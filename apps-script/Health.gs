@@ -10,11 +10,26 @@ function ttqsHealthRequiredHeaders_() {
   return required;
 }
 
+function ttqsAuthorizationHealth_() {
+  try {
+    var info = ScriptApp.getAuthorizationInfo(ScriptApp.AuthMode.FULL);
+    var status = info.getAuthorizationStatus();
+    return {
+      pass: status === ScriptApp.AuthorizationStatus.NOT_REQUIRED,
+      actual: String(status)
+    };
+  } catch (err) {
+    return { pass: false, actual: 'AUTH_STATUS_ERROR:' + String(err.message || err) };
+  }
+}
+
 function ttqsHealthCheck() {
   ttqsAssertTestOnly_();
   var cfg = ttqsConfig_();
   var ss = ttqsOpenCore_();
   var checks = [];
+  var auth = ttqsAuthorizationHealth_();
+  checks.push({ check: 'full_authorization', pass: auth.pass, actual: auth.actual });
   checks.push({ check: 'environment', pass: cfg.ENVIRONMENT === 'TEST', actual: cfg.ENVIRONMENT });
   checks.push({ check: 'real_writes_disabled', pass: cfg.ENABLE_REAL_WRITES === false, actual: cfg.ENABLE_REAL_WRITES });
   checks.push({ check: 'pii_vault_disabled', pass: cfg.PII_VAULT_READY === false, actual: cfg.PII_VAULT_READY });
