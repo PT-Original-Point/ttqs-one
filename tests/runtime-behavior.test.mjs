@@ -51,7 +51,7 @@ test('retry start updates primary trigger_source and preserves initial source in
     ttqsLedgerSheet_() { return {}; },
     ttqsNow_() { return 'NOW'; },
     ttqsParseJson_(v, f) { try { return v ? JSON.parse(v) : f; } catch { return f; } },
-    ttqsConfig_() { return { MAX_ATTEMPTS: 3, RETRY_MINUTES: 1, TIME_ZONE: 'Asia/Taipei' }; },
+    ttqsConfig_() { return { MAX_ATTEMPTS: 3, RETRY_MINUTES: 1, RUNNING_LEASE_MINUTES: 5, TIME_ZONE: 'Asia/Taipei' }; },
     ttqsEnsureRuntimeRecoveryEvidence_() { return { evidenceId: 'EV-REC' }; },
     Utilities: { formatDate() { return 'LATER'; } },
     ttqsGetSheet_() {}, ttqsFindUniqueRowByValue_() {}, ttqsStableId_() {}, ttqsAppendObject_() {}, ttqsHeaders_() {}
@@ -67,31 +67,28 @@ test('retry start updates primary trigger_source and preserves initial source in
   assert.equal(notes.retry, true);
 });
 
-test('reconcile is locked and passes only when survey party and evidence counts are exactly one', () => {
-  let patched;
+test('reconcile is locked and summarizes raw-root exact matches and mismatches', () => {
   let locked = 0;
-  const counts = { survey: 1, party: 1, evidence: 1 };
+  let status = 'MATCHED_EXACTLY_ONCE';
+  const sheet = { getLastRow() { return 2; } };
   const sandbox = load('Reconcile.gs', baseGlobals({
     ttqsWithScriptLock_(fn) { locked++; return fn(); },
     ttqsAssertTestOnly_() {},
-    ttqsReadObjects_() { return [{ rowNumber: 8, object: { event_type: 'FORM_SUITE', status: 'SUCCESS', job_id: 'JOB1', notes: JSON.stringify({ rawRef: 'R1', aliasCode: 'S-L06', evidenceId: 'E1' }) } }]; },
-    ttqsLedgerSheet_() { return 'ledger'; },
+    ttqsOpenCore_() { return {}; },
     ttqsParseJson_(v) { return JSON.parse(v); },
-    ttqsCountRowsByValue_(sheet) { return counts[sheet]; },
-    ttqsSurveySheet_() { return 'survey'; },
-    ttqsPartySheet_() { return 'party'; },
-    ttqsEvidenceSheet_() { return 'evidence'; },
-    ttqsUpdateObjectRow_(sheet, row, p) { patched = p; },
-    ttqsDateOnly_() { return '2026-08-11'; }
+    PropertiesService: { getScriptProperties() { return { getProperty() { return JSON.stringify({ 77: 'REGISTRATION' }); } }; } },
+    ttqsFindSheetById_() { return sheet; },
+    ttqsRawSubmission_() { return { kind: 'REGISTRATION', eventId: 'EVT1', rawRef: 'FORM_SUITE:F1:EVT1' }; }
   }));
+  sandbox.ttqsReconcileRaw_ = () => ({ status });
   let result = sandbox.ttqsReconcile();
   assert.equal(locked, 1);
   assert.equal(result.status, 'PASS');
-  assert.equal(patched.reconciliation_status, 'MATCHED');
-  counts.survey = 2;
+  assert.equal(result.matched, 1);
+  status = 'MISMATCH_TRIGGER_MISSED';
   result = sandbox.ttqsReconcile();
   assert.equal(result.status, 'FAIL');
-  assert.match(patched.reconciliation_status, /^MISMATCH_SURVEY_2_/);
+  assert.equal(result.mismatched, 1);
 });
 
 test('survey replay still ensures EvidenceMaster registration without appending duplicate survey', () => {
@@ -110,7 +107,7 @@ test('survey replay still ensures EvidenceMaster registration without appending 
     ttqsRedactFreeText_(v) { return v; },
     ttqsRequireSampleAlias_(v) { return v; }
   }));
-  const result = sandbox.ttqsWriteSurvey_({ partyAliasId: 'P1', surveyType: 'NEEDS', questionSetVersion: 'v1', scoreTotal: 4, scoreMax: 5, freeText: 'SAMPLE', sourceRef: 'FORM_SUITE:1:2' });
+  const result = sandbox.ttqsWriteSurvey_({ partyAliasId: 'P1', surveyType: 'NEEDS', questionSetVersion: 'v1', scoreTotal: 4, scoreMax: 5, freeText: 'SAMPLE', sourceRef: 'FORM_SUITE:F1:EVT1', providerFormId: 'F1', rawFingerprint: 'FP', jobId: 'J1' });
   assert.equal(result.duplicate, true);
   assert.equal(result.responseId, 'RESP-1');
   assert.equal(appended.filter((x) => x.sheet === 'survey').length, 0);
@@ -143,7 +140,7 @@ test('partial form state reuses same form id and recovers response sheet mapping
   const items = ['TTQS_ALIAS_CODE', 'TTQS_SAMPLE_CONFIRM'].map((title) => ({ getTitle() { return title; } }));
   const form = {
     getItems() { return items; }, getResponses() { return []; }, deleteItem() {},
-    setTitle() {}, setDescription() {}, setConfirmationMessage() {}, setCollectEmail() {}, setLimitOneResponsePerUser() {}, setPublished() {},
+    setTitle() {}, setDescription() {}, setConfirmationMessage() {}, setCollectEmail() {}, setLimitOneResponsePerUser() {}, setPublished() {}, isPublished() { return true; },
     getDestinationId() { return 'CORE'; }, getDestinationType() { return 'SPREADSHEET_ENUM'; },
     getId() { return 'FORM-1'; }, getEditUrl() { return 'EDIT'; }, getPublishedUrl() { return 'VIEW'; }
   };
@@ -164,6 +161,7 @@ test('partial form state reuses same form id and recovers response sheet mapping
   assert.equal(createCalls, 0);
   assert.equal(result.formId, 'FORM-1');
   assert.equal(result.responseSheetId, 77);
+  assert.equal(result.published, true);
   assert.equal(result.recoveredPartialState, true);
   assert.equal(stored.TTQS_FORM_REGISTRATION_SHEET_ID, '77');
 });
@@ -175,14 +173,14 @@ test('bootstrap failure is ledgered after job starts', () => {
     ttqsWithScriptLock_(fn) { order.push('lock'); return fn(); },
     ttqsAssertTestOnly_() {},
     ttqsHealthCheck() { return { status: 'PASS', failed: [] }; },
-    ttqsConfig_() { return { VERSION: '0.6.2', MAX_ATTEMPTS: 3, AUTO_CONSULT_SHEET: 'AUTO' }; },
+    ttqsConfig_() { return { VERSION: '0.6.3', MAX_ATTEMPTS: 3, AUTO_CONSULT_SHEET: 'AUTO' }; },
     ttqsLedgerEnsure_() { order.push('ensureJob'); return job; },
     ttqsLedgerStart_() { order.push('startJob'); job.object.attempt_no = 1; },
     ttqsLedgerStage_(j, stage) { order.push('stage:' + stage); },
     ttqsEnsureForms_() { order.push('ensureForms'); throw new Error('FORM_FAIL'); },
     ttqsLedgerFail_() { order.push('ledgerFail'); },
     ttqsLedgerSuccess_() { order.push('ledgerSuccess'); },
-    ttqsInstallManagedTriggers_() {}, ttqsRefreshConsultViewUnlocked_() {}, ttqsManagedTriggerSnapshot_() {},
+    ttqsInstallManagedTriggers_() {}, ttqsRefreshConsultViewUnlocked_() {}, ttqsAssertManagedTriggerContract_() {},
     ScriptApp: { AuthMode: { FULL: 'FULL' }, requireAllScopes() {}, getProjectTriggers() { return []; } }
   }));
   assert.throws(() => sandbox.ttqsBootstrapTest(), /FORM_FAIL/);
@@ -196,7 +194,7 @@ test('recovered FORM_SUITE success registers recovery evidence and stores eviden
     ttqsNow_() { return 'NOW'; },
     ttqsParseJson_(v, f) { return v ? JSON.parse(v) : f; },
     ttqsEnsureRuntimeRecoveryEvidence_() { return { evidenceId: 'EV-REC-1' }; },
-    ttqsConfig_() { return { MAX_ATTEMPTS: 3, RETRY_MINUTES: 1, TIME_ZONE: 'Asia/Taipei' }; },
+    ttqsConfig_() { return { MAX_ATTEMPTS: 3, RETRY_MINUTES: 1, RUNNING_LEASE_MINUTES: 5, TIME_ZONE: 'Asia/Taipei' }; },
     Utilities: { formatDate() { return 'LATER'; } },
     ttqsGetSheet_() {}, ttqsFindUniqueRowByValue_() {}, ttqsStableId_() {}, ttqsAppendObject_() {}, ttqsHeaders_() {}
   }));
@@ -218,10 +216,11 @@ test('health check fails when a required machine header is missing', () => {
   const ss = { getSpreadsheetTimeZone() { return 'Asia/Taipei'; }, getId() { return 'CORE'; }, getSheets() { return Object.values(sheets); }, getSheetByName(name) { return sheets[name]; } };
   const sandbox = load('Health.gs', baseGlobals({
     ttqsAssertTestOnly_() {}, ttqsConfig_() { return cfg; }, ttqsOpenCore_() { return ss; },
-    ttqsMissingHeaders_(sheet, required) { return sheet === sheets.survey ? ['source_ref'] : []; },
+    ttqsMissingHeaders_(sheet) { return sheet === sheets.survey ? ['source_ref'] : []; },
     ttqsFindRowsByValue_() { return [{ object: { environment: 'TEST', data_class: 'SAMPLE', real_start_gate_status: 'NOT_APPLICABLE_SAMPLE' } }]; },
     SpreadsheetApp: { openById() { return { getId() { return 'CONSULT'; }, getSpreadsheetTimeZone() { return 'Asia/Taipei'; } }; } },
     PropertiesService: { getScriptProperties() { return { getProperty() { return null; } }; } },
+    ScriptApp: { AuthMode: { FULL: 'FULL' }, AuthorizationStatus: { NOT_REQUIRED: 'NOT_REQUIRED' }, getAuthorizationInfo() { return { getAuthorizationStatus() { return 'NOT_REQUIRED'; } }; } },
     ttqsParseJson_() {}, ttqsFindSheetById_() {}, ttqsSheetMatchesFormKind_() {}
   }));
   const result = sandbox.ttqsHealthCheck();

@@ -50,12 +50,19 @@ function ttqsLedgerStage_(job, stage, extra) {
   return ttqsLedgerPatch_(job, { notes: JSON.stringify(notes) });
 }
 
+function ttqsLedgerLeaseUntil_() {
+  var leaseDate = new Date(Date.now() + Number(ttqsConfig_().RUNNING_LEASE_MINUTES || 5) * 60000);
+  return Utilities.formatDate(leaseDate, ttqsConfig_().TIME_ZONE, "yyyy-MM-dd'T'HH:mm:ssZ");
+}
+
 function ttqsLedgerStart_(job, isRetry) {
   var attempt = Number(job.object.attempt_no || 0) + 1;
   var notes = Object.assign({}, ttqsParseJson_(job.object.notes, {}));
   if (!notes.initialTriggerSource) notes.initialTriggerSource = job.object.trigger_source;
   notes.retry = !!isRetry;
   if (isRetry) notes.retryTrigger = 'TIME_RETRY';
+  notes.leaseUntil = ttqsLedgerLeaseUntil_();
+  notes.lastHeartbeatAt = ttqsNow_();
   return ttqsLedgerPatch_(job, {
     status: 'RUNNING',
     attempt_no: attempt,
@@ -69,8 +76,22 @@ function ttqsLedgerStart_(job, isRetry) {
   });
 }
 
+function ttqsLedgerRunningLeaseExpired_(job, nowMillis) {
+  if (String(job.object.status) !== 'RUNNING') return false;
+  var now = Number(nowMillis || Date.now());
+  var notes = ttqsParseJson_(job.object.notes, {});
+  var leaseUntil = notes.leaseUntil ? new Date(notes.leaseUntil).getTime() : 0;
+  if (!leaseUntil && job.object.started_at) {
+    var started = new Date(job.object.started_at).getTime();
+    if (isFinite(started)) leaseUntil = started + Number(ttqsConfig_().RUNNING_LEASE_MINUTES || 5) * 60000;
+  }
+  return !!leaseUntil && leaseUntil <= now;
+}
+
 function ttqsLedgerSuccess_(job, notesPatch) {
   var notes = Object.assign({}, ttqsParseJson_(job.object.notes, {}), notesPatch || {});
+  notes.leaseUntil = '';
+  notes.lastHeartbeatAt = ttqsNow_();
   ttqsLedgerPatch_(job, {
     status: 'SUCCESS',
     finished_at: ttqsNow_(),
@@ -89,11 +110,16 @@ function ttqsLedgerFail_(job, err) {
   var attempt = Number(job.object.attempt_no || 0);
   var maxAttempts = Number(job.object.max_attempts || ttqsConfig_().MAX_ATTEMPTS);
   var retryDate = new Date(Date.now() + ttqsConfig_().RETRY_MINUTES * 60000);
+  var notes = Object.assign({}, ttqsParseJson_(job.object.notes, {}), {
+    leaseUntil: '',
+    lastHeartbeatAt: ttqsNow_()
+  });
   return ttqsLedgerPatch_(job, {
     status: attempt >= maxAttempts ? 'FAILED_FINAL' : 'FAILED',
     finished_at: ttqsNow_(),
     error_class: err && err.name ? err.name : 'Error',
     error_message: String(err && err.message ? err.message : err).slice(0, 500),
-    retry_at: attempt >= maxAttempts ? '' : Utilities.formatDate(retryDate, ttqsConfig_().TIME_ZONE, "yyyy-MM-dd'T'HH:mm:ssZ")
+    retry_at: attempt >= maxAttempts ? '' : Utilities.formatDate(retryDate, ttqsConfig_().TIME_ZONE, "yyyy-MM-dd'T'HH:mm:ssZ"),
+    notes: JSON.stringify(notes)
   });
 }

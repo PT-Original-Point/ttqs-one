@@ -84,7 +84,10 @@ function ttqsEnsureFormShape_(form, kind, def) {
   form.setCollectEmail(false);
   form.setLimitOneResponsePerUser(false);
   form.setPublished(true);
-  return true;
+  if (form.isPublished() !== true) throw new Error('FORM_NOT_PUBLISHED:' + kind);
+  var publishedUrl = String(form.getPublishedUrl() || '');
+  if (!publishedUrl) throw new Error('FORM_PUBLISHED_URL_EMPTY:' + kind);
+  return publishedUrl;
 }
 
 function ttqsSheetMatchesFormKind_(sheet, kind) {
@@ -163,7 +166,7 @@ function ttqsEnsureOneForm_(kind, def) {
     createdNow = true;
   }
 
-  ttqsEnsureFormShape_(form, kind, def);
+  var publishedUrl = ttqsEnsureFormShape_(form, kind, def);
 
   var destinationId = form.getDestinationId();
   var destinationType = form.getDestinationType();
@@ -195,7 +198,8 @@ function ttqsEnsureOneForm_(kind, def) {
     formId: form.getId(),
     responseSheetId: responseSheet.getSheetId(),
     editUrl: form.getEditUrl(),
-    publishedUrl: form.getPublishedUrl(),
+    published: form.isPublished() === true,
+    publishedUrl: publishedUrl,
     reused: !createdNow,
     recoveredPartialState: !!existingId && !existingSheetId
   };
