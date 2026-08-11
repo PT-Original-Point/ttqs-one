@@ -10,7 +10,7 @@ const manifest = JSON.parse(fs.readFileSync('apps-script/appsscript.json', 'utf8
 
 const checks = [
   ['13 gs sources', () => assert.equal(files.length, 13)],
-  ['version 0.6.1', () => assert.match(all, /VERSION: '0\.6\.1'/)],
+  ['version 0.6.2', () => assert.match(all, /VERSION: '0\.6\.2'/)],
   ['TEST environment fixed', () => assert.match(all, /ENVIRONMENT: 'TEST'/)],
   ['real writes disabled', () => assert.match(all, /ENABLE_REAL_WRITES: false/)],
   ['pii vault disabled', () => assert.match(all, /PII_VAULT_READY: false/)],

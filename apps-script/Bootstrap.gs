@@ -100,5 +100,6 @@ function ttqsBootstrapTestLocked_() {
 }
 
 function ttqsBootstrapTest() {
+  ScriptApp.requireAllScopes(ScriptApp.AuthMode.FULL);
   return ttqsWithScriptLock_(ttqsBootstrapTestLocked_);
 }
