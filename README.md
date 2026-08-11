@@ -25,6 +25,7 @@ Hard gates:
 - `FormResponse.submit()` is not used for runtime acceptance; submissions must use the real Google Forms UI.
 - `clasp` push scope remains exactly `appsscript.json` plus 13 root-level `.gs` files.
 - The release manifest verifier requires exact coverage of git-tracked regular files, excluding only the manifest and its separate self-hash file.
+- GitHub Actions `checkout` and `setup-node` references are pinned to immutable commit SHAs rather than mutable major-version tags.
 
 Evidence boundary:
 
@@ -34,7 +35,6 @@ Evidence boundary:
 
 Known non-blocking post-demo hardening:
 
-- Pin GitHub Actions to immutable full commit SHAs.
 - Remove CI-time `npx --yes` supply-chain dependence by locking the clasp tool graph.
 - Re-evaluate TypeScript and a transactional database / Cloud Run architecture before REAL or scaled production use.
 
