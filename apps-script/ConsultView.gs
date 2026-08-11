@@ -3,7 +3,7 @@ function ttqsIndicatorEvidenceMap_() {
   var map = {};
   for (var i = 1; i <= 19; i++) map[String(i)] = [];
   evidenceRows.forEach(function(entry) {
-    var tags = String(entry.object.ttqs_indicator_tags || '').split(',').map(function(v) { return v.trim(); }).filter(Boolean);
+    var tags = String(entry.object.ttqs_indicator_tags || '').split(',').map(function(value) { return value.trim(); }).filter(Boolean);
     tags.forEach(function(tag) {
       if (map[tag]) map[tag].push(entry.object);
     });
@@ -11,7 +11,7 @@ function ttqsIndicatorEvidenceMap_() {
   return map;
 }
 
-function ttqsRefreshConsultView() {
+function ttqsRefreshConsultViewUnlocked_() {
   ttqsAssertTestOnly_();
   var indicators = ttqsReadObjects_(ttqsGetSheet_(ttqsConfig_().SHEETS.INDICATORS));
   var evidenceMap = ttqsIndicatorEvidenceMap_();
@@ -23,9 +23,9 @@ function ttqsRefreshConsultView() {
   indicators.forEach(function(entry) {
     var no = String(entry.object.indicator_no);
     var evidence = evidenceMap[no] || [];
-    var ids = evidence.map(function(e) { return e.evidence_id; }).filter(Boolean);
-    var dataClasses = ttqsUnique_(evidence.map(function(e) { return e.data_class; }).filter(Boolean));
-    var health = ttqsUnique_(evidence.map(function(e) { return e.health_status; }).filter(Boolean));
+    var ids = evidence.map(function(item) { return item.evidence_id; }).filter(Boolean);
+    var dataClasses = ttqsUnique_(evidence.map(function(item) { return item.data_class; }).filter(Boolean));
+    var health = ttqsUnique_(evidence.map(function(item) { return item.health_status; }).filter(Boolean));
     var formalStatus = Number(no) >= 17 ? 'FORMAL_BLOCKED_NEEDS_REAL' : (evidence.length ? 'WORKING_EVIDENCE_AVAILABLE' : 'GAP');
     out.push([
       no,
@@ -43,4 +43,8 @@ function ttqsRefreshConsultView() {
   sheet.getRange(1, 1, out.length, header.length).setValues(out);
   sheet.setFrozenRows(1);
   return { rows: out.length - 1, sheet: ttqsConfig_().AUTO_CONSULT_SHEET };
+}
+
+function ttqsRefreshConsultView() {
+  return ttqsWithScriptLock_(ttqsRefreshConsultViewUnlocked_);
 }

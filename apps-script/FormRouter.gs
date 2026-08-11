@@ -17,23 +17,24 @@ function ttqsRawSubmission_(sheetId, rowNumber) {
 function ttqsProcessSubmission_(raw) {
   var aliasCode = ttqsRequireSampleAlias_(raw.named.TTQS_ALIAS_CODE);
   var partyId = ttqsEnsurePartyAlias_(aliasCode);
+  var surveyResult;
   if (raw.kind === 'REGISTRATION') {
     var props = PropertiesService.getScriptProperties();
     if (props.getProperty('TTQS_FAIL_NEXT_REG_AFTER_PARTY') === 'TRUE') {
       props.deleteProperty('TTQS_FAIL_NEXT_REG_AFTER_PARTY');
       throw new Error('TTQS_INJECTED_PARTIAL_FAILURE_AFTER_PARTY_ALIAS');
     }
-    ttqsWriteSurvey_({
+    surveyResult = ttqsWriteSurvey_({
       partyAliasId: partyId,
       surveyType: 'REGISTRATION',
       questionSetVersion: 'SAMPLE-RUNTIME-REG-v1',
       scoreTotal: 1,
       scoreMax: 1,
-      freeText: '',
+      freeText: 'SAMPLE_ONLY',
       sourceRef: raw.rawRef
     });
   } else if (raw.kind === 'NEEDS') {
-    ttqsWriteSurvey_({
+    surveyResult = ttqsWriteSurvey_({
       partyAliasId: partyId,
       surveyType: 'NEEDS',
       questionSetVersion: 'SAMPLE-RUNTIME-NEEDS-v1',
@@ -46,7 +47,7 @@ function ttqsProcessSubmission_(raw) {
     var total = ['CLARITY', 'RELEVANCE', 'SAFETY', 'PRACTICE', 'OVERALL'].reduce(function(sum, code) {
       return sum + ttqsNumber_(raw.named['TTQS_REACTION_' + code], 1, 5);
     }, 0);
-    ttqsWriteSurvey_({
+    surveyResult = ttqsWriteSurvey_({
       partyAliasId: partyId,
       surveyType: 'REACTION',
       questionSetVersion: 'SAMPLE-RUNTIME-REACTION-v1',
@@ -57,7 +58,7 @@ function ttqsProcessSubmission_(raw) {
     });
   } else if (raw.kind === 'FOLLOWUP30') {
     var score = ttqsNumber_(raw.named.TTQS_30D_SAFE_ACTION, 1, 5) + ttqsNumber_(raw.named.TTQS_30D_BOUNDARY, 1, 5);
-    ttqsWriteSurvey_({
+    surveyResult = ttqsWriteSurvey_({
       partyAliasId: partyId,
       surveyType: '30_DAY_BEHAVIOR',
       questionSetVersion: 'SAMPLE-RUNTIME-30D-v1',
@@ -71,10 +72,15 @@ function ttqsProcessSubmission_(raw) {
   } else {
     throw new Error('UNKNOWN_FORM_KIND:' + raw.kind);
   }
-  return { aliasCode: aliasCode, partyAliasId: partyId };
+  return {
+    aliasCode: aliasCode,
+    partyAliasId: partyId,
+    responseId: surveyResult.responseId,
+    evidenceId: surveyResult.evidenceId
+  };
 }
 
-function ttqsHandleRawSubmission_(sheetId, rowNumber, isRetry) {
+function ttqsHandleRawSubmissionUnlocked_(sheetId, rowNumber, isRetry) {
   ttqsAssertTestOnly_();
   var raw = ttqsRawSubmission_(sheetId, rowNumber);
   var idempotencyKey = 'TEST:' + raw.rawRef;
@@ -86,19 +92,32 @@ function ttqsHandleRawSubmission_(sheetId, rowNumber, isRetry) {
     triggerSource: isRetry ? 'TIME_RETRY' : 'GOOGLE_FORM',
     notes: { kind: raw.kind, rawRef: raw.rawRef, sheetId: raw.sheetId, rowNumber: raw.rowNumber }
   });
-  if (job.object.status === 'SUCCESS') return { duplicate: true, jobId: job.object.job_id };
+  if (job.object.status === 'SUCCESS') return { duplicate: true, jobId: job.object.job_id, traceId: job.object.trace_id };
   if (Number(job.object.attempt_no || 0) >= Number(job.object.max_attempts || ttqsConfig_().MAX_ATTEMPTS)) {
     throw new Error('MAX_ATTEMPTS_EXCEEDED');
   }
   ttqsLedgerStart_(job, isRetry);
   try {
     var result = ttqsProcessSubmission_(raw);
-    ttqsLedgerSuccess_(job, { aliasCode: result.aliasCode, partyAliasId: result.partyAliasId, recovered: !!isRetry });
-    return { duplicate: false, recovered: !!isRetry, jobId: job.object.job_id, traceId: job.object.trace_id };
+    ttqsLedgerSuccess_(job, {
+      aliasCode: result.aliasCode,
+      partyAliasId: result.partyAliasId,
+      responseId: result.responseId,
+      evidenceId: result.evidenceId,
+      sourceRef: raw.rawRef,
+      recovered: !!isRetry
+    });
+    return { duplicate: false, recovered: !!isRetry, jobId: job.object.job_id, traceId: job.object.trace_id, responseId: result.responseId, evidenceId: result.evidenceId };
   } catch (err) {
     ttqsLedgerFail_(job, err);
     throw err;
   }
+}
+
+function ttqsHandleRawSubmission_(sheetId, rowNumber, isRetry) {
+  return ttqsWithScriptLock_(function() {
+    return ttqsHandleRawSubmissionUnlocked_(sheetId, rowNumber, isRetry);
+  });
 }
 
 function ttqsOnSpreadsheetFormSubmit(e) {

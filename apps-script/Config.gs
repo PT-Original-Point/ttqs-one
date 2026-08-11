@@ -1,5 +1,5 @@
 var TTQS_CONFIG = Object.freeze({
-  VERSION: '0.6.0',
+  VERSION: '0.6.1',
   ENVIRONMENT: 'TEST',
   TIME_ZONE: 'Asia/Taipei',
   CORE_SPREADSHEET_ID: '1TzICbMmNoN2dTiRMK1dPYx-JOISKaCS-6i0i3iH68is',
@@ -9,6 +9,9 @@ var TTQS_CONFIG = Object.freeze({
   PII_VAULT_READY: false,
   MAX_ATTEMPTS: 3,
   RETRY_MINUTES: 1,
+  LOCK_WAIT_MS: 30000,
+  FORM_RESPONSE_WAIT_MS: 10000,
+  FORM_RESPONSE_POLL_MS: 500,
   SHEETS: Object.freeze({
     RULES: '01_RuleRegistry_\u898f\u5247\u4e3b\u6a94',
     INDICATORS: '02_TTQSIndicator_19\u6307\u6a19',

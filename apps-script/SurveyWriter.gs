@@ -6,8 +6,12 @@ function ttqsSurveySheet_() {
   return ttqsGetSheet_(ttqsConfig_().SHEETS.SURVEY);
 }
 
+function ttqsEvidenceSheet_() {
+  return ttqsGetSheet_(ttqsConfig_().SHEETS.EVIDENCE);
+}
+
 function ttqsFindPartyByAlias_(aliasCode) {
-  return ttqsFindRowByValue_(ttqsPartySheet_(), 'alias_code', aliasCode);
+  return ttqsFindUniqueRowByValue_(ttqsPartySheet_(), 'alias_code', aliasCode, 'DUPLICATE_PARTY_ALIAS');
 }
 
 function ttqsEnsurePartyAlias_(aliasCode) {
@@ -32,29 +36,107 @@ function ttqsEnsurePartyAlias_(aliasCode) {
 }
 
 function ttqsSurveyFindBySource_(sourceRef) {
-  return ttqsFindRowByValue_(ttqsSurveySheet_(), 'source_ref', sourceRef);
+  return ttqsFindUniqueRowByValue_(ttqsSurveySheet_(), 'source_ref', sourceRef, 'DUPLICATE_SURVEY_SOURCE_REF');
+}
+
+function ttqsRuntimeEvidenceSpec_(surveyType) {
+  var map = {
+    NEEDS: { tags: '7,11', stage: 'Design', title: 'TEST SAMPLE runtime needs response' },
+    REGISTRATION: { tags: '12', stage: 'Do', title: 'TEST SAMPLE runtime registration response' },
+    REACTION: { tags: '15,17', stage: 'Review,Outcome', title: 'TEST SAMPLE runtime reaction response' },
+    '30_DAY_BEHAVIOR': { tags: '13,17,18', stage: 'Do,Outcome', title: 'TEST SAMPLE runtime 30-day behavior response' }
+  };
+  var spec = map[String(surveyType)];
+  if (!spec) throw new Error('UNKNOWN_RUNTIME_EVIDENCE_SURVEY_TYPE:' + surveyType);
+  return spec;
+}
+
+function ttqsEnsureRuntimeEvidence_(spec, responseId) {
+  var evidenceSpec = ttqsRuntimeEvidenceSpec_(spec.surveyType);
+  var evidenceId = ttqsStableId_('EV-RUN-', spec.sourceRef, 16);
+  var existing = ttqsFindUniqueRowByValue_(ttqsEvidenceSheet_(), 'evidence_id', evidenceId, 'DUPLICATE_RUNTIME_EVIDENCE_ID');
+  if (!existing) {
+    ttqsAppendObject_(ttqsEvidenceSheet_(), {
+      evidence_id: evidenceId,
+      evidence_title: evidenceSpec.title,
+      evidence_type: 'STRUCTURED_DATA',
+      environment: 'TEST',
+      data_class: 'SAMPLE',
+      source_object_type: 'SurveyResponse',
+      source_object_id: responseId,
+      drive_file_id: '',
+      drive_url: '',
+      document_version_id: '',
+      class_run_id: ttqsConfig_().CLASS_RUN_ID,
+      ttqs_indicator_tags: evidenceSpec.tags,
+      pddro_stage: evidenceSpec.stage,
+      approval_status: 'SAMPLE_SIMULATED',
+      approved_by: '',
+      sha256: '',
+      health_status: 'HEALTHY_SAMPLE_RUNTIME',
+      retrieval_tested_at: ttqsNow_(),
+      archive_status: 'NOT_APPLICABLE_SAMPLE',
+      notes: 'Auto-registered from TEST SAMPLE runtime source_ref=' + spec.sourceRef + '; never formal REAL outcome evidence'
+    });
+  }
+  return { evidenceId: evidenceId, duplicate: !!existing };
+}
+
+function ttqsEnsureRuntimeRecoveryEvidence_(job) {
+  var evidenceId = ttqsStableId_('EV-RUN-REC-', job.object.job_id, 16);
+  var existing = ttqsFindUniqueRowByValue_(ttqsEvidenceSheet_(), 'evidence_id', evidenceId, 'DUPLICATE_RUNTIME_RECOVERY_EVIDENCE_ID');
+  if (!existing) {
+    ttqsAppendObject_(ttqsEvidenceSheet_(), {
+      evidence_id: evidenceId,
+      evidence_title: 'TEST SAMPLE runtime automatic retry recovery',
+      evidence_type: 'SYSTEM_EVENT',
+      environment: 'TEST',
+      data_class: 'SAMPLE',
+      source_object_type: 'EventJobLedger',
+      source_object_id: job.object.job_id,
+      drive_file_id: '',
+      drive_url: '',
+      document_version_id: '',
+      class_run_id: ttqsConfig_().CLASS_RUN_ID,
+      ttqs_indicator_tags: '16',
+      pddro_stage: 'Review',
+      approval_status: 'SAMPLE_SIMULATED',
+      approved_by: '',
+      sha256: '',
+      health_status: 'HEALTHY_SAMPLE_RUNTIME',
+      retrieval_tested_at: ttqsNow_(),
+      archive_status: 'NOT_APPLICABLE_SAMPLE',
+      notes: 'Auto-registered after FORM_SUITE retry recovered=true; TEST SAMPLE control evidence only'
+    });
+  }
+  return { evidenceId: evidenceId, duplicate: !!existing };
 }
 
 function ttqsWriteSurvey_(spec) {
   var existing = ttqsSurveyFindBySource_(spec.sourceRef);
-  if (existing) return { duplicate: true, responseId: existing.object.response_id };
-  var responseId = ttqsStableId_('S-RUN-SUR-', spec.sourceRef, 14);
-  ttqsAppendObject_(ttqsSurveySheet_(), {
-    response_id: responseId,
-    class_run_id: ttqsConfig_().CLASS_RUN_ID,
-    party_alias_id: spec.partyAliasId,
-    survey_type: spec.surveyType,
-    response_date: ttqsDateOnly_(new Date()),
-    question_set_version: spec.questionSetVersion,
-    score_total: spec.scoreTotal,
-    score_max: spec.scoreMax,
-    free_text_redacted: ttqsRedactFreeText_(spec.freeText),
-    followup_due_date: spec.followupDueDate || '',
-    followup_completed_date: spec.followupCompletedDate || '',
-    source_ref: spec.sourceRef,
-    ai_allowed: 'YES_SAMPLE_NO_PII',
-    verification_status: 'SAMPLE_RUNTIME_CAPTURED',
-    notes: 'Runtime TEST SAMPLE; not formal REAL evidence'
-  });
-  return { duplicate: false, responseId: responseId };
+  var responseId;
+  if (existing) {
+    responseId = existing.object.response_id;
+  } else {
+    responseId = ttqsStableId_('S-RUN-SUR-', spec.sourceRef, 14);
+    ttqsAppendObject_(ttqsSurveySheet_(), {
+      response_id: responseId,
+      class_run_id: ttqsConfig_().CLASS_RUN_ID,
+      party_alias_id: spec.partyAliasId,
+      survey_type: spec.surveyType,
+      response_date: ttqsDateOnly_(new Date()),
+      question_set_version: spec.questionSetVersion,
+      score_total: spec.scoreTotal,
+      score_max: spec.scoreMax,
+      free_text_redacted: ttqsRedactFreeText_(spec.freeText),
+      followup_due_date: spec.followupDueDate || '',
+      followup_completed_date: spec.followupCompletedDate || '',
+      source_ref: spec.sourceRef,
+      ai_allowed: 'YES_SAMPLE_NO_PII',
+      verification_status: 'SAMPLE_RUNTIME_CAPTURED',
+      notes: 'Runtime TEST SAMPLE; not formal REAL evidence'
+    });
+  }
+  var evidence = ttqsEnsureRuntimeEvidence_(spec, responseId);
+  return { duplicate: !!existing, responseId: responseId, evidenceId: evidence.evidenceId };
 }
