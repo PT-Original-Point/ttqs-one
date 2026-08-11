@@ -51,6 +51,20 @@ function ttqsRuntimeEvidenceSpec_(surveyType) {
   return spec;
 }
 
+function ttqsRuntimeEvidenceNotes_(spec, responseId) {
+  return JSON.stringify({
+    evidence_origin: 'GOOGLE_FORM_RUNTIME',
+    formal_admissibility: 'NOT_FORMAL',
+    environment: 'TEST',
+    data_class: 'SAMPLE',
+    provider_form_id: String(spec.providerFormId || ''),
+    provider_raw_fingerprint: String(spec.rawFingerprint || ''),
+    source_ref: String(spec.sourceRef || ''),
+    job_id: String(spec.jobId || ''),
+    survey_response_id: String(responseId || '')
+  });
+}
+
 function ttqsEnsureRuntimeEvidence_(spec, responseId) {
   var evidenceSpec = ttqsRuntimeEvidenceSpec_(spec.surveyType);
   var evidenceId = ttqsStableId_('EV-RUN-', spec.sourceRef, 16);
@@ -72,11 +86,11 @@ function ttqsEnsureRuntimeEvidence_(spec, responseId) {
       pddro_stage: evidenceSpec.stage,
       approval_status: 'SAMPLE_SIMULATED',
       approved_by: '',
-      sha256: '',
+      sha256: spec.rawFingerprint || '',
       health_status: 'HEALTHY_SAMPLE_RUNTIME',
       retrieval_tested_at: ttqsNow_(),
       archive_status: 'NOT_APPLICABLE_SAMPLE',
-      notes: 'Auto-registered from TEST SAMPLE runtime source_ref=' + spec.sourceRef + '; never formal REAL outcome evidence'
+      notes: ttqsRuntimeEvidenceNotes_(spec, responseId)
     });
   }
   return { evidenceId: evidenceId, duplicate: !!existing };
@@ -86,6 +100,7 @@ function ttqsEnsureRuntimeRecoveryEvidence_(job) {
   var evidenceId = ttqsStableId_('EV-RUN-REC-', job.object.job_id, 16);
   var existing = ttqsFindUniqueRowByValue_(ttqsEvidenceSheet_(), 'evidence_id', evidenceId, 'DUPLICATE_RUNTIME_RECOVERY_EVIDENCE_ID');
   if (!existing) {
+    var notes = ttqsParseJson_(job.object.notes, {});
     ttqsAppendObject_(ttqsEvidenceSheet_(), {
       evidence_id: evidenceId,
       evidence_title: 'TEST SAMPLE runtime automatic retry recovery',
@@ -102,11 +117,21 @@ function ttqsEnsureRuntimeRecoveryEvidence_(job) {
       pddro_stage: 'Review',
       approval_status: 'SAMPLE_SIMULATED',
       approved_by: '',
-      sha256: '',
+      sha256: notes.rawFingerprint || '',
       health_status: 'HEALTHY_SAMPLE_RUNTIME',
       retrieval_tested_at: ttqsNow_(),
       archive_status: 'NOT_APPLICABLE_SAMPLE',
-      notes: 'Auto-registered after FORM_SUITE retry recovered=true; TEST SAMPLE control evidence only'
+      notes: JSON.stringify({
+        evidence_origin: 'TIME_DRIVEN_RETRY_RECOVERY',
+        formal_admissibility: 'NOT_FORMAL',
+        environment: 'TEST',
+        data_class: 'SAMPLE',
+        job_id: job.object.job_id,
+        trace_id: job.object.trace_id,
+        source_ref: notes.rawRef || '',
+        provider_form_id: notes.formId || '',
+        provider_raw_fingerprint: notes.rawFingerprint || ''
+      })
     });
   }
   return { evidenceId: evidenceId, duplicate: !!existing };
@@ -134,7 +159,14 @@ function ttqsWriteSurvey_(spec) {
       source_ref: spec.sourceRef,
       ai_allowed: 'YES_SAMPLE_NO_PII',
       verification_status: 'SAMPLE_RUNTIME_CAPTURED',
-      notes: 'Runtime TEST SAMPLE; not formal REAL evidence'
+      notes: JSON.stringify({
+        environment: 'TEST',
+        data_class: 'SAMPLE',
+        formal_admissibility: 'NOT_FORMAL',
+        job_id: String(spec.jobId || ''),
+        provider_form_id: String(spec.providerFormId || ''),
+        provider_raw_fingerprint: String(spec.rawFingerprint || '')
+      })
     });
   }
   var evidence = ttqsEnsureRuntimeEvidence_(spec, responseId);
