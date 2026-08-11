@@ -19,18 +19,61 @@ function ttqsManagedTriggerSnapshot_() {
   return counts;
 }
 
+function ttqsManagedTriggerDetails_() {
+  var handlers = {
+    ttqsOnSpreadsheetFormSubmit: true,
+    ttqsRetryFailedJobs: true,
+    ttqsReconcile: true,
+    ttqsRefreshConsultView: true
+  };
+  return ScriptApp.getProjectTriggers().filter(function(trigger) {
+    return !!handlers[trigger.getHandlerFunction()];
+  }).map(function(trigger) {
+    return {
+      handler: trigger.getHandlerFunction(),
+      eventType: String(trigger.getEventType()),
+      triggerSource: String(trigger.getTriggerSource()),
+      triggerSourceId: trigger.getTriggerSourceId ? String(trigger.getTriggerSourceId() || '') : ''
+    };
+  });
+}
+
+function ttqsAssertManagedTriggerContract_() {
+  var cfg = ttqsConfig_();
+  var triggers = ScriptApp.getProjectTriggers();
+  var expected = {
+    ttqsOnSpreadsheetFormSubmit: { eventType: ScriptApp.EventType.ON_FORM_SUBMIT, source: ScriptApp.TriggerSource.SPREADSHEETS, sourceId: cfg.CORE_SPREADSHEET_ID },
+    ttqsRetryFailedJobs: { eventType: ScriptApp.EventType.CLOCK, source: ScriptApp.TriggerSource.CLOCK },
+    ttqsReconcile: { eventType: ScriptApp.EventType.CLOCK, source: ScriptApp.TriggerSource.CLOCK },
+    ttqsRefreshConsultView: { eventType: ScriptApp.EventType.CLOCK, source: ScriptApp.TriggerSource.CLOCK }
+  };
+  var matched = {};
+  triggers.forEach(function(trigger) {
+    var handler = trigger.getHandlerFunction();
+    if (!expected[handler]) return;
+    matched[handler] = Number(matched[handler] || 0) + 1;
+    var contract = expected[handler];
+    if (trigger.getEventType() !== contract.eventType) throw new Error('MANAGED_TRIGGER_EVENT_TYPE_INVALID:' + handler);
+    if (trigger.getTriggerSource() !== contract.source) throw new Error('MANAGED_TRIGGER_SOURCE_INVALID:' + handler);
+    if (contract.sourceId && String(trigger.getTriggerSourceId ? trigger.getTriggerSourceId() : '') !== String(contract.sourceId)) {
+      throw new Error('MANAGED_TRIGGER_SOURCE_ID_INVALID:' + handler);
+    }
+  });
+  Object.keys(expected).forEach(function(handler) {
+    if (Number(matched[handler] || 0) !== 1) throw new Error('MANAGED_TRIGGER_COUNT_INVALID:' + handler + ':' + Number(matched[handler] || 0));
+  });
+  return { counts: matched, details: ttqsManagedTriggerDetails_() };
+}
+
 function ttqsInstallManagedTriggers_() {
+  ScriptApp.requireAllScopes(ScriptApp.AuthMode.FULL);
   ttqsRemoveManagedTriggers_();
   var ss = ttqsOpenCore_();
   ScriptApp.newTrigger('ttqsOnSpreadsheetFormSubmit').forSpreadsheet(ss).onFormSubmit().create();
   ScriptApp.newTrigger('ttqsRetryFailedJobs').timeBased().everyMinutes(1).create();
   ScriptApp.newTrigger('ttqsReconcile').timeBased().everyHours(1).create();
   ScriptApp.newTrigger('ttqsRefreshConsultView').timeBased().everyHours(1).create();
-  var counts = ttqsManagedTriggerSnapshot_();
-  ['ttqsOnSpreadsheetFormSubmit', 'ttqsRetryFailedJobs', 'ttqsReconcile', 'ttqsRefreshConsultView'].forEach(function(handler) {
-    if (Number(counts[handler] || 0) !== 1) throw new Error('MANAGED_TRIGGER_COUNT_INVALID:' + handler + ':' + Number(counts[handler] || 0));
-  });
-  return counts;
+  return ttqsAssertManagedTriggerContract_();
 }
 
 function ttqsBootstrapTestLocked_() {
@@ -51,13 +94,14 @@ function ttqsBootstrapTestLocked_() {
 
   if (job.object.status === 'SUCCESS') {
     var reusedForms = ttqsEnsureForms_();
+    var reusedTriggers = ttqsAssertManagedTriggerContract_();
     return {
       version: ttqsConfig_().VERSION,
       environment: 'TEST',
       health: ttqsHealthCheck(),
       forms: reusedForms,
       consult: { sheet: ttqsConfig_().AUTO_CONSULT_SHEET, reusedBootstrap: true },
-      triggers: ttqsManagedTriggerSnapshot_(),
+      triggers: reusedTriggers,
       duplicateBootstrap: true,
       realWrites: false,
       piiVaultReady: false,
@@ -73,14 +117,14 @@ function ttqsBootstrapTestLocked_() {
   try {
     ttqsLedgerStage_(job, 'ENSURE_FORMS');
     var forms = ttqsEnsureForms_();
-    ttqsLedgerStage_(job, 'INSTALL_TRIGGERS', { forms: forms.map(function(f) { return { kind: f.kind, formId: f.formId, responseSheetId: f.responseSheetId }; }) });
+    ttqsLedgerStage_(job, 'INSTALL_TRIGGERS', { forms: forms.map(function(f) { return { kind: f.kind, formId: f.formId, responseSheetId: f.responseSheetId, published: f.published }; }) });
     var triggers = ttqsInstallManagedTriggers_();
     ttqsLedgerStage_(job, 'REFRESH_CONSULT');
     var consult = ttqsRefreshConsultViewUnlocked_();
     ttqsLedgerStage_(job, 'POST_HEALTH');
     var postHealth = ttqsHealthCheck();
     if (postHealth.status !== 'PASS') throw new Error('POST_BOOTSTRAP_HEALTH_FAIL:' + JSON.stringify(postHealth.failed));
-    ttqsLedgerSuccess_(job, { bootstrap: true, forms: forms.map(function(f) { return { kind: f.kind, formId: f.formId, responseSheetId: f.responseSheetId }; }), triggers: triggers, consultRows: consult.rows, stage: 'COMPLETE' });
+    ttqsLedgerSuccess_(job, { bootstrap: true, forms: forms.map(function(f) { return { kind: f.kind, formId: f.formId, responseSheetId: f.responseSheetId, published: f.published }; }), triggers: triggers, consultRows: consult.rows, stage: 'COMPLETE' });
     return {
       version: ttqsConfig_().VERSION,
       environment: 'TEST',
