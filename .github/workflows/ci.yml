@@ -1,0 +1,27 @@
+name: TTQS ONE CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm run verify
+      - name: Verify actual clasp push set
+        shell: bash
+        run: |
+          printf '%s\n' '{"scriptId":"15ImUCpyi1Jsd8yF8Z6wey_7cw793CymWTLxOqwMka3P1CzE5hQun6qiC","rootDir":"apps-script"}' > .clasp.json
+          npx --yes @google/clasp@3.3.0 --version
+          npx --yes @google/clasp@3.3.0 show-file-status --json > clasp-status.json
+          node scripts/verify-clasp-status.mjs clasp-status.json

@@ -1,0 +1,38 @@
+name: Deploy DEV Apps Script
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: DEV
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm run verify
+      - name: Restore clasp credentials and project settings
+        shell: bash
+        env:
+          CLASPRC_JSON_B64: ${{ secrets.CLASPRC_JSON_B64 }}
+          CLASP_JSON_DEV_B64: ${{ secrets.CLASP_JSON_DEV_B64 }}
+        run: |
+          test -n "$CLASPRC_JSON_B64"
+          test -n "$CLASP_JSON_DEV_B64"
+          printf '%s' "$CLASPRC_JSON_B64" | base64 -d > "$HOME/.clasprc.json"
+          printf '%s' "$CLASP_JSON_DEV_B64" | base64 -d > .clasp.json
+          node -e "const p=require('./.clasp.json'); if(p.rootDir!=='apps-script'||!p.scriptId) process.exit(1)"
+      - name: Fail-closed push-set verification
+        shell: bash
+        run: |
+          npx --yes @google/clasp@3.3.0 show-file-status --json > clasp-status.json
+          node scripts/verify-clasp-status.mjs clasp-status.json
+      - name: Push DEV
+        run: npx --yes @google/clasp@3.3.0 push --force
