@@ -175,7 +175,7 @@ test('bootstrap failure is ledgered after job starts', () => {
     ttqsWithScriptLock_(fn) { order.push('lock'); return fn(); },
     ttqsAssertTestOnly_() {},
     ttqsHealthCheck() { return { status: 'PASS', failed: [] }; },
-    ttqsConfig_() { return { VERSION: '0.6.1', MAX_ATTEMPTS: 3, AUTO_CONSULT_SHEET: 'AUTO' }; },
+    ttqsConfig_() { return { VERSION: '0.6.2', MAX_ATTEMPTS: 3, AUTO_CONSULT_SHEET: 'AUTO' }; },
     ttqsLedgerEnsure_() { order.push('ensureJob'); return job; },
     ttqsLedgerStart_() { order.push('startJob'); job.object.attempt_no = 1; },
     ttqsLedgerStage_(j, stage) { order.push('stage:' + stage); },
@@ -183,7 +183,7 @@ test('bootstrap failure is ledgered after job starts', () => {
     ttqsLedgerFail_() { order.push('ledgerFail'); },
     ttqsLedgerSuccess_() { order.push('ledgerSuccess'); },
     ttqsInstallManagedTriggers_() {}, ttqsRefreshConsultViewUnlocked_() {}, ttqsManagedTriggerSnapshot_() {},
-    ScriptApp: { getProjectTriggers() { return []; } }
+    ScriptApp: { AuthMode: { FULL: 'FULL' }, requireAllScopes() {}, getProjectTriggers() { return []; } }
   }));
   assert.throws(() => sandbox.ttqsBootstrapTest(), /FORM_FAIL/);
   assert.deepEqual(order.slice(0, 6), ['lock', 'ensureJob', 'startJob', 'stage:ENSURE_FORMS', 'ensureForms', 'ledgerFail']);
