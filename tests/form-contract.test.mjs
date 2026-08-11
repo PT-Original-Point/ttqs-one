@@ -21,11 +21,16 @@ test('aliases are controlled SAMPLE choices', () => assert.match(forms, /\['S-L0
 test('forms use controlled SAMPLE narrative choices', () => assert.match(forms, /SAMPLE：希望增加更多安全情境案例/));
 test('all forms target core spreadsheet', () => assert.match(forms, /setDestination\(FormApp\.DestinationType\.SPREADSHEET/));
 test('form creation explicitly publishes form', () => assert.match(forms, /setPublished\(true\)/));
-test('raw row reconstruction uses sheet and row', () => assert.match(router, /ttqsRawSubmission_\(sheetId, rowNumber\)/));
-test('idempotency key binds sheet and row', () => assert.match(router, /'TEST:' \+ raw\.rawRef/));
+test('form publication is read back fail-closed', () => assert.match(forms, /isPublished\(\) !== true/));
+test('published responder URL is required', () => assert.match(forms, /FORM_PUBLISHED_URL_EMPTY/));
+test('raw response persists immutable event ID', () => assert.match(router, /TTQS_EVENT_ID/));
+test('raw response identity excludes row number from source ref', () => assert.match(router, /'FORM_SUITE:' \+ formId \+ ':' \+ eventId/));
+test('raw retry resolves immutable ref by scanning current rows', () => assert.match(router, /ttqsFindRawSubmissionByRef_/));
+test('idempotency key binds immutable raw ref', () => assert.match(router, /'TEST:' \+ raw\.rawRef/));
 test('registration writes a survey stage after party stage', () => assert.match(router, /surveyType: 'REGISTRATION'/));
 test('survey dedupe checks source_ref', () => assert.match(survey, /DUPLICATE_SURVEY_SOURCE_REF/));
-test('runtime survey is sample-only', () => assert.match(survey, /not formal REAL evidence/));
+test('runtime survey is sample-only', () => assert.match(survey, /YES_SAMPLE_NO_PII/));
+test('runtime survey carries provider fingerprint and job linkage', () => assert.match(survey, /provider_raw_fingerprint/));
 test('runtime survey ensures evidence even on duplicate replay', () => assert.match(survey, /ttqsEnsureRuntimeEvidence_\(spec, responseId\)/));
 
 for (const code of ['CLARITY', 'RELEVANCE', 'SAFETY', 'PRACTICE', 'OVERALL']) test(`reaction dimension list contains ${code}`, () => assert.ok(forms.includes(`'${code}'`)));
