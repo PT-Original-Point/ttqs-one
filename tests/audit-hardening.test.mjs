@@ -55,7 +55,7 @@ test('audit: stale RUNNING lease expires but fresh RUNNING lease does not', () =
   assert.equal(sandbox.ttqsLedgerRunningLeaseExpired_(fresh, now), false);
 });
 
-test('audit: retry eligibility includes due FAILED and stale RUNNING only', () => {
+test('audit: retry eligibility includes due FAILED and stale RUNNING even at max attempt for terminalization', () => {
   const sandbox = load('Retry.gs', base({
     ttqsConfig_() { return { MAX_ATTEMPTS: 3 }; },
     ttqsLedgerRunningLeaseExpired_(job) { return job.object.notes === 'STALE'; }
@@ -63,7 +63,53 @@ test('audit: retry eligibility includes due FAILED and stale RUNNING only', () =
   const now = Date.parse('2026-08-11T12:00:00Z');
   assert.equal(sandbox.ttqsRetryJobEligible_({ object: { status: 'FAILED', attempt_no: 1, max_attempts: 3, retry_at: '2026-08-11T11:00:00Z' } }, now), true);
   assert.equal(sandbox.ttqsRetryJobEligible_({ object: { status: 'RUNNING', attempt_no: 1, max_attempts: 3, notes: 'STALE' } }, now), true);
+  assert.equal(sandbox.ttqsRetryJobEligible_({ object: { status: 'RUNNING', attempt_no: 3, max_attempts: 3, notes: 'STALE' } }, now), true);
   assert.equal(sandbox.ttqsRetryJobEligible_({ object: { status: 'RUNNING', attempt_no: 1, max_attempts: 3, notes: 'FRESH' } }, now), false);
+  assert.equal(sandbox.ttqsRetryJobEligible_({ object: { status: 'FAILED', attempt_no: 3, max_attempts: 3, retry_at: '2026-08-11T11:00:00Z' } }, now), false);
+});
+
+test('audit: stale RUNNING at max attempts is terminalized instead of stranded', () => {
+  let failCalls = 0;
+  let stageCalls = 0;
+  const jobObject = { job_id: 'J-MAX', event_type: 'FORM_SUITE', status: 'RUNNING', attempt_no: 3, max_attempts: 3, notes: JSON.stringify({ rawRef: 'R', sheetId: 1 }) };
+  const sandbox = load('Retry.gs', base({
+    ttqsAssertTestOnly_() {},
+    ttqsReadObjects_() { return [{ rowNumber: 2, object: jobObject }]; },
+    ttqsLedgerSheet_() { return 'ledger'; },
+    ttqsConfig_() { return { MAX_ATTEMPTS: 3 }; },
+    ttqsLedgerRunningLeaseExpired_() { return true; },
+    ttqsLedgerStage_() { stageCalls++; },
+    ttqsNow_() { return 'NOW'; },
+    ttqsLedgerFail_(job, err) { failCalls++; job.object.status = 'FAILED_FINAL'; job.object.error_message = err.message; },
+    ttqsParseJson_(v, f) { return v ? JSON.parse(v) : f; },
+    ttqsFindRawSubmissionByRef_() { throw new Error('SHOULD_NOT_LOOKUP'); },
+    ttqsHandleRawObjectUnlocked_() { throw new Error('SHOULD_NOT_DELEGATE'); }
+  }));
+  const result = sandbox.ttqsRetryFailedJobsUnlocked_();
+  assert.equal(stageCalls, 1);
+  assert.equal(failCalls, 1);
+  assert.equal(jobObject.status, 'FAILED_FINAL');
+  assert.equal(result[0].terminalized, true);
+  assert.equal(result[0].error, 'STALE_RUNNING_MAX_ATTEMPTS_EXCEEDED');
+});
+
+test('audit: delegated FORM_SUITE handler owns ledger failure without outer double-fail', () => {
+  let outerFailCalls = 0;
+  const jobObject = { job_id: 'J1', event_type: 'FORM_SUITE', status: 'FAILED', attempt_no: 1, max_attempts: 3, retry_at: '', notes: JSON.stringify({ rawRef: 'R1', sheetId: 77 }) };
+  const sandbox = load('Retry.gs', base({
+    ttqsAssertTestOnly_() {},
+    ttqsReadObjects_() { return [{ rowNumber: 2, object: jobObject }]; },
+    ttqsLedgerSheet_() { return 'ledger'; },
+    ttqsConfig_() { return { MAX_ATTEMPTS: 3 }; },
+    ttqsLedgerRunningLeaseExpired_() { return false; },
+    ttqsParseJson_(v, f) { return v ? JSON.parse(v) : f; },
+    ttqsFindRawSubmissionByRef_() { return { rawRef: 'R1' }; },
+    ttqsHandleRawObjectUnlocked_() { jobObject.status = 'FAILED'; throw new Error('INNER_HANDLER_ALREADY_FAILED_LEDGER'); },
+    ttqsLedgerFail_() { outerFailCalls++; }
+  }));
+  const result = sandbox.ttqsRetryFailedJobsUnlocked_();
+  assert.equal(outerFailCalls, 0);
+  assert.equal(result[0].error, 'INNER_HANDLER_ALREADY_FAILED_LEDGER');
 });
 
 test('audit: reconciliation detects raw response with no event identity', () => {
