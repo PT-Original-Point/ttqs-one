@@ -1,21 +1,32 @@
 {
-  "candidate": "TTQS_ONE_P1_05_AUTH_PREFLIGHT_HARDENING_V0.6.2_20260811",
-  "version": "0.6.2",
+  "report_role": "IMMUTABLE_CANDIDATE_BUILD_SNAPSHOT_NOT_FINAL_ATTESTATION",
+  "candidate": "TTQS_ONE_P1_05_AUDIT_HARDENING_V0.6.3_20260811",
+  "version": "0.6.3",
   "status": "SOURCE_PATCH_PENDING_EXTERNAL_GATES",
-  "base_main_commit": "f5ee53e2e9294d158192171db1cc7883ad869ed0",
-  "security_delta": [
-    "Bootstrap requires all explicit OAuth scopes in FULL auth mode before any runtime side effect",
-    "CI verifies release manifest file hashes and manifest self hash fail-closed",
-    "Historical v0.6.1 manifest workflow hashes were found stale and are corrected in v0.6.2"
+  "base_main_commit": "76660888dcd8a7ed6c767ddfa2781b937ab2658c",
+  "source_delta": [
+    "Persist immutable TTQS_EVENT_ID in each real Google Form response row before ledger processing",
+    "Use Form ID plus immutable event ID as FORM_SUITE source_ref; raw row fingerprint becomes integrity evidence rather than primary identity",
+    "Retry FAILED jobs and stale RUNNING jobs after a bounded lease, resolving the current raw row by immutable source_ref",
+    "Reconciliation starts from raw RUNTIME response rows and detects missing event identity, missed triggers, duplicate ledger rows, component-count mismatches and cross-link mismatches",
+    "Health reports FULL Apps Script authorization status",
+    "Managed trigger contract validates event type, trigger source and TEST core source ID",
+    "Forms fail closed unless published state and responder URL are readable",
+    "Runtime SAMPLE evidence records provider form, raw fingerprint, job linkage and NOT_FORMAL admissibility",
+    "Manifest verifier requires exact coverage of git tracked regular files except the manifest and its self-hash file"
   ],
-  "expected_test_suite_after_patch": "104 tests",
-  "local_execution_note": "Chat container has no external DNS; full npm suite and clasp verification must pass in GitHub Actions before merge. This report does not claim those external gates have passed.",
+  "known_nonblocking_post_demo_debt": [
+    "GitHub Actions still use mutable major action tags",
+    "CI clasp verification still downloads @google/clasp@3.3.0 from npm at runtime",
+    "Apps Script and Google Sheets remain a limited TEST/SAMPLE architecture, not a proven production system of record"
+  ],
+  "snapshot_semantics": "This file describes candidate source intent at freeze time. GitHub PR/CI/merge evidence belongs in a separate acceptance record; Google provider execution belongs in a runtime evidence package.",
   "deploy_set_expected": "appsscript.json plus 13 root-level .gs files only",
   "external_gates_required": [
-    "GitHub exact-byte readback",
-    "GitHub Actions CI including manifest verification",
+    "GitHub exact source readback",
+    "GitHub Actions CI including exact manifest coverage verification",
     "official @google/clasp@3.3.0 show-file-status verification",
-    "real TEST Apps Script runtime"
+    "real TEST Apps Script provider runtime"
   ],
   "environment": "TEST",
   "enable_real_writes": false,
