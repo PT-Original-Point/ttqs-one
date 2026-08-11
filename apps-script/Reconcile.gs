@@ -1,10 +1,5 @@
 function ttqsExpectedSurveyTypeForKind_(kind) {
-  var map = {
-    NEEDS: 'NEEDS',
-    REGISTRATION: 'REGISTRATION',
-    REACTION: 'REACTION',
-    FOLLOWUP30: '30_DAY_BEHAVIOR'
-  };
+  var map = { NEEDS: 'NEEDS', REGISTRATION: 'REGISTRATION', REACTION: 'REACTION', FOLLOWUP30: '30_DAY_BEHAVIOR' };
   var value = map[String(kind)];
   if (!value) throw new Error('UNKNOWN_FORM_KIND_FOR_RECONCILE:' + kind);
   return value;
@@ -12,23 +7,30 @@ function ttqsExpectedSurveyTypeForKind_(kind) {
 
 function ttqsReconcileRaw_(raw) {
   var cfg = ttqsConfig_();
-  var idempotencyKey = 'TEST:' + raw.rawRef;
-  var ledgerRows = ttqsFindRowsByValue_(ttqsLedgerSheet_(), 'idempotency_key', idempotencyKey);
   var detail = {
     rawRef: raw.rawRef,
+    eventId: raw.eventId,
     rawFingerprint: raw.rawFingerprint,
     formId: raw.formId,
     sheetId: raw.sheetId,
     observedRowNumber: raw.rowNumber,
     kind: raw.kind,
-    idempotencyKey: idempotencyKey,
-    ledgerCount: ledgerRows.length,
+    ledgerCount: 0,
     surveyCount: 0,
     partyCount: 0,
     evidenceCount: 0,
     linkageErrors: []
   };
 
+  if (!raw.eventId || !raw.rawRef) {
+    detail.status = 'MISMATCH_EVENT_ID_MISSING';
+    return detail;
+  }
+
+  var idempotencyKey = 'TEST:' + raw.rawRef;
+  detail.idempotencyKey = idempotencyKey;
+  var ledgerRows = ttqsFindRowsByValue_(ttqsLedgerSheet_(), 'idempotency_key', idempotencyKey);
+  detail.ledgerCount = ledgerRows.length;
   if (ledgerRows.length === 0) {
     detail.status = 'MISMATCH_TRIGGER_MISSED';
     return detail;
@@ -49,6 +51,7 @@ function ttqsReconcileRaw_(raw) {
   if (String(job.object_type) !== String(raw.kind)) detail.linkageErrors.push('JOB_OBJECT_TYPE:' + String(job.object_type));
   if (String(job.object_id) !== String(raw.rawRef)) detail.linkageErrors.push('JOB_OBJECT_ID');
   if (String(notes.rawRef || '') !== String(raw.rawRef)) detail.linkageErrors.push('JOB_RAW_REF');
+  if (String(notes.eventId || '') !== String(raw.eventId)) detail.linkageErrors.push('JOB_EVENT_ID');
   if (String(notes.rawFingerprint || '') !== String(raw.rawFingerprint)) detail.linkageErrors.push('JOB_RAW_FINGERPRINT');
   if (String(notes.formId || '') !== String(raw.formId)) detail.linkageErrors.push('JOB_FORM_ID');
 
@@ -68,10 +71,14 @@ function ttqsReconcileRaw_(raw) {
   if (surveyRows.length === 1 && partyRows.length === 1) {
     var survey = surveyRows[0].object;
     var party = partyRows[0].object;
+    var surveyNotes = ttqsParseJson_(survey.notes, {});
     if (String(survey.class_run_id) !== String(cfg.CLASS_RUN_ID)) detail.linkageErrors.push('SURVEY_CLASS_RUN');
     if (String(survey.party_alias_id) !== String(party.party_alias_id)) detail.linkageErrors.push('SURVEY_PARTY_LINK');
     if (String(survey.survey_type) !== ttqsExpectedSurveyTypeForKind_(raw.kind)) detail.linkageErrors.push('SURVEY_TYPE');
     if (String(survey.source_ref) !== String(raw.rawRef)) detail.linkageErrors.push('SURVEY_SOURCE_REF');
+    if (String(surveyNotes.job_id || '') !== String(job.job_id)) detail.linkageErrors.push('SURVEY_JOB_LINK');
+    if (String(surveyNotes.provider_form_id || '') !== String(raw.formId)) detail.linkageErrors.push('SURVEY_FORM_ID');
+    if (String(surveyNotes.provider_raw_fingerprint || '') !== String(raw.rawFingerprint)) detail.linkageErrors.push('SURVEY_RAW_FINGERPRINT');
   }
 
   if (surveyRows.length === 1 && evidenceRows.length === 1) {
@@ -112,7 +119,7 @@ function ttqsReconcileUnlocked_() {
       return;
     }
     for (var rowNumber = 2; rowNumber <= sheet.getLastRow(); rowNumber++) {
-      details.push(ttqsReconcileRaw_(ttqsRawSubmission_(Number(sheetId), rowNumber)));
+      details.push(ttqsReconcileRaw_(ttqsRawSubmission_(Number(sheetId), rowNumber, false)));
     }
   });
 
