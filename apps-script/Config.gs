@@ -1,5 +1,5 @@
 var TTQS_CONFIG = Object.freeze({
-  VERSION: '0.6.1',
+  VERSION: '0.6.2',
   ENVIRONMENT: 'TEST',
   TIME_ZONE: 'Asia/Taipei',
   CORE_SPREADSHEET_ID: '1TzICbMmNoN2dTiRMK1dPYx-JOISKaCS-6i0i3iH68is',
