@@ -1,8 +1,8 @@
 {
   "name": "ttqs-one",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "private": true,
-  "description": "TTQS ONE TEST runtime candidate for 2026-08-13 consultant demo",
+  "description": "TTQS ONE TEST pre-runtime hardened candidate for 2026-08-13 consultant demo",
   "type": "module",
   "scripts": {
     "lint": "node scripts/lint-gs.mjs",
@@ -11,7 +11,5 @@
     "verify:clasp-status": "node scripts/verify-clasp-status.mjs clasp-status.json",
     "verify": "npm run lint && npm test && npm run verify:deploy"
   },
-  "engines": {
-    "node": ">=22"
-  }
+  "engines": { "node": ">=22" }
 }

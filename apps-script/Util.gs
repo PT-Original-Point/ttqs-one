@@ -54,3 +54,14 @@ function ttqsUnique_(values) {
     return true;
   });
 }
+
+function ttqsWithScriptLock_(fn) {
+  var lock = LockService.getScriptLock();
+  var acquired = lock.tryLock(Number(ttqsConfig_().LOCK_WAIT_MS));
+  if (!acquired) throw new Error('TTQS_SCRIPT_LOCK_TIMEOUT');
+  try {
+    return fn();
+  } finally {
+    lock.releaseLock();
+  }
+}

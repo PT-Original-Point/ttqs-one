@@ -3,7 +3,7 @@ function ttqsLedgerSheet_() {
 }
 
 function ttqsLedgerFind_(idempotencyKey) {
-  return ttqsFindRowByValue_(ttqsLedgerSheet_(), 'idempotency_key', idempotencyKey);
+  return ttqsFindUniqueRowByValue_(ttqsLedgerSheet_(), 'idempotency_key', idempotencyKey, 'DUPLICATE_LEDGER_IDEMPOTENCY_KEY');
 }
 
 function ttqsLedgerEnsure_(spec) {
@@ -45,28 +45,44 @@ function ttqsLedgerPatch_(job, patch) {
   return job;
 }
 
+function ttqsLedgerStage_(job, stage, extra) {
+  var notes = Object.assign({}, ttqsParseJson_(job.object.notes, {}), extra || {}, { stage: stage, stageAt: ttqsNow_() });
+  return ttqsLedgerPatch_(job, { notes: JSON.stringify(notes) });
+}
+
 function ttqsLedgerStart_(job, isRetry) {
   var attempt = Number(job.object.attempt_no || 0) + 1;
+  var notes = Object.assign({}, ttqsParseJson_(job.object.notes, {}));
+  if (!notes.initialTriggerSource) notes.initialTriggerSource = job.object.trigger_source;
+  notes.retry = !!isRetry;
+  if (isRetry) notes.retryTrigger = 'TIME_RETRY';
   return ttqsLedgerPatch_(job, {
     status: 'RUNNING',
     attempt_no: attempt,
+    trigger_source: isRetry ? 'TIME_RETRY' : job.object.trigger_source,
     started_at: ttqsNow_(),
     finished_at: '',
     error_class: '',
     error_message: '',
     retry_at: '',
-    notes: JSON.stringify(Object.assign({}, ttqsParseJson_(job.object.notes, {}), { retry: !!isRetry }))
+    notes: JSON.stringify(notes)
   });
 }
 
 function ttqsLedgerSuccess_(job, notesPatch) {
   var notes = Object.assign({}, ttqsParseJson_(job.object.notes, {}), notesPatch || {});
-  return ttqsLedgerPatch_(job, {
+  ttqsLedgerPatch_(job, {
     status: 'SUCCESS',
     finished_at: ttqsNow_(),
     retry_at: '',
     notes: JSON.stringify(notes)
   });
+  if (job.object.event_type === 'FORM_SUITE' && notes.recovered === true) {
+    var recoveryEvidence = ttqsEnsureRuntimeRecoveryEvidence_(job);
+    notes.recoveryEvidenceId = recoveryEvidence.evidenceId;
+    ttqsLedgerPatch_(job, { notes: JSON.stringify(notes) });
+  }
+  return job;
 }
 
 function ttqsLedgerFail_(job, err) {
