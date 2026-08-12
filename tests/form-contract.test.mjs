@@ -23,6 +23,13 @@ test('all forms target core spreadsheet', () => assert.match(forms, /setDestinat
 test('form creation explicitly publishes form', () => assert.match(forms, /setPublished\(true\)/));
 test('form publication is read back fail-closed', () => assert.match(forms, /isPublished\(\) !== true/));
 test('published responder URL is required', () => assert.match(forms, /FORM_PUBLISHED_URL_EMPTY/));
+test('forms tolerate provider no-response-destination exception before setDestination', () => {
+  assert.match(forms, /function ttqsFormDestinationSnapshot_\(form\)/);
+  assert.match(forms, /no response destination/);
+  assert.match(forms, /return \{ id: '', type: null \}/);
+  assert.match(forms, /var destination = ttqsFormDestinationSnapshot_\(form\)/);
+});
+test('unexpected destination inspection errors remain fail-closed', () => assert.match(forms, /throw err;/));
 test('raw response persists immutable event ID', () => assert.match(router, /TTQS_EVENT_ID/));
 test('raw response identity excludes row number from source ref', () => assert.match(router, /'FORM_SUITE:' \+ formId \+ ':' \+ eventId/));
 test('raw retry resolves immutable ref by scanning current rows', () => assert.match(router, /ttqsFindRawSubmissionByRef_/));
