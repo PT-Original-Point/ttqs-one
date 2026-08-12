@@ -6,6 +6,7 @@ import path from 'node:path';
 const dir = 'apps-script';
 const files = fs.readdirSync(dir).filter((n) => n.endsWith('.gs')).sort();
 const all = files.map((n) => fs.readFileSync(path.join(dir, n), 'utf8')).join('\n');
+const ledgerSource = fs.readFileSync(path.join(dir, 'Ledger.gs'), 'utf8');
 const manifest = JSON.parse(fs.readFileSync('apps-script/appsscript.json', 'utf8'));
 
 const checks = [
@@ -60,7 +61,13 @@ const checks = [
   ['append-only AttemptHistory sheet contract present', () => assert.match(all, /16_AttemptHistory_嘗試歷史/)],
   ['immutable AttemptHistory update guard present', () => assert.match(all, /ATTEMPT_HISTORY_IMMUTABLE_UPDATE_FORBIDDEN/)],
   ['hash-chained audit records present', () => assert.match(all, /previous_event_hash[\s\S]*record_hash/)],
-  ['retry start does not clear JobLedger error fields', () => assert.doesNotMatch(all, /function ttqsLedgerStart_\([\s\S]*?error_class:\s*''[\s\S]*?error_message:\s*''[\s\S]*?ttqsLedgerPatch_\(job, patch\)/)],
+  ['retry start JobLedger patch preserves prior error fields', () => {
+    const match = ledgerSource.match(/function ttqsLedgerStart_\(job, isRetry\) \{([\s\S]*?)\n\}\n\nfunction ttqsLedgerRunningLeaseExpired_/);
+    assert.ok(match, 'ttqsLedgerStart_ function body must be isolatable');
+    const patchMatch = match[1].match(/var patch = \{([\s\S]*?)\n  \};/);
+    assert.ok(patchMatch, 'ttqsLedgerStart_ JobLedger patch must exist');
+    assert.doesNotMatch(patchMatch[1], /error_class|error_message/);
+  }],
   ['final acceptance gate present', () => assert.match(all, /FINAL_ACCEPTED/)],
   ['reconciliation watchdog present', () => assert.match(all, /function ttqsReconciliationWatchdog_\(/)],
   ['health validates audit hash chain', () => assert.match(all, /attempt_history_hash_chain/)],
