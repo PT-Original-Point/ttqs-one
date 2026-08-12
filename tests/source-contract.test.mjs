@@ -11,7 +11,7 @@ const manifest = JSON.parse(fs.readFileSync('apps-script/appsscript.json', 'utf8
 
 const checks = [
   ['13 gs sources', () => assert.equal(files.length, 13)],
-  ['version 0.6.4', () => assert.match(all, /VERSION: '0\.6\.4'/)],
+  ['version 0.6.5', () => assert.match(all, /VERSION: '0\.6\.5'/)],
   ['audit log version 2', () => assert.match(all, /AUDIT_LOG_VERSION: 2/)],
   ['TEST environment fixed', () => assert.match(all, /ENVIRONMENT: 'TEST'/)],
   ['real writes disabled', () => assert.match(all, /ENABLE_REAL_WRITES: false/)],
@@ -44,6 +44,8 @@ const checks = [
   ['no FormResponse submit', () => assert.doesNotMatch(all, /FormResponse\s*\.\s*submit|\.submit\(\)/)],
   ['retry handler present', () => assert.match(all, /function ttqsRetryFailedJobs\(/)],
   ['retry provenance updates trigger source', () => assert.match(all, /'TIME_RETRY'/)],
+  ['P0 provider audit alias contract present', () => assert.match(all, /S-P0AUDIT-RUNTIME/)],
+  ['P0 provider contract self-heal hook present', () => assert.match(all, /ttqsMaintainP0AuditRegistrationProviderContract_/)],
   ['runtime evidence registration present', () => assert.match(all, /function ttqsEnsureRuntimeEvidence_\(/)],
   ['recovery evidence registration present', () => assert.match(all, /function ttqsEnsureRuntimeRecoveryEvidence_\(/)],
   ['runtime evidence provider linkage present', () => assert.match(all, /evidence_origin: 'GOOGLE_FORM_RUNTIME'/)],
