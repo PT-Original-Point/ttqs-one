@@ -1,74 +1,56 @@
-var TTQS_EVENT_ID_HEADER = 'TTQS_EVENT_ID';
-
-function ttqsFormIdForKind_(kind) {
-  var formId = PropertiesService.getScriptProperties().getProperty('TTQS_FORM_' + kind + '_ID');
-  if (!formId) throw new Error('MISSING_FORM_ID_FOR_KIND:' + kind);
-  return String(formId);
-}
-
-function ttqsRawFingerprint_(kind, formId, sheetId, headers, values) {
-  return ttqsDigest_(JSON.stringify({
-    kind: String(kind),
-    formId: String(formId),
-    sheetId: Number(sheetId),
-    headers: headers.map(String),
-    values: values.map(String)
-  }));
-}
-
-function ttqsEventIdColumn_(sheet, createIfMissing) {
-  var lastColumn = sheet.getLastColumn();
-  var headers = lastColumn > 0 ? sheet.getRange(1, 1, 1, lastColumn).getDisplayValues()[0].map(String) : [];
-  var matches = [];
-  headers.forEach(function(header, i) {
-    if (header === TTQS_EVENT_ID_HEADER) matches.push(i + 1);
-  });
-  if (matches.length > 1) throw new Error('DUPLICATE_EVENT_ID_HEADER:' + matches.length);
-  if (matches.length === 1) return matches[0];
-  if (!createIfMissing) return 0;
-  var column = lastColumn + 1;
-  sheet.getRange(1, column).setValue(TTQS_EVENT_ID_HEADER);
-  return column;
-}
-
 function ttqsEnsureEventId_(sheet, rowNumber) {
-  var column = ttqsEventIdColumn_(sheet, true);
-  var cell = sheet.getRange(rowNumber, column);
+  var col = ttqsEventIdColumn_(sheet);
+  var cell = sheet.getRange(rowNumber, col);
   var existing = String(cell.getDisplayValue() || '').trim();
   if (existing) return existing;
-  var eventId = ttqsStableId_('EVT-', Utilities.getUuid(), 24);
+  var eventId = ttqsStableId_('EVT-', Utilities.getUuid() + '|' + sheet.getSheetId() + '|' + rowNumber + '|' + new Date().getTime(), 24);
   cell.setValue(eventId);
   SpreadsheetApp.flush();
   var readback = String(cell.getDisplayValue() || '').trim();
-  if (readback !== eventId) throw new Error('EVENT_ID_WRITE_READBACK_MISMATCH');
+  if (readback !== eventId) throw new Error('EVENT_ID_PERSIST_READBACK_FAILED');
   return eventId;
+}
+
+function ttqsEventIdColumn_(sheet) {
+  var headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getDisplayValues()[0];
+  var index = headers.indexOf('TTQS_EVENT_ID');
+  if (index >= 0) return index + 1;
+  var col = headers.length + 1;
+  sheet.getRange(1, col).setValue('TTQS_EVENT_ID');
+  SpreadsheetApp.flush();
+  return col;
+}
+
+function ttqsRawFingerprint_(kind, formId, sheetId, headers, values) {
+  var pairs = [];
+  headers.forEach(function(header, i) {
+    if (String(header) === 'TTQS_EVENT_ID') return;
+    pairs.push([String(header), String(values[i] === undefined ? '' : values[i])]);
+  });
+  return ttqsDigest_(JSON.stringify({ kind: kind, formId: formId, sheetId: Number(sheetId), pairs: pairs }));
+}
+
+function ttqsCanonicalHeader_(kind, header) {
+  var map = ttqsFormHeaderMap_();
+  var kindMap = map[String(kind)] || {};
+  var key = String(header || '');
+  return kindMap[key] || key;
 }
 
 function ttqsRawSubmission_(sheetId, rowNumber, ensureEventId) {
   var ss = ttqsOpenCore_();
   var sheet = ss.getSheets().filter(function(s) { return s.getSheetId() === Number(sheetId); })[0];
   if (!sheet) throw new Error('UNKNOWN_RESPONSE_SHEET:' + sheetId);
-  if (rowNumber < 2 || rowNumber > sheet.getLastRow()) throw new Error('INVALID_RESPONSE_ROW');
-
-  var eventColumn = ttqsEventIdColumn_(sheet, !!ensureEventId);
-  var eventId = eventColumn ? (ensureEventId ? ttqsEnsureEventId_(sheet, rowNumber) : String(sheet.getRange(rowNumber, eventColumn).getDisplayValue() || '').trim()) : '';
+  if (ensureEventId) ttqsEnsureEventId_(sheet, rowNumber);
   var lastColumn = sheet.getLastColumn();
-  var allHeaders = sheet.getRange(1, 1, 1, lastColumn).getDisplayValues()[0].map(String);
-  var allValues = sheet.getRange(rowNumber, 1, 1, lastColumn).getDisplayValues()[0].map(String);
-  var headers = [];
-  var values = [];
-  var named = {};
-  allHeaders.forEach(function(header, i) {
-    if (header === TTQS_EVENT_ID_HEADER) return;
-    var canonicalHeader = ttqsCanonicalFieldCode_(header);
-    headers.push(String(canonicalHeader));
-    values.push(String(allValues[i]));
-    named[String(canonicalHeader)] = allValues[i];
-  });
-
+  var headers = sheet.getRange(1, 1, 1, lastColumn).getDisplayValues()[0].map(String);
+  var values = sheet.getRange(rowNumber, 1, 1, lastColumn).getDisplayValues()[0];
   var map = ttqsParseJson_(PropertiesService.getScriptProperties().getProperty('TTQS_RESPONSE_SHEET_MAP'), {});
   var kind = map[String(sheetId)];
   if (!kind) throw new Error('UNMAPPED_RESPONSE_SHEET:' + sheetId);
+  var named = {};
+  headers.forEach(function(header, i) { named[ttqsCanonicalHeader_(kind, header)] = values[i]; });
+  var eventId = String(named.TTQS_EVENT_ID || '').trim();
   var formId = ttqsFormIdForKind_(kind);
   var fingerprint = ttqsRawFingerprint_(kind, formId, sheetId, headers, values);
   return {
@@ -109,9 +91,7 @@ function ttqsProcessSubmission_(raw, job) {
   };
   var surveyResult;
   if (raw.kind === 'REGISTRATION') {
-    var props = PropertiesService.getScriptProperties();
-    if (props.getProperty('TTQS_FAIL_NEXT_REG_AFTER_PARTY') === 'TRUE') {
-      props.deleteProperty('TTQS_FAIL_NEXT_REG_AFTER_PARTY');
+    if (ttqsShouldInjectRegistrationFailure_(raw, aliasCode)) {
       throw new Error('TTQS_INJECTED_PARTIAL_FAILURE_AFTER_PARTY_ALIAS');
     }
     surveyResult = ttqsWriteSurvey_(Object.assign({}, common, {
