@@ -137,7 +137,22 @@ test('response sheet polling tolerates delayed sheet creation', () => {
 test('partial form state reuses same form id and recovers response sheet mapping', () => {
   const stored = { TTQS_FORM_REGISTRATION_ID: 'FORM-1' };
   let createCalls = 0;
-  const items = ['TTQS_ALIAS_CODE', 'TTQS_SAMPLE_CONFIRM'].map((title) => ({ getTitle() { return title; } }));
+  const itemState = [];
+  function mockChoiceItem(title) {
+    const state = { title, help: '', choices: [], required: false };
+    itemState.push(state);
+    const item = {
+      getTitle() { return state.title; },
+      getType() { return 'MULTIPLE_CHOICE_ENUM'; },
+      asMultipleChoiceItem() { return item; },
+      setTitle(v) { state.title = String(v); return item; },
+      setHelpText(v) { state.help = String(v); return item; },
+      setChoiceValues(v) { state.choices = Array.from(v); return item; },
+      setRequired(v) { state.required = !!v; return item; }
+    };
+    return item;
+  }
+  const items = [mockChoiceItem('TTQS_ALIAS_CODE'), mockChoiceItem('TTQS_SAMPLE_CONFIRM')];
   const form = {
     getItems() { return items; }, getResponses() { return []; }, deleteItem() {},
     setTitle() {}, setDescription() {}, setConfirmationMessage() {}, setCollectEmail() {}, setLimitOneResponsePerUser() {}, setPublished() {}, isPublished() { return true; },
@@ -149,13 +164,23 @@ test('partial form state reuses same form id and recovers response sheet mapping
     getRange() { return { getDisplayValues() { return [['Timestamp', 'TTQS_ALIAS_CODE', 'TTQS_SAMPLE_CONFIRM']]; } }; }
   };
   const ss = { getSheets() { return [sheet]; }, getSheetByName() { return null; } };
+  let permissionCreated = 0;
+  const permissions = [{ id: 'P-ORG', type: 'domain', role: 'reader', view: 'published' }];
   const sandbox = load('Forms.gs', baseGlobals({
     ttqsAssertTestOnly_() {},
     ttqsOpenCore_() { return ss; },
     ttqsConfig_() { return { CORE_SPREADSHEET_ID: 'CORE', FORM_RESPONSE_WAIT_MS: 1000, FORM_RESPONSE_POLL_MS: 1 }; },
     SpreadsheetApp: { flush() {} }, Utilities: { sleep() {} },
     PropertiesService: { getScriptProperties() { return { getProperty(k) { return stored[k] || null; }, setProperty(k, v) { stored[k] = String(v); } }; } },
-    FormApp: { DestinationType: { SPREADSHEET: 'SPREADSHEET_ENUM' }, openById() { return form; }, create() { createCalls++; return form; } }
+    FormApp: {
+      DestinationType: { SPREADSHEET: 'SPREADSHEET_ENUM' },
+      ItemType: { MULTIPLE_CHOICE: 'MULTIPLE_CHOICE_ENUM', SCALE: 'SCALE_ENUM' },
+      openById() { return form; }, create() { createCalls++; return form; }
+    },
+    Drive: { Permissions: {
+      list() { return { permissions }; },
+      create(permission) { permissionCreated++; permissions.push(Object.assign({ id: 'P-ANY' }, permission)); return permission; }
+    } }
   }));
   const result = sandbox.ttqsEnsureOneForm_('REGISTRATION', sandbox.ttqsFormDefinitions_().REGISTRATION);
   assert.equal(createCalls, 0);
@@ -163,7 +188,13 @@ test('partial form state reuses same form id and recovers response sheet mapping
   assert.equal(result.responseSheetId, 77);
   assert.equal(result.published, true);
   assert.equal(result.recoveredPartialState, true);
+  assert.equal(result.anyoneWithLinkResponder, true);
+  assert.equal(permissionCreated, 1);
   assert.equal(stored.TTQS_FORM_REGISTRATION_SHEET_ID, '77');
+  assert.equal(itemState[0].title, '示範學員代碼');
+  assert.equal(itemState[1].title, '確認本次為示範填答');
+  assert.equal(itemState[0].required, true);
+  assert.equal(itemState[1].required, true);
 });
 
 test('bootstrap failure is ledgered after job starts', () => {
