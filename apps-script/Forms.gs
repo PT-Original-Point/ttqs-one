@@ -145,6 +145,19 @@ function ttqsNameResponseSheet_(ss, responseSheet, kind) {
   return responseSheet;
 }
 
+function ttqsFormDestinationSnapshot_(form) {
+  try {
+    return {
+      id: String(form.getDestinationId() || ''),
+      type: form.getDestinationType()
+    };
+  } catch (err) {
+    var message = String(err && err.message ? err.message : err).toLowerCase();
+    if (message.indexOf('no response destination') !== -1) return { id: '', type: null };
+    throw err;
+  }
+}
+
 function ttqsEnsureOneForm_(kind, def) {
   var props = PropertiesService.getScriptProperties();
   var formIdKey = 'TTQS_FORM_' + kind + '_ID';
@@ -168,8 +181,9 @@ function ttqsEnsureOneForm_(kind, def) {
 
   var publishedUrl = ttqsEnsureFormShape_(form, kind, def);
 
-  var destinationId = form.getDestinationId();
-  var destinationType = form.getDestinationType();
+  var destination = ttqsFormDestinationSnapshot_(form);
+  var destinationId = destination.id;
+  var destinationType = destination.type;
   var responseSheet = null;
 
   if (existingSheetId) {
