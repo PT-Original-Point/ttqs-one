@@ -1,20 +1,20 @@
 function ttqsFormDefinitions_() {
   return {
     NEEDS: {
-      title: '[SAMPLE][TEST] TTQS ONE - Needs Survey',
-      description: 'TEST SAMPLE only. All responses are controlled SAMPLE values. Do not enter real names, email, phone, ID numbers, or medical information.'
+      title: '【示範／測試】TTQS ONE－課前需求調查',
+      description: '顧問 DEMO 用測試表單。請只使用畫面提供的示範代碼與選項，不要填寫真實姓名、Email、電話、身分證字號、醫療資訊或其他個人資料。'
     },
     REGISTRATION: {
-      title: '[SAMPLE][TEST] TTQS ONE - Registration',
-      description: 'TEST SAMPLE only. Select a synthetic alias. No real personal data.'
+      title: '【示範／測試】TTQS ONE－課程報名',
+      description: '顧問 DEMO 用測試表單。請選擇系統提供的示範學員代碼；本表單不收集真實個人資料。'
     },
     REACTION: {
-      title: '[SAMPLE][TEST] TTQS ONE - Satisfaction',
-      description: 'TEST SAMPLE only. Scores and controlled SAMPLE choices are demonstration data and are not formal TTQS outcomes.'
+      title: '【示範／測試】TTQS ONE－課後滿意度',
+      description: '顧問 DEMO 用測試表單。以下分數與回饋皆為示範資料，只用來展示 TTQS ONE 的流程與證據鏈，不代表正式 TTQS 成果。'
     },
     FOLLOWUP30: {
-      title: '[SAMPLE][TEST] TTQS ONE - 30 Day Follow-up',
-      description: 'TEST SAMPLE only. All narrative content is selected from controlled SAMPLE choices. Do not enter real personal or medical information.'
+      title: '【示範／測試】TTQS ONE－30 日追蹤',
+      description: '顧問 DEMO 用測試表單。請使用系統提供的示範選項，不要填寫真實個人、醫療或其他敏感資訊。'
     }
   };
 }
@@ -23,7 +23,41 @@ function ttqsSampleAliasChoices_() {
   return ['S-L01', 'S-L02', 'S-L03', 'S-L04', 'S-L05', 'S-L06', 'S-L07'];
 }
 
-function ttqsExpectedFormTitles_(kind) {
+function ttqsFieldDisplayMap_() {
+  return {
+    TTQS_ALIAS_CODE: '示範學員代碼',
+    TTQS_NEED_SCORE: '本次課程需求程度',
+    TTQS_NEED_TEXT: '最希望增加的內容',
+    TTQS_SAMPLE_CONFIRM: '確認本次為示範填答',
+    TTQS_REACTION_CLARITY: '課程內容清楚度',
+    TTQS_REACTION_RELEVANCE: '課程內容與需求的相關程度',
+    TTQS_REACTION_SAFETY: '安全界線說明清楚度',
+    TTQS_REACTION_PRACTICE: '實作練習的幫助程度',
+    TTQS_REACTION_OVERALL: '整體滿意度',
+    TTQS_REACTION_TEXT: '本次課程回饋',
+    TTQS_30D_SAFE_ACTION: '30 日後安全行動實踐程度',
+    TTQS_30D_BOUNDARY: '30 日後界線判斷信心',
+    TTQS_30D_TEXT: '30 日後追蹤回饋'
+  };
+}
+
+function ttqsDisplayTitleForCode_(code) {
+  var map = ttqsFieldDisplayMap_();
+  return String(map[String(code)] || code);
+}
+
+function ttqsCanonicalFieldCode_(title) {
+  var value = String(title || '');
+  var map = ttqsFieldDisplayMap_();
+  if (Object.prototype.hasOwnProperty.call(map, value)) return value;
+  var codes = Object.keys(map);
+  for (var i = 0; i < codes.length; i++) {
+    if (String(map[codes[i]]) === value) return codes[i];
+  }
+  return value;
+}
+
+function ttqsExpectedFieldCodes_(kind) {
   var common = ['TTQS_ALIAS_CODE'];
   if (kind === 'NEEDS') return common.concat(['TTQS_NEED_SCORE', 'TTQS_NEED_TEXT']);
   if (kind === 'REGISTRATION') return common.concat(['TTQS_SAMPLE_CONFIRM']);
@@ -32,33 +66,43 @@ function ttqsExpectedFormTitles_(kind) {
   throw new Error('UNKNOWN_FORM_KIND:' + kind);
 }
 
+function ttqsExpectedFormTitles_(kind) {
+  return ttqsExpectedFieldCodes_(kind).map(ttqsDisplayTitleForCode_);
+}
+
 function ttqsBuildFormItems_(form, kind) {
-  form.addMultipleChoiceItem().setTitle('TTQS_ALIAS_CODE').setChoiceValues(ttqsSampleAliasChoices_()).setRequired(true);
+  form.addMultipleChoiceItem().setTitle(ttqsDisplayTitleForCode_('TTQS_ALIAS_CODE')).setChoiceValues(ttqsSampleAliasChoices_()).setRequired(true);
   if (kind === 'NEEDS') {
-    form.addScaleItem().setTitle('TTQS_NEED_SCORE').setBounds(1, 5).setLabels('Low', 'High').setRequired(true);
-    form.addMultipleChoiceItem().setTitle('TTQS_NEED_TEXT').setChoiceValues([
-      'SAMPLE：希望增加更多安全情境案例',
-      'SAMPLE：希望增加更多實作練習',
-      'SAMPLE：無其他需求'
+    form.addScaleItem().setTitle(ttqsDisplayTitleForCode_('TTQS_NEED_SCORE')).setBounds(1, 5).setLabels('較低', '較高').setRequired(true);
+    form.addMultipleChoiceItem().setTitle(ttqsDisplayTitleForCode_('TTQS_NEED_TEXT')).setChoiceValues([
+      '【示範】希望增加更多安全情境案例',
+      '【示範】希望增加更多實作練習',
+      '【示範】目前沒有其他需求'
     ]).setRequired(true);
   } else if (kind === 'REGISTRATION') {
-    form.addMultipleChoiceItem().setTitle('TTQS_SAMPLE_CONFIRM').setChoiceValues(['SAMPLE_ONLY']).setRequired(true);
+    form.addMultipleChoiceItem().setTitle(ttqsDisplayTitleForCode_('TTQS_SAMPLE_CONFIRM')).setChoiceValues(['我確認：本次只使用示範資料，不填寫真實個資']).setRequired(true);
   } else if (kind === 'REACTION') {
-    ['CLARITY', 'RELEVANCE', 'SAFETY', 'PRACTICE', 'OVERALL'].forEach(function(code) {
-      form.addScaleItem().setTitle('TTQS_REACTION_' + code).setBounds(1, 5).setLabels('1', '5').setRequired(true);
+    [
+      'TTQS_REACTION_CLARITY',
+      'TTQS_REACTION_RELEVANCE',
+      'TTQS_REACTION_SAFETY',
+      'TTQS_REACTION_PRACTICE',
+      'TTQS_REACTION_OVERALL'
+    ].forEach(function(code) {
+      form.addScaleItem().setTitle(ttqsDisplayTitleForCode_(code)).setBounds(1, 5).setLabels('較低', '較高').setRequired(true);
     });
-    form.addMultipleChoiceItem().setTitle('TTQS_REACTION_TEXT').setChoiceValues([
-      'SAMPLE：內容清楚，安全界線與實作方式容易理解',
-      'SAMPLE：情境演練有助於理解',
-      'SAMPLE：無其他回饋'
+    form.addMultipleChoiceItem().setTitle(ttqsDisplayTitleForCode_('TTQS_REACTION_TEXT')).setChoiceValues([
+      '【示範】內容清楚，安全界線與實作方式容易理解',
+      '【示範】情境演練有助於理解與應用',
+      '【示範】目前沒有其他回饋'
     ]).setRequired(true);
   } else if (kind === 'FOLLOWUP30') {
-    form.addScaleItem().setTitle('TTQS_30D_SAFE_ACTION').setBounds(1, 5).setLabels('1', '5').setRequired(true);
-    form.addScaleItem().setTitle('TTQS_30D_BOUNDARY').setBounds(1, 5).setLabels('1', '5').setRequired(true);
-    form.addMultipleChoiceItem().setTitle('TTQS_30D_TEXT').setChoiceValues([
-      'SAMPLE：遇到不確定情境時會先辨識警訊並尋求專業協助',
-      'SAMPLE：能依安全原則調整日常行為',
-      'SAMPLE：無其他追蹤回饋'
+    form.addScaleItem().setTitle(ttqsDisplayTitleForCode_('TTQS_30D_SAFE_ACTION')).setBounds(1, 5).setLabels('較低', '較高').setRequired(true);
+    form.addScaleItem().setTitle(ttqsDisplayTitleForCode_('TTQS_30D_BOUNDARY')).setBounds(1, 5).setLabels('較低', '較高').setRequired(true);
+    form.addMultipleChoiceItem().setTitle(ttqsDisplayTitleForCode_('TTQS_30D_TEXT')).setChoiceValues([
+      '【示範】遇到不確定情境時，會先辨識警訊並尋求專業協助',
+      '【示範】能依安全原則調整日常行為',
+      '【示範】目前沒有其他追蹤回饋'
     ]).setRequired(true);
   } else {
     throw new Error('UNKNOWN_FORM_KIND:' + kind);
@@ -69,18 +113,29 @@ function ttqsFormItemTitles_(form) {
   return form.getItems().map(function(item) { return String(item.getTitle()); });
 }
 
+function ttqsNormalizeExistingFormTitles_(form, kind) {
+  var items = form.getItems();
+  var expectedCodes = ttqsExpectedFieldCodes_(kind);
+  var currentCodes = items.map(function(item) { return ttqsCanonicalFieldCode_(item.getTitle()); });
+  var sameShape = currentCodes.length === expectedCodes.length && currentCodes.every(function(code, i) { return code === expectedCodes[i]; });
+  if (!sameShape) return false;
+  items.forEach(function(item, i) {
+    var displayTitle = ttqsDisplayTitleForCode_(expectedCodes[i]);
+    if (String(item.getTitle()) !== displayTitle) item.setTitle(displayTitle);
+  });
+  return true;
+}
+
 function ttqsEnsureFormShape_(form, kind, def) {
-  var expected = ttqsExpectedFormTitles_(kind);
-  var current = ttqsFormItemTitles_(form);
-  var same = current.length === expected.length && current.every(function(title, i) { return title === expected[i]; });
-  if (!same) {
+  var shapeCompatible = ttqsNormalizeExistingFormTitles_(form, kind);
+  if (!shapeCompatible) {
     if (form.getResponses().length > 0) throw new Error('FORM_SCHEMA_MISMATCH_WITH_RESPONSES:' + kind);
     for (var i = form.getItems().length - 1; i >= 0; i--) form.deleteItem(i);
     ttqsBuildFormItems_(form, kind);
   }
   form.setTitle(def.title);
   form.setDescription(def.description);
-  form.setConfirmationMessage('SAMPLE TEST response captured. This is not formal REAL TTQS evidence.');
+  form.setConfirmationMessage('示範資料已送出。這是 TTQS ONE TEST／SAMPLE 流程展示，不是正式 REAL TTQS 證據。');
   form.setCollectEmail(false);
   form.setLimitOneResponsePerUser(false);
   form.setPublished(true);
@@ -92,8 +147,10 @@ function ttqsEnsureFormShape_(form, kind, def) {
 
 function ttqsSheetMatchesFormKind_(sheet, kind) {
   if (!sheet || sheet.getLastColumn() < 1 || sheet.getLastRow() < 1) return false;
-  var headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getDisplayValues()[0].map(String);
-  return ttqsExpectedFormTitles_(kind).every(function(title) { return headers.indexOf(title) >= 0; });
+  var headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getDisplayValues()[0].map(function(header) {
+    return ttqsCanonicalFieldCode_(header);
+  });
+  return ttqsExpectedFieldCodes_(kind).every(function(code) { return headers.indexOf(code) >= 0; });
 }
 
 function ttqsMatchingResponseSheets_(ss, kind) {
