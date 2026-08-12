@@ -17,7 +17,7 @@ concurrency:
 
 jobs:
   deploy:
-    if: github.repository == 'PT-Original-Point/ttqs-one' && github.ref == 'refs/heads/fix/p0-append-only-attempt-history-20260813' && github.event.head_commit.message == 'ops: one-shot deploy 0.6.5 TEST'
+    if: "${{ github.repository == 'PT-Original-Point/ttqs-one' && github.ref == 'refs/heads/fix/p0-append-only-attempt-history-20260813' && github.event.head_commit.message == 'ops-one-shot-deploy-065' }}"
     runs-on: ubuntu-latest
     environment: TEST
     steps:
