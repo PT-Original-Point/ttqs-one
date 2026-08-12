@@ -56,6 +56,9 @@ function ttqsRetryFailedJobsUnlocked_() {
       results.push({ jobId: job.object.job_id, error: String(err.message || err), staleRunningRecovered: wasStaleRunning });
     }
   });
+  if (typeof ttqsMaintainP0AuditRegistrationProviderContract_ === 'function') {
+    ttqsMaintainP0AuditRegistrationProviderContract_();
+  }
   return results;
 }
 
