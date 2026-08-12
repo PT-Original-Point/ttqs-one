@@ -87,3 +87,40 @@ test('P0: reconciliation MATCH is the only path to FINAL_ACCEPTED', () => {
   assert.equal(mismatch.object.final_acceptance_status, 'RECONCILIATION_EXCEPTION');
   assert.equal(mismatch.object.final_accepted_at, '');
 });
+
+test('P0: reserved TEST audit alias injects exactly one failure per real rawRef', () => {
+  const store = new Map();
+  const props = {
+    getProperty(key) { return store.has(key) ? store.get(key) : null; },
+    setProperty(key, value) { store.set(key, String(value)); },
+    deleteProperty(key) { store.delete(key); }
+  };
+  const sandbox = load('DemoFault.gs', base({
+    ttqsAssertTestOnly_() {},
+    PropertiesService: { getScriptProperties() { return props; } },
+    ttqsDigest_(value) { return crypto.createHash('sha256').update(String(value)).digest('hex'); }
+  }));
+  const raw = { kind: 'REGISTRATION', eventId: 'EVT-P0-1', rawRef: 'FORM_SUITE:F1:EVT-P0-1' };
+  assert.equal(sandbox.ttqsShouldInjectRegistrationFailure_(raw, 'S-L01'), false);
+  assert.equal(sandbox.ttqsShouldInjectRegistrationFailure_(raw, 'S-P0AUDIT-A1B2'), true);
+  assert.equal(sandbox.ttqsShouldInjectRegistrationFailure_(raw, 'S-P0AUDIT-A1B2'), false);
+  const other = { kind: 'REGISTRATION', eventId: 'EVT-P0-2', rawRef: 'FORM_SUITE:F1:EVT-P0-2' };
+  assert.equal(sandbox.ttqsShouldInjectRegistrationFailure_(other, 'S-P0AUDIT-A1B2'), true);
+});
+
+test('P0: reserved fault alias is rejected outside registration and never affects normal alias', () => {
+  const store = new Map();
+  const props = {
+    getProperty(key) { return store.has(key) ? store.get(key) : null; },
+    setProperty(key, value) { store.set(key, String(value)); },
+    deleteProperty(key) { store.delete(key); }
+  };
+  const sandbox = load('DemoFault.gs', base({
+    ttqsAssertTestOnly_() {},
+    PropertiesService: { getScriptProperties() { return props; } },
+    ttqsDigest_(value) { return crypto.createHash('sha256').update(String(value)).digest('hex'); }
+  }));
+  assert.equal(sandbox.ttqsP0AuditAlias_('S-L01'), '');
+  assert.equal(sandbox.ttqsP0AuditAlias_('S-P0AUDIT-A1B2'), 'S-P0AUDIT-A1B2');
+  assert.throws(() => sandbox.ttqsShouldInjectRegistrationFailure_({ kind: 'NEEDS', eventId: 'E1', rawRef: 'R1' }, 'S-P0AUDIT-A1B2'), /P0_AUDIT_REGISTRATION_ONLY/);
+});
