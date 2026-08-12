@@ -60,9 +60,10 @@ function ttqsRawSubmission_(sheetId, rowNumber, ensureEventId) {
   var named = {};
   allHeaders.forEach(function(header, i) {
     if (header === TTQS_EVENT_ID_HEADER) return;
-    headers.push(String(header));
+    var canonicalHeader = ttqsCanonicalFieldCode_(header);
+    headers.push(String(canonicalHeader));
     values.push(String(allValues[i]));
-    named[String(header)] = allValues[i];
+    named[String(canonicalHeader)] = allValues[i];
   });
 
   var map = ttqsParseJson_(PropertiesService.getScriptProperties().getProperty('TTQS_RESPONSE_SHEET_MAP'), {});

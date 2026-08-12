@@ -63,9 +63,10 @@ const checks = [
   ['manifest V8 runtime', () => assert.equal(manifest.runtimeVersion, 'V8')],
   ['manifest no executionApi', () => assert.equal(Object.hasOwn(manifest, 'executionApi'), false)],
   ['manifest no broad drive scope', () => assert.equal(manifest.oauthScopes.some((s) => s === 'https://www.googleapis.com/auth/drive'), false)],
-  ['manifest only three scopes', () => assert.equal(manifest.oauthScopes.length, 3)],
+  ['manifest exactly four least-privilege scopes', () => assert.equal(manifest.oauthScopes.length, 4)],
   ['forms scope present', () => assert.ok(manifest.oauthScopes.includes('https://www.googleapis.com/auth/forms'))],
   ['spreadsheets scope present', () => assert.ok(manifest.oauthScopes.includes('https://www.googleapis.com/auth/spreadsheets'))],
-  ['trigger scope present', () => assert.ok(manifest.oauthScopes.includes('https://www.googleapis.com/auth/script.scriptapp'))]
+  ['trigger scope present', () => assert.ok(manifest.oauthScopes.includes('https://www.googleapis.com/auth/script.scriptapp'))],
+  ['per-file Drive scope present', () => assert.ok(manifest.oauthScopes.includes('https://www.googleapis.com/auth/drive.file'))]
 ];
 for (const [name, fn] of checks) test(name, fn);
