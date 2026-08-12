@@ -1,32 +1,33 @@
 {
   "report_role": "IMMUTABLE_CANDIDATE_BUILD_SNAPSHOT_NOT_FINAL_ATTESTATION",
-  "candidate": "TTQS_ONE_P1_05_AUDIT_HARDENING_V0.6.3_20260811",
-  "version": "0.6.3",
-  "status": "SOURCE_PATCH_PENDING_EXTERNAL_GATES",
-  "base_main_commit": "76660888dcd8a7ed6c767ddfa2781b937ab2658c",
+  "candidate": "TTQS_ONE_P0_APPEND_ONLY_LOG_PROVIDER_CONTRACT_V0.6.5_20260813",
+  "version": "0.6.5",
+  "status": "SOURCE_CANDIDATE_PENDING_TEST_RUNTIME_GATE",
+  "base_main_commit": "10460b43ba4e55da9854195d2644a6c5018dfdc2",
   "source_delta": [
-    "Persist immutable TTQS_EVENT_ID in each real Google Form response row before ledger processing",
-    "Use Form ID plus immutable event ID as FORM_SUITE source_ref; raw row fingerprint becomes integrity evidence rather than primary identity",
-    "Retry FAILED jobs and stale RUNNING jobs after a bounded lease, resolving the current raw row by immutable source_ref",
-    "Reconciliation starts from raw RUNTIME response rows and detects missing event identity, missed triggers, duplicate ledger rows, component-count mismatches and cross-link mismatches",
-    "Health reports FULL Apps Script authorization status",
-    "Managed trigger contract validates event type, trigger source and TEST core source ID",
-    "Forms fail closed unless published state and responder URL are readable",
-    "Runtime SAMPLE evidence records provider form, raw fingerprint, job linkage and NOT_FORMAL admissibility",
-    "Manifest verifier requires exact coverage of git tracked regular files except the manifest and its self-hash file",
-    "GitHub Actions checkout and setup-node references are pinned to runner-resolved immutable commit SHAs"
+    "Add append-only 16_AttemptHistory audit history with hash chaining so prior attempt failures cannot be overwritten by retry success",
+    "Preserve prior JobLedger failure summary when a retry starts; JobLedger remains latest summary while AttemptHistory is authoritative history",
+    "Require MATCHED_EXACTLY_ONCE reconciliation before FINAL_ACCEPTED and keep reconciliation watchdog health checks",
+    "Inject one controlled TEST registration failure per real P0 audit rawRef without affecting normal aliases",
+    "Immediately reconcile each successful FORM_SUITE event while retaining hourly reconciliation as watchdog/backfill",
+    "Expose a stable TEST-only S-P0AUDIT-RUNTIME provider alias by self-healing the existing Registration Google Form from the one-minute maintenance heartbeat",
+    "Read back the provider alias choice list after repair and store fail-closed maintenance status/error markers",
+    "Keep TEST-only boundaries: REAL writes disabled, PII vault disabled, no execution API and no PROD workflow"
   ],
   "known_nonblocking_post_demo_debt": [
     "CI clasp verification still downloads @google/clasp@3.3.0 from npm at runtime",
+    "The P0 provider audit alias is TEST-only engineering instrumentation and is not a production user-facing identity model",
     "Apps Script and Google Sheets remain a limited TEST/SAMPLE architecture, not a proven production system of record"
   ],
-  "snapshot_semantics": "This file describes candidate source intent at freeze time. GitHub PR/CI/merge evidence belongs in a separate acceptance record; Google provider execution belongs in a runtime evidence package.",
+  "snapshot_semantics": "This file describes candidate source intent. Final acceptance still requires a real published Google Forms submission plus authoritative TEST Sheets readback proving FAILED attempt history survives retry and exact-once final acceptance.",
   "deploy_set_expected": "appsscript.json plus 13 root-level .gs files only",
   "external_gates_required": [
     "GitHub exact source readback",
     "GitHub Actions CI including exact manifest coverage verification",
     "official @google/clasp@3.3.0 show-file-status verification",
-    "real TEST Apps Script provider runtime"
+    "real TEST Apps Script deployment",
+    "real TEST Google Forms P0 provider submission",
+    "authoritative AttemptHistory/JobLedger/SurveyResponse/Evidence/reconciliation/health readback"
   ],
   "environment": "TEST",
   "enable_real_writes": false,
