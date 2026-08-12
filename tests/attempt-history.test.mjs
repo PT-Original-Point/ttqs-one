@@ -136,10 +136,10 @@ test('P0: successful form processing immediately reconciles the same raw event',
     ttqsLedgerStart_(j) { j.object.status = 'RUNNING'; j.object.attempt_no = 1; },
     ttqsLedgerSuccess_(j) { j.object.status = 'SUCCESS'; },
     ttqsLedgerFail_() { failCalls++; },
-    ttqsProcessSubmission_() { return { aliasCode: 'S-L01', partyAliasId: 'P1', responseId: 'R1', evidenceId: 'E1' }; },
     ttqsReconcileRaw_(raw) { reconcileCalls++; assert.equal(raw.rawRef, 'FORM_SUITE:F1:EVT1'); return { status: 'MATCHED_EXACTLY_ONCE' }; },
     ttqsReconciliationMarkEngineFailure_() { throw new Error('SHOULD_NOT_MARK_FAILURE'); }
   }));
+  sandbox.ttqsProcessSubmission_ = function() { return { aliasCode: 'S-L01', partyAliasId: 'P1', responseId: 'R1', evidenceId: 'E1' }; };
   const result = sandbox.ttqsHandleRawObjectUnlocked_({ kind: 'REGISTRATION', formId: 'F1', sheetId: 7, rowNumber: 2, eventId: 'EVT1', rawRef: 'FORM_SUITE:F1:EVT1', rawFingerprint: 'FP', named: {} }, false);
   assert.equal(job.object.status, 'SUCCESS');
   assert.equal(reconcileCalls, 1);
@@ -158,10 +158,10 @@ test('P0: reconciliation engine failure never downgrades business SUCCESS into a
     ttqsLedgerStart_(j) { j.object.status = 'RUNNING'; j.object.attempt_no = 1; },
     ttqsLedgerSuccess_(j) { j.object.status = 'SUCCESS'; },
     ttqsLedgerFail_() { failCalls++; },
-    ttqsProcessSubmission_() { return { aliasCode: 'S-L01', partyAliasId: 'P1', responseId: 'R1', evidenceId: 'E1' }; },
     ttqsReconcileRaw_() { throw new Error('RECONCILE_ENGINE_BOOM'); },
     ttqsReconciliationMarkEngineFailure_(err) { engineFailureCalls++; assert.equal(err.message, 'RECONCILE_ENGINE_BOOM'); }
   }));
+  sandbox.ttqsProcessSubmission_ = function() { return { aliasCode: 'S-L01', partyAliasId: 'P1', responseId: 'R1', evidenceId: 'E1' }; };
   const result = sandbox.ttqsHandleRawObjectUnlocked_({ kind: 'REGISTRATION', formId: 'F1', sheetId: 7, rowNumber: 2, eventId: 'EVT2', rawRef: 'FORM_SUITE:F1:EVT2', rawFingerprint: 'FP2', named: {} }, false);
   assert.equal(job.object.status, 'SUCCESS');
   assert.equal(failCalls, 0);
