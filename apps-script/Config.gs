@@ -1,5 +1,5 @@
 var TTQS_CONFIG = Object.freeze({
-  VERSION: '0.6.4',
+  VERSION: '0.6.5',
   AUDIT_LOG_VERSION: 2,
   ENVIRONMENT: 'TEST',
   TIME_ZONE: 'Asia/Taipei',
