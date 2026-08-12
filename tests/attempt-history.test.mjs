@@ -124,3 +124,47 @@ test('P0: reserved fault alias is rejected outside registration and never affect
   assert.equal(sandbox.ttqsP0AuditAlias_('S-P0AUDIT-A1B2'), 'S-P0AUDIT-A1B2');
   assert.throws(() => sandbox.ttqsShouldInjectRegistrationFailure_({ kind: 'NEEDS', eventId: 'E1', rawRef: 'R1' }, 'S-P0AUDIT-A1B2'), /P0_AUDIT_REGISTRATION_ONLY/);
 });
+
+test('P0: successful form processing immediately reconciles the same raw event', () => {
+  let failCalls = 0;
+  let reconcileCalls = 0;
+  const job = { rowNumber: 3, object: { job_id: 'JOB-1', trace_id: 'TRACE-1', status: 'QUEUED', attempt_no: 0, max_attempts: 3 } };
+  const sandbox = load('FormRouter.gs', base({
+    ttqsAssertTestOnly_() {},
+    ttqsConfig_() { return { MAX_ATTEMPTS: 3 }; },
+    ttqsLedgerEnsure_() { return job; },
+    ttqsLedgerStart_(j) { j.object.status = 'RUNNING'; j.object.attempt_no = 1; },
+    ttqsLedgerSuccess_(j) { j.object.status = 'SUCCESS'; },
+    ttqsLedgerFail_() { failCalls++; },
+    ttqsProcessSubmission_() { return { aliasCode: 'S-L01', partyAliasId: 'P1', responseId: 'R1', evidenceId: 'E1' }; },
+    ttqsReconcileRaw_(raw) { reconcileCalls++; assert.equal(raw.rawRef, 'FORM_SUITE:F1:EVT1'); return { status: 'MATCHED_EXACTLY_ONCE' }; },
+    ttqsReconciliationMarkEngineFailure_() { throw new Error('SHOULD_NOT_MARK_FAILURE'); }
+  }));
+  const result = sandbox.ttqsHandleRawObjectUnlocked_({ kind: 'REGISTRATION', formId: 'F1', sheetId: 7, rowNumber: 2, eventId: 'EVT1', rawRef: 'FORM_SUITE:F1:EVT1', rawFingerprint: 'FP', named: {} }, false);
+  assert.equal(job.object.status, 'SUCCESS');
+  assert.equal(reconcileCalls, 1);
+  assert.equal(failCalls, 0);
+  assert.equal(result.reconciliationStatus, 'MATCHED_EXACTLY_ONCE');
+});
+
+test('P0: reconciliation engine failure never downgrades business SUCCESS into a retryable FAILED job', () => {
+  let failCalls = 0;
+  let engineFailureCalls = 0;
+  const job = { rowNumber: 3, object: { job_id: 'JOB-2', trace_id: 'TRACE-2', status: 'QUEUED', attempt_no: 0, max_attempts: 3 } };
+  const sandbox = load('FormRouter.gs', base({
+    ttqsAssertTestOnly_() {},
+    ttqsConfig_() { return { MAX_ATTEMPTS: 3 }; },
+    ttqsLedgerEnsure_() { return job; },
+    ttqsLedgerStart_(j) { j.object.status = 'RUNNING'; j.object.attempt_no = 1; },
+    ttqsLedgerSuccess_(j) { j.object.status = 'SUCCESS'; },
+    ttqsLedgerFail_() { failCalls++; },
+    ttqsProcessSubmission_() { return { aliasCode: 'S-L01', partyAliasId: 'P1', responseId: 'R1', evidenceId: 'E1' }; },
+    ttqsReconcileRaw_() { throw new Error('RECONCILE_ENGINE_BOOM'); },
+    ttqsReconciliationMarkEngineFailure_(err) { engineFailureCalls++; assert.equal(err.message, 'RECONCILE_ENGINE_BOOM'); }
+  }));
+  const result = sandbox.ttqsHandleRawObjectUnlocked_({ kind: 'REGISTRATION', formId: 'F1', sheetId: 7, rowNumber: 2, eventId: 'EVT2', rawRef: 'FORM_SUITE:F1:EVT2', rawFingerprint: 'FP2', named: {} }, false);
+  assert.equal(job.object.status, 'SUCCESS');
+  assert.equal(failCalls, 0);
+  assert.equal(engineFailureCalls, 1);
+  assert.equal(result.reconciliationStatus, 'RECONCILIATION_EXCEPTION');
+});
