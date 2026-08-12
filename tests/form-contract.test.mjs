@@ -46,11 +46,12 @@ test('anyone-with-link responder access is provisioned only on published view', 
   assert.match(forms, /role: 'reader'/);
   assert.match(forms, /FORM_ANYONE_WITH_LINK_RESPONDER_NOT_CONFIRMED/);
 });
-test('Drive advanced service is enabled for published responder permission', () => {
+test('Drive advanced service uses least-privilege per-file scope', () => {
   assert.match(manifest, /"userSymbol": "Drive"/);
   assert.match(manifest, /"serviceId": "drive"/);
   assert.match(manifest, /"version": "v3"/);
-  assert.match(manifest, /https:\/\/www\.googleapis\.com\/auth\/drive/);
+  assert.match(manifest, /https:\/\/www\.googleapis\.com\/auth\/drive\.file/);
+  assert.doesNotMatch(manifest, /"https:\/\/www\.googleapis\.com\/auth\/drive"/);
 });
 test('existing legacy headers and new Chinese headers canonicalize to stable field codes', () => {
   assert.match(forms, /function ttqsCanonicalFieldCode_\(title\)/);
