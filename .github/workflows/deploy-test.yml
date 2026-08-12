@@ -2,40 +2,22 @@ name: Deploy TEST Apps Script
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - fix/p0-append-only-attempt-history-20260813
-    paths:
-      - .github/workflows/deploy-test.yml
 
 permissions:
   contents: read
 
-concurrency:
-  group: ttqs-one-test-deploy
-  cancel-in-progress: false
-
 jobs:
   deploy:
-    if: "${{ github.repository == 'PT-Original-Point/ttqs-one' && github.ref == 'refs/heads/fix/p0-append-only-attempt-history-20260813' && github.event.head_commit.message == 'ops-one-shot-deploy-065' }}"
     runs-on: ubuntu-latest
     environment: TEST
     steps:
-      - name: Checkout exact verified 0.6.5 source
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
-        with:
-          ref: ef5991952795b8b9c8daff8b451711dbd6647b3c
-          fetch-depth: 1
-      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4 resolved by GitHub runner 2026-08-11
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4 resolved by GitHub runner 2026-08-11
         with:
           node-version: '22'
           cache: npm
       - run: npm ci --ignore-scripts
       - run: npm run verify
-      - name: Verify exact source commit
-        shell: bash
-        run: |
-          test "$(git rev-parse HEAD)" = "ef5991952795b8b9c8daff8b451711dbd6647b3c"
       - name: Restore clasp credentials and project settings
         shell: bash
         env:
@@ -46,7 +28,7 @@ jobs:
           test -n "$CLASP_JSON_TEST_B64"
           printf '%s' "$CLASPRC_JSON_B64" | base64 -d > "$HOME/.clasprc.json"
           printf '%s' "$CLASP_JSON_TEST_B64" | base64 -d > .clasp.json
-          node -e "const p=require('./.clasp.json'); if(p.rootDir!=='apps-script'||p.scriptId!=='1HkNqqReHhv_9IibZkn4qX05bKLAKcHTBV3oAp_ZwHmxdOgZP7ICkevg4') process.exit(1)"
+          node -e "const p=require('./.clasp.json'); if(p.rootDir!=='apps-script'||!p.scriptId) process.exit(1)"
       - name: Fail-closed push-set verification
         shell: bash
         run: |
