@@ -6,7 +6,8 @@ function ttqsHealthRequiredHeaders_() {
   required[cfg.SHEETS.PARTY_ALIAS] = ['party_alias_id', 'party_type', 'alias_code', 'display_name_masked', 'pii_vault_ref', 'consent_status', 'consent_ref', 'retention_class', 'active_status', 'created_at', 'notes'];
   required[cfg.SHEETS.SURVEY] = ['response_id', 'class_run_id', 'party_alias_id', 'survey_type', 'response_date', 'question_set_version', 'score_total', 'score_max', 'free_text_redacted', 'followup_due_date', 'followup_completed_date', 'source_ref', 'ai_allowed', 'verification_status', 'notes'];
   required[cfg.SHEETS.EVIDENCE] = ['evidence_id', 'evidence_title', 'evidence_type', 'environment', 'data_class', 'source_object_type', 'source_object_id', 'drive_file_id', 'drive_url', 'document_version_id', 'class_run_id', 'ttqs_indicator_tags', 'pddro_stage', 'approval_status', 'approved_by', 'sha256', 'health_status', 'retrieval_tested_at', 'archive_status', 'notes'];
-  required[cfg.SHEETS.LEDGER] = ['job_id', 'event_type', 'environment', 'object_type', 'object_id', 'idempotency_key', 'trigger_source', 'scheduled_at', 'started_at', 'finished_at', 'status', 'attempt_no', 'max_attempts', 'error_class', 'error_message', 'retry_at', 'reconciliation_date', 'reconciliation_status', 'operator', 'trace_id', 'notes'];
+  required[cfg.SHEETS.LEDGER] = ['job_id', 'event_type', 'environment', 'object_type', 'object_id', 'idempotency_key', 'trigger_source', 'scheduled_at', 'started_at', 'finished_at', 'status', 'attempt_no', 'max_attempts', 'error_class', 'error_message', 'retry_at', 'reconciliation_date', 'reconciliation_status', 'operator', 'trace_id', 'notes', 'final_acceptance_status', 'final_accepted_at'];
+  required[cfg.SHEETS.ATTEMPT_HISTORY] = ttqsAttemptHistoryColumns_().map(function(column) { return column.header; });
   return required;
 }
 
@@ -78,6 +79,20 @@ function ttqsHealthCheck() {
         checks.push({ check: 'response_sheet_map:' + kind, pass: !!sheet && sheet.getName() === expectedName && ttqsSheetMatchesFormKind_(sheet, kind), actual: sheet ? sheet.getName() : 'MISSING' });
       });
     }
+  }
+
+  try {
+    var integrity = ttqsAttemptHistoryIntegrity_();
+    checks.push({ check: 'attempt_history_hash_chain', pass: integrity.status === 'PASS', actual: integrity.status === 'PASS' ? ('PASS rows=' + integrity.rows + ' auditedJobs=' + integrity.auditedJobs) : integrity.errors.join('|') });
+  } catch (err) {
+    checks.push({ check: 'attempt_history_hash_chain', pass: false, actual: 'ERROR:' + String(err.message || err) });
+  }
+
+  try {
+    var watchdog = ttqsReconciliationWatchdog_();
+    checks.push({ check: 'reconciliation_watchdog', pass: watchdog.status === 'PASS', actual: watchdog.status === 'PASS' ? ('PASS pendingWithinGrace=' + watchdog.pendingWithinGrace.length) : JSON.stringify(watchdog.issues) });
+  } catch (err) {
+    checks.push({ check: 'reconciliation_watchdog', pass: false, actual: 'ERROR:' + String(err.message || err) });
   }
 
   var failed = checks.filter(function(check) { return !check.pass; });

@@ -46,18 +46,20 @@ test('script lock timeout fails closed', () => {
 
 test('retry start updates primary trigger_source and preserves initial source in notes', () => {
   let patch;
+  const history = [];
   const sandbox = load('Ledger.gs', baseGlobals({
     ttqsUpdateObjectRow_() {},
     ttqsLedgerSheet_() { return {}; },
     ttqsNow_() { return 'NOW'; },
     ttqsParseJson_(v, f) { try { return v ? JSON.parse(v) : f; } catch { return f; } },
-    ttqsConfig_() { return { MAX_ATTEMPTS: 3, RETRY_MINUTES: 1, RUNNING_LEASE_MINUTES: 5, TIME_ZONE: 'Asia/Taipei' }; },
+    ttqsConfig_() { return { AUDIT_LOG_VERSION: 2, MAX_ATTEMPTS: 3, RETRY_MINUTES: 1, RUNNING_LEASE_MINUTES: 5, TIME_ZONE: 'Asia/Taipei' }; },
     ttqsEnsureRuntimeRecoveryEvidence_() { return { evidenceId: 'EV-REC' }; },
     Utilities: { formatDate() { return 'LATER'; } },
     ttqsGetSheet_() {}, ttqsFindUniqueRowByValue_() {}, ttqsStableId_() {}, ttqsAppendObject_() {}, ttqsHeaders_() {}
   }));
   sandbox.ttqsLedgerPatch_ = function(job, p) { patch = p; Object.assign(job.object, p); return job; };
-  const job = { rowNumber: 3, object: { trigger_source: 'GOOGLE_FORM', attempt_no: 1, notes: '{}', status: 'FAILED' } };
+  sandbox.ttqsAttemptHistoryAppend_ = function(job, phase, p) { history.push({ phase, patch: p }); };
+  const job = { rowNumber: 3, object: { job_id: 'JOB1', event_type: 'FORM_SUITE', trigger_source: 'GOOGLE_FORM', attempt_no: 1, notes: JSON.stringify({ auditLogVersion: 2 }), status: 'FAILED', error_class: 'Error', error_message: 'FIRST_FAILURE' } };
   sandbox.ttqsLedgerStart_(job, true);
   assert.equal(patch.trigger_source, 'TIME_RETRY');
   assert.equal(patch.attempt_no, 2);
@@ -65,6 +67,8 @@ test('retry start updates primary trigger_source and preserves initial source in
   assert.equal(notes.initialTriggerSource, 'GOOGLE_FORM');
   assert.equal(notes.retryTrigger, 'TIME_RETRY');
   assert.equal(notes.retry, true);
+  assert.equal(job.object.error_message, 'FIRST_FAILURE');
+  assert.equal(history[0].phase, 'RETRY_STARTED');
 });
 
 test('reconcile is locked and summarizes raw-root exact matches and mismatches', () => {
@@ -81,6 +85,7 @@ test('reconcile is locked and summarizes raw-root exact matches and mismatches',
     ttqsRawSubmission_() { return { kind: 'REGISTRATION', eventId: 'EVT1', rawRef: 'FORM_SUITE:F1:EVT1' }; }
   }));
   sandbox.ttqsReconcileRaw_ = () => ({ status });
+  sandbox.ttqsReconciliationWatchdog_ = () => ({ status: 'PASS', issues: [], pendingWithinGrace: [] });
   let result = sandbox.ttqsReconcile();
   assert.equal(locked, 1);
   assert.equal(result.status, 'PASS');
@@ -204,7 +209,7 @@ test('bootstrap failure is ledgered after job starts', () => {
     ttqsWithScriptLock_(fn) { order.push('lock'); return fn(); },
     ttqsAssertTestOnly_() {},
     ttqsHealthCheck() { return { status: 'PASS', failed: [] }; },
-    ttqsConfig_() { return { VERSION: '0.6.3', MAX_ATTEMPTS: 3, AUTO_CONSULT_SHEET: 'AUTO' }; },
+    ttqsConfig_() { return { VERSION: '0.6.4', MAX_ATTEMPTS: 3, AUTO_CONSULT_SHEET: 'AUTO' }; },
     ttqsLedgerEnsure_() { order.push('ensureJob'); return job; },
     ttqsLedgerStart_() { order.push('startJob'); job.object.attempt_no = 1; },
     ttqsLedgerStage_(j, stage) { order.push('stage:' + stage); },
@@ -220,39 +225,46 @@ test('bootstrap failure is ledgered after job starts', () => {
 
 test('recovered FORM_SUITE success registers recovery evidence and stores evidence id in notes', () => {
   const patches = [];
+  const history = [];
   const sandbox = load('Ledger.gs', baseGlobals({
     ttqsUpdateObjectRow_() {}, ttqsLedgerSheet_() { return {}; },
     ttqsNow_() { return 'NOW'; },
     ttqsParseJson_(v, f) { return v ? JSON.parse(v) : f; },
     ttqsEnsureRuntimeRecoveryEvidence_() { return { evidenceId: 'EV-REC-1' }; },
-    ttqsConfig_() { return { MAX_ATTEMPTS: 3, RETRY_MINUTES: 1, RUNNING_LEASE_MINUTES: 5, TIME_ZONE: 'Asia/Taipei' }; },
+    ttqsConfig_() { return { AUDIT_LOG_VERSION: 2, MAX_ATTEMPTS: 3, RETRY_MINUTES: 1, RUNNING_LEASE_MINUTES: 5, TIME_ZONE: 'Asia/Taipei' }; },
     Utilities: { formatDate() { return 'LATER'; } },
     ttqsGetSheet_() {}, ttqsFindUniqueRowByValue_() {}, ttqsStableId_() {}, ttqsAppendObject_() {}, ttqsHeaders_() {}
   }));
   sandbox.ttqsLedgerPatch_ = function(job, p) { patches.push(p); Object.assign(job.object, p); return job; };
-  const job = { rowNumber: 9, object: { event_type: 'FORM_SUITE', job_id: 'JOB1', notes: '{}', status: 'RUNNING' } };
+  sandbox.ttqsAttemptHistoryAppend_ = function(job, phase, p) { history.push({ phase, patch: p }); };
+  const job = { rowNumber: 9, object: { event_type: 'FORM_SUITE', job_id: 'JOB1', attempt_no: 2, notes: JSON.stringify({ auditLogVersion: 2 }), status: 'RUNNING' } };
   sandbox.ttqsLedgerSuccess_(job, { recovered: true });
   assert.equal(job.object.status, 'SUCCESS');
   assert.equal(JSON.parse(job.object.notes).recoveryEvidenceId, 'EV-REC-1');
   assert.equal(patches.length, 2);
+  assert.equal(history[0].phase, 'ATTEMPT_SUCCEEDED');
+  assert.equal(history[0].patch.recovery_evidence_id, 'EV-REC-1');
 });
 
 test('health check fails when a required machine header is missing', () => {
   const sheets = {};
   const cfg = {
-    ENVIRONMENT: 'TEST', ENABLE_REAL_WRITES: false, PII_VAULT_READY: false, TIME_ZONE: 'Asia/Taipei', CORE_SPREADSHEET_ID: 'CORE', CONSULT_VIEW_SPREADSHEET_ID: 'CONSULT', CLASS_RUN_ID: 'SAMPLE-CLASS-001',
-    SHEETS: { INDICATORS: 'ind', CLASS_RUN: 'class', PARTY_ALIAS: 'party', SURVEY: 'survey', EVIDENCE: 'evidence', LEDGER: 'ledger' }
+    AUDIT_LOG_VERSION: 2, ENVIRONMENT: 'TEST', ENABLE_REAL_WRITES: false, PII_VAULT_READY: false, TIME_ZONE: 'Asia/Taipei', CORE_SPREADSHEET_ID: 'CORE', CONSULT_VIEW_SPREADSHEET_ID: 'CONSULT', CLASS_RUN_ID: 'SAMPLE-CLASS-001',
+    SHEETS: { INDICATORS: 'ind', CLASS_RUN: 'class', PARTY_ALIAS: 'party', SURVEY: 'survey', EVIDENCE: 'evidence', LEDGER: 'ledger', ATTEMPT_HISTORY: 'attempt' }
   };
   for (const name of Object.values(cfg.SHEETS)) sheets[name] = { getName() { return name; } };
   const ss = { getSpreadsheetTimeZone() { return 'Asia/Taipei'; }, getId() { return 'CORE'; }, getSheets() { return Object.values(sheets); }, getSheetByName(name) { return sheets[name]; } };
   const sandbox = load('Health.gs', baseGlobals({
     ttqsAssertTestOnly_() {}, ttqsConfig_() { return cfg; }, ttqsOpenCore_() { return ss; },
+    ttqsAttemptHistoryColumns_() { return [{ header: 'attempt_event_id' }]; },
     ttqsMissingHeaders_(sheet) { return sheet === sheets.survey ? ['source_ref'] : []; },
     ttqsFindRowsByValue_() { return [{ object: { environment: 'TEST', data_class: 'SAMPLE', real_start_gate_status: 'NOT_APPLICABLE_SAMPLE' } }]; },
     SpreadsheetApp: { openById() { return { getId() { return 'CONSULT'; }, getSpreadsheetTimeZone() { return 'Asia/Taipei'; } }; } },
     PropertiesService: { getScriptProperties() { return { getProperty() { return null; } }; } },
     ScriptApp: { AuthMode: { FULL: 'FULL' }, AuthorizationStatus: { NOT_REQUIRED: 'NOT_REQUIRED' }, getAuthorizationInfo() { return { getAuthorizationStatus() { return 'NOT_REQUIRED'; } }; } },
-    ttqsParseJson_() {}, ttqsFindSheetById_() {}, ttqsSheetMatchesFormKind_() {}
+    ttqsParseJson_() {}, ttqsFindSheetById_() {}, ttqsSheetMatchesFormKind_() {},
+    ttqsAttemptHistoryIntegrity_() { return { status: 'PASS', rows: 0, auditedJobs: 0, errors: [] }; },
+    ttqsReconciliationWatchdog_() { return { status: 'PASS', issues: [], pendingWithinGrace: [] }; }
   }));
   const result = sandbox.ttqsHealthCheck();
   assert.equal(result.status, 'FAIL');

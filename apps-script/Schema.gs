@@ -90,11 +90,59 @@ function ttqsReadObjects_(sheet) {
   });
 }
 
+function ttqsImmutableSheetName_() {
+  try {
+    var cfg = ttqsConfig_();
+    return cfg && cfg.SHEETS ? String(cfg.SHEETS.ATTEMPT_HISTORY || '') : '';
+  } catch (err) {
+    return '';
+  }
+}
+
+function ttqsAssertMutableSheet_(sheet) {
+  var immutableName = ttqsImmutableSheetName_();
+  var sheetName = sheet && sheet.getName ? String(sheet.getName()) : '';
+  if (immutableName && sheetName === immutableName) {
+    throw new Error('ATTEMPT_HISTORY_IMMUTABLE_UPDATE_FORBIDDEN');
+  }
+  return true;
+}
+
 function ttqsUpdateObjectRow_(sheet, rowNumber, patch) {
+  ttqsAssertMutableSheet_(sheet);
   var headers = ttqsHeaders_(sheet);
   var current = sheet.getRange(rowNumber, 1, 1, headers.length).getValues()[0];
   headers.forEach(function(h, i) {
     if (Object.prototype.hasOwnProperty.call(patch, h)) current[i] = patch[h];
   });
   sheet.getRange(rowNumber, 1, 1, headers.length).setValues([current]);
+}
+
+function ttqsEnsureColumns_(sheet, columns) {
+  var headers = ttqsHeaders_(sheet);
+  var index = ttqsHeaderIndex_(headers);
+  columns.forEach(function(column) {
+    var header = String(column.header);
+    if (index[header] !== undefined) return;
+    var targetColumn = sheet.getLastColumn() + 1;
+    sheet.getRange(1, targetColumn).setValue(header);
+    if (column.description) sheet.getRange(2, targetColumn).setValue(String(column.description));
+    index[header] = targetColumn - 1;
+  });
+  return sheet;
+}
+
+function ttqsEnsureStructuredSheet_(spreadsheet, name, columns) {
+  var sheet = spreadsheet.getSheetByName(name);
+  if (!sheet) sheet = spreadsheet.insertSheet(name);
+  if (sheet.getLastColumn() < 1) {
+    var headers = columns.map(function(column) { return String(column.header); });
+    var descriptions = columns.map(function(column) { return String(column.description || ''); });
+    sheet.getRange(1, 1, 1, headers.length).setValues([headers]);
+    sheet.getRange(2, 1, 1, descriptions.length).setValues([descriptions]);
+    if (sheet.setFrozenRows) sheet.setFrozenRows(2);
+  } else {
+    ttqsEnsureColumns_(sheet, columns);
+  }
+  return sheet;
 }

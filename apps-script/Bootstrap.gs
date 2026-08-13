@@ -78,6 +78,7 @@ function ttqsInstallManagedTriggers_() {
 
 function ttqsBootstrapTestLocked_() {
   ttqsAssertTestOnly_();
+  if (typeof ttqsEnsureAuditSchema_ === 'function') ttqsEnsureAuditSchema_();
   var preHealth = ttqsHealthCheck();
   if (preHealth.status !== 'PASS') throw new Error('PRE_BOOTSTRAP_HEALTH_FAIL:' + JSON.stringify(preHealth.failed));
 

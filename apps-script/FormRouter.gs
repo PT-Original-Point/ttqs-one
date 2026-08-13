@@ -109,9 +109,7 @@ function ttqsProcessSubmission_(raw, job) {
   };
   var surveyResult;
   if (raw.kind === 'REGISTRATION') {
-    var props = PropertiesService.getScriptProperties();
-    if (props.getProperty('TTQS_FAIL_NEXT_REG_AFTER_PARTY') === 'TRUE') {
-      props.deleteProperty('TTQS_FAIL_NEXT_REG_AFTER_PARTY');
+    if (ttqsShouldInjectRegistrationFailure_(raw, aliasCode)) {
       throw new Error('TTQS_INJECTED_PARTIAL_FAILURE_AFTER_PARTY_ALIAS');
     }
     surveyResult = ttqsWriteSurvey_(Object.assign({}, common, {
@@ -140,6 +138,22 @@ function ttqsProcessSubmission_(raw, job) {
   return { aliasCode: aliasCode, partyAliasId: partyId, responseId: surveyResult.responseId, evidenceId: surveyResult.evidenceId };
 }
 
+function ttqsImmediateReconcile_(raw) {
+  try {
+    return ttqsReconcileRaw_(raw);
+  } catch (err) {
+    try {
+      ttqsReconciliationMarkEngineFailure_(err);
+    } catch (auditErr) {
+      console.error('IMMEDIATE_RECONCILIATION_FAILURE_LOGGING_FAILED', String(auditErr && auditErr.message ? auditErr.message : auditErr));
+    }
+    return {
+      status: 'RECONCILIATION_EXCEPTION',
+      error: String(err && err.message ? err.message : err).slice(0, 500)
+    };
+  }
+}
+
 function ttqsHandleRawObjectUnlocked_(raw, isRetry) {
   ttqsAssertTestOnly_();
   if (!raw.eventId || !raw.rawRef) throw new Error('RAW_EVENT_ID_REQUIRED');
@@ -149,20 +163,34 @@ function ttqsHandleRawObjectUnlocked_(raw, isRetry) {
     triggerSource: isRetry ? 'TIME_RETRY' : 'GOOGLE_FORM',
     notes: { kind: raw.kind, rawRef: raw.rawRef, rawFingerprint: raw.rawFingerprint, formId: raw.formId, sheetId: raw.sheetId, eventId: raw.eventId, originalRowNumber: raw.rowNumber }
   });
-  if (job.object.status === 'SUCCESS') return { duplicate: true, jobId: job.object.job_id, traceId: job.object.trace_id };
+  if (job.object.status === 'SUCCESS') {
+    var duplicateReconciliation = ttqsImmediateReconcile_(raw);
+    return { duplicate: true, jobId: job.object.job_id, traceId: job.object.trace_id, reconciliationStatus: duplicateReconciliation.status };
+  }
   if (Number(job.object.attempt_no || 0) >= Number(job.object.max_attempts || ttqsConfig_().MAX_ATTEMPTS)) throw new Error('MAX_ATTEMPTS_EXCEEDED');
   ttqsLedgerStart_(job, isRetry);
+  var result;
   try {
-    var result = ttqsProcessSubmission_(raw, job);
+    result = ttqsProcessSubmission_(raw, job);
     ttqsLedgerSuccess_(job, {
       aliasCode: result.aliasCode, partyAliasId: result.partyAliasId, responseId: result.responseId, evidenceId: result.evidenceId,
       sourceRef: raw.rawRef, rawFingerprint: raw.rawFingerprint, formId: raw.formId, eventId: raw.eventId, recovered: !!isRetry
     });
-    return { duplicate: false, recovered: !!isRetry, jobId: job.object.job_id, traceId: job.object.trace_id, responseId: result.responseId, evidenceId: result.evidenceId };
   } catch (err) {
     ttqsLedgerFail_(job, err);
     throw err;
   }
+
+  var reconciliation = ttqsImmediateReconcile_(raw);
+  return {
+    duplicate: false,
+    recovered: !!isRetry,
+    jobId: job.object.job_id,
+    traceId: job.object.trace_id,
+    responseId: result.responseId,
+    evidenceId: result.evidenceId,
+    reconciliationStatus: reconciliation.status
+  };
 }
 
 function ttqsHandleRawSubmissionUnlocked_(sheetId, rowNumber, isRetry) {

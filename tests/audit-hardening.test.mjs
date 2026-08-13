@@ -138,19 +138,22 @@ test('audit: reconciliation requires exact cross-layer linkage', () => {
     ttqsConfig_() { return { CLASS_RUN_ID: 'CLASS' }; },
     ttqsLedgerSheet_() { return 'ledger'; }, ttqsSurveySheet_() { return 'survey'; }, ttqsPartySheet_() { return 'party'; }, ttqsEvidenceSheet_() { return 'evidence'; },
     ttqsFindRowsByValue_(sheet) {
-      if (sheet === 'ledger') return [{ rowNumber: 9, object: { job_id: 'J1', status: 'SUCCESS', environment: 'TEST', object_type: 'REGISTRATION', object_id: raw.rawRef, notes: JSON.stringify(jobNotes) } }];
+      if (sheet === 'ledger') return [{ rowNumber: 9, object: { job_id: 'J1', status: 'SUCCESS', environment: 'TEST', object_type: 'REGISTRATION', object_id: raw.rawRef, notes: JSON.stringify(jobNotes), reconciliation_status: '', final_acceptance_status: 'RECONCILIATION_PENDING', final_accepted_at: '' } }];
       if (sheet === 'survey') return [{ object: survey }];
       if (sheet === 'party') return [{ object: { party_alias_id: 'P1', alias_code: 'S-L06' } }];
       if (sheet === 'evidence') return [{ object: evidence }];
       return [];
     },
     ttqsParseJson_(v, f) { return v ? JSON.parse(v) : f; },
-    ttqsUpdateObjectRow_(sheet, row, patch) { patched = patch; },
-    ttqsDateOnly_() { return '2026-08-11'; }
+    ttqsNow_() { return 'NOW'; },
+    ttqsDateOnly_() { return '2026-08-11'; },
+    ttqsLedgerPatch_(job, patch) { patched = patch; Object.assign(job.object, patch); return job; },
+    ttqsJobUsesAppendOnlyAudit_() { return false; }
   }));
   const result = sandbox.ttqsReconcileRaw_(raw);
   assert.equal(result.status, 'MATCHED_EXACTLY_ONCE');
   assert.equal(patched.reconciliation_status, 'MATCHED_EXACTLY_ONCE');
+  assert.equal(patched.final_acceptance_status, 'FINAL_ACCEPTED');
 });
 
 test('audit: authorization health fails when FULL authorization is still required', () => {

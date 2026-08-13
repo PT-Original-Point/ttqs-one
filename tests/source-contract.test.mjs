@@ -6,11 +6,13 @@ import path from 'node:path';
 const dir = 'apps-script';
 const files = fs.readdirSync(dir).filter((n) => n.endsWith('.gs')).sort();
 const all = files.map((n) => fs.readFileSync(path.join(dir, n), 'utf8')).join('\n');
+const ledgerSource = fs.readFileSync(path.join(dir, 'Ledger.gs'), 'utf8');
 const manifest = JSON.parse(fs.readFileSync('apps-script/appsscript.json', 'utf8'));
 
 const checks = [
   ['13 gs sources', () => assert.equal(files.length, 13)],
-  ['version 0.6.3', () => assert.match(all, /VERSION: '0\.6\.3'/)],
+  ['version 0.6.5', () => assert.match(all, /VERSION: '0\.6\.5'/)],
+  ['audit log version 2', () => assert.match(all, /AUDIT_LOG_VERSION: 2/)],
   ['TEST environment fixed', () => assert.match(all, /ENVIRONMENT: 'TEST'/)],
   ['real writes disabled', () => assert.match(all, /ENABLE_REAL_WRITES: false/)],
   ['pii vault disabled', () => assert.match(all, /PII_VAULT_READY: false/)],
@@ -42,6 +44,8 @@ const checks = [
   ['no FormResponse submit', () => assert.doesNotMatch(all, /FormResponse\s*\.\s*submit|\.submit\(\)/)],
   ['retry handler present', () => assert.match(all, /function ttqsRetryFailedJobs\(/)],
   ['retry provenance updates trigger source', () => assert.match(all, /'TIME_RETRY'/)],
+  ['P0 provider audit alias contract present', () => assert.match(all, /S-P0AUDIT-RUNTIME/)],
+  ['P0 provider contract self-heal hook present', () => assert.match(all, /ttqsMaintainP0AuditRegistrationProviderContract_/)],
   ['runtime evidence registration present', () => assert.match(all, /function ttqsEnsureRuntimeEvidence_\(/)],
   ['recovery evidence registration present', () => assert.match(all, /function ttqsEnsureRuntimeRecoveryEvidence_\(/)],
   ['runtime evidence provider linkage present', () => assert.match(all, /evidence_origin: 'GOOGLE_FORM_RUNTIME'/)],
@@ -56,6 +60,20 @@ const checks = [
   ['managed trigger source ID verification present', () => assert.match(all, /MANAGED_TRIGGER_SOURCE_ID_INVALID/)],
   ['managed trigger event type verification present', () => assert.match(all, /MANAGED_TRIGGER_EVENT_TYPE_INVALID/)],
   ['trigger install repeats FULL auth barrier', () => assert.match(all, /function ttqsInstallManagedTriggers_\(\)[\s\S]*requireAllScopes/)],
+  ['append-only AttemptHistory sheet contract present', () => assert.match(all, /16_AttemptHistory_嘗試歷史/)],
+  ['immutable AttemptHistory update guard present', () => assert.match(all, /ATTEMPT_HISTORY_IMMUTABLE_UPDATE_FORBIDDEN/)],
+  ['hash-chained audit records present', () => assert.match(all, /previous_event_hash[\s\S]*record_hash/)],
+  ['retry start JobLedger patch preserves prior error fields', () => {
+    const match = ledgerSource.match(/function ttqsLedgerStart_\(job, isRetry\) \{([\s\S]*?)\n\}\n\nfunction ttqsLedgerRunningLeaseExpired_/);
+    assert.ok(match, 'ttqsLedgerStart_ function body must be isolatable');
+    const patchMatch = match[1].match(/var patch = \{([\s\S]*?)\n  \};/);
+    assert.ok(patchMatch, 'ttqsLedgerStart_ JobLedger patch must exist');
+    assert.doesNotMatch(patchMatch[1], /error_class|error_message/);
+  }],
+  ['final acceptance gate present', () => assert.match(all, /FINAL_ACCEPTED/)],
+  ['reconciliation watchdog present', () => assert.match(all, /function ttqsReconciliationWatchdog_\(/)],
+  ['health validates audit hash chain', () => assert.match(all, /attempt_history_hash_chain/)],
+  ['health validates reconciliation watchdog', () => assert.match(all, /reconciliation_watchdog/)],
   ['no DriveApp usage', () => assert.doesNotMatch(all, /DriveApp/)],
   ['no UrlFetchApp usage', () => assert.doesNotMatch(all, /UrlFetchApp/)],
   ['no GmailApp usage', () => assert.doesNotMatch(all, /GmailApp/)],
