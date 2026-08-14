@@ -1,24 +1,41 @@
 name: Deploy TEST Apps Script
 
 on:
+  push:
+    branches:
+      - deploy/test
   workflow_dispatch:
 
 permissions:
   contents: read
 
+concurrency:
+  group: ttqs-one-test-deploy
+  cancel-in-progress: false
+
 jobs:
   deploy:
+    if: github.ref == 'refs/heads/deploy/test'
     runs-on: ubuntu-latest
     environment: TEST
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4 resolved by GitHub runner 2026-08-11
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4 resolved by GitHub runner 2026-08-11
         with:
           node-version: '22'
           cache: npm
+      - name: Verify deploy ref and main ancestry
+        shell: bash
+        run: |
+          test "$GITHUB_REF" = "refs/heads/deploy/test"
+          git fetch origin main --no-tags
+          git merge-base --is-ancestor "$GITHUB_SHA" origin/main
+          printf 'TEST deploy source SHA: %s\n' "$GITHUB_SHA"
       - run: npm ci --ignore-scripts
       - run: npm run verify
-      - name: Restore clasp credentials and project settings
+      - name: Restore TEST-only clasp credentials and project settings
         shell: bash
         env:
           CLASPRC_JSON_B64: ${{ secrets.CLASPRC_JSON_B64 }}
@@ -29,10 +46,26 @@ jobs:
           printf '%s' "$CLASPRC_JSON_B64" | base64 -d > "$HOME/.clasprc.json"
           printf '%s' "$CLASP_JSON_TEST_B64" | base64 -d > .clasp.json
           node -e "const p=require('./.clasp.json'); if(p.rootDir!=='apps-script'||!p.scriptId) process.exit(1)"
-      - name: Fail-closed push-set verification
+      - name: Fail-closed push-set verification before deploy
         shell: bash
         run: |
-          npx --yes @google/clasp@3.3.0 show-file-status --json > clasp-status.json
-          node scripts/verify-clasp-status.mjs clasp-status.json
+          npx --yes @google/clasp@3.3.0 show-file-status --json > clasp-status-before.json
+          node scripts/verify-clasp-status.mjs clasp-status-before.json
       - name: Push TEST
         run: npx --yes @google/clasp@3.3.0 push --force
+      - name: Verify deployed TEST push set
+        shell: bash
+        run: |
+          npx --yes @google/clasp@3.3.0 show-file-status --json > clasp-status-after.json
+          node scripts/verify-clasp-status.mjs clasp-status-after.json
+      - name: Record deployment provenance
+        shell: bash
+        run: |
+          {
+            echo '## TTQS ONE TEST deployment'
+            echo
+            echo "- Source SHA: $GITHUB_SHA"
+            echo "- Ref: $GITHUB_REF"
+            echo '- Environment: TEST'
+            echo '- PROD/REAL deployment: not performed'
+          } >> "$GITHUB_STEP_SUMMARY"
