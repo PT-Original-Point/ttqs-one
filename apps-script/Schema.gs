@@ -190,10 +190,8 @@ function ttqsObservationSourceKey_(kind, formId, providerTimestamp, payloadHash)
   }));
 }
 
-function ttqsObservationCandidateFromRow_(sheet, rowNumber, kind, formId) {
-  var lastColumn = sheet.getLastColumn();
-  var headers = sheet.getRange(1, 1, 1, lastColumn).getDisplayValues()[0].map(String);
-  var values = sheet.getRange(rowNumber, 1, 1, lastColumn).getDisplayValues()[0].map(String);
+function ttqsObservationCandidateFromValues_(sheetId, rowNumber, kind, formId, headers, displayValues, timestampValue) {
+  var values = displayValues.map(String);
   var byCode = {};
   headers.forEach(function(header, index) {
     if (String(header) === 'TTQS_EVENT_ID') return;
@@ -205,7 +203,6 @@ function ttqsObservationCandidateFromRow_(sheet, rowNumber, kind, formId) {
   var payload = {};
   expectedCodes.forEach(function(code) { payload[code] = byCode[code]; });
   var payloadHash = ttqsDigest_(JSON.stringify(payload));
-  var timestampValue = sheet.getRange(rowNumber, 1).getValue();
   var providerTimestamp = ttqsObservationProviderTimestamp_(timestampValue, values[0]);
   var timestampValid = providerTimestamp.indexOf('INVALID:') !== 0;
   var sourceKey = ttqsObservationSourceKey_(kind, formId, providerTimestamp, payloadHash);
@@ -214,8 +211,8 @@ function ttqsObservationCandidateFromRow_(sheet, rowNumber, kind, formId) {
     source_type: 'GOOGLE_FORM_SHEET',
     source_kind: String(kind),
     source_form_id: String(formId),
-    source_sheet_id: String(sheet.getSheetId()),
-    source_locator: 'SHEET:' + String(sheet.getSheetId()) + ':ROW:' + String(rowNumber),
+    source_sheet_id: String(sheetId),
+    source_locator: 'SHEET:' + String(sheetId) + ':ROW:' + String(rowNumber),
     provider_timestamp: providerTimestamp,
     payload_hash: payloadHash,
     source_key: sourceKey,
@@ -227,6 +224,15 @@ function ttqsObservationCandidateFromRow_(sheet, rowNumber, kind, formId) {
     processed_object_id: '',
     disposition: ''
   };
+}
+
+function ttqsObservationCandidateFromRow_(sheet, rowNumber, kind, formId) {
+  var lastColumn = sheet.getLastColumn();
+  var headers = sheet.getRange(1, 1, 1, lastColumn).getDisplayValues()[0].map(String);
+  var rowRange = sheet.getRange(rowNumber, 1, 1, lastColumn);
+  var displayValues = rowRange.getDisplayValues()[0].map(String);
+  var timestampValue = rowRange.getValues()[0][0];
+  return ttqsObservationCandidateFromValues_(sheet.getSheetId(), rowNumber, kind, formId, headers, displayValues, timestampValue);
 }
 
 function ttqsObservationSourceDescriptors_() {
@@ -242,19 +248,51 @@ function ttqsObservationScanRaw_() {
   if (ttqsConfig_().OBSERVATION_SHADOW_MODE !== true) throw new Error('OBSERVATION_SHADOW_MODE_REQUIRED');
   var ss = ttqsOpenCore_();
   var sources = ttqsObservationSourceDescriptors_();
+  var sheetsById = {};
+  ss.getSheets().forEach(function(sheet) { sheetsById[String(sheet.getSheetId())] = sheet; });
   var candidates = [];
   var rawCount = 0;
+  var rangeReadCalls = 0;
+  var sourceStats = [];
   sources.forEach(function(source) {
-    var sheet = ss.getSheets().filter(function(item) { return item.getSheetId() === Number(source.sheetId); })[0];
+    var sheet = sheetsById[String(source.sheetId)];
     if (!sheet) throw new Error('OBSERVATION_SOURCE_SHEET_MISSING:' + source.sheetId);
-    var rows = Math.max(0, sheet.getLastRow() - 1);
+    var lastRow = sheet.getLastRow();
+    var lastColumn = sheet.getLastColumn();
+    var rows = Math.max(0, lastRow - 1);
     rawCount += rows;
     if (rawCount > Number(ttqsConfig_().OBSERVATION_SCAN_MAX_ROWS)) throw new Error('OBSERVATION_SHADOW_SCAN_LIMIT_EXCEEDED:' + rawCount);
-    for (var rowNumber = 2; rowNumber <= sheet.getLastRow(); rowNumber++) {
-      candidates.push(ttqsObservationCandidateFromRow_(sheet, rowNumber, source.kind, source.formId));
+    if (!rows) {
+      sourceStats.push({ kind: source.kind, sheet_id: String(source.sheetId), rows: 0, range_read_calls: 0 });
+      return;
     }
+    var headers = sheet.getRange(1, 1, 1, lastColumn).getDisplayValues()[0].map(String);
+    rangeReadCalls += 1;
+    var dataRange = sheet.getRange(2, 1, rows, lastColumn);
+    var valueRows = dataRange.getValues();
+    var displayRows = dataRange.getDisplayValues();
+    rangeReadCalls += 2;
+    for (var i = 0; i < rows; i++) {
+      candidates.push(ttqsObservationCandidateFromValues_(
+        sheet.getSheetId(),
+        i + 2,
+        source.kind,
+        source.formId,
+        headers,
+        displayRows[i],
+        valueRows[i][0]
+      ));
+    }
+    sourceStats.push({ kind: source.kind, sheet_id: String(source.sheetId), rows: rows, range_read_calls: 3 });
   });
-  return { candidates: candidates, rawCount: rawCount, sourceCount: sources.length };
+  return {
+    candidates: candidates,
+    rawCount: rawCount,
+    sourceCount: sources.length,
+    readStrategy: 'BATCH_PER_SOURCE',
+    rangeReadCalls: rangeReadCalls,
+    sourceStats: sourceStats
+  };
 }
 
 function ttqsObservationAppendBatch_(sheet, objects) {
@@ -377,13 +415,26 @@ function ttqsObservationReconcileShadow_() {
 function ttqsScheduler() {
   ttqsAssertTestOnly_();
   if (ttqsConfig_().OBSERVATION_SHADOW_MODE !== true) throw new Error('OBSERVATION_SHADOW_MODE_REQUIRED');
+  var startedAt = Date.now();
   var scan = ttqsObservationScanRaw_();
+  var scannedAt = Date.now();
   var ingest = ttqsWithScriptLock_(function() { return ttqsObservationApplyCandidates_(scan.candidates); });
+  var ingestedAt = Date.now();
   var reconciliation = ttqsObservationReconcileShadow_();
+  var reconciledAt = Date.now();
   return {
     mode: 'OBSERVATION_SHADOW',
     sources: scan.sourceCount,
     raw_rows_scanned: scan.rawCount,
+    read_strategy: scan.readStrategy,
+    range_read_calls: scan.rangeReadCalls,
+    source_stats: scan.sourceStats,
+    timings_ms: {
+      scan: scannedAt - startedAt,
+      ingest: ingestedAt - scannedAt,
+      reconcile: reconciledAt - ingestedAt,
+      total: reconciledAt - startedAt
+    },
     ingest: ingest,
     reconciliation: reconciliation,
     legacy_processing_unchanged: true
