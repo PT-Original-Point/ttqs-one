@@ -32,6 +32,6 @@ test('user-facing status avoids self-scoring claims', () => {
 });
 
 test('web app keeps TEST and SAMPLE boundary visible', () => {
-  assert.match(source, /TTQS ONE · TEST \/ SAMPLE/);
-  assert.match(source, /所有 REAL 寫入仍停用/);
+  assert.match(source, /TTQS ONE · 測試／示範資料（TEST／SAMPLE）/);
+  assert.match(source, /所有正式資料寫入（REAL）仍停用/);
 });
