@@ -8,6 +8,8 @@ var TTQS_CONFIG = Object.freeze({
   CLASS_RUN_ID: 'SAMPLE-CLASS-001',
   ENABLE_REAL_WRITES: false,
   PII_VAULT_READY: false,
+  OBSERVATION_SHADOW_MODE: true,
+  OBSERVATION_SCAN_MAX_ROWS: 5000,
   MAX_ATTEMPTS: 3,
   RETRY_MINUTES: 1,
   RUNNING_LEASE_MINUTES: 5,
@@ -31,7 +33,8 @@ var TTQS_CONFIG = Object.freeze({
     APPROVAL: '13_ApprovalEvent_核准紀錄',
     EVIDENCE: '14_EvidenceMaster_證據總索引',
     LEDGER: '15_EventJobLedger_工作總帳',
-    ATTEMPT_HISTORY: '16_AttemptHistory_嘗試歷史'
+    ATTEMPT_HISTORY: '16_AttemptHistory_嘗試歷史',
+    OBSERVATION: '17_Observation_原始收件索引'
   }),
   AUTO_CONSULT_SHEET: 'AUTO_19指標證據索引'
 });
