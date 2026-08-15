@@ -35,10 +35,12 @@ test('source key is stable for provider identity inputs', () => {
   assert.equal(a, b);
 });
 
-test('raw candidate builder never writes to linked raw sheet', () => {
-  const body = functionBody('ttqsObservationCandidateFromRow_');
-  assert.doesNotMatch(body, /\.setValue|\.setValues|appendRow|ttqsEnsureEventId_/);
-  assert.match(body, /source_locator:/);
+test('raw candidate builders never write to linked raw sheet', () => {
+  const rowBody = functionBody('ttqsObservationCandidateFromRow_');
+  const valuesBody = functionBody('ttqsObservationCandidateFromValues_');
+  assert.doesNotMatch(rowBody, /\.setValue|\.setValues|appendRow|ttqsEnsureEventId_/);
+  assert.doesNotMatch(valuesBody, /\.setValue|\.setValues|appendRow|ttqsEnsureEventId_/);
+  assert.match(valuesBody, /source_locator:/);
 });
 
 test('source-key collision and raw mutation fail into quarantine', () => {
