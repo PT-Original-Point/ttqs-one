@@ -107,6 +107,48 @@ function ttqsWebModuleModel_() {
   ];
 }
 
+function ttqsWebFormLaunchModel_() {
+  var props = PropertiesService.getScriptProperties();
+  var labels = {
+    NEEDS: '需求調查',
+    REGISTRATION: '課程報名',
+    REACTION: '課後滿意度',
+    FOLLOWUP30: '30 日追蹤'
+  };
+  return ['NEEDS', 'REGISTRATION', 'REACTION', 'FOLLOWUP30'].map(function(kind) {
+    var formId = String(props.getProperty('TTQS_FORM_' + kind + '_ID') || '');
+    if (!formId) return { kind: kind, label: labels[kind], url: '', status: '尚未建立' };
+    try {
+      var form = FormApp.openById(formId);
+      var published = form.isPublished() === true;
+      var url = published ? String(form.getPublishedUrl() || '') : '';
+      return {
+        kind: kind,
+        label: labels[kind],
+        url: url,
+        status: published && url ? '可填答' : '需要檢查'
+      };
+    } catch (err) {
+      return { kind: kind, label: labels[kind], url: '', status: '需要檢查' };
+    }
+  });
+}
+
+function ttqsWebHealthSummary_() {
+  try {
+    var health = ttqsHealthCheck();
+    var total = health && health.checks ? health.checks.length : 0;
+    var failed = health && health.failed ? health.failed.length : 0;
+    return {
+      state: health && health.status === 'PASS' ? '正常' : '需要檢查',
+      total: total,
+      failed: failed
+    };
+  } catch (err) {
+    return { state: '需要檢查', total: 0, failed: 0 };
+  }
+}
+
 function ttqsWebDashboardModel_(requestedView) {
   ttqsAssertTestOnly_();
   var view = String(requestedView || '').toLowerCase() === 'external' ? 'EXTERNAL_PREVIEW' : 'INTERNAL';
@@ -120,7 +162,9 @@ function ttqsWebDashboardModel_(requestedView) {
     indicators: indicators,
     coveredIndicators: covered,
     gapIndicators: 19 - covered,
-    modules: view === 'INTERNAL' ? ttqsWebModuleModel_() : []
+    modules: view === 'INTERNAL' ? ttqsWebModuleModel_() : [],
+    formLaunchers: view === 'INTERNAL' ? ttqsWebFormLaunchModel_() : [],
+    health: view === 'INTERNAL' ? ttqsWebHealthSummary_() : null
   };
 }
 
@@ -144,22 +188,37 @@ function ttqsWebModuleCardsHtml_(modules) {
     }).join('') + '</div></section>';
 }
 
+function ttqsWebFormLaunchHtml_(forms, health) {
+  if (!forms.length) return '';
+  var cards = forms.map(function(item) {
+    var action = item.url
+      ? '<a class="launch-action" target="_blank" rel="noopener noreferrer" href="' + ttqsWebEscape_(item.url) + '">開啟填答</a>'
+      : '<span class="launch-action disabled">' + ttqsWebEscape_(item.status) + '</span>';
+    return '<article class="launch-card"><div><span class="launch-state">' + ttqsWebEscape_(item.status) + '</span><h3>' + ttqsWebEscape_(item.label) + '</h3><p>使用 Google Forms 原生填答頁面；只使用 SAMPLE 示範資料。</p></div>' + action + '</article>';
+  }).join('');
+  var healthHtml = health
+    ? '<div class="health-summary"><strong>系統狀態：' + ttqsWebEscape_(health.state) + '</strong><span>自動檢查 ' + ttqsWebEscape_(health.total) + ' 項；需檢查 ' + ttqsWebEscape_(health.failed) + ' 項</span></div>'
+    : '';
+  return '<section><div class="section-heading"><h2>顧問示範流程入口</h2><p>填答仍走 Google Forms 原生介面，不繞過既有 TEST 處理流程。</p></div>' + healthHtml + '<div class="launch-grid">' + cards + '</div></section>';
+}
+
 function ttqsRenderWebAppHtml_(model) {
   var externalPreview = model.view === 'EXTERNAL_PREVIEW';
   var viewTitle = externalPreview ? '外部唯讀預覽' : '內部辦訓總覽';
   var viewNote = externalPreview
     ? '目前僅為外部唯讀畫面預覽；尚未建立正式外部部署，也不讀取 REAL 個資。'
     : '目前為 TEST／SAMPLE 內部畫面；所有 REAL 寫入仍停用。';
+  var launchers = ttqsWebFormLaunchHtml_(model.formLaunchers || [], model.health);
   var modules = ttqsWebModuleCardsHtml_(model.modules);
   var indicators = ttqsWebIndicatorCardsHtml_(model.indicators);
   return '<!doctype html><html lang="zh-Hant-TW"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">' +
     '<title>TTQS ONE</title><style>' +
-    ':root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;color:#17202a;background:#f5f7f9}*{box-sizing:border-box}body{margin:0;background:#f5f7f9}main{max-width:1180px;margin:0 auto;padding:24px}header{background:#fff;border:1px solid #dfe6ec;border-radius:18px;padding:24px;margin-bottom:18px}.eyebrow{font-size:13px;font-weight:700;letter-spacing:.08em;color:#52606d}.title-row{display:flex;gap:16px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap}h1{margin:6px 0 4px;font-size:32px}h2{margin:0;font-size:22px}h3{margin:0;font-size:16px}.badge{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;background:#eef2f5;font-size:13px;font-weight:700}.notice{margin:16px 0 0;padding:14px 16px;border-radius:12px;background:#fff8e5;border:1px solid #f0d48a;line-height:1.55}.switch{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.switch a{text-decoration:none;color:#17202a;border:1px solid #c9d3dc;border-radius:10px;padding:9px 12px;background:#fff}.switch a.active{font-weight:700;border-color:#66788a;background:#eef2f5}.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}.stat{background:#fff;border:1px solid #dfe6ec;border-radius:14px;padding:16px}.stat strong{display:block;font-size:24px;margin-top:6px}.section-heading{display:flex;justify-content:space-between;gap:20px;align-items:end;margin:26px 0 12px}.section-heading p{margin:0;color:#5f6b76}.module-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.module,.indicator{background:#fff;border:1px solid #dfe6ec;border-radius:14px;padding:16px}.module-title,.indicator-top{display:flex;justify-content:space-between;gap:10px;align-items:center}.module-title span,.stage{font-size:12px;font-weight:700;padding:4px 7px;border-radius:999px;background:#eef2f5}.module p,.indicator p{color:#5f6b76;line-height:1.45}.indicator-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.indicator-no{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:#eef2f5;font-weight:800}.indicator.ok{border-left:5px solid #5b8c64}.indicator.gap{border-left:5px solid #a86464}.indicator.wait{border-left:5px solid #a98a4a}.status{min-height:42px}.count{font-size:13px;margin-bottom:0}.footnote{margin:24px 0 0;color:#68737d;font-size:13px;line-height:1.6}@media(max-width:820px){main{padding:14px}.stats,.module-grid,.indicator-grid{grid-template-columns:1fr}.section-heading{display:block}.section-heading p{margin-top:6px}h1{font-size:27px}}' +
+    ':root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;color:#17202a;background:#f5f7f9}*{box-sizing:border-box}body{margin:0;background:#f5f7f9}main{max-width:1180px;margin:0 auto;padding:24px}header{background:#fff;border:1px solid #dfe6ec;border-radius:18px;padding:24px;margin-bottom:18px}.eyebrow{font-size:13px;font-weight:700;letter-spacing:.08em;color:#52606d}.title-row{display:flex;gap:16px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap}h1{margin:6px 0 4px;font-size:32px}h2{margin:0;font-size:22px}h3{margin:0;font-size:16px}.badge{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;background:#eef2f5;font-size:13px;font-weight:700}.notice{margin:16px 0 0;padding:14px 16px;border-radius:12px;background:#fff8e5;border:1px solid #f0d48a;line-height:1.55}.switch{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.switch a{text-decoration:none;color:#17202a;border:1px solid #c9d3dc;border-radius:10px;padding:9px 12px;background:#fff}.switch a.active{font-weight:700;border-color:#66788a;background:#eef2f5}.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}.stat{background:#fff;border:1px solid #dfe6ec;border-radius:14px;padding:16px}.stat strong{display:block;font-size:24px;margin-top:6px}.section-heading{display:flex;justify-content:space-between;gap:20px;align-items:end;margin:26px 0 12px}.section-heading p{margin:0;color:#5f6b76}.launch-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.launch-card{background:#fff;border:1px solid #dfe6ec;border-radius:14px;padding:16px;display:flex;justify-content:space-between;gap:18px;align-items:center}.launch-card p{color:#5f6b76;line-height:1.45}.launch-state{display:inline-block;font-size:12px;font-weight:700;padding:4px 7px;border-radius:999px;background:#eef2f5;margin-bottom:8px}.launch-action{text-decoration:none;font-weight:700;white-space:nowrap;border:1px solid #66788a;border-radius:10px;padding:9px 12px;color:#17202a;background:#fff}.launch-action.disabled{border-color:#c9d3dc;color:#7a8792}.health-summary{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;background:#eef6ef;border:1px solid #cbdccc;border-radius:12px;padding:12px 14px;margin-bottom:12px}.health-summary span{color:#52606d}.module-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.module,.indicator{background:#fff;border:1px solid #dfe6ec;border-radius:14px;padding:16px}.module-title,.indicator-top{display:flex;justify-content:space-between;gap:10px;align-items:center}.module-title span,.stage{font-size:12px;font-weight:700;padding:4px 7px;border-radius:999px;background:#eef2f5}.module p,.indicator p{color:#5f6b76;line-height:1.45}.indicator-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.indicator-no{display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:#eef2f5;font-weight:800}.indicator.ok{border-left:5px solid #5b8c64}.indicator.gap{border-left:5px solid #a86464}.indicator.wait{border-left:5px solid #a98a4a}.status{min-height:42px}.count{font-size:13px;margin-bottom:0}.footnote{margin:24px 0 0;color:#68737d;font-size:13px;line-height:1.6}@media(max-width:820px){main{padding:14px}.stats,.launch-grid,.module-grid,.indicator-grid{grid-template-columns:1fr}.launch-card{align-items:flex-start;flex-direction:column}.section-heading{display:block}.section-heading p{margin-top:6px}h1{font-size:27px}}' +
     '</style></head><body><main><header><div class="title-row"><div><div class="eyebrow">TTQS ONE · TEST / SAMPLE</div><h1>' + ttqsWebEscape_(viewTitle) + '</h1><div>' + ttqsWebEscape_(viewNote) + '</div></div><div class="badge">版本 ' + ttqsWebEscape_(model.version) + '</div></div>' +
     '<div class="notice">此切換僅為內部測試預覽，不是權限控制。真正外部唯讀部署必須先完成伺服器函式隔離與發布安全驗證。</div>' +
     '<nav class="switch"><a class="' + (externalPreview ? '' : 'active') + '" href="?view=internal">內部辦訓總覽</a><a class="' + (externalPreview ? 'active' : '') + '" href="?view=external">外部唯讀預覽</a></nav></header>' +
     '<section class="stats"><div class="stat">資料分類<strong>' + ttqsWebEscape_(model.dataClass) + '</strong></div><div class="stat">已有測試佐證指標<strong>' + ttqsWebEscape_(model.coveredIndicators) + ' / 19</strong></div><div class="stat">目前缺少佐證指標<strong>' + ttqsWebEscape_(model.gapIndicators) + '</strong></div></section>' +
-    modules +
+    launchers + modules +
     '<section><div class="section-heading"><h2>TTQS 19 指標佐證投影</h2><p>只呈現佐證狀態，不計算官方分數，也不宣稱評核結果。</p></div><div class="indicator-grid">' + indicators + '</div></section>' +
     '<p class="footnote">目前畫面直接讀取既有 TEST／SAMPLE 核心資料。外部預覽不等於正式 Snapshot；正式評核發布仍需獨立的唯讀快照與核准流程。</p>' +
     '</main></body></html>';
