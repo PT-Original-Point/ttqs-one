@@ -368,7 +368,12 @@ function ttqsLedgerFail_(job, err) {
 }
 
 function ttqsAttemptHistoryIntegrity_() {
-  var historyRows = ttqsReadObjects_(ttqsAttemptHistorySheet_());
+  var sheet = ttqsAttemptHistorySheet_();
+  var headers = ttqsHeaders_(sheet);
+  var lastRow = sheet.getLastRow();
+  var historyRows = lastRow < 3 ? [] : sheet.getRange(3, 1, lastRow - 2, headers.length).getDisplayValues().map(function(row, i) {
+    return { rowNumber: i + 3, object: ttqsRowObject_(headers, row) };
+  });
   var errors = [];
   var seenEventIds = {};
   var lastHashByJob = {};
