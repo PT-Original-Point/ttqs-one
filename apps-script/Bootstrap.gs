@@ -79,6 +79,9 @@ function ttqsInstallManagedTriggers_() {
 function ttqsBootstrapTestLocked_() {
   ttqsAssertTestOnly_();
   if (typeof ttqsEnsureAuditSchema_ === 'function') ttqsEnsureAuditSchema_();
+  if (ttqsConfig_().OBSERVATION_SHADOW_MODE === true && typeof ttqsEnsureObservationSheet_ === 'function') {
+    ttqsEnsureObservationSheet_();
+  }
   var preHealth = ttqsHealthCheck();
   if (preHealth.status !== 'PASS') throw new Error('PRE_BOOTSTRAP_HEALTH_FAIL:' + JSON.stringify(preHealth.failed));
 
