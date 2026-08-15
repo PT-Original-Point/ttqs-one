@@ -8,6 +8,9 @@ function ttqsHealthRequiredHeaders_() {
   required[cfg.SHEETS.EVIDENCE] = ['evidence_id', 'evidence_title', 'evidence_type', 'environment', 'data_class', 'source_object_type', 'source_object_id', 'drive_file_id', 'drive_url', 'document_version_id', 'class_run_id', 'ttqs_indicator_tags', 'pddro_stage', 'approval_status', 'approved_by', 'sha256', 'health_status', 'retrieval_tested_at', 'archive_status', 'notes'];
   required[cfg.SHEETS.LEDGER] = ['job_id', 'event_type', 'environment', 'object_type', 'object_id', 'idempotency_key', 'trigger_source', 'scheduled_at', 'started_at', 'finished_at', 'status', 'attempt_no', 'max_attempts', 'error_class', 'error_message', 'retry_at', 'reconciliation_date', 'reconciliation_status', 'operator', 'trace_id', 'notes', 'final_acceptance_status', 'final_accepted_at'];
   required[cfg.SHEETS.ATTEMPT_HISTORY] = ttqsAttemptHistoryColumns_().map(function(column) { return column.header; });
+  if (cfg.OBSERVATION_SHADOW_MODE === true && cfg.SHEETS.OBSERVATION && typeof ttqsObservationColumns_ === 'function') {
+    required[cfg.SHEETS.OBSERVATION] = ttqsObservationColumns_().map(function(column) { return column.header; });
+  }
   return required;
 }
 
