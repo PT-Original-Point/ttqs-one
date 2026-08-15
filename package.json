@@ -10,7 +10,8 @@
     "verify:deploy": "node scripts/check-deploy-set.mjs",
     "verify:clasp-status": "node scripts/verify-clasp-status.mjs clasp-status.json",
     "verify:manifest": "node scripts/verify-manifest.mjs",
-    "verify": "npm run verify:manifest && npm run lint && npm test && npm run verify:deploy"
+    "verify:deploy-controls": "node scripts/verify-github-deploy-controls.mjs",
+    "verify": "npm run verify:manifest && npm run verify:deploy-controls && npm run lint && npm test && npm run verify:deploy"
   },
   "engines": { "node": ">=22" }
 }
