@@ -2,11 +2,16 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { pathToFileURL } from 'node:url';
+import { publishTestWebApp } from './publish-test-webapp.mjs';
 
 export const APPROVED_TEST_SCRIPT_ID_SHA256 = '949a2d8127c3be600fe93b6d3e76a83e3daf296412e0f930115415eb66aab703';
 
 export function isTestDeployContext(env = process.env) {
   return env.GITHUB_ACTIONS === 'true' && env.GITHUB_REF === 'refs/heads/deploy/test' && env.GITHUB_JOB === 'deploy';
+}
+
+export function shouldPublishTestWebApp(file, env = process.env) {
+  return isTestDeployContext(env) && path.basename(String(file || '')) === 'clasp-status-after.json';
 }
 
 export function verifyApprovedTestTarget(clasp, env = process.env, expectedHash = APPROVED_TEST_SCRIPT_ID_SHA256) {
@@ -68,7 +73,8 @@ function main() {
     target = verifyApprovedTestTarget(clasp);
   }
 
-  console.log(JSON.stringify({ status: 'PASS', matched: matched.sort(), count: matched.length, target }, null, 2));
+  const webappDeployment = shouldPublishTestWebApp(file) ? publishTestWebApp() : { status: 'SKIP', reason: 'NOT_POST_PUSH_PHASE' };
+  console.log(JSON.stringify({ status: 'PASS', matched: matched.sort(), count: matched.length, target, webappDeployment }, null, 2));
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) main();
