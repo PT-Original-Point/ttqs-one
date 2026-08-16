@@ -247,7 +247,8 @@ function ttqsBenchmarkRawLocators_(ss, sources) {
   sources.forEach(function(source) {
     var sheet = sheetsById[String(source.sheetId)];
     if (!sheet) throw new Error('BENCHMARK_SOURCE_SHEET_MISSING:' + source.sheetId);
-    for (var rowNumber = 2; rowNumber <= sheet.getLastRow(); rowNumber++) {
+    var lastRow = sheet.getLastRow();
+    for (var rowNumber = 2; rowNumber <= lastRow; rowNumber++) {
       locators['SHEET:' + String(source.sheetId) + ':ROW:' + String(rowNumber)] = true;
     }
   });
