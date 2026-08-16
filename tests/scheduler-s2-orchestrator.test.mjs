@@ -75,6 +75,28 @@ test('S2 reuses existing task entrypoints instead of cloning business logic', ()
   assert.doesNotMatch(execute, /ttqsRetryFailedJobsUnlocked_|ttqsReconcileUnlocked_|ttqsRefreshConsultViewUnlocked_/);
 });
 
+test('S2 treats unhealthy returned results as task failures, not successful execution', () => {
+  const match = source.match(/function ttqsS2TaskResultHealth_\(taskName, result\) \{([\s\S]*?)\n\}\n\nfunction ttqsS2ExecuteTask_/);
+  assert.ok(match, 'result health function must be isolatable');
+  const context = {};
+  vm.createContext(context);
+  vm.runInContext(`function ttqsS2TaskResultHealth_(taskName, result) {${match[1]}\n}`, context);
+  const health = (task, result) => JSON.parse(JSON.stringify(context.ttqsS2TaskResultHealth_(task, result)));
+
+  assert.equal(health('RETRY', [{ error: 'synthetic' }]).pass, false);
+  assert.equal(health('RETRY', []).pass, true);
+  assert.equal(health('OBSERVATION', { ingest: { quarantined: 1, rawMutation: 0, sourceKeyCollision: 0 }, reconciliation: { status: 'PASS_WITH_QUARANTINE' } }).pass, false);
+  assert.equal(health('OBSERVATION', { ingest: { quarantined: 0, rawMutation: 0, sourceKeyCollision: 0 }, reconciliation: { status: 'PASS' } }).pass, true);
+  assert.equal(health('RECONCILE', { status: 'FAIL', watchdog: { status: 'FAIL' } }).pass, false);
+  assert.equal(health('RECONCILE', { status: 'PASS', watchdog: { status: 'PASS' } }).pass, true);
+  assert.equal(health('CONSULT', { rows: 18 }).pass, false);
+  assert.equal(health('CONSULT', { rows: 19 }).pass, true);
+
+  const master = functionBody('ttqsSchedulerMasterTrigger', 'ttqsS2MasterTriggers_');
+  assert.match(master, /ttqsS2TaskResultHealth_\(definition\.name, result\)/);
+  assert.match(master, /S2_TASK_RESULT_INVALID/);
+});
+
 test('S2 trigger topology keeps form-submit and forbids legacy clocks plus S1 shadow', () => {
   const contract = functionBody('ttqsAssertS2TriggerContract_', 'ttqsS2InitializeState_');
   assert.match(contract, /ttqsOnSpreadsheetFormSubmit/);
