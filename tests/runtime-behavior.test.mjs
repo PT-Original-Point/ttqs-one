@@ -82,7 +82,7 @@ test('reconcile is locked and summarizes raw-root exact matches and mismatches',
     ttqsParseJson_(v) { return JSON.parse(v); },
     PropertiesService: { getScriptProperties() { return { getProperty() { return JSON.stringify({ 77: 'REGISTRATION' }); } }; } },
     ttqsFindSheetById_() { return sheet; },
-    ttqsRawSubmission_() { return { kind: 'REGISTRATION', eventId: 'EVT1', rawRef: 'FORM_SUITE:F1:EVT1' }; }
+    ttqsS3ResolveUnifiedRawBySheetRow_() { return { kind: 'REGISTRATION', eventId: 'EVT1', rawRef: 'FORM_SUITE:F1:EVT1' }; }
   }));
   sandbox.ttqsReconcileRaw_ = () => ({ status });
   sandbox.ttqsReconciliationWatchdog_ = () => ({ status: 'PASS', issues: [], pendingWithinGrace: [] });

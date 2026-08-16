@@ -197,6 +197,16 @@ function ttqsReconciliationMarkEngineFailure_(err) {
   return updated;
 }
 
+function ttqsS3ReconcileSourceFailureDetail_(sheetId, rowNumber, kind, err) {
+  return {
+    sheetId: Number(sheetId),
+    observedRowNumber: Number(rowNumber),
+    kind: String(kind || ''),
+    status: 'MISMATCH_SOURCE_PROVENANCE',
+    error: String(err && err.message ? err.message : err).slice(0, 500)
+  };
+}
+
 function ttqsReconcileUnlocked_() {
   ttqsAssertTestOnly_();
   var ss = ttqsOpenCore_();
@@ -211,7 +221,11 @@ function ttqsReconcileUnlocked_() {
       return;
     }
     for (var rowNumber = 2; rowNumber <= sheet.getLastRow(); rowNumber++) {
-      details.push(ttqsReconcileRaw_(ttqsRawSubmission_(Number(sheetId), rowNumber, false)));
+      try {
+        details.push(ttqsReconcileRaw_(ttqsS3ResolveUnifiedRawBySheetRow_(Number(sheetId), rowNumber)));
+      } catch (err) {
+        details.push(ttqsS3ReconcileSourceFailureDetail_(Number(sheetId), rowNumber, map[sheetId], err));
+      }
     }
   });
 

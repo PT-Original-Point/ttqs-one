@@ -39,11 +39,7 @@ function ttqsRetryFailedJobsUnlocked_() {
         }
       }
       if (job.object.event_type === 'FORM_SUITE') {
-        var notes = ttqsParseJson_(job.object.notes, {});
-        if (!notes.rawRef || notes.sheetId === undefined || notes.sheetId === null) {
-          throw new Error('FORM_SUITE_RETRY_PROVENANCE_MISSING');
-        }
-        var raw = ttqsFindRawSubmissionByRef_(Number(notes.sheetId), String(notes.rawRef));
+        var raw = ttqsS3ResolveRetryRaw_(job);
         delegatedToFormHandler = true;
         results.push(ttqsHandleRawObjectUnlocked_(raw, true));
       } else if (job.object.event_type === 'FAULT_PROBE') {
