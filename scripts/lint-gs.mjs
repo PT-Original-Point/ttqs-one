@@ -4,7 +4,7 @@ import vm from 'node:vm';
 
 const root = path.resolve('apps-script');
 const files = fs.readdirSync(root).filter((name) => name.endsWith('.gs')).sort();
-if (files.length !== 17) throw new Error(`Expected 17 Apps Script sources, found ${files.length}`);
+if (files.length !== 18) throw new Error(`Expected 18 Apps Script sources, found ${files.length}`);
 for (const file of files) {
   const code = fs.readFileSync(path.join(root, file), 'utf8');
   new vm.Script(code, { filename: file });

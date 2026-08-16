@@ -10,7 +10,7 @@ const ledgerSource = fs.readFileSync(path.join(dir, 'Ledger.gs'), 'utf8');
 const manifest = JSON.parse(fs.readFileSync('apps-script/appsscript.json', 'utf8'));
 
 const checks = [
-  ['17 gs sources', () => assert.equal(files.length, 17)],
+  ['18 gs sources', () => assert.equal(files.length, 18)],
   ['version 0.6.5', () => assert.match(all, /VERSION: '0\.6\.5'/)],
   ['audit log version 2', () => assert.match(all, /AUDIT_LOG_VERSION: 2/)],
   ['TEST environment fixed', () => assert.match(all, /ENVIRONMENT: 'TEST'/)],
