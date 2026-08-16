@@ -93,10 +93,10 @@ function ttqsS2SaveState_(state) {
 
 function ttqsS2TaskDue_(task, definition, nowMillis) {
   if (Number(task.lease_until_ms || 0) > Number(nowMillis)) return { due: false, reason: 'LEASE_ACTIVE' };
-  var lastSuccess = Number(task.last_success_ms || 0);
-  if (!lastSuccess) return { due: true, reason: 'NEVER_SUCCEEDED' };
+  var lastAttempt = Math.max(Number(task.last_success_ms || 0), Number(task.last_finished_ms || 0));
+  if (!lastAttempt) return { due: true, reason: 'NEVER_ATTEMPTED' };
   var cadenceMs = Number(definition.cadenceMinutes) * 60000;
-  if (Number(nowMillis) - lastSuccess >= cadenceMs) return { due: true, reason: 'CADENCE_DUE' };
+  if (Number(nowMillis) - lastAttempt >= cadenceMs) return { due: true, reason: 'CADENCE_DUE' };
   return { due: false, reason: 'NOT_DUE' };
 }
 
