@@ -61,6 +61,24 @@ test('row locator changes do not alter source identity', () => {
   assert.notEqual(first.source_locator, moved.source_locator);
 });
 
+test('reconciliation raw locator scan hoists provider calls out of the row loop', () => {
+  const body = functionBody('ttqsObservationRawLocators_');
+  assert.match(body, /var sheetsById = \{\};/);
+  assert.match(body, /ss\.getSheets\(\)\.forEach/);
+  assert.match(body, /var lastRow = sheet\.getLastRow\(\);/);
+  assert.match(body, /for \(var rowNumber = 2; rowNumber <= lastRow; rowNumber\+\+\)/);
+  assert.doesNotMatch(body, /rowNumber <= sheet\.getLastRow\(\)/);
+  assert.equal((body.match(/ss\.getSheets\(\)/g) || []).length, 1);
+  assert.equal((body.match(/sheet\.getLastRow\(\)/g) || []).length, 1);
+});
+
+test('reconciliation raw locator scan preserves fail-closed source and locator semantics', () => {
+  const body = functionBody('ttqsObservationRawLocators_');
+  assert.match(body, /ttqsObservationSourceDescriptors_\(\)\.forEach/);
+  assert.match(body, /OBSERVATION_SOURCE_SHEET_MISSING/);
+  assert.match(body, /'SHEET:' \+ String\(source\.sheetId\) \+ ':ROW:' \+ String\(rowNumber\)/);
+});
+
 test('scheduler exposes benchmark timings and RPC-read strategy', () => {
   const body = functionBody('ttqsScheduler');
   assert.match(body, /read_strategy: scan\.readStrategy/);
