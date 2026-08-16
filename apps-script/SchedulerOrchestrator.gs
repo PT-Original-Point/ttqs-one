@@ -174,6 +174,7 @@ function ttqsS2ResultSummary_(taskName, result) {
   if (taskName === 'OBSERVATION') {
     var ingest = result && result.ingest ? result.ingest : {};
     var reconciliation = result && result.reconciliation ? result.reconciliation : {};
+    var processing = result && result.processing ? result.processing : {};
     return {
       sources: Number(result && result.sources || 0),
       raw_rows_scanned: Number(result && result.raw_rows_scanned || 0),
@@ -182,6 +183,13 @@ function ttqsS2ResultSummary_(taskName, result) {
       quarantined: Number(ingest.quarantined || 0),
       reconciliation_status: String(reconciliation.status || ''),
       observation_count: Number(reconciliation.observation_count || 0),
+      processing_selected: Number(processing.selected || 0),
+      processing_accepted: Number(processing.accepted || 0),
+      processing_linked_existing: Number(processing.linked_existing || 0),
+      processing_scheduler_processed: Number(processing.scheduler_processed || 0),
+      processing_deferred: Number(processing.deferred || 0),
+      processing_quarantined: Number(processing.quarantined || 0),
+      processing_rejected: Number(processing.rejected || 0),
       legacy_processing_unchanged: result && result.legacy_processing_unchanged === true
     };
   }
@@ -209,13 +217,16 @@ function ttqsS2TaskResultHealth_(taskName, result) {
   if (taskName === 'OBSERVATION') {
     var ingest = result && result.ingest ? result.ingest : {};
     var reconciliation = result && result.reconciliation ? result.reconciliation : {};
+    var processing = result && result.processing ? result.processing : {};
     var observationPass = String(reconciliation.status || '') === 'PASS' &&
       Number(ingest.quarantined || 0) === 0 &&
       Number(ingest.rawMutation || 0) === 0 &&
-      Number(ingest.sourceKeyCollision || 0) === 0;
+      Number(ingest.sourceKeyCollision || 0) === 0 &&
+      Number(processing.quarantined || 0) === 0 &&
+      Number(processing.rejected || 0) === 0;
     return {
       pass: observationPass,
-      reason: observationPass ? 'PASS' : ('OBSERVATION_INTEGRITY:' + String(reconciliation.status || '') + ':Q' + Number(ingest.quarantined || 0) + ':M' + Number(ingest.rawMutation || 0) + ':C' + Number(ingest.sourceKeyCollision || 0))
+      reason: observationPass ? 'PASS' : ('OBSERVATION_INTEGRITY:' + String(reconciliation.status || '') + ':Q' + Number(ingest.quarantined || 0) + ':M' + Number(ingest.rawMutation || 0) + ':C' + Number(ingest.sourceKeyCollision || 0) + ':PQ' + Number(processing.quarantined || 0) + ':PR' + Number(processing.rejected || 0))
     };
   }
   if (taskName === 'RECONCILE') {
@@ -231,7 +242,7 @@ function ttqsS2TaskResultHealth_(taskName, result) {
 
 function ttqsS2ExecuteTask_(taskName) {
   if (taskName === 'RETRY') return ttqsRetryFailedJobs();
-  if (taskName === 'OBSERVATION') return ttqsScheduler();
+  if (taskName === 'OBSERVATION') return ttqsS3ObservationCycle();
   if (taskName === 'RECONCILE') return ttqsReconcile();
   if (taskName === 'CONSULT') return ttqsRefreshConsultView();
   throw new Error('S2_UNKNOWN_TASK:' + taskName);
