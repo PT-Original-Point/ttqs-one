@@ -167,10 +167,10 @@ test('S2 master does not hold one outer script lock across existing locked tasks
   assert.match(commit, /ttqsWithScriptLock_/);
 });
 
-test('S2 reuses existing task entrypoints instead of cloning business logic', () => {
+test('S2 reuses existing task entrypoints and delegates Observation to S3 dual-run cycle', () => {
   const execute = functionBody('ttqsS2ExecuteTask_', 'ttqsS2AppendLogObject_');
   assert.match(execute, /RETRY'\) return ttqsRetryFailedJobs\(\)/);
-  assert.match(execute, /OBSERVATION'\) return ttqsScheduler\(\)/);
+  assert.match(execute, /OBSERVATION'\) return ttqsS3ObservationCycle\(\)/);
   assert.match(execute, /RECONCILE'\) return ttqsReconcile\(\)/);
   assert.match(execute, /CONSULT'\) return ttqsRefreshConsultView\(\)/);
   assert.doesNotMatch(execute, /ttqsRetryFailedJobsUnlocked_|ttqsReconcileUnlocked_|ttqsRefreshConsultViewUnlocked_/);
@@ -188,6 +188,9 @@ test('S2 treats unhealthy returned results as task failures, not successful exec
   assert.equal(health('RETRY', []).pass, true);
   assert.equal(health('OBSERVATION', { ingest: { quarantined: 1, rawMutation: 0, sourceKeyCollision: 0 }, reconciliation: { status: 'PASS_WITH_QUARANTINE' } }).pass, false);
   assert.equal(health('OBSERVATION', { ingest: { quarantined: 0, rawMutation: 0, sourceKeyCollision: 0 }, reconciliation: { status: 'PASS' } }).pass, true);
+  assert.equal(health('OBSERVATION', { ingest: { quarantined: 0, rawMutation: 0, sourceKeyCollision: 0 }, processing: { deferred: 1, quarantined: 0, rejected: 0 }, reconciliation: { status: 'PASS' } }).pass, true);
+  assert.equal(health('OBSERVATION', { ingest: { quarantined: 0, rawMutation: 0, sourceKeyCollision: 0 }, processing: { quarantined: 1, rejected: 0 }, reconciliation: { status: 'PASS_WITH_QUARANTINE' } }).pass, false);
+  assert.equal(health('OBSERVATION', { ingest: { quarantined: 0, rawMutation: 0, sourceKeyCollision: 0 }, processing: { quarantined: 0, rejected: 1 }, reconciliation: { status: 'PASS' } }).pass, false);
   assert.equal(health('RECONCILE', { status: 'FAIL', watchdog: { status: 'FAIL' } }).pass, false);
   assert.equal(health('RECONCILE', { status: 'PASS', watchdog: { status: 'PASS' } }).pass, true);
   assert.equal(health('CONSULT', { rows: 18 }).pass, false);
