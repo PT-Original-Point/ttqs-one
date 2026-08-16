@@ -1,5 +1,6 @@
 var TTQS_S3_OBSERVATION_TRIGGER_SOURCE = 'SCHEDULER_OBSERVATION';
 var TTQS_S3_SYNTHETIC_EVENT_PREFIX = 'EVT-OBS-';
+var TTQS_S3_OBSERVATION_BATCH_LIMIT = 50;
 
 function ttqsS3ParseSourceLocator_(locator) {
   var match = /^SHEET:(\d+):ROW:(\d+)$/.exec(String(locator || ''));
@@ -143,4 +144,249 @@ function ttqsS3JobNotesFromRaw_(raw) {
     observationProviderTimestamp: String(provenance.observationProviderTimestamp || ''),
     observationIdentityMode: String(raw && raw.observationIdentityMode || provenance.observationIdentityMode || '')
   };
+}
+
+function ttqsS3ObservationBoundedError_(err) {
+  return String(err && err.message ? err.message : err || '').slice(0, 500);
+}
+
+function ttqsS3ObservationIntegrityError_(err) {
+  var message = ttqsS3ObservationBoundedError_(err);
+  return /^S3_OBSERVATION_(SOURCE_(TYPE|LOCATOR|SHEET|KIND|FORM|KEY)_|PROVIDER_TIMESTAMP_MISMATCH|PAYLOAD_HASH_MISMATCH)/.test(message) ||
+    /^S3_DUPLICATE_OBSERVATION_/.test(message);
+}
+
+function ttqsS3ObservationBusinessIntegrityError_(err) {
+  var message = ttqsS3ObservationBoundedError_(err);
+  return /^S3_OBSERVATION_(RECONCILIATION_|FINAL_ACCEPTANCE_|JOB_(NOT_FOUND|NOT_SUCCESS|RAW_REF|NOTES_RAW_REF|FINGERPRINT|EVENT_ID|SOURCE_KEY))/.test(message) ||
+    /^S3_DUPLICATE_JOB_ID/.test(message);
+}
+
+function ttqsS3ObservationDue_(entry, nowMillis) {
+  if (!entry || !entry.object) return false;
+  if (String(entry.object.processing_status || '') !== 'PENDING') return false;
+  var retryAt = String(entry.object.next_retry_at || '').trim();
+  if (!retryAt) return true;
+  var retryMillis = new Date(retryAt).getTime();
+  return !isFinite(retryMillis) || retryMillis <= Number(nowMillis || Date.now());
+}
+
+function ttqsS3PatchObservation_(entry, patch) {
+  ttqsUpdateObjectRow_(ttqsEnsureObservationSheet_(), entry.rowNumber, patch);
+  Object.keys(patch).forEach(function(key) { entry.object[key] = patch[key]; });
+  return entry;
+}
+
+function ttqsS3ObservationJobByRaw_(raw) {
+  if (!raw || !raw.rawRef) throw new Error('S3_OBSERVATION_RAW_REF_REQUIRED');
+  return ttqsLedgerFind_('TEST:' + String(raw.rawRef));
+}
+
+function ttqsS3ObservationFinalJob_(jobId, raw) {
+  var job = ttqsFindUniqueRowByValue_(ttqsLedgerSheet_(), 'job_id', String(jobId || ''), 'S3_DUPLICATE_JOB_ID');
+  if (!job) throw new Error('S3_OBSERVATION_JOB_NOT_FOUND:' + String(jobId || ''));
+  var notes = ttqsParseJson_(job.object.notes, {});
+  if (String(job.object.status || '') !== 'SUCCESS') throw new Error('S3_OBSERVATION_JOB_NOT_SUCCESS:' + String(job.object.status || ''));
+  if (String(job.object.reconciliation_status || '') !== 'MATCHED_EXACTLY_ONCE') throw new Error('S3_OBSERVATION_RECONCILIATION_NOT_EXACT:' + String(job.object.reconciliation_status || ''));
+  if (String(job.object.final_acceptance_status || '') !== 'FINAL_ACCEPTED') throw new Error('S3_OBSERVATION_FINAL_ACCEPTANCE_MISSING:' + String(job.object.final_acceptance_status || ''));
+  if (String(job.object.object_id || '') !== String(raw.rawRef || '')) throw new Error('S3_OBSERVATION_JOB_RAW_REF_MISMATCH');
+  if (String(notes.rawRef || '') !== String(raw.rawRef || '')) throw new Error('S3_OBSERVATION_JOB_NOTES_RAW_REF_MISMATCH');
+  if (String(notes.rawFingerprint || '') !== String(raw.rawFingerprint || '')) throw new Error('S3_OBSERVATION_JOB_FINGERPRINT_MISMATCH');
+  if (String(notes.eventId || '') !== String(raw.eventId || '')) throw new Error('S3_OBSERVATION_JOB_EVENT_ID_MISMATCH');
+  if (String(raw.observationIdentityMode || '') === 'OBSERVATION_SOURCE_KEY') {
+    var sourceKey = String(raw.observationProvenance && raw.observationProvenance.observationSourceKey || '');
+    if (!sourceKey || String(notes.observationSourceKey || '') !== sourceKey) throw new Error('S3_OBSERVATION_JOB_SOURCE_KEY_MISMATCH');
+  }
+  return {
+    job: job,
+    processedObjectId: String(notes.responseId || ''),
+    evidenceId: String(notes.evidenceId || '')
+  };
+}
+
+function ttqsS3AcceptObservation_(entry, raw, jobId, disposition, attemptCount) {
+  var finalJob = ttqsS3ObservationFinalJob_(jobId, raw);
+  ttqsS3PatchObservation_(entry, {
+    processing_status: 'ACCEPTED',
+    attempt_count: Number(attemptCount),
+    next_retry_at: '',
+    last_error: '',
+    processed_object_id: finalJob.processedObjectId || String(jobId),
+    disposition: String(disposition || 'ACCEPTED')
+  });
+  return {
+    status: 'ACCEPTED',
+    jobId: String(jobId),
+    processedObjectId: finalJob.processedObjectId || String(jobId),
+    disposition: String(disposition || 'ACCEPTED')
+  };
+}
+
+function ttqsS3ProcessObservationEntryUnlocked_(entry) {
+  ttqsAssertTestOnly_();
+  var currentAttempts = Number(entry && entry.object && entry.object.attempt_count || 0);
+  var raw;
+  try {
+    raw = ttqsS3ResolveObservationRaw_(entry);
+  } catch (resolveErr) {
+    var resolveMessage = ttqsS3ObservationBoundedError_(resolveErr);
+    if (ttqsS3ObservationIntegrityError_(resolveErr)) {
+      ttqsS3PatchObservation_(entry, {
+        processing_status: 'QUARANTINED',
+        attempt_count: currentAttempts + 1,
+        next_retry_at: '',
+        last_error: resolveMessage,
+        disposition: 'SOURCE_INTEGRITY_BLOCKED'
+      });
+      return { status: 'QUARANTINED', error: resolveMessage };
+    }
+    ttqsS3PatchObservation_(entry, {
+      processing_status: 'PENDING',
+      attempt_count: currentAttempts,
+      last_error: resolveMessage
+    });
+    return { status: 'DEFERRED', error: resolveMessage };
+  }
+
+  var existingJob = ttqsS3ObservationJobByRaw_(raw);
+  if (existingJob) {
+    var existingStatus = String(existingJob.object.status || '');
+    if (existingStatus === 'SUCCESS') {
+      var reconciliation = ttqsImmediateReconcile_(raw);
+      if (String(reconciliation.status || '') !== 'MATCHED_EXACTLY_ONCE') {
+        var mismatch = 'S3_OBSERVATION_RECONCILIATION_MISMATCH:' + String(reconciliation.status || 'UNKNOWN');
+        ttqsS3PatchObservation_(entry, {
+          processing_status: 'QUARANTINED',
+          attempt_count: currentAttempts + 1,
+          next_retry_at: '',
+          last_error: mismatch.slice(0, 500),
+          disposition: 'BUSINESS_LINKAGE_BLOCKED'
+        });
+        return { status: 'QUARANTINED', jobId: existingJob.object.job_id, error: mismatch };
+      }
+      return ttqsS3AcceptObservation_(entry, raw, existingJob.object.job_id, 'LINKED_EXISTING', currentAttempts + 1);
+    }
+    if (existingStatus === 'FAILED_FINAL') {
+      var terminalMessage = 'S3_OBSERVATION_JOB_FAILED_FINAL';
+      ttqsS3PatchObservation_(entry, {
+        processing_status: 'REJECTED',
+        attempt_count: currentAttempts,
+        next_retry_at: '',
+        last_error: terminalMessage,
+        disposition: 'JOB_FAILED_FINAL'
+      });
+      return { status: 'REJECTED', jobId: existingJob.object.job_id, error: terminalMessage };
+    }
+    if (existingStatus === 'FAILED' || existingStatus === 'RUNNING') {
+      ttqsS3PatchObservation_(entry, {
+        processing_status: 'PENDING',
+        attempt_count: currentAttempts,
+        next_retry_at: String(existingJob.object.retry_at || ''),
+        last_error: 'WAITING_JOB_' + existingStatus,
+        disposition: 'AWAITING_JOB_RECOVERY'
+      });
+      return { status: 'DEFERRED', jobId: existingJob.object.job_id, jobStatus: existingStatus };
+    }
+  }
+
+  try {
+    var result = ttqsHandleRawObjectUnlocked_(raw, false);
+    if (String(result && result.reconciliationStatus || '') !== 'MATCHED_EXACTLY_ONCE') {
+      throw new Error('S3_OBSERVATION_RECONCILIATION_MISMATCH:' + String(result && result.reconciliationStatus || 'UNKNOWN'));
+    }
+    return ttqsS3AcceptObservation_(entry, raw, result.jobId, result && result.duplicate ? 'LINKED_EXISTING' : 'SCHEDULER_PROCESSED', currentAttempts + 1);
+  } catch (processErr) {
+    var processMessage = ttqsS3ObservationBoundedError_(processErr);
+    if (ttqsS3ObservationBusinessIntegrityError_(processErr)) {
+      ttqsS3PatchObservation_(entry, {
+        processing_status: 'QUARANTINED',
+        attempt_count: currentAttempts + 1,
+        next_retry_at: '',
+        last_error: processMessage,
+        disposition: 'BUSINESS_LINKAGE_BLOCKED'
+      });
+      return { status: 'QUARANTINED', error: processMessage };
+    }
+    var jobAfter = ttqsS3ObservationJobByRaw_(raw);
+    if (jobAfter && String(jobAfter.object.status || '') === 'FAILED_FINAL') {
+      ttqsS3PatchObservation_(entry, {
+        processing_status: 'REJECTED',
+        attempt_count: currentAttempts + 1,
+        next_retry_at: '',
+        last_error: processMessage,
+        disposition: 'JOB_FAILED_FINAL'
+      });
+      return { status: 'REJECTED', jobId: jobAfter.object.job_id, error: processMessage };
+    }
+    ttqsS3PatchObservation_(entry, {
+      processing_status: 'PENDING',
+      attempt_count: currentAttempts + 1,
+      next_retry_at: String(jobAfter && jobAfter.object.retry_at || ''),
+      last_error: processMessage,
+      disposition: 'AWAITING_JOB_RECOVERY'
+    });
+    return { status: 'DEFERRED', jobId: jobAfter ? jobAfter.object.job_id : '', error: processMessage };
+  }
+}
+
+function ttqsS3ProcessPendingObservationsUnlocked_() {
+  ttqsAssertTestOnly_();
+  var now = Date.now();
+  var pending = ttqsReadObjects_(ttqsEnsureObservationSheet_()).filter(function(entry) {
+    return ttqsS3ObservationDue_(entry, now);
+  }).slice(0, TTQS_S3_OBSERVATION_BATCH_LIMIT);
+  var summary = {
+    selected: pending.length,
+    accepted: 0,
+    linked_existing: 0,
+    scheduler_processed: 0,
+    deferred: 0,
+    quarantined: 0,
+    rejected: 0,
+    results: []
+  };
+  pending.forEach(function(entry) {
+    var result = ttqsS3ProcessObservationEntryUnlocked_(entry);
+    summary.results.push({
+      observation_id: String(entry.object.observation_id || ''),
+      status: String(result.status || ''),
+      job_id: String(result.jobId || ''),
+      error: ttqsS3ObservationBoundedError_(result.error || '')
+    });
+    if (result.status === 'ACCEPTED') {
+      summary.accepted += 1;
+      if (result.disposition === 'LINKED_EXISTING') summary.linked_existing += 1;
+      if (result.disposition === 'SCHEDULER_PROCESSED') summary.scheduler_processed += 1;
+    } else if (result.status === 'DEFERRED') {
+      summary.deferred += 1;
+    } else if (result.status === 'QUARANTINED') {
+      summary.quarantined += 1;
+    } else if (result.status === 'REJECTED') {
+      summary.rejected += 1;
+    }
+  });
+  return summary;
+}
+
+function ttqsS3ObservationCycle() {
+  ttqsAssertTestOnly_();
+  var startedAt = Date.now();
+  var shadow = ttqsScheduler();
+  var processedAt = Date.now();
+  var processing = ttqsWithScriptLock_(ttqsS3ProcessPendingObservationsUnlocked_);
+  var postProcessingAt = Date.now();
+  var reconciliation = ttqsObservationReconcileShadow_();
+  var finishedAt = Date.now();
+  return Object.assign({}, shadow, {
+    mode: 'OBSERVATION_S3_DUAL_RUN',
+    processing: processing,
+    reconciliation: reconciliation,
+    legacy_processing_unchanged: false,
+    timings_ms: Object.assign({}, shadow.timings_ms || {}, {
+      shadow_total: processedAt - startedAt,
+      processing: postProcessingAt - processedAt,
+      post_processing_reconcile: finishedAt - postProcessingAt,
+      total: finishedAt - startedAt
+    })
+  });
 }
