@@ -4,6 +4,7 @@ var TTQS_S2_STATE_PROPERTY = 'TTQS_S2_TASK_STATE';
 var TTQS_S2_MASTER_HANDLER = 'ttqsSchedulerMasterTrigger';
 var TTQS_S2_MASTER_INTERVAL_MINUTES = 1;
 var TTQS_S2_TASK_LEASE_MINUTES = 10;
+var TTQS_S2_CADENCE_EARLY_TOLERANCE_MS = 5000;
 var TTQS_S2_LOG_SHEET = '99_TEST_SchedulerS2_執行紀錄';
 
 function ttqsSchedulerRuntimeMode_() {
@@ -57,6 +58,7 @@ function ttqsS2InitialState_() {
   ttqsS2TaskDefinitions_().forEach(function(definition) {
     state.tasks[definition.name] = {
       cadence_minutes: definition.cadenceMinutes,
+      next_due_ms: 0,
       last_success_ms: 0,
       last_claimed_ms: 0,
       last_finished_ms: 0,
@@ -75,6 +77,7 @@ function ttqsS2ValidateState_(state) {
     var task = state.tasks[definition.name];
     if (!task) throw new Error('S2_TASK_STATE_MISSING:' + definition.name);
     if (Number(task.cadence_minutes) !== Number(definition.cadenceMinutes)) throw new Error('S2_TASK_CADENCE_DRIFT:' + definition.name);
+    if (task.next_due_ms !== undefined && Number(task.next_due_ms || 0) < 0) throw new Error('S2_TASK_NEXT_DUE_INVALID:' + definition.name);
   });
   return state;
 }
@@ -91,25 +94,60 @@ function ttqsS2SaveState_(state) {
   return state;
 }
 
-function ttqsS2TaskDue_(task, definition, nowMillis) {
-  if (Number(task.lease_until_ms || 0) > Number(nowMillis)) return { due: false, reason: 'LEASE_ACTIVE' };
-  var lastAttempt = Math.max(Number(task.last_success_ms || 0), Number(task.last_finished_ms || 0));
-  if (!lastAttempt) return { due: true, reason: 'NEVER_ATTEMPTED' };
-  var cadenceMs = Number(definition.cadenceMinutes) * 60000;
-  if (Number(nowMillis) - lastAttempt >= cadenceMs) return { due: true, reason: 'CADENCE_DUE' };
-  return { due: false, reason: 'NOT_DUE' };
+function ttqsS2CadenceMs_(definition) {
+  var cadenceMs = Number(definition && definition.cadenceMinutes) * 60000;
+  if (!isFinite(cadenceMs) || cadenceMs <= 0) throw new Error('S2_TASK_CADENCE_INVALID:' + String(definition && definition.name || 'UNKNOWN'));
+  return cadenceMs;
 }
 
-function ttqsS2ClaimTask_(definition, tickId) {
+function ttqsS2TaskNextDue_(task, definition) {
+  var stored = Number(task.next_due_ms || 0);
+  if (stored > 0) return { nextDueMs: stored, persisted: true };
+  var cadenceMs = ttqsS2CadenceMs_(definition);
+  var lastClaimed = Number(task.last_claimed_ms || 0);
+  if (lastClaimed > 0) return { nextDueMs: lastClaimed + cadenceMs, persisted: false };
+  var lastAttempt = Math.max(Number(task.last_success_ms || 0), Number(task.last_finished_ms || 0));
+  if (lastAttempt > 0) return { nextDueMs: lastAttempt + cadenceMs, persisted: false };
+  return { nextDueMs: 0, persisted: false };
+}
+
+function ttqsS2TaskDue_(task, definition, scheduleMillis, currentMillis) {
+  var now = Number(currentMillis === undefined ? scheduleMillis : currentMillis);
+  if (Number(task.lease_until_ms || 0) > now) return { due: false, reason: 'LEASE_ACTIVE' };
+  var next = ttqsS2TaskNextDue_(task, definition);
+  if (!next.nextDueMs) return { due: true, reason: 'NEVER_ATTEMPTED', next_due_ms: 0, persisted: false };
+  if (Number(scheduleMillis) + TTQS_S2_CADENCE_EARLY_TOLERANCE_MS >= Number(next.nextDueMs)) {
+    return { due: true, reason: 'CADENCE_DUE', next_due_ms: Number(next.nextDueMs), persisted: next.persisted === true };
+  }
+  return { due: false, reason: 'NOT_DUE', next_due_ms: Number(next.nextDueMs), persisted: next.persisted === true };
+}
+
+function ttqsS2AdvanceNextDue_(task, definition, scheduleMillis, due) {
+  var cadenceMs = ttqsS2CadenceMs_(definition);
+  if (!due || due.persisted !== true || Number(due.next_due_ms || 0) <= 0) {
+    task.next_due_ms = Number(scheduleMillis) + cadenceMs;
+    return task.next_due_ms;
+  }
+  var nextDue = Number(due.next_due_ms);
+  do {
+    nextDue += cadenceMs;
+  } while (nextDue <= Number(scheduleMillis) + TTQS_S2_CADENCE_EARLY_TOLERANCE_MS);
+  task.next_due_ms = nextDue;
+  return nextDue;
+}
+
+function ttqsS2ClaimTask_(definition, tickId, scheduleMillis) {
   return ttqsWithScriptLock_(function() {
     ttqsAssertTestOnly_();
     if (ttqsSchedulerRuntimeMode_() !== TTQS_S2_MODE) return { claimed: false, task: definition.name, reason: 'MODE_NOT_S2' };
     var state = ttqsS2LoadState_();
     var task = state.tasks[definition.name];
     var now = Date.now();
-    var due = ttqsS2TaskDue_(task, definition, now);
+    var scheduleNow = Number(scheduleMillis || now);
+    var due = ttqsS2TaskDue_(task, definition, scheduleNow, now);
     if (!due.due) return { claimed: false, task: definition.name, reason: due.reason };
     var runId = ttqsStableId_('S2RUN-', Utilities.getUuid(), 24);
+    ttqsS2AdvanceNextDue_(task, definition, scheduleNow, due);
     task.last_claimed_ms = now;
     task.last_status = 'CLAIMED';
     task.last_error = '';
@@ -266,7 +304,7 @@ function ttqsSchedulerMasterTrigger() {
   var startedAt = Date.now();
   var outcomes = [];
   ttqsS2TaskDefinitions_().forEach(function(definition) {
-    var claim = ttqsS2ClaimTask_(definition, tickId);
+    var claim = ttqsS2ClaimTask_(definition, tickId, startedAt);
     if (!claim.claimed) {
       outcomes.push({ task: definition.name, claimed: false, status: 'SKIPPED', reason: claim.reason });
       return;
