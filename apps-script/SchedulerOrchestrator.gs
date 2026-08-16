@@ -162,6 +162,35 @@ function ttqsS2ResultSummary_(taskName, result) {
   return {};
 }
 
+function ttqsS2TaskResultHealth_(taskName, result) {
+  if (taskName === 'RETRY') {
+    var retryRows = Array.isArray(result) ? result : [];
+    var retryErrors = retryRows.filter(function(item) { return !!(item && item.error); }).length;
+    return { pass: retryErrors === 0, reason: retryErrors ? ('RETRY_ITEM_ERRORS:' + retryErrors) : 'PASS' };
+  }
+  if (taskName === 'OBSERVATION') {
+    var ingest = result && result.ingest ? result.ingest : {};
+    var reconciliation = result && result.reconciliation ? result.reconciliation : {};
+    var observationPass = String(reconciliation.status || '') === 'PASS' &&
+      Number(ingest.quarantined || 0) === 0 &&
+      Number(ingest.rawMutation || 0) === 0 &&
+      Number(ingest.sourceKeyCollision || 0) === 0;
+    return {
+      pass: observationPass,
+      reason: observationPass ? 'PASS' : ('OBSERVATION_INTEGRITY:' + String(reconciliation.status || '') + ':Q' + Number(ingest.quarantined || 0) + ':M' + Number(ingest.rawMutation || 0) + ':C' + Number(ingest.sourceKeyCollision || 0))
+    };
+  }
+  if (taskName === 'RECONCILE') {
+    var reconcilePass = String(result && result.status || '') === 'PASS' && String(result && result.watchdog && result.watchdog.status || '') === 'PASS';
+    return { pass: reconcilePass, reason: reconcilePass ? 'PASS' : ('RECONCILE_STATUS:' + String(result && result.status || '') + ':WATCHDOG:' + String(result && result.watchdog && result.watchdog.status || '')) };
+  }
+  if (taskName === 'CONSULT') {
+    var consultRows = Number(result && result.rows || 0);
+    return { pass: consultRows === 19, reason: consultRows === 19 ? 'PASS' : ('CONSULT_ROWS:' + consultRows) };
+  }
+  return { pass: false, reason: 'UNKNOWN_TASK' };
+}
+
 function ttqsS2ExecuteTask_(taskName) {
   if (taskName === 'RETRY') return ttqsRetryFailedJobs();
   if (taskName === 'OBSERVATION') return ttqsScheduler();
@@ -247,6 +276,8 @@ function ttqsSchedulerMasterTrigger() {
     var taskError = null;
     try {
       result = ttqsS2ExecuteTask_(definition.name);
+      var resultHealth = ttqsS2TaskResultHealth_(definition.name, result);
+      if (!resultHealth.pass) taskError = new Error('S2_TASK_RESULT_INVALID:' + definition.name + ':' + resultHealth.reason);
     } catch (err) {
       taskError = err;
     }
