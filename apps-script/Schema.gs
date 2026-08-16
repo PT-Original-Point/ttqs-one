@@ -369,11 +369,14 @@ function ttqsObservationApplyCandidates_(candidates) {
 
 function ttqsObservationRawLocators_() {
   var ss = ttqsOpenCore_();
+  var sheetsById = {};
+  ss.getSheets().forEach(function(sheet) { sheetsById[String(sheet.getSheetId())] = sheet; });
   var locators = {};
   ttqsObservationSourceDescriptors_().forEach(function(source) {
-    var sheet = ss.getSheets().filter(function(item) { return item.getSheetId() === Number(source.sheetId); })[0];
+    var sheet = sheetsById[String(source.sheetId)];
     if (!sheet) throw new Error('OBSERVATION_SOURCE_SHEET_MISSING:' + source.sheetId);
-    for (var rowNumber = 2; rowNumber <= sheet.getLastRow(); rowNumber++) {
+    var lastRow = sheet.getLastRow();
+    for (var rowNumber = 2; rowNumber <= lastRow; rowNumber++) {
       locators['SHEET:' + String(source.sheetId) + ':ROW:' + String(rowNumber)] = true;
     }
   });
