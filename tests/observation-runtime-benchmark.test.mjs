@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 
 const source = fs.readFileSync('apps-script/Benchmark.gs', 'utf8');
+const schemaSource = fs.readFileSync('apps-script/Schema.gs', 'utf8');
 
 test('benchmark source parses', () => {
   assert.doesNotThrow(() => new vm.Script(source));
@@ -67,4 +68,20 @@ test('benchmark scan retains production batch-per-source read strategy', () => {
   assert.match(source, /rangeReadCalls \+= 1/);
   assert.match(source, /rangeReadCalls \+= 2/);
   assert.match(source, /scan\.rangeReadCalls === 12/);
+});
+
+test('benchmark reconciliation raw-locator scan matches production provider-call contract', () => {
+  const benchmarkMatch = source.match(/function ttqsBenchmarkRawLocators_\(ss, sources\) \{[\s\S]*?\n\}/);
+  const productionMatch = schemaSource.match(/function ttqsObservationRawLocators_\(\) \{[\s\S]*?\n\}/);
+  assert.ok(benchmarkMatch, 'benchmark raw-locator helper missing');
+  assert.ok(productionMatch, 'production raw-locator helper missing');
+
+  const benchmarkBody = benchmarkMatch[0];
+  const productionBody = productionMatch[0];
+  assert.match(benchmarkBody, /var lastRow = sheet\.getLastRow\(\);/);
+  assert.match(productionBody, /var lastRow = sheet\.getLastRow\(\);/);
+  assert.doesNotMatch(benchmarkBody, /for \([^\n]*sheet\.getLastRow\(\)/);
+  assert.doesNotMatch(productionBody, /for \([^\n]*sheet\.getLastRow\(\)/);
+  assert.equal((benchmarkBody.match(/sheet\.getLastRow\(\)/g) || []).length, 1);
+  assert.equal((productionBody.match(/sheet\.getLastRow\(\)/g) || []).length, 1);
 });
