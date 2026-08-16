@@ -103,7 +103,7 @@ test('audit: delegated FORM_SUITE handler owns ledger failure without outer doub
     ttqsConfig_() { return { MAX_ATTEMPTS: 3 }; },
     ttqsLedgerRunningLeaseExpired_() { return false; },
     ttqsParseJson_(v, f) { return v ? JSON.parse(v) : f; },
-    ttqsFindRawSubmissionByRef_() { return { rawRef: 'R1' }; },
+    ttqsS3ResolveRetryRaw_() { return { rawRef: 'R1' }; },
     ttqsHandleRawObjectUnlocked_() { jobObject.status = 'FAILED'; throw new Error('INNER_HANDLER_ALREADY_FAILED_LEDGER'); },
     ttqsLedgerFail_() { outerFailCalls++; }
   }));
