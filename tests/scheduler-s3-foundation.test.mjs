@@ -155,7 +155,7 @@ test('retry resolver prefers Observation provenance and preserves legacy fallbac
   const observationJob = { object: { notes: JSON.stringify({ observationSourceKey: 'ab'.repeat(32) }) } };
   assert.equal(context.ttqsS3ResolveRetryRaw_(observationJob).rawRef, `OBS:${'ab'.repeat(32)}`);
 
-  const legacyJob = { object: { notes: JSON.stringify({ sheetId: 101, rawRef: 'FORM_SUITE:FORM-1:EVT-1' }) };
+  const legacyJob = { object: { notes: JSON.stringify({ sheetId: 101, rawRef: 'FORM_SUITE:FORM-1:EVT-1' }) } };
   assert.deepEqual(JSON.parse(JSON.stringify(context.ttqsS3ResolveRetryRaw_(legacyJob))), {
     sheetId: 101,
     rawRef: 'FORM_SUITE:FORM-1:EVT-1'
