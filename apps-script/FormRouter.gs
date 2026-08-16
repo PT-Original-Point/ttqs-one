@@ -158,10 +158,21 @@ function ttqsHandleRawObjectUnlocked_(raw, isRetry) {
   ttqsAssertTestOnly_();
   if (!raw.eventId || !raw.rawRef) throw new Error('RAW_EVENT_ID_REQUIRED');
   var idempotencyKey = 'TEST:' + raw.rawRef;
+  var hasObservationProvenance = !!(raw && raw.observationProvenance && raw.observationProvenance.observationSourceKey);
+  var jobNotes = hasObservationProvenance ? ttqsS3JobNotesFromRaw_(raw) : {
+    kind: raw.kind,
+    rawRef: raw.rawRef,
+    rawFingerprint: raw.rawFingerprint,
+    formId: raw.formId,
+    sheetId: raw.sheetId,
+    eventId: raw.eventId,
+    originalRowNumber: raw.rowNumber
+  };
+  var initialTriggerSource = String(raw && raw.triggerSource || 'GOOGLE_FORM');
   var job = ttqsLedgerEnsure_({
     eventType: 'FORM_SUITE', objectType: raw.kind, objectId: raw.rawRef, idempotencyKey: idempotencyKey,
-    triggerSource: isRetry ? 'TIME_RETRY' : 'GOOGLE_FORM',
-    notes: { kind: raw.kind, rawRef: raw.rawRef, rawFingerprint: raw.rawFingerprint, formId: raw.formId, sheetId: raw.sheetId, eventId: raw.eventId, originalRowNumber: raw.rowNumber }
+    triggerSource: isRetry ? 'TIME_RETRY' : initialTriggerSource,
+    notes: jobNotes
   });
   if (job.object.status === 'SUCCESS') {
     var duplicateReconciliation = ttqsImmediateReconcile_(raw);
