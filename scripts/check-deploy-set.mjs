@@ -5,7 +5,7 @@ const appRoot = path.resolve('apps-script');
 const actual = fs.readdirSync(appRoot).filter((name) => fs.statSync(path.join(appRoot, name)).isFile()).sort();
 const gs = actual.filter((name) => name.endsWith('.gs'));
 const expected = ['appsscript.json', ...gs].sort();
-if (gs.length !== 14) throw new Error(`Expected 14 .gs files, found ${gs.length}`);
+if (gs.length !== 15) throw new Error(`Expected 15 .gs files, found ${gs.length}`);
 if (actual.length !== expected.length || actual.some((name, i) => name !== expected[i])) {
   throw new Error(`Unsafe apps-script directory contents: ${JSON.stringify(actual)}`);
 }
