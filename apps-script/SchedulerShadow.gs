@@ -134,6 +134,9 @@ function ttqsInstallShadowSchedulerTest() {
   ScriptApp.requireAllScopes(ScriptApp.AuthMode.FULL);
   return ttqsWithScriptLock_(function() {
     ttqsAssertTestOnly_();
+    if (typeof ttqsSchedulerRuntimeMode_ === 'function' && typeof TTQS_S2_MODE !== 'undefined' && ttqsSchedulerRuntimeMode_() === TTQS_S2_MODE) {
+      throw new Error('S2_RUNTIME_MODE_ACTIVE');
+    }
     if (ttqsConfig_().OBSERVATION_SHADOW_MODE !== true) throw new Error('OBSERVATION_SHADOW_MODE_REQUIRED');
     var legacyBefore = ttqsAssertManagedTriggerContract_();
     ttqsRemoveShadowSchedulerTrigger_();

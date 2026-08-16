@@ -38,7 +38,7 @@ function ttqsManagedTriggerDetails_() {
   });
 }
 
-function ttqsAssertManagedTriggerContract_() {
+function ttqsAssertLegacyManagedTriggerContract_() {
   var cfg = ttqsConfig_();
   var triggers = ScriptApp.getProjectTriggers();
   var expected = {
@@ -62,18 +62,29 @@ function ttqsAssertManagedTriggerContract_() {
   Object.keys(expected).forEach(function(handler) {
     if (Number(matched[handler] || 0) !== 1) throw new Error('MANAGED_TRIGGER_COUNT_INVALID:' + handler + ':' + Number(matched[handler] || 0));
   });
-  return { counts: matched, details: ttqsManagedTriggerDetails_() };
+  return { counts: matched, details: ttqsManagedTriggerDetails_(), mode: 'LEGACY_S1' };
+}
+
+function ttqsAssertManagedTriggerContract_() {
+  if (typeof ttqsSchedulerRuntimeMode_ === 'function' && typeof TTQS_S2_MODE !== 'undefined' && ttqsSchedulerRuntimeMode_() === TTQS_S2_MODE) {
+    if (typeof ttqsAssertS2TriggerContract_ !== 'function') throw new Error('S2_TRIGGER_CONTRACT_REQUIRED');
+    return ttqsAssertS2TriggerContract_();
+  }
+  return ttqsAssertLegacyManagedTriggerContract_();
 }
 
 function ttqsInstallManagedTriggers_() {
   ScriptApp.requireAllScopes(ScriptApp.AuthMode.FULL);
+  if (typeof ttqsSchedulerRuntimeMode_ === 'function' && typeof TTQS_S2_MODE !== 'undefined' && ttqsSchedulerRuntimeMode_() === TTQS_S2_MODE) {
+    throw new Error('S2_MANAGED_TRIGGER_REINSTALL_FORBIDDEN');
+  }
   ttqsRemoveManagedTriggers_();
   var ss = ttqsOpenCore_();
   ScriptApp.newTrigger('ttqsOnSpreadsheetFormSubmit').forSpreadsheet(ss).onFormSubmit().create();
   ScriptApp.newTrigger('ttqsRetryFailedJobs').timeBased().everyMinutes(1).create();
   ScriptApp.newTrigger('ttqsReconcile').timeBased().everyHours(1).create();
   ScriptApp.newTrigger('ttqsRefreshConsultView').timeBased().everyHours(1).create();
-  return ttqsAssertManagedTriggerContract_();
+  return ttqsAssertLegacyManagedTriggerContract_();
 }
 
 function ttqsBootstrapTestLocked_() {
