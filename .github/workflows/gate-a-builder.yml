@@ -1,0 +1,68 @@
+name: Gate A Self Builder
+
+on:
+  push:
+    branches:
+      - p1/gate-a-responseid-foundation
+    paths:
+      - .github/workflows/gate-a-builder.yml
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Apply Gate A foundation
+        run: node .github/scripts/gate-a-builder.mjs
+      - name: Stage source and regenerate exact manifest
+        shell: bash
+        run: |
+          git add -A
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import crypto from 'node:crypto';
+          import { execFileSync } from 'node:child_process';
+          const manifest = 'release/MANIFEST.sha256';
+          const self = 'release/MANIFEST.sha256.sha256';
+          const files = execFileSync('git', ['ls-files', '-z'], { encoding: 'utf8' })
+            .split('\0')
+            .filter(Boolean)
+            .filter((p) => p !== manifest && p !== self)
+            .sort();
+          const sha = (p) => crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+          fs.writeFileSync(manifest, files.map((p) => sha(p) + '  ' + p).join('\n') + '\n');
+          fs.writeFileSync(self, sha(manifest) + '  release/MANIFEST.sha256\n');
+          NODE
+          git add release/MANIFEST.sha256 release/MANIFEST.sha256.sha256
+          git diff --cached --check
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+      - name: Full verify
+        run: npm run verify
+      - name: Safety diff checks
+        shell: bash
+        run: |
+          test "$(git diff --cached --name-only -- apps-script/appsscript.json | wc -l | tr -d ' ')" = "0"
+          test "$(git diff --cached --name-only -- apps-script/SchedulerOrchestrator.gs apps-script/SchedulerShadow.gs apps-script/FormRouter.gs | wc -l | tr -d ' ')" = "0"
+          test "$(git diff --cached --name-only | grep -E '(^|/)(prod|real)(/|$)' | wc -l | tr -d ' ')" = "0"
+          node scripts/check-deploy-set.mjs | tee /tmp/deploy-set.log
+          grep -q '"count": 19' /tmp/deploy-set.log
+      - name: Commit clean candidate
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git status --short
+          git commit -m "P1：建立 Gate A responseId 不可變收件契約"
+          git push origin HEAD:p1/gate-a-responseid-foundation
