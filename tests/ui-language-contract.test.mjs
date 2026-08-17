@@ -33,7 +33,9 @@ const externalHtml = external.ttqsExternalRender_({
     '指標範圍': '1–19',
     '17–19 狀態': '正式成果待實際營運'
   },
-  indicators: [{ no: '1', stage: '規劃', title: '測試指標', evidenceCount: '1', status: '已有測試佐證', refreshedAt: '2026-08-15' }]
+  causalFlow: [],
+  evidence: [],
+  indicators: [{ no: '1', stage: '規劃', title: '測試指標', evidenceCount: '1', status: '已有測試佐證', refreshedAt: '2026-08-15', evidenceDetails: [] }]
 });
 const errorHtml = internal.ttqsWebErrorHtml_() + '\n' + external.ttqsExternalErrorHtml_();
 const visibleHtml = internalHtml + '\n' + externalHtml + '\n' + errorHtml;
