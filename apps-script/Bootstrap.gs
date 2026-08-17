@@ -66,6 +66,10 @@ function ttqsAssertLegacyManagedTriggerContract_() {
 }
 
 function ttqsAssertManagedTriggerContract_() {
+  if (typeof ttqsSchedulerRuntimeMode_ === 'function' && typeof TTQS_S3_MODE !== 'undefined' && ttqsSchedulerRuntimeMode_() === TTQS_S3_MODE) {
+    if (typeof ttqsAssertS3TriggerContract_ !== 'function') throw new Error('S3_TRIGGER_CONTRACT_REQUIRED');
+    return ttqsAssertS3TriggerContract_();
+  }
   if (typeof ttqsSchedulerRuntimeMode_ === 'function' && typeof TTQS_S2_MODE !== 'undefined' && ttqsSchedulerRuntimeMode_() === TTQS_S2_MODE) {
     if (typeof ttqsAssertS2TriggerContract_ !== 'function') throw new Error('S2_TRIGGER_CONTRACT_REQUIRED');
     return ttqsAssertS2TriggerContract_();
@@ -75,6 +79,7 @@ function ttqsAssertManagedTriggerContract_() {
 
 function ttqsInstallManagedTriggers_() {
   ScriptApp.requireAllScopes(ScriptApp.AuthMode.FULL);
+  if (typeof ttqsSchedulerRuntimeMode_ === 'function' && typeof TTQS_S3_MODE !== 'undefined' && ttqsSchedulerRuntimeMode_() === TTQS_S3_MODE) throw new Error('S3_MANAGED_TRIGGER_REINSTALL_FORBIDDEN');
   if (typeof ttqsSchedulerRuntimeMode_ === 'function' && typeof TTQS_S2_MODE !== 'undefined' && ttqsSchedulerRuntimeMode_() === TTQS_S2_MODE) {
     throw new Error('S2_MANAGED_TRIGGER_REINSTALL_FORBIDDEN');
   }

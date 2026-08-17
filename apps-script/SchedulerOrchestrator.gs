@@ -1,4 +1,5 @@
 var TTQS_S2_MODE = 'S2_CLOCK_CONSOLIDATED';
+var TTQS_S3_MODE = 'S3_SINGLE_SCHEDULER';
 var TTQS_S2_MODE_PROPERTY = 'TTQS_SCHEDULER_RUNTIME_MODE';
 var TTQS_S2_STATE_PROPERTY = 'TTQS_S2_TASK_STATE';
 var TTQS_S2_MASTER_HANDLER = 'ttqsSchedulerMasterTrigger';
@@ -9,6 +10,11 @@ var TTQS_S2_LOG_SHEET = '99_TEST_SchedulerS2_執行紀錄';
 
 function ttqsSchedulerRuntimeMode_() {
   return String(PropertiesService.getScriptProperties().getProperty(TTQS_S2_MODE_PROPERTY) || 'LEGACY_S1');
+}
+
+function ttqsSchedulerMasterModeActive_() {
+  var mode = ttqsSchedulerRuntimeMode_();
+  return mode === TTQS_S2_MODE || mode === TTQS_S3_MODE;
 }
 
 function ttqsS2TaskDefinitions_() {
@@ -139,7 +145,7 @@ function ttqsS2AdvanceNextDue_(task, definition, scheduleMillis, due) {
 function ttqsS2ClaimTask_(definition, tickId, scheduleMillis) {
   return ttqsWithScriptLock_(function() {
     ttqsAssertTestOnly_();
-    if (ttqsSchedulerRuntimeMode_() !== TTQS_S2_MODE) return { claimed: false, task: definition.name, reason: 'MODE_NOT_S2' };
+    if (!ttqsSchedulerMasterModeActive_()) return { claimed: false, task: definition.name, reason: 'MODE_NOT_MASTER' };
     var state = ttqsS2LoadState_();
     var task = state.tasks[definition.name];
     var now = Date.now();
@@ -310,7 +316,8 @@ function ttqsS2RecordTick_(tickId, startedAtMillis, outcomes) {
 
 function ttqsSchedulerMasterTrigger() {
   ttqsAssertTestOnly_();
-  if (ttqsSchedulerRuntimeMode_() !== TTQS_S2_MODE) throw new Error('S2_RUNTIME_MODE_REQUIRED');
+  var runtimeMode = ttqsSchedulerRuntimeMode_();
+  if (!ttqsSchedulerMasterModeActive_()) throw new Error('SCHEDULER_MASTER_RUNTIME_MODE_REQUIRED:' + runtimeMode);
   var tickId = ttqsStableId_('S2TICK-', Utilities.getUuid(), 24);
   var startedAt = Date.now();
   var outcomes = [];
@@ -334,7 +341,7 @@ function ttqsSchedulerMasterTrigger() {
     outcomes.push({ task: definition.name, claimed: true, status: taskError ? 'FAIL' : 'PASS', reason: claim.reason });
   });
   ttqsS2RecordTick_(tickId, startedAt, outcomes);
-  return { mode: TTQS_S2_MODE, tick_id: tickId, outcomes: outcomes };
+  return { mode: runtimeMode, tick_id: tickId, outcomes: outcomes };
 }
 
 function ttqsS2MasterTriggers_() {
@@ -413,6 +420,7 @@ function ttqsS2RestoreLegacyS1_(previousMode) {
 function ttqsInstallS2ClockConsolidationTest() {
   ScriptApp.requireAllScopes(ScriptApp.AuthMode.FULL);
   ttqsAssertTestOnly_();
+  if (ttqsSchedulerRuntimeMode_() === TTQS_S3_MODE) throw new Error('S3_RUNTIME_MODE_ACTIVE');
   if (ttqsSchedulerRuntimeMode_() === TTQS_S2_MODE) return ttqsAssertS2TriggerContract_();
   var legacyBefore = ttqsAssertLegacyManagedTriggerContract_();
   var shadowBefore = ttqsAssertShadowSchedulerTriggerContract_();
@@ -452,6 +460,7 @@ function ttqsInstallS2ClockConsolidationTest() {
 function ttqsRollbackS2ClockConsolidationTest() {
   ScriptApp.requireAllScopes(ScriptApp.AuthMode.FULL);
   ttqsAssertTestOnly_();
+  if (ttqsSchedulerRuntimeMode_() === TTQS_S3_MODE) throw new Error('S3_RUNTIME_MODE_ACTIVE');
   ttqsS2RestoreLegacyS1_('LEGACY_S1');
   var legacy = ttqsAssertLegacyManagedTriggerContract_();
   var shadow = ttqsAssertShadowSchedulerTriggerContract_();
@@ -462,4 +471,110 @@ function ttqsRollbackS2ClockConsolidationTest() {
     shadow: shadow,
     s2_master_trigger_count: ttqsS2MasterTriggers_().length
   };
+}
+
+function ttqsS3FormSubmitTriggers_() {
+  return ScriptApp.getProjectTriggers().filter(function(trigger) {
+    return trigger.getHandlerFunction() === 'ttqsOnSpreadsheetFormSubmit';
+  });
+}
+
+function ttqsS3RemoveFormSubmitTriggers_() {
+  ttqsS3FormSubmitTriggers_().forEach(function(trigger) { ScriptApp.deleteTrigger(trigger); });
+}
+
+function ttqsAssertS3TriggerContract_() {
+  var counts = {};
+  var forbidden = ttqsS2LegacyClockHandlers_();
+  forbidden[TTQS_S1_SHADOW_HANDLER] = true;
+  var masterCount = 0;
+  var submitCount = 0;
+  ScriptApp.getProjectTriggers().forEach(function(trigger) {
+    var handler = trigger.getHandlerFunction();
+    counts[handler] = Number(counts[handler] || 0) + 1;
+    if (forbidden[handler]) throw new Error('S3_FORBIDDEN_LEGACY_TRIGGER:' + handler);
+    if (handler === 'ttqsOnSpreadsheetFormSubmit') submitCount++;
+    if (handler === TTQS_S2_MASTER_HANDLER) {
+      masterCount++;
+      if (trigger.getEventType() !== ScriptApp.EventType.CLOCK || trigger.getTriggerSource() !== ScriptApp.TriggerSource.CLOCK) throw new Error('S3_MASTER_TRIGGER_CONTRACT_INVALID');
+      return;
+    }
+    throw new Error('S3_UNEXPECTED_TRIGGER:' + handler);
+  });
+  if (masterCount !== 1) throw new Error('S3_MASTER_TRIGGER_COUNT_INVALID:' + masterCount);
+  if (submitCount !== 0) throw new Error('S3_FORM_SUBMIT_TRIGGER_COUNT_INVALID:' + submitCount);
+  return { counts: counts, mode: TTQS_S3_MODE, master: masterCount, formSubmit: submitCount };
+}
+
+function ttqsS3RecordTopology_(action, contract) {
+  var now = Date.now();
+  var summary = {
+    action: String(action || ""),
+    mode: String(contract && contract.mode || ttqsSchedulerRuntimeMode_()),
+    master: Number(contract && contract.master || 0),
+    form_submit: Number(contract && contract.formSubmit || 0)
+  };
+  return ttqsWithScriptLock_(function() {
+    return ttqsS2AppendLogObject_({
+      record_id: ttqsStableId_('S3TOPO-', Utilities.getUuid(), 24),
+      record_type: 'TOPOLOGY',
+      tick_id: '', task_run_id: '', task_name: '__TOPOLOGY__', cadence_minutes: '',
+      started_at: new Date(now).toISOString(), finished_at: new Date(now).toISOString(),
+      status: 'PASS', reason: String(action || ''), duration_ms: 0,
+      summary: ttqsS2Bounded_(JSON.stringify(summary), 1000), error: ""
+    });
+  });
+}
+
+function ttqsS3RestoreS2Topology_() {
+  return ttqsWithScriptLock_(function() {
+    ttqsAssertTestOnly_();
+    ttqsRemoveS2MasterTrigger_();
+    ScriptApp.newTrigger(TTQS_S2_MASTER_HANDLER).timeBased().everyMinutes(TTQS_S2_MASTER_INTERVAL_MINUTES).create();
+    ttqsS2RemoveLegacyClockTriggers_();
+    ttqsRemoveShadowSchedulerTrigger_();
+    ttqsS3RemoveFormSubmitTriggers_();
+    ScriptApp.newTrigger('ttqsOnSpreadsheetFormSubmit').forSpreadsheet(ttqsOpenCore_()).onFormSubmit().create();
+    PropertiesService.getScriptProperties().setProperty(TTQS_S2_MODE_PROPERTY, TTQS_S2_MODE);
+    ttqsEnsureS2LogSheet_();
+    return true;
+  });
+}
+
+function ttqsInstallS3SingleSchedulerTest() {
+  ScriptApp.requireAllScopes(ScriptApp.AuthMode.FULL);
+  ttqsAssertTestOnly_();
+  var mode = ttqsSchedulerRuntimeMode_();
+  if (mode === TTQS_S3_MODE) {
+    var existing = ttqsAssertS3TriggerContract_();
+    ttqsS3RecordTopology_('VERIFY_EXISTING', existing);
+    return existing;
+  }
+  if (mode !== TTQS_S2_MODE) throw new Error('S3_S2_RUNTIME_BASELINE_REQUIRED:' + mode);
+  var before = ttqsAssertS2TriggerContract_();
+  try {
+    ttqsWithScriptLock_(function() {
+      ttqsS3RemoveFormSubmitTriggers_();
+      PropertiesService.getScriptProperties().setProperty(TTQS_S2_MODE_PROPERTY, TTQS_S3_MODE);
+    });
+    var after = ttqsAssertS3TriggerContract_();
+    ttqsS3RecordTopology_('CUTOVER', after);
+    return { mode: TTQS_S3_MODE, environment: "TEST", before: before, after: after, state_revision: ttqsS2LoadState_().revision, form_submit_removed: true, rollback_mode: TTQS_S2_MODE };
+  } catch (err) {
+    try { ttqsS3RestoreS2Topology_(); ttqsAssertS2TriggerContract_(); }
+    catch (rollbackErr) { throw new Error('S3_INSTALL_FAIL:' + ttqsS2Bounded_(err && err.message ? err.message : err, 400) + '|ROLLBACK_FAIL:' + ttqsS2Bounded_(rollbackErr && rollbackErr.message ? rollbackErr.message : rollbackErr, 400)); }
+    throw err;
+  }
+}
+
+function ttqsRollbackS3SingleSchedulerTest() {
+  ScriptApp.requireAllScopes(ScriptApp.AuthMode.FULL);
+  ttqsAssertTestOnly_();
+  var mode = ttqsSchedulerRuntimeMode_();
+  if (mode === TTQS_S2_MODE) return ttqsAssertS2TriggerContract_();
+  if (mode !== TTQS_S3_MODE) throw new Error('S3_RUNTIME_MODE_REQUIRED_FOR_ROLLBACK:' + mode);
+  ttqsS3RestoreS2Topology_();
+  var restored = ttqsAssertS2TriggerContract_();
+  ttqsS3RecordTopology_('ROLLBACK_TO_S2', restored);
+  return restored;
 }
