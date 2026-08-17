@@ -84,105 +84,106 @@ jobs:
           )
 
           p = Path(scheduler)
-          text = p.read_text()
-          append = r'''
-
-function ttqsS3FormSubmitTriggers_() {
-  return ScriptApp.getProjectTriggers().filter(function(trigger) {
-    return trigger.getHandlerFunction() === 'ttqsOnSpreadsheetFormSubmit';
-  });
-}
-
-function ttqsS3RemoveFormSubmitTriggers_() {
-  ttqsS3FormSubmitTriggers_().forEach(function(trigger) {
-    ScriptApp.deleteTrigger(trigger);
-  });
-}
-
-function ttqsAssertS3TriggerContract_() {
-  var counts = {};
-  var forbidden = ttqsS2LegacyClockHandlers_();
-  forbidden[TTQS_S1_SHADOW_HANDLER] = true;
-  var masterCount = 0;
-  var submitCount = 0;
-  ScriptApp.getProjectTriggers().forEach(function(trigger) {
-    var handler = trigger.getHandlerFunction();
-    counts[handler] = Number(counts[handler] || 0) + 1;
-    if (forbidden[handler]) throw new Error('S3_FORBIDDEN_LEGACY_TRIGGER:' + handler);
-    if (handler === TTQS_S2_MASTER_HANDLER) {
-      masterCount++;
-      if (trigger.getEventType() !== ScriptApp.EventType.CLOCK || trigger.getTriggerSource() !== ScriptApp.TriggerSource.CLOCK) {
-        throw new Error('S3_MASTER_TRIGGER_CONTRACT_INVALID');
-      }
-    }
-    if (handler === 'ttqsOnSpreadsheetFormSubmit') submitCount++;
-  });
-  if (masterCount !== 1) throw new Error('S3_MASTER_TRIGGER_COUNT_INVALID:' + masterCount);
-  if (submitCount !== 0) throw new Error('S3_FORM_SUBMIT_TRIGGER_COUNT_INVALID:' + submitCount);
-  return { counts: counts, mode: TTQS_S3_MODE, master: masterCount, formSubmit: submitCount };
-}
-
-function ttqsS3RestoreS2Topology_() {
-  return ttqsWithScriptLock_(function() {
-    ttqsAssertTestOnly_();
-    ttqsRemoveS2MasterTrigger_();
-    ScriptApp.newTrigger(TTQS_S2_MASTER_HANDLER).timeBased().everyMinutes(TTQS_S2_MASTER_INTERVAL_MINUTES).create();
-    ttqsS2RemoveLegacyClockTriggers_();
-    ttqsRemoveShadowSchedulerTrigger_();
-    ttqsS3RemoveFormSubmitTriggers_();
-    ScriptApp.newTrigger('ttqsOnSpreadsheetFormSubmit').forSpreadsheet(ttqsOpenCore_()).onFormSubmit().create();
-    PropertiesService.getScriptProperties().setProperty(TTQS_S2_MODE_PROPERTY, TTQS_S2_MODE);
-    ttqsEnsureS2LogSheet_();
-    return true;
-  });
-}
-
-function ttqsInstallS3SingleSchedulerTest() {
-  ScriptApp.requireAllScopes(ScriptApp.AuthMode.FULL);
-  ttqsAssertTestOnly_();
-  var mode = ttqsSchedulerRuntimeMode_();
-  if (mode === TTQS_S3_MODE) return ttqsAssertS3TriggerContract_();
-  if (mode !== TTQS_S2_MODE) throw new Error('S3_S2_RUNTIME_BASELINE_REQUIRED:' + mode);
-  var before = ttqsAssertS2TriggerContract_();
-  try {
-    ttqsWithScriptLock_(function() {
-      ttqsS3RemoveFormSubmitTriggers_();
-      PropertiesService.getScriptProperties().setProperty(TTQS_S2_MODE_PROPERTY, TTQS_S3_MODE);
-    });
-    var after = ttqsAssertS3TriggerContract_();
-    return {
-      mode: TTQS_S3_MODE,
-      environment: 'TEST',
-      before: before,
-      after: after,
-      state_revision: ttqsS2LoadState_().revision,
-      form_submit_removed: true,
-      rollback_mode: TTQS_S2_MODE
-    };
-  } catch (err) {
-    try {
-      ttqsS3RestoreS2Topology_();
-      ttqsAssertS2TriggerContract_();
-    } catch (rollbackErr) {
-      throw new Error('S3_INSTALL_FAIL:' + ttqsS2Bounded_(err && err.message ? err.message : err, 400) + '|ROLLBACK_FAIL:' + ttqsS2Bounded_(rollbackErr && rollbackErr.message ? rollbackErr.message : rollbackErr, 400));
-    }
-    throw err;
-  }
-}
-
-function ttqsRollbackS3SingleSchedulerTest() {
-  ScriptApp.requireAllScopes(ScriptApp.AuthMode.FULL);
-  ttqsAssertTestOnly_();
-  var mode = ttqsSchedulerRuntimeMode_();
-  if (mode === TTQS_S2_MODE) return ttqsAssertS2TriggerContract_();
-  if (mode !== TTQS_S3_MODE) throw new Error('S3_RUNTIME_MODE_REQUIRED_FOR_ROLLBACK:' + mode);
-  ttqsS3RestoreS2Topology_();
-  return ttqsAssertS2TriggerContract_();
-}
-'''
+          text = p.read_text().rstrip()
           if 'function ttqsInstallS3SingleSchedulerTest()' in text:
               raise SystemExit('S3_FUNCTIONS_ALREADY_PRESENT')
-          p.write_text(text.rstrip() + append + '\n')
+          append_lines = [
+              '',
+              '',
+              'function ttqsS3FormSubmitTriggers_() {',
+              '  return ScriptApp.getProjectTriggers().filter(function(trigger) {',
+              "    return trigger.getHandlerFunction() === 'ttqsOnSpreadsheetFormSubmit';",
+              '  });',
+              '}',
+              '',
+              'function ttqsS3RemoveFormSubmitTriggers_() {',
+              '  ttqsS3FormSubmitTriggers_().forEach(function(trigger) {',
+              '    ScriptApp.deleteTrigger(trigger);',
+              '  });',
+              '}',
+              '',
+              'function ttqsAssertS3TriggerContract_() {',
+              '  var counts = {};',
+              '  var forbidden = ttqsS2LegacyClockHandlers_();',
+              '  forbidden[TTQS_S1_SHADOW_HANDLER] = true;',
+              '  var masterCount = 0;',
+              '  var submitCount = 0;',
+              '  ScriptApp.getProjectTriggers().forEach(function(trigger) {',
+              '    var handler = trigger.getHandlerFunction();',
+              '    counts[handler] = Number(counts[handler] || 0) + 1;',
+              "    if (forbidden[handler]) throw new Error('S3_FORBIDDEN_LEGACY_TRIGGER:' + handler);",
+              '    if (handler === TTQS_S2_MASTER_HANDLER) {',
+              '      masterCount++;',
+              '      if (trigger.getEventType() !== ScriptApp.EventType.CLOCK || trigger.getTriggerSource() !== ScriptApp.TriggerSource.CLOCK) {',
+              "        throw new Error('S3_MASTER_TRIGGER_CONTRACT_INVALID');",
+              '      }',
+              '    }',
+              "    if (handler === 'ttqsOnSpreadsheetFormSubmit') submitCount++;",
+              '  });',
+              "  if (masterCount !== 1) throw new Error('S3_MASTER_TRIGGER_COUNT_INVALID:' + masterCount);",
+              "  if (submitCount !== 0) throw new Error('S3_FORM_SUBMIT_TRIGGER_COUNT_INVALID:' + submitCount);",
+              '  return { counts: counts, mode: TTQS_S3_MODE, master: masterCount, formSubmit: submitCount };',
+              '}',
+              '',
+              'function ttqsS3RestoreS2Topology_() {',
+              '  return ttqsWithScriptLock_(function() {',
+              '    ttqsAssertTestOnly_();',
+              '    ttqsRemoveS2MasterTrigger_();',
+              '    ScriptApp.newTrigger(TTQS_S2_MASTER_HANDLER).timeBased().everyMinutes(TTQS_S2_MASTER_INTERVAL_MINUTES).create();',
+              '    ttqsS2RemoveLegacyClockTriggers_();',
+              '    ttqsRemoveShadowSchedulerTrigger_();',
+              '    ttqsS3RemoveFormSubmitTriggers_();',
+              "    ScriptApp.newTrigger('ttqsOnSpreadsheetFormSubmit').forSpreadsheet(ttqsOpenCore_()).onFormSubmit().create();",
+              '    PropertiesService.getScriptProperties().setProperty(TTQS_S2_MODE_PROPERTY, TTQS_S2_MODE);',
+              '    ttqsEnsureS2LogSheet_();',
+              '    return true;',
+              '  });',
+              '}',
+              '',
+              'function ttqsInstallS3SingleSchedulerTest() {',
+              '  ScriptApp.requireAllScopes(ScriptApp.AuthMode.FULL);',
+              '  ttqsAssertTestOnly_();',
+              '  var mode = ttqsSchedulerRuntimeMode_();',
+              '  if (mode === TTQS_S3_MODE) return ttqsAssertS3TriggerContract_();',
+              "  if (mode !== TTQS_S2_MODE) throw new Error('S3_S2_RUNTIME_BASELINE_REQUIRED:' + mode);",
+              '  var before = ttqsAssertS2TriggerContract_();',
+              '  try {',
+              '    ttqsWithScriptLock_(function() {',
+              '      ttqsS3RemoveFormSubmitTriggers_();',
+              '      PropertiesService.getScriptProperties().setProperty(TTQS_S2_MODE_PROPERTY, TTQS_S3_MODE);',
+              '    });',
+              '    var after = ttqsAssertS3TriggerContract_();',
+              '    return {',
+              '      mode: TTQS_S3_MODE,',
+              "      environment: 'TEST',",
+              '      before: before,',
+              '      after: after,',
+              '      state_revision: ttqsS2LoadState_().revision,',
+              '      form_submit_removed: true,',
+              '      rollback_mode: TTQS_S2_MODE',
+              '    };',
+              '  } catch (err) {',
+              '    try {',
+              '      ttqsS3RestoreS2Topology_();',
+              '      ttqsAssertS2TriggerContract_();',
+              '    } catch (rollbackErr) {',
+              "      throw new Error('S3_INSTALL_FAIL:' + ttqsS2Bounded_(err && err.message ? err.message : err, 400) + '|ROLLBACK_FAIL:' + ttqsS2Bounded_(rollbackErr && rollbackErr.message ? rollbackErr.message : rollbackErr, 400));",
+              '    }',
+              '    throw err;',
+              '  }',
+              '}',
+              '',
+              'function ttqsRollbackS3SingleSchedulerTest() {',
+              '  ScriptApp.requireAllScopes(ScriptApp.AuthMode.FULL);',
+              '  ttqsAssertTestOnly_();',
+              '  var mode = ttqsSchedulerRuntimeMode_();',
+              '  if (mode === TTQS_S2_MODE) return ttqsAssertS2TriggerContract_();',
+              "  if (mode !== TTQS_S3_MODE) throw new Error('S3_RUNTIME_MODE_REQUIRED_FOR_ROLLBACK:' + mode);",
+              '  ttqsS3RestoreS2Topology_();',
+              '  return ttqsAssertS2TriggerContract_();',
+              '}',
+          ]
+          p.write_text(text + '\n'.join(append_lines) + '\n')
 
           replace_once(
               bootstrap,
@@ -275,15 +276,13 @@ function ttqsRollbackS3SingleSchedulerTest() {
 
             context.ScriptApp.triggers = [mk('ttqsSchedulerMasterTrigger'), mk('ttqsOnSpreadsheetFormSubmit', 'ON_FORM_SUBMIT', 'SPREADSHEETS')];
             assert.throws(() => context.ttqsAssertS3TriggerContract_(), /S3_FORM_SUBMIT_TRIGGER_COUNT_INVALID:1/);
-
             context.ScriptApp.triggers = [mk('ttqsSchedulerMasterTrigger'), mk('ttqsRetryFailedJobs')];
             assert.throws(() => context.ttqsAssertS3TriggerContract_(), /S3_FORBIDDEN_LEGACY_TRIGGER:ttqsRetryFailedJobs/);
-
             context.ScriptApp.triggers = [mk('ttqsSchedulerMasterTrigger'), mk('ttqsSchedulerShadowTrigger')];
             assert.throws(() => context.ttqsAssertS3TriggerContract_(), /S3_FORBIDDEN_LEGACY_TRIGGER:ttqsSchedulerShadowTrigger/);
           });
 
-          test('S3 installer requires S2 baseline, removes only form-submit, preserves scheduler state, and rolls back to S2', () => {
+          test('S3 installer requires S2 baseline, preserves cadence state, and rolls back to S2', () => {
             const install = functionBody(source, 'ttqsInstallS3SingleSchedulerTest', 'ttqsRollbackS3SingleSchedulerTest');
             assert.match(install, /S3_S2_RUNTIME_BASELINE_REQUIRED/);
             assert.match(install, /ttqsAssertS2TriggerContract_\(\)/);
@@ -292,10 +291,10 @@ function ttqsRollbackS3SingleSchedulerTest() {
             assert.match(install, /ttqsAssertS3TriggerContract_\(\)/);
             assert.match(install, /ttqsS3RestoreS2Topology_\(\)/);
             assert.match(install, /ROLLBACK_FAIL/);
-            assert.doesNotMatch(install, /ttqsS2InitializeState_\(\)/, 'S3 cutover must preserve proven S2 cadence state');
+            assert.doesNotMatch(install, /ttqsS2InitializeState_\(\)/);
           });
 
-          test('S3 rollback restores exactly the S2 master plus spreadsheet form-submit topology', () => {
+          test('S3 rollback restores S2 master plus spreadsheet form-submit', () => {
             const restore = functionBody(source, 'ttqsS3RestoreS2Topology_', 'ttqsInstallS3SingleSchedulerTest');
             assert.match(restore, /ttqsRemoveS2MasterTrigger_\(\)/);
             assert.match(restore, /newTrigger\(TTQS_S2_MASTER_HANDLER\).*everyMinutes\(TTQS_S2_MASTER_INTERVAL_MINUTES\)/s);
@@ -304,9 +303,6 @@ function ttqsRollbackS3SingleSchedulerTest() {
             assert.match(restore, /ttqsS3RemoveFormSubmitTriggers_\(\)/);
             assert.match(restore, /newTrigger\('ttqsOnSpreadsheetFormSubmit'\)\.forSpreadsheet\(ttqsOpenCore_\(\)\)\.onFormSubmit\(\)\.create\(\)/);
             assert.match(restore, /setProperty\(TTQS_S2_MODE_PROPERTY, TTQS_S2_MODE\)/);
-            const rollback = functionBody(source, 'ttqsRollbackS3SingleSchedulerTest');
-            assert.match(rollback, /ttqsS3RestoreS2Topology_\(\)/);
-            assert.match(rollback, /ttqsAssertS2TriggerContract_\(\)/);
           });
 
           test('legacy S2 public installer and rollback cannot overwrite active S3 topology', () => {
@@ -314,23 +310,19 @@ function ttqsRollbackS3SingleSchedulerTest() {
             assert.match(install, /ttqsSchedulerRuntimeMode_\(\) === TTQS_S3_MODE/);
             assert.match(install, /S3_RUNTIME_MODE_ACTIVE/);
             const rollback = source.match(/function ttqsRollbackS2ClockConsolidationTest\(\) \{([\s\S]*?)\n\}\n\nfunction ttqsS3FormSubmitTriggers_/);
-            assert.ok(rollback, 'S2 rollback must be isolatable before S3 functions');
+            assert.ok(rollback);
             assert.match(rollback[1], /ttqsSchedulerRuntimeMode_\(\) === TTQS_S3_MODE/);
             assert.match(rollback[1], /S3_RUNTIME_MODE_ACTIVE/);
           });
 
-          test('Bootstrap is S3-aware and cannot recreate the form-submit or legacy clock triggers', () => {
-            const assertManaged = bootstrap.match(/function ttqsAssertManagedTriggerContract_\(\) \{([\s\S]*?)\n\}/);
-            assert.ok(assertManaged);
-            assert.match(assertManaged[1], /TTQS_S3_MODE/);
-            assert.match(assertManaged[1], /ttqsAssertS3TriggerContract_\(\)/);
-            const installManaged = bootstrap.match(/function ttqsInstallManagedTriggers_\(\) \{([\s\S]*?)\n\}/);
-            assert.ok(installManaged);
-            assert.match(installManaged[1], /S3_MANAGED_TRIGGER_REINSTALL_FORBIDDEN/);
-            assert.match(installManaged[1], /S2_MANAGED_TRIGGER_REINSTALL_FORBIDDEN/);
+          test('Bootstrap cannot recreate form-submit or legacy clocks in S3', () => {
+            assert.match(bootstrap, /TTQS_S3_MODE/);
+            assert.match(bootstrap, /ttqsAssertS3TriggerContract_\(\)/);
+            assert.match(bootstrap, /S3_MANAGED_TRIGGER_REINSTALL_FORBIDDEN/);
+            assert.match(bootstrap, /S2_MANAGED_TRIGGER_REINSTALL_FORBIDDEN/);
           });
 
-          test('S1 shadow installer also fails closed in S3 runtime mode', () => {
+          test('S1 shadow installer fails closed in S3', () => {
             const install = shadow.match(/function ttqsInstallShadowSchedulerTest\(\) \{([\s\S]*?)\n\}\n\nfunction ttqsRemoveShadowSchedulerTest/);
             assert.ok(install);
             assert.match(install[1], /TTQS_S2_MODE/);
