@@ -35,3 +35,35 @@ test('web app keeps TEST and SAMPLE boundary visible', () => {
   assert.match(source, /TTQS ONE · 測試／示範資料（TEST／SAMPLE）/);
   assert.match(source, /所有正式資料寫入（REAL）仍停用/);
 });
+
+test('SAMPLE evaluator flow is explicit and ordered from needs through improvement', () => {
+  for (const label of ['需求蒐集', '需求／職能落差分析', '課程設計／目標／審查', '執行／資源／班次', '評量／檢討', '追蹤／改善']) {
+    assert.match(source, new RegExp(label));
+  }
+  assert.match(source, /SAMPLE 評核因果鏈/);
+  assert.match(source, /href="#indicator-/);
+});
+
+test('internal evaluator drilldown projects SUPPORTS relationship from EvidenceMaster tags', () => {
+  assert.match(source, /relation: 'SUPPORTS'/);
+  assert.match(source, /EvidenceMaster\.ttqs_indicator_tags 現行相容投影/);
+  assert.match(source, /查看佐證與來源/);
+  assert.match(source, /此處只做TEST\/SAMPLE追溯，不代表官方評分/);
+});
+
+test('runtime evidence can drill down from processed object to Observation source locator', () => {
+  assert.match(source, /processed_object_id/);
+  assert.match(source, /source_locator/);
+  assert.match(source, /observation_id/);
+  assert.match(source, /原始收件定位/);
+});
+
+test('external preview receives indicator counts but no evidence detail payload', () => {
+  assert.match(source, /ttqsWebIndicatorModel_\(view === 'INTERNAL'\)/);
+  assert.match(source, /evidence: includeEvidenceDetails \? evidence\.map/);
+});
+
+test('document drilldown only permits Google Drive or Google Docs source links', () => {
+  assert.match(source, /docs\\\.google\\\.com\|drive\\\.google\\\.com/);
+  assert.match(source, /開啟原始文件/);
+});
