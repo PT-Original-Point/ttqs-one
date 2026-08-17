@@ -218,5 +218,7 @@ function ttqsHandleRawRef_(sheetId, rawRef, isRetry) {
 
 function ttqsOnSpreadsheetFormSubmit(e) {
   if (!e || !e.range) throw new Error('REAL_SPREADSHEET_FORM_EVENT_REQUIRED');
+  var suppression = ttqsMaybeSuppressS3MissedTriggerFormSubmit_(e);
+  if (suppression && suppression.suppressed === true) return suppression;
   return ttqsHandleRawSubmission_(e.range.getSheet().getSheetId(), e.range.getRow(), false);
 }
