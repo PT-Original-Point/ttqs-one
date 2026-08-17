@@ -137,6 +137,7 @@ function ttqsInstallShadowSchedulerTest() {
     if (typeof ttqsSchedulerRuntimeMode_ === 'function' && typeof TTQS_S2_MODE !== 'undefined' && ttqsSchedulerRuntimeMode_() === TTQS_S2_MODE) {
       throw new Error('S2_RUNTIME_MODE_ACTIVE');
     }
+    if (typeof ttqsSchedulerRuntimeMode_ === 'function' && typeof TTQS_S3_MODE !== 'undefined' && ttqsSchedulerRuntimeMode_() === TTQS_S3_MODE) throw new Error('S3_RUNTIME_MODE_ACTIVE');
     if (ttqsConfig_().OBSERVATION_SHADOW_MODE !== true) throw new Error('OBSERVATION_SHADOW_MODE_REQUIRED');
     var legacyBefore = ttqsAssertManagedTriggerContract_();
     ttqsRemoveShadowSchedulerTrigger_();
