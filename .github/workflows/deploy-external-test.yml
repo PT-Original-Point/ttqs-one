@@ -1,0 +1,178 @@
+name: Deploy External TEST Evaluator Portal
+
+on:
+  push:
+    branches:
+      - deploy/test
+
+concurrency:
+  group: ttqs-one-deploy-external-test
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy_external:
+    if: github.ref == 'refs/heads/deploy/test'
+    runs-on: ubuntu-24.04
+    environment: TEST
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Verify deploy ref and main ancestry
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REF" = "refs/heads/deploy/test"
+          git fetch origin main --no-tags
+          git merge-base --is-ancestor "$GITHUB_SHA" origin/main
+          printf 'External TEST deploy source SHA: %s\n' "$GITHUB_SHA"
+
+      - name: Verify repository and external viewer safety contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm ci --ignore-scripts
+          npm run verify
+          node - <<'NODE'
+          const fs = require('fs');
+          const manifest = JSON.parse(fs.readFileSync('external-viewer/appsscript.json', 'utf8'));
+          const expectedScope = 'https://www.googleapis.com/auth/spreadsheets.readonly';
+          if (manifest.webapp?.access !== 'ANYONE_ANONYMOUS') throw new Error('EXTERNAL_ACCESS_NOT_ANONYMOUS');
+          if (manifest.webapp?.executeAs !== 'USER_DEPLOYING') throw new Error('EXTERNAL_EXECUTION_IDENTITY_INVALID');
+          if (JSON.stringify(manifest.oauthScopes) !== JSON.stringify([expectedScope])) throw new Error('EXTERNAL_SCOPE_INVALID');
+          const files = fs.readdirSync('external-viewer').sort();
+          if (JSON.stringify(files) !== JSON.stringify(['Code.gs', 'appsscript.json'])) throw new Error('EXTERNAL_PUSH_SET_INVALID');
+          NODE
+
+      - name: Restore TEST clasp credentials
+        shell: bash
+        env:
+          CLASPRC_JSON_B64: ${{ secrets.CLASPRC_JSON_B64 }}
+        run: |
+          set -euo pipefail
+          test -n "$CLASPRC_JSON_B64"
+          printf '%s' "$CLASPRC_JSON_B64" | base64 -d > "$HOME/.clasprc.json"
+
+      - name: Resolve or bootstrap external TEST Apps Script project
+        shell: bash
+        run: |
+          set -euo pipefail
+          if test -f config/external-test-deployment.json; then
+            node - <<'NODE'
+            const fs = require('fs');
+            const cfg = JSON.parse(fs.readFileSync('config/external-test-deployment.json', 'utf8'));
+            if (!cfg.scriptId || typeof cfg.scriptId !== 'string') throw new Error('EXTERNAL_SCRIPT_ID_REQUIRED');
+            if (cfg.environment !== 'TEST') throw new Error('EXTERNAL_ENVIRONMENT_MISMATCH');
+            if (cfg.rootDir !== 'external-viewer') throw new Error('EXTERNAL_ROOT_DIR_MISMATCH');
+            fs.writeFileSync('.clasp.json', JSON.stringify({ scriptId: cfg.scriptId, rootDir: 'external-viewer' }, null, 2) + '\n');
+            NODE
+            SCRIPT_ID=$(node -p "require('./config/external-test-deployment.json').scriptId")
+            DEPLOYMENT_ID=$(node -p "require('./config/external-test-deployment.json').deploymentId || ''")
+            echo 'EXTERNAL_MODE=REUSE' >> "$GITHUB_ENV"
+          else
+            rm -rf .external-bootstrap
+            mkdir .external-bootstrap
+            (
+              cd .external-bootstrap
+              npx --yes @google/clasp@3.3.0 create-script --type standalone --title 'TTQS ONE TEST External Evaluator Portal'
+            )
+            SCRIPT_ID=$(node -p "require('./.external-bootstrap/.clasp.json').scriptId")
+            test -n "$SCRIPT_ID"
+            node -e "const fs=require('fs'); const scriptId=process.argv[1]; fs.writeFileSync('.clasp.json', JSON.stringify({scriptId,rootDir:'external-viewer'},null,2)+'\\n')" "$SCRIPT_ID"
+            DEPLOYMENT_ID=''
+            echo 'EXTERNAL_MODE=BOOTSTRAP' >> "$GITHUB_ENV"
+          fi
+          test -n "$SCRIPT_ID"
+          echo "EXTERNAL_SCRIPT_ID=$SCRIPT_ID" >> "$GITHUB_ENV"
+          echo "EXTERNAL_DEPLOYMENT_ID=$DEPLOYMENT_ID" >> "$GITHUB_ENV"
+          printf 'EXTERNAL_SCRIPT_ID=%s\n' "$SCRIPT_ID"
+          if test -n "$DEPLOYMENT_ID"; then
+            printf 'EXTERNAL_EXISTING_DEPLOYMENT_ID=%s\n' "$DEPLOYMENT_ID"
+          else
+            printf 'EXTERNAL_EXISTING_DEPLOYMENT_ID=NONE\n'
+          fi
+
+      - name: Verify external push set before deploy
+        shell: bash
+        run: |
+          set -euo pipefail
+          node -e "const p=require('./.clasp.json'); if(p.rootDir!=='external-viewer'||!p.scriptId) process.exit(1)"
+          npx --yes @google/clasp@3.3.0 show-file-status --json > external-clasp-status-before.json
+          cat external-clasp-status-before.json
+
+      - name: Push external TEST viewer
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx --yes @google/clasp@3.3.0 push --force
+
+      - name: Create or update external TEST web app deployment
+        shell: bash
+        run: |
+          set -euo pipefail
+          DESCRIPTION="TTQS_ONE_TEST_EXTERNAL $GITHUB_SHA"
+          if test -n "$EXTERNAL_DEPLOYMENT_ID"; then
+            npx --yes @google/clasp@3.3.0 create-deployment --deploymentId "$EXTERNAL_DEPLOYMENT_ID" --description "$DESCRIPTION" | tee external-deploy.txt
+            DEPLOYMENT_ID="$EXTERNAL_DEPLOYMENT_ID"
+          else
+            npx --yes @google/clasp@3.3.0 create-deployment --description "$DESCRIPTION" | tee external-deploy.txt
+            DEPLOYMENT_ID=$(grep -Eo 'AKfy[A-Za-z0-9_-]+' external-deploy.txt | head -n 1 || true)
+          fi
+          if test -z "$DEPLOYMENT_ID"; then
+            npx --yes @google/clasp@3.3.0 list-deployments | tee external-deployments.txt
+            DEPLOYMENT_ID=$(grep -Eo 'AKfy[A-Za-z0-9_-]+' external-deployments.txt | tail -n 1 || true)
+          fi
+          test -n "$DEPLOYMENT_ID"
+          echo "EXTERNAL_DEPLOYMENT_ID_RESOLVED=$DEPLOYMENT_ID" >> "$GITHUB_ENV"
+          printf 'EXTERNAL_DEPLOYMENT_ID=%s\n' "$DEPLOYMENT_ID"
+          npx --yes @google/clasp@3.3.0 list-deployments
+
+      - name: Anonymous product black-box probe
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL="https://script.google.com/macros/s/$EXTERNAL_DEPLOYMENT_ID_RESOLVED/exec"
+          PASS=0
+          for attempt in 1 2 3 4 5 6; do
+            rm -f external-page.html
+            if curl --fail --silent --show-error --location --max-time 30 "$URL" -o external-page.html; then
+              if grep -Fq 'TTQS ONE' external-page.html \
+                && grep -Fq 'SAMPLE 評核因果鏈' external-page.html \
+                && grep -Fq '查看佐證與來源' external-page.html \
+                && grep -Fq 'EXTERNAL_READONLY' external-page.html \
+                && ! grep -Fq '目前無法載入唯讀快照' external-page.html; then
+                PASS=1
+                break
+              fi
+            fi
+            sleep 10
+          done
+          if test "$PASS" -ne 1; then
+            echo 'EXTERNAL_PRODUCT_BLACKBOX_FAIL'
+            if test -f external-page.html; then sed -n '1,80p' external-page.html; fi
+            exit 1
+          fi
+          printf 'EXTERNAL_PRODUCT_BLACKBOX_PASS\n'
+          printf 'EXTERNAL_WEBAPP_URL=%s\n' "$URL"
+          {
+            echo '## TTQS ONE External TEST deployment'
+            echo
+            echo "- Source SHA: $GITHUB_SHA"
+            echo "- Script ID: $EXTERNAL_SCRIPT_ID"
+            echo "- Deployment ID: $EXTERNAL_DEPLOYMENT_ID_RESOLVED"
+            echo "- URL: $URL"
+            echo '- Access: ANYONE_ANONYMOUS'
+            echo '- Execute as: USER_DEPLOYING'
+            echo '- Data: TEST/SAMPLE deidentified snapshot only'
+            echo '- Anonymous black-box: PASS'
+            echo '- REAL/PROD: not performed'
+          } >> "$GITHUB_STEP_SUMMARY"
