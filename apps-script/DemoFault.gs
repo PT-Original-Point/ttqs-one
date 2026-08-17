@@ -94,6 +94,178 @@ function ttqsMaintainP0AuditRegistrationProviderContract_() {
   }
 }
 
+var TTQS_S3_MISSED_TRIGGER_SUPPRESSION_PROPERTY = 'TTQS_S3_MISSED_TRIGGER_SUPPRESS_ONCE';
+var TTQS_S3_MISSED_TRIGGER_LAST_CONSUMED_PROPERTY = 'TTQS_S3_MISSED_TRIGGER_LAST_CONSUMED';
+var TTQS_S3_MISSED_TRIGGER_SUPPRESSION_VERSION = 'S3_MISSED_TRIGGER_SUPPRESSION_V1';
+
+function ttqsS3MissedTriggerSuppressionTtlMs_() {
+  return 10 * 60 * 1000;
+}
+
+function ttqsS3MissedTriggerSuppressionParse_(rawState) {
+  var state = ttqsParseJson_(String(rawState || ''), null);
+  var armedAtMs = Number(state && state.armedAtMs || 0);
+  var expiresAtMs = Number(state && state.expiresAtMs || 0);
+  var expectedAlias = ttqsP0AuditProviderAlias_();
+  if (!state ||
+      String(state.version || '') !== TTQS_S3_MISSED_TRIGGER_SUPPRESSION_VERSION ||
+      String(state.alias || '') !== expectedAlias ||
+      String(state.kind || '') !== 'REGISTRATION' ||
+      !String(state.nonce || '') ||
+      !isFinite(armedAtMs) || armedAtMs <= 0 ||
+      !isFinite(expiresAtMs) || expiresAtMs <= armedAtMs ||
+      expiresAtMs - armedAtMs > ttqsS3MissedTriggerSuppressionTtlMs_()) {
+    throw new Error('S3_MISSED_TRIGGER_SUPPRESSION_STATE_INVALID');
+  }
+  return {
+    version: TTQS_S3_MISSED_TRIGGER_SUPPRESSION_VERSION,
+    nonce: String(state.nonce),
+    alias: expectedAlias,
+    kind: 'REGISTRATION',
+    armedAtMs: armedAtMs,
+    expiresAtMs: expiresAtMs
+  };
+}
+
+function ttqsArmS3MissedTriggerRecoveryTest() {
+  ttqsAssertTestOnly_();
+  var props = PropertiesService.getScriptProperties();
+  var formId = String(props.getProperty('TTQS_FORM_REGISTRATION_ID') || '');
+  if (!formId) throw new Error('S3_MISSED_TRIGGER_REGISTRATION_FORM_ID_MISSING');
+
+  return ttqsWithScriptLock_(function() {
+    var nowMs = new Date().getTime();
+    var existingRaw = String(props.getProperty(TTQS_S3_MISSED_TRIGGER_SUPPRESSION_PROPERTY) || '');
+    if (existingRaw) {
+      var existing = ttqsS3MissedTriggerSuppressionParse_(existingRaw);
+      if (existing.expiresAtMs > nowMs) throw new Error('S3_MISSED_TRIGGER_SUPPRESSION_ALREADY_ARMED');
+      props.deleteProperty(TTQS_S3_MISSED_TRIGGER_SUPPRESSION_PROPERTY);
+      if (props.getProperty(TTQS_S3_MISSED_TRIGGER_SUPPRESSION_PROPERTY)) {
+        throw new Error('S3_MISSED_TRIGGER_EXPIRED_ARM_CLEAR_FAILED');
+      }
+    }
+
+    var state = {
+      version: TTQS_S3_MISSED_TRIGGER_SUPPRESSION_VERSION,
+      nonce: String(Utilities.getUuid()),
+      alias: ttqsP0AuditProviderAlias_(),
+      kind: 'REGISTRATION',
+      armedAtMs: nowMs,
+      expiresAtMs: nowMs + ttqsS3MissedTriggerSuppressionTtlMs_()
+    };
+    props.setProperty(TTQS_S3_MISSED_TRIGGER_SUPPRESSION_PROPERTY, JSON.stringify(state));
+    props.deleteProperty(TTQS_S3_MISSED_TRIGGER_LAST_CONSUMED_PROPERTY);
+
+    var readback = ttqsS3MissedTriggerSuppressionParse_(props.getProperty(TTQS_S3_MISSED_TRIGGER_SUPPRESSION_PROPERTY));
+    if (readback.nonce !== state.nonce || readback.expiresAtMs !== state.expiresAtMs) {
+      throw new Error('S3_MISSED_TRIGGER_SUPPRESSION_ARM_READBACK_MISMATCH');
+    }
+    return {
+      armed: true,
+      version: state.version,
+      nonce: state.nonce,
+      alias: state.alias,
+      kind: state.kind,
+      form_id: formId,
+      expires_at: new Date(state.expiresAtMs).toISOString()
+    };
+  });
+}
+
+function ttqsCancelS3MissedTriggerRecoveryTest() {
+  ttqsAssertTestOnly_();
+  var props = PropertiesService.getScriptProperties();
+  return ttqsWithScriptLock_(function() {
+    props.deleteProperty(TTQS_S3_MISSED_TRIGGER_SUPPRESSION_PROPERTY);
+    if (props.getProperty(TTQS_S3_MISSED_TRIGGER_SUPPRESSION_PROPERTY)) {
+      throw new Error('S3_MISSED_TRIGGER_SUPPRESSION_CANCEL_FAILED');
+    }
+    return { armed: false, alias: ttqsP0AuditProviderAlias_(), kind: 'REGISTRATION' };
+  });
+}
+
+function ttqsMaybeSuppressS3MissedTriggerFormSubmit_(e) {
+  var cfg = ttqsConfig_();
+  if (!cfg || String(cfg.ENVIRONMENT || '') !== 'TEST') return { suppressed: false, reason: 'NOT_TEST' };
+  ttqsAssertTestOnly_();
+  if (!e || !e.range) throw new Error('REAL_SPREADSHEET_FORM_EVENT_REQUIRED');
+
+  var props = PropertiesService.getScriptProperties();
+  var initialRaw = String(props.getProperty(TTQS_S3_MISSED_TRIGGER_SUPPRESSION_PROPERTY) || '');
+  if (!initialRaw) return { suppressed: false, reason: 'NOT_ARMED' };
+  var initialState = ttqsS3MissedTriggerSuppressionParse_(initialRaw);
+  var nowMs = new Date().getTime();
+
+  if (initialState.expiresAtMs <= nowMs) {
+    return ttqsWithScriptLock_(function() {
+      var currentRaw = String(props.getProperty(TTQS_S3_MISSED_TRIGGER_SUPPRESSION_PROPERTY) || '');
+      if (!currentRaw) return { suppressed: false, reason: 'NOT_ARMED' };
+      var current = ttqsS3MissedTriggerSuppressionParse_(currentRaw);
+      var lockedNowMs = new Date().getTime();
+      if (current.expiresAtMs > lockedNowMs) return { suppressed: false, reason: 'ARM_REFRESHED' };
+      props.deleteProperty(TTQS_S3_MISSED_TRIGGER_SUPPRESSION_PROPERTY);
+      if (props.getProperty(TTQS_S3_MISSED_TRIGGER_SUPPRESSION_PROPERTY)) {
+        throw new Error('S3_MISSED_TRIGGER_EXPIRED_ARM_CLEAR_FAILED');
+      }
+      return { suppressed: false, reason: 'EXPIRED' };
+    });
+  }
+
+  var sheetId = Number(e.range.getSheet().getSheetId());
+  var rowNumber = Number(e.range.getRow());
+  var raw = ttqsRawSubmission_(sheetId, rowNumber, false);
+  var aliasCode = String(raw && raw.named && raw.named.TTQS_ALIAS_CODE || '').trim().toUpperCase();
+  if (String(raw && raw.kind || '') !== 'REGISTRATION' || aliasCode !== initialState.alias) {
+    return { suppressed: false, reason: 'NON_TARGET' };
+  }
+
+  return ttqsWithScriptLock_(function() {
+    var currentRaw = String(props.getProperty(TTQS_S3_MISSED_TRIGGER_SUPPRESSION_PROPERTY) || '');
+    if (!currentRaw) return { suppressed: false, reason: 'ALREADY_CONSUMED' };
+    var current = ttqsS3MissedTriggerSuppressionParse_(currentRaw);
+    if (current.nonce !== initialState.nonce) throw new Error('S3_MISSED_TRIGGER_SUPPRESSION_ARM_CHANGED');
+    var consumedAtMs = new Date().getTime();
+    if (current.expiresAtMs <= consumedAtMs) {
+      props.deleteProperty(TTQS_S3_MISSED_TRIGGER_SUPPRESSION_PROPERTY);
+      if (props.getProperty(TTQS_S3_MISSED_TRIGGER_SUPPRESSION_PROPERTY)) {
+        throw new Error('S3_MISSED_TRIGGER_EXPIRED_ARM_CLEAR_FAILED');
+      }
+      return { suppressed: false, reason: 'EXPIRED' };
+    }
+
+    var consumed = {
+      version: current.version,
+      nonce: current.nonce,
+      alias: current.alias,
+      kind: current.kind,
+      source_locator: 'SHEET:' + String(sheetId) + ':ROW:' + String(rowNumber),
+      raw_fingerprint: String(raw.rawFingerprint || ''),
+      consumedAtMs: consumedAtMs
+    };
+    props.deleteProperty(TTQS_S3_MISSED_TRIGGER_SUPPRESSION_PROPERTY);
+    props.setProperty(TTQS_S3_MISSED_TRIGGER_LAST_CONSUMED_PROPERTY, JSON.stringify(consumed));
+    if (props.getProperty(TTQS_S3_MISSED_TRIGGER_SUPPRESSION_PROPERTY)) {
+      throw new Error('S3_MISSED_TRIGGER_SUPPRESSION_CONSUME_FAILED');
+    }
+    var consumedReadback = ttqsParseJson_(props.getProperty(TTQS_S3_MISSED_TRIGGER_LAST_CONSUMED_PROPERTY), null);
+    if (!consumedReadback ||
+        String(consumedReadback.nonce || '') !== consumed.nonce ||
+        String(consumedReadback.source_locator || '') !== consumed.source_locator ||
+        String(consumedReadback.raw_fingerprint || '') !== consumed.raw_fingerprint) {
+      throw new Error('S3_MISSED_TRIGGER_SUPPRESSION_CONSUMED_READBACK_MISMATCH');
+    }
+    return {
+      suppressed: true,
+      reason: 'P0_AUDIT_MISSED_TRIGGER_TEST',
+      nonce: consumed.nonce,
+      alias: consumed.alias,
+      kind: consumed.kind,
+      source_locator: consumed.source_locator,
+      raw_fingerprint: consumed.raw_fingerprint
+    };
+  });
+}
+
 function ttqsP0FaultConsumedKey_(rawRef) {
   if (!rawRef) throw new Error('P0_AUDIT_RAW_REF_REQUIRED');
   return 'TTQS_P0_FAULT_CONSUMED_' + ttqsDigest_(String(rawRef)).slice(0, 24).toUpperCase();
