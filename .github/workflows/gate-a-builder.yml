@@ -25,6 +25,15 @@ jobs:
           cache: npm
       - name: Apply Gate A foundation
         run: node .github/scripts/gate-a-builder.mjs
+      - name: Normalize generated EOF
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          for (const path of ['apps-script/S3Foundation.gs', 'tests/gate-a-responseid-foundation.test.mjs']) {
+            const content = fs.readFileSync(path, 'utf8').replace(/\n+$/, '\n');
+            fs.writeFileSync(path, content);
+          }
+          NODE
       - name: Stage source and regenerate exact manifest
         shell: bash
         run: |
