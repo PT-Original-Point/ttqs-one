@@ -13,8 +13,32 @@ import {
 const rawProduct = REQUIRED_PRODUCT_MARKERS.join(' | ');
 const wrappedProduct = rawProduct.replace('19 / 19', '19 \\/ 19');
 
+const D8_ACCEPTANCE_MARKERS = [
+  '官方 19 指標評核語意導航',
+  '12a 學員遴選',
+  '12e 教學環境與設備',
+  '17a 反應評估',
+  '17d 成果評估',
+  'SAMPLE 評核因果鏈',
+  '四類 TEST Google Forms 生命週期',
+  '4/4 類別都有 ACCEPTED 來源',
+  '故障 → 重試 → 對帳 → FINAL_ACCEPTED',
+  'MATCHED_EXACTLY_ONCE',
+  'AttemptHistory=append-only',
+  '19 指標佐證與來源下鑽',
+  'Google Drive 連結只是選配，不是顧問調閱成功的必要條件',
+  '不在執行期呼叫 Google Sheets／Drive API',
+  '本唯讀檢視器不會把 SAMPLE／CONTROL 宣稱為 REAL'
+];
+
 test('raw external product markers pass', () => {
   assert.equal(classifyExternalBlackbox(rawProduct).pass, true);
+});
+
+test('blackbox contract explicitly covers D8 consultant acceptance semantics', () => {
+  for (const marker of D8_ACCEPTANCE_MARKERS) {
+    assert.ok(REQUIRED_PRODUCT_MARKERS.includes(marker), `missing D8 blackbox contract marker: ${marker}`);
+  }
 });
 
 test('Apps Script HtmlService escaped slash is normalized before marker classification', () => {
@@ -28,10 +52,12 @@ test('hex and unicode escaped slash variants are normalized', () => {
   assert.equal(classifyExternalBlackbox(rawProduct.replace('19 / 19', '19 \\u002F 19')).pass, true);
 });
 
-test('missing required product marker fails closed', () => {
-  const result = classifyExternalBlackbox(rawProduct.replace('查看佐證與來源', ''));
-  assert.equal(result.pass, false);
-  assert.deepEqual(result.missing, ['查看佐證與來源']);
+test('every required product marker independently fails closed when missing', () => {
+  for (const marker of REQUIRED_PRODUCT_MARKERS) {
+    const result = classifyExternalBlackbox(rawProduct.replace(marker, ''));
+    assert.equal(result.pass, false, `classifier must fail when marker is absent: ${marker}`);
+    assert.ok(result.missing.includes(marker), `missing list must identify absent marker: ${marker}`);
+  }
 });
 
 test('friendly application error page fails closed even if other markers are present', () => {
