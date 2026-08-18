@@ -13,7 +13,7 @@ const runtime = {};
 vm.createContext(runtime);
 vm.runInContext(source, runtime);
 
- test('external viewer has exact two-file deploy set', () => {
+test('external viewer has exact two-file deploy set', () => {
   assert.deepEqual(files, ['Code.gs', 'appsscript.json']);
 });
 
@@ -37,12 +37,14 @@ test('viewer embeds only the deidentified snapshot provenance and never the core
   assert.match(source, /不在執行期呼叫 Google Sheets／Drive API/);
 });
 
-test('static snapshot model preserves 19 indicators, six causal steps, 25 evidence rows and four TEST locators', () => {
+test('static snapshot model preserves 19 indicators, six causal steps, 25 evidence rows and four unique TEST observations', () => {
   const model = runtime.ttqsExternalSnapshotModel_();
   assert.equal(model.indicators.length, 19);
   assert.equal(model.causalFlow.length, 6);
   assert.equal(model.evidence.length, 25);
-  assert.equal(model.evidence.filter((item) => item.observationId && item.sourceLocator).length, 4);
+  const locatorRows = model.evidence.filter((item) => item.observationId && item.sourceLocator);
+  assert.equal(locatorRows.length, 7);
+  assert.equal(new Set(locatorRows.map((item) => item.observationId)).size, 4);
   assert.deepEqual([...new Set(model.evidence.map((item) => item.indicatorNo))].sort((a,b) => Number(a)-Number(b)), Array.from({length:19}, (_,i) => String(i+1)));
 });
 
