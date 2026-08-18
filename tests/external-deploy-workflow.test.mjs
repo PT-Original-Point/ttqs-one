@@ -20,6 +20,7 @@ test('external deploy is isolated to external-viewer and anonymous read-only man
   assert.match(source, /ANYONE_ANONYMOUS/);
   assert.match(source, /USER_DEPLOYING/);
   assert.match(source, /spreadsheets\.readonly/);
+  assert.match(source, /enabledAdvancedServices/);
   assert.doesNotMatch(source, /rootDir:'apps-script'/);
 });
 
@@ -34,10 +35,28 @@ test('external deployment requires anonymous product black-box proof', () => {
   assert.match(source, /查看佐證與來源/);
   assert.match(source, /EXTERNAL_READONLY/);
   assert.match(source, /EXTERNAL_PRODUCT_BLACKBOX_PASS/);
+  assert.match(source, /19 \/ 19/);
 });
 
-test('bootstrap emits reusable external script and deployment identifiers', () => {
-  assert.match(source, /EXTERNAL_SCRIPT_ID=/);
-  assert.match(source, /EXTERNAL_DEPLOYMENT_ID=/);
-  assert.match(source, /config\/external-test-deployment\.json/);
+test('deployment identity is persisted in TEST control issue after black-box PASS', () => {
+  assert.match(source, /EXTERNAL_RECEIPT_ISSUE: '39'/);
+  assert.match(source, /TTQS_EXTERNAL_TEST_RECEIPT_V1/);
+  assert.match(source, /gh issue view/);
+  assert.match(source, /gh issue edit/);
+  assert.match(source, /anonymousBlackbox: 'PASS'/);
+  assert.match(source, /realProdTouch: 0/);
+  assert.doesNotMatch(source, /config\/external-test-deployment\.json/);
+});
+
+test('empty receipt recovers exact titled script before creating another project', () => {
+  assert.match(source, /list-scripts/);
+  assert.match(source, /EXTERNAL_SCRIPT_TITLE/);
+  assert.match(source, /EXTERNAL_SCRIPT_TITLE_AMBIGUOUS/);
+  assert.match(source, /create-script --type standalone/);
+});
+
+test('receipt identifiers are validated before reuse', () => {
+  assert.match(source, /EXTERNAL_RECEIPT_SCRIPT_ID_INVALID/);
+  assert.match(source, /EXTERNAL_RECEIPT_DEPLOYMENT_ID_INVALID/);
+  assert.match(source, /EXTERNAL_RECEIPT_DEPLOYMENT_WITHOUT_SCRIPT/);
 });
