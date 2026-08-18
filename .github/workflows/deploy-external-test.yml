@@ -57,27 +57,25 @@ jobs:
           set -euo pipefail
           npm ci --ignore-scripts
           npm run verify
-          node - <<'NODE'
-          const fs = require('fs');
-          const manifest = JSON.parse(fs.readFileSync('external-viewer/appsscript.json', 'utf8'));
-          const expectedScope = 'https://www.googleapis.com/auth/spreadsheets.readonly';
-          const expectedService = [{ userSymbol: 'Sheets', version: 'v4', serviceId: 'sheets' }];
-          if (manifest.webapp?.access !== 'ANYONE_ANONYMOUS') throw new Error('EXTERNAL_ACCESS_NOT_ANONYMOUS');
-          if (manifest.webapp?.executeAs !== 'USER_DEPLOYING') throw new Error('EXTERNAL_EXECUTION_IDENTITY_INVALID');
-          if (JSON.stringify(manifest.oauthScopes) !== JSON.stringify([expectedScope])) throw new Error('EXTERNAL_SCOPE_INVALID');
-          if (JSON.stringify(manifest.dependencies?.enabledAdvancedServices) !== JSON.stringify(expectedService)) throw new Error('EXTERNAL_SHEETS_SERVICE_INVALID');
-          const files = fs.readdirSync('external-viewer').sort();
-          if (JSON.stringify(files) !== JSON.stringify(['Code.gs', 'appsscript.json'])) throw new Error('EXTERNAL_PUSH_SET_INVALID');
-          NODE
+          node -e "const fs=require('fs'); const manifest=JSON.parse(fs.readFileSync('external-viewer/appsscript.json','utf8')); const expectedScope='https://www.googleapis.com/auth/spreadsheets.readonly'; const expectedService=[{userSymbol:'Sheets',version:'v4',serviceId:'sheets'}]; if(manifest.webapp?.access!=='ANYONE_ANONYMOUS') throw new Error('EXTERNAL_ACCESS_NOT_ANONYMOUS'); if(manifest.webapp?.executeAs!=='USER_DEPLOYING') throw new Error('EXTERNAL_EXECUTION_IDENTITY_INVALID'); if(JSON.stringify(manifest.oauthScopes)!==JSON.stringify([expectedScope])) throw new Error('EXTERNAL_SCOPE_INVALID'); if(JSON.stringify(manifest.dependencies?.enabledAdvancedServices)!==JSON.stringify(expectedService)) throw new Error('EXTERNAL_SHEETS_SERVICE_INVALID'); const files=fs.readdirSync('external-viewer').sort(); if(JSON.stringify(files)!==JSON.stringify(['Code.gs','appsscript.json'])) throw new Error('EXTERNAL_PUSH_SET_INVALID');"
 
-      - name: Restore TEST clasp credentials
+      - name: Restore TEST OAuth credential material
         shell: bash
         env:
           CLASPRC_JSON_B64: ${{ secrets.CLASPRC_JSON_B64 }}
         run: |
           set -euo pipefail
           test -n "$CLASPRC_JSON_B64"
-          printf '%s' "$CLASPRC_JSON_B64" | base64 -d > "$HOME/.clasprc.json"
+          OAUTH_FILE="$RUNNER_TEMP/ttqs-external-oauth.json"
+          printf '%s' "$CLASPRC_JSON_B64" | base64 -d > "$OAUTH_FILE"
+          chmod 600 "$OAUTH_FILE"
+          echo "EXTERNAL_OAUTH_FILE=$OAUTH_FILE" >> "$GITHUB_ENV"
+
+      - name: Verify minimal OAuth deployment contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/apps-script-rest-deploy.mjs auth-check --credentials "$EXTERNAL_OAUTH_FILE"
 
       - name: Read durable external deployment receipt
         shell: bash
@@ -86,99 +84,65 @@ jobs:
         run: |
           set -euo pipefail
           gh issue view "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --json body --jq .body > external-receipt-body.md
-          node - <<'NODE'
-          const fs = require('fs');
-          const body = fs.readFileSync('external-receipt-body.md', 'utf8');
-          const marker = '<!-- TTQS_EXTERNAL_TEST_RECEIPT_V1 -->';
-          if (!body.includes(marker)) throw new Error('EXTERNAL_RECEIPT_MARKER_MISSING');
-          const match = body.match(/<!-- TTQS_EXTERNAL_TEST_RECEIPT_V1 -->[\s\S]*?```json\s*([\s\S]*?)```/);
-          if (!match) throw new Error('EXTERNAL_RECEIPT_JSON_MISSING');
-          const receipt = JSON.parse(match[1]);
-          if (receipt.schema !== 'TTQS_EXTERNAL_TEST_RECEIPT_V1') throw new Error('EXTERNAL_RECEIPT_SCHEMA_INVALID');
-          if (receipt.environment !== 'TEST' || receipt.rootDir !== 'external-viewer') throw new Error('EXTERNAL_RECEIPT_CONTEXT_INVALID');
-          const scriptId = String(receipt.scriptId || '');
-          const deploymentId = String(receipt.deploymentId || '');
-          if (scriptId && !/^[A-Za-z0-9_-]{20,}$/.test(scriptId)) throw new Error('EXTERNAL_RECEIPT_SCRIPT_ID_INVALID');
-          if (deploymentId && !/^AKfy[A-Za-z0-9_-]+$/.test(deploymentId)) throw new Error('EXTERNAL_RECEIPT_DEPLOYMENT_ID_INVALID');
-          if (deploymentId && !scriptId) throw new Error('EXTERNAL_RECEIPT_DEPLOYMENT_WITHOUT_SCRIPT');
-          fs.appendFileSync(process.env.GITHUB_ENV, `EXTERNAL_SCRIPT_ID=${scriptId}\nEXTERNAL_DEPLOYMENT_ID=${deploymentId}\n`);
-          NODE
+          node --input-type=module -e "import fs from 'node:fs'; import {parseReceiptBody} from './scripts/external-deployment-receipt.mjs'; const r=parseReceiptBody(fs.readFileSync('external-receipt-body.md','utf8')); const s=String(r.scriptId||''); const d=String(r.deploymentId||''); if(s&&!/^[A-Za-z0-9_-]{20,}$/.test(s)) throw new Error('EXTERNAL_RECEIPT_SCRIPT_ID_INVALID'); if(d&&!/^AKfy[A-Za-z0-9_-]+$/.test(d)) throw new Error('EXTERNAL_RECEIPT_DEPLOYMENT_ID_INVALID'); if(d&&!s) throw new Error('EXTERNAL_RECEIPT_DEPLOYMENT_WITHOUT_SCRIPT'); fs.appendFileSync(process.env.GITHUB_ENV,'EXTERNAL_SCRIPT_ID='+s+'\\nEXTERNAL_DEPLOYMENT_ID='+d+'\\n');"
 
-      - name: Recover or bootstrap external TEST Apps Script project
+      - name: Recover or bootstrap external TEST Apps Script project via REST
         shell: bash
         run: |
           set -euo pipefail
-          SCRIPT_ID="$EXTERNAL_SCRIPT_ID"
-          DEPLOYMENT_ID="$EXTERNAL_DEPLOYMENT_ID"
-          if test -z "$SCRIPT_ID"; then
-            npx --yes @google/clasp@3.3.0 list-scripts | tee external-scripts.txt
-            SCRIPT_ID=$(node scripts/resolve-external-script-id.mjs --input external-scripts.txt --title "$EXTERNAL_SCRIPT_TITLE")
-          fi
-          if test -z "$SCRIPT_ID"; then
-            rm -rf .external-bootstrap
-            mkdir .external-bootstrap
-            (
-              cd .external-bootstrap
-              npx --yes @google/clasp@3.3.0 create-script --type standalone --title "$EXTERNAL_SCRIPT_TITLE"
-            )
-            SCRIPT_ID=$(node -p "require('./.external-bootstrap/.clasp.json').scriptId")
-            test -n "$SCRIPT_ID"
-            echo 'EXTERNAL_MODE=BOOTSTRAP' >> "$GITHUB_ENV"
-          else
-            echo 'EXTERNAL_MODE=REUSE' >> "$GITHUB_ENV"
-          fi
-          if ! printf '%s' "$SCRIPT_ID" | grep -Eq '^[A-Za-z0-9_-]{20,}$'; then
-            echo 'EXTERNAL_SCRIPT_ID_INVALID'
-            exit 1
-          fi
-          node -e "const fs=require('fs'); const scriptId=process.argv[1]; fs.writeFileSync('.clasp.json', JSON.stringify({scriptId,rootDir:'external-viewer'},null,2)+'\\n')" "$SCRIPT_ID"
-          echo "EXTERNAL_SCRIPT_ID_RESOLVED=$SCRIPT_ID" >> "$GITHUB_ENV"
-          echo "EXTERNAL_DEPLOYMENT_ID_PREVIOUS=$DEPLOYMENT_ID" >> "$GITHUB_ENV"
-          printf 'EXTERNAL_SCRIPT_ID=%s\n' "$SCRIPT_ID"
-          printf 'EXTERNAL_PREVIOUS_DEPLOYMENT_ID=%s\n' "${DEPLOYMENT_ID:-NONE}"
+          node scripts/apps-script-rest-deploy.mjs ensure-project \
+            --credentials "$EXTERNAL_OAUTH_FILE" \
+            --script-id "$EXTERNAL_SCRIPT_ID" \
+            --title "$EXTERNAL_SCRIPT_TITLE" \
+            --env-file "$GITHUB_ENV"
 
-      - name: Verify external push set before deploy
+      - name: Persist external script identity before content push
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh issue view "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --json body --jq .body > external-receipt-body.md
+          node scripts/external-deployment-receipt.mjs --input external-receipt-body.md --output external-receipt-next.md --state RUNNING
+          gh issue edit "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file external-receipt-next.md
+
+      - name: Push external TEST viewer via Apps Script REST
         shell: bash
         run: |
           set -euo pipefail
-          node -e "const p=require('./.clasp.json'); if(p.rootDir!=='external-viewer'||!p.scriptId) process.exit(1)"
-          npx --yes @google/clasp@3.3.0 show-file-status --json > external-clasp-status-before.json
-          cat external-clasp-status-before.json
+          node scripts/apps-script-rest-deploy.mjs push-content \
+            --credentials "$EXTERNAL_OAUTH_FILE" \
+            --script-id "$EXTERNAL_SCRIPT_ID_RESOLVED" \
+            --root-dir external-viewer
 
-      - name: Push external TEST viewer
-        shell: bash
-        run: |
-          set -euo pipefail
-          npx --yes @google/clasp@3.3.0 push --force
-
-      - name: Create or update external TEST web app deployment
+      - name: Create or update external TEST web app deployment via REST
         shell: bash
         run: |
           set -euo pipefail
           DESCRIPTION="TTQS_ONE_TEST_EXTERNAL $GITHUB_SHA"
-          DEPLOYMENT_ID="$EXTERNAL_DEPLOYMENT_ID_PREVIOUS"
-          if test -n "$DEPLOYMENT_ID"; then
-            npx --yes @google/clasp@3.3.0 create-deployment --deploymentId "$DEPLOYMENT_ID" --description "$DESCRIPTION" | tee external-deploy.txt
-          else
-            npx --yes @google/clasp@3.3.0 create-deployment --description "$DESCRIPTION" | tee external-deploy.txt
-            DEPLOYMENT_ID=$(grep -Eo 'AKfy[A-Za-z0-9_-]+' external-deploy.txt | head -n 1 || true)
-          fi
-          if test -z "$DEPLOYMENT_ID"; then
-            npx --yes @google/clasp@3.3.0 list-deployments "$EXTERNAL_SCRIPT_ID_RESOLVED" | tee external-deployments.txt
-            DEPLOYMENT_ID=$(grep -Eo 'AKfy[A-Za-z0-9_-]+' external-deployments.txt | tail -n 1 || true)
-          fi
-          if ! printf '%s' "$DEPLOYMENT_ID" | grep -Eq '^AKfy[A-Za-z0-9_-]+$'; then
-            echo 'EXTERNAL_DEPLOYMENT_ID_INVALID'
-            exit 1
-          fi
-          echo "EXTERNAL_DEPLOYMENT_ID_RESOLVED=$DEPLOYMENT_ID" >> "$GITHUB_ENV"
-          printf 'EXTERNAL_DEPLOYMENT_ID=%s\n' "$DEPLOYMENT_ID"
+          node scripts/apps-script-rest-deploy.mjs deploy \
+            --credentials "$EXTERNAL_OAUTH_FILE" \
+            --script-id "$EXTERNAL_SCRIPT_ID_RESOLVED" \
+            --deployment-id "$EXTERNAL_DEPLOYMENT_ID" \
+            --description "$DESCRIPTION" \
+            --env-file "$GITHUB_ENV"
+
+      - name: Persist external deployment identity before black-box probe
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh issue view "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --json body --jq .body > external-receipt-body.md
+          node scripts/external-deployment-receipt.mjs --input external-receipt-body.md --output external-receipt-next.md --state RUNNING
+          gh issue edit "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file external-receipt-next.md
 
       - name: Anonymous product black-box probe
         shell: bash
         run: |
           set -euo pipefail
-          URL="https://script.google.com/macros/s/$EXTERNAL_DEPLOYMENT_ID_RESOLVED/exec"
+          URL="$EXTERNAL_WEBAPP_URL"
+          test -n "$URL"
           PASS=0
           for attempt in 1 2 3 4 5 6; do
             rm -f external-page.html
@@ -201,8 +165,6 @@ jobs:
             exit 1
           fi
           echo 'EXTERNAL_PRODUCT_BLACKBOX_PASS'
-          echo "EXTERNAL_WEBAPP_URL=$URL" >> "$GITHUB_ENV"
-          printf 'EXTERNAL_WEBAPP_URL=%s\n' "$URL"
 
       - name: Publish durable deployment receipt after black-box PASS
         shell: bash
@@ -224,7 +186,9 @@ jobs:
             echo "- Source SHA: $GITHUB_SHA"
             echo "- Script ID: $EXTERNAL_SCRIPT_ID_RESOLVED"
             echo "- Deployment ID: $EXTERNAL_DEPLOYMENT_ID_RESOLVED"
+            echo "- Version: $EXTERNAL_VERSION_NUMBER"
             echo "- URL: $EXTERNAL_WEBAPP_URL"
+            echo '- Provider path: Apps Script REST API with minimal user OAuth scopes'
             echo '- Access: ANYONE_ANONYMOUS'
             echo '- Execute as: USER_DEPLOYING'
             echo '- Data: TEST/SAMPLE deidentified snapshot only'
