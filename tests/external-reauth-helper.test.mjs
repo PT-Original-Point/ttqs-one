@@ -20,6 +20,25 @@ test('reauth helper uses isolated temporary HOME and cleans it', () => {
   assert.match(helper, /rm -rf "\$TMP_ROOT"/);
 });
 
+test('missing gh bootstraps an official temporary macOS binary instead of requiring package installation', () => {
+  assert.doesNotMatch(helper, /need gh/);
+  assert.match(helper, /GH_RELEASE_API="https:\/\/api\.github\.com\/repos\/cli\/cli\/releases\/latest"/);
+  assert.match(helper, /asset\.digest/);
+  assert.match(helper, /sha256:\[0-9a-f\]\{64\}/);
+  assert.match(helper, /shasum -a 256/);
+  assert.match(helper, /GitHub CLI 暫存版已完成 SHA-256 驗證/);
+  assert.doesNotMatch(helper, /brew install gh|sudo installer/);
+});
+
+test('GitHub authentication is self-healing with one browser login when needed', () => {
+  assert.match(helper, /"\$GH_BIN" auth status -h github\.com/);
+  assert.match(helper, /"\$GH_BIN" auth login -h github\.com --git-protocol https --web/);
+  const status = helper.indexOf('auth status -h github.com');
+  const login = helper.indexOf('auth login -h github.com --git-protocol https --web');
+  const repo = helper.indexOf('repo view "$REPO"');
+  assert.ok(status >= 0 && login > status && repo > login);
+});
+
 test('reauth helper requests exactly project manifest scope plus two Apps Script deployment scopes', () => {
   assert.match(helper, /SHEETS_SCOPE="https:\/\/www\.googleapis\.com\/auth\/spreadsheets\.readonly"/);
   assert.match(helper, /PROJECT_SCOPE="https:\/\/www\.googleapis\.com\/auth\/script\.projects"/);
@@ -43,26 +62,26 @@ test('reauth helper pins clasp version and uses dedicated credential profile', (
 
 test('reauth helper fail-closes through REST auth-check before GitHub secret mutation', () => {
   const authCheck = helper.indexOf('auth-check --credentials "$AUTH_FILE"');
-  const secretSet = helper.indexOf('gh secret set "$SECRET_NAME"');
+  const secretSet = helper.indexOf('"$GH_BIN" secret set "$SECRET_NAME"');
   assert.ok(authCheck >= 0 && secretSet > authCheck);
   assert.match(helper, /OAuth scope 或 refresh token 驗證未通過；GitHub Secret 未變更/);
 });
 
 test('reauth helper sends secret through stdin and never prints its value', () => {
-  assert.match(helper, /printf '%s' "\$OAUTH_B64" \| gh secret set/);
+  assert.match(helper, /printf '%s' "\$OAUTH_B64" \| "\$GH_BIN" secret set/);
   assert.match(helper, /unset OAUTH_B64/);
   assert.doesNotMatch(helper, /say .*OAUTH_B64|printf .*AUTH_FILE.*stdout/);
 });
 
 test('reauth helper reads back GitHub environment secret metadata', () => {
-  assert.match(helper, /gh secret list --env "\$ENVIRONMENT" --repo "\$REPO" --json name,updatedAt/);
+  assert.match(helper, /"\$GH_BIN" secret list --env "\$ENVIRONMENT" --repo "\$REPO" --json name,updatedAt/);
   assert.match(helper, /select\(\.name==\\"\$SECRET_NAME\\"\)/);
   assert.match(helper, /readback updatedAt=/);
 });
 
 test('reauth helper automatically dispatches only deploy/test workflow after secret readback', () => {
   const readback = helper.indexOf('UPDATED_AT=');
-  const dispatch = helper.indexOf('gh workflow run deploy-external-test.yml');
+  const dispatch = helper.indexOf('"$GH_BIN" workflow run deploy-external-test.yml');
   assert.ok(readback >= 0 && dispatch > readback);
   assert.match(helper, /--ref deploy\/test/);
   assert.doesNotMatch(helper, /deploy\/prod|--ref main/);
@@ -71,5 +90,5 @@ test('reauth helper automatically dispatches only deploy/test workflow after sec
 test('external TEST workflow supports explicit workflow_dispatch while retaining deploy/test ref guard', () => {
   assert.match(workflow, /workflow_dispatch:/);
   assert.match(workflow, /github\.ref == 'refs\/heads\/deploy\/test'/);
-  assert.match(workflow, /test "\$GITHUB_REF" = "refs\/heads\/deploy\/test"/);
+  assert.match(workflow, /test \"\$GITHUB_REF\" = \"refs\/heads\/deploy\/test\"/);
 });
