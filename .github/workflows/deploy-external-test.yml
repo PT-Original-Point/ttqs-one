@@ -41,6 +41,16 @@ jobs:
           git merge-base --is-ancestor "$GITHUB_SHA" origin/main
           printf 'External TEST deploy source SHA: %s\n' "$GITHUB_SHA"
 
+      - name: Mark external deployment receipt RUNNING
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh issue view "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --json body --jq .body > external-receipt-body.md
+          node scripts/external-deployment-receipt.mjs --input external-receipt-body.md --output external-receipt-next.md --state RUNNING
+          gh issue edit "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file external-receipt-next.md
+
       - name: Verify repository and external viewer safety contract
         shell: bash
         run: |
@@ -215,36 +225,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          node - <<'NODE'
-          const fs = require('fs');
-          const receipt = {
-            schema: 'TTQS_EXTERNAL_TEST_RECEIPT_V1',
-            environment: 'TEST',
-            rootDir: 'external-viewer',
-            sourceSha: process.env.GITHUB_SHA,
-            scriptId: process.env.EXTERNAL_SCRIPT_ID_RESOLVED,
-            deploymentId: process.env.EXTERNAL_DEPLOYMENT_ID_RESOLVED,
-            webappUrl: process.env.EXTERNAL_WEBAPP_URL,
-            anonymousBlackbox: 'PASS',
-            realProdTouch: 0
-          };
-          const body = [
-            '# TTQS ONE TEST External Evaluator Portal Deployment Receipt',
-            '',
-            '此 Issue 是 TEST／SAMPLE 控制面。只有匿名產品黑箱通過後才更新。',
-            '',
-            '目前狀態：`PASS_PRODUCT_BLACKBOX`',
-            '',
-            '<!-- TTQS_EXTERNAL_TEST_RECEIPT_V1 -->',
-            '```json',
-            JSON.stringify(receipt, null, 2),
-            '```',
-            '',
-            '部署成功不代表 REAL／PROD 啟動；`realProdTouch` 必須維持 0。',
-            ''
-          ].join('\n');
-          fs.writeFileSync('external-receipt-next.md', body);
-          NODE
+          gh issue view "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --json body --jq .body > external-receipt-body.md
+          node scripts/external-deployment-receipt.mjs --input external-receipt-body.md --output external-receipt-next.md --state PASS_PRODUCT_BLACKBOX
           gh issue edit "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file external-receipt-next.md
 
       - name: Record deployment provenance
@@ -265,3 +247,15 @@ jobs:
             echo '- Receipt: GitHub Issue #39'
             echo '- REAL/PROD: not performed'
           } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Publish FAILED receipt for observability
+        if: ${{ failure() }}
+        continue-on-error: true
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh issue view "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --json body --jq .body > external-receipt-body.md
+          node scripts/external-deployment-receipt.mjs --input external-receipt-body.md --output external-receipt-next.md --state FAILED
+          gh issue edit "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file external-receipt-next.md
