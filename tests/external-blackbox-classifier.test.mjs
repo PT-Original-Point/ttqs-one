@@ -11,7 +11,9 @@ import {
 } from '../scripts/external-blackbox-classifier.mjs';
 
 const rawProduct = REQUIRED_PRODUCT_MARKERS.join(' | ');
-const wrappedProduct = rawProduct.replace('19 / 19', '19 \\/ 19');
+const wrappedProduct = rawProduct
+  .replace('19 / 19', '19 \\/ 19')
+  .replace('AttemptHistory=append-only', 'AttemptHistory\\x3dappend-only');
 
 const D8_ACCEPTANCE_MARKERS = [
   '官方 19 指標評核語意導航',
@@ -41,15 +43,21 @@ test('blackbox contract explicitly covers D8 consultant acceptance semantics', (
   }
 });
 
-test('Apps Script HtmlService escaped slash is normalized before marker classification', () => {
+test('Apps Script HtmlService escaped slash and equals are normalized before marker classification', () => {
   assert.match(wrappedProduct, /19 \\\/ 19/);
-  assert.match(normalizeAppsScriptHtmlServiceWrapper(wrappedProduct), /19 \/ 19/);
+  assert.match(wrappedProduct, /AttemptHistory\\x3dappend-only/);
+  const normalized = normalizeAppsScriptHtmlServiceWrapper(wrappedProduct);
+  assert.match(normalized, /19 \/ 19/);
+  assert.match(normalized, /AttemptHistory=append-only/);
   assert.equal(classifyExternalBlackbox(wrappedProduct).pass, true);
 });
 
-test('hex and unicode escaped slash variants are normalized', () => {
+test('hex, unicode and HTML entity escaped slash/equals variants are normalized', () => {
   assert.equal(classifyExternalBlackbox(rawProduct.replace('19 / 19', '19 \\x2f 19')).pass, true);
   assert.equal(classifyExternalBlackbox(rawProduct.replace('19 / 19', '19 \\u002F 19')).pass, true);
+  for (const escaped of ['AttemptHistory\\x3Dappend-only', 'AttemptHistory\\u003dappend-only', 'AttemptHistory&#61;append-only', 'AttemptHistory&#x3D;append-only', 'AttemptHistory&equals;append-only']) {
+    assert.equal(classifyExternalBlackbox(rawProduct.replace('AttemptHistory=append-only', escaped)).pass, true, escaped);
+  }
 });
 
 test('every required product marker independently fails closed when missing', () => {
