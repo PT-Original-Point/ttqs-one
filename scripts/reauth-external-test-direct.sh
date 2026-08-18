@@ -1,0 +1,145 @@
+#!/bin/bash
+set -euo pipefail
+
+CLASP_VERSION="3.3.0"
+PROFILE="ttqs-external-test-direct"
+PROJECT_SCOPE="https://www.googleapis.com/auth/script.projects"
+DEPLOY_SCOPE="https://www.googleapis.com/auth/script.deployments"
+SHEETS_SCOPE="https://www.googleapis.com/auth/spreadsheets.readonly"
+RAW_BASE="https://raw.githubusercontent.com/PT-Original-Point/ttqs-one/main"
+TITLE="TTQS ONE External Evaluator Portal TEST"
+
+say() { printf '%s\n' "$*"; }
+fail() { printf 'ERROR: %s\n' "$*" >&2; exit 1; }
+need() { command -v "$1" >/dev/null 2>&1 || fail "缺少必要工具：$1"; }
+
+need node
+need npx
+need curl
+need grep
+need sed
+need open
+
+node -e "const [maj]=process.versions.node.split('.').map(Number); if(maj<22) process.exit(1)" \
+  || fail "Node.js 必須為 22 以上版本。"
+
+TMP_ROOT="$(mktemp -d "${TMPDIR:-/tmp}/ttqs-external-direct.XXXXXX")"
+cleanup() { rm -rf "$TMP_ROOT"; }
+trap cleanup EXIT INT TERM
+
+AUTH_HOME="$TMP_ROOT/home"
+PROJECT_DIR="$TMP_ROOT/project"
+ENV_FILE="$TMP_ROOT/deploy.env"
+mkdir -p "$AUTH_HOME" "$PROJECT_DIR"
+chmod 700 "$AUTH_HOME"
+
+cat > "$PROJECT_DIR/.clasp.json" <<'JSON'
+{
+  "scriptId": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+  "rootDir": "."
+}
+JSON
+
+cat > "$PROJECT_DIR/appsscript.json" <<JSON
+{
+  "timeZone": "Asia/Taipei",
+  "runtimeVersion": "V8",
+  "oauthScopes": [
+    "$SHEETS_SCOPE"
+  ]
+}
+JSON
+
+say "TTQS ONE｜External TEST 直接部署"
+say "這條流程不需要 GitHub CLI，也不要求 GitHub 裝置驗證。"
+say "只會要求 Google 3 個最小 scope："
+say "  1. spreadsheets.readonly"
+say "  2. script.projects"
+say "  3. script.deployments"
+say "REAL／PROD 不在本流程範圍。"
+say "接下來若瀏覽器跳出 Google 授權頁，請使用協會 Google Workspace 部署帳號登入並同意。"
+
+(
+  cd "$PROJECT_DIR"
+  HOME="$AUTH_HOME" npx --yes "@google/clasp@$CLASP_VERSION" login \
+    --user "$PROFILE" \
+    --use-project-scopes \
+    --extra-scopes "$PROJECT_SCOPE,$DEPLOY_SCOPE"
+)
+
+AUTH_FILE="$AUTH_HOME/.clasprc.json"
+test -s "$AUTH_FILE" || fail "Google OAuth 已返回，但未產生授權檔。"
+chmod 600 "$AUTH_FILE"
+
+REST_HELPER="$TMP_ROOT/apps-script-rest-deploy.mjs"
+curl -fsSL "$RAW_BASE/scripts/apps-script-rest-deploy.mjs" -o "$REST_HELPER"
+test -s "$REST_HELPER" || fail "無法取得 Apps Script REST 部署器。"
+
+curl -fsSL "$RAW_BASE/external-viewer/Code.gs" -o "$PROJECT_DIR/Code.gs"
+curl -fsSL "$RAW_BASE/external-viewer/appsscript.json" -o "$PROJECT_DIR/appsscript.json"
+test -s "$PROJECT_DIR/Code.gs" && test -s "$PROJECT_DIR/appsscript.json" \
+  || fail "無法取得 External TEST Viewer 成品。"
+
+node "$REST_HELPER" auth-check --credentials "$AUTH_FILE" \
+  || fail "Google OAuth scope 或 refresh token 驗證未通過。"
+
+: > "$ENV_FILE"
+node "$REST_HELPER" ensure-project \
+  --credentials "$AUTH_FILE" \
+  --script-id "" \
+  --title "$TITLE" \
+  --env-file "$ENV_FILE"
+
+# shellcheck disable=SC1090
+source "$ENV_FILE"
+test -n "${EXTERNAL_SCRIPT_ID_RESOLVED:-}" || fail "Apps Script 專案建立後讀回 scriptId 失敗。"
+
+node "$REST_HELPER" push-content \
+  --credentials "$AUTH_FILE" \
+  --script-id "$EXTERNAL_SCRIPT_ID_RESOLVED" \
+  --root-dir "$PROJECT_DIR"
+
+node "$REST_HELPER" deploy \
+  --credentials "$AUTH_FILE" \
+  --script-id "$EXTERNAL_SCRIPT_ID_RESOLVED" \
+  --deployment-id "" \
+  --description "TTQS ONE 9/1 External Evaluator Portal TEST direct deploy" \
+  --env-file "$ENV_FILE"
+
+# shellcheck disable=SC1090
+source "$ENV_FILE"
+test -n "${EXTERNAL_DEPLOYMENT_ID_RESOLVED:-}" || fail "deploymentId 讀回失敗。"
+test -n "${EXTERNAL_WEBAPP_URL:-}" || fail "Web App URL 讀回失敗。"
+
+say "Apps Script TEST 外部 Portal 已建立並完成部署讀回。"
+say "scriptId=$EXTERNAL_SCRIPT_ID_RESOLVED"
+say "deploymentId=$EXTERNAL_DEPLOYMENT_ID_RESOLVED"
+say "webappUrl=$EXTERNAL_WEBAPP_URL"
+say "realProdTouch=0"
+
+HTML="$TMP_ROOT/portal.html"
+BLACKBOX="NOT_PASS"
+for attempt in 1 2 3 4 5 6; do
+  if curl -fLsS --max-time 30 "$EXTERNAL_WEBAPP_URL" -o "$HTML"; then
+    if grep -q 'TTQS ONE · 測試／示範資料（TEST／SAMPLE）· EXTERNAL_READONLY' "$HTML" \
+      && grep -q '官方指標範圍' "$HTML" \
+      && grep -q '19 / 19' "$HTML" \
+      && grep -q 'SAMPLE 評核因果鏈' "$HTML" \
+      && grep -q '19 指標佐證與來源下鑽' "$HTML" \
+      && grep -q '查看佐證與來源' "$HTML"; then
+      BLACKBOX="PASS_PRODUCT_BLACKBOX"
+      break
+    fi
+  fi
+  sleep 5
+done
+
+say "anonymousBlackbox=$BLACKBOX"
+if [ "$BLACKBOX" != "PASS_PRODUCT_BLACKBOX" ]; then
+  fail "Apps Script 部署已完成，但匿名產品黑箱尚未通過；請不要重跑，我們會從部署成品繼續查。"
+fi
+
+open "$EXTERNAL_WEBAPP_URL" >/dev/null 2>&1 || true
+say "PASS_PRODUCT_BLACKBOX"
+say "瀏覽器已嘗試開啟外部 TEST Portal。"
+say "請回到 ChatGPT，只貼最後這四行：scriptId、deploymentId、webappUrl、anonymousBlackbox。"
