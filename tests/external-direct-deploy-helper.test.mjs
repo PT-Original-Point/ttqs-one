@@ -28,6 +28,7 @@ test('direct helper isolates clasp auth project from canonical push project', ()
   assert.match(helper, /PROJECT_DIR="\$TMP_ROOT\/project"/);
   assert.match(helper, /cat > "\$AUTH_PROJECT_DIR\/\.clasp\.json"/);
   assert.match(helper, /cat > "\$AUTH_PROJECT_DIR\/appsscript\.json"/);
+  assert.match(helper, /"oauthScopes": \[\]/);
   assert.match(helper, /cd "\$AUTH_PROJECT_DIR"/);
   assert.match(helper, /"\$PROJECT_DIR\/Code\.gs"/);
   assert.match(helper, /"\$PROJECT_DIR\/appsscript\.json"/);
@@ -45,18 +46,19 @@ test('direct helper reuses existing TEST project and deployment', () => {
   assert.doesNotMatch(helper, /--deployment-id ""/);
 });
 
-test('direct helper requests only three minimal Google scopes', () => {
-  assert.match(helper, /spreadsheets\.readonly/);
-  assert.match(helper, /script\.projects/);
-  assert.match(helper, /script\.deployments/);
+test('direct helper requests exactly two deployment Google scopes', () => {
+  assert.match(helper, /PROJECT_SCOPE="https:\/\/www\.googleapis\.com\/auth\/script\.projects"/);
+  assert.match(helper, /DEPLOY_SCOPE="https:\/\/www\.googleapis\.com\/auth\/script\.deployments"/);
+  assert.match(helper, /只會要求 Google 2 個最小部署 scope/);
   assert.match(helper, /--use-project-scopes/);
   assert.match(helper, /--extra-scopes "\$PROJECT_SCOPE,\$DEPLOY_SCOPE"/);
-  assert.doesNotMatch(helper, /cloud-platform|drive\.file|gmail|userinfo/);
+  assert.doesNotMatch(helper, /spreadsheets\.readonly|cloud-platform|drive\.file|gmail|userinfo/);
 });
 
-test('direct helper downloads canonical main artifacts and uses REST deployer', () => {
+test('direct helper downloads canonical main artifacts, REST deployer and black-box classifier', () => {
   assert.match(helper, /RAW_BASE="https:\/\/raw\.githubusercontent\.com\/PT-Original-Point\/ttqs-one\/main"/);
   assert.match(helper, /scripts\/apps-script-rest-deploy\.mjs/);
+  assert.match(helper, /scripts\/external-blackbox-classifier\.mjs/);
   assert.match(helper, /external-viewer\/Code\.gs/);
   assert.match(helper, /external-viewer\/appsscript\.json/);
   assert.match(helper, /auth-check/);
@@ -94,13 +96,15 @@ test('direct helper diagnoses anonymous HTTP failure without curl -f hiding stat
   assert.doesNotMatch(helper, /curl -fLsS --max-time 30/);
 });
 
-test('direct helper is TEST-only and proves anonymous product markers', () => {
-  assert.match(helper, /realProdTouch=0/);
-  assert.match(helper, /EXTERNAL_READONLY/);
-  assert.match(helper, /19 \/ 19/);
-  assert.match(helper, /SAMPLE 評核因果鏈/);
-  assert.match(helper, /19 指標佐證與來源下鑽/);
-  assert.match(helper, /查看佐證與來源/);
+test('direct helper uses normalized classifier instead of raw HtmlService marker grep', () => {
+  assert.match(helper, /BLACKBOX_CLASSIFIER=/);
+  assert.match(helper, /node "\$BLACKBOX_CLASSIFIER" --html "\$HTML"/);
+  assert.match(helper, /anonymousMarkerDiagnostic=/);
   assert.match(helper, /PASS_PRODUCT_BLACKBOX/);
+  assert.doesNotMatch(helper, /grep -q '19 \/ 19'/);
+});
+
+test('direct helper remains TEST-only', () => {
+  assert.match(helper, /realProdTouch=0/);
   assert.doesNotMatch(helper, /deploy\/prod|PROD_ENABLE|REAL_WRITE/);
 });
