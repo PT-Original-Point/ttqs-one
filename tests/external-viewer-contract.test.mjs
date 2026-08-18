@@ -46,9 +46,10 @@ test('viewer contains no write, form, worker or script bridge APIs', () => {
 });
 
 test('viewer uses bounded snapshot ranges only', () => {
-  for (const range of ["'發布摘要'!A1:B10", "'19指標佐證'!A1:F20", "'SAMPLE因果鏈'!A1:G7", "'佐證來源定位'!A1:L120"]) {
-    assert.match(source, new RegExp(range.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
-  }
+  assert.ok(source.includes("'發布摘要'!A1:B10"));
+  assert.ok(source.includes("'19指標佐證'!A1:F20"));
+  assert.match(source, /TTQS_EXTERNAL_CAUSAL_SHEET_[^\n]+A1:G7/);
+  assert.match(source, /TTQS_EXTERNAL_SOURCE_SHEET_[^\n]+A1:L120/);
 });
 
 test('viewer validates exact 19-indicator snapshot schema', () => {
