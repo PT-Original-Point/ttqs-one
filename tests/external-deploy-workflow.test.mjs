@@ -38,14 +38,23 @@ test('external deployment requires anonymous product black-box proof', () => {
   assert.match(source, /19 \/ 19/);
 });
 
-test('deployment identity is persisted in TEST control issue after black-box PASS', () => {
+test('deployment lifecycle is observable through TEST control issue', () => {
   assert.match(source, /EXTERNAL_RECEIPT_ISSUE: '39'/);
-  assert.match(source, /TTQS_EXTERNAL_TEST_RECEIPT_V1/);
+  assert.match(source, /Mark external deployment receipt RUNNING/);
+  assert.match(source, /--state RUNNING/);
+  assert.match(source, /--state PASS_PRODUCT_BLACKBOX/);
+  assert.match(source, /Publish FAILED receipt for observability/);
+  assert.match(source, /--state FAILED/);
+  assert.match(source, /if: \$\{\{ failure\(\) \}\}/);
   assert.match(source, /gh issue view/);
   assert.match(source, /gh issue edit/);
-  assert.match(source, /anonymousBlackbox: 'PASS'/);
-  assert.match(source, /realProdTouch: 0/);
-  assert.doesNotMatch(source, /config\/external-test-deployment\.json/);
+});
+
+test('PASS receipt is published only after anonymous black-box step', () => {
+  const probe = source.indexOf('- name: Anonymous product black-box probe');
+  const publish = source.indexOf('- name: Publish durable deployment receipt after black-box PASS');
+  assert.ok(probe >= 0 && publish > probe);
+  assert.match(source.slice(publish), /--state PASS_PRODUCT_BLACKBOX/);
 });
 
 test('empty receipt recovers exact titled script before creating another project', () => {
