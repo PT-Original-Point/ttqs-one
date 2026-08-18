@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import {fileURLToPath} from 'node:url';
 
 const SCRIPT_PROJECTS = 'https://www.googleapis.com/auth/script.projects';
 const SCRIPT_DEPLOYMENTS = 'https://www.googleapis.com/auth/script.deployments';
@@ -25,6 +26,17 @@ export function parseArgs(argv) {
     out[key.slice(2)] = value;
   }
   return out;
+}
+
+export function isDirectExecution(metaUrl, argvPath) {
+  if (!metaUrl || !argvPath) return false;
+  try {
+    const modulePath = fs.realpathSync(fileURLToPath(metaUrl));
+    const invokedPath = fs.realpathSync(path.resolve(argvPath));
+    return modulePath === invokedPath;
+  } catch {
+    return false;
+  }
 }
 
 function credentialSignature(value) {
@@ -302,7 +314,7 @@ async function main() {
   throw stableError('REST_DEPLOY_COMMAND_INVALID', command);
 }
 
-if (process.argv[1] && import.meta.url === new URL(`file://${process.argv[1]}`).href) {
+if (isDirectExecution(import.meta.url, process.argv[1])) {
   main().catch(error => {
     const message = String(error?.code || error?.message || 'REST_DEPLOY_FAILED');
     process.stderr.write(`${message}\n`);
