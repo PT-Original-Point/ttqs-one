@@ -24,19 +24,9 @@ const internalHtml = internal.ttqsRenderWebAppHtml_({
   modules: [{ name: '需求調查', state: '示範（SAMPLE）', note: '示範資料' }],
   indicators: [{ no: '1', stage: '規劃', title: '測試指標', evidenceCount: 1, status: '已有測試佐證' }]
 });
-const externalHtml = external.ttqsExternalRender_({
-  title: 'TTQS ONE 外部唯讀快照（測試／示範）',
-  summary: {
-    '用途': '顧問測試',
-    '資料分類': '測試／示範資料（TEST／SAMPLE）',
-    '來源更新時間': '2026-08-15',
-    '指標範圍': '1–19',
-    '17–19 狀態': '正式成果待實際營運'
-  },
-  causalFlow: [],
-  evidence: [],
-  indicators: [{ no: '1', stage: '規劃', title: '測試指標', evidenceCount: '1', status: '已有測試佐證', refreshedAt: '2026-08-15', evidenceDetails: [] }]
-});
+// Use the canonical external snapshot model so this language contract follows the current
+// product render contract instead of maintaining a second, stale partial fixture.
+const externalHtml = external.ttqsExternalRender_(external.ttqsExternalSnapshotModel_());
 const errorHtml = internal.ttqsWebErrorHtml_() + '\n' + external.ttqsExternalErrorHtml_();
 const visibleHtml = internalHtml + '\n' + externalHtml + '\n' + errorHtml;
 const bannedVisibleTerms = [

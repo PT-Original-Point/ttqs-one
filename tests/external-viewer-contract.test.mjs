@@ -33,7 +33,7 @@ test('viewer is anonymous but has zero Google data runtime permissions', () => {
 test('viewer embeds only the deidentified snapshot provenance and never the core spreadsheet id', () => {
   assert.match(source, /1yqrz0Xwj6vWQkfYor8WSGC6zV93L8EaJZkEfncATUqA/);
   assert.doesNotMatch(source, /1TzICbMmNoN2dTiRMK1dPYx-JOISKaCS-6i0i3iH68is/);
-  assert.match(source, /部署版本內嵌的去識別唯讀快照/);
+  assert.match(source, /部署版本內嵌的去識別靜態快照/);
   assert.match(source, /不在執行期呼叫 Google Sheets／Drive API/);
 });
 
@@ -78,7 +78,8 @@ test('runtime drilldown exposes only deidentified Observation locator metadata',
 test('document source links are allowlisted to Google Drive or Docs', () => {
   assert.match(source, /SNAPSHOT_SOURCE_URL_UNSAFE/);
   assert.match(source, /docs\\\.google\\\.com\|drive\\\.google\\\.com/);
-  assert.match(source, /開啟受控來源（依 Drive 權限）/);
+  assert.match(source, /選配：開啟受控 Drive 來源（可能需登入）/);
+  assert.match(source, /Google Drive 連結只是選配，不是顧問調閱成功的必要條件/);
 });
 
 test('viewer states external read-only, snapshot isolation and no self-scoring', () => {
