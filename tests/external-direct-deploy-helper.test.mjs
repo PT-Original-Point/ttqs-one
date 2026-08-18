@@ -34,12 +34,15 @@ test('direct helper isolates clasp auth project from canonical push project', ()
   assert.doesNotMatch(helper, /cat > "\$PROJECT_DIR\/\.clasp\.json"/);
 });
 
-test('direct helper reuses the already-created TEST Apps Script project and refuses duplicate bootstrap', () => {
+test('direct helper reuses existing TEST project and deployment', () => {
   assert.match(helper, /EXTERNAL_SCRIPT_ID_HINT="1hjS_1IZ3rqwCe8wxi3cICUu_zcVk1EPI2QRrrchEb3wh6ySJ_ZHAMrUA"/);
+  assert.match(helper, /EXTERNAL_DEPLOYMENT_ID_HINT="AKfycbznbXi-0XWNV68E-vGU9CiAE6ElXGIlDmy27EePXMdGpRaorURzKZq0dDgsNBaaZOLh"/);
   assert.match(helper, /--script-id "\$EXTERNAL_SCRIPT_ID_HINT"/);
+  assert.match(helper, /--deployment-id "\$EXTERNAL_DEPLOYMENT_ID_HINT"/);
   assert.match(helper, /EXTERNAL_MODE:-.*REUSE/);
-  assert.match(helper, /未建立第二個專案/);
+  assert.match(helper, /deployment identity 漂移/);
   assert.doesNotMatch(helper, /--script-id ""/);
+  assert.doesNotMatch(helper, /--deployment-id ""/);
 });
 
 test('direct helper requests only three minimal Google scopes', () => {
@@ -72,6 +75,23 @@ test('direct helper fails closed if REST CLI silently does not execute', () => {
   assert.match(helper, /PUSH_OUTPUT=/);
   assert.match(helper, /EXTERNAL_CONTENT_PUSH_READBACK_PASS/);
   assert.match(helper, /DEPLOY_OUTPUT=/);
+});
+
+test('direct helper requires provider effective anonymous web app config', () => {
+  assert.match(helper, /EXTERNAL_WEBAPP_ACCESS:-.*ANYONE_ANONYMOUS/);
+  assert.match(helper, /EXTERNAL_WEBAPP_EXECUTE_AS:-.*USER_DEPLOYING/);
+  assert.match(helper, /Google provider readback 不是 ANYONE_ANONYMOUS/);
+  assert.match(helper, /Google provider readback 不是 USER_DEPLOYING/);
+  assert.match(helper, /webappAccess=\$EXTERNAL_WEBAPP_ACCESS/);
+  assert.match(helper, /webappExecuteAs=\$EXTERNAL_WEBAPP_EXECUTE_AS/);
+});
+
+test('direct helper diagnoses anonymous HTTP failure without curl -f hiding status', () => {
+  assert.match(helper, /-w '%\{http_code\}\|%\{url_effective\}'/);
+  assert.match(helper, /anonymousHttpStatus=\$LAST_HTTP_STATUS/);
+  assert.match(helper, /anonymousFinalHost=\$FINAL_HOST/);
+  assert.match(helper, /HTTP_403_AFTER_PROVIDER_ANYONE_ANONYMOUS/);
+  assert.doesNotMatch(helper, /curl -fLsS --max-time 30/);
 });
 
 test('direct helper is TEST-only and proves anonymous product markers', () => {
