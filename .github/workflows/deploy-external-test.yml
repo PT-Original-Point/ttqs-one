@@ -112,22 +112,7 @@ jobs:
           DEPLOYMENT_ID="$EXTERNAL_DEPLOYMENT_ID"
           if test -z "$SCRIPT_ID"; then
             npx --yes @google/clasp@3.3.0 list-scripts | tee external-scripts.txt
-            node - <<'NODE'
-            const fs = require('fs');
-            const title = process.env.EXTERNAL_SCRIPT_TITLE;
-            const lines = fs.readFileSync('external-scripts.txt', 'utf8').split(/\r?\n/).map(v => v.trim()).filter(Boolean);
-            const matches = [];
-            for (const line of lines) {
-              if (!line.startsWith(title)) continue;
-              const tail = line.slice(title.length).trim();
-              const match = tail.match(/^[–—-]\s*([A-Za-z0-9_-]{20,})/);
-              if (match) matches.push(match[1]);
-            }
-            const unique = [...new Set(matches)];
-            if (unique.length > 1) throw new Error('EXTERNAL_SCRIPT_TITLE_AMBIGUOUS');
-            fs.writeFileSync('external-script-candidate.txt', unique[0] || '');
-            NODE
-            SCRIPT_ID=$(cat external-script-candidate.txt)
+            SCRIPT_ID=$(node scripts/resolve-external-script-id.mjs --input external-scripts.txt --title "$EXTERNAL_SCRIPT_TITLE")
           fi
           if test -z "$SCRIPT_ID"; then
             rm -rf .external-bootstrap

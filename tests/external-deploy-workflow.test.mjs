@@ -57,11 +57,19 @@ test('PASS receipt is published only after anonymous black-box step', () => {
   assert.match(source.slice(publish), /--state PASS_PRODUCT_BLACKBOX/);
 });
 
-test('empty receipt recovers exact titled script before creating another project', () => {
+test('empty receipt uses tested resolver before creating another project', () => {
   assert.match(source, /list-scripts/);
-  assert.match(source, /EXTERNAL_SCRIPT_TITLE/);
-  assert.match(source, /EXTERNAL_SCRIPT_TITLE_AMBIGUOUS/);
+  assert.match(source, /scripts\/resolve-external-script-id\.mjs/);
+  assert.match(source, /--title "\$EXTERNAL_SCRIPT_TITLE"/);
   assert.match(source, /create-script --type standalone/);
+});
+
+test('recover/bootstrap block has no nested Node heredoc regression', () => {
+  const start = source.indexOf('- name: Recover or bootstrap external TEST Apps Script project');
+  const end = source.indexOf('- name: Verify external push set before deploy');
+  assert.ok(start >= 0 && end > start);
+  const block = source.slice(start, end);
+  assert.doesNotMatch(block, /node - <<['"]?NODE/);
 });
 
 test('receipt identifiers are validated before reuse', () => {
