@@ -48,12 +48,47 @@ test('OAuth credential material is decoded into runner temp and checked before p
   assert.ok(authCheck >= 0 && ensureProject > authCheck);
 });
 
-test('external deployment requires normalized anonymous product black-box proof', () => {
+test('verifier-only deploy/test pushes skip OAuth and all provider mutation', () => {
+  assert.match(source, /git diff --quiet "\$BEFORE" "\$GITHUB_SHA" -- external-viewer/);
+  assert.match(source, /EXTERNAL_FULL_DEPLOY=0/);
+  assert.match(source, /BLACKBOX_ONLY_NO_PROVIDER_MUTATION/);
+  assert.match(source, /EXTERNAL_RECEIPT_SOURCE_SHA/);
+  const guarded = source.match(/if: env\.EXTERNAL_FULL_DEPLOY == '1'/g) || [];
+  assert.ok(guarded.length >= 7, `expected provider mutation steps to be guarded, got ${guarded.length}`);
+  for (const name of [
+    'Restore TEST OAuth credential material',
+    'Verify minimal OAuth deployment contract',
+    'Recover or bootstrap external TEST Apps Script project via REST',
+    'Persist external script identity before content push',
+    'Push external TEST viewer via Apps Script REST',
+    'Create or update external TEST web app deployment via REST',
+    'Persist external deployment identity before black-box probe'
+  ]) {
+    const start = source.indexOf(`- name: ${name}`);
+    assert.ok(start >= 0, `missing provider step: ${name}`);
+    const block = source.slice(start, source.indexOf('\n      - name:', start + 1) === -1 ? undefined : source.indexOf('\n      - name:', start + 1));
+    assert.match(block, /if: env\.EXTERNAL_FULL_DEPLOY == '1'/, `provider step is not guarded: ${name}`);
+  }
+});
+
+test('blackbox-only mode requires existing durable deployment identity and keeps deployed source SHA', () => {
+  assert.match(source, /EXTERNAL_BLACKBOX_ONLY_IDENTITY_REQUIRED/);
+  assert.match(source, /EXTERNAL_RECEIPT_SOURCE_SHA='\+src/);
+  assert.match(source, /EXTERNAL_SCRIPT_ID_RESOLVED='\+s/);
+  assert.match(source, /EXTERNAL_DEPLOYMENT_ID_RESOLVED='\+d/);
+  assert.match(source, /EXTERNAL_WEBAPP_URL='\+u/);
+});
+
+test('external deployment requires normalized anonymous product black-box proof in every mode', () => {
   assert.match(source, /Anonymous product black-box probe/);
   assert.match(source, /scripts\/external-blackbox-classifier\.mjs --html external-page\.html/);
   assert.match(source, /EXTERNAL_PRODUCT_BLACKBOX_PASS/);
   assert.match(source, /EXTERNAL_PRODUCT_BLACKBOX_FAIL status=/);
   assert.doesNotMatch(source, /grep -Fq '19 \/ 19'/);
+  const probe = source.indexOf('- name: Anonymous product black-box probe');
+  const shell = source.indexOf('shell: bash', probe);
+  assert.ok(probe >= 0 && shell > probe);
+  assert.doesNotMatch(source.slice(probe, shell), /if:/);
 });
 
 test('deployment lifecycle is observable through TEST control issue', () => {
@@ -66,6 +101,12 @@ test('deployment lifecycle is observable through TEST control issue', () => {
   assert.match(source, /if: \$\{\{ failure\(\) \}\}/);
   assert.match(source, /gh issue view/);
   assert.match(source, /gh issue edit/);
+});
+
+test('durable receipt is read before RUNNING state is published', () => {
+  const read = source.indexOf('- name: Read durable receipt and select provider mutation mode');
+  const running = source.indexOf('- name: Mark external deployment receipt RUNNING');
+  assert.ok(read >= 0 && running > read);
 });
 
 test('new script identity is durably persisted before any content push', () => {
@@ -99,4 +140,5 @@ test('receipt identifiers are validated before reuse', () => {
   assert.match(source, /EXTERNAL_RECEIPT_SCRIPT_ID_INVALID/);
   assert.match(source, /EXTERNAL_RECEIPT_DEPLOYMENT_ID_INVALID/);
   assert.match(source, /EXTERNAL_RECEIPT_DEPLOYMENT_WITHOUT_SCRIPT/);
+  assert.match(source, /EXTERNAL_RECEIPT_WEBAPP_URL_INVALID/);
 });
