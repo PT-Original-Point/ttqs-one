@@ -9,6 +9,7 @@ SHEETS_SCOPE="https://www.googleapis.com/auth/spreadsheets.readonly"
 RAW_BASE="https://raw.githubusercontent.com/PT-Original-Point/ttqs-one/main"
 TITLE="TTQS ONE External Evaluator Portal TEST"
 EXTERNAL_SCRIPT_ID_HINT="1hjS_1IZ3rqwCe8wxi3cICUu_zcVk1EPI2QRrrchEb3wh6ySJ_ZHAMrUA"
+EXTERNAL_DEPLOYMENT_ID_HINT="AKfycbznbXi-0XWNV68E-vGU9CiAE6ElXGIlDmy27EePXMdGpRaorURzKZq0dDgsNBaaZOLh"
 
 say() { printf '%s\n' "$*"; }
 fail() { printf 'ERROR: %s\n' "$*" >&2; exit 1; }
@@ -59,7 +60,7 @@ say "  1. spreadsheets.readonly"
 say "  2. script.projects"
 say "  3. script.deployments"
 say "REAL／PROD 不在本流程範圍。"
-say "本次會優先續用既有 TEST Apps Script 專案，不重複建立新專案。"
+say "本次固定續用既有 TEST Apps Script 專案與既有 deployment，不重複建立。"
 say "接下來若瀏覽器跳出 Google 授權頁，請使用協會 Google Workspace 部署帳號登入並同意。"
 
 (
@@ -121,27 +122,37 @@ say "$PUSH_OUTPUT"
 DEPLOY_OUTPUT="$(node "$REST_HELPER" deploy \
   --credentials "$AUTH_FILE" \
   --script-id "$EXTERNAL_SCRIPT_ID_RESOLVED" \
-  --deployment-id "" \
+  --deployment-id "$EXTERNAL_DEPLOYMENT_ID_HINT" \
   --description "TTQS ONE 9/1 External Evaluator Portal TEST direct deploy" \
   --env-file "$ENV_FILE")" \
-  || fail "External TEST Web App 建版／部署／讀回失敗。"
+  || fail "External TEST Web App 建版／部署／有效入口讀回失敗。"
 say "$DEPLOY_OUTPUT"
 
 # shellcheck disable=SC1090
 source "$ENV_FILE"
 test -n "${EXTERNAL_DEPLOYMENT_ID_RESOLVED:-}" || fail "deploymentId 讀回失敗。"
 test -n "${EXTERNAL_WEBAPP_URL:-}" || fail "Web App URL 讀回失敗。"
+test "$EXTERNAL_DEPLOYMENT_ID_RESOLVED" = "$EXTERNAL_DEPLOYMENT_ID_HINT" || fail "Web App deployment identity 漂移。"
+test "${EXTERNAL_WEBAPP_ACCESS:-}" = "ANYONE_ANONYMOUS" || fail "Google provider readback 不是 ANYONE_ANONYMOUS。"
+test "${EXTERNAL_WEBAPP_EXECUTE_AS:-}" = "USER_DEPLOYING" || fail "Google provider readback 不是 USER_DEPLOYING。"
 
-say "Apps Script TEST 外部 Portal 已建立並完成部署讀回。"
+say "Apps Script TEST 外部 Portal 已完成版本更新與有效入口讀回。"
 say "scriptId=$EXTERNAL_SCRIPT_ID_RESOLVED"
 say "deploymentId=$EXTERNAL_DEPLOYMENT_ID_RESOLVED"
 say "webappUrl=$EXTERNAL_WEBAPP_URL"
+say "webappAccess=$EXTERNAL_WEBAPP_ACCESS"
+say "webappExecuteAs=$EXTERNAL_WEBAPP_EXECUTE_AS"
 say "realProdTouch=0"
 
 HTML="$TMP_ROOT/portal.html"
 BLACKBOX="NOT_PASS"
+LAST_HTTP_STATUS="000"
+LAST_FINAL_URL=""
 for attempt in 1 2 3 4 5 6; do
-  if curl -fLsS --max-time 30 "$EXTERNAL_WEBAPP_URL" -o "$HTML"; then
+  CURL_META="$(curl -LsS --max-time 30 -o "$HTML" -w '%{http_code}|%{url_effective}' "$EXTERNAL_WEBAPP_URL" 2>/dev/null || true)"
+  LAST_HTTP_STATUS="${CURL_META%%|*}"
+  LAST_FINAL_URL="${CURL_META#*|}"
+  if [ "$LAST_HTTP_STATUS" = "200" ]; then
     if grep -q 'TTQS ONE · 測試／示範資料（TEST／SAMPLE）· EXTERNAL_READONLY' "$HTML" \
       && grep -q '官方指標範圍' "$HTML" \
       && grep -q '19 / 19' "$HTML" \
@@ -155,12 +166,22 @@ for attempt in 1 2 3 4 5 6; do
   sleep 5
 done
 
+FINAL_HOST="$(node -e 'try{process.stdout.write(new URL(process.argv[1]).host)}catch{process.stdout.write("unknown")}' "$LAST_FINAL_URL")"
+say "anonymousHttpStatus=$LAST_HTTP_STATUS"
+say "anonymousFinalHost=$FINAL_HOST"
 say "anonymousBlackbox=$BLACKBOX"
 if [ "$BLACKBOX" != "PASS_PRODUCT_BLACKBOX" ]; then
-  fail "Apps Script 部署已完成，但匿名產品黑箱尚未通過；請不要重跑，我們會從部署成品繼續查。"
+  if [ "$LAST_HTTP_STATUS" = "403" ]; then
+    say "anonymousFailure=HTTP_403_AFTER_PROVIDER_ANYONE_ANONYMOUS"
+  elif [ "$LAST_HTTP_STATUS" = "200" ]; then
+    say "anonymousFailure=HTTP_200_BUT_PRODUCT_MARKERS_MISSING"
+  else
+    say "anonymousFailure=HTTP_$LAST_HTTP_STATUS"
+  fi
+  fail "Apps Script provider 已確認匿名權限設定，但產品黑箱仍未通過；請不要重跑，我們會依 HTTP 診斷繼續查。"
 fi
 
 open "$EXTERNAL_WEBAPP_URL" >/dev/null 2>&1 || true
 say "PASS_PRODUCT_BLACKBOX"
 say "瀏覽器已嘗試開啟外部 TEST Portal。"
-say "請回到 ChatGPT，只貼最後這四行：scriptId、deploymentId、webappUrl、anonymousBlackbox。"
+say "請回到 ChatGPT，只貼最後這六行：scriptId、deploymentId、webappUrl、webappAccess、webappExecuteAs、anonymousBlackbox。"
