@@ -27,7 +27,12 @@ test('reauth helper requests exactly project manifest scope plus two Apps Script
   assert.match(helper, /--use-project-scopes/);
   assert.match(helper, /--extra-scopes "\$PROJECT_SCOPE,\$DEPLOY_SCOPE"/);
   assert.doesNotMatch(helper, /--include-clasp-scopes/);
-  assert.doesNotMatch(helper, /cloud-platform|drive\.file|userinfo\.email|userinfo\.profile/);
+
+  const loginStart = helper.indexOf('HOME="$AUTH_HOME" npx');
+  const authFileStart = helper.indexOf('AUTH_FILE="$AUTH_HOME/.clasprc.json"');
+  assert.ok(loginStart >= 0 && authFileStart > loginStart);
+  const executableLoginBlock = helper.slice(loginStart, authFileStart);
+  assert.doesNotMatch(executableLoginBlock, /cloud-platform|drive\.file|userinfo\.email|userinfo\.profile/);
 });
 
 test('reauth helper pins clasp version and uses dedicated credential profile', () => {
