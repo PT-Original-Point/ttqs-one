@@ -10,6 +10,8 @@ const ALLOWED_SCOPES = new Set([SCRIPT_PROJECTS, SCRIPT_DEPLOYMENTS, SHEETS_READ
 const SCRIPT_API = 'https://script.googleapis.com/v1';
 const TOKEN_ENDPOINT = 'https://oauth2.googleapis.com/token';
 const TOKENINFO_ENDPOINT = 'https://oauth2.googleapis.com/tokeninfo';
+const EXPECTED_WEBAPP_ACCESS = 'ANYONE_ANONYMOUS';
+const EXPECTED_WEBAPP_EXECUTE_AS = 'USER_DEPLOYING';
 
 function stableError(code, detail = '') {
   const error = new Error(detail ? `${code}:${detail}` : code);
@@ -177,6 +179,26 @@ function validateVersionNumber(value) {
   return number;
 }
 
+export function readEffectiveWebAppEntryPoint(deployment) {
+  const entries = Array.isArray(deployment?.entryPoints) ? deployment.entryPoints : [];
+  const webApps = entries.filter(entry => entry?.entryPointType === 'WEB_APP' && entry?.webApp);
+  if (webApps.length !== 1) throw stableError('EXTERNAL_WEBAPP_ENTRYPOINT_INVALID', String(webApps.length));
+  const webApp = webApps[0].webApp;
+  const url = String(webApp.url || '').trim();
+  const access = String(webApp.entryPointConfig?.access || '').trim();
+  const executeAs = String(webApp.entryPointConfig?.executeAs || '').trim();
+  if (!/^https:\/\/script\.google\.com\/macros\/s\/AKfy[A-Za-z0-9_-]+\/exec$/.test(url)) {
+    throw stableError('EXTERNAL_WEBAPP_URL_INVALID');
+  }
+  if (access !== EXPECTED_WEBAPP_ACCESS) {
+    throw stableError('EXTERNAL_WEBAPP_ACCESS_MISMATCH', access || 'missing');
+  }
+  if (executeAs !== EXPECTED_WEBAPP_EXECUTE_AS) {
+    throw stableError('EXTERNAL_WEBAPP_EXECUTE_AS_MISMATCH', executeAs || 'missing');
+  }
+  return {url, access, executeAs};
+}
+
 function appendEnv(envFile, entries) {
   if (!envFile) return;
   const lines = Object.entries(entries).map(([key, value]) => `${key}=${String(value)}\n`).join('');
@@ -258,8 +280,15 @@ export async function createOrUpdateDeployment({accessToken, scriptId, deploymen
   const resolvedId = validateDeploymentId(deployment.deploymentId);
   const readback = await googleApiRequest(accessToken, `${SCRIPT_API}/projects/${encodeURIComponent(id)}/deployments/${encodeURIComponent(resolvedId)}`, {}, fetchImpl);
   if (String(readback.deploymentId || '') !== resolvedId) throw stableError('EXTERNAL_DEPLOYMENT_READBACK_MISMATCH');
+  if (String(readback.deploymentConfig?.scriptId || '') !== id) throw stableError('EXTERNAL_DEPLOYMENT_SCRIPT_READBACK_MISMATCH');
   if (Number(readback.deploymentConfig?.versionNumber) !== version) throw stableError('EXTERNAL_DEPLOYMENT_VERSION_READBACK_MISMATCH');
-  return {deploymentId: resolvedId, webappUrl: `https://script.google.com/macros/s/${resolvedId}/exec`};
+  const effectiveWebApp = readEffectiveWebAppEntryPoint(readback);
+  return {
+    deploymentId: resolvedId,
+    webappUrl: effectiveWebApp.url,
+    webappAccess: effectiveWebApp.access,
+    webappExecuteAs: effectiveWebApp.executeAs
+  };
 }
 
 async function main() {
@@ -305,9 +334,17 @@ async function main() {
     appendEnv(args['env-file'], {
       EXTERNAL_VERSION_NUMBER: versionNumber,
       EXTERNAL_DEPLOYMENT_ID_RESOLVED: result.deploymentId,
-      EXTERNAL_WEBAPP_URL: result.webappUrl
+      EXTERNAL_WEBAPP_URL: result.webappUrl,
+      EXTERNAL_WEBAPP_ACCESS: result.webappAccess,
+      EXTERNAL_WEBAPP_EXECUTE_AS: result.webappExecuteAs
     });
-    process.stdout.write(`EXTERNAL_VERSION_NUMBER=${versionNumber}\nEXTERNAL_DEPLOYMENT_ID_RESOLVED=${result.deploymentId}\nEXTERNAL_WEBAPP_URL=${result.webappUrl}\n`);
+    process.stdout.write(
+      `EXTERNAL_VERSION_NUMBER=${versionNumber}\n` +
+      `EXTERNAL_DEPLOYMENT_ID_RESOLVED=${result.deploymentId}\n` +
+      `EXTERNAL_WEBAPP_URL=${result.webappUrl}\n` +
+      `EXTERNAL_WEBAPP_ACCESS=${result.webappAccess}\n` +
+      `EXTERNAL_WEBAPP_EXECUTE_AS=${result.webappExecuteAs}\n`
+    );
     return;
   }
 

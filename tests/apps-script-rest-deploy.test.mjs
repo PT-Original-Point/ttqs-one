@@ -14,6 +14,7 @@ import {
   pushProjectContent,
   createVersion,
   createOrUpdateDeployment,
+  readEffectiveWebAppEntryPoint,
   isDirectExecution
 } from '../scripts/apps-script-rest-deploy.mjs';
 
@@ -22,9 +23,31 @@ const DEPLOYMENTS = 'https://www.googleapis.com/auth/script.deployments';
 const SHEETS_READONLY = 'https://www.googleapis.com/auth/spreadsheets.readonly';
 const SCRIPT_ID = 'A'.repeat(30);
 const DEPLOYMENT_ID = `AKfy${'B'.repeat(30)}`;
+const WEBAPP_URL = `https://script.google.com/macros/s/${DEPLOYMENT_ID}/exec`;
 
 function jsonResponse(body, status = 200) {
   return new Response(JSON.stringify(body), {status, headers: {'content-type': 'application/json'}});
+}
+
+function deploymentReadback(versionNumber, overrides = {}) {
+  return {
+    deploymentId: DEPLOYMENT_ID,
+    deploymentConfig: {scriptId: SCRIPT_ID, versionNumber},
+    entryPoints: [{
+      entryPointType: 'WEB_APP',
+      webApp: {
+        url: WEBAPP_URL,
+        entryPointConfig: {
+          access: 'ANYONE_ANONYMOUS',
+          executeAs: 'USER_DEPLOYING',
+          ...(overrides.entryPointConfig || {})
+        },
+        ...(overrides.webApp || {})
+      },
+      ...(overrides.entryPoint || {})
+    }],
+    ...overrides.deployment
+  };
 }
 
 test('extracts one authorized_user credential from clasp user-key store', () => {
@@ -156,7 +179,27 @@ test('createVersion accepts only positive provider version number', async () => 
   assert.equal(await createVersion({accessToken: 'token', scriptId: SCRIPT_ID, description: 'test', fetchImpl: fakeFetch}), 7);
 });
 
-test('new deployment is created then read back at the same version', async () => {
+test('effective web app readback requires anonymous access and deploying-user execution', () => {
+  assert.deepEqual(readEffectiveWebAppEntryPoint(deploymentReadback(7)), {
+    url: WEBAPP_URL,
+    access: 'ANYONE_ANONYMOUS',
+    executeAs: 'USER_DEPLOYING'
+  });
+  assert.throws(
+    () => readEffectiveWebAppEntryPoint(deploymentReadback(7, {entryPointConfig: {access: 'ANYONE'}})),
+    /EXTERNAL_WEBAPP_ACCESS_MISMATCH/
+  );
+  assert.throws(
+    () => readEffectiveWebAppEntryPoint(deploymentReadback(7, {entryPointConfig: {executeAs: 'USER_ACCESSING'}})),
+    /EXTERNAL_WEBAPP_EXECUTE_AS_MISMATCH/
+  );
+  assert.throws(
+    () => readEffectiveWebAppEntryPoint({...deploymentReadback(7), entryPoints: []}),
+    /EXTERNAL_WEBAPP_ENTRYPOINT_INVALID/
+  );
+});
+
+test('new deployment is created then provider web app entry point is read back', async () => {
   let step = 0;
   const fakeFetch = async (url, options = {}) => {
     step += 1;
@@ -168,16 +211,20 @@ test('new deployment is created then read back at the same version', async () =>
       return jsonResponse({deploymentId: DEPLOYMENT_ID});
     }
     assert.match(url, new RegExp(`/deployments/${DEPLOYMENT_ID}$`));
-    return jsonResponse({deploymentId: DEPLOYMENT_ID, deploymentConfig: {scriptId: SCRIPT_ID, versionNumber: 7}});
+    return jsonResponse(deploymentReadback(7));
   };
   const result = await createOrUpdateDeployment({
     accessToken: 'token', scriptId: SCRIPT_ID, deploymentId: '', versionNumber: 7, description: 'test', fetchImpl: fakeFetch
   });
-  assert.equal(result.deploymentId, DEPLOYMENT_ID);
-  assert.equal(result.webappUrl, `https://script.google.com/macros/s/${DEPLOYMENT_ID}/exec`);
+  assert.deepEqual(result, {
+    deploymentId: DEPLOYMENT_ID,
+    webappUrl: WEBAPP_URL,
+    webappAccess: 'ANYONE_ANONYMOUS',
+    webappExecuteAs: 'USER_DEPLOYING'
+  });
 });
 
-test('existing deployment update preserves deployment id and version readback', async () => {
+test('existing deployment update preserves id and verifies effective entry point', async () => {
   let step = 0;
   const fakeFetch = async (_url, options = {}) => {
     step += 1;
@@ -188,10 +235,26 @@ test('existing deployment update preserves deployment id and version readback', 
       assert.equal(body.deploymentConfig.versionNumber, 8);
       return jsonResponse({deploymentId: DEPLOYMENT_ID});
     }
-    return jsonResponse({deploymentId: DEPLOYMENT_ID, deploymentConfig: {scriptId: SCRIPT_ID, versionNumber: 8}});
+    return jsonResponse(deploymentReadback(8));
   };
   const result = await createOrUpdateDeployment({
     accessToken: 'token', scriptId: SCRIPT_ID, deploymentId: DEPLOYMENT_ID, versionNumber: 8, description: 'update', fetchImpl: fakeFetch
   });
   assert.equal(result.deploymentId, DEPLOYMENT_ID);
+  assert.equal(result.webappAccess, 'ANYONE_ANONYMOUS');
+});
+
+test('deployment readback fails closed if provider downgrades anonymous access', async () => {
+  let step = 0;
+  const fakeFetch = async (_url, options = {}) => {
+    step += 1;
+    if (step === 1) return jsonResponse({deploymentId: DEPLOYMENT_ID});
+    return jsonResponse(deploymentReadback(9, {entryPointConfig: {access: 'DOMAIN'}}));
+  };
+  await assert.rejects(
+    createOrUpdateDeployment({
+      accessToken: 'token', scriptId: SCRIPT_ID, deploymentId: DEPLOYMENT_ID, versionNumber: 9, description: 'policy', fetchImpl: fakeFetch
+    }),
+    /EXTERNAL_WEBAPP_ACCESS_MISMATCH/
+  );
 });
