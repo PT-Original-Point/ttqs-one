@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 
 const MARKER = '<!-- TTQS_EXTERNAL_TEST_RECEIPT_V1 -->';
+export const NOTES_MARKER = '<!-- TTQS_EXTERNAL_TEST_NOTES -->';
 const VALID_STATES = new Set(['RUNNING', 'FAILED', 'PASS_PRODUCT_BLACKBOX']);
 
 function parseArgs(argv) {
@@ -14,6 +15,16 @@ function parseArgs(argv) {
   return out;
 }
 
+function validateSha(value, code) {
+  if (!/^[0-9a-f]{40}$/.test(String(value || ''))) throw new Error(code);
+}
+
+function preservedNotes(body) {
+  const source = String(body || '');
+  const index = source.indexOf(NOTES_MARKER);
+  return index === -1 ? '' : source.slice(index).trimEnd();
+}
+
 export function parseReceiptBody(body) {
   if (!String(body || '').includes(MARKER)) throw new Error('EXTERNAL_RECEIPT_MARKER_MISSING');
   const match = String(body).match(/<!-- TTQS_EXTERNAL_TEST_RECEIPT_V1 -->[\s\S]*?```json\s*([\s\S]*?)```/);
@@ -22,6 +33,7 @@ export function parseReceiptBody(body) {
   if (receipt.schema !== 'TTQS_EXTERNAL_TEST_RECEIPT_V1') throw new Error('EXTERNAL_RECEIPT_SCHEMA_INVALID');
   if (receipt.environment !== 'TEST' || receipt.rootDir !== 'external-viewer') throw new Error('EXTERNAL_RECEIPT_CONTEXT_INVALID');
   if (Number(receipt.realProdTouch || 0) !== 0) throw new Error('EXTERNAL_RECEIPT_REAL_PROD_TOUCH_INVALID');
+  if (receipt.verificationSha) validateSha(receipt.verificationSha, 'EXTERNAL_RECEIPT_VERIFICATION_SHA_INVALID');
   return receipt;
 }
 
@@ -42,8 +54,14 @@ function validateWebappUrl(value, deploymentId) {
 export function nextReceiptBody(body, state, env = {}) {
   if (!VALID_STATES.has(state)) throw new Error('EXTERNAL_RECEIPT_STATE_INVALID');
   const prior = parseReceiptBody(body);
-  const sourceSha = String(env.GITHUB_SHA || '').trim();
-  if (!/^[0-9a-f]{40}$/.test(sourceSha)) throw new Error('EXTERNAL_RECEIPT_SOURCE_SHA_INVALID');
+  const verificationSha = String(env.GITHUB_SHA || '').trim();
+  validateSha(verificationSha, 'EXTERNAL_RECEIPT_SOURCE_SHA_INVALID');
+
+  // A black-box-only verification must not pretend verifier-only commits were
+  // deployed to Apps Script. Full provider deployments leave the override empty
+  // and therefore use GITHUB_SHA as both sourceSha and verificationSha.
+  const sourceSha = String(env.EXTERNAL_RECEIPT_SOURCE_SHA || verificationSha).trim();
+  validateSha(sourceSha, 'EXTERNAL_RECEIPT_SOURCE_SHA_INVALID');
 
   const scriptId = String(env.EXTERNAL_SCRIPT_ID_RESOLVED || prior.scriptId || '').trim();
   const deploymentId = String(env.EXTERNAL_DEPLOYMENT_ID_RESOLVED || prior.deploymentId || '').trim();
@@ -63,6 +81,7 @@ export function nextReceiptBody(body, state, env = {}) {
     rootDir: 'external-viewer',
     runStatus: state,
     sourceSha,
+    verificationSha,
     scriptId,
     deploymentId,
     webappUrl,
@@ -75,7 +94,7 @@ export function nextReceiptBody(body, state, env = {}) {
     ? '此 Issue 是 TEST／SAMPLE 控制面。匿名產品黑箱已通過。'
     : '此 Issue 是 TEST／SAMPLE 控制面。非 PASS 狀態不得解讀為成品驗收通過。';
 
-  return [
+  const generated = [
     '# TTQS ONE TEST External Evaluator Portal Deployment Receipt',
     '',
     headline,
@@ -87,9 +106,11 @@ export function nextReceiptBody(body, state, env = {}) {
     JSON.stringify(receipt, null, 2),
     '```',
     '',
-    '部署成功不代表 REAL／PROD 啟動；`realProdTouch` 必須維持 0。',
-    ''
+    '部署成功不代表 REAL／PROD 啟動；`realProdTouch` 必須維持 0。'
   ].join('\n');
+
+  const notes = preservedNotes(body);
+  return notes ? `${generated}\n\n${notes}\n` : `${generated}\n`;
 }
 
 if (process.argv[1] && import.meta.url === new URL(`file://${process.argv[1]}`).href) {
