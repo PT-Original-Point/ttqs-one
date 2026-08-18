@@ -58,7 +58,7 @@ jobs:
           set -euo pipefail
           npm ci --ignore-scripts
           npm run verify
-          node -e "const fs=require('fs'); const manifest=JSON.parse(fs.readFileSync('external-viewer/appsscript.json','utf8')); const expectedScope='https://www.googleapis.com/auth/spreadsheets.readonly'; const expectedService=[{userSymbol:'Sheets',version:'v4',serviceId:'sheets'}]; if(manifest.webapp?.access!=='ANYONE_ANONYMOUS') throw new Error('EXTERNAL_ACCESS_NOT_ANONYMOUS'); if(manifest.webapp?.executeAs!=='USER_DEPLOYING') throw new Error('EXTERNAL_EXECUTION_IDENTITY_INVALID'); if(JSON.stringify(manifest.oauthScopes)!==JSON.stringify([expectedScope])) throw new Error('EXTERNAL_SCOPE_INVALID'); if(JSON.stringify(manifest.dependencies?.enabledAdvancedServices)!==JSON.stringify(expectedService)) throw new Error('EXTERNAL_SHEETS_SERVICE_INVALID'); const files=fs.readdirSync('external-viewer').sort(); if(JSON.stringify(files)!==JSON.stringify(['Code.gs','appsscript.json'])) throw new Error('EXTERNAL_PUSH_SET_INVALID');"
+          node -e "const fs=require('fs'); const manifest=JSON.parse(fs.readFileSync('external-viewer/appsscript.json','utf8')); const code=fs.readFileSync('external-viewer/Code.gs','utf8'); if(manifest.webapp?.access!=='ANYONE_ANONYMOUS') throw new Error('EXTERNAL_ACCESS_NOT_ANONYMOUS'); if(manifest.webapp?.executeAs!=='USER_DEPLOYING') throw new Error('EXTERNAL_EXECUTION_IDENTITY_INVALID'); if(Object.hasOwn(manifest,'oauthScopes')) throw new Error('EXTERNAL_RUNTIME_OAUTH_SCOPE_FORBIDDEN'); if(Object.hasOwn(manifest,'dependencies')) throw new Error('EXTERNAL_RUNTIME_ADVANCED_SERVICE_FORBIDDEN'); if(/Sheets\\.|SpreadsheetApp|DriveApp|UrlFetchApp/.test(code)) throw new Error('EXTERNAL_RUNTIME_GOOGLE_DATA_API_FORBIDDEN'); const files=fs.readdirSync('external-viewer').sort(); if(JSON.stringify(files)!==JSON.stringify(['Code.gs','appsscript.json'])) throw new Error('EXTERNAL_PUSH_SET_INVALID');"
 
       - name: Restore TEST OAuth credential material
         shell: bash
@@ -145,15 +145,15 @@ jobs:
           URL="$EXTERNAL_WEBAPP_URL"
           test -n "$URL"
           PASS=0
+          LAST_STATUS="000"
+          LAST_CLASSIFIER=""
           for attempt in 1 2 3 4 5 6; do
             rm -f external-page.html
-            if curl --fail --silent --show-error --location --max-time 30 "$URL" -o external-page.html; then
-              if grep -Fq 'TTQS ONE' external-page.html \
-                && grep -Fq 'SAMPLE 評核因果鏈' external-page.html \
-                && grep -Fq '查看佐證與來源' external-page.html \
-                && grep -Fq 'EXTERNAL_READONLY' external-page.html \
-                && grep -Fq '19 / 19' external-page.html \
-                && ! grep -Fq '目前無法載入唯讀快照' external-page.html; then
+            META="$(curl --silent --show-error --location --max-time 30 -o external-page.html -w '%{http_code}|%{url_effective}' "$URL" 2>/dev/null || true)"
+            LAST_STATUS="${META%%|*}"
+            if test "$LAST_STATUS" = "200"; then
+              if LAST_CLASSIFIER="$(node scripts/external-blackbox-classifier.mjs --html external-page.html 2>&1)"; then
+                echo "$LAST_CLASSIFIER"
                 PASS=1
                 break
               fi
@@ -161,8 +161,7 @@ jobs:
             sleep 10
           done
           if test "$PASS" -ne 1; then
-            echo 'EXTERNAL_PRODUCT_BLACKBOX_FAIL'
-            if test -f external-page.html; then sed -n '1,80p' external-page.html; fi
+            echo "EXTERNAL_PRODUCT_BLACKBOX_FAIL status=$LAST_STATUS classifier=$LAST_CLASSIFIER"
             exit 1
           fi
           echo 'EXTERNAL_PRODUCT_BLACKBOX_PASS'
@@ -189,10 +188,11 @@ jobs:
             echo "- Deployment ID: $EXTERNAL_DEPLOYMENT_ID_RESOLVED"
             echo "- Version: $EXTERNAL_VERSION_NUMBER"
             echo "- URL: $EXTERNAL_WEBAPP_URL"
-            echo '- Provider path: Apps Script REST API with minimal user OAuth scopes'
+            echo '- Provider path: Apps Script REST API with minimal deployment OAuth contract'
             echo '- Access: ANYONE_ANONYMOUS'
             echo '- Execute as: USER_DEPLOYING'
-            echo '- Data: TEST/SAMPLE deidentified snapshot only'
+            echo '- Data: TEST/SAMPLE deidentified static snapshot only'
+            echo '- Runtime Google data permissions: none'
             echo '- Anonymous black-box: PASS'
             echo '- Receipt: GitHub Issue #39'
             echo '- REAL/PROD: not performed'
