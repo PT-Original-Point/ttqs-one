@@ -11,6 +11,11 @@ concurrency:
 
 permissions:
   contents: read
+  issues: write
+
+env:
+  EXTERNAL_RECEIPT_ISSUE: '39'
+  EXTERNAL_SCRIPT_TITLE: 'TTQS ONE TEST External Evaluator Portal'
 
 jobs:
   deploy_external:
@@ -46,9 +51,11 @@ jobs:
           const fs = require('fs');
           const manifest = JSON.parse(fs.readFileSync('external-viewer/appsscript.json', 'utf8'));
           const expectedScope = 'https://www.googleapis.com/auth/spreadsheets.readonly';
+          const expectedService = [{ userSymbol: 'Sheets', version: 'v4', serviceId: 'sheets' }];
           if (manifest.webapp?.access !== 'ANYONE_ANONYMOUS') throw new Error('EXTERNAL_ACCESS_NOT_ANONYMOUS');
           if (manifest.webapp?.executeAs !== 'USER_DEPLOYING') throw new Error('EXTERNAL_EXECUTION_IDENTITY_INVALID');
           if (JSON.stringify(manifest.oauthScopes) !== JSON.stringify([expectedScope])) throw new Error('EXTERNAL_SCOPE_INVALID');
+          if (JSON.stringify(manifest.dependencies?.enabledAdvancedServices) !== JSON.stringify(expectedService)) throw new Error('EXTERNAL_SHEETS_SERVICE_INVALID');
           const files = fs.readdirSync('external-viewer').sort();
           if (JSON.stringify(files) !== JSON.stringify(['Code.gs', 'appsscript.json'])) throw new Error('EXTERNAL_PUSH_SET_INVALID');
           NODE
@@ -62,44 +69,78 @@ jobs:
           test -n "$CLASPRC_JSON_B64"
           printf '%s' "$CLASPRC_JSON_B64" | base64 -d > "$HOME/.clasprc.json"
 
-      - name: Resolve or bootstrap external TEST Apps Script project
+      - name: Read durable external deployment receipt
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh issue view "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --json body --jq .body > external-receipt-body.md
+          node - <<'NODE'
+          const fs = require('fs');
+          const body = fs.readFileSync('external-receipt-body.md', 'utf8');
+          const marker = '<!-- TTQS_EXTERNAL_TEST_RECEIPT_V1 -->';
+          if (!body.includes(marker)) throw new Error('EXTERNAL_RECEIPT_MARKER_MISSING');
+          const match = body.match(/<!-- TTQS_EXTERNAL_TEST_RECEIPT_V1 -->[\s\S]*?```json\s*([\s\S]*?)```/);
+          if (!match) throw new Error('EXTERNAL_RECEIPT_JSON_MISSING');
+          const receipt = JSON.parse(match[1]);
+          if (receipt.schema !== 'TTQS_EXTERNAL_TEST_RECEIPT_V1') throw new Error('EXTERNAL_RECEIPT_SCHEMA_INVALID');
+          if (receipt.environment !== 'TEST' || receipt.rootDir !== 'external-viewer') throw new Error('EXTERNAL_RECEIPT_CONTEXT_INVALID');
+          const scriptId = String(receipt.scriptId || '');
+          const deploymentId = String(receipt.deploymentId || '');
+          if (scriptId && !/^[A-Za-z0-9_-]{20,}$/.test(scriptId)) throw new Error('EXTERNAL_RECEIPT_SCRIPT_ID_INVALID');
+          if (deploymentId && !/^AKfy[A-Za-z0-9_-]+$/.test(deploymentId)) throw new Error('EXTERNAL_RECEIPT_DEPLOYMENT_ID_INVALID');
+          if (deploymentId && !scriptId) throw new Error('EXTERNAL_RECEIPT_DEPLOYMENT_WITHOUT_SCRIPT');
+          fs.appendFileSync(process.env.GITHUB_ENV, `EXTERNAL_SCRIPT_ID=${scriptId}\nEXTERNAL_DEPLOYMENT_ID=${deploymentId}\n`);
+          NODE
+
+      - name: Recover or bootstrap external TEST Apps Script project
         shell: bash
         run: |
           set -euo pipefail
-          if test -f config/external-test-deployment.json; then
+          SCRIPT_ID="$EXTERNAL_SCRIPT_ID"
+          DEPLOYMENT_ID="$EXTERNAL_DEPLOYMENT_ID"
+          if test -z "$SCRIPT_ID"; then
+            npx --yes @google/clasp@3.3.0 list-scripts | tee external-scripts.txt
             node - <<'NODE'
             const fs = require('fs');
-            const cfg = JSON.parse(fs.readFileSync('config/external-test-deployment.json', 'utf8'));
-            if (!cfg.scriptId || typeof cfg.scriptId !== 'string') throw new Error('EXTERNAL_SCRIPT_ID_REQUIRED');
-            if (cfg.environment !== 'TEST') throw new Error('EXTERNAL_ENVIRONMENT_MISMATCH');
-            if (cfg.rootDir !== 'external-viewer') throw new Error('EXTERNAL_ROOT_DIR_MISMATCH');
-            fs.writeFileSync('.clasp.json', JSON.stringify({ scriptId: cfg.scriptId, rootDir: 'external-viewer' }, null, 2) + '\n');
+            const title = process.env.EXTERNAL_SCRIPT_TITLE;
+            const lines = fs.readFileSync('external-scripts.txt', 'utf8').split(/\r?\n/).map(v => v.trim()).filter(Boolean);
+            const matches = [];
+            for (const line of lines) {
+              if (!line.startsWith(title)) continue;
+              const tail = line.slice(title.length).trim();
+              const match = tail.match(/^[–—-]\s*([A-Za-z0-9_-]{20,})/);
+              if (match) matches.push(match[1]);
+            }
+            const unique = [...new Set(matches)];
+            if (unique.length > 1) throw new Error('EXTERNAL_SCRIPT_TITLE_AMBIGUOUS');
+            fs.writeFileSync('external-script-candidate.txt', unique[0] || '');
             NODE
-            SCRIPT_ID=$(node -p "require('./config/external-test-deployment.json').scriptId")
-            DEPLOYMENT_ID=$(node -p "require('./config/external-test-deployment.json').deploymentId || ''")
-            echo 'EXTERNAL_MODE=REUSE' >> "$GITHUB_ENV"
-          else
+            SCRIPT_ID=$(cat external-script-candidate.txt)
+          fi
+          if test -z "$SCRIPT_ID"; then
             rm -rf .external-bootstrap
             mkdir .external-bootstrap
             (
               cd .external-bootstrap
-              npx --yes @google/clasp@3.3.0 create-script --type standalone --title 'TTQS ONE TEST External Evaluator Portal'
+              npx --yes @google/clasp@3.3.0 create-script --type standalone --title "$EXTERNAL_SCRIPT_TITLE"
             )
             SCRIPT_ID=$(node -p "require('./.external-bootstrap/.clasp.json').scriptId")
             test -n "$SCRIPT_ID"
-            node -e "const fs=require('fs'); const scriptId=process.argv[1]; fs.writeFileSync('.clasp.json', JSON.stringify({scriptId,rootDir:'external-viewer'},null,2)+'\\n')" "$SCRIPT_ID"
-            DEPLOYMENT_ID=''
             echo 'EXTERNAL_MODE=BOOTSTRAP' >> "$GITHUB_ENV"
-          fi
-          test -n "$SCRIPT_ID"
-          echo "EXTERNAL_SCRIPT_ID=$SCRIPT_ID" >> "$GITHUB_ENV"
-          echo "EXTERNAL_DEPLOYMENT_ID=$DEPLOYMENT_ID" >> "$GITHUB_ENV"
-          printf 'EXTERNAL_SCRIPT_ID=%s\n' "$SCRIPT_ID"
-          if test -n "$DEPLOYMENT_ID"; then
-            printf 'EXTERNAL_EXISTING_DEPLOYMENT_ID=%s\n' "$DEPLOYMENT_ID"
           else
-            printf 'EXTERNAL_EXISTING_DEPLOYMENT_ID=NONE\n'
+            echo 'EXTERNAL_MODE=REUSE' >> "$GITHUB_ENV"
           fi
+          if ! printf '%s' "$SCRIPT_ID" | grep -Eq '^[A-Za-z0-9_-]{20,}$'; then
+            echo 'EXTERNAL_SCRIPT_ID_INVALID'
+            exit 1
+          fi
+          node -e "const fs=require('fs'); const scriptId=process.argv[1]; fs.writeFileSync('.clasp.json', JSON.stringify({scriptId,rootDir:'external-viewer'},null,2)+'\\n')" "$SCRIPT_ID"
+          echo "EXTERNAL_SCRIPT_ID_RESOLVED=$SCRIPT_ID" >> "$GITHUB_ENV"
+          echo "EXTERNAL_DEPLOYMENT_ID_PREVIOUS=$DEPLOYMENT_ID" >> "$GITHUB_ENV"
+          printf 'EXTERNAL_SCRIPT_ID=%s\n' "$SCRIPT_ID"
+          printf 'EXTERNAL_PREVIOUS_DEPLOYMENT_ID=%s\n' "${DEPLOYMENT_ID:-NONE}"
 
       - name: Verify external push set before deploy
         shell: bash
@@ -120,21 +161,23 @@ jobs:
         run: |
           set -euo pipefail
           DESCRIPTION="TTQS_ONE_TEST_EXTERNAL $GITHUB_SHA"
-          if test -n "$EXTERNAL_DEPLOYMENT_ID"; then
-            npx --yes @google/clasp@3.3.0 create-deployment --deploymentId "$EXTERNAL_DEPLOYMENT_ID" --description "$DESCRIPTION" | tee external-deploy.txt
-            DEPLOYMENT_ID="$EXTERNAL_DEPLOYMENT_ID"
+          DEPLOYMENT_ID="$EXTERNAL_DEPLOYMENT_ID_PREVIOUS"
+          if test -n "$DEPLOYMENT_ID"; then
+            npx --yes @google/clasp@3.3.0 create-deployment --deploymentId "$DEPLOYMENT_ID" --description "$DESCRIPTION" | tee external-deploy.txt
           else
             npx --yes @google/clasp@3.3.0 create-deployment --description "$DESCRIPTION" | tee external-deploy.txt
             DEPLOYMENT_ID=$(grep -Eo 'AKfy[A-Za-z0-9_-]+' external-deploy.txt | head -n 1 || true)
           fi
           if test -z "$DEPLOYMENT_ID"; then
-            npx --yes @google/clasp@3.3.0 list-deployments | tee external-deployments.txt
+            npx --yes @google/clasp@3.3.0 list-deployments "$EXTERNAL_SCRIPT_ID_RESOLVED" | tee external-deployments.txt
             DEPLOYMENT_ID=$(grep -Eo 'AKfy[A-Za-z0-9_-]+' external-deployments.txt | tail -n 1 || true)
           fi
-          test -n "$DEPLOYMENT_ID"
+          if ! printf '%s' "$DEPLOYMENT_ID" | grep -Eq '^AKfy[A-Za-z0-9_-]+$'; then
+            echo 'EXTERNAL_DEPLOYMENT_ID_INVALID'
+            exit 1
+          fi
           echo "EXTERNAL_DEPLOYMENT_ID_RESOLVED=$DEPLOYMENT_ID" >> "$GITHUB_ENV"
           printf 'EXTERNAL_DEPLOYMENT_ID=%s\n' "$DEPLOYMENT_ID"
-          npx --yes @google/clasp@3.3.0 list-deployments
 
       - name: Anonymous product black-box probe
         shell: bash
@@ -149,6 +192,7 @@ jobs:
                 && grep -Fq 'SAMPLE 評核因果鏈' external-page.html \
                 && grep -Fq '查看佐證與來源' external-page.html \
                 && grep -Fq 'EXTERNAL_READONLY' external-page.html \
+                && grep -Fq '19 / 19' external-page.html \
                 && ! grep -Fq '目前無法載入唯讀快照' external-page.html; then
                 PASS=1
                 break
@@ -161,18 +205,63 @@ jobs:
             if test -f external-page.html; then sed -n '1,80p' external-page.html; fi
             exit 1
           fi
-          printf 'EXTERNAL_PRODUCT_BLACKBOX_PASS\n'
+          echo 'EXTERNAL_PRODUCT_BLACKBOX_PASS'
+          echo "EXTERNAL_WEBAPP_URL=$URL" >> "$GITHUB_ENV"
           printf 'EXTERNAL_WEBAPP_URL=%s\n' "$URL"
+
+      - name: Publish durable deployment receipt after black-box PASS
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          node - <<'NODE'
+          const fs = require('fs');
+          const receipt = {
+            schema: 'TTQS_EXTERNAL_TEST_RECEIPT_V1',
+            environment: 'TEST',
+            rootDir: 'external-viewer',
+            sourceSha: process.env.GITHUB_SHA,
+            scriptId: process.env.EXTERNAL_SCRIPT_ID_RESOLVED,
+            deploymentId: process.env.EXTERNAL_DEPLOYMENT_ID_RESOLVED,
+            webappUrl: process.env.EXTERNAL_WEBAPP_URL,
+            anonymousBlackbox: 'PASS',
+            realProdTouch: 0
+          };
+          const body = [
+            '# TTQS ONE TEST External Evaluator Portal Deployment Receipt',
+            '',
+            '此 Issue 是 TEST／SAMPLE 控制面。只有匿名產品黑箱通過後才更新。',
+            '',
+            '目前狀態：`PASS_PRODUCT_BLACKBOX`',
+            '',
+            '<!-- TTQS_EXTERNAL_TEST_RECEIPT_V1 -->',
+            '```json',
+            JSON.stringify(receipt, null, 2),
+            '```',
+            '',
+            '部署成功不代表 REAL／PROD 啟動；`realProdTouch` 必須維持 0。',
+            ''
+          ].join('\n');
+          fs.writeFileSync('external-receipt-next.md', body);
+          NODE
+          gh issue edit "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file external-receipt-next.md
+
+      - name: Record deployment provenance
+        shell: bash
+        run: |
+          set -euo pipefail
           {
             echo '## TTQS ONE External TEST deployment'
             echo
             echo "- Source SHA: $GITHUB_SHA"
-            echo "- Script ID: $EXTERNAL_SCRIPT_ID"
+            echo "- Script ID: $EXTERNAL_SCRIPT_ID_RESOLVED"
             echo "- Deployment ID: $EXTERNAL_DEPLOYMENT_ID_RESOLVED"
-            echo "- URL: $URL"
+            echo "- URL: $EXTERNAL_WEBAPP_URL"
             echo '- Access: ANYONE_ANONYMOUS'
             echo '- Execute as: USER_DEPLOYING'
             echo '- Data: TEST/SAMPLE deidentified snapshot only'
             echo '- Anonymous black-box: PASS'
+            echo '- Receipt: GitHub Issue #39'
             echo '- REAL/PROD: not performed'
           } >> "$GITHUB_STEP_SUMMARY"
