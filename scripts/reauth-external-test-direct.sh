@@ -80,31 +80,47 @@ curl -fsSL "$RAW_BASE/external-viewer/appsscript.json" -o "$PROJECT_DIR/appsscri
 test -s "$PROJECT_DIR/Code.gs" && test -s "$PROJECT_DIR/appsscript.json" \
   || fail "無法取得 External TEST Viewer 成品。"
 
-node "$REST_HELPER" auth-check --credentials "$AUTH_FILE" \
+AUTH_OUTPUT="$(node "$REST_HELPER" auth-check --credentials "$AUTH_FILE")" \
   || fail "Google OAuth scope 或 refresh token 驗證未通過。"
+case "$AUTH_OUTPUT" in
+  *AUTH_MINIMAL_SCOPE_PASS*) ;;
+  *) fail "Apps Script REST 部署器未真正執行 auth-check；已停止在任何專案建立之前。" ;;
+esac
+say "$AUTH_OUTPUT"
 
 : > "$ENV_FILE"
-node "$REST_HELPER" ensure-project \
+ENSURE_OUTPUT="$(node "$REST_HELPER" ensure-project \
   --credentials "$AUTH_FILE" \
   --script-id "" \
   --title "$TITLE" \
-  --env-file "$ENV_FILE"
+  --env-file "$ENV_FILE")" \
+  || fail "Apps Script 專案建立／讀回失敗。"
+say "$ENSURE_OUTPUT"
+test -s "$ENV_FILE" || fail "Apps Script REST 部署器沒有寫入專案收據；已停止，請勿盲目重跑。"
 
 # shellcheck disable=SC1090
 source "$ENV_FILE"
 test -n "${EXTERNAL_SCRIPT_ID_RESOLVED:-}" || fail "Apps Script 專案建立後讀回 scriptId 失敗。"
 
-node "$REST_HELPER" push-content \
+PUSH_OUTPUT="$(node "$REST_HELPER" push-content \
   --credentials "$AUTH_FILE" \
   --script-id "$EXTERNAL_SCRIPT_ID_RESOLVED" \
-  --root-dir "$PROJECT_DIR"
+  --root-dir "$PROJECT_DIR")" \
+  || fail "External TEST Viewer 推送或讀回失敗。"
+case "$PUSH_OUTPUT" in
+  *EXTERNAL_CONTENT_PUSH_READBACK_PASS*) ;;
+  *) fail "External TEST Viewer 推送未取得 provider readback PASS。" ;;
+esac
+say "$PUSH_OUTPUT"
 
-node "$REST_HELPER" deploy \
+DEPLOY_OUTPUT="$(node "$REST_HELPER" deploy \
   --credentials "$AUTH_FILE" \
   --script-id "$EXTERNAL_SCRIPT_ID_RESOLVED" \
   --deployment-id "" \
   --description "TTQS ONE 9/1 External Evaluator Portal TEST direct deploy" \
-  --env-file "$ENV_FILE"
+  --env-file "$ENV_FILE")" \
+  || fail "External TEST Web App 建版／部署／讀回失敗。"
+say "$DEPLOY_OUTPUT"
 
 # shellcheck disable=SC1090
 source "$ENV_FILE"

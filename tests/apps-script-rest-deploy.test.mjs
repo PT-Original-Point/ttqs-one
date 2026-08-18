@@ -3,6 +3,8 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
+import {spawnSync} from 'node:child_process';
+import {pathToFileURL} from 'node:url';
 import {
   extractAuthorizedUserCredentials,
   assertMinimalDeploymentScopes,
@@ -11,7 +13,8 @@ import {
   ensureProject,
   pushProjectContent,
   createVersion,
-  createOrUpdateDeployment
+  createOrUpdateDeployment,
+  isDirectExecution
 } from '../scripts/apps-script-rest-deploy.mjs';
 
 const PROJECTS = 'https://www.googleapis.com/auth/script.projects';
@@ -64,6 +67,32 @@ test('invalid_rapt becomes stable AUTH_REAUTH_REQUIRED without leaking provider 
     refreshAccessToken({client_id: 'client', client_secret: 'secret', refresh_token: 'refresh'}, fakeFetch),
     error => error.code === 'AUTH_REAUTH_REQUIRED'
   );
+});
+
+test('direct execution detection resolves a symlinked invocation path', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'ttqs-rest-entrypoint-'));
+  const realPath = path.resolve('scripts/apps-script-rest-deploy.mjs');
+  const linkPath = path.join(dir, 'rest-deploy.mjs');
+  try {
+    fs.symlinkSync(realPath, linkPath);
+    assert.equal(isDirectExecution(pathToFileURL(realPath).href, linkPath), true);
+  } finally {
+    fs.rmSync(dir, {recursive: true, force: true});
+  }
+});
+
+test('REST deploy CLI actually enters main when invoked through a symlink', () => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'ttqs-rest-cli-'));
+  const realPath = path.resolve('scripts/apps-script-rest-deploy.mjs');
+  const linkPath = path.join(dir, 'rest-deploy.mjs');
+  try {
+    fs.symlinkSync(realPath, linkPath);
+    const result = spawnSync(process.execPath, [linkPath, 'auth-check'], {encoding: 'utf8'});
+    assert.notEqual(result.status, 0);
+    assert.match(result.stderr, /REST_DEPLOY_CREDENTIALS_REQUIRED/);
+  } finally {
+    fs.rmSync(dir, {recursive: true, force: true});
+  }
 });
 
 test('project payload contains exactly Code SERVER_JS and appsscript JSON', () => {
