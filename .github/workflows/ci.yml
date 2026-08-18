@@ -26,12 +26,6 @@ jobs:
           const fs = require('fs');
           const crypto = require('crypto');
           const body = fs.readFileSync('/tmp/ttqs-body', 'utf8');
-          const decode = s => s
-            .replace(/&nbsp;|&#160;/gi, ' ')
-            .replace(/&sol;|&#47;|&#x2f;/gi, '/')
-            .replace(/&frasl;|&#8260;|&#x2044;/gi, '⁄')
-            .replace(/&lt;/gi, '<').replace(/&gt;/gi, '>').replace(/&amp;/gi, '&');
-          const visible = decode(body.replace(/<script\b[\s\S]*?<\/script>/gi, ' ').replace(/<style\b[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
           const title = (body.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [,''])[1]
             .replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 160);
           const markers = [
@@ -45,14 +39,20 @@ jobs:
           ];
           const flags = Object.fromEntries(markers.map(([k,v]) => [k, body.includes(v) ? 1 : 0]));
           const hosts = [...new Set([...body.matchAll(/https:\/\/([A-Za-z0-9.-]+)/g)].map(m => m[1]))].sort();
-          const pos = visible.indexOf('官方指標範圍');
-          const snippet = pos >= 0 ? visible.slice(pos, pos + 100) : '';
+          const rawPos = body.indexOf('官方指標範圍');
+          const rawSnippet = rawPos >= 0 ? body.slice(rawPos, rawPos + 180) : '';
           console.log('PROBE_BODY_SHA256=' + crypto.createHash('sha256').update(body).digest('hex'));
           console.log('PROBE_TITLE=' + JSON.stringify(title));
           console.log('PROBE_MARKERS=' + JSON.stringify(flags));
-          console.log('PROBE_VISIBLE_19_REGEX=' + (/官方指標範圍\s*19\s*[\/／⁄]\s*19/.test(visible) ? 1 : 0));
-          console.log('PROBE_SCOPE_SNIPPET=' + JSON.stringify(snippet));
-          console.log('PROBE_19_VARIANTS=' + JSON.stringify({slash:body.includes('19/19'), fullwidth:body.includes('19 ／ 19'), fraction:body.includes('19 ⁄ 19'), spaced:body.includes('19 / 19')}));
+          console.log('PROBE_RAW_SCOPE_SNIPPET=' + JSON.stringify(rawSnippet));
+          console.log('PROBE_19_VARIANTS=' + JSON.stringify({
+            slash: body.includes('19/19'),
+            spaced: body.includes('19 / 19'),
+            escapedSlash: body.includes('19 \\/ 19'),
+            hexSlashLower: body.includes('19 \\x2f 19'),
+            hexSlashUpper: body.includes('19 \\x2F 19'),
+            unicodeSlash: body.includes('19 \\u002f 19') || body.includes('19 \\u002F 19')
+          }));
           console.log('PROBE_IFRAME_COUNT=' + (body.match(/<iframe\b/gi) || []).length);
           console.log('PROBE_GOOGLEUSERCONTENT=' + (body.includes('script.googleusercontent.com') ? 1 : 0));
           console.log('PROBE_ACCOUNTS_GOOGLE=' + (body.includes('accounts.google.com') ? 1 : 0));
