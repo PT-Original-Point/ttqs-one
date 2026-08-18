@@ -37,9 +37,17 @@ export const REQUIRED_PRODUCT_MARKERS = [
 
 export function normalizeAppsScriptHtmlServiceWrapper(source) {
   return String(source ?? '')
+    // HtmlService may serialize user HTML into a JS wrapper and escape
+    // punctuation even though the browser-visible text is semantically identical.
+    // Normalize only the narrow encodings required by our exact product markers.
     .replace(/\\\//g, '/')
     .replace(/\\x2[fF]/g, '/')
-    .replace(/\\u002[fF]/g, '/');
+    .replace(/\\u002[fF]/g, '/')
+    .replace(/\\x3[dD]/g, '=')
+    .replace(/\\u003[dD]/g, '=')
+    .replace(/&#0*61;/gi, '=')
+    .replace(/&#x0*3d;/gi, '=')
+    .replace(/&equals;/gi, '=');
 }
 
 export function classifyExternalBlackbox(source) {
