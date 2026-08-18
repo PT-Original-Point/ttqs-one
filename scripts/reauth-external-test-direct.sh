@@ -5,7 +5,6 @@ CLASP_VERSION="3.3.0"
 PROFILE="ttqs-external-test-direct"
 PROJECT_SCOPE="https://www.googleapis.com/auth/script.projects"
 DEPLOY_SCOPE="https://www.googleapis.com/auth/script.deployments"
-SHEETS_SCOPE="https://www.googleapis.com/auth/spreadsheets.readonly"
 RAW_BASE="https://raw.githubusercontent.com/PT-Original-Point/ttqs-one/main"
 TITLE="TTQS ONE External Evaluator Portal TEST"
 EXTERNAL_SCRIPT_ID_HINT="1hjS_1IZ3rqwCe8wxi3cICUu_zcVk1EPI2QRrrchEb3wh6ySJ_ZHAMrUA"
@@ -18,8 +17,6 @@ need() { command -v "$1" >/dev/null 2>&1 || fail "缺少必要工具：$1"; }
 need node
 need npx
 need curl
-need grep
-need sed
 need open
 
 node -e "const [maj]=process.versions.node.split('.').map(Number); if(maj<22) process.exit(1)" \
@@ -43,22 +40,19 @@ cat > "$AUTH_PROJECT_DIR/.clasp.json" <<'JSON'
 }
 JSON
 
-cat > "$AUTH_PROJECT_DIR/appsscript.json" <<JSON
+cat > "$AUTH_PROJECT_DIR/appsscript.json" <<'JSON'
 {
   "timeZone": "Asia/Taipei",
   "runtimeVersion": "V8",
-  "oauthScopes": [
-    "$SHEETS_SCOPE"
-  ]
+  "oauthScopes": []
 }
 JSON
 
 say "TTQS ONE｜External TEST 直接部署"
 say "這條流程不需要 GitHub CLI，也不要求 GitHub 裝置驗證。"
-say "只會要求 Google 3 個最小 scope："
-say "  1. spreadsheets.readonly"
-say "  2. script.projects"
-say "  3. script.deployments"
+say "只會要求 Google 2 個最小部署 scope："
+say "  1. script.projects"
+say "  2. script.deployments"
 say "REAL／PROD 不在本流程範圍。"
 say "本次固定續用既有 TEST Apps Script 專案與既有 deployment，不重複建立。"
 say "接下來若瀏覽器跳出 Google 授權頁，請使用協會 Google Workspace 部署帳號登入並同意。"
@@ -76,8 +70,11 @@ test -s "$AUTH_FILE" || fail "Google OAuth 已返回，但未產生授權檔。"
 chmod 600 "$AUTH_FILE"
 
 REST_HELPER="$TMP_ROOT/apps-script-rest-deploy.mjs"
+BLACKBOX_CLASSIFIER="$TMP_ROOT/external-blackbox-classifier.mjs"
 curl -fsSL "$RAW_BASE/scripts/apps-script-rest-deploy.mjs" -o "$REST_HELPER"
+curl -fsSL "$RAW_BASE/scripts/external-blackbox-classifier.mjs" -o "$BLACKBOX_CLASSIFIER"
 test -s "$REST_HELPER" || fail "無法取得 Apps Script REST 部署器。"
+test -s "$BLACKBOX_CLASSIFIER" || fail "無法取得 External TEST 黑箱分類器。"
 
 curl -fsSL "$RAW_BASE/external-viewer/Code.gs" -o "$PROJECT_DIR/Code.gs"
 curl -fsSL "$RAW_BASE/external-viewer/appsscript.json" -o "$PROJECT_DIR/appsscript.json"
@@ -148,19 +145,18 @@ HTML="$TMP_ROOT/portal.html"
 BLACKBOX="NOT_PASS"
 LAST_HTTP_STATUS="000"
 LAST_FINAL_URL=""
+LAST_MARKER_DIAGNOSTIC=""
 for attempt in 1 2 3 4 5 6; do
   CURL_META="$(curl -LsS --max-time 30 -o "$HTML" -w '%{http_code}|%{url_effective}' "$EXTERNAL_WEBAPP_URL" 2>/dev/null || true)"
   LAST_HTTP_STATUS="${CURL_META%%|*}"
   LAST_FINAL_URL="${CURL_META#*|}"
   if [ "$LAST_HTTP_STATUS" = "200" ]; then
-    if grep -q 'TTQS ONE · 測試／示範資料（TEST／SAMPLE）· EXTERNAL_READONLY' "$HTML" \
-      && grep -q '官方指標範圍' "$HTML" \
-      && grep -q '19 / 19' "$HTML" \
-      && grep -q 'SAMPLE 評核因果鏈' "$HTML" \
-      && grep -q '19 指標佐證與來源下鑽' "$HTML" \
-      && grep -q '查看佐證與來源' "$HTML"; then
+    if MARKER_OUTPUT="$(node "$BLACKBOX_CLASSIFIER" --html "$HTML" 2>&1)"; then
+      LAST_MARKER_DIAGNOSTIC="$MARKER_OUTPUT"
       BLACKBOX="PASS_PRODUCT_BLACKBOX"
       break
+    else
+      LAST_MARKER_DIAGNOSTIC="$MARKER_OUTPUT"
     fi
   fi
   sleep 5
@@ -175,12 +171,14 @@ if [ "$BLACKBOX" != "PASS_PRODUCT_BLACKBOX" ]; then
     say "anonymousFailure=HTTP_403_AFTER_PROVIDER_ANYONE_ANONYMOUS"
   elif [ "$LAST_HTTP_STATUS" = "200" ]; then
     say "anonymousFailure=HTTP_200_BUT_PRODUCT_MARKERS_MISSING"
+    test -n "$LAST_MARKER_DIAGNOSTIC" && say "anonymousMarkerDiagnostic=$LAST_MARKER_DIAGNOSTIC"
   else
     say "anonymousFailure=HTTP_$LAST_HTTP_STATUS"
   fi
   fail "Apps Script provider 已確認匿名權限設定，但產品黑箱仍未通過；請不要重跑，我們會依 HTTP 診斷繼續查。"
 fi
 
+say "$LAST_MARKER_DIAGNOSTIC"
 open "$EXTERNAL_WEBAPP_URL" >/dev/null 2>&1 || true
 say "PASS_PRODUCT_BLACKBOX"
 say "瀏覽器已嘗試開啟外部 TEST Portal。"
