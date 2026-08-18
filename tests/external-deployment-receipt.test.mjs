@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { nextReceiptBody, parseReceiptBody } from '../scripts/external-deployment-receipt.mjs';
+import { NOTES_MARKER, nextReceiptBody, parseReceiptBody } from '../scripts/external-deployment-receipt.mjs';
 
 const blankBody = `# Receipt\n\n<!-- TTQS_EXTERNAL_TEST_RECEIPT_V1 -->\n\`\`\`json\n${JSON.stringify({
   schema: 'TTQS_EXTERNAL_TEST_RECEIPT_V1',
@@ -24,6 +24,7 @@ test('RUNNING receipt is observable but never claims black-box PASS', () => {
   const receipt = parseReceiptBody(body);
   assert.equal(receipt.runStatus, 'RUNNING');
   assert.equal(receipt.sourceSha, sha);
+  assert.equal(receipt.verificationSha, sha);
   assert.equal(receipt.anonymousBlackbox, 'NOT_RUN');
   assert.equal(receipt.realProdTouch, 0);
   assert.match(body, /非 PASS 狀態不得解讀為成品驗收通過/);
@@ -65,8 +66,43 @@ test('PASS requires script, deployment and exact canonical webapp URL', () => {
   assert.equal(receipt.realProdTouch, 0);
 });
 
-test('receipt rejects REAL/PROD touch and invalid source SHA', () => {
+test('black-box-only verification keeps deployed source SHA distinct from verifier SHA', () => {
+  const deployedSha = 'c'.repeat(40);
+  const verifierSha = 'd'.repeat(40);
+  const body = nextReceiptBody(blankBody, 'PASS_PRODUCT_BLACKBOX', {
+    GITHUB_SHA: verifierSha,
+    EXTERNAL_RECEIPT_SOURCE_SHA: deployedSha,
+    EXTERNAL_SCRIPT_ID_RESOLVED: scriptId,
+    EXTERNAL_DEPLOYMENT_ID_RESOLVED: deploymentId,
+    EXTERNAL_WEBAPP_URL: webappUrl
+  });
+  const receipt = parseReceiptBody(body);
+  assert.equal(receipt.sourceSha, deployedSha);
+  assert.equal(receipt.verificationSha, verifierSha);
+  assert.notEqual(receipt.sourceSha, receipt.verificationSha);
+});
+
+test('control notes survive RUNNING, FAILED and PASS receipt rewrites', () => {
+  const notes = `${NOTES_MARKER}\n## Browser evidence\nkeep-this-cross-browser-SOP`;
+  const seeded = `${blankBody.trimEnd()}\n\n${notes}\n`;
+  const running = nextReceiptBody(seeded, 'RUNNING', { GITHUB_SHA: sha });
+  assert.match(running, /keep-this-cross-browser-SOP/);
+  const failed = nextReceiptBody(running, 'FAILED', { GITHUB_SHA: 'b'.repeat(40) });
+  assert.match(failed, /keep-this-cross-browser-SOP/);
+  const passed = nextReceiptBody(failed, 'PASS_PRODUCT_BLACKBOX', {
+    GITHUB_SHA: 'c'.repeat(40),
+    EXTERNAL_SCRIPT_ID_RESOLVED: scriptId,
+    EXTERNAL_DEPLOYMENT_ID_RESOLVED: deploymentId,
+    EXTERNAL_WEBAPP_URL: webappUrl
+  });
+  assert.match(passed, /keep-this-cross-browser-SOP/);
+  assert.equal(passed.split(NOTES_MARKER).length - 1, 1);
+});
+
+test('receipt rejects REAL/PROD touch and invalid source or verification SHA', () => {
   const polluted = blankBody.replace('"realProdTouch": 0', '"realProdTouch": 1');
   assert.throws(() => parseReceiptBody(polluted), /REAL_PROD_TOUCH_INVALID/);
   assert.throws(() => nextReceiptBody(blankBody, 'RUNNING', { GITHUB_SHA: 'not-a-sha' }), /SOURCE_SHA_INVALID/);
+  const badVerification = blankBody.replace('"realProdTouch": 0', '"verificationSha": "bad",\n  "realProdTouch": 0');
+  assert.throws(() => parseReceiptBody(badVerification), /VERIFICATION_SHA_INVALID/);
 });
