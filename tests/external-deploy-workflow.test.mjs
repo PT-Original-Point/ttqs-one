@@ -50,7 +50,8 @@ test('OAuth credential material is decoded into runner temp and checked before p
 
 test('verifier-only deploy/test pushes skip OAuth and all provider mutation', () => {
   assert.match(source, /git diff --quiet "\$BEFORE" "\$GITHUB_SHA" -- external-viewer/);
-  assert.match(source, /EXTERNAL_FULL_DEPLOY=0/);
+  assert.match(source, /FULL_DEPLOY=0/);
+  assert.match(source, /EXTERNAL_FULL_DEPLOY="\$FULL_DEPLOY"/);
   assert.match(source, /BLACKBOX_ONLY_NO_PROVIDER_MUTATION/);
   assert.match(source, /EXTERNAL_RECEIPT_SOURCE_SHA/);
   const guarded = source.match(/if: env\.EXTERNAL_FULL_DEPLOY == '1'/g) || [];
