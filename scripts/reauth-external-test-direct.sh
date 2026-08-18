@@ -8,6 +8,7 @@ DEPLOY_SCOPE="https://www.googleapis.com/auth/script.deployments"
 SHEETS_SCOPE="https://www.googleapis.com/auth/spreadsheets.readonly"
 RAW_BASE="https://raw.githubusercontent.com/PT-Original-Point/ttqs-one/main"
 TITLE="TTQS ONE External Evaluator Portal TEST"
+EXTERNAL_SCRIPT_ID_HINT="1hjS_1IZ3rqwCe8wxi3cICUu_zcVk1EPI2QRrrchEb3wh6ySJ_ZHAMrUA"
 
 say() { printf '%s\n' "$*"; }
 fail() { printf 'ERROR: %s\n' "$*" >&2; exit 1; }
@@ -28,19 +29,20 @@ cleanup() { rm -rf "$TMP_ROOT"; }
 trap cleanup EXIT INT TERM
 
 AUTH_HOME="$TMP_ROOT/home"
+AUTH_PROJECT_DIR="$TMP_ROOT/auth-project"
 PROJECT_DIR="$TMP_ROOT/project"
 ENV_FILE="$TMP_ROOT/deploy.env"
-mkdir -p "$AUTH_HOME" "$PROJECT_DIR"
+mkdir -p "$AUTH_HOME" "$AUTH_PROJECT_DIR" "$PROJECT_DIR"
 chmod 700 "$AUTH_HOME"
 
-cat > "$PROJECT_DIR/.clasp.json" <<'JSON'
+cat > "$AUTH_PROJECT_DIR/.clasp.json" <<'JSON'
 {
   "scriptId": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
   "rootDir": "."
 }
 JSON
 
-cat > "$PROJECT_DIR/appsscript.json" <<JSON
+cat > "$AUTH_PROJECT_DIR/appsscript.json" <<JSON
 {
   "timeZone": "Asia/Taipei",
   "runtimeVersion": "V8",
@@ -57,10 +59,11 @@ say "  1. spreadsheets.readonly"
 say "  2. script.projects"
 say "  3. script.deployments"
 say "REAL／PROD 不在本流程範圍。"
+say "本次會優先續用既有 TEST Apps Script 專案，不重複建立新專案。"
 say "接下來若瀏覽器跳出 Google 授權頁，請使用協會 Google Workspace 部署帳號登入並同意。"
 
 (
-  cd "$PROJECT_DIR"
+  cd "$AUTH_PROJECT_DIR"
   HOME="$AUTH_HOME" npx --yes "@google/clasp@$CLASP_VERSION" login \
     --user "$PROFILE" \
     --use-project-scopes \
@@ -84,23 +87,25 @@ AUTH_OUTPUT="$(node "$REST_HELPER" auth-check --credentials "$AUTH_FILE")" \
   || fail "Google OAuth scope 或 refresh token 驗證未通過。"
 case "$AUTH_OUTPUT" in
   *AUTH_MINIMAL_SCOPE_PASS*) ;;
-  *) fail "Apps Script REST 部署器未真正執行 auth-check；已停止在任何專案建立之前。" ;;
+  *) fail "Apps Script REST 部署器未真正執行 auth-check；已停止在任何專案變更之前。" ;;
 esac
 say "$AUTH_OUTPUT"
 
 : > "$ENV_FILE"
 ENSURE_OUTPUT="$(node "$REST_HELPER" ensure-project \
   --credentials "$AUTH_FILE" \
-  --script-id "" \
+  --script-id "$EXTERNAL_SCRIPT_ID_HINT" \
   --title "$TITLE" \
   --env-file "$ENV_FILE")" \
-  || fail "Apps Script 專案建立／讀回失敗。"
+  || fail "既有 Apps Script TEST 專案讀回失敗；已停止，未建立第二個專案。"
 say "$ENSURE_OUTPUT"
 test -s "$ENV_FILE" || fail "Apps Script REST 部署器沒有寫入專案收據；已停止，請勿盲目重跑。"
 
 # shellcheck disable=SC1090
 source "$ENV_FILE"
-test -n "${EXTERNAL_SCRIPT_ID_RESOLVED:-}" || fail "Apps Script 專案建立後讀回 scriptId 失敗。"
+test -n "${EXTERNAL_SCRIPT_ID_RESOLVED:-}" || fail "Apps Script TEST 專案讀回 scriptId 失敗。"
+test "$EXTERNAL_SCRIPT_ID_RESOLVED" = "$EXTERNAL_SCRIPT_ID_HINT" || fail "Apps Script TEST 專案 identity 漂移。"
+test "${EXTERNAL_MODE:-}" = "REUSE" || fail "Apps Script TEST 專案未以 REUSE 模式執行；已停止避免重複 bootstrap。"
 
 PUSH_OUTPUT="$(node "$REST_HELPER" push-content \
   --credentials "$AUTH_FILE" \

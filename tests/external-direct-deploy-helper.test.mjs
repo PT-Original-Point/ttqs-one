@@ -23,6 +23,25 @@ test('direct helper uses isolated temporary HOME and cleans credentials', () => 
   assert.match(helper, /rm -rf "\$TMP_ROOT"/);
 });
 
+test('direct helper isolates clasp auth project from canonical push project', () => {
+  assert.match(helper, /AUTH_PROJECT_DIR="\$TMP_ROOT\/auth-project"/);
+  assert.match(helper, /PROJECT_DIR="\$TMP_ROOT\/project"/);
+  assert.match(helper, /cat > "\$AUTH_PROJECT_DIR\/\.clasp\.json"/);
+  assert.match(helper, /cat > "\$AUTH_PROJECT_DIR\/appsscript\.json"/);
+  assert.match(helper, /cd "\$AUTH_PROJECT_DIR"/);
+  assert.match(helper, /"\$PROJECT_DIR\/Code\.gs"/);
+  assert.match(helper, /"\$PROJECT_DIR\/appsscript\.json"/);
+  assert.doesNotMatch(helper, /cat > "\$PROJECT_DIR\/\.clasp\.json"/);
+});
+
+test('direct helper reuses the already-created TEST Apps Script project and refuses duplicate bootstrap', () => {
+  assert.match(helper, /EXTERNAL_SCRIPT_ID_HINT="1hjS_1IZ3rqwCe8wxi3cICUu_zcVk1EPI2QRrrchEb3wh6ySJ_ZHAMrUA"/);
+  assert.match(helper, /--script-id "\$EXTERNAL_SCRIPT_ID_HINT"/);
+  assert.match(helper, /EXTERNAL_MODE:-.*REUSE/);
+  assert.match(helper, /未建立第二個專案/);
+  assert.doesNotMatch(helper, /--script-id ""/);
+});
+
 test('direct helper requests only three minimal Google scopes', () => {
   assert.match(helper, /spreadsheets\.readonly/);
   assert.match(helper, /script\.projects/);
