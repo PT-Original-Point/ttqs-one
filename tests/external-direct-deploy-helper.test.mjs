@@ -43,6 +43,18 @@ test('direct helper downloads canonical main artifacts and uses REST deployer', 
   assert.match(helper, /deploy/);
 });
 
+test('direct helper fails closed if REST CLI silently does not execute', () => {
+  assert.match(helper, /AUTH_OUTPUT=/);
+  assert.match(helper, /AUTH_MINIMAL_SCOPE_PASS/);
+  assert.match(helper, /未真正執行 auth-check/);
+  assert.match(helper, /ENSURE_OUTPUT=/);
+  assert.match(helper, /test -s "\$ENV_FILE"/);
+  assert.match(helper, /沒有寫入專案收據/);
+  assert.match(helper, /PUSH_OUTPUT=/);
+  assert.match(helper, /EXTERNAL_CONTENT_PUSH_READBACK_PASS/);
+  assert.match(helper, /DEPLOY_OUTPUT=/);
+});
+
 test('direct helper is TEST-only and proves anonymous product markers', () => {
   assert.match(helper, /realProdTouch=0/);
   assert.match(helper, /EXTERNAL_READONLY/);
