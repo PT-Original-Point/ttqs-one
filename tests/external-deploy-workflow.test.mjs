@@ -15,12 +15,14 @@ test('external TEST workflow requires source SHA to already be in main', () => {
   assert.match(source, /git merge-base --is-ancestor "\$GITHUB_SHA" origin\/main/);
 });
 
-test('external deploy is isolated to external-viewer and anonymous read-only manifest', () => {
+test('external deploy is isolated to zero-runtime-permission external-viewer', () => {
   assert.match(source, /--root-dir external-viewer/);
   assert.match(source, /ANYONE_ANONYMOUS/);
   assert.match(source, /USER_DEPLOYING/);
-  assert.match(source, /spreadsheets\.readonly/);
-  assert.match(source, /enabledAdvancedServices/);
+  assert.match(source, /EXTERNAL_RUNTIME_OAUTH_SCOPE_FORBIDDEN/);
+  assert.match(source, /EXTERNAL_RUNTIME_ADVANCED_SERVICE_FORBIDDEN/);
+  assert.match(source, /EXTERNAL_RUNTIME_GOOGLE_DATA_API_FORBIDDEN/);
+  assert.doesNotMatch(source, /spreadsheets\.readonly|enabledAdvancedServices/);
   assert.doesNotMatch(source, /--root-dir apps-script/);
 });
 
@@ -35,7 +37,7 @@ test('deployment no longer invokes clasp in CI and uses tested Apps Script REST 
   assert.match(source, /scripts\/apps-script-rest-deploy\.mjs ensure-project/);
   assert.match(source, /scripts\/apps-script-rest-deploy\.mjs push-content/);
   assert.match(source, /scripts\/apps-script-rest-deploy\.mjs deploy/);
-  assert.match(source, /Apps Script REST API with minimal user OAuth scopes/);
+  assert.match(source, /Apps Script REST API with minimal deployment OAuth contract/);
 });
 
 test('OAuth credential material is decoded into runner temp and checked before provider mutation', () => {
@@ -46,13 +48,12 @@ test('OAuth credential material is decoded into runner temp and checked before p
   assert.ok(authCheck >= 0 && ensureProject > authCheck);
 });
 
-test('external deployment requires anonymous product black-box proof', () => {
+test('external deployment requires normalized anonymous product black-box proof', () => {
   assert.match(source, /Anonymous product black-box probe/);
-  assert.match(source, /SAMPLE 評核因果鏈/);
-  assert.match(source, /查看佐證與來源/);
-  assert.match(source, /EXTERNAL_READONLY/);
+  assert.match(source, /scripts\/external-blackbox-classifier\.mjs --html external-page\.html/);
   assert.match(source, /EXTERNAL_PRODUCT_BLACKBOX_PASS/);
-  assert.match(source, /19 \/ 19/);
+  assert.match(source, /EXTERNAL_PRODUCT_BLACKBOX_FAIL status=/);
+  assert.doesNotMatch(source, /grep -Fq '19 \/ 19'/);
 });
 
 test('deployment lifecycle is observable through TEST control issue', () => {
