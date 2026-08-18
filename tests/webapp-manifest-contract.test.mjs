@@ -17,10 +17,12 @@ test('外部 Viewer 使用匿名唯讀 Web App 設定', () => {
   assert.deepEqual(external.webapp, { access: 'ANYONE_ANONYMOUS', executeAs: 'USER_DEPLOYING' });
 });
 
-test('外部 Viewer OAuth scope 仍只有 spreadsheets.readonly', () => {
-  assert.deepEqual(external.oauthScopes, ['https://www.googleapis.com/auth/spreadsheets.readonly']);
+test('外部 Viewer 不宣告 Google 資料執行期 OAuth scope', () => {
+  assert.equal(Object.hasOwn(external, 'oauthScopes'), false);
 });
 
-test('外部 Viewer 不取得核心寫入或 Drive scope', () => {
-  assert.equal(external.oauthScopes.some((scope) => scope === 'https://www.googleapis.com/auth/spreadsheets' || scope.includes('/auth/drive')), false);
+test('外部 Viewer 不啟用進階服務或 Google 資料 API 相依', () => {
+  assert.equal(Object.hasOwn(external, 'dependencies'), false);
+  const serialized = JSON.stringify(external);
+  assert.doesNotMatch(serialized, /spreadsheets|drive|enabledAdvancedServices|executionApi/);
 });

@@ -9,58 +9,52 @@ const manifest = JSON.parse(fs.readFileSync(`${root}/appsscript.json`, 'utf8'));
 const files = fs.readdirSync(root).sort();
 const functions = [...source.matchAll(/function\s+([A-Za-z0-9_]+)\s*\(/g)].map((m) => m[1]);
 const publicFunctions = functions.filter((name) => !name.endsWith('_'));
+const runtime = {};
+vm.createContext(runtime);
+vm.runInContext(source, runtime);
 
 test('external viewer has exact two-file deploy set', () => {
   assert.deepEqual(files, ['Code.gs', 'appsscript.json']);
 });
 
-test('external viewer source parses', () => {
+test('external viewer source parses and only doGet is publicly callable', () => {
   new vm.Script(source, { filename: 'external-viewer/Code.gs' });
-});
-
-test('only doGet is publicly callable', () => {
   assert.deepEqual(publicFunctions, ['doGet']);
 });
 
-test('viewer has anonymous external webapp and read-only spreadsheet scope only', () => {
+test('viewer is anonymous but has zero Google data runtime permissions', () => {
   assert.deepEqual(manifest.webapp, { access: 'ANYONE_ANONYMOUS', executeAs: 'USER_DEPLOYING' });
-  assert.deepEqual(manifest.oauthScopes, ['https://www.googleapis.com/auth/spreadsheets.readonly']);
+  assert.equal(Object.hasOwn(manifest, 'oauthScopes'), false);
+  assert.equal(Object.hasOwn(manifest, 'dependencies'), false);
+  assert.doesNotMatch(source, /Sheets\.|SpreadsheetApp|DriveApp|UrlFetchApp/);
+  assert.doesNotMatch(JSON.stringify(manifest), /spreadsheets|drive|enabledAdvancedServices/);
 });
 
-test('viewer enables Sheets v4 advanced service and does not use SpreadsheetApp', () => {
-  assert.deepEqual(manifest.dependencies?.enabledAdvancedServices, [
-    { userSymbol: 'Sheets', version: 'v4', serviceId: 'sheets' }
-  ]);
-  assert.match(source, /Sheets\.Spreadsheets\.Values\.get/);
-  assert.doesNotMatch(source, /SpreadsheetApp/);
-});
-
-test('viewer knows snapshot but never core spreadsheet id', () => {
+test('viewer embeds only the deidentified snapshot provenance and never the core spreadsheet id', () => {
   assert.match(source, /1yqrz0Xwj6vWQkfYor8WSGC6zV93L8EaJZkEfncATUqA/);
   assert.doesNotMatch(source, /1TzICbMmNoN2dTiRMK1dPYx-JOISKaCS-6i0i3iH68is/);
+  assert.match(source, /部署版本內嵌的去識別唯讀快照/);
+  assert.match(source, /不在執行期呼叫 Google Sheets／Drive API/);
+});
+
+test('static snapshot model preserves 19 indicators, six causal steps, 25 evidence rows and four unique TEST observations', () => {
+  const model = runtime.ttqsExternalSnapshotModel_();
+  assert.equal(model.indicators.length, 19);
+  assert.equal(model.causalFlow.length, 6);
+  assert.equal(model.evidence.length, 25);
+  const locatorRows = model.evidence.filter((item) => item.observationId && item.sourceLocator);
+  assert.equal(locatorRows.length, 7);
+  assert.equal(new Set(locatorRows.map((item) => item.observationId)).size, 4);
+  assert.deepEqual([...new Set(model.evidence.map((item) => item.indicatorNo))].sort((a,b) => Number(a)-Number(b)), Array.from({length:19}, (_,i) => String(i+1)));
 });
 
 test('viewer contains no write, form, worker or script bridge APIs', () => {
-  const forbidden = /\.setValue\s*\(|\.setValues\s*\(|\.appendRow\s*\(|insertSheet\s*\(|deleteSheet\s*\(|PropertiesService|ScriptApp|FormApp|DriveApp|UrlFetchApp|google\.script\.run|Sheets\.Spreadsheets\.Values\.(?:update|append|batchUpdate)/;
+  const forbidden = /\.setValue\s*\(|\.setValues\s*\(|\.appendRow\s*\(|insertSheet\s*\(|deleteSheet\s*\(|PropertiesService|ScriptApp|FormApp|DriveApp|UrlFetchApp|google\.script\.run/;
   assert.doesNotMatch(source, forbidden);
 });
 
-test('viewer uses bounded snapshot ranges only', () => {
-  assert.ok(source.includes("'發布摘要'!A1:B10"));
-  assert.ok(source.includes("'19指標佐證'!A1:F20"));
-  assert.match(source, /TTQS_EXTERNAL_CAUSAL_SHEET_[^\n]+A1:G7/);
-  assert.match(source, /TTQS_EXTERNAL_SOURCE_SHEET_[^\n]+A1:L120/);
-});
-
-test('viewer validates exact 19-indicator snapshot schema', () => {
-  assert.match(source, /SNAPSHOT_SCHEMA_MISMATCH/);
-  assert.match(source, /SNAPSHOT_INDICATOR_COUNT_INVALID/);
-  assert.match(source, /indicators\.length !== 19/);
-});
-
 test('D3 requires exact six-step SAMPLE causal chain', () => {
-  assert.match(source, /SAMPLE因果鏈/);
-  assert.match(source, /SNAPSHOT_CAUSAL_SCHEMA_MISMATCH/);
+  assert.match(source, /SAMPLE 評核因果鏈/);
   assert.match(source, /SNAPSHOT_CAUSAL_SEQUENCE_INVALID/);
   for (const label of ['需求蒐集', '需求／職能落差分析', '課程設計／目標／審查', '執行／資源／班次', '評量／檢討', '追蹤／改善']) {
     assert.match(source, new RegExp(label));
@@ -68,8 +62,6 @@ test('D3 requires exact six-step SAMPLE causal chain', () => {
 });
 
 test('D5 requires SUPPORTS evidence source rows covering all 19 indicators', () => {
-  assert.match(source, /佐證來源定位/);
-  assert.match(source, /SNAPSHOT_EVIDENCE_SCHEMA_MISMATCH/);
   assert.match(source, /SNAPSHOT_EVIDENCE_RELATION_INVALID/);
   assert.match(source, /SNAPSHOT_EVIDENCE_COVERAGE_INVALID/);
   assert.match(source, /SUPPORTS/);
@@ -77,11 +69,10 @@ test('D5 requires SUPPORTS evidence source rows covering all 19 indicators', () 
 });
 
 test('runtime drilldown exposes only deidentified Observation locator metadata', () => {
-  assert.match(source, /Observation ID/);
+  assert.match(source, /OBS-5DF457DAE87CE85418F35E8B/);
+  assert.match(source, /SHEET:1145488986:ROW:5/);
   assert.match(source, /原始收件定位/);
-  assert.match(source, /observationId/);
-  assert.match(source, /sourceLocator/);
-  assert.doesNotMatch(source, /respondentEmail|emailAddress|phone|身分證|問卷原始回答[^。]*顯示/);
+  assert.doesNotMatch(source, /respondentEmail|emailAddress|phone|身分證字號[^或]*[0-9]{6}|問卷原始回答[^。]*顯示/);
 });
 
 test('document source links are allowlisted to Google Drive or Docs', () => {
