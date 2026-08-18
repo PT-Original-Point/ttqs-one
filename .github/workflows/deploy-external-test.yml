@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - deploy/test
+  workflow_dispatch:
 
 concurrency:
   group: ttqs-one-deploy-external-test
