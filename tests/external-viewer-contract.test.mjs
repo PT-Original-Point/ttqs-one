@@ -27,14 +27,28 @@ test('viewer has anonymous external webapp and read-only spreadsheet scope only'
   assert.deepEqual(manifest.oauthScopes, ['https://www.googleapis.com/auth/spreadsheets.readonly']);
 });
 
+test('viewer enables Sheets v4 advanced service and does not use SpreadsheetApp', () => {
+  assert.deepEqual(manifest.dependencies?.enabledAdvancedServices, [
+    { userSymbol: 'Sheets', version: 'v4', serviceId: 'sheets' }
+  ]);
+  assert.match(source, /Sheets\.Spreadsheets\.Values\.get/);
+  assert.doesNotMatch(source, /SpreadsheetApp/);
+});
+
 test('viewer knows snapshot but never core spreadsheet id', () => {
   assert.match(source, /1yqrz0Xwj6vWQkfYor8WSGC6zV93L8EaJZkEfncATUqA/);
   assert.doesNotMatch(source, /1TzICbMmNoN2dTiRMK1dPYx-JOISKaCS-6i0i3iH68is/);
 });
 
 test('viewer contains no write, form, worker or script bridge APIs', () => {
-  const forbidden = /\.setValue\s*\(|\.setValues\s*\(|\.appendRow\s*\(|insertSheet\s*\(|deleteSheet\s*\(|PropertiesService|ScriptApp|FormApp|DriveApp|UrlFetchApp|google\.script\.run/;
+  const forbidden = /\.setValue\s*\(|\.setValues\s*\(|\.appendRow\s*\(|insertSheet\s*\(|deleteSheet\s*\(|PropertiesService|ScriptApp|FormApp|DriveApp|UrlFetchApp|google\.script\.run|Sheets\.Spreadsheets\.Values\.(?:update|append|batchUpdate)/;
   assert.doesNotMatch(source, forbidden);
+});
+
+test('viewer uses bounded snapshot ranges only', () => {
+  for (const range of ["'發布摘要'!A1:B10", "'19指標佐證'!A1:F20", "'SAMPLE因果鏈'!A1:G7", "'佐證來源定位'!A1:L120"]) {
+    assert.match(source, new RegExp(range.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')));
+  }
 });
 
 test('viewer validates exact 19-indicator snapshot schema', () => {
