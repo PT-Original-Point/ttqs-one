@@ -40,7 +40,34 @@ jobs:
           test "$GITHUB_REF" = "refs/heads/deploy/test"
           git fetch origin main --no-tags
           git merge-base --is-ancestor "$GITHUB_SHA" origin/main
-          printf 'External TEST deploy source SHA: %s\n' "$GITHUB_SHA"
+          printf 'External TEST control source SHA: %s\n' "$GITHUB_SHA"
+
+      - name: Read durable receipt and select provider mutation mode
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh issue view "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --json body --jq .body > external-receipt-body.md
+
+          FULL_DEPLOY=1
+          if test "$GITHUB_EVENT_NAME" = "push"; then
+            BEFORE="${{ github.event.before }}"
+            if [[ "$BEFORE" =~ ^[0-9a-f]{40}$ ]] && test "$BEFORE" != "0000000000000000000000000000000000000000"; then
+              if git diff --quiet "$BEFORE" "$GITHUB_SHA" -- external-viewer; then
+                FULL_DEPLOY=0
+              fi
+            fi
+          fi
+          export EXTERNAL_FULL_DEPLOY="$FULL_DEPLOY"
+
+          node --input-type=module -e "import fs from 'node:fs'; import {parseReceiptBody} from './scripts/external-deployment-receipt.mjs'; const r=parseReceiptBody(fs.readFileSync('external-receipt-body.md','utf8')); const s=String(r.scriptId||''); const d=String(r.deploymentId||''); const u=String(r.webappUrl||''); const src=String(r.sourceSha||''); const full=process.env.EXTERNAL_FULL_DEPLOY==='1'; if(s&&!/^[A-Za-z0-9_-]{20,}$/.test(s)) throw new Error('EXTERNAL_RECEIPT_SCRIPT_ID_INVALID'); if(d&&!/^AKfy[A-Za-z0-9_-]+$/.test(d)) throw new Error('EXTERNAL_RECEIPT_DEPLOYMENT_ID_INVALID'); if(d&&!s) throw new Error('EXTERNAL_RECEIPT_DEPLOYMENT_WITHOUT_SCRIPT'); if(u&&(!d||u!=='https://script.google.com/macros/s/'+d+'/exec')) throw new Error('EXTERNAL_RECEIPT_WEBAPP_URL_INVALID'); if(!full){ if(!/^[0-9a-f]{40}$/.test(src)) throw new Error('EXTERNAL_RECEIPT_SOURCE_SHA_INVALID'); if(!s||!d||!u) throw new Error('EXTERNAL_BLACKBOX_ONLY_IDENTITY_REQUIRED'); } const lines=['EXTERNAL_FULL_DEPLOY='+(full?'1':'0'),'EXTERNAL_SCRIPT_ID='+s,'EXTERNAL_SCRIPT_ID_RESOLVED='+s,'EXTERNAL_DEPLOYMENT_ID='+d,'EXTERNAL_DEPLOYMENT_ID_RESOLVED='+d,'EXTERNAL_WEBAPP_URL='+u]; if(!full) lines.push('EXTERNAL_RECEIPT_SOURCE_SHA='+src); fs.appendFileSync(process.env.GITHUB_ENV,lines.join('\\n')+'\\n');"
+
+          if test "$FULL_DEPLOY" = "1"; then
+            echo 'EXTERNAL_DEPLOY_MODE=FULL_PROVIDER_MUTATION'
+          else
+            echo 'EXTERNAL_DEPLOY_MODE=BLACKBOX_ONLY_NO_PROVIDER_MUTATION'
+          fi
 
       - name: Mark external deployment receipt RUNNING
         shell: bash
@@ -61,6 +88,7 @@ jobs:
           node -e "const fs=require('fs'); const manifest=JSON.parse(fs.readFileSync('external-viewer/appsscript.json','utf8')); const code=fs.readFileSync('external-viewer/Code.gs','utf8'); if(manifest.webapp?.access!=='ANYONE_ANONYMOUS') throw new Error('EXTERNAL_ACCESS_NOT_ANONYMOUS'); if(manifest.webapp?.executeAs!=='USER_DEPLOYING') throw new Error('EXTERNAL_EXECUTION_IDENTITY_INVALID'); if(Object.hasOwn(manifest,'oauthScopes')) throw new Error('EXTERNAL_RUNTIME_OAUTH_SCOPE_FORBIDDEN'); if(Object.hasOwn(manifest,'dependencies')) throw new Error('EXTERNAL_RUNTIME_ADVANCED_SERVICE_FORBIDDEN'); if(/Sheets\\.|SpreadsheetApp|DriveApp|UrlFetchApp/.test(code)) throw new Error('EXTERNAL_RUNTIME_GOOGLE_DATA_API_FORBIDDEN'); const files=fs.readdirSync('external-viewer').sort(); if(JSON.stringify(files)!==JSON.stringify(['Code.gs','appsscript.json'])) throw new Error('EXTERNAL_PUSH_SET_INVALID');"
 
       - name: Restore TEST OAuth credential material
+        if: env.EXTERNAL_FULL_DEPLOY == '1'
         shell: bash
         env:
           CLASPRC_JSON_B64: ${{ secrets.CLASPRC_JSON_B64 }}
@@ -73,21 +101,14 @@ jobs:
           echo "EXTERNAL_OAUTH_FILE=$OAUTH_FILE" >> "$GITHUB_ENV"
 
       - name: Verify minimal OAuth deployment contract
+        if: env.EXTERNAL_FULL_DEPLOY == '1'
         shell: bash
         run: |
           set -euo pipefail
           node scripts/apps-script-rest-deploy.mjs auth-check --credentials "$EXTERNAL_OAUTH_FILE"
 
-      - name: Read durable external deployment receipt
-        shell: bash
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
-          gh issue view "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --json body --jq .body > external-receipt-body.md
-          node --input-type=module -e "import fs from 'node:fs'; import {parseReceiptBody} from './scripts/external-deployment-receipt.mjs'; const r=parseReceiptBody(fs.readFileSync('external-receipt-body.md','utf8')); const s=String(r.scriptId||''); const d=String(r.deploymentId||''); if(s&&!/^[A-Za-z0-9_-]{20,}$/.test(s)) throw new Error('EXTERNAL_RECEIPT_SCRIPT_ID_INVALID'); if(d&&!/^AKfy[A-Za-z0-9_-]+$/.test(d)) throw new Error('EXTERNAL_RECEIPT_DEPLOYMENT_ID_INVALID'); if(d&&!s) throw new Error('EXTERNAL_RECEIPT_DEPLOYMENT_WITHOUT_SCRIPT'); fs.appendFileSync(process.env.GITHUB_ENV,'EXTERNAL_SCRIPT_ID='+s+'\\nEXTERNAL_DEPLOYMENT_ID='+d+'\\n');"
-
       - name: Recover or bootstrap external TEST Apps Script project via REST
+        if: env.EXTERNAL_FULL_DEPLOY == '1'
         shell: bash
         run: |
           set -euo pipefail
@@ -98,6 +119,7 @@ jobs:
             --env-file "$GITHUB_ENV"
 
       - name: Persist external script identity before content push
+        if: env.EXTERNAL_FULL_DEPLOY == '1'
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
@@ -108,6 +130,7 @@ jobs:
           gh issue edit "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file external-receipt-next.md
 
       - name: Push external TEST viewer via Apps Script REST
+        if: env.EXTERNAL_FULL_DEPLOY == '1'
         shell: bash
         run: |
           set -euo pipefail
@@ -117,6 +140,7 @@ jobs:
             --root-dir external-viewer
 
       - name: Create or update external TEST web app deployment via REST
+        if: env.EXTERNAL_FULL_DEPLOY == '1'
         shell: bash
         run: |
           set -euo pipefail
@@ -129,6 +153,7 @@ jobs:
             --env-file "$GITHUB_ENV"
 
       - name: Persist external deployment identity before black-box probe
+        if: env.EXTERNAL_FULL_DEPLOY == '1'
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
@@ -180,15 +205,18 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          DEPLOYED_SOURCE_SHA="${EXTERNAL_RECEIPT_SOURCE_SHA:-$GITHUB_SHA}"
+          if test "$EXTERNAL_FULL_DEPLOY" = "1"; then MODE='FULL_PROVIDER_MUTATION'; else MODE='BLACKBOX_ONLY_NO_PROVIDER_MUTATION'; fi
           {
-            echo '## TTQS ONE External TEST deployment'
+            echo '## TTQS ONE External TEST deployment / verification'
             echo
-            echo "- Source SHA: $GITHUB_SHA"
+            echo "- Deployed source SHA: $DEPLOYED_SOURCE_SHA"
+            echo "- Verification SHA: $GITHUB_SHA"
+            echo "- Mode: $MODE"
             echo "- Script ID: $EXTERNAL_SCRIPT_ID_RESOLVED"
             echo "- Deployment ID: $EXTERNAL_DEPLOYMENT_ID_RESOLVED"
-            echo "- Version: $EXTERNAL_VERSION_NUMBER"
             echo "- URL: $EXTERNAL_WEBAPP_URL"
-            echo '- Provider path: Apps Script REST API with minimal deployment OAuth contract'
+            echo '- Provider path when mutation is required: Apps Script REST API with minimal deployment OAuth contract'
             echo '- Access: ANYONE_ANONYMOUS'
             echo '- Execute as: USER_DEPLOYING'
             echo '- Data: TEST/SAMPLE deidentified static snapshot only'

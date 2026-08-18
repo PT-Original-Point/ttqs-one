@@ -7,6 +7,11 @@ function sha256File(file) {
   return crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
 }
 
+function hashDebug(value) {
+  const text = String(value);
+  return `${text}(len=${text.length},asciiHex=${Buffer.from(text, 'ascii').toString('hex')})`;
+}
+
 function normalizeRepoPath(input) {
   let rel = String(input || '').trim();
   if (rel.startsWith('./')) rel = rel.slice(2);
@@ -63,7 +68,7 @@ for (const line of lines) {
     continue;
   }
   const actual = sha256File(rel);
-  if (actual !== expected) errors.push(`HASH_MISMATCH:${rel}:expected=${expected}:actual=${actual}`);
+  if (actual !== expected) errors.push(`HASH_MISMATCH:${rel}:expected=${hashDebug(expected)}:actual=${hashDebug(actual)}`);
 }
 
 const tracked = trackedFiles();
@@ -94,7 +99,7 @@ if (!selfMatch) {
   errors.push('INVALID_MANIFEST_SELF_LINE');
 } else {
   const actualSelf = sha256File(manifestPath);
-  if (actualSelf !== selfMatch[1]) errors.push(`MANIFEST_SELF_MISMATCH:expected=${selfMatch[1]}:actual=${actualSelf}`);
+  if (actualSelf !== selfMatch[1]) errors.push(`MANIFEST_SELF_MISMATCH:expected=${hashDebug(selfMatch[1])}:actual=${hashDebug(actualSelf)}`);
 }
 
 if (errors.length) {
