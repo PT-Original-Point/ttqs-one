@@ -16,6 +16,39 @@ jobs:
         with:
           node-version: '22'
           cache: npm
+      - name: Diagnostic probe external TEST HTTP 200
+        shell: bash
+        run: |
+          set -euo pipefail
+          url='https://script.google.com/macros/s/AKfycbznbXi-0XWNV68E-vGU9CiAE6ElXGIlDmy27EePXMdGpRaorURzKZq0dDgsNBaaZOLh/exec'
+          curl -LsS --max-time 30 -D /tmp/ttqs-headers -o /tmp/ttqs-body -w 'PROBE_HTTP=%{http_code}\nPROBE_FINAL_URL=%{url_effective}\nPROBE_CONTENT_TYPE=%{content_type}\nPROBE_SIZE=%{size_download}\nPROBE_REDIRECTS=%{num_redirects}\n' "$url"
+          node <<'NODE'
+          const fs = require('fs');
+          const crypto = require('crypto');
+          const body = fs.readFileSync('/tmp/ttqs-body', 'utf8');
+          const title = (body.match(/<title[^>]*>([\s\S]*?)<\/title>/i) || [,''])[1]
+            .replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 160);
+          const markers = [
+            ['eyebrow','TTQS ONE · 測試／示範資料（TEST／SAMPLE）· EXTERNAL_READONLY'],
+            ['scope','官方指標範圍'],
+            ['nineteen','19 / 19'],
+            ['causal','SAMPLE 評核因果鏈'],
+            ['drilldown','19 指標佐證與來源下鑽'],
+            ['details','查看佐證與來源'],
+            ['friendly_error','目前無法載入唯讀快照']
+          ];
+          const flags = Object.fromEntries(markers.map(([k,v]) => [k, body.includes(v) ? 1 : 0]));
+          const hosts = [...new Set([...body.matchAll(/https:\/\/([A-Za-z0-9.-]+)/g)].map(m => m[1]))].sort();
+          console.log('PROBE_BODY_SHA256=' + crypto.createHash('sha256').update(body).digest('hex'));
+          console.log('PROBE_TITLE=' + JSON.stringify(title));
+          console.log('PROBE_MARKERS=' + JSON.stringify(flags));
+          console.log('PROBE_IFRAME_COUNT=' + (body.match(/<iframe\b/gi) || []).length);
+          console.log('PROBE_GOOGLEUSERCONTENT=' + (body.includes('script.googleusercontent.com') ? 1 : 0));
+          console.log('PROBE_ACCOUNTS_GOOGLE=' + (body.includes('accounts.google.com') ? 1 : 0));
+          console.log('PROBE_SERVICE_LOGIN=' + (/ServiceLogin|signin\/v2|accounts\.google\.com\/v3\/signin/i.test(body) ? 1 : 0));
+          console.log('PROBE_SCRIPT_ERROR=' + (/script error|exception|authorization is required|需要授權|權限/i.test(body) ? 1 : 0));
+          console.log('PROBE_HOSTS=' + JSON.stringify(hosts));
+          NODE
       - run: npm ci --ignore-scripts
       - run: npm run verify
       - name: Verify actual clasp push set
