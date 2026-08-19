@@ -53,7 +53,7 @@ test('index mode hashes staged blob bytes rather than working-tree bytes', () =>
   fs.writeFileSync(path.join(cwd, 'a.txt'), 'different unstaged bytes\n');
   const staged = node(cwd, ['--index']).stdout;
   assert.notEqual(staged, committed);
-  assert.match(staged, new RegExp(`^${sha256('staged bytes\\n')}  a\\.txt`, 'm'));
+  assert.match(staged, new RegExp(`^${sha256('staged bytes\n')}  a\\.txt`, 'm'));
 });
 
 test('--check fails closed when committed manifest is stale', () => {
