@@ -85,6 +85,15 @@ function sha256(bytes) {
   return crypto.createHash('sha256').update(bytes).digest('hex');
 }
 
+function manifestMap(bytes) {
+  const map = new Map();
+  for (const line of bytes.toString('utf8').split(/\r?\n/).filter(Boolean)) {
+    const match = line.match(/^([0-9a-f]{64})\s+(.+)$/);
+    if (match) map.set(match[2], match[1]);
+  }
+  return map;
+}
+
 export function generateManifest(options) {
   const entries = normalizedEntries(options);
   const lines = entries.map((entry) => `${sha256(objectBytes(entry.oid))}  ${entry.path}`);
@@ -100,7 +109,23 @@ function checkStored(options, generated) {
   if (!storedManifest.equals(generated.manifest)) errors.push('GENERATED_MANIFEST_MISMATCH');
   if (!storedSelf.equals(generated.self)) errors.push('GENERATED_MANIFEST_SELF_MISMATCH');
   if (errors.length) {
-    console.error(JSON.stringify({ status: 'FAIL', source: options.source, ref: options.ref, errors }, null, 2));
+    const stored = manifestMap(storedManifest);
+    const expected = manifestMap(generated.manifest);
+    const paths = new Set([...stored.keys(), ...expected.keys()]);
+    const entryDiffs = [...paths].sort().flatMap((filePath) => {
+      const storedHash = stored.get(filePath) || null;
+      const expectedHash = expected.get(filePath) || null;
+      return storedHash === expectedHash ? [] : [{ path: filePath, stored: storedHash, expected: expectedHash }];
+    });
+    console.error(JSON.stringify({
+      status: 'FAIL',
+      source: options.source,
+      ref: options.ref,
+      errors,
+      entryDiffs,
+      expectedManifestSha256: sha256(generated.manifest),
+      expectedSelfLine: generated.self.toString('utf8').trim()
+    }, null, 2));
     process.exit(1);
   }
 }
