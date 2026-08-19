@@ -9,9 +9,10 @@
     "test": "node --test tests/*.test.mjs",
     "verify:deploy": "node scripts/check-deploy-set.mjs",
     "verify:clasp-status": "node scripts/verify-clasp-status.mjs clasp-status.json",
+    "verify:generated-manifest": "node scripts/generate-manifest.mjs --ref HEAD --check",
     "verify:manifest": "node scripts/verify-manifest.mjs",
     "verify:deploy-controls": "node scripts/verify-github-deploy-controls.mjs",
-    "verify": "npm run verify:manifest && npm run verify:deploy-controls && npm run lint && npm test && npm run verify:deploy"
+    "verify": "npm run verify:generated-manifest && npm run verify:manifest && npm run verify:deploy-controls && npm run lint && npm test && npm run verify:deploy"
   },
   "engines": { "node": ">=22" }
 }
