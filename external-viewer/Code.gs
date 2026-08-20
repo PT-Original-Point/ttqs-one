@@ -70,11 +70,11 @@ var TTQS_EXTERNAL_CAUSAL_ = [
 ];
 
 var TTQS_EXTERNAL_EVIDENCE_ = [
-  ['1','EV-S002-001','clean SAMPLE-002 需求與課程方向連結','SUPPORTS','SAMPLE','STRUCTURED_DATA','CourseMaster','SAMPLE-COURSE-002','','','','CLEAN_FIXTURE_2；非正式協會年度營運目標。'],
+  ['1','EV-S002-001','clean SAMPLE-002 需求與課程方向連結','SUPPORTS','SAMPLE','STRUCTURED_DATA','課程主檔','SAMPLE-COURSE-002','','','','CLEAN_FIXTURE_2；非正式協會年度營運目標。'],
   ['2','EV-POLPROC-001','TTQS ONE 制度政策與19程序主手冊 CURRENT','SUPPORTS','CONTROL','DOCUMENT','DocumentVersion','DV-POLPROC-20260817T230900','','','https://docs.google.com/document/d/1TzJVJrw-K7OoCLgIe18JGdI-QyDa3UGRkU9Khog87SQ/edit','CURRENT 工作版；不是已正式核准制度。'],
   ['3','EV-S002-001','clean SAMPLE-002 課程需求、設計與目標','SUPPORTS','SAMPLE','STRUCTURED_DATA','CourseVersion','SAMPLE-CV-002','','','','CLEAN_FIXTURE_2；T Gate 前不得轉為 REAL 課程。'],
   ['4','EV-POLPROC-001','TTQS ONE 制度政策與19程序主手冊 CURRENT','SUPPORTS','CONTROL','DOCUMENT','DocumentVersion','DV-POLPROC-20260817T230900','','','https://docs.google.com/document/d/1TzJVJrw-K7OoCLgIe18JGdI-QyDa3UGRkU9Khog87SQ/edit','CURRENT／WORKING 不等於 APPROVED／EFFECTIVE。'],
-  ['5','EV-S002-001','clean SAMPLE-002 需求與課程方向連結','SUPPORTS','SAMPLE','STRUCTURED_DATA','CourseMaster','SAMPLE-COURSE-002','','','','只展示需求→課程連結方法；非 REAL。'],
+  ['5','EV-S002-001','clean SAMPLE-002 需求與課程方向連結','SUPPORTS','SAMPLE','STRUCTURED_DATA','課程主檔','SAMPLE-COURSE-002','','','','只展示需求→課程連結方法；非 REAL。'],
   ['6','EV-GOV-CTRL-001','TTQS ONE 治理控制手冊 CURRENT','SUPPORTS','CONTROL','DOCUMENT','DocumentVersion','DV-GOV-CTRL-20260818T004500','','','https://docs.google.com/document/d/1fvocxiyS-_-fqs_1P835tai1jA_aBlqHDKKoxeYVUTI/edit','治理控制工作版；正式制度仍依必要 A 核准。'],
   ['7','EV-S002-001','clean SAMPLE-002 需求與職能落差→課程設計鏈','SUPPORTS','SAMPLE','STRUCTURED_DATA','CourseVersion','SAMPLE-CV-002','','','','scenario_need_date=2026-05-15；record_created_at=2026-08-19；temporal_integrity_status=PASS。'],
   ['7','EV-RUN-A1788F62F85532C2','TEST runtime needs response','SUPPORTS','SAMPLE','STRUCTURED_DATA','SurveyResponse','S-RUN-SUR-A1788F62F85532','OBS-5DF457DAE87CE85418F35E8B','SHEET:1145488986:ROW:5','','真實 Google Forms TEST submission 的去識別索引；ACCEPTED，非正式證據。'],
@@ -97,36 +97,15 @@ var TTQS_EXTERNAL_EVIDENCE_ = [
   ['19','EV-S002-003','clean SAMPLE-002 市場價值方法／缺口狀態','SUPPORTS','SAMPLE','STRUCTURED_DATA','ClassRun','SAMPLE-CLASS-002','','','','無 REAL 市場／顧客價值事件；本列只保留方法與 EMPTY_BY_REALITY 缺口語意。']
 ];
 
-// Google 文件連結在顧問裝置上可能需要登入；Portal 因此內嵌最小充分的受控章節定位與去識別摘要。
-// Drive 連結只是選配深挖，不是 9/1 調閱成功的單點依賴。
 var TTQS_EXTERNAL_SOURCE_BRIEFS_ = {
-  'EV-POLPROC-001': {
-    locator: '制度政策與19程序主手冊：P14-01～P14-07、PR-01～PR-19、第三部 9/1 T Gate',
-    summary: '工作版制度明確要求 T Gate 前只用 TEST／SAMPLE；正式課程必須在 REAL 需求與職能落差分析後才形成；證據保存一次並可索引至多個指標。'
-  },
-  'EV-GOV-CTRL-001': {
-    locator: '治理控制手冊：四 Mission 投影、五角色責任、八 T/R/C/E Gate、九外部寫入驗證',
-    summary: 'A 負責正式治理；B 負責辦訓營運；C 負責 TTQS／品質／技術治理。T Gate 前禁止 REAL_WRITE、PROD_ENABLE、REAL_COURSE_LOCK、SAMPLE_AS_REAL。'
-  },
-  'EV-S002-001': {
-    locator: 'CLEAN_FIXTURE_2：SAMPLE-COURSE-002／SAMPLE-CV-002；scenario_need_date 2026-05-15、scenario_version_date 2026-05-20、scenario_effective_from 2026-05-21',
-    summary: '9/1 主展示使用乾淨雙時間軸 SAMPLE fixture；scenario 日期與 record_created_at 分離，temporal_integrity_status=PASS，不構成 REAL 課程。'
-  },
-  'EV-S002-002': {
-    locator: 'CLEAN_FIXTURE_2：S-AP-004 模擬核准／參與方法',
-    summary: '只證明 SAMPLE 核准與利益關係人方法可追溯；不得視為 A/B/C 真人核准或正式制度。'
-  },
-  'EV-S002-003': {
-    locator: 'CLEAN_FIXTURE_2：SAMPLE-CLASS-002 執行／評量／追蹤方法',
-    summary: '班次情境只用於 T Gate 方法驗收；成果移轉、結案及 17–19 REAL Outcome 仍依真實未發生狀態呈現缺口。'
-  },
-  'EV-ARCH-001': {
-    locator: '系統架構與平台對接說明：五外部收件、六已驗證 runtime、八 Evaluator Portal、九 Evidence/Locator',
-    summary: 'TEST 四類表單經 Observation→業務主表→Ledger／AttemptHistory→reconciliation→FINAL_ACCEPTED；S3 已驗證單一 Scheduler、exactly-once、append-only 與 duplicate=0。'
-  }
+  'EV-POLPROC-001': {locator:'制度政策與19程序主手冊：P14-01～P14-07、PR-01～PR-19、第三部 9/1 T Gate',summary:'工作版制度明確要求 T Gate 前只用 TEST／SAMPLE；正式課程必須在 REAL 需求與職能落差分析後才形成；證據保存一次並可索引至多個指標。'},
+  'EV-GOV-CTRL-001': {locator:'治理控制手冊：四 Mission 投影、五角色責任、八 T/R/C/E Gate、九外部寫入驗證',summary:'A 負責正式治理；B 負責辦訓營運；C 負責 TTQS／品質／技術治理。T Gate 前禁止 REAL_WRITE、PROD_ENABLE、REAL_COURSE_LOCK、SAMPLE_AS_REAL。'},
+  'EV-S002-001': {locator:'CLEAN_FIXTURE_2：SAMPLE-COURSE-002／SAMPLE-CV-002；scenario_need_date 2026-05-15、scenario_version_date 2026-05-20、scenario_effective_from 2026-05-21',summary:'9/1 主展示使用乾淨雙時間軸 SAMPLE fixture；scenario 日期與 record_created_at 分離，temporal_integrity_status=PASS，不構成 REAL 課程。'},
+  'EV-S002-002': {locator:'CLEAN_FIXTURE_2：S-AP-004 模擬核准／參與方法',summary:'只證明 SAMPLE 核准與利益關係人方法可追溯；不得視為 A/B/C 真人核准或正式制度。'},
+  'EV-S002-003': {locator:'CLEAN_FIXTURE_2：SAMPLE-CLASS-002 執行／評量／追蹤方法',summary:'班次情境只用於 T Gate 方法驗收；成果移轉、結案及 17–19 REAL Outcome 仍依真實未發生狀態呈現缺口。'},
+  'EV-ARCH-001': {locator:'系統架構與平台對接說明：五外部收件、六已驗證 runtime、八 Evaluator Portal、九 Evidence/Locator',summary:'TEST 四類表單經 Observation→業務主表→Ledger／AttemptHistory→reconciliation→FINAL_ACCEPTED；S3 已驗證單一 Scheduler、exactly-once、append-only 與 duplicate=0。'}
 };
 
-// 2026-08-18 live TEST 讀回。只保留去識別生命週期摘要與代表 locator。
 var TTQS_EXTERNAL_FORM_LIFECYCLE_ = [
   ['NEEDS','需求調查',4,'OBS-5DF457DAE87CE85418F35E8B','SHEET:1145488986:ROW:5','S-RUN-SUR-A1788F62F85532','ACCEPTED','LINKED_EXISTING','4 筆 TEST Observation 均已接受；代表來源可由 Observation 回到原始收件列。'],
   ['REGISTRATION','課程報名',6,'OBS-0BDC55AF857F2A31861AF73F','SHEET:1407831401:ROW:7','S-RUN-SUR-D72493E5294CD5','ACCEPTED','SCHEDULER_PROCESSED','6 筆 TEST Observation 均已接受；代表列由單一 Scheduler 發現與處理。'],
@@ -134,219 +113,26 @@ var TTQS_EXTERNAL_FORM_LIFECYCLE_ = [
   ['FOLLOWUP30','30日追蹤',2,'OBS-B6FCD3304656E8618BD552CA','SHEET:332084943:ROW:2','S-RUN-SUR-99545B2AB6B10D','ACCEPTED','LINKED_EXISTING','2 筆 TEST Observation 均已接受；用於示範後續追蹤與行為層來源。']
 ];
 
-// 已完成且不為 9/1 重跑的 S3 真實 TEST 故障／恢復證據。
-var TTQS_EXTERNAL_S3_TRACE_ = {
-  topology: 'S3_SINGLE_SCHEDULER：1 master / 0 form-submit',
-  jobId: 'JOB-63831AEA86216EA8B1',
-  observationId: 'OBS-A319BCBB94CA4A5956E68B80',
-  sourceLocator: 'SHEET:1407831401:ROW:6',
-  failure: {
-    attemptEventId: 'ATT-FD9077D2CE6AB18E1A1648FE',
-    attemptNo: '1',
-    trigger: 'SCHEDULER_OBSERVATION',
-    status: 'FAILED',
-    errorClass: 'Error',
-    errorMessage: 'TTQS_INJECTED_PARTIAL_FAILURE_AFTER_PARTY_ALIAS',
-    retryAt: '2026-08-17T10:13:39+0800'
-  },
-  recovery: {
-    attemptEventId: 'ATT-3EEECFBB3D2A9DED5897DBEA',
-    attemptNo: '2',
-    trigger: 'TIME_RETRY',
-    status: 'SUCCESS',
-    recovered: 'true',
-    recoveryEvidenceId: 'EV-RUN-REC-CF43A0C33DC3EACD'
-  },
-  reconciliationStatus: 'MATCHED_EXACTLY_ONCE',
-  finalAcceptanceStatus: 'FINAL_ACCEPTED',
-  resultObjectId: 'S-RUN-SUR-C2CDCEDD26C2E0',
-  attemptHistory: 'append-only；FAILED 與 SUCCESS 是不同 attempt event，hash chain 保留失敗歷史',
-  duplicateCounts: {job:0, party:0, survey:0, evidence:0},
-  rawProviderWrite: '0'
-};
+var TTQS_EXTERNAL_S3_TRACE_ = {topology:'S3_SINGLE_SCHEDULER：1 master / 0 form-submit',jobId:'JOB-63831AEA86216EA8B1',observationId:'OBS-A319BCBB94CA4A5956E68B80',sourceLocator:'SHEET:1407831401:ROW:6',failure:{attemptEventId:'ATT-FD9077D2CE6AB18E1A1648FE',attemptNo:'1',trigger:'SCHEDULER_OBSERVATION',status:'FAILED',errorClass:'Error',errorMessage:'TTQS_INJECTED_PARTIAL_FAILURE_AFTER_PARTY_ALIAS',retryAt:'2026-08-17T10:13:39+0800'},recovery:{attemptEventId:'ATT-3EEECFBB3D2A9DED5897DBEA',attemptNo:'2',trigger:'TIME_RETRY',status:'SUCCESS',recovered:'true',recoveryEvidenceId:'EV-RUN-REC-CF43A0C33DC3EACD'},reconciliationStatus:'MATCHED_EXACTLY_ONCE',finalAcceptanceStatus:'FINAL_ACCEPTED',resultObjectId:'S-RUN-SUR-C2CDCEDD26C2E0',attemptHistory:'append-only；FAILED 與 SUCCESS 是不同 attempt event，hash chain 保留失敗歷史',duplicateCounts:{job:0,party:0,survey:0,evidence:0},rawProviderWrite:'0'};
 
-function ttqsExternalEscape_(value) {
-  return String(value === null || value === undefined ? '' : value)
-    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-}
+function ttqsExternalEscape_(value) {return String(value === null || value === undefined ? '' : value).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
+function ttqsExternalSafeSourceUrl_(value) {var url=String(value||'').trim();if(!url)return '';if(!/^https:\/\/(docs\.google\.com|drive\.google\.com)\//.test(url))throw new Error('SNAPSHOT_SOURCE_URL_UNSAFE');return url;}
+function ttqsExternalOfficialModel_(){if(TTQS_EXTERNAL_OFFICIAL_FOCUS_.length!==19)throw new Error('SNAPSHOT_OFFICIAL_FOCUS_COUNT_INVALID');var seen={};return TTQS_EXTERNAL_OFFICIAL_FOCUS_.map(function(row){var no=String(row[0]);if(!/^(?:[1-9]|1[0-9])$/.test(no)||seen[no])throw new Error('SNAPSHOT_OFFICIAL_FOCUS_ID_INVALID');seen[no]=true;var subitems=Array.isArray(row[2])?row[2].slice():[];if(no==='12'&&subitems.length!==5)throw new Error('SNAPSHOT_INDICATOR_12_SUBITEMS_INVALID');if(no==='17'&&subitems.length!==4)throw new Error('SNAPSHOT_INDICATOR_17_SUBITEMS_INVALID');return {no:no,focus:String(row[1]||''),subitems:subitems,demoPath:String(row[3]||'')};});}
+function ttqsExternalFormLifecycleModel_(){if(TTQS_EXTERNAL_FORM_LIFECYCLE_.length!==4)throw new Error('SNAPSHOT_FORM_LIFECYCLE_COUNT_INVALID');var allowed={NEEDS:true,REGISTRATION:true,REACTION:true,FOLLOWUP30:true};var seen={};var total=0;var items=TTQS_EXTERNAL_FORM_LIFECYCLE_.map(function(row){var kind=String(row[0]);if(!allowed[kind]||seen[kind])throw new Error('SNAPSHOT_FORM_LIFECYCLE_KIND_INVALID');seen[kind]=true;var count=Number(row[2]);if(!Number.isFinite(count)||count<1)throw new Error('SNAPSHOT_FORM_LIFECYCLE_COUNT_INVALID');if(row[6]!=='ACCEPTED')throw new Error('SNAPSHOT_FORM_LIFECYCLE_STATUS_INVALID');total+=count;return {kind:kind,label:row[1],count:count,observationId:row[3],sourceLocator:row[4],processedObjectId:row[5],status:row[6],disposition:row[7],note:row[8]};});if(total!==14)throw new Error('SNAPSHOT_FORM_OBSERVATION_TOTAL_INVALID');return {items:items,total:total};}
+function ttqsExternalS3TraceModel_(){var trace=TTQS_EXTERNAL_S3_TRACE_;if(!trace||trace.failure.status!=='FAILED'||trace.recovery.status!=='SUCCESS')throw new Error('SNAPSHOT_S3_TRACE_ATTEMPTS_INVALID');if(trace.failure.attemptNo!=='1'||trace.recovery.attemptNo!=='2')throw new Error('SNAPSHOT_S3_TRACE_SEQUENCE_INVALID');if(trace.reconciliationStatus!=='MATCHED_EXACTLY_ONCE'||trace.finalAcceptanceStatus!=='FINAL_ACCEPTED')throw new Error('SNAPSHOT_S3_TRACE_ACCEPTANCE_INVALID');var dup=trace.duplicateCounts||{};if(Number(dup.job)!==0||Number(dup.party)!==0||Number(dup.survey)!==0||Number(dup.evidence)!==0)throw new Error('SNAPSHOT_S3_TRACE_DUPLICATE_INVALID');if(trace.rawProviderWrite!=='0')throw new Error('SNAPSHOT_S3_TRACE_PROVIDER_WRITE_INVALID');return trace;}
+function ttqsExternalSnapshotModel_(){if(TTQS_EXTERNAL_INDICATORS_.length!==19)throw new Error('SNAPSHOT_INDICATOR_COUNT_INVALID');if(TTQS_EXTERNAL_CAUSAL_.length!==6)throw new Error('SNAPSHOT_CAUSAL_SEQUENCE_INVALID');var official=ttqsExternalOfficialModel_();var officialByNo={};official.forEach(function(item){officialByNo[item.no]=item;});var seen={};var indicators=TTQS_EXTERNAL_INDICATORS_.map(function(row){var no=row[0];if(!/^(?:[1-9]|1[0-9])$/.test(no)||seen[no])throw new Error('SNAPSHOT_INDICATOR_ID_INVALID');seen[no]=true;if(!officialByNo[no])throw new Error('SNAPSHOT_OFFICIAL_FOCUS_MISSING');return {no:no,stage:row[1],title:row[2],evidenceCount:row[3],status:row[4],refreshedAt:row[5],officialFocus:officialByNo[no],evidenceDetails:[]};});var expectedCausal=[['1','需求蒐集','7'],['2','需求／職能落差分析','7、8'],['3','課程設計／目標／審查','9、10、11'],['4','執行／資源／班次','12、13、14'],['5','評量／檢討','15、16、17'],['6','追蹤／改善','18、19']];var causalFlow=TTQS_EXTERNAL_CAUSAL_.map(function(row,index){var expected=expectedCausal[index];if(row[0]!==expected[0]||row[1]!==expected[1]||row[2]!==expected[2])throw new Error('SNAPSHOT_CAUSAL_SEQUENCE_INVALID');if(row[4].indexOf('SAMPLE')===-1||row[4].indexOf('REAL')!==-1)throw new Error('SNAPSHOT_CAUSAL_DATA_CLASS_INVALID');return {step:row[0],name:row[1],indicators:row[2],representativeEvidence:row[3],dataClass:row[4],status:row[5],note:row[6]};});var coverage={};var byIndicator={};indicators.forEach(function(item){byIndicator[item.no]=[];});var evidence=TTQS_EXTERNAL_EVIDENCE_.map(function(row){var no=row[0];if(!/^(?:[1-9]|1[0-9])$/.test(no))throw new Error('SNAPSHOT_EVIDENCE_INDICATOR_INVALID');if(row[3]!=='SUPPORTS')throw new Error('SNAPSHOT_EVIDENCE_RELATION_INVALID');if(row[4]!=='SAMPLE'&&row[4]!=='CONTROL')throw new Error('SNAPSHOT_EVIDENCE_DATA_CLASS_INVALID');var sourceUrl=ttqsExternalSafeSourceUrl_(row[10]);var brief=TTQS_EXTERNAL_SOURCE_BRIEFS_[row[1]]||null;if(sourceUrl&&(!brief||!brief.locator||!brief.summary))throw new Error('SNAPSHOT_DOCUMENT_SOURCE_BRIEF_REQUIRED');var item={indicatorNo:no,evidenceId:row[1],title:row[2],relation:row[3],dataClass:row[4],evidenceType:row[5],sourceObjectType:row[6],sourceObjectId:row[7],observationId:row[8],sourceLocator:row[9],sourceUrl:sourceUrl,publicNote:row[11],controlledLocator:brief?brief.locator:'',embeddedSummary:brief?brief.summary:''};if(!item.evidenceId||!item.title||!item.sourceObjectType||!item.sourceObjectId)throw new Error('SNAPSHOT_EVIDENCE_REQUIRED_FIELD_MISSING');coverage[no]=(coverage[no]||0)+1;byIndicator[no].push(item);return item;});for(var i=1;i<=19;i++)if(!coverage[String(i)])throw new Error('SNAPSHOT_EVIDENCE_COVERAGE_INVALID');indicators.forEach(function(item){item.evidenceDetails=byIndicator[item.no];});var forms=ttqsExternalFormLifecycleModel_();return {title:TTQS_EXTERNAL_SNAPSHOT_TITLE_,summary:TTQS_EXTERNAL_SUMMARY_,official:official,indicators:indicators,causalFlow:causalFlow,evidence:evidence,forms:forms.items,formObservationTotal:forms.total,s3Trace:ttqsExternalS3TraceModel_()};}
+function ttqsExternalSubitemsHtml_(items){if(!items||!items.length)return '';return '<div class="subitems">'+items.map(function(item){return '<span>'+ttqsExternalEscape_(item)+'</span>';}).join('')+'</div>';}
+function ttqsExternalOfficialHtml_(items){return '<section id="official-semantics"><div class="section-title"><h2>官方 19 指標評核語意導航</h2><p>依現行訓練機構版評核表／查核佐證表摘要；只協助顧問知道「這個指標要看什麼」，不在系統內自動評分。</p></div><div class="official-grid">'+items.map(function(item){return '<a class="official-card" href="#indicator-'+item.no+'"><div class="top"><span class="no">'+item.no+'</span><span class="stage">抽查焦點</span></div><p>'+ttqsExternalEscape_(item.focus)+'</p>'+ttqsExternalSubitemsHtml_(item.subitems)+'<small>最短路徑：'+ttqsExternalEscape_(item.demoPath)+'</small></a>';}).join('')+'</div></section>';}
+function ttqsExternalCausalHtml_(steps){return '<section id="sample-causal"><div class="section-title"><h2>SAMPLE 評核因果鏈</h2><p>需求→分析→課程設計→執行→評量→追蹤→改善。所有內容皆為 TEST／SAMPLE，不得轉作 REAL 證據。</p></div><div class="flow">'+steps.map(function(item){var anchor=item.indicators.split('、')[0];return '<a class="flow-step" href="#indicator-'+ttqsExternalEscape_(anchor)+'"><span>'+ttqsExternalEscape_(item.step)+'</span><strong>'+ttqsExternalEscape_(item.name)+'</strong><small>指標 '+ttqsExternalEscape_(item.indicators)+' · '+ttqsExternalEscape_(item.status)+'</small><p>'+ttqsExternalEscape_(item.note)+'</p></a>';}).join('')+'</div></section>';}
+function ttqsExternalFormsHtml_(items,total){return '<section id="form-lifecycle"><div class="section-title"><h2>四類 TEST Google Forms 生命週期</h2><p>目前只展示去識別 readback。共 '+ttqsExternalEscape_(total)+' 筆 Observation；4/4 類別都有 ACCEPTED 來源，不公開原始回答。</p></div><div class="form-grid">'+items.map(function(item){return '<article class="form-card"><div class="top"><strong>'+ttqsExternalEscape_(item.label)+'</strong><span class="stage">'+ttqsExternalEscape_(item.kind)+'</span></div><div class="metric">Observation <b>'+ttqsExternalEscape_(item.count)+'</b></div><div class="tags"><b>'+ttqsExternalEscape_(item.status)+'</b><b>'+ttqsExternalEscape_(item.disposition)+'</b></div><div class="locator"><strong>代表 Observation</strong><code>'+ttqsExternalEscape_(item.observationId)+'</code><strong>原始收件定位</strong><code>'+ttqsExternalEscape_(item.sourceLocator)+'</code><strong>處理物件</strong><code>'+ttqsExternalEscape_(item.processedObjectId)+'</code></div><p class="note">'+ttqsExternalEscape_(item.note)+'</p></article>';}).join('')+'</div></section>';}
+function ttqsExternalS3TraceHtml_(trace){return '<section id="runtime-trace"><div class="section-title"><h2>故障 → 重試 → 對帳 → FINAL_ACCEPTED</h2><p>這是已經通過的 S3 真實 TEST runtime 證據；9/1 只讀展示，不為表演而重跑故障。</p></div><article class="trace-card"><div class="trace-head"><b>'+ttqsExternalEscape_(trace.topology)+'</b><code>'+ttqsExternalEscape_(trace.jobId)+'</code></div><div class="trace-grid"><div class="trace-step bad"><span>1</span><strong>第一次處理失敗</strong><code>'+ttqsExternalEscape_(trace.failure.attemptEventId)+'</code><p>'+ttqsExternalEscape_(trace.failure.trigger+' · '+trace.failure.status)+'</p><p class="note">'+ttqsExternalEscape_(trace.failure.errorMessage)+'</p></div><div class="trace-step"><span>2</span><strong>TIME_RETRY 恢復</strong><code>'+ttqsExternalEscape_(trace.recovery.attemptEventId)+'</code><p>'+ttqsExternalEscape_(trace.recovery.status+' · recovered='+trace.recovery.recovered)+'</p><p class="note">Recovery Evidence：'+ttqsExternalEscape_(trace.recovery.recoveryEvidenceId)+'</p></div><div class="trace-step"><span>3</span><strong>唯一對帳</strong><p>'+ttqsExternalEscape_(trace.reconciliationStatus)+'</p><p class="note">job / party / survey / evidence duplicate = 0 / 0 / 0 / 0</p></div><div class="trace-step good"><span>4</span><strong>最終接受</strong><p>'+ttqsExternalEscape_(trace.finalAcceptanceStatus)+'</p><code>'+ttqsExternalEscape_(trace.resultObjectId)+'</code><p class="note">provider raw write='+ttqsExternalEscape_(trace.rawProviderWrite)+'；AttemptHistory='+ttqsExternalEscape_(trace.attemptHistory)+'</p></div></div><div class="locator"><strong>原始來源</strong><span>Observation：'+ttqsExternalEscape_(trace.observationId)+'</span><code>'+ttqsExternalEscape_(trace.sourceLocator)+'</code></div></article></section>';}
+function ttqsExternalEvidenceHtml_(items){if(!items||!items.length)return '<p class="empty">此指標目前沒有公開定位資料。</p>';return '<div class="evidence-list">'+items.map(function(item){var source='<div class="locator"><strong>來源物件</strong><code>'+ttqsExternalEscape_(item.sourceObjectType+':'+item.sourceObjectId)+'</code></div>';var observation=item.observationId||item.sourceLocator?'<div class="locator"><strong>原始收件定位</strong>'+(item.observationId?'<span>Observation：'+ttqsExternalEscape_(item.observationId)+'</span>':'')+(item.sourceLocator?'<code>'+ttqsExternalEscape_(item.sourceLocator)+'</code>':'')+'</div>':'';var controlled=item.controlledLocator?'<div class="controlled"><strong>受控章節／物件定位</strong><p>'+ttqsExternalEscape_(item.controlledLocator)+'</p><strong>去識別摘要</strong><p>'+ttqsExternalEscape_(item.embeddedSummary)+'</p></div>':'';var link=item.sourceUrl?'<a class="source-link" target="_blank" rel="noopener noreferrer" href="'+ttqsExternalEscape_(item.sourceUrl)+'">選配：開啟受控 Drive 來源（可能需登入）</a>':'';return '<details class="evidence"><summary><span>'+ttqsExternalEscape_(item.evidenceId)+'</span>'+ttqsExternalEscape_(item.title)+'</summary><div class="tags"><b>'+item.relation+'</b><b>'+item.dataClass+'</b><b>'+ttqsExternalEscape_(item.evidenceType)+'</b></div>'+source+observation+controlled+(item.publicNote?'<p class="note">'+ttqsExternalEscape_(item.publicNote)+'</p>':'')+link+'</details>';}).join('')+'</div>';}
+function ttqsExternalRender_(model){var cards=model.indicators.map(function(item){var klass=Number(item.no)>=17?'outcome':'evidence-card';return '<article id="indicator-'+item.no+'" class="card '+klass+'"><div class="top"><span class="no">'+item.no+'</span><span class="stage">'+ttqsExternalEscape_(item.stage)+'</span></div><h3>'+ttqsExternalEscape_(item.title)+'</h3><div class="focus"><strong>官方查核焦點摘要</strong><p>'+ttqsExternalEscape_(item.officialFocus.focus)+'</p>'+ttqsExternalSubitemsHtml_(item.officialFocus.subitems)+'<small>顧問最短路徑：'+ttqsExternalEscape_(item.officialFocus.demoPath)+'</small></div><p class="status">'+ttqsExternalEscape_(item.status)+'</p><div class="meta"><span>核心索引佐證筆數：'+ttqsExternalEscape_(item.evidenceCount)+'</span><span>快照更新：'+ttqsExternalEscape_(item.refreshedAt)+'</span></div><details class="drill"><summary>查看佐證與來源（'+item.evidenceDetails.length+'）</summary>'+ttqsExternalEvidenceHtml_(item.evidenceDetails)+'</details></article>';}).join('');var runtimeLocators=model.evidence.filter(function(item){return item.observationId&&item.sourceLocator;}).length;return '<!doctype html><html lang="zh-Hant-TW"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TTQS ONE 外部唯讀</title><style>:root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;color:#17202a;background:#f4f6f8}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f4f6f8}main{max-width:1220px;margin:auto;padding:22px}header,.card,.stat,.flow-step,.official-card,.form-card,.trace-card{background:#fff;border:1px solid #dce3e8;border-radius:16px}header{padding:24px;margin-bottom:16px}.eyebrow{font-size:13px;font-weight:800;color:#586674}h1{font-size:30px;margin:7px 0 8px}h2{font-size:22px}h3{font-size:16px}.notice{background:#fff7dd;border:1px solid #ead18a;border-radius:12px;padding:13px 15px;line-height:1.6}.security{background:#edf7ef;border:1px solid #c8dfcd;border-radius:12px;padding:13px 15px;line-height:1.6;margin-top:10px}.jump{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.jump a{padding:7px 10px;border:1px solid #c9d3dc;border-radius:999px;text-decoration:none;color:#17202a;font-size:12px;font-weight:800;background:#fff}.stats,.flow,.grid,.official-grid,.form-grid,.trace-grid{display:grid;gap:11px}.stats{grid-template-columns:repeat(4,1fr);margin:16px 0}.stat{padding:14px}.stat strong{display:block;font-size:24px}.flow{grid-template-columns:repeat(3,1fr)}.flow-step,.official-card{padding:15px;text-decoration:none;color:#17202a;display:grid;gap:6px}.official-grid{grid-template-columns:repeat(3,1fr)}.official-card small{color:#66737e;line-height:1.5}.grid{grid-template-columns:repeat(2,1fr)}.form-grid{grid-template-columns:repeat(2,1fr)}.form-card{padding:15px}.metric{margin:9px 0}.metric b{font-size:22px}.trace-card{padding:16px}.trace-head{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.trace-grid{grid-template-columns:repeat(4,1fr);margin-top:12px}.trace-step{border:1px solid #dce3e8;border-radius:12px;padding:12px;background:#fafbfc;display:grid;gap:5px}.trace-step>span{font-weight:900}.trace-step.bad{border-color:#e2b8b8}.trace-step.good{border-color:#a9cfb2}.card{padding:16px;border-left:5px solid #60886b}.card.outcome{border-left-color:#a98945}.top{display:flex;justify-content:space-between}.no{font-weight:800}.stage,.tags b,.subitems span{font-size:12px;background:#eef2f5;padding:4px 8px;border-radius:999px}.subitems{display:flex;gap:5px;flex-wrap:wrap;margin:8px 0}.focus{border:1px solid #dce3e8;background:#f8fafb;border-radius:10px;padding:10px;line-height:1.55}.focus p{margin:6px 0}.focus small{color:#66737e}.meta,.note,.status,.flow-step small,.foot{color:#66737e;font-size:12px;line-height:1.55}.drill{border-top:1px solid #e1e7eb;margin-top:12px;padding-top:10px}.drill>summary,.evidence>summary{cursor:pointer;font-weight:800}.evidence-list{display:grid;gap:9px;margin-top:10px}.evidence{border:1px solid #e1e7eb;border-radius:10px;padding:10px;background:#fafbfc}.tags{display:flex;gap:5px;flex-wrap:wrap;margin:9px 0}.locator,.controlled{display:grid;gap:4px;margin:7px 0;padding:8px;border-radius:8px;background:#f1f4f6;font-size:12px}.controlled{background:#fffbe9;border:1px solid #eadca3}.locator code,.trace-step code,.trace-head code{overflow-wrap:anywhere}.controlled p{margin:3px 0;line-height:1.55}.source-link{display:inline-block;margin-top:4px;text-decoration:none;color:#17202a;border:1px solid #c9d3dc;border-radius:9px;padding:7px 9px;background:#fff;font-size:12px;font-weight:800}.section-title{margin-top:25px}.section-title p{line-height:1.6;color:#586674}@media(max-width:920px){.official-grid,.trace-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:720px){main{padding:13px}.grid,.stats,.flow,.official-grid,.form-grid,.trace-grid{grid-template-columns:1fr}}</style></head><body><main><header><div class="eyebrow">TTQS ONE · 測試／示範資料（TEST／SAMPLE）· EXTERNAL_READONLY</div><h1>'+ttqsExternalEscape_(model.title)+'</h1><div>用途：'+ttqsExternalEscape_(model.summary['用途'])+'</div><div class="notice">本畫面不計算 TTQS 官方分數，不宣稱評核通過或準備完成。17–19 的正式成果仍須以實際營運證據（REAL）為準。</div><div class="security">唯讀安全邊界：此 Web App 僅呈現部署版本內嵌的去識別靜態快照，不在執行期呼叫 Google Sheets／Drive API、不直接連線 TTQS ONE 核心資料庫、不讀取問卷原始回答，也不提供新增、修改、刪除、核准、正式啟動或背景工作控制。</div><nav class="jump"><a href="#official-semantics">官方19指標</a><a href="#sample-causal">SAMPLE因果鏈</a><a href="#form-lifecycle">四表生命週期</a><a href="#runtime-trace">故障／重試</a><a href="#evidence-drilldown">19指標佐證</a></nav></header><section class="stats"><div class="stat">官方指標範圍<strong>19 / 19</strong></div><div class="stat">公開 SUPPORTS 定位<strong>'+model.evidence.length+'</strong></div><div class="stat">四類 TEST Forms<strong>4 / 4</strong></div><div class="stat">TEST Observation<strong>'+ttqsExternalEscape_(model.formObservationTotal)+'</strong></div></section>'+ttqsExternalOfficialHtml_(model.official)+ttqsExternalCausalHtml_(model.causalFlow)+ttqsExternalFormsHtml_(model.forms,model.formObservationTotal)+ttqsExternalS3TraceHtml_(model.s3Trace)+'<section id="evidence-drilldown"><div class="section-title"><h2>19 指標佐證與來源下鑽</h2><p>每張卡片先顯示官方查核焦點，再展開去識別 SUPPORTS 佐證、來源物件、Observation locator 與受控章節摘要。Google Drive 連結只是選配，不是顧問調閱成功的必要條件。</p></div><div class="grid">'+cards+'</div></section><p class="foot">資料更新：'+ttqsExternalEscape_(model.summary['來源更新時間'])+'。資料分類：'+ttqsExternalEscape_(model.summary['資料分類'])+'。官方語意：'+ttqsExternalEscape_(model.summary['官方語意來源'])+'。代表 runtime locator：'+runtimeLocators+'。來源快照：'+ttqsExternalEscape_(TTQS_EXTERNAL_SOURCE_SNAPSHOT_ID_)+'。本唯讀檢視器不會把 SAMPLE／CONTROL 宣稱為 REAL。</p></main></body></html>';}
+function ttqsExternalErrorHtml_(){return '<!doctype html><html lang="zh-Hant-TW"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TTQS ONE 外部唯讀</title></head><body><main><h1>目前無法載入唯讀快照</h1><p>安全檢查未通過或資料暫時不可用。請聯絡承辦窗口協助確認。</p></main></body></html>';}
 
-function ttqsExternalSafeSourceUrl_(value) {
-  var url = String(value || '').trim();
-  if (!url) return '';
-  if (!/^https:\/\/(docs\.google\.com|drive\.google\.com)\//.test(url)) throw new Error('SNAPSHOT_SOURCE_URL_UNSAFE');
-  return url;
-}
-
-function ttqsExternalOfficialModel_() {
-  if (TTQS_EXTERNAL_OFFICIAL_FOCUS_.length !== 19) throw new Error('SNAPSHOT_OFFICIAL_FOCUS_COUNT_INVALID');
-  var seen = {};
-  return TTQS_EXTERNAL_OFFICIAL_FOCUS_.map(function(row) {
-    var no = String(row[0]);
-    if (!/^(?:[1-9]|1[0-9])$/.test(no) || seen[no]) throw new Error('SNAPSHOT_OFFICIAL_FOCUS_ID_INVALID');
-    seen[no] = true;
-    var subitems = Array.isArray(row[2]) ? row[2].slice() : [];
-    if (no === '12' && subitems.length !== 5) throw new Error('SNAPSHOT_INDICATOR_12_SUBITEMS_INVALID');
-    if (no === '17' && subitems.length !== 4) throw new Error('SNAPSHOT_INDICATOR_17_SUBITEMS_INVALID');
-    return {no:no, focus:String(row[1] || ''), subitems:subitems, demoPath:String(row[3] || '')};
-  });
-}
-
-function ttqsExternalFormLifecycleModel_() {
-  if (TTQS_EXTERNAL_FORM_LIFECYCLE_.length !== 4) throw new Error('SNAPSHOT_FORM_LIFECYCLE_COUNT_INVALID');
-  var allowed = {NEEDS:true,REGISTRATION:true,REACTION:true,FOLLOWUP30:true};
-  var seen = {};
-  var total = 0;
-  var items = TTQS_EXTERNAL_FORM_LIFECYCLE_.map(function(row) {
-    var kind = String(row[0]);
-    if (!allowed[kind] || seen[kind]) throw new Error('SNAPSHOT_FORM_LIFECYCLE_KIND_INVALID');
-    seen[kind] = true;
-    var count = Number(row[2]);
-    if (!Number.isFinite(count) || count < 1) throw new Error('SNAPSHOT_FORM_LIFECYCLE_COUNT_INVALID');
-    if (row[6] !== 'ACCEPTED') throw new Error('SNAPSHOT_FORM_LIFECYCLE_STATUS_INVALID');
-    total += count;
-    return {kind:kind,label:row[1],count:count,observationId:row[3],sourceLocator:row[4],processedObjectId:row[5],status:row[6],disposition:row[7],note:row[8]};
-  });
-  if (total !== 14) throw new Error('SNAPSHOT_FORM_OBSERVATION_TOTAL_INVALID');
-  return {items:items,total:total};
-}
-
-function ttqsExternalS3TraceModel_() {
-  var trace = TTQS_EXTERNAL_S3_TRACE_;
-  if (!trace || trace.failure.status !== 'FAILED' || trace.recovery.status !== 'SUCCESS') throw new Error('SNAPSHOT_S3_TRACE_ATTEMPTS_INVALID');
-  if (trace.failure.attemptNo !== '1' || trace.recovery.attemptNo !== '2') throw new Error('SNAPSHOT_S3_TRACE_SEQUENCE_INVALID');
-  if (trace.reconciliationStatus !== 'MATCHED_EXACTLY_ONCE' || trace.finalAcceptanceStatus !== 'FINAL_ACCEPTED') throw new Error('SNAPSHOT_S3_TRACE_ACCEPTANCE_INVALID');
-  var dup = trace.duplicateCounts || {};
-  if (Number(dup.job) !== 0 || Number(dup.party) !== 0 || Number(dup.survey) !== 0 || Number(dup.evidence) !== 0) throw new Error('SNAPSHOT_S3_TRACE_DUPLICATE_INVALID');
-  if (trace.rawProviderWrite !== '0') throw new Error('SNAPSHOT_S3_TRACE_PROVIDER_WRITE_INVALID');
-  return trace;
-}
-
-function ttqsExternalSnapshotModel_() {
-  if (TTQS_EXTERNAL_INDICATORS_.length !== 19) throw new Error('SNAPSHOT_INDICATOR_COUNT_INVALID');
-  if (TTQS_EXTERNAL_CAUSAL_.length !== 6) throw new Error('SNAPSHOT_CAUSAL_SEQUENCE_INVALID');
-  var official = ttqsExternalOfficialModel_();
-  var officialByNo = {};
-  official.forEach(function(item) { officialByNo[item.no] = item; });
-  var seen = {};
-  var indicators = TTQS_EXTERNAL_INDICATORS_.map(function(row) {
-    var no = row[0];
-    if (!/^(?:[1-9]|1[0-9])$/.test(no) || seen[no]) throw new Error('SNAPSHOT_INDICATOR_ID_INVALID');
-    seen[no] = true;
-    if (!officialByNo[no]) throw new Error('SNAPSHOT_OFFICIAL_FOCUS_MISSING');
-    return {no:no, stage:row[1], title:row[2], evidenceCount:row[3], status:row[4], refreshedAt:row[5], officialFocus:officialByNo[no], evidenceDetails:[]};
-  });
-  var expectedCausal = [['1','需求蒐集','7'],['2','需求／職能落差分析','7、8'],['3','課程設計／目標／審查','9、10、11'],['4','執行／資源／班次','12、13、14'],['5','評量／檢討','15、16、17'],['6','追蹤／改善','18、19']];
-  var causalFlow = TTQS_EXTERNAL_CAUSAL_.map(function(row, index) {
-    var expected = expectedCausal[index];
-    if (row[0] !== expected[0] || row[1] !== expected[1] || row[2] !== expected[2]) throw new Error('SNAPSHOT_CAUSAL_SEQUENCE_INVALID');
-    if (row[4].indexOf('SAMPLE') === -1 || row[4].indexOf('REAL') !== -1) throw new Error('SNAPSHOT_CAUSAL_DATA_CLASS_INVALID');
-    return {step:row[0], name:row[1], indicators:row[2], representativeEvidence:row[3], dataClass:row[4], status:row[5], note:row[6]};
-  });
-  var coverage = {};
-  var byIndicator = {};
-  indicators.forEach(function(item) { byIndicator[item.no] = []; });
-  var evidence = TTQS_EXTERNAL_EVIDENCE_.map(function(row) {
-    var no = row[0];
-    if (!/^(?:[1-9]|1[0-9])$/.test(no)) throw new Error('SNAPSHOT_EVIDENCE_INDICATOR_INVALID');
-    if (row[3] !== 'SUPPORTS') throw new Error('SNAPSHOT_EVIDENCE_RELATION_INVALID');
-    if (row[4] !== 'SAMPLE' && row[4] !== 'CONTROL') throw new Error('SNAPSHOT_EVIDENCE_DATA_CLASS_INVALID');
-    var sourceUrl = ttqsExternalSafeSourceUrl_(row[10]);
-    var brief = TTQS_EXTERNAL_SOURCE_BRIEFS_[row[1]] || null;
-    if (sourceUrl && (!brief || !brief.locator || !brief.summary)) throw new Error('SNAPSHOT_DOCUMENT_SOURCE_BRIEF_REQUIRED');
-    var item = {indicatorNo:no,evidenceId:row[1],title:row[2],relation:row[3],dataClass:row[4],evidenceType:row[5],sourceObjectType:row[6],sourceObjectId:row[7],observationId:row[8],sourceLocator:row[9],sourceUrl:sourceUrl,publicNote:row[11],controlledLocator:brief ? brief.locator : '',embeddedSummary:brief ? brief.summary : ''};
-    if (!item.evidenceId || !item.title || !item.sourceObjectType || !item.sourceObjectId) throw new Error('SNAPSHOT_EVIDENCE_REQUIRED_FIELD_MISSING');
-    coverage[no] = (coverage[no] || 0) + 1;
-    byIndicator[no].push(item);
-    return item;
-  });
-  for (var i = 1; i <= 19; i++) if (!coverage[String(i)]) throw new Error('SNAPSHOT_EVIDENCE_COVERAGE_INVALID');
-  indicators.forEach(function(item) { item.evidenceDetails = byIndicator[item.no]; });
-  var forms = ttqsExternalFormLifecycleModel_();
-  return {title:TTQS_EXTERNAL_SNAPSHOT_TITLE_, summary:TTQS_EXTERNAL_SUMMARY_, official:official, indicators:indicators, causalFlow:causalFlow, evidence:evidence, forms:forms.items, formObservationTotal:forms.total, s3Trace:ttqsExternalS3TraceModel_()};
-}
-
-function ttqsExternalSubitemsHtml_(items) {
-  if (!items || !items.length) return '';
-  return '<div class="subitems">' + items.map(function(item) { return '<span>' + ttqsExternalEscape_(item) + '</span>'; }).join('') + '</div>';
-}
-
-function ttqsExternalOfficialHtml_(items) {
-  return '<section id="official-semantics"><div class="section-title"><h2>官方 19 指標評核語意導航</h2><p>依現行訓練機構版評核表／查核佐證表摘要；只協助顧問知道「這個指標要看什麼」，不在系統內自動評分。</p></div><div class="official-grid">' + items.map(function(item) {
-    return '<a class="official-card" href="#indicator-' + item.no + '"><div class="top"><span class="no">' + item.no + '</span><span class="stage">抽查焦點</span></div><p>' + ttqsExternalEscape_(item.focus) + '</p>' + ttqsExternalSubitemsHtml_(item.subitems) + '<small>最短路徑：' + ttqsExternalEscape_(item.demoPath) + '</small></a>';
-  }).join('') + '</div></section>';
-}
-
-function ttqsExternalCausalHtml_(steps) {
-  return '<section id="sample-causal"><div class="section-title"><h2>SAMPLE 評核因果鏈</h2><p>需求→分析→課程設計→執行→評量→追蹤→改善。所有內容皆為 TEST／SAMPLE，不得轉作 REAL 證據。</p></div><div class="flow">' + steps.map(function(item) {
-    var anchor = item.indicators.split('、')[0];
-    return '<a class="flow-step" href="#indicator-' + ttqsExternalEscape_(anchor) + '"><span>' + ttqsExternalEscape_(item.step) + '</span><strong>' + ttqsExternalEscape_(item.name) + '</strong><small>指標 ' + ttqsExternalEscape_(item.indicators) + ' · ' + ttqsExternalEscape_(item.status) + '</small><p>' + ttqsExternalEscape_(item.note) + '</p></a>';
-  }).join('') + '</div></section>';
-}
-
-function ttqsExternalFormsHtml_(items, total) {
-  return '<section id="form-lifecycle"><div class="section-title"><h2>四類 TEST Google Forms 生命週期</h2><p>目前只展示去識別 readback。共 ' + ttqsExternalEscape_(total) + ' 筆 Observation；4/4 類別都有 ACCEPTED 來源，不公開原始回答。</p></div><div class="form-grid">' + items.map(function(item) {
-    return '<article class="form-card"><div class="top"><strong>' + ttqsExternalEscape_(item.label) + '</strong><span class="stage">' + ttqsExternalEscape_(item.kind) + '</span></div><div class="metric">Observation <b>' + ttqsExternalEscape_(item.count) + '</b></div><div class="tags"><b>' + ttqsExternalEscape_(item.status) + '</b><b>' + ttqsExternalEscape_(item.disposition) + '</b></div><div class="locator"><strong>代表 Observation</strong><code>' + ttqsExternalEscape_(item.observationId) + '</code><strong>原始收件定位</strong><code>' + ttqsExternalEscape_(item.sourceLocator) + '</code><strong>處理物件</strong><code>' + ttqsExternalEscape_(item.processedObjectId) + '</code></div><p class="note">' + ttqsExternalEscape_(item.note) + '</p></article>';
-  }).join('') + '</div></section>';
-}
-
-function ttqsExternalS3TraceHtml_(trace) {
-  return '<section id="runtime-trace"><div class="section-title"><h2>故障 → 重試 → 對帳 → FINAL_ACCEPTED</h2><p>這是已經通過的 S3 真實 TEST runtime 證據；9/1 只讀展示，不為表演而重跑故障。</p></div><article class="trace-card"><div class="trace-head"><b>' + ttqsExternalEscape_(trace.topology) + '</b><code>' + ttqsExternalEscape_(trace.jobId) + '</code></div><div class="trace-grid"><div class="trace-step bad"><span>1</span><strong>第一次處理失敗</strong><code>' + ttqsExternalEscape_(trace.failure.attemptEventId) + '</code><p>' + ttqsExternalEscape_(trace.failure.trigger + ' · ' + trace.failure.status) + '</p><p class="note">' + ttqsExternalEscape_(trace.failure.errorMessage) + '</p></div><div class="trace-step"><span>2</span><strong>TIME_RETRY 恢復</strong><code>' + ttqsExternalEscape_(trace.recovery.attemptEventId) + '</code><p>' + ttqsExternalEscape_(trace.recovery.status + ' · recovered=' + trace.recovery.recovered) + '</p><p class="note">Recovery Evidence：' + ttqsExternalEscape_(trace.recovery.recoveryEvidenceId) + '</p></div><div class="trace-step"><span>3</span><strong>唯一對帳</strong><p>' + ttqsExternalEscape_(trace.reconciliationStatus) + '</p><p class="note">job / party / survey / evidence duplicate = 0 / 0 / 0 / 0</p></div><div class="trace-step good"><span>4</span><strong>最終接受</strong><p>' + ttqsExternalEscape_(trace.finalAcceptanceStatus) + '</p><code>' + ttqsExternalEscape_(trace.resultObjectId) + '</code><p class="note">provider raw write=' + ttqsExternalEscape_(trace.rawProviderWrite) + '；AttemptHistory=' + ttqsExternalEscape_(trace.attemptHistory) + '</p></div></div><div class="locator"><strong>原始來源</strong><span>Observation：' + ttqsExternalEscape_(trace.observationId) + '</span><code>' + ttqsExternalEscape_(trace.sourceLocator) + '</code></div></article></section>';
-}
-
-function ttqsExternalEvidenceHtml_(items) {
-  if (!items || !items.length) return '<p class="empty">此指標目前沒有公開定位資料。</p>';
-  return '<div class="evidence-list">' + items.map(function(item) {
-    var source = '<div class="locator"><strong>來源物件</strong><code>' + ttqsExternalEscape_(item.sourceObjectType + ':' + item.sourceObjectId) + '</code></div>';
-    var observation = item.observationId || item.sourceLocator ? '<div class="locator"><strong>原始收件定位</strong>' + (item.observationId ? '<span>Observation：' + ttqsExternalEscape_(item.observationId) + '</span>' : '') + (item.sourceLocator ? '<code>' + ttqsExternalEscape_(item.sourceLocator) + '</code>' : '') + '</div>' : '';
-    var controlled = item.controlledLocator ? '<div class="controlled"><strong>受控章節／物件定位</strong><p>' + ttqsExternalEscape_(item.controlledLocator) + '</p><strong>去識別摘要</strong><p>' + ttqsExternalEscape_(item.embeddedSummary) + '</p></div>' : '';
-    var link = item.sourceUrl ? '<a class="source-link" target="_blank" rel="noopener noreferrer" href="' + ttqsExternalEscape_(item.sourceUrl) + '">選配：開啟受控 Drive 來源（可能需登入）</a>' : '';
-    return '<details class="evidence"><summary><span>' + ttqsExternalEscape_(item.evidenceId) + '</span>' + ttqsExternalEscape_(item.title) + '</summary><div class="tags"><b>' + item.relation + '</b><b>' + item.dataClass + '</b><b>' + ttqsExternalEscape_(item.evidenceType) + '</b></div>' + source + observation + controlled + (item.publicNote ? '<p class="note">' + ttqsExternalEscape_(item.publicNote) + '</p>' : '') + link + '</details>';
-  }).join('') + '</div>';
-}
-
-function ttqsExternalRender_(model) {
-  var cards = model.indicators.map(function(item) {
-    var klass = Number(item.no) >= 17 ? 'outcome' : 'evidence-card';
-    return '<article id="indicator-' + item.no + '" class="card ' + klass + '"><div class="top"><span class="no">' + item.no + '</span><span class="stage">' + ttqsExternalEscape_(item.stage) + '</span></div><h3>' + ttqsExternalEscape_(item.title) + '</h3><div class="focus"><strong>官方查核焦點摘要</strong><p>' + ttqsExternalEscape_(item.officialFocus.focus) + '</p>' + ttqsExternalSubitemsHtml_(item.officialFocus.subitems) + '<small>顧問最短路徑：' + ttqsExternalEscape_(item.officialFocus.demoPath) + '</small></div><p class="status">' + ttqsExternalEscape_(item.status) + '</p><div class="meta"><span>核心索引佐證筆數：' + ttqsExternalEscape_(item.evidenceCount) + '</span><span>快照更新：' + ttqsExternalEscape_(item.refreshedAt) + '</span></div><details class="drill"><summary>查看佐證與來源（' + item.evidenceDetails.length + '）</summary>' + ttqsExternalEvidenceHtml_(item.evidenceDetails) + '</details></article>';
-  }).join('');
-  var runtimeLocators = model.evidence.filter(function(item) { return item.observationId && item.sourceLocator; }).length;
-  return '<!doctype html><html lang="zh-Hant-TW"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TTQS ONE 外部唯讀</title><style>' +
-    ':root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;color:#17202a;background:#f4f6f8}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f4f6f8}main{max-width:1220px;margin:auto;padding:22px}header,.card,.stat,.flow-step,.official-card,.form-card,.trace-card{background:#fff;border:1px solid #dce3e8;border-radius:16px}header{padding:24px;margin-bottom:16px}.eyebrow{font-size:13px;font-weight:800;color:#586674}h1{font-size:30px;margin:7px 0 8px}h2{font-size:22px}h3{font-size:16px}.notice{background:#fff7dd;border:1px solid #ead18a;border-radius:12px;padding:13px 15px;line-height:1.6}.security{background:#edf7ef;border:1px solid #c8dfcd;border-radius:12px;padding:13px 15px;line-height:1.6;margin-top:10px}.jump{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.jump a{padding:7px 10px;border:1px solid #c9d3dc;border-radius:999px;text-decoration:none;color:#17202a;font-size:12px;font-weight:800;background:#fff}.stats,.flow,.grid,.official-grid,.form-grid,.trace-grid{display:grid;gap:11px}.stats{grid-template-columns:repeat(4,1fr);margin:16px 0}.stat{padding:14px}.stat strong{display:block;font-size:24px}.flow{grid-template-columns:repeat(3,1fr)}.flow-step,.official-card{padding:15px;text-decoration:none;color:#17202a;display:grid;gap:6px}.official-grid{grid-template-columns:repeat(3,1fr)}.official-card small{color:#66737e;line-height:1.5}.grid{grid-template-columns:repeat(2,1fr)}.form-grid{grid-template-columns:repeat(2,1fr)}.form-card{padding:15px}.metric{margin:9px 0}.metric b{font-size:22px}.trace-card{padding:16px}.trace-head{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.trace-grid{grid-template-columns:repeat(4,1fr);margin-top:12px}.trace-step{border:1px solid #dce3e8;border-radius:12px;padding:12px;background:#fafbfc;display:grid;gap:5px}.trace-step>span{font-weight:900}.trace-step.bad{border-color:#e2b8b8}.trace-step.good{border-color:#a9cfb2}.card{padding:16px;border-left:5px solid #60886b}.card.outcome{border-left-color:#a98945}.top{display:flex;justify-content:space-between}.no{font-weight:800}.stage,.tags b,.subitems span{font-size:12px;background:#eef2f5;padding:4px 8px;border-radius:999px}.subitems{display:flex;gap:5px;flex-wrap:wrap;margin:8px 0}.focus{border:1px solid #dce3e8;background:#f8fafb;border-radius:10px;padding:10px;line-height:1.55}.focus p{margin:6px 0}.focus small{color:#66737e}.meta,.note,.status,.flow-step small,.foot{color:#66737e;font-size:12px;line-height:1.55}.drill{border-top:1px solid #e1e7eb;margin-top:12px;padding-top:10px}.drill>summary,.evidence>summary{cursor:pointer;font-weight:800}.evidence-list{display:grid;gap:9px;margin-top:10px}.evidence{border:1px solid #e1e7eb;border-radius:10px;padding:10px;background:#fafbfc}.tags{display:flex;gap:5px;flex-wrap:wrap;margin:9px 0}.locator,.controlled{display:grid;gap:4px;margin:7px 0;padding:8px;border-radius:8px;background:#f1f4f6;font-size:12px}.controlled{background:#fffbe9;border:1px solid #eadca3}.locator code,.trace-step code,.trace-head code{overflow-wrap:anywhere}.controlled p{margin:3px 0;line-height:1.55}.source-link{display:inline-block;margin-top:4px;text-decoration:none;color:#17202a;border:1px solid #c9d3dc;border-radius:9px;padding:7px 9px;background:#fff;font-size:12px;font-weight:800}.section-title{margin-top:25px}.section-title p{line-height:1.6;color:#586674}@media(max-width:920px){.official-grid,.trace-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:720px){main{padding:13px}.grid,.stats,.flow,.official-grid,.form-grid,.trace-grid{grid-template-columns:1fr}}' +
-    '</style></head><body><main><header><div class="eyebrow">TTQS ONE · 測試／示範資料（TEST／SAMPLE）· EXTERNAL_READONLY</div><h1>' + ttqsExternalEscape_(model.title) + '</h1><div>用途：' + ttqsExternalEscape_(model.summary['用途']) + '</div><div class="notice">本畫面不計算 TTQS 官方分數，不宣稱評核通過或準備完成。17–19 的正式成果仍須以實際營運證據（REAL）為準。</div><div class="security">唯讀安全邊界：此 Web App 僅呈現部署版本內嵌的去識別靜態快照，不在執行期呼叫 Google Sheets／Drive API、不直接連線 TTQS ONE 核心資料庫、不讀取問卷原始回答，也不提供新增、修改、刪除、核准、正式啟動或背景工作控制。</div><nav class="jump"><a href="#official-semantics">官方19指標</a><a href="#sample-causal">SAMPLE因果鏈</a><a href="#form-lifecycle">四表生命週期</a><a href="#runtime-trace">故障／重試</a><a href="#evidence-drilldown">19指標佐證</a></nav></header>' +
-    '<section class="stats"><div class="stat">官方指標範圍<strong>19 / 19</strong></div><div class="stat">公開 SUPPORTS 定位<strong>' + model.evidence.length + '</strong></div><div class="stat">四類 TEST Forms<strong>4 / 4</strong></div><div class="stat">TEST Observation<strong>' + ttqsExternalEscape_(model.formObservationTotal) + '</strong></div></section>' +
-    ttqsExternalOfficialHtml_(model.official) + ttqsExternalCausalHtml_(model.causalFlow) + ttqsExternalFormsHtml_(model.forms, model.formObservationTotal) + ttqsExternalS3TraceHtml_(model.s3Trace) + '<section id="evidence-drilldown"><div class="section-title"><h2>19 指標佐證與來源下鑽</h2><p>每張卡片先顯示官方查核焦點，再展開去識別 SUPPORTS 佐證、來源物件、Observation locator 與受控章節摘要。Google Drive 連結只是選配，不是顧問調閱成功的必要條件。</p></div><div class="grid">' + cards + '</div></section><p class="foot">資料更新：' + ttqsExternalEscape_(model.summary['來源更新時間']) + '。資料分類：' + ttqsExternalEscape_(model.summary['資料分類']) + '。官方語意：' + ttqsExternalEscape_(model.summary['官方語意來源']) + '。代表 runtime locator：' + runtimeLocators + '。來源快照：' + ttqsExternalEscape_(TTQS_EXTERNAL_SOURCE_SNAPSHOT_ID_) + '。本唯讀檢視器不會把 SAMPLE／CONTROL 宣稱為 REAL。</p></main></body></html>';
-}
-
-function ttqsExternalErrorHtml_() {
-  return '<!doctype html><html lang="zh-Hant-TW"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TTQS ONE 外部唯讀</title></head><body><main><h1>目前無法載入唯讀快照</h1><p>安全檢查未通過或資料暫時不可用。請聯絡承辦窗口協助確認。</p></main></body></html>';
-}
-
-// R3 additive layer. Canonical D8 safety helpers above remain unchanged from main.
-var TTQS_SUBJECT_='社團法人屏東縣原始點關懷協會';
-var TTQS_RELEASE_='ER-DEMO-20260901-DRAFT-001';
-var TTQS_INDICATORS_=[
-['1','規劃','訓練機構未來經營方向及目標之訂定','NOT_FORMAL_READY','EV-S002-001','clean SAMPLE-002 方法；無協會正式營運/市場目標',''],
-['2','規劃','對外明確的訓練政策','NOT_FORMAL_READY','EV-POLPROC-001','工作版制度存在；無正式 A ApprovalEvent',''],
-['3','規劃','明確的 PDDRO 訓練課程及明確的核心訓練類別','NOT_FORMAL_READY','EV-S002-001','clean SAMPLE-002 架構方法可展示；無 REAL 課程體系',''],
-['4','規劃','訓練品質管理的系統化文件資訊','NOT_FORMAL_READY','EV-POLPROC-001','CURRENT/WORKING 不等於 APPROVED/EFFECTIVE',''],
-['5','規劃','訓練規劃及經營目標的連結性','NOT_FORMAL_READY','EV-S002-001','clean SAMPLE-002 只展示連結方法',''],
-['6','規劃','訓練機構的行政管理能力及訓練主管相關職能','NOT_FORMAL_READY','EV-GOV-CTRL-001','A/B/C 是治理模型；真人職能事證尚未形成',''],
-['7','設計','訓練需求相關的職能分析及應用','NOT_FORMAL_READY','EV-S002-001','clean SAMPLE-002 展示需求/職能分析方法',''],
-['8','設計','訓練方案的系統設計','NOT_FORMAL_READY','EV-S002-001','clean SAMPLE-002 展示課程方案方法',''],
-['9','設計','利益關係人的參與過程','NOT_FORMAL_READY','EV-S002-002','全部參與者與決策均為 SAMPLE',''],
-['10','設計','訓練資源的採購程序及甄選標準','EVIDENCE_MISSING','S-AP-004','受控教材/個資告知/招生快照原件尚未建立',''],
-['11','設計','訓練計畫及目標需求的結合','NOT_FORMAL_READY','EV-S002-001','clean SAMPLE-002 展示需求→目標→內容',''],
-['12','執行','訓練內涵按計畫執行的程度','EVIDENCE_MISSING','EV-S002-003','12d 可展示；12a/b/c/e 仍有受控原件缺口','12a 學員遴選|12b 教材選擇|12c 師資遴選|12d 教學方法|12e 教學環境與設備'],
-['13','執行','提供學習成果移轉的建議或協助','EVIDENCE_MISSING','EV-S002-003','clean fixture 成果移轉原件待建立',''],
-['14','執行','訓練資料分類與建檔及管理資訊系統化','NOT_FORMAL_READY','EV-ARCH-001','系統化索引能力可展示；不可替代 REAL 訓練檔案',''],
-['15','查核','評估報告及定期性綜合分析','EVIDENCE_MISSING','—','clean fixture 結案/綜合分析待建立',''],
-['16','查核','管控及異常矯正處理','NOT_FORMAL_READY','EV-RUN-REC-CF43A0C33DC3EACD','S3 僅證明系統控制，不是辦訓異常事證',''],
-['17','成果','訓練成果評估的多元性和完整性','FORMAL_BLOCKED_NEEDS_REAL','—','協會尚無 REAL Outcome','17a 反應評估|17b 學習評估|17c 行為評估|17d 成果評估'],
-['18','成果','訓練系統的一般性功能─目標客戶及學員的評價','FORMAL_BLOCKED_NEEDS_REAL','—','REAL 目標客戶/學員評價尚未發生',''],
-['19','成果','訓練系統的市場功能─目標市場及顧客的價值創造','FORMAL_BLOCKED_NEEDS_REAL','—','REAL 目標市場/顧客價值尚未發生','']];
-var TTQS_CHECKLIST_=[
-['1','clean SAMPLE-002 需求與課程方向連結','T_GATE_SAMPLE_ONLY','EV-S002-001'],['2','訓練政策工作版＋clean SAMPLE-002','WORKING_CONTROL_ONLY','EV-POLPROC-001'],['3','PDDRO 制度/架構工作版','WORKING_CONTROL_ONLY','EV-ARCH-001'],['4','制度政策與 19 程序工作版＋治理控制','WORKING_CONTROL_ONLY','EV-POLPROC-001'],['5','clean SAMPLE-002 需求與課程方向連結','T_GATE_SAMPLE_ONLY','EV-S002-001'],['6','A/B/C 治理模型與系統角色控制','WORKING_CONTROL_ONLY','EV-GOV-CTRL-001'],['7','SAMPLE-002 乾淨雙時間軸需求與課程設計鏈','T_GATE_SAMPLE_ONLY','EV-S002-001'],['8','SAMPLE-002 乾淨雙時間軸課程方案','T_GATE_SAMPLE_ONLY','EV-S002-001'],['9','SAMPLE-002 模擬核准與參與方法','T_GATE_SAMPLE_ONLY','EV-S002-002'],['10','資源甄選方法；受控原件尚未建立','GAP_CONTROLLED_RESOURCE_OBJECTS_MISSING','S-AP-004'],['11','SAMPLE-002 需求→目標→內容連結','T_GATE_SAMPLE_ONLY','EV-S002-001'],['12a','學員遴選方法骨架','GAP_SAMPLE_METHOD_ONLY','SAMPLE-CLASS-002'],['12b','教材評選方法骨架','GAP_CONTROLLED_MATERIAL_OBJECT_MISSING','SAMPLE-CV-002'],['12c','師資遴選方法骨架','GAP_SAMPLE_METHOD_ONLY','SAMPLE-CV-002'],['12d','教學方法與目標切合示範','T_GATE_SAMPLE_ONLY','EV-S002-001'],['12e','場地/設備情境；無受控安檢/投保原件','GAP_CONTROLLED_VENUE_OBJECT_MISSING','SAMPLE-CLASS-002'],['13','成果移轉 clean fixture 原件待建立','GAP_CLEAN_TRANSFER_ARTIFACT_MISSING','SAMPLE-CLASS-002'],['14','系統架構/資料字典/Evidence 索引與查詢','CONTROL_METHOD_AVAILABLE','EV-ARCH-001'],['15','clean fixture 結案/綜合分析尚未建立','GAP_CLEAN_CLOSEOUT_NOT_BUILT','—'],['16','S3 故障→重試→對帳 CONTROL trace','CONTROL_METHOD_AVAILABLE','EV-RUN-REC-CF43A0C33DC3EACD'],['17a','REAL 反應評估尚未發生','FORMAL_BLOCKED_NEEDS_REAL','—'],['17b','REAL 學習評估尚未發生','FORMAL_BLOCKED_NEEDS_REAL','—'],['17c','REAL 行為評估尚未發生','FORMAL_BLOCKED_NEEDS_REAL','—'],['17d','REAL 成果評估尚未發生','FORMAL_BLOCKED_NEEDS_REAL','—'],['18','REAL 目標客戶/學員評價尚未發生','FORMAL_BLOCKED_NEEDS_REAL','—'],['19','REAL 目標市場/顧客價值尚未發生','FORMAL_BLOCKED_NEEDS_REAL','—']];
+var TTQS_SUBJECT_='社團法人屏東縣原始點關懷協會';var TTQS_RELEASE_='ER-DEMO-20260901-DRAFT-001';
+var TTQS_INDICATORS_=[['1','規劃','訓練機構未來經營方向及目標之訂定','NOT_FORMAL_READY','EV-S002-001','clean SAMPLE-002 方法；無協會正式營運/市場目標',''],['2','規劃','對外明確的訓練政策','NOT_FORMAL_READY','EV-POLPROC-001','工作版制度存在；無正式 A ApprovalEvent',''],['3','規劃','明確的 PDDRO 訓練課程及明確的核心訓練類別','NOT_FORMAL_READY','EV-S002-001','clean SAMPLE-002 架構方法可展示；無 REAL 課程體系',''],['4','規劃','訓練品質管理的系統化文件資訊','NOT_FORMAL_READY','EV-POLPROC-001','CURRENT/WORKING 不等於 APPROVED/EFFECTIVE',''],['5','規劃','訓練規劃及經營目標的連結性','NOT_FORMAL_READY','EV-S002-001','clean SAMPLE-002 只展示連結方法',''],['6','規劃','訓練機構的行政管理能力及訓練主管相關職能','NOT_FORMAL_READY','EV-GOV-CTRL-001','A/B/C 是治理模型；真人職能事證尚未形成',''],['7','設計','訓練需求相關的職能分析及應用','NOT_FORMAL_READY','EV-S002-001','clean SAMPLE-002 展示需求/職能分析方法',''],['8','設計','訓練方案的系統設計','NOT_FORMAL_READY','EV-S002-001','clean SAMPLE-002 展示課程方案方法',''],['9','設計','利益關係人的參與過程','NOT_FORMAL_READY','EV-S002-002','全部參與者與決策均為 SAMPLE',''],['10','設計','訓練資源的採購程序及甄選標準','EVIDENCE_MISSING','S-AP-004','受控教材/個資告知/招生快照原件尚未建立',''],['11','設計','訓練計畫及目標需求的結合','NOT_FORMAL_READY','EV-S002-001','clean SAMPLE-002 展示需求→目標→內容',''],['12','執行','訓練內涵按計畫執行的程度','EVIDENCE_MISSING','EV-S002-003','12d 可展示；12a/b/c/e 仍有受控原件缺口','12a 學員遴選|12b 教材選擇|12c 師資遴選|12d 教學方法|12e 教學環境與設備'],['13','執行','提供學習成果移轉的建議或協助','EVIDENCE_MISSING','EV-S002-003','clean fixture 成果移轉原件待建立',''],['14','執行','訓練資料分類與建檔及管理資訊系統化','NOT_FORMAL_READY','EV-ARCH-001','系統化索引能力可展示；不可替代 REAL 訓練檔案',''],['15','查核','評估報告及定期性綜合分析','EVIDENCE_MISSING','—','clean fixture 結案/綜合分析待建立',''],['16','查核','管控及異常矯正處理','NOT_FORMAL_READY','EV-RUN-REC-CF43A0C33DC3EACD','S3 僅證明系統控制，不是辦訓異常事證',''],['17','成果','訓練成果評估的多元性和完整性','FORMAL_BLOCKED_NEEDS_REAL','—','協會尚無 REAL Outcome','17a 反應評估|17b 學習評估|17c 行為評估|17d 成果評估'],['18','成果','訓練系統的一般性功能─目標客戶及學員的評價','FORMAL_BLOCKED_NEEDS_REAL','—','REAL 目標客戶/學員評價尚未發生',''],['19','成果','訓練系統的市場功能─目標市場及顧客的價值創造','FORMAL_BLOCKED_NEEDS_REAL','—','REAL 目標市場/顧客價值尚未發生','']];
+var TTQS_CHECKLIST_=[['1','clean SAMPLE-002 需求與課程方向連結','T_GATE_SAMPLE_ONLY','EV-S002-001'],['2','訓練政策工作版＋clean SAMPLE-002','WORKING_CONTROL_ONLY','EV-POLPROC-001'],['3','PDDRO 制度/架構工作版','WORKING_CONTROL_ONLY','EV-ARCH-001'],['4','制度政策與 19 程序工作版＋治理控制','WORKING_CONTROL_ONLY','EV-POLPROC-001'],['5','clean SAMPLE-002 需求與課程方向連結','T_GATE_SAMPLE_ONLY','EV-S002-001'],['6','A/B/C 治理模型與系統角色控制','WORKING_CONTROL_ONLY','EV-GOV-CTRL-001'],['7','SAMPLE-002 乾淨雙時間軸需求與課程設計鏈','T_GATE_SAMPLE_ONLY','EV-S002-001'],['8','SAMPLE-002 乾淨雙時間軸課程方案','T_GATE_SAMPLE_ONLY','EV-S002-001'],['9','SAMPLE-002 模擬核准與參與方法','T_GATE_SAMPLE_ONLY','EV-S002-002'],['10','資源甄選方法；受控原件尚未建立','GAP_CONTROLLED_RESOURCE_OBJECTS_MISSING','S-AP-004'],['11','SAMPLE-002 需求→目標→內容連結','T_GATE_SAMPLE_ONLY','EV-S002-001'],['12a','學員遴選方法骨架','GAP_SAMPLE_METHOD_ONLY','SAMPLE-CLASS-002'],['12b','教材評選方法骨架','GAP_CONTROLLED_MATERIAL_OBJECT_MISSING','SAMPLE-CV-002'],['12c','師資遴選方法骨架','GAP_SAMPLE_METHOD_ONLY','SAMPLE-CV-002'],['12d','教學方法與目標切合示範','T_GATE_SAMPLE_ONLY','EV-S002-001'],['12e','場地/設備情境；無受控安檢/投保原件','GAP_CONTROLLED_VENUE_OBJECT_MISSING','SAMPLE-CLASS-002'],['13','成果移轉 clean fixture 原件待建立','GAP_CLEAN_TRANSFER_ARTIFACT_MISSING','SAMPLE-CLASS-002'],['14','系統架構/資料字典/Evidence 索引與查詢','CONTROL_METHOD_AVAILABLE','EV-ARCH-001'],['15','clean fixture 結案/綜合分析尚未建立','GAP_CLEAN_CLOSEOUT_NOT_BUILT','—'],['16','S3 故障→重試→對帳 CONTROL trace','CONTROL_METHOD_AVAILABLE','EV-RUN-REC-CF43A0C33DC3EACD'],['17a','REAL 反應評估尚未發生','FORMAL_BLOCKED_NEEDS_REAL','—'],['17b','REAL 學習評估尚未發生','FORMAL_BLOCKED_NEEDS_REAL','—'],['17c','REAL 行為評估尚未發生','FORMAL_BLOCKED_NEEDS_REAL','—'],['17d','REAL 成果評估尚未發生','FORMAL_BLOCKED_NEEDS_REAL','—'],['18','REAL 目標客戶/學員評價尚未發生','FORMAL_BLOCKED_NEEDS_REAL','—'],['19','REAL 目標市場/顧客價值尚未發生','FORMAL_BLOCKED_NEEDS_REAL','—']];
 function esc_(v){return String(v==null?'':v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 function css_(){return ':root{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;color:#142532;background:#f3f6f8}.r3hero,.r3panel,.r3card{background:#fff;border:1px solid #d9e2e8;border-radius:16px}.r3hero,.r3panel{padding:18px;margin:16px 0}.r3grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.r3card{padding:12px}.axis{display:flex;justify-content:space-between;gap:8px;padding:8px;border-radius:10px;margin:7px 0}.axis.ok{background:#eaf7ee}.axis.warn{background:#fff2d9}.chip,.button{display:inline-block;border:1px solid #cbd7df;border-radius:999px;padding:5px 8px;margin:2px;text-decoration:none;color:#173142}.r3table{width:100%;border-collapse:collapse}.r3table th,.r3table td{padding:7px;border-bottom:1px solid #e4eaee;text-align:left;vertical-align:top}@media(max-width:900px){.r3grid{grid-template-columns:1fr}}';}
 function findIndicator_(id){for(var i=0;i<TTQS_INDICATORS_.length;i++){if(TTQS_INDICATORS_[i][0]===String(id))return TTQS_INDICATORS_[i];}return null;}
@@ -356,13 +142,4 @@ function checklistHtml_(){return TTQS_CHECKLIST_.map(function(r){return '<tr><td
 function r3CardsHtml_(){var cardParts=[];for (var i = 1; i <= 19; i++) {var r=TTQS_INDICATORS_[i-1];var subs=r[6]?r[6].split('|').map(function(x){return '<span class="chip">'+esc_(x)+'</span>';}).join(''):'';var adm=r[3]==='FORMAL_BLOCKED_NEEDS_REAL'?'NO_REAL_EVENT':(r[3]==='EVIDENCE_MISSING'?'GAP':'TEST/SAMPLE/CONTROL_ONLY');cardParts.push('<article class="r3card"><h3>'+r[0]+'｜'+esc_(r[2])+'</h3><div class="axis ok"><b>系統能力</b><span>TEST_EVIDENCE_PATH_AVAILABLE</span></div><div class="axis warn"><b>正式可評事證</b><span>'+r[3]+'</span></div><div>'+subs+'</div><details><summary>查看佐證與來源｜Evidence Matrix</summary><table class="r3table"><tr><th>Evidence/物件</th><th>可採認性</th><th>來源/缺口</th></tr><tr><td>'+esc_(r[4])+'</td><td>'+adm+'</td><td>'+esc_(r[5])+'</td></tr></table><p><a class="button" target="_blank" href="?artifact='+r[0]+'">開啟 FrozenArtifact</a></p><p>正式委員主路徑不依賴協會 Google 帳號。</p></details></article>');}return cardParts.join('');}
 function r3AdditiveHtml_(){return '<style>'+css_()+'</style><section class="r3hero"><b>TTQS ONE · T_TEST_RELEASE · TEST／SAMPLE／CONTROL</b><h2>'+TTQS_SUBJECT_+'</h2><p><b>目前營運真實狀態：</b>協會目前尚未開辦 REAL 課程；REAL 學員、講師、成果與 Outcome 尚未發生。</p><p><b>介面覆蓋：</b>19 / 19。這只代表導航與查驗路徑覆蓋，不代表正式指標達成。</p><p><b>REAL 訓練事證：</b>尚未發生。</p><p><b>legacy SAMPLE-001 因時序倒掛已退出主展示</b>；主展示使用 CLEAN_FIXTURE_2 / SAMPLE-002，scenario 與 record_created_at 分離。</p><p>首頁 → 指標卡 → Evidence Matrix → FrozenArtifact 為 3-click 查驗路徑；卡內 12a–e／17a–d 切換不算導航。</p></section><section class="r3panel"><h2>雙軸狀態｜系統能力 × 正式可評事證</h2><div class="r3grid">'+r3CardsHtml_()+'</div></section><section class="r3panel"><h2>官方佐證表視圖｜26 列</h2><p>OfficialEvidenceChecklistDraft 唯讀展示；不代表已向官方平台送件。</p><table class="r3table"><tr><th>指標/子項</th><th>本次佐證名稱/缺口</th><th>狀態</th><th>來源定位</th></tr>'+checklistHtml_()+'</table></section><section class="r3panel"><h2>EvaluationRelease / Offline</h2><p>DEMO Release：'+TTQS_RELEASE_+'。Evidence Matrix／官方佐證表已建立；FrozenArtifact 與 Offline Pack R1 已於 TEST/CONTROL 建置，正式 LOCK／SUBMIT 尚未發生。</p><p>正式 cutoff_at 尚未定義。REAL／正式評分／PROD／官方送件均未執行。</p></section>';}
 function render_(){var canonical=ttqsExternalRender_(ttqsExternalSnapshotModel_());return canonical.replace('<body><main>','<body><main>'+r3AdditiveHtml_());}
-
-function doGet(e) {
-  try {
-    var artifact = e && e.parameter && e.parameter.artifact;
-    if (artifact) return HtmlService.createHtmlOutput(artifactHtml_(artifact)).setTitle('TTQS ONE FrozenArtifact DEMO').addMetaTag('viewport', 'width=device-width, initial-scale=1');
-    return HtmlService.createHtmlOutput(render_()).setTitle('TTQS ONE 外部唯讀評核入口｜TEST/SAMPLE').addMetaTag('viewport', 'width=device-width, initial-scale=1');
-  } catch (err) {
-    return HtmlService.createHtmlOutput(ttqsExternalErrorHtml_()).setTitle('TTQS ONE 外部唯讀').addMetaTag('viewport', 'width=device-width, initial-scale=1');
-  }
-}
+function doGet(e){try{var artifact=e&&e.parameter&&e.parameter.artifact;if(artifact)return HtmlService.createHtmlOutput(artifactHtml_(artifact)).setTitle('TTQS ONE FrozenArtifact DEMO').addMetaTag('viewport','width=device-width, initial-scale=1');return HtmlService.createHtmlOutput(render_()).setTitle('TTQS ONE 外部唯讀評核入口｜TEST/SAMPLE').addMetaTag('viewport','width=device-width, initial-scale=1');}catch(err){return HtmlService.createHtmlOutput(ttqsExternalErrorHtml_()).setTitle('TTQS ONE 外部唯讀').addMetaTag('viewport','width=device-width, initial-scale=1');}}
