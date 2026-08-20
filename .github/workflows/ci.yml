@@ -15,15 +15,12 @@ jobs:
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           ref: 'e7ba6825a5ab5d12c0cab9f87593d4a9ab59434f'
-
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '22'
           cache: npm
-
       - name: Install dependencies
         run: npm ci --ignore-scripts
-
       - name: Show package.json verify chain
         shell: bash
         run: |
@@ -33,79 +30,48 @@ jobs:
           console.log(`scripts.verify = ${pkg.scripts.verify}`);
           for (const command of pkg.scripts.verify.split(' && ')) console.log(`- ${command}`);
           NODE
-
       - name: "verify: generated-manifest"
         id: generated_manifest
         if: ${{ !cancelled() }}
         continue-on-error: true
         shell: bash
         run: |
-          set +e
-          npm run verify:generated-manifest
-          rc=$?
-          echo "exit_code=$rc" >> "$GITHUB_OUTPUT"
-          exit "$rc"
-
+          set +e; npm run verify:generated-manifest; rc=$?; echo "exit_code=$rc" >> "$GITHUB_OUTPUT"; exit "$rc"
       - name: "verify: manifest"
         id: manifest
         if: ${{ !cancelled() }}
         continue-on-error: true
         shell: bash
         run: |
-          set +e
-          npm run verify:manifest
-          rc=$?
-          echo "exit_code=$rc" >> "$GITHUB_OUTPUT"
-          exit "$rc"
-
+          set +e; npm run verify:manifest; rc=$?; echo "exit_code=$rc" >> "$GITHUB_OUTPUT"; exit "$rc"
       - name: "verify: deploy-controls"
         id: deploy_controls
         if: ${{ !cancelled() }}
         continue-on-error: true
         shell: bash
         run: |
-          set +e
-          npm run verify:deploy-controls
-          rc=$?
-          echo "exit_code=$rc" >> "$GITHUB_OUTPUT"
-          exit "$rc"
-
+          set +e; npm run verify:deploy-controls; rc=$?; echo "exit_code=$rc" >> "$GITHUB_OUTPUT"; exit "$rc"
       - name: "verify: lint"
         id: lint
         if: ${{ !cancelled() }}
         continue-on-error: true
         shell: bash
         run: |
-          set +e
-          npm run lint
-          rc=$?
-          echo "exit_code=$rc" >> "$GITHUB_OUTPUT"
-          exit "$rc"
-
+          set +e; npm run lint; rc=$?; echo "exit_code=$rc" >> "$GITHUB_OUTPUT"; exit "$rc"
       - name: "verify: test"
         id: test
         if: ${{ !cancelled() }}
         continue-on-error: true
         shell: bash
         run: |
-          set +e
-          npm test
-          rc=$?
-          echo "exit_code=$rc" >> "$GITHUB_OUTPUT"
-          exit "$rc"
-
+          set +e; npm test; rc=$?; echo "exit_code=$rc" >> "$GITHUB_OUTPUT"; exit "$rc"
       - name: "verify: deploy"
         id: deploy
         if: ${{ !cancelled() }}
         continue-on-error: true
         shell: bash
         run: |
-          set +e
-          npm run verify:deploy
-          rc=$?
-          echo "exit_code=$rc" >> "$GITHUB_OUTPUT"
-          exit "$rc"
-
+          set +e; npm run verify:deploy; rc=$?; echo "exit_code=$rc" >> "$GITHUB_OUTPUT"; exit "$rc"
       - name: Verify actual clasp push set
         if: ${{ !cancelled() }}
         shell: bash
@@ -113,7 +79,6 @@ jobs:
           printf '%s\n' '{"scriptId":"15ImUCpyi1Jsd8yF8Z6wey_7cw793CymWTLxOqwMka3P1CzE5hQun6qiC","rootDir":"apps-script"}' > .clasp.json
           npx --yes @google/clasp@3.3.0 show-file-status --json > clasp-status.json
           node scripts/verify-clasp-status.mjs clasp-status.json
-
       - name: Summarize verify exit codes
         if: ${{ always() }}
         shell: bash
@@ -139,7 +104,6 @@ jobs:
             echo "| npm test | ${E:-NOT_RUN} |"
             echo "| npm run verify:deploy | ${F:-NOT_RUN} |"
           } >> "$GITHUB_STEP_SUMMARY"
-
       - name: "gate: generated-manifest"
         if: ${{ always() && steps.generated_manifest.outputs.exit_code != '0' }}
         run: exit 1
@@ -158,3 +122,41 @@ jobs:
       - name: "gate: deploy"
         if: ${{ always() && steps.deploy.outputs.exit_code != '0' }}
         run: exit 1
+
+  discover-product-tests:
+    runs-on: ubuntu-latest
+    outputs:
+      files: ${{ steps.files.outputs.files }}
+    steps:
+      - name: Checkout exact Q-03 target
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: 'e7ba6825a5ab5d12c0cab9f87593d4a9ab59434f'
+      - name: Discover tests coupled to external viewer
+        id: files
+        shell: bash
+        run: |
+          files=$(grep -lE 'external-viewer|Code\.gs' tests/*.test.mjs | sort | jq -R -s -c 'split("\n")[:-1]')
+          echo "files=$files" >> "$GITHUB_OUTPUT"
+          echo "Discovered: $files"
+
+  product-test-file:
+    needs: discover-product-tests
+    name: "test-file ${{ matrix.file }}"
+    strategy:
+      fail-fast: false
+      matrix:
+        file: ${{ fromJSON(needs.discover-product-tests.outputs.files) }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact Q-03 target
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: 'e7ba6825a5ab5d12c0cab9f87593d4a9ab59434f'
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: "run ${{ matrix.file }}"
+        run: node --test "${{ matrix.file }}"
