@@ -31,44 +31,64 @@ function decodeEntities(value) {
     .replace(/&amp;/gi, '&');
 }
 
-function visibleText(source) {
-  return decodeEntities(decodeWrapperForInspection(source)
-    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, ' ')
+function normalizeText(value) {
+  return decodeEntities(String(value ?? '').replace(/<[^>]+>/g, ' ').replace(/\\["']/g, '').replace(/\s+/g, ' ').trim());
+}
+
+function artifactPayloadText(source) {
+  const decoded = decodeWrapperForInspection(source);
+  const pre = decoded.match(/<pre\b[^>]*class=["']?frozen-text["']?[^>]*>([\s\S]*?)<\/pre>/i)?.[1];
+  if (pre) return normalizeText(pre);
+  const first = decoded.indexOf(REQUIRED_CONTENT_MARKERS[0]);
+  const second = decoded.indexOf(REQUIRED_CONTENT_MARKERS[1]);
+  if (first >= 0 && second >= 0) {
+    const start = Math.min(first, second);
+    const end = Math.max(first + REQUIRED_CONTENT_MARKERS[0].length, second + REQUIRED_CONTENT_MARKERS[1].length);
+    return normalizeText(decoded.slice(start, end));
+  }
+  return normalizeText(decoded
     .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, ' ')
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim());
+    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, ' '));
 }
 
 function extractAttr(source, name) {
   const decoded = decodeWrapperForInspection(source);
-  const re = new RegExp(`${name}=["']([^"']+)["']`, 'i');
+  const re = new RegExp(`${name}\\s*=\\s*\\?["']([^"']+)\\?["']`, 'i');
   return decoded.match(re)?.[1] || '';
+}
+
+function extractRenderedArtifactId(source) {
+  const decoded = decodeWrapperForInspection(source);
+  const attr = extractAttr(source, 'data-artifact-id');
+  if (attr) return attr;
+  const labelMatch = decoded.match(/artifact_id[\s\S]{0,320}?(FA-DEMO-[A-Za-z0-9_-]+)/i);
+  if (labelMatch) return labelMatch[1];
+  return '';
 }
 
 function extractTitle(source) {
   const decoded = decodeWrapperForInspection(source);
   const h1 = decoded.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || '';
   const title = decoded.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i)?.[1] || '';
-  return decodeEntities((h1 || title).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim());
+  return normalizeText(h1 || title);
 }
 
 function evidence(actual, extra = {}) { return {actual, ...extra}; }
 
 export function classifyFrozenArtifact({source, requestedUrl, requestedArtifactId, httpStatus, effectiveUrl = ''}) {
   const decoded = decodeWrapperForInspection(source);
-  const text = visibleText(source);
-  const renderedArtifactId = extractAttr(source, 'data-artifact-id');
+  const text = artifactPayloadText(source);
+  const renderedArtifactId = extractRenderedArtifactId(source);
   const title = extractTitle(source);
   const friendlyError = decoded.includes('找不到指定的評核凍結文件') || decoded.includes('目前無法載入唯讀快照');
   const expectedUrl = `${CANONICAL_EXEC_URL}?artifact=${encodeURIComponent(requestedArtifactId)}`;
   const markerResults = REQUIRED_CONTENT_MARKERS.map((marker) => ({marker, pass: decoded.includes(marker), actual: decoded.includes(marker) ? marker : 'MISSING'}));
   const checks = [
     {id:'FA-01', expected:expectedUrl, pass:requestedUrl === expectedUrl && requestedArtifactId === FROZEN_ARTIFACT_ID, evidence:evidence(requestedUrl,{effectiveUrl,note:'Google may use internal delivery URLs after the canonical navigation target; browser top-level address remains a HUMAN check.'})},
-    {id:'FA-02', expected:'normalized visible text >= 200 and not a friendly-error shell', pass:text.length >= 200 && !friendlyError, evidence:evidence(text.length,{friendlyError})},
+    {id:'FA-02', expected:'artifact payload visible text >= 200 and not a friendly-error shell', pass:text.length >= 200 && !friendlyError, evidence:evidence(text.length,{friendlyError,measurement:'decoded frozen artifact payload, wrapper-safe'})},
     {id:'FA-03', expected:'non-empty document title', pass:title.length > 0, evidence:evidence(title)},
     {id:'FA-04', expected:'visible TEST/CONTROL simulation warning and explicit non-REAL boundary', pass:decoded.includes('模擬評核查驗｜TEST／CONTROL｜非正式事證') && decoded.includes('不是協會 REAL 辦訓紀錄'), evidence:evidence(decoded.includes('模擬評核查驗｜TEST／CONTROL｜非正式事證') ? 'warning-present' : 'warning-missing')},
-    {id:'FA-05', expected:requestedArtifactId, pass:requestedArtifactId === FROZEN_ARTIFACT_ID && renderedArtifactId === requestedArtifactId, evidence:evidence(renderedArtifactId,{requestedArtifactId,manifestReference:FROZEN_ARTIFACT_ID})},
+    {id:'FA-05', expected:requestedArtifactId, pass:requestedArtifactId === FROZEN_ARTIFACT_ID && renderedArtifactId === requestedArtifactId, evidence:evidence(renderedArtifactId,{requestedArtifactId,manifestReference:FROZEN_ARTIFACT_ID,measurement:'data attribute or visible artifact_id table field'})},
     {id:'FA-06', expected:REQUIRED_CONTENT_MARKERS, pass:markerResults.length >= 2 && markerResults.every((item)=>item.pass), evidence:markerResults}
   ];
   const machineInputsPass = checks.every((item)=>item.pass);
