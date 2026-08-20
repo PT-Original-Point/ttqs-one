@@ -1,4 +1,4 @@
-name: TTQS ONE CI
+name: TTQS ONE CI Q-03 Diagnostic
 
 on:
   push:
@@ -6,22 +6,198 @@ on:
 
 permissions:
   contents: read
+  issues: write
+  pull-requests: write
+
+env:
+  Q03_TARGET: 'f75006487e803831f3b80870686dbebfaeaecf9e'
 
 jobs:
-  verify:
+  generate-manifest-output:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4 resolved by GitHub runner 2026-08-11
-      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4 resolved by GitHub runner 2026-08-11
+      - name: Checkout exact repaired PR-B target
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ env.Q03_TARGET }}
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Generate manifest strictly from Git commit blobs
+        run: |
+          node scripts/generate-manifest.mjs --ref HEAD --manifest-out /tmp/MANIFEST.sha256 --self-out /tmp/MANIFEST.sha256.sha256
+      - name: Publish exact generator output to PR 61
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          {
+            echo '<!-- Q03_GENERATED_MANIFEST_START -->'
+            echo 'Q-03 generator output for exact target `${{ env.Q03_TARGET }}`.'
+            echo
+            echo '```text'
+            cat /tmp/MANIFEST.sha256
+            echo '```'
+            echo
+            echo 'Sidecar:'
+            echo '```text'
+            cat /tmp/MANIFEST.sha256.sha256
+            echo '```'
+            echo '<!-- Q03_GENERATED_MANIFEST_END -->'
+          } > /tmp/q03-comment.md
+          gh api "repos/${GITHUB_REPOSITORY}/issues/61/comments" --method POST -F body=@/tmp/q03-comment.md
+
+  verify-diagnostic:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact repaired PR-B target
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ env.Q03_TARGET }}
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+      - name: Show package.json verify chain
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+          console.log(`scripts.verify = ${pkg.scripts.verify}`);
+          for (const command of pkg.scripts.verify.split(' && ')) console.log(`- ${command}`);
+          NODE
+      - name: "verify: generated-manifest"
+        id: generated_manifest
+        if: ${{ !cancelled() }}
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e; npm run verify:generated-manifest; rc=$?; echo "exit_code=$rc" >> "$GITHUB_OUTPUT"; exit "$rc"
+      - name: "verify: manifest"
+        id: manifest
+        if: ${{ !cancelled() }}
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e; npm run verify:manifest; rc=$?; echo "exit_code=$rc" >> "$GITHUB_OUTPUT"; exit "$rc"
+      - name: "verify: deploy-controls"
+        id: deploy_controls
+        if: ${{ !cancelled() }}
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e; npm run verify:deploy-controls; rc=$?; echo "exit_code=$rc" >> "$GITHUB_OUTPUT"; exit "$rc"
+      - name: "verify: lint"
+        id: lint
+        if: ${{ !cancelled() }}
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e; npm run lint; rc=$?; echo "exit_code=$rc" >> "$GITHUB_OUTPUT"; exit "$rc"
+      - name: "verify: test"
+        id: test
+        if: ${{ !cancelled() }}
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e; npm test; rc=$?; echo "exit_code=$rc" >> "$GITHUB_OUTPUT"; exit "$rc"
+      - name: "verify: deploy"
+        id: deploy
+        if: ${{ !cancelled() }}
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e; npm run verify:deploy; rc=$?; echo "exit_code=$rc" >> "$GITHUB_OUTPUT"; exit "$rc"
+      - name: Verify actual clasp push set
+        if: ${{ !cancelled() }}
+        shell: bash
+        run: |
+          printf '%s\n' '{"scriptId":"15ImUCpyi1Jsd8yF8Z6wey_7cw793CymWTLxOqwMka3P1CzE5hQun6qiC","rootDir":"apps-script"}' > .clasp.json
+          npx --yes @google/clasp@3.3.0 show-file-status --json > clasp-status.json
+          node scripts/verify-clasp-status.mjs clasp-status.json
+      - name: Summarize verify exit codes
+        if: ${{ always() }}
+        shell: bash
+        env:
+          A: ${{ steps.generated_manifest.outputs.exit_code }}
+          B: ${{ steps.manifest.outputs.exit_code }}
+          C: ${{ steps.deploy_controls.outputs.exit_code }}
+          D: ${{ steps.lint.outputs.exit_code }}
+          E: ${{ steps.test.outputs.exit_code }}
+          F: ${{ steps.deploy.outputs.exit_code }}
+        run: |
+          {
+            echo '## Q-03 exact-target verify diagnostics'
+            echo
+            echo 'Target: ${{ env.Q03_TARGET }}'
+            echo
+            echo '| Subcommand | Exit code |'
+            echo '|---|---:|'
+            echo "| npm run verify:generated-manifest | ${A:-NOT_RUN} |"
+            echo "| npm run verify:manifest | ${B:-NOT_RUN} |"
+            echo "| npm run verify:deploy-controls | ${C:-NOT_RUN} |"
+            echo "| npm run lint | ${D:-NOT_RUN} |"
+            echo "| npm test | ${E:-NOT_RUN} |"
+            echo "| npm run verify:deploy | ${F:-NOT_RUN} |"
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: "gate: generated-manifest"
+        if: ${{ always() && steps.generated_manifest.outputs.exit_code != '0' }}
+        run: exit 1
+      - name: "gate: manifest"
+        if: ${{ always() && steps.manifest.outputs.exit_code != '0' }}
+        run: exit 1
+      - name: "gate: deploy-controls"
+        if: ${{ always() && steps.deploy_controls.outputs.exit_code != '0' }}
+        run: exit 1
+      - name: "gate: lint"
+        if: ${{ always() && steps.lint.outputs.exit_code != '0' }}
+        run: exit 1
+      - name: "gate: test"
+        if: ${{ always() && steps.test.outputs.exit_code != '0' }}
+        run: exit 1
+      - name: "gate: deploy"
+        if: ${{ always() && steps.deploy.outputs.exit_code != '0' }}
+        run: exit 1
+
+  discover-product-tests:
+    runs-on: ubuntu-latest
+    outputs:
+      files: ${{ steps.files.outputs.files }}
+    steps:
+      - name: Checkout exact repaired PR-B target
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ env.Q03_TARGET }}
+      - name: Discover tests coupled to external viewer
+        id: files
+        shell: bash
+        run: |
+          files=$(grep -lE 'external-viewer|Code\.gs' tests/*.test.mjs | sort | jq -R -s -c 'split("\n")[:-1]')
+          echo "files=$files" >> "$GITHUB_OUTPUT"
+          echo "Discovered: $files"
+
+  product-test-file:
+    needs: discover-product-tests
+    name: "test-file ${{ matrix.file }}"
+    strategy:
+      fail-fast: false
+      matrix:
+        file: ${{ fromJSON(needs.discover-product-tests.outputs.files) }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact repaired PR-B target
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ env.Q03_TARGET }}
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: '22'
           cache: npm
       - run: npm ci --ignore-scripts
-      - run: npm run verify
-      - name: Verify actual clasp push set
-        shell: bash
-        run: |
-          printf '%s\n' '{"scriptId":"15ImUCpyi1Jsd8yF8Z6wey_7cw793CymWTLxOqwMka3P1CzE5hQun6qiC","rootDir":"apps-script"}' > .clasp.json
-          npx --yes @google/clasp@3.3.0 --version
-          npx --yes @google/clasp@3.3.0 show-file-status --json > clasp-status.json
-          node scripts/verify-clasp-status.mjs clasp-status.json
+      - name: "run ${{ matrix.file }}"
+        run: node --test "${{ matrix.file }}"
