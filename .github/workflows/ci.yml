@@ -113,7 +113,7 @@ jobs:
           npx --yes @google/clasp@3.3.0 show-file-status --json > clasp-status.json
           node scripts/verify-clasp-status.mjs clasp-status.json
 
-      - name: Summarize verify exit codes and enforce gate
+      - name: Summarize verify exit codes
         if: ${{ always() }}
         shell: bash
         env:
@@ -144,10 +144,38 @@ jobs:
             echo "| \`npm run verify:deploy\` | \`$deploy\` |"
           } >> "$GITHUB_STEP_SUMMARY"
 
-          gate=0
-          for code in "$generated_manifest" "$manifest" "$deploy_controls" "$lint" "$test_rc" "$deploy"; do
-            if [ "$code" != '0' ]; then
-              gate=1
-            fi
-          done
-          exit "$gate"
+      - name: "gate: generated-manifest"
+        if: ${{ always() && steps.verify_generated_manifest.outputs.exit_code != '0' }}
+        run: |
+          echo "::error::npm run verify:generated-manifest exit=${{ steps.verify_generated_manifest.outputs.exit_code }}"
+          exit 1
+
+      - name: "gate: manifest"
+        if: ${{ always() && steps.verify_manifest.outputs.exit_code != '0' }}
+        run: |
+          echo "::error::npm run verify:manifest exit=${{ steps.verify_manifest.outputs.exit_code }}"
+          exit 1
+
+      - name: "gate: deploy-controls"
+        if: ${{ always() && steps.verify_deploy_controls.outputs.exit_code != '0' }}
+        run: |
+          echo "::error::npm run verify:deploy-controls exit=${{ steps.verify_deploy_controls.outputs.exit_code }}"
+          exit 1
+
+      - name: "gate: lint"
+        if: ${{ always() && steps.verify_lint.outputs.exit_code != '0' }}
+        run: |
+          echo "::error::npm run lint exit=${{ steps.verify_lint.outputs.exit_code }}"
+          exit 1
+
+      - name: "gate: test"
+        if: ${{ always() && steps.verify_test.outputs.exit_code != '0' }}
+        run: |
+          echo "::error::npm test exit=${{ steps.verify_test.outputs.exit_code }}"
+          exit 1
+
+      - name: "gate: deploy"
+        if: ${{ always() && steps.verify_deploy.outputs.exit_code != '0' }}
+        run: |
+          echo "::error::npm run verify:deploy exit=${{ steps.verify_deploy.outputs.exit_code }}"
+          exit 1
