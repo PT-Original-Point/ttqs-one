@@ -191,6 +191,36 @@ jobs:
           fi
           echo 'EXTERNAL_PRODUCT_BLACKBOX_PASS'
 
+      - name: Anonymous FrozenArtifact FA-01 through FA-07 probe
+        shell: bash
+        run: |
+          set -euo pipefail
+          ARTIFACT_ID='FA-DEMO-002'
+          ARTIFACT_URL="${EXTERNAL_WEBAPP_URL}?artifact=${ARTIFACT_ID}"
+          PASS=0
+          LAST_STATUS='000'
+          LAST_EFFECTIVE=''
+          LAST_CLASSIFIER=''
+          for attempt in 1 2 3 4 5 6; do
+            rm -f external-artifact.html
+            META="$(curl --silent --show-error --location --max-time 30 -o external-artifact.html -w '%{http_code}|%{url_effective}' "$ARTIFACT_URL" 2>/dev/null || true)"
+            LAST_STATUS="${META%%|*}"
+            LAST_EFFECTIVE="${META#*|}"
+            if test "$LAST_STATUS" = '200'; then
+              if LAST_CLASSIFIER="$(node scripts/external-frozenartifact-classifier.mjs --html external-artifact.html --requested-url "$ARTIFACT_URL" --artifact-id "$ARTIFACT_ID" --http-status "$LAST_STATUS" --effective-url "$LAST_EFFECTIVE" 2>&1)"; then
+                echo "$LAST_CLASSIFIER"
+                PASS=1
+                break
+              fi
+            fi
+            sleep 10
+          done
+          if test "$PASS" -ne 1; then
+            echo "FROZEN_ARTIFACT_BLACKBOX_FAIL status=$LAST_STATUS effective=$LAST_EFFECTIVE classifier=$LAST_CLASSIFIER"
+            exit 1
+          fi
+          echo 'FROZEN_ARTIFACT_BLACKBOX_PASS'
+
       - name: Publish durable deployment receipt after black-box PASS
         shell: bash
         env:
@@ -221,7 +251,8 @@ jobs:
             echo '- Execute as: USER_DEPLOYING'
             echo '- Data: TEST/SAMPLE deidentified static snapshot only'
             echo '- Runtime Google data permissions: none'
-            echo '- Anonymous black-box: PASS'
+            echo '- Anonymous product black-box: PASS'
+            echo '- FrozenArtifact FA-01..FA-07 black-box: PASS; FA-08 remains HUMAN'
             echo '- Receipt: GitHub Issue #39'
             echo '- REAL/PROD: not performed'
           } >> "$GITHUB_STEP_SUMMARY"
