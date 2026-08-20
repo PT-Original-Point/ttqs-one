@@ -16,8 +16,95 @@ jobs:
         with:
           node-version: '22'
           cache: npm
-      - run: npm ci --ignore-scripts
-      - run: npm run verify
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Show package.json verify chain
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+          console.log(`package.json scripts.verify = ${pkg.scripts.verify}`);
+          console.log('Expanded subcommands:');
+          for (const command of pkg.scripts.verify.split(' && ')) {
+            console.log(`- ${command}`);
+          }
+          NODE
+
+      - name: "verify: generated-manifest"
+        id: verify_generated_manifest
+        if: ${{ !cancelled() }}
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          npm run verify:generated-manifest
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit "$code"
+
+      - name: "verify: manifest"
+        id: verify_manifest
+        if: ${{ !cancelled() }}
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          npm run verify:manifest
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit "$code"
+
+      - name: "verify: deploy-controls"
+        id: verify_deploy_controls
+        if: ${{ !cancelled() }}
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          npm run verify:deploy-controls
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit "$code"
+
+      - name: "verify: lint"
+        id: verify_lint
+        if: ${{ !cancelled() }}
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          npm run lint
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit "$code"
+
+      - name: "verify: test"
+        id: verify_test
+        if: ${{ !cancelled() }}
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          npm test
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit "$code"
+
+      - name: "verify: deploy"
+        id: verify_deploy
+        if: ${{ !cancelled() }}
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          npm run verify:deploy
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          exit "$code"
+
       - name: Verify actual clasp push set
         shell: bash
         run: |
@@ -25,3 +112,70 @@ jobs:
           npx --yes @google/clasp@3.3.0 --version
           npx --yes @google/clasp@3.3.0 show-file-status --json > clasp-status.json
           node scripts/verify-clasp-status.mjs clasp-status.json
+
+      - name: Summarize verify exit codes
+        if: ${{ always() }}
+        shell: bash
+        env:
+          RC_GENERATED_MANIFEST: ${{ steps.verify_generated_manifest.outputs.exit_code }}
+          RC_MANIFEST: ${{ steps.verify_manifest.outputs.exit_code }}
+          RC_DEPLOY_CONTROLS: ${{ steps.verify_deploy_controls.outputs.exit_code }}
+          RC_LINT: ${{ steps.verify_lint.outputs.exit_code }}
+          RC_TEST: ${{ steps.verify_test.outputs.exit_code }}
+          RC_DEPLOY: ${{ steps.verify_deploy.outputs.exit_code }}
+        run: |
+          generated_manifest="${RC_GENERATED_MANIFEST:-NOT_RUN}"
+          manifest="${RC_MANIFEST:-NOT_RUN}"
+          deploy_controls="${RC_DEPLOY_CONTROLS:-NOT_RUN}"
+          lint="${RC_LINT:-NOT_RUN}"
+          test_rc="${RC_TEST:-NOT_RUN}"
+          deploy="${RC_DEPLOY:-NOT_RUN}"
+
+          {
+            echo '## npm verify diagnostics'
+            echo
+            echo '| Subcommand | Exit code |'
+            echo '|---|---:|'
+            echo "| \`npm run verify:generated-manifest\` | \`$generated_manifest\` |"
+            echo "| \`npm run verify:manifest\` | \`$manifest\` |"
+            echo "| \`npm run verify:deploy-controls\` | \`$deploy_controls\` |"
+            echo "| \`npm run lint\` | \`$lint\` |"
+            echo "| \`npm test\` | \`$test_rc\` |"
+            echo "| \`npm run verify:deploy\` | \`$deploy\` |"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: "gate: generated-manifest"
+        if: ${{ always() && steps.verify_generated_manifest.outputs.exit_code != '0' }}
+        run: |
+          echo "::error::npm run verify:generated-manifest exit=${{ steps.verify_generated_manifest.outputs.exit_code }}"
+          exit 1
+
+      - name: "gate: manifest"
+        if: ${{ always() && steps.verify_manifest.outputs.exit_code != '0' }}
+        run: |
+          echo "::error::npm run verify:manifest exit=${{ steps.verify_manifest.outputs.exit_code }}"
+          exit 1
+
+      - name: "gate: deploy-controls"
+        if: ${{ always() && steps.verify_deploy_controls.outputs.exit_code != '0' }}
+        run: |
+          echo "::error::npm run verify:deploy-controls exit=${{ steps.verify_deploy_controls.outputs.exit_code }}"
+          exit 1
+
+      - name: "gate: lint"
+        if: ${{ always() && steps.verify_lint.outputs.exit_code != '0' }}
+        run: |
+          echo "::error::npm run lint exit=${{ steps.verify_lint.outputs.exit_code }}"
+          exit 1
+
+      - name: "gate: test"
+        if: ${{ always() && steps.verify_test.outputs.exit_code != '0' }}
+        run: |
+          echo "::error::npm test exit=${{ steps.verify_test.outputs.exit_code }}"
+          exit 1
+
+      - name: "gate: deploy"
+        if: ${{ always() && steps.verify_deploy.outputs.exit_code != '0' }}
+        run: |
+          echo "::error::npm run verify:deploy exit=${{ steps.verify_deploy.outputs.exit_code }}"
+          exit 1
