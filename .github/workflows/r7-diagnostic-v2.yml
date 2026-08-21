@@ -1,0 +1,58 @@
+name: R7 Diagnostic Marker
+
+on:
+  push:
+    branches:
+      - r7/official129-evaluator-integration-20260821
+
+permissions:
+  contents: write
+
+concurrency:
+  group: r7-diagnostic-marker-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  diagnose-marker:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+      - name: Run all machine gates and write one status marker
+        shell: bash
+        run: |
+          set +e
+          rm -f release/official129/R7_DIAG_PASS_ALL release/official129/R7_DIAG_FAIL_*
+          npm ci >/tmp/install.log 2>&1; i=$?
+          node scripts/generate-manifest.mjs >/tmp/manifest.log 2>&1; m=$?
+          npm run verify >/tmp/verify.log 2>&1; v=$?
+          node scripts/build-external-official129.mjs >/tmp/build.log 2>&1; b=$?
+          if [ "$i" -ne 0 ]; then marker=R7_DIAG_FAIL_INSTALL;
+          elif [ "$m" -ne 0 ]; then marker=R7_DIAG_FAIL_MANIFEST;
+          elif [ "$v" -ne 0 ]; then marker=R7_DIAG_FAIL_VERIFY;
+          elif [ "$b" -ne 0 ]; then marker=R7_DIAG_FAIL_BUILD;
+          else marker=R7_DIAG_PASS_ALL; fi
+          {
+            echo "head_sha=${GITHUB_SHA}"
+            echo "install=$i manifest=$m verify=$v build=$b"
+            echo "marker=$marker"
+            echo '--- verify tail ---'
+            tail -n 80 /tmp/verify.log
+            echo '--- build tail ---'
+            tail -n 40 /tmp/build.log
+          } > "release/official129/$marker"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add release/official129/R7_DIAG_*
+          if ! git diff --cached --quiet; then
+            git commit -m "R7: ${marker} [skip ci]"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
+          cat "release/official129/$marker"
+          exit 0
