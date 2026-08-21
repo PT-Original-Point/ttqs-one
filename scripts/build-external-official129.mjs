@@ -16,7 +16,7 @@ function readUtf8(p){return fs.readFileSync(p,'utf8');}
 
 const baseFiles=fs.readdirSync(srcDir).sort();
 if(JSON.stringify(baseFiles)!==JSON.stringify(['Code.gs','appsscript.json']))fail('EXTERNAL_BASE_PUSH_SET_INVALID',baseFiles.join(','));
-const parts=fs.readdirSync(r7Dir).filter(x=>/^data\.part\d+\.b64$/.test(x)).sort();
+const parts=fs.readdirSync(r7Dir).filter(x=>/^data\.part\d+(?:[a-z])?\.b64$/.test(x)).sort();
 if(parts.length<2)fail('R7_DATA_PARTS_MISSING');
 const b64=parts.map(f=>readUtf8(path.join(r7Dir,f)).trim()).join('');
 if(!/^[A-Za-z0-9+/=]+$/.test(b64))fail('R7_DATA_B64_INVALID');
@@ -45,6 +45,4 @@ fs.writeFileSync(path.join(outDir,'Code.gs'),code);
 fs.writeFileSync(path.join(outDir,'appsscript.json'),manifest);
 const buildSha=sha256(Buffer.from(code,'utf8'));
 const summary={releaseId:expectedRelease,itemCount:129,partCount:parts.length,projectionSha256:expectedProjectionSha,buildCodeSha256:buildSha,buildBytes:Buffer.byteLength(code),result:'PASS'};
-fs.writeFileSync(path.join(outDir,'R7_BUILD_SUMMARY.json'),JSON.stringify(summary,null,2));
-fs.unlinkSync(path.join(outDir,'R7_BUILD_SUMMARY.json'));
 process.stdout.write(`R7_EXTERNAL_BUILD_PASS items=129 parts=${parts.length} projectionSha256=${expectedProjectionSha} buildCodeSha256=${buildSha} buildBytes=${summary.buildBytes}\n`);
