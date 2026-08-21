@@ -1,0 +1,65 @@
+name: R7 Branch Materialize
+
+on:
+  push:
+    branches:
+      - r7/official129-evaluator-integration-20260821
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: r7-branch-materialize-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify-and-materialize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Materialize deterministic manifest
+        run: node scripts/generate-manifest.mjs
+
+      - name: Run full additive verification suite
+        run: npm run verify
+
+      - name: Build R7 static evaluator bundle
+        run: node scripts/build-external-official129.mjs
+
+      - name: Verify generated Apps Script push set
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(find .external-viewer-build -maxdepth 1 -type f -printf '%f\n' | sort | tr '\n' ' ')" = "Code.gs appsscript.json "
+          ! grep -Eq 'SpreadsheetApp|DriveApp|UrlFetchApp|Sheets\.' .external-viewer-build/Code.gs
+          grep -Fq 'ER-DEMO-20260901-DRAFT-002' .external-viewer-build/Code.gs
+          grep -Fq '7567530e1f72ef5c8ec491aa38936bf7884ef258943df5f01e0fce08c0c3f2de' .external-viewer-build/Code.gs
+
+      - name: Commit only deterministic manifest outputs when changed
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- release/MANIFEST.sha256 release/MANIFEST.sha256.sha256; then
+            echo 'MANIFEST_ALREADY_CURRENT'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add release/MANIFEST.sha256 release/MANIFEST.sha256.sha256
+          git commit -m 'R7: materialize deterministic manifest [skip ci]'
+          git push origin "HEAD:${GITHUB_REF_NAME}"
