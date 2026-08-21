@@ -36,10 +36,12 @@ for(let i=1;i<=19;i++){
   if(n<1)fail('R7_INDICATOR_EMPTY',String(i));
 }
 const runtime=readUtf8(path.join(r7Dir,'Official129Runtime.gs'));
-for(const forbidden of [/Sheets\./,/SpreadsheetApp/,/DriveApp/,/UrlFetchApp/])if(forbidden.test(runtime))fail('R7_RUNTIME_GOOGLE_DATA_API_FORBIDDEN',String(forbidden));
+const legacy=readUtf8(path.join(r7Dir,'Official129LegacyRegression.gs'));
+const runtimeAll=runtime+'\n'+legacy;
+for(const forbidden of [/Sheets\./,/SpreadsheetApp/,/DriveApp/,/UrlFetchApp/])if(forbidden.test(runtimeAll))fail('R7_RUNTIME_GOOGLE_DATA_API_FORBIDDEN',String(forbidden));
 const base=readUtf8(path.join(srcDir,'Code.gs'));
 const manifest=readUtf8(path.join(srcDir,'appsscript.json'));
-const code=base+'\n\n/* build-time injected R7 frozen projection; source sha256='+expectedProjectionSha+' */\nvar TTQS_R7_DATA_GZIP_B64_='+JSON.stringify(b64)+';\n'+runtime+'\n';
+const code=base+'\n\n/* build-time injected R7 frozen projection; source sha256='+expectedProjectionSha+' */\nvar TTQS_R7_DATA_GZIP_B64_='+JSON.stringify(b64)+';\n'+runtimeAll+'\n';
 fs.rmSync(outDir,{recursive:true,force:true});fs.mkdirSync(outDir,{recursive:true});
 fs.writeFileSync(path.join(outDir,'Code.gs'),code);
 fs.writeFileSync(path.join(outDir,'appsscript.json'),manifest);
