@@ -5,6 +5,7 @@ import { execFileSync } from 'node:child_process';
 const MANIFEST_PATH = 'release/MANIFEST.sha256';
 const SELF_PATH = 'release/MANIFEST.sha256.sha256';
 const EXCLUDED = new Set([MANIFEST_PATH, SELF_PATH]);
+const LF = '\n';
 
 function runGit(args, options = {}) {
   return execFileSync('git', args, { maxBuffer: 128 * 1024 * 1024, ...options });
@@ -31,6 +32,22 @@ function safePath(value) {
   return true;
 }
 
+function normalizeManifestPath(value) {
+  const normalized = value.normalize('NFC');
+  if (!safePath(normalized)) throw new Error(`unsafe tracked path: ${value}`);
+  return normalized;
+}
+
+function compareCodePoints(left, right) {
+  const a = Array.from(left, (char) => char.codePointAt(0));
+  const b = Array.from(right, (char) => char.codePointAt(0));
+  const length = Math.min(a.length, b.length);
+  for (let i = 0; i < length; i += 1) {
+    if (a[i] !== b[i]) return a[i] - b[i];
+  }
+  return a.length - b.length;
+}
+
 function parseCommitEntries(ref) {
   const raw = runGit(['ls-tree', '-r', '-z', '--full-tree', ref]);
   return raw.toString('utf8').split('\0').filter(Boolean).map((record) => {
@@ -40,7 +57,7 @@ function parseCommitEntries(ref) {
     const filePath = record.slice(tab + 1);
     if (meta.length !== 3) throw new Error(`invalid ls-tree metadata: ${record}`);
     const [mode, type, oid] = meta;
-    return { mode, type, oid, path: filePath };
+    return { mode, type, oid, sourcePath: filePath, path: normalizeManifestPath(filePath) };
   });
 }
 
@@ -54,21 +71,27 @@ function parseIndexEntries() {
     if (meta.length !== 3) throw new Error(`invalid ls-files metadata: ${record}`);
     const [mode, oid, stage] = meta;
     if (stage !== '0') throw new Error(`unmerged index entry forbidden: ${filePath}`);
-    return { mode, type: 'blob', oid, path: filePath };
+    return { mode, type: 'blob', oid, sourcePath: filePath, path: normalizeManifestPath(filePath) };
   });
 }
 
 function normalizedEntries(options) {
   const entries = options.source === 'index' ? parseIndexEntries() : parseCommitEntries(options.ref);
+  const normalizedOwners = new Map();
   for (const entry of entries) {
-    if (!safePath(entry.path)) throw new Error(`unsafe tracked path: ${entry.path}`);
-    if (entry.type !== 'blob') throw new Error(`non-blob tracked object forbidden: ${entry.path}:${entry.type}`);
-    if (entry.mode === '120000') throw new Error(`tracked symlink forbidden: ${entry.path}`);
-    if (!/^100(644|755)$/.test(entry.mode)) throw new Error(`unsupported tracked file mode: ${entry.path}:${entry.mode}`);
+    if (!safePath(entry.sourcePath)) throw new Error(`unsafe tracked path: ${entry.sourcePath}`);
+    if (entry.type !== 'blob') throw new Error(`non-blob tracked object forbidden: ${entry.sourcePath}:${entry.type}`);
+    if (entry.mode === '120000') throw new Error(`tracked symlink forbidden: ${entry.sourcePath}`);
+    if (!/^100(644|755)$/.test(entry.mode)) throw new Error(`unsupported tracked file mode: ${entry.sourcePath}:${entry.mode}`);
+    const prior = normalizedOwners.get(entry.path);
+    if (prior && prior !== entry.sourcePath) {
+      throw new Error(`NFC_PATH_COLLISION:${prior}:${entry.sourcePath}:${entry.path}`);
+    }
+    normalizedOwners.set(entry.path, entry.sourcePath);
   }
   return entries
     .filter((entry) => !EXCLUDED.has(entry.path))
-    .sort((a, b) => Buffer.compare(Buffer.from(a.path, 'utf8'), Buffer.from(b.path, 'utf8')));
+    .sort((a, b) => compareCodePoints(a.path, b.path));
 }
 
 function objectBytes(oid) {
@@ -97,8 +120,12 @@ function manifestMap(bytes) {
 export function generateManifest(options) {
   const entries = normalizedEntries(options);
   const lines = entries.map((entry) => `${sha256(objectBytes(entry.oid))}  ${entry.path}`);
-  const manifest = Buffer.from(`${lines.join('\n')}\n`, 'utf8');
-  const self = Buffer.from(`${sha256(manifest)}  ${MANIFEST_PATH}\n`, 'utf8');
+  // The manifest hashes every tracked blob except the manifest and its sidecar.
+  // Therefore the manifest never contains its own hash and has no circular input.
+  const manifest = Buffer.from(`${lines.join(LF)}${LF}`, 'utf8');
+  // The sidecar is a one-line SHA-256 over the exact manifest bytes above.
+  // The sidecar is also excluded from the manifest, so it can be derived after the manifest is final.
+  const self = Buffer.from(`${sha256(manifest)}  ${MANIFEST_PATH}${LF}`, 'utf8');
   return { entries, manifest, self };
 }
 
@@ -112,7 +139,7 @@ function checkStored(options, generated) {
     const stored = manifestMap(storedManifest);
     const expected = manifestMap(generated.manifest);
     const paths = new Set([...stored.keys(), ...expected.keys()]);
-    const entryDiffs = [...paths].sort().flatMap((filePath) => {
+    const entryDiffs = [...paths].sort(compareCodePoints).flatMap((filePath) => {
       const storedHash = stored.get(filePath) || null;
       const expectedHash = expected.get(filePath) || null;
       return storedHash === expectedHash ? [] : [{ path: filePath, stored: storedHash, expected: expectedHash }];
@@ -124,7 +151,18 @@ function checkStored(options, generated) {
       errors,
       entryDiffs,
       expectedManifestSha256: sha256(generated.manifest),
-      expectedSelfLine: generated.self.toString('utf8').trim()
+      expectedSelfLine: generated.self.toString('utf8').trim(),
+      canonicalization: {
+        pathUnicodeNormalization: 'NFC',
+        pathOrdering: 'UNICODE_CODE_POINT',
+        manifestLineEnding: 'LF',
+        sourceBlobBytes: 'EXACT_GIT_BLOB_BYTES'
+      },
+      selfHashModel: {
+        manifestExcludes: [MANIFEST_PATH, SELF_PATH],
+        sidecarHashesExactBytesOf: MANIFEST_PATH,
+        sidecarIncludedInManifest: false
+      }
     }, null, 2));
     process.exit(1);
   }
@@ -141,5 +179,16 @@ console.error(JSON.stringify({
   source: options.source,
   ref: options.ref,
   entries: generated.entries.length,
-  manifestSha256: sha256(generated.manifest)
+  manifestSha256: sha256(generated.manifest),
+  canonicalization: {
+    pathUnicodeNormalization: 'NFC',
+    pathOrdering: 'UNICODE_CODE_POINT',
+    manifestLineEnding: 'LF',
+    sourceBlobBytes: 'EXACT_GIT_BLOB_BYTES'
+  },
+  selfHashModel: {
+    manifestExcludes: [MANIFEST_PATH, SELF_PATH],
+    sidecarHashesExactBytesOf: MANIFEST_PATH,
+    sidecarIncludedInManifest: false
+  }
 }, null, 2));
