@@ -9,6 +9,7 @@ const r7Dir=path.join(root,'release','official129');
 const outDir=path.join(root,'.external-viewer-build');
 const expectedProjectionSha='7567530e1f72ef5c8ec491aa38936bf7884ef258943df5f01e0fce08c0c3f2de';
 const expectedRelease='ER-DEMO-20260901-DRAFT-002';
+const recoveredRawOut=process.env.TTQS_R7_RECOVERED_RAW_OUT||'';
 
 function fail(code,detail=''){throw new Error(detail?`${code}:${detail}`:code);}
 function sha256(buf){return crypto.createHash('sha256').update(buf).digest('hex');}
@@ -47,6 +48,28 @@ function inflateGzipPayloadIgnoringTrailer(bytes){
     return {raw,error:null,headerBytes:offset,trailerHex:bytes.subarray(bytes.length-8).toString('hex')};
   }catch(error){return {raw:null,error:String(error&&error.message||error)};}
 }
+function candidateSerializations(raw){
+  const out=[];
+  try{
+    const data=JSON.parse(raw.toString('utf8'));
+    const candidates=[
+      ['JSON_MINIFIED',JSON.stringify(data)],
+      ['JSON_MINIFIED_LF',JSON.stringify(data)+'\n'],
+      ['JSON_PRETTY2',JSON.stringify(data,null,2)],
+      ['JSON_PRETTY2_LF',JSON.stringify(data,null,2)+'\n'],
+      ['JSON_PRETTY4',JSON.stringify(data,null,4)],
+      ['JSON_PRETTY4_LF',JSON.stringify(data,null,4)+'\n']
+    ];
+    for(const [mode,text] of candidates){const bytes=Buffer.from(text,'utf8');out.push({mode,bytes:bytes.length,sha256:sha256(bytes),matchesExpected:sha256(bytes)===expectedProjectionSha});}
+    return {parseStatus:'PASS',releaseId:data?.releaseId??null,itemCount:Array.isArray(data?.items)?data.items.length:null,candidates:out};
+  }catch(error){return {parseStatus:'FAIL',error:String(error&&error.message||error),candidates:out};}
+}
+function maybeWriteRecovered(raw){
+  if(!recoveredRawOut||!raw)return null;
+  fs.mkdirSync(path.dirname(recoveredRawOut),{recursive:true});
+  fs.writeFileSync(recoveredRawOut,raw);
+  return {path:recoveredRawOut,bytes:raw.length,sha256:sha256(raw)};
+}
 function decodeProjection(partNames){
   const tokens=partNames.map((name)=>{
     const token=readUtf8(path.join(r7Dir,name)).trim();
@@ -66,6 +89,9 @@ function decodeProjection(partNames){
     return {raw:trailerRecovery.raw,mode:'GZIP_TRAILER_RECOVERY_BY_CANONICAL_RAW_SHA',tokens,attempts};
   }
 
+  const recoveredRawReceipt=maybeWriteRecovered(trailerRecovery.raw);
+  const recoveredRawInspection=trailerRecovery.raw?candidateSerializations(trailerRecovery.raw):null;
+
   const decodedParts=tokens.map(x=>Buffer.from(x.token,'base64'));
   const binaryConcat=Buffer.concat(decodedParts);
   const perPart=tryGunzip(binaryConcat);
@@ -74,6 +100,8 @@ function decodeProjection(partNames){
 
   const diagnostics={
     expectedProjectionSha,
+    recoveredRawReceipt,
+    recoveredRawInspection,
     parts:tokens.map((x,i)=>({name:x.name,base64Chars:x.token.length,padding:(x.token.match(/=+$/)||[''])[0].length,decodedBytes:decodedParts[i].length})),
     attempts
   };
