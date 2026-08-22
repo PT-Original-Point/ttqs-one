@@ -51,6 +51,34 @@ jobs:
           echo 'GENERATED_MANIFEST_MISMATCH: CI golden manifest artifact published for byte-identical repair.' >&2
           exit 1
 
+      - name: Run R7 projection reconstruction preflight
+        id: r7_projection_preflight
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -uo pipefail
+          DIAG_ROOT="$RUNNER_TEMP/ttqs-r7-projection-diagnostic"
+          mkdir -p "$DIAG_ROOT"
+          printf 'TTQS_R7_DIAG_ROOT=%s\n' "$DIAG_ROOT" >> "$GITHUB_ENV"
+          node scripts/build-external-official129.mjs >"$DIAG_ROOT/build.txt" 2>&1
+
+      - name: Upload R7 projection reconstruction diagnostic
+        if: steps.r7_projection_preflight.outcome == 'failure'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: r7-projection-diagnostic-${{ github.sha }}
+          path: ${{ env.TTQS_R7_DIAG_ROOT }}/build.txt
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 0
+
+      - name: Fail closed after R7 projection diagnostic publication
+        if: steps.r7_projection_preflight.outcome == 'failure'
+        shell: bash
+        run: |
+          echo 'R7_PROJECTION_PREFLIGHT_FAILED: diagnostic artifact published.' >&2
+          exit 1
+
       - run: npm run verify
       - name: Verify actual clasp push set
         shell: bash
