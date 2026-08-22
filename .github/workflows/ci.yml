@@ -17,6 +17,40 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci --ignore-scripts
+
+      - name: Generate CI golden manifest candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          GOLDEN_ROOT="$RUNNER_TEMP/ttqs-golden-manifest"
+          mkdir -p "$GOLDEN_ROOT/release"
+          node scripts/generate-manifest.mjs --ref HEAD \
+            --manifest-out "$GOLDEN_ROOT/release/MANIFEST.sha256" \
+            --self-out "$GOLDEN_ROOT/release/MANIFEST.sha256.sha256"
+          printf 'TTQS_GOLDEN_ROOT=%s\n' "$GOLDEN_ROOT" >> "$GITHUB_ENV"
+
+      - name: Check committed manifest against CI golden bytes
+        id: manifest_gate
+        continue-on-error: true
+        run: npm run verify:generated-manifest
+
+      - name: Upload CI golden manifest on mismatch
+        if: steps.manifest_gate.outcome == 'failure'
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: golden-manifest-${{ github.sha }}
+          path: ${{ env.TTQS_GOLDEN_ROOT }}/release
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 0
+
+      - name: Fail closed after golden manifest publication
+        if: steps.manifest_gate.outcome == 'failure'
+        shell: bash
+        run: |
+          echo 'GENERATED_MANIFEST_MISMATCH: CI golden manifest artifact published for byte-identical repair.' >&2
+          exit 1
+
       - run: npm run verify
       - name: Verify actual clasp push set
         shell: bash
