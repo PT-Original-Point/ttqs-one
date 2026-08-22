@@ -49,6 +49,11 @@ export const R7_REQUIRED_PRODUCT_MARKERS = [
   '不得用於正式 TTQS 評分'
 ];
 
+const FRIENDLY_ERROR_MARKERS = [
+  '目前無法載入唯讀快照',
+  'data-friendly-error="true"'
+];
+
 function normalizeAppsScriptHtmlServiceWrapperLayer(source) {
   const observedDoubleEscapedDoubleQuote = String.fromCharCode(92, 92, 34);
   return String(source)
@@ -75,20 +80,102 @@ export function normalizeAppsScriptHtmlServiceWrapper(source) {
   return normalized;
 }
 
-export function classifyExternalBlackbox(source) {
-  const normalized = normalizeAppsScriptHtmlServiceWrapper(source);
-  const legacyMissing = REQUIRED_PRODUCT_MARKERS.filter(marker => !normalized.includes(marker));
-  const r7Missing = R7_REQUIRED_PRODUCT_MARKERS.filter(marker => !normalized.includes(marker));
-  const friendlyError = normalized.includes('目前無法載入唯讀快照') || normalized.includes('data-friendly-error="true"');
-  const legacyPass = legacyMissing.length === 0;
-  const r7Pass = r7Missing.length === 0;
-  const missing = legacyMissing.length <= r7Missing.length ? legacyMissing : r7Missing;
+function directEvidence(normalized, expected, normalizedIndex) {
+  if (normalizedIndex < 0) {
+    return {
+      matchType: 'NORMALIZED_SUBSTRING',
+      normalizedIndex: -1,
+      excerpt: null
+    };
+  }
+  const padding = 48;
+  const start = Math.max(0, normalizedIndex - padding);
+  const end = Math.min(normalized.length, normalizedIndex + expected.length + padding);
   return {
-    pass: (legacyPass || r7Pass) && !friendlyError,
-    missing,
-    friendlyError,
-    mode: r7Pass ? 'R7_DRAFT003' : legacyPass ? 'LEGACY_R3_D8' : null
+    matchType: 'NORMALIZED_SUBSTRING',
+    normalizedIndex,
+    excerpt: normalized.slice(start, end)
   };
+}
+
+function buildMarkerEvidence(normalized, contractId, markers) {
+  return markers.map((expected, index) => {
+    const normalizedIndex = normalized.indexOf(expected);
+    const pass = normalizedIndex >= 0;
+    return {
+      markerId: `${contractId}-M${String(index + 1).padStart(2, '0')}`,
+      expected,
+      actual: pass ? normalized.slice(normalizedIndex, normalizedIndex + expected.length) : null,
+      result: pass ? 'PASS' : 'FAIL',
+      evidence: directEvidence(normalized, expected, normalizedIndex)
+    };
+  });
+}
+
+function buildSafetyEvidence(normalized) {
+  for (const marker of FRIENDLY_ERROR_MARKERS) {
+    const normalizedIndex = normalized.indexOf(marker);
+    if (normalizedIndex >= 0) {
+      return {
+        checkId: 'FRIENDLY_ERROR_ABSENT',
+        expected: 'ABSENT',
+        actual: marker,
+        result: 'FAIL',
+        evidence: directEvidence(normalized, marker, normalizedIndex)
+      };
+    }
+  }
+  return {
+    checkId: 'FRIENDLY_ERROR_ABSENT',
+    expected: 'ABSENT',
+    actual: 'ABSENT',
+    result: 'PASS',
+    evidence: {
+      matchType: 'NEGATIVE_NORMALIZED_SUBSTRING_CHECK',
+      normalizedIndex: -1,
+      excerpt: null
+    }
+  };
+}
+
+export function evaluateExternalBlackbox(source) {
+  const normalized = normalizeAppsScriptHtmlServiceWrapper(source);
+  const legacyEvidence = buildMarkerEvidence(normalized, 'LEGACY_R3_D8', REQUIRED_PRODUCT_MARKERS);
+  const r7Evidence = buildMarkerEvidence(normalized, 'R7_DRAFT003', R7_REQUIRED_PRODUCT_MARKERS);
+  const legacyPass = legacyEvidence.every(row => row.result === 'PASS');
+  const r7Pass = r7Evidence.every(row => row.result === 'PASS');
+  const safetyEvidence = buildSafetyEvidence(normalized);
+  const safetyPass = safetyEvidence.result === 'PASS';
+  const acceptedContractPass = legacyPass || r7Pass;
+  const pass = acceptedContractPass && safetyPass;
+  const mode = r7Pass ? 'R7_DRAFT003' : legacyPass ? 'LEGACY_R3_D8' : null;
+  const legacyMissingCount = legacyEvidence.filter(row => row.result === 'FAIL').length;
+  const r7MissingCount = r7Evidence.filter(row => row.result === 'FAIL').length;
+  const evidenceMode = mode ?? (legacyMissingCount <= r7MissingCount ? 'LEGACY_R3_D8' : 'R7_DRAFT003');
+  const markerEvidence = evidenceMode === 'R7_DRAFT003' ? r7Evidence : legacyEvidence;
+  const markerPassCount = markerEvidence.filter(row => row.result === 'PASS').length;
+  const missing = markerEvidence.filter(row => row.result === 'FAIL').map(row => row.expected);
+  return {
+    pass,
+    mode,
+    evidenceMode,
+    missing,
+    friendlyError: !safetyPass,
+    markerEvidence,
+    safetyEvidence,
+    derivation: {
+      markerPassCount,
+      markerTotal: markerEvidence.length,
+      selectedContractPass: markerEvidence.every(row => row.result === 'PASS'),
+      safetyPass,
+      acceptedContractPass,
+      totalPass: pass
+    }
+  };
+}
+
+export function classifyExternalBlackbox(source) {
+  return evaluateExternalBlackbox(source);
 }
 
 function isDirectExecution() {
@@ -100,23 +187,56 @@ function isDirectExecution() {
   }
 }
 
-function parseHtmlPath(argv) {
-  const index = argv.indexOf('--html');
-  if (index === -1 || !argv[index + 1] || argv[index + 2]) {
+function parseArgs(argv) {
+  let htmlPath = null;
+  let evidenceOut = null;
+  for (let index = 0; index < argv.length; index += 1) {
+    const arg = argv[index];
+    if (arg === '--html') {
+      if (htmlPath || !argv[index + 1]) throw new Error('BLACKBOX_CLASSIFIER_ARGS_INVALID');
+      htmlPath = argv[index + 1];
+      index += 1;
+      continue;
+    }
+    if (arg === '--evidence-out') {
+      if (evidenceOut || !argv[index + 1]) throw new Error('BLACKBOX_CLASSIFIER_ARGS_INVALID');
+      evidenceOut = argv[index + 1];
+      index += 1;
+      continue;
+    }
     throw new Error('BLACKBOX_CLASSIFIER_ARGS_INVALID');
   }
-  return argv[index + 1];
+  if (!htmlPath) throw new Error('BLACKBOX_CLASSIFIER_ARGS_INVALID');
+  return {htmlPath, evidenceOut};
+}
+
+function writeEvidence(path, result) {
+  if (!path) return;
+  const receipt = {
+    schema: 'TTQS_BLACKBOX_MARKER_EVIDENCE_V1',
+    mode: result.mode,
+    evidenceMode: result.evidenceMode,
+    markerEvidence: result.markerEvidence,
+    safetyEvidence: result.safetyEvidence,
+    derivation: result.derivation
+  };
+  fs.writeFileSync(path, `${JSON.stringify(receipt, null, 2)}\n`, 'utf8');
 }
 
 function main() {
-  const htmlPath = parseHtmlPath(process.argv.slice(2));
+  const {htmlPath, evidenceOut} = parseArgs(process.argv.slice(2));
   const body = fs.readFileSync(htmlPath, 'utf8');
-  const result = classifyExternalBlackbox(body);
+  const result = evaluateExternalBlackbox(body);
+  writeEvidence(evidenceOut, result);
+  for (const row of result.markerEvidence) {
+    process.stdout.write(`BLACKBOX_MARKER_DETAIL ${JSON.stringify(row)}\n`);
+  }
+  process.stdout.write(`BLACKBOX_SAFETY_DETAIL ${JSON.stringify(result.safetyEvidence)}\n`);
   if (result.pass) {
-    process.stdout.write(`BLACKBOX_MARKERS_PASS mode=${result.mode}\n`);
+    process.stdout.write(`BLACKBOX_MARKERS_PASS mode=${result.mode} markers=${result.derivation.markerPassCount}/${result.derivation.markerTotal} safety=${result.derivation.safetyPass ? 'PASS' : 'FAIL'}\n`);
     return;
   }
-  process.stdout.write(`BLACKBOX_MARKERS_FAIL missing=${result.missing.join('|') || 'none'} friendlyError=${result.friendlyError ? 1 : 0}\n`);
+  process.stdout.write(`BLACKBOX_MARKERS_FAIL evidenceMode=${result.evidenceMode} missing=${result.missing.join('|') || 'none'} friendlyError=${result.friendlyError ? 1 : 0}\n`);
   process.exitCode = 2;
 }
 
