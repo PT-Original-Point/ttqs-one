@@ -63,6 +63,17 @@ test('observed HtmlService attribute quote codepoints 005C 005C 0022 normalize e
   assert.equal(normalized.includes(observedQuote), false);
 });
 
+test('observed live x22 decode feeds back into the bounded quote fixed point', () => {
+  const slash = String.fromCharCode(92);
+  const liveEncodedQuote = `${slash.repeat(3)}x22`;
+  assert.deepEqual(Array.from(liveEncodedQuote.slice(0, 3), ch => ch.codePointAt(0)), [92, 92, 92]);
+  const observed = `data-matrix-indicator=${liveEncodedQuote}1${liveEncodedQuote} href=${liveEncodedQuote}https://script.google.com/macros/s/DEMO/exec?indicator=1${liveEncodedQuote}`;
+  const normalized = normalizeAppsScriptHtmlServiceWrapper(observed);
+  assert.equal(normalized, 'data-matrix-indicator="1" href="https://script.google.com/macros/s/DEMO/exec?indicator=1"');
+  assert.equal(normalized.includes(String.fromCharCode(92, 92, 34)), false);
+  assert.equal(normalizeAppsScriptHtmlServiceWrapper(normalized), normalized);
+});
+
 test('multilayer HtmlService wrapper reaches a bounded fixed point and is idempotent', () => {
   const slash = String.fromCharCode(92);
   const quote = String.fromCharCode(34);
