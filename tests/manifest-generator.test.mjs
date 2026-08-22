@@ -22,8 +22,8 @@ function node(cwd, args, expectSuccess = true) {
   return result;
 }
 
-function sha256(text) {
-  return crypto.createHash('sha256').update(text).digest('hex');
+function sha256(value) {
+  return crypto.createHash('sha256').update(value).digest('hex');
 }
 
 function initRepo() {
@@ -54,6 +54,54 @@ test('index mode hashes staged blob bytes rather than working-tree bytes', () =>
   const staged = node(cwd, ['--index']).stdout;
   assert.notEqual(staged, committed);
   assert.match(staged, new RegExp(`^${sha256('staged bytes\n')}  a\\.txt`, 'm'));
+});
+
+test('manifest paths use NFC, Unicode code-point ordering, and LF line endings', () => {
+  const cwd = initRepo();
+  const nfdName = `e\u0301.txt`;
+  const bmpName = `\uE000.txt`;
+  const astralName = `\u{10000}.txt`;
+  fs.writeFileSync(path.join(cwd, nfdName), 'nfd\n');
+  fs.writeFileSync(path.join(cwd, bmpName), 'bmp\n');
+  fs.writeFileSync(path.join(cwd, astralName), 'astral\n');
+  git(cwd, ['add', nfdName, bmpName, astralName]);
+  git(cwd, ['commit', '-qm', 'unicode paths']);
+
+  const manifest = node(cwd, ['--ref', 'HEAD']).stdout;
+  assert.equal(manifest.includes('\r'), false);
+  assert.match(manifest, /é\.txt/m);
+  assert.equal(manifest.includes(nfdName), false);
+  assert.ok(manifest.indexOf(`${bmpName}\n`) < 0 || manifest.indexOf(bmpName) < manifest.indexOf(astralName));
+  assert.ok(manifest.indexOf(bmpName) < manifest.indexOf(astralName));
+});
+
+test('NFC-normalized path collisions fail closed', () => {
+  const cwd = initRepo();
+  const nfdName = `e\u0301.txt`;
+  const nfcName = `é.txt`;
+  fs.writeFileSync(path.join(cwd, nfdName), 'nfd\n');
+  fs.writeFileSync(path.join(cwd, nfcName), 'nfc\n');
+  git(cwd, ['add', nfdName, nfcName]);
+  git(cwd, ['commit', '-qm', 'normalization collision']);
+
+  const result = node(cwd, ['--ref', 'HEAD'], false);
+  assert.notEqual(result.status, 0);
+  assert.match(result.stderr, /NFC_PATH_COLLISION/);
+});
+
+test('sidecar hashes exact manifest bytes without circular self-inclusion', () => {
+  const cwd = initRepo();
+  fs.mkdirSync(path.join(cwd, 'release'));
+  const manifestOut = path.join(cwd, 'release', 'MANIFEST.sha256');
+  const selfOut = path.join(cwd, 'release', 'MANIFEST.sha256.sha256');
+  node(cwd, ['--ref', 'HEAD', '--manifest-out', manifestOut, '--self-out', selfOut]);
+
+  const manifest = fs.readFileSync(manifestOut);
+  const sidecar = fs.readFileSync(selfOut, 'utf8');
+  assert.equal(manifest.includes(Buffer.from('\r')), false);
+  assert.equal(sidecar, `${sha256(manifest)}  release/MANIFEST.sha256\n`);
+  assert.equal(manifest.toString('utf8').includes('release/MANIFEST.sha256'), false);
+  assert.equal(manifest.toString('utf8').includes('release/MANIFEST.sha256.sha256'), false);
 });
 
 test('--check fails closed when committed manifest is stale', () => {

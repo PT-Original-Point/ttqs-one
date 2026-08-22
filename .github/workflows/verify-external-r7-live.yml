@@ -1,0 +1,58 @@
+name: R7 External TEST Live Verification
+
+on:
+  workflow_run:
+    workflows:
+      - Deploy External TEST Evaluator Portal
+    types:
+      - completed
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  EXTERNAL_WEBAPP_URL: https://script.google.com/macros/s/AKfycbznbXi-0XWNV68E-vGU9CiAE6ElXGIlDmy27EePXMdGpRaorURzKZq0dDgsNBaaZOLh/exec
+
+jobs:
+  exhaustive-r7-live:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'deploy/test')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout deployed source
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && 'deploy/test' || github.event.workflow_run.head_sha }}
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify repository contract before live probe
+        run: npm run verify
+
+      - name: Exhaustively probe 19 matrices, 129 FrozenArtifacts, fail-closed routes, legacy R3 and performance
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .r7-live-evidence
+          node scripts/external-official129-live-probe.mjs 2>&1 | tee .r7-live-evidence/R7_LIVE_PROBE_OUTPUT.txt
+          grep -Fq 'OFFICIAL129_LIVE_BLACKBOX_PASS items=129 matrices=19 negatives=2 release=ER-DEMO-20260901-DRAFT-002' .r7-live-evidence/R7_LIVE_PROBE_OUTPUT.txt
+
+      - name: Preserve live probe evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: r7-external-test-live-evidence-${{ github.run_id }}
+          path: .r7-live-evidence/R7_LIVE_PROBE_OUTPUT.txt
+          if-no-files-found: error
+          retention-days: 30
