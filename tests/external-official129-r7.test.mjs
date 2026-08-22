@@ -13,8 +13,17 @@ const expectedRelease='ER-DEMO-20260901-DRAFT-002';
 const canonical='https://script.google.com/macros/s/AKfycbznbXi-0XWNV68E-vGU9CiAE6ElXGIlDmy27EePXMdGpRaorURzKZq0dDgsNBaaZOLh/exec';
 const sha256=(buf)=>crypto.createHash('sha256').update(buf).digest('hex');
 
+function compareParts(a,b){
+  const ma=String(a).match(/^data\.part(\d+)([a-z]?)\.b64$/);
+  const mb=String(b).match(/^data\.part(\d+)([a-z]?)\.b64$/);
+  assert.ok(ma&&mb,'projection part names must be canonical');
+  const na=Number(ma[1]),nb=Number(mb[1]);
+  if(na!==nb)return na-nb;
+  return ma[2]<mb[2]?-1:ma[2]>mb[2]?1:0;
+}
+
 function projection(){
-  const parts=fs.readdirSync(r7Dir).filter(x=>/^data\.part\d+(?:[a-z])?\.b64$/.test(x)).sort();
+  const parts=fs.readdirSync(r7Dir).filter(x=>/^data\.part\d+(?:[a-z])?\.b64$/.test(x)).sort(compareParts);
   assert.ok(parts.length>=15,'projection is intentionally split and build-time assembled');
   const b64=parts.map(f=>fs.readFileSync(path.join(r7Dir,f),'utf8').trim()).join('');
   assert.match(b64,/^[A-Za-z0-9+/=]+$/);
@@ -60,8 +69,8 @@ test('R7 each frozen artifact has complete text, page-warning QA, hashes and off
 test('R7 runtime exposes evaluator navigation, simulation boundary, 19/26/129 governance and legacy R3 control route',()=>{
   const src=fs.readFileSync(path.join(r7Dir,'Official129Runtime.gs'),'utf8');
   for(const marker of ['TEST／SAMPLE／CONTROL','不得用於正式 TTQS 評分','129','19','26','Evidence Matrix','開啟 FrozenArtifact','FA-DEMO-002','runtime 不查詢 live Drive'])assert.ok(src.includes(marker),marker);
-  assert.match(src,/\?indicator=/);
-  assert.match(src,/\?artifact=/);
+  assert.match(src,/ttqsR7AbsUrl_\('indicator='\+/);
+  assert.match(src,/ttqsR7AbsUrl_\('artifact='\+/);
   assert.match(src,/data-friendly-error/);
 });
 
