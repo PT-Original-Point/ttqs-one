@@ -42,7 +42,7 @@ export const R7_REQUIRED_PRODUCT_MARKERS = [
   'Evidence Matrix',
   'FrozenArtifact',
   '共 129 / 129',
-  '不是官方強制 129 份文件',
+  '並非官方強制 129 份文件',
   'ER-DEMO-20260901-DRAFT-003',
   'SAMPLE 永不得轉 REAL',
   'runtime live Drive',
@@ -51,9 +51,6 @@ export const R7_REQUIRED_PRODUCT_MARKERS = [
 
 export function normalizeAppsScriptHtmlServiceWrapper(source) {
   return String(source ?? '')
-    // HtmlService may serialize user HTML into a JS wrapper and escape
-    // punctuation even though the browser-visible text is semantically identical.
-    // Normalize only the narrow encodings required by our exact product markers.
     .replace(/\\\//g, '/')
     .replace(/\\x2[fF]/g, '/')
     .replace(/\\u002[fF]/g, '/')
