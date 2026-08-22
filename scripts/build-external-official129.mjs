@@ -13,10 +13,22 @@ const expectedRelease='ER-DEMO-20260901-DRAFT-002';
 function fail(code,detail=''){throw new Error(detail?`${code}:${detail}`:code);}
 function sha256(buf){return crypto.createHash('sha256').update(buf).digest('hex');}
 function readUtf8(p){return fs.readFileSync(p,'utf8');}
+function partKey(name){
+  const m=String(name).match(/^data\.part(\d+)([a-z]?)\.b64$/);
+  if(!m)fail('R7_DATA_PART_NAME_INVALID',String(name));
+  return {number:Number(m[1]),suffix:m[2]||''};
+}
+function compareParts(a,b){
+  const ka=partKey(a),kb=partKey(b);
+  if(ka.number!==kb.number)return ka.number-kb.number;
+  if(ka.suffix<kb.suffix)return -1;
+  if(ka.suffix>kb.suffix)return 1;
+  return 0;
+}
 
 const baseFiles=fs.readdirSync(srcDir).sort();
 if(JSON.stringify(baseFiles)!==JSON.stringify(['Code.gs','appsscript.json']))fail('EXTERNAL_BASE_PUSH_SET_INVALID',baseFiles.join(','));
-const parts=fs.readdirSync(r7Dir).filter(x=>/^data\.part\d+(?:[a-z])?\.b64$/.test(x)).sort();
+const parts=fs.readdirSync(r7Dir).filter(x=>/^data\.part\d+(?:[a-z])?\.b64$/.test(x)).sort(compareParts);
 if(parts.length<2)fail('R7_DATA_PARTS_MISSING');
 const b64=parts.map(f=>readUtf8(path.join(r7Dir,f)).trim()).join('');
 if(!/^[A-Za-z0-9+/=]+$/.test(b64))fail('R7_DATA_B64_INVALID');
