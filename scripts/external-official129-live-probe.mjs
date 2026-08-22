@@ -53,7 +53,7 @@ try{
   const cold=await get(canonical);
   require_(cold.status===200,'HOME_HTTP_STATUS',String(cold.status));
   require_(!cold.normalized.includes('data-friendly-error="true"'),'HOME_FRIENDLY_ERROR');
-  for(const marker of ['TTQS ONE｜顧問唯讀 DEMO 查驗入口','TEST／SAMPLE／CONTROL','19/19','26','129','不是官方強制 129 份文件',expectedRelease,expectedProjectionSha,expectedManifestSha,expectedOfflineZipSha])require_(cold.normalized.includes(marker),'HOME_MARKER_MISSING',marker);
+  for(const marker of ['TTQS ONE｜顧問唯讀 DEMO 查驗入口','TEST／SAMPLE／CONTROL','19/19','26','129','並非官方強制 129 份文件',expectedRelease,expectedProjectionSha,expectedManifestSha,expectedOfflineZipSha])require_(cold.normalized.includes(marker),'HOME_MARKER_MISSING',marker);
   for(let i=1;i<=19;i++)require_(cold.normalized.includes(`data-matrix-indicator="${i}"`),'HOME_INDICATOR_LINK_MISSING',String(i));
   require_(cold.ms<=8000,'HOME_COLD_PERFORMANCE_HARD_FAIL',String(cold.ms));
   const warm=await get(canonical);
