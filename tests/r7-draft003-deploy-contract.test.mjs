@@ -27,6 +27,18 @@ test('exhaustive live verification is pinned to DRAFT-003 registered identity',(
   assert.equal(liveWorkflow.includes('ER-DEMO-20260901-DRAFT-002'),false);
 });
 
+test('exhaustive live verification always publishes a durable Issue 39 receipt',()=>{
+  assert.match(liveWorkflow,/issues: write/);
+  assert.match(liveWorkflow,/EXTERNAL_RECEIPT_ISSUE: '39'/);
+  assert.match(liveWorkflow,/Publish durable exhaustive-live receipt/);
+  assert.match(liveWorkflow,/if: always\(\)/);
+  assert.match(liveWorkflow,/TTQS_R7_EXHAUSTIVE_LIVE_RECEIPT_V1/);
+  assert.match(liveWorkflow,/workflow_run_id/);
+  assert.match(liveWorkflow,/source_sha/);
+  assert.match(liveWorkflow,/evidence_artifact/);
+  assert.match(liveWorkflow,/gh issue comment "\$EXTERNAL_RECEIPT_ISSUE"/);
+});
+
 test('generic anonymous product classifier accepts complete DRAFT-003 evaluator homepage and fails closed when a marker is missing',()=>{
   const product=R7_REQUIRED_PRODUCT_MARKERS.join(' | ');
   const pass=classifyExternalBlackbox(product);
