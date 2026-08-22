@@ -26,16 +26,29 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: npm
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Install dependencies without lifecycle scripts
+        run: npm ci --ignore-scripts
 
-      - name: Materialize deterministic manifest
-        run: node scripts/generate-manifest.mjs
+      - name: Generate deterministic manifest from exact index
+        run: npm run manifest:generate:index
 
-      - name: Run full additive verification suite
+      - name: Commit generated manifest before verification
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add release/MANIFEST.sha256 release/MANIFEST.sha256.sha256
+          if git diff --cached --quiet; then
+            echo 'MANIFEST_ALREADY_CURRENT'
+          else
+            git commit -m 'R7: materialize deterministic manifest [skip ci]'
+          fi
+
+      - name: Verify committed exact tree
         run: npm run verify
 
       - name: Build R7 static evaluator bundle
@@ -50,16 +63,12 @@ jobs:
           grep -Fq 'ER-DEMO-20260901-DRAFT-002' .external-viewer-build/Code.gs
           grep -Fq '7567530e1f72ef5c8ec491aa38936bf7884ef258943df5f01e0fce08c0c3f2de' .external-viewer-build/Code.gs
 
-      - name: Commit only deterministic manifest outputs when changed
+      - name: Push only after full verification passes
         shell: bash
         run: |
           set -euo pipefail
-          if git diff --quiet -- release/MANIFEST.sha256 release/MANIFEST.sha256.sha256; then
-            echo 'MANIFEST_ALREADY_CURRENT'
+          if [ "$(git rev-parse HEAD)" = "${GITHUB_SHA}" ]; then
+            echo 'NO_GENERATED_COMMIT_TO_PUSH'
             exit 0
           fi
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add release/MANIFEST.sha256 release/MANIFEST.sha256.sha256
-          git commit -m 'R7: materialize deterministic manifest [skip ci]'
           git push origin "HEAD:${GITHUB_REF_NAME}"
