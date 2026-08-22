@@ -41,7 +41,7 @@ export const R7_REQUIRED_PRODUCT_MARKERS = [
   '19/19',
   'Evidence Matrix',
   'FrozenArtifact',
-  '129',
+  '共 129 / 129',
   '不是官方強制 129 份文件',
   'ER-DEMO-20260901-DRAFT-003',
   'SAMPLE 永不得轉 REAL',
