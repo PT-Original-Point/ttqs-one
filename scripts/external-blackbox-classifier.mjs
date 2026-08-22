@@ -50,8 +50,9 @@ export const R7_REQUIRED_PRODUCT_MARKERS = [
 ];
 
 export function normalizeAppsScriptHtmlServiceWrapper(source) {
+  const observedDoubleEscapedDoubleQuote = String.fromCharCode(92, 92, 34);
   return String(source ?? '')
-    .replace(/\\\\"/g, '"')
+    .split(observedDoubleEscapedDoubleQuote).join('"')
     .replace(/\\\//g, '/')
     .replace(/\\x2[fF]/g, '/')
     .replace(/\\u002[fF]/g, '/')
