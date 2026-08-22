@@ -51,6 +51,7 @@ export const R7_REQUIRED_PRODUCT_MARKERS = [
 
 export function normalizeAppsScriptHtmlServiceWrapper(source) {
   return String(source ?? '')
+    .replace(/\\\\"/g, '"')
     .replace(/\\\//g, '/')
     .replace(/\\x2[fF]/g, '/')
     .replace(/\\u002[fF]/g, '/')
