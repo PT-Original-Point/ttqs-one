@@ -49,9 +49,9 @@ export const R7_REQUIRED_PRODUCT_MARKERS = [
   '不得用於正式 TTQS 評分'
 ];
 
-export function normalizeAppsScriptHtmlServiceWrapper(source) {
+function normalizeAppsScriptHtmlServiceWrapperLayer(source) {
   const observedDoubleEscapedDoubleQuote = String.fromCharCode(92, 92, 34);
-  return String(source ?? '')
+  return String(source)
     .split(observedDoubleEscapedDoubleQuote).join('"')
     .replace(/\\\//g, '/')
     .replace(/\\x2[fF]/g, '/')
@@ -61,6 +61,16 @@ export function normalizeAppsScriptHtmlServiceWrapper(source) {
     .replace(/&#0*61;/gi, '=')
     .replace(/&#x0*3d;/gi, '=')
     .replace(/&equals;/gi, '=');
+}
+
+export function normalizeAppsScriptHtmlServiceWrapper(source) {
+  let normalized = String(source ?? '');
+  for (let round = 0; round < 8; round += 1) {
+    const next = normalizeAppsScriptHtmlServiceWrapperLayer(normalized);
+    if (next === normalized) return normalized;
+    normalized = next;
+  }
+  return normalized;
 }
 
 export function classifyExternalBlackbox(source) {
