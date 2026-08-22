@@ -53,6 +53,8 @@ function normalizeAppsScriptHtmlServiceWrapperLayer(source) {
   const observedDoubleEscapedDoubleQuote = String.fromCharCode(92, 92, 34);
   return String(source)
     .split(observedDoubleEscapedDoubleQuote).join('"')
+    .replace(/\\x22/g, '"')
+    .replace(/\\u0022/g, '"')
     .replace(/\\\//g, '/')
     .replace(/\\x2[fF]/g, '/')
     .replace(/\\u002[fF]/g, '/')
