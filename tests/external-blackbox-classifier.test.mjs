@@ -63,6 +63,29 @@ test('observed HtmlService attribute quote codepoints 005C 005C 0022 normalize e
   assert.equal(normalized.includes(observedQuote), false);
 });
 
+test('multilayer HtmlService wrapper reaches a bounded fixed point and is idempotent', () => {
+  const slash = String.fromCharCode(92);
+  const quote = String.fromCharCode(34);
+  const fourSlashQuote = `${slash}${slash}${slash}${slash}${quote}`;
+  const fourSlashSlash = `${slash}${slash}${slash}${slash}/`;
+  const multilayer = `data-matrix-indicator=${fourSlashQuote}1${fourSlashQuote}><${fourSlashSlash}h2>`;
+  const once = normalizeAppsScriptHtmlServiceWrapper(multilayer);
+  const twice = normalizeAppsScriptHtmlServiceWrapper(once);
+  assert.equal(once, 'data-matrix-indicator="1"></h2>');
+  assert.equal(twice, once);
+  assert.equal(once.includes(`${slash}${slash}${quote}`), false);
+  assert.equal(once.includes(`${slash}/`), false);
+});
+
+test('up to eight observed wrapper escape layers converge within the explicit bound', () => {
+  const slash = String.fromCharCode(92);
+  const quote = String.fromCharCode(34);
+  const eightSlashQuote = `${slash.repeat(8)}${quote}`;
+  const eightSlashSlash = `${slash.repeat(8)}/`;
+  const wrapped = `data-matrix-indicator=${eightSlashQuote}1${eightSlashQuote}><${eightSlashSlash}h2>`;
+  assert.equal(normalizeAppsScriptHtmlServiceWrapper(wrapped), 'data-matrix-indicator="1"></h2>');
+});
+
 test('hex, unicode and HTML entity escaped slash/equals variants are normalized', () => {
   assert.equal(classifyExternalBlackbox(rawProduct.replace('19 / 19', '19 \\x2f 19')).pass, true);
   assert.equal(classifyExternalBlackbox(rawProduct.replace('19 / 19', '19 \\u002F 19')).pass, true);
