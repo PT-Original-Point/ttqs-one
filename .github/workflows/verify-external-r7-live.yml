@@ -42,6 +42,24 @@ jobs:
       - name: Verify repository contract before live probe
         run: npm run verify
 
+      - name: Persist auditable per-marker live homepage evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .r7-live-evidence
+          curl --fail --silent --show-error --location --max-time 30 \
+            -H 'cache-control: no-cache' \
+            -H 'user-agent: TTQS-ONE-G02-V10-LIVE-PROBE/1.0' \
+            -o .r7-live-evidence/HOME_MARKER_PAGE.html \
+            "$EXTERNAL_WEBAPP_URL"
+          node scripts/external-blackbox-classifier.mjs \
+            --html .r7-live-evidence/HOME_MARKER_PAGE.html \
+            --evidence-out .r7-live-evidence/BLACKBOX_MARKER_EVIDENCE.json \
+            2>&1 | tee .r7-live-evidence/BLACKBOX_MARKER_OUTPUT.txt
+          grep -Fq 'BLACKBOX_MARKERS_PASS mode=R7_DRAFT003 markers=11/11 safety=PASS' .r7-live-evidence/BLACKBOX_MARKER_OUTPUT.txt
+          node --input-type=module -e "import fs from 'node:fs'; const p='.r7-live-evidence/BLACKBOX_MARKER_EVIDENCE.json'; const r=JSON.parse(fs.readFileSync(p,'utf8')); if(r.schema!=='TTQS_BLACKBOX_MARKER_EVIDENCE_V1') throw new Error('MARKER_EVIDENCE_SCHEMA_FAIL'); if(r.mode!=='R7_DRAFT003'||r.evidenceMode!=='R7_DRAFT003') throw new Error('MARKER_EVIDENCE_MODE_FAIL'); if(r.markerEvidence?.length!==11) throw new Error('MARKER_EVIDENCE_COUNT_FAIL'); if(!r.markerEvidence.every(x=>x.expected&&x.actual===x.expected&&x.result==='PASS'&&x.evidence?.matchType==='NORMALIZED_SUBSTRING'&&Number.isInteger(x.evidence.normalizedIndex)&&x.evidence.normalizedIndex>=0&&String(x.evidence.excerpt||'').includes(x.expected))) throw new Error('MARKER_EVIDENCE_DETAIL_FAIL'); if(r.safetyEvidence?.expected!=='ABSENT'||r.safetyEvidence?.actual!=='ABSENT'||r.safetyEvidence?.result!=='PASS') throw new Error('MARKER_EVIDENCE_SAFETY_FAIL'); if(r.derivation?.markerPassCount!==11||r.derivation?.markerTotal!==11||r.derivation?.selectedContractPass!==true||r.derivation?.safetyPass!==true||r.derivation?.totalPass!==true) throw new Error('MARKER_EVIDENCE_DERIVATION_FAIL'); console.log('G02_V10_MARKER_EVIDENCE_PASS markers=11/11 safety=PASS total=PASS');"
+          rm -f .r7-live-evidence/HOME_MARKER_PAGE.html
+
       - name: Exhaustively probe 19 matrices, 129 FrozenArtifacts, fail-closed routes, legacy R3 and performance
         shell: bash
         run: |
@@ -52,10 +70,10 @@ jobs:
 
       - name: Preserve live probe evidence
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
           name: r7-external-test-live-evidence-${{ github.run_id }}
-          path: .r7-live-evidence/R7_LIVE_PROBE_OUTPUT.txt
+          path: .r7-live-evidence/
           if-no-files-found: warn
           retention-days: 30
 
@@ -70,9 +88,14 @@ jobs:
           SOURCE_SHA="$(git rev-parse HEAD)"
           RESULT="$(printf '%s' "$JOB_STATUS" | tr '[:lower:]' '[:upper:]')"
           PASS_LINE='NOT_AVAILABLE'
+          MARKER_LINE='NOT_AVAILABLE'
           if test -f .r7-live-evidence/R7_LIVE_PROBE_OUTPUT.txt; then
             PASS_LINE="$(grep -F 'OFFICIAL129_LIVE_BLACKBOX_PASS' .r7-live-evidence/R7_LIVE_PROBE_OUTPUT.txt | tail -n 1 || true)"
             test -n "$PASS_LINE" || PASS_LINE='NOT_AVAILABLE'
+          fi
+          if test -f .r7-live-evidence/BLACKBOX_MARKER_OUTPUT.txt; then
+            MARKER_LINE="$(grep -F 'BLACKBOX_MARKERS_PASS' .r7-live-evidence/BLACKBOX_MARKER_OUTPUT.txt | tail -n 1 || true)"
+            test -n "$MARKER_LINE" || MARKER_LINE='NOT_AVAILABLE'
           fi
           {
             echo '<!-- TTQS_R7_EXHAUSTIVE_LIVE_RECEIPT_V1 -->'
@@ -83,6 +106,7 @@ jobs:
             echo "- source_sha: \`$SOURCE_SHA\`"
             echo '- release: `ER-DEMO-20260901-DRAFT-003`'
             echo "- evidence_artifact: \`r7-external-test-live-evidence-$GITHUB_RUN_ID\`"
+            echo "- marker_line: \`$MARKER_LINE\`"
             echo "- pass_line: \`$PASS_LINE\`"
             echo '- scope: TEST/SAMPLE/CONTROL only; REAL/PROD/formal scoring/official submission = 0'
           } > .r7-live-receipt.md
