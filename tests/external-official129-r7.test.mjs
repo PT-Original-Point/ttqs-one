@@ -22,14 +22,26 @@ function compareParts(a,b){
   return ma[2]<mb[2]?-1:ma[2]>mb[2]?1:0;
 }
 
+function tryGunzip(bytes){
+  try{return zlib.gunzipSync(bytes);}catch{return null;}
+}
+
 function projection(){
   const parts=fs.readdirSync(r7Dir).filter(x=>/^data\.part\d+(?:[a-z])?\.b64$/.test(x)).sort(compareParts);
   assert.ok(parts.length>=15,'projection is intentionally split and build-time assembled');
-  const b64=parts.map(f=>fs.readFileSync(path.join(r7Dir,f),'utf8').trim()).join('');
-  assert.match(b64,/^[A-Za-z0-9+/=]+$/);
-  const raw=zlib.gunzipSync(Buffer.from(b64,'base64'));
-  assert.equal(sha256(raw),expectedProjectionSha);
-  return {parts,raw,data:JSON.parse(raw.toString('utf8'))};
+  const tokens=parts.map(f=>fs.readFileSync(path.join(r7Dir,f),'utf8').trim());
+  for(const token of tokens)assert.match(token,/^[A-Za-z0-9+/=]+$/);
+
+  const joined=tryGunzip(Buffer.from(tokens.join(''),'base64'));
+  if(joined&&sha256(joined)===expectedProjectionSha){
+    return {parts,raw:joined,data:JSON.parse(joined.toString('utf8')),reconstructionMode:'JOIN_BASE64_TEXT'};
+  }
+
+  const binaryConcat=Buffer.concat(tokens.map(token=>Buffer.from(token,'base64')));
+  const perPart=tryGunzip(binaryConcat);
+  assert.ok(perPart,'projection chunks must reconstruct into a valid gzip stream');
+  assert.equal(sha256(perPart),expectedProjectionSha);
+  return {parts,raw:perPart,data:JSON.parse(perPart.toString('utf8')),reconstructionMode:'DECODE_EACH_PART_THEN_CONCAT_BINARY'};
 }
 
 test('R7 static projection is exact, immutable and contains 129 unique official-reference artifacts',()=>{
