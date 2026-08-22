@@ -46,7 +46,7 @@ jobs:
           set -euo pipefail
           mkdir -p .r7-live-evidence
           node scripts/external-official129-live-probe.mjs 2>&1 | tee .r7-live-evidence/R7_LIVE_PROBE_OUTPUT.txt
-          grep -Fq 'OFFICIAL129_LIVE_BLACKBOX_PASS items=129 matrices=19 negatives=2 release=ER-DEMO-20260901-DRAFT-002' .r7-live-evidence/R7_LIVE_PROBE_OUTPUT.txt
+          grep -Fq 'OFFICIAL129_LIVE_BLACKBOX_PASS items=129 matrices=19 negatives=2 release=ER-DEMO-20260901-DRAFT-003' .r7-live-evidence/R7_LIVE_PROBE_OUTPUT.txt
 
       - name: Preserve live probe evidence
         if: always()
