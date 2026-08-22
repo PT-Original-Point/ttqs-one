@@ -29,6 +29,24 @@ function tryGunzip(bytes){
   try{return {raw:zlib.gunzipSync(bytes),error:null};}
   catch(error){return {raw:null,error:String(error&&error.message||error)};}
 }
+function inflateGzipPayloadIgnoringTrailer(bytes){
+  if(bytes.length<18||bytes[0]!==0x1f||bytes[1]!==0x8b||bytes[2]!==8)return {raw:null,error:'INVALID_GZIP_HEADER'};
+  const flags=bytes[3];
+  if(flags&0xe0)return {raw:null,error:`RESERVED_GZIP_FLAGS:${flags}`};
+  let offset=10;
+  try{
+    if(flags&0x04){
+      if(offset+2>bytes.length-8)throw new Error('GZIP_EXTRA_LENGTH_TRUNCATED');
+      const xlen=bytes.readUInt16LE(offset);offset+=2+xlen;
+    }
+    if(flags&0x08){while(offset<bytes.length-8&&bytes[offset]!==0)offset+=1;offset+=1;}
+    if(flags&0x10){while(offset<bytes.length-8&&bytes[offset]!==0)offset+=1;offset+=1;}
+    if(flags&0x02)offset+=2;
+    if(offset>=bytes.length-8)throw new Error('GZIP_DEFLATE_PAYLOAD_MISSING');
+    const raw=zlib.inflateRawSync(bytes.subarray(offset,bytes.length-8));
+    return {raw,error:null,headerBytes:offset,trailerHex:bytes.subarray(bytes.length-8).toString('hex')};
+  }catch(error){return {raw:null,error:String(error&&error.message||error)};}
+}
 function decodeProjection(partNames){
   const tokens=partNames.map((name)=>{
     const token=readUtf8(path.join(r7Dir,name)).trim();
@@ -42,6 +60,12 @@ function decodeProjection(partNames){
   attempts.push({mode:'JOIN_BASE64_TEXT',compressedBytes:joinedBase64.length,error:joined.error,rawSha256:joined.raw?sha256(joined.raw):null});
   if(joined.raw&&sha256(joined.raw)===expectedProjectionSha)return {raw:joined.raw,mode:'JOIN_BASE64_TEXT',tokens,attempts};
 
+  const trailerRecovery=inflateGzipPayloadIgnoringTrailer(joinedBase64);
+  attempts.push({mode:'GZIP_TRAILER_RECOVERY_BY_CANONICAL_RAW_SHA',compressedBytes:joinedBase64.length,error:trailerRecovery.error,rawSha256:trailerRecovery.raw?sha256(trailerRecovery.raw):null,headerBytes:trailerRecovery.headerBytes||null,trailerHex:trailerRecovery.trailerHex||null});
+  if(trailerRecovery.raw&&sha256(trailerRecovery.raw)===expectedProjectionSha){
+    return {raw:trailerRecovery.raw,mode:'GZIP_TRAILER_RECOVERY_BY_CANONICAL_RAW_SHA',tokens,attempts};
+  }
+
   const decodedParts=tokens.map(x=>Buffer.from(x.token,'base64'));
   const binaryConcat=Buffer.concat(decodedParts);
   const perPart=tryGunzip(binaryConcat);
@@ -49,6 +73,7 @@ function decodeProjection(partNames){
   if(perPart.raw&&sha256(perPart.raw)===expectedProjectionSha)return {raw:perPart.raw,mode:'DECODE_EACH_PART_THEN_CONCAT_BINARY',tokens,attempts};
 
   const diagnostics={
+    expectedProjectionSha,
     parts:tokens.map((x,i)=>({name:x.name,base64Chars:x.token.length,padding:(x.token.match(/=+$/)||[''])[0].length,decodedBytes:decodedParts[i].length})),
     attempts
   };
@@ -86,5 +111,4 @@ fs.rmSync(outDir,{recursive:true,force:true});fs.mkdirSync(outDir,{recursive:tru
 fs.writeFileSync(path.join(outDir,'Code.gs'),code);
 fs.writeFileSync(path.join(outDir,'appsscript.json'),manifest);
 const buildSha=sha256(Buffer.from(code,'utf8'));
-const summary={releaseId:expectedRelease,itemCount:129,partCount:parts.length,reconstructionMode:decoded.mode,projectionSha256:expectedProjectionSha,buildCodeSha256:buildSha,buildBytes:Buffer.byteLength(code),result:'PASS'};
-process.stdout.write(`R7_EXTERNAL_BUILD_PASS items=129 parts=${parts.length} reconstruction=${decoded.mode} projectionSha256=${expectedProjectionSha} buildCodeSha256=${buildSha} buildBytes=${summary.buildBytes}\n`);
+process.stdout.write(`R7_EXTERNAL_BUILD_PASS items=129 parts=${parts.length} reconstruction=${decoded.mode} projectionSha256=${expectedProjectionSha} buildCodeSha256=${buildSha} buildBytes=${Buffer.byteLength(code)}\n`);
