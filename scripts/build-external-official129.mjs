@@ -7,136 +7,45 @@ const root=process.cwd();
 const srcDir=path.join(root,'external-viewer');
 const r7Dir=path.join(root,'release','official129');
 const outDir=path.join(root,'.external-viewer-build');
-const expectedProjectionSha='7567530e1f72ef5c8ec491aa38936bf7884ef258943df5f01e0fce08c0c3f2de';
-const expectedRelease='ER-DEMO-20260901-DRAFT-002';
-const recoveredRawOut=process.env.TTQS_R7_RECOVERED_RAW_OUT||'';
-
-function fail(code,detail=''){throw new Error(detail?`${code}:${detail}`:code);}
-function sha256(buf){return crypto.createHash('sha256').update(buf).digest('hex');}
-function readUtf8(p){return fs.readFileSync(p,'utf8');}
-function partKey(name){
-  const m=String(name).match(/^data\.part(\d+)([a-z]?)\.b64$/);
-  if(!m)fail('R7_DATA_PART_NAME_INVALID',String(name));
-  return {number:Number(m[1]),suffix:m[2]||''};
-}
-function compareParts(a,b){
-  const ka=partKey(a),kb=partKey(b);
-  if(ka.number!==kb.number)return ka.number-kb.number;
-  if(ka.suffix<kb.suffix)return -1;
-  if(ka.suffix>kb.suffix)return 1;
-  return 0;
-}
-function tryGunzip(bytes){
-  try{return {raw:zlib.gunzipSync(bytes),error:null};}
-  catch(error){return {raw:null,error:String(error&&error.message||error)};}
-}
-function inflateGzipPayloadIgnoringTrailer(bytes){
-  if(bytes.length<18||bytes[0]!==0x1f||bytes[1]!==0x8b||bytes[2]!==8)return {raw:null,error:'INVALID_GZIP_HEADER'};
-  const flags=bytes[3];
-  if(flags&0xe0)return {raw:null,error:`RESERVED_GZIP_FLAGS:${flags}`};
-  let offset=10;
-  try{
-    if(flags&0x04){
-      if(offset+2>bytes.length-8)throw new Error('GZIP_EXTRA_LENGTH_TRUNCATED');
-      const xlen=bytes.readUInt16LE(offset);offset+=2+xlen;
-    }
-    if(flags&0x08){while(offset<bytes.length-8&&bytes[offset]!==0)offset+=1;offset+=1;}
-    if(flags&0x10){while(offset<bytes.length-8&&bytes[offset]!==0)offset+=1;offset+=1;}
-    if(flags&0x02)offset+=2;
-    if(offset>=bytes.length-8)throw new Error('GZIP_DEFLATE_PAYLOAD_MISSING');
-    const raw=zlib.inflateRawSync(bytes.subarray(offset,bytes.length-8));
-    return {raw,error:null,headerBytes:offset,trailerHex:bytes.subarray(bytes.length-8).toString('hex')};
-  }catch(error){return {raw:null,error:String(error&&error.message||error)};}
-}
-function candidateSerializations(raw){
-  const out=[];
-  try{
-    const data=JSON.parse(raw.toString('utf8'));
-    const candidates=[
-      ['JSON_MINIFIED',JSON.stringify(data)],
-      ['JSON_MINIFIED_LF',JSON.stringify(data)+'\n'],
-      ['JSON_PRETTY2',JSON.stringify(data,null,2)],
-      ['JSON_PRETTY2_LF',JSON.stringify(data,null,2)+'\n'],
-      ['JSON_PRETTY4',JSON.stringify(data,null,4)],
-      ['JSON_PRETTY4_LF',JSON.stringify(data,null,4)+'\n']
-    ];
-    for(const [mode,text] of candidates){const bytes=Buffer.from(text,'utf8');out.push({mode,bytes:bytes.length,sha256:sha256(bytes),matchesExpected:sha256(bytes)===expectedProjectionSha});}
-    return {parseStatus:'PASS',releaseId:data?.releaseId??null,itemCount:Array.isArray(data?.items)?data.items.length:null,candidates:out};
-  }catch(error){return {parseStatus:'FAIL',error:String(error&&error.message||error),candidates:out};}
-}
-function maybeWriteRecovered(raw){
-  if(!recoveredRawOut||!raw)return null;
-  fs.mkdirSync(path.dirname(recoveredRawOut),{recursive:true});
-  fs.writeFileSync(recoveredRawOut,raw);
-  return {path:recoveredRawOut,bytes:raw.length,sha256:sha256(raw)};
-}
-function decodeProjection(partNames){
-  const tokens=partNames.map((name)=>{
-    const token=readUtf8(path.join(r7Dir,name)).trim();
-    if(!/^[A-Za-z0-9+/=]+$/.test(token))fail('R7_DATA_B64_INVALID',name);
-    return {name,token};
-  });
-  const attempts=[];
-
-  const joinedBase64=Buffer.from(tokens.map(x=>x.token).join(''),'base64');
-  const joined=tryGunzip(joinedBase64);
-  attempts.push({mode:'JOIN_BASE64_TEXT',compressedBytes:joinedBase64.length,error:joined.error,rawSha256:joined.raw?sha256(joined.raw):null});
-  if(joined.raw&&sha256(joined.raw)===expectedProjectionSha)return {raw:joined.raw,mode:'JOIN_BASE64_TEXT',tokens,attempts};
-
-  const trailerRecovery=inflateGzipPayloadIgnoringTrailer(joinedBase64);
-  attempts.push({mode:'GZIP_TRAILER_RECOVERY_BY_CANONICAL_RAW_SHA',compressedBytes:joinedBase64.length,error:trailerRecovery.error,rawSha256:trailerRecovery.raw?sha256(trailerRecovery.raw):null,headerBytes:trailerRecovery.headerBytes||null,trailerHex:trailerRecovery.trailerHex||null});
-  if(trailerRecovery.raw&&sha256(trailerRecovery.raw)===expectedProjectionSha){
-    return {raw:trailerRecovery.raw,mode:'GZIP_TRAILER_RECOVERY_BY_CANONICAL_RAW_SHA',tokens,attempts};
-  }
-
-  const recoveredRawReceipt=maybeWriteRecovered(trailerRecovery.raw);
-  const recoveredRawInspection=trailerRecovery.raw?candidateSerializations(trailerRecovery.raw):null;
-
-  const decodedParts=tokens.map(x=>Buffer.from(x.token,'base64'));
-  const binaryConcat=Buffer.concat(decodedParts);
-  const perPart=tryGunzip(binaryConcat);
-  attempts.push({mode:'DECODE_EACH_PART_THEN_CONCAT_BINARY',compressedBytes:binaryConcat.length,error:perPart.error,rawSha256:perPart.raw?sha256(perPart.raw):null});
-  if(perPart.raw&&sha256(perPart.raw)===expectedProjectionSha)return {raw:perPart.raw,mode:'DECODE_EACH_PART_THEN_CONCAT_BINARY',tokens,attempts};
-
-  const diagnostics={
-    expectedProjectionSha,
-    recoveredRawReceipt,
-    recoveredRawInspection,
-    parts:tokens.map((x,i)=>({name:x.name,base64Chars:x.token.length,padding:(x.token.match(/=+$/)||[''])[0].length,decodedBytes:decodedParts[i].length})),
-    attempts
-  };
-  fail('R7_PROJECTION_RECONSTRUCTION_FAILED',JSON.stringify(diagnostics));
-}
+const expectedProjectionSha='94590a9bbfdca699235815fb96e4c37c69156f10689e70b6c3caa74527165a53';
+const expectedRelease='ER-DEMO-20260901-DRAFT-003';
+const expectedParts=[
+  'data.part00.b64','data.part01.b64','data.part02a.b64','data.part02b.b64','data.part03.b64','data.part04.b64',
+  'data.part05a.b64','data.part05b.b64','data.part06.b64','data.part07a.b64','data.part07b.b64','data.part08a.b64',
+  'data.part08b.b64','data.part09a.b64','data.part09b.b64','data.part10a.b64','data.part10b.b64','data.part11.b64',
+  'data.part12a.b64','data.part12b.b64','data.part13.b64','data.part14.b64'
+];
+const sha256=(bytes)=>crypto.createHash('sha256').update(bytes).digest('hex');
+const fail=(code,detail='')=>{throw new Error(detail?`${code}:${detail}`:code);};
+const readUtf8=(p)=>fs.readFileSync(p,'utf8');
 
 const baseFiles=fs.readdirSync(srcDir).sort();
 if(JSON.stringify(baseFiles)!==JSON.stringify(['Code.gs','appsscript.json']))fail('EXTERNAL_BASE_PUSH_SET_INVALID',baseFiles.join(','));
-const parts=fs.readdirSync(r7Dir).filter(x=>/^data\.part\d+(?:[a-z])?\.b64$/.test(x)).sort(compareParts);
-if(parts.length<2)fail('R7_DATA_PARTS_MISSING');
-const decoded=decodeProjection(parts);
-const raw=decoded.raw;
-if(sha256(raw)!==expectedProjectionSha)fail('R7_PROJECTION_HASH_MISMATCH',sha256(raw));
+const actualParts=fs.readdirSync(r7Dir).filter(x=>/^data\.part\d+(?:[a-z])?\.b64$/.test(x)).sort();
+if(new Set(actualParts).size!==expectedParts.length||expectedParts.some(x=>!actualParts.includes(x)))fail('R7_DATA_PART_SET_INVALID',actualParts.join(','));
+const tokens=expectedParts.map(name=>{const t=readUtf8(path.join(r7Dir,name)).trim();if(!/^[A-Za-z0-9+/=]+$/.test(t))fail('R7_DATA_B64_INVALID',name);return t;});
+let raw;
+try{raw=zlib.gunzipSync(Buffer.from(tokens.join(''),'base64'));}catch(error){fail('R7_PROJECTION_GUNZIP_FAIL',String(error&&error.message||error));}
+const actualProjectionSha=sha256(raw);
+if(actualProjectionSha!==expectedProjectionSha)fail('R7_PROJECTION_HASH_MISMATCH',actualProjectionSha);
 let data;
-try{data=JSON.parse(raw.toString('utf8'));}catch(e){fail('R7_PROJECTION_JSON_INVALID',e.message);}
+try{data=JSON.parse(raw.toString('utf8'));}catch(error){fail('R7_PROJECTION_JSON_INVALID',String(error&&error.message||error));}
 if(data.releaseId!==expectedRelease)fail('R7_RELEASE_ID_MISMATCH',String(data.releaseId));
 if(!Array.isArray(data.items)||data.items.length!==129)fail('R7_ITEM_COUNT_MISMATCH',String(data.items?.length));
-for(const key of ['artifactCode','officialRefId']){
-  const vals=data.items.map(x=>String(x[key]||''));
-  if(vals.some(x=>!x)||new Set(vals).size!==129)fail('R7_IDENTITY_UNIQUENESS_FAIL',key);
-}
-for(let i=1;i<=19;i++){
-  const n=data.items.filter(x=>String(x.indicator).match(/^\d+/)?.[0]===String(i)).length;
-  if(n<1)fail('R7_INDICATOR_EMPTY',String(i));
+for(const key of ['artifactCode','officialRefId']){const vals=data.items.map(x=>String(x[key]||''));if(vals.some(x=>!x)||new Set(vals).size!==129)fail('R7_IDENTITY_UNIQUENESS_FAIL',key);}
+for(let i=1;i<=19;i++){const n=data.items.filter(x=>String(x.indicator).match(/^\d+/)?.[0]===String(i)).length;if(n<1)fail('R7_INDICATOR_EMPTY',String(i));}
+for(const x of data.items){
+  if(!String(x.warning||'').includes('模擬資料')||!String(x.warning||'').includes('不得用於正式 TTQS 評分或官方送件'))fail('R7_SAMPLE_WARNING_MISSING',String(x.artifactCode));
+  if(!/^artifacts\/pdf\//.test(String(x.offlinePdfPath||'')))fail('R7_OFFLINE_PATH_INVALID',String(x.artifactCode));
 }
 const runtime=readUtf8(path.join(r7Dir,'Official129Runtime.gs'));
 const legacy=readUtf8(path.join(r7Dir,'Official129LegacyRegression.gs'));
 const runtimeAll=runtime+'\n'+legacy;
 for(const forbidden of [/Sheets\./,/SpreadsheetApp/,/DriveApp/,/UrlFetchApp/])if(forbidden.test(runtimeAll))fail('R7_RUNTIME_GOOGLE_DATA_API_FORBIDDEN',String(forbidden));
 const base=readUtf8(path.join(srcDir,'Code.gs'));
-const manifest=readUtf8(path.join(srcDir,'appsscript.json'));
+const appsscript=readUtf8(path.join(srcDir,'appsscript.json'));
 const projectionGzipB64=zlib.gzipSync(raw,{level:9,mtime:0}).toString('base64');
 const code=base+'\n\n/* build-time injected R7 frozen projection; source sha256='+expectedProjectionSha+' */\nvar TTQS_R7_DATA_GZIP_B64_='+JSON.stringify(projectionGzipB64)+';\n'+runtimeAll+'\n';
 fs.rmSync(outDir,{recursive:true,force:true});fs.mkdirSync(outDir,{recursive:true});
-fs.writeFileSync(path.join(outDir,'Code.gs'),code);
-fs.writeFileSync(path.join(outDir,'appsscript.json'),manifest);
-const buildSha=sha256(Buffer.from(code,'utf8'));
-process.stdout.write(`R7_EXTERNAL_BUILD_PASS items=129 parts=${parts.length} reconstruction=${decoded.mode} projectionSha256=${expectedProjectionSha} buildCodeSha256=${buildSha} buildBytes=${Buffer.byteLength(code)}\n`);
+fs.writeFileSync(path.join(outDir,'Code.gs'),code);fs.writeFileSync(path.join(outDir,'appsscript.json'),appsscript);
+process.stdout.write(`R7_EXTERNAL_BUILD_PASS items=129 parts=${expectedParts.length} projectionSha256=${expectedProjectionSha} buildCodeSha256=${sha256(Buffer.from(code,'utf8'))} buildBytes=${Buffer.byteLength(code)}\n`);
