@@ -44,6 +44,53 @@ function require_(condition,code,detail=''){if(!condition){const e=new Error(det
 function escPattern(s){return String(s).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');}
 function attr(body,name,value){return new RegExp(`${escPattern(name)}=[\\"']${escPattern(value)}[\\"']`).test(body);}
 function indicatorBase(v){return String(v).match(/^\d+/)?.[0]||'';}
+function countToken(body,token){return String(body).split(token).length-1;}
+function safeSnippet(body,needles,radius=180){
+  const source=String(body);
+  for(const needle of needles){
+    const index=source.indexOf(needle);
+    if(index<0)continue;
+    const start=Math.max(0,index-radius);
+    const end=Math.min(source.length,index+needle.length+radius);
+    return source.slice(start,end).replace(/\s+/g,' ').slice(0,500);
+  }
+  return '';
+}
+function routeTokenPresent(body,id){return new RegExp(`\\?indicator=${escPattern(id)}(?=[\\"'&<\\s]|$)`).test(String(body));}
+function homeNavigationDiagnostic(response){
+  const normalized=String(response.normalized);
+  const raw=String(response.body);
+  const routes=Array.from({length:19},(_,index)=>{
+    const id=String(index+1);
+    return {
+      indicator:id,
+      strictDataAttr:normalized.includes(`data-matrix-indicator="${id}"`),
+      singleQuotedDataAttr:normalized.includes(`data-matrix-indicator='${id}'`),
+      backslashQuotedDataAttr:normalized.includes(`data-matrix-indicator=\\"${id}\\"`),
+      looseDataAttr:new RegExp(`data-matrix-indicator\\s*=\\s*[\\"']${escPattern(id)}[\\"']`).test(normalized),
+      routeToken:routeTokenPresent(normalized,id),
+      canonicalRoute:normalized.includes(`${canonical}?indicator=${id}`),
+      rawRouteToken:routeTokenPresent(raw,id),
+      rawEscapedEquals:raw.includes(`indicator\\x3d${id}`)||raw.includes(`indicator\\u003d${id}`),
+      percentEncodedEquals:raw.toLowerCase().includes(`indicator%3d${id}`)
+    };
+  });
+  return {
+    finalUrl:response.finalUrl,
+    status:response.status,
+    coldMs:response.ms,
+    bodyBytes:Buffer.byteLength(raw),
+    normalizedChars:normalized.length,
+    rawDataIndicatorTokenCount:countToken(raw,'data-indicator'),
+    rawDataMatrixIndicatorTokenCount:countToken(raw,'data-matrix-indicator'),
+    normalizedDataIndicatorTokenCount:countToken(normalized,'data-indicator'),
+    normalizedDataMatrixIndicatorTokenCount:countToken(normalized,'data-matrix-indicator'),
+    normalizedEvidenceMatrixTextCount:countToken(normalized,'Evidence Matrix'),
+    normalizedIndicatorQueryTokenCount:countToken(normalized,'?indicator='),
+    routes,
+    safeNavigationSnippet:safeSnippet(normalized,['data-matrix-indicator','?indicator=','查看佐證與來源','Evidence Matrix'])
+  };
+}
 async function mapLimit(items,limit,fn){const out=new Array(items.length);let next=0;async function worker(){while(true){const i=next++;if(i>=items.length)return;out[i]=await fn(items[i],i);}}await Promise.all(Array.from({length:Math.min(limit,items.length)},worker));return out;}
 
 const data=projection();
@@ -51,6 +98,7 @@ const results={releaseId:expectedRelease,canonical,home:{},matrices:[],artifacts
 
 try{
   const cold=await get(canonical);
+  results.home=homeNavigationDiagnostic(cold);
   require_(cold.status===200,'HOME_HTTP_STATUS',String(cold.status));
   require_(!cold.normalized.includes('data-friendly-error="true"'),'HOME_FRIENDLY_ERROR');
   for(const marker of ['TTQS ONE｜顧問唯讀 DEMO 查驗入口','TEST／SAMPLE／CONTROL','19/19','26','129','並非官方強制 129 份文件',expectedRelease,expectedProjectionSha,expectedManifestSha,expectedOfflineZipSha])require_(cold.normalized.includes(marker),'HOME_MARKER_MISSING',marker);
@@ -59,7 +107,7 @@ try{
   const warm=await get(canonical);
   require_(warm.status===200,'HOME_WARM_HTTP_STATUS',String(warm.status));
   require_(warm.ms<=6000,'HOME_WARM_PERFORMANCE_HARD_FAIL',String(warm.ms));
-  results.home={coldMs:cold.ms,warmMs:warm.ms,status:200};
+  results.home.warmMs=warm.ms;
   if(warm.ms>3000)results.performance.homeWarmOver3s=warm.ms;
 
   const indicatorIds=Array.from({length:19},(_,i)=>String(i+1));
