@@ -25,15 +25,42 @@ function compareParts(a,b){
   if(ka.suffix>kb.suffix)return 1;
   return 0;
 }
+function tryGunzip(bytes){
+  try{return {raw:zlib.gunzipSync(bytes),error:null};}
+  catch(error){return {raw:null,error:String(error&&error.message||error)};}
+}
+function decodeProjection(partNames){
+  const tokens=partNames.map((name)=>{
+    const token=readUtf8(path.join(r7Dir,name)).trim();
+    if(!/^[A-Za-z0-9+/=]+$/.test(token))fail('R7_DATA_B64_INVALID',name);
+    return {name,token};
+  });
+  const attempts=[];
+
+  const joinedBase64=Buffer.from(tokens.map(x=>x.token).join(''),'base64');
+  const joined=tryGunzip(joinedBase64);
+  attempts.push({mode:'JOIN_BASE64_TEXT',compressedBytes:joinedBase64.length,error:joined.error,rawSha256:joined.raw?sha256(joined.raw):null});
+  if(joined.raw&&sha256(joined.raw)===expectedProjectionSha)return {raw:joined.raw,mode:'JOIN_BASE64_TEXT',tokens,attempts};
+
+  const decodedParts=tokens.map(x=>Buffer.from(x.token,'base64'));
+  const binaryConcat=Buffer.concat(decodedParts);
+  const perPart=tryGunzip(binaryConcat);
+  attempts.push({mode:'DECODE_EACH_PART_THEN_CONCAT_BINARY',compressedBytes:binaryConcat.length,error:perPart.error,rawSha256:perPart.raw?sha256(perPart.raw):null});
+  if(perPart.raw&&sha256(perPart.raw)===expectedProjectionSha)return {raw:perPart.raw,mode:'DECODE_EACH_PART_THEN_CONCAT_BINARY',tokens,attempts};
+
+  const diagnostics={
+    parts:tokens.map((x,i)=>({name:x.name,base64Chars:x.token.length,padding:(x.token.match(/=+$/)||[''])[0].length,decodedBytes:decodedParts[i].length})),
+    attempts
+  };
+  fail('R7_PROJECTION_RECONSTRUCTION_FAILED',JSON.stringify(diagnostics));
+}
 
 const baseFiles=fs.readdirSync(srcDir).sort();
 if(JSON.stringify(baseFiles)!==JSON.stringify(['Code.gs','appsscript.json']))fail('EXTERNAL_BASE_PUSH_SET_INVALID',baseFiles.join(','));
 const parts=fs.readdirSync(r7Dir).filter(x=>/^data\.part\d+(?:[a-z])?\.b64$/.test(x)).sort(compareParts);
 if(parts.length<2)fail('R7_DATA_PARTS_MISSING');
-const b64=parts.map(f=>readUtf8(path.join(r7Dir,f)).trim()).join('');
-if(!/^[A-Za-z0-9+/=]+$/.test(b64))fail('R7_DATA_B64_INVALID');
-let raw;
-try{raw=zlib.gunzipSync(Buffer.from(b64,'base64'));}catch(e){fail('R7_DATA_GZIP_INVALID',e.message);}
+const decoded=decodeProjection(parts);
+const raw=decoded.raw;
 if(sha256(raw)!==expectedProjectionSha)fail('R7_PROJECTION_HASH_MISMATCH',sha256(raw));
 let data;
 try{data=JSON.parse(raw.toString('utf8'));}catch(e){fail('R7_PROJECTION_JSON_INVALID',e.message);}
@@ -53,10 +80,11 @@ const runtimeAll=runtime+'\n'+legacy;
 for(const forbidden of [/Sheets\./,/SpreadsheetApp/,/DriveApp/,/UrlFetchApp/])if(forbidden.test(runtimeAll))fail('R7_RUNTIME_GOOGLE_DATA_API_FORBIDDEN',String(forbidden));
 const base=readUtf8(path.join(srcDir,'Code.gs'));
 const manifest=readUtf8(path.join(srcDir,'appsscript.json'));
-const code=base+'\n\n/* build-time injected R7 frozen projection; source sha256='+expectedProjectionSha+' */\nvar TTQS_R7_DATA_GZIP_B64_='+JSON.stringify(b64)+';\n'+runtimeAll+'\n';
+const projectionGzipB64=zlib.gzipSync(raw,{level:9,mtime:0}).toString('base64');
+const code=base+'\n\n/* build-time injected R7 frozen projection; source sha256='+expectedProjectionSha+' */\nvar TTQS_R7_DATA_GZIP_B64_='+JSON.stringify(projectionGzipB64)+';\n'+runtimeAll+'\n';
 fs.rmSync(outDir,{recursive:true,force:true});fs.mkdirSync(outDir,{recursive:true});
 fs.writeFileSync(path.join(outDir,'Code.gs'),code);
 fs.writeFileSync(path.join(outDir,'appsscript.json'),manifest);
 const buildSha=sha256(Buffer.from(code,'utf8'));
-const summary={releaseId:expectedRelease,itemCount:129,partCount:parts.length,projectionSha256:expectedProjectionSha,buildCodeSha256:buildSha,buildBytes:Buffer.byteLength(code),result:'PASS'};
-process.stdout.write(`R7_EXTERNAL_BUILD_PASS items=129 parts=${parts.length} projectionSha256=${expectedProjectionSha} buildCodeSha256=${buildSha} buildBytes=${summary.buildBytes}\n`);
+const summary={releaseId:expectedRelease,itemCount:129,partCount:parts.length,reconstructionMode:decoded.mode,projectionSha256:expectedProjectionSha,buildCodeSha256:buildSha,buildBytes:Buffer.byteLength(code),result:'PASS'};
+process.stdout.write(`R7_EXTERNAL_BUILD_PASS items=129 parts=${parts.length} reconstruction=${decoded.mode} projectionSha256=${expectedProjectionSha} buildCodeSha256=${buildSha} buildBytes=${summary.buildBytes}\n`);
