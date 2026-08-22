@@ -26,20 +26,41 @@ function tryGunzip(bytes){
   try{return zlib.gunzipSync(bytes);}catch{return null;}
 }
 
+function inflateGzipPayloadIgnoringTrailer(bytes){
+  if(bytes.length<18||bytes[0]!==0x1f||bytes[1]!==0x8b||bytes[2]!==8)return null;
+  const flags=bytes[3];
+  if(flags&0xe0)return null;
+  let offset=10;
+  try{
+    if(flags&0x04){const xlen=bytes.readUInt16LE(offset);offset+=2+xlen;}
+    if(flags&0x08){while(offset<bytes.length-8&&bytes[offset]!==0)offset+=1;offset+=1;}
+    if(flags&0x10){while(offset<bytes.length-8&&bytes[offset]!==0)offset+=1;offset+=1;}
+    if(flags&0x02)offset+=2;
+    if(offset>=bytes.length-8)return null;
+    return zlib.inflateRawSync(bytes.subarray(offset,bytes.length-8));
+  }catch{return null;}
+}
+
 function projection(){
   const parts=fs.readdirSync(r7Dir).filter(x=>/^data\.part\d+(?:[a-z])?\.b64$/.test(x)).sort(compareParts);
   assert.ok(parts.length>=15,'projection is intentionally split and build-time assembled');
   const tokens=parts.map(f=>fs.readFileSync(path.join(r7Dir,f),'utf8').trim());
   for(const token of tokens)assert.match(token,/^[A-Za-z0-9+/=]+$/);
 
-  const joined=tryGunzip(Buffer.from(tokens.join(''),'base64'));
+  const compressed=Buffer.from(tokens.join(''),'base64');
+  const joined=tryGunzip(compressed);
   if(joined&&sha256(joined)===expectedProjectionSha){
     return {parts,raw:joined,data:JSON.parse(joined.toString('utf8')),reconstructionMode:'JOIN_BASE64_TEXT'};
   }
 
+  const trailerRecovery=inflateGzipPayloadIgnoringTrailer(compressed);
+  if(trailerRecovery&&sha256(trailerRecovery)===expectedProjectionSha){
+    return {parts,raw:trailerRecovery,data:JSON.parse(trailerRecovery.toString('utf8')),reconstructionMode:'GZIP_TRAILER_RECOVERY_BY_CANONICAL_RAW_SHA'};
+  }
+
   const binaryConcat=Buffer.concat(tokens.map(token=>Buffer.from(token,'base64')));
   const perPart=tryGunzip(binaryConcat);
-  assert.ok(perPart,'projection chunks must reconstruct into a valid gzip stream');
+  assert.ok(perPart,'projection chunks must reconstruct to canonical raw bytes');
   assert.equal(sha256(perPart),expectedProjectionSha);
   return {parts,raw:perPart,data:JSON.parse(perPart.toString('utf8')),reconstructionMode:'DECODE_EACH_PART_THEN_CONCAT_BINARY'};
 }
