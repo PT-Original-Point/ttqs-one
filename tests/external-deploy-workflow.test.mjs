@@ -15,15 +15,23 @@ test('external TEST workflow requires source SHA to already be in main', () => {
   assert.match(source, /git merge-base --is-ancestor "\$GITHUB_SHA" origin\/main/);
 });
 
-test('external deploy is isolated to zero-runtime-permission external-viewer', () => {
-  assert.match(source, /--root-dir external-viewer/);
+test('external deploy is isolated to deterministic zero-runtime-permission R7 build output', () => {
+  assert.match(source, /node scripts\/build-external-official129\.mjs/);
+  assert.match(source, /--root-dir \.external-viewer-build/);
   assert.match(source, /ANYONE_ANONYMOUS/);
   assert.match(source, /USER_DEPLOYING/);
   assert.match(source, /EXTERNAL_RUNTIME_OAUTH_SCOPE_FORBIDDEN/);
   assert.match(source, /EXTERNAL_RUNTIME_ADVANCED_SERVICE_FORBIDDEN/);
   assert.match(source, /EXTERNAL_RUNTIME_GOOGLE_DATA_API_FORBIDDEN/);
+  assert.match(source, /EXTERNAL_R7_RELEASE_IDENTITY_MISSING/);
+  assert.match(source, /EXTERNAL_R7_PROJECTION_IDENTITY_MISSING/);
   assert.doesNotMatch(source, /spreadsheets\.readonly|enabledAdvancedServices/);
   assert.doesNotMatch(source, /--root-dir apps-script/);
+});
+
+test('R7 source changes require provider mutation instead of being misclassified as verifier-only', () => {
+  assert.match(source, /git diff --quiet "\$BEFORE" "\$GITHUB_SHA" -- external-viewer/);
+  assert.match(source, /git diff --quiet "\$BEFORE" "\$GITHUB_SHA" -- release\/official129 scripts\/build-external-official129\.mjs/);
 });
 
 test('external workflow never contains REAL or PROD deployment actions', () => {
@@ -37,7 +45,7 @@ test('deployment no longer invokes clasp in CI and uses tested Apps Script REST 
   assert.match(source, /scripts\/apps-script-rest-deploy\.mjs ensure-project/);
   assert.match(source, /scripts\/apps-script-rest-deploy\.mjs push-content/);
   assert.match(source, /scripts\/apps-script-rest-deploy\.mjs deploy/);
-  assert.match(source, /Apps Script REST API with minimal deployment OAuth contract/);
+  assert.match(source, /Apps Script REST API with deterministic DRAFT-003 build output and minimal deployment OAuth contract/);
 });
 
 test('OAuth credential material is decoded into runner temp and checked before provider mutation', () => {
@@ -49,7 +57,6 @@ test('OAuth credential material is decoded into runner temp and checked before p
 });
 
 test('verifier-only deploy/test pushes skip OAuth and all provider mutation', () => {
-  assert.match(source, /git diff --quiet "\$BEFORE" "\$GITHUB_SHA" -- external-viewer/);
   assert.match(source, /FULL_DEPLOY=0/);
   assert.match(source, /EXTERNAL_FULL_DEPLOY="\$FULL_DEPLOY"/);
   assert.match(source, /BLACKBOX_ONLY_NO_PROVIDER_MUTATION/);
