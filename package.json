@@ -7,6 +7,11 @@
   "scripts": {
     "lint": "node scripts/lint-gs.mjs",
     "test": "node --test tests/*.test.mjs",
+    "manifest:generate:index": "node scripts/generate-manifest.mjs --index --manifest-out release/MANIFEST.sha256 --self-out release/MANIFEST.sha256.sha256",
+    "manifest:check:index": "node scripts/generate-manifest.mjs --index --check",
+    "build": "npm run manifest:check:index",
+    "prepush": "npm run build",
+    "prepare": "node scripts/install-git-hooks.mjs",
     "verify:deploy": "node scripts/check-deploy-set.mjs",
     "verify:clasp-status": "node scripts/verify-clasp-status.mjs clasp-status.json",
     "verify:generated-manifest": "node scripts/generate-manifest.mjs --ref HEAD --check",
