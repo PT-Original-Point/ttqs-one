@@ -6,10 +6,10 @@ import {normalizeAppsScriptHtmlServiceWrapper} from './external-blackbox-classif
 
 const root=process.cwd();
 const r7Dir=path.join(root,'release','official129');
-const expectedRelease='ER-DEMO-20260901-DRAFT-002';
-const expectedProjectionSha='7567530e1f72ef5c8ec491aa38936bf7884ef258943df5f01e0fce08c0c3f2de';
-const expectedManifestSha='2673e9abd5942eb3b3c27a5a54e05b1f73339a902035787344b65d2027e052ee';
-const expectedOfflineZipSha='5026066430bd65c57f4c2adb59cef6e4bad70a6fcda298f89d864938dba0c676';
+const expectedRelease='ER-DEMO-20260901-DRAFT-003';
+const expectedProjectionSha='94590a9bbfdca699235815fb96e4c37c69156f10689e70b6c3caa74527165a53';
+const expectedManifestSha='e9e5e2145e915a5eac53905239ce52e25b9ea90911756bc707821f0ec568dd79';
+const expectedOfflineZipSha='8b79687329b03c08e971cde0ccd8f8efd312487543e2d285e05f4838b1cc3059';
 const canonical=String(process.env.EXTERNAL_WEBAPP_URL||'').replace(/\/+$/,'');
 if(!/^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(canonical))throw new Error('OFFICIAL129_CANONICAL_EXEC_URL_INVALID');
 const sha256=b=>crypto.createHash('sha256').update(b).digest('hex');

@@ -54,7 +54,8 @@ jobs:
           if test "$GITHUB_EVENT_NAME" = "push"; then
             BEFORE="${{ github.event.before }}"
             if [[ "$BEFORE" =~ ^[0-9a-f]{40}$ ]] && test "$BEFORE" != "0000000000000000000000000000000000000000"; then
-              if git diff --quiet "$BEFORE" "$GITHUB_SHA" -- external-viewer; then
+              if git diff --quiet "$BEFORE" "$GITHUB_SHA" -- external-viewer && \
+                 git diff --quiet "$BEFORE" "$GITHUB_SHA" -- release/official129 scripts/build-external-official129.mjs; then
                 FULL_DEPLOY=0
               fi
             fi
@@ -79,13 +80,14 @@ jobs:
           node scripts/external-deployment-receipt.mjs --input external-receipt-body.md --output external-receipt-next.md --state RUNNING
           gh issue edit "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file external-receipt-next.md
 
-      - name: Verify repository and external viewer safety contract
+      - name: Verify repository and build deterministic external viewer push set
         shell: bash
         run: |
           set -euo pipefail
           npm ci --ignore-scripts
           npm run verify
-          node -e "const fs=require('fs'); const manifest=JSON.parse(fs.readFileSync('external-viewer/appsscript.json','utf8')); const code=fs.readFileSync('external-viewer/Code.gs','utf8'); if(manifest.webapp?.access!=='ANYONE_ANONYMOUS') throw new Error('EXTERNAL_ACCESS_NOT_ANONYMOUS'); if(manifest.webapp?.executeAs!=='USER_DEPLOYING') throw new Error('EXTERNAL_EXECUTION_IDENTITY_INVALID'); if(Object.hasOwn(manifest,'oauthScopes')) throw new Error('EXTERNAL_RUNTIME_OAUTH_SCOPE_FORBIDDEN'); if(Object.hasOwn(manifest,'dependencies')) throw new Error('EXTERNAL_RUNTIME_ADVANCED_SERVICE_FORBIDDEN'); if(/Sheets\\.|SpreadsheetApp|DriveApp|UrlFetchApp/.test(code)) throw new Error('EXTERNAL_RUNTIME_GOOGLE_DATA_API_FORBIDDEN'); const files=fs.readdirSync('external-viewer').sort(); if(JSON.stringify(files)!==JSON.stringify(['Code.gs','appsscript.json'])) throw new Error('EXTERNAL_PUSH_SET_INVALID');"
+          node scripts/build-external-official129.mjs
+          node -e "const fs=require('fs'); const root='.external-viewer-build'; const manifest=JSON.parse(fs.readFileSync(root+'/appsscript.json','utf8')); const code=fs.readFileSync(root+'/Code.gs','utf8'); if(manifest.webapp?.access!=='ANYONE_ANONYMOUS') throw new Error('EXTERNAL_ACCESS_NOT_ANONYMOUS'); if(manifest.webapp?.executeAs!=='USER_DEPLOYING') throw new Error('EXTERNAL_EXECUTION_IDENTITY_INVALID'); if(Object.hasOwn(manifest,'oauthScopes')) throw new Error('EXTERNAL_RUNTIME_OAUTH_SCOPE_FORBIDDEN'); if(Object.hasOwn(manifest,'dependencies')) throw new Error('EXTERNAL_RUNTIME_ADVANCED_SERVICE_FORBIDDEN'); if(/Sheets\\.|SpreadsheetApp|DriveApp|UrlFetchApp/.test(code)) throw new Error('EXTERNAL_RUNTIME_GOOGLE_DATA_API_FORBIDDEN'); if(!code.includes('ER-DEMO-20260901-DRAFT-003')) throw new Error('EXTERNAL_R7_RELEASE_IDENTITY_MISSING'); if(!code.includes('94590a9bbfdca699235815fb96e4c37c69156f10689e70b6c3caa74527165a53')) throw new Error('EXTERNAL_R7_PROJECTION_IDENTITY_MISSING'); const files=fs.readdirSync(root).sort(); if(JSON.stringify(files)!==JSON.stringify(['Code.gs','appsscript.json'])) throw new Error('EXTERNAL_PUSH_SET_INVALID');"
 
       - name: Restore TEST OAuth credential material
         if: env.EXTERNAL_FULL_DEPLOY == '1'
@@ -137,7 +139,7 @@ jobs:
           node scripts/apps-script-rest-deploy.mjs push-content \
             --credentials "$EXTERNAL_OAUTH_FILE" \
             --script-id "$EXTERNAL_SCRIPT_ID_RESOLVED" \
-            --root-dir external-viewer
+            --root-dir .external-viewer-build
 
       - name: Create or update external TEST web app deployment via REST
         if: env.EXTERNAL_FULL_DEPLOY == '1'
@@ -246,10 +248,10 @@ jobs:
             echo "- Script ID: $EXTERNAL_SCRIPT_ID_RESOLVED"
             echo "- Deployment ID: $EXTERNAL_DEPLOYMENT_ID_RESOLVED"
             echo "- URL: $EXTERNAL_WEBAPP_URL"
-            echo '- Provider path when mutation is required: Apps Script REST API with minimal deployment OAuth contract'
+            echo '- Provider path when mutation is required: Apps Script REST API with deterministic DRAFT-003 build output and minimal deployment OAuth contract'
             echo '- Access: ANYONE_ANONYMOUS'
             echo '- Execute as: USER_DEPLOYING'
-            echo '- Data: TEST/SAMPLE deidentified static snapshot only'
+            echo '- Data: TEST/SAMPLE/CONTROL deidentified static projection only'
             echo '- Runtime Google data permissions: none'
             echo '- Anonymous product black-box: PASS'
             echo '- FrozenArtifact FA-01..FA-07 black-box: PASS; FA-08 remains HUMAN'

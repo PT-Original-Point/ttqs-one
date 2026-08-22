@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import {fileURLToPath} from 'node:url';
 
 export const REQUIRED_PRODUCT_MARKERS = [
-  // Product identity and anonymous TEST/SAMPLE boundary.
+  // Legacy R3/D8 product identity and anonymous TEST/SAMPLE boundary.
   'TTQS ONE · 測試／示範資料（TEST／SAMPLE）· EXTERNAL_READONLY',
 
   // D8 official 19-indicator semantics, including the two official sub-item clusters
@@ -35,6 +35,20 @@ export const REQUIRED_PRODUCT_MARKERS = [
   '本唯讀檢視器不會把 SAMPLE／CONTROL 宣稱為 REAL'
 ];
 
+export const R7_REQUIRED_PRODUCT_MARKERS = [
+  'TTQS ONE｜顧問唯讀 DEMO 查驗入口',
+  'TEST／SAMPLE／CONTROL',
+  '19/19',
+  'Evidence Matrix',
+  'FrozenArtifact',
+  '共 129 / 129',
+  '不是官方強制 129 份文件',
+  'ER-DEMO-20260901-DRAFT-003',
+  'SAMPLE 永不得轉 REAL',
+  'runtime live Drive',
+  '不得用於正式 TTQS 評分'
+];
+
 export function normalizeAppsScriptHtmlServiceWrapper(source) {
   return String(source ?? '')
     // HtmlService may serialize user HTML into a JS wrapper and escape
@@ -52,12 +66,17 @@ export function normalizeAppsScriptHtmlServiceWrapper(source) {
 
 export function classifyExternalBlackbox(source) {
   const normalized = normalizeAppsScriptHtmlServiceWrapper(source);
-  const missing = REQUIRED_PRODUCT_MARKERS.filter(marker => !normalized.includes(marker));
-  const friendlyError = normalized.includes('目前無法載入唯讀快照');
+  const legacyMissing = REQUIRED_PRODUCT_MARKERS.filter(marker => !normalized.includes(marker));
+  const r7Missing = R7_REQUIRED_PRODUCT_MARKERS.filter(marker => !normalized.includes(marker));
+  const friendlyError = normalized.includes('目前無法載入唯讀快照') || normalized.includes('data-friendly-error="true"');
+  const legacyPass = legacyMissing.length === 0;
+  const r7Pass = r7Missing.length === 0;
+  const missing = legacyMissing.length <= r7Missing.length ? legacyMissing : r7Missing;
   return {
-    pass: missing.length === 0 && !friendlyError,
+    pass: (legacyPass || r7Pass) && !friendlyError,
     missing,
-    friendlyError
+    friendlyError,
+    mode: r7Pass ? 'R7_DRAFT003' : legacyPass ? 'LEGACY_R3_D8' : null
   };
 }
 
@@ -83,7 +102,7 @@ function main() {
   const body = fs.readFileSync(htmlPath, 'utf8');
   const result = classifyExternalBlackbox(body);
   if (result.pass) {
-    process.stdout.write('BLACKBOX_MARKERS_PASS\n');
+    process.stdout.write(`BLACKBOX_MARKERS_PASS mode=${result.mode}\n`);
     return;
   }
   process.stdout.write(`BLACKBOX_MARKERS_FAIL missing=${result.missing.join('|') || 'none'} friendlyError=${result.friendlyError ? 1 : 0}\n`);
