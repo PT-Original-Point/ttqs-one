@@ -6,6 +6,7 @@ import {R7_REQUIRED_PRODUCT_MARKERS,classifyExternalBlackbox} from '../scripts/e
 const deploy=fs.readFileSync('.github/workflows/deploy-external-test.yml','utf8');
 const liveWorkflow=fs.readFileSync('.github/workflows/verify-external-r7-live.yml','utf8');
 const liveProbe=fs.readFileSync('scripts/external-official129-live-probe.mjs','utf8');
+const runtime=fs.readFileSync('release/official129/Official129Runtime.gs','utf8');
 
 const release='ER-DEMO-20260901-DRAFT-003';
 const projection='94590a9bbfdca699235815fb96e4c37c69156f10689e70b6c3caa74527165a53';
@@ -37,6 +38,16 @@ test('exhaustive live verification always publishes a durable Issue 39 receipt',
   assert.match(liveWorkflow,/source_sha/);
   assert.match(liveWorkflow,/evidence_artifact/);
   assert.match(liveWorkflow,/gh issue comment "\$EXTERNAL_RECEIPT_ISSUE"/);
+});
+
+test('R7 homepage marker contract is byte-for-text aligned across runtime, classifier and live probe',()=>{
+  const exact='並非官方強制 129 份文件';
+  const stale='不是官方強制 129 份文件';
+  assert.ok(runtime.includes(exact),'runtime canonical wording missing');
+  assert.ok(R7_REQUIRED_PRODUCT_MARKERS.includes(exact),'classifier marker drift');
+  assert.ok(liveProbe.includes(exact),'live probe marker drift');
+  assert.equal(R7_REQUIRED_PRODUCT_MARKERS.includes(stale),false,'stale classifier wording revived');
+  assert.equal(liveProbe.includes(stale),false,'stale live-probe wording revived');
 });
 
 test('generic anonymous product classifier accepts complete DRAFT-003 evaluator homepage and fails closed when a marker is missing',()=>{
