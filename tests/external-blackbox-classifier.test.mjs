@@ -52,6 +52,15 @@ test('Apps Script HtmlService escaped slash and equals are normalized before mar
   assert.equal(classifyExternalBlackbox(wrappedProduct).pass, true);
 });
 
+test('observed double-escaped HtmlService attribute quotes normalize to exact HTML attributes without weakening content', () => {
+  const observed = String.raw`data-matrix-indicator=\\"1\\" href=\\"https://script.google.com/macros/s/DEMO/exec?indicator=1\\"`;
+  const normalized = normalizeAppsScriptHtmlServiceWrapper(observed);
+  assert.equal(normalized, 'data-matrix-indicator="1" href="https://script.google.com/macros/s/DEMO/exec?indicator=1"');
+  assert.equal(normalized.includes('data-matrix-indicator="1"'), true);
+  assert.equal(normalized.includes('?indicator=1'), true);
+  assert.equal(normalized.includes(String.raw`\\"`), false);
+});
+
 test('hex, unicode and HTML entity escaped slash/equals variants are normalized', () => {
   assert.equal(classifyExternalBlackbox(rawProduct.replace('19 / 19', '19 \\x2f 19')).pass, true);
   assert.equal(classifyExternalBlackbox(rawProduct.replace('19 / 19', '19 \\u002F 19')).pass, true);
