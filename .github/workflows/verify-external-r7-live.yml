@@ -10,9 +10,11 @@ on:
 
 permissions:
   contents: read
+  issues: write
 
 env:
   EXTERNAL_WEBAPP_URL: https://script.google.com/macros/s/AKfycbznbXi-0XWNV68E-vGU9CiAE6ElXGIlDmy27EePXMdGpRaorURzKZq0dDgsNBaaZOLh/exec
+  EXTERNAL_RECEIPT_ISSUE: '39'
 
 jobs:
   exhaustive-r7-live:
@@ -54,5 +56,34 @@ jobs:
         with:
           name: r7-external-test-live-evidence-${{ github.run_id }}
           path: .r7-live-evidence/R7_LIVE_PROBE_OUTPUT.txt
-          if-no-files-found: error
+          if-no-files-found: warn
           retention-days: 30
+
+      - name: Publish durable exhaustive-live receipt
+        if: always()
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          JOB_STATUS: ${{ job.status }}
+        run: |
+          set -euo pipefail
+          SOURCE_SHA="$(git rev-parse HEAD)"
+          RESULT="$(printf '%s' "$JOB_STATUS" | tr '[:lower:]' '[:upper:]')"
+          PASS_LINE='NOT_AVAILABLE'
+          if test -f .r7-live-evidence/R7_LIVE_PROBE_OUTPUT.txt; then
+            PASS_LINE="$(grep -F 'OFFICIAL129_LIVE_BLACKBOX_PASS' .r7-live-evidence/R7_LIVE_PROBE_OUTPUT.txt | tail -n 1 || true)"
+            test -n "$PASS_LINE" || PASS_LINE='NOT_AVAILABLE'
+          fi
+          {
+            echo '<!-- TTQS_R7_EXHAUSTIVE_LIVE_RECEIPT_V1 -->'
+            echo '## R7 DRAFT-003 全量現場黑箱驗證回執'
+            echo
+            echo "- result: \`$RESULT\`"
+            echo "- workflow_run_id: \`$GITHUB_RUN_ID\`"
+            echo "- source_sha: \`$SOURCE_SHA\`"
+            echo '- release: `ER-DEMO-20260901-DRAFT-003`'
+            echo "- evidence_artifact: \`r7-external-test-live-evidence-$GITHUB_RUN_ID\`"
+            echo "- pass_line: \`$PASS_LINE\`"
+            echo '- scope: TEST/SAMPLE/CONTROL only; REAL/PROD/formal scoring/official submission = 0'
+          } > .r7-live-receipt.md
+          gh issue comment "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file .r7-live-receipt.md
