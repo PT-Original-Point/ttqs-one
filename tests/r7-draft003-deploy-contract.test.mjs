@@ -50,6 +50,14 @@ test('R7 homepage marker contract is byte-for-text aligned across runtime, class
   assert.equal(liveProbe.includes(stale),false,'stale live-probe wording revived');
 });
 
+test('live homepage navigation failure emits bounded serialization diagnostics while the strict T4b gate remains fail-closed',()=>{
+  for(const marker of ['homeNavigationDiagnostic','normalizedDataMatrixIndicatorTokenCount','normalizedIndicatorQueryTokenCount','safeNavigationSnippet','backslashQuotedDataAttr','rawEscapedEquals'])assert.ok(liveProbe.includes(marker),marker);
+  assert.match(liveProbe,/HOME_INDICATOR_LINK_MISSING/);
+  assert.match(liveProbe,/cold\.normalized\.includes\(`data-matrix-indicator=/);
+  assert.ok(liveProbe.includes("slice(0,500)"),'diagnostic snippet must stay bounded');
+  assert.equal(liveProbe.includes('HOME_INDICATOR_LINK_MISSING_BYPASSED'),false);
+});
+
 test('generic anonymous product classifier accepts complete DRAFT-003 evaluator homepage and fails closed when a marker is missing',()=>{
   const product=R7_REQUIRED_PRODUCT_MARKERS.join(' | ');
   const pass=classifyExternalBlackbox(product);
