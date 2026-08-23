@@ -99,33 +99,49 @@ test('V-06 homepage layer requires 查看文件與證據 but never requires seco
   assert.equal(R7_REQUIRED_PRODUCT_MARKERS.includes('data-indicator='),true);
 });
 
-test('V-07 actual Playwright Matrix DOM satisfies Chinese card, warning, open control and canonical artifact route',()=>{
+test('V-07 actual Playwright Matrix DOM satisfies every-card title, open control and canonical artifact route',()=>{
   const matrix=browserMatrix();
   const result=verifyEvidenceMatrixLayer(matrix,{indicator:1,canonical});
   assert.equal(result.pass,true,result.code||'unexpected failure');
-  assert.ok(result.documentCardCount>=1);
-  assert.ok(result.chineseDocumentCardCount>=1);
-  assert.ok(result.openDocumentCount>=1);
+  assert.equal(result.documentCardCount,6);
+  assert.equal(result.chineseDocumentCardCount,6);
+  assert.equal(result.everyCardHasChineseTitle,true);
+  assert.equal(result.everyCardHasOpenDocument,true);
+  assert.equal(result.everyCardHasCanonicalArtifactRoute,true);
+  assert.ok(result.openDocumentCount>=result.documentCardCount);
   assert.ok(result.firstCanonicalArtifactUrl.startsWith(`${canonical}?artifact=`));
 });
 
 test('V-07 Matrix verifier independently fail-closes missing second-layer requirements',()=>{
   const matrix=browserMatrix();
-  const cases=[
-    ['開啟文件','MATRIX_OPEN_DOCUMENT_MISSING'],
+  const withoutAnyOpenDocument=matrix.replaceAll('開啟文件','');
+  assert.notEqual(withoutAnyOpenDocument,matrix);
+  let result=verifyEvidenceMatrixLayer(withoutAnyOpenDocument,{indicator:1,canonical});
+  assert.equal(result.pass,false);
+  assert.equal(result.code,'MATRIX_OPEN_DOCUMENT_MISSING');
+
+  for(const [needle,code] of [
     ['TEST／SAMPLE／CONTROL','MATRIX_SIMULATION_WARNING_MISSING'],
     ['指標 1｜查看文件與證據','MATRIX_CHINESE_HEADING_MISSING']
-  ];
-  for(const [needle,code] of cases){
-    const result=verifyEvidenceMatrixLayer(removeOnce(matrix,needle),{indicator:1,canonical});
+  ]){
+    result=verifyEvidenceMatrixLayer(removeOnce(matrix,needle),{indicator:1,canonical});
     assert.equal(result.pass,false,needle);
     assert.equal(result.code,code,needle);
   }
+
+  const withoutFirstTitle=matrix.replace('<h3>中長程業務發展規劃與策略地圖</h3>','');
+  assert.notEqual(withoutFirstTitle,matrix);
+  result=verifyEvidenceMatrixLayer(withoutFirstTitle,{indicator:1,canonical});
+  assert.equal(result.pass,false);
+  assert.equal(result.code,'MATRIX_DOCUMENT_TITLE_MISSING');
+  assert.equal(result.cardIndex,1);
+
   const brokenHref=matrix.replace(`${canonical}?artifact=DOC-129-01`,'https://example.invalid/not-canonical');
   assert.notEqual(brokenHref,matrix);
-  const result=verifyEvidenceMatrixLayer(brokenHref,{indicator:1,canonical});
+  result=verifyEvidenceMatrixLayer(brokenHref,{indicator:1,canonical});
   assert.equal(result.pass,false);
   assert.equal(result.code,'MATRIX_CANONICAL_ARTIFACT_ROUTE_MISSING');
+  assert.equal(result.cardIndex,1);
 });
 
 test('V-04 R2 acceptance marker contract remains exactly 19 required markers',()=>{
