@@ -1,7 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {R7_REQUIRED_PRODUCT_MARKERS,classifyExternalBlackbox} from '../scripts/external-blackbox-classifier.mjs';
+import {
+  REQUIRED_PRODUCT_MARKERS,
+  R7_REQUIRED_PRODUCT_MARKERS,
+  classifyExternalBlackbox
+} from '../scripts/external-blackbox-classifier.mjs';
 
 const deploy=fs.readFileSync('.github/workflows/deploy-external-test.yml','utf8');
 const liveWorkflow=fs.readFileSync('.github/workflows/verify-external-r7-live.yml','utf8');
@@ -28,23 +32,26 @@ test('exhaustive live verification is pinned to DRAFT-003 registered identity',(
   assert.equal(liveWorkflow.includes('ER-DEMO-20260901-DRAFT-002'),false);
 });
 
-test('exhaustive live verification always publishes a durable Issue 39 receipt',()=>{
+test('exhaustive live verification always publishes durable R2 per-marker evidence in Issue 39',()=>{
   assert.match(liveWorkflow,/issues: write/);
   assert.match(liveWorkflow,/EXTERNAL_RECEIPT_ISSUE: '39'/);
-  assert.match(liveWorkflow,/Publish durable exhaustive-live receipt/);
+  assert.match(liveWorkflow,/Publish durable R2 per-marker evidence and exhaustive-live receipt/);
   assert.match(liveWorkflow,/if: always\(\)/);
-  assert.match(liveWorkflow,/TTQS_R7_EXHAUSTIVE_LIVE_RECEIPT_V1/);
+  assert.match(liveWorkflow,/TTQS_R2_G02_MARKER_EVIDENCE_V1/);
+  assert.match(liveWorkflow,/R2_G02_19_REQUIRED/);
+  assert.match(liveWorkflow,/marker_evidence_sha256/);
+  assert.match(liveWorkflow,/cat \.r7-live-evidence\/BLACKBOX_MARKER_EVIDENCE\.json/);
   assert.match(liveWorkflow,/workflow_run_id/);
   assert.match(liveWorkflow,/source_sha/);
-  assert.match(liveWorkflow,/evidence_artifact/);
+  assert.match(liveWorkflow,/artifact_secondary_copy/);
   assert.match(liveWorkflow,/gh issue comment "\$EXTERNAL_RECEIPT_ISSUE"/);
 });
 
-test('R7 homepage marker contract is byte-for-text aligned across runtime, classifier and live probe',()=>{
+test('R7 homepage diagnostic wording is byte-for-text aligned across runtime, classifier and live probe',()=>{
   const exact='並非官方強制 129 份文件';
   const stale='不是官方強制 129 份文件';
   assert.ok(runtime.includes(exact),'runtime canonical wording missing');
-  assert.ok(R7_REQUIRED_PRODUCT_MARKERS.includes(exact),'classifier marker drift');
+  assert.ok(R7_REQUIRED_PRODUCT_MARKERS.includes(exact),'classifier diagnostic marker drift');
   assert.ok(liveProbe.includes(exact),'live probe marker drift');
   assert.equal(R7_REQUIRED_PRODUCT_MARKERS.includes(stale),false,'stale classifier wording revived');
   assert.equal(liveProbe.includes(stale),false,'stale live-probe wording revived');
@@ -58,13 +65,23 @@ test('live homepage navigation failure emits bounded serialization diagnostics w
   assert.equal(liveProbe.includes('HOME_INDICATOR_LINK_MISSING_BYPASSED'),false);
 });
 
-test('generic anonymous product classifier accepts complete DRAFT-003 evaluator homepage and fails closed when a marker is missing',()=>{
-  const product=R7_REQUIRED_PRODUCT_MARKERS.join(' | ');
-  const pass=classifyExternalBlackbox(product);
+test('DRAFT-003 evaluator homepage must satisfy R2 G02-M01..M19; R7 11 diagnostics alone can never pass',()=>{
+  const completeProduct=[...REQUIRED_PRODUCT_MARKERS,...R7_REQUIRED_PRODUCT_MARKERS].join(' | ');
+  const pass=classifyExternalBlackbox(completeProduct);
   assert.equal(pass.pass,true);
   assert.equal(pass.mode,'R7_DRAFT003');
-  for(const marker of R7_REQUIRED_PRODUCT_MARKERS){
-    const result=classifyExternalBlackbox(product.replace(marker,''));
+  assert.equal(pass.contractId,'R2_G02_19_REQUIRED');
+  assert.equal(pass.derivation.markerPassCount,19);
+  assert.equal(pass.derivation.markerTotal,19);
+
+  const diagnosticsOnly=classifyExternalBlackbox(R7_REQUIRED_PRODUCT_MARKERS.join(' | '));
+  assert.equal(diagnosticsOnly.mode,'R7_DRAFT003');
+  assert.equal(diagnosticsOnly.derivation.r7DiagnosticsPass,true);
+  assert.equal(diagnosticsOnly.derivation.requiredContractPass,false);
+  assert.equal(diagnosticsOnly.pass,false);
+
+  for(const marker of REQUIRED_PRODUCT_MARKERS){
+    const result=classifyExternalBlackbox(completeProduct.replace(marker,''));
     assert.equal(result.pass,false,marker);
     assert.ok(result.missing.includes(marker),marker);
   }
