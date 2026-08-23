@@ -170,20 +170,25 @@ try {
           let firstChineseTitle = null;
           let firstChineseCardOuterHTML = null;
           let firstOpenDocument = null;
+          const perCard = [];
           for (let index = 0; index < row.documentCards; index += 1) {
             const cardLoc = cards.nth(index);
             const cardText = await cardLoc.innerText({ timeout: 3000 }).catch(() => '');
-            if (chineseText.test(cardText)) {
+            const title = await cardLoc.locator('h1,h2,h3,h4,h5,h6').first().innerText().catch(() => null);
+            const titleChinese = Boolean(title && chineseText.test(title));
+            if (titleChinese) {
               row.chineseDocumentCards += 1;
               if (!row.documentCardSample) row.documentCardSample = compact(cardText, 180);
               if (!firstChineseCardOuterHTML) {
                 firstChineseCardOuterHTML = await cardLoc.evaluate(el => el.outerHTML).catch(() => '');
-                firstChineseTitle = await cardLoc.locator('h1,h2,h3,h4,h5,h6').first().innerText().catch(() => null);
+                firstChineseTitle = title;
               }
             }
             const opens = cardLoc.getByText('開啟文件', { exact: true });
             const openCount = await opens.count().catch(() => 0);
             row.openDocumentButtons += openCount;
+            let canonicalOpenCount = 0;
+            let cardFirstCanonicalOpen = null;
             for (let openIndex = 0; openIndex < openCount; openIndex += 1) {
               const openLoc = opens.nth(openIndex);
               const hrefAttribute = await openLoc.getAttribute('href');
@@ -191,10 +196,25 @@ try {
               const target = await openLoc.getAttribute('target');
               if (canonicalArtifactUrl(hrefAttribute) && resolved === hrefAttribute && target === '_top') {
                 row.canonicalOpenDocumentButtons += 1;
-                if (!firstOpenDocument) firstOpenDocument = { hrefAttribute, resolvedHref: resolved, targetAttribute: target, outerHTMLSnippet: compact(await openLoc.evaluate(el => el.outerHTML).catch(() => '')) };
+                canonicalOpenCount += 1;
+                const openEvidence = { hrefAttribute, resolvedHref: resolved, targetAttribute: target, outerHTMLSnippet: compact(await openLoc.evaluate(el => el.outerHTML).catch(() => '')) };
+                if (!firstOpenDocument) firstOpenDocument = openEvidence;
+                if (!cardFirstCanonicalOpen) cardFirstCanonicalOpen = openEvidence;
               }
             }
+            perCard.push({
+              cardIndex: index + 1,
+              title,
+              titlePresent: Boolean(title),
+              titleChinese,
+              openDocumentButtonCount: openCount,
+              canonicalOpenDocumentButtonCount: canonicalOpenCount,
+              firstCanonicalOpenDocument: cardFirstCanonicalOpen
+            });
           }
+          const everyCardHasTitle = row.documentCards >= 1 && perCard.every(cardRow => cardRow.titlePresent && cardRow.titleChinese);
+          const everyCardHasOpenDocument = row.documentCards >= 1 && perCard.every(cardRow => cardRow.openDocumentButtonCount >= 1);
+          const everyCardHasCanonicalArtifactRoute = row.documentCards >= 1 && perCard.every(cardRow => cardRow.canonicalOpenDocumentButtonCount >= 1);
           row.domEvidence.matrix = {
             contentFrameUrl: matrixFrame.url(),
             headingExpected: heading,
@@ -202,20 +222,24 @@ try {
             simulationWarningPresent: matrixText.includes('TEST／SAMPLE／CONTROL'),
             documentCardCount: row.documentCards,
             chineseDocumentCardCount: row.chineseDocumentCards,
+            everyCardHasTitle,
+            everyCardHasOpenDocument,
+            everyCardHasCanonicalArtifactRoute,
             firstChineseDocumentTitle: firstChineseTitle,
             firstChineseDocumentCardSha256: firstChineseCardOuterHTML ? sha256(firstChineseCardOuterHTML) : null,
             firstChineseDocumentCardSnippet: firstChineseCardOuterHTML ? compact(firstChineseCardOuterHTML) : null,
             openDocumentButtonCount: row.openDocumentButtons,
             canonicalOpenDocumentButtonCount: row.canonicalOpenDocumentButtons,
-            firstCanonicalOpenDocument: firstOpenDocument
+            firstCanonicalOpenDocument: firstOpenDocument,
+            perCard
           };
-          const documentLayerOk = row.documentCards >= 1 && row.chineseDocumentCards >= 1 && row.openDocumentButtons >= 1 && row.canonicalOpenDocumentButtons >= 1 && row.domEvidence.matrix.simulationWarningPresent;
+          const documentLayerOk = row.documentCards >= 1 && row.chineseDocumentCards >= 1 && everyCardHasTitle && everyCardHasOpenDocument && everyCardHasCanonicalArtifactRoute && row.domEvidence.matrix.simulationWarningPresent;
           finishCheck(
             row,
             'e_chineseDocumentCardAndOpenButton',
             documentLayerOk,
-            {cards: row.documentCards, chineseCards: row.chineseDocumentCards, openButtons: row.openDocumentButtons, canonicalOpenButtons: row.canonicalOpenDocumentButtons, simulationWarningPresent: row.domEvidence.matrix.simulationWarningPresent},
-            {cardsAtLeast: 1, chineseCardsAtLeast: 1, openButtonsAtLeast: 1, canonicalOpenButtonsAtLeast: 1, simulationWarningPresent: true}
+            {cards: row.documentCards, chineseCards: row.chineseDocumentCards, everyCardHasTitle, everyCardHasOpenDocument, everyCardHasCanonicalArtifactRoute, simulationWarningPresent: row.domEvidence.matrix.simulationWarningPresent},
+            {cardsAtLeast: 1, chineseCardsAtLeast: 1, everyCardHasTitle: true, everyCardHasOpenDocument: true, everyCardHasCanonicalArtifactRoute: true, simulationWarningPresent: true}
           );
 
           const allText = await allFrameText(page);
