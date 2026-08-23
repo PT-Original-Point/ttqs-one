@@ -1,0 +1,122 @@
+name: External TEST Provider Version Receipt
+
+on:
+  workflow_run:
+    workflows:
+      - Deploy External TEST Evaluator Portal
+    types:
+      - completed
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+env:
+  EXTERNAL_RECEIPT_ISSUE: '39'
+
+jobs:
+  provider-version-receipt:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'deploy/test')
+    runs-on: ubuntu-24.04
+    environment: TEST
+    timeout-minutes: 10
+    steps:
+      - name: Checkout verified deploy/test source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && 'deploy/test' || github.event.workflow_run.head_sha }}
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install dependencies without lifecycle scripts
+        run: npm ci --ignore-scripts
+
+      - name: Read durable provider identity from Issue 39
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh issue view "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --json body --jq .body > external-receipt-body.md
+          node --input-type=module -e "import fs from 'node:fs'; import {parseReceiptBody} from './scripts/external-deployment-receipt.mjs'; const r=parseReceiptBody(fs.readFileSync('external-receipt-body.md','utf8')); const s=String(r.scriptId||''); const d=String(r.deploymentId||''); const src=String(r.sourceSha||''); if(!/^[A-Za-z0-9_-]{20,}$/.test(s)) throw new Error('PROVIDER_RECEIPT_SCRIPT_ID_INVALID'); if(!/^AKfy[A-Za-z0-9_-]+$/.test(d)) throw new Error('PROVIDER_RECEIPT_DEPLOYMENT_ID_INVALID'); if(!/^[0-9a-f]{40}$/.test(src)) throw new Error('PROVIDER_RECEIPT_SOURCE_SHA_INVALID'); fs.appendFileSync(process.env.GITHUB_ENV,['EXTERNAL_SCRIPT_ID_RESOLVED='+s,'EXTERNAL_DEPLOYMENT_ID_RESOLVED='+d,'EXTERNAL_PROVIDER_SOURCE_SHA='+src].join('\\n')+'\\n');"
+
+      - name: Restore TEST OAuth credential material for read-only inspection
+        shell: bash
+        env:
+          CLASPRC_JSON_B64: ${{ secrets.CLASPRC_JSON_B64 }}
+        run: |
+          set -euo pipefail
+          test -n "$CLASPRC_JSON_B64"
+          OAUTH_FILE="$RUNNER_TEMP/ttqs-external-provider-inspect-oauth.json"
+          printf '%s' "$CLASPRC_JSON_B64" | base64 -d > "$OAUTH_FILE"
+          chmod 600 "$OAUTH_FILE"
+          echo "EXTERNAL_OAUTH_FILE=$OAUTH_FILE" >> "$GITHUB_ENV"
+
+      - name: Verify minimal OAuth deployment contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/apps-script-rest-deploy.mjs auth-check --credentials "$EXTERNAL_OAUTH_FILE"
+
+      - name: Inspect existing Apps Script deployment version via GET only
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/inspect-external-deployment.mjs \
+            --credentials "$EXTERNAL_OAUTH_FILE" \
+            --script-id "$EXTERNAL_SCRIPT_ID_RESOLVED" \
+            --deployment-id "$EXTERNAL_DEPLOYMENT_ID_RESOLVED" \
+            --env-file "$GITHUB_ENV" \
+            | tee provider-inspection-output.txt
+          head -n 1 provider-inspection-output.txt > provider-inspection-readback.json
+          node --input-type=module -e "import fs from 'node:fs'; const r=JSON.parse(fs.readFileSync('provider-inspection-readback.json','utf8')); const expected='TTQS_ONE_TEST_EXTERNAL '+process.env.EXTERNAL_PROVIDER_SOURCE_SHA; if(r.description!==expected) throw new Error('PROVIDER_VERSION_SOURCE_DESCRIPTION_MISMATCH:'+r.description); if(!Number.isInteger(r.versionNumber)||r.versionNumber<=0) throw new Error('PROVIDER_VERSION_INVALID'); const e={schema:'TTQS_EXTERNAL_PROVIDER_VERSION_EVIDENCE_V1',scriptId:r.scriptId,deploymentId:r.deploymentId,versionNumber:r.versionNumber,providerSourceSha:process.env.EXTERNAL_PROVIDER_SOURCE_SHA,providerDescription:r.description,verificationSha:process.env.GITHUB_SHA,workflowRunId:process.env.GITHUB_RUN_ID,mode:'READ_ONLY_PROVIDER_INSPECTION',scope:'TEST/SAMPLE/CONTROL only; REAL/PROD/formal scoring/official submission = 0'}; fs.writeFileSync('provider-version-evidence.json',JSON.stringify(e)+'\\n');"
+
+      - name: Publish durable provider version receipt to Issue 39
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          EVIDENCE_SHA="$(sha256sum provider-version-evidence.json | awk '{print $1}')"
+          VERSION="$(node --input-type=module -e "import fs from 'node:fs'; const r=JSON.parse(fs.readFileSync('provider-version-evidence.json','utf8')); process.stdout.write(String(r.versionNumber));")"
+          {
+            echo '<!-- TTQS_EXTERNAL_PROVIDER_VERSION_RECEIPT_V1 -->'
+            echo '## External TEST｜Apps Script provider 版本永久收據'
+            echo
+            echo '- inspection_mode: `READ_ONLY_PROVIDER_INSPECTION`'
+            echo "- provider_version: \`$VERSION\`"
+            echo "- evidence_sha256: \`sha256:$EVIDENCE_SHA\`"
+            echo '- durable_byte_location: `this Issue #39 comment; fenced JSON below is the exact provider-version evidence payload`'
+            echo '- mutation: `NONE`'
+            echo '- scope: `TEST/SAMPLE/CONTROL only; REAL/PROD/formal scoring/official submission = 0`'
+            echo
+            echo '```json'
+            cat provider-version-evidence.json
+            echo '```'
+          } > provider-version-receipt.md
+          gh issue comment "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file provider-version-receipt.md
+
+      - name: Record read-only provider provenance
+        shell: bash
+        run: |
+          set -euo pipefail
+          VERSION="$(node --input-type=module -e "import fs from 'node:fs'; const r=JSON.parse(fs.readFileSync('provider-version-evidence.json','utf8')); process.stdout.write(String(r.versionNumber));")"
+          {
+            echo '## External TEST provider version inspection'
+            echo
+            echo "- Provider source SHA: $EXTERNAL_PROVIDER_SOURCE_SHA"
+            echo "- Verification SHA: $GITHUB_SHA"
+            echo "- Deployment ID: $EXTERNAL_DEPLOYMENT_ID_RESOLVED"
+            echo "- Provider version: $VERSION"
+            echo '- Mode: READ_ONLY_PROVIDER_INSPECTION'
+            echo '- Mutation: NONE'
+            echo '- Receipt: GitHub Issue #39'
+          } >> "$GITHUB_STEP_SUMMARY"
