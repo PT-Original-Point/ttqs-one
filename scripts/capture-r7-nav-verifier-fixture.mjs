@@ -103,11 +103,15 @@ try {
     if (await candidate.locator('[data-matrix-indicator="1"]').count().catch(() => 0)) { matrixFrame = candidate; break; }
   }
   const matrix = { found: Boolean(matrixFrame) };
+  let matrixBodyOuterHTML = null;
   if (matrixFrame) {
+    matrixBodyOuterHTML = await frameBodyOuterHtml(matrixFrame);
     const matrixBodyText = await matrixFrame.locator('body').innerText({ timeout: 5000 });
     const cards = matrixFrame.locator('[data-document-card="true"]');
     const firstCard = cards.first();
     const firstOpen = firstCard.getByText('開啟文件', { exact: true }).first();
+    matrix.bodyOuterHTMLFile = 'browser.matrix.body.outerHTML.html';
+    matrix.bodyOuterHTMLSha256 = sha256(Buffer.from(matrixBodyOuterHTML));
     matrix.headingPresent = matrixBodyText.includes('指標 1｜查看文件與證據');
     matrix.warningPresent = matrixBodyText.includes('TEST／SAMPLE／CONTROL');
     matrix.documentCardCount = await cards.count();
@@ -119,6 +123,7 @@ try {
 
   fs.writeFileSync(`${outDir}/browser.top.body.outerHTML.html`, topBody);
   fs.writeFileSync(`${outDir}/browser.content.body.outerHTML.html`, contentBody);
+  if (matrixBodyOuterHTML !== null) fs.writeFileSync(`${outDir}/browser.matrix.body.outerHTML.html`, matrixBodyOuterHTML);
   fs.writeFileSync(`${outDir}/indicator1.link.outerHTML.html`, `${linkOuterHTML}\n`);
   fs.writeFileSync(`${outDir}/indicator1.card.outerHTML.html`, `${cardOuterHTML}\n`);
 
