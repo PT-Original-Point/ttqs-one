@@ -55,6 +55,9 @@ export function sanitizeDeploymentReadback(readback, expected = {}) {
   const webApp = webAppEntry?.webApp && typeof webAppEntry.webApp === 'object'
     ? webAppEntry.webApp
     : null;
+  const entryPointConfig = webApp?.entryPointConfig && typeof webApp.entryPointConfig === 'object'
+    ? webApp.entryPointConfig
+    : null;
   return {
     schema: 'TTQS_PROVIDER_DEPLOYMENT_READBACK_SHAPE_V2',
     topLevelKeys: readback && typeof readback === 'object' ? Object.keys(readback).sort() : [],
@@ -74,10 +77,12 @@ export function sanitizeDeploymentReadback(readback, expected = {}) {
     webAppEntryPointPresent: Boolean(webAppEntry),
     webAppEntryPointType: webAppEntry && Object.hasOwn(webAppEntry, 'entryPointType') ? String(webAppEntry.entryPointType ?? '') : '',
     webAppPresent: Boolean(webApp),
-    accessPresent: Boolean(webApp && Object.hasOwn(webApp, 'access')),
-    access: webApp && Object.hasOwn(webApp, 'access') ? String(webApp.access ?? '') : '',
-    executeAsPresent: Boolean(webApp && Object.hasOwn(webApp, 'executeAs')),
-    executeAs: webApp && Object.hasOwn(webApp, 'executeAs') ? String(webApp.executeAs ?? '') : ''
+    webAppUrl: webApp && Object.hasOwn(webApp, 'url') ? String(webApp.url ?? '') : '',
+    entryPointConfigPresent: Boolean(entryPointConfig),
+    accessPresent: Boolean(entryPointConfig && Object.hasOwn(entryPointConfig, 'access')),
+    access: entryPointConfig && Object.hasOwn(entryPointConfig, 'access') ? String(entryPointConfig.access ?? '') : '',
+    executeAsPresent: Boolean(entryPointConfig && Object.hasOwn(entryPointConfig, 'executeAs')),
+    executeAs: entryPointConfig && Object.hasOwn(entryPointConfig, 'executeAs') ? String(entryPointConfig.executeAs ?? '') : ''
   };
 }
 
@@ -111,6 +116,7 @@ export async function inspectDeploymentVersion({accessToken, scriptId, deploymen
     description: String(readback.deploymentConfig?.description || ''),
     access: diagnostic.access,
     executeAs: diagnostic.executeAs,
+    webAppUrl: diagnostic.webAppUrl,
     webAppEntryPointType: diagnostic.webAppEntryPointType,
     webAppEntryPointPresent: diagnostic.webAppEntryPointPresent
   };
