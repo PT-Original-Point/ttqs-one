@@ -1,0 +1,101 @@
+name: CONTROL Provider Version Diagnostic
+
+on:
+  push:
+    branches:
+      - control/provider-version-diagnostic-20260823
+
+permissions:
+  contents: read
+  issues: write
+
+env:
+  EXTERNAL_RECEIPT_ISSUE: '39'
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-24.04
+    environment: TEST
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install dependencies without lifecycle scripts
+        run: npm ci --ignore-scripts
+
+      - name: Read durable TEST deployment identity
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh issue view "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --json body --jq .body > receipt.md
+          node --input-type=module -e "import fs from 'node:fs'; import {parseReceiptBody} from './scripts/external-deployment-receipt.mjs'; const r=parseReceiptBody(fs.readFileSync('receipt.md','utf8')); const s=String(r.scriptId||''); const d=String(r.deploymentId||''); if(!/^[A-Za-z0-9_-]{20,}$/.test(s)) throw new Error('DIAG_SCRIPT_ID_INVALID'); if(!/^AKfy[A-Za-z0-9_-]+$/.test(d)) throw new Error('DIAG_DEPLOYMENT_ID_INVALID'); fs.appendFileSync(process.env.GITHUB_ENV,'DIAG_SCRIPT_ID='+s+'\\nDIAG_DEPLOYMENT_ID='+d+'\\n');"
+
+      - name: Restore TEST OAuth for read-only GET
+        shell: bash
+        env:
+          CLASPRC_JSON_B64: ${{ secrets.CLASPRC_JSON_B64 }}
+        run: |
+          set -euo pipefail
+          test -n "$CLASPRC_JSON_B64"
+          OAUTH_FILE="$RUNNER_TEMP/provider-diagnostic-oauth.json"
+          printf '%s' "$CLASPRC_JSON_B64" | base64 -d > "$OAUTH_FILE"
+          chmod 600 "$OAUTH_FILE"
+          echo "DIAG_OAUTH_FILE=$OAUTH_FILE" >> "$GITHUB_ENV"
+
+      - name: Verify minimal OAuth contract
+        run: node scripts/apps-script-rest-deploy.mjs auth-check --credentials "$DIAG_OAUTH_FILE"
+
+      - name: Perform one read-only deployment GET
+        id: provider_get
+        continue-on-error: true
+        shell: bash
+        run: |
+          set +e
+          node scripts/diagnose-external-deployment.mjs \
+            --credentials "$DIAG_OAUTH_FILE" \
+            --script-id "$DIAG_SCRIPT_ID" \
+            --deployment-id "$DIAG_DEPLOYMENT_ID" \
+            > provider-diagnostic.json 2> provider-diagnostic-error.txt
+          STATUS=$?
+          set -e
+          echo "status=$STATUS" >> "$GITHUB_OUTPUT"
+          if test "$STATUS" -ne 0; then
+            ERROR_CODE="$(head -n 1 provider-diagnostic-error.txt | tr -cd 'A-Za-z0-9_:. -' | cut -c1-180)"
+            node --input-type=module -e "import fs from 'node:fs'; const e={schema:'TTQS_PROVIDER_DEPLOYMENT_DIAGNOSTIC_V1',diagnosticStatus:'GET_FAILED',errorCode:process.env.ERROR_CODE||'UNKNOWN',mutation:'NONE'}; fs.writeFileSync('provider-diagnostic.json',JSON.stringify(e)+'\\n');" 
+          fi
+        env:
+          ERROR_CODE: ''
+
+      - name: Publish exact sanitized diagnostic to Issue 39
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          DIAG_SHA="$(sha256sum provider-diagnostic.json | awk '{print $1}')"
+          {
+            echo '<!-- TTQS_EXTERNAL_PROVIDER_VERSION_DIAGNOSTIC_V1 -->'
+            echo '## External TEST｜provider deployment 唯讀診斷'
+            echo
+            echo "- workflow_run_id: \`$GITHUB_RUN_ID\`"
+            echo "- verification_sha: \`$GITHUB_SHA\`"
+            echo "- diagnostic_sha256: \`sha256:$DIAG_SHA\`"
+            echo '- mutation: `NONE`'
+            echo '- note: `sanitized Apps Script deployment GET shape only; no OAuth/token/secret bytes`'
+            echo
+            echo '```json'
+            cat provider-diagnostic.json
+            echo '```'
+          } > diagnostic-comment.md
+          gh issue comment "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file diagnostic-comment.md
+
+      - name: Fail closed if GET itself failed
+        if: steps.provider_get.outputs.status != '0'
+        run: exit 1
