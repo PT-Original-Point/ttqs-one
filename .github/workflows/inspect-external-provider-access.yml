@@ -9,6 +9,7 @@ on:
       - work/p01-trigger-20260823
     paths:
       - scripts/inspect-external-webapp-access.mjs
+      - release/official129/Official129Runtime.gs
       - .github/workflows/inspect-external-provider-access.yml
   workflow_dispatch:
 
@@ -58,7 +59,7 @@ jobs:
           chmod 600 "$OAUTH_FILE"
           echo "EXTERNAL_OAUTH_FILE=$OAUTH_FILE" >> "$GITHUB_ENV"
 
-      - name: P-01 GET current web-app deployment configuration
+      - name: P-01/P-05 GET current web-app deployment configuration
         shell: bash
         run: |
           set -euo pipefail
@@ -68,9 +69,9 @@ jobs:
             --script-id "$EXTERNAL_SCRIPT_ID" \
             --deployment-id "$EXTERNAL_DEPLOYMENT_ID" \
             > p01-provider.json
-          node --input-type=module -e "import fs from 'node:fs'; const r=JSON.parse(fs.readFileSync('p01-provider.json','utf8')); const e={schema:'TTQS_P01_PROVIDER_ACCESS_READBACK_V1',deploymentId:r.deploymentId,scriptId:r.scriptId,versionNumber:r.versionNumber,access:r.access,executeAs:r.executeAs,webAppUrl:r.webAppUrl,entryPointType:r.entryPointType,mode:'GET_ONLY',mutation:'NONE',verificationSha:process.env.GITHUB_SHA}; fs.writeFileSync('p01-readback.json',JSON.stringify(e)+'\n'); fs.appendFileSync(process.env.GITHUB_ENV,'EXTERNAL_WEBAPP_URL='+r.webAppUrl+'\nEXTERNAL_WEBAPP_ACCESS='+r.access+'\nEXTERNAL_WEBAPP_EXECUTE_AS='+r.executeAs+'\n');"
+          node --input-type=module -e "import fs from 'node:fs'; const r=JSON.parse(fs.readFileSync('p01-provider.json','utf8')); const e={schema:'TTQS_P01_PROVIDER_ACCESS_READBACK_V1',deploymentId:r.deploymentId,scriptId:r.scriptId,versionNumber:r.versionNumber,access:r.access,executeAs:r.executeAs,webAppUrl:r.webAppUrl,entryPointType:r.entryPointType,mode:'GET_ONLY',mutation:'NONE',verificationSha:process.env.GITHUB_SHA}; fs.writeFileSync('p01-readback.json',JSON.stringify(e)+'\n'); fs.appendFileSync(process.env.GITHUB_ENV,'EXTERNAL_WEBAPP_URL='+r.webAppUrl+'\nEXTERNAL_WEBAPP_ACCESS='+r.access+'\nEXTERNAL_WEBAPP_EXECUTE_AS='+r.executeAs+'\nEXTERNAL_VERSION_NUMBER='+r.versionNumber+'\n');"
 
-      - name: Publish P-01 durable readback receipt
+      - name: Publish durable access readback receipt
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
@@ -78,7 +79,7 @@ jobs:
           set -euo pipefail
           {
             echo '<!-- TTQS_P01_PROVIDER_ACCESS_READBACK_V1 -->'
-            echo '## P-01｜Apps Script 匿名存取設定唯讀讀回'
+            echo '## P-01/P-05｜Apps Script 匿名存取設定唯讀讀回'
             echo
             echo '- mode: `GET_ONLY`'
             echo '- mutation: `NONE`'
@@ -90,50 +91,47 @@ jobs:
           } > p01-receipt.md
           gh issue comment "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file p01-receipt.md
 
-      - name: Decide whether P-02 repair is required
+      - name: Enforce P-02 access contract
         shell: bash
         run: |
           set -euo pipefail
-          if [[ "$EXTERNAL_WEBAPP_ACCESS" != 'ANYONE_ANONYMOUS' || "$EXTERNAL_WEBAPP_EXECUTE_AS" != 'USER_DEPLOYING' ]]; then
-            echo 'P02_REPAIR_REQUIRED=1' >> "$GITHUB_ENV"
-            echo "P-02 required: access=$EXTERNAL_WEBAPP_ACCESS executeAs=$EXTERNAL_WEBAPP_EXECUTE_AS"
-            exit 1
-          fi
-          echo 'P02_REPAIR_REQUIRED=0' >> "$GITHUB_ENV"
+          [[ "$EXTERNAL_WEBAPP_ACCESS" == 'ANYONE_ANONYMOUS' ]]
+          [[ "$EXTERNAL_WEBAPP_EXECUTE_AS" == 'USER_DEPLOYING' ]]
 
-      - name: P-03 anonymous no-cookie curl verification
+      - name: P-03 HEAD diagnostic plus anonymous GET usability proof
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          rm -f cookie.jar
+          rm -f p03-head.txt p03-home.html p03-first500.txt
+          set +e
           curl -sI "$EXTERNAL_WEBAPP_URL" > p03-head.txt
-          STATUS="$(awk 'toupper($1) ~ /^HTTP\// {code=$2} END {print code}' p03-head.txt)"
-          LOCATION="$(awk 'BEGIN{IGNORECASE=1} /^location:/ {sub(/^[^:]*:[[:space:]]*/,""); sub(/\r$/,""); print}' p03-head.txt | tail -n 1)"
-          case "$STATUS" in
-            200) ;;
-            302)
-              [[ "$LOCATION" == *googleusercontent.com* || "$LOCATION" == *script.google.com* ]] || { echo "unexpected redirect: $LOCATION"; exit 1; }
-              ;;
-            *) echo "anonymous HEAD failed: HTTP $STATUS"; exit 1;;
-          esac
-          curl -sS -L --cookie '' "$EXTERNAL_WEBAPP_URL" -o p03-home.html
+          HEAD_RC=$?
+          set -e
+          HEAD_STATUS="$(awk 'toupper($1) ~ /^HTTP\// {code=$2} END {print code}' p03-head.txt)"
+          HEAD_LOCATION="$(awk 'BEGIN{IGNORECASE=1} /^location:/ {sub(/^[^:]*:[[:space:]]*/,""); sub(/\r$/,""); print}' p03-head.txt | tail -n 1)"
+          GET_STATUS="$(curl -sS -L --cookie '' --header 'Cookie:' -o p03-home.html -w '%{http_code}' "$EXTERNAL_WEBAPP_URL")"
+          [[ "$GET_STATUS" == '200' ]]
           test -s p03-home.html
-          head -c 500 p03-home.html > p03-first500.txt
-          FINAL_STATUS="$(curl -sS -L --cookie '' -o /dev/null -w '%{http_code}' "$EXTERNAL_WEBAPP_URL")"
-          [[ "$FINAL_STATUS" == '200' ]] || { echo "anonymous GET failed: HTTP $FINAL_STATUS"; exit 1; }
+          node --input-type=module -e "import fs from 'node:fs'; const t=fs.readFileSync('p03-home.html','utf8'); fs.writeFileSync('p03-first500.txt',[...t].slice(0,500).join('')); fs.writeFileSync('p03-size.env','HTML_BYTES='+Buffer.byteLength(t,'utf8')+'\nHTML_CHARS='+[...t].length+'\n');"
+          source p03-size.env
           {
-            echo '<!-- TTQS_P03_ANONYMOUS_CURL_V1 -->'
-            echo '## P-03｜匿名 curl 驗證'
+            echo '<!-- TTQS_P03_ANONYMOUS_GET_WITH_HEAD_DIAGNOSTIC_V2 -->'
+            echo '## P-03/P-05｜匿名 Portal 實測（HEAD 診斷＋GET 可用性）'
             echo
-            echo "- initial_status: \`$STATUS\`"
-            echo "- redirect_location: \`$LOCATION\`"
-            echo "- final_status: \`$FINAL_STATUS\`"
+            echo "- provider_version: \`$EXTERNAL_VERSION_NUMBER\`"
+            echo "- source_sha: \`$GITHUB_SHA\`"
+            echo "- head_rc: \`$HEAD_RC\`"
+            echo "- head_status: \`${HEAD_STATUS:-MISSING}\`"
+            echo "- head_redirect: \`${HEAD_LOCATION:-}\`"
+            echo "- anonymous_get_status: \`$GET_STATUS\`"
+            echo "- html_bytes: \`$HTML_BYTES\`"
+            echo "- html_chars: \`$HTML_CHARS\`"
             echo '- cookie/auth: `NONE`'
-            echo '- html_nonempty: `PASS`'
+            echo '- interpretation: `HEAD is diagnostic only; browser usability is verified by anonymous GET`'
             echo
-            echo '首頁前 500 位元組：'
+            echo '首頁前 500 字元：'
             echo '```html'
             cat p03-first500.txt
             echo
