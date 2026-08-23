@@ -1,9 +1,11 @@
+import {normalizeAppsScriptHtmlServiceWrapper} from './external-blackbox-classifier.mjs';
+
 const DEFAULT_CANONICAL_RE=/^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/;
 
 function escPattern(value){return String(value).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');}
 
 export function normalizeR7NavigationHtml(input){
-  let out=String(input??'');
+  let out=normalizeAppsScriptHtmlServiceWrapper(String(input??''));
   for(let pass=0;pass<16;pass++){
     const before=out;
     out=out
@@ -48,6 +50,19 @@ function linkText(element,openTag){
   return tail.slice(0,close).replace(/<[^>]+>/g,'').trim();
 }
 
+function headingText(card){
+  const match=String(card).match(/<h[1-6]\b[^>]*>([\s\S]*?)<\/h[1-6]>/i);
+  return match?.[1]?.replace(/<[^>]+>/g,'').trim()??null;
+}
+
+function linksWithText(card,text){
+  const links=String(card).match(/<a\b[^>]*>[\s\S]*?<\/a>/gi)||[];
+  return links.filter(link=>link.replace(/<[^>]+>/g,'').trim()===text).map(link=>{
+    const open=link.match(/^<a\b[^>]*>/i)?.[0]||'';
+    return {href:attrValue(open,'href'),target:attrValue(open,'target'),html:link};
+  });
+}
+
 export function verifyHomeIndicatorRoute(input,{indicator,canonical}){
   const id=String(indicator);
   const normalized=normalizeR7NavigationHtml(input);
@@ -75,21 +90,36 @@ export function verifyEvidenceMatrixLayer(input,{indicator,canonical}){
   if(!normalized.includes('TEST／SAMPLE／CONTROL'))return {pass:false,code:'MATRIX_SIMULATION_WARNING_MISSING',indicator:id,expectedHeading,normalized};
   const cards=normalized.match(/<article\b(?=[^>]*\bdata-document-card=["']true["'])[^>]*>[\s\S]*?<\/article>/gi)||[];
   if(cards.length<1)return {pass:false,code:'MATRIX_DOCUMENT_CARD_MISSING',indicator:id,expectedHeading,normalized};
-  const chineseCards=cards.filter(card=>/<h[1-6]\b[^>]*>[\s\S]*?[\u3400-\u9fff][\s\S]*?<\/h[1-6]>/i.test(card));
-  if(chineseCards.length<1)return {pass:false,code:'MATRIX_CHINESE_DOCUMENT_CARD_MISSING',indicator:id,expectedHeading,documentCardCount:cards.length,normalized};
-  const openLinks=[];
-  for(const card of cards){
-    const links=card.match(/<a\b[^>]*>[\s\S]*?<\/a>/gi)||[];
-    for(const link of links){
-      if(!link.includes('開啟文件'))continue;
-      const open=link.match(/^<a\b[^>]*>/i)?.[0]||'';
-      openLinks.push({href:attrValue(open,'href'),target:attrValue(open,'target'),html:link});
-    }
+
+  const cardEvidence=[];
+  for(let index=0;index<cards.length;index++){
+    const card=cards[index];
+    const title=headingText(card);
+    if(!title)return {pass:false,code:'MATRIX_DOCUMENT_TITLE_MISSING',indicator:id,cardIndex:index+1,expectedHeading,documentCardCount:cards.length,normalized};
+    if(!/[\u3400-\u9fff]/.test(title))return {pass:false,code:'MATRIX_DOCUMENT_TITLE_NOT_CHINESE',indicator:id,cardIndex:index+1,title,expectedHeading,documentCardCount:cards.length,normalized};
+    const openLinks=linksWithText(card,'開啟文件');
+    if(openLinks.length<1)return {pass:false,code:'MATRIX_OPEN_DOCUMENT_MISSING',indicator:id,cardIndex:index+1,title,expectedHeading,documentCardCount:cards.length,normalized};
+    const canonicalLinks=openLinks.filter(x=>x.href&&new RegExp(`^${escPattern(canonical)}\\?artifact=[A-Za-z0-9._~-]+$`).test(x.href)&&x.target==='_top');
+    if(canonicalLinks.length<1)return {pass:false,code:'MATRIX_CANONICAL_ARTIFACT_ROUTE_MISSING',indicator:id,cardIndex:index+1,title,expectedHeading,documentCardCount:cards.length,openLinks,normalized};
+    cardEvidence.push({cardIndex:index+1,title,openDocumentCount:openLinks.length,canonicalArtifactCount:canonicalLinks.length,firstCanonicalArtifactUrl:canonicalLinks[0].href});
   }
-  if(openLinks.length<1)return {pass:false,code:'MATRIX_OPEN_DOCUMENT_MISSING',indicator:id,expectedHeading,documentCardCount:cards.length,normalized};
-  const canonicalArtifact=openLinks.find(x=>x.href&&new RegExp(`^${escPattern(canonical)}\\?artifact=[A-Za-z0-9._~-]+$`).test(x.href)&&x.target==='_top');
-  if(!canonicalArtifact)return {pass:false,code:'MATRIX_CANONICAL_ARTIFACT_ROUTE_MISSING',indicator:id,expectedHeading,documentCardCount:cards.length,openLinks,normalized};
-  return {pass:true,code:null,indicator:id,expectedHeading,documentCardCount:cards.length,chineseDocumentCardCount:chineseCards.length,openDocumentCount:openLinks.length,firstCanonicalArtifactUrl:canonicalArtifact.href,normalized};
+
+  return {
+    pass:true,
+    code:null,
+    indicator:id,
+    expectedHeading,
+    documentCardCount:cards.length,
+    chineseDocumentCardCount:cardEvidence.length,
+    openDocumentCount:cardEvidence.reduce((sum,row)=>sum+row.openDocumentCount,0),
+    canonicalArtifactRouteCount:cardEvidence.reduce((sum,row)=>sum+row.canonicalArtifactCount,0),
+    everyCardHasChineseTitle:true,
+    everyCardHasOpenDocument:true,
+    everyCardHasCanonicalArtifactRoute:true,
+    firstCanonicalArtifactUrl:cardEvidence[0].firstCanonicalArtifactUrl,
+    cardEvidence,
+    normalized
+  };
 }
 
 export function assertCanonical(canonical){
