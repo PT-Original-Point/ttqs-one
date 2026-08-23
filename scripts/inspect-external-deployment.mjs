@@ -31,11 +31,6 @@ function validateVersionNumber(value) {
   return number;
 }
 
-function findWebAppEntryPoint(readback) {
-  const entryPoints = Array.isArray(readback?.entryPoints) ? readback.entryPoints : [];
-  return entryPoints.find(entry => entry?.webApp && typeof entry.webApp === 'object') || null;
-}
-
 export function parseArgs(argv) {
   const out = {};
   for (let i = 0; i < argv.length; i += 2) {
@@ -51,15 +46,8 @@ export function sanitizeDeploymentReadback(readback, expected = {}) {
   const config = readback?.deploymentConfig && typeof readback.deploymentConfig === 'object'
     ? readback.deploymentConfig
     : null;
-  const webAppEntry = findWebAppEntryPoint(readback);
-  const webApp = webAppEntry?.webApp && typeof webAppEntry.webApp === 'object'
-    ? webAppEntry.webApp
-    : null;
-  const entryPointConfig = webApp?.entryPointConfig && typeof webApp.entryPointConfig === 'object'
-    ? webApp.entryPointConfig
-    : null;
   return {
-    schema: 'TTQS_PROVIDER_DEPLOYMENT_READBACK_SHAPE_V2',
+    schema: 'TTQS_PROVIDER_DEPLOYMENT_READBACK_SHAPE_V1',
     topLevelKeys: readback && typeof readback === 'object' ? Object.keys(readback).sort() : [],
     expectedDeploymentId: String(expected.deploymentId || ''),
     returnedDeploymentId: String(readback?.deploymentId || ''),
@@ -73,16 +61,7 @@ export function sanitizeDeploymentReadback(readback, expected = {}) {
     versionNumber: config && Object.hasOwn(config, 'versionNumber') ? config.versionNumber : null,
     descriptionPresent: Boolean(config && Object.hasOwn(config, 'description')),
     description: config && Object.hasOwn(config, 'description') ? String(config.description ?? '') : '',
-    entryPointCount: Array.isArray(readback?.entryPoints) ? readback.entryPoints.length : null,
-    webAppEntryPointPresent: Boolean(webAppEntry),
-    webAppEntryPointType: webAppEntry && Object.hasOwn(webAppEntry, 'entryPointType') ? String(webAppEntry.entryPointType ?? '') : '',
-    webAppPresent: Boolean(webApp),
-    webAppUrl: webApp && Object.hasOwn(webApp, 'url') ? String(webApp.url ?? '') : '',
-    entryPointConfigPresent: Boolean(entryPointConfig),
-    accessPresent: Boolean(entryPointConfig && Object.hasOwn(entryPointConfig, 'access')),
-    access: entryPointConfig && Object.hasOwn(entryPointConfig, 'access') ? String(entryPointConfig.access ?? '') : '',
-    executeAsPresent: Boolean(entryPointConfig && Object.hasOwn(entryPointConfig, 'executeAs')),
-    executeAs: entryPointConfig && Object.hasOwn(entryPointConfig, 'executeAs') ? String(entryPointConfig.executeAs ?? '') : ''
+    entryPointCount: Array.isArray(readback?.entryPoints) ? readback.entryPoints.length : null
   };
 }
 
@@ -100,8 +79,7 @@ export async function inspectDeploymentVersion({accessToken, scriptId, deploymen
     {},
     fetchImpl
   );
-  const diagnostic = sanitizeDeploymentReadback(readback, {scriptId: script, deploymentId: deployment});
-  writeDiagnosticFile(diagnosticFile, diagnostic);
+  writeDiagnosticFile(diagnosticFile, sanitizeDeploymentReadback(readback, {scriptId: script, deploymentId: deployment}));
   if (String(readback.deploymentId || '') !== deployment) {
     throw stableError('EXTERNAL_DEPLOYMENT_READBACK_MISMATCH');
   }
@@ -113,12 +91,7 @@ export async function inspectDeploymentVersion({accessToken, scriptId, deploymen
     scriptId: script,
     deploymentId: deployment,
     versionNumber,
-    description: String(readback.deploymentConfig?.description || ''),
-    access: diagnostic.access,
-    executeAs: diagnostic.executeAs,
-    webAppUrl: diagnostic.webAppUrl,
-    webAppEntryPointType: diagnostic.webAppEntryPointType,
-    webAppEntryPointPresent: diagnostic.webAppEntryPointPresent
+    description: String(readback.deploymentConfig?.description || '')
   };
 }
 
@@ -150,14 +123,10 @@ async function main() {
     diagnosticFile: args['diagnostic-file'] || ''
   });
   appendEnv(args['env-file'], {
-    EXTERNAL_VERSION_NUMBER: result.versionNumber,
-    EXTERNAL_WEBAPP_ACCESS: result.access,
-    EXTERNAL_WEBAPP_EXECUTE_AS: result.executeAs
+    EXTERNAL_VERSION_NUMBER: result.versionNumber
   });
   process.stdout.write(`${JSON.stringify(result)}\n`);
   process.stdout.write(`EXTERNAL_VERSION_NUMBER=${result.versionNumber}\n`);
-  process.stdout.write(`EXTERNAL_WEBAPP_ACCESS=${result.access}\n`);
-  process.stdout.write(`EXTERNAL_WEBAPP_EXECUTE_AS=${result.executeAs}\n`);
 }
 
 if (isDirectExecution(import.meta.url, process.argv[1])) {
