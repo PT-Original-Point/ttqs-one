@@ -1,3 +1,4 @@
+// CONTROL-only readback diagnostic; never merged into provider runtime.
 import {googleApiRequest, obtainVerifiedAccessToken} from './apps-script-rest-deploy.mjs';
 
 const SCRIPT_API = 'https://script.googleapis.com/v1';
