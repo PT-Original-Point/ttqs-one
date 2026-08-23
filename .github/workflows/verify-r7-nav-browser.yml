@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
-      - name: Resolve deployed source SHA
+      - name: Resolve verification source SHA
         id: source
         shell: bash
         run: |
@@ -40,7 +40,7 @@ jobs:
           echo "sha=$SHA" >> "$GITHUB_OUTPUT"
           echo "deploy_run=$DEPLOY_RUN" >> "$GITHUB_OUTPUT"
 
-      - name: Checkout exact deployed source
+      - name: Checkout exact verification source
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           ref: ${{ steps.source.outputs.sha }}
@@ -61,12 +61,18 @@ jobs:
           npm install --no-save --ignore-scripts playwright@1.55.0
           npx playwright install chromium --with-deps
 
-      - name: Browser click probe — desktop and mobile, all 19 indicators
+      - name: Browser click probe — desktop and mobile, all 19 indicators, exact a-g contract
         env:
           R7_NAV_EVIDENCE_OUT: r7-nav-browser-evidence.json
         run: node scripts/r7-nav-browser-probe.mjs
 
-      - name: Upload machine browser evidence
+      - name: Verify evidence shape before publication
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module -e "import fs from 'node:fs'; const r=JSON.parse(fs.readFileSync('r7-nav-browser-evidence.json','utf8')); if(r.schema!=='TTQS_R7_NAV_ROUTE_EVIDENCE_V2') throw new Error('ROUTE_EVIDENCE_SCHEMA'); if(r.checks!==38||r.passCount!==38||r.failCount!==0||r.result!=='PASS_MACHINE_BROWSER') throw new Error('ROUTE_EVIDENCE_NOT_38_PASS'); if(!Array.isArray(r.evidence)||r.evidence.length!==38) throw new Error('ROUTE_EVIDENCE_ROWS'); for(const row of r.evidence){ for(const key of ['a_topLevelCanonicalUrl','b_windowTopEqualsSelf','c_scriptGoogleIframeCountZero','d_chineseHeadingPresent','e_chineseDocumentCardAndOpenButton','f_refusedToConnectAbsent','g_mobile390NoHorizontalOverflow']) if(row.checks?.[key]?.pass!==true) throw new Error('ROUTE_EVIDENCE_CHECK_FAIL:'+row.viewport+':'+row.indicator+':'+key); }"
+
+      - name: Upload secondary machine browser evidence copy
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: r7-nav-browser-evidence-${{ steps.source.outputs.sha }}
@@ -74,7 +80,7 @@ jobs:
           if-no-files-found: error
           retention-days: 30
 
-      - name: Publish machine browser receipt without changing human gates
+      - name: Publish complete 38-row route evidence permanently to Issue 39
         env:
           GH_TOKEN: ${{ github.token }}
           SOURCE_SHA: ${{ steps.source.outputs.sha }}
@@ -82,20 +88,26 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          CHECKS="$(node --input-type=module -e "import fs from 'node:fs';const r=JSON.parse(fs.readFileSync('r7-nav-browser-evidence.json'));process.stdout.write(String(r.checks));")"
+          EVIDENCE_SHA="$(sha256sum r7-nav-browser-evidence.json | awk '{print $1}')"
           {
-            echo '<!-- TTQS_R7_NAV_BROWSER_EVIDENCE_V1 -->'
-            echo '## R7-NAV-BLOCKER｜部署後真實瀏覽器機器驗證'
+            echo '<!-- TTQS_R7_NAV_ROUTE_EVIDENCE_V2 -->'
+            echo '## R7-NAV-BLOCKER｜38 條真實瀏覽器逐路徑永久證據'
             echo
-            echo "- source_sha: \`$SOURCE_SHA\`"
+            echo "- verification_source_sha: \`$SOURCE_SHA\`"
             echo "- deployment_workflow_run: \`$DEPLOY_RUN\`"
             echo '- browser: `Playwright Chromium / clean context`'
             echo '- viewports: `desktop 1440x1000 + mobile 390x844`'
-            echo '- indicators_clicked: `19/19 each viewport`'
-            echo "- total_checks: \`$CHECKS\`"
-            echo '- required: top-level canonical /exec?indicator=<id>; no nested script.google.com /exec frame; no refused-to-connect text; Chinese title; >=1 document card'
+            echo '- routes: `desktop 19 + mobile 19 = 38/38`'
+            echo '- exact_checks: `a URL; b top=self; c script.google iframe=0; d 中文標題; e 中文文件卡+開啟文件; f 拒絕連線文字=0; g mobile 390px 無水平溢位`'
+            echo "- evidence_sha256: \`sha256:$EVIDENCE_SHA\`"
+            echo '- durable_byte_location: `this Issue #39 comment; fenced JSON below is the complete 38-row evidence payload`'
             echo '- result: `PASS_MACHINE_BROWSER`'
-            echo '- human_gate: `UNCHANGED — FA-08=FAIL; NAV-02=FAIL; T Gate=NOT PASS until human re-test`'
+            echo '- human_gate: `UNCHANGED — GAP remains BLOCKER; FA-08=FAIL; NAV-02=FAIL; T Gate=NOT PASS until human re-test`'
             echo '- scope: `TEST/SAMPLE/CONTROL only; REAL/PROD/formal scoring/official submission = 0`'
+            echo
+            echo '```json'
+            cat r7-nav-browser-evidence.json
+            echo '```'
           } > r7-nav-browser-receipt.md
+          test "$(wc -c < r7-nav-browser-receipt.md)" -lt 65000
           gh issue comment "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file r7-nav-browser-receipt.md
