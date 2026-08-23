@@ -9,6 +9,12 @@ on:
     paths:
       - scripts/inspect-external-webapp-access.mjs
       - .github/workflows/inspect-external-provider-access.yml
+  pull_request:
+    branches:
+      - main
+    paths:
+      - scripts/inspect-external-webapp-access.mjs
+      - .github/workflows/inspect-external-provider-access.yml
   workflow_dispatch:
 
 permissions:
