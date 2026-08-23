@@ -77,15 +77,31 @@ test('R7 homepage diagnostic wording is byte-for-text aligned across runtime, cl
   assert.equal(liveProbe.includes(stale),false,'stale live-probe wording revived');
 });
 
-test('live homepage navigation failure emits bounded serialization diagnostics while the strict T4b gate remains fail-closed',()=>{
-  for(const marker of ['homeNavigationDiagnostic','normalizedDataMatrixIndicatorTokenCount','normalizedIndicatorQueryTokenCount','safeNavigationSnippet','backslashQuotedDataAttr','rawEscapedEquals'])assert.ok(liveProbe.includes(marker),marker);
-  assert.match(liveProbe,/HOME_INDICATOR_LINK_MISSING/);
-  assert.match(liveProbe,/cold\.normalized\.includes\(`data-matrix-indicator=/);
-  assert.ok(liveProbe.includes("slice(0,500)"),'diagnostic snippet must stay bounded');
-  assert.equal(liveProbe.includes('HOME_INDICATOR_LINK_MISSING_BYPASSED'),false);
+test('V-06 homepage diagnostics no longer require second-layer 開啟文件',()=>{
+  assert.ok(R7_REQUIRED_PRODUCT_MARKERS.includes('data-top-level-nav='));
+  assert.ok(R7_REQUIRED_PRODUCT_MARKERS.includes('data-indicator='));
+  assert.equal(R7_REQUIRED_PRODUCT_MARKERS.includes('開啟文件'),false);
+  assert.ok(REQUIRED_PRODUCT_MARKERS.includes('查看文件與證據'),'R2 human-facing contract must remain unchanged');
 });
 
-test('DRAFT-003 evaluator homepage must satisfy R2 G02-M01..M19; R7 11 diagnostics alone can never pass',()=>{
+test('V-03 live homepage navigation uses actual data-indicator card plus exact canonical route and stays fail-closed',()=>{
+  for(const marker of ['homeNavigationDiagnostic','normalizedDataIndicatorTokenCount','normalizedIndicatorQueryTokenCount','safeNavigationSnippet','rawEscapedEquals','verifyHomeIndicatorRoute','routeVerifierPass','exactCanonicalRoute','exactTargetTop']) assert.ok(liveProbe.includes(marker),marker);
+  assert.match(liveProbe,/require_\(route\.pass,route\.code\|\|'HOME_INDICATOR_LINK_MISSING'/);
+  assert.equal(liveProbe.includes('cold.normalized.includes(`data-matrix-indicator="${i}"`)'),false,'homepage must not require Matrix-only attribute');
+  assert.ok(liveProbe.includes("safeSnippet(normalized,['data-indicator=\"1\"','data-top-level-nav=\"true\"','?indicator=1','查看文件與證據'])"));
+});
+
+test('V-07 exhaustive live Matrix layer explicitly verifies Chinese document layer before all 129 item checks',()=>{
+  assert.ok(liveProbe.includes('verifyEvidenceMatrixLayer'));
+  assert.match(liveProbe,/require_\(matrixContract\.pass,matrixContract\.code\|\|'MATRIX_DOCUMENT_LAYER_FAIL'/);
+  for(const marker of ['documentCardCount','chineseDocumentCardCount','openDocumentCount','firstCanonicalArtifactUrl']) assert.ok(liveProbe.includes(marker),marker);
+  assert.ok(liveProbe.includes('MATRIX_REF_MISSING'));
+  assert.ok(liveProbe.includes('MATRIX_ARTIFACT_CODE_MISSING'));
+  assert.ok(liveProbe.includes('MATRIX_ARTIFACT_LINK_MISSING'));
+  assert.ok(liveProbe.includes('MATRIX_CANONICAL_LINK_FAIL'));
+});
+
+test('DRAFT-003 evaluator homepage must satisfy R2 G02-M01..M19; R7 diagnostics alone can never pass',()=>{
   const completeProduct=[...REQUIRED_PRODUCT_MARKERS,...R7_REQUIRED_PRODUCT_MARKERS].join(' | ');
   const pass=classifyExternalBlackbox(completeProduct);
   assert.equal(pass.pass,true);
