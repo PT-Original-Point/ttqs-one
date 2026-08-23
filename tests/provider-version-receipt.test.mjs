@@ -54,7 +54,7 @@ test('provider version inspection fails closed on deployment, script, or version
   );
 });
 
-test('provider-version workflow is post-deploy, durable, and contains no provider mutation command',()=>{
+test('provider-version workflow is post-deploy, durable, observable on failure, and contains no provider mutation command',()=>{
   const workflow=fs.readFileSync('.github/workflows/verify-external-provider-version.yml','utf8');
   assert.match(workflow,/workflows:\s*\n\s*- Deploy External TEST Evaluator Portal/);
   assert.match(workflow,/environment: TEST/);
@@ -65,6 +65,10 @@ test('provider-version workflow is post-deploy, durable, and contains no provide
   assert.match(workflow,/evidence_sha256/);
   assert.match(workflow,/READ_ONLY_PROVIDER_INSPECTION/);
   assert.match(workflow,/mutation: `NONE`/);
+  assert.match(workflow,/TTQS_EXTERNAL_PROVIDER_VERSION_FAILURE_V1/);
+  assert.match(workflow,/Publish FAILED provider-version receipt for observability/);
+  assert.match(workflow,/if: \$\{\{ failure\(\) \}\}/);
+  assert.match(workflow,/workflow_run_id:/);
   assert.equal(/apps-script-rest-deploy\.mjs\s+(?:push-content|deploy|ensure-project)/.test(workflow),false);
   assert.equal(/inspect-external-deployment\.mjs[\s\S]*--root-dir/.test(workflow),false);
 });
