@@ -117,7 +117,7 @@ test('provider-version workflow is post-deploy, durable, observable on failure, 
   assert.equal(/inspect-external-deployment\.mjs[\s\S]*--root-dir/.test(workflow),false);
 });
 
-test('deploy workflow persists sanitized provider GET shape before strict failure and publishes it on failure',()=>{
+test('deploy workflow persists sanitized provider GET shape and exports same-step source SHA before strict comparison',()=>{
   const workflow=fs.readFileSync('.github/workflows/deploy-external-test.yml','utf8');
   const blackboxReceipt=workflow.indexOf('Publish durable deployment receipt after black-box PASS');
   const providerGet=workflow.indexOf('Read back exact Apps Script provider version after black-box PASS');
@@ -126,6 +126,7 @@ test('deploy workflow persists sanitized provider GET shape before strict failur
   assert.ok(providerGet>blackboxReceipt);
   assert.ok(providerReceipt>providerGet);
   const postBlackbox=workflow.slice(blackboxReceipt);
+  assert.match(postBlackbox,/PROVIDER_SOURCE_SHA="\$\{EXTERNAL_RECEIPT_SOURCE_SHA:-\$GITHUB_SHA\}"\s*\n\s*export PROVIDER_SOURCE_SHA/);
   assert.match(postBlackbox,/inspect-external-deployment\.mjs/);
   assert.match(postBlackbox,/--diagnostic-file "provider-inspection-diagnostic\.json"/);
   assert.match(postBlackbox,/provider_inspection_diagnostic_sha256/);
