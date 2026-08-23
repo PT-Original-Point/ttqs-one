@@ -120,3 +120,28 @@ jobs:
             echo '- Mutation: NONE'
             echo '- Receipt: GitHub Issue #39'
           } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Publish FAILED provider-version receipt for observability
+        if: ${{ failure() }}
+        continue-on-error: true
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          {
+            echo '<!-- TTQS_EXTERNAL_PROVIDER_VERSION_FAILURE_V1 -->'
+            echo '## External TEST｜Apps Script provider 版本讀回失敗'
+            echo
+            echo "- workflow_run_id: \`$GITHUB_RUN_ID\`"
+            echo "- verification_sha: \`$GITHUB_SHA\`"
+            echo "- event_name: \`$GITHUB_EVENT_NAME\`"
+            echo '- mutation: `NONE`'
+            echo '- scope: `TEST/SAMPLE/CONTROL only; REAL/PROD/formal scoring/official submission = 0`'
+            if test -f provider-inspection-output.txt; then
+              echo '- provider_inspection_output: present; inspect job log for exact failure boundary'
+            else
+              echo '- provider_inspection_output: absent; failure occurred before provider GET completed'
+            fi
+          } > provider-version-failure.md
+          gh issue comment "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file provider-version-failure.md
