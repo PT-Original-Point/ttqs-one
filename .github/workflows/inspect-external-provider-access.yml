@@ -1,0 +1,140 @@
+name: External TEST Provider Access Readback
+
+on:
+  push:
+    branches:
+      - main
+      - work/portal-anon-20260823
+    paths:
+      - scripts/inspect-external-webapp-access.mjs
+      - .github/workflows/inspect-external-provider-access.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+env:
+  EXTERNAL_RECEIPT_ISSUE: '39'
+
+jobs:
+  provider-access-readback:
+    runs-on: ubuntu-24.04
+    environment: TEST
+    timeout-minutes: 10
+    steps:
+      - name: Checkout read-only inspection source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      - name: Setup Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install dependencies without lifecycle scripts
+        run: npm ci --ignore-scripts
+
+      - name: Resolve durable TEST provider identity
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh issue view "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --json body --jq .body > external-receipt-body.md
+          node --input-type=module -e "import fs from 'node:fs'; import {parseReceiptBody} from './scripts/external-deployment-receipt.mjs'; const r=parseReceiptBody(fs.readFileSync('external-receipt-body.md','utf8')); const s=String(r.scriptId||''); const d=String(r.deploymentId||''); if(!/^[A-Za-z0-9_-]{20,}$/.test(s)) throw new Error('SCRIPT_ID_INVALID'); if(!/^AKfy[A-Za-z0-9_-]+$/.test(d)) throw new Error('DEPLOYMENT_ID_INVALID'); fs.appendFileSync(process.env.GITHUB_ENV,'EXTERNAL_SCRIPT_ID='+s+'\nEXTERNAL_DEPLOYMENT_ID='+d+'\n');"
+
+      - name: Restore TEST OAuth credential for GET-only inspection
+        shell: bash
+        env:
+          CLASPRC_JSON_B64: ${{ secrets.CLASPRC_JSON_B64 }}
+        run: |
+          set -euo pipefail
+          test -n "$CLASPRC_JSON_B64"
+          OAUTH_FILE="$RUNNER_TEMP/ttqs-provider-access-readback-oauth.json"
+          printf '%s' "$CLASPRC_JSON_B64" | base64 -d > "$OAUTH_FILE"
+          chmod 600 "$OAUTH_FILE"
+          echo "EXTERNAL_OAUTH_FILE=$OAUTH_FILE" >> "$GITHUB_ENV"
+
+      - name: P-01 GET current web-app deployment configuration
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/apps-script-rest-deploy.mjs auth-check --credentials "$EXTERNAL_OAUTH_FILE"
+          node scripts/inspect-external-webapp-access.mjs \
+            --credentials "$EXTERNAL_OAUTH_FILE" \
+            --script-id "$EXTERNAL_SCRIPT_ID" \
+            --deployment-id "$EXTERNAL_DEPLOYMENT_ID" \
+            > p01-provider.json
+          node --input-type=module -e "import fs from 'node:fs'; const r=JSON.parse(fs.readFileSync('p01-provider.json','utf8')); const e={schema:'TTQS_P01_PROVIDER_ACCESS_READBACK_V1',deploymentId:r.deploymentId,scriptId:r.scriptId,versionNumber:r.versionNumber,access:r.access,executeAs:r.executeAs,webAppUrl:r.webAppUrl,entryPointType:r.entryPointType,mode:'GET_ONLY',mutation:'NONE',verificationSha:process.env.GITHUB_SHA}; fs.writeFileSync('p01-readback.json',JSON.stringify(e)+'\n'); fs.appendFileSync(process.env.GITHUB_ENV,'EXTERNAL_WEBAPP_URL='+r.webAppUrl+'\nEXTERNAL_WEBAPP_ACCESS='+r.access+'\nEXTERNAL_WEBAPP_EXECUTE_AS='+r.executeAs+'\n');"
+
+      - name: Publish P-01 durable readback receipt
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          {
+            echo '<!-- TTQS_P01_PROVIDER_ACCESS_READBACK_V1 -->'
+            echo '## P-01｜Apps Script 匿名存取設定唯讀讀回'
+            echo
+            echo '- mode: `GET_ONLY`'
+            echo '- mutation: `NONE`'
+            echo '- scope: `TEST/SAMPLE/CONTROL only`'
+            echo
+            echo '```json'
+            cat p01-readback.json
+            echo '```'
+          } > p01-receipt.md
+          gh issue comment "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file p01-receipt.md
+
+      - name: Decide whether P-02 repair is required
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "$EXTERNAL_WEBAPP_ACCESS" != 'ANYONE_ANONYMOUS' || "$EXTERNAL_WEBAPP_EXECUTE_AS" != 'USER_DEPLOYING' ]]; then
+            echo 'P02_REPAIR_REQUIRED=1' >> "$GITHUB_ENV"
+            echo "P-02 required: access=$EXTERNAL_WEBAPP_ACCESS executeAs=$EXTERNAL_WEBAPP_EXECUTE_AS"
+            exit 1
+          fi
+          echo 'P02_REPAIR_REQUIRED=0' >> "$GITHUB_ENV"
+
+      - name: P-03 anonymous no-cookie curl verification
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          rm -f cookie.jar
+          curl -sI "$EXTERNAL_WEBAPP_URL" > p03-head.txt
+          STATUS="$(awk 'toupper($1) ~ /^HTTP\// {code=$2} END {print code}' p03-head.txt)"
+          LOCATION="$(awk 'BEGIN{IGNORECASE=1} /^location:/ {sub(/^[^:]*:[[:space:]]*/,""); sub(/\r$/,""); print}' p03-head.txt | tail -n 1)"
+          case "$STATUS" in
+            200) ;;
+            302)
+              [[ "$LOCATION" == *googleusercontent.com* || "$LOCATION" == *script.google.com* ]] || { echo "unexpected redirect: $LOCATION"; exit 1; }
+              ;;
+            *) echo "anonymous HEAD failed: HTTP $STATUS"; exit 1;;
+          esac
+          curl -sS -L --cookie '' "$EXTERNAL_WEBAPP_URL" -o p03-home.html
+          test -s p03-home.html
+          head -c 500 p03-home.html > p03-first500.txt
+          FINAL_STATUS="$(curl -sS -L --cookie '' -o /dev/null -w '%{http_code}' "$EXTERNAL_WEBAPP_URL")"
+          [[ "$FINAL_STATUS" == '200' ]] || { echo "anonymous GET failed: HTTP $FINAL_STATUS"; exit 1; }
+          {
+            echo '<!-- TTQS_P03_ANONYMOUS_CURL_V1 -->'
+            echo '## P-03｜匿名 curl 驗證'
+            echo
+            echo "- initial_status: \`$STATUS\`"
+            echo "- redirect_location: \`$LOCATION\`"
+            echo "- final_status: \`$FINAL_STATUS\`"
+            echo '- cookie/auth: `NONE`'
+            echo '- html_nonempty: `PASS`'
+            echo
+            echo '首頁前 500 位元組：'
+            echo '```html'
+            cat p03-first500.txt
+            echo
+            echo '```'
+          } > p03-receipt.md
+          gh issue comment "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file p03-receipt.md
