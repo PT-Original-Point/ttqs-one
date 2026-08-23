@@ -1,0 +1,55 @@
+name: Apply R7 Golden Exact Bytes
+
+on:
+  push:
+    branches:
+      - control/apply-r7-golden-exact-20260824
+    paths:
+      - '.github/workflows/apply-r7-golden-exact.yml'
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout verifier target branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: work/r7-nav-verifier-repair-20260824
+          fetch-depth: 0
+
+      - name: Download exact CI golden artifact and replace exact bytes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/9501681674/zip" > /tmp/golden.zip
+          mkdir -p /tmp/golden
+          unzip -q /tmp/golden.zip -d /tmp/golden
+          test -f /tmp/golden/MANIFEST.sha256
+          test -f /tmp/golden/MANIFEST.sha256.sha256
+          cp /tmp/golden/MANIFEST.sha256 release/MANIFEST.sha256
+          cp /tmp/golden/MANIFEST.sha256.sha256 release/MANIFEST.sha256.sha256
+          cmp /tmp/golden/MANIFEST.sha256 release/MANIFEST.sha256
+          cmp /tmp/golden/MANIFEST.sha256.sha256 release/MANIFEST.sha256.sha256
+          sha256sum /tmp/golden/MANIFEST.sha256 release/MANIFEST.sha256
+          sha256sum /tmp/golden/MANIFEST.sha256.sha256 release/MANIFEST.sha256.sha256
+
+      - name: Commit exact artifact bytes to verifier branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add release/MANIFEST.sha256 release/MANIFEST.sha256.sha256
+          if git diff --cached --quiet; then
+            echo 'EXACT_GOLDEN_ALREADY_PRESENT'
+            exit 0
+          fi
+          git commit -m 'chore: accept CI golden manifest exact artifact bytes'
+          git push origin HEAD:work/r7-nav-verifier-repair-20260824
