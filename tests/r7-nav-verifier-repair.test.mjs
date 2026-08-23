@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
@@ -7,10 +8,12 @@ import {normalizeR7NavigationHtml,verifyHomeIndicatorRoute,verifyEvidenceMatrixL
 
 const fixtureDir=path.join('tests','fixtures','r7-nav-verifier-repair','provider-v11-source-53c6f5-20260824');
 const fixture=JSON.parse(fs.readFileSync(path.join(fixtureDir,'fixture.json'),'utf8'));
+const matrixProvenance=JSON.parse(fs.readFileSync(path.join(fixtureDir,'matrix-capture-provenance.json'),'utf8'));
 const raw=fs.readFileSync(path.join(fixtureDir,'home.raw.html'),'utf8');
 const browserHome=fs.readFileSync(path.join(fixtureDir,'browser.content.body.outerHTML.html'),'utf8');
 const browserMatrix=()=>fs.readFileSync(path.join(fixtureDir,'browser.matrix.body.outerHTML.html'),'utf8');
 const canonical=fixture.source.canonicalUrl;
+const sha256=value=>crypto.createHash('sha256').update(value).digest('hex');
 
 function removeOnce(source,needle){
   const index=source.indexOf(needle);
@@ -36,6 +39,18 @@ test('V-01/V-02 fixture is actual anonymous TEST provider evidence, not a handwr
   assert.equal(fixture.browserDom.click.actualPageUrl,`${canonical}?indicator=1`);
   assert.equal(fixture.browserDom.click.windowTopEqualsSelfAfter,true);
   assert.equal(fixture.browserDom.click.scriptGoogleIframeCountAfter,0);
+});
+
+test('V-02 Matrix fixture is exact bytes from the second actual Playwright capture',()=>{
+  const matrix=browserMatrix();
+  assert.equal(matrixProvenance.schema,'TTQS_R7_NAV_MATRIX_ACTUAL_FIXTURE_PROVENANCE_V1');
+  assert.equal(matrixProvenance.source,'ACTUAL_TEST_PROVIDER_PLAYWRIGHT');
+  assert.equal(matrixProvenance.providerVersion,11);
+  assert.equal(matrixProvenance.providerSourceSha,fixture.source.providerSourceSha);
+  assert.equal(matrixProvenance.canonicalUrl,canonical);
+  assert.equal(matrixProvenance.mutation,'NONE');
+  assert.equal(Buffer.byteLength(matrix),matrixProvenance.bytes);
+  assert.equal(sha256(matrix),matrixProvenance.sha256);
 });
 
 test('V-05 actual raw fixture reproduces the old HOME_INDICATOR_LINK_MISSING false negative',()=>{
@@ -91,7 +106,7 @@ test('V-07 actual Playwright Matrix DOM satisfies Chinese card, warning, open co
   assert.ok(result.documentCardCount>=1);
   assert.ok(result.chineseDocumentCardCount>=1);
   assert.ok(result.openDocumentCount>=1);
-  assert.match(result.firstCanonicalArtifactUrl,new RegExp('^'+canonical.replace(/[.*+?^${}()|[\\]\\]/g,'\\$&')+'\\?artifact='));
+  assert.ok(result.firstCanonicalArtifactUrl.startsWith(`${canonical}?artifact=`));
 });
 
 test('V-07 Matrix verifier independently fail-closes missing second-layer requirements',()=>{
