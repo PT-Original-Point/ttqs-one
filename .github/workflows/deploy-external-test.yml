@@ -262,6 +262,7 @@ jobs:
             --script-id "$EXTERNAL_SCRIPT_ID_RESOLVED" \
             --deployment-id "$EXTERNAL_DEPLOYMENT_ID_RESOLVED" \
             --env-file "$GITHUB_ENV" \
+            --diagnostic-file "provider-inspection-diagnostic.json" \
             | tee provider-inspection-output.txt
           head -n 1 provider-inspection-output.txt > provider-inspection-readback.json
           node --input-type=module -e "import fs from 'node:fs'; const r=JSON.parse(fs.readFileSync('provider-inspection-readback.json','utf8')); const expected='TTQS_ONE_TEST_EXTERNAL '+process.env.PROVIDER_SOURCE_SHA; if(r.description!==expected) throw new Error('PROVIDER_VERSION_SOURCE_DESCRIPTION_MISMATCH:'+r.description); if(!Number.isInteger(r.versionNumber)||r.versionNumber<=0) throw new Error('PROVIDER_VERSION_INVALID'); const e={schema:'TTQS_EXTERNAL_PROVIDER_VERSION_EVIDENCE_V2',scriptId:r.scriptId,deploymentId:r.deploymentId,versionNumber:r.versionNumber,providerSourceSha:process.env.PROVIDER_SOURCE_SHA,providerDescription:r.description,verificationSha:process.env.GITHUB_SHA,workflowRunId:process.env.GITHUB_RUN_ID,mode:'POST_DEPLOY_READ_ONLY_PROVIDER_GET',mutation:'NONE',scope:'TEST/SAMPLE/CONTROL only; REAL/PROD/formal scoring/official submission = 0'}; fs.writeFileSync('provider-version-evidence.json',JSON.stringify(e)+'\\n');"
@@ -336,6 +337,17 @@ jobs:
             echo "- workflow_run_id: \`$GITHUB_RUN_ID\`"
             echo "- verification_sha: \`$GITHUB_SHA\`"
             echo '- mutation_by_provider_version_probe: `NONE`'
-            echo '- inspect job log for the exact failure boundary; no provider version may be guessed'
+            if test -f provider-inspection-diagnostic.json; then
+              DIAGNOSTIC_SHA="$(sha256sum provider-inspection-diagnostic.json | awk '{print $1}')"
+              echo "- provider_inspection_diagnostic_sha256: \`sha256:$DIAGNOSTIC_SHA\`"
+              echo '- provider_inspection_diagnostic_location: `this Issue #39 comment; fenced JSON below`'
+              echo
+              echo '```json'
+              cat provider-inspection-diagnostic.json
+              echo '```'
+            else
+              echo '- provider_inspection_diagnostic: `NOT_AVAILABLE_BEFORE_GET_OR_PRE_GET_FAILURE`'
+            fi
+            echo '- strict validation remains fail-closed; no provider version may be guessed'
           } > provider-version-integrated-failure.md
           gh issue comment "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file provider-version-integrated-failure.md
