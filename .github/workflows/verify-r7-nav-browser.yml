@@ -62,17 +62,28 @@ jobs:
           npx playwright install chromium --with-deps
 
       - name: Browser click probe — desktop and mobile, all 19 indicators, exact a-g contract
+        id: probe
         env:
           R7_NAV_EVIDENCE_OUT: r7-nav-browser-evidence.json
-        run: node scripts/r7-nav-browser-probe.mjs
+        shell: bash
+        run: |
+          set +e
+          node scripts/r7-nav-browser-probe.mjs
+          STATUS=$?
+          set -e
+          echo "status=$STATUS" >> "$GITHUB_OUTPUT"
+          test -f r7-nav-browser-evidence.json
+          exit 0
 
-      - name: Verify evidence shape before publication
+      - name: Verify 38-row evidence shape before durable publication
+        if: always()
         shell: bash
         run: |
           set -euo pipefail
-          node --input-type=module -e "import fs from 'node:fs'; const r=JSON.parse(fs.readFileSync('r7-nav-browser-evidence.json','utf8')); if(r.schema!=='TTQS_R7_NAV_ROUTE_EVIDENCE_V2') throw new Error('ROUTE_EVIDENCE_SCHEMA'); if(r.checks!==38||r.passCount!==38||r.failCount!==0||r.result!=='PASS_MACHINE_BROWSER') throw new Error('ROUTE_EVIDENCE_NOT_38_PASS'); if(!Array.isArray(r.evidence)||r.evidence.length!==38) throw new Error('ROUTE_EVIDENCE_ROWS'); for(const row of r.evidence){ for(const key of ['a_topLevelCanonicalUrl','b_windowTopEqualsSelf','c_scriptGoogleIframeCountZero','d_chineseHeadingPresent','e_chineseDocumentCardAndOpenButton','f_refusedToConnectAbsent','g_mobile390NoHorizontalOverflow']) if(row.checks?.[key]?.pass!==true) throw new Error('ROUTE_EVIDENCE_CHECK_FAIL:'+row.viewport+':'+row.indicator+':'+key); }"
+          node --input-type=module -e "import fs from 'node:fs'; const r=JSON.parse(fs.readFileSync('r7-nav-browser-evidence.json','utf8')); if(r.schema!=='TTQS_R7_NAV_ROUTE_EVIDENCE_V2') throw new Error('ROUTE_EVIDENCE_SCHEMA'); if(r.checks!==38||!Array.isArray(r.evidence)||r.evidence.length!==38) throw new Error('ROUTE_EVIDENCE_ROWS'); const keys=['a_topLevelCanonicalUrl','b_windowTopEqualsSelf','c_scriptGoogleIframeCountZero','d_chineseHeadingPresent','e_chineseDocumentCardAndOpenButton','f_refusedToConnectAbsent','g_mobile390NoHorizontalOverflow']; for(const row of r.evidence){if(!row.expectedUrl||!Object.hasOwn(row,'actualUrl')||!row.domEvidence?.home) throw new Error('ROUTE_EVIDENCE_REQUIRED_FIELDS:'+row.viewport+':'+row.indicator); for(const key of keys) if(!row.checks?.[key]||typeof row.checks[key].pass!=='boolean') throw new Error('ROUTE_EVIDENCE_CHECK_MISSING:'+row.viewport+':'+row.indicator+':'+key);}"
 
       - name: Upload secondary machine browser evidence copy
+        if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: r7-nav-browser-evidence-${{ steps.source.outputs.sha }}
@@ -81,6 +92,7 @@ jobs:
           retention-days: 30
 
       - name: Publish complete 38-row route evidence permanently to Issue 39
+        if: always()
         env:
           GH_TOKEN: ${{ github.token }}
           SOURCE_SHA: ${{ steps.source.outputs.sha }}
@@ -89,25 +101,48 @@ jobs:
         run: |
           set -euo pipefail
           EVIDENCE_SHA="$(sha256sum r7-nav-browser-evidence.json | awk '{print $1}')"
+          RESULT="$(node --input-type=module -e "import fs from 'node:fs'; const r=JSON.parse(fs.readFileSync('r7-nav-browser-evidence.json','utf8')); process.stdout.write(r.result)")"
+          COUNTS="$(node --input-type=module -e "import fs from 'node:fs'; const r=JSON.parse(fs.readFileSync('r7-nav-browser-evidence.json','utf8')); process.stdout.write(String(r.passCount)+'/38; fail='+String(r.failCount))")"
           {
             echo '<!-- TTQS_R7_NAV_ROUTE_EVIDENCE_V2 -->'
-            echo '## R7-NAV-BLOCKER｜38 條真實瀏覽器逐路徑永久證據'
+            echo '## R7-NAV-BLOCKER｜38 條真實瀏覽器逐路徑永久證據索引'
             echo
             echo "- verification_source_sha: \`$SOURCE_SHA\`"
             echo "- deployment_workflow_run: \`$DEPLOY_RUN\`"
             echo '- browser: `Playwright Chromium / clean context`'
             echo '- viewports: `desktop 1440x1000 + mobile 390x844`'
-            echo '- routes: `desktop 19 + mobile 19 = 38/38`'
-            echo '- exact_checks: `a URL; b top=self; c script.google iframe=0; d 中文標題; e 中文文件卡+開啟文件; f 拒絕連線文字=0; g mobile 390px 無水平溢位`'
+            echo '- routes: `desktop 19 + mobile 19 = 38`'
+            echo '- exact_checks: `a URL; b top=self; c script.google iframe=0; d 中文標題; e 中文文件卡+開啟文件+canonical artifact route+模擬警示; f 拒絕連線文字=0; g mobile 390px 無水平溢位`'
             echo "- evidence_sha256: \`sha256:$EVIDENCE_SHA\`"
-            echo '- durable_byte_location: `this Issue #39 comment; fenced JSON below is the complete 38-row evidence payload`'
-            echo '- result: `PASS_MACHINE_BROWSER`'
-            echo '- human_gate: `UNCHANGED — GAP remains BLOCKER; FA-08=FAIL; NAV-02=FAIL; T Gate=NOT PASS until human re-test`'
+            echo "- result: \`$RESULT\`"
+            echo "- counts: \`$COUNTS\`"
+            echo '- durable_rows: `the next two Issue #39 comments contain desktop 19 rows and mobile 19 rows; together they are the complete 38-row payload`'
+            echo '- human_gate: `UNCHANGED — R7-NAV-BLOCKER=OPEN; FA-08=FAIL; NAV-02=FAIL; T Gate=NOT PASS until human re-test`'
             echo '- scope: `TEST/SAMPLE/CONTROL only; REAL/PROD/formal scoring/official submission = 0`'
-            echo
-            echo '```json'
-            cat r7-nav-browser-evidence.json
-            echo '```'
-          } > r7-nav-browser-receipt.md
-          test "$(wc -c < r7-nav-browser-receipt.md)" -lt 65000
-          gh issue comment "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file r7-nav-browser-receipt.md
+          } > r7-nav-browser-summary.md
+          gh issue comment "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file r7-nav-browser-summary.md
+
+          for VIEWPORT in desktop mobile; do
+            node --input-type=module -e "import fs from 'node:fs'; const viewport=process.argv[1]; const r=JSON.parse(fs.readFileSync('r7-nav-browser-evidence.json','utf8')); const rows=r.evidence.filter(x=>x.viewport===viewport); if(rows.length!==19) throw new Error('VIEWPORT_ROWS:'+viewport+':'+rows.length); fs.writeFileSync('r7-nav-'+viewport+'.json',JSON.stringify({schema:r.schema,canonicalUrl:r.canonicalUrl,generatedAt:r.generatedAt,viewport,evidenceSha256:'sha256:'+process.argv[2],rows},null,2)+'\n');" "$VIEWPORT" "$EVIDENCE_SHA"
+            {
+              echo '<!-- TTQS_R7_NAV_ROUTE_EVIDENCE_V2_ROWS -->'
+              echo "## R7-NAV｜$VIEWPORT 19 條永久 DOM／路由證據"
+              echo
+              echo '- human_gate: `UNCHANGED — R7-NAV-BLOCKER=OPEN; FA-08=FAIL; NAV-02=FAIL; T Gate=NOT PASS`'
+              echo '```json'
+              cat "r7-nav-$VIEWPORT.json"
+              echo '```'
+            } > "r7-nav-$VIEWPORT.md"
+            test "$(wc -c < "r7-nav-$VIEWPORT.md")" -lt 65000
+            gh issue comment "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file "r7-nav-$VIEWPORT.md"
+          done
+
+      - name: Enforce exhaustive 38/38 browser gate after durable publication
+        if: always()
+        env:
+          PROBE_STATUS: ${{ steps.probe.outputs.status }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module -e "import fs from 'node:fs'; const r=JSON.parse(fs.readFileSync('r7-nav-browser-evidence.json','utf8')); if(r.checks!==38||r.passCount!==38||r.failCount!==0||r.result!=='PASS_MACHINE_BROWSER') throw new Error('ROUTE_EVIDENCE_NOT_38_PASS'); for(const row of r.evidence){ for(const key of ['a_topLevelCanonicalUrl','b_windowTopEqualsSelf','c_scriptGoogleIframeCountZero','d_chineseHeadingPresent','e_chineseDocumentCardAndOpenButton','f_refusedToConnectAbsent','g_mobile390NoHorizontalOverflow']) if(row.checks?.[key]?.pass!==true) throw new Error('ROUTE_EVIDENCE_CHECK_FAIL:'+row.viewport+':'+row.indicator+':'+key); }"
+          test "$PROBE_STATUS" = '0'
