@@ -3,6 +3,7 @@ import path from 'node:path';
 import zlib from 'node:zlib';
 import crypto from 'node:crypto';
 import {normalizeAppsScriptHtmlServiceWrapper} from './external-blackbox-classifier.mjs';
+import {normalizeR7NavigationHtml,verifyHomeIndicatorRoute,verifyEvidenceMatrixLayer} from './r7-nav-verifier.mjs';
 
 const root=process.cwd();
 const r7Dir=path.join(root,'release','official129');
@@ -25,12 +26,7 @@ function projection(){
 }
 
 function normalize(body){
-  return normalizeAppsScriptHtmlServiceWrapper(body)
-    .replace(/\\x3[cC]/g,'<').replace(/\\u003[cC]/g,'<')
-    .replace(/\\x3[eE]/g,'>').replace(/\\u003[eE]/g,'>')
-    .replace(/\\x26/g,'&').replace(/\\u0026/g,'&')
-    .replace(/\\x27/g,"'").replace(/\\u0027/g,"'")
-    .replace(/\\x22/g,'"').replace(/\\u0022/g,'"');
+  return normalizeR7NavigationHtml(normalizeAppsScriptHtmlServiceWrapper(body));
 }
 
 async function get(url){
@@ -62,14 +58,17 @@ function homeNavigationDiagnostic(response){
   const raw=String(response.body);
   const routes=Array.from({length:19},(_,index)=>{
     const id=String(index+1);
+    const verified=verifyHomeIndicatorRoute(normalized,{indicator:id,canonical});
     return {
       indicator:id,
-      strictDataAttr:normalized.includes(`data-matrix-indicator="${id}"`),
-      singleQuotedDataAttr:normalized.includes(`data-matrix-indicator='${id}'`),
-      backslashQuotedDataAttr:normalized.includes(`data-matrix-indicator=\\"${id}\\"`),
-      looseDataAttr:new RegExp(`data-matrix-indicator\\s*=\\s*[\\"']${escPattern(id)}[\\"']`).test(normalized),
+      cardDataIndicator:normalized.includes(`data-indicator="${id}"`),
+      topLevelNav:normalized.includes('data-top-level-nav="true"'),
+      exactCanonicalRoute:verified.actualUrl===`${canonical}?indicator=${id}`,
+      exactTargetTop:verified.target==='_top',
+      exactLabel:verified.linkText==='查看文件與證據',
+      routeVerifierPass:verified.pass,
+      routeVerifierCode:verified.code,
       routeToken:routeTokenPresent(normalized,id),
-      canonicalRoute:normalized.includes(`${canonical}?indicator=${id}`),
       rawRouteToken:routeTokenPresent(raw,id),
       rawEscapedEquals:raw.includes(`indicator\\x3d${id}`)||raw.includes(`indicator\\u003d${id}`),
       percentEncodedEquals:raw.toLowerCase().includes(`indicator%3d${id}`)
@@ -85,10 +84,9 @@ function homeNavigationDiagnostic(response){
     rawDataMatrixIndicatorTokenCount:countToken(raw,'data-matrix-indicator'),
     normalizedDataIndicatorTokenCount:countToken(normalized,'data-indicator'),
     normalizedDataMatrixIndicatorTokenCount:countToken(normalized,'data-matrix-indicator'),
-    normalizedEvidenceMatrixTextCount:countToken(normalized,'Evidence Matrix'),
     normalizedIndicatorQueryTokenCount:countToken(normalized,'?indicator='),
     routes,
-    safeNavigationSnippet:safeSnippet(normalized,['data-matrix-indicator','?indicator=','查看佐證與來源','Evidence Matrix'])
+    safeNavigationSnippet:safeSnippet(normalized,['data-indicator="1"','data-top-level-nav="true"','?indicator=1','查看文件與證據'])
   };
 }
 async function mapLimit(items,limit,fn){const out=new Array(items.length);let next=0;async function worker(){while(true){const i=next++;if(i>=items.length)return;out[i]=await fn(items[i],i);}}await Promise.all(Array.from({length:Math.min(limit,items.length)},worker));return out;}
@@ -102,7 +100,10 @@ try{
   require_(cold.status===200,'HOME_HTTP_STATUS',String(cold.status));
   require_(!cold.normalized.includes('data-friendly-error="true"'),'HOME_FRIENDLY_ERROR');
   for(const marker of ['TTQS ONE｜顧問唯讀 DEMO 查驗入口','TEST／SAMPLE／CONTROL','19/19','26','129','並非官方強制 129 份文件',expectedRelease,expectedProjectionSha,expectedManifestSha,expectedOfflineZipSha])require_(cold.normalized.includes(marker),'HOME_MARKER_MISSING',marker);
-  for(let i=1;i<=19;i++)require_(cold.normalized.includes(`data-matrix-indicator="${i}"`),'HOME_INDICATOR_LINK_MISSING',String(i));
+  for(let i=1;i<=19;i++){
+    const route=verifyHomeIndicatorRoute(cold.normalized,{indicator:i,canonical});
+    require_(route.pass,route.code||'HOME_INDICATOR_LINK_MISSING',String(i));
+  }
   require_(cold.ms<=8000,'HOME_COLD_PERFORMANCE_HARD_FAIL',String(cold.ms));
   const warm=await get(canonical);
   require_(warm.status===200,'HOME_WARM_HTTP_STATUS',String(warm.status));
@@ -116,7 +117,8 @@ try{
     const r=await get(`${canonical}?indicator=${id}`);
     require_(r.status===200,'MATRIX_HTTP_STATUS',`${id}:${r.status}`);
     require_(!r.normalized.includes('data-friendly-error="true"'),'MATRIX_FRIENDLY_ERROR',id);
-    require_(r.normalized.includes(`data-matrix-indicator="${id}"`),'MATRIX_IDENTITY_FAIL',id);
+    const matrixContract=verifyEvidenceMatrixLayer(r.normalized,{indicator:id,canonical});
+    require_(matrixContract.pass,matrixContract.code||'MATRIX_DOCUMENT_LAYER_FAIL',id);
     for(const x of expected){
       require_(r.normalized.includes(`data-official-ref-id="${x.officialRefId}"`),'MATRIX_REF_MISSING',x.officialRefId);
       require_(r.normalized.includes(`data-artifact-code="${x.artifactCode}"`),'MATRIX_ARTIFACT_CODE_MISSING',x.artifactCode);
@@ -124,7 +126,7 @@ try{
       require_(r.normalized.includes(`${canonical}?artifact=${encodeURIComponent(x.artifactCode)}`),'MATRIX_CANONICAL_LINK_FAIL',x.artifactCode);
     }
     if(r.ms>4000)results.performance.hardFailures.push({kind:'matrix',id,ms:r.ms}); else if(r.ms>2000)results.performance.matrixOver2s.push({id,ms:r.ms});
-    return {indicator:id,expectedItems:expected.length,status:r.status,ms:r.ms,pass:true};
+    return {indicator:id,expectedItems:expected.length,status:r.status,ms:r.ms,documentCardCount:matrixContract.documentCardCount,chineseDocumentCardCount:matrixContract.chineseDocumentCardCount,openDocumentCount:matrixContract.openDocumentCount,firstCanonicalArtifactUrl:matrixContract.firstCanonicalArtifactUrl,pass:true};
   });
   require_(results.performance.hardFailures.length===0,'MATRIX_PERFORMANCE_HARD_FAIL',JSON.stringify(results.performance.hardFailures));
 
