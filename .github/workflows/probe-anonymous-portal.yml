@@ -1,0 +1,115 @@
+name: P-03 Anonymous Portal Probe
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .github/workflows/probe-anonymous-portal.yml
+  push:
+    branches:
+      - main
+      - deploy/test
+    paths:
+      - .github/workflows/probe-anonymous-portal.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+env:
+  PORTAL_URL: https://script.google.com/macros/s/AKfycbznbXi-0XWNV68E-vGU9CiAE6ElXGIlDmy27EePXMdGpRaorURzKZq0dDgsNBaaZOLh/exec
+  RECEIPT_ISSUE: '39'
+
+jobs:
+  anonymous-probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: P-03 exact no-cookie no-auth HEAD and GET probe
+        id: probe
+        shell: bash
+        run: |
+          set +e
+          rm -f p03-head.txt p03-home.html p03-first500.txt p03-result.env
+
+          curl -sI "$PORTAL_URL" > p03-head.txt
+          HEAD_RC=$?
+          INITIAL_STATUS="$(awk 'toupper($1) ~ /^HTTP\// {code=$2} END {print code}' p03-head.txt)"
+          LOCATION="$(awk 'BEGIN{IGNORECASE=1} /^location:/ {sub(/^[^:]*:[[:space:]]*/,""); sub(/\r$/,""); print}' p03-head.txt | tail -n 1)"
+
+          curl -sS -L --cookie '' --header 'Cookie:' "$PORTAL_URL" -o p03-home.html
+          GET_RC=$?
+          FINAL_STATUS="$(curl -sS -L --cookie '' --header 'Cookie:' -o /dev/null -w '%{http_code}' "$PORTAL_URL")"
+          FINAL_RC=$?
+
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const text = fs.existsSync('p03-home.html') ? fs.readFileSync('p03-home.html', 'utf8') : '';
+          fs.writeFileSync('p03-first500.txt', text.slice(0, 500));
+          fs.writeFileSync('p03-char-count.txt', String([...text].length));
+          NODE
+
+          HTML_BYTES="$(wc -c < p03-home.html 2>/dev/null || printf '0')"
+          HTML_CHARS="$(cat p03-char-count.txt 2>/dev/null || printf '0')"
+
+          PASS=1
+          if [[ "$HEAD_RC" -ne 0 ]]; then PASS=0; fi
+          if [[ "$INITIAL_STATUS" == '200' ]]; then :
+          elif [[ "$INITIAL_STATUS" == '302' && "$LOCATION" == *googleusercontent.com* ]]; then :
+          else PASS=0
+          fi
+          if [[ "$GET_RC" -ne 0 || "$FINAL_RC" -ne 0 || "$FINAL_STATUS" != '200' ]]; then PASS=0; fi
+          if [[ "$HTML_BYTES" -le 0 || "$HTML_CHARS" -le 0 ]]; then PASS=0; fi
+
+          {
+            echo "HEAD_RC=$HEAD_RC"
+            echo "INITIAL_STATUS=$INITIAL_STATUS"
+            echo "LOCATION=$LOCATION"
+            echo "GET_RC=$GET_RC"
+            echo "FINAL_RC=$FINAL_RC"
+            echo "FINAL_STATUS=$FINAL_STATUS"
+            echo "HTML_BYTES=$HTML_BYTES"
+            echo "HTML_CHARS=$HTML_CHARS"
+            echo "PASS=$PASS"
+          } > p03-result.env
+          cat p03-result.env
+          exit 0
+
+      - name: Publish P-03 durable diagnostic receipt
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          source p03-result.env
+          {
+            echo '<!-- TTQS_P03_ANONYMOUS_CURL_V1 -->'
+            echo '## P-03｜匿名 curl 驗證'
+            echo
+            echo "- workflow_run_id: \`${GITHUB_RUN_ID}\`"
+            echo "- source_sha: \`${GITHUB_SHA}\`"
+            echo "- command_head: \`curl -sI canonical_url\`"
+            echo '- cookie/auth: `NONE`'
+            echo "- initial_status: \`${INITIAL_STATUS:-MISSING}\`"
+            echo "- redirect_location: \`${LOCATION:-}\`"
+            echo "- final_status: \`${FINAL_STATUS:-MISSING}\`"
+            echo "- html_bytes: \`${HTML_BYTES:-0}\`"
+            echo "- html_chars: \`${HTML_CHARS:-0}\`"
+            echo "- result: \`$([[ \"${PASS:-0}\" == '1' ]] && echo PASS || echo FAIL)\`"
+            echo
+            echo '首頁前 500 字元：'
+            echo '```html'
+            cat p03-first500.txt
+            echo
+            echo '```'
+          } > p03-receipt.md
+          gh issue comment "$RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file p03-receipt.md
+
+      - name: Enforce P-03 contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          source p03-result.env
+          [[ "$PASS" == '1' ]]
