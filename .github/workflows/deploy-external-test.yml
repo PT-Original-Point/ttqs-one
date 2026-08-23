@@ -256,6 +256,7 @@ jobs:
         run: |
           set -euo pipefail
           PROVIDER_SOURCE_SHA="${EXTERNAL_RECEIPT_SOURCE_SHA:-$GITHUB_SHA}"
+          export PROVIDER_SOURCE_SHA
           echo "PROVIDER_SOURCE_SHA=$PROVIDER_SOURCE_SHA" >> "$GITHUB_ENV"
           node scripts/inspect-external-deployment.mjs \
             --credentials "$PROVIDER_INSPECT_OAUTH_FILE" \
