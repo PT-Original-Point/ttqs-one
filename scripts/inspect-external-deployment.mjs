@@ -42,7 +42,35 @@ export function parseArgs(argv) {
   return out;
 }
 
-export async function inspectDeploymentVersion({accessToken, scriptId, deploymentId, fetchImpl = fetch}) {
+export function sanitizeDeploymentReadback(readback, expected = {}) {
+  const config = readback?.deploymentConfig && typeof readback.deploymentConfig === 'object'
+    ? readback.deploymentConfig
+    : null;
+  return {
+    schema: 'TTQS_PROVIDER_DEPLOYMENT_READBACK_SHAPE_V1',
+    topLevelKeys: readback && typeof readback === 'object' ? Object.keys(readback).sort() : [],
+    expectedDeploymentId: String(expected.deploymentId || ''),
+    returnedDeploymentId: String(readback?.deploymentId || ''),
+    deploymentConfigPresent: Boolean(config),
+    deploymentConfigKeys: config ? Object.keys(config).sort() : [],
+    expectedScriptId: String(expected.scriptId || ''),
+    scriptIdPresent: Boolean(config && Object.hasOwn(config, 'scriptId')),
+    returnedScriptId: config && Object.hasOwn(config, 'scriptId') ? String(config.scriptId ?? '') : '',
+    versionNumberPresent: Boolean(config && Object.hasOwn(config, 'versionNumber')),
+    versionNumberType: config && Object.hasOwn(config, 'versionNumber') ? typeof config.versionNumber : 'missing',
+    versionNumber: config && Object.hasOwn(config, 'versionNumber') ? config.versionNumber : null,
+    descriptionPresent: Boolean(config && Object.hasOwn(config, 'description')),
+    description: config && Object.hasOwn(config, 'description') ? String(config.description ?? '') : '',
+    entryPointCount: Array.isArray(readback?.entryPoints) ? readback.entryPoints.length : null
+  };
+}
+
+function writeDiagnosticFile(diagnosticFile, diagnostic) {
+  if (!diagnosticFile) return;
+  fs.writeFileSync(diagnosticFile, `${JSON.stringify(diagnostic)}\n`);
+}
+
+export async function inspectDeploymentVersion({accessToken, scriptId, deploymentId, diagnosticFile = '', fetchImpl = fetch}) {
   const script = validateScriptId(scriptId);
   const deployment = validateDeploymentId(deploymentId);
   const readback = await googleApiRequest(
@@ -51,6 +79,7 @@ export async function inspectDeploymentVersion({accessToken, scriptId, deploymen
     {},
     fetchImpl
   );
+  writeDiagnosticFile(diagnosticFile, sanitizeDeploymentReadback(readback, {scriptId: script, deploymentId: deployment}));
   if (String(readback.deploymentId || '') !== deployment) {
     throw stableError('EXTERNAL_DEPLOYMENT_READBACK_MISMATCH');
   }
@@ -90,7 +119,8 @@ async function main() {
   const result = await inspectDeploymentVersion({
     accessToken,
     scriptId: args['script-id'],
-    deploymentId: args['deployment-id']
+    deploymentId: args['deployment-id'],
+    diagnosticFile: args['diagnostic-file'] || ''
   });
   appendEnv(args['env-file'], {
     EXTERNAL_VERSION_NUMBER: result.versionNumber
