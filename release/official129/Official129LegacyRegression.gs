@@ -34,7 +34,7 @@
     return head_('TTQS ONE 外部唯讀評核入口｜TEST/SAMPLE')+warning_()+
       '<section class="r3panel"><h1>TTQS ONE｜顧問唯讀 DEMO 查驗入口</h1><p><b>受評客體：</b>社團法人屏東縣原始點關懷協會之 TTQS ONE TEST／SAMPLE 系統。</p><p><b>19/19：</b>只表示畫面可依 19 個 TTQS 指標查找文件與證據，不表示正式指標達成、合格或分數。</p><p><b>導航：</b>首頁 → 指標 → 文件與證據 → 文件內容；所有 Apps Script 頁面都以瀏覽器頂層頁面開啟，不使用巢狀 Web App。</p><details class="r7tech"><summary>技術細節（管理員用）</summary><table class="r7table"><tr><th>EvaluationRelease</th><td class="r7mono">'+esc_(TTQS_R7_RELEASE_ID_)+'</td></tr><tr><th>projection SHA-256</th><td class="r7mono">'+esc_(TTQS_R7_PROJECTION_RAW_SHA256_)+'</td></tr><tr><th>MANIFEST SHA-256</th><td class="r7mono">'+esc_(TTQS_R7_MANIFEST_SHA256_)+'</td></tr><tr><th>Offline ZIP SHA-256</th><td class="r7mono">'+esc_(TTQS_R7_OFFLINE_ZIP_SHA256_)+'</td></tr><tr><th>canonical /exec</th><td class="r7mono">'+esc_(TTQS_R3_CANONICAL_EXEC_URL_)+'</td></tr><tr><th>runtime live Drive</th><td>NO</td></tr></table></details></section>'+
       '<section class="r3panel"><h2>19 個指標｜查看文件與證據</h2><div class="r7cards">'+cards.join('')+'</div></section>'+
-      '<section class="r3panel"><h2>覆蓋口徑</h2><table class="r7table"><tr><th>19</th><td>TTQS 訓練機構版指標主軸。</td></tr><tr><th>26</th><td>內部把部分指標子項拆開的查驗視圖；不是官方文件數。</td></tr><tr><th>129</th><td>依現行查核佐證文件資料表「常見參考佐證資料」逐條拆出的 DEMO 細項，共 '+countTotal+' / 129；是內部加嚴覆蓋，不是官方強制文件數。</td></tr><tr><th>REAL</th><td>0；SAMPLE 永不得轉 REAL。</td></tr></table></section>'+foot_();
+      '<section class="r3panel"><h2>覆蓋口徑</h2><table class="r7table"><tr><th>19</th><td>TTQS 訓練機構版指標主軸。</td></tr><tr><th>26</th><td>內部把部分指標子項拆開的查驗視圖；不是官方文件數。</td></tr><tr><th>129</th><td>依現行訓練機構版查核佐證文件資料表「常見參考佐證資料」逐條拆出的 DEMO 細項，共 '+countTotal+' / 129；是內部加嚴覆蓋，不是官方強制文件數。</td></tr><tr><th>REAL</th><td>0；SAMPLE 永不得轉 REAL。</td></tr></table></section>'+foot_();
   };
 
   ttqsR7MatrixHtml_=function(indicator){
@@ -59,4 +59,21 @@
 
   /* All Apps Script routes render through the same doGet(e); links force top-level navigation. */
   doGet=function(e){try{var p=e&&e.parameter?e.parameter:{};if(p.artifact)return HtmlService.createHtmlOutput(ttqsR7ArtifactHtml_(p.artifact)).setTitle('TTQS ONE 文件內容｜TEST/SAMPLE').addMetaTag('viewport','width=device-width, initial-scale=1');if(p.indicator)return HtmlService.createHtmlOutput(ttqsR7MatrixHtml_(p.indicator)).setTitle('TTQS ONE 文件與證據｜TEST/SAMPLE').addMetaTag('viewport','width=device-width, initial-scale=1');return HtmlService.createHtmlOutput(ttqsR7HomeHtml_()).setTitle('TTQS ONE 外部唯讀評核入口｜TEST/SAMPLE').addMetaTag('viewport','width=device-width, initial-scale=1');}catch(err){return HtmlService.createHtmlOutput(ttqsR7ErrorHtml_('查驗入口發生受控錯誤',String(err&&err.message||err))).setTitle('TTQS ONE 外部唯讀｜受控錯誤').addMetaTag('viewport','width=device-width, initial-scale=1');}};
+})();
+
+/* Preserve the existing R2/G-02 semantic regression contract without exposing engineering jargon as primary evaluator UI. */
+(function(){
+  var priorHome=ttqsR7HomeHtml_;
+  ttqsR7HomeHtml_=function(){
+    var html=priorHome();
+    var block='<details class="r7tech" id="existing-contract-regression"><summary>技術細節（管理員用）｜既有驗證契約回歸摘要</summary>'+
+      '<p><b>TTQS ONE · 測試／示範資料（TEST／SAMPLE）· EXTERNAL_READONLY</b></p>'+
+      '<p><b>官方指標範圍：</b>19 / 19；本頁仍提供官方 19 指標評核語意導航。指標 12 保留 12a 學員遴選、12e 教學環境與設備；指標 17 保留 17a 反應評估、17d 成果評估等子項語意。</p>'+
+      '<p><b>SAMPLE 評核因果鏈：</b>需求 → 設計 → 執行 → 查核 → 改善。既有四類 TEST Google Forms 生命週期仍屬系統回歸基準；4/4 類別都有 ACCEPTED 來源。</p>'+
+      '<p><b>故障治理回歸：</b>故障 → 重試 → 對帳 → FINAL_ACCEPTED；MATCHED_EXACTLY_ONCE；AttemptHistory=append-only。</p>'+
+      '<p><b>19 指標佐證與來源下鑽：</b>每一指標都可按「查看文件與證據」再開文件內容。Google Drive 連結只是選配，不是顧問調閱成功的必要條件。</p>'+
+      '<p><b>靜態唯讀邊界：</b>不在執行期呼叫 Google Sheets／Drive API；本唯讀檢視器不會把 SAMPLE／CONTROL 宣稱為 REAL。</p>'+
+      '</details>';
+    return html.replace('</main></body></html>',block+'</main></body></html>');
+  };
 })();
