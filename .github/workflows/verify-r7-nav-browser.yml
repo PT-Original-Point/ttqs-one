@@ -1,0 +1,101 @@
+name: Verify R7 Navigation Browser
+
+on:
+  workflow_run:
+    workflows:
+      - Deploy External TEST Evaluator Portal
+    types:
+      - completed
+    branches:
+      - deploy/test
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+env:
+  EXTERNAL_RECEIPT_ISSUE: '39'
+  EXTERNAL_WEBAPP_URL: 'https://script.google.com/macros/s/AKfycbznbXi-0XWNV68E-vGU9CiAE6ElXGIlDmy27EePXMdGpRaorURzKZq0dDgsNBaaZOLh/exec'
+
+jobs:
+  browser_nav:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Resolve deployed source SHA
+        id: source
+        shell: bash
+        run: |
+          set -euo pipefail
+          if test "$GITHUB_EVENT_NAME" = 'workflow_run'; then
+            SHA='${{ github.event.workflow_run.head_sha }}'
+            DEPLOY_RUN='${{ github.event.workflow_run.id }}'
+          else
+            SHA="$GITHUB_SHA"
+            DEPLOY_RUN='MANUAL'
+          fi
+          test -n "$SHA"
+          echo "sha=$SHA" >> "$GITHUB_OUTPUT"
+          echo "deploy_run=$DEPLOY_RUN" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout exact deployed source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ steps.source.outputs.sha }}
+
+      - name: Setup Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install repository dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Install isolated Playwright browser probe dependency
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm install --no-save --ignore-scripts playwright@1.55.0
+          npx playwright install chromium --with-deps
+
+      - name: Browser click probe — desktop and mobile, all 19 indicators
+        env:
+          R7_NAV_EVIDENCE_OUT: r7-nav-browser-evidence.json
+        run: node scripts/r7-nav-browser-probe.mjs
+
+      - name: Upload machine browser evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: r7-nav-browser-evidence-${{ steps.source.outputs.sha }}
+          path: r7-nav-browser-evidence.json
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Publish machine browser receipt without changing human gates
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_SHA: ${{ steps.source.outputs.sha }}
+          DEPLOY_RUN: ${{ steps.source.outputs.deploy_run }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          CHECKS="$(node --input-type=module -e "import fs from 'node:fs';const r=JSON.parse(fs.readFileSync('r7-nav-browser-evidence.json'));process.stdout.write(String(r.checks));")"
+          {
+            echo '<!-- TTQS_R7_NAV_BROWSER_EVIDENCE_V1 -->'
+            echo '## R7-NAV-BLOCKER｜部署後真實瀏覽器機器驗證'
+            echo
+            echo "- source_sha: \`$SOURCE_SHA\`"
+            echo "- deployment_workflow_run: \`$DEPLOY_RUN\`"
+            echo '- browser: `Playwright Chromium / clean context`'
+            echo '- viewports: `desktop 1440x1000 + mobile 390x844`'
+            echo '- indicators_clicked: `19/19 each viewport`'
+            echo "- total_checks: \`$CHECKS\`"
+            echo '- required: top-level canonical /exec?indicator=<id>; no nested script.google.com /exec frame; no refused-to-connect text; Chinese title; >=1 document card'
+            echo '- result: `PASS_MACHINE_BROWSER`'
+            echo '- human_gate: `UNCHANGED — FA-08=FAIL; NAV-02=FAIL; T Gate=NOT PASS until human re-test`'
+            echo '- scope: `TEST/SAMPLE/CONTROL only; REAL/PROD/formal scoring/official submission = 0`'
+          } > r7-nav-browser-receipt.md
+          gh issue comment "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file r7-nav-browser-receipt.md
