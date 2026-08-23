@@ -27,12 +27,14 @@ export const REQUIRED_PRODUCT_MARKERS = [
 
 // R7/DRAFT-003 interface diagnostics are additive only. They can help explain
 // the rendered product, but they MUST NOT replace, waive, or satisfy any R2
-// G02-M01..M19 required marker.
+// G02-M01..M19 required marker. In particular, do not duplicate an R2 human-facing
+// phrase here: use a structural R7 navigation marker so diagnostics-only input
+// cannot accidentally satisfy the R2 contract.
 export const R7_REQUIRED_PRODUCT_MARKERS = [
   'TTQS ONE｜顧問唯讀 DEMO 查驗入口',
   'TEST／SAMPLE／CONTROL',
   '19/19',
-  '查看文件與證據',
+  'data-top-level-nav=',
   '開啟文件',
   '共 129 / 129',
   '並非官方強制 129 份文件',
