@@ -2,8 +2,8 @@ import fs from 'node:fs';
 import {fileURLToPath} from 'node:url';
 
 export const REQUIRED_PRODUCT_MARKERS = [
-  // R2 G-02 acceptance contract. These 19 markers are immutable unless a human
-  // explicitly approves an acceptance-contract revision before implementation.
+  // R2 G-02 acceptance contract. The user explicitly revised the evaluator-facing
+  // navigation wording from 「查看佐證與來源」 to 「查看文件與證據」 on 2026-08-24.
   'TTQS ONE · 測試／示範資料（TEST／SAMPLE）· EXTERNAL_READONLY',
   '官方指標範圍',
   '19 / 19',
@@ -19,7 +19,7 @@ export const REQUIRED_PRODUCT_MARKERS = [
   'MATCHED_EXACTLY_ONCE',
   'AttemptHistory=append-only',
   '19 指標佐證與來源下鑽',
-  '查看佐證與來源',
+  '查看文件與證據',
   'Google Drive 連結只是選配，不是顧問調閱成功的必要條件',
   '不在執行期呼叫 Google Sheets／Drive API',
   '本唯讀檢視器不會把 SAMPLE／CONTROL 宣稱為 REAL'
@@ -27,13 +27,15 @@ export const REQUIRED_PRODUCT_MARKERS = [
 
 // R7/DRAFT-003 interface diagnostics are additive only. They can help explain
 // the rendered product, but they MUST NOT replace, waive, or satisfy any R2
-// G02-M01..M19 required marker.
+// G02-M01..M19 required marker. In particular, do not duplicate an R2 human-facing
+// phrase here: use a structural R7 navigation marker so diagnostics-only input
+// cannot accidentally satisfy the R2 contract.
 export const R7_REQUIRED_PRODUCT_MARKERS = [
   'TTQS ONE｜顧問唯讀 DEMO 查驗入口',
   'TEST／SAMPLE／CONTROL',
   '19/19',
-  'Evidence Matrix',
-  'FrozenArtifact',
+  'data-top-level-nav=',
+  '開啟文件',
   '共 129 / 129',
   '並非官方強制 129 份文件',
   'ER-DEMO-20260901-DRAFT-003',
