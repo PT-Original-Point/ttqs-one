@@ -72,3 +72,20 @@ test('provider-version workflow is post-deploy, durable, observable on failure, 
   assert.equal(/apps-script-rest-deploy\.mjs\s+(?:push-content|deploy|ensure-project)/.test(workflow),false);
   assert.equal(/inspect-external-deployment\.mjs[\s\S]*--root-dir/.test(workflow),false);
 });
+
+test('deploy workflow performs provider version GET only after black-box PASS and publishes a durable receipt',()=>{
+  const workflow=fs.readFileSync('.github/workflows/deploy-external-test.yml','utf8');
+  const blackboxReceipt=workflow.indexOf('Publish durable deployment receipt after black-box PASS');
+  const providerGet=workflow.indexOf('Read back exact Apps Script provider version after black-box PASS');
+  const providerReceipt=workflow.indexOf('TTQS_EXTERNAL_PROVIDER_VERSION_RECEIPT_V2');
+  assert.ok(blackboxReceipt>=0);
+  assert.ok(providerGet>blackboxReceipt);
+  assert.ok(providerReceipt>providerGet);
+  const postBlackbox=workflow.slice(blackboxReceipt);
+  assert.match(postBlackbox,/inspect-external-deployment\.mjs/);
+  assert.match(postBlackbox,/POST_DEPLOY_READ_ONLY_PROVIDER_GET/);
+  assert.match(postBlackbox,/mutation:'NONE'/);
+  assert.match(postBlackbox,/PROVIDER_VERSION_SOURCE_DESCRIPTION_MISMATCH/);
+  assert.match(postBlackbox,/TTQS_EXTERNAL_PROVIDER_VERSION_INTEGRATED_FAILURE_V1/);
+  assert.equal(/apps-script-rest-deploy\.mjs\s+(?:ensure-project|push-content|deploy)\b/.test(postBlackbox),false);
+});
