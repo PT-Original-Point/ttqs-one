@@ -1,0 +1,89 @@
+name: External TEST Provider Access Readback
+
+on:
+  push:
+    branches:
+      - work/portal-anon-20260823
+    paths:
+      - scripts/inspect-external-deployment.mjs
+      - .github/workflows/inspect-external-provider-access.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+env:
+  EXTERNAL_RECEIPT_ISSUE: '39'
+
+jobs:
+  provider-access-readback:
+    runs-on: ubuntu-24.04
+    environment: TEST
+    timeout-minutes: 10
+    steps:
+      - name: Checkout read-only inspection source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      - name: Setup Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install dependencies without lifecycle scripts
+        run: npm ci --ignore-scripts
+
+      - name: Resolve durable TEST provider identity
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh issue view "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --json body --jq .body > external-receipt-body.md
+          node --input-type=module -e "import fs from 'node:fs'; import {parseReceiptBody} from './scripts/external-deployment-receipt.mjs'; const r=parseReceiptBody(fs.readFileSync('external-receipt-body.md','utf8')); const s=String(r.scriptId||''); const d=String(r.deploymentId||''); if(!/^[A-Za-z0-9_-]{20,}$/.test(s)) throw new Error('SCRIPT_ID_INVALID'); if(!/^AKfy[A-Za-z0-9_-]+$/.test(d)) throw new Error('DEPLOYMENT_ID_INVALID'); fs.appendFileSync(process.env.GITHUB_ENV,'EXTERNAL_SCRIPT_ID='+s+'\nEXTERNAL_DEPLOYMENT_ID='+d+'\n');"
+
+      - name: Restore TEST OAuth credential for GET-only inspection
+        shell: bash
+        env:
+          CLASPRC_JSON_B64: ${{ secrets.CLASPRC_JSON_B64 }}
+        run: |
+          set -euo pipefail
+          test -n "$CLASPRC_JSON_B64"
+          OAUTH_FILE="$RUNNER_TEMP/ttqs-provider-access-readback-oauth.json"
+          printf '%s' "$CLASPRC_JSON_B64" | base64 -d > "$OAUTH_FILE"
+          chmod 600 "$OAUTH_FILE"
+          echo "EXTERNAL_OAUTH_FILE=$OAUTH_FILE" >> "$GITHUB_ENV"
+
+      - name: GET current deployment including web-app entry configuration
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/apps-script-rest-deploy.mjs auth-check --credentials "$EXTERNAL_OAUTH_FILE"
+          node scripts/inspect-external-deployment.mjs \
+            --credentials "$EXTERNAL_OAUTH_FILE" \
+            --script-id "$EXTERNAL_SCRIPT_ID" \
+            --deployment-id "$EXTERNAL_DEPLOYMENT_ID" \
+            --diagnostic-file provider-access-readback.json \
+            | tee provider-access-output.txt
+          node --input-type=module -e "import fs from 'node:fs'; const r=JSON.parse(fs.readFileSync('provider-access-readback.json','utf8')); if(!r.entryPointConfigPresent) throw new Error('WEBAPP_ENTRY_CONFIG_MISSING'); const e={schema:'TTQS_P01_PROVIDER_ACCESS_READBACK_V1',deploymentId:r.returnedDeploymentId,scriptId:r.returnedScriptId,versionNumber:r.versionNumber,access:r.access,executeAs:r.executeAs,webAppUrl:r.webAppUrl,entryPointType:r.webAppEntryPointType,mode:'GET_ONLY',mutation:'NONE',verificationSha:process.env.GITHUB_SHA}; fs.writeFileSync('p01-readback.json',JSON.stringify(e)+'\n');"
+
+      - name: Publish P-01 durable readback receipt
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          {
+            echo '<!-- TTQS_P01_PROVIDER_ACCESS_READBACK_V1 -->'
+            echo '## P-01｜Apps Script 匿名存取設定唯讀讀回'
+            echo
+            echo '- mode: `GET_ONLY`'
+            echo '- mutation: `NONE`'
+            echo '- scope: `TEST/SAMPLE/CONTROL only`'
+            echo
+            echo '```json'
+            cat p01-readback.json
+            echo '```'
+          } > p01-receipt.md
+          gh issue comment "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file p01-receipt.md
