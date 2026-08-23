@@ -35,7 +35,7 @@ test('exhaustive live verification is pinned to DRAFT-003 registered identity',(
 test('exhaustive live verification always publishes durable R2 per-marker evidence in Issue 39',()=>{
   assert.match(liveWorkflow,/issues: write/);
   assert.match(liveWorkflow,/EXTERNAL_RECEIPT_ISSUE: '39'/);
-  assert.match(liveWorkflow,/Publish durable R2 per-marker evidence and exhaustive-live receipt/);
+  assert.match(liveWorkflow,/Publish durable Issue 39 evidence receipts/);
   assert.match(liveWorkflow,/if: always\(\)/);
   assert.match(liveWorkflow,/TTQS_R2_G02_MARKER_EVIDENCE_V1/);
   assert.match(liveWorkflow,/R2_G02_19_REQUIRED/);
@@ -45,6 +45,26 @@ test('exhaustive live verification always publishes durable R2 per-marker eviden
   assert.match(liveWorkflow,/source_sha/);
   assert.match(liveWorkflow,/artifact_secondary_copy/);
   assert.match(liveWorkflow,/gh issue comment "\$EXTERNAL_RECEIPT_ISSUE"/);
+});
+
+test('live verifier uses supported Node, bounded transport-only retry, and never retries semantic failures',()=>{
+  assert.match(liveWorkflow,/node-version: '22'/);
+  assert.match(liveWorkflow,/MAX_TRANSPORT_ATTEMPTS=3/);
+  assert.match(liveWorkflow,/OFFICIAL129_LIVE_BLACKBOX_FAIL fetch failed/);
+  assert.match(liveWorkflow,/R7_LIVE_TRANSPORT_RETRY/);
+  assert.match(liveWorkflow,/exit "\$PROBE_STATUS"/);
+  assert.equal(liveWorkflow.includes("OFFICIAL129_LIVE_BLACKBOX_FAIL ARTIFACT_IDENTITY_OR_HASH_FAIL"),false);
+  assert.equal(liveWorkflow.includes("OFFICIAL129_LIVE_BLACKBOX_FAIL HOME_INDICATOR_LINK_MISSING"),false);
+});
+
+test('full live evidence is durably machine-readable in Issue 39 and artifact is secondary only',()=>{
+  assert.match(liveWorkflow,/R7_LIVE_PROBE_EVIDENCE\.json/);
+  assert.match(liveWorkflow,/JSON\.stringify\(parsed\)/);
+  assert.match(liveWorkflow,/TTQS_R7_LIVE_EVIDENCE_V1/);
+  assert.match(liveWorkflow,/live_evidence_sha256/);
+  assert.match(liveWorkflow,/fenced JSON below is the exact compact live evidence payload/);
+  assert.match(liveWorkflow,/include-hidden-files: true/);
+  assert.match(liveWorkflow,/Preserve live probe evidence as secondary human-download copy/);
 });
 
 test('R7 homepage diagnostic wording is byte-for-text aligned across runtime, classifier and live probe',()=>{
