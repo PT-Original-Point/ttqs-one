@@ -4,24 +4,32 @@ const DEFAULT_CANONICAL_RE=/^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-
 
 function escPattern(value){return String(value).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');}
 
-export function normalizeR7NavigationHtml(input){
+export function normalizeHtmlServiceSerializedAttributes(input){
   let out=normalizeAppsScriptHtmlServiceWrapper(String(input??''));
   for(let pass=0;pass<16;pass++){
     const before=out;
     out=out
-      .replace(/\\x3c/gi,'<').replace(/\\u003c/gi,'<')
-      .replace(/\\x3e/gi,'>').replace(/\\u003e/gi,'>')
-      .replace(/\\x3d/gi,'=').replace(/\\u003d/gi,'=')
-      .replace(/\\x22/gi,'"').replace(/\\u0022/gi,'"')
-      .replace(/\\x27/gi,"'").replace(/\\u0027/gi,"'")
-      .replace(/\\x26/gi,'&').replace(/\\u0026/gi,'&')
-      .replace(/\\x2f/gi,'/').replace(/\\u002f/gi,'/')
-      .replace(/\\\//g,'/').replace(/\\"/g,'"').replace(/\\'/g,"'")
+      .replace(/\\+(?:x3c|u003c)/gi,'<')
+      .replace(/\\+(?:x3e|u003e)/gi,'>')
+      .replace(/\\+(?:x3d|u003d)/gi,'=')
+      .replace(/\\+(?:x22|u0022)/gi,'"')
+      .replace(/\\+(?:x27|u0027)/gi,"'")
+      .replace(/\\+(?:x26|u0026)/gi,'&')
+      .replace(/\\+(?:x2f|u002f)/gi,'/')
+      .replace(/\\+\//g,'/')
+      .replace(/\\+(?=["'])/g,'')
       .replace(/&lt;/gi,'<').replace(/&gt;/gi,'>').replace(/&quot;/gi,'"')
-      .replace(/&#39;|&apos;/gi,"'").replace(/&amp;/gi,'&');
+      .replace(/&#0*34;|&#x0*22;/gi,'"')
+      .replace(/&#0*39;|&#x0*27;|&apos;/gi,"'")
+      .replace(/&#0*61;|&#x0*3d;|&equals;/gi,'=')
+      .replace(/&amp;/gi,'&');
     if(out===before)break;
   }
   return out;
+}
+
+export function normalizeR7NavigationHtml(input){
+  return normalizeHtmlServiceSerializedAttributes(input);
 }
 
 function elementByDataAttribute(html,tag,attribute,value){
