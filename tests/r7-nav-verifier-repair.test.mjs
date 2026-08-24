@@ -3,14 +3,16 @@ import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
-import {R7_REQUIRED_PRODUCT_MARKERS,REQUIRED_PRODUCT_MARKERS} from '../scripts/external-blackbox-classifier.mjs';
-import {normalizeR7NavigationHtml,verifyHomeIndicatorRoute,verifyEvidenceMatrixLayer} from '../scripts/r7-nav-verifier.mjs';
+import {normalizeAppsScriptHtmlServiceWrapper,R7_REQUIRED_PRODUCT_MARKERS,REQUIRED_PRODUCT_MARKERS} from '../scripts/external-blackbox-classifier.mjs';
+import {normalizeHtmlServiceSerializedAttributes,normalizeR7NavigationHtml,verifyHomeIndicatorRoute,verifyEvidenceMatrixLayer} from '../scripts/r7-nav-verifier.mjs';
 
 const fixtureDir=path.join('tests','fixtures','r7-nav-verifier-repair','provider-v11-source-53c6f5-20260824');
 const fixture=JSON.parse(fs.readFileSync(path.join(fixtureDir,'fixture.json'),'utf8'));
 const matrixProvenance=JSON.parse(fs.readFileSync(path.join(fixtureDir,'matrix-capture-provenance.json'),'utf8'));
 const raw=fs.readFileSync(path.join(fixtureDir,'home.raw.html'),'utf8');
 const browserHome=fs.readFileSync(path.join(fixtureDir,'browser.content.body.outerHTML.html'),'utf8');
+const browserCard=fs.readFileSync(path.join(fixtureDir,'indicator1.card.outerHTML.html'),'utf8');
+const browserLink=fs.readFileSync(path.join(fixtureDir,'indicator1.link.outerHTML.html'),'utf8').trim();
 const browserMatrix=()=>fs.readFileSync(path.join(fixtureDir,'browser.matrix.body.outerHTML.html'),'utf8');
 const canonical=fixture.source.canonicalUrl;
 const sha256=value=>crypto.createHash('sha256').update(value).digest('hex');
@@ -25,6 +27,23 @@ function removeAttributeOnce(source,name){
   const pattern=new RegExp(`\\s${name}="[^"]*"`);
   assert.match(source,pattern);
   return source.replace(pattern,'');
+}
+
+// Exact historical homepage condition from the pre-repair exhaustive live verifier:
+// normalize the HtmlService wrapper, then require data-matrix-indicator="N" on HOME.
+// The actual TEST homepage uses data-indicator on the card, so this old condition must
+// reproduce HOME_INDICATOR_LINK_MISSING:N on the same real V-01 bytes.
+function historicalOldHomeVerifier(input,{indicator}){
+  const id=String(indicator);
+  const normalized=normalizeAppsScriptHtmlServiceWrapper(input)
+    .replace(/\\x3[cC]/g,'<').replace(/\\u003[cC]/g,'<')
+    .replace(/\\x3[eE]/g,'>').replace(/\\u003[eE]/g,'>')
+    .replace(/\\x26/g,'&').replace(/\\u0026/g,'&')
+    .replace(/\\x27/g,"'").replace(/\\u0027/g,"'")
+    .replace(/\\x22/g,'"').replace(/\\u0022/g,'"');
+  return normalized.includes(`data-matrix-indicator="${id}"`)
+    ? {pass:true,code:null}
+    : {pass:false,code:`HOME_INDICATOR_LINK_MISSING:${id}`};
 }
 
 test('V-01/V-02 fixture is actual anonymous TEST provider evidence, not a handwritten mock',()=>{
@@ -53,11 +72,15 @@ test('V-02 Matrix fixture is exact bytes from the second actual Playwright captu
   assert.equal(sha256(matrix),matrixProvenance.sha256);
 });
 
-test('V-05 actual raw fixture reproduces the old HOME_INDICATOR_LINK_MISSING false negative',()=>{
-  const normalized=normalizeR7NavigationHtml(raw);
-  assert.equal(normalized.includes('data-matrix-indicator="1"'),false,'old homepage verifier condition must remain reproducible as false');
+test('V-05 same actual raw fixture fails historical verifier and passes repaired verifier',()=>{
+  const oldResult=historicalOldHomeVerifier(raw,{indicator:1});
+  assert.equal(oldResult.pass,false);
+  assert.equal(oldResult.code,'HOME_INDICATOR_LINK_MISSING:1');
+
+  const normalized=normalizeHtmlServiceSerializedAttributes(raw);
   assert.equal(normalized.includes('data-indicator="1"'),true);
-  assert.equal(normalized.includes(`${canonical}?indicator=1`),true);
+  const repaired=verifyHomeIndicatorRoute(raw,{indicator:1,canonical});
+  assert.equal(repaired.pass,true,repaired.code||'unexpected repaired-verifier failure');
 });
 
 test('V-03 repaired home verifier reads the same actual serialized provider link',()=>{
@@ -75,7 +98,7 @@ test('V-03 repaired home verifier also reads the real Playwright DOM representat
   assert.equal(result.target,fixture.browserDom.indicator1.targetAttribute);
 });
 
-test('V-05 actual DOM without card data-indicator remains fail-closed',()=>{
+test('V-05 fail closed: actual card missing data-indicator',()=>{
   const broken=browserHome.replace(' data-indicator="1"','');
   assert.notEqual(broken,browserHome);
   const result=verifyHomeIndicatorRoute(broken,{indicator:1,canonical});
@@ -83,12 +106,34 @@ test('V-05 actual DOM without card data-indicator remains fail-closed',()=>{
   assert.equal(result.code,'HOME_INDICATOR_CARD_MISSING');
 });
 
-test('V-05 actual DOM without href remains fail-closed instead of being treated as escaping',()=>{
-  const card=fs.readFileSync(path.join(fixtureDir,'indicator1.card.outerHTML.html'),'utf8');
-  const broken=removeAttributeOnce(card,'href');
+test('V-05 fail closed: indicator card missing 查看文件與證據 link',()=>{
+  const broken=removeOnce(browserCard,browserLink);
+  const result=verifyHomeIndicatorRoute(broken,{indicator:1,canonical});
+  assert.equal(result.pass,false);
+  assert.equal(result.code,'HOME_INDICATOR_LINK_MISSING');
+});
+
+test('V-05 fail closed: actual DOM without href is not treated as escaping',()=>{
+  const broken=removeAttributeOnce(browserCard,'href');
   const result=verifyHomeIndicatorRoute(broken,{indicator:1,canonical});
   assert.equal(result.pass,false);
   assert.equal(result.code,'HOME_INDICATOR_HREF_MISSING');
+});
+
+test('V-05 fail closed: 查看文件與證據 href must be exact canonical indicator route',()=>{
+  const broken=browserCard.replace(`${canonical}?indicator=1`,'https://example.invalid/not-canonical');
+  assert.notEqual(broken,browserCard);
+  const result=verifyHomeIndicatorRoute(broken,{indicator:1,canonical});
+  assert.equal(result.pass,false);
+  assert.equal(result.code,'HOME_INDICATOR_CANONICAL_URL_FAIL');
+});
+
+test('V-05 fail closed: canonical href with non-top target is rejected',()=>{
+  const broken=browserCard.replace('target="_top"','target="_self"');
+  assert.notEqual(broken,browserCard);
+  const result=verifyHomeIndicatorRoute(broken,{indicator:1,canonical});
+  assert.equal(result.pass,false);
+  assert.equal(result.code,'HOME_INDICATOR_TARGET_FAIL');
 });
 
 test('V-06 homepage layer requires 查看文件與證據 but never requires second-layer 開啟文件',()=>{
