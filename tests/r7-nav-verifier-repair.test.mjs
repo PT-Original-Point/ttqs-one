@@ -4,12 +4,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
 import {normalizeAppsScriptHtmlServiceWrapper,R7_REQUIRED_PRODUCT_MARKERS,REQUIRED_PRODUCT_MARKERS} from '../scripts/external-blackbox-classifier.mjs';
-import {normalizeHtmlServiceSerializedAttributes,normalizeR7NavigationHtml,verifyHomeIndicatorRoute,verifyEvidenceMatrixLayer} from '../scripts/r7-nav-verifier.mjs';
+import {normalizeHtmlServiceSerializedAttributes,verifyHomeIndicatorRoute,verifyEvidenceMatrixLayer} from '../scripts/r7-nav-verifier.mjs';
 
 const fixtureDir=path.join('tests','fixtures','r7-nav-verifier-repair','provider-v11-source-53c6f5-20260824');
 const fixture=JSON.parse(fs.readFileSync(path.join(fixtureDir,'fixture.json'),'utf8'));
 const matrixProvenance=JSON.parse(fs.readFileSync(path.join(fixtureDir,'matrix-capture-provenance.json'),'utf8'));
-const raw=fs.readFileSync(path.join(fixtureDir,'home.raw.html'),'utf8');
+const rawB64=Array.from({length:7},(_,index)=>fs.readFileSync(path.join(fixtureDir,`home.raw.b64.part${String(index).padStart(2,'0')}`),'utf8')).join('');
+const rawBuffer=Buffer.from(rawB64,'base64');
+const raw=rawBuffer.toString('utf8');
 const browserHome=fs.readFileSync(path.join(fixtureDir,'browser.content.body.outerHTML.html'),'utf8');
 const browserCard=fs.readFileSync(path.join(fixtureDir,'indicator1.card.outerHTML.html'),'utf8');
 const browserLink=fs.readFileSync(path.join(fixtureDir,'indicator1.link.outerHTML.html'),'utf8').trim();
@@ -53,6 +55,8 @@ test('V-01/V-02 fixture is actual anonymous TEST provider evidence, not a handwr
   assert.equal(fixture.source.providerVersion,11);
   assert.equal(fixture.source.providerSourceSha,'53c6f5f05886bd3e5e48e682043dec3b492af3ed');
   assert.match(fixture.capturedAt,/^2026-08-23T22:/);
+  assert.equal(rawBuffer.length,fixture.rawHtmlService.bytes);
+  assert.equal(sha256(rawBuffer),fixture.rawHtmlService.sha256);
   assert.equal(fixture.browserDom.indicator1.linkGetAttributeDataIndicator,null);
   assert.equal(fixture.browserDom.indicator1.cardGetAttributeDataIndicator,'1');
   assert.equal(fixture.browserDom.click.actualPageUrl,`${canonical}?indicator=1`);
