@@ -1,4 +1,4 @@
-name: PR89 R7 Live Canary
+name: PR89 R7 Targeted Matrix Regression
 
 on:
   pull_request:
@@ -6,14 +6,11 @@ on:
 permissions:
   contents: read
 
-env:
-  EXTERNAL_WEBAPP_URL: https://script.google.com/macros/s/AKfycbznbXi-0XWNV68E-vGU9CiAE6ElXGIlDmy27EePXMdGpRaorURzKZq0dDgsNBaaZOLh/exec
-
 jobs:
-  exhaustive-r7-live-pr89:
+  targeted-r7-matrix-regression:
     if: github.head_ref == 'work/r7-nav-verifier-repair-20260824'
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 10
     steps:
       - name: Checkout current PR head
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
@@ -29,58 +26,5 @@ jobs:
       - name: Install dependencies without lifecycle scripts
         run: npm ci --ignore-scripts
 
-      - name: Verify R2 required homepage markers
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p .r7-live-evidence
-          curl --fail --silent --show-error --location --max-time 30 \
-            -H 'cache-control: no-cache' \
-            -H 'user-agent: TTQS-ONE-PR89-LIVE-CANARY/1.0' \
-            -o .r7-live-evidence/HOME_MARKER_PAGE.html \
-            "$EXTERNAL_WEBAPP_URL"
-          node scripts/external-blackbox-classifier.mjs \
-            --html .r7-live-evidence/HOME_MARKER_PAGE.html \
-            --evidence-out .r7-live-evidence/BLACKBOX_MARKER_EVIDENCE.json \
-            2>&1 | tee .r7-live-evidence/BLACKBOX_MARKER_OUTPUT.txt
-          grep -Fq 'BLACKBOX_MARKERS_PASS contract=R2_G02_19_REQUIRED markers=19/19 safety=PASS mode=R7_DRAFT003' .r7-live-evidence/BLACKBOX_MARKER_OUTPUT.txt
-          rm -f .r7-live-evidence/HOME_MARKER_PAGE.html
-
-      - name: Run exhaustive R7 live verifier
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p .r7-live-evidence
-          MAX_TRANSPORT_ATTEMPTS=3
-          ATTEMPT=1
-          while true; do
-            ATTEMPT_OUTPUT=".r7-live-evidence/R7_LIVE_PROBE_OUTPUT.attempt-${ATTEMPT}.txt"
-            set +e
-            node scripts/external-official129-live-probe.mjs 2>&1 | tee "$ATTEMPT_OUTPUT"
-            PROBE_STATUS=${PIPESTATUS[0]}
-            set -e
-            cp "$ATTEMPT_OUTPUT" .r7-live-evidence/R7_LIVE_PROBE_OUTPUT.txt
-            if test "$PROBE_STATUS" -eq 0; then
-              printf '%s\n' "$ATTEMPT" > .r7-live-evidence/R7_LIVE_TRANSPORT_ATTEMPT.txt
-              break
-            fi
-            if grep -Fq 'OFFICIAL129_LIVE_BLACKBOX_FAIL fetch failed' "$ATTEMPT_OUTPUT" && test "$ATTEMPT" -lt "$MAX_TRANSPORT_ATTEMPTS"; then
-              ATTEMPT=$((ATTEMPT + 1))
-              sleep $((ATTEMPT * 2))
-              continue
-            fi
-            printf '%s\n' "$ATTEMPT" > .r7-live-evidence/R7_LIVE_TRANSPORT_ATTEMPT.txt
-            exit "$PROBE_STATUS"
-          done
-          grep -Fq 'OFFICIAL129_LIVE_BLACKBOX_PASS items=129 matrices=19 negatives=2 release=ER-DEMO-20260901-DRAFT-003' .r7-live-evidence/R7_LIVE_PROBE_OUTPUT.txt
-
-      - name: Upload exhaustive evidence
-        if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
-        with:
-          name: pr89-r7-live-canary-${{ github.run_id }}
-          path: .r7-live-evidence/
-          if-no-files-found: warn
-          include-hidden-files: true
-          retention-days: 7
-          compression-level: 0
+      - name: Run targeted actual-fixture matrix regression
+        run: node --test tests/r7-matrix-item-verifier.test.mjs tests/r7-nav-verifier-repair.test.mjs

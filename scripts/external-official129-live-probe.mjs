@@ -4,6 +4,7 @@ import zlib from 'node:zlib';
 import crypto from 'node:crypto';
 import {normalizeAppsScriptHtmlServiceWrapper} from './external-blackbox-classifier.mjs';
 import {normalizeR7NavigationHtml,verifyHomeIndicatorRoute,verifyEvidenceMatrixLayer} from './r7-nav-verifier.mjs';
+import {verifyEvidenceMatrixItemIdentity} from './r7-matrix-item-verifier.mjs';
 
 const root=process.cwd();
 const r7Dir=path.join(root,'release','official129');
@@ -120,10 +121,8 @@ try{
     const matrixContract=verifyEvidenceMatrixLayer(r.normalized,{indicator:id,canonical});
     require_(matrixContract.pass,matrixContract.code||'MATRIX_DOCUMENT_LAYER_FAIL',id);
     for(const x of expected){
-      require_(r.normalized.includes(`data-official-ref-id="${x.officialRefId}"`),'MATRIX_REF_MISSING',x.officialRefId);
-      require_(r.normalized.includes(`data-artifact-code="${x.artifactCode}"`),'MATRIX_ARTIFACT_CODE_MISSING',x.artifactCode);
-      require_(r.normalized.includes(`data-frozen-artifact-id="${x.artifactCode}"`),'MATRIX_ARTIFACT_LINK_MISSING',x.artifactCode);
-      require_(r.normalized.includes(`${canonical}?artifact=${encodeURIComponent(x.artifactCode)}`),'MATRIX_CANONICAL_LINK_FAIL',x.artifactCode);
+      const itemContract=verifyEvidenceMatrixItemIdentity(r.normalized,{officialRefId:x.officialRefId,artifactCode:x.artifactCode,canonical});
+      require_(itemContract.pass,itemContract.code||'MATRIX_ITEM_IDENTITY_FAIL',x.officialRefId);
     }
     if(r.ms>4000)results.performance.hardFailures.push({kind:'matrix',id,ms:r.ms}); else if(r.ms>2000)results.performance.matrixOver2s.push({id,ms:r.ms});
     return {indicator:id,expectedItems:expected.length,status:r.status,ms:r.ms,documentCardCount:matrixContract.documentCardCount,chineseDocumentCardCount:matrixContract.chineseDocumentCardCount,openDocumentCount:matrixContract.openDocumentCount,firstCanonicalArtifactUrl:matrixContract.firstCanonicalArtifactUrl,pass:true};
