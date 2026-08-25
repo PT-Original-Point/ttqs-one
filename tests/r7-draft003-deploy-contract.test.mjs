@@ -10,6 +10,7 @@ import {
 const deploy=fs.readFileSync('.github/workflows/deploy-external-test.yml','utf8');
 const liveWorkflow=fs.readFileSync('.github/workflows/verify-external-r7-live.yml','utf8');
 const liveProbe=fs.readFileSync('scripts/external-official129-live-probe.mjs','utf8');
+const matrixItemVerifier=fs.readFileSync('scripts/r7-matrix-item-verifier.mjs','utf8');
 const runtime=fs.readFileSync('release/official129/Official129Runtime.gs','utf8');
 
 const release='ER-DEMO-20260901-DRAFT-003';
@@ -95,10 +96,9 @@ test('V-07 exhaustive live Matrix layer explicitly verifies Chinese document lay
   assert.ok(liveProbe.includes('verifyEvidenceMatrixLayer'));
   assert.match(liveProbe,/require_\(matrixContract\.pass,matrixContract\.code\|\|'MATRIX_DOCUMENT_LAYER_FAIL'/);
   for(const marker of ['documentCardCount','chineseDocumentCardCount','openDocumentCount','firstCanonicalArtifactUrl']) assert.ok(liveProbe.includes(marker),marker);
-  assert.ok(liveProbe.includes('MATRIX_REF_MISSING'));
-  assert.ok(liveProbe.includes('MATRIX_ARTIFACT_CODE_MISSING'));
-  assert.ok(liveProbe.includes('MATRIX_ARTIFACT_LINK_MISSING'));
-  assert.ok(liveProbe.includes('MATRIX_CANONICAL_LINK_FAIL'));
+  assert.match(liveProbe,/import \{verifyEvidenceMatrixItemIdentity\} from '\.\/r7-matrix-item-verifier\.mjs';/);
+  assert.match(liveProbe,/const matrixContract=verifyEvidenceMatrixLayer[\s\S]*require_\(matrixContract\.pass[\s\S]*for\(const x of expected\)\{[\s\S]*verifyEvidenceMatrixItemIdentity/);
+  for(const marker of ['MATRIX_REF_MISSING','MATRIX_ARTIFACT_CODE_MISSING','MATRIX_CANONICAL_ARTIFACT_ROUTE_MISSING']) assert.ok(matrixItemVerifier.includes(marker),marker);
 });
 
 test('DRAFT-003 evaluator homepage must satisfy R2 G02-M01..M19; R7 diagnostics alone can never pass',()=>{
