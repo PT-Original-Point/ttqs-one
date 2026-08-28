@@ -12,6 +12,7 @@ const liveWorkflow=fs.readFileSync('.github/workflows/verify-external-r7-live.ym
 const liveProbe=fs.readFileSync('scripts/external-official129-live-probe.mjs','utf8');
 const matrixItemVerifier=fs.readFileSync('scripts/r7-matrix-item-verifier.mjs','utf8');
 const runtime=fs.readFileSync('release/official129/Official129Runtime.gs','utf8');
+const legacyRegression=fs.readFileSync('release/official129/Official129LegacyRegression.gs','utf8');
 
 const release='ER-DEMO-20260901-DRAFT-003';
 const projection='94590a9bbfdca699235815fb96e4c37c69156f10689e70b6c3caa74527165a53';
@@ -76,6 +77,13 @@ test('R7 homepage diagnostic wording is byte-for-text aligned across runtime, cl
   assert.ok(liveProbe.includes(exact),'live probe marker drift');
   assert.equal(R7_REQUIRED_PRODUCT_MARKERS.includes(stale),false,'stale classifier wording revived');
   assert.equal(liveProbe.includes(stale),false,'stale live-probe wording revived');
+});
+
+test('LegacyRegression artifact override preserves canonical R7 identity while keeping human navigation',()=>{
+  for(const marker of ['data-artifact-id=','data-official-ref-id=','data-release-id=','data-frozen-pdf-sha256=','data-text-sha256=','data-offline-relative-path=','Frozen PDF 文字投影']) assert.ok(legacyRegression.includes(marker),marker);
+  assert.ok(legacyRegression.includes('data-top-level-nav='),'top-level navigation marker missing');
+  assert.ok(legacyRegression.includes('查看文件與證據'),'home human-facing navigation missing');
+  assert.ok(legacyRegression.includes('開啟文件'),'matrix human-facing navigation missing');
 });
 
 test('V-06 homepage diagnostics no longer require second-layer 開啟文件',()=>{
