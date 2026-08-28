@@ -1,0 +1,209 @@
+name: PR89 R7 Live Canary
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  EXTERNAL_WEBAPP_URL: https://script.google.com/macros/s/AKfycbznbXi-0XWNV68E-vGU9CiAE6ElXGIlDmy27EePXMdGpRaorURzKZq0dDgsNBaaZOLh/exec
+
+jobs:
+  exhaustive-r7-live-pr89:
+    if: github.head_ref == 'work/r7-nav-verifier-repair-20260824'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout current PR head
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install dependencies without lifecycle scripts
+        run: npm ci --ignore-scripts
+
+      - name: Verify R2 required homepage markers
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .r7-live-evidence
+          curl --fail --silent --show-error --location --max-time 30 \
+            -H 'cache-control: no-cache' \
+            -H 'user-agent: TTQS-ONE-PR89-LIVE-CANARY/1.0' \
+            -o .r7-live-evidence/HOME_MARKER_PAGE.html \
+            "$EXTERNAL_WEBAPP_URL"
+          node scripts/external-blackbox-classifier.mjs \
+            --html .r7-live-evidence/HOME_MARKER_PAGE.html \
+            --evidence-out .r7-live-evidence/BLACKBOX_MARKER_EVIDENCE.json \
+            2>&1 | tee .r7-live-evidence/BLACKBOX_MARKER_OUTPUT.txt
+          grep -Fq 'BLACKBOX_MARKERS_PASS contract=R2_G02_19_REQUIRED markers=19/19 safety=PASS mode=R7_DRAFT003' .r7-live-evidence/BLACKBOX_MARKER_OUTPUT.txt
+          rm -f .r7-live-evidence/HOME_MARKER_PAGE.html
+
+      - name: Run exhaustive R7 live verifier
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .r7-live-evidence
+          MAX_TRANSPORT_ATTEMPTS=3
+          ATTEMPT=1
+          while true; do
+            ATTEMPT_OUTPUT=".r7-live-evidence/R7_LIVE_PROBE_OUTPUT.attempt-${ATTEMPT}.txt"
+            set +e
+            node scripts/external-official129-live-probe.mjs 2>&1 | tee "$ATTEMPT_OUTPUT"
+            PROBE_STATUS=${PIPESTATUS[0]}
+            set -e
+            cp "$ATTEMPT_OUTPUT" .r7-live-evidence/R7_LIVE_PROBE_OUTPUT.txt
+            if test "$PROBE_STATUS" -eq 0; then
+              printf '%s\n' "$ATTEMPT" > .r7-live-evidence/R7_LIVE_TRANSPORT_ATTEMPT.txt
+              break
+            fi
+            if grep -Fq 'OFFICIAL129_LIVE_BLACKBOX_FAIL fetch failed' "$ATTEMPT_OUTPUT" && test "$ATTEMPT" -lt "$MAX_TRANSPORT_ATTEMPTS"; then
+              ATTEMPT=$((ATTEMPT + 1))
+              sleep $((ATTEMPT * 2))
+              continue
+            fi
+            printf '%s\n' "$ATTEMPT" > .r7-live-evidence/R7_LIVE_TRANSPORT_ATTEMPT.txt
+            exit "$PROBE_STATUS"
+          done
+          grep -Fq 'OFFICIAL129_LIVE_BLACKBOX_PASS items=129 matrices=19 negatives=2 release=ER-DEMO-20260901-DRAFT-003' .r7-live-evidence/R7_LIVE_PROBE_OUTPUT.txt
+
+      - name: Capture DOC-129-05 failure observability
+        if: failure()
+        continue-on-error: true
+        shell: bash
+        env:
+          DOC12905_PROVIDER_VERSION: '11'
+          DOC12905_PROVIDER_SOURCE_SHA: 53c6f5f05886bd3e5e48e682043dec3b492af3ed
+        run: |
+          set +e
+          mkdir -p .r7-live-evidence
+          RAW='.r7-live-evidence/DOC-129-05.raw.html'
+          NORMALIZED='.r7-live-evidence/DOC-129-05.normalized.html'
+          OBS='.r7-live-evidence/DOC-129-05.observability.json'
+          HTTP_CODE="$(curl --silent --show-error --location --max-time 30 \
+            -H 'cache-control: no-cache' \
+            -H 'user-agent: TTQS-ONE-PR89-DOC12905-EVIDENCE/1.0' \
+            -o "$RAW" \
+            -w '%{http_code}' \
+            "${EXTERNAL_WEBAPP_URL}?artifact=DOC-129-05")"
+          CURL_STATUS=$?
+          export DOC12905_HTTP_CODE="$HTTP_CODE"
+          export DOC12905_CURL_STATUS="$CURL_STATUS"
+          if test ! -f "$RAW"; then : > "$RAW"; fi
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          import zlib from 'node:zlib';
+          import crypto from 'node:crypto';
+          import {normalizeAppsScriptHtmlServiceWrapper} from './scripts/external-blackbox-classifier.mjs';
+          import {normalizeR7NavigationHtml} from './scripts/r7-nav-verifier.mjs';
+
+          const artifactCode='DOC-129-05';
+          const expectedProjectionSha='94590a9bbfdca699235815fb96e4c37c69156f10689e70b6c3caa74527165a53';
+          const rawPath='.r7-live-evidence/DOC-129-05.raw.html';
+          const normalizedPath='.r7-live-evidence/DOC-129-05.normalized.html';
+          const observationPath='.r7-live-evidence/DOC-129-05.observability.json';
+          const sha256=value=>crypto.createHash('sha256').update(value).digest('hex');
+          const snippet=(body,needle,radius=220)=>{
+            const source=String(body||'');
+            const index=source.indexOf(needle);
+            if(index<0)return '';
+            return source.slice(Math.max(0,index-radius),Math.min(source.length,index+needle.length+radius)).replace(/\s+/g,' ').slice(0,700);
+          };
+          const extractAttr=body=>{
+            const match=String(body||'').match(/\bdata-official-ref-id\s*=\s*["']([^"']*)["']/i);
+            return match?match[1]:null;
+          };
+
+          let projectionStatus='PASS';
+          let projectionSha=null;
+          let expected=null;
+          try{
+            const r7Dir=path.join(process.cwd(),'release','official129');
+            const parts=fs.readdirSync(r7Dir).filter(name=>/^data\.part\d+(?:[a-z])?\.b64$/.test(name)).sort();
+            const b64=parts.map(name=>fs.readFileSync(path.join(r7Dir,name),'utf8').trim()).join('');
+            const projectionRaw=zlib.gunzipSync(Buffer.from(b64,'base64'));
+            projectionSha=sha256(projectionRaw);
+            if(projectionSha!==expectedProjectionSha)projectionStatus='HASH_MISMATCH';
+            const projection=JSON.parse(projectionRaw.toString('utf8'));
+            expected=projection.items.find(item=>item.artifactCode===artifactCode)||null;
+            if(!expected)projectionStatus='ARTIFACT_MISSING';
+          }catch(error){
+            projectionStatus=`ERROR:${error.message}`;
+          }
+
+          const raw=fs.readFileSync(rawPath,'utf8');
+          let normalized='';
+          let normalizationStatus='PASS';
+          try{
+            normalized=normalizeR7NavigationHtml(normalizeAppsScriptHtmlServiceWrapper(raw));
+          }catch(error){
+            normalizationStatus=`ERROR:${error.message}`;
+          }
+          fs.writeFileSync(normalizedPath,normalized,'utf8');
+
+          const actualRawOfficialRefId=extractAttr(raw);
+          const actualNormalizedOfficialRefId=extractAttr(normalized);
+          const observation={
+            schema:'TTQS_DOC129_05_FAILURE_OBSERVABILITY_V1',
+            artifactCode,
+            route:`${process.env.EXTERNAL_WEBAPP_URL}?artifact=${artifactCode}`,
+            providerAnchor:{
+              version:Number(process.env.DOC12905_PROVIDER_VERSION||0),
+              sourceSha:String(process.env.DOC12905_PROVIDER_SOURCE_SHA||'')
+            },
+            fetch:{
+              curlStatus:Number(process.env.DOC12905_CURL_STATUS||-1),
+              httpCode:String(process.env.DOC12905_HTTP_CODE||''),
+              rawCaptured:raw.length>0
+            },
+            expectedProjection:{
+              status:projectionStatus,
+              sha256:projectionSha,
+              expectedSha256:expectedProjectionSha,
+              officialRefId:expected?.officialRefId||null,
+              artifactCode:expected?.artifactCode||null,
+              pdfSha256:expected?.pdfSha256||null,
+              pdfTextSha256:expected?.pdfTextSha256||null,
+              offlinePdfPath:expected?.offlinePdfPath||null
+            },
+            rawHtml:{
+              bytes:Buffer.byteLength(raw),
+              sha256:sha256(raw),
+              actualOfficialRefId:actualRawOfficialRefId||'MISSING',
+              snippet:snippet(raw,'data-official-ref-id')
+            },
+            normalizedHtml:{
+              status:normalizationStatus,
+              chars:normalized.length,
+              sha256:sha256(normalized),
+              actualOfficialRefId:actualNormalizedOfficialRefId||'MISSING',
+              snippet:snippet(normalized,'data-official-ref-id')
+            },
+            equality:{
+              rawMatchesExpected:Boolean(expected&&actualRawOfficialRefId===expected.officialRefId),
+              normalizedMatchesExpected:Boolean(expected&&actualNormalizedOfficialRefId===expected.officialRefId)
+            }
+          };
+          fs.writeFileSync(observationPath,`${JSON.stringify(observation,null,2)}\n`,'utf8');
+          console.log(JSON.stringify(observation));
+          NODE
+          exit 0
+
+      - name: Upload exhaustive evidence
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: pr89-r7-live-canary-${{ github.run_id }}
+          path: .r7-live-evidence/
+          if-no-files-found: warn
+          include-hidden-files: true
+          retention-days: 7
+          compression-level: 0
