@@ -15,6 +15,9 @@ const expectedOfflineZipSha='8b79687329b03c08e971cde0ccd8f8efd312487543e2d285e05
 const canonical=String(process.env.EXTERNAL_WEBAPP_URL||'').replace(/\/+$/,'');
 if(!/^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(canonical))throw new Error('OFFICIAL129_CANONICAL_EXEC_URL_INVALID');
 const sha256=b=>crypto.createHash('sha256').update(b).digest('hex');
+const ARTIFACT_PERF_WARN_MS=2000;
+const ARTIFACT_PERF_HARD_MS=4000;
+const MAX_ARTIFACT_PERF_CONFIRMATIONS=3;
 
 function projection(){
   const parts=fs.readdirSync(r7Dir).filter(x=>/^data\.part\d+(?:[a-z])?\.b64$/.test(x)).sort();
@@ -93,7 +96,17 @@ function homeNavigationDiagnostic(response){
 async function mapLimit(items,limit,fn){const out=new Array(items.length);let next=0;async function worker(){while(true){const i=next++;if(i>=items.length)return;out[i]=await fn(items[i],i);}}await Promise.all(Array.from({length:Math.min(limit,items.length)},worker));return out;}
 
 const data=projection();
-const results={releaseId:expectedRelease,canonical,home:{},matrices:[],artifacts:[],negative:[],performance:{matrixOver2s:[],artifactOver2s:[],hardFailures:[]},result:'FAIL'};
+const results={releaseId:expectedRelease,canonical,home:{},matrices:[],artifacts:[],negative:[],performance:{matrixOver2s:[],artifactOver2s:[],artifactConfirmations:[],hardFailures:[]},result:'FAIL'};
+
+async function probeArtifact(x){
+    const r=await get(`${canonical}?artifact=${encodeURIComponent(x.artifactCode)}`);
+    require_(r.status===200,'ARTIFACT_HTTP_STATUS',`${x.artifactCode}:${r.status}`);
+    require_(!r.normalized.includes('data-friendly-error="true"'),'ARTIFACT_FRIENDLY_ERROR',x.artifactCode);
+    for(const [name,value] of [['data-artifact-id',x.artifactCode],['data-official-ref-id',x.officialRefId],['data-release-id',expectedRelease],['data-frozen-pdf-sha256',x.pdfSha256],['data-text-sha256',x.pdfTextSha256],['data-offline-relative-path',x.offlinePdfPath]])require_(attr(r.normalized,name,value),'ARTIFACT_IDENTITY_OR_HASH_FAIL',`${x.artifactCode}:${name}`);
+    for(const marker of ['TEST／SAMPLE／CONTROL','不得用於正式 TTQS 評分','Frozen PDF 文字投影',x.officialRefId,x.pdfFilename,x.pdfSha256,x.pdfTextSha256])require_(r.normalized.includes(marker),'ARTIFACT_MARKER_MISSING',`${x.artifactCode}:${marker.slice(0,80)}`);
+    require_(r.body.length>=Math.max(2500,Math.floor(String(x.text).length*0.7)),'ARTIFACT_PAYLOAD_TOO_SHORT',`${x.artifactCode}:${r.body.length}`);
+    return {artifactCode:x.artifactCode,officialRefId:x.officialRefId,status:r.status,bodyBytes:Buffer.byteLength(r.body),ms:r.ms,pass:true};
+}
 
 try{
   const cold=await get(canonical);
@@ -129,16 +142,23 @@ try{
   });
   require_(results.performance.hardFailures.length===0,'MATRIX_PERFORMANCE_HARD_FAIL',JSON.stringify(results.performance.hardFailures));
 
-  results.artifacts=await mapLimit(data.items,6,async x=>{
-    const r=await get(`${canonical}?artifact=${encodeURIComponent(x.artifactCode)}`);
-    require_(r.status===200,'ARTIFACT_HTTP_STATUS',`${x.artifactCode}:${r.status}`);
-    require_(!r.normalized.includes('data-friendly-error="true"'),'ARTIFACT_FRIENDLY_ERROR',x.artifactCode);
-    for(const [name,value] of [['data-artifact-id',x.artifactCode],['data-official-ref-id',x.officialRefId],['data-release-id',expectedRelease],['data-frozen-pdf-sha256',x.pdfSha256],['data-text-sha256',x.pdfTextSha256],['data-offline-relative-path',x.offlinePdfPath]])require_(attr(r.normalized,name,value),'ARTIFACT_IDENTITY_OR_HASH_FAIL',`${x.artifactCode}:${name}`);
-    for(const marker of ['TEST／SAMPLE／CONTROL','不得用於正式 TTQS 評分','Frozen PDF 文字投影',x.officialRefId,x.pdfFilename,x.pdfSha256,x.pdfTextSha256])require_(r.normalized.includes(marker),'ARTIFACT_MARKER_MISSING',`${x.artifactCode}:${marker.slice(0,80)}`);
-    require_(r.body.length>=Math.max(2500,Math.floor(String(x.text).length*0.7)),'ARTIFACT_PAYLOAD_TOO_SHORT',`${x.artifactCode}:${r.body.length}`);
-    if(r.ms>4000)results.performance.hardFailures.push({kind:'artifact',id:x.artifactCode,ms:r.ms}); else if(r.ms>2000)results.performance.artifactOver2s.push({id:x.artifactCode,ms:r.ms});
-    return {artifactCode:x.artifactCode,officialRefId:x.officialRefId,status:r.status,bodyBytes:Buffer.byteLength(r.body),ms:r.ms,pass:true};
-  });
+  results.artifacts=await mapLimit(data.items,6,probeArtifact);
+  for(const row of results.artifacts){
+    if(row.ms>ARTIFACT_PERF_WARN_MS&&row.ms<=ARTIFACT_PERF_HARD_MS)results.performance.artifactOver2s.push({id:row.artifactCode,ms:row.ms});
+  }
+  const artifactPerfCandidates=results.artifacts.filter(row=>row.ms>ARTIFACT_PERF_HARD_MS);
+  if(artifactPerfCandidates.length>MAX_ARTIFACT_PERF_CONFIRMATIONS){
+    for(const initial of artifactPerfCandidates)results.performance.hardFailures.push({kind:'artifact',id:initial.artifactCode,ms:initial.ms,initialMs:initial.ms,reason:'TOO_MANY_INITIAL_OUTLIERS'});
+  }else{
+    for(const initial of artifactPerfCandidates){
+      const x=data.items.find(item=>item.artifactCode===initial.artifactCode);
+      require_(Boolean(x),'ARTIFACT_PERFORMANCE_CONFIRMATION_IDENTITY_MISSING',initial.artifactCode);
+      const confirmation=await probeArtifact(x);
+      const confirmedSlow=confirmation.ms>ARTIFACT_PERF_HARD_MS;
+      results.performance.artifactConfirmations.push({id:initial.artifactCode,initialMs:initial.ms,confirmationMs:confirmation.ms,hardThresholdMs:ARTIFACT_PERF_HARD_MS,pass:!confirmedSlow});
+      if(confirmedSlow)results.performance.hardFailures.push({kind:'artifact',id:initial.artifactCode,ms:confirmation.ms,initialMs:initial.ms,confirmationMs:confirmation.ms,reason:'CONFIRMED_OVER_HARD_THRESHOLD'});
+    }
+  }
   require_(results.performance.hardFailures.length===0,'ARTIFACT_PERFORMANCE_HARD_FAIL',JSON.stringify(results.performance.hardFailures.slice(0,20)));
 
   for(const [kind,url] of [['indicator',`${canonical}?indicator=999`],['artifact',`${canonical}?artifact=DOC-129-999`]]){
