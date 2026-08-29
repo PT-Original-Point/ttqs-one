@@ -1,0 +1,164 @@
+name: PR91 R7 Live Revalidation
+
+on:
+  push:
+    branches:
+      - tmp/pr91-live-revalidation-20260829
+
+permissions:
+  contents: read
+  issues: write
+
+env:
+  EXTERNAL_WEBAPP_URL: https://script.google.com/macros/s/AKfycbznbXi-0XWNV68E-vGU9CiAE6ElXGIlDmy27EePXMdGpRaorURzKZq0dDgsNBaaZOLh/exec
+  EXTERNAL_RECEIPT_ISSUE: '39'
+  PR91_EXPECTED_SHA: 6d765ba5464d42128fc62dc51f72544555147ecb
+  PROVIDER_SOURCE_ANCHOR: 0b863c2d54483cf0427822c06dfbcaf0a84a5d81
+
+jobs:
+  bounded-live-revalidation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout frozen PR91 verifier source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: 6d765ba5464d42128fc62dc51f72544555147ecb
+          fetch-depth: 0
+
+      - name: Verify frozen source identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$PR91_EXPECTED_SHA"
+          echo "PR91_LIVE_REVALIDATION_SOURCE_PIN_PASS sha=$PR91_EXPECTED_SHA"
+
+      - name: Setup Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install dependencies without lifecycle scripts
+        run: npm ci --ignore-scripts
+
+      - name: Verify frozen repository contract
+        run: npm run verify
+
+      - name: Verify live-probe hardening contract
+        run: node --test tests/external-official129-live-probe-contract.test.mjs
+
+      - name: Capture R2 19-marker live homepage evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .r7-live-evidence
+          curl --fail --silent --show-error --location --max-time 30 \
+            -H 'cache-control: no-cache' \
+            -H 'user-agent: TTQS-ONE-PR91-LIVE-REVALIDATION/1.0' \
+            -o .r7-live-evidence/HOME_MARKER_PAGE.html \
+            "$EXTERNAL_WEBAPP_URL"
+          node scripts/external-blackbox-classifier.mjs \
+            --html .r7-live-evidence/HOME_MARKER_PAGE.html \
+            --evidence-out .r7-live-evidence/BLACKBOX_MARKER_EVIDENCE.json \
+            2>&1 | tee .r7-live-evidence/BLACKBOX_MARKER_OUTPUT.txt
+          grep -Fq 'BLACKBOX_MARKERS_PASS contract=R2_G02_19_REQUIRED markers=19/19 safety=PASS mode=R7_DRAFT003' .r7-live-evidence/BLACKBOX_MARKER_OUTPUT.txt
+          rm -f .r7-live-evidence/HOME_MARKER_PAGE.html
+
+      - name: Run bounded exhaustive R7 live verifier
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .r7-live-evidence
+          MAX_TRANSPORT_ATTEMPTS=3
+          ATTEMPT=1
+          while true; do
+            ATTEMPT_OUTPUT=".r7-live-evidence/R7_LIVE_PROBE_OUTPUT.attempt-${ATTEMPT}.txt"
+            set +e
+            node scripts/external-official129-live-probe.mjs 2>&1 | tee "$ATTEMPT_OUTPUT"
+            PROBE_STATUS=${PIPESTATUS[0]}
+            set -e
+            cp "$ATTEMPT_OUTPUT" .r7-live-evidence/R7_LIVE_PROBE_OUTPUT.txt
+            node --input-type=module -e "import fs from 'node:fs'; const input=process.argv[1],output=process.argv[2]; const s=fs.readFileSync(input,'utf8'); const m=s.match(/\\nOFFICIAL129_LIVE_BLACKBOX_(?:PASS|FAIL) [^\\n]*\\n?$/); if(!m) throw new Error('R7_LIVE_EVIDENCE_TRAILER_MISSING'); const raw=s.slice(0,m.index).trim(); fs.writeFileSync(output,JSON.stringify(JSON.parse(raw))+'\\n');" "$ATTEMPT_OUTPUT" .r7-live-evidence/R7_LIVE_PROBE_EVIDENCE.json
+            if test "$PROBE_STATUS" -eq 0; then
+              printf '%s\n' "$ATTEMPT" > .r7-live-evidence/R7_LIVE_TRANSPORT_ATTEMPT.txt
+              break
+            fi
+            if grep -Fq 'OFFICIAL129_LIVE_BLACKBOX_FAIL fetch failed' "$ATTEMPT_OUTPUT" && test "$ATTEMPT" -lt "$MAX_TRANSPORT_ATTEMPTS"; then
+              echo "R7_LIVE_TRANSPORT_RETRY attempt=${ATTEMPT}/${MAX_TRANSPORT_ATTEMPTS} reason=fetch_failed"
+              ATTEMPT=$((ATTEMPT + 1))
+              sleep $((ATTEMPT * 2))
+              continue
+            fi
+            printf '%s\n' "$ATTEMPT" > .r7-live-evidence/R7_LIVE_TRANSPORT_ATTEMPT.txt
+            exit "$PROBE_STATUS"
+          done
+          grep -Fq 'OFFICIAL129_LIVE_BLACKBOX_PASS items=129 matrices=19 negatives=2 release=ER-DEMO-20260901-DRAFT-003' .r7-live-evidence/R7_LIVE_PROBE_OUTPUT.txt
+
+      - name: Upload bounded live evidence
+        id: upload_evidence
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: pr91-r7-live-revalidation-${{ github.run_id }}
+          path: .r7-live-evidence/
+          if-no-files-found: warn
+          include-hidden-files: true
+          retention-days: 30
+          compression-level: 0
+
+      - name: Publish durable Issue 39 revalidation receipts
+        if: always()
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          JOB_STATUS: ${{ job.status }}
+          ARTIFACT_ID: ${{ steps.upload_evidence.outputs.artifact-id }}
+          ARTIFACT_DIGEST: ${{ steps.upload_evidence.outputs.artifact-digest }}
+        run: |
+          set -euo pipefail
+          RESULT="$(printf '%s' "$JOB_STATUS" | tr '[:lower:]' '[:upper:]')"
+          LIVE_JSON_SHA256='NOT_AVAILABLE'
+          MARKER_JSON_SHA256='NOT_AVAILABLE'
+          TRANSPORT_ATTEMPT='NOT_AVAILABLE'
+          PASS_LINE='NOT_AVAILABLE'
+          if test -f .r7-live-evidence/R7_LIVE_PROBE_EVIDENCE.json; then LIVE_JSON_SHA256="$(sha256sum .r7-live-evidence/R7_LIVE_PROBE_EVIDENCE.json | awk '{print $1}')"; fi
+          if test -f .r7-live-evidence/BLACKBOX_MARKER_EVIDENCE.json; then MARKER_JSON_SHA256="$(sha256sum .r7-live-evidence/BLACKBOX_MARKER_EVIDENCE.json | awk '{print $1}')"; fi
+          if test -f .r7-live-evidence/R7_LIVE_TRANSPORT_ATTEMPT.txt; then TRANSPORT_ATTEMPT="$(cat .r7-live-evidence/R7_LIVE_TRANSPORT_ATTEMPT.txt)"; fi
+          if test -f .r7-live-evidence/R7_LIVE_PROBE_OUTPUT.txt; then PASS_LINE="$(grep -F 'OFFICIAL129_LIVE_BLACKBOX_PASS' .r7-live-evidence/R7_LIVE_PROBE_OUTPUT.txt | tail -n 1 || true)"; test -n "$PASS_LINE" || PASS_LINE='NOT_AVAILABLE'; fi
+          {
+            echo '<!-- TTQS_PR91_R7_LIVE_REVALIDATION_V1 -->'
+            echo '## PR #91｜R7 bounded live revalidation'
+            echo
+            echo "- result: \`$RESULT\`"
+            echo "- workflow_run_id: \`$GITHUB_RUN_ID\`"
+            echo "- verifier_source_sha: \`$PR91_EXPECTED_SHA\`"
+            echo "- provider_source_anchor: \`$PROVIDER_SOURCE_ANCHOR\`"
+            echo "- endpoint: \`$EXTERNAL_WEBAPP_URL\`"
+            echo '- artifact_hard_threshold_ms: `4000`'
+            echo '- first_pass_concurrency: `6`'
+            echo '- max_initial_outlier_confirmations: `3`'
+            echo '- confirmation_mode: `SEQUENTIAL_ONE_EACH_FAIL_CLOSED`'
+            echo "- marker_evidence_sha256: \`sha256:$MARKER_JSON_SHA256\`"
+            echo "- live_evidence_sha256: \`sha256:$LIVE_JSON_SHA256\`"
+            echo "- transport_attempt: \`$TRANSPORT_ATTEMPT\`"
+            echo "- pass_line: \`$PASS_LINE\`"
+            echo "- artifact_id: \`${ARTIFACT_ID:-NOT_AVAILABLE}\`"
+            echo "- artifact_digest: \`${ARTIFACT_DIGEST:-NOT_AVAILABLE}\`"
+            echo '- scope: `TEST/SAMPLE/CONTROL only; REAL/PROD/formal scoring/official submission = 0`'
+          } > .r7-live-revalidation-receipt.md
+          gh issue comment "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file .r7-live-revalidation-receipt.md
+          if test -f .r7-live-evidence/R7_LIVE_PROBE_EVIDENCE.json; then
+            {
+              echo '<!-- TTQS_PR91_R7_LIVE_EVIDENCE_V1 -->'
+              echo '## PR #91｜R7 exact live evidence payload'
+              echo
+              echo "- verifier_source_sha: \`$PR91_EXPECTED_SHA\`"
+              echo "- provider_source_anchor: \`$PROVIDER_SOURCE_ANCHOR\`"
+              echo "- live_evidence_sha256: \`sha256:$LIVE_JSON_SHA256\`"
+              echo '```json'
+              cat .r7-live-evidence/R7_LIVE_PROBE_EVIDENCE.json
+              echo '```'
+            } > .r7-live-evidence-receipt.md
+            gh issue comment "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file .r7-live-evidence-receipt.md
+          fi
