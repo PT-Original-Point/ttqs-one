@@ -1,0 +1,160 @@
+name: PR91 R7 Browser Route Evidence
+
+on:
+  push:
+    branches:
+      - tmp/pr91-browser-route-evidence-20260829
+
+permissions:
+  contents: read
+  issues: write
+
+env:
+  EXTERNAL_RECEIPT_ISSUE: '39'
+  EXTERNAL_WEBAPP_URL: 'https://script.google.com/macros/s/AKfycbznbXi-0XWNV68E-vGU9CiAE6ElXGIlDmy27EePXMdGpRaorURzKZq0dDgsNBaaZOLh/exec'
+  PR91_EXPECTED_SHA: 6d765ba5464d42128fc62dc51f72544555147ecb
+  PROVIDER_SOURCE_ANCHOR: 0b863c2d54483cf0427822c06dfbcaf0a84a5d81
+
+jobs:
+  browser-route-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - name: Checkout frozen PR91 source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: 6d765ba5464d42128fc62dc51f72544555147ecb
+          fetch-depth: 0
+
+      - name: Verify frozen source identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$PR91_EXPECTED_SHA"
+          echo "PR91_BROWSER_EVIDENCE_SOURCE_PIN_PASS sha=$PR91_EXPECTED_SHA"
+
+      - name: Setup Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install repository dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Verify repository and browser-probe contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm run verify
+          node --test tests/r7-nav-browser-probe-contract.test.mjs
+
+      - name: Install isolated Playwright Chromium
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm install --no-save --ignore-scripts playwright@1.55.0
+          npx playwright install chromium --with-deps
+
+      - name: Run desktop19 + mobile19 canonical browser probe
+        id: probe
+        env:
+          R7_NAV_EVIDENCE_OUT: r7-nav-browser-evidence.json
+        shell: bash
+        run: |
+          set +e
+          node scripts/r7-nav-browser-probe.mjs 2>&1 | tee r7-nav-browser-output.txt
+          STATUS=${PIPESTATUS[0]}
+          set -e
+          echo "status=$STATUS" >> "$GITHUB_OUTPUT"
+          test -f r7-nav-browser-evidence.json
+          exit 0
+
+      - name: Verify complete 38-row evidence shape
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module -e "import fs from 'node:fs'; const r=JSON.parse(fs.readFileSync('r7-nav-browser-evidence.json','utf8')); if(r.schema!=='TTQS_R7_NAV_ROUTE_EVIDENCE_V2') throw new Error('ROUTE_EVIDENCE_SCHEMA'); if(r.checks!==38||!Array.isArray(r.evidence)||r.evidence.length!==38) throw new Error('ROUTE_EVIDENCE_ROWS'); const d=r.evidence.filter(x=>x.viewport==='desktop'); const m=r.evidence.filter(x=>x.viewport==='mobile'); if(d.length!==19||m.length!==19) throw new Error('ROUTE_EVIDENCE_VIEWPORT_ROWS'); const keys=['a_topLevelCanonicalUrl','b_windowTopEqualsSelf','c_scriptGoogleIframeCountZero','d_chineseHeadingPresent','e_chineseDocumentCardAndOpenButton','f_refusedToConnectAbsent','g_mobile390NoHorizontalOverflow']; for(const row of r.evidence){if(!row.expectedUrl||!Object.hasOwn(row,'actualUrl')||!row.domEvidence?.home) throw new Error('ROUTE_EVIDENCE_REQUIRED_FIELDS:'+row.viewport+':'+row.indicator); for(const key of keys) if(!row.checks?.[key]||typeof row.checks[key].pass!=='boolean') throw new Error('ROUTE_EVIDENCE_CHECK_MISSING:'+row.viewport+':'+row.indicator+':'+key);}" 
+
+      - name: Upload immutable 38-row browser evidence
+        id: upload_evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: pr91-r7-browser-route-evidence-${{ github.run_id }}
+          path: |
+            r7-nav-browser-evidence.json
+            r7-nav-browser-output.txt
+          if-no-files-found: error
+          retention-days: 30
+          compression-level: 0
+
+      - name: Publish desktop19, mobile19 and 38-row durable receipts
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PROBE_STATUS: ${{ steps.probe.outputs.status }}
+          ARTIFACT_ID: ${{ steps.upload_evidence.outputs.artifact-id }}
+          ARTIFACT_DIGEST: ${{ steps.upload_evidence.outputs.artifact-digest }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          EVIDENCE_SHA="$(sha256sum r7-nav-browser-evidence.json | awk '{print $1}')"
+          RESULT="$(node --input-type=module -e "import fs from 'node:fs'; const r=JSON.parse(fs.readFileSync('r7-nav-browser-evidence.json','utf8')); process.stdout.write(r.result)")"
+          PASS_COUNT="$(node --input-type=module -e "import fs from 'node:fs'; const r=JSON.parse(fs.readFileSync('r7-nav-browser-evidence.json','utf8')); process.stdout.write(String(r.passCount))")"
+          FAIL_COUNT="$(node --input-type=module -e "import fs from 'node:fs'; const r=JSON.parse(fs.readFileSync('r7-nav-browser-evidence.json','utf8')); process.stdout.write(String(r.failCount))")"
+
+          for VIEWPORT in desktop mobile; do
+            node --input-type=module -e "import fs from 'node:fs'; const viewport=process.argv[1]; const hash=process.argv[2]; const r=JSON.parse(fs.readFileSync('r7-nav-browser-evidence.json','utf8')); const rows=r.evidence.filter(x=>x.viewport===viewport); if(rows.length!==19) throw new Error('VIEWPORT_ROWS:'+viewport+':'+rows.length); const pass=rows.filter(x=>x.result==='PASS').length; fs.writeFileSync('r7-nav-'+viewport+'.json',JSON.stringify({schema:r.schema,canonicalUrl:r.canonicalUrl,generatedAt:r.generatedAt,verificationSourceSha:process.env.PR91_EXPECTED_SHA,providerSourceAnchor:process.env.PROVIDER_SOURCE_ANCHOR,viewport,evidenceSha256:'sha256:'+hash,passCount:pass,failCount:rows.length-pass,rows},null,2)+'\n');" "$VIEWPORT" "$EVIDENCE_SHA"
+            ROW_SHA="$(sha256sum "r7-nav-$VIEWPORT.json" | awk '{print $1}')"
+            {
+              echo '<!-- TTQS_PR91_R7_BROWSER_VIEWPORT_EVIDENCE_V1 -->'
+              echo "## PR #91｜R7 $VIEWPORT 19-route evidence"
+              echo
+              echo "- workflow_run_id: \`$GITHUB_RUN_ID\`"
+              echo "- verifier_source_sha: \`$PR91_EXPECTED_SHA\`"
+              echo "- provider_source_anchor: \`$PROVIDER_SOURCE_ANCHOR\`"
+              echo "- evidence_sha256: \`sha256:$EVIDENCE_SHA\`"
+              echo "- viewport_payload_sha256: \`sha256:$ROW_SHA\`"
+              echo "- artifact_id: \`${ARTIFACT_ID:-NOT_AVAILABLE}\`"
+              echo "- artifact_digest: \`${ARTIFACT_DIGEST:-NOT_AVAILABLE}\`"
+              echo '- human_gate: `UNCHANGED — R7-NAV-BLOCKER=OPEN; FA-08=FAIL; NAV-02=FAIL; T Gate=NOT PASS`'
+              echo '```json'
+              cat "r7-nav-$VIEWPORT.json"
+              echo '```'
+            } > "r7-nav-$VIEWPORT.md"
+            test "$(wc -c < "r7-nav-$VIEWPORT.md")" -lt 65000
+            gh issue comment "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file "r7-nav-$VIEWPORT.md"
+          done
+
+          {
+            echo '<!-- TTQS_PR91_R7_BROWSER_38_EVIDENCE_V1 -->'
+            echo '## PR #91｜R7 desktop19 + mobile19 = 38-route evidence'
+            echo
+            echo "- workflow_run_id: \`$GITHUB_RUN_ID\`"
+            echo "- verifier_source_sha: \`$PR91_EXPECTED_SHA\`"
+            echo "- provider_source_anchor: \`$PROVIDER_SOURCE_ANCHOR\`"
+            echo '- browser: `Playwright Chromium / clean context`'
+            echo '- viewports: `desktop 1440x1000 + mobile 390x844`'
+            echo '- routes: `desktop 19 + mobile 19 = 38`'
+            echo "- evidence_sha256: \`sha256:$EVIDENCE_SHA\`"
+            echo "- result: \`$RESULT\`"
+            echo "- counts: \`$PASS_COUNT/38; fail=$FAIL_COUNT\`"
+            echo "- artifact_id: \`${ARTIFACT_ID:-NOT_AVAILABLE}\`"
+            echo "- artifact_digest: \`${ARTIFACT_DIGEST:-NOT_AVAILABLE}\`"
+            echo '- exact_checks: `a URL; b top=self; c script.google iframe=0; d 中文標題; e 中文文件卡+開啟文件+canonical artifact route+模擬警示; f 拒絕連線文字=0; g mobile 390px 無水平溢位`'
+            echo '- human_gate: `UNCHANGED — R7-NAV-BLOCKER=OPEN; FA-08=FAIL; NAV-02=FAIL; T Gate=NOT PASS`'
+            echo '- scope: `TEST/SAMPLE/CONTROL only; REAL/PROD/formal scoring/official submission = 0`'
+          } > r7-nav-38-summary.md
+          gh issue comment "$EXTERNAL_RECEIPT_ISSUE" --repo "$GITHUB_REPOSITORY" --body-file r7-nav-38-summary.md
+
+      - name: Enforce 38/38 only after durable publication
+        if: always()
+        env:
+          PROBE_STATUS: ${{ steps.probe.outputs.status }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module -e "import fs from 'node:fs'; const r=JSON.parse(fs.readFileSync('r7-nav-browser-evidence.json','utf8')); if(r.checks!==38||r.passCount!==38||r.failCount!==0||r.result!=='PASS_MACHINE_BROWSER') throw new Error('ROUTE_EVIDENCE_NOT_38_PASS'); const d=r.evidence.filter(x=>x.viewport==='desktop'); const m=r.evidence.filter(x=>x.viewport==='mobile'); if(d.filter(x=>x.result==='PASS').length!==19||m.filter(x=>x.result==='PASS').length!==19) throw new Error('VIEWPORT_NOT_19_PASS'); for(const row of r.evidence){ for(const key of ['a_topLevelCanonicalUrl','b_windowTopEqualsSelf','c_scriptGoogleIframeCountZero','d_chineseHeadingPresent','e_chineseDocumentCardAndOpenButton','f_refusedToConnectAbsent','g_mobile390NoHorizontalOverflow']) if(row.checks?.[key]?.pass!==true) throw new Error('ROUTE_EVIDENCE_CHECK_FAIL:'+row.viewport+':'+row.indicator+':'+key); }"
+          test "$PROBE_STATUS" = '0'
