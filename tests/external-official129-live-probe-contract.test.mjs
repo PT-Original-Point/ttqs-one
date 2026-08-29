@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 
-const probe=fs.readFileSync(new URL('./external-official129-live-probe.mjs',import.meta.url),'utf8');
+const probe=fs.readFileSync(new URL('../scripts/external-official129-live-probe.mjs',import.meta.url),'utf8');
 
 test('artifact hard threshold remains 4000ms and confirmation load is bounded',()=>{
   assert.ok(probe.includes('const ARTIFACT_PERF_HARD_MS=4000;'));
