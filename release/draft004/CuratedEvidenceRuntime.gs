@@ -52,14 +52,25 @@ function ttqsD004BlockHtml_(b){
   }
   return '';
 }
+function ttqsD004LegacyCompatibilityHtml_(){
+  return '<section class="d4doc" aria-label="既有查驗契約相容語意"><h2>既有 R2 G02 查驗語意相容說明</h2>'+
+    '<p><b>TTQS ONE · 測試／示範資料（TEST／SAMPLE）· EXTERNAL_READONLY</b></p>'+
+    '<p>本區只保留既有自動查驗契約所需、且目前仍真實成立的系統語意；不取代 DRAFT-004 的 28 份人類主要查驗文件，也不代表正式 TTQS 評分。</p>'+
+    '<ul>'+
+    '<li><b>官方指標範圍：</b>19 / 19；首頁提供官方 19 指標評核語意導航，並包含 12a 學員遴選、12e 教學環境與設備、17a 反應評估、17d 成果評估。</li>'+
+    '<li><b>TEST／SAMPLE 流程：</b>保留 SAMPLE 評核因果鏈與四類 TEST Google Forms 生命週期；4/4 類別都有 ACCEPTED 來源；故障 → 重試 → 對帳 → FINAL_ACCEPTED；同一事件以 MATCHED_EXACTLY_ONCE 對帳，AttemptHistory=append-only。</li>'+
+    '<li><b>調閱：</b>提供 19 指標佐證與來源下鑽；每張指標卡可用「查看文件與證據」進入 Evidence Matrix。Google Drive 連結只是選配，不是顧問調閱成功的必要條件。</li>'+
+    '<li><b>唯讀邊界：</b>本 DRAFT-004 不在執行期呼叫 Google Sheets／Drive API；本唯讀檢視器不會把 SAMPLE／CONTROL 宣稱為 REAL。</li>'+
+    '</ul></section>';
+}
 function ttqsD004HomeHtml_(){
   var cards=[];
   for(var i=1;i<=19;i++){
     var u=ttqsD004MainUnit_(i),children=ttqsD004IndicatorUnits_(i).filter(function(x){return x.subitem!==null;});
     var chips=children.map(function(x){return '<span class="d4badge">'+esc_(x.subitem)+'｜'+esc_(x.title)+'</span>';}).join('');
-    cards.push('<article class="d4card" data-indicator="'+i+'"><h2>指標 '+i+'</h2><p><b>主要查驗文件：</b>'+esc_(u.title)+'</p><div>'+chips+'</div><p>本卡顯示的是顧問主要查驗文件；舊 129 細項僅保留內部 regression，不再冒充人類 DEMO 主證據。</p>'+ttqsD004Nav_({indicator:String(i)},'查看 Evidence Matrix',false)+'</article>');
+    cards.push('<article class="d4card" data-indicator="'+i+'"><h2>指標 '+i+'</h2><p><b>主要查驗文件：</b>'+esc_(u.title)+'</p><div>'+chips+'</div><p>本卡顯示的是顧問主要查驗文件；舊 129 細項僅保留內部 regression，不再冒充人類 DEMO 主證據。</p>'+ttqsD004Nav_({indicator:String(i)},'查看文件與證據',false)+'</article>');
   }
-  return ttqsD004Head_('TTQS ONE｜DRAFT-004 顧問唯讀 DEMO')+ttqsD004Warning_()+'<section class="d4doc"><h1>TTQS ONE｜顧問唯讀 DEMO 查驗入口</h1><p><b>EvaluationRelease：</b>ER-DEMO-20260901-DRAFT-004（TEST／SAMPLE／CONTROL；未 LOCK、未 SUBMIT）</p><p><b>顧問可見主要文件：</b>19 個指標 primary evidence ＋ 12a–12e ＋ 17a–17d，共 28 份。</p><p><b>導航：</b>首頁 → 指標 Evidence Matrix → 文件內容。</p></section><section><h2>19 個指標</h2><div class="d4grid">'+cards.join('')+'</div></section><details class="d4tech"><summary>技術細節（管理員用）</summary><table class="d4table"><tr><th>source SHA-256</th><td class="d4mono">'+TTQS_D004_SOURCE_SHA256_+'</td></tr><tr><th>frozen bytes manifest SHA-256</th><td class="d4mono">'+TTQS_D004_FROZEN_BYTES_MANIFEST_SHA256_+'</td></tr><tr><th>Offline manifest SHA-256</th><td class="d4mono">'+TTQS_D004_OFFLINE_MANIFEST_SHA256_+'</td></tr><tr><th>Offline ZIP SHA-256</th><td class="d4mono">'+TTQS_D004_OFFLINE_ZIP_SHA256_+'</td></tr><tr><th>runtime live Drive</th><td>NO</td></tr></table></details>'+ttqsD004Foot_();
+  return ttqsD004Head_('TTQS ONE｜DRAFT-004 顧問唯讀 DEMO')+ttqsD004Warning_()+'<section class="d4doc"><h1>TTQS ONE｜顧問唯讀 DEMO 查驗入口</h1><p><b>EvaluationRelease：</b>ER-DEMO-20260901-DRAFT-004（TEST／SAMPLE／CONTROL；未 LOCK、未 SUBMIT）</p><p><b>顧問可見主要文件：</b>19 個指標 primary evidence ＋ 12a–12e ＋ 17a–17d，共 28 份。</p><p><b>導航：</b>首頁 → 指標 Evidence Matrix → 文件內容。</p></section>'+ttqsD004LegacyCompatibilityHtml_()+'<section><h2>19 個指標</h2><div class="d4grid">'+cards.join('')+'</div></section><details class="d4tech"><summary>技術細節（管理員用）</summary><table class="d4table"><tr><th>source SHA-256</th><td class="d4mono">'+TTQS_D004_SOURCE_SHA256_+'</td></tr><tr><th>frozen bytes manifest SHA-256</th><td class="d4mono">'+TTQS_D004_FROZEN_BYTES_MANIFEST_SHA256_+'</td></tr><tr><th>Offline manifest SHA-256</th><td class="d4mono">'+TTQS_D004_OFFLINE_MANIFEST_SHA256_+'</td></tr><tr><th>Offline ZIP SHA-256</th><td class="d4mono">'+TTQS_D004_OFFLINE_ZIP_SHA256_+'</td></tr><tr><th>runtime live Drive</th><td>NO</td></tr></table></details>'+ttqsD004Foot_();
 }
 function ttqsD004MatrixHtml_(indicator){
   var id=String(indicator||''),xs=ttqsD004IndicatorUnits_(id);if(!xs.length)return ttqsD004ErrorHtml_('找不到指定指標');

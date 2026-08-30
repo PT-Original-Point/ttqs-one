@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import crypto from 'node:crypto';
 import zlib from 'node:zlib';
+import {evaluateExternalBlackbox,REQUIRED_PRODUCT_MARKERS} from '../scripts/external-blackbox-classifier.mjs';
 
 const read=(p)=>fs.readFileSync(p,'utf8');
 const sha=(b)=>crypto.createHash('sha256').update(b).digest('hex');
@@ -74,6 +75,27 @@ test('consultant runtime defaults to DRAFT-004 and confines technical metadata t
   assert.match(runtime,/return HtmlService\.createHtmlOutput\(ttqsD004HomeHtml_\(\)\)/);
   for(const token of forbidden)assert.equal(runtime.includes(token),false,`runtime primary code contains forbidden token ${token}`);
   assert.equal(/SpreadsheetApp|DriveApp|UrlFetchApp|Sheets\./.test(runtime),false);
+});
+
+test('DRAFT-004 visible compatibility section satisfies exact R2 G02 19/19 plus safety without identity rollback',()=>{
+  assert.equal(REQUIRED_PRODUCT_MARKERS.length,19);
+  const compatStart=runtime.indexOf('function ttqsD004LegacyCompatibilityHtml_');
+  const homeStart=runtime.indexOf('function ttqsD004HomeHtml_');
+  const homeEnd=runtime.indexOf('function ttqsD004MatrixHtml_');
+  assert.ok(compatStart>=0&&homeStart>compatStart&&homeEnd>homeStart);
+  const compatSource=runtime.slice(compatStart,homeStart);
+  const result=evaluateExternalBlackbox(compatSource);
+  assert.equal(result.derivation.markerPassCount,19);
+  assert.equal(result.derivation.markerTotal,19);
+  for(const row of result.markerEvidence)assert.equal(row.result,'PASS',row.markerId);
+  assert.equal(result.safetyEvidence.result,'PASS');
+  assert.equal(result.pass,true);
+  const homeSource=runtime.slice(homeStart,homeEnd);
+  assert.match(homeSource,/ttqsD004LegacyCompatibilityHtml_\(\)/);
+  assert.match(homeSource,/查看文件與證據/);
+  assert.equal(runtime.includes('ER-DEMO-20260901-DRAFT-003'),false);
+  assert.equal(compatSource.includes('display:none'),false);
+  assert.equal(homeSource.includes('data-friendly-error="true"'),false);
 });
 
 test('build preserves 129 regression but injects DRAFT-004 last',()=>{
