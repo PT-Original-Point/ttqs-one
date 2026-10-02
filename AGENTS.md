@@ -62,3 +62,10 @@ The following are explicitly NOT Human Gates:
 - a local validator/parser bug;
 - a reviewer disagreement that can be resolved from authoritative sources;
 - an individual lane being parked while other READY lanes exist.
+
+## Efficiency safety invariant
+- Speed optimizations may change scheduling, retries, caching, or concurrency only; they MUST NOT weaken semantic acceptance.
+- Fresh Builder for one deliverable may not use peer DOCX body text as a writing template.
+- Reuse is limited to authoritative source readback, calculations, and shared fact IDs; generated prose/body/table/question blocks are not reusable across unrelated deliverables.
+- Before CURRENT promotion, every DOCX must still pass exact requirement/genre mechanics, title-blind identification, negative-neighbor rejection, substantive cross-document duplication screening, evaluator-facing readability, and SAMPLE/REAL truth-boundary checks.
+- Contract freeze requires two consecutive PASS canaries from different document families and a passing duplication/negative-neighbor gate.
