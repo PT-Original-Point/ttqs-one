@@ -8,6 +8,8 @@
 - Do NOT depend on Factory MCP, Win11 Factory, RDC, or SYSTEM_CAPABILITY_RUN_DENY wrappers.
 - Missing Factory/MCP capability is NOT a blocker for ordinary local file work.
 - Primary artifact is DOCX. Do not generate full-corpus PDF/PNG by default.
+- Runtime root: E:\TTQS\TTQS_ONE_CODEX_RUNTIME.
+- Home-PC concurrency ceiling: at most one BUILD worker plus one REVIEW worker on a different document; shared promotion/register/CURRENT writes are serialized.
 
 ## Authority
 Latest Human Mission > this AGENTS.md/current control files > official TTQS sources/Unique Blueprint > verified artifacts > historical Work outputs.
@@ -22,10 +24,20 @@ Latest Human Mission > this AGENTS.md/current control files > official TTQS sour
 7. 待填|待核|空白表|保持空白|會後填寫 outside an explicitly labeled REAL replacement area is a hard fail.
 8. Questionnaire/SOP/meeting/assessment/outcome genres must contain their real functional mechanics, not generic headings.
 9. Body hard floor 10.5 pt, table hard floor 9.5 pt; never shrink text just to reduce page count.
-10. CURRENT means latest candidate, not PASS/APPROVED/EFFECTIVE/REAL.
+10. CURRENT means latest accepted candidate under the current frozen acceptance contract; it does not mean REAL/APPROVED/EFFECTIVE.
+
+## Efficiency ownership
+- Builder: create exact-source DOCX + build receipt only. Do not duplicate validator/reviewer work.
+- Static gate: deterministic technical/content checks only.
+- Fresh reviewer: semantic/usability/evaluator-facing review only. No Word COM/CUA/PDF/PNG/nested Codex unless a concrete layout anomaly exists.
+- Non-zero builder exit with a stable new DOCX + valid receipt is salvageable; gate that exact candidate before rebuilding.
+- One lane gets at most one attempt per scheduling turn; failures move to queue tail while other READY lanes continue.
+- Reuse unchanged authoritative source readback by exact source SHA + Blueprint row hash.
+- Delta-only verification during production; full-corpus verification is reserved for final QA.
+- After two consecutive Canary PASS under the same contract, freeze builder/static/reviewer acceptance semantics for the run unless a concrete source/artifact defect is proven.
 
 ## Autonomy
-- Work in 10-document batches.
+- Work in 10-document batches for checkpoint/reporting, not as a blocking approval gate.
 - After each batch: lightweight delta checkpoint only (changed DOCX + SHA + synthetic delta + QA receipt + remaining queue).
 - If gates pass, continue automatically. Do NOT wait for Human permit every 10 docs.
 - Human notification is non-blocking unless a true Human Gate is triggered.
