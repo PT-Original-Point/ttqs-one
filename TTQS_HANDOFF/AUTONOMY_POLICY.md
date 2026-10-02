@@ -1,10 +1,23 @@
 # Autonomy policy
 
 Default loop:
-BUILD 10 -> STATIC HARD GATES -> FRESH REVIEW -> PUBLISH PASSING DOCS TO CURRENT -> DELTA CHECKPOINT -> CONTINUE.
+BUILD -> STATIC HARD GATES -> FRESH SEMANTIC REVIEW -> PUBLISH PASSING DOCS TO CURRENT -> DELTA CHECKPOINT -> CONTINUE.
 
 Human is not workflow heartbeat.
 Every 10 docs may emit a concise NON-BLOCKING status. Continue automatically if gates pass.
+
+## Throughput / anti-churn policy
+- One scheduling turn gives each lane at most one build-or-repair attempt. If it does not pass, move that lane to the back of the READY queue; do not retry the same lane immediately while other READY work exists.
+- Builder responsibility ends when a stable DOCX + build receipt are written. Builder MUST NOT run duplicate PowerShell/Word/LibreOffice/CUA/PDF self-check pipelines that are already owned by the static gate or reviewer.
+- If a builder exits non-zero but leaves a stable new DOCX + valid receipt, salvage that exact candidate: run static gate + fresh review before deciding to rebuild. Never discard a completed candidate merely because builder cleanup/self-check failed.
+- Static gate owns deterministic checks: DOCX/OOXML integrity, placeholders, font floors, required markers, arithmetic/source consistency that is machine-checkable, candidate/receipt SHA binding.
+- Fresh reviewer owns semantic/usability checks only: exact requirement fit, genre mechanics, title-blind identification, negative-neighbor rejection, middle-school first-glance readability, evaluator-facing professionalism, SAMPLE/REAL truth boundary. Reviewer MUST NOT launch Word COM, CUA, PDF/PNG rendering, or nested Codex probes unless an exact layout anomaly has already been identified.
+- Allow at most two active execution units on this home PC: one BUILD lane and one REVIEW lane for a different document. All shared writes (central synthetic register, queue promotion, CURRENT publish, checkpoint) are serialized under one promotion lock.
+- Cache authoritative source readback per deliverable by exact source SHA + Blueprint row hash. Reuse only when both hashes are unchanged; do not repeatedly re-read Drive/PDF sources without an evidence delta.
+- A timed-out/crashed build or review is TRANSIENT for that exact lane. Return it to queue tail and continue other READY lanes.
+- Do not rescan/re-hash the full 142 corpus after every document. Use delta-only verification except at explicit final QA.
+- No full-corpus PDF/PNG rendering. Render only an exact document/page when a concrete layout anomaly is detected.
+- After two consecutive Canary documents PASS under the same builder/static/reviewer contract, freeze that acceptance contract for the remaining Canary/production run. A later control change may invalidate prior PASS only when tied to a concrete source defect or exact artifact defect with body locators; policy drift alone is not enough.
 
 ## Non-blocking failure policy
 - A single document failure parks only that document lane.
