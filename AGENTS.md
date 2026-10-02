@@ -28,8 +28,25 @@ Latest Human Mission > this AGENTS.md/current control files > official TTQS sour
 - Work in 10-document batches.
 - After each batch: lightweight delta checkpoint only (changed DOCX + SHA + synthetic delta + QA receipt + remaining queue).
 - If gates pass, continue automatically. Do NOT wait for Human permit every 10 docs.
-- Human notification is non-blocking unless a real Human Gate is triggered.
+- Human notification is non-blocking unless a true Human Gate is triggered.
 - On defect: auto impact-scan affected family/epoch, repair/rebuild, fresh re-review, continue other READY lanes.
+- A failed document or failed canary MUST NOT stop other READY lanes.
+- After two failed repair epochs on the same logical defect, stop rebuilding only that exact lane, run root-cause audit, repair the builder/reviewer/validator contract if needed, then retry only when there is a material delta. Do NOT escalate to Human merely because two repairs failed.
+- During Canary phase, publish each passing canary to CURRENT immediately; park failing canaries and continue testing the remaining representative canaries. Full production rollout still requires the required Canary set to pass, but Canary repair is an autonomous engineering task unless a true Human Gate exists.
 
 ## Human Gates only
-Stop only for Mission/spec change; genuine SAMPLE-vs-REAL authority ambiguity; legal/signature/identity/OAuth/MFA; missing third-party original that changes required deliverable; repeated substantive failure after two repair epochs; final evaluation package acceptance.
+Stop and ask Human only for:
+- Mission/spec change or major quality-policy change that cannot be derived from the current Mission;
+- genuine SAMPLE-vs-REAL authority ambiguity;
+- legal/signature/identity/OAuth/MFA;
+- missing third-party original or missing real-world fact that materially changes what must be delivered and cannot be obtained automatically;
+- bounded root-cause reconciliation still leaves an external side effect or authority ambiguity unresolved;
+- final evaluation package acceptance.
+
+The following are explicitly NOT Human Gates:
+- one document failing review;
+- one canary failing review;
+- two repair epochs failing the same document;
+- a local validator/parser bug;
+- a reviewer disagreement that can be resolved from authoritative sources;
+- an individual lane being parked while other READY lanes exist.
