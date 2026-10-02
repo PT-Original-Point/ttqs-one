@@ -1,6 +1,6 @@
 {
   "project": "TTQS_ONE",
-  "handoff_revision": "WIN10_CODEX_LIVE_HOST_ALIGNED_20261002_R04_HOTFIX1_EFF1",
+  "handoff_revision": "WIN10_CODEX_LIVE_HOST_ALIGNED_20261002_R04_HOTFIX1_EFF1A",
   "official_checkbox_total": 157,
   "named_non_other_requirements": 129,
   "blocked_other_rows": 28,
@@ -25,7 +25,19 @@
     "shared_writes_serialized": true,
     "source_cache_key": "source_sha256 + blueprint_row_hash",
     "delta_only_verification_during_production": true,
-    "acceptance_contract_freeze_after_two_consecutive_canary_pass": true
+    "acceptance_contract_freeze_after_two_consecutive_canary_pass": true,
+    "throughput_must_not_weaken_quality": true,
+    "peer_document_body_reuse": false,
+    "generated_prose_cache_reuse": false,
+    "promotion_requires": [
+      "exact_requirement_and_genre_mechanics",
+      "title_blind_identification",
+      "negative_neighbor_rejection",
+      "substantive_duplication_gate",
+      "evaluator_facing_readability",
+      "sample_real_truth_boundary"
+    ],
+    "acceptance_contract_freeze_condition": "two consecutive PASS canaries from different document families plus duplication/negative-neighbor PASS"
   },
   "canary_policy": {
     "required_representative_canaries": [
@@ -48,6 +60,6 @@
     "full_production_requires_required_canary_set_pass": true
   },
   "human_gate_policy": "Only Mission/spec change, genuine SAMPLE-vs-REAL or third-party authority ambiguity, legal/signature/identity/OAuth/MFA, missing real-world prerequisite that changes the deliverable and cannot be obtained automatically, unresolved external side effect after bounded readback, or final package acceptance. Single-doc/canary failures and repeated repair failures are NOT Human Gates.",
-  "next_legal_action": "Sync EFF1 control, resume queue loop, salvage stable candidates before rebuild, run at most one build plus one semantic review concurrently, and publish every PASS immediately to CURRENT.",
+  "next_legal_action": "Sync EFF1A. Optimize scheduling/caching only; do not weaken semantic gates. No candidate enters CURRENT without requirement/genre, title-blind, negative-neighbor, substantive-duplication, readability, and SAMPLE/REAL PASS.",
   "updated_at": "2026-10-02"
 }
