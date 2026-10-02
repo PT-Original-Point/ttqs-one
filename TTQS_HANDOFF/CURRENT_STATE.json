@@ -1,6 +1,6 @@
 {
   "project": "TTQS_ONE",
-  "handoff_revision": "WIN10_CODEX_20261002_R01",
+  "handoff_revision": "WIN10_CODEX_LIVE_HOST_ALIGNED_20261002_R04_HOTFIX1",
   "official_checkbox_total": 157,
   "named_non_other_requirements": 129,
   "blocked_other_rows": 28,
@@ -10,15 +10,36 @@
   "win11_factory_dependency": false,
   "docx_primary_artifact": true,
   "full_pdf_png_default": false,
-  "latest_good_quality_epoch_candidate": {
-    "docs": "0031-0040",
-    "source": "Wave005 R3 Blueprint Aligned",
-    "human_preview": "PENDING"
+  "runtime_root": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME",
+  "current_publish_dir": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CURRENT",
+  "canary_policy": {
+    "required_representative_canaries": [
+      "0001",
+      "0003",
+      "0025",
+      "0039",
+      "0066",
+      "0067",
+      "0071",
+      "0076",
+      "0087",
+      "0092",
+      "0100",
+      "0142"
+    ],
+    "passing_canary_publish_immediately": true,
+    "failing_canary_parks_exact_lane_only": true,
+    "two_failed_repairs_is_human_gate": false,
+    "full_production_requires_required_canary_set_pass": true
   },
-  "taint": {
-    "Wave001-004": "TAINTED_REBUILD_CANDIDATE: 40/40 hit old placeholder/blank-policy patterns",
-    "old_Wave005": "INVALIDATED_BY_HUMAN_FINDING",
-    "old_Wave006": "SUPERSEDED_TAINTED_DO_NOT_USE"
+  "current_incident": {
+    "deliverable_id": "0003",
+    "status": "PARKED_ROOT_CAUSE_REPAIR",
+    "previous_false_human_gate": "REVOKED",
+    "defect": "Q4 synthetic answer selected three needs but did not provide one concrete work/life scenario for each selected need.",
+    "required_repair": "Add one explicit concrete scenario per selected Q4 need, register new synthetic facts, then fresh review."
   },
-  "human_gate_policy": "Non-blocking by default; only true authority/policy/repeated-failure/final-acceptance gates stop execution."
+  "human_gate_policy": "Only Mission/spec change, genuine SAMPLE-vs-REAL or third-party authority ambiguity, legal/signature/identity/OAuth/MFA, missing real-world prerequisite that changes the deliverable and cannot be obtained automatically, unresolved external side effect after bounded readback, or final package acceptance. Single-doc/canary failures and repeated repair failures are NOT Human Gates.",
+  "next_legal_action": "Re-enable supervisor, continue all other READY canaries, publish passing canaries to CURRENT immediately, and repair 0003 autonomously in its parked lane.",
+  "updated_at": "2026-10-02"
 }
