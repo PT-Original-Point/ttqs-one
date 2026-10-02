@@ -1,6 +1,6 @@
 {
   "project": "TTQS_ONE",
-  "handoff_revision": "WIN10_CODEX_LIVE_HOST_ALIGNED_20261002_R04_HOTFIX1",
+  "handoff_revision": "WIN10_CODEX_LIVE_HOST_ALIGNED_20261002_R04_HOTFIX1_EFF1",
   "official_checkbox_total": 157,
   "named_non_other_requirements": 129,
   "blocked_other_rows": 28,
@@ -12,6 +12,21 @@
   "full_pdf_png_default": false,
   "runtime_root": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME",
   "current_publish_dir": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CURRENT",
+  "efficiency_policy": {
+    "one_attempt_per_lane_per_scheduler_turn": true,
+    "salvage_stable_candidate_after_nonzero_builder_exit": true,
+    "builder_no_duplicate_self_qa": true,
+    "reviewer_semantic_only": true,
+    "reviewer_forbid_word_com_cua_render_by_default": true,
+    "max_active_workers": {
+      "build": 1,
+      "review": 1
+    },
+    "shared_writes_serialized": true,
+    "source_cache_key": "source_sha256 + blueprint_row_hash",
+    "delta_only_verification_during_production": true,
+    "acceptance_contract_freeze_after_two_consecutive_canary_pass": true
+  },
   "canary_policy": {
     "required_representative_canaries": [
       "0001",
@@ -32,14 +47,7 @@
     "two_failed_repairs_is_human_gate": false,
     "full_production_requires_required_canary_set_pass": true
   },
-  "current_incident": {
-    "deliverable_id": "0003",
-    "status": "PARKED_ROOT_CAUSE_REPAIR",
-    "previous_false_human_gate": "REVOKED",
-    "defect": "Q4 synthetic answer selected three needs but did not provide one concrete work/life scenario for each selected need.",
-    "required_repair": "Add one explicit concrete scenario per selected Q4 need, register new synthetic facts, then fresh review."
-  },
   "human_gate_policy": "Only Mission/spec change, genuine SAMPLE-vs-REAL or third-party authority ambiguity, legal/signature/identity/OAuth/MFA, missing real-world prerequisite that changes the deliverable and cannot be obtained automatically, unresolved external side effect after bounded readback, or final package acceptance. Single-doc/canary failures and repeated repair failures are NOT Human Gates.",
-  "next_legal_action": "Re-enable supervisor, continue all other READY canaries, publish passing canaries to CURRENT immediately, and repair 0003 autonomously in its parked lane.",
+  "next_legal_action": "Sync EFF1 control, resume queue loop, salvage stable candidates before rebuild, run at most one build plus one semantic review concurrently, and publish every PASS immediately to CURRENT.",
   "updated_at": "2026-10-02"
 }
