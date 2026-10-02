@@ -51,3 +51,6 @@ Do NOT escalate merely because:
 - repeated same defect with no material delta -> park exact lane, root-cause audit, repair contract, continue other READY lanes.
 
 Human may randomly inspect CURRENT anytime. A Human finding outranks automated PASS, but Human is never required to keep the queue moving.
+
+## Anti-garbage rule for efficiency work
+Efficiency changes are invalid if they reduce semantic review coverage. No fast path may skip fresh review, reuse peer document bodies as templates, or promote on technical validity alone. Every promotion still requires requirement-specific genre mechanics, title-blind identification, negative-neighbor rejection, substantive-duplication screening, evaluator-facing readability, and SAMPLE/REAL truth-boundary PASS. Caching may reuse source readback, calculations, and shared fact IDs only; not generated prose or document bodies.
