@@ -173,3 +173,27 @@ Priority 2: remaining planned 1:N support documents.
 Within equal priority, choose READY work with no shared-fact collision and shortest unresolved dependency chain.
 
 The target remains 142/142; prioritization changes order, not scope.
+
+
+## Worker liveness / no-idle invariant
+Once HOTFIX6 activation prerequisites are satisfied, an initialized READY worker must not remain idle while legal work exists.
+
+For OPENCODE_WORKER, in every dispatcher scheduling turn:
+1. if a Codex-built candidate is ready for cross-review -> dispatch REVIEW immediately;
+2. else if an OpenCode-built candidate has an exact repair locator -> dispatch REPAIR immediately;
+3. else if any READY build item exists with no shared_fact_group collision -> dispatch BUILD immediately;
+4. only if none of the above exists may OpenCode remain IDLE.
+
+Invariant:
+READY_WORK_EXISTS && OPENCODE_READY && NO_ACTIVE_OPENCODE_TASK => DISPATCH_IN_SAME_SCHEDULING_TURN
+
+The Agent Bus being empty is not a normal steady state when READY work exists.
+
+The dispatcher must create required bus directories, including BUILD_INBOX, before declaring DUAL_WORKER_ACTIVE.
+
+## OpenCode CLI path
+Do not depend on shell PATH. The dispatcher must resolve and persist an absolute verified OpenCode CLI executable path from the successful local installation/preflight, verify it with a harmless version/read-only smoke, and use that absolute path for headless launches.
+
+Persist the verified path in a control sidecar (not in DOCX). If the CLI path is temporarily unresolved, classify REVIEW_INFRA_DEFECT / EXECUTOR_ROUTE_DEFECT for OpenCode only; Codex READY lanes continue. Do not ask Human unless interactive authentication/OAuth/MFA is actually required.
+
+OpenCode Desktop UI state is irrelevant to worker liveness.
