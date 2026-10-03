@@ -1,6 +1,6 @@
 {
   "project": "TTQS_ONE",
-  "handoff_revision": "WIN10_CODEX_LIVE_HOST_ALIGNED_20261002_R04_HOTFIX1_EFF1A",
+  "handoff_revision": "WIN10_CODEX_LIVE_HOST_ALIGNED_20261002_R04_HOTFIX2",
   "official_checkbox_total": 157,
   "named_non_other_requirements": 129,
   "blocked_other_rows": 28,
@@ -60,6 +60,20 @@
     "full_production_requires_required_canary_set_pass": true
   },
   "human_gate_policy": "Only Mission/spec change, genuine SAMPLE-vs-REAL or third-party authority ambiguity, legal/signature/identity/OAuth/MFA, missing real-world prerequisite that changes the deliverable and cannot be obtained automatically, unresolved external side effect after bounded readback, or final package acceptance. Single-doc/canary failures and repeated repair failures are NOT Human Gates.",
-  "next_legal_action": "Sync EFF1A. Optimize scheduling/caching only; do not weaken semantic gates. No candidate enters CURRENT without requirement/genre, title-blind, negative-neighbor, substantive-duplication, readability, and SAMPLE/REAL PASS.",
-  "updated_at": "2026-10-02"
+  "next_legal_action": "Sync HOTFIX2; first eliminate visible TTQS console/task launchers with prestate/readback and hidden replacement, then apply targeted evaluator-facing DOCX hardening to known affected docs and same-pattern neighbors without weakening semantic gates.",
+  "updated_at": "2026-10-02",
+  "runtime_ui_policy": {
+    "visible_console_for_ttqs_automation": false,
+    "focus_stealing_for_ttqs_automation": false,
+    "require_hidden_launcher_readback": true,
+    "disable_visible_launcher_if_hidden_replacement_not_verified": true
+  },
+  "evaluator_docx_policy": {
+    "first_page_30s_plain_language": true,
+    "forbid_internal_control_metadata_in_body": true,
+    "blank_page_hard_fail": true,
+    "sparse_orphan_page_review": true,
+    "full_corpus_pdf_png_default": false,
+    "replacement_register_internal_sidecar": true
+  }
 }
