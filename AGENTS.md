@@ -69,3 +69,11 @@ The following are explicitly NOT Human Gates:
 - Reuse is limited to authoritative source readback, calculations, and shared fact IDs; generated prose/body/table/question blocks are not reusable across unrelated deliverables.
 - Before CURRENT promotion, every DOCX must still pass exact requirement/genre mechanics, title-blind identification, negative-neighbor rejection, substantive cross-document duplication screening, evaluator-facing readability, and SAMPLE/REAL truth-boundary checks.
 - Contract freeze requires two consecutive PASS canaries from different document families and a passing duplication/negative-neighbor gate.
+
+## HOTFIX5 stable dual-agent invariant
+- Canonical promotion pipeline is: BUILD -> deterministic STATIC/LAYOUT/RECEIPT PASS -> WAITING_OPENCODE_REVIEW -> OpenCode exact-SHA semantic/usability PASS -> CURRENT.
+- OpenCode is the single independent semantic acceptance reviewer. Codex builder/self-diagnostics do not grant semantic acceptance.
+- CONTROL_PLANE_DEFECT, REVIEW_INFRA_DEFECT, and TRANSIENT_EXECUTION_DEFECT never authorize DOCX mutation.
+- If content/layout bytes do not need repair, DOCX SHA must not change; metadata/control updates stay in sidecars.
+- WAITING_OPENCODE_REVIEW is workflow state, never CONTENT_FAIL.
+- DONE/CURRENT evidence is not invalidated merely by policy/control-code revision; exact source/artifact defect with locator is required.
