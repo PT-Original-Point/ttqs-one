@@ -60,7 +60,7 @@
     "full_production_requires_required_canary_set_pass": true
   },
   "human_gate_policy": "Only Mission/spec change, genuine SAMPLE-vs-REAL or third-party authority ambiguity, legal/signature/identity/OAuth/MFA, missing real-world prerequisite that changes the deliverable and cannot be obtained automatically, unresolved external side effect after bounded readback, or final package acceptance. Single-doc/canary failures and repeated repair failures are NOT Human Gates.",
-  "next_legal_action": "Complete HOTFIX5 two-cycle proof if still pending; then auto-activate HOTFIX6 dual-worker sprint with Codex and OpenCode both building/reviewing disjoint work under cross-review, no Human relay.",
+  "next_legal_action": "Finish HOTFIX5 proof if pending; once activation prerequisites pass, enforce same-turn OpenCode dispatch for REVIEW/REPAIR/BUILD using a verified absolute CLI path; no Human relay.",
   "updated_at": "2026-10-03",
   "runtime_ui_policy": {
     "visible_console_for_ttqs_automation": false,
@@ -139,6 +139,9 @@
     ],
     "shared_fact_collision_avoidance": true,
     "promotion_serialized": true,
-    "target_docx": 142
+    "target_docx": 142,
+    "worker_liveness_invariant": "READY_WORK_EXISTS && OPENCODE_READY && NO_ACTIVE_OPENCODE_TASK => DISPATCH_IN_SAME_SCHEDULING_TURN",
+    "require_build_inbox_when_active": true,
+    "opencode_cli_route": "VERIFIED_ABSOLUTE_PATH_NOT_SHELL_PATH"
   }
 }
