@@ -1,0 +1,254 @@
+PROJECT=TTQS_ONE
+COMMAND=BOOTSTRAP_HOTFIX6_DUAL_WORKER_SPRINT
+
+同步 branch=ttqs-win10-handoff-20261002
+
+fresh-read：
+TTQS_HANDOFF/R04_HOTFIX5_STABLE_DUAL_AGENT_PIPELINE_20261003.md
+TTQS_HANDOFF/R04_HOTFIX6_DUAL_WORKER_SPRINT_20261003.md
+TTQS_HANDOFF/DUAL_WORKER_SPRINT_CONTRACT_R01.md
+TTQS_HANDOFF/DUAL_AGENT_REVIEW_CONTRACT_R01.md
+TTQS_HANDOFF/CURRENT_STATE.json
+
+不要重建 CURRENT、queue、candidates、checkpoints。
+
+一、先完成 HOTFIX5 bootstrap
+若 ROUND_A / ROUND_B 尚未 PASS：
+先完成兩個不改 DOCX bytes 的 exact-SHA E2E。
+未 PASS 前不得雙 Builder。
+
+當且僅當以下全部 PASS：
+HUMAN_RELAY_COUNT=0
+VISIBLE_CONSOLE_COUNT=0
+DOCX_SHA_CHANGED_BY_CONTROL_FIX=0
+ROUND_A=PASS
+ROUND_B=PASS
+
+立即自動切換：
+SPRINT_MODE=DUAL_WORKER_ACTIVE
+
+不要再等 Human。
+
+二、雙 Worker
+最多同時兩個 model workers：
+CODEX_WORKER=1
+OPENCODE_WORKER=1
+
+每個 worker 每次只做一個 model task。
+
+角色依文件分派，不固定：
+
+文件 A：
+Codex BUILD
+OpenCode REVIEW
+
+文件 B：
+OpenCode BUILD
+Codex fresh isolated REVIEW
+
+任何文件：
+BUILD_OWNER != REVIEW_OWNER
+
+禁止 self-review。
+
+三、Codex 是唯一 dispatcher/integrator/promoter
+只有 Codex 可以寫：
+BUILD_QUEUE
+SUPERVISOR_STATE
+central synthetic register
+CURRENT
+canonical checkpoints
+
+OpenCode 永遠不得碰上述共享狀態。
+
+四、建立 isolated OpenCode build workspace
+E:\TTQS\TTQS_ONE_OPENCODE_BUILD\
+
+至少：
+CANDIDATES\
+BUILD_RECEIPTS\
+SYNTHETIC_DELTAS\
+LOGS\
+CONTROL\
+
+OpenCode-built DOCX 只寫這裡。
+
+五、work packet
+Codex 對 OpenCode build 任務建立：
+E:\TTQS\TTQS_ONE_AGENT_BUS\BUILD_INBOX\<work_id>.json
+
+必要欄位：
+work_id
+deliverable_id
+build_owner
+review_owner
+requirement_id
+document_family
+blueprint_row_hash
+source_anchor_hash
+evidence_bundle_path
+shared_fact_snapshot_path
+shared_fact_snapshot_hash
+shared_fact_groups
+acceptance_contract_hash
+output_staging_path
+
+temp-write → atomic rename。
+
+一個 deliverable 同時只能一個 BUILD_OWNER。
+
+shared_fact_groups 有重疊的兩份文件不得同時 build。
+未知依賴時，同 family 先序列化。
+
+六、immutable evidence bundle
+每份文件只建一次 authoritative evidence bundle：
+exact requirement
+exact Blueprint row
+verified source anchors/excerpts
+genre mechanics
+shared fact snapshot
+該文件 known repair feedback
+
+禁止塞其他 DOCX body。
+
+Builder 和 reviewer 都使用同 bundle/hash。
+Reviewer 不讀 builder prose plan。
+
+七、OpenCode BUILD 的交付
+OpenCode只能輸出：
+stable DOCX
+build receipt
+proposed synthetic fact delta
+candidate SHA
+source/evidence hashes
+
+不得直接 merge central register。
+
+八、deterministic integration
+Codex 對兩邊 Builder 的候選統一跑：
+OOXML integrity
+placeholder
+font floor
+required markers
+arithmetic
+engineering-language scan
+hidden lightweight layout
+candidate/receipt hash binding
+substantive duplication
+
+Word COM/layout serialized。
+禁止 full-corpus PDF/PNG。
+
+九、cross-review
+Codex-built：
+OpenCode exact-SHA REVIEW。
+
+OpenCode-built：
+啟動 fresh isolated Codex reviewer。
+此 reviewer只讀 candidate + evidence bundle + review contract。
+不得讀 Builder context。
+不得修改 DOCX。
+
+十、worker scheduling
+每個 worker 的優先序：
+1. REVIEW 另一個 worker 已完成的 ready candidate
+2. REPAIR 自己原先 build 且有 exact defect 的文件
+3. BUILD 下一份 READY 文件
+
+不要讓 OpenCode空等。
+不要讓 Codex因等待 review 而空等。
+
+十一、promotion
+只有 Codex integrator promotion。
+
+需要：
+deterministic exact-SHA PASS
++
+independent cross-review exact-SHA PASS
++
+contract hash match
++
+synthetic delta validation
+
+promotion lock 內：
+fresh-read shared fact groups
+→ merge approved delta
+→ publish exact reviewed DOCX to CURRENT
+→ update queue/checkpoint
+→ unlock
+
+若 shared fact snapshot stale：
+先檢查是否真正衝突。
+無衝突：
+只 rebind sidecar，不改 DOCX。
+真正內容衝突：
+才回 CONTENT_DEFECT 給原 Builder。
+
+十二、FAIL
+FAIL_REPAIRABLE：
+只回 original BUILD_OWNER。
+只修 exact locator。
+新 SHA 後重新 gate + cross-review。
+
+FAIL_SYSTEMIC：
+只 impact scan confirmed affected family/epoch。
+禁止 142 全 reset。
+
+CONTROL/REVIEW INFRA failure：
+修控制器。
+禁止改 DOCX。
+
+十三、品質不可降
+每份仍必須：
+requirement fit
+genre mechanics
+title-blind
+negative-neighbor
+substantive duplication
+國中生30秒懂
+協會直接可用
+委員看起來是正式文件
+SAMPLE完整但非REAL
+無第三方偽造
+無工程垃圾
+無不合理膨脹
+可靠 layout PASS
+
+十四、deadline priority
+評核前執行：
+P0 remaining canaries / known evaluator defects
+P1 named requirement coverage
+P2 remaining planned 1:N support docs
+
+只改施工順序，不縮減 142 目標。
+
+十五、桌面
+所有 background：
+CREATE_NO_WINDOW / redirected stdio
+不得 PowerShell/cmd/Python/OpenCode/Codex 黑窗
+不得 steal focus
+不得第二套 visible scheduler
+
+十六、人類
+Human 不做搬運、不做 heartbeat。
+每 10 promotions 可非阻塞寫 checkpoint/通知，但施工繼續。
+
+十七、回報欄位
+SPRINT_MODE=
+HOTFIX5_ROUND_A=
+HOTFIX5_ROUND_B=
+CODEX_WORKER=
+OPENCODE_WORKER=
+CODEX_BUILD_ID=
+OPENCODE_BUILD_ID=
+CODEX_REVIEW_ID=
+OPENCODE_REVIEW_ID=
+CURRENT_COUNT=
+READY_COUNT=
+PARKED_CONTENT=
+PARKED_CONTROL=
+VISIBLE_CONSOLE_COUNT=
+HUMAN_RELAY_COUNT=
+NEXT_ACTION=
+
+啟動後自行持續到 final acceptance 或真正 Human Gate。
