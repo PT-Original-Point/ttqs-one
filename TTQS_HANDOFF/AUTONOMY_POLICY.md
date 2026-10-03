@@ -54,3 +54,10 @@ Human may randomly inspect CURRENT anytime. A Human finding outranks automated P
 
 ## Anti-garbage rule for efficiency work
 Efficiency changes are invalid if they reduce semantic review coverage. No fast path may skip fresh review, reuse peer document bodies as templates, or promote on technical validity alone. Every promotion still requires requirement-specific genre mechanics, title-blind identification, negative-neighbor rejection, substantive-duplication screening, evaluator-facing readability, and SAMPLE/REAL truth-boundary PASS. Caching may reuse source readback, calculations, and shared fact IDs only; not generated prose or document bodies.
+
+## HOTFIX5 delete-first dual-agent pipeline
+The stable acceptance path is BUILD -> STATIC/LAYOUT/RECEIPT -> OpenCode exact-SHA independent semantic review -> promotion. Remove duplicate mandatory Codex semantic acceptance from the critical path. Codex may diagnose repairs but cannot self-accept content.
+Defect classes are CONTENT_DEFECT, LAYOUT_DEFECT, CONTROL_PLANE_DEFECT, REVIEW_INFRA_DEFECT, TRANSIENT_EXECUTION_DEFECT. Only the first two may mutate DOCX.
+NO_CONTENT_OR_LAYOUT_CHANGE => DOCX_SHA_MUST_NOT_CHANGE.
+WAITING_OPENCODE_REVIEW != CONTENT_FAIL.
+Control/review infrastructure defects repair only their own lane/control surface, never document bytes.
