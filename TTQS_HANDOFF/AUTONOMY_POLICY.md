@@ -61,3 +61,6 @@ Defect classes are CONTENT_DEFECT, LAYOUT_DEFECT, CONTROL_PLANE_DEFECT, REVIEW_I
 NO_CONTENT_OR_LAYOUT_CHANGE => DOCX_SHA_MUST_NOT_CHANGE.
 WAITING_OPENCODE_REVIEW != CONTENT_FAIL.
 Control/review infrastructure defects repair only their own lane/control surface, never document bytes.
+
+## Deadline dual-worker execution
+When HOTFIX5 liveness/evidence bootstrap has passed, two model workers may be active: one Codex task and one OpenCode task. Each worker prioritizes cross-review of the other worker's ready candidate, then exact repair of its own rejected candidate, then new build. Do not concurrently build deliverables with overlapping shared_fact_groups. Shared writes/promotion remain serialized by Codex. This changes throughput only; all semantic/anti-garbage gates remain unchanged.
