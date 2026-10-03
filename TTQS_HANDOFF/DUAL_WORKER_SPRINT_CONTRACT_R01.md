@@ -197,3 +197,13 @@ Do not depend on shell PATH. The dispatcher must resolve and persist an absolute
 Persist the verified path in a control sidecar (not in DOCX). If the CLI path is temporarily unresolved, classify REVIEW_INFRA_DEFECT / EXECUTOR_ROUTE_DEFECT for OpenCode only; Codex READY lanes continue. Do not ask Human unless interactive authentication/OAuth/MFA is actually required.
 
 OpenCode Desktop UI state is irrelevant to worker liveness.
+
+
+## Human model pin: Muse Spark 1.3 Free only
+OpenCode execution is model-allowlisted by explicit Human authority.
+Only the model displayed as "Muse Spark 1.3 Free" may be used for OpenCode BUILD/REVIEW/REPAIR.
+Fallback models are forbidden.
+The exact CLI identifier must be resolved from local OpenCode metadata/configuration and persisted; do not guess it.
+Every headless invocation must explicitly pin that identifier and every result must record the actual model used.
+If Muse Spark returns 429, enter provider backoff/cooldown; do not switch models. Codex continues other READY lanes.
+Any result produced by a different model is MODEL_POLICY_VIOLATION and cannot be promoted.
