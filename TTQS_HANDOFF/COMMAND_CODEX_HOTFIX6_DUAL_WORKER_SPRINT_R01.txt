@@ -252,3 +252,47 @@ HUMAN_RELAY_COUNT=
 NEXT_ACTION=
 
 啟動後自行持續到 final acceptance 或真正 Human Gate。
+
+
+十八、Worker liveness：禁止 OpenCode 就緒後睡死
+
+若 HOTFIX5 Round A/B 已符合 activation contract，且：
+OPENCODE_DUAL_WORKER_READY=TRUE
+READY_COUNT>0
+OPENCODE_ACTIVE_TASK=NONE
+
+則同一 scheduling turn 必須 dispatch OpenCode，不得留到下一次人工喚醒。
+
+dispatch priority：
+1. REVIEW Codex ready candidate
+2. REPAIR OpenCode 自己被 exact locator 退回的 candidate
+3. BUILD 下一份無 shared_fact_group collision 的 READY deliverable
+
+正式 invariant：
+READY_WORK_EXISTS && OPENCODE_READY && NO_ACTIVE_OPENCODE_TASK
+=> DISPATCH_IN_SAME_SCHEDULING_TURN
+
+若已宣告 DUAL_WORKER_ACTIVE：
+E:\TTQS\TTQS_ONE_AGENT_BUS\BUILD_INBOX
+必須存在。
+bus 空白只有在「真的沒有可合法派送工作」時才正常。
+
+十九、OpenCode CLI 不得依賴 PATH
+
+OpenCode Desktop shell 回報 PATH 找不到 opencode，不代表本機 CLI 不可用。
+不得要求 Human 手動修 PATH。
+
+Codex 必須：
+- 讀回先前 HOTFIX3 成功 preflight 的 executable/path evidence；
+- 或 fresh-resolve 本機已安裝 OpenCode CLI 的 absolute executable path；
+- 用 absolute path 執行 --version / harmless read-only smoke；
+- 將 verified absolute path 寫入 control sidecar；
+- 之後 headless invocation 一律使用該 absolute path + redirected stdio + CREATE_NO_WINDOW。
+
+只有真的需要互動 OAuth/MFA 才是 Human Gate。
+
+若 CLI route 暫時失效：
+只標 OpenCode executor/review infra lane defect，
+Codex 其他 READY 工作照常施工，
+不得 global stop，
+不得修改 DOCX。
