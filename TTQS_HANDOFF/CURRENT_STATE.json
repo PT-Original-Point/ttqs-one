@@ -1,6 +1,6 @@
 {
   "project": "TTQS_ONE",
-  "handoff_revision": "WIN10_CODEX_LIVE_HOST_ALIGNED_20261002_R04_HOTFIX3",
+  "handoff_revision": "WIN10_CODEX_LIVE_HOST_ALIGNED_20261003_R04_HOTFIX5",
   "official_checkbox_total": 157,
   "named_non_other_requirements": 129,
   "blocked_other_rows": 28,
@@ -60,8 +60,8 @@
     "full_production_requires_required_canary_set_pass": true
   },
   "human_gate_policy": "Only Mission/spec change, genuine SAMPLE-vs-REAL or third-party authority ambiguity, legal/signature/identity/OAuth/MFA, missing real-world prerequisite that changes the deliverable and cannot be obtained automatically, unresolved external side effect after bounded readback, or final package acceptance. Single-doc/canary failures and repeated repair failures are NOT Human Gates.",
-  "next_legal_action": "Sync HOTFIX3; verify local OpenCode CLI/auth headlessly, build the file-based exact-SHA review bus, prove two end-to-end automatic review cycles with zero Human relay and zero visible windows, then continue normal queue.",
-  "updated_at": "2026-10-02",
+  "next_legal_action": "Sync HOTFIX5; freeze DOCX mutation, prove two exact-SHA end-to-end Codex->OpenCode review cycles on unchanged stable candidates with zero Human relay/visible windows/SHA churn, then resume normal queue.",
+  "updated_at": "2026-10-03",
   "runtime_ui_policy": {
     "visible_console_for_ttqs_automation": false,
     "focus_stealing_for_ttqs_automation": false,
@@ -90,5 +90,27 @@
     "exact_sha_binding": true,
     "review_required_before_promotion": true,
     "visible_console_allowed": false
+  },
+  "dual_agent_pipeline": {
+    "codex": "CANONICAL_BUILDER_STATIC_LAYOUT_CONTROL_PROMOTION_OWNER",
+    "opencode": "SOLE_INDEPENDENT_SEMANTIC_USABILITY_REVIEWER",
+    "pipeline": [
+      "BUILD",
+      "STATIC_LAYOUT_RECEIPT_PASS",
+      "WAITING_OPENCODE_REVIEW",
+      "OPENCODE_EXACT_SHA_PASS",
+      "PROMOTE_CURRENT"
+    ],
+    "codex_mandatory_semantic_acceptance_gate": false,
+    "docx_mutation_allowed_only_for": [
+      "CONTENT_DEFECT",
+      "LAYOUT_DEFECT"
+    ],
+    "no_content_or_layout_change_docx_sha_must_not_change": true,
+    "waiting_opencode_is_content_fail": false,
+    "max_concurrency": {
+      "build": 1,
+      "review": 1
+    }
   }
 }
