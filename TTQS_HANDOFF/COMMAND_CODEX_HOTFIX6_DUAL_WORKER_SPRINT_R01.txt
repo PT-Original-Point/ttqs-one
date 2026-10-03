@@ -296,3 +296,55 @@ Codex 必須：
 Codex 其他 READY 工作照常施工，
 不得 global stop，
 不得修改 DOCX。
+
+
+二十、OpenCode model 強制鎖定
+
+Human 最新明確命令：
+OpenCode 只允許使用畫面顯示名稱「Muse Spark 1.3 Free」。
+
+禁止使用任何其他 OpenCode 模型。
+禁止 fallback。
+
+特別禁止目前曾被偵測到的：
+ling-3.1-flash-free
+mimo-v2.6-flash-free
+nemotron-3.5-lightning-free
+
+以及任何其他非 Muse Spark 1.3 Free 模型。
+
+不要猜 CLI model slug。
+必須從本機 OpenCode metadata/config/model listing 中證明：
+display label = Muse Spark 1.3 Free
+對應的 exact CLI model identifier。
+
+把 exact mapping 寫入 control sidecar：
+allowed_display_model
+resolved_cli_model_id
+resolution_evidence
+resolved_at
+
+之後每個 OpenCode BUILD/REVIEW/REPAIR：
+必須在 headless invocation 明確指定 resolved_cli_model_id。
+不得依賴 Desktop UI 當前選擇。
+
+每個 OpenCode result 必須記錄 actual_model_id。
+actual_model_id != resolved_cli_model_id：
+MODEL_POLICY_VIOLATION
+→ result invalid
+→ 禁止 promotion
+→ 禁止 reuse
+
+如果 Muse Spark 1.3 Free 429：
+PROVIDER_BACKPRESSURE
+→ Retry-After 或 bounded exponential backoff
+→ 不得切其他模型
+→ 不得修改 DOCX
+→ Codex 其他 READY lanes 繼續
+
+如果無法證明 Muse Spark 的 exact CLI identity：
+OPENCODE_MODEL_ROUTE_BLOCKED
+→ OpenCode lane 暫停
+→ Codex 照常施工
+→ 不得自行換模型
+→ 除非真的需要 OAuth/MFA，否則不是 Human Gate。
