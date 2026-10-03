@@ -1,0 +1,205 @@
+PROJECT=TTQS_ONE
+COMMAND=BOOTSTRAP_R04_HOTFIX5_STABLE_DUAL_AGENT_PIPELINE
+
+同步 PT-Original-Point/ttqs-one
+branch=ttqs-win10-handoff-20261002
+
+fresh-read：
+TTQS_HANDOFF/R04_HOTFIX5_STABLE_DUAL_AGENT_PIPELINE_20261003.md
+TTQS_HANDOFF/DUAL_AGENT_REVIEW_CONTRACT_R01.md
+TTQS_HANDOFF/CURRENT_STATE.json
+AGENTS.md
+TTQS_HANDOFF/AUTONOMY_POLICY.md
+
+這不是新 Mission，不得重建 CURRENT、queue、candidates、checkpoints。
+
+【A. 立即止血】
+1. 暫停 TTQS_ONE_Codex_Supervisor 的未來 trigger；不粗暴終止正在完成 stable checkpoint 的工作。
+2. 建立 HOTFIX5_PRESTATE sidecar：CURRENT/candidate exact SHA、queue state、static/layout/receipt/review evidence。
+3. HOTFIX5 bootstrap 期間 DOCX_MUTATION_FREEZE=TRUE。
+4. 禁止因 control/review/scheduler/receipt/hash 問題重新 save DOCX、改 OOXML modified time、重建 body、重開 DONE lane。
+
+【B. 刪除重複 acceptance gate】
+正式 promotion pipeline 改為唯一：
+BUILD
+→ Codex STATIC/LAYOUT/RECEIPT deterministic PASS
+→ immutable exact candidate SHA
+→ WAITING_OPENCODE_REVIEW
+→ OpenCode exact-SHA semantic/usability review
+→ PASS 才 PROMOTE CURRENT。
+
+Codex Builder 無 PASS 權。
+Codex 不再維持第二套 mandatory semantic acceptance reviewer。
+Codex 可做 repair diagnosis，但不得把自身 diagnosis 當 promotion PASS。
+
+WAITING_OPENCODE_REVIEW / NO_EXTERNAL_REVIEW / OpenCode pending/timeout 全部是 workflow/review-infra state，不是 CONTENT FAIL。
+
+【C. defect classification 寫死】
+只有：
+CONTENT_DEFECT
+LAYOUT_DEFECT
+可以修改 DOCX。
+
+以下全部禁止修改 DOCX：
+CONTROL_PLANE_DEFECT
+REVIEW_INFRA_DEFECT
+TRANSIENT_EXECUTION_DEFECT
+
+control-plane bug → 修 runtime/control sidecar。
+review infra bug → 修 bus/CLI/schema/invocation。
+transient → queue tail / bounded retry。
+不得把它們轉成 document repair。
+
+【D. artifact immutability】
+若正文與版面沒有實質改動：
+DOCX SHA 必須保持不變。
+
+以下只能更新 sidecar：
+receipt binding
+queue state
+review request
+review verdict
+checkpoint
+policy version
+scheduler state
+control version
+
+禁止只為更新 modified time / metadata 而重存 Word。
+
+【E. Agent Bus】
+固定：
+E:\TTQS\TTQS_ONE_AGENT_BUS
+
+INBOX
+REVIEWS
+REPAIR_SPECS
+CORPUS_FINDINGS
+PROCESSED
+DEADLETTER
+LOGS
+LOCKS
+
+request idempotency key：
+deliverable_id + candidate_sha256 + review_contract_hash
+
+request temp-write → atomic rename。
+同 key 不得重送。
+
+OpenCode result 必須 exact SHA + exact review_contract_hash。
+SHA 不同 = VERDICT_NOT_PORTABLE。
+
+【F. OpenCode CLI】
+只用 headless non-interactive route。
+不得 GUI automation。
+不得建立第二套 visible Scheduled Task。
+使用 redirected stdio + CREATE_NO_WINDOW 或等效真正 no-window 啟動。
+正常 wake 不得彈 PowerShell/cmd/Python/OpenCode/Word 視窗。
+
+【G. 兩輪 E2E bootstrap】
+先不要重建任何 DOCX。
+挑兩份不同 document family、已有 stable candidate、static/layout/receipt 可重新確認的文件。
+
+Round A：
+不改 bytes
+→ exact-SHA bus request
+→ headless OpenCode
+→ exact-SHA verdict
+→ Codex consume。
+
+Round B：
+不同 family 重複一次。
+
+驗收必須：
+HUMAN_RELAY_COUNT=0
+VISIBLE_CONSOLE_COUNT=0
+DOCX_SHA_CHANGED_BY_CONTROL_FIX=0
+DUPLICATE_REQUEST_COUNT=0
+STALE_VERDICT_REUSE_COUNT=0
+ROUND_A=PASS
+ROUND_B=PASS
+
+若任一失敗：
+修 exact control/review infrastructure。
+不得動 DOCX。
+不得再次做 root-cause rebuild。
+
+【H. 恢復正常施工】
+兩輪 E2E PASS 後才解除 DOCX_MUTATION_FREEZE 並重新 Enable 原 hidden supervisor。
+
+正常流水線：
+Codex BUILD N+1
+同時
+OpenCode REVIEW N
+
+最大同時：
+1 BUILD
+1 REVIEW
+
+shared writes 序列化。
+
+OpenCode PASS：
+static/layout/receipt exact-SHA 仍 PASS
+→ Codex promotion CURRENT。
+
+OpenCode FAIL_REPAIRABLE：
+讀 exact locator
+→ 只修 exact content/layout defect
+→ 新 SHA
+→ static/layout/receipt
+→ fresh OpenCode review。
+
+OpenCode FAIL_SYSTEMIC：
+只做 confirmed affected family/epoch impact scan。
+禁止全 142 reset。
+
+OpenCode timeout/crash/schema error：
+REVIEW_INFRA_DEFECT
+→ bounded retry / deadletter exact request
+→ 其他 READY lanes 繼續
+→ 不得 promotion，亦不得修改 DOCX。
+
+【I. churn fuse】
+logical fingerprint：
+deliverable_id + requirement + acceptance_contract + source_anchor
+不含 candidate output SHA。
+
+同 logical work repair/audit >=2，且沒有 Human Mission/source/requirement/acceptance contract/new concrete source defect：
+CHURN_FUSE=TRIPPED
+→ 停止 rebuild/audit loop
+→ 修 control/root cause
+→ 其他 READY lanes 繼續。
+
+【J. DONE/CURRENT 保護】
+不得因 HOTFIX5、policy version、control code變更就把 DONE/CURRENT 全部打回 PENDING。
+
+只有 exact artifact/source defect + locator 才能 invalidated affected evidence。
+已覆蓋且 bytes 未變的 evidence 可保留。
+
+【K. Human Gate】
+Human 不是 heartbeat，也不是 Codex/OpenCode relay。
+只有：
+Mission/Spec重大改變
+真實 SAMPLE/REAL 或第三方 authority 歧義
+法律/簽章/身份/OAuth/MFA
+無法自行取得且改變交付內容的現實資料
+無法釐清的外部副作用
+最終驗收
+才找 Human。
+
+【L. 回報欄位】
+HOTFIX5_STATUS=
+DOCX_MUTATION_FREEZE=
+ROUND_A=
+ROUND_B=
+OPEN_CODE_HEADLESS=
+VISIBLE_CONSOLE_COUNT=
+DOCX_SHA_CHANGED_BY_CONTROL_FIX=
+CURRENT_COUNT=
+READY_LANES=
+PARKED_CONTENT_LANES=
+PARKED_CONTROL_LANES=
+CHURN_FUSE=
+SUPERVISOR_REENABLED=
+NEXT_BUILD_ID=
+
+兩輪 E2E PASS 後自動持續施工，不等待 Human。
