@@ -1,6 +1,6 @@
 {
   "project": "TTQS_ONE",
-  "handoff_revision": "WIN10_CODEX_LIVE_HOST_ALIGNED_20261002_R04_HOTFIX2",
+  "handoff_revision": "WIN10_CODEX_LIVE_HOST_ALIGNED_20261002_R04_HOTFIX3",
   "official_checkbox_total": 157,
   "named_non_other_requirements": 129,
   "blocked_other_rows": 28,
@@ -60,7 +60,7 @@
     "full_production_requires_required_canary_set_pass": true
   },
   "human_gate_policy": "Only Mission/spec change, genuine SAMPLE-vs-REAL or third-party authority ambiguity, legal/signature/identity/OAuth/MFA, missing real-world prerequisite that changes the deliverable and cannot be obtained automatically, unresolved external side effect after bounded readback, or final package acceptance. Single-doc/canary failures and repeated repair failures are NOT Human Gates.",
-  "next_legal_action": "Sync HOTFIX2; first eliminate visible TTQS console/task launchers with prestate/readback and hidden replacement, then apply targeted evaluator-facing DOCX hardening to known affected docs and same-pattern neighbors without weakening semantic gates.",
+  "next_legal_action": "Sync HOTFIX3; verify local OpenCode CLI/auth headlessly, build the file-based exact-SHA review bus, prove two end-to-end automatic review cycles with zero Human relay and zero visible windows, then continue normal queue.",
   "updated_at": "2026-10-02",
   "runtime_ui_policy": {
     "visible_console_for_ttqs_automation": false,
@@ -75,5 +75,20 @@
     "sparse_orphan_page_review": true,
     "full_corpus_pdf_png_default": false,
     "replacement_register_internal_sidecar": true
+  },
+  "agent_bus": {
+    "enabled": true,
+    "root": "E:\\TTQS\\TTQS_ONE_AGENT_BUS",
+    "codex_role": "CANONICAL_BUILDER_PROMOTION_OWNER",
+    "opencode_role": "HEADLESS_INDEPENDENT_REVIEWER",
+    "human_progress_relay": false,
+    "chatgpt_web_runtime_dependency": false,
+    "max_concurrency": {
+      "codex_build": 1,
+      "opencode_review": 1
+    },
+    "exact_sha_binding": true,
+    "review_required_before_promotion": true,
+    "visible_console_allowed": false
   }
 }
