@@ -77,3 +77,6 @@ The following are explicitly NOT Human Gates:
 - If content/layout bytes do not need repair, DOCX SHA must not change; metadata/control updates stay in sidecars.
 - WAITING_OPENCODE_REVIEW is workflow state, never CONTENT_FAIL.
 - DONE/CURRENT evidence is not invalidated merely by policy/control-code revision; exact source/artifact defect with locator is required.
+
+## HOTFIX6 dual-worker sprint
+After HOTFIX5 two-cycle exact-SHA bootstrap PASS, OpenCode may actively BUILD isolated deliverables as well as REVIEW Codex-built deliverables. Roles are per-document. BUILD_OWNER must never equal REVIEW_OWNER. Codex remains sole dispatcher/integrator/promoter and sole writer of shared canonical state. OpenCode build outputs and proposed synthetic deltas remain isolated until independent cross-review PASS and Codex serialized promotion.
