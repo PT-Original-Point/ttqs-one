@@ -1,6 +1,6 @@
 {
   "project": "TTQS_ONE",
-  "handoff_revision": "WIN10_CODEX_LIVE_HOST_ALIGNED_20261003_R04_HOTFIX5",
+  "handoff_revision": "WIN10_CODEX_LIVE_HOST_ALIGNED_20261003_R04_HOTFIX6_ARMED",
   "official_checkbox_total": 157,
   "named_non_other_requirements": 129,
   "blocked_other_rows": 28,
@@ -60,7 +60,7 @@
     "full_production_requires_required_canary_set_pass": true
   },
   "human_gate_policy": "Only Mission/spec change, genuine SAMPLE-vs-REAL or third-party authority ambiguity, legal/signature/identity/OAuth/MFA, missing real-world prerequisite that changes the deliverable and cannot be obtained automatically, unresolved external side effect after bounded readback, or final package acceptance. Single-doc/canary failures and repeated repair failures are NOT Human Gates.",
-  "next_legal_action": "Sync HOTFIX5; freeze DOCX mutation, prove two exact-SHA end-to-end Codex->OpenCode review cycles on unchanged stable candidates with zero Human relay/visible windows/SHA churn, then resume normal queue.",
+  "next_legal_action": "Complete HOTFIX5 two-cycle proof if still pending; then auto-activate HOTFIX6 dual-worker sprint with Codex and OpenCode both building/reviewing disjoint work under cross-review, no Human relay.",
   "updated_at": "2026-10-03",
   "runtime_ui_policy": {
     "visible_console_for_ttqs_automation": false,
@@ -112,5 +112,33 @@
       "build": 1,
       "review": 1
     }
+  },
+  "deadline": "2026-10-05T09:00:00+08:00",
+  "dual_worker_sprint": {
+    "armed": true,
+    "auto_activate_after": {
+      "hotfix5_round_a": "PASS",
+      "hotfix5_round_b": "PASS",
+      "human_relay_count": 0,
+      "visible_console_count": 0,
+      "docx_sha_changed_by_control_fix": 0
+    },
+    "workers": [
+      "CODEX_WORKER",
+      "OPENCODE_WORKER"
+    ],
+    "roles_per_deliverable": true,
+    "no_self_review": true,
+    "codex_canonical_integrator": true,
+    "opencode_isolated_builder_allowed": true,
+    "max_model_workers": 2,
+    "work_priority": [
+      "CROSS_REVIEW",
+      "EXACT_REPAIR_OWN_BUILD",
+      "NEW_READY_BUILD"
+    ],
+    "shared_fact_collision_avoidance": true,
+    "promotion_serialized": true,
+    "target_docx": 142
   }
 }
