@@ -45,6 +45,14 @@ Raw file contents remain local to the authorized runtime/profile. The hashes abo
 ## First resumed salvage turn — 0042
 
 - Reused payload copy: E:\TTQS\TTQS_ONE_CODEX_RUNTIME\WORK\CONTENT_PAYLOADS\WF_CODEX_SALVAGE_0042_20261004_212511_552043\content.json — 556fd26f04885e1895bbabbe6a62b42c3faf54ebb5b189c8e6e16378a5f62f73
-- Candidate: E:\TTQS\TTQS_ONE_CODEX_RUNTIME\WORK\CANDIDATES\0042__執行本項目與作業流程相關文件資料（展現利益關係人需求）_完整工作稿.docx — 22645a9e527efe51bfbf929eb029b23d2336845e42ac85df5fb36a0064edce15
-- Static report: E:\TTQS\TTQS_ONE_CODEX_RUNTIME\CONTROL\QA\0042__執行本項目與作業流程相關文件資料（展現利益關係人需求）_完整工作稿.docx.static.json — 5aa8153fd4a70b87cc5cf823d0e891fc047977908ea293470b4e2a8e40a15027
+- Candidate (JSON-escaped local path): E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\CANDIDATES\\0042__\u57f7\u884c\u672c\u9805\u76ee\u8207\u4f5c\u696d\u6d41\u7a0b\u76f8\u95dc\u6587\u4ef6\u8cc7\u6599\uff08\u5c55\u73fe\u5229\u76ca\u95dc_\u5b8c\u6574\u5de5\u4f5c\u7a3f.docx — 22645a9e527efe51bfbf929eb029b23d2336845e42ac85df5fb36a0064edce15
+- Static report (JSON-escaped local path): E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\QA\\0042__\u57f7\u884c\u672c\u9805\u76ee\u8207\u4f5c\u696d\u6d41\u7a0b\u76f8\u95dc\u6587\u4ef6\u8cc7\u6599\uff08\u5c55\u73fe\u5229\u76ca\u95dc_\u5b8c\u6574\u5de5\u4f5c\u7a3f.docx.static.json — 5aa8153fd4a70b87cc5cf823d0e891fc047977908ea293470b4e2a8e40a15027
+- Outcome: FAIL_STATIC; lane parked. No Antigravity invocation, no layout/review, no CURRENT promotion.
+
+## Persisted-artifact salvage — 0030
+
+- Reused content: E:\TTQS\TTQS_ONE_CODEX_RUNTIME\WORK\CONTENT_PAYLOADS\WF_CODEX_SALVAGE_0030_20261004_212706_133481\content.json — 8049bb49fad917c628ec5aa97229b5ca742b7916e883af0dd245776c1b3ce731
+- New renderer candidate (JSON-escaped local path): E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\CANDIDATES\\0030__\u5de5\u4f5c\u7d93\u9a57\u7684\u76f8\u95dc\u53d7\u8a13\u8b49\u660e_\u53ef\u76f4\u63a5\u4f7f\u7528\u6210\u54c1.docx — c29bd40a3cb3c73b174e7477c41a59d71f36e3e10284268de26c806d0a25c334
+- Prior candidate preserved (JSON-escaped local path): E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\SUPERSEDED\\0030__\u5de5\u4f5c\u7d93\u9a57\u7684\u76f8\u95dc\u53d7\u8a13\u8b49\u660e_\u53ef\u76f4\u63a5\u4f7f\u7528\u6210\u54c1__WF_CODEX_SALVAGE_0030_20261004_212706_133481__3dd0bcd1549e.docx — 3dd0bcd1549e9ff33478834e17e66a5546d424b14bf1fef155a397adba996998
+- Static report (JSON-escaped local path): E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\QA\\0030__\u5de5\u4f5c\u7d93\u9a57\u7684\u76f8\u95dc\u53d7\u8a13\u8b49\u660e_\u53ef\u76f4\u63a5\u4f7f\u7528\u6210\u54c1.docx.static.json — c97a24f984283a1e72c8537e4d070fa94bf8a3e8d23489cb88caba00f6621c72
 - Outcome: FAIL_STATIC; lane parked. No Antigravity invocation, no layout/review, no CURRENT promotion.

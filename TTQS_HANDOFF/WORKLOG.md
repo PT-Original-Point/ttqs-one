@@ -22,3 +22,9 @@ Checkpoint: CHECKPOINT_ANTIGRAVITY_SCOPED_WRITE_20261004.md
 - Re-enabled and started the hidden Task Scheduler supervisor after that readback. Task state is Enabled=true, Hidden=true. It used one queue turn and created no Antigravity task.
 - 0042 reused its persisted valid payload with byte-identical host copy SHA256 556fd26f04885e1895bbabbe6a62b42c3faf54ebb5b189c8e6e16378a5f62f73. The fixed renderer created candidate SHA256 22645a9e527efe51bfbf929eb029b23d2336845e42ac85df5fb36a0064edce15. Static gate failed on RAW_ENGLISH_SAMPLE_SYNTHETIC_LABEL_IN_BODY, FIRST_PAGE_30S_USE_CONTEXT_MISSING:user,timing, and DOCUMENT_CONTROL_STRIP_INCOMPLETE:version. No layout or reviewer step followed a static failure. Lane 0042 is PARKED_CONTROL; no model was called.
 - Next queue target remains existing candidate 0030. Fresh Antigravity dispatch is withheld until the existing persisted-artifact salvage order is exhausted.
+
+## 2026-10-04 21:28 +08:00 — 0030 salvage gate
+
+- 0030 reused its persisted valid content payload (SHA256 8049bb49fad917c628ec5aa97229b5ca742b7916e883af0dd245776c1b3ce731); no model call occurred.
+- The fixed renderer produced candidate SHA256 c29bd40a3cb3c73b174e7477c41a59d71f36e3e10284268de26c806d0a25c334. The pre-existing candidate SHA256 3dd0bcd1549e9ff33478834e17e66a5546d424b14bf1fef155a397adba996998 is preserved under SUPERSEDED.
+- Static gate failed on RAW_ENGLISH_SAMPLE_SYNTHETIC_LABEL_IN_BODY and FIRST_PAGE_30S_USE_CONTEXT_MISSING:timing. No layout/review/promotion followed; lane 0030 is PARKED_CONTROL. Next reusable candidate target: 0044.
