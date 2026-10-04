@@ -3,7 +3,7 @@
 ## INC-20261004-ANTIGRAVITY-WRITE-DENIAL
 
 - **Classification:** executor permission-route defect; no provider quota evidence.
-- **Severity/status:** mitigated locally; production exact-file route verification pending first real E2E.
+- **Severity/status:** mitigated; exact-file route passed a real production write/readback/removal cycle. That document failed content gates and did not qualify as a production cost sample.
 - **Affected work:** 0026, 0027, 0028; 0033 is separately classified as pre-fix historical work.
 - **Cause:** Antigravity CLI headless mode used request-review, but no interactive approval prompt was available and no matching write_file allow rule existed.
 - **Evidence:** actual model gemini-3.8-flash-high; structured provider quota error absent; exact denials and before/after official usage are indexed in RAW_EVIDENCE_INDEX.md.
@@ -14,6 +14,16 @@
 - **Production control:** one Antigravity worker. Existing payload/candidate salvage precedes new work; first no-model salvage target is 0042. Hidden supervisor must remain disabled until repository durability readback, then may resume.
 - **Owner/action:** Codex host control and promotion; next proof is one exact-file-scoped Antigravity production build through content validation, renderer, static/layout, fresh independent Codex review, and CURRENT.
 - **References:** INCIDENT_ANTIGRAVITY_WRITE_FILE_AUTO_DENIED_20261004.md; RAW_EVIDENCE_INDEX.md; CHECKPOINT_ANTIGRAVITY_SCOPED_WRITE_20261004.md.
+
+
+## 2026-10-05 04:28 +08:00 — scoped-write follow-up and recorder readback
+
+- **Production route:** `WF_ANTIGRAVITY_BUILD_0031_20261004_215707_654194` proved the exact isolated `content.json` rule was loaded and removed/read back after use. Actual model was `gemini-3.8-flash-high`; there was no structured quota error. Its output failed deterministic content gates and did not promote.
+- **Later attempt:** `WF_ANTIGRAVITY_BUILD_0037_20261004_221108_567364` also records exact write-scope and removal readbacks, but the CLI marked the response `ERROR` after an output-token-limit interruption. Its stable payload omits required schema and is rejected as `CONTENT_SCHEMA_INVALID`; no candidate or CURRENT promotion exists. This is output incompleteness, not a permission denial or quota event.
+- **Recorder:** no model call was made. The repaired recorder was run against the original smoke evidence offline; 13 checks passed, generated receipt bytes matched the previously stored receipt hash, and the quota ledger retained a single smoke row. The receipt serialization issue is closed as a logging-control defect.
+- **Smoke remains** based only on the original isolated smoke. It was not repeated. The allow-list is empty after cleanup. Work `0033` remains pre-scope historical-only and is not retried.
+- **Successful recovery artifact:** 0042 used existing content and no Antigravity call; exact candidate SHA `47bddaa2ba7d19f8401676553a37ba9aeb5878166e54276bdcbf1bfe3ab583d0` passed static, layout, and fresh semantic review, then was published to CURRENT. This does not count as an Antigravity cost sample.
+- **Resumption:** after GitHub fetch/readback of this update, re-enable only the existing hidden `wscript.exe //B //NoLogo` supervisor task with one worker and one-document wake; keep every gate unchanged.
 
 
 ## 2026-10-04 22:06 +08:00 - production route verification

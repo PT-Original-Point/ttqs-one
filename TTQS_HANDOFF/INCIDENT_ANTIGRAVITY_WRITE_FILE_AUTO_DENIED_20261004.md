@@ -4,7 +4,7 @@
 **Date:** 2026-10-04 (Asia/Taipei)
 **Model:** `gemini-3.8-flash-high`
 **Official CLI:** `C:\Users\J\AppData\Local\agy\bin\agy.exe` (`1.2.16`)
-**Status:** isolated smoke-directory write smoke PASS; production now uses a narrower exact-`content.json` permission lease. The production exact-file route has not yet been exercised by a real build.
+**Status:** isolated smoke-directory write smoke PASS; the exact-file production lease was exercised and read back on real builds. One build passed the write route but failed content gates; a later model response was cut off and yielded an invalid payload. No Antigravity production sample has passed the full promotion chain.
 
 ## Affected attempts
 
@@ -59,6 +59,16 @@ The separate 0033 job that was already running was allowed to finish. It produce
 ## Production disposition
 
 Production was paused while the smoke was run. The direct-write smoke passed. The supervisor remains limited to one Antigravity worker; the exact-scoped write route is now enabled for the next READY production lane. Existing queue, candidates, CURRENT, and checkpoints were preserved.
+
+
+## 2026-10-05 04:28 +08:00 — post-fix evidence and current disposition
+
+- **Exact production write proof:** `WF_ANTIGRAVITY_BUILD_0031_20261004_215707_654194` wrote only its isolated `content.json`; pre-dispatch rule readback and post-run rule removal/readback both passed. Actual model was `gemini-3.8-flash-high`; CLI exit 0; no structured quota error. Its candidate failed static content checks, so it did not pass layout/review/promotion and is not a cost sample.
+- **0037 disposition:** `WF_ANTIGRAVITY_BUILD_0037_20261004_221108_567364` records the same exact-scope lifecycle and readable official usage before/after. The CLI receipt reports a response truncated by the output-token limit; host validation rejects the stable 70,114-byte JSON because `schema` is absent. No candidate was rendered. This is a failed content payload, not a permission denial or quota rejection. Preserve its original bytes and do not label it a successful sample.
+- **0033 disposition:** pre-scoped attempt, `PRE_SCOPED_WRITE_FIX_ATTEMPT=true`, historical-only, no retry. Candidate SHA is retained in the build receipt.
+- **Smoke recorder:** the serialization fix was verified offline from the original raw stream, permission log, content file, and usage snapshots. The deterministic receipt result was PASS with all 13 checks true; receipt hash stayed unchanged and the ledger was not duplicated. The smoke was not repeated and no quota was spent on this verification.
+- **Successful salvaged file:** existing payload 0042 was integrated without a model call, passed static/duplication, five-page hidden layout, and a fresh exact-SHA Codex review after targeted corrections. It was promoted to CURRENT; this is a Codex salvage and does not count as an Antigravity cost sample.
+- **Control state:** maximum Antigravity concurrency remains one; exact temporary permission allow-list is empty after the work; existing hidden `wscript.exe //B //NoLogo` task is Disabled until this GitHub record is fetched back and compared. After readback, resume only that hidden route. No Muse/OpenCode request is part of this recovery.
 
 
 ## 2026-10-04 22:06 +08:00 - production route verification

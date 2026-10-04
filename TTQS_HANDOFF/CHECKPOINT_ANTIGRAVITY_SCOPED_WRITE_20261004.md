@@ -38,3 +38,13 @@ Continue existing artifact salvage in order, then dispatch one Antigravity work 
 - One isolated retry is active: `codex_cross_review_0031_20261004_230355`; candidate SHA unchanged; 45-minute one-run timeout override; semantic/static gates unchanged.
 - Task Scheduler is disabled to prevent an overlapping worker. No Antigravity worker is running, and exact temporary write permission is removed.
 - Next action: complete the exact-SHA review; if it returns a content FAIL, repair only the identified defects, then rerun all deterministic gates and a fresh independent review before any promotion.
+
+
+## 2026-10-05 04:28 +08:00 — fresh checkpoint
+
+- CURRENT contains 14 DOCX; queue states are 120 PENDING, 11 DONE, 6 PARKED_CONTROL, and 5 PARKED_ROOT_CAUSE_REPAIR. Human Gate is null.
+- 0042 was promoted from salvaged existing content after static/duplication PASS, hidden layout PASS (5 pages; no blank/sparse pages), and final fresh independent Codex review PASS at candidate SHA `47bddaa2ba7d19f8401676553a37ba9aeb5878166e54276bdcbf1bfe3ab583d0`. Checkpoint `CP_011_20261005_041337.zip` and its receipt hashes are indexed in `RAW_EVIDENCE_INDEX.md`.
+- Offline recorder verification passed without an Antigravity call or a repeated smoke. Existing receipt SHA stayed `be4302b9962c4aebc3066e439600ac469e0f0355d0c65daecce7dfbf788dea18`; all 13 checks are true; one ledger row remains.
+- 0031 proves the exact production write permission/readback/removal lifecycle but failed static. 0037 is retained at its exact payload SHA; its CLI result was truncated and host validation rejects the missing schema. Neither qualifies as an Antigravity production sample. 0033 remains pre-scope historical-only. 0032 remains parked after a fresh review with six blocking defects.
+- Antigravity max workers=1; allow-list is empty; no structured provider quota was recorded for 0037. Last readable 0037 quota was five-hour 72.9793%→71.1157% and weekly 78.2695%→77.9589%.
+- The existing task is Hidden=true and uses `wscript.exe //B //NoLogo` to launch the supervisor with `--max-docs 1`. It remains Disabled until this checkpoint and permanent GitHub worklog are fetched back and verified. Then resume that hidden task only; do not rebuild queue/CURRENT or broaden permissions.
