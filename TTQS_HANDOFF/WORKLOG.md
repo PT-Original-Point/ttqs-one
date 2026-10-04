@@ -15,3 +15,10 @@
 Incident detail: INCIDENT_ANTIGRAVITY_WRITE_FILE_AUTO_DENIED_20261004.md
 Raw evidence hashes and local paths: RAW_EVIDENCE_INDEX.md
 Checkpoint: CHECKPOINT_ANTIGRAVITY_SCOPED_WRITE_20261004.md
+
+## 2026-10-04 21:25 +08:00 — first salvage turn
+
+- GitHub commit cf4c50f was fetched back from origin; normalized text readback matched all five durability files.
+- Re-enabled and started the hidden Task Scheduler supervisor after that readback. Task state is Enabled=true, Hidden=true. It used one queue turn and created no Antigravity task.
+- 0042 reused its persisted valid payload with byte-identical host copy SHA256 556fd26f04885e1895bbabbe6a62b42c3faf54ebb5b189c8e6e16378a5f62f73. The fixed renderer created candidate SHA256 22645a9e527efe51bfbf929eb029b23d2336845e42ac85df5fb36a0064edce15. Static gate failed on RAW_ENGLISH_SAMPLE_SYNTHETIC_LABEL_IN_BODY, FIRST_PAGE_30S_USE_CONTEXT_MISSING:user,timing, and DOCUMENT_CONTROL_STRIP_INCOMPLETE:version. No layout or reviewer step followed a static failure. Lane 0042 is PARKED_CONTROL; no model was called.
+- Next queue target remains existing candidate 0030. Fresh Antigravity dispatch is withheld until the existing persisted-artifact salvage order is exhausted.

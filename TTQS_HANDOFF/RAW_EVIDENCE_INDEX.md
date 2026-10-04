@@ -41,3 +41,10 @@ Official usage evidence for those attempts:
 - Local execution checkpoint: E:\TTQS\TTQS_ONE_CODEX_RUNTIME\CHECKPOINTS\20261004_ANTIGRAVITY_SCOPED_WRITE_RESUME.json — e894b6ca8af100f6019abb2bd695b43e3418678286df581b45e07040ffc6c9a5
 
 Raw file contents remain local to the authorized runtime/profile. The hashes above make later readback comparisons deterministic.
+
+## First resumed salvage turn — 0042
+
+- Reused payload copy: E:\TTQS\TTQS_ONE_CODEX_RUNTIME\WORK\CONTENT_PAYLOADS\WF_CODEX_SALVAGE_0042_20261004_212511_552043\content.json — 556fd26f04885e1895bbabbe6a62b42c3faf54ebb5b189c8e6e16378a5f62f73
+- Candidate: E:\TTQS\TTQS_ONE_CODEX_RUNTIME\WORK\CANDIDATES\0042__執行本項目與作業流程相關文件資料（展現利益關係人需求）_完整工作稿.docx — 22645a9e527efe51bfbf929eb029b23d2336845e42ac85df5fb36a0064edce15
+- Static report: E:\TTQS\TTQS_ONE_CODEX_RUNTIME\CONTROL\QA\0042__執行本項目與作業流程相關文件資料（展現利益關係人需求）_完整工作稿.docx.static.json — 5aa8153fd4a70b87cc5cf823d0e891fc047977908ea293470b4e2a8e40a15027
+- Outcome: FAIL_STATIC; lane parked. No Antigravity invocation, no layout/review, no CURRENT promotion.
