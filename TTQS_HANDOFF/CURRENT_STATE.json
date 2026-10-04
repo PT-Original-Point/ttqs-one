@@ -1,6 +1,6 @@
 {
   "project": "TTQS_ONE",
-  "handoff_revision": "WIN10_CODEX_DEADLINE_EXECUTION_20261004_R03_429_DETECTOR_FIX",
+  "handoff_revision": "WIN10_CODEX_ANTIGRAVITY_DUAL_EXECUTION_20261004_R01",
   "official_checkbox_total": 157,
   "named_non_other_requirements": 129,
   "blocked_other_rows": 28,
@@ -61,7 +61,7 @@
     "production_block_scope": "EXACT_LANE_OR_PROVEN_AFFECTED_FAMILY_ONLY"
   },
   "human_gate_policy": "Only Mission/spec change, genuine SAMPLE-vs-REAL or third-party authority ambiguity, legal/signature/identity/OAuth/MFA, missing real-world prerequisite that changes the deliverable and cannot be obtained automatically, unresolved external side effect after bounded readback, or final package acceptance. Single-doc/canary failures and repeated repair failures are NOT Human Gates.",
-  "next_legal_action": "Apply HOTFIX8 narrow detector fix: salvage the successful 0076 Muse exact-SHA review, clear any cooldown created only by body-text false positives, reclassify recent attempts only from structured transport evidence, then continue production immediately without further control-plane refactor.",
+  "next_legal_action": "Disable all new OpenCode dispatch. On WIN10, Codex must fresh-discover the official local Antigravity route, verify Gemini 3.8 Flash High with a harmless smoke, then immediately assign READY content build/repair/review work to Antigravity while Codex retains canonical integration, gates, independent review, and promotion.",
   "updated_at": "2026-10-04",
   "runtime_ui_policy": {
     "visible_console_for_ttqs_automation": false,
@@ -80,59 +80,49 @@
   "agent_bus": {
     "enabled": true,
     "root": "E:\\TTQS\\TTQS_ONE_AGENT_BUS",
-    "codex_role": "CANONICAL_BUILDER_PROMOTION_OWNER",
-    "opencode_role": "HEADLESS_INDEPENDENT_REVIEWER",
+    "codex_role": "CANONICAL_DISPATCH_INTEGRATION_PROMOTION_OWNER",
     "human_progress_relay": false,
     "chatgpt_web_runtime_dependency": false,
     "max_concurrency": {
-      "codex_build": 1,
-      "opencode_review": 1
+      "codex_control_review": 1,
+      "antigravity_model": 1
     },
     "exact_sha_binding": true,
     "review_required_before_promotion": true,
-    "visible_console_allowed": false
+    "visible_console_allowed": false,
+    "antigravity_role": "PRIMARY_LONG_RUNNING_CONTENT_BUILDER_AND_INDEPENDENT_REVIEWER"
   },
   "dual_agent_pipeline": {
-    "codex": "CANONICAL_BUILDER_STATIC_LAYOUT_CONTROL_PROMOTION_OWNER",
-    "opencode": "SOLE_INDEPENDENT_SEMANTIC_USABILITY_REVIEWER",
+    "codex": "CANONICAL_DISPATCH_STATIC_LAYOUT_CONTROL_REVIEW_PROMOTION_OWNER",
+    "antigravity": "PRIMARY_CONTENT_BUILDER_AND_INDEPENDENT_SEMANTIC_REVIEWER",
+    "model": "Gemini 3.8 Flash High",
     "pipeline": [
-      "BUILD",
+      "CONTENT_BUILD",
+      "FIXED_RENDERER",
       "STATIC_LAYOUT_RECEIPT_PASS",
-      "SEMANTIC_REVIEW_OPENCODE_MUSE_OR_CODEX_ISOLATED_ON_429",
+      "FRESH_INDEPENDENT_REVIEW",
       "PROMOTE_CURRENT"
     ],
-    "codex_mandatory_semantic_acceptance_gate": false,
-    "docx_mutation_allowed_only_for": [
-      "CONTENT_DEFECT",
-      "LAYOUT_DEFECT"
-    ],
-    "no_content_or_layout_change_docx_sha_must_not_change": true,
-    "waiting_opencode_is_content_fail": false,
-    "max_concurrency": {
-      "build": 1,
-      "review": 1
-    },
-    "semantic_fallback_on_provider_backpressure": "FRESH_ISOLATED_CODEX_REVIEWER_EXACT_SHA"
+    "no_self_review": true,
+    "canonical_shared_writes": "CODEX_ONLY",
+    "opencode_disabled": true
   },
   "deadline": "2026-10-05T09:00:00+08:00",
   "dual_worker_sprint": {
     "armed": true,
-    "auto_activate_after": {
-      "hotfix5_round_a": "PASS",
-      "hotfix5_round_b": "PASS",
-      "human_relay_count": 0,
-      "visible_console_count": 0,
-      "docx_sha_changed_by_control_fix": 0
-    },
     "workers": [
       "CODEX_WORKER",
-      "OPENCODE_WORKER"
+      "ANTIGRAVITY_WORKER"
     ],
     "roles_per_deliverable": true,
     "no_self_review": true,
     "codex_canonical_integrator": true,
-    "opencode_isolated_builder_allowed": true,
+    "antigravity_isolated_builder_allowed": true,
     "max_model_workers": 2,
+    "preferred_long_running_builder": "ANTIGRAVITY_WORKER",
+    "antigravity_model": "Gemini 3.8 Flash High",
+    "antigravity_route": "DISCOVER_WIN10_LOCAL_OFFICIAL_ROUTE_DO_NOT_USE_MCP",
+    "opencode_active_dispatch": false,
     "work_priority": [
       "CROSS_REVIEW",
       "EXACT_REPAIR_OWN_BUILD",
@@ -140,17 +130,7 @@
     ],
     "shared_fact_collision_avoidance": true,
     "promotion_serialized": true,
-    "target_docx": 142,
-    "worker_liveness_invariant": "READY_WORK_EXISTS && OPENCODE_READY && NO_ACTIVE_OPENCODE_TASK => DISPATCH_IN_SAME_SCHEDULING_TURN",
-    "require_build_inbox_when_active": true,
-    "opencode_cli_route": "VERIFIED_ABSOLUTE_PATH_NOT_SHELL_PATH",
-    "opencode_model_policy": {
-      "allowed_display_model": "Muse Spark 1.3 Free",
-      "exact_cli_model_id": "RESOLVE_FROM_LOCAL_METADATA_DO_NOT_GUESS",
-      "fallback_models_allowed": false,
-      "on_429": "BACKOFF_ONLY_NO_MODEL_SWITCH",
-      "require_actual_model_attestation": true
-    }
+    "target_docx": 142
   },
   "deadline_execution": {
     "active": true,
@@ -159,27 +139,27 @@
     "global_canary_block": false,
     "first_ready_doc_can_serve_as_family_canary": true,
     "semantic_review_route": {
-      "preferred": "OPENCODE_MUSE_EXACT_SHA",
-      "on_opencode_429": "FRESH_ISOLATED_CODEX_REVIEWER_EXACT_SHA",
-      "opencode_other_models_allowed": false,
-      "muse_catchup_review_queued": true
+      "preferred": "CROSS_REVIEW_BY_OTHER_ACTIVE_AGENT",
+      "antigravity_build_review": "FRESH_ISOLATED_CODEX_EXACT_SHA",
+      "codex_build_review": "ANTIGRAVITY_GEMINI_3_8_FLASH_HIGH_EXACT_SHA",
+      "opencode_allowed": false
     },
     "policy_change_not_retroactive_artifact_defect": true,
     "restore_unchanged_prior_current_if_demoted_only_for_missing_new_review_metadata": true,
     "max_identical_transient_retries_before_queue_tail": 2,
     "no_third_identical_attempt_without_material_delta": true,
     "opencode_route": {
-      "primary": "DESKTOP_LOCAL_SERVER_SESSION",
-      "client": "OFFICIAL_OPENCODE_CLIENT_OR_SDK",
-      "model": "Muse Spark 1.3 Free",
-      "standalone_run_default": false,
-      "gui_automation_default": false,
-      "on_desktop_route_429": "PROVIDER_BACKPRESSURE_NO_MODEL_SWITCH"
+      "disabled": true,
+      "reason": "HUMAN_EXPLICIT_DEPRECATION_20261004"
     },
-    "opencode_429_detection": {
-      "structured_transport_only": true,
-      "forbid_body_substring_detection": true,
-      "salvage_successful_exact_sha_results": true
+    "antigravity_route": {
+      "host": "WIN10_LOCAL",
+      "mcp_required": false,
+      "model": "Gemini 3.8 Flash High",
+      "discover_official_route": true,
+      "visible_gui_automation_default": false,
+      "outsource_as_much_long_running_model_work_as_possible": true
     }
-  }
+  },
+  "secondary_executor": "WIN10_ANTIGRAVITY_LOCAL_NATIVE"
 }
