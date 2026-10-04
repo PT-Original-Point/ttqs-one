@@ -1,6 +1,6 @@
 {
   "project": "TTQS_ONE",
-  "handoff_revision": "WIN10_CODEX_DEADLINE_EXECUTION_20261004_R02_DESKTOP_SIDECAR",
+  "handoff_revision": "WIN10_CODEX_DEADLINE_EXECUTION_20261004_R03_429_DETECTOR_FIX",
   "official_checkbox_total": 157,
   "named_non_other_requirements": 129,
   "blocked_other_rows": 28,
@@ -61,7 +61,7 @@
     "production_block_scope": "EXACT_LANE_OR_PROVEN_AFFECTED_FAMILY_ONLY"
   },
   "human_gate_policy": "Only Mission/spec change, genuine SAMPLE-vs-REAL or third-party authority ambiguity, legal/signature/identity/OAuth/MFA, missing real-world prerequisite that changes the deliverable and cannot be obtained automatically, unresolved external side effect after bounded readback, or final package acceptance. Single-doc/canary failures and repeated repair failures are NOT Human Gates.",
-  "next_legal_action": "Discover the live OpenCode Desktop-owned local server/opencode-cli sidecar, prove one Muse Spark 1.3 Free session through that official server path, then use it for TTQS OpenCode BUILD/REVIEW; do not use standalone opencode run as the default deadline route.",
+  "next_legal_action": "Apply HOTFIX8 narrow detector fix: salvage the successful 0076 Muse exact-SHA review, clear any cooldown created only by body-text false positives, reclassify recent attempts only from structured transport evidence, then continue production immediately without further control-plane refactor.",
   "updated_at": "2026-10-04",
   "runtime_ui_policy": {
     "visible_console_for_ttqs_automation": false,
@@ -175,6 +175,11 @@
       "standalone_run_default": false,
       "gui_automation_default": false,
       "on_desktop_route_429": "PROVIDER_BACKPRESSURE_NO_MODEL_SWITCH"
+    },
+    "opencode_429_detection": {
+      "structured_transport_only": true,
+      "forbid_body_substring_detection": true,
+      "salvage_successful_exact_sha_results": true
     }
   }
 }
