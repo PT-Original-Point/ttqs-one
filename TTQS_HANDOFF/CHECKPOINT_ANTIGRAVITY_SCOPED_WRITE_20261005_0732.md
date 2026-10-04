@@ -20,3 +20,8 @@
 - Keep new Antigravity work to one worker and use exact per-work `content.json` lease lifecycle. Do not re-enable the scheduler during the current salvage/review-reserve state.
 
 See `WORKLOG.md`, `INCIDENT_LEDGER.md`, and `RAW_EVIDENCE_INDEX.md` for detailed durable records and hashes.
+
+## Quota refresh — 2026-10-05 07:42 +0800
+
+- Official Codex usage is 92% five-hour remaining and 9% weekly remaining. The local 10% weekly reserve blocks a new model launch; no reset credit was used. Readback: `CODEX_USAGE_READBACK_20261005_074254.json`.
+- 0054 R06 remains static/layout PASS but awaits fresh independent semantic review. No promotion or new model work; CURRENT is 14 DOCX, queue SHA256 unchanged, and the supervisor remains disabled under the existing reserve checkpoint.

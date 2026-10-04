@@ -119,3 +119,9 @@ All paths below are under `E:\TTQS\TTQS_ONE_CODEX_RUNTIME` unless otherwise stat
 - R06 static report SHA256 `8d8ff7f420e8f59ff109da6d6eec29cb786971fdd18fdab8c88be7e1f93a8090`: PASS_STATIC, substantive duplication PASS (37 peers, zero findings). Hidden layout report SHA256 `70f2dbbdf078060627ba91de1a26431fe0deaf25f968ad092e28c73b021f2f58`: PASS_LAYOUT, 7 pages, no blank/sparse pages, Word hidden.
 - R06 has no fresh review receipt and is not in CURRENT. CURRENT count remains 14. Queue was not edited; `CONTROL\BUILD_QUEUE.json` SHA256 `b76c027107d8fdc7a8cf2fca787659a1d6028a9518a595c172c5c375c89bacf7`.
 - Official Codex usage readback: 8% used in five-hour window, 90% used weekly (10% remaining). The local weekly reserve blocks launching a fresh reviewer; no reset credit was used.
+
+## 2026-10-05 07:42 +0800 — Codex model-launch reserve
+
+- Sanitized official usage readback: `TTQS_HANDOFF/CODEX_USAGE_READBACK_20261005_074254.json` (SHA256 `31aae122b8387e396e17d700b707e987cd434b7998d994b8b103bb74fab4cc37`); 92% five-hour remaining; 9% weekly remaining; weekly reset `2026-10-09T15:12:13Z`. Local 10% weekly reserve blocks a new model launch. No reset credit was used.
+- Exact review target remains 0054 R06 candidate SHA256 `407a9ad07ecf67c2166cc416d834e48b28c37b6d5442e1f03205c3ce28dc58be`; no fresh review result exists and CURRENT was not modified.
+- Readback JSON SHA256: `31aae122b8387e396e17d700b707e987cd434b7998d994b8b103bb74fab4cc37`.

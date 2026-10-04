@@ -84,3 +84,10 @@ Evidence paths and hashes are indexed in `RAW_EVIDENCE_INDEX.md`; the scoped-wri
 - No Human Gate is active. Continue local payload salvage and deterministic checks; do not promote R06 until its fresh exact-SHA review passes. Keep new Antigravity dispatch single-worker and quota-governed.
 
 R06 receipts and hashes: see `RAW_EVIDENCE_INDEX.md`. The scoped-write incident remains recorded in `INCIDENT_ANTIGRAVITY_WRITE_FILE_AUTO_DENIED_20261004.md`.
+
+## 2026-10-05 07:42 +0800 — Codex quota reserve refresh
+
+- Fresh official Codex usage readback: 92% five-hour remaining (reset `2026-10-05T03:34:50Z`) and 9% weekly remaining (reset `2026-10-09T15:12:13Z`). The provider still reports ordinary usage allowed, but the local model-launch preflight has a 10% weekly floor and returns `WEEKLY_RESERVE_REACHED`; no reset credit was used.
+- No new Antigravity or Codex model task was dispatched. `0054` R06 remains the strongest salvaged candidate at SHA256 `407a9ad07ecf67c2166cc416d834e48b28c37b6d5442e1f03205c3ce28dc58be`, with static/duplication and hidden layout PASS; fresh independent exact-SHA semantic review remains outstanding, so it is not promoted.
+- CURRENT remains 14 DOCX and the queue hash remains `b76c027107d8fdc7a8cf2fca787659a1d6028a9518a595c172c5c375c89bacf7`. The supervisor remains disabled under the existing quota-reserve checkpoint; no queue, candidate, CURRENT, or permission state was changed.
+- Sanitized official usage readback is recorded in `CODEX_USAGE_READBACK_20261005_074254.json`; it omits account identifiers and reset-credit IDs.
