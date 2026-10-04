@@ -71,3 +71,12 @@ Raw file contents remain local to the authorized runtime/profile. The hashes abo
 - 0050 candidate `d1a50ff6157c791030bd6a3073bd2921ce5666a5deb07fa57e1913117e7695a9`; static report `f57f936a92717ef66daa9732e958feffeed658de16884d4c490ea0d0b158a70d` (FAIL).
 - 0047 corrected host copy `WORK\CONTENT_PAYLOADS\WF_CODEX_SALVAGE_0047_20261004_220104_927494\content.json` - SHA256 `6b8a2527a1bbe3c35249fcd9ad4cf38591e38130d31330348035641ce4ea0efc`; source-binding repair sidecar `6752abc24f3f0ec8efc8a8808147f278feed4ab6988b9b018ecaf646b2b67225`; candidate `903be30d0df2ef7e0303bc0dde4a17f0b7fea975e99fd0829d0fd6d9f6af70f0`; static report `896d16c9ec78bc4eb1655e664f4df3352802dfb9b3db17027f99a54e1b9a35a2` (FAIL).
 - At checkpoint, exact scoped lease for 0032 was active at `CONTROL\ANTIGRAVITY_WRITE_PERMISSION_LEASE.json`; no hash is asserted while the lease is live.
+
+
+## 2026-10-04 - 0031 Codex review timeout
+
+- Runtime transcript: `E:\TTQS\TTQS_ONE_CODEX_RUNTIME\LOGS\20261004_223302__codex_cross_review_0031_20261004_223302.log`; SHA256 `32717e863f08ff5a76793363d716642eeb0429a2fcfb1d423d6ef7c7f3c5b2ca`.
+- Candidate: `E:\TTQS\TTQS_ONE_CODEX_RUNTIME\WORK\CANDIDATES\0031__專業訓練人員職能評估方法等證明_可直接使用成品.docx`; SHA256 `756deaa32c1f159b4a0aeaf2ca75fbf376fcff3bb460e90dd612616490cf87a5`; candidate bytes unchanged across first review.
+- Review ID: `codex_cross_review_0031_20261004_223302`; start 22:33:02 +08:00; exit 124 at 22:58:02; no review JSON.
+- Retry ID: `codex_cross_review_0031_20261004_230355`; review-only, same candidate SHA, 45-minute timeout override; active at `2026-10-04 23:05:32 +0800`.
+- Exact-file Antigravity permission lease readback: `PERMISSION_REMOVED`; scheduled supervisor remains disabled while the bounded review runs.

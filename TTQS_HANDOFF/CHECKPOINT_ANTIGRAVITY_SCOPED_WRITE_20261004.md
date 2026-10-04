@@ -28,3 +28,13 @@ Continue existing artifact salvage in order, then dispatch one Antigravity work 
 - Official usage for 0031: five-hour remaining 76.4892% before / 75.1647% after; weekly remaining 78.8545% before / 78.6337% after.
 - 0032 is the only active Antigravity job, under exact target `.../WF_ANTIGRAVITY_BUILD_0032_20261004_220508_165870/content.json`. Preserve its current lease until normal completion; do not dispatch another model worker.
 - Salvage results: 0030/0042/0047/0050 static FAIL; 0044 semantic FAIL after static/layout; 0033 historical-only. No CURRENT changes.
+
+
+## 2026-10-04 23:05:32 +08:00 — exact-SHA review retry checkpoint
+
+- CURRENT remains 10 DOCX; no promotion occurred.
+- 0031 candidate SHA256 `756deaa32c1f159b4a0aeaf2ca75fbf376fcff3bb460e90dd612616490cf87a5` passed static and was not modified during review. Hidden pagination: 16 pages; no blank page; page 16 has 112 characters.
+- First fresh Codex review timed out at its 25-minute bound (exit 124), without writing a verdict. Queue preserved as `PENDING`, `review_only_retry=true`.
+- One isolated retry is active: `codex_cross_review_0031_20261004_230355`; candidate SHA unchanged; 45-minute one-run timeout override; semantic/static gates unchanged.
+- Task Scheduler is disabled to prevent an overlapping worker. No Antigravity worker is running, and exact temporary write permission is removed.
+- Next action: complete the exact-SHA review; if it returns a content FAIL, repair only the identified defects, then rerun all deterministic gates and a fresh independent review before any promotion.

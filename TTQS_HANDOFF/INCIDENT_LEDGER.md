@@ -19,3 +19,12 @@
 ## 2026-10-04 22:06 +08:00 - production route verification
 
 The scoped write correction passed its first real CLI write: work `WF_ANTIGRAVITY_BUILD_0031_20261004_215707_654194` used only its exact isolated `content.json` target; the run receipt records permission scope readback and removal/readback PASS, model attestation, CLI exit 0, and official usage before/after. The generated payload and DOCX did not pass the evaluator-facing static gate (English SAMPLE/SYNTHETIC leakage and missing first-page timing), so no layout, review, promotion, or cost sample qualification occurred. Exact candidate and receipts are retained. The single-worker supervisor moved to 0032 under a fresh exact-file lease; no parallel Antigravity worker is active.
+
+
+## INC-20261004-CODEX-REVIEW-EXECUTION-TIMEOUT-0031
+
+- **Classification:** isolated Codex semantic-review execution timeout; no document mutation and no promotion.
+- **Evidence:** first review ran 22:33:02–22:58:02 +08:00 and exited 124 at its 25-minute bound; exact candidate SHA `756deaa32c1f159b4a0aeaf2ca75fbf376fcff3bb460e90dd612616490cf87a5` unchanged; required review JSON absent.
+- **Queue recovery:** lane 0031 is `PENDING` with `review_only_retry=true`, preserving the existing candidate and payload.
+- **Mitigation:** one exact-SHA review-only retry started at 23:03:55 +08:00 with a 45-minute timeout; no semantic or deterministic gate changed; no Antigravity request.
+- **Current status:** retry still active at checkpoint time `2026-10-04 23:05:32 +0800`; no CURRENT change.

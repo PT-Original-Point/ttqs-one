@@ -39,3 +39,12 @@ Checkpoint: CHECKPOINT_ANTIGRAVITY_SCOPED_WRITE_20261004.md
 - Persisted-artifact salvage outcomes are now recorded for 0030, 0042, 0044, 0047, and 0050. 0030/0042/0047/0050 failed static review; 0044 passed static/layout but its fresh exact-SHA Codex review failed. None was promoted. 0033 remains historical-only.
 - At 22:05:14 +08:00 the hidden scheduler dispatched the next single Antigravity task, `WF_ANTIGRAVITY_BUILD_0032_20261004_220508_165870`, with the exact-file scope under its own isolated directory. Its lease was ACTIVE at this checkpoint; no second model worker was observed.
 - CURRENT remains 10 DOCX; queue snapshot is 121 PENDING, 1 BUILDING_ANTIGRAVITY, 7 DONE, 8 PARKED_CONTROL, and 5 PARKED_ROOT_CAUSE_REPAIR.
+
+
+## 2026-10-04 23:05:32 +08:00 - 0031 fresh-review execution timeout and bounded retry
+
+- Candidate `0031__專業訓練人員職能評估方法等證明_可直接使用成品.docx` remains byte-identical at SHA256 `756deaa32c1f159b4a0aeaf2ca75fbf376fcff3bb460e90dd612616490cf87a5`. It passed current static gate; hidden pagination reported 16 pages, no blank pages, and one sparse final page (112 characters).
+- Fresh isolated reviewer `codex_cross_review_0031_20261004_223302` started at 22:33:02 +08:00 and reached its configured 25-minute execution bound at 22:58:02 +08:00 (exit 124). It produced no review JSON and did not promote or modify the DOCX. The lane returned to `PENDING` with `review_only_retry=true`.
+- Reviewer output identified concrete traceability concerns: no current replacement-register rows shared the receipt fact IDs; several synthetic value locators did not match the body; the DOCX references “table 2/table 5” although the extracted OOXML has only the first-page guide table. These are review findings to resolve, not a verdict.
+- A single exact-SHA review-only retry `codex_cross_review_0031_20261004_230355` is active in a hidden no-window process with a 45-minute timeout override. The candidate SHA and every quality gate are unchanged; Task Scheduler remains disabled, Antigravity is not dispatched, and its exact-file permission lease is removed.
+- First reviewer transcript: `LOGS/20261004_223302__codex_cross_review_0031_20261004_223302.log`, SHA256 `32717e863f08ff5a76793363d716642eeb0429a2fcfb1d423d6ef7c7f3c5b2ca`.
