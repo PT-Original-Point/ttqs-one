@@ -73,3 +73,15 @@ Until the 2026-10-05 evaluation handoff:
 - New control/review metadata requirements are not retroactive artifact defects. Do not demote unchanged prior CURRENT solely because an older PASS lacks newly introduced model-attestation fields.
 - Freeze control-plane architecture; patch it only for a concrete all-production blocker.
 - Two identical transient attempts without material delta park the lane to queue tail; do not immediately start a third identical attempt.
+
+
+## Human executor migration — 2026-10-04
+OpenCode / Muse is explicitly deprecated for TTQS_ONE active execution. Do not dispatch new BUILD/REVIEW/REPAIR/quota-probe work to OpenCode. Preserve historical evidence only.
+
+Active workers are now:
+- Codex: canonical dispatcher, shared-state owner, deterministic integration, independent review of Antigravity artifacts, promotion.
+- Antigravity on the WIN10 host using Gemini 3.8 Flash High: preferred long-running content builder, exact content repair worker, and independent semantic reviewer of Codex artifacts.
+
+WIN10 has no MCP dependency for Antigravity. Codex must discover and use the official local Antigravity execution/session route directly from WIN10. Do not guess executable paths, ports, or model identifiers. Do not use visible GUI automation unless there is no official headless/local route and Human explicitly approves it.
+
+Outsource as much long-running model work as practical to Antigravity. Codex should remain available for orchestration, deterministic gates, exact independent review, integration and promotion. Keep no-self-review and shared-fact collision rules unchanged.
