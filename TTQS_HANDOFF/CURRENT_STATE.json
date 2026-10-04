@@ -1,6 +1,6 @@
 {
   "project": "TTQS_ONE",
-  "handoff_revision": "WIN10_CODEX_DEADLINE_EXECUTION_20261004_R01",
+  "handoff_revision": "WIN10_CODEX_DEADLINE_EXECUTION_20261004_R02_DESKTOP_SIDECAR",
   "official_checkbox_total": 157,
   "named_non_other_requirements": 129,
   "blocked_other_rows": 28,
@@ -61,7 +61,7 @@
     "production_block_scope": "EXACT_LANE_OR_PROVEN_AFFECTED_FAMILY_ONLY"
   },
   "human_gate_policy": "Only Mission/spec change, genuine SAMPLE-vs-REAL or third-party authority ambiguity, legal/signature/identity/OAuth/MFA, missing real-world prerequisite that changes the deliverable and cannot be obtained automatically, unresolved external side effect after bounded readback, or final package acceptance. Single-doc/canary failures and repeated repair failures are NOT Human Gates.",
-  "next_legal_action": "Apply DEADLINE_EXECUTION_OVERRIDE_20261004: restore unchanged prior CURRENT demoted only by new metadata policy; remove global Canary blockade; stop repeated same-lane retries; continue unrelated READY production immediately; OpenCode Muse 429 falls back to fresh isolated Codex semantic review without using another OpenCode model.",
+  "next_legal_action": "Discover the live OpenCode Desktop-owned local server/opencode-cli sidecar, prove one Muse Spark 1.3 Free session through that official server path, then use it for TTQS OpenCode BUILD/REVIEW; do not use standalone opencode run as the default deadline route.",
   "updated_at": "2026-10-04",
   "runtime_ui_policy": {
     "visible_console_for_ttqs_automation": false,
@@ -167,6 +167,14 @@
     "policy_change_not_retroactive_artifact_defect": true,
     "restore_unchanged_prior_current_if_demoted_only_for_missing_new_review_metadata": true,
     "max_identical_transient_retries_before_queue_tail": 2,
-    "no_third_identical_attempt_without_material_delta": true
+    "no_third_identical_attempt_without_material_delta": true,
+    "opencode_route": {
+      "primary": "DESKTOP_LOCAL_SERVER_SESSION",
+      "client": "OFFICIAL_OPENCODE_CLIENT_OR_SDK",
+      "model": "Muse Spark 1.3 Free",
+      "standalone_run_default": false,
+      "gui_automation_default": false,
+      "on_desktop_route_429": "PROVIDER_BACKPRESSURE_NO_MODEL_SWITCH"
+    }
   }
 }
