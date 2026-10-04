@@ -72,3 +72,15 @@ Durability references: `INCIDENT_ANTIGRAVITY_WRITE_FILE_AUTO_DENIED_20261004.md`
 - Official Codex usage after review was 96% five-hour remaining and 10% weekly remaining. Local preflight reports `WEEKLY_RESERVE_REACHED`; no further model review was started. Continue offline salvage/gates. The existing hidden supervisor task remains Disabled and Hidden while persisted salvage work is being prioritized; no visible launcher is enabled.
 
 Evidence paths and hashes are indexed in `RAW_EVIDENCE_INDEX.md`; the scoped-write incident addendum is in `INCIDENT_LEDGER.md`.
+
+
+## 2026-10-05 07:32 +0800 — scoped-write closeout follow-up and 0054 R06 salvage
+
+- Fresh-read the R03 control state and latest branch. The official Antigravity CLI route remains `C:\Users\J\AppData\Local\agy\bin\agy.exe` v1.2.16, pinned to `gemini-3.8-flash-high`, one worker, no fallback. The hidden Task Scheduler supervisor remains Disabled; CLI settings are `{}`; there is no active Antigravity or Word process.
+- Verified the retained write smoke receipt offline: all 13 checks PASS; no smoke or model call was repeated. The 0055 lease readback is exactly one `content.json` file, status `PERMISSION_REMOVED`, removal readback true. `0033` completed with exit 0 and a stable payload before the scoped-write fix; it remains historical and was not retried.
+- Salvaged the existing 0054 Antigravity payload into isolated host integration R06. No model call and no renderer change. The R06 sidecar register copy binds all 42 synthetic facts; the canonical register, queue, and CURRENT were not changed. Exact candidate SHA256 `407a9ad07ecf67c2166cc416d834e48b28c37b6d5442e1f03205c3ce28dc58be` passed current static/duplication checks and hidden layout at 7 pages, with no blank or sparse pages and `word_visible=false`.
+- R06 is not promoted: fresh independent Codex semantic review remains required. Current official Codex usage is 8% used in the five-hour window and 90% used weekly (10% remaining), which meets the local weekly reserve block. No reviewer was launched and no reset credit was used. CURRENT remains 14 DOCX; current queue SHA256 remains `b76c027107d8fdc7a8cf2fca787659a1d6028a9518a595c172c5c375c89bacf7`.
+- No Antigravity work was dispatched in this turn. Latest recorded Antigravity work remains 0055, not a qualified cost sample: five-hour remaining 92.4829% before / 91.0415% after; weekly 65.9350% before / 65.6948% after. Cost-sample register remains zero.
+- No Human Gate is active. Continue local payload salvage and deterministic checks; do not promote R06 until its fresh exact-SHA review passes. Keep new Antigravity dispatch single-worker and quota-governed.
+
+R06 receipts and hashes: see `RAW_EVIDENCE_INDEX.md`. The scoped-write incident remains recorded in `INCIDENT_ANTIGRAVITY_WRITE_FILE_AUTO_DENIED_20261004.md`.

@@ -48,3 +48,10 @@ This addendum closes the current evidence readback for the original `ANTIGRAVITY
 - The currently read permission settings are empty; latest lease status is `PERMISSION_REMOVED`, exact target readback matched its one `content.json` grant, and removal readback is true. Recovery found no stale TTQS rule. No broad E: or runtime grant was added.
 - The official CLI remains pinned at absolute path `C:\Users\J\AppData\Local\agy\bin\agy.exe`, version 1.2.16; route identity is `gemini-3.8-flash-high`; fallback is disabled and worker cap is one. This turn made no Antigravity model request.
 - 0054's later semantic review failure is a document-content issue and is not reclassified as a write-permission incident. It remains unpromoted at exact candidate SHA `0c799e810621357b2e2dc495ea93f37d3499c64ea2aeaf3ef1329ec745a2ca05`.
+
+
+## 2026-10-05 07:32 +0800 — verification follow-up
+
+No new write-permission incident occurred in this follow-up. The R03 local-native route and one-file lease remain as previously documented; the retained smoke receipt still records 13/13 checks PASS and was not rerun. The latest lease (0055) is removed with exact readback, and CLI settings remain empty. Work 0033 is historical pre-fix work and was not retried.
+
+The 0054 R06 work is host-side salvage of a persisted payload, not a permission test or a new Antigravity request. It passed static and hidden layout checks but remains unpromoted pending a fresh independent review. Current remains 14 DOCX. Exact artifact evidence is indexed in `RAW_EVIDENCE_INDEX.md`.
