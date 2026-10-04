@@ -214,3 +214,10 @@ Canaries are no longer a global production blockade. A pending/failing canary bl
 OpenCode is still restricted to Muse Spark 1.3 Free only. If Muse returns provider 429, semantic review for that exact candidate may be performed by a fresh isolated Codex reviewer process; no other OpenCode model may be used. Muse catch-up review remains queued.
 New model-attestation/control metadata is not retroactive evidence invalidation for unchanged previously accepted artifacts.
 After two identical transient attempts without material delta, park the lane and dispatch another READY item.
+
+
+## OpenCode Desktop-sidecar route
+For Muse Spark 1.3 Free, the preferred OpenCode execution route is the official local server/opencode-cli sidecar already owned by OpenCode Desktop, not repeated standalone `opencode run` calls.
+Codex must discover the live Desktop server endpoint from local process/listening-port/config evidence, then use the official OpenCode client/SDK to create/reuse a dedicated TTQS session on that server.
+The Desktop UI itself does not need mouse/keyboard automation.
+If this official Desktop-sidecar session route also returns provider 429, treat that as genuine provider/backpressure and continue Codex READY work; do not switch to another OpenCode model.
