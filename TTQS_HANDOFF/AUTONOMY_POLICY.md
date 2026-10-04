@@ -99,3 +99,17 @@ Human 明確要求將 WIN10 Antigravity / Gemini 3.8 Flash High 作為主力施�
 - 兩個 Antigravity worker 各成功至少 2 份且無 quota/session/shared-fact 衝突後，可自動升到 3。若 3-worker 在 30 分鐘內有效候選吞吐至少提升 20% 且錯誤率不惡化，可升到 4。最大 4。
 - 若並行導致 quota、session collision、shared-state race、吞吐下降或主機資源壓力，自動降一級，不等待 Human。
 - no-self-review、SAMPLE/REAL、title-blind、negative-neighbor、substantive duplication、layout 等品質門檻完全不變。
+
+
+## Antigravity 額度保護修正 — 2026-10-04
+Antigravity 的速度不得被解讀為無限額度。預設只允許 1 個 Antigravity 長時間模型工作。取消先前 2→3→4 自動擴張規則。
+
+第二個 Antigravity worker 只有在同時滿足以下條件才可做有界短測：
+- 官方本機介面可讀回可驗證的五小時/每週使用額度或其他等價 headroom；
+- 已完成最多 3 份真實 READY 文件的單 worker 額度成本樣本；
+- 樣本期間無 quota/rate-limit/session 衝突；
+- 根據剩餘文件與評核期限，增加 worker 不會高機率提前耗盡可用額度。
+
+Antigravity 額度優先花在新 content payload 與 exact content repair。固定 renderer、static/layout、SHA/receipt、queue/checkpoint、重複來源讀取與可由 Codex 短時間完成的驗收不得消耗 Antigravity 額度。
+
+OpenCode/Muse 不再送任何新 probe。只離線分析既有 logs/session exports，能讀到多少 token/成功次數/quota 時間序列就記多少；缺失欄位必須標 UNKNOWN，不得反推或猜測官方 quota threshold。
