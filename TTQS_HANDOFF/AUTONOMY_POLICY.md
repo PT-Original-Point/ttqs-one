@@ -64,3 +64,12 @@ Control/review infrastructure defects repair only their own lane/control surface
 
 ## Deadline dual-worker execution
 When HOTFIX5 liveness/evidence bootstrap has passed, two model workers may be active: one Codex task and one OpenCode task. Each worker prioritizes cross-review of the other worker's ready candidate, then exact repair of its own rejected candidate, then new build. Do not concurrently build deliverables with overlapping shared_fact_groups. Shared writes/promotion remain serialized by Codex. This changes throughput only; all semantic/anti-garbage gates remain unchanged.
+
+
+## Deadline execution override — 2026-10-04
+Until the 2026-10-05 evaluation handoff:
+- Canary status is lane/family scoped, not a global production gate. Unrelated READY production continues.
+- OpenCode remains pinned exclusively to Muse Spark 1.3 Free. If Muse is unavailable due provider 429/backpressure, use a fresh isolated Codex semantic reviewer for the exact candidate rather than blocking all production. Do not use another OpenCode model.
+- New control/review metadata requirements are not retroactive artifact defects. Do not demote unchanged prior CURRENT solely because an older PASS lacks newly introduced model-attestation fields.
+- Freeze control-plane architecture; patch it only for a concrete all-production blocker.
+- Two identical transient attempts without material delta park the lane to queue tail; do not immediately start a third identical attempt.
