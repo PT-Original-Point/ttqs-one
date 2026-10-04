@@ -38,3 +38,13 @@ The scoped write correction passed its first real CLI write: work `WF_ANTIGRAVIT
 - **Queue recovery:** lane 0031 is `PENDING` with `review_only_retry=true`, preserving the existing candidate and payload.
 - **Mitigation:** one exact-SHA review-only retry started at 23:03:55 +08:00 with a 45-minute timeout; no semantic or deterministic gate changed; no Antigravity request.
 - **Current status:** retry still active at checkpoint time `2026-10-04 23:05:32 +0800`; no CURRENT change.
+
+
+## 2026-10-05 06:54 +0800 - follow-up: scoped Antigravity write route and offline recorder verification
+
+This addendum closes the current evidence readback for the original `ANTIGRAVITY_WRITE_FILE_AUTO_DENIED` incident; it does not claim a production sample or promotion. The prior incident entry retains the 0026/0028 denials, the pre-fix 0033 attempt, denial evidence, and the initial root-cause and permission records.
+
+- Smoke was not rerun. Existing receipt SHA256 `be4302b9962c4aebc3066e439600ac469e0f0355d0c65daecce7dfbf788dea18` still records 13/13 checks PASS; recorder serialization was corrected to serialize decoded evidence text and scalar metadata rather than raw bytes; the deterministic receipt was regenerated and verified offline from retained raw evidence.
+- The currently read permission settings are empty; latest lease status is `PERMISSION_REMOVED`, exact target readback matched its one `content.json` grant, and removal readback is true. Recovery found no stale TTQS rule. No broad E: or runtime grant was added.
+- The official CLI remains pinned at absolute path `C:\Users\J\AppData\Local\agy\bin\agy.exe`, version 1.2.16; route identity is `gemini-3.8-flash-high`; fallback is disabled and worker cap is one. This turn made no Antigravity model request.
+- 0054's later semantic review failure is a document-content issue and is not reclassified as a write-permission incident. It remains unpromoted at exact candidate SHA `0c799e810621357b2e2dc495ea93f37d3499c64ea2aeaf3ef1329ec745a2ca05`.
