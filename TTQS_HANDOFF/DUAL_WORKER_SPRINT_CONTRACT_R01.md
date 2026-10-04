@@ -207,3 +207,10 @@ The exact CLI identifier must be resolved from local OpenCode metadata/configura
 Every headless invocation must explicitly pin that identifier and every result must record the actual model used.
 If Muse Spark returns 429, enter provider backoff/cooldown; do not switch models. Codex continues other READY lanes.
 Any result produced by a different model is MODEL_POLICY_VIOLATION and cannot be promoted.
+
+
+## Deadline override: production must not be hostage to Muse availability
+Canaries are no longer a global production blockade. A pending/failing canary blocks only its exact lane or a proven affected family.
+OpenCode is still restricted to Muse Spark 1.3 Free only. If Muse returns provider 429, semantic review for that exact candidate may be performed by a fresh isolated Codex reviewer process; no other OpenCode model may be used. Muse catch-up review remains queued.
+New model-attestation/control metadata is not retroactive evidence invalidation for unchanged previously accepted artifacts.
+After two identical transient attempts without material delta, park the lane and dispatch another READY item.
