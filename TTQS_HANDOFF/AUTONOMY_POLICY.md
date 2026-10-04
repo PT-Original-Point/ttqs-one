@@ -85,3 +85,17 @@ Active workers are now:
 WIN10 has no MCP dependency for Antigravity. Codex must discover and use the official local Antigravity execution/session route directly from WIN10. Do not guess executable paths, ports, or model identifiers. Do not use visible GUI automation unless there is no official headless/local route and Human explicitly approves it.
 
 Outsource as much long-running model work as practical to Antigravity. Codex should remain available for orchestration, deterministic gates, exact independent review, integration and promotion. Keep no-self-review and shared-fact collision rules unchanged.
+
+
+## Antigravity 主力生產模式 — 2026-10-04
+Human 明確要求將 WIN10 Antigravity / Gemini 3.8 Flash High 作為主力施工者，Codex 退出例行長時間內容生成。
+
+執行規則：
+- 起始 2 個彼此隔離的 Antigravity 內容 worker，同時 1 個 Codex 控制/獨立複核 worker。
+- Antigravity 只產生 content.json 或做 exact content repair；固定 host renderer 與 deterministic gates 不占用模型 worker。
+- Codex 主要做派工、shared-fact 衝突檢查、fresh independent semantic review、整合與 promotion；除 Antigravity 不可用外，不做例行長時間 BUILD。
+- 各階段流水化；Antigravity 生成下一份時，host 同時 render/check 上一份，Codex 同時 review 已通過 deterministic gate 的更早一份。
+- 維持 2~4 份已通過 deterministic gate 的候選緩衝。少於 2 時 Antigravity 優先 BUILD；達 4 時優先 exact repair / 下一批內容準備，避免無限堆積。
+- 兩個 Antigravity worker 各成功至少 2 份且無 quota/session/shared-fact 衝突後，可自動升到 3。若 3-worker 在 30 分鐘內有效候選吞吐至少提升 20% 且錯誤率不惡化，可升到 4。最大 4。
+- 若並行導致 quota、session collision、shared-state race、吞吐下降或主機資源壓力，自動降一級，不等待 Human。
+- no-self-review、SAMPLE/REAL、title-blind、negative-neighbor、substantive duplication、layout 等品質門檻完全不變。
