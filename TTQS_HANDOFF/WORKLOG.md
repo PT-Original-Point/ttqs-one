@@ -28,3 +28,14 @@ Checkpoint: CHECKPOINT_ANTIGRAVITY_SCOPED_WRITE_20261004.md
 - 0030 reused its persisted valid content payload (SHA256 8049bb49fad917c628ec5aa97229b5ca742b7916e883af0dd245776c1b3ce731); no model call occurred.
 - The fixed renderer produced candidate SHA256 c29bd40a3cb3c73b174e7477c41a59d71f36e3e10284268de26c806d0a25c334. The pre-existing candidate SHA256 3dd0bcd1549e9ff33478834e17e66a5546d424b14bf1fef155a397adba996998 is preserved under SUPERSEDED.
 - Static gate failed on RAW_ENGLISH_SAMPLE_SYNTHETIC_LABEL_IN_BODY and FIRST_PAGE_30S_USE_CONTEXT_MISSING:timing. No layout/review/promotion followed; lane 0030 is PARKED_CONTROL. Next reusable candidate target: 0044.
+
+
+## 2026-10-04 22:06 +08:00 - 0031 exact scope production run
+
+- The first post-fix Antigravity production route was exercised by work `WF_ANTIGRAVITY_BUILD_0031_20261004_215707_654194`. The verified model was `gemini-3.8-flash-high`; CLI exit was 0; duration was 154.047 seconds; the content payload is stable and valid (SHA256 `c211dce8d4494e71092107ab45149ef6f3ec3d723a84b807c24968d8fc1e80f1`).
+- Exact permission readback was `write_file(E:/TTQS/TTQS_ONE_CODEX_RUNTIME/WORK/CONTENT_PAYLOADS/WF_ANTIGRAVITY_BUILD_0031_20261004_215707_654194/content.json)`. The run receipt records pre-dispatch scope readback PASS and permission removal/readback PASS after completion. No broad allow rule was used.
+- Official usage readback: five-hour remaining `76.4892%` before and `75.1647%` after; weekly remaining `78.8545%` before and `78.6337%` after. No structured quota error. Cost sample register still has zero qualified CURRENT promotions.
+- Fixed renderer produced candidate SHA256 `045ef0b1033ad9aaed205c074396619db2da8dd9eed30aab2eac35a050ec16e9`. Static gate failed on `RAW_ENGLISH_SAMPLE_SYNTHETIC_LABEL_IN_BODY` and `FIRST_PAGE_30S_USE_CONTEXT_MISSING:timing`. No layout, semantic review, or CURRENT promotion followed. The exact lane has repair feedback and the content/candidate bytes are retained. This is not a successful production cost sample.
+- Persisted-artifact salvage outcomes are now recorded for 0030, 0042, 0044, 0047, and 0050. 0030/0042/0047/0050 failed static review; 0044 passed static/layout but its fresh exact-SHA Codex review failed. None was promoted. 0033 remains historical-only.
+- At 22:05:14 +08:00 the hidden scheduler dispatched the next single Antigravity task, `WF_ANTIGRAVITY_BUILD_0032_20261004_220508_165870`, with the exact-file scope under its own isolated directory. Its lease was ACTIVE at this checkpoint; no second model worker was observed.
+- CURRENT remains 10 DOCX; queue snapshot is 121 PENDING, 1 BUILDING_ANTIGRAVITY, 7 DONE, 8 PARKED_CONTROL, and 5 PARKED_ROOT_CAUSE_REPAIR.

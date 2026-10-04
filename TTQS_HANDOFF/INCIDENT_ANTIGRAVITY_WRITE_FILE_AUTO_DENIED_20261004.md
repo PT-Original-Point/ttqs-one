@@ -59,3 +59,8 @@ The separate 0033 job that was already running was allowed to finish. It produce
 ## Production disposition
 
 Production was paused while the smoke was run. The direct-write smoke passed. The supervisor remains limited to one Antigravity worker; the exact-scoped write route is now enabled for the next READY production lane. Existing queue, candidates, CURRENT, and checkpoints were preserved.
+
+
+## 2026-10-04 22:06 +08:00 - production route verification
+
+The scoped write correction passed its first real CLI write: work `WF_ANTIGRAVITY_BUILD_0031_20261004_215707_654194` used only its exact isolated `content.json` target; the run receipt records permission scope readback and removal/readback PASS, model attestation, CLI exit 0, and official usage before/after. The generated payload and DOCX did not pass the evaluator-facing static gate (English SAMPLE/SYNTHETIC leakage and missing first-page timing), so no layout, review, promotion, or cost sample qualification occurred. Exact candidate and receipts are retained. The single-worker supervisor moved to 0032 under a fresh exact-file lease; no parallel Antigravity worker is active.

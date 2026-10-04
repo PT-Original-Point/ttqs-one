@@ -56,3 +56,18 @@ Raw file contents remain local to the authorized runtime/profile. The hashes abo
 - Prior candidate preserved (JSON-escaped local path): E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\SUPERSEDED\\0030__\u5de5\u4f5c\u7d93\u9a57\u7684\u76f8\u95dc\u53d7\u8a13\u8b49\u660e_\u53ef\u76f4\u63a5\u4f7f\u7528\u6210\u54c1__WF_CODEX_SALVAGE_0030_20261004_212706_133481__3dd0bcd1549e.docx — 3dd0bcd1549e9ff33478834e17e66a5546d424b14bf1fef155a397adba996998
 - Static report (JSON-escaped local path): E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\QA\\0030__\u5de5\u4f5c\u7d93\u9a57\u7684\u76f8\u95dc\u53d7\u8a13\u8b49\u660e_\u53ef\u76f4\u63a5\u4f7f\u7528\u6210\u54c1.docx.static.json — c97a24f984283a1e72c8537e4d070fa94bf8a3e8d23489cb88caba00f6621c72
 - Outcome: FAIL_STATIC; lane parked. No Antigravity invocation, no layout/review, no CURRENT promotion.
+
+
+## Production exact-scope proof and first gate result - 0031
+
+- Stable payload: `E:\TTQS\TTQS_ONE_CODEX_RUNTIME\WORK\CONTENT_PAYLOADS\WF_ANTIGRAVITY_BUILD_0031_20261004_215707_654194\content.json` - SHA256 `c211dce8d4494e71092107ab45149ef6f3ec3d723a84b807c24968d8fc1e80f1`.
+- Content receipt: `...\content_receipt.json` - SHA256 `282233EBF6A56CF9E16EE42559F4E1306CDBDBA4B1505114F8D70F1102807217`.
+- Antigravity run receipt: `...\antigravity_run_receipt.json` - SHA256 `EFDA18D5B2D09F0C95BA048E70FD4DA42B9E8E52965B2CF7BC17FC25D4547B47`; requested/actual model both `gemini-3.8-flash-high`; CLI exit 0; exact-file grant readback PASS; removal/readback PASS; structured quota error false.
+- Candidate `WORK\CANDIDATES\0031*.docx` - SHA256 `045ef0b1033ad9aaed205c074396619db2da8dd9eed30aab2eac35a050ec16e9` (stored DOCX SHA256 `5F009EC7B3E1C2AC2706EC95FF71576C6D5E6A567DCEED91FB6FC470C9E8908A`). Static report `CONTROL\QA\0031*.static.json` - SHA256 `1F108D68A452664BFB01677CB52C0AC286C9F6D39D4A745622B5909F89BD7235`.
+- Static result: FAIL on `RAW_ENGLISH_SAMPLE_SYNTHETIC_LABEL_IN_BODY` and `FIRST_PAGE_30S_USE_CONTEXT_MISSING:timing`; no layout/review/promotion.
+- Usage before: `CONTROL\ANTIGRAVITY_USAGE_EVIDENCE\AGY_USAGE_BEFORE_20261004T215715_WF_ANTIGRAVITY_BUILD_0031_20261004_215707_654194.json` - SHA256 `7EA54A6F5A5B1388D6B4464A2986A8C168479093C6842019524AA10635201E20`; five-hour 76.4892%, weekly 78.8545%.
+- Usage after: `CONTROL\ANTIGRAVITY_USAGE_EVIDENCE\AGY_USAGE_AFTER_20261004T215949_WF_ANTIGRAVITY_BUILD_0031_20261004_215707_654194.json` - SHA256 `D3DBA7BD93B7E5591D6D8BE569E7D2A891FBE108D07EE97B38BEDD6C718F341A`; five-hour 75.1647%, weekly 78.6337%.
+- Existing salvage evidence: 0044 candidate `47ba98891123dc6e89d609461af2e9842fde54cfff680378e25a15a4b0dacc22`, static `b62f4cd0518530a5f1d5e3abb42272807ae61fd2d2ff85b472f18a82734649a6`, layout `6dd389dafdc9de2fb9c2906250ca65622e248f5b048f3793cb4f6aea8a0a903c`, fresh review result `ee082fc182bfa7829609e718a4845a1a7086093215b2d197c2b1e1910f057ff9` (FAIL).
+- 0050 candidate `d1a50ff6157c791030bd6a3073bd2921ce5666a5deb07fa57e1913117e7695a9`; static report `f57f936a92717ef66daa9732e958feffeed658de16884d4c490ea0d0b158a70d` (FAIL).
+- 0047 corrected host copy `WORK\CONTENT_PAYLOADS\WF_CODEX_SALVAGE_0047_20261004_220104_927494\content.json` - SHA256 `6b8a2527a1bbe3c35249fcd9ad4cf38591e38130d31330348035641ce4ea0efc`; source-binding repair sidecar `6752abc24f3f0ec8efc8a8808147f278feed4ab6988b9b018ecaf646b2b67225`; candidate `903be30d0df2ef7e0303bc0dde4a17f0b7fea975e99fd0829d0fd6d9f6af70f0`; static report `896d16c9ec78bc4eb1655e664f4df3352802dfb9b3db17027f99a54e1b9a35a2` (FAIL).
+- At checkpoint, exact scoped lease for 0032 was active at `CONTROL\ANTIGRAVITY_WRITE_PERMISSION_LEASE.json`; no hash is asserted while the lease is live.

@@ -14,3 +14,8 @@
 - **Production control:** one Antigravity worker. Existing payload/candidate salvage precedes new work; first no-model salvage target is 0042. Hidden supervisor must remain disabled until repository durability readback, then may resume.
 - **Owner/action:** Codex host control and promotion; next proof is one exact-file-scoped Antigravity production build through content validation, renderer, static/layout, fresh independent Codex review, and CURRENT.
 - **References:** INCIDENT_ANTIGRAVITY_WRITE_FILE_AUTO_DENIED_20261004.md; RAW_EVIDENCE_INDEX.md; CHECKPOINT_ANTIGRAVITY_SCOPED_WRITE_20261004.md.
+
+
+## 2026-10-04 22:06 +08:00 - production route verification
+
+The scoped write correction passed its first real CLI write: work `WF_ANTIGRAVITY_BUILD_0031_20261004_215707_654194` used only its exact isolated `content.json` target; the run receipt records permission scope readback and removal/readback PASS, model attestation, CLI exit 0, and official usage before/after. The generated payload and DOCX did not pass the evaluator-facing static gate (English SAMPLE/SYNTHETIC leakage and missing first-page timing), so no layout, review, promotion, or cost sample qualification occurred. Exact candidate and receipts are retained. The single-worker supervisor moved to 0032 under a fresh exact-file lease; no parallel Antigravity worker is active.

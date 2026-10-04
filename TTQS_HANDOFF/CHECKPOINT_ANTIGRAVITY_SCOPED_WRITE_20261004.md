@@ -19,3 +19,12 @@ Control revision: WIN10_ANTIGRAVITY_QUOTA_GOVERNED_FACTORY_20261004_R03
 ## Next action
 
 Continue existing artifact salvage in order, then dispatch one Antigravity work item only when no reusable payload/candidate remains ahead of it. Only a complete content → DOCX → static → layout → fresh Codex review → CURRENT pass qualifies as production cost sample 1.
+
+
+## 2026-10-04 22:06 +08:00 - live checkpoint
+
+- CURRENT: 10 DOCX. Queue: 121 PENDING, 1 BUILDING_ANTIGRAVITY, 7 DONE, 8 PARKED_CONTROL, 5 PARKED_ROOT_CAUSE_REPAIR.
+- Exact production scoped-write route: exercised by 0031; write and temporary-permission removal readbacks PASS. First generated candidate failed static content checks; no promotion. Qualified Antigravity cost samples: 0.
+- Official usage for 0031: five-hour remaining 76.4892% before / 75.1647% after; weekly remaining 78.8545% before / 78.6337% after.
+- 0032 is the only active Antigravity job, under exact target `.../WF_ANTIGRAVITY_BUILD_0032_20261004_220508_165870/content.json`. Preserve its current lease until normal completion; do not dispatch another model worker.
+- Salvage results: 0030/0042/0047/0050 static FAIL; 0044 semantic FAIL after static/layout; 0033 historical-only. No CURRENT changes.
