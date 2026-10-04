@@ -221,3 +221,32 @@ For Muse Spark 1.3 Free, the preferred OpenCode execution route is the official 
 Codex must discover the live Desktop server endpoint from local process/listening-port/config evidence, then use the official OpenCode client/SDK to create/reuse a dedicated TTQS session on that server.
 The Desktop UI itself does not need mouse/keyboard automation.
 If this official Desktop-sidecar session route also returns provider 429, treat that as genuine provider/backpressure and continue Codex READY work; do not switch to another OpenCode model.
+
+
+## 人類指定第二工作者替換 — 2026-10-04
+本節取代上文所有仍在生效的 OpenCode / Muse 工作者條款。
+
+從現在起：
+- OpenCode / Muse 不再接任何新工作。
+- 第二工作者改為 WIN10 本機 Antigravity。
+- 指定模型：Gemini 3.8 Flash High。
+- WIN10 沒有 MCP；不得以 MCP / Win11 Factory 作為 Antigravity 控制依賴。
+
+現役雙工作者：
+- CODEX_WORKER
+- ANTIGRAVITY_WORKER
+
+角色：
+- Codex：唯一派工、共享狀態、固定轉檔整合、機械檢查、獨立複核、發布。
+- Antigravity：優先承接新文件內容產生、精確內容修復、以及 Codex 產物的獨立內容複核。
+
+優先把長時間模型工作外包給 Antigravity；Codex 應保留在總控、驗收、整合、發布與必要獨立複核。
+
+若 Antigravity 產生內容，必須由 fresh isolated Codex review。
+若 Codex 產生內容，必須由 Antigravity review。
+禁止自產自審。
+
+Antigravity 只寫隔離工作區，不直接寫 CURRENT、canonical queue、central synthetic register、supervisor 或 scheduler。
+共享狀態與 promotion 仍只有 Codex 可以寫。
+
+Codex 必須在 WIN10 本機 fresh-discover Antigravity 官方本機執行路徑與實際模型，不得猜路徑、port 或 model id。優先使用官方 CLI / background service / session route；若只能透過可見 GUI，才形成真正 Human Gate。
