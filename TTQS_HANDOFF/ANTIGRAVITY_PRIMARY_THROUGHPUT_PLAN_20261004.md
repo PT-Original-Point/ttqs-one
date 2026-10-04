@@ -1,86 +1,86 @@
-# TTQS_ONE Antigravity 主力生產模式 — 2026-10-04
+# TTQS_ONE Antigravity 額度感知主力生產模式 — 2026-10-04
 
-人類最新要求：WIN10 的 Antigravity / Gemini 3.8 Flash High 是主力施工者；Codex 很慢，應退出長時間內容生成，主要做派工、檢查、獨立複核、整合與發布。
+人類修正：Antigravity 有使用額度，禁止把「速度快」誤解為「可無限多開」。OpenCode / Muse 已因供應端 quota 無法繼續，TTQS_ONE 不得在 Antigravity 重演同一錯誤。
 
-## 核心分工
-Antigravity 優先負責：
-- 新文件 content.json
-- 精確內容修復
-- 下一批文件來源整理與內容準備
-- Codex 產物的獨立語意複核
-- 其他長時間模型工作
+## 核心原則
+- Antigravity / Gemini 3.8 Flash High 仍是主力長工。
+- Codex 主要做派工、機械檢查協調、獨立複核、整合與發布。
+- 預設只開 1 個 Antigravity 長工。
+- 不再自動 2 -> 3 -> 4 擴張。
+- 只有在取得可驗證的 Antigravity 使用額度資訊，並量出每份「最終通過文件」的實際額度成本後，才允許短時間增加第 2 個 worker。
+- 未證明額度餘裕前，最大並行 Antigravity=1。
 
-Codex 只優先負責：
-- 選下一批 READY 文件
-- 建立不可變工作包
-- 共享資料衝突檢查
-- Antigravity 產物的 fresh isolated 語意複核
-- 精確缺陷定位
-- CURRENT 發布與中央紀錄更新
+## 額度帳本
+每次 Antigravity 呼叫都記錄：
+- 開始/結束時間
+- deliverable_id / work_id
+- 實際模型
+- 成功/失敗/被限額
+- 若官方介面有提供：五小時剩餘額度、每週剩餘額度、重設時間、輸入/輸出 token 或其他官方用量欄位
+- 是否產生有效 content.json
+- 是否最後進 CURRENT
 
-固定主機程式負責：
-- content.json -> DOCX
-- 收據與 SHA
-- OOXML/static
-- 版面檢查
-- 重複度與其他機械檢查
+不得用 log 長度或請求數假裝 token 用量。
 
-Codex 不得再用長時間模型工作做以上機械檢查。
+## 三份樣本估算
+先用單 worker 完成最多 3 份不同 family 的真實 READY 文件：
+- 記錄每份前後的官方額度差
+- 計算每份有效 payload / 每份 CURRENT 的額度成本
+- 若官方不暴露數字，標 UNKNOWN，不得猜
 
-## 生產線
-Antigravity 並行生成 content.json
--> 固定 renderer 立即轉 DOCX
--> deterministic gates 立即執行
--> 通過者進 Codex 短複核佇列
--> PASS 後由 Codex 發布
--> FAIL 只把 exact locator 退給原 Antigravity 修復
+只有有可驗證 headroom 且三份樣本沒有 rate-limit / quota / session 錯誤，才可短時間測第 2 worker。
 
-各階段流水化，不得等上一份完全發布後才開始下一份。
+## Antigravity 工作優先級
+額度只花在高價值模型工作：
+1. 新文件 content.json
+2. exact content repair
+3. SAMPLE/SYNTHETIC substantive content
+4. Codex 無法快速完成的語意長工
 
-## Antigravity 自適應並行
-起始：
-- 2 個 Antigravity content workers
-- 1 個 Codex review/control worker
+預設不要用 Antigravity 做：
+- renderer
+- static/layout
+- SHA/receipt
+- queue/checkpoint
+- 重複來源讀取
+- Codex 可在短時間完成的 acceptance readback
+- 週期性 availability probe
 
-若兩個 Antigravity worker 各完成至少 2 個不同文件，且沒有模型額度錯誤、工作區衝突、共享事實衝突、輸出互蓋：
-- 自動升到 3 個 Antigravity workers
+## Codex
+Codex 做：
+- 派工
+- 來源快取與 evidence packet
+- 固定 renderer / deterministic gates 的控制
+- Antigravity 產物 fresh review
+- promotion
+- 額度帳本與速率控制
 
-若升到 3 後 30 分鐘內有效候選吞吐較 2 workers 提升至少 20%，且錯誤率沒有明顯增加：
-- 可升到 4 個 Antigravity workers
+若 Antigravity 被限額：
+- 立刻停止 Antigravity 新長工
+- 不輪流拿正式 TTQS lane 探 quota
+- Codex 繼續 deterministic work、review、promotion 與必要 BUILD
+- 等官方 reset / usage state 證明恢復後才重新派 Antigravity
 
-最大先到 4，不再自行擴張。
+## OpenCode 歷史額度追溯
+停止 OpenCode 新呼叫，但離線整理既有 OpenCode logs/session exports：
+- 第一次 structured quota 時間
+- 成功呼叫數
+- quota 拒絕數
+- Retry-After / cooldown
+- 若 metadata 存在則輸入/輸出 tokens
+- session/model
+- 每次成功與拒絕的時間序列
 
-若出現：
-- provider quota / session collision
-- 有效候選吞吐下降
-- 連續工作區衝突
-- 主機 CPU 或記憶體長時間高負載造成實際變慢
+只做離線讀取；禁止再送 OpenCode probe。
 
-則自動降一級，不等待 Human。
+## 產量指標
+每 30 分鐘看：
+- 新有效 payload
+- 新有效 DOCX candidate
+- 新 CURRENT
+- Antigravity 成功任務數
+- Antigravity 額度拒絕數
+- 官方五小時/每週餘額（若可取得）
+- 每份 CURRENT 的估算額度成本
 
-## 緩衝區
-維持 2~4 份已通過 deterministic gate、等待 Codex 語意複核的候選。
-
-如果等待複核候選 < 2：
-- Antigravity 優先 BUILD
-
-如果等待複核候選 >= 4：
-- 不再盲目堆積新 BUILD
-- Antigravity 改做 exact repair 或下一批來源/內容準備
-
-## 禁止
-- Codex 長時間寫 content.json，除非 Antigravity 不可用
-- 每份文件重新寫 renderer
-- 模型自行做 Word/PDF/版面機械檢查
-- 同一文件雙 build owner
-- 自產自審
-- 不同 worker 寫同一工作目錄
-- 同時施工 shared_fact_group 重疊文件
-- 因速度降低任何現有品質 gate
-
-## 目標
-真正指標是每 30 分鐘：
-- 新增有效 content payload
-- 新增有效 DOCX candidate
-- 新增 CURRENT
-不是 log 數量、喚醒次數或控制程式修改量。
+速度目標是「在不提前耗盡 Antigravity 的前提下，最大化評核前最終通過文件數」。
