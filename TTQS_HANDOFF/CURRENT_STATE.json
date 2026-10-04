@@ -1,11 +1,11 @@
 {
   "project": "TTQS_ONE",
-  "handoff_revision": "WIN10_CODEX_ANTIGRAVITY_DUAL_EXECUTION_20261004_R01",
+  "handoff_revision": "WIN10_ANTIGRAVITY_PRIMARY_FACTORY_20261004_R02",
   "official_checkbox_total": 157,
   "named_non_other_requirements": 129,
   "blocked_other_rows": 28,
   "planned_docx": 142,
-  "primary_executor": "WIN10_CODEX_LOCAL_NATIVE",
+  "primary_executor": "WIN10_ANTIGRAVITY_LOCAL_NATIVE",
   "factory_mcp_dependency": false,
   "win11_factory_dependency": false,
   "docx_primary_artifact": true,
@@ -61,7 +61,7 @@
     "production_block_scope": "EXACT_LANE_OR_PROVEN_AFFECTED_FAMILY_ONLY"
   },
   "human_gate_policy": "Only Mission/spec change, genuine SAMPLE-vs-REAL or third-party authority ambiguity, legal/signature/identity/OAuth/MFA, missing real-world prerequisite that changes the deliverable and cannot be obtained automatically, unresolved external side effect after bounded readback, or final package acceptance. Single-doc/canary failures and repeated repair failures are NOT Human Gates.",
-  "next_legal_action": "Disable all new OpenCode dispatch. On WIN10, Codex must fresh-discover the official local Antigravity route, verify Gemini 3.8 Flash High with a harmless smoke, then immediately assign READY content build/repair/review work to Antigravity while Codex retains canonical integration, gates, independent review, and promotion.",
+  "next_legal_action": "On WIN10, verify the official local Antigravity route and Gemini 3.8 Flash High, then run Antigravity as the primary content factory starting with two isolated workers. Codex must stop routine long content builds and focus on dispatch, exact independent review, integration and promotion. Fixed renderer/static/layout run in parallel outside model slots. Scale Antigravity adaptively up to four workers only after proven throughput.",
   "updated_at": "2026-10-04",
   "runtime_ui_policy": {
     "visible_console_for_ttqs_automation": false,
@@ -80,17 +80,18 @@
   "agent_bus": {
     "enabled": true,
     "root": "E:\\TTQS\\TTQS_ONE_AGENT_BUS",
-    "codex_role": "CANONICAL_DISPATCH_INTEGRATION_PROMOTION_OWNER",
+    "codex_role": "DISPATCH_REVIEW_INTEGRATION_PROMOTION_OWNER",
     "human_progress_relay": false,
     "chatgpt_web_runtime_dependency": false,
     "max_concurrency": {
-      "codex_control_review": 1,
-      "antigravity_model": 1
+      "antigravity_content_workers_initial": 2,
+      "antigravity_content_workers_max": 4,
+      "codex_review_control_workers": 1
     },
     "exact_sha_binding": true,
     "review_required_before_promotion": true,
     "visible_console_allowed": false,
-    "antigravity_role": "PRIMARY_LONG_RUNNING_CONTENT_BUILDER_AND_INDEPENDENT_REVIEWER"
+    "antigravity_role": "PRIMARY_CONTENT_FACTORY"
   },
   "dual_agent_pipeline": {
     "codex": "CANONICAL_DISPATCH_STATIC_LAYOUT_CONTROL_REVIEW_PROMOTION_OWNER",
@@ -111,23 +112,21 @@
   "dual_worker_sprint": {
     "armed": true,
     "workers": [
-      "CODEX_WORKER",
-      "ANTIGRAVITY_WORKER"
+      "ANTIGRAVITY_POOL",
+      "CODEX_CONTROL_REVIEW"
     ],
-    "roles_per_deliverable": true,
     "no_self_review": true,
     "codex_canonical_integrator": true,
-    "antigravity_isolated_builder_allowed": true,
-    "max_model_workers": 2,
-    "preferred_long_running_builder": "ANTIGRAVITY_WORKER",
+    "preferred_long_running_builder": "ANTIGRAVITY_POOL",
     "antigravity_model": "Gemini 3.8 Flash High",
-    "antigravity_route": "DISCOVER_WIN10_LOCAL_OFFICIAL_ROUTE_DO_NOT_USE_MCP",
+    "antigravity_initial_workers": 2,
+    "antigravity_max_workers": 4,
+    "scale_to_3_after_each_worker_completed_docs": 2,
+    "scale_to_4_if_30m_valid_candidate_gain_pct_at_least": 20,
+    "validated_candidate_buffer_min": 2,
+    "validated_candidate_buffer_max": 4,
+    "codex_long_build_default": false,
     "opencode_active_dispatch": false,
-    "work_priority": [
-      "CROSS_REVIEW",
-      "EXACT_REPAIR_OWN_BUILD",
-      "NEW_READY_BUILD"
-    ],
     "shared_fact_collision_avoidance": true,
     "promotion_serialized": true,
     "target_docx": 142
@@ -159,7 +158,26 @@
       "discover_official_route": true,
       "visible_gui_automation_default": false,
       "outsource_as_much_long_running_model_work_as_possible": true
+    },
+    "antigravity_primary_factory": {
+      "enabled": true,
+      "long_running_model_work_owner": "ANTIGRAVITY",
+      "codex_focus": [
+        "DISPATCH",
+        "EXACT_REVIEW",
+        "INTEGRATION",
+        "PROMOTION"
+      ],
+      "host_deterministic_pipeline_parallel": true,
+      "adaptive_workers": {
+        "initial": 2,
+        "max": 4
+      },
+      "keep_validated_candidate_buffer": {
+        "min": 2,
+        "max": 4
+      }
     }
   },
-  "secondary_executor": "WIN10_ANTIGRAVITY_LOCAL_NATIVE"
+  "secondary_executor": "WIN10_CODEX_LOCAL_NATIVE_CONTROL_REVIEW"
 }
