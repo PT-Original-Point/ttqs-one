@@ -1,6 +1,6 @@
 {
   "project": "TTQS_ONE",
-  "handoff_revision": "WIN10_CODEX_LIVE_HOST_ALIGNED_20261004_R04_HOTFIX6_MUSE_PIN",
+  "handoff_revision": "WIN10_CODEX_DEADLINE_EXECUTION_20261004_R01",
   "official_checkbox_total": 157,
   "named_non_other_requirements": 129,
   "blocked_other_rows": 28,
@@ -57,10 +57,11 @@
     "passing_canary_publish_immediately": true,
     "failing_canary_parks_exact_lane_only": true,
     "two_failed_repairs_is_human_gate": false,
-    "full_production_requires_required_canary_set_pass": true
+    "full_production_requires_required_canary_set_pass": false,
+    "production_block_scope": "EXACT_LANE_OR_PROVEN_AFFECTED_FAMILY_ONLY"
   },
   "human_gate_policy": "Only Mission/spec change, genuine SAMPLE-vs-REAL or third-party authority ambiguity, legal/signature/identity/OAuth/MFA, missing real-world prerequisite that changes the deliverable and cannot be obtained automatically, unresolved external side effect after bounded readback, or final package acceptance. Single-doc/canary failures and repeated repair failures are NOT Human Gates.",
-  "next_legal_action": "Continue HOTFIX7 true-parallel repair, but OpenCode dispatch must be explicitly pinned to the exact CLI identity corresponding to Muse Spark 1.3 Free; no fallback models.",
+  "next_legal_action": "Apply DEADLINE_EXECUTION_OVERRIDE_20261004: restore unchanged prior CURRENT demoted only by new metadata policy; remove global Canary blockade; stop repeated same-lane retries; continue unrelated READY production immediately; OpenCode Muse 429 falls back to fresh isolated Codex semantic review without using another OpenCode model.",
   "updated_at": "2026-10-04",
   "runtime_ui_policy": {
     "visible_console_for_ttqs_automation": false,
@@ -97,8 +98,7 @@
     "pipeline": [
       "BUILD",
       "STATIC_LAYOUT_RECEIPT_PASS",
-      "WAITING_OPENCODE_REVIEW",
-      "OPENCODE_EXACT_SHA_PASS",
+      "SEMANTIC_REVIEW_OPENCODE_MUSE_OR_CODEX_ISOLATED_ON_429",
       "PROMOTE_CURRENT"
     ],
     "codex_mandatory_semantic_acceptance_gate": false,
@@ -111,7 +111,8 @@
     "max_concurrency": {
       "build": 1,
       "review": 1
-    }
+    },
+    "semantic_fallback_on_provider_backpressure": "FRESH_ISOLATED_CODEX_REVIEWER_EXACT_SHA"
   },
   "deadline": "2026-10-05T09:00:00+08:00",
   "dual_worker_sprint": {
@@ -150,5 +151,22 @@
       "on_429": "BACKOFF_ONLY_NO_MODEL_SWITCH",
       "require_actual_model_attestation": true
     }
+  },
+  "deadline_execution": {
+    "active": true,
+    "deadline": "2026-10-05T09:00:00+08:00",
+    "control_plane_freeze": true,
+    "global_canary_block": false,
+    "first_ready_doc_can_serve_as_family_canary": true,
+    "semantic_review_route": {
+      "preferred": "OPENCODE_MUSE_EXACT_SHA",
+      "on_opencode_429": "FRESH_ISOLATED_CODEX_REVIEWER_EXACT_SHA",
+      "opencode_other_models_allowed": false,
+      "muse_catchup_review_queued": true
+    },
+    "policy_change_not_retroactive_artifact_defect": true,
+    "restore_unchanged_prior_current_if_demoted_only_for_missing_new_review_metadata": true,
+    "max_identical_transient_retries_before_queue_tail": 2,
+    "no_third_identical_attempt_without_material_delta": true
   }
 }
