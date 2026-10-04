@@ -1,6 +1,6 @@
 {
   "project": "TTQS_ONE",
-  "handoff_revision": "WIN10_ANTIGRAVITY_PRIMARY_FACTORY_20261004_R02",
+  "handoff_revision": "WIN10_ANTIGRAVITY_QUOTA_GOVERNED_FACTORY_20261004_R03",
   "official_checkbox_total": 157,
   "named_non_other_requirements": 129,
   "blocked_other_rows": 28,
@@ -61,7 +61,7 @@
     "production_block_scope": "EXACT_LANE_OR_PROVEN_AFFECTED_FAMILY_ONLY"
   },
   "human_gate_policy": "Only Mission/spec change, genuine SAMPLE-vs-REAL or third-party authority ambiguity, legal/signature/identity/OAuth/MFA, missing real-world prerequisite that changes the deliverable and cannot be obtained automatically, unresolved external side effect after bounded readback, or final package acceptance. Single-doc/canary failures and repeated repair failures are NOT Human Gates.",
-  "next_legal_action": "On WIN10, verify the official local Antigravity route and Gemini 3.8 Flash High, then run Antigravity as the primary content factory starting with two isolated workers. Codex must stop routine long content builds and focus on dispatch, exact independent review, integration and promotion. Fixed renderer/static/layout run in parallel outside model slots. Scale Antigravity adaptively up to four workers only after proven throughput.",
+  "next_legal_action": "Use one Antigravity Gemini 3.8 Flash High worker as the primary long-running builder. Record official five-hour/weekly usage data if exposed and measure quota cost across up to three successful real documents. Do not start a second Antigravity worker until verified headroom and empirical cost support it. Reconstruct prior OpenCode/Muse consumption offline from existing logs/session exports only; send no new OpenCode requests.",
   "updated_at": "2026-10-04",
   "runtime_ui_policy": {
     "visible_console_for_ttqs_automation": false,
@@ -84,8 +84,8 @@
     "human_progress_relay": false,
     "chatgpt_web_runtime_dependency": false,
     "max_concurrency": {
-      "antigravity_content_workers_initial": 2,
-      "antigravity_content_workers_max": 4,
+      "antigravity_content_workers_default": 1,
+      "antigravity_content_workers_max_without_verified_quota_headroom": 1,
       "codex_review_control_workers": 1
     },
     "exact_sha_binding": true,
@@ -112,19 +112,17 @@
   "dual_worker_sprint": {
     "armed": true,
     "workers": [
-      "ANTIGRAVITY_POOL",
+      "ANTIGRAVITY_PRIMARY",
       "CODEX_CONTROL_REVIEW"
     ],
     "no_self_review": true,
     "codex_canonical_integrator": true,
-    "preferred_long_running_builder": "ANTIGRAVITY_POOL",
+    "preferred_long_running_builder": "ANTIGRAVITY_PRIMARY",
     "antigravity_model": "Gemini 3.8 Flash High",
-    "antigravity_initial_workers": 2,
-    "antigravity_max_workers": 4,
-    "scale_to_3_after_each_worker_completed_docs": 2,
-    "scale_to_4_if_30m_valid_candidate_gain_pct_at_least": 20,
-    "validated_candidate_buffer_min": 2,
-    "validated_candidate_buffer_max": 4,
+    "antigravity_default_workers": 1,
+    "antigravity_max_workers_without_verified_quota_headroom": 1,
+    "second_worker_requires_verified_usage_headroom": true,
+    "second_worker_requires_empirical_cost_sample_docs": 3,
     "codex_long_build_default": false,
     "opencode_active_dispatch": false,
     "shared_fact_collision_avoidance": true,
@@ -161,22 +159,21 @@
     },
     "antigravity_primary_factory": {
       "enabled": true,
+      "quota_governed": true,
       "long_running_model_work_owner": "ANTIGRAVITY",
       "codex_focus": [
         "DISPATCH",
         "EXACT_REVIEW",
         "INTEGRATION",
-        "PROMOTION"
+        "PROMOTION",
+        "QUOTA_LEDGER"
       ],
       "host_deterministic_pipeline_parallel": true,
-      "adaptive_workers": {
-        "initial": 2,
-        "max": 4
-      },
-      "keep_validated_candidate_buffer": {
-        "min": 2,
-        "max": 4
-      }
+      "default_workers": 1,
+      "max_workers_without_verified_quota_headroom": 1,
+      "measure_first_n_successful_docs": 3,
+      "no_periodic_provider_probe": true,
+      "reconstruct_opencode_usage_offline": true
     }
   },
   "secondary_executor": "WIN10_CODEX_LOCAL_NATIVE_CONTROL_REVIEW"
