@@ -46,3 +46,12 @@ Every OpenCode result must record the actual model identity used.
 If actual model != resolved allowed Muse Spark model:
 MODEL_POLICY_VIOLATION
 The result is invalid for promotion and must not be reused.
+
+
+## Preferred official client route
+For Muse Spark 1.3 Free, route priority is:
+1. OpenCode Desktop-owned local server / opencode-cli sidecar session via official OpenCode client/SDK.
+2. An official session attached to that same server, if needed.
+3. Standalone `opencode run` is disabled by default for deadline production because repeated 429s were observed on that route.
+
+Do not use another model. If the Desktop-sidecar route also receives 429, classify provider backpressure.
