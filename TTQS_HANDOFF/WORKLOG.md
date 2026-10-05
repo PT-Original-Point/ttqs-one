@@ -91,3 +91,14 @@ R06 receipts and hashes: see `RAW_EVIDENCE_INDEX.md`. The scoped-write incident 
 - No new Antigravity or Codex model task was dispatched. `0054` R06 remains the strongest salvaged candidate at SHA256 `407a9ad07ecf67c2166cc416d834e48b28c37b6d5442e1f03205c3ce28dc58be`, with static/duplication and hidden layout PASS; fresh independent exact-SHA semantic review remains outstanding, so it is not promoted.
 - CURRENT remains 14 DOCX and the queue hash remains `b76c027107d8fdc7a8cf2fca787659a1d6028a9518a595c172c5c375c89bacf7`. The supervisor remains disabled under the existing quota-reserve checkpoint; no queue, candidate, CURRENT, or permission state was changed.
 - Sanitized official usage readback is recorded in `CODEX_USAGE_READBACK_20261005_074254.json`; it omits account identifiers and reset-credit IDs.
+
+## 2026-10-05 12:25:02 +08:00 — workflow guard integration and scoped-write evidence closeout
+
+- Copied the exact runtime integration sources and evidence into TTQS_HANDOFF/WORKFLOW_GUARD_INTEGRATION_20261005/; source hashes and test receipt are listed there. The supervisor now invokes the shared workflow guard at the content-validation and dispatch entrypoints, blocks evaluator-body prompt leaks, binds review reuse to exact work/evidence, and defers Antigravity dispatch to the Master controller.
+- The retained offline verification receipt records 22/22 PASS, integration PASS against the live validate_content_payload entrypoint and a persisted 0013 fixture, with zero live model calls. Semantic gates were not weakened.
+- The original scoped write smoke was not rerun. Recorder repair was verified offline from retained raw evidence. The existing exact-file lease receipts show readback before dispatch and removal/readback after completion; this work did not edit permission settings, queue, CURRENT, scheduler, or Antigravity lease.
+- 0033 stays pre-scope historical-only. No new Antigravity production sample or promotion is claimed. CURRENT remains 14 from the latest exact inventory; 0013 is still subject to full host/content review and 0054 still needs targeted repair plus fresh acceptance.
+- The weekly evidence file uses a corrected capture time and explicitly marks the unavailable 2026-09-29–10-01 log window and token/account-usage limitations. OpenCode historical records are read-only; no OpenCode request was made.
+- This addendum records workflow integration only. Production resumes through the Master-owned single-worker dispatch path after exact work permission scope is read back; this executor did not enable a competing automated launcher.
+
+Evidence and hashes: TTQS_HANDOFF/WORKFLOW_GUARD_INTEGRATION_20261005/README.md, luna_evidence.json, guard_verification.json, RAW_EVIDENCE_INDEX.md.

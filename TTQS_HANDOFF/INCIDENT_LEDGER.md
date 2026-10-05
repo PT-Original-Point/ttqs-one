@@ -55,3 +55,11 @@ This addendum closes the current evidence readback for the original `ANTIGRAVITY
 No new write-permission incident occurred in this follow-up. The R03 local-native route and one-file lease remain as previously documented; the retained smoke receipt still records 13/13 checks PASS and was not rerun. The latest lease (0055) is removed with exact readback, and CLI settings remain empty. Work 0033 is historical pre-fix work and was not retried.
 
 The 0054 R06 work is host-side salvage of a persisted payload, not a permission test or a new Antigravity request. It passed static and hidden layout checks but remains unpromoted pending a fresh independent review. Current remains 14 DOCX. Exact artifact evidence is indexed in `RAW_EVIDENCE_INDEX.md`.
+
+## 2026-10-05 12:25:02 +08:00 — workflow integration readback
+
+- The earlier 0026/0027/0028 auto-denials and recorder serialization issue remain classified as executor permission/logging-control defects, not provider quota failures. Existing smoke evidence remains valid; it was not rerun.
+- Integration is now verified by 22/22 offline cases, including the actual supervisor content-validation entrypoint rejecting a persisted 0013 prompt leak; 0 live model calls were made by this verification. Exact-write automation remains fail-closed and owned by the Master dispatcher. No broad permission was granted.
+- 0033 remains PRE_SCOPED_WRITE_FIX_ATTEMPT=true, historical-only. Current production cost-sample count remains zero; a successful isolated smoke or a payload that later fails content gates is not a successful sample.
+- Dispatch ownership changed to Master-only under the current workflow policy. This supersedes any earlier note suggesting the local scheduled supervisor should resume Antigravity auto-dispatch. No scheduler or lease state was changed here.
+- Supporting source snapshots, test receipt, hashes, and usage/evidence limitations are in TTQS_HANDOFF/WORKFLOW_GUARD_INTEGRATION_20261005/ and RAW_EVIDENCE_INDEX.md.
