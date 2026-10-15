@@ -17,6 +17,7 @@ AI 幾十次失敗是因為只換標題、泛用四段式、沒有實際題目�
 01_HUMAN_MISSION_AND_ACCEPTANCE.md
 02_GENRE_WRITING_MANUAL.md
 03_157_CHECKBOX_BLUEPRINTS.md
+05_HOURLY_NATIVE_WAKE_RESUME.md：Human 明確批准每 60 分鐘喚醒目前這條 Codex GOAL；優先用 Codex App 原生同對話 Scheduled task，不可用才借現有 Windows Task Scheduler，兩者不可雙主。必須真正安裝、讀回、煙測，未知不得說 ACTIVE。
 
 三份是一起生效的 Human 最新 CANDIDATE 細化契約，不得只讀這份 GOAL。官方 PDF 訓練機構版參考佐證 157 格、129 具名和 28 個 Other 的逐格核對，必須比對現有正式 Blueprint 與 142 份生產序列；方框號不是 DOCX 號，不得自行重編。每個方框/拆件都要自己的 genre、獨有章節、圖表/問卷、計算、分母、來源、示範與可驗收結果。不能把其他文類的正文套過來。
 
