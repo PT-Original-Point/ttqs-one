@@ -1,10 +1,26 @@
 # TTQS ONE｜每小時自動喚醒 Codex 並接續 GOAL（2026-10-16 Human 最新授權）
 
 **PROJECT_ID=TTQS_ONE**  
-**Human 命令：在高品質文件 GOAL 完成前，每 60 分鐘讓 Windows 原生工作排程器執行一次有界檢查；如果 Codex/Worker 沒有工作而存在合法 READY 任務，接續原有生產。無實質差異則不浪費高級模型。**  
+**Human 命令：在高品質文件 GOAL 完成前，每 60 分鐘由 Codex App 原生 Thread Scheduled Task（優先）或既有 Windows Task Scheduler（備援二擇一）喚醒／檢查；合法 READY 且沒有活躍 Writer 時續工，無實質差異不浪費高級模型。**  
 **狀態：CANDIDATE，寫入 GitHub 不等於 Windows 已安裝、排程已啟用或產品已完成。**
 
-## 1. 重用舊排程，不允許雙主
+## 0. 首選：Codex App 原生 Scheduled／Thread automation（不新建第二個 Supervisor）
+
+依 OpenAI 目前官方 Scheduled tasks 文件（https://learn.chatgpt.com/docs/automations）：桌面 app 支援 project-scoped scheduled tasks，並能建立**附著於現有 Codex 對話**的 thread scheduled task。此類 task 定時回到同一條對話，比另起新任務更適合本次「同一 TTQS GOAL 自我喚醒」。有自訂排程時，可選 Cron 0 * * * *（Asia/Taipei、每小時整點），或 UI 提供的 Every 1 hour。官方亦提醒：本機專案排程需電腦開啟、app 保持運行、專案仍在本機可用；排程本身不是把雲端 ChatGPT 變成 24/7 Windows 常駐服務。
+
+**先在實際 Windows Codex App 讀回：**
+1. Scheduled/Automations 是否已可使用？同一個 TTQS GOAL thread 已有 scheduler 嗎？讀回 task ID、thread ID、repo/工作目錄、模型、sandbox、enabled/paused、週期、last/next run。從 app UI 或原生支援動作建立/更新，不猜造 app 的內部 JSON/SQLite 格式，不直接修改私有排程 DB。
+2. 若本機 app 支援**thread scheduled task**，只建立或更新**一個**綁定現在 TTQS ONE GOAL thread、每 60 分鐘一次的 task，任務 prompt 以本檔「第 2 節 deterministic L0」為共同內容，並引用 01–04 完整品質規格；每次醒來讀當前來源/queue/OS worker，必要時合法續工，沒有進展不重複消耗模型工具或重派同一寫入。
+3. 它必須使用真正可存取 E:\TTQS 工作區的本機執行環境，不是隔離到無法讀取 Windows DOCX 的雲端聊天；排程 sandbox/工具/授權要做有界 smoke，不能預設有 elevated 權限。若選工作樹模式與現有真實 DOCX 工作目錄隔離，必須先驗證能讀到相同正式工件；否則選合格 local project mode 並保證單 Writer。
+4. 每次觸發前，重用既有 OS/queue/GOAL 驗證；若已有同一範圍 Worker alive，僅記錄並結束該次；不得因 thread 已醒就開第二個 Builder。GOAL 的最終完成/正式接受經可信 readback 後，使用**原生 Scheduled 管理功能**停止或封存這個 recurrence；不能僅靠模型最後一句「完成」。
+5. 驗收：從 Codex app 原生 Scheduled 頁讀回 task enabled/active、每小時觸發設定、綁定的 thread、last/next run、一次實際執行紀錄、再次執行時保留同一 GOAL/工作狀態，並與 OS Worker/queue 的同來源 readback 比對。未實測不得宣稱 24/7 已生效。
+6. 原有 TTQS_ONE_Codex_Supervisor 若已擔任長時 Worker 執行主體，可以繼續作為 Worker，但不能同時再設同功能 hourly re-dispatch trigger 造成雙主；如有兩個候選排程，指定唯一 hourly wake owner，另一個關閉重複觸發或保留純 Worker 功能，不刪除歷史。
+
+**只有在這個 Codex 原生 Scheduled 功能不支援/本機不可用、或無法以本機權限實際接續 GOAL 時，才選以下 Windows Task Scheduler fallback。** 兩者擇一，不能互相當額外核准 Gate、不能雙重整點派工。
+
+---
+
+## 1. Windows 備援：重用舊排程，不允許雙主
 
 2026-10-05 GitHub 歷史 WORKLOG（不是本次 LIVE）記載曾有 Windows Task Scheduler 任務 TTQS_ONE_Codex_Supervisor；某次觀測為 Disabled、Hidden=true、Principal=J，Action 為 wscript.exe //B //NoLogo，透過 supervisor_hidden_launcher.vbs 執行有限的一個 supervisor turn（--max-docs 1）。先做 Windows fresh readback：舊名字、Action、Principal、Triggers、Settings、LastRunTime、LastTaskResult、Enabled、目前實際工作程序、其他 TTQS 排程、BUILD_QUEUE、CURRENT 和 Writer owner。不得把 10/05 歷史狀態冒充現在狀態。
 
@@ -70,4 +86,4 @@ READBACK_EVIDENCE=<native location/timestamp>
 NEXT_LEGAL_ACTION=<one clear action>
 TRUE_HUMAN_GATE=<specific genuine gate|none>
 
-**只有原生 Windows Task 已安裝、已啟用、確實每小時觸發，且安全恢復工作的實測證據完整時，才可回報每小時 Codex 自動喚醒已完成。GitHub 文件自身不具 OS 安裝效果。**
+**只有 Codex 原生 Scheduled 或 Windows Task Scheduler 其中一個通道已真正註冊、已啟用、每小時觸發，且能安全續工，才可回報每小時 Codex 自動喚醒已完成。不得同時啟用兩條相同功能的派工通道。GitHub 文件自身不具主機安裝效果。**
