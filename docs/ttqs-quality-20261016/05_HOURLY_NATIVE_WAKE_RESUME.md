@@ -16,6 +16,8 @@
 5. 驗收：從 Codex app 原生 Scheduled 頁讀回 task enabled/active、每小時觸發設定、綁定的 thread、last/next run、一次實際執行紀錄、再次執行時保留同一 GOAL/工作狀態，並與 OS Worker/queue 的同來源 readback 比對。未實測不得宣稱 24/7 已生效。
 6. 原有 TTQS_ONE_Codex_Supervisor 若已擔任長時 Worker 執行主體，可以繼續作為 Worker，但不能同時再設同功能 hourly re-dispatch trigger 造成雙主；如有兩個候選排程，指定唯一 hourly wake owner，另一個關閉重複觸發或保留純 Worker 功能，不刪除歷史。
 
+**重要的成本實情**：Codex App 原生 Scheduled 在每次定時回到對話時可能已經觸發一個模型執行；它不能保證「完全沒有 material delta 時零模型呼叫」。如果本專案要求嚴格的零空轉模型成本，則優先讓既有 Windows Task Scheduler 執行 deterministic L0（OS process、Git/hash、queue 檢查），只有發現需要 Codex 續工時才叫醒模型。這是基於『無實質變化不呼叫高階模型』的合法路由選擇，不是新增第二套排程。兩種方案擇一，須將選擇及實際成本條件寫入 readback。
+
 **只有在這個 Codex 原生 Scheduled 功能不支援/本機不可用、或無法以本機權限實際接續 GOAL 時，才選以下 Windows Task Scheduler fallback。** 兩者擇一，不能互相當額外核准 Gate、不能雙重整點派工。
 
 ---
