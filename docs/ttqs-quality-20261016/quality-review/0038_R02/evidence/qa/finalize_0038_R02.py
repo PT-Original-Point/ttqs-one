@@ -76,7 +76,10 @@ progress["review"] = {
     "exact_sha_bound_review": bool(semantic_matches and semantic_status == "PASS"),
     "formal_acceptance": "NOT_GRANTED",
 }
-progress["remote"] = {"status": "PENDING_UPLOAD", "github_path": None, "verified_readback": False}
+remote_state = progress.get("remote", {})
+if remote_state.get("status") != "PASS_EXACT_READBACK":
+    remote_state = {"status": "PENDING_UPLOAD", "github_path": None, "verified_readback": False}
+progress["remote"] = remote_state
 progress["last_material_change"] = {
     "reason": "Resolved the two R01 semantic-review gaps by adding row-level execution trace and an official-requirement-to-fields/sources/decision/review crosswalk; no metadata-only DOCX rebuild.",
     "previous_candidate_sha256": "75065568b801506d736297441ee30abd3eaccc4fa3748ef6da2a11c67715088a",
@@ -106,11 +109,14 @@ tracked = [
     ROOT / "inputs" / "SOURCE_MAP.md", ROOT / "inputs" / "BLUEPRINT_CURRENT_0038.jsonl",
     EVIDENCE / "assets" / "design_improvement_flow.png",
     EVIDENCE / "assets" / "synthetic_prepost_comparison.png",
-    QA / "verify_0038_R02.py", QA / "finalize_0038_R02.py", QA / "record_semantic_review_R02.py",
+    QA / "verify_0038_R02.py", QA / "finalize_0038_R02.py", QA / "record_semantic_review_R02.py", QA / "verify_remote_readback_0038_R02.py",
     TECH_PATH, QA / "visual_review_notes.json", QA / "visual_qa.json", PDF,
 ]
 if semantic_receipt:
     tracked.extend([semantic_path, QA / "independent_semantic_review_R02.md"])
+readback_path = QA / "remote_readback_R02.json"
+if readback_path.exists():
+    tracked.append(readback_path)
 tracked.extend(images)
 inventory = [{"path": p.relative_to(ROOT).as_posix(), "bytes": p.stat().st_size, "sha256": sha256(p)} for p in tracked if p.is_file()]
 manifest = {
@@ -119,6 +125,7 @@ manifest = {
     "candidate_sha256": docx_sha, "pdf_sha256": pdf_sha,
     "technical_qa": tech["status"], "visual_qa": visual_status,
     "independent_semantic_review": semantic_status, "formal_acceptance": "NOT_GRANTED",
+    "remote_readback": progress.get("remote", {}),
     "artifacts": inventory,
 }
 (EVIDENCE / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

@@ -10,6 +10,11 @@
   "visual_qa": "PASS",
   "independent_semantic_review": "PASS",
   "formal_acceptance": "NOT_GRANTED",
+  "remote_readback": {
+    "status": "PENDING_UPLOAD",
+    "github_path": null,
+    "verified_readback": false
+  },
   "artifacts": [
     {
       "path": "README.md",
@@ -73,13 +78,18 @@
     },
     {
       "path": "evidence/qa/finalize_0038_R02.py",
-      "bytes": 6796,
-      "sha256": "bf5fd847f51139ba6072b3d1e4bbbb302a26058f5eb413336dbfd492a0ac7786"
+      "bytes": 7129,
+      "sha256": "7acd3e0ed9e6541266fe7ce0159c4b6154366f554f1772736d93535dacaa8c53"
     },
     {
       "path": "evidence/qa/record_semantic_review_R02.py",
       "bytes": 4336,
       "sha256": "a4132b6530bbec6786ac46cf35e217e4651c3b0bcb6c4bb1d13d4ccddcb9db71"
+    },
+    {
+      "path": "evidence/qa/verify_remote_readback_0038_R02.py",
+      "bytes": 2477,
+      "sha256": "66a7cbe82cf94fceb05097c064b54f17629f22aac9cc0d6af6bf2875a3edbdd5"
     },
     {
       "path": "evidence/qa/technical_qa.json",
