@@ -22,10 +22,14 @@
   "candidate_state": "CANDIDATE_NOT_PROMOTED",
   "formal_acceptance": "NOT_GRANTED",
   "remote_readback": {
-    "status": "PENDING_AFTER_REVIEW_EVIDENCE_UPDATE",
-    "previous_verified_branch_head": "682edf0ba72503897f7827b194f9c331b49b810a",
-    "previous_manifest_entries_read_back": 31,
-    "previous_candidate_sha256": "c84e200ff11d2e9f46360b4e03b7867e22fb03ac4ec298d022c9d1f3d76ffdf8"
+    "status": "PASS_EXACT_BLOBS_READ_FROM_GITHUB",
+    "verified_branch_head": "0f66c95b56acdc41d6df3db701f5ffef702e33d3",
+    "artifact_manifest_sha256": "0d49d1b78da51ee6bc3796a444d06117173bbf4d4b94bbefbe5e72b9c6a208fa",
+    "manifest_entries_read_back": 33,
+    "candidate_sha256": "c84e200ff11d2e9f46360b4e03b7867e22fb03ac4ec298d022c9d1f3d76ffdf8",
+    "raw_independent_review_sha256": "418021f7ad554ebf66abb7283712c26dce8f0d527572cb5c77f079d84e5d518b",
+    "normalized_review_receipt_sha256": "bcc8b8c9b828ceb1296c312646163daf42f4e73e439df6a597254c832006073e",
+    "method": "Fetched the existing GitHub branch and SHA-256 hashed all exact Git blob bytes listed in the manifest; separately read back the candidate, raw review, normalized receipt, manifest and progress status."
   },
   "independent_review_receipt_path": "evidence/qa/0040_semantic_review_r03_exact.json",
   "independent_review_receipt_sha256": "bcc8b8c9b828ceb1296c312646163daf42f4e73e439df6a597254c832006073e",
