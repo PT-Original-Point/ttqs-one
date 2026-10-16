@@ -4,7 +4,7 @@
   "revision": "R07",
   "requirement_id": "I08-E01",
   "official_checkbox_sequence": "038",
-  "status": "INDEPENDENT_SEMANTIC_PASS_CANDIDATE_ONLY_REMOTE_PENDING",
+  "status": "INDEPENDENT_SEMANTIC_PASS_CANDIDATE_ONLY_REMOTE_VERIFIED",
   "candidate_sha256": "0a66a439be8fc67e358b59ecace73ae59dae2369a90e0c13adc354e49c3ae77d",
   "official_source_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
   "source_map_sha256": "405b987797d1558ecac182cea8e1adfbd1aead7754c880db32db43c235d5024e",
@@ -25,11 +25,11 @@
   "formal_acceptance": "NOT_GRANTED",
   "source_commit_at_package_creation": "e83d0b0944a8229847135f90c0f62683aa704619",
   "remote_readback": {
-    "status": "PENDING",
-    "verified_branch_head": null,
-    "artifact_manifest_sha256": null,
-    "manifest_entries_read_back": 0,
-    "candidate_sha256": null,
-    "method": "Pending exact GitHub blob readback after push."
+    "status": "PASS_EXACT_BLOBS_READ_FROM_GITHUB",
+    "verified_branch_head": "cdd64aeb07c3d8eef9f4583ccebc9790f3c955a6",
+    "artifact_manifest_sha256": "31b128d8e3525f233c99f15a87919638de53e5d557c265fbb715917d32df8868",
+    "manifest_entries_read_back": 42,
+    "candidate_sha256": "0a66a439be8fc67e358b59ecace73ae59dae2369a90e0c13adc354e49c3ae77d",
+    "method": "Fetched the GitHub branch and hashed the exact remote Git blob bytes for every manifest entry, then separately read back artifact_manifest.json."
   }
 }
