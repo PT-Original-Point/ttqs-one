@@ -1,0 +1,33 @@
+{
+  "deliverable_id": "0045",
+  "requirement_id": "I10-E01",
+  "official_checkbox_sequence": "047",
+  "candidate_revision": "R01",
+  "candidate_docx_sha256": "c40f401fade386d831b5ba170f9cb17a24313de84474cd957a92ecf8d75a7049",
+  "review_dispatch_status": "NOT_DISPATCHED",
+  "semantic_verdict": "PENDING",
+  "preflight_at_utc": "2026-10-16T23:36:00Z",
+  "route_findings": [
+    {
+      "route": "OpenCode CLI v2 Desktop sidecar",
+      "configured_cli": "C:\\Users\\J\\AppData\\Roaming\\ai.opencode.desktop\\cli\\2.0.22\\opencode-cli.exe",
+      "cli_exists": false,
+      "path_lookup": "opencode not found on PATH",
+      "configured_sidecar": "http://127.0.0.1:49374",
+      "sidecar_probe": "connection refused",
+      "result": "No review request sent; a V2 CLI or verified sidecar is unavailable at the configured route."
+    },
+    {
+      "route": "Antigravity CLI",
+      "result": "New review dispatch remains paused under the preserved 0044 incident record after four failed attempts and three scoped repairs; no Computer Use was used."
+    }
+  ],
+  "policy_evidence": [
+    "AGENTS.md HOTFIX5: independent OpenCode semantic reviewer requirement",
+    "TTQS_HANDOFF/CURRENT_STATE.json: OpenCode route marked disabled in the 2026-10-04 state; later Human authorization for OpenCode V2 does not recreate the missing executable or listener",
+    "quality-review/0044_R01/review/antigravity_route_incident_R01/INCIDENT.json: PAUSED_NEW_DISPATCH"
+  ],
+  "builder_self_review_used_as_acceptance": false,
+  "promotion": "NOT_PROMOTED",
+  "next_action": "Continue other READY document production while preserving this candidate SHA; retry exact-SHA independent semantic review only after a real authorized reviewer route is restored."
+}
