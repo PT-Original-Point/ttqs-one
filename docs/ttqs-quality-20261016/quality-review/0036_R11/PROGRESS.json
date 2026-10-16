@@ -4,7 +4,7 @@
   "requirement_id": "I07-E04",
   "official_checkbox_serial": "036",
   "revision": "R11",
-  "status": "CANDIDATE_AWAITING_INDEPENDENT_SEMANTIC_REVIEW_NOT_PROMOTED",
+  "status": "CANDIDATE_PARTIAL_REQUIRES_TARGETED_R12_FLOWCHART_REPAIR_NOT_PROMOTED",
   "candidate_sha256": "1e08913a7e330fcbd52f50645138f97b8c951022ef69bc5bd1ee3d2971c9a7c7",
   "candidate_bytes": 228667,
   "source_revision": "R10",
@@ -21,14 +21,37 @@
   "layout_review": "PASS_VISUAL_DELTA; changed pages 6,16,17 directly inspected; other 16 pages pixel-identical to R10; no blank page.",
   "technical_review": "PASS_TECHNICAL_ONLY",
   "independent_semantic_review": {
-    "status": "IN_PROGRESS",
+    "status": "PARTIAL",
     "reviewer_agent_id": "01a1459f-3387-7a52-9608-fa07d7262c24",
     "candidate_sha256": "1e08913a7e330fcbd52f50645138f97b8c951022ef69bc5bd1ee3d2971c9a7c7",
-    "expected_flowchart_page5_sha256": "9de609525071cd8ccb5c1ec13b44d6e2c40e0c9329b3344e2fe964872d593b4b"
+    "review_file": "review/0036_R11_independent_semantic_review_R01.md",
+    "review_file_sha256": "d21e9ac50f4d6da170eec18d03f2fb2852a345dfaaa7578da2f1505c871f60ea",
+    "review_completed_at": "2026-10-17T00:59:18+08:00",
+    "visual_scope": "Page 5 flowchart only for this independent review; prior technical/layout chain remains as recorded separately.",
+    "passing_areas": [
+      "official requirement and genre",
+      "negative-neighbor mapping",
+      "duration arithmetic",
+      "handoff form usability",
+      "sample/real boundary",
+      "case calculations and internal consistency"
+    ],
+    "blocking_finding": {
+      "locator": "DOCX page 5, Figure 5-1; source-adequacy NO branch and goal/assessment-coverage NO branch",
+      "finding": "Neither remediation box has an explicit return arrow to the correct re-entry point. The reader must infer return to source verification or course matrix from §5 prose.",
+      "repair_scope": "Only redraw/replace the embedded flowchart image with explicit, correctly directed return connectors; preserve all other R11 content."
+    }
   },
   "candidate_disposition": "CANDIDATE_ONLY_NOT_PROMOTED",
   "formal_acceptance": "NOT_GRANTED",
   "remote_readback": {
+    "status": "PENDING_AFTER_REVIEW_RECEIPT_UPDATE",
+    "previous_verified_commit": "99e252ad31e05e3809d49ad4df3093c0397163f7",
+    "readback_required": "Fetch pushed branch and verify each current manifest blob, R11 DOCX SHA, and raw reviewer receipt SHA."
+  },
+  "artifact_manifest_sha256": null,
+  "artifact_file_count": 38,
+  "previous_remote_readback": {
     "status": "PASS",
     "verified_commit": "6a30c901b32418c7a5766f9f46356d10878144db",
     "manifest_file_count": 36,
@@ -37,6 +60,26 @@
     "pdf_sha256": "1a5f67f3858b764999cba87193106c76f47c01f533dd36fafec3bbf0c8e9ad42",
     "readback_source": "git fetch + exact blob readback from FETCH_HEAD"
   },
-  "artifact_manifest_sha256": "18add51383f4a69cafcf8d30a44020f226fc74ba60d924955b4f0fa9c0de2c8d",
-  "artifact_file_count": 36
+  "next_action": "Create R12 from R11 with only the two Figure 5-1 return connectors repaired; render and inspect affected page, run technical checks, then obtain fresh independent semantic review bound to the R12 exact SHA.",
+  "github_command_ingestion": {
+    "marker": "TTQS_GITHUB_COMMAND_PREFLIGHT_V1",
+    "automation_id": "ttqs-one-hourly-quality-goal-resume",
+    "automation_status": "ACTIVE",
+    "automation_kind": "heartbeat",
+    "interval": "RRULE:FREQ=HOURLY;INTERVAL=1",
+    "target_thread_id": "01a14098-b269-79e3-b07c-56e96557fe07",
+    "workspace": "E:\\TTQS",
+    "persisted_prompt_sha256": "fe0529b760020af2cea0998234a6f306e3a05168175e5449c77864031843006e",
+    "persistent_prompt_readback": "PASS_VIA_AUTOMATION_UPDATE_AND_NATIVE_SOURCE_READBACK",
+    "active_ttqs_scheduler_count": 1,
+    "standalone_hourly_status": "PAUSED",
+    "windows_supervisor_status": "DISABLED",
+    "last_actual_scheduled_run": "NOT_EXPOSED_BY_NATIVE_READBACK",
+    "next_run_time": "NOT_EXPOSED_BY_NATIVE_READBACK",
+    "real_scheduled_wake_test": "NOT_VERIFIED",
+    "github_preflight_test": "PASS_LIVE_HEAD_FETCHED_AND_AUDIT_FILE_FULLY_READ",
+    "audit_source_commit": "92d3d97acbd3c0a8c4dcad66e66468f5cafc3536",
+    "audit_source_blob_sha1": "70449889fd464106fe204496004bee13018d4a51",
+    "overall_instruction_status": "DISCOVERED_APPLICABLE_AUTOMATION_RULE_APPLIED_AND_READ_BACK; AUDIT WORK VERIFIED ONLY AFTER R12 REVIEW AND REMOTE READBACK"
+  }
 }

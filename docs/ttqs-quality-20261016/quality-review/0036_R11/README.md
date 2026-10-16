@@ -1,6 +1,6 @@
 # 0036 R11 課程設計進度與訓練規劃
 
-**狀態：候選文件，尚待 fresh independent semantic review；未提升為正式文件，也未獲 Human 正式接受。**
+**狀態：候選文件；R11 獨立語意審查為 PARTIAL，需修復圖5-1兩個回接箭頭；未提升為正式文件，也未獲 Human 正式接受。**
 
 ## 對應需求與精確版本
 
@@ -31,3 +31,18 @@ R11 只修改 R10 審查所列文字、表單欄位，沒有重新生成全份�
 ## 附件與可追溯來源
 
 本包包含 R11 DOCX、Word PDF、19頁影像、官方來源 PDF、完整需求映射、相鄰 Blueprint、唯一 Blueprint、85筆替換登錄、R10獨立審查原文、R11修復及技術／版面收據。來源雜湊在 `inputs/source_provenance.json` 和 `PROGRESS.json`。官方 PDF 的已核實完整 SHA-256 為 `805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709`。
+
+
+## R11 獨立語意審查 R01
+
+- 判定：**PARTIAL**，精確綁定 R11 DOCX SHA `1e08913a7e330fcbd52f50645138f97b8c951022ef69bc5bd1ee3d2971c9a7c7`。原始審查回覆見 `review/0036_R11_independent_semantic_review_R01.md`。
+- 唯一阻擋缺陷：第5頁圖5-1兩個「否」修訂分支缺少返回箭頭，分別應回到需求來源核對及課程矩陣重配。§5文字雖有說明，流程圖仍須無推斷即可操作。
+- 其他語意檢查：官方要求/文類、相鄰方框辨識、190+20=210時間、§15交接表、85筆SAMPLE替換追溯及案例計算均 PASS。視覺判定限第5頁。
+- 下一版 R12 僅修正這張內嵌流程圖，保留其餘 R11 DOCX 內容；完成後另行 exact-SHA 審查。
+
+## GitHub command preflight readback
+
+- 原生 Automation `ttqs-one-hourly-quality-goal-resume` 已更新並讀回：ACTIVE、HOURLY、同一 GOAL thread；持久化 prompt 含 `TTQS_GITHUB_COMMAND_PREFLIGHT_V1`。Prompt SHA-256 `fe0529b760020af2cea0998234a6f306e3a05168175e5449c77864031843006e`。
+- 本回合從 live branch HEAD `99e252ad31e05e3809d49ad4df3093c0397163f7` 讀完 06 外部稽核命令，來源 blob SHA-1 `70449889fd464106fe204496004bee13018d4a51`；完整讀取01–05規格。
+- 唯一啟用的 TTQS hourly automation 數量為1；standalone hourly automation PAUSED；Windows `TTQS_ONE_Codex_Supervisor` DISABLED。Automation 工具未提供最近實際觸發與下一次執行時間；因此不宣稱 scheduled wake smoke 已驗證。
+- 完整原生讀回欄位見 `review/TTQS_GITHUB_COMMAND_PREFLIGHT_R01.json`。
