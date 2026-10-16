@@ -3,7 +3,7 @@
   "doc_id": "0036",
   "requirement_id": "I07-E04",
   "revision": "R08",
-  "status": "IN_PROGRESS",
+  "status": "REVIEW_COMPLETE_PASS_CANDIDATE_ONLY",
   "reviewer_route": "Antigravity CLI headless; Computer Use not used",
   "model_requested": "gemini-3.8-flash-high",
   "effort_requested": "high",
@@ -11,15 +11,55 @@
   "render_pdf_sha256": "238b275247b67bbe83f07422fb71fd369346b95a1b147879639e5a80bef1e7dd",
   "replacement_register_sha256": "b160577f551ac162170ad1fd2afe50479de7d7f5d343ef1ca39d86f097471cca",
   "prompt_sha256": "77ade840efa5eaec826f46cc618d07786ca51e48ce3ee6aa3a991abcda4fa2b0",
-  "cli_version": "1.2.17",
-  "cli_binary_sha256": "6224a54c35d31b9b85232bbfb23e3306002c418481930442519743fab585f65a",
-  "local_worker_pid": 9072,
+  "cli_version": "1.4.0",
+  "cli_binary_sha256": "f5466e6aaf9f1345cae476fecb9aebb9e82c2ca8dfd43136fa9747fcf075e062",
+  "local_worker_pid": null,
   "worker_start_time_taipei": "2026-10-16 23:13:03",
-  "latest_branch_head_observed": "8c242914a04748f7ff3c6e3604a510a4c5a658f4",
-  "last_result": "PENDING",
+  "latest_branch_head_observed": "297aa26d592e8d383f5edfde4f73bc4ec2b2b19d",
+  "last_result": "PASS",
   "notes": [
-    "R08 technical and visual receipts match the exact candidate SHA but are context only; independent semantic review has not yet returned.",
-    "The reviewer is running as a separate Antigravity CLI headless process with terminal sandbox requested; no candidate edits or promotion are authorized.",
-    "DOCX ID 0036 maps to I07-E04; checkbox serial is not inferred from the DOCX ID."
-  ]
+    "Independent semantic review R01 returned PASS for the exact candidate SHA; this is not promotion or formal acceptance.",
+    "Reviewer returned no findings, no unmatched material facts among 75 SAMPLE/SYNTHETIC register rows, and no recalculation discrepancies.",
+    "The returned CLI envelope had status SUCCESS and process exit code 0; requested model was pinned, but runtime model identity was not returned in the envelope.",
+    "Independent direct visual review covered pages 14, 16, 18, and 19; other pages were checked from packet text and inherited review context.",
+    "Builder technical and visual receipts remain context only.",
+    "DOCX 0036 maps to I07-E04; checkbox serial is not inferred from DOCX ID.",
+    "Candidate bytes were unchanged by the read-only review and remain CANDIDATE / NOT_PROMOTED."
+  ],
+  "cli_conversation_id": "2d1c1652-f592-4611-a975-d0eb200eab88",
+  "cli_model_runtime_field_returned": false,
+  "cli_model_runtime_note": "Invocation pinned --model gemini-3.8-flash-high; CLI response envelope contains no runtime model field.",
+  "review_verdict": "PASS",
+  "review_criteria_passed": 7,
+  "review_findings_count": 0,
+  "synthetic_register_rows": 75,
+  "synthetic_register_unmatched_material_facts": 0,
+  "arithmetic_discrepancies": 0,
+  "candidate_unchanged": true,
+  "formal_acceptance": "NOT_REQUESTED_OR_GRANTED; CANDIDATE_ONLY",
+  "review_limitations": [
+    "Independent direct visual inspection was limited to pages 14, 16, 18, and 19; remaining pages were checked using packet text and inherited review context."
+  ],
+  "review_record_path": "docs/ttqs-quality-20261016/quality-review/0036_R08/",
+  "artifact_manifest_sha256": "a80f5ebcdeaff106f6de2a2c3dcf3383f299825e3efa12eed5f1f7bbc41069bb",
+  "review_receipt_sha256": "db0d42a15144da3eecd9ce1ddbc9247a1efe2a8e051b0c6944132aa3f868e767",
+  "raw_stdout_sha256": "02b4265e31ea3d7604d4a96bea4ef7a13d1c4c20c7bb48bc0e0b44521b284ee3",
+  "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "prior_dispatch_observation": {
+    "initially_recorded_cli_version": "1.2.17",
+    "initially_recorded_cli_binary_sha256": "6224a54c35d31b9b85232bbfb23e3306002c418481930442519743fab585f65a",
+    "initially_recorded_worker_pid": 9072,
+    "initially_recorded_worker_start_time_taipei": "2026-10-16 23:13:03",
+    "superseded_by": "Completed review receipt R01; preserve these as dispatch-time observations, not final runtime identity."
+  },
+  "outsourcing_failure_policy": {
+    "applies_to": [
+      "Antigravity",
+      "OpenCode"
+    ],
+    "trigger": "Three consecutive errors and three corrective attempts fail to restore normal operation and reporting.",
+    "action": "Pause further outsourcing dispatch through the affected route.",
+    "audit": "Preserve complete errors, fixes, execution and progress records and sync them to this GitHub branch.",
+    "scope": "Pause only the affected outsourcing route; continue independent legal READY work where possible."
+  }
 }
