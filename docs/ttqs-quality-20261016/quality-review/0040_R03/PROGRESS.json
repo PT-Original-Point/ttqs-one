@@ -4,7 +4,7 @@
   "revision": "R03",
   "requirement_id": "I08-E03",
   "official_checkbox_sequence": "040",
-  "status": "CANDIDATE_REMOTE_VERIFIED_INDEPENDENT_SEMANTIC_REVIEW_PENDING",
+  "status": "INDEPENDENT_SEMANTIC_PARTIAL_CANDIDATE_ONLY",
   "candidate_sha256": "c84e200ff11d2e9f46360b4e03b7867e22fb03ac4ec298d022c9d1f3d76ffdf8",
   "register_sha256": "91ec0ab6b0a37fa38293e18bb2121adde75ff6c132d448f6779466217c207b07",
   "register_rows": 39,
@@ -18,15 +18,21 @@
   "page_count": 6,
   "technical_status": "PASS",
   "primary_visual_status": "PASS",
-  "independent_semantic_verdict": "PENDING",
+  "independent_semantic_verdict": "PARTIAL",
   "candidate_state": "CANDIDATE_NOT_PROMOTED",
   "formal_acceptance": "NOT_GRANTED",
   "remote_readback": {
-    "status": "PASS_EXACT_BLOBS_READ_FROM_GITHUB",
-    "verified_branch_head": "72b2d7bb0a8099b6b6f667a09eddd9caea10ea3f",
-    "artifact_manifest_sha256": "5f4e070afabfef4618cc11cd087ac23f24236ea85c99da4a721812da923dea87",
-    "manifest_entries_read_back": 31,
-    "candidate_sha256": "c84e200ff11d2e9f46360b4e03b7867e22fb03ac4ec298d022c9d1f3d76ffdf8",
-    "method": "Fetched the existing GitHub branch and SHA-256 hashed all exact Git blob bytes listed in the manifest, then separately read back the manifest."
-  }
+    "status": "PENDING_AFTER_REVIEW_EVIDENCE_UPDATE",
+    "previous_verified_branch_head": "682edf0ba72503897f7827b194f9c331b49b810a",
+    "previous_manifest_entries_read_back": 31,
+    "previous_candidate_sha256": "c84e200ff11d2e9f46360b4e03b7867e22fb03ac4ec298d022c9d1f3d76ffdf8"
+  },
+  "independent_review_receipt_path": "evidence/qa/0040_semantic_review_r03_exact.json",
+  "independent_review_receipt_sha256": "bcc8b8c9b828ceb1296c312646163daf42f4e73e439df6a597254c832006073e",
+  "raw_independent_review_path": "evidence/qa/0040_semantic_review_r03_crossreview_raw.md",
+  "raw_independent_review_sha256": "418021f7ad554ebf66abb7283712c26dce8f0d527572cb5c77f079d84e5d518b",
+  "independent_review_blockers": [
+    "Blueprint line 40 requires visible current matrix version/revision history and a consolidated audit index to printed content locations.",
+    "34/39 register locators use nonprinted section markers; replace with exact page/table-header/row/column locators."
+  ]
 }
