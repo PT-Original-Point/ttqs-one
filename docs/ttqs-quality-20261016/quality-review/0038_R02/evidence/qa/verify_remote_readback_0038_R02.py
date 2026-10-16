@@ -20,6 +20,14 @@ def sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
+TEXT_SUFFIXES = {".md", ".json", ".jsonl", ".csv", ".py", ".txt", ".ps1"}
+
+
+def canonical_local_bytes(path: Path) -> bytes:
+    data = path.read_bytes()
+    return data.replace(b"\r\n", b"\n") if path.suffix.lower() in TEXT_SUFFIXES else data
+
+
 manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
 remote_head = git("rev-parse", REMOTE_REF).decode().strip()
 local_head = git("rev-parse", "HEAD").decode().strip()
@@ -32,8 +40,10 @@ for artifact in manifest["artifacts"]:
     path = prefix + artifact["path"]
     remote_bytes = git("show", f"{REMOTE_REF}:{path}")
     actual_sha = sha256(remote_bytes)
-    ok = actual_sha == artifact["sha256"] and len(remote_bytes) == artifact["bytes"]
-    checks.append({"path": artifact["path"], "sha256": actual_sha, "bytes": len(remote_bytes), "status": "PASS" if ok else "FAIL"})
+    local_bytes = canonical_local_bytes(PACKAGE / artifact["path"])
+    local_canonical_matches = remote_bytes == local_bytes
+    ok = actual_sha == artifact["sha256"] and len(remote_bytes) == artifact["bytes"] and local_canonical_matches
+    checks.append({"path": artifact["path"], "sha256": actual_sha, "bytes": len(remote_bytes), "local_canonical_matches": local_canonical_matches, "status": "PASS" if ok else "FAIL"})
 
 candidate = next(x for x in checks if x["path"] == "candidate/0038_R02.docx")
 pdf = next(x for x in checks if x["path"] == "evidence/render/0038_R02.pdf")

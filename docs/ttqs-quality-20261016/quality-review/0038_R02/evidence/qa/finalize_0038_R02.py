@@ -23,6 +23,18 @@ def sha256(path: Path) -> str:
     return h.hexdigest()
 
 
+TEXT_SUFFIXES = {".md", ".json", ".jsonl", ".csv", ".py", ".txt", ".ps1"}
+
+
+def canonical_artifact_bytes(path: Path) -> bytes:
+    data = path.read_bytes()
+    return data.replace(b"\r\n", b"\n") if path.suffix.lower() in TEXT_SUFFIXES else data
+
+
+def sha256_bytes(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest()
+
+
 tech = json.loads(TECH_PATH.read_text(encoding="utf-8"))
 notes = json.loads(NOTES_PATH.read_text(encoding="utf-8"))
 docx_sha = sha256(DOCX)
@@ -111,14 +123,16 @@ tracked = [
     EVIDENCE / "assets" / "synthetic_prepost_comparison.png",
     QA / "verify_0038_R02.py", QA / "finalize_0038_R02.py", QA / "record_semantic_review_R02.py", QA / "verify_remote_readback_0038_R02.py",
     TECH_PATH, QA / "visual_review_notes.json", QA / "visual_qa.json", PDF,
+    QA / "remote_readback_attempt_initial.json", QA / "readback_normalization_note.md",
 ]
 if semantic_receipt:
     tracked.extend([semantic_path, QA / "independent_semantic_review_R02.md"])
-readback_path = QA / "remote_readback_R02.json"
-if readback_path.exists():
-    tracked.append(readback_path)
 tracked.extend(images)
-inventory = [{"path": p.relative_to(ROOT).as_posix(), "bytes": p.stat().st_size, "sha256": sha256(p)} for p in tracked if p.is_file()]
+inventory = []
+for p in tracked:
+    if p.is_file():
+        artifact_bytes = canonical_artifact_bytes(p)
+        inventory.append({"path": p.relative_to(ROOT).as_posix(), "bytes": len(artifact_bytes), "sha256": sha256_bytes(artifact_bytes)})
 manifest = {
     "project": "TTQS_ONE", "document_id": "0038", "requirement_id": "I08-E02",
     "official_checkbox_sequence": "039", "candidate": "0038_R02",

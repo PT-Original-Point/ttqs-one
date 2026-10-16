@@ -22,7 +22,8 @@ docx_sha = sha256(DOCX)
 pdf_sha = sha256(PDF)
 if docx_sha != expected_docx or pdf_sha != expected_pdf:
     raise SystemExit(f"exact-SHA mismatch: DOCX={docx_sha}; PDF={pdf_sha}")
-raw_sha = sha256(RAW)
+raw_bytes = RAW.read_bytes().replace(b"\r\n", b"\n")
+raw_sha = hashlib.sha256(raw_bytes).hexdigest()
 raw_text = RAW.read_text(encoding="utf-8")
 if expected_docx not in raw_text or expected_pdf not in raw_text or "整體語意判定：PASS" not in raw_text:
     raise SystemExit("raw reviewer record does not bind both artifact SHAs and PASS")
