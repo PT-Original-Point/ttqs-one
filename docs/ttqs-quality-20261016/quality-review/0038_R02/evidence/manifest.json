@@ -10,31 +10,16 @@
   "visual_qa": "PASS",
   "independent_semantic_review": "PASS",
   "formal_acceptance": "NOT_GRANTED",
-  "remote_readback": {
-    "status": "PASS_EXACT_READBACK",
-    "github_path": "docs/ttqs-quality-20261016/quality-review/0038_R02/",
-    "verified_readback": true,
-    "verified_commit": "203c7e17ba0d51bb3ca44ed3c07b206ac56bd752",
-    "manifest_sha256": "efb42b8b6415c5a55fe410a2a02510349a7239d20d4fb4627ec121cefe3cd6bf",
-    "candidate_sha256": "bdb6ef07c1aacd31f638cdad511012777d2f1b9d2c9f5f307252dd62de0170a4",
-    "pdf_sha256": "f549d34db5d841dc04b61df3ce217a7ad1e2e5ee97d5f53106896ad3f5776012",
-    "artifact_count": 37,
-    "verified_artifact_count": 37,
-    "readback_receipt": "evidence/qa/remote_readback_R02.json",
-    "readback_receipt_sha256": "86305550bd4978ce40a7c6c2500d2a355b7eb5ed865e1dce6a7bd16f41597f63",
-    "verified_at": "2026-10-17T03:58:19.3151444+08:00",
-    "method": "Fresh git fetch from GitHub followed by git-show readback of each manifested remote blob and local SHA-256/byte-length comparison"
-  },
+  "self_reference_excluded": [
+    "PROGRESS.json",
+    "evidence/manifest.json",
+    "evidence/qa/remote_readback_R02.json"
+  ],
   "artifacts": [
     {
       "path": "README.md",
       "bytes": 1040,
       "sha256": "677e61cc00364a37ba3d6e6a3d0a0df73dafee0968896635571884ef23a048b0"
-    },
-    {
-      "path": "PROGRESS.json",
-      "bytes": 3823,
-      "sha256": "9bcce1e8e40f6712e00d24d7d0bd3c7cc1500502cc3e6b56556f236af0920a12"
     },
     {
       "path": "candidate/0038_R02.docx",
@@ -88,8 +73,8 @@
     },
     {
       "path": "evidence/qa/finalize_0038_R02.py",
-      "bytes": 7548,
-      "sha256": "f2cbb3c17702d3f95f1744c66407557112de4270aec4d00bdc2560afb3f04c7a"
+      "bytes": 7629,
+      "sha256": "30550538e4cdbe62e82a01123de45c2243cf02cd29fa5e72dd05d13e0bde837f"
     },
     {
       "path": "evidence/qa/record_semantic_review_R02.py",
@@ -98,8 +83,8 @@
     },
     {
       "path": "evidence/qa/verify_remote_readback_0038_R02.py",
-      "bytes": 2928,
-      "sha256": "d00270cbc24bf057565520514f1bc9485ab7ba846eea3f50f1b2fc8ee53d5c2d"
+      "bytes": 4465,
+      "sha256": "1a3383c0d77cc3dd2cd2dfa91622203d7ab4a91ed7e1ad585cba0287dc68fdbf"
     },
     {
       "path": "evidence/qa/technical_qa.json",

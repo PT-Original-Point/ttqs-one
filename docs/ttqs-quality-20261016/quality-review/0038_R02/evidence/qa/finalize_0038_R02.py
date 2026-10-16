@@ -114,7 +114,7 @@ R02依R01獨立審查的兩項 PARTIAL 發現補入24筆逐列執行追溯，以
 (ROOT / "README.md").write_text(readme, encoding="utf-8")
 
 tracked = [
-    ROOT / "README.md", progress_path, DOCX,
+    ROOT / "README.md", DOCX,
     EVIDENCE / "SYNTHETIC_REPLACEMENT_REGISTER.csv",
     EVIDENCE / "build" / "build_0038_R02.py",
     ROOT / "inputs" / "official-2.png", ROOT / "inputs" / "official-3.png",
@@ -139,7 +139,11 @@ manifest = {
     "candidate_sha256": docx_sha, "pdf_sha256": pdf_sha,
     "technical_qa": tech["status"], "visual_qa": visual_status,
     "independent_semantic_review": semantic_status, "formal_acceptance": "NOT_GRANTED",
-    "remote_readback": progress.get("remote", {}),
+    "self_reference_excluded": [
+        "PROGRESS.json",
+        "evidence/manifest.json",
+        "evidence/qa/remote_readback_R02.json",
+    ],
     "artifacts": inventory,
 }
 (EVIDENCE / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

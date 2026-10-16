@@ -3,6 +3,7 @@ from __future__ import annotations
 import hashlib
 import json
 import subprocess
+from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[6]
@@ -10,6 +11,8 @@ PACKAGE = Path(__file__).resolve().parents[2]
 BRANCH = "work/ttqs-one-document-quality-contract-20261016"
 REMOTE_REF = f"refs/remotes/origin/{BRANCH}"
 MANIFEST = PACKAGE / "evidence" / "manifest.json"
+PROGRESS = PACKAGE / "PROGRESS.json"
+READBACK_REL = "docs/ttqs-quality-20261016/quality-review/0038_R02/evidence/qa/remote_readback_R02.json"
 
 
 def git(*args: str) -> bytes:
@@ -33,6 +36,11 @@ remote_head = git("rev-parse", REMOTE_REF).decode().strip()
 local_head = git("rev-parse", "HEAD").decode().strip()
 if remote_head != local_head:
     raise SystemExit(f"branch readback is not current: local={local_head}; remote={remote_head}")
+manifest_rel = MANIFEST.relative_to(ROOT).as_posix()
+remote_manifest = git("show", f"{REMOTE_REF}:{manifest_rel}")
+if remote_manifest != canonical_local_bytes(MANIFEST):
+    raise SystemExit("remote manifest bytes do not match the canonical local manifest")
+manifest_sha = sha256(remote_manifest)
 
 checks = []
 prefix = "docs/ttqs-quality-20261016/quality-review/0038_R02/"
@@ -55,7 +63,8 @@ result = {
     "branch": BRANCH,
     "remote_commit": remote_head,
     "local_commit": local_head,
-    "manifest_sha256": sha256(MANIFEST.read_bytes()),
+    "manifest_path": manifest_rel,
+    "manifest_sha256": manifest_sha,
     "candidate_sha256": candidate["sha256"],
     "pdf_sha256": pdf["sha256"],
     "artifact_count": len(checks),
@@ -66,4 +75,24 @@ result = {
 }
 out = PACKAGE / "evidence" / "qa" / "remote_readback_R02.json"
 out.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+receipt_sha = sha256(canonical_local_bytes(out))
+progress = json.loads(PROGRESS.read_text(encoding="utf-8"))
+progress["remote"] = {
+    "status": "PASS_EXACT_READBACK" if ok else "FAIL_EXACT_READBACK",
+    "github_path": "docs/ttqs-quality-20261016/quality-review/0038_R02/",
+    "verified_readback": ok,
+    "verified_commit": remote_head,
+    "manifest_sha256": manifest_sha,
+    "candidate_sha256": candidate["sha256"],
+    "pdf_sha256": pdf["sha256"],
+    "artifact_count": len(checks),
+    "verified_artifact_count": sum(x["status"] == "PASS" for x in checks),
+    "readback_receipt": "evidence/qa/remote_readback_R02.json",
+    "readback_receipt_sha256": receipt_sha,
+    "verified_at": datetime.now().astimezone().isoformat(timespec="seconds"),
+    "method": "Fresh GitHub branch fetch; canonical manifest verification; exact remote Git blob SHA-256 and byte-length comparison for every manifested artifact",
+}
+PROGRESS.write_text(json.dumps(progress, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 print(json.dumps({k: result[k] for k in ("remote_commit", "manifest_sha256", "candidate_sha256", "pdf_sha256", "artifact_count", "verified_artifact_count", "status")}, ensure_ascii=False))
+if not ok:
+    raise SystemExit(1)
