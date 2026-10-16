@@ -4,7 +4,7 @@
   "revision": "R03",
   "requirement_id": "I08-E03",
   "official_checkbox_sequence": "040",
-  "status": "CANDIDATE_TECHNICAL_PASS_PRIMARY_VISUAL_PASS_INDEPENDENT_SEMANTIC_REVIEW_PENDING",
+  "status": "CANDIDATE_REMOTE_VERIFIED_INDEPENDENT_SEMANTIC_REVIEW_PENDING",
   "candidate_sha256": "c84e200ff11d2e9f46360b4e03b7867e22fb03ac4ec298d022c9d1f3d76ffdf8",
   "register_sha256": "91ec0ab6b0a37fa38293e18bb2121adde75ff6c132d448f6779466217c207b07",
   "register_rows": 39,
@@ -22,10 +22,11 @@
   "candidate_state": "CANDIDATE_NOT_PROMOTED",
   "formal_acceptance": "NOT_GRANTED",
   "remote_readback": {
-    "status": "PENDING",
-    "verified_branch_head": null,
-    "artifact_manifest_sha256": null,
-    "manifest_entries_read_back": 0,
-    "candidate_sha256": null
+    "status": "PASS_EXACT_BLOBS_READ_FROM_GITHUB",
+    "verified_branch_head": "72b2d7bb0a8099b6b6f667a09eddd9caea10ea3f",
+    "artifact_manifest_sha256": "5f4e070afabfef4618cc11cd087ac23f24236ea85c99da4a721812da923dea87",
+    "manifest_entries_read_back": 31,
+    "candidate_sha256": "c84e200ff11d2e9f46360b4e03b7867e22fb03ac4ec298d022c9d1f3d76ffdf8",
+    "method": "Fetched the existing GitHub branch and SHA-256 hashed all exact Git blob bytes listed in the manifest, then separately read back the manifest."
   }
 }
