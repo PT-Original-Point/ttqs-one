@@ -38,3 +38,10 @@ artifact_manifest.json records SHA-256 and byte size for every bundled file othe
 ## Outsourcing failure stop rule
 
 For Antigravity or OpenCode outsourcing, if there are three consecutive errors and three corrective attempts still fail to restore normal execution and reporting, pause further dispatch through that affected outsourcing route. Preserve the complete error, correction, execution, and progress record and sync it to the project GitHub branch for external audit. Continue independent legal READY work on other lanes when possible. Do not create another scheduler or control platform.
+## Supplemental full-page visual inspection R02
+
+A separate direct visual pass inspected all 19 page images rendered from the unchanged R08 DOCX SHA e2d4b3f5e906faaf3d473c7351bd79618a78dcf2c8f91a32a4e952d005ac5eae. All pages were legible without observed clipping, overflow, or broken table layout. The page-5 flowchart has a substantive flow-clarity finding: two NO branches lack return arrows to the source-verification and course-matrix steps. This does not change the historical R01 semantic review record; the R08 supplemental overall result is PARTIAL. The finding is repaired in the separate R12 candidate (DOCX SHA e2be3928f96d45bdee6d18762b169c92e7817d10d0c0f87e4854bd16756febbb). R08 remains unchanged and CANDIDATE ONLY.
+
+The R02 JSON receipt binds the exact DOCX and Word-export PDF SHAs, lists the 19 directly inspected page-image SHAs, and records page-specific observations. All 19 page images are included in evidence/render/full_page_supplement/.
+
+Source audit linkage: this supplemental action applies external audit finding F-01 from docs/ttqs-quality-20261016/06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md (source commit 92d3d97acbd3c0a8c4dcad66e66468f5cafc3536, live branch blob 70449889fd464106fe204496004bee13018d4a51). The current Human instruction authorizes the reversible review and evidence sync; the audit file itself is treated as evidence, not independent authority.
