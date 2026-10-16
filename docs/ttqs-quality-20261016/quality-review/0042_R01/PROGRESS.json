@@ -8,9 +8,9 @@
   "candidate_state": "CANDIDATE_NOT_PROMOTED",
   "genre": "execution_record",
   "sample_scope": "SAMPLE_SYNTHETIC_ONLY",
-  "technical_status": "PASS",
-  "layout_status": "PASS_INTERNAL_ALL_14_PAGES_POST_REPAIR",
-  "independent_semantic_review": "PENDING_INDEPENDENT_EXACT_SHA_REVIEW",
+  "technical_status": "PARTIAL_WITH_COURSE_TIME_ARITHMETIC_DEFECT",
+  "layout_status": "PASS_INTERNAL_ALL_14_PAGES",
+  "independent_semantic_review": "FAIL_REPAIR_REQUIRED",
   "formal_acceptance": "NOT_GRANTED",
   "source_head": "53cc30ed628c58206cddf71a516914a77ac52f8e",
   "source_index_sha256": "e64535aa6c58ee9b6e2689670dedc89269bbf036dd453ddde31bec3d1b9c841d",
@@ -30,5 +30,15 @@
   },
   "visual_receipt_sha256": "67d52dd1050ab3b0cdfcda7962aa16a1eb8c8efe1c90c3f20c65d9d71241e70f",
   "reviewer_dispatch_attempt": "evidence/reviewer_dispatch_attempt_R01.json",
-  "reviewer_route_status": "Antigravity CLI yielded no review under sandbox restrictions; broad sandbox bypass was declined; an existing independent reviewer task was assigned the exact-SHA review."
+  "reviewer_route_status": "Antigravity CLI yielded no review under sandbox restrictions; broad sandbox bypass was declined; an existing independent reviewer task was assigned the exact-SHA review.",
+  "independent_review": {
+    "path": "review/independent_semantic_visual_review_R01.md",
+    "sha256": "8951eaa096100093637b142646cc984326674d54b07503262b62ab35b1d65b8e",
+    "exact_candidate_sha256": "e6f74140e5dfa01464ec5e4dc66d8817b06a7b878ccdaba704c49da213a0df17",
+    "overall": "FAIL",
+    "course_time": "T13 displays duplicate 10-minute break; displayed sum 250, claimed 240",
+    "synthetic_batch": "PARTIAL; no event date/id/mode and P04/P06/P07 modeled-response status ambiguous",
+    "replacement_register": "PARTIAL; no separately traceable corrected break/subtotal/total",
+    "visual": "PASS on 14 supplied pages; typography PARTIAL for 9.5pt non-table captions"
+  }
 }

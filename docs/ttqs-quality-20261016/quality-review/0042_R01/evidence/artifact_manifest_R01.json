@@ -4,13 +4,9 @@
   "revision": "R01",
   "requirement_id": "I09-E02",
   "official_checkbox_sequence": "043",
-  "candidate_sha256": "e6f74140e5dfa01464ec5e4dc66d8817b06a7b878ccdaba704c49da213a0df17",
-  "candidate_state": "CANDIDATE_NOT_PROMOTED",
-  "formal_acceptance": "NOT_GRANTED",
-  "independent_semantic_review": "PENDING_INDEPENDENT_EXACT_SHA_REVIEW",
-  "file_count": 35,
-  "hash_basis": "Git index blob bytes; hashes match remote Git blobs including normalized text line endings.",
-  "files": [
+  "manifest_hash_basis": "SHA-256 of staged Git blob bytes; excludes this manifest to avoid recursion",
+  "artifact_count": 36,
+  "artifacts": [
     {
       "path": ".gitignore",
       "bytes": 19,
@@ -18,13 +14,13 @@
     },
     {
       "path": "PROGRESS.json",
-      "bytes": 1909,
-      "sha256": "fd7e5c02099dc2433a7512122987c2d5fae3289412d85576a67fed5af3266b58"
+      "bytes": 2603,
+      "sha256": "46df61558bf17f4b0bbab5f68f0a816542dfeb74f549b50f1d3dac2738165172"
     },
     {
       "path": "README.md",
-      "bytes": 1480,
-      "sha256": "ccb2b761a4de3bc673bf1d60cd5ff96ae70939bd43c5f3ff8ada8557b2dd4f87"
+      "bytes": 1039,
+      "sha256": "2b577603a9bf42e996df28b12073dedb31df2c99d954f4554af00e3babb01a60"
     },
     {
       "path": "build/build_0042_R01.py",
@@ -133,13 +129,13 @@
     },
     {
       "path": "evidence/technical_integrity_receipt_R01.json",
-      "bytes": 2263,
-      "sha256": "2da8a1a413c268809bd39f272f57424001600090f4415ac6ae542ac0adcea3f4"
+      "bytes": 2967,
+      "sha256": "a77949f54becc5af63b03dc7e8cc7b607653ad93536af44e70344ade95e91f73"
     },
     {
       "path": "evidence/visual_layout_receipt_R01.json",
-      "bytes": 4140,
-      "sha256": "4437c7bb92cd03332f110afea751241fa1337cd023fb917e56a7c7fd26e59323"
+      "bytes": 4505,
+      "sha256": "e7604467d8480d149525ef56fd365b13740e7b629c7117c792889c86a0dd7acd"
     },
     {
       "path": "inputs/crosswalk_row_I09-E02.csv",
@@ -185,11 +181,11 @@
       "path": "review/antigravity_exact_sha_prompt_R01.md",
       "bytes": 4367,
       "sha256": "30f1901c4eb4aad7eeceb579692c16c93c33606ad2e11a965511c5a92048dae1"
+    },
+    {
+      "path": "review/independent_semantic_visual_review_R01.md",
+      "bytes": 16864,
+      "sha256": "8951eaa096100093637b142646cc984326674d54b07503262b62ab35b1d65b8e"
     }
-  ],
-  "excluded_patterns": [
-    "build/__pycache__/**",
-    "this manifest itself"
-  ],
-  "created_at_utc": "2026-10-16T21:46:27.014276+00:00"
+  ]
 }

@@ -1,0 +1,47 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0042",
+  "revision": "R02",
+  "requirement_id": "I09-E02",
+  "official_checkbox_sequence": "043",
+  "candidate_sha256": "dd59253da82e8bb9a7129cfee174f28f23695e843f3bb303b16c0fb56378cf45",
+  "candidate_state": "CANDIDATE_NOT_PROMOTED",
+  "genre": "execution_record",
+  "sample_scope": "SAMPLE_SYNTHETIC_ONLY",
+  "technical_status": "PASS",
+  "layout_status": "PASS_INTERNAL_ALL_14_PAGES",
+  "independent_semantic_review": "PENDING_INDEPENDENT_EXACT_SHA_R02",
+  "formal_acceptance": "NOT_GRANTED",
+  "source_head": "53b54e1cfafbc1f2fe7e99894629a7cc39d937ce",
+  "source_index_sha256": "b585798a694cabfaa2556c0a34aac846c15a5491e8c04deece61b09d5e217d77",
+  "replacement_register_sha256": "d76ecd44dabe5b17ebd33ecd84839d5cc89d293bbd445f76c4c4fa2a8113e05a",
+  "replacement_register_rows": 275,
+  "remote_readback": "PENDING",
+  "notes": [
+    "Freshly authored from official page 3, current unique Blueprint row and 129-to-142 crosswalk.",
+    "No historical DOCX body was used as a writing template.",
+    "No real association approval, attendance, participant, email, signature or training fact is asserted."
+  ],
+  "visual_receipt_sha256": "cb6aa72940b21a52cd3132b491a3ed685053e7d1c12ecf1dc09af1c7b8b0a928",
+  "prior_revision": {
+    "revision": "R01",
+    "candidate_sha256": "e6f74140e5dfa01464ec5e4dc66d8817b06a7b878ccdaba704c49da213a0df17",
+    "review": "FAIL_REPAIR_REQUIRED",
+    "review_path": "../0042_R01/review/independent_semantic_visual_review_R01.md",
+    "review_sha256": "8951eaa096100093637b142646cc984326674d54b07503262b62ab35b1d65b8e",
+    "preserved_unchanged": true
+  },
+  "repair_summary": [
+    "R01 T13 duplicate break removed: each version now has 230 teaching/assessment minutes + one 10-minute break = 240 minutes.",
+    "Register separately identifies each unit, subtotal, single break, and derived total for both versions.",
+    "Added synthetic event ID SYN-MTG-0042-A01, date 2026-09-09, time, and explicitly unheld online scenario; linked to modeled attendance rows and source index.",
+    "Clarified all ten batch states are hypothetical; P04/P06/P07 are model-only hypothetical replies with no underlying send/receive/call/form artifacts.",
+    "Raised non-table table-caption labels to 10.5 pt."
+  ],
+  "reviewer_route": {
+    "existing_reviewer_agent": "01a1459f-3387-7a52-9608-fa07d7262c24",
+    "review_request": "review/independent_review_request_R02.md",
+    "status": "DISPATCHED_PENDING",
+    "antigravity_cli": "Earlier headless permission prompt could not be safely granted; no Computer Use and no broad sandbox bypass."
+  }
+}

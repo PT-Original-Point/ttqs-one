@@ -33,10 +33,12 @@
       "course_v02_instruction_minutes": 230,
       "course_v03_instruction_minutes": 230,
       "rubric_max": 8,
-      "sample_score": 6
+      "sample_score": 6,
+      "course_v02_components_equal_total": false,
+      "course_v03_components_equal_total": false
     }
   },
-  "status": "PASS_TECHNICAL; CANDIDATE_PENDING_INDEPENDENT_REVIEW",
+  "status": "FAIL_INDEPENDENT_REVIEW_DEFECT_RECORDED; R01_CANDIDATE_PRESERVED",
   "formal_acceptance": "NOT_GRANTED",
   "created_at_utc": "2026-10-16T21:30:37.607095+00:00",
   "layout_repair": {
@@ -50,5 +52,14 @@
     "status": "PASS_INTERNAL_ALL_14_PAGES",
     "visual_receipt_sha256": "67d52dd1050ab3b0cdfcda7962aa16a1eb8c8efe1c90c3f20c65d9d71241e70f",
     "pdf_sha256": "ac84440d69962175c08aae99865c9000cad695909292a9c951f2a54cc25c60b2"
+  },
+  "review_correction": {
+    "status": "INDEPENDENT_REVIEW_FOUND_MATERIAL_ARITHMETIC_DEFECT",
+    "review_path": "review/independent_semantic_visual_review_R01.md",
+    "review_sha256": "8951eaa096100093637b142646cc984326674d54b07503262b62ab35b1d65b8e",
+    "candidate_sha256_unchanged": "e6f74140e5dfa01464ec5e4dc66d8817b06a7b878ccdaba704c49da213a0df17",
+    "course_table_T13_displayed_sum_minutes": 250,
+    "course_table_T13_claimed_total_minutes": 240,
+    "required_repair": "Retain only one 10-minute break per version; separately register unit, subtotal, break and total facts."
   }
 }
