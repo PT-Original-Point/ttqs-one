@@ -20,6 +20,14 @@
   "candidate_disposition": "CANDIDATE_ONLY_NOT_PROMOTED",
   "formal_acceptance": "NOT_GRANTED",
   "finding_fixed": "R08 page 13 rubric item 8 was stranded without column headings; R09 places it below a visible four-column continuation heading.",
-  "remote_readback": "PENDING_FINAL_READBACK_AFTER_MANIFEST_EOL_CORRECTION",
+  "remote_readback": {
+    "status": "PASS",
+    "verified_branch_head": "38080e5a22ac2d73016a5d8fe972daa027178a71",
+    "artifact_manifest_sha256": "9c1b5c1aab4bf40239945ac368f26b0d72726ba23a2e7f12fc921419a7dd97b3",
+    "manifest_entries_read_back": 34,
+    "candidate_sha256": "91d749d00b153227bb3db67a60c552c0e17fa2b5364c799dee7de6bf69117815",
+    "render_pdf_sha256": "b68da17dd6fae66eb05db8c2c8a6d91bc44abb53487d34880975533a2639b677",
+    "method": "Fetched branch and hashed each GitHub blob with git show; all 34 manifest entries matched."
+  },
   "artifact_manifest_sha256": "9c1b5c1aab4bf40239945ac368f26b0d72726ba23a2e7f12fc921419a7dd97b3"
 }
