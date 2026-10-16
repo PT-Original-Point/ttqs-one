@@ -15,7 +15,7 @@
   "cli_binary_sha256": "f5466e6aaf9f1345cae476fecb9aebb9e82c2ca8dfd43136fa9747fcf075e062",
   "local_worker_pid": null,
   "worker_start_time_taipei": "2026-10-16 23:13:03",
-  "latest_branch_head_observed": "37025b24c62b9d984fcec2862cd54f74a8954699",
+  "latest_branch_head_observed": "1837e42e2c847fd5e64c67208ff871628207ea5e",
   "last_result": "SUPPLEMENTAL_VISUAL_REVIEW_PARTIAL_PAGE5_FLOW_FINDING",
   "notes": [
     "Independent semantic review R01 returned PASS for the exact candidate SHA; this is not promotion or formal acceptance.",
@@ -79,15 +79,15 @@
     "current_repair_candidate_sha256": "e2be3928f96d45bdee6d18762b169c92e7817d10d0c0f87e4854bd16756febbb"
   },
   "remote_readback": {
-    "status": "PENDING",
+    "status": "PASS_EXACT_BLOBS_READ_FROM_GITHUB",
     "candidate_sha256": "e2d4b3f5e906faaf3d473c7351bd79618a78dcf2c8f91a32a4e952d005ac5eae",
     "receipt_sha256": "ec4295706bdfb55d88fd650c047dda42b3b91ee2a2b77e1223273e0f902e1f74",
     "manifest_sha256": "5ccf1d7914dcea6725587df3a2647813bc348b2889f7302e68ca057d1b97e354",
     "expected_remote_branch": "work/ttqs-one-document-quality-contract-20261016",
-    "remote_commit": "37025b24c62b9d984fcec2862cd54f74a8954699",
-    "readback_method": "git fetch origin branch then read FETCH_HEAD blobs with git show and independently recompute SHA-256 and bytes",
+    "remote_commit": "1837e42e2c847fd5e64c67208ff871628207ea5e",
+    "readback_method": "git fetch origin branch then independently recompute SHA-256 and byte length for each GitHub FETCH_HEAD blob",
     "artifact_count_verified": 48,
-    "verified_at": "2026-10-17T01:24:09.361+08:00"
+    "verified_at": "2026-10-17T01:26:53.330+08:00"
   },
   "supplemental_visual_receipt_sha256": "94e685d7c51d5002e40d990e8b39043d09d9114ea4395731062fe8c778334807",
   "supplemental_visual_receipt_path": "review/visual_supplement_R02.json",
@@ -110,12 +110,12 @@
     "evidence_sha256": "28a91547ac7f727583ca0ba81e7d77a3c11b307cbbea3acb34165834568d69a1",
     "candidate_sha256": "e2d4b3f5e906faaf3d473c7351bd79618a78dcf2c8f91a32a4e952d005ac5eae",
     "remote_sync_required": true,
-    "verified_at": "2026-10-17T01:24:09.361+08:00",
-    "verified_commit": "37025b24c62b9d984fcec2862cd54f74a8954699",
-    "verified_manifest_sha256": "1085bb7da838495b11faf73d418f8fa31515b6a8926b3e0d86482d1531a50f85",
-    "verified_receipt_sha256": "28a91547ac7f727583ca0ba81e7d77a3c11b307cbbea3acb34165834568d69a1",
     "source_pr_comment_id": 6219331992,
     "source_pr_comment_author_login": "t14210184",
-    "verified": "PENDING_UPDATED_RECEIPT_REMOTE_READBACK"
+    "verified": "PASS_REMOTE_READBACK_48_OF_48_ARTIFACT_BLOBS",
+    "verified_at": "2026-10-17T01:26:53.330+08:00",
+    "verified_commit": "1837e42e2c847fd5e64c67208ff871628207ea5e",
+    "verified_manifest_sha256": "5ccf1d7914dcea6725587df3a2647813bc348b2889f7302e68ca057d1b97e354",
+    "verified_receipt_sha256": "ec4295706bdfb55d88fd650c047dda42b3b91ee2a2b77e1223273e0f902e1f74"
   }
 }
