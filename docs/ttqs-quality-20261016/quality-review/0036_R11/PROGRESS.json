@@ -28,7 +28,15 @@
   },
   "candidate_disposition": "CANDIDATE_ONLY_NOT_PROMOTED",
   "formal_acceptance": "NOT_GRANTED",
-  "remote_readback": "PENDING_AFTER_CANDIDATE_SYNC",
-  "artifact_manifest_sha256": "353470c843aa5965dee3de06880c2c69b554156e6703e4691ef7dc2a88ad95e1",
+  "remote_readback": {
+    "status": "PASS",
+    "verified_commit": "6a30c901b32418c7a5766f9f46356d10878144db",
+    "manifest_file_count": 36,
+    "manifest_mismatch_count": 0,
+    "candidate_sha256": "1e08913a7e330fcbd52f50645138f97b8c951022ef69bc5bd1ee3d2971c9a7c7",
+    "pdf_sha256": "1a5f67f3858b764999cba87193106c76f47c01f533dd36fafec3bbf0c8e9ad42",
+    "readback_source": "git fetch + exact blob readback from FETCH_HEAD"
+  },
+  "artifact_manifest_sha256": "18add51383f4a69cafcf8d30a44020f226fc74ba60d924955b4f0fa9c0de2c8d",
   "artifact_file_count": 36
 }
