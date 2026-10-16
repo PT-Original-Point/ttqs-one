@@ -2,7 +2,7 @@
   "project_id": "TTQS_ONE",
   "bundle": "0040_R06",
   "manifest_scope": "All R06 files except top-level artifact_manifest.json and mutable PROGRESS.json.",
-  "hash_method": "SHA-256 over exact file bytes and Git blobs; no real or protected source records are included.",
+  "hash_method": "SHA-256 exact bytes; Git blob IDs independently read from GitHub after push.",
   "files": [
     {
       "path": ".gitattributes",
@@ -16,13 +16,13 @@
     },
     {
       "path": "build/repair_r06_register_locators.py",
-      "bytes": 4993,
-      "sha256": "ec84569b7110776d4ba2a3a2e9125ba9e4916fa1a6e58775e92f25b40b2fda94"
+      "bytes": 5108,
+      "sha256": "c587e6c1e777ed088c77ff72b9ca5c29e983327968ff16a3f3c506ad9410e2ae"
     },
     {
       "path": "build/verify_0040_r06.py",
-      "bytes": 8700,
-      "sha256": "208c79ea60f12dd88bf91719d6fa23fcd0d1134970bda72b2255d28e15f3bb24"
+      "bytes": 8784,
+      "sha256": "5273d494dcd82eb73004924227c2a7a81d83bc4221d71c44a9a8dcf64e05aad5"
     },
     {
       "path": "build/write_0040_r06_receipts.py",
@@ -45,19 +45,39 @@
       "sha256": "62d970b0a2910094319ae3a3359d33add1ce7664696637106a5bd4b91158aaa2"
     },
     {
+      "path": "evidence/prior/0040_technical_review_r06_R01.json",
+      "bytes": 4683,
+      "sha256": "0b54517a969c4bda28538fd68b73af8e7701fe4e2fc60aea72f1907b801fe0e7"
+    },
+    {
       "path": "evidence/prior/SYNTHETIC_REPLACEMENT_REGISTER_R05.csv",
       "bytes": 23221,
       "sha256": "35cdb226aa14f8b36304ed5d22031e3ccd5f1c77d98851e968f8ca64ee0e1788"
     },
     {
+      "path": "evidence/prior/SYNTHETIC_REPLACEMENT_REGISTER_R06_R01_REVIEWED.csv",
+      "bytes": 22455,
+      "sha256": "35ffc7df10bd5af3b71d18123d69e94a90462182e2ec128e36fae678460a0e72"
+    },
+    {
       "path": "evidence/qa/0040_R06_provenance.json",
-      "bytes": 3237,
-      "sha256": "1c1a1e43bc1c7adace6b7403ac40b038f60a4e7c35d5e78a0d7629d0f25c66f7"
+      "bytes": 3741,
+      "sha256": "5126094fdf6450d4059e73ddbd87ea4f82abde4962863bdac68de9ccf57f3b38"
+    },
+    {
+      "path": "evidence/qa/0040_semantic_review_r06_crossreview_raw.md",
+      "bytes": 10172,
+      "sha256": "21267c10f5f09230f220faae72a5e4eb62245a78c6ff34a96167a6ed4aa4e917"
+    },
+    {
+      "path": "evidence/qa/0040_semantic_review_r06_r01_exact.json",
+      "bytes": 3822,
+      "sha256": "8f9ee7963ca856e8d240a1b0b6ff2bc430c0f27758f686b630c764f12e822708"
     },
     {
       "path": "evidence/qa/0040_technical_review_r06_exact.json",
-      "bytes": 4683,
-      "sha256": "0b54517a969c4bda28538fd68b73af8e7701fe4e2fc60aea72f1907b801fe0e7"
+      "bytes": 4697,
+      "sha256": "c38a33509eb643b76ec7e141e1d6052edbe75574c2fb8381238ed7c1397a3b0a"
     },
     {
       "path": "evidence/qa/0040_visual_review_r06_primary.json",
@@ -121,8 +141,8 @@
     },
     {
       "path": "evidence/SYNTHETIC_REPLACEMENT_REGISTER_R06.csv",
-      "bytes": 22455,
-      "sha256": "35ffc7df10bd5af3b71d18123d69e94a90462182e2ec128e36fae678460a0e72"
+      "bytes": 22570,
+      "sha256": "a75092ac268bc4d0e37bf677f2b3ea6e7cf8be808a5bed1cb52e39e1cb0eaa2d"
     },
     {
       "path": "inputs/inputs/CURRENT_STATE_reviewer_route.json",
@@ -151,8 +171,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2122,
-      "sha256": "cdb36cd9184cafd02e440d86d2a73effb4ce8c8469ae4afae234cccb9f529db2"
+      "bytes": 2196,
+      "sha256": "0d039b68489db150f0329ed4cebadf1bb275c39df2e45838063a00dd115a2d09"
     }
   ]
 }

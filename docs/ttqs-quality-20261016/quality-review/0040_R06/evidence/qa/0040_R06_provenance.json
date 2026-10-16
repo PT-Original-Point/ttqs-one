@@ -11,11 +11,11 @@
   "official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
   "blueprint_row_sha256": "ab080a2e6d85cc13a706f0c10bda7c208ddc191a1fea20a670fd5a174ab14943",
   "source_map_sha256": "405b987797d1558ecac182cea8e1adfbd1aead7754c880db32db43c235d5024e",
-  "synthetic_register_sha256": "35ffc7df10bd5af3b71d18123d69e94a90462182e2ec128e36fae678460a0e72",
+  "synthetic_register_sha256": "a75092ac268bc4d0e37bf677f2b3ea6e7cf8be808a5bed1cb52e39e1cb0eaa2d",
   "synthetic_register_rows": 40,
   "rendered_pdf_sha256": "76d1239f37b87c78388f94a7cd7282062424dbd4dffe7ba5ce8d8f773539edc7",
   "page_count": 9,
-  "technical_receipt_sha256": "0b54517a969c4bda28538fd68b73af8e7701fe4e2fc60aea72f1907b801fe0e7",
+  "technical_receipt_sha256": "c38a33509eb643b76ec7e141e1d6052edbe75574c2fb8381238ed7c1397a3b0a",
   "visual_receipt_sha256": "56cd1b98c7049f9fdac924fc428bfee987983d07881e7d35802def7ec5915184",
   "repair_scope": [
     "R05-F01: added a synthetic-only evidence index and explicit controlled file ID, attachment/page and version fields to each K1-K4 matrix row and the filled D04 form.",
@@ -34,9 +34,14 @@
   "renderer": "Microsoft Word COM ExportAsFixedFormat plus bundled Poppler pdftoppm at 140 dpi; render_docx.py could not use the canonical LibreOffice route because soffice.exe is unavailable.",
   "technical_status": "PASS_TECHNICAL",
   "primary_visual_status": "PASS",
-  "independent_semantic_verdict": "PENDING",
+  "independent_semantic_verdict": "PENDING_R02_TARGETED_REGISTER_RECHECK",
   "independent_semantic_review_route": "Separate read-only cross-review agent, to be bound to the exact R06 SHA after GitHub readback.",
   "sample_state": "SAMPLE_SYNTHETIC_ONLY; SYN-EV-0039-01 is a synthetic index and no external original is attached.",
   "candidate_state": "CANDIDATE_NOT_PROMOTED",
-  "formal_acceptance": "NOT_GRANTED"
+  "formal_acceptance": "NOT_GRANTED",
+  "previous_semantic_review_verdict": "PARTIAL",
+  "previous_semantic_review_sha256": "21267c10f5f09230f220faae72a5e4eb62245a78c6ff34a96167a6ed4aa4e917",
+  "previous_semantic_review_register_sha256": "35ffc7df10bd5af3b71d18123d69e94a90462182e2ec128e36fae678460a0e72",
+  "current_register_sha256": "a75092ac268bc4d0e37bf677f2b3ea6e7cf8be808a5bed1cb52e39e1cb0eaa2d",
+  "register_locator_repair": "Three R01 findings repaired in register only; candidate DOCX unchanged."
 }

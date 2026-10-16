@@ -4,36 +4,67 @@
   "revision": "R06",
   "requirement_id": "I08-E03",
   "official_checkbox_sequence": "040",
-  "status": "CANDIDATE_TECHNICAL_AND_PRIMARY_VISUAL_PASS_PENDING_INDEPENDENT_SEMANTIC_REVIEW",
+  "status": "CANDIDATE_TECHNICAL_AND_PRIMARY_VISUAL_PASS_PENDING_TARGETED_R02_REGISTER_RECHECK",
   "candidate_path": "candidate/0040_R06.docx",
   "candidate_sha256": "115caf94165263040b27dbea5a2c83e02f94253d361e16784da398cefd3562d7",
-  "parent_candidate_path": "../0040_R05/candidate/0040_R05.docx",
-  "parent_candidate_sha256": "95531ac5f8a79eed7c605f3ab1f42da3948e8f15316499d325b606bd6d434384",
-  "parent_semantic_verdict": "PARTIAL",
+  "candidate_bytes": 52561,
   "register_path": "evidence/SYNTHETIC_REPLACEMENT_REGISTER_R06.csv",
-  "register_sha256": "35ffc7df10bd5af3b71d18123d69e94a90462182e2ec128e36fae678460a0e72",
+  "register_sha256": "a75092ac268bc4d0e37bf677f2b3ea6e7cf8be808a5bed1cb52e39e1cb0eaa2d",
   "register_rows": 40,
   "register_rows_bound_to_candidate_sha": 40,
-  "register_rows_with_validated_printed_anchors": "See technical receipt; all 40 facts are hash-bound; all page-bound facts have corrected printed-page locators and rendered-page anchor checks.",
-  "rendered_pdf_path": "evidence/render/candidate.pdf",
-  "rendered_pdf_sha256": "76d1239f37b87c78388f94a7cd7282062424dbd4dffe7ba5ce8d8f773539edc7",
-  "page_count": 9,
+  "previous_independent_semantic_review": {
+    "verdict": "PARTIAL",
+    "reviewed_candidate_sha256": "115caf94165263040b27dbea5a2c83e02f94253d361e16784da398cefd3562d7",
+    "reviewed_register_sha256": "35ffc7df10bd5af3b71d18123d69e94a90462182e2ec128e36fae678460a0e72",
+    "raw_review_path": "evidence/qa/0040_semantic_review_r06_crossreview_raw.md",
+    "raw_review_sha256": "21267c10f5f09230f220faae72a5e4eb62245a78c6ff34a96167a6ed4aa4e917",
+    "normalized_receipt_path": "evidence/qa/0040_semantic_review_r06_r01_exact.json",
+    "normalized_receipt_sha256": "8f9ee7963ca856e8d240a1b0b6ff2bc430c0f27758f686b630c764f12e822708",
+    "reviewed_register_snapshot": "evidence/prior/SYNTHETIC_REPLACEMENT_REGISTER_R06_R01_REVIEWED.csv",
+    "snapshot_sha256": "35ffc7df10bd5af3b71d18123d69e94a90462182e2ec128e36fae678460a0e72",
+    "findings": [
+      {
+        "id": "R06-R01-F01",
+        "status": "OPEN_AT_REVIEW_TIME",
+        "register_fact_id": "0040-SYN-004",
+        "wrong_locator": "p.3 K1-K2; p.4 K3-K4",
+        "correct_locator": "printed p.3 assessment matrix, all K1-K4 baseline/target/gap rows",
+        "body_defect": false
+      },
+      {
+        "id": "R06-R01-F02",
+        "status": "OPEN_AT_REVIEW_TIME",
+        "register_fact_id": "0040-SYN-BL-K3",
+        "wrong_locator": "printed p.4 K3 row",
+        "correct_locator": "printed p.3 assessment matrix K3 row, first column (baseline 1.2, target 2, gap 0.8)",
+        "body_defect": false
+      },
+      {
+        "id": "R06-R01-F03",
+        "status": "OPEN_AT_REVIEW_TIME",
+        "register_fact_id": "0040-SYN-BL-K4",
+        "wrong_locator": "printed p.4 K4 row",
+        "correct_locator": "printed p.3 assessment matrix K4 row, first column (baseline 0.6, target 2, gap 1.4)",
+        "body_defect": false
+      }
+    ]
+  },
+  "register_locator_repair_status": "APPLIED_TARGETED; only R01 findings R06-R01-F01/F02/F03; DOCX bytes unchanged.",
   "technical_status": "PASS",
   "technical_receipt_path": "evidence/qa/0040_technical_review_r06_exact.json",
-  "technical_receipt_sha256": "0b54517a969c4bda28538fd68b73af8e7701fe4e2fc60aea72f1907b801fe0e7",
+  "technical_receipt_sha256": "c38a33509eb643b76ec7e141e1d6052edbe75574c2fb8381238ed7c1397a3b0a",
   "primary_visual_status": "PASS",
   "visual_receipt_path": "evidence/qa/0040_visual_review_r06_primary.json",
   "visual_receipt_sha256": "56cd1b98c7049f9fdac924fc428bfee987983d07881e7d35802def7ec5915184",
-  "independent_semantic_verdict": "PENDING",
-  "independent_semantic_review_path": null,
-  "independent_semantic_review_sha256": null,
+  "page_count": 9,
+  "independent_semantic_verdict": "PENDING_R02_TARGETED_REGISTER_RECHECK",
+  "next_semantic_review_scope": "Confirm corrected printed-page locators for 0040-SYN-004, 0040-SYN-BL-K3 and 0040-SYN-BL-K4; DOCX unchanged.",
   "sample_state": "SAMPLE_SYNTHETIC_ONLY",
   "candidate_state": "CANDIDATE_NOT_PROMOTED",
   "formal_acceptance": "NOT_GRANTED",
-  "repair_summary": "Applied only R05-F01 usable evidence locators, R05-F02 split register facts and R05-F03 R06 metadata. The user-facing evidence pointer is synthetic and no original is fabricated.",
   "known_limitations": [
-    "Independent exact-SHA semantic review has not yet returned.",
-    "Original evidence files are absent by design; the SAMPLE locator is not an attached record."
+    "R01 exact-SHA review found three replacement-register locator errors; corrected locators are awaiting a bounded independent R02 recheck.",
+    "No external original assessment record is attached; all examples remain SAMPLE/SYNTHETIC."
   ],
   "source_audit": {
     "command": "TTQS_ONE_EXTERNAL_AUDIT_FINDINGS_20261016_CONTINUE",
@@ -42,5 +73,12 @@
     "live_blob_sha": "70449889fd464106fe204496004bee13018d4a51",
     "disposition": "APPLIED_PARTIAL; R05 semantic PARTIAL recorded; R06 repairs applied; other 06 findings remain subject to their own live evidence checks."
   },
-  "github_sync_status": "PENDING_INITIAL_R06_SYNC"
+  "github_sync_status": "PENDING_R06_REGISTER_REPAIR_AND_R01_REVIEW_SYNC",
+  "remote_readback": {
+    "last_verified_commit": "66b54520057896a701b0c1f919d0213ad721fb7a",
+    "candidate_sha256": "115caf94165263040b27dbea5a2c83e02f94253d361e16784da398cefd3562d7",
+    "prior_register_sha256": "35ffc7df10bd5af3b71d18123d69e94a90462182e2ec128e36fae678460a0e72",
+    "current_register_sha256": "a75092ac268bc4d0e37bf677f2b3ea6e7cf8be808a5bed1cb52e39e1cb0eaa2d",
+    "current_register_remote_readback": "PENDING"
+  }
 }

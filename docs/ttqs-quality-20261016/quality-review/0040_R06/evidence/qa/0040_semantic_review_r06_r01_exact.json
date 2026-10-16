@@ -1,0 +1,87 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0040",
+  "requirement_id": "I08-E03",
+  "official_checkbox_sequence": "040",
+  "revision": "R06",
+  "candidate_sha256": "115caf94165263040b27dbea5a2c83e02f94253d361e16784da398cefd3562d7",
+  "reviewed_register_sha256": "35ffc7df10bd5af3b71d18123d69e94a90462182e2ec128e36fae678460a0e72",
+  "reviewed_pdf_sha256": "76d1239f37b87c78388f94a7cd7282062424dbd4dffe7ba5ce8d8f773539edc7",
+  "review_route": "Independent read-only cross-review by agent 01a1435e-f156-7a52-ade0-b76f38bb6230; Builder not invoked.",
+  "verdict": "PARTIAL",
+  "candidate_state": "CANDIDATE_NOT_PROMOTED",
+  "formal_acceptance": "NOT_GRANTED",
+  "directly_inspected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "resolved_r05_findings": [
+    "F01 usable evidence IDs and source-location fields on p.3 and p.6",
+    "F02 optional p.1 authorization rule separated from D04 unexecuted status on pp.6-7",
+    "F03 core properties identify R06/revision 6"
+  ],
+  "findings": [
+    {
+      "id": "R06-R01-F01",
+      "status": "OPEN_AT_REVIEW_TIME",
+      "register_fact_id": "0040-SYN-004",
+      "wrong_locator": "p.3 K1-K2; p.4 K3-K4",
+      "correct_locator": "printed p.3 assessment matrix, all K1-K4 baseline/target/gap rows",
+      "body_defect": false
+    },
+    {
+      "id": "R06-R01-F02",
+      "status": "OPEN_AT_REVIEW_TIME",
+      "register_fact_id": "0040-SYN-BL-K3",
+      "wrong_locator": "printed p.4 K3 row",
+      "correct_locator": "printed p.3 assessment matrix K3 row, first column (baseline 1.2, target 2, gap 0.8)",
+      "body_defect": false
+    },
+    {
+      "id": "R06-R01-F03",
+      "status": "OPEN_AT_REVIEW_TIME",
+      "register_fact_id": "0040-SYN-BL-K4",
+      "wrong_locator": "printed p.4 K4 row",
+      "correct_locator": "printed p.3 assessment matrix K4 row, first column (baseline 0.6, target 2, gap 1.4)",
+      "body_defect": false
+    }
+  ],
+  "semantic_gates": {
+    "official_requirement_and_genre": "PASS",
+    "title_blind_and_neighbor_distinction": "PASS",
+    "practical_use_and_evidence_fields": "PASS",
+    "sample_real_and_authority_boundaries": "PASS",
+    "shared_case_dates": "PASS",
+    "arithmetic_and_thresholds": "PASS",
+    "r05_f02_f03": "PASS",
+    "layout": "PASS_WITH_MINOR_ORPHAN_HEADER_NOTE",
+    "register_locator_integrity": "PARTIAL"
+  },
+  "layout_note": "All 9 existing rendered pages were directly inspected. No clipping, overlap or unreadable content. p.6 has a table header at page bottom with rows on p.7 under repeated header; awkward but usable.",
+  "reviewer_limitations": [
+    "Reviewer did not independently re-fetch GitHub during this review; exact GitHub candidate readback was separately performed by the parent task.",
+    "Review is candidate-level only and does not grant formal or Human acceptance."
+  ],
+  "raw_review_path": "evidence/qa/0040_semantic_review_r06_crossreview_raw.md",
+  "raw_review_sha256": "21267c10f5f09230f220faae72a5e4eb62245a78c6ff34a96167a6ed4aa4e917",
+  "reviewer_agent_id": "01a1435e-f156-7a52-ade0-b76f38bb6230",
+  "normalizer": "Parent task recorded the returned reviewer text and normalized the receipt; raw reply is preserved unchanged.",
+  "reviewed_at_local": "2026-10-17T02:59:10.208189+08:00",
+  "exact_historical_review_inputs": {
+    "SYNTHETIC_REPLACEMENT_REGISTER_R06_R01_REVIEWED.csv": {
+      "path": "evidence/prior/SYNTHETIC_REPLACEMENT_REGISTER_R06_R01_REVIEWED.csv",
+      "sha256": "35ffc7df10bd5af3b71d18123d69e94a90462182e2ec128e36fae678460a0e72"
+    },
+    "0040_technical_review_r06_R01.json": {
+      "path": "evidence/prior/0040_technical_review_r06_R01.json",
+      "sha256": "0b54517a969c4bda28538fd68b73af8e7701fe4e2fc60aea72f1907b801fe0e7"
+    }
+  }
+}

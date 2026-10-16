@@ -37,8 +37,8 @@ register_separation={
 expected_page_refs={
  '0040-REF-001':(1,),
  **{f'0040-SYN-{i:03d}':(1,) for i in (1,2,3,7,8,9)},
- '0040-SYN-004':(3,4),'0040-SYN-005':(3,4),'0040-SYN-006':(4,5),'0040-SYN-010':(3,4,6),
- '0040-SYN-BL-K1':(3,),'0040-SYN-BL-K2':(3,),'0040-SYN-BL-K3':(4,),'0040-SYN-BL-K4':(4,),
+ '0040-SYN-004':(3,),'0040-SYN-005':(3,4),'0040-SYN-006':(4,5),'0040-SYN-010':(3,4,6),
+ '0040-SYN-BL-K1':(3,),'0040-SYN-BL-K2':(3,),'0040-SYN-BL-K3':(3,),'0040-SYN-BL-K4':(3,),
  **{f'0040-SYN-PRE-D{i:02d}':(5,) for i in range(1,6)},
  **{f'0040-SYN-POST-D{i:02d}':(5,) for i in range(1,6)},
  **{f'0040-SYN-CALC-{i:03d}':(5,) for i in range(2,9)},
@@ -54,7 +54,7 @@ def pages_covered(locator):
     return covered
 locator_page_checks={fid:set(refs).issubset(pages_covered(by_id[fid]['body_locator'])) for fid,refs in expected_page_refs.items()}
 page_anchor_checks={
- 'p3_matrix':'K1' in pages[2] and 'K2' in pages[2] and 'SYN-EV-0039-01' in pages[2],
+ 'p3_matrix_all_baselines':all(f'K{i}' in pages[2] for i in range(1,5)) and all(v in pages[2] for v in ('1.0','0.6','1.2','0.8','1.4')) and 'SYN-EV-0039-01' in pages[2],
  'p4_matrix_and_scoring':'K3' in pages[3] and 'K4' in pages[3] and '計分' in pages[3],
  'p5_five_examples':'D01' in pages[4] and 'D05' in pages[4],
  'p6_d04_form':'D04' in pages[5] and '原始評量證據定位' in pages[5],
