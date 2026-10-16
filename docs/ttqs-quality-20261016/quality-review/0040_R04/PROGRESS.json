@@ -4,7 +4,7 @@
   "revision": "R04",
   "requirement_id": "I08-E03",
   "official_checkbox_sequence": "040",
-  "status": "CANDIDATE_REMOTE_SYNC_PENDING_INDEPENDENT_SEMANTIC_REVIEW",
+  "status": "CANDIDATE_REMOTE_VERIFIED_INDEPENDENT_SEMANTIC_REVIEW_PENDING",
   "candidate_path": "candidate/0040_R04.docx",
   "candidate_sha256": "be163030c29effe4067e4be1d5bc6f041a48020fbbaf5659716c87094305a44e",
   "register_path": "evidence/SYNTHETIC_REPLACEMENT_REGISTER_R04.csv",
@@ -31,6 +31,14 @@
   "candidate_state": "CANDIDATE_NOT_PROMOTED",
   "formal_acceptance": "NOT_GRANTED",
   "remote_readback": {
-    "status": "PENDING"
+    "status": "PASS_EXACT_BLOBS_READ_FROM_GITHUB",
+    "verified_branch_head": "a4edc36fb7275930ebe580f0969c0cc17cdcc71d",
+    "artifact_manifest_sha256": "21f18b1a86c734b9860413ddfbe2c7fdff8b17b1de6304bdcbf245c4ac3c5b20",
+    "manifest_entries_read_back": 63,
+    "candidate_sha256": "be163030c29effe4067e4be1d5bc6f041a48020fbbaf5659716c87094305a44e",
+    "register_sha256": "a5fcd44f14561cd7122b656d04a72cce928308813bd13e45c4bfbcc1718d83ed",
+    "technical_receipt_sha256": "5facf1dec95d3f84ad6dbc5d70fa9cf67462b60727fab480faada0e405e10e6a",
+    "visual_receipt_sha256": "3652c38958e7ed5608650c826a30ef7e91d7548af1f3ec630be2b192bdf88be2",
+    "method": "Fetched the existing GitHub branch and SHA-256 hashed every exact Git blob listed in the manifest; separately read back the DOCX, register, PDF, technical and visual receipts, manifest and progress status."
   }
 }
