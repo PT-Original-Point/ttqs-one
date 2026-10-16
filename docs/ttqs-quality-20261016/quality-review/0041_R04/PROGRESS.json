@@ -56,7 +56,16 @@
   "artifact_manifest_sha256": "27773220552391dd4dc2a69383974a591a05c613827bc74922440eff073805be",
   "artifact_file_count": 24,
   "remote_readback": {
-    "status": "PENDING_FINAL_READBACK",
-    "scope": "Candidate DOCX, manifest entries, reviewer artifacts, and progress will be read back from the pushed commit."
+    "status": "PASS",
+    "verified_commit": "6264bbf34a87ed65b91ecd7bfc260c6e739b55d6",
+    "manifest_file_count": 24,
+    "verified_blob_count": 26,
+    "manifest_mismatch_count": 0,
+    "candidate_sha256": "287c06f989478d31204cb34a0c4ddf66bf9bae8c68e4ad4ff5f90c54421a7b8c",
+    "review_sha256": "9627ee97a78d61e1b80be06ba17188e048147c021d0c60fdae937bcccdeeefb0",
+    "render_pdf_sha256": "94195148b2bab34df9d4a8c0e67bd96b000144fad6714e0b711e6c695d66c826",
+    "artifact_manifest_sha256": "27773220552391dd4dc2a69383974a591a05c613827bc74922440eff073805be",
+    "readback_source": "git fetch origin branch + remote tree/blob SHA-256 readback",
+    "scope": "Every manifest entry, candidate DOCX, independent review, progress and manifest were verified from the fetched remote commit; candidate remains not formally accepted."
   }
 }

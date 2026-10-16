@@ -35,8 +35,17 @@
   "candidate_disposition": "CANDIDATE_ONLY_NOT_PROMOTED",
   "formal_acceptance": "NOT_GRANTED",
   "remote_readback": {
-    "status": "PENDING_AFTER_VISUAL_SUPPLEMENT",
-    "scope": "R12 unchanged DOCX, updated PARTIAL visual receipt, manifest and progress require remote readback after push."
+    "status": "PASS",
+    "verified_commit": "6264bbf34a87ed65b91ecd7bfc260c6e739b55d6",
+    "manifest_file_count": 46,
+    "verified_blob_count": 48,
+    "manifest_mismatch_count": 0,
+    "candidate_sha256": "e2be3928f96d45bdee6d18762b169c92e7817d10d0c0f87e4854bd16756febbb",
+    "review_sha256": "db940a45c280680920a0a9ef9c56a9a06aed6cc831cfd157102a17963bde4bd2",
+    "render_pdf_sha256": "092e92c70e224287de86b099cb989f4caf97da86d30397f93132990b84ea5bb2",
+    "artifact_manifest_sha256": "ce9b42f4af1030538885f04d9a13a93a26e270d7d220dffe1a548e281c943ae9",
+    "readback_source": "git fetch origin branch + remote tree/blob SHA-256 readback",
+    "scope": "Every manifest entry, candidate DOCX, independent review, progress and manifest were verified from the fetched remote commit; candidate remains not formally accepted."
   },
   "artifact_manifest_sha256": "ce9b42f4af1030538885f04d9a13a93a26e270d7d220dffe1a548e281c943ae9",
   "artifact_file_count": 46,
