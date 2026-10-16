@@ -1,0 +1,76 @@
+{
+  "project": "TTQS_ONE",
+  "document_id": "0038",
+  "requirement_id": "I08-E02",
+  "official_checkbox_sequence": "039",
+  "candidate": "0038_R02",
+  "candidate_path": "candidate/0038_R02.docx",
+  "candidate_sha256": "bdb6ef07c1aacd31f638cdad511012777d2f1b9d2c9f5f307252dd62de0170a4",
+  "status": "CANDIDATE_BUILT; technical=PASS; visual=PASS; independent_semantic_review=PASS; formal_acceptance=NOT_GRANTED",
+  "source_spec_branch": "work/ttqs-one-document-quality-contract-20261016",
+  "source_spec_head": "56de53f2dfb46aa3513716b6ad595d39e4b207de",
+  "source_spec_blob_ids": {
+    "01": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e",
+    "02": "4ff863d9f534b6359fc1c7c1685bd8cce02da886",
+    "03": "8c2bbe7ca9dcbb03088a48934b9e57e7147ede63",
+    "04": "62e3dd7dfd8579b6bc97952ffa6236e7494f3b4d",
+    "05": "60ae010c58140e1710ed24016085c6dfaf6ffaee"
+  },
+  "official_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "blueprint_file_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+  "blueprint_row_sha256": "2504485c1698a5c83ac2205938c05b532edc8d697f2441ad1d6a0c324897b73e",
+  "case_id": "SYN-I08E02-2026-01",
+  "sample_boundary": "All dates, roles, course facts, options, participant codes, scores, calculations and decisions are SYNTHETIC.",
+  "sample_calculation": {
+    "group_a": {
+      "n": 12,
+      "pre_sum": 44,
+      "post_sum": 57,
+      "gain": 13,
+      "pass": 3,
+      "critical_zero": 2
+    },
+    "group_b": {
+      "n": 12,
+      "pre_sum": 44,
+      "post_sum": 79,
+      "gain": 35,
+      "pass": 11,
+      "critical_zero": 0
+    },
+    "valid_pairs": 24,
+    "returned_pairs": 24,
+    "valid_rate": "24/24=100%",
+    "gain_difference": 1.8333333333333333
+  },
+  "review": {
+    "technical": "PASS",
+    "visual": "PASS",
+    "visual_page_count": 14,
+    "semantic": "PASS",
+    "semantic_review_receipt": "evidence/qa/semantic_review_receipt_R02.json",
+    "semantic_review_raw_sha256": "07a75ea78648c7662a1b50e33eaccde878c1b7ec76d7c4c505999cc18eff169c",
+    "exact_sha_bound_review": true,
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "supersedes": {
+    "candidate": "0038_R01",
+    "sha256": "75065568b801506d736297441ee30abd3eaccc4fa3748ef6da2a11c67715088a",
+    "independent_review": "PARTIAL",
+    "resolved_findings": [
+      "row-level execution trace fields",
+      "official-requirement-to-record/source/decision/review crosswalk"
+    ]
+  },
+  "remote": {
+    "status": "PENDING_UPLOAD",
+    "github_path": null,
+    "verified_readback": false
+  },
+  "created_local": "2026-10-17",
+  "last_material_change": {
+    "reason": "Resolved the two R01 semantic-review gaps by adding row-level execution trace and an official-requirement-to-fields/sources/decision/review crosswalk; no metadata-only DOCX rebuild.",
+    "previous_candidate_sha256": "75065568b801506d736297441ee30abd3eaccc4fa3748ef6da2a11c67715088a",
+    "new_candidate_sha256": "bdb6ef07c1aacd31f638cdad511012777d2f1b9d2c9f5f307252dd62de0170a4"
+  }
+}

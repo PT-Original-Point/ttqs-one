@@ -1,0 +1,111 @@
+{
+  "project": "TTQS_ONE",
+  "document_id": "0038",
+  "requirement_id": "I08-E02",
+  "official_checkbox_sequence": "039",
+  "candidate": "0038_R02",
+  "candidate_sha256": "bdb6ef07c1aacd31f638cdad511012777d2f1b9d2c9f5f307252dd62de0170a4",
+  "pdf_sha256": "f549d34db5d841dc04b61df3ce217a7ad1e2e5ee97d5f53106896ad3f5776012",
+  "page_count": 14,
+  "table_count": 19,
+  "scoring_batches": {
+    "A": {
+      "pre": 44,
+      "post": 57,
+      "pass": 3,
+      "critical_zero": 2,
+      "n": 12
+    },
+    "B": {
+      "pre": 44,
+      "post": 79,
+      "pass": 11,
+      "critical_zero": 0,
+      "n": 12
+    }
+  },
+  "replacement_register_rows": 37,
+  "minimum_explicit_table_font_pt": 9.5,
+  "checks": [
+    {
+      "name": "candidate_exists",
+      "status": "PASS",
+      "detail": "E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0038_R02\\candidate\\0038_R02.docx"
+    },
+    {
+      "name": "candidate_sha_available",
+      "status": "PASS",
+      "detail": "bdb6ef07c1aacd31f638cdad511012777d2f1b9d2c9f5f307252dd62de0170a4"
+    },
+    {
+      "name": "docx_zip_integrity",
+      "status": "PASS",
+      "detail": "all DOCX package members passed CRC"
+    },
+    {
+      "name": "requirement_and_boundary_text",
+      "status": "PASS",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "no_stale_review_claim",
+      "status": "PASS",
+      "detail": "document avoids a review status that would go stale after review"
+    },
+    {
+      "name": "two_full_12_row_batches",
+      "status": "PASS",
+      "detail": "{\"A\": {\"pre\": 44, \"post\": 57, \"pass\": 3, \"critical_zero\": 2, \"n\": 12}, \"B\": {\"pre\": 44, \"post\": 79, \"pass\": 11, \"critical_zero\": 0, \"n\": 12}}"
+    },
+    {
+      "name": "all_row_calculations",
+      "status": "PASS",
+      "detail": "24 vectors, totals, deltas and threshold labels recomputed"
+    },
+    {
+      "name": "aggregate_math",
+      "status": "PASS",
+      "detail": "A gain=13/12; B gain=35/12; gain difference=22/12"
+    },
+    {
+      "name": "row_level_execution_trace_24_cases",
+      "status": "PASS",
+      "detail": "table_found=True; rows=24; ids_match=True"
+    },
+    {
+      "name": "official_requirement_source_decision_review_crosswalk",
+      "status": "PASS",
+      "detail": "table_found=True; rows=4"
+    },
+    {
+      "name": "table_type_size",
+      "status": "PASS",
+      "detail": "min_direct_size_pt=9.5; unscaled_nonempty_runs=0"
+    },
+    {
+      "name": "synthetic_register_row_trace",
+      "status": "PASS",
+      "detail": "rows=37; row_trace_records=24"
+    },
+    {
+      "name": "rendered_page_set",
+      "status": "PASS",
+      "detail": "page_png_count=14"
+    },
+    {
+      "name": "word_pdf_export",
+      "status": "PASS",
+      "detail": "exists=True; bytes=710256"
+    },
+    {
+      "name": "independent_review_exact_sha_binding",
+      "status": "PASS",
+      "detail": "verdict=PASS; review_raw_sha256=07a75ea78648c7662a1b50e33eaccde878c1b7ec76d7c4c505999cc18eff169c"
+    }
+  ],
+  "status": "PASS",
+  "independent_semantic_review": "PASS",
+  "semantic_review_candidate_sha256": "bdb6ef07c1aacd31f638cdad511012777d2f1b9d2c9f5f307252dd62de0170a4",
+  "semantic_review_raw_sha256": "07a75ea78648c7662a1b50e33eaccde878c1b7ec76d7c4c505999cc18eff169c",
+  "formal_acceptance": "NOT_GRANTED"
+}
