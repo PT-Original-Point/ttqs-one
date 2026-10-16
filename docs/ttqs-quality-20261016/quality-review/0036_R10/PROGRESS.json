@@ -25,7 +25,7 @@
     "candidate_sha256": "765e36f07c5e92964d3d5aa438564ef4578e0b2d6ca684b2123687cff5686a6a",
     "reviewer_agent_id": "01a14596-0f8b-7bd0-b192-f9e07ef7957c",
     "review_file": "review/0036_R10_independent_semantic_review_R01.md",
-    "review_sha256": "853918a049b2e2d1d2c73b287c370c054aa86aa9c4ca7d42a19459e0c12a456c",
+    "review_sha256": "d2022d992f1231fa75c8865c72556cb914ee17336347fe64038a52c3c91b1d59",
     "substantive_blockers": [
       "§6 records 190 minutes as teaching while §9 includes evaluation in that block.",
       "§15 checklist has no completion status, verification date, evidence locator or incomplete-item owner/due date.",
@@ -36,8 +36,17 @@
   },
   "candidate_disposition": "CANDIDATE_ONLY_NOT_PROMOTED",
   "formal_acceptance": "NOT_GRANTED",
-  "remote_readback": "PENDING_AFTER_REVIEW_SYNC",
-  "artifact_manifest_sha256": "d98a681221883625e06ae32b277ede124246408c81292fc5bf02bfef06cf8794",
+  "remote_readback": {
+    "status": "PASS",
+    "verified_commit": "fca176919c4399d8bc373cbb1e4b8b0c97b0e06b",
+    "manifest_file_count": 39,
+    "manifest_mismatch_count": 0,
+    "candidate_sha256": "765e36f07c5e92964d3d5aa438564ef4578e0b2d6ca684b2123687cff5686a6a",
+    "candidate_remote_sha256": "765e36f07c5e92964d3d5aa438564ef4578e0b2d6ca684b2123687cff5686a6a",
+    "review_file_remote_sha256": "d2022d992f1231fa75c8865c72556cb914ee17336347fe64038a52c3c91b1d59",
+    "manifest_file_remote_sha256": "8a13e918f8efe96929a1a34a268f836aef8b500322987025672c17efbd01ef93"
+  },
+  "artifact_manifest_sha256": "8a13e918f8efe96929a1a34a268f836aef8b500322987025672c17efbd01ef93",
   "artifact_file_count": 39,
   "artifact_manifest_status": "CANONICAL_GIT_BLOB_SHA256",
   "semantic_review_status": "PARTIAL",
