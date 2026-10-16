@@ -14,4 +14,4 @@ evidence/SYNTHETIC_REPLACEMENT_REGISTER.csv 有 275 筆唯一事實，均待真�
 生成來源提交：53b54e1cfafbc1f2fe7e99894629a7cc39d937ce。
 PDF SHA-256：572354125d7e3d0610e154ffcc8963b8b27fade8d5ffa36868f09fa0e8041dd9。
 
-獨立 exact-SHA 語意審查已派給既有獨立 reviewer，結果仍待回收；內部版面檢查不是獨立驗收。不得宣稱真人參與、協會決議、核准或正式 TTQS 接受。
+獨立 reviewer 已對 exact SHA 完成審查，整體 PARTIAL：上述算術、事件、假設回覆、字級與14頁版面均 PASS；只剩 T12 D04/P04 與 T13 能力檢核25→20、情境55→60分鐘的逐列設計理由需說明。原始報告位於 review/independent_semantic_visual_review_R02.md，SHA-256 7e52896b1f212493d96c5eb7690df87677fdbeedce471c09bb3b63d9cbf9fd32。內部版面檢查不替代該項語意缺口。不得宣稱真人參與、協會決議、核准或正式 TTQS 接受。

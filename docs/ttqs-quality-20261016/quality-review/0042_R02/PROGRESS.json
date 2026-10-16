@@ -10,7 +10,7 @@
   "sample_scope": "SAMPLE_SYNTHETIC_ONLY",
   "technical_status": "PASS",
   "layout_status": "PASS_INTERNAL_ALL_14_PAGES",
-  "independent_semantic_review": "PENDING_INDEPENDENT_EXACT_SHA_R02",
+  "independent_semantic_review": "PARTIAL_DESIGN_TRACE_GAP",
   "formal_acceptance": "NOT_GRANTED",
   "source_head": "53b54e1cfafbc1f2fe7e99894629a7cc39d937ce",
   "source_index_sha256": "b585798a694cabfaa2556c0a34aac846c15a5491e8c04deece61b09d5e217d77",
@@ -41,7 +41,19 @@
   "reviewer_route": {
     "existing_reviewer_agent": "01a1459f-3387-7a52-9608-fa07d7262c24",
     "review_request": "review/independent_review_request_R02.md",
-    "status": "DISPATCHED_PENDING",
-    "antigravity_cli": "Earlier headless permission prompt could not be safely granted; no Computer Use and no broad sandbox bypass."
-  }
+    "status": "COMPLETE_PARTIAL",
+    "antigravity_cli": "Earlier headless permission prompt could not be safely granted; no Computer Use and no broad sandbox bypass.",
+    "review_path": "review/independent_semantic_visual_review_R02.md",
+    "review_sha256": "7e52896b1f212493d96c5eb7690df87677fdbeedce471c09bb3b63d9cbf9fd32",
+    "reviewed_candidate_sha256": "dd59253da82e8bb9a7129cfee174f28f23695e843f3bb303b16c0fb56378cf45"
+  },
+  "remaining_independent_finding": {
+    "dimension": "opinion_to_design_trace",
+    "status": "PARTIAL",
+    "locator": "§7 Table T12 D04/P04 and §8 Table T13 capability-check/scenario time-allocation rationale; corresponding replacement-register facts",
+    "finding": "The 25-to-20 minute capability-check reduction and 55-to-60 minute scenario increase lack an explicit row-specific rationale tied to P04 and the intended observable assessment.",
+    "required_repair": "Explain the synthetic 5-minute transfer to an observable scenario task while preserving the assessment rubric and 20-minute scoring/check period, or choose a supported alternative and keep all totals and register locators consistent.",
+    "human_or_real_approval": "NOT_EVIDENCED"
+  },
+  "review_sha256": "7e52896b1f212493d96c5eb7690df87677fdbeedce471c09bb3b63d9cbf9fd32"
 }
