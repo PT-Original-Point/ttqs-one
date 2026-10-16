@@ -1,0 +1,58 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0040",
+  "revision": "R06",
+  "requirement_id": "I08-E03",
+  "official_checkbox_sequence": "040",
+  "review_id": "R03_EXACT_SHA_REGISTER_LOCATOR_FOLLOWUP",
+  "reviewer_route": "Independent read-only cross-review agent",
+  "reviewer_id": "01a1435e-f156-7a52-ade0-b76f38bb6230",
+  "submission_id": "01a1461a-f2e6-7ce1-b294-34b5d107bb81",
+  "verdict": "PASS",
+  "scope": "Exact-SHA binding and bounded register locator recheck; not a new full semantic review.",
+  "candidate": {
+    "path": "candidate/0040_R06.docx",
+    "sha256": "115caf94165263040b27dbea5a2c83e02f94253d361e16784da398cefd3562d7",
+    "matches_expected": true
+  },
+  "register": {
+    "path": "evidence/SYNTHETIC_REPLACEMENT_REGISTER_R06.csv",
+    "sha256": "a75092ac268bc4d0e37bf677f2b3ea6e7cf8be808a5bed1cb52e39e1cb0eaa2d",
+    "matches_expected": true,
+    "rows_checked": 40,
+    "unique_fact_ids": 40,
+    "all_fields_populated": true,
+    "all_rows_bound_to_candidate_sha": true,
+    "additional_material_locator_findings": 0
+  },
+  "locator_checks": [
+    {
+      "fact_id": "0040-SYN-004",
+      "status": "PASS",
+      "locator": "printed p.3 assessment matrix, all K1-K4 baseline/target/gap rows"
+    },
+    {
+      "fact_id": "0040-SYN-BL-K3",
+      "status": "PASS",
+      "locator": "printed p.3 K3 row, first column; baseline 1.2, target 2, gap 0.8"
+    },
+    {
+      "fact_id": "0040-SYN-BL-K4",
+      "status": "PASS",
+      "locator": "printed p.3 K4 row, first column; baseline 0.6, target 2, gap 1.4"
+    }
+  ],
+  "page_4_check": "K3/K4 rubric descriptors only; not the baseline/target/gap rows.",
+  "prior_r02_sha_typo": {
+    "raw_response_preserved": true,
+    "reported_candidate_sha256": "115caf94165263040b27bdea5a2c83e02f94253d361e16784da398cefd3562d7",
+    "expected_candidate_sha256": "115caf94165263040b27dbea5a2c83e02f94253d361e16784da398cefd3562d7",
+    "counted_as_exact_sha_pass": false
+  },
+  "combined_review_interpretation": "R01 remains PARTIAL at its original review time. R03 closes the three register-locator findings against the exact unchanged DOCX SHA and current register, within its bounded scope. The combined evidence covers the R01 content review plus the register locator delta; R03 alone is not a full semantic re-review.",
+  "candidate_state": "CANDIDATE_NOT_PROMOTED",
+  "formal_acceptance": "NOT_GRANTED",
+  "sample_state": "SAMPLE_SYNTHETIC_ONLY",
+  "raw_response_path": "evidence/qa/0040_semantic_review_r06_r03_exact_sha_followup_raw.md",
+  "raw_response_sha256": "46a2c58bd43c08953e6c89beabe97719bb2bd70fea554d33f5335d43d5487cd1"
+}

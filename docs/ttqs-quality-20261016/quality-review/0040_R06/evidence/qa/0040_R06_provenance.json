@@ -28,14 +28,14 @@
     "path": "docs/ttqs-quality-20261016/06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md",
     "observed_live_commit": "0c0a3f283bd78af37d22355a4ed9e0b5c49fd49d",
     "live_blob_sha": "70449889fd464106fe204496004bee13018d4a51",
-    "disposition": "APPLIED_PARTIAL; R05 semantic PARTIAL recorded; R06 repairs applied; other 06 findings remain subject to their own live evidence checks."
+    "disposition": "R06 register-locator finding resolved by exact-SHA R03 follow-up; other 06 audit findings remain open or require separate current-evidence reconciliation."
   },
   "authoring_route": "Local targeted python-docx repair plus a single-element OOXML core-properties patch by the current task; no institutional authorship or approval is claimed.",
   "renderer": "Microsoft Word COM ExportAsFixedFormat plus bundled Poppler pdftoppm at 140 dpi; render_docx.py could not use the canonical LibreOffice route because soffice.exe is unavailable.",
   "technical_status": "PASS_TECHNICAL",
   "primary_visual_status": "PASS",
-  "independent_semantic_verdict": "PENDING_R02_TARGETED_REGISTER_RECHECK",
-  "independent_semantic_review_route": "Separate read-only cross-review agent, to be bound to the exact R06 SHA after GitHub readback.",
+  "independent_semantic_verdict": "PASS_WITH_SCOPE_LIMITATION_R01_FULL_CONTENT_REVIEW_PLUS_R03_EXACT_SHA_REGISTER_FOLLOWUP",
+  "independent_semantic_review_route": "R01 independent review remains archived as PARTIAL at its review time. R03 verified the corrected register-locator delta against the exact unchanged R06 DOCX SHA and current register; the combined coverage closes the locator-only partial finding within complementary scopes. R03 alone is not a full semantic re-review.",
   "sample_state": "SAMPLE_SYNTHETIC_ONLY; SYN-EV-0039-01 is a synthetic index and no external original is attached.",
   "candidate_state": "CANDIDATE_NOT_PROMOTED",
   "formal_acceptance": "NOT_GRANTED",
@@ -43,5 +43,31 @@
   "previous_semantic_review_sha256": "21267c10f5f09230f220faae72a5e4eb62245a78c6ff34a96167a6ed4aa4e917",
   "previous_semantic_review_register_sha256": "35ffc7df10bd5af3b71d18123d69e94a90462182e2ec128e36fae678460a0e72",
   "current_register_sha256": "a75092ac268bc4d0e37bf677f2b3ea6e7cf8be808a5bed1cb52e39e1cb0eaa2d",
-  "register_locator_repair": "Three R01 findings repaired in register only; candidate DOCX unchanged."
+  "register_locator_repair": "Three R01 findings repaired in register only; candidate DOCX unchanged.",
+  "r02_register_followup": {
+    "verdict": "UNBOUND_SHA_MISMATCH",
+    "scope": "Bounded locator response cannot be counted as exact-SHA acceptance",
+    "reviewer_id": "01a1435e-f156-7a52-ade0-b76f38bb6230",
+    "submission_id": "01a14615-5526-75f2-a3e8-5691995deed4",
+    "reported_candidate_sha256": "115caf94165263040b27bdea5a2c83e02f94253d361e16784da398cefd3562d7",
+    "expected_candidate_sha256": "115caf94165263040b27dbea5a2c83e02f94253d361e16784da398cefd3562d7",
+    "register_sha256": "a75092ac268bc4d0e37bf677f2b3ea6e7cf8be808a5bed1cb52e39e1cb0eaa2d",
+    "rows_claimed_checked": 40,
+    "raw_response_sha256": "61f8251751fa513c8e4030486ed120898941925bc6b48b7bf9778759a8c15d96",
+    "normalized_receipt_sha256": "8e83e15351861e5689c27522b50d6d91dad07b3bc72e16fed6f2708fd9c6d190",
+    "exact_sha_pass_counted": false
+  },
+  "r03_exact_sha_register_followup": {
+    "verdict": "PASS",
+    "scope": "Exact-SHA binding and bounded register locator follow-up; not a full semantic review",
+    "reviewer_id": "01a1435e-f156-7a52-ade0-b76f38bb6230",
+    "submission_id": "01a1461a-f2e6-7ce1-b294-34b5d107bb81",
+    "candidate_sha256": "115caf94165263040b27dbea5a2c83e02f94253d361e16784da398cefd3562d7",
+    "register_sha256": "a75092ac268bc4d0e37bf677f2b3ea6e7cf8be808a5bed1cb52e39e1cb0eaa2d",
+    "rows_checked": 40,
+    "additional_material_locator_findings": 0,
+    "raw_response_sha256": "46a2c58bd43c08953e6c89beabe97719bb2bd70fea554d33f5335d43d5487cd1",
+    "normalized_receipt_sha256": "78c1a38a848191bc84d3c69eb7d890f6f00f39850e81d0a0a439bb9e4d70e3ef",
+    "formal_acceptance": "NOT_GRANTED"
+  }
 }
