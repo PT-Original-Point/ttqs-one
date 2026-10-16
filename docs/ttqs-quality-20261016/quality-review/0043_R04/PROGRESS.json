@@ -1,0 +1,63 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0043",
+  "requirement_id": "I09-E03",
+  "official_checkbox_sequence": 44,
+  "revision": "R04",
+  "status": "INDEPENDENT_SEMANTIC_REVIEW_RUNNING",
+  "candidate_sha256": "23e2218ccd297d82cd0fc8298fc242c66df278cb7708d824ebfb4b15449478ab",
+  "official_source_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "blueprint_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+  "unique_blueprint_row_sha256": "2bfd365ff90118700a70521cbf90985b33fb6df1dc964bf5d96b3e8de5ce5e8f",
+  "render_pdf_sha256": "0fd45dc48c3ee7861aa2bc7f7fd1f7b966e9a4c6b509c20a4d88967256a847fa",
+  "r04_replacement_register_sha256": "6e7f99767c8c2562ae2453b8ee41ed25ee56bf6810db94ce82cf0fd15fd1421e",
+  "frozen_review_packet_register_sha256": "ad43c11c33299526a93c673fd2183bb39f739ddebdd1f16d743f59e03ebdc31d",
+  "reviewer_route": "Antigravity CLI headless read-only; Computer Use not used",
+  "model_requested": "gemini-3.8-flash-high",
+  "effort_requested": "high",
+  "reviewer_process": {
+    "stdout_bytes": 0,
+    "stderr_bytes": 0,
+    "state": "RUNNING_AT_SNAPSHOT",
+    "error_count_for_this_invocation": 0,
+    "pid": 20584,
+    "parent_pid": 17216,
+    "start_time_taipei": "2026-10-16 23:40:40"
+  },
+  "reviewer_verdict": "PENDING",
+  "review_is_independent_of_builder": true,
+  "review_bound_candidate_sha256": "23e2218ccd297d82cd0fc8298fc242c66df278cb7708d824ebfb4b15449478ab",
+  "review_input_register_binding": "Frozen packet has the R01-bound register; corrected R04-bound copy and field-only reconciliation are separately included. Verify reviewer finding and, if material, run only a targeted binding follow-up.",
+  "technical_visual_status": "PASS_RECORDED_BY_BUILDER; 17/17 pages visually inspected; semantic acceptance pending",
+  "candidate_status": "CANDIDATE_NOT_PROMOTED",
+  "formal_acceptance": "NOT_REQUESTED_OR_GRANTED",
+  "build_history": [
+    "R01 font readability defects; retained for provenance only",
+    "R02 style attempt failed due invalid font unit; not a candidate",
+    "R03 fonts corrected but 3 near-empty pages remained",
+    "R04 removed 3 orphaning page breaks; text signature unchanged; 17-page render checked"
+  ],
+  "synthetic_scope": {
+    "returned": 10,
+    "all_sample_synthetic": true,
+    "eligible": 8,
+    "linked_to_other_case": false,
+    "replacement_fact_rows": 248,
+    "ratings": 48,
+    "excluded": 2
+  },
+  "outsourcing_failure_policy": {
+    "trigger": "Three consecutive errors and three corrective attempts fail to restore normal operation and reporting",
+    "action": "Pause further dispatch through affected route; sync complete error, correction, execution and progress record to this GitHub branch",
+    "applies_to": [
+      "Antigravity",
+      "OpenCode"
+    ],
+    "current_route_failure_count": 0,
+    "route_paused": false
+  },
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "branch_head_observed": "57f19ed8496aabbf99a8bb5bfc805a1293151ff5",
+  "next_action": "Collect the one active CLI result; verify its envelope, exit code, exact candidate SHA and complete criteria. Continue with a targeted 0043 repair only if a material defect is evidenced; otherwise record the independent result and proceed to the next READY document.",
+  "synced_at_taipei": "2026-10-16 23:46"
+}
