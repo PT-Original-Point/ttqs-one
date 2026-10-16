@@ -23,7 +23,7 @@
 - 完整性：DOCX ZIP/OOXML 可讀，38 張表格；R09→R10 只有 `word/document.xml` 改變。
 - Word 輸出：Microsoft Word COM，PDF SHA-256 `0759a112f8709069ca53a4b54acfdeac5d226aa5c49e6a31fd3a503d88ece6bb`；19 頁、19 張 144 dpi 頁面圖。
 - 直接重新目視：第 1、6、15、16 頁。其他第 2–5、7–14、17–19 頁與已完成全頁目視的 R09 渲染逐像素相同。沒有空白頁；表頭對比及交接表分頁通過。
-- 目前語意狀態：獨立 reviewer 正依 R10 exact SHA 審查中；此技術／版面結果不代表語意 PASS。
+- 目前獨立語意結果：PARTIAL（exact SHA 已記錄）。§6 分鐘分類、§15 可稽核交接欄位及 §5 流程圖語意驗證仍待修；官方 PDF 雜湊派審文字曾截短，已由實際來源檔重新核對完整值。
 
 ## SAMPLE／REAL 邊界
 
@@ -32,3 +32,7 @@
 ## 稽核來源
 
 本目錄附有官方來源 PDF、Wave005 R03 需求映射、目前 Blueprint 相鄰列、0036 Unique Blueprint、SAMPLE 替換清冊、R09 原始 PARTIAL 審查、R10 修復收據、Word PDF 與逐頁影像。各項來源 SHA 在 `inputs/source_provenance.json`、`review/0036_R10_technical_and_visual_receipt_R01.json` 及 `PROGRESS.json`。
+
+## 獨立語意審查結果
+
+R10 exact-SHA reviewer verdict 為 PARTIAL。修復範圍限定為 §6 的 190 分鐘分類用語、§15 的完成狀態／日期／證據定位／未結案責任人期限，以及 §5 流程圖語意驗證。派審文字中的官方 PDF SHA 曾截短；實際來源檔及本包內副本的完整 SHA 均為 `805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709`。原始審查回覆及更正說明均保存在 `review/`。

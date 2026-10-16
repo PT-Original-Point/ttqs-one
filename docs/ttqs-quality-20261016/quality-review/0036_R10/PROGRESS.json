@@ -4,7 +4,7 @@
   "requirement_id": "I07-E04",
   "official_checkbox_serial": "036",
   "revision": "R10",
-  "status": "CANDIDATE_AWAITING_INDEPENDENT_SEMANTIC_REVIEW_NOT_PROMOTED",
+  "status": "PARTIAL_REQUIRES_TARGETED_R11_REPAIR_NOT_PROMOTED",
   "candidate_sha256": "765e36f07c5e92964d3d5aa438564ef4578e0b2d6ca684b2123687cff5686a6a",
   "candidate_bytes": 228466,
   "source_revision": "R09",
@@ -21,15 +21,25 @@
   "layout_review": "PASS_VISUAL_DELTA; changed pages 1,6,15,16 directly inspected; remaining 15 pages pixel-identical to fully inspected R09 baseline; no blank page.",
   "technical_review": "PASS_TECHNICAL_ONLY; exact candidate SHA and OOXML package verified.",
   "independent_semantic_review": {
-    "status": "PENDING_EXACT_SHA_REVIEW",
+    "status": "PARTIAL",
     "candidate_sha256": "765e36f07c5e92964d3d5aa438564ef4578e0b2d6ca684b2123687cff5686a6a",
-    "prior_R09_verdict": "PARTIAL",
-    "prior_review_file": "review/lineage_0036_R09_independent_semantic_review_R01.md"
+    "reviewer_agent_id": "01a14596-0f8b-7bd0-b192-f9e07ef7957c",
+    "review_file": "review/0036_R10_independent_semantic_review_R01.md",
+    "review_sha256": "853918a049b2e2d1d2c73b287c370c054aa86aa9c4ca7d42a19459e0c12a456c",
+    "substantive_blockers": [
+      "§6 records 190 minutes as teaching while §9 includes evaluation in that block.",
+      "§15 checklist has no completion status, verification date, evidence locator or incomplete-item owner/due date.",
+      "§5 flowchart semantics were not independently checked because the reviewer was instructed not to inspect images."
+    ],
+    "dispatch_metadata_issue": "The review prompt contained a truncated 60-character official PDF SHA. The exact source file and bundled source PDF both hash to 805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709; see review/0036_R10_review_readback_note_R01.md.",
+    "raw_review_note": "The reviewer returned PARTIAL. The corrected source hash does not change the verdict."
   },
   "candidate_disposition": "CANDIDATE_ONLY_NOT_PROMOTED",
   "formal_acceptance": "NOT_GRANTED",
-  "remote_readback": "PENDING_AFTER_CANDIDATE_SYNC",
-  "artifact_manifest_sha256": "46eda42f55a415b805ad6f08475576d45338b6d81a13f34c94472232a470ded7",
-  "artifact_file_count": 37,
-  "artifact_manifest_status": "CANONICAL_GIT_BLOB_SHA256"
+  "remote_readback": "PENDING_AFTER_REVIEW_SYNC",
+  "artifact_manifest_sha256": "d98a681221883625e06ae32b277ede124246408c81292fc5bf02bfef06cf8794",
+  "artifact_file_count": 39,
+  "artifact_manifest_status": "CANONICAL_GIT_BLOB_SHA256",
+  "semantic_review_status": "PARTIAL",
+  "next_action": "Create R11 only for the three substantive findings; verify the flowchart from the existing rendered page and obtain fresh exact-SHA review."
 }
