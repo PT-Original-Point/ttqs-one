@@ -1,0 +1,42 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0040",
+  "revision": "R06",
+  "requirement_id": "I08-E03",
+  "official_checkbox_sequence": "040",
+  "candidate_sha256": "115caf94165263040b27dbea5a2c83e02f94253d361e16784da398cefd3562d7",
+  "parent_r05_candidate_sha256": "95531ac5f8a79eed7c605f3ab1f42da3948e8f15316499d325b606bd6d434384",
+  "parent_r05_verdict": "PARTIAL",
+  "parent_r05_raw_review_sha256": "4c0cb2d6ba44a232d1aa5eb6707820893d56b9a78fd3da0f8a15e12c981e03df",
+  "official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "blueprint_row_sha256": "ab080a2e6d85cc13a706f0c10bda7c208ddc191a1fea20a670fd5a174ab14943",
+  "source_map_sha256": "405b987797d1558ecac182cea8e1adfbd1aead7754c880db32db43c235d5024e",
+  "synthetic_register_sha256": "35ffc7df10bd5af3b71d18123d69e94a90462182e2ec128e36fae678460a0e72",
+  "synthetic_register_rows": 40,
+  "rendered_pdf_sha256": "76d1239f37b87c78388f94a7cd7282062424dbd4dffe7ba5ce8d8f773539edc7",
+  "page_count": 9,
+  "technical_receipt_sha256": "0b54517a969c4bda28538fd68b73af8e7701fe4e2fc60aea72f1907b801fe0e7",
+  "visual_receipt_sha256": "56cd1b98c7049f9fdac924fc428bfee987983d07881e7d35802def7ec5915184",
+  "repair_scope": [
+    "R05-F01: added a synthetic-only evidence index and explicit controlled file ID, attachment/page and version fields to each K1-K4 matrix row and the filled D04 form.",
+    "R05-F02: separated the optional 30-day authorization rule (printed p.1) from the D04 rescore-not-executed status (printed p.7) in the replacement register.",
+    "R05-F03: updated docProps/core.xml description to R06 and revision to 6."
+  ],
+  "unchanged_scope": "The five paired synthetic score vectors, thresholds, formulas and case dates are unchanged from reviewed R05. The R06 candidate adds the evidence-location instructions and corrects metadata only at the specific reviewed loci.",
+  "source_audit": {
+    "command": "TTQS_ONE_EXTERNAL_AUDIT_FINDINGS_20261016_CONTINUE",
+    "path": "docs/ttqs-quality-20261016/06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md",
+    "observed_live_commit": "0c0a3f283bd78af37d22355a4ed9e0b5c49fd49d",
+    "live_blob_sha": "70449889fd464106fe204496004bee13018d4a51",
+    "disposition": "APPLIED_PARTIAL; R05 semantic PARTIAL recorded; R06 repairs applied; other 06 findings remain subject to their own live evidence checks."
+  },
+  "authoring_route": "Local targeted python-docx repair plus a single-element OOXML core-properties patch by the current task; no institutional authorship or approval is claimed.",
+  "renderer": "Microsoft Word COM ExportAsFixedFormat plus bundled Poppler pdftoppm at 140 dpi; render_docx.py could not use the canonical LibreOffice route because soffice.exe is unavailable.",
+  "technical_status": "PASS_TECHNICAL",
+  "primary_visual_status": "PASS",
+  "independent_semantic_verdict": "PENDING",
+  "independent_semantic_review_route": "Separate read-only cross-review agent, to be bound to the exact R06 SHA after GitHub readback.",
+  "sample_state": "SAMPLE_SYNTHETIC_ONLY; SYN-EV-0039-01 is a synthetic index and no external original is attached.",
+  "candidate_state": "CANDIDATE_NOT_PROMOTED",
+  "formal_acceptance": "NOT_GRANTED"
+}

@@ -35,7 +35,7 @@
     "R05-F02: split the p.1 30-day authorization rule from the p.6 D04 rescore-not-executed fact in the replacement register.",
     "R05-F03: correct core properties description and revision to the actual R06 candidate in the targeted repair."
   ],
-  "github_sync_status": "PENDING_R05_PARTIAL_REVIEW_SYNC",
+  "github_sync_status": "REMOTE_READBACK_PASS_FOR_R05_PARTIAL_REVIEW",
   "source_audit": {
     "command": "TTQS_ONE_EXTERNAL_AUDIT_FINDINGS_20261016_CONTINUE",
     "path": "docs/ttqs-quality-20261016/06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md",
@@ -43,5 +43,14 @@
     "live_source_blob_sha": "70449889fd464106fe204496004bee13018d4a51",
     "state": "APPLIED_PARTIAL",
     "evidence": "R05 exact-SHA semantic PARTIAL persisted; targeted R06 repair required; unrelated findings remain separately tracked."
+  },
+  "remote_readback": {
+    "commit": "0c0a3f283bd78af37d22355a4ed9e0b5c49fd49d",
+    "verified_paths": [
+      "quality-review/0040_R05/evidence/qa/0040_semantic_review_r05_crossreview_raw.md",
+      "quality-review/0040_R05/evidence/qa/0040_semantic_review_r05_exact.json",
+      "quality-review/0040_R05/PROGRESS.json"
+    ],
+    "method": "Fresh fetch, resolve Git blob and compare exact raw bytes and SHA-256; all equal."
   }
 }
