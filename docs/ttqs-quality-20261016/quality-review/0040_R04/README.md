@@ -12,6 +12,6 @@
 - Assessment vectors, thresholds, arithmetic and D04 follow-up facts were not changed. R04 pages 2–6 are pixel-identical to the reviewed R03 render at 120 dpi; page 1 only adds the visible sample case code.
 - Technical exact-SHA check: PASS. It verifies the OOXML package, page rendering, 39/39 locator anchors, and 10.5 pt body / 9.5 pt table minimums.
 - Primary visual check: PASS. Pages 1, 7 and 8 were directly inspected; pages 2–6 are pixel-identical to the pages already directly inspected by the independent R03 reviewer.
-- Independent semantic review of R04 exact SHA: PENDING. Builder and technical receipts are not semantic acceptance.
+- Independent semantic review of R04 exact SHA: PARTIAL. The body on printed pages 7–8 exposes internal IDs, SHA values, review history and evaluator mapping; register locators for 0040-SYN-006 / 0040-SYN-CALC-005 abbreviate the p.4 header, and 0040-SYN-009 needs a p.6 locator. Exact raw and normalized reviewer records are in evidence/qa/. R04 remains historical candidate evidence and is not promoted. Builder and technical receipts are not semantic acceptance.
 - The complete R03 bundle, including raw PARTIAL review, is preserved under evidence/history/0040_R03_remote_verified_bundle/.
 - No association approval, attendance, scores, course execution, outcomes, signatures, or third-party originals are represented.

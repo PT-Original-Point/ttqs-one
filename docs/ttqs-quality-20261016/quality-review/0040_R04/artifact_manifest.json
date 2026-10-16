@@ -1,7 +1,7 @@
 {
   "project_id": "TTQS_ONE",
   "bundle": "0040_R04",
-  "manifest_scope": "All files in this bundle except the top-level artifact_manifest.json and mutable top-level PROGRESS.json; top-level .gitattributes prevents line-ending transformation.",
+  "manifest_scope": "All files in this bundle except top-level artifact_manifest.json and mutable top-level PROGRESS.json; top-level .gitattributes prevents line-ending transformation.",
   "hash_method": "SHA-256 of exact source bytes and Git blob bytes.",
   "files": [
     {
@@ -58,6 +58,11 @@
       "path": "evidence/history/0040_R03_remote_verified_bundle/.gitattributes",
       "bytes": 9,
       "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+    },
+    {
+      "path": "evidence/history/0040_R03_remote_verified_bundle/artifact_manifest.json",
+      "bytes": 6187,
+      "sha256": "0d49d1b78da51ee6bc3796a444d06117173bbf4d4b94bbefbe5e72b9c6a208fa"
     },
     {
       "path": "evidence/history/0040_R03_remote_verified_bundle/build/repair_0040_r03.py",
@@ -215,6 +220,11 @@
       "sha256": "ab080a2e6d85cc13a706f0c10bda7c208ddc191a1fea20a670fd5a174ab14943"
     },
     {
+      "path": "evidence/history/0040_R03_remote_verified_bundle/PROGRESS.json",
+      "bytes": 2890,
+      "sha256": "37eea21d4380eeedfa12ed05a522ab0dda79626dc9613b9f1817023f92036a88"
+    },
+    {
       "path": "evidence/history/0040_R03_remote_verified_bundle/README.md",
       "bytes": 1802,
       "sha256": "cecec5a28d456f373a671796dfc872edb412e813d106d753dcf51394fa01fcb2"
@@ -223,6 +233,16 @@
       "path": "evidence/qa/0040_R04_provenance.json",
       "bytes": 2389,
       "sha256": "5e938708d3611b0f85981e2893333e485381c0a8fe739e36c9b43ef4bd0da022"
+    },
+    {
+      "path": "evidence/qa/0040_semantic_review_r04_crossreview_raw.md",
+      "bytes": 8064,
+      "sha256": "23522aab423db2bddad33861235dea6feec365f7322fac9e6d2a362e54281aa0"
+    },
+    {
+      "path": "evidence/qa/0040_semantic_review_r04_exact.json",
+      "bytes": 3211,
+      "sha256": "c7c3e5fae66829897d5a9b54b8605237c87947d52109c0817ec3db35fe78f11f"
     },
     {
       "path": "evidence/qa/0040_technical_review_r04_exact.json",
@@ -316,8 +336,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2304,
-      "sha256": "ed04dc905c01ddaba4a3e155ff414b3dd5a3948f76b78a57b135732a63fc5db0"
+      "bytes": 2654,
+      "sha256": "4440750d6b07017d9a6dc2964a3d1d8205f2b3d8bc084b07fceb077e0aa59158"
     }
   ]
 }
