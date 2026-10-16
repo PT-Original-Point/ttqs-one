@@ -4,7 +4,7 @@
   "requirement_id": "I07-E04",
   "official_checkbox_serial": "036",
   "revision": "R12",
-  "status": "CANDIDATE_SEMANTIC_REVIEW_PASS_WITH_INHERITED_VISUAL_SCOPE_NOT_PROMOTED",
+  "status": "CANDIDATE_SEMANTIC_PASS_VISUAL_SUPPLEMENT_PARTIAL_NOT_PROMOTED",
   "candidate_sha256": "e2be3928f96d45bdee6d18762b169c92e7817d10d0c0f87e4854bd16756febbb",
   "candidate_bytes": 229608,
   "source_revision": "R11",
@@ -35,20 +35,12 @@
   "candidate_disposition": "CANDIDATE_ONLY_NOT_PROMOTED",
   "formal_acceptance": "NOT_GRANTED",
   "remote_readback": {
-    "status": "PASS",
-    "verified_commit": "06bec55854c255e5b82c7be6ad2a573d6d6824a3",
-    "manifest_file_count": 45,
-    "manifest_mismatch_count": 0,
-    "candidate_sha256": "e2be3928f96d45bdee6d18762b169c92e7817d10d0c0f87e4854bd16756febbb",
-    "review_sha256": "7cd58f04456820f084621c11062b07db46e38b4b2bf52e93210054e4dffc831d",
-    "render_pdf_sha256": "092e92c70e224287de86b099cb989f4caf97da86d30397f93132990b84ea5bb2",
-    "artifact_manifest_sha256": "da7ed02c43be5445729035a0afda78113d44c5edef18aef15f3d482212a8ee43",
-    "readback_source": "git fetch + exact blob readback from FETCH_HEAD",
-    "scope": "All 45 R12 manifest files, exact candidate, raw independent review and manifest verified; candidate remains not promoted."
+    "status": "PENDING_AFTER_VISUAL_SUPPLEMENT",
+    "scope": "R12 unchanged DOCX, updated PARTIAL visual receipt, manifest and progress require remote readback after push."
   },
-  "artifact_manifest_sha256": "da7ed02c43be5445729035a0afda78113d44c5edef18aef15f3d482212a8ee43",
-  "artifact_file_count": 45,
-  "next_action": "Fresh-read local 0043 R04 exact candidate SHA, current R03 visual/semantic receipts and queue; continue the newest lawful READY lane without changing 0036 R12 bytes.",
+  "artifact_manifest_sha256": "ce9b42f4af1030538885f04d9a13a93a26e270d7d220dffe1a548e281c943ae9",
+  "artifact_file_count": 46,
+  "next_action": "Keep R12 as historical candidate with its exact SHA and PARTIAL visual scope; do not rebuild it. R13 addresses the three findings. Sync the raw supplement and verify remote readback.",
   "flowchart_source_png_sha256": "220219b638b6e240f43aeefc3b4a2d847606f67a34f58cf267dff044a0176e63",
   "flowchart_repaired_png_sha256": "b6d9f07444056e2eb1128fdb83cc7a9df9be2371c7b3c3cb261e0d9dd974e408",
   "render_pdf_bytes": 917504,
@@ -75,5 +67,31 @@
     "instruction_state": "DISCOVERED_AND_APPLICABLE; 0036 R11 finding applied as a targeted R12 diagram-only repair and independently PASS-reviewed; other audit work remains in progress.",
     "automation_prompt_update": "PERSISTED_AND_READ_BACK_PASS",
     "r12_candidate_remote_readback": "PASS for initial 44-file bundle; final review update pending exact GitHub reread."
+  },
+  "historical_remote_readback": {
+    "status": "PASS",
+    "verified_commit": "06bec55854c255e5b82c7be6ad2a573d6d6824a3",
+    "manifest_file_count": 45,
+    "manifest_mismatch_count": 0,
+    "candidate_sha256": "e2be3928f96d45bdee6d18762b169c92e7817d10d0c0f87e4854bd16756febbb",
+    "review_sha256": "7cd58f04456820f084621c11062b07db46e38b4b2bf52e93210054e4dffc831d",
+    "render_pdf_sha256": "092e92c70e224287de86b099cb989f4caf97da86d30397f93132990b84ea5bb2",
+    "artifact_manifest_sha256": "da7ed02c43be5445729035a0afda78113d44c5edef18aef15f3d482212a8ee43",
+    "readback_source": "git fetch + exact blob readback from FETCH_HEAD",
+    "scope": "All 45 R12 manifest files, exact candidate, raw independent review and manifest verified; candidate remains not promoted."
+  },
+  "independent_visual_supplement": {
+    "status": "PARTIAL",
+    "candidate_sha256": "e2be3928f96d45bdee6d18762b169c92e7817d10d0c0f87e4854bd16756febbb",
+    "reviewer_agent_id": "01a14663-df8b-7e03-972e-48b85eda27c8",
+    "review_file": "review/0036_R12_independent_visual_supplement_R01.md",
+    "review_file_local_sha256": "db940a45c280680920a0a9ef9c56a9a06aed6cc831cfd157102a17963bde4bd2",
+    "review_file_git_blob_sha256": "db940a45c280680920a0a9ef9c56a9a06aed6cc831cfd157102a17963bde4bd2",
+    "findings": {
+      "page_15": "exception table continuation lacked repeated column headers",
+      "page_16": "Section 14 case walkthrough continuation lacked repeated headers",
+      "page_17": "handoff form fields too short for source locator and action notes"
+    },
+    "disposition": "R12 DOCX bytes retained unchanged; all three located visual findings targeted in R13; R13 exact-SHA semantic and 19-page visual review PASS for sample artifact."
   }
 }

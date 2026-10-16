@@ -1,0 +1,78 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0036",
+  "requirement_id": "I07-E04",
+  "official_checkbox_serial": "036",
+  "revision": "R13",
+  "status": "CANDIDATE_SAMPLE_SEMANTIC_AND_VISUAL_PASS_NOT_PROMOTED",
+  "candidate_path": "candidate/0036__課程設計進度與訓練規劃_R13.docx",
+  "candidate_sha256": "0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f",
+  "candidate_bytes": 229655,
+  "source_revision": "R12",
+  "source_candidate_sha256": "e2be3928f96d45bdee6d18762b169c92e7817d10d0c0f87e4854bd16756febbb",
+  "official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "render_engine": "Microsoft Word COM export; Poppler rasterization at 144 dpi",
+  "render_pdf_path": "evidence/render_R13_final/0036_R13_word_export.pdf",
+  "render_pdf_sha256": "d05668efb4b9ef3ffa2820b56c0eddd086274e3ae3673ac84035c7ecaa5099a7",
+  "page_count": 19,
+  "page_image_count": 19,
+  "blank_page_count": 0,
+  "technical_review": "PASS_TECHNICAL_ONLY",
+  "changed_docx_package_parts_from_R12": [
+    "word/document.xml"
+  ],
+  "visual_review": {
+    "status": "PASS_LOCAL_DIRECT_VISUAL_19_PAGES",
+    "direct_visual_evidence": "Pages 01-17 in final R13 render are byte-identical to inspected superseded R13 render with same content/layout before appendix-break correction; pages 18-19 directly inspected in final render. All pages 01-17 were directly viewed; R13 flowchart p5 was rechecked.",
+    "page15": "exception table continuation repeats its column header",
+    "page16": "section 14 continuation repeats its column header",
+    "page17": "blank handoff fields expanded and usable; no clipping",
+    "appendices": "A-1 begins on page 18 and A-2 on page 19; no blank page",
+    "findings": "No clipped, overlapped, or unreadable content observed."
+  },
+  "layout_iteration_history": [
+    {
+      "candidate_sha256": "8b0dbd326e2ef13a6b0f7fd9806e913ef563a560a526e72949a48ef61b058cfe",
+      "pdf_sha256": "2c42e3b3ec3282386d5fe90dbbf671a2a1d63bffe3436725a8421cc822963975",
+      "result": "20 pages; p18 blank after form growth; superseded."
+    },
+    {
+      "candidate_sha256": "66a3be2d6f60579b8a8ed93b32248a21336a8eb0d8fd4722050130a8927333f9",
+      "pdf_sha256": "5ab92fc15f01c9bb067c417f9263a6b1b86354d6a6ed64df74f5f6c828b86006",
+      "result": "20 pages; standalone pagebreak still produced blank p18; root cause isolated."
+    },
+    {
+      "candidate_sha256": "0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f",
+      "pdf_sha256": "d05668efb4b9ef3ffa2820b56c0eddd086274e3ae3673ac84035c7ecaa5099a7",
+      "result": "Final 19 pages, no blank; standalone pagebreak removed after form expansion."
+    }
+  ],
+  "semantic_review": {
+    "R12_semantic_status": "PASS_WITH_INHERITED_VISUAL_SCOPE on exact SHA e2be3928f96d45bdee6d18762b169c92e7817d10d0c0f87e4854bd16756febbb",
+    "R12_independent_visual_supplement": "PARTIAL; p15/p16 missing repeated headings and p17 short handoff fields; repaired in R13",
+    "R13_exact_sha_independent_review": "PASS_FOR_SAMPLE_ARTIFACT",
+    "real_checkbox_036_evidence": "NOT_EVIDENCED"
+  },
+  "synthetic_register_rows": 85,
+  "formal_acceptance": "NOT_GRANTED",
+  "candidate_disposition": "CANDIDATE_ONLY_NOT_PROMOTED",
+  "next_action": "Sync stable R13 candidate and independent review to existing PR #92; read back exact remote DOCX and evidence SHA; continue the next legal READY deliverable.",
+  "independent_review": {
+    "status": "PASS_FOR_SAMPLE_ARTIFACT_WITH_DECLARED_SCOPE",
+    "candidate_sha256": "0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f",
+    "review_file": "review/0036_R13_independent_semantic_visual_review_R01.md",
+    "review_file_local_sha256": "baf34c29bf7ff781924378dee1a5c237b5097e75779d430b0688d9b83c531a6f",
+    "review_file_git_blob_sha256": "baf34c29bf7ff781924378dee1a5c237b5097e75779d430b0688d9b83c531a6f",
+    "reviewer_agent_id": "01a1459f-3387-7a52-9608-fa07d7262c24",
+    "real_checkbox_036_evidence": "NOT_EVIDENCED",
+    "formal_acceptance": "NOT_GRANTED",
+    "promotion": "NOT_PROMOTED",
+    "scope": "Independent exact-SHA semantic and direct 19-page visual review; sample quality PASS; no claim of real association approval, execution, authorization, or outcomes."
+  },
+  "artifact_manifest_sha256": "45eae2c938e2a1f2a9deeb5fff022164928c54ce2dcd6ab5ebaa9ee506a80bd6",
+  "artifact_file_count": 110,
+  "remote_readback": {
+    "status": "PENDING_FINAL_READBACK",
+    "scope": "Candidate DOCX, manifest entries, reviewer artifacts, and progress will be read back from the pushed commit."
+  }
+}

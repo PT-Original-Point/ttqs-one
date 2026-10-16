@@ -1,0 +1,62 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0041",
+  "requirement_id": "I09-E01",
+  "official_checkbox_serial": "042",
+  "revision": "R04",
+  "status": "CANDIDATE_SAMPLE_SEMANTIC_PASS_REAL_EVIDENCE_NOT_ESTABLISHED_NOT_PROMOTED",
+  "candidate_path": "candidate/0041_R04.docx",
+  "candidate_sha256": "287c06f989478d31204cb34a0c4ddf66bf9bae8c68e4ad4ff5f90c54421a7b8c",
+  "source_revision": "R03",
+  "source_candidate_sha256": "1bc0337c0328c68a8644cabf3e07d5080e9c2a9d98b19b8881a6db05196cba43",
+  "resolved_finding": "R03 independent review F-02: objective-table handoff-card exercise said three columns while timetable and SYN-HANDOFF-001 register specified four. Corrected the objective row to four columns; no other content claim changed.",
+  "source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "unique_blueprint_row_file_sha256": "f16548ffdb24c0e5022d640f5ec1d72a23f1a63e30338711abd6b757fe322d5e",
+  "requirement_mapping_sha256": "d58c41cccd152f1d8b79e2f659355aa288b7d2cb1c5a05353d4a5597f682e1d6",
+  "synthetic_register": "evidence/SYNTHETIC_REPLACEMENT_REGISTER_R04.csv",
+  "synthetic_register_rows": 43,
+  "synthetic_fact_rows": 41,
+  "context_rows": 2,
+  "synthetic_register_sha256": "3bc9711552bb49d7cb9afdfb51a61242ea6da16f699820d43b8eb2f749a84802",
+  "technical_status": "PASS_TECHNICAL_ONLY",
+  "docx_zip_integrity": "PASS",
+  "changed_zip_parts_from_R03": [
+    "word/document.xml"
+  ],
+  "render_engine": "Microsoft Word COM export, then Poppler rasterization at 144 dpi",
+  "render_pdf": "evidence/render_final/0041_R04_Word.pdf",
+  "render_pdf_sha256": "94195148b2bab34df9d4a8c0e67bd96b000144fad6714e0b711e6c695d66c826",
+  "page_count": 12,
+  "render_page_image_count": 12,
+  "visual_review": {
+    "status": "PASS_LOCAL_DIRECT_DELTA_REVIEW",
+    "pages_01_04_and_06_11": "byte-identical to R03 page renders; all were directly inspected in R03 independent review and local visual review",
+    "page_05": "directly inspected; objective now specifies four-column card, visually intact",
+    "page_12": "directly inspected; only visible revision marker changed to R04; visually intact",
+    "findings": "No clipping, collisions, broken rows, or readability issues detected in the changed page renders. R03 reviewer found all 12 pages legible."
+  },
+  "independent_semantic_review": {
+    "status": "PASS_FOR_SAMPLE_ARTIFACT; REAL_CHECKBOX_042_NOT_ESTABLISHED",
+    "candidate_sha256": "287c06f989478d31204cb34a0c4ddf66bf9bae8c68e4ad4ff5f90c54421a7b8c",
+    "reviewer_agent_id": "01a14663-df8b-7e03-972e-48b85eda27c8",
+    "review_file": "review/0041_R04_independent_semantic_delta_review_R01.md",
+    "review_file_local_sha256": "9627ee97a78d61e1b80be06ba17188e048147c021d0c60fdae937bcccdeeefb0",
+    "review_file_git_blob_sha256": "9627ee97a78d61e1b80be06ba17188e048147c021d0c60fdae937bcccdeeefb0",
+    "finding_F02": "CLOSED: four-column objective now matches timetable and SYN-HANDOFF-001",
+    "finding_F01": "OPEN: four stakeholder views are synthetic; actual consultation/opinions are not evidenced",
+    "finding_F03": "Minor unverified association-name alignment note retained",
+    "real_checkbox_042_evidence": "NOT_ESTABLISHED_BY_THIS_CANDIDATE",
+    "formal_acceptance": "NOT_GRANTED",
+    "promotion": "NOT_PROMOTED",
+    "visual_scope": "Bounded direct page 5 and 12 supplement; full R03 page review inherited for unchanged pages, not a new full R04 audit."
+  },
+  "candidate_disposition": "CANDIDATE_ONLY_NOT_PROMOTED",
+  "formal_acceptance": "NOT_GRANTED",
+  "next_action": "Sync exact R04 candidate and independent review to existing PR #92; continue next legal READY deliverable. Real stakeholder evidence remains outstanding and must not be represented as actual.",
+  "artifact_manifest_sha256": "27773220552391dd4dc2a69383974a591a05c613827bc74922440eff073805be",
+  "artifact_file_count": 24,
+  "remote_readback": {
+    "status": "PENDING_FINAL_READBACK",
+    "scope": "Candidate DOCX, manifest entries, reviewer artifacts, and progress will be read back from the pushed commit."
+  }
+}

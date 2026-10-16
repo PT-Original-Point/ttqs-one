@@ -41,3 +41,8 @@ R12 exact-SHA 獨立語意審查為 PASS（指定範圍；第5頁直接目視，
 - 第5頁兩個「否」修訂分支各自回到正確核對/設計節點；方向、可讀性和授權 fail-closed 條件通過，沒有遮字、裁切或放行旁路。
 - 本次只直接目視第5頁；其他18頁與R11逐像素相同，沿用R11審查鏈，沒有宣稱重新目視全部19頁。
 - PASS 僅是此候選 SHA 的獨立語意審查結論；仍未正式接受或升格。
+
+
+## 2026-10-17 independent visual supplement
+
+A full 19-page direct visual supplement bound to the unchanged R12 SHA found PARTIAL: p15 and p16 table continuation headers were missing, and p17 handoff write-in space was short. The exact findings are preserved in `review/0036_R12_independent_visual_supplement_R01.md`. R12 bytes remain unchanged; targeted fixes are in R13, whose independent exact-SHA sample-artifact review passed. R12 is historical and not promoted.

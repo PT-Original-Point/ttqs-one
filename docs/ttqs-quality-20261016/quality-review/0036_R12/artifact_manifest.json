@@ -4,9 +4,9 @@
   "requirement_id": "I07-E04",
   "official_checkbox_serial": "036",
   "revision": "R12",
-  "status": "CANDIDATE_ONLY_NOT_PROMOTED",
+  "status": "CANDIDATE_SEMANTIC_PASS_VISUAL_SUPPLEMENT_PARTIAL_NOT_PROMOTED",
   "candidate_sha256": "e2be3928f96d45bdee6d18762b169c92e7817d10d0c0f87e4854bd16756febbb",
-  "file_count": 45,
+  "file_count": 46,
   "files": [
     {
       "path": "build/patch_0036_R12_flowchart_loopbacks_R01.py",
@@ -180,13 +180,18 @@
     },
     {
       "path": "README.md",
-      "bytes": 3557,
-      "sha256": "8324704858b1d9539857dbd1b0b43ead0c23d3bb1d699b90e9f9289ffb9dae80"
+      "bytes": 4027,
+      "sha256": "b44106fdd6708ac6b68dc3143b938020b7c263ec07d9e8de6e63874a13b5f039"
     },
     {
       "path": "review/0036_R12_independent_semantic_review_R01.md",
       "bytes": 3197,
       "sha256": "7cd58f04456820f084621c11062b07db46e38b4b2bf52e93210054e4dffc831d"
+    },
+    {
+      "path": "review/0036_R12_independent_visual_supplement_R01.md",
+      "bytes": 8794,
+      "sha256": "db940a45c280680920a0a9ef9c56a9a06aed6cc831cfd157102a17963bde4bd2"
     },
     {
       "path": "review/0036_R12_targeted_repair_receipt_R01.json",
@@ -234,5 +239,5 @@
       "sha256": "408d5ce9659006862ea6301c3bd9d0f8abeb6f683b85a8224b9e194baa7528c1"
     }
   ],
-  "manifest_note": "Canonical Git blob bytes; CRLF normalized to LF for text. PROGRESS.json and artifact_manifest.json are excluded; commit records their state."
+  "manifest_note": "SHA-256 and byte counts use canonical Git blob bytes (CRLF normalized to LF for text files). PROGRESS.json and artifact_manifest.json are excluded to avoid circular hashing; the Git commit binds both."
 }
