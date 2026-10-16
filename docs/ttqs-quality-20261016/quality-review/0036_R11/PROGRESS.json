@@ -45,11 +45,18 @@
   "candidate_disposition": "CANDIDATE_ONLY_NOT_PROMOTED",
   "formal_acceptance": "NOT_GRANTED",
   "remote_readback": {
-    "status": "PENDING_AFTER_REVIEW_RECEIPT_UPDATE",
-    "previous_verified_commit": "99e252ad31e05e3809d49ad4df3093c0397163f7",
-    "readback_required": "Fetch pushed branch and verify each current manifest blob, R11 DOCX SHA, and raw reviewer receipt SHA."
+    "status": "PASS",
+    "verified_commit": "d08a0569d4217b515e47cf11031a6daa6951213b",
+    "manifest_file_count": 38,
+    "manifest_mismatch_count": 0,
+    "candidate_sha256": "1e08913a7e330fcbd52f50645138f97b8c951022ef69bc5bd1ee3d2971c9a7c7",
+    "candidate_bytes": 228667,
+    "review_sha256": "d21e9ac50f4d6da170eec18d03f2fb2852a345dfaaa7578da2f1505c871f60ea",
+    "artifact_manifest_sha256": "9d7d1dd73b20cafc0121d0aa7879b7843de79cf87bf9bbebdca58363d1552ed7",
+    "readback_source": "git fetch + exact blob readback from FETCH_HEAD",
+    "scope": "R11 candidate unchanged; review, prompt-readback receipt, README, manifest and all 38 manifest files verified."
   },
-  "artifact_manifest_sha256": null,
+  "artifact_manifest_sha256": "9d7d1dd73b20cafc0121d0aa7879b7843de79cf87bf9bbebdca58363d1552ed7",
   "artifact_file_count": 38,
   "previous_remote_readback": {
     "status": "PASS",
