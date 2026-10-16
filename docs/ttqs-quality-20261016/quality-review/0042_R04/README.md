@@ -11,7 +11,7 @@
 候選 DOCX SHA-256：42c03b05b887532c2a7b7695ca6866fa5552c8ba65a6a1ab4d1c0bd17e58be10
 來源 branch/head：work/ttqs-one-document-quality-contract-20261016 / 865216179ea357ddf2b2e944f6246c912dbf9219
 
-完成狀態：技術封裝檢查 PASS；Word 原生 PDF 全頁視覺檢查 PASS（14/14 頁逐頁檢視，收據見 evidence/visual_layout_receipt_R04.json）；獨立 exact-SHA 語意審查待完成。不得據此宣稱正式接受或真實 TTQS 證據。
+完成狀態：技術封裝檢查 PASS；Word 原生 PDF 全頁視覺檢查 PASS（14/14 頁逐頁檢視，收據見 evidence/visual_layout_receipt_R04.json）；獨立 exact-SHA 語意及14頁視覺複核 PASS（僅限 SAMPLE/SYNTHETIC 候選品質；原始回覆與收據見 review/independent_semantic_visual_review_R04.md、evidence/independent_review_receipt_R04.json）。真實方框043證據仍 NOT EVIDENCED；Human 最終接受與正式核准均未發生。不得據此宣稱正式接受或真實 TTQS 證據。
 
 
 R04 修復 R03 第15頁僅有狀態句的孤立尾頁：狀態提示已移至首頁，正文及合成事實未因版面收據而另行重建。
