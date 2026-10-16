@@ -1,13 +1,16 @@
 {
   "project_id": "TTQS_ONE",
   "doc_id": "0036",
-  "requirement_id": "I07-E04",
-  "official_checkbox_serial": "036",
   "revision": "R09",
-  "status": "CANDIDATE_ONLY_NOT_PROMOTED",
   "candidate_sha256": "91d749d00b153227bb3db67a60c552c0e17fa2b5364c799dee7de6bf69117815",
-  "file_count": 34,
+  "manifest_scope": "All staged GitHub blob files in this bundle except artifact_manifest.json and PROGRESS.json; PROGRESS is a separately read-back mutable status record.",
+  "hash_method": "SHA-256 over exact Git index blob bytes (after Git line-ending normalization where applicable).",
   "files": [
+    {
+      "path": "README.md",
+      "bytes": 3597,
+      "sha256": "53c3fe066acf9c789f9de9117548601711ef0b8ab517cb50940f8caede7b7bb2"
+    },
     {
       "path": "candidate/0036__課程設計進度與訓練規劃_R09.docx",
       "bytes": 228271,
@@ -149,9 +152,9 @@
       "sha256": "bf9ec339f93a0a13b59f2cd87cc9cd8fbef905038034af2ffe3b2104e4b7d31b"
     },
     {
-      "path": "README.md",
-      "bytes": 3597,
-      "sha256": "53c3fe066acf9c789f9de9117548601711ef0b8ab517cb50940f8caede7b7bb2"
+      "path": "review/0036_R09_independent_semantic_review_R01.md",
+      "bytes": 3625,
+      "sha256": "e72ad2979a12bae0931b6dcc2323386b567a78f1d814be88af80b8e7fa0461a4"
     },
     {
       "path": "review/0036_R09_layout_patch_receipt_R01.json",
@@ -178,6 +181,5 @@
       "bytes": 6767,
       "sha256": "5d6f7028b245dca1c4436732a1398e399708aa50b72a06fae7bb8dd2e119993e"
     }
-  ],
-  "manifest_note": "File sizes and SHA-256 values record canonical Git blob bytes. For text files, CRLF is normalized to LF to match GitHub blob storage. PROGRESS.json and artifact_manifest.json are excluded to avoid a circular digest; the Git commit binds both."
+  ]
 }
