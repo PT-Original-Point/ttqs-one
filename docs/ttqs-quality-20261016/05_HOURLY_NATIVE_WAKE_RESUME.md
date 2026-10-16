@@ -22,6 +22,31 @@
 
 ---
 
+## 0B. 2026-10-16 七小時無交付：同對話排程失去工作活性之修復
+
+Human 當日提供的 Codex 畫面/回報顯示：Scheduled task ID = ttqs-one-hourly-quality-goal-resume，target thread = 01a14098-b269-79e3-b07c-56e96557fe07，設定 ACTIVE / HOURLY；但先前 smoke = NOT_TESTED，Codex 自己表示「同一對話的排程等待目前回合結束」，Windows 舊 TTQS_ONE_Codex_Supervisor 則是 Disabled。此為 HUMAN-PROVIDED OBSERVATION，不是直接 Windows 現場讀回。GitHub PR #92 最後內容更新約為 2026-10-16 01:38 Asia/Taipei，並不能證明之後本機 DOCX 沒有變化。
+
+**禁止把排程設定 ACTIVE 當成長時 Worker 已在執行**。Codex 須先查 Scheduled「近期執行」的 start/end/status/error、每小時預定觸發時段、Windows OS process/Task Scheduler、0031 候選與 QA 的檔案 mtime+SHA、最後一個實質工作變化時間，據此判定：
+- NO_SCHEDULED_TURN：排程根本沒有觸發；找精確原因（同 thread 活躍、app 沒運作、PC 睡眠、task paused、工具審批等）。
+- TURN_STARTED_NO_WORK：排程進入但沒有開任何合法 READY 工作，查來源、Sandbox 路徑、OS owner、舊 pause 與 prompt，勿自報完成。
+- WORKER_ALIVE_NO_DELTA：程序真正存活但長時沒有實質工作；查正在等 I/O、CLI model、配額/人工批准。不可從一個標記直接推定死鎖。
+- WORK_COMPLETED_LOCAL_ONLY：本機確有新的 DOCX/QA，可讀回 exact SHA；GitHub 未上傳不代表本機沒工作。
+
+### 同對話排程的受限情境
+
+若**有證據**顯示目前對話長時間處於 active turn，造成 hourly in-thread task 過了至少一個應執行時段仍無新回合：**不要再次建立另一個同對話 hourly 排程**。先使用 Codex 原生 Scheduled 管理功能**暫停/停用**原本的 thread 綁定 task，讀回確定它不再會重複派工。接著，在相同可存取 E:\TTQS 實際 DOCX 的本機專案下，使用一個**standalone scheduled task**，每 60 分鐘產生獨立 run/thread；它每次 fresh-read repo 本契約/正式 Source/OS Worker/Queue/Pending effects，不依賴前一個 GUI 長回合完成，也不靠 Chat 記憶推論施工狀態。
+
+- standalone task 的 prompt 必須含 project_id、精確 repo/ref、工作目錄、目前 GOAL 規格、唯讀 L0 preflight、只接續 READY、單 Writer 與 fail-closed 外部效果確認、只在可信完成時停止、確切產物與回報欄位。
+- Codex Scheduled 若只能選隔離 worktree，必須現場證明它可實際讀寫受權限保護的 E:\TTQS 工件；否則不能假稱能繼續 Word 生產。若限制無法突破，**改走本機已存在的 Windows Task Scheduler**，以確定性 L0 偵測與官方 CLI/原生 Worker 做分工；任一時刻只有一個 hourly dispatch owner。
+- 原生 scheduled task 每個觸發本身可能花費模型額度；若需要「無差異完全零模型呼叫」，使用 Windows OS 的 deterministic L0 作唯一每小時觸發，僅 READY/故障需續工時再喚醒模型。
+- 如果原同一對話**真的還有活躍的 writer**，獨立 task 只能偵測，不得直接再開第二個 writer；一切以 Windows 真正 OS 存活、工作 ID/寫入 owner/檔案變更/外部效果為證。
+- 以官方 Scheduled 近期執行頁或 Task Scheduler 原生結果做**真實 scheduled smoke**：不僅設定 ACTIVE，要觀察至少一個定時執行事件，有開始/結束時間、同來源來源 readback、0031 或其他 READY 的 bounded 工作證據。無法做 Run now 就等下一次真實觸發；不得為了通過煙測竄改官方完成數。
+- 原先卡住的對話要先確認是否有未結外部寫入/正工作的 worker，之後才合法終止或結束該 GUI turn；避免丟失尚未持久化的成果。
+
+**驗收失敗修正條件**：每一小時至少要留下原生觸發讀回；存在合法 READY 且沒有活躍 worker 的情況，必須有真正 worker resume 與文件/QA delta 或精確失敗原因。只呈現「已排程、正在思考」一律 PARTIAL/UNKNOWN，不得 PASS。
+
+---
+
 ## 1. Windows 備援：重用舊排程，不允許雙主
 
 2026-10-05 GitHub 歷史 WORKLOG（不是本次 LIVE）記載曾有 Windows Task Scheduler 任務 TTQS_ONE_Codex_Supervisor；某次觀測為 Disabled、Hidden=true、Principal=J，Action 為 wscript.exe //B //NoLogo，透過 supervisor_hidden_launcher.vbs 執行有限的一個 supervisor turn（--max-docs 1）。先做 Windows fresh readback：舊名字、Action、Principal、Triggers、Settings、LastRunTime、LastTaskResult、Enabled、目前實際工作程序、其他 TTQS 排程、BUILD_QUEUE、CURRENT 和 Writer owner。不得把 10/05 歷史狀態冒充現在狀態。
