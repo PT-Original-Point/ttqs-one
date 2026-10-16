@@ -38,3 +38,10 @@ Technical, rendering, pagination, and register-binding receipts are builder evid
 ## Acceptance boundary
 
 A semantic PASS, if returned and verified against the exact SHA, establishes only an independent candidate review. It does not promote the document, establish real association records, or grant formal Human acceptance. On material failure, repair only the cited defect in 0043 and re-review the resulting exact SHA. Do not rebuild for control metadata alone.
+## Independent semantic review result
+
+Antigravity CLI returned `SUCCESS` with process exit code 0 after 710.862 seconds. Its read-only review is bound to the exact R04 SHA above, reports `PASS`, passes all 9 criteria, has zero findings and zero arithmetic discrepancies, and lists all pages 1-17 as inspected. The wrapper receipt confirms the DOCX SHA did not change and the frozen input packet did not change. The runtime model identity was not returned; only the requested model is evidenced. The CLI response reported 350,812 total tokens.
+
+The response also says the loose register and Blueprint were not mounted separately. The frozen packet manifest and invocation show both files were available in the `inputs/` directory added to the CLI. Because availability does not prove the reviewer opened them, a separate crosswalk records every one of the 247 synthetic facts: 193 normalized text matches and 54 table/formula/context matches, with no unresolved rows. The official source row is exact and labeled `NOT ASSOCIATION EVIDENCE`. The frozen R01 register and corrected R04 register are identical except the candidate-binding SHA, updated in all 248 rows. The current Blueprint confirms 0042→I09-E02, 0043→I09-E03, and 0044→I09-E04.
+
+R04 remains `CANDIDATE / NOT_PROMOTED`; the independent PASS does not assert real association interviews, approval, or formal Human acceptance. This Antigravity invocation completed without error. The user's three-error/three-correction outsourcing stop rule is not triggered.
