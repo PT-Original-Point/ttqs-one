@@ -1,0 +1,39 @@
+{
+  "project_id": "TTQS_ONE",
+  "goal_thread_id": "01a14098-b269-79e3-b07c-56e96557fe07",
+  "source_repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "source_command_path": "docs/ttqs-quality-20261016/06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md",
+  "historical_anchor_commit": "92d3d97acbd3c0a8c4dcad66e66468f5cafc3536",
+  "live_branch_head_verified_before_build": "688ffdd76623798912bcdd5b4925a2f69c40b088",
+  "source_command_blob_sha": "70449889fd464106fe204496004bee13018d4a51",
+  "DISCOVERED": {
+    "status": "PASS",
+    "evidence": "Full current 06 command read from GitHub at verified live head; exact blob SHA recorded."
+  },
+  "APPLICABLE": {
+    "status": "PASS",
+    "evidence": "Human-authorized reversible candidate QA/sync; no formal acceptance or protected source change."
+  },
+  "APPLIED": {
+    "status": "PARTIAL",
+    "evidence": "0047 R04-R06 layout defect was isolated; R06 candidate and exact-SHA visual/technical evidence created. 0036 visual supplement and latest 0043 reconciliation remain outstanding."
+  },
+  "VERIFIED": {
+    "status": "PARTIAL",
+    "evidence": "R06 exact candidate SHA rendered and all seven pages directly inspected; no independent semantic verdict yet; this does not verify the entire 06 command."
+  },
+  "BLOCKED": {
+    "status": "NONE_FOR_0047_LAYOUT",
+    "evidence": "No current layout blocker; semantic independent review is in progress."
+  },
+  "candidate_sha256": "be27651b17ac2759b6eab5391fb330df6b68a978d41c47fe618fef9f3a6c0976",
+  "automation": "Existing automation unchanged: ttqs-one-hourly-quality-goal-resume; no second scheduler created.",
+  "scope_remaining": [
+    "Independent semantic review of 0047 R06 exact SHA",
+    "0036 R08/R12 visual-scope reconciliation without rebuilding R08",
+    "Fresh latest-state reconciliation and recovery of 0043",
+    "Other named stable candidates and remaining 06 findings"
+  ],
+  "candidate_state": "CANDIDATE_ONLY_SAMPLE_SYNTHETIC_NOT_HUMAN_ACCEPTED"
+}

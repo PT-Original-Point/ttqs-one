@@ -1,0 +1,50 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0047",
+  "requirement_id": "I10-E02",
+  "checkbox_sequence": 48,
+  "candidate_sha256": "b8cc8e4473e9cd7ad93f21c0cb9503865e683e3b802ac70577fbd8db3524d447",
+  "review_status": "PASS_SEMANTIC_ONLY",
+  "review_response_sha256": "8b322f0fb3e37e8a58026efde20a5fe05c884288c89ac408ad8eb292617715a1",
+  "cli_receipt_sha256": "a293cebf01a14225cf11d60e45b3ada6e61395b4e7e0b80e33ce777c59390606",
+  "official_neighbor_boxes_readback": {
+    "source_inventory_sha256": "0db907ef0173d4addacc53fbe2982e12555bc3e7a7c844e2e3033be892c9578a",
+    "source_blueprint_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+    "verified_rows": {
+      "P03-B07": {
+        "page": 3,
+        "page_checkbox_order": 7,
+        "extracted_block": "其他： \n10.訓練資源的\n採購程序及\n甄選標準 \n展現課程設計時，\n有適當的流程進行\n師資（含內部講\n師）、教材或合格\n廠商評估選擇。 \n流程應有適當辦法\n進行評估、採購、\n簽約及後續管理作\n業。",
+        "other": true
+      },
+      "P03-B09": {
+        "page": 3,
+        "page_checkbox_order": 9,
+        "extracted_block": "相關文件能 記錄近年來對於課\n程之評估、採購、簽約 與後續\n管理作業的檢討及改善。",
+        "other": false
+      },
+      "P03-B10": {
+        "page": 3,
+        "page_checkbox_order": 10,
+        "extracted_block": "大型採購均辦理會議通過、師\n資遴聘後亦經過會議或審查通\n過並留有紀錄。",
+        "other": false
+      }
+    }
+  },
+  "cross_checks_by_local_integrator": {
+    "candidate_sha_recomputed_after_review": "PASS",
+    "R08_visual_technical_QA": "PASS; all 8 page PNGs directly inspected locally; this is not an independent reviewer pixel audit",
+    "reviewer_exact_sha_scope": "PASS_WITH_LIMITATION; report quotes exact SHA supplied in the packet; reviewer did not hash binary",
+    "0045_P03_B07_and_0048_P03_B10": "PASS; verified against official source checkbox inventory SHA above",
+    "reviewer_scope_limit_preserved": "PASS; no claim of independent pixel/font/source-PDF review",
+    "formal_acceptance": "NOT_CLAIMED"
+  },
+  "independent_review_nonblocking_observations": [
+    "same fulfillment metric uses several Chinese labels; reviewers found mapping inferable but terminology varies",
+    "short criterion labels and longer criterion labels are not explicitly keyed in the body",
+    "the >=4.00 but incomplete threshold branch is described but not exercised by the two sample cases",
+    "only two synthetic years are shown; they are not represented as actual association years",
+    "reviewer says register fact keys are external sidecar rather than embedded in report body"
+  ],
+  "disposition": "No material FAIL/PARTIAL finding. Retain R08; do not rebuild for non-blocking observations. Formal association acceptance remains separate."
+}
