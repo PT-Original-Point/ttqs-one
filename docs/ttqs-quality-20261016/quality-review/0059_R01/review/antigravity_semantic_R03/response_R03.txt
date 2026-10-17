@@ -1,0 +1,56 @@
+```json
+{
+  "candidate_sha256": "0263017F16D81B1121BB97410DE9895B43B7A42F75632BF71A82B86426FBC2B0",
+  "reviewed_packet_sha256": "936E3011C867A422CC1313AE0137A1C8D2C793AC1DB5523858D85D43DD5F4587",
+  "verdict": "PASS",
+  "subchecks": {
+    "requirement_fit": "PASS",
+    "genre_and_separation": "PASS",
+    "operational_usability": "PASS",
+    "completeness": "PASS",
+    "sample_real_boundary": "PASS",
+    "numerical_consistency": "PASS",
+    "cross_document_separation": "PASS",
+    "readability": "PASS"
+  },
+  "findings": [
+    {
+      "category": "Formal Mapping & Identification",
+      "locator": "封面與文件識別表、第一章 1.1–1.2、第二章 2.1–2.4",
+      "assessment": "PASS",
+      "details": "正確建立 DOCX 0059 = I13-E03 = 官方勾選單序號 063（訓練機構版第 4–5 頁）。明確區隔勾選單 060（未命名 Other 項目，封鎖中）、0057（I13-E01 / 061 宏觀移轉檢討）、0058（I13-E02 / 062 個人行動與團隊績效）及 0056（I12-E04 / 059 設施設備）。官方逐字引文完整對照，負鄰決策測試清楚具體。"
+    },
+    {
+      "category": "Four Mechanisms Completeness",
+      "locator": "第三章至第七章、附錄 A",
+      "assessment": "PASS",
+      "details": "四項機制完整拆分且具備獨立運作架構：(A) 回訓／技能更新：受邀 18 人、主場出席 15 人（83.3%）、課後評量全數通過（15/15，≥8/10），3 人缺席提供補課選項並標記 HOLD；(B) 心得交流平台：投稿 12 篇、審查通過並去識別化上架 8 篇（66.7%）、退件 4 篇（2 篇缺同意書、2 篇含可識別個資），提供具體節錄與退件處置；(C) 證照登記與查證：受理 18 件申報，12 件完成情境內部比對步驟（SIM，66.7%），6 件待補僅列學員自述，嚴格聲明無真實外部連線或發證單位回覆；(D) 監督式模擬實作：10 人參與首測，8 人通過（80.0%），2 人補強重測（1 人重測通過、1 人持續 HOLD），明確界定為模擬情境演練，絕非 REAL 實習或法定安置，並以 7.2.2 檢核表將實習放行標記為 HOLD。"
+    },
+    {
+      "category": "Questionnaire Design & Timing",
+      "locator": "第八章 8.1–8.9",
+      "assessment": "PASS",
+      "details": "問卷施測時點設定為 113/12/01–12/08（所有機制完成後），修復了初稿時序矛盾。具備 Q0 知情同意、1–5 分量表錨點、跳題邏輯（未參與者選 N/A，不列入題項分母）、15 份逐人完整作答矩陣。計算方式透明，Q1–Q4 有效題項合併平均為 209/51 = 4.1，Q5–Q8 遷移自評為 228/60 = 3.8，Q9–Q10 為 120/30 = 4.0。嚴格聲明自評非能力測量，不作因果推論。"
+    },
+    {
+      "category": "Skill Rubric & Scoring Rules",
+      "locator": "第七章 7.3–7.6、第九章 9.1–9.5",
+      "assessment": "PASS",
+      "details": "規準涵蓋五大行為錨定構面（流程正確性、問題辨識、工具表單、溝通記錄、安全隱私），採 0–3 分量表。滿分 15 分，門檻 ≥11 分（15 × 70% = 10.5），且安全與隱私構面不得為 0 分。首測逐人分數（S-07 至 S-16）及各構面總分平均（2.2, 2.2, 2.0, 2.3, 2.9，總平均 2.3/3）完全一致。重測（S-15, S-16）獨立記錄，重測合格者未混入首測分母。"
+    },
+    {
+      "category": "Arithmetic & De-duplication Consistency",
+      "locator": "第三章 3.4、第十章 10.1–10.6、第十二章 12.7",
+      "assessment": "PASS",
+      "details": "跨機制人去重邏輯嚴謹：實質參與為回訓出席（S-01～S-15）、心得投稿（S-03～S-14）、模擬實作（S-07～S-16）之聯集，共計 16 人（S-01～S-16）。S-17 與 S-18 僅申報證照，排除於實質參與分子之外。實質參與率 16/18 = 88.9%，名冊旗標與跨機制分子分母、比率計算 100% 驗算相符。"
+    },
+    {
+      "category": "SAMPLE/REAL Boundary & Governance",
+      "locator": "第十一章 11.1–11.2、第十二章 12.1–12.5、附錄 B",
+      "assessment": "PASS",
+      "details": "案件標註為獨立合成案例 SAMPLE-SYN-113，不與 0057/0058 共享事實。改善決策（IMP-01～IMP-05）全數明確標記為 NOT ADOPTED 提案；REAL 替換地圖與附錄 B 登記表完整定義所需真實原件、查證者、授權與個資最小化條件，目前全數列為 HOLD／UNKNOWN，未發生虛構外部原件或冒充核准情事。無非法待填/待核殘留。"
+    }
+  ],
+  "limitations": "本審查僅就候選 DOCX 之純文字抽取內容（Extracted UTF-8 text SHA-256: 7B1F9729BCECB5EB825F7F3946C32C469649308615D768A8035CCDE24836BE3C）進行語意、法規要求、文體規格、運作機制、數據算術與證據邊界之獨立靜態審查。文字審查不代表 Word COM 排版引擎之視覺版面、分頁換行、頁眉頁腳或列印渲染結果之驗收；視覺版面驗證由品保與產出流程另行負責。"
+}
+```
