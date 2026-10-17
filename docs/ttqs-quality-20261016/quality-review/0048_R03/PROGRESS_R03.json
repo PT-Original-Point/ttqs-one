@@ -29,16 +29,17 @@
   "sample_boundary": "SAMPLE/SYNTHETIC only; no actual procurement meeting, vote, approval, appointment, signature, qualification, or third-party original asserted.",
   "formal_acceptance": "NOT_GRANTED",
   "promotion": "NOT_PROMOTED",
-  "updated_at_taipei": "2026-10-17T17:22:06+08:00",
-  "next_action": "Push the corrected six text hash bases and verify all 31 manifest entries from the new remote head; then continue the next lawful READY document without rebuilding this candidate.",
+  "updated_at_taipei": "2026-10-17T17:26:09+08:00",
+  "next_action": "Preserve this exact candidate and review; continue the next lawful READY document without rebuilding 0048 R03.",
   "remote_readback": {
-    "status": "PENDING_CORRECTED_MANIFEST_REMOTE_READBACK",
-    "observed_commit": "408648bae3a9f516a1201d75e51dadc76f0e903c",
+    "status": "PASS_EXACT_REMOTE_PACKAGE_READBACK",
+    "verified_commit": "f7d89dd305168d54f22a6984095b45f202c47983",
     "manifest_file_count": 31,
-    "pre_correction_readback": "25/31 entries matched raw bytes; remaining 6 text entries matched local and remote after LF normalization, with no content delta.",
-    "metadata_correction": "The six text entries now declare text_lf and normalized SHA-256; bytes retain local raw byte lengths. DOCX and review result are unchanged.",
+    "verified_artifact_count": 31,
+    "manifest_mismatch_count": 0,
     "candidate_sha256": "d029d291425447f20d59cb54b9a30190cd8ac0621041d2233b4a1bb8d081cc39",
     "independent_review_result_sha256": "42285397a5a44c174e6724d1a1214948763ab0b35b0bd2c1a1fd95a5aa3ff3f2",
-    "scope": "Awaiting push and exact remote readback of the corrected 31-entry package."
+    "readback_source": "Fetched live PR branch and re-read every manifest entry; raw entries matched exact bytes and text_lf entries matched LF-normalized SHA-256.",
+    "scope": "All 31 package entries verified at the recorded commit; candidate DOCX and independent review bytes unchanged. SAMPLE/SYNTHETIC candidate only; no formal acceptance."
   }
 }

@@ -56,7 +56,7 @@
   "synthetic_register_rows": 85,
   "formal_acceptance": "NOT_GRANTED",
   "candidate_disposition": "CANDIDATE_ONLY_NOT_PROMOTED",
-  "next_action": "Verify both corrected 0054 manifests and exact DOCX/reviewer hashes from GitHub; then continue next READY item.",
+  "next_action": "Confirm current Writer owner and authoritative legal READY queue; if no active Writer, continue the first eligible unfinished requirement and preserve exact-SHA review evidence.",
   "independent_review": {
     "status": "PASS_FOR_SAMPLE_ARTIFACT_WITH_DECLARED_SCOPE",
     "candidate_sha256": "0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f",
@@ -130,12 +130,12 @@
       "F01": {
         "discovered": "PASS",
         "applied": "PASS_R08_R02_INSPECTED_ALL_19_PAGES_AND_FOUND_TWO_PAGE5_RETURN_ARROWS_MISSING",
-        "verified": "PASS_LATER_R13_EXACT_SHA_AND_19_PAGE_REVIEW; R13_PAGE5_DIRECTLY_READ; NO_R08_REBUILD"
+        "verified": "PASS_CURRENT_R13_EXACT_SHA_0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f; independent semantic and direct 19-page visual review; page 5 flowchart inspected; R08 bytes preserved."
       },
       "F02": {
         "discovered": "PASS",
-        "applied": "IN_PROGRESS_SYNCING_0054_R13_AND_R14_STABLE_PACKAGE",
-        "verified": "PARTIAL_FIRST_READBACK_36_OF_37; only full-text source extraction line-ending basis metadata corrected in follow-up"
+        "applied": "PASS_SYNCED_0054_R13_R14_PACKAGE_STATUS_AND_CORRECTED_0048_R03_SIX_LF_HASH_BASE_ENTRIES; DOCX bytes unchanged.",
+        "verified": "PASS_REMOTE_READBACK_AT_F7D89DD: 0048_R03 31/31; 0054_R13 37/37; 0054_R14 37/37 manifest entries; exact candidate SHA values preserved."
       },
       "F04": {
         "discovered": "PASS",
@@ -143,7 +143,15 @@
         "verified": "PASS_LOCAL_AND_REMOTE_DOCX_SHA_MATCH; formal acceptance not granted"
       }
     },
-    "overall_state": "APPLIED_REMOTE_READBACK_METADATA_CORRECTION_PENDING",
-    "next_action": "Verify both corrected 0054 manifests and exact DOCX/reviewer hashes from GitHub; then continue next READY item."
-  }
+    "overall_state": "APPLIED_AND_VERIFIED_REMOTE_READBACK; NO_DOCX_REBUILT_FOR_METADATA",
+    "next_action": "Confirm current Writer owner and authoritative legal READY queue; if no active Writer, continue the first eligible unfinished requirement and preserve exact-SHA review evidence.",
+    "latest_github_head_verified": "f7d89dd305168d54f22a6984095b45f202c47983",
+    "pr_92_readback": {
+      "state": "OPEN_DRAFT_NOT_MERGED",
+      "head_sha": "f7d89dd305168d54f22a6984095b45f202c47983",
+      "repository": "PT-Original-Point/ttqs-one",
+      "branch": "work/ttqs-one-document-quality-contract-20261016"
+    }
+  },
+  "updated_at_taipei": "2026-10-17T17:26:09+08:00"
 }
