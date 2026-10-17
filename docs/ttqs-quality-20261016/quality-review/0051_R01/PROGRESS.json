@@ -1,0 +1,54 @@
+{
+  "project_id": "TTQS_ONE",
+  "goal_thread_id": "01a14098-b269-79e3-b07c-56e96557fe07",
+  "command_ingestion": {
+    "command": "TTQS_ONE_INSTALL_PERSISTENT_GITHUB_COMMAND_INGESTION",
+    "initial_command_commit": "92d3d97acbd3c0a8c4dcad66e66468f5cafc3536",
+    "source_file": "docs/ttqs-quality-20261016/06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md",
+    "source_blob_sha": "70449889fd464106fe204496004bee13018d4a51",
+    "live_head_at_discovery": "47addb1e25a601a23b8e774f20cc0779626ace25",
+    "states": {
+      "DISCOVERED": "PASS",
+      "APPLICABLE": "PASS",
+      "APPLIED": "PASS_FOR_CURRENT_ACTIONS",
+      "VERIFIED": "PENDING_REMOTE_READBACK"
+    },
+    "basis": "Direct Human authorization in the user-provided command; limited to the existing reversible candidate-document Goal and PR #92."
+  },
+  "automation": {
+    "id": "ttqs-one-hourly-quality-goal-resume",
+    "enabled": "ACTIVE",
+    "interval": "HOURLY",
+    "thread_id": "01a14098-b269-79e3-b07c-56e96557fe07",
+    "workspace": "E:\\TTQS",
+    "persistent_preflight_marker_present": "YES_ALREADY_PERSISTED",
+    "prompt_update_this_turn": "NO_CHANGE_NEEDED_EXISTING_PROMPT_CONTAINS_PREFLIGHT_AND_INGESTION_RULES",
+    "native_readback": "Previously read from native automation source; no schedule mutation made in this execution.",
+    "real_scheduled_wake_test": "UNKNOWN",
+    "next_scheduled_run": "UNKNOWN",
+    "duplicate_schedulers": "0 additional active schedulers; standalone paused and Windows supervisor disabled per prior readback"
+  },
+  "preflight_functional_test": {
+    "result": "PASS",
+    "checked_live_pr_head_and_full_06_source": true,
+    "deduplicated_against_existing_finding_and_work_evidence": true,
+    "actual_document_work_resumed": "0051 R01 exact-SHA review and package closeout"
+  },
+  "document": {
+    "doc_id": "0051",
+    "revision": "R01",
+    "unique_blueprint": "I11-E03",
+    "official_checkbox": "053",
+    "candidate_sha256": "6f575ebb41c6c26b4d6b36262fb4d9a5abdae53cbdc1ff4e75acda46d5f0b495",
+    "candidate_bytes": 56098,
+    "state": "CANDIDATE_ONLY_SAMPLE_SYNTHETIC",
+    "technical_visual_qa": "PASS",
+    "independent_semantic_review": "PASS_EXACT_DOCX_SHA_14_OF_14",
+    "current_register_sha256": "57da26117ebaf3a517af4fe040d54661ca1021faa1202d19d651b3a51866f707",
+    "register_locator_correction": "PASS_DETERMINISTIC; register-only change, not in primary semantic review scope",
+    "remote_sync": "PENDING_GITHUB_PUSH_AND_READBACK"
+  },
+  "human_acceptance": "NOT_GRANTED",
+  "promotion": "NOT_AUTHORIZED",
+  "next_legal_action": "Commit only the stable 0051 R01 package to the existing branch; verify exact GitHub bytes, record the readback on PR #92, then continue the next READY document."
+}
