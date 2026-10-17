@@ -11,7 +11,7 @@
       "DISCOVERED": "PASS",
       "APPLICABLE": "PASS",
       "APPLIED": "PASS_FOR_CURRENT_ACTIONS",
-      "VERIFIED": "PENDING_REMOTE_READBACK"
+      "VERIFIED": "PASS_DOCX_EXACT_SHA_REMOTE_READBACK"
     },
     "basis": "Direct Human authorization in the user-provided command; limited to the existing reversible candidate-document Goal and PR #92."
   },
@@ -46,9 +46,15 @@
     "independent_semantic_review": "PASS_EXACT_DOCX_SHA_14_OF_14",
     "current_register_sha256": "57da26117ebaf3a517af4fe040d54661ca1021faa1202d19d651b3a51866f707",
     "register_locator_correction": "PASS_DETERMINISTIC; register-only change, not in primary semantic review scope",
-    "remote_sync": "PENDING_GITHUB_PUSH_AND_READBACK"
+    "remote_sync": {
+      "status": "PASS_DOCX_EXACT_SHA_READBACK",
+      "upload_commit": "ca7b5d67c6bc1a1b900eed002daaf25237cba63c",
+      "remote_sha256": "6f575ebb41c6c26b4d6b36262fb4d9a5abdae53cbdc1ff4e75acda46d5f0b495",
+      "remote_git_blob_sha": "be436bf78d4e66831f7bbfbfc9a2b312a08c1474",
+      "package_progress_and_manifest_final_readback": "PENDING_THIS_FOLLOWUP_COMMIT"
+    }
   },
   "human_acceptance": "NOT_GRANTED",
   "promotion": "NOT_AUTHORIZED",
-  "next_legal_action": "Commit only the stable 0051 R01 package to the existing branch; verify exact GitHub bytes, record the readback on PR #92, then continue the next READY document."
+  "next_legal_action": "Finish this receipt/manifest readback commit, then inspect the existing queue and active-worker state and resume the next READY document without rebuilding accepted candidates."
 }
