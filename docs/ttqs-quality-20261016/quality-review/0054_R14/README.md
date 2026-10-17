@@ -25,7 +25,7 @@ The worked example is explicitly SAMPLE/SYNTHETIC. It does not assert real appli
 - Typography: minimum body text 11 pt; minimum table text 10 pt; all inspected runs resolve to a size.
 - Render: 10-page PDF and 10 page images.
 - Direct Codex visual inspection: pages 1–10; no clipping, overlap, or table-row split found. This is recorded separately from semantic review.
-- Independent Antigravity CLI exact-SHA semantic review: in progress; see `review/` for prompt, raw execution evidence, and final reviewer response when available. The first headless attempt was denied before any review output; it is not a verdict.
+- Independent Antigravity CLI exact-SHA semantic review: PASS for the I12-E02 content. Runtime model identity was not returned. The raw response contains an incorrect official sequence mapping; the separate source-backed correction identifies I12-E02 as sequence 057. The pass applies to the candidate content, not that mistaken number.
 
 ## Package contents
 
@@ -34,6 +34,8 @@ The worked example is explicitly SAMPLE/SYNTHETIC. It does not assert real appli
 - `evidence/render/`: exact-candidate PDF and 10 page images.
 - `evidence/technical/`: pagination-repair receipt and technical/layout QA receipts.
 - `review/`: read-only exact-SHA review prompt, CLI receipts, and raw stdout/stderr.
+
+Remote readback: all 38 manifest entries were checked against the fetched GitHub tree with 38/38 canonical hash matches; candidate DOCX SHA is unchanged. The readback record is in `PROGRESS.json`.
 
 No protected real-person, contract, signature, or private association source record is included.
 
