@@ -102,9 +102,10 @@ R03 attempt 1 使用 `--print` 型讀檔提示，模型選擇 `RunCommand` 取�
 5. CLI 中的 requested model、token counts、exit status、response text 均依原始輸出照錄；不能替代 provider attestation、成本帳單或 Human/協會正式核定。
 6. 公開報告只含合成案例與已存於候選工作區的外包紀錄；未附入協會未公開的個資、秘密、簽章、正式原件或受保護資料。
 
-7. Git 設定 `core.autocrlf=true`，第一次暫存後比對發現部分文字收據的 staged blob 被行尾正規化，與來源檔 SHA 不同。為保持原始輸出與收據位元組，本次在 `.gitattributes` 為 0059 證據目錄及 R08 報告設定 `-text`，再對精確暫存路徑執行 `git add --renormalize`。送出前以 Git index blob 逐位元組比對 79 個 0059／報告檔案，結果 79/79 與本機原始檔完全一致；遠端仍須在 push 後再讀回核對。
+7. Git 設定 `core.autocrlf=true`，第一次暫存後比對發現部分文字收據的 staged blob 被行尾正規化，與來源檔 SHA 不同。為保持原始輸出與收據位元組，本次在 `.gitattributes` 為 0059 證據目錄及 R08 報告設定 `-text`，再對精確暫存路徑執行 `git add --renormalize`。送出前以 Git index blob 逐位元組比對 79 個 0059／報告檔案，結果 79/79 與本機原始檔完全一致。
 
-## 6. 原始 Antigravity 0059 呼叫資料
+
+8. 初次同步提交為 `6629fb3822ee31bb95d10711acdb928d95db46fe`，推送至既有分支 `work/ttqs-one-document-quality-contract-20261016` 後，從 GitHub fetch/readback 並與本機逐位元組比較，0059 與報告共 79/79 個檔案完全一致。該提交中的報告為 5,183,470 bytes、SHA-256 `E748D24C565A5A593A4E4C6E7523DE53B851C335B2F6567F915994502760B703`；DOCX `0059_R03.docx` 為 74,228 bytes、SHA-256 `0263017F16D81B1121BB97410DE9895B43B7A42F75632BF71A82B86426FBC2B0`。後續若本稽核報告只更新同步收據，文件與其他 0059 證據仍保持原 byte identity。## 6. 原始 Antigravity 0059 呼叫資料
 
 以下列出五次 Antigravity 呼叫的完整 stdout／event stream、response、stderr、invocation receipts、已保存的 prompts 與各次唯一 review packet。每個 block 上方標示原始檔路徑、位元組數及 SHA-256；空 stderr 保持零位元原樣。R01/R02 實際 invocation prompt 檔未保存，依稽核原則不重建；其完整審查封包仍隨本節附入。
 ### R01 raw stdout JSON
