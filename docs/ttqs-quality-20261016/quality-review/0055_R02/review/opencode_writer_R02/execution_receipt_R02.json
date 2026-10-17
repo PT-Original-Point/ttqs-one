@@ -1,0 +1,77 @@
+{
+  "project_id": "TTQS_ONE",
+  "document_id": "0055",
+  "revision": "R02",
+  "route": "OpenCode CLI v2.0.29",
+  "mode": "external builder; no Computer Use",
+  "source_branch_head": "fdfd3b4dbd7c8cc52dd0e315406294bab83f1093",
+  "source_blobs": {
+    "mission": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e",
+    "genre_manual": "4ff863d9f534b6359fc1c7c1685bd8cce02da886",
+    "157_blueprints": "8c2bbe7ca9dcbb03088a48934b9e57e7147ede63",
+    "external_audit_06": "263aaca84891bba8dca087875804343c3670e921"
+  },
+  "attempts": [
+    {
+      "session_id": "ses_eb6445721ffeutU7PkBcQL4kSO",
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "input_tokens": 150775,
+      "output_tokens": 19345,
+      "reasoning_tokens": 42178,
+      "cache_read_tokens": 1998336,
+      "cache_write_tokens": 0,
+      "cost_usd": 0,
+      "operation": "R02 content builder and initial build",
+      "candidate_sha256": "0048af2a7e2822a9bb0463839b19c428e9d0681949bc1fb9b666fb575547f13d",
+      "stdout_file": "review/opencode_writer_R02/stdout.jsonl",
+      "stdout_sha256": "edc1bcc4b94d948e2b4242b7f8f70659807f039832a0ffc616df8b2ecc4c1e65",
+      "exit_code": 0
+    },
+    {
+      "session_id": "ses_eb63a5001ffeNM0CsbCCtPCkIo",
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "input_tokens": 44067,
+      "output_tokens": 1765,
+      "reasoning_tokens": 485,
+      "cache_read_tokens": 152832,
+      "cache_write_tokens": 0,
+      "cost_usd": 0,
+      "operation": "Narrow page-break repair for §4/§7",
+      "candidate_sha256": "025ac93336e03bf520edd60d03a2a320f1708a2942b50eabaf158dcfd066ed43",
+      "stdout_file": "review/opencode_pagination_fix_R02/stdout.jsonl",
+      "stdout_sha256": "208e64b66dcd457d7d44e77b60491221c3e813df5bc94840fa3754ff3d595e3b",
+      "exit_code": 0
+    },
+    {
+      "session_id": "ses_eb637743affeJ5d0XymGyrxlVk",
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "input_tokens": 8080,
+      "output_tokens": 1325,
+      "reasoning_tokens": 355,
+      "cache_read_tokens": 85376,
+      "cache_write_tokens": 0,
+      "cost_usd": 0,
+      "operation": "Narrow removal of forced page break before candidate C-03",
+      "candidate_sha256": "2d69f2e515c424a8717bfb189e8c9de861580d636fafd82f79d332bab8cfe827",
+      "stdout_file": "review/opencode_pagination_fix2_R02/stdout.jsonl",
+      "stdout_sha256": "1f7fcc57a93e6d23d382245e78728da602665aff1b6fba9b199d003d01912f1e",
+      "exit_code": 0
+    }
+  ],
+  "totals": {
+    "input_tokens": 202922,
+    "output_tokens": 22435,
+    "reasoning_tokens": 43018,
+    "cache_read_tokens": 2236544,
+    "cache_write_tokens": 0,
+    "reported_cost_usd": 0
+  },
+  "layout_findings_resolved": [
+    "R02 first render had forced blank pages at sections 4 and 7; narrow breaks removed.",
+    "Next render had sparse page 6 due forced page break before C-03; that single break was removed."
+  ],
+  "final_candidate_sha256": "2d69f2e515c424a8717bfb189e8c9de861580d636fafd82f79d332bab8cfe827",
+  "register_sha256": "b7b2948b300e0c5ca36b838bdbca10d1470b0ddc1450257c742b32bd782d8531",
+  "rebuild_due_to_metadata": false,
+  "candidate_status": "CANDIDATE_ONLY; formal Human acceptance not granted"
+}
