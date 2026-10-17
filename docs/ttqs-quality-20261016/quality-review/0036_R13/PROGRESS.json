@@ -56,7 +56,7 @@
   "synthetic_register_rows": 85,
   "formal_acceptance": "NOT_GRANTED",
   "candidate_disposition": "CANDIDATE_ONLY_NOT_PROMOTED",
-  "next_action": "Sync 0054 R13/R14 reviewed-candidate packages and this preflight status to existing PR #92; verify exact remote hashes; then continue the next lawful READY document.",
+  "next_action": "Verify both corrected 0054 manifests and exact DOCX/reviewer hashes from GitHub; then continue next READY item.",
   "independent_review": {
     "status": "PASS_FOR_SAMPLE_ARTIFACT_WITH_DECLARED_SCOPE",
     "candidate_sha256": "0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f",
@@ -135,7 +135,7 @@
       "F02": {
         "discovered": "PASS",
         "applied": "IN_PROGRESS_SYNCING_0054_R13_AND_R14_STABLE_PACKAGE",
-        "verified": "PENDING_0054_REMOTE_READBACK"
+        "verified": "PARTIAL_FIRST_READBACK_36_OF_37; only full-text source extraction line-ending basis metadata corrected in follow-up"
       },
       "F04": {
         "discovered": "PASS",
@@ -143,7 +143,7 @@
         "verified": "PASS_LOCAL_AND_REMOTE_DOCX_SHA_MATCH; formal acceptance not granted"
       }
     },
-    "overall_state": "APPLIED_PENDING_0054_PACKAGE_REMOTE_READBACK",
-    "next_action": "Commit the scoped 0054 R13/R14 candidate and review packages plus this status, read back every manifest blob and exact DOCX SHA from GitHub, then continue the next lawful READY document."
+    "overall_state": "APPLIED_REMOTE_READBACK_METADATA_CORRECTION_PENDING",
+    "next_action": "Verify both corrected 0054 manifests and exact DOCX/reviewer hashes from GitHub; then continue next READY item."
   }
 }

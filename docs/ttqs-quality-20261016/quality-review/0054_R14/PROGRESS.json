@@ -47,5 +47,19 @@
     "sha256": "cb323556ffca79a795d81882c9f81449f8fe7980cc35c7df0eda536ea6065a6c",
     "page_count": 10
   },
-  "next_action": "Sync the complete candidate, exact-SHA review, raw execution evidence, 10-page visual evidence, replacement register, and status to the existing GitHub branch; verify remote hashes; continue the next READY document."
+  "next_action": "Read back the corrected 0054 R13/R14 manifests and every artifact SHA from the live branch; then continue the next lawful READY document.",
+  "remote_readback": {
+    "status": "PARTIAL_READBACK_METADATA_NORMALIZATION_REQUIRED",
+    "verified_commit": "8fb0acbe4674b1e945a083bd0eb154ec6437c2eb",
+    "candidate_sha256": "3d000e580b9cb1247fd984ebb0c8f5f817fce08ce7c368cc1799c95a111a979c",
+    "candidate_remote_sha256": "3d000e580b9cb1247fd984ebb0c8f5f817fce08ce7c368cc1799c95a111a979c",
+    "manifest_entries_total": 37,
+    "manifest_entries_matching_before_fix": 36,
+    "single_difference": {
+      "path": "inputs/official/official_evidence_table_fulltext.txt",
+      "reason": "GitHub blob has LF line endings while local extraction has CRLF; LF-normalized content is identical. The manifest incorrectly declared raw-byte basis."
+    },
+    "correction": "Both R13 and R14 manifest entries now declare text_lf and the normalized content hash. DOCX bytes and independent review output are unchanged.",
+    "final_readback_after_this_metadata_correction": "PENDING"
+  }
 }
