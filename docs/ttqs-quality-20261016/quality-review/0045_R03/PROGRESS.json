@@ -59,5 +59,13 @@
     "raw_stdout_sha256": "ac948e7213007885a9743dfbcf150242a0b24d3b195a07f15c4cbe4fc79b19ba",
     "review_packet_sha256": "bc53ffef8302e983dcc2bf2618958c7c7aa9b991f64f9364aa66861661682c90"
   },
-  "next_action": "Sync 0045 R03 exact candidate and review evidence to existing PR #92 branch; verify remote SHA; continue the next current READY requirement."
+  "next_action": "Push the package manifest and read it back from GitHub; then continue the next legal READY requirement. Preserve this exact candidate and reviewer result.",
+  "remote_readback": {
+    "pre_manifest_head": "891c19502184e5a7739c97151c947c5d93abe2e4",
+    "candidate_sha256": "2ea8937143c5360e03d3db74cf531b8ddffccaecaf4058c89bb3df2ede06d031",
+    "candidate_git_blob_match": "PASS",
+    "semantic_review_git_blob_match": "PASS",
+    "raw_reviewer_response_git_blob_match": "PASS",
+    "manifest": "CREATED_LOCAL_POST_PUSH_READBACK_PENDING"
+  }
 }
