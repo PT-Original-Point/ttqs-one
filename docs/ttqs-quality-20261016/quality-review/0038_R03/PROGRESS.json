@@ -1,0 +1,41 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0038",
+  "requirement_id": "I08-E02",
+  "official_checkbox_sequence": "039",
+  "candidate": "0038_R03",
+  "candidate_sha256": "3a887bd3835b3a30b9fdb489257c8a09f79d3c2ce25c10565fae2b4e173f7efa",
+  "status": "CANDIDATE; technical=PASS; visual=PASS_ALL_14; independent_semantic_review=PASS_8_OF_8; formal_acceptance=NOT_GRANTED",
+  "source_spec_branch": "work/ttqs-one-document-quality-contract-20261016",
+  "source_spec_head": "639b9eacce93f84f49ee20714f1bad337c6a961e",
+  "blueprint_file_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+  "blueprint_row_sha256": "2504485c1698a5c83ac2205938c05b532edc8d697f2441ad1d6a0c324897b73e",
+  "official_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "pdf_sha256": "85974e68937426d2a7b80844527098a0370cbe39200f3563ee773fdf15543f2a",
+  "visual_pages_reviewed": 14,
+  "sample_case_id": "SYN-I08E02-2026-01",
+  "sample_boundary": "All dates, roles, course facts, options, participant codes, scores, calculations and decisions are SYNTHETIC.",
+  "change_from_R02": {
+    "sha256": "bdb6ef07c1aacd31f638cdad511012777d2f1b9d2c9f5f307252dd62de0170a4",
+    "reason": "Raised 20 below-floor body runs from 9.5/10.0 pt to 10.5 pt; verified all paragraph/table text unchanged."
+  },
+  "next_action": "Sync R03 package and exact-SHA review to the existing GitHub branch; verify remote artifact bytes; then continue with the next legal READY deliverable.",
+  "formal_acceptance": "NOT_GRANTED",
+  "review": {
+    "verdict": "PASS",
+    "reviewer_route": "OpenCode CLI v2.0.29 independent model review",
+    "candidate_sha256": "3a887bd3835b3a30b9fdb489257c8a09f79d3c2ce25c10565fae2b4e173f7efa",
+    "raw_reply_sha256": "e7e0d60f45d4fdbe22c7875389647eeb60e8bcbb4df5b63da54c749abf76a561",
+    "criteria_passed": 8,
+    "criteria_total": 8,
+    "blocking_findings": 0,
+    "nonblocking_notes": 4,
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "nonblocking_review_notes": [
+    "SYNTHETIC replacement register uses full label 未達標 while DOCX shortens to 未達; arithmetic and cases reconcile.",
+    "Unique Blueprint tool/subsequent-analysis handoff has no standalone heading; reviewer found it partly served by results, next-round steps and execution outputs.",
+    "Two neighbor rows in §1 use generic 差異說明 pointers; §9 source index restates the distinction.",
+    "Whitespace remains at page bottoms 7 and 11; no content is clipped."
+  ]
+}
