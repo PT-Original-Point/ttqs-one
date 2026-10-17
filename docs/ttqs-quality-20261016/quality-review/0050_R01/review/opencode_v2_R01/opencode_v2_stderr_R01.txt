@@ -1,0 +1,938 @@
+
+> build · deepseek-v4.1-flash-free
+$ Get-FileHash "E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\candidate\0050_R01.docx" -Algorithm SHA256 | Format-List
+Algorithm : SHA256
+Hash      : D0D37C2C69B161A2CDD37EE3097306722C4A65A1AFD844AE92E1DFF58B43381A
+Path      : E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\candidat
+            e\0050_R01.docx
+$ cd "E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01"; Get-ChildItem -Recurse -File | Select-Object FullName, Length | Format-Table -AutoSize -Wrap
+FullName
+--------                                                                                                               
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\candidate\0050_R01.d
+ocx
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\source\official_evid
+ence_table_page4.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\inputs\0049_R01_SOUR
+CE_MAP.md
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\inputs\0049_R01_SYNT
+HETIC_REGISTER.csv
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\inputs\SOURCE_MAP_R0
+1.md
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\inputs\UNIQUE_BLUEPR
+INT_0050.jsonl
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\inspect_sty
+le_0050.py
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\qa_extract_
+0050.py
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\qa_extract_
+0050.txt
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\SYNTHETIC_R
+EPLACEMENT_REGISTER_R01.csv
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\build\build
+_0050_R01.py
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\build\BUILD
+_METADATA_R01.json
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\build\__pyc
+ache__\build_0050_R01.cpython-312.pyc
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\qa\audit_00
+50_R01.py
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\qa\TECHNICA
+L_VISUAL_QA_R01.json
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01\
+0050_R01.pdf
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01\
+page-01.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01\
+page-02.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01\
+page-03.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01\
+page-04.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01\
+page-05.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01\
+page-06.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01\
+page-07.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01\
+page-08.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01\
+page-09.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01\
+page-10.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01\
+page-11.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01\
+page-12.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01\
+page-13.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01\
+page-14.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01\
+page-15.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+861b4298\0050_R01.pdf
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+861b4298\page-01.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+861b4298\page-02.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+861b4298\page-03.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+861b4298\page-04.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+861b4298\page-05.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+861b4298\page-06.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+861b4298\page-07.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+861b4298\page-08.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+861b4298\page-09.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+861b4298\page-10.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+861b4298\page-11.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+861b4298\page-12.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+861b4298\page-13.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+861b4298\page-14.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+861b4298\page-15.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+861b4298\page-16.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+861b4298\page-17.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+031ef35a\0050_R01.pdf
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+031ef35a\page-01.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+031ef35a\page-02.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+031ef35a\page-03.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+031ef35a\page-04.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+031ef35a\page-05.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+031ef35a\page-06.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+031ef35a\page-07.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+031ef35a\page-08.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+031ef35a\page-09.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+031ef35a\page-10.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+031ef35a\page-11.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+031ef35a\page-12.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+031ef35a\page-13.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+031ef35a\page-14.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+031ef35a\page-15.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+031ef35a\page-16.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+031ef35a\page-17.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+031ef35a\page-18.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+725bbb0f\0050_R01.pdf
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+725bbb0f\inspect.py
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+725bbb0f\page-01.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+725bbb0f\page-02.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+725bbb0f\page-03.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+725bbb0f\page-04.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+725bbb0f\page-05.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+725bbb0f\page-06.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+725bbb0f\page-07.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+725bbb0f\page-08.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+725bbb0f\page-09.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+725bbb0f\page-10.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+725bbb0f\page-11.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+725bbb0f\page-12.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+725bbb0f\page-13.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+725bbb0f\page-14.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+725bbb0f\page-15.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+725bbb0f\page-16.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+725bbb0f\page-17.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+725bbb0f\page-18.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+725bbb0f\__pycache__\inspect.cpython-312.pyc
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+3ef744d5\0050_R01.pdf
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+3ef744d5\page-01.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+3ef744d5\page-02.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+3ef744d5\page-03.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+3ef744d5\page-04.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+3ef744d5\page-05.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+3ef744d5\page-06.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+3ef744d5\page-07.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+3ef744d5\page-08.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+3ef744d5\page-09.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+3ef744d5\page-10.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+3ef744d5\page-11.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+3ef744d5\page-12.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+3ef744d5\page-13.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+3ef744d5\page-14.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+3ef744d5\page-15.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+3ef744d5\page-16.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+3ef744d5\page-17.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+3ef744d5\page-18.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+d0d37c2c\0050_R01.pdf
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+d0d37c2c\page-01.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+d0d37c2c\page-02.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+d0d37c2c\page-03.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+d0d37c2c\page-04.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+d0d37c2c\page-05.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+d0d37c2c\page-06.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+d0d37c2c\page-07.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+d0d37c2c\page-08.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+d0d37c2c\page-09.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+d0d37c2c\page-10.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+d0d37c2c\page-11.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+d0d37c2c\page-12.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+d0d37c2c\page-13.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+d0d37c2c\page-14.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+d0d37c2c\page-15.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+d0d37c2c\page-16.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+d0d37c2c\page-17.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_
+d0d37c2c\page-18.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\review\opencode_v2_R
+01\opencode_v2_stderr_R01.txt
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\review\opencode_v2_R
+01\opencode_v2_stdout_R01.txt
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\review\packet_R01\RE
+VIEW_REQUEST_R01.md
+> build · deepseek-v4.1-flash-free
+$ cd "E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01"; Write-Output "=== BLUEPRINT ==="; Get-Content inputs\UNIQUE_BLUEPRINT_0050.jsonl -Encoding UTF8; Write-Output "=== SOURCE MAP ==="; Get-Content inputs\SOURCE_MAP_R01.md -Encoding UTF8
+=== BLUEPRINT ===
+{"deliverable_id":"0050","requirement_id":"I11-E02","final_filename":"0050__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z.docx","document_genre":"�������p�e���U�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z","document_purpose":"����M�ݵJ�I�G�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z�F�ݪ����^�����x����ҭn�D���G�U�ҵ{�椸���e����F���V�m�W�����ؼСC�F���X�@���i��ڰ���B�i�\Ū�åi�l�����M�ݦ��~�F������¾�d�P�P�n�D��L����M�����}�C","primary_user_or_reader":"�Ѳz�ʨơB�D�޻P����H����x��n�D�ର�i���檺��V�B�d���B�ɵ{�P�Ŷq�覡�C","evidence_role":"�H���Y�����έp�e�ҩ��n�D�p�󸨦a�F���ѥؼСB�d���B��ǻP�M���̾ڡC �����u�֦� I11-E02 ���������������R�f�|�F���o�]�֨�L�n�D���ƹ�C","source_of_truth":"�x��d�֦��Ҫ���T���y�U�ҵ{�椸���e����F���V�m�W�����ؼСC�z�A�������� 4�AŪ�����A PDF_TEXT_EXACT_PAGE_MATCH�FREQ_157_MAP ���� I11-E02�F������W�ٻP ID �H R04 142 ��I crosswalk/seed ���ǡCPhase2 ���v Blueprint �ȧ@�ݨD��ѰѦҡA���D�i�ƻs����β{����D�v�¡C","required_sections":"���γ~�P�M���d��F�x��n�D�P�A�άɽu�F�{�p�B�ݨD�P�i���Ҩӷ��F�ؼй�H�B���ȻP�A�Ƚd��F�������p�e�D�b�P�]�G���Y�F�ؼСB��ǡB���лP�p��f�|�F�u�@���ѡB�d���P��@�F�귽�B�ɵ{�P���{�O�F���I�B���]�����ܪ��e�F�˰Q�W�v�B�M�������P�׭q�F����X���ܨһP�u���ƴ����M��F�Ҿگ��ޡB����P�����ֹ�","required_tables_or_figures":"���X�w�q�X�ӷ��X��g�̡X���ҳW�h�F����X����g�C�����ѻ��F���D���ҥ~�X�ץ��X�Ю֤ΰl�ܡF�x��n�D�X�������X����w��l����","required_fields_or_questions":"�X������ѧO�X�F������ΦX���ХܡF�d������N�X�F�ӷ��������m���F�P�w�B�z�ѡB�Ю֤Ϋ�����","required_calculations_or_analysis":"�Y�����榳�ƶq�B���B�B�����Τ�ҡA���C�w�q�B���l�����P�v�B��ҡF�Y�S���A���ܤ��A�Ψô��Ѧܤ֤@��������ҡ�����קP�_�ܨҡC","required_cross_references":"�P�n�D���� �L�F�۾F�n�D I11-E01, I11-E03�F�@�έ�l�ӷ��ɥu�ޥήֹ굲�G�A���ƻs�O����󥿤�C","real_data_required":"�ɮ欰 REAL �e�v�����o�i�ֹ�ӷ��G��������F�u��H�W/����F�֭�/ñ���F�u��Z��/�ҵ{�F��ڼƦr/��ҡF�u�����P�ɮצ�m�C�b�L���ɼХ� SAMPLE/SYNTHETIC�F�X���ƹ궷�n�� replacement register�A���o�źپ��c���Z�C","third_party_evidence_required":"�Y���ר̿�~���������ĤT����u�H����ñ�����ҮѡA�����ѦX�k�ӷ����o�i�ֹ���F�����i���ѲM�����޻P�X���y�{�ܽd�A�����N�s�B��ñ�B�ɧ@�Ϋ_�R�ĤT�西�����C","prohibited_fabrication":"���o�����u�u�@�Z�Ц�REAL�F���o���y�֭�Bñ���B�u�H�ѻP�B��V�B���Z�B���G�Τ��s�b���~���ƹ�C�F���o�N���ɤ��e�B�ܽd�ƾڡB���d��Drive�Կ�ξ��v��׼Ц� REAL�F���o���y�֭�Bñ���B�u�H�ѻP�B��V�B���Z�B���G�B�~���ҾکΨӷ��w��C","title_blind_test":"�B��������D�B�ɦW�P�s���A�uŪ�������i�ѱM�ݾ����{���y�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z�z���ҩ��y�U�ҵ{�椸���e����F���V�m�W�����ؼСC�z�F�Y�i�L�קﲾ�@��L�n�D�Y���ѡC","negative_choice_neighbors":"0049�m�V�m�ҵ{�p�e�t�X�~�D�B���V�̥H��¾��ݨD����_�i�����ϥΦ��~�n�]I11-E01�^�G���ҩ����P�u�@���F���󤣱o�N���B�X�֩νƻs��M�ݨƹ�C\n0051�m�U���ҵ{���X���g�Q�׫�T�{�A�B�d����������P_�i�����ϥΦ��~�n�]I11-E03�^�G���ҩ����P�u�@���F���󤣱o�N���B�X�֩νƻs��M�ݨƹ�C","acceptance_tests":"�������D���ɦW��AŪ�̥i�ѥ���M�����B�ާ@�Τ��R��{���y�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z�z�A�B����X�����^���y�U�ҵ{�椸���e����F���V�m�W�����ؼСC�z�����`������C\n�v���e�{�x��n�D�B��ƨӷ��B�O�����B�P�w�B�Ҿکw����Ю֡F�x���夣�Q���v��ק�g�C\n�̥���������ڥi�ΡG�ݨ��t�D�ؿﶵ�q�ءFSOP�t����B��J�B�P�_�B�����I�B���`�M��X�F�|ĳ�����tĳ�D�B�ҾڡB�Mĳ�B�d���B�����F���i�t��ơB�����B�����B�v�B�p��B����M�M���C\n�Y�S���i���� REAL ��ơA���ѫe��@�P�B�����J�� SAMPLE/SYNTHETIC �רҡF���o�ΪŪ��B�ݶ�B�ݮ֩Υ��Ӧ��R�������~�C\n�C�@���X������B����B�Ʀr�B��ҡB���B�B�Mĳ�B�ӷ����|�P���G�Ҧ��v�ƹ����ï�O����B�Ҧb�������������ίu������覡�C\n�������y�ĤT����B�u�Hñ�W�B�֭�B�X�u�B�ҮѡB�F���B�Ȧ�B�|�p�Υ~�����c�ƹ�F�ݭn�ӵ����ɥu�����һݭ��P���o���|�C\n�Ҧ������i�Ѯi�ܼƾڭ���F�����B���B�����B�|�ˤ��J��N/A����M���A��e�ޥΤ����Ƴгy�۲������C\n��ӭt�V�F���A����i�ڵ��ܤ֨�ӿ��~��F�F���X�i�ֹ諸�t�����γ��`�C\n����30���������ت��BŪ�̡B�ϥή��I�B�ާ@�B��X�MSAMPLE��REAL���A�F�L���֤u�{�����N�y�C\n����i�Ѥ�`��|�@�~�ε��־\Ū�F���D�h�šB���B�B�J�B����ઽ������A�L�ƻs�P�� DOCX ����C\n�r��U���G����ܤ�10.5pt�B����ܤ�9.5pt�F��T�����ɥ[���A���Y�p�r��C\n�ӷ��w��P��e�ޥΨϥΥ� Blueprint �n�����x�譶������� ID�F�Ҧ����פ��W�X�ӷ�����d��C","document_role":"strategy_plan","official_requirement_text":"�U�ҵ{�椸���e����F���V�m�W�����ؼСC","official_checkbox_text":"�U�ҵ{�椸���e����F���V�m�W�����ؼСC","official_evidence_table_page":"4","official_source_readback_status":"PDF_TEXT_EXACT_PAGE_MATCH","official_visually_checked_pages":"","requirement_deliverable_siblings":"0050","docx_body_template_policy":"FROM_SOURCE_ONLY; old body is discovery evidence only and prohibited as rebuild template; Wave005 R3 0031-0040 quality-height references only; Wave001-004 tainted; old Wave005 invalid; Wave006 prohibited.","synthetic_population_rule":"�� REAL �Y�ͦ�����s�e SAMPLE/SYNTHETIC worked example�F�ƹ�ɫפ@���@�C�n�� SYNTHETIC_REPLACEMENT_REGISTER�A�t�ȡB�����B�w��B�������P�d���F���o�d�ݶ�Ϋ_�R REAL�C","historical_blueprint_source":"5b544eea87a668ed3ec607d251ad57347130f1d81131cac9432163e0ae73cc17","historical_body_use":"PROHIBITED","source_map_notes":"129 exact official requirement rows + reconciled 142-ID crosswalk; official source PDF and exact Drive readback evidence are recorded in runtime SOURCE/CONTROL maps."}
+=== SOURCE MAP ===
+# DOCX 0050 R01 source map and evidence boundary
+
+## Identity
+
+- Project: TTQS_ONE
+- Document: 0050 R01
+- Unique Blueprint: I11-E02
+- Official evidence checkbox: 052, official evidence table page 4
+- Official wording: �u�U�ҵ{�椸���e����F���V�m�W�����ؼСC�v
+- Candidate SHA-256: `d0d37c2c69b161a2cdd37ee3097306722c4a65a1afd844ae92e1dff58b43381a`
+- Candidate state: `CANDIDATE_ONLY`; formal Human acceptance: `NOT_GRANTED`
+
+## Authoritative requirement sources
+
+| Source | Version / locator | SHA-256 | Authority and limit |
+|---|---|---|---|
+| Official training-evidence table | PDF, page 4; accompanying page image is in `source/official_evidence_table_page4.png` | PDF `805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709` | Establishes the exact requirement and checkbox location. Does not prove an association course was delivered. |
+| Current Unique Blueprint | `BLUEPRINT_CURRENT.jsonl`, row `deliverable_id=0050` | file `406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e`; row `1204cbe5799e24ded84ad7c7a4dcf2ebb6fb0270f59ed5332f1982b714a1221a` | Defines the dedicated unit-level lesson-design evidence, required tables, sample controls, rejection conditions, source boundaries, and the I11-E02 identity. |
+| Writing manual | `02_GENRE_WRITING_MANUAL.md`, Indicator 11 | Current contract branch | Used to distinguish unit-level design from course-level planning and training-output review. |
+| 157-checkbox contract | `03_157_CHECKBOX_BLUEPRINTS.md`, I11-E02 | Current contract branch | Defines checkbox 052 separately from 051, 053, and 054. |
+
+## Same-case, synthetic cross-document links
+
+The worked example is case `SYN-0033-PLAN-01`. It is a single invented planning example; it does not represent a real survey, course, class, association decision, or delivery.
+
+- DOCX 0033 R03, I07-E01 / checkbox 033: DOCX SHA `fe5f3cfd84c761da86435a71e0fd899daa725be78628c4d2d3f2324c1fdb5f4f`; synthetic-register SHA `d114f36d9c4852cda2239bf22fcc709bdc0a40aad62418e076c6b9c2ae523247`. It is the sample demand-survey source. 0050 does not reproduce its questionnaire or claim those results as real.
+- DOCX 0049 R01, I11-E01 / checkbox 051: DOCX SHA `e8212788b1f7b201ca4af4f4c5fb83ab131627dbfa815987f7cf6344edfda727`; synthetic-register SHA `c79dd292c3679b83d334f5773694d2d9089dce7c7d532197d287e3c5ad5be501`. It is the same sample course plan and source for 0050's course title, four unit goals, 12-person planning assumption, and 360 teaching minutes.
+- 0050 R01 owns the four unit-level lesson designs, student exercise materials, parallel assessment forms, scoring keys, sample score interpretation, and replacement gates. It must not substitute for 0049 course-level demand-to-plan analysis or for 0051/0052 deliberation and learner feedback evidence.
+
+## Synthetic evidence boundary
+
+All dates, role codes, class size, lesson timings, scenarios, questions, thresholds, work products, scores, and outcomes in this candidate are `SAMPLE / SYNTHETIC`. The 99-row replacement register identifies each fact, its location, basis, responsible role to confirm, and actual source needed for replacement. No item establishes the association's current policy, staff appointment, approval, actual class, attendance, teaching, student performance, or result. The example pre/post difference is arithmetic only and is not causal evidence.
+
+Before any real use, authorized staff must replace the synthetic course objectives, role boundaries, procedures, teaching material, assessment key and thresholds with verified current sources, and review any personal-data and accessibility controls. No official signature or third-party source is simulated.
+
+## Exact candidate and QA references
+
+- DOCX: `candidate/0050_R01.docx`, SHA-256 above.
+- Complete synthetic replacement register: `evidence/SYNTHETIC_REPLACEMENT_REGISTER_R01.csv`, 99 unique fact IDs; SHA-256 `556f69271e796e533d4afc2c19c1ddcfbb80e8554b40c527c87e5efec29a99b3`.
+- Build metadata: `evidence/build/BUILD_METADATA_R01.json`.
+- Technical and visual receipt: `evidence/qa/TECHNICAL_VISUAL_QA_R01.json`.
+- Word-native PDF and all 18 page images: `evidence/render_R01_d0d37c2c/`.
+- Independent exact-SHA semantic review: pending in `review/packet_R01/`; it must not grant Human acceptance or promote the candidate.
+$ cd "E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01"; python -c "import docx; print(docx.__version__)" 2>&1; python --version 2>&1
+1.2.0
+Python 3.10.8
+> build · deepseek-v4.1-flash-free
+$ $tmp="C:\Users\J\AppData\Local\Temp\opencode\rev0050"; @'
+import json,io
+base=r"E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01"
+for f in ["inputs/UNIQUE_BLUEPRINT_0050.jsonl"]:
+    for line in io.open(base+"\\"+f.replace("/","\\"),encoding="utf-8"):
+        line=line.strip()
+        if not line: continue
+        d=json.loads(line)
+        for k,v in d.items():
+            print(f"## {k}: {v}")
+        print("="*80)
+'@ | Set-Content -Encoding UTF8 "$tmp\bp.py"; python "$tmp\bp.py" > "$tmp\bp.txt" 2>&1; Get-Content "$tmp\bp.txt" -Encoding UTF8
+Set-Content: 
+Line |
+  12 |  '@ | Set-Content -Encoding UTF8 "$tmp\bp.py"; python "$tmp\bp.py" > " �K
+     |       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Could not find a part of the path 'C:\Users\J\AppData\Local\Temp\opencode\rev0050\bp.py'.
+C:\Users\J\AppData\Local\Programs\Python\Python310\python.exe: can't open file 'C:\\Users\\J\\AppData\\Local\\Temp\\opencode\\rev0050\\bp.py': [Errno 2] No such file or directory
+$ $tmp="C:\Users\J\AppData\Local\Temp\opencode\rev0050"; New-Item -ItemType Directory -Force -Path $tmp | Out-Null; @'
+import sys, json
+from docx import Document
+from docx.table import Table
+from docx.text.paragraph import Paragraph
+from docx.oxml.ns import qn
+
+p = r"E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\candidate\0050_R01.docx"
+doc = Document(p)
+
+def iter_block(parent):
+    body = parent.element.body
+    for child in body.iterchildren():
+        if child.tag == qn('w:p'):
+            yield Paragraph(child, parent)
+        elif child.tag == qn('w:tbl'):
+            yield Table(child, parent)
+
+out = []
+tcount=0
+for blk in iter_block(doc):
+    if isinstance(blk, Paragraph):
+        t = blk.text
+        style = blk.style.name if blk.style else ''
+        if t.strip()=="" :
+            continue
+        out.append(f"[P|{style}] {t}")
+    else:
+        tcount+=1
+        out.append(f"[TABLE {tcount}] rows={len(blk.rows)} cols={len(blk.columns)}")
+        for ri,row in enumerate(blk.rows):
+            cells = [c.text.replace("\n","\\n") for c in row.cells]
+            out.append(f"  R{ri}: " + " | ".join(cells))
+print("\n".join(out))
+print(f"\n=== COUNTS: tables={tcount} ===")
+'@ | Set-Content -Encoding UTF8 "$tmp\extract.py"; python "$tmp\extract.py" > "$tmp\body.txt" 2>&1; (Get-Content "$tmp\body.txt").Count
+4
+> build · deepseek-v4.1-flash-free
+$ $tmp="C:\Users\J\AppData\Local\Temp\opencode\rev0050"; New-Item -ItemType Directory -Force -Path $tmp | Out-Null; Get-Content "$tmp\body.txt" -Encoding UTF8
+Traceback (most recent call last):
+  File "C:\Users\J\AppData\Local\Temp\opencode\rev0050\extract.py", line 33, in <module>
+    print("\n".join(out))
+UnicodeEncodeError: 'cp950' codec can't encode character '\u2212' in position 12822: illegal multibyte sequence
+> build · deepseek-v4.1-flash-free
+$ $tmp="C:\Users\J\AppData\Local\Temp\opencode\rev0050"; @'
+import json, io
+from docx import Document
+from docx.table import Table
+from docx.text.paragraph import Paragraph
+from docx.oxml.ns import qn
+
+p = r"E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\candidate\0050_R01.docx"
+doc = Document(p)
+
+def iter_block(parent):
+    body = parent.element.body
+    for child in body.iterchildren():
+        if child.tag == qn('w:p'):
+            yield Paragraph(child, parent)
+        elif child.tag == qn('w:tbl'):
+            yield Table(child, parent)
+
+out = []
+tcount=0
+for blk in iter_block(doc):
+    if isinstance(blk, Paragraph):
+        t = blk.text
+        style = blk.style.name if blk.style else ''
+        if t.strip()=="":
+            continue
+        out.append(f"[P|{style}] {t}")
+    else:
+        tcount+=1
+        out.append(f"[TABLE {tcount}] rows={len(blk.rows)} cols={len(blk.columns)}")
+        seen=set()
+        for ri,row in enumerate(blk.rows):
+            cells = [c.text.replace("\n","\\n") for c in row.cells]
+            out.append(f"  R{ri}: " + " | ".join(cells))
+out.append(f"\n=== COUNTS: tables={tcount} paragraphs={sum(1 for l in out if l.startswith('[P|'))} ===")
+io.open(r"C:\Users\J\AppData\Local\Temp\opencode\rev0050\body.txt","w",encoding="utf-8").write("\n".join(out))
+print("done", tcount, "tables")
+'@ | Set-Content -Encoding UTF8 "$tmp\extract.py"; python "$tmp\extract.py"
+done 28 tables
+> build · deepseek-v4.1-flash-free
+→ Read C:/Users/J/AppData/Local/Temp/opencode/rev0050/body.txt 
+> build · deepseek-v4.1-flash-free
+$ $tmp="C:\Users\J\AppData\Local\Temp\opencode\rev0050"; @'
+import io
+base=r"E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review"
+p=base+r"\0050_R01\evidence\SYNTHETIC_REPLACEMENT_REGISTER_R01.csv"
+txt=io.open(p,encoding="utf-8-sig").read()
+io.open(r"C:\Users\J\AppData\Local\Temp\opencode\rev0050\reg0050_raw.txt","w",encoding="utf-8").write(txt)
+print(len(txt.splitlines()))
+'@ | Set-Content -Encoding UTF8 "$tmp\reg2.py"; python "$tmp\reg2.py"
+100
+$ $tmp="C:\Users\J\AppData\Local\Temp\opencode\rev0050"; @'
+import io,csv,hashlib,re
+base=r"E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review"
+paths={
+ "0050": base+r"\0050_R01\evidence\SYNTHETIC_REPLACEMENT_REGISTER_R01.csv",
+ "0049": base+r"\0049_R01\evidence\SYNTHETIC_REPLACEMENT_REGISTER_R01.csv",
+ "0033": base+r"\0033_R03\evidence\SYNTHETIC_REPLACEMENT_REGISTER_R03.csv",
+}
+out=[]
+for tag,p in paths.items():
+    raw=io.open(p,"rb").read()
+    sha=hashlib.sha256(raw).hexdigest()
+    txt=raw.decode("utf-8-sig")
+    rows=list(csv.reader(io.StringIO(txt)))
+    out.append(f"##### {tag}  SHA256={sha}  lines={len(rows)}")
+    out.append("HEADER: "+" | ".join(rows[0]))
+    out.append(f"data_rows={len(rows)-1}")
+    ids=[r[0] for r in rows[1:] if r]
+    out.append(f"unique_first_col={len(set(ids))}")
+    out.append("")
+io.open(r"C:\Users\J\AppData\Local\Temp\opencode\rev0050\reg_summary.txt","w",encoding="utf-8").write("\n".join(out))
+print("ok")
+'@ | Set-Content -Encoding UTF8 "$tmp\reg1.py"; python "$tmp\reg1.py"; Get-Content "$tmp\reg_summary.txt" -Encoding UTF8
+Traceback (most recent call last):
+  File "C:\Users\J\AppData\Local\Temp\opencode\rev0050\reg1.py", line 10, in <module>
+    raw=io.open(p,"rb").read()
+FileNotFoundError: [Errno 2] No such file or directory: 'E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0033_R03\\evidence\\SYNTHETIC_REPLACEMENT_REGISTER_R03.csv'
+Get-Content: 
+Line |
+  23 |  �K hon "$tmp\reg1.py"; Get-Content "$tmp\reg_summary.txt" -Encoding UTF8
+     |                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Cannot find path 'C:\Users\J\AppData\Local\Temp\opencode\rev0050\reg_summary.txt' because it does not exist.
+> build · deepseek-v4.1-flash-free
+$ $base="E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review"; Get-ChildItem $base -Directory | Where-Object {$_.Name -match "^(0033|0049|0050|0051)"} | Select-Object Name; Write-Output "---0049 reg---"; Get-ChildItem "$base\0049_R01" -Recurse -Filter "*REGISTER*" | Select-Object FullName; Write-Output "---0033 reg---"; Get-ChildItem "$base\0033_R03" -Recurse -Filter "*REGISTER*" | Select-Object FullName; Write-Output "---0033 tree---"; Get-ChildItem "$base\0033_R03" -Recurse -File | Select-Object FullName
+Name
+----
+0033_R03
+0049_R01
+0050_R01
+---0049 reg---
+
+---0033 reg---
+
+---0033 tree---
+> build · deepseek-v4.1-flash-free
+$ $tmp="C:\Users\J\AppData\Local\Temp\opencode\rev0050"; @'
+import os,io
+base=r"E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review"
+out=[]
+for d in ["0049_R01","0033_R03"]:
+    for root,dirs,files in os.walk(os.path.join(base,d)):
+        for f in files:
+            out.append(os.path.join(root,f))
+io.open(r"C:\Users\J\AppData\Local\Temp\opencode\rev0050\peers_tree.txt","w",encoding="utf-8").write("\n".join(out))
+print("done",len(out))
+'@ | Set-Content -Encoding UTF8 "$tmp\tree.py"; python "$tmp\tree.py"; Get-Content "$tmp\peers_tree.txt" -Encoding UTF8
+done 197
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\SOURCE_MAP_R01.md
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\README_R01.md
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\REPAIR_CHANGELOG_R03.md
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\PERSISTENT_GITHUB_PREFLIGHT_RECEIPT_R01.md
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\INDEPENDENT_REVIEW_RECEIPT_R03.json
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\PROGRESS_R01.json
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\MANIFEST_R01.json
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\REMOTE_READBACK_R01.json
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\source\official_evidence_table_page4.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\SYNTHETIC_REPLACEMENT_REGISTER_R01.csv
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\build\build_0049_R01.py
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\build\BUILD_METADATA_R01.json
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01\0049_R01.pdf
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01\page-1.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01\page-5.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01\page-3.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01\page-7.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01\page-11.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01\page-9.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01\page-13.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01\page-15.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01\page-2.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01\page-6.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01\page-16.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01\page-12.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01\page-10.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01\page-14.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01\page-4.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01\page-8.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01\contact_sheet_all_pages.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_a549ec5e\0049_R01.pdf
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_a549ec5e\page-1.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_a549ec5e\page-5.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_a549ec5e\page-3.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_a549ec5e\page-15.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_a549ec5e\page-11.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_a549ec5e\page-7.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_a549ec5e\page-9.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_a549ec5e\page-13.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_a549ec5e\page-2.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_a549ec5e\page-6.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_a549ec5e\page-12.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_a549ec5e\page-14.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_a549ec5e\page-4.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_a549ec5e\page-10.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_a549ec5e\page-8.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_a549ec5e\contact_sheet_all_pages.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_4d321541\0049_R01.pdf
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_4d321541\page-1.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_4d321541\page-5.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_4d321541\page-3.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_4d321541\page-7.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_4d321541\page-11.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_4d321541\page-9.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_4d321541\page-15.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_4d321541\page-13.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_4d321541\page-6.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_4d321541\page-12.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_4d321541\page-2.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_4d321541\page-8.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_4d321541\page-14.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_4d321541\page-16.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_4d321541\page-10.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_4d321541\page-4.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_4d321541\contact_sheet_all_pages.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\qa\verify_0049_R01.py
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\qa\TECHNICAL_VISUAL_QA_R01.json
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_7a793b67\0049_R01.pdf
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_7a793b67\page-1.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_7a793b67\page-3.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_7a793b67\page-5.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_7a793b67\page-11.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_7a793b67\page-9.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_7a793b67\page-7.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_7a793b67\page-15.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_7a793b67\page-13.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_7a793b67\page-2.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_7a793b67\page-8.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_7a793b67\page-6.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_7a793b67\page-12.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_7a793b67\page-4.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_7a793b67\page-10.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_7a793b67\page-16.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_7a793b67\page-14.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c064ed15\0049_R01.pdf
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c064ed15\page-1.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c064ed15\page-3.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c064ed15\page-7.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c064ed15\page-11.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c064ed15\page-9.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c064ed15\page-13.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c064ed15\page-5.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c064ed15\page-15.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c064ed15\page-2.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c064ed15\page-12.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c064ed15\page-6.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c064ed15\page-8.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c064ed15\page-14.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c064ed15\page-10.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c064ed15\page-4.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c064ed15\page-16.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c064ed15\contact_sheet_all_pages.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c3b42d15\0049_R01.pdf
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c3b42d15\page-01.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c3b42d15\page-02.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c3b42d15\page-03.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c3b42d15\page-04.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c3b42d15\page-05.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c3b42d15\page-06.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c3b42d15\page-07.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c3b42d15\page-08.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c3b42d15\page-09.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c3b42d15\page-10.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c3b42d15\page-11.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c3b42d15\page-12.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c3b42d15\page-13.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c3b42d15\page-14.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c3b42d15\page-15.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c3b42d15\contact-sheet.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_955f7138\0049_R01.pdf
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_955f7138\page-01.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_955f7138\page-02.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_955f7138\page-03.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_955f7138\page-04.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_955f7138\page-05.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_955f7138\page-06.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_955f7138\page-07.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_955f7138\page-08.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_955f7138\page-09.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_955f7138\page-10.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_955f7138\page-11.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_955f7138\page-12.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_955f7138\page-13.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_955f7138\page-14.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_955f7138\page-15.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\history\0049_R01_955f7138.docx
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_e8212788\0049_R01.pdf
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_e8212788\page-01.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_e8212788\page-02.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_e8212788\page-03.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_e8212788\page-04.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_e8212788\page-05.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_e8212788\page-06.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_e8212788\page-07.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_e8212788\page-08.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_e8212788\page-09.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_e8212788\page-10.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_e8212788\page-11.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_e8212788\page-12.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_e8212788\page-13.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_e8212788\page-14.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_e8212788\page-15.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\candidate\0049_R01.docx
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\review\packet_R01\REVIEW_REQUEST_R01.md
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\review\opencode_v2_R01\opencode_v2_stdout_R01.txt
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\review\opencode_v2_R01\opencode_v2_stderr_R01.txt
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\review\opencode_v2_R01\process_exit_code.txt
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\review\opencode_v2_R01\opencode_v2_review_result_R01.md
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\review\packet_R02\REVIEW_REQUEST_R02.md
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\review\opencode_v2_R02\opencode_v2_stdout_R02.txt
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\review\opencode_v2_R02\opencode_v2_stderr_R02.txt
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\review\opencode_v2_R02\exit_code.txt
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\review\opencode_v2_R02\opencode_v2_review_result_R02.md
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\review\packet_R03\REVIEW_REQUEST_R03.md
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\review\opencode_v2_R03\opencode_v2_stdout_R03.txt
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\review\opencode_v2_R03\opencode_v2_stderr_R03.txt
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\review\opencode_v2_R03\exit_code.txt
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\review\opencode_v2_R03\opencode_v2_review_result_R03.md
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\PROGRESS.json
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\README.md
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\artifact_manifest.json
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\candidate\0033_R03.docx
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\SYNTHETIC_REPLACEMENT_REGISTER.csv
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\qa_original\0033_build_receipt_r03.json
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\qa_original\0033_full_page_visual_review_r03.json
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\qa_original\0033_page_locator_receipt_r03.json
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\qa_original\0033_semantic_review_r03.json
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\qa_original\0033_technical_integrity_qa_r03.json
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\qa_original\paragraph_pages_r03.json
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\qa_original\word_table_pages_r03.json
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\render\document.pdf
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\render\pages\page-01.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\render\pages\page-02.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\render\pages\page-03.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\render\pages\page-04.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\render\pages\page-05.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\render\pages\page-06.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\render\pages\page-07.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\render\pages\page-08.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\render\pages\page-09.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\render\pages\page-10.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\render\pages\page-11.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\render\pages\page-12.png
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\inputs\official_source.pdf
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\inputs\requirement_and_blueprint_mapping.json
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\inputs\unique_blueprint_row.json
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\inputs\source_sidecars\0033_source_manifest_r03.md
+> build · deepseek-v4.1-flash-free
+$ $tmp="C:\Users\J\AppData\Local\Temp\opencode\rev0050"; @'
+import io,csv,hashlib,os
+base=r"E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review"
+targets={
+ "0050_docx": base+r"\0050_R01\candidate\0050_R01.docx",
+ "0049_docx": base+r"\0049_R01\candidate\0049_R01.docx",
+ "0033_docx": base+r"\0033_R03\candidate\0033_R03.docx",
+ "0050_reg": base+r"\0050_R01\evidence\SYNTHETIC_REPLACEMENT_REGISTER_R01.csv",
+ "0049_reg": base+r"\0049_R01\evidence\SYNTHETIC_REPLACEMENT_REGISTER_R01.csv",
+ "0033_reg": base+r"\0033_R03\evidence\SYNTHETIC_REPLACEMENT_REGISTER.csv",
+}
+res=[]
+for k,p in targets.items():
+    if not os.path.exists(p):
+        res.append(f"{k}: MISSING {p}"); continue
+    b=open(p,"rb").read()
+    res.append(f"{k}: sha256={hashlib.sha256(b).hexdigest()} size={len(b)}")
+io.open(r"C:\Users\J\AppData\Local\Temp\opencode\rev0050\shas.txt","w",encoding="utf-8").write("\n".join(res))
+print("\n".join(res))
+'@ | Set-Content -Encoding UTF8 "$tmp\shas.py"; python "$tmp\shas.py"
+0050_docx: sha256=d0d37c2c69b161a2cdd37ee3097306722c4a65a1afd844ae92e1dff58b43381a size=62426
+0049_docx: sha256=e8212788b1f7b201ca4af4f4c5fb83ab131627dbfa815987f7cf6344edfda727 size=61773
+0033_docx: sha256=fe5f3cfd84c761da86435a71e0fd899daa725be78628c4d2d3f2324c1fdb5f4f size=58475
+0050_reg: sha256=556f69271e796e533d4afc2c19c1ddcfbb80e8554b40c527c87e5efec29a99b3 size=66223
+0049_reg: sha256=c79dd292c3679b83d334f5773694d2d9089dce7c7d532197d287e3c5ad5be501 size=94197
+0033_reg: sha256=d114f36d9c4852cda2239bf22fcc709bdc0a40aad62418e076c6b9c2ae523247 size=70395
+$ $tmp="C:\Users\J\AppData\Local\Temp\opencode\rev0050"; @'
+import io,csv
+paths={
+ "0050": r"E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\SYNTHETIC_REPLACEMENT_REGISTER_R01.csv",
+ "0049": r"E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\SYNTHETIC_REPLACEMENT_REGISTER_R01.csv",
+ "0033": r"E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\SYNTHETIC_REPLACEMENT_REGISTER.csv",
+}
+out=[]
+for tag,p in paths.items():
+    raw=open(p,"rb").read()
+    txt=raw.decode("utf-8-sig")
+    rows=list(csv.reader(io.StringIO(txt)))
+    out.append(f"##### {tag} rows_total={len(rows)} data={len(rows)-1}")
+    out.append("HDR: "+" || ".join(rows[0]))
+    ids=[r[0].strip() for r in rows[1:] if r and r[0].strip()]
+    out.append(f"unique_ids={len(set(ids))} ids={len(ids)}")
+    out.append("")
+io.open(r"C:\Users\J\AppData\Local\Temp\opencode\rev0050\reg_head.txt","w",encoding="utf-8").write("\n".join(out))
+print("\n".join(out))
+'@ | Set-Content -Encoding UTF8 "$tmp\regh.py"; python "$tmp\regh.py"
+##### 0050 rows_total=100 data=99
+HDR: fact_id || case_id || doc_id || revision || section || table_anchor || row_key || field || value || provenance_status || assumption_or_basis || source_doc_id || source_docx_sha256 || source_fact_id || required_replacement_source || owner_role_to_confirm || verification_status || cross_document_refs || locator_marker
+unique_ids=99 ids=99
+
+##### 0049 rows_total=159 data=158
+HDR: fact_id || case_id || doc_id || section || table_anchor || row_key || field || value || provenance_status || assumption_or_basis || source_doc_id || source_docx_sha256 || source_fact_id || required_replacement_source || owner_role_to_confirm || verification_status || cross_document_refs || locator_marker
+unique_ids=158 ids=158
+
+##### 0033 rows_total=197 data=196
+HDR: fact_id || case_id || doc_id || section || table_anchor || row_key || field || value || provenance_status || assumption_or_basis || required_replacement_source || owner_role_to_confirm || reviewer || verification_status || cross_document_refs || locator_marker || page
+unique_ids=196 ids=196
+> build · deepseek-v4.1-flash-free
+→ Read C:/Users/J/AppData/Local/Temp/opencode/rev0050/reg0050_raw.txt 
+→ Read docs/ttqs-quality-20261016/quality-review/0050_R01/source/official_evidence_table_page4.png 
+> build · deepseek-v4.1-flash-free
+→ Read C:/Users/J/AppData/Local/Temp/opencode/rev0050/reg0050_raw.txt [offset=78]
+$ $tmp="C:\Users\J\AppData\Local\Temp\opencode\rev0050"; @'
+import io
+from docx import Document
+from docx.table import Table
+from docx.text.paragraph import Paragraph
+from docx.oxml.ns import qn
+def extract(p,outp):
+    doc=Document(p)
+    def it(parent):
+        for ch in parent.element.body.iterchildren():
+            if ch.tag==qn('w:p'): yield Paragraph(ch,parent)
+            elif ch.tag==qn('w:tbl'): yield Table(ch,parent)
+    out=[];tc=0
+    for b in it(doc):
+        if isinstance(b,Paragraph):
+            if b.text.strip(): out.append(f"[P|{b.style.name}] {b.text}")
+        else:
+            tc+=1
+            out.append(f"[TABLE {tc}] rows={len(b.rows)} cols={len(b.columns)}")
+            for ri,row in enumerate(b.rows):
+                out.append(f"  R{ri}: "+" | ".join(c.text.replace(chr(10),"\\n") for c in row.cells))
+    out.append(f"=== tables={tc} ===")
+    io.open(outp,"w",encoding="utf-8").write("\n".join(out))
+    return tc
+base=r"E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review"
+print("0049 tables",extract(base+r"\0049_R01\candidate\0049_R01.docx", r"C:\Users\J\AppData\Local\Temp\opencode\rev0050\body0049.txt"))
+print("0033 tables",extract(base+r"\0033_R03\candidate\0033_R03.docx", r"C:\Users\J\AppData\Local\Temp\opencode\rev0050\body0033.txt"))
+'@ | Set-Content -Encoding UTF8 "$tmp\ex2.py"; python "$tmp\ex2.py"
+0049 tables 31
+0033 tables 25
+> build · deepseek-v4.1-flash-free
+→ Read C:/Users/J/AppData/Local/Temp/opencode/rev0050/body0049.txt 
+> build · deepseek-v4.1-flash-free
+→ Read C:/Users/J/AppData/Local/Temp/opencode/rev0050/body0033.txt [limit=80]
+> build · deepseek-v4.1-flash-free
+$ $tmp="C:\Users\J\AppData\Local\Temp\opencode\rev0050"; Write-Output "=== 0033 case/name/duration ==="; Select-String -Path "$tmp\body0033.txt" -Pattern "SYN-0033-PLAN-01|志工服務紀錄|360|90＋90|單元一|單元二|單元三|單元四|9÷12|12人" | ForEach-Object {$_.LineNumber.ToString()+": "+$_.Line}
+=== 0033 case/name/duration ===
+89: [P|Normal] �ר��ѧO SYN-0033-PLAN-01�F�ܽd����2026/08/03��2026/08/14�C�T���U�ܽ�4���B�@12���F�^��10���A�䤤���Ȩ���N��SYN-R10��Q04���㭫�n�ׯx�}�ӱư��F����9���C�X�@���fSYN-R11�ιw�w���V��SYN-R12���^�СC�Ҧ���Ƶ�c�C
+97: [P|Normal] �����G�^���v�צ^�����ܽСF���Ħ^�вv�צ��ġ��ܽСF�^�������Ĥ�ҡ�9��10��90.0%�C�p�ƥ|�ˤ��J��1��C�X�p��10��12��83.3%�B9��12��75.0%�B9��10��90.0%�C�ŭȤ���0�A���^�Ф���Ū���S���ݨD�C
+167:   R1: �椸�@�G����ɽu�P�汵 | ���X�W�X���V���⪺���ҤΥ��T�汵�d���C | 5�ӵ�c�רҦܤ�4�D�P�_���T�C | 90����
+168:   R2: �椸�G�G�ݨD�T�{ | �δ��ݡB���z�B�T�{�U�@�B�����t�m�C | ��ť�B���z�B�ɽu�B�T�{4���ܤ�3���F�СC | 90����
+169:   R3: �椸�T�G�̤p���n���� | �ΰΦW�N�X�O�����ȡB���A�B�����ƶ��B�U�@�B�γd���̡C | 5�ӥ��n��짹��F���t�����n�Ӹ�C | 120����
+170:   R4: �椸�|�G��X�m�� | ������c�רҥ汵�ë��X�ݸɸ�T�C | ���M��ֹ�F���F�Э��@�A���O���u�ꦨ�Z�C | 60����
+171: [P|Normal] �|�椸�@90+90+120+60��360�����]6�p�ɡ^�F�ܽd�W���W�B12�H�C����B���v�B���a�B�Ч��M��I�����S���u��ӷ��A�����u�ܽd��ݨD�ন�i�[��ؼСC���e���E�_�B���v���B���ӿ����ġC
+$ $tmp="C:\Users\J\AppData\Local\Temp\opencode\rev0050"; @'
+import io,csv
+for tag,p in [("0049",r"E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\SYNTHETIC_REPLACEMENT_REGISTER_R01.csv"),("0033",r"E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\SYNTHETIC_REPLACEMENT_REGISTER.csv")]:
+    rows=list(csv.reader(io.StringIO(io.open(p,encoding="utf-8-sig").read())))
+    hdr=rows[0]
+    print(f"##### {tag}  ncols={len(hdr)}")
+    for r in rows[1:]:
+        fid=r[0]
+        if any(k in fid for k in ["CASE_ID","COURSE_TITLE","COHORT","TOTAL_MINUTES","PROV","PROVENANCE_STATUS","VERIFICATION"]):
+            print("  ",fid,"=>",r[8] if len(r)>8 else "")
+    # print all distinct provenance/verification-like columns
+    print("  VERIF col sample:", set(r[-4] for r in rows[1:] if len(r)>4))
+'@ | Set-Content -Encoding UTF8 "$tmp\peerscan.py"; python "$tmp\peerscan.py"
+##### 0049  ncols=18
+   F0049_CASE_ID => SYNTHETIC_CROSS_DOCUMENT_REFERENCE
+   F0049_COURSE_TITLE => SYNTHETIC_PLAN_ASSUMPTION
+   F0049_COHORT_SIZE => SYNTHETIC_CROSS_DOCUMENT_REFERENCE
+   F0049_TOTAL_MINUTES => SYNTHETIC_CROSS_DOCUMENT_REFERENCE
+  VERIF col sample: {'��ڱ��v���ҵ{�W���d���̡]�m�W�P�v���ݮ֡^'}
+##### 0033  ncols=17
+  VERIF col sample: {'���Y�ֹ�', '�ݯu��ӷ�������Ʈ�'}
+> build · deepseek-v4.1-flash-free
+→ Read docs/ttqs-quality-20261016/quality-review/0050_R01/evidence/qa/TECHNICAL_VISUAL_QA_R01.json 
+$ $tmp="C:\Users\J\AppData\Local\Temp\opencode\rev0050"; @'
+import json,io
+p=r"E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\inputs\UNIQUE_BLUEPRINT_0050.jsonl"
+d=json.loads(io.open(p,encoding="utf-8").read().strip())
+keys=["deliverable_id","requirement_id","document_genre","official_requirement_text","official_checkbox_text","official_evidence_table_page","document_role","required_cross_references","negative_choice_neighbors","real_data_required","prohibited_fabrication"]
+out=[]
+for k in keys:
+    out.append(f"## {k}\n{d.get(k)}\n")
+io.open(r"C:\Users\J\AppData\Local\Temp\opencode\rev0050\bp_decoded.txt","w",encoding="utf-8").write("\n".join(out))
+print("ok")
+'@ | Set-Content -Encoding UTF8 "$tmp\bpd.py"; python "$tmp\bpd.py"; Get-Content "$tmp\bp_decoded.txt" -Encoding UTF8
+ok
+## deliverable_id
+0050
+
+## requirement_id
+I11-E02
+
+## document_genre
+�������p�e���U�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z
+
+## official_requirement_text
+�U�ҵ{�椸���e����F���V�m�W�����ؼСC
+
+## official_checkbox_text
+�U�ҵ{�椸���e����F���V�m�W�����ؼСC
+
+## official_evidence_table_page
+4
+
+## document_role
+strategy_plan
+
+## required_cross_references
+�P�n�D���� �L�F�۾F�n�D I11-E01, I11-E03�F�@�έ�l�ӷ��ɥu�ޥήֹ굲�G�A���ƻs�O����󥿤�C
+
+## negative_choice_neighbors
+0049�m�V�m�ҵ{�p�e�t�X�~�D�B���V�̥H��¾��ݨD����_�i�����ϥΦ��~�n�]I11-E01�^�G���ҩ����P�u�@���F���󤣱o�N���B�X�֩νƻs��M�ݨƹ�C
+0051�m�U���ҵ{���X���g�Q�׫�T�{�A�B�d����������P_�i�����ϥΦ��~�n�]I11-E03�^�G���ҩ����P�u�@���F���󤣱o�N���B�X�֩νƻs��M�ݨƹ�C
+
+## real_data_required
+�ɮ欰 REAL �e�v�����o�i�ֹ�ӷ��G��������F�u��H�W/����F�֭�/ñ���F�u��Z��/�ҵ{�F��ڼƦr/��ҡF�u�����P�ɮצ�m�C�b�L���ɼХ� SAMPLE/SYNTHETIC�F�X���ƹ궷�n�� replacement register�A���o�źپ��c���Z�C
+
+## prohibited_fabrication
+���o�����u�u�@�Z�Ц�REAL�F���o���y�֭�Bñ���B�u�H�ѻP�B��V�B���Z�B���G�Τ��s�b���~���ƹ�C�F���o�N���ɤ��e�B�ܽd�ƾڡB���d��Drive�Կ�ξ��v��׼Ц� REAL�F���o���y�֭�Bñ���B�u�H�ѻP�B��V�B���Z�B���G�B�~���ҾکΨӷ��w��C
+> build · deepseek-v4.1-flash-free
+→ Read docs/ttqs-quality-20261016/quality-review/0050_R01/evidence/render_R01_d0d37c2c/page-01.png 
+→ Read docs/ttqs-quality-20261016/quality-review/0050_R01/evidence/render_R01_d0d37c2c/page-08.png 
+> build · deepseek-v4.1-flash-free
+→ Read docs/ttqs-quality-20261016/quality-review/0050_R01/evidence/render_R01_d0d37c2c/page-14.png 
+→ Read docs/ttqs-quality-20261016/quality-review/0050_R01/evidence/render_R01_d0d37c2c/page-17.png 
+> build · deepseek-v4.1-flash-free
+$ $tmp="C:\Users\J\AppData\Local\Temp\opencode\rev0050"; Write-Output "=== placeholder scan in candidate body ==="; Select-String -Path "$tmp\body.txt" -Pattern "待填|待核|空白表|保持空白|會後填寫|TODO|TBD|XXX|待補填" | ForEach-Object {$_.LineNumber.ToString()+": "+$_.Line}; Write-Output "=== literal underscore blanks count ==="; (Select-String -Path "$tmp\body.txt" -Pattern "_{6,}" -AllMatches).Matches.Count
+=== placeholder scan in candidate body ===
+270: [P|Normal] ���󪺩ڦ��ɽu�C���󥼵n�����X������B�u�H�����B���v�B�ҵ{��I�B���絲�G�ΥD�ޮ֭㳣���o�ɶi�������C���ʤ֮ɡA�O�d�M�����������A�üХX���o�ӷ��P�d������F���o�H�ťժ��ΥܨҴ��N���Z�C
+=== literal underscore blanks count ===
+35
+$ $tmp="C:\Users\J\AppData\Local\Temp\opencode\rev0050"; @'
+import io,csv,collections,re
+p=r"E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\SYNTHETIC_REPLACEMENT_REGISTER_R01.csv"
+rows=list(csv.reader(io.StringIO(io.open(p,encoding="utf-8-sig").read())))
+hdr=rows[0]; data=rows[1:]
+def col(name): 
+    i=hdr.index(name); return [r[i] for r in data]
+print("provenance_status distinct:",collections.Counter(col("provenance_status")))
+print("verification_status distinct:",collections.Counter(col("verification_status")))
+print("doc_id distinct:",set(col("doc_id")),"case_id distinct:",set(col("case_id")),"revision:",set(col("revision")))
+print("empty locator_marker:",sum(1 for v in col("locator_marker") if not v.strip()))
+print("empty required_replacement_source:",sum(1 for v in col("required_replacement_source") if not v.strip()))
+print("empty owner_role_to_confirm:",sum(1 for v in col("owner_role_to_confirm") if not v.strip()))
+print("rows with source_docx_sha256:",sum(1 for v in col("source_docx_sha256") if v.strip()),"distinct sha:",set(v for v in col("source_docx_sha256") if v.strip()))
+# any value text asserting REAL / 已核准
+bad=[r[0] for r in data if re.search(r"REAL|已核准|已開課|實際成效", r[8])]
+print("rows whose value mentions REAL/已核准/已開課/實際成效:",bad[:10], "count", len(bad))
+'@ | Set-Content -Encoding UTF8 "$tmp\chk.py"; python "$tmp\chk.py"
+provenance_status distinct: Counter({'SYNTHETIC_LEARNING_DESIGN': 96, 'SYNTHETIC_CROSS_DOCUMENT_REFERENCE': 3})
+verification_status distinct: Counter({'SAMPLE_ONLY_NOT_VERIFIED_AS_REAL': 99})
+doc_id distinct: {'0050'} case_id distinct: {'SYN-0033-PLAN-01'} revision: {'R01'}
+empty locator_marker: 0
+empty required_replacement_source: 0
+empty owner_role_to_confirm: 0
+rows with source_docx_sha256: 4 distinct sha: {'e8212788b1f7b201ca4af4f4c5fb83ab131627dbfa815987f7cf6344edfda727'}
+rows whose value mentions REAL/�w�֭�/�w�}��/��ڦ���: [] count 0
+> build · deepseek-v4.1-flash-free
+$ $tmp="C:\Users\J\AppData\Local\Temp\opencode\rev0050"; @'
+import io,json
+p=r"E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\inputs\UNIQUE_BLUEPRINT_0050.jsonl"
+raw=open(p,"rb").read()
+print("bytes",len(raw))
+for enc in ["utf-8","cp950","big5","utf-8-sig"]:
+    try:
+        t=raw.decode(enc)
+        # show a slice containing the requirement text
+        i=t.find("official_requirement_text")
+        print("---",enc,"OK sample:",repr(t[i:i+80]))
+    except Exception as e:
+        print("---",enc,"FAIL",e)
+# try: decode utf-8 then re-encode latin1/cp950 and decode cp950
+try:
+    t8=raw.decode("utf-8")
+    for mid in ["cp950","big5","latin1"]:
+        try:
+            print("recover via utf8->",mid,"->cp950:", t8.encode(mid).decode("cp950")[ t8.encode(mid).decode("cp950").find("official_requirement_text"):][:70])
+        except Exception as e:
+            print("   recover",mid,"fail",e)
+except Exception as e:
+    print("u8 fail",e)
+'@ | Set-Content -Encoding UTF8 "$tmp\enc.py"; python "$tmp\enc.py"
+bytes 7356
+--- utf-8 OK sample: 'official_requirement_text":"�U�ҵ{�椸���e����F���V�m�W�����ؼСC","official_checkbox_text":"�U�ҵ{�椸'
+--- cp950 FAIL 'cp950' codec can't decode byte 0xe5 in position 76: illegal multibyte sequence
+--- big5 FAIL 'big5' codec can't decode byte 0xe5 in position 76: illegal multibyte sequence
+--- utf-8-sig OK sample: 'official_requirement_text":"�U�ҵ{�椸���e����F���V�m�W�����ؼСC","official_checkbox_text":"�U�ҵ{�椸'
+recover via utf8-> cp950 ->cp950: official_requirement_text":"�U�ҵ{�椸���e����F���V�m�W�����ؼСC","official_checkbox_te
+recover via utf8-> big5 ->cp950: official_requirement_text":"�U�ҵ{�椸���e����F���V�m�W�����ؼСC","official_checkbox_te
+   recover latin1 fail 'latin-1' codec can't encode characters in position 76-93: ordinal not in range(256)
+> build · deepseek-v4.1-flash-free
+→ Read C:/Users/J/AppData/Local/Temp/opencode/rev0050/bp_decoded.txt 
+> build · deepseek-v4.1-flash-free

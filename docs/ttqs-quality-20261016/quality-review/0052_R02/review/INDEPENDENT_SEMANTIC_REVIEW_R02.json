@@ -1,0 +1,47 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0052",
+  "revision": "R02",
+  "requirement_id": "I11-E04",
+  "official_checkbox_sequence": "054",
+  "candidate_docx_sha256": "9129aff2bb730d31f76a5cb457ed069f1cafd2460b4069219f697b35d2c11afa",
+  "candidate_docx_bytes": 63283,
+  "overall_verdict": "PASS",
+  "candidate_only": true,
+  "formal_acceptance": "NOT_GRANTED",
+  "promotion": "NOT_AUTHORIZED",
+  "reviewer_route": "OpenCode CLI v2",
+  "cli_version": "2.0.29",
+  "provider_id": "opencode",
+  "runtime_model_identity": "GLM-5.3-Flash Free",
+  "requested_model": "opencode/glm-5.3-flash-free",
+  "process_exit_code": 0,
+  "reviewer_visual_pages": "1-16 (all inspected per raw response and per-page Read log)",
+  "reviewer_checked": {
+    "official_page4_and_current_157_spec": true,
+    "unique_blueprint": true,
+    "candidate_raw_sha_twice": true,
+    "candidate_paragraphs_and_32_tables": true,
+    "arithmetic_recalculation": true,
+    "replacement_register_186_rows": true,
+    "sample_real_boundary": true,
+    "negative_neighbors": true
+  },
+  "raw_stdout_path": "review/opencode_v2_R02/opencode_v2_stdout_R02.txt",
+  "raw_stdout_sha256": "175b80b12183238b1f6c2fd511d654bacea178bc4868197282903806744572f0",
+  "raw_stderr_sha256_local": "6feb446eef420d9b5511a0144e1fac8b9c55a09e3d29e2fd9047457300cac6ff",
+  "reviewed_register_sha256": "71e5f87f8d5a829601077fb1b98f5715c61159fddb5e5afb6420353d03779474",
+  "current_register_sha256": "dd88ff14f8ddf744128e214e0982b2b3f1bafad952fb511bfc5238d6ecc886d5",
+  "review_nonblocking_observations": [
+    "docProps/core.xml title still contains R01 and template timestamps; reviewer called cosmetic. No DOCX metadata-only rewrite was made because visible content was clean and a rewrite would invalidate the exact-SHA review.",
+    "Three register locator labels G3/G4/G5 were corrected after review in companion CSV only; reviewer observed the pre-correction register. Values and DOCX bytes are unchanged."
+  ],
+  "scope_limitations": [
+    "Cross-document reviewer compared supplied source map/register; separate local exact-SHA linkage check was added for 0033 R03, 0049 R01 and 0050 R01. No claim of independent full review of upstream documents.",
+    "All example data remain SAMPLE/SYNTHETIC and no formal association acceptance is claimed."
+  ],
+  "raw_stderr_sha256_private_local": "6feb446eef420d9b5511a0144e1fac8b9c55a09e3d29e2fd9047457300cac6ff",
+  "raw_stderr_private_copy_preserved_locally": true,
+  "public_redacted_stderr_path": "review/opencode_v2_R02/opencode_v2_stderr_R02_REDACTED_PUBLIC.txt",
+  "public_redacted_stderr_sha256": "c071fb1db34485e3718b419c2c8ead591551b3792c49b550a485ed9ba78a16a9"
+}

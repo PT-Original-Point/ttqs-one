@@ -1,0 +1,84 @@
+{
+  "project": "TTQS_ONE",
+  "document_id": "0038",
+  "requirement_id": "I08-E02",
+  "official_checkbox_sequence": "039",
+  "candidate": "0038_R01",
+  "candidate_sha256": "75065568b801506d736297441ee30abd3eaccc4fa3748ef6da2a11c67715088a",
+  "pdf_sha256": "a41f44d91c42e4efa78abee347af82e1d459eaa9b5a91fcbee574f8b36545575",
+  "page_count": 11,
+  "table_count": 17,
+  "scoring_batches": {
+    "A": {
+      "pre": 44,
+      "post": 57,
+      "pass": 3,
+      "critical_zero": 2,
+      "n": 12
+    },
+    "B": {
+      "pre": 44,
+      "post": 79,
+      "pass": 11,
+      "critical_zero": 0,
+      "n": 12
+    }
+  },
+  "replacement_register_rows": 37,
+  "minimum_explicit_table_font_pt": 9.5,
+  "checks": [
+    {
+      "name": "candidate_exact_sha",
+      "status": "PASS",
+      "detail": "75065568b801506d736297441ee30abd3eaccc4fa3748ef6da2a11c67715088a"
+    },
+    {
+      "name": "docx_zip_integrity",
+      "status": "PASS",
+      "detail": "all DOCX package members passed CRC"
+    },
+    {
+      "name": "requirement_and_boundary_text",
+      "status": "PASS",
+      "detail": "missing=[]"
+    },
+    {
+      "name": "two_full_12_row_batches",
+      "status": "PASS",
+      "detail": "{\"A\": {\"pre\": 44, \"post\": 57, \"pass\": 3, \"critical_zero\": 2, \"n\": 12}, \"B\": {\"pre\": 44, \"post\": 79, \"pass\": 11, \"critical_zero\": 0, \"n\": 12}}"
+    },
+    {
+      "name": "all_row_calculations",
+      "status": "PASS",
+      "detail": "24 vectors, totals, deltas and threshold labels recomputed"
+    },
+    {
+      "name": "aggregate_math",
+      "status": "PASS",
+      "detail": "A gain=13/12; B gain=35/12; gain difference=22/12"
+    },
+    {
+      "name": "table_type_size",
+      "status": "PASS",
+      "detail": "min_direct_size_pt=9.5; unscaled_nonempty_runs=0"
+    },
+    {
+      "name": "synthetic_register_rows",
+      "status": "PASS",
+      "detail": "rows=37"
+    },
+    {
+      "name": "rendered_page_set",
+      "status": "PASS",
+      "detail": "page_png_count=11"
+    },
+    {
+      "name": "word_pdf_export",
+      "status": "PASS",
+      "detail": "exists=True; bytes=657122"
+    }
+  ],
+  "status": "PASS",
+  "independent_semantic_review": "PENDING",
+  "formal_acceptance": "NOT_GRANTED"
+}

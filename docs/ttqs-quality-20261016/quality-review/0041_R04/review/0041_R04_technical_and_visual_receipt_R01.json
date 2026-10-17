@@ -1,0 +1,47 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0041",
+  "requirement_id": "I09-E01",
+  "official_checkbox_serial": "042",
+  "revision": "R04",
+  "candidate_path": "candidate/0041_R04.docx",
+  "candidate_sha256": "287c06f989478d31204cb34a0c4ddf66bf9bae8c68e4ad4ff5f90c54421a7b8c",
+  "candidate_disposition": "CANDIDATE_ONLY_NOT_PROMOTED",
+  "repair_from_R03": {
+    "source_sha256": "1BC0337C0328C68A8644CABF3E07D5080E9C2A9D98B19B8881A6DB05196CBA43",
+    "finding_id": "F-02",
+    "location": "Section 4, objective/design table; rendered page 5",
+    "change": "三欄交接卡演練及同儕回饋。 → 四欄交接卡演練及同儕回饋。",
+    "crosscheck": "Section 5 timetable and SYN-HANDOFF-001 register both already specified four columns. R04 aligns all three."
+  },
+  "technical_review": {
+    "status": "PASS_TECHNICAL_ONLY",
+    "zip_test": "PASS",
+    "only_changed_docx_package_part_from_R03": "word/document.xml",
+    "page_count": 12,
+    "pdf_sha256": "94195148B2BAB34DF9D4A8C0E67BD96B000144FAD6714E0B711E6C695D66C826",
+    "render_png_count": 12
+  },
+  "visual_review": {
+    "status": "PASS_LOCAL_DIRECT_DELTA_REVIEW",
+    "directly_inspected_pages": [
+      5,
+      12
+    ],
+    "other_pages_01_04_06_11": "byte-identical page PNGs to reviewed R03 renders",
+    "readability": "No changed-page clipping, overlap, or text loss; R03 independent review directly inspected the complete 12-page content/render."
+  },
+  "synthetic_replacement_register": {
+    "rows": 43,
+    "SYN_fact_rows": 41,
+    "CTX_context_rows": 2,
+    "sha256": "3BC9711552BB49D7CB9AFDFB51A61242EA6DA16F699820D43B8EB2F749A84802"
+  },
+  "independent_semantic_review": {
+    "status": "PENDING",
+    "must_bind_exact_sha256": "287c06f989478d31204cb34a0c4ddf66bf9bae8c68e4ad4ff5f90c54421a7b8c",
+    "prior_R03_status": "PARTIAL; F-02 localized mismatch now corrected in R04; F-01 remains an evidence limitation because stakeholder perspectives are synthetic, not actual consultation."
+  },
+  "formal_acceptance": "NOT_GRANTED",
+  "promotion": "NOT_PROMOTED"
+}

@@ -1,0 +1,68 @@
+I'll start the independent review. First, verifying the candidate DOCX hash and reading the official sources in parallel.
+SHA-256 matches exactly: `9129AFF2BB730D31F76A5CB457ED069F1CAFD2460B4069219F697B35D2C11AFA`. Now let me read the remaining source files and inspect the DOCX internals.
+Both contract files read. Now let me view the official page-4 evidence image, the replacement register, and inspect the DOCX internals.
+The official page-4 image confirms Indicator 11 with the checkbox「規劃課程依學員及結訓學員意見訂定訓練課程，且流程有完整紀錄。」— matching the quoted official text. Now inspecting the actual DOCX bytes in memory (no files written):
+SHA verified again from the raw bytes. Now dumping paragraph/table text from the DOCX in memory to cross-check against the supplied extraction:
+Structure matches the supplied extraction (32 tables). Noting a metadata point (core title says "R01" while file is R02). Now extracting the arithmetic tables in full and independently recalculating:
+All previously read tables match the register. Now dumping the remaining arithmetic tables to cross-check DOCX vs the supplied extraction:
+All DOCX tables match the supplied extraction exactly. Now the visual review — I will inspect all 16 rendered pages:
+All 16 pages were visually inspected. Independent review is complete; no files were written or modified and no paths outside the packet were accessed.
+
+# Independent Review Report — DOCX 0052 R02 (I11-E04 / checkbox 054)
+
+**Runtime/model identity (as actually known):** OpenCode harness, model GLM-5.3-Flash Free (providerID `opencode`). This is an independent candidate review, **not** formal TTQS acceptance or authorization to promote.
+
+## 1. SHA and bytes observed
+- `candidate\0052_R02.docx` — 63,283 bytes; SHA-256 = `9129AFF2BB730D31F76A5CB457ED069F1CAFD2460B4069219F697B35D2C11AFA` → exact, case-insensitive match to `9129aff2…11afa`. Verified twice (PowerShell `Get-FileHash` on file; hashlib on raw bytes re-read).
+- Valid Office Open XML package. Body = 78 top-level paragraphs + 32 tables; parsed independently (ElementTree over `word/document.xml`, no writes). All extracted paragraph and table texts match the supplied `0052_R02_extracted.md` exactly, including Tables 11, 12, 14, 15, 16, 19, 20, 22, 25.
+- Footer renders a live PAGE field (pages 1–16 rendered correctly in the PDF). **PASS**
+
+## 2. Official sources and contract comparison — **PASS**
+- Official page-4 image (`official_evidence_table_page4.png`) visually confirmed: Indicator 11「訓練計畫及目標需求的結合」with the checkbox「規劃課程依學員及結訓學員意見訂定訓練課程，且流程有完整紀錄。」It matches the document's quoted 官方原文 (§本件對應與範圍, p.1) verbatim.
+- 157-list current (`03_157…`): 054 =「依結訓學員回饋訂課：意見統計、取捨與修正閉環」— the document delivers opinion statistics (§5–6, §8), trade-offs (§9), and a revision closed loop (§10, §12). Neighbor figures verified: 053 = 課程產出確認, 056 = 適配評估 — not absorbed here.
+- Blueprint row (`UNIQUE_BLUEPRINT_0052.jsonl`): genre 策略／計畫文件， required sections/tables/fields/calculations all materially present (scope §1/表4; indicators 表23; responsibility 表7; risks 表24; timeline/version 表25; replacement 表30/31; traceability 表27).
+- Both current contract files (02 genre manual, 03 157 list) read; no §-text copied from them; register locators (§§, Q/G codes) checked against the body.
+
+## 3. Genre and title-blind identity — **PASS**
+Read with title/ID masked, the body itself plans the full closed loop: learner feedback Q1–Q7 (§4–6) → graduated-learner D+30 follow-up G1–G5 (§7–8) → analysis and trigger thresholds (§6, §8) → weighted option trade-offs (§9) → concrete next-course revision (§10, Table 22) → authorization gate (§3, EX-S05) → next-cycle validation (§2 step 8, §12, Table 25). Not movable to 053 (meeting/confirmation) or 056 (fit review) without rewrite. A strategy/plan reading is confirmed everywhere (§1, 表2, 表27 row 4).
+
+## 4. Instruments, respondents, missing-answer rules, synthetic sample, stats, alternatives, plan — **PASS**
+- §4/Table 8 two instruments + §7/Table 13 follow-up; 1–5 scale with explicit anchors; NA/「不適用／不願回答」as missing code, excluded from means, "必須報數"; missing-answer handling in Table 9 (per-question valid n and missing n; no zero imputation).
+- Respondent definitions: G1 count rules (Table 13: only 是/否 enter the usage-rate denominator, denominator must be noted; Appendix B repeats this).
+- Options: ≥3 alternatives incl. retaining current design (§2 step 5, §9 Tables 19–21); weighted scoring with explicit pulse warnings (small margins not claimed as statistical superiority).
+- Responsibilities P1–P5 with authority boundaries (Table 7); exception rules EX-S01–S05 (Table 24); evidence fields and next-cycle checks (§13 Table 26, 表27, 30, 31); timeline/version trail Table 25 with clear SYNTHETIC status per entry.
+
+## 5. Arithmetic recalculation (independent, from Table 11/14 matrices)
+
+| Item | Doc claim | Independent result | Verdict |
+|---|---|---|---|
+| Q1..Q7 sums / means | 30/3.750, 30/3.750, 23/2.875, 28/3.500, 32/4.000, 34/4.250, 29/3.625 | Same (e.g. Q3: 1+2+2+3+3+3+5+4=23, 23÷8=2.875) | ✓ |
+| Frequency counts (all 10 rows, Tables 12/15) | as listed | Recounted identical (e.g. G3 2,3,3,4,4 → 0/1/2/2/0) | ✓ |
+| Learner response rate | 8÷12×100=66.7% | 66.666…→66.7% ✓ | ✓ |
+| Grad response rate / used | 5÷12=41.7%; 3/5=60%, 2/5; needs 4/5=80%, 3/5=60%, 2/5=40%, 1/5=20%; overlap total 9 ticks (4+3+2) | All ✓ | ✓ |
+| Weighted A/B/C | A: 120+100+100+60+50=430→4.30; B: 150+100+60+60+50=420→4.20; C: 150+125+40+60+50=425→4.25 | Same; weights 30+25+20+15+10=100 ✓ | ✓ |
+| 360-min plan | 90+90+120+60=360; A: G1 20+20+50=90 vs base 35/20/35=90 (+15 shifted); B: 105+105+90+60=360; C: 375 | All ✓； consensus margins 0.05/0.10 as stated | ✓ |
+
+No arithmetic errors found. **PASS**
+
+## 6. Cross-document facts — **PASS**
+- SYN-0033-PLAN-01 used consistently as upstream synthetic case (Table 25 rows 1–2, header/subject metadata, register CASE-ID); course title/duration/12-person assumption match the stated 0049/0050 lineage in OFFICIAL_AND_NEIGHBOR…R02.md.
+- All 186 fact rows of `SYNTHETIC_REPLACEMENT_REGISTER_R02.csv` (header + 186 data rows, verified by line count) cross-checked against the body: L01–L08 and G01–G05 values match Tables 11/14 exactly; all DERIVED values recomputed as above match. One **cosmetic** register locator note: graduate rating facts are labeled "row G01, Q03/Q04/Q05" while the document's follow-up instrument codes those columns G3/G4/G5 — values match 1:1 but the register's question naming diverges from the document's code (register-internal, non-blocking).
+- No causal or extrapolation claims: means not recast as percentages; multi-select shares not summed to a population share; small-N descriptive-only statements in §6/§8; no inference from pre/post differences (Table 6 step 8).
+
+## 7. No invented real approvals / replacement actionability — **PASS**
+SAMPLE/SYNTHETIC banner in footer of all 16 pages; 表1/表5/表10/表21/Table 24 EX-S05/表31/表32 all disclaim approval; P4 authority explicitly UNKNOWN with "示例代碼不能核准" (Table 6 step 6/7, Table 26 step 4 "AI 文字…不算核定"). No real names, signatures, meeting minutes, attendance or delivery claimed. Replacement instructions are actionable: §13/Table 26 gives per-step REAL evidence plus rejection criteria mapped to the 186-row register's role assignments (P1/P3/P4 / P1/P2), each value traceable via fact_id.
+
+## 8. Negative neighbors — **PASS**
+Table 3 (p.1) explicitly lists 課程產出討論與確認紀錄 (0051/053) and 課程適切性檢討與調整紀錄 (0053/§12 of official p.4) as non-interchangeable; body §§ say it does not replace them. No numeric crossings (052/053/054 vs 0051/0052/0053) observed.
+
+## 9. Reader usability / layout — **PASS**
+Visually inspected all sixteen rendered pages: p1–p16 of `render\` (headers 原始點協會｜課程意見回流與課程規劃； footer SAMPLE/SYNTHETIC on every page; page numbers 1–16 rendered; tables readable, no clipped/overlapping content; NA column on appendix checkboxes renders; highlighted status boxes legible). Full visual coverage confirmed.
+
+## Material findings
+None requiring correction in this candidate. Two **non-blocking notes**:
+1. `docProps/core.xml` title reads「…0052 R01 SAMPLE/SYNTHETIC」and created/modified timestamps carry python-docx template defaults (2013-12-23); metadata should be aligned to R02 in any future rebuild — cosmetic, outside body content.
+2. Register locator naming G3–G5 vs "Q03/Q04/Q05" for graduate ratings (above) — recommend aligning codes when the register is next regenerated.
+
+## Overall verdict
+**PASS** (candidate-only; R02 remains pending formal acceptance, association approval, and real-course evidence per the review request scope).

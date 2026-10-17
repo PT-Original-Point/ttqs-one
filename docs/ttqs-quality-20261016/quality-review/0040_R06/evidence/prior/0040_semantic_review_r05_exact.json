@@ -1,0 +1,57 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0040",
+  "revision": "R05",
+  "requirement_id": "I08-E03",
+  "official_checkbox_sequence": "040",
+  "candidate_sha256": "95531ac5f8a79eed7c605f3ab1f42da3948e8f15316499d325b606bd6d434384",
+  "verdict": "PARTIAL",
+  "reviewer_route": "separate read-only cross-review agent; writer identity separation not independently documented",
+  "raw_review_path": "evidence/qa/0040_semantic_review_r05_crossreview_raw.md",
+  "raw_review_sha256": "4c0cb2d6ba44a232d1aa5eb6707820893d56b9a78fd3da0f8a15e12c981e03df",
+  "reviewed_artifact_sha256": {
+    "rendered_pdf": "dd4d8ea87cdb8ca22ef549ef496e61a5da38ffd0720c548895988f39daf7e",
+    "synthetic_register": "35cdb226aa14f8b36304ed5d22031e3ccd5f1c77d98851e968f8ca64ee0e1788",
+    "official_source_pdf": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "unique_blueprint_row": "ab080a2e6d85cc13a706f0c10bda7c208ddc191a1fea20a670fd5a174ab14943"
+  },
+  "criteria": {
+    "official_mapping_and_genre": "PASS",
+    "title_blind_and_neighbor_distinction": "PASS",
+    "operational_maturity": "PARTIAL",
+    "calculations_and_data_consistency": "PASS",
+    "cross_document_case_consistency": "PASS",
+    "sample_real_and_authority_boundary": "PASS",
+    "replacement_register": "PARTIAL",
+    "R04_regression_repair": "PASS",
+    "visual_readability": "PASS",
+    "docx_version_metadata": "PARTIAL"
+  },
+  "findings": [
+    {
+      "id": "R05-F01",
+      "locator": "printed p.3, K1-K4 evidence/locator/responsibility column; printed p.5 D04 table",
+      "finding": "The matrix and D04 example do not provide a fillable original-record identifier or attachment/file/page location. Tool page navigation is not source-evidence location.",
+      "required_action": "Add a usable evidence ID/location field with a clearly synthetic pointer and an instruction to enter the controlled real file/attachment/page when authorized."
+    },
+    {
+      "id": "R05-F02",
+      "locator": "replacement register row 0040-SYN-009; printed pp.1 and 6",
+      "finding": "The 30-day follow-up authorization rule on p.1 and the D04 rescore-not-executed fact on p.6 are different facts; the combined locator incorrectly makes the latter evidence for the former.",
+      "required_action": "Separate the register facts and bind each to its own precise locator."
+    },
+    {
+      "id": "R05-F03",
+      "locator": "DOCX package docProps/core.xml",
+      "finding": "Document description still says R04 and revision is 4 although the candidate is R05.",
+      "required_action": "Set document properties to the actual new revision; do not alter printed substantive content for this metadata correction."
+    }
+  ],
+  "scope_limitations": [
+    "Reviewer directly inspected all eight rendered pages.",
+    "No claim of formal acceptance or association approval.",
+    "Builder identity not independently evidenced."
+  ],
+  "candidate_state": "CANDIDATE_NOT_PROMOTED",
+  "formal_acceptance": "NOT_GRANTED"
+}

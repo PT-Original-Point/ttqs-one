@@ -1,0 +1,236 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0036",
+  "official_requirement": "I07-E04",
+  "official_checkbox_serial": "036",
+  "candidate_revision": "R08",
+  "review_type": "technical_integrity",
+  "reviewer_lane": "current control lane; not an independent semantic reviewer",
+  "reviewed_at": "2026-10-16T23:02:33+08:00",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0036_R08\\candidate\\0036__課程設計進度與訓練規劃_R08.docx",
+  "candidate_sha256": "e2d4b3f5e906faaf3d473c7351bd79618a78dcf2c8f91a32a4e952d005ac5eae",
+  "render_pdf_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0036_R08\\render\\R08_final_review\\0036_R08_word_export.pdf",
+  "render_pdf_sha256": "238b275247b67bbe83f07422fb71fd369346b95a1b147879639e5a80bef1e7dd",
+  "register_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0036_R08\\sources\\SYNTHETIC_REPLACEMENT_REGISTER_0036_R08.csv",
+  "register_sha256": "b160577f551ac162170ad1fd2afe50479de7d7f5d343ef1ca39d86f097471cca",
+  "status": "PASS",
+  "semantic_review_status": "PENDING_INDEPENDENT_REVIEW",
+  "checks": [
+    {
+      "check": "candidate_exists",
+      "status": "PASS",
+      "evidence": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0036_R08\\candidate\\0036__課程設計進度與訓練規劃_R08.docx"
+    },
+    {
+      "check": "candidate_exact_sha",
+      "status": "PASS",
+      "evidence": "e2d4b3f5e906faaf3d473c7351bd79618a78dcf2c8f91a32a4e952d005ac5eae"
+    },
+    {
+      "check": "docx_zip_integrity",
+      "status": "PASS",
+      "evidence": {
+        "first_bad_member": null
+      }
+    },
+    {
+      "check": "pdf_exact_sha",
+      "status": "PASS",
+      "evidence": "238b275247b67bbe83f07422fb71fd369346b95a1b147879639e5a80bef1e7dd"
+    },
+    {
+      "check": "render_19_pages",
+      "status": "PASS",
+      "evidence": {
+        "pdf_pages": 19,
+        "png_pages": 19
+      }
+    },
+    {
+      "check": "same_renderer_baseline_coverage",
+      "status": "PASS",
+      "evidence": {
+        "compared_pages": 17,
+        "matching_dimensions": true,
+        "old_render": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0036_R07\\render\\R07_word_com_baseline_144"
+      }
+    },
+    {
+      "check": "expected_legacy_page_deltas_only",
+      "status": "PASS",
+      "evidence": {
+        "changed_pages": [
+          14,
+          16
+        ]
+      }
+    },
+    {
+      "check": "new_appendix_pages_present",
+      "status": "PASS",
+      "evidence": {
+        "page-18.png": [
+          1191,
+          1684
+        ],
+        "page-19.png": [
+          1191,
+          1684
+        ]
+      }
+    },
+    {
+      "check": "document_structure",
+      "status": "PASS",
+      "evidence": {
+        "paragraphs": 112,
+        "tables": 37
+      }
+    },
+    {
+      "check": "no_builder_internal_label",
+      "status": "PASS",
+      "evidence": {
+        "phrase_absent": true
+      }
+    },
+    {
+      "check": "sample_synthetic_boundary",
+      "status": "PASS",
+      "evidence": {
+        "sample": true,
+        "synthetic": true
+      }
+    },
+    {
+      "check": "learner_assessor_tools",
+      "status": "PASS",
+      "evidence": {
+        "A1": true,
+        "A2": true,
+        "3_of_4": true,
+        "critical_error": true
+      }
+    },
+    {
+      "check": "baseline_and_target_rates",
+      "status": "PASS",
+      "evidence": {
+        "baseline": [
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            3,
+            10
+          ]
+        ],
+        "target": [
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            10
+          ]
+        ]
+      }
+    },
+    {
+      "check": "weighted_option_scores",
+      "status": "PASS",
+      "evidence": [
+        [
+          3.3,
+          3.3
+        ],
+        [
+          4.7,
+          4.7
+        ],
+        [
+          3.5,
+          3.5
+        ]
+      ]
+    },
+    {
+      "check": "schedule_minutes",
+      "status": "PASS",
+      "evidence": {
+        "total": 210,
+        "instruction": 190,
+        "breaks": 20
+      }
+    },
+    {
+      "check": "paired_pre_post_math",
+      "status": "PASS",
+      "evidence": {
+        "n": 10,
+        "pre_total": 24,
+        "post_total": 40,
+        "gain_total": 16,
+        "at_least_4": 8,
+        "pre_average": 2.4,
+        "post_average": 4.0,
+        "gain_average": 1.6
+      }
+    },
+    {
+      "check": "synthetic_register_identity",
+      "status": "PASS",
+      "evidence": {
+        "rows": 75,
+        "unique_fact_ids": 75,
+        "doc_ids": [
+          "0036"
+        ],
+        "sha256": "b160577f551ac162170ad1fd2afe50479de7d7f5d343ef1ca39d86f097471cca"
+      }
+    },
+    {
+      "check": "synthetic_register_required_fields",
+      "status": "PASS",
+      "evidence": {
+        "empty_rows": [],
+        "empty_count": 0
+      }
+    },
+    {
+      "check": "synthetic_register_page_locators",
+      "status": "PASS",
+      "evidence": {
+        "invalid_count": 0,
+        "examples": []
+      }
+    },
+    {
+      "check": "appendix_scenario_and_rubric",
+      "status": "PASS",
+      "evidence": {
+        "appendix_pages": 2,
+        "scenario_rows": 4,
+        "rubric_rows": 4
+      }
+    }
+  ]
+}

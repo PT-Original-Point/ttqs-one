@@ -1,0 +1,82 @@
+{
+  "document": "0056",
+  "revision": "R02",
+  "candidate_sha256": "599b28655c491947dfe026d74a7b671faf84d62a37e2252ae25a4ecdc56ad58c",
+  "render_pdf_sha256": "e0f8369a611f500284712b1c2f3a44794487546d1e6fbdeb4e939d05ae647418",
+  "word_pages": 15,
+  "visual_review": "FAIL - targeted pagination repair required",
+  "review_scope": "All 15 pages directly rendered by Microsoft Word COM and inspected as PNG at 120 DPI",
+  "findings": [
+    "Page 4: only the final two status-dictionary rows and a note remain before the landscape form section; excessive whitespace. Reflow/compact so the complete dictionary is on one page or otherwise avoid a two-row tail page, without lowering the font floor.",
+    "Page 9: only the second sample evidence row and blank T5 rows remain before the portrait section; excessive whitespace. Keep T5 together on one landscape page or reflow so a single-row tail page is eliminated.",
+    "The table identifiers now wrap at underscore boundaries visually. R02 uses U+200B in table cell text; verify/avoid hidden characters breaking copy/search where practical."
+  ],
+  "pass_observations": [
+    "15-page Word render; page numbers, landscape forms and repeating headers appear.",
+    "T7 sample row and I12-E03 negative-neighbor row now remain intact across page boundaries.",
+    "No blank page, clipped border, broken glyph, or overlap observed.",
+    "SAMPLE/SYNTHETIC and HOLD/PENDING_REAL_SOURCE remain visible; no real inspection/policy asserted."
+  ],
+  "page_image_hashes": [
+    {
+      "file": "page-01.png",
+      "sha256": "0cdb2d0da2c365db1b95011f8051b437e8201b42c9109b30b25bbfa4f6f701ca"
+    },
+    {
+      "file": "page-02.png",
+      "sha256": "f2e14075adc17c8805fd79edd69e7f7e9d43dfa8e544dbde0fef1863e2a6be52"
+    },
+    {
+      "file": "page-03.png",
+      "sha256": "190f493e7e5f729e1581be78b35ac0224c45385369edcc93193bd2a169a5f840"
+    },
+    {
+      "file": "page-04.png",
+      "sha256": "bac72fc167f13803a082022c519556286bfe011e430e0d39928bb83ff9fa36fb"
+    },
+    {
+      "file": "page-05.png",
+      "sha256": "ea1b5f326c915696b099d47ea2940242f4f8b8ee02b69066f2c726b9776cec85"
+    },
+    {
+      "file": "page-06.png",
+      "sha256": "c309e8a5b72aee080e04f92843e8854a82dde7dac5bb271f6d2f82d01b816eed"
+    },
+    {
+      "file": "page-07.png",
+      "sha256": "1714ba27177cff6f421cdf8df9850eaff2c99b0925e457f48a6650e3565541a8"
+    },
+    {
+      "file": "page-08.png",
+      "sha256": "fa41a02fb80429a6af2ec7dd8fa7c303f5b4a74d80fe25dddaf24da8648119b7"
+    },
+    {
+      "file": "page-09.png",
+      "sha256": "720344ab33294d96b33a960a8e139ec3a4beb082a16070796abcf37962e0de82"
+    },
+    {
+      "file": "page-10.png",
+      "sha256": "b669bdf4411458f36459a8469957c08cddfc35fbf561225287ab78ae81a3b374"
+    },
+    {
+      "file": "page-11.png",
+      "sha256": "07f925403e4420028c35ec14bfdd9feee93524207fb416025f1badb15591404a"
+    },
+    {
+      "file": "page-12.png",
+      "sha256": "23897e754bfe74417c3151cee60cb9e2d4ec6d02f89da932b0611cf302ae27aa"
+    },
+    {
+      "file": "page-13.png",
+      "sha256": "e46992693360efba1a1904dd61c73dc96252b8c5d07879061440cb7e501aef55"
+    },
+    {
+      "file": "page-14.png",
+      "sha256": "6cfbf2caa05c20eb4f102fc0135d777471c10d64e909cf3770a3a53f2115703d"
+    },
+    {
+      "file": "page-15.png",
+      "sha256": "f30a3535b10c668f17835a71df48a1042e4ef3d265770712d33342c7ee829517"
+    }
+  ]
+}

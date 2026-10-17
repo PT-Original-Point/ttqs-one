@@ -1,0 +1,227 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0043",
+  "requirement_id": "I09-E03",
+  "official_checkbox_sequence": 44,
+  "candidate_revision": "R04",
+  "candidate_sha256": "23e2218ccd297d82cd0fc8298fc242c66df278cb7708d824ebfb4b15449478ab",
+  "verdict": "PASS",
+  "title_blind_test": {
+    "verdict": "PASS",
+    "evidence": [
+      "Page 2, Section 1 ('本報告回答什麼問題') & Table ('要求、正文證據與解讀界線'): Explicitly frames the interview requirement from official checklist page 3 ('針對需求單位進行訪談並留有紀錄與統計分析') with exact evidence mapping.",
+      "Page 3, Section 2 ('資料設計與判定規則') & Table ('樣本與有效性規則'): Defines response denominator (10 received), completion criteria, and exclusion rules prior to analysis.",
+      "Page 4, Section 3 ('訪談執行步驟'): Sets a 7-step standard operating procedure for authorization, informed consent, de-identification, structured recording, read-back verification, and data locking.",
+      "Pages 4-5, Section 4 ('完整訪談題綱與填答欄位'): Contains 10 operational interview questions (Q1-Q10) with exact wording, response anchors (1 to 5 Likert scale), and read-back confirmation.",
+      "Pages 5-6, Section 5 ('合成樣本登錄與納入排除') & Table ('收到回覆逐筆狀態'): Logs all 10 responses (S01-S10) with 8 eligible and 2 excluded (S09 refused consent; S10 missing 3 score fields).",
+      "Pages 6-10, Section 6 ('八份完整合成訪談紀錄'): Provides 8 complete individual interview record cards (S01-S08) detailing date, role, Q2 top 3 priorities, Q3 urgency, Q4 six ratings, Q5 concrete change, Q6 schedule/mode, Q7 fee, Q8 barrier, Q9 privacy boundary, and Q10 verification.",
+      "Page 11, Section 7 ('完整需求評分資料與欄位字典') & Table ('六項能力需求分數矩陣'): Full 8 x 6 = 48 rating matrix with column sums, row sums, and field dictionary.",
+      "Pages 12-13, Section 8 ('統計結果與逐步計算'): Contains statistical ranking table ('需求排序與指標'), manual formula calculations, and explicit 3-tier tie-breaking rules.",
+      "Pages 13-14, Section 9 ('角色差異、時段偏好與參與障礙'): Subgroup comparisons (frontline vs admin, n=4 each), condition distribution, and coded barrier frequency table.",
+      "Pages 14-15, Section 10 ('發現、證據強度與可執行建議'): 4 data-backed findings, evidence boundary disclaimers, and 6-item actionable recommendation tracking table.",
+      "Pages 15-17, Section 11 & Appendices: Official requirement traceability index, 6-step authentic replacement procedure, audit checklist, and title-blind validation guidelines."
+    ]
+  },
+  "criteria": [
+    {
+      "criterion": "Title-blind requirement fit (I09-E03: 針對需求單位進行訪談並留有紀錄與統計分析)",
+      "verdict": "PASS",
+      "evidence_locators": [
+        "Page 2, Section 1",
+        "Pages 4-5, Section 4",
+        "Pages 5-6, Section 5",
+        "Pages 6-10, Section 6",
+        "Pages 11-13, Sections 7-8"
+      ],
+      "reason": "When document titles are masked, the content functions unequivocally as a structured needs interview instrument, completed interview response registry, and statistical analysis report directly satisfying official requirement I09-E03."
+    },
+    {
+      "criterion": "Negative-neighbor distinction (0042 / I09-E02 & 0044 / I09-E04)",
+      "verdict": "PASS",
+      "evidence_locators": [
+        "Page 2, Section 1 ('與相關鄰工作成果的差別')",
+        "Page 16, Section 11 ('品質限制與禁止推論')",
+        "Page 16, Appendix 1 ('遮蔽標題後的用途核對')"
+      ],
+      "reason": "The document strictly preserves evidence boundaries. It disclaims being a meeting minute or curriculum review record (avoiding merger with 0042) and contains no trainer, vendor, or material procurement/evaluation procedures (avoiding merger with 0044)."
+    },
+    {
+      "criterion": "Direct operational usability by 原始點協會",
+      "verdict": "PASS",
+      "evidence_locators": [
+        "Page 3, Section 2",
+        "Page 4, Section 3",
+        "Pages 4-5, Section 4",
+        "Page 14, Section 10 Table ('建議追蹤表')",
+        "Pages 15-16, Section 11"
+      ],
+      "reason": "A training administrator can immediately obtain consent, conduct interviews with Q1-Q10, log responses, enforce pre-declared exclusion rules, compute exact metrics, interpret limitations, and track follow-up tasks without ambiguity."
+    },
+    {
+      "criterion": "Completeness of interview instrument and synthetic records",
+      "verdict": "PASS",
+      "evidence_locators": [
+        "Pages 4-5, Section 4 (Q1-Q10)",
+        "Pages 5-6, Section 5 Table ('收到回覆逐筆狀態')",
+        "Pages 6-10, Section 6 (S01-S08 records)"
+      ],
+      "reason": "All 10 interview questions, Likert anchors, response logging fields, 8 complete synthetic record cards (S01-S08), and 2 excluded case summaries (S09 without consent, S10 with 3 missing values) are fully articulated."
+    },
+    {
+      "criterion": "Truth boundary and conspicuous synthetic marking",
+      "verdict": "PASS",
+      "evidence_locators": [
+        "Pages 1-17, Header right ('SAMPLE/SYNTHETIC')",
+        "Pages 1-17, Page footer ('本報告為合成案例，不是原始點協會的實際訪談或核准紀錄')",
+        "Page 1, Paragraph ('資料狀態')",
+        "Page 16, Section 11 ('品質限制與禁止推論')"
+      ],
+      "reason": "Every page displays prominent synthetic watermarks/headers/footers. The text explicitly disclaims real association approval, real interviews, actual expenditure, or formal course commitments."
+    },
+    {
+      "criterion": "Mathematical accuracy and arithmetic recomputation",
+      "verdict": "PASS",
+      "evidence_locators": [
+        "Page 6, Section 5 Table ('分母核對')",
+        "Page 11, Section 7 Table ('六項能力需求分數矩陣')",
+        "Page 12, Section 8 Tables & Subsections ('需求排序與指標', '手算示例')",
+        "Page 13, Section 9 Tables ('角色分群需求平均', '參與條件分布', '主要參與障礙')"
+      ],
+      "reason": "All raw data from S01-S08 (8 x 6 = 48 ratings, total 196) was independently recomputed. All row sums, column sums, item means, high-demand percentages, urgency statistics, role subgroup means, and barrier frequencies match 100% with zero discrepancies."
+    },
+    {
+      "criterion": "Case standalone integrity and cross-table consistency",
+      "verdict": "PASS",
+      "evidence_locators": [
+        "Page 2, Section 1 ('與相關鄰工作成果的差別')",
+        "Pages 5-10, Sections 5-6",
+        "Page 17, Section 11 ('附件索引' bottom paragraph)"
+      ],
+      "reason": "Case IDs (S01-S10), simulation dates (2026-09-07, 2026-09-08), roles (frontline vs admin), ratings, exclusions, and conclusions are cross-checked and fully consistent across all sections, treated strictly as an independent standalone case."
+    },
+    {
+      "criterion": "Layout, visual readability, and typography",
+      "verdict": "PASS",
+      "evidence_locators": [
+        "Pages 1-17, Rendered PNG images (page-01.png through page-17.png)"
+      ],
+      "reason": "All 17 pages are legible with body text >= 10.5 pt and table text >= 9.5 pt. Table widths, repeated headers, page breaks, margins, and running headers/footers are clean, with no clipping, orphan headings, or blank pages."
+    },
+    {
+      "criterion": "Independent evaluation separate from builder receipts",
+      "verdict": "PASS",
+      "evidence_locators": [
+        "Full document candidate inspection"
+      ],
+      "reason": "Evaluation was conducted strictly on candidate materials (17 rendered pages, raw tables, text) without relying on builder provenance receipts as proof. The deliverable is evaluated as CANDIDATE / NOT_PROMOTED."
+    }
+  ],
+  "findings": [],
+  "truth_boundary_and_register": {
+    "verdict": "PASS",
+    "evidence": [
+      "Page 1 states: '本報告中的案例、日期、角色、回答、分數、統計結果及建議均為合成資料。沒有實際訪談，也不表示原始點協會曾核准、辦訓、出席或取得任何成果。'",
+      "Pages 1-17 header: '需求單位訪談與統計分析 | SAMPLE/SYNTHETIC'",
+      "Pages 1-17 footer: '本報告為合成案例，不是原始點協會的實際訪談或核准紀錄 | 第 X 頁'",
+      "Page 15 Table explicitly classifies document evidence state as '正文為合成示例；真實訪談尚未提供' and '數據均為合成，不是協會績效'",
+      "Page 16 Section 11 explicitly lists 5 quality limits and prohibited inferences, barring any claim of association resolution, trainer contracting, or budget approval.",
+      "Page 16-17 Appendix 2 defines the replacement rules and structure of the 248-row synthetic replacement register, distinguishing REAL_OFFICIAL_SOURCE_REFERENCE from SYNTHETIC_REPLACEMENT."
+    ],
+    "unmatched_material_facts": []
+  },
+  "arithmetic_recalculation": {
+    "verdict": "PASS",
+    "recalculated_items": [
+      {
+        "item": "Received Denominator and Rates",
+        "locator": "Page 6, Section 5 Table ('分母核對')",
+        "reported_formula_or_value": "Invited = 10, Received = 10 (100.0%); Valid = 8 / 10 (80.0%); Excluded = 2 / 10 (20.0%)",
+        "recalculated_value": "Invited = 10, Received = 10 (10/10 = 100.0%); Valid = 8 (8/10 = 80.0%); Excluded = 2 (2/10 = 20.0%)",
+        "status": "MATCH"
+      },
+      {
+        "item": "Individual Rating Row Totals (S01-S08)",
+        "locator": "Page 11, Section 7 Table ('六項能力需求分數矩陣')",
+        "reported_formula_or_value": "S01=25, S02=24, S03=25, S04=25, S05=25, S06=22, S07=28, S08=22",
+        "recalculated_value": "S01 (5+4+5+5+3+3=25), S02 (4+5+4+4+3+4=24), S03 (5+4+4+5+4+3=25), S04 (4+4+5+4+5+3=25), S05 (5+5+4+4+3+4=25), S06 (4+4+4+3+4+3=22), S07 (5+5+5+5+4+4=28), S08 (3+4+4+4+4+3=22)",
+        "status": "MATCH"
+      },
+      {
+        "item": "Capability Column Totals & Overall Sum",
+        "locator": "Page 11, Section 7 Table ('六項能力需求分數矩陣')",
+        "reported_formula_or_value": "紀錄完整=35, 個資安全=35, 服務交接=35, 需求判別=34, 服務溝通=30, 整理統計=27, Overall Sum=196",
+        "recalculated_value": "紀錄完整: 5+4+5+4+5+4+5+3=35; 個資安全: 4+5+4+4+5+4+5+4=35; 服務交接: 5+4+4+5+4+4+5+4=35; 需求判別: 5+4+5+4+4+3+5+4=34; 服務溝通: 3+3+4+5+3+4+4+4=30; 整理統計: 3+4+3+3+4+3+4+3=27; Total Sum = 35+35+35+34+30+27 = 196 (Row sum total = 25+24+25+25+25+22+28+22 = 196)",
+        "status": "MATCH"
+      },
+      {
+        "item": "Capability Means, High Demand Counts & Proportions",
+        "locator": "Page 12, Section 8 Table ('需求排序與指標')",
+        "reported_formula_or_value": "服務交接: Mean 4.38 (35/8), High Demand 8/8 (100.0%), Top-3 6; 個人資料安全: Mean 4.38 (35/8), High Demand 8/8 (100.0%), Top-3 5; 服務紀錄完整性: Mean 4.38 (35/8), High Demand 7/8 (87.5%), Top-3 6; 需求與急迫性判別: Mean 4.25 (34/8), High Demand 7/8 (87.5%), Top-3 4; 服務溝通: Mean 3.75 (30/8), High Demand 5/8 (62.5%), Top-3 3; 紀錄整理與統計: Mean 3.38 (27/8), High Demand 3/8 (37.5%), Top-3 0",
+        "recalculated_value": "服務交接: 35/8=4.375->4.38, >=4 count=8 (100.0%), top-3 count=6; 個人資料安全: 35/8=4.375->4.38, >=4 count=8 (100.0%), top-3 count=5; 服務紀錄完整性: 35/8=4.375->4.38, >=4 count=7 (87.5%), top-3 count=6; 需求與急迫性判別: 34/8=4.25, >=4 count=7 (87.5%), top-3 count=4; 服務溝通: 30/8=3.75, >=4 count=5 (62.5%), top-3 count=3; 紀錄整理與統計: 27/8=3.375->3.38, >=4 count=3 (37.5%), top-3 count=0. Tie-breaking correctly orders 服務交接 (rank 1) > 個人資料安全 (rank 2) > 服務紀錄完整性 (rank 3) > 需求與急迫性判別 (rank 4)",
+        "status": "MATCH"
+      },
+      {
+        "item": "Overall Score Mean and High Demand Proportion",
+        "locator": "Page 12, Section 8 ('手算示例')",
+        "reported_formula_or_value": "Overall Mean = 196 / 48 = 4.0833... -> 4.08; Overall High Demand Proportion = 38 / 48 = 0.79166... -> 79.2%",
+        "recalculated_value": "196 / 48 = 4.083333... -> 4.08; High demand count = 7+8+8+7+5+3 = 38; 38 / 48 = 0.791666... -> 79.2%",
+        "status": "MATCH"
+      },
+      {
+        "item": "Overall Urgency Mean and Proportion",
+        "locator": "Page 12, Section 8 ('手算示例')",
+        "reported_formula_or_value": "Urgency Mean = 35 / 8 = 4.375 -> 4.38; High Urgency Proportion = 7 / 8 = 87.5%",
+        "recalculated_value": "Urgency sum = 5+4+5+4+5+3+5+4 = 35; 35 / 8 = 4.375 -> 4.38; >=4 count = 7 (S01, S02, S03, S04, S05, S07, S08); 7 / 8 = 87.5%",
+        "status": "MATCH"
+      },
+      {
+        "item": "Role-Group Subgroup Means (Frontline vs Admin, n=4 each)",
+        "locator": "Page 13, Section 9 Table ('角色分群需求平均')",
+        "reported_formula_or_value": "Frontline: 紀錄完整 5.00, 個資安全 4.50, 服務交接 4.50, 需求判別 4.75, 服務溝通 3.50, 整理統計 3.50; Admin: 紀錄完整 3.75, 個資安全 4.25, 服務交接 4.25, 需求判別 3.75, 服務溝通 4.00, 整理統計 3.25",
+        "recalculated_value": "Frontline (S01, S03, S05, S07): 紀錄完整=(5+5+5+5)/4=5.00; 個資安全=(4+4+5+5)/4=4.50; 服務交接=(5+4+4+5)/4=4.50; 需求判別=(5+5+4+5)/4=4.75; 服務溝通=(3+4+3+4)/4=3.50; 整理統計=(3+3+4+4)/4=3.50. Admin (S02, S04, S06, S08): 紀錄完整=(4+4+4+3)/4=3.75; 個資安全=(5+4+4+4)/4=4.25; 服務交接=(4+5+4+4)/4=4.25; 需求判別=(4+4+3+4)/4=3.75; 服務溝通=(3+5+4+4)/4=4.00; 整理統計=(4+3+3+3)/4=3.25",
+        "status": "MATCH"
+      },
+      {
+        "item": "Participation Conditions Distribution",
+        "locator": "Page 13, Section 9 Table ('參與條件分布')",
+        "reported_formula_or_value": "Slot: 平日晚間 5, 週末 2, 平日早上 1; Hours: 2小時 5, 3小時 3; Mode: 實體為主 5, 混合/線上 3; Fee: 0-500元 5, 501-1000元 2, 不收個人費用 1",
+        "recalculated_value": "Slot: 平日晚間 (S01, S02, S05, S07, S08 = 5), 週末 (S03, S06 = 2), 平日早上 (S04 = 1); Hours: 2h (S01, S04, S05, S06, S08 = 5), 3h (S02, S03, S07 = 3); Mode: 實體 (S01, S03, S04, S06, S08 = 5), 線上/混合 (S02, S05, S07 = 3); Fee: 0-500 (S01, S02, S05, S07, S08 = 5), 501-1000 (S03, S06 = 2), 0元 (S04 = 1)",
+        "status": "MATCH"
+      },
+      {
+        "item": "Primary Participation Barriers Distribution",
+        "locator": "Page 13, Section 9 Table ('主要參與障礙')",
+        "reported_formula_or_value": "時段與人力覆蓋 = 4 (50.0%); 裝置與表單可近性 = 2 (25.0%); 交通可近性 = 1 (12.5%); 照顧安排 = 1 (12.5%)",
+        "recalculated_value": "時段與人力 (S01, S03, S06, S07 = 4 / 8 = 50.0%); 裝置與表單 (S02, S05 = 2 / 8 = 25.0%); 交通 (S04 = 1 / 8 = 12.5%); 照顧安排 (S08 = 1 / 8 = 12.5%). Total = 8 / 8 = 100.0%",
+        "status": "MATCH"
+      }
+    ],
+    "discrepancies": []
+  },
+  "layout_scope": {
+    "verdict": "PASS",
+    "inspected_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "findings": []
+  },
+  "review_limitations": [
+    "Independent visual and semantic review was conducted directly on all 17 rendered candidate document page images (page-01.png through page-17.png), covering full text, tables, formulas, and appendices. Loose external CSV and blueprint JSON files were not mounted separately in the inputs directory, but all 48 rating entries, 10 case logs, formulas, calculations, and replacement procedures were fully present and recomputed from the candidate document itself."
+  ]
+}
