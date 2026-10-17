@@ -16,12 +16,12 @@
     "evidence": "Human-authorized reversible candidate QA and existing PR synchronization; no formal acceptance or protected source change."
   },
   "APPLIED": {
-    "status": "PASS_PENDING_READBACK",
-    "evidence": "0036 R13 exact-SHA visual/semantic result reconciled; 0043 R04 pass reused; 0048 R03 exact-SHA reviewer returned PASS; review package and 0036 stale-receipt correction prepared for PR #92."
+    "status": "PASS",
+    "evidence": "06 Findings F-01 through F-04 applied or reused without unnecessary DOCX rebuild; 0048 R03 exact-SHA independent review passed and was synced; 0036 R13 stale review receipt status reconciled. F-05 route rule remains unchanged and no new failure was induced."
   },
   "VERIFIED": {
-    "status": "PARTIAL_PENDING_READBACK",
-    "evidence": "Existing DOCX candidates matched live branch blobs; 0048 R03 review metadata and 0036 R13 receipt correction await same-branch push/readback."
+    "status": "PASS_FOR_PREFLIGHT_AND_GITHUB_SYNC",
+    "evidence": "Live remote readback at a873bafa2618dfc8a2e7f0a94b36918b87b802a2 verified 0048 DOCX/reviewer response/receipt and all 30 manifest entries plus 0036 R13 DOCX/review/receipt and all 110 manifest entries. Actual native scheduled wake remains unverified."
   },
   "BLOCKED": {
     "status": "NONE_FOR_0047_LAYOUT",
@@ -30,9 +30,9 @@
   "candidate_sha256": "be27651b17ac2759b6eab5391fb330df6b68a978d41c47fe618fef9f3a6c0976",
   "automation": "Existing automation unchanged: ttqs-one-hourly-quality-goal-resume; no second scheduler created.",
   "scope_remaining": [
-    "Remote readback of current 0048 R03 review result/receipt and updated manifests.",
-    "Next-document selection from live 0047+ candidate/reviewer/Writer state; no queue file was found.",
-    "Real native scheduled-wake execution history remains unverified; it does not block current authorized file work."
+    "Inspect existing 0047/0049 candidate and reviewer state and determine the next genuinely READY, unowned document.",
+    "Native automation execution history and next-run time are not exposed by the available readback; do not claim a real scheduled wake.",
+    "Formal association acceptance and real evidence remain Human-gated."
   ],
   "candidate_state": "CANDIDATE_ONLY_SAMPLE_SYNTHETIC_NOT_HUMAN_ACCEPTED",
   "latest_application": {
@@ -52,7 +52,7 @@
       "DISCOVERED": "PASS: live PR #92 head resolved; full 06 file reread at exact blob SHA.",
       "APPLICABLE": "PASS: compatible with Human-authorized TTQS ONE candidate QA and existing thread-bound GOAL.",
       "APPLIED": "PASS_PENDING_REMOTE_READBACK: F-01 resolved through 0036 R13; F-02 candidate bytes verified; F-03 no unchanged review rerun; F-04 0043 R04 exact review reused; 0048 R03 exact-SHA review completed PASS and receipt prepared.",
-      "VERIFIED": "PARTIAL_PENDING_REMOTE_READBACK: existing candidate DOCX blobs matched live HEAD; current 0048 reviewer response and 0036 metadata correction await push/readback.",
+      "VERIFIED": "PASS_FOR_LIVE_PREFLIGHT_AND_GITHUB_SYNC; the actual scheduled-wake execution history remains NOT_VERIFIED.",
       "BLOCKED": "NONE_FOR_CURRENT_CANDIDATE_REVIEW_OR_SYNC"
     },
     "automation": {
@@ -69,7 +69,10 @@
       "windows_supervisor_state": "DISABLED",
       "duplicate_active_scheduler_count": 1,
       "actual_scheduled_wake": "NOT_VERIFIED_BY_NATIVE_READBACK",
-      "next_run_time": "NOT_EXPOSED"
+      "next_run_time": "NOT_EXPOSED",
+      "persistent_prompt_update_this_turn": "NOT_NEEDED; current native heartbeat prompt already contains both required markers and full recovery rules",
+      "functional_preflight_test": "PASS; live GitHub head and full 06 command discovered/read, authority/scope validated, live candidate state reconciled, no duplicate worker dispatched",
+      "scheduled_wake_test": "NOT_VERIFIED; native view did not expose execution history or next run time"
     },
     "findings": {
       "F-01": {
@@ -79,7 +82,7 @@
         "evidence": "R08 exact bytes remained unchanged. R13 reviewer PASS plus direct 19-page visual review closed the page-5 flowchart concern and prior appendix/header findings. Candidate remains sample-only/not promoted."
       },
       "F-02": {
-        "status": "PENDING_THIS_TURN_REVIEW_RECEIPT_READBACK",
+        "status": "VERIFIED_REMOTE_READBACK_PASS",
         "live_head": "e6dcfd6284522fbf69202f499ab503b64f632a57",
         "verified_candidate_bytes": {
           "0031_R06": "a35be13fe320aedf431f9a2ee7db4a5866d69ef42d87a61496a3c82ad804b4d3",
@@ -91,7 +94,7 @@
           "0043_R04": "23e2218ccd297d82cd0fc8298fc242c66df278cb7708d824ebfb4b15449478ab",
           "0048_R03": "d029d291425447f20d59cb54b9a30190cd8ac0621041d2233b4a1bb8d081cc39"
         },
-        "evidence": "All listed local DOCX bytes matched their Git blobs at live HEAD by exact SHA-256. Current OpenCode R03 reviewer result and metadata manifests await push/readback."
+        "evidence": "At fetched remote commit a873bafa2618dfc8a2e7f0a94b36918b87b802a2, DOCX 0048 R03, original reviewer response, receipt and two updated manifests were hashed from GitHub blobs. 0048 manifest 30/30 entries and 0036 R13 manifest 110/110 entries match. Existing candidate DOCX hashes also matched live head before this sync."
       },
       "F-03": {
         "status": "APPLIED",
@@ -118,7 +121,7 @@
       "formal_acceptance": "NOT_GRANTED",
       "review_result_sha256": "42285397a5a44c174e6724d1a1214948763ab0b35b0bd2c1a1fd95a5aa3ff3f",
       "review_receipt_sha256": "f78e74242bcaddb736e53e7fdfa92e6f9dac50a3f24b47144e35bfb088ae2a2a",
-      "remote_readback": "PENDING",
+      "remote_readback": "PASS",
       "review_receipt_worktree_sha256": "b705b2165f24e9bfcc670fe03119c8030a0070bb587483436272177b050bacfd"
     },
     "next_actions": [
@@ -126,7 +129,24 @@
       "Inspect current 0047 and 0049 candidate/reviewer/Writer state after sync; continue only a verified READY item with no active Writer."
     ],
     "true_human_gate": "Formal association acceptance, REAL records, signatures/approvals, protected originals, submission and external irreversible action remain Human-gated.",
-    "overall_goal_complete": false
+    "overall_goal_complete": false,
+    "sync_commit_sha": "a873bafa2618dfc8a2e7f0a94b36918b87b802a2",
+    "remote_readback": {
+      "status": "PASS",
+      "readback_head": "a873bafa2618dfc8a2e7f0a94b36918b87b802a2",
+      "docx_0048_R03": "d029d291425447f20d59cb54b9a30190cd8ac0621041d2233b4a1bb8d081cc39",
+      "review_0048_R03": "42285397a5a44c174e6724d1a1214948763ab0b35b0bd2c1a1fd95a5aa3ff3f2",
+      "receipt_0048_R03": "f78e74242bcaddb736e53e7fdfa92e6f9dac50a3f24b47144e35bfb088ae2a2a",
+      "manifest_0048_R03": "e46cce0cb268689992f9fb8a28426ef744db064bcc5986518dfe46cbed8f9d10",
+      "manifest_0048_R03_entries": 30,
+      "manifest_0048_R03_mismatches": 0,
+      "docx_0036_R13": "0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f",
+      "manifest_0036_R13": "1ee238517d70cba0cd50deda591739271393fe65ea4ab26091362ed9ee156175",
+      "manifest_0036_R13_entries": 110,
+      "manifest_0036_R13_mismatches": 0,
+      "method": "git fetch from GitHub at the live branch then hash remote Git blob bytes; compare candidate DOCX, reviewer response, receipts, and every manifest-listed blob."
+    },
+    "overall_acceptance": "PREFLIGHT_AND_GITHUB_COMMAND_INGESTION_PASS; SCHEDULED_WAKE_EXECUTION_UNVERIFIED"
   },
   "application_history": [
     {
