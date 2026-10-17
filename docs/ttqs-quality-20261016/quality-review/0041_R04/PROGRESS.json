@@ -52,15 +52,18 @@
   },
   "candidate_disposition": "CANDIDATE_ONLY_NOT_PROMOTED",
   "formal_acceptance": "NOT_GRANTED",
-  "next_action": "Push the corrected manifest and read it back from GitHub; preserve the exact reviewed DOCX SHA, then continue the next legal READY requirement.",
+  "next_action": "Continue the next legal READY requirement; preserve this exact reviewed candidate and do not rebuild for metadata.",
   "artifact_manifest_sha256": "27773220552391dd4dc2a69383974a591a05c613827bc74922440eff073805be",
   "artifact_file_count": 24,
   "remote_readback": {
-    "pre_repair_head": "891c19502184e5a7739c97151c947c5d93abe2e4",
+    "readback_commit": "49701e7cbebd4fbed98d9dcf3372f8611b37cac3",
     "candidate_sha256": "287c06f989478d31204cb34a0c4ddf66bf9bae8c68e4ad4ff5f90c54421a7b8c",
-    "candidate_git_blob_match": "PASS",
-    "independent_review_git_blob_match": "PASS",
-    "prior_manifest": "FAIL_5_STALE_FILE_HASHES",
-    "manifest": "REBUILT_LOCAL_POST_REPAIR_READBACK_PENDING"
+    "candidate_exact_sha_remote_readback": "PASS",
+    "independent_review_exact_candidate_binding": "PASS",
+    "artifact_manifest_git_blob_sha": "7ae392ba382a845457becc03d44aa0c4268ffd44",
+    "artifact_manifest_git_blob_match_local": "PASS",
+    "manifest_entry_count": 26,
+    "post_readback_status": "PASS_CANDIDATE_REVIEW_AND_MANIFEST",
+    "formal_acceptance": "NOT_GRANTED"
   }
 }

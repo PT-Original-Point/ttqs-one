@@ -59,13 +59,16 @@
     "raw_stdout_sha256": "ac948e7213007885a9743dfbcf150242a0b24d3b195a07f15c4cbe4fc79b19ba",
     "review_packet_sha256": "bc53ffef8302e983dcc2bf2618958c7c7aa9b991f64f9364aa66861661682c90"
   },
-  "next_action": "Push the package manifest and read it back from GitHub; then continue the next legal READY requirement. Preserve this exact candidate and reviewer result.",
+  "next_action": "Continue the next legal READY requirement; preserve this exact reviewed candidate and do not rebuild for metadata.",
   "remote_readback": {
-    "pre_manifest_head": "891c19502184e5a7739c97151c947c5d93abe2e4",
+    "readback_commit": "49701e7cbebd4fbed98d9dcf3372f8611b37cac3",
     "candidate_sha256": "2ea8937143c5360e03d3db74cf531b8ddffccaecaf4058c89bb3df2ede06d031",
-    "candidate_git_blob_match": "PASS",
-    "semantic_review_git_blob_match": "PASS",
-    "raw_reviewer_response_git_blob_match": "PASS",
-    "manifest": "CREATED_LOCAL_POST_PUSH_READBACK_PENDING"
+    "candidate_exact_sha_remote_readback": "PASS",
+    "independent_review_exact_candidate_binding": "PASS",
+    "artifact_manifest_git_blob_sha": "7890894212defb8be01f58e8a0c777412fda4af2",
+    "artifact_manifest_git_blob_match_local": "PASS",
+    "manifest_entry_count": 36,
+    "post_readback_status": "PASS_CANDIDATE_REVIEW_AND_MANIFEST",
+    "formal_acceptance": "NOT_GRANTED"
   }
 }
