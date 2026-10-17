@@ -24,6 +24,7 @@
 - `evidence/qa/`：技術／版面 QA 程式及結果。
 - `review/packet_R01/`：送獨立 reviewer 的內容與請求。
 - `review/opencode_v2_R01/`：OpenCode V2 原始 stdout/stderr、exit code 及 exact-SHA 結果摘要。
+- `evidence/REMOTE_READBACK_R01.json`：GitHub 精確 bytes readback，綁定遠端 commit 及逐檔 Git blob／SHA-256。
 
 `artifact_manifest_R01.json` 列出本套件正式保存的檔案 SHA-256 與大小；manifest 自身不列入其檔案清單。
 
