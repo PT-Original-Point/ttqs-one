@@ -4,7 +4,7 @@
   "revision": "R01",
   "requirement_id": "I11-E01",
   "official_checkbox_sequence": "051",
-  "status": "INDEPENDENT_SEMANTIC_PASS_CANDIDATE_ONLY_PENDING_REMOTE_READBACK",
+  "status": "INDEPENDENT_SEMANTIC_PASS_CANDIDATE_ONLY_REMOTE_VERIFIED",
   "candidate_sha256": "e8212788b1f7b201ca4af4f4c5fb83ab131627dbfa815987f7cf6344edfda727",
   "official_source_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
   "source_map_sha256": "ca69e5c8b774d485cab2326b60a6e96c0486081aeb4acba80d30e7b7c521789a",
@@ -30,10 +30,11 @@
   "candidate_state": "CANDIDATE_ONLY",
   "formal_acceptance": "NOT_GRANTED",
   "remote_readback": {
-    "status": "PENDING",
-    "verified_branch_head": null,
-    "manifest_sha256": null,
-    "entries_read_back": 0,
-    "method": "Will be set to PASS only after pushing and fetching back the complete listed artifact package."
+    "status": "PASS",
+    "verified_branch_head": "6cf03cf3d5255a7a1e31c439095bd481b5b8c3a7",
+    "verified_manifest_sha256": "448dc61ac2e00cc5486fe5d1a0b413650e1a0905d065ecd591211e4ed9a10467",
+    "manifest_entries_read_back": 37,
+    "receipt_path": "REMOTE_READBACK_R01.json",
+    "method": "Native Git fetch from GitHub; every manifest-listed remote blob matched local HEAD; candidate SHA-256 matched the local source."
   }
 }
