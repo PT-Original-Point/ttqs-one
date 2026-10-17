@@ -24,3 +24,8 @@ Four nonblocking notes remain recorded in `PROGRESS.json` and the raw report: th
 ## Exact-byte audit
 
 This revision folder uses folder-scoped `text=auto eol=lf` so text evidence remains byte-stable across Windows and other platforms while binary DOCX, PDF, PNG and gzip artifacts remain untouched. The scope is only this R03 folder.
+
+
+## GitHub exact-byte readback
+
+A fresh `git ls-remote` and fetch verified all 46 of 46 manifest artifacts against GitHub commit `d6e5668899af779378b095d295a981ecfa00c093`. The remote DOCX SHA-256 matched `3a887bd3835b3a30b9fdb489257c8a09f79d3c2ce25c10565fae2b4e173f7efa` byte-for-byte; the manifest SHA-256 was `68868a6bfd1683164e7a1fedb7230778aaa4716076c8b41b856c532a155ce621`. The detailed receipt is `evidence/qa/remote_readback_R03.json`. This verifies repository synchronization, not formal association acceptance.

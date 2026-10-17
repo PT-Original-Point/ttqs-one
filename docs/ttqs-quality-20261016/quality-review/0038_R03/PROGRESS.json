@@ -19,7 +19,7 @@
     "sha256": "bdb6ef07c1aacd31f638cdad511012777d2f1b9d2c9f5f307252dd62de0170a4",
     "reason": "Raised 20 below-floor body runs from 9.5/10.0 pt to 10.5 pt; verified all paragraph/table text unchanged."
   },
-  "next_action": "Sync R03 package and exact-SHA review to the existing GitHub branch; verify remote artifact bytes; then continue with the next legal READY deliverable.",
+  "next_action": "Continue with the next legal READY requirement from the current authoritative queue; preserve this exact candidate and its review evidence.",
   "formal_acceptance": "NOT_GRANTED",
   "review": {
     "verdict": "PASS",
@@ -38,5 +38,17 @@
     "Two neighbor rows in §1 use generic 差異說明 pointers; §9 source index restates the distinction.",
     "Whitespace remains at page bottoms 7 and 11; no content is clipped."
   ],
-  "git_exact_byte_policy": "R03-scoped .gitattributes uses text=auto,eol=lf for text and preserves binary artifacts, keeping manifest hashes stable on Windows."
+  "git_exact_byte_policy": "R03-scoped .gitattributes uses text=auto,eol=lf for text and preserves binary artifacts, keeping manifest hashes stable on Windows.",
+  "remote_readback": {
+    "status": "PASS_EXACT_REMOTE_READBACK",
+    "repository": "PT-Original-Point/ttqs-one",
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "verified_commit": "d6e5668899af779378b095d295a981ecfa00c093",
+    "artifact_count": 46,
+    "verified_artifact_count": 46,
+    "manifest_sha256": "68868a6bfd1683164e7a1fedb7230778aaa4716076c8b41b856c532a155ce621",
+    "candidate_sha256": "3a887bd3835b3a30b9fdb489257c8a09f79d3c2ce25c10565fae2b4e173f7efa",
+    "verified_at": "2026-10-17T10:24:12+08:00",
+    "note": "This readback verified the complete 46-artifact package at the recorded commit; subsequent metadata commits must preserve the candidate bytes."
+  }
 }
