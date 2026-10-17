@@ -206,6 +206,31 @@
     "render_pdf_nonempty": true
   },
   "technical_status": "PASS",
-  "semantic_status": "PENDING_INDEPENDENT_EXACT_SHA_REVIEW",
-  "built_at": "2026-10-17T13:17:00.735323+08:00"
+  "semantic_status": "PASS_WITH_NONMATERIAL_OBSERVATIONS",
+  "built_at": "2026-10-17T13:17:00.735323+08:00",
+  "independent_semantic_review": {
+    "verdict": "PASS",
+    "candidate_sha256": "d0d37c2c69b161a2cdd37ee3097306722c4a65a1afd844ae92e1dff58b43381a",
+    "reviewer": "OpenCode CLI v2.0.29",
+    "requested_model": "opencode/deepseek-v4.1-flash-free",
+    "process_exit_code": 0,
+    "result_path": "review/opencode_v2_R01/opencode_v2_review_result_R01.md",
+    "raw_stdout_path": "review/opencode_v2_R01/opencode_v2_stdout_R01.txt",
+    "raw_stderr_path": "review/opencode_v2_R01/opencode_v2_stderr_R01.txt",
+    "independent_of_builder": true,
+    "material_defects": [],
+    "nonmaterial_observations": [
+      "Table captions 24-26 appear before 16-23; captions 14 and 15 each label two split quiz tables.",
+      "The request cited an R03 suffix for the 0033 replacement register filename; the reviewer located the actual file and verified its SHA.",
+      "No 0051 candidate was present; distinction was checked against the current Blueprint and explicit exclusions in 0050.",
+      "A blank-table regex hit was a prohibition sentence, not an empty template field."
+    ],
+    "visual_pages_independently_sampled": [
+      1,
+      8,
+      14,
+      17
+    ],
+    "human_acceptance": "NOT_GRANTED"
+  }
 }

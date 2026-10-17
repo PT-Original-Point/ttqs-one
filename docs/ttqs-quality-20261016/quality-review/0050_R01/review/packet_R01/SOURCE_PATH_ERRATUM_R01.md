@@ -1,0 +1,3 @@
+# Review packet source-path erratum — DOCX 0050 R01
+
+The preserved request `REVIEW_REQUEST_R01.md` named the 0033 R03 replacement register as `SYNTHETIC_REPLACEMENT_REGISTER_R03.csv`. The actual file on the checked-out current package is `docs/ttqs-quality-20261016/quality-review/0033_R03/evidence/SYNTHETIC_REPLACEMENT_REGISTER.csv` (without the R03 suffix in the filename). Its SHA-256 is `d114f36d9c4852cda2239bf22fcc709bdc0a40aad62418e076c6b9c2ae523247`, matching the source map. OpenCode's preserved review log records that it found and verified this file. The reviewer issued `PASS`; this request-path typo did not change the source bytes or the candidate SHA. The original request remains unchanged so the audit packet shows exactly what was dispatched.
