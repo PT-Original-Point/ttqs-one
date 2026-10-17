@@ -1,0 +1,1 @@
+Route validation only. Read only the file `REPAIR_ITERATION_LOG_R03.md` in the current workspace. Extract the exact 64-character SHA-256 for the final R03 DOCX and return exactly one line: READ_OK <sha256>. Do not use shell, network, browser, Computer Use, or any file other than that named file. Do not write files, perform a document review, or claim acceptance.
