@@ -9,19 +9,19 @@
   "source_command_blob_sha": "70449889fd464106fe204496004bee13018d4a51",
   "DISCOVERED": {
     "status": "PASS",
-    "evidence": "Full current 06 command read from GitHub at verified live head; exact blob SHA recorded."
+    "evidence": "Full 06 command read from live head e6dcfd6284522fbf69202f499ab503b64f632a57; blob SHA 70449889fd464106fe204496004bee13018d4a51."
   },
   "APPLICABLE": {
     "status": "PASS",
-    "evidence": "Human-authorized reversible candidate QA/sync; no formal acceptance or protected source change."
+    "evidence": "Human-authorized reversible candidate QA and existing PR synchronization; no formal acceptance or protected source change."
   },
   "APPLIED": {
-    "status": "PARTIAL",
-    "evidence": "0047 R04-R06 layout defect was isolated; R06 candidate and exact-SHA visual/technical evidence created. 0036 visual supplement and latest 0043 reconciliation remain outstanding."
+    "status": "PASS_PENDING_READBACK",
+    "evidence": "0036 R13 exact-SHA visual/semantic result reconciled; 0043 R04 pass reused; 0048 R03 exact-SHA reviewer returned PASS; review package and 0036 stale-receipt correction prepared for PR #92."
   },
   "VERIFIED": {
-    "status": "PARTIAL",
-    "evidence": "R06 exact candidate SHA rendered and all seven pages directly inspected; no independent semantic verdict yet; this does not verify the entire 06 command."
+    "status": "PARTIAL_PENDING_READBACK",
+    "evidence": "Existing DOCX candidates matched live branch blobs; 0048 R03 review metadata and 0036 R13 receipt correction await same-branch push/readback."
   },
   "BLOCKED": {
     "status": "NONE_FOR_0047_LAYOUT",
@@ -30,86 +30,180 @@
   "candidate_sha256": "be27651b17ac2759b6eab5391fb330df6b68a978d41c47fe618fef9f3a6c0976",
   "automation": "Existing automation unchanged: ttqs-one-hourly-quality-goal-resume; no second scheduler created.",
   "scope_remaining": [
-    "Independent semantic review of 0047 R06 exact SHA",
-    "0036 R08/R12 visual-scope reconciliation without rebuilding R08",
-    "Fresh latest-state reconciliation and recovery of 0043",
-    "Other named stable candidates and remaining 06 findings"
+    "Remote readback of current 0048 R03 review result/receipt and updated manifests.",
+    "Next-document selection from live 0047+ candidate/reviewer/Writer state; no queue file was found.",
+    "Real native scheduled-wake execution history remains unverified; it does not block current authorized file work."
   ],
   "candidate_state": "CANDIDATE_ONLY_SAMPLE_SYNTHETIC_NOT_HUMAN_ACCEPTED",
   "latest_application": {
-    "recorded_at_utc": "2026-10-17T00:46:09.603Z",
+    "recorded_at_utc": "2026-10-17T03:14:12.177Z",
+    "recovery_run": "TTQS_GITHUB_COMMAND_PREFLIGHT_20261017_R02",
     "source": {
       "repository": "PT-Original-Point/ttqs-one",
       "branch": "work/ttqs-one-document-quality-contract-20261016",
       "pr": 92,
-      "live_head_sha": "bc30fcab0790594230dc7260c26df56521688af9",
+      "live_head_sha_before_sync": "e6dcfd6284522fbf69202f499ab503b64f632a57",
       "command_path": "docs/ttqs-quality-20261016/06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md",
       "command_blob_sha": "70449889fd464106fe204496004bee13018d4a51",
       "historical_anchor_commit": "92d3d97acbd3c0a8c4dcad66e66468f5cafc3536"
     },
-    "authorization": "Human directly instructed execution in this thread; scope is reversible candidate QA, persistent automation preflight update, and public audit synchronization. No formal acceptance or protected source was changed.",
+    "authorization": "Human directly instructed execution in the current thread; scope is reversible candidate review, stale review metadata correction, existing PR synchronization, and continuation. Formal acceptance and protected originals were not changed.",
     "command_intake": {
-      "DISCOVERED": "PASS: full current command read from GitHub; its blob SHA matches the local branch tree.",
-      "APPLICABLE": "PASS: applies to existing TTQS_ONE GOAL and authorized candidate workflow.",
-      "APPLIED": "PASS_WITH_PENDING_SCHEDULE_WAKE: native existing hourly heartbeat prompt updated in place; the one-time findings were reconciled against current local and GitHub artifacts.",
-      "VERIFIED": "PARTIAL: same-source automation config readback and a live GitHub preflight passed; an actual scheduler-triggered wake is not yet evidenced.",
-      "BLOCKED": "NONE_FOR_PROMPT_OR_PREFLIGHT; real scheduled-wake evidence and Antigravity route-state recheck remain pending."
+      "DISCOVERED": "PASS: live PR #92 head resolved; full 06 file reread at exact blob SHA.",
+      "APPLICABLE": "PASS: compatible with Human-authorized TTQS ONE candidate QA and existing thread-bound GOAL.",
+      "APPLIED": "PASS_PENDING_REMOTE_READBACK: F-01 resolved through 0036 R13; F-02 candidate bytes verified; F-03 no unchanged review rerun; F-04 0043 R04 exact review reused; 0048 R03 exact-SHA review completed PASS and receipt prepared.",
+      "VERIFIED": "PARTIAL_PENDING_REMOTE_READBACK: existing candidate DOCX blobs matched live HEAD; current 0048 reviewer response and 0036 metadata correction await push/readback.",
+      "BLOCKED": "NONE_FOR_CURRENT_CANDIDATE_REVIEW_OR_SYNC"
     },
     "automation": {
       "id": "ttqs-one-hourly-quality-goal-resume",
       "kind": "heartbeat",
       "status": "ACTIVE",
-      "rrule": "RRULE:FREQ=HOURLY;INTERVAL=1",
+      "interval": "RRULE:FREQ=HOURLY;INTERVAL=1",
       "target_thread_id": "01a14098-b269-79e3-b07c-56e96557fe07",
-      "update_method": "Codex native automation_update(mode=update), preserving the existing ID, thread, hourly rule and failed-runs-only notifications.",
-      "same_source_readback": "PASS",
-      "persistent_prompt_sha256": "d2a07e151e9108478d1f037bf141b62fc6bc689b5f375eccf0337a8a4f31d7ea",
+      "workspace": "E:\\TTQS",
+      "prompt_sha256": "d2a07e151e9108478d1f037bf141b62fc6bc689b5f375eccf0337a8a4f31d7ea",
       "preflight_marker_present": true,
       "command_ingestion_marker_present": true,
-      "stale_R12_checkpoint_replaced_with_live_read_rule": true,
-      "scheduled_wake_test": "NOT_VERIFIED; the available native tool supports view/update but exposed no safe run-now operation or execution-history payload in this turn."
+      "native_view_invoked": true,
+      "windows_supervisor_state": "DISABLED",
+      "duplicate_active_scheduler_count": 1,
+      "actual_scheduled_wake": "NOT_VERIFIED_BY_NATIVE_READBACK",
+      "next_run_time": "NOT_EXPOSED"
     },
     "findings": {
       "F-01": {
         "status": "VERIFIED_FOR_SAMPLE_CANDIDATE",
         "preserved_R08_sha256": "e2d4b3f5e906faaf3d473c7351bd79618a78dcf2c8f91a32a4e952d005ac5eae",
         "latest_R13_sha256": "0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f",
-        "evidence": "R13 progress records the page-5 flowchart correction, direct visual coverage of all 19 final pages, exact-SHA independent semantic PASS_FOR_SAMPLE_ARTIFACT, no real checkbox evidence, and no promotion. Local and live-branch DOCX SHA-256 match. R08 bytes were not rebuilt."
+        "evidence": "R08 exact bytes remained unchanged. R13 reviewer PASS plus direct 19-page visual review closed the page-5 flowchart concern and prior appendix/header findings. Candidate remains sample-only/not promoted."
       },
       "F-02": {
-        "status": "VERIFIED_REMOTE_BYTES_MATCH",
-        "candidates": {
+        "status": "PENDING_THIS_TURN_REVIEW_RECEIPT_READBACK",
+        "live_head": "e6dcfd6284522fbf69202f499ab503b64f632a57",
+        "verified_candidate_bytes": {
           "0031_R06": "a35be13fe320aedf431f9a2ee7db4a5866d69ef42d87a61496a3c82ad804b4d3",
           "0032_R04": "22dfa33b9c010c4c33f7e1c19ac0bfee999119c4732aca13e611a7c7ab552d3d",
           "0033_R03": "fe5f3cfd84c761da86435a71e0fd899daa725be78628c4d2d3f2324c1fdb5f4f",
-          "0036_R13": "0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f",
-          "0037_R07": "0a66a439be8fc67e358b59ecace73ae59dae2369a90e0c13adc354e49c3ae77d",
           "0039_R09": "3e7ed5f173dc4604803f477289f1d6190e95a5c58d3a229420eaee67037080f5",
+          "0036_R08": "e2d4b3f5e906faaf3d473c7351bd79618a78dcf2c8f91a32a4e952d005ac5eae",
+          "0036_R13": "0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f",
           "0043_R04": "23e2218ccd297d82cd0fc8298fc242c66df278cb7708d824ebfb4b15449478ab",
-          "0047_R08": "b8cc8e4473e9cd7ad93f21c0cb9503865e683e3b802ac70577fbd8db3524d447"
+          "0048_R03": "d029d291425447f20d59cb54b9a30190cd8ac0621041d2233b4a1bb8d081cc39"
         },
-        "note": "Each listed local candidate DOCX was SHA-256 compared with its Git blob at the live branch head; all matched. Candidate status is retained."
+        "evidence": "All listed local DOCX bytes matched their Git blobs at live HEAD by exact SHA-256. Current OpenCode R03 reviewer result and metadata manifests await push/readback."
       },
       "F-03": {
         "status": "APPLIED",
-        "evidence": "Existing exact-SHA receipts were reused; no unchanged semantic review was rerun in this turn. Actual historical model cost remains unknown."
+        "evidence": "Reused unchanged exact-SHA reviews. One necessary independent review was run for 0048 R03 after the R02 font defect repair; no repeated review of unchanged DOCX. Invocation cost is not independently available."
       },
       "F-04": {
         "status": "VERIFIED_CANDIDATE_ONLY",
         "doc_id": "0043",
         "revision": "R04",
         "sha256": "23e2218ccd297d82cd0fc8298fc242c66df278cb7708d824ebfb4b15449478ab",
-        "evidence": "Local and live branch DOCX bytes match. Existing receipt reports independent semantic PASS with register crosswalk and inspection of pages 1-17; requested model identity was not returned. No rebuild performed."
+        "evidence": "Existing independent review PASS 9/9, all 17 pages, zero findings; local and live GitHub candidate bytes match. No rebuild."
       },
       "F-05": {
-        "status": "PARTIAL_RECORDED_PAUSE_NOT_RETESTED",
-        "evidence": "0047 R08 progress says Antigravity new dispatch was not attempted because of the 0044 permission-denial/repair incident. This turn did not dispatch Antigravity or manufacture failures; live route control was not independently re-tested."
+        "status": "NO_NEW_FAILURE; ROUTE_THRESHOLD_NOT_RETESTED",
+        "evidence": "The 0048 OpenCode v2 invocation exited 0. Antigravity route was not dispatched or retested; no artificial failures were created. Existing route incident/pause evidence remains historical and distinct."
       }
     },
+    "document_0048_R03": {
+      "candidate_sha256": "d029d291425447f20d59cb54b9a30190cd8ac0621041d2233b4a1bb8d081cc39",
+      "independent_verdict": "PASS",
+      "criteria": "18/18",
+      "findings": 0,
+      "candidate_unchanged": true,
+      "formal_acceptance": "NOT_GRANTED",
+      "review_result_sha256": "42285397a5a44c174e6724d1a1214948763ab0b35b0bd2c1a1fd95a5aa3ff3f",
+      "review_receipt_sha256": "f78e74242bcaddb736e53e7fdfa92e6f9dac50a3f24b47144e35bfb088ae2a2a",
+      "remote_readback": "PENDING",
+      "review_receipt_worktree_sha256": "b705b2165f24e9bfcc670fe03119c8030a0070bb587483436272177b050bacfd"
+    },
     "next_actions": [
-      "Commit and push the already staged 0047 R08 text-byte preservation changes without changing its DOCX bytes; then read back every manifest entry from GitHub.",
-      "Continue the actual READY document queue after checking for a live document-specific Writer; preserve exact-SHA reviews and do not rebuild stable candidates."
+      "Commit and push the 0048 R03 exact-SHA reviewer response/receipt and corrected 0036 R13 status metadata to existing PR #92; read back each changed blob.",
+      "Inspect current 0047 and 0049 candidate/reviewer/Writer state after sync; continue only a verified READY item with no active Writer."
     ],
-    "formal_acceptance": "NOT_GRANTED"
-  }
+    "true_human_gate": "Formal association acceptance, REAL records, signatures/approvals, protected originals, submission and external irreversible action remain Human-gated.",
+    "overall_goal_complete": false
+  },
+  "application_history": [
+    {
+      "recorded_at_utc": "2026-10-17T00:46:09.603Z",
+      "source": {
+        "repository": "PT-Original-Point/ttqs-one",
+        "branch": "work/ttqs-one-document-quality-contract-20261016",
+        "pr": 92,
+        "live_head_sha": "bc30fcab0790594230dc7260c26df56521688af9",
+        "command_path": "docs/ttqs-quality-20261016/06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md",
+        "command_blob_sha": "70449889fd464106fe204496004bee13018d4a51",
+        "historical_anchor_commit": "92d3d97acbd3c0a8c4dcad66e66468f5cafc3536"
+      },
+      "authorization": "Human directly instructed execution in this thread; scope is reversible candidate QA, persistent automation preflight update, and public audit synchronization. No formal acceptance or protected source was changed.",
+      "command_intake": {
+        "DISCOVERED": "PASS: full current command read from GitHub; its blob SHA matches the local branch tree.",
+        "APPLICABLE": "PASS: applies to existing TTQS_ONE GOAL and authorized candidate workflow.",
+        "APPLIED": "PASS_WITH_PENDING_SCHEDULE_WAKE: native existing hourly heartbeat prompt updated in place; the one-time findings were reconciled against current local and GitHub artifacts.",
+        "VERIFIED": "PARTIAL: same-source automation config readback and a live GitHub preflight passed; an actual scheduler-triggered wake is not yet evidenced.",
+        "BLOCKED": "NONE_FOR_PROMPT_OR_PREFLIGHT; real scheduled-wake evidence and Antigravity route-state recheck remain pending."
+      },
+      "automation": {
+        "id": "ttqs-one-hourly-quality-goal-resume",
+        "kind": "heartbeat",
+        "status": "ACTIVE",
+        "rrule": "RRULE:FREQ=HOURLY;INTERVAL=1",
+        "target_thread_id": "01a14098-b269-79e3-b07c-56e96557fe07",
+        "update_method": "Codex native automation_update(mode=update), preserving the existing ID, thread, hourly rule and failed-runs-only notifications.",
+        "same_source_readback": "PASS",
+        "persistent_prompt_sha256": "d2a07e151e9108478d1f037bf141b62fc6bc689b5f375eccf0337a8a4f31d7ea",
+        "preflight_marker_present": true,
+        "command_ingestion_marker_present": true,
+        "stale_R12_checkpoint_replaced_with_live_read_rule": true,
+        "scheduled_wake_test": "NOT_VERIFIED; the available native tool supports view/update but exposed no safe run-now operation or execution-history payload in this turn."
+      },
+      "findings": {
+        "F-01": {
+          "status": "VERIFIED_FOR_SAMPLE_CANDIDATE",
+          "preserved_R08_sha256": "e2d4b3f5e906faaf3d473c7351bd79618a78dcf2c8f91a32a4e952d005ac5eae",
+          "latest_R13_sha256": "0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f",
+          "evidence": "R13 progress records the page-5 flowchart correction, direct visual coverage of all 19 final pages, exact-SHA independent semantic PASS_FOR_SAMPLE_ARTIFACT, no real checkbox evidence, and no promotion. Local and live-branch DOCX SHA-256 match. R08 bytes were not rebuilt."
+        },
+        "F-02": {
+          "status": "VERIFIED_REMOTE_BYTES_MATCH",
+          "candidates": {
+            "0031_R06": "a35be13fe320aedf431f9a2ee7db4a5866d69ef42d87a61496a3c82ad804b4d3",
+            "0032_R04": "22dfa33b9c010c4c33f7e1c19ac0bfee999119c4732aca13e611a7c7ab552d3d",
+            "0033_R03": "fe5f3cfd84c761da86435a71e0fd899daa725be78628c4d2d3f2324c1fdb5f4f",
+            "0036_R13": "0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f",
+            "0037_R07": "0a66a439be8fc67e358b59ecace73ae59dae2369a90e0c13adc354e49c3ae77d",
+            "0039_R09": "3e7ed5f173dc4604803f477289f1d6190e95a5c58d3a229420eaee67037080f5",
+            "0043_R04": "23e2218ccd297d82cd0fc8298fc242c66df278cb7708d824ebfb4b15449478ab",
+            "0047_R08": "b8cc8e4473e9cd7ad93f21c0cb9503865e683e3b802ac70577fbd8db3524d447"
+          },
+          "note": "Each listed local candidate DOCX was SHA-256 compared with its Git blob at the live branch head; all matched. Candidate status is retained."
+        },
+        "F-03": {
+          "status": "APPLIED",
+          "evidence": "Existing exact-SHA receipts were reused; no unchanged semantic review was rerun in this turn. Actual historical model cost remains unknown."
+        },
+        "F-04": {
+          "status": "VERIFIED_CANDIDATE_ONLY",
+          "doc_id": "0043",
+          "revision": "R04",
+          "sha256": "23e2218ccd297d82cd0fc8298fc242c66df278cb7708d824ebfb4b15449478ab",
+          "evidence": "Local and live branch DOCX bytes match. Existing receipt reports independent semantic PASS with register crosswalk and inspection of pages 1-17; requested model identity was not returned. No rebuild performed."
+        },
+        "F-05": {
+          "status": "PARTIAL_RECORDED_PAUSE_NOT_RETESTED",
+          "evidence": "0047 R08 progress says Antigravity new dispatch was not attempted because of the 0044 permission-denial/repair incident. This turn did not dispatch Antigravity or manufacture failures; live route control was not independently re-tested."
+        }
+      },
+      "next_actions": [
+        "Commit and push the already staged 0047 R08 text-byte preservation changes without changing its DOCX bytes; then read back every manifest entry from GitHub.",
+        "Continue the actual READY document queue after checking for a live document-specific Writer; preserve exact-SHA reviews and do not rebuild stable candidates."
+      ],
+      "formal_acceptance": "NOT_GRANTED"
+    }
+  ]
 }

@@ -56,7 +56,7 @@
   "synthetic_register_rows": 85,
   "formal_acceptance": "NOT_GRANTED",
   "candidate_disposition": "CANDIDATE_ONLY_NOT_PROMOTED",
-  "next_action": "Sync stable R13 candidate and independent review to existing PR #92; read back exact remote DOCX and evidence SHA; continue the next legal READY deliverable.",
+  "next_action": "Push the corrected R13 review-status metadata and 0048 R03 exact-SHA review package to existing PR #92; read back exact candidate and evidence hashes; continue next lawful READY item.",
   "independent_review": {
     "status": "PASS_FOR_SAMPLE_ARTIFACT_WITH_DECLARED_SCOPE",
     "candidate_sha256": "0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f",
@@ -69,19 +69,29 @@
     "promotion": "NOT_PROMOTED",
     "scope": "Independent exact-SHA semantic and direct 19-page visual review; sample quality PASS; no claim of real association approval, execution, authorization, or outcomes."
   },
-  "artifact_manifest_sha256": "45eae2c938e2a1f2a9deeb5fff022164928c54ce2dcd6ab5ebaa9ee506a80bd6",
+  "artifact_manifest_sha256": "1ee238517d70cba0cd50deda591739271393fe65ea4ab26091362ed9ee156175",
   "artifact_file_count": 110,
   "remote_readback": {
-    "status": "PASS",
-    "verified_commit": "6264bbf34a87ed65b91ecd7bfc260c6e739b55d6",
-    "manifest_file_count": 110,
-    "verified_blob_count": 112,
-    "manifest_mismatch_count": 0,
+    "status": "PENDING_POST_METADATA_SYNC_READBACK",
+    "previous_verified_commit": "6264bbf34a87ed65b91ecd7bfc260c6e739b55d6",
     "candidate_sha256": "0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f",
-    "review_sha256": "baf34c29bf7ff781924378dee1a5c237b5097e75779d430b0688d9b83c531a6f",
-    "render_pdf_sha256": "d05668efb4b9ef3ffa2820b56c0eddd086274e3ae3673ac84035c7ecaa5099a7",
-    "artifact_manifest_sha256": "45eae2c938e2a1f2a9deeb5fff022164928c54ce2dcd6ab5ebaa9ee506a80bd6",
-    "readback_source": "git fetch origin branch + remote tree/blob SHA-256 readback",
-    "scope": "Every manifest entry, candidate DOCX, independent review, progress and manifest were verified from the fetched remote commit; candidate remains not formally accepted."
-  }
+    "technical_receipt_sha256": "a32703853ecec0a201ade79b05f4a1d0e2870cd53cd96a0d0548de9f9f1b33cd",
+    "artifact_manifest_sha256": "aef2a8ab38341ec79c186a3288c286d021ad72a0a68e08a21604717de84cae96",
+    "scope": "DOCX candidate unchanged; corrected the stale R13 technical receipt from review pending to exact-SHA independent PASS. New metadata sync awaits same-branch remote readback."
+  },
+  "remote_readback_history": [
+    {
+      "status": "PASS",
+      "verified_commit": "6264bbf34a87ed65b91ecd7bfc260c6e739b55d6",
+      "manifest_file_count": 110,
+      "verified_blob_count": 112,
+      "manifest_mismatch_count": 0,
+      "candidate_sha256": "0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f",
+      "review_sha256": "baf34c29bf7ff781924378dee1a5c237b5097e75779d430b0688d9b83c531a6f",
+      "render_pdf_sha256": "d05668efb4b9ef3ffa2820b56c0eddd086274e3ae3673ac84035c7ecaa5099a7",
+      "artifact_manifest_sha256": "45eae2c938e2a1f2a9deeb5fff022164928c54ce2dcd6ab5ebaa9ee506a80bd6",
+      "readback_source": "git fetch origin branch + remote tree/blob SHA-256 readback",
+      "scope": "Every manifest entry, candidate DOCX, independent review, progress and manifest were verified from the fetched remote commit; candidate remains not formally accepted."
+    }
+  ]
 }
