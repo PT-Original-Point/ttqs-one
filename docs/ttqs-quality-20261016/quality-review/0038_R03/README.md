@@ -19,3 +19,8 @@ This is a complete instructional example for a training-association administrato
 The separate OpenCode CLI v2 reviewer independently verified the R03 DOCX/PDF hashes, all 24 score rows, group summaries, the 37-row replacement register, the official source mapping, and all 14 rendered pages. Verdict: **PASS** for semantic acceptance as a SAMPLE/CANDIDATE. The exact raw reply and bound receipt are in `review/`; the complete CLI transcript is preserved as gzip with its uncompressed SHA-256.
 
 Four nonblocking notes remain recorded in `PROGRESS.json` and the raw report: the register's full/short non-pass label differs only cosmetically; the Blueprint's tool/analysis handoff lacks its own heading but is partly served by the follow-up and control-order sections; two §1 neighbor pointers say only “差異說明”; and pages 7/11 have extra bottom whitespace. The independent reviewer found no blocking defect. No wording was changed in response to these notes. Formal association acceptance and promotion remain **NOT GRANTED**.
+
+
+## Exact-byte audit
+
+This revision folder uses folder-scoped `text=auto eol=lf` so text evidence remains byte-stable across Windows and other platforms while binary DOCX, PDF, PNG and gzip artifacts remain untouched. The scope is only this R03 folder.
