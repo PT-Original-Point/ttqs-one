@@ -8,6 +8,8 @@
 
 這十四小時五十四分鐘有可核對的文件與品質工作，不只是排程回合：分支從午夜至 14:23:29 有 **88 筆 Git commit**；同一時段之後，本機完成 0052 R01 候選、獨立語意審查與 16 頁版面目視。今天主要工作集中在 0036、0037、0038、0040–0052 多份候選的修復、獨立審查證據、遠端同步與 SHA 回讀。
 
+**工作量口徑：**時間窗內有 21 個文件／QA 套件的 Git 變更；20 個文件編號出現 DOCX 檔案新增。相較午夜前基準至 14:23 截止版，分支新增 60 個 DOCX 檔案，當中包括舊版、歷史副本及伴隨文件，不能算 60 份新成品。實際新建候選修訂為 13 個文件編號、38 個候選 DOCX 版本；另有 0052 R01 在截止前只存在本機，合計 14 個文件編號、39 個新候選版本。quality-review 目錄另有 2,440 個檔案的本機最後修改時間落在本時間窗，內容含頁面影像、PDF、審查包與 QA 收據，不是 2,440 份文件。
+
 但這不代表 142 份文件完成或正式接受。各檔仍是候選／示範材料；真正的協會學員回饋、實際開課、授權核准及正式接受並未由這些合成例子證明。每小時排程仍只有既有單一 thread-bound 任務；目前能讀到的原生紀錄沒有證明今天任何一次排程實際喚醒，也沒有提供可核實的下次時間。
 
 **0052 R01 是本時間窗末端最新的本機成品。** 它對應 DOCX 0052＝Unique Blueprint `I11-E04`＝官方流水號 054；16 頁、32 表、78 段，186 筆 SAMPLE/SYNTHETIC 替換資料。DOCX SHA-256 為 `406d1ef2c6e9b6266ea1adaeadedc5dfac77964fe76f73c2471168220ee6d455`。OpenCode CLI V2 的獨立語意結果是 `PASS_WITH_SCOPE_LIMITATION`；OpenCode 未目視頁面，因此另以同一 exact-SHA 的 16/16 頁目視補足版面檢查。正式接受仍未授予。
@@ -17,6 +19,8 @@
 本報告以 PR #92 分支在時間窗內的 commit 訊息與檔案記錄、PR 對話中的狀態回讀、以及本機 0052 候選的檔案／雜湊／QA 收據重建工作。GitHub commit 作者欄顯示帳號 `t14210184`；這些紀錄可證明提交的檔案與時間，不能單憑作者欄證明每項操作由哪一個 Codex UI 執行個體或哪個排程回合產生。
 
 本報告不把下列事項混為一談：候選與正式接受、文件可開啟與語意合格、OpenCode reviewer 的視覺範圍與本機另做的全頁目視、SAMPLE/SYNTHETIC 與協會 REAL 原始證據，以及排程設定與排程真正執行。
+
+**編號核對提醒：**DOCX 編號不是官方方框流水號。套件資料中 0039 與 0040 都出現 I08-E03／040，0045 與 0046 都出現 I10-E01／047。本報告不把這些可能重複的映射計成額外獨立方框覆蓋；須由正式 157 方框來源及各份 Unique Blueprint 再確認。
 
 ## 時間線
 
@@ -28,7 +32,7 @@
 | 05:44–06:18 | 施工 0042 R01–R04，保存 R02 的 PARTIAL 審查，加入 R03/R04 可複核候選；0042 R04 獲獨立 exact-SHA PASS 並做 GitHub readback。 |
 | 07:03–09:33 | 發布 0044 R01 及外包審查路由事故；校正候選 manifest 的 Git blob 對應；新增 0045 R01 合成採購程序；保存 0047 R08 審查資料；記錄 0045 R02/R03 獨立審查。Antigravity CLI headless 權限錯誤在三次修正後仍無法正常回收，故暫停該路由新派工，保留事故記錄；沒有使用 Computer Use。 |
 | 10:03–10:27 | 完成 0046 R03 的 exact-SHA 候選審查和 readback；修正 0038 R03 並記錄精確遠端位元組讀回。 |
-| 10:51–11:29 | 對 0048 R01–R03 進行獨立審查與字級下限定點修復；R03 保留候選 bytes，修正 QA／manifest 及 audit recovery 紀錄。0044 R01 的獨立精確 SHA 審查及 GitHub readback 也在此時段記錄，但其語意 reviewer 回覆當時仍未取得。 |
+| 10:51–11:29 | 對 0048 R01–R03 進行獨立審查與字級下限定點修復；R03 保留候選 bytes，修正 QA／manifest 及 audit recovery 紀錄。0044 R01 於 11:27 記錄 OpenCode v2 exact-SHA 語意 PASS（14 項 substantive criteria）；reviewer 直接檢視提供的 8/8 頁面影像，但未自行重新轉檔。11:29 完成 readback。Antigravity CLI 仍因 4 次嘗試、3 次修正後未回覆而暫停新派工。 |
 | 12:53–13:25 | 發布 0049 R01 獨立審查候選與 readback；建立 0050 R01 候選、獨立 QA，後續補做全頁目視證據。 |
 | 14:06–14:23 | 同步 0051 R01 reviewed candidate；修正 0041、0045 evidence manifest；完成候選進度及遠端讀回記錄。14:23:29 的 `bdfa5a6` 是本時間窗末端的分支 HEAD。 |
 | 14:43–14:53 | 本機開始 0052 R01 最終候選流程：14:44:36 DOCX 位元組建立；14:45:24 Word 固定版 PDF、14:45:26 產生 16 頁影像；14:51:02 OpenCode CLI V2 reviewer 正常結束（exit code 0）；14:52:30 更新來源圖、14:52:46 QA 程式、14:53:02 build metadata、14:53:22 存下獨立語意結果。到 14:53:56 為止，0052 尚未同步到 GitHub。 |
@@ -37,18 +41,20 @@
 
 | DOCX | 時間窗內的可核結果 | 限制／狀態 |
 |---|---|---|
-| 0036 | R08 SHA `e2d4b3f5e906faaf3d473c7351bd79618a78dcf2c8f91a32a4e952d005ac5eae` 保留；後續 R13 SHA `0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f` 的遠端進度記錄 19 頁版面 PASS 及第 5 頁流程圖覆查。 | 不因新增驗收收據重建 R08；R13 是獨立後續候選。仍為 SAMPLE 候選。 |
+| 0031–0035 | 回收並同步既有 R06/R04/R03/R06/R11 候選：SHA 分別為 `a35be13fe320aedf431f9a2ee7db4a5866d69ef42d87a61496a3c82ad804b4d3`、`22dfa33b9c010c4c33f7e1c19ac0bfee999119c4732aca13e611a7c7ab552d3d`、`fe5f3cfd84c761da86435a71e0fd899daa725be78628c4d2d3f2324c1fdb5f4f`、`f220573a65ee7497b8be12d60eb06abd1e949ee08a5792687ddf45f5f60b407a`、`9c6036599fec79e41bc482ea3b720ba1dd5cfa9b2b3bfa05cf8930d997d02661`；六個套件讀回收據（含 0039）驗證清單 Git blob。 | 這五份都是今天回收／同步，不是今天重建；依現存收據為獨立語意 PASS 候選，視覺覆核範圍各有註記，正式接受未授予。 |
+| 0036 | R08 SHA `e2d4b3f5e906faaf3d473c7351bd79618a78dcf2c8f91a32a4e952d005ac5eae` 保留；後續 R13 SHA `0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f` 的獨立 exact-SHA 語意及 19 頁目視記錄為 SAMPLE PASS，含第 5 頁流程圖覆查。 | 不因補驗收收據重建 R08；R13 是獨立候選。R13 候選 bytes 曾遠端核對，但截止前 QA metadata 更新後的完整 manifest readback 仍待完成；正式接受未授予。 |
 | 0037 | R07 SHA `0a66a439be8fc67e358b59ecace73ae59dae2369a90e0c13adc354e49c3ae77d` 的 package/readback；既有收據記錄語意 PASS、18 頁目視 PASS。 | 候選；沒有經認證的協會 REAL 原始紀錄。 |
-| 0038 | R01/R02 package 與 readback；R03 修正候選、獨立審查與遠端精確讀回。 | 只依今日提交紀錄描述已記錄的審查及讀回，不把版本存在當成正式接受。 |
+| 0038 | R01/R02 package 與 readback；R03 SHA 3a887bd3835b3a30b9fdb489257c8a09f79d3c2ce25c10565fae2b4e173f7efa 的獨立語意審查 8/8 PASS、14 頁視覺 PASS，46/46 項遠端 readback。針對 R02 的 20 個低於 10.5 pt 正文文字執行字級修復，文字內容未變。 | 只依今日提交紀錄描述已記錄的審查及讀回，不把版本存在當成正式接受。 |
+| 0039 | R09 SHA `3e7ed5f173dc4604803f477289f1d6190e95a5c58d3a229420eaee67037080f5`；I08-E03／方框 040；獨立語意審查與 14 頁全頁目視 PASS，套件遠端 readback。這是回收／同步既有候選，沒有把 DOCX 0039 與官方方框 039 混用。 | SAMPLE 候選，非正式接受。 |
 | 0040 | R03–R06 多輪針對 locator 與呈現修復；R06 SHA `115caf94165263040b27dbea5a2c83e02f94253d361e16784da398cefd3562d7`，9/9 頁技術／主要視覺檢查記錄 PASS。 | R02 reviewer 回覆有一字元 SHA 不符，排除於 exact-SHA PASS；R03 是限定範圍補查，與 R01 完整審查互補。仍是候選。 |
-| 0041 | R04 獨立 QA 和遠端 QA readback。 | 今日證據記錄沒有在本報告重新驗證其全部語意範圍；維持候選狀態。 |
+| 0041 | R04 獨立 QA 和遠端 QA readback。 | R04 SHA `287c06f989478d31204cb34a0c4ddf66bf9bae8c68e4ad4ff5f90c54421a7b8c` 的獨立 delta 審查為 SAMPLE PASS，遠端候選 bytes readback；真實方框 042 的 REAL 證據仍未建立，頁面 5、12 是差異覆核，不是全本重新目視。 |
 | 0042 | R01–R04 修復歷程；R04 獨立 exact-SHA PASS、GitHub readback。 | 候選，非 Human 正式接受。 |
 | 0043 | R04 SHA `23e2218ccd297d82cd0fc8298fc242c66df278cb7708d824ebfb4b15449478ab`；I09-E03／方框 044。更新 247 項 crosswalk、248 列替換簿控制綁定；DOCX bytes 未重建。 | PR 回讀記錄獨立語意 PASS；SAMPLE 候選，正式接受未授予。 |
-| 0044 | R01 SHA `76bde5df4209abc6f102a15a02c5e51a5816ef3df309aaed0a0ab44ea9075644` 技術／全頁版面證據與 exact-SHA 審查資料已保存。 | 獨立語意 reviewer 回覆仍待取得；Antigravity CLI 路由在多次錯誤與修正後停止新派工；只停受影響路由。 |
-| 0045 | R01 合成採購程序；R02/R03 獨立審查記錄與原始 OpenCode stdout 保存。 | R02/R03 的歷史與本件候選仍須依 exact-SHA 收據判讀；無正式接受。 |
+| 0044 | R01 SHA `76bde5df4209abc6f102a15a02c5e51a5816ef3df309aaed0a0ab44ea9075644` OpenCode v2 對 exact SHA 給予 14/14 substantive criteria PASS，並檢視 8/8 提供的頁面影像；沒有獨立重新轉檔。 | 3 項非重大觀察只修正 sidecar；候選 Word bytes 未變。Antigravity CLI 共 4 次嘗試、3 次修正仍無回覆，已暫停該路由新派工；未使用 Computer Use。 |
+| 0045 | R01 合成採購程序；R03 SHA 2ea8937143c5360e03d3db74cf531b8ddffccaecaf4058c89bb3df2ede06d031 獨立語意 PASS（0 blocker、6 nonblocking observations）、候選遠端 readback。 | SAMPLE 候選；runtime model identity 未回報，審查範圍限制仍保留，未正式接受。 |
 | 0046 | R03 SHA `bf83aa0849790b991263b60cd8fdc4187065313083d447f8976f22a9a6972a39`；16 表、18 筆評分、152 筆 SAMPLE/SYNTHETIC 清冊；10 頁全頁目視。OpenCode CLI V2 對同一 SHA 回覆語意 PASS（0 blocker、0 major、5 nonblocking minor）。 | R02 因 12 段正文低於 10.5 pt 下限而不接受；R03 仍是候選。 |
-| 0047 | R08 exact-SHA 審查輸入／輸出位元組與 package 被保存。 | 不因保存 review package 就推定審查 PASS。 |
-| 0048 | R01–R03 targeted review/repair；R03 SHA `d029d291425447f20d59cb54b9a30190cd8ac0621041d2233b4a1bb8d081cc39` 保留，更新五個失效 manifest hash 和缺少的進度紀錄。 | 維持候選；依 exact-SHA reviewer 收據及界限判讀。 |
+| 0047 | R08 SHA b8cc8e4473e9cd7ad93f21c0cb9503865e683e3b802ac70577fbd8db3524d447；OpenCode v2 獨立語意 PASS（semantic-only）。 | 此結果不包含完整頁面目視；review packet 的範圍限制保留，未正式接受。 |
+| 0048 | R01–R03 targeted review/repair；R03 SHA `d029d291425447f20d59cb54b9a30190cd8ac0621041d2233b4a1bb8d081cc39` 獨立語意 PASS，16 頁視覺收據記錄 PASS；更新失效 manifest 與缺少的進度紀錄。 | OpenCode runtime model identity 未回報；仍為候選，未正式接受。 |
 | 0049 | R01 獨立審查候選 package 與 GitHub readback；其 bytes SHA 為 `e8212788b1f7b201ca4af4f4c5fb83ab131627dbfa815987f7cf6344edfda727`。 | 候選；0052 只引用合成課程計畫假設，不證明已實際排課。 |
 | 0050 | R01 SHA `d0d37c2c69b161a2cdd37ee3097306722c4a65a1afd844ae92e1dff58b43381a`；OpenCode 語意 PASS；同一 exact-render 的 18 頁均直接目視，視覺收據和 readback 已同步。 | 候選，沒有 REAL 課程實施或正式接受。 |
 | 0051 | R01 SHA `6f575ebb41c6c26b4d6b36262fb4d9a5abdae53cbdc1ff4e75acda46d5f0b495`；reviewed candidate 已同步並記錄遠端讀回。 | 候選；不是正式會議或核准原件。 |
