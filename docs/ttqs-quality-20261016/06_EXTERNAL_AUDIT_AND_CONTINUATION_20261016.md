@@ -87,3 +87,56 @@ OVERALL_GOAL_COMPLETE=NO
 | 新版品質 GOAL 全體完成 | **NO** | 各具名佐證尚未全量獨立驗收 |
 
 **下一步是實際品質與可稽核交付，不是再增加治理文件或排程。**
+
+
+---
+
+## 5. 2026-10-17 19:22 Human 最新增量｜省 Codex Token、CLI 外包、同步優先
+
+\`COMMAND=TTQS_ONE_COST_AWARE_CLI_OUTSOURCING_SYNC_R01\`  
+\`PROJECT_ID=TTQS_ONE\`  
+\`TARGET_REPO=PT-Original-Point/ttqs-one\`  
+\`TARGET_BRANCH=work/ttqs-one-document-quality-contract-20261016\`  
+\`SOURCE_OF_COMMAND=THIS_FILE_SECTION_5\`  
+\`AUTHORITY=HUMAN_LATEST_APPROVED_REVERSIBLE_CANDIDATE_WORK\`  
+\`MODE=ONE_ACTIVE_WRITER; USE_EXISTING_GITHUB_PR_92_AND_NATIVE_CLI_ONLY; NO_NEW_CONTROL_PLANE\`
+
+**適用與優先順序**：此節是 Human 2026-10-17 最新明確指示，補充本檔較早的稽核和 01–05；舊節中的「第一個動作檢查 0036 R08」已屬 10/16 歷史起點，**不得重新執行已完成的 0036/0043 全文重審或反覆產生活動日報**。新順序固定為：**本機↔GitHub 實質進度對帳與必要同步 → 外包 CLI Writer/Reviewer 真正派工及原始結果回收 → 修復已定位內容缺陷並持續下一個 READY → 降低 Codex 本體 Token 用量**。降低 Token 必須貫穿各步，不能以「先寫成本報告」拖延施工。
+
+### 5.1 立即執行：本機、GitHub、命令領取三方讀回
+
+1. 使用目前唯一真正有效的 Windows Writer/GOAL 原生工作環境，先唯讀核對 OS process command-line（不以 OpenCode service/Word COM 存活代替 Writer alive）、未提交變更、共享 register owner、既有 pending external effects、\`git status\`、精確 HEAD、各個本機最新 DOCX/QA SHA。對照同一 PR #92 分支與 Source/Blueprint；不要用本節建立第二個 ledger/queue、重複鎖或孤立工作目錄。
+2. 截至 2026-10-17 18:40 台灣時間的已觀測遠端 HEAD 為 \`b53b85176ecbd8ec22e36aa766d24325636e3937\`：已有 0052 R02 exact-SHA 候選 \`9129aff2bb730d31f76a5cb457ed069f1cafd2460b4069219f697b35d2c11afa\`、0054 R14；**當時遠端未列 0055**。Human 19:20 Windows 畫面顯示 0055 R01 先發現表格 8.5 pt 與分頁缺陷、已進行 R02 修復；此為 HUMAN-SCREENSHOT，不是 GitHub LIVE、不是已完成驗收。請先讀本機最新 0055 Writer/Word/QA 真相，不重啟另一個 0055 Builder。
+3. 對已穩定且可公開的本機候選及相應 QA/原始 reviewer 收據/合成清冊，**在既有分支一次提交必要差異，git fetch GitHub 後重算遠端 blob/exact DOCX SHA 與收據**；結果才標 \`REMOTE_SYNC_VERIFIED\`。對進行中的 0055，標 \`LOCAL_WIP\` 與目前完成階段；有重大進度且安全可公開時，在既有 PR 保存最短 checkpoint，不將未審候選冒稱 PASS。不要每頁、每次文字修正、每小時空動作都 commit；但正式穩定候選、review 終態、重大故障或 Human 新規則不得留在本機不對外同步。GitHub 與本機「同一穩定交付 checkpoint」必須精確一致；同步延遲或 WIP 必須明記，不聲稱逐秒同步。
+4. **命令領取驗收**：讀回本節 \`COMMAND\` 及本文件最新 Git blob，另查 PR #92 留言 \`F-20261017-01\`～\`08\`（特別是 \`#issuecomment-6231114583\` 與 \`#issuecomment-6231360018\`），逐項判定 \`DISCOVERED / APPLICABLE / APPLIED / VERIFIED / OPEN / PARTIAL / BLOCKED\`；只對已真正修復且有 exact-SHA 及必要 reviewer/遠端讀回者寫 VERIFIED。0052 R02 只關閉 0052 本身正文工程資訊外露的有證據部分；F-08 的舊 0036 工作目錄污染與 Shell 方言錯誤仍須證明後續審查封包已修正，不能因 exit 0 或模型 PASS 自動結案。若本次仍無新穩定產物，保留 OPEN，勿為了 ACK 生成長文活動報告。
+5. **0055 特別檢核**：任何 R02 版必須重新檢查正文字級至少 10.5 pt、表格至少 9.5 pt、字型實際 Word 匯出後分頁，專屬「講師遴選／聘任」邏輯、合成候選人分數、同案例來源及教學/行政可讀性；修復後才可委託 reviewer、回收新 SHA/原始回覆並同步。未通過不能因局部目視或 Worker 自稱 PASS 升格。
+
+### 5.2 唯一合格外包路由與免費模型選型
+
+- **所有受 Codex 委託的 AI Worker，只能透過本機已有且現場驗證版本與權限的 \`OpenCode v2 CLI\` 或 \`Antigravity CLI\` 進行。** 禁止使用 Computer Use、桌面 UI 點擊、螢幕操控、瀏覽器自動化、第三種 Worker/harness 或旁路遠端 API 冒充這兩條外包路由。Codex 自己可使用已授權的 Git/gh、PowerShell、Python、Microsoft Word COM 和 GitHub 工具完成原生施工/驗收，不以 GUI Worker 代替 CLI。
+- **Antigravity 路由只准請求 \`gemini-3.8-flash-high\`**，無法使用時只停 Antigravity 該車道，不自動改模型、繞過授權、改成 Computer Use 或要求所有生產停工；沿用官方受支援參數與受限唯讀/可逆寫入權限，禁止 \`--dangerously-skip-permissions\`。0044 四次 headless 權限拒絕、三次修正後停派是有收據的舊事故；0054 R14 之後雖有成功回覆，**仍要從原生來源解釋如何恢復該路由的合法派工能力**，不能用成功字樣抹掉原事故/三修政策。
+- **OpenCode v2：只允許實機 \`opencode models\` 或等價官方 CLI 列得出、當下可用、能無追加費用使用的免費 SKU**。選型參考 2026-10-17 每日免費模型查核：優先有界試用 DeepSeek V4.1 Flash Free；失敗或任務不適合再考慮 Muse Spark 1.3 Contributor Free、MiMo V2.6 Flash Free。該日既有社群小測僅 3 題/單次，不代表 TTQS 17 頁長文可靠，也不構成永久固定優先序。每次依 provider 當前型錄、配額、429/5xx/timeout 及一個極短 CLI 原生回覆測試選擇；禁止為單次失敗啟動無限 fallback 迴圈或消耗 Codex 高階模型重講整份文件。
+- 特別注意 0052 R02 reviewer 收據記載 \`opencode/glm-5.3-flash-free\`、runtime 說 \`GLM-5.3-Flash Free\`，但 2026-10-17 OpenCode 公開價格表中一般 **GLM 5.3 Flash** 列為計費 SKU。這兩者不能在未查原生 provider SKU、實際帳務/剩餘免費資格與是否產生新費用之前視為同一免費服務；\`COST=UNKNOWN\`，不得從名稱推定 FREE、不得自動購買 credit/改付費模型。需 Human 新費用授權才可增加成本。
+- OpenCode 與 Antigravity 分別保留實際 native command/版本/model request/runtime identity（若未回傳寫 UNKNOWN）/error 與 timeout；三次錯誤經三次有界修正仍失敗只暫停受影響路由，其他 READY 繼續。安全或權限不許的命令不走全域放行。
+
+### 5.3 外包「有形交付與回收」，取代 Codex 反覆親自長篇撰寫
+
+1. 將每件工作拆成一個真正小的可驗收工作物：官方方框與應用情境核對 → **專屬** Blueprint 的實際欄位/問卷/公式/完整 SAMPLE 答卷 → 寫出真實可開啟 DOCX/建置腳本 → Word 固定 PDF 技術與全頁目視 → 獨立語意（不同於 Builder）→ 定位缺陷的 bounded repair → exact-SHA 發布。Codex 只做項目選擇、任務派發、原生 deterministic L0 比對、必要品質仲裁與安全外部寫入，不重讀每頁或重做 Worker 可以完成的作文。每份 DOCX 的同一寫入範圍只有一位 Writer；獨立文件可並行但不共寫 CURRENT/register。
+2. 每次 Worker 收到**限定文件的隔離 packet**：此件官方原文與頁次、已核實協會定位/同案例共用事實、該件獨有 Blueprint、負向近鄰差異、exact SRC/候選 SHA、僅需的 PDF/圖片/CSV、接受準則與工作路徑。不要任由模型在 \`E:\\TTQS\` 全磁碟或舊 \`_REVIEW_SYNC_0036...\` 遍歷；先修正 PowerShell 與 bash 語法不相容，使用本機支援的命令及絕對檔案路徑。不要在審稿封包內堆所有 157 方框、88 筆提交、完整聊天史或未相關 Word。
+3. **每一個外包 attempt 必須實際回收**：native CLI exit code + 語意內容非空、原始 stdout/stderr 或保護敏感資訊後的可公開必要證據、模型身分與來源、輸入 packet SHA、候選 exact SHA、修改檔案清單、發現缺陷的頁/節/表、建議最小修補、QA scope、必要 token usage（input/output/cache/實際 billing 若 provider 有給）。\`exit 0\`、執行中、空回應、Worker 自評 PASS 都不是成功；不回覆不得派下一個重複同範圍 Worker。
+4. **返工只交差異**：例如字級不合先由 Python/Word 確定性修；register 定位不合只改 register 並有界再審；PDF 孤頁只修 Word 分頁；內容誤解再由便宜且可用 CLI Writer 改相應章節。對未改 DOCX 的 metadata/hash，絕不重跑全 17 頁與完整高 Token reviewer。已確認 SHA 的舊 PASS 作歷史保留；真正改 DOCX 則以新 SHA 對受影響內容、跨頁與必要獨立語意重核。
+5. 對每份成品實施標題盲測：拿掉工程標題仍能知道文件用途；對行政志工必須白話、完整、有責任/時機/步驟/實例，所有敏感療效及 REAL/合成邊界清楚。**工程 SHA、内部控制 metadata、JSONL 路徑不得寫進 Human Word 正文**，只留 sidecar。不能只有美觀與字級 PASS 就宣稱可用。
+
+### 5.4 Codex Token 與每小時排程：只監測、修補、續工，不要每小時寫活動報告
+
+1. **禁止為每小時喚醒、context compact、同一份日報改措辭、排程 ACTIVE 查核、無實質變化而重新生成長篇人類報告**。每小時任務的作用只是最低成本存活/命令差異/失敗補漏/合法 READY 續工；已有真實 Worker 在跑就不重派、不重啟、不叫另一批模型，也不為同一進展列幾十筆重覆 commits。只有完整候選、關鍵 QA 結果、重大故障或 Human 要求時，用既有 GitHub PR + 最短狀態更新；沒有變更就退出。長篇活動報告**僅 Human 明確索取時**製作一次。
+2. 先由現有 native OS/Git \`L0\` 比對 \`git diff\`、GitHub HEAD、候選 SHA、queue/Writer pid 與 native scheduler last-run；**沒有 material delta 不叫 Codex/高階 LLM**。如果 Codex App hourly thread scheduled 每次喚醒都必然扣高階模型 Token，須先提出 native usage 與觸發證據，再依 05 已核准的二擇一規則，評估把**唯一喚醒 owner**切到既有 Windows Task Scheduler 的 cheap L0（先停舊、同來源讀回停用再啟動另一個，不能雙主）。此時若仍有正在寫的 0055 不得直接殺掉 GOAL/誤傷 Worker。無原生 last/next run 記錄則 \`SCHEDULED_WAKE=UNKNOWN\`，不要拿 UI「每小時／開啟」卡片、長回合及 Git commits 假稱實測。
+3. Codex 本身的 Token 必須優先省：減少四個以上同時長期讀全量 repo 的子代理、重複載入 GitHub/官方文件、重複完整 Word 渲染及大段全量 stdout；先讓低成本 CLI Worker 真正產生成品或定位審查，再由 Codex 單次短仲裁。預設回覆只提供 doc_id、exact SHA、已證實修復/仍開啟、同步狀態、下一個 READY 一小段；每次模型輸入、輸出、快取命中、elapsed、找出的重大缺陷及返工成功率，沿用已有執行收據記錄，未知不得亂填 0。對高輸入案如 0043 的 Antigravity \`total_tokens=350812\`，下次先縮短 packet/輸出格式後以相同品質要求比較，**不可犧牲實質 QA 換漂亮 Token 數字**。
+4. Codex 原生每小時排程已有 \`TTQS_GITHUB_COMMAND_PREFLIGHT_V1\` 的歷史設定讀回，不代表真實 scheduled-run 已通過。先 readback 原生 Prompt、last/next 與真正 triggered run；只在發現 Prompt 實際欠缺本節「無差異不耗 Token／不寫報告／只做同步與派工」能力時，**有界修改同一任務**並再讀回，不要每回合反覆「修排程」；也不要憑本 GitHub 文件就稱 Windows 持久化 Prompt 已更新。
+5. 若人類當前的 0055 改稿有真正活躍 Worker，保留工作並在下一個合法 checkpoint 接手；禁止新 session、compact 或 hourly wake 重做同一文件。外部未知寫入只停影響的 push lane，其他純本地可逆工作可繼續。
+
+**本節不是另一套監督系統，也不新增 Human 審批／新付費／Production 權限。正式/舊 canonical 差異仍依 01–05、 Human 最新要求標 \`SPEC_CONTROL_PLANE_REBASE_REQUIRED\`。**
+
+\`ACCEPTANCE_THIS_COMMAND=NOT_YET_VERIFIED_ON_WINDOWS\`  
+\`FIRST_NEXT_ACTION=READ_WIN10_NATIVE_WRITER_AND_LATEST_0055_LOCAL_SHA_THEN_SYNC_CHECKPOINT\`  
+\`HUMAN_GATE=ONLY_NEW_COST_OR_CREDENTIAL_OR_IRREVERSIBLE_REAL_OPERATION_OR_FORMAL_TTQS_ACCEPTANCE\`
