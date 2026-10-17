@@ -1,0 +1,44 @@
+{
+  "doc_id": "0058",
+  "requirement_id": "I13-E02",
+  "official_checkbox_serial": "062",
+  "blueprint_revision": "R06",
+  "blueprint_sha256": "7606D16B80A4886CF6871943EF46DE0407D3EFB921FD6DB63597615F4C5B81F4",
+  "candidate_revision": "R08",
+  "candidate_sha256": "0DFCAAE1FF9943E46C1B9D527C3DF34FA61048547268C482D0DD378E44D7C58B",
+  "candidate_state": "CANDIDATE / SAMPLE-SYNTHETIC; not formally accepted",
+  "technical_qa": {
+    "verdict": "PASS",
+    "receipt": "technical_qa_0058_R08.json",
+    "sha256": "F36E1C35180203E130A1480E4F85B7FE27049F159C3AB420EC6C59C66572CE53"
+  },
+  "visual_qa": {
+    "verdict": "PASS",
+    "scope": "all 8 contact sheets (32 pages) and full-resolution pages 29-32",
+    "receipt": "visual_review_0058_R08.md",
+    "sha256": "F5BF336CA79AAFDD79FCC027D68FDD9FBF0AE2ADC42FD4F98FCD24561489CBDC",
+    "pdf_sha256": "97A83ADD1FC52342AB9FD4D0035EBCC79488B023B6FE5F2DB299FD71A85A8F61"
+  },
+  "semantic_review": {
+    "verdict": "PASS — qualified semantic delta review",
+    "reviewer_route": "OpenCode CLI v2.0.29; opencode/longcat-2.5-preview-free; distinct from Antigravity Builder",
+    "session_id": "ses_eb4c69a00ffecdiCvGl5LzE5aU",
+    "response": "review/opencode_v2_semantic_R05/opencode_longcat_R01_independent_review.md",
+    "response_sha256": "8B402602765113692E2899ECF5CAB5A51E5564D6B0823966A5D7A73CD7FF3AF2",
+    "raw_stdout": "review/opencode_v2_semantic_R05/opencode_longcat_R01_stdout.jsonl",
+    "raw_stdout_sha256": "27100D3ADF6E162E6BFAB7F2F592B92043E9204BC626BA6A3D5988C501A28BE7",
+    "invocation_receipt": "review/opencode_v2_semantic_R05/opencode_longcat_R01_invocation_receipt.json",
+    "invocation_receipt_sha256": "617C30F66E2759427CBA6E6E469CA1169EEA3A39921D2A2568F7CA00E5ACDB27",
+    "formal_acceptance": "NOT CLAIMED"
+  },
+  "antigravity_corroboration": {
+    "verdict": "PASS — same-platform corroboration, not counted as independent acceptance because Antigravity also built R06",
+    "model": "gemini-3.8-flash-high",
+    "conversation_id": "36d655c5-9a04-4030-9c6f-69b46e9c2dc3",
+    "response": "review/opencode_v2_semantic_R05/antigravity_gemini38_0058_R08_semantic_R04_response.md",
+    "response_sha256": "B69932A79805524A994A0A346DD799F06195CAFE058C9448AAC8CB6CD914D6A2",
+    "raw_stdout_sha256": "11C75B8764BA36DD8131BEA2F323C9EE692A71FA325E2B10AC11A64FE3267068"
+  },
+  "formal_association_acceptance": "NOT CLAIMED",
+  "real_evidence": "NOT CLAIMED; sample facts remain SAMPLE/SYNTHETIC and real-source status remains UNKNOWN"
+}

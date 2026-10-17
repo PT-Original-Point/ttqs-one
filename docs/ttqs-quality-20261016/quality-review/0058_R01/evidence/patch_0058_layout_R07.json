@@ -1,0 +1,24 @@
+{
+  "operation": "targeted_layout_repair",
+  "source_revision": "R06",
+  "target_revision": "R07",
+  "source_docx_sha256": "B7F8806A204EB6CB9C1F9FA2F84B016B6F1EAFB56FF43E5C7C02E2499CE13B07",
+  "output_docx_sha256": "C4464EDB21E2D7B118A1565C474A719BB1B97B97DDDCCD3ED3500ED6E5D14701",
+  "candidate_path": "candidate/0058_R07.docx",
+  "target_defect": "Table 10-3 caption and header were stranded at the bottom of rendered page 30 while data rows began on page 31.",
+  "repair": "Set pageBreakBefore on the exact Table 10-3 caption paragraph; no wording, data, table, or decision changed.",
+  "source_caption_text": "表 10-3：文件修訂與版本管制紀錄表",
+  "caption_followed_by_table": true,
+  "package_parts_changed": [
+    "word/document.xml"
+  ],
+  "all_other_uncompressed_package_parts_identical": true,
+  "canonical_document_xml_equal_after_removing_added_page_break": true,
+  "sidecars_copied_byte_identically": [
+    "0058_SYNTHETIC_REPLACEMENT_REGISTER_R07.csv",
+    "0058_CONTENT_R07.json"
+  ],
+  "semantic_review": "PENDING exact R07 SHA",
+  "visual_review": "PENDING fresh R07 Word render",
+  "formal_acceptance": "NOT_CLAIMED"
+}
