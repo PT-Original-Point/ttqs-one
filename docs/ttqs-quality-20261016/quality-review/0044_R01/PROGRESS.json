@@ -4,7 +4,7 @@
   "requirement_id": "I09-E04",
   "official_checkbox_sequence": "045",
   "candidate_revision": "R01",
-  "status": "INDEPENDENT_REVIEW_BLOCKED_EXTERNAL_ROUTE",
+  "status": "INDEPENDENT_REVIEW_PASS_CANDIDATE_NOT_PROMOTED",
   "candidate_path": "candidate/0044_R01.docx",
   "candidate_sha256": "76bde5df4209abc6f102a15a02c5e51a5816ef3df309aaed0a0ab44ea9075644",
   "candidate_bytes": 49849,
@@ -32,12 +32,12 @@
   },
   "technical_integrity": "PASS",
   "visual_layout": "PASS; Word-native render; all 8 pages directly inspected",
-  "semantic_review": "PENDING_NO_VERDICT; four Antigravity headless permission denials persisted across three scoped prompt/config repairs. The external route is paused for new dispatch. No reviewer response was returned; this is not a semantic finding or PASS.",
+  "semantic_review": "PASS_EXACT_SHA; 14 substantive criteria PASS; 8/8 provided page images directly inspected; 0 material findings; 3 P3 observations repaired in sidecars only; formal acceptance NOT_GRANTED.",
   "formal_acceptance": "NOT_REQUESTED_OR_GRANTED",
   "real_evidence": "NOT_EVIDENCED; synthetic demonstration only",
   "authoring_owner": "current TTQS ONE GOAL thread; no competing active Builder reported",
-  "next_action": "Keep this exact candidate SHA unchanged. Continue other lawful READY documents while the Antigravity route is paused; resume 0044 review only through a verified independent route, then repair only exact-located material defects and sync the result to existing PR #92.",
-  "updated_at_taipei": "2026-10-17T07:02:17+08:00",
+  "next_action": "Keep candidate R01 at the exact reviewed SHA; do not rebuild. Continue the next verified READY candidate document. This result does not establish real association evidence or formal acceptance.",
+  "updated_at_taipei": "2026-10-17T11:26:22+08:00",
   "external_review_route": {
     "route": "Antigravity CLI",
     "status": "PAUSED_NEW_DISPATCH",
@@ -51,5 +51,21 @@
     "computer_use": false,
     "broad_permission_bypass_used": false,
     "incident_record": "review/antigravity_route_incident_R01/INCIDENT.json"
+  },
+  "independent_semantic_review": {
+    "route": "OpenCode CLI v2",
+    "requested_model": "opencode/deepseek-v4.1-flash-free",
+    "runtime_model_identity": "NOT_RETURNED",
+    "verdict": "PASS",
+    "candidate_sha256": "76bde5df4209abc6f102a15a02c5e51a5816ef3df309aaed0a0ab44ea9075644",
+    "final_response_sha256": "3199e4bb2243c4f991b591f76f5b3eed1d9384a9d6b10dfa6e42cf01d1964cc5",
+    "receipt_path": "review/opencode_v2_review_R01/opencode_v2_review_receipt_R01.json",
+    "criteria_passed": 14,
+    "material_findings": 0,
+    "non_material_findings": 3,
+    "candidate_mutated": false,
+    "formal_acceptance": "NOT_GRANTED",
+    "visual_scope": "8/8 supplied final PNGs directly inspected; reviewer did not independently re-render DOCX",
+    "sidecar_repairs": "replacement register locators and top-level package manifest only"
   }
 }

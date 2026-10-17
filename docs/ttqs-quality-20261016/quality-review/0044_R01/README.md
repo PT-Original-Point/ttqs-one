@@ -8,7 +8,7 @@
 - Official checklist sequence: 045. This is distinct from DOCX ID 0044.
 - Candidate revision: R01, `CANDIDATE / NOT_PROMOTED`.
 - Candidate DOCX SHA-256: `76bde5df4209abc6f102a15a02c5e51a5816ef3df309aaed0a0ab44ea9075644`.
-- Current status: exact-SHA independent semantic review pending; Antigravity CLI new dispatch is paused after four headless permission denials despite three scoped prompt/config repairs. No reviewer response or verdict was returned. Technical and visual receipts do not establish semantic acceptance.
+- Current status: independent semantic review PASS for exact SHA `76bde5df4209abc6f102a15a02c5e51a5816ef3df309aaed0a0ab44ea9075644`; candidate remains `CANDIDATE / NOT_PROMOTED`. The review found 0 material issues and 3 non-material P3 locator/index observations, repaired in sidecars only. Antigravity remains paused for new dispatch on its route; OpenCode CLI v2 completed the independent review. Formal acceptance is not granted.
 - Real association discussions, meetings, emails, signatures, approvals, and archive locations: NOT EVIDENCED.
 
 ## Source and requirement mapping
@@ -28,6 +28,10 @@ The 156-row fact-level register binds each synthetic date, role, event, message,
 - Final visual receipt: `evidence/visual_layout_receipt_R01_FINAL.json`; page images are included in `evidence/render_final_0044_R01_final/`.
 - Earlier localized layout defects were corrected: the built-in title border, excessive wrapping in the reusable form label column, the date split in the identifier line, and an isolated email table header. The stop condition is now in the section 8 exception table. The 12-field reusable form uses six paired-field rows with wide response cells so the final official crosswalk stays together. The candidate also completes missing Chinese control-field examples and adds the corresponding 12-field evidence facts; these are substantive content repairs, not metadata-only changes.
 
+## Independent semantic review (2026-10-17)
+
+OpenCode CLI v2 completed a read-only review and returned **PASS** for exact candidate SHA `76bde5df4209abc6f102a15a02c5e51a5816ef3df309aaed0a0ab44ea9075644`. All 14 substantive criteria passed, the candidate SHA was unchanged before and after, and there were 0 material findings. The reviewer directly inspected all 8 supplied final page images; this was not an independent DOCX re-render. Three non-material P3 locator/index observations were repaired in the replacement register and package manifest only. The DOCX bytes and render artifacts were not changed. This is candidate review only; formal acceptance remains NOT GRANTED.
+
 ## Candidate lineage
 
 - Runtime historical DOCX SHA-256: `427e9ccae8ebf0f3128571057b63602c728ea70c1ea911857fba941c3acfd1d1`; retained as discovery-only. It lacks fully worked meeting/oral-discussion examples and a fact-level replacement register and was not used as a writing template.
@@ -39,10 +43,10 @@ The 156-row fact-level register binds each synthetic date, role, event, message,
 - `candidate/`: exact current DOCX candidate.
 - `inputs/`: official source, requirement identity, unique and negative-neighbor Blueprints, crosswalk, historical disposition, source map, and candidate body text.
 - `evidence/`: technical receipt, final Word PDF and page images, final visual receipt, 156-row synthetic replacement register, deterministic builder, and preserved prior visual candidates.
-- `review/`: frozen exact-SHA packets, four raw CLI attempt outputs and receipts, and a route-incident record. The CLI returned empty reviewer responses; permission denials are not semantic findings or a PASS.
+- `review/`: frozen exact-SHA packets and Antigravity route incident; `opencode_v2_review_R01/` contains the exact successful independent response and receipt. The full OpenCode event stream stays local because it contains unrelated tool trace.
 - `PROGRESS.json`: machine-readable candidate, source, verification, and next-action state.
 - `artifact_manifest.json`: hashes and byte sizes for package files other than the manifest itself.
 
 ## Acceptance boundary
 
-Only an independent reviewer result bound to the exact candidate SHA can establish candidate semantic review. A review PASS still does not prove actual association records, real execution, formal approval, or final Human acceptance. Do not promote this package or present synthetic examples as real evidence.
+OpenCode CLI v2 returned PASS bound to the unchanged exact candidate SHA. It directly inspected all eight supplied final page images; it did not independently re-render the DOCX. The result establishes candidate semantic review only. It does not prove actual association records, real execution, formal approval, or final Human acceptance. Do not promote this package or present synthetic examples as real evidence.
