@@ -56,7 +56,7 @@
   "synthetic_register_rows": 85,
   "formal_acceptance": "NOT_GRANTED",
   "candidate_disposition": "CANDIDATE_ONLY_NOT_PROMOTED",
-  "next_action": "Push the corrected R13 review-status metadata and 0048 R03 exact-SHA review package to existing PR #92; read back exact candidate and evidence hashes; continue next lawful READY item.",
+  "next_action": "Sync 0054 R13/R14 reviewed-candidate packages and this preflight status to existing PR #92; verify exact remote hashes; then continue the next lawful READY document.",
   "independent_review": {
     "status": "PASS_FOR_SAMPLE_ARTIFACT_WITH_DECLARED_SCOPE",
     "candidate_sha256": "0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f",
@@ -72,12 +72,15 @@
   "artifact_manifest_sha256": "1ee238517d70cba0cd50deda591739271393fe65ea4ab26091362ed9ee156175",
   "artifact_file_count": 110,
   "remote_readback": {
-    "status": "PENDING_POST_METADATA_SYNC_READBACK",
-    "previous_verified_commit": "6264bbf34a87ed65b91ecd7bfc260c6e739b55d6",
+    "status": "PASS",
+    "verified_commit": "5694df158c138cae8768df1aaa22e987716535f9",
+    "manifest_file_count": 110,
+    "verified_blob_count": 112,
+    "manifest_mismatch_count": 0,
     "candidate_sha256": "0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f",
-    "technical_receipt_sha256": "a32703853ecec0a201ade79b05f4a1d0e2870cd53cd96a0d0548de9f9f1b33cd",
-    "artifact_manifest_sha256": "aef2a8ab38341ec79c186a3288c286d021ad72a0a68e08a21604717de84cae96",
-    "scope": "DOCX candidate unchanged; corrected the stale R13 technical receipt from review pending to exact-SHA independent PASS. New metadata sync awaits same-branch remote readback."
+    "artifact_manifest_sha256": "1ee238517d70cba0cd50deda591739271393fe65ea4ab26091362ed9ee156175",
+    "readback_source": "git fetch origin work/ttqs-one-document-quality-contract-20261016 and exact SHA-256 readback of all 110 manifest entries",
+    "scope": "The fetched remote package at verified_commit contained all listed R13 artifacts with no mismatch. Candidate remains SAMPLE and not formally accepted."
   },
   "remote_readback_history": [
     {
@@ -92,6 +95,55 @@
       "artifact_manifest_sha256": "45eae2c938e2a1f2a9deeb5fff022164928c54ce2dcd6ab5ebaa9ee506a80bd6",
       "readback_source": "git fetch origin branch + remote tree/blob SHA-256 readback",
       "scope": "Every manifest entry, candidate DOCX, independent review, progress and manifest were verified from the fetched remote commit; candidate remains not formally accepted."
+    },
+    {
+      "status": "PASS",
+      "verified_commit": "5694df158c138cae8768df1aaa22e987716535f9",
+      "manifest_file_count": 110,
+      "verified_blob_count": 112,
+      "manifest_mismatch_count": 0,
+      "candidate_sha256": "0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f",
+      "artifact_manifest_sha256": "1ee238517d70cba0cd50deda591739271393fe65ea4ab26091362ed9ee156175",
+      "readback_source": "git fetch origin branch + remote tree/blob SHA-256 readback",
+      "scope": "All 110 artifact-manifest entries for 0036 R13 matched remote bytes; no candidate change."
     }
-  ]
+  ],
+  "command_processing": {
+    "command": "TTQS_ONE_INSTALL_PERSISTENT_GITHUB_COMMAND_INGESTION",
+    "source_audit_file": "docs/ttqs-quality-20261016/06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md",
+    "source_commit_observed": "5694df158c138cae8768df1aaa22e987716535f9",
+    "source_git_blob_oid": "70449889fd464106fe204496004bee13018d4a51",
+    "discovered": "PASS_FULL_06_READ_AND_LIVE_BLOB_VERIFIED",
+    "applicable": "PASS_HUMAN_AUTHORIZED_REVERSIBLE_SYNC_AND_AUDIT_CONTINUATION",
+    "automation_readback": {
+      "automation_id": "ttqs-one-hourly-quality-goal-resume",
+      "status": "ACTIVE",
+      "rrule": "RRULE:FREQ=HOURLY;INTERVAL=1",
+      "goal_thread_id": "01a14098-b269-79e3-b07c-56e96557fe07",
+      "prompt_update": "PASS_NATIVE_UPDATE_AND_READBACK; prior four replacement characters corrected",
+      "duplicate_schedulers": "one active thread-bound; standalone paused; Windows task disabled",
+      "preflight_marker": "TTQS_GITHUB_COMMAND_PREFLIGHT_V1",
+      "functional_test": "PASS_MANUAL_SOURCE_AUTHORITY_FINDING_AND_NEXT_ACTION_PREFLIGHT",
+      "real_scheduled_wake_test": "NOT_VERIFIED_THIS_TURN"
+    },
+    "finding_states": {
+      "F01": {
+        "discovered": "PASS",
+        "applied": "PASS_R08_R02_INSPECTED_ALL_19_PAGES_AND_FOUND_TWO_PAGE5_RETURN_ARROWS_MISSING",
+        "verified": "PASS_LATER_R13_EXACT_SHA_AND_19_PAGE_REVIEW; R13_PAGE5_DIRECTLY_READ; NO_R08_REBUILD"
+      },
+      "F02": {
+        "discovered": "PASS",
+        "applied": "IN_PROGRESS_SYNCING_0054_R13_AND_R14_STABLE_PACKAGE",
+        "verified": "PENDING_0054_REMOTE_READBACK"
+      },
+      "F04": {
+        "discovered": "PASS",
+        "applied": "PASS_0043_R04_EXACT_SHA_REVIEW_AND_17_PAGE_CHECK",
+        "verified": "PASS_LOCAL_AND_REMOTE_DOCX_SHA_MATCH; formal acceptance not granted"
+      }
+    },
+    "overall_state": "APPLIED_PENDING_0054_PACKAGE_REMOTE_READBACK",
+    "next_action": "Commit the scoped 0054 R13/R14 candidate and review packages plus this status, read back every manifest blob and exact DOCX SHA from GitHub, then continue the next lawful READY document."
+  }
 }

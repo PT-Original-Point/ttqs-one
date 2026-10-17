@@ -1,0 +1,34 @@
+{
+  "schema": "ttqs-docx-font-floor-report-v1",
+  "candidate_sha256": "7b14bcfc09ad38c42b73ffebbfaee1c09939e7b9f7ae578240168cd1aa13b6ea",
+  "method": "python-docx run-level effective size through paragraph style inheritance; table cells evaluated separately",
+  "requirements_pt": {
+    "body_min": 10.5,
+    "table_min": 9.5
+  },
+  "body": {
+    "nonempty_runs": 52,
+    "explicit_or_inherited_size_runs": 52,
+    "size_counts_pt": {
+      "11.0": 33,
+      "13.0": 18,
+      "20.0": 1
+    },
+    "minimum_pt": 11.0,
+    "below_floor_count": 0,
+    "missing_size_count": 0,
+    "examples_below_floor": []
+  },
+  "tables": {
+    "nonempty_runs": 304,
+    "explicit_or_inherited_size_runs": 304,
+    "size_counts_pt": {
+      "10.0": 304
+    },
+    "minimum_pt": 10.0,
+    "below_floor_count": 0,
+    "missing_size_count": 0,
+    "examples_below_floor": []
+  },
+  "conclusion": "PASS"
+}
