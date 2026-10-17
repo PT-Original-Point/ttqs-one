@@ -2,7 +2,7 @@
   "project_id": "TTQS_ONE",
   "doc_id": "0054",
   "requirement_id": "I12-E02",
-  "official_checkbox_sequence": "054",
+  "official_checkbox_sequence": "057",
   "revision": "R14",
   "candidate_path": "E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0054_R14\\candidate\\0054_R14.docx",
   "candidate_sha256": "3d000e580b9cb1247fd984ebb0c8f5f817fce08ce7c368cc1799c95a111a979c",
@@ -47,16 +47,35 @@
     "sha256": "cb323556ffca79a795d81882c9f81449f8fe7980cc35c7df0eda536ea6065a6c",
     "page_count": 10
   },
-  "next_action": "Remote package readback passed 37/37 at 408648bae3a9f516a1201d75e51dadc76f0e903c. Preserve this exact candidate and proceed to the next lawful READY document; formal acceptance remains NOT_GRANTED.",
+  "next_action": "Verify corrected 38-entry R14 package remotely, then continue next lawful READY requirement; 0055 is I12-E03 / sequence 058, subject to current queue and source check.",
   "remote_readback": {
-    "status": "PASS",
-    "verified_commit": "408648bae3a9f516a1201d75e51dadc76f0e903c",
-    "manifest_entries_total": 37,
-    "manifest_entries_matching": 37,
-    "manifest_mismatch_count": 0,
+    "status": "PENDING_CROSSWALK_METADATA_SYNC",
+    "previous_verified_commit": "f7d89dd305168d54f22a6984095b45f202c47983",
+    "current_manifest_entries_expected": 38,
     "candidate_sha256": "3d000e580b9cb1247fd984ebb0c8f5f817fce08ce7c368cc1799c95a111a979c",
-    "readback_source": "Fetched live branch and independently SHA-256 checked each artifact using the manifest declared raw or text_lf basis; all 37 entries match.",
-    "scope": "Package byte/readback only; revision R13 retains NO_VERDICT and R14 remains candidate-only with independent semantic PASS. No formal acceptance or promotion."
+    "scope": "Awaiting push and exact readback after the official sequence crosswalk correction."
   },
-  "updated_at_taipei": "2026-10-17T17:22:06+08:00"
+  "updated_at_taipei": "2026-10-17T17:30:27+08:00",
+  "official_sequence_correction": {
+    "status": "CORRECTED_FROM_OFFICIAL_SOURCE_CROSSWALK",
+    "source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "source_pdf_page": "4; indicator 12a; exact I12-E02 requirement text",
+    "current_03_mapping": "054=I11-E04; 055=Other; 056=I12-E01; 057=I12-E02; 058=I12-E03",
+    "raw_reviewer_sequence_claim": "Preserved reviewer response incorrectly says 054=I12-E02 and 055=I12-E03; its PASS is retained only for I12-E02 content, not numbering.",
+    "docx_bytes_changed": false,
+    "correction_note": "review/official_checkbox_sequence_correction_R01.md"
+  },
+  "independent_review_scope_note": "Exact-SHA semantic PASS applies to the I12-E02 content. The raw reviewer response contains an incorrect checkbox-sequence crosswalk; the source-backed correction is separately recorded. No DOCX bytes changed.",
+  "remote_readback_history": [
+    {
+      "status": "PASS",
+      "verified_commit": "408648bae3a9f516a1201d75e51dadc76f0e903c",
+      "manifest_entries_total": 37,
+      "manifest_entries_matching": 37,
+      "manifest_mismatch_count": 0,
+      "candidate_sha256": "3d000e580b9cb1247fd984ebb0c8f5f817fce08ce7c368cc1799c95a111a979c",
+      "readback_source": "Fetched live branch and independently SHA-256 checked each artifact using the manifest declared raw or text_lf basis; all 37 entries match.",
+      "scope": "Package byte/readback only; revision R13 retains NO_VERDICT and R14 remains candidate-only with independent semantic PASS. No formal acceptance or promotion."
+    }
+  ]
 }

@@ -3,7 +3,7 @@
 - **Project:** TTQS ONE
 - **DOCX ID:** 0054
 - **Official requirement:** I12-E02; official evidence-table page 4, item 12a.
-- **Official checkbox sequence:** 054. This is distinct from DOCX ID 0054.
+- **Official checkbox sequence:** 057. This is distinct from DOCX ID 0054. Official sequence 055 is the I11 “Other” row; DOCX 0055 is a different requirement.
 - **Document genre:** Volunteer-training learner-selection and teaching-material review SOP.
 - **Candidate SHA-256:** `3d000e580b9cb1247fd984ebb0c8f5f817fce08ce7c368cc1799c95a111a979c`
 - **Status:** CANDIDATE ONLY. No Human formal acceptance, REAL record status, or promotion is asserted.
@@ -14,7 +14,7 @@ R14 derives from the preserved R13 candidate (`7b14bcfc09ad38c42b73ffebbfaee1c09
 
 ## Content and source boundary
 
-The document is mapped to I12-E02: selection follows stated learner criteria and the lecturer/consultant material recommendation receives Training Management Committee approval. It is not a substitute for DOCX 0053 / I12-E01 (review and adjustment of learner/material/faculty/method/facilities fit) or the adjacent official checkbox 055 / I12-E03 (faculty selection and appointment-letter process).
+The document is mapped to I12-E02: selection follows stated learner criteria and the lecturer/consultant material recommendation receives Training Management Committee approval. It is not a substitute for DOCX 0053 / I12-E01 (review and adjustment of learner/material/faculty/method/facilities fit) or the adjacent official checkbox 058 / I12-E03, represented by DOCX 0055 (faculty selection and appointment-letter process).
 
 The worked example is explicitly SAMPLE/SYNTHETIC. It does not assert real applicants, a real course, an actual association meeting, committee approval, signatures, or third-party materials. The input register contains 71 fact-level replacement rows. Formal use requires replacement with verifiable association records and authorized decisions.
 
