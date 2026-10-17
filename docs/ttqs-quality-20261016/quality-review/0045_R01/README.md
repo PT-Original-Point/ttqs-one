@@ -34,6 +34,6 @@
 
 ## 審查界線
 
-版面視覺檢查：PASS（12 頁已逐頁檢視）。技術檢查：PASS（DOCX ZIP 完整、計算重算一致、105 筆合成替換資料）。獨立語意審查：PENDING，尚無有效獨立審查路由回覆。故此 DOCX 仍是候選，不得作為正式核定或真實採購紀錄。
+版面視覺檢查：PASS（12 頁已逐頁檢視）。技術檢查：PASS（DOCX ZIP 完整、計算重算一致、105 筆合成替換資料）。OpenCode CLI v2 獨立語意審查：PARTIAL（精確 SHA 綁定於 review/opencode_v2_review_R01/EXECUTION_RECEIPT_R01.json）；未發現阻擋缺陷，但列出替換簿欄位及內部引用修復項。故此 DOCX 仍是候選，不得作為正式核定或真實採購紀錄。
 
-獨立語意審查路由預檢：未派發、無語意裁定。設定的 OpenCode v2 路徑不存在，原 sidecar 連線遭拒；Antigravity 新派工依既有事故收據仍暫停。此路由狀態不代表文件 FAIL 或 PASS，也不阻止其他 READY 文件施工。詳見 `evidence/semantic_review_status_R01.json`。
+R01 獨立語意審查已透過 OpenCode CLI v2 完成，裁定 PARTIAL；原始輸出、封包、執行收據及逐項結論見 `review/opencode_v2_review_R01/`。此裁定只屬於 R01 exact SHA，不升格為核准或 REAL。
