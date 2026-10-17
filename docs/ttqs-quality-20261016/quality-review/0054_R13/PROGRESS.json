@@ -14,5 +14,16 @@
   "opencode_route_paused": false,
   "candidate_only": true,
   "formal_acceptance": "NOT_GRANTED",
-  "next_action": "R14 exact-SHA independent review is complete; do not reuse R13 failure as an R14 defect or verdict."
+  "next_action": "R14 exact-SHA independent review and remote package readback are complete. Keep R13 as a no-verdict historical candidate; continue the next lawful READY document.",
+  "remote_readback": {
+    "status": "PASS",
+    "verified_commit": "408648bae3a9f516a1201d75e51dadc76f0e903c",
+    "manifest_entries_total": 37,
+    "manifest_entries_matching": 37,
+    "manifest_mismatch_count": 0,
+    "candidate_sha256": "7b14bcfc09ad38c42b73ffebbfaee1c09939e7b9f7ae578240168cd1aa13b6ea",
+    "readback_source": "Fetched live branch and independently SHA-256 checked each artifact using the manifest declared raw or text_lf basis; all 37 entries match.",
+    "scope": "Package byte/readback only; revision R13 retains NO_VERDICT and R14 remains candidate-only with independent semantic PASS. No formal acceptance or promotion."
+  },
+  "updated_at_taipei": "2026-10-17T17:22:06+08:00"
 }

@@ -47,19 +47,16 @@
     "sha256": "cb323556ffca79a795d81882c9f81449f8fe7980cc35c7df0eda536ea6065a6c",
     "page_count": 10
   },
-  "next_action": "Read back the corrected 0054 R13/R14 manifests and every artifact SHA from the live branch; then continue the next lawful READY document.",
+  "next_action": "Remote package readback passed 37/37 at 408648bae3a9f516a1201d75e51dadc76f0e903c. Preserve this exact candidate and proceed to the next lawful READY document; formal acceptance remains NOT_GRANTED.",
   "remote_readback": {
-    "status": "PARTIAL_READBACK_METADATA_NORMALIZATION_REQUIRED",
-    "verified_commit": "8fb0acbe4674b1e945a083bd0eb154ec6437c2eb",
-    "candidate_sha256": "3d000e580b9cb1247fd984ebb0c8f5f817fce08ce7c368cc1799c95a111a979c",
-    "candidate_remote_sha256": "3d000e580b9cb1247fd984ebb0c8f5f817fce08ce7c368cc1799c95a111a979c",
+    "status": "PASS",
+    "verified_commit": "408648bae3a9f516a1201d75e51dadc76f0e903c",
     "manifest_entries_total": 37,
-    "manifest_entries_matching_before_fix": 36,
-    "single_difference": {
-      "path": "inputs/official/official_evidence_table_fulltext.txt",
-      "reason": "GitHub blob has LF line endings while local extraction has CRLF; LF-normalized content is identical. The manifest incorrectly declared raw-byte basis."
-    },
-    "correction": "Both R13 and R14 manifest entries now declare text_lf and the normalized content hash. DOCX bytes and independent review output are unchanged.",
-    "final_readback_after_this_metadata_correction": "PENDING"
-  }
+    "manifest_entries_matching": 37,
+    "manifest_mismatch_count": 0,
+    "candidate_sha256": "3d000e580b9cb1247fd984ebb0c8f5f817fce08ce7c368cc1799c95a111a979c",
+    "readback_source": "Fetched live branch and independently SHA-256 checked each artifact using the manifest declared raw or text_lf basis; all 37 entries match.",
+    "scope": "Package byte/readback only; revision R13 retains NO_VERDICT and R14 remains candidate-only with independent semantic PASS. No formal acceptance or promotion."
+  },
+  "updated_at_taipei": "2026-10-17T17:22:06+08:00"
 }
