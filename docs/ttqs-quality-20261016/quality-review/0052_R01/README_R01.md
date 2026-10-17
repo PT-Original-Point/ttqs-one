@@ -26,3 +26,5 @@
 - `review/opencode_v2_R01/`：OpenCode V2 原始 stdout/stderr、exit code 及 exact-SHA 結果摘要。
 
 `artifact_manifest_R01.json` 列出本套件正式保存的檔案 SHA-256 與大小；manifest 自身不列入其檔案清單。
+
+套件內 `.gitattributes` 僅對上述 8 個 checksum-bound 文字來源停用 Git 換行正規化，讓 GitHub 原始 blob 保留 reviewer stdout/stderr、建置資料與來源清冊的精確位元組；不改變其他文件或全域 Git 設定。
