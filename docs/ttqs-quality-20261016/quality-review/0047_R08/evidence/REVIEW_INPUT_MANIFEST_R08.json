@@ -12,24 +12,29 @@
   "review_response_sha256": "8b322f0fb3e37e8a58026efde20a5fe05c884288c89ac408ad8eb292617715a1",
   "files": [
     {
+      "path": ".gitattributes",
+      "sha256": "7128909fcdb03ed326d3ea4515c686c6f4c25413e32a8148529535ebedad252e",
+      "bytes": 246
+    },
+    {
+      "path": "PROGRESS_R08.json",
+      "sha256": "75926940c0d41cea9579c922635670897eb28b8edbaff7be58c8cc7a7c38f242",
+      "bytes": 1015
+    },
+    {
+      "path": "README.md",
+      "sha256": "3eacb7fd51b7beffcc21d6c5e67b3a82cf1470fc76c2514f8ecebe8506b1bf0a",
+      "bytes": 1976
+    },
+    {
       "path": "candidate\\0047_R08.docx",
       "sha256": "b8cc8e4473e9cd7ad93f21c0cb9503865e683e3b802ac70577fbd8db3524d447",
       "bytes": 47609
     },
     {
-      "path": "evidence\\assemble_review_package_R08.py",
-      "sha256": "e1c1ee50a6593504fff7c7163a75eb888caaf113c64e03b0a7438aa8ee6bd4e8",
-      "bytes": 18086
-    },
-    {
       "path": "evidence\\EXTRACTED_TEXT_R08.md",
       "sha256": "098661438053becec1df340930404f674ee530ce333c1b61a15014d3690d2c0b",
       "bytes": 19640
-    },
-    {
-      "path": "evidence\\finalize_independent_review_R08.py",
-      "sha256": "0232cea7b4e450c6784a700d9431fba2e5b791d6fdea3da99fe7bead0b1966dd",
-      "bytes": 10957
     },
     {
       "path": "evidence\\R08_TITLE_REPAIR_RECEIPT.json",
@@ -40,6 +45,16 @@
       "path": "evidence\\R08_VISUAL_TECHNICAL_QA.json",
       "sha256": "7c3bdffb9a8318483645ee34d4523e3626e0135eba373da22743579d802e79ec",
       "bytes": 4786
+    },
+    {
+      "path": "evidence\\assemble_review_package_R08.py",
+      "sha256": "e1c1ee50a6593504fff7c7163a75eb888caaf113c64e03b0a7438aa8ee6bd4e8",
+      "bytes": 18086
+    },
+    {
+      "path": "evidence\\finalize_independent_review_R08.py",
+      "sha256": "0232cea7b4e450c6784a700d9431fba2e5b791d6fdea3da99fe7bead0b1966dd",
+      "bytes": 10957
     },
     {
       "path": "evidence\\render_R08\\0047_R08.pdf",
@@ -92,29 +107,29 @@
       "bytes": 2490
     },
     {
-      "path": "inputs\\official_checkbox_048.json",
-      "sha256": "6c9e6db752a40221a0a50ecb52cdb977cd5e711ebce54041516ee28340b8aa19",
-      "bytes": 1465
-    },
-    {
       "path": "inputs\\UNIQUE_BLUEPRINT_0045_0047_0048.jsonl",
       "sha256": "cf27a59f04d59d7b43aa364c3a812715e37337863c756ab513fe0b0661513667",
       "bytes": 23863
     },
     {
-      "path": "PROGRESS_R08.json",
-      "sha256": "75926940c0d41cea9579c922635670897eb28b8edbaff7be58c8cc7a7c38f242",
-      "bytes": 1015
-    },
-    {
-      "path": "README.md",
-      "sha256": "3eacb7fd51b7beffcc21d6c5e67b3a82cf1470fc76c2514f8ecebe8506b1bf0a",
-      "bytes": 1976
+      "path": "inputs\\official_checkbox_048.json",
+      "sha256": "6c9e6db752a40221a0a50ecb52cdb977cd5e711ebce54041516ee28340b8aa19",
+      "bytes": 1465
     },
     {
       "path": "register\\SYNTHETIC_REPLACEMENT_REGISTER_0047_R08.json",
       "sha256": "915b0608e30423da063c7e133c158fc2f6de43ff21b582b91ef9fa08996dc304",
       "bytes": 32614
+    },
+    {
+      "path": "review\\REVIEW_PACKET_R08.md",
+      "sha256": "f21ddfc2b46214c0221f225b1689abecc7bf387507d86d4ca2f4875678badd84",
+      "bytes": 79874
+    },
+    {
+      "path": "review\\REVIEW_PROMPT_R08.txt",
+      "sha256": "f757f615b87e9c64970dbbd7b7411c78f9f5d6489dce78f6821ed3701b3553b9",
+      "bytes": 970
     },
     {
       "path": "review\\opencode_execution_receipt_R01.json",
@@ -137,19 +152,10 @@
       "bytes": 13892
     },
     {
-      "path": "review\\REVIEW_PACKET_R08.md",
-      "sha256": "f21ddfc2b46214c0221f225b1689abecc7bf387507d86d4ca2f4875678badd84",
-      "bytes": 79874
-    },
-    {
-      "path": "review\\REVIEW_PROMPT_R08.txt",
-      "sha256": "f757f615b87e9c64970dbbd7b7411c78f9f5d6489dce78f6821ed3701b3553b9",
-      "bytes": 970
-    },
-    {
       "path": "review\\review_validation_R01.json",
       "sha256": "92d5fbb8769c2107cd105e235846d0f17f7524a8544fb08799f970a40b98aa00",
       "bytes": 2983
     }
-  ]
+  ],
+  "raw_artifact_bytes_policy": "Scoped .gitattributes -text preserves exact input packet, prompt, CLI stdout/stderr and reviewer response bytes in Git."
 }
