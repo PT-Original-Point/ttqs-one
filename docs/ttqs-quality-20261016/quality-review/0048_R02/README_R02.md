@@ -1,6 +1,6 @@
 # DOCX 0048 R02 — targeted semantic repair
 
-**Status:** CANDIDATE ONLY. Technical and direct visual QA pass. Independent exact-SHA semantic review is in progress. Formal association acceptance is NOT GRANTED.
+**Status:** CANDIDATE ONLY. Technical and direct visual QA pass. Independent exact-SHA semantic review: **PARTIAL**. Formal association acceptance is NOT GRANTED.
 
 ## Requirement binding
 
@@ -35,4 +35,4 @@ The earlier R01 candidate and review remain preserved in `../0048_R01/` and are 
 
 ## Independent review
 
-OpenCode CLI v2 is reviewing the complete R02 candidate and its exact SHA, including confirmation that both R01 findings are closed. Semantic verdict remains PENDING until the CLI returns. Formal acceptance is NOT GRANTED.
+OpenCode CLI v2 reviewed the complete R02 candidate against its exact SHA. Both R01 findings are closed. The reviewer found one remaining material issue: two body-note paragraphs use 9.5 pt, below the Blueprint body minimum of 10.5 pt (page 1 after the 30-second start table; page 11 at the end of §10). This same issue was present in R01; the first R01 review incorrectly stated that the body-font floor passed. R03 will change only those two run sizes to 10.5 pt and re-check layout. Exact response and invocation receipt: `review/opencode_v2_review_result_R02.md` and `review/opencode_v2_review_receipt_R02.json`. Formal acceptance remains NOT GRANTED.
