@@ -1,0 +1,61 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0063",
+  "candidate_revision": "R02",
+  "candidate_path": "candidate/0063_R02.docx",
+  "candidate_sha256": "b1e8210b57d00813596d343403526787f065da51afcf5df4434868f0c96279f5",
+  "official_requirement_id": "I14-E04",
+  "official_checkbox_sequence": "068",
+  "unique_blueprint_sha256": "9c5e91155a18ccb5aae2a21f7bba40f35d8c483b973436873f08e2fde925dd34",
+  "source_manuscript_sha256": "85f2038e3f472148be9f594d0841f522d96affca300635aa68fa548ea4c0a919",
+  "source_candidate_sha256": "4e2d56c9ce46b8acdb2d8b3288ed6083a054c4bb2955edf2127a4f16c058792d",
+  "scope": "Query-service operation and continuous improvement; performance metrics belong to 0064, index design and permissions to 0061, source/record location to 0062, and defect register to 0060.",
+  "docx_integrity": "PASS",
+  "content_change": "None; R02 relocates only page-break properties in word/document.xml; all extracted w:t content and all other DOCX package parts unchanged.",
+  "content_structure": {
+    "body_font_pt": 10.5,
+    "tables": 17,
+    "page_size": "A4 portrait",
+    "body_text_chars": 8402,
+    "rendered_pages": 13,
+    "main_paragraphs": 104,
+    "table_min_font_pt": 9.5
+  },
+  "sample_case": "SYN-0063-QI-2026-01",
+  "sample_cross_reference": "SYN-0060-2026-A01 and 0061 R03 file_id F-0061-2026-0001 are clearly labeled SAMPLE/SYNTHETIC; document states it does not add an index entry or prove deployed association service.",
+  "synthetic_replacement_register": {
+    "rows": 20,
+    "path": "sidecar/0063_R01_SYNTHETIC_REPLACEMENT_REGISTER.csv",
+    "sha256": "4f70d73b7ab7103d20e4ff6944a1442c506d28e40c916d6c38ccdba1968f0d0f"
+  },
+  "calculations": {
+    "baseline_zero_result": "1/8 = 12.5%",
+    "baseline_clarification": "2/8 = 25.0%",
+    "retest_first_response": "6/8 = 75.0%",
+    "first_response_change": "75.0% - 62.5% = +12.5 percentage points",
+    "baseline_first_response": "5/8 = 62.5%",
+    "retest_resolved_with_one_clarification": "8/8 = 100.0%",
+    "status": "PASS",
+    "retest_zero_result": "0/8 = 0.0%"
+  },
+  "substantive_components": [
+    "query intake template and filled synthetic example",
+    "8-query baseline matrix",
+    "three failure records and correction plan",
+    "8-query retest matrix",
+    "reproducible KPI calculations",
+    "blank reusable improvement register and synthetic completed sample",
+    "hold/reject and stop conditions",
+    "replacement register requiring real evidence before substitution"
+  ],
+  "technical_status": "PASS",
+  "visual_status": "PASS_LAYOUT",
+  "visual_receipt_path": "evidence/render_R05/visual_review_R05.json",
+  "visual_receipt_sha256": "4d9541c1a37fea2721062cd705567437f8b993b14eba8235682e8d0084c4f32e",
+  "render_receipt_path": "evidence/render_R05/render_R05_receipt.json",
+  "semantic_independent_review": "PENDING_FOR_R02_EXACT_SHA",
+  "historical_reviewer_session": "OpenCode v2 session is still processing R01 SHA and does not verify R02",
+  "formal_human_acceptance": "NOT_GRANTED",
+  "candidate_disposition": "CANDIDATE_ONLY",
+  "created_local": "2026-10-18T17:58:26.4116776+08:00"
+}
