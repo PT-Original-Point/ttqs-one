@@ -60,11 +60,11 @@
   "P4_sync": {
     "status": "REMOTE_SYNC_VERIFIED_BYTE_EXACT",
     "destination": "existing branch work/ttqs-one-document-quality-contract-20261016 and PR #92",
-    "verification_commit": "35cf41ad9195ca1e5c226fb78ca3198821121680",
-    "readback_receipt": "evidence/REMOTE_READBACK_R02.json",
-    "readback_receipt_sha256": "f05477716db04d273da036990c9449e7f4cebc856cd6dc113e76c459d4fb92ae",
-    "verified_paths": 58,
-    "exact_byte_matches": 58,
+    "verification_commit": "472728968bb465121c12f808821e493a5dc7ba43",
+    "readback_receipt": "evidence/REMOTE_READBACK_R03.json",
+    "readback_receipt_sha256": "3b938830f469be08714b42edcda6f308a5ae3089b7801be61fde83bab1e455ec",
+    "verified_paths": 60,
+    "exact_byte_matches": 60,
     "mismatches": 0,
     "remote_docx_sha256": "d5a15e087d7323dd0d9c44191ae26fc0cca6bef052de8af85daa94e621e1f190",
     "force_push": false
@@ -89,9 +89,10 @@
     "T2_empty_worker_reply": "PASS_NO_DELIVERABLE_ROUTE_PAUSED_OTHER_READY_WORK_CONTINUES",
     "T3_reuse_existing_review": "PASS_NO_DUPLICATE_REVIEW_OR_REBUILD",
     "T4_sync_readback": "PASS_BYTE_EXACT",
-    "T5_sample_real_boundary": "PASS_CANDIDATE_ONLY_REAL_HOLD"
+    "T5_sample_real_boundary": "PASS_CANDIDATE_ONLY_REAL_HOLD",
+    "T4_github_sync": "PASS_BYTE_EXACT; 60/60 paths exact at 472728968bb465121c12f808821e493a5dc7ba43; candidate DOCX SHA verified."
   },
-  "P8_status": "0074 R01 is a CANDIDATE only. Exact DOCX SHA d5a15e087d7323dd0d9c44191ae26fc0cca6bef052de8af85daa94e621e1f190 is remote-verified. Technical PASS, 20/20-page visual PASS_WITH_SCOPE and independent exact-SHA semantic PASS are preserved. The final package readback at commit 35cf41ad9195ca1e5c226fb78ca3198821121680 covered 58 paths byte-for-byte with zero mismatches. T1-T5 have bounded evidence; the no-op test is a local simulation, not a scheduled-run claim. SAMPLE/SYNTHETIC only; REAL=UNKNOWN/HOLD; formal acceptance NOT_GRANTED. Next source-bound READY is 0075 / I17A-E03 / checkbox 082, pending one last owner/queue recheck.",
-  "updated_at_local": "2026-10-19T07:45:50+08:00",
+  "P8_status": "0074 R01 remains CANDIDATE only. Exact DOCX SHA d5a15e087d7323dd0d9c44191ae26fc0cca6bef052de8af85daa94e621e1f190 is remote-verified. Technical PASS, 20/20-page visual PASS_WITH_SCOPE, and independent exact-SHA semantic PASS are preserved. Final R04 readback checked 60 paths byte-for-byte at 472728968bb465121c12f808821e493a5dc7ba43 with zero mismatches. T1-T5 have bounded evidence; T1 is a local no-op simulation, not proof of a scheduled wake. SAMPLE/SYNTHETIC only; REAL=UNKNOWN/HOLD; formal acceptance NOT_GRANTED. Next READY is 0075 / I17A-E03 / checkbox 082 after owner/queue recheck.",
+  "updated_at_local": "2026-10-19T07:47:35+08:00",
   "P7_test_receipt": "evidence/P7_COUNTEREXAMPLE_TESTS_R01.json"
 }
