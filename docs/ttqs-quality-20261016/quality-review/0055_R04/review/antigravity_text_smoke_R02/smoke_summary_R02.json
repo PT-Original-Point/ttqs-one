@@ -1,0 +1,99 @@
+{
+  "project_id": "TTQS_ONE",
+  "command": "TTQS_ONE_ANTIGRAVITY_CLI_RECOVERY_COST_AWARE_R02",
+  "scope": "one bounded read-only text smoke; no file-writer authorization or resume",
+  "cli_version": "1.4.2",
+  "model_requested": "gemini-3.8-flash-high",
+  "runtime_model_identity": "UNKNOWN",
+  "same_account_as_human_gui": "UNKNOWN",
+  "provider_cost": "UNKNOWN",
+  "permission_bypass_used": false,
+  "computer_use": false,
+  "sandbox": true,
+  "mode": "plan",
+  "network_tool_or_browse_requested": false,
+  "provider_network_transport": "Used for the successful remote CLI model request; this is inherent in the model invocation.",
+  "attempts": [
+    {
+      "id": "initial",
+      "state": "CLI_REJECTED_BEFORE_MODEL_TURN",
+      "reason": "model gemini-3.8-flash-high conflicts with effort=low",
+      "exit_code": 1,
+      "num_turns": 0,
+      "reported_total_tokens": 0,
+      "receipt_sha256": "7c80d58be0496be7edbcc22f5965074324efeab68e900e579ca0fd64b74f636d",
+      "provider_cost": "UNKNOWN"
+    },
+    {
+      "id": "retry01",
+      "state": "READ_ONLY_TEXT_SMOKE_PASS",
+      "exit_code": 0,
+      "response": "SMOKE=PASS\\nMODEL_REQUESTED=gemini-3.8-flash-high",
+      "tool_events": [],
+      "usage": {
+        "input_tokens": 11792,
+        "output_tokens": 133,
+        "thinking_tokens": 113,
+        "cache_read_tokens": 0,
+        "total_tokens": 11925
+      },
+      "receipt_sha256": "87a0d1ee0d4984784031148391954f5189955058f6761161d9761c0374fad9a9",
+      "stdout_sha256": "527a665492a28ba8d613fddfc1b0e2b83130e3c3b5baeda07118b6bcf3a65491",
+      "response_sha256": "5c3b4ff661511fd7740a11e8b5da50154c2b85761118d828eec51c1f13112dc9",
+      "provider_cost": "UNKNOWN"
+    }
+  ],
+  "antigravity_file_writer_route": "PAUSED; 0055 R04 prior four attempts produced no output after three repairs; the smoke does not resume it",
+  "local_process_observation": "OpenCode service process only; no active document Writer or reviewer run observed at preflight",
+  "evidence_files": {
+    "prompt.txt": {
+      "bytes": 266,
+      "sha256": "86deb91595b1dfaa694b5f81faa02e4af10b14c184bc775e7ce40225702ea6da"
+    },
+    "stdout.jsonl": {
+      "bytes": 367,
+      "sha256": "5ba58a22be5f0a7a0f7f8588fe8d77cc1c362958ffb1d1479cd8c046300dffa3"
+    },
+    "stderr.txt": {
+      "bytes": 139,
+      "sha256": "2ed788447f62dd6738610ca6e1c19ee124955a993fd532911a5c700bc25c929c"
+    },
+    "exit_code.txt": {
+      "bytes": 1,
+      "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    "response.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "receipt.json": {
+      "bytes": 2961,
+      "sha256": "7c80d58be0496be7edbcc22f5965074324efeab68e900e579ca0fd64b74f636d"
+    },
+    "retry01_prompt.txt": {
+      "bytes": 266,
+      "sha256": "86deb91595b1dfaa694b5f81faa02e4af10b14c184bc775e7ce40225702ea6da"
+    },
+    "retry01_stdout.jsonl": {
+      "bytes": 2754,
+      "sha256": "527a665492a28ba8d613fddfc1b0e2b83130e3c3b5baeda07118b6bcf3a65491"
+    },
+    "retry01_stderr.txt": {
+      "bytes": 78,
+      "sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459"
+    },
+    "retry01_exit_code.txt": {
+      "bytes": 1,
+      "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    "retry01_response.txt": {
+      "bytes": 51,
+      "sha256": "5c3b4ff661511fd7740a11e8b5da50154c2b85761118d828eec51c1f13112dc9"
+    },
+    "retry01_receipt.json": {
+      "bytes": 1943,
+      "sha256": "87a0d1ee0d4984784031148391954f5189955058f6761161d9761c0374fad9a9"
+    }
+  },
+  "formal_acceptance": "NOT CLAIMED"
+}
