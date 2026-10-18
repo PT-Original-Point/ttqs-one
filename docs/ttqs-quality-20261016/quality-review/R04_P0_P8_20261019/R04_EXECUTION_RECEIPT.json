@@ -1,0 +1,168 @@
+{
+  "schema": "TTQS_ONE_R04_EXECUTION_RECEIPT.v1",
+  "project_id": "TTQS_ONE",
+  "command": "TTQS_ONE_CODEX_NATIVE_WORKER_RECOVERY_SYNC_R04",
+  "source_attachment": {
+    "path": "TTQS_ONE_CODEX_96E5A5B4E5A581E5A9_80E6A593E49C89E58A_R04_20261019.md",
+    "bytes": 36456,
+    "sha256": "3330de8de26275c5e51f299982d87c250bb7e030c9838badafc369e26ee29c35"
+  },
+  "project_binding": {
+    "repo": "PT-Original-Point/ttqs-one",
+    "root": "E:\\TTQS\\_github_sync_0064",
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "pr": 92,
+    "pr_state": "OPEN_DRAFT",
+    "local_head": "ac9a13e394fcb25414d69a6f538f95c700cc26c9",
+    "remote_head_before": "ac9a13e394fcb25414d69a6f538f95c700cc26c9",
+    "prestate": "VERIFIED"
+  },
+  "P0_readonly_preflight": {
+    "writer_owner": "NO_LIVE_WRITER_CONFIRMED_AT_2026-10-19_LOCAL_SNAPSHOT",
+    "reviewer_owner": "NO_LIVE_REVIEWER_CONFIRMED",
+    "opencode_service_pid": 3980,
+    "opencode_service_is_writer": false,
+    "antigravity_process_or_command_on_path": false,
+    "old_word_automation_pids": [
+      6108,
+      7412,
+      10412,
+      9536,
+      9584,
+      3976,
+      7140
+    ],
+    "old_word_processes_counted_as_writer": false,
+    "unsynced_stable_work": "0054_R14 safe-review correction; 0064_R05 visual finding receipt; 0064_R06 fixed candidate/QA; 0070_R03 package-manifest reconciliation; 0070_R01 loose superseded local outputs preserved but not staged"
+  },
+  "P1_status_reconciliation": {
+    "0057_R07": {
+      "docx_sha256": "a8d67c3f89105d85e47b554007624ce1231c6fb3340e3a9d3bfd14b6ae838705",
+      "status": "DELTA_SEMANTIC_PASS_WITH_SCOPE",
+      "new_review_dispatch": false
+    },
+    "0061_R03": {
+      "docx_sha256": "3d4fe20f7fb825e470ed5dfd71fcaf0f5bb8052dc7a63ef51ee08e2a11668c9c",
+      "status": "TEXT_SEMANTIC_15_OF_15_PASS_WITH_SCOPE",
+      "reviewer_visual_scope": "NOT_INSPECTED_BY_REVIEWER"
+    },
+    "0059_R03": {
+      "docx_sha256": "0263017f16d81b1121bb97410de9895b43b7a42f75632bf71a82b86426fbc2b0",
+      "register_rows": 270,
+      "new_R02_rows_checked": 80,
+      "mapped": 80,
+      "unresolved": 0,
+      "source_receipt": "quality-review/R04_P0_P8_20261019/0059_R02_body_reconciliation.json",
+      "source_receipt_sha256": "d2f044529c74c9dad5fe8e19ba51f529213ad90af5d758fdd39f431ff53f2081",
+      "docx_rebuild": false
+    },
+    "0065_R04": {
+      "docx_sha256": "4b6a0116e8ebd4a3700c4d3243532eeb54e7dea1f6c40e56f7e8a5e7806e654d",
+      "status": "CANDIDATE_SEMANTIC_PASS_VISUAL_PASS_NOT_FORMALLY_ACCEPTED",
+      "visual_scope": "22-page contact plus 4 direct pages; remaining full-size scope limited"
+    },
+    "0066_R01": {
+      "docx_sha256": "c9ec333f27c967eb5bbd28c49f3c54d218783cd659feec936ba9c0c566d1f8d6",
+      "status": "SEMANTIC_PASS_AND_13_PAGE_DIRECT_VISUAL; CANDIDATE_ONLY"
+    },
+    "0058_R08": {
+      "docx_sha256": "0dfcaae1ff9943e46c1b9d527c3df34fa61048547268c482d0dd378e44d7c58b",
+      "status": "DELTA_REVIEW_PASS_WITH_SCOPE",
+      "runtime_model_identity": "UNKNOWN_DUE_CONFLICTING_ATTRIBUTION"
+    },
+    "0063_R02": {
+      "docx_sha256": "b1e8210b57d00813596d343403526787f065da51afcf5df4434868f0c96279f5",
+      "status": "REVIEW_TEXT_PASS_RECORDED",
+      "reviewer_exit_code": "UNKNOWN_NOT_CAPTURED"
+    },
+    "0055_R04": {
+      "docx_sha256": "0c4abf37856611a8226361cedb9bf58fd7c769a4cec27574920ed5d93ff4687b",
+      "status": "SAMPLE_CANDIDATE_WITH_CROSS_DOCUMENT_READBACK; NO_REBUILD"
+    },
+    "0054_R14": {
+      "docx_sha256": "3d000e580b9cb1247fd984ebb0c8f5f817fce08ce7c368cc1799c95a111a979c",
+      "status": "SAFE_OPENCODE_EXACT_SHA_SEMANTIC_PASS; CANDIDATE_ONLY",
+      "antigravity_flag_receipt": "dangerously_skip_permissions=true in preserved historical retry receipt",
+      "actual_original_argv": "UNKNOWN; no native argv record verified",
+      "docx_rebuild": false
+    }
+  },
+  "P2_worker_routes": {
+    "opencode_cli": "v2.0.29; current model catalogue includes free SKUs; prior exact-SHA Beam review succeeded; provider billing remains UNKNOWN",
+    "antigravity_writer": "PAUSED_FOR_THIS_ROUTE; original effective argv remains UNKNOWN; historical retry receipt records dangerously_skip_permissions=true and is not treated as proof of actual argv",
+    "computer_use": "NOT_USED"
+  },
+  "P3_document_action": {
+    "doc_id": "0064",
+    "requirement_id": "I14-E05",
+    "official_checkbox_serial": "069",
+    "action": "Targeted R05 orphan table-header pagination repair; R05 retained",
+    "candidate_revision": "R06",
+    "candidate_sha256": "f83eeda42589da66c23918d522ad983178a252da9b6dd2240b725e9c9cfb50a1",
+    "technical": "PASS; 24 paired observations recomputed",
+    "visual": "PASS_LAYOUT; 28/28 page coverage; pages 1,19 directly inspected and 26 unchanged pages inherit R05 direct inspection",
+    "semantic": "PASS exact-SHA, OpenCode v2.0.29 Beam Free; raw response preserved",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "SAMPLE_SYNTHETIC_ONLY",
+    "package_manifest": {
+      "path": "quality-review/0064_R06/MANIFEST_R06.json",
+      "entries": 52,
+      "validated": 52,
+      "errors": 0
+    }
+  },
+  "P4_sync": {
+    "status": "LOCAL_STABLE_UNSYNCED",
+    "planned_exact_paths": [
+      "quality-review/0054_R14/{PROGRESS.json,README.md,artifact_manifest.json,review/opencode_safe_R02/}",
+      "quality-review/0064_R05/{MANIFEST_R05.json,README_R05_AUDIT.md,evidence/visual_review_R05_supplemental_direct.json}",
+      "quality-review/0064_R06/",
+      "quality-review/0070_R01/evidence/package_manifest_R03.json",
+      "quality-review/R04_P7_FAILSAFE_TESTS.json",
+      "quality-review/R04_P0_P8_20261019/{0059_R02_body_reconciliation.json,R04_EXECUTION_RECEIPT.json}"
+    ]
+  },
+  "P5_schedule_and_cost": {
+    "existing_hourly_task": "UNCHANGED; this turn was invoked with existing hourly automation id ttqs-one-hourly-quality-goal-resume",
+    "new_schedulers_created": 0,
+    "next_run_time": "UNKNOWN_FROM_READBACK",
+    "codex_native_usage": "UNKNOWN",
+    "token_cost_note": "OpenCode CLI review reports are worker-local and not Codex/provider billing"
+  },
+  "P6_next_ready": {
+    "doc_id": "0067",
+    "requirement_id": "I15-E03",
+    "official_checkbox_serial": "073",
+    "current_source": "Current 157 blueprint row 073 exactly names I15-E03; archived R04 runtime source bundle identifies official table p.5 and 142 crosswalk doc_id 0067. Source binaries/hashes still require current cross-check into a fresh package.",
+    "historical_queue_state": "PARKED_ROOT_CAUSE_REPAIR; 11 attempts, 3 repair epochs; churn fuse tripped 2026-10-04 for repeated audits without new feedback.",
+    "historical_current_candidate_sha256": "a20342c25a00a6b6a9c3412b61e52a3c865cd8361ce6778d5eb99a9ac50e72d1",
+    "known_failure_classes": [
+      "blueprint filename binding",
+      "sample facts missing register entries",
+      "build receipt provenance missing",
+      "synthetic fact register mismatches F001-F008",
+      "first-page use context missing",
+      "document-control strip incomplete",
+      "invalid register preview"
+    ],
+    "status": "FRESH_SOURCE_BOUND_REPAIR_ACTIONABLE; old body prohibited as template",
+    "next_action": "Reconcile current source page 5 + current official row 073 + R04 crosswalk, create a fresh unique Blueprint and complete synthetic replacement register; then one OpenCode v2 writer deliverable."
+  },
+  "P7_tests": {
+    "T1": "PASS_EXPECTED_NOOP_FIXTURE_ONLY",
+    "T2": "PASS_ROUTE_ISOLATED_FROM_HISTORICAL_0055_R04",
+    "T3": "PASS_EXACT_SHA_REUSE_NO_NEW_REVIEW_CALLS",
+    "T4": "PENDING_AFTER_PUSH",
+    "T5": "PASS_0070_R03_SAMPLE_SYNTHETIC_BOUNDARY; 0071_OLD_CANDIDATE_INVALID"
+  },
+  "P8_status": "IN_PROGRESS; local stable evidence prepared; remote push/readback still required",
+  "updated_at_local": "2026-10-19T04:45:07+08:00",
+  "source_contract_blobs": {
+    "01_HUMAN_MISSION_AND_ACCEPTANCE.md": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e",
+    "02_GENRE_WRITING_MANUAL.md": "4ff863d9f534b6359fc1c7c1685bd8cce02da886",
+    "03_157_CHECKBOX_BLUEPRINTS.md": "8c2bbe7ca9dcbb03088a48934b9e57e7147ede63",
+    "04_CODEX_GOAL_24X7_EXECUTION.md": "62e3dd7dfd8579b6bc97952ffa6236e7494f3b4d",
+    "05_HOURLY_NATIVE_WAKE_RESUME.md": "60ae010c58140e1710ed24016085c6dfaf6ffaee",
+    "06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md": "263aaca84891bba8dca087875804343c3670e921"
+  }
+}

@@ -25,7 +25,8 @@ The worked example is explicitly SAMPLE/SYNTHETIC. It does not assert real appli
 - Typography: minimum body text 11 pt; minimum table text 10 pt; all inspected runs resolve to a size.
 - Render: 10-page PDF and 10 page images.
 - Direct Codex visual inspection: pages 1–10; no clipping, overlap, or table-row split found. This is recorded separately from semantic review.
-- Independent Antigravity CLI exact-SHA semantic review: PASS for the I12-E02 content. Runtime model identity was not returned. The raw response contains an incorrect official sequence mapping; the separate source-backed correction identifies I12-E02 as sequence 057. The pass applies to the candidate content, not that mistaken number.
+- Historical Antigravity retry returned PASS for this exact SHA, but its execution receipt records `dangerously_skip_permissions: true`; preserve it as history and do not count it as valid acceptance evidence. The raw reviewer response also contains an incorrect official sequence mapping; the source-backed correction identifies I12-E02 as sequence 057.
+- Safe independent semantic review: OpenCode CLI v2.0.29, selected model `opencode/beam-free`, exact-SHA text extraction, PASS. Runtime model identity was not attested by the CLI. The scope is semantic only; it does not claim visual inspection or Association acceptance. Raw JSONL, stderr, exit code, prompt, extracted text, and a hash-bound receipt are in `review/opencode_safe_R02/`.
 
 ## Package contents
 
@@ -33,7 +34,7 @@ The worked example is explicitly SAMPLE/SYNTHETIC. It does not assert real appli
 - `inputs/`: official source extract/PDF, Unique Blueprint, candidate text trace, content trace and 71-row replacement register.
 - `evidence/render/`: exact-candidate PDF and 10 page images.
 - `evidence/technical/`: pagination-repair receipt and technical/layout QA receipts.
-- `review/`: read-only exact-SHA review prompt, CLI receipts, and raw stdout/stderr.
+- `review/`: historical Antigravity raw evidence and the safe OpenCode v2 exact-SHA review response/receipts.
 
 Remote readback: all 38 manifest entries were checked against the fetched GitHub tree with 38/38 canonical hash matches; candidate DOCX SHA is unchanged. The readback record is in `PROGRESS.json`.
 

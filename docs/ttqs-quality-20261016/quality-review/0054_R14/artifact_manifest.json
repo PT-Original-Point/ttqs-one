@@ -4,9 +4,21 @@
   "doc_id": "0054",
   "revision": "R14",
   "manifest_sha256_self_excluded": true,
-  "manifest_note": "Entries cover every package file except artifact_manifest.json itself. Text hashes use LF-normalized bytes; DOCX/PDF/images, explicit CLI raw outputs, and captured official extraction preserve exact bytes. PROGRESS.json is included.",
-  "file_count": 38,
+  "manifest_note": "Entries cover every package file except artifact_manifest.json itself. Text hashes use LF-normalized bytes; DOCX/PDF/images and raw CLI outputs use the declared basis. PROGRESS.json is included. R02 safely corrects the invalid-for-acceptance Antigravity retry status without changing candidate bytes.",
+  "file_count": 46,
   "files": [
+    {
+      "path": "PROGRESS.json",
+      "bytes": 7320,
+      "sha256": "2ef3b2a106760522188764880cb3b6454f84b27b58635febbcbdea0fb5c0ce53",
+      "hash_basis": "text_lf"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4035,
+      "sha256": "b7ddc9abceb2f49ac372c40acb72d4b24d50c9fb1cc1189e879c727bfacb0101",
+      "hash_basis": "text_lf"
+    },
     {
       "path": "build/repair_0054_R14_pagination.py",
       "bytes": 6429,
@@ -164,18 +176,6 @@
       "hash_basis": "text_lf"
     },
     {
-      "path": "PROGRESS.json",
-      "bytes": 5782,
-      "sha256": "e7e474062188cacd7e4a7d56e57ecd167a78743d16dada51b7093bc670c10681",
-      "hash_basis": "text_lf"
-    },
-    {
-      "path": "README.md",
-      "bytes": 3606,
-      "sha256": "9f839ca4af64dd8f9b51c15c21759782c20c0508d8da501cb28472b713370d29",
-      "hash_basis": "text_lf"
-    },
-    {
       "path": "review/antigravity_cli_R01.stderr.raw",
       "bytes": 303,
       "sha256": "6f9b232ca1f3b43aa72e2ba63698c09b0796b612d5a17cf05efee31e6c79b713",
@@ -230,11 +230,59 @@
       "hash_basis": "text_lf"
     },
     {
+      "path": "review/opencode_safe_R02/antigravity_status_correction_R01.md",
+      "bytes": 1064,
+      "sha256": "c440c6ecd06013b2628fa8980f4c294fd4dba9623aac091e9127b8b70e3c3ec1",
+      "hash_basis": "text_lf"
+    },
+    {
+      "path": "review/opencode_safe_R02/candidate_text_extraction.md",
+      "bytes": 22243,
+      "sha256": "bc92402a10b9eb092b9199a60dcdbf759e19dc8f5883612bd91cee5f2de8f8f8",
+      "hash_basis": "text_lf"
+    },
+    {
+      "path": "review/opencode_safe_R02/independent_semantic_review_R02.md",
+      "bytes": 2813,
+      "sha256": "57c80d6d4fe9b228da62ecc00f2f5fd1b7374481870501bc6391c04af6ca8573",
+      "hash_basis": "text_lf"
+    },
+    {
+      "path": "review/opencode_safe_R02/opencode_exit_R02.txt",
+      "bytes": 2,
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "hash_basis": "text_lf"
+    },
+    {
+      "path": "review/opencode_safe_R02/opencode_stderr_R02.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hash_basis": "text_lf"
+    },
+    {
+      "path": "review/opencode_safe_R02/opencode_stdout_R02.jsonl",
+      "bytes": 2812,
+      "sha256": "2748ad1aeacd3aebac937e83854aace649b9a47785fc1afc265f19633f81084d",
+      "hash_basis": "text_lf"
+    },
+    {
+      "path": "review/opencode_safe_R02/review_execution_receipt_R02.json",
+      "bytes": 2467,
+      "sha256": "8a13e6b938bf80d67712ebd30c798fa0060172cf944f03fc07e55b2d3e227a8a",
+      "hash_basis": "text_lf"
+    },
+    {
+      "path": "review/opencode_safe_R02/review_prompt.md",
+      "bytes": 1330,
+      "sha256": "a79224e068c79ce30b51e996a249b947ba9f532cdfc71276f9b58a540c52b33a",
+      "hash_basis": "text_lf"
+    },
+    {
       "path": "review/review_validation_R01.md",
       "bytes": 2602,
       "sha256": "a68d8b90ce9ffb657c8e3f537c82b120816963807edd2038afb7e69df43abefc",
       "hash_basis": "text_lf"
     }
   ],
-  "generated_at_local": "2026-10-17T18:18:14+08:00"
+  "generated_at_local": "2026-10-19T04:13:44.930727+08:00"
 }

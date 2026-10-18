@@ -5,7 +5,7 @@
 - Official requirement: I14-E05
 - Official checkbox serial: 069
 - Candidate: R05; status remains `CANDIDATE`, with formal acceptance and promotion not granted.
-- DOCX SHA-256: `54888e13f954478051a49839d8b67ff845992c72811e09d90045e512c69e1`
+- DOCX SHA-256: `54888e13f954478051a49839d8b67ff845992c72811e41e09d90045e512c69e1`
 - Unique Blueprint R02 SHA-256: `0f521debdaeeef17f2c47d11cccbb193e2a4b0f8370bf4dd56da86d512c0f3d8`
 - Official source PDF SHA-256: `805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709`
 - Render PDF SHA-256: `2d7e5c84d72b62b96b04cc45e7613154c2e959669e66cd8e27611b6f2ffe12c2` (28 pages; 28 page images included)
@@ -20,7 +20,7 @@ The local CLI was `opencode v2.0.29`, while the report stated `v2.0.32` as its l
 
 R05 is based on Unique Blueprint R02 and the official I14-E05 source. It contains 12 synthetic task cards, timing and retrieval measures, arithmetic, a 12-row sample-to-real replacement register, SOP/hold criteria and explicit SAMPLE/REAL boundaries. The register CSV is included. A-0062-08 is explicitly held: no version, filename, path or content is disclosed; only the approved HOLD response is allowed.
 
-R04 had a visible pagination defect: T07/T12 labels were separated from their task cards. R05 applied a targeted keep-with-next repair for those headings. Technical checks and visual inspection pass on the exact R05 SHA. The 28-page PDF and all page images are included; R05 pages 1 and 11–13 were directly re-inspected, while unchanged page-image hashes inherit the prior direct R04 inspection recorded in the visual receipt.
+R04 had a visible pagination defect: T07/T12 labels were separated from their task cards. R05 applied a targeted keep-with-next repair for those headings. Technical checks pass on the exact R05 SHA. The original visual-render receipt was still pending and had partial direct coverage. A supplemental direct inspection now covers all 28 page images and found one material layout defect: the §13.3 table header is stranded at the bottom of page 19, with data starting on page 20. R05 therefore remains a historical candidate with layout repair required; it is not visually accepted or promoted. The exact DOCX bytes are preserved. A targeted keep-with-next repair is recorded in the R06 package; the full R05 review history remains unchanged.
 
 OpenCode Beam Free returned `PASS` for semantic review of the exact R05 SHA only. The reviewer did not personally inspect page images, compared only official PDF page 5, checked targeted cross-document facts rather than exhaustively rereading neighboring documents, and did not independently read `REQUIREMENT_SOURCE_RECONCILIATION.csv`; the review relies on the separate visual receipt for layout. Two informational observations remain: the T08 heading lacks a `keepNext` XML marker but no visible split results, and the 28-page length exceeds a non-binding 12–16 page recommendation. Neither was judged a blocking defect; no rebuild was made for those metadata-only observations.
 

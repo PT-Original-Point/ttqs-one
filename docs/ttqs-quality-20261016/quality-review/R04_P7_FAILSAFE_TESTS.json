@@ -1,7 +1,7 @@
 {
   "project_id": "TTQS_ONE",
   "source_contract_sha256": "3330de8de26275c5e51f299982d87c250bb7e030c9838badafc369e26ee29c35",
-  "observed_branch_head": "93547e014ddcf66c039e3f91ca60cd21514c0b54",
+  "observed_branch_head": "ac9a13e394fcb25414d69a6f538f95c700cc26c9",
   "tests": [
     {
       "id": "T1_NO_MATERIAL_DELTA",
@@ -66,8 +66,8 @@
     },
     {
       "id": "T4_REMOTE_BYTE_READBACK",
-      "execution": "AFTER_PUSH",
-      "result": "PENDING"
+      "execution": "NOT_YET_RUN",
+      "result": "PENDING_UNTIL_PUSH_AND_REMOTE_BYTE_READBACK"
     },
     {
       "id": "T5_SAMPLE_REAL_BOUNDARY",
@@ -103,5 +103,6 @@
         "external_review_status": "INVALID_UNATTESTED_MODEL_IDENTITY"
       }
     }
-  ]
+  ],
+  "read_at_local": "2026-10-19T04:45:07+08:00"
 }
