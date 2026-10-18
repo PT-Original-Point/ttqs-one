@@ -23,17 +23,25 @@
   "real_evidence_status": "UNKNOWN_HOLD",
   "technical_status": "PASS",
   "visual_status": "PENDING",
-  "independent_semantic_status": "PENDING_EXACT_SHA",
-  "reviewed_sha256": null,
+  "independent_semantic_status": "PASS_WITH_MINOR_FINDINGS",
+  "reviewed_sha256": "b701604ab634d42d1638ea0065cbbac39bb40e631d2716a572bc5422494e53bd",
   "build_receipt": "qa/build_receipt_R02.json",
   "technical_receipt": "qa/technical_check_R02.json",
   "repair_delta": "qa/semantic_repair_delta_R02.md",
   "history_disposition": "R01 and worker drafts retained as HISTORICAL_UNQUALIFIED",
   "remote_readback": {
-    "verified_commit": "60a7113c09eb39763a95cc6501df13ffe10db306",
-    "receipt": "qa/remote_readback_R02.json",
-    "docx_byte_for_byte_match": true,
-    "all_18_files_match": true,
-    "line_ending_differences": "text files normalized by Git to LF; semantic bytes match after EOL normalization"
+    "previous_verified_commit": "60a7113c09eb39763a95cc6501df13ffe10db306",
+    "previous_receipt": "qa/remote_readback_R02.json",
+    "candidate_still_byte_exact": true,
+    "new_review_evidence": "PENDING_REMOTE_READBACK"
+  },
+  "semantic_review": {
+    "verdict": "PASS_WITH_MINOR_FINDINGS",
+    "response": "review/semantic_review_response_R02.md",
+    "manifest": "review/semantic_review_manifest_R02.json",
+    "exact_sha256": "b701604ab634d42d1638ea0065cbbac39bb40e631d2716a572bc5422494e53bd",
+    "visual_excluded": true,
+    "targeted_repair_required": false,
+    "minor_findings": 3
   }
 }

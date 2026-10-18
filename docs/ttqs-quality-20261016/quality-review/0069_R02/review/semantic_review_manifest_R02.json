@@ -1,0 +1,181 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0069",
+  "revision": "R02",
+  "requirement_id": "I16-E01",
+  "official_checkbox_serial": "076",
+  "candidate_sha256": "b701604ab634d42d1638ea0065cbbac39bb40e631d2716a572bc5422494e53bd",
+  "candidate_state": "CANDIDATE_ONLY",
+  "verdict": "PASS_WITH_MINOR_FINDINGS",
+  "formal_acceptance": "NOT_ACCEPTED",
+  "review_route": "OpenCode v2 native CLI",
+  "cli_version": "opencode v2.0.29",
+  "requested_model": "opencode/beam-free",
+  "runtime_model_identity": "UNKNOWN",
+  "provider_billing": "UNKNOWN",
+  "session_id": "ses_eaf9cb0f8ffefyJuGc1P0n3WVM",
+  "cli_exit_code": 0,
+  "extracted_candidate_sha256": "60864acb537b53068a7020d83db6111c6f18c1c8df1b5148673519da98193190",
+  "official_source_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "unique_blueprint_sha256": "e0d083bf0301ae140a57b1be3863530f6b9d2938349abcbf1c5eb55e710729a6",
+  "review_scope": "semantic usability on exact candidate SHA; layout/visual excluded",
+  "findings": {
+    "blocking": 0,
+    "major": 0,
+    "minor": 3,
+    "targeted_repair_required": false
+  },
+  "minor_findings": [
+    "SAMPLE-ASSESS-0069 and SAMPLE-RECON-0069 absent from replacement registers",
+    "Attendance warning is finalized at closeout, not shown at T1",
+    "Records 1-6 are embedded checklist/observation rows, not standalone forms"
+  ],
+  "limitations": [
+    "Reviewer could not directly inspect the attached official PDF; correspondence was based on pinned source-facts map and PDF SHA",
+    "No visual/page-layout verification",
+    "Candidate only; no REAL evidence and no formal acceptance"
+  ],
+  "execution_note": "One initial bash-style ls command failed under the PowerShell shell; reviewer recovered via native PowerShell listing and completed the review. No retry loop.",
+  "token_events": [
+    {
+      "timestamp_ms": 1792350124935,
+      "usage": {
+        "input": 32248,
+        "output": 66,
+        "reasoning": 6096,
+        "cache": {
+          "read": 1728,
+          "write": 0
+        }
+      }
+    },
+    {
+      "timestamp_ms": 1792350141105,
+      "usage": {
+        "input": 6252,
+        "output": 72,
+        "reasoning": 19,
+        "cache": {
+          "read": 33920,
+          "write": 0
+        }
+      }
+    },
+    {
+      "timestamp_ms": 1792350148734,
+      "usage": {
+        "input": 2155,
+        "output": 75,
+        "reasoning": 116,
+        "cache": {
+          "read": 40128,
+          "write": 0
+        }
+      }
+    },
+    {
+      "timestamp_ms": 1792350160948,
+      "usage": {
+        "input": 303,
+        "output": 106,
+        "reasoning": 27,
+        "cache": {
+          "read": 42240,
+          "write": 0
+        }
+      }
+    },
+    {
+      "timestamp_ms": 1792350172889,
+      "usage": {
+        "input": 8234,
+        "output": 117,
+        "reasoning": 102,
+        "cache": {
+          "read": 42496,
+          "write": 0
+        }
+      }
+    },
+    {
+      "timestamp_ms": 1792350179741,
+      "usage": {
+        "input": 422,
+        "output": 70,
+        "reasoning": 23,
+        "cache": {
+          "read": 50688,
+          "write": 0
+        }
+      }
+    },
+    {
+      "timestamp_ms": 1792350184407,
+      "usage": {
+        "input": 199,
+        "output": 78,
+        "reasoning": 29,
+        "cache": {
+          "read": 51072,
+          "write": 0
+        }
+      }
+    },
+    {
+      "timestamp_ms": 1792350192317,
+      "usage": {
+        "input": 2303,
+        "output": 188,
+        "reasoning": 250,
+        "cache": {
+          "read": 51264,
+          "write": 0
+        }
+      }
+    },
+    {
+      "timestamp_ms": 1792350196083,
+      "usage": {
+        "input": 580,
+        "output": 270,
+        "reasoning": 236,
+        "cache": {
+          "read": 53504,
+          "write": 0
+        }
+      }
+    },
+    {
+      "timestamp_ms": 1792350209014,
+      "usage": {
+        "input": 737,
+        "output": 84,
+        "reasoning": 2719,
+        "cache": {
+          "read": 54080,
+          "write": 0
+        }
+      }
+    }
+  ],
+  "evidence_files": {
+    "qa/0069_R02_docx_extraction.txt": {
+      "sha256": "60864acb537b53068a7020d83db6111c6f18c1c8df1b5148673519da98193190",
+      "bytes": 31325
+    },
+    "review/semantic_review_task_R02.md": {
+      "sha256": "e4349e8fcb931d66e81494fd20570e4e55bd4f73c364dd1ad32c8a2c6c5480be",
+      "bytes": 3143
+    },
+    "review/semantic_review_stdout_R02.jsonl": {
+      "sha256": "20496dff26e78c0da90a93c081950981d127b7bfeb482e2939bf7f198aec2e86",
+      "bytes": 96536
+    },
+    "review/semantic_review_response_R02.md": {
+      "sha256": "144804cd0c46a768039790166d6b2219a6c4fa196b22b955aa40522600d60653",
+      "bytes": 7582
+    }
+  },
+  "stderr_bytes": 0,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}
