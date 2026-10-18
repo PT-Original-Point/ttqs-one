@@ -112,19 +112,32 @@
     }
   },
   "P4_sync": {
-    "status": "PENDING_0067_PACKAGE_PUSH_AND_REMOTE_READBACK",
-    "commit": "0791d956c5dd624c7a5e79703195d7871c11d87e",
-    "remote_head": "0791d956c5dd624c7a5e79703195d7871c11d87e",
-    "remote_readback_at_local": "2026-10-19T04:49:16+08:00",
-    "changed_paths": 79,
-    "text_lf_normalized_matches": 48,
-    "binary_raw_byte_matches": 31,
+    "status": "ARTIFACT_EXACT_READBACK_VERIFIED",
+    "artifact_commit": "42626bcc3ba4b0def465fe1cc35fb68b1f4ba72f",
+    "remote_head_at_readback": "42626bcc3ba4b0def465fe1cc35fb68b1f4ba72f",
+    "readback_at_local": "2026-10-19T05:24:38+08:00",
+    "changed_paths": 89,
+    "exact_byte_matches": 89,
     "mismatches": 0,
-    "docx_remote_readback": {
-      "path": "quality-review/0064_R06/0064_R06.docx",
-      "sha256": "f83eeda42589da66c23918d522ad983178a252da9b6dd2240b725e9c9cfb50a1",
-      "bytes": 148387
-    }
+    "readback_manifest_path": "docs/ttqs-quality-20261016/quality-review/0067_R01/evidence/remote_readback_R03.json",
+    "readback_manifest_sha256": "4ea0ad1f66d3ef6c848b24387d3743480074666dce662719db092658ba7e97b3",
+    "docx_remote_readback": [
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0067_R01/candidate/0067_R01.docx",
+        "sha256": "57895a9daecea908630897ccd95cf7763ae9457d18829225ee9d92e4638141f2",
+        "bytes": 62191
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0067_R01/candidate/0067_R02.docx",
+        "sha256": "74e086337bc4ccca6c779dd5005d47cf97415122ca8b79e7745e99b567b5156d",
+        "bytes": 64728
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0067_R01/candidate/0067_R03.docx",
+        "sha256": "f9985cce5ed4b5fdc65a961efe2ccbee754e8f73db773d0604c8695db9ff4e8a",
+        "bytes": 64732
+      }
+    ]
   },
   "P5_schedule_and_cost": {
     "existing_hourly_task": "UNCHANGED; this turn was invoked with existing hourly automation id ttqs-one-hourly-quality-goal-resume",
@@ -164,11 +177,11 @@
     "T1": "PASS_EXPECTED_NOOP_FIXTURE_ONLY",
     "T2": "PASS_ROUTE_ISOLATED_FROM_HISTORICAL_0055_R04",
     "T3": "PASS_EXACT_SHA_REUSE_NO_NEW_REVIEW_CALLS",
-    "T4": "PENDING_0067_REMOTE_BINARY_READBACK",
+    "T4": "PASS_EXACT_REMOTE_READBACK_89_OF_89; artifact commit 42626bcc3ba4b0def465fe1cc35fb68b1f4ba72f; R04/readback-manifest commit readback follows.",
     "T5": "PASS_0070_R03_SAMPLE_SYNTHETIC_BOUNDARY; 0071_OLD_CANDIDATE_INVALID"
   },
-  "P8_status": "R04 prior P0-P7 preserved. DOCX 0067 R03 now has local exact-SHA technical PASS, 21-page visual PASS, and independent semantic PASS; it remains a candidate. GitHub package push and remote readback are pending.",
-  "updated_at_local": "2026-10-19T05:19:48+08:00",
+  "P8_status": "P0-P7 executed for 0067: R03 candidate, independent semantic, technical and 21-page visual checks pass; all 89 files exact-byte read back from GitHub commit 42626bcc3ba4b0def465fe1cc35fb68b1f4ba72f. Candidate only; formal acceptance not asserted. 0068 R06 remains visual-blocked after three stalled Word render routes; no DOCX rebuild.",
+  "updated_at_local": "2026-10-19T05:24:38+08:00",
   "source_contract_blobs": {
     "01_HUMAN_MISSION_AND_ACCEPTANCE.md": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e",
     "02_GENRE_WRITING_MANUAL.md": "4ff863d9f534b6359fc1c7c1685bd8cce02da886",
