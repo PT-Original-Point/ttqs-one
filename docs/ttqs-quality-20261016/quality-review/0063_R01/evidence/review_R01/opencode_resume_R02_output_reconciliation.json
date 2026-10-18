@@ -1,0 +1,52 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0063",
+  "review_target": "R01",
+  "opencode_session_id": "ses_eb24a07aeffeXb5vPLg3Hs2KQG",
+  "model": "opencode/nemotron-3.5-lightning-free",
+  "candidate_sha256": "4e2d56c9ce46b8acdb2d8b3288ed6083a054c4bb2955edf2127a4f16c058792d",
+  "raw_stdout_path": "opencode_resume_R02_stdout.jsonl",
+  "raw_stdout_sha256": "50af0c6a9ad104b1c1e9efc1e87f7dd8ad759c38cebb122e542f0e815ec57601",
+  "raw_stdout_bytes": 3595,
+  "events": [
+    {
+      "line": 1,
+      "type": "step_start",
+      "timestamp": 1792317106768
+    },
+    {
+      "line": 2,
+      "type": "text",
+      "timestamp": 1792317664970
+    },
+    {
+      "line": 3,
+      "type": "error",
+      "timestamp": 1792317665981
+    },
+    {
+      "line": 4,
+      "type": "step_start",
+      "timestamp": 1792317705043
+    }
+  ],
+  "partial_text_report_path": "opencode_resume_R01_partial_report.md",
+  "partial_text_report_sha256": "96c23db39625f35df70ed5e268f256c9a539723df62b3cdfd11f7511e35d9bdf",
+  "partial_text_chars": 1976,
+  "text_begins_with_provisional_pass_heading": true,
+  "text_is_incomplete": true,
+  "provider_error": {
+    "type": "provider.internal",
+    "message": "Streaming response failed: [502] Upstream error from Nvidia: Internal server error",
+    "status": 200,
+    "response": {
+      "body": "{\"error\":{\"type\":\"server_error\",\"message\":\"Streaming response failed: [502] Upstream error from Nvidia: Internal server error\"}}"
+    }
+  },
+  "terminal_verdict_complete": false,
+  "run_state": "PARTIAL_REVIEW_TEXT_THEN_502_THEN_RESTARTED_STEP_THEN_CLIENT_STOPPED",
+  "corrected_interpretation": "A provisional PASS heading was emitted, but the report is cut off mid-section and followed by provider.internal 502 plus another step_start; no complete final review verdict was returned. Do not count as PASS.",
+  "stop_receipt_correction": "The earlier stop receipt incorrectly stated there was no stdout delta; this record supersedes that interpretation while preserving the original receipt.",
+  "route_pause_threshold_met": false,
+  "next_action": "Run an independent exact-R02-SHA review using the report-priority available free model opencode/deepseek-v4.1-flash-free."
+}
