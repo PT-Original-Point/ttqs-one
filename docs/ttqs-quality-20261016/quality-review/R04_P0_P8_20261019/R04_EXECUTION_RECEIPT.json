@@ -88,8 +88,43 @@
     }
   },
   "P2_worker_routes": {
-    "opencode_cli": "v2.0.29; current model catalogue includes free SKUs; prior exact-SHA Beam review succeeded; provider billing remains UNKNOWN",
-    "antigravity_writer": "PAUSED_FOR_THIS_ROUTE; original effective argv remains UNKNOWN; historical retry receipt records dangerously_skip_permissions=true and is not treated as proof of actual argv",
+    "opencode_cli": {
+      "status": "CURRENT_V2_ROUTE_PROBED; writer now active",
+      "path": "C:\\Users\\J\\AppData\\Roaming\\ai.opencode.desktop\\cli\\2.0.29-x64\\opencode-cli.exe",
+      "version": "opencode v2.0.29",
+      "model_catalogue_count": 10,
+      "listed_model_ids": [
+        "opencode/beam-free",
+        "opencode/big-pickle",
+        "opencode/deepseek-v4.1-flash-free",
+        "opencode/glm-5.3-flash-free",
+        "opencode/longcat-2.5-preview-free",
+        "opencode/mimo-v2.6-flash-free",
+        "opencode/nemotron-3-ultra-free",
+        "opencode/nemotron-3.5-lightning-free",
+        "opencode/nemotron-3.5-super-vl-free",
+        "opencode/space-bunny-free"
+      ],
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "selection_source": "Human supplied 2026-10-18 report, attachment SHA 2854ed92ff7d013b6bf74baf6de56d1916632e420d13900651d72dc6ae13e308",
+      "isolated_probe": "PASS exact marker; exit 0; stderr 0; stdout SHA 033e8b9ac32298a426db5f2c567245bc0f426ca2f1f7b29569b28107032747c0",
+      "provider_model_attestation": "NOT_RETURNED; requested model is recorded, not independently attested",
+      "automatic_fallback": false,
+      "legacy_muse_pin": "Replaced in active route pointer; prior 429 and prior route JSON archived locally.",
+      "active_route_file_sha256": {
+        "OPENCODE_CLI_ROUTE.json": "f0c85779aa037ad58e62b172f260a3bcf793f2c657912be4a1be8d26865928c0",
+        "OPENCODE_MODEL_ROUTE.json": "f92d44f6faf78ecc02caf10cef348ce927e0079ac45e27397edeb9d988018471"
+      },
+      "model_list_stdout_sha256": "ba43f069a542fa07e313ed9b9591d554fa2886285edae8ce39ad85c39f535ba3"
+    },
+    "active_writer": {
+      "doc_id": "0072",
+      "state": "RUNNING",
+      "model_requested": "opencode/deepseek-v4.1-flash-free",
+      "started_at_local": "2026-10-19T05:33:23+08:00",
+      "no_duplicate_writer": true
+    },
+    "antigravity_writer": "PAUSED_FOR_THIS_ROUTE; no new dispatch; historical effective argv remains UNKNOWN; no Computer Use.",
     "computer_use": "NOT_USED"
   },
   "P3_document_action": {
@@ -112,32 +147,17 @@
     }
   },
   "P4_sync": {
-    "status": "ARTIFACT_EXACT_READBACK_VERIFIED",
-    "artifact_commit": "42626bcc3ba4b0def465fe1cc35fb68b1f4ba72f",
-    "remote_head_at_readback": "42626bcc3ba4b0def465fe1cc35fb68b1f4ba72f",
-    "readback_at_local": "2026-10-19T05:24:38+08:00",
-    "changed_paths": 89,
-    "exact_byte_matches": 89,
-    "mismatches": 0,
-    "readback_manifest_path": "docs/ttqs-quality-20261016/quality-review/0067_R01/evidence/remote_readback_R03.json",
-    "readback_manifest_sha256": "4ea0ad1f66d3ef6c848b24387d3743480074666dce662719db092658ba7e97b3",
-    "docx_remote_readback": [
-      {
-        "path": "docs/ttqs-quality-20261016/quality-review/0067_R01/candidate/0067_R01.docx",
-        "sha256": "57895a9daecea908630897ccd95cf7763ae9457d18829225ee9d92e4638141f2",
-        "bytes": 62191
-      },
-      {
-        "path": "docs/ttqs-quality-20261016/quality-review/0067_R01/candidate/0067_R02.docx",
-        "sha256": "74e086337bc4ccca6c779dd5005d47cf97415122ca8b79e7745e99b567b5156d",
-        "bytes": 64728
-      },
-      {
-        "path": "docs/ttqs-quality-20261016/quality-review/0067_R01/candidate/0067_R03.docx",
-        "sha256": "f9985cce5ed4b5fdc65a961efe2ccbee754e8f73db773d0604c8695db9ff4e8a",
-        "bytes": 64732
-      }
-    ]
+    "status": "0067_ARTIFACT_REMOTE_READBACK_VERIFIED; 0072_SOURCE_AND_ROUTE_RECEIPTS_AWAITING_PUSH",
+    "verified_artifact_commit": "42626bcc3ba4b0def465fe1cc35fb68b1f4ba72f",
+    "verified_artifact_exact_files": 89,
+    "verified_artifact_mismatches": 0,
+    "new_work_pending_sync": [
+      "0072 source packet",
+      "OpenCode v2.0.29 model-list and isolated smoke evidence",
+      "sanitized worker status"
+    ],
+    "readback_manifest_path": "quality-review/0067_R01/evidence/remote_readback_R03.json",
+    "readback_manifest_sha256": "4ea0ad1f66d3ef6c848b24387d3743480074666dce662719db092658ba7e97b3"
   },
   "P5_schedule_and_cost": {
     "existing_hourly_task": "UNCHANGED; this turn was invoked with existing hourly automation id ttqs-one-hourly-quality-goal-resume",
@@ -147,41 +167,45 @@
     "token_cost_note": "OpenCode CLI review reports are worker-local and not Codex/provider billing"
   },
   "P6_next_ready": {
-    "doc_id": "0067",
-    "requirement_id": "I15-E03",
-    "official_checkbox_serial": "073",
-    "status": "READY_FOR_FRESH_SOURCE_BOUND_CANDIDATE_WORK",
-    "official_source_readback": {
-      "pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
-      "pdf_page_index": 5,
-      "printed_page": "5",
-      "exact_requirement_text": "訓練執行評估指標分析及相關統計分析。",
-      "authoritative_page5_read": true
-    },
-    "official_blueprint_row_073_blob": "8c2bbe7ca9dcbb03088a48934b9e57e7147ede63",
-    "current_142_crosswalk_row_source": "historical runtime R01 crosswalk; file SHA-256 1ddfbb608bcad25170683ddb42a1dbb27bafa6f1f35ff0498f1b8d75b24f0679; row I15-E03 -> deliverable 0067, count 1",
-    "existing_unique_blueprint_row": "R04 current row 0067/I15-E03; normalized line SHA-256 c4f3e23c89388a0fd22f668cc4f28e39d03b37a2bd9c0fc6ade9ca7ef264d59c; rereconcile against latest official and Human contracts before use",
-    "historical_writer_state": "PARKED_ROOT_CAUSE_REPAIR; 11 attempts, 3 epochs, old candidate sha a20342c25a00a6b6a9c3412b61e52a3c865cd8361ce6778d5eb99a9ac50e72d1; do not reuse old body",
-    "known_defects": [
-      "blueprint filename binding",
-      "sample facts missing replacement-register entries",
-      "source provenance missing",
-      "F001-F008 sample fact register mismatches",
-      "first-page 30-second user/timing/how context absent",
-      "document-control strip incomplete",
-      "invalid replacement-register preview"
-    ],
-    "next_action": "Create a fresh source-bound 0067 unique blueprint/register packet from current source page 5, row 073 and verified crosswalk; then one OpenCode v2 writer output. Preserve all old failure evidence."
+    "doc_id": "0072",
+    "requirement_id": "I16-E03",
+    "official_checkbox_serial": "078",
+    "status": "SOURCE_BOUND_WRITER_ACTIVE",
+    "queue_state": "PENDING; no live writer existed before this explicit dispatch",
+    "candidate_path": "quality-review/0072_R01/candidate/0072_R01.docx",
+    "candidate_sha256": null,
+    "blueprint_row": 72,
+    "blueprint_row_sha256": "2349093657e67140c2cb2721fbe8b95257492ca40bd1182cb3161288d826ce5d",
+    "active_worker": "OpenCode CLI v2.0.29 build agent; requested model opencode/deepseek-v4.1-flash-free; isolated probe passed, provider identity not separately attested.",
+    "next_action": "Collect this single active writer return; recover exact body; deterministic DOCX build; technical/math/marker checks; Word PDF render and full-page visual inspection; then one exact-SHA independent semantic review. No second writer.",
+    "prior_lane_blockers": {
+      "0068": {
+        "candidate_sha256": "a6b9c3c4110ab15673ee365ee8d75f59770ab88f86f5760b723958dd63c3e8ae",
+        "semantic": "PASS",
+        "technical": "PASS",
+        "visual": "BLOCKED after three stalled Word export routes; no DOCX rebuild; no compliant alternate renderer found."
+      },
+      "0069": {
+        "candidate_sha256": "b701604ab634d42d1638ea0065cbbac39bb40e631d2716a572bc5422494e53bd",
+        "semantic": "PASS_WITH_MINOR_FINDINGS",
+        "technical": "PASS",
+        "visual": "PENDING; old Muse 429 work-owner record is historical, not a live writer."
+      },
+      "0070": {
+        "candidate_sha256": "55af406663f29e6a3ea8fb644d61c029c74df42934166e6076a991fdcd895bba",
+        "status": "exact-SHA semantic, technical and 22-page visual PASS; already tracked in GitHub; no rebuild."
+      }
+    }
   },
   "P7_tests": {
     "T1": "PASS_EXPECTED_NOOP_FIXTURE_ONLY",
     "T2": "PASS_ROUTE_ISOLATED_FROM_HISTORICAL_0055_R04",
     "T3": "PASS_EXACT_SHA_REUSE_NO_NEW_REVIEW_CALLS",
-    "T4": "PASS_EXACT_REMOTE_READBACK_89_OF_89; artifact commit 42626bcc3ba4b0def465fe1cc35fb68b1f4ba72f; R04/readback-manifest commit readback follows.",
+    "T4": "PASS_0067_ARTIFACT_89_OF_89_EXACT; readback manifest and R04 commit 927f36057b1843dd2ffc437e0166d4f9f9beb34f read back; manifest exact, R04 JSON LF-normalized equal.",
     "T5": "PASS_0070_R03_SAMPLE_SYNTHETIC_BOUNDARY; 0071_OLD_CANDIDATE_INVALID"
   },
-  "P8_status": "P0-P7 executed for 0067: R03 candidate, independent semantic, technical and 21-page visual checks pass; all 89 files exact-byte read back from GitHub commit 42626bcc3ba4b0def465fe1cc35fb68b1f4ba72f. Candidate only; formal acceptance not asserted. 0068 R06 remains visual-blocked after three stalled Word render routes; no DOCX rebuild.",
-  "updated_at_local": "2026-10-19T05:24:38+08:00",
+  "P8_status": "0067 R03 and all 89 package files are exact-byte verified on GitHub. The stale Muse route has been replaced with the current OpenCode v2.0.29 DeepSeek model route after a successful isolated marker probe (provider identity unattested). 0072 is source-bound and its single OpenCode Writer is active; no DOCX candidate yet. 0068 remains visual-blocked without rebuild.",
+  "updated_at_local": "2026-10-19T05:35:22+08:00",
   "source_contract_blobs": {
     "01_HUMAN_MISSION_AND_ACCEPTANCE.md": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e",
     "02_GENRE_WRITING_MANUAL.md": "4ff863d9f534b6359fc1c7c1685bd8cce02da886",
@@ -207,5 +231,24 @@
     "semantic": "PASS exact SHA, OpenCode CLI v2.0.29 opencode/beam-free; original output and verbatim review preserved.",
     "real_evidence": "SAMPLE_SYNTHETIC_ONLY; REAL UNKNOWN/HOLD",
     "limitation": "Reviewer did not inspect visual layout (separate visual receipt); 0066 R01 candidate SHA was not independently verified because file absent."
+  },
+  "P3_document_action_0072": {
+    "doc_id": "0072",
+    "requirement_id": "I16-E03",
+    "official_checkbox_serial": "078",
+    "revision": "R01",
+    "status": "SOURCE_PACKET_VERIFIED; OPENCODE_WRITER_RUNNING; DOCX_NOT_YET_BUILT",
+    "official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "official_page5_exact_extract_sha256": "c48349f1a90957e4d5ab7c349403964a8813b6b9f566aada533965d6bcc212e8",
+    "checkbox_count": "157 total; 078 exact item; 079 is generic Other; 080 maps to 0073/I17A-E01",
+    "crosswalk_sha256": "1ddfbb608bcad25170683ddb42a1dbb27bafa6f1f35ff0498f1b8d75b24f0679",
+    "blueprint_current_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+    "blueprint_row": 72,
+    "blueprint_raw_line_sha256": "2349093657e67140c2cb2721fbe8b95257492ca40bd1182cb3161288d826ce5d",
+    "source_manifest_path": "quality-review/0072_R01/inputs/SOURCE_MANIFEST_R01.json",
+    "source_manifest_sha256": "56850a1fc7bd9ffba678e56cb235924888566eecfeff534b7b4bd95d4f9c24d6",
+    "writer_task_sha256": "a9ce8b3985ad5be2e761473b64e0aca75e22fbba9cf48aa1aca40c2b9f6d1bdb",
+    "docx_sha256": null,
+    "formal_acceptance": "NOT_GRANTED"
   }
 }
