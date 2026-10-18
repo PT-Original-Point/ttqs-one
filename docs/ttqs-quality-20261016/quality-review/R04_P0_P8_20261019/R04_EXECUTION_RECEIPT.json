@@ -18,7 +18,7 @@
     "prestate": "VERIFIED"
   },
   "P0_readonly_preflight": {
-    "writer_owner": "NO_LIVE_WRITER_CONFIRMED_AT_2026-10-19_LOCAL_SNAPSHOT",
+    "writer_owner": "0072 R02 OpenCode CLI Writer active in isolated sandbox; previous R01 interrupted after context churn; no other Writer confirmed.",
     "reviewer_owner": "NO_LIVE_REVIEWER_CONFIRMED",
     "opencode_service_pid": 3980,
     "opencode_service_is_writer": false,
@@ -33,7 +33,9 @@
       7140
     ],
     "old_word_processes_counted_as_writer": false,
-    "unsynced_stable_work": "0054_R14 safe-review correction; 0064_R05 visual finding receipt; 0064_R06 fixed candidate/QA; 0070_R03 package-manifest reconciliation; 0070_R01 loose superseded local outputs preserved but not staged"
+    "unsynced_stable_work": "0054_R14 safe-review correction; 0064_R05 visual finding receipt; 0064_R06 fixed candidate/QA; 0070_R03 package-manifest reconciliation; 0070_R01 loose superseded local outputs preserved but not staged",
+    "active_writer_pid": 17152,
+    "active_writer_started_at_local": "2026-10-19T05:42:37+08:00"
   },
   "P1_status_reconciliation": {
     "0057_R07": {
@@ -119,13 +121,29 @@
     },
     "active_writer": {
       "doc_id": "0072",
+      "attempt": "R02",
       "state": "RUNNING",
       "model_requested": "opencode/deepseek-v4.1-flash-free",
-      "started_at_local": "2026-10-19T05:33:23+08:00",
-      "no_duplicate_writer": true
+      "cli_version": "opencode v2.0.29",
+      "started_at_local": "2026-10-19T05:42:37+08:00",
+      "pid": 17152,
+      "cwd": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0072_R01\\opencode_isolated_R02",
+      "packet_path": "WRITER_PACKET_R02.md",
+      "packet_sha256": "5fe032860de98262af7ccc2ce9652e27197f4c954d2915dc99ee0e435fdde264",
+      "output_path": "candidate/0072_R01_body.md",
+      "duplicate_writer": false,
+      "computer_use": "NOT_USED",
+      "permission_bypass": "NOT_USED"
     },
     "antigravity_writer": "PAUSED_FOR_THIS_ROUTE; no new dispatch; historical effective argv remains UNKNOWN; no Computer Use.",
-    "computer_use": "NOT_USED"
+    "computer_use": "NOT_USED",
+    "status": "CURRENT_V2_ROUTE_PROBED; 0072 R02 Writer active; R01 interrupted for context churn; no provider failure.",
+    "prior_0072_R01_attempt": {
+      "state": "INTERRUPTED_FOR_CONTEXT_CHURN",
+      "candidate_body_created": false,
+      "provider_error": false,
+      "incident_receipt": "quality-review/0072_R01/evidence/opencode_writer_R01_context_loop.json"
+    }
   },
   "P3_document_action": {
     "doc_id": "0064",
@@ -147,9 +165,9 @@
     }
   },
   "P4_sync": {
-    "status": "0067_ARTIFACT_AND_0072_SOURCE_ROUTE_REMOTE_READBACK_VERIFIED",
+    "status": "PRIOR_SYNC_VERIFIED_AT_8c5d641; R01 interruption diagnostic and R02 active-writer status pending sync",
     "last_verified_commit": "b6c019da4a3cf3796fbd9de731aeb7703a1ac896",
-    "remote_head_at_readback": "b6c019da4a3cf3796fbd9de731aeb7703a1ac896",
+    "remote_head_at_readback": "8c5d64116f0d9c2c30f66dfdc00d2dbd26b852f8",
     "readback_at_local": "2026-10-19T05:35:53+08:00",
     "verified_paths": 15,
     "exact_byte_matches": 10,
@@ -170,14 +188,14 @@
     "doc_id": "0072",
     "requirement_id": "I16-E03",
     "official_checkbox_serial": "078",
-    "status": "SOURCE_BOUND_WRITER_ACTIVE",
-    "queue_state": "PENDING; no live writer existed before this explicit dispatch",
+    "status": "SOURCE_BOUND_WRITER_ACTIVE_R02",
+    "queue_state": "One isolated 0072 Writer active; R01 stopped after no body and context churn; no duplicate Writer.",
     "candidate_path": "quality-review/0072_R01/candidate/0072_R01.docx",
     "candidate_sha256": null,
     "blueprint_row": 72,
     "blueprint_row_sha256": "2349093657e67140c2cb2721fbe8b95257492ca40bd1182cb3161288d826ce5d",
-    "active_worker": "OpenCode CLI v2.0.29 build agent; requested model opencode/deepseek-v4.1-flash-free; isolated probe passed, provider identity not separately attested.",
-    "next_action": "Collect this single active writer return; recover exact body; deterministic DOCX build; technical/math/marker checks; Word PDF render and full-page visual inspection; then one exact-SHA independent semantic review. No second writer.",
+    "active_worker": "OpenCode CLI v2.0.29 build agent; requested model opencode/deepseek-v4.1-flash-free; isolated R02 packet hash 5fe032860de98262af7ccc2ce9652e27197f4c954d2915dc99ee0e435fdde264; provider identity not separately attested.",
+    "next_action": "Collect the single R02 return; validate source mapping, body completeness, replacement register and arithmetic; build one DOCX; technical and full-page visual QA; then independent exact-SHA semantic review. Do not dispatch a second Writer.",
     "prior_lane_blockers": {
       "0068": {
         "candidate_sha256": "a6b9c3c4110ab15673ee365ee8d75f59770ab88f86f5760b723958dd63c3e8ae",
@@ -204,8 +222,8 @@
     "T4": "PASS: 0067 package 89/89 exact at 42626bcc; R04 readback receipt at 927f360 is remotely LF-normalized equal; 0072 source/route sync 15/15 matched (exact=10, EOL-only=5, mismatches=0) at b6c019da4a3cf3796fbd9de731aeb7703a1ac896.",
     "T5": "PASS_0070_R03_SAMPLE_SYNTHETIC_BOUNDARY; 0071_OLD_CANDIDATE_INVALID"
   },
-  "P8_status": "0067 R03 exact-SHA package remains remotely verified. 0072/I16-E03/078 source packet and OpenCode v2.0.29 route evidence are pushed and read back; the single DeepSeek Writer remains active, so no second Writer is dispatched. Candidate DOCX and QA are pending.",
-  "updated_at_local": "2026-10-19T05:35:53+08:00",
+  "P8_status": "R01 0072 Writer was interrupted after 21 tool calls spent reading neighboring 0070 materials without creating a body; no provider error, and the route remains active. One source-bound R02 Writer is running from an isolated sandbox on DeepSeek V4.1 Flash Free, with no Computer Use or permission bypass. No 0072 DOCX exists yet; next action is recover R02 body, build and independently verify the candidate.",
+  "updated_at_local": "2026-10-19T05:43:23+08:00",
   "source_contract_blobs": {
     "01_HUMAN_MISSION_AND_ACCEPTANCE.md": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e",
     "02_GENRE_WRITING_MANUAL.md": "4ff863d9f534b6359fc1c7c1685bd8cce02da886",
@@ -237,7 +255,7 @@
     "requirement_id": "I16-E03",
     "official_checkbox_serial": "078",
     "revision": "R01",
-    "status": "SOURCE_PACKET_VERIFIED; OPENCODE_WRITER_RUNNING; DOCX_NOT_YET_BUILT",
+    "status": "SOURCE_PACKET_VERIFIED; R01_INTERRUPTED_CONTEXT_CHURN; R02_WRITER_RUNNING; DOCX_NOT_BUILT",
     "official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
     "official_page5_exact_extract_sha256": "c48349f1a90957e4d5ab7c349403964a8813b6b9f566aada533965d6bcc212e8",
     "checkbox_count": "157 total; 078 exact item; 079 is generic Other; 080 maps to 0073/I17A-E01",
@@ -249,6 +267,21 @@
     "source_manifest_sha256": "56850a1fc7bd9ffba678e56cb235924888566eecfeff534b7b4bd95d4f9c24d6",
     "writer_task_sha256": "a9ce8b3985ad5be2e761473b64e0aca75e22fbba9cf48aa1aca40c2b9f6d1bdb",
     "docx_sha256": null,
-    "formal_acceptance": "NOT_GRANTED"
+    "formal_acceptance": "NOT_GRANTED",
+    "writer_attempts": [
+      {
+        "attempt": "R01",
+        "state": "INTERRUPTED_FOR_CONTEXT_CHURN",
+        "body_created": false,
+        "diagnostic_sha256": "f5f5a75bf26f957ea5d30e6917c0ea69ff1e0d912e7887373918c196a4bb716b"
+      },
+      {
+        "attempt": "R02",
+        "state": "RUNNING",
+        "packet_sha256": "5fe032860de98262af7ccc2ce9652e27197f4c954d2915dc99ee0e435fdde264",
+        "cwd": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0072_R01\\opencode_isolated_R02",
+        "output": "candidate/0072_R01_body.md"
+      }
+    ]
   }
 }
