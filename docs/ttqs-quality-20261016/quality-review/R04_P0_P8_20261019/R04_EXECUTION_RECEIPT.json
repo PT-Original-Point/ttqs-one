@@ -147,17 +147,17 @@
     }
   },
   "P4_sync": {
-    "status": "0067_ARTIFACT_REMOTE_READBACK_VERIFIED; 0072_SOURCE_AND_ROUTE_RECEIPTS_AWAITING_PUSH",
-    "verified_artifact_commit": "42626bcc3ba4b0def465fe1cc35fb68b1f4ba72f",
-    "verified_artifact_exact_files": 89,
-    "verified_artifact_mismatches": 0,
-    "new_work_pending_sync": [
-      "0072 source packet",
-      "OpenCode v2.0.29 model-list and isolated smoke evidence",
-      "sanitized worker status"
-    ],
-    "readback_manifest_path": "quality-review/0067_R01/evidence/remote_readback_R03.json",
-    "readback_manifest_sha256": "4ea0ad1f66d3ef6c848b24387d3743480074666dce662719db092658ba7e97b3"
+    "status": "0067_ARTIFACT_AND_0072_SOURCE_ROUTE_REMOTE_READBACK_VERIFIED",
+    "last_verified_commit": "b6c019da4a3cf3796fbd9de731aeb7703a1ac896",
+    "remote_head_at_readback": "b6c019da4a3cf3796fbd9de731aeb7703a1ac896",
+    "readback_at_local": "2026-10-19T05:35:53+08:00",
+    "verified_paths": 15,
+    "exact_byte_matches": 10,
+    "eol_normalized_only": 5,
+    "mismatches": 0,
+    "readback_manifest_path": "quality-review/R04_P0_P8_20261019/evidence/remote_readback_b6c019d_R04.json",
+    "readback_manifest_sha256": "4189a68c481ffcf0abb692e062fac3f9a0e25a018cbf62b9b5b93a885873107a",
+    "prior_0067_readback_manifest_sha256": "4ea0ad1f66d3ef6c848b24387d3743480074666dce662719db092658ba7e97b3"
   },
   "P5_schedule_and_cost": {
     "existing_hourly_task": "UNCHANGED; this turn was invoked with existing hourly automation id ttqs-one-hourly-quality-goal-resume",
@@ -201,11 +201,11 @@
     "T1": "PASS_EXPECTED_NOOP_FIXTURE_ONLY",
     "T2": "PASS_ROUTE_ISOLATED_FROM_HISTORICAL_0055_R04",
     "T3": "PASS_EXACT_SHA_REUSE_NO_NEW_REVIEW_CALLS",
-    "T4": "PASS_0067_ARTIFACT_89_OF_89_EXACT; readback manifest and R04 commit 927f36057b1843dd2ffc437e0166d4f9f9beb34f read back; manifest exact, R04 JSON LF-normalized equal.",
+    "T4": "PASS: 0067 package 89/89 exact at 42626bcc; R04 readback receipt at 927f360 is remotely LF-normalized equal; 0072 source/route sync 15/15 matched (exact=10, EOL-only=5, mismatches=0) at b6c019da4a3cf3796fbd9de731aeb7703a1ac896.",
     "T5": "PASS_0070_R03_SAMPLE_SYNTHETIC_BOUNDARY; 0071_OLD_CANDIDATE_INVALID"
   },
-  "P8_status": "0067 R03 and all 89 package files are exact-byte verified on GitHub. The stale Muse route has been replaced with the current OpenCode v2.0.29 DeepSeek model route after a successful isolated marker probe (provider identity unattested). 0072 is source-bound and its single OpenCode Writer is active; no DOCX candidate yet. 0068 remains visual-blocked without rebuild.",
-  "updated_at_local": "2026-10-19T05:35:22+08:00",
+  "P8_status": "0067 R03 exact-SHA package remains remotely verified. 0072/I16-E03/078 source packet and OpenCode v2.0.29 route evidence are pushed and read back; the single DeepSeek Writer remains active, so no second Writer is dispatched. Candidate DOCX and QA are pending.",
+  "updated_at_local": "2026-10-19T05:35:53+08:00",
   "source_contract_blobs": {
     "01_HUMAN_MISSION_AND_ACCEPTANCE.md": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e",
     "02_GENRE_WRITING_MANUAL.md": "4ff863d9f534b6359fc1c7c1685bd8cce02da886",
