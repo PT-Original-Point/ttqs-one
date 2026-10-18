@@ -40,5 +40,16 @@
     "raw_stdout_sha256": "11C75B8764BA36DD8131BEA2F323C9EE692A71FA325E2B10AC11A64FE3267068"
   },
   "formal_association_acceptance": "NOT CLAIMED",
-  "real_evidence": "NOT CLAIMED; sample facts remain SAMPLE/SYNTHETIC and real-source status remains UNKNOWN"
+  "real_evidence": "NOT CLAIMED; sample facts remain SAMPLE/SYNTHETIC and real-source status remains UNKNOWN",
+  "model_attribution": {
+    "status": "REQUESTED_MODEL_DISTINGUISHED_FROM_PRIOR_SESSION_METADATA; ACTUAL_RUNTIME_IDENTITY_UNKNOWN",
+    "reused_session_id": "ses_eb4c69a00ffecdiCvGl5LzE5aU",
+    "prior_R04_session_export_model": "opencode/beam-free",
+    "prior_R04_export_sha256": "e93a40adff827fd1fbe699151fb7af4613b9ce992abcfb50cce808b36ef24b5b",
+    "prior_export_last_message_utc": "2026-10-17T18:59:36.741Z",
+    "R05_invocation_receipt_model_field": "opencode/longcat-2.5-preview-free",
+    "R05_invocation_started_utc": "2026-10-17T20:46:37.2462562Z",
+    "R05_invocation_receipt_blob_sha": "a0852d7c50b1098a8682e3eae908b646dd5b98ef",
+    "interpretation": "The exported Beam session snapshot ends 1h47m before the R05 receipt records its LongCat model selection. The records therefore describe different moments in the same reused session; the prior Beam metadata does not establish which provider model generated R05. Preserve the R05 requested model as LongCat and actual runtime model identity as UNKNOWN."
+  }
 }
