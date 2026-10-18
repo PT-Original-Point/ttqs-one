@@ -1,0 +1,107 @@
+{
+  "project_id": "TTQS_ONE",
+  "source_contract_sha256": "3330de8de26275c5e51f299982d87c250bb7e030c9838badafc369e26ee29c35",
+  "observed_branch_head": "93547e014ddcf66c039e3f91ca60cd21514c0b54",
+  "tests": [
+    {
+      "id": "T1_NO_MATERIAL_DELTA",
+      "execution": "SIMULATED_FIXTURE_ONLY",
+      "result": "PASS_EXPECTED_NOOP",
+      "expected": {
+        "writer_dispatch": false,
+        "review_dispatch": false,
+        "status_commit": false
+      },
+      "model_calls": 0,
+      "note": "Bounded no-op behavior fixture; does not claim to exercise the live scheduler."
+    },
+    {
+      "id": "T2_ANTIGRAVITY_EMPTY_OR_PERMISSION_DENIAL",
+      "execution": "OBSERVED_0055_R04_RECORD",
+      "result": "PASS_ROUTE_ISOLATED",
+      "route_paused": "PAUSED_NEW_DISPATCH_AFTER_THREE_UNSUCCESSFUL_ATTEMPTS_AND_REPAIRS",
+      "attempts": [
+        {
+          "id": "initial",
+          "status": "CLI_ARGUMENT_ERROR",
+          "exit_code": 2
+        },
+        {
+          "id": "retry01",
+          "status": "PERMISSION_DENIAL_NO_DELIVERABLE",
+          "exit_code": 0
+        },
+        {
+          "id": "retry02",
+          "status": "STALLED_NO_DELIVERABLE_OPERATOR_STOP",
+          "exit_code": null
+        },
+        {
+          "id": "retry03",
+          "status": "STALLED_NO_DELIVERABLE_OPERATOR_STOP",
+          "exit_code": null
+        }
+      ],
+      "outputs_created": [],
+      "other_route": "OpenCode v2 continued and produced 0070 R01."
+    },
+    {
+      "id": "T3_REUSE_EXACT_SHA_REVIEWS",
+      "execution": "REMOTE_RAW_BLOB_RECOMPUTE",
+      "result": "PASS_NO_RERUN",
+      "artifacts": [
+        {
+          "path": "docs/ttqs-quality-20261016/quality-review/0057_R01/candidate/0057_R07.docx",
+          "sha256": "a8d67c3f89105d85e47b554007624ce1231c6fb3340e3a9d3bfd14b6ae838705",
+          "bytes": 140995
+        },
+        {
+          "path": "docs/ttqs-quality-20261016/quality-review/0061_R01/candidate/0061_R03.docx",
+          "sha256": "3d4fe20f7fb825e470ed5dfd71fcaf0f5bb8052dc7a63ef51ee08e2a11668c9c",
+          "bytes": 98065
+        }
+      ],
+      "new_review_calls": 0,
+      "candidate_bytes_changed": false
+    },
+    {
+      "id": "T4_REMOTE_BYTE_READBACK",
+      "execution": "AFTER_PUSH",
+      "result": "PENDING"
+    },
+    {
+      "id": "T5_SAMPLE_REAL_BOUNDARY",
+      "execution": "LOCAL_EXACT_DOCX_TEXT_EXTRACTION_R03",
+      "result": "PASS_CURRENT_0070_BOUNDARY; 0071_REMAINS_INVALID",
+      "0070": {
+        "sha256": "55af406663f29e6a3ea8fb644d61c029c74df42934166e6076a991fdcd895bba",
+        "markers": {
+          "SAMPLE": 31,
+          "SYNTHETIC": 6,
+          "UNKNOWN": 26,
+          "HOLD": 43
+        },
+        "zip_test": "PASS",
+        "candidate_state": "SAMPLE_SYNTHETIC_CANDIDATE_ONLY"
+      },
+      "0071_old_candidate": {
+        "sha256": "334ed51f437331605fa291c153a6726c1fc05a74d29cf057ad66747512c43065",
+        "markers": {
+          "SAMPLE": 0,
+          "SYNTHETIC": 0,
+          "UNKNOWN": 0,
+          "HOLD": 0
+        },
+        "boundary_status": "FAIL_NO_SAMPLE_SYNTHETIC_UNKNOWN_HOLD_MARKERS",
+        "queue_status": "PENDING_WITH_INVALID_UNATTESTED_MODEL_REVIEW",
+        "not_current_0071_candidate": "historical integrated candidate from Oct 3 queue record"
+      },
+      "queue_after_correction": {
+        "source": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\BUILD_QUEUE.json",
+        "sha256": "a7f1b942c5e403a820209739014e186cb700e8eeeff24951ec51ad4d9baceb42",
+        "0071_state": "PENDING",
+        "external_review_status": "INVALID_UNATTESTED_MODEL_IDENTITY"
+      }
+    }
+  ]
+}

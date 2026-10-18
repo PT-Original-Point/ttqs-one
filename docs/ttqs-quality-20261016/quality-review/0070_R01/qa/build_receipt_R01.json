@@ -1,0 +1,49 @@
+{
+  "artifact": "0070_R01",
+  "doc_id": "0070",
+  "requirement_id": "I16-E02",
+  "checkbox_serial": "077",
+  "generated_utc": "2026-10-18T19:53:26Z",
+  "builder": "scripts/build_0070_R01.py",
+  "inputs": {
+    "body_md": "candidate/0070_R01_body.md",
+    "body_md_sha256": "97ac8b6984df5f43d5c6691040ed751db023f2e1cec4464b2e5ed44614da3881",
+    "body_md_bytes": 29572
+  },
+  "outputs": {
+    "docx": "candidate/0070_R01.docx",
+    "docx_sha256": "55af406663f29e6a3ea8fb644d61c029c74df42934166e6076a991fdcd895bba",
+    "docx_bytes": 56045
+  },
+  "counts": {
+    "tables": 43,
+    "body_paragraphs_top_level": 105,
+    "table_cell_paragraphs": 862,
+    "total_paragraphs_including_tables": 967,
+    "sections": 1
+  },
+  "font_floor_checks": {
+    "body_floor_pt": 10.5,
+    "table_floor_pt": 9.5,
+    "body_min_pt_observed": 11.0,
+    "table_min_pt_observed": 10.0,
+    "body_floor_met": true,
+    "table_floor_met": true,
+    "body_runs_checked": 146,
+    "table_runs_checked": 894
+  },
+  "structural_checks": {
+    "fixed_table_layout": true,
+    "repeat_header_rows": true,
+    "prevent_row_split": true,
+    "page_break_directives_in_body": 16,
+    "cjk_font": "Microsoft JhengHei",
+    "latin_font": "Microsoft JhengHei"
+  },
+  "acceptance": {
+    "independent_semantic_acceptance": "NOT CLAIMED",
+    "independent_visual_acceptance": "NOT CLAIMED",
+    "association_approval": "NOT CLAIMED",
+    "note": "Writer self-check only. Receipt records build facts; it is not a PASS."
+  }
+}
