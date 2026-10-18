@@ -1,0 +1,43 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0055",
+  "official_requirement_id": "I12-E03",
+  "official_indicator": "12c",
+  "official_checkbox_serial": "058",
+  "status": "CANDIDATE",
+  "independent_semantic_verdict": "PASS",
+  "candidate_sha256": "0c4abf37856611a8226361cedb9bf58fd7c769a4cec27574920ed5d93ff4687b",
+  "replacement_register_sha256": "66f660e24cfe12bd0c1351be577a6e4602f5a5454ba4914c0b736926cf9c0af7",
+  "reviewer_route": "OpenCode V2 CLI",
+  "reviewer_model": "opencode/mimo-v2.6-flash-free",
+  "reviewer_session_id": "ses_eb2fdecb1ffeD4lwEL8mOy0aO6",
+  "native_cli_exit_code": 0,
+  "review_task_sha256": "714e8ae9ed1cc9a38fd3000952b7d999eb7b143a21342af4a93bba5775c84d06",
+  "original_stdout_jsonl_sha256": "bfea9bb5d5352ab09240fd2f24d26bb0ec5227bff8d998f4f3ed1779d07d31d1",
+  "extracted_full_response_path": "review/independent_semantic_R04/independent_semantic_review_R04.md",
+  "extracted_response_sha256": "6813e941d8b3a31dac337ad2ee3b402740192a7a4ccdf87d1a01c4945ce15ed6",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "source_branch": "work/ttqs-one-document-quality-contract-20261016",
+  "source_commit": "e34c2f4ed4719fc4612a7a91890f6ccba9733503",
+  "reviewer_scope": "Exact candidate and register SHA, full DOCX content/OOXML inspection, official requirement and unique Blueprint, arithmetic and date recomputation, tie-break, register, source/policy boundaries; visual inspection pages 1 and 7 and hash/pixel verification for remaining renders.",
+  "reviewer_limitations": [
+    "Reviewer did not independently re-render DOCX.",
+    "No full-corpus cross-document duplication sweep.",
+    "External same-case source DOCX files were not opened; their SHAs came from Blueprint/receipt."
+  ],
+  "human_formal_acceptance": "NOT_GRANTED",
+  "created_local": "2026-10-18T11:29:32+08:00",
+  "requested_model": "opencode/mimo-v2.6-flash-free",
+  "runtime_model_identity": "UNKNOWN_NOT_EMITTED_IN_CAPTURED_CLI_EVENTS",
+  "cli_reported_usage": {
+    "step_finish_events": 26,
+    "input_tokens": 85370.0,
+    "output_tokens": 5765.0,
+    "reasoning_tokens": 14775.0,
+    "cache_read_tokens": 962688.0,
+    "reported_cost_usd": 0.0
+  },
+  "session_start_taipei": "2026-10-18 11:15:49 +08:00",
+  "session_end_taipei": "2026-10-18 11:26:32 +08:00",
+  "full_cli_event_log_handling": "Retained locally for audit; not included in the public sync because it contains extensive tool transcripts and local-path output. The exact full reviewer response, task, exit code, stderr, and bounded receipt are included."
+}
