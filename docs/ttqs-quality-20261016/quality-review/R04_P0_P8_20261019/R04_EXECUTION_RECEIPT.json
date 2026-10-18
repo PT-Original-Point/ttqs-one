@@ -112,7 +112,7 @@
     }
   },
   "P4_sync": {
-    "status": "REMOTE_SYNC_VERIFIED",
+    "status": "PENDING_0067_PACKAGE_PUSH_AND_REMOTE_READBACK",
     "commit": "0791d956c5dd624c7a5e79703195d7871c11d87e",
     "remote_head": "0791d956c5dd624c7a5e79703195d7871c11d87e",
     "remote_readback_at_local": "2026-10-19T04:49:16+08:00",
@@ -164,11 +164,11 @@
     "T1": "PASS_EXPECTED_NOOP_FIXTURE_ONLY",
     "T2": "PASS_ROUTE_ISOLATED_FROM_HISTORICAL_0055_R04",
     "T3": "PASS_EXACT_SHA_REUSE_NO_NEW_REVIEW_CALLS",
-    "T4": "PENDING_AFTER_PUSH",
+    "T4": "PENDING_0067_REMOTE_BINARY_READBACK",
     "T5": "PASS_0070_R03_SAMPLE_SYNTHETIC_BOUNDARY; 0071_OLD_CANDIDATE_INVALID"
   },
-  "P8_status": "R04 verified and synced; 0067 is the next READY candidate-work lane, with historical parked failures isolated; no formal acceptance or REAL evidence asserted.",
-  "updated_at_local": "2026-10-19T04:49:16+08:00",
+  "P8_status": "R04 prior P0-P7 preserved. DOCX 0067 R03 now has local exact-SHA technical PASS, 21-page visual PASS, and independent semantic PASS; it remains a candidate. GitHub package push and remote readback are pending.",
+  "updated_at_local": "2026-10-19T05:19:48+08:00",
   "source_contract_blobs": {
     "01_HUMAN_MISSION_AND_ACCEPTANCE.md": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e",
     "02_GENRE_WRITING_MANUAL.md": "4ff863d9f534b6359fc1c7c1685bd8cce02da886",
@@ -176,5 +176,23 @@
     "04_CODEX_GOAL_24X7_EXECUTION.md": "62e3dd7dfd8579b6bc97952ffa6236e7494f3b4d",
     "05_HOURLY_NATIVE_WAKE_RESUME.md": "60ae010c58140e1710ed24016085c6dfaf6ffaee",
     "06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md": "263aaca84891bba8dca087875804343c3670e921"
+  },
+  "P3_document_action_0067": {
+    "doc_id": "0067",
+    "requirement_id": "I15-E03",
+    "official_checkbox_serial": "073",
+    "revision": "R03",
+    "status": "CANDIDATE_SEMANTIC_PASS_TECHNICAL_PASS_VISUAL_PASS; formal acceptance not granted",
+    "candidate_sha256": "f9985cce5ed4b5fdc65a961efe2ccbee754e8f73db773d0604c8695db9ff4e8a",
+    "history": {
+      "R01": "57895a9daecea908630897ccd95cf7763ae9457d18829225ee9d92e4638141f2",
+      "R02": "74e086337bc4ccca6c779dd5005d47cf97415122ca8b79e7745e99b567b5156d"
+    },
+    "change": "Removed extra empty spacer before Appendix A section; preserved body, dataset and replacement register. Earlier R02 fixes removed title border, moved section 3 to a fresh page and widened KPI 7.1 table.",
+    "technical": "PASS; DOCX ZIP/XML valid; 13 Blueprint sections; 49/49 contiguous register fact IDs; key formulas independently recalculated.",
+    "visual": "PASS_LAYOUT_VISUAL; 21-page PDF. R03 pages 1-13 pixel-identical to reviewed R02; pages 14-21 body pixels match reviewed R02 pages 15-22 with footer excluded; new R03 p14 directly inspected.",
+    "semantic": "PASS exact SHA, OpenCode CLI v2.0.29 opencode/beam-free; original output and verbatim review preserved.",
+    "real_evidence": "SAMPLE_SYNTHETIC_ONLY; REAL UNKNOWN/HOLD",
+    "limitation": "Reviewer did not inspect visual layout (separate visual receipt); 0066 R01 candidate SHA was not independently verified because file absent."
   }
 }
