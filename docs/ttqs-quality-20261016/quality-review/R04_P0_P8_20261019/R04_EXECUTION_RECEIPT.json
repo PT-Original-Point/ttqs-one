@@ -35,7 +35,17 @@
     "old_word_processes_counted_as_writer": false,
     "unsynced_stable_work": "0054_R14 safe-review correction; 0064_R05 visual finding receipt; 0064_R06 fixed candidate/QA; 0070_R03 package-manifest reconciliation; 0070_R01 loose superseded local outputs preserved but not staged",
     "active_writer_pid": 17152,
-    "active_writer_started_at_local": "2026-10-19T05:42:37+08:00"
+    "active_writer_started_at_local": "2026-10-19T05:42:37+08:00",
+    "initial_snapshot_role": "Historical pre-recovery snapshot; do not treat its R02 RUNNING owner as current.",
+    "current_recovery_snapshot": {
+      "observed_pr_head": "7efacd6c332a79b2e049a1f7ca1533d9acb44ec3",
+      "pr_state": "OPEN_DRAFT",
+      "active_0072_writer": "NONE; R04 CLI writer exited 0",
+      "active_exact_sha_reviewer": "NONE; final 3327fdc review exited 0",
+      "OpenCode process": "No active Writer/reviewer process observed at final check; long-lived service is not an owner",
+      "antigravity": "PAUSED_FOR_THIS_ROUTE; no Computer Use or permission bypass",
+      "current_unsynced_stable_work": "0072 R01 final candidate package and R04 progress/readback receipts"
+    }
   },
   "P1_status_reconciliation": {
     "0057_R07": {
@@ -87,6 +97,22 @@
       "antigravity_flag_receipt": "dangerously_skip_permissions=true in preserved historical retry receipt",
       "actual_original_argv": "UNKNOWN; no native argv record verified",
       "docx_rebuild": false
+    },
+    "0072_R01": {
+      "doc_id": "0072",
+      "requirement_id": "I16-E03",
+      "official_checkbox_serial": "078",
+      "status": "CANDIDATE_TECHNICAL_PASS_VISUAL_PASS_EXACT_SHA_SEMANTIC_PASS_NOT_FORMALLY_ACCEPTED",
+      "current_docx_sha256": "3327fdc5200770dde695fc822eca3653feed0f562b156d4529e89cdecbdf052e",
+      "body_sha256": "e76818aa55c14e49eff843f80aacbb3cc0cea1b9110526bd38e5a004590ac2e0",
+      "replacement_register_sha256": "abbbc0c0f8f1644d883bc8bab456ab7764cd8354e7c26cdaac8eb482b17525b2",
+      "prior_94005e3_result": "PARTIAL; only 14 inline body labels below 10.5pt",
+      "correction": "Typography only; body semantic text unchanged.",
+      "current_semantic_text_sha256": "16aeaae9e4055b22585bed0aacf2228f44b53896a6fe293de18a89cc54115788",
+      "technical_receipt": "quality-review/0072_R01/evidence/technical_review_3327fdc.json",
+      "visual_receipt": "quality-review/0072_R01/evidence/visual_review_3327fdc.json",
+      "independent_review": "quality-review/0072_R01/evidence/independent_semantic_review_3327fdc.md",
+      "review_scope_note": "Reviewer used supplied visual receipt; direct visual inspection is recorded separately."
     }
   },
   "P2_worker_routes": {
@@ -143,6 +169,15 @@
       "candidate_body_created": false,
       "provider_error": false,
       "incident_receipt": "quality-review/0072_R01/evidence/opencode_writer_R01_context_loop.json"
+    },
+    "current_0072_recovery": {
+      "opencode_cli": "v2.0.29; requested free model opencode/deepseek-v4.1-flash-free for R02/R03/R04; all returned exit 0 and zero stderr; provider model identity not separately attested",
+      "R01": "300-second wrapper timeout after context churn; no body; no provider error indicated; not a 3-error/3-repair route failure",
+      "active_writer": "NONE",
+      "antigravity": "PAUSED_FOR_THIS_ROUTE; no new dispatch",
+      "computer_use": "NOT_USED",
+      "permission_bypass": "NOT_USED",
+      "raw_outputs": "R02/R03/R04 public transcripts redacted for transient IDs; original raw local hashes recorded in worker/worker_history_redaction_manifest.json"
     }
   },
   "P3_document_action": {
@@ -165,7 +200,7 @@
     }
   },
   "P4_sync": {
-    "status": "PRIOR_SYNC_VERIFIED_AT_8c5d641; R01 interruption diagnostic and R02 active-writer status pending sync",
+    "status": "PENDING_0072_PACKAGE_FIRST_PUSH_AND_READBACK",
     "last_verified_commit": "b6c019da4a3cf3796fbd9de731aeb7703a1ac896",
     "remote_head_at_readback": "8c5d64116f0d9c2c30f66dfdc00d2dbd26b852f8",
     "readback_at_local": "2026-10-19T05:35:53+08:00",
@@ -175,55 +210,35 @@
     "mismatches": 0,
     "readback_manifest_path": "quality-review/R04_P0_P8_20261019/evidence/remote_readback_b6c019d_R04.json",
     "readback_manifest_sha256": "4189a68c481ffcf0abb692e062fac3f9a0e25a018cbf62b9b5b93a885873107a",
-    "prior_0067_readback_manifest_sha256": "4ea0ad1f66d3ef6c848b24387d3743480074666dce662719db092658ba7e97b3"
+    "prior_0067_readback_manifest_sha256": "4ea0ad1f66d3ef6c848b24387d3743480074666dce662719db092658ba7e97b3",
+    "remote_head_at_preparation": "7efacd6c332a79b2e049a1f7ca1533d9acb44ec3",
+    "new_docx_sha256": "3327fdc5200770dde695fc822eca3653feed0f562b156d4529e89cdecbdf052e"
   },
   "P5_schedule_and_cost": {
-    "existing_hourly_task": "UNCHANGED; this turn was invoked with existing hourly automation id ttqs-one-hourly-quality-goal-resume",
+    "existing_hourly_task": "UNCHANGED; this wake is on the existing bound thread task",
     "new_schedulers_created": 0,
     "next_run_time": "UNKNOWN_FROM_READBACK",
     "codex_native_usage": "UNKNOWN",
-    "token_cost_note": "OpenCode CLI review reports are worker-local and not Codex/provider billing"
+    "token_cost_note": "OpenCode CLI review reports are worker-local and not Codex/provider billing",
+    "scheduler_changes_this_recovery": 0
   },
   "P6_next_ready": {
-    "doc_id": "0072",
-    "requirement_id": "I16-E03",
-    "official_checkbox_serial": "078",
-    "status": "SOURCE_BOUND_WRITER_ACTIVE_R02",
-    "queue_state": "One isolated 0072 Writer active; R01 stopped after no body and context churn; no duplicate Writer.",
-    "candidate_path": "quality-review/0072_R01/candidate/0072_R01.docx",
-    "candidate_sha256": null,
-    "blueprint_row": 72,
-    "blueprint_row_sha256": "2349093657e67140c2cb2721fbe8b95257492ca40bd1182cb3161288d826ce5d",
-    "active_worker": "OpenCode CLI v2.0.29 build agent; requested model opencode/deepseek-v4.1-flash-free; isolated R02 packet hash 5fe032860de98262af7ccc2ce9652e27197f4c954d2915dc99ee0e435fdde264; provider identity not separately attested.",
-    "next_action": "Collect the single R02 return; validate source mapping, body completeness, replacement register and arithmetic; build one DOCX; technical and full-page visual QA; then independent exact-SHA semantic review. Do not dispatch a second Writer.",
-    "prior_lane_blockers": {
-      "0068": {
-        "candidate_sha256": "a6b9c3c4110ab15673ee365ee8d75f59770ab88f86f5760b723958dd63c3e8ae",
-        "semantic": "PASS",
-        "technical": "PASS",
-        "visual": "BLOCKED after three stalled Word export routes; no DOCX rebuild; no compliant alternate renderer found."
-      },
-      "0069": {
-        "candidate_sha256": "b701604ab634d42d1638ea0065cbbac39bb40e631d2716a572bc5422494e53bd",
-        "semantic": "PASS_WITH_MINOR_FINDINGS",
-        "technical": "PASS",
-        "visual": "PENDING; old Muse 429 work-owner record is historical, not a live writer."
-      },
-      "0070": {
-        "candidate_sha256": "55af406663f29e6a3ea8fb644d61c029c74df42934166e6076a991fdcd895bba",
-        "status": "exact-SHA semantic, technical and 22-page visual PASS; already tracked in GitHub; no rebuild."
-      }
-    }
+    "doc_id": "0073",
+    "requirement_id": "I17A-E01",
+    "official_checkbox_serial": "080",
+    "queue_state": "PENDING in the existing BUILD_QUEUE; no active Writer observed; historical route assignment is not a live owner",
+    "selection": "Next sequential source-bound READY after 0072 candidate is synced; first verify no package/candidate/worker exists and read its current official requirement/Unique Blueprint row 73.",
+    "next_action": "Inspect current 0073 local and remote artifacts, then prepare its source-bound sample packet and dispatch at most one OpenCode v2 free-model Writer if no live owner."
   },
   "P7_tests": {
     "T1": "PASS_EXPECTED_NOOP_FIXTURE_ONLY",
     "T2": "PASS_ROUTE_ISOLATED_FROM_HISTORICAL_0055_R04",
     "T3": "PASS_EXACT_SHA_REUSE_NO_NEW_REVIEW_CALLS",
-    "T4": "PASS: 0067 package 89/89 exact at 42626bcc; R04 readback receipt at 927f360 is remotely LF-normalized equal; 0072 source/route sync 15/15 matched (exact=10, EOL-only=5, mismatches=0) at b6c019da4a3cf3796fbd9de731aeb7703a1ac896.",
-    "T5": "PASS_0070_R03_SAMPLE_SYNTHETIC_BOUNDARY; 0071_OLD_CANDIDATE_INVALID"
+    "T4": "PENDING_0072_PACKAGE_PUSH_AND_RAW_GITHUB_BLOB_READBACK; historical 0064 readback remains PASS.",
+    "T5": "PASS_0072_LOCAL_EXACT_SHA_SAMPLE_SYNTHETIC_REAL_BOUNDARY; candidate only, REAL evidence UNKNOWN/HOLD, formal acceptance NOT_GRANTED."
   },
-  "P8_status": "R01 0072 Writer was interrupted after 21 tool calls spent reading neighboring 0070 materials without creating a body; no provider error, and the route remains active. One source-bound R02 Writer is running from an isolated sandbox on DeepSeek V4.1 Flash Free, with no Computer Use or permission bypass. No 0072 DOCX exists yet; next action is recover R02 body, build and independently verify the candidate.",
-  "updated_at_local": "2026-10-19T05:43:23+08:00",
+  "P8_status": "0072 R01 exact candidate 3327fdc5200770dde695fc822eca3653feed0f562b156d4529e89cdecbdf052e: technical PASS, visual PASS within recorded 40-page contact-sheet plus 12-page full-size scope, independent exact-SHA semantic PASS. Candidate only; REAL evidence UNKNOWN/HOLD and formal acceptance NOT_GRANTED. First 0072 package push and GitHub readback are pending.",
+  "updated_at_local": "2026-10-19T06:13:49.4004129+08:00",
   "source_contract_blobs": {
     "01_HUMAN_MISSION_AND_ACCEPTANCE.md": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e",
     "02_GENRE_WRITING_MANUAL.md": "4ff863d9f534b6359fc1c7c1685bd8cce02da886",
@@ -254,34 +269,51 @@
     "doc_id": "0072",
     "requirement_id": "I16-E03",
     "official_checkbox_serial": "078",
-    "revision": "R01",
-    "status": "SOURCE_PACKET_VERIFIED; R01_INTERRUPTED_CONTEXT_CHURN; R02_WRITER_RUNNING; DOCX_NOT_BUILT",
-    "official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
-    "official_page5_exact_extract_sha256": "c48349f1a90957e4d5ab7c349403964a8813b6b9f566aada533965d6bcc212e8",
-    "checkbox_count": "157 total; 078 exact item; 079 is generic Other; 080 maps to 0073/I17A-E01",
-    "crosswalk_sha256": "1ddfbb608bcad25170683ddb42a1dbb27bafa6f1f35ff0498f1b8d75b24f0679",
-    "blueprint_current_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
-    "blueprint_row": 72,
-    "blueprint_raw_line_sha256": "2349093657e67140c2cb2721fbe8b95257492ca40bd1182cb3161288d826ce5d",
-    "source_manifest_path": "quality-review/0072_R01/inputs/SOURCE_MANIFEST_R01.json",
-    "source_manifest_sha256": "56850a1fc7bd9ffba678e56cb235924888566eecfeff534b7b4bd95d4f9c24d6",
-    "writer_task_sha256": "a9ce8b3985ad5be2e761473b64e0aca75e22fbba9cf48aa1aca40c2b9f6d1bdb",
-    "docx_sha256": null,
-    "formal_acceptance": "NOT_GRANTED",
+    "revision": "R01 candidate built from writer body R04 plus deterministic exact-fact QA register repair",
+    "status": "CANDIDATE_TECHNICAL_PASS_VISUAL_PASS_EXACT_SHA_SEMANTIC_PASS_NOT_FORMALLY_ACCEPTED",
+    "docx_sha256": "3327fdc5200770dde695fc822eca3653feed0f562b156d4529e89cdecbdf052e",
+    "body_sha256": "e76818aa55c14e49eff843f80aacbb3cc0cea1b9110526bd38e5a004590ac2e0",
+    "replacement_register_sha256": "abbbc0c0f8f1644d883bc8bab456ab7764cd8354e7c26cdaac8eb482b17525b2",
+    "replacement_register_rows": 116,
+    "pages": 40,
     "writer_attempts": [
+      "R01 interrupted after 300s/no body",
+      "R02 exit 0; body 8472e6617f971fb041beef47ac2468bae00605d8b21f45b9ac983c67449e4e3d",
+      "R03 exit 0; body 429198331a3c81d586d5c08c01ffc279d99bd710329bed528004e7b8ee6c2331",
+      "R04 exit 0; body a485f656da9e111a7a10b2b287ec6afbee5980a4e2d1c2c37a305f8ef461bff9",
+      "R04 exact-fact QA body e76818aa55c14e49eff843f80aacbb3cc0cea1b9110526bd38e5a004590ac2e0"
+    ],
+    "semantic_review_history": [
       {
-        "attempt": "R01",
-        "state": "INTERRUPTED_FOR_CONTEXT_CHURN",
-        "body_created": false,
-        "diagnostic_sha256": "f5f5a75bf26f957ea5d30e6917c0ea69ff1e0d912e7887373918c196a4bb716b"
+        "sha256": "94005e3b37b998b0c914f613d41d18d918250fb26ee9c6d94c8d8bd5c5f81040",
+        "result": "PARTIAL_TYPOGRAPHY_ONLY"
       },
       {
-        "attempt": "R02",
-        "state": "RUNNING",
-        "packet_sha256": "5fe032860de98262af7ccc2ce9652e27197f4c954d2915dc99ee0e435fdde264",
-        "cwd": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0072_R01\\opencode_isolated_R02",
-        "output": "candidate/0072_R01_body.md"
+        "sha256": "3327fdc5200770dde695fc822eca3653feed0f562b156d4529e89cdecbdf052e",
+        "result": "PASS_SEMANTIC_EXACT_SHA"
       }
-    ]
+    ],
+    "technical": "PASS; DOCX ZIP valid; body min 10.5 pt; tables min 9.5 pt; no empty tables; formulas/identity bound in receipts",
+    "visual": "PASS_LAYOUT_VISUAL; all 40 pages contact-sheet reviewed; 12 pages full-size reviewed; scope recorded",
+    "real_evidence": "UNKNOWN/HOLD; SAMPLE/SYNTHETIC candidate only",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "R04_recovery_closeout": {
+    "command_state": "DISCOVERED_APPLICABLE_APPLIED; remote verification pending",
+    "pr_live_state": {
+      "number": 92,
+      "state": "OPEN_DRAFT",
+      "head_sha": "7efacd6c332a79b2e049a1f7ca1533d9acb44ec3",
+      "newer_command_comment": false
+    },
+    "p0_os_and_local_remote_alignment": "VERIFIED locally; no active 0072 writer/reviewer; previous 0054/0064/0070 exact candidate reconciliation retained in local_remote_reconciliation_7efacd6.json; 0072 package now stable and pending push",
+    "p1_acceptance_status_correction": "APPLIED; superseded 94005e3 PARTIAL typography finding is closed only on new exact SHA; candidate and formal acceptance remain distinct",
+    "p2_safe_cli_recovery": "APPLIED; OpenCode V2 DeepSeek free requested; R01 timeout/no-body recorded, R02-R04 successful; Antigravity remains paused, no Computer Use/bypass",
+    "p3_worker_return": "APPLIED; R02/R03/R04 bodies, patch packets, redacted complete outputs and hashes preserved; 116-row register extracted",
+    "p4_github_sync": "PENDING_FIRST_0072_PACKAGE_PUSH_AND_READBACK",
+    "p5_scheduler_and_cost": "VERIFIED unchanged; zero new schedulers; one existing hourly task; model calls recorded as nonzero",
+    "p6_next_ready": "0073 / I17A-E01 / checkbox 080, after sync and fresh no-writer/package check",
+    "p7_five_tests": "T1 fixture-only PASS; T2 route isolation PASS from prior observed incident; T3 exact-SHA reuse/no rerun PASS; T4 historical 0064 readback PASS and current 0072 pending; T5 0072 SAMPLE/REAL boundary PASS locally.",
+    "p8_result": "Candidate stays unaccepted; continue after GitHub readback; do not pause recurrence."
   }
 }

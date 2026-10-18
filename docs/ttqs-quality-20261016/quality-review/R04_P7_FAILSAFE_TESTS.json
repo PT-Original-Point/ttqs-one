@@ -1,7 +1,7 @@
 {
   "project_id": "TTQS_ONE",
   "source_contract_sha256": "3330de8de26275c5e51f299982d87c250bb7e030c9838badafc369e26ee29c35",
-  "observed_branch_head": "0791d956c5dd624c7a5e79703195d7871c11d87e",
+  "observed_branch_head": "7efacd6c332a79b2e049a1f7ca1533d9acb44ec3",
   "tests": [
     {
       "id": "T1_NO_MATERIAL_DELTA",
@@ -78,42 +78,72 @@
       "docx_path": "docs/ttqs-quality-20261016/quality-review/0064_R06/0064_R06.docx",
       "docx_sha256": "f83eeda42589da66c23918d522ad983178a252da9b6dd2240b725e9c9cfb50a1",
       "docx_bytes": 148387,
-      "note": "All 79 paths changed by the R04 sync commit were read from fetched origin branch; text files compare after LF normalization, all binaries compare raw. DOCX SHA-256 local and remote are identical."
+      "note": "All 79 paths changed by the R04 sync commit were read from fetched origin branch; text files compare after LF normalization, all binaries compare raw. DOCX SHA-256 local and remote are identical.",
+      "current_0072_package": {
+        "status": "PENDING_FIRST_PACKAGE_PUSH",
+        "docx_sha256": "3327fdc5200770dde695fc822eca3653feed0f562b156d4529e89cdecbdf052e",
+        "package_manifest": "docs/ttqs-quality-20261016/quality-review/0072_R01/evidence/PACKAGE_MANIFEST_0072_R01.json",
+        "readback": "PENDING"
+      }
     },
     {
       "id": "T5_SAMPLE_REAL_BOUNDARY",
-      "execution": "LOCAL_EXACT_DOCX_TEXT_EXTRACTION_R03",
-      "result": "PASS_CURRENT_0070_BOUNDARY; 0071_REMAINS_INVALID",
-      "0070": {
-        "sha256": "55af406663f29e6a3ea8fb644d61c029c74df42934166e6076a991fdcd895bba",
-        "markers": {
-          "SAMPLE": 31,
-          "SYNTHETIC": 6,
-          "UNKNOWN": 26,
-          "HOLD": 43
+      "execution": "LOCAL_EXACT_DOCX_AND_REPLACEMENT_REGISTER_CHECK",
+      "result": "PASS_LOCAL_SAMPLE_REAL_BOUNDARY",
+      "artifact_sha256": "3327fdc5200770dde695fc822eca3653feed0f562b156d4529e89cdecbdf052e",
+      "evidence": {
+        "id": "T5_SAMPLE_REAL_BOUNDARY",
+        "execution": "LOCAL_EXACT_DOCX_AND_REPLACEMENT_REGISTER_CHECK",
+        "doc_id": "0072",
+        "requirement_id": "I16-E03",
+        "official_checkbox_serial": "078",
+        "artifact_sha256": "3327fdc5200770dde695fc822eca3653feed0f562b156d4529e89cdecbdf052e",
+        "checks": {
+          "identity_binding": true,
+          "explicit_no_completed_audit_claim": true,
+          "filled_demo_facts_labeled_sample_synthetic": true,
+          "real_unverified_facts_hold": true,
+          "case_ids": [
+            "SYN-0072-CASE-01",
+            "SYN-0072-CASE-02",
+            "SYN-0072-CASE-03",
+            "SYN-0072-CASE-04"
+          ],
+          "m3_records": 20,
+          "all_20_record_ids": true,
+          "replacement_register_rows": 116,
+          "replacement_register_rows_match_20_record_population": true,
+          "replacement_register_hash": "abbbc0c0f8f1644d883bc8bab456ab7764cd8354e7c26cdaac8eb482b17525b2",
+          "calendar_day_differences": [
+            14,
+            10,
+            14,
+            30
+          ],
+          "formula_recalculation": {
+            "M1": "4/4=100%",
+            "M2": "3/4=75%",
+            "M3": "18/20=90%",
+            "M4": "68/4=17 days"
+          },
+          "package_state_not_formally_accepted": true,
+          "candidate_sha256": "3327fdc5200770dde695fc822eca3653feed0f562b156d4529e89cdecbdf052e",
+          "sample_synthetic_real_markers": {
+            "SAMPLE": 73,
+            "SYNTHETIC": 71,
+            "UNKNOWN/HOLD": 37,
+            "REAL": 12
+          },
+          "result": "PASS_LOCAL_SAMPLE_REAL_BOUNDARY"
         },
-        "zip_test": "PASS",
-        "candidate_state": "SAMPLE_SYNTHETIC_CANDIDATE_ONLY"
-      },
-      "0071_old_candidate": {
-        "sha256": "334ed51f437331605fa291c153a6726c1fc05a74d29cf057ad66747512c43065",
-        "markers": {
-          "SAMPLE": 0,
-          "SYNTHETIC": 0,
-          "UNKNOWN": 0,
-          "HOLD": 0
+        "other_history_retained": {
+          "0070": "SAMPLE/SYNTHETIC boundary receipt unchanged",
+          "0071": "historical invalid candidate remains invalid; no overwrite"
         },
-        "boundary_status": "FAIL_NO_SAMPLE_SYNTHETIC_UNKNOWN_HOLD_MARKERS",
-        "queue_status": "PENDING_WITH_INVALID_UNATTESTED_MODEL_REVIEW",
-        "not_current_0071_candidate": "historical integrated candidate from Oct 3 queue record"
+        "read_at_local": "2026-10-19T06:11:04.170261+08:00"
       },
-      "queue_after_correction": {
-        "source": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\BUILD_QUEUE.json",
-        "sha256": "a7f1b942c5e403a820209739014e186cb700e8eeeff24951ec51ad4d9baceb42",
-        "0071_state": "PENDING",
-        "external_review_status": "INVALID_UNATTESTED_MODEL_IDENTITY"
-      }
+      "note": "This verifies the candidate sample/real boundary; formal acceptance remains a separate state."
     }
   ],
-  "read_at_local": "2026-10-19T04:45:07+08:00"
+  "read_at_local": "2026-10-19T06:13:49.2084686+08:00"
 }
