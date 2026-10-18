@@ -1,7 +1,7 @@
 {
   "project_id": "TTQS_ONE",
   "source_contract_sha256": "3330de8de26275c5e51f299982d87c250bb7e030c9838badafc369e26ee29c35",
-  "observed_branch_head": "ac9a13e394fcb25414d69a6f538f95c700cc26c9",
+  "observed_branch_head": "0791d956c5dd624c7a5e79703195d7871c11d87e",
   "tests": [
     {
       "id": "T1_NO_MATERIAL_DELTA",
@@ -66,8 +66,19 @@
     },
     {
       "id": "T4_REMOTE_BYTE_READBACK",
-      "execution": "NOT_YET_RUN",
-      "result": "PENDING_UNTIL_PUSH_AND_REMOTE_BYTE_READBACK"
+      "execution": "GIT_FETCH_ORIGIN_AND_RAW_GIT_BLOB_SHA256",
+      "result": "PASS_REMOTE_BYTE_READBACK",
+      "verified_commit": "0791d956c5dd624c7a5e79703195d7871c11d87e",
+      "remote_head": "0791d956c5dd624c7a5e79703195d7871c11d87e",
+      "readback_at_local": "2026-10-19T04:49:16+08:00",
+      "changed_paths": 79,
+      "text_lf_normalized_matches": 48,
+      "binary_raw_byte_matches": 31,
+      "mismatches": 0,
+      "docx_path": "docs/ttqs-quality-20261016/quality-review/0064_R06/0064_R06.docx",
+      "docx_sha256": "f83eeda42589da66c23918d522ad983178a252da9b6dd2240b725e9c9cfb50a1",
+      "docx_bytes": 148387,
+      "note": "All 79 paths changed by the R04 sync commit were read from fetched origin branch; text files compare after LF normalization, all binaries compare raw. DOCX SHA-256 local and remote are identical."
     },
     {
       "id": "T5_SAMPLE_REAL_BOUNDARY",

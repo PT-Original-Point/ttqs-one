@@ -112,15 +112,19 @@
     }
   },
   "P4_sync": {
-    "status": "LOCAL_STABLE_UNSYNCED",
-    "planned_exact_paths": [
-      "quality-review/0054_R14/{PROGRESS.json,README.md,artifact_manifest.json,review/opencode_safe_R02/}",
-      "quality-review/0064_R05/{MANIFEST_R05.json,README_R05_AUDIT.md,evidence/visual_review_R05_supplemental_direct.json}",
-      "quality-review/0064_R06/",
-      "quality-review/0070_R01/evidence/package_manifest_R03.json",
-      "quality-review/R04_P7_FAILSAFE_TESTS.json",
-      "quality-review/R04_P0_P8_20261019/{0059_R02_body_reconciliation.json,R04_EXECUTION_RECEIPT.json}"
-    ]
+    "status": "REMOTE_SYNC_VERIFIED",
+    "commit": "0791d956c5dd624c7a5e79703195d7871c11d87e",
+    "remote_head": "0791d956c5dd624c7a5e79703195d7871c11d87e",
+    "remote_readback_at_local": "2026-10-19T04:49:16+08:00",
+    "changed_paths": 79,
+    "text_lf_normalized_matches": 48,
+    "binary_raw_byte_matches": 31,
+    "mismatches": 0,
+    "docx_remote_readback": {
+      "path": "quality-review/0064_R06/0064_R06.docx",
+      "sha256": "f83eeda42589da66c23918d522ad983178a252da9b6dd2240b725e9c9cfb50a1",
+      "bytes": 148387
+    }
   },
   "P5_schedule_and_cost": {
     "existing_hourly_task": "UNCHANGED; this turn was invoked with existing hourly automation id ttqs-one-hourly-quality-goal-resume",
@@ -133,20 +137,28 @@
     "doc_id": "0067",
     "requirement_id": "I15-E03",
     "official_checkbox_serial": "073",
-    "current_source": "Current 157 blueprint row 073 exactly names I15-E03; archived R04 runtime source bundle identifies official table p.5 and 142 crosswalk doc_id 0067. Source binaries/hashes still require current cross-check into a fresh package.",
-    "historical_queue_state": "PARKED_ROOT_CAUSE_REPAIR; 11 attempts, 3 repair epochs; churn fuse tripped 2026-10-04 for repeated audits without new feedback.",
-    "historical_current_candidate_sha256": "a20342c25a00a6b6a9c3412b61e52a3c865cd8361ce6778d5eb99a9ac50e72d1",
-    "known_failure_classes": [
+    "status": "READY_FOR_FRESH_SOURCE_BOUND_CANDIDATE_WORK",
+    "official_source_readback": {
+      "pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+      "pdf_page_index": 5,
+      "printed_page": "5",
+      "exact_requirement_text": "訓練執行評估指標分析及相關統計分析。",
+      "authoritative_page5_read": true
+    },
+    "official_blueprint_row_073_blob": "8c2bbe7ca9dcbb03088a48934b9e57e7147ede63",
+    "current_142_crosswalk_row_source": "historical runtime R01 crosswalk; file SHA-256 1ddfbb608bcad25170683ddb42a1dbb27bafa6f1f35ff0498f1b8d75b24f0679; row I15-E03 -> deliverable 0067, count 1",
+    "existing_unique_blueprint_row": "R04 current row 0067/I15-E03; normalized line SHA-256 c4f3e23c89388a0fd22f668cc4f28e39d03b37a2bd9c0fc6ade9ca7ef264d59c; rereconcile against latest official and Human contracts before use",
+    "historical_writer_state": "PARKED_ROOT_CAUSE_REPAIR; 11 attempts, 3 epochs, old candidate sha a20342c25a00a6b6a9c3412b61e52a3c865cd8361ce6778d5eb99a9ac50e72d1; do not reuse old body",
+    "known_defects": [
       "blueprint filename binding",
-      "sample facts missing register entries",
-      "build receipt provenance missing",
-      "synthetic fact register mismatches F001-F008",
-      "first-page use context missing",
+      "sample facts missing replacement-register entries",
+      "source provenance missing",
+      "F001-F008 sample fact register mismatches",
+      "first-page 30-second user/timing/how context absent",
       "document-control strip incomplete",
-      "invalid register preview"
+      "invalid replacement-register preview"
     ],
-    "status": "FRESH_SOURCE_BOUND_REPAIR_ACTIONABLE; old body prohibited as template",
-    "next_action": "Reconcile current source page 5 + current official row 073 + R04 crosswalk, create a fresh unique Blueprint and complete synthetic replacement register; then one OpenCode v2 writer deliverable."
+    "next_action": "Create a fresh source-bound 0067 unique blueprint/register packet from current source page 5, row 073 and verified crosswalk; then one OpenCode v2 writer output. Preserve all old failure evidence."
   },
   "P7_tests": {
     "T1": "PASS_EXPECTED_NOOP_FIXTURE_ONLY",
@@ -155,8 +167,8 @@
     "T4": "PENDING_AFTER_PUSH",
     "T5": "PASS_0070_R03_SAMPLE_SYNTHETIC_BOUNDARY; 0071_OLD_CANDIDATE_INVALID"
   },
-  "P8_status": "IN_PROGRESS; local stable evidence prepared; remote push/readback still required",
-  "updated_at_local": "2026-10-19T04:45:07+08:00",
+  "P8_status": "R04 verified and synced; 0067 is the next READY candidate-work lane, with historical parked failures isolated; no formal acceptance or REAL evidence asserted.",
+  "updated_at_local": "2026-10-19T04:49:16+08:00",
   "source_contract_blobs": {
     "01_HUMAN_MISSION_AND_ACCEPTANCE.md": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e",
     "02_GENRE_WRITING_MANUAL.md": "4ff863d9f534b6359fc1c7c1685bd8cce02da886",
