@@ -3,7 +3,7 @@
   "project_id": "TTQS_ONE",
   "command": "TTQS_ONE_CODEX_NATIVE_WORKER_RECOVERY_SYNC_R04",
   "source_attachment_sha256": "3330de8de26275c5e51f299982d87c250bb7e030c9838badafc369e26ee29c35",
-  "updated_at_local": "2026-10-19T07:04:08.129324+08:00",
+  "updated_at_local": "2026-10-19T07:07:54.4561786+08:00",
   "repo": "PT-Original-Point/ttqs-one",
   "branch": "work/ttqs-one-document-quality-contract-20261016",
   "pr": 92,
@@ -39,14 +39,20 @@
     "T1": "PASS fixture-only no-delta classification",
     "T2": "PASS historical empty/denied exit-0 fixture maps to NO_DELIVERABLE; Antigravity lane remains isolated and other READY work continued",
     "T3": "PASS one R08 exact-SHA review; reuse receipt; zero duplicate reviewer dispatches or DOCX changes after review",
-    "T4": "PENDING actual push/fetch blob SHA-256 readback",
+    "T4": "PASS; fetched origin commit 1f51cef86dec101c6eb524fd4b9e133126a2ea50; 66 paths checked, 28 byte-exact, 38 EOL-normalized only, 0 mismatches; DOCX SHA matched",
     "T5": "PASS SAMPLE/SYNTHETIC and REAL=UNKNOWN/HOLD boundary; candidate not promoted"
   },
   "github_sync": {
-    "status": "PENDING_PUSH_AND_READBACK",
+    "status": "REMOTE_SYNC_VERIFIED",
     "package_manifest": "docs/ttqs-quality-20261016/quality-review/0073_R01/evidence/PACKAGE_MANIFEST_R08.json",
     "manifest_sha256": "455656b61c6d45aeaeca22948cde212000450ff2472e577c057a07c755a72fa7",
-    "planned_candidate_docx_sha256": "a454cf0691a53173ae7838c9cd84522cf419d1d940cb63a7ddc168b497bc9b13"
+    "planned_candidate_docx_sha256": "a454cf0691a53173ae7838c9cd84522cf419d1d940cb63a7ddc168b497bc9b13",
+    "readback_receipt": "docs/ttqs-quality-20261016/quality-review/0073_R01/evidence/REMOTE_READBACK_R08.json",
+    "readback_commit": "1f51cef86dec101c6eb524fd4b9e133126a2ea50",
+    "readback_paths_checked": 66,
+    "readback_byte_exact": 28,
+    "readback_eol_normalized_only": 38,
+    "readback_mismatches": 0
   },
   "next_ready_after_readback": "0074 / I17A-E02 / checkbox 081, subject to fresh queue and writer check",
   "formal_acceptance": "NOT_GRANTED"

@@ -5,7 +5,7 @@
   "requirement_id": "I17A-E01",
   "official_checkbox_serial": "080",
   "candidate_docx_sha256": "a454cf0691a53173ae7838c9cd84522cf419d1d940cb63a7ddc168b497bc9b13",
-  "updated_at_local": "2026-10-19T07:03:06.029572+08:00",
+  "updated_at_local": "2026-10-19T07:07:54.4561786+08:00",
   "tests": {
     "T1_no_material_delta": {
       "mode": "fixture_only",
@@ -42,7 +42,14 @@
     },
     "T4_remote_readback": {
       "mode": "actual",
-      "status": "PENDING_PUSH_AND_FETCH",
+      "status": "PASS",
+      "readback_receipt": "docs/ttqs-quality-20261016/quality-review/0073_R01/evidence/REMOTE_READBACK_R08.json",
+      "readback_commit": "1f51cef86dec101c6eb524fd4b9e133126a2ea50",
+      "paths_checked": 66,
+      "byte_exact": 28,
+      "eol_normalized_only": 38,
+      "mismatches": 0,
+      "candidate_docx_remote_sha256": "a454cf0691a53173ae7838c9cd84522cf419d1d940cb63a7ddc168b497bc9b13",
       "expected": "Fetch Git blob bytes and compare SHA-256 for candidate DOCX and all manifest-listed artifacts"
     },
     "T5_real_source_not_verified": {
@@ -55,7 +62,7 @@
       "status": "PASS"
     }
   },
-  "overall_before_sync": "4/4 complete tests PASS; T4 pending actual remote push/readback",
+  "overall_after_sync": "5/5 tests PASS; actual remote fetch/readback verified with 0 mismatches",
   "formal_acceptance": "NOT_GRANTED",
   "real_evidence": "UNKNOWN/HOLD"
 }
