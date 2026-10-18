@@ -1,7 +1,7 @@
 {
   "project_id": "TTQS_ONE",
   "source_contract_sha256": "3330de8de26275c5e51f299982d87c250bb7e030c9838badafc369e26ee29c35",
-  "observed_branch_head": "7efacd6c332a79b2e049a1f7ca1533d9acb44ec3",
+  "observed_branch_head": "6e22ec932865567b969350f82d97a1652151c531",
   "tests": [
     {
       "id": "T1_NO_MATERIAL_DELTA",
@@ -67,7 +67,7 @@
     {
       "id": "T4_REMOTE_BYTE_READBACK",
       "execution": "GIT_FETCH_ORIGIN_AND_RAW_GIT_BLOB_SHA256",
-      "result": "PASS_REMOTE_BYTE_READBACK",
+      "result": "PASS_HISTORICAL_0064_AND_CURRENT_0072",
       "verified_commit": "0791d956c5dd624c7a5e79703195d7871c11d87e",
       "remote_head": "0791d956c5dd624c7a5e79703195d7871c11d87e",
       "readback_at_local": "2026-10-19T04:49:16+08:00",
@@ -80,10 +80,17 @@
       "docx_bytes": 148387,
       "note": "All 79 paths changed by the R04 sync commit were read from fetched origin branch; text files compare after LF normalization, all binaries compare raw. DOCX SHA-256 local and remote are identical.",
       "current_0072_package": {
-        "status": "PENDING_FIRST_PACKAGE_PUSH",
+        "status": "PASS_GITHUB_RAW_SHA256_READBACK",
         "docx_sha256": "3327fdc5200770dde695fc822eca3653feed0f562b156d4529e89cdecbdf052e",
         "package_manifest": "docs/ttqs-quality-20261016/quality-review/0072_R01/evidence/PACKAGE_MANIFEST_0072_R01.json",
-        "readback": "PENDING"
+        "readback": "PASS",
+        "verified_commit": "6e22ec932865567b969350f82d97a1652151c531",
+        "verified_paths": 107,
+        "exact_raw_byte_matches": 105,
+        "eol_normalized_matches": 2,
+        "mismatches": 0,
+        "readback_manifest": "docs/ttqs-quality-20261016/quality-review/R04_P0_P8_20261019/evidence/remote_readback_6e22ec9_0072.json",
+        "readback_manifest_sha256": "00e8e4014776b5ce52bdf529cba906fceda4bc46fe697dec359f3894eb0684dd"
       }
     },
     {
@@ -145,5 +152,5 @@
       "note": "This verifies the candidate sample/real boundary; formal acceptance remains a separate state."
     }
   ],
-  "read_at_local": "2026-10-19T06:13:49.2084686+08:00"
+  "read_at_local": "2026-10-19T06:18:18.8175429+08:00"
 }
