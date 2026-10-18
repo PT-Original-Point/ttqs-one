@@ -58,18 +58,15 @@
     "sample_real_boundary": "Complete SAMPLE/SYNTHETIC example and 70-row replacement register; REAL=UNKNOWN/HOLD; no association approval, actual event or formal acceptance claimed."
   },
   "P4_sync": {
-    "status": "DOCX_REMOTE_SHA_VERIFIED_PACKAGE_BYTE_REPAIR_PENDING",
+    "status": "REMOTE_SYNC_VERIFIED_BYTE_EXACT",
     "destination": "existing branch work/ttqs-one-document-quality-contract-20261016 and PR #92",
-    "first_sync_commit": "37c98b391ecef1b4ab43c477e4427b497e5307bd",
-    "initial_readback": {
-      "path": "evidence/REMOTE_READBACK_R01.json",
-      "paths": 56,
-      "exact_byte_matches": 38,
-      "eol_normalized_only": 18,
-      "mismatches": 0,
-      "remote_docx_sha256": "d5a15e087d7323dd0d9c44191ae26fc0cca6bef052de8af85daa94e621e1f190"
-    },
-    "action": "Added package-scoped .gitattributes to preserve raw evidence bytes; resync and full exact-byte readback pending.",
+    "verification_commit": "35cf41ad9195ca1e5c226fb78ca3198821121680",
+    "readback_receipt": "evidence/REMOTE_READBACK_R02.json",
+    "readback_receipt_sha256": "f05477716db04d273da036990c9449e7f4cebc856cd6dc113e76c459d4fb92ae",
+    "verified_paths": 58,
+    "exact_byte_matches": 58,
+    "mismatches": 0,
+    "remote_docx_sha256": "d5a15e087d7323dd0d9c44191ae26fc0cca6bef052de8af85daa94e621e1f190",
     "force_push": false
   },
   "P5_schedule_and_cost": {
@@ -88,12 +85,13 @@
     "status": "SOURCE_PREFLIGHT_READY; recheck owner and package after 0074 remote sync before dispatch."
   },
   "P7_minimum_counterexample_tests": {
-    "T1_no_material_delta": "PENDING_POST_SYNC_READ_ONLY_NOOP_SIMULATION",
-    "T2_empty_worker_reply": "PASS_HISTORICAL_0055_ANTIGRAVITY_EMPTY_PERMISSION_DENIAL_RECOGNIZED_AS_NO_DELIVERABLE; route remains paused; no retry; 0075 may proceed via independent lawful route.",
-    "T3_reuse_existing_review": "PASS_EXISTING_EXACT_SHA_RECEIPTS_REUSED; no new review dispatched for unchanged historical documents.",
-    "T4_github_sync": "PASS_DOCX_EXACT_SHA_READBACK_AT_FIRST_SYNC; package text EOL normalization found and is being corrected before final package verification.",
-    "T5_sample_real_boundary": "PASS_0074_CANDIDATE_SAMPLE_SYNTHETIC_ONLY_REAL_UNKNOWN_HOLD; no approval or execution fabricated."
+    "T1_no_material_delta": "PASS_NO_MATERIAL_DELTA_NO_DISPATCH",
+    "T2_empty_worker_reply": "PASS_NO_DELIVERABLE_ROUTE_PAUSED_OTHER_READY_WORK_CONTINUES",
+    "T3_reuse_existing_review": "PASS_NO_DUPLICATE_REVIEW_OR_REBUILD",
+    "T4_sync_readback": "PASS_BYTE_EXACT",
+    "T5_sample_real_boundary": "PASS_CANDIDATE_ONLY_REAL_HOLD"
   },
-  "P8_status": "0074 R01 DOCX was pushed and fetched from GitHub with exact SHA d5a15e087d7323dd0d9c44191ae26fc0cca6bef052de8af85daa94e621e1f190. The first 56-path readback had 38 raw-byte matches and 18 EOL-normalized text matches, with zero content mismatches; scoped byte-preservation settings are being added and the package will be resynced before final P4/P7 completion. Candidate only; REAL=UNKNOWN/HOLD; formal acceptance NOT_GRANTED.",
-  "updated_at_local": "2026-10-19T07:43:38+08:00"
+  "P8_status": "0074 R01 is a CANDIDATE only. Exact DOCX SHA d5a15e087d7323dd0d9c44191ae26fc0cca6bef052de8af85daa94e621e1f190 is remote-verified. Technical PASS, 20/20-page visual PASS_WITH_SCOPE and independent exact-SHA semantic PASS are preserved. The final package readback at commit 35cf41ad9195ca1e5c226fb78ca3198821121680 covered 58 paths byte-for-byte with zero mismatches. T1-T5 have bounded evidence; the no-op test is a local simulation, not a scheduled-run claim. SAMPLE/SYNTHETIC only; REAL=UNKNOWN/HOLD; formal acceptance NOT_GRANTED. Next source-bound READY is 0075 / I17A-E03 / checkbox 082, pending one last owner/queue recheck.",
+  "updated_at_local": "2026-10-19T07:45:50+08:00",
+  "P7_test_receipt": "evidence/P7_COUNTEREXAMPLE_TESTS_R01.json"
 }
