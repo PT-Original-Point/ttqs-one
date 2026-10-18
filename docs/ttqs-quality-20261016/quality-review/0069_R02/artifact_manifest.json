@@ -28,5 +28,12 @@
   "build_receipt": "qa/build_receipt_R02.json",
   "technical_receipt": "qa/technical_check_R02.json",
   "repair_delta": "qa/semantic_repair_delta_R02.md",
-  "history_disposition": "R01 and worker drafts retained as HISTORICAL_UNQUALIFIED"
+  "history_disposition": "R01 and worker drafts retained as HISTORICAL_UNQUALIFIED",
+  "remote_readback": {
+    "verified_commit": "60a7113c09eb39763a95cc6501df13ffe10db306",
+    "receipt": "qa/remote_readback_R02.json",
+    "docx_byte_for_byte_match": true,
+    "all_18_files_match": true,
+    "line_ending_differences": "text files normalized by Git to LF; semantic bytes match after EOL normalization"
+  }
 }
