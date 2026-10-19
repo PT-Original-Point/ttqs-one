@@ -262,7 +262,7 @@
     "T5": "PASS_0072_LOCAL_EXACT_SHA_SAMPLE_SYNTHETIC_REAL_BOUNDARY; candidate only, REAL evidence UNKNOWN/HOLD, formal acceptance NOT_GRANTED."
   },
   "P8_status": "0081 R03 is synced and read back from GitHub commit 6518947d8cd8d9c06a7f22597a14a62953ac2a9a. DOCX exact SHA afad7608a1e85dd479eb655724cc2ce42cf5f91f0f9bb59d6f601b3b31b56201; technical PASS; all 13 rendered pages directly inspected; exact-SHA semantic PASS (R02 full review plus R03 delta). Package readback: 96 manifest files, 58 raw exact, 38 text EOL-normalized, 0 mismatches. Candidate only; REAL=UNKNOWN/HOLD; formal acceptance NOT_GRANTED. Next 0082/I17C-E01/checkbox 088 awaits fresh source, queue and worker reconciliation.",
-  "updated_at_local": "2026-10-19T13:39:28.492+08:00",
+  "updated_at_local": "2026-10-19T13:45:27.358+08:00",
   "source_contract_blobs": {
     "01_HUMAN_MISSION_AND_ACCEPTANCE.md": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e",
     "02_GENRE_WRITING_MANUAL.md": "4ff863d9f534b6359fc1c7c1685bd8cce02da886",
@@ -340,7 +340,7 @@
     "p7_five_tests": "T1 fixture-only PASS; T2 route isolation PASS from observed 0055 record; T3 exact-SHA reuse/no rerun PASS; T4 current 0072 remote readback PASS (105 exact raw, 2 text EOL-normalized, 0 mismatch); T5 current 0072 boundary PASS.",
     "p8_result": "0072 synced exact candidate; not formally accepted; proceed to 0073 after source/worker preflight."
   },
-  "P0_current_status": "0081 R03 writer and reviewer exited; no active 0081 Writer/reviewer confirmed. OpenCode service is not an owner. Word COM render complete; no Computer Use. Existing unrelated stale render processes remain uncounted as Writers.",
+  "P0_current_status": "PR #92 is open draft; local and fetched remote branch both at f478e050c9ff17b562f2151da7c4d973c30b16a9. Live Windows process snapshot found no active 0082 Writer/reviewer: OpenCode CLI PID 3980 is only the resident serve --service process, not a task owner; Antigravity process absent; WINWORD /Automation processes have no 0082 owner evidence and are not counted as Writers. R08 reviewer exit 0 is terminal.",
   "P3_document_action_0081": {
     "doc_id": "0081",
     "requirement_id": "I17B-E03",
@@ -361,22 +361,36 @@
     "github_readback": "VERIFIED_EXACT_DOCX; 96 manifest files: 58 raw exact, 38 text EOL-normalized, 0 mismatches"
   },
   "P4_sync_current": {
-    "status": "PENDING_GITHUB_PUSH",
+    "status": "VERIFIED_PACKAGE_READBACK; READBACK_RECEIPT_INCLUDED",
     "target": "PT-Original-Point/ttqs-one PR #92 existing branch work/ttqs-one-document-quality-contract-20261016",
-    "package": "0082_R08 full synthetic revision and QA history",
-    "package_file_count": 243,
-    "package_bytes": 37481599,
-    "remote_readback": "PENDING",
-    "package_manifest_sha256": "0a1a0322e7d52c6d080daddc885c4312e1a40c546ecb25e1733ba9e650803b36"
+    "readback_commit": "f478e050c9ff17b562f2151da7c4d973c30b16a9",
+    "package_manifest_path": "docs/ttqs-quality-20261016/quality-review/0082_R01/evidence/package_manifest_0082_R08.json",
+    "package_manifest_sha256": "0a1a0322e7d52c6d080daddc885c4312e1a40c546ecb25e1733ba9e650803b36",
+    "manifest_entries": 242,
+    "verified_entries": 242,
+    "mismatches": [],
+    "candidate_sha256": "2a4b2aadf2a1ee9e1dce47247b91aa4bd150d83770fda1708bca0c722a07e20d",
+    "receipt_at_readback_sha256": "e78734c0a0a2d3bbe274f66e369f37d59041805b461e69be6b84c40e6f6a4c23",
+    "readback_receipt_path": "docs/ttqs-quality-20261016/quality-review/0082_R01/evidence/remote_readback_0082_R08.json",
+    "readback_receipt_sha256_scope": "SHA256 of the readback JSON bytes stored in the staged Git blob.",
+    "readback_receipt_sha256": "ddf102ce33cb11dde6e21defeef25bb8404430358d7c406da52cff2c639a1f45"
   },
   "P6_current_next_ready": {
     "doc_id": "0083",
     "requirement_id": "I17C-E02",
     "official_checkbox_serial": "089",
-    "queue_state": "NEXT_AFTER_0082_SYNC; SOURCE_AND_WORKER_PREFLIGHT_REQUIRED",
-    "candidate_exists_locally": false,
-    "next_action": "Verify current official source and unique Blueprint for 089, fresh-check local/remote candidate and live Writer; proceed only if READY.",
-    "status": "PENDING_FRESH_RECONCILIATION"
+    "queue_state": "READY_FOR_UNIQUE_BLUEPRINT_CREATION",
+    "official_source_path": "docs/ttqs-quality-20261016/quality-review/0077_R01/inputs/upstream_snapshots/03_157_CHECKBOX_BLUEPRINTS.md",
+    "official_source_git_blob": "8c2bbe7ca9dcbb03088a48934b9e57e7147ede63",
+    "official_source_locator": "I17c row 089: 學員行動計畫追蹤：目標/實際/阻礙/協助/成效",
+    "official_page_image": "docs/ttqs-quality-20261016/quality-review/0078_R01/evidence/official_evidence_table_page6-6.png",
+    "official_page_image_sha256": "b7bd4c09b7d7e22993a1577647e10a421fb240222b46b531ba3f01ee047fa1d1",
+    "genre_manual_git_blob": "4ff863d9f534b6359fc1c7c1685bd8cce02da886",
+    "mission_git_blob": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e",
+    "local_candidate_exists": false,
+    "remote_candidate_exists": false,
+    "live_writer_or_reviewer": false,
+    "next_action": "Create a document-specific unique Blueprint for 0083, then use the existing OpenCode v2 CLI free route for its substantive body; preserve the distinction from 0082 survey and never imply real implementation."
   },
   "P4_sync_0081_historical": {
     "status": "PENDING_GITHUB_PUSH",
@@ -418,5 +432,17 @@
     "package_manifest_sha256": "0a1a0322e7d52c6d080daddc885c4312e1a40c546ecb25e1733ba9e650803b36",
     "package_manifest_sha256_scope": "SHA256 of the manifest bytes stored in the Git index after line-ending normalization."
   },
-  "P8_current_status": "0082 R08 candidate has technical/data/visual and independent exact-SHA semantic PASS; DOCX SHA 2a4b2aadf2a1ee9e1dce47247b91aa4bd150d83770fda1708bca0c722a07e20d. All 242 prior package files plus a SHA256 manifest are prepared for sync. No formal acceptance; REAL=UNKNOWN/HOLD. Push/readback pending."
+  "P8_current_status": "0082 R08 is synced and verified from GitHub commit f478e050c9ff17b562f2151da7c4d973c30b16a9: 242/242 manifest entries match remote bytes; candidate SHA 2a4b2aadf2a1ee9e1dce47247b91aa4bd150d83770fda1708bca0c722a07e20d; technical/data/visual and exact-SHA semantic PASS. Candidate only; REAL=UNKNOWN/HOLD; formal acceptance NOT_GRANTED. Next READY action: unique Blueprint for 0083/I17C-E02/checkbox 089.",
+  "P2_current_outsourcing": {
+    "OpenCode": "v2.0.29; R08 exact-SHA review succeeded with opencode/beam-free, exit 0; no active 0082 request remains.",
+    "Antigravity": "dispatch remains paused; no new attempt in this recovery; no Computer Use.",
+    "next_route": "Use the existing OpenCode v2 CLI free route for a READY 0083 blueprint/body task after source reconciliation; no new platform or agent."
+  },
+  "P7_current_0082": {
+    "T1_identity_mapping": "PASS: DOCX 0082=I17C-E01=checkbox 088; unique Blueprint SHA recorded.",
+    "T2_live_writer_guard": "PASS: no active 0082 Writer/reviewer; no duplicate dispatch.",
+    "T3_exact_sha_reuse": "PASS: preserved and reused R08 candidate; no rebuild or repeated review.",
+    "T4_remote_package_integrity": "PASS: 242 manifest entries; all 242 fetched remote Git blob byte lengths and SHA-256 matched; 0 mismatches at f478e050c9ff17b562f2151da7c4d973c30b16a9.",
+    "T5_evidence_boundary": "PASS: SAMPLE/SYNTHETIC only; REAL=UNKNOWN/HOLD; formal acceptance NOT_GRANTED."
+  }
 }
