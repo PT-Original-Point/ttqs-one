@@ -8,7 +8,18 @@
   "semantic_review": "NOT_STARTED",
   "visual_qa": "NOT_STARTED",
   "formal_acceptance": "NOT_GRANTED",
-  "block": "No active Antigravity Writer; same-user Antigravity native TUI sign-in and /usage readback required to verify gemini-3.8-flash-high route. OpenCode inference remains paused after three failed routes; free-model report does not prove current recovery.",
+  "block": "0090 writer not dispatched: native Antigravity TUI last reported not signed in; /usage was not read; prior logs warned requested Gemini model fell back to CCPA. Actual model/provider, account match, quota debit and billing remain UNKNOWN. File-writing remains PAUSED. OpenCode v2 has one scoped exact-SHA semantic review success on 0089 R04; this does not verify broader route health or replace the 0090 writer.",
   "historical_matrix": "FAIL_REPAIR; old body not reused",
-  "updated_local": "2026-10-20T05:10:55.9637272+08:00"
+  "updated_local": "2026-10-20T05:33:10+08:00",
+  "antigravity_text_writer_lane": "BLOCKED_PENDING_HUMAN_NATIVE_TUI_SIGN_IN_AND_USAGE_READBACK",
+  "file_writer_lane": "PAUSED",
+  "opencode_independent_review_lane": {
+    "state": "ONE_SCOPED_EXACT_SHA_REVIEW_SUCCEEDED; NOT_BROADLY_VERIFIED",
+    "evidence_doc_id": "0089",
+    "evidence_candidate_sha256": "42bebbdfcaba93a753467260d5e1865b93b6bc2fee652a03d39b8fb385ef8476",
+    "requested_model": "opencode/mimo-v2.6-flash-free",
+    "verdict": "PASS_TEXT_ONLY",
+    "runtime_model_identity": "UNKNOWN_NOT_EMITTED",
+    "usage_and_billing": "UNKNOWN_NOT_RETURNED"
+  }
 }
