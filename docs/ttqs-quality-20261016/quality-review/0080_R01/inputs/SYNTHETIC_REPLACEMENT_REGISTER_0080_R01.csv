@@ -1,0 +1,24 @@
+replacement_id,source_path,source_row_or_locator,field_name,synthetic_value,required_real_source_or_replacement,verification_rule,real_status
+SYN-0080-001,0076 assessment CSV,all rows,case_id,SYN-0073-2026-A01,authorized actual course record,verify case identity and source permission,REAL=UNKNOWN/HOLD
+SYN-0080-002,0076 assessment CSV,course field,course_name,志工服務溝通與紀錄交接實務,actual approved course plan,match course identifier and approved title,REAL=UNKNOWN/HOLD
+SYN-0080-003,0076 assessment CSV,course date,sample_course_date,2026-08-15,actual roster and attendance,verify exact period and cohort,REAL=UNKNOWN/HOLD
+SYN-0080-004,scenario only,meeting header,review_date,2026-08-29,actual meeting record and attendance,do not imply a meeting occurred,REAL=UNKNOWN/HOLD
+SYN-0080-005,scenario only,participant list,role_attendees,three role labels only,authorized attendance record,replace role labels only with verified roles and approved names where permitted,REAL=UNKNOWN/HOLD
+SYN-0080-006,0076 assessment CSV,rows 2-17,n,16,valid roster and denominator reconciliation,reconcile every eligible participant and exclusion,REAL=UNKNOWN/HOLD
+SYN-0080-007,0076 assessment CSV,pretest column,pretest_total,870,verified original response sheets,independently recompute all valid scores,REAL=UNKNOWN/HOLD
+SYN-0080-008,0076 assessment CSV,pretest sum / n,pretest_mean,54.375,verified original response sheets,recompute and record denominator,REAL=UNKNOWN/HOLD
+SYN-0080-009,0076 assessment CSV,posttest column,posttest_total,1265,verified original response sheets,independently recompute all valid scores,REAL=UNKNOWN/HOLD
+SYN-0080-010,0076 assessment CSV,posttest sum / n,posttest_mean,79.0625,verified original response sheets,recompute and record denominator,REAL=UNKNOWN/HOLD
+SYN-0080-011,0076 assessment CSV,item analysis,Q01_Q17_Q18_Q19,11 of 16 correct each,source answer keys and individual responses,recompute each item count and validate answer key,REAL=UNKNOWN/HOLD
+SYN-0080-012,0076 assessment CSV,practical totals,practical_mean,15.8125 of 20,verified original scoring rubrics and assessor notes,reconcile scores and scorer authorization,REAL=UNKNOWN/HOLD
+SYN-0080-013,0076 assessment CSV,rubric record accuracy,record_accuracy_low,mean 3.5625 of 5 and 8 of 16 at most 3,verified authorized assessments,recompute from actual records,REAL=UNKNOWN/HOLD
+SYN-0080-014,0077 reflection CSV,all rows,reflection_theme_counts,5 plus 3 plus 4 plus 3 plus 1,consented and authorized actual reflection records,verify coding rules and independent second coder,REAL=UNKNOWN/HOLD
+SYN-0080-015,scenario only,agenda,meeting_agenda,synthetic agenda,actual contemporaneous agenda,do not backfill as a real agenda,REAL=UNKNOWN/HOLD
+SYN-0080-016,scenario only,minutes,discussion_summary,synthetic discussion,actual meeting notes and source-linked discussion,distinguish observation from interpretation,REAL=UNKNOWN/HOLD
+SYN-0080-017,scenario only,decision table,review_decisions,proposed mixed scenario practice,authorized approval record,verify who had decision authority and exact decision,REAL=UNKNOWN/HOLD
+SYN-0080-018,scenario only,action table,owners_and_due_dates,role owners and sample dates,actual assignment and approved calendar,verify assignee acceptance and date,REAL=UNKNOWN/HOLD
+SYN-0080-019,scenario only,assessment plan,proposed_measurement,0-2 rubric and 80 percent sample threshold,approved assessment plan and calibrated rubric,do not call sample threshold official,REAL=UNKNOWN/HOLD
+SYN-0080-020,scenario only,next cohort,implementation,NOT_EXECUTED,actual revised course materials and delivery logs,require evidence before marking complete,REAL=UNKNOWN/HOLD
+SYN-0080-021,scenario only,outcome,learning_improvement,UNKNOWN,post-revision data with denominator and baseline,do not infer effect from proposal or historical sample,REAL=UNKNOWN/HOLD
+SYN-0080-022,scenario only,meeting record,signature_or_approval,NONE,actual authorized signature or approval record,never fabricate or copy a signature,REAL=UNKNOWN/HOLD
+SYN-0080-023,0079 R05,individual cards,personal_advice_details,not used in group record,authorized consented and minimized source only,keep individual details out of public group evidence,REAL=UNKNOWN/HOLD

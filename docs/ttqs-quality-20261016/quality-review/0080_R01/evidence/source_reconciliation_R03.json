@@ -1,0 +1,28 @@
+{
+  "schema": "TTQS_ONE_0080_SOURCE_RECONCILIATION_R03.v1",
+  "document_id": "0080",
+  "requirement_id": "I17B-E02",
+  "official_checkbox_serial": "085",
+  "status": "VERIFIED",
+  "r01_0077_sha_transcription_error": "3bdce0a1675a5b377dfafe2d7519f9f877e51530f5edc4ba3551a116bc6e985",
+  "verified_0077_sha256": "3bdce0a1675a5b377dfafe2d75139d1f877e51530f5edc4ba3551a116bc6e985",
+  "r02_input_hashes": {
+    "blueprint": "a1feb7b8598ff810e3910e360eab2749c7d115035fad878ac189760350d4f891",
+    "source_packet": "7efb7670e78a0b9c03d8ec2bf6be7b3bf42fe517448ddd66b9575ba3296215ae",
+    "body": "3d57844ef5e66714ff9e663e140fa452094f02c6f97c54eff42cc023c1115ab6"
+  },
+  "r03_input_hashes": {
+    "blueprint": "a13ba084a2eba26ba36cd695ea227b0b13cce1ecd1a2d7dffc0c724821560a1c",
+    "source_packet": "1a4f761e63a151dffb1910eeb6a9dbc044facf18dc0456095c83fb1ffd6e3535",
+    "body": "d36166b7d56362466d778716bcaa3bf659275d801620a73be0afc85829c6d540"
+  },
+  "current_0079_candidate_sha256": "0361cf65557733cb3e1af93d5e59197aa96d307622a840800d008d8c580c66a7",
+  "current_0079_independent_semantic_review_sha256": "2476e6330ecaf79c1bcae18e8dc242b958ceb8477967d9cb22b7ec79e6b06070",
+  "r03_changes": [
+    "Corrected body Appendix A to bind the verified 0077 CSV SHA with no stale discrepancy warning.",
+    "Updated the related-document reference from historical 0079 R05 to current candidate 0079 R07 with exact SHA and candidate-only review state.",
+    "Preserved the worker R01 output and the corrected R02 source/body files."
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD"
+}

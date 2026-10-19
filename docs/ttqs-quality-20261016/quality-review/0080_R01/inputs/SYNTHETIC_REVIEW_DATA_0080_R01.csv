@@ -1,0 +1,27 @@
+case_id,source_file,metric,synthetic_value,calculation_or_locator,interpretation_limit,status
+SYN-0073-2026-A01,0076 assessment CSV,learner_count,16,CSV rows 2-17,synthetic only,SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD
+SYN-0073-2026-A01,0076 assessment CSV,pretest_total,870,sum of 16 pretest totals,source reconstruction only,SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD
+SYN-0073-2026-A01,0076 assessment CSV,pretest_mean,54.375,870 divided by 16,not a real result,SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD
+SYN-0073-2026-A01,0076 assessment CSV,posttest_total,1265,sum of 16 posttest totals,source reconstruction only,SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD
+SYN-0073-2026-A01,0076 assessment CSV,posttest_mean,79.0625,1265 divided by 16,not a real result,SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD
+SYN-0073-2026-A01,0076 assessment CSV,mean_change,24.6875,79.0625 minus 54.375,association only not causation,SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD
+SYN-0073-2026-A01,0076 assessment CSV,posttest_at_least_80,9/16,9 divided by 16,threshold is sample rule,SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD
+SYN-0073-2026-A01,0076 assessment CSV,practical_total,253,16 practical totals summed,source reconstruction only,SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD
+SYN-0073-2026-A01,0076 assessment CSV,practical_mean,15.8125/20,253 divided by 16,threshold is sample rule,SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD
+SYN-0073-2026-A01,0076 assessment CSV,practical_pass_hold,11 PASS and 5 HOLD,0076 sample threshold only,not official standard,SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD
+SYN-0073-2026-A01,0076 item analysis CSV,Q01,11/16 correct; 0.6875,11 divided by 16,needs clarification,SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD
+SYN-0073-2026-A01,0076 item analysis CSV,Q17,11/16 correct; 0.6875,11 divided by 16,consent before sensitive media,SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD
+SYN-0073-2026-A01,0076 item analysis CSV,Q18,11/16 correct; 0.6875,11 divided by 16,service scope and authority,SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD
+SYN-0073-2026-A01,0076 item analysis CSV,Q19,11/16 correct; 0.6875,11 divided by 16,closed loop handoff,SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD
+SYN-0073-2026-A01,0076 item analysis CSV,Q02_Q03,12/16 each; 0.75,12 divided by 16,privacy and evidence accuracy,SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD
+SYN-0073-2026-A01,0076 assessment CSV,communication_mean,4.125/5,66 divided by 16,synthetic rubric scores,SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD
+SYN-0073-2026-A01,0076 assessment CSV,privacy_mean,4.0625/5,65 divided by 16,synthetic rubric scores,SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD
+SYN-0073-2026-A01,0076 assessment CSV,record_accuracy_mean,3.5625/5,57 divided by 16,weakest rubric area,SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD
+SYN-0073-2026-A01,0076 assessment CSV,record_accuracy_at_most_3,8/16,8 of 16 scores no higher than 3,not a validated threshold,SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD
+SYN-0073-2026-A01,0076 assessment CSV,handoff_mean,4.0625/5,65 divided by 16,synthetic rubric scores,SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD
+SYN-0073-2026-A01,0077 reflection CSV,needs_clarification_theme,5/16,primary theme count,not real learner feedback,SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD
+SYN-0073-2026-A01,0077 reflection CSV,privacy_consent_theme,3/16,primary theme count,not real learner feedback,SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD
+SYN-0073-2026-A01,0077 reflection CSV,record_accuracy_theme,4/16,primary theme count,not real learner feedback,SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD
+SYN-0073-2026-A01,0077 reflection CSV,closed_loop_handoff_theme,3/16,primary theme count,not real learner feedback,SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD
+SYN-0073-2026-A01,0077 reflection CSV,role_boundary_safety_theme,1/16,primary theme count,not real learner feedback,SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD
+SYN-0073-2026-A01,0077 reflection CSV,theme_total,16,5+3+4+3+1,one primary theme per row,SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD
