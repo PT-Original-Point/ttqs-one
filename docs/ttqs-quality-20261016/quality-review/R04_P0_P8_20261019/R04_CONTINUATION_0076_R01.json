@@ -1,0 +1,87 @@
+{
+  "schema": "TTQS_ONE_R04_CONTINUATION_0076_R01.v1",
+  "project_id": "TTQS_ONE",
+  "command": "TTQS_ONE_CODEX_NATIVE_WORKER_RECOVERY_SYNC_R04",
+  "source_attachment_sha256": "3330de8de26275c5e51f299982d87c250bb7e030c9838badafc369e26ee29c35",
+  "current_source_commit": "e43dbf8da93b1738ecb30c591010d3ca123d2ab6",
+  "current_local_head_before_sync": "e43dbf8da93b1738ecb30c591010d3ca123d2ab6",
+  "current_remote_tracking_head_before_sync": "e43dbf8da93b1738ecb30c591010d3ca123d2ab6",
+  "P0_readonly_preflight": {
+    "status": "VERIFIED",
+    "checks": [
+      "Live GitHub PR #92/branch head checked before build and worker dispatch.",
+      "No active 0076 Writer or reviewer before dispatch; OpenCode persistent service was not treated as document owner.",
+      "One OpenCode Writer completed; its task process exited before review dispatch.",
+      "No Antigravity/Computer Use dispatch."
+    ]
+  },
+  "P1_reconciliation": {
+    "status": "VERIFIED",
+    "historical_0076_candidate_sha256": "f0099863f55cd9a180b502c1fc5d03b303aa8ea38b14b74f4783afdb2b8e4471",
+    "decision": "Historical candidate was a different course/date/sample and lacked complete keyed instrument; new 0076 candidate was required. Unrelated previously qualified DOCX were not rebuilt."
+  },
+  "P2_cli_recovery": {
+    "status": "APPLIED",
+    "writer": {
+      "route": "OpenCode CLI v2",
+      "version": "2.0.29",
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "session_id": "ses_eae7040e2ffervxNMrBSrt9W0J",
+      "exit_code": 0,
+      "computer_use": false
+    },
+    "reviewer": {
+      "route": "OpenCode CLI v2",
+      "version": "2.0.29",
+      "model": "opencode/beam-free",
+      "session_id": "ses_eae64f03cffezJNEC42vjxpWiV",
+      "exit_code": 0,
+      "computer_use": false
+    },
+    "antigravity": "No new dispatch; route remains paused pending its authorized headless CLI path; no Computer Use or permission bypass."
+  },
+  "P3_worker_return": {
+    "status": "APPLIED",
+    "body_sha256": "00266efaeefb061c61c84c2478f5cc96ad09289c7f711286e6c4a31181cbe95f",
+    "docx_sha256": "885fe403b46144639034a3f6b26c2b74916c22c7b5a5a971628136f376a115f3",
+    "worker_stdout_sha256": "899dd8ecb8a0c6bea9159351ddaf3b67e553d33859d9fb0ace7556ea08ca2310",
+    "register_sha256": "afdc9767b654af94e3e5301e4211e55f817f135487d2197c7e7f71eb8aef1eea",
+    "details": "Original worker body and raw output retained; two pre-build editorial corrections are separately receipted; builder did not modify unrelated DOCX."
+  },
+  "P4_github_sync": {
+    "status": "PENDING_PACKAGE_PUSH_AND_BYTE_READBACK",
+    "package_path": "docs/ttqs-quality-20261016/quality-review/0076_R01/",
+    "remote_readback_required": true
+  },
+  "P5_scheduler_and_cost": {
+    "status": "VERIFIED_UNCHANGED",
+    "scheduler": "One existing thread-bound hourly task retained; no scheduler/session/control-platform created.",
+    "model_cost": "OpenCode writer and independent reviewer each consumed a model call; not represented as zero cost."
+  },
+  "P6_next_ready": {
+    "status": "QUEUED_AFTER_0076_SYNC",
+    "document_id": "0077",
+    "requirement_id": "I17B-E01",
+    "official_checkbox_serial": "084",
+    "function": "Learner reflection report, distinct from 0076 assessment record."
+  },
+  "P7_five_tests": {
+    "T1": "PASS inherited R04 fixture-only/no-op check; does not claim a scheduled wake test.",
+    "T2": "PASS inherited route-isolation check for historical 0055 work.",
+    "T3": "PASS inherited exact-SHA reuse/no-duplicate-review check.",
+    "T4": "PENDING; current 0076 package requires GitHub blob readback and hash comparison.",
+    "T5": "PASS; 0076 clearly SAMPLE/SYNTHETIC, candidate-only, REAL=UNKNOWN/HOLD, no formal acceptance; checkbox 084 remains composite PARTIAL."
+  },
+  "P8_result": {
+    "status": "CANDIDATE_READY_FOR_REMOTE_SYNC",
+    "technical": "PASS exact DOCX SHA",
+    "visual": "PASS_LAYOUT_VISUAL all 26 pages inspected; PDF SHA 576fa2915d2879b8c3e9ded5847b3d2cc2246b37e0230229cbf44bfe2f4d15dd",
+    "semantic": "PASS independent OpenCode CLI v2 beam-free; exact DOCX SHA bound via extraction receipt",
+    "candidate_sha256": "885fe403b46144639034a3f6b26c2b74916c22c7b5a5a971628136f376a115f3",
+    "page_count": 26,
+    "checkbox_084": "PARTIAL; 0077/0078/0079 and real sources still outstanding",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_status": "UNKNOWN/HOLD"
+  },
+  "updated_utc": "2026-10-19T00:47:28.199367+00:00"
+}
