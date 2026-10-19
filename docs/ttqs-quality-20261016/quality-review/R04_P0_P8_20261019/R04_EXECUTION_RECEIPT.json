@@ -262,7 +262,7 @@
     "T5": "PASS_0072_LOCAL_EXACT_SHA_SAMPLE_SYNTHETIC_REAL_BOUNDARY; candidate only, REAL evidence UNKNOWN/HOLD, formal acceptance NOT_GRANTED."
   },
   "P8_status": "0081 R03 is synced and read back from GitHub commit 6518947d8cd8d9c06a7f22597a14a62953ac2a9a. DOCX exact SHA afad7608a1e85dd479eb655724cc2ce42cf5f91f0f9bb59d6f601b3b31b56201; technical PASS; all 13 rendered pages directly inspected; exact-SHA semantic PASS (R02 full review plus R03 delta). Package readback: 96 manifest files, 58 raw exact, 38 text EOL-normalized, 0 mismatches. Candidate only; REAL=UNKNOWN/HOLD; formal acceptance NOT_GRANTED. Next 0082/I17C-E01/checkbox 088 awaits fresh source, queue and worker reconciliation.",
-  "updated_at_local": "2026-10-19T15:26:09.959761+08:00",
+  "updated_at_local": "2026-10-19T15:32:45.397797+08:00",
   "source_contract_blobs": {
     "01_HUMAN_MISSION_AND_ACCEPTANCE.md": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e",
     "02_GENRE_WRITING_MANUAL.md": "4ff863d9f534b6359fc1c7c1685bd8cce02da886",
@@ -385,13 +385,11 @@
     "doc_id": "0084",
     "requirement_id": "I17C-E03",
     "official_checkbox_serial": "090",
-    "queue_state": "READY_FOR_DOCX_WRITER_AFTER_BLUEPRINT_R02_AND_GITHUB_READBACK",
+    "queue_state": "ACTIVE_WRITER_DO_NOT_REDISPATCH",
     "blueprint_path": "docs/ttqs-quality-20261016/quality-review/0084_R01/inputs/UNIQUE_BLUEPRINT_0084_R02.md",
     "blueprint_sha256": "72729eab74a1cc61e84854668a7ae4afc37ef4b5eefdcab8956b90c6e0c1a5f3",
-    "local_candidate_exists": false,
-    "remote_candidate_exists": false,
-    "active_writer_or_reviewer_for_0084": false,
-    "next_action": "After blueprint/status sync and readback, dispatch one OpenCode v2 free-model writer against R02 to create the full body and DOCX; do not dispatch a duplicate."
+    "writer_session_id": "ses_eacf1cb26ffeUBxW4SruAR7csW",
+    "next_action": "Wait for the existing writer; then inspect exact outputs and continue independent QA."
   },
   "P4_sync_0081_historical": {
     "status": "PENDING_GITHUB_PUSH",
@@ -462,7 +460,7 @@
     "evidence_manifest": "docs/ttqs-quality-20261016/quality-review/0083_R01/evidence/package_manifest_R03.json",
     "github_readback": "VERIFIED; 162 entries, no missing or content mismatches"
   },
-  "P8_status_current": "0084/I17C-E03/090 Blueprint R02 and its source/review package are synced; fetched remote readback verified 13 entries with no missing or content mismatches. DOCX not yet built. Next: single OpenCode v2 free-model Writer. 0083 R03 remains candidate-only; semantic PASS, visual blocked.",
+  "P8_status_current": "0084 Blueprint R02 is synced/readback verified. One OpenCode v2 free-model Writer is active (session ses_eacf1cb26ffeUBxW4SruAR7csW, PID 43480); no DOCX exists yet and no duplicate dispatch is permitted. 0083 R03 remains candidate-only, semantic PASS, visual BLOCKED.",
   "P4_sync_0083_R03": {
     "status": "VERIFIED_PACKAGE_READBACK",
     "target": "PT-Original-Point/ttqs-one PR #92 existing branch work/ttqs-one-document-quality-contract-20261016",
@@ -524,5 +522,17 @@
     "readback_receipt_sha256_local": "a3fe38e5d4fad1497cdc393cae980228664421d6055d389e0b5ce590303afd17",
     "readback_receipt_sha256_remote_content": "61dce5852b62612b140719f7666e125b440f50ef1c845dccfdd9fdebf70ef33a",
     "readback_receipt_git_blob": "3d782b320731a5e63c4e86e4d9e36be0b4a6f924"
+  },
+  "P2_current_0084_writer": {
+    "status": "ACTIVE",
+    "pid": 43480,
+    "session_id": "ses_eacf1cb26ffeUBxW4SruAR7csW",
+    "model": "opencode/deepseek-v4.1-flash-free",
+    "task_path": "docs/ttqs-quality-20261016/quality-review/0084_R01/worker/opencode_docx_task_R01.md",
+    "started_local": "2026-10-19T15:26:42.222891+08:00",
+    "exit_code": null,
+    "candidate_body": "PENDING",
+    "candidate_docx": "PENDING",
+    "no_duplicate_dispatch": true
   }
 }

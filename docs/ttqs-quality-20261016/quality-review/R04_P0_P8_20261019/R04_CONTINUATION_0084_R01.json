@@ -2,7 +2,7 @@
   "schema": "TTQS_ONE_R04_CONTINUATION_0084_R01.v1",
   "project_id": "TTQS_ONE",
   "command": "TTQS_ONE_CODEX_NATIVE_WORKER_RECOVERY_SYNC_R04",
-  "updated_local": "2026-10-19T15:26:09.959761+08:00",
+  "updated_local": "2026-10-19T15:32:45.397797+08:00",
   "repo": "PT-Original-Point/ttqs-one",
   "branch": "work/ttqs-one-document-quality-contract-20261016",
   "pr": 92,
@@ -13,10 +13,18 @@
     "checkbox": "090",
     "local_docx_candidate_exists": false,
     "remote_docx_candidate_exists": false,
-    "active_0084_writer": false,
+    "active_0084_writer": true,
     "opencode_process": "resident service PID 3980 only; no active run at dispatch preflight",
     "antigravity": "PAUSED; no dispatch and no Computer Use",
-    "stale_word_automation_pids": "Observed, all from previous dates; no command line or file ownership linking them to 0084; not counted as writer"
+    "stale_word_automation_pids": "Observed, all from previous dates; no command line or file ownership linking them to 0084; not counted as writer",
+    "active_writer_process": {
+      "pid": 43480,
+      "started_local": "2026-10-19T15:26:42.222891+08:00",
+      "opencode_session_id": "ses_eacf1cb26ffeUBxW4SruAR7csW",
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "task": "worker/opencode_docx_task_R01.md",
+      "status_at_receipt": "ACTIVE; no candidate files created yet"
+    }
   },
   "P1_source_reconciliation": {
     "source_packet_sha256": "6c2e928a889f0e01fe6aeca2ed0ed5b6a0dca6b3a12f591ba493a969dd4d3f1d",
@@ -61,7 +69,17 @@
     "blueprint_session_id": "ses_eacfded6affeoGIzPOMznmvdNV",
     "blueprint_session_outcome": "succeeded",
     "blueprint_writer_exit_code": 0,
-    "antigravity": "paused; unused"
+    "antigravity": "paused; unused",
+    "docx_writer": {
+      "status": "ACTIVE",
+      "pid": 43480,
+      "session_id": "ses_eacf1cb26ffeUBxW4SruAR7csW",
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "started_local": "2026-10-19T15:26:42.222891+08:00",
+      "exit_code": null,
+      "candidate_body": "PENDING",
+      "candidate_docx": "PENDING"
+    }
   },
   "P3_blueprint_action": {
     "R01_sha256": "1978e0c261caa14f26bf03c6307e364d83468fbe1ee476e6e543eb55e98142e7",
@@ -97,7 +115,7 @@
     "doc_id": "0084",
     "requirement_id": "I17C-E03",
     "checkbox": "090",
-    "next_action": "The blueprint and source package are synced and verified. Run one OpenCode v2 free-model Writer using worker/opencode_docx_task_R01.md and UNIQUE_BLUEPRINT_0084_R02.md to create the full body and editable DOCX; then run exact-SHA technical, semantic, visual and boundary checks."
+    "next_action": "Do not redispatch 0084. Keep the single active OpenCode Writer; after it exits, inspect the returned body/DOCX, run deterministic technical and boundary checks, then independent semantic and bounded visual review."
   },
   "P8_state": {
     "blueprint": "R02 ready for Writer; not document acceptance",
