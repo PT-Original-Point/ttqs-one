@@ -200,7 +200,7 @@
     }
   },
   "P4_sync": {
-    "status": "VERIFIED_0072_PACKAGE_AND_GITHUB_READBACK",
+    "status": "PENDING_0081_PUSH_AND_READBACK",
     "last_verified_commit": "6e22ec932865567b969350f82d97a1652151c531",
     "remote_head_at_readback": "6e22ec932865567b969350f82d97a1652151c531",
     "readback_at_local": "2026-10-19T06:17:34.8704067+08:00",
@@ -215,7 +215,18 @@
     "new_docx_sha256": "3327fdc5200770dde695fc822eca3653feed0f562b156d4529e89cdecbdf052e",
     "package_manifest_path": "docs/ttqs-quality-20261016/quality-review/0072_R01/evidence/PACKAGE_MANIFEST_0072_R01.json",
     "package_manifest_sha256": "13f7592c78eb40cead6c16c7cbc696a83e94fe613d70797163582aeb695814fc",
-    "readback_scope": "104 manifest-listed package files plus package manifest, R04 execution receipt, and P7 test receipt; 105 raw exact, 2 text CRLF-to-LF normalized, 0 mismatches."
+    "readback_scope": "104 manifest-listed package files plus package manifest, R04 execution receipt, and P7 test receipt; 105 raw exact, 2 text CRLF-to-LF normalized, 0 mismatches.",
+    "previous_verified_status": "VERIFIED_0072_PACKAGE_AND_GITHUB_READBACK",
+    "current_0081": {
+      "status": "PREPARED_FOR_SYNC",
+      "candidate_sha256": "afad7608a1e85dd479eb655724cc2ce42cf5f91f0f9bb59d6f601b3b31b56201",
+      "package_manifest_path": "docs/ttqs-quality-20261016/quality-review/0081_R01/qa/package_manifest_R03.json",
+      "package_manifest_sha256": "447227c166f251c67d48f1efc4ef9ff3413f6fb6ae57db02fa69df1ad4f4ca64",
+      "manifest_files": 96,
+      "manifest_mismatches": 0,
+      "readback_commit": null,
+      "readback_status": "PENDING"
+    }
   },
   "P5_schedule_and_cost": {
     "existing_hourly_task": "UNCHANGED; this wake is on the existing bound thread task",
@@ -226,13 +237,13 @@
     "scheduler_changes_this_recovery": 0
   },
   "P6_next_ready": {
-    "doc_id": "0073",
-    "requirement_id": "I17A-E01",
-    "official_checkbox_serial": "080",
-    "queue_state": "PENDING; no existing 0073 package/candidate found in this checkout; no active 0073 Writer identified.",
-    "selection": "Next sequential source-bound READY after 0072 exact package and receipts were pushed and read back.",
-    "next_action": "Read official I17A-E01 source and current Unique Blueprint row 73; verify local/remote state and active writer; prepare one isolated OpenCode v2 free-model source-bound packet.",
-    "status": "READY_AFTER_0072_PACKAGE_READBACK"
+    "doc_id": "0082",
+    "requirement_id": "I17C-E01",
+    "official_checkbox_serial": "088",
+    "queue_state": "SOURCE_FRESH_READ_REQUIRED_AFTER_0081_READBACK",
+    "selection": "Next sequential item reported by current R04 queue history; must reconfirm current official source, Unique Blueprint and OS queue before dispatch.",
+    "next_action": "After 0081 GitHub readback, reconcile 0082 local/remote artifacts, official source, unique blueprint and live Writer state; dispatch only if still READY.",
+    "status": "PENDING_FRESH_RECONCILIATION"
   },
   "P7_tests": {
     "T1": "PASS_EXPECTED_NOOP_FIXTURE_ONLY",
@@ -241,8 +252,8 @@
     "T4": "PASS_CURRENT_0072_GITHUB_BLOB_READBACK: 107 paths; 105 raw exact, 2 text files LF-normalized, 0 mismatches; DOCX SHA verified.",
     "T5": "PASS_0072_LOCAL_EXACT_SHA_SAMPLE_SYNTHETIC_REAL_BOUNDARY; candidate only, REAL evidence UNKNOWN/HOLD, formal acceptance NOT_GRANTED."
   },
-  "P8_status": "R04 recovery: 0072 candidate and required public evidence are synced to GitHub and read back from commit 6e22ec932865567b969350f82d97a1652151c531. Readback covers 107 paths (105 raw-byte exact, 2 text files LF-normalized, 0 mismatches). Candidate DOCX SHA 3327fdc5200770dde695fc822eca3653feed0f562b156d4529e89cdecbdf052e; technical PASS, visual PASS within recorded scope, independent exact-SHA semantic PASS. SAMPLE/SYNTHETIC only; REAL evidence UNKNOWN/HOLD; formal acceptance NOT_GRANTED. Next READY is 0073 / I17A-E01 / checkbox 080 after fresh source and worker check.",
-  "updated_at_local": "2026-10-19T06:18:10.9985078+08:00",
+  "P8_status": "0081 R03 candidate package is locally reconciled: DOCX SHA afad7608a1e85dd479eb655724cc2ce42cf5f91f0f9bb59d6f601b3b31b56201; technical PASS; all 13 Word-rendered pages inspected; exact-SHA semantic PASS (R02 full review plus R03 metadata delta). Package manifest covers 96 files with 0 local mismatches. CANDIDATE_ONLY; REAL=UNKNOWN/HOLD; formal acceptance NOT_GRANTED. GitHub push and remote readback pending; next queue item 0082/I17C-E01/checkbox 088 requires fresh source/queue reconciliation.",
+  "updated_at_local": "2026-10-19T12:33:47.0586701+08:00",
   "source_contract_blobs": {
     "01_HUMAN_MISSION_AND_ACCEPTANCE.md": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e",
     "02_GENRE_WRITING_MANUAL.md": "4ff863d9f534b6359fc1c7c1685bd8cce02da886",
@@ -320,5 +331,33 @@
     "p7_five_tests": "T1 fixture-only PASS; T2 route isolation PASS from observed 0055 record; T3 exact-SHA reuse/no rerun PASS; T4 current 0072 remote readback PASS (105 exact raw, 2 text EOL-normalized, 0 mismatch); T5 current 0072 boundary PASS.",
     "p8_result": "0072 synced exact candidate; not formally accepted; proceed to 0073 after source/worker preflight."
   },
-  "P0_current_status": "Fresh GitHub fetch/readback at current commit; no active 0072 writer/reviewer; OpenCode persistent service is not a document owner; Word COM processes have no identified document target and are not counted as active writers."
+  "P0_current_status": "0081 R03 writer and reviewer exited; no active 0081 Writer/reviewer confirmed. OpenCode service is not an owner. Word COM render complete; no Computer Use. Existing unrelated stale render processes remain uncounted as Writers.",
+  "P3_document_action_0081": {
+    "doc_id": "0081",
+    "requirement_id": "I17B-E03",
+    "official_checkbox_serial": "086",
+    "unique_blueprint_sha256": "ea24a5986af99c2c6b8e68075e64c2e1d0a8702ab3c4434d94120191de3fde18",
+    "candidate_path": "docs/ttqs-quality-20261016/quality-review/0081_R01/candidate/0081_R03.docx",
+    "candidate_sha256": "afad7608a1e85dd479eb655724cc2ce42cf5f91f0f9bb59d6f601b3b31b56201",
+    "body_sha256": "77f84cad04c8487652fa112c84f21c586a7ed5a3c7429e323337e971395277c2",
+    "register_sha256": "4e76c3f7e7dc818e94b1551e81b5d3e83d1dd4361c5aaaa3cf8eea139be7e074",
+    "technical": "PASS_TECHNICAL_SCOPE",
+    "visual": "PASS; Word PDF 13 pages and all page images inspected",
+    "independent_semantic": "PASS exact SHA R03 delta; R02 full substantive review carried forward",
+    "writer_route": "OpenCode CLI v2 opencode/deepseek-v4.1-flash-free; exit 0; actual output and session artifacts preserved",
+    "reviewer_route": "OpenCode CLI v2 opencode/beam-free; R02 full semantic PASS plus R03 delta PASS; exit 0; read only",
+    "state": "CANDIDATE_ONLY; REAL=UNKNOWN/HOLD; formal_acceptance=NOT_GRANTED"
+  },
+  "P4_sync_current": {
+    "status": "PENDING_GITHUB_PUSH",
+    "target": "PT-Original-Point/ttqs-one PR #92 existing branch",
+    "candidate_sha256": "afad7608a1e85dd479eb655724cc2ce42cf5f91f0f9bb59d6f601b3b31b56201"
+  },
+  "P6_current_next_ready": {
+    "doc_id": "0082",
+    "requirement_id": "I17C-E01",
+    "official_checkbox_serial": "088",
+    "queue_state": "READY_AFTER_0081_SYNC; pre-dispatch live check required",
+    "genre": "post-training behavior-transfer survey; distinct from 0081 closeout/action-plan verification"
+  }
 }
