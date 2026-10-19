@@ -1,0 +1,72 @@
+{
+  "project_id": "TTQS_ONE",
+  "command": "TTQS_ONE_ANTIGRAVITY_DISPATCH_QUOTA_FORENSIC_R05",
+  "source_attachment_sha256": "08537c533ff7e0e8fc070cbc06d1a9814ac5ae0c20538587e128a823d4d5aae5",
+  "source_attachment": "TTQS_ONE_ANTIGRAVITY_CLI_QUOTA_FORENSIC_R05_20261019.md",
+  "source_branch": "work/ttqs-one-document-quality-contract-20261016",
+  "source_head_observed_before_execution": "a1bb20f94ebb20df7f2efc3bfccfaf0351690f2e",
+  "audit_window": "rolling 72 hours ending 2026-10-19 local audit",
+  "receipt_backed_dispatches": 35,
+  "total_actual_dispatch_count": "UNKNOWN; at least 35 evidenced, missing/unmatched session receipt prevents complete count",
+  "request_outcomes": {
+    "nonempty_substantive_model_responses": 14,
+    "successful_smoke_only_responses": 2,
+    "no_usable_substantive_result": 19,
+    "caveat": "A nonempty response is not a DOCX delivery or formal acceptance; the 0085 R01 long response ended at output limit and was not a complete deliverable."
+  },
+  "per_work": {
+    "0044": "4 attempts; 0 usable responses; empty",
+    "0054": "2 attempts; 1 exact-SHA review response; 1 blocked/other, including historical permission-flag discrepancy",
+    "0055": "9 attempts across Writer/tool lane and text-only smoke; file Writer produced no usable deliverable; one bounded text-only smoke returned 49 chars",
+    "0057": "3 attempts; 2 substantive review responses",
+    "0058": "8 attempts; 4 substantive responses including one independent review PASS, others empty/failed",
+    "0059": "5 attempts; 4 substantive Writer responses",
+    "0061": "3 attempts with recorded responses/artifacts; provider identity not attested",
+    "0085": "1 text-only full-draft attempt; ~66,454 characters but CLI output-limit error, no complete returned artifact."
+  },
+  "requested_model": "gemini-3.8-flash-high",
+  "provider_model_attestation": "UNKNOWN",
+  "cli_gui_account_match": "UNKNOWN",
+  "provider_billing_and_quota_attribution": "UNKNOWN",
+  "cli_quota_snapshot": "2026-10-19 21:14 Asia/Taipei: Gemini weekly 92% remaining, 5h 98% remaining; CLI-side view only",
+  "gui_quota_snapshot": "2026-10-18 11:10 Asia/Taipei screenshot: weekly 94%, 5h 95%, overage disabled; not simultaneous with CLI snapshot",
+  "observed_errors": "No 429/quota-exhaustion evidence in examined logs; 68 background not-logged-in JSON messages do not prove the direct task calls were unauthenticated.",
+  "file_write_lane": "PAUSED: observed argument errors, headless file-tool permission denials, stalls and no Writer artifact after bounded repairs",
+  "text_only_lane": "BLOCKED_PENDING_HUMAN_CLI_SIGN_IN: prior bounded text-only smoke succeeded on 2026-10-18, but current native interactive CLI says not signed in; no new model call made. Resume only after Human authenticates using the native CLI and the bounded no-tools sandbox route is revalidated.",
+  "security_flag_discrepancy": "OPEN: historical 0054 R14 receipt says dangerously_skip_permissions=true; raw original argv not resolved",
+  "active_writer": "No Antigravity process observed active at audit snapshot; current TUI exited after workspace-trust denial; OpenCode R06 exact-SHA reviewer PID 35740 active; older OpenCode service PID 45628 preserved.",
+  "interpretation": "UNDERUTILIZATION_BY_DISPATCH_POLICY is supported: OpenCode progressed while the Antigravity file Writer route was paused. Provider quota depletion, account mismatch, and GUI/CLI billing attribution remain UNKNOWN.",
+  "antigravity_calls_this_turn": 0,
+  "next_action": "Human must authenticate in the native Antigravity CLI; after login, resume one document-specific text-only prose task through the already authorized no-tools sandbox route, then Windows-native build and OpenCode independent review. Do not alter OAuth or grant workspace trust without Human.",
+  "completed_at_utc": "2026-10-19T23:06:24.736618+08:00",
+  "cli_forensic_readback": {
+    "cli_version": "agy 1.4.2",
+    "installed_model_listing": "gemini-3.8-flash-high listed",
+    "provider_override_present": false,
+    "GEMINI_API_KEY_present": false,
+    "GOOGLE_GEMINI_BASE_URL_present": false,
+    "interactive_TUI": "Not signed in",
+    "workspace_trust": "Denied for E:\\TTQS; no workspace access granted",
+    "usage_command": "Not run because CLI is not signed in",
+    "checked_at_local": "2026-10-19 evening Asia/Taipei"
+  },
+  "doc_0085_R06": {
+    "candidate_docx_sha256": "4c2d459c8b02a333157db136774e452fb9c293e02cb525b9286f5d2d7d3740cc",
+    "body_sha256": "cda67d0e3aeab29e3329255854d75dd94a9bf8591bc7253f126ad68e49c2bbad",
+    "source_packet_sha256": "e9afdcf603ba14d95071a15ab77d41ca1fcd7dc00bb10b64aecdb4c919b02b3f",
+    "unique_blueprint_sha256": "4fe718c40a4a46231863104853b7d5dad7ab48e7347d1d7639ef8fd49786b73e",
+    "technical_content": "PASS: 179/179 Appendix E value cells exact; §15.2 native 7x7 table; all listed static checks pass",
+    "visual": "Producer inspected all 37 pages via four contact sheets and full pages 19,20,21,22,24,28,30,31,32,33; no clipping/overlap observed; separate from semantic review",
+    "semantic_response": "OpenCode response text says PASS for exact-SHA semantic/text scope; R05 F1-F8 and C1-C6 pass",
+    "semantic_execution": "CLI_ERROR exit 1 after provider.invalid-output; final complete text event captured; response and transport error separately receipted",
+    "formal_acceptance": "NOT_GRANTED",
+    "remote_sync": "PENDING"
+  },
+  "queue_readback": {
+    "file": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\BUILD_QUEUE.json",
+    "last_write_local": "2026-10-19 03:24",
+    "observed_0085": "PENDING",
+    "observed_0086": "PENDING",
+    "assessment": "STALE relative to current R06 candidate/review; not a reliable current READY queue"
+  }
+}
