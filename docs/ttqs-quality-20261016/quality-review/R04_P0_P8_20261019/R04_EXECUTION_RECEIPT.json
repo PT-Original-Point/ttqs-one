@@ -262,7 +262,7 @@
     "T5": "PASS_0072_LOCAL_EXACT_SHA_SAMPLE_SYNTHETIC_REAL_BOUNDARY; candidate only, REAL evidence UNKNOWN/HOLD, formal acceptance NOT_GRANTED."
   },
   "P8_status": "0081 R03 is synced and read back from GitHub commit 6518947d8cd8d9c06a7f22597a14a62953ac2a9a. DOCX exact SHA afad7608a1e85dd479eb655724cc2ce42cf5f91f0f9bb59d6f601b3b31b56201; technical PASS; all 13 rendered pages directly inspected; exact-SHA semantic PASS (R02 full review plus R03 delta). Package readback: 96 manifest files, 58 raw exact, 38 text EOL-normalized, 0 mismatches. Candidate only; REAL=UNKNOWN/HOLD; formal acceptance NOT_GRANTED. Next 0082/I17C-E01/checkbox 088 awaits fresh source, queue and worker reconciliation.",
-  "updated_at_local": "2026-10-19T15:10:01.668283+08:00",
+  "updated_at_local": "2026-10-19T15:24:16.833569+08:00",
   "source_contract_blobs": {
     "01_HUMAN_MISSION_AND_ACCEPTANCE.md": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e",
     "02_GENRE_WRITING_MANUAL.md": "4ff863d9f534b6359fc1c7c1685bd8cce02da886",
@@ -381,16 +381,13 @@
     "doc_id": "0084",
     "requirement_id": "I17C-E03",
     "official_checkbox_serial": "090",
-    "queue_state": "READY_FOR_UNIQUE_BLUEPRINT_CREATION_AFTER_NO_LOCAL_OR_REMOTE_CANDIDATE_AND_NO_ACTIVE_WRITER_CHECK",
-    "official_source_path": "docs/ttqs-quality-20261016/quality-review/0077_R01/inputs/upstream_snapshots/03_157_CHECKBOX_BLUEPRINTS.md",
-    "official_source_locator": "I17c row 090: 派訓主管學習成效評估：職場觀察量規和回饋",
-    "mapping_source": "R04 BUILD_QUEUE.json maps 0084 to I17C-E03; mapping only, its old PENDING state is not treated as live readiness.",
-    "source_authority": "Official evidence table PDF page 6, 17c 行為評估; 02_GENRE_WRITING_MANUAL.md 17c and 17d boundary.",
-    "cross_document_anchor": "0083 R02 body SHA 65adee0f9be4643b612817250484407cd1833daa3a2fa6a0a93e797ba68c324e; sample case only, not real evidence; 0083 candidate remains formally unaccepted.",
+    "queue_state": "READY_FOR_DOCX_WRITER_AFTER_BLUEPRINT_R02_AND_GITHUB_READBACK",
+    "blueprint_path": "docs/ttqs-quality-20261016/quality-review/0084_R01/inputs/UNIQUE_BLUEPRINT_0084_R02.md",
+    "blueprint_sha256": "72729eab74a1cc61e84854668a7ae4afc37ef4b5eefdcab8956b90c6e0c1a5f3",
     "local_candidate_exists": false,
     "remote_candidate_exists": false,
     "active_writer_or_reviewer_for_0084": false,
-    "next_action": "Create and verify 0084/I17C-E03/090 Unique Blueprint and source packet; then write the manager workplace-observation rubric/feedback document through existing OpenCode v2 free route. Keep official 17c 0-3 institutional evidence scale distinct from any proposed sample behavior anchors and separate from 17d outcomes."
+    "next_action": "After blueprint/status sync and readback, dispatch one OpenCode v2 free-model writer against R02 to create the full body and DOCX; do not dispatch a duplicate."
   },
   "P4_sync_0081_historical": {
     "status": "PENDING_GITHUB_PUSH",
@@ -478,5 +475,29 @@
     "remote_docx_exact_sha_verified": true,
     "readback_receipt_git_blob_sha": "f47560ce5821ade4aa3ba0ecb3aa2693b4cfa73f",
     "readback_receipt_sha_scope": "SHA256 of fetched remote text blob content; Git object id listed separately."
+  },
+  "P3_document_action_0084_blueprint": {
+    "document_id": "0084",
+    "requirement_id": "I17C-E03",
+    "official_checkbox_serial": "090",
+    "blueprint_r01_sha256": "1978e0c261caa14f26bf03c6307e364d83468fbe1ee476e6e543eb55e98142e7",
+    "blueprint_r01_review": "PARTIAL; precise defects recorded in inputs/BLUEPRINT_REVIEW_R01.md",
+    "blueprint_r02_sha256": "72729eab74a1cc61e84854668a7ae4afc37ef4b5eefdcab8956b90c6e0c1a5f3",
+    "blueprint_r02_review_receipt_sha256": "7dfa84aa3c178d9b3aad7f92c75aad39980db1b60e0367af9a448337de4f90ec",
+    "builder": "OpenCode CLI v2.0.29 opencode/deepseek-v4.1-flash-free",
+    "worker_session": "ses_eacfded6affeoGIzPOMznmvdNV",
+    "worker_exit_code": 0,
+    "blueprint_static_checks": "PASS; identity, source hashes, B1–B4 anchors, date arithmetic, 46 register IDs, sample boundary and case-link checks. Blueprint readiness only.",
+    "candidate_docx": "NOT_BUILT"
+  },
+  "P8_current_0084_blueprint_R02": {
+    "document_id": "0084",
+    "requirement_id": "I17C-E03",
+    "official_checkbox_serial": "090",
+    "blueprint_sha256": "72729eab74a1cc61e84854668a7ae4afc37ef4b5eefdcab8956b90c6e0c1a5f3",
+    "status": "READY_FOR_DOCX_WRITER; BLUEPRINT ONLY",
+    "candidate_docx": "NOT_BUILT",
+    "real_evidence": "UNKNOWN/HOLD",
+    "formal_acceptance": "NOT_GRANTED"
   }
 }
