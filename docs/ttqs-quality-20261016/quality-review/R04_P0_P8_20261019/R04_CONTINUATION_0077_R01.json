@@ -52,7 +52,13 @@
     "details": "Original OpenCode Writer body, raw output and exit receipt retained. One formatting-only repair removed the title rule and prevents action/mapping cards splitting; no semantic rewrite after review."
   },
   "P4_github_sync": {
-    "status": "PENDING_PACKAGE_PUSH_AND_READBACK"
+    "status": "VERIFIED",
+    "package_commit": "b71642d877c21c79574e1bb41ec1ff36185acc29",
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "pull_request_head": "b71642d877c21c79574e1bb41ec1ff36185acc29",
+    "readback_receipt": "0077_GITHUB_READBACK_R01.json",
+    "file_count": 99,
+    "comparison": "Binary files exact SHA-256; text files compared after CRLF/CR-to-LF normalization. All 99 entries matched."
   },
   "P5_scheduler_and_cost": {
     "status": "VERIFIED_UNCHANGED",
@@ -60,7 +66,7 @@
     "model_cost": "One OpenCode Writer call and one independent OpenCode reviewer call; not zero cost."
   },
   "P6_next_ready": {
-    "status": "QUEUED_AFTER_0077_SYNC",
+    "status": "READY_AFTER_0077_SYNC",
     "document_id": "0078",
     "requirement_id": "I17B-E01",
     "official_checkbox_serial": "084",
@@ -70,11 +76,11 @@
     "T1": "PASS inherited fixture-only/no-op check from the current R04 root receipt; it does not claim a scheduled wake test.",
     "T2": "PASS route isolation: the 0077 Writer and Reviewer used OpenCode CLI v2 only; no Antigravity executable was found on the targeted check, no Computer Use dispatch occurred, and the historical 0055 R04 lane was not reused.",
     "T3": "PASS exact-SHA reuse: exactly one semantic review dispatch for final SHA cc545510…17edf7; no candidate change/rebuild after review.",
-    "T4": "PENDING: complete 0077 package and this continuation must be read from live GitHub after push.",
+    "T4": "PASS: fetched branch and PR #92 head both resolved to b71642d877c21c79574e1bb41ec1ff36185acc29; all 99 package/continuation entries read back and matched (binary exact SHA-256; text line-ending normalization only).",
     "T5": "PASS: candidate, technical receipt and independent reviewer preserve SAMPLE/SYNTHETIC, REAL=UNKNOWN/HOLD, NOT_GRANTED and checkbox 084 PARTIAL/HOLD."
   },
   "P8_result": {
-    "status": "REVIEWED_READY_FOR_GITHUB_SYNC",
+    "status": "CANDIDATE_SYNCED_REVIEWED_NOT_FORMALLY_ACCEPTED",
     "technical": "PASS exact DOCX SHA; 16 synthetic rows, 80 narrative values, 7 action cards, 9 mapping cards, 119 replacement fields.",
     "visual": "PASS; all 23 final render pages inspected at original resolution; PDF SHA 82249c87d81e853e4e83e56c16b3359dd80924b797c61cad3a0d36b31280bbcb.",
     "semantic": "PASS independent OpenCode CLI v2 beam-free; exact-SHA bound; official PDF direct parsing and reviewer image inspection limitations recorded.",
@@ -83,7 +89,7 @@
     "checkbox_084": "PARTIAL/HOLD; 0076/0078/0079 and genuine source paths remain required.",
     "formal_acceptance": "NOT_GRANTED",
     "real_status": "UNKNOWN/HOLD",
-    "github_readback": "PENDING"
+    "github_readback": "VERIFIED at b71642d877c21c79574e1bb41ec1ff36185acc29; 99 entries matched."
   },
-  "updated_utc": "2026-10-19T01:15:59.271080+00:00"
+  "updated_utc": "2026-10-19T01:23:48.855824+00:00"
 }
