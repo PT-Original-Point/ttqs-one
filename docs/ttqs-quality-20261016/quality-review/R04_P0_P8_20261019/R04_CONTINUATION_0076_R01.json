@@ -49,9 +49,18 @@
     "details": "Original worker body and raw output retained; two pre-build editorial corrections are separately receipted; builder did not modify unrelated DOCX."
   },
   "P4_github_sync": {
-    "status": "PENDING_PACKAGE_PUSH_AND_BYTE_READBACK",
-    "package_path": "docs/ttqs-quality-20261016/quality-review/0076_R01/",
-    "remote_readback_required": true
+    "status": "VERIFIED",
+    "package_commit": "31961c49fd82100289ec6f62fd6f79663dcbd833",
+    "manifest_blob_commit": "0733c72",
+    "remote_head_at_readback": "0733c720af0214c9e6fb7c73956b162f5e083292",
+    "readback_receipt": "quality-review/R04_P0_P8_20261019/0076_GITHUB_READBACK_R01.json",
+    "files_checked": 81,
+    "status_counts": {
+      "EOL_NORMALIZED_CONTENT_MATCH": 35,
+      "EXACT": 46
+    },
+    "content_mismatch_count": 0,
+    "docx_sha256_exact": "885fe403b46144639034a3f6b26c2b74916c22c7b5a5a971628136f376a115f3"
   },
   "P5_scheduler_and_cost": {
     "status": "VERIFIED_UNCHANGED",
@@ -69,11 +78,11 @@
     "T1": "PASS inherited R04 fixture-only/no-op check; does not claim a scheduled wake test.",
     "T2": "PASS inherited route-isolation check for historical 0055 work.",
     "T3": "PASS inherited exact-SHA reuse/no-duplicate-review check.",
-    "T4": "PENDING; current 0076 package requires GitHub blob readback and hash comparison.",
+    "T4": "PASS; 0076 package plus manifest and R04 checkpoint: 81 paths read from fetched GitHub branch; 46 exact raw matches, 35 UTF-8 EOL-normalized content matches, 0 content mismatch; DOCX binary SHA exact.",
     "T5": "PASS; 0076 clearly SAMPLE/SYNTHETIC, candidate-only, REAL=UNKNOWN/HOLD, no formal acceptance; checkbox 084 remains composite PARTIAL."
   },
   "P8_result": {
-    "status": "CANDIDATE_READY_FOR_REMOTE_SYNC",
+    "status": "CANDIDATE_SYNCED",
     "technical": "PASS exact DOCX SHA",
     "visual": "PASS_LAYOUT_VISUAL all 26 pages inspected; PDF SHA 576fa2915d2879b8c3e9ded5847b3d2cc2246b37e0230229cbf44bfe2f4d15dd",
     "semantic": "PASS independent OpenCode CLI v2 beam-free; exact DOCX SHA bound via extraction receipt",
@@ -81,7 +90,9 @@
     "page_count": 26,
     "checkbox_084": "PARTIAL; 0077/0078/0079 and real sources still outstanding",
     "formal_acceptance": "NOT_GRANTED",
-    "real_status": "UNKNOWN/HOLD"
+    "real_status": "UNKNOWN/HOLD",
+    "github_readback": "VERIFIED",
+    "remote_head_at_readback": "0733c720af0214c9e6fb7c73956b162f5e083292"
   },
-  "updated_utc": "2026-10-19T00:47:28.199367+00:00"
+  "updated_utc": "2026-10-19T00:50:25.521729+00:00"
 }
