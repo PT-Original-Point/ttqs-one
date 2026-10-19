@@ -1,0 +1,73 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0088",
+  "requirement_id": "I17D-E02",
+  "revision": "R07",
+  "candidate_docx_sha256": "83ff96699e8c3e01852524047c822f912323207b2c22eb7e6fdb2cc561a5b5dc",
+  "word_export_pdf_sha256": "7ac5df6c968ed094989517cdd0250f6574e2ff6a75c7f908a0f7471a94df7e61",
+  "page_count": 26,
+  "status": "PASS_WITH_SCOPE_LIMITS",
+  "review_method": "Human visual inspection of all seven rendered overview sheets covering pages 1-26; full-resolution inspection of pages 1, 10, 25, and 26. Page-image SHA values are bound to the Word-export manifest.",
+  "reviewed_overview_sheets": [
+    {
+      "file": "overview-01.png",
+      "sha256": "67b31d78ccb4f81cf5896d9b2b1453032ca21230697a6ed1194a35ebdd16170b"
+    },
+    {
+      "file": "overview-02.png",
+      "sha256": "ee92a537461496f5230ab4ceb3e3f936e9e851431e434e525300c7821235a759"
+    },
+    {
+      "file": "overview-03.png",
+      "sha256": "95ce465173e85ab3b20e5887a9cea359c884cacbcd6d9b39ff45e835150ec459"
+    },
+    {
+      "file": "overview-04.png",
+      "sha256": "ba6fac34c4b034cafe7a0a2aab262f0066e369ff5bd321419e24d9cb674260f7"
+    },
+    {
+      "file": "overview-05.png",
+      "sha256": "8305db4bb0a52a8707c768b6cc1c71267f2ce3bf200977c82eada5ebfbe4b840"
+    },
+    {
+      "file": "overview-06.png",
+      "sha256": "631f2462fdff49a9396f904a3447a1ed205c638f42298e614640f14404a3a5f3"
+    },
+    {
+      "file": "overview-07.png",
+      "sha256": "77db30f3eb066d9544fa0f5181d22e3aa56d0b5cc1e922128195251d04a5b4b6"
+    }
+  ],
+  "full_resolution_pages": [
+    {
+      "page": 1,
+      "file": "page-01.png",
+      "sha256": "e8cde83000d91715e5880db13829812ab3d6aadbc7edd15a3bc84f38b73355c1"
+    },
+    {
+      "page": 10,
+      "file": "page-10.png",
+      "sha256": "373e8befe0422bee2c6c7a7ecb6905c508846b07546520154e0b21af2cea418c"
+    },
+    {
+      "page": 25,
+      "file": "page-25.png",
+      "sha256": "76bd444f66c01f3cd659ccc8c78e5c8513fb8858a94365303e7124e3827b239b"
+    },
+    {
+      "page": 26,
+      "file": "page-26.png",
+      "sha256": "071e8763574e225a708cce37144ab7dbef4bb52933a22ff80103d83aa4bb4241"
+    }
+  ],
+  "findings": [
+    "Cover exposes the SAMPLE/SYNTHETIC boundary and intended use without internal doc_id, requirement_id, serial, or candidate SHA metadata.",
+    "Section 7.3 contact-script labels remain attached to their sample scripts; the prior orphan-label defect is resolved.",
+    "Tables and body text inspected across all 26 pages show no clipping, overlap, or unreadable page-edge content.",
+    "Pages 25-26 are intentionally sparse final checklist/comparison pages; content remains readable and complete."
+  ],
+  "limitations": [
+    "Overview sheets were used for full-document coverage; only pages 1, 10, 25 and 26 received full-resolution inspection.",
+    "Visual review does not establish semantic acceptance or formal TTQS acceptance."
+  ]
+}
