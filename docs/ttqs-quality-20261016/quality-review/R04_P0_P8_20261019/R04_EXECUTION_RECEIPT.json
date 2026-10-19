@@ -376,21 +376,19 @@
     "readback_receipt_sha256": "ddf102ce33cb11dde6e21defeef25bb8404430358d7c406da52cff2c639a1f45"
   },
   "P6_current_next_ready": {
-    "doc_id": "0083",
-    "requirement_id": "I17C-E02",
-    "official_checkbox_serial": "089",
-    "queue_state": "READY_FOR_UNIQUE_BLUEPRINT_CREATION",
+    "doc_id": "0084",
+    "requirement_id": "I17C-E03",
+    "official_checkbox_serial": "090",
+    "queue_state": "READY_FOR_UNIQUE_BLUEPRINT_CREATION_AFTER_NO_LOCAL_OR_REMOTE_CANDIDATE_AND_NO_ACTIVE_WRITER_CHECK",
     "official_source_path": "docs/ttqs-quality-20261016/quality-review/0077_R01/inputs/upstream_snapshots/03_157_CHECKBOX_BLUEPRINTS.md",
-    "official_source_git_blob": "8c2bbe7ca9dcbb03088a48934b9e57e7147ede63",
-    "official_source_locator": "I17c row 089: 學員行動計畫追蹤：目標/實際/阻礙/協助/成效",
-    "official_page_image": "docs/ttqs-quality-20261016/quality-review/0078_R01/evidence/official_evidence_table_page6-6.png",
-    "official_page_image_sha256": "b7bd4c09b7d7e22993a1577647e10a421fb240222b46b531ba3f01ee047fa1d1",
-    "genre_manual_git_blob": "4ff863d9f534b6359fc1c7c1685bd8cce02da886",
-    "mission_git_blob": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e",
+    "official_source_locator": "I17c row 090: 派訓主管學習成效評估：職場觀察量規和回饋",
+    "mapping_source": "R04 BUILD_QUEUE.json maps 0084 to I17C-E03; mapping only, its old PENDING state is not treated as live readiness.",
+    "source_authority": "Official evidence table PDF page 6, 17c 行為評估; 02_GENRE_WRITING_MANUAL.md 17c and 17d boundary.",
+    "cross_document_anchor": "0083 R02 body SHA 65adee0f9be4643b612817250484407cd1833daa3a2fa6a0a93e797ba68c324e; sample case only, not real evidence; 0083 candidate remains formally unaccepted.",
     "local_candidate_exists": false,
     "remote_candidate_exists": false,
-    "live_writer_or_reviewer": false,
-    "next_action": "Create a document-specific unique Blueprint for 0083, then use the existing OpenCode v2 CLI free route for its substantive body; preserve the distinction from 0082 survey and never imply real implementation."
+    "active_writer_or_reviewer_for_0084": false,
+    "next_action": "Create and verify 0084/I17C-E03/090 Unique Blueprint and source packet; then write the manager workplace-observation rubric/feedback document through existing OpenCode v2 free route. Keep official 17c 0-3 institutional evidence scale distinct from any proposed sample behavior anchors and separate from 17d outcomes."
   },
   "P4_sync_0081_historical": {
     "status": "PENDING_GITHUB_PUSH",
@@ -444,5 +442,21 @@
     "T3_exact_sha_reuse": "PASS: preserved and reused R08 candidate; no rebuild or repeated review.",
     "T4_remote_package_integrity": "PASS: 242 manifest entries; all 242 fetched remote Git blob byte lengths and SHA-256 matched; 0 mismatches at f478e050c9ff17b562f2151da7c4d973c30b16a9.",
     "T5_evidence_boundary": "PASS: SAMPLE/SYNTHETIC only; REAL=UNKNOWN/HOLD; formal acceptance NOT_GRANTED."
-  }
+  },
+  "P8_current_0083_R03": {
+    "doc_id": "0083",
+    "requirement_id": "I17C-E02",
+    "official_checkbox_serial": "089",
+    "candidate_revision": "R03",
+    "candidate_sha256": "60c18ccbb6f5b723de7cd69efca28c4c14774617c13d90784604427895ab8b07",
+    "body_sha256": "65adee0f9be4643b612817250484407cd1833daa3a2fa6a0a93e797ba68c324e",
+    "semantic": "PASS exact candidate SHA; independent OpenCode v2 DeepSeek V4.1 Flash Free reviewer; exit 0; full DOCX content and all 81-row crosswalks inspected.",
+    "technical": "PASS_STRUCTURE_ONLY; python-docx opened; 63 tables; 10 sections; watermark/footer fields found.",
+    "visual": "BLOCKED_VISUAL_VERIFICATION; R02 defects located (orphan §5.3 heading p14, trailing blank p64); R03 Word PDF and one-page PDF/XPS exports stalled; no R03 visual PASS.",
+    "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+    "REAL": "UNKNOWN/HOLD",
+    "FORMAL_ACCEPTANCE": "NOT_GRANTED",
+    "evidence_manifest": "docs/ttqs-quality-20261016/quality-review/0083_R01/evidence/package_manifest_R03.json"
+  },
+  "P8_status_current": "0083 R03 semantic PASS exact SHA; visual remains blocked by Word export stall and is not accepted. Continue the unaffected READY lane 0084/I17C-E03/090; preserve candidate/REAL/formal acceptance boundaries."
 }

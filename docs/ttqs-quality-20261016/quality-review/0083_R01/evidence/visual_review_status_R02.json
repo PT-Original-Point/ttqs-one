@@ -1,0 +1,32 @@
+{
+  "schema": "ttqs-0083-visual-review-v1",
+  "document_id": "0083",
+  "revision": "R02",
+  "docx_sha256": "a0cab36f092855e0968660de18e682bf4ee349831f332f6a830bc3f42bc08a8c",
+  "pdf_sha256": "9316664f1a8b558ff4d2380adffa4461d1e48f85c7eafda8cae3c4da05f925d5",
+  "pdf_pages": 64,
+  "coverage": "All 64 pages inspected in four contact sheets; pages 1,14,15,25,27,48,64 additionally inspected at original resolution.",
+  "findings": [
+    {
+      "page": 14,
+      "severity": "MATERIAL_LAYOUT_DEFECT",
+      "finding": "Section heading 5.3 空白表單 is stranded alone near the end of a portrait page; the six-column blank form begins on the following landscape page."
+    },
+    {
+      "page": 64,
+      "severity": "MATERIAL_LAYOUT_DEFECT",
+      "finding": "Trailing page contains only watermark/header/footer/page number and no document content."
+    }
+  ],
+  "observations": [
+    {
+      "pages": [
+        15,
+        48
+      ],
+      "finding": "One-row six-column blank forms occupy landscape pages; fields remain legible and intentional as reusable forms; no content clipping observed on high-resolution pages."
+    }
+  ],
+  "status": "FAIL_R02_LAYOUT_REPAIRED_IN_R03_CANDIDATE_BUT_R03_RENDER_UNVERIFIED",
+  "review_method": "Native Word PDF render; bundled Poppler PNGs; contact-sheet full-document triage plus targeted original-resolution inspection."
+}

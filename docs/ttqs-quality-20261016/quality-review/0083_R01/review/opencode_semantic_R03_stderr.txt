@@ -1,0 +1,606 @@
+[0m
+> build · deepseek-v4.1-flash-free
+[0m✱ [0mGlob "**/*0083*" [90m13 matches[0m
+[0m$ [0mgit rev-parse --show-toplevel; git branch --show-current; git log --oneline -5
+E:/TTQS/_github_sync_0064
+work/ttqs-one-document-quality-contract-20261016
+719ac6a Record 0082 R08 GitHub readback and R04 status
+f478e05 Sync 0082 R08 candidate and R04 evidence receipt
+39e4937 Record 0081 GitHub package readback
+6518947 Add TTQS 0081 R03 candidate and QA evidence
+17a6495 docs(ttqs): record 0069 R02 GitHub readback
+> build · deepseek-v4.1-flash-free
+[0m→ [0mRead docs/ttqs-quality-20261016/quality-review/0083_R01 
+[0m$ [0mGet-FileHash -Algorithm SHA256 "docs\ttqs-quality-20261016\quality-review\0083_R01\candidate\0083_R03.docx" | Format-List; Get-FileHash -Algorithm SHA256 "docs\ttqs-quality-20261016\quality-review\0083_R01\candidate\0083_R02.docx" | Format-List
+Algorithm : SHA256
+Hash      : 60C18CCBB6F5B723DE7CD69EFCA28C4C14774617C13D90784604427895AB8B07
+Path      : E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\candidate\0083_R03.docx
+
+
+Algorithm : SHA256
+Hash      : A0CAB36F092855E0968660DE18E682BF4EE349831F332F6A830BC3F42BC08A8C
+Path      : E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\candidate\0083_R02.docx
+> build · deepseek-v4.1-flash-free
+[0m✱ [0mGlob "**/0083_R01/**/*" [90m100 matches[0m
+[0m$ [0mGet-ChildItem -Recurse "docs\ttqs-quality-20261016\quality-review\0083_R01" | Select-Object FullName, Length | Format-Table -AutoSize
+FullName
+--------                                                                                                               
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\candidate                                 
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence                                  
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\inputs                                    
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\review                                    
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker                                    
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\inputs\SOURCE_PACKET_0083_R01.md          
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\inputs\UNIQUE_BLUEPRINT_0083_R03.md       
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\candidate\0083_R01_body.md                
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\candidate\0083_R02_body.md                
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\candidate\0083_R02_pre_watermark.docx     
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\candidate\0083_R02.docx                   
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\candidate\0083_R03_pre_watermark.docx     
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\candidate\0083_R03.docx                   
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\candidate\SYNTHETIC_REPLACEMENT_REGISTER_�K
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\contact_sheets                   
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02                       
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word                  
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\0083_R02_word_render.pdf         
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\blueprint_qa_R03.json            
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\body_blueprint_qa_R02.json       
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\body_markdown_qa_R01.json        
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\build_receipt_R01.json           
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\build_receipt_R03.json           
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\docx_extracted_R02.txt           
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\docx_extracted_R03.md            
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\R03_page1_probe.log              
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\R03_page1_xps_probe.log          
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\replacement_register_receipt_R01�K
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\semantic_review_receipt_R01.json 
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\semantic_review_receipt_R02.json 
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\source_hash_readback_R01.json    
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\word_render_receipt_R02.json     
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\word_render_steps_R03.log        
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\writer_receipt_R01.json          
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\writer_receipt_R02.json          
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-01.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-02.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-03.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-04.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-05.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-06.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-07.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-08.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-09.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-10.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-11.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-12.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-13.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-14.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-15.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-16.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-17.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-18.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-19.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-20.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-21.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-22.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-23.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-24.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-25.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-26.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-27.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-28.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-29.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-30.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-31.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-32.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-33.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-34.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-35.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-36.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-37.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-38.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-39.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-40.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-41.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-42.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-43.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-44.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-45.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-46.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-47.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-48.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-49.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-50.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-51.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-52.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-53.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-54.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-55.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-56.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-57.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-58.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-59.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-60.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-61.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-62.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-63.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\render_R02_word\page-64.png      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\contact_sheets\contact-01.jpg    
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\contact_sheets\contact-02.jpg    
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\contact_sheets\contact-03.jpg    
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\contact_sheets\contact-04.jpg    
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\review\independent_semantic_review_R01.md 
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\review\independent_semantic_review_R02.md 
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\review\opencode_semantic_R01_exit.txt     
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\review\opencode_semantic_R01_stderr.txt   
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\review\opencode_semantic_R01_stdout.jsonl 
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\review\opencode_semantic_R02_exit.txt     
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\review\opencode_semantic_R02_stderr.txt   
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\review\opencode_semantic_R02_stdout.jsonl 
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\review\opencode_semantic_R03_stderr.txt   
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\review\opencode_semantic_R03_stdout.jsonl 
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\review\semantic_review_prompt_R01.md      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\review\semantic_review_prompt_R02.md      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\review\semantic_review_prompt_R03_exact_d�K
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\blueprint_repair_R02_task.md       
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\blueprint_repair_R03_task.md       
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\body_repair_task_R02.md            
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\body_writer_task_R01.md            
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\build_0083_docx.py                 
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\build_0083_R03_layoutfix.py        
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\export_docx_word_pdf_R03_logged.ps1
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\export_docx_word_pdf_R03.ps1       
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\export_docx_word_pdf.ps1           
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\extract_opencode_body_R02.py       
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\extract_opencode_body.py           
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\extract_replacement_register.py    
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\extract_semantic_review_R02.py     
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\extract_semantic_review.py         
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\finalize_build_receipt_R03.py      
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\finalize_build_receipt.py          
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\opencode_blueprint_prompt_R01.md   
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\opencode_blueprint_R01_exit.txt    
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\opencode_blueprint_R01_response.md 
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\opencode_blueprint_R01_stderr.txt  
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\opencode_blueprint_R01_stdout.jsonl
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\opencode_blueprint_R02_exit.txt    
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\opencode_blueprint_R02_response.md 
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\opencode_blueprint_R02_stderr.txt  
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\opencode_blueprint_R02_stdout.jsonl
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\opencode_blueprint_R03_exit.txt    
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\opencode_blueprint_R03_response.md 
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\opencode_blueprint_R03_stderr.txt  
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\opencode_blueprint_R03_stdout.jsonl
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\opencode_blueprint_task_R01.md     
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\opencode_body_R01_exit.txt         
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\opencode_body_R01_stderr.txt       
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\opencode_body_R01_stdout.jsonl     
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\opencode_body_R02_exit.txt         
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\opencode_body_R02_stderr.txt       
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\opencode_body_R02_stdout.jsonl     
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\patch_body_metadata_R02.py         
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\probe_word_export_R03_page1.ps1    
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\probe_word_xps_R03_page1.ps1       
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\qa_blueprint_0083_R03.py           
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\qa_body_blueprint_R02.py           
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\qa_body_markdown_R01.py            
+E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\worker\verify_source_hashes.py
+> build · deepseek-v4.1-flash-free
+[0m→ [0mRead docs/ttqs-quality-20261016/quality-review/0083_R01/review/semantic_review_prompt_R03_exact_docx.md 
+[0m→ [0mRead docs/ttqs-quality-20261016/quality-review/0083_R01/evidence/build_receipt_R03.json 
+[0m$ [0mGet-FileHash -Algorithm SHA256 "docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\docx_extracted_R03.md" | Format-List; Get-FileHash -Algorithm SHA256 "docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\docx_extracted_R02.txt" | Format-List
+Algorithm : SHA256
+Hash      : 3E662AFFD562099B51FD1E537D2643191B62809FC8A21721BB96BC6AF6860879
+Path      : E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\docx_extracted_R03.md
+
+
+Algorithm : SHA256
+Hash      : 027939BA5C34C411BD534A2AA48EE70F738A579127D8D37AC3AB178A026FAFA4
+Path      : E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\docx_extracted_R02.tx
+            t
+> build · deepseek-v4.1-flash-free
+[0m→ [0mRead docs/ttqs-quality-20261016/quality-review/0083_R01/worker/extract_semantic_review_R02.py 
+[0m→ [0mRead docs/ttqs-quality-20261016/quality-review/0083_R01/worker/extract_semantic_review.py 
+> build · deepseek-v4.1-flash-free
+[0m→ [0mRead docs/ttqs-quality-20261016/quality-review/0083_R01/worker/build_0083_R03_layoutfix.py 
+[0m$ [0mpython --version; python -c "import docx; print('python-docx', docx.__version__ if hasattr(docx,'__version__') else 'ok')" 2>&1
+Python 3.10.8
+python-docx 1.2.0
+> build · deepseek-v4.1-flash-free
+[0m← [0mWrite C:/Users/J/AppData/Local/Temp/opencode/extract_0083.py
+Created file successfully: C:/Users/J/AppData/Local/Temp/opencode/extract_0083.py
+> build · deepseek-v4.1-flash-free
+[0m$ [0mcd "E:\TTQS\_github_sync_0064"; python "C:\Users\J\AppData\Local\Temp\opencode\extract_0083.py" "docs\ttqs-quality-20261016\quality-review\0083_R01\candidate\0083_R03.docx" > "C:\Users\J\AppData\Local\Temp\opencode\extract_0083_out.txt" 2> "C:\Users\J\AppData\Local\Temp\opencode\extract_0083_stats.txt"; Get-Content "C:\Users\J\AppData\Local\Temp\opencode\extract_0083_stats.txt"
+Traceback (most recent call last):
+  File "src/lxml/parsertarget.pxi", line 5, in lxml.etree
+ImportError: cannot import name getfullargspec
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\J\AppData\Local\Temp\opencode\extract_0083.py", line 3, in <module>
+    from docx import Document
+  File "C:\Users\J\AppData\Local\Programs\Python\Python310\lib\site-packages\docx\__init__.py", line 11, in <module>
+    from docx.api import Document
+  File "C:\Users\J\AppData\Local\Programs\Python\Python310\lib\site-packages\docx\api.py", line 12, in <module>
+    from docx.package import Package
+  File "C:\Users\J\AppData\Local\Programs\Python\Python310\lib\site-packages\docx\package.py", line 9, in <module>
+    from docx.opc.package import OpcPackage
+  File "C:\Users\J\AppData\Local\Programs\Python\Python310\lib\site-packages\docx\opc\package.py", line 9, in <module>
+    from docx.opc.part import PartFactory
+  File "C:\Users\J\AppData\Local\Programs\Python\Python310\lib\site-packages\docx\opc\part.py", line 9, in <module>
+    from docx.opc.oxml import serialize_part_xml
+  File "C:\Users\J\AppData\Local\Programs\Python\Python310\lib\site-packages\docx\opc\oxml.py", line 14, in <module>
+    from lxml import etree
+  File "src/lxml/parsertarget.pxi", line 7, in init lxml.etree
+ImportError: cannot import name getargspec
+> build · deepseek-v4.1-flash-free
+[0m← [0mWrite C:/Users/J/AppData/Local/Temp/opencode/extract_0083_raw.py
+Created file successfully: C:/Users/J/AppData/Local/Temp/opencode/extract_0083_raw.py
+> build · deepseek-v4.1-flash-free
+[0m$ [0mcd "E:\TTQS\_github_sync_0064"; python "C:\Users\J\AppData\Local\Temp\opencode\extract_0083_raw.py" "docs\ttqs-quality-20261016\quality-review\0083_R01\candidate\0083_R03.docx" > "C:\Users\J\AppData\Local\Temp\opencode\raw_out.txt" 2> "C:\Users\J\AppData\Local\Temp\opencode\raw_stats.txt"; Get-Content "C:\Users\J\AppData\Local\Temp\opencode\raw_stats.txt"; (Get-Content "C:\Users\J\AppData\Local\Temp\opencode\raw_out.txt").Count
+Traceback (most recent call last):
+  File "C:\Users\J\AppData\Local\Temp\opencode\extract_0083_raw.py", line 43, in <module>
+    print('\n'.join(out))
+UnicodeEncodeError: 'cp950' codec can't encode character '\u2212' in position 6264: illegal multibyte sequence
+0
+> build · deepseek-v4.1-flash-free
+[0m← [0mEdit C:/Users/J/AppData/Local/Temp/opencode/extract_0083_raw.py
+Index: C:/Users/J/AppData/Local/Temp/opencode/extract_0083_raw.py
+===================================================================
+--- C:/Users/J/AppData/Local/Temp/opencode/extract_0083_raw.py
++++ C:/Users/J/AppData/Local/Temp/opencode/extract_0083_raw.py
+@@ -39,6 +39,6 @@
+                 ct = ' '.join(ptext(p) for p in tc.findall(W+'p'))
+                 cells.append(ct.strip())
+             out.append(' | '.join(cells))
+ 
+-print('\n'.join(out))
++open(sys.argv[2],'w',encoding='utf-8').write('\n'.join(out)+'\n')
+ sys.stderr.write(f"\nSTATS paragraphs_with_text={npar} tables={ntab} lines={len(out)}\n")
+
+> build · deepseek-v4.1-flash-free
+[0m$ [0mcd "E:\TTQS\_github_sync_0064"; python "C:\Users\J\AppData\Local\Temp\opencode\extract_0083_raw.py" "docs\ttqs-quality-20261016\quality-review\0083_R01\candidate\0083_R03.docx" "C:\Users\J\AppData\Local\Temp\opencode\raw_out.txt" 2>&1; Get-FileHash -Algorithm SHA256 "C:\Users\J\AppData\Local\Temp\opencode\raw_out.txt" | Format-List
+STATS paragraphs_with_text=231 tables=63 lines=873
+
+Algorithm : SHA256
+Hash      : 4EF489D2922836AABB9AEBD352E83B835C4A9CC8F1B9D22C5CCFFC7EBE8810C2
+Path      : C:\Users\J\AppData\Local\Temp\opencode\raw_out.txt
+> build · deepseek-v4.1-flash-free
+[0m→ [0mRead C:/Users/J/AppData/Local/Temp/opencode/raw_out.txt [90m[limit=80][0m
+> build · deepseek-v4.1-flash-free
+[0m← [0mWrite C:/Users/J/AppData/Local/Temp/opencode/diff_0083.py
+Created file successfully: C:/Users/J/AppData/Local/Temp/opencode/diff_0083.py
+> build · deepseek-v4.1-flash-free
+[0m$ [0mcd "E:\TTQS\_github_sync_0064"; python "C:\Users\J\AppData\Local\Temp\opencode\diff_0083.py" "docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\docx_extracted_R03.md" "docs\ttqs-quality-20261016\quality-review\0083_R01\candidate\0083_R02_body.md" 2>&1 | Out-File -Encoding utf8 "C:\Users\J\AppData\Local\Temp\opencode\diff_result.txt"; Get-Content "C:\Users\J\AppData\Local\Temp\opencode\diff_result.txt" -Encoding utf8 | Select-Object -First 60
+DOCX normalized lines: 935 (unique 734)
+BODY normalized lines: 871 (unique 732)
+
+=== IN BODY BUT MISSING/UNDER-REPRESENTED IN DOCX (505) ===
+  x1: ����	���e
+  x1: ���W��	�ǭ���ʭp�e�l�ܬ���
+  x2: ���s��	DOCX 0083
+  x2: ���حn�D	I17C-E02
+  x2: �x����	089
+  x1: ����	�ӧO�ǭ��V���ʭp�e���]�p�B�v���l�ܻP���G�P�w
+  x1: ���媩��	R02�F�]�p�̾ڬ� UNIQUE_BLUEPRINT_0083_R03
+  x2: ��󪬺A	NOT EXECUTED
+  x1: �u���ƪ��A	REAL = UNKNOWN/HOLD
+  x1: ��������	FORMAL_ACCEPTANCE = NOT_GRANTED
+  x1: �ܽd���A	ALL_DEMO = SAMPLE/SYNTHETIC/PROPOSED
+  x1: �D�nŪ��	���V�ӿ�B��@���N���]�D�Ү֥γ~�^�B�ǭ����H�B�����Υ~���d��
+  x1: �A�{�b�����p	��������	�o���������A�M�w
+  x1: �ǭ��赲�V�A�ݭn��ǲߦ��G�ܦ��i�l�ܪ����	�إ� Form-G1	�ؼЬO�_����B�i�q���B���H�t�d
+  x1: ��F�w�w�l�ܤ�	�ƻs Form-T1	�~��B���Ѩ�U�B�ץ��B�ᵲ�ε���
+  x1: �ǭ����X��U�ݨD	�l�[ Form-A1	�֨�աB��ɴ��ѡB�O�_�v�T�P�w
+  x1: �n�T�{�Ʀr���Ҿ�	�ϥ� Form-E1 �P�� 9 �`	�Ʀr��_����B�ҾڬO�_�i�w��B�g���v
+  x1: �u���ݨ��B���N�סB�D�ަҮ֩νҵ{����	���n�Υ���	���ϥ� 17c ��L��������
+  x1: 17c ��������	�D�n���e	�P�������Y
+  x1: �V��ʺA�ݨ�	�����B�ǲߩΦ欰�ಾ���ݨ��լd	�t��A���֤J
+  x1: �ӤH��ʭp�e�P�l��	�ӧO�ؼСB��ڡB��ê�B��U�B����	���� DOCX 0083��089
+  x1: ���V�D���[��q�W	�Ѭ��V�D���[��欰	�t��A�D���󥲳ơF090 ��W��
+  x1: ���Ѫ��s�O�����R	���s���ʻP���Ѥ���	�t��
+  x1: �����ȩΥ~���]��	�~���d�֤�k	�t��
+  x1: �A��	���A��
+  x1: �@��ǭ��B�@�ӽҵ{�ߵ��B�@�ӥi�[���ʥؼ�	���饭���B�ҵ{���N�סB��´�Z��
+  x1: �U���V���@�F�Ӥu�A�ȶȬ��� 8 �`�X���ܨ�	���g���v���ĤT�H�Ӹ�ίu��A�ȹ�H����
+  x1: �ݭn�v���O���ؼлP��ڮt��	�D�ަҮ֡B���u���ɡB�Z�ıƦW
+  x1: �ݭn���U�B�ҾڡB�d���P�U�@�B�s�b�@�_	0082 �V��欰�ಾ�ݨ��B090 �D�޵����B���Ѫ��s�B������
+  x1: �ݭn�p��P�w HOLD�BRETURN�BREVISE�BREVERIFY	�D�i�V�m�]�G�ΫO�Ҧ���
+  x1: ���q	��ĳ���I	�D�n���X	�D�d	�q�L����
+  x1: T0 ���V	�ҵ{������	�ҵ{�X�B���V��B�ǭ��N�X	���V�ӿ�	�i�P G1 ���
+  x1: �إ߭p�e	D+0 �� D+7�]PROPOSED SAMPLE ONLY�^	Form-G1	ROLE-TRACKER �P ROLE-LEARNER	�ؼСB�q�ءB��ǡB�����B�����B�������
+  x1: T1 �� Tn	�w�w�d���I�A�ܤ֤T�I�]PROPOSED SAMPLE ONLY�^	Form-T1�BForm-A1�BForm-E1	ROLE-TRACKER	������W�B�Ʀr�i��B�Ҿڦ��w��
+  x1: ���G�P�w	�ؼд����δ��eĲ�o	�P�w�P�U�@�B	ROLE-TRACKER �P ROLE-AUDIT	�ƭȡB�˥�����B�u���Ҿڤ��h
+  x1: ����l��	�Ȧb AID �������Ҿ� HOLD ��	�l�[�l�ܬ���	ROLE-TRACKER	���o�g�������w�ܧ�
+  x1: ����N�X	�D�n�u�@	���i�H��
+  x1: ROLE-LEARNER	�����ʡB���Ѧۭz�B�T�{���	����N���l�ܨ����g���[����
+  x1: ROLE-TRACKER	�ت��B�O���B�ˬd����P��N�B�w�ưl��	����ݥ��Ү֪̩Υ���������
+  x1: ROLE-COORD	��ը�U�B�إ� AID�B�O�����Ѫ��A	����O�Ҹ귽�A�]����N��ǭ��N��
+  x1: ROLE-PEER	�i�﨣�ҡB���ѥi�w�����	�����v�Τ��i�w��ɤ��o�ϥ�
+  x1: ROLE-AUDIT	�d�֤���B��N�B�ҾڡB���p�P�@�P��	�����d�ֵ��G�ܦ���������
+  x4: �渹	��W	�w�q�P�γ~	�榡���ﶵ	�ʺ|�B�z
+  x1: G1-01	�׸�	�ߤ@�ѧO����ʭp�e	��r�A�� SYN-0083-��	�ʩέ��Ʈɼ� HOLD
+  x1: G1-02	�ǭ��N�X�]�D�m�W�^	�h�ѧO�s���ǭ�	�N�X	�ʮɼ� RETURN
+  x1: G1-03	�ҵ{�N�X�����V��	����V����I T0	�ҵ{�X��YYYY-MM-DD	�ʮɼ� HOLD
+  x1: G1-04	��ʥؼС]S�^	����B�i�[��V��欰	��r�A��h�W���W�L 60 �r	�L�ʵ��Τ��i�[��ɼ� RETURN
+  x1: G1-05	�q�ػ����]M�^	�����p��p�ƩΧP�w	�p�ơ���ҡ��G��	�L�q�خɼ� RETURN
+  x1: G1-06	��ǭȡϰ�Ǵ�	�إ߰_�I�P����	�ƭȡϰ_�W����Ѽ�	�ʭȩίʰ϶��ɼ� HOLD
+  x1: G1-07	�ؼЭȡϳ��	�]�w���I�P�֭p����	�ƭȡϳ��	�ʳ��λP��Ǥ��P�f�|�ɼ� REJECT
+  x1: G1-08	�ؼд���	�]�w�פ��	YYYY-MM-DD�A���ߩ� T0	�ʩΦ��� T0 �ɼ� REJECT
+  x1: G1-09	���������	�ɩw�i����d��	��r�F�A�βĤT�H�ɥh�ѧO	�ʮɼ� RETURN
+  x1: G1-10	�����W�v	�]�w�`��	�ҨC 28 �� 4 ��	�ʮɼ� RETURN
+  x1: G1-11	�O���d������	�����֭t�d�l�ܰO��	����N�X	�ʰO������ɼ� REJECT
+  x1: G1-12	�һݨ�U	�����귽�ݨD	��r�F�L�h��u�L�v	�ʮɶ�u�L�v�γs�� AID
+  x1: G1-13	�i�������Һ���	�ɩw����Ҿڥi��	�h��M��	�ʮɼ� RETURN
+> build · deepseek-v4.1-flash-free
+[0m← [0mWrite C:/Users/J/AppData/Local/Temp/opencode/diff_0083.py
+Wrote file successfully: C:/Users/J/AppData/Local/Temp/opencode/diff_0083.py
+> build · deepseek-v4.1-flash-free
+[0m$ [0mcd "E:\TTQS\_github_sync_0064"; python "C:\Users\J\AppData\Local\Temp\opencode\diff_0083.py" "docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\docx_extracted_R03.md" "docs\ttqs-quality-20261016\quality-review\0083_R01\candidate\0083_R02_body.md" "C:\Users\J\AppData\Local\Temp\opencode\diff_result.txt"
+written C:\Users\J\AppData\Local\Temp\opencode\diff_result.txt missing 0 extra 1
+> build · deepseek-v4.1-flash-free
+[0m→ [0mRead C:/Users/J/AppData/Local/Temp/opencode/diff_result.txt 
+> build · deepseek-v4.1-flash-free
+[0m$ [0mcd "E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01"; Get-FileHash -Algorithm SHA256 "candidate\0083_R02_body.md" | Format-List; Write-Output "---- CSV rows ----"; $c = Get-Content "candidate\SYNTHETIC_REPLACEMENT_REGISTER_0083_R03.csv" -Encoding utf8; Write-Output "Total lines: $($c.Count)"; $c[0..2]; Write-Output "..."; $c[-1]
+Algorithm : SHA256
+Hash      : 65ADEE0F9BE4643B612817250484407CD1833DAA3A2FA6A0A93E797BA68C324E
+Path      : E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\candidate\0083_R02_body.md
+
+---- CSV rows ----
+Total lines: 82
+REG_ID,���w��,��,���O,�����ӷ�/����,���A
+R-001,G1-01 �׸�,SYN-0083-B01,�ѧO,�����׸�,NOT_EXECUTED
+R-002,G1-02 �ǭ��N�X,LRN-B01,�ѧO,�u��h�ѧO�X,NOT_EXECUTED
+...
+R-081,��7.4 �u���Ҿڼh,HOLD/REVERIFY�]REAL=UNKNOWN/HOLD�^,�P�w,���Ҿګ᭫�P,NOT_EXECUTED
+[0m$ [0mcd "E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01"; $c = Get-Content "candidate\SYNTHETIC_REPLACEMENT_REGISTER_0083_R03.csv" -Encoding utf8 | Select-Object -Skip 1 | Where-Object { $_.Trim() -ne "" }; Write-Output "Data rows: $($c.Count)"; $ids = $c | ForEach-Object { ($_ -split ',')[0] }; Write-Output "First: $($ids[0])  Last: $($ids[-1])"; Write-Output "Unique IDs: $(($ids | Sort-Object -Unique).Count)"; Write-Output "Duplicates: $((($ids | Group-Object | Where-Object Count -gt 1).Name) -join ',')"; $expected = 1..81 | ForEach-Object { 'R-{0:D3}' -f $_ }; $diff = Compare-Object $expected $ids; if ($diff) { Write-Output "ID MISMATCH"; $diff | Format-Table } else { Write-Output "IDs R-001..R-081 all present exactly once (no gaps/dupes)" }
+Data rows: 81
+First: R-001  Last: R-081
+Unique IDs: 81
+Duplicates: 
+IDs R-001..R-081 all present exactly once (no gaps/dupes)
+> build · deepseek-v4.1-flash-free
+[0m← [0mWrite C:/Users/J/AppData/Local/Temp/opencode/check_register.py
+Created file successfully: C:/Users/J/AppData/Local/Temp/opencode/check_register.py
+> build · deepseek-v4.1-flash-free
+[0m$ [0mcd "E:\TTQS\_github_sync_0064"; python "C:\Users\J\AppData\Local\Temp\opencode\check_register.py" > "C:\Users\J\AppData\Local\Temp\opencode\reg_check.txt" 2>&1; Get-Content "C:\Users\J\AppData\Local\Temp\opencode\reg_check.txt" -Encoding utf8
+CSV header: ['REG_ID', '���w��', '��', '���O', '�����ӷ�/����', '���A']
+CSV data rows: 81
+Body register rows found: 81
+Mismatches CSV vs body: 0
+> build · deepseek-v4.1-flash-free
+[0m$ [0mcd "E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence"; Write-Output "=== REQUIRED STATEMENTS (counts) ==="; foreach ($p in @('REAL = UNKNOWN/HOLD','REAL=UNKNOWN/HOLD','FORMAL_ACCEPTANCE = NOT_GRANTED','FORMAL_ACCEPTANCE=NOT_GRANTED','FORMAL_ACCEPTANCE','NOT EXECUTED','NOT_EXECUTED','SAMPLE/SYNTHETIC','PROPOSED SAMPLE ONLY','I17C-E02','089','DOCX 0083')) { $n = (Select-String -Path docx_extracted_R03.md -Pattern ([regex]::Escape($p)) -AllMatches | Measure-Object).Count; Write-Output ("{0,-32} {1}" -f $p, $n) }
+=== REQUIRED STATEMENTS (counts) ===
+REAL = UNKNOWN/HOLD              1
+REAL=UNKNOWN/HOLD                9
+FORMAL_ACCEPTANCE = NOT_GRANTED  1
+FORMAL_ACCEPTANCE=NOT_GRANTED    2
+FORMAL_ACCEPTANCE                5
+NOT EXECUTED                     4
+NOT_EXECUTED                     163
+SAMPLE/SYNTHETIC                 21
+PROPOSED SAMPLE ONLY             32
+I17C-E02                         5
+089                              7
+DOCX 0083                        6
+[0m$ [0mcd "E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence"; Write-Output "=== NEGATIVE / FORBIDDEN PATTERNS ==="; foreach ($p in @('核准','核定','批准','簽核','協會規定','實績提升','250%','受訪者後續','0082 個案','T2 本期 83.3','T3 本期 80','見附件')) { Write-Output ("---- {0} ----" -f $p); Select-String -Path docx_extracted_R03.md -Pattern ([regex]::Escape($p)) | ForEach-Object { "  L{0}: {1}" -f $_.LineNumber, $_.Line.Trim() } }
+=== NEGATIVE / FORBIDDEN PATTERNS ===
+---- �֭� ----
+  L447: R-060 | T3 T1-16 �U������ | 2026-06-26�]SAMPLE �ݰl�ܡA�D�����֭�^ | ��� | �u����� | NOT_EXECUTED
+  L673: 17 | �ź٨�|�]���ӧӤu�A�ȯ��B�w�ĥάy�{�Τw�֭㥻�p�e | FAIL | �אּ�X���ܨһP����������
+  L677: 21 | �ϥΡuñ�֡��֭���֩w�v���t�ܥ������v�����z | FAIL | ��O���B�n���B�T�{�w��
+  L682: 26 | �N AID-02�B2026-06-26 �g�������w�֭� | FAIL | �� REQUESTED��SAMPLE �ݰl��
+  L977: R-060 | T3 T1-16 �U������ | 2026-06-26�]SAMPLE �ݰl�ܡA�D�����֭�^ | ��� | �u����� | NOT_EXECUTED
+---- �֩w ----
+  L396: R-009 | G1-07 �ؼЭ� | 12 �� | �ƭ� | �u��֩w�ؼ� | NOT_EXECUTED
+  L677: 21 | �ϥΡuñ�֡��֭���֩w�v���t�ܥ������v�����z | FAIL | ��O���B�n���B�T�{�w��
+  L926: R-009 | G1-07 �ؼЭ� | 12 �� | �ƭ� | �u��֩w�ؼ� | NOT_EXECUTED
+---- ��� ----
+---- ñ�� ----
+  L677: 21 | �ϥΡuñ�֡��֭���֩w�v���t�ܥ������v�����z | FAIL | ��O���B�n���B�T�{�w��
+---- ��|�W�w ----
+  L670: 14 | �N PROPOSED ���e�g���u��|�W�w�v | FAIL | �� PROPOSED SAMPLE ONLY
+---- ���Z���� ----
+  L659: 3 | �� SAMPLE �Ⱥ١u���Z���� 83.3%�v | FAIL | �� SAMPLE�A���@���Z
+---- 250% ----
+  L678: 22 | �֭p�F���v�~�γ̪�@���p�e�]4�^�������o 250% | FAIL | �� 12�A�o 83.3%
+---- ���X�̫��� ----
+  L652: 0082 �O�V��欰�ಾ�ݨ��A0083 �~�O�ӧO��ʭp�e�l�ܡC���ר� SYN-0083-B01 ���O�u�ꪺ 0082 ���X�̡A�]���O 0082 ���श�F���o�g���u0082 �Ӯסv�Ρu0082 ���X�̫���v�C���ܨҤ��D�i�����´����ڹB�@�覡�B�]�I�B�y�{�B�u���B���ɩΨƥ�C
+---- 0082 �Ӯ� ----
+  L652: 0082 �O�V��欰�ಾ�ݨ��A0083 �~�O�ӧO��ʭp�e�l�ܡC���ר� SYN-0083-B01 ���O�u�ꪺ 0082 ���X�̡A�]���O 0082 ���श�F���o�g���u0082 �Ӯסv�Ρu0082 ���X�̫���v�C���ܨҤ��D�i�����´����ڹB�@�覡�B�]�I�B�y�{�B�u���B���ɩΨƥ�C
+---- T2 ���� 83.3 ----
+  L674: 18 | �X�{�uT2 ���� 83.3%�v�uT3 ���� 80%�v������ | FAIL | �󥿬� 100.0%��75.0%
+---- T3 ���� 80 ----
+  L674: 18 | �X�{�uT2 ���� 83.3%�v�uT3 ���� 80%�v������ | FAIL | �󥿬� 100.0%��75.0%
+---- ������ ----
+  L161: T1-14 | �Ҿڨӷ��P�w�� | ���X�i�^�d���Ҿ� | ���|�����v�����X������ | �u�g�u������v�Τ��i�w��ɼ� RETURN
+  L253: E1-05 | �i�w��榡 | ���|�B���v�B���X�Ϊ��� | ��r | �u�g�u������v�Τ��i�w��ɼ� RETURN
+  L285: �u�g�u������v���X��F���������|�B���v�B���X�Ϊ����C
+  L667: 11 | �Ҿڶȼg�u������v�L���|���X | FAIL | �� RETURN
+  L863: T1-14 | �u�g������Τ��i�w�� | RETURN | ROLE-AUDIT | �ɸ��|�B���v�B���X�Ϊ���
+  L887: E1-05 | �w��ʩΥu�g������ | RETURN | ROLE-AUDIT | �ɸ��|�B���v�B���X�Ϊ���
+> build · deepseek-v4.1-flash-free
+[0m$ [0mcd "E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence"; $t = Get-Content docx_extracted_R03.md -Encoding utf8 -Raw; Write-Output ("decision-table rows (numbered triggers in §11.2): " + ([regex]::Matches($t, '(?m)^\|\s*\d+\s*\|')).Count); Write-Output ("negative-test rows (§13.2): " + ([regex]::Matches($t, '(?m)^\|\s*\d+\s*\|')).Count); Write-Output ("REG rows R-0NN total: " + ([regex]::Matches($t, '(?m)^\|\s*R-\d{3}\s*\|')).Count)
+decision-table rows (numbered triggers in ��11.2): 0
+negative-test rows (��13.2): 0
+REG rows R-0NN total: 0
+[0m$ [0mcd "E:\TTQS\_github_sync_0064"; python -c "import zipfile,sys; z=zipfile.ZipFile(r'docs\ttqs-quality-20261016\quality-review\0083_R01\candidate\0083_R03.docx'); [print(n) for n in z.namelist()]; print('--- header1 ---'); print(z.read('word/header1.xml').decode('utf-8')[:1500])" 2>&1 | Out-File -Encoding utf8 "C:\Users\J\AppData\Local\Temp\opencode\header.txt"; Get-Content "C:\Users\J\AppData\Local\Temp\opencode\header.txt" -Encoding utf8
+[Content_Types].xml
+_rels/.rels
+docProps/core.xml
+docProps/app.xml
+word/document.xml
+word/_rels/document.xml.rels
+word/styles.xml
+word/stylesWithEffects.xml
+word/settings.xml
+word/webSettings.xml
+word/fontTable.xml
+word/theme/theme1.xml
+customXml/item1.xml
+customXml/_rels/item1.xml.rels
+customXml/itemProps1.xml
+word/numbering.xml
+word/header1.xml
+word/footer1.xml
+docProps/thumbnail.jpeg
+--- header1 ---
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<w:hdr xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mo="http://schemas.microsoft.com/office/mac/office/2008/main" xmlns:mv="urn:schemas-microsoft-com:mac:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" mc:Ignorable="w14 wp14"><w:p><w:pPr><w:pStyle w:val="Header"/><w:jc w:val="right"/></w:pPr><w:r><w:rPr><w:rFonts w:ascii="Microsoft JhengHei" w:hAnsi="Microsoft JhengHei" w:eastAsia="Microsoft JhengHei"/><w:color w:val="637585"/><w:sz w:val="16"/></w:rPr><w:t>TTQS ONE�@�U�@DOCX 0083�@�U�@SAMPLE /
+> build · deepseek-v4.1-flash-free
+[0m← [0mWrite C:/Users/J/AppData/Local/Temp/opencode/counts.py
+Created file successfully: C:/Users/J/AppData/Local/Temp/opencode/counts.py
+> build · deepseek-v4.1-flash-free
+[0m$ [0mcd "E:\TTQS\_github_sync_0064"; python "C:\Users\J\AppData\Local\Temp\opencode\counts.py" > "C:\Users\J\AppData\Local\Temp\opencode\counts_out.txt" 2>&1; Get-Content "C:\Users\J\AppData\Local\Temp\opencode\counts_out.txt" -Encoding utf8
+REG rows (| R-0NN |): 0
+Numeric-leading rows (| N |): 0
+13.2 at line None 12.3 at line None
+Traceback (most recent call last):
+  File "C:\Users\J\AppData\Local\Temp\opencode\counts.py", line 15, in <module>
+    seg = '\n'.join(lines[i13:i13+40])
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+> build · deepseek-v4.1-flash-free
+[0m← [0mWrite C:/Users/J/AppData/Local/Temp/opencode/counts2.py
+Created file successfully: C:/Users/J/AppData/Local/Temp/opencode/counts2.py
+> build · deepseek-v4.1-flash-free
+[0m$ [0mcd "E:\TTQS\_github_sync_0064"; python "C:\Users\J\AppData\Local\Temp\opencode\counts2.py" > "C:\Users\J\AppData\Local\Temp\opencode\counts2_out.txt" 2>&1; Get-Content "C:\Users\J\AppData\Local\Temp\opencode\counts2_out.txt" -Encoding utf8
+REG rows (R-0NN | ...): 162
+13.2 heading at 652   ## 14 at None
+Negative-test rows in 13.2: 28
+11.2 heading at 553 11.3 at 579
+11.2 decision rows: 21
+11.2 rows with PROPOSED SAMPLE ONLY: 21
+11.2 rows with PENDING: 4
+8.8 heading at 382
+Appendix E at None
+REG rows before Appendix E: 162
+REG rows from Appendix E: 162
+> build · deepseek-v4.1-flash-free
+[0m$ [0mcd "E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0083_R01\evidence"; python -c "import re; lines=open('docx_extracted_R03.md',encoding='utf-8-sig').read().splitlines(); [print(i,repr(l)) for i,l in enumerate(lines) if 'Appendix' in l or l.strip().startswith('## 14') or '8.8' in l or '完整 81' in l]" 2>&1 | Out-File -Encoding utf8 "C:\Users\J\AppData\Local\Temp\opencode\appx.txt"; Get-Content "C:\Users\J\AppData\Local\Temp\opencode\appx.txt" -Encoding utf8
+382 '8.8 SAMPLE/SYNTHETIC�G�v��l�ƹ�����M�U'
+612 '�M�U | R-001 �� R-081�]81 �C�A�s��ߤ@�^ | �� 8.8 �`�BAppendix E'
+626 'Appendix A �� E | SHA�����J���ʺ|�x�}���������A��81 �C�M�U | ���� | FAIL'
+632 '�ؿ��۰ʲ��ͥB�i�����FAppendix A �� E ���C�X�C'
+774 'Appendix E �O����󧹾㪺 81 �C R-001 �� R-081 �M�U�A�]�O�����P QA ��������r�����C�t�M SYNTHETIC_REPLACEMENT_REGISTER_0083_R03.csv �� Blueprint ���񭫫ءA��̶��v�C�@�P�F���o�H���� CSV ���N�����C'
+782 'Appendix A�G�ӷ� SHA ���K�P�����'
+796 'Appendix B�G���J�P�Y�g'
+826 'Appendix C�G�ʺ|���P�ʧ@�x�}'
+890 'Appendix D�G�����P���ݪ��A��'
+912 'Appendix E�G���� 81 �C�����M�U'
+913 'SAMPLE/SYNTHETIC ���ҥä[�O�d�C�����P�� 8.8 �`�ۦP�A��Ǭ� REG_ID�B���w��B�ȡB���O�B�����ӷ�/����B���A�C'
+> build · deepseek-v4.1-flash-free
+[0m$ [0mcd "E:\TTQS\_github_sync_0064"; python -c "import re; lines=open(r'docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\docx_extracted_R03.md',encoding='utf-8-sig').read().splitlines(); reg=lambda seg: sum(1 for l in seg if re.match(r'^\s*R-\d{3}\s*\|',l)); print('REG rows lines[382:912] =', reg(lines[382:912])); print('REG rows lines[912:] =', reg(lines[912:]))" 2>&1
+REG rows lines[382:912] = 81
+REG rows lines[912:] = 81
+> build · deepseek-v4.1-flash-free
+[0m$ [0mcd "E:\TTQS\_github_sync_0064"; foreach ($f in @("docs\ttqs-quality-20261016\quality-review\0083_R01\inputs\UNIQUE_BLUEPRINT_0083_R03.md","docs\ttqs-quality-20261016\quality-review\0083_R01\inputs\SOURCE_PACKET_0083_R01.md")) { if (Test-Path $f) { $h=(Get-FileHash -Algorithm SHA256 $f).Hash.ToLower(); Write-Output "$h  $f" } else { Write-Output "MISSING $f" } }
+21f76376621c5dd22d002a62202f41ea7335bbf872a965b0bbf8fb86955d0178  docs\ttqs-quality-20261016\quality-review\0083_R01\inputs\UNIQUE_BLUEPRINT_0083_R03.md
+2c2f2947961abd93c0b36ce1269519e8db9c9e1c4e352d5f15aa71c5c5450783  docs\ttqs-quality-20261016\quality-review\0083_R01\inputs\SOURCE_PACKET_0083_R01.md
+[0m$ [0mcd "E:\TTQS\_github_sync_0064"; foreach ($f in @("docs\ttqs-quality-20261016\quality-review\0077_R01\inputs\upstream_snapshots\03_157_CHECKBOX_BLUEPRINTS.md","docs\ttqs-quality-20261016\quality-review\0078_R01\evidence\official_evidence_table_page6-6.png","docs\ttqs-quality-20261016\quality-review\0077_R01\inputs\upstream_snapshots\01_HUMAN_MISSION_AND_ACCEPTANCE.md","docs\ttqs-quality-20261016\quality-review\0077_R01\inputs\upstream_snapshots\02_GENRE_WRITING_MANUAL.md","docs\ttqs-quality-20261016\quality-review\0082_R01\candidate\0082_R08.docx","docs\ttqs-quality-20261016\quality-review\0082_R01\inputs\UNIQUE_BLUEPRINT_0082_R02.md")) { if (Test-Path $f) { $h=(Get-FileHash -Algorithm SHA256 $f).Hash.ToLower(); Write-Output "$h  $f" } else { Write-Output "MISSING  $f" } }
+ad03323d591cbea62814a8a59d233110587f2741bed8f944380b1faa2d04d216  docs\ttqs-quality-20261016\quality-review\0077_R01\inputs\upstream_snapshots\03_157_CHECKBOX_BLUEPRINTS.md
+b7bd4c09b7d7e22993a1577647e10a421fb240222b46b531ba3f01ee047fa1d1  docs\ttqs-quality-20261016\quality-review\0078_R01\evidence\official_evidence_table_page6-6.png
+07c4b0beb30ebe9919818977d6eb0255e9f467955e9190e515ae3e2b963d1dd8  docs\ttqs-quality-20261016\quality-review\0077_R01\inputs\upstream_snapshots\01_HUMAN_MISSION_AND_ACCEPTANCE.md
+7fc23191efdb60ca4a9b48bc306799a9f15916b1160b63292d164bd4f4cf49aa  docs\ttqs-quality-20261016\quality-review\0077_R01\inputs\upstream_snapshots\02_GENRE_WRITING_MANUAL.md
+2a4b2aadf2a1ee9e1dce47247b91aa4bd150d83770fda1708bca0c722a07e20d  docs\ttqs-quality-20261016\quality-review\0082_R01\candidate\0082_R08.docx
+451acd1e197b916f2d14c03bd2651653892a4a7955119291e9628bdc5e27e602  docs\ttqs-quality-20261016\quality-review\0082_R01\inputs\UNIQUE_BLUEPRINT_0082_R02.md
+> build · deepseek-v4.1-flash-free
+[0m$ [0mcd "E:\TTQS\_github_sync_0064"; foreach ($f in @("docs/ttqs-quality-20261016/quality-review/0077_R01/inputs/upstream_snapshots/03_157_CHECKBOX_BLUEPRINTS.md","docs/ttqs-quality-20261016/quality-review/0077_R01/inputs/upstream_snapshots/01_HUMAN_MISSION_AND_ACCEPTANCE.md","docs/ttqs-quality-20261016/quality-review/0077_R01/inputs/upstream_snapshots/02_GENRE_WRITING_MANUAL.md","docs/ttqs-quality-20261016/quality-review/0082_R01/candidate/0082_R08.docx","docs/ttqs-quality-20261016/quality-review/0082_R01/inputs/UNIQUE_BLUEPRINT_0082_R02.md")) { $h = git hash-object $f; Write-Output "$h  $f" }
+8c2bbe7ca9dcbb03088a48934b9e57e7147ede63  docs/ttqs-quality-20261016/quality-review/0077_R01/inputs/upstream_snapshots/03_157_CHECKBOX_BLUEPRINTS.md
+538bedb9d87e8465f43151933b4a5c1bfa4bbc4e  docs/ttqs-quality-20261016/quality-review/0077_R01/inputs/upstream_snapshots/01_HUMAN_MISSION_AND_ACCEPTANCE.md
+4ff863d9f534b6359fc1c7c1685bd8cce02da886  docs/ttqs-quality-20261016/quality-review/0077_R01/inputs/upstream_snapshots/02_GENRE_WRITING_MANUAL.md
+a113eaee53b18776e1dfc9665fc5a557b685a19a  docs/ttqs-quality-20261016/quality-review/0082_R01/candidate/0082_R08.docx
+3679bfa41ef88ca1792234049f49f0127a923ed5  docs/ttqs-quality-20261016/quality-review/0082_R01/inputs/UNIQUE_BLUEPRINT_0082_R02.md
+> build · deepseek-v4.1-flash-free
+[0m$ [0mcd "E:\TTQS\_github_sync_0064"; python "C:\Users\J\AppData\Local\Temp\opencode\diff_0083.py" "C:\Users\J\AppData\Local\Temp\opencode\raw_out.txt" "docs\ttqs-quality-20261016\quality-review\0083_R01\candidate\0083_R02_body.md" "C:\Users\J\AppData\Local\Temp\opencode\diff_raw.txt"; Get-Content "C:\Users\J\AppData\Local\Temp\opencode\diff_raw.txt" -Encoding utf8 | Select-Object -First 25
+written C:\Users\J\AppData\Local\Temp\opencode\diff_raw.txt missing 0 extra 2
+DOCX normalized lines: 873 (unique 734)
+BODY normalized lines: 871 (unique 732)
+
+=== IN BODY BUT MISSING/UNDER-REPRESENTED IN DOCX (0) ===
+
+=== IN DOCX BUT NOT IN BODY (2) ===
+  x1: �ؿ�
+  x1: �}�� Word ���s�ؿ����
+[0m$ [0mcd "E:\TTQS\_github_sync_0064"; python -c "
+import zipfile,re
+z=zipfile.ZipFile(r'docs\ttqs-quality-20261016\quality-review\0083_R01\candidate\0083_R03.docx')
+doc=z.read('word/document.xml').decode('utf-8')
+hdr=z.read('word/header1.xml').decode('utf-8')
+ftr=z.read('word/footer1.xml').decode('utf-8')
+txt=re.sub(r'<[^>]+>','',doc)
+issues={}
+for name,pat in [('email',r'[\w.]+@[\w.]+'),('phone_tw',r'09\d{8}'),('idcard',r'[A-Z][12]\d{8}'),('rocdatelike',r'\b09\d{7,}\b')]:
+    m=re.findall(pat,txt)
+    if m: issues[name]=m[:5]
+print('PII-ish patterns in document.xml:', issues if issues else 'none')
+# watermark text
+wt=re.findall(r'<w:t[^>]*>([^<]*)</w:t>', hdr)
+print('header text runs:', wt)
+print('header has v:shape/watermark:', ('v:shape' in hdr) or ('w:pict' in hdr) or ('PowerPlusWaterMark' in hdr) or ('WordPictureWatermark' in hdr))
+wtf=re.findall(r'<w:t[^>]*>([^<]*)</w:t>', ftr)
+print('footer text runs:', wtf)
+" 2>&1 | Out-File -Encoding utf8 "C:\Users\J\AppData\Local\Temp\opencode\pii.txt"; Get-Content "C:\Users\J\AppData\Local\Temp\opencode\pii.txt" -Encoding utf8
+PII-ish patterns in document.xml: none
+header text runs: ['TTQS ONE\u3000�U\u3000DOCX 0083\u3000�U\u3000SAMPLE / SYNTHETIC']
+header has v:shape/watermark: True
+footer text runs: ['�ǭ���ʭp�e�l�ܬ���\u3000�E\u3000�� ', '1']
+> build · deepseek-v4.1-flash-free
+[0m$ [0mcd "E:\TTQS\_github_sync_0064"; python -c "
+import re
+p=r'docs\ttqs-quality-20261016\quality-review\0083_R01\evidence\docx_extracted_R03.md'
+lines=open(p,encoding='utf-8-sig').read().splitlines()
+for pat in ['PASS-SAMPLE','ACHIEVED','090','正式接受','已核准','已生效','REAL','FORMAL_ACCEPTANCE']:
+    hits=[(i+1,l.strip()) for i,l in enumerate(lines) if pat in l]
+    print(f'== {pat}: {len(hits)} hits ==')
+    for ln,t in hits[:6]:
+        print(f'   L{ln}: {t[:150]}')
+" > "C:\Users\J\AppData\Local\Temp\opencode\final.txt" 2>&1; Get-Content "C:\Users\J\AppData\Local\Temp\opencode\final.txt" -Encoding utf8
+== PASS-SAMPLE: 6 hits ==
+   L204: PASS-SAMPLE | �Ȩѥܽd��Ӫ��ƭȿz��]PROPOSED SAMPLE ONLY�^ | �F���ίu�ꦨ��
+   L287: �����v�B���i�w��B�ʭ��εL�k���Ѫ��ҾڡA���o��� ACHIEVED �� PASS-SAMPLE�C
+   L367: �˥�����h�GAID-01 �b T1 �|�����ѡAAID-02 ���� REQUESTED �B A1-04�BA1-05 �� PENDING�AEVID-04�BEVID-05 ���v PENDING�������AEVID-01 �� EVID-03 �S���u��i�w����C�˥����檬�A�p��P�� PARTIAL�A���o�P PA
+   L374: �˥����� | PARTIAL | AID-01 T1 �����ѡFAID-02 REQUESTED��PENDING�F�Ҿڥ����v������ | ���P PASS-SAMPLE
+   L676: 20 | �ƭȹF 83.3% �Y�ź� PASS-SAMPLE �Ϋ��[���� | FAIL | �� PARTIAL��HOLD/REVERIFY
+   L817: PASS-SAMPLE | �Ȩѥܽd��Ӫ��ƭȿz��A�D�F��
+== ACHIEVED: 4 hits ==
+   L195: ACHIEVED | �ؼФw�F���A�B���i�w��B�g���v���Ҿ� | �u���Ʀr�L���e�A�Ҿڤ�����
+   L287: �����v�B���i�w��B�ʭ��εL�k���Ѫ��ҾڡA���o��� ACHIEVED �� PASS-SAMPLE�C
+   L377: ���� PARTIAL�A���� 83.3% �g�� ACHIEVED�C
+   L581: �C���P�w���n�O���ʧ@�B����B�d������P�Ѱ�����C��Ȥ��o�мg�F�Y�ݧ󥿡A�O�d��C�å[���C�Ѱ����󥼧����e�A���o�� HOLD �� REVERIFY �令 ACHIEVED�C
+== 090: 6 hits ==
+   L44: ���V�D���[��q�W | �Ѭ��V�D���[��欰 | �t��A�D���󥲳ơF090 ��W��
+   L54: �ݭn���U�B�ҾڡB�d���P�U�@�B�s�b�@�_ | 0082 �V��欰�ಾ�ݨ��B090 �D�޵����B���Ѫ��s�B������
+   L63: ���O 0082 �����X�̡B�श�έӮסA�]���O 0082��088��090 �����N�C
+   L577: �X�� 17c ��L�����A�t 090 | REJECT | ROLE-AUDIT | �Y�ɡ]PROPOSED SAMPLE ONLY�^ | ��^��@�@�~
+   L649: 090 | �D�޵��� | 17c ��L���ҡA�t��B�i�� | SEPARATE
+   L672: 16 | �� 17c �ʺA�ݨ��B090 �D�޵����P 0083 �X�� | FAIL | ��^��@�@�~
+== ��������: 12 hits ==
+   L19: �������� | FORMAL_ACCEPTANCE = NOT_GRANTED
+   L59: ���إߥ����´���F���B�����ܧ�B���������Τw�ͮĪ��M�w�C
+   L81: ROLE-TRACKER | �ت��B�O���B�ˬd����P��N�B�w�ưl�� | ����ݥ��Ү֪̩Υ���������
+   L84: ROLE-AUDIT | �d�֤���B��N�B�ҾڡB���p�P�@�P�� | �����d�ֵ��G�ܦ���������
+   L131: �����T�{�]�D G1 �s�����A�ťա^�G�ǭ��T�{�wŪ�P�ѻP �ġġġġF�ӿ�T�{�����w�إ� �ġġġġC��̧����N�����������C
+   L292: �H�U������ SAMPLE/SYNTHETIC�C���ҬO�u�����Ӥu�A�ȯ����ΦW�A�ȥ汵�v�A����������u�H�A�]���O 0082 ���X�̩��श�C���ܨҤ��D�i�����´����ڹB�@�覡�B�]�I�B�y�{�B�u���B���ɩΨƥ�A�]���ź٥����´�w�����������p�e�C�Ҧ�����B�N�X�B�ƭȡB��U�B�ҾڻP���ק����ܨҡFNOT EXECU
+== �w�֭�: 2 hits ==
+   L673: 17 | �ź٨�|�]���ӧӤu�A�ȯ��B�w�ĥάy�{�Τw�֭㥻�p�e | FAIL | �אּ�X���ܨһP����������
+   L682: 26 | �N AID-02�B2026-06-26 �g�������w�֭� | FAIL | �� REQUESTED��SAMPLE �ݰl��
+== �w�ͮ�: 5 hits ==
+   L59: ���إߥ����´���F���B�����ܧ�B���������Τw�ͮĪ��M�w�C
+   L241: AID-02 �����A�O REQUESTED�FA1-04 �ӿմ����P A1-05 ��ڴ��Ѥ鳣�O PENDING�C2026-06-26 �u�O PROPOSED SAMPLE ���U���l�ܤ�A���O���������A�]���O�w�ͮĪ������ܧ�C
+   L379: 2026-06-26 �u�@�� SAMPLE �U���l�ܤ�A���O���������A�]���O�w�ͮĪ������ܧ�C
+   L574: �����վ�g���w�ͮ� | RETURN | ROLE-AUDIT | 3 �u�@��]PROPOSED SAMPLE ONLY�^ | �אּ SAMPLE �ݰl�ܩ� PENDING
+   L708: �w�ͮġB�w�w�� | �ݽT�{�BHOLD�BPENDING
+== REAL: 19 hits ==
+   L18: �u���ƪ��A | REAL = UNKNOWN/HOLD
+   L292: �H�U������ SAMPLE/SYNTHETIC�C���ҬO�u�����Ӥu�A�ȯ����ΦW�A�ȥ汵�v�A����������u�H�A�]���O 0082 ���X�̩��श�C���ܨҤ��D�i�����´����ڹB�@�覡�B�]�I�B�y�{�B�u���B���ɩΨƥ�A�]���ź٥����´�w�����������p�e�C�Ҧ�����B�N�X�B�ƭȡB��U�B�ҾڻP���ק����ܨҡFNOT EXECU
+   L368: �u���Ҿڼh�GEVID-01 �� EVID-05 ���L�i�w��B�g���v���u����A�u���ҾڧP�w�� HOLD��REVERIFY�AREAL=UNKNOWN/HOLD�C���o�źٰV�m���ġB�A�ȹ�H���q�Υ���]�G���Y�C
+   L468: R-081 | ��7.4 �u���Ҿڼh | HOLD/REVERIFY�]REAL=UNKNOWN/HOLD�^ | �P�w | ���Ҿګ᭫�P | NOT_EXECUTED
+   L542: �� SAMPLE �ȨS���i�J REAL ������C
+   L582: 12. ���e��B�@�P�ʡB�禬�x�}�B�����P SAMPLE/REAL �j��
+== FORMAL_ACCEPTANCE: 5 hits ==
+   L19: �������� | FORMAL_ACCEPTANCE = NOT_GRANTED
+   L586: REAL=UNKNOWN/HOLD�FFORMAL_ACCEPTANCE=NOT_GRANTED�C
+   L782: �b�i�w��B�g���v�������e�AREAL ���� UNKNOWN/HOLD�AFORMAL_ACCEPTANCE ���� NOT_GRANTED�C
+   L824: FORMAL_ACCEPTANCE=NOT_GRANTED | �����������¤�
+   L911: FORMAL_ACCEPTANCE | NOT_GRANTED
+> build · deepseek-v4.1-flash-free
