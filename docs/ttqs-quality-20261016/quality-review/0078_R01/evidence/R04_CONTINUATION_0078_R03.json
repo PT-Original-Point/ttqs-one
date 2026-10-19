@@ -85,11 +85,17 @@
     "checkbox_084": "PARTIAL/HOLD"
   },
   "P4_github_sync": {
-    "status": "PENDING",
+    "status": "VERIFIED_PACKAGE_READBACK",
     "target_branch": "work/ttqs-one-document-quality-contract-20261016",
     "target_pr": 92,
-    "package_commit": null,
-    "remote_readback": "PENDING"
+    "package_commit": "17d156ee525ec314d843b57e0a6d00a1600ec526",
+    "file_count": 82,
+    "binary_count": 36,
+    "text_count": 46,
+    "comparison": "binary exact bytes/SHA256; text compared after CRLF/CR to LF normalization",
+    "readback_receipt": "evidence/0078_GITHUB_READBACK_R03.json",
+    "candidate_docx_fetched_sha256": "95436f7d8d01ea4153084de90e5f6b7a50d6d34224dfdab5ebe3d348e8b2b174",
+    "all_entries_match": true
   },
   "P5_scheduler_cost": {
     "status": "VERIFIED_UNCHANGED",
@@ -134,8 +140,13 @@
       "behavior": "No rebuild and no redundant review dispatch; bytes unchanged at remote exact SHAs."
     },
     "T4_github_binary_readback": {
-      "status": "PENDING",
-      "behavior": "Must compare fetched Git binary SHA-256 and package paths after push; push success alone is not PASS."
+      "status": "PASS",
+      "package_commit": "17d156ee525ec314d843b57e0a6d00a1600ec526",
+      "file_count": 82,
+      "candidate_docx_local_sha256": "95436f7d8d01ea4153084de90e5f6b7a50d6d34224dfdab5ebe3d348e8b2b174",
+      "candidate_docx_fetched_sha256": "95436f7d8d01ea4153084de90e5f6b7a50d6d34224dfdab5ebe3d348e8b2b174",
+      "all_entries_match": true,
+      "comparison": "binary exact bytes/SHA256; text compared after CRLF/CR to LF normalization"
     },
     "T5_no_real_source": {
       "status": "PASS",
@@ -143,7 +154,7 @@
     }
   },
   "P8_result": {
-    "status": "CANDIDATE_READY_FOR_SYNC_NOT_FORMALLY_ACCEPTED",
+    "status": "CANDIDATE_SYNCED_AND_REVIEWED_NOT_FORMALLY_ACCEPTED",
     "candidate_docx_sha256": "95436f7d8d01ea4153084de90e5f6b7a50d6d34224dfdab5ebbe3d348e8b2b174",
     "page_count": 20,
     "technical_review": "PASS",
@@ -154,7 +165,7 @@
       "Checkbox 084 also needs distinct 0076, 0077 and 0079 plus genuine source evidence.",
       "Formal acceptance NOT_GRANTED."
     ],
-    "github_readback": "PENDING"
+    "github_readback": "PASS all 82 package entries read from fetched Git; candidate DOCX exact SHA matches."
   },
-  "updated_utc": "2026-10-19T02:13:19.526549+00:00"
+  "updated_utc": "2026-10-19T02:17:32.823965+00:00"
 }
