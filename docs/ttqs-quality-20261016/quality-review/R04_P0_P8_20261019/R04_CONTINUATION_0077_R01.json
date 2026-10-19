@@ -58,7 +58,10 @@
     "pull_request_head": "b71642d877c21c79574e1bb41ec1ff36185acc29",
     "readback_receipt": "0077_GITHUB_READBACK_R01.json",
     "file_count": 99,
-    "comparison": "Binary files exact SHA-256; text files compared after CRLF/CR-to-LF normalization. All 99 entries matched."
+    "comparison": "Binary files exact SHA-256; text files compared after CRLF/CR-to-LF normalization. All 99 entries matched.",
+    "terminal_readback_commit": "a1d80a26369021c0f2bc456fc58d402be2ee3952",
+    "terminal_file_count": 100,
+    "terminal_readback": "PASS"
   },
   "P5_scheduler_and_cost": {
     "status": "VERIFIED_UNCHANGED",
@@ -76,7 +79,7 @@
     "T1": "PASS inherited fixture-only/no-op check from the current R04 root receipt; it does not claim a scheduled wake test.",
     "T2": "PASS route isolation: the 0077 Writer and Reviewer used OpenCode CLI v2 only; no Antigravity executable was found on the targeted check, no Computer Use dispatch occurred, and the historical 0055 R04 lane was not reused.",
     "T3": "PASS exact-SHA reuse: exactly one semantic review dispatch for final SHA cc545510…17edf7; no candidate change/rebuild after review.",
-    "T4": "PASS: fetched branch and PR #92 head both resolved to b71642d877c21c79574e1bb41ec1ff36185acc29; all 99 package/continuation entries read back and matched (binary exact SHA-256; text line-ending normalization only).",
+    "T4": "PASS: package read back at b71642d877c21c79574e1bb41ec1ff36185acc29 (99 entries), then final 100 entries including this receipt read back at a1d80a26369021c0f2bc456fc58d402be2ee3952; binaries exact SHA-256, text normalized only for CRLF/CR to LF.",
     "T5": "PASS: candidate, technical receipt and independent reviewer preserve SAMPLE/SYNTHETIC, REAL=UNKNOWN/HOLD, NOT_GRANTED and checkbox 084 PARTIAL/HOLD."
   },
   "P8_result": {
@@ -89,7 +92,7 @@
     "checkbox_084": "PARTIAL/HOLD; 0076/0078/0079 and genuine source paths remain required.",
     "formal_acceptance": "NOT_GRANTED",
     "real_status": "UNKNOWN/HOLD",
-    "github_readback": "VERIFIED at b71642d877c21c79574e1bb41ec1ff36185acc29; 99 entries matched."
+    "github_readback": "VERIFIED at a1d80a26369021c0f2bc456fc58d402be2ee3952; 100 entries matched."
   },
-  "updated_utc": "2026-10-19T01:23:48.855824+00:00"
+  "updated_utc": "2026-10-19T01:24:35.582628+00:00"
 }
