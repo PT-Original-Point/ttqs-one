@@ -12,17 +12,14 @@
   "body_sha256": "4f150eb598cea245971f606deb8238a24d191517fb8b06b88545fa45414b9dd0",
   "blueprint_sha256": "21f76376621c5dd22d002a62202f41ea7335bbf872a965b0bbf8fb86955d0178",
   "source_packet_sha256": "2c2f2947961abd93c0b36ce1269519e8db9c9e1c4e352d5f15aa71c5c5450783",
-  "technical_status": "TECHNICAL_PASS; SEMANTIC_REVIEW_PENDING; CANDIDATE_NOT_FORMALLY_ACCEPTED; REAL_UNKNOWN_HOLD",
+  "technical_status": "TECHNICAL_PASS; VISUAL_PASS; SEMANTIC_PASS; CANDIDATE_NOT_FORMALLY_ACCEPTED; REAL_UNKNOWN_HOLD",
   "visual_status": "PASS_LAYOUT_ONLY",
   "visual_review_receipt_sha256": "dbae7e1aea7f2ea5ac43fac9f221353ab1488b6430b11ad91a86c7a117b7b1c9",
   "semantic_review": {
-    "status": "IN_PROGRESS_NO_TERMINAL_VERDICT",
     "route": "OpenCode CLI v2.0.29",
     "model": "opencode/mimo-v2.6-flash-free",
     "session_id": "ses_eac29974affeJdoWA4zZ0n8pcb",
     "client_exit_code": -1,
-    "client_note": "CLI client was stopped after prolonged wait; the background OpenCode session remained present and updated in session export. Preserve and continue inspecting this same session; do not launch a duplicate exact-SHA review.",
-    "last_session_updated_ms": 1792408932921,
     "tokens_reported_by_session": {
       "input": 171195,
       "output": 9316,
@@ -32,11 +29,23 @@
         "write": 0
       }
     },
-    "partial_checks": "DOCX and extraction hashes recomputed; OOXML text/table extraction checked; 81-row CSV and both registers verified; fields, 21 triggers, 28 negative tests, dates/math, source SHA, identity and boundary checks were in progress/completed in transcript. No final Markdown verdict has been emitted."
+    "assistant_finish": "stop",
+    "receipt_sha256": "22e5c7d5314e571d6b25812ef3fd20149a47bf2407bcf75b084627c8c8d362d3",
+    "receipt_path": "docs/ttqs-quality-20261016/quality-review/0083_R01/evidence/semantic_review_receipt_R07.json",
+    "idle_outcome": "succeeded",
+    "last_session_updated_ms": 1792409195447,
+    "session_outcome": "succeeded",
+    "partial_checks": "TERMINAL_VERIFIED: exact-SHA PASS response emitted by the named persistent OpenCode session; final finish=stop and following idle=succeeded. Full scope and limitations are in the original final response and semantic receipt.",
+    "session_export_sha256_local_only": "66a377091d4790c8f477f70aa81b2fbdf68f5edd464440aed35d8008f587d3ef",
+    "review_response_sha256": "b521d007f1fa905f8f524f0b9aa19c2279cde961f9720451cb8f0c60c5552bf6",
+    "status": "PASS",
+    "review_response_path": "docs/ttqs-quality-20261016/quality-review/0083_R01/review/independent_semantic_review_R07.md",
+    "final_message_id": "msg_153e7531f001jKyNnrJ6d0EeQg",
+    "client_note": "The CLI client exited -1 after prolonged wait, but the background session remained active and subsequently completed successfully. No duplicate review was launched."
   },
   "candidate_only": true,
   "real_evidence": "UNKNOWN/HOLD",
   "formal_acceptance": "NOT_GRANTED",
-  "next_action": "Observe the existing OpenCode session for a terminal exact-SHA semantic result; then sync its original response and receipt. Do not rebuild R07 while its exact SHA remains unchanged.",
-  "updated_local": "2026-10-19T19:23:58.128169+08:00"
+  "next_action": "Inspect live 0084 writer/session and current READY queue; do not duplicate an active Writer. Continue the next eligible document after reconciling its current candidate and QA.",
+  "updated_local": "2026-10-19T19:29:56.8068764+08:00"
 }
