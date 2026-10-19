@@ -262,7 +262,7 @@
     "T5": "PASS_0072_LOCAL_EXACT_SHA_SAMPLE_SYNTHETIC_REAL_BOUNDARY; candidate only, REAL evidence UNKNOWN/HOLD, formal acceptance NOT_GRANTED."
   },
   "P8_status": "0081 R03 is synced and read back from GitHub commit 6518947d8cd8d9c06a7f22597a14a62953ac2a9a. DOCX exact SHA afad7608a1e85dd479eb655724cc2ce42cf5f91f0f9bb59d6f601b3b31b56201; technical PASS; all 13 rendered pages directly inspected; exact-SHA semantic PASS (R02 full review plus R03 delta). Package readback: 96 manifest files, 58 raw exact, 38 text EOL-normalized, 0 mismatches. Candidate only; REAL=UNKNOWN/HOLD; formal acceptance NOT_GRANTED. Next 0082/I17C-E01/checkbox 088 awaits fresh source, queue and worker reconciliation.",
-  "updated_at_local": "2026-10-19T15:24:16.833569+08:00",
+  "updated_at_local": "2026-10-19T15:25:26.623507+08:00",
   "source_contract_blobs": {
     "01_HUMAN_MISSION_AND_ACCEPTANCE.md": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e",
     "02_GENRE_WRITING_MANUAL.md": "4ff863d9f534b6359fc1c7c1685bd8cce02da886",
@@ -361,21 +361,23 @@
     "github_readback": "VERIFIED_EXACT_DOCX; 96 manifest files: 58 raw exact, 38 text EOL-normalized, 0 mismatches"
   },
   "P4_sync_current": {
-    "status": "VERIFIED_PACKAGE_READBACK",
+    "status": "VERIFIED_BLUEPRINT_PACKAGE_READBACK",
     "target": "PT-Original-Point/ttqs-one PR #92 existing branch work/ttqs-one-document-quality-contract-20261016",
-    "readback_commit": "77551d0d0b1a34577f2aa82d0f2f73b772b9d72f",
-    "candidate_sha256": "60c18ccbb6f5b723de7cd69efca28c4c14774617c13d90784604427895ab8b07",
-    "manifest_sha256": "f714723a8245d39cbd643b2ce813332c6f49de475c099a06933ab818b46892e3",
-    "files_checked": 162,
-    "byte_exact_matches": 121,
-    "text_eol_only_matches": 41,
+    "readback_commit": "f9da2a8ace7735b7e7b55cb39a91a01cb497ce6b",
+    "manifest_path": "docs/ttqs-quality-20261016/quality-review/0084_R01/evidence/blueprint_manifest_R02.json",
+    "manifest_local_sha256": "c69899c96e00cd91d48f9bfbb9c6d564c2b44a75c1732758a7b84bbf61a979d2",
+    "manifest_remote_sha256": "f722318834280bff9ba3024526fbe0396b4d5761198fe5ac3cf8f1ea246d818e",
+    "manifest_git_blob_at_readback": "6ac6e886032401e90f9bcdb930e9eecff0f9b583",
+    "entries_checked": 12,
+    "byte_exact_matches": 1,
+    "text_eol_only_matches": 11,
     "missing": 0,
     "mismatches": 0,
-    "readback_receipt_path": "docs/ttqs-quality-20261016/quality-review/R04_P0_P8_20261019/0083_GITHUB_READBACK_R03.json",
-    "readback_receipt_sha256": "bd92dd6477bd5cb34668d0b70c47cdb241758d6ee2e06dca31086b325426e711",
-    "remote_docx_exact_sha_verified": true,
-    "readback_receipt_git_blob_sha": "f47560ce5821ade4aa3ba0ecb3aa2693b4cfa73f",
-    "readback_receipt_sha_scope": "SHA256 of fetched remote text blob content; Git object id listed separately."
+    "blueprint_sha256_local": "72729eab74a1cc61e84854668a7ae4afc37ef4b5eefdcab8956b90c6e0c1a5f3",
+    "blueprint_sha256_remote_content": "63450ec38056980710951571a9ca1b29d6816fe58d58c53ecb67b1e6474db30d",
+    "blueprint_git_blob_at_readback": "52471714fd567f71841e2de947f3e7bce0b46771",
+    "readback_receipt_path": "docs/ttqs-quality-20261016/quality-review/0084_R01/evidence/remote_readback_blueprint_R02.json",
+    "readback_receipt_sha256_local": "a3fe38e5d4fad1497cdc393cae980228664421d6055d389e0b5ce590303afd17"
   },
   "P6_current_next_ready": {
     "doc_id": "0084",
@@ -458,7 +460,7 @@
     "evidence_manifest": "docs/ttqs-quality-20261016/quality-review/0083_R01/evidence/package_manifest_R03.json",
     "github_readback": "VERIFIED; 162 entries, no missing or content mismatches"
   },
-  "P8_status_current": "0083 R03 semantic PASS exact SHA; remote package readback verified. Visual remains blocked by Word PDF/XPS export stall; candidate only, not formally accepted. Continue 0084/I17C-E03/090.",
+  "P8_status_current": "0084/I17C-E03/090 Blueprint R02 is synced and remote-readback verified; DOCX not yet built. Next: one OpenCode v2 free-model Writer. 0083 R03 remains semantic PASS, visual BLOCKED, candidate only.",
   "P4_sync_0083_R03": {
     "status": "VERIFIED_PACKAGE_READBACK",
     "target": "PT-Original-Point/ttqs-one PR #92 existing branch work/ttqs-one-document-quality-contract-20261016",
@@ -499,5 +501,24 @@
     "candidate_docx": "NOT_BUILT",
     "real_evidence": "UNKNOWN/HOLD",
     "formal_acceptance": "NOT_GRANTED"
+  },
+  "P4_sync_0084_blueprint_R02": {
+    "status": "VERIFIED_BLUEPRINT_PACKAGE_READBACK",
+    "target": "PT-Original-Point/ttqs-one PR #92 existing branch work/ttqs-one-document-quality-contract-20261016",
+    "readback_commit": "f9da2a8ace7735b7e7b55cb39a91a01cb497ce6b",
+    "manifest_path": "docs/ttqs-quality-20261016/quality-review/0084_R01/evidence/blueprint_manifest_R02.json",
+    "manifest_local_sha256": "c69899c96e00cd91d48f9bfbb9c6d564c2b44a75c1732758a7b84bbf61a979d2",
+    "manifest_remote_sha256": "f722318834280bff9ba3024526fbe0396b4d5761198fe5ac3cf8f1ea246d818e",
+    "manifest_git_blob_at_readback": "6ac6e886032401e90f9bcdb930e9eecff0f9b583",
+    "entries_checked": 12,
+    "byte_exact_matches": 1,
+    "text_eol_only_matches": 11,
+    "missing": 0,
+    "mismatches": 0,
+    "blueprint_sha256_local": "72729eab74a1cc61e84854668a7ae4afc37ef4b5eefdcab8956b90c6e0c1a5f3",
+    "blueprint_sha256_remote_content": "63450ec38056980710951571a9ca1b29d6816fe58d58c53ecb67b1e6474db30d",
+    "blueprint_git_blob_at_readback": "52471714fd567f71841e2de947f3e7bce0b46771",
+    "readback_receipt_path": "docs/ttqs-quality-20261016/quality-review/0084_R01/evidence/remote_readback_blueprint_R02.json",
+    "readback_receipt_sha256_local": "a3fe38e5d4fad1497cdc393cae980228664421d6055d389e0b5ce590303afd17"
   }
 }
