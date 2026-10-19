@@ -1,0 +1,42 @@
+{
+  "schema": "TTQS_ONE_0083_R07_CANDIDATE_CONTINUATION.v1",
+  "project_id": "TTQS_ONE",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "pr": 92,
+  "doc_id": "0083",
+  "requirement_id": "I17C-E02",
+  "official_checkbox": "089",
+  "candidate_revision": "R07",
+  "candidate_docx_sha256": "63699ceb8dee08bea7c6ea437ae811670e15d021264b0f253b61ae2bdc4d1d61",
+  "body_sha256": "4f150eb598cea245971f606deb8238a24d191517fb8b06b88545fa45414b9dd0",
+  "blueprint_sha256": "21f76376621c5dd22d002a62202f41ea7335bbf872a965b0bbf8fb86955d0178",
+  "source_packet_sha256": "2c2f2947961abd93c0b36ce1269519e8db9c9e1c4e352d5f15aa71c5c5450783",
+  "technical_status": "TECHNICAL_PASS; SEMANTIC_REVIEW_PENDING; CANDIDATE_NOT_FORMALLY_ACCEPTED; REAL_UNKNOWN_HOLD",
+  "visual_status": "PASS_LAYOUT_ONLY",
+  "visual_review_receipt_sha256": "dbae7e1aea7f2ea5ac43fac9f221353ab1488b6430b11ad91a86c7a117b7b1c9",
+  "semantic_review": {
+    "status": "IN_PROGRESS_NO_TERMINAL_VERDICT",
+    "route": "OpenCode CLI v2.0.29",
+    "model": "opencode/mimo-v2.6-flash-free",
+    "session_id": "ses_eac29974affeJdoWA4zZ0n8pcb",
+    "client_exit_code": -1,
+    "client_note": "CLI client was stopped after prolonged wait; the background OpenCode session remained present and updated in session export. Preserve and continue inspecting this same session; do not launch a duplicate exact-SHA review.",
+    "last_session_updated_ms": 1792408932921,
+    "tokens_reported_by_session": {
+      "input": 171195,
+      "output": 9316,
+      "reasoning": 17893,
+      "cache": {
+        "read": 2503936,
+        "write": 0
+      }
+    },
+    "partial_checks": "DOCX and extraction hashes recomputed; OOXML text/table extraction checked; 81-row CSV and both registers verified; fields, 21 triggers, 28 negative tests, dates/math, source SHA, identity and boundary checks were in progress/completed in transcript. No final Markdown verdict has been emitted."
+  },
+  "candidate_only": true,
+  "real_evidence": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED",
+  "next_action": "Observe the existing OpenCode session for a terminal exact-SHA semantic result; then sync its original response and receipt. Do not rebuild R07 while its exact SHA remains unchanged.",
+  "updated_local": "2026-10-19T19:23:58.128169+08:00"
+}
