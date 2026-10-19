@@ -1,0 +1,97 @@
+{
+  "project_id": "TTQS_ONE",
+  "command": "TTQS_ONE_ANTIGRAVITY_DISPATCH_QUOTA_FORENSIC_R05",
+  "record_type": "BOUNDED_WINDOWS_NATIVE_RECHECK",
+  "observed_at_local": "2026-10-20T06:26:43.4705514+08:00",
+  "source": {
+    "pr": 92,
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "head_before_write": "9bbc07a9c97b61e8d9d149ff754e2873b7bce5a4",
+    "latest_relevant_comment_id": 6277795294,
+    "audit_file_blob_sha": "263aaca84891bba8dca087875804343c3670e921",
+    "r05_attachment_sha256": "08537c533ff7e0e8fc070cbc06d1a9814ac5ae0c20538587e128a823d4d5aae5",
+    "r05_reconciliation_blob_sha": "9eee326d6af11a0dab495c8f728c1b3e1d7da333",
+    "prior_0055_dispatch_status_blob_sha": "43c8c096e8f3a8cbc97444dc8224134ec260d513",
+    "prior_0055_text_smoke_blob_sha": "cd4b53b4f75b41f047ac47b5c2064f7ed1e012bf"
+  },
+  "antigravity_attempts": {
+    "through_2026_10_19_receipt_backed_attempt_records": 35,
+    "nonempty_substantive_response_records": 14,
+    "smoke_only_response_records": 2,
+    "no_usable_substantive_result_records": 19,
+    "exact_os_invocation_or_provider_endpoint_dispatch_count": "UNKNOWN; records include pre-model failures and an unmatched session",
+    "oct20_cli_commands": {
+      "argument_parse_failure_before_generation": 1,
+      "text_print_commands_returning_text": 4,
+      "content_requests": 3,
+      "smoke_requests": 1,
+      "complete_content_text_returns": 2,
+      "partial_timeout_content_returns": 1,
+      "final_document_artifacts_from_antigravity": 0,
+      "provider_endpoint_or_gemini_quota_debit": "UNKNOWN"
+    },
+    "success_rate": "14/35 is a nonempty-response-record ratio only, not an API or provider success rate"
+  },
+  "root_cause": {
+    "supported": "UNDERUTILIZATION_BY_DISPATCH_POLICY_WITH_MODEL_AUTH_UNVERIFIED",
+    "evidence": [
+      "Antigravity file-writing lane was paused after 0055 writer errors and repairs; this pause was previously propagated too broadly to text-only work.",
+      "Text-only calls did return complete and partial text, but R05 logs for 0088 report not signed in and requested Gemini fallback to CCPA.",
+      "No 429/quota-exhaustion evidence appears in the available receipts."
+    ],
+    "limits": [
+      "The local Windows 10 Pro user settings contain no modelProvider override; current PowerShell environment has neither GEMINI_API_KEY nor GOOGLE_GEMINI_BASE_URL. No agy process was alive, so process-specific environment for historical calls is not attested.",
+      "The latest recorded native TUI check said not signed in; no fresh /usage or same-time GUI quota readback exists.",
+      "GUI/CLI account match, actual runtime provider model, quota pool/debit and billing remain UNKNOWN."
+    ]
+  },
+  "windows_observation": {
+    "os": "Windows 10 Pro",
+    "build": 19045,
+    "agy_version": "1.4.2",
+    "catalog_lists_requested_model": "gemini-3.8-flash-high",
+    "agy_or_antigravity_process_alive": false,
+    "current_modelProvider_override": false,
+    "current_shell_GEMINI_API_KEY_present": false,
+    "current_shell_GOOGLE_GEMINI_BASE_URL_present": false,
+    "gui_quota_readback": "UNKNOWN",
+    "cli_usage_readback": "UNKNOWN",
+    "account_match": "UNKNOWN",
+    "actions_this_recheck": [
+      "agy --version",
+      "agy models",
+      "agy --help",
+      "read-only settings/environment existence checks"
+    ],
+    "model_generation_call_this_recheck": false
+  },
+  "lane_state": {
+    "antigravity_file_writer": "PAUSED",
+    "antigravity_text_only_content": "NOT_DISABLED_BY_FILE_PERMISSION_POLICY; BLOCKED_PENDING_HUMAN_NATIVE_TUI_SIGN_IN_AND_FRESH_USAGE_READBACK_FOR_GEMINI_ROUTE",
+    "opencode_v2": "ONE_SCOPED_EXACT_SHA_REVIEW_PASS_ON_0089_R04; no general route-health claim",
+    "active_writer": {
+      "worker": "OpenCode v2 CLI",
+      "pid": 62432,
+      "started_at_local": "2026-10-20T06:20:37.1737167+08:00",
+      "requested_model": "opencode/mimo-v2.6-flash-free",
+      "target_doc_id": "0090",
+      "role": "bounded text repair of 0090 R03 candidate",
+      "state_at_observation": "PROCESS_ALIVE_RESPONDING; response and artifact not yet recovered",
+      "duplicate_dispatch": "NOT_MADE"
+    }
+  },
+  "deliverables": {
+    "antigravity_oct20_final_docx_count": 0,
+    "current_0090_candidate_revision": "R03",
+    "current_0090_candidate_sha256": "10be40d9dcbe2109844194ffc4285da5c217ef4f5ac7242d524b1eec691f357d",
+    "current_0090_r03_review": "PARTIAL; R04 text repair process remains active",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "security": {
+    "computer_use": false,
+    "permission_bypass": false,
+    "oauth_or_mfa_modified": false,
+    "new_cost_or_paid_fallback_authorized": false
+  },
+  "next_legal_action": "Preserve and recover the active OpenCode 0090 R04 writer result; then build/render DOCX with Windows-native tools and use a separate OpenCode exact-SHA reviewer if the free route remains available. Resume Antigravity gemini-3.8-flash-high text writing only after Human provides same-user native TUI sign-in and fresh /usage plus same-time GUI quota readback."
+}
