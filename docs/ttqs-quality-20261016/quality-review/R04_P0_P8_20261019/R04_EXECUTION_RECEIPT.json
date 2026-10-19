@@ -200,7 +200,7 @@
     }
   },
   "P4_sync": {
-    "status": "PENDING_0081_PUSH_AND_READBACK",
+    "status": "VERIFIED_0081_PACKAGE_AND_GITHUB_READBACK",
     "last_verified_commit": "6e22ec932865567b969350f82d97a1652151c531",
     "remote_head_at_readback": "6e22ec932865567b969350f82d97a1652151c531",
     "readback_at_local": "2026-10-19T06:17:34.8704067+08:00",
@@ -218,14 +218,23 @@
     "readback_scope": "104 manifest-listed package files plus package manifest, R04 execution receipt, and P7 test receipt; 105 raw exact, 2 text CRLF-to-LF normalized, 0 mismatches.",
     "previous_verified_status": "VERIFIED_0072_PACKAGE_AND_GITHUB_READBACK",
     "current_0081": {
-      "status": "PREPARED_FOR_SYNC",
+      "status": "VERIFIED_REMOTE_READBACK",
       "candidate_sha256": "afad7608a1e85dd479eb655724cc2ce42cf5f91f0f9bb59d6f601b3b31b56201",
       "package_manifest_path": "docs/ttqs-quality-20261016/quality-review/0081_R01/qa/package_manifest_R03.json",
       "package_manifest_sha256": "447227c166f251c67d48f1efc4ef9ff3413f6fb6ae57db02fa69df1ad4f4ca64",
       "manifest_files": 96,
       "manifest_mismatches": 0,
-      "readback_commit": null,
-      "readback_status": "PENDING"
+      "readback_commit": "6518947d8cd8d9c06a7f22597a14a62953ac2a9a",
+      "readback_status": "VERIFIED",
+      "remote_head": "6518947d8cd8d9c06a7f22597a14a62953ac2a9a",
+      "verified_files": 96,
+      "raw_byte_exact": 58,
+      "eol_normalized_text": 38,
+      "mismatches": 0,
+      "candidate_remote_sha256": "afad7608a1e85dd479eb655724cc2ce42cf5f91f0f9bb59d6f601b3b31b56201",
+      "package_manifest_remote_git_blob_bytes_sha256": "2cb2c378a3cb22d2d004e946675d39f77bf3cfd959c92ef62f191ead0ba244e7",
+      "readback_manifest_path": "docs/ttqs-quality-20261016/quality-review/R04_P0_P8_20261019/evidence/remote_readback_6518947_0081.json",
+      "readback_manifest_sha256": "0c5c4cfdf7f746fa1f78a077f7f48d47964cb694773248678c602538d7ddd665"
     }
   },
   "P5_schedule_and_cost": {
@@ -240,10 +249,10 @@
     "doc_id": "0082",
     "requirement_id": "I17C-E01",
     "official_checkbox_serial": "088",
-    "queue_state": "SOURCE_FRESH_READ_REQUIRED_AFTER_0081_READBACK",
-    "selection": "Next sequential item reported by current R04 queue history; must reconfirm current official source, Unique Blueprint and OS queue before dispatch.",
-    "next_action": "After 0081 GitHub readback, reconcile 0082 local/remote artifacts, official source, unique blueprint and live Writer state; dispatch only if still READY.",
-    "status": "PENDING_FRESH_RECONCILIATION"
+    "queue_state": "PENDING_FRESH_SOURCE_AND_WORKER_RECONCILIATION",
+    "selection": "Sequential next candidate; official/Blueprint and local/remote existence still require live verification.",
+    "next_action": "Inspect current requirement and Unique Blueprint row 88, verify no local/remote candidate or live Writer, then proceed only if READY.",
+    "status": "PENDING_RECONCILIATION"
   },
   "P7_tests": {
     "T1": "PASS_EXPECTED_NOOP_FIXTURE_ONLY",
@@ -252,8 +261,8 @@
     "T4": "PASS_CURRENT_0072_GITHUB_BLOB_READBACK: 107 paths; 105 raw exact, 2 text files LF-normalized, 0 mismatches; DOCX SHA verified.",
     "T5": "PASS_0072_LOCAL_EXACT_SHA_SAMPLE_SYNTHETIC_REAL_BOUNDARY; candidate only, REAL evidence UNKNOWN/HOLD, formal acceptance NOT_GRANTED."
   },
-  "P8_status": "0081 R03 candidate package is locally reconciled: DOCX SHA afad7608a1e85dd479eb655724cc2ce42cf5f91f0f9bb59d6f601b3b31b56201; technical PASS; all 13 Word-rendered pages inspected; exact-SHA semantic PASS (R02 full review plus R03 metadata delta). Package manifest covers 96 files with 0 local mismatches. CANDIDATE_ONLY; REAL=UNKNOWN/HOLD; formal acceptance NOT_GRANTED. GitHub push and remote readback pending; next queue item 0082/I17C-E01/checkbox 088 requires fresh source/queue reconciliation.",
-  "updated_at_local": "2026-10-19T12:33:47.0586701+08:00",
+  "P8_status": "0081 R03 is synced and read back from GitHub commit 6518947d8cd8d9c06a7f22597a14a62953ac2a9a. DOCX exact SHA afad7608a1e85dd479eb655724cc2ce42cf5f91f0f9bb59d6f601b3b31b56201; technical PASS; all 13 rendered pages directly inspected; exact-SHA semantic PASS (R02 full review plus R03 delta). Package readback: 96 manifest files, 58 raw exact, 38 text EOL-normalized, 0 mismatches. Candidate only; REAL=UNKNOWN/HOLD; formal acceptance NOT_GRANTED. Next 0082/I17C-E01/checkbox 088 awaits fresh source, queue and worker reconciliation.",
+  "updated_at_local": "2026-10-19T12:35:27.037454+08:00",
   "source_contract_blobs": {
     "01_HUMAN_MISSION_AND_ACCEPTANCE.md": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e",
     "02_GENRE_WRITING_MANUAL.md": "4ff863d9f534b6359fc1c7c1685bd8cce02da886",
@@ -346,7 +355,10 @@
     "independent_semantic": "PASS exact SHA R03 delta; R02 full substantive review carried forward",
     "writer_route": "OpenCode CLI v2 opencode/deepseek-v4.1-flash-free; exit 0; actual output and session artifacts preserved",
     "reviewer_route": "OpenCode CLI v2 opencode/beam-free; R02 full semantic PASS plus R03 delta PASS; exit 0; read only",
-    "state": "CANDIDATE_ONLY; REAL=UNKNOWN/HOLD; formal_acceptance=NOT_GRANTED"
+    "state": "CANDIDATE_ONLY; REAL=UNKNOWN/HOLD; formal_acceptance=NOT_GRANTED",
+    "github_readback_commit": "6518947d8cd8d9c06a7f22597a14a62953ac2a9a",
+    "github_candidate_sha256": "afad7608a1e85dd479eb655724cc2ce42cf5f91f0f9bb59d6f601b3b31b56201",
+    "github_readback": "VERIFIED_EXACT_DOCX; 96 manifest files: 58 raw exact, 38 text EOL-normalized, 0 mismatches"
   },
   "P4_sync_current": {
     "status": "PENDING_GITHUB_PUSH",
