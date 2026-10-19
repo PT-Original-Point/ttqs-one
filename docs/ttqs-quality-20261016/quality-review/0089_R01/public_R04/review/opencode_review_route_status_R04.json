@@ -5,7 +5,7 @@
   "packet_sha256": "2511bf46f03115283bcd0a715c2e50ff6883e9e7f793f7fbcef300f908fa4065",
   "prompt_sha256": "18d19b9ec0ffd0618cf439097f9ba7f9b30cc6ea8b7a5163b05e7df124a35ee1",
   "cli": "OpenCode v2.0.32",
-  "lane": "SEMANTIC_INFERENCE_PAUSED_AFTER_THREE_FAILED_MODEL_ROUTES",
+  "lane": "RESUMED_AFTER_SCOPED_MIMO_SUCCESS_R01",
   "attempts": [
     {
       "time_local": "2026-10-20T04:44:13+08:00",
@@ -41,7 +41,18 @@
   "dispatch_selection_note": "DeepSeek was the first attempt. The subsequent GLM and Space Bunny fallbacks deviated from the report-listed fallback order (MiMo/Muse); record as a routing error. MiMo was not tried after the three-error pause threshold.",
   "billing_or_token_usage": "UNKNOWN_NOT_RETURNED",
   "raw_session_ids_and_local_paths": "NOT_PUBLISHED; raw local outputs remain in the private working tree and are SHA-bound above",
-  "independent_semantic_verdict": "UNKNOWN",
-  "next_action": "Keep OpenCode inference dispatch paused until an approved listed free model is demonstrably available; no paid fallback.",
-  "updated_at_local": "2026-10-20T04:52:10.1011320+08:00"
+  "independent_semantic_verdict": "PASS_TEXT_ONLY",
+  "next_action": "R04 exact-SHA text semantic review completed PASS with nonblocking observations. Do not rebuild unchanged DOCX for these low/cosmetic items. Continue 0090 writer packet as next document; monitor current MiMo route without paid fallback. Full model backend identity, cost and usage remain UNKNOWN.",
+  "updated_at_local": "2026-10-20T04:52:10.101132+08:00",
+  "recovery_call": {
+    "completed_at": "2026-10-20T05:25:55.9383647+08:00",
+    "exit_code": 0,
+    "raw_stdout_sha256": "90da1cc443c3d8e4c6ac90067756b877abb579d7bd5b80882657c3b0fae1973b",
+    "cost_or_token_usage": "UNKNOWN_NOT_RETURNED",
+    "requested_model": "opencode/mimo-v2.6-flash-free",
+    "response_sha256": "7fa3f1818a67dc13b70944dd921a8b54c946aff1c2f632d1d988d264bfb732c7",
+    "started_at": "2026-10-20T05:18:28.9671327+08:00",
+    "runtime_model_identity": "UNKNOWN_NOT_EMITTED",
+    "candidate_docx_sha256": "42bebbdfcaba93a753467260d5e1865b93b6bc2fee652a03d39b8fb385ef8476"
+  }
 }
