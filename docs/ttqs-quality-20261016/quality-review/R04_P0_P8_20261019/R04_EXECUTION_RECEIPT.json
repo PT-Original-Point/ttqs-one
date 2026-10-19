@@ -262,7 +262,7 @@
     "T5": "PASS_0072_LOCAL_EXACT_SHA_SAMPLE_SYNTHETIC_REAL_BOUNDARY; candidate only, REAL evidence UNKNOWN/HOLD, formal acceptance NOT_GRANTED."
   },
   "P8_status": "0081 R03 is synced and read back from GitHub commit 6518947d8cd8d9c06a7f22597a14a62953ac2a9a. DOCX exact SHA afad7608a1e85dd479eb655724cc2ce42cf5f91f0f9bb59d6f601b3b31b56201; technical PASS; all 13 rendered pages directly inspected; exact-SHA semantic PASS (R02 full review plus R03 delta). Package readback: 96 manifest files, 58 raw exact, 38 text EOL-normalized, 0 mismatches. Candidate only; REAL=UNKNOWN/HOLD; formal acceptance NOT_GRANTED. Next 0082/I17C-E01/checkbox 088 awaits fresh source, queue and worker reconciliation.",
-  "updated_at_local": "2026-10-19T12:35:27.037454+08:00",
+  "updated_at_local": "2026-10-19T13:39:28.492+08:00",
   "source_contract_blobs": {
     "01_HUMAN_MISSION_AND_ACCEPTANCE.md": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e",
     "02_GENRE_WRITING_MANUAL.md": "4ff863d9f534b6359fc1c7c1685bd8cce02da886",
@@ -362,14 +362,61 @@
   },
   "P4_sync_current": {
     "status": "PENDING_GITHUB_PUSH",
+    "target": "PT-Original-Point/ttqs-one PR #92 existing branch work/ttqs-one-document-quality-contract-20261016",
+    "package": "0082_R08 full synthetic revision and QA history",
+    "package_file_count": 243,
+    "package_bytes": 37481599,
+    "remote_readback": "PENDING",
+    "package_manifest_sha256": "0a1a0322e7d52c6d080daddc885c4312e1a40c546ecb25e1733ba9e650803b36"
+  },
+  "P6_current_next_ready": {
+    "doc_id": "0083",
+    "requirement_id": "I17C-E02",
+    "official_checkbox_serial": "089",
+    "queue_state": "NEXT_AFTER_0082_SYNC; SOURCE_AND_WORKER_PREFLIGHT_REQUIRED",
+    "candidate_exists_locally": false,
+    "next_action": "Verify current official source and unique Blueprint for 089, fresh-check local/remote candidate and live Writer; proceed only if READY.",
+    "status": "PENDING_FRESH_RECONCILIATION"
+  },
+  "P4_sync_0081_historical": {
+    "status": "PENDING_GITHUB_PUSH",
     "target": "PT-Original-Point/ttqs-one PR #92 existing branch",
     "candidate_sha256": "afad7608a1e85dd479eb655724cc2ce42cf5f91f0f9bb59d6f601b3b31b56201"
   },
-  "P6_current_next_ready": {
+  "P6_after_0081_historical": {
     "doc_id": "0082",
     "requirement_id": "I17C-E01",
     "official_checkbox_serial": "088",
     "queue_state": "READY_AFTER_0081_SYNC; pre-dispatch live check required",
     "genre": "post-training behavior-transfer survey; distinct from 0081 closeout/action-plan verification"
-  }
+  },
+  "P3_document_action_0082": {
+    "doc_id": "0082",
+    "requirement_id": "I17C-E01",
+    "official_checkbox_serial": "088",
+    "unique_blueprint_sha256": "451acd1e197b916f2d14c03bd2651653892a4a7955119291e9628bdc5e27e602",
+    "source_packet_sha256": "8a40f41867a1cbe2a847f58538f6a8a9831e5e518a3f0435d90ab7ce59b39388",
+    "revision": "R08",
+    "candidate_path": "docs/ttqs-quality-20261016/quality-review/0082_R01/candidate/0082_R08.docx",
+    "candidate_sha256": "2a4b2aadf2a1ee9e1dce47247b91aa4bd150d83770fda1708bca0c722a07e20d",
+    "body_sha256": "e16528b80a80e245ca2161587ac5f6019dd2d2deed2def570d77a3fafe03924b",
+    "replacement_register_sha256": "c2beac42f56ce4b764ca9c26ee16ebed880c7abac237547565c8b3e139115b10",
+    "replacement_register_rows": 115,
+    "repairs": [
+      "R06 restored N-10/N-11 negative tests, Blueprint +7/+14 reminder cadence, valid A8 synthetic option, and PASS-SAMPLE vocabulary.",
+      "R07 aligned blank questionnaire C1 with the field dictionary and worked example: handoff closure.",
+      "R08 removed literal Markdown delimiters around PASS-SAMPLE in §10; presentation-only change."
+    ],
+    "technical": "PASS; exact DOCX SHA bound; 3 sections, 20 tables, 245 paragraphs; 17-page A4 Word render.",
+    "data": "PASS; 72 locked synthetic rows / 12 synthetic respondents; 115 replacement-register rows; matrix, arithmetic, date, identity and boundary checks pass.",
+    "visual": "PASS_LAYOUT_VISUAL; final R08 page 14 directly inspected; remaining 16 pages pixel-identical to R07; all 17 pages have direct or inherited visual scope; no clipping/table overflow/header-footer overlap; whitespace notes nonblocking.",
+    "independent_semantic": "PASS exact SHA; OpenCode CLI v2.0.29, opencode/beam-free, session ses_ead5792d5ffeMqM16cRB8kGCJT, exit 0; original review and raw outputs preserved.",
+    "reviewer_scope_limitation": "Reviewer used supplied extracted text and technical/visual receipts; did not independently recompute DOCX bytes or inspect PDF. Local exact SHA verified; final page 14 directly inspected, other pages inherited pixel-identical.",
+    "sample_real": "SAMPLE/SYNTHETIC only; REAL=UNKNOWN/HOLD; formal acceptance NOT_GRANTED.",
+    "state": "CANDIDATE_QUALITY_PASS; NOT_FORMALLY_ACCEPTED",
+    "package_manifest": "docs/ttqs-quality-20261016/quality-review/0082_R01/evidence/package_manifest_0082_R08.json",
+    "package_manifest_sha256": "0a1a0322e7d52c6d080daddc885c4312e1a40c546ecb25e1733ba9e650803b36",
+    "package_manifest_sha256_scope": "SHA256 of the manifest bytes stored in the Git index after line-ending normalization."
+  },
+  "P8_current_status": "0082 R08 candidate has technical/data/visual and independent exact-SHA semantic PASS; DOCX SHA 2a4b2aadf2a1ee9e1dce47247b91aa4bd150d83770fda1708bca0c722a07e20d. All 242 prior package files plus a SHA256 manifest are prepared for sync. No formal acceptance; REAL=UNKNOWN/HOLD. Push/readback pending."
 }
