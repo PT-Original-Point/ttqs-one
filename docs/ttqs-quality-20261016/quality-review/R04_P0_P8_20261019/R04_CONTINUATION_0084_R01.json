@@ -2,7 +2,7 @@
   "schema": "TTQS_ONE_R04_CONTINUATION_0084_R01.v1",
   "project_id": "TTQS_ONE",
   "command": "TTQS_ONE_CODEX_NATIVE_WORKER_RECOVERY_SYNC_R04",
-  "updated_local": "2026-10-19T15:32:45.397797+08:00",
+  "updated_local": "2026-10-19T19:48:43.9856074+08:00",
   "repo": "PT-Original-Point/ttqs-one",
   "branch": "work/ttqs-one-document-quality-contract-20261016",
   "pr": 92,
@@ -122,5 +122,35 @@
     "candidate_docx": "NOT_BUILT",
     "REAL": "UNKNOWN/HOLD",
     "FORMAL_ACCEPTANCE": "NOT_GRANTED"
+  },
+  "current_reconciliation": {
+    "checked_at_local": "2026-10-19T19:48:43.9524533+08:00",
+    "source_branch_head": "717f08733d4cda7d84af21db346e44f41f7854fb",
+    "latest_candidate": {
+      "doc_id": "0084",
+      "requirement_id": "I17C-E03",
+      "official_checkbox": "090",
+      "revision": "R11",
+      "docx_sha256": "cf4376b3287db4f3a900fe7a39012e7dc6a49b419e586371b1eb1e0190a245d8",
+      "remote_git_blob_match": true,
+      "technical_verdict": "PASS",
+      "visual_verdict": null,
+      "semantic_verdict": "PASS",
+      "semantic_result": "PASS_WITH_FOUR_NON_BLOCKING_FINDINGS",
+      "semantic_response_sha256": "da7f36484ffd1960f016fb6bad68e72d7b63b2d3e7843490aa49fb7c7cc4a4f3",
+      "semantic_review_receipt_sha256": "be2fbfb084c88e43339b89fabdd50954a45c76a49fbc23417cb417eb092802c9",
+      "nonblocking_findings": 4
+    },
+    "writer_session": {
+      "session_id": "ses_eacf1cb26ffeUBxW4SruAR7csW",
+      "model": "deepseek-v4.1-flash-free",
+      "outcome": "succeeded",
+      "updated_utc": "2026-10-19T11:22:22.1530000+00:00",
+      "active_writer": false
+    },
+    "candidate_state": "CANDIDATE_QUALITY_PASS; NOT_FORMALLY_ACCEPTED",
+    "real_evidence": "UNKNOWN/HOLD",
+    "formal_acceptance": "NOT_GRANTED",
+    "next_ready": "0085 / I17C-E04 / checkbox 091; one OpenCode Blueprint worker active"
   }
 }
