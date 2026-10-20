@@ -1,0 +1,30 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0091",
+  "candidate": "R03",
+  "requirement_id": "I17D-E05",
+  "official_checkbox_serial": "098",
+  "candidate_sha256": "8c9b8f7ec6fa37f9ad833fa5df406ef2c9d120e675eea28cc3d3b15e5b9c4ac3",
+  "candidate_status": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "technical_review": "PASS_STATIC_ONLY",
+  "visual_review": "PASS_ALL_16_PAGES",
+  "semantic_review": {
+    "status": "PARTIAL",
+    "route": "OpenCode CLI v2.0.32",
+    "model": "opencode/deepseek-v4.1-flash-free",
+    "packet_sha256": "5C3E2DB00C096248F3140851DCBFF9D06404E14BD7375FD03557A40E92F9C8F2",
+    "response_sha256": "f2bb39ce894bac28a22177f2ebfb15c64fac5ec84ebbe758b589ec5a09b766f5",
+    "candidate_sha256": "8C9B8F7EC6FA37F9AD833FA5DF406EF2C9D120E675EEA28CC3D3B15E5B9C4AC3"
+  },
+  "remaining_findings": [
+    "Pre-open REAL source gate conflicts with the worked case.",
+    "Authorization pass criteria omit mandatory scope, target, date, checker, withdrawal and expiry checks.",
+    "Employer request fields need scope-conditional sending.",
+    "G1/G2 evidence wording conflicts with evidence-grade definitions.",
+    "Register omits authorization, actor, contact, decision, notice and public-locator trace fields.",
+    "Pre-open checklist, refusal/withdrawal rules and one-person closure need consistent conditional branches.",
+    "Sample template shares case identity and implies authorization; replacement register and disposition precedence need correction."
+  ],
+  "real_evidence": "NOT_PROVIDED; examples remain SAMPLE/SYNTHETIC",
+  "next_action": "Targeted repair of 0091 content, then rebuild/render and review only the new exact SHA."
+}
