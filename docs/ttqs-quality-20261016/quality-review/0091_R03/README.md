@@ -8,3 +8,5 @@
 - Visual checks: all 16 final Word-rendered pages were directly inspected; see `evidence/visual_review_R03_exact.json`.
 - Independent semantic review: **PARTIAL** on this exact SHA. See the raw OpenCode v2 response in `review/independent_semantic_review_R03.md`; the concrete findings are summarized in `PROGRESS.json`.
 - Next action: repair only the cited 0091 defects, then create and review a new exact-SHA candidate.
+
+GitHub readback: candidate DOCX remote raw SHA-256 matches the exact local candidate. Text assets were normalized from CRLF to LF by Git; the manifest records GitHub raw blob hashes and the readback receipt confirms each text asset matches after newline-only normalization.
