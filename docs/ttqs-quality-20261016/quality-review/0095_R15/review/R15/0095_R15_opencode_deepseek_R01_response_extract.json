@@ -1,0 +1,135 @@
+{
+  "native_exit_code": 0,
+  "session_ids": [
+    "ses_ea62f7cd3ffeKjIHgCyBwf6YcX"
+  ],
+  "event_counts": {
+    "step_start": 10,
+    "tool_use": 10,
+    "step_finish": 9,
+    "text": 1
+  },
+  "steps": [
+    {
+      "reason": "tool-calls",
+      "cost": 0,
+      "tokens": {
+        "input": 59825,
+        "output": 132,
+        "reasoning": 1085,
+        "cache": {
+          "read": 4992,
+          "write": 0
+        }
+      }
+    },
+    {
+      "reason": "tool-calls",
+      "cost": 0,
+      "tokens": {
+        "input": 23656,
+        "output": 217,
+        "reasoning": 32,
+        "cache": {
+          "read": 65920,
+          "write": 0
+        }
+      }
+    },
+    {
+      "reason": "tool-calls",
+      "cost": 0,
+      "tokens": {
+        "input": 1490,
+        "output": 301,
+        "reasoning": 23,
+        "cache": {
+          "read": 89728,
+          "write": 0
+        }
+      }
+    },
+    {
+      "reason": "tool-calls",
+      "cost": 0,
+      "tokens": {
+        "input": 13964,
+        "output": 254,
+        "reasoning": 222,
+        "cache": {
+          "read": 91520,
+          "write": 0
+        }
+      }
+    },
+    {
+      "reason": "tool-calls",
+      "cost": 0,
+      "tokens": {
+        "input": 1092,
+        "output": 512,
+        "reasoning": 524,
+        "cache": {
+          "read": 105856,
+          "write": 0
+        }
+      }
+    },
+    {
+      "reason": "tool-calls",
+      "cost": 0,
+      "tokens": {
+        "input": 318,
+        "output": 552,
+        "reasoning": 73,
+        "cache": {
+          "read": 107904,
+          "write": 0
+        }
+      }
+    },
+    {
+      "reason": "tool-calls",
+      "cost": 0,
+      "tokens": {
+        "input": 2036,
+        "output": 607,
+        "reasoning": 171,
+        "cache": {
+          "read": 108800,
+          "write": 0
+        }
+      }
+    },
+    {
+      "reason": "tool-calls",
+      "cost": 0,
+      "tokens": {
+        "input": 3326,
+        "output": 382,
+        "reasoning": 496,
+        "cache": {
+          "read": 111488,
+          "write": 0
+        }
+      }
+    },
+    {
+      "reason": "tool-calls",
+      "cost": 0,
+      "tokens": {
+        "input": 117399,
+        "output": 96,
+        "reasoning": 304,
+        "cache": {
+          "read": 1792,
+          "write": 0
+        }
+      }
+    }
+  ],
+  "stdout_sha256": "83546b6cf1f95d29d69b7db272aaebfe81277dcdc7b9c2304c85a25c03d3535e",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "response_sha256": "2d182b9b0d2384268f3fd2ecb977bbb6b705e1ab94c23c986fd58059b08723f3",
+  "response_text": "**Verdict: PASS** — bounded R14 F-01 closure review only, bound to the packet-declared DOCX SHA `c70521d50fbec6cdc3b53ce3dc35fa2613069e60c58625b7eb2f96a5a6fd3658`.\n\n**Blocking count: 0**  \n**R14 F-01: CLOSED**\n\n| Check | Result | Evidence |\n|---|---|---|\n| (1) CSV row points to §9.5 row 3 at p.39 | **PASS** | `qa/0095_R15_synthetic_replacement_register.csv`, key `UNK-0095-UNK_FORMAL_EFFECTIVE_DATE`: `§4.1 Tool-A blank REAL date fields; §4.2 Tool-B blank REAL date fields; §9.5 row 3；PDF pp. 11, 15, 39` |\n| (2) Actual page 39 and manuscript map agree | **PASS** | Loaded `qa/render_0095_R15_final/page-39.png`: §9.5 table, row 3, target key, footer `第 39 頁`; manuscript §1.4 maps §9.5 → pp.39–42 and §9.5 states row 3 is on p.39 |\n| (3) DOCX binds the R15 CSV SHA | **PASS** | `writer/0095_R15_CANDIDATE.docx` → `word/document.xml` contains `163796fb365509ddda1d03fe2db7f795feb4f45fba30cbb138fd50857eafd1c9` twice; R15 manifest declares the same `current_csv_sha256` and DOCX SHA `c70521…` |\n| (4) Only this register locator changed vs R14 | **PASS** | Direct read-only comparison of R14/R15 CSVs: 211 rows, identical keys/order, exactly **one** changed cell — `UNK-0095-UNK_FORMAL_EFFECTIVE_DATE.document_location`, `p.38` → `p.39`. Manuscript R14→R15 differences are version/SHA relabeling; no factual values changed |\n| (5) No REAL fact, approval, signature, or execution inferred | **PASS** | §9.5 row 3 status remains `未提供；UNKNOWN`; REAL date fields remain blank; no approval/signature/execution claim introduced |\n\n**Exact key/page:** `UNK-0095-UNK_FORMAL_EFFECTIVE_DATE` — §9.5 row 3 — R15 PDF **p.39**.\n\n**New finding:** None blocking. Scope note only: the DOCX necessarily carries R14→R15 version/SHA relabeling beyond the single CSV cell; this is bookkeeping, not a substantive change.\n\n**Model identity:** UNKNOWN as native attestation. Harness label only: `opencode` / `deepseek-v4.1-flash-free` (DeepSeek V4.1 Flash Free); not treated as provider attestation.\n\n**Limits:** This is not a full unchanged-content review and does not assert formal acceptance. No direct byte hashing was performed; SHA bindings above are read from the packet, R15 DOCX text, and R15 manifest, not independently recomputed."
+}
