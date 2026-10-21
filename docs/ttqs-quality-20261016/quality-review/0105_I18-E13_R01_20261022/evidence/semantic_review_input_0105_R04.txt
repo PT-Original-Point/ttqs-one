@@ -1,0 +1,334 @@
+REVIEW TARGET
+doc_id=0105
+official_requirement_id=I18-E13
+project_157_index=114 (not an official checkbox ordinal)
+exact_docx_sha256=17f7d680cbb992db93a6f67df84415500050953eecf426b477f675810177b4cb
+review_scope=semantic only; this packet contains text extracted from that exact DOCX. No visual/layout verdict is requested here.
+
+=== OFFICIAL SOURCE PACKET ===
+# 0105 / I18-E13 來源包 R01
+
+## 文件身分與範圍
+
+- 專案：TTQS_ONE；文件 ID：`0105`；R04 142 文件 crosswalk 對應官方要求識別碼 `I18-E13`。
+- R04 crosswalk row maps `0105` to `問卷調查及課後行動計畫評估表等顯示目標客戶及_可直接使用成品`；官方序列原始文件對照為 page 7、I18-L3 project index 114。
+- Index 114 is a project blueprint index. It is not a printed official checkbox ordinal. No printed serial is claimed here.
+- Document genre: ready-to-use survey instrument plus post-training action-plan and follow-up evaluation forms, with a worked synthetic data example and transparent descriptive calculation.
+- Official evidence table PDF page 7 states under the 3-point common evidence examples: `問卷調查及課後行動計畫評估表等顯示目標客戶及學員認為訓練有績效改善的效果。` It is an example of supporting evidence, not proof of association achievement or a guaranteed score.
+
+## Source of truth and exact source identifiers
+
+- Live GitHub PR #92 / branch `work/ttqs-one-document-quality-contract-20261016` at source capture: commit `95d7c2e856f70cfb883d186aee1c87d1c2720370`.
+- Current 06 contract blob: `4c7eff55748ff265b1e5a7d1122852b0d101acbd`; R09 and the project authorization are applied from this live contract.
+- Current `01_HUMAN_MISSION_AND_ACCEPTANCE.md` blob: `538bedb9d87e8465f43151933b4a5c1bfa4bbc4e`.
+- Current `02_GENRE_WRITING_MANUAL.md` blob: `4ff863d9f534b6359fc1c7c1685bd8cce02da886`.
+- Current `03_157_CHECKBOX_BLUEPRINTS.md` blob: `8c2bbe7ca9dcbb03088a48934b9e57e7147ede63` (project index 114: performance-improvement survey and action-plan follow-up; index 113 is a distinct `Other` row and is not being used as the authority for this named document).
+- R04 129-to-142 crosswalk source blob: `1ac4a8419088d947947031b758e29c35a3606514`; seed-142 source blob: `f20ac9ae37700eb03a93b8da4407e7bf4788b602`.
+- Crosswalk row excerpt and seed-142 row excerpt are included beside this packet.
+- Official evidence-table PDF: `quality-review/0039_R09/inputs/official_source.pdf`, SHA-256 `805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709`; page 7 excerpt SHA-256 `78a60101bc37d688670a27d0f115f78abde6385391947459cbbb51343b5ad9eb`; corresponding page image SHA-256 `cd6abab433007af144da97f54c946b3be85d90977b5140c74fec3a428ab7f180`.
+
+## Target association facts and limits
+
+- The project target is 屏東縣原始點關懷協會. Current legal status, actual courses, staff, target customers, learners, survey responses, action-plan execution, and organizational performance are not established by this source packet.
+- No real survey data, course roster, respondent consent, follow-up records, approval, or objective performance evidence is included. The deliverable must not report association performance as REAL.
+- Use fully completed, visibly `SAMPLE / SYNTHETIC` material so the forms can be understood. Never invent a real respondent, course date, signature, decision, external approval, association result, or verified organizational outcome.
+
+## Neighbor boundaries
+
+- `0104 / I18-E11` is a certificate-acquisition-rate analysis; this document is about perceived performance improvement and post-course action-plan follow-up. A learner satisfaction result cannot count as an issued certificate.
+- `0106 / I18-E14` is a financial performance-improvement explanation; do not turn synthetic survey responses into financial statements or objective financial outcomes.
+- `0110 / I18-E19` addresses stronger 4-point organizational-performance improvement/significant-effect evidence; this document's 3-point common-evidence example does not prove that higher standard.
+- `0095 / I18-E02` is a system/process satisfaction survey mechanism; the present deliverable must include a specific performance-improvement instrument and post-course action-plan evaluation, not merely a generic satisfaction SOP.
+- No cross-document cohort join is authorized without the same source-backed cohort ID, dates, population, denominator, consent and matching evidence definitions.
+
+## Required claim boundary
+
+Distinguish, field by field: (1) a respondent's perception, (2) a planned action, (3) a self-reported follow-up, (4) an objective source-verified indicator, and (5) a causal conclusion. The sample may demonstrate an apparent descriptive change, but it must label every such value `SAMPLE / SYNTHETIC`; no causal attribution is permitted without a suitable design and corroborating sources. If source evidence is absent, mark `UNKNOWN`, `NOT_RECEIVED`, or `HOLD`, not REAL or PASS.
+=== UNIQUE BLUEPRINT ===
+# UNIQUE BLUEPRINT 0105 / I18-E13 / R01
+
+## 1. Identity, official mapping and genre
+
+- `project_id`: TTQS_ONE
+- `doc_id`: `0105` (document ID; not an official checkbox serial)
+- `official_requirement_id`: `I18-E13` (R04 142 crosswalk)
+- Official source: training-institution evidence table, printed page 7, I18-L3, 3-point common evidence example: `問卷調查及課後行動計畫評估表等顯示目標客戶及學員認為訓練有績效改善的效果。`
+- Project `03_157_CHECKBOX_BLUEPRINTS.md` index 114: `績效改善調查與行動計畫追蹤`. Project index 114 is not claimed as a printed official checkbox ordinal. The adjacent index 113 is a distinct `其他` item; do not conflate it with 0105.
+- Genre: operational questionnaire and post-training action-plan evaluation package, including administration instructions, response instrument, scoring worksheet, follow-up form, worked synthetic example, decision/hold thresholds and synthetic replacement register.
+- Primary readers: small association training staff, target customers/learners completing the survey, and TTQS reviewers checking the evidence chain.
+
+## 2. The job this document must do
+
+Enable an association administrator to: define a specific expected work-performance change before training; administer a brief, understandable survey to learners and target customers; protect privacy; summarize valid responses with transparent denominators; create a post-course action plan with owners, due dates and evidence sources; conduct a timed follow-up; distinguish perceived effects from verified performance; and decide whether the evidence supports a limited descriptive statement, requires HOLD, or can be escalated for human review.
+
+The form does not itself establish that training caused a change or that the association achieved an outcome. The official phrase is a common evidence example under the 3-point section, not a score promise.
+
+## 3. Mandatory content architecture
+
+1. Cover with prominent `SAMPLE / SYNTHETIC` notice, exact requirement, purpose, reader, timing, and 30-second use instructions.
+2. One-page definitions: target customer vs learner; expected performance; self-report vs objective record; baseline; target; follow-up; valid response; nonresponse; evidence status; causal limitation.
+3. Roles/authority/privacy procedure: who may invite, collect, de-identify, analyze, approve access and store records; use role labels, minimum necessary data, consent and opt-out; no invented delegation.
+4. Administration SOP with input, steps, timing, denominator rules, duplicate handling, nonresponse, missing/NA values, output and exception paths.
+5. Form A — survey cover/control record: case/course ID, target group, invitation count, collection window, consent scope, version, custodial role, response channel and de-identification key location.
+6. Form B — complete learner questionnaire and branching notes; at least 12 substantive items with a five-point scale (`1 strongly disagree` to `5 strongly agree`) plus `N/A / unable to judge`, clear instructions and at least two open-text prompts. Ask separately about learning/application, task quality or time, perceived organizational/service performance, observed evidence, other contributing changes, and action follow-through. Do not force an opinion.
+7. Form C — target-customer questionnaire or clearly branched equivalent, phrased so a customer can judge observed service/work change without being asked to rate internal training quality they did not observe.
+8. Form D — data-entry and scoring sheet: invitation/response/valid denominators; positive share; item-level distribution; subgroup counts; missing/NA treatment; no unsupported composite score. Each formula must show numerator, denominator and rounding.
+9. Form E — post-training action plan: expected result, baseline and source, measurable target, actions, owner role, due dates, resources, barriers, check method, follow-up date, outcome source, evidence locator, status and corrective step.
+10. Form F — follow-up evaluation: planned vs actual action, source-check state, baseline/target/current value, deviation, alternative explanations, privacy status, reviewer role and disposition (`OPEN`, `HOLD`, `CLOSED_FOR_SAMPLE`, `ESCALATE_FOR_HUMAN_REVIEW`).
+11. Worked synthetic case using stable case ID `SYN-0105-CASE-01`. State that the class, respondents and all values are invented. Complete invitation and response counts, subgroup breakdown, item distribution and action-plan follow-up with consistent arithmetic. Any apparent work-performance change remains sample-only and noncausal.
+12. Results interpretation: descriptive statements only; discuss small N, self-selection, nonresponse, recall/social-desirability bias, missing objective sources, other causes and limits of generalization. Provide “what may be said / what must not be said” examples.
+13. Decision/hold table for too few responses, missing consent, duplicated response, no baseline, no follow-up, contradictory data, unsupported financial claim, unverified source, privacy concern, or causal overclaim.
+14. Replacement register with one synthetic fact per row: `fact_id`, `case_id`, document ID, section/form/cell, synthetic value, real source needed, responsible role, state, and replacement instructions.
+15. Filing, retention and access log fields; retention period is `set from current law/consent/policy`, not invented. Include version/change log and quick final completeness checklist.
+
+## 4. Fixed worked-example data and arithmetic
+
+Use only `SAMPLE / SYNTHETIC` identifiers and clearly state this is not association performance:
+
+- Synthetic course ID `SYN-0105-COURSE-01`; no REAL course is established.
+- Invitations: 12 total = 7 synthetic learners + 5 synthetic target-customer respondents.
+- Completed valid surveys: 10 = 6 learners + 4 target-customer respondents. Overall response rate = 10/12 = 83.3%; learner = 6/7 = 85.7%; target-customer = 4/5 = 80.0%.
+- One common item: “依您可觀察的資料，訓練後工作／服務表現有改善” with responses: strongly agree 4, agree 3, neutral 2, disagree 1, strongly disagree 0, N/A 0; total 10. Positive = 7/10 = 70.0%. Learner split: 2,2,1,1,0,0 = 6; positive 4/6 = 66.7%. Target-customer split: 2,1,1,0,0,0 = 4; positive 3/4 = 75.0%. Optional mean = (4×5 + 3×4 + 2×3 + 1×2)/10 = 40/10 = 4.0/5; explain mean does not prove objective improvement.
+- One synthetic action metric: mock administrative records complete at baseline 5/10 = 50%; target 8/10 = 80%; synthetic follow-up 8/10 = 80%. Absolute change = +3/10 = +30 percentage points; relative change = (80%-50%)/50% = +60%. Identify the evidence as a made-up mock checklist, not a real association log or independent validation. Do not state training caused the change.
+- All sample values, dates, owner roles, case labels and statements must appear in the replacement register. Use no invented names, employers, signatures, actual association approvals or third-party records.
+
+## 5. Neighbor and scope exclusions
+
+- Exclude `0104 / I18-E11`: certificate acquisition rate. A survey response never counts as a certificate.
+- Exclude `0106 / I18-E14`: financial-performance explanation. No synthetic survey metric may be represented as money, revenue, savings or audited financial performance.
+- Exclude `0110 / I18-E19`: stronger 4-point significant organizational effect evidence. This package does not certify that threshold.
+- Exclude `0095 / I18-E02`: generic satisfaction-system analysis. Include the distinct performance-improvement question plus the post-course action plan and actual follow-up instrument.
+- Do not link to 0100/0101 or other actual cohorts unless exact real source records establish the same cohort, dates, population and denominator.
+
+## 6. Acceptance criteria
+
+- The reader can administer the questionnaire, score it and follow up the action plan without further model interpretation.
+- Survey question wording is observable, neutral, answerable by each respondent group and has defined scale/NA handling.
+- All synthetic counts, subgroup sums, rates and arithmetic reconcile exactly.
+- The form distinguishes perceived improvement from verified objective change and from causation.
+- Full worked sample and replacement register are present; no “待填” is used as the worked example.
+- Missing consent, source, baseline or follow-up leads to a truthful hold or limitation, never fabricated success.
+- Title-blind reading distinguishes this document from satisfaction system SOP, certificate-rate report, financial outcome report and 4-point significant-effect evidence.
+- Plain language is suitable for association volunteers and evaluator use; no internal production jargon is placed in the user-facing form.
+- Any REAL status, response, course, result, approval, signature or association performance remains `UNKNOWN` until source records are provided and verified.
+- Formal acceptance remains `NOT_GRANTED` until exact-SHA technical, visual and independent semantic review are complete.
+=== EXACT DOCX EXTRACTED CONTENT ===
+績效改善調查與課後行動計畫追蹤表 問卷＋行動計畫＋追蹤評估套件
+文件編號 0105　評核項目 I18-E13　專案157索引 114（非官方方框序號）　類型：績效改善調查與課後行動計畫追蹤表
+文件編號：0105 ／ 官方要求識別碼：I18-E13 ／ R04 142 crosswalk ／ 官方來源對照：page 7、I18-L3 project index 114（專案索引，非官方印刷勾選序號）
+⚠️ 全文宣告：SAMPLE / SYNTHETIC。 本文件內所有課程、案例、日期、人數、選項次數、數值與陳述皆為虛構示範值，不是屏東縣原始點關懷協會（以下稱「本會」）的真實資料、真實成效或真實核准。正式使用前，必須以真實來源紀錄逐項替換並經人工查核。
+本文件不主張任何 TTQS 分數、不主張因果關係、不主張本會已達成任何成效或已獲任何外部核准。 官方第 7 頁第 3 點「常見佐證示例」原文為：「問卷調查及課後行動計畫評估表等顯示目標客戶及學員認為訓練有績效改善的效果。」此為佐證示例，非承諾分數、非達陣證明。
+一 文件身分 官方對應與文體
+project_id：TTQS_ONE；doc_id：0105（文件編號，非官方勾選序號）；official_requirement_id：I18-E13。
+官方來源：訓練機構佐證表，印刷第 7 頁，I18-L3，第 3 點常見佐證示例（見上方宣告）。
+專案 03_157_CHECKBOX_BLUEPRINTS.md index 114：「績效改善調查與行動計畫追蹤」。index 114 為專案索引，不宣稱為官方印刷序號；相鄰 index 113 為獨立「其他」項目，不得與 0105 混用。
+文體：可直接操作的問卷、計分、行動計畫與追蹤評估套件，含施測 SOP、決策/HOLD 門檻、虛構值替換登記表。
+主要讀者：小型協會志工幹部、填答的目標客戶與學員、查核證據鏈的審查人員。
+二 本文件要完成的工作
+讓協會工作人員能在開課前定義預期的工作／服務表現改變；對學員與目標客戶施測簡短可懂的問卷；保護隱私；以透明分母彙總有效問卷；建立含負責角色、期限與證據來源的課後行動計畫；在約定時間追蹤；區分「感受」與「已查證的客觀表現」；並判斷證據僅足以支持「有限的描述性敘述」、應 HOLD，或須升請人工審查。
+本表本身不建立「訓練造成改變」或「本會已達成結果」。
+三 名詞定義 單頁
+
+[TABLE]
+名詞 | 定義
+目標客戶 | 接受本會服務、可觀察到服務／工作結果者（不含未觀察內部訓練品質者）。
+學員 | 參與訓練並可自我評估學習與應用者。
+預期表現 | 開課前以可觀察、可計數方式寫下的改變。
+自述 vs 客觀紀錄 | 自述＝受訪者感受；客觀紀錄＝可回溯來源檔案（如行政清單、紀錄表）。
+基準值 | 訓練前的量測值及其來源。
+目標值 | 訓練後欲達到的量測值。
+追蹤 | 於行動計畫約定日期重新量測並比對。
+有效問卷 | 完成規定題數、同意範圍符合、非重複、可辨識 subgroup 者。
+未回收 | 已邀請但未回覆；不得以推測填補。
+證據狀態 | REAL-VERIFIED / UNKNOWN / NOT_RECEIVED / HOLD。
+因果限制 | 描述性前後差異不等於訓練造成的因果效果；因果需適當設計與多來源佐證。
+[/TABLE]
+
+四 角色 權限與隱私程序
+
+[TABLE]
+角色標籤 | 權限 | 不可為
+R1 邀請者 | 發出邀請與同意說明 | 不得代填、不得查看可識別個資對照
+R2 收集者 | 收卷、勾稽份數 | 不得修改答案
+R3 去識別者 | 以代碼替換姓名、保管對照金鑰 | 不得外流對照表
+R4 分析者 | 以去識別資料計算 | 不得回推個別身分
+R5 核准者 | 核准存取與對外陳述 | 不得核准任何因果或分數主張
+R6 保管者 | 歸檔、留存、存取日誌 | 不得銷毀未到期紀錄
+[/TABLE]
+
+原則：最小必要資料、自願填答、可隨時退出（退出者不計入分母的處理須一致且記錄）、去識別存放、對照金鑰與問卷分開保存。不得虛構授權或代簽。
+五 施測標準作業程序 SOP
+輸入：課程／案例 ID、目標對象名單（僅計數）、同意範本、行動計畫。
+步驟：①開課前定義預期表現與基準值與來源；②發放 Form A 建立控制紀錄與同意範圍；③發放 Form B（學員）與 Form C（目標客戶）；④截止後由 R3 去識別；⑤以 Form D 計分（分母規則見下）；⑥填 Form E 行動計畫；⑦於 Form F 約定日期追蹤；⑧依第十四節「決策／HOLD 表」判定。
+分母規則：分母＝有效問卷數；N/A/無法判斷 計入總份數但不計入正向分子，並逐題揭露 N/A 份數；未回收不得填補。
+重複處理：同一邀請對象多份，保留最早完成的一份，其餘登錄為重複並剔除，份數記錄於 Form A。
+例外路徑：同意缺失、來源缺失、分母過小、前後矛盾、隱私疑慮 → 一律 HOLD，不得對外表述成效。
+六 Form A 調查封面 控制紀錄表 欄位與選項
+案例／課程 ID：SYN-0105-CASE-01／SYN-0105-COURSE-01【SAMPLE / SYNTHETIC】
+目標對象群體：〔學員〕〔目標客戶〕
+邀請份數：12（學員 7＋目標客戶 5）【SAMPLE / SYNTHETIC】
+收卷期間：SYN-W1～SYN-W2（虛構相對週次，非真實日期）【SAMPLE / SYNTHETIC】
+同意範圍：〔僅內部品質改善使用〕〔可匿名彙總對外〕（擇一勾選）
+版本：R01；保管角色：R6；施測管道：〔紙本〕〔線上〕〔現場〕
+去識別對照金鑰位置：〔受控路徑，僅 R3／R6 可存取〕
+重複剔除：0 份；退出：0 份；無效：0 份【SAMPLE / SYNTHETIC】
+七 Form B 學員問卷 含分支說明
+說明：以下每題皆可選 1 非常不同意｜2 不同意｜3 普通｜4 同意｜5 非常同意｜N/A 無法判斷。無法判斷請選 N/A，不勉強表態。
+1. 訓練內容與我的工作／服務任務相關。
+2. 我能在訓練後實際運用所學於工作／服務。
+3. 我對自己完成任務所需時間較有把握。（應用／時間）
+4. 我產出的工作／服務品質較符合既有標準。（品質）
+5. 依您可觀察的資料，訓練後工作／服務表現有改善。（共同題）
+6. 我能指出一項可查證的紀錄或成果，支持上述改善判斷。（觀察到的證據）
+7. 除訓練外，同時期也有其他因素影響我的工作表現（如人力、流程、設備）。（其他變因，本題高分代表「其他因素多」，不計入正向）
+8. 我已依課後行動計畫完成至少一項約定行動。
+9. 行動計畫的目標與期限清楚可行。
+10. 我在執行行動時獲得所需資源或協助。
+11. 我認為本訓練對服務對象有可觀察的改善。
+12. 綜合而言，我會建議類似需求者參加本訓練。
+開放題 13：請描述一項您在訓練後實際改變的做法，以及可佐證的紀錄名稱／位置。
+開放題 14：請說明可能影響上述改變的其他因素（人力、流程、設備、個案差異等）。
+分支：第 5 題選 1–4 者須填第 6 題；選 N/A 者第 6 題可填 N/A 並進入「無客觀來源」處理。
+八 Form C 目標客戶問卷 分支版
+說明：您不必評估內部訓練品質，只需判斷您可觀察到的服務變化。選項同上五點量尺＋N/A。
+1. 近期本會提供的服務／工作結果符合先前說明。
+2. 依您可觀察的資料，訓練後工作／服務表現有改善。（與學員共同計分題同題；無法觀察請選 N/A，不必推論因果）
+3. 您等待回覆或處理的時間感知較以往順暢。（若無從比較請選 N/A）
+4. 您能指出一項可查證的往來紀錄支持您的判斷。
+5. 同期有其他因素影響服務結果（如需求量、人力、個案差異）。
+6. 綜合而言，您認為服務表現有改善。
+開放題 7：請描述一項可觀察的變化與可查證紀錄。開放題 8：其他可能影響因素。
+九 Form D 錄入與計分表 公式 分子分母 四捨五入
+
+[TABLE]
+項目 | 公式 | 示例
+整體回收率 | 有效份數÷邀請份數×100，小數 1 位 | 10÷12＝83.3%
+學員回收率 | 6÷7×100 | 85.7%
+客戶回收率 | 4÷5×100 | 80.0%
+正向占比 | （選 4＋選 5）÷有效份數 | 7÷10＝70.0%
+子群正向 | 子群正向÷子群有效 | 學員 4÷6＝66.7%；客戶 3÷4＝75.0%
+選項均值（選用） | Σ(選項值×份數)÷有效份數 | (4×5+3×4+2×3+1×2)÷10＝40÷10＝4.0/5
+[/TABLE]
+
+不建立加權總分或 composite score；N/A 逐題揭露；子群樣本數須與總數加總一致（6＋4＝10）。均值僅為描述，不代表客觀改善，更不代表因果。
+十 Form E 課後行動計畫
+
+[TABLE]
+欄位 | 示例【SAMPLE / SYNTHETIC】
+預期結果 | 行政紀錄填寫完整率提升
+基準值與來源 | 5/10＝50%，來源＝虛構示範行政清單（非真實協會紀錄）
+可測量目標 | 8/10＝80%
+行動 | ①採用統一檢核清單；②每案完成後雙人確認
+負責角色 | R1／R2 角色標籤（不使用虛構姓名）
+期限／資源／障礙 | 第 1、2、3 週；清單模板；人力不足
+檢查方法 | 逐筆勾稽檢核清單
+追蹤日期 | 課後第 4 週
+結果來源／證據定位 | 示例清單路徑（虛構）
+狀態 | 進行中 → 追蹤後 CLOSED_FOR_SAMPLE
+矫正步驟 | 若未達 80%，檢視人力與清單可用性後再評估
+[/TABLE]
+
+十一 Form F 追蹤評估表
+欄位：計畫行動 vs 實際行動；來源查核狀態（REAL-VERIFIED/UNKNOWN/NOT_RECEIVED）；基準／目標／目前值；差異；其他可能解釋；隱私狀態；覆核角色；處置（OPEN／HOLD／CLOSED_FOR_SAMPLE／ESCALATE_FOR_HUMAN_REVIEW）。
+示例【SAMPLE / SYNTHETIC】：實際完成檢核清單與雙人確認；來源查核＝UNKNOWN（示範清單非真實來源）；基準 5/10＝50%、目標 8/10＝80%、目前 8/10＝80%；絕對變化 +3/10＝+30 個百分點；相對變化 (80%−50%)÷50%＝+60%；其他解釋＝同時期人力調整、清單本身簡化、紀錄習慣改變；處置＝CLOSED_FOR_SAMPLE。
+十二 完整示範案例 SYN 0105 CASE 01 全部為虛構
+課程 SYN-0105-COURSE-01（虛構）。邀請 12＝學員 7＋目標客戶 5；有效 10＝學員 6＋客戶 4。整體回收率 10/12＝83.3%；學員 6/7＝85.7%；客戶 4/5＝80.0%。
+共同題「依您可觀察的資料，訓練後工作／服務表現有改善」全體分配：非常同意 4、同意 3、普通 2、不同意 1、非常不同意 0、N/A 0，合計 10；正向 7/10＝70.0%。學員分配 2,2,1,1,0,0＝6，正向 4/6＝66.7%；客戶分配 2,1,1,0,0,0＝4，正向 3/4＝75.0%。選用均值＝(4×5+3×4+2×3+1×2)/10＝40/10＝4.0/5（均值不證明客觀改善）。
+行動指標：虛構示範行政清單，基準 5/10＝50% → 目標 8/10＝80% → 追蹤 8/10＝80%；絕對 +30 個百分點、相對 +60%。此為虛構清單，非本會真實紀錄、非獨立驗證，且不得宣稱訓練造成此變化。
+十三 結果詮釋 可說 不可說
+可說（描述性）：「在 10 份有效示範問卷中，7 份（70.0%）在該題勾選同意或非常同意；學員 4/6（66.7%）、目標客戶 3/4（75.0%）。示範行政清單完整率由 5/10（50%）變為 8/10（80%）。」
+不可說：「訓練提升了服務績效」「本會達成 TTQS 某分數」「改善由訓練造成」「本會已獲核准」「客戶滿意度代表核發證書」「此數字代表收入或成本節省」「已達 4 點強化標準的顯著組織成效」。
+限制：N 極小、自願填答的自選偏差、未回收者可能系統性不同、回憶與社會期許偏差、缺乏獨立客觀來源、同期其他變因、不可推論至其他群體或期間。
+十四 決策 HOLD 表
+
+[TABLE]
+情境 | 處置
+有效份數過少（如子群<5） | HOLD，僅內部參考
+缺同意或同意範圍不符 | HOLD，不得使用該份
+重複填答 | 剔除後續份，記錄於 Form A
+無基準值 | HOLD，禁止前後比較陳述
+無追蹤 | OPEN，不得宣稱已改善
+前後資料矛盾 | HOLD，人工查核
+涉金錢／財務主張 | 拒絕，轉 0106／I18-E14 處理
+來源未經驗證 | 標 UNKNOWN／NOT_RECEIVED
+隱私疑慮 | HOLD，停止存取並通報 R5
+因果過度主張 | 拒絕該陳述，改寫為描述性
+[/TABLE]
+
+十五 虛構值替換登記表 逐項
+每列只記一項合成值或一項計算結果；比例、分組計數、週次、角色及替代解釋分開登錄。所有列目前均為 SAMPLE/SYNTHETIC，狀態 HOLD。
+
+[TABLE]
+fact_id | case_id | 文件 | 位置 | 虛構值 | 需要的真實來源 | 負責角色 | 狀態 | 替換指示
+SYN-0105-F001 | SYN-0105-CASE-01 | 0105 | 案例識別 | SYN-0105-CASE-01 | 正式案件登錄來源 | R1 | SAMPLE/SYNTHETIC; HOLD | 替換為真實去識別案件碼
+SYN-0105-F002 | SYN-0105-CASE-01 | 0105 | 課程識別 | SYN-0105-COURSE-01 | 實際開課核准及課程紀錄 | R6 | SAMPLE/SYNTHETIC; HOLD | 替換並查核來源
+SYN-0105-F003 | SYN-0105-CASE-01 | 0105 | Form A 邀請總數 | 12 | 實際邀請清冊的去識別計數 | R1 | SAMPLE/SYNTHETIC; HOLD | 重新計數
+SYN-0105-F004 | SYN-0105-CASE-01 | 0105 | Form A 學員邀請數 | 7 | 實際邀請清冊的去識別計數 | R1 | SAMPLE/SYNTHETIC; HOLD | 重新計數
+SYN-0105-F005 | SYN-0105-CASE-01 | 0105 | Form A 目標客戶邀請數 | 5 | 實際邀請清冊的去識別計數 | R1 | SAMPLE/SYNTHETIC; HOLD | 重新計數
+SYN-0105-F006 | SYN-0105-CASE-01 | 0105 | Form A 收卷期間 | SYN-W1～SYN-W2 | 實際發放／截止時間紀錄 | R2 | SAMPLE/SYNTHETIC; HOLD | 用真實時間戳替換
+SYN-0105-F007 | SYN-0105-CASE-01 | 0105 | Form D 有效總份數 | 10 | 去識別收卷登記表及有效性規則 | R2 | SAMPLE/SYNTHETIC; HOLD | 重新判定有效份數
+SYN-0105-F008 | SYN-0105-CASE-01 | 0105 | Form D 學員有效份數 | 6 | 去識別收卷登記表 | R2 | SAMPLE/SYNTHETIC; HOLD | 重新計數
+SYN-0105-F009 | SYN-0105-CASE-01 | 0105 | Form D 客戶有效份數 | 4 | 去識別收卷登記表 | R2 | SAMPLE/SYNTHETIC; HOLD | 重新計數
+SYN-0105-F010 | SYN-0105-CASE-01 | 0105 | Form D 整體回收率 | 10/12=83.3% | 邀請及有效問卷原始計數 | R4 | SAMPLE/SYNTHETIC; HOLD | 依新分子分母重算
+SYN-0105-F011 | SYN-0105-CASE-01 | 0105 | Form D 學員回收率 | 6/7=85.7% | 邀請及有效問卷原始計數 | R4 | SAMPLE/SYNTHETIC; HOLD | 依新分子分母重算
+SYN-0105-F012 | SYN-0105-CASE-01 | 0105 | Form D 客戶回收率 | 4/5=80.0% | 邀請及有效問卷原始計數 | R4 | SAMPLE/SYNTHETIC; HOLD | 依新分子分母重算
+SYN-0105-F013 | SYN-0105-CASE-01 | 0105 | Form D 共同題/全體/非常同意份數 | 4 | 去識別問卷原始作答 | R4 | SAMPLE/SYNTHETIC; HOLD | 以逐題原始作答替換
+SYN-0105-F014 | SYN-0105-CASE-01 | 0105 | Form D 共同題/全體/同意份數 | 3 | 去識別問卷原始作答 | R4 | SAMPLE/SYNTHETIC; HOLD | 以逐題原始作答替換
+SYN-0105-F015 | SYN-0105-CASE-01 | 0105 | Form D 共同題/全體/普通份數 | 2 | 去識別問卷原始作答 | R4 | SAMPLE/SYNTHETIC; HOLD | 以逐題原始作答替換
+SYN-0105-F016 | SYN-0105-CASE-01 | 0105 | Form D 共同題/全體/不同意份數 | 1 | 去識別問卷原始作答 | R4 | SAMPLE/SYNTHETIC; HOLD | 以逐題原始作答替換
+SYN-0105-F017 | SYN-0105-CASE-01 | 0105 | Form D 共同題/全體/非常不同意份數 | 0 | 去識別問卷原始作答 | R4 | SAMPLE/SYNTHETIC; HOLD | 以逐題原始作答替換
+SYN-0105-F018 | SYN-0105-CASE-01 | 0105 | Form D 共同題/全體/N/A份數 | 0 | 去識別問卷原始作答 | R4 | SAMPLE/SYNTHETIC; HOLD | 以逐題原始作答替換
+SYN-0105-F019 | SYN-0105-CASE-01 | 0105 | Form D 共同題/學員/非常同意份數 | 2 | 去識別問卷原始作答 | R4 | SAMPLE/SYNTHETIC; HOLD | 以逐題原始作答替換
+SYN-0105-F020 | SYN-0105-CASE-01 | 0105 | Form D 共同題/學員/同意份數 | 2 | 去識別問卷原始作答 | R4 | SAMPLE/SYNTHETIC; HOLD | 以逐題原始作答替換
+SYN-0105-F021 | SYN-0105-CASE-01 | 0105 | Form D 共同題/學員/普通份數 | 1 | 去識別問卷原始作答 | R4 | SAMPLE/SYNTHETIC; HOLD | 以逐題原始作答替換
+SYN-0105-F022 | SYN-0105-CASE-01 | 0105 | Form D 共同題/學員/不同意份數 | 1 | 去識別問卷原始作答 | R4 | SAMPLE/SYNTHETIC; HOLD | 以逐題原始作答替換
+SYN-0105-F023 | SYN-0105-CASE-01 | 0105 | Form D 共同題/學員/非常不同意份數 | 0 | 去識別問卷原始作答 | R4 | SAMPLE/SYNTHETIC; HOLD | 以逐題原始作答替換
+SYN-0105-F024 | SYN-0105-CASE-01 | 0105 | Form D 共同題/學員/N/A份數 | 0 | 去識別問卷原始作答 | R4 | SAMPLE/SYNTHETIC; HOLD | 以逐題原始作答替換
+SYN-0105-F025 | SYN-0105-CASE-01 | 0105 | Form D 共同題/目標客戶/非常同意份數 | 2 | 去識別問卷原始作答 | R4 | SAMPLE/SYNTHETIC; HOLD | 以逐題原始作答替換
+SYN-0105-F026 | SYN-0105-CASE-01 | 0105 | Form D 共同題/目標客戶/同意份數 | 1 | 去識別問卷原始作答 | R4 | SAMPLE/SYNTHETIC; HOLD | 以逐題原始作答替換
+SYN-0105-F027 | SYN-0105-CASE-01 | 0105 | Form D 共同題/目標客戶/普通份數 | 1 | 去識別問卷原始作答 | R4 | SAMPLE/SYNTHETIC; HOLD | 以逐題原始作答替換
+SYN-0105-F028 | SYN-0105-CASE-01 | 0105 | Form D 共同題/目標客戶/不同意份數 | 0 | 去識別問卷原始作答 | R4 | SAMPLE/SYNTHETIC; HOLD | 以逐題原始作答替換
+SYN-0105-F029 | SYN-0105-CASE-01 | 0105 | Form D 共同題/目標客戶/非常不同意份數 | 0 | 去識別問卷原始作答 | R4 | SAMPLE/SYNTHETIC; HOLD | 以逐題原始作答替換
+SYN-0105-F030 | SYN-0105-CASE-01 | 0105 | Form D 共同題/目標客戶/N/A份數 | 0 | 去識別問卷原始作答 | R4 | SAMPLE/SYNTHETIC; HOLD | 以逐題原始作答替換
+SYN-0105-F031 | SYN-0105-CASE-01 | 0105 | Form D 全體正向占比 | 7/10=70.0% | 去識別原始作答及有效份數 | R4 | SAMPLE/SYNTHETIC; HOLD | 重新計算，定義正向為4或5
+SYN-0105-F032 | SYN-0105-CASE-01 | 0105 | Form D 學員正向占比 | 4/6=66.7% | 去識別原始作答及有效份數 | R4 | SAMPLE/SYNTHETIC; HOLD | 重新計算
+SYN-0105-F033 | SYN-0105-CASE-01 | 0105 | Form D 客戶正向占比 | 3/4=75.0% | 去識別原始作答及有效份數 | R4 | SAMPLE/SYNTHETIC; HOLD | 重新計算
+SYN-0105-F034 | SYN-0105-CASE-01 | 0105 | Form D 選項平均 | 40/10=4.0/5 | 去識別原始作答及有效份數 | R4 | SAMPLE/SYNTHETIC; HOLD | 重新計算或刪除
+SYN-0105-F035 | SYN-0105-CASE-01 | 0105 | Form E 基準檢核總筆數 | 10筆 | 真實基準期抽樣及抽樣方法紀錄 | R2/R4 | SAMPLE/SYNTHETIC; HOLD | 以真實且可追溯來源替換並重算
+SYN-0105-F036 | SYN-0105-CASE-01 | 0105 | Form E 基準完整筆數 | 5筆 | 真實基準期檢核表 | R2/R4 | SAMPLE/SYNTHETIC; HOLD | 以真實且可追溯來源替換並重算
+SYN-0105-F037 | SYN-0105-CASE-01 | 0105 | Form E 基準完整率 | 5/10=50% | 真實基準期檢核表 | R2/R4 | SAMPLE/SYNTHETIC; HOLD | 以真實且可追溯來源替換並重算
+SYN-0105-F038 | SYN-0105-CASE-01 | 0105 | Form E 目標檢核總筆數 | 10筆 | 經核定的目標及抽樣設計 | R2/R4 | SAMPLE/SYNTHETIC; HOLD | 以真實且可追溯來源替換並重算
+SYN-0105-F039 | SYN-0105-CASE-01 | 0105 | Form E 目標完整筆數 | 8筆 | 經核定的目標及計畫 | R2/R4 | SAMPLE/SYNTHETIC; HOLD | 以真實且可追溯來源替換並重算
+SYN-0105-F040 | SYN-0105-CASE-01 | 0105 | Form E 目標完整率 | 8/10=80% | 經核定的目標及計畫 | R2/R4 | SAMPLE/SYNTHETIC; HOLD | 以真實且可追溯來源替換並重算
+SYN-0105-F041 | SYN-0105-CASE-01 | 0105 | Form F 追蹤檢核總筆數 | 10筆 | 真實追蹤樣本及抽樣方法紀錄 | R2/R4 | SAMPLE/SYNTHETIC; HOLD | 以真實且可追溯來源替換並重算
+SYN-0105-F042 | SYN-0105-CASE-01 | 0105 | Form F 追蹤完整筆數 | 8筆 | 真實追蹤檢核表 | R2/R4 | SAMPLE/SYNTHETIC; HOLD | 以真實且可追溯來源替換並重算
+SYN-0105-F043 | SYN-0105-CASE-01 | 0105 | Form F 追蹤完整率 | 8/10=80% | 真實追蹤檢核表 | R2/R4 | SAMPLE/SYNTHETIC; HOLD | 以真實且可追溯來源替換並重算
+SYN-0105-F044 | SYN-0105-CASE-01 | 0105 | Form F 絕對變化 | +3筆/+30個百分點 | 真實基準與追蹤檢核表 | R4 | SAMPLE/SYNTHETIC; HOLD | 依同口徑比較重算
+SYN-0105-F045 | SYN-0105-CASE-01 | 0105 | Form F 相對變化 | +60% | 真實基準與追蹤檢核表 | R4 | SAMPLE/SYNTHETIC; HOLD | 基準為0時不得計算；本例基準非0
+SYN-0105-F046 | SYN-0105-CASE-01 | 0105 | Form E 第1週行動 | 採用統一檢核清單 | 實際課後行動紀錄 | R1/R2 | SAMPLE/SYNTHETIC; HOLD | 以實際核定計畫及執行證據替換
+SYN-0105-F047 | SYN-0105-CASE-01 | 0105 | Form E 第2週行動 | 每案完成後雙人確認 | 實際課後行動紀錄 | R1/R2 | SAMPLE/SYNTHETIC; HOLD | 以實際核定計畫及執行證據替換
+SYN-0105-F048 | SYN-0105-CASE-01 | 0105 | Form E 第3週行動 | 檢查執行差異並記錄障礙 | 實際追蹤紀錄 | R1/R2 | SAMPLE/SYNTHETIC; HOLD | 以實際核定計畫及執行證據替換
+SYN-0105-F049 | SYN-0105-CASE-01 | 0105 | Form F 第4週追蹤期限 | 課後第4週 | 實際追蹤日程及執行紀錄 | R1/R2 | SAMPLE/SYNTHETIC; HOLD | 以實際核定計畫及執行證據替換
+SYN-0105-F050 | SYN-0105-CASE-01 | 0105 | 角色代碼 R1 | 邀請者 | 經確認的實際職掌及授權紀錄 | R5 | SAMPLE/SYNTHETIC; HOLD | 核對真實職掌；未確認前不得對外代表授權
+SYN-0105-F051 | SYN-0105-CASE-01 | 0105 | 角色代碼 R2 | 收集者 | 經確認的實際職掌及授權紀錄 | R5 | SAMPLE/SYNTHETIC; HOLD | 核對真實職掌；未確認前不得對外代表授權
+SYN-0105-F052 | SYN-0105-CASE-01 | 0105 | 角色代碼 R3 | 去識別者 | 經確認的實際職掌及授權紀錄 | R5 | SAMPLE/SYNTHETIC; HOLD | 核對真實職掌；未確認前不得對外代表授權
+SYN-0105-F053 | SYN-0105-CASE-01 | 0105 | 角色代碼 R4 | 分析者 | 經確認的實際職掌及授權紀錄 | R5 | SAMPLE/SYNTHETIC; HOLD | 核對真實職掌；未確認前不得對外代表授權
+SYN-0105-F054 | SYN-0105-CASE-01 | 0105 | 角色代碼 R5 | 核准者 | 經確認的實際職掌及授權紀錄 | R5 | SAMPLE/SYNTHETIC; HOLD | 核對真實職掌；未確認前不得對外代表授權
+SYN-0105-F055 | SYN-0105-CASE-01 | 0105 | 角色代碼 R6 | 保管者 | 經確認的實際職掌及授權紀錄 | R5 | SAMPLE/SYNTHETIC; HOLD | 核對真實職掌；未確認前不得對外代表授權
+SYN-0105-F056 | SYN-0105-CASE-01 | 0105 | Form F 其他可能因素1 | 同期人力調整 | 同期變更紀錄或其他可核對來源 | R4 | SAMPLE/SYNTHETIC; HOLD | 只保留有來源支持的因素；否則標未知假設
+SYN-0105-F057 | SYN-0105-CASE-01 | 0105 | Form F 其他可能因素2 | 檢核清單本身簡化 | 同期變更紀錄或其他可核對來源 | R4 | SAMPLE/SYNTHETIC; HOLD | 只保留有來源支持的因素；否則標未知假設
+SYN-0105-F058 | SYN-0105-CASE-01 | 0105 | Form F 其他可能因素3 | 紀錄習慣改變 | 同期變更紀錄或其他可核對來源 | R4 | SAMPLE/SYNTHETIC; HOLD | 只保留有來源支持的因素；否則標未知假設
+SYN-0105-F059 | SYN-0105-CASE-01 | 0105 | Form F 示範處置 | CLOSED_FOR_SAMPLE | 實際覆核及結案紀錄 | R5 | SAMPLE/SYNTHETIC; HOLD | 示範標籤不得移除；真實結案須由有權者核准
+SYN-0105-F060 | SYN-0105-CASE-01 | 0105 | Form F 示例來源定位 | 虛構示範行政清單 | 真實原始行政紀錄及受控檔案定位 | R6 | SAMPLE/SYNTHETIC; HOLD | 以正式來源路徑及檔案版本替換
+[/TABLE]
+
+禁止使用：虛構姓名、雇主、簽名、核准、第三方紀錄。
+十六 歸檔 留存與存取日誌欄位 版本紀錄 結案檢核
+留存欄位：保管角色、存放位置、留存期間（依現行法令／同意書／本會政策訂定，不得虛構年限）、存取日誌（日期、角色、目的、範圍）、銷毀授權。
+版本／變更日誌：R01（初版，全文 SAMPLE / SYNTHETIC）。
+結案快速檢核：□ 同意範圍齊備 □ 分母可勾稽 □ 子群加總相符 □ 重複已處理 □ N/A 已揭露 □ 基準與來源具備 □ 追蹤已執行 □ 虛擬值已全數替換 □ 未出現因果／分數／核准主張 □ 隱私欄位齊備。
+本套件不涵蓋：0104／I18-E11（證照取得率——問卷回答不等於證照）、0106／I18-E14（財務成效——不得把回答當金額）、0110／I18-E19（4 點強化顯著成效）、0095／I18-E02（一般滿意度制度）。未經同源 cohort ID、期間、母體、分母與同意紀錄一致，不得與其他文件串接。
+示例品質檢核 僅針對本示範稿
+已具備：15 項內容架構、Form A–F 完整欄位、14 題問卷（含五點量尺＋N/A＋2 題開放題）、學員／客戶分支、透明分母與公式、完整虛構示範案例與行動計畫追蹤、逐項替換登記表、HOLD 邏輯、隱私與來源定位欄位；所有數值可勾稽（12＝7＋5；10＝6＋4；10/12＝83.3%；6/7＝85.7%；4/5＝80.0%；7/10＝70.0%；4/6＝66.7%；3/4＝75.0%；40/10＝4.0；5/10→8/10＝+30pp、+60%）。
+未解決之 REAL 證據與驗收邊界
+本會的真實法定狀態、課程、人員、目標客戶、學員、問卷回收、行動計畫執行與組織績效均為 UNKNOWN；無任何真實回收、同意、追蹤紀錄、核准或客觀績效佐證。任何 REAL 狀態須待真實來源紀錄提供並查證後方可標記；在此之前一律為 UNKNOWN／NOT_RECEIVED／HOLD。正式驗收 NOT_GRANTED，須待精確 SHA 技術檢查、視覺檢查與獨立語意審查完成；本文件未宣稱通過任何檢核，亦未宣稱任何 TTQS 分數、成效、因果或核准。
