@@ -1,9 +1,18 @@
-# Rolling 24-hour Worker reconciliation
+# Rolling 24-hour OpenCode v2 reconciliation
 
-OpenCode native SQLite window: 2026-10-21 03:14:50 to 2026-10-22 03:14:50 Taipei time. The row-level receipt is worker_dispatch_24h_opencode.json; aggregate is worker_dispatch_24h_opencode_aggregate.json. DB rows are session lifecycles, not executable launches; exact CLI invocation count is UNKNOWN.
+Observed 2026-10-22T03:27:13.631759+08:00; window 2026-10-21T03:27:13.631759+08:00 to 2026-10-22T03:27:13.631759+08:00 (Asia/Taipei).
 
-OpenCode v2: 36 TTQS session rows. Recorded selected-model groups: deepseek-v4.1-flash-free 23, nemotron-3-ultra-free 6, glm-5.3-flash-free 3, minimax-m3.1-flash-free 2, mimo-v2.6-flash-free 2. Aggregate recorded tokens: input 2,431,027; output 315,271; reasoning 930,311; cache-read 11,609,372. Local SQLite cost 0.00; vendor billing and actual served-model identity UNKNOWN. OpenCode v2.0.32 review session ses_ea030cfffffeWft8qAw18cKX1E is live on DOCX 0104 R15 and has not returned a terminal semantic verdict.
+- Native SQLite TTQS session rows: **36**. These are not exact CLI launch attempts; invocation count remains **UNKNOWN**.
+- Token totals from native `session_v2`: input 2,436,930; output 321,864; reasoning 937,223; cache-read 11,815,580; cache-write 0.
+- Local SQLite cost sum: 0.00; vendor billing remains **UNKNOWN**.
+- Selected model IDs are recorded by OpenCode; actual serving-model identity/fallback is **UNKNOWN**.
 
-Antigravity CLI: 10 locally recorded attempts in the exact rolling window: four exit-0 text returns, five parser/argument rejections before model dispatch, and one runtime error with partial output. All requested gemini-3.8-flash-high; actual serving model UNKNOWN for all dispatched attempts, verified Gemini calls 0. Three attempts report usage, totaling 149,265 tokens; a fourth successful text response has no usage record, so the usage total is incomplete. Billing/quota delta UNKNOWN.
+| Selected model (not serving attestation) | Sessions | Input | Output | Reasoning | Cache read | Local cost |
+|---|---:|---:|---:|---:|---:|---:|
+| deepseek-v4.1-flash-free | 23 | 1,659,438 | 227,361 | 835,362 | 10,747,520 | 0.00 |
+| glm-5.3-flash-free | 3 | 127,930 | 50,266 | 2,676 | 98,432 | 0.00 |
+| mimo-v2.6-flash-free | 2 | 132,970 | 13,575 | 74,571 | 965,760 | 0.00 |
+| minimax-m3.1-flash-free | 2 | 74,044 | 12,182 | 13,869 | 3,868 | 0.00 |
+| nemotron-3-ultra-free | 6 | 442,548 | 18,480 | 10,745 | 0 | 0.00 |
 
-Adoption: 0099 R03 is verified as a manuscript baseline for 0099 R17, not a final DOCX. 0097 and 0098 final-DOCX adoption remain UNKNOWN. No new Antigravity dispatch was made because serving-model identity/fallback exclusion remains unverified; other legal work continued.
+R15 review `ses_ea030cfffffeWft8qAw18cKX1E` is a terminal native session (`idle_outcome=succeeded`) on selected `mimo-v2.6-flash-free`, with 70,570 input / 8,130 output / 41,871 reasoning / 680,960 cache-read, local cost 0.00. Its shell CLI exit was 1; raw response was recovered, and the independent verdict is PARTIAL.

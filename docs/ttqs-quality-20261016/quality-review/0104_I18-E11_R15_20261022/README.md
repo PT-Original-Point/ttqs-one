@@ -12,7 +12,7 @@ Crosswalk SHA-256: 922294941ce3f33eb83deef49f2aa0600cf44d42c9a79738e59394e61b12a
 Native Word export: evidence/word_export_receipt_0104_R15.json.
 Technical QA: evidence/technical_qa_receipt_0104_R15.json.
 Visual QA: evidence/visual_qa_receipt_0104_R15.json. All 32 page images are included; 19 changed pages were directly inspected; unchanged pages inherit visual coverage only by exact page-image SHA.
-Independent review packet and manifest: review/R15/. The R15 review was in progress at initial publication; R14 review data are historical only.
+Independent review packet and manifest: review/R15/. The independent R15 exact-SHA text review is terminal PARTIAL with zero blocking defects and ten concrete residual findings (RF-1 to RF-10). Preserve the raw CLI exit code 1 and the recovered terminal response; the native OpenCode session ended succeeded, but actual serving-model identity is UNKNOWN. See review/R15/review_reconciliation_receipt_R15.json. R14 review data remain historical only.
 GitHub readback: evidence/github_remote_readback_commit1.json records PR head 214703f2acba005d0a3f9bcfed1b2f908457d5fb and 89/89 raw-blob SHA-256 matches. This readback is for commit1; later metadata updates are verified from their own PR head.
 The 121-row replacement register identifies demonstration facts to replace before promotion. No REAL association result, approval, signature, or third-party certificate is represented.
 See evidence/worker_dispatch_24h_*.json and antigravity_runtime_receipt_inventory.txt for bounded local worker records. Local OpenCode cost 0.00 is not vendor-billing proof.

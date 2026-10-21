@@ -1,12 +1,12 @@
 {
   "receipt_id": "TTQS_ONE_R09_T01_T14_CURRENT_SCOPE_20261022",
   "source_06_blob": "4c7eff55748ff265b1e5a7d1122852b0d101acbd",
-  "observed_at_local": "2026-10-22T03:18:13.3329093+08:00",
+  "observed_at_local": "2026-10-22T03:25:00+08:00",
   "results": [
     {
       "id": "T01",
-      "status": "PASS_OBSERVED",
-      "evidence": "OpenCode service PID 45628 is not a Writer; PID 11156 is the distinct active exact-SHA reviewer."
+      "status": "PASS_OBSERVED_TERMINAL_REVIEW",
+      "evidence": "OpenCode service PID 45628 is not a Writer; reviewer PID 11156 completed at 03:18:49 TPE. No OpenCode Writer/reviewer child process remained at 03:25."
     },
     {
       "id": "T02",
@@ -50,8 +50,8 @@
     },
     {
       "id": "T10",
-      "status": "PENDING_EXACT_SHA_REVIEW",
-      "evidence": "R15 review session is bound to DOCX SHA 9bbb96da74ba9da845ab0e063421d04f035e79496209a02de1f04b0c98ec7eb8; terminal verdict pending."
+      "status": "PARTIAL_EXACT_SHA_REVIEW_RECEIVED",
+      "evidence": "Independent text-only reviewer returned PARTIAL on exact DOCX SHA 9bbb96da74ba9da845ab0e063421d04f035e79496209a02de1f04b0c98ec7eb8; zero blocking defects, ten residual findings RF-1..RF-10. CLI exit=1 preserved; recovered stdout/final response, native session idle_outcome=succeeded."
     },
     {
       "id": "T11",
@@ -60,8 +60,8 @@
     },
     {
       "id": "T12",
-      "status": "PARTIAL_TECHNICAL_ONLY",
-      "evidence": "R15 technical/layout QA and replacement register exist; independent semantic review pending; candidate remains SAMPLE."
+      "status": "PARTIAL_TECHNICAL_AND_SEMANTIC",
+      "evidence": "R15 technical/layout QA exists and semantic review is exact-SHA PARTIAL; candidate remains SAMPLE/CANDIDATE, not accepted. Visual review scope is separate from semantic review."
     },
     {
       "id": "T13",
