@@ -1,3 +1,22 @@
+# TTQS ONE｜GOAL 目標持續施工修訂（Human 2026-10-21；優先於下方 10/16 舊程序）
+
+**COMMAND=GOAL_20261021_STAGE_READY_NO_STOP_R08**  
+**LATEST HUMAN SPEC**：維持高品質 129 具名需求全鏈 SAMPLE 可用 Word（28 個尚未命名的「其他」不假造），先恢復已批准的可逆 CANDIDATE 文件生產，不得以單一模型/Word 渲染故障、佇列過期、缺 READY 字面或缺 REAL 原件造成整專案停止。兩小時排程以 **`05_HOURLY_NATIVE_WAKE_RESUME.md` 頂端 2026-10-21 ACTIVE 覆寫**為準；下方舊每小時／「直接停止」若牴觸，以本段優先。
+
+**R07 已完成的不能重做**：0099 R17 DOCX exact SHA-256 `293be2dc0e3e0162fa368272851baed27e92990b4ac1871228ec37b51546776b` 有技術、37 頁有界視覺及獨立文字語意收據，仍 CANDIDATE／非協會 REAL／NOT_FORMALLY_ACCEPTED；0097 R08 只在 Word PDF/visual lane BLOCKED，其他 source/Blueprint/Writer/QA lane 不陪停。R07 S12 的 `NEXT_READY=NONE_CONFIRMED` 是 10/21 16:14 的歷史快照，不是永久停止指令。
+
+**立即重新導出下一步**：原生 Windows OS/PR readback → source-bound checkbox x 對應 DOCX 複合拆件 → 最新穩定工件／owner／QA → 逐階段 `READY_SOURCE_PACKET` / `READY_BLUEPRINT` / `READY_WRITER` / `READY_DETERMINISTIC_QA` / `READY_FRESH_REVIEW` / `READY_BOUNDED_REPAIR`。舊 `BUILD_QUEUE.json` 上次 10/19 的 PENDING 只作索引，不得因無顯式 READY 宣告停工。
+
+**可立即驗收之例**：`I18-E08`（專案索引 109）在 142 份歷史 crosswalk 對應 `0100` 學員前後自評表及 `0101` 雷達分析報告。正式來源依官方 PDF 第 7 頁與現行 `03_157_CHECKBOX_BLUEPRINTS.md` 綁定；合成案例可利用 0099 已重算的 8x2x5=80 分值（前75、後117、+42，平均5.25），但分別產出不同文類、真雷達圖數據與完整 SAMPLE 替換清冊，**不得假冒真實成效**。如果 packet/unique Blueprint 尚未存在，當下至少是可逆合法的 `READY_SOURCE_PACKET` 而非 NO_READY；有現役 Writer 則先回收，不雙主。
+
+**Goal 暫停處置**：先原生 `/goal` 取得 paused 原因、owner 與使用量，再以已批准且可復工的具體任務，在同一 Goal 使用 `/goal resume`；不要 `/goal clear` 或重設整個 Objective。必須真的產生 source/Blueprint/Writer/QA 增量才叫復工，切忌只把 Goal 狀態改成 active。
+
+**停止條件**：正式已接受的範圍完成，或所有獨立合法車道都取得具體外部 blocker 才允許相應等待；不能因某個 Word 視覺、免費模型 429、沒有 REAL 原件或 stale queue 停全部。真正費用／身份／OAuth／簽章／Production／正式接受 Human Gate 保留。
+
+---
+
+## HISTORICAL｜以下為 2026-10-16 候選原規格，牴觸之續工／排程段落已被上方 Human 最新命令取代
+
 # CODEX GOAL｜TTQS ONE 原始點協會高品質 Word 長時自動施工命令（CANDIDATE）
 
 COMMAND=TTQS_ONE_REBUILD_FROM_SOURCE_QUALITY_FIRST
