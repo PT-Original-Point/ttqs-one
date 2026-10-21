@@ -1,0 +1,47 @@
+{
+  "schema": "ttqs.independent_semantic_delta_review.v1",
+  "document_id": "0097",
+  "requirement_id": "I18-E05",
+  "revision": "R07",
+  "artifact_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "candidate_docx_sha256": "026288491716d626a7bcac14a515313da7846f5a204703da9bad3a9010edf214",
+  "reviewer_route_requested": "OpenCode v2 CLI / opencode/minimax-m3.1-flash-free",
+  "opencode_cli_version": "2.0.32",
+  "actual_serving_model_identity": "UNKNOWN",
+  "session_id": "ses_ea48660bfffeH4mqsa13eeohJ3",
+  "cli_exit_code": 0,
+  "raw_response_file": "0097_R07_opencode_minimax_stdout.jsonl",
+  "raw_response_sha256": "5eaa1dcc0d2923c12d45fd55ab35944601e707a964f9130bc97b2873786999f3",
+  "extracted_response_file": "0097_R07_opencode_minimax_response_extracted.txt",
+  "extracted_response_sha256": "cfb957b7c6e71467e33ea93597ef97fa0914347656b4af96876e4fada59118d7",
+  "review_packet": "0097_R07_independent_delta_review_packet.md",
+  "review_packet_sha256": "f15be9f233f620a84721972afe55e2a1c04ffcb286c798cbd35271c75f954fc4",
+  "reviewed_extract_sha256": "8e9ae4c5bc7176d4e1d7c4f2451ee389ba831300ff7b2b33ac53d51a0a51e79f",
+  "scope": "targeted_delta",
+  "overall_verdict": "PASS",
+  "findings": [
+    {
+      "locator": "DOCX §7.1, new tier-boundary block immediately before §7.2",
+      "verdict_code": "PASS",
+      "verdict": "FIXED",
+      "summary": "Quotes adjacent official 3-point and 4-point evidence wordings, names the 2-point I18-E05 target and rationale, excludes higher-tier claims, leaves printed official serial UNKNOWN.",
+      "id": "F2"
+    },
+    {
+      "locator": "DOCX §5.5.3, pooling paragraph before pooled summary table",
+      "verdict_code": "PASS",
+      "verdict": "FIXED",
+      "summary": "States learner 24 paired items (8×3), observer 12 (4×3), item-weighted means, separate groups, and recomputation using actual per-indicator valid denominators when missing/N/O.",
+      "id": "F3"
+    }
+  ],
+  "new_material_regression": false,
+  "review_limitations": [
+    "Targeted delta only; the nine R06 rubric rows previously passing were not re-reviewed.",
+    "Reviewer did not independently re-hash the DOCX; local technical receipt independently binds exact SHA.",
+    "Official page-7 source readback was truncated at the top, so tier placement relies on the supplied contract mapping and readback order; official printed checkbox serial stays UNKNOWN.",
+    "No visual/layout review; no R07 PDF was produced.",
+    "This is not formal association acceptance or a TTQS rating."
+  ],
+  "reviewed_at_local": "2026-10-21T06:47:10.7186760+08:00"
+}
