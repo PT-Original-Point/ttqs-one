@@ -140,3 +140,276 @@ OVERALL_GOAL_COMPLETE=NO
 \`ACCEPTANCE_THIS_COMMAND=NOT_YET_VERIFIED_ON_WINDOWS\`  
 \`FIRST_NEXT_ACTION=READ_WIN10_NATIVE_WRITER_AND_LATEST_0055_LOCAL_SHA_THEN_SYNC_CHECKPOINT\`  
 \`HUMAN_GATE=ONLY_NEW_COST_OR_CREDENTIAL_OR_IRREVERSIBLE_REAL_OPERATION_OR_FORMAL_TTQS_ACCEPTANCE\`
+
+
+---
+
+## 6. 2026-10-21 Human 最新命令｜R09 Windows 10 監控、兩個 CLI Worker、GitHub 一致性與兩小時續工完整操作契約
+
+**COMMAND=TTQS_ONE_R09_WIN10_PANEL_WORKER_FULL_CLOSED_LOOP_20261021**  
+**PROJECT_ID=TTQS_ONE**  
+**SCOPE=既有 TTQS ONE 候選文件施工、PR #92、同一 Windows 10 主機、既有 GOAL 與唯一排程；不另設控制面。**  
+**STATUS=CANDIDATE_INSTRUCTIONS; OS_NOT_VERIFIED; NOT_A_DEPLOYMENT_RECEIPT.**
+
+### 6.0 絕對優先順序與防混專案規則
+
+這份 R09 **補足** 2026-10-21 的 04 GOAL 防自鎖、05 唯一 120 分鐘排程與本檔 §5.2～5.4 的雙 CLI Worker 契約。後續有可核實的 Human 最新指示時，以最新 Human 為準。這裡不得回復到舊版每小時排程。
+
+- 精確正式 repo：PT-Original-Point/ttqs-one；精確候選 PR：#92；目標分支：work/ttqs-one-document-quality-contract-20261016。**執行時重新讀 HEAD，不可固定以下歷史 SHA**。
+- 2026-10-21 18:08 TPE 外部讀回：PR #92 OPEN/DRAFT，HEAD abc322e30e2bebd772e638daf4e6b7ae14c7b01a；這只有 GitHub 候選證據，**不是 OS 主機、排程或人類正式接受的現況**。
+- R07 S12 主機收據觀察時間為 2026-10-21 16:14 TPE：在該時間點，沒有可驗證活躍 Writer；OpenCode service PID 45628 只是 service；18 個 WINWORD Automation 程序用途 UNKNOWN；BUILD_QUEUE 最後寫入 10/19，115 筆 PENDING 而沒有明示 READY。**不可把這些歷史 PID/數量填作現在 LIVE**。
+- R07 0099 R17 的 DOCX SHA-256 293be2dc0e3e0162fa368272851baed27e92990b4ac1871228ec37b51546776b，有有界技術、版面及抽文語意收據；仍為 SAMPLE/CANDIDATE，不是正式 REAL。0097 R08 Word→PDF 停滯只封鎖 0097 渲染車道。
+- 2026-10-03 的 AGENTS.md HOTFIX、2026-10-04 的 TTQS_HANDOFF/CURRENT_STATE.json 仍記載舊式 Antigravity 優先、OpenCode 停用及過期 10/05 截止日。它們是 HISTORICAL，不得覆蓋 10/17 §5 允許 OpenCode v2 CLI 與 10/21 R08 GOAL 規格。若本機 control plane 仍以舊值阻擋最新已批准可逆候選工作，標 SPEC_CONTROL_PLANE_REBASE_REQUIRED；**不得默默改寫舊史，也不能用舊規格自行新增 Human Gate**。
+- **嚴禁拿別案監控面板冒充本案面板**：PT-Original-Point/ptysd-autonomous-factory 的 operator-panel/index.html 讀 Issue #407 與 PTYSD_OPERATOR_OBSERVATION_V1，host = DESKTOP-1B6PD2P / Win11；2026-10-13 的觀察已過期。這與本案 Windows 10 的 desktop-vmv4q60/j、GitHub PR #92 不同。它不提供本案主機同步驗收。只唯讀核對身分，不修改另一個專案。
+- **三種權威須分離**：Windows OS/CLI 原生讀回 = 主機正在執行的真相；GitHub PR #92 + 實際 raw bytes = 可供跨 Session 稽核的遠端候選真相；監控面板 = 呈現層，只有當它的來源、snapshot、時間與這兩者對上才算同步，永遠不能自行產生正式接受。
+
+### 6.1 第 1 階段：Windows 唯讀現場盤點（禁止先修改或派工）
+
+在 Windows 同一執行帳戶內先讀回 username、hostname、Windows 版本、現行日期與時區、E:\TTQS 是否存在、Codex GOAL、作業系統排程、真正 PID/command line、Git 本機 HEAD、既有未同步成果及外部未結效果。最短 PowerShell 示例（**唯讀**）：
+
+~~~powershell
+$ErrorActionPreference = 'Stop'
+$now = Get-Date
+Write-Output "OBSERVED_LOCAL=$($now.ToString('o'))"
+Write-Output "HOST=$env:COMPUTERNAME"
+whoami
+Get-CimInstance Win32_OperatingSystem | Select-Object Caption,Version,BuildNumber,LastBootUpTime
+foreach ($p in @('E:\TTQS\TTQS_ONE_CODEX_RUNTIME','E:\TTQS\_github_sync_0064')) {
+  [pscustomobject]@{ Path=$p; Exists=(Test-Path -LiteralPath $p) }
+}
+Get-CimInstance Win32_Process |
+  Where-Object { $_.Name -match '^(WINWORD|opencode-cli|agy|node|python|powershell|pwsh|Codex)\.exe$' } |
+  Select-Object ProcessId,ParentProcessId,CreationDate,Name,CommandLine |
+  Format-List
+Get-ScheduledTask -ErrorAction SilentlyContinue |
+  Where-Object { $_.TaskName -match 'TTQS|Codex' } |
+  Select-Object TaskName,TaskPath,State,Triggers,Actions,Principal
+~~~
+
+- 如果需要查目前 Repo，本機已知 clone 候選路徑 E:\TTQS\_github_sync_0064 **僅作定位候選**。先檢查 .git、git remote -v、git status --porcelain=v1、git branch --show-current、git rev-parse HEAD，確認 repo identity 和 exact branch，不能對錯 clone 推送。
+- 對 Windows 程序：同名、PID、process alive、service alive、GOAL active、排程 enabled 均非「真的正在寫 DOCX」。要把 PID 與 work_id、輸入 SHA、output location、該程序命令列、最後實際產物變更、相符 session/attempt 對起來；無法關聯則 ACTIVE_WRITER=UNKNOWN，不可標 RUNNING_VERIFIED。
+- 任何尚未完成、未知結果或外部寫入狀態先同來源讀回，確認沒有雙主，**不能因新命令就重派相同 doc_id/revision**。18 個用途不明的 Word COM 程序不得全部 Kill；先以 parent、操作檔案、渲染 owner/時間與對應 log 局部定位。
+- GOAL 顯示 paused 時，先讀官方原生 GOAL 狀態／原因；辨識是舊 queue 無 READY、已達平台限制、真正 Human Gate、目標自然結束、工具審批或排程同 thread 互鎖。不得以「看到 paused」即清空 GOAL、刪除歷史或重設執行緒。
+
+**第 1 階段輸出**：OBSERVED_AT, HOST, USER, RUNTIME_PATH, LOCAL_REPO_ID, LOCAL_HEAD, REMOTE_HEAD, OS_GOAL_STATE+REASON, ACTIVE_WRITER+WORK_ID 或 UNKNOWN, UNRESOLVED_EFFECTS, SCHEDULER_OWNER+ID, QUEUE_MTIME。若少任何值保留 UNKNOWN，不填 0。
+
+### 6.2 第 2 階段：辨識 Windows 10「真正的」TTQS 監控面板
+
+1. **先定位既有面板**：找桌面捷徑實際 Target、打開的 localhost URL 或本機 HTML、伺服器程序 PID/command line、工作目錄、面板配置與資料來源路徑；用原生 Get-CimInstance、Get-NetTCPConnection -State Listen 與既有檔案索引。不得大範圍讀取使用者無關目錄，不得因找不到就新建 dashboard/service/DB/監督程序。
+2. 判斷畫面 PROJECT_ID、repo/ref、PR/Issue、host、data_source、last_observed_at、last_published_at、expires_at、refresh interval。若對到 PTYSD / Issue #407 或其他 host，標 PANEL_PROJECT_MISMATCH，**不得用作 TTQS 對帳**。若完全找不到 TTQS 原有面板，標 PANEL_EXISTENCE=UNKNOWN/NOT_FOUND_ON_TESTED_PATHS，不冒稱已部署。
+3. 不以 Windows 桌面截圖上的「正在運作」「最近更新」「綠燈」直接認定 Worker live。若現有面板只有 cached JSON、單一 GitHub 讀值、靜態 HTML 或超過自身 TTL 的 snapshot，必須標 STALE 或 UNKNOWN；不得補零、猜最後運作時間或製造假 PASS。
+4. 若發現既有 TTQS 合格面板，修**既有資料接線**使其只讀相同 OS + PR #92 有來源的現況；禁止新增第二套面板／Supervisor／Quota DB／事件匯流排。若實體面板在另一專案，這個 R09 僅要求提出 TTQS 專用相容讀取策略及需另授權的跨案變更，**不得擅改另一專案程式或將它升格 TTQS 權威**。
+5. 來源與秘密保護：不可把 Google/OAuth token、session cookie、Windows private env、模型 API key、學員真實個資或憑證上傳 GitHub 或面板；只公開白名單欄位與必要 hash/時間/狀態，PID/本機路徑如有敏感資訊需按原有政策遮罩。
+
+**必查**：PANEL_URL_OR_PATH, PANEL_PROJECT_ID, PANEL_HOST_ID, PANEL_SOURCE_REF, PANEL_LAST_OBSERVED, PANEL_TTL, PANEL_LIVE_STATUS, PANEL_SOURCE_ISSUE_OR_PR。未取得實際面板來源，PANEL_GITHUB_ALIGNMENT=UNKNOWN，不能 PASS。
+
+### 6.3 第 3 階段：OS ↔ GitHub ↔ 面板三方精確對帳（不建立新的狀態權威）
+
+用**同一輪有時戳的觀測**，對以下欄位逐一列 LOCAL_OS / REMOTE_GITHUB / PANEL / MATCH / EVIDENCE：
+
+- project_id + Windows host/user（不能混 PTYSD）、repo/ref/PR 與 GitHub HEAD；
+- GOAL 真實 active/paused 及原因；排程 task_id、mode、interval=120m、last_run、next_run、最近三次 run 的 native receipt；
+- 已接受的現在進行 work_id/doc_id/requirement_id/Blueprint SHA，source source_hash；
+- Worker（Codex dispatcher、OpenCode v2、Antigravity CLI）每條路由的 PID/session、attempt、model requested、actual serving model 或 UNKNOWN、最後工具活動、完整輸出/錯誤；
+- candidate DOCX exact SHA-256、Word/PDF 頁數、QA scope 與 verdict、SAMPLE/REAL、未結返工及局部阻擋；
+- 本機未推送的穩定工件、GitHub 遠端已推送／讀回 hash、PR 最新提交時刻；
+- 各來源 observed_at / published_at / expires_at／來源 API 是否讀不到及 timeout。
+
+**狀態語意**：OS 已有活躍 Worker 而尚未產出穩定工件時，不把 GitHub 舊 HEAD 當作「同步失敗」，要顯示 REMOTE_STABLE_BEHIND_ACTIVE_WORK；若成果已穩定且 scope 已批准卻未推送，標 SYNC_PENDING。遠端有新 SHA 但面板仍顯示舊 SHA，標 PANEL_STALE_NEEDS_REFRESH。若面板只顯示「Green」但缺 exact work/receipt，標 UNVERIFIED_DISPLAY。
+
+**通過規則**：有至少一筆真實 material delta（工件、QA、同步或明確故障），OS 原生收據、相應 GitHub remote bytes 和面板三方取到同 work_id + exact SHA + 對應時間；之後再做一次面板刷新，確認「已完成」「RUNNING」「BLOCKED」不把歷史狀態與現況混淆。無面板原生讀回時最多 PARTIAL，**絕不寫 ALL_SYNC=PASS**。
+
+### 6.4 第 4 階段：先解除 GOAL 自鎖，再把唯一排程改每兩小時
+
+按照 docs/ttqs-quality-20261016/04_CODEX_GOAL_24X7_EXECUTION.md 與 05_HOURLY_NATIVE_WAKE_RESUME.md **最上層 2026-10-21 ACTIVE 覆寫**執行。
+
+1. 原生讀取現有 Codex App Scheduled task：task_id、thread_id、project/workdir、執行模式、enabled、prompt 完整保存內容、60 分鐘舊設定、last/next、最近三次 run，並查 Windows Task Scheduler 所有 TTQS 同類任務。禁止直接寫 App 私有 JSON/DB，也不可虛構 UI/CLI 所沒有的原生欄位。
+2. 先鎖定**唯一有權接觸真正 E:\TTQS 工件的派工 Owner**；若舊每小時同 thread 排程只能向 paused GOAL 發文字訊息，SCHEDULE_TRIGGER=PASS / REAL_RESUME=FAIL，不可再繼續刷無 READY 的報告。
+3. 若唯一舊任務支援直接在相同安全本機 Context 施工，**只修改原任務**為 120 分鐘；若只支援特定間隔則使用經原生支援的 UI/規則（例如 RRULE:FREQ=HOURLY;INTERVAL=2）；以原生來源讀回間隔、執行帳戶及 next run。**不保留第二個同作用 enabled 派工排程**。
+4. 若 thread-bound Scheduled 的根本限制使之不能繼續本機施工，先安全停用舊任務並 readback，再檢驗同專案 standalone local mode 是否能讀本機 E:\TTQS。若仍不能且既有 Windows Task Scheduler 有受信任現役 Worker 入口，重用其原生 L0 觸發器做唯一每 120 分鐘低成本觀察，必要才啟動合格 Codex CLI/Worker。不得盲目復活過期的 TTQS_ONE_Codex_Supervisor 或另一專案 PTYSD 的排程。
+5. 真正需要**無變化 0 次高階模型**時，應讓 Windows Task Scheduler / Git / OS 原生 L0 先檢查 material delta；不能宣稱 Codex App 每次 Scheduled 觸發必然 0 Token。
+6. 在解開 stale queue 自鎖後，原生 GOAL 確認可由 /goal resume 恢復原工作時，先查是否仍有活躍相同 Worker 與未結 side effects，再恢復；不 /goal clear、不重設整條歷史。若 paused 有真正安全／身份／正式驗收 Gate，只停該範圍，不能假解鎖。
+7. **驗收**分三層：NATIVE_120M_SETTING_PASS（原生讀回）；SCHEDULE_TRIGGER_PASS（真實定時到點，不是 UI 卡片）；AUTONOMOUS_CONTINUATION_PASS（觸發後真的有合法 SOURCE/BLUEPRINT/WORD/QA 增量與 GitHub 精確 readback，或精確獨立 blocker 且其他 READY 沒被誤停）。只手動 Run now 不能代替自然定時觸發。
+
+### 6.5 第 5 階段：嚴格從需求重算逐階段 READY，禁止 NO_READY 循環自鎖
+
+每次先讀本案當前 Human Mission、官方 TTQS PDF、第 157 核取項目矩陣、已接受任務、crosswalk、每份唯一 Blueprint、候選 SHA、QA、OS Writer。**不以舊 BUILD_QUEUE.json 有沒有 READY 字串決定全部停工**。
+
+逐階段導出：
+READY_SOURCE_PACKET → READY_UNIQUE_BLUEPRINT → READY_WRITER → READY_DETERMINISTIC_QA → READY_FRESH_SEMANTIC_REVIEW → READY_BOUNDED_REPAIR → CANDIDATE_PUBLISHED。
+
+具體救援範例：
+- 0100、0101 綁定 I18-E08（專案 157 索引 109，2 個不同文類），必須先 fresh-read 是否已有新工件及是否活躍 Writer，避免重派。
+- 0100 是 8 人前後自評表：有可實際操作欄位、日期、前後測、分母、方法及 SAMPLE 完整填寫示範。
+- 0101 是能力提升雷達分析報告：**真的具有五個維度可重算數據／雷達圖，結論、限制及改善方案**；不能把 0100 換標題當作 0101。
+- 0099 R17 已驗證 SAMPLE 8×5×2=80 評分格、總分前75／後117／總增42／人均增5.25、示範 6/8 達標，若引用此案例，source facts ID、量表定義、得分方向、軸範圍與兩文件都要精確一致，不能暗加第二組資料。
+- 無 REAL 第三方原件時，仍可製作誠實、完整的 SAMPLE／SYNTHETIC 候選及原件索取清冊，**不得偽造第三方信函、安檢證明、簽章、就業成效或保險憑證**；正式升格維持 Human Gate。
+
+每份工件只在下一階段真正前置資料缺失時封鎖那一階段。例如 0097 R08 PDF export 失敗，只封鎖該候選 visual lane，不能把 0100 來源整理、0101 Blueprint 也判 NO_READY。
+
+### 6.6 第 6 階段：雙 Worker 的精確「派工→回收」協定
+
+**僅使用現有原生 OpenCode v2 CLI 與 Antigravity CLI 作 AI 外包。Codex 負責調度、仲裁、既有 Windows/Python/Word 原生工具及 GitHub 同步；不可用 Computer Use 或假扮兩個 Worker 的其他 harness。**
+
+#### A. 派工前
+
+- Worker 任務須有唯一 work_id、doc_id、requirement_id、正式來源定位與 SHA、專屬 Blueprint SHA、SAMPLE/REAL 界線、所需共用合成事實 snapshot、負向鄰項、工作角色（WRITER 或 REVIEWER）、禁止的外部效果、輸出格式、QA 接受條件及單一輸出目標。
+- 真正確認 OS 沒有相同 work_id/相同寫入範圍仍活躍的 Writer，沒有 PENDING_OR_UNKNOWN side effect；若未知只停受影響寫入路由，其它獨立 READY 照做。
+- OpenCode v2：先由當次原生模型型錄、免費額度、模型實際合法可用性讀回，選有實際證據不新增費用的免費 SKU。型錄有列、名稱有 free、舊每日報告推薦、exit 0 **均非真正可用或免費的充分證據**。
+- Antigravity CLI：唯一准請求 gemini-3.8-flash-high；限定純文字輸入輸出，禁止 Computer Use、檔案工具讀寫、dangerously-skip-permissions、無聲切換至 CCPA 或其他模型。2026-10-20 Human GUI/CLI 的 Google AI Pro 帳戶與配額相符只是該時點觀察，不證明此次 CLI 子程序繼承相同憑證或供應端使用 Gemini；若偵測 fallback，不能宣稱指定模型 PASS。模型身分/帳務無原生證據寫 UNKNOWN。
+- 優先短、小、專屬輸入包：只附此文件所需官方段落、事實、唯一 Blueprint、計算、已知缺陷；禁止把 12MB 報告、88 筆 commit、所有 157 項、重複完整回覆輸入模型。
+- 每個 Worker 的精確 CLI 參數先從本機已安裝版本 --help / 現存成功腳本讀取；**不抄無法解析的舊參數**。同一路由無新修正/材料變化不得反覆空轉測試。
+
+#### B. 派工與執行
+
+- 只派**一次**受信任的 exact work/owner/attempt；於既有暫存工作目錄保存模型輸入摘要與原生 stdout/stderr／程序 exit。不能把 model request accepted 當作完成；不能因面板顯示 RUNNING 就另開同文件 Writer。
+- 無法取得 runtime model identity 時保留 UNKNOWN；若 Antigravity fallback 或 429/no-route/timeout/permission denied，記「哪個車道／哪個 exact attempt」，不要停全部、不要危險權限繞過。
+- Writer 交付的「完整內容」需有明確可解析結構與真實文稿/表格內容，不是只回應「完成」、「PASS」、「已建立」或在私人 Temp 留草稿。對 CLI exit 非 0 但已有穩定部分產物，先做原生檢查能否 salvage，不先重建。
+
+#### C. 回收（必須逐件收據）
+
+每個 attempt 回收至少：
+work_id、owner、doc_id、attempt_id、started_at、ended_at、CLI version、requested_model、actual_serving_model 或 UNKNOWN、exit_code、timeout、stdout_bytes、stderr_bytes、raw stdout/stderr SHA、prompt/packet SHA、真正文字/文件輸出路徑及 SHA、是否用於下一件 DOCX、Token input/output/reasoning/cache（只有原生確有的才填）、計費（UNKNOWN 若無 provider invoice）、缺陷定位與下一單一步驟。
+
+- **僅在完整回覆已被取回、解析／必要公式檢查成功、對應同 work/SHA、文件真實存在、指定 QA 完成時**可標 USEFUL_DELIVERABLE；exit 0 或 PASS 自報不足。
+- WRITER 與獨立 REVIEWER 不能是同一個實質撰稿上下文；審查模型如只看抽取文字必須標 TEXT_ONLY_PASS，不可提升成看過 DOCX/圖像或人類已接受。
+- 同一根因最多先核對已有失敗＋已採用的材料變更；§5 的三次錯誤／三次修正上限只對確實同一路由錯誤適用，不准為湊次數再造三次高 Token 故障；達停派條件只 pause 該 lane。沒新原生證據就直接暫停和走其他 READY。
+- 返工只交修補差異：字級／頁碼／定位／雜湊用 Python/Word deterministic 工具；文字誤解才派便宜 CLI；相同 DOCX exact SHA 已有相同範圍 reviewer PASS 則不再完整重審。
+- Codex 不可代替 Worker 寫完整正文再冒稱外包成功；若確需 Codex 接管為例外，記成本與理由，保留獨立審查。
+
+### 6.7 第 7 階段：人類可用完整 Word 的品質 Gate（不犧牲品質換 Token）
+
+由現有原生工具與不同撰稿者完成以下必要檢查，對 exact bytes 綁定：
+1. 需求對應：唯一 157 核取項目身分、官方 PDF 實際頁次與原文，若編號是專案自編就明標 INTERNAL_INDEX，不能說官方 PDF 印製序號。
+2. 專屬性：課程／問卷／會議／流程／評量／統計等文類有真正差異；通用 Blueprint、換標題相同正文、近鄰需求誤套皆 FAIL。進行標題盲測與負向近鄰識別。
+3. 協會適用：第一頁以國中程度繁中說清楚誰、何時、做什麼、填什麼、去哪找資料、結果如何用；有完整可直接操作的示範、行政人員最短路徑與常見錯誤處理。AI 代理盲測只能稱代理檢查，**不能冒稱實際國中生/人類試讀完成**。
+4. SAMPLE 完整：每一個合成數據、人物、金額、時間、課程、問卷、統計、事件及結果須可重算、相互一致且標 SAMPLE/SYNTHETIC 並有 REAL replacement register。除清楚標記 REAL 待替換區外，不得保留大面積待填、待核、空白表、空答案。
+5. 真實性：第三方正式文件／簽署／政府證明未有原件時，提供索取流程與示範，絕不做偽造正式文件；REAL、正式 TTQS 升格仍需 Human/真實來源。
+6. Word 正文與內部工程證據分離：正文禁止內部 SHA、GitHub 路徑、Blueprint JSONL、engine metadata 佔版；工程側錄單獨保留，不得刪除可追溯性。
+7. OOXML 開啟、公式重算、中文字級（正文 ≥10.5pt、表格 ≥9.5pt）、A4版面、表格跨頁、孤立段落/空白頁、必要時 Word→PDF 全頁檢視；縮圖概覽不等於 reviewer 全尺寸目視。
+8. 若只有 Word COM 匯出工具故障，固定該 DOCX SHA，先查對應 renderer owner、必要有限恢復；不為修工具重寫 Word，也不讓該故障阻止其他文件來源與撰稿。
+9. 獨立 reviewer 的 PASS 要註明 exact SHA、輸入文字/圖像範圍、未驗證項目、非阻擋觀察與返工 scope。Reviewer 自報 PASS、prompt 要求回填五個 SHA 皆不能替代本機自己重算實際 bytes。
+10. CURRENT 表示符合專案當時候選品質控制的可讀成果，不是 REAL／政府認證／協會正式接受；PR Draft、GitHub 對帳 PASS 不會改變此界線。
+
+### 6.8 第 8 階段：遠端 GitHub exact-SHA 同來源發布與回讀
+
+- 只有已有授權且真正穩定之候選、必要 QA 與原始 Worker 收據才進 PR #92 既有分支；不同文件有獨立 work scope；先 Git/GitHub HEAD + git status 看現場 pending，**不 force push、不混入不相關檔案、外部效果未知不盲重送**。
+- Git Blob SHA（Git 物件 SHA-1）與 DOCX 檔案 SHA-256 是**不同演算法**，必須各自核對；PR status、commit 存在、exit 0 不表示 Word bytes 相同。
+- 對已 fetch 回來的 exact remote ref 與本機 DOCX，用 Python **byte-safe** 的 subprocess 直接取得 Git blob raw bytes，再兩邊算 SHA-256；避免 PowerShell 文字重導向破壞 binary：
+
+~~~python
+from pathlib import Path
+import hashlib, subprocess
+repo = Path(r"E:\TTQS\_github_sync_0064")  # 僅候選：先驗證 remote identity
+relative = "docs/ttqs-quality-20261016/quality-review/0099_R17_20261021/candidate/0099_R17.docx"
+branch = "work/ttqs-one-document-quality-contract-20261016"
+local_file = repo / relative
+local_sha = hashlib.sha256(local_file.read_bytes()).hexdigest()
+remote_bytes = subprocess.run(
+    ["git", "-C", str(repo), "show", f"refs/remotes/origin/{branch}:{relative}"],
+    capture_output=True, check=True
+).stdout
+remote_sha = hashlib.sha256(remote_bytes).hexdigest()
+print({"local_sha256":local_sha, "remote_sha256":remote_sha, "MATCH":local_sha==remote_sha})
+~~~
+
+**執行此範例前**須以現行 repo、真實 relative path、正確 remote ref 並先 fetch，不能盲用上面的示例檔名／clone 或將示例結果冒充全部檔案驗收。對 manifest/QA/JSONL 要按其實際 raw bytes 或明確宣告的是解析後等價；Git 自動正規化換行時依實際產品政策處理，不能改寫原始 Worker 失敗收據。
+- 發布後 fresh-read GitHub 同分支 HEAD、目標 blob/raw bytes、reviewer bound SHA、receipts、SAMPLE register 與必要文件索引；未驗證變更不能標 REMOTE_CONFIRMED。
+- 若推送成功而回讀超時/UNKNOWN，只封鎖該 shared push lane 並重新讀回，不重複無條件 push；純本機獨立 READY 工作不陪停。
+
+### 6.9 第 9 階段：每兩小時只做必要恢復，不重寫報告
+
+**每一個合法排程觸發**按固定順序：
+L0 原生 OS/GUI task trigger readback → 一次有界 Git fetch/HEAD + local status + PID/attempt/work_id + stable SHA 比對 → 回收上次未確認 Worker/end effects → 重新導出 Stage READY → 無 material delta、無 READY/new failure 則 silent no-op → 有 READY 則派一個 exact scope 或回收正在執行工作 → deterministic QA → 必要 reviewer → GitHub readback → 同源面板更新。
+
+- 不在每次兩小時生成活動報告、長檔、Context compact 全史、逐分鐘 heartbeat、成本估算幻想、第二控制面。
+- L0 無 material delta 的目標是**0 次高階模型**，前提是真由 Windows 原生 L0 觸發；Codex App Scheduled 自動傳訊可能已耗模型額度，不得自報絕對零 Token。
+- 每次失敗只留下最短精確原因、哪個 lane、OS/provider 收據、下一個不同於前一回合的修復動作。不允許「暫無 READY → GOAL 已暫停 → 永不讀新來源」循環。
+- 實際正在做的 0100／0101 或其他 doc_id 工作須在下次兩小時觀測前後保持同 owner；不能因 session compaction、排程或 GitHub 討論留言重派第二 Writer。
+- 每兩小時清點既有免費模型狀況前先看已有失敗收據；沒有材料變化不得為查免費額度再花模型 Token。Codex 本體 Token 花在真正仲裁與未知重大品質，不花在長篇報告。
+
+### 6.10 第 10 階段：24 小時兩個 Worker 的實際績效與成本稽核
+
+直接從 Windows CLI 原生日誌、session、process、stdout/stderr、GitHub PR #92 收據重建**滑動過去 24 小時**的 attempt 明細表，欄位：
+attempt_id / task_id / doc_id / worker / role / requested_model / actual_model_verified_or_UNKNOWN / start/end / input/ output/ reasoning/ cache_tokens_or_UNKNOWN / CLI exit / status / material_delta / adopted_in_DOCX / docx_sha / reviewer_sha / return_repair_round / model_error / raw_receipt / GitHub blob。
+
+只計算資料完整且口徑一致的：
+- dispatched attempts、實際有可用文字稿數、真正納入候選 DOCX 數、獨立審查覆蓋率、首次正確交付率、缺陷返工輪數、重複無效重試數、平均等待時間、每個可靠成果的模型使用量；
+- OpenCode 與 Antigravity 各自成功與失敗原因，尤其 Antigravity 文字路由未派／fallback／無 Gemini 身分的真實數量，不因 CLI 回過字就算 Gemini Writer 已恢復；
+- Codex GPT 自身輸入／輸出／快取 Token 必須有原生用量來源；不能拿 OpenCode reported tokens 冒充 Codex 費用。沒有 provider invoice 的費用 UNKNOWN，不能用 model 名稱推免費總額；
+- 若近 24h 沒有某模型呼叫，要區分 NOT_DISPATCHED、ROUTE_PAUSED、AUTH_BLOCKED、quota、NO_READY、OS_TASK_NOT_TRIGGERED，不能只報 0 後聲稱省成本；
+- 0099 R17 歷史 OpenCode session 顯示 input=108009、output=4753、reasoning=298；僅是個別審查的原生收據，**不是全日用量或計費帳單**。應在下一次真正可比的同類品質工作縮小輸入包，再在不降低內容驗收下比較效率。
+- 將成本與返工資料收斂為既有 receipt 的短彙總，不另建持久 Quota DB/代理交易日誌；如 24h 來源完整性不夠，仍以 available sample + UNKNOWN 分母說明，**不虛構整體成功率**。
+
+### 6.11 第 11 階段：反例測試（不得靠模型自報 PASS）
+
+以下至少 14 項要用既有真實事故收據或便宜的 deterministic 模擬驗證，不准刻意重放大量模型請求：
+
+T01｜OpenCode service PID alive、沒有 work_id/活躍 session → ACTIVE_WRITER 不得 PASS。  
+T02｜18 個 WINWORD AutoEmbedding 但未知文件 owner → 不得全殺或稱 18 Writer。  
+T03｜GitHub 新 HEAD、面板仍顯示舊 HEAD → PANEL_STALE；不冒充對齊。  
+T04｜面板指向 PTYSD Issue407 / DESKTOP-1B6PD2P → PANEL_PROJECT_MISMATCH，不能作 TTQS 證據。  
+T05｜原生排程啟用但只把訊息送入 paused GOAL → TRIGGER_PASS/WORK_RESUME_FAIL。  
+T06｜BUILD_QUEUE 115 PENDING 無 READY 字串，但 0100/0101 合法來源可以準備 → READY_SOURCE_PACKET，不能停工。  
+T07｜0097 PDF 匯出 180 秒失敗 → 只停渲染 lane，0100/0101 照做。  
+T08｜Worker exit=0、但沒有文字或 DOCX → DELIVERABLE_FAIL。  
+T09｜exit 非 0、但已有完整穩定 DOCX 與可檢驗收據 → 先 bounded salvage，不能盲重建。  
+T10｜reviewer 說 PASS 但 SHA 是舊版或未自己讀 DOCX → 綁定失敗或僅 TEXT_ONLY。  
+T11｜Antigravity 要求 Gemini 但 fallback 至 CCPA → GEMINI_ROUTE_NOT_VERIFIED，不能算 Gemini quota 使用。  
+T12｜合成 Word 有空白問卷、內部 SHA、官方證明偽造或正文換標題 → 品質 FAIL，不能靠 technical PASS 升格。  
+T13｜GitHub blob SHA 一致但本機 DOCX SHA-256 不相等 → 遠端候選完整性 FAIL；禁止改用不同演算法比對混過。  
+T14｜一個未知 push 結果／另一個 Writer 正在工作 → 只暫停該寫入並讀回，不雙主、不全案停。  
+
+**任何測試失敗必須附 exact locator、受影響範圍與修補行動。** 只建立文件／測試表，沒有 OS、provider 讀回不能自稱 T01–T14 已在 Windows 通過。
+
+### 6.12 第 12 階段：正式验收分級與最短交付
+
+分三層交付，不可互相冒充：
+
+- **GITHUB_CONTROL_UPDATED=PASS**：只證明本節內容保存在 PR #92 GitHub 同來源，有對應 commit/blob readback。
+- **WINDOWS_HOST_PANEL_ALIGNED=PASS**：必須有真實 Win10 面板來源和 OS readback、相同 project/host/head/work_id/doc SHA、來源 freshness、不混 PTYSD、不讓舊快照冒稱現在；沒有本機面板 live 讀回就 UNKNOWN/PARTIAL。
+- **AUTONOMOUS_GOAL_WORK_RESUMED=PASS**：唯一 120m 原生 scheduler 已讀回設定與自然定時 run，該 run 真的回收/派發合法工作並留下新源包、Blueprint、Word 或 QA 的材料變化及 GitHub exact-SHA 遠端讀回；某獨立 lane blocked 不阻其他。
+
+最後不得超過一頁（必要證據改指向已存在檔案），固定回報：
+
+~~~text
+PROJECT_ID=TTQS_ONE
+REPORT_SCOPE=R09_OS_HOST_GITHUB_PANEL_WORKER_2H
+OBSERVED_AT_TPE=
+HUMAN_SPEC=2026-10-21 R09 / CANDIDATE
+CANONICAL_SPEC=UNKNOWN_OR_VERIFIED_REF
+GITHUB_PR=92
+GITHUB_BRANCH=
+REMOTE_HEAD_SHA=
+WINDOWS_HOST_ID=
+WINDOWS_USER=
+OS_GOAL_STATE_AND_PAUSE_REASON=
+ACTIVE_WORKER_OWNER_AND_WORK_ID=
+SCHEDULER_ID_AND_OWNER=
+SCHEDULE_INTERVAL=120m|NOT_APPLIED|UNKNOWN
+NATIVE_LAST_RUN=
+NATIVE_NEXT_RUN=
+ACTUAL_2H_TRIGGER=PASS|FAIL|NOT_TESTED
+OS_RESUME_ARTIFACT_SHA=
+OPEN_CODE_24H_ATTEMPTS=VERIFIED_COUNT|UNKNOWN
+ANTIGRAVITY_24H_ATTEMPTS=VERIFIED_COUNT|UNKNOWN
+WORKER_RETURNED_ADOPTED_AND_REWORK=
+CODEX_TOKEN_COST=VERIFIED_VALUE|UNKNOWN
+PANEL_PATH_OR_URL=
+PANEL_PROJECT_AND_HOST=
+PANEL_LAST_OBSERVED_AT=
+PANEL_DATA_SOURCE=
+PANEL_OS_GITHUB_ALIGNMENT=PASS|PARTIAL|FAIL|UNKNOWN
+READY_SOURCE_BLUEPRINT_OR_DOCX=
+BLOCKED_SCOPE=
+REAL_THIRD_PARTY_EVIDENCE=UNKNOWN_UNTIL_RECEIVED
+HUMAN_FORMAL_ACCEPTANCE=NOT_GRANTED
+GITHUB_REMOTE_ARTIFACT_READBACK=SHA_AND_LOCATOR|UNKNOWN
+UNRESOLVED_EXTERNAL_EFFECTS=
+NEXT_SINGLE_LEGAL_ACTION=
+TRUE_HUMAN_GATE=NONE|EXACT_REASON
+~~~
+
+**完成條件**：立刻開始一項已授權且 OS 確實 READY 的可逆工作，先把結果回收到既有 GitHub；同步修現有排程及面板讀數。只有需真人 OAuth/MFA、身份、法律／契約、Production、新費用、重大不可逆權限或無法釐清重大外部效果才找 Human。沒有面板就如實報 NOT_FOUND_ON_TESTED_PATHS／UNKNOWN，不能為了回答 Human 建新服務。
+
+**極簡復工驗收情境**：在 Win10 真正核對沒有相同 Writer 後，使用 0100/0101 其中一個 READY_SOURCE_PACKET 完成來源/唯一 Blueprint，存 source SHA → QA → GitHub 遠端 raw bytes 對帳 → 現役面板相同 HEAD/來源時戳 readback；下一次**真實 120 分鐘觸發**確認任務是延續而非重來。完成之前不得宣稱整個自動施工恢復正常。
