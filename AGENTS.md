@@ -1,3 +1,15 @@
+# 2026-10-21 最新 Human／TTQS ONE 專用操作提醒（R09）
+
+**COMMAND=TTQS_ONE_R09_WIN10_PANEL_WORKER_FULL_CLOSED_LOOP_20261021**
+
+- 首先讀取 `docs/ttqs-quality-20261016/04_CODEX_GOAL_24X7_EXECUTION.md` 目前最上方 2026-10-21 GOAL 防自鎖、`05_HOURLY_NATIVE_WAKE_RESUME.md` 最上方 120 分鐘唯一排程、`06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md` 最新 **§6 R09** 12 階段完整操作與 §5 雙 CLI Worker 契約。
+- 下方 HOTFIX5／HOTFIX6 是歷史流程說明；`TTQS_HANDOFF/CURRENT_STATE.json` 記錄 2026-10-04 的 OpenCode disabled／舊期限／Agent Bus 狀態，**不可用它們推翻 Human 2026-10-17～21 已批准的 OpenCode v2 CLI + Antigravity CLI 文字外包、SAMPLE 完整 DOCX 和兩小時續工**。如舊控制實際仍阻擋新 Mission，標 `SPEC_CONTROL_PLANE_REBASE_REQUIRED` 並進行有界合法遷移；不改寫歷史成當前 PASS。
+- **不可把 PTYSD 其他專案的 Win11 operator-panel／Issue #407，當成 TTQS ONE Win10／PR #92 監控面板**；必須在 Windows 實機定位 TTQS 真正面板並三方（OS/GitHub/面板）同來源讀回。沒有 OS/panel 原生證據，`PANEL_ALIGNED=UNKNOWN`。
+- R08/R09 的 GitHub Commit 是候選控制檔更新，不代表 Windows Scheduler 已改成 120m、GOAL 已 resume 或 Worker 真的採用；續工以實機來源／精確 SHA／單一寫入 owner 為準。不得因舊 queue 無 READY 或 0097 Word 渲染卡住而停止全部合法候選工作。
+- 本指示不新增 Worker、Supervisor、資料庫或 Human Gate；不允許 Computer Use、危險權限繞過、未授權付費、Antigravity 無聲模型 fallback；嚴守 SAMPLE/REAL 與正式接受分界。
+
+---
+
 # AGENTS.md — TTQS_ONE Win10 Codex Local
 
 ## Mission
