@@ -27,13 +27,18 @@
   "S10": "PASS 10/10 disposable cases",
   "S11": "metrics recorded; invoice/token fields UNKNOWN",
   "github_sync": {
-    "state": "VERIFIED_EXACT_BYTES",
-    "head_before": "3308da622ed43f2bb37f3f757e4744ae359c43a6",
-    "package_commit": "5c1c598f7bef18210d737cf7e2d0e664b152a779",
-    "raw_byte_correction_commit": "d22096f956aa548e11b02f8c7ea9ad7d408e4d99",
-    "verified_files": 116,
-    "verified_bytes": 12450179,
-    "SHA256SUMS_line_ending_note": "Git text normalization was detected and corrected by a follow-up commit using exact raw blobs.",
-    "final_readback_receipt": "github_remote_readback_commit2.json; pending final receipt commit."
+    "state": "VERIFIED",
+    "verified_head": "b83850f34f2c1cac25dcb6e2623fd0a58cc4f6e2",
+    "verified_files": 117,
+    "verified_bytes": 12486634,
+    "method": "Fresh GitHub PR readback plus exact full-tree blob extraction and SHA-256/byte equality for every staged file. Text normalization was corrected with a raw-blob follow-up commit.",
+    "readback_receipt": "github_remote_readback_commit2.json",
+    "candidate_docx_sha256_readbacks": {
+      "0094_R18": "ecf9717cdc7f7785ed6c7b18b9dd8e29af21a5b2641e13acf3b4b813371b5e18",
+      "0097_R08": "daf85320fc7b2304da353a0c41d3bf32d585f2edfb3349938bff877dd0f5a2cb",
+      "0097_R07 historical": "026288491716d626a7bcac14a515313da7846f5a204703da9bad3a9010edf214",
+      "0098_R10": "6310a71f6fb540b22572f823e7becb7a8198c12dc068eebff2794599e5a88152",
+      "0099_R17": "293be2dc0e3e0162fa368272851baed27e92990b4ac1871228ec37b51546776b"
+    }
   }
 }
