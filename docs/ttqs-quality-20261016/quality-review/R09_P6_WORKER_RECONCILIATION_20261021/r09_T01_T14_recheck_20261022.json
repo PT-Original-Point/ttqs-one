@@ -1,6 +1,6 @@
 {
   "receipt_id": "TTQS_ONE_R09_T01_T14_RECHECK_20261022",
-  "observed_at_tpe": "2026-10-22T04:06:40+08:00",
+  "observed_at_tpe": "2026-10-22T04:18:33.0335987+08:00",
   "source_06_blob": "4c7eff55748ff265b1e5a7d1122852b0d101acbd",
   "results": [
     {
@@ -65,8 +65,8 @@
     },
     {
       "id": "T13",
-      "status": "PASS_REMOTE_READBACK_COMMITS_1_AND_2",
-      "evidence": "Commit1 705c3c0 package: 109 changed paths canonical-blob verified, all 38 binary artifacts raw-byte exact; unchanged 0100/0101 exact SHA verified. Commit2 561a12a closure receipt and T01-T14 matrix also read back from fresh PR head; per-path receipt github_remote_readback_commit2_R09_20261022.json."
+      "status": "PASS_REMOTE_READBACK_COMMITS_1_TO_4",
+      "evidence": "Commit1 package and commit2 closure were read back as previously receipted; commit3 R09 state sync was fetched and compared; commit4 9febd8aa02d9063d4d4101074fb82f2d8d034cd4 added 0103 R02 render/visual evidence. Fresh PR and branch refs both pointed to commit4; 50 changed paths had canonical Git blob equality, including 42 binary raw-byte SHA-256 matches and zero mismatches. Receipt: github_remote_readback_commit4_0103_R02_R09_20261022.json."
     },
     {
       "id": "T14",
@@ -74,5 +74,5 @@
       "evidence": "No competing writer was observed before synchronization; no ambiguous push or competing-writer test was induced."
     }
   ],
-  "overall": "PARTIAL; GitHub readback verified through commit2. Native Goal remains paused, natural 120-minute trigger/live panel alignment unverified, reviewer hash recomputation and model/provider attestation unavailable, and T14 competing-writer branch not induced."
+  "overall": "PARTIAL; GitHub exact readback verified through commit4. 0103 R02 is now rendered and all 35 pages inspected, but visual QA found repairable near-empty transition pages (24, 29, 32); DOCX remains unchanged candidate-only. Native Goal is still PAUSED, natural 120-minute trigger and live panel alignment remain UNKNOWN, reviewer binary rehash is unavailable, and T14 competing-writer race was not induced."
 }
