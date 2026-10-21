@@ -1,0 +1,77 @@
+{
+  "receipt_id": "TTQS_ONE_R09_T01_T14_CURRENT_SCOPE_20261022",
+  "source_06_blob": "4c7eff55748ff265b1e5a7d1122852b0d101acbd",
+  "observed_at_local": "2026-10-22T03:13:20.3199597+08:00",
+  "results": [
+    {
+      "id": "T01",
+      "status": "PASS_OBSERVED",
+      "evidence": "OpenCode service PID 45628 is not a Writer; PID 11156 is the distinct active exact-SHA reviewer."
+    },
+    {
+      "id": "T02",
+      "status": "PASS_OBSERVED",
+      "evidence": "20 WINWORD PIDs observed; export child 44056 exited per receipt; no Word process killed."
+    },
+    {
+      "id": "T03",
+      "status": "PASS_STALE_PANEL_DETECTED",
+      "evidence": "Legacy dashboard last written 2026-10-05; ports 8765/8766 have no listener; panel-to-GitHub alignment UNKNOWN."
+    },
+    {
+      "id": "T04",
+      "status": "SIMULATION_ONLY",
+      "evidence": "Previous deterministic PTYSD/Issue407 mismatch fixture; not a live TTQS panel observation."
+    },
+    {
+      "id": "T05",
+      "status": "BLOCKED_GOAL_RESUME",
+      "evidence": "Goal paused while 120m task ACTIVE; no supported native resume tool in available surface and natural trigger unverified."
+    },
+    {
+      "id": "T06",
+      "status": "PASS_OBSERVED_QUEUE_STALE",
+      "evidence": "BUILD_QUEUE last written 2026-10-18, 142 rows all blank status; derive READY from current source, Blueprint, candidate and QA."
+    },
+    {
+      "id": "T07",
+      "status": "PASS_OBSERVED_LANE_ISOLATION",
+      "evidence": "I18-E11 R15 candidate completed independently while 0097 render lane remained blocked."
+    },
+    {
+      "id": "T08",
+      "status": "PASS_GUARD_APPLIED",
+      "evidence": "Four Antigravity exit-0 text returns are not credited as final DOCX; exit zero alone is insufficient."
+    },
+    {
+      "id": "T09",
+      "status": "SIMULATION_ONLY",
+      "evidence": "Prior stable-DOCX salvage fixture is not a live nonzero-exit recovery."
+    },
+    {
+      "id": "T10",
+      "status": "PENDING_EXACT_SHA_REVIEW",
+      "evidence": "R15 review session is bound to DOCX SHA 9bbb96da74ba9da845ab0e063421d04f035e79496209a02de1f04b0c98ec7eb8; terminal verdict pending."
+    },
+    {
+      "id": "T11",
+      "status": "IDENTITY_UNKNOWN_GUARD_PASS",
+      "evidence": "Antigravity served model UNKNOWN for current window; adjacent 0096 R10 CCPA fallback is outside window; no Gemini PASS asserted."
+    },
+    {
+      "id": "T12",
+      "status": "PARTIAL_TECHNICAL_ONLY",
+      "evidence": "R15 technical/layout QA and replacement register exist; independent semantic review pending; candidate remains SAMPLE."
+    },
+    {
+      "id": "T13",
+      "status": "PENDING_GITHUB_READBACK",
+      "evidence": "Compare origin raw DOCX SHA-256 after non-force push; Git object SHA is a different identifier."
+    },
+    {
+      "id": "T14",
+      "status": "PENDING_SAFE_PUSH_READBACK",
+      "evidence": "Verify remote head and package bytes; no force push and no duplicate Writer."
+    }
+  ]
+}

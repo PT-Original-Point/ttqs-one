@@ -1,0 +1,9 @@
+# Rolling 24-hour Worker reconciliation
+
+OpenCode native SQLite window: 2026-10-21 03:14:50 to 2026-10-22 03:14:50 Taipei time. The row-level receipt is worker_dispatch_24h_opencode.json; aggregate is worker_dispatch_24h_opencode_aggregate.json. DB rows are session lifecycles, not executable launches; exact CLI invocation count is UNKNOWN.
+
+OpenCode v2: 36 TTQS session rows. Recorded selected-model groups: deepseek-v4.1-flash-free 23, nemotron-3-ultra-free 6, glm-5.3-flash-free 3, minimax-m3.1-flash-free 2, mimo-v2.6-flash-free 2. Aggregate recorded tokens: input 2,431,027; output 315,271; reasoning 930,311; cache-read 11,609,372. Local SQLite cost 0.00; vendor billing and actual served-model identity UNKNOWN. OpenCode v2.0.32 review session ses_ea030cfffffeWft8qAw18cKX1E is live on DOCX 0104 R15 and has not returned a terminal semantic verdict.
+
+Antigravity CLI: 10 locally recorded attempts in the exact rolling window: four exit-0 text returns, five parser/argument rejections before model dispatch, and one runtime error with partial output. All requested gemini-3.8-flash-high; actual serving model UNKNOWN for all dispatched attempts, verified Gemini calls 0. Three attempts report usage, totaling 149,265 tokens; a fourth successful text response has no usage record, so the usage total is incomplete. Billing/quota delta UNKNOWN.
+
+Adoption: 0099 R03 is verified as a manuscript baseline for 0099 R17, not a final DOCX. 0097 and 0098 final-DOCX adoption remain UNKNOWN. No new Antigravity dispatch was made because serving-model identity/fallback exclusion remains unverified; other legal work continued.
