@@ -1,0 +1,33 @@
+{
+  "doc_id": "0103",
+  "requirement_id": "I18-E10",
+  "blueprint_item": 111,
+  "candidate_sha256": "82380e64672229d1f3d9a55094a1badd24f17555c85d45a35e8626b1c412e87c",
+  "review_input_sha256": "ff2812afef1aeb44db0da73c4c631a81e82aefc1fc547ae086a9abf59c1b99f5",
+  "requested_model": "opencode/glm-5.3-flash-free",
+  "actual_provider_and_model_identity": "UNKNOWN; see execution receipt",
+  "model_fallback": "UNKNOWN; no provider identity field in CLI event stream",
+  "cli_version": "opencode v2.0.32",
+  "pid": 73488,
+  "session_id": "ses_ea0a8b186ffeybrhKyR37rxlGz",
+  "start_local": "2026-10-22T00:41:59.3699343+08:00",
+  "end_local": "2026-10-22T00:43:01.6835971+08:00",
+  "elapsed_seconds": 62.314,
+  "exit_code": 0,
+  "stdout_bytes": 7532,
+  "stdout_sha256": "c61a380a327a49e5148266aeabdab65596c45575dd35dfd3cba95d6988ce7a30",
+  "stderr_bytes": 0,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "event_types": {
+    "step_start": 1,
+    "text": 1
+  },
+  "response_chars": 6254,
+  "response_sha256": "bc1e8b259de5310abdc960b1299172a18ec3a0cce51ec02601f6ac48edfda621",
+  "verdict": "PASS",
+  "scope": "independent semantic review bound to extracted text and stated DOCX SHA; not visual or page-layout review",
+  "tool_calls_observed_in_json_events": 0,
+  "usage_and_provider_billing": "UNKNOWN; not included in native CLI events",
+  "review_execution_receipt_sha256": "see independent_semantic_review_execution_0103_R02.json",
+  "limitations": "No rendered pages reviewed; independent reviewer accepted text/extraction SHA chain from packet and did not independently read raw DOCX bytes. Three non-gating wording observations were reported."
+}

@@ -1,0 +1,79 @@
+{
+  "receipt_id": "TTQS-R09-WINDOWS-PANEL-GOAL-SCHEDULER-READBACK-20261022T005813+0800",
+  "observed_at_tpe": "2026-10-22T00:58:13.349+08:00",
+  "project_id": "TTQS_ONE",
+  "host": "DESKTOP-VMV4Q60",
+  "windows_user": "DESKTOP-VMV4Q60\\J",
+  "os": "Windows 10 Pro 10.0.19045",
+  "github": {
+    "repository": "PT-Original-Point/ttqs-one",
+    "pr": 92,
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "head": "c352b95623c4f533923485499c67f3226363b0a1",
+    "head_source": "git ls-remote and local fast-forward readback"
+  },
+  "goal": {
+    "thread_id": "01a14098-b269-79e3-b07c-56e96557fe07",
+    "native_status": "PAUSED",
+    "resume_action": "UNAVAILABLE_IN_EXPOSED_NATIVE_TOOLSET",
+    "resumed": false
+  },
+  "scheduler": {
+    "active_thread_automation_id": "ttqs-one-hourly-quality-goal-resume",
+    "type": "heartbeat",
+    "status": "ACTIVE",
+    "rrule": "RRULE:FREQ=HOURLY;INTERVAL=2",
+    "interval_minutes": 120,
+    "target_thread_id": "01a14098-b269-79e3-b07c-56e96557fe07",
+    "project_path": "E:\\TTQS",
+    "native_last_run": "UNKNOWN",
+    "native_next_run": "UNKNOWN",
+    "natural_2h_trigger": "NOT_TESTED"
+  },
+  "windows_task_scheduler": {
+    "name": "TTQS_ONE_Codex_Supervisor",
+    "state": "Disabled",
+    "enabled": false,
+    "last_run": "2026-10-05T05:03:03+08:00",
+    "last_result": 0,
+    "action": "wscript.exe supervisor_hidden_launcher.vbs"
+  },
+  "workers": {
+    "opencode_processes": [
+      {
+        "pid": 45628,
+        "name": "opencode-cli.exe",
+        "command": "serve --service",
+        "created": "2026-10-19T20:49:10+08:00",
+        "classification": "SERVICE_ONLY_NOT_WRITER"
+      }
+    ],
+    "antigravity_cli_processes": 0,
+    "active_writer": "NONE_OBSERVED",
+    "winword_process_count": 19,
+    "old_winword_processes_retained": true,
+    "unresolved_external_write": "NONE_OBSERVED"
+  },
+  "panel": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\MASTER\\dashboard.html",
+    "sha256": "f0e8625b2b77f4616beab18e31c1f1f7b05655e9d54898129d8e8d4f1d35a070",
+    "bytes": 12260,
+    "last_modified": "2026-10-05T22:14:08+08:00",
+    "age_days": 16.114,
+    "data_sources": [
+      "http://127.0.0.1:8766/muse-status",
+      "/status"
+    ],
+    "listeners_on_8765_or_8766": 0,
+    "project_and_host_identity": "NOT_PRESENT_IN_PANEL",
+    "status": "STALE_OFFLINE",
+    "os_github_alignment": "FAIL",
+    "age_elapsed_hours": 386.7348
+  },
+  "observation_limits": [
+    "Automation file confirms enabled interval and thread binding; app execution history and actual next trigger are not exposed in native automation file.",
+    "Goal native status readback is PAUSED; no supported resume command was available in exposed tools.",
+    "Panel source code shows expected endpoints, but neither endpoint was listening during observation.",
+    "No live writer process was observed; OpenCode service PID does not count as a writer."
+  ]
+}
