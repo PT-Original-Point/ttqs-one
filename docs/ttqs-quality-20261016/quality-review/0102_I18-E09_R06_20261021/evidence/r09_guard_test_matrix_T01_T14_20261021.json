@@ -1,6 +1,6 @@
 {
   "receipt_id": "TTQS-R09-GUARD-MATRIX-T01-T14-20261021",
-  "observed_at_tpe": "2026-10-21T23:47:45+08:00",
+  "observed_at_tpe": "2026-10-21T23:54:11+08:00",
   "scope": "Evidence-bound guardrail adjudication; one counterexample is simulated; statuses do not imply all integrations passed.",
   "tests": [
     {
@@ -90,26 +90,26 @@
     {
       "id": "T13",
       "guard": "GitHub exact-byte readback must match local SHA256",
-      "mode": "PENDING_REMOTE_READBACK",
-      "result": "PENDING",
-      "finding": "Will be updated after publication and binary readback."
+      "mode": "NATIVE_GIT_REMOTE_READBACK",
+      "result": "PASS_GUARD",
+      "finding": "At initial artifact commit be6055e95f15cba04967c195a929ee25de6ada76, all 30 package Git blobs matched the local filtered Git blobs; DOCX and PDF exact SHA-256 matched. Receipt: github_readback_receipt_0102_R06_R09.json."
     },
     {
       "id": "T14",
       "guard": "Do not duplicate a live Writer or claim unresolved external effects are settled",
       "mode": "NATIVE_OS_AND_GIT",
-      "result": "PENDING_FINAL_SYNC_CHECK",
-      "finding": "No one-shot CLI Writer observed; 19 WINWORD embedding processes remain owner-unknown; remote readback is still pending."
+      "result": "UNKNOWN_RETAINED",
+      "finding": "No one-shot CLI Writer was observed and no duplicate dispatch occurred; 19 WINWORD embedding processes still have unknown document ownership. Git publication is read back; no process was terminated."
     }
   ],
   "summary": {
     "total": 14,
-    "pass_guard": 6,
+    "pass_guard": 7,
     "pass_simulated": 1,
     "partial": 1,
     "fail_recovery": 1,
-    "unknown": 3,
-    "pending": 2,
+    "unknown": 4,
+    "pending": 0,
     "overall": "PARTIAL_NOT_AUTONOMOUS_RESUME_PASS"
   }
 }

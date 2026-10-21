@@ -30,3 +30,7 @@ R09 T01–T14 evidence and limitations are itemized in `evidence/r09_guard_test_
 ## Review boundary
 
 `review/semantic_review_status_0102_R06.json` records the exact candidate SHA and the outstanding independent-review gate. All sample/person/award/organization details remain synthetic placeholders. No real third-party evidence, association approval, signature, formal acceptance, or Human submission is claimed.
+
+## Remote readback
+
+At branch commit `be6055e95f15cba04967c195a929ee25de6ada76`, all 30 package Git blobs were checked against their local filtered blob IDs; the DOCX SHA-256 is `7275d99844ffb0a96773872ccca99f44a6523c827eca76af2a24ef85e23f27da` both locally and remotely, and the PDF SHA-256 is `39713509ecbfbb7445f7b5b293a3cbed17838069063443c50794cb3f1f30f537` both locally and remotely. Existing 0100 and 0101 candidate DOCX plus semantic receipts were also read from the same branch head and matched their local SHA-256 values; see `evidence/candidate_reuse_check_0100_0101_R09.json`.
