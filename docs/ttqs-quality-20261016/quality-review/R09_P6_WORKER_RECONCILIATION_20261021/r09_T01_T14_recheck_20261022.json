@@ -1,6 +1,6 @@
 {
   "receipt_id": "TTQS_ONE_R09_T01_T14_RECHECK_20261022",
-  "observed_at_tpe": "2026-10-22T04:05:43+08:00",
+  "observed_at_tpe": "2026-10-22T04:06:40+08:00",
   "source_06_blob": "4c7eff55748ff265b1e5a7d1122852b0d101acbd",
   "results": [
     {
@@ -65,8 +65,8 @@
     },
     {
       "id": "T13",
-      "status": "PASS_REMOTE_READBACK_COMMIT1",
-      "evidence": "PR head 1b3b7ed29650867cf1299293a828d31b579ac7c7; all 109 changed paths have matching local clean blob OID and remote blob OID; all 38 binary artifacts are byte-for-byte equal; 0100/0101 unchanged candidates exact SHA read back. Full per-path receipt: github_remote_readback_commit1_R09_20261022.json."
+      "status": "PASS_REMOTE_READBACK_COMMITS_1_AND_2",
+      "evidence": "Commit1 705c3c0 package: 109 changed paths canonical-blob verified, all 38 binary artifacts raw-byte exact; unchanged 0100/0101 exact SHA verified. Commit2 561a12a closure receipt and T01-T14 matrix also read back from fresh PR head; per-path receipt github_remote_readback_commit2_R09_20261022.json."
     },
     {
       "id": "T14",
@@ -74,5 +74,5 @@
       "evidence": "No competing writer was observed before synchronization; no ambiguous push or competing-writer test was induced."
     }
   ],
-  "overall": "PARTIAL; T13 verified for commit1, but Goal resume, natural 120-minute run, live panel alignment, reviewer SHA recomputation, provider model attestation, and T14 competing-writer branch remain unverified."
+  "overall": "PARTIAL; GitHub readback verified through commit2. Native Goal remains paused, natural 120-minute trigger/live panel alignment unverified, reviewer hash recomputation and model/provider attestation unavailable, and T14 competing-writer branch not induced."
 }
