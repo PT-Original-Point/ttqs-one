@@ -1,3 +1,68 @@
+# TTQS ONE｜每兩小時原生排程與 Codex GOAL 真正復工（2026-10-21 Human 最新覆寫）
+
+> `COMMAND=HUMAN_20261021_TWO_HOUR_GOAL_RESUME_OVERRIDE`
+>
+> **HUMAN LATEST**：原每小時（60m）改為 **每兩小時（120m）**。本節優先於下方 2026-10-16 每小時歷史條款及 R07 的舊停工判定；只更新 TTQS_ONE 已批准的可逆候選施工與相關排程，絕不自動核准正式接受、新費用、身份、OAuth/MFA 或高風險權限。
+>
+> **狀態**：CANDIDATE／GitHub 施工指示。寫入 GitHub 不等於 Windows 任務已修改、Codex GOAL 已 resume 或真正排程續工已 PASS。與較舊 control plane 有衝突時標 `SPEC_CONTROL_PLANE_REBASE_REQUIRED`，不因舊規格阻擋合法可逆施工。
+
+## ACTIVE｜P0 先判斷「排程觸發」和「GOAL 恢復」兩件不同的事
+
+- Human 2026-10-21 17:25 台灣截圖：Codex GOAL 顯示「目標已暫停」，舊每小時排程仍於約 16:16／17:15 傳送 `TTQS_GITHUB_COMMAND_PREFLIGHT_V1`，只回答無 READY。**有送達訊息的證據，沒有真實 Writer/Word 或 QA 續工的證據；不是排程完全未觸發。**
+- GitHub R07 S12 收據：`BUILD_QUEUE.json` 上次修改 2026-10-19 03:24:56+08:00；115 筆 PENDING 但沒有顯式 READY；把 `PENDING` 當不可施工是自鎖。R07 已有 0099 R17（SHA-256 `293be2dc0e3e0162fa368272851baed27e92990b4ac1871228ec37b51546776b`）及 QA，不能重建。
+- 0097 R08 Word COM PDF 匯出超過 180 秒失敗，只擋**0097 R08 的渲染/視覺車道**；18 個 `WINWORD.EXE /Automation -Embedding` 用途 UNKNOWN，不是 18 個已確認 Writer，嚴禁一律 kill。
+- 在 Windows 原生 GOAL 介面先查 `/goal` 的目標、paused 與可取得的真正理由；用 OS PID/command-line、未結工作/owner 與 GitHub fresh-read 排除重複派工，之後才用官方原生 `/goal resume` 恢復原 GOAL。**不要 `/goal clear`，也不要單純重設長目標造成 usage history 重置**。Goal 標成 active、但沒有合法作業與產物，不算恢復成功。
+
+## ACTIVE｜P1 不再依賴舊佇列顯示 READY 才能施工
+
+`READY` 必須由 Human 目前 Mission、官方需求、既有 crosswalk、上游來源、候選工件、受信 QA、實際 OS Writer 推導**下一個可逆階段**，不得只看 `BUILD_QUEUE.state`。至少分：
+
+`READY_SOURCE_PACKET`（官方具名來源可讀、專屬 source packet 缺）→ `READY_BLUEPRINT`（專屬章節、真題目、計算與 SAMPLE/REAL）→ `READY_WRITER`（上游具體且無活躍同一 writer）→ `READY_DETERMINISTIC_QA` → `READY_FRESH_REVIEW` → `READY_SCOPED_REPAIR`。
+
+第三方 REAL 原件仍 UNKNOWN 時可製作不造假的 SAMPLE 完整示例與原件索取流程，但正式升格/真實替換維持 Human Gate。沒有 `READY` 字串 ≠ 沒有 `READY_SOURCE_PACKET`。單個 provider/渲染器故障只擋該 Lane。
+
+**立即驗收樣本**：`official_129_to_142_crosswalk.csv` 將 `I18-E08` 綁定 `0100 | 0101`，專案 157 指標索引 109：「訓練前後自評量表與真雷達圖數據」。0100 是學員訓練前後自評表，0101 是能力提升雷達分析報告；官方 PDF 第 7 頁及 `03_157_CHECKBOX_BLUEPRINTS.md` 已可核。先查 OS／GitHub 是否已有新工件或 active Writer；若沒有，至少可合法進行來源包及 UNIQUE Blueprint。可沿 0099 已驗算的合成案例（8 人×5 維×前後2次=80 格，前測75／後測117，平均增加5.25），但必須檢查跨文件 fact ID、一致性、分母與完整替換清冊，絕不宣稱真實學員成效。0100、0101 是兩種不同文類，不能換標題複製。
+
+## ACTIVE｜P2 排程改 120 分鐘，只有一個真正派工主人
+
+1. 在桌面 App 「已排程」先讀回**現有** `TTQS ONE hourly quality GOAL` 原生 task ID、綁定 thread、enabled、last/next run、prompt、project/local vs worktree、執行帳戶、最近三次真實 run。原生排程仍顯示舊名稱不表示已修復。
+2. 若它可以在相同**有權存取本機 E:\TTQS**的 Context 真正續工，就只**編輯同一任務**成 `Every 2 hours`；原生進階重複規則支援時用 `RRULE:FREQ=HOURLY;INTERVAL=2`，確認台灣本地時區及下一次時間。**不得創建另一條同功能任務**。重寫保存的 prompt，改用「P1 階段 READY＋OS live owner＋回收成果」的短前置規則，禁止兩小時空轉長篇報告。
+3. 若同對話排程**只傳訊息到 paused Goal、無法取得本機工件或建立 Writer**，先暫停舊任務並從原生介面讀回，然後在同一已授權本機專案用唯一 standalone scheduled task 作受限 120m 恢復；必須驗證能讀真實 DOCX、單一 owner、原生 working directory、真實 Worker 和 GitHub exact-SHA readback。若 standalone 只能隔離工作樹且看不到受信 E:\TTQS，不能稱已復工。
+4. **成本最佳方案**：若原生 Scheduled 每次喚醒都需要 GPT-6 呼叫，且已存在合格 Windows Task Scheduler/原生 Codex Worker 入口，優先由**唯一** Windows OS 120m deterministic L0 任務檢查 Git/OS/hash；**無 material delta 時 0 高階模型呼叫**，有 READY 或真故障才調用一次受信 CLI。修改前保存既有任務 XML/Action/Principal，查明 `TTQS_ONE_Codex_Supervisor` 歷史任務是否仍適用，不能因名稱相同就重啟舊 launcher。OS 路線啟用前先停用同作用 Codex App 派工，避免雙主。
+5. 只有 **Native schedule interval=120m、唯一 owner、實際計時觸發、同來源 OS readback、合法 Source/Blueprint/Word/QA delta 或精確 blocker** 全部證實，才叫 `AUTONOMOUS_RESUME=PASS`。只收到排程文字 = `SCHEDULE_TRIGGER=PASS / WORKER_RESUME=FAIL`。
+
+## ACTIVE｜P3 施工與安全／成本邊界
+
+- 0099 R17 已是候選；0097 R08 Word 匯出維持精確受限，0100/0101 可獨立合法開始。沒活躍 Writer 才派新工作，同一寫入範圍不得雙主；未知 GitHub/OS 寫入先同來源讀回，不能盲重送。
+- OpenCode v2 CLI 只用當日**實際可用**免費模型做有界內容或審查；Antigravity CLI 只請求 `gemini-3.8-flash-high`，不允許 Computer Use、檔案工具 Writer、危險權限繞過、模型 fallback 或未授權付費。Windows 原生工具建 DOCX、公式/字級/視覺檢查。
+- GOAL 完成的條件是 Human 真正已接受的範圍與受信文件品質，不是 Queue empty、沒有明示 READY、GOAL 暫停、Word 卡住或 129/142 個名稱看起來齊。28 個未具名「其他」維持 BLOCKED_UNTIL_UNIQUE_OTHER_NAMED；正式 HUMAN_ACCEPTED/REAL_REPLACED 獨立。
+- 每兩小時僅需最多 1 頁增量；沒有實質差異且用 OS L0 → 0 大模型呼叫。不要再把 12MB 歷史報告遞迴附進新報告，不重做已同 SHA 通過的正文或 QA。
+
+## ACTIVE｜P4 Native 驗收回報（缺資料保留 UNKNOWN）
+
+```text
+PROJECT_ID=TTQS_ONE
+SCHEDULE_TASK_ID=<same native ID>
+SCHEDULE_OWNER=<Codex desktop local|standalone local|Windows OS>
+OLD_INTERVAL=60m
+NEW_INTERVAL=120m|NOT_APPLIED
+NATIVE_LAST_RUN=<timestamp>
+NATIVE_NEXT_RUN=<timestamp>
+EXACT_OS_GOAL_STATE=<active|paused and reason|UNKNOWN>
+OS_WRITER_OWNER=<PID + exact work_id|NONE|UNKNOWN>
+QUEUE_LAST_WRITE=<timestamp>
+READY_SOURCE_PACKET=<0100/0101 or fresh other item>
+SCHEDULED_TRIGGER=<PASS|FAIL|UNKNOWN>
+REAL_WORKER_RESUME=<PASS|FAIL|NOT_TESTED>
+FIRST_WORK_SHA=<exact source packet/Blueprint/Word/QA or NONE>
+GITHUB_EXACT_READBACK=<commit/blob/SHA or UNKNOWN>
+TOKEN_IF_NO_DELTA=<zero verified|UNKNOWN>
+NEXT_SINGLE_LEGAL_ACTION=<precise>
+```
+
+---
+
+## HISTORICAL｜以下保留 2026-10-16 60 分鐘規格原文供稽核，不再作為目前時程權威
 # TTQS ONE｜每小時自動喚醒 Codex 並接續 GOAL（2026-10-16 Human 最新授權）
 
 **PROJECT_ID=TTQS_ONE**  
