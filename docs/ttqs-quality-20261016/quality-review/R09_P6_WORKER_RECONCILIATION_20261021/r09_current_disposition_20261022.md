@@ -12,7 +12,7 @@ This is a short current-state addendum, not a completion claim. Its **pre-sync o
 ## Document dispositions
 
 - **0105 / I18-E13 R04:** DOCX SHA-256 `17f7d680cbb992db93a6f67df84415500050953eecf426b477f675810177b4cb`; technical QA 32/32 PASS; independent semantic review PASS on the exact SHA. Requested Antigravity model was `gemini-3.8-flash-high`; serving identity/fallback UNKNOWN. Word visual export is BLOCKED after three distinct bounded COM output methods; no R04 PDF/page images exist. Candidate remains unaccepted. The complete public package and failure evidence are in `quality-review/0105_I18-E13_R01_20261022/`.
-- **0103 / I18-E10 R03:** SHA-256 `7b95524d9e0c0010ebd45938dad25afe2432e2d6f0c83bba4cafbf7d180375e2`; technical package checks PASS, visual `FAIL_REPAIRABLE_LAYOUT`, semantic review not requested, NOT ADOPTED. Existing PR evidence has the DOCX, Word PDF, and six contact sheets. The local 30-file exact readback receipt is being added; its prior check recorded 30/30 Git blobs and 17/17 raw binary SHA-256 matches at the referenced commit.
+- **0103 / I18-E10 R03:** SHA-256 `7b95524d9e0c0010ebd45938dad25afe2432e2d6f0c83bba4cafbf7d180375e2`; technical package checks PASS, visual `FAIL_REPAIRABLE_LAYOUT`, semantic review not requested, NOT ADOPTED. Existing PR evidence has the DOCX, Word PDF, and six contact sheets. The exact readback receipt is now synced; it records 30/30 Git blobs and 17/17 raw binary SHA-256 matches at its referenced commit.
 - **0101 / I18-E08 R09 final9:** existing remote candidate SHA-256 `56f433e095f32378f2fd8241c1a27948d2bfe6748da003af5623d265885edb68` matches the local prepared package. It is reused; no rebuild is authorized or needed for this sync.
 
 ## Worker-window evidence
@@ -39,7 +39,7 @@ Statuses below are from `r09_T01_T14_recheck_20261022.json`; they are guard-test
 | T10 | PARTIAL_TEXT_ONLY_EXACT_PACKET_BINDING | Exact text packet binding exists; reviewer did not rehash the DOCX or inspect pages. |
 | T11 | PASS_GUARD_MODEL_UNKNOWN | Gemini was requested, but actual provider/fallback and quota remain UNKNOWN. |
 | T12 | PASS_SCOPED_SAMPLE_AND_QA | Prior sample candidate passed its recorded scope; no REAL/approval claim. |
-| T13 | PASS_REMOTE_READBACK_COMMITS_1_TO_4 | Exact remote readback verified through commit 4; 0105 readback is still pending this push. |
+| T13 | PASS_REMOTE_READBACK_COMMIT4_AND_0105_ABB10FC | Readback verified through commit 4 and 0105 commit `abb10fcb`: 84/84 changed-path Git blob IDs and 6/6 binary raw SHA-256 values match; R04 DOCX raw SHA-256 is exact. |
 | T14 | PARTIAL_SAFE_PUSH_CASE_ONLY | No live competing Writer or ambiguous push was induced; unknown-push guard not live-tested. |
 
 ## Closure state

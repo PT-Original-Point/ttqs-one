@@ -27,3 +27,7 @@ The bundled `render_docx.py` requires LibreOffice on Windows; `soffice.exe` was 
 OpenCode v2 CLI 2.0.32 first selected `deepseek-v4.1-flash-free` and returned zero manuscript tokens (`finish=length`); a bounded second dispatch selected `mimo-v2.6-flash-free` and returned the retained manuscript. The session model identifiers are recorded, but serving identity/fallback and vendor billing are UNKNOWN; local-reported cost was zero. The manuscript and both dispatch records are under `writer/`.
 
 The complete raw Antigravity response, prompt, retry/parser error, requested model, token usage, and exact-SHA semantic receipt are under `evidence/`. Neither Worker directly produced the final DOCX; the DOCX was built and technically checked by the native local pipeline.
+
+## GitHub readback
+
+The candidate and evidence package were pushed to PR #92 at commit `abb10fcb356a533777e0e685eb7ff160ad5482e6`. The branch and PR head matched. The first commit's 84 changed paths had 84/84 matching canonical Git blob IDs; all 6 binary artifacts also matched raw SHA-256, including the R04 DOCX (`17f7d680cbb992db93a6f67df84415500050953eecf426b477f675810177b4cb`). Full path-level evidence is in `evidence/github_readback_receipt_0105_R04.json`.
