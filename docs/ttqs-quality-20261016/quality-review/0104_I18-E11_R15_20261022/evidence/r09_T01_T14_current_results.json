@@ -1,7 +1,7 @@
 {
   "receipt_id": "TTQS_ONE_R09_T01_T14_CURRENT_SCOPE_20261022",
   "source_06_blob": "4c7eff55748ff265b1e5a7d1122852b0d101acbd",
-  "observed_at_local": "2026-10-22T03:13:20.3199597+08:00",
+  "observed_at_local": "2026-10-22T03:18:13.3329093+08:00",
   "results": [
     {
       "id": "T01",
@@ -65,13 +65,13 @@
     },
     {
       "id": "T13",
-      "status": "PENDING_GITHUB_READBACK",
-      "evidence": "Compare origin raw DOCX SHA-256 after non-force push; Git object SHA is a different identifier."
+      "status": "PASS_REMOTE_EXACT_SHA",
+      "evidence": "Fetched PR refs/pull/92/head at 214703f2acba005d0a3f9bcfed1b2f908457d5fb; 89/89 manifest file raw Git blobs matched local SHA-256; candidate raw SHA-256 9bbb96da74ba9da845ab0e063421d04f035e79496209a02de1f04b0c98ec7eb8."
     },
     {
       "id": "T14",
-      "status": "PENDING_SAFE_PUSH_READBACK",
-      "evidence": "Verify remote head and package bytes; no force push and no duplicate Writer."
+      "status": "PASS_OBSERVED_SAFE_KNOWN_PUSH_UNKNOWN_BRANCH_NOT_TESTED",
+      "evidence": "Non-force push was accepted; branch and PR head matched; no duplicate Writer was active; 89/89 bytes read back. Unknown/ambiguous push recovery branch itself was not induced and remains untested."
     }
   ]
 }
