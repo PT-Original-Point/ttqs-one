@@ -1,0 +1,35 @@
+{
+  "document_id": "0098",
+  "requirement_id": "I18-E06",
+  "revision": "R08",
+  "candidate_docx_sha256": "a5d4bb14c884ff2d19db7bb6a86f999de0604d9ac6bacd9eb26f0b5db2c9cdba",
+  "reviewed_extraction_sha256": "75156190b5e7a52072e130c10b202a07b09dc56e52d276f34953e977c6082179",
+  "reviewed_register_sha256": "9fa51aef4394a3e0f8ae8e42a42cdfa8b49356802427614e1ac439cb512e29e4",
+  "reviewer_route": "OpenCode CLI v2",
+  "session_id": "ses_ea37b16fbffe5Io3P91yhHWIjk",
+  "provider_id": "opencode",
+  "model_id": "nemotron-3-ultra-free",
+  "agent": "plan",
+  "session_cost": 0,
+  "token_usage": {
+    "input": 78455,
+    "output": 2846,
+    "reasoning": 3375,
+    "cache": {
+      "read": 0,
+      "write": 0
+    }
+  },
+  "dispatch_started_utc": "2026-10-21T03:32:56.7130000+00:00",
+  "review_response_sha256": "bd82f9eba803f7cc4e33e5ad4f7f6450fec812ff6002f50e2140c038cc5d3adf",
+  "verdict": "PASS",
+  "finding_count": 2,
+  "limitations": [
+    "Visual layout (font sizes, page breaks) not verified; only exact-SHA body text and register reviewed.",
+    "Official printed serial (checkbox number) remains UNKNOWN per candidate; not validated against authoritative source.",
+    "No REAL source documents (invitation logs, raw exports, signed receipts, approved notices, correction requests, review signatures, handover receipts) were supplied or verified; all REAL fields remain UNKNOWN/HOLD.",
+    "R07 prior receipts not transferred; R08 stands on its own exact SHA."
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "status": "INDEPENDENT_EXACT_SHA_SEMANTIC_REVIEW_COMPLETED"
+}
