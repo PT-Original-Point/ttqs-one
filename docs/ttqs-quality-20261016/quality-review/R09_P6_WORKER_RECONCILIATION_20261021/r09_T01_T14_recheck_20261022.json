@@ -1,6 +1,6 @@
 {
   "receipt_id": "TTQS_ONE_R09_T01_T14_RECHECK_20261022",
-  "observed_at_tpe": "2026-10-22T03:57:34+08:00",
+  "observed_at_tpe": "2026-10-22T04:05:43+08:00",
   "source_06_blob": "4c7eff55748ff265b1e5a7d1122852b0d101acbd",
   "results": [
     {
@@ -65,8 +65,8 @@
     },
     {
       "id": "T13",
-      "status": "PENDING_REMOTE_READBACK",
-      "evidence": "Must be updated after push and exact GitHub byte/hash comparison."
+      "status": "PASS_REMOTE_READBACK_COMMIT1",
+      "evidence": "PR head 1b3b7ed29650867cf1299293a828d31b579ac7c7; all 109 changed paths have matching local clean blob OID and remote blob OID; all 38 binary artifacts are byte-for-byte equal; 0100/0101 unchanged candidates exact SHA read back. Full per-path receipt: github_remote_readback_commit1_R09_20261022.json."
     },
     {
       "id": "T14",
@@ -74,5 +74,5 @@
       "evidence": "No competing writer was observed before synchronization; no ambiguous push or competing-writer test was induced."
     }
   ],
-  "overall": "PARTIAL; native Goal resume, natural 120-minute execution, live panel alignment, and provider model attestation remain unverified"
+  "overall": "PARTIAL; T13 verified for commit1, but Goal resume, natural 120-minute run, live panel alignment, reviewer SHA recomputation, provider model attestation, and T14 competing-writer branch remain unverified."
 }
