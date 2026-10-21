@@ -1,0 +1,30 @@
+{
+  "doc_id": "0102",
+  "requirement_id": "I18-E09",
+  "input_docx": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0102_I18-E09_R01_20261021\\candidate\\0102__技能競賽獲獎證據取得與查核工作紀錄_R03.docx",
+  "input_sha256": "0865bb2d9ac0fcbe3fd1bc880d6be6c96c2f3d00154e488b5bd9618c946de3d8",
+  "output_docx": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0102_I18-E09_R01_20261021\\candidate\\0102__技能競賽獲獎證據取得與查核工作紀錄_R04.docx",
+  "output_sha256": "f55dd9f80c26e35d4103d2007fceccf41e35c899d6fb16042ab309d10839345d",
+  "bytes": 93314,
+  "patch_scope": "three pageBreakBefore repairs for orphaned section/table starts; one visible inline-Markdown delimiter repair; footer revision label R03 to R04",
+  "targeted_page_breaks": [
+    "9.2 判定門檻",
+    "10.1 CASE-01",
+    "11.2 本示範資料集"
+  ],
+  "inline_markup_fixes": [
+    {
+      "paragraph_prefix": "`0/2=0%` 是兩個合成案件的流程示範，不是協會實績、不是獲獎率、不是評核分數，也不能解讀為",
+      "text_nodes_repaired": 1
+    }
+  ],
+  "footer_updates": [
+    {
+      "part": "word/footer1.xml",
+      "replacements": 1
+    }
+  ],
+  "sample_boundary": "unchanged",
+  "content_source": "R03 DOCX exact bytes; no manuscript regeneration",
+  "status": "PATCHED_PENDING_WORD_EXPORT_AND_VISUAL_RECHECK"
+}

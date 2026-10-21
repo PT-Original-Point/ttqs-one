@@ -1,0 +1,115 @@
+{
+  "receipt_id": "TTQS-R09-GUARD-MATRIX-T01-T14-20261021",
+  "observed_at_tpe": "2026-10-21T23:47:45+08:00",
+  "scope": "Evidence-bound guardrail adjudication; one counterexample is simulated; statuses do not imply all integrations passed.",
+  "tests": [
+    {
+      "id": "T01",
+      "guard": "OpenCode service PID is not a Writer",
+      "mode": "NATIVE_OS_OBSERVATION",
+      "result": "PASS_GUARD",
+      "finding": "OpenCode service remains alive; no one-shot OpenCode or agy writer process observed."
+    },
+    {
+      "id": "T02",
+      "guard": "Do not terminate unidentified WINWORD embedding process",
+      "mode": "NATIVE_OS_OBSERVATION",
+      "result": "UNKNOWN_RETAINED",
+      "finding": "Current snapshot has 19 WINWORD /Automation -Embedding processes with no window titles and svchost parents; ownership/file scope is unknown and none were terminated."
+    },
+    {
+      "id": "T03",
+      "guard": "Absent or stale TTQS dashboard must remain UNKNOWN",
+      "mode": "NATIVE_FILES_AND_HTTP",
+      "result": "UNKNOWN",
+      "finding": "Only old local dashboard artifact found; HTTP port 8765 refused connection; its source data is stale."
+    },
+    {
+      "id": "T04",
+      "guard": "Do not reuse a dashboard from another controller/project as TTQS ONE current panel",
+      "mode": "NATIVE_FILE_READ",
+      "result": "PASS_GUARD",
+      "finding": "Local MASTER dashboard points to a different historical controller thread and old 142-file workflow; excluded from current alignment."
+    },
+    {
+      "id": "T05",
+      "guard": "Scheduler ACTIVE cannot prove paused Goal resumed",
+      "mode": "NATIVE_TOOL_READBACK",
+      "result": "FAIL_RECOVERY",
+      "finding": "Same Goal is paused; heartbeat interval config is 120 minutes, native last/next run and natural trigger unavailable."
+    },
+    {
+      "id": "T06",
+      "guard": "Stale BUILD_QUEUE must not hide a concrete source-ready document",
+      "mode": "NATIVE_FILE_READ",
+      "result": "PASS_GUARD",
+      "finding": "0102 has official mapping, source packet, unique Blueprint, existing candidate and QA; queue mtime is older and not treated as authority."
+    },
+    {
+      "id": "T07",
+      "guard": "0097 renderer failure blocks only that render lane",
+      "mode": "NATIVE_ARTIFACT_RECONCILIATION",
+      "result": "PASS_GUARD",
+      "finding": "0102 R06 was built and exported; 0097 render failure did not stop this lane."
+    },
+    {
+      "id": "T08",
+      "guard": "Zero CLI exit without an artifact is not completion",
+      "mode": "SIMULATED_COUNTEREXAMPLE",
+      "result": "PASS_SIMULATED",
+      "finding": "Synthetic counterexample classified as NOT_COMPLETE; no real invocation was made for this test."
+    },
+    {
+      "id": "T09",
+      "guard": "Nonzero exit with complete stable response may be salvaged, not called CLI success",
+      "mode": "NATIVE_RECEIPT_READ",
+      "result": "PASS_GUARD",
+      "finding": "0102 OpenCode exit 1; raw output retained and deterministic repair produced a manuscript; exit remains failure."
+    },
+    {
+      "id": "T10",
+      "guard": "Review of another/old SHA cannot accept current candidate",
+      "mode": "NATIVE_REVIEW_SCOPE_READ",
+      "result": "PASS_GUARD",
+      "finding": "0102 has no independent semantic receipt; its status remains pending; 0101 review limits remain attached to 0101 only."
+    },
+    {
+      "id": "T11",
+      "guard": "Antigravity requested model does not prove served model or fallback identity",
+      "mode": "NATIVE_LEDGER_READ",
+      "result": "UNKNOWN",
+      "finding": "Historical attempts requested Gemini; actual provider/model/fallback/billing remain UNKNOWN; no fresh dispatch made."
+    },
+    {
+      "id": "T12",
+      "guard": "Document must distinguish sample from real and include usable forms and hold/reject rules",
+      "mode": "NATIVE_DOCX_TECHNICAL_AND_VISUAL",
+      "result": "PARTIAL",
+      "finding": "39-row replacement register, two synthetic cases, correct 0/2 sample calculation, 53-page visual review and technical QA exist; independent semantic review is still pending."
+    },
+    {
+      "id": "T13",
+      "guard": "GitHub exact-byte readback must match local SHA256",
+      "mode": "PENDING_REMOTE_READBACK",
+      "result": "PENDING",
+      "finding": "Will be updated after publication and binary readback."
+    },
+    {
+      "id": "T14",
+      "guard": "Do not duplicate a live Writer or claim unresolved external effects are settled",
+      "mode": "NATIVE_OS_AND_GIT",
+      "result": "PENDING_FINAL_SYNC_CHECK",
+      "finding": "No one-shot CLI Writer observed; 19 WINWORD embedding processes remain owner-unknown; remote readback is still pending."
+    }
+  ],
+  "summary": {
+    "total": 14,
+    "pass_guard": 6,
+    "pass_simulated": 1,
+    "partial": 1,
+    "fail_recovery": 1,
+    "unknown": 3,
+    "pending": 2,
+    "overall": "PARTIAL_NOT_AUTONOMOUS_RESUME_PASS"
+  }
+}
