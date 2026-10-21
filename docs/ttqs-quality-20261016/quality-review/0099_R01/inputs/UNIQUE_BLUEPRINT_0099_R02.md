@@ -112,7 +112,7 @@
 
 ## 10. 數據 fixture 與可重現性
 
-表 5 的 80 個原始前後維度評分格（8 人×2階段×5維度=80；不得誤稱160格）、8 個代碼、合成課程/日期/門檻/課程單元/作品欄位/分析值/改進決定均須逐事實記錄於 `SYNTHETIC_REPLACEMENT_REGISTER.csv`，使用固定 fact_id，160以外的派生合計/差值/門檻判定另列計算事實，定位至章節/表/欄；不把一個「整份為 SAMPLE」當成免列細項的理由。建立可重算腳本或表格公式並保存輸入、輸出及規則版本；所有報告值從唯一 fixture 推導。任何 fixture 更動都建立新 R revision，重算數據及 QA；純 metadata 變更不得重建 DOCX。
+表 5 的 80 個原始前後維度評分格（8 人×2階段×5維度=80；不得誤稱160格）、8 個代碼、合成課程/日期/門檻/課程單元/作品欄位/分析值/改進決定均須逐事實記錄於 `SYNTHETIC_REPLACEMENT_REGISTER.csv`，使用固定 fact_id，80格原始分數之外的合計/差值/門檻判定另列計算事實，定位至章節/表/欄；不把一個「整份為 SAMPLE」當成免列細項的理由。建立可重算腳本或表格公式並保存輸入、輸出及規則版本；所有報告值從唯一 fixture 推導。任何 fixture 更動都建立新 R revision，重算數據及 QA；純 metadata 變更不得重建 DOCX。
 
 
 ## R02 追加防呆要求
@@ -124,3 +124,4 @@
 - 前後分數只描述本合成案例的觀察差異。沒有對照設計不得聲稱訓練已被證明造成能力提升，也不得宣稱統計顯著。
 
 R02 supersedes R01 for the writer and QA specifications. R01 is retained as historical evidence; the original Antigravity output remains unmodified and receives only a traceable, deterministic editorial repair.
+
