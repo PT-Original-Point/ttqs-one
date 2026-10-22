@@ -1,0 +1,92 @@
+{
+  "info": {
+    "id": "ses_e9cb2a4c5ffeKj7mRtRIbYX2TJ",
+    "projectID": "2b9c84aee7faec126be9dc98858e5f1745bc7b9a",
+    "agent": "text-only-writer",
+    "model": {
+      "id": "deepseek-v4.1-flash-free",
+      "providerID": "opencode",
+      "variant": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 0,
+      "output": 0,
+      "reasoning": 0,
+      "cache": {
+        "read": 0,
+        "write": 0
+      }
+    },
+    "outcome": "failed",
+    "time": {
+      "created": 1792667376447,
+      "updated": 1792667377266,
+      "idle": 1792667377294
+    },
+    "title": "[redacted:session-title:ses_e9cb2a4c5ffeKj7mRtRIbYX2TJ]",
+    "location": {
+      "directory": "/[redacted:session-directory:ses_e9cb2a4c5ffeKj7mRtRIbYX2TJ]"
+    }
+  },
+  "messages": [
+    {
+      "id": "msg_1634d5b6e001mJ49qzweUScX51",
+      "time": {
+        "created": 1792667376494
+      },
+      "type": "agent-switched",
+      "agent": "text-only-writer",
+      "previous": "text-only-writer"
+    },
+    {
+      "id": "msg_1634d5b6b0017Uj4Nh1H6CfGga",
+      "time": {
+        "created": 1792667376562
+      },
+      "text": "[redacted:text:msg_1634d5b6b0017Uj4Nh1H6CfGga]",
+      "files": [],
+      "type": "user"
+    },
+    {
+      "id": "msg_1634d5bbc001fOWr7mk5u8jZbs",
+      "time": {
+        "created": 1792667376589,
+        "completed": 1792667377266
+      },
+      "type": "assistant",
+      "agent": "text-only-writer",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [],
+      "finish": "error",
+      "error": {
+        "type": "provider.auth",
+        "message": "OpenCode's free tier can only be used from within OpenCode. Download it at https://opencode.ai and keep building.",
+        "status": 403,
+        "response": {
+          "body": "{\"type\":\"error\",\"error\":{\"type\":\"FreeTierError\",\"message\":\"OpenCode's free tier can only be used from within OpenCode. Download it at https://opencode.ai and keep building.\"}}"
+        }
+      }
+    },
+    {
+      "id": "msg_1634d5e8e0017sF2g8AefOz80s",
+      "time": {
+        "created": 1792667377294
+      },
+      "type": "idle",
+      "outcome": "failed",
+      "error": {
+        "type": "provider.auth",
+        "message": "OpenCode's free tier can only be used from within OpenCode. Download it at https://opencode.ai and keep building.",
+        "status": 403,
+        "response": {
+          "body": "{\"type\":\"error\",\"error\":{\"type\":\"FreeTierError\",\"message\":\"OpenCode's free tier can only be used from within OpenCode. Download it at https://opencode.ai and keep building.\"}}"
+        }
+      }
+    }
+  ]
+}
