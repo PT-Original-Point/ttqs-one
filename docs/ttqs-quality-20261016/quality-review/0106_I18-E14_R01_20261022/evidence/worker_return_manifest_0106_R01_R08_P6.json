@@ -61,11 +61,18 @@
     "status": "requested Gemini; logs show CCPA/default fallback and permission/auth failure; not adopted as Gemini evidence"
   },
   "remote_readback": {
-    "status": "PENDING",
+    "status": "VERIFIED",
     "remote_branch_head_before_sync": "a4c1b183400c857fcf5d1d5b768a9da92596fde8",
     "candidate_sha256_expected": "204bc47e1d7049b872c667a07b1f9fe7d9148bb867ca13b59c89ccaad36d515e",
     "artifact_count": 74,
-    "all_artifact_hashes_verified_after_push": false
+    "all_artifact_hashes_verified_after_push": true,
+    "verified_at_tpe": "2026-10-22T15:34:55+08:00",
+    "verified_remote_head": "46ca3dec7f46a346f9f794d9b02abb2ac870c473",
+    "verified_artifact_count": 74,
+    "failed_count": 0,
+    "all_artifact_hashes_and_lengths_verified": true,
+    "candidate_bytes": 351339,
+    "method": "native git fetch + FETCH_HEAD: git cat-file blob; SHA-256 and byte-length comparison"
   },
   "artifacts": [
     {

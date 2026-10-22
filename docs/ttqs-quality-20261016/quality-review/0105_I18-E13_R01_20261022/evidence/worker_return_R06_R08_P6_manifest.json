@@ -784,5 +784,17 @@
     "correction_at_tpe": "2026-10-22T14:47:56.006249+08:00",
     "reason": "R06 writer work_id verified from the native session prompt; reviewer work_id remains UNKNOWN; visual receipt is render-only, so no visual PASS is claimed."
   },
-  "artifact_hash_note": "sha256 records the local source bytes used during production; github_blob_sha256 records exact staged/current Git blob bytes. Text-only CRLF-to-LF normalization is explicitly marked; DOCX, PDF, PNG and other binary artifacts require byte-for-byte equality."
+  "artifact_hash_note": "sha256 records the local source bytes used during production; github_blob_sha256 records exact staged/current Git blob bytes. Text-only CRLF-to-LF normalization is explicitly marked; DOCX, PDF, PNG and other binary artifacts require byte-for-byte equality.",
+  "remote_readback": {
+    "status": "VERIFIED",
+    "verified_at_tpe": "2026-10-22T15:34:55+08:00",
+    "verified_remote_head": "46ca3dec7f46a346f9f794d9b02abb2ac870c473",
+    "artifact_count": 81,
+    "verified_artifact_count": 81,
+    "failed_count": 0,
+    "all_artifact_hashes_and_lengths_verified": true,
+    "candidate_sha256": "bf588da017fb6a6e8da993ce9d677e17303ae2444baa68c8c2956714ce82144d",
+    "candidate_bytes": 92356,
+    "method": "native git fetch + FETCH_HEAD: git cat-file blob; SHA-256 and byte-length comparison"
+  }
 }
