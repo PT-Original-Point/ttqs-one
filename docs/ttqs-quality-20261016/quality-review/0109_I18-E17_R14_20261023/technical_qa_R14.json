@@ -1,0 +1,73 @@
+{
+  "doc_id": "0109",
+  "requirement_id": "I18-E17",
+  "docx_sha256": "6f846e1737ff0d9b8baf40f459071f9258d51c267935d95222a89e7a05804a63",
+  "docx_bytes": 138449,
+  "table_count": 15,
+  "inline_shape_count": 1,
+  "embedded_media_sha256": [
+    "28a4c56a15925b527035f1cf121beefb899c4bb862e2ae12453411d79d25939a"
+  ],
+  "chart_alt_text": [
+    "圖 1：基準期與示範期使用率比較圖；SAMPLE/SYNTHETIC，n=8；描述性結果，不作因果推論。"
+  ],
+  "table_rows": [
+    11,
+    6,
+    6,
+    7,
+    11,
+    10,
+    8,
+    10,
+    4,
+    7,
+    15,
+    6,
+    25,
+    23,
+    8
+  ],
+  "calculated_totals": {
+    "baseline_active_weeks": 13,
+    "baseline_interactions": 18,
+    "sample_active_weeks": 47,
+    "sample_interactions": 67,
+    "baseline_active_users": 5,
+    "sample_active_users": 7
+  },
+  "min_table_font_pt": 9.5,
+  "min_body_font_pt": 10.5,
+  "checks": {
+    "zip_integrity": true,
+    "docx_loads": true,
+    "table_count_matches_markdown": true,
+    "sections_1_to_9_present_once": true,
+    "sample_rows_match_blueprint_exactly": true,
+    "eight_rows_reconcile": true,
+    "active_rates_reconcile": true,
+    "equal_user_week_denominator": true,
+    "active_user_rate_values_present": true,
+    "active_user_week_values_present": true,
+    "interaction_depth_values_present": true,
+    "sample_boundary_present": true,
+    "no_claim_of_official_score": true,
+    "candidate_not_formal_acceptance": true,
+    "official_reference_quote_and_title_present": true,
+    "pre_export_gates_and_post_export_recalculation_present": true,
+    "period_timezone_and_week_boundaries_present": true,
+    "no_unsourced_association_approval_claim": true,
+    "no_hash_or_internal_blob_in_body": true,
+    "chart_image_present": true,
+    "chart_alt_identifies_sample_and_n": true,
+    "chart_caption_reports_all_percentage_point_changes": true,
+    "chart_states_no_causal_inference": true,
+    "embedded_chart_matches_chart_receipt": true,
+    "table_min_font_at_least_9_5": true,
+    "body_min_font_at_least_10_5": true
+  },
+  "technical_status": "PASS",
+  "visual_status": "PENDING",
+  "semantic_status": "PENDING",
+  "formal_acceptance": "NOT_GRANTED"
+}
