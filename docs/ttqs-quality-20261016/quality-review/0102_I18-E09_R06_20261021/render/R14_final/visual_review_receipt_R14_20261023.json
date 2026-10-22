@@ -1,0 +1,55 @@
+{
+  "receipt_id": "TTQS_ONE_0102_R14_VISUAL_QA_20261023",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0102",
+  "official_requirement_id": "I18-E09",
+  "project_157_index": 110,
+  "printed_official_checkbox_serial": "UNKNOWN",
+  "candidate_status": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "candidate_file": "candidate/0102__技能競賽獲獎證據取得與查核工作紀錄_R14.docx",
+  "candidate_sha256": "DFF360BD29772B5CC52FCB7ABE227B7281589949F3744EA06D9C9E91AA83F007",
+  "source_packet_git_blob": "41a98e2f0eca92d8ad6be05b396f6a18ceb4ca68",
+  "source_packet_sha256_remote_bytes": "1C71D7095D32C31DACF450B0069E0C4AB3D7D2B9F296E38827CFFF9976A7F767",
+  "unique_blueprint_git_blob": "d20368335369a0680c97a43360d60f120cc37bfe",
+  "unique_blueprint_sha256_remote_bytes": "6DDF1FB585EB24144DFC544034D74E9FB9E02C742521083150F4087357E8BC8A",
+  "word_native_pdf": "render/R14_final/0102_R14_Word_native_export_20261023.pdf",
+  "pdf_sha256": "2F30AC7E7779078D73F72642DD7FBE99CDC7A72259AA1C21E0580361F555D67D",
+  "pdf_pages": 54,
+  "page_image_manifest": "render/R14_final/page_image_manifest_R14_20261023.json",
+  "page_image_manifest_sha256": "57CF1E1DC09C27A8083D1EAAB4A603BBB3E5C95230354CBC3ABC4B21C07154E5",
+  "page_images_reviewed": 54,
+  "contact_sheet_review": {
+    "coverage": "all 54 pages in six sheets",
+    "files": [
+      {"path":"contact_sheets/contact_01_09.jpg","sha256":"8A14D52C3D259772AB3E8ED67BCB58CE44A40E8469D51CB18C0EC8787F980308"},
+      {"path":"contact_sheets/contact_10_18.jpg","sha256":"E8871C885E764CB8DC74EDF07283E6586C2AF0CE912F40EC283552E4D84715C7"},
+      {"path":"contact_sheets/contact_19_27.jpg","sha256":"2092A2A27533E04771B212A9E33EA505514571316377FDBDD3C153012B2B9320"},
+      {"path":"contact_sheets/contact_28_36.jpg","sha256":"6C675FF89060D25935D502D92E81E45CCCBFB7BC6D7C48E31411E761D425A874"},
+      {"path":"contact_sheets/contact_37_45.jpg","sha256":"2FE35484C75687D01C188CA9F06A3B96B424D66A45BAA9E85695E523C4FB1C1F"},
+      {"path":"contact_sheets/contact_46_54.jpg","sha256":"101290EBBAF39CEF4CDCBD86982C451BD193D1FAFE9A07C28B710DD3CEC260CB"}
+    ]
+  },
+  "full_resolution_pages_inspected": [1,13,48,49,54],
+  "checks": [
+    "page count and page order",
+    "headers and footers",
+    "table boundaries and continuation headers",
+    "diagram placement",
+    "cover identification and SAMPLE/SYNTHETIC warning",
+    "closing caution remains on the final page"
+  ],
+  "findings": [
+    {"page":1,"status":"PASS","note":"Document and requirement identifiers are legible; SAMPLE/SYNTHETIC boundary and UNKNOWN/NOT_GRANTED status are explicit."},
+    {"page":13,"status":"NONBLOCKING_LAYOUT_NOTE","note":"A four-row continued table occupies a sparse page; repeated table headers are present and no content is clipped."},
+    {"page":48,"status":"PASS","note":"Section 13.3 and 13.4 tables remain intact and readable."},
+    {"page":49,"status":"PASS","note":"Section 13.5 begins with its heading and complete table; no orphaned heading."},
+    {"page":54,"status":"PASS","note":"Closing qualification and checklist remain on the final page; no trailing one-line page."}
+  ],
+  "visual_result": "PASS_WITH_NONBLOCKING_LAYOUT_NOTE",
+  "review_scope_limit": "This is a direct visual layout inspection by the current Codex reviewer; it is not an independent semantic review and does not establish formal acceptance.",
+  "independent_semantic_review_exact_sha": "PENDING",
+  "formal_acceptance": "NOT_GRANTED",
+  "word_export_receipt_status": "PARTIAL_EXPORT_RECEIPT; Word-created PDF exists and hashes match, but exporter shell exit remained UNKNOWN after COM cleanup hang.",
+  "reviewed_at_local": "2026-10-23",
+  "reviewer": "Codex current-thread visual inspection"
+}
