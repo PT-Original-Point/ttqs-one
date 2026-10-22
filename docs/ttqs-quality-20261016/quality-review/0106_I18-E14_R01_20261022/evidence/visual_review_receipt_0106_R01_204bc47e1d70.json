@@ -1,0 +1,22 @@
+{
+  "doc_id": "0106",
+  "requirement_id": "I18-E14",
+  "project_157_index": 115,
+  "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "candidate_sha256": "204bc47e1d7049b872c667a07b1f9fe7d9148bb867ca13b59c89ccaad36d515e",
+  "pdf_sha256": "94b44ba1805612f1da7620d1b922db1b1d60471b71e9a26e0b9ff52e57aeb9ad",
+  "page_count": 29,
+  "renderer": "Microsoft Word 16.0 COM read-only export + Poppler 120 dpi raster",
+  "visual_reviewer": "Codex visual QA in this task; independent from the DOCX builder",
+  "scope": "All pages 1–29 were inspected in five contact sheets; selected pages 1, 10–13, 18, and 29 were also inspected at native 120 dpi. Checked table splitting/repeated headers, page fields, chart labels, content clipping, margins, sample/real labels and final pagination.",
+  "findings_resolved": [
+    "SAMPLE notice, calculation statement, survey instructions and attribution boundary no longer display raw/doubled Markdown dashes.",
+    "T05 review header retained the shorter original label after an expanded label caused T07 header-only page; current DOCX is 29 pages and T07 header plus Q1–Q5 remain together on page 13.",
+    "Removed the terminal horizontal rule that created an empty trailing page.",
+    "T05 table continues with repeated header; no clipping observed."
+  ],
+  "remaining_visual_findings": [],
+  "page_manifest_sha256": "6aba53b55c84c97c8bc20562dc4d2238fc29597de4199723b31acc7da4f124de",
+  "visual_verdict": "PASS",
+  "formal_acceptance": false
+}
