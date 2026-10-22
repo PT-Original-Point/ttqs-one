@@ -262,9 +262,142 @@
       "cli_exit_code": "PENDING",
       "adoption": "NONE",
       "status": "ACTIVE_PROGRESSING_BUT_NO_TERMINAL_RETURN"
+    },
+    {
+      "work_id": "TTQS-0105-WRITER-R07-20261022-01",
+      "doc_id": "0105",
+      "requirement_id": "I18-E13",
+      "os_pid": 65076,
+      "process_alive": true,
+      "process_exit_code": 259,
+      "native_session_id": "ses_e9d858be9ffeR53uwL0FL4qS3v",
+      "native_outcome": "ACTIVE",
+      "native_last_updated_tpe": "2026-10-22T15:52:09.020+08:00",
+      "selected_model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode"
+      },
+      "actual_serving_model": "UNKNOWN",
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "input": 179291,
+        "output": 53126,
+        "reasoning": 19394,
+        "cache_read": 2789568,
+        "cache_write": 0,
+        "local_cost_field": 0.0,
+        "not_final": true
+      },
+      "native_message_count": 21,
+      "tool_calls": [
+        {
+          "seq": 7,
+          "tool": "write",
+          "state": "completed"
+        },
+        {
+          "seq": 18,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 27,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 36,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 45,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 54,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 63,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 72,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 81,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 90,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 99,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 108,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 117,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 126,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 135,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 144,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 153,
+          "tool": "grep",
+          "state": "completed"
+        },
+        {
+          "seq": 153,
+          "tool": "read",
+          "state": "completed"
+        },
+        {
+          "seq": 166,
+          "tool": "read",
+          "state": "completed"
+        }
+      ],
+      "output": {
+        "path": "docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022/writer/opencode_writer_manuscript_0105_R07_raw.md",
+        "bytes": 127585,
+        "sha256": "31b7de140f4cd93169c709f30e111ca0994267b59fa6a76ec06ccc1fda5cea12",
+        "last_write_tpe": "2026-10-22T15:50:58+08:00",
+        "adoption": "NONE; in-progress raw output"
+      },
+      "cli_exit_code": "PENDING",
+      "status": "ACTIVE_PROGRESSING_BUT_NO_TERMINAL_RETURN"
     }
   ],
-  "last_native_snapshot_tpe": "2026-10-22T15:44:13+08:00",
+  "last_native_snapshot_tpe": "2026-10-22T15:53:21+08:00",
   "latest_progress_snapshot": {
     "work_id": "TTQS-0105-WRITER-R07-20261022-01",
     "doc_id": "0105",
@@ -274,7 +407,7 @@
     "process_exit_code": 259,
     "native_session_id": "ses_e9d858be9ffeR53uwL0FL4qS3v",
     "native_outcome": "ACTIVE",
-    "native_last_updated_tpe": "2026-10-22T15:43:06.076+08:00",
+    "native_last_updated_tpe": "2026-10-22T15:52:09.020+08:00",
     "selected_model": {
       "id": "mimo-v2.6-flash-free",
       "providerID": "opencode"
@@ -282,15 +415,15 @@
     "actual_serving_model": "UNKNOWN",
     "provider_billing": "UNKNOWN",
     "tokens": {
-      "input": 136924,
-      "output": 33049,
-      "reasoning": 17405,
-      "cache_read": 634112,
+      "input": 179291,
+      "output": 53126,
+      "reasoning": 19394,
+      "cache_read": 2789568,
       "cache_write": 0,
       "local_cost_field": 0.0,
       "not_final": true
     },
-    "native_message_count": 9,
+    "native_message_count": 21,
     "tool_calls": [
       {
         "seq": 7,
@@ -325,18 +458,77 @@
       {
         "seq": 63,
         "tool": "edit",
-        "state": "streaming"
+        "state": "completed"
+      },
+      {
+        "seq": 72,
+        "tool": "edit",
+        "state": "completed"
+      },
+      {
+        "seq": 81,
+        "tool": "edit",
+        "state": "completed"
+      },
+      {
+        "seq": 90,
+        "tool": "edit",
+        "state": "completed"
+      },
+      {
+        "seq": 99,
+        "tool": "edit",
+        "state": "completed"
+      },
+      {
+        "seq": 108,
+        "tool": "edit",
+        "state": "completed"
+      },
+      {
+        "seq": 117,
+        "tool": "edit",
+        "state": "completed"
+      },
+      {
+        "seq": 126,
+        "tool": "edit",
+        "state": "completed"
+      },
+      {
+        "seq": 135,
+        "tool": "edit",
+        "state": "completed"
+      },
+      {
+        "seq": 144,
+        "tool": "edit",
+        "state": "completed"
+      },
+      {
+        "seq": 153,
+        "tool": "grep",
+        "state": "completed"
+      },
+      {
+        "seq": 153,
+        "tool": "read",
+        "state": "completed"
+      },
+      {
+        "seq": 166,
+        "tool": "read",
+        "state": "completed"
       }
     ],
     "output": {
       "path": "docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022/writer/opencode_writer_manuscript_0105_R07_raw.md",
-      "bytes": 90066,
-      "sha256": "0ddcd052dc39d1e385fd964d1acccc3aa5e1bcfccb0e22f4efb78ce375d2d647",
-      "last_write_tpe": "2026-10-22T15:42:50+08:00",
+      "bytes": 127585,
+      "sha256": "31b7de140f4cd93169c709f30e111ca0994267b59fa6a76ec06ccc1fda5cea12",
+      "last_write_tpe": "2026-10-22T15:50:58+08:00",
       "adoption": "NONE; in-progress raw output"
     },
     "cli_exit_code": "PENDING",
-    "adoption": "NONE",
     "status": "ACTIVE_PROGRESSING_BUT_NO_TERMINAL_RETURN"
   }
 }
