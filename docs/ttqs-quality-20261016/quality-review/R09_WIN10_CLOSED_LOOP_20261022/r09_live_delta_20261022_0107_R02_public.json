@@ -169,20 +169,28 @@
     },
     {
       "id": "T13",
-      "status": "PENDING_GITHUB_EXACT_BYTE_READBACK"
+      "status": "PASS_OBSERVED_EXACT_REMOTE_BYTE_READBACK",
+      "basis": "32/32 first-sync files exact by SHA-256 at commit e39cb7728b8e56398ae04e5bd0ce45a3cd7ab45a; DOCX SHA-256 66160c8f... and Git blob SHA 11bfc3ec..."
     },
     {
       "id": "T14",
-      "status": "HISTORICAL_SIMULATION_ONLY",
-      "basis": "Prior unknown-push scenario was a fixture; current push has not yet occurred."
+      "status": "PASS_OBSERVED_EXPECTED_HEAD_LEASE_AND_READBACK; NEGATIVE_FIXTURE_NOT_REINDUCED",
+      "basis": "Branch updated from expected head 2080a1eb...; 32/32 file byte readbacks matched; no unknown write."
     }
   ],
   "github_sync": {
-    "status": "PREPARING_PUBLIC_EVIDENCE",
-    "readback": "PENDING",
-    "base_head": "2080a1eb89c6b3ea73a99f73f4bb7d9324cdeeba"
+    "status": "VERIFIED",
+    "base_head": "2080a1eb89c6b3ea73a99f73f4bb7d9324cdeeba",
+    "first_sync_commit": "e39cb7728b8e56398ae04e5bd0ce45a3cd7ab45a",
+    "initial_payload_files": 32,
+    "exact_sha256_readback": 32,
+    "mismatches": 0,
+    "candidate_remote_sha256": "66160c8fdf8d674317c895687182f2883c2447a5294e926c4d6f412a3190767e",
+    "candidate_git_blob_sha": "11bfc3ecb58ca18f549867666168dc79d045c0f5",
+    "readback_receipt_path": "docs/ttqs-quality-20261016/quality-review/0107_I18-E15_R02_20261022/evidence/github_exact_byte_readback_0107_R02.json",
+    "readback_receipt_sha256": "7ab60673fa843648912289a02c9777abd2aada52e529ccd7d3557518a81dbb75"
   },
-  "next_legal_action": "Publish the stable synthetic 0107 R02 candidate and minimum source/semantic/technical evidence to PR #92 with a lease; fetch every uploaded blob back and compare exact DOCX SHA. Then reconcile existing 0108 C08 candidate and receipts before any new dispatch.",
+  "next_legal_action": "Reconcile existing 0108 C08 candidate, exact-SHA review, current visual/render status and GitHub readback without rebuild; then derive the next unowned source-ready document stage.",
   "formal_acceptance": "NOT_GRANTED",
   "real_third_party_evidence": "UNKNOWN"
 }
