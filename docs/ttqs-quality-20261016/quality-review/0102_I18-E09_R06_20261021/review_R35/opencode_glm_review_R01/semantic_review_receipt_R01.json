@@ -1,0 +1,52 @@
+{
+  "schema": "ttqs.opencode_independent_semantic_review.v1",
+  "work_id": "TTQS-0102-I18E09-R35-SEMANTIC-REVIEW-R01",
+  "doc_id": "0102",
+  "official_requirement_id": "I18-E09",
+  "unique_blueprint_project_index": 110,
+  "printed_official_checkbox_serial": "UNKNOWN",
+  "candidate_revision": "R35",
+  "candidate_docx_sha256": "04f71db94dd8949b2e0fc67fc0df5577c2a647138b95e3beadd3be2dea4457aa",
+  "review_packet_sha256": "c2e61bdbf7e92b1a5d08d58b1907fb74aaee5e97f9d13432b524259e995e297c",
+  "review_prompt_sha256": "8dcb77bd2742d7d07c0c9f960b2e519d84bf3b379c8d4d89f32de4a4ef14fa4b",
+  "reviewer": "OpenCode v2 CLI separate session from the R34 Writer",
+  "requested_model": "opencode/glm-5.3-flash-free",
+  "model_catalog_observed": "The local opencode models output listed this SKU as free at dispatch time.",
+  "actual_model_identity": "UNKNOWN",
+  "identity_note": "Captured native JSONL contains step_start and text events without a model field. The response prose claims GLM-5.3-Flash Free but is not native model metadata.",
+  "fallback": "NOT_AUTHORIZED; no native evidence proves provider-side fallback did or did not occur.",
+  "session_id": "ses_e99faefd2ffehQKzyvREetJ4Md",
+  "pid": 21648,
+  "exit_code": 0,
+  "elapsed_seconds": 76.2,
+  "stderr_bytes": 0,
+  "visible_window_detected": false,
+  "main_window_handle_samples": 366,
+  "token_usage": "UNKNOWN",
+  "provider_billing": "UNKNOWN",
+  "semantic_scope_verdict": "PASS",
+  "review_findings": [
+    {
+      "severity": "LOW",
+      "finding": "R35 history note cites §7.2 Form A; Form A is §4.2.",
+      "locator": "T0045-R0018"
+    },
+    {
+      "severity": "LOW",
+      "finding": "Filled Form D sample label says 競賽日期 while master row says 競賽日期與地點.",
+      "locator": "T0019-R0007 versus T0017-R0007"
+    },
+    {
+      "severity": "INFO",
+      "finding": "Simulated limited-consent workflow remains explicitly synthetic and REAL consent UNKNOWN.",
+      "locator": "T0009/T0012/T0029/T0031"
+    }
+  ],
+  "locator_check": "The two LOW locations and the master-item comparison were checked against the exact extracted R35 packet.",
+  "visual_scope": "NOT_REVIEWED",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "NOT_VERIFIED",
+  "overall_document_state": "CANDIDATE_SEMANTIC_PASS_VISUAL_PENDING_MODEL_ID_UNKNOWN",
+  "response_sha256": "a0e86d0b96b3b7b9970ecc5073dbb8ec92ab10c8755857da46d0b4677a95ff09",
+  "stdout_sha256": "2065aea32307bcd89f5dd7a038cc974ea518a3d800a14c92841d71729c643bfd"
+}
