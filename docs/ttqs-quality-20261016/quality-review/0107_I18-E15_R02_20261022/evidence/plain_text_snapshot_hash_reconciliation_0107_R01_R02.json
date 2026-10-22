@@ -1,0 +1,29 @@
+{
+  "doc_id": "0107",
+  "requirement_id": "I18-E15",
+  "candidate_sha256": "66160c8fdf8d674317c895687182f2883c2447a5294e926c4d6f412a3190767e",
+  "method": "Recomputed python-docx plain text serialization: paragraphs, then each table row cell sequence; newline between blocks and final newline. This is distinct from the structural JSON body-block snapshot.",
+  "r02": {
+    "recomputed_plain_text_sha256": "de6576b8177280d6e2323c389e1075855c97802cfed358cbe0195044fe7314dd",
+    "saved_packet_snapshot_sha256": "de6576b8177280d6e2323c389e1075855c97802cfed358cbe0195044fe7314dd",
+    "manifest_snapshot_sha256": "de6576b8177280d6e2323c389e1075855c97802cfed358cbe0195044fe7314dd",
+    "recomputed_matches_saved_and_manifest": true
+  },
+  "structural_diff": {
+    "json_snapshot_sha256": "e088ce13863a35e7e36481b0401d71bf4cc961fcc2194e1340200880c686787b",
+    "serialization": "JSON structural body-block representation in r01_r02_deterministic_text_diff_0107.json; not byte-comparable with the plain-text .txt snapshot"
+  },
+  "r01": {
+    "recomputed_plain_text_sha256": "2db33a9a23678ebcedbecd739fec2243b5a67a76d469622148b11b222e527af9",
+    "prior_review_dispatch_extracted_text_sha256": "0dfd7360e0da5b330faefcc1fd91fa48be7012e8f99ff6aeb37ac228fb059301",
+    "reconstructed_match": false,
+    "status": "UNRESOLVED_PROVENANCE_HASH_MISMATCH"
+  },
+  "reviewer_response": {
+    "raw_stdout_sha256": "e13917ffd64260d7178211442c698a51a30be163f0d0b8e8b27cc45bc62d4e03",
+    "extracted_response_path": "ttqs-one/docs/ttqs-quality-20261016/quality-review/0107_I18-E15_R02_20261022/review/opencode_semantic_delta_R02_final_response.md",
+    "extracted_response_sha256": "5fc59925bd9a031b2de807fae37b4b2295248c218a96453dec4fcc90714306d7",
+    "response_chars": 3645
+  },
+  "conclusion": "R02 plain-text snapshot and packet hash agree exactly. The separate structural JSON snapshot uses a different representation. R01 prior dispatch hash does not reproduce from the current R01 DOCX using the R02 patcher serializer; retain that historical mismatch as UNKNOWN rather than claiming reconciliation."
+}

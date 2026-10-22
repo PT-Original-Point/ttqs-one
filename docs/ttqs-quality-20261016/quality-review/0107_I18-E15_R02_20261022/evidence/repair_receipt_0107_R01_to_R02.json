@@ -1,0 +1,38 @@
+{
+  "doc_id": "0107",
+  "requirement_id": "I18-E15",
+  "requirement_page": 7,
+  "internal_blueprint_index": 116,
+  "source_commit": "2080a1eb89c6b3ea73a99f73f4bb7d9324cdeeba",
+  "blueprint_blob": "8c2bbe7ca9dcbb03088a48934b9e57e7147ede63",
+  "crosswalk_blob": "ee3fc17e4e0e89a5b5d404c6f0ca7bd92a1a4f9b",
+  "official_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "base_candidate_sha256": "748ac062b33c1da0db75aa882905c4d0e8c624b0ab50189b7b37146bc6968651",
+  "new_candidate_sha256": "66160c8fdf8d674317c895687182f2883c2447a5294e926c4d6f412a3190767e",
+  "base_source_sha256": "c25b4367ef289e39ba630656d22b8aeec9616210a0c6e8388f5bd531c868e892",
+  "new_source_sha256": "32a9c666e7dd3d7a82a8197bf4d0de89978c5db220620f1ab6a706b47e081a8a",
+  "review_finding_addressed": "Blueprint 5.D requires a cutoff date in the three-metric recomputation table; R01 had the 90-day window in the cohort card and narrative but no explicit cutoff-date column in the table.",
+  "localized_change": "Added an explicit 觀察窗截止日 / cutoff_date final column to the metrics table and populated 2026-07-29 for metrics A, B, C and the attempt-count reference row. Updated visible candidate version/work ID to R02.",
+  "date_basis": "SAMPLE cohort completion 2026-04-30; 90-day observation window is 2026-05-01 through 2026-07-29 inclusive, as stated in the existing cohort card and attempt table.",
+  "no_change": "No results, numerator/denominator sets, formulas, synthetic records, other tables, body paragraphs, or REAL evidence claims changed.",
+  "technical_comparison": {
+    "metrics_non_date_cells_unchanged": true,
+    "all_other_tables_unchanged": true,
+    "all_paragraphs_unchanged": true
+  },
+  "antigravity_work_id_reconciliation": {
+    "dispatch_work_id": "TTQS-0107-I18-E15-SAMPLE-WRITER-R01-20261022-03",
+    "revision_work_id": "TTQS-0107-I18-E15-SAMPLE-WRITER-R01-20261022-02",
+    "shared_conversation_id": "1edc38bc-56b8-4aaa-b950-278d19c1809d",
+    "resolution": "Preserve both immutable raw receipts; do not assert which suffix owns both calls. R02 receives a fresh unique work ID."
+  },
+  "r01_independent_review": {
+    "verdict": "PASS_TEXT_SEMANTIC_ONLY",
+    "candidate_sha256": "748ac062b33c1da0db75aa882905c4d0e8c624b0ab50189b7b37146bc6968651",
+    "review_raw_response_sha256": "3844e50304c9652dc58737b8eb9db267ab3fc3e22284b748a4cccef512228c7a",
+    "scope": "text-only; no binary/page visual inspection; two LOW findings, one corrected here; one receipt-ID inconsistency is preserved as provenance."
+  },
+  "visual_state": "BLOCKED_RENDERER_LANE_ONLY; no extra WINWORD process launched. Current process snapshot: [{\"ProcessId\":66060,\"ParentProcessId\":67620,\"Name\":\"pwsh.exe\",\"CommandLine\":\"\\\"C:\\\\Users\\\\J\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\\\" -Command \\\"try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}\\n$ErrorActionPreference=\\u0027Stop\\u0027;\\n$base=\\u0027E:\\\\PT-Original-Point\\\\ttqs-one\\\\docs\\\\ttqs-quality-20261016\\\\quality-review\\\\0102_I18-E09_R06_20261021\\u0027;\\n$pdf=Join-Path $base \\u0027render\\\\R09_final\\\\0102_R09_Word_native_export.pdf\\u0027;\\nif(Test-Path -LiteralPath $pdf){throw \\u0027Refusing to overwrite existing R09 PDF\\u0027};\\n$script=Join-Path $base \\u0027evidence\\\\R09\\\\export_0102_R09_word_native.ps1\\u0027;\\n$code=@\\u0027\\n$ErrorActionPreference=\\u0027Stop\\u0027\\n$base=\\u0027E:\\\\PT-Original-Point\\\\ttqs-one\\\\docs\\\\ttqs-quality-20261016\\\\quality-review\\\\0102_I18-E09_R06_20261021\\u0027\\n$cdir=Join-Path $base \\u0027candidate\\u0027\\n$matches=@(Get-ChildItem -LiteralPath $cdir -File -Filter \\u0027*_R09.docx\\u0027)\\nif($matches.Count -ne 1){throw \\\\\\\"Expected one R09 DOCX, got $($matches.Count)\\\\\\\"}\\n$docx=$matches[0].FullName\\n$pdf=Join-Path $base \\u0027render\\\\R09_final\\\\0102_R09_Word_native_export.pdf\\u0027\\n$log=Join-Path $base \\u0027evidence\\\\R09\\\\word_export_receipt_0102_R09.json\\u0027\\n$started=(Get-Date).ToString(\\u0027o\\u0027)\\n$before=@(Get-Process WINWORD -ErrorAction SilentlyContinue | ForEach-Object Id)\\n$word=$null;$doc=$null;$owned=$null;$version=$null;$failure=$null;$stage=\\u0027create\\u0027\\ntry {\\n $word=New-Object -ComObject Word.Application\\n Start-Sleep -Seconds 2\\n $after=@(Get-Process WINWORD -ErrorAction SilentlyContinue | ForEach-Object Id)\\n $delta=@($after | Where-Object {$_ -notin $before})\\n if($delta.Count -ne 1){$stage=\\u0027ownership_ambiguous\\u0027; throw \\\\\\\"Refusing export: new WINWORD count=$($delta.Count); process ownership is ambiguous.\\\\\\\"}\\n $owned=[int]$delta[0]\\n $version=$word.Version\\n $word.Visible=$false;$word.DisplayAlerts=0\\n $stage=\\u0027open_readonly\\u0027\\n $doc=$word.Documents.Open($docx,$false,$true,$false)\\n $stage=\\u0027export_pdf\\u0027\\n $doc.ExportAsFixedFormat($pdf,17)\\n $stage=\\u0027close_document\\u0027\\n $doc.Close(0);$doc=$null\\n $stage=\\u0027quit_owned_word\\u0027\\n $word.Quit();$word=$null\\n} catch { $failure=$_.Exception.Message; throw } finally {\\n if($doc){try{$doc.Close(0)}catch{}}\\n if($word -and $owned){try{$word.Quit()}catch{}}\\n}\\n$exists=Test-Path -LiteralPath $pdf\\n$hash=$null;$size=0\\nif($exists){$hash=(Get-FileHash -LiteralPath $pdf -Algorithm SHA256).Hash.ToLowerInvariant();$size=(Get-Item -LiteralPath $pdf).Length}\\n$docxHash=(Get-FileHash -LiteralPath $docx -Algorithm SHA256).Hash.ToLowerInvariant()\\n$rec=[ordered]@{doc_id=\\u00270102\\u0027;requirement_id=\\u0027I18-E09\\u0027;candidate_sha256=$docxHash;pdf_path=\\u0027render/R09_final/0102_R09_Word_native_export.pdf\\u0027;pdf_sha256=$hash;pdf_bytes=$size;word_version=$version;owned_word_pid=$owned;preexisting_word_pids=$before;exporter=\\u0027Microsoft Word COM\\u0027;read_only=$true;stage=$stage;created=$exists;created_at=$started;finished_at=(Get-Date).ToString(\\u0027o\\u0027);error=$failure;status=$(if($exists){\\u0027PDF_EXPORTED\\u0027}else{\\u0027FAILED\\u0027})}\\n$rec|ConvertTo-Json -Depth 5|Set-Content -LiteralPath $log -Encoding UTF8\\n$rec|ConvertTo-Json -Compress\\n\\u0027@;\\n[IO.File]::WriteAllText($script,$code,[Text.UTF8Encoding]::new($false)); \\u0026 powershell.exe -NoProfile -ExecutionPolicy Bypass -File $script\\\"\"},{\"ProcessId\":70808,\"ParentProcessId\":66060,\"Name\":\"powershell.exe\",\"CommandLine\":\"\\\"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\\\" -NoProfile -ExecutionPolicy Bypass -File E:\\\\PT-Original-Point\\\\ttqs-one\\\\docs\\\\ttqs-quality-20261016\\\\quality-review\\\\0102_I18-E09_R06_20261021\\\\evidence\\\\R09\\\\export_0102_R09_word_native.ps1\"},{\"ProcessId\":15600,\"ParentProcessId\":1104,\"Name\":\"WINWORD.EXE\",\"CommandLine\":\"\\\"C:\\\\Program Files\\\\Microsoft Office\\\\Root\\\\Office16\\\\WINWORD.EXE\\\" /Automation -Embedding\"}]",
+  "formal_acceptance": "NOT_GRANTED",
+  "created_at_local": "2026-10-22T22:39:11+08:00"
+}
