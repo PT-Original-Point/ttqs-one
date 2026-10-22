@@ -1,0 +1,27 @@
+{
+  "receipt_id": "TTQS_ONE_0108_R01_C08_WORD_EXPORT_WATCHDOG",
+  "doc_id": "0108",
+  "requirement_id": "I18-E16",
+  "candidate_docx_sha256": "e4c5b662384d84f6c11d0a1d69860935992216437088febfb791e767075d7f4f",
+  "script": "evidence/export_C08_word_native.ps1",
+  "script_pid_stopped": 68624,
+  "script_command_line_verified": true,
+  "new_word_pid_stopped": 69028,
+  "word_ownership_basis": "pre-export WINWORD snapshot had PID 15600; script spawned the sole new WINWORD PID 69028 at 20:38:50",
+  "preexisting_word_pid_15600_preserved": true,
+  "started_tpe": "2026-10-22T20:38:48+08:00",
+  "watchdog_tpe": "2026-10-22T20:48:46.8795216+08:00",
+  "result": "BLOCKED_TIMEOUT",
+  "elapsed_minutes": 9.8,
+  "script_stage": "UNKNOWN_NO_STAGE_HEARTBEAT",
+  "pdf_created": false,
+  "visual_review": "NOT_PERFORMED",
+  "reason": "No PDF or receipt after >9 minutes while exact script-owned processes remained responsive; stop only those owned processes",
+  "remaining_target_processes": [
+    {
+      "Id": 15600,
+      "ProcessName": "WINWORD"
+    }
+  ],
+  "next_action": "Investigate Word COM repagination/export hang before a new bounded renderer attempt; keep candidate and text-only QA intact"
+}
