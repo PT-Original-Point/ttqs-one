@@ -1,0 +1,55 @@
+{
+  "receipt_id": "TTQS_ONE_OPENCODE_V2_ROLLING24H_RECONCILIATION_R09",
+  "captured_at_local": "2026-10-22T18:31:57.983698+08:00",
+  "window_start_local": "2026-10-21T18:31:57.983698+08:00",
+  "window_end_local": "2026-10-22T18:31:57.983698+08:00",
+  "source_database": "C:\\Users\\J\\.local\\share\\opencode\\opencode.db",
+  "base_inventory_path": "E:\\PT-Original-Point\\ttqs-one\\docs\\ttqs-quality-20261016\\quality-review\\0102_I18-E09_R06_20261021\\evidence\\R09\\opencode_v2_rolling24h_session_inventory_20261022.json",
+  "base_inventory_sha256": "aa9c66b5955eb776ba440a2bae662ac054d9426f461524a661abf3d0816c9839",
+  "ttqs_session_count": 46,
+  "session_outcomes": {
+    "succeeded": 44,
+    "interrupted": 2
+  },
+  "selected_model_counts": {
+    "opencode/deepseek-v4.1-flash-free": 27,
+    "opencode/glm-5.3-flash-free": 2,
+    "opencode/mimo-v2.6-flash-free": 17
+  },
+  "aggregate_usage": {
+    "input": 2388783,
+    "output": 430762,
+    "reasoning": 760083,
+    "cache_read": 9989952,
+    "cache_write": 0,
+    "local_reported_cost": 0.0,
+    "provider_billing": "UNKNOWN",
+    "provider_attested_serving_models": "UNKNOWN"
+  },
+  "interpretation": "Session success is not the same as an adopted document deliverable. Work-to-artifact crosswalk gaps remain in the base inventory and are not inferred here.",
+  "recovered_session": {
+    "session_id": "ses_e9ce6d3ceffecnApJfED1m3jCg",
+    "work_id": "TTQS-0102-I18-E09-SEMANTIC-REVIEW-R09-20261022-01",
+    "doc_id": "0102",
+    "requirement_id": "I18-E09",
+    "candidate_sha256": "b7c9d82667971097313514aaaa0939d912730b63cd7a8e2dd25d4999a8659b92",
+    "selected_model": "opencode/mimo-v2.6-flash-free",
+    "provider_attested_serving_model": "UNKNOWN",
+    "session_outcome": "succeeded",
+    "tokens": {
+      "input": 40206,
+      "output": 4852,
+      "reasoning": 17421,
+      "cache_read": 4800,
+      "cache_write": 0
+    },
+    "client_wrapper_status": "TIMEOUT after 300 seconds; background session completed later in the same OpenCode service",
+    "session_completed_local": "2026-10-22T18:22:29.928000+08:00",
+    "assistant_text_sha256": "255f1ec054863a1eb195c07ef58c0c37b464aec447e0f3722ba70e217c65b729",
+    "recovered_response_file": "E:\\PT-Original-Point\\ttqs-one\\docs\\ttqs-quality-20261016\\quality-review\\0102_I18-E09_R06_20261021\\evidence\\R09\\opencode_semantic_review_0102_R09_recovered.md",
+    "recovered_response_file_sha256": "2094b565b3f1efac6ef0bc5a0f35e99267a8de97c084909f5687731e4796feb2",
+    "independent_semantic_verdict": "PASS 14/14 (semantic scope only)",
+    "visual_status": "PENDING_WORD_NATIVE_RENDER",
+    "formal_acceptance": "NOT_GRANTED"
+  }
+}

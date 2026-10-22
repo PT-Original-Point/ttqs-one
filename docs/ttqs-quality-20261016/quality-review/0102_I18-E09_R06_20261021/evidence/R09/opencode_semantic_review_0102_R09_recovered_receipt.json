@@ -1,0 +1,51 @@
+{
+  "receipt_id": "TTQS-0102-I18-E09-SEMANTIC-REVIEW-R09-RECOVERED",
+  "work_id": "TTQS-0102-I18-E09-SEMANTIC-REVIEW-R09-20261022-01",
+  "doc_id": "0102",
+  "official_requirement_id": "I18-E09",
+  "project_index": 110,
+  "candidate_sha256": "b7c9d82667971097313514aaaa0939d912730b63cd7a8e2dd25d4999a8659b92",
+  "ordered_body_text_sha256": "67d0ff109cfdb0497530658ad3f364483e23dd3356f9d8eea4012ea01dc30e7d",
+  "source_commit": "cde1e7aa6172f5aa7252fadfba2f48cc25dd673d",
+  "source_packet_git_blob": "41a98e2f0eca92d8ad6be05b396f6a18ceb4ca68",
+  "unique_blueprint_git_blob": "d20368335369a0680c97a43360d60f120cc37bfe",
+  "reviewer_route": "OpenCode CLI v2.0.32; plan agent; read-only; no tools; no file mutation; no Computer Use",
+  "selected_model": "opencode/mimo-v2.6-flash-free",
+  "provider_attested_serving_model": "UNKNOWN",
+  "session_id": "ses_e9ce6d3ceffecnApJfED1m3jCg",
+  "assistant_message_id": "msg_163193080001mt1Ap4ohiK0O7f",
+  "session_outcome": "succeeded",
+  "client_wrapper_status": "TIMEOUT after 300s; background service completed later; original TIMEOUT receipt preserved",
+  "session_created_local": "2026-10-22T18:12:37.482000+08:00",
+  "session_completed_local": "2026-10-22T18:22:29.928000+08:00",
+  "usage": {
+    "input": 40206,
+    "output": 4852,
+    "reasoning": 17421,
+    "cache_read": 4800,
+    "cache_write": 0,
+    "reported_local_cost": 0.0,
+    "provider_billing": "UNKNOWN"
+  },
+  "review_output_path": "E:\\PT-Original-Point\\ttqs-one\\docs\\ttqs-quality-20261016\\quality-review\\0102_I18-E09_R06_20261021\\evidence\\R09\\opencode_semantic_review_0102_R09_recovered.md",
+  "review_output_sha256": "2094b565b3f1efac6ef0bc5a0f35e99267a8de97c084909f5687731e4796feb2",
+  "assistant_text_sha256": "255f1ec054863a1eb195c07ef58c0c37b464aec447e0f3722ba70e217c65b729",
+  "semantic_verdict": "PASS",
+  "criterion_count": "14/14 PASS as reported by reviewer",
+  "r08_findings": {
+    "B1": "CLOSED",
+    "B2": "CLOSED",
+    "B3": "CLOSED"
+  },
+  "blockers": [],
+  "nonblocker_count": 8,
+  "scope_limitations": [
+    "Reviewer did not open/hash candidate binary; exact SHA and ordered-text binding were quoted from supplied packet/technical receipt.",
+    "Technical receipt was not re-executed during this review.",
+    "R09 Word-native visual review remains PENDING; no visual PASS inferred.",
+    "Formal acceptance remains NOT_GRANTED."
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence_status": "UNKNOWN",
+  "method": "Recovered assistant text from local OpenCode SQLite after CLI wrapper timeout; no second reviewer dispatch"
+}
