@@ -1,0 +1,75 @@
+{
+  "schema": "ttqs-one-r09-document-reconciliation-v1",
+  "observed_at_taipei": "2026-10-22T21:38:41+08:00",
+  "project_id": "TTQS_ONE",
+  "document_id": "0106",
+  "requirement_id": "I18-E14",
+  "project_157_index": 115,
+  "official_pdf_page": 7,
+  "official_printed_checkbox_serial": "UNKNOWN",
+  "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "source_commit_before_sync": "cda0246b4019214aad3d712fd5fc89b9a39a01f4",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "candidate": {
+    "path": "candidate/0106_I18-E14_R01.docx",
+    "sha256": "204bc47e1d7049b872c667a07b1f9fe7d9148bb867ca13b59c89ccaad36d515e",
+    "bytes": 351339,
+    "local_remote_byte_match": true,
+    "rebuilt_this_reconciliation": false
+  },
+  "source": {
+    "source_packet_sha256": "6e39bdeff9c8f0955aca5c382346bdd4d897cb7c1a9d22a4a2e438632b333238",
+    "unique_blueprint_sha256": "dad70f1d1772ed20636d50956e3464aa9ac6918df242f7f11cb5a12f0b63a97d",
+    "official_requirement_text_sha256": "f8e21ea6edce71760c9f7cdff582b819e8823affb5328ddaf9fa0f01d7ce6e8a",
+    "crosswalk_row_sha256": "f40f1d00b238e72b225e467970d54aeb8d6cfbd75964f48397f80aa94d2454f7"
+  },
+  "technical": {
+    "verdict": "PASS",
+    "receipt_sha256": "351988e9cbb9d0c6e962957e90f1c289f36c35c119e55ec32d13c3b5edb30bbf",
+    "checks_failed": 0,
+    "recomputed_finance_pairs": 10,
+    "sample_survey_respondents": 10,
+    "body_font_floor_pt": 10.5,
+    "table_font_floor_pt": 9.5,
+    "limitations": [
+      "Deterministic technical validation is not semantic acceptance.",
+      "Official printed checkbox serial remains UNKNOWN."
+    ]
+  },
+  "visual": {
+    "verdict": "PASS",
+    "receipt_sha256": "6bfba7644b2ace8eb635707fe4de3a165f893e9564b0c82ec11b22169876fff1",
+    "manifest_sha256": "6aba53b55c84c97c8bc20562dc4d2238fc29597de4199723b31acc7da4f124de",
+    "pdf_sha256": "94b44ba1805612f1da7620d1b922db1b1d60471b71e9a26e0b9ff52e57aeb9ad",
+    "page_count": 29,
+    "scope": "Pages 1-29 inspected in five contact sheets; pages 1,10-13,18,29 also inspected at native 120 dpi.",
+    "remaining_findings": []
+  },
+  "semantic": {
+    "verdict": "PASS_TEXT_SEMANTIC_ONLY",
+    "reviewer_response_sha256": "b81141e22e5963d9879ab6341c887a38e05895296d6192787dd06aee38e1d518",
+    "text_snapshot_sha256": "eed0cfe267d12c8d253f209f63294b5a7c3c7e2ab3c72c420dd73b997e452894",
+    "candidate_sha_bound_in_response": "204bc47e1d7049b872c667a07b1f9fe7d9148bb867ca13b59c89ccaad36d515e",
+    "reviewer_recomputed_candidate_sha256": false,
+    "requested_model": "opencode/deepseek-v4.1-flash-free",
+    "reported_local_cost": 0,
+    "provider_billing_and_actual_serving_identity": "UNKNOWN",
+    "limitations": [
+      "Text-only review; reviewer did not open the DOCX/PDF bytes.",
+      "Formal blind test not executed.",
+      "Cross-document body-duplication check against peer bodies UNKNOWN.",
+      "No formal acceptance or REAL evidence upgrade."
+    ]
+  },
+  "github_before_sync": {
+    "candidate_sha256": "204bc47e1d7049b872c667a07b1f9fe7d9148bb867ca13b59c89ccaad36d515e",
+    "technical_receipt_sha256": "6e61b228a05ac268b89632e74773304baceeda3fa2c3e84843c3fd005b044970",
+    "visual_receipt_sha256": "04d6722e9d11ea9d6d7cd26a168b8d76557951f16029fd24e821a89967fb1f0d",
+    "page_render_manifest_sha256": "0c712d7b8b025e0d0a4203261eaf46bdf9d3832e3c34caef03bbafe2f216944c",
+    "semantic_response_sha256": "8cb3cc2af42fb4a89f58b7ac439a69201c6803404e366dc00294bf49ec4a89d2"
+  },
+  "reconciliation_result": "CANDIDATE_BYTES_UNCHANGED; LOCAL_CURRENT_EXACT_SHA_RECEIPTS_ARE_NEWER_THAN_REMOTE; SYNC_REQUIRED",
+  "overall_quality_state": "PARTIAL_CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "human_formal_acceptance": "NOT_GRANTED",
+  "real_third_party_evidence": "UNKNOWN_UNTIL_RECEIVED"
+}
