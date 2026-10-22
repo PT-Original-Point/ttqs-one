@@ -1,15 +1,15 @@
 {
   "schema": "ttqs.0102.r33.public_sync_manifest.v1",
-  "work_id": "0102_R33_CANDIDATE_AND_QA_SYNC",
+  "work_id": "0102_R33_CANDIDATE_AND_SEMANTIC_REVIEW_SYNC",
   "doc_id": "0102",
   "official_requirement_id": "I18-E09",
   "source_control_commit": "ef4af2fb975cab9c701b52415ecaa2bd09d19808",
   "source_packet_sha256": "90E2C809914964039563C734881D9DEDC4E969F60179778F391E39FE2C156982",
   "unique_blueprint_sha256": "211DE39325C3EE5811D25738161CC6C5AE6322AE6809FD056400ECD2181074A0",
   "candidate_docx_sha256": "F17048266910F962D2B5DADBA62CB91863F1CECD2684486D80D3C9A0CEEF1C3A",
-  "semantic_review": "PENDING_INDEPENDENT_REVIEW",
+  "semantic_review": "PARTIAL_10_FINDINGS",
   "formal_acceptance": "NOT_GRANTED",
-  "remote_head_before_sync": "ef4af2fb975cab9c701b52415ecaa2bd09d19808",
+  "latest_remote_head_before_review_sync": "3d8668849e5987799de696275e0aeddf85f3c127",
   "manifest_excludes_itself": true,
   "artifacts": [
     {
@@ -149,13 +149,23 @@
     },
     {
       "path": "docs/ttqs-quality-20261016/quality-review/0102_I18-E09_R06_20261021/README_R33_candidate.md",
-      "bytes": 2672,
-      "sha256": "BD2CFB2FEC895654BA5DABE2DB8A5E0C65ED8E5AC3D5BE6BABAF1D8E65BE6C2D"
+      "bytes": 2577,
+      "sha256": "7A11E41F60AFC98E311CDB74FEA613BA864196AEB22F3C404C16C813A6F5F72A"
     },
     {
       "path": "docs/ttqs-quality-20261016/quality-review/0102_I18-E09_R06_20261021/evidence/R33/semantic_review_dispatch_R33_public.json",
-      "bytes": 1488,
-      "sha256": "8F7D28264792F18E11D9D46B4E4E4DE9913FF5710FE2D70E4BAB014843B16F5F"
+      "bytes": 1751,
+      "sha256": "627473090506E415A90F6A69195D52F2CE44C484AEFB00C0622C0F6E375EEECC"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0102_I18-E09_R06_20261021/review/R33/opencode_semantic_R33_response.md",
+      "bytes": 17075,
+      "sha256": "ED255F45D9C8A746D7451C0AD2C1C12CEC90BA33A7389050DFBFE4E0745F7BBA"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0102_I18-E09_R06_20261021/evidence/R33/semantic_review_receipt_R33.json",
+      "bytes": 3612,
+      "sha256": "BFABBDCEBA369CE79E5E916682EE44EC210AF7457B3085A3733720CEE19A6E15"
     }
   ]
 }
