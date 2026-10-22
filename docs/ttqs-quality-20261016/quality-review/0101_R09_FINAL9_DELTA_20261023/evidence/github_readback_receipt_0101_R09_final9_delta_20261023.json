@@ -1,0 +1,62 @@
+{
+  "receipt_id": "TTQS-I18E08-0101-R09-FINAL9-DELTA-GITHUB-READBACK-20261023",
+  "repository": "PT-Original-Point/ttqs-one",
+  "pr": 92,
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "readback_commit": "5836a9a609f775780ffa3fe663f65507ecf91680",
+  "candidate": {
+    "doc_id": "0101",
+    "requirement_id": "I18-E08",
+    "path": "docs/ttqs-quality-20261016/quality-review/0100_0101_R09_20261021/0101_final9/candidate/0101_I18-E08_R09_FINAL9.docx",
+    "local_sha256": "56f433e095f32378f2fd8241c1a27948d2bfe6748da003af5623d265885edb68",
+    "remote_git_blob_sha": "94624ae436571dba496f42dec10996baa4109a63",
+    "state": "CANDIDATE_UNCHANGED",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "evidence_files": [
+    {
+      "path": "workers/opencode_dispatch_receipt.json",
+      "sha256": "3143B98DA174929A409AD4F81683F32C31AF50F7168F2AA111AF872E66BA7414",
+      "git_blob": "9ad4f6cd9bc572fdb71220bed3333b8e189de99b"
+    },
+    {
+      "path": "workers/opencode_stderr.txt",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "workers/opencode_stdout.jsonl",
+      "sha256": "6235D1AA339F261976D8E02978357365C8110BCE740FF449B5A577B48558568B",
+      "git_blob": "4eb9eba1d35d8beac031a3f700b6fcbc8bab1dae"
+    },
+    {
+      "path": "evidence/quality_closeout_0101_R09_final9_R01.json",
+      "sha256": "74A0AB7F1C482BAC60F6FC63C02E9E7E34D7B96013C20B94CC5AA65C1237A2FC",
+      "git_blob": "a4ad9f5ba2cfab7d0e9f50dc20055f12ffc72686"
+    },
+    {
+      "path": "review_packet_0101_R09_final9_delta.md",
+      "sha256": "37518CE28AC83D8A5C4A0AA1C719AC097F8501A8F34DE453F9259DBB27A9C17E",
+      "git_blob": "737e78c4e3d4aae7c1344fa984486cefa8871893"
+    },
+    {
+      "path": "reviewer_response_original.txt",
+      "sha256": "EBEA9A2F2DA673F15439D02608AA4AF08AB2D0793FDEB56F69DA8B7F9CECDB21",
+      "git_blob": "92998f6337c98a06c581e42697679865b84742ca"
+    },
+    {
+      "path": "evidence/semantic_review_result_0101_R09_final9.json",
+      "sha256": "0C569715A376DA7E17FE638721981CEAEDC2949545719A4B5F3601968F8E5325",
+      "git_blob": "500583a14108aea54ca30ea8ffbb8f8565add07d"
+    },
+    {
+      "path": "evidence/technical_qa_scope_corrected_0101_R09_final9_R01.json",
+      "sha256": "4A9342DF0F2C8EA1C13D4EA7B18D4A60DDEF49961EE246D35B2FDB67FA627D50",
+      "git_blob": "801dc75cc3a2855c6699b81153713937bdf36edd"
+    }
+  ],
+  "byte_readback": "All 8 local evidence files fetched from immutable GitHub commit as base64 matched byte for byte after stripping API line wrapping. Candidate DOCX unchanged at listed remote Git blob and local SHA-256.",
+  "semantic_verdict": "PASS_DELTA_INHERITING_FINAL8_BASELINE",
+  "scope_note": "Targeted delta review only; exact final9 corrections verified. Technical and 32-page visual receipts inherited. Dense landscape pages remain a non-blocking usability observation.",
+  "process_note": "OpenCode CLI launched with hidden-window settings; 336 MainWindowHandle samples were zero; exit 0."
+}
