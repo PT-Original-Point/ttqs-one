@@ -1,0 +1,75 @@
+{
+  "receipt_id": "TTQS_ONE_R09_P6_WINDOWS_WORKER_PANEL_SCHEDULER_READBACK",
+  "observed_at_tpe": "2026-10-22T21:04:09.867299+08:00",
+  "host": "DESKTOP-VMV4Q60",
+  "user": "DESKTOP-VMV4Q60\\J",
+  "opencode_service": {
+    "pid": 45628,
+    "alive": true,
+    "classification": "service only; not a Writer"
+  },
+  "writer_0102": {
+    "doc_id": "0102",
+    "requirement": "I18-E09",
+    "observed_processes": [
+      {
+        "pid": 66060,
+        "type": "pwsh launcher",
+        "started": "2026-10-22T18:06:30+08:00",
+        "responding": true
+      },
+      {
+        "pid": 70808,
+        "type": "Windows PowerShell native Word export child",
+        "started": "2026-10-22T18:06:32+08:00",
+        "responding": true
+      },
+      {
+        "pid": 15600,
+        "type": "WINWORD",
+        "started": "2026-10-22T18:06:33+08:00",
+        "responding": true
+      }
+    ],
+    "classification": "ACTIVE_OBSERVED; not duplicated"
+  },
+  "antigravity": {
+    "cli_version": "1.4.5",
+    "processes": [],
+    "logs_modified_last_24h": 0,
+    "dispatch_count_doc0108": 0,
+    "global_24h_dispatch_count": "UNKNOWN",
+    "current_auth": "UNKNOWN; last saved receipt was an auth/sign-in gate, not refreshed"
+  },
+  "panel": {
+    "path": "E:/TTQS/TTQS_ONE_CODEX_RUNTIME/MASTER/dashboard.html",
+    "exists": true,
+    "last_write_tpe": "2026-10-05T22:14:08+08:00",
+    "listeners_ports_8765_8766": [],
+    "os_github_alignment": "UNKNOWN_STALE"
+  },
+  "windows_scheduler": {
+    "task_name": "TTQS_ONE_Codex_Supervisor",
+    "enabled": false,
+    "state": "Ready but disabled",
+    "last_run_tpe": "2026-10-05T05:03:03+08:00",
+    "last_task_result": 0,
+    "missed_runs": 12719,
+    "next_run_property_tpe": "2026-10-22T21:03:03+08:00",
+    "warning": "A disabled Task Scheduler task with a NextRunTime field does not demonstrate an actual trigger."
+  },
+  "codex_thread_recurrence": {
+    "id": "ttqs-one-hourly-quality-goal-resume",
+    "current_thread_bound": true,
+    "120_minute_interval_instruction": "present",
+    "native_interval_and_next_run": "UNKNOWN",
+    "natural_trigger_test": "NOT_VERIFIED",
+    "new_scheduler_created": false
+  },
+  "active_candidate_states": {
+    "0100": "R09a candidate: semantic pass; visual pass 16 pages; not formally accepted; DOCX SHA debd41e7ca1b18b88cad37db118c5b3474df411b3e2d1c87a8351d456245e0b2",
+    "0101": "R09 final9 candidate: semantic pass; visual pass all 32 pages; not formally accepted; DOCX SHA 56f433e095f32378f2fd8241c1a27948d2bfe6748da003af5623d265885edb68",
+    "0108": "R01-C08 candidate: technical pass and text-only semantic delta pass; visual export timed out; SHA e4c5b662384d84f6c11d0a1d69860935992216437088febfb791e767075d7f4f"
+  },
+  "formal_acceptance": "NOT_GRANTED"
+}
