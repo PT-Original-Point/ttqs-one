@@ -1,0 +1,48 @@
+{
+  "receipt_id": "TTQS_ONE_0105_R07_INDEPENDENT_SEMANTIC_REVIEW_20261022",
+  "observed_at_tpe": "2026-10-22T16:29:05+08:00",
+  "doc_id": "0105",
+  "official_requirement_id": "I18-E13",
+  "candidate_docx_sha256": "32bc0b8d7efe767e584b2a848206507d4da73ffa344378143b22186705302027",
+  "review_packet_sha256": "d0db2415f72d37b92cae1a959061282a6b23a6d5533a6d18c2889012d2721798",
+  "reviewer_worker": "OpenCode CLI v2, process PID 24608; native session ses_e9d4f1562ffefAEhlf2U03V4kk",
+  "selected_model": "opencode/mimo-v2.6-flash-free",
+  "actual_serving_model": "UNKNOWN",
+  "provider_billing": "UNKNOWN; local native DB cost 0.0",
+  "native_session_outcome": "succeeded",
+  "native_session_usage": {
+    "input": 97475,
+    "output": 2921,
+    "reasoning": 7468,
+    "cache_read": 6656,
+    "cache_write": 0,
+    "local_cost": 0.0
+  },
+  "response_raw_jsonl_path": "evidence/opencode_semantic_review_0105_R07_stdout.jsonl",
+  "response_raw_jsonl_sha256": "41fe33d4c46481451b056f037ed7952fe4ba37d1cb4536a15908e516f9dca383",
+  "response_text_path": "evidence/independent_semantic_review_0105_R07_raw_response.md",
+  "response_text_sha256": "2ab4c17142d62d618ba0f70c5704a8b5fbc46fd1382dace9a7ffdcb875bed64c",
+  "response_text_bytes": 8221,
+  "verdict": "PASS_SEMANTIC_ONLY_EXACT_SHA",
+  "blocking_defects": [],
+  "nonblocking_notes": [
+    "The optional external page/table/row locator companion was not included in the review packet; its presence/status remains UNKNOWN until rendered and mapped.",
+    "Blueprint §3.6 could be read to require 12 scaled learner items; the reviewer accepted the 11 scored + 1 evidence-prompt design as consistent with no-forced-opinion and observed-evidence requirements.",
+    "Case/document ID is declared at register section level rather than repeated in every row; reviewer found it independently parseable."
+  ],
+  "review_scope": [
+    "Genre and official I18-E13 mapping against official page 7 text and unique Blueprint",
+    "Forms A-F and questionnaire item coverage",
+    "Worked-example counts, rates, means, cross-table arithmetic",
+    "SAMPLE/SYNTHETIC versus REAL boundary and HOLD conditions",
+    "Replacement register 162 fact IDs",
+    "Blind-title recognition and neighboring requirement separation"
+  ],
+  "excluded_scope": [
+    "Visual rendering, typography, pagination, table breaks",
+    "Independent verification of DOCX physical bytes (local technical SHA check is separate)",
+    "Full official source PDF beyond page 7",
+    "Formal association acceptance or REAL evidence"
+  ],
+  "formal_acceptance": "NOT_GRANTED"
+}

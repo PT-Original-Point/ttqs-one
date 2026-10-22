@@ -1,0 +1,42 @@
+## Independent Semantic Review — doc 0102 / I18-E09
+
+**Overall verdict: PARTIAL** (13 of 14 criteria PASS; 1 criterion FAIL)
+**Exact candidate SHA-256 reviewed (as bound in packet, not independently hashed):** `7275d99844ffb0a96773872ccca99f44a6523c827eca76af2a24ef85e23f27da`
+Real evidence: `real_awards=UNKNOWN` · formal acceptance: `NOT_GRANTED` · verified awards: 0 (SAMPLE dataset only).
+
+### Criterion verdicts
+
+| # | Criterion | Verdict | Body locators |
+|---|---|---|---|
+| 1 | Official requirement I18-E09 + correct genre | PASS | Table 1 (文件編號 0102, 對應要求 I18-E09/指標18, 專案索引 110, printed serial=not official number, 官方依據 p.7/p.4, 文件性質 = third-party evidence acquisition/verification/linkage/register); §文件用途; requirement text quoted in 「對應要求與正確用法」 |
+| 2 | Operational end-to-end acquisition/authenticity/verification workflow | PASS | §3.1 flow diagram; Table 5 (10 steps + stop points); Table 6 (deadlines); §3.4 branches A–F (timeout, mismatch, duplicate, forgery, non-response, consent withdrawal); §一分鐘上手; §15.1 checklist |
+| 3 | Learner + organizer templates clearly SAMPLE / NOT SENT | PASS | §5.1 + closing 「（本稿為 SAMPLE TEMPLATE—NOT SENT…）」; §5.3; §6 section banner 「SAMPLE TEMPLATE—NOT SENT 本節所有文字都是未送出樣板」; §6.2; §6.3; Tables 9, 12 (回覆摘要「無（不得預填）」) |
+| 4 | Authenticity and training-linkage logic | PASS | Table 3 (5 evidence levels); §1.2 over-inference; §1.3; Table 14 (14 authenticity checks); Table 15 (state rules); §8.1–8.6, Tables 17–21 (linkage matrix, inference ceiling, 可說/不可說, strength ≤ 較強, "no auto-pass level") |
+| 5 | Two complete synthetic HOLD cases; no fabricated award/original/issuer reply/identity/approval/signature | PASS (with nonblocker, below) | §9.3, §9.4 (示範判定 HOLD), Table 26/28, §10.1/§10.2, Table 30 (第三方原件 無/無), §10.4 (六項「沒有證明」), Table 12 (no reply value), Table 40 (no real data) |
+| 6 | Sample-only calculation 0 verified / 2 due = 0% | PASS | §11.1 (five AND conditions), Table 31 (已驗證得獎案例 0; 流程結案率 0/2=0%), §11.3 (six disclaimers), Table 32 (已驗證率 0/2=0%), §15.5 restatement |
+| 7 | Privacy / consent / authority → HOLD | PASS | §2.3 fixed text 「待依章程及授權名冊確認」; Table 4 (人力不足 fallbacks); §2.2 conflict of interest; Form B consent options; Table 15/23 (#7 同意不含公開→HOLD); Table 39 rows 沒有同意/同意不含公開; §13.1–13.6 (retention 「待依現行法規…確認」) |
+| 8 | Replacement register completeness | PASS | §12.2 Table 34 = F-0102-001…039 (39 rows, matching supplied register in count, IDs, locations, values, roles, states); §12.3 replacement procedure; state vocabulary defined (SYNTHETIC_PLACEHOLDER/AWAITING_REAL_SOURCE/VERIFIED_REAL/RETIRED) |
+| 9 | REAL / SYNTHETIC separation | PASS | Cover 4-line warning; §10 「邊界声明」; Table 8 reminder; SYN-/P-SYN- prefixes throughout; Table 33 register; §13.1 SAMPLE_ filenames with disclaimer; Table 1 status line |
+| 10 | Neighboring official requirements and doc IDs | **FAIL** | Not present anywhere in ordered text. No mention of I18-E08 / index 109 / docs 0100–0101, index 111 (thank-you letter), index 112 (certificate-acquisition rate), index 122 (return rate), and no warning against the `0102_122` archived-file numeric-ID collision. Only own IDs (0102, I18-E09, 110) appear (Table 1). |
+| 11 | Title-blind genre recognition | PASS | With title hidden, Table 1 文件性質 + Forms A–F index (Table 2) + §1 + §7 + §8 + §9 unmistakably read as evidence acquisition + authenticity + training linkage; not a certificate or success story |
+| 12 | Rejection / HOLD rules | PASS | Table 15; Table 23 (9.2 thresholds); §14.1 Table 39 (15 scenarios → HOLD/REJECTED with role, field, deadline); §14.2 three principles; §14.3 prohibited moves; §15.5 final rule |
+| 13 | Actionable by a small association | PASS | Table 4 (roles incl. single-person degradation), §2.4 handoff pack, §一分鐘上手, Table 6/10 timelines, §15.2 15-minute monthly maintenance, §15.3 annual review, plain-language rewrites (Table 11) |
+| 14 | p.7 4-point example not a guarantee / not standalone causation or score proof | PASS | 「對應要求與正確用法」: 「這是例示，不是保證…不能把這個例示當成 4 分門檻」; 「單一獎項不保證 2 分，也不保證 4 分」; §1.2–1.3; §11.3 (not a score); Table 18/20 inference limits |
+
+### Blocker
+- **B1 (criterion 10):** The blueprint's required "Negative neighbors" content is entirely absent from the candidate body. A user cannot tell from this document that index 109 (0100/0101 self-rating), 111 (thank-you letter), 112 (certificate rate ≠ award count), 122 (return rate), or the archived `0102_122_指標18_4分_輔導考照及學員回訓率持續提高.docx` are out of scope. This is a semantic completeness gap required by the supplied blueprint; it prevents full PASS.
+
+### Nonblockers
+- **N1:** CASE-01 state-taxonomy inconsistency: Table 8 `claim_origin = 學員自述＋一張無網址截圖` and §10.1 step 1 (screenshot received) vs. `evidence_state = NOT_RECEIVED`, §7.4 「尚未收到任何來源」, and Table 15 definition (「只有主張或口述」). CASE-02's screenshot was classed `RECEIVED_UNVERIFIED`. Outcome is unaffected (both HOLD, 0 verified), but the distinction is not justified in-text.
+- **N2:** §11.2 labels both claims 「待審主張」 (denominator 2) while CASE-01 `due_date = 未設定`; defensible via internal review dates (2026-10-20/26), but "due" wording is loose.
+- **N3:** Scattered simplified-character forms in an otherwise traditional-Chinese document: `组別` (Table 14 #7), `待联系` (Table 12), `五个問題` (§6.3), `我推论的` (§6.3), `不等于因果` (§8.1), `Form F 写明` (§2.2), `邊界声明` (§10). Orthographic, not semantic.
+- **N4:** Technical receipt field `body_text_unchanged_from_R04: true` cannot be reconciled from text alone with the source packet's `HISTORICAL_INVENTORY_ONLY_BODY_REUSE_PROHIBITED_BY_R04`; likely refers to the current R04 baseline, not the historical inventory file. Out of semantic scope.
+
+### Limitations / scope record
+1. Did not independently hash or byte-compare the DOCX; all SHAs (candidate, packet `1c71d709…`, blueprint `6ddf1fb5…`, page-7 PDF `805386b7…`, ordered text `dcbbb966…`, register `4d859880…`) are taken as bound in the packet.
+2. No visual/page inspection; 53-page visual PASS and technical receipt are context only and did not influence these verdicts (including the two `false` page breaks at 10.1 and 11.2).
+3. **2-point scoring PDF absent:** only the p.7 evidence-table extract was supplied; the assessment-form p.4 2-point/3-point/4-point wording is known only through the source packet and blueprint quotations and could not be verified from source text here.
+4. No tool use, no external browsing: GitHub PR #92 HEAD `4012f92d…`, Git blobs, R04 CSV, and Mission facts are unverified.
+5. Register completeness checked against the supplied register text (ID/row/value match), not against an exhaustive scan of every synthetic value in the body.
+6. The ordered candidate text is party-supplied; no rendering, table-boundary, or pagination claims are made.
+7. No real association, event, award, organizer, identity, approval, signature or issuer reply was inferred; all such facts remain UNKNOWN / NOT_RECEIVED.
