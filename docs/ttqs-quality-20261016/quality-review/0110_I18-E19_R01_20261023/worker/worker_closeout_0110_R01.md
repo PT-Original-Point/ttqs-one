@@ -34,3 +34,7 @@
 ## Evidence index
 
 `worker_artifact_manifest_R01.json` lists each included file's local name, planned remote path, byte length, SHA-256, and evidence class. Empty local streams are omitted from GitHub and their zero lengths are documented above.
+
+## GitHub synchronization byte-integrity correction
+
+The first evidence commit (`675ed18efe08a6044fa3cb270415d4fb4823d7c4`) was pushed, but the first native readback **failed** exact-byte comparison: `AGY_writer_input_R01.md` was 22,361 bytes locally and 22,354 bytes remotely; local SHA-256 was `D00600F37DD0E70084EE713146009FE2A85F50E5FF9DEF06601CBA898DFB8952`, remote SHA-256 was `2150FEBFDC3A1876314F4FA5FE52956F0FFC38C0802BE4436C2A4AE8DAA62047`. The Git clean conversion normalized line endings. This first upload is not claimed byte-identical. A corrective commit will store the exact local bytes without clean filters; final per-file GitHub readback is recorded in `github_readback_receipt_R01.json`.
