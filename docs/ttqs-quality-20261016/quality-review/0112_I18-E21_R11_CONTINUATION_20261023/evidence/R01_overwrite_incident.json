@@ -1,0 +1,12 @@
+{
+  "work_id": "0112-I18-E21-BUILD-CHURN-INCIDENT-R01",
+  "severity": "LOW_PROCESS_CONTROL_DEFECT",
+  "candidate": "R01",
+  "first_observed_sha256": "d3bf75b6015cbc70011f6f07bb8a6eaab609be6166d286544fc4a44966182199",
+  "current_R01_sha256": "12e840feb490d4fe40dcc4d4863a5c53b2b39a75a5ca4576050068ab54a0aa40",
+  "cause": "PowerShell patch-command parsing failed, but the command sequence still executed the original build script and regenerated R01, replacing the first ZIP bytes with a new archive hash despite unchanged body.",
+  "content_unchanged": "TRUE_TO_COMMAND_SEQUENCE; R01 old bytes not retained",
+  "containment": "Preserve current R01 bytes; no further overwrite. Create R02 under a distinct filename only after patch script validates all anchors.",
+  "current_successor_sha256": "0cfb3d594b5ad13dbe6edd9f4c42feb38488938821736d621b23835a554908b0",
+  "status": "CONTAINED_FOR_THIS_ARTIFACT; R01 historical bytes unavailable"
+}
