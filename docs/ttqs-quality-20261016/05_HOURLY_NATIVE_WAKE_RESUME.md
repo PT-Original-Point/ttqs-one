@@ -1,3 +1,25 @@
+# TTQS ONE｜2026-10-23 R11 最新兩小時續工覆寫：保底補漏，禁止變成施工節流
+
+**COMMAND=SCHEDULE_20261023_R11_120M_WATCHDOG_NOT_WORK_THROTTLE**
+
+## ACTIVE R11｜唯一 120m 任務只是 watchdog，不是工作速率配額
+
+1. **保持使用 Human 已批准的唯一 120 分鐘排程，不另建同任務**。原生管理讀回其完整 prompt/task ID/thread/本機工作權限/last+next run，設定 `ACTIVE` 只證明配置；自然觸發與本機工件變化需獨立證據。
+2. **刪除已生效 prompt 中「每次喚醒只做一個 bounded READY stage/每輪最多一 attempt/完成後等下一輪」的語義限制**。每次 stage 完成、result 已回收、沒有未結外部效果或同 scope Writer 時，在同一**仍然活躍的**合法 Windows 執行會話立即做下一個 READY；同一期間可有多個不同 doc 的獨立 READY。保留各次嘗試的 bounded timeout/收據與共享寫入序列化；不盲目重試相同失敗。
+3. **真正的活躍工作不受 120 分鐘限制**，但也不可宣稱 Codex 桌面關閉／會話結束後會自動續工，除非已有合格 OS/native 機制並真正 readback。正常 session 持續做下一 stage；排程只負責在確實中斷、未知效果或定期時從真實收據補漏。
+4. GOAL paused 時若原生介面沒有可用 `/goal resume`，**不把不存在的動作當施工權限前置**。在已授權的本機 Codex/CLI 工作入口作可逆 CANDIDATE；GOAL UI 狀態獨立回報。不可 `/goal clear`、改私有 DB、刪歷史或另建 daemon 來冒稱修好。
+5. **CLI 視窗**：必須非互動隱藏及 stdout/stderr 重導向，先以 `--help` 原生零模型測試。若 `MainWindowHandle` 欄位缺席記 UNKNOWN，不以「無法證實=0」全案停派。真的出現黑窗才隔離精確 PID、修起動方法，不能把 UI 症狀當任何模型都不可用。
+6. **唯一 owner 切換**：若原生 thread-bound Scheduled 只會送訊息、不接觸 E:\TTQS 或無法延續，就先確定安全現有獨立本機執行入口及權限/作用範圍，再先停舊入口並同源 readback、後啟用唯一新入口；尚未驗證 native 入口不能承諾 24x7。舊 disabled Supervisor 不可直接啟用。
+7. **驗收分層**：`CONFIG_120M`（原生設定）≠ `TRIGGER`（真的自然到點）≠ `WORKER_RECOVERED`（已回收成果）≠ `AUTONOMOUS_CONTINUATION`（有真正下一工作／最小 GitHub readback）。缺任一證據標 PARTIAL/UNKNOWN。
+8. **成本與回報**：0 material delta 的 L0/OS 原生補漏不呼叫大模型；定時 App 預設本身可能消耗 Token，不自稱絕對零。只有材料變化才短報告；若沒有變化且無真 READY 則退出，不產生巨型稽核報告。
+9. **保留**：same write scope no double-master、OS sandbox/身份秘密隔離、SAMPLE/REAL/必要 reviewer exact SHA、人類正式核准 Gate。另一文件的模型 429／Word 失敗／0110 Antigravity PAUSED 不停整案。
+
+## ACTIVE R11｜Windows Codex 必須修改真正生效的 native Prompt，而非只讀此 GitHub 檔
+
+在 Codex App 原生 Automation 編輯既有 `ttqs-one-hourly-quality-goal-resume`，核對完整持久 Prompt 與生效時間；以以上九點**取代**有害一句式配額。透過原生 readback 驗證輸入與保存結果；沒有原生編輯入口寫 `NATIVE_AUTOMATION_EDIT_UNAVAILABLE`，不得直接改未公開支援的私有 `automation.toml` 來假裝已安裝。相應 Windows Host 真正工作與自然 trigger 未驗證前，`AUTONOMOUS_RESUME` 一律 UNKNOWN。
+
+---
+
 # TTQS ONE｜每兩小時原生排程與 Codex GOAL 真正復工（2026-10-21 Human 最新覆寫）
 
 > `COMMAND=HUMAN_20261021_TWO_HOUR_GOAL_RESUME_OVERRIDE`
