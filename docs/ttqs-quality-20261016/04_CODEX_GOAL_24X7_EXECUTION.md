@@ -1,3 +1,15 @@
+# TTQS ONE｜2026-10-23 R11 最新 Human GOAL 覆寫（立即連續施工、刪除時間窗自鎖）
+
+**COMMAND=GOAL_20261023_R11_CONTINUOUS_STAGE_NO_NATIVE_RESUME_DEADLOCK**
+
+- **最新 Human 明確變更**：TTQS ONE 120 分鐘排程只是原生故障補漏與未結工作讀回，絕非冷卻時間，也不是一次只准執行一個 READY stage。持續工作的合格本機 Codex/CLI 在前一段已終結、收據與共享寫入明確時，**立即做下一個授權 READY stage**；可以在同一活躍施工會話連續多個 stage。舊 AGENTS 固定 one BUILD+one REVIEW、one attempt per scheduling turn 與 old Canary 開工限制不再適用。
+- 原生 Goal UI 若 PAUSED：先查可取得的真狀態、scope 與 owner；**只有 native 確實提供 resume 才呼叫**，無此操作時不假設 `/goal resume` 可用、不循環等待、不 `/goal clear`。在同一可授權本機 Codex 執行路徑上直接續作可逆 TTQS DOCX 工作，GOAL UI 本身的 paused/resume acceptance 分開記錄。若該原生執行路徑真受平台阻擋，就精確標 lane，並核對現有合法 Windows 入口；不建立新 daemon/DB。
+- 允許不同 doc_id 與不同來源/文稿/確定性 QA 的獨立 READY 車道按 OS 資源與安全隔離**適度並行**；同一 doc/revision 寫入範圍只有一個 Writer；共享 replacement register/CURRENT、GitHub 同一 ref 需防競寫及同源讀回。過期 queue 和 R10.1/0110 的路由 PAUSED 不能當作全案停止。
+- 成本：0 material delta 的原生 L0 檢查不啟動模型；Worker 先用低成本且實際可用的原生 CLI 短包，完成立刻回收/採用/QA；絕不定時自動寫長篇活動報告。真正 SAMPLE/REAL、獨立 exact-SHA QA、Word 原生可用性及 Human 保留授權不變。
+- 最優先另參閱 `06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md` 頂端 R11／R10.1 增量。**GitHub 指令寫入不等於 Windows 排程 Prompt 已持久改好；須由 Windows 原生 Automation 設定讀回**。
+
+---
+
 # TTQS ONE｜GOAL 目標持續施工修訂（Human 2026-10-21；優先於下方 10/16 舊程序）
 
 **COMMAND=GOAL_20261021_STAGE_READY_NO_STOP_R08**  
