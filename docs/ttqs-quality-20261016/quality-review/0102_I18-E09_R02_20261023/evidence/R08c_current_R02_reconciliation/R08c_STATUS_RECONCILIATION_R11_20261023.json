@@ -1,0 +1,73 @@
+{
+  "schema": "ttqs-one-evidence-reconciliation-v1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0102-I18E09-R08C-R11-CURRENT-STATE-RECONCILIATION",
+  "observed_at_tpe": "2026-10-23T21:26:29+08:00",
+  "status": "VERIFIED_CURRENT_EVIDENCE_RECONCILIATION",
+  "github": {
+    "repository": "PT-Original-Point/ttqs-one",
+    "pull_request": 92,
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "head_before_delta": "a96883d7bb91d21a99d7c3a70ca8ce222bcc739a",
+    "current_06_blob": "b566c5c71d1a88e012eca2eeac90c8a3e4ecc06c"
+  },
+  "binding": {
+    "doc_id": "0102",
+    "official_requirement_id": "I18-E09",
+    "project_registry_index": 110,
+    "official_checkbox_serial": "UNKNOWN",
+    "source_packet_sha256": "54d9c05f70b4fef993bd92b656694030878a236e1a2d0c6a21af5d24d94fa1bd",
+    "unique_blueprint_sha256": "d6ab10107f42d6f913e1c94df45c8cd179babaa2603a8a7e628c2db78a0cce75",
+    "candidate_revision": "R08c",
+    "candidate_sha256": "84c279d09484b88724dd59ae8a5155cb8d0be284133258e166269a80c26c67b4",
+    "candidate_bytes": 97846,
+    "candidate_mutated": false
+  },
+  "verified_scope": {
+    "semantic": {
+      "verdict": "PASS",
+      "scope": "SEMANTIC_SCOPE_ONLY",
+      "blockers": 0,
+      "receipt_sha256": "236d3ff9b7294c4efdbd34296dbccee8130a92238eb91f22195265f2212afb54",
+      "reviewer_response_sha256": "604117e890e9d2db8b9aaf8263459254c7e40152a644c9232117ba5114f647ca",
+      "candidate_sha256": "84c279d09484b88724dd59ae8a5155cb8d0be284133258e166269a80c26c67b4",
+      "nonblocking_findings": [
+        "Cover/footer say R08c while version-history latest row still says R08.",
+        "Form F lacks explicit evidence-used field and uses generic deadline labels; related dates/evidence appear elsewhere."
+      ],
+      "provider_backend_identity": "UNKNOWN",
+      "provider_fallback": "UNKNOWN",
+      "provider_billing": "UNKNOWN"
+    },
+    "technical": {
+      "verdict": "PASS",
+      "candidate_sha256": "84c279d09484b88724dd59ae8a5155cb8d0be284133258e166269a80c26c67b4",
+      "receipt_sha256": "72a4c6f1f76f473a87dab21ccd7777be2204e5bbba4540c9e7528f76ec9963a5",
+      "scope": "R08 lineage checks plus R08c label-only package changes; package integrity, 41 tables/396 rows, font floors 10.5pt body and 9.5pt tables."
+    },
+    "visual": {
+      "verdict": "PASS_FOR_VISUAL_LAYOUT_SCOPE",
+      "candidate_sha256": "84c279d09484b88724dd59ae8a5155cb8d0be284133258e166269a80c26c67b4",
+      "receipt_sha256": "f2eef003b225e441679499b954a38243518fb58053d62572b31a6634d21dc869",
+      "pages": 57,
+      "coverage": "55 pages inherited from inspected R08a contact sheets; R08c-specific pages 1 and 57 rerendered and directly inspected.",
+      "pdf_sha256": "c73b667abd9213cf6f1e93fb8a9343bba6f9a94cf30fc7884c68a23286bfc6a0"
+    },
+    "word_export_receipt_sha256": "f5418e6e9173cfd467d6c1edff78c8077bd6f9e1d282e752037be4d1beca2caf"
+  },
+  "state": {
+    "candidate": "CANDIDATE",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "NOT_VERIFIED",
+    "r35_candidate_sha256": "04f71db94dd8949b2e0fc67fc0df5577c2a647138b95e3beadd3be2dea4457aa",
+    "r35_current_r02_review": "NOT_APPLICABLE_TO_R02; no PASS transferred",
+    "decision": "Keep R08c exact bytes. The top-level R11 snapshot and earlier export/technical/visual sidecars contain PENDING fields that predate or are out of scope of the exact-SHA semantic/visual receipts; this delta is the current reconciliation. Do not combine verdicts across candidate SHA.",
+    "historical_flags_preserved": true
+  },
+  "remote_byte_readback": {
+    "prior_package_receipt": "R08c R02 readback recorded 26/26 raw-byte matches at e5167fbdeae5c963fe8e195a1fad097c8a4e3c4f",
+    "new_status_delta_readback": "PENDING_AFTER_COMMIT",
+    "candidate_sha256": "84c279d09484b88724dd59ae8a5155cb8d0be284133258e166269a80c26c67b4"
+  }
+}
+
