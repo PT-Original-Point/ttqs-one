@@ -1,3 +1,25 @@
+# TTQS ONE｜R11 Human 2026-10-23：淨刪自我鎖，120 分鐘只補漏、不節流
+
+**COMMAND=TTQS_ONE_20261023_R11_DELETE_LOCKS_CONTINUOUS_DELIVERY**
+**STATUS=GITHUB_CONTROL_CANDIDATE; WINDOWS_EFFECTIVE_AUTOMATION_PROMPT=UNKNOWN; REAL_120M_TRIGGER=UNKNOWN; FORMAL_ACCEPTANCE=NOT_GRANTED**
+
+Human 最新施工規格：取消固定一 BUILD + 一 REVIEW、每個 scheduling turn 只做一次 attempt、做完一個 bounded READY stage 就要等 120 分鐘、必須使用可能不存在的 /goal resume 才能工作、MainWindowHandle 無法量測就全面禁派、舊 Canary 重新開工 Gate。**120 分鐘仍保留為唯一原生補漏週期，不是工時/產能上限。每個合法 stage 終態確認後，在同一仍活躍的合法 Session 立即開始下一個 READY**，不同文件依 Windows 資源和真正作用範圍可並行。保留相同 DOCX/shared register/同一 Git ref 的單一寫入 owner、unknown-effect readback、全部必要品質和安全保護。
+
+已修改同 repo 的 AGENTS.md、04_CODEX_GOAL_24X7_EXECUTION.md、05_HOURLY_NATIVE_WAKE_RESUME.md 頂端 R11：移除上述現役時間窗與固定席次自鎖。**Windows Codex App 的原生持久 prompt 尚未由本次外部寫入或驗證**；必須在現有 Codex 原生排程介面修改原本唯一的 ttqs-one-hourly-quality-goal-resume、讀回並觀測真正自然觸發；不直接修改未經支援的私有 toml/DB。舊 Disabled Supervisor / AUTONOMY_POLICY.md 未找到現役 consumer 前不得亂改。
+
+**完整可執行施工指揮書**：Human 附件 TTQS_ONE_20261023_R11_自我限制淨刪與連續施工_完整Codex指揮書.md；SHA-256 a0b2d24f60abe4c7819ca64505bb0fb1aae181db5ab0136f0527f4b121679493；336行、39543 bytes。另附同一 120m 排程持久 Prompt 專用文本。Codex 必須實際閱讀並依附件 S0～S12 做精確 Windows 原生讀回、派工、回收、Word QA 和 GitHub 同 SHA 讀回；不只在對話自報完成。
+
+## R11 新鮮已完成證據：舊 R10 待辦需修正
+- 0100 R10 SHA 1563f89a1b83119c5f7c57a21cbf6b89cc0c213231c5d12f90fc4d58fa06039e：已有 GitHub 20檔精確回讀，除新 SHA/缺陷不重建。
+- **0109 R14 的 X02/X03 已在 R10.1 之後結案**：10/23 10:41 commit 3463e230c31305af8d40670932c7cde08101e1dd 修 I18-E17 primary 對照與 I18-E08 負向近鄰；10:42 commit 009b1bce564fdf724bff9e73770d3baebc4250c5 的 github_readback_receipt_R14_X02.json 對 17/17 個遠端檔案核對一致，DOCX SHA 6f846e1737ff0d9b8baf40f459071f9258d51c267935d95222a89e7a05804a63 未變。**禁止再根據下方舊快照重修 0109 來源或重作完整 reviewer。**
+- 0102 Windows R08c SHA 84c279d09484b88724dd59ae8a5155cb8d0be284133258e166269a80c26c67b4（57頁 Word 視覺證據、semantic PENDING）與 GitHub R35 SHA 04f71db94dd8949b2e0fc67fc0df5577c2a647138b95e3beadd3be2dea4457aa（text semantic PASS、visual BLOCKED）不得拼合成一個 PASS；先唯讀 source/content/QA 比較。
+- 0110 Worker 失敗證據已有 20檔 GitHub raw-byte readback，但沒有候選 Word。OpenCode DeepSeek 32000 reasoning/0 output、MiMo 396秒無 assistant；Antigravity parser errors、partial、虛構保存期限，全部 NONADOPTED。0110 Antigravity Writer PAUSED。先 Python 對 L01～L09、C03～C07 題項/量尺/構面/分母建立可重算對照，6/8=75%、7/8=87.5%、+12.5百分點、target90%→REVISE，再以合格短包 OpenCode v2 外包，不同長 prompt 原樣重投。
+- Windows Human 10:33 唯讀面板 8765/8766 無監聽、queue 10/19、thread automation ACTIVE/120m 但原生 last/next/natural trigger UNKNOWN；面板不是 READY/Writer 的 Gate。sandbox=unelevated、Node REPL 120s、hook 3s、multi_agent_v2=false 沒證據是 Writer 六分鐘上限，保留不盲改。
+
+執行順序：S0 Windows native OS/owner/原生 scheduler prompt → S1 GitHub fresh exact HEAD → S2 確認舊 Policy 真正 consumer → S3 透過原生 UI 更新唯一排程有效 Prompt → S4 本機 AGENTS/GitHub readback → 選 0102 有界 diff 或 0110 無模型量表映射（依當前 OS READY）→ 真 CLI 小包回收 → Word／獨立語意 QA → 必要 GitHub bytes readback → **同一活躍 Session 直接施工下一 READY，不等待下個 120m**。
+
+---
+
 # TTQS ONE｜R10.1 2026-10-23 10:28 即時增量：0110 完整撰稿尚未成功（Human 最新施工修訂）
 
 **COMMAND=TTQS_ONE_20261023_R10_1_0110_WORKER_FAILURE_DELTA**  
