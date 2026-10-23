@@ -13,4 +13,4 @@ Candidate state: stable CANDIDATE. Independent exact-SHA semantic review is BLOC
 - Review dispatch used the listed free model opencode/deepseek-v4.1-flash-free. Native session export records outcome failed, provider.quota HTTP 429, native cost 0, and no semantic response text. The failure receipt and sanitized session summary are in review/.
 - The candidate remains CANDIDATE, not accepted. No Antigravity model fallback or Computer Use was used.
 
-See evidence/ for technical/layout receipts, review/ for source-bound review and failure evidence, and render/ for the native PDF and visual contact sheets.
+GitHub raw-byte readback verified all 29 manifest-listed files at commit 8901f86ecb8263c42d902f345b8f49d3b84dccfe; see evidence/R20_GITHUB_RAW_BYTE_READBACK_RECEIPT.json. See evidence/ for technical/layout receipts, review/ for source-bound review and failure evidence, and render/ for the native PDF and visual contact sheets.
