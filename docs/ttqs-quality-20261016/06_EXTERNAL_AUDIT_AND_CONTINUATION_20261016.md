@@ -1,3 +1,29 @@
+# TTQS ONE｜2026-10-23 R10 最新增量鑑識與「停止無效重做」指示（Human 指揮書附錄）
+
+**COMMAND=TTQS_ONE_20261023_R10_EXACT_RECONCILIATION_AND_EXECUTION**  
+**PROJECT_ID=TTQS_ONE；SCOPE=既有 PR #92 可逆 CANDIDATE；STATUS=GITHUB_CONTROL_CANDIDATE，Windows 實機 R10 施工尚未由本次 ChatGPT 驗證。**
+**來源**：Human 提供 2026-10-22 09:30～2026-10-23 09:30 Windows 本機 24 小時報告，SHA-256 `dee4ae1bd40fcf0f41166c882e7e0de9b4028cd6142b4b6a90c1b10c43dc20fe`；R10 完整詳細指揮書為 Human 新版附件，SHA-256 `46838700c39d39a13454245f84be4579adb75270881d2c034c1c4d2e23d7d783`，約 58KB/514 行。本檔只登錄新發現與下一合法動作，不複製 58KB 全文；執行時 Human 附件和此段相容並行，後續 Human 最新命令優先。
+
+**2026-10-23 約10:17 台灣 fresh GitHub**：PR #92 `open/draft`，HEAD 在寫本段前 `f275dc6acf7b2da25dec75de3b7c6a182a232d8e`，指定 24 小時窗口 36 commits；報告截止後再有 2 commits 新增 0110 I18-E19 的 source/Unique Blueprint。這些不是正式 TTQS 接受，也不是此刻 OS live Writer。
+
+## P0｜先消除「已存在當未存在」與「同一文件不同 SHA 拼 PASS」
+
+1. **0100 R10**：本機 09:30 報告稱缺 GitHub readback，但 GitHub 已有 `0100_R10_20261023/evidence/github_readback_receipt_0100_R10.json`，對應 commit `ccbc60cdd9b60e09262bb46d9b165b7396291140`、20個檔案 readback，DOCX SHA-256 `1563f89a1b83119c5f7c57a21cbf6b89cc0c213231c5d12f90fc4d58fa06039e`。先 fresh-read OS 實際候選與 GitHub，同 SHA 則不重推、不重建、不全文重審。
+2. **0109 R14**：本機報告只知 staging；GitHub 已有 R14 Word/PDF/QA，DOCX SHA-256 `6f846e1737ff0d9b8baf40f459071f9258d51c267935d95222a89e7a05804a63`，但沒有同口徑全檔 raw-byte readback 收據。優先補最小遠端對帳，不重做已存在 Word/QA。另 `quality_summary_R14.json` 把 **I18-E08 / 0100+0101** crosswalk 收據用在 **0109 / I18-E17** 身上；這是 sidecar SOURCE_PROVENANCE 缺陷。先以正式 03 與 crosswalk 的 I18-E17 列修來源收據，查正文是否受影響；沒有正文缺陷就不動 DOCX bytes。
+3. **0102 I18-E09**：Windows R08c DOCX SHA `84c279d09484b88724dd59ae8a5155cb8d0be284133258e166269a80c26c67b4`，有 Word 57頁 visual Scope，但該 SHA semantic PENDING／remote PENDING；GitHub R35 DOCX SHA `04f71db94dd8949b2e0fc67fc0df5577c2a647138b95e3beadd3be2dea4457aa`，同 SHA semantic TEXT_ONLY PASS，但 LibreOffice unavailable、Word COM timeout，visual BLOCKED。**不得拼兩個 SHA 的 PASS，不因 R35 數字較大就取代 R08c**。唯讀比較兩者正式來源、章節/CASE/算式/SAMPLE/缺陷/版面後選一條最短收斂路徑；builder exit 1 且有穩定 Word 先 bounded salvage；精確阻擋只停 0102 promotion lane。
+4. **0103 I18-E10**：10/23 兩次 Writer 零輸出（一筆 32,000 reasoning，0 output）是**此次新派工失敗**，不是需求完全無 DOCX。GitHub 已有 R02 baseline、R03 未採用的 layout regression；優先局部修 R02 Word 分頁，禁止同大 prompt 再派整篇撰稿。
+
+## P1｜雙 CLI Worker、成本與排程的限定改善
+
+5. **Antigravity**：0100 R10 指定 Gemini 3.8 Flash High，實際 fallback 到 CCPA，回覆未採用；不能記 Gemini PASS/扣額。先用同一 Windows 帳戶的原生 CLI --help/模型設定/已知成功收據查來源；不能證實指定 Gemini 就停**這一條**文字路由，不能 Computer Use、權限繞過或未批准付費，其他 OpenCode READY 繼續。
+6. **OpenCode v2**：0100 R10 Writer 4項小型修補有採用；0100 reviewer input 78,783/reasoning 48,079/output 4,614，0109 reviewer input 54,587/reasoning 34,991/output 1,627，0103 Writer 32,000 reasoning/0 output。減量目標是**短而專的來源包＋確定性靜態檢查＋只補欠缺語意範圍**，不是減少必要品質。已同 SHA 同範圍 PASS 不全文重派；免費模型型錄／exit0／session idle 都不能證明可用/付費/完成，所有 attempt 需回收原始回覆、exit/error、採用 SHA 與實際模型或 UNKNOWN。
+7. **0110 / I18-E19**：PR #92 在 09:50 已有 `0110_I18-E19_R01_20261023/source/SOURCE_PACKET_0110_I18-E19_R01.md` 與 `UNIQUE_BLUEPRINT_0110_I18-E19_R01.md`；先查 OS 活躍 Writer/未同步工件，沒有衝突就當 `READY_WRITER`，做**學員問卷 + 目標客戶問卷 + 課後行動計畫**完整 SAMPLE 示範，不虛構真正組織績效或統計顯著。
+8. **監控/排程**：Windows 09:30 快照 8765/8766 無 LISTEN；dashboard/MASTER_STATUS 10/05，queue 10/19，仍 STALE/OFFLINE。Codex Thread automation `RRULE:FREQ=HOURLY;INTERVAL=2` ACTIVE 只有設定層，真 last/next/natural run UNKNOWN，舊 OS Supervisor Disabled。先核 OS/本案 panel 原生來源，再按 04/05 原規則修唯一 120m 排程與真正續工；不可只重啟沒有 GitHub API 的舊 panel，也不能把 PTYSD Win11 Issue407 的面板冒充本案。
+
+**單一下一合法動作**：在 Windows OS/Repo fresh-read 後，先處理低成本 0100/0109 遠端與身份收據，再並行有界 0102 分歧調查及（無 Writer 時）0110 合格 CLI Writer；每次一個 work scope、保留已完成 exact SHA、每個穩定候選與終態 QA 才最小推送 PR #92 並 raw-byte readback。勿新建 Supervisor/DB、勿每120分鐘寫重複長篇報告、勿把來源/模型/UI/正式接受不同層級混成 PASS。
+
+---
+
 # TTQS ONE｜2026-10-16 外部稽核 Findings 與 Codex GOAL 即時續工命令
 
 > **證據身分：CANDIDATE／獨立外部稽核記錄**。基準 GitHub：\`PT-Original-Point/ttqs-one\`，PR #92，當時 head \`57f19ed8496aabbf99a8bb5bfc805a1293151ff5\`；查核日期 2026-10-16（台灣）。本記錄只新增可追溯 Findings 與已批准的下一施工動作，不把 Draft PR 升格 canonical、不撤銷既有 exact-SHA PASS、不修改 DOCX、OS 排程或對外服務。正式資料及 Windows 執行存活需各自 fresh-read。
