@@ -1,3 +1,16 @@
+# TTQS ONE｜R10.1 2026-10-23 10:28 即時增量：0110 完整撰稿尚未成功（Human 最新施工修訂）
+
+**COMMAND=TTQS_ONE_20261023_R10_1_0110_WORKER_FAILURE_DELTA**  
+**來源**：PR #92 `0110_I18-E19_R01_20261023/worker/worker_closeout_0110_R01.md`、`github_readback_receipt_R01.json`；Human 外部指揮書最終完整附件 SHA-256 `609ad4438bb194b0305486b4a891fae9027de65df27749e22d927fd0f77ad823`（63,233 bytes，542 行）。下方 R10 09:50 關於「0110 source/Blueprint READY」是**來源就緒、尚未派工的歷史截面**；本 R10.1 優先。實際執行時先讀 GitHub/Windows 是否還有更新工作。
+- GitHub `f3ffb6fedafb2760fb431bc0c29cc0c4e42f1786` 保存 0110 Worker 失敗收據的遠端讀回；先前 `675ed18e...` 有 Git 換行差異，經 `a5edf0a2...` 修復後 20/20 raw bytes exact match。**這只是失敗證據保存成功，不是候選 Word 成功。**
+- OpenCode DeepSeek（CLI v2）0110 Writer：8,648 input／32,000 reasoning／0 output；MiMo 另一 Writer 約396秒無 assistant 回覆。二者皆無可採用稿，不能用免費模型型錄、session 或 exit 自報成功。
+- Antigravity 0110：前兩次 CLI 參數錯誤，A3 3分鐘 timeout 只回不完整稿，補稿內容不連續且提出沒有來源的三年保存期限、聲稱已檢查實體檔案、聲稱 QA PASS、建議拿掉 SAMPLE 標記；全部 **REJECTED**，指定 Gemini 的真實 serving identity 仍 UNKNOWN。依現有 Human 三次失敗加三次修正停派規則，**只暫停 0110 的 Antigravity Writer 路由**，其餘獨立工作可繼續。現有設定中的 `--mode plan` 在 CLI 禁用 slash expansion 時有警告無效，不能當安全驗收。
+- **下一個實質且低成本動作**：不要再派相同 0110 整篇。以 Python/來源表修正 Learner L01–L09（9題 vs 4構面）、Client C03–C07（5題 vs 3構面）的 item→construct→scale→N/A→分母映射；L04 頻率 4–1/0 不得混入一般 4–5 favorable formula；重算合成 `6/8=75.0%` → `7/8=87.5%`、差 `+12.5 percentage points`、target `90%`、應 `REVISE` 而非 CLOSE。未取得協會保留年限、批准或真實問卷不能憑空填寫。
+- 0110 數據結構修好、OS 無同一 Writer 活躍，且**工作包真正縮小**時，才允許在合格免費 OpenCode CLI 以「單張量表映射／一份問卷／單份行動計畫」分段派工、逐件回收；Antigravity 路由不合格就不派 Gemini-only Writer。其間先處理下方 X01（0100已remote讀回）、X02/X03（0109遠端收據與錯誤 crosswalk）、X04（0102 R08c vs R35 相互獨立的 QA）。
+- 上述只代表 GitHub 已保存 R10.1 候選操作規格。Windows live model/panel/scheduler/GOAL 和 Human 正式接受仍必須同來源 readback，未知寫 UNKNOWN。不得為追逐一個模型路由浪費整個 GOAL。
+
+---
+
 # TTQS ONE｜2026-10-23 R10 最新增量鑑識與「停止無效重做」指示（Human 指揮書附錄）
 
 **COMMAND=TTQS_ONE_20261023_R10_EXACT_RECONCILIATION_AND_EXECUTION**  
