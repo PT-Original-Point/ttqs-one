@@ -1,0 +1,71 @@
+{
+  "schema": "ttqs-one-visual-qa-delta-v1",
+  "doc_id": "0115",
+  "requirement_id": "I19-E02",
+  "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "observed_at_local": "2026-10-24T05:31:03.080587+08:00",
+  "docx_sha256": "ec4e48258dca756eaad81d899d8195285308fa5e08edb99b31e2f2e9856ff707",
+  "pdf_sha256": "1736ab156ca4dd38d133554e93c1d238bcdc3dcd6fc75b30ad3795c551d52a06",
+  "pdf_pages": 24,
+  "renderer": "Microsoft Word native COM ExportAsFixedFormat",
+  "renderer_receipt": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0115_I19-E02_R01_20261024\\render_qa_v6\\0115_I19-E02_R06.pdf.receipt.json",
+  "renderer_receipt_sha256": "50d20113968ad1687ffca1d5a660864e9131ee405ae186225d7bcfc59243ccd1",
+  "raster_manifest": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0115_I19-E02_R01_20261024\\render_qa_v6\\pages\\raster_manifest.json",
+  "raster_manifest_sha256": "59a31f934a3f24a544fa563a31cb5a68d4499ac8c2645429d67f8d1d9747882b",
+  "page_png_hashes_sha256": "59a31f934a3f24a544fa563a31cb5a68d4499ac8c2645429d67f8d1d9747882b",
+  "changed_pages_vs_R05": [
+    1,
+    17
+  ],
+  "directly_inspected_pages": [
+    1,
+    17
+  ],
+  "pixel_identical_to_R05_pages": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "inherited_visual_coverage": {
+    "pages_2_16": "R05 pages pixel-identical; R05 inherited direct R04 inspection",
+    "pages_18_24": "R05 pages pixel-identical; R05 directly inspected pages 18-24"
+  },
+  "R05_visual_receipt_sha256": "d44296bcd86958d519de61a5c0e0c271368749e778e6f825a9e3f28019b1315a",
+  "blank_pages": [],
+  "clipping_or_cutoff": "NOT_OBSERVED_ON_DIRECTLY_INSPECTED_CHANGED_PAGES; unchanged pages inherit R05 coverage",
+  "findings": [
+    {
+      "locator": "page 1 / P001",
+      "status": "PASS",
+      "detail": "R06 candidate label and R03 adopted manuscript label are legible; no clipping."
+    },
+    {
+      "locator": "page 17 / T10R06",
+      "status": "PASS",
+      "detail": "corrected 否則 cell text is legible; table grid and adjacent content intact."
+    }
+  ],
+  "visual_result": "PASS_WITH_HASH_BOUND_INHERITED_UNCHANGED_PAGE_COVERAGE",
+  "semantic_review": "PASS_SCOPED_DELTA; full unchanged-body coverage inherited from R05 exact-SHA review",
+  "real_evidence": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED"
+}

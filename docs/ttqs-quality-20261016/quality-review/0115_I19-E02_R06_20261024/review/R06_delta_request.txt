@@ -1,0 +1,23 @@
+R06 independent semantic delta review. This is a bounded review of two pinpointed corrections on the final candidate. Do not use tools, browse, open files, execute commands, or use computer interaction. Do not claim visual or binary inspection. Judge only the supplied facts and excerpts.
+
+DOC_ID=0115
+OFFICIAL_REQUIREMENT=I19-E02
+OFFICIAL_CHECKBOX_SERIAL=UNKNOWN_NOT_ASSERTED
+CANDIDATE=0115_I19-E02_R06.docx
+CANDIDATE_SHA256=ec4e48258dca756eaad81d899d8195285308fa5e08edb99b31e2f2e9856ff707
+SOURCE_PACKET_SHA256=a89016ff83deefc129c8720dfae1f84752eb6bb5d898a061a3dc148e96e994e8
+UNIQUE_BLUEPRINT_SHA256=504e264d05c468e78970feff0fd68a2549250cc0c00653baee5f786424e81cae
+
+Official requirement, verbatim: 「提出心得與知識分享執行成效（系統及流程面）」.
+
+Prior exact-SHA independent semantic review: R05 SHA bd2119b0e4359dd2066712d91d7f3fb154c094fc27993d6786aab01074f1fe3e received PASS (with minor findings). It reviewed the full extracted body, official excerpt, unique Blueprint, eight-row synthetic dataset and replacement register; found all 14 Blueprint requirements, calculations and SAMPLE/REAL boundary suitable. It did not inspect DOCX/PDF binaries or images. The only two actionable findings were: (1) locator [P001] had a stale R02 label while candidate was R05 and Blueprint was R01; recommended candidate-specific version or reconcile extraction; (2) [T10R06] typo 「否者」 should be 「否則」. Other findings were informational/nonblocking.
+
+R05→R06 targeted diff receipt states exactly two string-only changes, with no other body changes: [P001] label corrected to R06 and [T10R06] typo corrected.
+
+R06 extracted identity paragraph:
+文件編號：0115｜對應需求：I19-E02｜版本：R06（本次校正；正文稿 R03）
+
+R06 extracted table row [T10R06], table=10, row=6:
+可否分享 | 是／否；否則應填 HOLD 或 REJECT 理由。
+
+Please return PASS, PARTIAL, or FAIL only for this exact-SHA semantic delta. Check: (a) the version now accurately identifies the R06 candidate while clearly labeling R03 as the adopted manuscript revision; (b) 「否則」 is correct and the HOLD/REJECT instruction retains its original meaning; (c) whether these edits preserve the prior semantic PASS over the unchanged body, or whether any newly introduced semantic ambiguity remains. Bind your verdict to candidate SHA ec4e48258dca756eaad81d899d8195285308fa5e08edb99b31e2f2e9856ff707 and this supplied extraction. State limitations: no binary, PDF, image, or untouched full-text re-review. Give concise evidence and locators.
