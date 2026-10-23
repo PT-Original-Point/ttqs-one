@@ -1,0 +1,93 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0113",
+  "requirement_id": "I18-E22",
+  "stage": "SOURCE_PREP_R01",
+  "source_head": "e4415b32904af1d0868527eea03cc74792ce954c",
+  "status": "PASS_SOURCE_PREP_TECHNICAL",
+  "checks": {
+    "manifest_matches_SOURCE_PACKET_0113_I18-E22_R01.md": true,
+    "manifest_matches_UNIQUE_BLUEPRINT_0113_I18-E22_R01.md": true,
+    "manifest_matches_SYNTHETIC_DATASET_0113_R01.csv": true,
+    "manifest_matches_SYNTHETIC_REPLACEMENT_REGISTER_0113_R01.csv": true,
+    "official_pdf_manifest_sha_matches": true,
+    "doc_binding_correct": true,
+    "official_locator_bound": true,
+    "four_dataset_periods": true,
+    "unique_fact_ids": true,
+    "case_id_consistent": true,
+    "all_rows_synthetic_only": true,
+    "register_holds_real_data": true,
+    "total_change_math": true,
+    "source_and_blueprint_required_sections": true,
+    "personal_data_not_present_in_synthetic_dataset": true,
+    "no_docx_claimed": true
+  },
+  "arithmetic": [
+    {
+      "period": "2023-12-31",
+      "reconciliation": "42+8-4=46",
+      "net_change": 4,
+      "yoy_percent_1dp": "9.5",
+      "pass": true
+    },
+    {
+      "period": "2024-12-31",
+      "reconciliation": "46+9-4=51",
+      "net_change": 5,
+      "yoy_percent_1dp": "10.9",
+      "pass": true
+    },
+    {
+      "period": "2025-12-31",
+      "reconciliation": "51+10-4=57",
+      "net_change": 6,
+      "yoy_percent_1dp": "11.8",
+      "pass": true
+    }
+  ],
+  "total_change": {
+    "count": 15,
+    "percent_1dp": "35.7"
+  },
+  "artifacts": {
+    "source_packet": {
+      "sha256": "5596e508240bc7995fb69181433756da11e9a0af02923620fc5490f49ea4a99b",
+      "bytes": 2517
+    },
+    "unique_blueprint": {
+      "sha256": "15871b0ace40420c33b4a883c3f0f6dd2f2afa685fa47a1b36d3f66ca514c334",
+      "bytes": 5733
+    },
+    "synthetic_dataset": {
+      "sha256": "6fe0928cc6100eae0ed6245f6866668e230276d51c8451a0a6197d90a3990d1f",
+      "bytes": 659
+    },
+    "replacement_register": {
+      "sha256": "d25abbc9de8e941f3e7a35b7e6da197e7c49c4dc51dd51157a83e1c2ecbe03fd",
+      "bytes": 2336
+    },
+    "source_manifest": {
+      "sha256": "150c713310ed1c148d0ce28c0a943c95d84b9de39a003bc2c245c1a7f8f26352",
+      "bytes": 3134
+    },
+    "official_pdf": {
+      "sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+      "bytes": 303044
+    },
+    "official_page7_render": {
+      "sha256": "0479eecd5ea3c2092ae19e0d4ad7c8f44aa20e525d36938f4957e727e3edbaab",
+      "bytes": 400415
+    },
+    "official_text_extraction": {
+      "sha256": "47f4f8aafd086906f52a5653ad8a0429656ddd2f0ec6cce9aaadab2b110623db",
+      "bytes": 20802
+    }
+  },
+  "limits": [
+    "No DOCX exists in this source-prep directory.",
+    "No semantic review, Word rendering, visual inspection, formal acceptance, or REAL association data is claimed."
+  ],
+  "checked_by": "deterministic local Python validation",
+  "checked_at_local": "2026-10-24 Asia/Taipei"
+}
