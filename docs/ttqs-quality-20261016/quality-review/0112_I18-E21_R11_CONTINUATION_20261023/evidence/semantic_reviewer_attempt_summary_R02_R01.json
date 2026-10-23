@@ -1,0 +1,38 @@
+{
+  "work_id": "0112-I18-E21-SEMANTIC-R02-TEXTONLY-R01",
+  "doc_id": "0112",
+  "candidate_sha256": "0cfb3d594b5ad13dbe6edd9f4c42feb38488938821736d621b23835a554908b0",
+  "attempts": [
+    {
+      "attempt": "R00_PARSE",
+      "status": "NOT_DISPATCHED",
+      "cli_exit": 2,
+      "cause": "--print-timeout requires a duration unit; provider was not called",
+      "stderr_file": "antigravity_semantic_stderr_R02_R01.txt"
+    },
+    {
+      "attempt": "R01_FIXED_ARGS",
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_model": "UNKNOWN",
+      "cli_exit": 0,
+      "duration_seconds": 43.0326193,
+      "conversation_id": "3c244078-d193-4512-91ef-e9b0059efbd9",
+      "usage": {
+        "input_tokens": 13029,
+        "output_tokens": 6272,
+        "thinking_tokens": 4832,
+        "cache_read_tokens": 0,
+        "total_tokens": 19301
+      },
+      "tool_calls_observed_in_returned_json": 0,
+      "computer_use": false,
+      "raw_verdict": "PASS_TEXT_ONLY",
+      "effective_status": "PARTIAL_TEXT_ONLY_UNVERIFIED_MODEL",
+      "response_sha256": "98d5df6a9b5509c6e76eeadce9736e81e409cd579c21b592a48d7fd2679ce4f8",
+      "receipt_sha256": "81b99b16d8736d347409c617ec4a43c437fd5d4128ed9b5e44fe3f339cd8ca96"
+    }
+  ],
+  "visual_review": "NOT_PERFORMED",
+  "formal_acceptance": "NOT_GRANTED",
+  "candidate_bytes_changed": false
+}
