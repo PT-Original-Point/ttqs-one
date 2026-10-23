@@ -1,0 +1,68 @@
+{
+  "project_id": "TTQS_ONE",
+  "work_id": "0103-R19-FORM-D-NA-LOCATOR-COMPLETION",
+  "doc_id": "0103",
+  "requirement_id": "I18-E10",
+  "parent_sha256": "d48e52ff5a1c0e9eb9ad26e1d8e231d770ed28b89d0c331ef1e7ebad54f0dbee",
+  "candidate_sha256": "f72387005f2e230fa702bbe98f888ae0297067055152ac094fc767fc65a77415",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0103_I18-E10_SOURCE_PREP_20261022\\candidate\\0103__I18-E10__感謝函取得與真偽查核工作紀錄_R19.docx",
+  "changes": [
+    {
+      "locator": "T12 R2 C2",
+      "old": "沒有收到函件或可獨立查源紀錄。定位：Form B「未寄出草稿」；Form C「來件狀態」。",
+      "new": "沒有收到函件或可獨立查源紀錄。定位：Form B「狀態」（T9 R15）；Form C「本附件收件狀態」（T10 R21）。"
+    },
+    {
+      "locator": "T12 R4 C2",
+      "old": "沒有原件或副本可判斷。定位：Form C「格式／附件」及來件狀態；目前無收件。",
+      "new": "沒有原件或副本可判斷。定位：Form C「格式」（T10 R7）及「本附件收件狀態」（T10 R21）；目前無原件或可驗證副本。"
+    },
+    {
+      "locator": "T12 R6 C2",
+      "old": "沒有函件日期可與課程、收件日期比對。定位：Form C「文件日期」。",
+      "new": "沒有函件日期可與課程、收件日期比對。定位：Form C「文件日期」（T10 R10）；本案未取得日期。"
+    },
+    {
+      "locator": "T12 R7 C2",
+      "old": "沒有函件內容可與課程或服務核對。定位：Form C「課程／服務連結」；Form E 主張矩陣。",
+      "new": "沒有函件內容可與課程或服務核對。定位：Form C「與課程連結」（T10 R18）；Form E「課程／服務」（T13 R6）及「限制與下一步」（T13 R12）。"
+    },
+    {
+      "locator": "T12 R8 C2",
+      "old": "沒有發文者、收件者或第三方關係可比對。定位：Form C「收件者／關係」。",
+      "new": "沒有發文者、收件者或第三方關係可比對。定位：Form C「收件者（文件所示）」（T10 R9）；Form A「與課程的關係」（T8 R8）。"
+    },
+    {
+      "locator": "T12 R10 C2",
+      "old": "沒有原始檔案位元組可計算雜湊或追溯版本。定位：Form C「檔案雜湊／保存位置」。",
+      "new": "沒有原始檔案位元組可計算雜湊或追溯版本。定位：Form C「檔案特徵／雜湊」（T10 R14）及「保管位置」（T10 R15）。"
+    },
+    {
+      "locator": "T12 R11 C2",
+      "old": "沒有簽名或用印可查驗。定位：Form C「簽署／用印」。",
+      "new": "沒有簽名或用印可查驗。定位：Form C「簽名／用印」（T10 R12）；本案無可查件。"
+    },
+    {
+      "locator": "T12 R12 C2",
+      "old": "沒有收到文件可與其他案件清冊比對。定位：Form D「重複使用」；Form C「來件狀態」。",
+      "new": "沒有收到文件可與其他案件清冊比對。定位：Form D「D11 是否重複使用或重複送件」（T11 R12）；Form C「本附件收件狀態」（T10 R21）。"
+    },
+    {
+      "locator": "T12 R13 C2",
+      "old": "沒有來件可評估函件使用同意範圍；Form A 同意／授權仍未核定、Form B 未寄出。此 N/A 不構成同意、法定例外或寄送許可。",
+      "new": "沒有來件可評估函件使用同意範圍；Form A 同意、代表權及寄送授權仍未核定，Form B 未寄出。此 N/A 不構成同意、法定例外或寄送許可。定位：Form A「同意狀態」（T8 R11）、「收件人代表權／機構書面寄送授權狀態」（T8 R12）及「同意例外書面依據」（T8 R22）；Form B「授權狀態」（T9 R9）及「狀態」（T9 R15）。"
+    },
+    {
+      "locator": "T12 R15 C2",
+      "old": "沒有收到函件或訓練關聯可對照；不得推論訓練績效。定位：Form C「課程／服務連結」；Form E「證據限制」。",
+      "new": "沒有收到函件或訓練關聯可對照；不得推論訓練績效。定位：Form C「與課程連結」（T10 R18）；Form E「對照的學習／評量紀錄」（T13 R9）及「限制與下一步」（T13 R12）。"
+    }
+  ],
+  "checks": {
+    "all_T12_D01_D15_rows_have_a_locator": true,
+    "all_old_missing_field_names_removed": true
+  },
+  "result": "PASS",
+  "scope": "Completed all Form D case-1 N/A evidence locators with visible field names and 1-based table/row bindings; no change to disposition or sample evidence.",
+  "observed_at_utc": "2026-10-23T12:34:13.967363+00:00"
+}
