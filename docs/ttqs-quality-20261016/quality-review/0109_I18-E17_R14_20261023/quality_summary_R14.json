@@ -24,10 +24,22 @@
   ],
   "real_evidence": "UNKNOWN; synthetic sample only",
   "crosswalk": {
-    "git_blob_sha": "1ac4a8419088d947947031b758e29c35a3606514",
     "source_commit": "93b13adc14470817b13e79aef39410f4885def8a",
-    "local_receipt_sha256": "ac553cd397c78a6e949b82965265dbe4e3357ef147c3e204a715ecacb43366c9",
+    "source_path": "docs/ttqs-quality-20261016/quality-review/0098_R08_20261021/inputs/official_129_to_142_crosswalk.csv",
+    "git_blob_sha": "1ac4a8419088d947947031b758e29c35a3606514",
+    "verified_row": "I18-E17,1,0,0109,社群網站知識討論區，人員使用網站頻率高_分析報告",
+    "verified_row_utf8_sha256": "f8d44f7ec65ec7d41a6dfa12a3b588dc8a091173721c9089113441393d25ebae",
+    "role": "PRIMARY_OFFICIAL_CROSSWALK"
+  },
+  "negative_neighbor_crosswalk": {
+    "source_commit": "93b13adc14470817b13e79aef39410f4885def8a",
+    "source_path": "docs/ttqs-quality-20261016/quality-review/0098_R08_20261021/inputs/official_129_to_142_crosswalk.csv",
+    "git_blob_sha": "1ac4a8419088d947947031b758e29c35a3606514",
     "verified_row": "I18-E08,2,1,0100 | 0101,學員培訓前後自我評量表 | 能力提升雷達分析報告",
-    "path": "docs/ttqs-quality-20261016/quality-review/0098_R08_20261021/inputs/official_129_to_142_crosswalk.csv"
-  }
+    "verified_row_utf8_sha256": "fff3f19500fdc444d1d4712fefa6faecdfe2a00f82546609d283b2ae15598f4c",
+    "role": "NEGATIVE_NEIGHBOR_ONLY",
+    "neighbor_requirement_id": "I18-E08",
+    "neighbor_doc_ids": "0100 | 0101"
+  },
+  "source_provenance_status": "PRIMARY_I18-E17_TO_0109_VERIFIED; I18-E08_RETAINED_AS_NEGATIVE_NEIGHBOR_ONLY"
 }
