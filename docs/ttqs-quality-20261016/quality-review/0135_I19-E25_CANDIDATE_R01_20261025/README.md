@@ -38,3 +38,5 @@ DOCX 0135 對應官方 I19-E25，並以專案 157 指標第 140 項作內容設�
 獨立 exact-SHA 語意驗收未完成；REAL 證據未提供；Human 正式接受未授權。視覺與計算檢查只對本 README 所列 SHA 有效，不代表 TTQS 正式分數或文件已可作為協會真實紀錄。
 
 Official full source PDF and the page 7-8 extract remain in the existing public source package: `docs/ttqs-quality-20261016/quality-review/0135_I19-E25_SOURCE_PREP_R01_20261024/source`. They are not duplicated here. The candidate package includes the exact textual mapping, source packet, unique blueprint, evidence excerpts, synthetic data, and hashes needed to trace this candidate.
+
+GitHub raw-byte readback: `GITHUB_READBACK_RECEIPT_R01.json` records 55/55 package files exact at commit `353ce83f5efb582876310c1885cba5a4bfe33cbd`; the receipt covers byte identity only.
