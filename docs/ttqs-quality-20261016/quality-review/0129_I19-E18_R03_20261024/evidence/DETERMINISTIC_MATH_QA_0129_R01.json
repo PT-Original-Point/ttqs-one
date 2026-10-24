@@ -1,0 +1,65 @@
+{
+  "work_id": "TTQS-0129-I19-E18-SOURCE-PREP-R01",
+  "document_id": "0129",
+  "official_requirement_id": "I19-E18",
+  "status": "PASS_DETERMINISTIC_ONLY",
+  "sample_only": true,
+  "cohort_counts": {
+    "pre": 8,
+    "post": 8,
+    "cases_per_cohort_period": 10
+  },
+  "metrics": {
+    "SAMPLE_PRE": {
+      "n": 80,
+      "first_pass": 55,
+      "first_pass_rate": 0.6875,
+      "rework": 25,
+      "rework_rate": 0.3125,
+      "workdays": 400,
+      "mean_workdays_per_case": 5.0,
+      "rework_material_cost_ntd": 200,
+      "cost_per_case_ntd": 2.5
+    },
+    "SAMPLE_POST": {
+      "n": 80,
+      "first_pass": 66,
+      "first_pass_rate": 0.825,
+      "rework": 14,
+      "rework_rate": 0.175,
+      "workdays": 265,
+      "mean_workdays_per_case": 3.3125,
+      "rework_material_cost_ntd": 112,
+      "cost_per_case_ntd": 1.4
+    }
+  },
+  "derived": {
+    "first_pass_rate_change_percentage_points": 13.75,
+    "rework_rate_change_percentage_points": -13.75,
+    "mean_workdays_relative_change_percent": -33.75,
+    "sample_material_rework_cost_change_percent": -44.0,
+    "sample_rework_cost_difference_ntd": -88
+  },
+  "outlier_or_adverse_batch": {
+    "batch_id": "S-B03",
+    "pre_first_pass": 5,
+    "post_first_pass": 4,
+    "decision": "MUST_RETAIN_AND_DISCUSS_NO_SUPPRESSION"
+  },
+  "limitations": [
+    "All values are SAMPLE/SYNTHETIC; no actual association performance or training outcome is asserted.",
+    "No causal attribution to TTQS training.",
+    "NT$8 per reworked case is a demonstration assumption and excludes labor, overhead, software, occupancy and other full costs.",
+    "No actual revenue, market share, complaint rate, or approval evidence is present.",
+    "REAL status remains UNKNOWN until authoritative records are supplied."
+  ],
+  "formula_checks": [
+    "n=80 each period",
+    "first_pass_rate=first_pass/n",
+    "rework_rate=rework/n",
+    "workday_mean=sum(workdays)/n",
+    "cost=sum(rework_case_count*8)",
+    "relative_change=(post-pre)/pre*100"
+  ],
+  "input_sha256": "8ee4e3039354f8d1bb941d5de5bbee2ff8b4e26a5a5212ecd7fb263eae75f8bb"
+}
