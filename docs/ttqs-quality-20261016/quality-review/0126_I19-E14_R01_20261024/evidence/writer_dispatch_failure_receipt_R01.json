@@ -1,0 +1,79 @@
+{
+  "schema": "ttqs-one-worker-dispatch-failure/v1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0126-I19-E14-WRITER-R01",
+  "doc_id": "0126",
+  "official_requirement_id": "I19-E14",
+  "stage": "READY_WRITER",
+  "status": "BLOCKED_NO_ADOPTABLE_MANUSCRIPT",
+  "observed_at_tpe": "2026-10-24T17:32:13.1236673+08:00",
+  "source_binding": {
+    "source_packet_sha256": "1eaa10f4beb343f224b0a71288ee22246b9f00f7acbed04aac440210ea30db0d",
+    "unique_blueprint_sha256": "b2df529a0c3e0812968cfce307722a9339d467787ec8cf30e7f673abffc44bd1",
+    "writer_request_sha256": "fa226354dc2723e05284d4d2697d39e0311b4eaeb492a2918f47bc3a49cb7856",
+    "source_bundle_github_readback_commit": "87b0e14d08b2674ab28319d8139f0301662ea639"
+  },
+  "opencode_v2": {
+    "version": "2.0.32",
+    "requested_model": "opencode/glm-5.3-flash-free",
+    "actual_model": "UNKNOWN; provider rejected request before a model result",
+    "process_id": 78388,
+    "process_started": "2026-10-24T17:25:08.3554903+08:00",
+    "process_ended": "2026-10-24T17:25:10.0207008+08:00",
+    "exit_code": 1,
+    "native_session_id": "ses_e92c59068ffe6tRiNgFmbmQrEc",
+    "provider_error_type": "provider.quota",
+    "http_status": 429,
+    "error_message": "Free usage limit reached. Subscribe to OpenCode Go to keep going: https://opencode.ai/go",
+    "stdout_bytes": 430,
+    "stdout_sha256": "8d1d78ee230c2715ed932ee7fe618b3b863899b352d3fbff31c74f958c4726e0",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "token_usage": "UNKNOWN; error event contains no usage",
+    "adopted_content_sha256": null,
+    "lane": "BLOCKED pending new quota/model availability evidence",
+    "paid_fallback_used": false,
+    "auto_approval_used": false
+  },
+  "antigravity_cli": {
+    "version": "1.4.7",
+    "requested_model": "gemini-3.8-flash-high",
+    "attempt_1": {
+      "exit_code": 2,
+      "failure": "invalid --print-timeout value 900 (duration unit missing); no model inference",
+      "stderr_sha256": "a1c377bc602bd1c0f09f4064d0d342a3eb86e494fc3d3140a082ccad98401d33"
+    },
+    "attempt_2": {
+      "exit_code": 0,
+      "conversation_id": "d595ec97-1e90-4fff-98c4-947eed0721d1",
+      "resolver_log": "Model ID gemini-3.8-flash-high not in local config, defaulting to CCPA",
+      "auth_error": "You are not logged into Antigravity",
+      "permission_error": "headless command permission auto-denied; no permission bypass used",
+      "cli_log_sha256": "cf6db997d2bada515e02a095b556779557defd5a57d18ff7dc7cdc58a22b0df7",
+      "stderr_sha256": "151149b107b4425cda676e9670d2094ecfe8050655ab64d6657f923384f998d4",
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual_gemini_inference": "NOT_PROVEN",
+      "adopted_content_sha256": null,
+      "lane": "BLOCKED pending exact-model configuration/auth path and permitted text-only invocation",
+      "dangerous_skip_permissions_used": false
+    }
+  },
+  "candidate": {
+    "docx": "NONE",
+    "candidate_sha256": null,
+    "adopted_manuscript_sha256": null,
+    "technical_qa": "NOT_RUN",
+    "visual_qa": "NOT_RUN",
+    "independent_semantic_review": "NOT_RUN",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN until source"
+  },
+  "worker_state": {
+    "opencode_service_pid": "45628 service only; no live document writer",
+    "antigravity_writer": "no live process; prior attempts terminal",
+    "observed_at_tpe": "2026-10-24T17:32:13.1477987+08:00"
+  },
+  "next_action": "Continue other independent READY work; resume 0126 only after a permitted exact-model writer path has materially changed; do not retry identical quota/auth/permission-failed inputs."
+}
+
