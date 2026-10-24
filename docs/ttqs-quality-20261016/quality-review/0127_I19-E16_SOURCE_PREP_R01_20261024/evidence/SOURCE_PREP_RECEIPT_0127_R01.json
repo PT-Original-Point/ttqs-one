@@ -3,7 +3,7 @@
   "doc_id": "0127",
   "official_checkbox": "I19-E16",
   "stage": "SOURCE_PACKET_AND_UNIQUE_BLUEPRINT_COMPLETE",
-  "writer_status": "READY_FOR_TEXT_WRITER_DISPATCH",
+  "writer_status": "BLOCKED_OPENCODE_FREE_QUOTA",
   "docx_status": "NOT_CREATED",
   "candidate_sha256": null,
   "formal_acceptance": "NOT_GRANTED",
@@ -43,8 +43,8 @@
     },
     {
       "path": "MAPPING_EVIDENCE_0127_R01.json",
-      "bytes": 1288,
-      "sha256": "77134330260e1a32f56683eb74d792b30673558d3ab79c7d3dd616f3341a3872"
+      "bytes": 1342,
+      "sha256": "f2314e9be2918361abd446777f3dc69c7ba8a5a62c10ca258921574dad56ca61"
     },
     {
       "path": "SAMPLE_CUSTOMER_VALUE_PANEL_R01.csv",
@@ -66,5 +66,9 @@
       "bytes": 5934,
       "sha256": "9a249a2e398407469bd82c9bf5d7a6188c9e3d28be79172bd4cc33b213c700ff"
     }
-  ]
+  ],
+  "writer_attempted": 1,
+  "writer_attempt_result": "EXIT_1_ZERO_OUTPUT_FREE_USAGE_LIMIT_REACHED",
+  "request_sha256": "a92dc3b81e03a4f05faa4d80f0664158756647f5f7fd5b060c6781f8ce54df77",
+  "failure_receipt_sha256": "b354c74e137e2429352fd1a90269207823610608dc1d3615fcec98f2918c22e0"
 }
