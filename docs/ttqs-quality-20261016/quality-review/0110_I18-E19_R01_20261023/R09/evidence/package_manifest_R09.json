@@ -122,6 +122,54 @@
       "path": "UNIQUE_BLUEPRINT.md",
       "bytes": 11388,
       "sha256": "81ec1fc96c9d48fa2a088fbe32ecf8bc31abd88a3d8945ba22585226440a8796"
+    },
+    {
+      "path": "evidence\\0110_R09_item_construct_math_mapping_R11_attempt01_extractor_label_mismatch.json",
+      "bytes": 9650,
+      "sha256": "a4cd57d54a2618407f5b79e25d9a3eefa6c53e5539672ede1670841d237bd9ce"
+    },
+    {
+      "path": "evidence\\0110_R09_item_construct_math_mapping_R11_R02.json",
+      "bytes": 9932,
+      "sha256": "9286695c3256bc1b7fe90affc6360063dca543f41f32cbee25b6cfb54acbf68a"
+    },
+    {
+      "path": "evidence\\0110_R09_item_construct_math_mapping_R11_R03.json",
+      "bytes": 10391,
+      "sha256": "8ea8d3072e67daa258e6d8820fad01434c0e980a0e31488bb22ebd5a7b456d53"
     }
-  ]
+  ],
+  "r11_deterministic_math_mapping": {
+    "status": "PASS_DETERMINISTIC_MATH_AND_ITEM_MAPPING",
+    "candidate_sha256": "7fc82ba7ae25ba3fd422d7abcae2618176f64d4e2e118021122912440d9b740f",
+    "receipt": "evidence\\0110_R09_item_construct_math_mapping_R11_R03.json",
+    "receipt_sha256": "8ea8d3072e67daa258e6d8820fad01434c0e980a0e31488bb22ebd5a7b456d53",
+    "scope": {
+      "items": "14 items: learner L01-L09 and client C03-C07",
+      "denominators": "Learner sample 8; L06 response HOLD/INVALID excluded where applicable. Client sample 6; C01=Yes eligibility; C08 is practice identification, not eligibility.",
+      "scoring": "L04 is a frequency distribution; no mean/favorable rate. Other items: N, zeros, sum, 3-decimal mean, favorable 4-5 count/percentage recalculated.",
+      "outcome": "All Table 34 item summaries match raw SAMPLE responses. Baseline 6/8=75.0%; D0+30 7/8=87.5%; change +12.5 percentage points; fixed-N target >=90% requires 8/8. D0+30 remains REVISE; D0+60 pending, not CLOSE.",
+      "reverse_scoring": "None; no composite weighting; item-level reporting."
+    },
+    "validator_history": [
+      {
+        "file": "evidence\\0110_R09_item_construct_math_mapping_R11_attempt01_extractor_label_mismatch.json",
+        "sha256": "a4cd57d54a2618407f5b79e25d9a3eefa6c53e5539672ede1670841d237bd9ce",
+        "result": "FALSE_FAIL_VALIDATOR_LABEL_LOOKUP; L04 display label includes frequency suffix."
+      },
+      {
+        "file": "evidence\\0110_R09_item_construct_math_mapping_R11_R02.json",
+        "sha256": "9286695c3256bc1b7fe90affc6360063dca543f41f32cbee25b6cfb54acbf68a",
+        "result": "FALSE_FAIL_VALIDATOR_ROW_SCOPE; validator inspected one cell instead of matching the complete row."
+      },
+      {
+        "file": "evidence\\0110_R09_item_construct_math_mapping_R11_R03.json",
+        "sha256": "8ea8d3072e67daa258e6d8820fad01434c0e980a0e31488bb22ebd5a7b456d53",
+        "result": "PASS_DETERMINISTIC_MATH_AND_ITEM_MAPPING; errors=[]"
+      }
+    ],
+    "real_evidence": "UNKNOWN_HOLD",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "r11_sync_parent_head": "bb5abb9c733d14186b16c1a732cf10d5c2f9de37"
 }
