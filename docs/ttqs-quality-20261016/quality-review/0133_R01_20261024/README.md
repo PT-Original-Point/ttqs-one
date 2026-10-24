@@ -34,5 +34,5 @@ Independent title-blind, negative-neighbor semantic review bound to the DOCX SHA
 - source/: official source page, source packet, crosswalk and unique Blueprint lineage.
 - candidate/: complete manuscript and openable DOCX.
 - worker/: reproducible local DOCX builder.
-- qa/: builder receipt, technical and visual scope receipts, truthful worker-routing record.
+- qa/: builder receipt, technical and visual scope receipts, truthful worker-routing record, and GitHub raw-byte readback receipt.
 - render/: Word-native PDF, all 11 page images and chart image.
