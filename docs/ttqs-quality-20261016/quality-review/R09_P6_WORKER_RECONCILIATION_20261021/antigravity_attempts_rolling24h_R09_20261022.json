@@ -1,0 +1,605 @@
+{
+  "receipt_id": "TTQS_ONE_ANTIGRAVITY_RECORDED_ATTEMPTS_ROLLING_24H_R09_20261022",
+  "observed_at_tpe": "2026-10-22T03:57:34+08:00",
+  "window_start_tpe": "2026-10-21T03:57:34+08:00",
+  "window_end_tpe": "2026-10-22T03:57:34+08:00",
+  "attempts_counted": 10,
+  "count_basis": "Distinct retained attempt IDs in 0097/0098/0099 runtime records; not a provider-side or account-side complete invocation log",
+  "unlogged_invocations": "UNKNOWN",
+  "cli_exit_zero_count": 3,
+  "cli_exit_nonzero_or_error_count": 6,
+  "text_return_count": 5,
+  "known_tokens_lower_bound": 149265,
+  "tokens_unknown_for_text_calls": 2,
+  "final_docx_directly_produced_by_attempts": 0,
+  "model_identity_confirmed_count": 0,
+  "all_actual_models": "UNKNOWN; requested model labels do not attest provider serving identity",
+  "all_quota_deltas": "UNKNOWN; no provider-side before/after receipt",
+  "attempts": [
+    {
+      "reconciliation_work_id": "TTQS-0097-I18-E05-ANTIGRAVITY-A01-20261021",
+      "native_work_id": "UNKNOWN_NOT_PRESENT_IN_RETAINED_RECEIPT",
+      "doc_id": "0097",
+      "requirement_id": "I18-E05",
+      "attempt_id": "A01",
+      "worker": "Antigravity CLI",
+      "requested_model": "gemini-3.8-flash-high",
+      "native_actual_model": "UNKNOWN",
+      "provider_and_fallback": "UNKNOWN",
+      "input_sha256": "268392d1f2e8a104bf42d26f387faa0d7ed0ff517f862120119f344ca78bf597",
+      "candidate_docx_sha256": "UNKNOWN_NO_DIRECT_FINAL_DOCX_BOUND_TO_THIS_CALL",
+      "pid": "UNKNOWN_NOT_CAPTURED_IN_RETAINED_RECEIPT",
+      "native_session_id": "UNKNOWN_NOT_CAPTURED_IN_RETAINED_RECEIPT",
+      "output_file_mtime_tpe": "2026-10-21T04:56:22+08:00",
+      "exact_cli_start_time": "UNKNOWN_UNLESS_NATIVE_RECEIPT",
+      "cli_exit_code": "2",
+      "returned_text": false,
+      "elapsed_seconds": null,
+      "known_total_tokens": null,
+      "quota_delta": "UNKNOWN",
+      "provider_billing": "UNKNOWN",
+      "files": {
+        "input": {
+          "local_locator": "0097_R01_ANTIGRAVITY_WRITER_R01/writer/0097_R01_Antigravity_prompt.md",
+          "sha256": "268392d1f2e8a104bf42d26f387faa0d7ed0ff517f862120119f344ca78bf597",
+          "bytes": 16710,
+          "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0097/A01/0097_R01_Antigravity_prompt.md"
+        },
+        "stdout": {
+          "local_locator": "0097_R01_ANTIGRAVITY_WRITER_R01/writer/0097_R01_antigravity_attempt01_stdout.json",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0097/A01/0097_R01_antigravity_attempt01_stdout.json"
+        },
+        "stderr": {
+          "local_locator": "0097_R01_ANTIGRAVITY_WRITER_R01/writer/0097_R01_antigravity_attempt01_stderr.txt",
+          "sha256": "9ff90d3ce9966fa7568d59457e1b1dbb2f95a21dc63d4022df03502c31fff6f3",
+          "bytes": 3033,
+          "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0097/A01/0097_R01_antigravity_attempt01_stderr.txt",
+          "error_excerpt": "invalid value \"300\" for flag -print-timeout: time: missing unit in duration \"300\"\nUsage of agy.exe:\n  --add-dir                       Add a directory to the workspace (repeatable) (default [])\n  --agent                         Agent for the"
+        },
+        "exit": {
+          "local_locator": "0097_R01_ANTIGRAVITY_WRITER_R01/writer/0097_R01_antigravity_attempt01_exit.txt",
+          "sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+          "bytes": 1,
+          "github_locator": null,
+          "value": "2"
+        }
+      },
+      "adoption_state": "No manuscript; no candidate.",
+      "outcome": "CLI argument/parser error; empty output."
+    },
+    {
+      "reconciliation_work_id": "TTQS-0097-I18-E05-ANTIGRAVITY-A02-20261021",
+      "native_work_id": "UNKNOWN_NOT_PRESENT_IN_RETAINED_RECEIPT",
+      "doc_id": "0097",
+      "requirement_id": "I18-E05",
+      "attempt_id": "A02",
+      "worker": "Antigravity CLI",
+      "requested_model": "gemini-3.8-flash-high",
+      "native_actual_model": "UNKNOWN",
+      "provider_and_fallback": "UNKNOWN",
+      "input_sha256": "268392d1f2e8a104bf42d26f387faa0d7ed0ff517f862120119f344ca78bf597",
+      "candidate_docx_sha256": "UNKNOWN_NO_DIRECT_FINAL_DOCX_BOUND_TO_THIS_CALL",
+      "pid": "UNKNOWN_NOT_CAPTURED_IN_RETAINED_RECEIPT",
+      "native_session_id": "UNKNOWN_NOT_CAPTURED_IN_RETAINED_RECEIPT",
+      "output_file_mtime_tpe": "2026-10-21T05:00:44+08:00",
+      "exact_cli_start_time": "UNKNOWN_UNLESS_NATIVE_RECEIPT",
+      "cli_exit_code": "0",
+      "returned_text": true,
+      "elapsed_seconds": 241.2182228,
+      "known_total_tokens": 44572,
+      "quota_delta": "UNKNOWN",
+      "provider_billing": "UNKNOWN",
+      "files": {
+        "input": {
+          "local_locator": "0097_R01_ANTIGRAVITY_WRITER_R01/writer/0097_R01_Antigravity_prompt.md",
+          "sha256": "268392d1f2e8a104bf42d26f387faa0d7ed0ff517f862120119f344ca78bf597",
+          "bytes": 16710,
+          "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0097/A02/0097_R01_Antigravity_prompt.md"
+        },
+        "stdout": {
+          "local_locator": "0097_R01_ANTIGRAVITY_WRITER_R01/writer/0097_R01_antigravity_attempt02_stdout.json",
+          "sha256": "0c9616492cf17528e5077d0976026eaae81af50299a55fc1a3079f4dc9ca250b",
+          "bytes": 67671,
+          "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0097/A02/0097_R01_antigravity_attempt02_stdout.json"
+        },
+        "stderr": {
+          "local_locator": "0097_R01_ANTIGRAVITY_WRITER_R01/writer/0097_R01_antigravity_attempt02_stderr.txt",
+          "sha256": "74e7b4521686e6abeff87ebb6d47e49ebb4f38787dd0cab41ff848ec01008e5f",
+          "bytes": 79,
+          "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0097/A02/0097_R01_antigravity_attempt02_stderr.txt",
+          "error_excerpt": "warning: --mode plan has no effect while slash command expansion is disabled.\n"
+        },
+        "exit": {
+          "local_locator": "0097_R01_ANTIGRAVITY_WRITER_R01/writer/0097_R01_antigravity_attempt02_exit.txt",
+          "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+          "bytes": 1,
+          "github_locator": null,
+          "value": "0"
+        },
+        "adopted_or_reviewed": {
+          "local_locator": "0097_R01_ANTIGRAVITY_WRITER_R01/writer/0097_R01_antigravity_response_raw.md",
+          "sha256": "38c00405794ed7bfd1227fedf270b144152cdbadb97cf2f27dcf32bccce28386",
+          "bytes": 66475,
+          "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0097/A02/0097_R01_antigravity_response_raw.md"
+        }
+      },
+      "adoption_state": "Raw response/manuscript present; downstream exact candidate linkage UNKNOWN.",
+      "outcome": "Raw text returned; not a final DOCX."
+    },
+    {
+      "reconciliation_work_id": "TTQS-0098-I18-E06-ANTIGRAVITY-A01-20261021",
+      "native_work_id": "UNKNOWN_NOT_PRESENT_IN_RETAINED_RECEIPT",
+      "doc_id": "0098",
+      "requirement_id": "I18-E06",
+      "attempt_id": "A01",
+      "worker": "Antigravity CLI",
+      "requested_model": "gemini-3.8-flash-high",
+      "native_actual_model": "UNKNOWN",
+      "provider_and_fallback": "UNKNOWN",
+      "input_sha256": "c3d0aa467b61cacf6d19d3f16741b78f5c6445f9e6b80d0f9b332ee52b81ed41",
+      "candidate_docx_sha256": "UNKNOWN_NO_DIRECT_FINAL_DOCX_BOUND_TO_THIS_CALL",
+      "pid": "UNKNOWN_NOT_CAPTURED_IN_RETAINED_RECEIPT",
+      "native_session_id": "UNKNOWN_NOT_CAPTURED_IN_RETAINED_RECEIPT",
+      "output_file_mtime_tpe": null,
+      "exact_cli_start_time": "UNKNOWN_UNLESS_NATIVE_RECEIPT",
+      "cli_exit_code": 2,
+      "returned_text": false,
+      "elapsed_seconds": null,
+      "known_total_tokens": null,
+      "quota_delta": "UNKNOWN",
+      "provider_billing": "UNKNOWN",
+      "files": {
+        "input": {
+          "local_locator": "0098_R01_ANTIGRAVITY_WRITER_R01/inputs/0098_R01_antigravity_prompt.txt",
+          "sha256": "c3d0aa467b61cacf6d19d3f16741b78f5c6445f9e6b80d0f9b332ee52b81ed41",
+          "bytes": 16112,
+          "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0098/A01/0098_R01_antigravity_prompt.txt"
+        },
+        "stdout": {
+          "local_locator": "0098_R01_ANTIGRAVITY_WRITER_R01/worker/antigravity_attempt01_stdout.txt",
+          "status": "MISSING",
+          "sha256": null,
+          "bytes": null
+        },
+        "stderr": {
+          "local_locator": "0098_R01_ANTIGRAVITY_WRITER_R01/worker/antigravity_attempt01_stderr.txt",
+          "sha256": "a56e70b151b6bc03877544bfe622d52286c41b4aeb1328223eeda62c9110c21c",
+          "bytes": 209,
+          "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0098/A01/antigravity_attempt01_stderr.txt",
+          "error_excerpt": "Error: --print took \"--model\" as its prompt, so the intended prompt was left as an argument and ignored.\nAttach the prompt to the flag (--print='your prompt') and move --model elsewhere on the command line.\n"
+        },
+        "exit": {
+          "local_locator": "0098_R01_ANTIGRAVITY_WRITER_R01/worker/antigravity_attempt01_exit.txt",
+          "sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+          "bytes": 1,
+          "github_locator": null,
+          "value": "2"
+        }
+      },
+      "adoption_state": "No manuscript; no candidate.",
+      "outcome": "CLI argument/parser failure; empty output.",
+      "native_receipt": {
+        "local_locator": "0098_R01_ANTIGRAVITY_WRITER_R01/worker/antigravity_invocation_receipt.json",
+        "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0098/A01/antigravity_invocation_receipt.json",
+        "sha256": "5f5f55ad73c9db088b0c51dfc76f6faf5a508cf32e0d1378df1e9a9cb15731ab",
+        "bytes": 1034
+      }
+    },
+    {
+      "reconciliation_work_id": "TTQS-0098-I18-E06-ANTIGRAVITY-A02-20261021",
+      "native_work_id": "UNKNOWN_NOT_PRESENT_IN_RETAINED_RECEIPT",
+      "doc_id": "0098",
+      "requirement_id": "I18-E06",
+      "attempt_id": "A02",
+      "worker": "Antigravity CLI",
+      "requested_model": "gemini-3.8-flash-high",
+      "native_actual_model": "UNKNOWN",
+      "provider_and_fallback": "UNKNOWN",
+      "input_sha256": "c3d0aa467b61cacf6d19d3f16741b78f5c6445f9e6b80d0f9b332ee52b81ed41",
+      "candidate_docx_sha256": "UNKNOWN_NO_DIRECT_FINAL_DOCX_BOUND_TO_THIS_CALL",
+      "pid": "UNKNOWN_NOT_CAPTURED_IN_RETAINED_RECEIPT",
+      "native_session_id": "UNKNOWN_NOT_CAPTURED_IN_RETAINED_RECEIPT",
+      "output_file_mtime_tpe": "2026-10-21T07:00:22+08:00",
+      "exact_cli_start_time": "2026-10-21T06:54:26.7910183+08:00",
+      "cli_exit_code": -1,
+      "returned_text": true,
+      "elapsed_seconds": null,
+      "known_total_tokens": null,
+      "quota_delta": "UNKNOWN",
+      "provider_billing": "UNKNOWN",
+      "files": {
+        "input": {
+          "local_locator": "0098_R01_ANTIGRAVITY_WRITER_R01/inputs/0098_R01_antigravity_prompt.txt",
+          "sha256": "c3d0aa467b61cacf6d19d3f16741b78f5c6445f9e6b80d0f9b332ee52b81ed41",
+          "bytes": 16112,
+          "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0098/A02/0098_R01_antigravity_prompt.txt"
+        },
+        "stdout": {
+          "local_locator": "0098_R01_ANTIGRAVITY_WRITER_R01/worker/antigravity_gemini_3_8_flash_high_stdout.txt",
+          "sha256": "28a11028cff308436256e575ed5bbf8a5d3d5b566c171557af7ec07bc28053b3",
+          "bytes": 42664,
+          "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0098/A02/antigravity_gemini_3_8_flash_high_stdout.txt"
+        },
+        "stderr": {
+          "local_locator": "0098_R01_ANTIGRAVITY_WRITER_R01/worker/antigravity_gemini_3_8_flash_high_stderr.txt",
+          "sha256": "74e7b4521686e6abeff87ebb6d47e49ebb4f38787dd0cab41ff848ec01008e5f",
+          "bytes": 79,
+          "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0098/A02/antigravity_gemini_3_8_flash_high_stderr.txt",
+          "error_excerpt": "warning: --mode plan has no effect while slash command expansion is disabled.\n"
+        },
+        "exit": {
+          "local_locator": "0098_R01_ANTIGRAVITY_WRITER_R01/worker/antigravity_gemini_3_8_flash_high_exit.txt",
+          "sha256": "1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464",
+          "bytes": 2,
+          "github_locator": null,
+          "value": "-1"
+        },
+        "adopted_or_reviewed": {
+          "local_locator": "0098_R01_ANTIGRAVITY_WRITER_R01/worker/antigravity_manuscript_returned_original.md",
+          "sha256": "32c7c9a38c044d28f58d90d90b56cdf08f00de1143b69352735c36231391af8e",
+          "bytes": 29284,
+          "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0098/A02/antigravity_manuscript_returned_original.md"
+        }
+      },
+      "adoption_state": "Raw manuscript/register returned; downstream exact candidate linkage UNKNOWN.",
+      "outcome": "Text returned, but shell exit was -1.",
+      "native_receipt": {
+        "local_locator": "0098_R01_ANTIGRAVITY_WRITER_R01/worker/antigravity_invocation_receipt.json",
+        "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0098/A02/antigravity_invocation_receipt.json",
+        "sha256": "5f5f55ad73c9db088b0c51dfc76f6faf5a508cf32e0d1378df1e9a9cb15731ab",
+        "bytes": 1034
+      },
+      "exact_cli_end_time": "2026-10-21T07:00:21.4080320+08:00"
+    },
+    {
+      "reconciliation_work_id": "TTQS-0098-I18-E06-ANTIGRAVITY-R03-20261021",
+      "native_work_id": "UNKNOWN_NOT_PRESENT_IN_RETAINED_RECEIPT",
+      "doc_id": "0098",
+      "requirement_id": "I18-E06",
+      "attempt_id": "R03",
+      "worker": "Antigravity CLI",
+      "requested_model": "gemini-3.8-flash-high",
+      "native_actual_model": "UNKNOWN",
+      "provider_and_fallback": "UNKNOWN",
+      "input_sha256": "d8a11b01e45e93e77eb4e0f2aa8cbb4634656e57ee87397d4f6fc22b86a29dc1",
+      "candidate_docx_sha256": "UNKNOWN_NO_DIRECT_FINAL_DOCX_BOUND_TO_THIS_CALL",
+      "pid": "UNKNOWN_NOT_CAPTURED_IN_RETAINED_RECEIPT",
+      "native_session_id": "UNKNOWN_NOT_CAPTURED_IN_RETAINED_RECEIPT",
+      "output_file_mtime_tpe": "2026-10-21T07:56:26+08:00",
+      "exact_cli_start_time": "2026-10-21T07:51:28.5396178+08:00",
+      "cli_exit_code": 0,
+      "returned_text": true,
+      "elapsed_seconds": 296.36,
+      "known_total_tokens": null,
+      "quota_delta": "UNKNOWN",
+      "provider_billing": "UNKNOWN",
+      "files": {
+        "input": {
+          "local_locator": "0098_R01_ANTIGRAVITY_WRITER_R01/qa/0098_R03_antigravity_bounded_writer_packet.md",
+          "sha256": "d8a11b01e45e93e77eb4e0f2aa8cbb4634656e57ee87397d4f6fc22b86a29dc1",
+          "bytes": 25611,
+          "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0098/R03/0098_R03_antigravity_bounded_writer_packet.md"
+        },
+        "stdout": {
+          "local_locator": "0098_R01_ANTIGRAVITY_WRITER_R01/worker/antigravity_R03_stdout.txt",
+          "sha256": "ec4b6f7abf60913e6892ec9de39778a5d048b60b4bce67f6edb7c5659a1f5a95",
+          "bytes": 35067,
+          "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0098/R03/antigravity_R03_stdout.txt"
+        },
+        "stderr": {
+          "local_locator": "0098_R01_ANTIGRAVITY_WRITER_R01/worker/antigravity_R03_stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0098/R03/antigravity_R03_stderr.txt",
+          "error_excerpt": ""
+        },
+        "adopted_or_reviewed": {
+          "local_locator": "0098_R01_ANTIGRAVITY_WRITER_R01/qa/antigravity_R03_response_review.txt",
+          "sha256": "172a28a0eec3be95d00bd264bde446d4761454ebdee6826d66fcd43b688234b8",
+          "bytes": 33224,
+          "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0098/R03/antigravity_R03_response_review.txt"
+        }
+      },
+      "adoption_state": "Response-review artifact exists; exact final candidate linkage UNKNOWN.",
+      "outcome": "Text response returned; no final DOCX directly from call.",
+      "native_receipt": {
+        "local_locator": "0098_R01_ANTIGRAVITY_WRITER_R01/worker/antigravity_R03_invocation_receipt.json",
+        "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0098/R03/antigravity_R03_invocation_receipt.json",
+        "sha256": "e954931dc3fe445f2f3b031fd1a90d3d53374ec89e46d772742b161fb936a59d",
+        "bytes": 965
+      },
+      "exact_cli_end_time": "2026-10-21T07:56:24.9006548+08:00"
+    },
+    {
+      "reconciliation_work_id": "TTQS-0098-I18-E06-ANTIGRAVITY-R04-01-20261021",
+      "native_work_id": "UNKNOWN_NOT_PRESENT_IN_RETAINED_RECEIPT",
+      "doc_id": "0098",
+      "requirement_id": "I18-E06",
+      "attempt_id": "R04-01",
+      "worker": "Antigravity CLI",
+      "requested_model": "gemini-3.8-flash-high",
+      "native_actual_model": "UNKNOWN",
+      "provider_and_fallback": "UNKNOWN",
+      "input_sha256": "59e254bda28e08b97c5fdb6d0fcf6100146b828ac7f2c96f52da77996af6a268",
+      "candidate_docx_sha256": "UNKNOWN_NO_DIRECT_FINAL_DOCX_BOUND_TO_THIS_CALL",
+      "pid": "UNKNOWN_NOT_CAPTURED_IN_RETAINED_RECEIPT",
+      "native_session_id": "UNKNOWN_NOT_CAPTURED_IN_RETAINED_RECEIPT",
+      "output_file_mtime_tpe": "2026-10-21T08:41:43+08:00",
+      "exact_cli_start_time": "UNKNOWN_NOT_DISPATCHED",
+      "cli_exit_code": 2,
+      "returned_text": false,
+      "elapsed_seconds": null,
+      "known_total_tokens": null,
+      "quota_delta": "UNKNOWN",
+      "provider_billing": "UNKNOWN",
+      "files": {
+        "input": {
+          "local_locator": "0098_R01_ANTIGRAVITY_WRITER_R01/qa/0098_R04_antigravity_bounded_patch_packet.txt",
+          "sha256": "59e254bda28e08b97c5fdb6d0fcf6100146b828ac7f2c96f52da77996af6a268",
+          "bytes": 36682,
+          "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0098/R04-01/0098_R04_antigravity_bounded_patch_packet.txt"
+        },
+        "stdout": {
+          "local_locator": "0098_R01_ANTIGRAVITY_WRITER_R01/worker/antigravity_R04_stdout.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0098/R04-01/antigravity_R04_stdout.txt"
+        },
+        "stderr": {
+          "local_locator": "0098_R01_ANTIGRAVITY_WRITER_R01/worker/antigravity_R04_stderr.txt",
+          "sha256": "f3b5ee458d12088dbe92af8b826e1fce6870bda08d3befb5d75ff6dd3db057b7",
+          "bytes": 3039,
+          "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0098/R04-01/antigravity_R04_stderr.txt",
+          "error_excerpt": "invalid value \"360000\" for flag -print-timeout: time: missing unit in duration \"360000\"\nUsage of agy.exe:\n  --add-dir                       Add a directory to the workspace (repeatable) (default [])\n  --agent                         Agent f"
+        }
+      },
+      "adoption_state": "Rejected before model dispatch; no model response.",
+      "outcome": "Invalid --print-timeout duration missing unit; exit 2.",
+      "native_receipt": {
+        "local_locator": "0098_R01_ANTIGRAVITY_WRITER_R01/qa/antigravity_R04_attempt01_execution_receipt.json",
+        "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0098/R04-01/antigravity_R04_attempt01_execution_receipt.json",
+        "sha256": "66a389817c727e03c84ee02659ec206d96ffc96e5ebec81a9cee17396bc8deea",
+        "bytes": 3748
+      },
+      "native_status": "REJECTED_BEFORE_MODEL_DISPATCH"
+    },
+    {
+      "reconciliation_work_id": "TTQS-0098-I18-E06-ANTIGRAVITY-R04-02-20261021",
+      "native_work_id": "UNKNOWN_NOT_PRESENT_IN_RETAINED_RECEIPT",
+      "doc_id": "0098",
+      "requirement_id": "I18-E06",
+      "attempt_id": "R04-02",
+      "worker": "Antigravity CLI",
+      "requested_model": "gemini-3.8-flash-high",
+      "native_actual_model": "UNKNOWN",
+      "provider_and_fallback": "UNKNOWN",
+      "input_sha256": "59e254bda28e08b97c5fdb6d0fcf6100146b828ac7f2c96f52da77996af6a268",
+      "candidate_docx_sha256": "UNKNOWN_NO_DIRECT_FINAL_DOCX_BOUND_TO_THIS_CALL",
+      "pid": "UNKNOWN_NOT_CAPTURED_IN_RETAINED_RECEIPT",
+      "native_session_id": "UNKNOWN_NOT_CAPTURED_IN_RETAINED_RECEIPT",
+      "output_file_mtime_tpe": "2026-10-21T08:46:30+08:00",
+      "exact_cli_start_time": "2026-10-21T08:41:55.2641393+08:00",
+      "cli_exit_code": "UNKNOWN_NOT_RECORDED",
+      "returned_text": true,
+      "elapsed_seconds": 268.8141743,
+      "known_total_tokens": 65187,
+      "quota_delta": "UNKNOWN",
+      "provider_billing": "UNKNOWN",
+      "files": {
+        "input": {
+          "local_locator": "0098_R01_ANTIGRAVITY_WRITER_R01/qa/0098_R04_antigravity_bounded_patch_packet.txt",
+          "sha256": "59e254bda28e08b97c5fdb6d0fcf6100146b828ac7f2c96f52da77996af6a268",
+          "bytes": 36682,
+          "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0098/R04-02/0098_R04_antigravity_bounded_patch_packet.txt"
+        },
+        "stdout": {
+          "local_locator": "0098_R01_ANTIGRAVITY_WRITER_R01/worker/antigravity_R04_attempt02_stdout.txt",
+          "sha256": "f90072437c1d28aa2b9ff235eef235dd4f4be944b53a67a59da05a297484537b",
+          "bytes": 42725,
+          "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0098/R04-02/antigravity_R04_attempt02_stdout.txt"
+        },
+        "stderr": {
+          "local_locator": "0098_R01_ANTIGRAVITY_WRITER_R01/worker/antigravity_R04_attempt02_stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0098/R04-02/antigravity_R04_attempt02_stderr.txt",
+          "error_excerpt": ""
+        },
+        "adopted_or_reviewed": {
+          "local_locator": "0098_R01_ANTIGRAVITY_WRITER_R01/qa/antigravity_R04_patch_proposal.json",
+          "sha256": "1880d14cadc93039616b739f1c84987e3a6abdf89e3a33072dfef4fbc979949c",
+          "bytes": 40850,
+          "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0098/R04-02/antigravity_R04_patch_proposal.json"
+        }
+      },
+      "adoption_state": "Bounded proposal returned; exact final candidate linkage UNKNOWN.",
+      "outcome": "Proposal/raw output retained; no final DOCX directly from call.",
+      "native_receipt": {
+        "local_locator": "0098_R01_ANTIGRAVITY_WRITER_R01/qa/antigravity_R04_execution_receipt.json",
+        "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_24h_R09_20261022/0098/R04-02/antigravity_R04_execution_receipt.json",
+        "sha256": "c4fc2b6b7a59b95a53c58daae1a94d669e186af26fa94657563a16aa52014512",
+        "bytes": 1715
+      },
+      "native_status": "SUCCESS",
+      "exact_cli_end_time": "2026-10-21T08:46:28.2614201+08:00"
+    },
+    {
+      "reconciliation_work_id": "TTQS-0099-I18-E07-ANTIGRAVITY-A01-20261021",
+      "native_work_id": "UNKNOWN_NOT_PRESENT_IN_RETAINED_RECEIPT",
+      "doc_id": "0099",
+      "requirement_id": "I18-E07",
+      "attempt_id": "A01",
+      "worker": "Antigravity CLI",
+      "requested_model": "gemini-3.8-flash-high",
+      "native_actual_model": "UNKNOWN",
+      "provider_and_fallback": "UNKNOWN",
+      "input_sha256": "1d9cb048543adb25517104d68f829a90094840801b2e39e991c39167df2ceb41",
+      "candidate_docx_sha256": "UNKNOWN_NO_DIRECT_FINAL_DOCX_BOUND_TO_THIS_CALL",
+      "pid": "UNKNOWN_NOT_CAPTURED_IN_RETAINED_RECEIPT",
+      "native_session_id": "UNKNOWN_NOT_CAPTURED_IN_RETAINED_RECEIPT",
+      "output_file_mtime_tpe": "2026-10-21T11:59:05+08:00",
+      "exact_cli_start_time": "2026-10-21T11:59:05.130000+08:00",
+      "cli_exit_code": "2",
+      "returned_text": false,
+      "elapsed_seconds": null,
+      "known_total_tokens": null,
+      "quota_delta": "UNKNOWN",
+      "provider_billing": "UNKNOWN",
+      "files": {
+        "input": {
+          "local_locator": "0099_R01_BLUEPRINT_R01/worker/antigravity_writer_task_0099_R01.md",
+          "sha256": "1d9cb048543adb25517104d68f829a90094840801b2e39e991c39167df2ceb41",
+          "bytes": 14929,
+          "github_locator": "0099_R01_BLUEPRINT_R01/worker/antigravity_writer_task_0099_R01.md"
+        },
+        "stdout": {
+          "local_locator": "0099_R01_BLUEPRINT_R01/worker/antigravity_writer_stdout_R01.json",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "github_locator": "0099_R01_BLUEPRINT_R01/worker/antigravity_writer_stdout_R01.json"
+        },
+        "stderr": {
+          "local_locator": "0099_R01_BLUEPRINT_R01/worker/antigravity_writer_stderr_R01.txt",
+          "sha256": "4cb01e42c36d7235625054e37698ff638a43c91898eb1f4237c28ba9bd5849b1",
+          "bytes": 207,
+          "github_locator": "0099_R01_BLUEPRINT_R01/worker/antigravity_writer_stderr_R01.txt",
+          "error_excerpt": "Error: --print took \"--model\" as its prompt, so the intended prompt was left as an argument and ignored.\nAttach the prompt to the flag (--print='your prompt') and move --model elsewhere on the command line.\n"
+        },
+        "exit": {
+          "local_locator": "0099_R01_BLUEPRINT_R01/worker/antigravity_writer_exit_R01.txt",
+          "sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+          "bytes": 1,
+          "github_locator": "0099_R01_BLUEPRINT_R01/worker/antigravity_writer_exit_R01.txt",
+          "value": "2"
+        }
+      },
+      "adoption_state": "No manuscript; no candidate.",
+      "outcome": "CLI argument-parser failure; empty output.",
+      "exact_cli_end_time": "2026-10-21T11:59:06+08:00"
+    },
+    {
+      "reconciliation_work_id": "TTQS-0099-I18-E07-ANTIGRAVITY-A02-20261021",
+      "native_work_id": "UNKNOWN_NOT_PRESENT_IN_RETAINED_RECEIPT",
+      "doc_id": "0099",
+      "requirement_id": "I18-E07",
+      "attempt_id": "A02",
+      "worker": "Antigravity CLI",
+      "requested_model": "gemini-3.8-flash-high",
+      "native_actual_model": "UNKNOWN",
+      "provider_and_fallback": "UNKNOWN",
+      "input_sha256": "1d9cb048543adb25517104d68f829a90094840801b2e39e991c39167df2ceb41",
+      "candidate_docx_sha256": "UNKNOWN_NO_DIRECT_FINAL_DOCX_BOUND_TO_THIS_CALL",
+      "pid": "UNKNOWN_NOT_CAPTURED_IN_RETAINED_RECEIPT",
+      "native_session_id": "UNKNOWN_NOT_CAPTURED_IN_RETAINED_RECEIPT",
+      "output_file_mtime_tpe": "2026-10-21T11:59:24+08:00",
+      "exact_cli_start_time": "2026-10-21T11:59:24.220000+08:00",
+      "cli_exit_code": "2",
+      "returned_text": false,
+      "elapsed_seconds": null,
+      "known_total_tokens": null,
+      "quota_delta": "UNKNOWN",
+      "provider_billing": "UNKNOWN",
+      "files": {
+        "input": {
+          "local_locator": "0099_R01_BLUEPRINT_R01/worker/antigravity_writer_task_0099_R01.md",
+          "sha256": "1d9cb048543adb25517104d68f829a90094840801b2e39e991c39167df2ceb41",
+          "bytes": 14929,
+          "github_locator": "0099_R01_BLUEPRINT_R01/worker/antigravity_writer_task_0099_R01.md"
+        },
+        "stdout": {
+          "local_locator": "0099_R01_BLUEPRINT_R01/worker/antigravity_writer_stdout_R02.json",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0,
+          "github_locator": "0099_R01_BLUEPRINT_R01/worker/antigravity_writer_stdout_R02.json"
+        },
+        "stderr": {
+          "local_locator": "0099_R01_BLUEPRINT_R01/worker/antigravity_writer_stderr_R02.txt",
+          "sha256": "4d9c1a99584e626857948fe59409fa1f8f03dcf6719465008324bc0887bb38e1",
+          "bytes": 2999,
+          "github_locator": "0099_R01_BLUEPRINT_R01/worker/antigravity_writer_stderr_R02.txt",
+          "error_excerpt": "invalid value \"480000\" for flag -print-timeout: time: missing unit in duration \"480000\"\nUsage of agy.exe:\n  --add-dir                       Add a directory to the workspace (repeatable) (default [])\n  --agent                         Agent f"
+        },
+        "exit": {
+          "local_locator": "0099_R01_BLUEPRINT_R01/worker/antigravity_writer_exit_R02.txt",
+          "sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+          "bytes": 1,
+          "github_locator": "0099_R01_BLUEPRINT_R01/worker/antigravity_writer_exit_R02.txt",
+          "value": "2"
+        }
+      },
+      "adoption_state": "No manuscript; no candidate.",
+      "outcome": "--print-timeout duration missing unit; empty output.",
+      "exact_cli_end_time": "2026-10-21T11:59:26+08:00"
+    },
+    {
+      "reconciliation_work_id": "TTQS-0099-I18-E07-ANTIGRAVITY-A03-20261021",
+      "native_work_id": "UNKNOWN_NOT_PRESENT_IN_RETAINED_RECEIPT",
+      "doc_id": "0099",
+      "requirement_id": "I18-E07",
+      "attempt_id": "A03",
+      "worker": "Antigravity CLI",
+      "requested_model": "gemini-3.8-flash-high",
+      "native_actual_model": "UNKNOWN",
+      "provider_and_fallback": "UNKNOWN",
+      "input_sha256": "1d9cb048543adb25517104d68f829a90094840801b2e39e991c39167df2ceb41",
+      "candidate_docx_sha256": "UNKNOWN_NO_DIRECT_FINAL_DOCX_BOUND_TO_THIS_CALL",
+      "pid": "UNKNOWN_NOT_CAPTURED_IN_RETAINED_RECEIPT",
+      "native_session_id": "UNKNOWN_NOT_CAPTURED_IN_RETAINED_RECEIPT",
+      "output_file_mtime_tpe": "2026-10-21T12:03:32+08:00",
+      "exact_cli_start_time": "2026-10-21T12:03:32+08:00",
+      "cli_exit_code": "0",
+      "returned_text": true,
+      "elapsed_seconds": 221.8665486,
+      "known_total_tokens": 39506,
+      "quota_delta": "UNKNOWN",
+      "provider_billing": "UNKNOWN",
+      "files": {
+        "input": {
+          "local_locator": "0099_R01_BLUEPRINT_R01/worker/antigravity_writer_task_0099_R01.md",
+          "sha256": "1d9cb048543adb25517104d68f829a90094840801b2e39e991c39167df2ceb41",
+          "bytes": 14929,
+          "github_locator": "0099_R01_BLUEPRINT_R01/worker/antigravity_writer_task_0099_R01.md"
+        },
+        "stdout": {
+          "local_locator": "0099_R01_BLUEPRINT_R01/worker/antigravity_writer_stdout_R03.json",
+          "sha256": "f069e10b6a72498c1df2b5985a0015deb033d9d4b218d8445d9aeeca009c80b8",
+          "bytes": 71657,
+          "github_locator": "0099_R01_BLUEPRINT_R01/worker/antigravity_writer_stdout_R03.json"
+        },
+        "stderr": {
+          "local_locator": "0099_R01_BLUEPRINT_R01/worker/antigravity_writer_stderr_R03.txt",
+          "sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+          "bytes": 78,
+          "github_locator": "0099_R01_BLUEPRINT_R01/worker/antigravity_writer_stderr_R03.txt",
+          "error_excerpt": "warning: --mode plan has no effect while slash command expansion is disabled.\n"
+        },
+        "exit": {
+          "local_locator": "0099_R01_BLUEPRINT_R01/worker/antigravity_writer_exit_R03.txt",
+          "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+          "bytes": 1,
+          "github_locator": "0099_R01_BLUEPRINT_R01/worker/antigravity_writer_exit_R03.txt",
+          "value": "0"
+        },
+        "adopted_or_reviewed": {
+          "local_locator": "TTQS_ONE_CODEX_RUNTIME/WORK/QUALITY_REBUILD_20261016/0099_R01_BLUEPRINT_R01/candidate/0099_R01_manuscript_raw.md",
+          "sha256": "8d089f3329a2b2cd361b91202639a86f747345fe0062280f3489fdac745aa214",
+          "bytes": 69757,
+          "github_locator": "docs/ttqs-quality-20261016/quality-review/R09_P6_WORKER_RECONCILIATION_20261021/antigravity_raw/antigravity/historical_R03_0099_R01_initial_manuscript_raw.md"
+        }
+      },
+      "adoption_state": "Raw response adopted as manuscript baseline by matching hash; later DOCX lineage separate.",
+      "outcome": "Baseline manuscript adopted; no final DOCX directly from call.",
+      "adoption_exact_sha256": "8d089f3329a2b2cd361b91202639a86f747345fe0062280f3489fdac745aa214",
+      "exact_cli_end_time": "2026-10-21T12:03:32+08:00"
+    }
+  ],
+  "scope_note": "Copied raw AI responses are untrusted SAMPLE/DRAFT outputs, not real association evidence or accepted documents.",
+  "cli_exit_2_count": 5,
+  "cli_exit_minus_one_count": 1,
+  "cli_exit_unknown_count": 1,
+  "receipt_status_success_count": 2,
+  "response_return_count": 5,
+  "interpretation": "10 retained CLI attempts: 3 confirmed exit 0; 5 exit 2; 1 exit -1 with text; 1 bounded R04 response has native SUCCESS status but exit code was not captured. Five attempts returned text. None directly produced a final DOCX; model identity and provider quota remain UNKNOWN."
+}

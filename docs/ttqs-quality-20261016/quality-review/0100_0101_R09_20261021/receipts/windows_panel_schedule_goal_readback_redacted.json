@@ -1,0 +1,156 @@
+{
+  "receipt_id": "TTQS-WINDOWS10-PANEL-SCHEDULE-GOAL-READBACK-20261021",
+  "read_at_local": "2026-10-21T19:33:20.905137+08:00",
+  "host": "WINDOWS_HOST_REDACTED",
+  "user": "WINDOWS_USER_REDACTED",
+  "os": "Windows 10 Pro 10.0.19045 build 19045",
+  "github_head_at_panel_check": "c3cd0c64ed80498c989695ca07a64eab57d84cd4",
+  "legacy_panel": {
+    "html_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\MASTER\\dashboard.html",
+    "html_sha256": "f0e8625b2b77f4616beab18e31c1f1f7b05655e9d54898129d8e8d4f1d35a070",
+    "server_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\MASTER\\dashboard_server.py",
+    "server_sha256": "482ab14a1db90c918fd40341c42f3c57ba840fb728524dade87225750cc04b10",
+    "configured_url": "http://127.0.0.1:8765",
+    "configured_pid": 17852,
+    "configured_start": "2026-10-05T11:11:04.0434598+08:00",
+    "server_process_currently_alive": false,
+    "keepalive_recorded_pid": 22076,
+    "keepalive_record_updated": "2026-10-10T18:06:46+08:00",
+    "keepalive_process_currently_alive": false,
+    "listening_ports_8765_8766": false,
+    "http_probe": "No successful local HTTP status response; 2-second probe timed out",
+    "desktop_dashboard_shortcut_target": "C:\\Program Files (x86)\\Western Digital\\SSD Dashboard\\Dashboard.exe",
+    "data_sources": [
+      "CONTROL/SUPERVISOR_STATE.json",
+      "CONTROL/BUILD_QUEUE.json",
+      "MASTER/MASTER_STATUS.json",
+      "MASTER/LUNA_STATUS.json",
+      "MASTER/LUNA_OBSERVED.json",
+      "CONTROL/ANTIGRAVITY_USAGE_EVIDENCE/*.json",
+      "MASTER/WORKER_RESULTS/*.json",
+      "CONTROL/CODEX_MODEL_ACTIVE.json"
+    ],
+    "github_api_in_server_code": false,
+    "status": "LEGACY_TTQS_PANEL_FOUND_BUT_OFFLINE_AND_STALE",
+    "alignment": "FAIL_FOR_CURRENT_LIVE_ALIGNMENT; latest source timestamps are Oct 5/Oct 10 (queue Oct 19), panel not listening and no live current branch data"
+  },
+  "data_source_files": [
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\MASTER\\dashboard.html",
+      "sha256": "f0e8625b2b77f4616beab18e31c1f1f7b05655e9d54898129d8e8d4f1d35a070",
+      "bytes": 12260,
+      "last_write_local": "2026-10-05T22:14:08+08:00"
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\MASTER\\dashboard_server.py",
+      "sha256": "482ab14a1db90c918fd40341c42f3c57ba840fb728524dade87225750cc04b10",
+      "bytes": 9949,
+      "last_write_local": "2026-10-05T12:26:02+08:00"
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\MASTER\\DASHBOARD_SERVICE.json",
+      "sha256": "eb442bd3db4b6dd2ba50ff1e4dcb3696a3c75739ebb2ac7dbb797dbeaad15116",
+      "bytes": 111,
+      "last_write_local": "2026-10-05T11:11:06+08:00",
+      "url": "http://127.0.0.1:8765",
+      "started_at": "2026-10-05T11:11:04.0434598+08:00",
+      "pid": 17852
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\MASTER\\DASHBOARD_KEEPALIVE.json",
+      "sha256": "9ce9c16e1995f37ad1cd4063dc225b24ec479fdd5819eab2f186ac387b51974d",
+      "bytes": 333,
+      "last_write_local": "2026-10-10T18:06:48+08:00",
+      "updated_at": "2026-10-10T18:06:46+08:00",
+      "monitor_pid": 22076
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\MASTER\\DASHBOARD_HTTP_HEALTH_20261005.json",
+      "sha256": "7ece6e709aa7c817152a3c30d6753b70eef0da513ba5de96a12b974cbb46477a",
+      "bytes": 287,
+      "last_write_local": "2026-10-05T20:04:50+08:00"
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\SUPERVISOR_STATE.json",
+      "sha256": "2b7e189662d97846d63daf72f7a714a8db7242831981c295c72299b1df1e9b19",
+      "bytes": 12591,
+      "last_write_local": "2026-10-05T21:49:08+08:00"
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\BUILD_QUEUE.json",
+      "sha256": "a7f1b942c5e403a820209739014e186cb700e8eeeff24951ec51ad4d9baceb42",
+      "bytes": 175825,
+      "last_write_local": "2026-10-19T03:24:56+08:00",
+      "items_count": 142,
+      "state_counts": {
+        "DONE": 10,
+        "PENDING": 115,
+        "PARKED_ROOT_CAUSE_REPAIR": 5,
+        "PARKED_CONTROL": 12
+      }
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\MASTER\\MASTER_STATUS.json",
+      "sha256": "b7aaeff20a4e4d0b236fb50608250ab5f03f2ef7def12c4978d78fc229afbade",
+      "bytes": 948,
+      "last_write_local": "2026-10-05T22:36:16+08:00",
+      "updated_at": "2026-10-05T22:36:15.695796+08:00"
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\MASTER\\LUNA_STATUS.json",
+      "sha256": "69d23563d4deb0454702e0434557385320eeabe645277740415b72e626136c4e",
+      "bytes": 1468,
+      "last_write_local": "2026-10-05T11:00:14+08:00",
+      "updated_at": "2026-10-05T11:00:12+08:00"
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\MASTER\\LUNA_OBSERVED.json",
+      "sha256": "53cd8e5004710c0b800157587b2785324f9d09c15a061b15e0e547d38d64ecb0",
+      "bytes": 407,
+      "last_write_local": "2026-10-05T13:48:42+08:00",
+      "updated_at": "2026-10-05T13:48:41.616709+08:00"
+    }
+  ],
+  "schedule": {
+    "automation_id": "ttqs-one-hourly-quality-goal-resume",
+    "config_path": "%USERPROFILE%\\.codex\\automations\\ttqs-one-hourly-quality-goal-resume\\automation.toml",
+    "config_sha256": "29ff76fda30a937bec1dcf88bd381bf041467363cc45c6632618388525498ff1",
+    "status": "ACTIVE",
+    "kind": "existing thread-bound heartbeat",
+    "rrule": "RRULE:FREQ=HOURLY;INTERVAL=2",
+    "target_thread_id": "01a14098-b269-79e3-b07c-56e96557fe07",
+    "project_path": "E:\\TTQS",
+    "native_run_history": "UNAVAILABLE through current native readback",
+    "last_run": "UNKNOWN",
+    "next_run": "UNKNOWN",
+    "natural_120m_trigger_proven": false,
+    "windows_task_scheduler_supervisor": "Disabled; last run 2026-10-05 05:03 local",
+    "active_duplicate_schedulers": 1
+  },
+  "goal": {
+    "thread_id": "01a14098-b269-79e3-b07c-56e96557fe07",
+    "native_status": "paused",
+    "native_resume_api": "No active/resume transition exposed; get_goal/update_goal status enum has no active state; cannot claim resumed",
+    "resume_status": "BLOCKED_NATIVE_RESUME_ACTION_UNAVAILABLE"
+  },
+  "process_readback": {
+    "opencode_server_pid": 45628,
+    "opencode_server_is_writer": false,
+    "antigravity_running": false,
+    "current_r09a_reviewer_session": "ses_ea1cf5503ffe00DhJ9tzXxSzPG",
+    "review_session_completed_local": "2026-10-21T19:27:04+08:00",
+    "reviewer_process_after_completion": false,
+    "winword_process_count": 19,
+    "known_our_current_native_export_pid": 69032,
+    "other_winword_processes_without_current_work_id_mapping": 18,
+    "unknown_word_processes_killed": false
+  },
+  "publication": {
+    "source_local_sha256": "79dd3fd19c44fffcec462084424c1e3450b3f47dffc93eb117ac61f042dcad2e",
+    "redactions": [
+      "host and Windows username redacted",
+      "profile path replaced with %USERPROFILE%"
+    ],
+    "note": "Public audit derivative; original local receipt retained in Windows workspace."
+  }
+}

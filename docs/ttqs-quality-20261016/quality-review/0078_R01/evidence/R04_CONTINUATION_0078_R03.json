@@ -1,0 +1,171 @@
+{
+  "schema": "TTQS_ONE_R04_CONTINUATION_0078_R03.v1",
+  "project_id": "TTQS_ONE",
+  "document_id": "0078",
+  "requirement_id": "I17B-E01",
+  "official_checkbox_serial": "084",
+  "source_r04": {
+    "path": "TTQS_ONE_CODEX_96E5A5B4E5A581E5A9_80E6A593E49C89E58A_R04_20261019.md",
+    "sha256": "3330de8de26275c5e51f299982d87c250bb7e030c9838badafc369e26ee29c35"
+  },
+  "github_preflight": {
+    "repo": "PT-Original-Point/ttqs-one",
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "pr": 92,
+    "pr_state": "OPEN_DRAFT",
+    "pr_head": "b1c4975376ba3e551d6f2c48cc45783336e0ef17",
+    "branch_head": "b1c4975376ba3e551d6f2c48cc45783336e0ef17",
+    "source_contract_commit": "b1c4975376ba3e551d6f2c48cc45783336e0ef17"
+  },
+  "P0_preflight": {
+    "status": "VERIFIED",
+    "writer_owner": "NONE at final review check; OpenCode Writer exited 0 before R03 QA",
+    "reviewer_owner": "NONE at final review check; Mimo loop stopped and Beam review completed",
+    "unsynced_stable_work": "0078 R03 package; 0077 R01 package was already synced before this work",
+    "scheduler": "Existing hourly thread task unchanged; no new scheduler/thread/control platform."
+  },
+  "P1_reconciliation": {
+    "status": "VERIFIED",
+    "0077": "No rebuild; exact SHA cc545510cf503e9ecb16238c2b8dcdf6b15cbc43a28360b3b76f97513017edf7 retained as prior candidate/semantic PASS.",
+    "0078": "R01 42-page and R02 23-page layout issues preserved in receipts; R03 fixes split cards and redundant final-status page. DOCX not changed after render/review.",
+    "source_packet_sha256": "8f648688fef2292dfb4c72db70446e4d169425b827508767c37b9f00d0528ae0",
+    "blueprint_sha256": "5d64632062bd07a82e30bbc8480f836bd1d533e994fbdf395875cca7d219a5d7",
+    "cross_document_sha_readback": "PASS; 0073 R08, 0074 R01, 0075 R02, 0076 R01, 0077 R01 exact hashes match."
+  },
+  "P2_cli_recovery": {
+    "status": "APPLIED",
+    "writer": {
+      "route": "OpenCode CLI v2",
+      "version": "2.0.29",
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "process_id": 41948,
+      "session_id": "ses_eae3565e2ffew8XG42C8RC2xu3",
+      "exit_code": 0,
+      "computer_use": false
+    },
+    "first_reviewer_run": {
+      "route": "OpenCode CLI v2",
+      "model": "opencode/mimo-v2.6-flash-free",
+      "session_id": "ses_eae23172effeo9THUAK48KPMLs",
+      "status": "CANCELLED_REPEATED_VERIFICATION_LOOP_NO_VERDICT",
+      "assistant_turns": 15,
+      "tool_calls": 30,
+      "input_tokens": 62141,
+      "output_tokens": 4225,
+      "reasoning_tokens": 12892,
+      "reported_cost": 0,
+      "action": "Stopped only that exact reviewer PID; raw stdout/stderr and sanitized export retained; no verdict claimed."
+    },
+    "final_reviewer": {
+      "route": "OpenCode CLI v2",
+      "version": "2.0.29",
+      "model": "opencode/beam-free",
+      "session_id": "ses_eae141d9effeFTmAYfhVqNa4xU",
+      "process_id": 42612,
+      "session_finish": "stop",
+      "process_exit_code": "UNKNOWN_NOT_CAPTURED",
+      "tool_calls": 0,
+      "verdict": "PASS",
+      "candidate_sha256": "95436f7d8d01ea4153084de90e5f6b7a50d6d34224dfdab5ebbe3d348e8b2b174",
+      "computer_use": false
+    },
+    "antigravity": "No dispatch for 0078; historical 0055 Antigravity lane remains paused for new Writer dispatch."
+  },
+  "P3_worker_return": {
+    "status": "VERIFIED",
+    "body_sha256": "f4c55be7ff1ee104c68813f9efd6d56d618025d7d9c516e1d6406a063e1f3e1d",
+    "docx_sha256": "95436f7d8d01ea4153084de90e5f6b7a50d6d34224dfdab5ebbe3d348e8b2b174",
+    "activity_rows": 8,
+    "replacement_register_rows": 64,
+    "technical": "PASS",
+    "visual": "PASS; 20 pages; all contact sheets plus enlarged pages 7–13 and 20 inspected",
+    "semantic": "PASS exact SHA via OpenCode beam-free; report and raw response preserved. Reviewer noted extraction flattening; visual review separately checked page layout.",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN/HOLD",
+    "checkbox_084": "PARTIAL/HOLD"
+  },
+  "P4_github_sync": {
+    "status": "VERIFIED_PACKAGE_READBACK",
+    "target_branch": "work/ttqs-one-document-quality-contract-20261016",
+    "target_pr": 92,
+    "package_commit": "17d156ee525ec314d843b57e0a6d00a1600ec526",
+    "file_count": 82,
+    "binary_count": 36,
+    "text_count": 46,
+    "comparison": "binary exact bytes/SHA256; text compared after CRLF/CR to LF normalization",
+    "readback_receipt": "evidence/0078_GITHUB_READBACK_R03.json",
+    "candidate_docx_fetched_sha256": "95436f7d8d01ea4153084de90e5f6b7a50d6d34224dfdab5ebe3d348e8b2b174",
+    "all_entries_match": true
+  },
+  "P5_scheduler_cost": {
+    "status": "VERIFIED_UNCHANGED",
+    "scheduler_changes": 0,
+    "codex_thread_or_session_created": 0,
+    "model_calls_for_0078": "one Writer, one Mimo reviewer run cancelled without verdict, one Beam exact-SHA reviewer; no Computer Use or Antigravity dispatch."
+  },
+  "P6_next_ready": {
+    "status": "READY_AFTER_0078_REMOTE_READBACK",
+    "document_id": "0079",
+    "requirement_id": "I17B-E01",
+    "official_checkbox_serial": "084",
+    "function": "individual post-training career/learning advice; distinct from 0076–0078",
+    "next_action": "Resolve 0079 unique Blueprint and source packet, inspect current worker state, then build a complete SAMPLE candidate without inventing real guidance/approval."
+  },
+  "P7_five_tests": {
+    "T1_no_new_delta": {
+      "status": "PASS_INHERITED_FIXTURE_ONLY",
+      "evidence": "R04_CONTINUATION_0077_R01.json; this does not claim an actual scheduled wake test."
+    },
+    "T2_empty_worker_reply": {
+      "status": "PASS",
+      "evidence_path": "docs/ttqs-quality-20261016/quality-review/0055_R04/review/antigravity_dispatch_status_R04.json",
+      "evidence_sha256": "c4500f6d23906cfa5fe4484e36c67c729930a3e8c7a264f8cf5e9f253e2a7cfc",
+      "remote_evidence_sha256": "c4500f6d23906cfa5fe4484e36c67c729930a3e8c7a264f8cf5e9f253e2a7cfc",
+      "observed": "0055 Antigravity retry01 exit 0 but empty/permission denied; no deliverable; after three repaired retries the Antigravity Writer lane is paused; other lawful work continued."
+    },
+    "T3_old_exact_sha_reviews": {
+      "status": "PASS",
+      "documents": [
+        {
+          "id": "0057",
+          "sha256": "a8d67c3f89105d85e47b554007624ce1231c6fb3340e3a9d3bfd14b6ae838705",
+          "remote_sha256": "a8d67c3f89105d85e47b554007624ce1231c6fb3340e3a9d3bfd14b6ae838705"
+        },
+        {
+          "id": "0061",
+          "sha256": "3d4fe20f7fb825e470ed5dfd71fcaf0f5bb8052dc7a63ef51ee08e2a11668c9c",
+          "remote_sha256": "3d4fe20f7fb825e470ed5dfd71fcaf0f5bb8052dc7a63ef51ee08e2a11668c9c"
+        }
+      ],
+      "behavior": "No rebuild and no redundant review dispatch; bytes unchanged at remote exact SHAs."
+    },
+    "T4_github_binary_readback": {
+      "status": "PASS",
+      "package_commit": "17d156ee525ec314d843b57e0a6d00a1600ec526",
+      "file_count": 82,
+      "candidate_docx_local_sha256": "95436f7d8d01ea4153084de90e5f6b7a50d6d34224dfdab5ebe3d348e8b2b174",
+      "candidate_docx_fetched_sha256": "95436f7d8d01ea4153084de90e5f6b7a50d6d34224dfdab5ebe3d348e8b2b174",
+      "all_entries_match": true,
+      "comparison": "binary exact bytes/SHA256; text compared after CRLF/CR to LF normalization"
+    },
+    "T5_no_real_source": {
+      "status": "PASS",
+      "evidence": "0078 technical, visual and semantic exact-SHA receipts; no photo embedded; all examples synthetic; REAL=UNKNOWN/HOLD; NOT_GRANTED; 084 PARTIAL/HOLD."
+    }
+  },
+  "P8_result": {
+    "status": "CANDIDATE_SYNCED_AND_REVIEWED_NOT_FORMALLY_ACCEPTED",
+    "candidate_docx_sha256": "95436f7d8d01ea4153084de90e5f6b7a50d6d34224dfdab5ebbe3d348e8b2b174",
+    "page_count": 20,
+    "technical_review": "PASS",
+    "visual_review": "PASS",
+    "semantic_review": "PASS",
+    "remaining_gaps": [
+      "No real photos/source paths/consent or association policy supplied; REAL=UNKNOWN/HOLD.",
+      "Checkbox 084 also needs distinct 0076, 0077 and 0079 plus genuine source evidence.",
+      "Formal acceptance NOT_GRANTED."
+    ],
+    "github_readback": "PASS all 82 package entries read from fetched Git; candidate DOCX exact SHA matches."
+  },
+  "updated_utc": "2026-10-19T02:17:32.823965+00:00"
+}

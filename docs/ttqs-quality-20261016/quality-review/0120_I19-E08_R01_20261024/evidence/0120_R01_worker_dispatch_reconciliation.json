@@ -1,0 +1,72 @@
+{
+  "receipt_id": "0120_R01_WORKER_RECONCILIATION",
+  "observed_at_local": "2026-10-24T13:00:58.5641522+08:00",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0120",
+  "requirement_id": "I19-E08",
+  "candidate_sha256": "7dfc32e23d0be9e5c5749b3e721ae47d7a472dd913d9d247ce76a70eaa8ebaf4",
+  "os_observation": {
+    "computer": "DESKTOP-VMV4Q60",
+    "user": "desktop-vmv4q60\\j",
+    "processes": [
+      {
+        "name": "opencode-cli.exe",
+        "pid": 45628,
+        "created": "2026-10-19T20:49:10.184664+08:00",
+        "command_line": "opencode-cli.exe serve --service",
+        "classification": "service only; not an active Writer"
+      }
+    ],
+    "active_0120_writer_pid": "NONE_OBSERVED",
+    "agy_writer_pid": "NONE_OBSERVED"
+  },
+  "attempts": [
+    {
+      "worker": "OpenCode CLI v2.0.32",
+      "work_id": "0120-I19-E08-R01",
+      "requested_model": "opencode/glm-5.3-flash-free",
+      "actual_model": "UNKNOWN",
+      "status": "FAILED_NO_MANUSCRIPT",
+      "observed_error": "FreeUsageLimitError HTTP 429; free usage limit reached",
+      "stdout_bytes": 430,
+      "stderr_bytes": 0,
+      "process_exit_code": "UNKNOWN_NOT_CAPTURED",
+      "adopted_output_sha256": null,
+      "same_provider_retry": "NOT_PERFORMED"
+    },
+    {
+      "worker": "Antigravity CLI 1.4.7",
+      "work_id": "0120-I19-E08-R01",
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_model": "UNKNOWN",
+      "attempt_1": "stdin pipe closed before prompt write; no output/manuscript; external usage UNKNOWN",
+      "attempt_2_part_1": "response received, exit 0; partial 17,375-character output; wrong report genre/title and incorrect neighboring-requirement mapping observed; not adopted",
+      "attempt_2_part_2": "wrapper reported response/exit 0 but raw stdout status ERROR with stream interrupted; partial 13,660-character output; no complete four-part manuscript; not adopted",
+      "computer_use": false,
+      "auto_approve": false,
+      "final_candidate_produced": false,
+      "adopted_output_sha256": null
+    }
+  ],
+  "candidate_authoring_route": "Local deterministic Python/docx assembly from the verified official source packet, unique Blueprint and fully synthetic dataset after external writer attempts produced no complete usable manuscript. No worker prose adopted.",
+  "raw_response_hashes": {
+    "opencode_stdout": "fdae9c6c19d37ded7d25757319ddc3060f2ab29116e4ab60e9b8d490682d90b2",
+    "opencode_dispatch_receipt": "aa14f1d2882d22d4b6835702e61fbb6c35e0bfc5eb073be3c9bca6e9aa93724b",
+    "opencode_execution_reconciliation": "cec9eca8d020b4f785ea2da791775395cfaf3a8d5a6c4b19ba40e85da9e2f82a",
+    "antigravity_part01": "b9766365837b2a4470e1846fc96416e8fd0c4763ef65987fccede673d52d9114",
+    "antigravity_part01_execution": "3351d4662f2139b7d2f2700e57a393b6384f1ed2f293457f5398598b5f00150f",
+    "antigravity_part02": "b22c66d6411af091f6024dd99212f90805fa98d5fda710dffdf764c2bda7a54d",
+    "antigravity_part02_stdout": "0dd86499174ffcdba78cadfc7c414fa6f5cf8d9d80a2abce7ae8dd72b3c0e9f3",
+    "antigravity_part02_execution": "112f48867f23b90a4a9e3b58b424a0b88641ab7196543329802ce3ad7955f7c2",
+    "antigravity_attempt01_reconciliation": "1a3949f1e9542bb8283b132341fe438777e59609172823781c6f0b14d4159bc9"
+  },
+  "sensitive_pattern_scan": {
+    "email": 0,
+    "taiwan_id": 0,
+    "phone": 0,
+    "api_key": 0,
+    "scope": "the three raw text response/log files selected for public audit sync"
+  },
+  "independent_semantic_review": "PENDING",
+  "formal_acceptance": "NOT_GRANTED"
+}

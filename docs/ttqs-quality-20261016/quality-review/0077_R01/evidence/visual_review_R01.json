@@ -1,0 +1,23 @@
+{
+  "schema": "TTQS_ONE_0077_R01_VISUAL_REVIEW.v1",
+  "docx_sha256": "cc545510cf503e9ecb16238c2b8dcdf6b15cbc43a28360b3b76f97513017edf7",
+  "pdf_sha256": "82249c87d81e853e4e83e56c16b3359dd80924b797c61cad3a0d36b31280bbcb",
+  "pdf_pages": 23,
+  "page_pngs": 23,
+  "renderer": "Microsoft Word hidden COM export; pypdfium2 rasterization at 1.65 scale",
+  "inspection_scope": "All 23 page PNGs opened individually at original resolution; six contact sheets also reviewed.",
+  "checks": {
+    "title_rule_absent": true,
+    "action_cards_kept_together": true,
+    "cross_document_cards_kept_together": true,
+    "no_clipped_or_overlapping_text": true,
+    "no_broken_tables": true,
+    "headers_footers_page_numbers_consistent": true,
+    "glyphs_readable": true
+  },
+  "findings": [
+    "The initial render exposed the built-in Title style bottom border and split field/value cards. A targeted formatting-only repair removed the border and keeps each card together.",
+    "After the fix, every page was inspected at original resolution; no clipping, overlap, broken tables, or unreadable glyphs were found."
+  ],
+  "status": "PASS"
+}

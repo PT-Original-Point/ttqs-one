@@ -1,0 +1,77 @@
+{
+  "receipt_id": "TTQS-0104-R15-INDEPENDENT-SEMANTIC-REVIEW-RECONCILIATION",
+  "observed_at_tpe": "2026-10-22T03:25:00+08:00",
+  "doc_id": "0104",
+  "requirement_id": "I18-E11",
+  "official_checkbox_serial": "112",
+  "candidate_docx_sha256": "9bbb96da74ba9da845ab0e063421d04f035e79496209a02de1f04b0c98ec7eb8",
+  "review_packet_sha256": "9ae94841660e08188bc884517b20a9dd3f24cc723a41fcd7dbf85c0d9acfae14",
+  "reviewer": "OpenCode CLI v2.0.32, separate session from DOCX Writer/Builder",
+  "requested_model": "opencode/mimo-v2.6-flash-free",
+  "selected_model_native_session": "mimo-v2.6-flash-free",
+  "actual_serving_model": "UNKNOWN",
+  "session_id": "ses_ea030cfffffeWft8qAw18cKX1E",
+  "pid": 11156,
+  "started_at_tpe": "2026-10-22T02:52:55.9826741+08:00",
+  "ended_at_tpe": "2026-10-22T03:18:49.3584435+08:00",
+  "cli_exit_code": 1,
+  "native_session_idle_outcome": "succeeded",
+  "raw_stdout_sha256": "d1f31787f12d8176e13f151d85e4c9cdd4e6f86794160e1ee8e48d89d5d6f346",
+  "raw_stdout_bytes": 84774,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0,
+  "final_response_sha256": "58df643351494f3d0e8f2519e4a9dd5ec8fa97d605d2e1425d1fc8fae01804bc",
+  "final_response_bytes": 16740,
+  "verdict": "PARTIAL",
+  "blocking_defects": 0,
+  "residual_findings": [
+    "RF-1",
+    "RF-2",
+    "RF-3",
+    "RF-4",
+    "RF-5",
+    "RF-6",
+    "RF-7",
+    "RF-8",
+    "RF-9",
+    "RF-10"
+  ],
+  "review_scope": "text-only semantic and usability review of the exact SHA-bound extraction and all 31 tables; arithmetic independently recomputed; did not visually review layout.",
+  "limitations": [
+    "I18-E12 absent from packet and candidate; no E12 comparison asserted.",
+    "No REAL association counts, approvals, signatures, certificates, or third-party records are asserted.",
+    "CLI exit code 1 is preserved despite recovered terminal response and native idle_outcome=succeeded; not counted as clean CLI success."
+  ],
+  "raw_files": {
+    "final_response": {
+      "path": "review/R15/opencode_review_final_R15.md",
+      "sha256": "58df643351494f3d0e8f2519e4a9dd5ec8fa97d605d2e1425d1fc8fae01804bc",
+      "bytes": 16740
+    },
+    "stdout": {
+      "path": "review/R15/opencode_review_stdout_R15.jsonl",
+      "sha256": "d1f31787f12d8176e13f151d85e4c9cdd4e6f86794160e1ee8e48d89d5d6f346",
+      "bytes": 84774
+    },
+    "stderr": {
+      "path": "review/R15/opencode_review_stderr_R15.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "original_execution_receipt": {
+      "path": "review/R15/opencode_review_execution_receipt_R15.json",
+      "sha256": "b455485961fed2f40495edb78d9fc6657c37b1a44bc7e304a1dc8a294d03a061",
+      "bytes": 1614
+    },
+    "candidate": {
+      "path": "candidate/0104__證照獲取率_分析報告_R15.docx",
+      "sha256": "9bbb96da74ba9da845ab0e063421d04f035e79496209a02de1f04b0c98ec7eb8",
+      "bytes": 85599
+    },
+    "packet": {
+      "path": "review/R15/review_packet_0104_R15.md",
+      "sha256": "9ae94841660e08188bc884517b20a9dd3f24cc723a41fcd7dbf85c0d9acfae14",
+      "bytes": 84349
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "doc_id": "0039",
+  "requirement_id": "I08-E03",
+  "official_checkbox_sequence": "040",
+  "unique_blueprint_row_sha256": "2578c3db9d5f6faebef56c110038b974c1b0ec92cfb774ec8bf29a0391eecc28",
+  "review_round": "R09_REGISTER_SYNC_2",
+  "verdict": "PASS",
+  "review_type": "independent exact-SHA semantic and traceability review",
+  "reviewer": {
+    "agent_id": "01a1435e-f156-7a52-ade0-b76f38bb6230",
+    "route": "CROSS_REVIEW_BY_OTHER_ACTIVE_AGENT",
+    "submission_id": "01a143a1-74fd-7442-86d8-16810edc20eb",
+    "builder_independent": true
+  },
+  "reviewed_at_local": "2026-10-16T15:36:50+08:00",
+  "candidate_docx_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0039_R09\\candidate\\0039__課程規劃與設計審查會議紀錄_完整示範_R09.docx",
+  "candidate_docx_sha256": "3e7ed5f173dc4604803f477289f1d6190e95a5c58d3a229420eaee67037080f5",
+  "replacement_register_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0039_R09\\sources\\0039_逐筆示範資料替換與追溯清冊_R09.csv",
+  "replacement_register_sha256": "e3c0c0bedc07f61c05a9063e5c04d7c982110cb239bd2a9457969fe360d66e9f",
+  "replacement_register_rows": 175,
+  "unique_fact_ids": 175,
+  "render_pdf_sha256": "c3594436c13ff8f26fb41855040f61b255b87b89dadaee236af0a96039a55657",
+  "rendered_pages": 14,
+  "prior_review": {
+    "verdict": "PARTIAL",
+    "review_receipt": "R09 first independent read returned in task conversation",
+    "findings": [
+      "F001 locator pointed to p.1/Table01 instead of p.4 course-design scenario paragraph",
+      "F051-F053 values described stale M2 content",
+      "F060-F062 values did not match M4 discussion/decision/verification",
+      "F064-F066 values did not match M5 assessment discussion/decision/verification"
+    ]
+  },
+  "resolved_findings": [
+    {
+      "fact_ids": [
+        "0039-F001"
+      ],
+      "locator": "p.4 課程設計情境說明／示範課程主題",
+      "result": "value and page locator match exact DOCX paragraph"
+    },
+    {
+      "fact_ids": [
+        "0039-F051",
+        "0039-F052",
+        "0039-F053"
+      ],
+      "locator": "p.6 表 M2, 資料與來源／討論與不同意見／示範決議",
+      "result": "values match corresponding R09 body rows verbatim"
+    },
+    {
+      "fact_ids": [
+        "0039-F060",
+        "0039-F061",
+        "0039-F062"
+      ],
+      "locator": "p.7 表 M4, 討論與不同意見／示範決議與理由／責任與驗收",
+      "result": "values match corresponding R09 body rows verbatim"
+    },
+    {
+      "fact_ids": [
+        "0039-F064",
+        "0039-F065",
+        "0039-F066"
+      ],
+      "locator": "p.8 表 M5, 討論與不同意見／示範決議與理由／責任與驗收",
+      "result": "values match corresponding R09 body rows verbatim"
+    }
+  ],
+  "semantic_gates": {
+    "official_requirement_and_genre": {
+      "status": "PASS",
+      "locator": "official evidence table p.3; DOCX p.1"
+    },
+    "meeting_time_agenda_attendance_decisions": {
+      "status": "PASS",
+      "locator": "DOCX pp.2-3; 09:00-11:00 and agenda 10+15+30+40+20+5=120 minutes; roles SAMPLE/SYNTHETIC"
+    },
+    "needs_competency_gap_and_options": {
+      "status": "PASS",
+      "locator": "DOCX pp.4,6-7; K1-K4 gaps 1.0,1.4,0.8,1.4; options A=2.70, B=4.70, C=3.80; weights total 100%"
+    },
+    "course_design_six_dimensions": {
+      "status": "PASS",
+      "locator": "DOCX pp.5,7-8; Table09 totals 360 minutes; M4-A covers objectives, method/schedule, instructors, materials, entry conditions, learning environment"
+    },
+    "assessment_and_effectiveness_use": {
+      "status": "PASS",
+      "locator": "DOCX pp.8-11; M5-A timepoints, 0/1/2 scale, complete-pair denominator, missing-data rule and training-effectiveness use"
+    },
+    "numeric_consistency": {
+      "status": "PASS",
+      "locator": "DOCX pp.10-11; pre 17/5=3.4; post 31/5=6.2; paired mean delta 2.8; 4/5=80%; D04 fails threshold; no missing values imputed as zero"
+    },
+    "decisions_followup_and_0041_handoff": {
+      "status": "PASS",
+      "locator": "DOCX p.12 Table16 A01-A06; 6/6 tracking coverage and 0/6 acceptance completed; A06 hands off to 0041 v0.1 draft, not approved"
+    },
+    "sample_real_authority_and_cross_case_boundary": {
+      "status": "PASS",
+      "locator": "DOCX pp.1-3,12-14; no fabricated association approval, attendees, signatures or outcomes; 0033 SYN-0033-PLAN-01 is a distinct case from SAMPLE-0039-01"
+    },
+    "title_blind_and_practical_use": {
+      "status": "PASS",
+      "locator": "DOCX p.1 and complete minutes/design/assessment/follow-up sections"
+    },
+    "layout": {
+      "status": "PASS",
+      "locator": "all 14 rendered pages; PDF SHA unchanged; no blank page, clipping, overlap or unreadable table observed"
+    }
+  },
+  "traceability_gate": {
+    "status": "PASS",
+    "mapped_rows": 175,
+    "unresolved_rows": 0,
+    "warning": "175/175 page mapping alone is not semantic acceptance; reviewer also matched all listed corrected values to body cells and checked the full semantic gates."
+  },
+  "candidate_state": "CANDIDATE",
+  "promotion_status": "NOT_PROMOTED",
+  "human_acceptance": "NOT_GRANTED",
+  "limitations": [
+    "Ruling applies only to the exact DOCX and register SHAs above.",
+    "SAMPLE/SYNTHETIC data are not actual association records; real use requires source and authorization verification.",
+    "No canonical or production promotion is implied."
+  ]
+}

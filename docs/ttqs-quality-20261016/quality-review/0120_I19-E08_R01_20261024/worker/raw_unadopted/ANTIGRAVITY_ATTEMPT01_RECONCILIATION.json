@@ -1,0 +1,19 @@
+{
+  "work_id": "0120-I19-E08-R01",
+  "attempt": 1,
+  "worker": "Antigravity CLI 1.4.7",
+  "requested_model": "gemini-3.8-flash-high",
+  "actual_model": "UNKNOWN",
+  "failure": "CLI closed stdin before prompt write; PowerShell reported pipe ended",
+  "process_id": 72260,
+  "process_alive_after_failure": false,
+  "stdout_captured": false,
+  "stderr_captured": false,
+  "cli_exit_code": "UNKNOWN",
+  "manuscript_produced": false,
+  "external_model_usage": "UNKNOWN",
+  "filesystem_side_effects": "NONE_OBSERVED",
+  "repair": "Pass prompt as positional argument, supported by --print usage; capture both streams and exact CLI exit",
+  "retry_reason": "Changed invocation transport after concrete parser/input failure; not same invocation",
+  "observed_at": "2026-10-24T12:20:12.0451298+08:00"
+}

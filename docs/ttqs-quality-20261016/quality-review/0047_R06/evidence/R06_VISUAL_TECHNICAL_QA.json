@@ -1,0 +1,83 @@
+{
+  "doc_id": "0047",
+  "revision": "R06",
+  "status": "CANDIDATE_ONLY",
+  "candidate_sha256": "be27651b17ac2759b6eab5391fb330df6b68a978d41c47fe618fef9f3a6c0976",
+  "parent_revision": "R05",
+  "parent_sha256": "ccebe75661987db2b8e3affa57f5183e269881436c3aa8927e51e723cdde199c",
+  "change_scope": "PRESENTATION_ONLY_REMOVE_OVERFLOWING_EMPTY_TERMINAL_PARAGRAPH",
+  "reason": "R05 had a wholly blank page 8 caused by the empty paragraph after the final threshold bullet; R06 removes that empty paragraph only.",
+  "render_engine": "documents skill render_docx.py with project-bundled LibreOffice",
+  "rendered_pdf": "evidence/render_R06/0047_R06.pdf",
+  "rendered_pdf_sha256": "c40baa9ebd9c596590699738f845376cec6425f7e4cb5d964e3db8349ba52dda",
+  "rendered_page_count": 7,
+  "direct_visual_inspection": {
+    "scope": "every page 1 through 7",
+    "result": "PASS",
+    "pages": [
+      {
+        "page": 1,
+        "image": "page-1.png",
+        "sha256": "e65348b719b103b093353f8b63c4c3b57852f95d35ba528fe841e1358caa3a7a",
+        "observed": "Readable text and tables; no clipping, overlap, broken table, orphan table row, empty page, or split heading."
+      },
+      {
+        "page": 2,
+        "image": "page-2.png",
+        "sha256": "3bebaa70e92a52e3500284ca0ab4fe7778b9cd7181d5875714328d24dab3ae67",
+        "observed": "Readable text and tables; no clipping, overlap, broken table, orphan table row, empty page, or split heading."
+      },
+      {
+        "page": 3,
+        "image": "page-3.png",
+        "sha256": "dc401c60174e654c8eb842e39ff7f09fb2c17e0a4f53562eb9309059a8c8c2ae",
+        "observed": "Readable text and tables; no clipping, overlap, broken table, orphan table row, empty page, or split heading."
+      },
+      {
+        "page": 4,
+        "image": "page-4.png",
+        "sha256": "60d2afa895d7d046ed95a90372160f24341fb0ce4b3df5ca829aec31f2193126",
+        "observed": "Readable text and tables; no clipping, overlap, broken table, orphan table row, empty page, or split heading."
+      },
+      {
+        "page": 5,
+        "image": "page-5.png",
+        "sha256": "0afc772ecb4e5f82624a2d20c3458646e932bc230e40aeb08b86820aaddab3ae",
+        "observed": "Readable text and tables; no clipping, overlap, broken table, orphan table row, empty page, or split heading."
+      },
+      {
+        "page": 6,
+        "image": "page-6.png",
+        "sha256": "088216d83d53a2537af878e96c84101a9a48869d3f141b90ea64cd8d0352a2ec",
+        "observed": "Readable text and tables; no clipping, overlap, broken table, orphan table row, empty page, or split heading."
+      },
+      {
+        "page": 7,
+        "image": "page-7.png",
+        "sha256": "4d7124cc6123e3fc236c08fe889337f76b260f219ed40dfbd55bb98509785f33",
+        "observed": "Readable text and tables; no clipping, overlap, broken table, orphan table row, empty page, or split heading."
+      }
+    ]
+  },
+  "layout_findings_resolved": [
+    "Threshold summary is a compact four-item list and all four conditions remain legible.",
+    "Data dictionary continues to page 5 with repeated header.",
+    "Annual example tables and comparison/action tables are readable.",
+    "No trailing blank page remains."
+  ],
+  "calculation_recheck": {
+    "case_2024_weighted_score": "(4+4+3+2)/4=3.25",
+    "case_2024_fulfillment": "3/4=75.0%",
+    "case_2025_weighted_score": "(4+4+4+4)/4=4.00",
+    "case_2025_fulfillment": "4/4=100.0%",
+    "combined_fulfillment": "(3+4)/(4+4)=87.5%",
+    "mean_score": "(3.25+4.00)/2=3.625, displayed 3.63",
+    "score_change": "4.00-3.25=0.75",
+    "rate_change": "100.0%-75.0%=25.0 percentage points"
+  },
+  "body_and_table_values_changed_in_R06": false,
+  "text_change_in_R05_representation": "Only duplicated threshold table was represented as four bullets; threshold predicates and outcomes remain unchanged.",
+  "font_check": "Explicit body text minimum 10.5 pt; table text minimum 9.5 pt; inherited-size runs are styled by paragraph/style and visually readable.",
+  "independent_semantic_review": "PENDING exact R06 SHA; R01 review applies only to R01 exact SHA.",
+  "formal_acceptance": "NOT CLAIMED; all data remain SAMPLE/SYNTHETIC."
+}

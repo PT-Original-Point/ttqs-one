@@ -1,0 +1,54 @@
+{
+  "schema": "TTQS_ONE_R04_P7_COUNTEREXAMPLE_TESTS.v1",
+  "project_id": "TTQS_ONE",
+  "docx_id": "0074",
+  "candidate_sha256": "d5a15e087d7323dd0d9c44191ae26fc0cca6bef052de8af85daa94e621e1f190",
+  "tested_at_local": "2026-10-19T07:45:37+08:00",
+  "T1_no_material_delta": {
+    "result": "PASS_NO_MATERIAL_DELTA_NO_DISPATCH",
+    "method": "Two read-only snapshots 900ms apart compared local HEAD, live origin ref, candidate SHA-256, and non-service OpenCode/Antigravity CLI process list.",
+    "snapshot_1": {
+      "local_head": "35cf41ad9195ca1e5c226fb78ca3198821121680",
+      "remote_head": "35cf41ad9195ca1e5c226fb78ca3198821121680",
+      "candidate_sha256": "d5a15e087d7323dd0d9c44191ae26fc0cca6bef052de8af85daa94e621e1f190",
+      "non_service_cli_processes": []
+    },
+    "snapshot_2": {
+      "local_head": "35cf41ad9195ca1e5c226fb78ca3198821121680",
+      "remote_head": "35cf41ad9195ca1e5c226fb78ca3198821121680",
+      "candidate_sha256": "d5a15e087d7323dd0d9c44191ae26fc0cca6bef052de8af85daa94e621e1f190",
+      "non_service_cli_processes": []
+    },
+    "dispatches": 0,
+    "limitation": "Bounded local read-only simulation; not evidence of an actual scheduled wake."
+  },
+  "T2_empty_worker_reply": {
+    "result": "PASS_NO_DELIVERABLE_ROUTE_PAUSED_OTHER_READY_WORK_CONTINUES",
+    "historical_source": "docs/ttqs-quality-20261016/quality-review/0055_R02/review/antigravity_review_R02/attempt_receipt.md",
+    "observed": "Antigravity returned exit 0 but no review verdict after a headless read_file permission denial. This is NO VERDICT, not PASS. No permission bypass or Computer Use was used.",
+    "current_action": "No retry; Antigravity review lane remains paused; the independent OpenCode lane can continue with 0075."
+  },
+  "T3_reuse_existing_review": {
+    "result": "PASS_NO_DUPLICATE_REVIEW_OR_REBUILD",
+    "reused_prior_state": "R04 P1 status reconciliation retained exact-SHA scoped reviews for 0057 R07 (a8d67c3f89105d85e47b554007624ce1231c6fb3340e3a9d3bfd14b6ae838705) and 0061 R03 (3d4fe20f7fb825e470ed5dfd71fcaf0f5bb8052dc7a63ef51ee08e2a11668c9c).",
+    "new_model_calls": 0,
+    "docx_rebuilds": 0
+  },
+  "T4_sync_readback": {
+    "result": "PASS_BYTE_EXACT",
+    "verified_commit": "35cf41ad9195ca1e5c226fb78ca3198821121680",
+    "paths": 58,
+    "exact_byte_matches": 58,
+    "mismatches": 0,
+    "candidate_docx_remote_sha256": "d5a15e087d7323dd0d9c44191ae26fc0cca6bef052de8af85daa94e621e1f190",
+    "readback_receipt": "evidence/REMOTE_READBACK_R02.json"
+  },
+  "T5_sample_real_boundary": {
+    "result": "PASS_CANDIDATE_ONLY_REAL_HOLD",
+    "candidate_state": "CANDIDATE_ONLY",
+    "real_evidence": "UNKNOWN/HOLD",
+    "formal_acceptance": "NOT_GRANTED",
+    "synthetic_register_rows": 70,
+    "no_fabricated_approval_or_execution": true
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "project_id": "TTQS_ONE",
+  "document_id": "0090",
+  "requirement_id": "I17D-E04",
+  "official_checkbox_serial": "097",
+  "candidate_revision": "R05",
+  "exact_docx_sha256": "c2d83c21489806e361525f4c335ef803a9a4df1dfb90025a2d14562fbe4fc0da",
+  "reviewer": "OpenCode v2 CLI 2.0.32",
+  "model": "opencode/deepseek-v4.1-flash-free",
+  "session_id": "ses_ea992a30bffe24MWF2CvSa3pqX",
+  "session_outcome": "cli_exit_0_text_returned",
+  "cli_exit_code": 0,
+  "reported_cost": 0,
+  "token_usage": {
+    "input": 48522,
+    "output": 2916,
+    "reasoning": 44009,
+    "cache": {
+      "read": 2176,
+      "write": 0
+    }
+  },
+  "verdict": "PASS",
+  "response_sha256": "1e77ce59ab9bc6f21b37a594d1e28066fef3f71e0473b54c6ec06a049a3b74b0",
+  "response_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0090_R01_OPENCODE_WRITER_R01\\candidate_R05\\opencode_deepseek_review_R05.response.json",
+  "stdout_log_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0090_R01_OPENCODE_WRITER_R01\\candidate_R05\\opencode_deepseek_review_R05.stdout.jsonl",
+  "review_packet_sha256": "4a8679dd95476659ee748b87363afce7a7d388ee61327031e80eb285741b2095",
+  "scope": "Semantic review of the supplied exact Word body extraction for DOCX 0090 R05; visual pages, independent hash/extraction re-verification, live PR/blob checks, real association records and formal acceptance were not reviewed.",
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    {
+      "finding": "The three-way fixed-critical summary check has no explicit box for a critical item left unscored under the existing-source/locator-missing HOLD branch or the untraceable-source rejection branch; the separate source-deficiency field and §6.2.3 still determine the outcome, so this is a completeness polish rather than a decision-logic blocker.",
+      "locator": "§4 fixed-item check and source-deficiency field; §6.1 HOLD row; §6.2.3"
+    },
+    {
+      "finding": "P01–P03 and the P05 D+3 retest use page-level synthetic locators rather than row or line locators; row-level locators would speed evaluator traceability.",
+      "locator": "§7.3 evidence column; §7.5 retest row"
+    },
+    {
+      "finding": "§7.4's denominator field mixes the five-item scoring denominator with the D+30 cohort 4/6 and does not name the two excluded N/O cases in that field; split individual versus cohort denominators or cross-reference §7.2.",
+      "locator": "§7.4 分母與排除條件; §7.2"
+    },
+    {
+      "finding": "§7.2 cites §6.2 item 6 for a 3/6 error, but 3/6 is primarily the denominator/N/O error in item 4 rather than the percentage-point-versus-relative-percentage formula error in item 6.",
+      "locator": "§7.2 denominator rule; §6.2 items 4 and 6"
+    },
+    {
+      "finding": "The TTQS evaluator user is implicit rather than named; a short evaluator cross-check note would improve direct usability.",
+      "locator": "§1.4; §2.2; §9"
+    }
+  ],
+  "formal_acceptance": "NOT_GRANTED"
+}

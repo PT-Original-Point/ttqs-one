@@ -1,0 +1,44 @@
+{
+  "project_id": "TTQS_ONE",
+  "automation_id": "ttqs-one-hourly-quality-goal-resume",
+  "name": "TTQS ONE 2-hour quality GOAL resume",
+  "status": "ACTIVE",
+  "schedule_rule": "RRULE:FREQ=HOURLY;INTERVAL=2",
+  "schedule_interval_minutes": 120,
+  "destination": "thread",
+  "target_thread_id": "01a14098-b269-79e3-b07c-56e96557fe07",
+  "prompt_file_raw_sha256": "eef68c9f8921ed8bdb68e06aebb8220317a25d62c97117f70142160d919e7472",
+  "prompt_native_config_sha256": "8b4a351a3630f751a1bff0ff6e03b8ed59548efb1a47edcbd2fc0e2c07358647",
+  "prompt_stored_utf8_sha256": "828c6668b3bc5ca99cd26870842174e64a10e0061a987911b66c8f0da1a805af",
+  "prompt_content_line_normalized_match": true,
+  "prompt_semantics_checks": {
+    "next_ready_stage_immediate": true,
+    "mainwindow_zero_only_ui_unknown": true,
+    "missing_goal_resume_not_a_gate": true
+  },
+  "notification_policy": "failed_runs_only",
+  "ttqs_codex_automation_total": 2,
+  "ttqs_codex_automation_active": 1,
+  "ttqs_codex_automation_entries": [
+    {
+      "id": "ttqs-one-hourly-quality-goal-resume",
+      "status": "ACTIVE",
+      "rrule": "RRULE:FREQ=HOURLY;INTERVAL=2"
+    },
+    {
+      "id": "ttqs-one-standalone-quality-resume",
+      "status": "PAUSED",
+      "rrule": "RRULE:FREQ=HOURLY;INTERVAL=1"
+    }
+  ],
+  "windows_task_scheduler_task": "TTQS_ONE_Codex_Supervisor",
+  "windows_task_scheduler_state": "Disabled",
+  "goal_thread_id": "01a14098-b269-79e3-b07c-56e96557fe07",
+  "goal_status": "active",
+  "native_view_called": "YES_RENDERED_AUTOMATION_CARD",
+  "native_update_result": "UPDATED_AUTOMATION_IN_APP",
+  "next_run_time": "UNKNOWN_NOT_EXPOSED_BY_NATIVE_READBACK",
+  "natural_trigger_after_prompt_update": "NOT_YET_OBSERVED",
+  "new_scheduler_created": false,
+  "observed_at_local": "2026-10-24T13:15:26.883563+08:00"
+}

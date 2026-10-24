@@ -1,0 +1,97 @@
+{
+  "receipt_id": "TTQS_ONE_R09_P6_WORKER_DISPATCH_RECOVERY_DELTA_20261022",
+  "source_contract_commit": "cde1e7aa6172f5aa7252fadfba2f48cc25dd673d",
+  "source_contract_blobs": {
+    "AGENTS.md": "103cc9b04e4e756cbc7a8d405faaff218beade69",
+    "04_CODEX_GOAL_24X7_EXECUTION.md": "4ee893218791ec9460e824fc559933c276414738",
+    "05_HOURLY_NATIVE_WAKE_RESUME.md": "35d3081c7e7fb979466c3a58a1e77b42f0d1441a",
+    "06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md": "4c7eff55748ff265b1e5a7d1122852b0d101acbd"
+  },
+  "current_goal_status": "ACTIVE",
+  "pause_recovery": "No paused Goal observed in native Goal readback; native resume was not invoked.",
+  "schedule": {
+    "id": "ttqs-one-hourly-quality-goal-resume",
+    "state": "ACTIVE",
+    "target_thread": "01a14098-b269-79e3-b07c-56e96557fe07",
+    "interval_minutes": 120,
+    "source": "local native automation TOML",
+    "natural_next_trigger_and_execution_record": "UNKNOWN_NOT_READABLE_FROM_NATIVE_AUTOMATION_VIEW",
+    "dual_scheduler": "not found in current check; Windows TTQS_ONE_Codex_Supervisor disabled; separate standalone task paused per prior readback"
+  },
+  "dashboard": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\MASTER\\dashboard.html",
+    "sha256": "f0e8625b2b77f4616beab18e31c1f1f7b05655e9d54898129d8e8d4f1d35a070",
+    "last_modified": "2026-10-05",
+    "required_local_endpoints": "127.0.0.1:8765 and 127.0.0.1:8766",
+    "listeners": "NONE_OBSERVED",
+    "state": "STALE_OFFLINE_DASHBOARD"
+  },
+  "rolling_24h": {
+    "antigravity_receipt_path": "docs/ttqs-quality-20261016/quality-review/0102_I18-E09_R06_20261021/evidence/R09/antigravity_cli_rolling24h_reconciliation_20261022_R09.json",
+    "antigravity_receipt_sha256": "58a210a28749c519ffcfd34c68b2f2ddae506a978c4e324354c7581dc647ab04",
+    "antigravity_attempts": 5,
+    "antigravity_confirmed_gemini_successes": 0,
+    "antigravity_known_total_tokens": 104973,
+    "antigravity_additional_usage_and_billing": "UNKNOWN",
+    "opencode_receipt_path": "docs/ttqs-quality-20261016/quality-review/0102_I18-E09_R06_20261021/evidence/R09/opencode_v2_rolling24h_reconciliation_delta_20261022_R09.json",
+    "opencode_receipt_sha256": "1b90c514482fa413d660550dd3ae992a52991cff5ae614738d28a413fcb3245d",
+    "opencode_sessions": 46,
+    "opencode_succeeded": 44,
+    "opencode_interrupted": 2,
+    "opencode_active": 0,
+    "opencode_tokens": {
+      "input": 2388783,
+      "output": 430762,
+      "reasoning": 760083,
+      "cache_read": 9989952,
+      "cache_write": 0
+    },
+    "opencode_reported_cost": 0.0,
+    "provider_billing": "UNKNOWN"
+  },
+  "document_0102": {
+    "requirement_id": "I18-E09",
+    "candidate_path": "docs/ttqs-quality-20261016/quality-review/0102_I18-E09_R06_20261021/candidate/0102__技能競賽獲獎證據取得與查核工作紀錄_R09.docx",
+    "candidate_sha256": "b7c9d82667971097313514aaaa0939d912730b63cd7a8e2dd25d4999a8659b92",
+    "technical_status": "PASS_SCOPED",
+    "semantic_review_session": "ses_e9ce6d3ceffecnApJfED1m3jCg",
+    "semantic_review_output_sha256": "255f1ec054863a1eb195c07ef58c0c37b464aec447e0f3722ba70e217c65b729",
+    "semantic_result": "PASS 14/14 as independently reported; B1/B2/B3 closed; zero blockers; eight nonblockers",
+    "semantic_scope": "ordered body text bound by scoped technical receipt; reviewer did not open/hash DOCX; provider serving-model identity UNKNOWN",
+    "semantic_recovery": "CLI wrapper timed out at 300s; read-only session DB later showed succeeded; original response recovered, not re-dispatched",
+    "visual_status": "PENDING; owned Word export active, no PDF yet; current render-status receipt attached.",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence_status": "UNKNOWN; sample content only",
+    "nonblocker_adjudication": "pending; reviewer flagged Table 33 consent wording versus Table 9 UNKNOWN consent, and version history still displays R01."
+  },
+  "active_processes": {
+    "0102_word_native_export": "PIDs 70808/15600 owned export still active; CPU increased; no PDF at 18:37:15; continue same attempt, no duplicate.",
+    "0105_word_native_export": "STOPPED as scoped timeout after 8,386.7 seconds; exact exporter PIDs 60760/16684 stopped; no PDF/receipt; candidate unchanged.",
+    "opencode_cli_review": "reviewer completed in OpenCode DB; no second reviewer dispatched",
+    "opencode_service": "service PID alone is not a Writer"
+  },
+  "antigravity_route": "No new dispatch issued; last three provider-routed calls resolved to CCPA, so Gemini-contracted route is not verified available.",
+  "R09_guard_tests": {
+    "test_run_receipt_path": "docs/ttqs-quality-20261016/quality-review/0102_I18-E09_R06_20261021/evidence/r09_guard_test_run_receipt_20261021.json",
+    "test_run_receipt_sha256": "4b46b16a9382abe5782b9778f276c612b3275f787fc901277dcc353abaa3ebb7",
+    "prior_matrix": "T01-T14 retained; statuses were 6 observed-only, 6 simulated-only, 2 mixed; system_recovery_pass=false; natural 120-minute trigger untested.",
+    "T11_correction": "rolling-24h Antigravity activity is now reconciled from five current-window attempts; prior stale conclusion must be superseded by the linked reconciliation ledger, not the old capture."
+  },
+  "github_sync_before_this_delta": "pending",
+  "next_legal_action": "Keep the existing 0102 exact-SHA Word export as the only active 0102 render. If PDF appears, hash and inspect every page; if the scoped timeout threshold is reached with no output, write a failure receipt and proceed to a source-ready independent lane.",
+  "not_claimed": [
+    "natural schedule trigger success",
+    "dashboard live",
+    "Gemini serving identity",
+    "visual PASS",
+    "formal acceptance",
+    "all 46 OpenCode sessions adopted as document work"
+  ],
+  "document_0105_render_failure": {
+    "receipt_path": "docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022/evidence/word_export_failure_0105_R07_attempt02.json",
+    "receipt_sha256": "1a04fdfefc7488f5da1a07647024c1609fb2379863efc232b5b7d5442bc4fd88",
+    "candidate_sha256": "32bc0b8d7efe767e584b2a848206507d4da73ffa344378143b22186705302027",
+    "status": "SCOPED_RENDER_TIMEOUT_NO_PDF; only 0105 R07 render lane stopped"
+  },
+  "captured_at_local": "2026-10-22T18:37:15.2083173+08:00"
+}

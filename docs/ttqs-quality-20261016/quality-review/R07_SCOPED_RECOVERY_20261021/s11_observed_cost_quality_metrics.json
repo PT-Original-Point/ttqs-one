@@ -1,0 +1,45 @@
+{
+  "schema": "ttqs.r07_cost_quality_metrics.v1",
+  "scope": "Observed focal set only, no extrapolation to 129 requirements.",
+  "current_docx_candidate_count": 5,
+  "doc_ids": [
+    "0094",
+    "0096",
+    "0097",
+    "0098",
+    "0099"
+  ],
+  "candidate_sha256": {
+    "0094_R18": "ecf9717cdc7f7785ed6c7b18b9dd8e29af21a5b2641e13acf3b4b813371b5e18",
+    "0096_R13": "6ece53befed3ecb1b42e523b80da80decd33b0a7d55e4e1fe75ddf79b905d445",
+    "0097_R08": "daf85320fc7b2304da353a0c41d3bf32d585f2edfb3349938bff877dd0f5a2cb",
+    "0098_R10": "6310a71f6fb540b22572f823e7becb7a8198c12dc068eebff2794599e5a88152",
+    "0099_R17": "293be2dc0e3e0162fa368272851baed27e92990b4ac1871228ec37b51546776b"
+  },
+  "recovery_dispatch": {
+    "opencode_calls": 2,
+    "useful_reviewer_outputs": 2,
+    "docx_built": 1,
+    "antigravity_calls": 0,
+    "failed_calls": 0
+  },
+  "token_telemetry": {
+    "0094_input_output_reasoning_cache": "UNKNOWN",
+    "provider_invoice": "UNKNOWN",
+    "serving_model": "UNKNOWN",
+    "native_stdout_bytes": 11879,
+    "Codex_usage": "UNKNOWN",
+    "0096_input_output_reasoning_cache": "UNKNOWN"
+  },
+  "first_pass": {
+    "0096": "metadata correction only",
+    "0098": "sidecar correction only",
+    "0097": "R08 visual remains blocked",
+    "0099": "R02 80-cell preflight and R17 build",
+    "0094": "one useful text-only review"
+  },
+  "review_outcomes": {
+    "0094_R18": "PASS_TEXT_ONLY; serving model UNKNOWN",
+    "0096_R13": "PASS_TEXT_ONLY; 11/12 text-verifiable checks; font size UNKNOWN; no binary/visual assertion"
+  }
+}

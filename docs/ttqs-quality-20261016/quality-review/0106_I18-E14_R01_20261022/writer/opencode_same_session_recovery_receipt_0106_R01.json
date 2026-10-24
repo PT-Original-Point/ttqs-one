@@ -1,0 +1,18 @@
+{
+  "work_id": "TTQS-0106-WRITER-R01-20261022-01",
+  "attempt": 2,
+  "session_id": "ses_e9f9d5427ffeA8zE0q5GWoZh9r",
+  "agent": "build",
+  "requested_model": "opencode/mimo-v2.6-flash-free",
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "cost_reported": 0,
+  "message_count": 4,
+  "last_message_type": "agent-switched",
+  "outcome": "BLOCKED_BEFORE_MODEL_CALL",
+  "evidence": "The native export recorded agent-switched but no continuation user message; tokens remained 0 and no manuscript was produced.",
+  "root_cause": "UNKNOWN; the continued run did not append its prompt after the agent switch.",
+  "action": "Stopped only the owned stalled CLI client; retained session export and receipts; next bounded attempt uses a fresh direct build-agent run because no writer generation occurred.",
+  "fallback": "NOT_AUTHORIZED",
+  "computer_use": "NOT_USED"
+}

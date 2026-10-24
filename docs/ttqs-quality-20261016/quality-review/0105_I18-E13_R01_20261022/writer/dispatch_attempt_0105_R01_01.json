@@ -1,0 +1,31 @@
+{
+  "receipt_id": "TTQS-0105-OPENCODE-WRITER-ATTEMPT-01",
+  "observed_at_tpe": "2026-10-22T04:36:51+08:00",
+  "work_id": "TTQS-0105-I18-E13-WRITER-R01",
+  "doc_id": "0105",
+  "requirement_id": "I18-E13",
+  "requested_route": "OpenCode v2 CLI 2.0.32",
+  "requested_model": "opencode/deepseek-v4.1-flash-free",
+  "session_id": "ses_e9fd5249fffen0drtH1VHbVyDL",
+  "session_event_provider": "opencode",
+  "session_event_model": "deepseek-v4.1-flash-free",
+  "actual_serving_model": "UNKNOWN",
+  "fallback": "UNKNOWN",
+  "session_finish": "length",
+  "tokens": {
+    "input": 5834,
+    "output": 0,
+    "reasoning": 32000,
+    "cache_read": 4096,
+    "cache_write": 0
+  },
+  "local_reported_cost": 0,
+  "vendor_billing": "UNKNOWN",
+  "returned_manuscript_chars": 0,
+  "stdout_bytes": 0,
+  "stderr_bytes": 0,
+  "candidate_docx_created": false,
+  "result": "FAILED_NO_TEXT_LENGTH",
+  "diagnostic": "OpenCode session assistant completed with finish=length and output_tokens=0; client process remained open after session completion and was interrupted after sanitized session export. No DOCX build or other external effect occurred.",
+  "repair_action": "One bounded repair attempt will use the separately selected currently listed free model opencode/mimo-v2.6-flash-free with the same source-bound packet and shorter direct output instruction; no model fallback will be used."
+}

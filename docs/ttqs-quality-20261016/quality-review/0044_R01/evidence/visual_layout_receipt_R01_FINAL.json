@@ -1,0 +1,110 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0044",
+  "requirement_id": "I09-E04",
+  "official_checkbox_sequence": "045",
+  "candidate_revision": "R01",
+  "candidate_sha256": "76bde5df4209abc6f102a15a02c5e51a5816ef3df309aaed0a0ab44ea9075644",
+  "render_method": "Microsoft Word 16 COM ExportAsFixedFormat to PDF; bundled Poppler rasterized at 144 dpi",
+  "render_pdf_path": "evidence/render_final_0044_R01_final/0044_R01_Word.pdf",
+  "render_pdf_sha256": "19d5a6e93a655401c987e52df5386c31c11695d2873557629e0e6ef7b88224f9",
+  "page_count": 8,
+  "page_images": [
+    {
+      "page": 1,
+      "path": "evidence/render_final_0044_R01_final/page-1.png",
+      "bytes": 388507,
+      "sha256": "e05204ae06b1b7e750e277d82b14f01b086cfe3e386e675887dd2bb49e14fb8a"
+    },
+    {
+      "page": 2,
+      "path": "evidence/render_final_0044_R01_final/page-2.png",
+      "bytes": 363680,
+      "sha256": "2b5812843085d1076a95d648bfd4d21d7ab9c238831fbcd981b248d9d0d90a18"
+    },
+    {
+      "page": 3,
+      "path": "evidence/render_final_0044_R01_final/page-3.png",
+      "bytes": 410635,
+      "sha256": "55062800bfe40c44f588d123931b80374dce3ee7431c5e514150db973e53e7fc"
+    },
+    {
+      "page": 4,
+      "path": "evidence/render_final_0044_R01_final/page-4.png",
+      "bytes": 387392,
+      "sha256": "9ab40cb673de9696a2c31e359e7fc518c9a290cb60ae5f36ae96ed8f97789e31"
+    },
+    {
+      "page": 5,
+      "path": "evidence/render_final_0044_R01_final/page-5.png",
+      "bytes": 333453,
+      "sha256": "3843c19f0998301a17ab6781244a22fa368acd3b8691fad4734fb71aaa1dd9a9"
+    },
+    {
+      "page": 6,
+      "path": "evidence/render_final_0044_R01_final/page-6.png",
+      "bytes": 348422,
+      "sha256": "d8c0f3f427ae2874e936bb66380f176a2452f7323691565cac959790430c26cd"
+    },
+    {
+      "page": 7,
+      "path": "evidence/render_final_0044_R01_final/page-7.png",
+      "bytes": 386198,
+      "sha256": "d63d37973392ac923f4d4409c15a2ac9f383bfd0c7b9c07bb4536a45d5c7a51f"
+    },
+    {
+      "page": 8,
+      "path": "evidence/render_final_0044_R01_final/page-8.png",
+      "bytes": 280860,
+      "sha256": "0c37f5870ec2ab98d06f038fbecfac1f57fba1bb185ceb242dcf7d87f07b941c"
+    }
+  ],
+  "direct_visual_inspection_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "visual_layout_verdict": "PASS",
+  "verified_observations": [
+    "Title is black/navy, uses the Word Title style, and has no bottom rule.",
+    "The identifier line keeps the complete production date together.",
+    "The four-message email thread is one table; no isolated table header remains at a page bottom.",
+    "The reusable-record form includes twelve individually represented fields plus a separate completeness judgment for each worked meeting and oral-discussion record.",
+    "All 8 pages were directly inspected with no clipped text, overlap, broken glyphs, or empty/nearly empty page."
+  ],
+  "layout_repairs": [
+    {
+      "finding": "Built-in Title style rendered a blue rule under the title.",
+      "repair": "Removed style and direct paragraph borders."
+    },
+    {
+      "finding": "The reusable form created an almost empty final page.",
+      "repair": "Widened only the form label column from 1.45 in to 2.25 in."
+    },
+    {
+      "finding": "The title metadata wrapped the date after a hyphen.",
+      "repair": "Shortened the identifier line without changing its values."
+    },
+    {
+      "finding": "Separate one-row email tables left an isolated table header.",
+      "repair": "Consolidated the four unchanged messages into one table with a repeated header."
+    },
+    {
+      "finding": "The stop-condition paragraph occupied an almost empty final page.",
+      "repair": "Moved the unchanged stop condition into the section 8 exception table, where operators can use it with the HOLD/rejection rows."
+    },
+    {
+      "finding": "The 12-row reusable form pushed the final requirement-crosswalk row to an almost empty page.",
+      "repair": "Reorganized the same 12 fields as six paired-field rows with wide response cells; no field was removed."
+    }
+  ],
+  "semantic_review": "PENDING; this receipt covers Word rendering and visual inspection only.",
+  "content_completion_repair": "Added explicit Traditional Chinese timezone, signoff-evidence, and correction/HOLD field values to the worked records; expanded the fact-level replacement register from 144 to 156 unique facts. This changed substantive candidate text.",
+  "candidate_bytes_unchanged_during_render": true,
+  "final_rendered_at_taipei": "2026-10-17T06:47:50.812686+08:00"
+}

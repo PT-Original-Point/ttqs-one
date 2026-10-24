@@ -1,0 +1,66 @@
+```json
+{
+  "doc_id": "0105",
+  "official_requirement_id": "I18-E13",
+  "candidate_docx_sha256": "32bc0b8d7efe767e584b2a848206507d4da73ffa344378143b22186705302027",
+  "verdict": "PASS",
+  "criteria_verdicts": {
+    "genre_match": "PASS — 問卷＋課後行動計畫＋追蹤評估套件，含 SOP、有效性規則、決策/HOLD 表、替換清冊（第一、二、五、五之一、十四、十五節）；非單純滿意度 SOP、非證照/財務/4點報告。",
+    "standalone_usability": "PASS — 定義（第三節）、角色權限（第四節）、施測 SOP（第五節）、Forms A–F（第六～十一節）、結論口徑（第十三節）、決策表（第十四節）、使用前10項與結案17項檢核（第十六節及文末）齊備，施測/計分/追蹤可不需額外解釋。",
+    "forms_completeness": "PASS — Form A–F 全數存在且含全部強制欄位；B1–B12（＋B13/B14 開放文字）與 C1–C8 在第七、八節及 9-2b 逐題表均可定位。",
+    "fixed_worked_example_data": "PASS — SYN-0105-CASE-01／SYN-0105-COURSE-01；邀請 12＝7+5、回覆 12＝7+5、有效 10＝6+4、無效 2＝1+1（第六節 Form A、第十二節 12-1/12-2、文末算術勾稽）。",
+    "item_distributions_and_math": "PASS — 共同題 4/3/2/1/0＋N/A 0＝10，正向 7/10＝70.0%；學員 2,2,1,1,0,0＝6→4/6＝66.7%；客戶 2,1,1,0,0,0＝4→3/4＝75.0%；均值 (5×4+4×3+3×2+2×1)÷10＝40÷10＝4.0（9-2、9-2b、12-2）。所有比率四捨五入至小數1位正確（83.3/85.7/80.0/16.7/14.3/20.0/66.7/63.6/60.0）。審計題數勾稽 77＝69+5+2+1、25＝21+3+1+0 自洽。",
+    "action_plan_values": "PASS — 行政示範資料集 SYN-0105-ADMIN-01：基準 5/10＝50.0%、目標 8/10＝80.0%、追蹤 8/10＝80.0%、絕對 +30.0pp、相對 +60.0%、與目標差距 0.0pp（9-3、第十節 Form E、第十一節 Form F、12-2、13節），並明示非同一批人、非同一分母、來源 UNKNOWN、不得作因果。",
+    "sample_real_boundary": "PASS — 全域 SAMPLE/SYNTHETIC 宣告；REAL 一律 UNKNOWN／NOT_RECEIVED／HOLD（封面宣告、第四節、第六節、第十六節「真實資料界線」）；依 V6 明示「本稿無任何 REAL 有效問卷」。無虛構姓名/簽名/核准/第三方紀錄。",
+    "consent_privacy": "PASS — 同意五項前提（範圍/依據/用途/回傳/隱私窗口）均為未填占位或 NOT_RECEIVED 且 HOLD，明示未核准不得發放（第四節、第六節 Form A、第七/八節須知）；不宣稱匿名；同意欄一律 〔SAMPLE/SYNTHETIC：假設已登記；不可作為同意證明〕。",
+    "unsupported_claims": "PASS — 未發現任何分數、核准、結案、匿名、財務、證照或因果主張；Form E「追蹤狀態 CLOSED_FOR_SAMPLE」與「實際證據處置 HOLD」雙欄拆分且明示不得互相覆蓋（第十節狀態欄拆分說明、N7）。",
+    "hold_reject_conditions": "PASS — 第十四節 29 列決策表涵蓋門檻不足、V4 無法建立、N/A 無理由、分母 0、診斷題揭露、子群 N<5、同意/占位缺失、重複/退出/未送達、無基準/無追蹤、來源 UNKNOWN、鄰界路由（0104/0106/0110/0095）、隱私、因果過度主張等。",
+    "replacement_register": "PASS — F001–F162 共 162 列（83+46+12+21），全部 SAMPLE/SYNTHETIC; HOLD (unverified)，無 REAL-VERIFIED；含位置、樣本值、替換來源/動作、負責角色、狀態及 owner 交叉引用與十五之一節次索引。",
+    "title_blind_and_neighbors": "PASS — 第十三節不可說清單與第十六節負向鄰界明確排除 0104 證照、0106 財務、0110 4點顯著成效、0095 一般滿意度制度；未見鄰界混淆或未授權 cohort 串接。",
+    "official_source_fidelity": "PASS — 第 7 頁第 3 點原文引用為「常見佐證示例」，明示非分數承諾、非達陣證明（封面宣告、第一節）；doc_id 0105／I18-E13／index 114 與 index 113 之區分正確。"
+  },
+  "response_rate_consistency_finding": {
+    "question": "Raw returns 12/12, 10 valid/12, 2 invalid 是否與 Blueprint「overall response rate 10/12＝83.3%」一致",
+    "decision": "CONSISTENT",
+    "explanation": "算術完全勾稽：邀請 12（7+5）＝回覆 12（7+5）＝有效 10（6+4）＋無效 2（1+1）。文件以分子/分母定義消解標籤差異：整體回覆率＝回覆 12÷送達邀請 12＝100.0%；整體回收率（有效）＝有效 10÷送達邀請 12＝83.3%，即對應 Blueprint 所稱 overall response rate；學員 6/7＝85.7%、客戶 4/5＝80.0% 同理為「回收率（有效）」列。文件在第九節 9-1「與 Blueprint 標籤對應說明」明文聲明「數值一致、標籤不同；比對以分子/分母定義為準」，並註明 83.3%＋16.7% 之可相加性僅為本例特例。無矛盾。",
+    "exact_locations": [
+      "第九節 9-1 回收類公式表（整體回覆率/整體回收率（有效）/整體有效率/整體無效率及各子群列）",
+      "第九節 9-1 末「與 Blueprint 標籤對應說明」與「不可相加限制」段",
+      "第六節 Form A 邀請/回覆/有效/無效份數列",
+      "第十二節首段、12-1 審計勾稽、12-2 題目與回收結果",
+      "文末算術勾稽段"
+    ]
+  },
+  "blocking_defects": [],
+  "nonblocking_notes": [
+    {
+      "locator": "第七節 Form B 題數結構表與題目清單（對照 Blueprint §3.6）",
+      "note": "嚴格字面讀法下，Blueprint 要求「at least 12 substantive items with a five-point scale」，文件提供 12 個實質題號但僅 11 題使用 1–5 量尺（第 6 題為非計分佐證提示題）。此設計符合 Blueprint 同段「Do not force an opinion」及「observed evidence」要求，且 B13/B14 開放文字齊備，故不構成阻擋。",
+      "minimal_correction_if_desired": "新增第 12 個 1–5 計分診斷題（並同步更新 F086/F088/F105/F159 與 V2 門檻），或於題數結構表加註等效性說明。"
+    },
+    {
+      "locator": "第十五節登錄原則⑦、15-1～15-4 各列",
+      "note": "Blueprint §3.14 要求每列含 case_id 與文件 ID；文件以登錄原則⑦（案件 SYN-0105-CASE-01、文件 0105）於段落層級宣告，fact_id 前綴 SYN-0105- 編碼文件 ID，各列未逐列重複 case_id/文件 ID 欄。定位仍可獨立解析。"
+    },
+    {
+      "locator": "第五節 N2 反例說明段、第九節 9-2b 空白格說明、第十二節 12-1 示範簡化限制",
+      "note": "未送達/退出/重複三分支與非共同題逐題分配在本示範資料集中無數值演示，文件已自我標示為已知限制，且 REAL 使用要求已明確。"
+    },
+    {
+      "locator": "第十五節引言與十五之一（〈0105虛構資料替換與頁碼定位清冊〉）",
+      "note": "文件引用隨附的頁碼/列次定位清冊作為外部附件；該附件不在本審查包內，存在與內容狀態 UNKNOWN。文件內建節次索引已足以定位。"
+    },
+    {
+      "locator": "第五之一節 V1–V6、第三節「子群報告門檻」、9-2b 報告口徑宣告",
+      "note": "80% 完整性門檻、子群門檻 5、僅共同題 B5/C2 得對外揭露等均為提案層 SAMPLE 規則並已登錄（F085、F078、F088、F159）且維持 HOLD 待有權者確認；未見將其寫成既有協會政策或 TTQS 官方規定。"
+    }
+  ],
+  "review_scope_limitations": [
+    "純文字審查：僅依審查包提供之 official page 7 摘錄、source packet、Unique Blueprint 與 Exact-SHA ordered text 進行；未使用檔案工具、未進行任何視覺/版面/字級檢視，不主張視覺檢查。",
+    "無法獨立驗證 DOCX 實體位元組與所給 SHA256 之符合性；一切結論綁定審查包宣稱之 SHA256=32bc0b8d...2027。",
+    "官方 PDF 僅以第 7 頁文字摘錄（及所附 SHA）為憑，未比對完整官方文件其餘頁面。",
+    "外部附件〈0105虛構資料替換與頁碼定位清冊〉未納入審查，狀態 UNKNOWN。",
+    "FORMAL_ACCEPTANCE 維持 NOT_GRANTED；本審查僅為獨立語意/可用性判定，未涵蓋技術/視覺 gate。未推論任何協會真實事實；所有 REAL 狀態維持 UNKNOWN/NOT_RECEIVED/HOLD。"
+  ]
+}
+```

@@ -1,0 +1,72 @@
+{
+  "project_id": "TTQS_ONE",
+  "document_id": "0086",
+  "official_requirement_id": "I17C-E05",
+  "official_checkbox_serial": "092",
+  "requirement_mapping": "PROVISIONAL; historical 142-document sequence source unavailable",
+  "revision": "R03",
+  "status": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "verdict": "PASS",
+  "docx_sha256": "95d57e56026bdcc4060ccfc00ef545f3434a2fc5d74c3c69e62d53b9052413ce",
+  "body_sha256": "4684d781585b00a144efe6da0ceb21f88c4ff35acd5aa42b7161921fbb1f7ec1",
+  "source_packet_sha256": "cb1ab7d75d430264cd77eef10e14c3d8b3c669de4605f2cd9cd2605dec73880e",
+  "unique_blueprint_sha256": "dcf4cfed82fa6e459abcafca164d489f4b33e1640ac15a9671cfa0fb8f29a6ca",
+  "synthetic_register_sha256": "58547772f9c8deb1ad853b329f608b084f3a32520ef62ca5245a94f04a8121df",
+  "review_task_sha256": "184886e1f39a28cd270af48abb73a7090397e756f8c19dd4ef2cb11c403a8900",
+  "normalized_review_sha256": "b19c15ec63c59e210a6a9f5c4b16e4d9cf8a384485ee982dea441d93ed0ae504",
+  "raw_stdout_sha256": "b19c15ec63c59e210a6a9f5c4b16e4d9cf8a384485ee982dea441d93ed0ae504",
+  "raw_stderr_sha256": "13ab5c7c87cdd58d6590e736a6fb756f8c2cde2cf3c22fcdfc5a81fd977bba79",
+  "reviewer": {
+    "route": "OpenCode CLI v2.0.32",
+    "model": "opencode/mimo-v2.6-flash-free",
+    "session_id": "ses_eaad9bedcffeER2qUNCnjGv6IN",
+    "independent_from_builder": true,
+    "session_outcome": "succeeded",
+    "exit_code": 0,
+    "cost_reported": 0,
+    "tokens": {
+      "input": 45561,
+      "output": 2915,
+      "reasoning": 15896,
+      "cache": {
+        "read": 4736,
+        "write": 0
+      }
+    }
+  },
+  "dimensions": {
+    "official_requirement_fit": "PASS",
+    "blueprint_completeness": "PASS",
+    "authorization_independence_safety": "PASS",
+    "forms_A_to_H": "PASS",
+    "examples_math_cross_section_consistency": "PASS",
+    "synthetic_real_boundary": "PASS",
+    "separation_from_0082_to_0085": "PASS",
+    "text_reader_usability": "PARTIAL_TEXT_PASS_RENDERED_REVIEW_NOT_INSPECTED"
+  },
+  "resolved_prior_findings": [
+    "D-1 three distinct case closure unit",
+    "D-2 NA approval 2026-07-14 after 2026-07-13 sample freeze and before 2026-07-20 observation",
+    "D-3 corrected F010 and F035 locators",
+    "D-4 full F046/F047/F050 IDs",
+    "D-5 added F055-F057 role-code rows; 56 register rows"
+  ],
+  "remaining_findings": [
+    {
+      "finding": "Quoted official 17c score descriptions are condensed, matching the source-packet transcription; body meaning and rubric separation are unaffected.",
+      "severity": "LOW_NON_BLOCKING",
+      "locator": "§2.2 rows 2-3",
+      "id": "N-1"
+    }
+  ],
+  "visual_scope": {
+    "reviewer_inspected_rendered_pages": "0/22; NOT_INSPECTED",
+    "separate_visual_receipt": "PASS",
+    "visual_receipt_sha256": "79b8e2ca1e1ad9130014d5eb7bd4c6dfd07000f4c375b383da1bedf10b0af4ae",
+    "visual_receipt_binds_docx_sha256": "95d57e56026bdcc4060ccfc00ef545f3434a2fc5d74c3c69e62d53b9052413ce"
+  },
+  "reviewer_scope": "Textual exact-candidate review; reviewer did not hash DOCX or inspect candidate rendered pages. Reviewer independently recomputed totals and inspected body/source/Blueprint/register/receipts and official page-6 image.",
+  "semantic_ready_for_human_review": true,
+  "formal_acceptance": "NOT_GRANTED",
+  "recorded_at_local": "2026-10-20T01:19:34.8413253+08:00"
+}

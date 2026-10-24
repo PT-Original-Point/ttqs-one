@@ -1,0 +1,167 @@
+{
+  "schema": "TTQS_ONE_0082_LOCKED_SYNTHETIC_MATH.v1",
+  "cohort": "SYN-0082-2026-A01",
+  "dataset_path": "inputs/SYNTHETIC_DATASET_LOCK_0082_R01.csv",
+  "dataset_sha256": "f09cce13a40a62bf4067efc2e6c9a5cabcc2496539bad4dd606fd0288896b7a6",
+  "rows": 72,
+  "issued": 12,
+  "returned": 10,
+  "valid": 9,
+  "invalid": 1,
+  "not_returned": 2,
+  "validity_rule": "VALID when at least 4 of 6 behavior items are answered; explicit N/O counts as an answered item but is excluded from score denominator; BTR-10 has 3/6 and is excluded.",
+  "items": [
+    {
+      "item": "B1",
+      "n_eligible": 9,
+      "no_opportunity": 0,
+      "missing": 0,
+      "pre_sum": 13,
+      "current_sum": 26,
+      "expected_tuple": [
+        9,
+        0,
+        0,
+        13,
+        26
+      ],
+      "actual_tuple": [
+        9,
+        0,
+        0,
+        13,
+        26
+      ],
+      "matches": true
+    },
+    {
+      "item": "B2",
+      "n_eligible": 8,
+      "no_opportunity": 1,
+      "missing": 0,
+      "pre_sum": 13,
+      "current_sum": 23,
+      "expected_tuple": [
+        8,
+        1,
+        0,
+        13,
+        23
+      ],
+      "actual_tuple": [
+        8,
+        1,
+        0,
+        13,
+        23
+      ],
+      "matches": true
+    },
+    {
+      "item": "B3",
+      "n_eligible": 7,
+      "no_opportunity": 2,
+      "missing": 0,
+      "pre_sum": 12,
+      "current_sum": 24,
+      "expected_tuple": [
+        7,
+        2,
+        0,
+        12,
+        24
+      ],
+      "actual_tuple": [
+        7,
+        2,
+        0,
+        12,
+        24
+      ],
+      "matches": true
+    },
+    {
+      "item": "B4",
+      "n_eligible": 9,
+      "no_opportunity": 0,
+      "missing": 0,
+      "pre_sum": 13,
+      "current_sum": 25,
+      "expected_tuple": [
+        9,
+        0,
+        0,
+        13,
+        25
+      ],
+      "actual_tuple": [
+        9,
+        0,
+        0,
+        13,
+        25
+      ],
+      "matches": true
+    },
+    {
+      "item": "B5",
+      "n_eligible": 8,
+      "no_opportunity": 1,
+      "missing": 0,
+      "pre_sum": 11,
+      "current_sum": 21,
+      "expected_tuple": [
+        8,
+        1,
+        0,
+        11,
+        21
+      ],
+      "actual_tuple": [
+        8,
+        1,
+        0,
+        11,
+        21
+      ],
+      "matches": true
+    },
+    {
+      "item": "B6",
+      "n_eligible": 5,
+      "no_opportunity": 3,
+      "missing": 1,
+      "pre_sum": 7,
+      "current_sum": 14,
+      "expected_tuple": [
+        5,
+        3,
+        1,
+        7,
+        14
+      ],
+      "actual_tuple": [
+        5,
+        3,
+        1,
+        7,
+        14
+      ],
+      "matches": true
+    }
+  ],
+  "scored_cells": 46,
+  "no_opportunity_cells": 7,
+  "missing_cells": 1,
+  "pre_score_sum": 69,
+  "current_score_sum": 133,
+  "pre_mean": 1.5,
+  "current_mean": 2.891304347826087,
+  "change": 1.391304347826087,
+  "grid_reconciliation": true,
+  "all_item_checks_match": true,
+  "all_examples_synthetic": true,
+  "real_status": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED",
+  "overall_match": true
+}

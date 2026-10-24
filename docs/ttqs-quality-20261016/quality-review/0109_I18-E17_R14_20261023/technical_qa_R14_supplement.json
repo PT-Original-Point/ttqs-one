@@ -1,0 +1,21 @@
+{
+  "work_id": "0109_I18E17_TECHNICAL_SUPPLEMENT_R14_R02_20261023",
+  "doc_id": "0109",
+  "requirement_id": "I18-E17",
+  "artifact_sha256": "6f846e1737ff0d9b8baf40f459071f9258d51c267935d95222a89e7a05804a63",
+  "checks": {
+    "I18E08_once_in_negative_neighbor_table": true,
+    "O05_once_in_fixed_source_table": true,
+    "O05_once_in_REAL_replacement_register": true,
+    "O05_once_in_decision_table": true,
+    "crosswalk_maps_I18E08_to_0100_0101": true,
+    "register_active_person_week_delta_34": true,
+    "baseline_distribution_3_5_0": true,
+    "S01_uses_active_person_weeks": true,
+    "sample_real_and_acceptance_boundary": true
+  },
+  "overall": "PASS",
+  "bound_crosswalk_source_commit": "93b13adc14470817b13e79aef39410f4885def8a",
+  "bound_crosswalk_blob": "1ac4a8419088d947947031b758e29c35a3606514",
+  "note": "I18-E08 is listed in the negative-neighbor table; O-05 is the crosswalk evidence identifier in fixed-source, replacement-register and decision tables."
+}

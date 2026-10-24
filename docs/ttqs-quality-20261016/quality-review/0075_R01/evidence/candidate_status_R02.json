@@ -1,0 +1,53 @@
+{
+  "schema": "TTQS_ONE_CANDIDATE_STATUS.v1",
+  "project_id": "TTQS_ONE",
+  "document_id": "0075",
+  "requirement_id": "I17A-E03",
+  "official_checkbox_serial": "082",
+  "indicator": "17a",
+  "candidate": {
+    "revision": "R02",
+    "path": "candidate/0075_R02.docx",
+    "sha256": "ca81a4791febbe6f303a755f441705e41fb465c869098e17cc3c5c222a2c6961",
+    "status": "CANDIDATE_ONLY"
+  },
+  "quality": {
+    "technical": "TECHNICAL_PASS",
+    "visual": "PASS_WITH_SCOPE",
+    "semantic": "PASS",
+    "semantic_reviewer": "OpenCode CLI v2.0.29 opencode/beam-free; separate session from Writer",
+    "blocking_findings": 0,
+    "pages_rendered_and_inspected": 21,
+    "register_rows": 110,
+    "reviewer_session": "ses_eae841cdcffeT8KZ7QUzvmnXrm"
+  },
+  "remaining_scope": [
+    "Human print-device fidelity not tested.",
+    "Semantic reviewer read the exact text extraction bound to this DOCX SHA; reviewer did not independently recompute binary SHA.",
+    "Optional non-blocking reviewer suggestion: colocate M2/M3 protocol fields in their own tables; required details are cross-referenced in sections 7, 9, and 10.2."
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "overall": "CANDIDATE_QA_PASS_WITH_SCOPE_NOT_FORMALLY_ACCEPTED",
+  "source_hashes": {
+    "body_sha256": "11a053e8957b89ff6d51c57426fe1aa40a9dc3f81c15af4e4c2661694945e27e",
+    "replacement_register_sha256": "cfda3ae8d479a37f1e06d06eb8ea3422e58751f010c6b0eecef9b533c6cf0985",
+    "technical_receipt_sha256": "ddfc7ac14ae9265c5185e318225ba4e4d9d6aa6a0906a7a0a9bc02926d3aa3e8",
+    "visual_receipt_sha256": "8f4c38a04ae6781d3e1cce85746ba763e7abfc836966fc0afc87734253722e9b",
+    "semantic_receipt_sha256": "bcadc1355b8eb4472ab8c6895c37102db8fe6760fe60b0010695087f38b3e42a",
+    "pdf_sha256": "c1874158a70a1638fe526208bf420048fa6467d96d1102676653a9ce0c0c5f47",
+    "rendered_pages": 21
+  },
+  "remote_sync": "VERIFIED",
+  "source_candidate_sha256": "ca81a4791febbe6f303a755f441705e41fb465c869098e17cc3c5c222a2c6961",
+  "source_artifact_sha256": {
+    "register": "cfda3ae8d479a37f1e06d06eb8ea3422e58751f010c6b0eecef9b533c6cf0985",
+    "semantic_receipt": "bcadc1355b8eb4472ab8c6895c37102db8fe6760fe60b0010695087f38b3e42a",
+    "visual_receipt": "8f4c38a04ae6781d3e1cce85746ba763e7abfc836966fc0afc87734253722e9b",
+    "technical_receipt": "ddfc7ac14ae9265c5185e318225ba4e4d9d6aa6a0906a7a0a9bc02926d3aa3e8",
+    "render_pdf": "c1874158a70a1638fe526208bf420048fa6467d96d1102676653a9ce0c0c5f47"
+  },
+  "remote_commit_first_readback": "2fc3a1bdeb6f59af278e4a3618b3f72e4b71f883",
+  "remote_readback_entries_verified": 97,
+  "remote_readback_mismatches": 0
+}

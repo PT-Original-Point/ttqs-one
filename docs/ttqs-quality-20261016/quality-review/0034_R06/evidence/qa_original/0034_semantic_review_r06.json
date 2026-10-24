@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "review_date": "2026-10-16",
+  "review_type": "independent_exact_sha_semantic_cross_review",
+  "reviewer": {
+    "agent": "Codex",
+    "route": "WIN10_CODEX_LOCAL_NATIVE_CONTROL_REVIEW",
+    "current_state_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\CURRENT_STATE.json",
+    "current_state_sha256": "1345b6330b01c7b71293eeaf58aa7409a78681b7cf011b65a065c91888f972d6",
+    "configured_route": "CROSS_REVIEW_BY_OTHER_ACTIVE_AGENT; fresh isolated Codex exact-SHA review for Antigravity-built documents; OpenCode disabled",
+    "independence": "Reviewer is the active Codex control-review lane, distinct from the configured Antigravity primary content-builder lane; no Builder self-review was used."
+  },
+  "candidate": {
+    "doc_id": "0034",
+    "version": "R06",
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0034_R06\\candidate\\0034__針對學員做職能盤點或職能分析並據以規劃適切課_可直接使用成品_R06.docx",
+    "expected_sha256": "f220573a65ee7497b8be12d60eb06abd1e949ee08a5792687ddf45f5f60b407a",
+    "observed_sha256": "f220573a65ee7497b8be12d60eb06abd1e949ee08a5792687ddf45f5f60b407a",
+    "exact_sha_match": true,
+    "state": "CANDIDATE",
+    "promotion_status": "NOT_PROMOTED",
+    "human_acceptance": "PENDING"
+  },
+  "requirement_mapping": {
+    "docx_id": "0034",
+    "requirement_id": "I07-E02",
+    "official_checkbox_sequence": "034",
+    "numbering_note": "DOCX ID and official checkbox sequence are separately sourced; the checkbox was not inferred from the DOCX number.",
+    "blueprint_current_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\BLUEPRINT_CURRENT.jsonl",
+    "unique_blueprint_row_number": 34,
+    "unique_blueprint_row_sha256_expected": "4e8db781a3c7a6ffe3254ecdc49d0691e96dea11dd2208a0620c47a330788200",
+    "unique_blueprint_row_sha256_observed": "4e8db781a3c7a6ffe3254ecdc49d0691e96dea11dd2208a0620c47a330788200",
+    "unique_blueprint_row_match": true,
+    "unique_content_blueprint_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0034_R06\\sources\\0034_unique_content_blueprint_R03.md",
+    "unique_content_blueprint_sha256": "40f0d94ef45200a02d73262831b02f2fa39e2cfc2f8c973357de4188863e8009",
+    "official_source": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\SOURCES\\TTQS查核佐證文件資料表-訓練機構版 (2).pdf",
+      "sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+      "page": 2,
+      "locator": "Design item 7, competency analysis/application, second listed evidence item",
+      "text": "針對學員做職能盤點或職能分析並據以規劃適切課程的證明資料。"
+    },
+    "mapping_verdict": "PASS"
+  },
+  "source_manifest": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0034_R06\\sources\\0034_source_manifest_R06.json",
+    "sha256": "3aa3256ba9d0cd6fb8d7de9501650b6f2dcbd01072e10d8eef793e24a0718c68"
+  },
+  "replacement_register": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0034_R06\\sources\\SYNTHETIC_REPLACEMENT_REGISTER_0034_R06.csv",
+    "sha256": "58eada931bc89f98da5af1ad1438e3c0ba3b73f6987278092c2201a376db5ac1",
+    "rows": 139,
+    "unique_fact_ids": 139,
+    "rows_bound_to_candidate_sha256": 139,
+    "checks": "Register labels facts SAMPLE/SYNTHETIC, gives document/render locators, required REAL source/replacement action and responsible role. It supports traceability but was not treated as semantic proof."
+  },
+  "render_review": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0034_R06\\render\\final_f220573a65ee7497b8be12d60eb06abd1e949ee08a5792687ddf45f5f60b407a\\candidate_f220573a65ee7497b8be12d60eb06abd1e949ee08a5792687ddf45f5f60b407a.pdf",
+    "sha256": "df74b20ccf72134725d9ca12955fff069226afbe7382b614f622d7517b91199a",
+    "pages": 21,
+    "existing_page_images_inspected": "page-01.png through page-21.png; every page viewed directly",
+    "rerendered": false,
+    "visual_gate": "PASS",
+    "visual_findings": [
+      "No blank pages, clipped text, clipped table edges, or unreadable content found across pages 1-21.",
+      "Page 4 continues Table 04 without repeating its column header; continuation remains understandable from page 3 but repeating the header would improve standalone page use.",
+      "Pages 6 and 18 have substantial whitespace but contain complete, legible content and are not blank/orphan pages."
+    ]
+  },
+  "gates": [
+    {
+      "gate": "exact_identity_and_provenance",
+      "verdict": "PASS",
+      "evidence": "Observed DOCX SHA equals the requested exact SHA. Current Blueprint row 34 maps deliverable 0034 to I07-E02 and its raw-row SHA matches the requested value."
+    },
+    {
+      "gate": "official_requirement_and_genre_fit",
+      "verdict": "PASS",
+      "evidence": "Official source p.2 Design item 7 calls for learner competency inventory/analysis used to plan a suitable course. DOCX pp.1-2 and section 1 state the sample-to-rating-to-gap-to-course chain; Tables 09-25 document it."
+    },
+    {
+      "gate": "mature_operational_content_and_title_blind",
+      "verdict": "PASS",
+      "evidence": "Cover and 30-second procedure, pp.1-6 Tables 01-08: triggers, roles/authority checks, eight-step input-operation-output-stop flow, behavior anchors, evidence acceptance/rejection, independent scoring and difference review. Pages 7-21 Tables 09-33 include five worked learner examples, individual support, group analysis, course plan, evaluation, follow-up and reusable fields. Removing title/file ID still leaves the distinctive individual-work-sample and gap-to-course mechanism."
+    },
+    {
+      "gate": "sample_real_legal_person_approval_and_third_party_boundary",
+      "verdict": "PASS",
+      "evidence": "Cover and Table 01 p.1 state all learners, dates, scores, samples, plans and results are fictional SAMPLE/SYNTHETIC and not association performance. Tables 03 and 19 p.3/p.13 require authority/source checks; Table 31 p.20 labels the course choice a non-formal design example; Tables 32-33 pp.20-21 list REAL originals required and prohibit inferring association approval, actual execution, outcomes, signatures or third-party evidence."
+    },
+    {
+      "gate": "case_and_fact_consistency",
+      "verdict": "PASS",
+      "evidence": "Tables 09-17 pp.7-12 use one five-person synthetic cohort; the register associates the example with SYN-034-CASE-01. The body uses relative timing (pretest 3-7 days before; posttest at last unit; follow-up +30 days), with no conflicting absolute case dates or other case IDs. Individual observations and support actions align with the pretest matrix."
+    },
+    {
+      "gate": "calculations_and_decisions",
+      "verdict": "PASS",
+      "evidence": "Recomputed from Table 10 p.7-8: pretest rows [2,1,1,2], [3,2,2,2], [2,2,1,3], [1,2,2,2], [2,3,2,1], row weighted scores 1.55, 2.30, 2.05, 1.70, 2.00. Table 16 p.11: skill means 2.00, 2.00, 1.60, 2.00; target 3 gaps 1.00, 1.00, 1.40, 1.00; weights 30/25/20/25%; weighted gaps .30+.25+.28+.25=1.08; weighted mean 1.92; raw total 38/20=1.90. Table 18 p.12: A (3×35+2×25+2×20+4×20)/100=2.75; B (5×35+5×25+5×20+4×20)/100=4.80; C (3×35+3×25+3×20+3×20)/100=3.00. Table 20 p.13-14: 20+55+55+45+55+40+30=300 min; pretest 30 min separate. Tables 23-25 pp.15-16: post totals 12,13,13,12,13=63/20=3.15; weighted learner scores 3.00,3.30,3.25,3.00,3.25 average 3.16; difference 3.16-1.92=1.24; raw gain [(12-6)+(13-9)+(13-8)+(12-7)+(13-8)]/5=25/5=5 points out of 16; synthetic threshold 5/5=100%. All are labelled examples, not real outcomes."
+    },
+    {
+      "gate": "negative_neighbor_rejection",
+      "verdict": "PASS",
+      "evidence": "Table 02 p.2 distinguishes I07-E01/0033 demand survey and course-needs planning from this document's individual competency evidence, and I07-E03/0035 method review/improvement from this document's one-cohort gap-to-course application. It also distinguishes course design progress and trainer qualification evidence. The official p.2 rows and unique Blueprint row corroborate the boundaries."
+    },
+    {
+      "gate": "administrator_and_evaluator_usability",
+      "verdict": "PASS",
+      "evidence": "Tables 01, 03-08 and 26-30 pp.1-6, 17-20 specify roles, authorization gates, accepted evidence, scoring/rework, owner-like functional roles, milestones, stop conditions, reusable sample and field definitions. Tables 19-21 pp.13-14 connect observed gaps to goals, units, activity/materials, timing and evaluation thresholds. Usable as a SAMPLE method and worksheet set; real association records still require source replacement and authorization."
+    },
+    {
+      "gate": "page_readability",
+      "verdict": "PASS_WITH_NONBLOCKING_NOTES",
+      "evidence": "All 21 existing Word-rendered page PNGs were inspected directly; content and tables are readable, with no clipping or blank page. See render_review.visual_findings for minor continuation-header and whitespace notes."
+    }
+  ],
+  "overall_verdict": "PASS",
+  "blocking_defects": [],
+  "nonblocking_findings": [
+    {
+      "locator": "p.4, continuation of Table 04",
+      "finding": "Column header is not repeated on continuation page.",
+      "impact": "Minor page-isolated readability reduction; prior page supplies the header, and no content is clipped or ambiguous in continuous reading.",
+      "repair": "Repeat the table header on continuation pages in a future candidate."
+    },
+    {
+      "locator": "pp.6 and 18",
+      "finding": "Sparse whitespace.",
+      "impact": "No lost content; each page contains complete legible material."
+    }
+  ],
+  "limitations": [
+    "All worked learner, date, score, approval and outcome content is synthetic. This PASS assesses candidate semantics and usability, not proof of real association execution or Human acceptance.",
+    "No DOCX content was changed, rebuilt or rerendered."
+  ]
+}

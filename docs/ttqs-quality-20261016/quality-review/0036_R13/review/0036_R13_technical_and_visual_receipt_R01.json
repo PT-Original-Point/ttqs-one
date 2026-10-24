@@ -1,0 +1,58 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0036",
+  "requirement_id": "I07-E04",
+  "official_checkbox_serial": "036",
+  "revision": "R13",
+  "candidate_path": "candidate/0036__課程設計進度與訓練規劃_R13.docx",
+  "candidate_sha256": "0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f",
+  "source_r12_sha256": "e2be3928f96d45bdee6d18762b169c92e7817d10d0c0f87e4854bd16756febbb",
+  "repair_findings": [
+    {
+      "finding": "R12 table continuation on p15 lacked repeated column headings.",
+      "location": "Exception-control table, continuation page 15",
+      "fix": "Repeat first header row."
+    },
+    {
+      "finding": "R12 section 14 continuation on p16 lacked repeated column headings.",
+      "location": "Section 14 synthetic case walkthrough, continuation page 16",
+      "fix": "Repeat first header row."
+    },
+    {
+      "finding": "R12 p17 handoff-record write-in blanks were too short.",
+      "location": "Handoff form, page 17",
+      "fix": "Expanded blank fields while keeping the form empty and clearly non-completed."
+    }
+  ],
+  "targeted_layout_change_only": "All DOCX package parts except word/document.xml are byte-identical to R12. Text changes are limited to blank handoff fields; all remaining edits are table header repeat properties and removal of a standalone page break that had produced an empty page after the form grew.",
+  "technical_status": "PASS_TECHNICAL_ONLY",
+  "zip_integrity": "PASS",
+  "pdf_sha256": "d05668efb4b9ef3ffa2820b56c0eddd086274e3ae3673ac84035c7ecaa5099a7",
+  "pdf_page_count": 19,
+  "rendered_page_count": 19,
+  "blank_page_count": 0,
+  "visual_status": "PASS_LOCAL_DIRECT_VISUAL_19_PAGES",
+  "visual_scope": {
+    "pages_01_17": "directly reviewed; byte-identical render PNGs from final render to the inspected R13 iteration before appendix pagebreak removal",
+    "pages_18_19": "directly inspected in final render",
+    "page_15": "repeating exception-table header visible",
+    "page_16": "repeating section 14 header visible",
+    "page_17": "longer empty write-in fields visible and usable",
+    "page_05": "flowchart arrows verified in prior R12/R13 direct view"
+  },
+  "superseded_iteration_findings": {
+    "initial_page_count": 20,
+    "root_cause": "After expanding p17 form, the standalone manual page-break paragraph before appendix A-1 could be pushed to an otherwise empty page, then forced A-1 to the following page.",
+    "fix": "Removed that standalone page-break paragraph; Word natural flow puts A-1 on p18.",
+    "final_page_count": 19
+  },
+  "independent_review": {
+    "R12_visual_supplement": "PARTIAL; review returned by independent agent Hooke, exact R12 SHA.",
+    "R13_exact_sha_review": "PASS_FOR_SAMPLE_ARTIFACT",
+    "review_file": "review/0036_R13_independent_semantic_visual_review_R01.md",
+    "review_sha256": "baf34c29bf7ff781924378dee1a5c237b5097e75779d430b0688d9b83c531a6f",
+    "exact_sha_binding": "0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f"
+  },
+  "formal_acceptance": "NOT_GRANTED",
+  "promotion": "NOT_PROMOTED"
+}

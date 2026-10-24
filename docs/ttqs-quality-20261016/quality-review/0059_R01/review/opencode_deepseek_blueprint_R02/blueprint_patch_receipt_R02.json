@@ -1,0 +1,238 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0059",
+  "requirement_id": "I13-E03",
+  "official_checkbox_serial": "063",
+  "candidate_docx_sha256_before": "0263017F16D81B1121BB97410DE9895B43B7A42F75632BF71A82B86426FBC2B0",
+  "candidate_docx_sha256_after": "0263017F16D81B1121BB97410DE9895B43B7A42F75632BF71A82B86426FBC2B0",
+  "source_blueprint_r01_path": "E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0059_R01\\worker\\opencode\\0059_UNIQUE_BLUEPRINT_R01_DRAFT.md",
+  "source_blueprint_r01_sha256": "3CD8257C0B88A85C25CA4C2BDAEADE15E9E84F70011728326626CABCACDA85E8",
+  "body_r03_sha256": "73FB3B0538D814FB6132648EBC9C05D3BE523C94FE635887A1990B24B6043DFD",
+  "model_patch_response_sha256": "DE1BBB04767CC433B35A0C042E888BD662F1EC5755E683E325EEDE5430877406",
+  "blueprint_r02_path": "E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0059_R01\\worker\\opencode\\0059_UNIQUE_BLUEPRINT_R02.md",
+  "blueprint_r02_sha256": "35D274528A588AF3464F9CC3AF605EAE8987BBA362A191A4A4534D7AA0CCBB4E",
+  "replacement_count": 24,
+  "replacements": [
+    {
+      "body_locator": "body §2.1 官方來源",
+      "expected_occurrences": 1,
+      "applied_occurrences": 1,
+      "reason": "Body names the authority as 勞動部勞動力發展署; the Blueprint prefix 行政院勞工署 disagrees and is corrected to the official source (mapping preserved).",
+      "search_sha256": "5B83BECBBA3C557BD3F5A1C3B2898580D6BE610A2713C3E160EC2F89071DB696",
+      "replacement_sha256": "C9EFE9B67F2F6E8410DFD7CCB6CB01734E639AB86A97B581E5C8E4DBB30A4DAD"
+    },
+    {
+      "body_locator": "body §2.1 頁碼定位",
+      "expected_occurrences": 1,
+      "applied_occurrences": 1,
+      "reason": "Body uses indicator label I13; Blueprint 指標 13 drops the I.",
+      "search_sha256": "996D9EF6480F80F938E5CC3581EFB0DEB0592A89C81A90E3DB599672E8D3D6A2",
+      "replacement_sha256": "E28AEED1FBA1307CDE01B98FF583CDE8A346AB49EFC2EBD14ACC530E2AA6213B"
+    },
+    {
+      "body_locator": "body §8.8 構面與合併指數",
+      "expected_occurrences": 1,
+      "applied_occurrences": 1,
+      "reason": "Body computes Q1–Q4 combined mean as (63+48+60+38)/(15+12+15+9)=209÷51=4.098→4.1, not 4.2.",
+      "search_sha256": "7B776EF05E95AEA337AC77675E871AF8606C30E010295E6187E92373BEAA1FA4",
+      "replacement_sha256": "F8F7E2792F4993AF778B29685B2B10C2E19D327564CD1D2026A3735BD18E4787"
+    },
+    {
+      "body_locator": "body §8.2 施測時點",
+      "expected_occurrences": 1,
+      "applied_occurrences": 1,
+      "reason": "Body administers the questionnaire 113/12/01–12/08 after all mechanisms; the old draft's sixth-week timing is stale.",
+      "search_sha256": "1CB84EBE0317AFF7188D22AA9341BD412D22AEF628522AD4357718B411D3B67A",
+      "replacement_sha256": "19329AB4C32E29B195B3337736703FBD300952BA7F9C66AA05EA11A0FB7AA5FF"
+    },
+    {
+      "body_locator": "body §8.8 構面與合併指數",
+      "expected_occurrences": 1,
+      "applied_occurrences": 1,
+      "reason": "Second occurrence of the usefulness index; body value is 4.1 (209÷51), not 4.2.",
+      "search_sha256": "9C3C394F2FF2F9D5ABD8C53EDBBCCB4B9DA122851121C745B2742DDD0DCD78FC",
+      "replacement_sha256": "B2153638CA6430D37BD69285DD00F44D75BD6C8A103565441F9F1394F7260A9F"
+    },
+    {
+      "body_locator": "body §8.2 對象",
+      "expected_occurrences": 1,
+      "applied_occurrences": 1,
+      "reason": "Body's questionnaire object has no 4–8 週 window; the window is a stale-draft questionnaire timing claim that would wrongly exclude C/D participants (administered 12/01–12/08).",
+      "search_sha256": "06272998491BAB41D5B54B28891DD6D27B57D550AB82F172AF5DC4342C9C2111",
+      "replacement_sha256": "CE250287FE6B09231FAC5513E79DE48881C468EB3E342625C3801DD5FE1CD16B"
+    },
+    {
+      "body_locator": "body §8.2 施測時點",
+      "expected_occurrences": 1,
+      "applied_occurrences": 1,
+      "reason": "Body fixes the questionnaire at 113/12/01–12/08 after all mechanisms; removes the sixth-week/August timing from the old draft.",
+      "search_sha256": "3912DBC1C35B03BE589CE361001F2DD56127C3772DC4781D6A17ACE1BDCC2D1B",
+      "replacement_sha256": "E73A4260C60EE91C6F6A7882FC6373B98DE9035775357A8B8B864745ED102A8D"
+    },
+    {
+      "body_locator": "body §6.1 機制目的、§6.6 重要聲明",
+      "expected_occurrences": 1,
+      "applied_occurrences": 1,
+      "reason": "Removes the claim that the mechanism already leaves issuer/字號/查證來源; matches body wording that this SAMPLE provides no real external source and C is an in-scenario synthetic comparison.",
+      "search_sha256": "4E83166F32DCB85F5BC2CD81A91CDBC082EE9183000D363BEC86B4AB7539B9DB",
+      "replacement_sha256": "549C38D328CA11C12AEC3335F8EA7BA7B1C2BB1667B02C6BF6F11519D2D8FE38"
+    },
+    {
+      "body_locator": "body §6.1",
+      "expected_occurrences": 1,
+      "applied_occurrences": 1,
+      "reason": "Old purpose implies completed independent verification; body limits the SAMPLE to in-scenario comparison with no real external check.",
+      "search_sha256": "7ABFC1E403A9973FA7F76AC15E9FE7C5A36642ABED9BAA07B424658D68C92E1F",
+      "replacement_sha256": "6361AFFCB0C605EE2B73C6A8660B96BD838B98F69C9D95B0AA2E519130D70C9C"
+    },
+    {
+      "body_locator": "body §6.4 證照查證登記表欄位",
+      "expected_occurrences": 1,
+      "applied_occurrences": 1,
+      "reason": "Replaces external-verification field labels (查證來源/查證日/查證結果、字號、取得日) with the body's actual SAMPLE column labels; no certificate name or number is asserted.",
+      "search_sha256": "98A0DF3A3E275B3666CDB4C2083664C72B8E3AC1D84F90D93603C7F4F9487AE6",
+      "replacement_sha256": "5821611315784B3419CEE1C3BD5BBA19314E32F0200118508E056ABF0F1ACCFE"
+    },
+    {
+      "body_locator": "body §6.4 情境流程比對紀錄、§6.5 數據計算",
+      "expected_occurrences": 1,
+      "applied_occurrences": 1,
+      "reason": "Body shows 12/18 as in-scenario synthetic comparison, not independent issuer verification via public query or official reply.",
+      "search_sha256": "A50EA46B7F12FD1925198D0EF5F07ED3EBC1FFA1B548138789028256AB7C1808",
+      "replacement_sha256": "F4A7EEFA7D820FCC0324F3CE5224B609B454C6878479925CBFD389BF7809637E"
+    },
+    {
+      "body_locator": "body §6.3 執行步驟（不連線、不查真實證照）",
+      "expected_occurrences": 1,
+      "applied_occurrences": 1,
+      "reason": "Removes 發證單位（查證回覆） as a performed role; body states no connection/query of real certificates and issuer replies remain unavailable.",
+      "search_sha256": "0F607AD32C21CB213F262C3762FE45D863BD6F7F97EF2FCE64C85CEC0266F944",
+      "replacement_sha256": "0FCC9B92B42BD6A9E182EBC8E77121571BC3EF9AA400F73274F5FF36426B09D9"
+    },
+    {
+      "body_locator": "body §6.4 重要聲明、附錄 B E-C1",
+      "expected_occurrences": 1,
+      "applied_occurrences": 1,
+      "reason": "Body uses 合成查證表 as the current form; real certificate copies and issuer replies are HOLD/UNKNOWN, not synthetic evidence.",
+      "search_sha256": "C8618E2ED7BB7C2B3C4798F9FDC8AEE7E0780EBAEE6FB5D686B12051773514F6",
+      "replacement_sha256": "9E0031392BD7939C08B4FF12C1332425D4DD75FA5BB0668F504CE76EA772BB0B"
+    },
+    {
+      "body_locator": "body §6.6 例外／限制",
+      "expected_occurrences": 1,
+      "applied_occurrences": 1,
+      "reason": "Body wording is 合成情境結果（非外部查證）; replaces the stale 查證結果 phrasing.",
+      "search_sha256": "D134C83168C8F58B3ED8E30FD029DC74324B197DA00D0D2CD8E5E784F7B05F56",
+      "replacement_sha256": "A8DA0396FE1447E387DAD42D849D17E016062FEA32D377F49BF1F147A3224B01"
+    },
+    {
+      "body_locator": "body §6.7 狀態字典、附錄 A",
+      "expected_occurrences": 1,
+      "applied_occurrences": 1,
+      "reason": "Body state values are 已申報／SIM／REAL查核待補／僅自述; 查證完成 would assert completed external verification.",
+      "search_sha256": "60A5A47F2ACC7EFB9FCB5E6E694CCEC2B300088574B2679755E0304043ECB1DA",
+      "replacement_sha256": "A9D8E52A563B37CD3377699FFFBA2F63A2608F089B07DD4FA1B4760191B0E804"
+    },
+    {
+      "body_locator": "body §6.5 數據計算",
+      "expected_occurrences": 1,
+      "applied_occurrences": 1,
+      "reason": "Body counts 12 as completed in-scenario comparison, not completed verification.",
+      "search_sha256": "3F83687EAF27CD5DA75387A64ADC5C118B1CE51BBC7694FDCD3EB39C8AD729FE",
+      "replacement_sha256": "7F137453ED8034686B9E5171F41D48130CE4582330C8161BC7FA8C4A59B474E0"
+    },
+    {
+      "body_locator": "body §6.5 數據計算",
+      "expected_occurrences": 1,
+      "applied_occurrences": 1,
+      "reason": "Body metric name and numerator definition are 情境內流程比對完成率 = 完成模擬比對 ÷ 申報.",
+      "search_sha256": "661FABAE6678729E102AC79100DD17381E110B5F8BA4467156A52B8AEC610F3B",
+      "replacement_sha256": "53D2FA9286D3DA5BED3804DEB713766C15A4B328F4A5A07C3B9D38365D40CF05"
+    },
+    {
+      "body_locator": "body §6.6 跟進",
+      "expected_occurrences": 1,
+      "applied_occurrences": 1,
+      "reason": "Body wording updates 合成情境結果（非外部查證）.",
+      "search_sha256": "7C2C043609BAAB975FB11E7A6A574A83BE5E3A8E03BCC2101D059172BE067307",
+      "replacement_sha256": "0275CFA6B20C90AE24727D09ACB42646B1EF7F457E32854DE5275372A31CA823"
+    },
+    {
+      "body_locator": "body §6.6 例外／限制",
+      "expected_occurrences": 1,
+      "applied_occurrences": 1,
+      "reason": "Aligns with body wording; adds the body's 未完成查證不得列為已查證 limit.",
+      "search_sha256": "1D2AF68D7261D20E2F9DAA023CD0638528AD63920F293782DAC20AE6C217C79F",
+      "replacement_sha256": "109870DE772032F35F89D5F2FEC6735332DC6921A761237584BAAD09B0F1EEA4"
+    },
+    {
+      "body_locator": "body §10.4 跨機制指標彙整",
+      "expected_occurrences": 1,
+      "applied_occurrences": 1,
+      "reason": "Body cross-mechanism table labels this row 情境內流程比對完成率.",
+      "search_sha256": "23E351D5B70297956F85735FB97B2E370977CEFC600AC13B037959D8D700DC44",
+      "replacement_sha256": "E42FAB1D2A3C9A07662A4DEE420D7DCBEBD8EA90240FC0E8A69B29BBB29F0473"
+    },
+    {
+      "body_locator": "body §11.1 IMP-03",
+      "expected_occurrences": 1,
+      "applied_occurrences": 1,
+      "reason": "Body IMP-03 content is 提高有授權來源之REAL證照核驗完成率; the old title implies already-completed independent verification.",
+      "search_sha256": "D8B2A95EC3DCBC7521788D3B7CAD3F40CAC0C1C7F86607A90FD8BA58277DAF38",
+      "replacement_sha256": "02B9EA928F0993A75E5013678AF8D4388F690DDF602B99639B037B391CAC542A"
+    },
+    {
+      "body_locator": "body §12.7 數學一致性預檢",
+      "expected_occurrences": 1,
+      "applied_occurrences": 1,
+      "reason": "Body math-precheck label is 情境內流程比對完成率.",
+      "search_sha256": "A2B3147C05B1C161D846337F90A0CADF0A0663343588DCA7BDBFFDAEB2A56368",
+      "replacement_sha256": "77769C193BD1F6A03267C6A4C25899054256F16D2095E68B1A3391AE720E1121"
+    },
+    {
+      "body_locator": "body §10.1 彙整截止",
+      "expected_occurrences": 1,
+      "applied_occurrences": 1,
+      "reason": "Typo treats the 113/12/15 consolidation cutoff as 11 years; body cutoff is 113 年 12 月 15 日.",
+      "search_sha256": "95B40C5BD0C745FA977C0194CBA0ACDA2982009DD7D77364CC3ACDAC7EB62A58",
+      "replacement_sha256": "537B5E12A12BB1E5AA78FFEDCCB791D22655AF2D243D6DD0F47BF225027061F9"
+    },
+    {
+      "body_locator": "body §10.2 分子／分母與排除規則",
+      "expected_occurrences": 1,
+      "applied_occurrences": 1,
+      "reason": "Body defines per-mechanism denominators; the Blueprint's blanket 18-person denominator conflicts with simulated practice (10) and certificate patents (18 synthetic filings).",
+      "search_sha256": "5E4D7862EF86F1D5761C4BE25799CC85DE9BF37117C5BC5188781F0CD7110888",
+      "replacement_sha256": "064AF73B37E1D96704BCA81CFDF2E142DDD6DF0EFF2564AB5456B5F5F96B8164"
+    }
+  ],
+  "unresolved_items_from_writer": [
+    "blueprint_r01_sha256_if_visible = null: the supplied Blueprint text contains no SHA-256 for itself; the only hash present (805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709) is the official source PDF, not the Blueprint.",
+    "The body defines no 證照名稱 or 證書字號 field; §4 第6節 必要欄位 was remapped to the body's actual SAMPLE columns (示意類別／發證單位（REAL欄位待核）／申報內碼（非證書字號）) so no certificate name or number is invented.",
+    "Body §6.1 also retains 區分「學員自述」與「獨立查證完成」 as a formal-operation distinction, not a completed SAMPLE result; the Blueprint keeps that phrase and it is not treated as a conflicting external-verification claim.",
+    "§5-2 roster column header 證照查證 vs body §3.4 column C情境內流程比對: the body itself uses 證照查證 in the 名冊校驗 bullet, so the header was judged body-consistent and left unchanged.",
+    "Body §4.6 records that S-16–S-18 補課 was not completed (HOLD) and body §4.7 adds 已補課; Blueprint §8.1 only says 補課選項 were provided. This is an omission, not a conflicting claim, so it was left unchanged.",
+    "Blueprint-only planning statements with no body counterpart (e.g. §4 第1節 觸發／時點「機制彙整截止日後 5 個工作天」, §4 第4節 講師角色敘述, §13.5 版面要求) were left unchanged as they neither conflict with nor are corroborated by the body.",
+    "Appendix 5-3 模擬實作 states omit body's HOLD value; left unchanged because it is an omission in a non-conflicting list."
+  ],
+  "docx_modified": false,
+  "status": "PATCH_APPLIED_AWAITING_INDEPENDENT_BLUEPRINT_REVIEW",
+  "created_at_local": "2026-10-18T20:27:46+08:00",
+  "independent_blueprint_review": {
+    "verdict": "PASS",
+    "reviewer": "OpenCode CLI V2 opencode/beam-free",
+    "replacements_checked": 24,
+    "findings_count": 0,
+    "remaining_conflicts": 0,
+    "omissions": [
+      "R02 §5-2 roster header remains 證照查證 (line 237), whereas body §3.4 uses C情境內流程比對; body also uses 證照查證 in its roster calibration bullet, so this is a precision omission rather than a contradiction.",
+      "R02 §9 exclusion rule still refers to 證照「查證完成」分子 (line 417) while the cross-mechanism metric is renamed 情境內流程比對完成率; body §10.2 uses the same phrase.",
+      "Body §4.6–§4.7 records S-16–S-18 complement as not completed (HOLD) and includes 已補課 status; R02 §8.1 only states that complement options were provided.",
+      "R02 table 5-1 still lists 證照影本、發證單位回覆 as C evidence forms; body table 3-1B uses the same future-real evidence labels, while body §6 states real copies/replies remain HOLD/UNKNOWN and the current synthetic form is 合成查證表.",
+      "Blueprint-only planning statements without a body counterpart remain uncorroborated (e.g. §4.1 trigger 機制彙整截止日後 5 個工作天, §4.4 lecturer role wording, §13.5 layout requirements).",
+      "Appendix 5-3 simulated-practice state list omits HOLD, which body includes."
+    ],
+    "reviewer_did_not_inspect_docx_bytes": true,
+    "formal_acceptance": "NOT_ASSERTED"
+  }
+}

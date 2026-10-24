@@ -1,0 +1,71 @@
+{
+  "project_id": "TTQS_ONE",
+  "document_id": "0062",
+  "official_requirement_id": "I14-E03",
+  "official_checkbox_serial": "067",
+  "official_evidence_title": "完整的訓練文件建檔資料",
+  "candidate_status": "CANDIDATE; HUMAN_ACCEPTANCE_PENDING; REAL_EVIDENCE_NOT_ESTABLISHED",
+  "builder": "Deterministic python-docx renderer from OpenCode v2 writer response and approved document-specific normalized body/Blueprint",
+  "build_time_utc": "2026-10-18T05:05:17.071990+00:00",
+  "inputs": {
+    "0062_BODY_R01_HUMAN_READY.md": "B6F17FDB213DEDF297C7981FA9C3AB0220C91779760D69879DAF799E1735CA82",
+    "0062_UNIQUE_BLUEPRINT_R04.md": "800DC3C4E799A194B6D49F077B6A6BC75D0ECDE4E32DCE9EFC0A55BBFE4156AD",
+    "0062_DOCUMENT_WRITER_TASK_R01.md": "0DFDC2401D6B59B40FF3070457420D3353AE124D4AE0133BB6C39019CC9CA8B6",
+    "response_normalization_R01.json": "DE7822EF76BD83534057C2AE07B9837AEE3A6F7BACE72AABADE4137010A5EB36"
+  },
+  "artifacts": {
+    "0062_R04.docx": {
+      "path": "E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0062_R01\\candidate\\0062_R04.docx",
+      "sha256": "460C4FCA4E685BDBF93B53B9CC3EECFC0EA72EDE07DAB209A68EC7F34476D924",
+      "size_bytes": 85655
+    },
+    "0062_R04_SYNTHETIC_REPLACEMENT_REGISTER.csv": {
+      "path": "E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0062_R01\\sidecar\\0062_R04_SYNTHETIC_REPLACEMENT_REGISTER.csv",
+      "sha256": "9F1A8FA21B57D65D9D2DEDC5FB8BD07DEA295809FE88AA981F7BF285645EEEC7",
+      "row_count": 173
+    }
+  },
+  "table_markers": [
+    "T-0062-01",
+    "T-0062-02",
+    "T-0062-02R",
+    "T-0062-03",
+    "T-0062-04",
+    "T-0062-05",
+    "T-0062-06",
+    "T-0062-07",
+    "T-0062-08",
+    "T-0062-09",
+    "T-0062-10"
+  ],
+  "unique_blueprint_tables_rendered": [
+    "T-0062-01",
+    "T-0062-02",
+    "T-0062-02R",
+    "T-0062-03",
+    "T-0062-04",
+    "T-0062-05",
+    "T-0062-06",
+    "T-0062-07",
+    "T-0062-08",
+    "T-0062-09",
+    "T-0062-10"
+  ],
+  "synthetic_register_rows": 173,
+  "claims": {
+    "semantic_review": "PENDING",
+    "render_visual_review": "PENDING",
+    "technical_validation": "PENDING",
+    "human_acceptance": "PENDING",
+    "real_association_evidence": "UNKNOWN; all 12 source records remain HOLD"
+  },
+  "targeted_repair": {
+    "source_candidate": "0062_R03.docx",
+    "source_candidate_sha256": "6C599668EF114CF53780DEF959B80183469021129FEB33531CF846CD4B0AAC81",
+    "verified_defect": "Word-rendered R03 quick-check ordered list under section 16 continued as 13-17 after an earlier list; this made a local usability/navigation sequence incorrect.",
+    "repair": "Restart only section 16 ordered quick-check sequence at 1 and bind its five items to a fresh numbering instance. No narrative/table/register values changed.",
+    "content_equivalence": "R03 and R04 ordered paragraph/table text is identical; OOXML comparison found only word/document.xml and word/numbering.xml changed.",
+    "candidate_sha256_after_repair": "460C4FCA4E685BDBF93B53B9CC3EECFC0EA72EDE07DAB209A68EC7F34476D924",
+    "formal_acceptance": "PENDING; real association evidence not established"
+  }
+}

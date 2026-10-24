@@ -1,0 +1,98 @@
+{
+  "schema": "TTQS_ONE_R04_CONTINUATION_0077_R01.v1",
+  "project_id": "TTQS_ONE",
+  "command": "TTQS_ONE_CODEX_NATIVE_WORKER_RECOVERY_SYNC_R04",
+  "source_attachment_sha256": "3330de8de26275c5e51f299982d87c250bb7e030c9838badafc369e26ee29c35",
+  "source_commit_at_preflight": "1ba6ee097eca0bd75dbb6f5c39120818dfb8a578",
+  "local_head_at_preflight": "1ba6ee097eca0bd75dbb6f5c39120818dfb8a578",
+  "remote_head_at_preflight": "1ba6ee097eca0bd75dbb6f5c39120818dfb8a578",
+  "P0_readonly_preflight": {
+    "status": "VERIFIED",
+    "checks": [
+      "Live branch and PR #92 head checked before 0077 dispatch.",
+      "No pre-existing 0077 writer/reviewer; one OpenCode v2 Writer completed with exit 0 before exact-SHA review.",
+      "After review, no active opencode run; active run PIDs observed: NONE.",
+      "No Computer Use or permission bypass.",
+      "No Antigravity executable or CLI process was found on a targeted name/path check. An earlier broad CommandLine substring match falsely included the PowerShell process running the diagnostic itself (PID 43384); it was excluded after inspection."
+    ]
+  },
+  "P1_reconciliation": {
+    "status": "VERIFIED",
+    "decision": "No prior 0077 candidate package existed; current R01 was authored for I17B-E01/checkbox 084. 0076 remains unchanged. Only two located layout defects were repaired; source body and synthetic dataset were unchanged."
+  },
+  "P2_cli_recovery": {
+    "status": "APPLIED",
+    "writer": {
+      "route": "OpenCode CLI v2",
+      "version": "2.0.29",
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "session_id": "ses_eae563b9fffeP3CTULp3M1smWn",
+      "process_id": 43236,
+      "exit_code": 0,
+      "computer_use": false
+    },
+    "reviewer": {
+      "route": "OpenCode CLI v2",
+      "version": "2.0.29",
+      "model": "opencode/beam-free",
+      "session_id": "ses_eae49b4e1ffeDCz6ToNFHcOog4",
+      "exit_code": 0,
+      "computer_use": false,
+      "verdict": "PASS",
+      "candidate_docx_sha256": "cc545510cf503e9ecb16238c2b8dcdf6b15cbc43a28360b3b76f97513017edf7"
+    },
+    "antigravity": "No dispatch; no Computer Use or permission bypass."
+  },
+  "P3_worker_return": {
+    "status": "VERIFIED",
+    "body_sha256": "6ca1eeb224285bd8fe43e9754ec0a44f3b6b03ce42fa72db0176bbdfda326ed6",
+    "docx_sha256": "cc545510cf503e9ecb16238c2b8dcdf6b15cbc43a28360b3b76f97513017edf7",
+    "worker_stdout_sha256": "f5f0333d3e882c87bbd0efc063feec9573ad6ee4913aea96e261b8e2eee2e54c",
+    "replacement_register_sha256": "d9c950c16445de26d304b347f146bcb919c19e46d7fcf73be009900af8766d91",
+    "details": "Original OpenCode Writer body, raw output and exit receipt retained. One formatting-only repair removed the title rule and prevents action/mapping cards splitting; no semantic rewrite after review."
+  },
+  "P4_github_sync": {
+    "status": "VERIFIED",
+    "package_commit": "b71642d877c21c79574e1bb41ec1ff36185acc29",
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "pull_request_head": "b71642d877c21c79574e1bb41ec1ff36185acc29",
+    "readback_receipt": "0077_GITHUB_READBACK_R01.json",
+    "file_count": 99,
+    "comparison": "Binary files exact SHA-256; text files compared after CRLF/CR-to-LF normalization. All 99 entries matched.",
+    "terminal_readback_commit": "a1d80a26369021c0f2bc456fc58d402be2ee3952",
+    "terminal_file_count": 100,
+    "terminal_readback": "PASS"
+  },
+  "P5_scheduler_and_cost": {
+    "status": "VERIFIED_UNCHANGED",
+    "scheduler": "No schedule/session/control platform created or modified during 0077 work.",
+    "model_cost": "One OpenCode Writer call and one independent OpenCode reviewer call; not zero cost."
+  },
+  "P6_next_ready": {
+    "status": "READY_AFTER_0077_SYNC",
+    "document_id": "0078",
+    "requirement_id": "I17B-E01",
+    "official_checkbox_serial": "084",
+    "function": "Photo and activity record index; genuine photos are not fabricated; any absent real image remains UNKNOWN/HOLD."
+  },
+  "P7_five_tests": {
+    "T1": "PASS inherited fixture-only/no-op check from the current R04 root receipt; it does not claim a scheduled wake test.",
+    "T2": "PASS route isolation: the 0077 Writer and Reviewer used OpenCode CLI v2 only; no Antigravity executable was found on the targeted check, no Computer Use dispatch occurred, and the historical 0055 R04 lane was not reused.",
+    "T3": "PASS exact-SHA reuse: exactly one semantic review dispatch for final SHA cc545510…17edf7; no candidate change/rebuild after review.",
+    "T4": "PASS: package read back at b71642d877c21c79574e1bb41ec1ff36185acc29 (99 entries), then final 100 entries including this receipt read back at a1d80a26369021c0f2bc456fc58d402be2ee3952; binaries exact SHA-256, text normalized only for CRLF/CR to LF.",
+    "T5": "PASS: candidate, technical receipt and independent reviewer preserve SAMPLE/SYNTHETIC, REAL=UNKNOWN/HOLD, NOT_GRANTED and checkbox 084 PARTIAL/HOLD."
+  },
+  "P8_result": {
+    "status": "CANDIDATE_SYNCED_REVIEWED_NOT_FORMALLY_ACCEPTED",
+    "technical": "PASS exact DOCX SHA; 16 synthetic rows, 80 narrative values, 7 action cards, 9 mapping cards, 119 replacement fields.",
+    "visual": "PASS; all 23 final render pages inspected at original resolution; PDF SHA 82249c87d81e853e4e83e56c16b3359dd80924b797c61cad3a0d36b31280bbcb.",
+    "semantic": "PASS independent OpenCode CLI v2 beam-free; exact-SHA bound; official PDF direct parsing and reviewer image inspection limitations recorded.",
+    "candidate_sha256": "cc545510cf503e9ecb16238c2b8dcdf6b15cbc43a28360b3b76f97513017edf7",
+    "page_count": 23,
+    "checkbox_084": "PARTIAL/HOLD; 0076/0078/0079 and genuine source paths remain required.",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_status": "UNKNOWN/HOLD",
+    "github_readback": "VERIFIED at a1d80a26369021c0f2bc456fc58d402be2ee3952; 100 entries matched."
+  },
+  "updated_utc": "2026-10-19T01:24:35.582628+00:00"
+}

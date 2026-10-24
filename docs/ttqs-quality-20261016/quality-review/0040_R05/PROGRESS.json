@@ -1,0 +1,56 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0040",
+  "revision": "R05",
+  "requirement_id": "I08-E03",
+  "official_checkbox_sequence": "040",
+  "status": "CANDIDATE_SEMANTIC_PARTIAL_REPAIR_REQUIRED",
+  "candidate_path": "candidate/0040_R05.docx",
+  "candidate_sha256": "95531ac5f8a79eed7c605f3ab1f42da3948e8f15316499d325b606bd6d434384",
+  "parent_candidate_path": "../0040_R04/candidate/0040_R04.docx",
+  "parent_candidate_sha256": "be163030c29effe4067e4be1d5bc6f041a48020fbbaf5659716c87094305a44e",
+  "register_path": "evidence/SYNTHETIC_REPLACEMENT_REGISTER_R05.csv",
+  "register_sha256": "35cdb226aa14f8b36304ed5d22031e3ccd5f1c77d98851e968f8ca64ee0e1788",
+  "register_rows": 39,
+  "register_rows_bound_to_candidate_sha": 39,
+  "register_rows_with_validated_printed_anchors": 39,
+  "rendered_pdf_path": "evidence/render/candidate.pdf",
+  "rendered_pdf_sha256": "dd4d8ea87cdb8ca22ef549ef496e61a5da38ffd0720c548413895988f39daf7e",
+  "page_count": 8,
+  "technical_status": "PASS",
+  "technical_receipt_path": "evidence/qa/0040_technical_review_r05_exact.json",
+  "technical_receipt_sha256": "38ad0e090de3a3ca4502e685f37389484ef36901ccf823973be770427c8e22fd",
+  "primary_visual_status": "PASS",
+  "visual_receipt_path": "evidence/qa/0040_visual_review_r05_primary.json",
+  "visual_receipt_sha256": "ce402147b0b9e5a9c18c025e8d131007b853e5f775e46266d9779eaa1e70b963",
+  "independent_semantic_verdict": "PARTIAL",
+  "independent_semantic_review_path": "evidence/qa/0040_semantic_review_r05_crossreview_raw.md",
+  "independent_semantic_review_sha256": "4c0cb2d6ba44a232d1aa5eb6707820893d56b9a78fd3da0f8a15e12c981e03df",
+  "sample_state": "SAMPLE_SYNTHETIC_ONLY",
+  "candidate_state": "CANDIDATE_NOT_PROMOTED",
+  "formal_acceptance": "NOT_GRANTED",
+  "repair_summary": "P.7-8 user-facing rewrite; official source and register locators corrected; p.1-6 score data, thresholds and D04 facts retained.",
+  "known_limitations": [
+    "R05-F01: add a usable, explicitly synthetic evidence ID and original attachment/file/page locator to the p.3 matrix and p.5 D04 example.",
+    "R05-F02: split the p.1 30-day authorization rule from the p.6 D04 rescore-not-executed fact in the replacement register.",
+    "R05-F03: correct core properties description and revision to the actual R06 candidate in the targeted repair."
+  ],
+  "github_sync_status": "REMOTE_READBACK_PASS_FOR_R05_PARTIAL_REVIEW",
+  "source_audit": {
+    "command": "TTQS_ONE_EXTERNAL_AUDIT_FINDINGS_20261016_CONTINUE",
+    "path": "docs/ttqs-quality-20261016/06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md",
+    "live_source_commit": "9c9bbfe537af6aecd616fcba85cfd1a10bbdb057",
+    "live_source_blob_sha": "70449889fd464106fe204496004bee13018d4a51",
+    "state": "APPLIED_PARTIAL",
+    "evidence": "R05 exact-SHA semantic PARTIAL persisted; targeted R06 repair required; unrelated findings remain separately tracked."
+  },
+  "remote_readback": {
+    "commit": "0c0a3f283bd78af37d22355a4ed9e0b5c49fd49d",
+    "verified_paths": [
+      "quality-review/0040_R05/evidence/qa/0040_semantic_review_r05_crossreview_raw.md",
+      "quality-review/0040_R05/evidence/qa/0040_semantic_review_r05_exact.json",
+      "quality-review/0040_R05/PROGRESS.json"
+    ],
+    "method": "Fresh fetch, resolve Git blob and compare exact raw bytes and SHA-256; all equal."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "doc_id": "0107",
+  "requirement_id": "I18-E15",
+  "candidate_sha256": "66160c8fdf8d674317c895687182f2883c2447a5294e926c4d6f412a3190767e",
+  "reviewer": "OpenCode v2 CLI; existing independent reviewer session ses_e9bf1c4edffeT95rFXd5SyNdmn; not the DOCX Builder",
+  "requested_model": "opencode/mimo-v2.6-flash-free",
+  "actual_provider_serving_model": "UNKNOWN",
+  "local_session_cost": 0.0,
+  "provider_billing": "UNKNOWN",
+  "verdict": "PASS_TEXT_SEMANTIC_DELTA",
+  "scope": "Exact R02 DOCX SHA text-semantic delta, including inherited PASS only for unchanged R01 text; not binary, layout, visual, or formal acceptance.",
+  "response_path": "ttqs-one/docs/ttqs-quality-20261016/quality-review/0107_I18-E15_R02_20261022/review/opencode_semantic_delta_R02_final_response.md",
+  "response_sha256": "5fc59925bd9a031b2de807fae37b4b2295248c218a96453dec4fcc90714306d7",
+  "raw_stdout_path": "review/opencode_semantic_delta_R02_followup_stdout.jsonl",
+  "raw_stdout_sha256": "e13917ffd64260d7178211442c698a51a30be163f0d0b8e8b27cc45bc62d4e03",
+  "findings": "No content defect. Reviewer verified exact R02 SHA, 2 changed body blocks, cutoff-date column/value, 90-day inclusive window, recomputed rates and inheritance boundary. Reviewer identified a non-blocking snapshot-provenance discrepancy; R02 plain text snapshot now reproduced exactly, while R01 previous extraction hash remains unresolved.",
+  "limitations": [
+    "Text semantic review only; no DOCX binary/OOXML inspection or rendered-page visual review.",
+    "Actual provider serving model and billing are UNKNOWN.",
+    "Formal association acceptance NOT_GRANTED.",
+    "R01 dispatched extraction hash 0dfd7360e0da5b330faefcc1fd91fa48be7012e8f99ff6aeb37ac228fb059301 was not reproduced from current R01 DOCX with R02 plain serialization."
+  ],
+  "status": "CANDIDATE_TEXT_SEMANTIC_PASS_VISUAL_PENDING_FORMAL_ACCEPTANCE_NOT_GRANTED"
+}

@@ -1,0 +1,488 @@
+# Independent semantic review packet — candidate is unaccepted
+
+## Identity and binding
+- Project: TTQS_ONE
+- Document: 0123
+- Requirement: I19-E11
+- Official page: 8
+- Candidate path: `E:\TTQS\TTQS_ONE_CODEX_RUNTIME\WORK\QUALITY_REBUILD_20261016\0123_I19-E11_SOURCE_PREP_R01_20261024\candidate_R01\0123__會員訓後事業成就個案紀錄_R01_candidate.docx`
+- Candidate SHA-256 (locally computed before review): `b5d3798c699c58a2e333703cd2df219ba47642d16bae9e2b496b60705b3ae5e1`
+- Source packet SHA-256: `25b5e6e27ce5a9434bb1dbdc8022908f82162281f425e6f7855c63ffb632ff13`
+- Unique Blueprint SHA-256: `47dde2beed4a67c2b2a201c8a274c5960f53807a6eab2b31c6c4f179996c2e72`
+- Official page-8 text SHA-256: `c34ead45cad406150de5622e157f44727157776ce5c6abf5343c7db5dca42520`
+- This packet contains the actual DOCX body extracted from its OOXML, including tables, not just the builder manuscript.
+
+## Official page 8 text
+ 
+8 
+項目 評核指標項目 
+內涵說明（以下為
+例，但不以此為
+限） 
+常見參考佐證資料 
+（並註明資料來源及頁碼） 
+3分 目標市場及顧客
+價值均有一定程度提
+升的效果。 
+4分 目標市場及顧客
+價值均有顯著具體的
+提升績效。 
+具體紀錄及評量。 
+ 感謝函。 
+ 其他： 
+2 分之常見參考佐證資料： 
+ 有具體紀錄可辨識目標市場及顧
+客價值均有部份提升效果。 
+ 相關證據顯示有初步訓練成果，
+且有部份佐證資料。 
+ 提出學員滿意度、考試測驗或心
+得報告（學習技能面） 。 
+ 提出課後追蹤調查與分析結果、
+證照通過情形（學習技能面） 。 
+ 部份會員透過訓練後，事業成就
+上突破原有格局。 
+ 企業主雇用結訓後學員，肯定機
+構訓練的成效。 
+ 部份學員能運用所學於職務中。 
+ 進行訓後薪資調查，部份訓後學
+員微幅調薪。 
+ 其他： 
+3 分之常見參考佐證資料： 
+ 有量化之效益可呈現目標市場及
+顧客價值均有一定程度提 升的效
+果。 
+ 相關證據顯示個人訓練後之績效
+改善成果。 
+ 提出市場競爭力、營業額、工作
+流程、成本控制或客訴率等營運
+表現（財務面） 。 
+ 學員訓後創業案例。 
+ 學員證照通過、就業率高。 
+ 個人產品不良件數有下降趨勢。 
+ 每年訓練班次、人次均持續成
+長。 
+ 會員人數及會費收入均逐年增
+加。 
+ 其他： 
+4 分之常見參考佐證資料： 
+ 經營績效中之數據呈現目標市場
+及顧客價值均有顯著具體的提 升
+績效。 
+ 提出參與社會公益活動、獲頒公
+民營單位獎項、結合學校單位產
+
+
+## Source packet
+# 0123 / I19-E11 Source Packet R01
+
+## Requirement identity and authority
+- Project: TTQS_ONE. DOCX deliverable: **0123**. Project requirement key: **I19-E11**.
+- Official source: `official_source_0108_r11.pdf`, printed page 8; exact page text and raster are copied beside this packet. Source PDF SHA-256: `805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709`.
+- Official wording: **「部份會員透過訓練後，事業成就上突破原有格局。」**
+- The project crosswalk maps I19-E11 to one deliverable, zero split extras: DOCX 0123, title **會員訓後事業成就個案紀錄**. This mapping key is not a printed official checkbox serial. Printed serial: `UNKNOWN_NOT_ASSERTED`.
+- The authoritative local requirement-to-deliverable controls are dated 2026-10-02 and are lineage controls, not substitutes for the official PDF. The populated `BLUEPRINT_CURRENT.jsonl` row is a candidate writing decomposition, not an Association approval.
+
+## Dedicated evidence purpose
+Create a case-record instrument for documenting a member’s claimed career or enterprise achievement after training. The record must preserve a traceable before/after timeline, define what achievement is claimed, locate the underlying evidence, record consent and verification, state evidence strength and limitations, and distinguish temporal association from proven causation. It is not an after-course follow-up survey, a learner certificate-pass report, an employment/ employer-feedback form, or a general organization-performance report.
+
+## Source and work state
+- Current branch: `work/ttqs-one-document-quality-contract-20261016`; branch HEAD observed at source-prep start: `9f09a89d104837db1b81c0d189dbf29006ac82c0`.
+- Current policy blob IDs are recorded in `evidence/SOURCE_PREP_RECEIPT_0123_R01.json`.
+- Source-prep status: source packet and dedicated Blueprint prepared. No DOCX is implied by this stage.
+- No REAL member case, membership record, attendance record, financial record, client record, permission, signature, third-party statement, or Association decision was supplied for this preparation. All worked values and identifiers in any candidate must be explicitly `SAMPLE/SYNTHETIC` until replaced with verified authorized originals.
+
+## Required downstream writer work
+Use only the accompanying Unique Blueprint. Build one practical record that a small member-serving association can use without assuming a full HR, legal, marketing, or finance department. Include a usable blank case form and a separate, fully populated synthetic worked case; define suggested role responsibilities without inventing legal authority. Each synthetic date, role, status, metric, source locator, finding and action needs a replacement key. Keep 0122/I19-E10 (post-course follow-up and certification-status analysis) and 0124/I19-E12 (employment/employer evidence) as negative neighbors; do not merge their claims or sample cases.
+
+## Human gate and hold state
+This is candidate source preparation only. It does not attest that any member achieved a real breakthrough. REAL status remains `UNKNOWN/NOT_PROVIDED`; formal acceptance remains `NOT_GRANTED`. If authentic member, training, baseline and post-training records or valid permissions are missing, keep the affected REAL finding on HOLD and provide the complete synthetic illustration separately.
+
+## Unique Blueprint
+# 0123 / I19-E11 Unique Blueprint R01
+
+**State:** source-derived authoring blueprint; not an official approval, a member record, or an Association decision.  
+**Document:** DOCX 0123, `會員訓後事業成就個案紀錄`.  
+**Project requirement:** I19-E11. **Official printed checkbox serial:** `UNKNOWN_NOT_ASSERTED`.  
+**Official wording (source PDF, page 8):** 「部份會員透過訓練後，事業成就上突破原有格局。」  
+**Purpose:** record and evaluate a specific member’s reported career or enterprise achievement after training, with verifiable before/after evidence and calibrated conclusions.
+
+## 1. Genre, readers and use
+This is a case record and evidence index, not a policy essay. Intended users are a training administrator, the case subject (member), the course owner, and an authorized reviewer. Suggested roles are operational suggestions only; actual authority must be checked against the Association’s current delegation rules. The form should be usable for a volunteer-run or small member-serving association without a dedicated HR, legal, or finance unit.
+
+The first page must tell a reader: what event is being documented; who may complete each part; when to open the case; which source records are needed; how to compare the pre-training baseline with the later achievement; where evidence is filed; and when to HOLD or reject a claim.
+
+## 2. Scope and negative-neighbor boundary
+- **This requirement (0123 / I19-E11):** a member’s post-training career or enterprise achievement said to have moved beyond the prior state. The case must identify the claimed change and support it with dated, traceable evidence.
+- **0122 / I19-E10:** post-course follow-up and certification-status analysis. Do not copy its 30/90-day survey case, response-rate data, certificate counts or conclusions into this case record.
+- **0124 / I19-E12:** employment and employer feedback evidence. Do not infer employment, employer satisfaction, hiring, wage change, or third-party endorsement from this case.
+- A shared member or course may be cross-referenced only when actual common records and authorized linkage exist. Otherwise use the distinct case ID `SAMPLE-0123-C01` and state that it is not linked to 0122 or 0124.
+- “After training” establishes sequence, not causality. Do not claim the course caused a business, career, revenue, employment, or social-impact change unless a valid design and evidence support that inference. A small single case ordinarily supports a bounded description, not attribution.
+
+## 3. Opening a case and operating workflow
+1. Assign a unique case ID; state whether the case is REAL, SAMPLE/SYNTHETIC, or HOLD/UNKNOWN. Record the preparer, date, reviewer role and source version; use coded member identifiers in the working copy.
+2. Obtain the member’s informed permission for the specified records and audiences. Record scope, date, expiry/withdrawal handling and storage location. Do not expose a contact crosswalk in the evaluator copy.
+3. Confirm membership status and the exact training event from authorized source records. If either cannot be verified, do not label the case REAL.
+4. Define the claimed “prior state” before looking only at the post-training result: what activity, service, product, job, responsibility, or business state existed; the baseline period; the measure; and its source.
+5. Record training timing and content from the authorized course record. The member’s participation is not established by a draft roster or synthetic value.
+6. Describe the post-training change with an observable indicator and a fixed comparison window. Locate each source item by controlled file ID and page/row/date; distinguish member self-report from documentary and third-party evidence.
+7. Compare baseline and post-training evidence using the same definition where possible. Record missingness, changed definitions, non-comparable periods, alternative explanations and any contradictory record.
+8. Assign an evidence grade: `SYNTHETIC_ONLY`, `SELF_REPORT_ONLY`, `DOCUMENTED_INTERNAL`, `CORROBORATED`, or `HOLD`. These labels describe evidence support, not formal approval.
+9. Write a bounded finding, limitation, next action, responsible suggested role and due date. Keep unresolved REAL claims on HOLD; preserve corrections in an audit trail rather than deleting the prior entry.
+
+## 4. Mandatory document sections
+1. One-page use card and confidentiality notice.
+2. Official requirement mapping, exact wording, page locator and scope boundary.
+3. Case intake, coded identity, consent, membership and training event checks.
+4. Claimed achievement statement and a pre-training baseline definition.
+5. Training-to-change timeline with dates, source IDs and verification states.
+6. Evidence inventory with type, custodian, locator, access permission, directness, verification and limitations.
+7. Baseline/post comparison, definitions, denominator or unit where relevant, and worked arithmetic.
+8. Alternative explanations, conflicting evidence, missing data and causal-inference limits.
+9. Bounded case conclusion and evidence grade.
+10. Findings-to-action and follow-up table with owner role, due date, measure, reopen trigger and closure evidence.
+11. A complete `SAMPLE-0123-C01` worked case, visibly separate from REAL evidence.
+12. A blank reusable case form with field instructions and controlled response choices.
+13. Fact-by-fact SAMPLE replacement register, REAL evidence checklist, hold/rejection criteria and correction log.
+14. Official/source index, cross-document references, exact candidate SHA, independent-review status and formal-acceptance status.
+
+## 5. Required form fields and evidence table
+The case form must include: case ID; status; member code; membership verification source/status; consent scope/date; course code/title/date and attendance source; claimed achievement in the member’s own words (clearly labeled as self-report when applicable); baseline state/period/measure/source; post-training state/period/measure/source; evidence item ID/type/custodian/locator/date; direct observation vs self-report; verifier role/date; comparison rule; discrepancy/missingness; alternative explanation; evidence grade; bounded conclusion; action/owner-role/due-date/measure/reopen trigger; reviewer comments; correction history; and protected-original storage reference.
+
+Use a traceability table with columns: claim/fact; time period; source item and exact locator; source type; permission/consent; who checked and when; same-definition comparison?; mismatch or limitation; disposition (`VERIFIED`, `SELF_REPORT`, `UNAVAILABLE`, `CONFLICT`, `HOLD`); replacement key if synthetic. Third-party statements and originals must be separately identified; never fabricate them.
+
+## 6. Fully populated synthetic demonstration requirements
+Create one new synthetic example `SAMPLE-0123-C01`, not reused from 0122 or 0124. Every identifier, date, role, course, metric, source description, finding and action must say `SAMPLE` or `SYNTHETIC` and have a replacement key. The example must show:
+- a member’s starting work/enterprise state and a clearly dated baseline;
+- a training event that precedes the stated change, labelled as a scenario rather than an actual Association class;
+- one specific, observable achievement claim and a comparable post-training period;
+- at least two evidence entries of different types (for the illustration only), each explicitly described as synthetic examples, not originals;
+- a simple numeric comparison with definition, unit and formula, or an explicit `NOT_APPLICABLE` reason if no valid number exists; never divide by zero or turn a sample count into an institutional rate;
+- at least one alternative explanation and at least one boundary on attribution;
+- one modest action, a suggested role, a sample due date, a measurable follow-up, and a HOLD/reopen trigger;
+- an explicit result: `SYNTHETIC_ONLY — NOT EVIDENCE OF A REAL MEMBER OR ASSOCIATION ACHIEVEMENT`.
+
+Example design only (the Writer may create a distinct but equivalently coherent scenario): a fictional member-led service introduces a new service package after a sample training; the illustrated ledger records three pilot orders after a baseline of zero. Show `3 − 0 = 3 recorded SAMPLE pilot orders`; do not calculate a percentage from a zero baseline, claim verified revenue, fabricate client confirmations, or attribute the change solely to training. Synthetic sample evidence locators must be visibly invented keys such as `SAMPLE-KEY-BASELINE-01` and `SAMPLE-KEY-POST-01`, not realistic file paths or third-party originals.
+
+## 7. Calculations and interpretation
+For each numeric comparison state indicator definition, baseline/post periods, unit, numerator/denominator when a rate is used, missing-data rules, formula, substituted values and rounding. Prefer absolute differences for zero baselines. Do not mix cases or count repeated records as distinct members. Separate: member self-report; internal records; independent/third-party originals; and the reviewer’s bounded conclusion. No claims of statistical significance, organization-wide performance or causality from a single synthetic case.
+
+## 8. SAMPLE/REAL control and replacement register
+Include a separate register with one row per synthetic fact: replacement key; current SAMPLE value; document page/section/table/field; required real original; authorized custodian; consent/authority; verification step; status; and date resolved. The REAL checklist must cover membership, course/attendance, baseline, post-training evidence, dates, metric definitions, member permission, any cited third party, discrepancies, reviewer identity/authority and secure original locator. When a real original is absent, say `NOT_PROVIDED`; never leave a synthetic value visually indistinguishable from a real value.
+
+## 9. HOLD, rejection and correction rules
+HOLD a REAL case if membership or course attendance is unverified; consent is absent or out of scope; baseline/post periods are not comparable; the asserted achievement has no source locator; a third-party claim lacks an authentic authorized original; the metric or denominator cannot be reconstructed; records conflict; the causal language exceeds evidence; or SAMPLE and REAL rows are mixed. Reject as I19-E11 evidence if the case is merely a satisfaction form, certificate table, employment/hiring/employer-feedback record, generic success story, unlocated testimonial, or organization-wide claim without a specific member and a traceable before/after case. Record correction date, author role, reason, affected fields, prior value, new value, source and reviewer; do not erase audit history.
+
+## 10. Source and review acceptance tests
+- Exact official wording and page 8 are bound to I19-E11 → DOCX 0123; printed checkbox serial remains `UNKNOWN_NOT_ASSERTED`.
+- A title-blind reader can identify a member post-training achievement case record and trace claim → baseline → post state → source → bounded conclusion.
+- Blank form is usable, and a separate complete synthetic example is fully populated and visibly labeled.
+- The synthetic case has coherent chronology, unique sample IDs, consistent figures, evidence locators and replacement keys.
+- 0122 and 0124 negative-neighbor boundaries are stated and enforced.
+- No fabricated real member, membership, attendance, business result, external client, employer, credential, signature, approval or Association decision.
+- Page layouts keep body text at least 10.5 pt and tables at least 9.5 pt; verify native Word render and every page visually.
+- Technical checks and visual review do not replace a fresh independent semantic review bound to the final exact DOCX SHA.
+- Candidate, REAL source evidence, independent review and formal acceptance remain separate states; formal acceptance is `NOT_GRANTED` absent the Human Gate.
+
+## 11. Evidence status at source preparation
+No real member case was supplied. This Blueprint is a source-derived authoring contract, not evidence that the Association has a qualifying member achievement. The next writer may create a synthetic candidate only; any REAL conclusion remains `UNKNOWN/NOT_PROVIDED` until verified originals and permissions exist.
+
+## Actual DOCX body text
+會員訓後事業成就個案紀錄
+文件識別碼： DOCX 0123
+評核指標對照： I19-E11
+官方檢核表印刷序號： UNKNOWN_NOT_ASSERTED
+文件用途： 記錄並查核會員訓練後所述的個人事業成就變化
+版本狀態： 候選 R01
+資料狀態： SAMPLE/SYNTHETIC 範例；未提供真實個案
+正式接受： NOT_GRANTED
+先看這一頁  這份紀錄供原始點協會行政人員、個案會員及獲授權覆核者共同使用。當會員提出訓練後在工作或事業上有具體改變時，先開案、取得適用的資料使用同意，再核對會員及訓練來源；接著定義訓練前基線、訓練後觀察期間和可查找的原始資料。所有比較要使用可重建的口徑。缺少會員或訓練紀錄、同意不適用、前後期間無法比較、主張沒有來源位置或資料互相矛盾時，先標示 HOLD，不得把自述直接寫成已證實成果。  本文件的已填案例全部是虛構示範。它不代表原始點協會會員、課程、服務、訂單、核准或實際績效。
+一 使用卡
+[TABLE]
+操作問題 | 使用方式
+何時開案 | 會員提出可具體描述的工作或事業變化，且能說明其與某次訓練的時間關係。開案不等於認定訓練造成變化。
+誰填寫 | 建議由個案承辦角色填基本欄位；會員確認其自述；另一位獲授權覆核者核對來源。實際權限須依協會當時有效的分工或授權規則確認。
+先找哪些資料 | 會員身分及參訓來源、會員同意範圍、訓練日期與內容、訓練前基線資料、訓練後同口徑資料、資料保管位置及必要的更正紀錄。
+如何比較 | 先寫明指標、單位、基線期間、訓後期間及納入規則，再查找兩個期間的資料。期間或定義不同時，列出差異，不得直接當成同口徑成長。
+資料放在哪裡 | 在本表填受控的檔案代碼、頁次、列號或日期；真實原件存放位置依協會現行授權與保管規則處理。評核用副本不放身分對照表或不必要的聯絡資料。
+何時暫緩 | 會員、訓練、同意、基線、訓後資料或來源定位有任何關鍵缺漏或衝突時，標 HOLD 並指定補件或查核責任角色。
+何時拒收為本項證據 | 只有滿意度、證照、就業或雇主回饋，沒有特定會員的訓前與訓後個案；或只有沒有來源位置的成功故事。
+可以結論到哪裡 | 只能說明已查得資料支持的有限發現。時間上先訓練後變化不等於訓練造成變化。單一個案不能代表協會整體績效。
+[/TABLE]
+二 官方要求與本表範圍
+官方評核指引第 8 頁的 I19-E11 佐證文字為：
+「部份會員透過訓練後，事業成就上突破原有格局。」
+本專案文件識別碼為 DOCX 0123，需求鍵為 I19-E11。這兩個識別碼不是官方檢核表的印刷序號；本次來源未能確認印刷序號，因此維持 UNKNOWN_NOT_ASSERTED，不自行補號。
+本表要記錄一名會員具體提出的工作或事業成就主張，描述訓練前狀態、訓練事件、訓練後狀態和支持資料，讓覆核者能從主張追到原始資料位置，再看出哪些部分已核對、哪些仍只是自述或待補。
+本表不自行判斷協會是否已正式採認某項成果。是否列入正式評核材料，應由具權責者依實際原件、授權和正式審查決定；本候選文件不代表該決定已作成。
+三 適用邊界
+[TABLE]
+相鄰需求 | 相鄰文件 | 相鄰文件處理事項 | 本表不可取代的內容
+I19-E10 課後追蹤及證照通過分析 | DOCX 0122 | 課後追蹤波次、學習技能、證照應考及通過情形 | 不把回卷率、證照通過率或課後滿意度當作會員事業成就
+I19-E11 會員訓後事業成就 | DOCX 0123 | 特定會員的訓前狀態、訓練時間、訓後變化、來源及限制 | 本表的核心工作
+I19-E12 雇用結訓學員及雇主肯定 | DOCX 0124 | 就業、雇用或雇主回饋等證據 | 不推論聘用、薪資、雇主滿意或第三方背書
+[/TABLE]
+只有當不同文件確實引用同一筆已核對原件、具有適當授權，而且沒有把不同主張混在一起時，才可以互相交叉索引。交叉引用要記錄原件識別碼與被引用的具體事實，不能複製另一份文件的案例敘述來補成本表的證據。
+四 開案與查核步驟
+登錄個案。 使用不直接揭露會員身分的個案代碼，填記錄日期、承辦角色、需求版本及目前狀態。聯絡人對照表應與評核副本分開管理。
+確認資料使用範圍。 核對會員同意的資料種類、用途、對象與有效範圍。若同意缺漏、撤回或與預定使用不符，立即標 HOLD，不抄錄受限資料。
+核對會員及訓練事件。 由獲授權人員依原始會員紀錄和訓練紀錄核對身分狀態、課程代碼、日期、參與狀態及可引用範圍。草稿名冊不能單獨證明實際出席。
+先定義基線。 在寫訓後結果前，說明原本的工作、產品、服務或責任狀態，選定期間、指標、單位及來源。不得看完訓後資料才改基線以放大變化。
+描述訓後主張。 以會員原話記錄所述變化，清楚標為自述；再拆成可觀察指標，設定相同或可比較的觀察期間。
+逐筆登錄來源。 每項支持或反證資料都填來源類型、保管角色、核准的查閱方式、精確位置、核對者、核對日期及限制。第三方資料只在真實原件及適當授權存在時登錄。
+重算與比較。 使用表內可見數字重算差額或比率；說明分子、分母、單位、期間、缺漏處理及四捨五入。基線為零時通常呈現絕對差，不計算以零為分母的成長率。
+分級與下結論。 區分自述、內部紀錄、外部原件及示範資料。結論只寫證據能支持的範圍，並說明替代解釋、缺漏和未能證實之處。
+派定行動。 對 HOLD 或有限支持事項指定建議責任角色、期限、要補的資料、衡量方式及重啟條件。期限須由實際權責者確認，不把本表的示範日期當成協會決議。
+覆核並保留更正軌跡。 覆核者記錄逐項意見、引用位置、處理狀態及複核日期。更正時保留原值、改後值、理由與來源，不覆寫掉歷史痕跡。
+五 建議分工
+下列為方便小型會員服務組織使用的工作角色名稱，不代表原始點協會已設立該職位或已授權該人員。
+[TABLE]
+建議角色 | 可負責的工作 | 權限確認
+個案承辦 | 建立代碼、收集必要欄位、維護來源索引、追蹤缺件 | 依協會實際分工確認；不得自行核准超出授權的資料使用
+個案會員 | 確認其自述、提供可提供的資料並指出不宜公開的資訊 | 由會員本人確認範圍；不能以承辦代簽
+資料保管角色 | 依既有規則保管會員、課程及個案原件，控制評核副本內容 | 以正式職掌或書面授權為準
+覆核角色 | 獨立核對資料位置、計算、限制、衝突和結論範圍 | 應記錄實際姓名或角色及授權來源；資料未提供時填 UNKNOWN
+決策權責者 | 決定協會是否採用、補件或結案 | 本表不指定人選或代替正式核准程序
+[/TABLE]
+若同一人因人力有限兼任承辦與覆核，應在表內揭露，並在有條件時安排另一位獲授權者複核關鍵來源及計算。沒有獨立覆核時，不得寫成已完成獨立查核。
+六 可重複使用的空白個案表
+6.1 個案識別與狀態
+[TABLE]
+欄位 | 填寫指引 | 個案填寫
+個案代碼 | 不直接顯示姓名；代碼須能安全回查受控身分表 | ______________________________
+案件狀態 | 勾選一項：OPEN／HOLD／REJECTED／CLOSED | ______________________________
+開案日期及表單版本 | 記實際日期及本表版本 | ______________________________
+承辦角色及授權依據 | 記角色、執掌來源；查不到填 UNKNOWN | ______________________________
+會員代碼及身分核對 | 記受控代碼、原件代碼、位置、核對角色及日期 | ______________________________
+會員同意 | 記用途、對象、資料範圍、日期、有效性及任何限制 | ______________________________
+資料公開範圍 | 內部／評核副本／另經授權的範圍；附同意位置 | ______________________________
+保護原件位置 | 以受控資料代碼記錄；不要把敏感聯絡資訊放入公開副本 | ______________________________
+[/TABLE]
+6.2 訓練事件與變化主張
+[TABLE]
+欄位 | 填寫指引 | 個案填寫
+訓練代碼、課程名稱及日期 | 引用正式訓練紀錄；沒有原件填 NOT_PROVIDED | ______________________________
+參訓核對 | 出席或參與狀態、核對原件、頁列位置、核對者及日期 | ______________________________
+會員原話主張 | 逐字或經會員確認的摘要；標示 SELF_REPORT | ______________________________
+變化指標 | 定義可觀察事件、單位、納入及排除條件 | ______________________________
+訓練前基線狀態 | 填期間、數值或描述、單位、來源及其限制 | ______________________________
+訓練後狀態 | 填期間、數值或描述、單位、來源及其限制 | ______________________________
+比較規則 | 說明是否同口徑、期間長度及缺漏處理 | ______________________________
+其他可能原因 | 列出可合理影響結果的因素，不需證明其必然發生 | ______________________________
+因果界線 | 只寫可支持的時間關係或關聯；超出資料者標未證實 | ______________________________
+[/TABLE]
+6.3 來源與查核表
+每一種支持、反證或未能取得的資料各用一列。不可只填「附件如上」而不給定位。
+[TABLE]
+項次 | 主張或事實與期間 | 來源類型、代碼及精確位置 | 同意範圍、核對者與日期 | 同口徑及差異
+1 | __________ | __________ | __________ | __________
+2 | __________ | __________ | __________ | __________
+3 | __________ | __________ | __________ | __________
+4 | __________ | __________ | __________ | __________
+5 | __________ | __________ | __________ | __________
+[/TABLE]
+[TABLE]
+項次 | 核對狀態 | 限制或缺漏 | 處置
+1 | VERIFIED／SELF_REPORT／UNAVAILABLE／CONFLICT／HOLD | ______________________________ | ______________________________
+2 | VERIFIED／SELF_REPORT／UNAVAILABLE／CONFLICT／HOLD | ______________________________ | ______________________________
+3 | VERIFIED／SELF_REPORT／UNAVAILABLE／CONFLICT／HOLD | ______________________________ | ______________________________
+4 | VERIFIED／SELF_REPORT／UNAVAILABLE／CONFLICT／HOLD | ______________________________ | ______________________________
+5 | VERIFIED／SELF_REPORT／UNAVAILABLE／CONFLICT／HOLD | ______________________________ | ______________________________
+[/TABLE]
+6.4 比較、計算與判定
+[TABLE]
+指標 | 定義與單位 | 基線期間和值 | 訓後期間和值 | 算式及四捨五入 | 結果限制
+__________ | __________ | __________ | __________ | __________ | __________
+__________ | __________ | __________ | __________ | __________ | __________
+[/TABLE]
+計算規則：
+先定義「一筆」代表什麼，並記錄重複列、取消列、未完成列及無法確認列的處理方式。
+使用相同單位和可比較期間；如期間長度或資料定義不同，先說明，不直接宣稱改善。
+比率列出分子、分母和納入規則；分母為零或無法核實時填 NOT_CALCULABLE，並說明原因。
+數值四捨五入至小數點位數：________。本個案採用的原始數值及算式須可由覆核者重算。
+6.5 結論與後續行動
+[TABLE]
+欄位 | 填寫內容
+證據分級 | SYNTHETIC_ONLY／SELF_REPORT_ONLY／DOCUMENTED_INTERNAL／CORROBORATED／HOLD；說明判定依據
+有界結論 | 只描述已查得的事實、期間、單位和限制
+尚未證實的主張 | ______________________________
+主要缺件或衝突 | ______________________________
+後續行動及建議責任角色 | ______________________________
+到期日與衡量方式 | 由實際權責者確認；未確認前填 UNKNOWN
+重啟條件 | ______________________________
+結案條件與結案證據位置 | ______________________________
+承辦、覆核及決策權責者 | 姓名或角色、授權依據、日期；未知者填 UNKNOWN
+會員確認範圍 | 記確認方式及資料範圍；沒有確認填 NOT_PROVIDED，不代簽
+[/TABLE]
+七 完整示範個案
+SAMPLE/SYNTHETIC ONLY  個案代碼 SAMPLE-0123-C01。下列會員、課程、日期、服務、表冊、訂單列、角色、數字、發現及行動全為虛構情境。表內來源鍵是示範定位符，不是原始點協會的檔案、會員、客戶或正式紀錄。此案例不能用作真實會員績效。
+7.1 情境與主張
+[TABLE]
+欄位 | 示範值及替換鍵
+個案代碼 | SAMPLE-0123-C01；SAMPLE-KEY-CASE-ID
+會員代碼 | SAMPLE-M-0123-01；SAMPLE-KEY-MEMBER-CODE。沒有真實會員身分資料。
+案件狀態 | SAMPLE／合成情境；SAMPLE-KEY-CASE-STATUS。不是 REAL 狀態。
+虛構訓練事件 | SAMPLE-COURSE-0123-01「會員服務方案設計練習」；SAMPLE-KEY-COURSE-CODE 與 SAMPLE-KEY-COURSE-TITLE。不是協會實際開班。
+虛構訓練日期 | 2026-04-18；SAMPLE-KEY-COURSE-DATE。日期僅供算例建立時間順序。
+會員自述 | 「課程後我把原本零散的社區健康教育活動構想整理成一個固定介紹頁，後來記下三筆試辦詢問。」此句為虛構自述；SAMPLE-KEY-MEMBER-STATEMENT。
+個案要回答的問題 | 在展示情境中，訓練前與訓練後是否有可描述的服務提案或試辦詢問紀錄差異？這個差異能否歸因於訓練？
+[/TABLE]
+這份示範只記錄「內部情境帳上三筆試辦詢問列」相對於基線期間的零筆記錄。它不證明三名真實客戶、實際交易、營收或服務完成，也不代表會員確實出席了任何協會課程。
+7.2 示範時間線
+[TABLE]
+日期或期間 | SAMPLE/SYNTHETIC 事件 | 來源鍵與限制
+2026-03-01 至 2026-03-31 | 虛構基線期間；該示範紀錄定義的試辦詢問列為 0 | SAMPLE-KEY-BASELINE-START、SAMPLE-KEY-BASELINE-END、SAMPLE-KEY-BASELINE-COUNT。只代表算例中的內部表格未記錄，不證明會員實際上沒有服務或詢問。
+2026-04-18 | 虛構的方案設計練習日期 | SAMPLE-KEY-COURSE-DATE。不是協會訓練事實或出席證明。
+2026-05-01 至 2026-05-31 | 虛構訓後觀察期間；示範詢問表有 3 列 | SAMPLE-KEY-POST-START、SAMPLE-KEY-POST-END、SAMPLE-KEY-POST-COUNT。不是實際訂單或客戶原件。
+2026-06-15 | 虛構的承辦角色提出核對後續來源列的建議期限 | SAMPLE-KEY-ACTION-DUE。不是協會決議或已執行期限。
+[/TABLE]
+基線與訓後期間各為 31 天，並以相同的「示範詢問表中標記為有效的試辦詢問列」作比較定義。虛構訓練日期位於兩期間之間。時間順序已在此算例中設定，但仍不足以證明訓練造成變化。
+7.3 示範證據清單
+[TABLE]
+來源鍵及類型 | SAMPLE/SYNTHETIC 內容 | 可支持的範圍 | 不能支持的範圍
+SAMPLE-KEY-BASELINE-01；虛構內部構想紀錄 | 虛構資料表記載基線期間沒有符合定義的試辦詢問列，值為 0 | 可重算本示範的基線值 | 不能證明會員在協會內外沒有其他服務、詢問或交易
+SAMPLE-KEY-POST-01；虛構內部試辦詢問表 | 示範表有 SAMPLE-KEY-ENTRY-01、SAMPLE-KEY-ENTRY-02、SAMPLE-KEY-ENTRY-03 三列，每列在示範期間內各計一次 | 可重算本示範的訓後列數 3 | 不能證明是真實客戶、成交、收款或服務完成
+SAMPLE-KEY-REFLECTION-01；虛構會員自述 | 虛構會員說明其曾整理介紹頁，並認為課程練習有助於整理想法 | 顯示範例如何記錄自述與看法 | 不是獨立驗證，也不能證明課程造成詢問增加
+SAMPLE-KEY-ALT-01；示範替代解釋 | 同一期間可能另有社群貼文、熟人轉介或季節性活動 | 提醒查核者列替代原因 | 不表示這些因素在任何真實個案已發生
+SAMPLE-KEY-MISSING-01；示範缺件 | 算例沒有真實聯絡原件、客戶確認、交易或收款資料 | 示範缺件如何限制結論 | 不能把三筆示範列提升為真實營運成果
+[/TABLE]
+所有來源鍵都是為示範創造的定位符，沒有附加或暗示任何第三方原件。示範覆核人、核對日期及會員同意都沒有真實資料，因此在 REAL 欄位一律是 UNKNOWN 或 NOT_PROVIDED；不得因為算例有完整欄位就把來源稱為 REAL。
+7.4 示範計算
+[TABLE]
+指標 | 基線 | 訓後 | 算式 | 示範結果
+示範內部詢問列數 | 0 列／31 天 | 3 列／31 天 | 3 − 0 = 3 列 | SAMPLE 絕對差額為增加 3 列
+[/TABLE]
+這個示範沒有計算成長百分比，因基線為 0，百分比的分母會是 0。三列資料也不是「轉換率」或「訂單完成率」；本表沒有列出可核實的完成交易分母。每列只在示範帳上計一次。若真實資料出現重複、取消、跨期或定義改變，應先逐列標示處理規則，再重算。
+7.5 示範替代因素與結論
+至少有兩種尚未排除的可能解釋：會員可能在訓練後另行發布介紹資訊；也可能有季節性需求或熟人轉介。示範資料沒有設計控制組、對照期間或外部核驗，所以無法估算各因素影響，也不能將差額單獨歸因於訓練。
+有界示範結論： 在此虛構案例資料中，示範內部表於 31 天基線期間有 0 列符合定義的詢問記錄，訓後 31 天期間有 3 列；算式為 3 − 0 = 3 列。算例沒有真實會員、課程、客戶、交易或外部原件，不能作為協會績效或因果證明。
+證據狀態： SYNTHETIC_ONLY — NOT EVIDENCE OF A REAL MEMBER OR ASSOCIATION ACHIEVEMENT。
+7.6 示範後續行動
+[TABLE]
+行動 | 建議角色 | 示範期限 | 衡量方式 | 重啟或 HOLD 條件
+若將來有真實個案，依授權取得基線及訓後原始紀錄，並逐列核對定義與重複項 | SAMPLE-ROLE-CASEWORKER-01；SAMPLE-KEY-ROLE-CASEWORKER | 2026-06-15；SAMPLE-KEY-ACTION-DUE | 符合定義的列數、查得原件的列數、無法定位的列數分開報告 | 任何列無法定位、期間不一致、同意不足或來源互相衝突時，標 HOLD；SAMPLE-KEY-ACTION-TRIGGER
+重新評估結論文字，只保留原件能支持的事實 | SAMPLE-ROLE-REVIEWER-01；SAMPLE-KEY-ROLE-REVIEWER | 由實際權責者確認，不把示範日期當決議 | 覆核表記載核對欄位、差異與處置 | 沒有真實覆核者或授權依據時，審查狀態維持 NOT_PROVIDED
+[/TABLE]
+上述角色、日期和行動均為示範，不是已指派給原始點協會人員的工作。
+八 證據分級與結論用語
+[TABLE]
+狀態 | 使用條件 | 可採用的結論範圍
+SYNTHETIC_ONLY | 內容是為表單示範而生成，沒有對應真實個案原件 | 只能說明表格使用方式；不能當作會員或協會成果
+SELF_REPORT_ONLY | 只有會員自述，沒有可定位的支持原件 | 只能寫「會員自述」，不能寫成已查證事實
+DOCUMENTED_INTERNAL | 有可追溯的協會或會員內部原件，且查閱及使用有適當授權 | 可描述內部原件記載的內容，同時說明內部資料的限制
+CORROBORATED | 另有真實、合法取得且適當的外部或獨立資料相互支持 | 只能在外部原件確實支持的範圍內寫成相互佐證；不得外推
+HOLD | 關鍵資料不足、衝突、不可比較、未授權或不能核實 | 不作正面實績結論，列明待補資料、責任角色和重啟條件
+[/TABLE]
+分級是證據支撐狀態，不是協會核准。只有正式權責者依有效程序作成的決定，才可代表協會正式採認；填表者或覆核者不得代替該決定。
+九 真實資料替換登錄表
+下列清單對應第七節示範案例的虛構事實。每一項都須以有權限的真實原件取代，並記錄查核結果。凡尚未提供原件者保持 NOT_PROVIDED，不得把示範值複製到真實欄位。
+[TABLE]
+替換鍵 | 示範值及文件位置 | 真實替換原件與查核方式 | 狀態
+SAMPLE-KEY-CASE-ID | SAMPLE-0123-C01；7.1 | 真實個案代碼及受控對照位置；查核方式：個案承辦確認不直接揭露身分 | NOT_PROVIDED
+SAMPLE-KEY-MEMBER-CODE | SAMPLE-M-0123-01；7.1 | 去識別化會員代碼及會員紀錄位置；查核方式：有權限資料保管者核對 | NOT_PROVIDED
+SAMPLE-KEY-CASE-STATUS | SAMPLE／合成；7.1 | 真實案件狀態及狀態變更紀錄；查核方式：承辦依案件紀錄更新 | NOT_PROVIDED
+SAMPLE-KEY-COURSE-CODE | SAMPLE-COURSE-0123-01；7.1 | 真實課程代碼及正式訓練檔案位置；查核方式：課程資料保管者核對 | NOT_PROVIDED
+SAMPLE-KEY-COURSE-TITLE | 會員服務方案設計練習；7.1 | 真實課程名稱及計畫版本；查核方式：以核定或正式留存文件核對 | NOT_PROVIDED
+SAMPLE-KEY-COURSE-DATE | 2026-04-18；7.1、7.2 | 真實開課日期、出席原件及定位；查核方式：由獲授權角色逐項比對 | NOT_PROVIDED
+SAMPLE-KEY-MEMBER-STATEMENT | 虛構會員自述；7.1、7.3 | 會員本人確認的原話或經確認摘要；查核方式：取得合適同意，保留確認方式及日期 | NOT_PROVIDED
+SAMPLE-KEY-BASELINE-START | 2026-03-01；7.2 | 真實基線期間起日及來源；查核方式：承辦核對觀察定義 | NOT_PROVIDED
+SAMPLE-KEY-BASELINE-END | 2026-03-31；7.2 | 真實基線期間迄日及來源；查核方式：承辦核對期間長度 | NOT_PROVIDED
+SAMPLE-KEY-BASELINE-COUNT | 0 列；7.2至7.4 | 基線原始資料及納入／排除清單；查核方式：覆核者抽查每列與重複項 | NOT_PROVIDED
+SAMPLE-KEY-BASELINE-01 | 虛構內部構想紀錄；7.3 | 真實原始紀錄及精確頁列位置；查核方式：核對形成日期、保管者及授權 | NOT_PROVIDED
+SAMPLE-KEY-POST-START | 2026-05-01；7.2 | 真實訓後期間起日及來源；查核方式：與基線定義比對 | NOT_PROVIDED
+SAMPLE-KEY-POST-END | 2026-05-31；7.2 | 真實訓後期間迄日及來源；查核方式：與基線期間長度比對 | NOT_PROVIDED
+SAMPLE-KEY-POST-COUNT | 3 列；7.2至7.4 | 訓後原始紀錄及逐列清單；查核方式：覆核者確認每列只計一次 | NOT_PROVIDED
+SAMPLE-KEY-POST-01 | 虛構內部試辦詢問表；7.3 | 真實表單原件、保管角色及精確位置；查核方式：不以摘要代替原件 | NOT_PROVIDED
+SAMPLE-KEY-ENTRY-01 | 虛構詢問列一；7.3 | 對應真實列及去識別化代碼；查核方式：核對日期、定義及重複 | NOT_PROVIDED
+SAMPLE-KEY-ENTRY-02 | 虛構詢問列二；7.3 | 對應真實列及去識別化代碼；查核方式：核對日期、定義及重複 | NOT_PROVIDED
+SAMPLE-KEY-ENTRY-03 | 虛構詢問列三；7.3 | 對應真實列及去識別化代碼；查核方式：核對日期、定義及重複 | NOT_PROVIDED
+SAMPLE-KEY-REFLECTION-01 | 虛構自述；7.3 | 會員確認的真實自述及同意範圍；查核方式：只標示為自述，不當作獨立佐證 | NOT_PROVIDED
+SAMPLE-KEY-ALT-01 | 社群資訊、季節需求或轉介可能性；7.3、7.5 | 實際查得的其他影響因素或 UNKNOWN；查核方式：記錄查核範圍，不把可能性寫成事實 | NOT_PROVIDED
+SAMPLE-KEY-MISSING-01 | 無真實客戶、交易或收款原件；7.3 | 依個案主張所需的原件或明確缺件狀態；查核方式：由覆核者確認缺件影響 | NOT_PROVIDED
+SAMPLE-KEY-ACTION-DUE | 2026-06-15；7.2、7.6 | 權責者確認的真實期限；查核方式：取得實際分工或決定來源 | NOT_PROVIDED
+SAMPLE-KEY-ROLE-CASEWORKER | SAMPLE-ROLE-CASEWORKER-01；7.6 | 實際承辦角色及授權來源；查核方式：核對職掌或正式授權 | NOT_PROVIDED
+SAMPLE-KEY-ROLE-REVIEWER | SAMPLE-ROLE-REVIEWER-01；7.6 | 實際覆核角色及獨立性說明；查核方式：留存授權依據、覆核日期及意見 | NOT_PROVIDED
+SAMPLE-KEY-ACTION-TRIGGER | 來源無法定位、期間不一致、同意不足或衝突；7.6 | 真實缺失、處置及重啟紀錄；查核方式：明確列出缺失事實及處理結果 | NOT_PROVIDED
+SAMPLE-KEY-SAMPLE-RESULT | 3 − 0 = 3 列；7.4、7.5 | 以真實基線及訓後列重算的結果；查核方式：獨立覆核算式及納入規則 | NOT_PROVIDED
+[/TABLE]
+替換時保留每個鍵、欄位位置、原件位置、查核人與日期。若真實資料與示範值不同，完全以真實原件為準；不要為了維持示範結論而修改真實紀錄。
+十 真實證據核對清單
+只有取得有權限查閱的原件，才能把相應項目從 NOT_PROVIDED 改為已核對狀態。此候選文件目前沒有任何真實個案資料。
+[TABLE]
+核對事項 | 必要的原件或資訊 | 目前狀態
+會員身分及當時會員狀態 | 可由有權限角色核對的會員紀錄與受控定位 | NOT_PROVIDED
+訓練事件及參與 | 正式課程資料、日期、參訓紀錄及定位 | NOT_PROVIDED
+會員同意 | 可涵蓋本表資料種類、用途和對象的有效同意紀錄 | NOT_PROVIDED
+訓前基線 | 形成於或可合理代表基線期間的原始資料 | NOT_PROVIDED
+訓後結果 | 同一定義下的訓後原始資料、期間及定位 | NOT_PROVIDED
+指標與計算 | 單位、納入規則、分子分母、排除及逐步算式 | NOT_PROVIDED
+會員自述 | 本人確認方式、日期和允許引用範圍 | NOT_PROVIDED
+第三方資料 | 若有引用，須有真實原件、來源及適當授權 | NOT_PROVIDED
+矛盾或缺件 | 衝突雙方資料及處理、限制或 HOLD 決定 | NOT_PROVIDED
+覆核者及權限 | 真實覆核者、實際授權依據、日期與覆核範圍 | NOT_PROVIDED
+正式採認 | 協會有權責者作成的實際決定及其正式來源 | NOT_PROVIDED
+[/TABLE]
+不能取得資料時保留 NOT_PROVIDED 或 UNKNOWN，並說明查找範圍及下一步。不得製作看似已簽署或已核准的空白簽名圖樣。
+十一 HOLD 拒收與結案規則
+11.1 先 HOLD 的情況
+遇到下列任一情形，暫緩 REAL 結論並列明待辦：
+會員身分或訓練參與無法由授權來源核實。
+同意不存在、已撤回、用途不符或涵蓋範圍不清。
+基線或訓後期間無法重建，或前後指標定義不可比較。
+主張沒有可查找的來源位置，或計算的分母無法重建。
+第三方說法缺少真實原件及必要授權。
+原件互相矛盾、關鍵欄位缺漏、資料重複未處理。
+結論超出資料支持範圍，將時間先後寫成訓練因果。
+SAMPLE 與 REAL 資料混列，或示範值未標示替換鍵。
+HOLD 紀錄要列出受影響欄位、現有證據、缺件、暫緩原因、建議責任角色、下一查核方式及重啟條件。
+11.2 不得當作 I19-E11 完成證據的內容
+下列內容本身不能滿足本表的個案目的：
+只有滿意度、考試、心得或證照通過表。
+只有就業率、雇主評語、聘用或薪資資料，沒有會員事業成就個案。
+沒有特定會員或沒有訓前與訓後比較的通用成功故事。
+無來源位置的口述、宣傳文字或未經確認的截圖。
+協會整體營收、會員人數或訓練班次變化，卻沒有本項要求的個案證據。
+把合成資料、欄位完整或技術檢查結果稱為真實實績。
+11.3 建議結案條件
+由實際權責者按用途決定是否結案。最低限度應可回查主張、會員與訓練來源、基線與訓後期間、資料使用範圍、計算、限制、覆核意見及未決事項。任何必要原件仍缺漏或存在重大衝突時，不得以本表的完成外觀取代核驗。
+十二 更正紀錄
+每次更正均保留一列，不刪除原值。若無更正，填「本次無更正」並記錄填寫日期；不得預填未來核准。
+[TABLE]
+更正日期 | 欄位及原值 | 更正後值 | 更正理由與來源位置 | 更正角色 | 複核角色及日期
+__________ | __________ | __________ | __________ | __________ | __________
+__________ | __________ | __________ | __________ | __________ | __________
+__________ | __________ | __________ | __________ | __________ | __________
+[/TABLE]
+十三 來源與文件治理狀態
+[TABLE]
+控制項 | 本候選文件狀態
+官方依據 | TTQS 評核指引第 8 頁；官方文字為「部份會員透過訓練後，事業成就上突破原有格局。」
+本專案映射 | DOCX 0123 → I19-E11；Unique Blueprint 為 0123 專屬；印刷序號 UNKNOWN_NOT_ASSERTED
+相鄰項隔離 | I19-E10／DOCX 0122 為課後追蹤及證照分析；I19-E12／DOCX 0124 為就業或雇主證據。本表不合併其資料。
+本次資料狀態 | 沒有真實會員個案、訓練、同意、基線或訓後原件提供；REAL 狀態 UNKNOWN／NOT_PROVIDED
+範例狀態 | 第七節所有內容為 SAMPLE/SYNTHETIC；不可當成協會紀錄
+獨立語意審查 | PENDING
+技術與版面驗收 | 須綁定最終 DOCX exact SHA；未取得對應收據前不得宣稱完成
+正式採認 | NOT_GRANTED；候選文件不代表協會核准或正式送審
+[/TABLE]
+文件使用前確認
+填表者在每次正式使用前，應核對目前有效的協會資料管理、授權和檔案保管規則。此表沒有自行設定保存年限、法定權限或核准人。沒有可核對的規則或授權時，標 UNKNOWN，先詢問實際權責者，不自行補造。
+文件識別
+DOCX 0123｜I19-E11｜會員訓後事業成就個案紀錄｜候選 R01
+REAL 個案資料：NOT_PROVIDED｜獨立語意審查：PENDING｜正式接受：NOT_GRANTED
+十四 本次個案填寫與歸檔核對單
+每次實際填用時，以一份核對單對應一個案件版本。只記錄已查到的原件位置與處理狀態；未知項目填 UNKNOWN，尚未取得的原件填 NOT_PROVIDED。下列欄位不取代會員同意、正式核准、簽章或原件，也不可預填結案。
+[TABLE]
+核對項目 | 本次案件填寫／原件定位
+案件識別／狀態 | __________________________________________
+填寫用途／日期／承辦角色 | __________________________________________
+會員同意／資料範圍／原件位置 | __________________________________________
+訓練日期／參與及紀錄位置 | __________________________________________
+指標定義／期間／來源 | __________________________________________
+納排、去重、缺漏及重算 | __________________________________________
+未證主張／矛盾／HOLD 理由 | __________________________________________
+待辦角色／期限／重啟核驗 | __________________________________________
+保存位置／存取授權來源 | __________________________________________
+覆核角色／日期／意見／引文 | __________________________________________
+案件狀態及決策來源 | __________________________________________
+[/TABLE]
+「覆核角色」與「決策來源」須按實際權責規則填寫。此核對單本身不構成協會核准或正式接受；沒有可核對的授權、原件或決策紀錄時，保留 UNKNOWN／NOT_PROVIDED，不補造姓名、簽章或結果。

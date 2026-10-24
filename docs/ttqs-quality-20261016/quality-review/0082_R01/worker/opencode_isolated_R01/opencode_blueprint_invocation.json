@@ -1,0 +1,42 @@
+{
+  "schema": "TTQS_ONE_OPENCODE_WORKER_INVOCATION.v1",
+  "document_id": "0082",
+  "task": "unique blueprint",
+  "route": "OpenCode CLI v2.0.29",
+  "model_requested": "opencode/deepseek-v4.1-flash-free",
+  "argv_safe": [
+    "opencode-cli.exe",
+    "run",
+    "--model",
+    "opencode/deepseek-v4.1-flash-free",
+    "--format",
+    "json",
+    "--title",
+    "TTQS 0082 unique blueprint R01",
+    "--file",
+    "SOURCE_PACKET_0082_R01.md",
+    "<task text>"
+  ],
+  "cwd": "E:\\TTQS\\_github_sync_0064\\docs\\ttqs-quality-20261016\\quality-review\\0082_R01\\worker\\opencode_isolated_R01",
+  "packet_sha256": "8a40f41867a1cbe2a847f58538f6a8a9831e5e518a3f0435d90ab7ce59b39388",
+  "task_sha256": "8f8ffff0889792dfba1af3c739e56c6ab8df6b703f54babcbd64ccc97324ee31",
+  "started_local": "2026-10-19T12:42:53+08:00",
+  "completed_local": "2026-10-19T12:46:37+08:00",
+  "exit_code": 0,
+  "stdout_sha256": "646d1d4f58d4c248c071df8f732cb56dc7568672b29cae090ab0eea5d770391b",
+  "stdout_bytes": 403678,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0,
+  "computer_use": false,
+  "permission_bypass": false,
+  "session_id": "ses_ead87c1b0ffeO6R1qtJ3E07BN0",
+  "token_usage": {
+    "input": 112428,
+    "output": 18315,
+    "reasoning": 10462,
+    "cache_read": 512512,
+    "provider_cost_reported": 0,
+    "claim_zero_resource": false
+  },
+  "provider_model_attestation": "SESSION_METADATA_CONFIRMS_OPENCODE/deepseek-v4.1-flash-free"
+}

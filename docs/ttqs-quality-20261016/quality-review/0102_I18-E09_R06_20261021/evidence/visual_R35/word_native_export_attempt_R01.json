@@ -1,0 +1,11 @@
+{
+  "work_id": "TTQS-0102-I18E09-R35-WORD-NATIVE-EXPORT-R01",
+  "candidate_revision": "R35",
+  "candidate_docx_sha256": "04F71DB94DD8949B2E0FC67FC0DF5577C2A647138B95E3BEADD3BE2DEA4457AA",
+  "result": "FAILED_PATH_ENCODING",
+  "error": "Microsoft Word COM Documents.Open rejected a path string whose Chinese filename characters were corrupted during PowerShell script creation. Failure occurred before opening the DOCX or creating the PDF; do not treat as document corruption.",
+  "docx_mutated": false,
+  "pdf_created": false,
+  "repair": "R02 will resolve the candidate by enumerating the candidate directory and a plain ASCII suffix, then verify exact DOCX SHA before opening.",
+  "observed_local": "2026-10-23T07:32:16.8304432+08:00"
+}

@@ -1,0 +1,196 @@
+{
+  "receipt_id": "R09_LIVE_DELTA_20261022_0107_R02",
+  "observed_at_tpe": "2026-10-22T23:15:01+08:00",
+  "project_id": "TTQS_ONE",
+  "remote_source": {
+    "repository": "PT-Original-Point/ttqs-one",
+    "pr": 92,
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "head_sha": "2080a1eb89c6b3ea73a99f73f4bb7d9324cdeeba",
+    "contract_06_blob": "4c7eff55748ff265b1e5a7d1122852b0d101acbd"
+  },
+  "windows": {
+    "host": "REDACTED_FOR_PUBLIC_AUDIT; exact host retained in local evidence.",
+    "user": "REDACTED_FOR_PUBLIC_AUDIT; exact user retained in local evidence.",
+    "os": "Windows 10 Pro 10.0.19045",
+    "goal_thread": "01a14098-b269-79e3-b07c-56e96557fe07",
+    "goal_state": "ACTIVE",
+    "pause_reason": null,
+    "heartbeat_id": "ttqs-one-hourly-quality-goal-resume",
+    "heartbeat_status": "ACTIVE",
+    "interval_minutes": 120,
+    "next_run_time": "UNKNOWN_NOT_EXPOSED_BY_NATIVE_READBACK",
+    "natural_120m_trigger": "NOT_VERIFIED",
+    "legacy_task_scheduler": {
+      "name": "TTQS_ONE_Codex_Supervisor",
+      "state": "Disabled",
+      "enabled": false,
+      "last_run": "2026-10-05 (legacy task record)"
+    },
+    "process_counts": {
+      "WINWORD.EXE": 21,
+      "opencode-cli.exe": 1
+    },
+    "renderer_incident": {
+      "doc_id": "0102",
+      "wrapper_pid": 70808,
+      "owned_word_pid": 15600,
+      "wrapper_started_tpe": "2026-10-22T18:06:32+08:00",
+      "observed_tpe": "2026-10-22T23:09:07+08:00",
+      "stall_duration_hours": 5.04,
+      "target_pdf_created": false,
+      "stalled_receipt_sha256": "4eef6b7461bd4105829cab8d9904103d732f4be9a98968864d7973c66496ced",
+      "shutdown_receipt_sha256": "4f795f1d1639daffc1a76e3ae884cf2d508413e89dd16a5651e1387dcea297cd",
+      "action": "Stopped only wrapper PID 70808 and attributable Word COM PID 15600; DOCX untouched; 21 other unmapped Word processes preserved."
+    }
+  },
+  "worker_24h": {
+    "opencode": {
+      "database_path": "USER_PROFILE/.local/share/opencode/opencode.db (local absolute path withheld)",
+      "window": "rolling_24h",
+      "exact_cli_invocations": "UNKNOWN",
+      "provider_billing": "UNKNOWN",
+      "serving_provider_model": "UNKNOWN",
+      "native_session_rows": 48,
+      "tokens_input": 2078989,
+      "tokens_output": 379408,
+      "tokens_reasoning": 660788,
+      "tokens_cache_read": 6277824,
+      "tokens_cache_write": 0,
+      "local_session_cost": 0.0
+    },
+    "antigravity": {
+      "retained_documented_attempts_minimum": 8,
+      "exact_total": "UNKNOWN",
+      "verified_gemini_3_8_flash_high_count": 0,
+      "actual_model_provider_identity": "UNKNOWN",
+      "current_live_antigravity_process": "NONE_OBSERVED"
+    },
+    "0107_R02_review": {
+      "session_id": "ses_e9bf1c4edffeT95rFXd5SyNdmn",
+      "session_idle_outcome": "succeeded",
+      "selected_model": "opencode/mimo-v2.6-flash-free",
+      "cli_exit_code": "UNKNOWN_WRAPPER_RECEIPT_ERROR_AFTER_MODEL_OUTPUT",
+      "review_verdict": "PASS_TEXT_SEMANTIC_DELTA",
+      "review_response_sha256": "5fc59925bd9a031b2de807fae37b4b2295248c218a96453dec4fcc90714306d7",
+      "local_db_session_cost": 0.0,
+      "provider_cost": "UNKNOWN"
+    },
+    "adoption_and_rework": "0107 R01 Antigravity-produced SAMPLE manuscript was adopted as R01 source; R02 is a deterministic localized cutoff-date-column and work-ID patch, not a content regeneration. R01 Antigravity work-id provenance conflict remains documented."
+  },
+  "panel": {
+    "path": "TTQS_ONE_CODEX_RUNTIME/MASTER/dashboard.html (workspace-relative; local absolute path withheld)",
+    "sha256": "f0e8625b2b77f4616beab18e31c1f1f7b05655e9d54898129d8e8d4d1f35a070",
+    "last_write_tpe": "2026-10-05 22:14",
+    "availability": "OFFLINE_NO_LISTENER_OBSERVED_ON_8766",
+    "data_source": "Dashboard HTML polls local /status and /muse-status endpoints; backing status files were stale (2026-10-05). Full provenance of live status source UNKNOWN.",
+    "alignment": "STALE_NOT_ALIGNED_TO_CURRENT_OS_OR_GITHUB"
+  },
+  "candidate_0107_R02": {
+    "doc_id": "0107",
+    "requirement_id": "I18-E15",
+    "blueprint_sha256": "54f4861e3d96f8cc63496caa43106ff3be704d2a10b1cb2d9a69455ba3304948",
+    "candidate_sha256": "66160c8fdf8d674317c895687182f2883c2447a5294e926c4d6f412a3190767e",
+    "technical_checks": 15,
+    "technical_static_result": "PASS",
+    "semantic_exact_sha_verdict": "PASS_TEXT_SEMANTIC_DELTA",
+    "semantic_response_sha256": "5fc59925bd9a031b2de807fae37b4b2295248c218a96453dec4fcc90714306d7",
+    "visual": "PENDING_BLOCKED_RENDERER_LANE",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN",
+    "r01_dispatch_snapshot_hash": "0dfd7360e0da5b330faefcc1fd91fa48be7012e8f99ff6aeb37ac228fb059301",
+    "r01_current_reconstruction_hash": "2db33a9a23678ebcedbecd739fec2243b5a67a76d469622148b11b222e527af9",
+    "r01_snapshot_provenance": "UNRESOLVED; retain historical discrepancy",
+    "r02_plain_snapshot_hash": "de6576b8177280d6e2323c389e1075855c97802cfed358cbe0195044fe7314dd",
+    "r02_plain_snapshot_reproduced": true,
+    "structural_json_snapshot_hash": "e088ce13863a35e7e36481b0401d71bf4cc961fcc2194e1340200880c686787b",
+    "structural_vs_plain": "Different serialized representations; not byte-comparable."
+  },
+  "guard_tests_T01_T14": [
+    {
+      "id": "T01",
+      "status": "PASS_OBSERVED_SERVICE_NOT_WRITER",
+      "basis": "OpenCode service PID 45628 is not a live writer; completed R02 reviewer session is native idle_succeeded."
+    },
+    {
+      "id": "T02",
+      "status": "PASS_OBSERVED_OWNERSHIP_SCOPED",
+      "basis": "Stopped only the exact stalled renderer-owned wrapper/Word PIDs; 21 remaining unowned WINWORD processes preserved."
+    },
+    {
+      "id": "T03",
+      "status": "PASS_OBSERVED_STALE_PANEL_DETECTED",
+      "basis": "Panel write date 2026-10-05 and localhost status endpoint offline; current GitHub head differs from panel snapshot."
+    },
+    {
+      "id": "T04",
+      "status": "HISTORICAL_SIMULATION_ONLY",
+      "basis": "Prior PTYSD mismatch test was deterministic fixture, not current live panel."
+    },
+    {
+      "id": "T05",
+      "status": "PARTIAL_NATURAL_TRIGGER_UNVERIFIED",
+      "basis": "Native heartbeat configured ACTIVE at 120 minutes; no observed natural two-hour trigger in this run; legacy Windows task Disabled."
+    },
+    {
+      "id": "T06",
+      "status": "CARRIED_FORWARD_NOT_REEXECUTED",
+      "basis": "0100/0101 source-derived work exists; not rebuilt. Current next READY derivation remains pending reconciliation of existing 0108 artifacts."
+    },
+    {
+      "id": "T07",
+      "status": "PASS_OBSERVED_SCOPED_RENDERER_FAILURE",
+      "basis": "0102 export stalled without PDF; only attributable render processes stopped. Other work lanes remain active."
+    },
+    {
+      "id": "T08",
+      "status": "PASS_OBSERVED_TEXT_IS_NOT_DOCX",
+      "basis": "Prior Antigravity exit-0 text attempts are not counted as accepted DOCX; 0107 R01 text was used only as source manuscript."
+    },
+    {
+      "id": "T09",
+      "status": "HISTORICAL_SIMULATION_ONLY",
+      "basis": "Stable DOCX salvage with simulated nonzero exit was not re-induced."
+    },
+    {
+      "id": "T10",
+      "status": "PASS_OBSERVED_EXACT_SHA_REVIEW",
+      "basis": "0107 R02 semantic response binds exact candidate SHA."
+    },
+    {
+      "id": "T11",
+      "status": "UNKNOWN_MODEL_IDENTITY",
+      "basis": "Gemini-only route remains unverified; no fallback claimed."
+    },
+    {
+      "id": "T12",
+      "status": "PARTIAL_TECHNICAL_AND_SEMANTIC_PASS_VISUAL_PENDING",
+      "basis": "0107 R02 15 deterministic checks and exact-SHA semantic PASS; no rendered-page review."
+    },
+    {
+      "id": "T13",
+      "status": "PASS_OBSERVED_EXACT_REMOTE_BYTE_READBACK",
+      "basis": "32/32 first-sync files exact by SHA-256 at commit e39cb7728b8e56398ae04e5bd0ce45a3cd7ab45a; DOCX SHA-256 66160c8f... and Git blob SHA 11bfc3ec..."
+    },
+    {
+      "id": "T14",
+      "status": "PASS_OBSERVED_EXPECTED_HEAD_LEASE_AND_READBACK; NEGATIVE_FIXTURE_NOT_REINDUCED",
+      "basis": "Branch updated from expected head 2080a1eb...; 32/32 file byte readbacks matched; no unknown write."
+    }
+  ],
+  "github_sync": {
+    "status": "VERIFIED",
+    "base_head": "2080a1eb89c6b3ea73a99f73f4bb7d9324cdeeba",
+    "first_sync_commit": "e39cb7728b8e56398ae04e5bd0ce45a3cd7ab45a",
+    "initial_payload_files": 32,
+    "exact_sha256_readback": 32,
+    "mismatches": 0,
+    "candidate_remote_sha256": "66160c8fdf8d674317c895687182f2883c2447a5294e926c4d6f412a3190767e",
+    "candidate_git_blob_sha": "11bfc3ecb58ca18f549867666168dc79d045c0f5",
+    "readback_receipt_path": "docs/ttqs-quality-20261016/quality-review/0107_I18-E15_R02_20261022/evidence/github_exact_byte_readback_0107_R02.json",
+    "readback_receipt_sha256": "7ab60673fa843648912289a02c9777abd2aada52e529ccd7d3557518a81dbb75"
+  },
+  "next_legal_action": "Reconcile existing 0108 C08 candidate, exact-SHA review, current visual/render status and GitHub readback without rebuild; then derive the next unowned source-ready document stage.",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_third_party_evidence": "UNKNOWN"
+}

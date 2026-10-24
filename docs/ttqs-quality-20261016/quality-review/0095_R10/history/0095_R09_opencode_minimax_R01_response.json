@@ -1,0 +1,260 @@
+{
+  "overall_verdict": "PARTIAL",
+  "reviewed_docx_sha256": "e1be4a9e9a0c61216416f6ff955bb1be3ed5d1f636550ea82bea4b5431e0ed8e",
+  "review_scope": "Packet-only independent semantic review of the R09 candidate for DOCX 0095 / I18-E02. All findings derive solely from the packet-supplied current R09 Word-exported PDF text (43 pages), the supplied R08 replacement-register CSV body, the supplied register manifest, the Unique Blueprint and source binding, the R08 exact-SHA review outcome, and the deterministic R06/R08 register key-set reconciliation. No shell, filesystem, browser, GUI, DOCX-binary rehash, PDF re-render, or visual inspection was performed or claimed. The DOCX SHA-256 e1be4a9e…0ed8e is bound as the review target exactly as supplied by the packet and was not independently rehashed. This review assesses semantic content only; it is not a TTQS assessment, not a score, and not formal association acceptance. The candidate remains CANDIDATE.",
+  "criteria": [
+    {
+      "criterion": "1. Official I18-E02 wording, DOCX 0095, analysis-report genre, case mapping, title-blind identifiability, separation from 0094/I18-E01 and 0096/I18-E03",
+      "verdict": "PASS",
+      "exact_locator": "§1.2 PDF p.2; §1.3 官方評核級距表 PDF pp.2–3; §1.4 PDF p.4; §9.1 PDF p.38; §9.3 PDF p.38; §9.4 PDF p.38; 文件狀態宣告 PDF p.1",
+      "finding": "The official checkbox text 『建立目標客戶及學員滿意度調查機制（系統及流程面）。』 is reproduced verbatim and bound to official source page 6 with SHA-256 805386b7…4709 and readback status PDF_TEXT_EXACT_PAGE_MATCH (§1.2, PDF p.2), matching the supplied page-6 extract. The indicator-18 grading band (1–4 分) is quoted verbatim from the scoring form page 4 with its own distinct SHA-256 9d253829…83684 (§1.3, PDF pp.2–3), and the document explicitly separates the two official instruments' roles, which is a material improvement over conflating them. The deliverable is DOCX 0095 / I18-E02 throughout the running header and §1.2. Genre is an analysis/evaluation report: §1 executive summary, §2 architecture and lifecycle, §3 SoD/SOP, §4 instruments, §5 dictionary/formulae, §6 worked synthetic case, §7 group analysis, §8 controls/PDCA, §9 neighbours, §10 register and version lineage. Title-blind identifiability holds: body-level fields LEARN_RELEVANCE/LEARN_CLARITY/LEARN_PRACTICE/LEARN_SUPPORT/LEARN_OVERALL and CUST_GOAL_FIT/CUST_ARRANGE/CUST_PRACTICE/CUST_COMM_CLAR/CUST_OVERALL (§4.3, PDF pp.17–18), plus form codes SURVEY-TOOL-A-L / SURVEY-TOOL-B-C (§4.1 p.10, §4.2 p.13) and SOP codes P-01…P-10 (PDF pp.7–8), could not be moved unchanged to another requirement. Separation from 0094 (口述訪談紀錄) and 0096 (感謝函) is explicit and concrete at §9.3 and §9.4 (PDF p.38), with an explicit refusal to fabricate or substitute 0096 originals; §9.2 also flags 0093 as an unverified extra neighbour without using it as requirement evidence. No correction required."
+    },
+    {
+      "criterion": "2. All Unique Blueprint sections, required tables/figure/analysis, questions, calculations, direct usability and acceptance tests",
+      "verdict": "PASS",
+      "exact_locator": "§1–§10 PDF pp.1–43; Blueprint required_sections vs §1.1–§10.2; required_tables_or_figures vs §5.1 (pp.20–21), §6.1–§6.4 (pp.24–30), §7.2 (pp.31–32), §7.2 附圖 A (pp.33–34), §8.5 (p.37), §1.4 (p.4); required_fields_or_questions vs §1.1 (p.1), §3.2 (pp.7–9), §5.1 (pp.20–21), §5.2 (p.22), §6.3 (pp.27–28), §7.3 (p.34), §8.1 (p.35), §10 (p.41), §9.5 (pp.39–41)",
+      "finding": "All thirteen Blueprint required_sections are present and substantively populated: 摘要/決策問題 (§1.1), 官方要求 (§1.2–§1.3), 來源樣本納入排除 (§2.4, §3.2, §5.1, §6.1–§6.2), 指標定義與分母 (§5.1–§5.2), 完整示範資料與逐步計算 (§6.1–§6.4.1), 分群/趨勢/差異 (§7.1–§7.2), 圖表解讀與品質限制 (§7.2 附圖 A, §7.3), 發現原因與證據強度 (§1.3, §7.3, §8.4), 結論與建議 (§8.4–§8.5), 責任/期限/追蹤指標 (§8.5, PDF pp.37–38), 合成聲明與替換清單 (§9.5, §10), 附件索引/覆核/版本 (§10.1–§10.2). All five required table/figure families are present, including 附圖 A as a fully specified two-panel figure with title, per-panel values, same 0–100% axis, presentation rules, warnings and alt-text draft (PDF pp.33–34). Per the packet instruction, the absence of an encoded figure object in PDF text was not treated as a missing chart. All ten required_questions are answered with explicit denominators, sources, nonresponse handling, attribution boundary, direct-evidence location, evidence-strength ladder (4.25–4.26), calculation precision and N/A conditions. All three required_calculations are implemented and recomputed (see material_arithmetic_checks) and the result is never framed as association performance. Genre-specific usability is satisfied: questionnaires carry items/options/scale (PDF pp.12, 16), the SOP carries role/input/control/output/hold-reject (PDF pp.7–8), the meeting-record role is carried as 審閱／決策紀錄 and 版本與調閱記錄 outputs with decisions, responsibility, deadline and status columns (§8.5, PDF p.37), and the report carries data, denominators, formulae, step-by-step arithmetic, limits and decisions. Acceptance tests are met on the text-only evidence available; typography floors, column fit and actual figure rendering are outside the packet-only scope and are carried in unknowns, not as defects."
+    },
+    {
+      "criterion": "3. Reassessment of the five R08 findings (R08-01 page-map precision; R08-02 uncounted CUSTOMER_VALID_RETURN_SHARE; R08-03 sample class wording; R08-04 review receipt status; R08-05 small-sample sensitivity)",
+      "verdict": "PARTIAL",
+      "exact_locator": "R08-01 → §1.4 table PDF p.4; R08-02 → §10 body PDF p.41 and manifest r08_current_rows_from_r06 / r08_added_unknown_index_rows / retired_r08_rows; R08-03 → §4.1 PDF pp.10–11, §4.2 PDF p.15; R08-04 → §10.1 附件 D/E PDF p.42, §10.2 R09 row PDF p.43; R08-05 → §7.2 sensitivity note PDF p.33, §7.3 PDF p.34, §6.4 PDF p.29",
+      "finding": "R08-01 is materially improved but not fully closed: the §1.4 locator column was rewritten to per-section page spans, §7.3–§7.4 now points to PDF p.34 (the page where both sections actually print) instead of R08's pp.33–34, and the row-1 spans §4.1 → pp.10–13, §4.2 → pp.13–17, §4.3 → pp.17–19 now match the section starts observed in the current export. Residual imprecision remains in row 1 (§5.1 → pp.20–21 and §5.2 → p.22, where §5.1 actually opens on p.19 under the §4.3 heading and §5.2 opens on p.22), row 2 (§2.1–§2.4 → pp.5–6, although §2.4 and its 制度設計與現況之分際 table run to p.6 only as a heading with the boundary text continuing to p.6–7), row 3 (§7.1–§7.2 → pp.31–34, but §7.2's 視覺化就緒表格 opens on p.31 while the 附圖 A figure specification opens on p.33), and row 4 (§6.3.3–§6.4 → pp.28–30, where §6.3.3 and §6.4 both open on p.28 and the §6.4.1 derivation extends to p.30, which the span does not cover). R08-02 is confirmed CLOSED/contradicted: SYN-0095-CUSTOMER_VALID_RETURN_SHARE is present in the supplied R08 CSV body and, per the deterministic R06/R08 key-set reconciliation, also in R06 and therefore among the 205 retained keys; the §10 lineage sentence (205 retained + 6 added − 3 retired = 208) is a count of key-set deltas that correctly reaches 211 only if read as 208 R06 keys − 3 retired + 6 added, and the R09 version note at PDF p.43 states this reconciliation, so no uncounted row survives. R08-03 is CLOSED: both instruments now carry the qualifier 『未提供任何經核實並核定的真實班次識別碼；下列代碼僅為合成示範』 immediately above the printed 示範班次代號 SYN-TRN-01 (PDF p.10 for Tool-A, p.14 for Tool-B), and Tool-B p.15 carries 『示範填答日期（SAMPLE／SYNTHETIC 合成值，非真實施測結果）：2026-07-11』 labelled as synthetic immediately above the four REAL blank date fields. R08-04 remains OPEN as a workflow state (Attachment E records R09 receipts as 待執行 at PDF p.42) and is consistent with CANDIDATE_QA_PENDING. R08-05 is CLOSED in substance and remains disclosed at PDF p.33."
+    },
+    {
+      "criterion": "4. Recomputation of all learner/customer raw counts, sums, means, positive counts/rates, rankings, gaps, single-record sensitivity, outcome figures, denominators, missing/N/A rules, rounding and suppression; no merging of distinct respondent populations",
+      "verdict": "PASS",
+      "exact_locator": "§6.1 PDF pp.24–25; §6.2 PDF pp.25–26; §6.3.1 PDF p.27; §6.3.2 PDF p.28; §6.3.3 PDF p.28; §6.4 PDF p.29; §6.4.1 PDF p.30; §7.1 PDF p.31; §7.2 PDF pp.31–33; §5.2 PDF p.22",
+      "finding": "Every displayed quantity was independently recomputed from the raw rows printed in §6.1/§6.2/§6.4 and all reproduce exactly (see material_arithmetic_checks). Counts reconcile: learners 18 invited = 15 returned + 3 nonresponse; 15 returned = 14 valid + 1 invalid (missing L-05); customers 6 invited = 5 returned + 1 nonresponse; 5 valid. Item sums 57/56/55/56/58 and 21/20/20/21/21, means 4.07/4.00/3.93/4.00/4.14 and 4.20/4.00/4.00/4.20/4.20, positive counts 11/11/10/11/12 and 4/4/4/4/4, positive rates 78.6/78.6/71.4/78.6/85.7 and 80.0 across, and 100.0/93.3/83.3/83.3/100.0 rate set all match. Ranking is reproducible under the stated rule (positive rate ascending, then mean ascending, dense ranking): learner P1 L-03, P2 L-02 and L-04, P3 L-01, P4 L-05 with gaps 14.3/7.1/7.1/0.0 percentage points and 0.21/0.14/0.07/0.00 points; customer P1 C-02 and C-03, P2 C-01, C-04, C-05. The §7.2 sensitivity scenario (excluding SYN-L14's 2-point L-03 response) recomputes exactly: n=13, sum 53, mean 4.08, 10/13 = 76.9%, gap narrowing to 8.8 points and 0.07 points, and L-03 remains P1. Follow-up figures reproduce: 51, 4.25, 85, 7.08, Δ_abs 2.83, Δ_rel 66.7%, 9/12 = 75.0%. The §6.4 pairing boundary (14 valid = 12 paired + 2 unavailable, excluded from the paired denominator, not treated as failure) is correctly applied. Rounding follows §5.2 (means/Δ_abs to 2 dp, rates/Δ_rel to 1 dp) and no displayed figure uses a rounded intermediate. N/A and missing rules (§4.3 p.19, §5.1 p.20, §5.2 p.22) are explicit and consistent, and the small-sample suppression rule n<5 is defined and applied to sub-groups with no sub-group data published. The §6.3.3 non-aggregation rule is honoured: learner and customer populations are reported on separate denominators with no pooled rate, and the §6.3.2 'valid returns as share of invitations' figure (5/6) is explicitly distinguished from the validity rate (5/5)."
+    },
+    {
+      "criterion": "5. Direct administration of both tools: eligibility, consent, scale, N/A, incomplete/withdrawn/invalid/valid status, REAL blank dates, invitation/delivery/return, population boundary, privacy/storage, aggregation and hold/reject criteria; proposed controls distinct from implemented operation",
+      "verdict": "PASS",
+      "exact_locator": "§4.1 PDF pp.10–13; §4.2 PDF pp.13–17; §3.1 SoD PDF p.6; §3.2 SOP P-01…P-10 PDF pp.7–8; 計數界線 blocks PDF pp.9, 13, 17, 22; §5.1 dictionary PDF pp.20–21; §8.1 PDF p.35; §8.3 PDF p.35; §6.3.3 PDF p.28",
+      "finding": "Both instruments are directly usable as printed. Tool-A (SURVEY-TOOL-A-L) and Tool-B (SURVEY-TOOL-B-C) each carry a pre-response consent/notice block, a volunteer-participation statement, a field-zone legend separating SAMPLE values from REAL blanks, the 1–5 plus N/A scale legend, and an item matrix with a check column. Status handling is complete and mutually exclusive on both forms: 未回應（NONRESPONSE, with an instruction not to tick it and not to treat it as negative）, 撤回（WITHDRAWN）, 待補正之未完成（INCOMPLETE_PENDING_CORRECTION）, 無效（INVALID）, 有效（VALID）, each with a mutually-exclusive instruction, and a repeated 計數界線 block (PDF pp.13, 17) stating that nonresponse is logged only on the invitation/delivery roster, that every physically returned form counts once as POP_RETURNED regardless of downstream status, that withdrawn/incomplete/invalid forms do not enter POP_VALID or item denominators, and that corrections leave a trace. REAL date fields are blank with explicit format instructions (Tool-A: 班次編號, 培訓日期, 實際填答日期, PDF pp.10–11; Tool-B: 邀請發送日期, 送達日期, 實際填答日期, 回收日期, PDF p.15), and the sample date is fenced as SAMPLE with a no-backfill instruction. Invitation/delivery/return are separated at the counting-boundary level (PDF p.9) and in SOP step P-04 (PDF p.7). Population boundaries are defined per POP_ELIGIBLE / POP_INVITED / POP_RETURNED / POP_VALID (PDF p.20). Privacy and storage are left explicitly UNKNOWN with a candidate control list (§8.3, PDF p.35) rather than asserted. Hold/reject conditions are given per SOP step and consolidated in the §8.1 decision table (可計算 / 暫緩 / 排除單份 / 抑制次分群 / 不得升格 REAL, PDF p.35), including the rule that a single unapproved percentage may not auto-trigger a failure verdict or CAPA (PDF p.6). Every control is labelled 候選設計/提案 and marked as requiring authorised adoption; the document never asserts that any control, committee, role assignment, storage location or recovery channel is in operation, so the proposed/implemented boundary holds throughout."
+    },
+    {
+      "criterion": "6. SAMPLE/SYNTHETIC vs REAL boundaries and replacement-register traceability; no fabricated people, approvals, signatures, courses, respondents, survey execution, outcomes or third-party records; missing REAL items remain UNKNOWN with safe source paths",
+      "verdict": "PASS",
+      "exact_locator": "文件狀態宣告 PDF p.1; §9.5 PDF pp.39–41; §10 and §10.1 PDF pp.41–42; §8.5 PDF pp.37–38; register CSV body (211 rows, 13 columns) and manifest",
+      "finding": "The SAMPLE/SYNTHETIC boundary is enforced at every layer. The status declaration on p.1 states the document is a candidate analysis report with a complete SAMPLE/SYNTHETIC demonstration and that no source proves the association adopted, approved or executed it. No fabricated person, approval, signature, course, respondent, real survey execution, outcome or third-party record was found: the only named entities are the synthetic course 志工服務溝通與紀錄練習, class code SYN-TRN-01 and synthetic dates 2026-07-11 / 2026-08-10, all flagged as synthetic; §8.5's 建議負責人 field is blank with 『姓名未提供；UNKNOWN，不得填入推定人選』; the 感謝函 of 0096 is expressly not fabricated (§9.4). Missing REAL items are held UNKNOWN with safe acquisition paths rather than filled: §9.5 lists 8 promotion classes, each with the needed real source, the corresponding register key and status 未提供；UNKNOWN, and every UNKNOWN row in the register carries real_source_status NOT_PROVIDED plus an explicit 'listed to prevent inference' note. Register traceability is complete: the CSV body supplied in the packet contains 211 data rows, 13 columns, unique register_key, and every row carries a §-anchored document_location with a PDF page; the manifest's fact_status counts (134/13/7/4/53 = 211) reconcile against the body I re-counted by status class. The three retired pooled keys are absent from the current body, consistent with §6.3.3 and the §10 narrative."
+    },
+    {
+      "criterion": "7. Usability for a small volunteer association: SOP, data dictionary, worked case, ranked recommendations, decision criteria, responsibility/deadline/metric fields and follow-up; recommendations separate from authorization/execution",
+      "verdict": "PASS",
+      "exact_locator": "§3.1 PDF p.6; §3.2 PDF pp.7–9; §5.1 PDF pp.20–21; §5.2 PDF p.22; §6 PDF pp.23–30; §7.2 PDF pp.31–33; §8.1 PDF p.35; §8.4 PDCA PDF pp.36–37; §8.5 PDF pp.37–38; §1.1 PDF p.1",
+      "finding": "Usability is high for a small volunteer body and does not assume a committee or dedicated data unit: the SoD matrix names four candidate functions (ROLE-CRD / COL / ANL / DEC) with an explicit scale-limitation fallback requiring an authorised alternative control, and states that no committee, CAPA or file-management process is implied (PDF p.6). The SOP provides ten steps with input, operation/control, output and hold/reject conditions, P-02 explicitly gating release on authorised tool approval, and P-01 gating on a known population and invitation denominator. The data dictionary gives eleven coded fields with denominator, numerator, source form and limits, including N/A and suppression rules, and the formula library gives six reproducible formulae with rounding and N/A guards. The worked case is complete and self-consistent end to end. Ranked recommendations exist at §7.2 (P1 L-03 for the learner track) with a documented ranking rule, an explicit decision criterion (positive rate 10/14, mean 3.93/5) and a sensitivity caveat. The tracking table separates 合成觀察 / 成因狀態 / 改善建議 / 後續核驗方式 / 建議責任職能 / 建議負責人 / 預定期限 / 狀態 into independent columns with fill rules ①–④ that forbid naming a person, forbid assumed deadlines and forbid writing 已改善 without verifiable follow-up data, plus a blank TRK- log table. The PDCA block adds hold/close criteria per stage, including a requirement to compare at least two options. Recommendations are consistently kept distinct from authorization: stage 4 requires verified decision authority, and every candidate proposal is marked as requiring authorised adoption with 實際指派未核定."
+    },
+    {
+      "criterion": "8. Negative-neighbour and title-blind tests reject at least two wrong documents by concrete body-level fields/sections",
+      "verdict": "PASS",
+      "exact_locator": "§9.3 PDF p.38; §9.4 PDF p.38; §9.1 PDF p.38; §4.3 field mapping PDF pp.17–18; §3.2 SOP codes PDF pp.7–8; §1.4 PDF p.4",
+      "finding": "Two wrong documents are rejected on body-level grounds, not labels. Against 0094 / I18-E01 (口述訪談紀錄), §9.3 identifies the distinguishing body content: 0094's artefact is an oral interview record with interview statements and interviewees, whereas 0095 carries dual-track structured instruments, item codes, a scale definition, a field dictionary, formulas, denominators and per-item rates, and the document expressly states it does not pass interview quotes, interviewees or real oral material off as its own survey results. Against 0096 / I18-E03 (感謝函), §9.4 identifies the distinguishing body content: 0096's artefact is a letter with an issuer, content and an original whose provenance must be verified, whereas 0095 is a mechanism analysis report, and the document states it must not impersonate, manufacture or backfill 0096's genuine original. In title-blind terms the two neighbours are rejected on concrete body fields a reader would have to see: SURVEY-TOOL-A-L / SURVEY-TOOL-B-C form codes, LEARN_*/CUST_* field names, P-01…P-10 SOP steps and ROLE-* function codes appear in no other document, while a 訪談逐字稿 or a 感謝函格式 (致受贈單位／敬啟者／署名) appears in none of them. The §9.1 four-document table further states the boundary is derived from official wording and Blueprint division of labour, and does not presume neighbours' real content."
+    },
+    {
+      "criterion": "9. §1.4 page locators against the current 43-page R09 export; no nonexistent subsection cited; §4.1/§4.2/§4.3 page spans cover their actual sections; §7.3–§7.4 point to their actual page; register page locators remain correct; R09 appendices/version lineage and exact R06/R07/R08 history preserved without rewriting prior artefacts",
+      "verdict": "PARTIAL",
+      "exact_locator": "§1.4 table PDF p.4; §2.4 PDF p.6; §3.2 PDF pp.7–9; §4.1 PDF pp.10–13; §4.2 PDF pp.13–17; §4.3 PDF pp.17–19; §5.1 PDF p.19; §5.2 PDF p.22; §6.1–§6.4 PDF pp.23–30; §7.1–§7.2 PDF pp.31–34; §7.3–§7.4 PDF p.34; §8 PDF pp.35–38; §9.5 PDF pp.39–41; §10 PDF pp.41–43; §10.1/§10.2 PDF pp.42–43; register document_location column (CSV body) and manifest page_locator_basis",
+      "finding": "Every section cited in §1.4 exists in the current export — no nonexistent subsection is cited — and the previously defective pointers are now correct where the R08 finding identified them: §7.3–§7.4 → PDF p.34 (both headings print on p.34, resolving the R08 'pp.33–34' defect); §4.1 → pp.10–13 (heading on p.10, form continues to p.13); §4.2 → pp.13–17 (heading on p.13, form to p.17); §4.3 → pp.17–19 (heading on p.17, mapping table to p.19). The register's page locators remain correct: SYN-0095-CASE_ID → p.23, SYN-0095-COURSE_DATE → pp.11/15/23, learner item keys → pp.24–25, customer item keys → pp.25–26, derived learner metrics → p.27, derived customer metrics → p.28, follow-up keys → pp.29 and derived follow-up → p.30, all of which match the current export's actual placement of §6.1, §6.2, §6.3.1, §6.3.2, §6.4 and §6.4.1. Residual locator defects remain in three spans: (a) §5.1 is mapped to pp.20–21, but its heading 5. 資料字典、計算公式與統計口徑規範 and the §5.1 heading both print at the foot of PDF p.19 with the table body on pp.20–21; (b) §6.3.3–§6.4 → pp.28–30 under-covers, since §6.3.3 and §6.4 both open on p.28 and the §6.4.1 derivation runs to p.30; (c) §7.1–§7.2 → pp.31–34 over-covers the ranking matrices (pp.31–32) and merges them with the 附圖 A figure specification (pp.33–34), while the §2.1–§2.4 → pp.5–6 span ends before the §2.4 boundary text completes on p.6. Version lineage is correct and non-destructive: §10.2 (PDF pp.42–43) records R05–R09 with dates, records R06 SHA 71398b10…fa4, R07 SHA ba6100f3…394, R08 SHA e9322191…ce31a1, the R08 review response path and its SHA 914a9d8f…1a89, keeps R06/R07 historical CSV and manifest artefacts unchanged (Attachment A-2/A-3 with their own SHAs) and states that R09 keeps the R08 register and manifest unchanged; the R09 row (PDF p.43) records that NB-R08-02 was a misjudgement confirmed by the R06/R08 key-set reconciliation and that the R09 register is unchanged, with the CSV SHA 203583e4…0202c and manifest SHA df1b2517…17c0 bound in §10/§10.1."
+    },
+    {
+      "criterion": "10. Remaining material contradiction, unsupported claim, ambiguous field, unusable form, arithmetic mismatch, overclaim, required omission or traceability defect",
+      "verdict": "PARTIAL",
+      "exact_locator": "§1.4 rows 1 and 4 (PDF p.4); §10 lineage sentence (PDF p.41); §10.2 R09 row (PDF p.43); §9.5 row 6 register-key count (PDF p.40); manifest r08_current_rows_from_r06 / r08_added_unknown_index_rows / retired_r08_rows; §8.1 不得升格 REAL row (PDF p.35) vs §10.1 Attachment D/E (PDF p.42)",
+      "finding": "No material contradiction, arithmetic mismatch, overclaim, unusable form, fabricated fact or unsafe REAL claim was found; the residual defects are traceability precision and count-presentation defects, and they are itemised in nonblocking_findings. Four residual items: (i) §1.4 §5.1 and §6.3.3–§6.4 page spans do not match the sections' actual pages (criterion 9); (ii) the §10 lineage sentence (PDF p.41) states '保留 205 鍵並新增 6 個 UNKNOWN 升格索引鍵…移除 3 個…鍵' without stating the 208-key R06 base, so the sentence's own arithmetic does not visibly close to the delivered 211 rows (the R09 note on p.43 and the manifest do close it, and the R06/R08 key-set reconciliation confirms the contested key is retained rather than added, so no row is unaccounted for); (iii) §9.5 row 6 (PDF p.40) describes 'L-01–L-05 與 C-01–C-05 各題之 SUM／MEAN／POSN／POSRATE 衍生鍵…共 40 列', but the register body actually contains 40 derived item-metric keys (10 items × 4) plus 4 derived rate keys (LEARNER_RETURN_RATE, LEARNER_VALID_RATE, CUSTOMER_RETURN_RATE, CUSTOMER_VALID_RATE) that the row's own parenthetical lists separately, making the '40' understate the derived-metric population; (iv) Attachment E (PDF p.42) records the R09 receipts as 待執行 while the manifest state remains CANDIDATE_QA_PENDING, which is internally consistent but leaves the candidate's QA chain open at R09 by design."
+    }
+  ],
+  "r08_finding_disposition": [
+    {
+      "id": "R08-01",
+      "disposition": "PARTIALLY_CLOSED",
+      "exact_locator": "§1.4 evidence-locator table, PDF p.4, third column (文件證據定位), rows 1–4; actual section locations: §4.1 PDF p.10, §4.2 PDF p.13, §4.3 PDF p.17, §5.1 PDF p.19, §5.2 PDF p.22, §6.3.3 PDF p.28, §6.4 PDF p.28, §6.4.1 PDF p.30, §7.1 PDF p.31, §7.2 PDF p.31, 附圖 A PDF pp.33–34, §7.3 PDF p.34, §7.4 PDF p.34, §8.1 PDF p.35, §9.5 PDF pp.39–41, §10 PDF pp.41–43",
+      "rationale": "The specific defect R08-01 named is fixed: §7.3–§7.4 is now cited to PDF p.34 only, where both headings actually print, and the row-1/row-2/row-3 spans for §4.1/§4.2/§4.3 (§2.1–§2.4 → pp.5–6, §3.1 → p.6, §3.2 → pp.7–9, §8.1–§8.5 → pp.35–38, §6.1–§6.4 → pp.23–30) now agree with the observed section starts. The table is also self-limited by the pagination-anchor warning immediately below it (PDF p.5) and by the R08 lineage note (PDF p.41). It is not fully closed because three spans remain mis-anchored against the current 43-page export: §5.1 → pp.20–21 although §5.1 opens on p.19; §6.3.3–§6.4 → pp.28–30 although §6.4.1 extends to p.30 and both cited headings open on p.28; and §7.1–§7.2 → pp.31–34 although the ranking matrices occupy pp.31–32 and 附圖 A occupies pp.33–34. These are audit-trail precision defects in the document's primary traceability table, not false pointers, so the finding is marked PARTIALLY_CLOSED rather than CLOSED."
+    },
+    {
+      "id": "R08-02",
+      "disposition": "CLOSED",
+      "exact_locator": "Register row SYN-0095-CUSTOMER_VALID_RETURN_SHARE (CSV body; document_location '§6.3.2 / valid target-customer returns as share of delivered invitations；PDF p. 28'); §10 lineage sentence PDF p.41; §10.2 R09 row PDF p.43; manifest r08_current_rows_from_r06 = 205, r08_added_unknown_index_rows = 6, retired_r08_rows = 3, row_count = 211",
+      "rationale": "R08-02 alleged an uncounted added key. The supplied R06/R08 key-set reconciliation shows SYN-0095-CUSTOMER_VALID_RETURN_SHARE is present in R06 and in R08 with the same fact_status, fact_type, value 83.3 and unit percent (only document_location gains the PDF p. 28 locator), so it is among the 205 retained keys and is neither an addition nor a retirement. The complete key-set difference is exactly the three listed removals (COMBINED_RETURN_RATE, COMBINED_VALID_RATE, POOLED_POSITIVE_RATE) and the six listed UNKNOWN additions, giving 208 − 3 + 6 = 211, which I confirmed against the CSV body I re-counted in the packet. I therefore do not repeat the allegation. The residual, narrower defect is presentational rather than evidentiary: the §10 sentence on p.41 gives 205 + 6 − 3 without naming the 208-key R06 base, so the sentence does not visibly close to 211 on its face, and the R09 version note on p.43 plus the manifest supply the closing arithmetic."
+    },
+    {
+      "id": "R08-03",
+      "disposition": "CLOSED",
+      "exact_locator": "§4.1 PDF p.10, block 『【未提供任何經核實並核定的真實班次識別碼；下列代碼僅為合成示範】』 immediately above 示範班次代號（SAMPLE／SYNTHETIC 合成值；未核定，非正式班次）：SYN-TRN-01, PDF p.11; §4.2 PDF p.14, same block above 示範班次代號 SYN-TRN-01; §4.2 PDF p.15, 『示範填答日期（SAMPLE／SYNTHETIC 合成值，非真實施測結果）：2026-07-11』 above 邀請發送日期／送達日期／實際填答日期／回收日期 (all REAL blanks)",
+      "rationale": "R08-03 flagged the literal wording 'no approved class identifier' sitting one line above a filled sample code and a prefilled sample date, creating a residual risk that a prefilled sample value could be read as an administration fact. R09 has closed this directly: both instruments now carry an explicit header stating that no verified and approved real class identifier is provided and that the following code is a synthetic demonstration only, and the sample code and sample date are each individually labelled SAMPLE／SYNTHETIC／未核定／非實際辦訓日期. The surrounding REAL fields are blank with format instructions and a prohibition on back-filling the sample date into the REAL fields, and the 欄位分區說明 legend states that the sample sheet leaves every REAL field blank. The wording risk R08-03 identified is therefore no longer present in the current text."
+    },
+    {
+      "id": "R08-04",
+      "disposition": "OPEN",
+      "exact_locator": "§10.1 附件 D (0095_R09_CANDIDATE.pdf; PDF SHA-256 及頁數由同套件最終 QA 清冊綁定) and 附件 E (0095_R09 technical, visual and semantic review receipts; 『R09 收據於本版製稿時尚待產生，狀態為待執行』) PDF p.42; §10.2 R09 row PDF p.43; manifest state CANDIDATE_QA_PENDING",
+      "rationale": "This is a workflow state rather than a document-body defect, and it is still open by design at R09: the candidate's own QA chain is open, Attachment D binds the Word-exported PDF only through an external final-QA list, and Attachment E records the R09 technical, visual and semantic receipts as not yet produced. The document is consistent with this — it does not self-declare PASS, states that the independent semantic review result must be taken from the external package receipt bound to this version's DOCX SHA, and the manifest carries CANDIDATE_QA_PENDING. I record it as OPEN because the R09 receipts do not exist in the supplied evidence; it is not counted as a material semantic defect and does not affect the body assessment."
+    },
+    {
+      "id": "R08-05",
+      "disposition": "CLOSED",
+      "exact_locator": "§7.2 低分回覆計數與敏感度註記, PDF p.33 (L-03 非正向 4 份, 識別 SYN-L14 2 分 / SYN-L04 / SYN-L11 3 分, 1 份未逐筆識別; 情境演算 n=13, sum 53, mean 約 4.08, 10/13 = 76.9%, 差距收斂為 8.8 個百分點與 0.07 分; 目標客戶端 n=5 每題各 1 份非正向回覆, 單一填答者對應 20 個百分點); §7.3 item 1 小樣本限制, PDF p.34; §6.4 追蹤遺漏處理, PDF p.29; §8.4 PDF p.36; §8.5 PDF pp.37–38",
+      "rationale": "R08-05 concerned the residual inherent limitation of a 14-respondent synthetic sample and the customer track's n=5 giving each respondent 20 percentage points of influence. R09 keeps both sensitivities disclosed with the causes UNKNOWN and an explicit prohibition on inferring group differences: the L-03 single-2-point scenario is recomputed and shown not to change the P1 ranking, the note states the scenario is a sensitivity calculation rather than a re-test result and not a basis for excluding that response, and the customer track's 20-point-per-respondent effect is stated with the reading limit that the five customer facets share the same 4/5 positive count and therefore cannot be read as agreement or representativeness. §7.3 adds small-sample and nonresponse-causality limits, §6.4 excludes the 2 unpaired learners from the paired denominator without treating them as failures, and §8.4/§8.5 keep cause, owner, deadline and status UNKNOWN or blank. The sensitivity is disclosed rather than concealed, so the finding is closed for the purposes of the review; the underlying small-sample limitation persists as an inherent property of the SAMPLE/SYNTHETIC design and is carried in the nonblocking list and unknowns."
+    }
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    {
+      "id": "NB-R09-01",
+      "severity": "LOW_MEDIUM",
+      "title": "§1.4 locator column still mis-anchors three section spans against the current 43-page R09 export",
+      "locator": "§1.4 table PDF p.4: row 1 third column '§5.1 → pp.20–21' (actual §5.1 heading and the chapter-5 heading print at the foot of PDF p.19); row 1 '§5.2 → p.22' (correct, §5.2 opens on p.22); row 4 '§6.3.3–§6.4 → PDF pp.28–30' (both cited headings open on p.28, but the §6.4.1 derivation runs to p.30); row 3 '§7.1–§7.2 → pp.31–34' (ranking matrices occupy pp.31–32, 附圖 A occupies pp.33–34); row 1/row 2 '§2.1–§2.4 → PDF pp.5–6' (the §2.4 boundary text completes on p.6–7)",
+      "finding": "R09's rewrite of the primary traceability table fixed the R08-01 defect at §7.3–§7.4 and at §4.1/§4.2/§4.3, but the same column still carries spans whose start or end does not match the sections actually printed. §5.1's start page is wrong by one page and §6.3.3–§6.4's span does not cover §6.4.1. Because the document itself warns that page anchors must not be inherited across re-exports (PDF pp.5, 41) and the register's own row-level locators are correct, this is a precision defect in the audit trail rather than a false pointer, but it is the table a reviewer uses to navigate, so each section should be anchored to its own start page."
+    },
+    {
+      "id": "NB-R09-02",
+      "severity": "LOW",
+      "title": "§10 lineage sentence does not state the R06 base count, so its own arithmetic does not visibly close to the delivered 211 rows",
+      "locator": "§10 body, PDF p.41: '該清冊為 211 筆資料列、13 欄，其中 205 個仍適用之 R06 鍵保留，6 個 UNKNOWN 升格索引鍵新增…R08 移除 3 個不再使用的合併／合併正向率衍生鍵'; §10 R08 補充說明 (3), PDF p.41; manifest r08_current_rows_from_r06 = 205, r08_added_unknown_index_rows = 6, retired_r08_rows = 3, row_count = 211; §10.2 R09 row PDF p.43",
+      "finding": "The §10 sentence expresses the lineage as 205 retained + 6 added − 3 retired, which does not reach 211 as printed unless the reader supplies the 208-key R06 base. The correct closure is 208 (R06) − 3 retired + 6 added = 211, and this is stated in the R09 version note on p.43 and encoded in the manifest (r06_historical_row_count = 208). Because the R06/R08 key-set reconciliation confirms the only contested key, SYN-0095-CUSTOMER_VALID_RETURN_SHARE, exists in R06 and R08 as a retained key rather than an uncounted addition, no register row is unaccounted for and no factual claim is false. The defect is that the primary lineage statement in §10 omits the 208-key base; adding it (or restating as 211 = 208 − 3 + 6) closes the sentence on its face."
+    },
+    {
+      "id": "NB-R09-03",
+      "severity": "LOW",
+      "title": "§9.5 row 6 understates the derived-metric register population by omitting the four derived rate keys from its '40 列' count",
+      "locator": "§9.5 row 6, PDF p.40: 'L-01–L-05 與 C-01–C-05 各題之 SUM／MEAN／POSN／POSRATE 衍生鍵（如 SYN-0095-LEARNER-L-01-SUM、SYN-0095-CUSTOMER-C-05-POSRATE 等，共 40 列）、SYN-0095-LEARNER_RETURN_RATE、SYN-0095-CUSTOMER_RETURN_RATE'; register body contains SYN-0095-LEARNER_VALID_RATE and SYN-0095-CUSTOMER_VALID_RATE in addition",
+      "finding": "I counted the derived item-metric keys in the supplied register body: 10 items × 4 keys (SUM, MEAN, POSN, POSRATE) = 40, which is what the row states; but the body also carries four derived rate keys (SYN-0095-LEARNER_RETURN_RATE 83.3, SYN-0095-LEARNER_VALID_RATE 93.3, SYN-0095-CUSTOMER_RETURN_RATE 83.3, SYN-0095-CUSTOMER_VALID_RATE 100.0), of which the row's parenthetical names only the two RETURN_RATE keys. The '40 列' therefore reads as the whole derived-metric population when it is only the item-metric subset, and the two VALID_RATE keys are the ones left outside the sentence's own list. This is a count-precision defect in the REAL-promotion index, not a missing registration: all four keys are present in the register, correctly valued and keyed, and the manifest's 53 DERIVED_SYNTHETIC_METRIC rows reconcile with the body."
+    },
+    {
+      "id": "NB-R09-04",
+      "severity": "INFORMATIONAL",
+      "title": "R09 QA chain remains open by design at the time of the candidate's drafting",
+      "locator": "§10.1 附件 D and 附件 E, PDF p.42 (附件 E: 'R09 收據於本版製稿時尚待產生，狀態為待執行'); §10.2 R09 row, PDF p.43 ('本版仍為 CANDIDATE，R09 QA 以外部 exact-SHA 收據為準'); manifest state CANDIDATE_QA_PENDING",
+      "finding": "The R09 technical, visual and semantic receipts did not exist in the supplied evidence, and Attachment D still binds the Word-exported PDF only through an external final-QA list. This is consistent with the CANDIDATE state and with the document's own prohibition on self-declaring PASS, so it is recorded as a workflow state rather than a body defect. It does mean that the figure-rendering confirmation required by the Blueprint's font-size and figure acceptance tests, and the R09 receipt chain itself, remain outstanding and must be satisfied by the separate exact-SHA visual receipt and the external QA list before any formal acceptance step."
+    },
+    {
+      "id": "NB-R09-05",
+      "severity": "INFORMATIONAL",
+      "title": "Improvement-candidate robustness continues to rest on a 14-respondent synthetic learner sample and a 5-respondent synthetic customer sample",
+      "locator": "§7.2 sensitivity note, PDF p.33; §7.3 items 1–2, PDF p.34; §6.1 PDF pp.24–25; §6.2 PDF pp.25–26; §6.3.3 PDF p.28; §8.5 PDF p.37",
+      "finding": "R09 discloses this fully — the L-03 single-record sensitivity is recomputed and shown not to change the ranking, the customer track's 20-points-per-respondent effect is stated, nonresponse reasons are UNKNOWN, and §6.3.3 forbids pooled or cross-group comparison — so the limitation is inherent to the SAMPLE/SYNTHETIC design and is presented, not concealed. It requires no change other than continued presentation as SAMPLE/SYNTHETIC and continued refusal to characterise the numbers as association performance, and it should be re-stated explicitly if any figure derived from these data is later reused outside this document."
+    }
+  ],
+  "material_arithmetic_checks": [
+    {
+      "item": "Learner population reconciliation (POP_INVITED / POP_RETURNED / POP_VALID / nonresponse)",
+      "locator": "§6.1 PDF p.24; §3.2 counting boundary PDF p.9; §5.1 PDF p.20; §6.3.1 PDF p.27",
+      "recomputed": "18 invited = 15 returned + 3 nonresponse; 15 returned = 14 valid + 1 invalid; 3 = 18 − 15; 1 = 15 − 14",
+      "verdict": "MATCH"
+    },
+    {
+      "item": "Learner return rate and validity rate",
+      "locator": "§6.3.1 items 1–2, PDF p.27; register SYN-0095-LEARNER_RETURN_RATE / SYN-0095-LEARNER_VALID_RATE",
+      "recomputed": "15/18 = 83.333% → 83.3%; 14/15 = 93.333% → 93.3%",
+      "verdict": "MATCH"
+    },
+    {
+      "item": "Learner item L-01 任務關聯性: sum, mean, positive count, positive rate",
+      "locator": "§6.1 PDF pp.24–25; §6.3.1 item 3, PDF p.27; register SYN-0095-LEARNER-L-01-SUM/MEAN/POSN/POSRATE",
+      "recomputed": "5+5+4+3+5+4+4+5+4+4+3+5+4+2 = 57; 57/14 = 4.0714 → 4.07; 11 values ≥ 4 → 11/14 = 78.571% → 78.6%",
+      "verdict": "MATCH"
+    },
+    {
+      "item": "Learner item L-02 目標引導清晰度",
+      "locator": "§6.3.1 item 4, PDF p.27; register SYN-0095-LEARNER-L-02-*",
+      "recomputed": "4+4+5+4+5+4+3+5+4+3+4+4+4+3 = 56; 56/14 = 4.00; positive 11 (L01,L02,L03,L04,L05,L06,L08,L09,L11,L12,L13) → 78.6%",
+      "verdict": "MATCH"
+    },
+    {
+      "item": "Learner item L-03 演練操作價值",
+      "locator": "§6.3.1 item 5, PDF p.27; register SYN-0095-LEARNER-L-03-*",
+      "recomputed": "5+4+4+3+4+4+4+5+3+4+3+5+4+3 = 55; 55/14 = 3.9286 → 3.93; positive 10 (L01,L02,L03,L05,L06,L07,L08,L10,L12,L13) → 71.428% → 71.4%",
+      "verdict": "MATCH"
+    },
+    {
+      "item": "Learner item L-04 講師支持度",
+      "locator": "§6.3.1 item 6, PDF p.27; register SYN-0095-LEARNER-L-04-*",
+      "recomputed": "5+4+4+4+5+3+4+4+4+3+4+5+4+3 = 56; 56/14 = 4.00; positive 11 (L01,L02,L03,L04,L05,L07,L08,L09,L11,L12,L13) → 78.6%",
+      "verdict": "MATCH"
+    },
+    {
+      "item": "Learner item L-05 整體滿意度",
+      "locator": "§6.3.1 item 7, PDF p.27; register SYN-0095-LEARNER-L-05-*",
+      "recomputed": "5+5+4+4+5+4+4+5+4+4+3+5+4+2 = 58; 58/14 = 4.1428 → 4.14; positive 12 (L01–L10, L12, L13) → 85.714% → 85.7%",
+      "verdict": "MATCH"
+    },
+    {
+      "item": "Customer population reconciliation and rates",
+      "locator": "§6.2 PDF pp.25–26; §6.3.2 item 1, PDF p.28; register SYN-0095-CUSTOMER_INVITED/RETURNED/VALID/NONRESPONSE and the four rate keys",
+      "recomputed": "6 invited = 5 returned + 1 nonresponse; 5 returned = 5 valid; 5/6 = 83.333% → 83.3% (return rate); 5/5 = 100.0% (validity rate); 5/6 = 83.3% valid-returns-as-share-of-invitations, explicitly distinguished from the validity rate",
+      "verdict": "MATCH"
+    },
+    {
+      "item": "Customer item sums, means, positive counts and rates (C-01…C-05)",
+      "locator": "§6.3.2 items 2–6, PDF p.28; register SYN-0095-CUSTOMER-C-01…C-05-* (20 keys)",
+      "recomputed": "C-01 5+4+5+3+4 = 21 → 4.20, positive 4 → 80.0%; C-02 5+4+4+3+4 = 20 → 4.00, positive 4 → 80.0%; C-03 4+4+5+3+4 = 20 → 4.00, positive 4 → 80.0%; C-04 5+4+5+3+4 = 21 → 4.20, positive 4 → 80.0%; C-05 5+4+5+3+4 = 21 → 4.20, positive 4 → 80.0%",
+      "verdict": "MATCH"
+    },
+    {
+      "item": "Follow-up pairing boundary and outcome figures",
+      "locator": "§6.4 PDF p.29; §6.4.1 PDF p.30; register SYN-0095-SYN-L01…L12-PRE/POST30 (24 keys) and SYN-0095-FOLLOWUP_* (8 keys)",
+      "recomputed": "14 valid = 12 paired + 2 unavailable (2 excluded from paired denominator, not counted as failures); Σpre = 4+5+6+3+4+5+6+2+4+5+3+4 = 51 → 4.25; Σpost = 7+8+8+6+7+8+8+5+7+8+6+7 = 85 → 7.08; Δ_abs = (85−51)/12 = 2.8333 → 2.83; Δ_rel = 34/51 = 0.66666 → 66.7%; post ≥ 7 for L01,L02,L03,L05,L06,L07,L09,L10,L12 = 9 → 9/12 = 75.0%; per-row Δ values +3,+3,+2,+3,+3,+3,+2,+3,+3,+3,+3,+3 all match the table",
+      "verdict": "MATCH"
+    },
+    {
+      "item": "Learner ranking, gaps and dense-rank application under the §7.2 rule",
+      "locator": "§7.2 learner matrix, PDF pp.31–32; §7.1 comparison table, PDF p.31",
+      "recomputed": "Positive rate ascending then mean ascending: L-03 71.4%/3.93 → P1; L-02 78.6%/4.00 and L-04 78.6%/4.00 → P2; L-01 78.6%/4.07 → P3; L-05 85.7%/4.14 → P4. Gaps to in-group top (L-05 85.7%, 4.14): 14.3/0.21, 7.1/0.14, 7.1/0.14, 7.1/0.07, 0.0/0.00",
+      "verdict": "MATCH"
+    },
+    {
+      "item": "Customer ranking, gaps and dense-rank application",
+      "locator": "§7.2 customer matrix, PDF p.32; §7.1 PDF p.31; 序位解讀界線 PDF p.33",
+      "recomputed": "All five positive rates 4/5 = 80.0%, so ordering is decided by mean alone: C-02 4.00 and C-03 4.00 → P1; C-01 4.20, C-04 4.20, C-05 4.20 → P2. Gaps: 0.0 points for all; mean gaps 0.20 for C-02/C-03 and 0.00 for C-01/C-04/C-05. §7.1's statement that the customer track has no relative highest or lowest positive-rate item and that the two lowest-mean items are 辦訓安排 and 實作演練 is consistent",
+      "verdict": "MATCH"
+    },
+    {
+      "item": "Single-record sensitivity scenario for L-03",
+      "locator": "§7.2 sensitivity note, PDF p.33",
+      "recomputed": "Removing SYN-L14's 2-point L-03 response: n = 13, sum = 55 − 2 = 53, mean = 53/13 = 4.0769 → ≈ 4.08, positive = 10/13 = 76.923% → 76.9%; positive-rate gap to L-05 (85.714%) = 8.79 → 8.8 points; mean gap to 4.1429 = 0.0660 → 0.07 points; P1 ordering retained because 76.9% < 78.6% of L-02/L-04/L-01",
+      "verdict": "MATCH"
+    },
+    {
+      "item": "Rounding, N/A, missing-value and suppression rules versus the displayed values",
+      "locator": "§5.2 rounding paragraph, PDF p.22; §4.3 N/A paragraph, PDF p.19; §5.1 MISSING_ITEM/NA_TREATMENT/SUB_SUPPRESS, PDF pp.20–21; §8.1, PDF p.35",
+      "recomputed": "Means and Δ_abs shown to 2 dp, rates and Δ_rel to 1 dp as required; no displayed figure is derived from a rounded intermediate (e.g. 34/51 computed from raw sums 85 and 51, 2.8333 from 34/12, not from 7.08−4.25); N/A excluded from item denominators and not treated as 0; core-item missing renders the form invalid; n<5 sub-group suppression defined and no sub-group results published",
+      "verdict": "MATCH"
+    },
+    {
+      "item": "Register row/column/unique-key totals and fact_status counts against the manifest",
+      "locator": "Supplied register CSV body; manifest row_count 211, column_count 13, unique_register_key true, fact_status_counts 134/13/7/4/53, r08_current_rows_from_r06 205, r08_added_unknown_index_rows 6, retired_r08_rows 3",
+      "recomputed": "Status counts 134 + 13 + 7 + 4 + 53 = 211, matching row_count 211 and column_count 13; 208 (R06) − 3 retired + 6 added = 211, consistent with the deterministic R06/R08 key-set reconciliation; the three retired keys are absent from the current body and all six listed UNKNOWN additions are present",
+      "verdict": "MATCH"
+    },
+    {
+      "item": "Population non-aggregation and denominator separation",
+      "locator": "§6.3.3, PDF p.28; §6.1/§6.2 denominators, PDF pp.24–26; §6.3.2 note, PDF p.28; §7.1, PDF p.31; 附圖 A 警示, PDF p.34",
+      "recomputed": "Learner denominators (18/15/14) and customer denominators (6/5/5) are used separately throughout; no pooled return rate, pooled positive rate or combined satisfaction figure appears anywhere in the R09 text; the three retired combined/pooled register keys are absent; §6.3.2's 5/6 figure is labelled as a share of the invitation population and not as a validity rate, avoiding a cross-metric conflation",
+      "verdict": "MATCH"
+    },
+    {
+      "item": "Source-hash internal consistency across the packet",
+      "locator": "§1.2 PDF p.2; §1.3 PDF p.2; §10 PDF p.41; §10.1 附件 A/A-1 PDF p.41–42; packet header",
+      "recomputed": "Official source PDF SHA 805386b7…4709 (§1.2), indicator-18 scoring-form page-4 extract SHA c789f8f0…adcf and its source form SHA 9d253829…83684 (§1.3), register CSV SHA 203583e4…0202c (§10 and 附件 A), manifest SHA df1b2517…17c0 (§10 and 附件 A-1) — all match the packet-supplied values and the CSV/manifest are the same R08 artefacts bound in the packet; official page-6 extract SHA e0ecd2d7…20f02 and Blueprint row SHA 9a22b3ac…79c2 are consistent with the manifest's source_refs. Hashes were compared for internal consistency only and were not independently recomputed",
+      "verdict": "MATCH"
+    }
+  ],
+  "unknowns": [
+    "Whether the DOCX file actually renders a drawn 附圖 A: the packet supplies the figure's full specification, panel values, presentation rules, warnings and alt-text draft (PDF pp.33–34) but the text-only evidence does not encode pixels, so per the packet instruction no missing chart is alleged. Figure rendering is to be confirmed by the separate exact-SHA visual receipt.",
+    "Typography compliance with the Blueprint floors (body ≥ 10.5pt, tables ≥ 9.5pt), column fit, orphan headings, blank pages, header/footer consistency and any image objects in the DOCX: not measurable from text-only PDF extraction.",
+    "Actual page count and byte-level identity of the R09 DOCX (262592 bytes) and the R09 Word-exported PDF (43 pages, SHA ab78192f…a23f): taken from the packet; the DOCX was not rehashed and the PDF was not re-rendered or re-hashed by the reviewer.",
+    "Whether the four R09 QA receipts (technical, visual, semantic, final-QA list binding the PDF SHA and page count) have since been produced: Attachment E records them as 待執行 and the manifest as CANDIDATE_QA_PENDING.",
+    "All association-side facts remain UNKNOWN/NOT PROVIDED by design and are correctly held as such in the candidate: existing survey system or adoption, committee or unit structure, authorised roles, approval and signature originals, formal and effective dates, real class/cohort identifiers, real invitation/delivery/return/valid counts, original questionnaires, nonresponse reasons, the invalid form's identity and other item values, real respondent roles and organisation, storage/access/retention paths, and improvement decision, responsible person, deadline and follow-up originals.",
+    "Whether the real-system promotion path (§9.5) can be closed on the required eight item classes, and whether any scored TTQS position follows: not determinable from the packet and outside this review's scope.",
+    "Runtime/provider model identity: UNKNOWN absent direct attestation by the executing runtime."
+  ],
+  "reviewer_limitations": [
+    "Packet-only review: no shell, filesystem, browser, GUI or other tooling was used or attempted; no DOCX binary rehash, no PDF re-render, no DOCX XML extraction, and no font-size or layout measurement.",
+    "No visual inspection of the 43-page export was performed; every page, table, row, cell and heading reference above is read from the packet's page-bounded PDF text. Image presence or absence (including whether 附圖 A exists as a drawn object) and typography could not be confirmed.",
+    "All arithmetic was recomputed by hand from the raw response rows printed in §6.1, §6.2 and §6.4 and from the CSV body reproduced in the packet; no spreadsheet or calculation engine was used.",
+    "SHA-256 values (DOCX, PDF, CSV, manifest, official sources, Blueprint row) were compared for internal consistency only and were not independently recomputed; the reviewed DOCX SHA is bound exactly as supplied by the packet.",
+    "Findings are bound to the DOCX SHA-256 e1be4a9e…0ed8e as supplied. Any re-export, re-layout or content change invalidates this verdict and requires a new exact-SHA review.",
+    "This is a semantic review of the supplied candidate only. It is not a TTQS assessment, not a score, not an evaluation of the association's real practice, and not formal association acceptance. The deliverable remains CANDIDATE.",
+    "R08's five findings were reassessed independently from the current R09 evidence and the deterministic R06/R08 key-set reconciliation; where the reconciliation contradicts an allegation (R08-02), the allegation was not repeated, and no prior artefact was rewritten in the process."
+  ],
+  "provider_model_identity": "UNKNOWN — no direct attestation of the executing runtime or provider model was available in the packet; the requested route was OpenCode CLI v2.0.32 / opencode/minimax-m3.1-flash-free, but the reviewer cannot attest which model actually produced this response."
+}

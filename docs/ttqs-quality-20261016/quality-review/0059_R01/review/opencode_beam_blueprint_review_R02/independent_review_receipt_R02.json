@@ -1,0 +1,40 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0059",
+  "requirement_id": "I13-E03",
+  "official_checkbox_serial": "063",
+  "candidate_docx_sha256_local": "0263017F16D81B1121BB97410DE9895B43B7A42F75632BF71A82B86426FBC2B0",
+  "candidate_docx_sha256_reviewer_claim": "0263017F16D81B1121BB97410DE9895B43B7A42F75632BF71A82B86426FBC2B0",
+  "candidate_docx_sha_independently_verified_by_reviewer": false,
+  "blueprint_revision": "R02",
+  "blueprint_r01_sha256": "3CD8257C0B88A85C25CA4C2BDAEADE15E9E84F70011728326626CABCACDA85E8",
+  "blueprint_r02_sha256_local": "35D274528A588AF3464F9CC3AF605EAE8987BBA362A191A4A4534D7AA0CCBB4E",
+  "blueprint_sha256_reviewer_claim": "35D274528A588AF3464F9CC3AF605EAE8987BBA362A191A4A4534D7AA0CCBB4E",
+  "reviewer_route": "OpenCode CLI V2",
+  "requested_model": "opencode/beam-free",
+  "cli_version": "opencode v2.0.29",
+  "exit_code": 0,
+  "verdict": "PASS",
+  "replacements_checked": 24,
+  "findings": [],
+  "remaining_conflicts": [],
+  "omissions": [
+    "R02 §5-2 roster header remains 證照查證 (line 237), whereas body §3.4 uses C情境內流程比對; body also uses 證照查證 in its roster calibration bullet, so this is a precision omission rather than a contradiction.",
+    "R02 §9 exclusion rule still refers to 證照「查證完成」分子 (line 417) while the cross-mechanism metric is renamed 情境內流程比對完成率; body §10.2 uses the same phrase.",
+    "Body §4.6–§4.7 records S-16–S-18 complement as not completed (HOLD) and includes 已補課 status; R02 §8.1 only states that complement options were provided.",
+    "R02 table 5-1 still lists 證照影本、發證單位回覆 as C evidence forms; body table 3-1B uses the same future-real evidence labels, while body §6 states real copies/replies remain HOLD/UNKNOWN and the current synthetic form is 合成查證表.",
+    "Blueprint-only planning statements without a body counterpart remain uncorroborated (e.g. §4.1 trigger 機制彙整截止日後 5 個工作天, §4.4 lecturer role wording, §13.5 layout requirements).",
+    "Appendix 5-3 simulated-practice state list omits HOLD, which body includes."
+  ],
+  "limitations": [
+    "Read-only review of supplied Markdown/JSON files and computed file hashes; no DOCX bytes were inspected, modified, or re-reviewed.",
+    "No formal Human/Association acceptance is asserted.",
+    "Findings are limited to the supplied R01, R02, body R03, patch response, and patch receipt; no hidden source files were used."
+  ],
+  "raw_stdout_sha256": "5A9805C711D4CB572DF8FB0BF4B3F521E6F57E18F0CCAA5C65410FD0DE53B2CB",
+  "response_sha256": "D0AF575EDCE2EFFA672BA768A91A1075871225C6CADD10D55D563F392CC0F5E9",
+  "stderr_bytes": 0,
+  "docx_modified_by_reviewer": false,
+  "formal_association_acceptance": "NOT_ASSERTED",
+  "status": "PASS_BLUEPRINT_CONTENT_WITH_DECLARED_OMISSIONS"
+}

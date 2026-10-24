@@ -1,0 +1,49 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0064",
+  "requirement_id": "I14-E05",
+  "official_checkbox_serial": "069",
+  "candidate_revision": "R05",
+  "candidate_sha256": "54888e13f954478051a49839d8b67ff845992c72811e41e09d90045e512c69e1",
+  "reviewer_route": "OpenCode v2 CLI",
+  "reviewer_model": "opencode/beam-free",
+  "cli_version": "opencode v2.0.29",
+  "review_session_id": "ses_eb0bdce14ffep7f4jpjUVBqnmg",
+  "review_packet_sha256": "8fcfa80f3db4f3a0b6cffc25cad22e994e98bc71e95d52fdce45239fd6405ca3",
+  "review_response_path": "review/opencode_beam_semantic_R05/independent_review_response_R05.md",
+  "review_response_sha256": "fe6308ab22f4c4cc0b18bc6044f519ab8e1bcc645abf8292ca5ecb465218066e",
+  "session_export_path": "review/opencode_beam_semantic_R05/session_export_R05_attempt1.json",
+  "session_export_sha256": "2025406594fd1fb31aeda7e66716bd03859badd6cd71acf55c09027d41d67ce4",
+  "review_outcome": "PASS",
+  "scope": "Semantic review only; bound to exact candidate SHA; not formal acceptance or promotion.",
+  "coverage": [
+    "official mapping and genre",
+    "complete usable forms/SOP/cards",
+    "independent arithmetic recomputation",
+    "SAMPLE/REAL boundary",
+    "cross-document fact links",
+    "A-0062-08 query safety",
+    "version/font/source reconciliation",
+    "Human Gate state"
+  ],
+  "limitations": [
+    "Reviewer did not directly inspect page images or rendered PDF; relies on visual_review_R05.json.",
+    "Only official source PDF page 5 was compared.",
+    "Neighbor documents were checked for targeted cross-document facts and SHA, not exhaustively reread.",
+    "REQUIREMENT_SOURCE_RECONCILIATION.csv was not independently read."
+  ],
+  "findings": [
+    {
+      "severity": "informational",
+      "locator": "§6 task-card headings / Word XML",
+      "finding": "11 of 12 task labels have keepNext; T08 label lacks the marker. The direct visual receipt shows no resulting split; reviewer says repair is not required for acceptance."
+    },
+    {
+      "severity": "informational",
+      "locator": "whole document",
+      "finding": "28 pages exceed the 12–16 page recommendation, which is not a hard gate; content volume is justified."
+    }
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "human_gate": "PRESERVED"
+}

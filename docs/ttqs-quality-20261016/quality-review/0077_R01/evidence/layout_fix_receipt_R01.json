@@ -1,0 +1,19 @@
+{
+  "schema": "TTQS_ONE_0077_R01_LAYOUT_FIX_RECEIPT.v1",
+  "source_docx_sha256": "d405d05fd6841d5345d4070fd14fce0fce839f5fb339560dee7908f142a03e95",
+  "fixed_docx_sha256": "cc545510cf503e9ecb16238c2b8dcdf6b15cbc43a28360b3b76f97513017edf7",
+  "source_body_sha256": "6ca1eeb224285bd8fe43e9754ec0a44f3b6b03ce42fa72db0176bbdfda326ed6",
+  "body_unchanged": true,
+  "defects_found": [
+    "Built-in Word Title style applied a blue bottom border beneath the title.",
+    "Action and cross-document field cards split across pages."
+  ],
+  "targeted_fixes": [
+    "Removed the Title style bottom border.",
+    "Wrapped each field/value card in a non-splitting outer row so a card moves intact to the next page."
+  ],
+  "builder_api_error": "Initial nested-table width keyword was unsupported by python-docx; corrected to supported cell.add_table(rows, cols). The candidate DOCX remained intact and the initial SHA was archived.",
+  "rebuild_scope": "Formatting-only rebuild; Markdown body and synthetic source data unchanged.",
+  "final_visual_status": "PASS",
+  "status": "REPAIRED_VERIFIED"
+}
