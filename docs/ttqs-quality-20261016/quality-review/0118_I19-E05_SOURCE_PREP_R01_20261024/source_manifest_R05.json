@@ -232,6 +232,11 @@
       "path": "writer/opencode_writer_R01_manuscript.md",
       "bytes": 22624,
       "sha256": "e6612f51f5025a52b0725064cd83b1140b018976113547aecd94dd31a53b9a7a"
+    },
+    {
+      "path": "qa/github_readback_receipt_R05.json",
+      "bytes": 13316,
+      "sha256": "00a4af39de75433235a8a3e3f795da037edf98af1b92577f572d68f1f904fe77"
     }
   ],
   "excluded_private_artifacts": [
@@ -240,5 +245,10 @@
     "PowerShell-corrupted console capture",
     "Windows-specific local session snapshot"
   ],
-  "manifest_note": "This file deliberately omits its own SHA to avoid a self-referential manifest."
+  "manifest_note": "This file deliberately omits its own SHA to avoid a self-referential manifest.",
+  "github_initial_sync_readback": {
+    "commit": "5ecfeb6afdba227efce3b4be7ac7b6fdfa1ea664",
+    "files_verified": 43,
+    "all_raw_bytes_match": true
+  }
 }
