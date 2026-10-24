@@ -24,3 +24,6 @@
 `qa/CONTENT_QA_0132_R01.json` 保存來源對照、逐批算式、分母和替換簿檢查；`qa/TECHNICAL_QA_0132_R01.json` 綁定 DOCX、建置收據、Word PDF 及 10 張頁面影像 SHA。Word 輸出由 Microsoft Word Office16 COM 隱藏、唯讀開啟並匯出；每頁均已逐頁目視。技術／版面 PASS 不代表獨立語意 PASS 或正式接受。
 
 此套件所列 `quality-review/` 路徑為此次 PR 同步目標；推送與遠端讀回另以提交和 exact-byte 收據確認。
+## GitHub 位元組同步校正
+
+首次推送提交 `57610e6e44aa16e7eb9cad36eb8017c345651b23` 後，原始位元組回讀辨識出 Windows `core.autocrlf=true` 將 10 個文字收據轉成 LF；DOCX 位元組一致。完整失敗清單見 `qa/GITHUB_RAW_BYTE_READBACK_INITIAL_FAILURE_0132_R01.json`。本套件加入只作用於 0132 子目錄的 `.gitattributes` `* -text` 規則，保存現有本機 bytes；沒有改全域 Git 設定，也沒有重建 DOCX。修正推送後逐檔回讀待本次提交確認。
