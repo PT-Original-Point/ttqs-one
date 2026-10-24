@@ -1,0 +1,261 @@
+{
+  "target_identity_and_sha": {
+    "doc_id": "0118",
+    "requirement_id": "I19-E05",
+    "candidate_version": "R07",
+    "docx_sha256": "125feecd751e7c01199fbcf3efd92c04d154cde2d83055216188df0a6271e983",
+    "extracted_body_sha256": "7a428bfc86a3da6dab5ee9bf71c3e76a62cd523dc4eab8765efb9c0ba724b12f",
+    "crosswalk_sha256": "1ddfbb608bcad25170683ddb42a1dbb27bafa6f1f35ff0498f1b8d75b24f0679",
+    "blueprint_seed_sha256": "280783e0df4dc0b7aaaf4a8fbe826bc65e9ed9c683146eea1dfd25c0ae1c92e0",
+    "official_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "official_page8_text_sha256": "57c6b33d70b665bd41b8d58ff58f5c0d78f9c2c751ccd9c6dd1b740b2fbf374e"
+  },
+  "verdict": "PASS",
+  "formal_acceptance": "NOT_GRANTED",
+  "scope_and_exclusions": {
+    "review_mode": "READ-ONLY independent semantic review",
+    "verification_scope": "僅依據嵌入之官方檢核表文字抽取、來源包 R02、專屬 Blueprint R02 及候選本文 R07 進行語意一致性、結構完整性與規範核對。",
+    "exclusions": "本審查純屬語意與文本規格驗證，未調用任何工具、未讀寫檔案系統、未執行程式碼、瀏覽器或電腦操作；明確排除對 DOCX 二進位實體結構及版面視覺呈現（Visual/Layout）之驗證宣稱。"
+  },
+  "checklist": [
+    {
+      "check_id": "CHK-01",
+      "item": "I19-E05 需求綁定與多重序位嚴格辨識",
+      "locators": [
+        "Section 1.3 官方綁定表",
+        "Section 1.3 說明文字",
+        "Section 8.4 完整驗收對照"
+      ],
+      "status": "PASS",
+      "observation": "候選文本正確綁定 doc_id=0118、requirement_id=I19-E05，並明確拆分且正確標記四種序位概念：157方框清單項次為 129、142文件種子表列序為 118、129要求 crosswalk 資料列為 105，官方檢核表第8頁原始未印流水號故流水號嚴格標記為 UNKNOWN_NOT_ASSERTED，且明確聲明 129 僅為清單勾選項次而非印刷流水號。"
+    },
+    {
+      "check_id": "CHK-02",
+      "item": "盲測文類用途（Title-Blind Test）：收件／保管／核驗登錄表，非第三方感謝函原件或範本",
+      "locators": [
+        "Section 1.1 本文件是什麼",
+        "Section 1.2 本文件不是什麼",
+        "Section 2 表 A 至 表 F",
+        "Section 7 與相鄰文件的證據分界"
+      ],
+      "status": "PASS",
+      "observation": "隱去主標題後，文本通篇為收存登錄、保管鏈追蹤、獨立來源核驗、完整性檢核、多附件清冊、多次移交紀錄與判定分流之作業表單架構。Section 1.2 明定四項禁止（非感謝函範本、不代替原件、非內容轉錄本、非正式接受文件），徹底根絕被誤認為第三方感謝函本體或信箋範本之可能。"
+    },
+    {
+      "check_id": "CHK-03",
+      "item": "作業表單、獨立來源查證、完整性／隱私／保存期限與狀態流轉判定矩陣",
+      "locators": [
+        "Section 2 表 A 至 表 F",
+        "Section 3 核驗清單 (#1-#10)",
+        "Section 4 判定矩陣",
+        "Section 4.1 狀態流轉原則",
+        "Section 4.2 拒收、補正與保留條件"
+      ],
+      "status": "PASS",
+      "observation": "表 A 至 表 F 與第 3 章 10 項檢核清單提供完整填報與核驗機制；表 D 嚴格規範來源查證必須使用獨立取得之正式管道，不得依賴函件自列通訊；表 E 與檢核項 10 明定保存期限依據、起算點與屆期處置；第 4 章定義 7 組狀態碼，確立 HOLD/RETURN/REJECT 觸發條件與流轉優先序，且明確要求補正期限必須由具備正式授權之角色依規則設定，無權設定時填 UNKNOWN 並列待決角色。"
+    },
+    {
+      "check_id": "CHK-04",
+      "item": "替換清冊欄位完整性與相依性定義（含 author、display_boundary、record_class、original_received 等）",
+      "locators": [
+        "Section 5.1 示範資料列",
+        "Section 5.4 替換清冊"
+      ],
+      "status": "PASS",
+      "observation": "Section 5.1 之 18 個示範欄位與 Section 5.4 替換清冊完全一對一對應無遺漏。清冊逐一涵蓋 record_class、record_id、doc_id、requirement_id、original_received、issuer、author、recipient、issue_date、source_verification、original_location、digital_sha256、relationship_status、retention_basis、retention_start、expiry_date、expiry_disposition、decision、display_boundary，並詳述替換/核驗約束與真實資料受限存放要求。"
+    },
+    {
+      "check_id": "CHK-05",
+      "item": "已知副本／螢幕截圖之 HOLD 與 NOT_ACCEPTED 狀態無矛盾",
+      "locators": [
+        "Section 1.5 原件型態邊界",
+        "Section 4 判定矩陣",
+        "Section 4.1 狀態流轉原則",
+        "Section 4.2 拒收、補正與保留條件"
+      ],
+      "status": "PASS",
+      "observation": "已徹底消除狀態衝突：若僅為如實標記之影本、截圖、轉寄內容，因缺少原件，主狀態一律維持 HOLD_NO_ORIGINAL，不指稱造假；只有在獨立證據確認副本被當作原件提出、文件錯置、發函者或內容不符、或嚴重違反資料授權，且由覆核者載明具體依據時，方對該筆原件佐證主張標記 NOT_ACCEPTED_CONFIRMED_COPY_OR_MISMATCH。"
+    },
+    {
+      "check_id": "CHK-06",
+      "item": "示範全域合成性（SYNTHETIC）與零虛構真實記錄",
+      "locators": [
+        "Section 5 邊界宣告",
+        "Section 5.1 示範資料列",
+        "Section 5.3 示範邊界自白",
+        "Section 8.1 現況宣告",
+        "Section 8.5 全域禁止清單"
+      ],
+      "status": "PASS",
+      "observation": "全篇僅含唯一示範案號 SYN-0118-001，標示 record_class=SYNTHETIC_SAMPLE_ONLY 與 display_boundary=SYNTHETIC_NOT_EVIDENCE。欄位全數為 NOT_PROVIDED、NOT_RUN、NONE、NOT_APPLICABLE、UNKNOWN、HOLD_NO_ORIGINAL。嚴格禁止虛構發函者、收件人、日期、簽章、印章、查證回覆、收件事件、績效計算或協會核准決定。"
+    },
+    {
+      "check_id": "CHK-07",
+      "item": "UNKNOWN／NOT_RUN 正確標記、保存期限／屆期處置及負面鄰居文件分流",
+      "locators": [
+        "Section 2 表 A 規則、表 D、表 E",
+        "Section 5.1 示範資料列",
+        "Section 5.2 逐步演算",
+        "Section 6.3 隱私與使用限制規則",
+        "Section 7 與相鄰文件的證據分界",
+        "Section 7.1 分流檢查"
+      ],
+      "status": "PASS",
+      "observation": "未收原件時，數位雜湊標記為 NOT_APPLICABLE，查證程序未執行標記為 NOT_RUN，關聯與保存期限查無依據標記為 UNKNOWN；Section 7 與 7.1 明確辨識 0092（I17D-E06 索取稿）、0096（I18-E03 他需求感謝函）、0103（I18-E10 他需求感謝函）、0116（I19-E03 就業證據）、0117（I19-E04 考照證據），嚴禁指標借用、混件或任意合併成果。"
+    },
+    {
+      "check_id": "CHK-08",
+      "item": "版本來源追溯、多附件明細、多次移交、存取權限控制與覆核人職權界線",
+      "locators": [
+        "Section 1.1 角色聲明",
+        "Section 1.3 官方綁定表",
+        "Section 2 表 A、表 C、表 E、表 F",
+        "Section 6.1 三層資料分層",
+        "Section 6.2 保管鏈要求",
+        "Section 8.3 升格前技術 QA",
+        "Section 8.4 完整驗收對照"
+      ],
+      "status": "PASS",
+      "observation": "完整包含 6 項來源 SHA-256 與版本中繼資料；表 C 增設多附件逐件登錄表與多次移交歷史清冊；表 E 增設存取角色、權限範圍、授權依據與查核紀錄；Section 1.1 與表 F 明訂角色為候選職責描述不代表已獲協會任命，覆核結果 PASS_FOR_HUMAN_REVIEW 僅代表符合人工審閱條件而非正式接受，Section 8.3 與 8.4 保持自查待執行勾選框，未逾越驗收權限。"
+    }
+  ],
+  "reassessment_of_historical_findings": {
+    "F1_replacement_register_omissions": {
+      "status": "RESOLVED",
+      "locators": [
+        "Section 5.1",
+        "Section 5.4"
+      ],
+      "explanation": "歷史版本遺漏 author、display_boundary、record_class 等欄位之問題在 R07 已完全修復。Section 5.4 替換清冊具備 19 個完整欄位，包含 author、display_boundary、record_class、original_received 等，皆有明確替換/核驗規則。"
+    },
+    "F2_conflicting_hold_vs_not_accepted": {
+      "status": "RESOLVED",
+      "locators": [
+        "Section 4 矩陣",
+        "Section 4.1",
+        "Section 4.2"
+      ],
+      "explanation": "歷史版本對截圖/副本存在 HOLD 與 NOT_ACCEPTED 矛盾之問題已澈底釐清。現行規則確立：如實標記之副本缺原件為主狀態 HOLD_NO_ORIGINAL；NOT_ACCEPTED 嚴格保留給已證實之冒充原件、錯置、造假或違規情事。"
+    },
+    "F3_self_check_and_readiness_contradiction": {
+      "status": "RESOLVED",
+      "locators": [
+        "Section 8.3",
+        "Section 8.4",
+        "卷尾聲明"
+      ],
+      "explanation": "歷史版本編製者自查勾選「完成」被誤解為獨立驗收通過之矛盾已解決。Section 8.4 明確標示「編製者自查項目（不等同獨立驗收）」，技術 QA 項目維持「□ 待執行」，卷尾明確宣告 formal_acceptance=NOT_GRANTED。"
+    },
+    "F4_unsupported_real_holdings_assertion": {
+      "status": "RESOLVED",
+      "locators": [
+        "Section 1.1",
+        "Section 1.3",
+        "Section 8.1"
+      ],
+      "explanation": "歷史版本可能暗示協會持有真實原件或已任命角色之疑慮已消除。Section 8.1 宣告候選包未檢附真實原件且不推論協會是否持有；Section 1.1 聲明角色僅為候選職責描述；Section 1.3 註明中繼資料非實績成果。"
+    },
+    "F5_retention_and_expiry_missing": {
+      "status": "RESOLVED",
+      "locators": [
+        "Section 2 表 E",
+        "Section 3 #10",
+        "Section 5.1",
+        "Section 5.4",
+        "Section 6.3"
+      ],
+      "explanation": "歷史版本欠缺保存期限欄位之缺失已補齊。表 E、清單項 10、示範列及替換清冊均納入 retention_basis、retention_start、expiry_date、expiry_disposition，並明定未查明填 UNKNOWN、未獲授權不得自行銷毀。"
+    },
+    "F6_repository_code_inconsistency": {
+      "status": "RESOLVED",
+      "locators": [
+        "Section 5.4"
+      ],
+      "explanation": "歷史版本真實資料位置代碼不一致之問題已修正。Section 5.4 統一規定受限位置唯一代碼為 RESTRICTED_ASSOCIATION_REPOSITORY（協會授權受限資料庫），固定識別碼則定位於來源索引/候選文件封面。"
+    },
+    "F7_not_applicable_vs_not_run_confusion": {
+      "status": "RESOLVED",
+      "locators": [
+        "Section 2 表 A 規則",
+        "Section 2 表 D",
+        "Section 5.1",
+        "Section 5.2"
+      ],
+      "explanation": "歷史版本未明確界分不適用與未執行之問題已修復。無原件時檔案雜湊明確標記為 NOT_APPLICABLE；來源查證未實施明確標記為 NOT_RUN，兩者語意清晰分離。"
+    },
+    "F8_cross_reference_and_neighbor_mapping": {
+      "status": "RESOLVED",
+      "locators": [
+        "Section 7",
+        "Section 7.1"
+      ],
+      "explanation": "歷史版本對鄰近文件界線不清之問題已修復。Section 7 清楚分流 0092、0096、0103、0116、0117 之需求 ID 與證據性質，嚴防索取稿冒充原件或跨需求指標借用。"
+    },
+    "F9_code_wrapping_and_formatting": {
+      "status": "RESOLVED",
+      "locators": [
+        "全篇純文字與表格結構"
+      ],
+      "explanation": "候選文本結構純淨，無破損或失配之程式碼區塊標記，表格標記 [TABLE] 格式嚴整統一。"
+    },
+    "F10_provenance_metadata_tracking": {
+      "status": "RESOLVED",
+      "locators": [
+        "Section 1.3",
+        "Section 8.4"
+      ],
+      "explanation": "歷史版本來源雜湊不全或序號混淆已修復。Section 1.3 完整登載 PDF SHA-256、文字抽取 SHA-256、Crosswalk SHA-256、Blueprint Seed SHA-256，並正確辨識 157清單129、種子118、crosswalk105 及 UNKNOWN_NOT_ASSERTED。"
+    },
+    "F11_multi_attachment_transfer_access_reviewer_terms": {
+      "status": "RESOLVED",
+      "locators": [
+        "Section 1.1",
+        "Section 2 表 A/C/E/F",
+        "Section 4.1"
+      ],
+      "explanation": "歷史版本缺少多附件管理、移交歷程與存取權限控管之問題已全面解決。表 C 具備「多附件明細」與「多次移交紀錄」；表 E 具備「可存取角色及權限範圍」；表 F 規範補正期限設定授權；覆核角色與結論術語標準化為 PASS_FOR_HUMAN_REVIEW。"
+    }
+  },
+  "blocking_findings": [],
+  "nonblocking_findings": [],
+  "title_blind_result": {
+    "test_passed": true,
+    "identified_genre": "感謝函原件收件登錄表、原件保管鏈紀錄暨來源與指標關聯核驗清單（行政與稽核工具）",
+    "risk_of_misidentification": "零。文本通篇為收件登錄、原件保管、雜湊比對、獨立查證、多附件清查、移交追蹤與判定分流表單，且於 Section 1.2 明定禁止作為感謝函範本或重製第三方函件，絕不可能被誤認為第三方來函原件或感謝函信箋。"
+  },
+  "negative_neighbor_result": {
+    "test_passed": true,
+    "evaluated_neighbors": [
+      {
+        "doc_id": "0092",
+        "requirement_id": "I17D-E06",
+        "boundary_analysis": "0092 為第三方感謝函「索取稿」及證據驗證登錄。Section 7 明定索取稿非收到的感謝函原件，0092 請求稿不得充當 0118 原件。"
+      },
+      {
+        "doc_id": "0096",
+        "requirement_id": "I18-E03",
+        "boundary_analysis": "0096 屬 I18 指標之感謝函文件，Section 7 禁止跨指標借用案例或成效結論代替 I19-E05。"
+      },
+      {
+        "doc_id": "0103",
+        "requirement_id": "I18-E10",
+        "boundary_analysis": "0103 屬 I18 指標之感謝函文件，Section 7 禁止借用代替 I19-E05。"
+      },
+      {
+        "doc_id": "0116",
+        "requirement_id": "I19-E03",
+        "boundary_analysis": "0116 為訓後就業狀態數據，非感謝函原件，嚴禁混件或任意合併對象成果。"
+      },
+      {
+        "doc_id": "0117",
+        "requirement_id": "I19-E04",
+        "boundary_analysis": "0117 為考照結果佐證，非感謝函原件，嚴禁混件或任意合併對象成果。"
+      }
+    ]
+  },
+  "synthetic_real_boundary_result": {
+    "test_passed": true,
+    "boundary_integrity": "極佳。唯一示範案件 SYN-0118-001 標記為 SYNTHETIC_SAMPLE_ONLY，展示邊界為 SYNTHETIC_NOT_EVIDENCE，數值全為缺件預設值（NOT_PROVIDED / NOT_RUN / NONE / NOT_APPLICABLE / UNKNOWN / HOLD_NO_ORIGINAL）。",
+    "prohibition_compliance": "完全無虛構真實人物、無假造機構名稱、無偽造簽名印章、無假借第三方回覆或收件日、無虛構因果成效數據或統計圖表，真實化替換清冊健全且隔離受限資料。"
+  }
+}

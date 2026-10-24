@@ -1,0 +1,11 @@
+{
+  "doc_id": "0118",
+  "requirement_id": "I19-E05",
+  "candidate_sha256": "931c549976b83956b111cc02e8c1f6b1a8402fd681924dcc4845ef6f7d9e72f7",
+  "review_scope": "Narrow R07 to R08 delta review evaluating the semantic and operational impact of adding w:trPr/w:cantSplit to the retention_start table row.",
+  "verdict": "PASS",
+  "findings": [],
+  "rationale": "The delta between baseline R07 and candidate R08 is restricted to layout pagination metadata (w:cantSplit on the retention_start row). Text sequence hashes are identical (text_sequence_sha256: 4b3aeb4bc6bd8adbb46d5f1fd759e9c748839c5ecbf438529d68cd6f40d760f1), confirming zero textual, structural, or semantic alterations. Keeping the retention_start row unified on page 13 rather than split across pages 12-13 does not introduce semantic ambiguity or degrade operational usability. The baseline R07 independent semantic review PASS verdict remains fully applicable to the unchanged text.",
+  "limitations": "Strictly limited to the narrow delta described in the review packet. Direct binary inspection of DOCX internals and visual/pixel inspection of rendered pages or PDFs are explicitly outside this independent review scope. This delta evaluation does not constitute an independent full-document semantic re-review.",
+  "formal_acceptance": "NOT_GRANTED"
+}
