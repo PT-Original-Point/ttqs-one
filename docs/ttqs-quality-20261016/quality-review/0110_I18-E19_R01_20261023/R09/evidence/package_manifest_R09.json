@@ -137,6 +137,26 @@
       "path": "evidence\\0110_R09_item_construct_math_mapping_R11_R03.json",
       "bytes": 10391,
       "sha256": "8ea8d3072e67daa258e6d8820fad01434c0e980a0e31488bb22ebd5a7b456d53"
+    },
+    {
+      "path": "evidence\\opencode_R09_mapping_math_review_R11.stdout.jsonl",
+      "bytes": 476,
+      "sha256": "b97fd8ef591480d8644fe0c0c327d3ef184789998c7ad00197cdaa9f60bf1e2c"
+    },
+    {
+      "path": "evidence\\opencode_R09_mapping_math_review_R11_dispatch_receipt.json",
+      "bytes": 2383,
+      "sha256": "b20f4863ed31a5b987799503b340ef775f6358543621350ba0e1ed11fc3d1b91"
+    },
+    {
+      "path": "evidence\\opencode_R09_mapping_math_review_packet_R11.md",
+      "bytes": 16064,
+      "sha256": "0199cf39ead350864d1f2dedac969ca57dce041201911f1d85bd476500b97adc"
+    },
+    {
+      "path": "evidence\\opencode_R09_mapping_math_review_packet_R11_receipt.json",
+      "bytes": 788,
+      "sha256": "e5914819bcde4b5ea9d86fb8ad411f575e5ba3e1bda84234dd9416f706e35caf"
     }
   ],
   "r11_deterministic_math_mapping": {
@@ -171,5 +191,20 @@
     "real_evidence": "UNKNOWN_HOLD",
     "formal_acceptance": "NOT_GRANTED"
   },
-  "r11_sync_parent_head": "bb5abb9c733d14186b16c1a732cf10d5c2f9de37"
+  "r11_sync_parent_head": "bb5abb9c733d14186b16c1a732cf10d5c2f9de37",
+  "r11_opencode_r09_mapping_review": {
+    "result": "BLOCKED_PROVIDER_429_NO_REVIEW_RETURNED",
+    "candidate_sha256": "7fc82ba7ae25ba3fd422d7abcae2618176f64d4e2e118021122912440d9b740f",
+    "requested_model": "opencode/glm-5.3-flash-free",
+    "actual_serving_model": "UNKNOWN",
+    "provider_error": "provider.free-limit HTTP 429",
+    "retry_after_ms": 12302000,
+    "fallback": "No fallback or model switch requested; actual serving model UNKNOWN",
+    "billing": "free model ID explicitly requested; actual billing confirmation UNKNOWN",
+    "candidate_sha256_after": "7fc82ba7ae25ba3fd422d7abcae2618176f64d4e2e118021122912440d9b740f",
+    "candidate_unchanged": true,
+    "independent_review": "NOT_RETURNED",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN/HOLD"
+  }
 }
