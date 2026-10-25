@@ -1,0 +1,167 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0121",
+  "requirement_id": "I19-E09",
+  "official_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+  "candidate_revision": "R02",
+  "candidate_state": "CANDIDATE_PENDING_INDEPENDENT_EXACT_SHA_SEMANTIC_REVIEW",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "NOT_PROVIDED",
+  "source_commit": "07b6933f1af011b32e49d4391475bedc99fdbe67",
+  "source_packet_sha256": "fbeb11b96648fff29a49a0fca74bf0cc3b3d1d29934f07dfaa3cf7e410a557fd",
+  "unique_blueprint_sha256": "99320fdc9078615ad04087c43bcbd22c5bbf751a22127c51e048e909726a5fca",
+  "prior_R01_candidate_sha256": "e59e6b6a2b7bb36b178301be48ab27577597fdd0cd5b6b010c388b66ffb3bef6",
+  "candidate_sha256": "ae5da09e834f5a8e9097a85ac87d4fe2f76acf9626049d3b0bea7c5f35042efe",
+  "technical_visual_qa": "PASS_TECHNICAL_VISUAL",
+  "independent_semantic_review": "PENDING_EXTERNAL_REVIEW",
+  "original_worker_evidence": "R01 Antigravity writer response/dispatch evidence remains in ../0121_I19-E09_R01_20261024/worker/; requested model was Gemini 3.8 Flash High, serving-model identity UNKNOWN; R02 is a targeted Codex correction of six exact findings, not another full Writer generation.",
+  "previous_R01_independent_review": "PARTIAL; exact SHA bound in included R01 review receipt.",
+  "route_blocker": "Two OpenCode v2 free-tier provider.free-limit HTTP 429 short smoke attempts; no review response; actual model/cost UNKNOWN; no paid fallback.",
+  "source_package_reference": "../0121_I19-E09_R01_20261024/source/",
+  "artifacts": [
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R02_20261026/candidate/0121_學員滿意度與學習評量報告_R02.docx",
+      "role": "candidate_docx",
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0121_I19-E09_SOURCE_PREP_R01_20261024\\candidate_R02\\0121_學員滿意度與學習評量報告_R02.docx",
+      "bytes": 72567,
+      "sha256": "ae5da09e834f5a8e9097a85ac87d4fe2f76acf9626049d3b0bea7c5f35042efe",
+      "git_blob_sha1": "369571cb73f1b674cf480196cf12f5fbc97ab684"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R02_20261026/evidence/0121_R02_word_render.pdf",
+      "role": "word_native_render_pdf",
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0121_I19-E09_SOURCE_PREP_R01_20261024\\candidate_R02\\0121_R02_word_render.pdf",
+      "bytes": 970834,
+      "sha256": "20995e755e0b58ba3b4fd47f3d2614673824947992c3e8a93b851ac69328893e",
+      "git_blob_sha1": "4521e5acfc4d2d370b4bdb2211a988efb12a961b"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R02_20261026/evidence/technical_visual_QA_R02.json",
+      "role": "deterministic_math_and_visual_qa",
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0121_I19-E09_SOURCE_PREP_R01_20261024\\candidate_R02\\technical_visual_QA_R02.json",
+      "bytes": 22327,
+      "sha256": "991070dd52752ba2d04c0c91d1b7ab1ea18574994b1cce29b5fdb3fc433330cd",
+      "git_blob_sha1": "d7e284ae24725b96aff3161bdd3d2e538910988b"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R02_20261026/evidence/repair_receipt_R02.json",
+      "role": "targeted_repair_and_status_receipt",
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0121_I19-E09_SOURCE_PREP_R01_20261024\\candidate_R02\\repair_receipt_R02.json",
+      "bytes": 9907,
+      "sha256": "98e9c48db49612065f583c7523c18d2cac0a9a4a8e48d865c9ed657ade2e4d30",
+      "git_blob_sha1": "8dfa2fc008a21b2cfa352254550c409b642c487b"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R02_20261026/evidence/candidate_R02_extract.txt",
+      "role": "complete_text_and_table_extract",
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0121_I19-E09_SOURCE_PREP_R01_20261024\\candidate_R02\\candidate_R02_extract.txt",
+      "bytes": 44992,
+      "sha256": "e1542259ebf50ccba0adaaea92da01d6c9a7426186adcd6c50a40ab95b0dc314",
+      "git_blob_sha1": "ec38d3f6e8e3366733e78d406909b4cc614af182"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R02_20261026/tools/qa_0121_R02.py",
+      "role": "deterministic_qa_script",
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0121_I19-E09_SOURCE_PREP_R01_20261024\\candidate_R02\\qa_0121_R02.py",
+      "bytes": 12516,
+      "sha256": "22913f0a862a5e61c3dfcd21688fa064142d926e0a6ee52d05b1024b3f9c6ac9",
+      "git_blob_sha1": "892db0ef9778024c6c1a0e221400cc527968ea45"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R02_20261026/review/semantic_review_request_R02.txt",
+      "role": "exact_sha_text_only_review_packet",
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0121_I19-E09_SOURCE_PREP_R01_20261024\\candidate_R02\\evidence\\semantic_review_request_R02.txt",
+      "bytes": 67794,
+      "sha256": "dbf4d1e8fac3cc591a021620906022c40f04b6ae0611ec71359cf5ed03cc387d",
+      "git_blob_sha1": "33700f87898c04e1c20cf25ab317a1792040181f"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R02_20261026/review/prior_R01_semantic_review.md",
+      "role": "prior_candidate_partial_review",
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0121_I19-E09_SOURCE_PREP_R01_20261024\\evidence\\codex_semantic_review_R01_20261026\\semantic_review_R01.md",
+      "bytes": 4846,
+      "sha256": "0e9cfc1e9fe14c8cc938097860274226e5623ce64a4dda773551272392e9be68",
+      "git_blob_sha1": "0d8e6269f697363a977bc496e4fa940a0f4cf4a7"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R02_20261026/review/prior_R01_semantic_review.json",
+      "role": "prior_candidate_review_receipt",
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0121_I19-E09_SOURCE_PREP_R01_20261024\\evidence\\codex_semantic_review_R01_20261026\\semantic_review_R01.json",
+      "bytes": 2757,
+      "sha256": "5157ae0d307d88eeec58c76441fba143497ba6a8550f0dc5e0c6889dcdd69f86",
+      "git_blob_sha1": "52c78e5ef473bca5856cb977164913bafc431abc"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R02_20261026/evidence/opencode_route_attempts/deepseek/receipt.json",
+      "role": "route_attempt_receipt",
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0121_I19-E09_SOURCE_PREP_R01_20261024\\evidence\\opencode_deepseek_v41_smoke_20261026T070839\\receipt.json",
+      "bytes": 858,
+      "sha256": "4a236c4d5cca563606c3261ed9acf3668677bf6a2de3dd20399e635ac7720653",
+      "git_blob_sha1": "544e6bf07c202cba0bb6da6a72b1a6f24519f1fb"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R02_20261026/evidence/opencode_route_attempts/deepseek/request.txt",
+      "role": "route_attempt_request",
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0121_I19-E09_SOURCE_PREP_R01_20261024\\evidence\\opencode_deepseek_v41_smoke_20261026T070839\\request.txt",
+      "bytes": 36,
+      "sha256": "69bb51528bc5afb419a4596dc3d1ac33f597a0e2d66232eb1599c4b28f1e5f11",
+      "git_blob_sha1": "a3bd6b5308b9d1f59bff053cbe2c71d5d92391e5"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R02_20261026/evidence/opencode_route_attempts/deepseek/stdout.jsonl",
+      "role": "route_attempt_raw_stdout",
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0121_I19-E09_SOURCE_PREP_R01_20261024\\evidence\\opencode_deepseek_v41_smoke_20261026T070839\\stdout.jsonl",
+      "bytes": 778,
+      "sha256": "55f522b2078ec7ddd61ff716a24178d4b53c15ad8f02f660bdd2c2611d874560",
+      "git_blob_sha1": "9c3950ae932fde8701cb8d5490f88cef64f4603b"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R02_20261026/evidence/opencode_route_attempts/deepseek/stderr.txt",
+      "role": "route_attempt_raw_stderr",
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0121_I19-E09_SOURCE_PREP_R01_20261024\\evidence\\opencode_deepseek_v41_smoke_20261026T070839\\stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R02_20261026/evidence/opencode_route_attempts/mimo/receipt.json",
+      "role": "route_attempt_receipt",
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0121_I19-E09_SOURCE_PREP_R01_20261024\\evidence\\opencode_mimo_v26_smoke_20261026T070908\\receipt.json",
+      "bytes": 852,
+      "sha256": "f3caaebfd345285c25e1ece4af57097fcd0b65ee064c0945a09838529a0f6b03",
+      "git_blob_sha1": "136f1aefb47bd950106b2986299e3278cf1e5848"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R02_20261026/evidence/opencode_route_attempts/mimo/request.txt",
+      "role": "route_attempt_request",
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0121_I19-E09_SOURCE_PREP_R01_20261024\\evidence\\opencode_mimo_v26_smoke_20261026T070908\\request.txt",
+      "bytes": 36,
+      "sha256": "69bb51528bc5afb419a4596dc3d1ac33f597a0e2d66232eb1599c4b28f1e5f11",
+      "git_blob_sha1": "a3bd6b5308b9d1f59bff053cbe2c71d5d92391e5"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R02_20261026/evidence/opencode_route_attempts/mimo/stdout.jsonl",
+      "role": "route_attempt_raw_stdout",
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0121_I19-E09_SOURCE_PREP_R01_20261024\\evidence\\opencode_mimo_v26_smoke_20261026T070908\\stdout.jsonl",
+      "bytes": 527,
+      "sha256": "aaac11cad4bdab881a34b3848a78a724fcc2d2fcfc8c5561fb8b746e1dcc9dff",
+      "git_blob_sha1": "ff0a5b57c18a61b4451eb7305e3b76ac97a4e899"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R02_20261026/evidence/opencode_route_attempts/mimo/stderr.txt",
+      "role": "route_attempt_raw_stderr",
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0121_I19-E09_SOURCE_PREP_R01_20261024\\evidence\\opencode_mimo_v26_smoke_20261026T070908\\stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R02_20261026/evidence/candidate_status_R02.md",
+      "role": "candidate_status",
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0121_I19-E09_SOURCE_PREP_R01_20261024\\candidate_R02\\candidate_status_R02.md",
+      "bytes": 1290,
+      "sha256": "6bd5e40ff95bb60b4a18f7ecb298df997f4a7828c9a8b6b835afb27a706f2794",
+      "git_blob_sha1": "f8071e0ef85d0c492c4ef82fa1bc0fcc1451dd4a"
+    }
+  ]
+}
