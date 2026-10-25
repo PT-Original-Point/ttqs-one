@@ -1,0 +1,90 @@
+{
+  "schema": "ttqs-one-0141-r06-worker-closeout-v1",
+  "observed_at_local": "2026-10-25T09:34:03+08:00",
+  "doc_id": "0141",
+  "requirement_id": "I19-E31",
+  "writer": {
+    "route": "OpenCode v2 CLI",
+    "work_id": "TTQS_ONE_0141_I19-E31_R06_TARGETED_REPAIR",
+    "pid": 7420,
+    "session_id": "ses_e8f607cfeffe0U04MF69kugpA2",
+    "requested_model": "opencode/deepseek-v4.1-flash-free",
+    "actual_model_identity": "UNKNOWN",
+    "exit_code": 0,
+    "stdout_path": "worker/OPENCODE_R06_WRITER_STDOUT.jsonl",
+    "stdout_bytes": 363175,
+    "stdout_sha256": "68a152fbfbe1c02c4435af6c7dc70501812c151c44e3a573f5964a4f292a7aa5",
+    "stderr_path": "worker/OPENCODE_R06_WRITER_STDERR.txt",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prompt_path": "OPENCODE_R06_TARGETED_REPAIR_PACKET.md",
+    "prompt_sha256": "b3993a7204735664cd5637c42eabb00947af8ab6d92f64e98e98cb7d248d2b8a",
+    "raw_output_manuscript_sha256_before_layout_fix": "4edb0c271429b76176f523322c02f200371c53fce655b242546047f5dd09b7ea",
+    "adopted_manuscript_sha256": "2c374341b936ab4e4bb13889f870f42c79e03f688b7e1d92478d1fe052d7d287",
+    "cost_usd": "UNKNOWN",
+    "token_usage": "UNKNOWN"
+  },
+  "layout_repair": {
+    "method": "local deterministic U+2011 replacement for one live executive token; historical revision-log occurrence preserved",
+    "receipt_path": "R06_LAYOUT_PATCH_RECEIPT.json",
+    "receipt_sha256": "214d9e35ae5121db338bab04e72559f0c1f799941da39646e6be6f342ae0cfbe"
+  },
+  "candidate": {
+    "docx_path": "0141_I19-E31_R06_CANDIDATE.docx",
+    "docx_sha256": "e2a5a981fd364b87a9bd3e096dbc97abeb6b58ed7fb27891d575f12e1d75bdc2",
+    "source_manuscript_sha256": "2c374341b936ab4e4bb13889f870f42c79e03f688b7e1d92478d1fe052d7d287",
+    "word_pdf_sha256": "c3a52474035e4c4239a763c565922f071e7c071af817fd1faf89284b1a76367e",
+    "page_count": 25,
+    "technical_verdict": "PASS",
+    "visual_verdict": "PASS"
+  },
+  "reviewer": {
+    "route": "OpenCode v2 CLI",
+    "work_id": "TTQS_ONE_0141_I19-E31_R06_SEMANTIC_REVIEW",
+    "pid": 83896,
+    "session_id": "ses_e8f51be5affeOCvWK7kny474ii",
+    "requested_model": "opencode/deepseek-v4.1-flash-free",
+    "actual_model_identity": "UNKNOWN",
+    "cli_exit_code": "UNKNOWN (process exit not captured; complete JSON response received)",
+    "stdout_path": "worker/OPENCODE_R06_SEMANTIC_REVIEW_STDOUT.jsonl",
+    "stdout_bytes": 26248,
+    "stdout_sha256": "24d302654595c3519665466316da7f5f22868115c3ab9497a8d30cca2480146c",
+    "stderr_path": "worker/OPENCODE_R06_SEMANTIC_REVIEW_STDERR.txt",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "packet_path": "OPENCODE_R06_SEMANTIC_REVIEW_PACKET.md",
+    "packet_sha256": "258ebd1ea74875c344f53c52fd12627009e5d916734a3dacba10a3b81f933c59",
+    "original_response_path": "OPENCODE_REVIEWER_ORIGINAL_0141_R06.md",
+    "original_response_sha256": "26b47017c73ad9c0ad5bea8a1d3c049c2b7f48dbeb650ffc62d9103789db99d1",
+    "verdict": "PASS",
+    "major_findings": 0,
+    "minor_findings": 4,
+    "limitations": [
+      "TEXT_ONLY; no reviewer pixel observation",
+      "actual serving model, provider usage, tokens and cost UNKNOWN"
+    ],
+    "status": "EXACT_SHA_SEMANTIC_PASS_WITH_4_MINOR_FINDINGS; NOT_PROMOTED"
+  },
+  "status_boundaries": {
+    "real_data": "UNKNOWN/HOLD",
+    "official_score": "NOT_ASSIGNED",
+    "human_formal_acceptance": "NOT_GRANTED",
+    "association_acceptance": "NOT_GRANTED"
+  },
+  "next_action": "Apply four scoped minor findings to a new R07 manuscript/register, rebuild only after content delta, then exact-SHA QA and independent review.",
+  "local_validation_history": {
+    "scope": "R06 deterministic source/math QA",
+    "initial_failures": "Two verifier-script implementation errors were caught before final QA: CSV field names were first assumed to be Q1..Q7 rather than the actual Q1_need_fit etc.; a follow-on comparator also compared alias keys to the longer source-summary labels. Neither changed source rows or DOCX. Both were corrected in the saved verifier.",
+    "final_verifier": "VERIFY_SOURCE_MATH_0141_R06.py",
+    "final_verifier_sha256": "68f5603cfa308755aa41ab49e7aa6caf1f2033f4fadb0615cd639e7fb73419ce",
+    "final_receipt_sha256": "b67ed7b7cf2cc44e19c1d66ab79c4f8455c97d81a9c937e5844c48d591b89543",
+    "final_all_checks_pass": true
+  },
+  "render_recovery": {
+    "initial_attempt": "Word COM exported a PDF but PowerShell failed at Application.Quit(0): installed COM dispatch required a PSReference argument. The first PDF/DOCX pair and receipts are preserved under PRE_LAYOUT_FIX names.",
+    "initial_docx_sha256": "d91bc537301d9431434446c5105db4b19d78860964fba19974d249f32785baaa",
+    "corrective_change": "Changed only renderer COM Quit calls to Quit([ref]$saveChanges); corrected renderer then returned PASS with read-only Word COM, DOCX SHA unchanged and 25 pages.",
+    "final_renderer_script_sha256": "196a676d7f390b7a28061d6e4218a0bf48d78fdba4648ad9ec3d7c47ffd44135",
+    "orphan_cleanup": "The exact hidden WINWORD process PID 85400 was created at 2026-10-25 09:23:47 by the failed render; after identity/time/window verification it was closed. Existing older Word processes were left untouched."
+  }
+}
