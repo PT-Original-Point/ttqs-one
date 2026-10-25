@@ -11,3 +11,5 @@
 - No R11 full-body semantic re-review, real-data validation, human formal acceptance, or official score is claimed.
 
 `R11_COMPLETION_DELTA_RECEIPT.json` closes the earlier README/manifest status mismatch. The original comprehensive technical QA receipt is retained as a time-scoped receipt; it recorded visual and semantic review as pending before those later stages completed.
+
+- GitHub raw-byte readback: VERIFIED for 19 package files at artifact commit `db02ac3f13ed8f02e5f93633c406c36606e70f6a`; receipt `GITHUB_RAW_READBACK_R11_0140.json` SHA-256: `b517e581b26b0d2a90855bdbaf26431251c62be55e724806e99103162205ac22`.
