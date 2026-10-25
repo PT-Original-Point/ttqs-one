@@ -1,31 +1,56 @@
 {
   "work_id": "TTQS-0140-I19-E30-R11",
+  "project_id": "TTQS_ONE",
   "doc_id": "0140",
   "requirement_id": "I19-E30",
-  "official_checklist_index": 154,
+  "official_registry_index": 154,
   "printed_checkbox_serial": "UNKNOWN",
-  "candidate_status": "CANDIDATE",
+  "candidate_status": "CANDIDATE_ONLY",
   "candidate_revision": "R11",
   "parent_candidate_revision": "R10",
   "parent_docx_sha256": "de9525e42a391d0ed002d23d54d5a9b9c1e042f7c194b71f00b61bd98ff48c16",
   "docx_sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d",
   "docx_bytes": 127801,
-  "manuscript_sha256": "8dcd4ec781e21d163a1912ff2397f40272ce357206fc7d81cea3a645116066df",
+  "source_manuscript_sha256": "8dcd4ec781e21d163a1912ff2397f40272ce357206fc7d81cea3a645116066df",
   "dataset_sha256": "d1322d85bb809f3606a2edf4a8e0a26b9bb461dee4577e91ea0522972694c63d",
   "replacement_register_sha256": "9a207c162cc36b08896d4f1ad04ccdcfdefa62bd2b038be31dc715702982e19f",
-  "source_mapping_sha256": "b9b18460bf16e477e8147aafa9f42dee0313290398e923667652393c14b346b5",
-  "real_data_status": "UNKNOWN/HOLD",
+  "technical_qa": {
+    "status": "PASS_21_OF_21",
+    "receipt_sha256": "bc3655dbe60bebfe4bc7dda65514808ae3ccb50cf85098e4f7fcb059ab5028d2"
+  },
+  "visual_review": {
+    "status": "PASS_WITH_NONBLOCKING_LAYOUT_NOTE",
+    "pages_reviewed": 29,
+    "receipt_sha256": "e077d1662a8d23706ad5de51f794ea908c69cfbc4682e608dd63fc301c8aa96a",
+    "word_native_pdf_sha256": "ed2b1cb66440eb5f4db83023d794587467c8836197fed4ca686fc86de49bc5bc",
+    "note": "Pages 6, 10 and 14 contain substantial whitespace; no clipping, overlap, truncation or overflow."
+  },
+  "semantic_delta_review": {
+    "status": "PASS_DELTA_ONLY",
+    "receipt_sha256": "0573a95b8b37dcf4e5c850cd8e7331dc4b0fa72f7dd22745742ee697426d447c",
+    "raw_response_sha256": "559e04a8ce4dfa80572123e9b29ef5e08c3a5f25ce514f65cd1465bd0391a236",
+    "review_packet_sha256": "8a5ea829182a30216dd6dbe9ef81e62d867a738262b6fa976647a9b478ac0324",
+    "scope": "R11 targeted text/table delta only; R10 full-body review remains bound to R10 SHA.",
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model": "UNKNOWN",
+    "fallback": "UNKNOWN"
+  },
+  "visible_text_diff": {
+    "status": "PASS_EXACTLY_FIVE_REGISTERED_REPLACEMENTS",
+    "receipt_sha256": "a1c6730a554947f120ae750b9fc78d1450f03b5cea2c786a012df19ca5c5dad4"
+  },
+  "inherited_full_semantic_baseline": {
+    "parent_revision": "R10",
+    "parent_docx_sha256": "de9525e42a391d0ed002d23d54d5a9b9c1e042f7c194b71f00b61bd98ff48c16",
+    "receipt_sha256": "598aa42ac83f3de9462bcf49f6c33fcf657bd1a1432a748c5cfa91e20c2f3d55",
+    "applies_to_R11": "NO; only context for targeted delta review"
+  },
+  "real_evidence": "UNKNOWN/HOLD",
   "formal_acceptance": "NOT_GRANTED",
+  "remote_sync": "PENDING",
   "build_receipt_sha256": "39a2c58493b22f8d73373c15879f4d514d60dd96378a1b1a97e0bf07670f47aa",
-  "comprehensive_qa_status": "PASS",
-  "visual_review": "PENDING",
-  "independent_semantic_review": "PENDING",
-  "inherited_parent_semantic_review": "R10 full-document PASS bound to parent SHA only; R11 requires exact-SHA delta review",
-  "finding_repairs": [
-    "F1",
-    "F2",
-    "F3"
-  ],
-  "visual_finding_F4": "Must inspect chart values at the exact R11 render",
-  "comprehensive_qa_sha256": "bc3655dbe60bebfe4bc7dda65514808ae3ccb50cf85098e4f7fcb059ab5028d2"
+  "source_delta_receipt_sha256": "e929d9079dce51347283a11543dab526e29395acc9963ca558533f95ec02cf6a",
+  "stage_receipt_sha256": "010c0fb4032f23ec99253fe2c7bc194ab0edaac344ec67a6f0542e1fa7b8d795",
+  "opencode_route": "BLOCKED_PROVIDER_FREE_LIMIT_HTTP_429",
+  "opencode_receipt_sha256": "c3e9d1fa92cc3eb12fdbc10ae35ac66299e40a16cb7de2b8b48445deb62e43d3"
 }
