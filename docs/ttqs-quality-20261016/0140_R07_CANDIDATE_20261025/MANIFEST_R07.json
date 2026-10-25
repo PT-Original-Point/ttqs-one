@@ -12,16 +12,17 @@
   "targeted_qa": "16/16 source/content/math checks PASS; native Word visual and independent semantic review pending",
   "visual_review": "PENDING; Word COM resources currently occupied by a separate responsive 0141 R07 render",
   "semantic_review": {
-    "status": "RUNNING",
+    "status": "PARTIAL_PENDING_TARGETED_REPAIR",
+    "reviewer_printed_verdict": "PASS",
+    "effective_adjudication": "PARTIAL",
     "requested_model": "opencode/mimo-v2.6-flash-free",
-    "actual_model": "UNKNOWN_PENDING_RAW_CLI_EVENT",
-    "pid": 77476,
-    "session_id": "ses_e8ee2716fffeHyvZzg52x5Tlaw",
-    "tools_authorized": false,
-    "auto_approve": false,
-    "computer_use": "NOT_USED",
-    "provider_billing": "UNKNOWN",
-    "packet_sha256": "21701263b1921dde332a702c7416e764d2f8d59c524620c8227a66d5a0392206"
+    "actual_model": "UNKNOWN",
+    "cli_exit_code": "UNKNOWN_NOT_CAPTURED",
+    "response_sha256": "593ef37bc8065e27d4179c786c6b4fb432ca2031cba222f28f0dd0b9d40bde81",
+    "stdout_sha256": "7611fd6cce0154b8a2d066bfb3b810dadc0c11453faeeca8052212ffa0aa138c",
+    "packet_sha256": "21701263b1921dde332a702c7416e764d2f8d59c524620c8227a66d5a0392206",
+    "scope": "text/semantic/source/math only; no visual review",
+    "adjudication_path": "review/R07_REVIEW_ADJUDICATION_RECEIPT.json"
   },
   "source_mapping": {
     "source_packet_path": "docs/ttqs-quality-20261016/0140_R06_CANDIDATE_20261025/source/SOURCE_PACKET_0140_I19-E30_R01.md",
@@ -113,10 +114,28 @@
       "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0140_I19-E30_CANDIDATE_R07_20261025\\review\\prepare_0140_r07_review_packet.py",
       "bytes": 4703,
       "sha256": "91c771dc6008b8069d3d98669be03b028a05b7aedcbd8251914563eb62fc50b1"
+    },
+    {
+      "remote_path": "docs/ttqs-quality-20261016/0140_R07_CANDIDATE_20261025/review/OPENCODE_MIMO_R07_RESPONSE.md",
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0140_I19-E30_CANDIDATE_R07_20261025\\review\\OPENCODE_MIMO_R07_RESPONSE.md",
+      "bytes": 16667,
+      "sha256": "593ef37bc8065e27d4179c786c6b4fb432ca2031cba222f28f0dd0b9d40bde81"
+    },
+    {
+      "remote_path": "docs/ttqs-quality-20261016/0140_R07_CANDIDATE_20261025/review/OPENCODE_MIMO_R07_STDOUT.jsonl",
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0140_I19-E30_CANDIDATE_R07_20261025\\review\\OPENCODE_MIMO_R07_STDOUT.jsonl",
+      "bytes": 17346,
+      "sha256": "7611fd6cce0154b8a2d066bfb3b810dadc0c11453faeeca8052212ffa0aa138c"
+    },
+    {
+      "remote_path": "docs/ttqs-quality-20261016/0140_R07_CANDIDATE_20261025/review/R07_REVIEW_ADJUDICATION_RECEIPT.json",
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0140_I19-E30_CANDIDATE_R07_20261025\\review\\R07_REVIEW_ADJUDICATION_RECEIPT.json",
+      "bytes": 3183,
+      "sha256": "4f39d48c6e540258a6f2fa994d0a02edb8dd805c85571551558b50b33eaedcd8"
     }
   ],
   "not_included_yet": [
     "R07 native Word PDF/page image set and visual receipt (pending 0141 Office render completion)",
-    "R07 terminal independent review response and terminal receipt (review currently running)"
+    "R08 targeted repair candidate and its new exact-SHA reviews"
   ]
 }
