@@ -1,0 +1,65 @@
+{
+  "schema": "ttqs-one-opencode-narrow-review-dispatch-receipt-r11-v1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0110-I18-E19-R09-MAPPING-MATH-QA-R11-OPENCODE-02",
+  "doc_id": "0110",
+  "requirement_id": "I18-E19",
+  "role": "INDEPENDENT_NARROW_MAPPING_MATH_REVIEW",
+  "worker": "OpenCode v2 CLI",
+  "cli_version": "2.1.4",
+  "requested_model": "opencode/mimo-v2.6-flash-free",
+  "actual_model_recorded_by_session_export": {
+    "provider": "opencode",
+    "model": "mimo-v2.6-flash-free",
+    "variant": "default"
+  },
+  "model_identity_limit": "OpenCode session metadata only; no independent provider attestation.",
+  "free_model_catalog_observation": "The CLI models list and session tool reported this model active with zero listed input/output/cache prices at dispatch; actual billing remains UNKNOWN.",
+  "session_reported_cost": 0,
+  "actual_billing": "UNKNOWN",
+  "session_id": "ses_e8e97457cffe70Uxvl2ikS6lVI",
+  "session_reported_token_usage": {
+    "input": 40187,
+    "output": 3784,
+    "reasoning": 16945,
+    "cache": {
+      "read": 306240,
+      "write": 0
+    }
+  },
+  "started_at_tpe": "2026-10-25T12:54:11.166+08:00",
+  "last_session_update_tpe": "2026-10-25T13:03:06.309+08:00",
+  "stopped_at_tpe": "2026-10-25T13:03:06+08:00",
+  "direct_cli_exit_code": "UNKNOWN",
+  "outer_exec_interrupted_exit_code": 1,
+  "result": "INCOMPLETE_NO_FINAL_REVIEW_VERDICT",
+  "stop_reason": "Bounded wait exceeded; session returned tool-call events but no final assistant review JSON/verdict. Stopped the exact CLI invocation; no retry of the unchanged packet.",
+  "no_fallback_requested": true,
+  "computer_use": false,
+  "file_mutation_observed": false,
+  "candidate_sha256_before": "7fc82ba7ae25ba3fd422d7abcae2618176f64d4e2e118021122912440d9b740f",
+  "candidate_sha256_after": "7fc82ba7ae25ba3fd422d7abcae2618176f64d4e2e118021122912440d9b740f",
+  "candidate_unchanged": true,
+  "packet_sha256": "0199cf39ead350864d1f2dedac969ca57dce041201911f1d85bd476500b97adc",
+  "deterministic_receipt_sha256": "8ea8d3072e67daa258e6d8820fad01434c0e980a0e31488bb22ebd5a7b456d53",
+  "raw_stdout": {
+    "path": "opencode_R09_mapping_math_review_R11_MIMO.stdout.jsonl",
+    "bytes": 112626,
+    "sha256": "45dfc53d758c18f7e943508e173b3fb0a16a5253e68c61a86d9b008d06fe827e"
+  },
+  "raw_stderr": {
+    "path": "opencode_R09_mapping_math_review_R11_MIMO.stderr.txt",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "session_export_snapshot": {
+    "path": "opencode_R09_mapping_math_review_R11_MIMO_session_snapshot.json",
+    "bytes": 143151,
+    "sha256": "1b21e7f11e51a72a6d7c47a06050d18b8c02fb4f802e5c55d83a8122b78c6a0b"
+  },
+  "prior_R09_deterministic_result": "PASS_DETERMINISTIC_MATH_AND_ITEM_MAPPING; exact candidate SHA above; 14 item rows and published figures match; 6/8=75.0%, 7/8=87.5%, +12.5pp, D0+30 REVISE, D0+60 pending.",
+  "prior_Antigravity_R09_semantic_result": "PASS for exact candidate text scope; requested Gemini 3.8 Flash High, actual model identity UNKNOWN; visual review not included.",
+  "candidate_state": "CANDIDATE_ONLY",
+  "real_data": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED"
+}
