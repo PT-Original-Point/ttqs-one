@@ -1,49 +1,17 @@
-# TTQS ONE
+# DOCX 0136 R02 candidate evidence package
 
-TTQS ONE is the controlled TEST runtime for the 2026-08-13 consultant demonstration.
-
-## v0.6.3 adversarial-audit hardening
-
-Acceptance path:
-
-Real Google Forms SAMPLE submission -> immutable raw event identity -> Apps Script -> TEST core database -> EventJobLedger -> controlled failure -> bounded automatic retry -> raw-root exact reconciliation -> runtime EvidenceMaster registration -> automatic 19-indicator consultant evidence index.
-
-Hard gates:
-
-- TEST only for the 8/13 runtime acceptance path; PROD remains untouched.
-- `ENABLE_REAL_WRITES=false` and `PII_VAULT_READY=false` are fail-closed code controls.
-- `ttqsBootstrapTest()` requires consent for all explicit manifest scopes before any lock, health check, ledger write, Form creation, or trigger creation; Health also exposes current FULL authorization status.
-- Google Forms expose only controlled SAMPLE choices; no arbitrary respondent text field is created.
-- Each real Form response is assigned a persisted `TTQS_EVENT_ID` before JobLedger processing. `FORM_SUITE` identity uses Form ID + this immutable event ID; row number is only a locator.
-- Retry handles due `FAILED` jobs and stale `RUNNING` jobs after a bounded lease, under a ScriptLock, and resolves the raw response again by immutable source reference.
-- Reconciliation starts from the raw `RUNTIME_*_RESPONSES` rows, so a response whose installable trigger never created a JobLedger row is a mismatch rather than a false PASS.
-- Reconciliation requires exact component counts and validates job/survey/party/evidence cross-links before `MATCHED_EXACTLY_ONCE`.
-- Runtime EvidenceMaster rows are `TEST` / `SAMPLE`, carry raw/provider/job linkage, and are explicitly `NOT_FORMAL`; they do not prove formal TTQS outcomes.
-- Managed trigger validation checks handler cardinality plus event type, trigger source, and the TEST core spreadsheet source ID for `onFormSubmit`.
-- Runtime Forms must read back as published and expose a non-empty responder URL; real accessibility is still a Google provider runtime gate.
-- Indicators 17-19 remain `FORMAL_BLOCKED_NEEDS_REAL` until genuine REAL outcome evidence exists.
-- `FormResponse.submit()` is not used for runtime acceptance; submissions must use the real Google Forms UI.
-- `clasp` push scope remains exactly `appsscript.json` plus 13 root-level `.gs` files.
-- The release manifest verifier requires exact coverage of git-tracked regular files, excluding only the manifest and its separate self-hash file.
-- GitHub Actions `checkout` and `setup-node` references are pinned to immutable commit SHAs rather than mutable major-version tags.
-
-Evidence boundary:
-
-- Source/CI PASS does not mean Google runtime PASS.
-- Unit/contract/behavior tests do not prove Google OAuth, trigger scheduling, responder accessibility, or provider-side execution.
-- Google provider runtime acceptance must independently verify identity ownership, remote source readback, real Form UI submission, Apps Script Executions evidence, exact reconciliation, and the 17-19 formal REAL gate.
-
-Known non-blocking post-demo hardening:
-
-- Remove CI-time `npx --yes` supply-chain dependence by locking the clasp tool graph.
-- Re-evaluate TypeScript and a transactional database / Cloud Run architecture before REAL or scaled production use.
-
-## Main TEST entrypoints
-
-- `ttqsBootstrapTest()`
-- `ttqsHealthCheck()`
-- `ttqsInjectNextRegistrationFailure()`
-- `ttqsCreateFaultProbe()`
-- `ttqsRetryFailedJobs()`
-- `ttqsReconcile()`
-- `ttqsRefreshConsultView()`
+- Project: TTQS ONE; DOCX 0136; official requirement I19-E26; project-157 index 150; printed checkbox serial UNKNOWN.
+- Candidate SHA-256: a9bd0fb528a1e22865fa5e07df44b314d48c1fd826a08149ecdd1d5915048b39; CANDIDATE only.
+- Official source packet: [SOURCE_PACKET_0136_I19-E26_R01.md](../source/SOURCE_PACKET_0136_I19-E26_R01.md), SHA-256 7bebd3eb012b152f4568db6fedccf43c3337f436a5f339127e5afe71cf0678d7.
+- Unique Blueprint: [UNIQUE_BLUEPRINT_0136_I19-E26_R01.md](../source/UNIQUE_BLUEPRINT_0136_I19-E26_R01.md), SHA-256 32c1b818cc0b3957a23e319606f77b176a7979d1ee4ff58db72b9ae32ada8399.
+- Official page 8-9 excerpt: [OFFICIAL_SOURCE_P8_P9_TEXT.txt](../source/OFFICIAL_SOURCE_P8_P9_TEXT.txt); source packet retains official PDF provenance.
+- Deterministic build receipt: technical integrity PASS; 106 paragraphs and 32 tables.
+- Word-native visual QA: PASS, all 14 pages inspected; PDF SHA-256 2d823b450348fbe4a260de82074daf4f66ec4e9467b4f1aac8e64649c9b8ea89.
+- Independent semantic review: Antigravity CLI returned PASS on the exact candidate SHA. Local adjudication checks the response binding, 14/14 finding statuses, table markers, and key content controls.
+- Requested model gemini-3.8-flash-high; actual model and fallback UNKNOWN. CLI-reported usage 32193 tokens; billing UNKNOWN.
+- No tools were requested, no permission-bypass flag was used, and the process used CreateNoWindow plus sandbox. CLI warned that plan mode had no effect with slash commands disabled; worker tool-use and Computer Use telemetry remain UNKNOWN.
+- The semantic review is text-only; visual review is covered separately by the 14-page Word receipt.
+- All examples are SAMPLE/SYNTHETIC. REAL evidence UNKNOWN/HOLD; formal acceptance NOT_GRANTED; no official score assigned.
+- The package includes the unadopted Worker disposition for audit context. Failed/unadopted Worker text was not used as candidate content.
+- Package location on PR #92: docs/ttqs-quality-20261016/quality-review/0136_I19-E26_SOURCE_PREP_R01_20261025/R02_CANDIDATE_R11_20261026/.
+- Raw-byte GitHub readback evidence is stored under evidence/GITHUB_RAW_READBACK_0136_R02.json after sync.
