@@ -1,0 +1,42 @@
+{
+  "receipt_id": "VISUAL_QA_0134_R01",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0134",
+  "requirement_id": "I19-E23",
+  "official_checkbox_serial": "UNKNOWN",
+  "project_157_index": 147,
+  "candidate_status": "CANDIDATE",
+  "candidate_docx": "candidate/0134__會員人數及會費收入逐年變化分析報告_R01.docx",
+  "candidate_docx_sha256": "a003ad1906194d1cb30a37a313f2ebd004cee129d6c231c6a3bef40b321cee08",
+  "source_commit_verified_at_pr_head": "82a0114562db9633edb01c57de0fbdf4bf51d067",
+  "source_packet_path": "docs/ttqs-quality-20261016/quality-review/0134_I19-E23_SOURCE_PREP_R01_20261024/source/SOURCE_PACKET_0134_I19-E23_R01.md",
+  "source_packet_local_remote_byte_match": true,
+  "unique_blueprint_path": "docs/ttqs-quality-20261016/quality-review/0134_I19-E23_SOURCE_PREP_R01_20261024/source/UNIQUE_BLUEPRINT_0134_I19-E23_R01.md",
+  "unique_blueprint_source_commit": "d9650e0df31b17f296994af5a65ec56930f40463",
+  "unique_blueprint_source_blob": "cab446ede479001334289d18062e6b8bb2340dc3",
+  "unique_blueprint_local_remote_byte_match": true,
+  "render": {
+    "method": "Microsoft Word native render, R06",
+    "pdf_path": "render/word_native_R06/0134_R01_WordNative.pdf",
+    "pdf_sha256": "464f844f116587bcac55f71e3fa6358fd4101f29af3feae0cbcc9076a9a6445e",
+    "page_count": 20,
+    "page_images": "render/word_native_R06/page-01.png through page-20.png",
+    "page_image_count": 20,
+    "inspection_scope": "All 20 page images individually inspected at original resolution."
+  },
+  "result": "PASS_WITH_NONBLOCKING_LAYOUT_NOTES",
+  "observations": [
+    "No clipping, overlap, broken tables, missing glyphs, or header/footer defects observed.",
+    "Split tables retain repeated headers.",
+    "Page 12 contains substantial whitespace around a short continued table; readable and nonblocking.",
+    "Page 20 is a sparse closing status page; readable and nonblocking."
+  ],
+  "technical_qa_path": "qa/TECHNICAL_QA_0134_R01.json",
+  "technical_qa_docx_sha256": "a003ad1906194d1cb30a37a313f2ebd004cee129d6c231c6a3bef40b321cee08",
+  "semantic_review": "PENDING_INDEPENDENT_EXACT_SHA_REVIEW",
+  "formal_acceptance": "NOT_GRANTED",
+  "evidence_boundary": "SAMPLE/SYNTHETIC throughout; REAL source records UNKNOWN.",
+  "reviewer_scope_note": "This receipt records visual layout inspection only; it does not claim semantic acceptance or formal acceptance.",
+  "reviewed_at_local": "2026-10-26 01:12:11 +08:00"
+}
+
