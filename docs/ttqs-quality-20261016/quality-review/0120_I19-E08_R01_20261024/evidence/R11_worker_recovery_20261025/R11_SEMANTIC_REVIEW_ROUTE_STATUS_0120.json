@@ -53,15 +53,30 @@
     "existing_service_pid": 79496,
     "service_is_writer": false,
     "requested_free_model": "opencode/deepseek-v4.1-flash-free",
-    "accepted_request": 1,
     "exit_code": 1,
     "response": "HTTP 429 Free usage limit reached",
     "retry_after_ms": 41436000,
     "actual_model": "UNKNOWN",
     "worker_output_adopted": false,
     "paid_fallback": "NOT_USED",
-    "retry": "NOT_PERFORMED"
+    "retry": "NOT_PERFORMED",
+    "dispatch_attempts_for_0120": 1,
+    "provider_inference_accepted": false,
+    "global_free_limit_observed": true,
+    "prior_same_provider_0110": {
+      "receipt_path": "docs/ttqs-quality-20261016/quality-review/0110_I18-E19_R01_20261023/R09/evidence/opencode_0110_R09_narrow_review_R11_dispatch_receipt.json",
+      "receipt_sha256": "654f3cd7d8eba79b2620046e6e4411e9455915dac741c3b7c4d19b6560542401",
+      "started_local": "2026-10-25T19:26:36+08:00",
+      "requested_model": "opencode/deepseek-v4.1-flash-free",
+      "http_status": 429,
+      "retry_after_ms": 45203000,
+      "actual_model": "UNKNOWN",
+      "token_usage": "UNKNOWN_NO_MODEL_RESPONSE"
+    },
+    "shared_provider_dispatches_since_0110": 2,
+    "cooldown_precheck_missed": true,
+    "correction": "Do not dispatch any OpenCode free model while shared provider retryAfter is active; before future dispatches reconcile same-provider failures across document lanes."
   },
   "real_evidence": "No REAL association performance or formal records asserted; candidate uses SAMPLE/SYNTHETIC",
-  "observed_at_local": "2026-10-25T20:32:31.0947799+08:00"
+  "observed_at_local": "2026-10-25T20:39:56.9120850+08:00"
 }
