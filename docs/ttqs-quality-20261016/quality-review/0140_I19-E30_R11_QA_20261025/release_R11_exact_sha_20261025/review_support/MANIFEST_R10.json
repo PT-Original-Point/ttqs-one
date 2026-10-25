@@ -1,0 +1,207 @@
+{
+  "work_id": "TTQS-0140-I19-E30-R10",
+  "doc_id": "0140",
+  "requirement_id": "I19-E30",
+  "official_checklist_index": 154,
+  "printed_checkbox_serial": "UNKNOWN",
+  "candidate_status": "CANDIDATE",
+  "real_data_status": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED",
+  "parent_candidate_revision": "R09",
+  "parent_docx_sha256": "49afdcfa11b6f91952590995b4c0152d76271b2169b2a4433bb08bbbba46db4e",
+  "source_mapping_sha256": "b9b18460bf16e477e8147aafa9f42dee0313290398e923667652393c14b346b5",
+  "manuscript_sha256": "05a48af62b25273f41019aa6f66d61ca2a1c9c111d51e3e02a37afeac2e4e4d6",
+  "builder_sha256": "cffdbf90262f14b3816f8fcb4aa5a00976a969c4081ba85dc72936ccb33e18d5",
+  "dataset_sha256": "d1322d85bb809f3606a2edf4a8e0a26b9bb461dee4577e91ea0522972694c63d",
+  "replacement_register_sha256": "9a207c162cc36b08896d4f1ad04ccdcfdefa62bd2b038be31dc715702982e19f",
+  "replacement_register_data_records": 82,
+  "replacement_register_physical_lines": 83,
+  "targeted_changes": [
+    "Deterministic inline Markdown parser renders paired single-asterisk emphasis as Word italic runs; no manuscript wording, dataset, chart input, or replacement-register changes."
+  ],
+  "unchanged_80_row_dataset": true,
+  "unchanged_replacement_register": true,
+  "visual_review": "PASS: all 29 pages individually inspected; bound to exact DOCX and Word PDF SHA in R10_VISUAL_PAGE_DIFF.json",
+  "independent_semantic_review": "PASS: exact candidate SHA; text/data/requirement/Blueprint only; see receipt and original response; binary SHA and visual review were expressly out of scope.",
+  "docx_sha256": "de9525e42a391d0ed002d23d54d5a9b9c1e042f7c194b71f00b61bd98ff48c16",
+  "docx_bytes": 127792,
+  "build_receipt_sha256": "a2a6066c4ec567bb7a205f6a26c3db45cd9250ef426b5c7d01a13c2490593d41",
+  "comprehensive_qa_sha256": "b2c12772bb422704982130708a9a93094fbb9c5967d5cc37b72d85d418dc402d",
+  "comprehensive_qa_status": "PASS",
+  "review_packet_sha256": "e9d5f92c17b9f078f2fc1d7bdd9a5695317eb6f0ca403765b5e91d7801bdd692",
+  "review_packet_receipt_sha256": "f43b316643e865b5fcf4761c44822cc37d21dba097374ccf6381769f090849d2",
+  "qa_method_correction": "Initial section-count expectation corrected from 4 total sections to actual 8 total sections (4 landscape); candidate DOCX unchanged.",
+  "candidate_revision": "R10",
+  "unchanged_manuscript_content_from_R09": true,
+  "R09_parent_sha256": "49afdcfa11b6f91952590995b4c0152d76271b2169b2a4433bb08bbbba46db4e",
+  "visual_receipt_sha256": "b9943292fe349ca0d2dafb2ed966a9779632ab6ccb9d429904fa5a00ac01709c",
+  "word_pdf_sha256": "03a9e7c8efd30beb81f0882bb6995211bff2bd6a6e487f0c45ff2c28117cfdd5",
+  "semantic_review_receipt_sha256": "598aa42ac83f3de9462bcf49f6c33fcf657bd1a1432a748c5cfa91e20c2f3d55",
+  "semantic_review_original_sha256": "73400bfceec096a794a211c85347e93a19c0a274e734e7c8882672ea9953c0cd",
+  "source_artifacts": [
+    {
+      "path": "source/MANUSCRIPT_0140_R09.md",
+      "sha256": "05a48af62b25273f41019aa6f66d61ca2a1c9c111d51e3e02a37afeac2e4e4d6",
+      "role": "unchanged manuscript inherited from R09"
+    },
+    {
+      "path": "source/SYNTHETIC_USER_DATASET_0140_R01.csv",
+      "sha256": "d1322d85bb809f3606a2edf4a8e0a26b9bb461dee4577e91ea0522972694c63d",
+      "role": "80-row SAMPLE dataset"
+    },
+    {
+      "path": "source/SYNTHETIC_REPLACEMENT_REGISTER_0140_R07.csv",
+      "sha256": "9a207c162cc36b08896d4f1ad04ccdcfdefa62bd2b038be31dc715702982e19f",
+      "role": "82 data records plus header"
+    }
+  ],
+  "semantic_review_findings_summary": "Three LOW editorial recommendations remain non-blocking; Figure 1 was covered by separate visual review. See original reviewer response and exact-SHA receipt.",
+  "audit_evidence_files": [
+    {
+      "path": "DOCX_BUILD_RECEIPT_0140_R10.json",
+      "bytes": 1599,
+      "sha256": "a2a6066c4ec567bb7a205f6a26c3db45cd9250ef426b5c7d01a13c2490593d41"
+    },
+    {
+      "path": "source/build_0140_docx_r10.py",
+      "bytes": 22476,
+      "sha256": "6899370a2c4d52979471f3138664e08c0cdd91d0decaa7abc6da3d72f15f5c2c"
+    },
+    {
+      "path": "source/make_r10_review_packet.py",
+      "bytes": 5188,
+      "sha256": "12a313db14b03c076a854903c39ac9593eb68c00ad9c3ce47a5574e4118f6d44"
+    },
+    {
+      "path": "source/prepare_r10.py",
+      "bytes": 6793,
+      "sha256": "98bd9a5fdc0dae21c3a9cab2b6b6167f0232676bc6a04687ff7bf1305d6d13ab"
+    },
+    {
+      "path": "source/qa_0140_r10_comprehensive.py",
+      "bytes": 10499,
+      "sha256": "3003e2f4cd64e98ee19a72de87b68d872ca0898fd2955d7590525d2a72af2ba4"
+    },
+    {
+      "path": "source/package_r10_audit_bundle.py",
+      "bytes": 7074,
+      "sha256": "8b928e38a306dd521ea3c0deebf4fccc36ab493f6df02ec0c7a9901f1d012493"
+    },
+    {
+      "path": "source/SOURCE_MAPPING_0140_R09.json",
+      "bytes": 1744,
+      "sha256": "b9b18460bf16e477e8147aafa9f42dee0313290398e923667652393c14b346b5"
+    },
+    {
+      "path": "source/MANUSCRIPT_0140_R09.md",
+      "bytes": 30888,
+      "sha256": "05a48af62b25273f41019aa6f66d61ca2a1c9c111d51e3e02a37afeac2e4e4d6"
+    },
+    {
+      "path": "source/SYNTHETIC_USER_DATASET_0140_R01.csv",
+      "bytes": 16952,
+      "sha256": "d1322d85bb809f3606a2edf4a8e0a26b9bb461dee4577e91ea0522972694c63d"
+    },
+    {
+      "path": "source/SYNTHETIC_REPLACEMENT_REGISTER_0140_R07.csv",
+      "bytes": 31613,
+      "sha256": "9a207c162cc36b08896d4f1ad04ccdcfdefa62bd2b038be31dc715702982e19f"
+    },
+    {
+      "path": "candidate/SAMPLE_RATE_TREND_0140_R10.png",
+      "bytes": 64906,
+      "sha256": "6863393aba501342057715f360c2a3651b266e6edd14a6a87ad58ad38e6c6e0b"
+    },
+    {
+      "path": "candidate/0140__訓練資訊系統使用普及率盤點與分析表_R10.docx",
+      "bytes": 127792,
+      "sha256": "de9525e42a391d0ed002d23d54d5a9b9c1e042f7c194b71f00b61bd98ff48c16"
+    },
+    {
+      "path": "receipts/R10_COMPREHENSIVE_QA_0140.json",
+      "bytes": 6223,
+      "sha256": "b2c12772bb422704982130708a9a93094fbb9c5967d5cc37b72d85d418dc402d"
+    },
+    {
+      "path": "receipts/R10_VISUAL_PAGE_DIFF.json",
+      "bytes": 13596,
+      "sha256": "b9943292fe349ca0d2dafb2ed966a9779632ab6ccb9d429904fa5a00ac01709c"
+    },
+    {
+      "path": "renders/WORD_PAGES/0140_R10_page-08.png",
+      "bytes": 112565,
+      "sha256": "b10ba14cbebc76dea6cac92a333b43e9a08bbb601b8caa62979f840cc0a64408"
+    },
+    {
+      "path": "renders/WORD_PAGES/0140_R10_page-09.png",
+      "bytes": 164209,
+      "sha256": "69e847e7f5dc9da5d7fea323fbda653475d35eff7ae3a2f8eb5cf506d751daae"
+    },
+    {
+      "path": "renders/WORD_PAGES/0140_R10_page-12.png",
+      "bytes": 222004,
+      "sha256": "f1501339198b7ad97388bf48436bc0800f5673a718619448ae4311d03d0ca143"
+    },
+    {
+      "path": "renders/WORD_PAGES/0140_R10_page-15.png",
+      "bytes": 109753,
+      "sha256": "ed9ab4f3035ab48649d04c78be57da0ebc3f0c24a06a8161a380b69534bf51ed"
+    },
+    {
+      "path": "renders/WORD_RENDER_RECEIPT_0140_R10.json",
+      "bytes": 664,
+      "sha256": "c2e9c90f457d22b30fa61a2daf441f10ef19d7429d2d65a02071363cddb9d593"
+    },
+    {
+      "path": "renders/WORD_RENDER_STATE_0140_R10.json",
+      "bytes": 1090,
+      "sha256": "4201535f6a11e0d52a879e6fe074af07ad337534620d6cf7ae32040c888ef120"
+    },
+    {
+      "path": "review/OPENCODE_R10_PROMPT.txt",
+      "bytes": 1029,
+      "sha256": "1be7a67d112ee465550f221001ac19163b71dcbe08302bd4db579a22f6279dac"
+    },
+    {
+      "path": "review/OPENCODE_R10_REVIEW_PACKET.md",
+      "bytes": 101222,
+      "sha256": "e9d5f92c17b9f078f2fc1d7bdd9a5695317eb6f0ca403765b5e91d7801bdd692"
+    },
+    {
+      "path": "review/R10_REVIEW_PACKET_RECEIPT.json",
+      "bytes": 988,
+      "sha256": "f43b316643e865b5fcf4761c44822cc37d21dba097374ccf6381769f090849d2"
+    },
+    {
+      "path": "review/OPENCODE_R10_REVIEW_RESPONSE.md",
+      "bytes": 6993,
+      "sha256": "73400bfceec096a794a211c85347e93a19c0a274e734e7c8882672ea9953c0cd"
+    },
+    {
+      "path": "review/R10_SEMANTIC_REVIEW_RECEIPT.json",
+      "bytes": 3097,
+      "sha256": "598aa42ac83f3de9462bcf49f6c33fcf657bd1a1432a748c5cfa91e20c2f3d55"
+    },
+    {
+      "path": "review/OPENCODE_R10_LAUNCH.json",
+      "bytes": 890,
+      "sha256": "6032389a95975310c00c4e6b5af5a41e1926cedd4f2b44906ed2bf1903ca2ba0"
+    },
+    {
+      "path": "review/OPENCODE_R10_STDOUT.jsonl",
+      "bytes": 7968,
+      "sha256": "fc4278c03a84829fc70a5d73e510591d387decc0cc0bd6c60795de42cbc0b510"
+    },
+    {
+      "path": "review/OPENCODE_R10_STDERR.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "review/OPENCODE_R10_SESSION_EXPORT_SANITIZED.json",
+      "bytes": 1336,
+      "sha256": "60fb9ff92a8b9f9e1b40c7b4acbd42c2eef450fcd4a464b618ae11aca3ad11bc"
+    }
+  ],
+  "audit_bundle_contents_note": "Bundle contains the standalone candidate DOCX, full manuscript/data/register sources, chart, build and QA code/receipts, four rendered pages covering changed emphasis, the operational checklist and chart page, and original OpenCode review packet, response, session output and receipts. The visual receipt lists SHA-256 values for all 29 locally inspected pages."
+}
