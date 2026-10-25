@@ -1,0 +1,83 @@
+{
+  "schema": "ttqs-one-0141-r07-c1-1-source-math-qa-v1",
+  "work_id": "TTQS_ONE_0141_I19-E31_R07_C1_1_SOURCE_MATH_QA",
+  "doc_id": "0141",
+  "requirement_id": "I19-E31",
+  "status": "PASS",
+  "verifier_sha256": "3c847179b0fb5434d2ea5cf4df88db0feff83c986c9da8985a82edf24b4b903b",
+  "manuscript_sha256": "169e074c99954abebe16f72892adc557ed11c6152ca5648424daea3c2126dc83",
+  "replacement_register_sha256": "55f932a8b1dbc27bba002ad076aad6e4c51f47a2166bf09f2736f8dc70cefc37",
+  "r01_response_csv_sha256": "723259199dd51973fc6473ec000234cc853fa1511be05864fdfd7b08bb452862",
+  "r01_questionnaire_csv_sha256": "310745e5be17980ca9c623b23e15605cb221c9cbbdf1886913cb54db1acdf0e7",
+  "r01_response_rows": 36,
+  "replacement_register_rows": 44,
+  "response_locators_chinese": 36,
+  "manuscript_pointer_rows": 8,
+  "all_register_rows_bound_to_exact_manuscript_sha": true,
+  "recalculated_item_stats": {
+    "Q2": {
+      "2023": {
+        "n": 12,
+        "sum": 41,
+        "mean": 3.4166666666666665,
+        "top2": 5,
+        "top2_rate": 0.4166666666666667
+      },
+      "2024": {
+        "n": 12,
+        "sum": 41,
+        "mean": 3.4166666666666665,
+        "top2": 5,
+        "top2_rate": 0.4166666666666667
+      },
+      "2025": {
+        "n": 12,
+        "sum": 47,
+        "mean": 3.9166666666666665,
+        "top2": 9,
+        "top2_rate": 0.75
+      }
+    },
+    "Q5": {
+      "2023": {
+        "n": 12,
+        "sum": 42,
+        "mean": 3.5,
+        "top2": 6,
+        "top2_rate": 0.5
+      },
+      "2024": {
+        "n": 12,
+        "sum": 48,
+        "mean": 4.0,
+        "top2": 8,
+        "top2_rate": 0.6666666666666666
+      },
+      "2025": {
+        "n": 12,
+        "sum": 51,
+        "mean": 4.25,
+        "top2": 10,
+        "top2_rate": 0.8333333333333334
+      }
+    }
+  },
+  "q2_target": "(47+1)/12=4.000000; strict Top-2 >75.00%, n=12 requires 10/12; 9/12 fails",
+  "q5_target": "(51+1)/12=4.333333",
+  "retired_legacy_floors": "Removed from this candidate; no analysis floor is set.",
+  "semantic_repair_checks": {
+    "construct separation": true,
+    "ASCII source condition": true,
+    "five-step flow": true,
+    "strict threshold label": true,
+    "legacy floors removed": true,
+    "arithmetic retained": true,
+    "truth boundary": true,
+    "revision history": true
+  },
+  "candidate_docx_sha256": "8e0252ac4ba18edbd364e29c7f143744e801b062b3c2cd8d69f5c4a83aee7c2c",
+  "real_data_status": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED",
+  "official_score": "NOT_ASSIGNED",
+  "text_diff_receipt_sha256": "04e9110a3868e45d2593a3d75391dfd4c899eac34168f9960d0972f4398efc4e"
+}
