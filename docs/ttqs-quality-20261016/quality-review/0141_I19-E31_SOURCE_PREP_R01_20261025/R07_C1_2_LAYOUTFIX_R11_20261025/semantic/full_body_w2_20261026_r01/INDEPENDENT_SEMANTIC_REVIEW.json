@@ -1,0 +1,172 @@
+{
+  "doc_id": "0141",
+  "requirement_id": "I19-E31",
+  "checkbox_index": 155,
+  "candidate_sha256": "b40ea2f5b5c5467cdc31c2e5b1595ac8de4d679b7f4763aa00860727f5d3f1a0",
+  "body_extraction_sha256": "8410743cf1525aa5a2fd8ddf19b7b1439da4c2f502319a2fb87acd11d19390fa",
+  "verdict": "PASS",
+  "criteria": {
+    "1": {
+      "verdict": "PASS",
+      "evidence": "Body functions specifically as a multi-period customer satisfaction survey and trend analysis report for TTQS Indicator 19 (I19-E31 / index 155). Title-blind inspection reveals a full survey administration SOP, complete instrument (Q1-Q8), 3-year empirical response dataset (36 records), multi-period Likert tracking tables, methodological boundary statements, and PDCA improvement proposals, rather than a blank template, generic policy, or neighbor evidence."
+    },
+    "2": {
+      "verdict": "PASS",
+      "evidence": "Document sets out 8 distinct questionnaire items with 1-5 Likert response anchors and N/A handling. Clear sampling denominator of 15 issued invitations and 12 valid responses per period (80.00% response rate). Item-specific denominators strictly exclude N/A and blanks; imputing missing values and scoring N/A as zero are explicitly prohibited. Individual respondent composite rule requires at least 5 of 6 valid core items. Includes multi-period tables, visual trend specifications, explicit inference boundaries, and hypothetical retrospective PDCA actions with measurable indicators and HOLD criteria."
+    },
+    "3": {
+      "verdict": "PASS",
+      "evidence": "All arithmetic independently verified against the canonical 36-row dataset. Annual invitation (N=15), valid responses (n=12), and response rate (80.00%) match across 2023-2025. Q1-Q6 domain dimensions (means: 2023=3.4861, 2024=3.5694, 2025=3.6944) are strictly segregated from independent Q7 overall satisfaction (means: 2023=3.5833, 2024=3.9167, 2025=4.2500). Q7 Top-2 proportions (58.33%, 83.33%, 91.67%) and unrounded percentage point deltas (+25.00, +8.33, +33.33) are exact. Scale-point changes are consistently reported in points rather than percentage growth. Appendix 3 36-row table exactly matches SAMPLE_SURVEY_RESPONSES_0141_R01.csv."
+    },
+    "4": {
+      "verdict": "PASS",
+      "evidence": "Document rigorously maintains the synthetic boundary. Entire dataset, case IDs (SYN-0141-YYYY-NNN), dates, and proposals are explicitly labeled SAMPLE/SYNTHETIC. Real association performance, official approval, and third-party evidence are marked REAL=UNKNOWN/HOLD, Human formal acceptance=NOT_GRANTED, and Official score=NOT_ASSIGNED. Section 10 supplies an actionable 5-step data replacement SOP and Replacement Register template without claiming current real adoption."
+    },
+    "5": {
+      "verdict": "PASS",
+      "evidence": "Negative-neighbor boundaries are explicitly enforced in Section 2 (Table 2 and text) and Gate 10 of Section 9. Trainee satisfaction is strictly insulated from license pass/employment rates (0139/I19-E29/index 153), IT system adoption rates (0140/I19-E30/index 154), and training revenue/financial growth (0142/I19-E32/index 156)."
+    },
+    "6": {
+      "verdict": "PASS",
+      "evidence": "Staff and evaluators are provided with fully operational tools: a printable blank survey form (Appendix 1), an illustrative filled questionnaire (Appendix 2), 36 canonical sample records (Appendix 3), a field data dictionary and calculation formula manual (Appendix 4), and a replacement register with change history (Appendix 5). Administrative SOP includes exact preparation, dispatch, reminder limits, lock-in, and cleaning rules."
+    }
+  },
+  "findings": [],
+  "verified_calculations": {
+    "sampling_and_response": {
+      "2023": {
+        "issued_N": 15,
+        "valid_n": 12,
+        "response_rate": "80.00%"
+      },
+      "2024": {
+        "issued_N": 15,
+        "valid_n": 12,
+        "response_rate": "80.00%"
+      },
+      "2025": {
+        "issued_N": 15,
+        "valid_n": 12,
+        "response_rate": "80.00%"
+      },
+      "total": {
+        "issued_N": 45,
+        "valid_n": 36,
+        "response_rate": "80.00%"
+      }
+    },
+    "domain_item_means_Q1_to_Q6": {
+      "Q1_need_fit": {
+        "2023": 3.5,
+        "2024": 3.5,
+        "2025": 3.5,
+        "delta_total": 0.0
+      },
+      "Q2_content_applicability": {
+        "2023": 3.4167,
+        "2024": 3.4167,
+        "2025": 3.9167,
+        "delta_total": 0.5
+      },
+      "Q3_instructor_support": {
+        "2023": 3.5,
+        "2024": 3.5,
+        "2025": 3.5,
+        "delta_total": 0.0
+      },
+      "Q4_materials_resources": {
+        "2023": 3.5833,
+        "2024": 3.5833,
+        "2025": 3.5833,
+        "delta_total": 0.0
+      },
+      "Q5_admin_communication": {
+        "2023": 3.5,
+        "2024": 4.0,
+        "2025": 4.25,
+        "delta_total": 0.75
+      },
+      "Q6_learning_environment": {
+        "2023": 3.4167,
+        "2024": 3.4167,
+        "2025": 3.4167,
+        "delta_total": 0.0
+      },
+      "six_item_pooled_index": {
+        "2023": 3.4861,
+        "2024": 3.5694,
+        "2025": 3.6944,
+        "delta_2023_2024": 0.0833,
+        "delta_2024_2025": 0.125,
+        "delta_total": 0.2083
+      }
+    },
+    "overall_satisfaction_Q7": {
+      "mean": {
+        "2023": 3.5833,
+        "2024": 3.9167,
+        "2025": 4.25,
+        "delta_2023_2024": 0.3333,
+        "delta_2024_2025": 0.3333,
+        "delta_total": 0.6667
+      },
+      "distribution_and_top2": {
+        "2023": {
+          "score_1_3": 5,
+          "score_4": 7,
+          "score_5": 0,
+          "top2_count": 7,
+          "top2_pct": "58.33%",
+          "pp_change": "baseline"
+        },
+        "2024": {
+          "score_1_3": 2,
+          "score_4": 9,
+          "score_5": 1,
+          "top2_count": 10,
+          "top2_pct": "83.33%",
+          "pp_change": "+25.00 pp"
+        },
+        "2025": {
+          "score_1_3": 1,
+          "score_4": 7,
+          "score_5": 4,
+          "top2_count": 11,
+          "top2_pct": "91.67%",
+          "pp_change": "+8.33 pp"
+        },
+        "total_change": {
+          "score_1_3": -4,
+          "score_4": 0,
+          "score_5": 4,
+          "top2_count": 4,
+          "pp_change": "+33.33 pp"
+        }
+      }
+    },
+    "pdca_targets": {
+      "plan_1_Q5": {
+        "baseline_2025": 4.25,
+        "formula": "4.2500 + 1/12",
+        "target_mean": 4.3333
+      },
+      "plan_2_Q2": {
+        "baseline_2025": 3.9167,
+        "formula": "3.9167 + 1/12",
+        "target_mean": 4.0,
+        "top2_baseline": "75.00%",
+        "top2_target": ">75.00% (at least 10/12 = 83.33%)"
+      }
+    },
+    "dataset_integrity": {
+      "canonical_csv_sha256": "723259199dd51973fc6473ec000234cc853fa1511be05864fdfd7b08bb452862",
+      "row_count": 36,
+      "appendix_3_cell_match": "100% exact match across all 36 rows and 7 quantitative columns"
+    }
+  },
+  "sample_real_boundary": "All presented empirical response figures, dates, cohorts, and analytical trends are synthetic teaching demonstrations (FACT-SYN-0141-SAT-TREND-R01). The real association status is explicitly designated REAL=UNKNOWN/HOLD with formal acceptance NOT_GRANTED and score NOT_ASSIGNED. Official page 9 scoring tier of 4 is designated as a scoring level rather than a weight or earned score. Both PDCA actions are framed as retrospective demonstrations (SAMPLE_HYPOTHETICAL_NOT_ADOPTED, NOT_ADOPTED/NOT_EXECUTED), blocking unverified causal attribution.",
+  "title_blind_genre": "Multi-period customer satisfaction survey and trend analysis report. The document presents a structured survey methodology, longitudinal quantitative measurements on an invariant 5-point Likert scale, rigorous missing-data and valid-denominator management, comparative trend analysis, and continuous improvement protocols for a vocational training context.",
+  "neighbor_distinction": "Explicitly distinguished from 0139 / I19-E29 / index 153 (licensing/employment outcomes), 0140 / I19-E30 / index 154 (training information system uptake), and 0142 / I19-E32 / index 156 (organizational revenue growth). The candidate strictly measures participant satisfaction with training services and contains explicit guardrails prohibiting construct substitution.",
+  "semantic_reviewer_scope": "Independent semantic review covers all extracted paragraphs [P1]-[P233] and tables [TABLE 1]-[TABLE 18] of the extracted DOCX candidate. Visual layout, page numbering, font typography, and image rendering are outside the reviewer's scope.",
+  "limitations": "Data are bounded by small sample size (n=12 per annual cohort), synthetic single-segment trainee sampling (TRAINING_PARTICIPANT_SYNTHETIC), absence of randomized control groups, and lack of qualitative comments in the 36 canonical rows (Q8 text absent). Real operational deployment and governance adoption remain pending authorized association action."
+}
