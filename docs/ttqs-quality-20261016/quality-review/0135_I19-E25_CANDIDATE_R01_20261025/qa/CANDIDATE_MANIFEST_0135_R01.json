@@ -46,5 +46,42 @@
   },
   "source_data_boundary": "All outcome figures and case rows are SAMPLE/SYNTHETIC. Association REAL originals and formal checkbox serial remain UNKNOWN.",
   "builder": "Codex authored the replacement candidate after external Worker results were rejected or unavailable; do not attribute this candidate to Antigravity/OpenCode.",
-  "created_at_local": "2026-10-25T00:23:30+08:00"
+  "created_at_local": "2026-10-25T00:23:30+08:00",
+  "independent_semantic_review": {
+    "status": "PASS_TEXT_ONLY_WITH_PROVIDER_IDENTITY_UNKNOWN",
+    "exact_sha_required": "cae8be8280456b51a1294ee90eafca0ac1ae8a12738289d6ebbca35b3a05a3da",
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model": "UNKNOWN",
+    "independent_route": "Antigravity CLI 1.4.7; reviewer separate from Codex Writer; actual provider/model identity not proven",
+    "result": "Raw reviewer JSON verdict PASS; zero blocking and zero nonblocking findings. Text-only semantic, arithmetic, SAMPLE/REAL boundary, neighbor separation and usability.",
+    "work_id": "TTQS-0135-I19-E25-R01-W2-ANTIGRAVITY-R12-EXACT-SHA-REVIEW",
+    "cli_exit_code": 0,
+    "pid": 82660,
+    "conversation_id": "b1dcba37-8eb8-49ec-8515-9628ad18c090",
+    "token_usage": {
+      "input_tokens": 20300,
+      "output_tokens": 7986,
+      "thinking_tokens": 6175,
+      "cache_read_tokens": 0,
+      "total_tokens": 28286
+    },
+    "response_sha256": "e1d401cf008db13e7e836684b05a9877efc838011235d5c7abec4ad1c653b519",
+    "stdout_sha256": "0c88c061431a39b0c3c7c2ba5e793445b935bc217aba662053c54b2862a59a6f",
+    "terminal_receipt": "independent_review/ANTIGRAVITY_R12_20261027/ADJUDICATION_R12.json",
+    "scope_limit": "No binary DOCX inspection, rendering, visual review, or provider identity proof; existing technical and 10/10-page visual receipts remain separate.",
+    "candidate_mutated": false,
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "historical_semantic_reviews": [
+    {
+      "status": "PARTIAL",
+      "source": "R11 Antigravity text review/adjudication",
+      "note": "Historical receipt retained; limitations not overwritten by R12."
+    },
+    {
+      "status": "NO_USABLE_REVIEW",
+      "source": "OpenCode free-model attempt",
+      "note": "Provider returned HTTP 429; no reviewer body was produced."
+    }
+  ]
 }

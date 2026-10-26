@@ -18,13 +18,22 @@ DOCX 0135 對應官方 I19-E25，並以專案 157 指標第 140 項作內容設�
 ## Worker 真實狀態
 
 - OpenCode v2 Writer：曾要求 `opencode/glm-5.3-flash-free`，原生回傳 429 `Free usage limit reached`，沒有文稿，沒有採用。原始回覆在 `worker/OPENCODE_0135_R01_RAW.jsonl`。
-- Antigravity CLI Writer：曾明確要求 `gemini-3.8-flash-high`；CLI 回傳文字，但原始結果未提供可核實的實際 serving model identity。回覆含無來源檔案路徑、REAL 占位及未有依據的正式扣分說法，故未採用。完整原始輸出及審核在 `worker/`；不可記成 Gemini 已驗證成功。
-- 本份正文由 Codex 根據官方來源、Unique Blueprint 及 SAMPLE 資料重新整理撰寫。不得將其說成由任一外包 Worker 交付。
-- exact-SHA 獨立語意審查：PENDING。依 2026-10-23 Human 提供的 OpenCode 模型監控資料，曾對目前目錄列出的 `opencode/deepseek-v4.1-flash-free` 發出一次短審查；原生回傳 429 免費額度耗盡，無審查正文。原始輸出和派工收據在 `worker/OPENCODE_0135_SEMANTIC_REVIEW_R01_*`。未重試其他模型，未將候選升格。
+- Antigravity CLI Writer：曾要求 `gemini-3.8-flash-high`；原始結果未提供可核實的實際 serving model identity，且含無來源檔案路徑、REAL 占位及未有依據的正式扣分說法，故未採用。完整歷史原始輸出及審核保存在既有 `worker/`。
+- 本份正文由 Codex 根據官方來源、Unique Blueprint 及 SAMPLE 資料整理撰寫。不得將正文說成由任一外包 Writer 交付。
+- 本頁所列 R12 是針對既有 Codex 候選的獨立 CLI 審查，請求模型為 `gemini-3.8-flash-high`，但實際服務端身分 UNKNOWN；它不改變 Writer 歷史，也不證明 Gemini 配額或模型路由。
 
 ## SAMPLE / REAL 邊界
 
 本件 20/80、24/80、28/80、15 組配對數據及其趨勢均為 SAMPLE / SYNTHETIC，僅示範分子、分母、回覆率、中央値與限制如何計算。它們不是原始點協會實績、正式市場母體、核准或評核結果。協會真實名冊、問卷原件、工時記錄、期限證據及決策紀錄目前為 UNKNOWN，取得前不得替換示範資料或聲稱成效。
+
+## 最新獨立語意審查（R12，2026-10-27）
+
+- 結果：reviewer 原始 JSON 回覆為 `PASS`、無 blocking/nonblocking findings；本地裁定標示 `PASS_TEXT_ONLY_WITH_PROVIDER_IDENTITY_UNKNOWN`。
+- 審查精確綁定 DOCX SHA-256：`cae8be8280456b51a1294ee90eafca0ac1ae8a12738289d6ebbca35b3a05a3da`；review packet SHA-256：`120ebf90abc83e931c5a34f505142d706d0c0ae6c11dcc98989302981878c9f9`。候選 DOCX 前後 SHA 相同，未重建或修改。
+- 工作 ID：`TTQS-0135-I19-E25-R01-W2-ANTIGRAVITY-R12-EXACT-SHA-REVIEW`。Antigravity CLI 1.4.7；要求模型 `gemini-3.8-flash-high`，但實際 serving model／供應端身分為 `UNKNOWN`，不宣稱 Gemini 路由已證實。CLI exit 0，PID 82660，conversation `b1dcba37-8eb8-49ec-8515-9628ad18c090`；28,286 tokens（input 20,300 / output 7,986 / thinking 6,175 / cache 0）；費用／計價狀態 UNKNOWN。
+- 審查涵蓋正文語意、計算、SAMPLE/REAL、相鄰需求區分及操作可用性；**不涵蓋** DOCX 二進位結構、Word 版面或視覺。既有同 SHA 技術與 10/10 頁視覺收據仍分別維持原範圍，不把文字審查擴大成全項品質 PASS。
+- 原始 request、完整 stdout/stderr、response、dispatch/input/terminal 收據及 CLI/model-list 觀測保存在 `independent_review/ANTIGRAVITY_R12_20261027/`。R11 的歷史審查／部分裁定保留在歷史收據；R12 不覆寫其來源。
+- 候選仍為 `CANDIDATE`；REAL 原件仍 UNKNOWN；沒有 Human 正式接受。
 
 ## 計算摘要
 
@@ -35,7 +44,7 @@ DOCX 0135 對應官方 I19-E25，並以專案 157 指標第 140 項作內容設�
 
 ## 目前不能宣告的事項
 
-獨立 exact-SHA 語意驗收未完成；REAL 證據未提供；Human 正式接受未授權。視覺與計算檢查只對本 README 所列 SHA 有效，不代表 TTQS 正式分數或文件已可作為協會真實紀錄。
+R12 已取得 exact-SHA 文字語意審查回覆 PASS，但實際模型身分 UNKNOWN，且審查不含視覺／二進位；技術及 10/10 頁視覺證據各自只對本 README 所列 SHA 有效。REAL 證據未提供，Human 正式接受未授權；候選不得視為 TTQS 正式分數或協會真實紀錄。
 
 Official full source PDF and the page 7-8 extract remain in the existing public source package: `docs/ttqs-quality-20261016/quality-review/0135_I19-E25_SOURCE_PREP_R01_20261024/source`. They are not duplicated here. The candidate package includes the exact textual mapping, source packet, unique blueprint, evidence excerpts, synthetic data, and hashes needed to trace this candidate.
 
