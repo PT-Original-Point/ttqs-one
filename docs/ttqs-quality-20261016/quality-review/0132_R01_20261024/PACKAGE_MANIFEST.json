@@ -1,10 +1,24 @@
 {
   "doc_id": "0132",
   "requirement_id": "I19-E21",
-  "package_state": "CANDIDATE_PENDING_INDEPENDENT_SEMANTIC_REVIEW",
+  "candidate_state": "CANDIDATE",
+  "candidate_docx_sha256": "e2f263c2c130d1939ebdaab1a253700935c54c8a26c937b8a77e7000a9a2d925",
+  "package_state": "CANDIDATE_TEXT_SEMANTIC_PASS_PROVIDER_IDENTITY_UNKNOWN",
+  "technical_qa": "PASS",
+  "visual_qa": "PASS_10_OF_10_PAGES",
+  "independent_semantic_review": {
+    "status": "PASS_TEXT_SEMANTIC",
+    "scope": "exact-SHA text semantic and usability only",
+    "candidate_sha256": "e2f263c2c130d1939ebdaab1a253700935c54c8a26c937b8a77e7000a9a2d925",
+    "review_path": "review/W2_EXACT_SHA_20261026/SEMANTIC_REVIEW_ADJUDICATION.json",
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_model_identity": "UNKNOWN"
+  },
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN",
   "manifest_excludes_itself": true,
-  "file_count": 34,
-  "total_bytes": 3791212,
+  "file_count": 49,
+  "total_bytes": 3904630,
   "files": [
     {
       "path": ".gitattributes",
@@ -53,8 +67,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2980,
-      "sha256": "767569ddee3f70e7cc5b03f6dfa4aa1e35469c13ffd686af7ca1806b37ca3f24"
+      "bytes": 2494,
+      "sha256": "5ea91de0ee8f5d4a10345a069965bd5bc03cb01940ad6614e4e7dff46b5d64c1"
     },
     {
       "path": "render/0132_I19-E21_CANDIDATE_R01.pdf",
@@ -110,6 +124,81 @@
       "path": "render/pages/page-10.png",
       "bytes": 364067,
       "sha256": "bb697efaa64517a11d6f737bb55751de77204ffeb5ab2272a8c3d051a16377c8"
+    },
+    {
+      "path": "review/W2_EXACT_SHA_20261026/0132_R01_EXACT_SHA_SEMANTIC_PAYLOAD_V2.txt",
+      "bytes": 21164,
+      "sha256": "e185f992cf3d6593ec8a0f6c68c01c1196739165baa537df821e460ddf92ba62"
+    },
+    {
+      "path": "review/W2_EXACT_SHA_20261026/ANTIGRAVITY_STDERR.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "review/W2_EXACT_SHA_20261026/ANTIGRAVITY_STDOUT.txt",
+      "bytes": 7502,
+      "sha256": "a44dc3340ee177479782b5533dc7ee7ebb4a0363f9be16580ee471342df6ae83"
+    },
+    {
+      "path": "review/W2_EXACT_SHA_20261026/DISPATCH_RESULT.json",
+      "bytes": 1532,
+      "sha256": "b28d95e2e63191eca449a35fd26c8bebf538737384b56db6e2630945da304464"
+    },
+    {
+      "path": "review/W2_EXACT_SHA_20261026/extract_docx_semantic_payload_v2.py",
+      "bytes": 3993,
+      "sha256": "cc8dd31b1bcb5f1cdefddd4ed5de62e7c90fcbb74c519132d00fd8b8e5f47daf"
+    },
+    {
+      "path": "review/W2_EXACT_SHA_20261026/extract_embedded_media.py",
+      "bytes": 501,
+      "sha256": "1170ff17877b3d9c037f8e501a0ee54d85b65516aecf176473022a37f32f6b84"
+    },
+    {
+      "path": "review/W2_EXACT_SHA_20261026/GITHUB_RAW_BYTE_READBACK_20261026.json",
+      "bytes": 6382,
+      "sha256": "ab7c9ea01d48c368a34faac61ff87383af0a63d54fe8e7f6c8f6f4dd1bfb8792"
+    },
+    {
+      "path": "review/W2_EXACT_SHA_20261026/INDEPENDENT_SEMANTIC_REVIEW_STATUS_0132_R01_20261026.json",
+      "bytes": 876,
+      "sha256": "5c363212da0e02a6788bcf39f47c09721668a7ef8874a5bbf01b95e478f73a20"
+    },
+    {
+      "path": "review/W2_EXACT_SHA_20261026/INPUT_MANIFEST.json",
+      "bytes": 3945,
+      "sha256": "db9cb13ee6c5faf2ee0366ced4a4b43125256a1a5188765d010f356c1241fd8e"
+    },
+    {
+      "path": "review/W2_EXACT_SHA_20261026/prepare_review_package.py",
+      "bytes": 7203,
+      "sha256": "d4241a4f43ace53431850c8028520311a909fe1ec03f7b011c3852636c801a5b"
+    },
+    {
+      "path": "review/W2_EXACT_SHA_20261026/README.md",
+      "bytes": 1079,
+      "sha256": "7023aa8fa930f566a7af9eb610462acc05f8135e8a9b308205de3db477efc618"
+    },
+    {
+      "path": "review/W2_EXACT_SHA_20261026/REVIEW_PROMPT.txt",
+      "bytes": 39538,
+      "sha256": "16062d7027da86c366c8c8c61d1b74de2c53ad02ffb510efdb20aa5d37bfff97"
+    },
+    {
+      "path": "review/W2_EXACT_SHA_20261026/REVIEWER_RESPONSE.md",
+      "bytes": 7047,
+      "sha256": "0ab5b332d1522d0c9080bf3eaee96091103a652b81fe863da0ca6d71c6e1ebf6"
+    },
+    {
+      "path": "review/W2_EXACT_SHA_20261026/SEMANTIC_REVIEW_ADJUDICATION.json",
+      "bytes": 5523,
+      "sha256": "931c1f901ce239f0fc40212ead087b16b7b2abf74d0e7cef4c357d92d88c7718"
+    },
+    {
+      "path": "review/W2_EXACT_SHA_20261026/write_review_receipts.py",
+      "bytes": 7619,
+      "sha256": "a769a87d3c76085022b139762d13d593a22ee808c70fa532f054a3e23e0e1c1d"
     },
     {
       "path": "source/INTERNAL_CROSSWALK_I19-E21_NEIGHBORS_R01.csv",

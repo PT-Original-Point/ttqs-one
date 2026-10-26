@@ -1,0 +1,166 @@
+{
+  "schema": "TTQS_ONE_R12_T01_T24_SUPPLEMENT_V1",
+  "project_id": "TTQS_ONE",
+  "command": "TTQS_ONE_20261026_R12_FULL_RECOVERY_DELIVERY",
+  "r12_source_blob_sha1": "63f26f0708249b211611d51b34a7fb90b4cd26a9",
+  "observed_at_local": "2026-10-27T02:57:03.6117823+08:00",
+  "remote_head_at_start": "e4ca029d5264f5402d566be4a54be5cde38dda90",
+  "preserves_prior_test_matrix": "R12_T01_T24_TEST_RESULTS.json at 00:48 remains historical; this is an append-only delta.",
+  "goal": {
+    "thread_id": "01a14098-b269-79e3-b07c-56e96557fe07",
+    "status": "active",
+    "remaining_budget": "UNKNOWN (native API returned remainingTokens=null)"
+  },
+  "windows": {
+    "host": "DESKTOP-VMV4Q60",
+    "user": "DESKTOP-VMV4Q60\\J",
+    "edition": "Windows 10 Pro",
+    "build": "19045",
+    "observed_at": "2026-10-27T02:57:03.6117823+08:00"
+  },
+  "automation": {
+    "thread_bound_id": "ttqs-one-hourly-quality-goal-resume",
+    "config_sha256": "0984df0e4ff24498890644cb9d1b41b0646a134230a7ae1606e388fac5ed32b6",
+    "configured_interval_minutes": 120,
+    "latest_observed_state": "ACTIVE at 00:49 native snapshot; current app view did not return schedule fields",
+    "current_last_run": "UNKNOWN",
+    "next_run": "UNKNOWN",
+    "natural_trigger": "UNKNOWN",
+    "standalone_state": "PAUSED at 00:49 snapshot; reason UNKNOWN",
+    "windows_supervisor": "Disabled"
+  },
+  "processes": {
+    "opencode_service_pid": 79496,
+    "service_is_writer": false,
+    "active_opencode_writer": "NONE_OBSERVED",
+    "active_antigravity_cli": "NONE_OBSERVED",
+    "winword_count": 52,
+    "newest_winword_created": "2026-10-25T14:44:30.951855+08:00",
+    "mass_termination": "NONE"
+  },
+  "panel": {
+    "ports_8765_8766_listening": false,
+    "alignment": "UNKNOWN"
+  },
+  "worker_attempts": [
+    {
+      "work_id": "TTQS_ONE_0132_I19-E21_R01_OPENCODE_GLM53_R12",
+      "worker": "OpenCode v2.1.4",
+      "requested_model": "opencode/glm-5.3-flash-free",
+      "pid": 92736,
+      "exit_code": 1,
+      "status": "HTTP_429_FREE_LIMIT",
+      "retry_after_ms": 18846000,
+      "approx_release_local": "2026-10-27T08:00:00+08:00",
+      "stdout_sha256": "823003d10cddcf8154d722220a4c3dedc95d6687c057f662557472fa19862c6c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "candidate_mutated": false,
+      "adopted": false
+    },
+    {
+      "work_id": "TTQS_ONE_0132_I19-E21_R01_ANTIGRAVITY_GEMINI38_R12",
+      "worker": "Antigravity CLI 1.4.7",
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_model": "UNKNOWN",
+      "pid": 83132,
+      "session_id": "c4aa98ba-aa66-4b17-ae1c-6707e9e8fee4",
+      "exit_code": 0,
+      "response_sha256": "acd69e7b46cbea3de842a4c11d998347134c03f1af0ea7bd3f0a9112c6cc5093",
+      "tokens_reported": 28815,
+      "tools_requested": false,
+      "computer_use": false,
+      "candidate_mutated": false,
+      "adopted": false,
+      "reason": "duplicate of the existing 2026-10-26 exact-SHA review; caused by incomplete local indexing of remote review tree"
+    },
+    {
+      "work_id": "TTQS-0134-I19-E23-R01-EXACT-SHA-INDEPENDENT-SEMANTIC-REVIEW-W2-R02",
+      "worker": "Antigravity CLI 1.4.2 historical review",
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_model": "UNKNOWN",
+      "candidate_sha256": "a003ad1906194d1cb30a37a313f2ebd004cee129d6c231c6a3bef40b321cee08",
+      "exit_code": 0,
+      "response_sha256": "86f40cf0d830767557bf0e9d3924968453b1c66630b064863abdb4da6fb2b509",
+      "tokens_reported": 41386,
+      "status": "VERIFIED_TEXT_SEMANTIC_PASS",
+      "new_dispatch": false
+    }
+  ],
+  "delta_tests": [
+    {
+      "id": "T07",
+      "status": "PASS_SERVICE_NOT_WRITER",
+      "finding": "Current process scan found no CLI Writer; PID 79496 is only opencode-cli.exe serve --service."
+    },
+    {
+      "id": "T08",
+      "status": "PASS_NO_MASS_TERMINATION",
+      "finding": "52 WINWORD /Automation processes remain, newest from 2026-10-25 14:44:30; ownership unknown, none killed."
+    },
+    {
+      "id": "T12",
+      "status": "PARTIAL_STALE_NATIVE_STATE",
+      "finding": "Goal active now. Native snapshot at 00:49 showed 120m thread task ACTIVE and standalone PAUSED; current native view did not return interval/last/next fields; supervisor Disabled."
+    },
+    {
+      "id": "T13",
+      "status": "UNKNOWN_NATURAL_TRIGGER",
+      "finding": "No native scheduledAt/last-run receipt or next run value available."
+    },
+    {
+      "id": "T15",
+      "status": "FAIL_DUPLICATE_REVIEW_DISPATCH",
+      "finding": "A prior 10/26 exact-SHA 0132 PASS_TEXT_SEMANTIC existed remotely. A duplicate 10/27 W2 review was dispatched after local indexing missed remote review tree. New response not adopted; DOCX unchanged."
+    },
+    {
+      "id": "T16",
+      "status": "PASS_NO_ACTIVE_CLI_WRITER_OBSERVED",
+      "finding": "No active Writer process at observation; historical WINWORD ownership remains UNKNOWN."
+    },
+    {
+      "id": "T19",
+      "status": "UNKNOWN_PANEL_ALIGNMENT",
+      "finding": "No 8765/8766 listener; current TTQS panel source/alignment not established."
+    },
+    {
+      "id": "T20",
+      "status": "PENDING_THIS_SYNC",
+      "finding": "Current start head e4ca029d5264f5402d566be4a54be5cde38dda90; exact readback to follow."
+    },
+    {
+      "id": "T22",
+      "status": "PASS_EXISTING_0134_CANDIDATE_RECONCILED",
+      "finding": "0134 is not source-only: R01 DOCX exists, SHA a003ad1906194d1cb30a37a313f2ebd004cee129d6c231c6a3bef40b321cee08, Git blob 14a5fb7cca55e25fee2370c4d32a5749580954a2, technical PASS, Word visual 20/20 PASS_WITH_NONBLOCKING_LAYOUT_NOTES, exact-SHA text semantic PASS. No Writer dispatched."
+    },
+    {
+      "id": "T23",
+      "status": "PASS_DISTINCT_EXACT_SHA_SCOPES",
+      "finding": "Text semantic review and 20/20 Word visual are separate receipts bound to same 0134 SHA."
+    },
+    {
+      "id": "T24",
+      "status": "PASS_CANDIDATE_ONLY",
+      "finding": "0132 and 0134 remain candidate evidence; formal acceptance NOT_GRANTED; REAL UNKNOWN/HOLD."
+    }
+  ],
+  "material_changes": [
+    {
+      "doc_id": "0132",
+      "kind": "metadata_manifest_reconciliation",
+      "candidate_sha256": "e2f263c2c130d1939ebdaab1a253700935c54c8a26c937b8a77e7000a9a2d925",
+      "docx_changed": false,
+      "detail": "Expose prior exact-SHA semantic PASS and provider identity UNKNOWN; label duplicate 10/27 response not adopted."
+    },
+    {
+      "doc_id": "0134",
+      "kind": "stale_status_projection_repair",
+      "candidate_sha256": "a003ad1906194d1cb30a37a313f2ebd004cee129d6c231c6a3bef40b321cee08",
+      "docx_changed": false,
+      "detail": "README and current review status corrected from PENDING; technical/visual receipts preserved."
+    }
+  ],
+  "next_ready_stage": "After exact GitHub readback of this delta, derive the next missing stage from current official 129-to-142 crosswalk; do not dispatch 0132/0134 again.",
+  "result_state": "PARTIAL_WITH_VERIFIED_EXISTING_CANDIDATE_AND_STATUS_REPAIR",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN"
+}

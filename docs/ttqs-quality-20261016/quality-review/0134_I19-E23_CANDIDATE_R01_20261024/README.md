@@ -1,34 +1,20 @@
-# 0134 I19-E23 candidate R01
+# 0134 I19-E23 — 會員人數及會費收入逐年變化分析報告 R01
 
-This package contains a new SAMPLE/SYNTHETIC analysis report candidate. It answers only the official evidence requirement “會員人數及會費收入均逐年增加。” and is distinct from 0133/I19-E22 (training classes and attendee person-times) and 0135/I19-E25 (customer-value outcomes).
+## 目前狀態
 
-## Current state
+- DOCX 候選 R01 SHA-256 a003ad1906194d1cb30a37a313f2ebd004cee129d6c231c6a3bef40b321cee08；Git blob 14a5fb7cca55e25fee2370c4d32a5749580954a2。候選位元組未更動。
+- 確定性技術檢查 PASS；23 表、55 筆逐事實合成替換項；正文最低 10.5 pt、表格最低 9.5 pt。
+- Word 原生輸出 20 頁；20/20 頁影像目視檢查 PASS_WITH_NONBLOCKING_LAYOUT_NOTES。
+- 獨立 exact-SHA 語意審查 VERIFIED_TEXT_SEMANTIC_PASS，綁定同一 DOCX SHA。回覆 SHA 86f40cf0d830767557bf0e9d3924968453b1c66630b064863abdb4da6fb2b509；仲裁 SHA eebe5bc27338661c3737011cedc044018d5e72534ecae8c312fa7a0a4eb36820。
+- 審查要求模型 gemini-3.8-flash-high；原生回覆未提供 provider-serving model 身分，實際模型 UNKNOWN，不得宣稱 Gemini serving 已驗證。
+- 正式接受 NOT_GRANTED；真實會員/會費原件與協會實績 UNKNOWN/HOLD。
 
-- Candidate DOCX SHA-256: `a003ad1906194d1cb30a37a313f2ebd004cee129d6c231c6a3bef40b321cee08
-- Word-native PDF SHA-256: `464f844f116587bcac55f71e3fa6358fd4101f29af3feae0cbcc9076a9a6445e
-- Word-native export: 20 pages; all page images are included under `render/pages/`; the 20 pages were inspected using four contact sheets in `qa/contact_sheets/`.
-- Technical checks: 23 tables; 55 synthetic replacement-register entries; body minimum 10.5 pt; table minimum 9.5 pt; calculations rechecked. See `qa/TECHNICAL_QA_0134_R01.json`.
-- Content data: SAMPLE/SYNTHETIC only. Real association membership, dues, refund, accounting-policy, and approval records were not supplied; those conclusions remain UNKNOWN.
-- Independent semantic review of this exact SHA: PENDING. No reviewer response is included or represented as received.
-- Formal acceptance: NOT_GRANTED.
+## 官方來源與文件用途
 
-## Sources and mapping
+本件對應內部文件 0134／I19-E23、157 Blueprint index 147、官方佐證表第 8 頁「會員人數及會費收入均逐年增加。」印刷方框流水號 UNKNOWN。它是分開計算會員人數和會費收入的年度分析報告，不混入 0133 的班次/參訓人次或 0135 的顧客價值成果。
 
-- Official requirement: official evidence-table PDF page 8; exact source is included in `source/official_source.pdf` and the page extract.
-- Crosswalk: deliverable 0134 maps to requirement I19-E23. The printed checkbox serial is UNKNOWN and is not inferred from the document ID, requirement ID, or index.
-- Project 157 index 147 covers membership/dues ledger and sensitive-data separation. The report keeps identifiable and financial source records out of this public package.
-- Unique current Blueprint and complete source packet are included under `source/`. Source prep commit: `eddbcd7f248026d212e85d199aa12738684a50d6`.
-- The report contains a synthetic replacement register; the CSV copy is `candidate/0134_SYNTHETIC_REPLACEMENT_REGISTER_R01.csv`.
+正文提供 2023–2025 SAMPLE/SYNTHETIC 多年資料、會員年增率與會費收入年增率、結餘與退款處理、資料對帳、限制及行動追蹤。合成數值不代表協會績效；REAL 原件未提供。
 
-## Worker and review trace
+## 驗收證據與狀態修正
 
-`qa/WORKER_DISPATCH_AND_RETURN_0134.json` records the per-document dispatch and adoption facts. OpenCode service liveness was not treated as a document Writer session. No OpenCode or Antigravity generation call is claimed for this candidate; no model identity is asserted. The document was authored in the current local task and built with the bundled local Python/docx tooling, then exported through Microsoft Word automation.
-
-The LibreOffice-based renderer could not run because `soffice.exe` is absent; Word-native PDF export and page images were produced instead. This limitation is explicit and does not imply a semantic PASS.
-
-## Reproduce / inspec
-
-- Body manuscript: `candidate/0134_I19-E23_BODY_R01.md
-- Openable DOCX: `candidate/0134__會員人數及會費收入逐年變化分析報告_R01.docx
-- Word-native PDF: `render/0134_R01_WordNative.pdf
-- Builder and QA code: `builder/` and `qa/
+技術收據 qa/TECHNICAL_QA_0134_R01.json 與視覺收據 qa/VISUAL_QA_0134_R01.json 綁定同一 DOCX SHA；語意審查只檢查文字/算式與可用性，沒有宣稱 reviewer 目視版面。歷史 QA 中 semantic_review=PENDING 是建置當時狀態，不覆寫該歷史收據；現況以 qa/INDEPENDENT_REVIEW_STATUS.md、review/R02_W2_EXACT_SHA/INDEPENDENT_ADJUDICATION_R02.json 及原始回覆為準。R12 只修正過期狀態投影與重算 SHA 清單，不重建 DOCX。
