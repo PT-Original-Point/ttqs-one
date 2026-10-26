@@ -2,7 +2,7 @@
 
 **COMMAND=TTQS_ONE_20261023_R11_DELETE_LOCKS_CONTINUOUS_DELIVERY**
 
-- 首先讀取 `docs/ttqs-quality-20261016/04_CODEX_GOAL_24X7_EXECUTION.md` 與 `05_HOURLY_NATIVE_WAKE_RESUME.md` 最頂端 R11 活躍覆寫，再讀 `06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md` 頂端 R11、R10.1、R10 有界最新發現；歷史 §5/§6 仍保留相容品質與安全條款，不是新的出工 Gate。
+- **2026-10-26 R12 優先入口**：先讀 `docs/ttqs-quality-20261016/06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md` 頂端 R12 指引，並**完整讀** `docs/ttqs-quality-20261016/reports/TTQS_ONE_R12_20261026_24H_Win10_GitHub_Codex_Worker_Audit_Execution.md` 的 §0～§15；再讀 `04_CODEX_GOAL_24X7_EXECUTION.md` 與 `05_HOURLY_NATIVE_WAKE_RESUME.md` 現行 R11 相容條款。R12 已對齊 10/26 Windows 24h 及 GitHub 61 commits，舊 R10/R11 版本收據不准重做已合格工作；所有 SAMPLE/REAL、安全及獨立品質驗收保留。**Windows Automation 在 10/26 22:05 報告為 PAUSED，GitHub 規格不能冒稱已恢復。**
 - 下方 HOTFIX5／HOTFIX6 是歷史流程說明；`TTQS_HANDOFF/CURRENT_STATE.json` 記錄 2026-10-04 的 OpenCode disabled／舊期限／Agent Bus 狀態，**不可用它們推翻 Human 2026-10-17～21 已批准的 OpenCode v2 CLI + Antigravity CLI 文字外包、SAMPLE 完整 DOCX 和兩小時續工**。如舊控制實際仍阻擋新 Mission，標 `SPEC_CONTROL_PLANE_REBASE_REQUIRED` 並進行有界合法遷移；不改寫歷史成當前 PASS。
 - **不可把 PTYSD 其他專案的 Win11 operator-panel／Issue #407，當成 TTQS ONE Win10／PR #92 監控面板**；必須在 Windows 實機定位 TTQS 真正面板並三方（OS/GitHub/面板）同來源讀回。沒有 OS/panel 原生證據，`PANEL_ALIGNED=UNKNOWN`。
 - R08/R09 的 GitHub Commit 是候選控制檔更新，不代表 Windows Scheduler 已改成 120m、GOAL 已 resume 或 Worker 真的採用；續工以實機來源／精確 SHA／單一寫入 owner 為準。不得因舊 queue 無 READY 或 0097 Word 渲染卡住而停止全部合法候選工作。
