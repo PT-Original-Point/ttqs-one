@@ -14,7 +14,7 @@
 - Source packet SHA-256: `fbeb11b96648fff29a49a0fca74bf0cc3b3d1d29934f07dfaa3cf7e410a557fd`.
 - Unique Blueprint SHA-256: `99320fdc9078615ad04087c43bcbd22c5bbf751a22127c51e048e909726a5fca`.
 - Official mapping evidence SHA-256: `fc9e9704748e58847c14c707078acf66ed07f024e2b83c67201b2372ead8208d`; source/Blueprint row SHA-256: `e5956462565186757b6a20f53cff22e9e53cd5abca1e2b69e6942a24c91f5b08`.
-- Existing source files are preserved at `docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R01_20261024/source/`; this package references those exact source hashes and does not duplicate the official source.
+- Existing source files are preserved at `docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R03_20261027/source/`; this package references those exact source hashes and does not duplicate the official source.
 
 ## R03 content delta and review
 
@@ -25,4 +25,5 @@ The R03 full-body reviewer checked exact mapping, title-blind genre, 0120/0122 n
 ## Reproduction receipts
 
 The `review/ANTIGRAVITY_R12_FULL_SEMANTIC_R03_20261027/` directory includes the original request, raw stdout/stderr, extracted response, dispatch start/terminal, input manifest and CLI model catalogue. R12 reports exit 0, 52,786 tokens, no tool indicators, and no candidate mutation. Model/provider identity and cost remain UNKNOWN. No Computer Use was used.
+
 
