@@ -1,6 +1,6 @@
 # 0133 / I19-E22 — R01 Candidate Evidence Package
 
-State: CANDIDATE. Technical, arithmetic and visual self-checks are recorded; independent exact-SHA semantic review is pending. Formal acceptance is NOT GRANTED. REAL association records and source documents remain UNKNOWN / not supplied.
+State: CANDIDATE. Deterministic technical checks and the 11-page Word-native visual receipt are recorded for the exact DOCX SHA below. An independent OpenCode v2 CLI semantic review returned PASS_TEXT_ONLY_WITH_NONBLOCKING_FINDINGS: zero blocking and four nonblocking findings. The reviewer assessed text only and did not inspect the DOCX binary or page layout. Formal acceptance is NOT GRANTED. REAL association records and source documents remain UNKNOWN / not supplied.
 
 ## Official mapping
 
@@ -25,9 +25,9 @@ All sample dates, names, attendee counts, identifiers, role labels, corrections,
 
 ## Worker and review trace
 
-For this 0133 work item, OpenCode v2 and Antigravity CLI were not dispatched. No external model text was adopted. The manuscript was authored in the Codex task; the local deterministic builder created the DOCX. The separate OpenCode free-provider 429 history is recorded only as dispatch context, not counted as a 0133 attempt. Antigravity actual Gemini identity was not verified and no fallback was used. See qa/OUTSOURCING_STATUS_0133_R01.json.
+The manuscript was authored in the Codex task and the deterministic local builder created the DOCX. A separate OpenCode v2 CLI reviewer was later dispatched against this same candidate SHA. The retained session export identifies `glm-5.3-flash-free` and matches the request metadata; upstream provider billing is UNKNOWN. The exact-SHA review response is `worker/OPENCODE_GLM_SEMANTIC_R02_20261026T0805/SEMANTIC_REVIEW_RESPONSE_R02.md` (SHA-256 `437a43e31542249f093f9f68e8e8777d9e92939f75305fa74ace0bb2f4f62d1f`); its dispatch receipt is `worker/OPENCODE_GLM_SEMANTIC_R02_20261026T0805/DISPATCH_RECEIPT.json` (SHA-256 `833c88ab2cf3f281a5b5efdd36885948c520acc19ba68ae992cb7d0d919b6690`). The review scope is TEXT_ONLY; it makes no layout-review claim. Four findings are nonblocking; no reviewer prose was adopted into the DOCX. Antigravity CLI was not dispatched for this item.
 
-Independent title-blind, negative-neighbor semantic review bound to the DOCX SHA above remains pending. No Builder or self-check assertion is used as a substitute.
+The title-blind, negative-neighbor semantic review is complete for the exact DOCX SHA above within TEXT_ONLY scope. Result: PASS_TEXT_ONLY_WITH_NONBLOCKING_FINDINGS (0 blocking, 4 nonblocking); the separate visual and technical receipts cover only their declared scopes. No formal acceptance is implied.
 
 ## Package map
 
