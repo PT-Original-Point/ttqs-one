@@ -3,7 +3,7 @@
   "project_id": "TTQS_ONE",
   "command": "TTQS_ONE_20261026_R12_FULL_RECOVERY_DELIVERY",
   "r12_source_blob_sha1": "63f26f0708249b211611d51b34a7fb90b4cd26a9",
-  "observed_at_local": "2026-10-27T05:53:11.9236309+08:00",
+  "observed_at_local": "2026-10-27T06:14:24.4148758+08:00",
   "repo": "PT-Original-Point/ttqs-one",
   "pr": 92,
   "branch": "work/ttqs-one-document-quality-contract-20261016",
@@ -313,5 +313,65 @@
       "exact_raw_readback": "PASS",
       "formal_acceptance": "NOT_GRANTED"
     }
+  },
+  "doc_0135": {
+    "doc_id": "0135",
+    "official_requirement_id": "I19-E25",
+    "project_157_item": 140,
+    "official_printed_checkbox_serial": "UNKNOWN",
+    "candidate_sha256": "cae8be8280456b51a1294ee90eafca0ac1ae8a12738289d6ebbca35b3a05a3da",
+    "source_packet_sha256": "fe4e433924b21b9891ca61ca52907e56a9dbd9ac62a4fd6fc43a9e4faef19696",
+    "unique_blueprint_sha256": "cb936466e92bb2d5976a2be1a013d85ccdd3a8bbe434dd8b51ac3d77e12d25c1",
+    "review_packet_sha256": "120ebf90abc83e931c5a34f505142d706d0c0ae6c11dcc98989302981878c9f9",
+    "technical": "PASS_WITH_SCOPE",
+    "visual": "PASS_WITH_SCOPE_10_OF_10_PAGES",
+    "semantic": {
+      "status": "REVIEWER_REPORTED_PASS_TEXT_ONLY_WITH_PROVIDER_IDENTITY_UNKNOWN",
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_model": "UNKNOWN",
+      "response_sha256": "e1d401cf008db13e7e836684b05a9877efc838011235d5c7abec4ad1c653b519",
+      "stdout_sha256": "0c88c061431a39b0c3c7c2ba5e793445b935bc217aba662053c54b2862a59a6f",
+      "pid": 82660,
+      "session": "b1dcba37-8eb8-49ec-8515-9628ad18c090",
+      "tokens_reported": {
+        "input": 20300,
+        "output": 7986,
+        "thinking": 6175,
+        "total": 28286
+      },
+      "provider_billing": "UNKNOWN",
+      "scope": "Text-only semantics, arithmetic, sample/real boundary, neighbor separation and usability; no binary/layout review."
+    },
+    "opencode_free_route": {
+      "status": "BLOCKED_SHARED_FREE_LIMIT_429",
+      "attempts": [
+        {
+          "model": "opencode/glm-5.3-flash-free",
+          "http": 429,
+          "next_eligible_local": "2026-10-27T08:00:00.267+08:00",
+          "review_body": false
+        },
+        {
+          "model": "opencode/deepseek-v4.1-flash-free",
+          "http": 429,
+          "retry_after_ms": 27461000,
+          "actual_model": "UNKNOWN_NOT_REACHED",
+          "usage": "UNKNOWN_NOT_REACHED"
+        },
+        {
+          "model": "opencode/mimo-v2.6-flash-free",
+          "http": 429,
+          "retry_after_ms": 22505000,
+          "actual_model": "UNKNOWN_NOT_REACHED",
+          "usage": "UNKNOWN_NOT_REACHED"
+        }
+      ],
+      "common_release_local": "2026-10-27T08:00:00+08:00",
+      "action": "No further free-model attempt before common release; other models were not tested."
+    },
+    "candidate_mutated": false,
+    "docx_rebuilt": false,
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN/HOLD"
   }
 }
