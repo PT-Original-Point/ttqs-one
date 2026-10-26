@@ -99,5 +99,52 @@
     "exact_raw_byte_matches": 35,
     "manifest_sha256_at_verified_commit": "f4691cb73624d09cc002f1e146130155086fc8c30bac2135b9ce6c4d0351c613",
     "mismatch_count": 0
+  },
+  "full_body_semantic_review_R12": {
+    "status": "PASS_TEXT_ONLY",
+    "scope": "Full candidate body semantic/usability review for this exact R03 DOCX and extracted body; no visual inspection claimed.",
+    "candidate_docx_sha256": "b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d",
+    "candidate_body_sha256": "a6f9b879203ab5234d6f5c918c7b3b7b5109c641a66bbbae3d72ebbb9b409991",
+    "source_packet_sha256": "8301b3e12467370086dfccd86c4dbcd50d339f0ed54cda93c2bfcc051b793c3d",
+    "unique_blueprint_sha256": "cbfd0760a03870151d9bc083b8db76655d53107757706f4b1f4449e997553420",
+    "official_requirement_page8_sha256": "c34ead45cad406150de5622e157f44727157776ce5c6abf5343c7db5dca42520",
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model": "UNKNOWN",
+    "provider_fallback": "UNKNOWN; no provider identity metadata; do not attribute output to Gemini as verified",
+    "attempts": [
+      {
+        "attempt": 1,
+        "work_id": "TTQS-0122-I19-E10-R03-ANTIGRAVITY-R12-FULL-BODY-REVIEW",
+        "request_sha256": "2894039b42213fb9ff1d157287e3e85b0120271fed13c958d34a4c6489c9c2ab",
+        "stdout_sha256": "254a8a5fb4d972eb2d43d8b3c8234a2a510a10a64746738932280e1309489f15",
+        "stderr_sha256": "6f9b232ca1f3b43aa72e2ba63698c09b0796b612d5a17cf05efee31e6c79b713",
+        "exit_code": 0,
+        "response": "NONE",
+        "root_cause": "Headless command permission denied; no reviewer text returned; no dangerous-permission bypass used.",
+        "usage_tokens": 28334,
+        "adopted": false
+      },
+      {
+        "attempt": 2,
+        "work_id": "TTQS-0122-I19-E10-R03-ANTIGRAVITY-R12-FULL-BODY-REVIEW-REPAIR02",
+        "request_sha256": "b62cb19c3e6e0bd99a24b9176389a833881e96dc5abf563e0086b261db527ce9",
+        "stdout_sha256": "063fd89c3f746705dc91132bbf6d2dd0850aa19bc3f6c98c1a4d649d3fa471a0",
+        "response_sha256": "1695e65738d405ae74223d5acb27752021941765436aa816c8eeddc5a3c6eb664",
+        "terminal_receipt_sha256": "c60ce7ac073ed3c41539b1ab57a75c6b9dd7c734f8e61f953b7ce7f8d48d3267",
+        "exit_code": 0,
+        "status": "COMPLETED",
+        "tool_indicators": [],
+        "visual_review": "NOT_IN_SCOPE",
+        "usage_tokens": 44051,
+        "adopted": true
+      }
+    ],
+    "review_response_verdict": "PASS_TEXT_ONLY",
+    "technical_qa": "PASS_DETERMINISTIC_SCOPE; existing receipt unchanged",
+    "visual_qa": "PASS_VISUAL_DELTA_SCOPE; existing receipt unchanged; no full 28-page visual pass asserted",
+    "candidate_mutated": false,
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "NOT_PROVIDED",
+    "promotion": "NOT_PROMOTED"
   }
 }
