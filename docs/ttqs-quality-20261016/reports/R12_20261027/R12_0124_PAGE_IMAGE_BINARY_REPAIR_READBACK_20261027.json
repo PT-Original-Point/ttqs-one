@@ -1,0 +1,144 @@
+{
+  "record_type": "TTQS_ONE_R12_PAGE_IMAGE_RAW_BYTE_REPAIR_READBACK",
+  "project_id": "TTQS_ONE",
+  "document": {
+    "doc_id": "0124",
+    "official_requirement": "I19-E12",
+    "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+    "docx_sha256": "0a6567c2779d9ad8014ab6d1c892779a98892351a38ceda0dea9fa8b24ff2988",
+    "docx_bytes": 60133,
+    "docx_modified": false
+  },
+  "source_render": {
+    "path": "TTQS_ONE_CODEX_RUNTIME/WORK/QUALITY_REBUILD_20261016/0124_I19-E12_SOURCE_PREP_R01_20261024/candidate_R01/word_render_R01_0a6567c2",
+    "page_count": 14,
+    "local_png_decode": "PASS (Pillow verify, 14/14)",
+    "prior_visual_inspection": "Existing receipt reports direct 14-page inspection; this repair did not redo or expand visual inspection."
+  },
+  "repair": {
+    "previous_branch_head": "8700011d42c3ae36f50727bbba0f44ec9f491d13",
+    "repair_commit": "d1293f70863794f0c3531caaea469c781f3139a5",
+    "current_branch_head": "d1293f70863794f0c3531caaea469c781f3139a5",
+    "change": "Replaced damaged GitHub PNG blobs with the exact bytes of the existing Word-native render; no DOCX rebuild."
+  },
+  "failure_evidence": {
+    "previous_remote_page_01_blob_sha1": "5c69a6cc1783b18c3a08653696ad83c219a798a8",
+    "finding": "PNG signature lacked required 0D byte after 89 50 4E 47; prior remote object was not decodable as PNG. Directory .gitattributes sets * -text."
+  },
+  "remote_readback": {
+    "source": "GitHub Contents API listing at the live branch head",
+    "page_count": 14,
+    "exact_local_raw_git_blob_and_byte_count_match": true,
+    "images": [
+      {
+        "name": "page-01.png",
+        "bytes": 298488,
+        "sha256": "051b4b590cc5c12d12df8658d074942a6999186ea575325ca07e47155f6a399d",
+        "local_git_blob_sha1": "a48086e3d12ffce12b038ebb136bd86a19762f5c",
+        "github_readback_git_blob_sha1": "a48086e3d12ffce12b038ebb136bd86a19762f5c"
+      },
+      {
+        "name": "page-02.png",
+        "bytes": 235982,
+        "sha256": "4ccfcc3f367cf27ebe5c8c8fe2847a21275a9ed174a7adbf1af623cb83cbfa0f",
+        "local_git_blob_sha1": "1db462a60578d817250a89edaf474d4f591b5765",
+        "github_readback_git_blob_sha1": "1db462a60578d817250a89edaf474d4f591b5765"
+      },
+      {
+        "name": "page-03.png",
+        "bytes": 290804,
+        "sha256": "f8c9405864041ea3eb059862e16b80f61426190331a04f80b32d4093921371db",
+        "local_git_blob_sha1": "490cb96e77d46b618444fce7e1b299aedbdd235c",
+        "github_readback_git_blob_sha1": "490cb96e77d46b618444fce7e1b299aedbdd235c"
+      },
+      {
+        "name": "page-04.png",
+        "bytes": 237490,
+        "sha256": "de0571b331fd7c494c37a159b9906bddb2044fff28aacb1d7818c1c300ab3882",
+        "local_git_blob_sha1": "dd4ca97ddcc4336ae293aeb72c063094e645d354",
+        "github_readback_git_blob_sha1": "dd4ca97ddcc4336ae293aeb72c063094e645d354"
+      },
+      {
+        "name": "page-05.png",
+        "bytes": 261497,
+        "sha256": "86f7d0543cd6d22ef5593faf8483d50c8495815cba71e3752a162d4cc3f3ec5d",
+        "local_git_blob_sha1": "c6b641363068d6ea05dc35e7daaa04900b24c0e4",
+        "github_readback_git_blob_sha1": "c6b641363068d6ea05dc35e7daaa04900b24c0e4"
+      },
+      {
+        "name": "page-06.png",
+        "bytes": 173785,
+        "sha256": "dd31deac6e7c911bca0e9a299810e33e7ae9169d69ac9aab0a4f267082273385",
+        "local_git_blob_sha1": "f61418c76106179ece557a1e91c7845da96cb457",
+        "github_readback_git_blob_sha1": "f61418c76106179ece557a1e91c7845da96cb457"
+      },
+      {
+        "name": "page-07.png",
+        "bytes": 271107,
+        "sha256": "29142c4d2abeac11dbbb01184f6bee7a2700847ff501f98b8c45def69c84f687",
+        "local_git_blob_sha1": "2efa08e69ed5f11e9baef2ab1cadb42c6890b45f",
+        "github_readback_git_blob_sha1": "2efa08e69ed5f11e9baef2ab1cadb42c6890b45f"
+      },
+      {
+        "name": "page-08.png",
+        "bytes": 240337,
+        "sha256": "c8715fbe21a02078cf753640fcb732d7024ced146ef433890be78d14a4376849",
+        "local_git_blob_sha1": "63f1f8029109b11d46c23c6ffd8fe2266d234092",
+        "github_readback_git_blob_sha1": "63f1f8029109b11d46c23c6ffd8fe2266d234092"
+      },
+      {
+        "name": "page-09.png",
+        "bytes": 266149,
+        "sha256": "9ade3f91352833931ba9eca87062ec23cf86c922c7a1b5434fc1544087325746",
+        "local_git_blob_sha1": "6d824f2f9b29a9f6c4fcf1dcecea25205aa4a28a",
+        "github_readback_git_blob_sha1": "6d824f2f9b29a9f6c4fcf1dcecea25205aa4a28a"
+      },
+      {
+        "name": "page-10.png",
+        "bytes": 289359,
+        "sha256": "8203d70e4a7dc2077467726b479d9fca5953f57b7f238c20e24df0efbfc469a1",
+        "local_git_blob_sha1": "4b5b765e7bb0d5c8f41870d56067f884bb60dcf0",
+        "github_readback_git_blob_sha1": "4b5b765e7bb0d5c8f41870d56067f884bb60dcf0"
+      },
+      {
+        "name": "page-11.png",
+        "bytes": 280169,
+        "sha256": "54d0a55df595d85d9d09b9a2c5accf88f6ea0feb0958edbe3bdb3c6ea196fa89",
+        "local_git_blob_sha1": "6ae11b156564b44b12dd4d4008972b3ee2f0605e",
+        "github_readback_git_blob_sha1": "6ae11b156564b44b12dd4d4008972b3ee2f0605e"
+      },
+      {
+        "name": "page-12.png",
+        "bytes": 248242,
+        "sha256": "ec4369e83f80ab271237dcdfb6ccdb3d9c2f43be49b3744ac0f29c7747971aef",
+        "local_git_blob_sha1": "8dc1d81f7783bc78c3fe209a3c59fdc994eb51ad",
+        "github_readback_git_blob_sha1": "8dc1d81f7783bc78c3fe209a3c59fdc994eb51ad"
+      },
+      {
+        "name": "page-13.png",
+        "bytes": 223415,
+        "sha256": "8d45e517d6f69879214acfdf0a5e37af831ce96c026725a07abfb8bdbb959d5a",
+        "local_git_blob_sha1": "25769b907a02d5ec57d81a30e7bfb57b8ca26948",
+        "github_readback_git_blob_sha1": "25769b907a02d5ec57d81a30e7bfb57b8ca26948"
+      },
+      {
+        "name": "page-14.png",
+        "bytes": 66810,
+        "sha256": "291d9d1202ef09e85581652b5702a4b8533d87c327361acf9687b80da3345683",
+        "local_git_blob_sha1": "e7c2b94da3119ed5de96d4b0f18df01eeac987b6",
+        "github_readback_git_blob_sha1": "e7c2b94da3119ed5de96d4b0f18df01eeac987b6"
+      }
+    ]
+  },
+  "qa_scope": {
+    "technical": "PASS for 14 PNG signatures and exact byte counts/blob IDs; local Pillow decode PASS 14/14; GitHub directory readback match 14/14.",
+    "semantic": "Existing exact-candidate text review was reported PASS; actual provider/model identity remains UNKNOWN.",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "NOT_VERIFIED"
+  },
+  "verified_at": "2026-10-27T06:40:17.9335588+08:00",
+  "limits": [
+    "This receipt verifies storage integrity and readback for the existing rendered images; it does not claim a new semantic review or new full visual review.",
+    "The DOCX SHA remains unchanged; no claim of formal association approval or real-world evidence."
+  ]
+}
