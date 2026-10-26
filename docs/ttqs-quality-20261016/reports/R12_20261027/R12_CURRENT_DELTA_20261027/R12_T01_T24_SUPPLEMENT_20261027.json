@@ -124,8 +124,8 @@
     },
     {
       "id": "T20",
-      "status": "PENDING_THIS_SYNC",
-      "finding": "Current start head e4ca029d5264f5402d566be4a54be5cde38dda90; exact readback to follow."
+      "status": "PASS_EXACT_RAW_BYTE_READBACK",
+      "finding": "23/23 files from commit 7b7e2cb9d5ad3305cd9abd283b81b7132268cabe were fetched by base64 from the live branch; every remote payload and Git blob SHA-1 matched the Windows local file."
     },
     {
       "id": "T22",
@@ -160,7 +160,13 @@
     }
   ],
   "next_ready_stage": "After exact GitHub readback of this delta, derive the next missing stage from current official 129-to-142 crosswalk; do not dispatch 0132/0134 again.",
-  "result_state": "PARTIAL_WITH_VERIFIED_EXISTING_CANDIDATE_AND_STATUS_REPAIR",
+  "result_state": "PARTIAL_WITH_VERIFIED_STATUS_REPAIR_AND_GITHUB_RAW_READBACK",
   "formal_acceptance": "NOT_GRANTED",
-  "real_evidence": "UNKNOWN"
+  "real_evidence": "UNKNOWN",
+  "github_sync": {
+    "commit": "7b7e2cb9d5ad3305cd9abd283b81b7132268cabe",
+    "verified_count": 23,
+    "failed_count": 0,
+    "readback_receipt": "GITHUB_RAW_BYTE_READBACK_20261027.json"
+  }
 }
