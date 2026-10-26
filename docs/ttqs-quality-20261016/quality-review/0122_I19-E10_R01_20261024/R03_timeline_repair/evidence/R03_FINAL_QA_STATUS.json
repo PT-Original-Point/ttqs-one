@@ -1,0 +1,94 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0122",
+  "requirement_id": "I19-E10",
+  "candidate_state": "CANDIDATE_PENDING_FORMAL_HUMAN_ACCEPTANCE",
+  "candidate_docx_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0122_I19-E10_SOURCE_PREP_R01_20261024\\candidate_R03\\0122_I19-E10_R03.docx",
+  "candidate_docx_sha256": "b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d",
+  "candidate_docx_bytes": 74234,
+  "extracted_body_sha256": "a6f9b879203ab5234d6f5c918c7b3b7b5109c641a66bbbae3d72ebbb9b409991",
+  "source_packet_sha256": "8301b3e12467370086dfccd86c4dbcd50d339f0ed54cda93c2bfcc051b793c3d",
+  "unique_blueprint_sha256": "cbfd0760a03870151d9bc083b8db76655d53107757706f4b1f4449e997553420",
+  "official_requirement_page8_sha256": "c34ead45cad406150de5622e157f44727157776ce5c6abf5343c7db5dca42520",
+  "material_repair": "Wave 1 Q12 chronology and exact distribution corrected; 90-day values and July 10 sample test register unchanged.",
+  "technical_review": {
+    "status": "PASS_DETERMINISTIC_SCOPE",
+    "receipt_sha256": "58e35edcf21b25b6f51cb619762099dc90cc16850e1f0258c1e733b565cd3118",
+    "body_min_font_pt": 10.5,
+    "table_min_font_pt": 9.5,
+    "q12_math": "Wave 1 8/8=100.0%; Wave 2 7/7=100.0% response distribution; final attempt pass 6/8=75.0%, cohort 6/10=60.0%."
+  },
+  "word_visual_review": {
+    "status": "PASS_VISUAL_DELTA_SCOPE",
+    "receipt_sha256": "90a34e9c237c7c3cb0a3c5d71e177b3559a389566a04f4411ad603b204ea03dc",
+    "word_native_pdf_sha256": "4817560b5739a506ce6d4227924eb7b35c0b70d8543cb5d609b19148f264d5a4",
+    "pages": 28,
+    "changed_visual_pages": [
+      15,
+      16,
+      21
+    ],
+    "unchanged_pixel_identical_pages": 25
+  },
+  "independent_semantic_review": {
+    "delta_verdict": "PASS",
+    "scope": "R03 exact-SHA delta only; unaffected content coverage inherited from R02 full-body reviewer, with R02 overall PASS rejected for the timeline defect.",
+    "response_sha256": "ebcb7ac280491bae06dc54da67e090ab3491a8a6e019eb308d4cc5bc07499820",
+    "human_readable_response_sha256": "2300f1a46f55b743d2da2b9bfdb8ebb230ff556e711ca55252121c083a97352d",
+    "review_request_sha256": "17710bde2b2af4796be63bb9846959fab8502db84d94d75d580e53ec77daef3a",
+    "candidate_sha256_verified_in_response": true,
+    "body_sha256_verified_in_response": true,
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model": "UNKNOWN",
+    "reviewer_self_reported_model": "Gemini 3.8 Flash (High); not corroborated by provider metadata",
+    "reported_usage": {
+      "input_tokens": 14256,
+      "output_tokens": 8088,
+      "thinking_tokens": 4924,
+      "cache_read_tokens": 0,
+      "total_tokens": 22344
+    },
+    "tool_calls": [],
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "worker_routing": {
+    "opencode_v2": {
+      "state": "BLOCKED_BY_FREE_USAGE_429_FOR_REQUESTED_DEEPSEEK_FREE_MODEL",
+      "status_code": 429,
+      "retry_after_ms": 30210000,
+      "model_usage": "UNKNOWN_NOT_REACHED",
+      "same_input_retry": "NOT_ATTEMPTED"
+    },
+    "antigravity_cli": {
+      "version": "1.4.7",
+      "model_listed": "gemini-3.8-flash-high",
+      "provider_model_identity": "UNKNOWN",
+      "attempts": {
+        "attempt01_permission_denied_usage": {
+          "input_tokens": 34125,
+          "output_tokens": 3550,
+          "thinking_tokens": 3089,
+          "cache_read_tokens": 0,
+          "total_tokens": 37675
+        },
+        "attempt02_model_effort_conflict": "pre-model CLI rejection; no provider usage field",
+        "attempt03_delta_review_usage": {
+          "input_tokens": 14256,
+          "output_tokens": 8088,
+          "thinking_tokens": 4924,
+          "cache_read_tokens": 0,
+          "total_tokens": 22344
+        }
+      },
+      "computer_use": "NOT_USED",
+      "dangerous_permission_bypass": "NOT_USED"
+    }
+  },
+  "truth_boundary": {
+    "sample_synthetic": "YES",
+    "real_evidence": "NOT_PROVIDED",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "github_sync": "PENDING",
+  "observed_at_local": "2026-10-26T23:44:29.340349+08:00"
+}
