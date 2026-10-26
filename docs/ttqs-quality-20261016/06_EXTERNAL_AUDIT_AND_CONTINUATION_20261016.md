@@ -1,3 +1,17 @@
+# TTQS ONE｜R12 2026-10-26 24h 最新增量：從已暫停排程恢復真正 Writer/Review 閉環
+
+**COMMAND=TTQS_ONE_20261026_R12_FULL_RECOVERY_DELIVERY**  
+**完整操作指揮書（同 PR #92、已有檔案，非第二控制平台）：docs/ttqs-quality-20261016/reports/TTQS_ONE_R12_20261026_24H_Win10_GitHub_Codex_Worker_Audit_Execution.md**  
+**指揮書 Git Blob SHA-1：63f26f0708249b211611d51b34a7fb90b4cd26a9；需按本案真實 Windows OS/CLI 最新讀回執行，GitHub 提交不等於本機已套用。**
+
+Human 10/26 22:05 Windows 24h 報告顯示兩條 Codex automation 均 PAUSED、舊 OS Supervisor Disabled、GOAL/自然排程未證明續工，面板 8765/8766 OFFLINE；R11 放寬 Prompt 但沒有原生執行證據。最新 R12 **優先於下列 R11/R10/R09 的歷史出工處置**，已通過同 SHA 產物/審查不得重跑。其他安全、SAMPLE/REAL、獨立語意、Word 視覺規則保留。
+
+精確增量：同 24h GitHub branch commit API 依 committer UTC 範圍分頁查得 **61 個不重複 SHA**（非本機僅列出的 13、非 61 件 DOCX）；本期只有 0100/0121/0122 3 個 doc_id 的 Word 變更，W1 OpenCode 6 session 僅 1 次有效文字審查，W2 Antigravity 14 attempts/10 正向有限範圍但實際 backend Gemini identity 多 UNKNOWN，可見 ≥391,827 tokens。0100 R09b 是最新而非舊 R10 SHA；0121 R02 SHA ae5da09e... 技術/23頁視覺 PASS、語意 PENDING，OpenCode 429 retryAfterMs=62226000；0122 R02 SHA d3a6a122... 28頁 Word＋W2 原文已存在但 packet asserted SHA 類型需無模型仲裁；0133 README PENDING 已落後於同 SHA W1 成功 review；0135 Word 可用但 semantic 受 429 限制。0110 R07 之後已有後續 Word/QA，禁止沿用 R10.1「0110 尚無 DOCX」舊結論。0142 為專案歷史 142 deliverable 序列末項，不得誤建 0143。請用同源資料按最新狀態縮減修復。
+
+**下一合法順序**：Windows 目前 GOAL/Automation native PAUSED 原因、last/next/budget/最後一次有無 tool call 與 owner → 當次有權本機 Session 繼續已核准的可逆 READY、不等 120m → 0122 原始審查零 Token SHA 鏈仲裁 → 0133 舊 README 局部修正 → 0121/0135 等路由/失敗限定 QA 及其他有實際 READY 的 142 crosswalk 工件 → 合格 W1/W2 真派工/回收 → Word+QA → 最小 GitHub raw bytes readback → 下一 READY。Black console/52 Word COM/429 只局部診斷。無原生 Windows/PANEL/天然 120m trigger 收據一律 UNKNOWN，不自報 PASS。
+
+---
+
 # TTQS ONE｜R11 Human 2026-10-23：淨刪自我鎖，120 分鐘只補漏、不節流
 
 **COMMAND=TTQS_ONE_20261023_R11_DELETE_LOCKS_CONTINUOUS_DELIVERY**
