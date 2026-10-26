@@ -1,0 +1,68 @@
+{
+  "schema": "ttqs-one-review-sync-manifest/v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0121",
+  "requirement_id": "I19-E09",
+  "candidate_sha256": "ae5da09e834f5a8e9097a85ac87d4fe2f76acf9626049d3b0bea7c5f35042efe",
+  "candidate_git_blob_sha": "369571cb73f1b674cf480196cf12f5fbc97ab684",
+  "source_branch": "work/ttqs-one-document-quality-contract-20261016",
+  "base_head": "42716111f1b9aa2c19fabd8d71a6aeab584a23c9",
+  "source_control_blobs": {
+    "06": "b566c5c71d1a88e012eca2eeac90c8a3e4ecc06c",
+    "04": "65e7fd5a406877e875174402a0d3ddc68b6111a1",
+    "05": "dbdb2e567e8e5c2b7eb0632f060a45a7ae371a49"
+  },
+  "candidate_status": "CANDIDATE_PENDING_INDEPENDENT_EXACT_SHA_SEMANTIC_REVIEW",
+  "independent_review_status": "PENDING; W2 attempt returned no response after permission-denied command; W1 explicit free model returned HTTP 429 before generating a review.",
+  "route_state": {
+    "W1": "BLOCKED_PROVIDER_FREE_LIMIT_429; retryAfterMs=62226000",
+    "fallback": "NOT_USED",
+    "W2": "NO_REVIEW_OUTPUT; actual Gemini serving identity UNKNOWN; command tool was denied, do not bypass"
+  },
+  "quality_status": {
+    "technical": "PASS_TECHNICAL_VISUAL (27 checks)",
+    "formal_acceptance": "NOT_GRANTED",
+    "semantic": "PENDING",
+    "real_evidence": "NOT_PROVIDED",
+    "word_render": "23 pages; native Word render receipt present"
+  },
+  "local_artifacts": [
+    {
+      "name": "INPUT_MANIFEST.json",
+      "bytes": 1403,
+      "local_sha256": "dc40cbfdd0cb79cfd8d9550c84377b44ee6e0d2dec41db21d4387423abec8637",
+      "expected_git_blob_sha": "632a8cbceefc7d63a77769f9b2985e3403c60cd3"
+    },
+    {
+      "name": "REVIEW_REQUEST.md",
+      "bytes": 1196,
+      "local_sha256": "c75629413104928b62a9dde2c3f0042f582839e404b7cd4a82530f00f6fd69e9",
+      "expected_git_blob_sha": "c05f376ae7c7da51b583b804169d3551a766f5f7"
+    },
+    {
+      "name": "RAW_STDOUT.jsonl",
+      "bytes": 528,
+      "local_sha256": "f721fe9714372302d1c4926742f1568819fef629db28557ebb1d3f56dc1164fc",
+      "expected_git_blob_sha": "60e74002b641fcbbf403214c06245e36b62f07d5"
+    },
+    {
+      "name": "RAW_STDERR.txt",
+      "bytes": 0,
+      "local_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected_git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "name": "DISPATCH_RECEIPT.json",
+      "bytes": 2980,
+      "local_sha256": "9e2c421ecb6fdacd3f7895c1c2f48ef9bf39971cf8fa411f9c3655eaec4bf59e",
+      "expected_git_blob_sha": "c778e7dc5b8887638544f63d3ca0d254717c859a"
+    },
+    {
+      "name": "ADJUDICATION.json",
+      "bytes": 1086,
+      "local_sha256": "2630ef9a2562597c6ceff523c61ce6fca654db50f2088b178a41d150ef064ea0",
+      "expected_git_blob_sha": "d05f84963e8277186ea7cc37f459c378fc8e252d"
+    }
+  ],
+  "remote_readback": "PENDING"
+}
