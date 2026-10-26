@@ -105,7 +105,7 @@
     {
       "id": "T20",
       "status": "PASS_RAW_READBACK_41_OF_41",
-      "finding": "At PR #92 HEAD 5e59de1d2b8ddd512ceb605ad4a7910eed154ed8, all 37 manifest-listed R12 payload files plus 4 auxiliary manifest/.gitattributes files were fetched as raw Git blobs and compared byte-for-byte. At the same HEAD the 0121 package is 58/58, 0124 existing candidate/PDF/visual QA/Word export receipt are 4/4, 0135 existing candidate SHA cae8be8280456b51a1294ee90eafca0ac1ae8a12738289d6ebbca35b3a05a3da matches local, and R12 contract blob remains 63f26f0708249b211611d51b34a7fb90b4cd26a9."
+      "finding": "Baseline raw readback before this 0121 update: at HEAD 70d7ca0fb0fe8e56e2da8b3c54f67e37bef59e64, R12 manifest 37/37 and 0121 R03 package 58/58 were byte-identical; the new R12 worker evidence is read back after push and recorded separately."
     },
     {
       "id": "T21",
@@ -120,7 +120,7 @@
     {
       "id": "T23",
       "status": "PASS_DISTINCT_EXACT_SHA_SCOPES",
-      "finding": "0124 now has an independent PASS_TEXT_ONLY response bound to exact candidate SHA 0a6567c2779d9ad8014ab6d1c892779a98892351a38ceda0dea9fa8b24ff2988; separate exact-SHA visual/technical evidence remains distinct. Reviewer did not claim binary or visual inspection; actual serving model remains UNKNOWN."
+      "finding": "0124: independent PASS_TEXT_ONLY bound to 0a6567c2779d9ad8014ab6d1c892779a98892351a38ceda0dea9fa8b24ff2988 with visual scope separate. 0121: full-body PASS_TEXT_ONLY bound to ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539; reviewer explicitly leaves layout UNKNOWN; exact-SHA separate Word QA 27/27. W2 actual serving model identity remains UNKNOWN; neither review grants formal acceptance."
     },
     {
       "id": "T24",

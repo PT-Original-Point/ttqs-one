@@ -28,13 +28,35 @@
     "table_min_font_pt": 9.5
   },
   "semantic": {
-    "status": "PASS_WITH_DELTA_SCOPE",
+    "status": "PASS_TEXT_ONLY",
     "exact_candidate_sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
-    "review_response_sha256": "d0d502350dc5a5178dd0c4d077b66591661aca1574f59b77f39c7a8f87414d",
-    "scope": "R02 full-body review was PARTIAL only at P162-P163; R03 delta review PASS closes P163 and confirms safe P002 metadata. No other body bytes changed.",
+    "review_response_sha256": "9f68f37a3427aee265f54f3f895fa832cca6580a3f6fdc0de07916f47865ed4d",
+    "raw_stdout_sha256": "93770fa08a7e4714c6b6e65d38c699f81bd4b26169a33e5f05741c951b5cdb10",
+    "review_request_sha256": "d5935a49c75152ff3e68451e9e78271f4ec4d746645bab49f89086a621576b1d",
+    "scope": "Full candidate body and tables; exact requirement I19-E09; Blueprint substantive sections 1-5 and 7-10. Reviewer separately marks native Word typography and page layout UNKNOWN; no visual/binary claim.",
     "requested_model": "gemini-3.8-flash-high",
     "actual_serving_model_identity": "UNKNOWN_PROVIDER_METADATA_NOT_EXPOSED",
-    "formal_acceptance": "NOT_GRANTED"
+    "provider_identity_verified": false,
+    "reviewer_verdict": "PASS",
+    "blockers_reported": 0,
+    "token_usage_reported": {
+      "input_tokens": 28821,
+      "output_tokens": 23965,
+      "thinking_tokens": 17128,
+      "cache_read_tokens": 0,
+      "total_tokens": 52786
+    },
+    "prior_r03_delta_review": {
+      "status": "PASS_WITH_DELTA_SCOPE",
+      "exact_candidate_sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+      "review_response_sha256": "d0d502350dc5a5178dd0c4d077b66591661aca1574f59b77f39c7a8f87414d",
+      "scope": "R02 full-body review was PARTIAL only at P162-P163; R03 delta review PASS closes P163 and confirms safe P002 metadata. No other body bytes changed.",
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_serving_model_identity": "UNKNOWN_PROVIDER_METADATA_NOT_EXPOSED",
+      "formal_acceptance": "NOT_GRANTED"
+    },
+    "formal_acceptance": "NOT_GRANTED",
+    "visual_layout_in_scope": false
   },
   "sample_real": {
     "synthetic_register_sha256": "96837dfbabcc81693256042e4c326825c6e0f847982a63add3eb72945c5d100e",
@@ -42,5 +64,6 @@
     "formal_acceptance": "NOT_GRANTED"
   },
   "docx_changed_during_qa_or_review": false,
-  "promotion": "NOT_PROMOTED"
+  "promotion": "NOT_PROMOTED",
+  "updated_by": "R12 exact-SHA full-body independent review readback; DOCX bytes untouched"
 }
