@@ -1,0 +1,46 @@
+{
+  "schema": "ttqs-one-candidate-status-r12-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0121",
+  "requirement_id": "I19-E09",
+  "revision": "R03",
+  "candidate_state": "CANDIDATE",
+  "candidate_docx_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0121_I19-E09_SOURCE_PREP_R01_20261024\\candidate_R03\\0121_I19-E09_R03.docx",
+  "candidate_docx_sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+  "candidate_bytes": 72632,
+  "body_extract_sha256": "4ea875c255a3d1f852788a258725150729787f83dad96efa997dd491a8f01552",
+  "source_packet_sha256": "fbeb11b96648fff29a49a0fca74bf0cc3b3d1d29934f07dfaa3cf7e410a557fd",
+  "unique_blueprint_sha256": "99320fdc9078615ad04087c43bcbd22c5bbf751a22127c51e048e909726a5fca",
+  "official_mapping_evidence_sha256": "fc9e9704748e58847c14c707078acf66ed07f024e2b83c67201b2372ead8208d",
+  "source_blueprint_row_sha256": "e5956462565186757b6a20f53cff22e9e53cd5abca1e2b69e6942a24c91f5b08",
+  "technical_visual": {
+    "status": "PASS",
+    "checks": 27,
+    "receipt_sha256": "5a7478d792a5e9cd0e884e5bdda78fa34cab611ba36b64d592b93a2a726b4015",
+    "word_native_pdf_sha256": "fa3fd36e716372d47ae36a3eaf4a5f28ec5c395d9800e6764bf69325abed0f70",
+    "pages": 23,
+    "changed_pages_inspected": [
+      1,
+      18
+    ],
+    "unchanged_pixel_identical_pages": 21,
+    "body_min_font_pt": 10.5,
+    "table_min_font_pt": 9.5
+  },
+  "semantic": {
+    "status": "PASS_WITH_DELTA_SCOPE",
+    "exact_candidate_sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+    "review_response_sha256": "d0d502350dc5a5178dd0c4d077b66591661aca1574f59b77f39c7a8f87414d",
+    "scope": "R02 full-body review was PARTIAL only at P162-P163; R03 delta review PASS closes P163 and confirms safe P002 metadata. No other body bytes changed.",
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model_identity": "UNKNOWN_PROVIDER_METADATA_NOT_EXPOSED",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "sample_real": {
+    "synthetic_register_sha256": "96837dfbabcc81693256042e4c326825c6e0f847982a63add3eb72945c5d100e",
+    "real_evidence": "NOT_PROVIDED",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "docx_changed_during_qa_or_review": false,
+  "promotion": "NOT_PROMOTED"
+}
