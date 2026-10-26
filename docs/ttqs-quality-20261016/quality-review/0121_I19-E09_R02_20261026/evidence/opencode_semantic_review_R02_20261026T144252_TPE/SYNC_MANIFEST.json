@@ -64,5 +64,57 @@
       "expected_git_blob_sha": "d05f84963e8277186ea7cc37f459c378fc8e252d"
     }
   ],
-  "remote_readback": "PENDING"
+  "remote_readback": {
+    "status": "VERIFIED_REMOTE_GIT_BLOB_ID_MATCH",
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "readback_head": "1a5eb08e9921dacdcab5fda77db742def6f9fc83",
+    "files": [
+      {
+        "match": true,
+        "name": "INPUT_MANIFEST.json",
+        "remote": "632a8cbceefc7d63a77769f9b2985e3403c60cd3",
+        "expected": "632a8cbceefc7d63a77769f9b2985e3403c60cd3"
+      },
+      {
+        "match": true,
+        "name": "REVIEW_REQUEST.md",
+        "remote": "c05f376ae7c7da51b583b804169d3551a766f5f7",
+        "expected": "c05f376ae7c7da51b583b804169d3551a766f5f7"
+      },
+      {
+        "match": true,
+        "name": "RAW_STDOUT.jsonl",
+        "remote": "60e74002b641fcbbf403214c06245e36b62f07d5",
+        "expected": "60e74002b641fcbbf403214c06245e36b62f07d5"
+      },
+      {
+        "match": true,
+        "name": "RAW_STDERR.txt",
+        "remote": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "expected": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      },
+      {
+        "match": true,
+        "name": "DISPATCH_RECEIPT.json",
+        "remote": "c778e7dc5b8887638544f63d3ca0d254717c859a",
+        "expected": "c778e7dc5b8887638544f63d3ca0d254717c859a"
+      },
+      {
+        "match": true,
+        "name": "ADJUDICATION.json",
+        "remote": "d05f84963e8277186ea7cc37f459c378fc8e252d",
+        "expected": "d05f84963e8277186ea7cc37f459c378fc8e252d"
+      },
+      {
+        "match": true,
+        "name": "0121_學員滿意度與學習評量報告_R02.docx",
+        "remote": "369571cb73f1b674cf480196cf12f5fbc97ab684",
+        "expected": "369571cb73f1b674cf480196cf12f5fbc97ab684"
+      }
+    ],
+    "exact_match_count": "7/7",
+    "manifest_blob_current": "ca9814c67051aca25c1ff5e8118ad3cec03e4617",
+    "limitation": "GitHub contents readback returned matching Git blob IDs. Candidate blob is unchanged from the previous independently verified raw-byte readback; no semantic PASS is implied."
+  }
 }
+
