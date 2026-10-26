@@ -168,9 +168,14 @@
       "id": "T24",
       "status": "PASS_CANDIDATE_ONLY",
       "finding": "No formal Human acceptance or REAL evidence granted."
+    },
+    {
+      "id": "T20",
+      "status": "PASS_RAW_READBACK_6_OF_6_0140_ADJUDICATION_UPDATE",
+      "finding": "At live head 4a8fd77a2c11b1b7a1218507ef7d40ac94e424a1, fetched the updated 0140 adjudication sidecar and five linked evidence/candidate paths; all six Git blob SHAs matched the expected local/source blobs. The DOCX SHA remained unchanged."
     }
   ],
-  "material_delta": "0121 received a new exact-SHA full-body text-only reviewer result; 0135 W1 failure was reconciled and parked. No DOCX was rebuilt.; exact selected raw-byte readback verified",
+  "material_delta": "0121 received a new exact-SHA full-body text-only reviewer result; 0135 W1 failure was reconciled and parked. No DOCX was rebuilt.; exact selected raw-byte readback verified; 0140 adjudication status corrected and exact raw bytes read back; no DOCX rebuild",
   "github_readback": {
     "status": "PASS_SELECTED_8_OF_8",
     "verified_head": "3138a480611db4491ac0b9a1df0096328bf90411",
@@ -210,10 +215,53 @@
         "git_blob_sha1": "20463448694102bfc345d6a9124025a8a8186ed2",
         "raw_bytes_equal": true
       }
+    ],
+    "additional_readbacks": [
+      {
+        "scope": "0140 R11 candidate + R12 review evidence + corrected adjudication",
+        "verified_head": "4a8fd77a2c11b1b7a1218507ef7d40ac94e424a1",
+        "count": "6_OF_6",
+        "adjudication_blob_sha1": "126613256c82fe6be92803912628c00344feb2f0",
+        "candidate_sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d",
+        "actual_model": "UNKNOWN",
+        "human_acceptance": "NOT_GRANTED"
+      }
     ]
   },
   "formal_acceptance": "NOT_GRANTED",
   "real_evidence": "NOT_PROVIDED",
   "remote_head_after_first_sync": "3138a480611db4491ac0b9a1df0096328bf90411",
-  "github_readback_status": "PASS"
+  "github_readback_status": "PASS",
+  "doc_0140": {
+    "doc_id": "0140",
+    "official_requirement_id": "I19-E30",
+    "candidate_sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d",
+    "technical_qa": "PASS_21_OF_21",
+    "visual_qa": "PASS_WITH_NONBLOCKING_LAYOUT_NOTE_29_PAGES",
+    "chart_data_reconciliation": "PASS",
+    "semantic_scope": "PASS_TEXT_BODY_ONLY_WITH_NONBLOCKING_NOTE",
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model": "UNKNOWN",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN_HOLD",
+    "docx_rebuilt": false,
+    "github_raw_readback_before_metadata_update": {
+      "live_head": "163ae69d017a4fc6180eb9cd6425cec441100599",
+      "exact_paths_count": "5_OF_5",
+      "git_blob_sha1s": {
+        "request_packet": "47727f25bfcbd7271f4fc6c328c09a902c20c8d9",
+        "input_manifest": "d340f9c84c12ec08030f689c9890682aeae00d53",
+        "dispatch": "90c122c13032c57a9daaaf07e8ca620628ee3a68",
+        "raw_response": "2dd98f729c3f10730ab587e498aa7d4873641a2a",
+        "candidate_docx": "a4c1545eaa9887195dae72623846dc9eea6cc120"
+      }
+    },
+    "adjudication_sync": {
+      "update_commit": "4a8fd77a2c11b1b7a1218507ef7d40ac94e424a1",
+      "sidecar_git_blob_sha1": "126613256c82fe6be92803912628c00344feb2f0",
+      "local_sha256_after_raw_readback": "4a4f4bc08b0ec3d6e7abba692c25da227d9aa97da1dd657d6e3213663a753d84",
+      "exact_raw_readback": "PASS",
+      "formal_acceptance": "NOT_GRANTED"
+    }
+  }
 }
