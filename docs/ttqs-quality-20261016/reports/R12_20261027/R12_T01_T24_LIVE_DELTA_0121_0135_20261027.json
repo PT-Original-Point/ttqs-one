@@ -151,8 +151,8 @@
     },
     {
       "id": "T20",
-      "status": "PASS_RAW_READBACK_8_OF_8",
-      "finding": "At PR branch head 3138a480611db4491ac0b9a1df0096328bf90411, authenticated GitHub fetch_file blob SHA-1 matched local Git blob SHA-1 for 8 selected 0121 artifacts, including candidate, PDF, current QA, new worker evidence, README and register."
+      "status": "PASS_RAW_READBACK_8_OF_8_BASELINE_PLUS_0140_6_OF_6",
+      "finding": "Baseline R12 readback verified 8/8 selected 0121 artifacts at head 3138a480611db4491ac0b9a1df0096328bf90411. Additional 0140 readback verified the adjudication sidecar plus four review evidence files and candidate DOCX, 6/6 exact Git blob SHAs, at head 4a8fd77a2c11b1b7a1218507ef7d40ac94e424a1. The 0140 DOCX SHA remained 5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d; formal acceptance NOT_GRANTED."
     },
     {
       "id": "T22",
@@ -168,11 +168,6 @@
       "id": "T24",
       "status": "PASS_CANDIDATE_ONLY",
       "finding": "No formal Human acceptance or REAL evidence granted."
-    },
-    {
-      "id": "T20",
-      "status": "PASS_RAW_READBACK_6_OF_6_0140_ADJUDICATION_UPDATE",
-      "finding": "At live head 4a8fd77a2c11b1b7a1218507ef7d40ac94e424a1, fetched the updated 0140 adjudication sidecar and five linked evidence/candidate paths; all six Git blob SHAs matched the expected local/source blobs. The DOCX SHA remained unchanged."
     }
   ],
   "material_delta": "0121 received a new exact-SHA full-body text-only reviewer result; 0135 W1 failure was reconciled and parked. No DOCX was rebuilt.; exact selected raw-byte readback verified; 0140 adjudication status corrected and exact raw bytes read back; no DOCX rebuild",
