@@ -1,0 +1,177 @@
+{
+  "schema": "TTQS_ONE_R12_0135_0121_LIVE_DELTA_V1",
+  "project_id": "TTQS_ONE",
+  "command": "TTQS_ONE_20261026_R12_FULL_RECOVERY_DELIVERY",
+  "r12_source_blob_sha1": "63f26f0708249b211611d51b34a7fb90b4cd26a9",
+  "observed_at_local": "2026-10-27T05:22:24.2124633+08:00",
+  "repo": "PT-Original-Point/ttqs-one",
+  "pr": 92,
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "remote_head_before_sync": "923b7cb03d888818a9a39be4e0ba1b668a9c6a55",
+  "prior_test_matrix": {
+    "path": "docs/ttqs-quality-20261016/reports/R12_20261027/R12_T01_T24_TEST_RESULTS.json",
+    "git_blob_sha1": "b214de0aea55c7741a361e46703bdc656ff25e98",
+    "t01_t24_preserved": true
+  },
+  "native_state": {
+    "host": "DESKTOP-VMV4Q60",
+    "user": "DESKTOP-VMV4Q60\\J",
+    "windows": "Windows 10 Pro build 19045",
+    "goal_thread": "01a14098-b269-79e3-b07c-56e96557fe07",
+    "goal_status": "ACTIVE",
+    "thread_automation_id": "ttqs-one-hourly-quality-goal-resume",
+    "thread_automation_interval_minutes": 120,
+    "thread_automation_config_sha256": "0984df0e4ff24498890644cb9d1b41b0646a134230a7ae1606e388fac5ed32b6",
+    "thread_automation_config_status": "ACTIVE",
+    "natural_last_run": "UNKNOWN",
+    "natural_next_run": "UNKNOWN",
+    "natural_trigger": "UNKNOWN",
+    "standalone_automation_id": "ttqs-one-standalone-quality-resume",
+    "standalone_status": "PAUSED",
+    "standalone_pause_reason": "UNKNOWN_NOT_EXPOSED",
+    "windows_supervisor": "DISABLED",
+    "opencode_service_pid": 79496,
+    "active_cli_writer": "NONE_OBSERVED",
+    "winword_count": 52,
+    "winword_ownership": "UNKNOWN",
+    "mass_termination": false,
+    "panel_alignment": "UNKNOWN"
+  },
+  "attempts": [
+    {
+      "work_id": "TTQS-0135-I19-E25-R03-W1-EXACT-SHA-REVIEW",
+      "doc_id": "0135",
+      "worker": "OpenCode v2 CLI 2.1.4",
+      "pid": 87916,
+      "session_id": "ses_e86ea3741ffej8R07EciB36je8",
+      "requested_model": "opencode/glm-5.3-flash-free",
+      "actual_model": "UNKNOWN_NOT_REACHED",
+      "candidate_sha256": "cae8be8280456b51a1294ee90eafca0ac1ae8a12738289d6ebbca35b3a05a3da",
+      "provider_error": "HTTP 429 provider.free-limit",
+      "retry_after_ms": 26365000,
+      "next_eligible_local": "2026-10-27T08:00:00.267+08:00",
+      "cli_exit_code": "UNKNOWN_NOT_CAPTURED",
+      "tokens": "UNKNOWN_NOT_REACHED",
+      "review_response": "NONE",
+      "adopted_content": "NONE",
+      "candidate_mutated": false
+    },
+    {
+      "work_id": "TTQS-0121-I19-E09-R03-ANTIGRAVITY-R12-FULL-SEMANTIC-REVIEW",
+      "doc_id": "0121",
+      "worker": "Antigravity CLI",
+      "pid": 18328,
+      "conversation_id": "41187bc5-1777-419f-a359-48b85d55aaf8",
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_serving_model": "UNKNOWN",
+      "exit_code": 0,
+      "reported_tokens": 52786,
+      "reviewer_reported_result": "PASS_FULL_BODY_TEXT_ONLY",
+      "review_response_sha256": "9f68f37a3427aee265f54f3f895fa832cca6580a3f6fdc0de07916f47865ed4d",
+      "raw_stdout_sha256": "93770fa08a7e4714c6b6e65d38c699f81bd4b26169a33e5f05741c951b5cdb10",
+      "candidate_sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+      "body_sha256": "4ea875c255a3d1f852788a258725150729787f83dad96efa997dd491a8f01552",
+      "source_packet_sha256": "fbeb11b96648fff29a49a0fca74bf0cc3b3d1d29934f07dfaa3cf7e410a557fd",
+      "blueprint_sha256": "99320fdc9078615ad04087c43bcbd22c5bbf751a22127c51e048e909726a5fca",
+      "reviewer_visual_scope": "NOT_REVIEWED",
+      "candidate_mutated": false,
+      "formal_acceptance": "NOT_GRANTED",
+      "real_evidence": "NOT_PROVIDED"
+    }
+  ],
+  "doc_0121_qa": {
+    "technical": "PASS_27_DETERMINISTIC_CHECKS",
+    "visual": "PASS_WITH_DELTA_SCOPE",
+    "page_count": 23,
+    "directly_inspected_pages": [
+      1,
+      18
+    ],
+    "unchanged_pixel_identical_pages_vs_r02": 21,
+    "minimum_body_pt": 10.5,
+    "minimum_table_pt": 9.5,
+    "pdf_sha256": "fa3fd36e716372d47ae36a3eaf4a5f28ec5c395d9800e6764bf69325abed0f70",
+    "printed_checkbox_serial": "UNKNOWN_NOT_ASSERTED"
+  },
+  "doc_0122_r02": {
+    "candidate_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+    "fresh_body_sha256": "61a732058927a033f268171084db05f3a86cac44fe9e92dd21a7a6f77fcb47ea",
+    "review_body_sha256": "81d144264640265ec015d412bdb08f3e74578b001b7621e7d4462863fb1a1e33",
+    "result": "NOT_GRANTED_UNBOUND_INPUT",
+    "docx_rebuilt": false
+  },
+  "doc_0122_r03": {
+    "candidate_sha256": "b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d",
+    "result": "SEPARATE_PASS_TEXT_ONLY_SCOPE; actual model UNKNOWN; not merged with R02"
+  },
+  "doc_0133": {
+    "candidate_sha256": "25116afb8206e0828c8b3a4a763845a9c3e672a4cb49969a64a2a3737d87256b",
+    "result": "PASS_TEXT_ONLY_WITH_NONBLOCKING_FINDINGS; status metadata reconciled; no DOCX rebuild"
+  },
+  "tests_delta": [
+    {
+      "id": "T04",
+      "status": "PASS_GUARD_ROUTE_PARKED",
+      "finding": "0135 OpenCode free route returned HTTP 429; next eligible local time 08:00; no same-input retry before release."
+    },
+    {
+      "id": "T06",
+      "status": "UNKNOWN_PROVIDER_IDENTITY",
+      "finding": "Antigravity requested Gemini but actual serving model is not established."
+    },
+    {
+      "id": "T10",
+      "status": "PASS_SCOPE_17_SELECTED_0138_ARTIFACTS",
+      "finding": "17 selected 0138 files were raw-byte verified at the referenced readback head; not the full package."
+    },
+    {
+      "id": "T12",
+      "status": "PARTIAL_NATIVE_CONFIG_ONLY",
+      "finding": "120-minute thread-bound config is ACTIVE; standalone is PAUSED with reason unavailable; Supervisor disabled."
+    },
+    {
+      "id": "T13",
+      "status": "UNKNOWN_NATURAL_TRIGGER",
+      "finding": "No native last/next scheduled execution receipt."
+    },
+    {
+      "id": "T15",
+      "status": "PASS_NO_DOCX_REBUILD",
+      "finding": "0121 exact candidate retained; only review/status evidence changed."
+    },
+    {
+      "id": "T16",
+      "status": "PARTIAL_OWNER_UNKNOWN",
+      "finding": "No live CLI Writer observed; 52 WINWORD owners unknown."
+    },
+    {
+      "id": "T19",
+      "status": "UNKNOWN_PANEL_ALIGNMENT",
+      "finding": "No confirmed TTQS panel source/live readback."
+    },
+    {
+      "id": "T20",
+      "status": "PENDING_POSTPUSH_READBACK",
+      "finding": "New worker evidence must be fetched from the current branch and compared after sync."
+    },
+    {
+      "id": "T22",
+      "status": "PARTIAL_0135_REVIEW_ROUTE_BLOCKED",
+      "finding": "0135 review remains outstanding until the actual 08:00 route release; unrelated READY work is not declared exhausted."
+    },
+    {
+      "id": "T23",
+      "status": "PASS_DISTINCT_EXACT_SHA_SCOPES",
+      "finding": "0121 text-only review is separate from the same-candidate Word visual/technical QA."
+    },
+    {
+      "id": "T24",
+      "status": "PASS_CANDIDATE_ONLY",
+      "finding": "No formal Human acceptance or REAL evidence granted."
+    }
+  ],
+  "material_delta": "0121 received a new exact-SHA full-body text-only reviewer result; 0135 W1 failure was reconciled and parked. No DOCX was rebuilt.",
+  "github_readback": "PENDING",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "NOT_PROVIDED"
+}
