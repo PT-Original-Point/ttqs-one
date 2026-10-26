@@ -151,8 +151,8 @@
     },
     {
       "id": "T20",
-      "status": "PENDING_POSTPUSH_READBACK",
-      "finding": "New worker evidence must be fetched from the current branch and compared after sync."
+      "status": "PASS_RAW_READBACK_8_OF_8",
+      "finding": "At PR branch head 3138a480611db4491ac0b9a1df0096328bf90411, authenticated GitHub fetch_file blob SHA-1 matched local Git blob SHA-1 for 8 selected 0121 artifacts, including candidate, PDF, current QA, new worker evidence, README and register."
     },
     {
       "id": "T22",
@@ -170,8 +170,50 @@
       "finding": "No formal Human acceptance or REAL evidence granted."
     }
   ],
-  "material_delta": "0121 received a new exact-SHA full-body text-only reviewer result; 0135 W1 failure was reconciled and parked. No DOCX was rebuilt.",
-  "github_readback": "PENDING",
+  "material_delta": "0121 received a new exact-SHA full-body text-only reviewer result; 0135 W1 failure was reconciled and parked. No DOCX was rebuilt.; exact selected raw-byte readback verified",
+  "github_readback": {
+    "status": "PASS_SELECTED_8_OF_8",
+    "verified_head": "3138a480611db4491ac0b9a1df0096328bf90411",
+    "selected_files": [
+      {
+        "path": "docs/ttqs-quality-20261016/reports/R12_20261027/R12_W1_W2_ORIGINAL_WORKER_EVIDENCE_0121_0135_20261027.md",
+        "git_blob_sha1": "e0f4adc9d5cb0c0f64d0b70707b73528daac3be2",
+        "raw_bytes_equal": true
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R03_20261027/README.md",
+        "git_blob_sha1": "0986f7cdb23a4f1e786b5d1c55ba2725282f18af",
+        "raw_bytes_equal": true
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R03_20261027/candidate/SAMPLE_REPLACEMENT_REGISTER_R03.csv",
+        "git_blob_sha1": "4840b4aa6f3e1067a210ef296931397d647ecc19",
+        "raw_bytes_equal": true
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R03_20261027/candidate/0121_I19-E09_R03.docx",
+        "git_blob_sha1": "820d586734c62ddaad3905ba8b8ea74ede5c9813",
+        "raw_bytes_equal": true
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R03_20261027/render/0121_I19-E09_R03_WordNative.pdf",
+        "git_blob_sha1": "7b61669f25857f0367d466f0454cbfcaed1220ae",
+        "raw_bytes_equal": true
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R03_20261027/evidence/R03_FINAL_QA_STATUS_R12.json",
+        "git_blob_sha1": "69b2a9a843fc566049208c49447508220332709e",
+        "raw_bytes_equal": true
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R03_20261027/evidence/TECHNICAL_VISUAL_QA_R03.json",
+        "git_blob_sha1": "20463448694102bfc345d6a9124025a8a8186ed2",
+        "raw_bytes_equal": true
+      }
+    ]
+  },
   "formal_acceptance": "NOT_GRANTED",
-  "real_evidence": "NOT_PROVIDED"
+  "real_evidence": "NOT_PROVIDED",
+  "remote_head_after_first_sync": "3138a480611db4491ac0b9a1df0096328bf90411",
+  "github_readback_status": "PASS"
 }
