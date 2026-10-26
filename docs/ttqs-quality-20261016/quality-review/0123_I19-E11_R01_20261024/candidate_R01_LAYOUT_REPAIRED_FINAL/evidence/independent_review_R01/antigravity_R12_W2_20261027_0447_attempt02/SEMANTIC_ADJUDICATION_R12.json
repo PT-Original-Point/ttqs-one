@@ -1,0 +1,57 @@
+{
+  "receipt_type": "EXACT_SHA_INDEPENDENT_SEMANTIC_REVIEW_ADJUDICATION",
+  "work_id": "R12-0123-W2-SEMANTIC-20261027T0447+08-ATTEMPT02",
+  "doc_id": "0123",
+  "official_requirement_id": "I19-E11",
+  "official_page": 8,
+  "printed_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+  "candidate_sha256": "b5d3798c699c58a2e333703cd2df219ba47642d16bae9e2b496b60705b3ae5e1",
+  "source_packet_sha256": null,
+  "unique_blueprint_sha256": null,
+  "reviewer_route": "Antigravity CLI",
+  "requested_model": "gemini-3.8-flash-high",
+  "actual_serving_model": "UNKNOWN",
+  "provider_fallback_status": "UNKNOWN",
+  "cli_status": "SUCCESS",
+  "cli_exit_code": 0,
+  "conversation_id": "345bbf9c-bac7-4993-8d3e-b0b8e02c7c71",
+  "token_usage": {
+    "input_tokens": 17547,
+    "output_tokens": 7847,
+    "thinking_tokens": 4865,
+    "cache_read_tokens": 0,
+    "total_tokens": 25394
+  },
+  "reviewer_response_sha256": "8d500a080a79462943e22ee2f15c87e44b1f9a75e635c8f7ab0899965fca516c",
+  "semantic_verdict": "PASS",
+  "semantic_scope": "full extracted text and tables; title-blind purpose, genre, negative neighbors, case usability, form completeness, 26-key replacement register, chronology, arithmetic, causal limits, evidence boundaries, HOLD/reject/reopen; exact candidate SHA",
+  "visual_scope": "NOT_REVIEWED_BY_W2",
+  "existing_visual_receipt": "PASS_FOR_VISUAL_SCOPE_ONLY",
+  "existing_visual_receipt_sha256": "1295a6d16c25cd7ed25a0d292eaacc10d96a41437a6436c38715ea6ab3af9cf2",
+  "visual_direct_pages": [
+    1,
+    2,
+    6,
+    14
+  ],
+  "visual_inherited_pages": null,
+  "technical_result": "PASS",
+  "technical_receipt_sha256": "61962cf1209ece9a48f7cf456911f23e49686f0b9f5661b2d5a6029c2f1e7276",
+  "independent_corroboration": {
+    "unique_replacement_keys": 26,
+    "zero_baseline_31_day": "0",
+    "post_31_day": "3",
+    "absolute_difference": "3-0=3",
+    "same_candidate_sha": true
+  },
+  "candidate_state": "CANDIDATE",
+  "real_evidence": "UNKNOWN/NOT_PROVIDED",
+  "formal_acceptance": "NOT_GRANTED",
+  "overall_acceptance": "PARTIAL_PENDING_PROVIDER_IDENTITY_AND_HUMAN_FORMAL_ACCEPTANCE",
+  "limitations": [
+    "Serving model and fallback status are not exposed by the CLI response; do not claim Gemini identity verified.",
+    "The semantic result is text-only; visual/layout is supported only by the separate exact-SHA Word visual receipt.",
+    "No REAL member/course/consent/baseline/post-training originals were supplied.",
+    "No formal Association acceptance is recorded."
+  ]
+}
