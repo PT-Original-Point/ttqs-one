@@ -6,11 +6,11 @@
   "formal_acceptance": "NOT_GRANTED",
   "candidate_state": "CANDIDATE_REVIEWER_REPORTED_PASS_TEXT_ONLY_EXACT_SHA; FORMAL_ACCEPTANCE_NOT_GRANTED",
   "project_id": "TTQS_ONE",
-  "github_existing_candidate_readback": "Candidate and QA bundle exact Git blob SHA match verified against branch head ee1a211a10730d12b2064f6da766bec919c3c8ea; R12 reviewer artifacts pending sync.",
+  "github_existing_candidate_readback": "PASS_EXACT_CANDIDATE_SOURCE_BLUEPRINT_QA_AND_VISUAL_GIT_BLOB_MATCH_AT_4dec4be; R12 exact review artifacts also read back 12/12.",
   "source_packet_sha256": "8301b3e12467370086dfccd86c4dbcd50d339f0ed54cda93c2bfcc051b793c3d",
   "candidate_docx_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
   "unique_blueprint_sha256": "cbfd0760a03870151d9bc083b8db76655d53107757706f4b1f4449e997553420",
-  "updated_at_local": "2026-10-27T05:47:17.0528051+08:00",
+  "updated_at_local": "2026-10-27T05:53:11.9236309+08:00",
   "doc_id": "0122",
   "work_id": "TTQS-0122-I19-E10-R11-TARGETED-REPAIR-R02",
   "requirement_id": "I19-E10",
@@ -20,9 +20,9 @@
   "official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
   "word_native_render": "PASS; 28-page Word-generated PDF, SHA 5cf146107a8b0bf94339f4becf9bdc8e72ca9fd79da9df06de3c78a883ad5794",
   "github_readback": {
-    "verified_at_local": "2026-10-27T05:47:17.0579374+08:00",
+    "verified_at_local": "2026-10-27T05:53:11.9236309+08:00",
     "branch": "work/ttqs-one-document-quality-contract-20261016",
-    "verified_head": "ee1a211a10730d12b2064f6da766bec919c3c8ea",
+    "verified_head": "4dec4beaa1295c2917783893ef0882286ed3db81",
     "candidate_remote_path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R02_candidate_pending_word_visual/0122_I19-E10_R02.docx",
     "candidate_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
     "candidate_git_blob_sha1": "4ff7c0c43593d6a2f732c2db605d4e7021e38cc3",
@@ -39,8 +39,11 @@
     "prior_remote_bytes": 11353,
     "prior_difference": "Remote had trailing 0D0A absent from local; the old exact-raw claim is superseded.",
     "visual_artifact_sha256": "2cdcdc6008433c00498545d7ad61f3327adf5db8c2eb1c8e7397f446ddbdc525",
-    "reviewer_artifacts": "PENDING_R12_PUSH_AND_RAW_BYTE_READBACK",
-    "formal_acceptance": "NOT_GRANTED"
+    "reviewer_artifacts": "PASS_RAW_GIT_BLOB_READBACK_12_OF_12_AT_4dec4be",
+    "formal_acceptance": "NOT_GRANTED",
+    "full_scope_count": "18_OF_18",
+    "readback_receipt_path": "evidence/R12_GITHUB_RAW_READBACK_0122_R02_20261027.json",
+    "readback_receipt_sha256": "4fb8f5a1580bff7cb392ecb1472c4bd51ea26a0c26d171a46c9ca562b86cdc54"
   },
   "r12_semantic_reconciliation": {
     "path": "evidence/R12_EXACT_SHA_RECONCILIATION_0122_R02.json",
@@ -52,6 +55,8 @@
     "actual_model": "UNKNOWN",
     "fallback": "UNKNOWN",
     "visual_scope": "SEPARATE_SAME_SHA_QA",
-    "formal_acceptance": "NOT_GRANTED"
+    "formal_acceptance": "NOT_GRANTED",
+    "github_readback_status": "PASS_18_OF_18_EXACT_GIT_BLOB_READBACK_AT_4dec4be",
+    "github_readback_receipt_sha256": "4fb8f5a1580bff7cb392ecb1472c4bd51ea26a0c26d171a46c9ca562b86cdc54"
   }
 }

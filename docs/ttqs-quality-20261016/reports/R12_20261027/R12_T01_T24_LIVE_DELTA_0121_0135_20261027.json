@@ -3,7 +3,7 @@
   "project_id": "TTQS_ONE",
   "command": "TTQS_ONE_20261026_R12_FULL_RECOVERY_DELIVERY",
   "r12_source_blob_sha1": "63f26f0708249b211611d51b34a7fb90b4cd26a9",
-  "observed_at_local": "2026-10-27T05:48:09.5248990+08:00",
+  "observed_at_local": "2026-10-27T05:53:11.9236309+08:00",
   "repo": "PT-Original-Point/ttqs-one",
   "pr": 92,
   "branch": "work/ttqs-one-document-quality-contract-20261016",
@@ -135,7 +135,9 @@
     "formal_acceptance": "NOT_GRANTED",
     "real_evidence": "UNKNOWN_HOLD",
     "github_raw_readback": "PENDING_R12_ARTIFACT_PUSH",
-    "github_sync_status": "PENDING_R12_TREE_COMMIT"
+    "github_sync_status": "PASS_RAW_GIT_BLOB_READBACK_18_OF_18",
+    "verified_commit": "4dec4beaa1295c2917783893ef0882286ed3db81",
+    "readback_receipt_sha256": "4fb8f5a1580bff7cb392ecb1472c4bd51ea26a0c26d171a46c9ca562b86cdc54"
   },
   "doc_0122_r03": {
     "candidate_sha256": "b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d",
@@ -193,8 +195,8 @@
     },
     {
       "id": "T20",
-      "status": "PASS_RAW_READBACK_8_OF_8_BASELINE_PLUS_0140_6_OF_6",
-      "finding": "Baseline R12 readback verified 8/8 selected 0121 artifacts at head 3138a480611db4491ac0b9a1df0096328bf90411. Additional 0140 readback verified the adjudication sidecar plus four review evidence files and candidate DOCX, 6/6 exact Git blob SHAs, at head 4a8fd77a2c11b1b7a1218507ef7d40ac94e424a1. The 0140 DOCX SHA remained 5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d; formal acceptance NOT_GRANTED."
+      "status": "PASS_RAW_READBACK_BASELINE_PLUS_0140_PLUS_0122_R02_18_OF_18",
+      "finding": "Baseline: 0121 selected 8/8 at 3138a480611db4491ac0b9a1df0096328bf90411; 0140 selected 6/6 at 4a8fd77a2c11b1b7a1218507ef7d40ac94e424a1; 0122 R02 candidate/source/Unique Blueprint/body/QA/visual and R12 review/status/delta/pointer package verified 18/18 exact local-vs-remote Git blob SHA-1 at 4dec4beaa1295c2917783893ef0882286ed3db81. Candidate SHA d3a6... unchanged; no DOCX rebuild; formal acceptance NOT_GRANTED."
     },
     {
       "id": "T22",
@@ -212,7 +214,7 @@
       "finding": "No formal Human acceptance or REAL evidence granted."
     }
   ],
-  "material_delta": "0121 received a new exact-SHA full-body text-only reviewer result; 0135 W1 failure was reconciled and parked. No DOCX was rebuilt.; exact selected raw-byte readback verified; 0140 adjudication status corrected and exact raw bytes read back; no DOCX rebuild; 0122 R02 received a new exact-SHA text-only reviewer response after two CLI parser corrections; actual provider model/fallback UNKNOWN; no DOCX rebuild. Corrected the local-vs-remote QA bundle raw-byte discrepancy (two trailing CRLF bytes), preserved the prior local copy, and will sync the reconciliation/request/raw response with exact readback.",
+  "material_delta": "0121 received a new exact-SHA full-body text-only reviewer result; 0135 W1 failure was reconciled and parked. No DOCX was rebuilt.; exact selected raw-byte readback verified; 0140 adjudication status corrected and exact raw bytes read back; no DOCX rebuild; 0122 R02 received a new exact-SHA text-only reviewer response after two CLI parser corrections; actual provider model/fallback UNKNOWN; no DOCX rebuild. Corrected the local-vs-remote QA bundle raw-byte discrepancy (two trailing CRLF bytes), preserved the prior local copy, and will sync the reconciliation/request/raw response with exact readback.; 0122 R02 raw-byte/Git-blob readback completed 18/18 at 4dec4be; previous QA bundle raw-equality claim corrected after preserving pre-alignment copy and matching its terminal CRLF.",
   "github_readback": {
     "status": "PASS_SELECTED_8_OF_8",
     "verified_head": "3138a480611db4491ac0b9a1df0096328bf90411",
@@ -262,13 +264,23 @@
         "candidate_sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d",
         "actual_model": "UNKNOWN",
         "human_acceptance": "NOT_GRANTED"
+      },
+      {
+        "scope": "0122 R02 exact-SHA review package",
+        "verified_head": "4dec4beaa1295c2917783893ef0882286ed3db81",
+        "count": "18_OF_18",
+        "raw_blob_matches": 18,
+        "readback_receipt_path": "docs/ttqs-quality-20261016/reports/R12_20261027/R12_GITHUB_RAW_READBACK_0122_R02_20261027.json",
+        "readback_receipt_sha256": "4fb8f5a1580bff7cb392ecb1472c4bd51ea26a0c26d171a46c9ca562b86cdc54",
+        "candidate_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+        "formal_acceptance": "NOT_GRANTED"
       }
     ]
   },
   "formal_acceptance": "NOT_GRANTED",
   "real_evidence": "NOT_PROVIDED",
-  "remote_head_after_first_sync": "3138a480611db4491ac0b9a1df0096328bf90411",
-  "github_readback_status": "PASS",
+  "remote_head_after_first_sync": "4dec4beaa1295c2917783893ef0882286ed3db81",
+  "github_readback_status": "PASS_R02_18_OF_18_EXACT_GIT_BLOB_READBACK",
   "doc_0140": {
     "doc_id": "0140",
     "official_requirement_id": "I19-E30",
