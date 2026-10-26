@@ -4,13 +4,18 @@
   "requirement_id": "I19-E22",
   "source_commit": "69434ddef4012e4ac1e94d2dfed638f67f926f19",
   "candidate_sha256": "25116afb8206e0828c8b3a4a763845a9c3e672a4cb49969a64a2a3737d87256b",
-  "semantic_review": "PENDING_NOT_PASS",
+  "semantic_review": "PASS_TEXT_ONLY_WITH_NONBLOCKING_FINDINGS",
   "formal_acceptance": "NOT_GRANTED",
   "files": [
     {
       "path": ".gitattributes",
       "bytes": 9,
       "sha256": "8b9c3028d6467ff3be7c793141927841d70f47f52d0590677438f488ca154992"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3857,
+      "sha256": "0f67c798bdb3f0e1c00d21ff360488d57238fd005b23e9e62ed1dd8b7096ac0e"
     },
     {
       "path": "candidate/0133_I19-E22_BODY_R01.md",
@@ -34,8 +39,13 @@
     },
     {
       "path": "qa/OUTSOURCING_STATUS_0133_R01.json",
-      "bytes": 1042,
-      "sha256": "142276fc6a53664ba0108f341749a9187a4094d007b5bd56314c2781e35d764e"
+      "bytes": 2104,
+      "sha256": "be68e5ce3d77c819f1c4ed7e83fec6964aec32616a39de27ad20c1039477e42b"
+    },
+    {
+      "path": "qa/SEMANTIC_ADJUDICATION_0133_R01_R02.json",
+      "bytes": 2406,
+      "sha256": "49c131e18878940039ead4466a8fd63d09663cc1cc91c814e95f56bc23661123"
     },
     {
       "path": "qa/TECHNICAL_QA_0133_R01.json",
@@ -46,11 +56,6 @@
       "path": "qa/VISUAL_QA_0133_R01.json",
       "bytes": 2366,
       "sha256": "2de3714933f7c0b0488b771185bf2756758d96bc2833a7371cb735695dbc6b39"
-    },
-    {
-      "path": "README.md",
-      "bytes": 3857,
-      "sha256": "0f67c798bdb3f0e1c00d21ff360488d57238fd005b23e9e62ed1dd8b7096ac0e"
     },
     {
       "path": "render/0133_I19-E22_WORD_NATIVE_R06.pdf",
@@ -163,9 +168,54 @@
       "sha256": "edb8d241b1604790b36daf1622b907a9985ec7901c6d1e0a79f440be5fcb42fd"
     },
     {
+      "path": "worker/OPENCODE_GLM_SEMANTIC_R02_20261026T0805/DISPATCH_RECEIPT.json",
+      "bytes": 3863,
+      "sha256": "833c88ab2cf3f281a5b5efdd36885948c520acc19ba68ae992cb7d0d919b6690"
+    },
+    {
+      "path": "worker/OPENCODE_GLM_SEMANTIC_R02_20261026T0805/INPUT_MANIFEST.json",
+      "bytes": 2089,
+      "sha256": "ae58780ab7ffb6bbe5e86fa3403c67b145ce86d5d55e5c6a34003a7dc111b545"
+    },
+    {
+      "path": "worker/OPENCODE_GLM_SEMANTIC_R02_20261026T0805/OPENCODE_REVIEW_REQUEST_0133_R01_R02.md",
+      "bytes": 56074,
+      "sha256": "912b6e07142426fa2bdbfeebf8b66adf63ab4bd8f5fd46d4aa04d084297cdfdf"
+    },
+    {
+      "path": "worker/OPENCODE_GLM_SEMANTIC_R02_20261026T0805/OPENCODE_SESSION_EXPORT_R02.json",
+      "bytes": 112968,
+      "sha256": "cedb80b2705b4f85f9e6298f2f2694b786a46519e7568935982c70f2e7ab6834"
+    },
+    {
+      "path": "worker/OPENCODE_GLM_SEMANTIC_R02_20261026T0805/RAW_STDOUT.jsonl",
+      "bytes": 9028,
+      "sha256": "375f46754f616cf75a0202e2e8d6b3aaeab87389381555bc0202bf7558463fde"
+    },
+    {
+      "path": "worker/OPENCODE_GLM_SEMANTIC_R02_20261026T0805/SEMANTIC_REVIEW_RESPONSE_R02.md",
+      "bytes": 8397,
+      "sha256": "437a43e31542249f093f9f68e8e8777d9e92939f75305fa74ace0bb2f4f62d1f"
+    },
+    {
       "path": "worker/build_0133_R01.py",
       "bytes": 12291,
       "sha256": "9085b390bf75a62003d71636636d37ab008b3ae0a862af6ec8173c170a985cd2"
     }
-  ]
+  ],
+  "latest_semantic_review": {
+    "receipt_path": "qa/SEMANTIC_ADJUDICATION_0133_R01_R02.json",
+    "candidate_sha256": "25116afb8206e0828c8b3a4a763845a9c3e672a4cb49969a64a2a3737d87256b",
+    "review_response_sha256": "437a43e31542249f093f9f68e8e8777d9e92939f75305fa74ace0bb2f4f62d1f",
+    "review_scope": "TEXT_ONLY",
+    "blocking_findings": 0,
+    "nonblocking_findings": 4,
+    "actual_model": {
+      "id": "glm-5.3-flash-free",
+      "providerID": "opencode",
+      "variant": "default"
+    },
+    "model_identity_status": "SESSION_EXPORT_MATCHES_REQUEST",
+    "formal_acceptance": "NOT_GRANTED"
+  }
 }

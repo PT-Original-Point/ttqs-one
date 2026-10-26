@@ -3,12 +3,35 @@
   "doc_id": "0133",
   "requirement_id": "I19-E22",
   "opencode_cli_v2": {
-    "dispatch_count_for_0133": 0,
-    "status": "NOT_DISPATCHED",
-    "reason": "Prior free-provider attempts on a separate work item returned quota 429; no new quota evidence justified repeating the same route during this stage.",
-    "requested_model": "NONE",
-    "actual_model": "NONE",
-    "response_adopted": false
+    "dispatch_count_for_0133": 1,
+    "status": "RESPONSE_RECOVERED_SEMANTIC_PASS_TEXT_ONLY",
+    "requested_model": "opencode/glm-5.3-flash-free",
+    "actual_model": {
+      "id": "glm-5.3-flash-free",
+      "providerID": "opencode",
+      "variant": "default"
+    },
+    "model_identity_status": "SESSION_EXPORT_MATCHES_REQUEST",
+    "session_id": "ses_e8a762120ffe1BzHfGFGMKqMTF",
+    "process_id": 87240,
+    "cli_exit_code": "UNKNOWN_NOT_CAPTURED_BY_WRAPPER",
+    "session_outcome": "succeeded",
+    "usage": {
+      "input": 21828,
+      "output": 2463,
+      "reasoning": 12224,
+      "cache": {
+        "read": 0,
+        "write": 0
+      }
+    },
+    "session_reported_cost": 0,
+    "provider_invoice": "UNKNOWN",
+    "candidate_sha256": "25116afb8206e0828c8b3a4a763845a9c3e672a4cb49969a64a2a3737d87256b",
+    "request_sha256": "912b6e07142426fa2bdbfeebf8b66adf63ab4bd8f5fd46d4aa04d084297cdfdf",
+    "response_sha256": "437a43e31542249f093f9f68e8e8777d9e92939f75305fa74ace0bb2f4f62d1f",
+    "dispatch_receipt_sha256": "833c88ab2cf3f281a5b5efdd36885948c520acc19ba68ae992cb7d0d919b6690",
+    "candidate_modified": false
   },
   "antigravity_cli": {
     "dispatch_count_for_0133": 0,
@@ -19,6 +42,9 @@
   },
   "manuscript_author": "Codex current task; not an external Worker response",
   "docx_builder": "Local bundled Python-docx and Pillow; final Word-native export through hidden Microsoft Word COM",
-  "independent_semantic_reviewer": "PENDING_NOT_PASS",
-  "formal_acceptance": "NOT_GRANTED"
+  "independent_semantic_reviewer": "PASS_TEXT_ONLY_WITH_NONBLOCKING_FINDINGS",
+  "formal_acceptance": "NOT_GRANTED",
+  "semantic_review_receipt_path": "qa/SEMANTIC_ADJUDICATION_0133_R01_R02.json",
+  "real_evidence": "UNKNOWN/HOLD",
+  "candidate_sha256": "25116afb8206e0828c8b3a4a763845a9c3e672a4cb49969a64a2a3737d87256b"
 }
