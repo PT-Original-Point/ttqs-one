@@ -3,7 +3,7 @@
   "project_id": "TTQS_ONE",
   "command": "TTQS_ONE_20261026_R12_FULL_RECOVERY_DELIVERY",
   "r12_source_blob_sha1": "63f26f0708249b211611d51b34a7fb90b4cd26a9",
-  "observed_at_local": "2026-10-27T05:22:24.2124633+08:00",
+  "observed_at_local": "2026-10-27T05:48:09.5248990+08:00",
   "repo": "PT-Original-Point/ttqs-one",
   "pr": 92,
   "branch": "work/ttqs-one-document-quality-contract-20261016",
@@ -96,9 +96,46 @@
   "doc_0122_r02": {
     "candidate_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
     "fresh_body_sha256": "61a732058927a033f268171084db05f3a86cac44fe9e92dd21a7a6f77fcb47ea",
-    "review_body_sha256": "81d144264640265ec015d412bdb08f3e74578b001b7621e7d4462863fb1a1e33",
-    "result": "NOT_GRANTED_UNBOUND_INPUT",
-    "docx_rebuilt": false
+    "original_unbound_body_sha256": "81d144264640265ec015d412bdb08f3e74578b001b7621e7d4462863fb1a1e33",
+    "original_review_not_inherited": true,
+    "r12_review_request_sha256": "501f07bfe715b90e3d8640e17feefc05488d9cce24c5ca0db26a953cc9c06c6a",
+    "reviewer_response_sha256": "0bfa5a69fb327fed4d28a57fadebe73c499b53a37fd177d145da8a2cb214ea92",
+    "raw_stdout_sha256": "653ecc9ec77c8acd09dd05ca8f89bddb3b39e0682927f2bc3f11a06c51dd6ce1",
+    "r12_reconciliation_sha256": "5488253ffef6a6761f7a3519b3a05bf179ba067bc602829f67bccdb9dce7035f",
+    "result": "REVIEWER_REPORTED_PASS_TEXT_ONLY_EXACT_SHA_BOUND",
+    "actual_model": "UNKNOWN",
+    "fallback": "UNKNOWN",
+    "attempts": [
+      {
+        "attempt": 1,
+        "exit_code": 2,
+        "result": "CLI_ARGUMENT_PARSE_ERROR_NO_MODEL_RESPONSE",
+        "repair": "Corrected prompt attachment; no model response; no tokens attributed."
+      },
+      {
+        "attempt": 2,
+        "exit_code": 2,
+        "result": "CLI_ARGUMENT_PARSE_ERROR_NO_MODEL_RESPONSE",
+        "repair": "Corrected --print-timeout duration unit; no model response; no tokens attributed."
+      },
+      {
+        "attempt": 3,
+        "exit_code": 0,
+        "result": "COMPLETED_NONEMPTY_REVIEWER_RESPONSE",
+        "reported_tokens": 36634,
+        "requested_model": "gemini-3.8-flash-high",
+        "actual_model": "UNKNOWN",
+        "fallback": "UNKNOWN"
+      }
+    ],
+    "review_scope": "Full extracted document text only; visual/technical QA is separately bound to same candidate SHA.",
+    "technical_visual": "Existing same-SHA technical delta and 28-page Word-render visual scope PASS; no DOCX rebuild.",
+    "qa_bundle_raw_sync": "Local previous copy was 11,351 bytes, SHA-256 cea52759e660d6564f42f482b53eb96b57c597b0ea7f13375c3b68dc7a41d933; remote was 11,353 bytes, SHA-256 ec0fac1cf68b2d2c3b38ebc44810872794d4ecf10004a63dee2f733b58ef770e, differing only by terminal CRLF. Preserved old local copy and aligned current local copy to remote bytes.",
+    "docx_rebuilt": false,
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN_HOLD",
+    "github_raw_readback": "PENDING_R12_ARTIFACT_PUSH",
+    "github_sync_status": "PENDING_R12_TREE_COMMIT"
   },
   "doc_0122_r03": {
     "candidate_sha256": "b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d",
@@ -109,6 +146,11 @@
     "result": "PASS_TEXT_ONLY_WITH_NONBLOCKING_FINDINGS; status metadata reconciled; no DOCX rebuild"
   },
   "tests_delta": [
+    {
+      "id": "T03",
+      "status": "PASS_GUARD_NO_INHERITANCE_PLUS_EXACT_SHA_REVIEW",
+      "finding": "The historical reviewer packet body SHA 81d144... is not inherited. A new bounded Antigravity CLI reviewer response is bound to candidate d3a6a122... and extracted body SHA 61a73205...; reported text-only PASS, actual provider model/fallback UNKNOWN; candidate remains unaccepted."
+    },
     {
       "id": "T04",
       "status": "PASS_GUARD_ROUTE_PARKED",
@@ -170,7 +212,7 @@
       "finding": "No formal Human acceptance or REAL evidence granted."
     }
   ],
-  "material_delta": "0121 received a new exact-SHA full-body text-only reviewer result; 0135 W1 failure was reconciled and parked. No DOCX was rebuilt.; exact selected raw-byte readback verified; 0140 adjudication status corrected and exact raw bytes read back; no DOCX rebuild",
+  "material_delta": "0121 received a new exact-SHA full-body text-only reviewer result; 0135 W1 failure was reconciled and parked. No DOCX was rebuilt.; exact selected raw-byte readback verified; 0140 adjudication status corrected and exact raw bytes read back; no DOCX rebuild; 0122 R02 received a new exact-SHA text-only reviewer response after two CLI parser corrections; actual provider model/fallback UNKNOWN; no DOCX rebuild. Corrected the local-vs-remote QA bundle raw-byte discrepancy (two trailing CRLF bytes), preserved the prior local copy, and will sync the reconciliation/request/raw response with exact readback.",
   "github_readback": {
     "status": "PASS_SELECTED_8_OF_8",
     "verified_head": "3138a480611db4491ac0b9a1df0096328bf90411",
