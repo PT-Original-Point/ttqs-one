@@ -104,8 +104,8 @@
     },
     {
       "id": "T20",
-      "status": "PASS_PRIOR_AND_CURRENT_RAW_READBACK",
-      "finding": "Commit d06e578107ecefaed694a86e0c9b1e31091fa2df readback verified 58/58 manifest entries plus manifest exact raw bytes. Current R12 push is separately raw-byte verified after this commit. Current d06e578107ecefaed694a86e0c9b1e31091fa2df also returned the existing 0135 candidate DOCX byte-for-byte (SHA-256 cae8be8280456b51a1294ee90eafca0ac1ae8a12738289d6ebbca35b3a05a3da); R12 payload itself remains to be read back after push."
+      "status": "PASS_PRIOR_PUSH_RAW_READBACK",
+      "finding": "The preceding 17deacf71e23a183b682f8eb52ffa244cae09982 R12 package was verified 31/31 raw files; the 0121 package 58/58, 0124 existing remote artifacts 4/4, and existing 0135 DOCX all match exact bytes. The current review payload will receive its own post-push readback."
     },
     {
       "id": "T21",
@@ -119,8 +119,8 @@
     },
     {
       "id": "T23",
-      "status": "PASS_SCOPE_SEPARATION",
-      "finding": "0121 semantic text scope and visual scope are separate; 0124 visual is documented while semantic remains pending. No reviewer is said to have seen uninspected pages."
+      "status": "PASS_DISTINCT_EXACT_SHA_SCOPES",
+      "finding": "0124 now has an independent PASS_TEXT_ONLY response bound to exact candidate SHA 0a6567c2779d9ad8014ab6d1c892779a98892351a38ceda0dea9fa8b24ff2988; separate exact-SHA visual/technical evidence remains distinct. Reviewer did not claim binary or visual inspection; actual serving model remains UNKNOWN."
     },
     {
       "id": "T24",
