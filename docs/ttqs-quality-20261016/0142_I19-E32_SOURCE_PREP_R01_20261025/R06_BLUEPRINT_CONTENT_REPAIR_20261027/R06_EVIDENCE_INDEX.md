@@ -44,6 +44,9 @@ The R05 review is historical repair input only and is not an R06 review. The ori
 
 The attached 2026-10-27 free-model report says the public free-inference service was Operational at its 08:17 Taiwan-time cutoff, while describing two incidents totaling 3 hours 39 minutes and multiple user reports about quota/reset problems. The same report explicitly says it did not perform logged-in account-level tests of the ten models. Therefore it does not establish this Windows account's availability, a completed OpenCode dispatch, or a reviewer result for R06. Attachment SHA-256: ff3ca9886e3a345d78be358b2883296b7e5454408d23bc940fee239ba826c900.
 
+## Latest OpenCode exact-SHA semantic-review attempt (2026-10-28)
+
+The hidden OpenCode V2 2.1.4 CLI request for `opencode/big-pickle` was dispatched once for the R06 candidate. It terminated in 10 seconds with a pre-inference `provider.free-limit` HTTP 429, no review text, no provider-reported tokens, and no candidate mutation. The server retry interval estimates 2026-10-28 07:59:57 +08:00. This is a quota rejection, not a service-health incident or semantic result. The earlier GLM 5.3 Flash Free request for this exact candidate also returned a pre-inference 429; quota scope is not conclusively established. See `independent_review/OPENCODE_BIGPICKLE_20261028T015432_R01/` for the request, original stdout/stderr, start/terminal records and route adjudication. R06 semantic status remains PENDING.
 ## Truth boundary and disposition
 
 - SAMPLE/SYNTHETIC calculations only; no association financial originals were supplied.
@@ -51,3 +54,4 @@ The attached 2026-10-27 free-model report says the public free-inference service
 - Official score: NOT ASSIGNED.
 - Formal acceptance: NOT GRANTED.
 - Candidate bytes remained unchanged during visual review. Any later semantic receipt must bind exactly to the R06 DOCX SHA above.
+
