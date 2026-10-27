@@ -47,10 +47,29 @@
     "manifest_blob": "f53bc6a7d3ea26b475855d560811ca800e38ccc8",
     "manifest_raw_byte_readback": "PASS"
   },
-  "new_status_sync": "PENDING",
+  "new_status_sync": "VERIFIED_RAW_BYTES_EQUAL_AT_COMMIT_4142ED10F92E3F366FDA2FC7B6236A5D63250D3D",
   "limitations": [
     "Candidate QA is not Human formal acceptance.",
     "Antigravity requested model slug does not prove backend serving model; identity and fallback UNKNOWN.",
     "R12 semantic review scope binds only to the exact R11 candidate SHA."
-  ]
+  ],
+  "status_readback": {
+    "status": "PASS_3_OF_3_RAW_BYTES_EQUAL",
+    "commit": "4142ed10f92e3f366fda2fc7b6236a5d63250d3d",
+    "pr_head_matched": true,
+    "files": [
+      {
+        "path": "candidate/0140__訓練資訊系統使用普及率盤點與分析表_R11.docx",
+        "sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d"
+      },
+      {
+        "path": "MANIFEST_R11.json",
+        "sha256": "e6f0141fa95eb08548642a34240896a9c37a321a3f9097dc0b39e60b577cae79"
+      },
+      {
+        "path": "R12_COMPLETION_STATUS_DELTA_0140_20261027.json",
+        "sha256": "1c87c7b953a595c5fcb85e4ca8d4c0c5a2d27986314a0d137afdfc90e07540d9"
+      }
+    ]
+  }
 }
