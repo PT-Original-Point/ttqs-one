@@ -1,0 +1,67 @@
+{
+  "schema": "TTQS_ONE_0136_R12_CURRENT_STATUS_RECONCILIATION_V2",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0136",
+  "official_requirement_id": "I19-E26",
+  "project_157_index": 150,
+  "official_printed_checkbox_serial": "UNKNOWN",
+  "observed_at_local": "2026-10-28T06:31:47+08:00",
+  "source_commit_observed_before_sync": "7adc87764a579f58a0330a0214e0bbfc3f8ec8b9",
+  "candidate": {
+    "revision": "R02_CANDIDATE_20261025",
+    "state": "CANDIDATE_ONLY",
+    "sha256": "a9bd0fb528a1e22865fa5e07df44b314d48c1fd826a08149ecdd1d5915048b39",
+    "changed_during_reconciliation": false,
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN/HOLD"
+  },
+  "source_binding": {
+    "source_packet_sha256": "7bebd3eb012b152f4568db6fedccf43c3337f436a5f339127e5afe71cf0678d7",
+    "unique_blueprint_sha256": "32c1b818cc0b3957a23e319606f77b176a7979d1ee4ff58db72b9ae32ada8399"
+  },
+  "technical_and_visual": {
+    "status": "PASS_SCOPED",
+    "receipt": "LAYOUT_QA_RECEIPT_0136_R02.json",
+    "receipt_sha256": "956a36c2e66dd980dfe8a2afeb2a392e3f1888b1083ade1678392ace5f3731c8",
+    "renderer": "Microsoft Word COM 16.0, hidden read-only export",
+    "visual_status": "PASS",
+    "pages_inspected": 14,
+    "page_count": 14,
+    "pdf_sha256": "2d823b450348fbe4a260de82074daf4f66ec4e9467b4f1aac8e64649c9b8ea89",
+    "minimum_body_font_pt": 10.5,
+    "minimum_table_font_pt": 9.5
+  },
+  "semantic_review": {
+    "worker": "Antigravity CLI",
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model": "UNKNOWN",
+    "fallback": "UNKNOWN",
+    "provider_billing": "UNKNOWN",
+    "tool_use_telemetry": "UNKNOWN",
+    "worker_computer_use_telemetry": "UNKNOWN",
+    "reported_verdict": "PASS",
+    "adjudicated_result": "PASS_WITH_LIMITATIONS_EXACT_SHA_TEXT_REVIEW",
+    "finding_count": 14,
+    "noncompliant_finding_count": 0,
+    "scope": "Exact-SHA packet-bound text and semantic review; no visual review. Candidate SHA remained unchanged; visual scope is covered by the separate 14-page Word receipt.",
+    "adjudication_receipt": "SEMANTIC_REVIEW_ADJUDICATION_0136_R02.json",
+    "adjudication_receipt_sha256": "db570afbcc58f76bccb875591b57bdba7a723b499cdaeccafb379c469e1eabcd",
+    "dispatch_receipt": "ANTIGRAVITY_0136_R02_SEMANTIC_DISPATCH_RECEIPT.json",
+    "dispatch_receipt_sha256": "2fa0051ae34657dbe05d54b282c2d825a765252a0a046b0feb0a693501b9f6e7",
+    "route_compliance": "UNKNOWN",
+    "count_as_verified_gemini_route": "NO"
+  },
+  "historical_snapshot": {
+    "file": "CANDIDATE_STATE_0136_R02_PRE_REVIEW.json",
+    "role": "PRE_REVIEW_SNAPSHOT",
+    "prior_semantic_state": "UNKNOWN_PROVIDER_FREE_LIMIT_429",
+    "treatment": "Preserved unchanged; superseded for current status by this post-review reconciliation."
+  },
+  "external_context": {
+    "supplied_public_report_cutoff": "2026-10-27 08:17 Asia/Taipei",
+    "public_free_inference_status_at_that_cutoff": "Operational",
+    "relevance": "Service-wide public status only; it does not establish this Windows account's quota or successful inference."
+  },
+  "disposition": "Preserve the existing DOCX exact SHA. Do not rebuild or repeat an identical review. If policy requires a verified serving model, obtain a new authorized exact-SHA review only after concrete route or quota evidence changes; continue unrelated READY lanes.",
+  "remote_sync": "PENDING"
+}
