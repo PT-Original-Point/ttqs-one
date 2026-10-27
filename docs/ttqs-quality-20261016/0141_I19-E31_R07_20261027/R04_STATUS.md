@@ -26,3 +26,6 @@ Observed locally: 2026-10-27T21:44:14+08:00
 ## Authority and remaining work
 
 Official source, unique Blueprint, neighbor crosswalk, R02 source packet, synthetic data, manuscript and exact-SHA QA are included in the package. Next legal action is a fresh, bounded exact-SHA semantic review only after an available permitted reviewer route is evidenced; otherwise keep this document waiting for semantic QA and continue unrelated READY work. No production submission or real-world acceptance is implied.
+## Additional bounded OpenCode Mimo attempt — 2026-10-27 22:07 TPE
+
+A single hidden, noninteractive exact-SHA review was requested from `opencode/mimo-v2.6-flash-free` under a deny-all-tools project configuration. The provider returned HTTP 429 `provider.free-limit` before inference. No semantic response or token usage was produced; actual model is UNKNOWN. Retry estimate: `2026-10-28T07:59:59.875000+08:00`. The R04 DOCX remained SHA-256 `de111911a549a0be0bd6381a6b22ed694881ba6b3f83528d2b4a4e153002142b` and was not modified. This does not prove every OpenCode model is unavailable; it blocks this free-model review route until fresh availability evidence. See `R04_SEMANTIC_REVIEW_ROUTE_DISPOSITION_R02_20261027.json` and the preserved worker receipt folder.
