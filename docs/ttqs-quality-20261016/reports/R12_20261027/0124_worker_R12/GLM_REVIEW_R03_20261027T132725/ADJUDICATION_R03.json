@@ -1,0 +1,59 @@
+{
+  "schema": "TTQS_ONE_R12_REVIEW_ADJUDICATION_V1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0124-I19-E12-R01-W1-GLM-EXACT-SHA-SEMANTIC-R03-20261027T132725",
+  "doc_id": "0124",
+  "requirement_id": "I19-E12",
+  "candidate_sha256": "0a6567c2779d9ad8014ab6d1c892779a98892351a38ceda0dea9fa8b24ff2988",
+  "review_packet_sha256": "28fd462a35929895d283e82127bc32664ff94bd9fd882217533d6764f88d2c14",
+  "source_packet_sha256": "83a03deb7cbef3f07ef8b7ce0b2b25e1744baa6bc2e96b29e3259453558ccfee",
+  "unique_blueprint_sha256": "d0d8b0990d96fb7dab5d02a34d9f507b6434e57778646c920c488f01c1ab0f42",
+  "requested_model": "opencode/glm-5.3-flash-free",
+  "session_export_model": "opencode/glm-5.3-flash-free",
+  "model_route_identity": "PASS_SESSION_EXPORT_MATCHES_REQUEST",
+  "provider_billing": "UNKNOWN",
+  "cli_process_exit": 1,
+  "session_outcome": "succeeded",
+  "stream_error": "provider.invalid-output: OpenAI Chat stream ended without finish_reason (HTTP status 200); first assistant JSON was truncated and retry returned only a trailing JSON fragment",
+  "tool_event_count": 0,
+  "candidate_mutated": false,
+  "reviewer_declared_verdict": "PASS (in incomplete first response)",
+  "adjudicated_semantic_status": "NOT_ACCEPTED_INVALID_INCOMPLETE_RESPONSE",
+  "blocking_findings": "UNKNOWN because the final response is malformed/incomplete",
+  "reviewer_nonblocking_findings": [
+    {
+      "id": "N1",
+      "summary": "E5 response-format line omits the four separate NOT OBSERVED / NOT APPLICABLE / DECLINED / UNKNOWN states that the general instructions and E3/E4 provide.",
+      "locator": "§7.1 vs §7.2 WORD TABLE 6, E5"
+    },
+    {
+      "id": "N2",
+      "summary": "Decision matrix does not expressly distinguish post-course job offer from commenced/verified hire and does not enumerate FEEDBACK_ONLY / NOT_ELIGIBLE.",
+      "locator": "§四 WORD TABLE 3"
+    },
+    {
+      "id": "N3",
+      "summary": "UNKNOWN: response truncates immediately after `cf`; no complete finding or recommendation recovered.",
+      "locator": "§8.2 WORD TABLE 9, row 示範聘用來源"
+    }
+  ],
+  "session_cost_reported": 0,
+  "tokens": {
+    "input": 24850,
+    "output": 21,
+    "reasoning": 485,
+    "cache_read": 4352,
+    "cache_write": 0
+  },
+  "evidence_sha256": {
+    "RAW_STDOUT.jsonl": "79c1cdf56929ab688894ab145a7881d75e4da886e7b8f2585ffaad25760f5988",
+    "REVIEW_REQUEST_R03.md": "9bc085f787d68bbb2c00b2cf9115172100c7f6d9116d3311bd94f2ad5de33cc4",
+    "DISPATCH_INTENT_R03.json": "ef779076278a321fc11306be09a2cebe053b66b01332ddc02f2394e642164cea",
+    "OPENCODE_SESSION_EXPORT_SANITIZED.json": "5014cd3ed3f9371172dc41de4523999c2668ce8e35d7b04ac27e8be208057f81",
+    "DISPATCH_START_R03.json": "bd76ea10615896dc664aaeaccef4c6a6d7aee31195679ea8b2f4a393cb727fae",
+    "DISPATCH_TERMINAL_R03.json": "9823d49efaa0c9303047751cc83a97904624206aa607880d201a2541b88c5ba3"
+  },
+  "candidate_disposition": "UNCHANGED_CANDIDATE_NOT_PROMOTED",
+  "next_action": "Retain raw evidence; verify concrete N1/N2 against source and exact candidate; do not retry identical review input; continue other READY lanes.",
+  "completed_local": "2026-10-27T13:28:35.7139055+08:00"
+}
