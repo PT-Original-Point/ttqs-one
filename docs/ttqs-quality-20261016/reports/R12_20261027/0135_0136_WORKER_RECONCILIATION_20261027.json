@@ -1,0 +1,112 @@
+{
+  "schema": "TTQS_ONE_R12_WORKER_DISPOSITION_V1",
+  "project_id": "TTQS_ONE",
+  "observed_at_local": "2026-10-27T12:09:42.7169732+08:00",
+  "source_report": {
+    "path": "C:\\Users\\J\\.codex\\attachments\\db41d346-8e40-4673-9bf2-6a6ed654e5c6\\貼上的文字.txt",
+    "sha256": "ff3ca9886e3a345d78be358b2883296b7e5454408d23bc940fee239ba826c900",
+    "used_as": "routing_context_only",
+    "recommendation_outcome": "OpenCode GLM 5.3 and Mimo are catalogued free routes; this run used Mimo and a separate 0135 GLM run provides a successful native session route record."
+  },
+  "doc_0136": {
+    "work_id": "TTQS-0136-I19-E26-R02-W1-MANUSCRIPT-AFTER-429-RELEASE",
+    "doc_id": "0136",
+    "requirement_id": "I19-E26",
+    "blueprint_sha256": "32c1b818cc0b3957a23e319606f77b176a7979d1ee4ff58db72b9ae32ada8399",
+    "source_packet_sha256": "7bebd3eb012b152f4568db6fedccf43c3337f436a5f339127e5afe71cf0678d7",
+    "writer": "OpenCode CLI v2.1.4",
+    "pid": 81100,
+    "session_id": "ses_e848ad83cffeCR1tVTvu1eu6MR",
+    "requested_model": "opencode/mimo-v2.6-flash-free",
+    "actual_model": "opencode/mimo-v2.6-flash-free",
+    "actual_model_evidence": "sanitized native OpenCode session export",
+    "fallback": "NOT_OBSERVED_IN_CAPTURED_SESSION; fallback not permitted",
+    "cli_exit_code": "UNKNOWN_NOT_CAPTURED",
+    "session_outcome": "succeeded",
+    "cost_reported_usd": 0,
+    "upstream_billing": "UNKNOWN",
+    "token_usage": {
+      "input": 6999,
+      "output": 26874,
+      "reasoning": 302,
+      "cache_read": 4864,
+      "cache_write": 0
+    },
+    "request_sha256": "7bceb288b5bc339ffd654ba47090aa5a07affb6b1efdb75105a62e3d72842150",
+    "raw_stdout_sha256": "6f00e9cf6d7b60d739cdcccb4869083993d5bb849c8d419d4b28c3fac4f2da5a",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "response_markdown_sha256": "d0d64fe8fade4b0c36c5be2e914f560432b32ee63e096417bc178890fa9eb447",
+    "response_markdown_bytes": 77224,
+    "markdown_table_rows_with_empty_cells": 17,
+    "empty_cells_in_markdown_tables": 77,
+    "docx_created": false,
+    "candidate_sha256": "a9bd0fb528a1e22865fa5e07df44b314d48c1fd826a08149ecdd1d5915048b39",
+    "candidate_changed": false,
+    "existing_candidate_result": "EXACT_SHA_TECHNICAL_PASS_WORD_VISUAL_14_OF_14_PASS_TEXT_ONLY_SEMANTIC_PASS_WITH_LIMITATIONS",
+    "adopted": false,
+    "reason": "Preflight miss: exact-SHA R02 candidate already existed remotely and had technical, 14/14 visual, and text semantic receipts. New manuscript contains empty cells contradicting its own R3 and missing owner/due/action for UQ-0136-002/003; output retained as unadopted evidence and not converted to DOCX."
+  },
+  "doc_0135": {
+    "work_id": "TTQS-0135-I19-E25-R03-W1-EXACT-SHA-REVIEW-AFTER-429-RELEASE",
+    "doc_id": "0135",
+    "requirement_id": "I19-E25",
+    "candidate_sha256": "cae8be8280456b51a1294ee90eafca0ac1ae8a12738289d6ebbca35b3a05a3da",
+    "reviewer": "OpenCode v2 CLI 2.1.4",
+    "requested_model": "opencode/glm-5.3-flash-free",
+    "actual_model": "opencode/glm-5.3-flash-free",
+    "fallback": "NOT_OBSERVED_IN_CAPTURED_SESSION",
+    "pid": 92176,
+    "session_id": "ses_e8544289bffeNRi5T4R1l2X87Y",
+    "cli_exit_code": 0,
+    "duration_seconds": 56.686,
+    "reported_cost_usd": 0,
+    "token_usage": {
+      "input": 14697,
+      "output": 1791,
+      "reasoning": 718,
+      "cache_read": 2432,
+      "cache_write": 0
+    },
+    "review_result": "PASS_TEXT_ONLY_WITH_TWO_NONBLOCKING_FINDINGS",
+    "blocking_findings": 0,
+    "candidate_mutated": false,
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN",
+    "request_sha256": "27559a01d07d0adcf1222287865ea2de6e9aadad6ad430974b7570786f08d7c5",
+    "review_response_sha256": "f5d73a8d010da4ceec811f5cb3754af1d8baf100f53b1211ba5b679275ca7af7",
+    "adjudication_sha256": "6eb3bf68a33c52ae49a2e2a507118bf4984b31d5eeeb9c036feae9aa63d441ee3",
+    "raw_stdout_sha256": "5b743e90485525ee05cddc6c57eb9a017bccfbb6aed950bb7700a3c98df2433e"
+  },
+  "r12_tests_delta": [
+    {
+      "id": "T07",
+      "status": "PASS_NATIVE_PROCESS_SCAN_NO_CLI_WRITER",
+      "evidence": "At 2026-10-27T12:09:42.7169732+08:00 only OpenCode service PID 79496 was observed; no active work_id-bound W1/W2 writer was present."
+    },
+    {
+      "id": "T15",
+      "status": "FAIL_DUPLICATE_0136_WRITER_DISPATCH",
+      "evidence": "Preflight omitted an already existing remote exact-SHA 0136 R02 candidate and QA package. New manuscript not adopted; existing DOCX unchanged. Repair: before writer dispatch query both local canonical queue and remote quality-review tree by doc_id/requirement/revision and compare candidate SHA/QA."
+    },
+    {
+      "id": "T16",
+      "status": "PASS_NO_DUPLICATE_LIVE_WRITER_AT_RECONCILIATION",
+      "evidence": "PID 81100 no longer alive; no duplicate process to terminate; 0136 response terminal recovered."
+    },
+    {
+      "id": "T20",
+      "status": "PENDING_UNTIL_REMOTE_READBACK",
+      "evidence": "This delta is not yet synced."
+    },
+    {
+      "id": "T23",
+      "status": "PASS_SEPARATE_REVIEW_SCOPES",
+      "evidence": "0135 semantic review is text-only; technical and Word visual receipts remain separate same-candidate-SHA evidence."
+    },
+    {
+      "id": "T24",
+      "status": "REMAINS_CANDIDATE",
+      "evidence": "Neither document is Human formally accepted; 0136 writer response was not adopted; 0135 remains candidate, REAL unknown."
+    }
+  ]
+}
