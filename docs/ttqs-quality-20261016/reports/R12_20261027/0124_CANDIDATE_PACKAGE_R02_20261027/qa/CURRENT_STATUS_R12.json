@@ -1,6 +1,6 @@
 {
   "schema": "TTQS_ONE_DOC_CURRENT_STATUS_R12_V1",
-  "observed_at_local": "2026-10-27T15:28:11.3533497+08:00",
+  "observed_at_local": "2026-10-27T15:53:11.8430665+08:00",
   "project_id": "TTQS_ONE",
   "github_repo": "PT-Original-Point/ttqs-one",
   "pull_request": 92,
@@ -33,7 +33,7 @@
     },
     "semantic": {
       "status": "NOT_GRANTED",
-      "reason": "No independent semantic review bound to R02 candidate SHA.",
+      "reason": "Exact-SHA text-only reviewer response declared PASS, but Antigravity CLI actual serving model and fallback are UNKNOWN; preserve response, do not claim Gemini-verified acceptance.",
       "r01_review_verdict": "PASS_TEXT_ONLY",
       "r01_review_response_sha256": "a4665ce8e60f6c2fe690a501806f860df9b40587e129dd050d2d0d15da73c515",
       "r01_candidate_sha256": "0a6567c2779d9ad8014ab6d1c892779a98892351a38ceda0dea9fa8b24ff2988",
@@ -41,7 +41,20 @@
       "actual_serving_model": "UNKNOWN",
       "fallback_status": "UNKNOWN_NOT_VERIFIED",
       "total_tokens": 28550,
-      "reusable_for_r02": false
+      "reusable_for_r02": false,
+      "latest_review": {
+        "review_scope": "Exact-SHA semantic text review; no visual",
+        "adjudication_receipt": "qa/review_r05_antigravity_r02/ADJUDICATION_R05.json",
+        "work_id": "TTQS-0124-I19-E12-R02-ANTIGRAVITY-EXACT-SHA-SEMANTIC-REVIEW",
+        "acceptance_status": "NOT_GRANTED_ROUTE_IDENTITY_UNKNOWN",
+        "fallback_status": "UNKNOWN_NOT_VERIFIED; no fallback authorized",
+        "requested_model": "gemini-3.8-flash-high",
+        "actual_serving_model": "UNKNOWN",
+        "reviewer_declared_verdict": "PASS",
+        "adjudicated_response": "PASS_TEXT_ONLY",
+        "candidate_sha256": "5ea20da675395954e5587859ddc3ca4b483abaeff90509a86c66950581afec07",
+        "review_response_sha256": "be62ff4bd2a214f864f7252b8bbc315615ce8d8805b0ba39781a0aad872a2ec7"
+      }
     }
   },
   "r01_to_r02": {
@@ -61,5 +74,11 @@
   "formal_acceptance": "NOT_GRANTED",
   "real_evidence": "UNKNOWN_NOT_SUPPLIED",
   "promotion": "NOT_PERFORMED",
-  "pre_sync_pr_head": "e130ab75a75e73574ed1a6a7914db4dd00c0e670"
+  "pre_sync_pr_head": "e130ab75a75e73574ed1a6a7914db4dd00c0e670",
+  "worker_reconciliation": {
+    "current_candidate_sha256": "5ea20da675395954e5587859ddc3ca4b483abaeff90509a86c66950581afec07",
+    "sha256": "3b71df6dc686978ccf342b40f7d8d68108f365aa57a2f3a448ddea654878efc6",
+    "path": "qa/R12_0124_W1_W2_RECONCILIATION_R05.json",
+    "status": "RECORDED"
+  }
 }
