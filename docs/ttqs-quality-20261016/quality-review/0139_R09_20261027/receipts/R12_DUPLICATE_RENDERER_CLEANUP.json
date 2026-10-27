@@ -1,0 +1,56 @@
+{
+  "schema": "ttqs.process_recovery_public.v1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0139-R09-DUPLICATE-NATIVE-WORD-RENDER-CLEANUP",
+  "doc_id": "0139",
+  "official_requirement_id": "I19-E29",
+  "candidate_state": "CANDIDATE",
+  "candidate_sha256": null,
+  "incident": "A hidden native Word render process pair remained active after a second exact-SHA Word export completed. The first pair continued consuming CPU without further output updates.",
+  "successful_render": {
+    "status": "PASS",
+    "render_receipt_sha256": "b6570ea4f5bb80c692165403a125393075bf3bca5cbdbd2454a3d932f25add67",
+    "page_count": 23,
+    "verified_at": "2026-10-27T08:59:10+08:00",
+    "pdf_sha256": "62a5e050693f6b4783effc9c49fb18e73ea6f193964fbde98bd97542ba04ce97"
+  },
+  "stale_pair": [
+    {
+      "window_handle": "0",
+      "pid": 85692,
+      "kind": "PowerShell renderer",
+      "started_at": "2026-10-27T08:56:29+08:00"
+    },
+    {
+      "window_handle": "0",
+      "pid": 70040,
+      "kind": "Microsoft Word COM /Automation -Embedding",
+      "started_at": "2026-10-27T08:56:30+08:00"
+    }
+  ],
+  "cleanup_basis": {
+    "output_files_unchanged_seconds": 6,
+    "candidate_and_pdf_hashes_matched_pass_receipt": true,
+    "run_age_minutes": 63,
+    "cpu_seconds_increased_during_observation": true,
+    "no_visible_window": true
+  },
+  "action": {
+    "method": "Stopped only the two listed stale PIDs after exact checks",
+    "target_processes_remaining": false,
+    "terminated_pids": [
+      85692,
+      70040
+    ],
+    "remaining_other_word_processes": 52
+  },
+  "post_cleanup_hashes": {
+    "word_render_receipt_sha256": "b6570ea4f5bb80c692165403a125393075bf3bca5cbdbd2454a3d932f25add67",
+    "candidate_sha256": "1deaf540425e38b4ad0017e6cf6a90057dc372cf5af69bbe27346c7ac834df5e",
+    "pdf_sha256": "62a5e050693f6b4783effc9c49fb18e73ea6f193964fbde98bd97542ba04ce97"
+  },
+  "local_full_receipt_sha256": "4abcf41dbe3dee0ccd771053c6db5ad408ef7028886f84caa2e9fabaa5394a5e",
+  "result": "CLEANED_DUPLICATE_STUCK_RENDERER_CANDIDATES_UNCHANGED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED"
+}

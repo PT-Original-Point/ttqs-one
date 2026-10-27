@@ -1,0 +1,29 @@
+{
+  "schema": "TTQS_ONE_R12_0139_R09_DELTA_ADJUDICATION_V1",
+  "doc_id": "0139",
+  "requirement_id": "I19-E29",
+  "blueprint_index": 153,
+  "candidate": "R09",
+  "candidate_sha256": "1deaf540425e38b4ad0017e6cf6a90057dc372cf5af69bbe27346c7ac834df5e",
+  "extracted_body_sha256": "f94ae6c3efac964be6b96bf3120a69e217110fac65a2623694bef97c0c68f108",
+  "reviewer_session": "ses_e851fadafffeq7R3XA6ZA5XYYN",
+  "reviewer_actual_route": "opencode/glm-5.3-flash-free",
+  "reviewer_cost": 0,
+  "reviewer_verdict": "PASS_FOR_SCOPED_DELTA",
+  "review_scope": "ACT-03 evidence-description cell versus unchanged §9.2, SAMPLE/HOLD status, and prospective L-3 target only.",
+  "adjudication": "PASS_WITH_NONBLOCKING_NOTES",
+  "resolved_finding": "The unsupported current L-2 rating of synthetic evidence is removed; no level is asserted and the row remains SAMPLE: HOLD.",
+  "nonblocking_notes": [
+    "Reviewer suggests anchoring the parenthetical specifically to §9.2 rather than the broader Section 9; current reference is directionally correct.",
+    "尚未評級 can imply future rateability when real evidence exists; it does not rate the current synthetic corpus and the surrounding SAMPLE/HOLD and §9.2 restrictions remain."
+  ],
+  "baseline_review": "R08 exact-SHA complete supplied-body semantic review PASS; unchanged body paragraphs, tables, calculations and sample register are inherited only because the R08-to-R09 technical comparison proves a single paragraph change.",
+  "not_claimed": [
+    "full-document review of R09 independent of R08 baseline",
+    "formal acceptance",
+    "real evidence or association approval",
+    "Gemini/Antigravity review"
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD"
+}

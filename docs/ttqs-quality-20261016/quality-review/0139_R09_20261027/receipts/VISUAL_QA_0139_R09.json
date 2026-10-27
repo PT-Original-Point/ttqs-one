@@ -1,0 +1,230 @@
+{
+  "schema": "TTQS_ONE_0139_R09_VISUAL_QA_V1",
+  "doc_id": "0139",
+  "requirement_id": "I19-E29",
+  "blueprint_index": 153,
+  "candidate": "R09",
+  "candidate_sha256": "1deaf540425e38b4ad0017e6cf6a90057dc372cf5af69bbe27346c7ac834df5e",
+  "method": "Microsoft Word 16.0 hidden read-only COM ExportAsFixedFormat; Poppler raster at matched 118.8 dpi for baseline comparison; direct 150 dpi inspection of changed page 13.",
+  "word_render_pdf_sha256": "62a5e050693f6b4783effc9c49fb18e73ea6f193964fbde98bd97542ba04ce97",
+  "word_page_count": 23,
+  "r08_baseline_sha256": "d31ef2d8b8615f3dd314572c4e50b6604198e8f24faafb144bcbaea7373c696f",
+  "r08_prior_visual_receipt": "R08 all 23 pages directly inspected; no findings; exact baseline SHA.",
+  "r09_pages_1_to_12_and_14_to_23_pixel_identical_to_r08": true,
+  "pixel_identical_non_target_pages": 22,
+  "target_page_13": "changed by ACT-03 text only; directly inspected at 150 dpi; phrase fits within existing cell, no clipping, overlap or pagination change; readable.",
+  "target_page_png_sha256": "3f879b3cbae4b62724068af6004d1c536ab4903ddb9e04fa86bdc7ea4c33e3c9",
+  "raster_comparison": [
+    {
+      "page": 1,
+      "same_size": true,
+      "pixel_identical": true,
+      "size": [
+        983,
+        1389
+      ]
+    },
+    {
+      "page": 2,
+      "same_size": true,
+      "pixel_identical": true,
+      "size": [
+        983,
+        1389
+      ]
+    },
+    {
+      "page": 3,
+      "same_size": true,
+      "pixel_identical": true,
+      "size": [
+        983,
+        1389
+      ]
+    },
+    {
+      "page": 4,
+      "same_size": true,
+      "pixel_identical": true,
+      "size": [
+        983,
+        1389
+      ]
+    },
+    {
+      "page": 5,
+      "same_size": true,
+      "pixel_identical": true,
+      "size": [
+        983,
+        1389
+      ]
+    },
+    {
+      "page": 6,
+      "same_size": true,
+      "pixel_identical": true,
+      "size": [
+        983,
+        1389
+      ]
+    },
+    {
+      "page": 7,
+      "same_size": true,
+      "pixel_identical": true,
+      "size": [
+        983,
+        1389
+      ]
+    },
+    {
+      "page": 8,
+      "same_size": true,
+      "pixel_identical": true,
+      "size": [
+        983,
+        1389
+      ]
+    },
+    {
+      "page": 9,
+      "same_size": true,
+      "pixel_identical": true,
+      "size": [
+        983,
+        1389
+      ]
+    },
+    {
+      "page": 10,
+      "same_size": true,
+      "pixel_identical": true,
+      "size": [
+        983,
+        1389
+      ]
+    },
+    {
+      "page": 11,
+      "same_size": true,
+      "pixel_identical": true,
+      "size": [
+        983,
+        1389
+      ]
+    },
+    {
+      "page": 12,
+      "same_size": true,
+      "pixel_identical": true,
+      "size": [
+        983,
+        1389
+      ]
+    },
+    {
+      "page": 13,
+      "same_size": true,
+      "pixel_identical": false,
+      "size": [
+        983,
+        1389
+      ]
+    },
+    {
+      "page": 14,
+      "same_size": true,
+      "pixel_identical": true,
+      "size": [
+        983,
+        1389
+      ]
+    },
+    {
+      "page": 15,
+      "same_size": true,
+      "pixel_identical": true,
+      "size": [
+        983,
+        1389
+      ]
+    },
+    {
+      "page": 16,
+      "same_size": true,
+      "pixel_identical": true,
+      "size": [
+        983,
+        1389
+      ]
+    },
+    {
+      "page": 17,
+      "same_size": true,
+      "pixel_identical": true,
+      "size": [
+        983,
+        1389
+      ]
+    },
+    {
+      "page": 18,
+      "same_size": true,
+      "pixel_identical": true,
+      "size": [
+        983,
+        1389
+      ]
+    },
+    {
+      "page": 19,
+      "same_size": true,
+      "pixel_identical": true,
+      "size": [
+        983,
+        1389
+      ]
+    },
+    {
+      "page": 20,
+      "same_size": true,
+      "pixel_identical": true,
+      "size": [
+        983,
+        1389
+      ]
+    },
+    {
+      "page": 21,
+      "same_size": true,
+      "pixel_identical": true,
+      "size": [
+        983,
+        1389
+      ]
+    },
+    {
+      "page": 22,
+      "same_size": true,
+      "pixel_identical": true,
+      "size": [
+        983,
+        1389
+      ]
+    },
+    {
+      "page": 23,
+      "same_size": true,
+      "pixel_identical": true,
+      "size": [
+        983,
+        1389
+      ]
+    }
+  ],
+  "visual_result": "PASS_SCOPED_DELTA",
+  "scope_limit": "R09 page 13 directly inspected. The other 22 R09 rendered pages are pixel-identical at 118.8 dpi to the corresponding R08 pages previously directly inspected; this is an exact render comparison, not a fresh hand inspection of each unchanged page.",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD"
+}
