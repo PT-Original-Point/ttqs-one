@@ -37,7 +37,7 @@
     "formal_acceptance": "NOT_GRANTED",
     "reviewer_reported_verdict": "PASS_WITH_DELTA_SCOPE",
     "adjudication_status": "NOT_ACCEPTED",
-    "adjudication_reason": "The previous Antigravity reviewer claimed PASS but actual model identity is UNKNOWN. The new bounded OpenCode GLM attempt received provider.free-limit HTTP 429 before inference; it returned no review."
+    "adjudication_reason": "Prior Antigravity reviewer model identity remains UNKNOWN; OpenCode GLM attempt 1 returned 429, and attempt 2 also returned HTTP 429 before inference with zero token fields. No replacement verdict."
   },
   "sample_real": {
     "synthetic_register_sha256": "96837dfbabcc81693256042e4c326825c6e0f847982a63add3eb72945c5d100e",
@@ -61,5 +61,31 @@
     "response": "NONE",
     "same_input_retry": "NOT_ATTEMPTED",
     "candidate_docx_sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539"
+  },
+  "opencode_attempt_latest": {
+    "work_id": "TTQS-0121-I19-E09-R03-W1-OPENCODE-GLM-EXACT-SHA-REVIEW-AFTER-0122-SUCCESS-20261028",
+    "status": "BLOCKED_PROVIDER_FREE_LIMIT_HTTP_429_BEFORE_INFERENCE",
+    "attempt_number": 2,
+    "requested_model": "opencode/glm-5.3-flash-free",
+    "selected_session_model": "glm-5.3-flash-free",
+    "session_provider_id": "opencode",
+    "actual_inference": "NOT_REACHED",
+    "http_status": 429,
+    "retry_after_ms": 6168000,
+    "retry_eligible_estimate_local": "2026-10-28T08:00:00.296+08:00",
+    "tokens": {
+      "input": 0,
+      "output": 0,
+      "reasoning": 0,
+      "cache_read": 0,
+      "cache_write": 0
+    },
+    "response": "NONE",
+    "pid": 77644,
+    "exit_code": 1,
+    "candidate_docx_sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+    "candidate_changed": false,
+    "receipt_sha256": "203e58e8517c0f6bc3f864efd638859cd6aea29776d80e9fb23df3ca133274e2",
+    "process_deviation": "Attempt occurred before prior server backoff estimate; honor latest retry boundary and do not repeat identical input."
   }
 }
