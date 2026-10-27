@@ -31,7 +31,7 @@
     "unchanged_pixel_identical_pages": 25
   },
   "independent_semantic_review": {
-    "delta_verdict": "PASS",
+    "delta_verdict": "UNVERIFIED_ROUTE_IDENTITY",
     "scope": "R03 exact-SHA delta only; unaffected content coverage inherited from R02 full-body reviewer, with R02 overall PASS rejected for the timeline defect.",
     "response_sha256": "ebcb7ac280491bae06dc54da67e090ab3491a8a6e019eb308d4cc5bc07499820",
     "human_readable_response_sha256": "2300f1a46f55b743d2da2b9bfdb8ebb230ff556e711ca55252121c083a97352d",
@@ -49,7 +49,12 @@
       "total_tokens": 22344
     },
     "tool_calls": [],
-    "formal_acceptance": "NOT_GRANTED"
+    "formal_acceptance": "NOT_GRANTED",
+    "reviewer_reported_delta_verdict": "PASS",
+    "adjudication_status": "NOT_ACCEPTED",
+    "acceptance_status": "NOT_GRANTED_ROUTE_IDENTITY_UNKNOWN",
+    "adjudication_reason": "Reviewer response is present and exact-SHA bound, but the requested Antigravity model is not corroborated by provider metadata and fallback status is UNKNOWN. Under the Gemini-only route rule, its PASS is recorded as self-reported evidence and is not counted as an independently verified semantic PASS.",
+    "fallback_status": "UNKNOWN_NOT_VERIFIED"
   },
   "worker_routing": {
     "opencode_v2": {
@@ -105,7 +110,7 @@
     "receipt_sha256": "4e4ab81759b3a6f82f6237ccb34ab7fa6ec24a58c0c2120de6f691c82964a665"
   },
   "full_body_semantic_review_R12": {
-    "status": "PASS_TEXT_ONLY",
+    "status": "UNVERIFIED_ROUTE_IDENTITY",
     "scope": "Full candidate body semantic/usability review for this exact R03 DOCX and extracted body; no visual inspection claimed.",
     "candidate_docx_sha256": "b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d",
     "candidate_body_sha256": "a6f9b879203ab5234d6f5c918c7b3b7b5109c641a66bbbae3d72ebbb9b409991",
@@ -143,13 +148,17 @@
         "adopted": true
       }
     ],
-    "review_response_verdict": "PASS_TEXT_ONLY",
+    "review_response_verdict": "REVIEWER_REPORTED_PASS_TEXT_ONLY",
     "technical_qa": "PASS_DETERMINISTIC_SCOPE; existing receipt unchanged",
     "visual_qa": "PASS_VISUAL_DELTA_SCOPE; existing receipt unchanged; no full 28-page visual pass asserted",
     "candidate_mutated": false,
     "formal_acceptance": "NOT_GRANTED",
     "real_evidence": "NOT_PROVIDED",
-    "promotion": "NOT_PROMOTED"
+    "promotion": "NOT_PROMOTED",
+    "reviewer_reported_verdict": "PASS_TEXT_ONLY",
+    "adjudication_status": "NOT_ACCEPTED",
+    "acceptance_eligible": false,
+    "adjudication_reason": "Exact candidate/body/source hashes match, but actual serving model and fallback are UNKNOWN; the response cannot be attributed to the permitted Gemini route."
   },
   "prior_github_remote_readback": {
     "repository": "PT-Original-Point/ttqs-one",
@@ -159,5 +168,29 @@
     "exact_raw_byte_matches": 35,
     "manifest_sha256_at_verified_commit": "f4691cb73624d09cc002f1e146130155086fc8c30bac2135b9ce6c4d0351c613",
     "mismatch_count": 0
+  },
+  "semantic_review_route_adjudication_R12_1": {
+    "observed_at_local": "2026-10-27T20:08:00+08:00",
+    "candidate_sha256": "b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d",
+    "status": "UNVERIFIED_ROUTE_IDENTITY",
+    "reviewer_reported_verdicts": {
+      "delta": "PASS",
+      "full_body": "PASS_TEXT_ONLY"
+    },
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model": "UNKNOWN",
+    "fallback_status": "UNKNOWN_NOT_VERIFIED",
+    "response_evidence": {
+      "delta_response_sha256": "ebcb7ac280491bae06dc54da67e090ab3491a8a6e019eb308d4cc5bc07499820",
+      "delta_human_readable_response_sha256": "2300f1a46f55b743d2da2b9bfdb8ebb230ff556e711ca55252121c083a97352d",
+      "full_body_response_sha256": "1695e65738d405ae74223d5acb27752021941765436aa816c8eeddc5a3c6eb664",
+      "full_body_request_sha256": "b62cb19c3e6e0bd99a24b9176389a833881e96dc5abf563e0086b261db527ce9",
+      "tool_calls": 0
+    },
+    "independent_semantic_pass_counted": false,
+    "formal_acceptance": "NOT_GRANTED",
+    "candidate_docx_changed": false,
+    "technical_and_visual_receipts": "UNCHANGED_AND_RETAINED",
+    "next_action": "Obtain an exact-SHA independent semantic review from a permitted route whose serving model identity and no-fallback status can be verified; do not rebuild this DOCX."
   }
 }
