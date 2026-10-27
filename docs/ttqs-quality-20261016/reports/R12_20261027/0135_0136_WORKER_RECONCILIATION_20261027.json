@@ -1,7 +1,7 @@
 {
   "schema": "TTQS_ONE_R12_WORKER_DISPOSITION_V1",
   "project_id": "TTQS_ONE",
-  "observed_at_local": "2026-10-27T12:09:42.7169732+08:00",
+  "observed_at_local": "2026-10-27T14:39:25.7965947+08:00",
   "source_report": {
     "sha256": "ff3ca9886e3a345d78be358b2883296b7e5454408d23bc940fee239ba826c900",
     "used_as": "routing_context_only",
@@ -95,8 +95,8 @@
     },
     {
       "id": "T20",
-      "status": "PENDING_UNTIL_REMOTE_READBACK",
-      "evidence": "This delta is not yet synced."
+      "status": "PASS_EXACT_CURRENT_BRANCH_READBACK_8_OF_8_PLUS_CANDIDATE",
+      "evidence": "Verified at 2026-10-27T14:39:25.7965947+08:00 against live branch head 119543dde77f4ad7bfaaa49e13fe861b043314d4: all eight 0136 OpenCode worker files fetched from the branch; each remote Git blob SHA-1 equals the local package manifest. Candidate DOCX also fetched at the same branch; remote blob 78c3e26c55523e8eec58253c7a2b91dd2e0d8d21 matches the recorded exact-SHA candidate a9bd0fb528a1e22865fa5e07df44b314d48c1fd826a08149ecdd1d5915048b39. No DOCX bytes changed."
     },
     {
       "id": "T23",
@@ -123,5 +123,68 @@
       "reason": "Removed private Windows profile/attachment path from the public summary; preserved source SHA-256."
     }
   ],
-  "correction_observed_at_local": "2026-10-27T12:21:43.4374833+08:00"
+  "correction_observed_at_local": "2026-10-27T12:21:43.4374833+08:00",
+  "github_current_head_readback": {
+    "repository": "PT-Original-Point/ttqs-one",
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "verified_head": "119543dde77f4ad7bfaaa49e13fe861b043314d4",
+    "verified_at_local": "2026-10-27T14:39:25.7965947+08:00",
+    "worker_files_expected": 8,
+    "worker_files_exact_git_blob_matches": 8,
+    "worker_file_mismatches": 0,
+    "candidate_sha256": "a9bd0fb528a1e22865fa5e07df44b314d48c1fd826a08149ecdd1d5915048b39",
+    "candidate_remote_git_blob_sha1": "78c3e26c55523e8eec58253c7a2b91dd2e0d8d21",
+    "candidate_exact_blob_match": true,
+    "method": "GitHub Contents API base64 reads; returned remote Git blob SHA-1 values matched local package manifest",
+    "worker_files": [
+      {
+        "file": "DISPATCH_INTENT_R02.json",
+        "local_sha256": "6433d6f0fde04c796f9ffdebf221b6a37c6c537d6b686a0986b578848f572829",
+        "remote_git_blob_sha1": "9cc8aa4b2afa4819b174ffae86f8e11e3b161090",
+        "exact_match": true
+      },
+      {
+        "file": "DISPATCH_START_R02.json",
+        "local_sha256": "c7c8fb1e3fa5dfca78a5988ab0c51e11ecbcdfeaac53f035bd1b370a0afa9eae",
+        "remote_git_blob_sha1": "6d1515dc56a7853f968129380c02d18bf03fcded",
+        "exact_match": true
+      },
+      {
+        "file": "MANUSCRIPT_RESPONSE_R02_RAW.md",
+        "local_sha256": "d0d64fe8fade4b0c36c5be2e914f560432b32ee63e096417bc178890fa9eb447",
+        "remote_git_blob_sha1": "457d8ba7d43b526833aad34274dfe6ea0640dff9",
+        "exact_match": true
+      },
+      {
+        "file": "OPENCODE_SESSION_EXPORT_SANITIZED.json",
+        "local_sha256": "6813f6d6c14d162abc76d66af74e7c23dc2b80cac95a80302b6bfd30cc46a49a",
+        "remote_git_blob_sha1": "4038647ba32c1371a565b254acfe45450776e0cc",
+        "exact_match": true
+      },
+      {
+        "file": "RAW_STDERR.txt",
+        "local_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "remote_git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "exact_match": true
+      },
+      {
+        "file": "RAW_STDOUT.jsonl",
+        "local_sha256": "6f00e9cf6d7b60d739cdcccb4869083993d5bb849c8d419d4b28c3fac4f2da5a",
+        "remote_git_blob_sha1": "71e451f34939a12e00e605c86050116b2225e9ee",
+        "exact_match": true
+      },
+      {
+        "file": "README.md",
+        "local_sha256": "7261e2172b886cc02aa210036305fa5835f392c5325ce9d5c6d12f40a33eb91c",
+        "remote_git_blob_sha1": "209cbbcd6a1108d2cbf70eeb4d7a60aa9c433d08",
+        "exact_match": true
+      },
+      {
+        "file": "REQUEST_0136_R02_OPENCODE.md",
+        "local_sha256": "7bceb288b5bc339ffd654ba47090aa5a07affb6b1efdb75105a62e3d72842150",
+        "remote_git_blob_sha1": "b8dc82d12b79e5b71f66f3ffd5a20bba9fd4ffc4",
+        "exact_match": true
+      }
+    ]
+  }
 }
