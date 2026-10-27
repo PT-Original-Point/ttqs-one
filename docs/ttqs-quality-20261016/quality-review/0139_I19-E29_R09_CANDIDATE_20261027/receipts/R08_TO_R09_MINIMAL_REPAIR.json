@@ -1,0 +1,31 @@
+{
+  "schema": "TTQS_ONE_0139_R08_TO_R09_MINIMAL_OOXML_REPAIR_V1",
+  "doc_id": "0139",
+  "requirement_id": "I19-E29",
+  "blueprint_index": 153,
+  "parent_candidate": "R08",
+  "parent_sha256": "d31ef2d8b8615f3dd314572c4e50b6604198e8f24faafb144bcbaea7373c696f",
+  "candidate": "R09",
+  "candidate_sha256": "1deaf540425e38b4ad0017e6cf6a90057dc372cf5af69bbe27346c7ac834df5e",
+  "candidate_bytes": 116371,
+  "zip_crc_ok": true,
+  "changed_package_parts": [
+    "word/document.xml"
+  ],
+  "exact_text_replacements": [
+    {
+      "old": "\\u5c31\\u696d\\u4f50\\u8b49\\u5f37\\u5ea6\\u50c5 L-2",
+      "new": "\\u5c31\\u696d\\u4f50\\u8b49\\u5f37\\u5ea6\\u5c1a\\u672a\\u8a55\\u7d1a",
+      "count": 1
+    },
+    {
+      "old": "\\uff08\\u7b2c 9 \\u7bc0\\u8a55\\u7d1a\\u5206\\u6790\\uff09",
+      "new": "\\uff08\\u7b2c 9 \\u7bc0\\u9650\\u5236\\uff09",
+      "count": 1
+    }
+  ],
+  "purpose": "Remove the contradiction between SAMPLE ONLY / NOT RATEABLE in section 9.2 and ACT-03 asserting an L-2 evidence rating.",
+  "preserved": "All package entries other than word/document.xml are byte-identical; no synthetic data or other document text changed.",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD"
+}
