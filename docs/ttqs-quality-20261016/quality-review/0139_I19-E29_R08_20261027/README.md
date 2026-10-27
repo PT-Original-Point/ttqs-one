@@ -1,5 +1,3 @@
-Warning: fs was declared with const; use let for reassignable variables.
-Warning: p was declared with const; use let for reassignable variables.
 # DOCX 0139 · I19-E29 · R08 candidate
 
 **Artifact state:** CANDIDATE (not formal acceptance)  
