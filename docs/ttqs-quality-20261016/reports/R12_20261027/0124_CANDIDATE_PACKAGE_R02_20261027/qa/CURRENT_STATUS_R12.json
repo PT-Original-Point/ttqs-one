@@ -1,6 +1,6 @@
 {
   "schema": "TTQS_ONE_DOC_CURRENT_STATUS_R12_V1",
-  "observed_at_local": "2026-10-27T15:53:11.8430665+08:00",
+  "observed_at_local": "2026-10-27T16:07:26.374890+08:00",
   "project_id": "TTQS_ONE",
   "github_repo": "PT-Original-Point/ttqs-one",
   "pull_request": 92,
@@ -33,7 +33,7 @@
     },
     "semantic": {
       "status": "NOT_GRANTED",
-      "reason": "Exact-SHA text-only reviewer response declared PASS, but Antigravity CLI actual serving model and fallback are UNKNOWN; preserve response, do not claim Gemini-verified acceptance.",
+      "reason": "R02 has a complete Antigravity text-only PASS response but actual serving model/fallback remain UNKNOWN; a separate OpenCode Beam review was rejected before inference with HTTP 429 and produced no review. No exact-SHA independent semantic acceptance is granted.",
       "r01_review_verdict": "PASS_TEXT_ONLY",
       "r01_review_response_sha256": "a4665ce8e60f6c2fe690a501806f860df9b40587e129dd050d2d0d15da73c515",
       "r01_candidate_sha256": "0a6567c2779d9ad8014ab6d1c892779a98892351a38ceda0dea9fa8b24ff2988",
@@ -54,6 +54,20 @@
         "adjudicated_response": "PASS_TEXT_ONLY",
         "candidate_sha256": "5ea20da675395954e5587859ddc3ca4b483abaeff90509a86c66950581afec07",
         "review_response_sha256": "be62ff4bd2a214f864f7252b8bbc315615ce8d8805b0ba39781a0aad872a2ec7"
+      },
+      "latest_route_attempt": {
+        "work_id": "TTQS-0124-I19-E12-R02-W1-BEAM-TABLE-DELTA-REVIEW",
+        "requested_model": "opencode/beam-free",
+        "actual_serving_model": "UNKNOWN_NO_INFERENCE_RESPONSE",
+        "outcome": "HTTP_429_PROVIDER_FREE_LIMIT",
+        "session_id": "ses_e839a7011ffesBjvTESRXRnlM9",
+        "cli_exit_code": 1,
+        "retry_after_ms": 57205000,
+        "next_eligible_estimate_local": "2026-10-28T08:00:00+08:00",
+        "candidate_sha256": "5ea20da675395954e5587859ddc3ca4b483abaeff90509a86c66950581afec07",
+        "candidate_mutated": false,
+        "response": "NONE",
+        "tokens": "NOT_REPORTED_NO_MODEL_RESPONSE"
       }
     }
   },
