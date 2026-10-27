@@ -3,10 +3,10 @@
   "project_id": "TTQS_ONE",
   "observed_at_local": "2026-10-27T12:09:42.7169732+08:00",
   "source_report": {
-    "path": "C:\\Users\\J\\.codex\\attachments\\db41d346-8e40-4673-9bf2-6a6ed654e5c6\\貼上的文字.txt",
     "sha256": "ff3ca9886e3a345d78be358b2883296b7e5454408d23bc940fee239ba826c900",
     "used_as": "routing_context_only",
-    "recommendation_outcome": "OpenCode GLM 5.3 and Mimo are catalogued free routes; this run used Mimo and a separate 0135 GLM run provides a successful native session route record."
+    "recommendation_outcome": "OpenCode GLM 5.3 and Mimo are catalogued free routes; this run used Mimo and a separate 0135 GLM run provides a successful native session route record.",
+    "source_label": "Human-provided OpenCode V2 daily free-model report"
   },
   "doc_0136": {
     "work_id": "TTQS-0136-I19-E26-R02-W1-MANUSCRIPT-AFTER-429-RELEASE",
@@ -74,7 +74,7 @@
     "real_evidence": "UNKNOWN",
     "request_sha256": "27559a01d07d0adcf1222287865ea2de6e9aadad6ad430974b7570786f08d7c5",
     "review_response_sha256": "f5d73a8d010da4ceec811f5cb3754af1d8baf100f53b1211ba5b679275ca7af7",
-    "adjudication_sha256": "6eb3bf68a33c52ae49a2e2a507118bf4984b31d5eeeb9c036feae9aa63d441ee3",
+    "adjudication_sha256": "6eb3bf68a33c52ae49a2e2a507118bf4984b31d5eeb9c036feae9aa63d441ee3",
     "raw_stdout_sha256": "5b743e90485525ee05cddc6c57eb9a017bccfbb6aed950bb7700a3c98df2433e"
   },
   "r12_tests_delta": [
@@ -108,5 +108,20 @@
       "status": "REMAINS_CANDIDATE",
       "evidence": "Neither document is Human formally accepted; 0136 writer response was not adopted; 0135 remains candidate, REAL unknown."
     }
-  ]
+  ],
+  "correction_delta": [
+    {
+      "field": "doc_0135.adjudication_sha256",
+      "previous": "6eb3bf68a33c52ae49a2e2a507118bf4984b31d5eeeb9c036feae9aa63d441ee3",
+      "corrected": "6eb3bf68a33c52ae49a2e2a507118bf4984b31d5eeb9c036feae9aa63d441ee3",
+      "reason": "Recomputed from exact local adjudication bytes with SHA-256."
+    },
+    {
+      "field": "source_report.path",
+      "previous": "REDACTED_LOCAL_ATTACHMENT_PATH",
+      "corrected": "source_label",
+      "reason": "Removed private Windows profile/attachment path from the public summary; preserved source SHA-256."
+    }
+  ],
+  "correction_observed_at_local": "2026-10-27T12:21:43.4374833+08:00"
 }
