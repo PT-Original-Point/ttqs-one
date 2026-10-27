@@ -1,0 +1,23 @@
+{
+  "doc_id": "0139",
+  "requirement_id": "I19-E29",
+  "candidate": "R08",
+  "candidate_sha256": "d31ef2d8b8615f3dd314572c4e50b6604198e8f24faafb144bcbaea7373c696f",
+  "reviewer": "W2 Antigravity CLI fresh conversation 3b698f42-9f79-4b78-bbb3-9ffe7f122a62",
+  "requested_model": "gemini-3.8-flash-high",
+  "actual_serving_model": "UNKNOWN",
+  "review_scope": "Delta-only exact-SHA review; same candidate byte binds three formula corrections, QC-08 register key, and visible version. R07 full-body semantic PASS with two findings remains historical; all non-targeted OOXML package parts are byte-identical.",
+  "verdict": "PASS_DELTA",
+  "verified_findings": [
+    "2023 (4+2)/10=6/10=60.00%",
+    "2024 (7+2)/12=9/12=75.00%",
+    "2025 (8+2)/12=10/12=83.33%",
+    "QC-08 KEY-DATE-001 matches dictionary key",
+    "visible candidate label R08; SAMPLE/REAL and NOT_GRANTED boundaries preserved"
+  ],
+  "reported_blockers": 0,
+  "response_sha256": "1c6c280d126a8d8dc58fe8619889ee392fbfdbf525c85021e6d00edd7785b62e",
+  "provider_status": "DONE",
+  "cli_exit_code": "UNKNOWN_CAPTURE_FAILURE",
+  "formal_acceptance": "NOT_GRANTED"
+}
