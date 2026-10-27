@@ -1,0 +1,41 @@
+{
+  "schema": "ttqs-one-current-candidate-status-0133-r01-reconciled-v2",
+  "observed_at_local": "2026-10-28T04:02:25.000+08:00",
+  "doc_id": "0133",
+  "requirement_id": "I19-E22",
+  "project_157_index": 146,
+  "unique_blueprint_code": "I19-L3",
+  "official_printed_checkbox_serial": "UNKNOWN",
+  "candidate_state": "CANDIDATE_ONLY",
+  "candidate_docx_sha256": "25116afb8206e0828c8b3a4a763845a9c3e672a4cb49969a64a2a3737d87256b",
+  "candidate_bytes": 101910,
+  "technical_math_status": "PASS_TECHNICAL_MATH_AND_LAYOUT_SCOPE",
+  "technical_receipt_sha256": "77472067016c7c720872ebd591abe57ed956a2caf3c05963d4dd1a6dc0a68d66",
+  "independent_semantic_status": "PASS_TEXT_ONLY_WITH_NONBLOCKING_FINDINGS",
+  "reviewer": "OpenCode v2 CLI",
+  "requested_model": "opencode/glm-5.3-flash-free",
+  "actual_model_from_session_export": {
+    "id": "glm-5.3-flash-free",
+    "providerID": "opencode",
+    "variant": "default"
+  },
+  "model_identity_status": "SESSION_METADATA_MATCHES_REQUEST; PROVIDER_UPSTREAM_INFRASTRUCTURE_NOT_EXPOSED",
+  "upstream_billing": "UNKNOWN",
+  "cli_exit_code": "UNKNOWN_NOT_CAPTURED_BY_WRAPPER",
+  "semantic_review_response_sha256": "437a43e31542249f093f9f68e8e8777d9e92939f75305fa74ace0bb2f4f62d1f",
+  "semantic_adjudication_sha256": "49c131e18878940039ead4466a8fd63d09663cc1cc91c814e95f56bc23661123",
+  "blocking_findings": 0,
+  "nonblocking_findings": 4,
+  "semantic_review_scope": "TEXT_ONLY; exact candidate text and supplied source/Blueprint context; reviewer did not inspect DOCX binary, images, layout or render and did not recompute hashes; dispatch receipt binds the supplied extracted text to the exact candidate SHA.",
+  "visual_status": "PASS_SELF_INSPECTED_11_PAGES; full independent visual review UNKNOWN",
+  "real_evidence": "UNKNOWN",
+  "formal_acceptance": "NOT_GRANTED",
+  "overall": "CANDIDATE_QUALITY_PASS_WITH_DECLARED_SCOPE_LIMITS; NOT_FORMALLY_ACCEPTED",
+  "status_reconciliation": {
+    "stale_sidecar_sha256": "1877201151d8be3f872194379586b0bcf0a6cf9d145cd54c1eed0acd2e92c6cc",
+    "stale_field": "reviewer_model_identity=UNKNOWN",
+    "corrected_identity": "opencode/glm-5.3-flash-free; session metadata matches request",
+    "docx_bytes_changed": false,
+    "rebuild_or_review_repeated": false
+  }
+}
