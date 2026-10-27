@@ -4,7 +4,7 @@
   "doc_id": "0124",
   "requirement_id": "I19-E12",
   "candidate_state": "CANDIDATE",
-  "observed_at_local": "2026-10-27T04:03:28.477930+08:00",
+  "observed_at_local": "2026-10-27T12:47:39+08:00",
   "candidate_docx_sha256": "0a6567c2779d9ad8014ab6d1c892779a98892351a38ceda0dea9fa8b24ff2988",
   "candidate_docx_unchanged_after_review": true,
   "source_packet_sha256": "83a03deb7cbef3f07ef8b7ce0b2b25e1744baa6bc2e96b29e3259453558ccfee",
@@ -20,7 +20,7 @@
     "receipt_sha256": "7a7b889c99be8902e88a7bab5ef94991f23a30c0cad326369836ac3c46a8c381"
   },
   "semantic_review": {
-    "result": "PASS_TEXT_ONLY",
+    "result": "NOT_ACCEPTED_MODEL_IDENTITY_UNVERIFIED",
     "rubric_sections": 8,
     "review_response_sha256": "a4665ce8e60f6c2fe690a501806f860df9b40587e129dd050d2d0d15da73c515",
     "dispatch_terminal_sha256": "e96a99cd7147c2059bc2d11190de8d609c1449b00b31a0a5871a3f55897a4e7c",
@@ -37,7 +37,26 @@
       "thinking_tokens": 4028,
       "cache_read_tokens": 0,
       "total_tokens": 28550
-    }
+    },
+    "reviewer_reported_result": "PASS_TEXT_ONLY",
+    "acceptance_state": "UNRESOLVED",
+    "limitation": "Antigravity response reported PASS_TEXT_ONLY but actual serving model UNKNOWN; OpenCode Mimo request was rejected with provider.free-limit HTTP 429 before any semantic response. Neither supports verified model identity or formal acceptance.",
+    "independent_review_attempts": [
+      {
+        "work_id": "TTQS-0124-I19-E12-R01-W1-MIMO-EXACT-SHA-REVIEW-R02-20261027",
+        "requested_model": "opencode/mimo-v2.6-flash-free",
+        "actual_model": "UNKNOWN_NOT_RETURNED",
+        "candidate_sha256": "0a6567c2779d9ad8014ab6d1c892779a98892351a38ceda0dea9fa8b24ff2988",
+        "review_packet_sha256": "28fd462a35929895d283e82127bc32664ff94bd9fd882217533d6764f88d2c14",
+        "terminal": "PROVIDER_FREE_LIMIT_HTTP_429_NO_RESPONSE",
+        "session_id": "ses_e8454999bffe262YcQ4WaXBdtl",
+        "stdout_sha256": "61eb2f1e26e732d11c02e33115b4393f0e092bd5deec4c12d8a155744e9d22e8",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "process_exit_code": "UNKNOWN_NOT_CAPTURED",
+        "retry_eligible_local": "2026-10-28T08:00:00.372000+08:00",
+        "receipt_path": "qa/OPENCODE_MIMO_REVIEW_ATTEMPT_R02.json"
+      }
+    ]
   },
   "register_count_correction": {
     "reviewer_reported_key_count": 27,
