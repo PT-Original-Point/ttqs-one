@@ -1,5 +1,5 @@
 {
-  "schema": "TTQS_ONE_0138_R12_CURRENT_STATUS_RECONCILIATION_V2",
+  "schema": "TTQS_ONE_0138_R12_CURRENT_STATUS_RECONCILIATION_V3",
   "project_id": "TTQS_ONE",
   "doc_id": "0138",
   "requirement_id": "I19-E28",
@@ -13,26 +13,22 @@
     "paragraphs_total": 140,
     "tables_reviewed": 21,
     "table_rows_reviewed": 149,
-    "review_type": "full-body text-only",
-    "review_receipt_sha256": "573d51a97c02c504f269a9fa00ac61010bdd308f5b79476353b86ccdfeea9a7f"
+    "receipt_sha256": "573d51a97c02c504f269a9fa00ac61010bdd308f5b79476353b86ccdfeea9a7f"
   },
   "actual_serving_model_identity": "UNKNOWN",
-  "requested_and_cli_reported_model": "gemini-3.8-flash-high",
   "visual_status": "PASS_VISUAL_SCOPE_ONLY",
   "visual_pages_inspected": 15,
   "visual_receipt_sha256": "36bfcc9a7b8b79b3f8f80f07c2867b61b4e3c81ccf91aa3833f1cee3b79a3468",
-  "current_raw_byte_readback": {
-    "commit": "a40b9c7514de854ca766f4ab3aed72cd2f6268d6",
+  "github_raw_readback": {
+    "commit": "b80dd853a08ee339d814cc935d825a8783ed34a4",
     "files": 17,
-    "exact": 13,
-    "mismatches": 4,
-    "docx_candidate_raw_exact": true,
-    "pdf_raw_exact": true,
-    "receipt_sha256": "ea161047c5398f520281ef3a2d39ab426b3e8afe8cead0d854022b7e39320aa3"
+    "exact": 17,
+    "mismatches": 0,
+    "receipt_sha256": "a0612302c634ed98703db1b3664ce7810ff05d17404f96b3994fe6b6c8339a61"
   },
-  "normalization_finding": "Earlier 17/17 claim used Git-normalized blob identity (core.autocrlf=true), not raw byte arrays. Four text evidence files differ only by CRLF-to-LF normalization; current candidate DOCX and Word PDF are byte-exact. Restore the four original local bytes with scoped .gitattributes; preserve this pre-repair receipt.",
+  "normalization_correction": "Four text evidence blobs were restored byte-for-byte from local originals under scoped .gitattributes; DOCX SHA remained unchanged. The earlier normalized-object comparison is superseded; correction incident is retained in R12 reports.",
   "candidate_docx_changed": false,
   "formal_acceptance": "NOT_GRANTED",
   "real_evidence": "UNKNOWN/HOLD",
-  "observed_at_local": "2026-10-27T09:23:38.320928+08:00"
+  "observed_at_local": "2026-10-27T09:25:19.801352+08:00"
 }
