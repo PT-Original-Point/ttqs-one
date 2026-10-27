@@ -37,7 +37,7 @@
     "typography_unresolved_runs": 0
   },
   "semantic_review": {
-    "result": "PASS_TEXT_ONLY_FULL_BODY",
+    "result": "NOT_ACCEPTED_PROVIDER_IDENTITY_UNKNOWN",
     "candidate_sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
     "review_response_sha256": "9f68f37a3427aee265f54f3f895fa832cca6580a3f6fdc0de07916f47865ed4d",
     "raw_stdout_sha256": "93770fa08a7e4714c6b6e65d38c699f81bd4b26169a33e5f05741c951b5cdb10",
@@ -49,7 +49,11 @@
     "actual_serving_model": "UNKNOWN",
     "usage_tokens_reported": 52786,
     "reported_substantive_blockers": 0,
-    "reviewer_visual_scope": "NOT_REVIEWED_TEXT_ONLY"
+    "reviewer_visual_scope": "NOT_REVIEWED_TEXT_ONLY",
+    "reviewer_reported_verdict": "PASS",
+    "acceptance_status": "NOT_GRANTED",
+    "status_reason": "Antigravity CLI response requested gemini-3.8-flash-high but terminal evidence records actual_serving_model=UNKNOWN; this Human-authorized route does not qualify as a Gemini PASS without verified serving identity. The OpenCode GLM attempt was rejected before model response by provider.free-limit HTTP 429.",
+    "opencode_followup": "NOT_REVIEWED; provider.free-limit 429 before response; no verdict produced."
   },
   "sample_register": {
     "sha256": "96837dfbabcc81693256042e4c326825c6e0f847982a63add3eb72945c5d100e",
@@ -70,5 +74,7 @@
   "formal_acceptance": "NOT_GRANTED",
   "real_evidence": "NOT_PROVIDED",
   "candidate_mutated": false,
-  "observed_at_local": "2026-10-27T04:17:05.3880475+08:00"
+  "observed_at_local": "2026-10-27T04:17:05.3880475+08:00",
+  "semantic_status_correction": "R12 provider identity correction; candidate bytes unchanged.",
+  "corrected_at_local": "2026-10-27T12:29:44.8166755+08:00"
 }
