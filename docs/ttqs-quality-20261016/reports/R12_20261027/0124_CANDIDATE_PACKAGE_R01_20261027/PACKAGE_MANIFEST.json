@@ -59,12 +59,28 @@
       "bytes": 3315,
       "sha256": "9ac92ea7e2f398ac1b3df1e6353d5fb7eb3ec0fa61000257bdd6bee2d084d549",
       "git_blob_sha": "9ee633fe4ffc024bfa2b7c1189785712fcf7cbd2"
+    },
+    {
+      "path": "qa/OPENCODE_MIMO_REVIEW_ATTEMPT_R02.json",
+      "bytes": 2241,
+      "sha256": "d869dbc868b904153a59190a80a07c88d762fc8bc76bca1f8ac778938b31234b",
+      "git_blob_sha": "8561f967b1b519e16617695ee478820fa6bc3b7e"
     }
   ],
   "review_response_path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_worker_R12/REVIEW_RESPONSE.md",
   "review_response_sha256": "a4665ce8e60f6c2fe690a501806f860df9b40587e129dd050d2d0d15da73c515",
-  "review_scope": "PASS_TEXT_ONLY; actual serving model UNKNOWN; visual is separately covered by 14-page receipt/images",
+  "review_scope": "NOT_ACCEPTED_MODEL_IDENTITY_UNVERIFIED: Antigravity reviewer-reported PASS_TEXT_ONLY has actual serving model UNKNOWN; OpenCode Mimo exact-SHA attempt returned provider.free-limit HTTP 429 without a semantic response. Visual scope remains 14 pages. Formal acceptance NOT_GRANTED.",
   "formal_acceptance": "NOT_GRANTED",
   "real_evidence": "NOT_VERIFIED",
-  "pages": "14 page images already in R12 reports path; no duplicate PDF needed"
+  "pages": "14 page images already in R12 reports path; no duplicate PDF needed",
+  "review_attempts": [
+    {
+      "path": "qa/OPENCODE_MIMO_REVIEW_ATTEMPT_R02.json",
+      "sha256": "d869dbc868b904153a59190a80a07c88d762fc8bc76bca1f8ac778938b31234b",
+      "candidate_sha256": "0a6567c2779d9ad8014ab6d1c892779a98892351a38ceda0dea9fa8b24ff2988",
+      "requested_model": "opencode/mimo-v2.6-flash-free",
+      "actual_model": "UNKNOWN_NOT_RETURNED",
+      "terminal": "NO_RESPONSE_PROVIDER_FREE_LIMIT"
+    }
+  ]
 }
