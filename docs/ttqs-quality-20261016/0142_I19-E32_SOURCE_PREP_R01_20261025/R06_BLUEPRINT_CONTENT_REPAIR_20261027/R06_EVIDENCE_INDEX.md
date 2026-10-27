@@ -26,6 +26,11 @@ State: CANDIDATE. This evidence index binds the R06 document, source mapping, sa
 - Visual receipt: VISUAL_REVIEW_RECEIPT_0142_R06.json; all 10 Word-exported page images were directly inspected. Result is PASS_LAYOUT_READABILITY. Page 7 has substantial lower-page whitespace but the table is readable and unclipped; no cosmetic rebuild was made. Visual inspection is not independent semantic review.
 - Semantic review: PENDING_INDEPENDENT_EXACT_SHA_REVIEW.
 
+## GitHub publication and raw-byte readback
+
+- Candidate package commit: 678c81f9a2990c5c60344fe3db2afd7550d8c8a1 on the existing PR #92 branch.
+- GitHub Contents API readback at that commit verified all 33 package files, including the DOCX, Word PDF, CSV, 10 page images, technical/layout receipts, and preserved R05 review evidence. For each file, the returned Git blob SHA-1 and byte count matched the local no-filter Git object and file byte count. Local file SHA-256 values remain separately recorded in R06_PACKAGE_MANIFEST.json.
+- Readback receipt: ../R06_PUBLICATION_READBACK/GITHUB_RAW_READBACK_RECEIPT_0142_R06.json. This post-publication receipt is outside the package manifest to avoid a circular listing.
 ## Historical R05 independent-review evidence
 
 The R05 review is historical repair input only and is not an R06 review. The original response and dispatch files are preserved under historical_R05_review/.
