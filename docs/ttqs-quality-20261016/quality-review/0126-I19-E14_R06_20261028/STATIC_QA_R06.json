@@ -1,0 +1,26 @@
+{
+  "schema": "ttqs-one-static-qa-receipt/v1",
+  "doc_id": "0126",
+  "requirement_id": "I19-E14",
+  "candidate_docx_sha256": "1f82a5ac21a105310aad23b96305e00c0396551f358fa8dc2252288973366130",
+  "source_packet_sha256": "1eaa10f4beb343f224b0a71288ee22246b9f00f7acbed04aac440210ea30db0d",
+  "unique_blueprint_sha256": "b2df529a0c3e0812968cfce307722a9339d467787ec8cf30e7f673abffc44bd1",
+  "blueprint_row_sha256": "bc640157d7f6e462de26a1b021af414be182b737319df3573ebbdfed34813cc6",
+  "checks": {
+    "docx_zip_integrity": "PASS",
+    "official_and_neighbor_ids_present": "PASS",
+    "six_pair_rows_match_expected_and_recompute": "PASS",
+    "totals_and_weighted_rate": "PASS",
+    "synthetic_register_26_unique_rows": "PASS",
+    "body_min_pt": 10.5,
+    "table_min_pt": 9.5,
+    "max_table_width_in": 6.9,
+    "table_count": 18,
+    "paragraph_count": 88,
+    "all_expected_page_renders_exist": "PASS"
+  },
+  "scope": "Deterministic structural, font, width, arithmetic and replacement-register checks; no independent semantic acceptance.",
+  "semantic_acceptance": "PENDING_INDEPENDENT_EXACT_SHA_REVIEW",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "NOT_PROVIDED"
+}
