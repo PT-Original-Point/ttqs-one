@@ -1,5 +1,5 @@
 {
-  "schema": "TTQS_ONE_0138_R12_CURRENT_STATUS_RECONCILIATION_V1",
+  "schema": "TTQS_ONE_0138_R12_CURRENT_STATUS_RECONCILIATION_V2",
   "project_id": "TTQS_ONE",
   "doc_id": "0138",
   "requirement_id": "I19-E28",
@@ -21,16 +21,18 @@
   "visual_status": "PASS_VISUAL_SCOPE_ONLY",
   "visual_pages_inspected": 15,
   "visual_receipt_sha256": "36bfcc9a7b8b79b3f8f80f07c2867b61b4e3c81ccf91aa3833f1cee3b79a3468",
-  "current_remote_readback": {
-    "branch_head": "636445caff75468d83a43ffb6d9c3db01f393663",
+  "current_raw_byte_readback": {
+    "commit": "a40b9c7514de854ca766f4ab3aed72cd2f6268d6",
     "files": 17,
-    "exact_blob_matches": 17,
-    "mismatches": 0,
-    "receipt_sha256": "3bdb76d9ffb1f96e432a206795ab3bca6f7c25fd24d28eb2aacb28fb2ed37335"
+    "exact": 13,
+    "mismatches": 4,
+    "docx_candidate_raw_exact": true,
+    "pdf_raw_exact": true,
+    "receipt_sha256": "ea161047c5398f520281ef3a2d39ab426b3e8afe8cead0d854022b7e39320aa3"
   },
-  "old_status_correction": "Historical 2026-10-26 status summarized the earlier review as selected-anchor scope; it is superseded by the exact-SHA R09 full-body review listed here. Old receipt preserved unchanged.",
-  "candidate_docx_changed_this_reconciliation": false,
+  "normalization_finding": "Earlier 17/17 claim used Git-normalized blob identity (core.autocrlf=true), not raw byte arrays. Four text evidence files differ only by CRLF-to-LF normalization; current candidate DOCX and Word PDF are byte-exact. Restore the four original local bytes with scoped .gitattributes; preserve this pre-repair receipt.",
+  "candidate_docx_changed": false,
   "formal_acceptance": "NOT_GRANTED",
   "real_evidence": "UNKNOWN/HOLD",
-  "observed_at_local": "2026-10-27T09:16:42.9436905+08:00"
+  "observed_at_local": "2026-10-27T09:23:38.320928+08:00"
 }
