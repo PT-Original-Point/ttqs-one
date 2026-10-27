@@ -62,6 +62,74 @@
       "scope_limit": "No binary DOCX inspection, rendering, visual review, or provider identity proof; existing technical and 10/10-page visual receipts remain separate.",
       "candidate_mutated": false,
       "formal_acceptance": "NOT_GRANTED"
+    },
+    "supplemental_semantic_reviews": [
+      {
+        "status": "PASS_TEXT_ONLY_WITH_TWO_NONBLOCKING_FINDINGS",
+        "exact_sha_required": "cae8be8280456b51a1294ee90eafca0ac1ae8a12738289d6ebbca35b3a05a3da",
+        "worker": "OpenCode v2 CLI 2.1.4",
+        "work_id": "TTQS-0135-I19-E25-R03-W1-EXACT-SHA-REVIEW-AFTER-429-RELEASE",
+        "requested_model": "opencode/glm-5.3-flash-free",
+        "actual_model": "opencode/glm-5.3-flash-free",
+        "actual_model_evidence": "Sanitized native session export: providerID=opencode, id=glm-5.3-flash-free",
+        "cli_exit_code": 0,
+        "pid": 92176,
+        "session_id": "ses_e8544289bffeNRi5T4R1l2X87Y",
+        "duration_seconds": 56.686,
+        "token_usage": {
+          "input_tokens": 14697,
+          "output_tokens": 1791,
+          "reasoning_tokens": 718,
+          "cache_read_tokens": 2432,
+          "cache_write_tokens": 0
+        },
+        "reported_cost_usd": 0,
+        "fallback": "NOT_OBSERVED_IN_CAPTURED_SESSION",
+        "tool_events_observed": false,
+        "computer_use": false,
+        "blocking_findings": 0,
+        "nonblocking_findings": 2,
+        "response_sha256": "f5d73a8d010da4ceec811f5cb3754af1d8baf100f53b1211ba5b679275ca7af7",
+        "stdout_sha256": "5b743e90485525ee05cddc6c57eb9a017bccfbb6aed950bb7700a3c98df2433e",
+        "session_export_sha256": "f80deda674cb7304152029009228d14d0697b409acd0a6762da18a357827966f",
+        "terminal_sha256": "e5a5d165260703bd54e20cec61720e3551a9befa64f0452c27ba74e8bce6bc72",
+        "adjudication_path": "independent_review/OPENCODE_R12_20261027T0819/ADJUDICATION_OPENCODE_R12.json",
+        "adjudication_sha256": "6eb3bf68a33c52ae49a2e2a507118bf4984b31d5eeb9c036feae9aa63d441ee3",
+        "scope_limit": "Text-only using supplied extracted text; reviewer did not open/re-hash DOCX. No layout/visual or formal/REAL acceptance."
+      }
+    ],
+    "latest_additional_semantic_review": {
+      "status": "PASS_TEXT_ONLY_WITH_TWO_NONBLOCKING_FINDINGS",
+      "exact_sha_required": "cae8be8280456b51a1294ee90eafca0ac1ae8a12738289d6ebbca35b3a05a3da",
+      "worker": "OpenCode v2 CLI 2.1.4",
+      "work_id": "TTQS-0135-I19-E25-R03-W1-EXACT-SHA-REVIEW-AFTER-429-RELEASE",
+      "requested_model": "opencode/glm-5.3-flash-free",
+      "actual_model": "opencode/glm-5.3-flash-free",
+      "actual_model_evidence": "Sanitized native session export: providerID=opencode, id=glm-5.3-flash-free",
+      "cli_exit_code": 0,
+      "pid": 92176,
+      "session_id": "ses_e8544289bffeNRi5T4R1l2X87Y",
+      "duration_seconds": 56.686,
+      "token_usage": {
+        "input_tokens": 14697,
+        "output_tokens": 1791,
+        "reasoning_tokens": 718,
+        "cache_read_tokens": 2432,
+        "cache_write_tokens": 0
+      },
+      "reported_cost_usd": 0,
+      "fallback": "NOT_OBSERVED_IN_CAPTURED_SESSION",
+      "tool_events_observed": false,
+      "computer_use": false,
+      "blocking_findings": 0,
+      "nonblocking_findings": 2,
+      "response_sha256": "f5d73a8d010da4ceec811f5cb3754af1d8baf100f53b1211ba5b679275ca7af7",
+      "stdout_sha256": "5b743e90485525ee05cddc6c57eb9a017bccfbb6aed950bb7700a3c98df2433e",
+      "session_export_sha256": "f80deda674cb7304152029009228d14d0697b409acd0a6762da18a357827966f",
+      "terminal_sha256": "e5a5d165260703bd54e20cec61720e3551a9befa64f0452c27ba74e8bce6bc72",
+      "adjudication_path": "independent_review/OPENCODE_R12_20261027T0819/ADJUDICATION_OPENCODE_R12.json",
+      "adjudication_sha256": "6eb3bf68a33c52ae49a2e2a507118bf4984b31d5eeb9c036feae9aa63d441ee3",
+      "scope_limit": "Text-only using supplied extracted text; reviewer did not open/re-hash DOCX. No layout/visual or formal/REAL acceptance."
     }
   },
   "source_data_boundary": "All outcome figures and case rows are SAMPLE/SYNTHETIC. Association REAL originals and formal checkbox serial remain UNKNOWN.",
@@ -78,5 +146,6 @@
       "source": "OpenCode free-model attempt",
       "note": "Provider returned HTTP 429; no reviewer body was produced."
     }
-  ]
+  ],
+  "updated_at_local": "2026-10-27T08:22:29.5248404+08:00"
 }
