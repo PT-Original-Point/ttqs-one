@@ -28,13 +28,16 @@
     "table_min_font_pt": 9.5
   },
   "semantic": {
-    "status": "PASS_WITH_DELTA_SCOPE",
+    "status": "UNVERIFIED_ROUTE_IDENTITY",
     "exact_candidate_sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
     "review_response_sha256": "d0d502350dc5a5178dd0c4d077b66591661aca1574f59b77f39c7a8f87414d",
-    "scope": "R02 full-body review was PARTIAL only at P162-P163; R03 delta review PASS closes P163 and confirms safe P002 metadata. No other body bytes changed.",
+    "scope": "Prior R02/R03 reviewer responses are reviewer-reported text evidence; actual Gemini provider identity is UNKNOWN, so they are not counted as a verified independent semantic PASS. OpenCode attempt R12_20261027T2017 was rejected before inference by HTTP 429; no replacement verdict exists.",
     "requested_model": "gemini-3.8-flash-high",
     "actual_serving_model_identity": "UNKNOWN_PROVIDER_METADATA_NOT_EXPOSED",
-    "formal_acceptance": "NOT_GRANTED"
+    "formal_acceptance": "NOT_GRANTED",
+    "reviewer_reported_verdict": "PASS_WITH_DELTA_SCOPE",
+    "adjudication_status": "NOT_ACCEPTED",
+    "adjudication_reason": "The previous Antigravity reviewer claimed PASS but actual model identity is UNKNOWN. The new bounded OpenCode GLM attempt received provider.free-limit HTTP 429 before inference; it returned no review."
   },
   "sample_real": {
     "synthetic_register_sha256": "96837dfbabcc81693256042e4c326825c6e0f847982a63add3eb72945c5d100e",
@@ -42,5 +45,21 @@
     "formal_acceptance": "NOT_GRANTED"
   },
   "docx_changed_during_qa_or_review": false,
-  "promotion": "NOT_PROMOTED"
+  "promotion": "NOT_PROMOTED",
+  "opencode_attempt": {
+    "work_id": "TTQS-0121-I19-E09-R03-W1-OPENCODE-GLM-5.3-FLASH-FREE-EXACT-SHA-REVIEW",
+    "status": "BLOCKED_PROVIDER_FREE_LIMIT_HTTP_429",
+    "evidence_bundle_sha256": "a8299e8230cb19b8d3b2ee0b21e36c60aa39fae6eaf0492f6d63ff1a97d02f1d",
+    "requested_model": "opencode/glm-5.3-flash-free",
+    "selected_session_model": "glm-5.3-flash-free",
+    "actual_inference": "NOT_REACHED",
+    "session_id": "ses_e82b1ca2cffeCEinyXAtf6PmLK",
+    "provider_error_status": 429,
+    "retry_after_ms": 41958000,
+    "retry_eligible_estimate_local": "2026-10-28T08:00:00.403+08:00",
+    "cli_exit_code": "UNKNOWN_NOT_CAPTURED",
+    "response": "NONE",
+    "same_input_retry": "NOT_ATTEMPTED",
+    "candidate_docx_sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539"
+  }
 }
