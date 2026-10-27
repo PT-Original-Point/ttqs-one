@@ -124,13 +124,26 @@
     "observed_at_local": "2026-10-27T15:31:21.43782+08:00"
   },
   "manifest_repair": {
-    "failed_manifest_update_commit": "9a0ac1b1a39fdc00ec66b6973dad39ab80a966d7",
-    "failed_remote_blob_sha1": "f6e8c9c83dacdcd1db1ad74715859382f1acc9c4",
-    "failed_remote_bytes": 6056,
-    "local_bytes": 7360,
-    "failed_remote_sha256": "0c9753fe8c6d723ae49b72b0cae3a9936e9ba6d21601979f602f4b277252a339",
-    "local_sha256_before_repair": "7f8b1e587e490e8f6a1160f3dcecd7a7fe96277e103d865b1558a66ff1920c8b",
-    "root_cause": "The base64 stdout from the nested local read was capped at 2000 tokens, so the uploaded manifest was truncated. It was detected by direct Git blob byte comparison.",
-    "status": "REPLACED_BY_CURRENT_LOCAL_MANIFEST_VERSION; final raw-byte readback required"
+    "failed_update_attempt": {
+      "commit": "9a0ac1b1a39fdc00ec66b6973dad39ab80a966d7",
+      "remote_blob_sha1": "f6e8c9c83dacdcd1db1ad74715859382f1acc9c4",
+      "local_bytes": 7360,
+      "remote_bytes": 6056,
+      "local_sha256": "7f8b1e587e490e8f6a1160f3dcecd7a7fe96277e103d865b1558a66ff1920c8b",
+      "remote_sha256": "0c9753fe8c6d723ae49b72b0cae3a9936e9ba6d21601979f602f4b277252a339",
+      "raw_equal": false,
+      "cause": "Nested exec_command output cap 2000 tokens truncated base64; direct Git blob readback detected mismatch."
+    },
+    "previous_corrected_version_readback": {
+      "commit": "13eab6acfc3e1dbd69ed5daeedbd93aa2b621246",
+      "blob_sha1": "4427b4f35e9d9bc48a29d5da81f9bd3f785646fd",
+      "local_sha256": "c31f9350e22cc263fe57722d382b41bd777cfa32f76fa193ca661b884a931f40",
+      "remote_sha256": "c31f9350e22cc263fe57722d382b41bd777cfa32f76fa193ca661b884a931f40",
+      "raw_equal": true,
+      "pr_head": "13eab6acfc3e1dbd69ed5daeedbd93aa2b621246",
+      "git_ls_remote": "13eab6acfc3e1dbd69ed5daeedbd93aa2b621246"
+    },
+    "status": "FAILURE_RECORDED_AND_CORRECTION_VERIFIED",
+    "observed_at_local": "2026-10-27T15:36:18.7774477+08:00"
   }
 }
