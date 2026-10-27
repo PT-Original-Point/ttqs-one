@@ -17,7 +17,7 @@
   "actual_provider_ids": [
     "opencode"
   ],
-  "actual_model_status": "UNKNOWN_PRE_INFERENCE_ERROR",
+  "actual_model_status": "SESSION_SELECTED_MODEL_CONFIRMED; INFERENCE_MODEL_UNKNOWN_NO_RESPONSE",
   "tokens": "NOT_REPORTED_IN_ERROR_RESPONSE",
   "reported_cost": "UNKNOWN_NOT_RETURNED",
   "fallback_allowed": false,
@@ -39,5 +39,21 @@
     "availability_note": "Provider retry estimate is not a service guarantee; no retry or model switch was performed."
   },
   "next_action": "Do not repeat the same free inference call before the provider retry estimate; continue other READY work.",
-  "request_sha256": "75e4085f11ce84eede492b1abab8c26ca1e44cfe2109611913db9cecfdf8e52d"
+  "request_sha256": "75e4085f11ce84eede492b1abab8c26ca1e44cfe2109611913db9cecfdf8e52d",
+  "session_model_selection": {
+    "model_id": "deepseek-v4.1-flash-free",
+    "provider_id": "opencode",
+    "source": "sanitized native OpenCode session export"
+  },
+  "inference_served_model": "UNKNOWN_NO_GENERATED_RESPONSE",
+  "session_reported_tokens": {
+    "input": 0,
+    "output": 0,
+    "reasoning": 0,
+    "cache": {
+      "read": 0,
+      "write": 0
+    }
+  },
+  "session_reported_cost_usd": 0
 }
