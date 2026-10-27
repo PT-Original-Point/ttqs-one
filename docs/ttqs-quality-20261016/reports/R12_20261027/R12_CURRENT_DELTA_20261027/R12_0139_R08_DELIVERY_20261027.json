@@ -2,7 +2,7 @@
   "schema": "TTQS_ONE_R12_0139_R08_DELIVERY_V1",
   "project_id": "TTQS_ONE",
   "command": "TTQS_ONE_20261026_R12_FULL_RECOVERY_DELIVERY",
-  "observed_at_local": "2026-10-27T08:04:13.9830516+08:00",
+  "observed_at_local": "2026-10-27T08:07:47.4452436+08:00",
   "r12_source_blob_sha1": "63f26f0708249b211611d51b34a7fb90b4cd26a9",
   "doc_id": "0139",
   "requirement_id": "I19-E29",
@@ -32,7 +32,15 @@
   "sample_synthetic": "34-row register retained; all illustrative figures marked SAMPLE/SYNTHETIC",
   "real_evidence": "UNKNOWN/HOLD",
   "formal_acceptance": "NOT_GRANTED",
-  "github_sync": "PENDING",
+  "github_sync": {
+    "status": "VERIFIED_RAW_BYTE_READBACK",
+    "initial_upload_commit": "f1bd505040e018b069aa0c38901c8132c8b4e3d2",
+    "corrected_package_head": "118564adda974f077648bf0db862b23e063102f5",
+    "verified_file_count": 25,
+    "mismatched": 0,
+    "docx_sha256": "d31ef2d8b8615f3dd314572c4e50b6604198e8f24faafb144bcbaea7373c696f",
+    "readback_method": "remote base64 compared with each local file base64"
+  },
   "github_readback": "PENDING",
   "known_failure_and_repair": "An initial ElementTree serialization changed XML namespace prefixes and Word rejected that intermediate. The failed file and error receipt are preserved locally; final candidate was remade from R07 with exact byte-preserving text replacements, then successfully opened/exported by Word.",
   "next_ready": "After remote readback, inspect next stage from current official named-requirement crosswalk; 0140 has an existing R11 candidate with semantic PASS and a remaining visual gate, subject to fresh writer/effect check."
