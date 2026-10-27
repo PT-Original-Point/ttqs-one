@@ -1,0 +1,45 @@
+{
+  "schema": "TTQS_ONE_R12_REVIEW_ROUTE_DELTA_V1",
+  "project_id": "TTQS_ONE",
+  "observed_at_local": "2026-10-27T14:51:24.5403282+08:00",
+  "source_report": {
+    "sha256": "ff3ca9886e3a345d78be358b2883296b7e5454408d23bc940fee239ba826c900",
+    "use": "routing_context_only",
+    "claim": "Global free service status in report does not prove this Windows account/model entitlement or successful inference."
+  },
+  "work": {
+    "work_id": "TTQS-0142-I19-E32-R08-OPENCODE-FULL-SEMANTIC-R12",
+    "doc_id": "0142",
+    "requirement_id": "I19-E32",
+    "candidate_sha256": "dd6bfd2bb75ed9708065578f435b54fc7c85c9492f35edcddf614f962db41e0a",
+    "candidate_mutated": false,
+    "requested_model": "opencode/deepseek-v4.1-flash-free",
+    "actual_model": "UNKNOWN_PRE_INFERENCE_ERROR",
+    "exit_code": 1,
+    "provider_error": "HTTP 429 provider.free-limit",
+    "retry_after_ms": 61964000,
+    "provider_next_eligible_estimate_taipei": "2026-10-28T08:00:00.236+08:00",
+    "semantic_review_obtained": false,
+    "tokens": "NOT_REPORTED",
+    "cost": "UNKNOWN_NOT_RETURNED",
+    "fallback_allowed": false,
+    "computer_use": false,
+    "local_terminal_sha256": "f908b49c3db1a476de6814bcf7bec85ba5c17fee767063709c3d64594d4a159a",
+    "evidence_folder": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0142_I19-E32_SOURCE_PREP_R01_20261025\\R08_BLUEPRINT_STRUCTURED_REPAIR_R11_20261025\\review_opencode_deepseek_full_r12"
+  },
+  "existing_candidate_evidence": {
+    "technical_math_structure": "PASS for 11 checks",
+    "word_visual": "PASS, 10 pages directly inspected; page 5 reinspected after table-header contrast fix",
+    "prior_full_semantic": "PARTIAL on older R07 candidate SHA",
+    "R08_targeted_delta": "PASS for exact R08 SHA per preserved targeted reviewer receipt; actual Antigravity model identity UNKNOWN",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN_HOLD"
+  },
+  "disposition": {
+    "status": "ADDITIONAL_FULL_BODY_REVIEW_NOT_OBTAINED",
+    "scope": "Only this requested DeepSeek free inference route is blocked by the observed 429; no claim that all OpenCode models are unavailable.",
+    "retry": "Do not repeat same route before provider estimate; estimate is not a guarantee.",
+    "candidate_action": "Keep exact R08 candidate and prior scoped receipts; no rebuild and do not convert error into semantic PASS.",
+    "next_action": "Continue another independently READY stage after fresh source/OS/branch preflight; choose a reviewer route only when its exact free availability is evidenced; do not wait for this isolated route."
+  }
+}
