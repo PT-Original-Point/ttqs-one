@@ -1,0 +1,303 @@
+{
+  "schema": "ttqs-one-0141-r07-page24-balance-r04-deterministic-qa-v1",
+  "observed_at_local": "2026-10-27T21:36:03+08:00",
+  "work_id": "TTQS_ONE_0141_I19-E31_R07_PAGE24_BALANCE_R04_DETERMINISTIC_QA",
+  "validator_sha256": "043312e6708da92166ae6e214c7d741ce5283968e2e6adc858b3de362122fb73",
+  "adapted_from_validator_sha256": "6cf8440aa60fcef457d11ac54612c571041d941e4e1d8a38bc1902c5e11a1f63",
+  "doc_id": "0141",
+  "requirement_id": "I19-E31",
+  "checkbox_serial": "E31 (official checkbox mapping verified by source packet/unique Blueprint)",
+  "candidate_sha256": "de111911a549a0be0bd6381a6b22ed694881ba6b3f83528d2b4a4e153002142b",
+  "source_sha256": {
+    "source_packet_r02": "43c0e1bda5dfeb12c1ba8fc8805b876641f5184e4bf95eb4ef6c3182cf8ee964",
+    "unique_blueprint_r02": "e19761674045b2defa7090ba1d8f1224943a89e54811180c20b9ea362de59cda",
+    "r07_manuscript": "4cad82a691c0697411a9fa57cc9cb45567eaa3dc1e05cc9994ca2fc89fb035d6",
+    "sample_response_csv_r01": "723259199dd51973fc6473ec000234cc853fa1511be05864fdfd7b08bb452862",
+    "r07_replacement_register": "6af002082a63fd443cea748890f07b9d779de50f14306bfb92fffba42fce3968"
+  },
+  "metrics": {
+    "docx_bytes": 164740,
+    "table_count": 18,
+    "section_count": 3,
+    "embedded_media_count": 1,
+    "pages": null,
+    "body_min_font_pt": 10.5,
+    "table_min_font_pt": 9.5,
+    "sample_response_count": 36,
+    "register_rows": 44,
+    "annual_aggregates": {
+      "2023": {
+        "n": 12,
+        "q1_q6_mean": 3.486111111111111,
+        "q7_mean": 3.5833333333333335,
+        "q7_top2": 7,
+        "q2_mean": 3.4166666666666665,
+        "q2_top2": 5,
+        "q5_mean": 3.5,
+        "q5_top2": 6
+      },
+      "2024": {
+        "n": 12,
+        "q1_q6_mean": 3.5694444444444446,
+        "q7_mean": 3.9166666666666665,
+        "q7_top2": 10,
+        "q2_mean": 3.4166666666666665,
+        "q2_top2": 5,
+        "q5_mean": 4.0,
+        "q5_top2": 8
+      },
+      "2025": {
+        "n": 12,
+        "q1_q6_mean": 3.6944444444444446,
+        "q7_mean": 4.25,
+        "q7_top2": 11,
+        "q2_mean": 3.9166666666666665,
+        "q2_top2": 9,
+        "q5_mean": 4.25,
+        "q5_top2": 10
+      }
+    }
+  },
+  "checks": [
+    {
+      "name": "candidate exact SHA",
+      "result": "PASS",
+      "detail": "de111911a549a0be0bd6381a6b22ed694881ba6b3f83528d2b4a4e153002142b"
+    },
+    {
+      "name": "R04 layout patch binds exact R03 source and R04 candidate",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "visual receipt binds exact candidate and PASS",
+      "result": "FAIL",
+      "detail": null
+    },
+    {
+      "name": "source response SHA unchanged",
+      "result": "PASS",
+      "detail": "723259199dd51973fc6473ec000234cc853fa1511be05864fdfd7b08bb452862"
+    },
+    {
+      "name": "source packet R02 exact SHA",
+      "result": "PASS",
+      "detail": "43c0e1bda5dfeb12c1ba8fc8805b876641f5184e4bf95eb4ef6c3182cf8ee964"
+    },
+    {
+      "name": "unique blueprint R02 exact SHA",
+      "result": "PASS",
+      "detail": "e19761674045b2defa7090ba1d8f1224943a89e54811180c20b9ea362de59cda"
+    },
+    {
+      "name": "DOCX ZIP integrity",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "native structure",
+      "result": "PASS",
+      "detail": {
+        "tables": 18,
+        "sections": 3
+      }
+    },
+    {
+      "name": "empty terminal paragraph compact without shrinking document text",
+      "result": "PASS",
+      "detail": {
+        "empty": true,
+        "line_twips": "20",
+        "font_half_points": "2"
+      }
+    },
+    {
+      "name": "embedded chart/media count",
+      "result": "PASS",
+      "detail": [
+        "word/media/image1.png"
+      ]
+    },
+    {
+      "name": "no raw Markdown heading markers",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "Q1-Q6 six core constructs",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "separate Q7 satisfaction",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "sample and real boundary",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "unknown ASCII locator",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "unknown nonbreaking locator",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "R06 predecessor SHA in appendix",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "Q5 baseline and delta",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "Q2 baseline and strict threshold",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "all 36 appendix aggregate scope",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "real data held unknown",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "response CSV row count",
+      "result": "PASS",
+      "detail": 36
+    },
+    {
+      "name": "register row count",
+      "result": "PASS",
+      "detail": 44
+    },
+    {
+      "name": "response register row count",
+      "result": "PASS",
+      "detail": 36
+    },
+    {
+      "name": "register responses match source CSV and locators",
+      "result": "PASS",
+      "detail": []
+    },
+    {
+      "name": "appendix III 36 DOCX rows equal source CSV",
+      "result": "PASS",
+      "detail": []
+    },
+    {
+      "name": "recomputed CSV annual aggregates",
+      "result": "PASS",
+      "detail": {
+        "actual": {
+          "2023": {
+            "n": 12,
+            "q1_q6_mean": 3.486111111111111,
+            "q7_mean": 3.5833333333333335,
+            "q7_top2": 7,
+            "q2_mean": 3.4166666666666665,
+            "q2_top2": 5,
+            "q5_mean": 3.5,
+            "q5_top2": 6
+          },
+          "2024": {
+            "n": 12,
+            "q1_q6_mean": 3.5694444444444446,
+            "q7_mean": 3.9166666666666665,
+            "q7_top2": 10,
+            "q2_mean": 3.4166666666666665,
+            "q2_top2": 5,
+            "q5_mean": 4.0,
+            "q5_top2": 8
+          },
+          "2025": {
+            "n": 12,
+            "q1_q6_mean": 3.6944444444444446,
+            "q7_mean": 4.25,
+            "q7_top2": 11,
+            "q2_mean": 3.9166666666666665,
+            "q2_top2": 9,
+            "q5_mean": 4.25,
+            "q5_top2": 10
+          }
+        },
+        "mismatches": []
+      }
+    },
+    {
+      "name": "strict Q2 Top-2 rule and baseline delta",
+      "result": "PASS",
+      "detail": {
+        "minimum_count": 10,
+        "minimum_rate": 83.33333333333334,
+        "baseline_count": 5,
+        "delta_pp": 41.66666666666667
+      }
+    },
+    {
+      "name": "Q5 Top-2 descriptive baseline only",
+      "result": "PASS",
+      "detail": {
+        "2023_baseline_rate": 50.0,
+        "2025_sample_count": 10,
+        "threshold": "none"
+      }
+    },
+    {
+      "name": "R03 build receipt binds the exact source of the R04 layout patch",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "Word render binds unchanged current SHA and 28 pages",
+      "result": "PASS",
+      "detail": null
+    },
+    {
+      "name": "28 current page rasters match exact manifest; only pages 23-24 differ from R03",
+      "result": "PASS",
+      "detail": {
+        "page_count": 28,
+        "changed_pages_vs_R03": [
+          23,
+          24
+        ],
+        "unchanged_pages_exact_match": true,
+        "all_hashes_match": true
+      }
+    },
+    {
+      "name": "body and table font floors",
+      "result": "PASS",
+      "detail": {
+        "body_min_pt": 10.5,
+        "table_min_pt": 9.5,
+        "unresolved_count": 0,
+        "unresolved_sample": []
+      }
+    },
+    {
+      "name": "candidate remains non-final and REAL held",
+      "result": "PASS",
+      "detail": null
+    }
+  ],
+  "semantic_independent_review": "PENDING",
+  "visual_review": "PASS_R04_NATIVE_WORD_28_PAGES; pages 23-24 inspected and other 26 page rasters match R03",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_data": "UNKNOWN/HOLD",
+  "result": "FAIL"
+}

@@ -1,0 +1,277 @@
+{
+  "schema": "ttqs-one-docx-audit-upload-manifest-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0141",
+  "requirement_id": "I19-E31",
+  "blueprint_index_157": 155,
+  "printed_checkbox_serial": "UNKNOWN",
+  "candidate_sha256": "de111911a549a0be0bd6381a6b22ed694881ba6b3f83528d2b4a4e153002142b",
+  "candidate_state": "CANDIDATE",
+  "source_binding": {
+    "source_packet_r02_sha256": "43c0e1bda5dfeb12c1ba8fc8805b876641f5184e4bf95eb4ef6c3182cf8ee964",
+    "unique_blueprint_r02_sha256": "e19761674045b2defa7090ba1d8f1224943a89e54811180c20b9ea362de59cda",
+    "sample_csv_r01_sha256": "723259199dd51973fc6473ec000234cc853fa1511be05864fdfd7b08bb452862",
+    "replacement_register_r07_sha256": "6af002082a63fd443cea748890f07b9d779de50f14306bfb92fffba42fce3968"
+  },
+  "qa": {
+    "deterministic": "PASS",
+    "receipt_sha256": "35d785708d5a50e299db0b0e4a0207a7954d993c2e274b1447ab6079902c22ce",
+    "visual": "PASS",
+    "visual_receipt_sha256": "26dd77f1c55958ff7bbe5ea6b861ef8f5e994416d8448cb35abff0ec066faecb",
+    "semantic": "BLOCKED_NO_REVIEW_RESPONSE",
+    "disposition_sha256": "4fd1ae95b1f81d16a5260578f83aacb0d75ccebb34284be7cc08d4bcf112b56e"
+  },
+  "formal_acceptance": "NOT_GRANTED",
+  "real_data": "UNKNOWN/HOLD",
+  "target_branch": "work/ttqs-one-document-quality-contract-20261016",
+  "target_pr": 92,
+  "manifest_scope": "All listed hashes are SHA-256 of local raw file bytes. This manifest excludes its own SHA to avoid self-reference.",
+  "files": [
+    {
+      "repo_path": "0141_I19-E31_R07_FONTFIX_PAGE24_BALANCE_R04_CANDIDATE.docx",
+      "source_relative_path": "0141_I19-E31_R07_FONTFIX_PAGE24_BALANCE_R04_CANDIDATE.docx",
+      "bytes": 164740,
+      "sha256": "de111911a549a0be0bd6381a6b22ed694881ba6b3f83528d2b4a4e153002142b",
+      "role": "CANDIDATE_DOCX"
+    },
+    {
+      "repo_path": "0141_I19-E31_R07_FONTFIX_TERMINALPARA_R03_CANDIDATE.docx",
+      "source_relative_path": "0141_I19-E31_R07_FONTFIX_TERMINALPARA_R03_CANDIDATE.docx",
+      "bytes": 164716,
+      "sha256": "bfdb9ae9e048dd43f87e84d9e541d63f655335d7d1478297969fe68debcea56e",
+      "role": "LAYOUT_PATCH_SOURCE_CANDIDATE"
+    },
+    {
+      "repo_path": "MANUSCRIPT_0141_R07_CANDIDATE.md",
+      "source_relative_path": "MANUSCRIPT_0141_R07_CANDIDATE.md",
+      "bytes": 60893,
+      "sha256": "4cad82a691c0697411a9fa57cc9cb45567eaa3dc1e05cc9994ca2fc89fb035d6",
+      "role": "CANDIDATE_MANUSCRIPT"
+    },
+    {
+      "repo_path": "SOURCE_PACKET_0141_I19-E31_R02.md",
+      "source_relative_path": "SOURCE_PACKET_0141_I19-E31_R02.md",
+      "bytes": 5505,
+      "sha256": "43c0e1bda5dfeb12c1ba8fc8805b876641f5184e4bf95eb4ef6c3182cf8ee964",
+      "role": "SOURCE_PACKET"
+    },
+    {
+      "repo_path": "UNIQUE_BLUEPRINT_0141_I19-E31_R02.md",
+      "source_relative_path": "UNIQUE_BLUEPRINT_0141_I19-E31_R02.md",
+      "bytes": 8639,
+      "sha256": "e19761674045b2defa7090ba1d8f1224943a89e54811180c20b9ea362de59cda",
+      "role": "UNIQUE_BLUEPRINT"
+    },
+    {
+      "repo_path": "OFFICIAL_REQUIREMENT_ROW_I19-E31.json",
+      "source_relative_path": "OFFICIAL_REQUIREMENT_ROW_I19-E31.json",
+      "bytes": 1581,
+      "sha256": "d18d41bd68b7dc45a78b5c26292cca6ba422902da83d8b7dbed25a7a34af7fb6",
+      "role": "OFFICIAL_REQUIREMENT_MAPPING"
+    },
+    {
+      "repo_path": "OFFICIAL_SOURCE_PAGE9_EXCERPT.txt",
+      "source_relative_path": "OFFICIAL_SOURCE_PAGE9_EXCERPT.txt",
+      "bytes": 2221,
+      "sha256": "0733c1e3a7fa7b88b79846aabf8667391e032165e78cf9bfc06b7363e71ffe11",
+      "role": "OFFICIAL_SOURCE_EXCERPT"
+    },
+    {
+      "repo_path": "CROSSWALK_ROW_0141_AND_NEIGHBORS.json",
+      "source_relative_path": "CROSSWALK_ROW_0141_AND_NEIGHBORS.json",
+      "bytes": 1143,
+      "sha256": "d09422ce4bca4ff442b1c4fa266c56181c0f4c162d269f9cc02933d45ea4f786",
+      "role": "NEIGHBOR_CROSSWALK"
+    },
+    {
+      "repo_path": "SAMPLE_SURVEY_RESPONSES_0141_R01.csv",
+      "source_relative_path": "SAMPLE_SURVEY_RESPONSES_0141_R01.csv",
+      "bytes": 5852,
+      "sha256": "723259199dd51973fc6473ec000234cc853fa1511be05864fdfd7b08bb452862",
+      "role": "SYNTHETIC_SAMPLE_DATA"
+    },
+    {
+      "repo_path": "SAMPLE_PERIOD_SUMMARY_0141_R01.csv",
+      "source_relative_path": "SAMPLE_PERIOD_SUMMARY_0141_R01.csv",
+      "bytes": 1107,
+      "sha256": "537c39dcc650d9818779ee3dd4572d64a820720828b9e632e9abb44358777c0b",
+      "role": "SYNTHETIC_SAMPLE_SUMMARY"
+    },
+    {
+      "repo_path": "SAMPLE_REPLACEMENT_REGISTER_0141_R07.csv",
+      "source_relative_path": "SAMPLE_REPLACEMENT_REGISTER_0141_R07.csv",
+      "bytes": 40137,
+      "sha256": "6af002082a63fd443cea748890f07b9d779de50f14306bfb92fffba42fce3968",
+      "role": "SYNTHETIC_REPLACEMENT_REGISTER"
+    },
+    {
+      "repo_path": "DOCX_BUILD_RECEIPT_0141_R07_FONTFIX_TERMINALPARA_R03_CANDIDATE.json",
+      "source_relative_path": "DOCX_BUILD_RECEIPT_0141_R07_FONTFIX_TERMINALPARA_R03_CANDIDATE.json",
+      "bytes": 1899,
+      "sha256": "7739ebdf00ae8ef35ad1848c3d02f9dbb5b16d6111526411eb5068d831975d51",
+      "role": "R03_BUILD_CHAIN_RECEIPT"
+    },
+    {
+      "repo_path": "R07_TERMINALPARA_R03_DETERMINISTIC_QA_RECEIPT_R02.json",
+      "source_relative_path": "R07_TERMINALPARA_R03_DETERMINISTIC_QA_RECEIPT_R02.json",
+      "bytes": 8018,
+      "sha256": "f9b0f87faf836ef8eff9093d175337907479d19b6f023d0709c6e55dc25e75a4",
+      "role": "R03_QA_RECEIPT"
+    },
+    {
+      "repo_path": "R07_PAGE24_BALANCE_LAYOUT_PATCH_R04_RECEIPT.json",
+      "source_relative_path": "R07_PAGE24_BALANCE_LAYOUT_PATCH_R04_RECEIPT.json",
+      "bytes": 1742,
+      "sha256": "e533cb837ccd3237b5cf61e7f74b81c0c08b8d12355ca024ed2f59a75fe63059",
+      "role": "R04_LAYOUT_PATCH_RECEIPT"
+    },
+    {
+      "repo_path": "VERIFY_0141_R07_PAGE24_BALANCE_R04_QA.py",
+      "source_relative_path": "VERIFY_0141_R07_PAGE24_BALANCE_R04_QA.py",
+      "bytes": 16478,
+      "sha256": "aec2c2ec4dcd89675360537d5f4a6ec6aaf21bb492337ad54dfbcf23f922257d",
+      "role": "R04_DETERMINISTIC_VALIDATOR"
+    },
+    {
+      "repo_path": "R07_PAGE24_BALANCE_R04_DETERMINISTIC_QA_RECEIPT_R02.json",
+      "source_relative_path": "R07_PAGE24_BALANCE_R04_DETERMINISTIC_QA_RECEIPT_R02.json",
+      "bytes": 8378,
+      "sha256": "35d785708d5a50e299db0b0e4a0207a7954d993c2e274b1447ab6079902c22ce",
+      "role": "R04_DETERMINISTIC_QA_RECEIPT"
+    },
+    {
+      "repo_path": "R07_PAGE24_BALANCE_R04_DETERMINISTIC_QA_RECEIPT_INITIAL_SCHEMA_MISMATCH.json",
+      "source_relative_path": "R07_PAGE24_BALANCE_R04_DETERMINISTIC_QA_RECEIPT_INITIAL_SCHEMA_MISMATCH.json",
+      "bytes": 8355,
+      "sha256": "22814b16f5c3dd0576afbe838959d26b547945587ef9167b7b6220a8f287acde",
+      "role": "PRESERVED_INITIAL_QA_SCHEMA_FAILURE"
+    },
+    {
+      "repo_path": "R07_TERMINALPARA_R04_PAGE_RENDER_MANIFEST.json",
+      "source_relative_path": "R07_TERMINALPARA_R04_PAGE_RENDER_MANIFEST.json",
+      "bytes": 7943,
+      "sha256": "e238775cfe7a2f20f4b73cce26950a50efb7fb7fe9254a4c971c88aa652deda1",
+      "role": "R04_WORD_RENDER_PAGE_MANIFEST"
+    },
+    {
+      "repo_path": "R07_TERMINALPARA_R03_PAGE_RENDER_MANIFEST.json",
+      "source_relative_path": "R07_TERMINALPARA_R03_PAGE_RENDER_MANIFEST.json",
+      "bytes": 10425,
+      "sha256": "6e5d4295f9d400d7aae518cd244a72ae9ebb033693cce619a4581ec67b1519e0",
+      "role": "R03_REFERENCE_PAGE_MANIFEST"
+    },
+    {
+      "repo_path": "R07_TERMINALPARA_R04_WORD_RENDER_120DPI/export_receipt.json",
+      "source_relative_path": "R07_TERMINALPARA_R04_WORD_RENDER_120DPI/export_receipt.json",
+      "bytes": 1000,
+      "sha256": "bd79e6fd88b6eb014c7bdf57955ae1220e02a9c0690fbf081e3594fc9664e47e",
+      "role": "R04_NATIVE_WORD_RENDER_RECEIPT"
+    },
+    {
+      "repo_path": "render/page-23.png",
+      "source_relative_path": "R07_TERMINALPARA_R04_WORD_RENDER_120DPI/page-23.png",
+      "bytes": 99066,
+      "sha256": "bcbe4285493594d746fb6bdf9aeada5fda776de824298f34bff0cf7f879f7e82",
+      "role": "R04_CHANGED_PAGE_IMAGE"
+    },
+    {
+      "repo_path": "render/page-24.png",
+      "source_relative_path": "R07_TERMINALPARA_R04_WORD_RENDER_120DPI/page-24.png",
+      "bytes": 80699,
+      "sha256": "b9e3ee34614cc0d9a9e3ee5ddb984ccc633ad8446b269f1a93c366160450c4bc",
+      "role": "R04_CHANGED_PAGE_IMAGE"
+    },
+    {
+      "repo_path": "VISUAL_REVIEW_RECEIPT_0141_R07_PAGE24_BALANCE_R04.json",
+      "source_relative_path": "VISUAL_REVIEW_RECEIPT_0141_R07_PAGE24_BALANCE_R04.json",
+      "bytes": 1585,
+      "sha256": "26dd77f1c55958ff7bbe5ea6b861ef8f5e994416d8448cb35abff0ec066faecb",
+      "role": "R04_VISUAL_REVIEW_RECEIPT"
+    },
+    {
+      "repo_path": "DOCX_TEXT_EXTRACTION_0141_R04_CANDIDATE.txt",
+      "source_relative_path": "DOCX_TEXT_EXTRACTION_0141_R04_CANDIDATE.txt",
+      "bytes": 62025,
+      "sha256": "e1cf2080d86aa67d7bb9667067db1cbd655ae8682ecdaa5c3517dd98c0e5789d",
+      "role": "EXACT_R04_TEXT_EXTRACTION"
+    },
+    {
+      "repo_path": "PREPARE_OPENCODE_REVIEW_PACKET_0141_R04.py",
+      "source_relative_path": "PREPARE_OPENCODE_REVIEW_PACKET_0141_R04.py",
+      "bytes": 6683,
+      "sha256": "737d6d27f398dcd4e3ff511d4094afa8d47cb5d19400a73bc3773c2bef265bc0",
+      "role": "R04_REVIEW_PACKET_GENERATOR"
+    },
+    {
+      "repo_path": "OPENCODE_REVIEW_PACKET_0141_R04.md",
+      "source_relative_path": "OPENCODE_REVIEW_PACKET_0141_R04.md",
+      "bytes": 154363,
+      "sha256": "86a280661e6a3a1b78996d71ca77d07a05f7f9394538212a9902a1a47272542c",
+      "role": "R04_INDEPENDENT_REVIEW_PACKET"
+    },
+    {
+      "repo_path": "OPENCODE_REVIEW_PACKET_RECEIPT_0141_R04.json",
+      "source_relative_path": "OPENCODE_REVIEW_PACKET_RECEIPT_0141_R04.json",
+      "bytes": 3848,
+      "sha256": "d8a3aee59ca62391dc92d9a98b2b0340aea43eea1f9aeb652c8fdd6bd89228e8",
+      "role": "R04_REVIEW_PACKET_RECEIPT"
+    },
+    {
+      "repo_path": "R04_SEMANTIC_REVIEW_ROUTE_DISPOSITION_0141.json",
+      "source_relative_path": "R04_SEMANTIC_REVIEW_ROUTE_DISPOSITION_0141.json",
+      "bytes": 6007,
+      "sha256": "4fd1ae95b1f81d16a5260578f83aacb0d75ccebb34284be7cc08d4bcf112b56e",
+      "role": "R04_SEMANTIC_ROUTE_STATUS"
+    },
+    {
+      "repo_path": "worker_OPENCODE_REVIEW_R04_GLM53/REQUEST.json",
+      "source_relative_path": "worker_OPENCODE_REVIEW_R04_GLM53/REQUEST.json",
+      "bytes": 1085,
+      "sha256": "11f78ee850633d2ac3a00575538e2c809eb7b010bba9edeffc6d9bc06f189ce7",
+      "role": "R04_WORKER_REQUEST"
+    },
+    {
+      "repo_path": "worker_OPENCODE_REVIEW_R04_GLM53/PROCESS_RECEIPT.json",
+      "source_relative_path": "worker_OPENCODE_REVIEW_R04_GLM53/PROCESS_RECEIPT.json",
+      "bytes": 1664,
+      "sha256": "2945627343bef741f25c2b9e1a7d8f3be0404b8294d5592520559876746bddd3",
+      "role": "R04_WORKER_PROCESS_RECEIPT"
+    },
+    {
+      "repo_path": "worker_OPENCODE_REVIEW_R04_GLM53/STDOUT.jsonl",
+      "source_relative_path": "worker_OPENCODE_REVIEW_R04_GLM53/STDOUT.jsonl",
+      "bytes": 528,
+      "sha256": "0cbf02ae7fc28ed5292e1278119f44481fad10e28d469b35c183a4d84358dc4c",
+      "role": "R04_WORKER_RAW_STDOUT"
+    },
+    {
+      "repo_path": "worker_OPENCODE_REVIEW_R04_GLM53/STDERR.txt",
+      "source_relative_path": "worker_OPENCODE_REVIEW_R04_GLM53/STDERR.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "role": "R04_WORKER_RAW_STDERR"
+    },
+    {
+      "repo_path": "R04_GITHUB_SYNC_PACKAGE/R03_REVIEW_ROUTE_RAW_ARCHIVE.zip",
+      "source_relative_path": "R04_GITHUB_SYNC_PACKAGE/R03_REVIEW_ROUTE_RAW_ARCHIVE.zip",
+      "bytes": 47782,
+      "sha256": "aba06b21dafda1dc196f1427ba4625008d1bf42b1f48611021cd0d1e259cf0fc",
+      "role": "R03_RAW_WORKER_ROUTE_ARCHIVE"
+    },
+    {
+      "repo_path": "R04_GITHUB_SYNC_PACKAGE/R03_REVIEW_ROUTE_RAW_ARCHIVE_MANIFEST.json",
+      "source_relative_path": "R04_GITHUB_SYNC_PACKAGE/R03_REVIEW_ROUTE_RAW_ARCHIVE_MANIFEST.json",
+      "bytes": 6614,
+      "sha256": "24eda6c5a163399073af4b22a99ed826de3764af6f111ef881b78c478dbcdbd6",
+      "role": "R03_RAW_WORKER_ROUTE_ARCHIVE_MANIFEST"
+    },
+    {
+      "repo_path": "R04_STATUS.md",
+      "source_relative_path": "R04_GITHUB_SYNC_PACKAGE/R04_STATUS.md",
+      "bytes": 2802,
+      "sha256": "5455dc970425d3b97959f191dfd1c59100eb46deb38d3f0c18d29cc11929ab45",
+      "role": "R04_STATUS_SUMMARY"
+    }
+  ],
+  "created_at_local": "2026-10-27T21:44:14+08:00"
+}
