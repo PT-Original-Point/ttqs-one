@@ -1,0 +1,203 @@
+{
+  "schema": "TTQS_ONE_R12_OPENCODE_ROUTE_TERMINAL_RECEIPT_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0122",
+  "requirement_id": "I19-E10",
+  "dispatch_start": {
+    "schema": "TTQS_ONE_R12_OPENCODE_DISPATCH_START_V1",
+    "work_id": "TTQS-0122-I19-E10-R02-W1-DEEPSEEK-FREE-EXACT-SHA-REVIEW",
+    "doc_id": "0122",
+    "requirement_id": "I19-E10",
+    "candidate_revision": "R02",
+    "candidate_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+    "body_sha256": "61a732058927a033f268171084db05f3a86cac44fe9e92dd21a7a6f77fcb47ea",
+    "remote_commit": "13a4c56a5c16b8cea951e76551d9a297309bb983",
+    "remote_docx_git_blob_sha1": "4ff7c0c43593d6a2f732c2db605d4e7021e38cc3",
+    "requested_model": "opencode/deepseek-v4.1-flash-free",
+    "fallback_allowed": false,
+    "computer_use": false,
+    "auto_approve": false,
+    "window_style": "CREATE_NO_WINDOW",
+    "stdin": "DEVNULL",
+    "started_local": "2026-10-28T02:39:24.504095+08:00",
+    "request_sha256": "6b01dbff35419dd416ef21bdef416fe0ab97a6a928481cb5ebd02232742a2eaf",
+    "input_bundle_sha256": "ac6efb18ffb6c9768fdbc8cb7741ed2f852815d559004b21f4c00cf7508d7600",
+    "cli": "OpenCode v2.1.4",
+    "executable": "C:\\Users\\J\\AppData\\Roaming\\ai.opencode.desktop\\cli\\2.1.4-x64\\opencode-cli.exe",
+    "pid": 12216
+  },
+  "dispatch_terminal": {
+    "schema": "TTQS_ONE_R12_OPENCODE_TERMINAL_V1",
+    "work_id": "TTQS-0122-I19-E10-R02-W1-DEEPSEEK-FREE-EXACT-SHA-REVIEW",
+    "doc_id": "0122",
+    "requirement_id": "I19-E10",
+    "candidate_revision": "R02",
+    "pid": 12216,
+    "session_id": "ses_e815709acffeLBGZ6n9bKLiC7z",
+    "cli_exit_code": 1,
+    "timed_out_initially": false,
+    "duration_seconds": 1.704,
+    "stdout_bytes": 528,
+    "stdout_sha256": "ad775e14fa2be3d92ada4e2a59d7207347090b9cdd8c347af12dcea89a823c88",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "session_export_exit": 0,
+    "session_export_stderr": "",
+    "actual_model_ids": [],
+    "actual_provider_ids": [
+      "opencode"
+    ],
+    "actual_model_status": "UNKNOWN",
+    "tokens": {},
+    "reported_cost": null,
+    "requested_model": "opencode/deepseek-v4.1-flash-free",
+    "fallback_allowed": false,
+    "computer_use": false,
+    "auto_approve": false,
+    "candidate_sha256_before": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+    "candidate_sha256_after": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+    "candidate_unchanged": true,
+    "review_verdict": "NOT_ADJUDICATED_BY_WRAPPER"
+  },
+  "session_export_sanitized": {
+    "info": {
+      "id": "ses_e815709acffeLBGZ6n9bKLiC7z",
+      "projectID": "c4369272b3afe015737f9cd137443ad78b04b4b0",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "cost": 0,
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "outcome": "failed",
+      "time": {
+        "created": 1793126364869,
+        "updated": 1793126365965,
+        "idle": 1793126365968
+      },
+      "title": "[redacted:session-title:ses_e815709acffeLBGZ6n9bKLiC7z]",
+      "location": {
+        "directory": "/[redacted:session-directory:ses_e815709acffeLBGZ6n9bKLiC7z]"
+      }
+    },
+    "messages": [
+      {
+        "id": "msg_17ea8f6d20012Sfsii6Cb33CGt",
+        "time": {
+          "created": 1793126364990
+        },
+        "text": "[redacted:text:msg_17ea8f6d20012Sfsii6Cb33CGt]",
+        "files": [],
+        "type": "user"
+      },
+      {
+        "id": "msg_17ea8f747001sIznKjXB6rafJ7",
+        "time": {
+          "created": 1793126365012,
+          "completed": 1793126365965
+        },
+        "type": "assistant",
+        "agent": "build",
+        "model": {
+          "id": "deepseek-v4.1-flash-free",
+          "providerID": "opencode",
+          "variant": "default"
+        },
+        "content": [],
+        "finish": "error",
+        "error": {
+          "type": "provider.free-limit",
+          "message": "Free usage limit reached. Connect a provider or subscribe to OpenCode Go to keep going, or switch models.",
+          "status": 429,
+          "response": {
+            "body": "{\"type\":\"error\",\"error\":{\"type\":\"FreeUsageLimitError\",\"message\":\"Free usage limit reached. Free models work in OpenCode (https://opencode.ai); subscribe to OpenCode Go to keep going: https://opencode.ai/go\"}}"
+          },
+          "retryAfterMs": 19234000
+        }
+      },
+      {
+        "id": "msg_17ea8fb10001FVgNlNjy2E4y6c",
+        "time": {
+          "created": 1793126365968
+        },
+        "type": "idle",
+        "outcome": "failed",
+        "error": {
+          "type": "provider.free-limit",
+          "message": "Free usage limit reached. Connect a provider or subscribe to OpenCode Go to keep going, or switch models.",
+          "status": 429,
+          "response": {
+            "body": "{\"type\":\"error\",\"error\":{\"type\":\"FreeUsageLimitError\",\"message\":\"Free usage limit reached. Free models work in OpenCode (https://opencode.ai); subscribe to OpenCode Go to keep going: https://opencode.ai/go\"}}"
+          },
+          "retryAfterMs": 19234000
+        }
+      }
+    ]
+  },
+  "input_manifest": {
+    "schema": "TTQS_ONE_R12_0122_OPENCODE_REVIEW_INPUT_V1",
+    "observed_local": "2026-10-28T02:39:18.0698692+08:00",
+    "work_id": "TTQS-0122-I19-E10-R02-W1-DEEPSEEK-FREE-EXACT-SHA-REVIEW",
+    "docx_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+    "remote_commit": "13a4c56a5c16b8cea951e76551d9a297309bb983",
+    "remote_docx_git_blob_sha1": "4ff7c0c43593d6a2f732c2db605d4e7021e38cc3",
+    "input_bundle_sha256": "ac6efb18ffb6c9768fdbc8cb7741ed2f852815d559004b21f4c00cf7508d7600",
+    "review_request_sha256": "6b01dbff35419dd416ef21bdef416fe0ab97a6a928481cb5ebd02232742a2eaf",
+    "sources": [
+      {
+        "name": "OFFICIAL_REQUIREMENT_PAGE08.txt",
+        "path": "E:/TTQS/TTQS_ONE_CODEX_RUNTIME/WORK/QUALITY_REBUILD_20261016/0122_I19-E10_SOURCE_PREP_R01_20261024/source/official_requirement_page08.txt",
+        "bytes": 1788,
+        "sha256": "c34ead45cad406150de5622e157f44727157776ce5c6abf5343c7db5dca42520"
+      },
+      {
+        "name": "SOURCE_PACKET_0122_I19-E10_R01.md",
+        "path": "E:/TTQS/TTQS_ONE_CODEX_RUNTIME/WORK/QUALITY_REBUILD_20261016/0122_I19-E10_SOURCE_PREP_R01_20261024/source/SOURCE_PACKET_0122_I19-E10_R01.md",
+        "bytes": 3924,
+        "sha256": "8301b3e12467370086dfccd86c4dbcd50d339f0ed54cda93c2bfcc051b793c3d"
+      },
+      {
+        "name": "UNIQUE_BLUEPRINT_0122_I19-E10_R01.md",
+        "path": "E:/TTQS/TTQS_ONE_CODEX_RUNTIME/WORK/QUALITY_REBUILD_20261016/0122_I19-E10_SOURCE_PREP_R01_20261024/source/UNIQUE_BLUEPRINT_0122_I19-E10_R01.md",
+        "bytes": 12498,
+        "sha256": "cbfd0760a03870151d9bc083b8db76655d53107757706f4b1f4449e997553420"
+      },
+      {
+        "name": "DOCX_BODY_EXTRACT_R12.txt",
+        "path": "E:/TTQS/TTQS_ONE_CODEX_RUNTIME/WORK/QUALITY_REBUILD_20261016/0122_I19-E10_SOURCE_PREP_R01_20261024/candidate_R02/evidence/DOCX_BODY_EXTRACT_R12.txt",
+        "bytes": 44536,
+        "sha256": "61a732058927a033f268171084db05f3a86cac44fe9e92dd21a7a6f77fcb47ea"
+      }
+    ],
+    "dispatch_script_sha256": "d1c473f1939af738613c7fa67d9eabbc7884f93d8229c2ab9341330a8fed96b7",
+    "requested_model": "opencode/deepseek-v4.1-flash-free"
+  },
+  "raw_stdout": "{\"type\":\"error\",\"timestamp\":1793126365968,\"sessionID\":\"ses_e815709acffeLBGZ6n9bKLiC7z\",\"error\":{\"type\":\"provider.free-limit\",\"message\":\"Free usage limit reached. Connect a provider or subscribe to OpenCode Go to keep going, or switch models.\",\"status\":429,\"response\":{\"body\":\"{\\\"type\\\":\\\"error\\\",\\\"error\\\":{\\\"type\\\":\\\"FreeUsageLimitError\\\",\\\"message\\\":\\\"Free usage limit reached. Free models work in OpenCode (https://opencode.ai); subscribe to OpenCode Go to keep going: https://opencode.ai/go\\\"}}\"},\"retryAfterMs\":19234000}}\r\n",
+  "assessment": {
+    "outcome": "BLOCKED_PRE_INFERENCE_FREE_LIMIT",
+    "inference_completed": false,
+    "response_artifact_created": false,
+    "tokens": {
+      "input": 0,
+      "output": 0,
+      "reasoning": 0,
+      "cache_read": 0,
+      "cache_write": 0
+    },
+    "reported_cost": 0,
+    "free_limit_retry_after_ms": 19234000,
+    "candidate_sha_before": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+    "candidate_sha_after": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+    "semantic_verdict": "NOT_ADJUDICATED",
+    "next_action": "Do not retry unchanged input in provider retry window; keep unrelated READY lanes moving."
+  }
+}
