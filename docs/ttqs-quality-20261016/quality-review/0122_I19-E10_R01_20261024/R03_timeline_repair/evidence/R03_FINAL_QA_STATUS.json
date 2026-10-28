@@ -31,30 +31,29 @@
     "unchanged_pixel_identical_pages": 25
   },
   "independent_semantic_review": {
-    "delta_verdict": "UNVERIFIED_ROUTE_IDENTITY",
-    "scope": "R03 exact-SHA delta only; unaffected content coverage inherited from R02 full-body reviewer, with R02 overall PASS rejected for the timeline defect.",
-    "response_sha256": "ebcb7ac280491bae06dc54da67e090ab3491a8a6e019eb308d4cc5bc07499820",
-    "human_readable_response_sha256": "2300f1a46f55b743d2da2b9bfdb8ebb230ff556e711ca55252121c083a97352d",
-    "review_request_sha256": "17710bde2b2af4796be63bb9846959fab8502db84d94d75d580e53ec77daef3a",
-    "candidate_sha256_verified_in_response": true,
-    "body_sha256_verified_in_response": true,
-    "requested_model": "gemini-3.8-flash-high",
-    "actual_serving_model": "UNKNOWN",
-    "reviewer_self_reported_model": "Gemini 3.8 Flash (High); not corroborated by provider metadata",
-    "reported_usage": {
-      "input_tokens": 14256,
-      "output_tokens": 8088,
-      "thinking_tokens": 4924,
-      "cache_read_tokens": 0,
-      "total_tokens": 22344
-    },
-    "tool_calls": [],
+    "scope": "Full-body semantic and usability review on exact candidate SHA; text-only scope; no visual inspection claimed",
+    "candidate_sha256": "b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d",
+    "candidate_body_sha256": "a6f9b879203ab5234d6f5c918c7b3b7b5109c641a66bbbae3d72ebbb9b409991",
+    "review_packet_sha256": "02d51a689b77b255479b499779efaff1d18f77be2c94d1f92f419efba53cde79",
+    "reviewer": "OpenCode v2 CLI fresh plan session",
+    "reviewer_context_separate_from_builder": true,
+    "cli_version": "2.1.4",
+    "session_id": "ses_e80a031c6ffel3fs9p6RJXrhzL",
+    "session_model_provider": "opencode",
+    "session_model_id": "glm-5.3-flash-free",
+    "requested_model": "opencode/glm-5.3-flash-free",
+    "actual_model": "opencode/glm-5.3-flash-free",
+    "fallback_status": "NO_DIFFERENT_MODEL_RECORDED_IN_NATIVE_SESSION_EXPORT; provider internal serving chain not separately exposed",
+    "process_id": 59216,
+    "process_exit_code": 0,
+    "raw_stdout_sha256": "0708aeef1583132e8612d48414f3090315ce3b8abcdf3c32bcd166d2e8ac9e2d",
+    "normalized_response_sha256": "a1d9294df8d4cc638473b56b388b21e7e68aca548f833e83debf09a97e8b41e0",
+    "reviewer_verdict": "PASS",
+    "adjudication_status": "PASS_TEXT_ONLY_EXACT_SHA",
+    "blocking_findings": [],
+    "visual_review": "NOT_IN_SCOPE_FOR_REVIEWER; existing visual receipt remains separately applicable",
     "formal_acceptance": "NOT_GRANTED",
-    "reviewer_reported_delta_verdict": "PASS",
-    "adjudication_status": "NOT_ACCEPTED",
-    "acceptance_status": "NOT_GRANTED_ROUTE_IDENTITY_UNKNOWN",
-    "adjudication_reason": "Reviewer response is present and exact-SHA bound, but the requested Antigravity model is not corroborated by provider metadata and fallback status is UNKNOWN. Under the Gemini-only route rule, its PASS is recorded as self-reported evidence and is not counted as an independently verified semantic PASS.",
-    "fallback_status": "UNKNOWN_NOT_VERIFIED"
+    "promotion": "NOT_PROMOTED"
   },
   "worker_routing": {
     "opencode_v2": {
@@ -388,5 +387,57 @@
       }
     ]
   },
-  "latest_github_sync_commit": "bb622ad3526588a5e80baf6573589f541ab71be7"
+  "latest_github_sync_commit": "bb622ad3526588a5e80baf6573589f541ab71be7",
+  "independent_semantic_review_R12_1_historical": {
+    "delta_verdict": "UNVERIFIED_ROUTE_IDENTITY",
+    "scope": "R03 exact-SHA delta only; unaffected content coverage inherited from R02 full-body reviewer, with R02 overall PASS rejected for the timeline defect.",
+    "response_sha256": "ebcb7ac280491bae06dc54da67e090ab3491a8a6e019eb308d4cc5bc07499820",
+    "human_readable_response_sha256": "2300f1a46f55b743d2da2b9bfdb8ebb230ff556e711ca55252121c083a97352d",
+    "review_request_sha256": "17710bde2b2af4796be63bb9846959fab8502db84d94d75d580e53ec77daef3a",
+    "candidate_sha256_verified_in_response": true,
+    "body_sha256_verified_in_response": true,
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model": "UNKNOWN",
+    "reviewer_self_reported_model": "Gemini 3.8 Flash (High); not corroborated by provider metadata",
+    "reported_usage": {
+      "input_tokens": 14256,
+      "output_tokens": 8088,
+      "thinking_tokens": 4924,
+      "cache_read_tokens": 0,
+      "total_tokens": 22344
+    },
+    "tool_calls": [],
+    "formal_acceptance": "NOT_GRANTED",
+    "reviewer_reported_delta_verdict": "PASS",
+    "adjudication_status": "NOT_ACCEPTED",
+    "acceptance_status": "NOT_GRANTED_ROUTE_IDENTITY_UNKNOWN",
+    "adjudication_reason": "Reviewer response is present and exact-SHA bound, but the requested Antigravity model is not corroborated by provider metadata and fallback status is UNKNOWN. Under the Gemini-only route rule, its PASS is recorded as self-reported evidence and is not counted as an independently verified semantic PASS.",
+    "fallback_status": "UNKNOWN_NOT_VERIFIED"
+  },
+  "status_projection_reconciliation_R12_3": {
+    "project_id": "TTQS_ONE",
+    "doc_id": "0122",
+    "requirement_id": "I19-E10",
+    "revision": "R12.3",
+    "observed_at_local": "2026-10-29T00:44:13.960+08:00",
+    "change_type": "STATUS_PROJECTION_ONLY_NO_DOCX_BYTES_CHANGED",
+    "candidate_docx_sha256": "b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d",
+    "previous_projection": {
+      "adjudication_status": "NOT_ACCEPTED",
+      "delta_verdict": "UNVERIFIED_ROUTE_IDENTITY",
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_serving_model": "UNKNOWN",
+      "fallback_status": "UNKNOWN_NOT_VERIFIED"
+    },
+    "current_semantic_projection": "PASS_TEXT_ONLY_EXACT_SHA",
+    "source_receipt": "latest_semantic_review_R12_2_20261028",
+    "review_response_sha256": "a1d9294df8d4cc638473b56b388b21e7e68aca548f833e83debf09a97e8b41e0",
+    "review_packet_sha256": "02d51a689b77b255479b499779efaff1d18f77be2c94d1f92f419efba53cde79",
+    "actual_session_model": "opencode/glm-5.3-flash-free",
+    "route_note": "OpenCode v2 CLI session export records glm-5.3-flash-free and no different model; provider internal serving chain is not separately exposed",
+    "technical_and_visual_receipts": "UNCHANGED",
+    "formal_acceptance": "NOT_GRANTED",
+    "promotion": "NOT_PROMOTED",
+    "github_raw_byte_readback": "PENDING"
+  }
 }
