@@ -41,12 +41,12 @@
     "candidate_docx_sha256": "0a1e7a2b9a685de612b6416f6d12d4f6c942485423ccfdc6d1e36e6bfbdb399e",
     "usable_for_current_candidate": false
   },
-  "semantic_review": "PENDING exact SHA; R08c review is not transferable",
-  "independent_review_blocker": "Antigravity reviewer route remains paused pending safe text-only review configuration; current OpenCode route retry not-before 2026-10-29 08:00 +08:00",
+  "semantic_review": "PASS_EXACT_SHA_TEXT_SEMANTIC_REVIEW; actual serving model identity UNKNOWN",
+  "independent_review_blocker": "CLEARED_FOR_THIS_CANDIDATE_SEMANTIC_SCOPE; Antigravity exact-SHA review returned PASS with zero required repairs. Exact provider-served model remains UNKNOWN; do not label this Gemini PASS.",
   "github_pr_head": "647f4eca5bd7cef7c901b1cc7d59dbfe2baf9831",
   "github_readback": "PASS_RAW_BYTE_READBACK_AT_647f4eca",
   "candidate_state": "CANDIDATE_NOT_ACCEPTED",
-  "updated_local": "2026-10-29T01:56:19+08:00",
+  "updated_local": "2026-10-29 04:39:38+08:00",
   "layout_receipt": "qa/R08d_visual_qa_receipt_R04_20261029.json",
   "pdf_sha256": "e9c43465177dd88d57cbe4819c5f6f25b5059b0767fab3736053a7bb2c29b468",
   "render_discovery_note": "Existing Word PDF and receipt were produced by fresh hidden Word PID 81260 at 00:58; R04 duplicate helper stopped safely at output-collision check.",
@@ -62,5 +62,37 @@
     "remote_bytes": 98482,
     "byte_exact": true,
     "observed_at_local": "2026-10-29T01:56:19+08:00"
+  },
+  "semantic_review_evidence": {
+    "work_id": "TTQS_ONE_0102_ANTIGRAVITY_EXACT_SHA_REVIEW_R01_20261029",
+    "reviewer": "Antigravity CLI",
+    "candidate_sha256": "7c988244ca0f402c0db439d50e62152ba5b0f7090b2753bfcdfc407b3a18ee1d",
+    "requested_model": "gemini-3.8-flash-high",
+    "cli_selected_model": "gemini-3.8-flash-high",
+    "actual_served_model": "UNKNOWN",
+    "provider_attestation": "UNKNOWN",
+    "cli_version": "1.4.9",
+    "verdict": "PASS",
+    "review_scope": "TEXT_SEMANTIC_AND_FACTUAL_CONSISTENCY_ONLY",
+    "finding_count": 6,
+    "required_repairs_count": 0,
+    "tool_calls_count": 0,
+    "response_sha256": "23bce2f6fc4c8c8ca24b0ca3f0fa74f1321d899a9e09c0680f8cd080e6aad309",
+    "public_receipt_path": "worker/antigravity_r08d_exact_sha_review_R01_20261029/PUBLIC_REVIEW_RECEIPT.json",
+    "status_delta_path": "worker/antigravity_r08d_exact_sha_review_R01_20261029/QUALITY_STATUS_DELTA.json",
+    "reviewer_response_blob": "4bf2d9ed84f5b95f90fe62e6373bcb42fdb1a5f0"
+  },
+  "status_reconciliation": {
+    "previous_status": "PENDING exact SHA; R08c review is not transferable",
+    "previous_status_blob": "f1f16df22da3342caa10fcbc919bab84967b6802",
+    "corrected_at_local": "2026-10-29 04:39:38+08:00",
+    "candidate_docx_changed": false,
+    "reason": "The exact-SHA R08d review and its PASS status delta were already present remotely; the root candidate sidecar had not incorporated that terminal result.",
+    "current_remote_branch_head_before_status_update": "cd53bd421f1b585d0253a9e6431c1a10c415f498",
+    "candidate_git_blob": "14e0831aaabaa90dda0299bf7592c0822a3b4487",
+    "reviewer_receipt_git_blob": "676bd5cb49b394d0a1f5cd2083553271a97fb076",
+    "reviewer_response_git_blob": "4bf2d9ed84f5b95f90fe62e6373bcb42fdb1a5f0",
+    "status_delta_git_blob": "67f94cc151e5ef57b075715330a1323c15e4f062",
+    "branch_readback": "Candidate and reviewer files observed at the current branch head; local Git blob IDs match the GitHub content object IDs."
   }
 }
