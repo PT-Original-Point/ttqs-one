@@ -8,7 +8,7 @@ GitHub：PT-Original-Point/ttqs-one；PR #92；分支 `work/ttqs-one-document-qu
 
 - 文件：0142；官方 requirement：I19-E32；157 方框索引 156；印刷 checkbox serial：UNKNOWN。
 - 文件狀態：CANDIDATE；REAL 證據 UNKNOWN/HOLD；官方分數 NOT_ASSIGNED；正式接受 NOT_GRANTED。
-- 本次修復未採用 OpenCode 或 Antigravity 文字輸出。外部獨立語意審查尚未取得對本候選 exact SHA 的回覆。社群監控報告所稱公開推論服務 Operational，不等同本機帳戶配額已恢復，也不構成審查 PASS。
+- Antigravity CLI 對 R06 exact SHA 回傳語意審查 PASS。CLI 生成 metadata 與 resolver log 記錄 gemini-3.8-flash-high 選擇，但啟動曾記錄 defaulting to CCPA，conversation backend 欄位為 unspecified，沒有 provider 端服務模型證明；原始 PASS 已保存，合格模型路由的語意驗收仍 PENDING/ROUTE IDENTITY UNKNOWN。OpenCode 本機額度狀態未因公開服務狀態改變。
 - 本次可判定的範圍限於確定性結構／算術檢查及 Word 版面檢視；不得將其描述為完整語意驗收或協會正式接受。
 
 ## 官方來源與唯一 Blueprint
@@ -31,6 +31,14 @@ GitHub：PT-Original-Point/ttqs-one；PR #92；分支 `work/ttqs-one-document-qu
 | `TECHNICAL_SEMANTIC_STRUCTURE_QA_0142_R06.json` | `f3838cde695754c572c4a0d732a21bf241c55be12747cf01c6107cf97537ea6b` | 收據列出的結構、來源界線及算術檢查全 PASS；不是語意 PASS |
 | `BUILD_RECEIPT_0142_R06.json` | `c5070a8417cf990c211751d5db97e05a89f133c961906c222b41b7173c601967` | 記錄候選 SHA、來源 SHA、register SHA 及變更範圍 |
 
+
+## Antigravity R06 exact-SHA 語意審查派工
+
+- 原始回覆對 DOCX SHA `60563d4a56ac4502e522feb2665edef07771824ab4c2b2fb596862bb0e84f0e6` 給出 PASS；範圍只含提供的完整正文、Source Packet 及 Unique Blueprint，未作視覺檢查。完整 request、JSON stdout、兩次 stderr 及派工收據均已保存。
+- 第二次有效 CLI 回合：Antigravity CLI 1.4.8、PID 75888、55.35 秒、conversation `eb226e65-0f89-4111-a87c-7691b25decc7`；input 19,830、output 7,024、thinking 5,045、total 26,854 tokens。第一次因 `--print` 旗標用法在本機解析失敗，exit 2，沒有有效審查回覆；修正旗標後只執行一次。
+- CLI 的選定模型與 generation metadata 記錄 `gemini-3.8-flash-high`；log 同時有啟動時 `defaulting to CCPA` 訊息，conversation backend 為 `BACKEND_TYPE_UNSPECIFIED`，最終 stdout 不含 served-model 欄位。因此模型選擇有證據，provider 實際服務模型/無 fallback 證明仍 UNKNOWN；審查回覆保留，但不升格為合格路由最終 semantic PASS。
+- conversation DB 唯讀讀回僅有兩個 step（14、15），均無子 trajectory；沒有觀察到 tool step。CLI stderr 另提示 plan mode 與停用 slash expansion 不相容。未使用 Computer Use，未執行檔案編輯或接受權限繞過。
+- 此結果不變更 CANDIDATE、REAL UNKNOWN/HOLD、NOT_ASSIGNED 分數或 NOT_GRANTED 正式接受狀態。
 ## 實質修復與版面結果
 
 1. 16 張實體表格均有 caption；逐列替換清冊 19 列含 18 項合成財務事實及 1 項非財務版次中繼資料。
@@ -41,6 +49,6 @@ GitHub：PT-Original-Point/ttqs-one；PR #92；分支 `work/ttqs-one-document-qu
 
 ## 門檻仍未完成
 
-- 獨立語意／可用性 reviewer 必須直接審查 exact SHA `60563d4a56ac4502e522feb2665edef07771824ab4c2b2fb596862bb0e84f0e6`；目前 PENDING。
+- Antigravity 對 exact SHA `60563d4a56ac4502e522feb2665edef07771824ab4c2b2fb596862bb0e84f0e6` 已有原始 PASS 回覆；因 provider-served model attestation UNKNOWN，回覆尚不計為合格路由的最終獨立語意 PASS。派工收據與完整原始回覆見 `R06_REVIEW/ANTIGRAVITY_DISPATCH_RECEIPT_0142_R06.json` 及同資料夾 ATTEMPT02_STDOUT。
 - 不得把 R05 回覆、另一候選 SHA 的審查、社群 OpenCode 狀態或本機 Builder／版面 QA 合併成 R06 語意 PASS。
 - 無真實財務原件、法人資料或正式核准已在本候選被宣稱；REAL 仍 UNKNOWN/HOLD，正式接受仍 NOT_GRANTED。
