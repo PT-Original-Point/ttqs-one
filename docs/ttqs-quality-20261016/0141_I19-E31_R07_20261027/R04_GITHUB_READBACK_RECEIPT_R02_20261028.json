@@ -1,0 +1,70 @@
+{
+  "schema": "ttqs-one-github-raw-byte-readback-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0141",
+  "requirement_id": "I19-E31",
+  "repository": "PT-Original-Point/ttqs-one",
+  "pull_request": 92,
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "readback_commit_sha": "ffaf60796ef094c028288b38faa66c6d62469c4f",
+  "observed_at_local": "2026-10-28T08:49:36+08:00",
+  "method": "Fetched the current branch from GitHub with native git; read exact Git blob bytes from FETCH_HEAD using git cat-file; compared SHA-256, byte count and byte equality against local artifacts. For the candidate DOCX, compared GitHub blob bytes against the Windows runtime candidate path because the clone is sparse.",
+  "candidate": {
+    "state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+    "path": "docs/ttqs-quality-20261016/0141_I19-E31_R07_20261027/0141_I19-E31_R07_FONTFIX_PAGE24_BALANCE_R04_CANDIDATE.docx",
+    "sha256": "de111911a549a0be0bd6381a6b22ed694881ba6b3f83528d2b4a4e153002142b",
+    "git_blob_sha1": "4b2cb05a3eb68d475d2af6b86d393bb61141131b",
+    "status": "PASS_BYTES_MATCH"
+  },
+  "files_verified": 5,
+  "status": "PASS",
+  "files": [
+    {
+      "path": "docs/ttqs-quality-20261016/0141_I19-E31_R07_20261027/R04_STATUS.md",
+      "bytes": 4451,
+      "local_sha256": "fd3418110c4be6caf2d7fe8702f895d137eb5f5dc28dbdcbb57674f0e67bf870",
+      "github_readback_sha256": "fd3418110c4be6caf2d7fe8702f895d137eb5f5dc28dbdcbb57674f0e67bf870",
+      "github_git_blob_sha1": "3d465304f0d34ec342584ffc8ddabfd48c91e315",
+      "byte_equal": true,
+      "status": "PASS"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0141_I19-E31_R07_20261027/R04_UPLOAD_MANIFEST.json",
+      "bytes": 13254,
+      "local_sha256": "0756d446bb93448308f9c58067e9eae719bf994aaaf950c733b5af70a8c96523",
+      "github_readback_sha256": "0756d446bb93448308f9c58067e9eae719bf994aaaf950c733b5af70a8c96523",
+      "github_git_blob_sha1": "0158256c526a36dfa5486f2db43cdfd6f2d3699d",
+      "byte_equal": true,
+      "status": "PASS"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0141_I19-E31_R07_20261027/OPENCODE_R04_DEEPSEEK_ATTEMPT_R01_PUBLIC.json",
+      "bytes": 2689,
+      "local_sha256": "1c3e3c3c56a7387dffa0d553f8e22b61d6cb9c1583ac990a73f74cac056e5396",
+      "github_readback_sha256": "1c3e3c3c56a7387dffa0d553f8e22b61d6cb9c1583ac990a73f74cac056e5396",
+      "github_git_blob_sha1": "e5d1c5e7392cabfef27d0453bb9b860836a1c1b2",
+      "byte_equal": true,
+      "status": "PASS"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0141_I19-E31_R07_20261027/R04_SEMANTIC_REVIEW_ROUTE_DISPOSITION_R03_20261028.json",
+      "bytes": 3459,
+      "local_sha256": "4038eb8efcf744357ca22670d14ba840e1ddb416dec3f224cac9bda6f5f1c131",
+      "github_readback_sha256": "4038eb8efcf744357ca22670d14ba840e1ddb416dec3f224cac9bda6f5f1c131",
+      "github_git_blob_sha1": "dfbae66abeed6074c8fb4cff94d2acea4058f44d",
+      "byte_equal": true,
+      "status": "PASS"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0141_I19-E31_R07_20261027/0141_I19-E31_R07_FONTFIX_PAGE24_BALANCE_R04_CANDIDATE.docx",
+      "bytes": 164740,
+      "local_sha256": "de111911a549a0be0bd6381a6b22ed694881ba6b3f83528d2b4a4e153002142b",
+      "github_readback_sha256": "de111911a549a0be0bd6381a6b22ed694881ba6b3f83528d2b4a4e153002142b",
+      "github_git_blob_sha1": "4b2cb05a3eb68d475d2af6b86d393bb61141131b",
+      "byte_equal": true,
+      "status": "PASS"
+    }
+  ],
+  "semantic_review_status": "BLOCKED_NO_REVIEW_RESPONSE",
+  "note": "This receipt verifies publication commit ffaf60796ef094c028288b38faa66c6d62469c4f. The receipt itself is being published separately and will be read back from GitHub."
+}
