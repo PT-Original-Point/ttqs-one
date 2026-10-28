@@ -1,0 +1,50 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0102",
+  "official_requirement_id": "I18-E09",
+  "official_source": "official 129 named requirements / current unique Blueprint",
+  "source_packet_sha256": "54d9c05f70b4fef993bd92b656694030878a236e1a2d0c6a21af5d24d94fa1bd",
+  "unique_blueprint_sha256": "d6ab10107f42d6f913e1c94df45c8cd179babaa2603a8a7e628c2db78a0cce75",
+  "candidate_revision": "R08d_FORMF_VERSION_REPAIR",
+  "candidate_docx_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0102_I18-E09_R01_20261021\\candidate\\0102__技能競賽獲獎證據取得與查核工作紀錄_R08d_FORMF_VERSION_REPAIR.docx",
+  "candidate_docx_sha256": "7c988244ca0f402c0db439d50e62152ba5b0f7090b2753bfcdfc407b3a18ee1d",
+  "sample_real": "SAMPLE/SYNTHETIC examples only; no real award claim or association approval added; real_awards UNKNOWN; formal_acceptance NOT_GRANTED",
+  "content_delta": [
+    "Form F explicit evidence-used locator",
+    "separate response_due_date and internal_review_date fields",
+    "existing SAMPLE CASE-01/CASE-02 evidence IDs retained",
+    "version history includes R08c/R08d"
+  ],
+  "technical_check": "PASS",
+  "technical_receipt": "R08d_technical_check_receipt.json",
+  "technical_values": {
+    "sample_cases": [
+      "CASE-01",
+      "CASE-02"
+    ],
+    "body_runs_below_min": 0,
+    "body_min_pt": 10.5,
+    "zip_integrity": "PASS",
+    "table_runs_below_min": 0,
+    "unknown_font_runs": 0,
+    "required_labels_missing": 0,
+    "table_min_pt": 9.5
+  },
+  "layout_check": "BLOCKED",
+  "layout_exact_sha": "7c988244ca0f402c0db439d50e62152ba5b0f7090b2753bfcdfc407b3a18ee1d",
+  "layout_issue": "Final candidate with Form F page-break repair has no completed Word-native PDF/render. Page break intends to move Form F heading off the prior-page orphan; visual effect unverified.",
+  "word_export": "BLOCKED_TIMEOUT",
+  "word_export_receipt": "qa/R08d_WORD_RENDER_FINAL_20261028/word_export_timeout_R08d.json",
+  "superseded_render": {
+    "pdf_sha256": "cb5661c16a5ca7e253619de299acf4c50335dd857a9f26e625a376d5f6453453",
+    "pages": 58,
+    "candidate_docx_sha256": "0a1e7a2b9a685de612b6416f6d12d4f6c942485423ccfdc6d1e36e6bfbdb399e",
+    "usable_for_current_candidate": false
+  },
+  "semantic_review": "PENDING exact SHA; R08c review is not transferable",
+  "independent_review_blocker": "Antigravity reviewer route remains paused pending safe text-only review configuration; current OpenCode route retry not-before 2026-10-29 08:00 +08:00",
+  "github_pr_head": "cf8ba645bc5357d2e977b8ccd22df2ca6253d559",
+  "github_readback": "PENDING",
+  "candidate_state": "CANDIDATE_NOT_ACCEPTED",
+  "updated_local": "2026-10-28T23:58:08.5175547+08:00"
+}
