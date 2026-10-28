@@ -5,33 +5,37 @@
   "requirement_id": "I19-E32",
   "candidate_sha256": "7efc848ed18decf665c423c03d4784e681a5d911ae5185885f614b391d92cc78",
   "candidate_status": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
-  "semantic_review_state": "PARTIAL_REVIEW_RESPONSE_RECEIVED_NOT_PROMOTABLE",
+  "semantic_review_state": "PASS_TEXT_ONLY_EXACT_SHA; OVERALL_PARTIAL_DUE_LINEAGE_ROOT_UNKNOWN",
   "reviewer_response": {
-    "route": "Antigravity CLI",
-    "requested_model": "gemini-3.8-flash-high",
-    "actual_model_identity": "UNKNOWN",
+    "route": "OpenCode v2 CLI",
+    "requested_model": "opencode/glm-5.3-flash-free",
+    "actual_model": "glm-5.3-flash-free",
+    "actual_provider": "opencode",
+    "model_identity_evidence": "Sanitized native OpenCode session export",
+    "session_id": "ses_e7eb7fa15ffeNy82oKA48J6mC8",
     "cli_exit_code": 0,
-    "elapsed_seconds": 49.344,
-    "response_verdict": "PASS",
-    "raw_stdout_sha256": "f47a82834d2e41d8cb39dccf671971b63361447ae0fe48de20dd0c8c6107dd2c",
-    "raw_stderr_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
-    "prompt_text_sha256": "91861983fdec66c732644f55f45faaac38ead26daa7f4a82a9fe55e26ced0e8a",
-    "prompt_file_sha256": "a41a44e90cd78d91ee8c417ca9ba830038987f33f1a4298351a841ae51483c59",
-    "usage": {
-      "input_tokens": 19022,
-      "output_tokens": 7157,
-      "thinking_tokens": 5073,
-      "cache_read_tokens": 0,
-      "total_tokens": 26179
-    },
-    "cost": "UNKNOWN",
+    "elapsed_seconds": 92.813,
+    "actual_model_fallback": "NOT_OBSERVED_IN_CAPTURED_SESSION",
+    "tool_events_observed": [],
     "computer_use": "NOT_USED",
-    "fallback": "NOT_REQUESTED_OR_AUTHORIZED",
-    "raw_terminal_receipt_sha256": "04fd4d4001b2bccd5e4a9aafe38fbb744e17ac915e9cfc49e17e6b52241934fb"
+    "auto_approve": false,
+    "raw_stdout_sha256": "35b8930c7c5d5fb89f911e6c386aeb02661fa7ed9d00475624fc8d43207d3263",
+    "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "session_export_sha256": "516a802ad6cd763767e442da3f627391c6d3b9294017d1fd76a6a86ca9b9b73f",
+    "response_sha256": "65341f80ac0a6205e33d6da74f834db6d1b7bd6fbd5a8ea3362681509533d271",
+    "usage_reported": {
+      "input_tokens": 29286,
+      "output_tokens": 3409,
+      "reasoning_tokens": 3320,
+      "cache_read_tokens": 4352
+    },
+    "session_reported_cost": 0,
+    "account_billing_independently_verified": false,
+    "review_verdict": "PASS_TEXT_ONLY_EXACT_SHA"
   },
   "scope_adjudication": {
     "overall": "PARTIAL",
-    "reason": "Reviewer response is bound to exact candidate SHA and contains substantive analysis, but it claims F1 resolved without being supplied the lineage annex/JSON; it also claims companion-register inspection without being supplied the CSV. Local follow-up verified register F15 and 19-row file separately. Lineage annex now includes a per-stage inventory, but R01 original bytes and build date remain UNKNOWN; F1 is not a clean independent PASS.",
+    "reason": "R02 independent text-only semantic review passed on the exact unchanged DOCX SHA and included the lineage annex and companion register. Overall remains PARTIAL because the original R01 DOCX bytes and build date are unavailable; the historical lineage root cannot be independently verified. Visual QA is separate and remains PASS 14/14.",
     "F1": "PARTIAL; R01 bytes/build date unknown; selected-chain hashes except R01 locally recomputed; lineage annex updated with per-stage sizes, mtimes explicitly labeled as mtime, changes, and verification.",
     "F2": "BODY_TEXT_SUPPORTED; control/version/build labels consistent at cover, section 7, F19, pending fresh exact-SHA semantic confirmation of scope-limited artifacts.",
     "F3": "BODY_TEXT_SUPPORTED; Table 12 separates roles and identifies SAMPLE accounting basis as unspecified; REAL requires source basis and review.",
@@ -46,7 +50,7 @@
   "official_score": "NOT_ASSIGNED",
   "docx_rebuilt": "NO",
   "docx_bytes_changed": "NO",
-  "next_action": "Keep this exact DOCX candidate unchanged and PARTIAL; do not blindly retry. Continue independent READY documents. A future reviewer run must include the lineage annex and companion register and must not claim model identity unless native evidence exposes it.",
+  "next_action": "Keep the exact candidate unchanged; do not repeat the same review. Continue the next independently READY document stage. Preserve CANDIDATE, formal acceptance NOT_GRANTED, REAL UNKNOWN/HOLD, and lineage-root limitation.",
   "prior_opencode_attempt": {
     "requested_model": "opencode/deepseek-v4.1-flash-free",
     "actual_model": "deepseek-v4.1-flash-free",
@@ -59,5 +63,32 @@
     "session_reported_cost": 0,
     "account_billing": "UNKNOWN",
     "raw_receipt": "OPENCODE_SESSION_R08_REVIEW_SANITIZED.json"
-  }
+  },
+  "reviewer_response_history": [
+    {
+      "route": "Antigravity CLI",
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_model_identity": "UNKNOWN",
+      "cli_exit_code": 0,
+      "elapsed_seconds": 49.344,
+      "response_verdict": "PASS",
+      "raw_stdout_sha256": "f47a82834d2e41d8cb39dccf671971b63361447ae0fe48de20dd0c8c6107dd2c",
+      "raw_stderr_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+      "prompt_text_sha256": "91861983fdec66c732644f55f45faaac38ead26daa7f4a82a9fe55e26ced0e8a",
+      "prompt_file_sha256": "a41a44e90cd78d91ee8c417ca9ba830038987f33f1a4298351a841ae51483c59",
+      "usage": {
+        "input_tokens": 19022,
+        "output_tokens": 7157,
+        "thinking_tokens": 5073,
+        "cache_read_tokens": 0,
+        "total_tokens": 26179
+      },
+      "cost": "UNKNOWN",
+      "computer_use": "NOT_USED",
+      "fallback": "NOT_REQUESTED_OR_AUTHORIZED",
+      "raw_terminal_receipt_sha256": "04fd4d4001b2bccd5e4a9aafe38fbb744e17ac915e9cfc49e17e6b52241934fb"
+    }
+  ],
+  "latest_review_receipt": "review/opencode_glm53_exact_sha_review_r02/SEMANTIC_REVIEW_STATUS_R02.json",
+  "latest_review_response_sha256": "65341f80ac0a6205e33d6da74f834db6d1b7bd6fbd5a8ea3362681509533d271"
 }
