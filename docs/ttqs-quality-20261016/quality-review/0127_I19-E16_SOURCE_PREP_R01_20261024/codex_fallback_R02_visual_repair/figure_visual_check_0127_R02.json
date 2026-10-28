@@ -1,0 +1,35 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0127",
+  "official_requirement": "I19-E16",
+  "unique_blueprint": "UBP-0127-I19-E16",
+  "candidate_sha256": "abba46bcdd0919c4511df025cd90d65cd302fe3f9f59c86d0fa8b7efe2015285",
+  "status": "PASS_ASSET_ONLY_NOT_DOCUMENT_VISUAL_QA",
+  "scope": "Direct inspection of the two embedded PNG source assets only. No rendered R02 DOCX pages were available.",
+  "assets": [
+    {
+      "file": "assets/figure1_market_sample.png",
+      "sha256": "11bde134fba90b14fe7ffa27f27a0673d9c4abfba14e8adb113d10bc960fb929",
+      "bytes": 56613,
+      "dimensions_px": [
+        1600,
+        620
+      ],
+      "direct_visual_observation": "Standalone source image inspected; labels and sample boundary are legible."
+    },
+    {
+      "file": "assets/figure2_customer_sample.png",
+      "sha256": "69d0e636d4ee2fac84470b4735b3dba1680253da302a9b6df960c11d3ec3e23a",
+      "bytes": 43541,
+      "dimensions_px": [
+        1600,
+        620
+      ],
+      "direct_visual_observation": "Standalone source image inspected; labels and sample boundary are legible."
+    }
+  ],
+  "limitations": [
+    "Does not establish Word pagination, embedded-image placement, clipping, captions, or full-page readability.",
+    "R01 page-03 and page-08 images are retained separately as historical baseline evidence, not R02 output."
+  ]
+}

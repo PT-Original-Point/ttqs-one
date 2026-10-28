@@ -1,0 +1,39 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0127",
+  "official_requirement": "I19-E16",
+  "official_requirement_description": "目標市場與顧客價值量化效益分析表",
+  "unique_blueprint_id": "UBP-0127-I19-E16",
+  "candidate_revision": "R02",
+  "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "artifact": {
+    "file": "0127__目標市場與顧客價值量化效益分析表_R02_CODEX_CANDIDATE.docx",
+    "sha256": "abba46bcdd0919c4511df025cd90d65cd302fe3f9f59c86d0fa8b7efe2015285",
+    "bytes": 145484
+  },
+  "source_pins": {
+    "SOURCE_PACKET_0127_I19-E16_R01.md": "058663e200fd0207196c08a02e4d159c6e3eaa7f167094cd7b409b4050b18675",
+    "UNIQUE_BLUEPRINT_0127_I19-E16_R01.md": "9a249a2e398407469bd82c9bf5d7a6188c9e3d28be79172bd4cc33b213c700ff",
+    "SAMPLE_MARKET_PANEL_R01.csv": "9d188e1c8c4b2a488cac2a989a029358dfae8c022ac30a9298518126d137fa36",
+    "SAMPLE_CUSTOMER_VALUE_PANEL_R01.csv": "ca7d92fc02a98ae32e0d306c0a42ff2fd9d6cd58a25b53cb34e89203325b15b6"
+  },
+  "completed_checks": {
+    "technical_layout_pre_render": "PASS_TECHNICAL_PRE_RENDER",
+    "standalone_figure_assets": "PASS_ASSET_ONLY_NOT_DOCUMENT_VISUAL_QA",
+    "word_native_visual": "BLOCKED_WORD_NATIVE_RENDER",
+    "independent_semantic": "BLOCKED_PROVIDER_FREE_LIMIT"
+  },
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN_HOLD",
+  "sample_boundary": "All generated observations are SAMPLE/SYNTHETIC; no association approval, real-world execution, or external outcome is asserted.",
+  "blocking_findings": [
+    "No final Word render or full-page visual inspection for R02.",
+    "No independent semantic verdict for R02 because the free provider returned HTTP 429 before review content."
+  ],
+  "next_legal_actions": [
+    "Diagnose Word ExportAsFixedFormat stall from bounded traces or use a separately verified native render path without changing DOCX bytes.",
+    "Obtain an independent exact-SHA semantic review only after an evidenced available route or after the documented provider release window; do not retry the identical request prematurely.",
+    "Continue unrelated READY document lanes."
+  ],
+  "updated_at_local": "2026-10-28T19:20:00+08:00"
+}
