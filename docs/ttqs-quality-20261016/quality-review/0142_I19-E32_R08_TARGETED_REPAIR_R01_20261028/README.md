@@ -9,4 +9,5 @@
 - Independent semantic review: BLOCKED, not PASS. A single OpenCode v2 deepseek-v4.1-flash-free exact-SHA attempt returned provider FreeUsageLimitError 429 after 39,599 input tokens and 0 output. CLI exit code UNKNOWN; no fallback was authorized or used. Native dispatch, raw stdout/stderr, sanitized session, and input manifest are included.
 - The semantic lane remains pending a usable authorized independent route; other unrelated READY work is not blocked.
 
-PACKAGE_MANIFEST_R08.json lists file sizes and SHA-256 digests for package contents (manifest excludes itself and this README).
+PACKAGE_MANIFEST_R08.json lists file sizes and SHA-256 digests for package contents (manifest excludes itself).
+
