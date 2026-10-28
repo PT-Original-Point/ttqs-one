@@ -1,6 +1,6 @@
 {
   "schema": "ttqs-one-current-candidate-status-0133-r01-reconciled-v2",
-  "observed_at_local": "2026-10-28T04:02:25.000+08:00",
+  "observed_at_local": "2026-10-29T02:51:36+08:00",
   "doc_id": "0133",
   "requirement_id": "I19-E22",
   "project_157_index": 146,
@@ -27,7 +27,7 @@
   "blocking_findings": 0,
   "nonblocking_findings": 4,
   "semantic_review_scope": "TEXT_ONLY; exact candidate text and supplied source/Blueprint context; reviewer did not inspect DOCX binary, images, layout or render and did not recompute hashes; dispatch receipt binds the supplied extracted text to the exact candidate SHA.",
-  "visual_status": "PASS_SELF_INSPECTED_11_PAGES; full independent visual review UNKNOWN",
+  "visual_status": "PASS_VISUAL_ONLY_ALL_11_PAGES_DIRECTLY_INSPECTED_BY_CODEX",
   "real_evidence": "UNKNOWN",
   "formal_acceptance": "NOT_GRANTED",
   "overall": "CANDIDATE_QUALITY_PASS_WITH_DECLARED_SCOPE_LIMITS; NOT_FORMALLY_ACCEPTED",
@@ -36,6 +36,10 @@
     "stale_field": "reviewer_model_identity=UNKNOWN",
     "corrected_identity": "opencode/glm-5.3-flash-free; session metadata matches request",
     "docx_bytes_changed": false,
-    "rebuild_or_review_repeated": false
-  }
+    "rebuild_or_review_repeated": false,
+    "visual_receipt_delta": "Added exact-SHA direct visual inspection receipt; DOCX unchanged; semantic and formal-acceptance states unchanged."
+  },
+  "visual_review_receipt_sha256": "6cb89f88fa492e46722154875b3eb23122ac9f7fc6ce4d2f3e3d4cd5a55d4414",
+  "visual_review_scope": "All 11 existing Microsoft Word native render page images were directly inspected in session; image hashes match the existing render receipt. No new render or DOCX mutation.",
+  "independent_visual_review": "NOT_CLAIMED; the visual inspection is separate in scope from the OpenCode semantic review but is not represented as an independent reviewer."
 }
