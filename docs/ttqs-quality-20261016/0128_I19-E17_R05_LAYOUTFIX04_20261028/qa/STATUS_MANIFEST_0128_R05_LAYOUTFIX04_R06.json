@@ -134,7 +134,38 @@
     "pull_request": 92,
     "branch": "work/ttqs-one-document-quality-contract-20261016",
     "current_head_before_publish": "4f72296cd4d62d6faffb25e91b8b10e344da59a0",
-    "readback": "PENDING"
+    "readback": "VERIFIED_RAW_BYTE_READBACK",
+    "current_head_after_publish": "556dfbde794f6cb1723c8a0fa2c25a7143d0a01a",
+    "readback_checked_at": "2026-10-29T00:30:18.7557922+08:00",
+    "readback_file_count": 5,
+    "readback_files": [
+      {
+        "path": "qa/ANTIGRAVITY_AUTH_HEADLESS_PROBE_R04_20261029.json",
+        "sha256": "e483bff01269582d5d29955b36c0e5afe1fb144906889e3cbcb78d4c67e9e6c9",
+        "blob": "07baa93180e634e9be766cbff49acc6d0e7bf03c"
+      },
+      {
+        "path": "qa/ANTIGRAVITY_SEMANTIC_REVIEW_0128_R06_RECEIPT.json",
+        "sha256": "450260ef904e397fff0ec8a6e91162836c0e265dc9c9149cffbb756897d82c12",
+        "blob": "847f0a03b837a69b91d55b15d7f19e9a5f9e9f07"
+      },
+      {
+        "path": "qa/STATUS_MANIFEST_0128_R05_LAYOUTFIX04_R06.json",
+        "sha256": "e4d77ac1079c8b7d355a63e093ab27ef73ff336bed2d02202297a1e056243bb2",
+        "blob": "f142ec5df095c8651bba94a4352a75c0d243c0f5"
+      },
+      {
+        "path": "worker/antigravity/REVIEW_REQUEST_0128_R05_LAYOUTFIX04_R06.txt",
+        "sha256": "de9b9c01ebe4ed53cca1194ce65557209ec19512cc55a7e0734d71cdd1b211f0",
+        "blob": "39ee9d8dc44fd36493231d4cdc2cb229d0318857"
+      },
+      {
+        "path": "worker/antigravity/ANTIGRAVITY_SEMANTIC_REVIEW_0128_R06.stdout.txt",
+        "sha256": "1ed367b341a0e06929f377dfb11b8ab88ecbd823af1441d5048f87df379b7b2e",
+        "blob": "af9c95fffad6fa544a61f13c9afea8cebe4e9dc0"
+      }
+    ],
+    "readback_scope": "Five published auth/review artifacts fetched from the same PR branch and compared as base64-encoded raw bytes; candidate DOCX SHA unchanged."
   },
   "limitations": [
     "Reviewer model provider attestation is UNKNOWN; CLI log confirms selected Gemini model and request but not provider-served identity.",
