@@ -1,0 +1,56 @@
+{
+  "schema": "TTQS_ONE_0136_CURRENT_STATUS_RECONCILIATION_R13",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0136",
+  "official_requirement_id": "I19-E26",
+  "project_157_index": 150,
+  "official_printed_checkbox_serial": "UNKNOWN",
+  "observed_at_local": "2026-10-29T02:50:00+08:00",
+  "basis": {
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "branch_head_before_status_sync": "139da6ead5260e2050f3d9efda0a6288859bc767",
+    "prior_status_path": "docs/ttqs-quality-20261016/quality-review/0136_I19-E26_SOURCE_PREP_R01_20261025/R02_CANDIDATE_R11_20261026/receipts/CANDIDATE_STATE_0136_R02_CURRENT.json",
+    "prior_semantic_adjudication_sha256": "3234-byte local/remote receipt hash recorded in source package; current exact receipt SHA-256 e57d246a75763bb7812b126acade17e53a64196082b8c72e19e48b81b38b1f1"
+  },
+  "candidate": {
+    "revision": "R02_CANDIDATE_20261025",
+    "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0136_I19-E26_CANDIDATE_R02_20261025\\0136_I19-E26_R02_CANDIDATE_20261025.docx",
+    "remote_path": "docs/ttqs-quality-20261016/quality-review/0136_I19-E26_SOURCE_PREP_R01_20261025/R02_CANDIDATE_R11_20261026/candidate/0136_I19-E26_R02_CANDIDATE.docx",
+    "bytes": 55525,
+    "sha256": "a9bd0fb528a1e22865fa5e07df44b314d48c1fd826a08149ecdd1d5915048b39",
+    "remote_git_blob_sha1": "78c3e26c55523e8eec58253c7a2b91dd2e0d8d21",
+    "current_branch_raw_sha256_readback": "a9bd0fb528a1e22865fa5e07df44b314d48c1fd826a08149ecdd1d5915048b39",
+    "docx_mutated_during_reconciliation": false
+  },
+  "source_binding": {
+    "source_packet_sha256": "7bebd3eb012b152f4568db6fedccf43c3337f436a5f339127e5afe71cf0678d7",
+    "unique_blueprint_sha256": "32c1b818cc0b3957a23e319606f77b176a7979d1ee4ff58db72b9ae32ada8399"
+  },
+  "qa": {
+    "technical_status": "PASS_SCOPED",
+    "technical_receipt_sha256": "956a36c2e66dd980dfe8a2afeb2a392e3f1888b1083ade1678392ace5f3731c8",
+    "visual_status": "PASS_WORD_NATIVE_14_OF_14_PAGES",
+    "visual_receipt_sha256": "956a36c2e66dd980dfe8a2afeb2a392e3f1888b1083ade1678392ace5f3731c8",
+    "semantic_status": "PASS_WITH_LIMITATIONS_EXACT_SHA_TEXT_REVIEW",
+    "semantic_adjudication_sha256": "e57d246a75763bb7812b126acade17e53a64196082b8c72e19e48b81b38b1f1",
+    "semantic_scope": "Exact-SHA packet-bound text review; no visual review; visual scope is separately evidenced by the 14-page Word-native receipt.",
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model": "UNKNOWN",
+    "fallback": "UNKNOWN",
+    "noncompliant_findings": 0,
+    "finding_count": 14
+  },
+  "later_route_attempt": {
+    "worker": "OpenCode v2",
+    "requested_model": "opencode/deepseek-v4.1-flash-free",
+    "actual_serving_model": "UNKNOWN_NOT_REACHED",
+    "result": "UNKNOWN_NO_REVIEW",
+    "use": "Does not invalidate or replace the existing exact-SHA semantic PASS."
+  },
+  "disposition": {
+    "candidate_state": "CANDIDATE_ONLY",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN/HOLD",
+    "next_action": "Keep candidate bytes unchanged; continue the next independently READY document stage. Do not rerun an identical review unless provider/model route evidence materially changes."
+  }
+}
