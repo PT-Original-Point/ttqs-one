@@ -1,0 +1,48 @@
+{
+  "schema": "TTQS_ONE_0142_R08_VISUAL_QA_V1",
+  "doc_id": "0142",
+  "requirement_id": "I19-E32",
+  "candidate_sha256": "7efc848ed18decf665c423c03d4784e681a5d911ae5185885f614b391d92cc78",
+  "renderer": "Microsoft Word COM to PDF; Poppler 150 dpi page images",
+  "pdf_sha256": "718b5807164bec5e1d519f8ac52236f3e45ae17f040edc5b25f76791a4ca6c2e",
+  "page_count": 14,
+  "pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "inspection_method": "All 14 page PNGs opened at original image resolution in the current review session.",
+  "checks": {
+    "all_pages_present": true,
+    "no_clipping_or_overlap": true,
+    "no_missing_glyphs": true,
+    "tables_readable_and_headers_repeat": true,
+    "table_rows_not_cut": true,
+    "sample_real_headers_and_footers_consistent": true,
+    "repaired_table12_roles_basis_and_dates_readable": true,
+    "repaired_table15_and_table16_dates_readable": true,
+    "page5_section5_begins_without_blank_orphan": true
+  },
+  "observations": [
+    "Page 8-9 Table 12 continues with its header repeated; rows remain readable and are not clipped.",
+    "Page 10 has whitespace after Table 14 naturally splits; no orphaned table row or clipped text.",
+    "Page 14 ends after the final F19 control-metadata row; SAMPLE/REAL status remains explicit.",
+    "The prior R07 nearly blank page-5 break is absent; page 5 begins Section 5."
+  ],
+  "result": "PASS",
+  "inspector": "Codex visual review of the page images in this task",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "checked_local": "2026-10-28T12:07:19.902209+08:00"
+}
