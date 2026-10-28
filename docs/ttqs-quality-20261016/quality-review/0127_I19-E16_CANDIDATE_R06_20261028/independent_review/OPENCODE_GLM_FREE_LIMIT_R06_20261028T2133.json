@@ -1,0 +1,47 @@
+{
+  "schema": "TTQS_ONE_OPENCODE_REVIEW_TERMINAL_R01",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS_ONE_0127_I19-E16_SEMANTIC_REVIEW_R06_GLM",
+  "observed_at_local": "2026-10-28T21:33:58+08:00",
+  "doc_id": "0127",
+  "official_requirement": "I19-E16",
+  "candidate_state": "CANDIDATE_ONLY",
+  "candidate_sha256": "c6c9a6270f429052aa959f9ae6fdca10ebd02a308a33b9d28c84e7d36ad48008",
+  "docx_changed": false,
+  "review_packet_sha256": "f8e16c5719a68e7e82a5a0ba94c3e2d2e19f2272ab34d78c16b238f7cf517ed7",
+  "cli_version": "opencode v2.1.4",
+  "worker": "OpenCode v2 CLI",
+  "requested_model": "opencode/glm-5.3-flash-free",
+  "actual_model": "UNKNOWN; provider rejected request before inference",
+  "fallback": "NOT_REQUESTED; explicit model pin",
+  "native_session_id": "ses_e7d485641ffenHmBC09AkNns4W",
+  "worker_pid": "UNKNOWN; transient CLI PID not captured",
+  "cli_exit_code": 1,
+  "http_status": 429,
+  "error_type": "provider.free-limit",
+  "retry_after_ms_reported_by_provider": 39649000,
+  "retry_after_is_not_a_verified_quota_reset_time": true,
+  "model_inference_completed": false,
+  "reviewer_response_present": false,
+  "token_usage": "UNKNOWN; no inference completed",
+  "stderr_bytes": 0,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "2cd340610f94064ece8f382331d072f37f7396ae28e35218c2ef85daf9bffaa1",
+  "raw_stdout_jsonl": {
+    "type": "error",
+    "timestamp": 1793194438066,
+    "sessionID": "ses_e7d485641ffenHmBC09AkNns4W",
+    "error": {
+      "type": "provider.free-limit",
+      "message": "Free usage limit reached. Connect a provider or subscribe to OpenCode Go to keep going, or switch models.",
+      "status": 429,
+      "response": {
+        "body": "{\"type\":\"error\",\"error\":{\"type\":\"FreeUsageLimitError\",\"message\":\"Free usage limit reached. Free models work in OpenCode (https://opencode.ai); subscribe to OpenCode Go to keep going: https://opencode.ai/go\"}}"
+      },
+      "retryAfterMs": 39649000
+    }
+  },
+  "previous_distinct_model_attempt": "DeepSeek V4.1 Flash Free returned provider free-limit HTTP 429 at 2026-10-28T21:10:28+08:00; no inference or reviewer response",
+  "disposition": "BLOCKED_FREE_LIMIT_FOR_TESTED_OPENCODE_FREE_MODELS; do not retry identical requests without new availability evidence; unrelated READY work remains unblocked",
+  "formal_acceptance": "NOT_GRANTED"
+}
