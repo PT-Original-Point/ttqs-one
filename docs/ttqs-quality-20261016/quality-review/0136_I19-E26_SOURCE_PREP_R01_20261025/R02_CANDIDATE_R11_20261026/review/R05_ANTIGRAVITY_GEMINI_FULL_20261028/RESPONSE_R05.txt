@@ -1,0 +1,93 @@
+{
+  "work_id": "TTQS-0136-I19-E26-R02-W2-GEMINI-FULL-SEMANTIC-REVIEW-R05",
+  "doc_id": "0136",
+  "requirement_id": "I19-E26",
+  "target_candidate_sha256": "a9bd0fb528a1e22865fa5e07df44b314d48c1fd826a08149ecdd1d5915048b39",
+  "review_input_sha256": "8315323168abe0d2e01f766d1eff68d522be22eb9cc0a7d5fd9af906d68bf386",
+  "review_type": "full-text semantic review",
+  "verdict": "PASS",
+  "summary": "Full-text semantic review of candidate DOCX 0136 (I19-E26, Project Blueprint Index 150) establishes complete conformance with the official source extract (printed pages 8–9), Source Packet R01, and Unique Blueprint R01. The document functions strictly as an operational original-evidence verification register rather than an unverified association performance report or self-assessment score. It rigorously maintains the three-layer claim separation (event/award/cooperation existence, association role, social outcome), provides three fully populated synthetic demonstration walkthroughs (SAMPLE-ACT-001, SAMPLE-AWD-001, SAMPLE-SCH-001) without fabricating counterfeit originals or certificates, specifies working operational tables (T1–T6), establishes clear HOLD/REJECT and privacy rules, disallows fake cryptographic hashes, enforces negative neighbor boundaries against DOCX 0135, 0137, 0133, and 0134, treats unsupported quantitative metrics as UNKNOWN, and explicitly records REAL association evidence as UNKNOWN and Human acceptance as NOT GRANTED.",
+  "checks": [
+    {
+      "criterion": "Official source verbatim excerpt and genre alignment",
+      "result": "PASS",
+      "locator": "Section 2, [TABLE 5]",
+      "evidence": "Candidate cites exact official Indicator 19 text: '提出參與社會公益活動、獲頒公民營單位獎項、結合學校單位產學或研發成果社會面。' It clarifies that this is a reference evidence example for the 4-point tier, does not imply that the association has achieved any or all classes, and functions as an evidence register rather than an outcome report or self-scoring rubric."
+    },
+    {
+      "criterion": "Document identity, requirement mapping, and printed checkbox serial control",
+      "result": "PASS",
+      "locator": "Header, [TABLE 1], Section 2, [TABLE 6]",
+      "evidence": "Candidate binds DOCX 0136 to 142 crosswalk requirement I19-E26 and Project 157 Blueprint Index 150. Official printed checkbox serial is explicitly designated as 'UNKNOWN; 不得以 0136、I19-E26 或 150 代替', strictly preventing conflation of internal indexes with official printed form numbers."
+    },
+    {
+      "criterion": "Three-layer claim separation across three evidence categories",
+      "result": "PASS",
+      "locator": "Section 3, [TABLE 3], [TABLE 9], [TABLE 11]",
+      "evidence": "Candidate decomposes intake into three discrete verification tracks (A: Social-benefit activity, B: Awards/recognitions, C: School partnership / R&D social impact) and requires independent proof across three layers: (1) event/award/project existence, (2) association actual role and contribution, and (3) separate delivery and social outcome. Prohibits inferring outcome from attendance, title, or MOU."
+    },
+    {
+      "criterion": "Usability as an original-source register with zero REAL entries",
+      "result": "PASS",
+      "locator": "Section 8 [TABLE 21, TABLE 22], Section 9 [TABLE 23, TABLE 24], Section 10 [TABLE 25, TABLE 26]",
+      "evidence": "Provides full operational field dictionaries, blank intake rows (T1), original inventory and custody logs (T2), itemized verification checklists (T3), hold/rejection/correction tracking (T4), and claim-to-source mapping matrices (T5). Blank fields indicate incomplete intake rather than verified status."
+    },
+    {
+      "criterion": "Decision taxonomy, stop conditions, and privacy/custody controls",
+      "result": "PASS",
+      "locator": "Section 4, [TABLE 12], [TABLE 13], [TABLE 14], Section 9 [TABLE 23]",
+      "evidence": "Defines mutually exclusive statuses: VERIFIED_PRIMARY, VERIFIED_SECONDARY, PENDING_SOURCE, HOLD_PRIVACY, REJECTED, SAMPLE_ONLY. Enforces hard stop conditions when sources are missing, roles unproven, or outcomes unevidenced. SHA-256 calculation is restricted strictly to actual received original bytes; fake hashes, dummy box numbers, and simulated timestamps are forbidden."
+    },
+    {
+      "criterion": "Three complete SAMPLE/SYNTHETIC walkthroughs without counterfeit originals",
+      "result": "PASS",
+      "locator": "Sections 5–7, [TABLE 15] through [TABLE 20]",
+      "evidence": "Demonstrates three distinct synthetic cases: SAMPLE-ACT-001 (community health talk with insufficient organizer role proof), SAMPLE-AWD-001 (nomination vs awardee entity mismatch), and SAMPLE-SCH-001 (courseware development with MOU but no verified delivery/social impact). All fields use synthetic labels (SAMPLE-ORGANIZER-A, SAMPLE-ISSUER-B, SAMPLE-SCHOOL-C), explicitly record SAMPLE_SOURCE_NOT_ATTACHED, status SAMPLE_ONLY, and NOT FOR EXTERNAL USE."
+    },
+    {
+      "criterion": "SAMPLE-to-REAL replacement register and procedural transition rules",
+      "result": "PASS",
+      "locator": "Section 11, [TABLE 28], [TABLE 29], [TABLE 30]",
+      "evidence": "Table T6 inventories every synthetic fact, dummy entity, and placeholder value across the three sample records, specifying the exact primary evidence required to achieve REAL status. Prescribes a 5-step transition procedure where new REAL record_ids must be created upon receiving physical/digital originals, leaving SAMPLE rows untouched as permanent training baselines."
+    },
+    {
+      "criterion": "Negative neighbor differentiation and cross-evidence deduplication",
+      "result": "PASS",
+      "locator": "Section 2, [TABLE 7], [TABLE 8]",
+      "evidence": "Explicitly routes market/customer value trends to DOCX 0135 (I19-E25), positive media reports to DOCX 0137 (I19-E27), training class/headcount totals to DOCX 0133 (I19-E22), and member/dues registries to DOCX 0134 (I19-E23). Employs shared event_project_key tracking to prevent double-counting across deliverable boundaries."
+    },
+    {
+      "criterion": "Attributable quantitative claims and self-scoring prohibition",
+      "result": "PASS",
+      "locator": "Section 1, Section 7, [TABLE 3], [TABLE 21]",
+      "evidence": "Candidate makes zero quantitative performance assertions. Mandates that any future numeric metrics specify unit, timeframe, numerator, denominator, calculation algorithm, deduplication method, and primary source; absent sources must remain UNKNOWN. Explicitly prohibits assigning or self-scoring TTQS points."
+    },
+    {
+      "criterion": "Evaluator retrieval auditability and candidate status boundary",
+      "result": "PASS",
+      "locator": "Section 12, [TABLE 31], [TABLE 32]",
+      "evidence": "Includes a 6-step retrieval audit exercise allowing an independent reviewer to re-verify claims against underlying restricted storage. Explicitly concludes with: '原始點協會 REAL 佐證：UNKNOWN（本候選未連接正式證據庫）。本候選狀態：CANDIDATE。Human 正式接受：NOT GRANTED.'"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "INFO",
+      "locator": "[TABLE 1], [TABLE 6], [TABLE 16], [TABLE 18], [TABLE 20]",
+      "evidence": "官方紙本方框序號 is consistently documented as UNKNOWN.",
+      "why_it_matters": "Prevents conflation between internal production indices (0136, I19-E26, 150) and unverified official printed checkbox serials from official TTQS evaluation forms.",
+      "required_action": "Maintain UNKNOWN until verified official printed checkbox documentation is formally captured and reviewed."
+    },
+    {
+      "severity": "INFO",
+      "locator": "[TABLE 2], [TABLE 32]",
+      "evidence": "Association REAL evidence is marked UNKNOWN and Human acceptance is marked NOT GRANTED.",
+      "why_it_matters": "Enforces strict boundary between operational tool readiness and real institutional performance claims or formal accreditation.",
+      "required_action": "Operational deployment must await real original intake, lawful privacy clearance, and human administrative sign-off."
+    }
+  ],
+  "sample_real_boundary": "The boundary between synthetic demonstration data and real evidence is comprehensively and unambiguously maintained. All demonstration rows are prefixed with SAMPLE identifiers (SAMPLE-ACT-001, SAMPLE-AWD-001, SAMPLE-SCH-001), populated with explicit synthetic tokens (SAMPLE-ORGANIZER-A, SAMPLE-ISSUER-B, SAMPLE-SCHOOL-C), categorized under status SAMPLE_ONLY, marked with 'SAMPLE_SOURCE_NOT_ATTACHED', and annotated 'NOT FOR EXTERNAL USE'. No counterfeit certificates, simulated awards, fake MOUs, or fabricated signatures exist. Furthermore, Table T6 provides an exhaustive replacement mapping outlining the precise first-party evidentiary threshold required to transition each synthetic placeholder into a verified REAL record.",
+  "negative_neighbor_distinction": "The document defines rigorous boundary controls against adjacent TTQS deliverables in [TABLE 7] and [TABLE 8]: (1) DOCX 0135 / I19-E25 is reserved for market competition, business revenue, and customer value metrics; DOCX 0136 cannot be used as a market survey tool. (2) DOCX 0137 / I19-E27 handles media clippings and broadcast interviews; news coverage may serve as an auxiliary corroborating locator but cannot replace primary originals of events, awards, or academic partnerships. (3) DOCX 0133 / I19-E22 tracks training course sessions and headcounts; training tallies cannot be double-counted as social community impact. (4) DOCX 0134 / I19-E23 manages member rosters and membership fees, which cannot substantiate social welfare results. Cross-deliverable duplication is systematically tracked using shared event_project_key identifiers.",
+  "quantitative_claims": "The candidate strictly avoids asserting any quantitative performance, beneficiary totals, volunteer hours, financial contributions, or outcome metrics. It establishes an absolute protocol that any quantitative claim must be documented with explicit measurement units, active periods, numerator, denominator, mathematical formula, and primary source backing. In the absence of such direct evidence, all quantitative fields are mandated to remain UNKNOWN. Causality or social effect cannot be extrapolated from attendance rosters, partnership titles, or award announcements, and TTQS evaluation scores are explicitly barred from self-assignment.",
+  "operational_usability": "The candidate provides complete operational utility as an intake and verification register for an association administrator. It contains clear, structured tables for intake logging (T1), physical and digital chain-of-custody tracking with SHA-256 byte hashing (T2), multi-point verification checklists (T3), exception and hold/rejection queues (T4), external claim vs source attribution matrices (T5), and sample-to-real migration logs (T6). It outlines actionable SOP steps from initial claim logging through privacy redaction and evaluator retrieval, operating effectively even when zero real primary sources are currently held.",
+  "limitations": "Review is strictly confined to semantic text verification of candidate DOCX 0136 (SHA-256: a9bd0fb528a1e22865fa5e07df44b314d48c1fd826a08149ecdd1d5915048b39) against the provided source packet and Unique Blueprint R01. Serving model reported as UNKNOWN per constraint rules regarding native response metadata. This semantic review does not inspect visual rendering, table pagination, or typographic layout (evaluated separately via native 14-page visual QA), does not verify external web sources or physical archives, does not validate association real-world performance, and does not constitute human legal or accreditation acceptance."
+}
