@@ -1,0 +1,167 @@
+{
+  "schema": "TTQS_ONE_INDEPENDENT_REVIEW_V1",
+  "doc_id": "0127",
+  "requirement_id": "I19-E16",
+  "candidate_sha256": "c6c9a6270f429052aa959f9ae6fdca10ebd02a308a33b9d28c84e7d36ad48008",
+  "verdict": "PASS",
+  "review_scope": "Independent read-only semantic, mathematical, usability, traceability, boundary, and negative neighbor review of candidate doc_id 0127 corresponding to official requirement I19-E16, based on candidate extracted DOCX text, tables, and R01 evidence packets.",
+  "criteria": [
+    {
+      "criterion": "Official requirement wording and Blueprint conformity",
+      "result": "PASS",
+      "locator": "Candidate Section 1; Table 8; SOURCE_PACKET_0127_I19-E16_R01.md; MAPPING_EVIDENCE_0127_R01.json",
+      "note": "Candidate reproduces the exact official wording verbatim from TTQS audit evidence checklist p.8 (3-point level): '有量化之效益可呈現目標市場及顧客價值均有一定程度提升的效果。' Follows the unique Blueprint structure and requirements across all 10 core components without historical body contamination."
+    },
+    {
+      "criterion": "Genre and practical usability",
+      "result": "PASS",
+      "locator": "文件身分與用途; 執行摘要; 30秒操作指引; Section 7 Table 6; Section 8 Table 7",
+      "note": "Correctly executes as an analytical/evaluation report of quantitative benefits. Features an executive summary, 30-second operational guide, dual-dimension overview table, actionable next steps with responsibility and deadline placeholders, and concrete REJECT/HOLD gates."
+    },
+    {
+      "criterion": "Mathematical integrity and recalculation consistency",
+      "result": "PASS",
+      "locator": "Section 3 Table 2, Table 2A; Section 4 Table 3, Table 3A; Appendix Table A1; SAMPLE_MARKET_PANEL_R01.csv; SAMPLE_CUSTOMER_VALUE_PANEL_R01.csv",
+      "note": "100% exact mathematical match with CSV synthetic datasets. Market reach changes from 32 to 48 (+50.00%); conversions change from 8 (25.00%) to 15 (31.25%), yielding +6.25 percentage points and +25.00% relative conversion change. Customer value across 24 paired respondents on 3 items (72 item observations per window) changes from 234 (mean 3.25) to 288 (mean 4.00), +0.75 points (+23.08% relative). Individual case heterogeneity (case S-O07 conversion dropping from 33.3% to 25.0%) is explicitly analyzed."
+    },
+    {
+      "criterion": "Denominators, units, and rounding precision",
+      "result": "PASS",
+      "locator": "Section 2 Table 1; Section 3 Table 2A; Section 4 Table 3A",
+      "note": "Clearly distinguishes percentage point differences (+6.25 pp) from relative rate changes (+25.00%). Denominators for reach and conversion rates are explicitly defined as window-specific unique qualified prospects, not market population or revenue. Rounding is consistent to 2 decimal places."
+    },
+    {
+      "criterion": "SAMPLE/SYNTHETIC vs REAL boundary and replacement register",
+      "result": "PASS",
+      "locator": "Header; 文件身分與用途; Section 5 Table 4; Section 8 Table 7; Section 10; Appendix B Table B1",
+      "note": "Unambiguously stamps all enterprises, customers, courses, time windows, and numbers as SAMPLE/SYNTHETIC ONLY. Confirms association REAL outcome evidence is UNKNOWN and disclaims formal acceptance or real submission. Appendix Table B1 provides an exhaustive replacement register mapping keys RR-ORG-01..08, RR-CUST-01..24, RR-COURSE-01, RR-WINDOW-01/02, RR-ITEM-Q1/Q2/Q3, RR-SCALE-01, RR-FORMULA-01/02, RR-RESULT-01/02, RR-INTERPRETATION-01, RR-ACTION-01, and RR-FIGURE-01/02 to specific required audit controls."
+    },
+    {
+      "criterion": "Traceability",
+      "result": "PASS",
+      "locator": "Section 9 Table 8; Section 10",
+      "note": "Fully establishes bidirectional traceability from official 157-checkbox (I19-E16) to 142-crosswalk row, PDF page 8 extracted text SHA-256 (57c6b33d...), blueprint row SHA-256 (8e0f7650...), candidate SHA-256, and input CSV SHA-256 fingerprints."
+    },
+    {
+      "criterion": "Title-blind identification",
+      "result": "PASS",
+      "locator": "雙構面摘要; Section 1; Section 3; Section 4",
+      "note": "Even if the document title is completely masked, the candidate text distinctly identifies itself as a quantitative evaluation covering target market qualified reach/conversion and multidimensional paired customer perceived value."
+    },
+    {
+      "criterion": "Negative neighbors exclusion (0126 and 0128)",
+      "result": "PASS",
+      "locator": "Section 1 (納入與排除); Section 9 (鄰件排除)",
+      "note": "Explicitly distinguishes boundaries and excludes negative neighbors: doc_id 0126/I19-E14 (salary change) and doc_id 0128/I19-E17 (individual post-training job performance improvement). Prohibits data sharing, merging, or substitution across these adjacent requirements."
+    },
+    {
+      "criterion": "Analytical limitations and non-causality",
+      "result": "PASS",
+      "locator": "Section 5 Table 4; Section 6 Table 5",
+      "note": "Prohibits claiming training causality, association overall achievement, market share, total market size, or financial profits. Documents potential confounding variables including pricing, seasonality, promotions, and selection bias."
+    }
+  ],
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    {
+      "finding_id": "NB-0127-01",
+      "locator": "Candidate Document Header; 文件身分與用途",
+      "description": "Visual layout and multi-column pagination across pages within the native Word environment remain to be confirmed via native Word visual inspection, though all required sections, tables, and extracted textual contents are complete."
+    },
+    {
+      "finding_id": "NB-0127-02",
+      "locator": "Section 4 Table 3A vs Blueprint Summary",
+      "description": "Composite customer value relative change is calculated and reported as 23.08% in Table 3A (0.75 / 3.25 = 23.0769%), whereas the Blueprint overview text cites 23.1%; both representations are mathematically accurate at 2 vs 1 decimal places."
+    },
+    {
+      "finding_id": "NB-0127-03",
+      "locator": "Section 7 Table 6",
+      "description": "Action roles and completion deadlines are maintained as unassigned placeholders ('待指派', '核定後'), which appropriately preserves organizational governance boundaries prior to official authorization."
+    }
+  ],
+  "math_recheck": {
+    "market_reach": {
+      "M1_total": 32,
+      "M4_total": 48,
+      "absolute_change": 16,
+      "relative_change_pct": 50.0,
+      "recalculated_match": true
+    },
+    "market_conversion": {
+      "M1_first_purchases": 8,
+      "M1_conversion_rate_pct": 25.0,
+      "M4_first_purchases": 15,
+      "M4_conversion_rate_pct": 31.25,
+      "percentage_point_diff": 6.25,
+      "relative_conversion_change_pct": 25.0,
+      "recalculated_match": true
+    },
+    "case_level_heterogeneity": {
+      "case_S_O07_M1_conversion_rate_pct": 33.33,
+      "case_S_O07_M4_conversion_rate_pct": 25.0,
+      "decline_noted_in_text": true,
+      "recalculated_match": true
+    },
+    "customer_value_composite": {
+      "paired_cases_N": 24,
+      "items_per_case": 3,
+      "total_items_per_window": 72,
+      "M1_total_score": 234,
+      "M1_mean_score": 3.25,
+      "M4_total_score": 288,
+      "M4_mean_score": 4.0,
+      "score_diff": 0.75,
+      "relative_change_pct": 23.08,
+      "recalculated_match": true
+    },
+    "customer_value_items": {
+      "Q1_usefulness": {
+        "M1_mean": 2.75,
+        "M4_mean": 3.75,
+        "diff": 1.0,
+        "recalculated_match": true
+      },
+      "Q2_convenience": {
+        "M1_mean": 3.25,
+        "M4_mean": 4.0,
+        "diff": 0.75,
+        "recalculated_match": true
+      },
+      "Q3_relative_benefit": {
+        "M1_mean": 3.75,
+        "M4_mean": 4.25,
+        "diff": 0.5,
+        "recalculated_match": true
+      }
+    }
+  },
+  "sample_real_boundary": {
+    "is_sample_declared": true,
+    "real_outcome_claimed": false,
+    "real_evidence_state": "UNKNOWN",
+    "formal_acceptance_granted": false,
+    "replacement_register_complete": true,
+    "replacement_register_keys_count": 42
+  },
+  "title_blind_and_negative_neighbor": {
+    "title_blind_discernible": true,
+    "neighbor_0126_salary_excluded": true,
+    "neighbor_0128_performance_excluded": true,
+    "historical_0127_body_prohibited": true,
+    "substitution_prevented": true
+  },
+  "limitations": {
+    "non_causality_stated": true,
+    "alternative_explanations_listed": [
+      "pricing",
+      "seasonality",
+      "promotions",
+      "channel_effects",
+      "sample_selection_bias"
+    ],
+    "forbids_market_share_claims": true,
+    "forbids_financial_profit_claims": true,
+    "hold_reject_gates_defined": true
+  },
+  "actual_model_identity": "UNKNOWN"
+}
