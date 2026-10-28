@@ -1,0 +1,93 @@
+{
+  "schema": "TTQS_ONE_R12_0121_R03_CURRENT_REVIEW_ROUTE_STATUS_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0121",
+  "requirement_id": "I19-E09",
+  "project_157_index": null,
+  "project_157_index_status": "NOT_ASSERTED_IN_THIS_DELTA",
+  "printed_checkbox_serial": "UNKNOWN",
+  "observed_at_local": "2026-10-28T09:09:50+08:00",
+  "github_pr": 92,
+  "github_branch": "work/ttqs-one-document-quality-contract-20261016",
+  "github_head_before_sync": "ce86a721b2683a24166178769f1f2d6b2a98eb73",
+  "candidate": {
+    "state": "CANDIDATE",
+    "revision": "R03",
+    "sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+    "bytes": 72632,
+    "docx_rebuilt_for_route_status": false,
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "authority": {
+    "official_requirement": "I19-E09",
+    "source_packet_sha256": "fbeb11b96648fff29a49a0fca74bf0cc3b3d1d29934f07dfaa3cf7e410a557fd",
+    "unique_blueprint_sha256": "99320fdc9078615ad04087c43bcbd22c5bbf751a22127c51e048e909726a5fca"
+  },
+  "existing_quality_evidence": {
+    "semantic_route": "Antigravity CLI 1.4.7",
+    "reviewer_reported_verdict": "PASS",
+    "candidate_sha256_bound": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+    "actual_model_identity": "UNKNOWN; DO NOT CLAIM GEMINI PASS",
+    "scope": "Text-only full body P001-P194 and tables T01-T17; no visual/binary review",
+    "technical_visual_qa": "PASS_WITH_SCOPE",
+    "technical_visual_receipt_sha256": "5a7478d792a5e9cd0e884e5bdda78fa34cab611ba36b64d592b93a2a726b4015",
+    "candidate_state": "CANDIDATE_ONLY"
+  },
+  "opencode_attempts": [
+    {
+      "work_id": "TTQS-0121-I19-E09-R03-W1-OPENCODE-GLM-EXACT-SHA-REVIEW-AFTER-0122-SUCCESS-20261028",
+      "requested_model": "opencode/glm-5.3-flash-free",
+      "actual_inference": "NOT_REACHED_PROVIDER_REJECTED_BEFORE_INFERENCE",
+      "provider_status": 429,
+      "retry_after_ms": 6168000,
+      "retry_eligible_at_local": "2026-10-28T08:00:00.296+08:00",
+      "finished_at_local": "2026-10-28T06:17:12.335400+08:00",
+      "candidate_unchanged": true,
+      "semantic_response": "NONE"
+    },
+    {
+      "work_id": "TTQS-0121-I19-E09-R03-W1-OPENCODE-GLM-EXACT-SHA-REVIEW-R12_3-20261028",
+      "requested_model": "opencode/glm-5.3-flash-free",
+      "actual_inference": "NOT_REACHED_PROVIDER_REJECTED_BEFORE_INFERENCE",
+      "provider_status": 429,
+      "retry_after_ms": 86349000,
+      "retry_eligible_at_local": "2026-10-29T08:00:00.212+08:00",
+      "finished_at_local": "2026-10-28T08:00:51.459617+08:00",
+      "cli_exit_code": 1,
+      "pid": 74468,
+      "session_id": "REDACTED_IN_PUBLIC_COPY",
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      },
+      "reported_cost": 0,
+      "provider_charge": "NOT_INDEPENDENTLY_VERIFIED",
+      "semantic_response": "NONE",
+      "candidate_unchanged": true,
+      "raw_stdout_sha256": "00c690956fc6fdb4156048070c5988f7dbe99414902dbda986b7ec03bccc8395",
+      "session_export_sha256": "89d93ff33589f7cbcf228fedf91f234293af4ba40d8b02156f215f5659c19da6",
+      "terminal_sha256": "02a39d1be77778edfc87870a63c8ccb7db8923d175a7cb8f5a2251efde8a2075"
+    }
+  ],
+  "same_route_health_only": {
+    "doc_id": "0141",
+    "work_id": "TTQS_ONE_0141_R04_GLM53_R02_EXACT_SHA_REVIEW_20261028",
+    "requested_model": "opencode/glm-5.3-flash-free",
+    "provider_status": 429,
+    "actual_inference": "NOT_REACHED",
+    "retry_eligible_at_local": "2026-10-29T07:59:59.513+08:00",
+    "scope": "Different document; route-health corroboration only, not a review of 0121. Receipt synced/read back at GitHub commit ce86a721b2683a24166178769f1f2d6b2a98eb73."
+  },
+  "route_disposition": "PAUSED_FOR_0121_SEMANTIC_REVIEW_UNTIL_2026-10-29T08:00:00.212+08:00_OR_NEW_VERIFIED_ROUTE_EVIDENCE",
+  "next_action": "Do not repeat OpenCode free-inference calls before this retry time. Preserve the existing Antigravity text-only reviewer result with model identity UNKNOWN; continue other READY work only on a currently permitted route.",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "public_export": {
+    "session_identifiers_redacted": true,
+    "raw_session_export_published": false,
+    "local_raw_artifacts_retained": true
+  }
+}
