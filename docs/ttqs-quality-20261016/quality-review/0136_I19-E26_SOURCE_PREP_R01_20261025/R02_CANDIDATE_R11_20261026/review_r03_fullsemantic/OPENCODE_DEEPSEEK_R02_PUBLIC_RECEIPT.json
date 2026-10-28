@@ -26,5 +26,42 @@
   "controller_capture_issue": "PID and child exit capture failed because the PowerShell wrapper assigned to reserved $PID after process launch; raw terminal output remains preserved locally.",
   "disposition": "BLOCKED_PROVIDER_FREE_LIMIT_429",
   "candidate_state": "UNCHANGED_CANDIDATE_ONLY",
-  "formal_acceptance": "NOT_GRANTED"
+  "formal_acceptance": "NOT_GRANTED",
+  "shared_route_reconciliation": {
+    "reconciled_at": "2026-10-28T09:40:34.5074549+08:00",
+    "preexisting_route_events": [
+      {
+        "route_receipt_path": "0121_I19-E09 candidate R03 R12 current route status",
+        "retry_not_before": "2026-10-29T08:00:00.212+08:00",
+        "inference": "NOT_REACHED_PROVIDER_REJECTED_BEFORE_INFERENCE",
+        "doc_id": "0121",
+        "status": 429,
+        "work_id": "TTQS-0121-I19-E09-R03-W1-OPENCODE-GLM-EXACT-SHA-REVIEW-R12_3-20261028",
+        "model": "opencode/glm-5.3-flash-free"
+      },
+      {
+        "stdout_sha256": "cbe2a80b1557afebf33f693719c3ce0d880e155c67a720b95bf9edf0bf3e1191",
+        "retry_not_before": "2026-10-29T07:59:59+08:00",
+        "inference": "NOT_REACHED_PROVIDER_REJECTED_BEFORE_INFERENCE",
+        "doc_id": "0141",
+        "status": 429,
+        "work_id": "TTQS_ONE_0141_I19-E31_R04_SEMANTIC_REVIEW",
+        "model": "opencode/deepseek-v4.1-flash-free"
+      },
+      {
+        "retry_not_before": "2026-10-29T07:59:59.513+08:00",
+        "inference": "NOT_REACHED_PROVIDER_REJECTED_BEFORE_INFERENCE",
+        "doc_id": "0141",
+        "route_disposition_sha256": "f032f5cfe1a2e10751fb6737332e6e5dc8042adf4c356a4deab0d3386ffe22a3",
+        "status": 429,
+        "work_id": "TTQS_ONE_0141_R04_GLM53_R02_EXACT_SHA_REVIEW_20261028",
+        "model": "opencode/glm-5.3-flash-free"
+      }
+    ],
+    "latest_retry_not_before": "2026-10-29T08:00:00.212+08:00",
+    "conservative_scope": "Pause OpenCode Free inference dispatch across free model IDs until the latest listed retry time. The provider quota scope (per-model versus account-wide) remains UNKNOWN; no further model-switch probe.",
+    "dispatcher_control_lapse": "The 0136 call at 09:30 was dispatched after local 0121/0141 provider.free-limit receipts and route-pause status were already present. Preflight missed cross-document shared-route evidence; this was an avoidable duplicate and yielded no review.",
+    "corrective_action": "No OpenCode Free model dispatch before 2026-10-29T08:00:00.212+08:00 unless new native quota/route evidence proves eligibility; next attempt must be substantive work, not a quota probe."
+  },
+  "dispatch_control_deviation": "REDUNDANT_AFTER_EXISTING_ROUTE_PAUSE; no candidate change; no semantic response."
 }
