@@ -55,3 +55,12 @@ The hidden OpenCode V2 2.1.4 CLI request for `opencode/big-pickle` was dispatche
 - Formal acceptance: NOT GRANTED.
 - Candidate bytes remained unchanged during visual review. Any later semantic receipt must bind exactly to the R06 DOCX SHA above.
 
+## Latest OpenCode GLM 5.3 Flash Free exact-SHA review dispatch (2026-10-28 08:28 TPE)
+
+- Work ID: TTQS-0142-I19-E32-R06-W1-OPENCODE-GLM53-FREE-EXACT-SHA-SEMANTIC-REVIEW-20261028T0830. The Windows OpenCode V2 2.1.4 CLI was launched hidden, noninteractive, with tools and fallback disabled.
+- Requested model: opencode/glm-5.3-flash-free. Provider rejected before inference with provider.free-limit HTTP 429; no reviewer response was produced. Actual model: NOT_REACHED_PROVIDER_REJECTED; token usage was not returned; billing is UNKNOWN.
+- Provider retry estimate: 2026-10-29T07:59:59.854+08:00 Asia/Taipei. This is an estimate from retryAfterMs, not proof the quota will reset then. Do not retry this identical request before that time.
+- Candidate DOCX SHA-256 remains 3781cb4cb2d26625fb5676181f4faa4176ca0bb80e2e3fac518245bbdc42f97e; no candidate bytes were changed. R06 semantic review remains PENDING; this 429 is not a semantic verdict.
+- Public monitoring report SHA-256 ff3ca9886e3a345d78be358b2883296b7e5454408d23bc940fee239ba826c900 reports service Operational at 2026-10-27 08:17 TPE but no account-level model tests; it does not override this local pre-inference rejection.
+- Local original stdout SHA-256: 09c672ec3d260c07b229990a98a3bcf59660b186bdabba682e14a7757bf96218; the public sanitized stdout SHA-256 is 5a113f7282a297e39b19aed6aa3e1ebde673375f329f2d182d3a0b43d6478551. The provider session identifier is omitted from public receipts.
+- Route scope: this request/model attempt is quota-blocked pending the estimate; no global outage or account-wide quota conclusion is made. Other READY work remains eligible.
