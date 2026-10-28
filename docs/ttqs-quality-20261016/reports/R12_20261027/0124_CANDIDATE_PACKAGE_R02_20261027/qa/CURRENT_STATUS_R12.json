@@ -94,5 +94,48 @@
     "sha256": "3b71df6dc686978ccf342b40f7d8d68108f365aa57a2f3a448ddea654878efc6",
     "path": "qa/R12_0124_W1_W2_RECONCILIATION_R05.json",
     "status": "RECORDED"
-  }
+  },
+  "route_attempt_history": [
+    {
+      "work_id": "TTQS-0124-I19-E12-R02-W1-GLM53-TABLE-DELTA-REVIEW-R07",
+      "requested_model": "opencode/glm-5.3-flash-free",
+      "actual_serving_model": "UNKNOWN_NO_INFERENCE_RESPONSE",
+      "outcome": "HTTP_429_PROVIDER_FREE_LIMIT",
+      "provider_id_observed": "opencode",
+      "session_id": "ses_e7e81caacffeJ1zRArqHBdRODy",
+      "pid": 89356,
+      "cli_exit_code": 1,
+      "response": "NONE",
+      "response_text_events": 0,
+      "retry_after_ms": 58104000,
+      "next_eligible_estimate_local": "2026-10-29T07:59:59.469000+08:00",
+      "estimate_is_guarantee": false,
+      "candidate_sha256": "5ea20da675395954e5587859ddc3ca4b483abaeff90509a86c66950581afec07",
+      "candidate_mutated": false,
+      "tokens": "NOT_REPORTED_NO_MODEL_RESPONSE",
+      "reported_cost": "UNKNOWN_NOT_RETURNED",
+      "fallback": "NOT_USED; NOT_AUTHORIZED"
+    }
+  ],
+  "latest_route_attempt": {
+    "work_id": "TTQS-0124-I19-E12-R02-W1-GLM53-TABLE-DELTA-REVIEW-R07",
+    "requested_model": "opencode/glm-5.3-flash-free",
+    "actual_serving_model": "UNKNOWN_NO_INFERENCE_RESPONSE",
+    "outcome": "HTTP_429_PROVIDER_FREE_LIMIT",
+    "provider_id_observed": "opencode",
+    "session_id": "ses_e7e81caacffeJ1zRArqHBdRODy",
+    "pid": 89356,
+    "cli_exit_code": 1,
+    "response": "NONE",
+    "response_text_events": 0,
+    "retry_after_ms": 58104000,
+    "next_eligible_estimate_local": "2026-10-29T07:59:59.469000+08:00",
+    "estimate_is_guarantee": false,
+    "candidate_sha256": "5ea20da675395954e5587859ddc3ca4b483abaeff90509a86c66950581afec07",
+    "candidate_mutated": false,
+    "tokens": "NOT_REPORTED_NO_MODEL_RESPONSE",
+    "reported_cost": "UNKNOWN_NOT_RETURNED",
+    "fallback": "NOT_USED; NOT_AUTHORIZED"
+  },
+  "observed_at_local_r07_update": "2026-10-28T15:53:43.735717+08:00"
 }
