@@ -1,0 +1,146 @@
+{
+  "schema": "TTQS_ONE_CANDIDATE_QA_STATUS_R06",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0128",
+  "official_requirement_id": "I19-E17",
+  "revision": "R05_LAYOUTFIX04",
+  "observed_at_local": "2026-10-29T00:26:52.0551988+08:00",
+  "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "candidate_docx": {
+    "path": "candidate/0128_I19-E17_R05_LAYOUTFIX04_CANDIDATE.docx",
+    "sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
+    "bytes": 56424
+  },
+  "source_hashes": {
+    "unique_blueprint_sha256": "f396793da8db5f7d0092ae5bb90f36b93098fdc4d9f25093db74760864796ffb",
+    "source_packet_sha256": "94699015ab0a316f09e500bd44f8fa6e7474e613557a6cffc322548f7c94307b",
+    "official_mapping": {
+      "path": "source/MAPPING_EVIDENCE_0128_R01.json",
+      "sha256": "5086a5b50eb72d46090e1781796cc73325d1e4581fa44beb803adb2302ace12b",
+      "bytes": 1114
+    },
+    "source_packet": {
+      "path": "source/SOURCE_PACKET_0128_I19-E17_R01.md",
+      "sha256": "94699015ab0a316f09e500bd44f8fa6e7474e613557a6cffc322548f7c94307b",
+      "bytes": 6453
+    },
+    "unique_blueprint": {
+      "path": "source/UNIQUE_BLUEPRINT_0128_I19-E17_R01.md",
+      "sha256": "f396793da8db5f7d0092ae5bb90f36b93098fdc4d9f25093db74760864796ffb",
+      "bytes": 6809
+    },
+    "sample_data": {
+      "path": "source/SAMPLE_INDIVIDUAL_PERFORMANCE_PANEL_R01.csv",
+      "sha256": "831cf00c91fd5078a4128c2576ff5a005c3e3243b71edced5599d18c1c3c91a4",
+      "bytes": 2927
+    },
+    "synthetic_register": {
+      "path": "source/SYNTHETIC_REPLACEMENT_REGISTER_0128_R01.csv",
+      "sha256": "ea06f9aa1083bd7c48f959a85dfd2ede1a480df485b51652087ce7fae7037826",
+      "bytes": 2623
+    }
+  },
+  "quality": {
+    "technical_status": "PASS",
+    "technical_receipt_sha256": "f1bde03ac493487eb524ecd5f1cbc570acc3f4bfdbc6077c2233bbb19ef65ceb",
+    "visual_status": "PASS",
+    "visual_receipt_sha256": "bb4eb08e5ccb771b7333d03e15f39926a31578abfe27b005b2c4613f7556e290",
+    "visual_pages": {
+      "manual_reinspection_pages": [
+        9,
+        12,
+        13
+      ],
+      "inherited_byte_identical_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11
+      ],
+      "covered_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "all_pages_covered": true
+    },
+    "word_native_pdf_sha256": "e6e676c260abe7dd4a044af8ad0df098c0c2beb66c0900c3ec8595215b2b703a",
+    "word_native_page_count": 13,
+    "semantic_content_status": "PASS_TEXT_ONLY_EXACT_SHA",
+    "semantic_review_work_id": "TTQS-0128-I19-E17-SEMANTIC-REVIEW-R06",
+    "semantic_review_receipt_sha256": "450260ef904e397fff0ec8a6e91162836c0e265dc9c9149cffbb756897d82c12",
+    "semantic_raw_response_sha256": "1ed367b341a0e06929f377dfb11b8ab88ecbd823af1441d5048f87df379b7b2e",
+    "semantic_request_sha256": "de9b9c01ebe4ed53cca1194ce65557209ec19512cc55a7e0734d71cdd1b211f0",
+    "semantic_review_exact_docx_sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
+    "semantic_criteria_count": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "semantic_all_criteria_pass": true,
+    "semantic_math": "PASS",
+    "semantic_sample_real_boundary": "PASS",
+    "semantic_title_blind": "PASS",
+    "semantic_visual_scope": "NOT_IN_SCOPE_VISUAL_QA_IS_SEPARATE",
+    "fresh_independent_reviewer_on_current_exact_sha": "PASS",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "worker_route": {
+    "antigravity": {
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_served_model": "UNKNOWN",
+      "cli_version": "1.4.9",
+      "headless_auth": "PASS_AT_TEST_TIME",
+      "keyring_auth": true,
+      "final_gemini_selection": true,
+      "startup_ccpa_default": true,
+      "final_fallback_observed": false,
+      "exit_code": 0,
+      "process_owner": "DESKTOP-VMV4Q60\\J",
+      "hidden": true,
+      "computer_use": "NOT_USED",
+      "token_usage": "UNKNOWN"
+    }
+  },
+  "truth_boundary": {
+    "sample_data": "SYNTHETIC; six cases; 120 task observations in aggregate",
+    "real_evidence": "UNKNOWN_UNTIL_SOURCE",
+    "real_signatures_or_approvals": "NONE_CLAIMED"
+  },
+  "remote": {
+    "repository": "PT-Original-Point/ttqs-one",
+    "pull_request": 92,
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "current_head_before_publish": "4f72296cd4d62d6faffb25e91b8b10e344da59a0",
+    "readback": "PENDING"
+  },
+  "limitations": [
+    "Reviewer model provider attestation is UNKNOWN; CLI log confirms selected Gemini model and request but not provider-served identity.",
+    "Visual QA is existing separate exact-SHA evidence; semantic review was text-only.",
+    "Real organization evidence remains UNKNOWN_UNTIL_SOURCE.",
+    "Formal acceptance NOT_GRANTED.",
+    "One headless CLI invocation was performed; earlier pre-auth CCPA defaults and auth errors were observed before keyring recovery, but no final inference fallback was observed."
+  ]
+}
