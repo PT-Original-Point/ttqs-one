@@ -5,12 +5,13 @@
   "official_requirement_id": "I19-E26",
   "project_157_index": 150,
   "official_printed_checkbox_serial": "UNKNOWN",
-  "observed_at_local": "2026-10-29T02:50:00+08:00",
+  "observed_at_local": "2026-10-29T02:48:47+08:00",
   "basis": {
     "branch": "work/ttqs-one-document-quality-contract-20261016",
     "branch_head_before_status_sync": "139da6ead5260e2050f3d9efda0a6288859bc767",
     "prior_status_path": "docs/ttqs-quality-20261016/quality-review/0136_I19-E26_SOURCE_PREP_R01_20261025/R02_CANDIDATE_R11_20261026/receipts/CANDIDATE_STATE_0136_R02_CURRENT.json",
-    "prior_semantic_adjudication_sha256": "3234-byte local/remote receipt hash recorded in source package; current exact receipt SHA-256 e57d246a75763bb7812b126acade17e53a64196082b8c72e19e48b81b38b1f1"
+    "prior_semantic_adjudication_sha256": "db570afbcc58f76bccb875591b57bdba7a723b499cdaeccafb379c469e1eabcd",
+    "prior_semantic_adjudication_path": "docs/ttqs-quality-20261016/quality-review/0136_I19-E26_SOURCE_PREP_R01_20261025/R02_CANDIDATE_R11_20261026/receipts/SEMANTIC_REVIEW_ADJUDICATION_0136_R02.json"
   },
   "candidate": {
     "revision": "R02_CANDIDATE_20261025",
@@ -32,7 +33,7 @@
     "visual_status": "PASS_WORD_NATIVE_14_OF_14_PAGES",
     "visual_receipt_sha256": "956a36c2e66dd980dfe8a2afeb2a392e3f1888b1083ade1678392ace5f3731c8",
     "semantic_status": "PASS_WITH_LIMITATIONS_EXACT_SHA_TEXT_REVIEW",
-    "semantic_adjudication_sha256": "e57d246a75763bb7812b126acade17e53a64196082b8c72e19e48b81b38b1f1",
+    "semantic_adjudication_sha256": "db570afbcc58f76bccb875591b57bdba7a723b499cdaeccafb379c469e1eabcd",
     "semantic_scope": "Exact-SHA packet-bound text review; no visual review; visual scope is separately evidenced by the 14-page Word-native receipt.",
     "requested_model": "gemini-3.8-flash-high",
     "actual_serving_model": "UNKNOWN",
@@ -52,5 +53,7 @@
     "formal_acceptance": "NOT_GRANTED",
     "real_evidence": "UNKNOWN/HOLD",
     "next_action": "Keep candidate bytes unchanged; continue the next independently READY document stage. Do not rerun an identical review unless provider/model route evidence materially changes."
-  }
+  },
+  "record_revision": 2,
+  "correction_note": "Corrected the semantic adjudication file hash reference before final readback; no DOCX or QA evidence was changed."
 }
