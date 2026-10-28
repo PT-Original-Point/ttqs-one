@@ -30,11 +30,11 @@
     "required_labels_missing": 0,
     "table_min_pt": 9.5
   },
-  "layout_check": "BLOCKED",
+  "layout_check": "PASS_VISUAL_58_OF_58",
   "layout_exact_sha": "7c988244ca0f402c0db439d50e62152ba5b0f7090b2753bfcdfc407b3a18ee1d",
-  "layout_issue": "Final candidate with Form F page-break repair has no completed Word-native PDF/render. Page break intends to move Form F heading off the prior-page orphan; visual effect unverified.",
-  "word_export": "BLOCKED_TIMEOUT",
-  "word_export_receipt": "qa/R08d_WORD_RENDER_FINAL_20261028/word_export_timeout_R08d.json",
+  "layout_issue": "No visible clipping, overlap, blank page, or broken table in all-page coverage; sparse page 32 follow-up form flagged for semantic usability only.",
+  "word_export": "PASS_WORD_NATIVE_READ_ONLY",
+  "word_export_receipt": "qa/R08d_WORD_RENDER_FINAL_20261028/word_export_receipt_R08d_final.json",
   "superseded_render": {
     "pdf_sha256": "cb5661c16a5ca7e253619de299acf4c50335dd857a9f26e625a376d5f6453453",
     "pages": 58,
@@ -44,7 +44,10 @@
   "semantic_review": "PENDING exact SHA; R08c review is not transferable",
   "independent_review_blocker": "Antigravity reviewer route remains paused pending safe text-only review configuration; current OpenCode route retry not-before 2026-10-29 08:00 +08:00",
   "github_pr_head": "cf8ba645bc5357d2e977b8ccd22df2ca6253d559",
-  "github_readback": "PENDING",
+  "github_readback": "PENDING_R04_SYNC",
   "candidate_state": "CANDIDATE_NOT_ACCEPTED",
-  "updated_local": "2026-10-28T23:58:08.5175547+08:00"
+  "updated_local": "2026-10-29T01:05:30.0480047+08:00",
+  "layout_receipt": "qa/R08d_visual_qa_receipt_R04_20261029.json",
+  "pdf_sha256": "e9c43465177dd88d57cbe4819c5f6f25b5059b0767fab3736053a7bb2c29b468",
+  "render_discovery_note": "Existing Word PDF and receipt were produced by fresh hidden Word PID 81260 at 00:58; R04 duplicate helper stopped safely at output-collision check."
 }
