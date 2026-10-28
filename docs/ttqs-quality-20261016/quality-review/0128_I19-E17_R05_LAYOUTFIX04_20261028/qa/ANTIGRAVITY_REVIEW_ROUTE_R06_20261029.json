@@ -1,0 +1,53 @@
+{
+  "schema": "ttqs-one-0128-antigravity-exact-sha-review-status-v1",
+  "observed_at_local": "2026-10-29T04:22:04.2603251+08:00",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0128",
+  "official_requirement_id": "I19-E17",
+  "unique_blueprint": "I19-L3",
+  "candidate_state": "CANDIDATE_ONLY",
+  "candidate_docx_sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
+  "candidate_text_sha256": "854d7e2c60c989a05d1b0a467fd7706e2f2f506f991f32aa16a9b9a6b44ce504",
+  "source_packet_sha256": "94699015ab0a316f09e500bd44f8fa6e7474e613557a6cffc322548f7c94307b",
+  "unique_blueprint_sha256": "f396793da8db5f7d0092ae5bb90f36b93098fdc4d9f25093db74760864796ffb",
+  "semantic_review": {
+    "status": "PASS",
+    "scope": "Independent text-only semantic review bound to current candidate SHA and supplied extracted text, official source packet, unique Blueprint, sample dataset and synthetic replacement register.",
+    "blocking_findings": 0,
+    "nonblocking_findings": [
+      "Section 3 result labels for the declining and flat cases could use the same standard category wording as Section 8.",
+      "Section 6 follow-up dates are sample-derived from the stated 2026-04-15 course date; replace with the real course end date when used."
+    ],
+    "response_sha256": "a1452abc3e2734da99c7c1bd5a5f4d73b5b1041bfe6fc77dd35d13d242fdf537",
+    "request_sha256": "29e2e12aca0646641bcba070c195339959e3bee04ee662428ad53177a0bf6ecf",
+    "receipt_sha256": "2a9071848b0e4041988a174267655e75b782736a579124ca0b14acb938d5c828"
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "page_count": 13,
+    "receipt_sha256": "bb4eb08e5ccb771b7333d03e15f39926a31578abfe27b005b2c4613f7556e290",
+    "candidate_sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
+    "scope": "Existing Word-native render page images; no new render or DOCX mutation."
+  },
+  "antigravity_route": {
+    "cli_version": "1.4.9",
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model": "UNKNOWN",
+    "route_status": "HEADLESS_AUTH_PASS; Gemini 3.8 Flash High selected before Google Code Assist stream requests; no inference-time fallback observed in captured log.",
+    "startup_note": "Earlier startup logged transient unauthenticated/keyring refresh errors; ChainedAuth subsequently authenticated via keyring. Exact cause of the transient startup errors remains UNKNOWN.",
+    "probe_status": "PASS",
+    "probe_exit_code": 0,
+    "probe_stdout_classification": "EXACT_AGY_HEADLESS_OK",
+    "probe_stdout_sha256": "ad469f03757a9ac0ff6daa4cde3c4afed963f91f7d2f7c3c8c50fe186ba61e84",
+    "probe_receipt_sha256": "5d7fdb08bdfb67cf9307238c9a9467c266dc71570ef6ff261f4df03113dbd7d8",
+    "review_exit_code": 0,
+    "review_duration_seconds": 81.31,
+    "review_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cli_log_sha256": "3497ab9cb7ee79b278984b84d3ae99ab6222c1e2ce82ebad04588219a6f78c69",
+    "tool_calls_observed": false,
+    "token_usage": "UNKNOWN"
+  },
+  "real_evidence": "UNKNOWN",
+  "formal_acceptance": "NOT_GRANTED",
+  "docx_changed_during_review": false
+}
