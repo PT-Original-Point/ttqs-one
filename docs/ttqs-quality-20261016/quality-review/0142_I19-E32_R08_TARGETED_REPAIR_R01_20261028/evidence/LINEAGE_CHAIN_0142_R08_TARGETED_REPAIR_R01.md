@@ -35,3 +35,20 @@ Page-image manifest SHA-256: d5b7ab71332583549b1971f3599dae5cbc712712bc5e697f8f8
 Replacement register SHA-256: b9ef1b7f1c9b703377f0284582cc72c4251d483cbeeae3adf8f6279e6aaa372b.
 
 No candidate evidence here establishes REAL association performance, formal acceptance, or an official score.
+
+## R12 per-stage metadata readback
+
+This table separates recorded build dates from filesystem timestamps. Filesystem mtime is observational metadata only and is not represented as a build event. R01 source bytes remain unavailable; its historical SHA is not independently verified. For each present selected-chain DOCX, the local SHA-256 and byte count below were read from the exact Windows path.
+
+| Stage | Revision/version label | Candidate SHA-256 | Bytes | Recorded build date | Filesystem mtime (not build-date proof) | Change type | Verifier/evidence |
+|---|---|---|---:|---|---|---|---|
+| R01 baseline | R01 baseline | 59f9b500eafd0b283a6df898d337e888da37cb6bcfc98cb180a6fd452b8034a6 | UNKNOWN | UNKNOWN | NOT_AVAILABLE | baseline candidate; original bytes absent from searched local source tree | No original binary; SHA exists only in historical parent lineage; not independently recomputed. |
+| R03 selected table-cell margin | R03 | c731c94ec54ea2980564fd580907a291d7bd93a050933e28a3fde7643d15a861 | 44984 | UNKNOWN unless a separate build receipt proves it | 2026-10-27T23:19:38+08:00 | selected table-cell margin repair | Windows-local SHA-256 recomputed 2026-10-28T12:47:44+08:00; MATCH |
+| R04 selected table flow | R04 | e43ab1564e19d9cf024a57bebaf0bd8cf898fa364155800a404409d69fa5181c | 44991 | UNKNOWN unless a separate build receipt proves it | 2026-10-27T23:21:38+08:00 | table-flow repair | Windows-local SHA-256 recomputed 2026-10-28T12:47:44+08:00; MATCH |
+| R05 header contrast | R05 | a213a30cd949948f7ce8c2b5d76fc79b5fdcd90117f6fba77139af6660c5ab6e | 44998 | UNKNOWN unless a separate build receipt proves it | 2026-10-27T23:23:50+08:00 | header-contrast repair | Windows-local SHA-256 recomputed 2026-10-28T12:47:44+08:00; MATCH |
+| R06 structural completion | R06 | 60563d4a56ac4502e522feb2665edef07771824ab4c2b2fb596862bb0e84f0e6 | 50454 | UNKNOWN unless a separate build receipt proves it | 2026-10-28T10:48:30+08:00 | structural completion | Windows-local SHA-256 recomputed 2026-10-28T12:47:44+08:00; MATCH |
+| R07 targeted semantic repair | R07 | 35f7e3c42d599a3c123786c997a4e4ee010e6b623d6cf93a919469fd59a044cd | 52863 | UNKNOWN unless a separate build receipt proves it | 2026-10-28T11:37:42+08:00 | targeted semantic repair | Windows-local SHA-256 recomputed 2026-10-28T12:47:44+08:00; MATCH |
+| R07-LF01 layout-only repair | R07-LF01 | ac6f2820027a206a6cd3db284d923f4bad22d11d52ef8afb1e59d6ce4d19684f | 50156 | UNKNOWN unless a separate build receipt proves it | 2026-10-28T11:46:42+08:00 | remove one empty manual page-break paragraph; non-empty body/table text unchanged | Windows-local SHA-256 recomputed 2026-10-28T12:47:44+08:00; MATCH |
+| R08-TR01 targeted repair | content version 1.3/R08; build R08-TR01 | 7efc848ed18decf665c423c03d4784e681a5d911ae5185885f614b391d92cc78 | 53207 | UNKNOWN unless a separate build receipt proves it | 2026-10-28T12:03:08+08:00 | targeted repairs for prior F1-F6; no financial figures changed | Windows-local SHA-256 recomputed 2026-10-28T12:47:44+08:00; MATCH |
+
+R12 finding: the selected R01→R08 chain is recorded, but R01 bytes and build date remain UNKNOWN. Do not promote the historical R01 hash to a locally verified binary. This sidecar inventory does not change the R08 DOCX bytes.

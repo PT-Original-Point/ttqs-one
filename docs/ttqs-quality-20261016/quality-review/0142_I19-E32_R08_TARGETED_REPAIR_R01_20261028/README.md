@@ -6,7 +6,7 @@
 - Mapping: internal document ID 0142; official requirement I19-E32; unique Blueprint and official row/crosswalk are included in this package. Official source evidence identifies I19-E32 on PDF page 9/9. R01 original DOCX bytes were not located, as explicitly disclosed in the lineage annex.
 - Changes: targeted repairs for lineage/version labeling, Table 12 roles and indeterminate REAL accounting basis, dated SAMPLE recalculation, REAL hold criteria, separate REAL copy instruction, and replacement-register locator/date fields. No source figures or arithmetic were changed.
 - Technical QA: PASS. Word-native PDF export: PASS, 14 pages. All 14 page images are included; visual QA: PASS.
-- Independent semantic review: BLOCKED, not PASS. A single OpenCode v2 deepseek-v4.1-flash-free exact-SHA attempt returned provider FreeUsageLimitError 429 after 39,599 input tokens and 0 output. CLI exit code UNKNOWN; no fallback was authorized or used. Native dispatch, raw stdout/stderr, sanitized session, and input manifest are included.
+- OpenCode v2 exact-SHA review attempt: provider FreeUsageLimitError HTTP 429; 39,599 input / 0 output, no review text. The attempt is preserved under `review/opencode_deepseek_r12_429_20261027/`.
 - The semantic lane remains pending a usable authorized independent route; other unrelated READY work is not blocked.
 
-PACKAGE_MANIFEST_R08.json lists file sizes and SHA-256 digests for package files and excludes only itself.
+Candidate remains CANDIDATE; semantic status PARTIAL_NOT_PROMOTABLE; formal acceptance NOT_GRANTED; REAL UNKNOWN/HOLD; official score NOT_ASSIGNED. The DOCX bytes were not changed by review or adjudication. PACKAGE_MANIFEST_R08.json lists package file sizes and SHA-256 digests and excludes only itself.
