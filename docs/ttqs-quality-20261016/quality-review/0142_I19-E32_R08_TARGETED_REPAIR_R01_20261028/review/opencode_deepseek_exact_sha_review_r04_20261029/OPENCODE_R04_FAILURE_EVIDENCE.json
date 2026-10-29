@@ -1,0 +1,67 @@
+{
+  "schema": "TTQS_ONE_0142_R08_OPENCODE_R04_PROVIDER_REJECTION_EVIDENCE",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0142",
+  "requirement_id": "I19-E32",
+  "candidate_state": "CANDIDATE_ONLY",
+  "candidate_sha256": "7efc848ed18decf665c423c03d4784e681a5d911ae5185885f614b391d92cc78",
+  "candidate_remote_git_blob_sha1": "2111e442011d573e8833689067f88743ca7927e5",
+  "dispatch": {
+    "worker": "OpenCode CLI v2",
+    "cli_version": "opencode v2.1.4",
+    "cli_path": "C:\\Users\\J\\AppData\\Roaming\\ai.opencode.desktop\\cli\\2.1.4-x64\\opencode-cli.exe",
+    "windows_user": "desktop-vmv4q60\\j",
+    "hidden_console": true,
+    "model_requested": "opencode/deepseek-v4.1-flash-free",
+    "actual_served_model": "UNKNOWN; provider rejected before generation",
+    "agent": "plan",
+    "auto_approve": false,
+    "tools_requested": false,
+    "cli_exit_code": 1,
+    "elapsed_seconds": 1.313,
+    "process_pid": "NOT_CAPTURED",
+    "session_id": "ses_e7a0a431cffetJzUa1S7CBVf9V",
+    "session_title": "TTQS_0142_R08_R04_DEEPSEEK_REVIEW",
+    "timeout_seconds": 240
+  },
+  "provider_result": {
+    "error_type": "provider.free-limit",
+    "http_status": 429,
+    "retry_after_ms": 71650000,
+    "message": "Free usage limit reached. Connect a provider or subscribe to OpenCode Go to keep going, or switch models.",
+    "model_response_received": false,
+    "raw_stdout_bytes": 528,
+    "raw_stdout_sha256": "09e29df990ea27c5fe2c29f190dbbfe7517df4c4f64fe5cc3b90882e4861183d",
+    "raw_stdout_base64": "eyJ0eXBlIjoiZXJyb3IiLCJ0aW1lc3RhbXAiOjE3OTMyNDg4Mzc4MDUsInNlc3Npb25JRCI6InNlc19lN2EwYTQzMWNmZmV0SnpVYTFTN0NCVmY5ViIsImVycm9yIjp7InR5cGUiOiJwcm92aWRlci5mcmVlLWxpbWl0IiwibWVzc2FnZSI6IkZyZWUgdXNhZ2UgbGltaXQgcmVhY2hlZC4gQ29ubmVjdCBhIHByb3ZpZGVyIG9yIHN1YnNjcmliZSB0byBPcGVuQ29kZSBHbyB0byBrZWVwIGdvaW5nLCBvciBzd2l0Y2ggbW9kZWxzLiIsInN0YXR1cyI6NDI5LCJyZXNwb25zZSI6eyJib2R5Ijoie1widHlwZVwiOlwiZXJyb3JcIixcImVycm9yXCI6e1widHlwZVwiOlwiRnJlZVVzYWdlTGltaXRFcnJvclwiLFwibWVzc2FnZVwiOlwiRnJlZSB1c2FnZSBsaW1pdCByZWFjaGVkLiBGcmVlIG1vZGVscyB3b3JrIGluIE9wZW5Db2RlIChodHRwczovL29wZW5jb2RlLmFpKTsgc3Vic2NyaWJlIHRvIE9wZW5Db2RlIEdvIHRvIGtlZXAgZ29pbmc6IGh0dHBzOi8vb3BlbmNvZGUuYWkvZ29cIn19In0sInJldHJ5QWZ0ZXJNcyI6NzE2NTAwMDB9fQ0K",
+    "raw_stderr_bytes": 0,
+    "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw_stderr_base64": ""
+  },
+  "input_binding": {
+    "task_sha256": "e088db91ba8607feb7311dee48a108d1da5dcc020e053160f3f16f9329924b66",
+    "task_text": "TTQS ONE independent semantic review. Review ONLY the attached source packet, unique blueprint, exact candidate body extraction, SAMPLE replacement register, and lineage annex. The candidate is DOCX 0142 / I19-E32 / 157-index 156, exact DOCX SHA-256 7efc848ed18decf665c423c03d4784e681a5d911ae5185885f614b391d92cc78; body-extraction SHA-256 is recorded in INPUT_MANIFEST_R03.json. The source packet and blueprint predate this R08 candidate: their old-candidate statements are historical context, not the reviewed artifact.\n\nPerform an independent, full-body text review. Do not use tools, browse, open files, edit files, create files, or infer facts outside attached materials. Do not treat a builder's or previous reviewer's assertion as proof. Review:\n1. Exact official purpose and identity; no confusion with DOCX IDs or neighboring I19-E29/I19-E30/I19-E31 requirements.\n2. Correct financial-trend report genre and usable procedures/tables, source locators, account classification, three consecutive complete years, reconciliation, exceptions/HOLD and real-data replacement mechanics.\n3. All SAMPLE calculations, denominators, units, rounding, totals, annual changes and cumulative change; check consistency between body and CSV register. SAMPLE must never be presented as real association performance.\n4. REAL evidence boundary, non-profit revenue-account ambiguity, missing statements/ledger, signatures/approval, official score and formal acceptance. No fabricated source records, approvals, or conclusions.\n5. Candidate lineage assertions: distinguish exact known bytes from UNKNOWN original bytes/build dates; assess whether the body claims more provenance than the annex supports.\n6. Whether an evaluator or small volunteer association administrator can operate and audit the document; title-blind purpose; concrete rejection/hold conditions.\n\nReturn a JSON object only with fields: doc_id, requirement_id, candidate_sha256, reviewed_text_sha256, verdict (PASS/PARTIAL/FAIL), review_scope, criteria (array of {id, verdict, body_locator, rationale}), findings (array of {severity, body_locator, issue, required_change}), math_checks (array with formula/input/result/recalculation), sample_real_boundary, lineage_limitations, title_blind_identification, negative_neighbor_check, formal_acceptance (must remain NOT_GRANTED). Use exact body paragraph/table locators where available. Do not claim layout/visual inspection; that is a separate receipt. If evidence is missing, say UNKNOWN and identify whether it blocks semantic acceptance or only limits history.",
+    "source_review_packet_sha256": "1cecc18cced230bd92584d7eafa78c10e5262fe90fdd24b709a196f3a7c69bb3",
+    "source_review_packet_bytes": 67150,
+    "packet_existing_remote_path": "docs/ttqs-quality-20261016/quality-review/0142_I19-E32_R08_TARGETED_REPAIR_R01_20261028/review/opencode_glm53_exact_sha_review_r03_20261029/REVIEW_PACKET_R03.md"
+  },
+  "prior_cross_model_evidence": {
+    "requested_model": "opencode/glm-5.3-flash-free",
+    "provider_error_type": "provider.free-limit",
+    "http_status": 429,
+    "retry_after_ms": 72754000,
+    "raw_stdout_sha256": "628efc3aa0aac27763e476b5e8fb0c3e8cb87b35af45129498478f3797ec65b1",
+    "remote_evidence_path": "docs/ttqs-quality-20261016/quality-review/0142_I19-E32_R08_TARGETED_REPAIR_R01_20261028/review/opencode_glm53_exact_sha_review_r03_20261029/RAW_STDOUT_R03.jsonl"
+  },
+  "adjudication": {
+    "free_inference_route": "PAUSED_PENDING_RETRY_WINDOW_OR_NEW_PROVIDER_AVAILABILITY_EVIDENCE",
+    "scope": "OpenCode hosted free-model inference only; deterministic CLI inspection and all other document/source/QA lanes remain available",
+    "reason": "Two distinct requested free model IDs returned provider.free-limit HTTP 429; this attempt returned no answer. Do not switch to paid plans, silently fall back, or repeat before provider reset/new evidence.",
+    "no_purchase_or_paid_route_invoked": true
+  },
+  "candidate_recheck": {
+    "sha256_after_attempt": "7efc848ed18decf665c423c03d4784e681a5d911ae5185885f614b391d92cc78",
+    "unchanged": true
+  },
+  "timestamp_utc": "2026-10-29T04:42:31.612653+00:00"
+}
+
