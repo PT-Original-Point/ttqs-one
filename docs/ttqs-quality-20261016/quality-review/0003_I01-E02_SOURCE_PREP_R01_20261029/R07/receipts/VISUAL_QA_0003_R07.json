@@ -1,0 +1,47 @@
+{
+  "schema": "ttqs-one-visual-qa-v1",
+  "doc_id": "0003",
+  "requirement_id": "I01-E02",
+  "official_checkbox_serial": "002",
+  "candidate_sha256": "265DA610608EDC4A97C4C592C4C556D16DD5B8288C20F0CF46A8477436A05357",
+  "rendered_pdf_sha256": "FE3327340CF6FB9A02AB14F05B8F9A529354C5A66583F8A8DF06285E83D9D4C1",
+  "page_count": 5,
+  "page_images": [
+    {
+      "page": 1,
+      "sha256": "4479CA4CCD4BA65E22B3FBC2B23634CF5D7A92EB959ECF28526A2114F651C603"
+    },
+    {
+      "page": 2,
+      "sha256": "4FD1F8A95786A937C98B9E44715786271F185B401B5E9D5E191E447DCBFFD69F"
+    },
+    {
+      "page": 3,
+      "sha256": "145125A40E4E59C734047CFC1FCFCE7D9A9EB94B1DC07210D25235AA9682E1DA"
+    },
+    {
+      "page": 4,
+      "sha256": "3B5B7D2C9A6DEA91798D83D6A39C80FD6CCCEAF8A8D9E4E091B80C71BA4FE64F"
+    },
+    {
+      "page": 5,
+      "sha256": "3EF505CDDB50E3114C300355134EF69DE2DD05D5D085212E4066EF100A98820B"
+    }
+  ],
+  "review_scope": "Manual visual inspection of every Word-native rendered page image at 130 dpi",
+  "checks": {
+    "all_pages_present": true,
+    "section_heading_not_orphaned": true,
+    "q6_heading_prompt_and_answer_lines_together": true,
+    "q13_prompt_and_answer_lines_together": true,
+    "previous_nearly_blank_page_removed": true,
+    "synthetic_answer_table_and_codebook_readable": true,
+    "crosswalk_and_source_table_readable": true,
+    "no_observed_clipping_or_overlap": true,
+    "page5_density": "Dense source/crosswalk table; legible at rendered resolution; no clipping observed"
+  },
+  "reviewer": "Codex visual inspection; not independent semantic review",
+  "status": "PASS_VISUAL_ONLY",
+  "semantic_review": "PENDING_INDEPENDENT_EXACT_SHA",
+  "created_at": "2026-10-29T20:39:23.7437235+08:00"
+}
