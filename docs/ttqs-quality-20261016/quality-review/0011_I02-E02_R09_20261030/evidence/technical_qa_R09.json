@@ -1,0 +1,80 @@
+{
+  "receipt_id": "0011_I02-E02_R09_DETERMINISTIC_TECHNICAL_QA",
+  "observed_at_utc": "2026-10-29T17:32:06.375692+00:00",
+  "document_id": "0011",
+  "requirement_id": "I02-E02",
+  "artifact_state": "CANDIDATE_SAMPLE_SYNTHETIC_NOT_ACCEPTED",
+  "artifact_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0011_I02-E02_LUNA_TEXT_DRAFT_R01_20261029\\candidate\\0011_I02-E02_R09.docx",
+  "artifact_sha256": "b2e96abedac44af5ad343eaa4576d5819ee8e7373145f65d5a7258274481e2c9",
+  "artifact_bytes": 76102,
+  "official_requirement_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "blueprint_file_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+  "blueprint_row_exact_line_sha256": "115b34f20b7f8106f5aa45d06da39ecae99a85a75f5276b79970911b428b32ec",
+  "checks": {
+    "zip_integrity": true,
+    "python_docx_open": true,
+    "table_count_27": true,
+    "expected_fact_ids_F001_F083": true,
+    "no_empty_table_cells": true,
+    "body_min_font_10_5": true,
+    "table_min_font_9_5": true,
+    "formula_strings_present": true,
+    "roles_sum_12": true,
+    "sample_proportions_recomputed": true,
+    "weights_sum_100": true,
+    "weighted_matrix_recomputed": true,
+    "course_minutes_recomputed": true,
+    "sample_synthetic_boundary_visible": true,
+    "candidate_sha_matches_build_receipt": true,
+    "28_page_renders": true
+  },
+  "tables": 27,
+  "table_rows": 260,
+  "empty_cells": [],
+  "minimum_direct_run_font_pt": {
+    "body": 10.5,
+    "table": 9.5
+  },
+  "formula_recalculation": {
+    "role_counts": [
+      5,
+      4,
+      3
+    ],
+    "role_total": 12,
+    "demand_counts": [
+      9,
+      8,
+      7
+    ],
+    "percentages": [
+      75.0,
+      66.7,
+      58.3
+    ],
+    "weights": [
+      25,
+      25,
+      20,
+      15,
+      15
+    ],
+    "weights_total": 100,
+    "weighted_points": {
+      "A": 340,
+      "B": 430,
+      "C": 380
+    },
+    "standardized_scores": {
+      "A": 68.0,
+      "B": 86.0,
+      "C": 76.0
+    },
+    "course_minutes": 240
+  },
+  "fact_id_coverage": "F001-F083 present",
+  "semantic_review": "PENDING; OpenCode 429 cooldown route; no PASS asserted",
+  "visual_review": "RECORDED_SEPARATELY; all 28 pages directly inspected",
+  "formal_acceptance": "UNKNOWN",
+  "status": "TECHNICAL_PASS_SEMANTIC_PENDING"
+}
