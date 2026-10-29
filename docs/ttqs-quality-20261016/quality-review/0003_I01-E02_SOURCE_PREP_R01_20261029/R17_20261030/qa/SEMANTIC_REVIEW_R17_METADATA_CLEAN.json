@@ -1,0 +1,41 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0003",
+  "requirement_id": "I01-E02",
+  "revision": "R17",
+  "verdict": "PASS",
+  "status": "PASS_EXACT_SHA_SEMANTIC_DELTA_REVIEW",
+  "candidate_sha256": "206dce1d471ea5cdda2a6af15d65cc0c59c7909e55d8fe4475e0ad0b05507281",
+  "review_request_sha256": "05a2705b6636f4c9a2d634b9421cbaf02a56aa44881daafecc7f01e3d76b9dc7",
+  "original_response_sha256": "1810ed0c6c8d45a59b84a8a30935e83c4c4bbe1b059d42ff3090d209959d6f16",
+  "reviewer_context_id": "01a189e1-5e63-7451-9906-7846d11710c5",
+  "reviewer_route": "independent Codex multi-agent context; separate from Builder context",
+  "reviewer_model": "UNKNOWN",
+  "scope": [
+    "official I01-E02 mapping and crosswalk serial distinction",
+    "questionnaire genre and Q1-Q13 usability",
+    "R16 P2 defect closure: single-select, raw marks/reason retention, affected denominator exclusion",
+    "independent item retention",
+    "invalid-parent precedence",
+    "negative neighbors 0004 and 0005",
+    "SAMPLE/SYNTHETIC vs REAL boundary",
+    "unsupported approval/execution claims",
+    "exact candidate SHA and metadata-only OOXML delta"
+  ],
+  "evidence": [
+    "candidate exact SHA recalculated",
+    "DOCX package opened and ZIP integrity checked",
+    "only docProps/core.xml changed vs prior reviewed R17 bytes",
+    "word/document.xml byte-identical",
+    "lastModifiedBy blank",
+    "official PDF page 1 says 目標市場需求調查。",
+    "R03 Blueprint source hashes match source packet"
+  ],
+  "limitations": [
+    "Reviewer did not render or inspect Word visual layout; separate Word-native and 12-page pixel-identical visual receipts cover that scope.",
+    "No REAL field test, association decision, signature, or formal acceptance is established."
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "real_data_status": "UNKNOWN",
+  "candidate_state": "CANDIDATE"
+}
