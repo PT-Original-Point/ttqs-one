@@ -8,20 +8,20 @@
   "candidate_docx_sha256": "9e0cf56a96bd6139c6f90915e94ae820f9eb4fffed063b75c199b8da2e8965fe",
   "technical_status": "PASS_WITHIN_LISTED_DETERMINISTIC_SCOPE",
   "visual_status": "PASS_WITH_LAYOUT_NOTE",
-  "semantic_status": "PENDING_NOT_DISPATCHED_R04b; prior OpenCode R04 call was a 429 with no review response and was bound to predecessor text SHA",
+  "semantic_status": "PARTIAL exact candidate SHA 9e0cf56a96bd6139c6f90915e94ae820f9eb4fffed063b75c199b8da2e8965fe; independent reviewer found major SEM-01 prompt/rubric reproducibility conflict and moderate SEM-02 retest-version/scoped-locator defects. Full original response is preserved in evidence/CODEX_INDEPENDENT_REVIEW_R04b_ORIGINAL_RESPONSE.md.",
   "blueprint_scope": "PARTIAL/UNKNOWN preserved",
   "real_evidence": "UNKNOWN_NOT_PROVIDED",
   "formal_acceptance": "NOT_ACCEPTED",
   "public_log_redactions": [
     "ephemeral OpenCode sessionID omitted from public historical raw response; original remains in local evidence"
   ],
-  "file_count_excluding_this_manifest": 62,
-  "total_bytes_excluding_this_manifest": 8720423,
+  "file_count_excluding_this_manifest": 63,
+  "total_bytes_excluding_this_manifest": 8731864,
   "files": [
     {
       "path": "STATUS_R04b.md",
-      "bytes": 1316,
-      "sha256": "5ca8ef63c7c6ab61af1f0ee7640c0d172e83d67fc7f45e30089ad40b2d72d591"
+      "bytes": 2691,
+      "sha256": "5a14a43574df9349f7c3be3097b76345c5119c664a0ce7ac96051d9780301a45"
     },
     {
       "path": "candidate/0010_I02-E01_R04b.docx",
@@ -327,7 +327,24 @@
       "path": "source/SYNTHETIC_REGISTER_R04.md",
       "bytes": 28004,
       "sha256": "6a424099b25613ad930cfc638bcb846b4914294d092c01902a943229186deecc"
+    },
+    {
+      "path": "evidence/CODEX_INDEPENDENT_REVIEW_R04b_ORIGINAL_RESPONSE.md",
+      "bytes": 10066,
+      "sha256": "f45a7e50469e2d7d8f895f0b930709d71600bdce5ad980bdd13f9f34bf997988"
     }
   ],
-  "created_at_taipei": "2026-10-30T00:55:08+08:00"
+  "created_at_taipei": "2026-10-30T00:55:08+08:00",
+  "semantic_review": {
+    "reviewer": "independent Codex subagent",
+    "reviewed_at_utc": "2026-10-29T22:20:18Z",
+    "verdict": "PARTIAL",
+    "candidate_docx_sha256": "9e0cf56a96bd6139c6f90915e94ae820f9eb4fffed063b75c199b8da2e8965fe",
+    "candidate_sha256_before_review": "9e0cf56a96bd6139c6f90915e94ae820f9eb4fffed063b75c199b8da2e8965fe",
+    "candidate_sha256_after_review": "9e0cf56a96bd6139c6f90915e94ae820f9eb4fffed063b75c199b8da2e8965fe",
+    "original_response_path": "evidence/CODEX_INDEPENDENT_REVIEW_R04b_ORIGINAL_RESPONSE.md",
+    "original_response_sha256": "f45a7e50469e2d7d8f895f0b930709d71600bdce5ad980bdd13f9f34bf997988",
+    "visual_review": "NOT_PERFORMED",
+    "candidate_modified": false
+  }
 }
