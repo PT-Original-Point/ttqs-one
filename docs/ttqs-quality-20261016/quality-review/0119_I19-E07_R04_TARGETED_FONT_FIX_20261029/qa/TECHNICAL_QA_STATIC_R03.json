@@ -1,0 +1,52 @@
+{
+  "schema": "TTQS_ONE_0119_STATIC_TECHNICAL_QA_R03",
+  "doc_id": "0119",
+  "requirement_id": "I19-E07",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0119_I19-E07_SOURCE_PREP_R01_20261024\\R04_TARGETED_FONT_FIX_20261029\\0119__目標市場及顧客價值部分提升證據分析表_CANDIDATE_R02.docx",
+  "candidate_sha256": "201466977e84188e6a5fa58b7b345924fec9d707199102feafb62677f735c676",
+  "expected_sha256": "201466977e84188e6a5fa58b7b345924fec9d707199102feafb62677f735c676",
+  "candidate_bytes": 57287,
+  "docx_zip_crc": "PASS",
+  "python_docx_reopen": "PASS",
+  "paragraph_count": 123,
+  "nonblank_paragraph_count": 112,
+  "table_count": 9,
+  "body_min_font_pt": 10.5,
+  "table_min_font_pt": 9.5,
+  "unresolved_run_font_count": 0,
+  "number_checks": {
+    "market_baseline_8_20_40": true,
+    "market_compare_12_25_48": true,
+    "market_delta_8pp": true,
+    "value_baseline_10_16_62_5": true,
+    "value_compare_15_20_75": true,
+    "value_delta_12_5pp": true,
+    "baseline_response_16_20_80": true,
+    "compare_response_20_25_80": true
+  },
+  "arithmetic_recomputed": {
+    "market_baseline_pct": 40.0,
+    "market_compare_pct": 48.0,
+    "market_delta_pp": 8.0,
+    "value_baseline_pct": 62.5,
+    "value_compare_pct": 75.0,
+    "value_delta_pp": 12.5,
+    "response_baseline_pct": 80.0,
+    "response_compare_pct": 80.0
+  },
+  "sample_synthetic_marker_count": 51,
+  "register_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0119_I19-E07_SOURCE_PREP_R01_20261024\\R03_ANTIGRAVITY_WRITER_20261029\\0119_SYNTHETIC_REPLACEMENT_REGISTER_R01.csv",
+  "register_sha256": "dc32e9693ba80d00d03315519f221b8847d8fb5a49be4522a5500ee6e6387d29",
+  "register_row_count": 50,
+  "register_headers": [
+    "sample_id",
+    "location",
+    "synthetic_value_or_rule",
+    "intended_real_source",
+    "replacement_check"
+  ],
+  "register_identifier_unique_nonblank": true,
+  "errors": [],
+  "technical_result": "PASS_DETERMINISTIC_SCOPE",
+  "scope_limit": "Static package integrity, text presence, numeric token cross-check, table count, register row identity, and resolvable font sizes only. No visual inspection, independent semantic acceptance, official/Human acceptance, or REAL evidence is asserted."
+}

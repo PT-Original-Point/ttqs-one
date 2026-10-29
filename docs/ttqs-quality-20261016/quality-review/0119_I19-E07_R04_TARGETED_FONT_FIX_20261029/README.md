@@ -1,0 +1,8 @@
+# 0119 / I19-E07 — R04 targeted font repair
+
+- The source packet, unique Blueprint, and official page-8 requirement were read from the live PR #92 branch at `6349862f89fd7593321db804ebf0347ed29789dc`; their Git blob and raw SHA-256 bindings are in `evidence/SOURCE_READBACK_R01.json`.
+- R03 candidate SHA-256 `1d626fdbcceb06668777315b73535799b28aadd51e3b32bf3be010f35557e5c0` was rechecked locally. A deterministic static audit found one body run at 10 pt, below the 10.5 pt floor. The failing receipt is retained under `history/`.
+- R04 changes only that paragraph/run font from 10 to 10.5 pt. Text is unchanged and only `word/document.xml` differs inside the DOCX package. The new candidate SHA-256 is `201466977e84188e6a5fa58b7b345924fec9d707199102feafb62677f735c676`.
+- Static QA on R04: ZIP and python-docx reopen PASS; 9 tables; body/table minima 10.5/9.5 pt; 50 unique synthetic-register rows; the displayed market/customer-value arithmetic recomputes to 8/20=40%, 12/25=48%, +8.0 pp; 10/16=62.5%, 15/20=75%, +12.5 pp; response rates 16/20 and 20/25 are each 80%.
+- Visual QA is pending. At 08:56 TPE, 1.58 GB of 15.94 GB physical memory was free with 53 WINWORD automation processes; no new Word process was started. Independent exact-SHA semantic review is pending; OpenCode free-model calls returned provider free-limit 429 and Antigravity served-model identity is UNKNOWN.
+- Candidate only; REAL evidence remains UNKNOWN/HOLD and formal acceptance is NOT_GRANTED.
