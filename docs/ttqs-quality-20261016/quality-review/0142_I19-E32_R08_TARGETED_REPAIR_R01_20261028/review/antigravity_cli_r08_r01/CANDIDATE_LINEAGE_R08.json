@@ -15,7 +15,7 @@
   "parent_lineage_json_sha256": "26649bd598d3f57739dee7e353e51cf181264d446580445462a2f78c27c639bc",
   "parent_layoutfix_lineage_sha256": "f805ee51ee1a4a3b09d78eded51477e59f8a5bacd4ccf8a6e386dccb42a764e5",
   "lineage_annex_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0142_I19-E32_SOURCE_PREP_R01_20261025\\R06_STRUCTURAL_COMPLETION_R12_20261028\\R06_REVIEW\\R08_TARGETED_REPAIR_R01_20261028\\LINEAGE_CHAIN_0142_R08_TARGETED_REPAIR_R01.md",
-  "lineage_annex_sha256": "ef44a720a9857d6455c76a25496bbc4a6fe82eb2b634bc955f8bc28c94bf435c",
+  "lineage_annex_sha256": "0a2024f1b4c1a89ec1112ecfe1171e0f6209f70fa1155eaf16db37d648a09286",
   "source_packet_sha256": "e3e8b3a8ee1effe758608fee183440add4f37381988c5e352912b1a3d55c9e49",
   "unique_blueprint_sha256": "4841161d6e9aad3ace2a0b4ec4a5a3e1b7e92b68ff2b20f95e9edeae2b84070b",
   "official_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
@@ -24,7 +24,11 @@
       "revision": "R01 baseline",
       "candidate_sha256": "59f9b500eafd0b283a6df898d337e888da37cb6bcfc98cb180a6fd452b8034a6",
       "parent_sha256": "—",
-      "verification": "Hash recorded in parent lineage; original DOCX bytes not found in searched 0142 source tree, so not independently recomputed."
+      "verification": "Windows-local SHA-256 recomputed 2026-10-29 from WORK/CANDIDATES; 44,970 bytes; MATCH to recorded R01 hash. Actual build date remains UNKNOWN.",
+      "prior_verification_as_of_2026_10_28": "Hash recorded in parent lineage; original DOCX bytes not found in searched 0142 source tree, so not independently recomputed.",
+      "bytes": 44970,
+      "filesystem_mtime_observed_not_build_date": "2026-10-04T04:31:08+08:00",
+      "recorded_build_date": "UNKNOWN"
     },
     {
       "revision": "R03 selected table-cell margin",
@@ -225,5 +229,24 @@
     ],
     "R01_original_bytes": "NOT_FOUND_IN_SEARCHED_SOURCE_TREE",
     "docx_candidate_sha256_unchanged": "7efc848ed18decf665c423c03d4784e681a5d911ae5185885f614b391d92cc78"
-  }
+  },
+  "lineage_reconciliation_20261029": {
+    "observed_at": "2026-10-29T13:35:28+08:00",
+    "prior_observation": "R12 audit on 2026-10-28 recorded R01 bytes NOT_FOUND_IN_SEARCHED_SOURCE_TREE.",
+    "current_state": "FOUND_AND_SHA256_MATCHED",
+    "source_file_relative_path": "WORK/CANDIDATES/0142__組織近三年營業額與收入趨勢核對報告.docx",
+    "bytes": 44970,
+    "expected_historical_sha256": "59f9b500eafd0b283a6df898d337e888da37cb6bcfc98cb180a6fd452b8034a6",
+    "recomputed_sha256": "59f9b500eafd0b283a6df898d337e888da37cb6bcfc98cb180a6fd452b8034a6",
+    "sha256_match": true,
+    "filesystem_mtime_observed_not_build_date": "2026-10-04T04:31:08+08:00",
+    "recorded_build_date": "UNKNOWN",
+    "classification": "Historical SAMPLE/SYNTHETIC and not effective per the source packet for this exact SHA.",
+    "real_evidence": "UNKNOWN/HOLD",
+    "candidate_r08_sha256_before": "7efc848ed18decf665c423c03d4784e681a5d911ae5185885f614b391d92cc78",
+    "candidate_r08_sha256_after": "7efc848ed18decf665c423c03d4784e681a5d911ae5185885f614b391d92cc78",
+    "docx_bytes_changed": false,
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "lineage_annex_repository_path": "docs/ttqs-quality-20261016/quality-review/0142_I19-E32_R08_TARGETED_REPAIR_R01_20261028/evidence/LINEAGE_CHAIN_0142_R08_TARGETED_REPAIR_R01.md"
 }

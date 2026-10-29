@@ -5,7 +5,7 @@
   "requirement_id": "I19-E32",
   "candidate_sha256": "7efc848ed18decf665c423c03d4784e681a5d911ae5185885f614b391d92cc78",
   "candidate_status": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
-  "semantic_review_state": "PASS_TEXT_ONLY_EXACT_SHA; OVERALL_PARTIAL_DUE_LINEAGE_ROOT_UNKNOWN",
+  "semantic_review_state": "PASS_TEXT_ONLY_EXACT_SHA; LINEAGE_ROOT_BYTES_VERIFIED; OVERALL_PARTIAL_HISTORICAL_BUILD_DATE_UNKNOWN",
   "reviewer_response": {
     "route": "OpenCode v2 CLI",
     "requested_model": "opencode/glm-5.3-flash-free",
@@ -35,8 +35,8 @@
   },
   "scope_adjudication": {
     "overall": "PARTIAL",
-    "reason": "R02 independent text-only semantic review passed on the exact unchanged DOCX SHA and included the lineage annex and companion register. Overall remains PARTIAL because the original R01 DOCX bytes and build date are unavailable; the historical lineage root cannot be independently verified. Visual QA is separate and remains PASS 14/14.",
-    "F1": "PARTIAL; R01 bytes/build date unknown; selected-chain hashes except R01 locally recomputed; lineage annex updated with per-stage sizes, mtimes explicitly labeled as mtime, changes, and verification.",
+    "reason": "R02 independent text-only semantic review passed on the exact unchanged DOCX SHA. Follow-up local byte recovery verified the original R01 DOCX is 44,970 bytes and its recomputed SHA-256 matches the recorded historical R01 hash. The previously missing-byte lineage-root gap is resolved; the actual historical build date remains UNKNOWN because filesystem mtime is not build-date proof, so overall remains PARTIAL. Visual QA is separate and remains PASS 14/14.",
+    "F1": "PARTIAL; R01 bytes recovered and SHA-256 matched to the recorded historical hash; actual build date remains UNKNOWN. R12's 2026-10-28 missing-byte observation is retained as historical; selected-chain hashes are locally verified where source bytes are available.",
     "F2": "BODY_TEXT_SUPPORTED; control/version/build labels consistent at cover, section 7, F19, pending fresh exact-SHA semantic confirmation of scope-limited artifacts.",
     "F3": "BODY_TEXT_SUPPORTED; Table 12 separates roles and identifies SAMPLE accounting basis as unspecified; REAL requires source basis and review.",
     "F4": "BODY_AND_REGISTER_LOCALLY_VERIFIED; SAMPLE recalculation date 2026-10-28, REAL N/A/HOLD.",
@@ -50,7 +50,7 @@
   "official_score": "NOT_ASSIGNED",
   "docx_rebuilt": "NO",
   "docx_bytes_changed": "NO",
-  "next_action": "Keep the exact candidate unchanged; do not repeat the same review. Continue the next independently READY document stage. Preserve CANDIDATE, formal acceptance NOT_GRANTED, REAL UNKNOWN/HOLD, and lineage-root limitation.",
+  "next_action": "Keep R08 DOCX unchanged and do not repeat the same exact-SHA semantic review. R01 baseline bytes and recorded hash now match; historical build date remains UNKNOWN. Continue the next independently READY document stage. Preserve CANDIDATE, formal acceptance NOT_GRANTED, REAL UNKNOWN/HOLD, and official score NOT_ASSIGNED.",
   "prior_opencode_attempt": {
     "requested_model": "opencode/deepseek-v4.1-flash-free",
     "actual_model": "deepseek-v4.1-flash-free",
@@ -90,5 +90,19 @@
     }
   ],
   "latest_review_receipt": "review/opencode_glm53_exact_sha_review_r02/SEMANTIC_REVIEW_STATUS_R02.json",
-  "latest_review_response_sha256": "65341f80ac0a6205e33d6da74f834db6d1b7bd6fbd5a8ea3362681509533d271"
+  "latest_review_response_sha256": "65341f80ac0a6205e33d6da74f834db6d1b7bd6fbd5a8ea3362681509533d271",
+  "lineage_reconciliation_20261029": {
+    "source_file_relative_path": "WORK/CANDIDATES/0142__組織近三年營業額與收入趨勢核對報告.docx",
+    "bytes": 44970,
+    "sha256": "59f9b500eafd0b283a6df898d337e888da37cb6bcfc98cb180a6fd452b8034a6",
+    "expected_sha256": "59f9b500eafd0b283a6df898d337e888da37cb6bcfc98cb180a6fd452b8034a6",
+    "sha256_match": true,
+    "filesystem_mtime_observed_not_build_date": "2026-10-04T04:31:08+08:00",
+    "build_date": "UNKNOWN",
+    "observed_at": "2026-10-29T13:35:28+08:00",
+    "R08_candidate_sha256": "7efc848ed18decf665c423c03d4784e681a5d911ae5185885f614b391d92cc78",
+    "R08_docx_unchanged": true,
+    "semantic_review_repeated": false,
+    "formal_acceptance": "NOT_GRANTED"
+  }
 }

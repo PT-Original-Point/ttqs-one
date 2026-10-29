@@ -42,7 +42,7 @@ This table separates recorded build dates from filesystem timestamps. Filesystem
 
 | Stage | Revision/version label | Candidate SHA-256 | Bytes | Recorded build date | Filesystem mtime (not build-date proof) | Change type | Verifier/evidence |
 |---|---|---|---:|---|---|---|---|
-| R01 baseline | R01 baseline | 59f9b500eafd0b283a6df898d337e888da37cb6bcfc98cb180a6fd452b8034a6 | UNKNOWN | UNKNOWN | NOT_AVAILABLE | baseline candidate; original bytes absent from searched local source tree | No original binary; SHA exists only in historical parent lineage; not independently recomputed. |
+| R01 baseline | R01 baseline | 59f9b500eafd0b283a6df898d337e888da37cb6bcfc98cb180a6fd452b8034a6 | 44970 | UNKNOWN | 2026-10-04T04:31:08+08:00 (mtime; not build-date proof) | historical baseline DOCX found in WORK/CANDIDATES | Windows-local SHA-256 recomputed 2026-10-29; MATCH to recorded hash. Actual build date remains UNKNOWN. |
 | R03 selected table-cell margin | R03 | c731c94ec54ea2980564fd580907a291d7bd93a050933e28a3fde7643d15a861 | 44984 | UNKNOWN unless a separate build receipt proves it | 2026-10-27T23:19:38+08:00 | selected table-cell margin repair | Windows-local SHA-256 recomputed 2026-10-28T12:47:44+08:00; MATCH |
 | R04 selected table flow | R04 | e43ab1564e19d9cf024a57bebaf0bd8cf898fa364155800a404409d69fa5181c | 44991 | UNKNOWN unless a separate build receipt proves it | 2026-10-27T23:21:38+08:00 | table-flow repair | Windows-local SHA-256 recomputed 2026-10-28T12:47:44+08:00; MATCH |
 | R05 header contrast | R05 | a213a30cd949948f7ce8c2b5d76fc79b5fdcd90117f6fba77139af6660c5ab6e | 44998 | UNKNOWN unless a separate build receipt proves it | 2026-10-27T23:23:50+08:00 | header-contrast repair | Windows-local SHA-256 recomputed 2026-10-28T12:47:44+08:00; MATCH |
@@ -51,4 +51,13 @@ This table separates recorded build dates from filesystem timestamps. Filesystem
 | R07-LF01 layout-only repair | R07-LF01 | ac6f2820027a206a6cd3db284d923f4bad22d11d52ef8afb1e59d6ce4d19684f | 50156 | UNKNOWN unless a separate build receipt proves it | 2026-10-28T11:46:42+08:00 | remove one empty manual page-break paragraph; non-empty body/table text unchanged | Windows-local SHA-256 recomputed 2026-10-28T12:47:44+08:00; MATCH |
 | R08-TR01 targeted repair | content version 1.3/R08; build R08-TR01 | 7efc848ed18decf665c423c03d4784e681a5d911ae5185885f614b391d92cc78 | 53207 | UNKNOWN unless a separate build receipt proves it | 2026-10-28T12:03:08+08:00 | targeted repairs for prior F1-F6; no financial figures changed | Windows-local SHA-256 recomputed 2026-10-28T12:47:44+08:00; MATCH |
 
-R12 finding: the selected R01→R08 chain is recorded, but R01 bytes and build date remain UNKNOWN. Do not promote the historical R01 hash to a locally verified binary. This sidecar inventory does not change the R08 DOCX bytes.
+R12 finding (as observed 2026-10-28): the R01 bytes had not been found in the searched 0142 source tree and the historical hash was not independently recomputed. Follow-up on 2026-10-29 recovered the baseline DOCX and verified its SHA-256 against the recorded R01 hash. The recorded build date remains UNKNOWN; filesystem mtime is not build-date proof. R08 DOCX bytes did not change.
+## R01 baseline byte recovery follow-up (2026-10-29)
+
+- Observed at (Windows local time): 2026-10-29T13:35:28+08:00.
+- Recovered local file: WORK/CANDIDATES/0142__組織近三年營業額與收入趨勢核對報告.docx.
+- Byte count: 44,970.
+- Recomputed SHA-256: 59f9b500eafd0b283a6df898d337e888da37cb6bcfc98cb180a6fd452b8034a6; matches the R01 hash recorded in the prior lineage.
+- Filesystem last-write time: 2026-10-04T04:31:08+08:00; this is mtime only and does not establish the build date. Recorded build date remains UNKNOWN.
+- The source packet identifies this exact R01 hash as a historical SAMPLE/SYNTHETIC, not-effective document. No real financial source or acceptance is established by recovering these bytes.
+- This is a lineage-evidence correction only. The R08 candidate remains byte-identical at SHA-256 7efc848ed18decf665c423c03d4784e681a5d911ae5185885f614b391d92cc78; no DOCX rebuild or duplicate semantic review was performed.
