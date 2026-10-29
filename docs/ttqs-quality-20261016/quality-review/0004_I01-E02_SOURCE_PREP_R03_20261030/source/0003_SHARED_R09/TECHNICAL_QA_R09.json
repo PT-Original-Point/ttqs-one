@@ -1,0 +1,73 @@
+{
+  "qa_id": "TTQS-0003-R09_0005-R05_SCOPED_TECHNICAL_QA",
+  "status": "PASS",
+  "checks": {
+    "0003_docx_zip_integrity": true,
+    "0005_docx_zip_integrity": true,
+    "0003_map_has_q1_q13_one_row_each": true,
+    "0003_q2_exact_option_and_period": true,
+    "0003_q11_exact_exclusive_zero_category": true,
+    "0003_codebook_distinguishes_missing_declined_na_not_asked": true,
+    "0003_pilot_is_explicitly_unperformed": true,
+    "0003_scope_and_inclusion_exclusion_present": true,
+    "0003_no_unsupported_actual_approval_claim": true,
+    "0003_register_q2_exact": true,
+    "0003_register_q11_exact": true,
+    "0005_q2_sample_cross_reference": true,
+    "0005_q11_sample_exact": true,
+    "0005_no_old_wrong_q2_sample": true,
+    "0005_no_old_cross_bracket_q11_sample": true,
+    "0005_register_q2_linkage": true,
+    "0005_register_q11_linkage": true,
+    "0005_register_q2_count_linkage": true,
+    "0005_source_md_has_q2_q11_same_values": true,
+    "0005_math_anchor_80_percent": true,
+    "0005_math_anchor_50_percent": true,
+    "0005_math_anchor_25_percent": true,
+    "0005_math_anchor_urgency": true,
+    "0005_math_anchor_confidence": true,
+    "0005_build_date_not_sample_date": true,
+    "0003_normal_style_at_least_10_5": true,
+    "0005_normal_style_at_least_10_5": true,
+    "0003_table_direct_min_at_least_9_5": true,
+    "0005_table_direct_min_at_least_9_5": true,
+    "cross_doc_q2_q11_values_align": true
+  },
+  "metrics": {
+    "0003_paragraphs": 91,
+    "0003_tables": [
+      6,
+      14,
+      15,
+      12,
+      6,
+      7
+    ],
+    "0005_paragraphs": 82,
+    "0005_tables": [
+      7,
+      10,
+      9,
+      15,
+      4,
+      5,
+      5,
+      5,
+      5,
+      44
+    ],
+    "0003_normal_pt": 10.5,
+    "0005_normal_pt": 11.0,
+    "0003_table_direct_min_pt": 9.5,
+    "0005_table_direct_min_pt": 9.5,
+    "0003_body_direct_min_pt": 10.5,
+    "0005_body_direct_min_pt": 11.0
+  },
+  "artifacts": {
+    "0003_docx_sha256": "4bb761ca6e147dba0f9203566def6e971a50c58ebc17e2cc88a03804191eb1e7",
+    "0005_docx_sha256": "669c19fc710c9c26b43768e98ba8ba38a3db781a38fb5cd55449c71ba0c18e76",
+    "0005_markdown_sha256": "a9f9984ef645e9c42fa14164773554957c5077fb8a00d4440935a63235b66d18",
+    "0003_register_sha256": "d42bc10edd5ab60d6669732910aa27c932ff81afa8438960e728c99609d2784e"
+  },
+  "scope": "Deterministic structure, cross-document sample-value, register, key calculation, DOCX ZIP, and direct-font checks only. This is not an independent semantic review, native Word visual inspection, formal acceptance, or REAL evidence validation."
+}
