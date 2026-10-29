@@ -95,10 +95,17 @@
     ],
     "formal_acceptances": 0
   },
-  "remote_readback": "PENDING",
+  "remote_readback": {
+    "status": "PASS_EXACT_RAW_BYTES",
+    "head": "23cd6b554ba3021b29b9574eddb797d124057bd7",
+    "file_count": 13,
+    "method": "GitHub fetch_file base64 exact equality against local base64",
+    "receipt_path": "qa/GITHUB_RAW_BYTE_READBACK_R09.json",
+    "receipt_sha256": "245f5ba4d79413294f32ab970ebf8d3c6b5ecc5dfc7e62fa3c8231dc09916cfe"
+  },
   "created_at": "2026-10-29T18:01:12+08:00",
   "change_receipt": {
     "path": "qa/R09_CHANGE_RECEIPT.json",
     "sha256": "57de800978c16d29fc3ce3b225cb00325562f0f6812be3efb5e983ee31ddd649"
   }
-}\n
+}
