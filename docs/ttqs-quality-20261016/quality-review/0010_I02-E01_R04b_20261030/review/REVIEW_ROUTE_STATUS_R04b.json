@@ -1,0 +1,35 @@
+{
+  "receipt_type": "review_route_status_R04b",
+  "work_id": "TTQS-0010-I02-E01-R04b-SEMANTIC",
+  "doc_id": "0010",
+  "requirement_id": "I02-E01",
+  "candidate_sha256": "9e0cf56a96bd6139c6f90915e94ae820f9eb4fffed063b75c199b8da2e8965fe",
+  "review_packet_sha256": "c5d411a3e2aad76523fd759b3f88b15eaa7204c0d11a9dc3dd3099e27bbe74de",
+  "current_review_request_sha256": "f50a3743f4866693837e20f89c067442c568e56532664fc38b0a5ad225c9b887",
+  "route": "OpenCode v2 CLI opencode/deepseek-v4.1-flash-free",
+  "historical_attempt": {
+    "work_id": "TTQS-0010-I02-E01-R04-SEMANTIC",
+    "candidate_markdown_sha256": "131b703267feebfbef3ec49fc8aa9beaab2ded0818415e9e5d86771b84925d90",
+    "packet_sha256": "51654954edfe288f0442a1c100e6c192146fcdb126f01db5b66bea868e2ef9e6",
+    "exit_code": 1,
+    "stdout_sha256": "95e672d0ac3e85a7098bad40d232094cb410adda8ececfc9fe71e59d53925c73",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_bytes": 0,
+    "provider_error": {
+      "type": "provider.free-limit",
+      "message": "Free usage limit reached. Connect a provider or subscribe to OpenCode Go to keep going, or switch models.",
+      "status": 429,
+      "response": {
+        "body": "{\"type\":\"error\",\"error\":{\"type\":\"FreeUsageLimitError\",\"message\":\"Free usage limit reached. Free models work in OpenCode (https://opencode.ai); subscribe to OpenCode Go to keep going: https://opencode.ai/go\"}}"
+      },
+      "retryAfterMs": 30381000
+    },
+    "applies_to_R04b": false
+  },
+  "current_review_status": "PENDING_NOT_DISPATCHED_R04b",
+  "reason": "The prior single attempt was for predecessor R04, returned provider HTTP 429/free-limit with retryAfterMs=30381000 and no semantic response. Its packet was bound to an older text SHA; it cannot review R04b.",
+  "earliest_retry_after_utc": "2026-10-30T00:34:47.523612+00:00",
+  "same_input_retry_performed": false,
+  "fallback_or_paid_route_used": false,
+  "checked_at_taipei": "2026-10-30T00:53:52+08:00"
+}
