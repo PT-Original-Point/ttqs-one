@@ -1,0 +1,104 @@
+{
+  "schema": "TTQS_ONE_0119_R09_PUBLIC_EVIDENCE_INDEX",
+  "project_id": "TTQS_ONE",
+  "repository": "PT-Original-Point/ttqs-one",
+  "pull_request": 92,
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "base_head_before_sync": "37e5f7411d08f4f7da12ebd2cef41742c4da70cc",
+  "doc_id": "0119",
+  "official_requirement_id": "I19-E07",
+  "official_source": {
+    "file": "official_source_0108_r11.pdf",
+    "page": 8,
+    "sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "printed_checkbox_serial": "UNKNOWN_NOT_ASSERTED"
+  },
+  "checkbox_crosswalk": {
+    "157_list_ordinal": 131,
+    "listed_item": "I19-L2",
+    "meaning": "Ordinal 131 is a list position, not the official printed checkbox serial.",
+    "crosswalk_sha256": "1ddfbb608bcad25170683ddb42a1dbb27bafa6f1f35ff0498f1b8d75b24f0679",
+    "seed_sha256": "280783e0df4dc0b7aaaf4a8fbe826bc65e9ed9c683146eea1dfd25c0ae1c92e0"
+  },
+  "source": {
+    "source_packet_sha256": "935a5cbc91c7dadfdcd0d9f3a7a45f56dcc5013ee9dd81fef1cfedd6b5b73656",
+    "unique_blueprint_sha256": "d097c7491235e323ebca4a31ff147ee5be2e6e5f893041087fd3076664aa0473",
+    "remote_source_base_path": "docs/ttqs-quality-20261016/quality-review/0119_I19-E07_R08_HEADER_KEEP_REPAIR_20261029/source/",
+    "synthetic_register_rows": 50,
+    "synthetic_register_sha256": "dc32e9693ba80d00d03315519f221b8847d8fb5a49be4522a5500ee6e6387d29",
+    "synthetic_register_remote_path": "docs/ttqs-quality-20261016/quality-review/0119_I19-E07_R08_HEADER_KEEP_REPAIR_20261029/source/0119_SYNTHETIC_REPLACEMENT_REGISTER_R01.csv"
+  },
+  "candidate": {
+    "state": "CANDIDATE_ONLY",
+    "path": "docs/ttqs-quality-20261016/quality-review/0119_I19-E07_R09_STATUS_LABEL_FIX_20261029/candidate/0119_I19-E07_CANDIDATE_R07.docx",
+    "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0119_I19-E07_SOURCE_PREP_R01_20261024\\R09_STATUS_LABEL_FIX_20261029\\0119_I19-E07_CANDIDATE_R07.docx",
+    "sha256": "9c61f74ee95dd21fc0c069072bdca1baccf98d464e4330fa11b320f3e52766f7",
+    "change": "Only stale page-1 status label SOURCE_PREPARED changed to CANDIDATE; all other paragraphs/table cells unchanged."
+  },
+  "qa": {
+    "technical": {
+      "result": "PASS_TECHNICAL_DELTA",
+      "path": "qa/TECHNICAL_QA_R09.json",
+      "sha256": "fd06d565813a35d0a5ea3f54381379bf21005695b27e0aa0a1f2481d5d767b58"
+    },
+    "visual": {
+      "result": "PASS_SCOPED_DELTA_EXACT_SHA",
+      "path": "qa/VISUAL_QA_R09.json",
+      "sha256": "8e4dd2cc07e895c178107c0136612d64ba9f9663f911c3bd871c8568072d2688",
+      "pages": 14,
+      "page_1_directly_inspected": true,
+      "pages_2_to_14_pixel_identical_to_R08": true,
+      "word_com_cleanup_verification": "PASS",
+      "changed_page_png_path": "visual/page-01.png"
+    },
+    "formal_acceptance": "NOT_GRANTED",
+    "quality_ok": "NOT_YET; semantic and remote exact-byte gates pending."
+  },
+  "worker_review": {
+    "worker": "W1 OpenCode v2 CLI",
+    "work_id": "TTQS-0119-R09-SEMANTIC-REVIEW-20261029",
+    "requested_model": "opencode/glm-5.3-flash-free",
+    "session_metadata_model": "opencode/glm-5.3-flash-free",
+    "upstream_served_model": "UNKNOWN",
+    "session_id": "ses_e78e7bfedffe32Bdc8LvgnkEtd",
+    "http_status": 429,
+    "provider_error": "provider.free-limit",
+    "review_response": "NONE",
+    "token_usage": {
+      "input": 0,
+      "output": 0,
+      "cost": 0
+    },
+    "cli_exit": "UNKNOWN_WRAPPER_ABORTED_BEFORE_CAPTURE",
+    "dispatch_receipt_sha256": "00fb5ef08a156292cd947a151cbf2f902bff8f54a00184b1370cc29104239b75",
+    "sanitized_session_export_sha256": "6d3b93a9cd68a0c41d7cda8a97af4b7acffe87de6216cbe7e9eede8c9a79d055",
+    "review_packet_sha256": "18c7096774519825bb66af128efe875970d6388ebc62d30754780cba293c30ff"
+  },
+  "w2": {
+    "active_document_dispatch": false,
+    "last_headless_probe": "AGY_HEADLESS_OK",
+    "actual_served_model": "UNKNOWN",
+    "not_counted_as_document_work": true
+  },
+  "dashboard_at_sync_prep": {
+    "latest_local_candidates": 64,
+    "same_sha_three_gate_pass": 9,
+    "quality_ok": 7,
+    "quality_ok_doc_ids": [
+      "0115",
+      "0121",
+      "0122",
+      "0133",
+      "0135",
+      "0138",
+      "0139"
+    ],
+    "formal_acceptances": 0
+  },
+  "remote_readback": "PENDING",
+  "created_at": "2026-10-29T18:01:12+08:00",
+  "change_receipt": {
+    "path": "qa/R09_CHANGE_RECEIPT.json",
+    "sha256": "57de800978c16d29fc3ce3b225cb00325562f0f6812be3efb5e983ee31ddd649"
+  }
+}\n
