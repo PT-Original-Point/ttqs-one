@@ -1,0 +1,32 @@
+{
+  "work_id": "TTQS-0008-I01-E05-R03C-WORD-VISUAL-QA",
+  "doc_id": "0008",
+  "requirement_id": "I01-E05",
+  "status": "PASS_WITHIN_VISUAL_LAYOUT_SCOPE",
+  "observed_at_local": "2026-10-30T00:31:45.934593+08:00",
+  "candidate_docx_sha256": "39a41b63f2e7704d9b004923e8fbc9d9dadc54855e229646ccbf080e1e8a9487",
+  "rendered_pdf_sha256": "0142ac80bd551121b42b7f80da032c27120c17313c90f28cf1521bfcdffa292c",
+  "native_route": "Microsoft Word COM export; opened=true; exported=true",
+  "scope": {
+    "pdf_pages": 117,
+    "rendered_page_pngs": 117,
+    "contact_sheets": 30,
+    "pages_visually_inspected": 117,
+    "contact_sheets_visually_inspected": 30,
+    "representative_pages_zoomed": [
+      20,
+      116,
+      117
+    ]
+  },
+  "findings": [
+    "R03c corrected the previously observed SF fact_id wrapping in the wide source-evidence table; page 20 SF-00005 through SF-00009 each display on one line.",
+    "Inspected all 117 pages via 30 contact sheets; no clipping, overlap, missing table columns, unexpected blank pages, or illegible page breaks observed.",
+    "Pages 116-117 visibly preserve SAMPLE/SYNTHETIC, UNKNOWN/HOLD conditions, REAL replacement controls, and REJECT criteria."
+  ],
+  "layout_defect_repaired": "fact_id column increased from 0.70in to 0.90in while reducing the locator column to 4.35in; caption font raised from 10pt to 10.5pt to meet the minimum body font requirement.",
+  "scope_exclusions": [
+    "Visual inspection does not establish semantic completeness or formal acceptance.",
+    "Independent semantic review for this exact SHA remains PENDING."
+  ]
+}
