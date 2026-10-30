@@ -1,0 +1,176 @@
+{
+  "schema": "ttqs-one-candidate-audit-package-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0007",
+  "requirement_id": "I01-E04",
+  "revision": "R12",
+  "candidate_state": "CANDIDATE_SAMPLE_SYNTHETIC_NOT_FORMALLY_ACCEPTED",
+  "source_commit": "8ae86414cc5e8307ce6cfe50e4afd5674e824d45",
+  "candidate_sha256": "7e7509a2687396c4fa32a5bd8d8bf89691d8fb250026c96067eed74173f67f76",
+  "semantic_status": "PASS",
+  "semantic_scope": "Exact SHA; independent Codex subagent reviewer Avicenna; response and receipt included",
+  "visual_status": "PASS_WITHIN_VISUAL_SCOPE",
+  "visual_scope": "11 pages; 1 and 11 direct inspection, 2-10 inherited as pixel-identical; PDF/page images included",
+  "deterministic_status": "PASS_WITHIN_DETERMINISTIC_SCOPE",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "NOT_ASSERTED",
+  "worker_route_note": "OpenCode review attempt returned HTTP 429 and supplied no review result; it is not counted as semantic QA",
+  "files": [
+    {
+      "path": "candidate/0007_I01-E04_R12.docx",
+      "bytes": 55301,
+      "sha256": "7e7509a2687396c4fa32a5bd8d8bf89691d8fb250026c96067eed74173f67f76"
+    },
+    {
+      "path": "qa/build_docx_R12.py",
+      "bytes": 14657,
+      "sha256": "6b33e3eee44dc1e6d104f7de9359291a94ba5ca430bc8101423bb3163aca3811"
+    },
+    {
+      "path": "qa/build_receipt_R12.json",
+      "bytes": 2392,
+      "sha256": "d50d134b76d804885ae1a0187fbc5635d1737dc3697065536ce5c77d561fbd54"
+    },
+    {
+      "path": "qa/deterministic_qa_R12.json",
+      "bytes": 1149,
+      "sha256": "e17eb91f6c1f457fe2699af5676df7bf6a68230a244ba6ee4f309bd7d8dae3d5"
+    },
+    {
+      "path": "qa/deterministic_qa_R12.py",
+      "bytes": 4798,
+      "sha256": "9ae5ef305039577764f7356556dd64074a03e838e69b5e1f2f1276eaaed0eb94"
+    },
+    {
+      "path": "qa/independent_semantic_review_R12.md",
+      "bytes": 2883,
+      "sha256": "1a5a820916eccb5213e2fb268de770e3ba225925902cc49ede3a1a8194d83296"
+    },
+    {
+      "path": "qa/independent_semantic_review_receipt_R12.json",
+      "bytes": 1476,
+      "sha256": "9e8611f09c19ee86e592a0542395059eb7945587fec8f8773848070f8d83ed71"
+    },
+    {
+      "path": "qa/rasterize_word_pdf_R12.py",
+      "bytes": 1284,
+      "sha256": "6e62d4a541ba230bc248f931bc727885751dd681317b3781c87f4fc1f7b7ee42"
+    },
+    {
+      "path": "qa/render_word_R12.ps1",
+      "bytes": 4031,
+      "sha256": "203dc3bfe3933549822d8adf3ad2c3fbf2ebec074f68c87af8b8411de38d1d80"
+    },
+    {
+      "path": "qa/semantic_review_packet_R12.md",
+      "bytes": 97856,
+      "sha256": "89027043db722fb6d121b781aa9f954a09270a17b05c502cb73e68fd84cba00f"
+    },
+    {
+      "path": "qa/visual_qa_R12.json",
+      "bytes": 5048,
+      "sha256": "e29dbef9375bd14fa02bd1aadb40161937dd213123440acc43645ad11352bfb5"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1299,
+      "sha256": "bab18812af36f63a457e70921bd1470c477c8899d37d4a2c497f27d92f4a1fba"
+    },
+    {
+      "path": "render/page_image_manifest_R12.json",
+      "bytes": 2212,
+      "sha256": "cb7e293cfa17a9cf4028782532267de9b5a580243b608af205f763d66dfa8417"
+    },
+    {
+      "path": "render/page-01.png",
+      "bytes": 495169,
+      "sha256": "c4d020a4895598d7468605ec2cc747a043d9cae2bc02f06135e6a0494eb2eee1"
+    },
+    {
+      "path": "render/page-02.png",
+      "bytes": 505828,
+      "sha256": "2dcd625ea9d627827f8a71d9e11c7b0c0cc00775d8ff19a30d8d0d308b9095ad"
+    },
+    {
+      "path": "render/page-03.png",
+      "bytes": 443168,
+      "sha256": "c7eafb2a988812d45c3baa540659bafeefaa2235c0eec7fb5d8f71dad3c1f119"
+    },
+    {
+      "path": "render/page-04.png",
+      "bytes": 234714,
+      "sha256": "59a66a3429ed631553a8ce8015a0541e4805cf562455edd5a18f611a6b4afa4e"
+    },
+    {
+      "path": "render/page-05.png",
+      "bytes": 431327,
+      "sha256": "9697e480e16fd9b910ee41ddde1c20e57a8d2415a5ea8f59849e10ab57c73a85"
+    },
+    {
+      "path": "render/page-06.png",
+      "bytes": 392794,
+      "sha256": "a51103d950094fd094fd37af9f920a18a86be96d53125c728d74f4b24449147d"
+    },
+    {
+      "path": "render/page-07.png",
+      "bytes": 329040,
+      "sha256": "a1479fd89298c6c62fb4b53006edb65f56e043e5937a5b629632faf604dfc88f"
+    },
+    {
+      "path": "render/page-08.png",
+      "bytes": 371376,
+      "sha256": "64aa3734ac11ffbfd118006d80a780f063337b3ea124a949a7ed0d2a3ffdbefd"
+    },
+    {
+      "path": "render/page-09.png",
+      "bytes": 463782,
+      "sha256": "69882ba0e60485d947aee7a14e6110f5f0ff111196242386b71a37d4bfadc144"
+    },
+    {
+      "path": "render/page-10.png",
+      "bytes": 389265,
+      "sha256": "c74e61761e1fa956f0fd7127c2bc29723102fb8fb6774b30a9f1fcb460c3fe9f"
+    },
+    {
+      "path": "render/page-11.png",
+      "bytes": 400360,
+      "sha256": "f2b6c2b16b29c92d31c949ddd90d36323a646daa1f3aea882af3ae01d9519935"
+    },
+    {
+      "path": "render/word_render_R12.pdf",
+      "bytes": 585800,
+      "sha256": "f1699c26e8bbfa42f0d9a32620edb96d0fe69d47f2f532756b3083256d0b844f"
+    },
+    {
+      "path": "render/word_render_receipt_R12.json",
+      "bytes": 2064,
+      "sha256": "3ddad34fc4209a0b00216afcc2bb856a630dd6d3e3e5278a215adff122cc7e42"
+    },
+    {
+      "path": "source/candidate_body_extract_R12.txt",
+      "bytes": 25808,
+      "sha256": "904a472cb4a3ff3d642a139c0ab10d4597902c94b0dd3e969987c90e2331877e"
+    },
+    {
+      "path": "source/source_packet_R12.json",
+      "bytes": 10770,
+      "sha256": "f294f9df1d9b6bdc9029f4122c4034521491618861fce60eb5184b13f79a5b74"
+    },
+    {
+      "path": "source/synthetic_replacement_register_R12.csv",
+      "bytes": 59467,
+      "sha256": "9ee20afdcf4307e014ea05ad27742957c4438a6fdd51d5ea791d7b6c68d6c1e6"
+    },
+    {
+      "path": "source/word_source_R12.md",
+      "bytes": 26100,
+      "sha256": "8a7f5acd93a0b731c3baa82283dbb9fbcd887af4f24893f626f81cf408f3520b"
+    },
+    {
+      "path": "source/worker_analysis_report_R12.md",
+      "bytes": 26100,
+      "sha256": "8a7f5acd93a0b731c3baa82283dbb9fbcd887af4f24893f626f81cf408f3520b"
+    }
+  ],
+  "manifest_excludes_itself": true
+}
