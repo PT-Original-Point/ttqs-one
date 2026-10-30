@@ -1,0 +1,38 @@
+{
+  "schema": "TTQS_ONE_RENDER_ATTEMPT_RECEIPT_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0005",
+  "requirement_id": "I01-E02",
+  "revision": "R07",
+  "work_id": "TTQS-0005-WORD-NATIVE-RENDER-SAVEAS2-20261030-01",
+  "status": "TIMEOUT_RENDER_LANE_BLOCKED",
+  "method": "Microsoft Word COM SaveAs2 to PDF; candidate opened read-only",
+  "candidate_filename": "0005_I01-E02_R07.docx",
+  "candidate_sha256": "a36c501893bcb4d2dadaf0adfa7d8638df5e426650a8876182a8f83aebfa1a7c",
+  "candidate_unchanged": true,
+  "observed_at_taipei": "2026-10-30T20:39:57.0687826+08:00",
+  "elapsed_seconds": 201.5,
+  "attempts": [
+    {
+      "stage": "launcher",
+      "result": "FAILED_BEFORE_WORD_COM",
+      "detail": "The first PowerShell execution could not resolve Get-FileHash; a .NET SHA-256 implementation was used in the subsequent attempt."
+    },
+    {
+      "stage": "native_word_saveas2",
+      "result": "TIMEOUT",
+      "detail": "Word opened the candidate read-only. SaveAs2 did not return within 201.5 seconds."
+    }
+  ],
+  "pdf_created": false,
+  "page_images_created": false,
+  "visual_qa": "NOT_VERIFIED",
+  "owned_word_process_stopped": true,
+  "owned_process_ids": [
+    34172,
+    115052,
+    105900
+  ],
+  "blocker": "This exact Word export lane is blocked; do not repeat the same COM export method without a material method or configuration change.",
+  "scope": "Rendering receipt only; the candidate DOCX and prior technical and semantic evidence were not changed."
+}
