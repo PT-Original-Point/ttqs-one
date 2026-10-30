@@ -31,6 +31,11 @@
   "unchanged_image_inherited_pages": 50,
   "files": [
     {
+      "path": ".gitattributes",
+      "sha256": "8B9C3028D6467FF3BE7C793141927841D70F47F52D0590677438F488CA154992",
+      "bytes": 9
+    },
+    {
       "path": "candidate/0009_I01-E06_R07_R05.docx",
       "sha256": "5BDDF2FFDE8E3DEDCCE4723E46873AC3ABF2F307CB63E8ADE3E336B2F642FFDC",
       "bytes": 143022
@@ -81,6 +86,11 @@
       "bytes": 8511
     },
     {
+      "path": "render/word_native_r07_r05/WORD_RENDER_RECEIPT_R07_R05.json",
+      "sha256": "F734398B411CAA444C0A1D4AF8B237AF7F4AC38850586EF20A2FB177E8E919D4",
+      "bytes": 1809
+    },
+    {
       "path": "render/word_native_r07_r05/pages/page-08.png",
       "sha256": "ABE5B85948337F00D37C86B81A00C053B6E202598863F9855834EFC7D2302983",
       "bytes": 214027
@@ -104,11 +114,6 @@
       "path": "render/word_native_r07_r05/pages/page-24.png",
       "sha256": "2173C2BF1E3DE95CB7F15628AC17265BC30263AA557B91B82CAAAC2D5B0D4EDA",
       "bytes": 214239
-    },
-    {
-      "path": "render/word_native_r07_r05/WORD_RENDER_RECEIPT_R07_R05.json",
-      "sha256": "F734398B411CAA444C0A1D4AF8B237AF7F4AC38850586EF20A2FB177E8E919D4",
-      "bytes": 1809
     },
     {
       "path": "review/INDEPENDENT_REVIEW_INPUT_R07_R05.md",
@@ -150,5 +155,10 @@
       "sha256": "4D00595289266D8126E8E890FC9E503037ACC43D296C0A176DB5025EC01BC3F0",
       "bytes": 7406
     }
+  ],
+  "package_byte_policy": "Package-local .gitattributes sets -text so tracked audit source/evidence bytes retain exact local hashes.",
+  "manifest_exclusions": [
+    "README.md",
+    "PACKAGE_MANIFEST_R07_R05.json (self-reference)"
   ]
 }
