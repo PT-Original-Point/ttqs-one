@@ -1,0 +1,84 @@
+{
+  "receipt_id": "STATIC_CONTENT_QA_0004_R05",
+  "doc_id": "0004",
+  "requirement_id": "I01-E02",
+  "source_revision": "R04",
+  "candidate_revision": "R05",
+  "source_sha256": "cba7dc71696108970d570f03bb09d1f3385bb7493192582e658cd9cdbd81a165",
+  "candidate_sha256": "a391589d8511372141963b9dbde172889420ed5baa3c6513681e58530a03656e",
+  "register_sha256": "bbf6ec66d58cd93df63c90ecd611b6aae3e8587265890b33a5daf061c96ec3f9",
+  "checks": [
+    {
+      "name": "all_registered_ids_in_body",
+      "result": "PASS",
+      "detail": "104/104; missing=[]"
+    },
+    {
+      "name": "U004_outcome_register_alignment",
+      "result": "PASS",
+      "detail": "outcome exact enum"
+    },
+    {
+      "name": "U004_reason_register_alignment",
+      "result": "PASS",
+      "detail": "reason exact enum"
+    },
+    {
+      "name": "U005_consent_register_alignment",
+      "result": "PASS",
+      "detail": "consent exact enum"
+    },
+    {
+      "name": "rate_period_explicit",
+      "result": "PASS",
+      "detail": "shared period and cutoff"
+    },
+    {
+      "name": "suggested_roles_not_assigned",
+      "result": "PASS",
+      "detail": "Table 10 role header"
+    },
+    {
+      "name": "negative_neighbor_0001_0006",
+      "result": "PASS",
+      "detail": "purpose and genre boundaries"
+    },
+    {
+      "name": "R04_source_sha",
+      "result": "PASS",
+      "detail": "cba7dc71696108970d570f03bb09d1f3385bb7493192582e658cd9cdbd81a165"
+    },
+    {
+      "name": "register_sha",
+      "result": "PASS",
+      "detail": "bbf6ec66d58cd93df63c90ecd611b6aae3e8587265890b33a5daf061c96ec3f9"
+    },
+    {
+      "name": "flow_5=1+4",
+      "result": "PASS",
+      "detail": "5=1+4"
+    },
+    {
+      "name": "flow_4=2+1+1",
+      "result": "PASS",
+      "detail": "4=2+1+1"
+    },
+    {
+      "name": "flow_2=1+1",
+      "result": "PASS",
+      "detail": "2=1+1"
+    },
+    {
+      "name": "flow_3=2+1",
+      "result": "PASS",
+      "detail": "3=2+1"
+    }
+  ],
+  "passed": 13,
+  "total": 13,
+  "status": "PASS_DETERMINISTIC_CONTENT_CANDIDATE_ONLY",
+  "semantic_review": "PENDING_EXACT_SHA_R05",
+  "layout_visual": "NOT_CHECKED",
+  "docx": "NOT_BUILT",
+  "formal_acceptance": "UNKNOWN"
+}
