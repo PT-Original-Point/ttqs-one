@@ -1,0 +1,1 @@
+Review the attached exact-SHA packet only. Candidate SHA256 must be 3781cb4cb2d26625fb5676181f4faa4176ca0bb80e2e3fac518245bbdc42f97e. Return PASS, PARTIAL, or FAIL with criterion-by-criterion findings and concrete body locators. Do not use tools, edit files, claim visual inspection, or grant formal acceptance. If evidence is missing, state UNKNOWN.
