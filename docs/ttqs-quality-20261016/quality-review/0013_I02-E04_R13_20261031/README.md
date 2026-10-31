@@ -27,4 +27,3 @@ Status: `CANDIDATE_SAMPLE_SYNTHETIC_NOT_ACCEPTED`. This artifact is not associat
 - Independent semantic review of the exact R13 SHA: PENDING. Therefore this is not counted as a quality-accepted or formally accepted Word.
 
 The R12 OpenCode review attempt ended with HTTP 429 and has no verdict; it is not a review of R13. Do not reuse it as R13 acceptance.
-
