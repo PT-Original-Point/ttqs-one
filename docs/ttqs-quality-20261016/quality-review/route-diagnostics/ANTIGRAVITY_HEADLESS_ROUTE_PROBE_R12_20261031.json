@@ -1,0 +1,43 @@
+{
+  "schema": "TTQS_ONE_ANTIGRAVITY_HEADLESS_ROUTE_PROBE_R12_V1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-ANTIGRAVITY-HEADLESS-ROUTE-PROBE-20261031-01",
+  "observed_at_taipei": "2026-10-31T23:18:27.579796+08:00",
+  "cli_path": "%LOCALAPPDATA%\\agy\\bin\\agy.exe",
+  "cli_version": "1.4.12",
+  "requested_model": "gemini-3.8-flash-high",
+  "launch": "noninteractive hidden subprocess; isolated working directory; --mode plan --sandbox --output-format text; external timeout 60 seconds; single attempt",
+  "request_text": "Reply with exactly AGY_HEADLESS_OK. Do not use tools.",
+  "keyring_matching_target_present": true,
+  "tui_auth_current": "UNKNOWN_NO_CURRENT_TUI_READBACK",
+  "transcript_response_marker": "AGY_HEADLESS_OK",
+  "transcript_sha256": "91eb3761dba9db2a6c852bea011bc31446875ff34311c7af71765155c16ebc49",
+  "cli_log_sha256": "c16b93c03e87c1ae32120fc046e5db3daa5b4ae1244ccdc2fa33fa33c3e6cfc3",
+  "conversation_db_sha256": "634e7eaecab67ccae4c03797c211c300c95bce13c3d6d1adf170b5d072a8ec68",
+  "tool_events": 0,
+  "resolver_evidence": "CLI log line 1: requested model ID gemini-3.8-flash-high not in local config; defaulting to CCPA",
+  "actual_route": "CCPA_FALLBACK_CONFIRMED",
+  "gemini_route": "FAIL",
+  "headless_response": "RECEIVED_FROM_FALLBACK_ROUTE_NOT_GEMINI",
+  "test_exit_code": "UNKNOWN",
+  "capture_failure": "Runner aborted immediately after process start because PowerShell reserved automatic variable PID was assigned; stdout/stderr capture files were not written; same process later absent and transcript persisted; no retry performed.",
+  "token_usage": "UNKNOWN",
+  "status": "REJECTED_MODEL_FALLBACK_W2_REMAINS_PAUSED",
+  "candidate_docx_changed": false,
+  "review_dispatched": false,
+  "next_action": "Pause only Antigravity Gemini route; repair current CLI model configuration/provider mapping without OAuth reset or reinstall; verify route through an authorized read-only/native path before any document review.",
+  "evidence_artifacts": [
+    {
+      "name": "transcript_full.jsonl",
+      "sha256": "91eb3761dba9db2a6c852bea011bc31446875ff34311c7af71765155c16ebc49"
+    },
+    {
+      "name": "cli-20261031_231827.log",
+      "sha256": "c16b93c03e87c1ae32120fc046e5db3daa5b4ae1244ccdc2fa33fa33c3e6cfc3"
+    },
+    {
+      "name": "conversation database",
+      "sha256": "634e7eaecab67ccae4c03797c211c300c95bce13c3d6d1adf170b5d072a8ec68"
+    }
+  ]
+}
