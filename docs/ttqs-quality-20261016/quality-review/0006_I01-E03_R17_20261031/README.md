@@ -19,3 +19,7 @@ R17 僅修正七個合成事實的位置索引，並將兩處版本標記由 R16
 - REAL／核准：未主張；真實資料仍須由協會提供與核實。
 
 R17 產物由本機確定性索引修復及 Codex QA 組成；這次 R17 不是 W1 或 W2 成功撰稿的成果。`ARTIFACT_MANIFEST.json` 列出本資料夾每個檔案的 SHA-256。
+
+## 原始位元組保護
+本資料夾的 .gitattributes 停用文字換行轉換，避免 JSON／CSV／Markdown 收據在 Git 傳輸時被改寫；遠端 readback 逐檔比對原始 SHA-256。
+
