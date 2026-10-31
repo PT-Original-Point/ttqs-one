@@ -16,10 +16,10 @@
   "visual_manifest_sha256": "10e67cb03f3b70fa272006aff6c4ace3509f4d26dc02216b4c9f46b738f89361",
   "synthetic_register_sha256": "3f1c20c75beaf3504d748667face176c3efbbff8526f0bdd614c41d3a93f2401",
   "delta_review_response_sha256": "419d99753e9a7271b2dd00c6fa73b60d5bc44bfbabaad2223d8fa4595271f69f",
-  "semantic_status": "R24 full-body review PARTIAL baseline plus R25 exact-SHA paragraph-only PASS_DELTA; combined scope covers unchanged body plus repaired cover paragraph, not formal acceptance",
+  "semantic_status": "PASS_COMPOSITE_EXACT_SHA: R24 full-body PARTIAL baseline (sole cover-provenance finding) plus R25 exact-SHA PASS_DELTA; unchanged body/table scope independently hash-verified; OpenCode upstream model identity UNKNOWN. Not Human acceptance.",
   "actual_model": "UNKNOWN",
-  "word_visual_scope": "47-page Word-native PDF; R25 directly inspected changed pages 1-3; pages 4-47 byte-identical render inherited from R24 visual checks per manifest",
-  "next_gate": "GitHub exact-byte readback; Human formal acceptance remains NOT_GRANTED",
+  "word_visual_scope": "Scoped PASS: R25 pages 1-3 directly inspected; pages 4-47 byte-identical PNGs inherited from the R24 visual baseline; 47-page Word-native PDF exact SHA retained. Not a claim of 47 fresh direct page inspections.",
+  "next_gate": "Formal Human acceptance remains NOT_GRANTED; REAL thank-you letter remains NOT_RECEIVED. Candidate QA scope is complete, no formal promotion implied.",
   "files": [
     {
       "path": "candidate\\0103__I18-E10__感謝函取得與真偽查核工作紀錄_R25.docx",
@@ -130,6 +130,41 @@
       "path": "review\\R25_RAW_STDOUT.jsonl",
       "sha256": "aaa7039d45d9d951150730c6af86916e7a6b9530a23a41d8a1fcb4e3b7eef6af",
       "bytes": 4678
+    },
+    {
+      "path": "evidence\\0103_R25_SEMANTIC_REVIEW_COMPOSITE_ADJUDICATION.json",
+      "sha256": "e456c0e1d03b0855b062c3c3279a53fbe4fda21f99c4f56af321427aea649b86",
+      "bytes": 2495
+    },
+    {
+      "path": "evidence\\0103_R25_WORD_PAGE_RENDER_MANIFEST.json",
+      "sha256": "ee5680efe21675424837a9622e1efcb345b730a62bf95b3521fc0601e6e463be",
+      "bytes": 7416
+    },
+    {
+      "path": "evidence\\0103_R25_WORD_RENDER_RECEIPT.json",
+      "sha256": "9f1b40fab488d703b9a2eb8a55a680ea286bda22971b17fcb883c0c27cec0670",
+      "bytes": 1643
+    },
+    {
+      "path": "evidence\\0103_R25_VISUAL_REVIEW_RECEIPT.json",
+      "sha256": "e459e3e386cd155d0ac115274398a05f085a6e730582d68a66df79913accc16c",
+      "bytes": 1513
+    },
+    {
+      "path": "evidence\\0103_R25_GITHUB_RAW_BYTE_READBACK_RECEIPT.json",
+      "sha256": "b632e5ccc6b7c22461ce74a83fc1b831954d62091f5ae9199c8d8dfa86064c7b",
+      "bytes": 1371
     }
-  ]
+  ],
+  "semantic_status_before_reconciliation": "R24 full-body review PARTIAL baseline plus R25 exact-SHA paragraph-only PASS_DELTA; combined scope covers unchanged body plus repaired cover paragraph, not formal acceptance",
+  "github_readback": {
+    "verified_remote_head_before_evidence_commit": "69c69bded188932fa03a1939e509a44e1bb1ffe8",
+    "candidate_git_blob_sha1": "895899a535df9722377c428fee136c5e50b7f973",
+    "candidate_sha256": "0968cee79b351bf2293e7eee78b35adf9a3fbdede364dc8e660e632d59609d92",
+    "remote_path": "docs/ttqs-quality-20261016/quality-review/0103_I18-E10_R25_20261031/candidate/0103__I18-E10__感謝函取得與真偽查核工作紀錄_R25.docx",
+    "all_raw_byte_matches": true,
+    "mismatch_count": 0,
+    "readback_receipt": "evidence/0103_R25_GITHUB_RAW_BYTE_READBACK_RECEIPT.json"
+  }
 }

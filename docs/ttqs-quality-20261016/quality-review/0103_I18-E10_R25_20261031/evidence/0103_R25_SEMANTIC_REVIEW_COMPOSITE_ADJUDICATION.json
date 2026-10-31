@@ -1,0 +1,48 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0103",
+  "official_requirement_id": "I18-E10",
+  "unique_blueprint_index": 111,
+  "candidate_state": "CANDIDATE",
+  "candidate_sha256": "0968cee79b351bf2293e7eee78b35adf9a3fbdede364dc8e660e632d59609d92",
+  "source_packet_sha256": "05b94f0469fa5b03ec1b204adcd5bdadc9bd8ae22a7f1b67aa7e71dcd830aede",
+  "unique_blueprint_sha256": "c4f0c3b93373aaea7ba9af1e13da40af4c72eec01e2bdb0d41a8f4919b1b8f1c",
+  "schema": "ttqs-one-semantic-evidence-composite-v1",
+  "work_id": "TTQS_ONE_0103_R25_R24_BASELINE_R25_DELTA_COMPOSITE_01",
+  "adjudicated_semantic_status": "PASS_COMPOSITE_EXACT_SHA",
+  "reviewer_name": "W1 OpenCode v2 CLI; separate R24 full-baseline and R25 exact-SHA delta sessions",
+  "reviewer_role": "Independent semantic evidence composed with deterministic exact-byte scope verification",
+  "requested_model": "opencode/glm-5.3-flash-free",
+  "actual_model": "UNKNOWN_UPSTREAM_SERVING_IDENTITY",
+  "scope": "R24 full-body review found only one cover provenance blocker; R25 exact-SHA PASS_DELTA reviewed the repaired paragraph. Deterministic check confirms all other paragraphs and all tables unchanged.",
+  "baseline_verdict": "PARTIAL_SOLELY_FOR_REPAIRED_COVER_PROVENANCE_PARAGRAPH",
+  "delta_verdict": "PASS_DELTA",
+  "deterministic_scope_check": {
+    "paragraph_count": 284,
+    "changed_paragraph_indexes": [
+      3
+    ],
+    "all_other_paragraphs_identical": true,
+    "table_count": 26,
+    "all_table_cells_identical": true,
+    "changed_docx_package_parts": [
+      "word/document.xml"
+    ]
+  },
+  "reviewer_evidence": {
+    "r24_terminal_sha256": "933cf9d0b4f07c7402fe65d55496d4bbae726e0b8ad98d379098a59965d673ea",
+    "r24_response_sha256": "3dbe065bd4538369957bff3c5b03818664e15b632d6c7137c7a61de6a6b604ff",
+    "r25_repair_receipt_sha256": "276897ecfbd1d9425913e07f7fa0be5255b5c2b60c4e32b98414675f554e6068",
+    "r25_terminal_sha256": "93d5754cee7641c3312449e29ffa462b267bfb6bd8c8d7f43aa852d81bbe509c",
+    "r25_response_sha256": "419d99753e9a7271b2dd00c6fa73b60d5bc44bfbabaad2223d8fa4595271f69f"
+  },
+  "blocking_findings": [],
+  "model_identity": "UNKNOWN; no provider-serving identity claimed",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence_state": "NOT_PROVIDED",
+  "limitations": [
+    "No new full-body model review; composite covers the prior full-body baseline plus only the changed R25 paragraph.",
+    "No REAL letter received; no formal Human acceptance."
+  ],
+  "adjudicated_at": "2026-10-31T11:20:40+08:00"
+}
