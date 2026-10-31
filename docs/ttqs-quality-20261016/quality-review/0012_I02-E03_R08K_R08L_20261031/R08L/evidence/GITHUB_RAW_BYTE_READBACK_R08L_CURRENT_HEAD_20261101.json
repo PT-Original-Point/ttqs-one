@@ -1,0 +1,39 @@
+{
+  "schema": "ttqs-one-github-raw-byte-readback-v1",
+  "status": "VERIFIED_RAW_BYTE_READBACK",
+  "project_id": "TTQS_ONE",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "doc_id": "0012",
+  "requirement_id": "I02-E03",
+  "candidate_state": "CANDIDATE",
+  "candidate_revision": "R08L",
+  "candidate_sha256": "529bd78f6a0013ac1e42af2b2c0ee854db91d6ceea5925831420617037ea910f",
+  "semantic_review_verdict": "PASS",
+  "semantic_review_scope": "Full body and all 18 tables; exact R08K-to-R08L delta, official source p.1, Blueprint row, SAMPLE/REAL boundary, calculations, and negative-neighbor identity. Technical and visual QA are separate receipts.",
+  "reviewer": "Independent Codex subagent Euler",
+  "reviewer_model": "UNKNOWN",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "sample_boundary": "SAMPLE/SYNTHETIC only",
+  "readback_commit": "121e7accc3ae42b37af4561f96eb25c4a94e9c9c",
+  "head_after": "121e7accc3ae42b37af4561f96eb25c4a94e9c9c",
+  "observed_at_local": "2026-11-01T00:55:56+08:00",
+  "readback_method": "Fetched the DOCX from GitHub by immutable commit with encoding=base64; independently computed SHA-256 from decoded bytes with Node crypto and compared SHA-256, byte length, and Git blob SHA-1 against the local candidate.",
+  "expected_file_count": 1,
+  "verified_file_count": 1,
+  "errors": [],
+  "files": [
+    {
+      "doc_id": "0012",
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0012_I02-E03_R08K_R08L_20261031/R08L/candidate/0012_I02-E03_R08L.docx",
+      "local_sha256": "529bd78f6a0013ac1e42af2b2c0ee854db91d6ceea5925831420617037ea910f",
+      "remote_sha256": "529bd78f6a0013ac1e42af2b2c0ee854db91d6ceea5925831420617037ea910f",
+      "local_bytes": 77743,
+      "remote_bytes": 77743,
+      "local_git_blob_sha1": "44cfd74e6eb5d37d71ce91ea380f0afd7f010005",
+      "remote_git_blob_sha1": "44cfd74e6eb5d37d71ce91ea380f0afd7f010005",
+      "exact_byte_match": true
+    }
+  ]
+}
