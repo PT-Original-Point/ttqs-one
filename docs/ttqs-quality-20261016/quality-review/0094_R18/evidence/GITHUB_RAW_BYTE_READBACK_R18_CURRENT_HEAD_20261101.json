@@ -1,0 +1,38 @@
+{
+  "schema": "ttqs-one-github-raw-byte-readback-v1",
+  "status": "VERIFIED_RAW_BYTE_READBACK",
+  "project_id": "TTQS_ONE",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "doc_id": "0094",
+  "candidate_state": "CANDIDATE",
+  "candidate_revision": "R18",
+  "candidate_sha256": "ecf9717cdc7f7785ed6c7b18b9dd8e29af21a5b2641e13acf3b4b813371b5e18",
+  "semantic_review_verdict": "PASS_TEXT_ONLY_EXACT_SHA",
+  "semantic_review_scope": "Reviewed supplied text and packet; reviewer did not open DOCX bytes or inspect pages. Candidate is not formally accepted.",
+  "reviewer": "reviewer_route=OpenCode CLI v2.0.32; requested_model=opencode/nemotron-3-ultra-free; actual_serving_model=UNKNOWN; text-only exact-candidate review",
+  "reviewer_model": "UNKNOWN",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "sample_boundary": "SAMPLE/SYNTHETIC only",
+  "readback_commit": "7e88a61905625eab96575f37dc8d4a185e11c7ea",
+  "head_after": "7e88a61905625eab96575f37dc8d4a185e11c7ea",
+  "observed_at_local": "2026-11-01T01:12:13+08:00",
+  "readback_method": "Fetched DOCX at the immutable live PR branch commit via GitHub connector as base64; Node crypto computed SHA-256 and Git blob SHA-1 and compared remote bytes and size against the Windows local candidate.",
+  "expected_file_count": 1,
+  "verified_file_count": 1,
+  "errors": [],
+  "files": [
+    {
+      "doc_id": "0094",
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0094_R18/0094_R18_CANDIDATE.docx",
+      "local_sha256": "ecf9717cdc7f7785ed6c7b18b9dd8e29af21a5b2641e13acf3b4b813371b5e18",
+      "remote_sha256": "ecf9717cdc7f7785ed6c7b18b9dd8e29af21a5b2641e13acf3b4b813371b5e18",
+      "local_bytes": 69447,
+      "remote_bytes": 69447,
+      "local_git_blob_sha1": "1b4c958814b6d86da7e5372245b65c2c3d0d417d",
+      "remote_git_blob_sha1": "1b4c958814b6d86da7e5372245b65c2c3d0d417d",
+      "exact_byte_match": true
+    }
+  ]
+}
