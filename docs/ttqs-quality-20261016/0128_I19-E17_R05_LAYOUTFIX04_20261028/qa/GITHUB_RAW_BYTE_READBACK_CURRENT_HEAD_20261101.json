@@ -4,44 +4,44 @@
   "doc_id": "0128",
   "official_requirement_id": "I19-E17",
   "revision": "R05_LAYOUTFIX04",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "readback_status": "PASS_RAW_BYTE_READBACK",
   "status": "PASS_RAW_BYTE_READBACK",
-  "observed_at_tpe": "2026-11-01T00:23:16+08:00",
-  "source": {
-    "repository": "PT-Original-Point/ttqs-one",
-    "pull_request": 92,
-    "branch": "work/ttqs-one-document-quality-contract-20261016",
-    "verified_head": "dbc223d72a7bcd3ed6a749ed9896864445f27fd2"
-  },
-  "candidate": {
-    "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0128_I19-E17_SOURCE_PREP_R01_20261024\\candidate\\github_package_0128_R05_LAYOUTFIX04\\candidate\\0128_I19-E17_R05_LAYOUTFIX04_CANDIDATE.docx",
-    "remote_path": "docs/ttqs-quality-20261016/0128_I19-E17_R05_LAYOUTFIX04_20261028/candidate/0128_I19-E17_R05_LAYOUTFIX04_CANDIDATE.docx",
-    "bytes": 56424,
-    "local_sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
-    "remote_sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
-    "github_blob_sha1": "1160585000f35885663da8d3f28fbec591a1ba07",
-    "raw_byte_match": true
-  },
-  "quality_evidence": {
-    "technical": {
-      "verdict": "PASS",
-      "receipt_sha256": "4fab62c4a7095d6bde96c22359bf49f96f387aa47d2b12ec255ddea8513c69ee"
-    },
-    "visual": {
-      "verdict": "PASS",
-      "coverage": "13/13 pages; 9,12,13 re-inspected",
-      "receipt_sha256": "bb4eb08e5ccb771b7333d03e15f39926a31578abfe27b005b2c4613f7556e290"
-    },
-    "semantic": {
-      "verdict": "PASS_TEXT_ONLY_EXACT_SHA",
-      "work_id": "TTQS-0128-I19-E17-SEMANTIC-REVIEW-R06",
-      "receipt_sha256": "450260ef904e397fff0ec8a6e91162836c0e265dc9c9149cffbb756897d82c12",
-      "bound_docx_sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
-      "requested_model": "gemini-3.8-flash-high",
-      "actual_served_model": "UNKNOWN",
-      "token_usage": "UNKNOWN"
+  "observed_at_local": "2026-11-01T00:26:01+08:00",
+  "readback_commit": "9f399094cf872298bd0f4aa723974472faf20a0a",
+  "head_after": "9f399094cf872298bd0f4aa723974472faf20a0a",
+  "verified_head_after": "9f399094cf872298bd0f4aa723974472faf20a0a",
+  "candidate_sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
+  "expected_file_count": 1,
+  "verified_file_count": 1,
+  "exact_byte_match": true,
+  "errors": [],
+  "files": [
+    {
+      "doc_id": "0128",
+      "remote_path": "docs/ttqs-quality-20261016/0128_I19-E17_R05_LAYOUTFIX04_20261028/candidate/0128_I19-E17_R05_LAYOUTFIX04_CANDIDATE.docx",
+      "local_sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
+      "remote_sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
+      "local_bytes": 56424,
+      "remote_bytes": 56424,
+      "exact_byte_match": true,
+      "local_git_blob_sha1": "1160585000f35885663da8d3f28fbec591a1ba07",
+      "remote_git_blob_sha1": "1160585000f35885663da8d3f28fbec591a1ba07"
     }
-  },
-  "truth_boundary": {
+  ],
+  "quality_evidence": {
+    "technical_status": "PASS",
+    "technical_receipt_sha256": "4fab62c4a7095d6bde96c22359bf49f96f387aa47d2b12ec255ddea8513c69ee",
+    "visual_status": "PASS",
+    "visual_coverage": "13/13 pages; pages 9,12,13 re-inspected",
+    "visual_receipt_sha256": "bb4eb08e5ccb771b7333d03e15f39926a31578abfe27b005b2c4613f7556e290",
+    "semantic_status": "PASS_TEXT_ONLY_EXACT_SHA",
+    "semantic_review_receipt_sha256": "450260ef904e397fff0ec8a6e91162836c0e265dc9c9149cffbb756897d82c12",
+    "semantic_candidate_sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_served_model": "UNKNOWN",
+    "token_usage": "UNKNOWN",
     "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
     "real_evidence": "UNKNOWN_UNTIL_SOURCE",
     "formal_acceptance": "NOT_GRANTED"
