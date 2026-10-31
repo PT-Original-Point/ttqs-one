@@ -1,0 +1,59 @@
+{
+  "schema": "TTQS_ONE_DOCX_FONT_FLOOR_AUDIT_R12_V1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS_ONE_0121_R12_FONT_FLOOR_AUDIT_20261031",
+  "observed_at_taipei": "2026-10-31T23:13:22.846200+08:00",
+  "doc_id": "0121",
+  "requirement_id": "I19-E09",
+  "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0121_I19-E09_SOURCE_PREP_R01_20261024\\candidate_R04\\0121_I19-E09_R04.docx",
+  "candidate_bytes": 73687,
+  "candidate_sha256": "a80535a46b457404c8c1bf93404b124ce6d74c53f653cf0b3dfa128ec82c6e89",
+  "source_packet_sha256": "fbeb11b96648fff29a49a0fca74bf0cc3b3d1d29934f07dfaa3cf7e410a557fd",
+  "unique_blueprint_sha256": "99320fdc9078615ad04087c43bcbd22c5bbf751a22127c51e048e909726a5fca",
+  "technical_receipt_sha256": "6a3c8e36780960c65db054aa9d6a87b9b9a29ddb3b0a0e5caa6b76979014306c",
+  "visual_receipt_sha256": "7e6b8c22b25ec29b6376c619ca045c0a25ff73bf1e93f341c5d7fbf92928d1d2",
+  "semantic_receipt_sha256": "de2c4e06175ca471fc9ce22979719d62ca62d7674a1e6eef63a2ea72147eaf32",
+  "audit_script_sha256": "efcbcd45a453d5cd5f4da3d914a1ae54a6079e076390eab5998ed96155a7fb30",
+  "method": "Resolve w:sz and w:szCs independently by direct run properties, character-style inheritance, paragraph-style inheritance, then document defaults; inspect text-bearing body paragraphs and all top-level/nested table cells; no DOCX write operation.",
+  "body": {
+    "floor_pt": 10.5,
+    "run_size_channels_checked": 518,
+    "unresolved_channel_count": 0,
+    "minimum_effective_pt": 10.5,
+    "below_floor_count": 0,
+    "below_floor_examples": [],
+    "resolved_from": {
+      "paragraph_style:Title": 2,
+      "paragraph_style:Normal": 1,
+      "document_defaults": 223,
+      "run": 257,
+      "paragraph_style:Heading1": 12,
+      "paragraph_style:Heading2": 23
+    }
+  },
+  "tables": {
+    "floor_pt": 9.5,
+    "run_size_channels_checked": 2066,
+    "unresolved_channel_count": 0,
+    "minimum_effective_pt": 9.5,
+    "below_floor_count": 0,
+    "below_floor_examples": [],
+    "resolved_from": {
+      "run": 1028,
+      "document_defaults": 1033,
+      "paragraph_style:Normal": 5
+    }
+  },
+  "github_raw_readback": {
+    "repository": "PT-Original-Point/ttqs-one",
+    "commit": "bb5b428a0003b4483b5631a3e15590995d9765b1",
+    "path": "docs/ttqs-quality-20261016/0121_I19-E09_R04_CANDIDATE_20261028/0121_I19-E09_R04.docx",
+    "blob_sha1": "b7c58c5fbef0a5e6ed0eb99392a8d6caeedb49a2",
+    "raw_sha256": "a80535a46b457404c8c1bf93404b124ce6d74c53f653cf0b3dfa128ec82c6e89",
+    "exact_local_remote_match": true
+  },
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "NOT_ASSERTED",
+  "status": "PASS_WITHIN_FONT_FLOOR_SCOPE"
+}
