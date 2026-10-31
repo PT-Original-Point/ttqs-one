@@ -1,0 +1,79 @@
+{
+  "receipt_id": "TTQS_ONE_0006_I01-E03_R17_SCOPED_REGISTER_POINTER_REPAIR",
+  "work_id": "TTQS-0006-R17-REGISTER-POINTER-REPAIR-20261031-01",
+  "observed_at_local": "2026-10-31T21:16:12+08:00",
+  "doc_id": "0006",
+  "requirement_id": "I01-E03",
+  "parent_candidate_path": "candidate/0006_I01-E03_R16.docx",
+  "parent_candidate_sha256": "064acaf269090da55a79dcb44faebfcdd7baac414f8b2f115fd299e5b21c3453",
+  "candidate_path": "candidate/0006_I01-E03_R17.docx",
+  "candidate_sha256": "7d40b9e4ddc85a1fbbc246212db3cdab5196b136fc63016540eac6fec6e53aef",
+  "candidate_bytes": 88421,
+  "finding_source": "R16 independent semantic review, PARTIAL, Lovelace; exact SHA bound",
+  "finding_locator": "Table 20 rows 46–47 and 69–70; Table 21 rows 7–9",
+  "change_scope": "Corrected only seven synthetic fact-register location pointers; updated the two visible revision labels R16→R17. No substantive narrative, tables, calculations, facts, or decisions changed.",
+  "register_pointer_changes": [
+    {
+      "fact_id": "SF-045",
+      "before": "所在位置：§8、§10.2\n合成來源／推導：假設為 C02 首次課前 T-30，不是實際會議",
+      "after": "所在位置：§8.1／表12、§10.3／表16\n合成來源／推導：假設為 C02 首次課前 T-30，不是實際會議"
+    },
+    {
+      "fact_id": "SF-046",
+      "before": "所在位置：§8、§10.2\n合成來源／推導：假設為 T-10 及後續覆核日期",
+      "after": "所在位置：§8.1／表12、§10.3／表16\n合成來源／推導：假設為 T-10 及後續覆核日期"
+    },
+    {
+      "fact_id": "SF-068",
+      "before": "所在位置：§10.2\n合成來源／推導：本草稿內部索引，不是組織紀錄",
+      "after": "所在位置：§10.3／表16\n合成來源／推導：本草稿內部索引，不是組織紀錄"
+    },
+    {
+      "fact_id": "SF-069",
+      "before": "所在位置：§9、§10.1、§10.2\n合成來源／推導：條件式示範，目前可核對資料沒有任何講師原件",
+      "after": "所在位置：§9、§10.1、§10.3／表16\n合成來源／推導：條件式示範，目前可核對資料沒有任何講師原件"
+    },
+    {
+      "fact_id": "SF-077",
+      "before": "所在位置：§8、§10.2\n合成來源／推導：假設檢核日，採 Asia/Taipei 日曆日期；非實際會議",
+      "after": "所在位置：§8.1／表12、§10.3／表16\n合成來源／推導：假設檢核日，採 Asia/Taipei 日曆日期；非實際會議"
+    },
+    {
+      "fact_id": "SF-078",
+      "before": "所在位置：§8、§10.2\n合成來源／推導：相對 C02 首次課程日期的示例日",
+      "after": "所在位置：§8.1／表12、§10.3／表16\n合成來源／推導：相對 C02 首次課程日期的示例日"
+    },
+    {
+      "fact_id": "SF-079",
+      "before": "所在位置：§8、§10.2\n合成來源／推導：假設覆核日，非實際覆核",
+      "after": "所在位置：§8.1／表12、§10.3／表16\n合成來源／推導：假設覆核日，非實際覆核"
+    }
+  ],
+  "version_label_changes": [
+    {
+      "table_index": 0,
+      "row_index": 3,
+      "cell_index": 1,
+      "before": "R16；SAMPLE／SYNTHETIC 草案，尚待協會依實際權責審議；不是已核定計畫。",
+      "after": "R17；SAMPLE／SYNTHETIC 草案，尚待協會依實際權責審議；不是已核定計畫。"
+    },
+    {
+      "table_index": 15,
+      "row_index": 7,
+      "cell_index": 1,
+      "before": "課程索引 C02 為 SAMPLE；本文件版本為 R16 SAMPLE 草案。未有核定課綱版次，課綱版次 N/A。示例日期採 Asia/Taipei 日曆日期；T-30／T-10 為相對首次課程日的日數，不是會議時間。",
+      "after": "課程索引 C02 為 SAMPLE；本文件版本為 R17 SAMPLE 草案。未有核定課綱版次，課綱版次 N/A。示例日期採 Asia/Taipei 日曆日期；T-30／T-10 為相對首次課程日的日數，不是會議時間。"
+    }
+  ],
+  "post_save_reference_readback": {
+    "SF-045": "所在位置：§8.1／表12、§10.3／表16",
+    "SF-046": "所在位置：§8.1／表12、§10.3／表16",
+    "SF-068": "所在位置：§10.3／表16",
+    "SF-069": "所在位置：§9、§10.1、§10.3／表16",
+    "SF-077": "所在位置：§8.1／表12、§10.3／表16",
+    "SF-078": "所在位置：§8.1／表12、§10.3／表16",
+    "SF-079": "所在位置：§8.1／表12、§10.3／表16"
+  },
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "NOT_ASSERTED"
+}
