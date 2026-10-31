@@ -3,17 +3,12 @@
   "doc_id": "0013",
   "requirement_id": "I02-E04",
   "revision": "R13",
-  "state": "CANDIDATE_SAMPLE_SYNTHETIC_NOT_ACCEPTED",
+  "state": "CANDIDATE_SAMPLE_SYNTHETIC_QUALITY_QA_PASS_NOT_ACCEPTED",
   "candidate_sha256": "bf13360703574a7e310864135dcb667314387462678ab8db12d63a0fe79ae31d",
   "source_candidate_sha256": "978672ae999bbcb1a71137739428ae6d37ce475b96eb59abc8d939d3cbcdc260",
-  "independent_semantic_review": "PENDING",
+  "independent_semantic_review": "PASS_TEXT_ONLY_EXACT_SHA",
   "formal_acceptance": "NOT_ACCEPTED",
   "files": [
-    {
-      "path": "README.md",
-      "bytes": 2273,
-      "sha256": "f6c12159dbf6046cdad65027ae27f64d9ffa6f8dea22684de2794ded51d6b366"
-    },
     {
       "path": "candidate/0013_I02-E04_R13.docx",
       "bytes": 67659,
@@ -53,6 +48,24 @@
       "path": "WORD_NATIVE_EXPORT_R13.json",
       "bytes": 565,
       "sha256": "bd1372ef73d4e1a93a6581b0ddc47ec781e8512eee3757efacd5ef9a79288e5d"
+    },
+    {
+      "sha256": "6cee0e569fb647b0c40c312d408ea42706ea0966f2f0b349134eadc79a302af3",
+      "path": "README.md",
+      "bytes": 2554
+    },
+    {
+      "sha256": "bc3639862d44b75763cb5d7e510012a29bea301c0d5d7bd556ab074e5afdc0df",
+      "path": "evidence/INDEPENDENT_SEMANTIC_REVIEW_R13_20261031.md",
+      "bytes": 4180
+    },
+    {
+      "sha256": "8656b1eb9f5869a935a8c78ceff784e493413a37aa3d421b095182f3fb613279",
+      "path": "evidence/SEMANTIC_ADJUDICATION_R13.json",
+      "bytes": 2483
     }
-  ]
+  ],
+  "semantic_review_scope": "154 body/table items; semantic/usability only; independent Codex reviewer; no REAL evidence or formal acceptance",
+  "semantic_review_candidate_sha256": "bf13360703574a7e310864135dcb667314387462678ab8db12d63a0fe79ae31d",
+  "semantic_adjudication_sha256": "8656b1eb9f5869a935a8c78ceff784e493413a37aa3d421b095182f3fb613279"
 }

@@ -24,6 +24,6 @@ Status: `CANDIDATE_SAMPLE_SYNTHETIC_NOT_ACCEPTED`. This artifact is not associat
 - Microsoft Word native export: 24 pages; PDF SHA-256 `937982bb2930257f901e5594236656605338cbdc2736cd6c1d9504e2c4f579d8`.
 - All 24 rendered pages directly inspected at 120 dpi. The corrected page 17 now contains the section 11.2 conclusion and section 12 in portrait layout; no clipping or overlap was observed.
 - SAMPLE arithmetic shown in the document: 4 courses × 9 required fields = 36; 35/36 rounds to 97.2%; 36/36 = 100%; four sample registration links remain unusable, so availability is 0/4 and release remains HOLD; planned hours total 30 and planned seats total 74.
-- Independent semantic review of the exact R13 SHA: PENDING. Therefore this is not counted as a quality-accepted or formally accepted Word.
+- Independent exact-SHA semantic review: PASS for SAMPLE/SYNTHETIC semantic correctness and operational usability; 154 body/table items reviewed, zero blockers. See `evidence/INDEPENDENT_SEMANTIC_REVIEW_R13_20261031.md` and `evidence/SEMANTIC_ADJUDICATION_R13.json`. Separate technical/package and Word-native all-24-page visual evidence applies to the same candidate SHA. The candidate remains unaccepted and does not evidence real publication.
 
-The R12 OpenCode review attempt ended with HTTP 429 and has no verdict; it is not a review of R13. Do not reuse it as R13 acceptance.
+The R12 OpenCode review attempt ended with HTTP 429 and has no verdict; it was not reused as R13 acceptance.

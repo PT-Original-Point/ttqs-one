@@ -1,0 +1,56 @@
+{
+  "schema": "TTQS_ONE_SEMANTIC_ADJUDICATION_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0013",
+  "official_requirement_id": "I02-E04",
+  "revision": "R13",
+  "candidate_state": "CANDIDATE_SAMPLE_SYNTHETIC_NOT_ACCEPTED",
+  "candidate_docx_sha256": "bf13360703574a7e310864135dcb667314387462678ab8db12d63a0fe79ae31d",
+  "reviewer_context_id": "01a18f20-c637-7f52-8e00-ff278024a2de",
+  "reviewer_role": "independent Codex subagent; separate from Builder",
+  "reviewer_model": "UNKNOWN",
+  "verdict": "PASS",
+  "verdict_scope": "semantic correctness and operational usability of SAMPLE/SYNTHETIC candidate only",
+  "reviewed_body_table_items": 154,
+  "candidate_sha_rehashed_by_reviewer": true,
+  "technical_scope": "Package delta verified separately: only word/document.xml changed; target requirement/title and font minima checked",
+  "visual_scope": "Not performed by semantic reviewer; separate Word-native all-24-page visual receipt applies to same candidate SHA",
+  "source_evidence": [
+    {
+      "source": "official requirement PDF",
+      "sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+      "locator": "page 1"
+    },
+    {
+      "row": "I02-E04 → 0013",
+      "source": "official crosswalk"
+    },
+    {
+      "row_sha256": "b529f3c13e964b6edbec124158d3559df988b401ce3b97fd1984e90b0582d35b",
+      "source": "unique Blueprint"
+    },
+    {
+      "sha256": "b87440b249ec78c6bbe69ff001fe9d7dbb5060d65f27fe61d21ec48cdb5bfa63",
+      "source": "source_packet_R01.json"
+    },
+    {
+      "sha256": "ae3e266c878283538a8dd57991c02e2123ff24a2d72fa9f7d6833aa55c5b074c",
+      "source": "inherited R11 synthetic register"
+    }
+  ],
+  "findings": [
+    "No semantic/usability blocking defects found.",
+    "All 67 synthetic register rows match the inherited R11 register.",
+    "Arithmetic checks: 35/36=97.2%; 36/36=100%; course hours=30; seats=74; usable sample links=0/4 and release remains HOLD.",
+    "Negative-neighbor distinction from 0012 and 0014 is explicit."
+  ],
+  "blockers": 0,
+  "nonblocking_findings": 0,
+  "limitations": [
+    "No real annual course notice, approval original, or public-page readback; actual publication is not evidenced.",
+    "This review does not establish formal acceptance or REAL evidence."
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "reviewed_at_tpe": "2026-10-31",
+  "original_response_path": "evidence/INDEPENDENT_SEMANTIC_REVIEW_R13_20261031.md"
+}
