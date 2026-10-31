@@ -1,0 +1,40 @@
+{
+  "schema": "ttqs-one-github-raw-byte-readback-v1",
+  "status": "VERIFIED_RAW_BYTE_READBACK",
+  "project_id": "TTQS_ONE",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "doc_id": "0010",
+  "requirement_id": "I02-E01",
+  "official_checkbox_serial": "008",
+  "candidate_state": "CANDIDATE",
+  "candidate_revision": "R18_R03",
+  "candidate_sha256": "f985ed84afe0373abb2de530002f656e63c2bd8af2524c0e8ad1014c573489c2",
+  "semantic_review_verdict": "PASS_SAMPLE_SYNTHETIC_SCOPE",
+  "semantic_review_scope": "Official I02-E01/checkbox 008; 20-question answer key; 12 behavior indicators plus separate knowledge construct; first and retest score math; P3 evidence and HOLD vs NOT_PASS; SAMPLE/REAL boundary; neighboring 0009/0011 genre separation; 162-row synthetic register. Visual scope remains the separate visual receipt.",
+  "reviewer": "Independent Codex Multi-Agent subagent 01a18c0e-2cdf-7fe0-92ab-16986a967ed3",
+  "reviewer_model": "UNKNOWN",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "sample_boundary": "SAMPLE/SYNTHETIC only",
+  "readback_commit": "62a1d813db8f9b659a5585aab5316bba496e5ebd",
+  "head_after": "62a1d813db8f9b659a5585aab5316bba496e5ebd",
+  "observed_at_local": "2026-11-01T01:00:31+08:00",
+  "readback_method": "GitHub connector fetched the DOCX at the live branch ref as base64; Node crypto independently computed SHA-256 and Git blob SHA-1 from decoded remote bytes, then compared both hashes and byte length with the Windows local file.",
+  "expected_file_count": 1,
+  "verified_file_count": 1,
+  "errors": [],
+  "files": [
+    {
+      "remote_sha256": "f985ed84afe0373abb2de530002f656e63c2bd8af2524c0e8ad1014c573489c2",
+      "remote_bytes": 89450,
+      "local_git_blob_sha1": "5b2ae3c263136287125408d53fbbd5d34a47cfd0",
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0010_I02-E01_R18_20261030/evidence/GITHUB_RAW_BYTE_READBACK_R18_R03_CURRENT_HEAD_20261101.json",
+      "exact_byte_match": true,
+      "local_sha256": "f985ed84afe0373abb2de530002f656e63c2bd8af2524c0e8ad1014c573489c2",
+      "remote_git_blob_sha1": "5b2ae3c263136287125408d53fbbd5d34a47cfd0",
+      "local_bytes": 89450,
+      "doc_id": "0010"
+    }
+  ]
+}
