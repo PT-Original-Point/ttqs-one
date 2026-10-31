@@ -1,0 +1,47 @@
+{
+  "work_id": "TTQS-0119-I19-E07-W2-ANTIGRAVITY-R01",
+  "doc_id": "0119",
+  "requirement_id": "I19-E07",
+  "official_printed_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+  "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "writer": "Antigravity CLI 1.4.9",
+  "requested_model": "gemini-3.8-flash-high",
+  "provider_attested_served_model": "UNKNOWN",
+  "writer_raw_stdout_sha256": "bfb980a9f82331a112fb01303f7450d7c7d3e5b18328209a825277885824bff1",
+  "manuscript_sha256": "85c56fede6370f988c4a7921bb88d7356d6fba78f7c6c6a8ffb7c3d3f12a22df",
+  "synthetic_register_sha256": "dc32e9693ba80d00d03315519f221b8847d8fb5a49be4522a5500ee6e6387d29",
+  "docx_sha256": "1d626fdbcceb06668777315b73535799b28aadd51e3b32bf3be010f35557e5c0",
+  "source_commit": "33a66d2f3cbdf9ef7f026994482660fa6138b973",
+  "source_snapshot_manifest_sha256": "04a9512ed116e57c3998a04647753c67461f3fbdedc5a13715834e416054a62f",
+  "replacement_register_rows": 50,
+  "arithmetic": {
+    "market_base": "8/20=40.0%",
+    "market_comparison": "12/25=48.0%",
+    "market_delta": "+8.0 pp",
+    "value_base": "10/16=62.5%",
+    "value_comparison": "15/20=75.0%",
+    "value_delta": "+12.5 pp",
+    "response_rates": "16/20=80.0%; 20/25=80.0%"
+  },
+  "deterministic_checks": {
+    "docx_zip": "PASS",
+    "python_docx_reopen": "PASS",
+    "document_tables": 9,
+    "visual_render": "BLOCKED_RESOURCE_PRESSURE_NOT_RUN",
+    "independent_semantic_review": "PENDING",
+    "visual_render_reason": "At 2026-10-29 05:41 Asia/Taipei: 1.33 GB free of 15.94 GB; 53 WINWORD.EXE processes; no soffice executable found. A prior Word ExportAsFixedFormat stage was stalled, so no new Word process was started. Visual QA is pending, not PASS.",
+    "source_snapshot_manifest_sha256": "04a9512ed116e57c3998a04647753c67461f3fbdedc5a13715834e416054a62f"
+  },
+  "created_local": "2026-10-29T05:41:34.336439+08:00",
+  "docx_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0119_I19-E07_SOURCE_PREP_R01_20261024\\R03_ANTIGRAVITY_WRITER_20261029\\0119__目標市場及顧客價值部分提升證據分析表_CANDIDATE_R01.docx",
+  "writer_dispatch": {
+    "requested_model": "gemini-3.8-flash-high",
+    "provider_attested_served_model": "UNKNOWN",
+    "exit_code": 0,
+    "stdout_bytes": 40537,
+    "stdout_sha256": "bfb980a9f82331a112fb01303f7450d7c7d3e5b18328209a825277885824bff1"
+  },
+  "source_snapshot_manifest_local_repair": "Verified local UNIQUE_BLUEPRINT SHA256 and Git blob SHA now match the PR #92 source at source_commit.",
+  "qa_scope_sha256": "885f6bd4b0bfb54a45ccf2bf2c444d48b069d4ae6fdf7b2f998529c9f7606e97",
+  "other_worker_attempt": "OpenCode v2 free-model request terminated before content with provider.free-limit 429; no manuscript adopted."
+}

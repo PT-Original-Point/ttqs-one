@@ -1,0 +1,77 @@
+{
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0128-I19-E17-MATH-QA-R01",
+  "doc_id": "0128",
+  "official_requirement_id": "I19-E17",
+  "verified_at_local": "2026-10-24T18:34:09.0970663+08:00",
+  "source_sha256": {
+    "blueprint": "f396793da8db5f7d0092ae5bb90f36b93098fdc4d9f25093db74760864796ffb",
+    "source_packet": "94699015ab0a316f09e500bd44f8fa6e7474e613557a6cffc322548f7c94307b",
+    "sample_csv": "831cf00c91fd5078a4128c2576ff5a005c3e3243b71edced5599d18c1c3c91a4"
+  },
+  "sample_cases": [
+    {
+      "case_id": "S-EMP-01",
+      "baseline": "14/20=70%",
+      "post": "18/20=90%",
+      "delta_pp": 20.0,
+      "evidence_class": "SAMPLE_SYNTHETIC_ONLY"
+    },
+    {
+      "case_id": "S-EMP-02",
+      "baseline": "16/20=80%",
+      "post": "18/20=90%",
+      "delta_pp": 10.0,
+      "evidence_class": "SAMPLE_SYNTHETIC_ONLY"
+    },
+    {
+      "case_id": "S-EMP-03",
+      "baseline": "15/20=75%",
+      "post": "14/20=70%",
+      "delta_pp": -5.0,
+      "evidence_class": "SAMPLE_SYNTHETIC_ONLY"
+    },
+    {
+      "case_id": "S-EMP-04",
+      "baseline": "18/20=90%",
+      "post": "19/20=95%",
+      "delta_pp": 5.0,
+      "evidence_class": "SAMPLE_SYNTHETIC_ONLY"
+    },
+    {
+      "case_id": "S-EMP-05",
+      "baseline": "13/20=65%",
+      "post": "15/20=75%",
+      "delta_pp": 10.0,
+      "evidence_class": "SAMPLE_SYNTHETIC_ONLY"
+    },
+    {
+      "case_id": "S-EMP-06",
+      "baseline": "17/20=85%",
+      "post": "17/20=85%",
+      "delta_pp": 0.0,
+      "evidence_class": "SAMPLE_SYNTHETIC_ONLY"
+    }
+  ],
+  "aggregates": {
+    "skill_demo_pre": "33/60",
+    "skill_demo_delta_pp": 25.0,
+    "baseline": "93/120",
+    "skill_demo_post_pct": 80.0,
+    "skill_demo_post": "48/60",
+    "post": "101/120",
+    "skill_demo_pre_pct": 55.0,
+    "improved": 4,
+    "post_pct": 84.1667,
+    "baseline_pct": 77.5,
+    "unchanged": 1,
+    "declined": 1,
+    "delta_pp": 6.6667
+  },
+  "evidence_class": "ALL SAMPLE_SYNTHETIC_ONLY",
+  "result": "PASS_DETERMINISTIC_MATH_AND_SOURCE_BINDING_ONLY",
+  "limitations": [
+    "Does not establish REAL performance, training delivery, supervisor observation, causality, Word rendering, semantic acceptance or formal acceptance.",
+    "Skill demonstration is a learning measure, not the workplace KPI."
+  ]
+}

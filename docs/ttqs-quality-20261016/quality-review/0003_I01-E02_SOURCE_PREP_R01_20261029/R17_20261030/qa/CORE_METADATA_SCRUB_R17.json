@@ -1,0 +1,19 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0003",
+  "requirement_id": "I01-E02",
+  "revision": "R17",
+  "operation": "targeted removal of an unverified personal lastModifiedBy value before public sync",
+  "scope": "docProps/core.xml only; paragraph text and all table text verified unchanged; no body, response, register, or source changes",
+  "previous_candidate_sha256": "0a6e74f45145fb0975a9455c3a89d065242b25b06af1774c174b3ff7c849b73e",
+  "new_candidate_sha256": "206dce1d471ea5cdda2a6af15d65cc0c59c7909e55d8fe4475e0ad0b05507281",
+  "updated_package_parts": [
+    "docProps/core.xml"
+  ],
+  "non_metadata_package_parts_changed": [],
+  "author_property_retained": "TTQS ONE 文件施工（Codex fallback）",
+  "last_modified_by_after": "",
+  "semantic_review_of_previous_exact_sha": "PASS with this P3 privacy note; new exact SHA delta review required",
+  "status": "METADATA_ONLY_REPAIR",
+  "public_note": "The unverified personal metadata value is redacted from this public copy; the candidate proves lastModifiedBy is blank. Raw value remains local and is not needed to audit the change."
+}

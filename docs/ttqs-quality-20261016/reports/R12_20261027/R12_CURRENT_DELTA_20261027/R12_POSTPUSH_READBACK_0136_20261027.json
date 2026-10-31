@@ -1,0 +1,40 @@
+{
+  "schema": "TTQS_ONE_R12_POSTPUSH_READBACK_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0136",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "pr": 92,
+  "verified_commit": "d256928c0d8be03c50b772fc3741605996326cac",
+  "pr_head_matches_commit": true,
+  "verification_method": "GitHub connector github_fetch_file, immutable commit ref, base64 decoded/compared against local exact bytes",
+  "results": [
+    {
+      "repo_path": "docs/ttqs-quality-20261016/quality-review/0136_I19-E26_SOURCE_PREP_R01_20261025/R02_CANDIDATE_R11_20261026/receipts/CANDIDATE_STATE_0136_R02_CURRENT.json",
+      "local_sha256": "82458f3c5b81109710d8a025a9b4a1a6e69dc5c9c90a31abe28f6acc9830d5e4",
+      "local_bytes": 1848,
+      "github_git_blob_sha": "0f10012c7a276fdc1e9b157b8015524c470c8a52",
+      "base64_equal": true,
+      "status": "PASS"
+    },
+    {
+      "repo_path": "docs/ttqs-quality-20261016/reports/R12_20261027/R12_DOC_0136_STATUS_RECONCILIATION_20261027.json",
+      "local_sha256": "fc99b0b50fc8607a5ed4c7a2b38f7ea28fea7ed7988d6e56d292a65eda6e7e03",
+      "local_bytes": 1405,
+      "github_git_blob_sha": "4441815d18449710f3f725cbd0ebd31b06727ac9",
+      "base64_equal": true,
+      "status": "PASS"
+    }
+  ],
+  "mutable_raw_url_observation": {
+    "url_kind": "branch-name URL",
+    "returned_sha256": "2243bc59d37906228d90774a93b1a0b86aacc46f53b8dd5bc882b3f5e8e34439",
+    "returned_bytes": 935,
+    "expected_sha256": "82458f3c5b81109710d8a025a9b4a1a6e69dc5c9c90a31abe28f6acc9830d5e4",
+    "result": "STALE_CDN_RESPONSE",
+    "resolution": "Immutable commit-ref GitHub connector read returned blob 0f10012c7a276fdc1e9b157b8015524c470c8a52 with base64 exactly matching local 1848-byte file."
+  },
+  "candidate_docx_sha256": "a9bd0fb528a1e22865fa5e07df44b314d48c1fd826a08149ecdd1d5915048b39",
+  "candidate_docx_changed": false,
+  "observed_local": "2026-10-27T03:39:02.6061735+08:00"
+}

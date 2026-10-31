@@ -1,0 +1,52 @@
+{
+  "doc_id": "0131",
+  "official_requirement": "I19-E20",
+  "project_157_index": 144,
+  "source_sha256": "1c0fe740375a2fa83010749fb50bf913eb3fbb58cfc2a07463bb3ce1fecf679c",
+  "checks": {
+    "doc_id_mapping": true,
+    "sample_banner": true,
+    "non_real_boundary": true,
+    "high_threshold_not_invented": true,
+    "cohort_16_rows": true,
+    "roster_exactly_16": true,
+    "cert_outcome_12_rows": true,
+    "cert_provenance_12_rows": true,
+    "employment_12_rows": true,
+    "contact_source_12_rows": true,
+    "certificate_math": true,
+    "employment_math": true,
+    "five_blank_forms": true,
+    "unsafe_fiction_removed": true,
+    "markdown_table_widths_consistent": true
+  },
+  "table_count": 20,
+  "table_width_mismatches": [],
+  "cohort_math": {
+    "registered": 16,
+    "completed": 12,
+    "not_completed": 4,
+    "balance": true
+  },
+  "certificate_math": {
+    "eligible": 10,
+    "attempted": 8,
+    "passed": 6,
+    "failed": 2,
+    "eligible_not_attempted": 2,
+    "attempt_rate_pct": 75.0,
+    "attainment_pct": 60.0,
+    "non_attempt_pct": 20.0
+  },
+  "employment_math": {
+    "completed": 12,
+    "responded": 9,
+    "unknown": 3,
+    "self_reported_employed": 6,
+    "self_reported_not_employed": 3,
+    "reply_rate_pct": 75.0,
+    "respondent_self_report_pct": 66.66666666666666,
+    "cohort_self_reported_share_pct": 50.0
+  },
+  "result": "PASS"
+}

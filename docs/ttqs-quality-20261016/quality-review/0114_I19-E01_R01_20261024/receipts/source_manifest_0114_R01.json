@@ -1,0 +1,97 @@
+{
+  "schema": "ttqs-one-source-prep-manifest-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0114",
+  "requirement_id": "I19-E01",
+  "official_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+  "internal_157_index": 125,
+  "candidate_revision": "R01",
+  "status": "SOURCE_PACKET_AND_UNIQUE_BLUEPRINT_READY_FOR_WRITER",
+  "candidate_docx_status": "NOT_CREATED",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "pr": 92,
+  "current_head": "82e0bd0ac1e05aa9563fc4a8ebe0937f349fd960",
+  "sources": [
+    {
+      "kind": "Human Mission",
+      "path": "docs/ttqs-quality-20261016/01_HUMAN_MISSION_AND_ACCEPTANCE.md",
+      "git_blob": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e",
+      "sha256": "ce228e4b8697e6e54ad48733f2aed2bcfd09cff625d99f1f0aeabb45e440c6e7"
+    },
+    {
+      "kind": "Genre manual I19",
+      "path": "docs/ttqs-quality-20261016/02_GENRE_WRITING_MANUAL.md",
+      "git_blob": "4ff863d9f534b6359fc1c7c1685bd8cce02da886",
+      "sha256": "0f4183a18e5668260b213b35ae223a7da334eed56a25b6fef72e2d6d7e12e649"
+    },
+    {
+      "kind": "Unique Blueprint master I19-L1 index 125",
+      "path": "docs/ttqs-quality-20261016/03_157_CHECKBOX_BLUEPRINTS.md",
+      "git_blob": "8c2bbe7ca9dcbb03088a48934b9e57e7147ede63",
+      "sha256": "7732c40f25d0803f18836725d1634ebe72a156925444f3ea9915b6168cc1a70a"
+    },
+    {
+      "kind": "142-document crosswalk row 115",
+      "path": "送審資料/05_填表建議_方法示範不等於實績/142份文件逐項檢查與填表建議.csv",
+      "git_blob": "3ee92744602321a7f27324e4a70b25aaaf015930",
+      "sha256": "166eb3cd3d8026206e88f06cb083aa162d2ddd464d53883a3ce5ac411adcea6a"
+    },
+    {
+      "kind": "129-requirement registry row 102",
+      "path": "送審資料/05_填表建議_方法示範不等於實績/19指標_129項現有文件對應填表清單.csv",
+      "git_blob": "069ffef111b995a5df3b3f1f417b7ef79fda59fa",
+      "sha256": "bc2e70b087cc2d6904de454f967d811223f1c87257a3dae7c1dae3aee1dad45d"
+    },
+    {
+      "kind": "Official TTQS institution evidence PDF p7",
+      "path": "送審資料/評核依據/TTQS查核佐證文件資料表-訓練機構版 (3).pdf",
+      "git_blob": "9c7621decdad585b743bf2b3d949ee5518b7bee0",
+      "sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709"
+    },
+    {
+      "kind": "Legacy 1651 document, historical gap evidence only",
+      "path": "送審資料/04_全部文件與歷次版本/TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925/17/1651_0114__I19-E01__01__目標市場及顧客價值改善紀錄與評量表.docx",
+      "git_blob": "b13a97ba24cf107bb58b32c68419ac83241c43ed",
+      "sha256": "b66b28271f9edeb36e5928f9089ff4a8f46ed0fd69f3e14a37e82527877512ea",
+      "bytes": 42019,
+      "role": "historical only; not a template; contains incomplete placeholders"
+    }
+  ],
+  "historical_gap": "Old 1651 has no verified REAL survey/evaluation; table cells include [待核定]/[待填]/[待補]/[待核]. New candidate will be a separate path and will not overwrite it.",
+  "latest_branch_tree_search": "No quality-review/0114 current candidate or active artifact was present on live HEAD at source-prep check",
+  "source_prep_files": [
+    {
+      "path": "SOURCE_PACKET_0114_I19-E01_R01.md",
+      "bytes": 5520,
+      "sha256": "d42ca5b1b656ffa01be20022a3508224275dcd693f25a0863dc1dac774e279a4"
+    },
+    {
+      "path": "UNIQUE_BLUEPRINT_0114_I19-E01_R01.md",
+      "bytes": 6189,
+      "sha256": "7dcd0c33b1a9acd38fc6ced26880c41be5a927da359c317d7a5b194afee988d2"
+    },
+    {
+      "path": "SYNTHETIC_DATASET_0114_R01.csv",
+      "bytes": 1517,
+      "sha256": "e216d24ca98635089ae39816677ee14adae4b2563dcaeeed7e53a78afdf360d2"
+    },
+    {
+      "path": "SYNTHETIC_REPLACEMENT_REGISTER_0114_R01.csv",
+      "bytes": 1771,
+      "sha256": "0f1ce3199e01cfd5b0d457d0b430bd9552b87735830441c28b204a76652144eb"
+    },
+    {
+      "path": "R01_math_check.json",
+      "bytes": 747,
+      "sha256": "35794851b658e866e424e6f380bc75b8a32e15c46f2505afb9c34bf17e479845"
+    }
+  ],
+  "acceptance": {
+    "candidate": "NOT_CREATED",
+    "real_evidence": "UNKNOWN",
+    "formal_acceptance": "NOT_GRANTED",
+    "synthetic_dataset_math": "PASS_DETERMINISTIC",
+    "review": "NOT_RUN"
+  }
+}

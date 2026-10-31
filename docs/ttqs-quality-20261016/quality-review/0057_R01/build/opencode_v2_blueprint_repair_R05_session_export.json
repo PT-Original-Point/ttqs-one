@@ -1,0 +1,1691 @@
+{
+  "info": {
+    "id": "ses_eb57142c6ffeQRvPRIy8FRC6rE",
+    "projectID": "f27b9df25437c3cad719f47428a6820888a43c04",
+    "model": {
+      "id": "deepseek-v4.1-flash-free",
+      "providerID": "opencode",
+      "variant": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 137003,
+      "output": 8283,
+      "reasoning": 6428,
+      "cache": {
+        "read": 878208,
+        "write": 0
+      }
+    },
+    "outcome": "succeeded",
+    "time": {
+      "created": 1792252230975,
+      "updated": 1792252381013,
+      "idle": 1792252381021
+    },
+    "title": "0057 Blueprint R05 minimal T1 schema repair",
+    "location": {
+      "directory": "E:\\TTQS"
+    }
+  },
+  "messages": [
+    {
+      "id": "msg_14a8ebd52001pNx9cxFfWBT4hM",
+      "time": {
+        "created": 1792252231034
+      },
+      "text": "\"Read the complete bounded R05 repair patch E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\inputs\\0057_BLUEPRINT_REPAIR_PATCH_R05.md (SHA256 11ca22101745f25fae15de5359b34605b8aebb6c617ae9661cf24b510df384be), independent R04 audit E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\review\\0057_R04_independent_deterministic_audit_R01.md, and source R04 E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\inputs\\0057_UNIQUE_BLUEPRINT_R04.md (SHA256 af88b80542585e85e2d25e8b2011b8f1770b6aa049b7f8de9e067ac8a9af4552). Verify source SHA before writing. Preserve R01-R04 byte-for-byte. Create only inputs/0057_UNIQUE_BLUEPRINT_R05.md and build/0057_R05_blueprint_repair_receipt.md. No DOCX. Align T1 schema names/order with its example table, move the common cutoff to one table note, and update SF-0057-001 locator as specified. Do not change any other data or content. Independently check exact T1 header match, unchanged 232 IDs, R04 unchanged, and report output SHA/checks/unresolved issues. No unrelated deliverables.\"",
+      "files": [],
+      "type": "user"
+    },
+    {
+      "id": "msg_14a8ebd840011nfCrzQ52Z9yRu",
+      "time": {
+        "created": 1792252231062,
+        "streamed": 1792252234710,
+        "completed": 1792252235373
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "Let me start by reading the three files mentioned. Let me verify the source SHA first.\n\nLet me read the files.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1792252232691,
+            "completed": 1792252234676
+          }
+        },
+        {
+          "type": "text",
+          "text": "I'll start by reading the three files and verifying the source SHA."
+        },
+        {
+          "type": "tool",
+          "id": "call_00_sr9k976vk2tkr4qdnchma9d4",
+          "name": "read",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "path": "E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\inputs\\0057_BLUEPRINT_REPAIR_PATCH_R05.md"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Read file E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\inputs\\0057_BLUEPRINT_REPAIR_PATCH_R05.md, lines 1-33\n1: # DOCX 0057 — Blueprint R05 minimal T1 schema repair\n2: \n3: ## Input lock\n4: \n5: - Source: `0057_UNIQUE_BLUEPRINT_R04.md`\n6: - Required source SHA-256: `af88b80542585e85e2d25e8b2011b8f1770b6aa049b7f8de9e067ac8a9af4552`\n7: - Independent local audit: `../review/0057_R04_independent_deterministic_audit_R01.md`\n8: - Preserve R01–R04 byte-for-byte. Write a new `0057_UNIQUE_BLUEPRINT_R05.md` and a concise build receipt. Do not edit or create a DOCX.\n9: \n10: ## Only required repair\n11: \n12: Align the T1 two-column field/type schema with the T1 example table. The schema fields, in order, must correspond exactly to the example table header names:\n13: \n14: `period_id` / `完成窗起` / `完成窗迄` / `期類型` / `追蹤波次` / `主波次最晚到期` / `T+90 狀態` / `T+180 狀態` / `列入分母`\n15: \n16: Specifically:\n17: \n18: 1. Remove `資料截點` from the list of table columns; the table does not have that column.\n19: 2. Add `追蹤波次` as a column definition with its existing displayed values `30/60/90/180`.\n20: 3. Match the exact example labels `主波次最晚到期` and `列入分母`.\n21: 4. Add one concise T1 table note stating the shared data cutoff is `2026-06-30`. Keep the value as the existing synthetic fact; do not add a new column or duplicate new synthetic values.\n22: 5. Update `SF-0057-001` to locate the actual T1 note (not a schema row), retaining all valid §5.1/§8.3 locators where the same value is displayed.\n23: \n24: Do not change any cohort windows, dates, maturity classifications, rates, arithmetic, narrative or other register rows. Do not alter the already repaired atomic rows or T2/T3/T8/T9 content. Keep `0057` / `I13-E01` / checkbox `061` distinct, and preserve SAMPLE/SYNTHETIC and REAL boundaries.\n25: \n26: ## Verify and report\n27: \n28: - Confirm the source SHA before any write and hash R04 again afterward; R04 must remain unchanged.\n29: - Parse the T1 schema field names and T1 example header and report `EXACT_MATCH` only if their ordered names are identical.\n30: - Confirm the T1 note displays `2026-06-30` and `SF-0057-001` points to that note.\n31: - Confirm register IDs remain unique/contiguous 001–232, no ID was added or removed, and all other R04 content is unchanged apart from the T1 schema/note and SF-001 locator.\n32: - Output the R05 exact SHA, build receipt, scope, checks and unresolved issues. This is a bounded candidate repair, not independent PASS or formal acceptance.\n33: - If the input SHA differs, stop without writing and report the observed SHA."
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1792252234610,
+            "ran": 1792252234683,
+            "completed": 1792252234761
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_01_z4p6jznwkapqh9pgrxzit89o",
+          "name": "read",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "path": "E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\review\\0057_R04_independent_deterministic_audit_R01.md"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Read file E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\review\\0057_R04_independent_deterministic_audit_R01.md, lines 1-24\n1: # DOCX 0057 Blueprint R04 — independent deterministic audit\n2: \n3: Snapshot: 2026-10-17 23:49:36 +08:00. Candidate SHA-256: `af88b80542585e85e2d25e8b2011b8f1770b6aa049b7f8de9e067ac8a9af4552`. Source R03 SHA-256: `8f3b404cad787975d06444603ca647702afc7f21df1d526d3ea2daeb800effb4` (unchanged).\n4: \n5: ## Verified checks\n6: \n7: - 232 register rows, IDs 001–232 unique and contiguous; all rows have 10 cells.\n8: - New IDs 204–232 are marked `SYNTHETIC`.\n9: - The previously reviewed R03 arithmetic/date sections were retained; R04’s own build receipt records its deterministic recomputations.\n10: - Required T8 repeated-value locators exist for IDs 115, 118, 121, 124, 127 and 130.\n11: - The former atomicity findings are separated, including the six Figure 3 node values; UTF-8 readback confirms `SF-0057-201` is only node (1) and IDs 218–222 are nodes (2)–(6). An earlier terminal-decoding interpretation that this row still bundled all six nodes was false and is corrected here.\n12: - R04 remains a Blueprint candidate only. No DOCX was created or accepted.\n13: \n14: ## Blocking defect found independently\n15: \n16: T1’s two-column field/type schema does not describe the adjacent T1 example table consistently. The schema lists `資料截點` but omits `追蹤波次`; the example table includes `追蹤波次` but has no `資料截點` column. It also labels `主波次 T+90 最晚到期` vs `主波次最晚到期`, and `是否列入分母` vs `列入分母`. This is a real Writer ambiguity. It is not resolved by the valid `SF-0057-001` locator to the schema note.\n17: \n18: **Minimum repair before semantic review:** make T1 schema names match the example table exactly; add `追蹤波次` to the schema; move the constant `2026-06-30` from a purported data-column definition into one explicit T1 table note (or add a registered column, if chosen); use the example’s exact `主波次最晚到期` and `列入分母` labels; update `SF-0057-001` locator to the actual T1 note. Preserve all cohort dates, values, calculations and R04 history; use a new R05 file and do not create/edit a DOCX.\n19: \n20: ## Status\n21: \n22: `R04 = CANDIDATE / DETERMINISTIC_AUDIT_FAIL_REPAIRABLE`. Do not claim independent semantic PASS. R04 Writer self-reported 100 checks, but the independent schema comparison above failed. Exact-SHA semantic review is deferred until this defect is repaired.\n23: \n24: Worker evidence: `opencode_v2_blueprint_repair_R04_stdout.jsonl`, stderr/exit files and `opencode_v2_blueprint_repair_R04_session_export.json`."
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1792252234636,
+            "ran": 1792252234691,
+            "completed": 1792252234754
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_02_0xfy8lcmmlqjwnmehk85y4yz",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "command": "Get-FileHash -Algorithm SHA256 \"E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\inputs\\0057_UNIQUE_BLUEPRINT_R04.md\" | Format-List"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "\r\nAlgorithm : SHA256\r\nHash      : AF88B80542585E85E2D25E8B2011B8F1770B6AA049B7F8DE9E067AC8A9AF4552\r\nPath      : E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\inputs\\0\r\n            057_UNIQUE_BLUEPRINT_R04.md\r\n\r\n"
+              }
+            ],
+            "metadata": {
+              "status": "completed",
+              "truncated": false,
+              "exit": 0
+            }
+          },
+          "time": {
+            "created": 1792252234653,
+            "ran": 1792252234697,
+            "completed": 1792252235370
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 1551,
+        "output": 290,
+        "reasoning": 24,
+        "cache": {
+          "read": 4096,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14a8ecc06001GANL5b3uH1xq6A",
+      "metadata": {
+        "instruction": {
+          "paths": [
+            "E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\AGENTS.md"
+          ]
+        }
+      },
+      "time": {
+        "created": 1792252234758
+      },
+      "text": "Instructions from: E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\AGENTS.md\n# AGENTS.md — TTQS_ONE Win10 Codex Local\r\n\r\n## Mission\r\n你是 TTQS_ONE 的 durable local executor。把 142 份 TTQS Word 候選重建成協會平日可操作、評核委員可抽查、SAMPLE/REAL 界線清楚的完整文件體系，並持續自動施工到 final acceptance 或真正 Human Gate。\r\n\r\n## Runtime\r\n- Use native Windows PowerShell, filesystem, Python, git, installed Office/LibreOffice tooling directly.\r\n- Do NOT depend on Factory MCP, Win11 Factory, RDC, or SYSTEM_CAPABILITY_RUN_DENY wrappers.\r\n- Missing Factory/MCP capability is NOT a blocker for ordinary local file work.\r\n- Primary artifact is DOCX. Do not generate full-corpus PDF/PNG by default.\r\n- Runtime root: E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME.\r\n- Home-PC concurrency ceiling: at most one BUILD worker plus one REVIEW worker on a different document; shared promotion/register/CURRENT writes are serialized.\r\n\r\n## Authority\r\nLatest Human Mission > this AGENTS.md/current control files > official TTQS sources/Unique Blueprint > verified artifacts > historical Work outputs.\r\n\r\n## Anti-garbage hard rules\r\n1. Build each deliverable from its exact requirement + Blueprint.\r\n2. If REAL operational data is unavailable, populate a complete coherent SAMPLE/SYNTHETIC worked example. Never submit an empty form or placeholder-only document.\r\n3. Every synthetic date/person/count/amount/ratio/score/result/meeting/decision must be registered.\r\n4. Never fabricate third-party originals, signatures, certificates, government letters, bank/accounting evidence, or external achievements.\r\n5. Builder has no PASS authority. A fresh review context checks every completed batch.\r\n6. Failed bodies and peer bodies are forbidden as rebuild templates. Shared front-matter labels are allowed; substantive tables/body schema must be requirement-specific.\r\n7. 待填|待核|空白表|保持空白|會後填寫 outside an explicitly labeled REAL replacement area is a hard fail.\r\n8. Questionnaire/SOP/meeting/assessment/outcome genres must contain their real functional mechanics, not generic headings.\r\n9. Body hard floor 10.5 pt, table hard floor 9.5 pt; never shrink text just to reduce page count.\r\n10. CURRENT means latest accepted candidate under the current frozen acceptance contract; it does not mean REAL/APPROVED/EFFECTIVE.\r\n\r\n## Efficiency ownership\r\n- Builder: create exact-source DOCX + build receipt only. Do not duplicate validator/reviewer work.\r\n- Static gate: deterministic technical/content checks only.\r\n- Fresh reviewer: semantic/usability/evaluator-facing review only. No Word COM/CUA/PDF/PNG/nested Codex unless a concrete layout anomaly exists.\r\n- Non-zero builder exit with a stable new DOCX + valid receipt is salvageable; gate that exact candidate before rebuilding.\r\n- One lane gets at most one attempt per scheduling turn; failures move to queue tail while other READY lanes continue.\r\n- Reuse unchanged authoritative source readback by exact source SHA + Blueprint row hash.\r\n- Delta-only verification during production; full-corpus verification is reserved for final QA.\r\n- After two consecutive Canary PASS under the same contract, freeze builder/static/reviewer acceptance semantics for the run unless a concrete source/artifact defect is proven.\r\n\r\n## Autonomy\r\n- Work in 10-document batches for checkpoint/reporting, not as a blocking approval gate.\r\n- After each batch: lightweight delta checkpoint only (changed DOCX + SHA + synthetic delta + QA receipt + remaining queue).\r\n- If gates pass, continue automatically. Do NOT wait for Human permit every 10 docs.\r\n- Human notification is non-blocking unless a true Human Gate is triggered.\r\n- On defect: auto impact-scan affected family/epoch, repair/rebuild, fresh re-review, continue other READY lanes.\r\n- A failed document or failed canary MUST NOT stop other READY lanes.\r\n- After two failed repair epochs on the same logical defect, stop rebuilding only that exact lane, run root-cause audit, repair the builder/reviewer/validator contract if needed, then retry only when there is a material delta. Do NOT escalate to Human merely because two repairs failed.\r\n- During Canary phase, publish each passing canary to CURRENT immediately; park failing canaries and continue testing the remaining representative canaries. Full production rollout still requires the required Canary set to pass, but Canary repair is an autonomous engineering task unless a true Human Gate exists.\r\n\r\n## Human Gates only\r\nStop and ask Human only for:\r\n- Mission/spec change or major quality-policy change that cannot be derived from the current Mission;\r\n- genuine SAMPLE-vs-REAL authority ambiguity;\r\n- legal/signature/identity/OAuth/MFA;\r\n- missing third-party original or missing real-world fact that materially changes what must be delivered and cannot be obtained automatically;\r\n- bounded root-cause reconciliation still leaves an external side effect or authority ambiguity unresolved;\r\n- final evaluation package acceptance.\r\n\r\nThe following are explicitly NOT Human Gates:\r\n- one document failing review;\r\n- one canary failing review;\r\n- two repair epochs failing the same document;\r\n- a local validator/parser bug;\r\n- a reviewer disagreement that can be resolved from authoritative sources;\r\n- an individual lane being parked while other READY lanes exist.\r\n\r\n## Efficiency safety invariant\r\n- Speed optimizations may change scheduling, retries, caching, or concurrency only; they MUST NOT weaken semantic acceptance.\r\n- Fresh Builder for one deliverable may not use peer DOCX body text as a writing template.\r\n- Reuse is limited to authoritative source readback, calculations, and shared fact IDs; generated prose/body/table/question blocks are not reusable across unrelated deliverables.\r\n- Before CURRENT promotion, every DOCX must still pass exact requirement/genre mechanics, title-blind identification, negative-neighbor rejection, substantive cross-document duplication screening, evaluator-facing readability, and SAMPLE/REAL truth-boundary checks.\r\n- Contract freeze requires two consecutive PASS canaries from different document families and a passing duplication/negative-neighbor gate.\r\n\r\n## HOTFIX5 stable dual-agent invariant\r\n- Canonical promotion pipeline is: BUILD -> deterministic STATIC/LAYOUT/RECEIPT PASS -> WAITING_OPENCODE_REVIEW -> OpenCode exact-SHA semantic/usability PASS -> CURRENT.\r\n- OpenCode is the single independent semantic acceptance reviewer. Codex builder/self-diagnostics do not grant semantic acceptance.\r\n- CONTROL_PLANE_DEFECT, REVIEW_INFRA_DEFECT, and TRANSIENT_EXECUTION_DEFECT never authorize DOCX mutation.\r\n- If content/layout bytes do not need repair, DOCX SHA must not change; metadata/control updates stay in sidecars.\r\n- WAITING_OPENCODE_REVIEW is workflow state, never CONTENT_FAIL.\r\n- DONE/CURRENT evidence is not invalidated merely by policy/control-code revision; exact source/artifact defect with locator is required.\r\n\r\n## HOTFIX6 dual-worker sprint\r\nAfter HOTFIX5 two-cycle exact-SHA bootstrap PASS, OpenCode may actively BUILD isolated deliverables as well as REVIEW Codex-built deliverables. Roles are per-document. BUILD_OWNER must never equal REVIEW_OWNER. Codex remains sole dispatcher/integrator/promoter and sole writer of shared canonical state. OpenCode build outputs and proposed synthetic deltas remain isolated until independent cross-review PASS and Codex serialized promotion.\r\n",
+      "description": "Loaded _TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\AGENTS.md",
+      "type": "synthetic"
+    },
+    {
+      "id": "msg_14a8ece7f001lEdwXVUP2mn6ca",
+      "time": {
+        "created": 1792252235409,
+        "streamed": 1792252238311,
+        "completed": 1792252239195
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "Let me read the R04 source blueprint. Let me find the T1 schema section. Let me read the whole file. First check the size.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1792252236822,
+            "completed": 1792252238280
+          }
+        },
+        {
+          "type": "text",
+          "text": "Source SHA verified: `AF88B805...AF4552` matches the required value. Now let me read the R04 blueprint source."
+        },
+        {
+          "type": "tool",
+          "id": "call_00_y3m4b9gf7k81e4l4i4qbyv3t",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "command": "$f=\"E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\inputs\\0057_UNIQUE_BLUEPRINT_R04.md\"; $c=Get-Content -Raw $f; \"Chars: $($c.Length)\"; \"Lines: $((Get-Content $f).Count)\"; \"Bytes: $((Get-Item $f).Length)\""
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Chars: 70668\r\nLines: 1026\r\nBytes: 125415\r\n"
+              }
+            ],
+            "metadata": {
+              "status": "completed",
+              "truncated": false,
+              "exit": 0
+            }
+          },
+          "time": {
+            "created": 1792252238202,
+            "ran": 1792252238288,
+            "completed": 1792252239191
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_01_f728itlf0gqimzftmzny54vx",
+          "name": "grep",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "pattern": "資料截點|追蹤波次|主波次|列入分母|SF-0057-001|T\\+90 狀態|T\\+180 狀態|完成窗",
+              "path": "E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\inputs\\0057_UNIQUE_BLUEPRINT_R04.md"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Found 82 matches\nE:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\inputs\\0057_UNIQUE_BLUEPRINT_R04.md:\n  Line 6: > 1. **登錄原子化補強（§13.2）**：將仍併列多值之既有列逐值拆列——`SF-0057-184`（`Q1`／`Q2`／`Q3`）、`186`（`R1`／`R2`／`R3`／`R4`／合計）、`188`（紀錄筆數／觸發界線筆數）、`191`（兩個日期）、`192`（兩個能力）、`194`（時限／每月班數）、`195`（兩個支持機制）、`198`（三項障礙，含 `18 欄` 單獨成列）、`199`（兩組證據）、`201`（六個流程圖節點文字），以及同類之 `200`（主波次判定與其計數基礎）。**保留原 ID 給第一個原子事實**，其餘自 **`SF-0057-204`** 起依序配發；並同步更新所有受影響之重複顯示定位。\n\n  Line 9: > 4. **`SF-0057-001` 定位修正**：改指**實際顯示** `2026-06-30` 之精確位置（不新增 `T1` 欄、不產生未登錄重複值）。\n\n  Line 24: > **本次 R04 五項修正摘要**見檔首「`R04 修訂性質（bounded repair）`」五點；本節為**歷史 R01 → R02 修訂**對照（保留、不改寫）。R03 不覆寫 R02 已含之修正，僅加上四項 bounded repair；R04 不覆寫 R03 已含之修正，僅加上五項 bounded repair（登錄原子化補強、`T8` 定位補齊、`T9` 覆蓋補齊、`SF-0057-001` 定位修正、`T3`／`T8` schema 一致化）。\n\n  Line 28: | 1 | `E` 時而為 `D` 中之**自述**應用，時而可由觀察/紀錄觸發，定義矛盾 | 統一「一人一率一次計」：明定主波次 `T+90`，`E` 由「自述達標 **或** 非自述佐證」判定，且 `G ⊆ E ⊆ D ⊆ C ⊆ A` 數學嵌套；跨波次不重複計數 |\n\n  Line 30: | 3 | `P3` 跑到 `2026-06-30` 卻宣稱有完成 90 天追蹤 | 分離「完成窗」與「資料截點」：`P3` 完成窗 `2026-01-01～2026-03-31`，截點 `2026-06-30`，使 `T+90` 成熟；`2026` Q2 完成者另列、**不列入分母**；`D` 不含未到期追蹤 |\n\n  Line 98: - **本件獨有核心（唯一）**：**跨近期年度的「訓練成果移轉與達成」分析檢討**——含能力達成率、訓後（主波次 T+90）應用率、非自述佐證分層、跨期趨勢、限制、結論與改進決定，以及一份**已填**的個人移轉行動計畫示例。\n\n  Line 118: ## 5. 資料模型、共同定義、cohort 與期間界線（含成熟度、主波次與 ID 分層）\n\n  Line 120: ### 5.1 完成窗、觀察 cohort 與資料截點（defects 3、9）\n\n  Line 122: **單一資料截點（data cutoff）**：`2026-06-30`。所有 cohort 之追蹤成熟度皆以此截點判定。\n\n  Line 124: | cohort 代號（sidecar） | 完成窗（training-completion window） | 期類型 | 主波次 `T+90` 狀態 | `T+180` 狀態 | 是否列入分母 |\n\n  Line 131: **`P3-Q2` 合成完成日期分布（14 人；用於 maturity 判定）**：2026-04-02、04-10、04-17、04-24、05-05、05-12、05-15、05-22、05-29、06-03、06-09、06-12、06-19、06-26（共 14 人，逐人一日期）。**最早**完成日 2026-04-02 → 最早 `T+90` = 2026-07-01；**最晚**完成日 2026-06-26 → 最晚 `T+90` = 2026-09-24。因最早 `T+90`（2026-07-01）已**超過**資料截點 `2026-06-30`，`P3-Q2` **全數 14 人**均未到期。\n\n  Line 134: 1. **完成窗 ≠ 資料截點**。`P3` 之「完成」僅計 `2026-01-01～2026-03-31` 結訓者；`2026-06-30` 只是**資料截點**，不是完成窗終點。此設計確保 `P3` 之 `T+90` 已成熟，可作為決策 cohort。\n\n  Line 156: | `A` | 受訓完成人數 | 於該 cohort 完成窗內，全程完成本課程且取得結訓者 |\n\n  Line 189: - 非回覆/失聯（`UNREACHABLE`）、明確拒訪（`DECLINED`）**留在 `C`**，不從分母剔除；只在分子（`D`）計入有主波次追蹤資料者。\n\n  Line 191: - 跨期口徑必須一致：`P1`/`P2` 為完整年度、`P3` 為 3 個月有界完成 cohort、`P3-Q2` 不列入分母；任何跨期比較須以「各 cohort 自身分母」計率，**禁止**把原始人數直接相加當等長趨勢。如提供合併數列，須標「合併（口徑不一致、成熟度不同，僅供描述性總覽；**不得作為決策依據**）》」。\n\n  Line 217: 4. **檢討範圍與方法**：完成窗與資料截點分離、主波次 `T+90` 定義、納入/排除、分母與缺失規則、資料來源類型（合成）。\n\n  Line 221: 8. **非回覆與資料缺失**：`T6`；說明主波次窗、提醒次數、失聯與拒訪處理及其對結果的影響。\n\n  Line 237: ### T1 完成窗、資料截點與成熟度表（defects 3、9）\n\n  Line 242: | 完成窗起 | 日期 |\n\n  Line 243: | 完成窗迄 | 日期 |\n\n  Line 245: | 資料截點 | 日期（全數 = `2026-06-30`） |\n\n  Line 246: | 主波次 `T+90` 最晚到期 | 日期 |\n\n  Line 249: | 是否列入分母 | 是／否 |\n\n  Line 251: | period_id | 完成窗起 | 完成窗迄 | 期類型 | 追蹤波次 | 主波次最晚到期 | `T+90` 狀態 | `T+180` 狀態 | 列入分母 |\n\n  Line 285: | P3-Q2（資訊，不列入分母） | 14 | — | — | — | — | — | — | 未計 | 未計 | 未計 | 未計 | 未計 | 未計 |\n\n  Line 401: | T+180 | 2025-09-11 | 耐久性抽查（描述性） | 續有紀錄、格式趨穩（合成示範） | 佐證（丁續） | Tier-A | 僅描述性、不進主波次率 |\n\n  Line 403: > `T+180` 依主波次規則**僅為描述性**；該個案屬 `P2`，其 `T+180` 於截點前成熟，惟仍**不**計入任何率。\n\n  Line 471: > 目的：量測課程所學（C1 分類、C2 紀錄填寫、C3 轉介界線）在實際志工服務情境中的使用。答案不含個資識別；以志工代號連結。**主波次＝T+90**：僅 `T+90` 回覆用於判定 `D`、`E`；`T+30/T+60/T+180` 僅描述性，**不**決定 `E`、`G`，且同一人不得跨波次重複計數。\n\n  Line 483: - **自述達標（T+90 主波次）**：`Q1 ≥ 1（即「1–2 次」以上）` **且** `Q2 ≥ 4` **且** `Q3 ≥ 4`。\n\n  Line 484: - **非自述佐證符合（主波次窗內）**：Tier-A（接觸紀錄／系統紀錄，日期 ≤ 結訓後 `T+90`）**或** Tier-B（觀察量尺總分 ≥ 9/12，於 `T+60` 或 `T+90`）。\n\n  Line 503: 1. 主波次窗開啟後，第 7、14 天各發 1 次提醒；跨 2 種管道，最多 3 次嘗試。\n\n  Line 507: 5. **未到期處理**：凡主波次（`T+90`）窗尾超過資料截點 `2026-06-30` 之筆，該筆標 `WINDOW_NOT_DUE`（或部分者 `WINDOW_TRUNCATED`），**不計入 `D`**，移入「未到期」計數並揭露。`P3-Q2` 全數屬此類，**不列入任何分母**。\n\n  Line 523: - 圖註（必要）：「本圖為合成示範數據，非協會實際成效，亦非任何評核分數；各期完成窗長度不同（第三期為 3 個月有界完成 cohort），不與完整年度等長；不含合併數列。」\n\n  Line 557: - **F2 主要應用未同步**：主波次應用率 `62.5% → 68.8% → 61.1%`，三期皆低於 70%。\n\n  Line 569: 4. **期間與成熟度不一**：`P3` 為 3 個月有界完成 cohort；`P2` 之 `T+180` 貼近截點；`P3` 之 `T+180` 未到期（`NOT YET DUE`）；`P3-Q2` 未列入分母。\n\n  Line 575: | 規則 | 條件（**限 `P3`，主波次 T+90**） | 觸發結果 | 本期判定 |\n\n  Line 621: - **個案檢討結論（示範）**：該員於 T0 達標，並在 T+30 自述、T+60 觀察、T+90 紀錄三層皆有應用跡象 → 屬「**行為層面有應用且具部分非自述佐證**」之合成示範個案（計入 `G`，因具 Tier-A/B）。**主波次 `T+90` 判定為「有應用」**。\n\n  Line 642: | 追蹤結果 T+90（**主波次判定**） | 3 筆紀錄欄位齊備，其中 1 筆正確觸發轉介界線 → 判定「有應用且具非自述佐證」 |\n\n  Line 670: | SF-0057-001 | — | 0057 | T1 欄定義 / 「資料截點」列（型別註記「全數 = `2026-06-30`」）；§5.1 段首（單一資料截點）；§5.1 硬規則1（完成窗≠截點）；§5.1 硬規則2（最早 `T+90` > 截點）；§8.3 規則5（未到期處理）；T1 註（`P3-Q2` 未到期） | 資料截點 | 2026-06-30 | 不假設 2026 為完整年度；全 cohort 成熟度單一判準 | 實際資料截點紀錄 | 訓練承辦（提案） | SYNTHETIC |\n\n  Line 671: | SF-0057-002 | — | 0057 | T1 / P1 列 / 完成窗起欄；§5.1 / P1 列 / 完成窗欄 | 完成窗起（P1） | 2024-01-01 | 完整年度起點，便於跨期比較 | 年度訓練計畫、班表 | 訓練承辦（提案） | SYNTHETIC |\n\n  Line 672: | SF-0057-003 | — | 0057 | T1 / P1 列 / 完成窗迄欄；§5.1 / P1 列 / 完成窗欄 | 完成窗迄（P1） | 2024-12-31 | 封閉完整年度迄點 | 年度訓練計畫、班表 | 訓練承辦（提案） | SYNTHETIC |\n\n  Line 673: | SF-0057-004 | — | 0057 | T1 / P2 列 / 完成窗起欄；§5.1 / P2 列 / 完成窗欄 | 完成窗起（P2） | 2025-01-01 | 完整年度起點 | 年度訓練計畫、班表 | 訓練承辦（提案） | SYNTHETIC |\n\n  Line 674: | SF-0057-005 | — | 0057 | T1 / P2 列 / 完成窗迄欄；§5.1 / P2 列 / 完成窗欄 | 完成窗迄（P2） | 2025-12-31 | 封閉完整年度迄點 | 年度訓練計畫、班表 | 訓練承辦（提案） | SYNTHETIC |\n\n  Line 675: | SF-0057-006 | — | 0057 | T1 / P3 列 / 完成窗起欄；§5.1 / P3 列 / 完成窗欄 | 完成窗起（P3） | 2026-01-01 | 有界 cohort 起點，使 T+90 成熟 | 班表、結訓紀錄 | 訓練承辦（提案） | SYNTHETIC |\n\n  Line 676: | SF-0057-007 | — | 0057 | T1 / P3 列 / 完成窗迄欄；§5.1 / P3 列 / 完成窗欄 | 完成窗迄（P3） | 2026-03-31 | 3 個月有界窗迄點 | 班表、結訓紀錄 | 訓練承辦（提案） | SYNTHETIC |\n\n  Line 677: | SF-0057-008 | — | 0057 | T1 / P3-Q2 列 / 完成窗起欄；§5.1 / P3-Q2 列 / 完成窗欄 | 完成窗起（P3-Q2） | 2026-04-01 | 季度窗起點 | 班表、結訓紀錄 | 訓練承辦（提案） | SYNTHETIC |\n\n  Line 678: | SF-0057-009 | — | 0057 | T1 / P3-Q2 列 / 完成窗迄欄；§5.1 / P3-Q2 列 / 完成窗欄 | 完成窗迄（P3-Q2） | 2026-06-30 | 季度窗迄點（同截點） | 班表、結訓紀錄 | 訓練承辦（提案） | SYNTHETIC |\n\n  Line 679: | SF-0057-010 | — | 0057 | T1 / P1 列 / 主波次最晚到期欄；§5.1 / P1 列 / T+90 狀態欄 | T+90 最晚到期（P1） | 2025-03-31 | 完成窗迄 +90，顯示已成熟 | 追蹤窗紀錄 | 追蹤執行者（提案） | SYNTHETIC |\n\n  Line 680: | SF-0057-011 | — | 0057 | T1 / P2 列 / 主波次最晚到期欄；§5.1 / P2 列 / T+90 狀態欄 | T+90 最晚到期（P2） | 2026-03-31 | 完成窗迄 +90，已成熟 | 追蹤窗紀錄 | 追蹤執行者（提案） | SYNTHETIC |\n\n  Line 681: | SF-0057-012 | — | 0057 | T1 / P3 列 / 主波次最晚到期欄；§5.1 / P3 列 / T+90 狀態欄 | T+90 最晚到期（P3） | 2026-06-29 | 完成窗迄 +90 ≤ 截點，決策 cohort 成熟 | 追蹤窗紀錄 | 追蹤執行者（提案） | SYNTHETIC |\n\n  Line 682: | SF-0057-013 | — | 0057 | T1 / P3-Q2 列 / 主波次最晚到期欄；§5.1 / P3-Q2 列 / T+90 狀態欄；§5.1 P3-Q2 分布段 | 最早 T+90 到期（P3-Q2） | 2026-07-01 | 最早完成日 2026-04-02 +90 > 截點 → 未到期 | 追蹤窗紀錄 | 追蹤執行者（提案） | SYNTHETIC |\n\n  Line 683: | SF-0057-014 | — | 0057 | T1 / P3-Q2 列 / 主波次最晚到期欄；§5.1 P3-Q2 分布段 | 最晚 T+90 到期（P3-Q2） | 2026-09-24 | 最晚完成日 2026-06-26 +90 | 追蹤窗紀錄 | 追蹤執行者（提案） | SYNTHETIC |\n\n  Line 684: | SF-0057-015 | — | 0057 | T1 / P1 列 / T+90 狀態欄；§5.1 / P1 列 / 主波次 T+90 狀態欄 | T+90 狀態（P1） | 成熟 | 完成窗迄 +90 ≤ 截點 | 追蹤窗紀錄 | 追蹤執行者（提案） | SYNTHETIC |\n\n  Line 685: | SF-0057-016 | — | 0057 | T1 / P2 列 / T+90 狀態欄；§5.1 / P2 列 / 主波次 T+90 狀態欄 | T+90 狀態（P2） | 成熟 | 完成窗迄 +90 ≤ 截點 | 追蹤窗紀錄 | 追蹤執行者（提案） | SYNTHETIC |\n\n  Line 686: | SF-0057-017 | — | 0057 | T1 / P3 列 / T+90 狀態欄；§5.1 / P3 列 / 主波次 T+90 狀態欄 | T+90 狀態（P3） | 成熟 | 完成窗迄 +90 = 2026-06-29 | 追蹤窗紀錄 | 追蹤執行者（提案） | SYNTHETIC |\n\n  Line 687: | SF-0057-018 | — | 0057 | T1 / P3-Q2 列 / T+90 狀態欄；§5.1 / P3-Q2 列 / 主波次 T+90 狀態欄；§8.3 規則5 | T+90 狀態（P3-Q2） | `NOT YET DUE` | 最早 T+90 > 截點 | 追蹤窗紀錄 | 追蹤執行者（提案） | SYNTHETIC |\n\n  Line 688: | SF-0057-019 | — | 0057 | T1 / P1 列 / T+180 狀態欄；§5.1 / P1 列 / T+180 狀態欄 | T+180 狀態（P1） | 成熟 | 完成窗迄 +180 ≤ 截點 | 追蹤窗紀錄 | 追蹤執行者（提案） | SYNTHETIC |\n\n  Line 689: | SF-0057-020 | — | 0057 | T1 / P2 列 / T+180 狀態欄；§5.1 / P2 列 / T+180 狀態欄；§10.2 第4點 | T+180 狀態（P2） | 成熟（描述性） | 貼近截點，僅描述性 | 追蹤窗紀錄 | 追蹤執行者（提案） | SYNTHETIC |\n\n  Line 690: | SF-0057-021 | — | 0057 | T1 註 / P2 T+180 最晚到期；§5.1 / P2 列 / T+180 狀態欄 | T+180 最晚到期（P2） | 2026-06-29 | 完成窗迄 2025-12-31 +180 | 追蹤窗紀錄 | 追蹤執行者（提案） | SYNTHETIC |\n\n  Line 691: | SF-0057-022 | — | 0057 | T1 / P3 列 / T+180 狀態欄；§5.1 / P3 列 / T+180 狀態欄；§10.2 第4點 | T+180 狀態（P3） | `NOT YET DUE` | 完成窗迄 +180 超過截點 | 追蹤窗紀錄 | 追蹤執行者（提案） | SYNTHETIC |\n\n  Line 692: | SF-0057-023 | — | 0057 | T1 註 / P3 T+180 最晚到期；§5.1 / P3 列 / T+180 狀態欄 | T+180 最晚到期（P3） | 2026-09-27 | 完成窗迄 2026-03-31 +180 | 追蹤窗紀錄 | 追蹤執行者（提案） | SYNTHETIC |\n\n  Line 693: | SF-0057-024 | — | 0057 | §5.1 / P3-Q2 列 / T+180 狀態欄 | T+180 最晚到期（P3-Q2） | 2026-12-23 | 最晚完成日 2026-06-26 +180（校正原誤植 2026-09-24） | 追蹤窗紀錄 | 追蹤執行者（提案） | SYNTHETIC |\n\n  Line 694: | SF-0057-025 | — | 0057 | T1 / P1–P3-Q2 列 / 追蹤波次欄；§8.1 發放時點 | 追蹤波次 | 30/60/90/180（主波次 T+90） | 明定四波次、主波次 T+90 | 追蹤窗設計文件 | 訓練承辦（提案） | SYNTHETIC |\n\n  Line 695: | SF-0057-026 | — | 0057 | T1 / P1 列 / 列入分母欄；§5.1 / P1 列 / 是否列入分母欄 | 列入分母（P1） | 是 | 已成熟、列入 | 名冊、追蹤紀錄 | 訓練承辦（提案） | SYNTHETIC |\n\n  Line 696: | SF-0057-027 | — | 0057 | T1 / P2 列 / 列入分母欄；§5.1 / P2 列 / 是否列入分母欄 | 列入分母（P2） | 是 | 已成熟、列入 | 名冊、追蹤紀錄 | 訓練承辦（提案） | SYNTHETIC |\n\n  Line 697: | SF-0057-028 | — | 0057 | T1 / P3 列 / 列入分母欄；§5.1 / P3 列 / 是否列入分母欄 | 列入分母（P3） | 是（決策 cohort） | 已成熟、決策 cohort | 名冊、追蹤紀錄 | 訓練承辦（提案） | SYNTHETIC |\n\n  Line 698: | SF-0057-029 | — | 0057 | T1 / P3-Q2 列 / 列入分母欄；§5.1 / P3-Q2 列 / 是否列入分母欄；§5.1 硬規則2 | 列入分母（P3-Q2） | 否（資訊） | 未到期，全數排除於分子與分母 | 名冊、追蹤紀錄 | 訓練承辦（提案） | SYNTHETIC |\n\n  Line 699: | SF-0057-030 | — | 0057 | §5.1 P3-Q2 分布段 / 逐人完成日 1/14；T1 / P3-Q2 列 / 完成窗欄（最早 2026-04-02） | P3-Q2 完成日期（1/14） | 2026-04-02 | 逐人完成日；14 筆之最早 | 結訓紀錄 | 訓練承辦（提案） | SYNTHETIC |\n\n  Line 712: | SF-0057-043 | — | 0057 | §5.1 P3-Q2 分布段 / 逐人完成日 14/14；T1 / P3-Q2 列 / 主波次最晚到期欄（最晚 2026-06-26） | P3-Q2 完成日期（14/14） | 2026-06-26 | 逐人完成日；14 筆之最晚 | 結訓紀錄 | 訓練承辦（提案） | SYNTHETIC |\n\n  Line 850: | SF-0057-181 | SYN-0057-CASE-01 | 0057 | T7 / T0 列 / 日期欄；§12.1 訓練日期；§12.1 追蹤時間 | 個案訓練日期（T0） | 2025-03-15 | 對應 P2 完成窗，合成 | 班表 | 訓練承辦（提案） | SYNTHETIC |\n\n  Line 856: | SF-0057-187 | SYN-0057-CASE-01 | 0057 | T7 / T+90 列 / 日期欄；§12.1 追蹤時間 | 個案 T+90 日期 | 2025-06-13 | T0+90，主波次 | 接觸紀錄抽查 | 志工督導（提案） | SYNTHETIC |\n\n  Line 869: | SF-0057-200 | SYN-0057-CASE-01 | 0057 | §12.2 / 追蹤結果 T+90（主波次判定）列；§12.1 個案檢討結論 | 個案 T+90 主波次判定 | 判定「有應用且具非自述佐證」（計入 `G`） | 主波次判定；其計數基礎（T+90 前 3 筆紀錄、其中 1 筆觸發界線）分列於 SF-188 與 SF-210 | 接觸紀錄、觀察表 | 志工督導（提案） | SYNTHETIC |\n\n  Line 880: | SF-0057-211 | SYN-0057-CASE-01 | 0057 | §12.2 / 期限列 | 個案行動計畫持續至日期 | 2025-06-13 | `T+90` 主波次截止（單一日期） | 志工任務表 | 志工督導（提案） | SYNTHETIC |\n\n  Line 914: | RQ-04 | 追蹤問卷回覆原始檔（含 T+90 主波次） | 問卷平台匯出／紙本 | 匯出時間＋份數＋涵蓋率計算明細 | `PENDING_REAL_SOURCE` |\n\n  Line 917: | RQ-07 | 達標門檻、主波次與追蹤窗之內部依據 | 訓練品質文件／內規 | 條號＋核定狀態 | `PENDING_REAL_SOURCE` |\n\n  Line 931: 3. 完成窗與資料截點分離：`P3` 完成窗 `2026-01-01～2026-03-31`、截點 `2026-06-30`、主波次 `T+90` 成熟、`P3 T+180` 標 `NOT YET DUE`；`P3-Q2` 不列入分母。\n\n  Line 933: 5. 含可直接使用之追蹤問卷（題目＋尺度＋時點＋計分＋主波次規則）與觀察量尺（錨點＋尺度＋門檻），並含非回覆/不適用/未到期處理。\n\n  Line 957: - `P3` `T+180` 未到期之筆數與 `P3-Q2` 未列入分母之情形未揭露。\n\n  Line 962: 2. 分母不明、非回覆未交代、或跨期口徑不一致（把 `P3` 當完整年度、把 `P3-Q2` 列入分母、或短窗與長窗混算）。\n\n  Line 983: 7. **期間誠實**：`P3` 完成窗為 `2026-01-01～2026-03-31`、截點 `2026-06-30`、`T+180` 為 `NOT YET DUE`；無任何「2026 全年」暗示。\n\n  Line 1005: - [ ] 完成窗與資料截點分離：`P3` 完成窗 `2026-01-01～2026-03-31`、截點 `2026-06-30`、主波次 `T+90` 成熟、`P3 T+180` 標 `NOT YET DUE`；`P3-Q2` 不列入分母。\n\n  Line 1007: - [ ] 追蹤問卷（Q1–Q6，含尺度/時點/計分/主波次規則）與觀察量尺（R1–R4，0–3，≥9 達標）齊備。\n"
+              }
+            ],
+            "metadata": {
+              "matches": 82,
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1792252238245,
+            "ran": 1792252238300,
+            "completed": 1792252238448
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 3844,
+        "output": 306,
+        "reasoning": 30,
+        "cache": {
+          "read": 5632,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14a8edd6e0019sRyFgm9kKCEN3",
+      "time": {
+        "created": 1792252239234,
+        "streamed": 1792252241452,
+        "completed": 1792252241476
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "Now let me read the T1 section in detail (lines 235-290).",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1792252240622,
+            "completed": 1792252241431
+          }
+        },
+        {
+          "type": "text",
+          "text": "Now let me read the T1 section in detail."
+        },
+        {
+          "type": "tool",
+          "id": "call_00_h45fuxjy1uqyvv5osv4qiwuh",
+          "name": "read",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "path": "E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\inputs\\0057_UNIQUE_BLUEPRINT_R04.md",
+              "offset": 235,
+              "limit": 60
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Read file E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\inputs\\0057_UNIQUE_BLUEPRINT_R04.md, lines 235-294\n235: > 以下所有數值均為 `SYNTHETIC`，並對應第 13 節之 `fact_id`。示例列以字串呈現；實作時每表須有完整表頭、跨頁重複表頭。**人類正文**用自然欄名與自然標籤（第 5.7 節 ID 分層），本節保留 sidecar 代號僅為施工對照。\n236: \n237: ### T1 完成窗、資料截點與成熟度表（defects 3、9）\n238: \n239: | 欄 | 型別/說明 |\n240: |---|---|\n241: | period_id | `P1`/`P2`/`P3`/`P3-Q2` |\n242: | 完成窗起 | 日期 |\n243: | 完成窗迄 | 日期 |\n244: | 期類型 | 完整年度／有界完成 cohort |\n245: | 資料截點 | 日期（全數 = `2026-06-30`） |\n246: | 主波次 `T+90` 最晚到期 | 日期 |\n247: | `T+90` 狀態 | 成熟／`NOT YET DUE` |\n248: | `T+180` 狀態 | 成熟（描述性）／`NOT YET DUE` |\n249: | 是否列入分母 | 是／否 |\n250: \n251: | period_id | 完成窗起 | 完成窗迄 | 期類型 | 追蹤波次 | 主波次最晚到期 | `T+90` 狀態 | `T+180` 狀態 | 列入分母 |\n252: |---|---|---|---|---|---|---|---|---|\n253: | P1 | 2024-01-01 | 2024-12-31 | 完整年度 | 30/60/90/180 | 2025-03-31 | 成熟 | 成熟 | 是 |\n254: | P2 | 2025-01-01 | 2025-12-31 | 完整年度 | 30/60/90/180 | 2026-03-31 | 成熟 | 成熟（描述性） | 是 |\n255: | P3 | 2026-01-01 | 2026-03-31 | 有界完成 cohort | 30/60/90/180 | 2026-06-29 | 成熟 | **NOT YET DUE** | 是（決策 cohort） |\n256: | P3-Q2 | 2026-04-01 | 2026-06-30 | 有界完成 cohort | 30/60/90/180 | 2026-07-01～2026-09-24（最早～最晚；實際完成日最早 2026-04-02） | **NOT YET DUE** | **NOT YET DUE** | **否**（資訊） |\n257: \n258: > 註：`P2` 之 `T+180` 最晚到期為 `2026-06-29`，貼近截點，僅作描述性、不作決策；`P3` 之 `T+180` 最晚到期 `2026-09-27`，**未到期**，正文不得出現其數字。\n259: > 註：`P3-Q2` 之 14 筆合成完成日為 2026-04-02～2026-06-26（逐人分布見第 5.1 節），最早 `T+90` = 2026-07-01 > 截點 `2026-06-30`，故**全數未到期**，並依預先宣告之 cohort 成熟度政策排除於所有率之分子與分母。\n260: \n261: ### T2 合成 cohort 主表（分母與可重算率，核心表；defects 1、3、4、9）\n262: \n263: | 欄 | 型別 |\n264: |---|---|\n265: | period_id | 文字 |\n266: | A 受訓完成 | 整數（人） |\n267: | B 完成評量 | 整數（人） |\n268: | C 可追蹤母數 | 整數（人） |\n269: | D 追蹤涵蓋（`T+90` 截止） | 整數（人） |\n270: | E 實際應用（`T+90` 截止） | 整數（人） |\n271: | F 達門檻 | 整數（人） |\n272: | G 具非自述佐證 | 整數（人） |\n273: | 評量完成率 | B/A |\n274: | 可追蹤率 | C/A |\n275: | 追蹤涵蓋率 | D/C |\n276: | 主要應用率 | E/D |\n277: | 達標率 | F/B |\n278: | 非自述佐證占率 | G/E |\n279: \n280: | period_id | A | B | C | D | E | F | G | 評量完成率 | 可追蹤率 | 追蹤涵蓋率 | 主要應用率 | 達標率 | 非自述佐證占率 |\n281: |---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n282: | P1 | 40 | 36 | 32 | 24 | 15 | 29 | 6 | 36/40 = 90.0% | 32/40 = 80.0% | 24/32 = 75.0% | 15/24 = 62.5% | 29/36 = 80.6% | 6/15 = 40.0% |\n283: | P2 | 48 | 45 | 40 | 32 | 22 | 39 | 10 | 45/48 = 93.8% | 40/48 = 83.3% | 32/40 = 80.0% | 22/32 = 68.8% | 39/45 = 86.7% | 10/22 = 45.5% |\n284: | P3 | 30 | 28 | 25 | 18 | 11 | 25 | 5 | 28/30 = 93.3% | 25/30 = 83.3% | 18/25 = 72.0% | 11/18 = 61.1% | 25/28 = 89.3% | 5/11 = 45.5% |\n285: | P3-Q2（資訊，不列入分母） | 14 | — | — | — | — | — | — | 未計 | 未計 | 未計 | 未計 | 未計 | 未計 |\n286: | 合併（口徑不一、成熟度不同；**描述性總覽，非決策**） | 118 | 109 | 97 | 74 | 48 | 93 | 21 | 109/118 = 92.4% | 97/118 = 82.2% | 74/97 = 76.3% | 48/74 = 64.9% | 93/109 = 85.3% | 21/48 = 43.8% |\n287: \n288: **重算檢核（writer 與 reviewer 均須逐格驗算）**：每格分子＝對應欄位值，分母＝對應欄位值。合併列分子/分母分別為 `P1–P3` 同欄相加（A：40+48+30=118；D：24+32+18=74；E：15+22+11=48；G：6+10+5=21）。比率以合併分子/合併分母計；**禁止**把三期比率直接平均。合併列**僅供描述性總覽**，**不得**作為第 10.3 節任何決策之輸入（決策僅用 `P3`）。`P3-Q2` 之 `A=14` 僅資訊揭露，**不列入任何分母**，且其率「未計」（未到期）。\n289: \n290: **嵌套檢核**：`F⊆B⊆A`、`G⊆E⊆D⊆C⊆A`（例：P1：29≤36≤40；6≤15≤24≤32≤40）。\n291: \n292: ### T3 能力評量分項與達標表\n293: \n294: | 欄 | 型別 |\n[Output truncated. Continue reading with offset: 295]"
+              }
+            ],
+            "metadata": {
+              "truncated": true
+            }
+          },
+          "time": {
+            "created": 1792252241414,
+            "ran": 1792252241447,
+            "completed": 1792252241474
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 7468,
+        "output": 134,
+        "reasoning": 17,
+        "cache": {
+          "read": 9472,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14a8ee651001snSCWDdugep3Hs",
+      "time": {
+        "created": 1792252241502,
+        "streamed": 1792252260190,
+        "completed": 1792252261198
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "Now I understand the T1 structure. Let me plan the changes:\n\nCurrent T1 schema (lines 239-249):\n```\n| 欄 | 型別/說明 |\n|---|---|\n| period_id | `P1`/`P2`/`P3`/`P3-Q2` |\n| 完成窗起 | 日期 |\n| 完成窗迄 | 日期 |\n| 期類型 | 完整年度／有界完成 cohort |\n| 資料截點 | 日期（全數 = `2026-06-30`） |\n| 主波次 `T+90` 最晚到期 | 日期 |\n| `T+90` 狀態 | 成熟／`NOT YET DUE` |\n| `T+180` 狀態 | 成熟（描述性）／`NOT YET DUE` |\n| 是否列入分母 | 是／否 |\n```\n\nExample header (line 251):\n```\n| period_id | 完成窗起 | 完成窗迄 | 期類型 | 追蹤波次 | 主波次最晚到期 | `T+90` 狀態 | `T+180` 狀態 | 列入分母 |\n```\n\nRepair requires schema field names, in order, must correspond exactly to example table header names:\n`period_id` / `完成窗起` / `完成窗迄` / `期類型` / `追蹤波次` / `主波次最晚到期` / `T+90 狀態` / `T+180 狀態` / `列入分母`\n\nSo new schema:\n```\n| 欄 | 型別/說明 |\n|---|---|\n| period_id | `P1`/`P2`/`P3`/`P3-Q2` |\n| 完成窗起 | 日期 |\n| 完成窗迄 | 日期 |\n| 期類型 | 完整年度／有界完成 cohort |\n| 追蹤波次 | 30/60/90/180（主波次 `T+90`） |\n| 主波次最晚到期 | 日期 |\n| `T+90` 狀態 | 成熟／`NOT YET DUE` |\n| `T+180` 狀態 | 成熟（描述性）／`NOT YET DUE` |\n| 列入分母 | 是／否 |\n```\n\nWait - the schema header line is `| 欄 | 型別/說明 |`. The requirement says \"Parse the T1 schema field names and T1 example header and report EXACT_MATCH only if their ordered names are identical.\" So the field names (first column of schema) should be: period_id, 完成窗起, 完成窗迄, 期類型, 追蹤波次, 主波次最晚到期, T+90 狀態, T+180 狀態, 列入分母.\n\nThe example header names: period_id, 完成窗起, 完成窗迄, 期類型, 追蹤波次, 主波次最晚到期, T+90 狀態, T+180 狀態, 列入分母.\n\nNote the backticks around `T+90` 狀態. In the header, it's `\\`T+90\\` 狀態`. In schema it should be the same text. The comparison likely uses the normalized name. Let me keep `T+90 狀態` with backticks as in the original schema line 247 `` | `T+90` 狀態 | `` — but wait, the repair spec lists `T+90\\` status as `T+90 狀態` without backticks. Hmm, the original title uses `T+90` with backticks. The example header line 251 uses `` `T+90` 狀態 ``. So to have EXACT match, the schema should preserve the backtick form as well. Actually the schema currently line 247: `| `T+90` 狀態 | 成熟／`NOT YET DUE` |` — yes backticks. And example header: `` | `T+90` 狀態 | ``. So they match.\n\nFor 主波次最晚到期: current schema line 246 is `| 主波次 `T+90` 最晚到期 | 日期 |`. Example header line 251 uses `主波次最晚到期`. So change schema to remove the `T+90` from the label.\n\nFor 是否列入分母 → 列入分母.\n\nNow the note: \"Add one concise T1 table note stating the shared data cutoff is `2026-06-30`.\"\n\nThere are existing T1 notes at lines 258-259 (two `> 註：` lines). The repair says \"move the common cutoff to one table note\". So add a note stating the shared data cutoff is 2026-06-30. \n\nHmm. The instruction item 4: \"Add one concise T1 table note stating the shared data cutoff is `2026-06-30`. Keep the value as the existing synthetic fact; do not add a new column or duplicate new synthetic values.\"\n\nR04 audit: \"move the constant `2026-06-30` from a purported data-column definition into one explicit T1 table note\".\n\nSo I should add a note. Where? After the example table (or after the schema table). The existing notes are after the example table (lines 258-259). I'll add a new note line. But careful: \"move\" implies removing the `2026-06-30` from the schema. The `資料截點` row (line 245) is being removed, which contained `日期（全數 = `2026-06-30`）`. So the constant 2026-06-30 is removed from schema. But note that 2026-06-30 appears elsewhere in T1 example table (P3-Q2 完成窗迄 = 2026-06-30). The repair says don't change other data, so the P3-Q2 row stays.\n\nSo I add one new note: `> 註：本表所有 cohort 之共同資料截點（data cutoff）為 `2026-06-30`。` Something concise.\n\nNow SF-0057-001 (line 670):\n```\n| SF-0057-001 | — | 0057 | T1 欄定義 / 「資料截點」列（型別註記「全數 = `2026-06-30`」）；§5.1 段首（單一資料截點）；§5.1 硬規則1（完成窗≠截點）；§5.1 硬規則2（最早 `T+90` > 截點）；§8.3 規則5（未到期處理）；T1 註（`P3-Q2` 未到期） | 資料截點 | 2026-06-30 | 不假設 2026 為完整年度；全 cohort 成熟度單一判準 | 實際資料截點紀錄 | 訓練承辦（提案） | SYNTHETIC |\n```\n\nNeed to update locator to the actual T1 note (not a schema row), retaining all valid §5.1/§8.3 locators. So change `T1 欄定義 / 「資料截點」列（型別註記「全數 = `2026-06-30`」）` → something like `T1 表註（共同資料截點 = `2026-06-30`）`. And keep §5.1 段首, §5.1 硬規則1, §5.1 硬規則2, §8.3 規則5, and T1 註（`P3-Q2` 未到期）.\n\nActually \"retaining all valid §5.1/§8.3 locators where the same value is displayed\". The field name column (第 5 欄) is `資料截點` — should that change? The repair item 5 says \"Update `SF-0057-001` to locate the actual T1 note (not a schema row), retaining all valid §5.1/§8.3 locators where the same value is displayed.\" The value label `資料截點` is fine as the fact name. Keep it. Only change the locator column.\n\nLet me construct the new locator:\n`T1 表註（共同資料截點 = `2026-06-30`）；§5.1 段首（單一資料截點）；§5.1 硬規則1（完成窗≠截點）；§5.1 硬規則2（最早 `T+90` > 截點）；§8.3 規則5（未到期處理）；T1 註（`P3-Q2` 未到期）`\n\nHmm, but there are two T1 notes now: the new cutoff note and existing notes. Let me think about the exact wording. The new note: I'll place it as the first note.\n\nNow, the register SF-002 through SF-029 etc. reference \"T1 / P1 列 / ...\" locators. Do those need updating? The repair says \"Do not change any other data or content.\" And specifically only update SF-0057-001 locator. However, some SF rows reference column names like \"主波次最晚到期欄\" (SF-010) — these already use 主波次最晚到期 in some and \"T+90 最晚到期（P1）\" as the fact name. These are register fact-name fields, not necessarily schema names. The instruction is explicit: only change SF-0057-001 locator and T1 schema/note. Also \"update SF-0057-001 locator as specified\". So don't touch others.\n\nWait, but item 3 says \"Match the exact example labels `主波次最晚到期` and `列入分母`.\" That refers to the schema. The register rows SF-010 etc. use `主波次最晚到期欄` in locator which already matches. SF-026 uses `列入分母欄` already. Good. SF-024 has odd formatting but leave it.\n\nNow let me carefully identify the exact byte content and make the edits. I'll copy R04 to R05, then edit R05.\n\nLet me also check: are there other references to `資料截點` schema row that would break? The `資料截點` term appears many places (§5.1). Only the schema row line 245 is removed. Good.\n\nLet me also double-check the schema header line 239 `| 欄 | 型別/說明 |`. The requirement says schema names must match example header names. The schema table first column is labeled 欄, second 型別/說明. Fine.\n\nNow let's do the work. First copy file.\n\nLet me also verify there are no other T1 example tables. The example header is line 251.\n\nLet me now create the R05 file. I'll use shell Copy-Item then edits.\n\nActually, I need to be careful about byte-for-byte preservation of everything else. Using Edit tool on copy preserves the rest. Good.\n\nLet me do the copy.\n\nThen edit:\n1. Remove `| 資料截點 | 日期（全數 = `2026-06-30`） |` line and change 主波次 label, 是否列入分母, add 追蹤波次.\n\nLet me construct the whole schema block replacement to be safe.\n\nOriginal block (lines 241-249):\n```\n| period_id | `P1`/`P2`/`P3`/`P3-Q2` |\n| 完成窗起 | 日期 |\n| 完成窗迄 | 日期 |\n| 期類型 | 完整年度／有界完成 cohort |\n| 資料截點 | 日期（全數 = `2026-06-30`） |\n| 主波次 `T+90` 最晚到期 | 日期 |\n| `T+90` 狀態 | 成熟／`NOT YET DUE` |\n| `T+180` 狀態 | 成熟（描述性）／`NOT YET DUE` |\n| 是否列入分母 | 是／否 |\n```\n\nNew:\n```\n| period_id | `P1`/`P2`/`P3`/`P3-Q2` |\n| 完成窗起 | 日期 |\n| 完成窗迄 | 日期 |\n| 期類型 | 完整年度／有界完成 cohort |\n| 追蹤波次 | 30/60/90/180（主波次 `T+90`） |\n| 主波次最晚到期 | 日期 |\n| `T+90` 狀態 | 成熟／`NOT YET DUE` |\n| `T+180` 狀態 | 成熟（描述性）／`NOT YET DUE` |\n| 列入分母 | 是／否 |\n```\n\n2. Add T1 note. Insert after line 256 (example table last row) and before line 258? The existing notes are 258-259. I'll add the cutoff note as the first note. Actually maybe better to add right after the example table as a new first note.\n\nNew note text: `> 註：本表所有 cohort 之共同資料截點（data cutoff）為 `2026-06-30`，並以之判定追蹤成熟度。`\n\nHmm, keep concise. Let me use: `> 註：共同資料截點（data cutoff）= `2026-06-30`；本表各 cohort 之追蹤成熟度均以此外部截點判定。`\n\nActually simpler and cleaner: `> 註：本表共同資料截點（data cutoff）為 `2026-06-30`。`\n\nI'll go with a concise one. Let me use exact wording that also conveys the single cutoff. I'll add:\n`> 註（共同資料截點）：本表所有 cohort 共用單一資料截點 `2026-06-30`。`\n\nThe task says \"one concise T1 table note stating the shared data cutoff is `2026-06-30`\". Good.\n\n3. SF-0057-001 locator update.\n\nLet me proceed. First copy and check line endings.\n\nLet me check file line endings (CRLF vs LF).",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1792252242930,
+            "completed": 1792252260170
+          }
+        },
+        {
+          "type": "text",
+          "text": "Now I have the full picture. Let me check line endings and set up the output directories."
+        },
+        {
+          "type": "tool",
+          "id": "call_00_9c3ol5ly26q1yb0i5z121qfw",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "command": "$src=\"E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\"; $b=[System.IO.File]::ReadAllBytes(\"$src\\inputs\\0057_UNIQUE_BLUEPRINT_R04.md\"); $crlf=0;$lf=0; for($i=0;$i -lt $b.Length;$i++){ if($b[$i] -eq 10){ if($i -gt 0 -and $b[$i-1] -eq 13){$crlf++}else{$lf++} } }; \"CRLF=$crlf LF-only=$lf\"; \"First bytes:\"; ($b[0..3] | ForEach-Object { $_.ToString('X2') }) -join ' '; \"Dir listing:\"; Get-ChildItem \"$src\\inputs\" | Select-Object Name,Length; Get-ChildItem \"$src\" | Select-Object Name,Mode"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "CRLF=0 LF-only=1026\r\nFirst bytes:\r\n23 20 30 30\r\nDir listing:\r\n\r\nName                               Length\r\n----                               ------\r\n0057_BLUEPRINT_REPAIR_BRIEF_R02.md   7875\r\n0057_BLUEPRINT_REPAIR_BRIEF_R03.md   3629\r\n0057_BLUEPRINT_REPAIR_PATCH_R03.md   3037\r\n0057_BLUEPRINT_REPAIR_PATCH_R04.md   3773\r\n0057_BLUEPRINT_REPAIR_PATCH_R05.md   2422\r\n0057_SOURCE_PACKET_R01.md            7873\r\n0057_UNIQUE_BLUEPRINT_R01.md        44072\r\n0057_UNIQUE_BLUEPRINT_R02.md        72613\r\n0057_UNIQUE_BLUEPRINT_R03.md       114405\r\n0057_UNIQUE_BLUEPRINT_R04.md       125415\r\nbuild                                   1\r\ninputs                                  1\r\nreview                                  1\r\n\r\n"
+              }
+            ],
+            "metadata": {
+              "status": "completed",
+              "truncated": false,
+              "exit": 0
+            }
+          },
+          "time": {
+            "created": 1792252260044,
+            "ran": 1792252260182,
+            "completed": 1792252261195
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 2196,
+        "output": 277,
+        "reasoning": 3070,
+        "cache": {
+          "read": 16896,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14a8f33610017J3zqKdeGmQDHc",
+      "time": {
+        "created": 1792252261235,
+        "streamed": 1792252264623,
+        "completed": 1792252265336
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "No BOM. LF-only line endings. Good.\n\nLet me copy R04 to R05 and create build directory (exists in 0057_R01? yes \"build\" is listed). Let me copy.\n\nWait, \"build\" and \"inputs\" listed at $src level. Actually the listing shows Get-ChildItem \"$src\\inputs\" gave files, then \"$src\" gave Name/Mode with \"build\",\"inputs\",\"review\". So build dir already exists. Good.\n\nLet me copy the file.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1792252262594,
+            "completed": 1792252264612
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_00_na83b6vj6lf80dl2fze12uug",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "command": "$src=\"E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\"; Copy-Item \"$src\\inputs\\0057_UNIQUE_BLUEPRINT_R04.md\" \"$src\\inputs\\0057_UNIQUE_BLUEPRINT_R05.md\" -Force; (Get-FileHash -Algorithm SHA256 \"$src\\inputs\\0057_UNIQUE_BLUEPRINT_R05.md\").Hash; Get-ChildItem \"$src\\build\" | Select-Object Name,Length"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "AF88B80542585E85E2D25E8B2011B8F1770B6AA049B7F8DE9E067AC8A9AF4552\r\n\r\nName                                                        Length\r\n----                                                        ------\r\n0057_PROGRESS_R03_REVIEW_R04_REPAIR_20261017.md               2729\r\n0057_PROGRESS_R04_T1_SCHEMA_REPAIR_20261017.md                1355\r\n0057_R02_after_interrupted_session_20261017.md               97407\r\n0057_R02_R03_exact_baseline_recovered_from_session_reads.md  72613\r\n0057_R02_R03_recovery_receipt_20261017.json                    890\r\n0057_R02_unexpected_mutation_snapshot_20261017.md            23137\r\n0057_R03_after_interrupted_session_20261017.md               76586\r\n0057_R04_blueprint_repair_receipt.md                          8135\r\nopencode_v2_blueprint_exit_R01.txt                               1\r\nopencode_v2_blueprint_patch_R03_GLM_exit.txt                     1\r\nopencode_v2_blueprint_patch_R03_GLM_stderr.txt                   0\r\nopencode_v2_blueprint_patch_R03_GLM_stdout.jsonl            203131\r\nopencode_v2_blueprint_prompt_R01.md                           3548\r\nopencode_v2_blueprint_repair_exit_R02b.txt                       1\r\nopencode_v2_blueprint_repair_prompt_R02.md                     769\r\nopencode_v2_blueprint_repair_R04_exit_code.txt                   1\r\nopencode_v2_blueprint_repair_R04_session_export.json        538693\r\nopencode_v2_blueprint_repair_R04_stderr.txt                      0\r\nopencode_v2_blueprint_repair_R04_stdout.jsonl               632971\r\nopencode_v2_blueprint_repair_R05_stderr.txt                      0\r\nopencode_v2_blueprint_repair_R05_stdout.jsonl                69632\r\nopencode_v2_blueprint_repair_response_R02.jsonl             200704\r\nopencode_v2_blueprint_repair_response_R02b.jsonl            548657\r\nopencode_v2_blueprint_repair_response_R03.jsonl             225280\r\nopencode_v2_blueprint_repair_stderr_R02.txt                      0\r\nopencode_v2_blueprint_repair_stderr_R02b.txt                     0\r\nopencode_v2_blueprint_repair_stderr_R03.txt                      0\r\nopencode_v2_blueprint_response_R01.jsonl                    355165\r\nopencode_v2_blueprint_stderr_R01.txt                             0\r\n\r\n"
+              }
+            ],
+            "metadata": {
+              "status": "completed",
+              "truncated": false,
+              "exit": 0
+            }
+          },
+          "time": {
+            "created": 1792252264534,
+            "ran": 1792252264620,
+            "completed": 1792252265334
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 3623,
+        "output": 168,
+        "reasoning": 104,
+        "cache": {
+          "read": 19072,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14a8f4385001UqQ5Xuy2RV9Jnv",
+      "time": {
+        "created": 1792252265362,
+        "streamed": 1792252269317,
+        "completed": 1792252269349
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "The R05 file now equals R04. Now make the edits.\n\nLet me edit the schema block.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1792252267741,
+            "completed": 1792252269305
+          }
+        },
+        {
+          "type": "text",
+          "text": "R05 copy created (matches R04). Now I'll apply the three bounded edits."
+        },
+        {
+          "type": "tool",
+          "id": "call_00_xcw6qyt2v6bohoc7qhce3ewi",
+          "name": "edit",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "path": "E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\inputs\\0057_UNIQUE_BLUEPRINT_R05.md",
+              "oldString": "| 期類型 | 完整年度／有界完成 cohort |\n| 資料截點 | 日期（全數 = `2026-06-30`） |\n| 主波次 `T+90` 最晚到期 | 日期 |\n| `T+90` 狀態 | 成熟／`NOT YET DUE` |\n| `T+180` 狀態 | 成熟（描述性）／`NOT YET DUE` |\n| 是否列入分母 | 是／否 |",
+              "newString": "| 期類型 | 完整年度／有界完成 cohort |\n| 追蹤波次 | 30/60/90/180（主波次 `T+90`） |\n| 主波次最晚到期 | 日期 |\n| `T+90` 狀態 | 成熟／`NOT YET DUE` |\n| `T+180` 狀態 | 成熟（描述性）／`NOT YET DUE` |\n| 列入分母 | 是／否 |"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Edited _TTQS_ONE_REVIEW_SYNC_0036_R08_20261016/docs/ttqs-quality-20261016/quality-review/0057_R01/inputs/0057_UNIQUE_BLUEPRINT_R05.md (1 replacement)"
+              }
+            ],
+            "metadata": {
+              "files": [
+                {
+                  "file": "_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016/docs/ttqs-quality-20261016/quality-review/0057_R01/inputs/0057_UNIQUE_BLUEPRINT_R05.md",
+                  "patch": "Index: _TTQS_ONE_REVIEW_SYNC_0036_R08_20261016/docs/ttqs-quality-20261016/quality-review/0057_R01/inputs/0057_UNIQUE_BLUEPRINT_R05.md\n===================================================================\n--- _TTQS_ONE_REVIEW_SYNC_0036_R08_20261016/docs/ttqs-quality-20261016/quality-review/0057_R01/inputs/0057_UNIQUE_BLUEPRINT_R05.md\n+++ _TTQS_ONE_REVIEW_SYNC_0036_R08_20261016/docs/ttqs-quality-20261016/quality-review/0057_R01/inputs/0057_UNIQUE_BLUEPRINT_R05.md\n@@ -241,13 +241,13 @@\n | period_id | `P1`/`P2`/`P3`/`P3-Q2` |\n | 完成窗起 | 日期 |\n | 完成窗迄 | 日期 |\n | 期類型 | 完整年度／有界完成 cohort |\n-| 資料截點 | 日期（全數 = `2026-06-30`） |\n-| 主波次 `T+90` 最晚到期 | 日期 |\n+| 追蹤波次 | 30/60/90/180（主波次 `T+90`） |\n+| 主波次最晚到期 | 日期 |\n | `T+90` 狀態 | 成熟／`NOT YET DUE` |\n | `T+180` 狀態 | 成熟（描述性）／`NOT YET DUE` |\n-| 是否列入分母 | 是／否 |\n+| 列入分母 | 是／否 |\n \n | period_id | 完成窗起 | 完成窗迄 | 期類型 | 追蹤波次 | 主波次最晚到期 | `T+90` 狀態 | `T+180` 狀態 | 列入分母 |\n |---|---|---|---|---|---|---|---|---|\n | P1 | 2024-01-01 | 2024-12-31 | 完整年度 | 30/60/90/180 | 2025-03-31 | 成熟 | 成熟 | 是 |\n",
+                  "status": "modified",
+                  "additions": 3,
+                  "deletions": 3
+                }
+              ],
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1792252269223,
+            "ran": 1792252269310,
+            "completed": 1792252269347
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 963,
+        "output": 356,
+        "reasoning": 21,
+        "cache": {
+          "read": 22656,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14a8f5332001zOGLpQ39DSekkH",
+      "time": {
+        "created": 1792252269376,
+        "streamed": 1792252275907,
+        "completed": 1792252275931
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "Now add the T1 note. Insert after the example table row P3-Q2 (line 256) before existing `> 註：` line 258. Let me add the new note as the first note.\n\nCurrent:\n```\n| P3-Q2 | 2026-04-01 | 2026-06-30 | 有界完成 cohort | 30/60/90/180 | 2026-07-01～2026-09-24（最早～最晚；實際完成日最早 2026-04-02） | **NOT YET DUE** | **NOT YET DUE** | **否**（資訊） |\n\n> 註：`P2` 之 `T+180` 最晚到期為 `2026-06-29`，貼近截點，僅作描述性、不作決策；`P3` 之 `T+180` 最晚到期 `2026-09-27`，**未到期**，正文不得出現其數字。\n```\n\nInsert new note between them.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1792252272911,
+            "completed": 1792252275900
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_00_me3t5oiba85cgfji5m7c0a8z",
+          "name": "edit",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "newString": "| P3-Q2 | 2026-04-01 | 2026-06-30 | 有界完成 cohort | 30/60/90/180 | 2026-07-01～2026-09-24（最早～最晚；實際完成日最早 2026-04-02） | **NOT YET DUE** | **NOT YET DUE** | **否**（資訊） |\n\n> 註：本表所有 cohort 共用單一資料截點（data cutoff）`2026-06-30`，各期追蹤成熟度均以此判定。\n\n> 註：`P2` 之 `T+180` 最晚到期為 `2026-06-29`，貼近截點，僅作描述性、不作決策；`P3` 之 `T+180` 最晚到期 `2026-09-27`，**未到期**，正文不得出現其數字。",
+              "oldString": "| P3-Q2 | 2026-04-01 | 2026-06-30 | 有界完成 cohort | 30/60/90/180 | 2026-07-01～2026-09-24（最早～最晚；實際完成日最早 2026-04-02） | **NOT YET DUE** | **NOT YET DUE** | **否**（資訊） |\n\n> 註：`P2` 之 `T+180` 最晚到期為 `2026-06-29`，貼近截點，僅作描述性、不作決策；`P3` 之 `T+180` 最晚到期 `2026-09-27`，**未到期**，正文不得出現其數字。",
+              "path": "E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\inputs\\0057_UNIQUE_BLUEPRINT_R05.md"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Edited _TTQS_ONE_REVIEW_SYNC_0036_R08_20261016/docs/ttqs-quality-20261016/quality-review/0057_R01/inputs/0057_UNIQUE_BLUEPRINT_R05.md (1 replacement)"
+              }
+            ],
+            "metadata": {
+              "files": [
+                {
+                  "file": "_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016/docs/ttqs-quality-20261016/quality-review/0057_R01/inputs/0057_UNIQUE_BLUEPRINT_R05.md",
+                  "patch": "Index: _TTQS_ONE_REVIEW_SYNC_0036_R08_20261016/docs/ttqs-quality-20261016/quality-review/0057_R01/inputs/0057_UNIQUE_BLUEPRINT_R05.md\n===================================================================\n--- _TTQS_ONE_REVIEW_SYNC_0036_R08_20261016/docs/ttqs-quality-20261016/quality-review/0057_R01/inputs/0057_UNIQUE_BLUEPRINT_R05.md\n+++ _TTQS_ONE_REVIEW_SYNC_0036_R08_20261016/docs/ttqs-quality-20261016/quality-review/0057_R01/inputs/0057_UNIQUE_BLUEPRINT_R05.md\n@@ -254,8 +254,10 @@\n | P2 | 2025-01-01 | 2025-12-31 | 完整年度 | 30/60/90/180 | 2026-03-31 | 成熟 | 成熟（描述性） | 是 |\n | P3 | 2026-01-01 | 2026-03-31 | 有界完成 cohort | 30/60/90/180 | 2026-06-29 | 成熟 | **NOT YET DUE** | 是（決策 cohort） |\n | P3-Q2 | 2026-04-01 | 2026-06-30 | 有界完成 cohort | 30/60/90/180 | 2026-07-01～2026-09-24（最早～最晚；實際完成日最早 2026-04-02） | **NOT YET DUE** | **NOT YET DUE** | **否**（資訊） |\n \n+> 註：本表所有 cohort 共用單一資料截點（data cutoff）`2026-06-30`，各期追蹤成熟度均以此判定。\n+\n > 註：`P2` 之 `T+180` 最晚到期為 `2026-06-29`，貼近截點，僅作描述性、不作決策；`P3` 之 `T+180` 最晚到期 `2026-09-27`，**未到期**，正文不得出現其數字。\n > 註：`P3-Q2` 之 14 筆合成完成日為 2026-04-02～2026-06-26（逐人分布見第 5.1 節），最早 `T+90` = 2026-07-01 > 截點 `2026-06-30`，故**全數未到期**，並依預先宣告之 cohort 成熟度政策排除於所有率之分子與分母。\n \n ### T2 合成 cohort 主表（分母與可重算率，核心表；defects 1、3、4、9）\n",
+                  "status": "modified",
+                  "additions": 2,
+                  "deletions": 0
+                }
+              ],
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1792252275767,
+            "ran": 1792252275904,
+            "completed": 1792252275929
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 511,
+        "output": 502,
+        "reasoning": 226,
+        "cache": {
+          "read": 23552,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14a8f6ce9001sYdIoeWzT95ywP",
+      "time": {
+        "created": 1792252275957,
+        "streamed": 1792252280411,
+        "completed": 1792252280438
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "Now update SF-0057-001 locator. The old locator: `T1 欄定義 / 「資料截點」列（型別註記「全數 = `2026-06-30`」）；§5.1 段首（單一資料截點）；§5.1 硬規則1（完成窗≠截點）；§5.1 硬規則2（最早 `T+90` > 截點）；§8.3 規則5（未到期處理）；T1 註（`P3-Q2` 未到期）`\n\nNew: `T1 表註（共同資料截點 = `2026-06-30`）；§5.1 段首（單一資料截點）；§5.1 硬規則1（完成窗≠截點）；§5.1 硬規則2（最早 `T+90` > 截點）；§8.3 規則5（未到期處理）；T1 註（`P3-Q2` 未到期）`",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1792252277448,
+            "completed": 1792252280400
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_00_x1f8641f15j6vs1dhjoa4yst",
+          "name": "edit",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "newString": "| SF-0057-001 | — | 0057 | T1 表註（共同資料截點 = `2026-06-30`）；§5.1 段首（單一資料截點）；§5.1 硬規則1（完成窗≠截點）；§5.1 硬規則2（最早 `T+90` > 截點）；§8.3 規則5（未到期處理）；T1 註（`P3-Q2` 未到期） | 資料截點 | 2026-06-30 | 不假設 2026 為完整年度；全 cohort 成熟度單一判準 | 實際資料截點紀錄 | 訓練承辦（提案） | SYNTHETIC |",
+              "oldString": "| SF-0057-001 | — | 0057 | T1 欄定義 / 「資料截點」列（型別註記「全數 = `2026-06-30`」）；§5.1 段首（單一資料截點）；§5.1 硬規則1（完成窗≠截點）；§5.1 硬規則2（最早 `T+90` > 截點）；§8.3 規則5（未到期處理）；T1 註（`P3-Q2` 未到期） | 資料截點 | 2026-06-30 | 不假設 2026 為完整年度；全 cohort 成熟度單一判準 | 實際資料截點紀錄 | 訓練承辦（提案） | SYNTHETIC |",
+              "path": "E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\inputs\\0057_UNIQUE_BLUEPRINT_R05.md"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Edited _TTQS_ONE_REVIEW_SYNC_0036_R08_20261016/docs/ttqs-quality-20261016/quality-review/0057_R01/inputs/0057_UNIQUE_BLUEPRINT_R05.md (1 replacement)"
+              }
+            ],
+            "metadata": {
+              "files": [
+                {
+                  "file": "_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016/docs/ttqs-quality-20261016/quality-review/0057_R01/inputs/0057_UNIQUE_BLUEPRINT_R05.md",
+                  "patch": "Index: _TTQS_ONE_REVIEW_SYNC_0036_R08_20261016/docs/ttqs-quality-20261016/quality-review/0057_R01/inputs/0057_UNIQUE_BLUEPRINT_R05.md\n===================================================================\n--- _TTQS_ONE_REVIEW_SYNC_0036_R08_20261016/docs/ttqs-quality-20261016/quality-review/0057_R01/inputs/0057_UNIQUE_BLUEPRINT_R05.md\n+++ _TTQS_ONE_REVIEW_SYNC_0036_R08_20261016/docs/ttqs-quality-20261016/quality-review/0057_R01/inputs/0057_UNIQUE_BLUEPRINT_R05.md\n@@ -668,9 +668,9 @@\n ### 13.2 完整登錄（**原子化登錄**：一列一值、一列一定位、一列一 `fact_id`；逐格枚舉每一筆合成事實，含期間、人數量、比率、量測、觀察、決策與佐證位置）\n \n | fact_id | case_id | doc_id | locator | 欄位 | 合成值 | 設值理由 | 真實替換來源 | 核驗角色（提案） | 升格狀態 |\n |---|---|---|---|---|---|---|---|---|---|\n-| SF-0057-001 | — | 0057 | T1 欄定義 / 「資料截點」列（型別註記「全數 = `2026-06-30`」）；§5.1 段首（單一資料截點）；§5.1 硬規則1（完成窗≠截點）；§5.1 硬規則2（最早 `T+90` > 截點）；§8.3 規則5（未到期處理）；T1 註（`P3-Q2` 未到期） | 資料截點 | 2026-06-30 | 不假設 2026 為完整年度；全 cohort 成熟度單一判準 | 實際資料截點紀錄 | 訓練承辦（提案） | SYNTHETIC |\n+| SF-0057-001 | — | 0057 | T1 表註（共同資料截點 = `2026-06-30`）；§5.1 段首（單一資料截點）；§5.1 硬規則1（完成窗≠截點）；§5.1 硬規則2（最早 `T+90` > 截點）；§8.3 規則5（未到期處理）；T1 註（`P3-Q2` 未到期） | 資料截點 | 2026-06-30 | 不假設 2026 為完整年度；全 cohort 成熟度單一判準 | 實際資料截點紀錄 | 訓練承辦（提案） | SYNTHETIC |\n | SF-0057-002 | — | 0057 | T1 / P1 列 / 完成窗起欄；§5.1 / P1 列 / 完成窗欄 | 完成窗起（P1） | 2024-01-01 | 完整年度起點，便於跨期比較 | 年度訓練計畫、班表 | 訓練承辦（提案） | SYNTHETIC |\n | SF-0057-003 | — | 0057 | T1 / P1 列 / 完成窗迄欄；§5.1 / P1 列 / 完成窗欄 | 完成窗迄（P1） | 2024-12-31 | 封閉完整年度迄點 | 年度訓練計畫、班表 | 訓練承辦（提案） | SYNTHETIC |\n | SF-0057-004 | — | 0057 | T1 / P2 列 / 完成窗起欄；§5.1 / P2 列 / 完成窗欄 | 完成窗起（P2） | 2025-01-01 | 完整年度起點 | 年度訓練計畫、班表 | 訓練承辦（提案） | SYNTHETIC |\n | SF-0057-005 | — | 0057 | T1 / P2 列 / 完成窗迄欄；§5.1 / P2 列 / 完成窗欄 | 完成窗迄（P2） | 2025-12-31 | 封閉完整年度迄點 | 年度訓練計畫、班表 | 訓練承辦（提案） | SYNTHETIC |\n",
+                  "status": "modified",
+                  "additions": 1,
+                  "deletions": 1
+                }
+              ],
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1792252280283,
+            "ran": 1792252280408,
+            "completed": 1792252280435
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 922,
+        "output": 467,
+        "reasoning": 225,
+        "cache": {
+          "read": 23936,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14a8f7e82001RlQAgFn0ACfih7",
+      "time": {
+        "created": 1792252280462,
+        "streamed": 1792252285366,
+        "completed": 1792252286304
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "Now let me verify:\n1. R04 unchanged (hash).\n2. Diff R04 vs R05 shows only the intended changes.\n3. T1 schema header names vs example header names EXACT_MATCH.\n4. Register IDs 001-232 unique/contiguous.\n5. All lines LF, no BOM.\n\nLet me write a verification script.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1792252283516,
+            "completed": 1792252285357
+          }
+        },
+        {
+          "type": "text",
+          "text": "Now let me run full independent verification."
+        },
+        {
+          "type": "tool",
+          "id": "call_00_61pmkxsz4gxdojrhte8frbht",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "command": "$src=\"E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\inputs\"\n\"=== R04 hash (must be unchanged) ===\"\n(Get-FileHash -Algorithm SHA256 \"$src\\0057_UNIQUE_BLUEPRINT_R04.md\").Hash\n\"=== R05 hash ===\"\n(Get-FileHash -Algorithm SHA256 \"$src\\0057_UNIQUE_BLUEPRINT_R05.md\").Hash\n\"=== diff R04 vs R05 ===\"\n$d = Compare-Object (Get-Content \"$src\\0057_UNIQUE_BLUEPRINT_R04.md\") (Get-Content \"$src\\0057_UNIQUE_BLUEPRINT_R05.md\") -SyncWindow 0\n$d | Format-Table -AutoSize -Wrap\n\"=== line counts ===\"\n\"R04 lines: $((Get-Content \"$src\\0057_UNIQUE_BLUEPRINT_R04.md\").Count)  R05 lines: $((Get-Content \"$src\\0057_UNIQUE_BLUEPRINT_R05.md\").Count)\""
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "A�y�z�ʡ^ | 14 | 5+4+5�A�y�z�� | �l���p������\r\n| �l�ܰ���̡]���ס^ | SYNTHETIC |\r\n| SF-0057-150 | �X | 0057 | T3 / P1�VP3 �C / ������ | �ҫ���q�����]T3�^ | 30 | ��@�`����A�קK��c���� | ���q�W�� | ��\r\n�q�]�p�̡]���ס^ | SYNTHETIC |\r\n| SF-0057-149 | �X | 0057 | T6 / �X�֦C / �ڳX�� | �ڳX DECLINED�]�X�֡A�y�z�ʡ^ | 9 | 3+4+2�A�y�z�ʡF14+9=23 �P���[�\\�@\r\n�P | �l���p������ | �l�ܰ���̡]���ס^ | SYNTHETIC |\r\n| SF-0057-151 | �X | 0057 | T3 / P1�VP3 �C / �`�����e��FT7 / T0 �C / ���X�� | �ҫ���q�F�Ъ��e�]T3�^ | ?21/30�]70%�^ |\r\n��@�`������e | ���q�W�� | ���q�]�p�̡]���ס^ | SYNTHETIC |\r\n| SF-0057-150 | �X | 0057 | T3 / P1�VP3 �C / ������ | �ҫ���q�����]T3�^ | 30 | ��@�`����A�קK��c���� | ���q�W�� | ��\r\n�q�]�p�̡]���ס^ | SYNTHETIC |\r\n| SF-0057-152 | �X | 0057 | T10 / �F�Ъ��e��F��8.2 �X�p�C�FT7 / T+60 �C / ���X��F��12.2 �Ҿکw��C | Tier-B �[��F�Ъ��e\r\n�]T10�^ | ?9/12 | �[��q�ت��e�]R1�VR4�A0�V3�^ | �[��W�� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-151 | �X | 0057 | T3 / P1�VP3 �C / �`�����e��FT7 / T0 �C / ���X�� | �ҫ���q�F�Ъ��e�]T3�^ | ?21/30�]70%�^ |\r\n��@�`������e | ���q�W�� | ���q�]�p�̡]���ס^ | SYNTHETIC |\r\n| SF-0057-153 | �X | 0057 | ��8.1 �欰�P�w�q�F��5.2 E ���{�w�q | �ۭz�F�ЧP�w�]�ݨ��^ | Q1?1 �B Q2?4 �B Q3?4 | ���w�P�w�W\r\n�h�B�����ƭp�� | �ݨ��]�p��� | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-152 | �X | 0057 | T10 / �F�Ъ��e��F��8.2 �X�p�C�FT7 / T+60 �C / ���X��F��12.2 �Ҿکw��C | Tier-B �[��F�Ъ��e\r\n�]T10�^ | ?9/12 | �[��q�ت��e�]R1�VR4�A0�V3�^ | �[��W�� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-154 | �X | 0057 | ��10.3 / DEC-A �C / ������F��10.3 ���Y | DEC-A �M�����e | �F�вv < 75%�]�� P3�^ | ���e�u�j�w\r\n�w������ P3 | �޲z�f�d���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-153 | �X | 0057 | ��8.1 �欰�P�w�q�F��5.2 E ���{�w�q | �ۭz�F�ЧP�w�]�ݨ��^ | Q1?1 �B Q2?4 �B Q3?4 | ���w�P�w�W\r\n�h�B�����ƭp�� | �ݨ��]�p��� | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-155 | �X | 0057 | ��10.3 / DEC-A �C / �����P�w��F��10.1 F1 | DEC-A �P�w�P��J | ��Ĳ�o�]��J P3 �F�вv 89.3%�^\r\n| �� SF-091 �P�w�A?75% | �޲z�f�d���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-154 | �X | 0057 | ��10.3 / DEC-A �C / ������F��10.3 ���Y | DEC-A �M�����e | �F�вv < 75%�]�� P3�^ | ���e�u�j�w\r\n�w������ P3 | �޲z�f�d���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-156 | �X | 0057 | ��10.3 / DEC-B �C / ������ | DEC-B �M�����e | �D�n���βv < 70% �B �D�ۭz���ҥe�v < 50%�]�� P3\r\n�^ | �����P�ɦ��ߤ~Ĳ�o | �޲z�f�d���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-155 | �X | 0057 | ��10.3 / DEC-A �C / �����P�w��F��10.1 F1 | DEC-A �P�w�P��J | ��Ĳ�o�]��J P3 �F�вv 89.3%�^\r\n| �� SF-091 �P�w�A?75% | �޲z�f�d���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-157 | �X | 0057 | ��10.3 / DEC-B �C / �����P�w��F��10.3 �������� | DEC-B �P�w�P��J | Ĳ�o�]��J P3 �D�n���βv\r\n61.1%�B�D�ۭz���ҥe�v 45.5%�^�� IMPROVE_TRANSFER_SUPPORT | �� SF-087 �P SF-095 �P�w | �޲z�f�d���� | ���ר���]���ס^ |\r\nSYNTHETIC |\r\n| SF-0057-156 | �X | 0057 | ��10.3 / DEC-B �C / ������ | DEC-B �M�����e | �D�n���βv < 70% �B �D�ۭz���ҥe�v < 50%�]�� P3\r\n�^ | �����P�ɦ��ߤ~Ĳ�o | �޲z�f�d���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-158 | �X | 0057 | ��10.3 / DEC-C �C / ������ | DEC-C �M�����e | �l�ܲ[�\\�v < 75%�]�� P3�^ | ���e�u�j�w P3 | ��\r\n�z�f�d���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-157 | �X | 0057 | ��10.3 / DEC-B �C / �����P�w��F��10.3 �������� | DEC-B �P�w�P��J | Ĳ�o�]��J P3 �D�n���βv\r\n61.1%�B�D�ۭz���ҥe�v 45.5%�^�� IMPROVE_TRANSFER_SUPPORT | �� SF-087 �P SF-095 �P�w | �޲z�f�d���� | ���ר���]���ס^ |\r\nSYNTHETIC |\r\n| SF-0057-159 | �X | 0057 | ��10.3 / DEC-C �C / �����P�w��F��10.1 F4 | DEC-C �P�w�P��J | Ĳ�o�]��J P3 �l�ܲ[�\\�v 72.0%\r\n�^ | �� SF-083 �P�w�A<75% | �޲z�f�d���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-158 | �X | 0057 | ��10.3 / DEC-C �C / ������ | DEC-C �M�����e | �l�ܲ[�\\�v < 75%�]�� P3�^ | ���e�u�j�w P3 | ��\r\n�z�f�d���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-160 | �X | 0057 | ��10.3 / DEC-D �C / ������FT9 / F3 �C / ���D�� | DEC-D �M�����e | ���� vs �L����t�Z ? 15 ��\r\n���I�]�� P3�^ | �s�ծt�Z���e | �޲z�f�d���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-159 | �X | 0057 | ��10.3 / DEC-C �C / �����P�w��F��10.1 F4 | DEC-C �P�w�P��J | Ĳ�o�]��J P3 �l�ܲ[�\\�v 72.0%\r\n�^ | �� SF-083 �P�w�A<75% | �޲z�f�d���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-161 | �X | 0057 | ��10.3 / DEC-D �C / �����P�w��F��10.1 F5 | DEC-D �P�w�P��J | Ĳ�o�]��J P3 �t�Z 25.0 �ʤ��I\r\n�^ | �� SF-137 �P�w�A?15 | �޲z�f�d���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-160 | �X | 0057 | ��10.3 / DEC-D �C / ������FT9 / F3 �C / ���D�� | DEC-D �M�����e | ���� vs �L����t�Z ? 15 ��\r\n���I�]�� P3�^ | �s�ծt�Z���e | �޲z�f�d���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-162 | �X | 0057 | ��10.3 / DEC-E �C / ������ | DEC-E �M�����e | �F�вv�U�� �B �D�n���βv�U���]P2��P3�^ | �Ͷժ�\r\n�e | �޲z�f�d���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-161 | �X | 0057 | ��10.3 / DEC-D �C / �����P�w��F��10.1 F5 | DEC-D �P�w�P��J | Ĳ�o�]��J P3 �t�Z 25.0 �ʤ��I\r\n�^ | �� SF-137 �P�w�A?15 | �޲z�f�d���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-163 | �X | 0057 | ��10.3 / DEC-E �C / �����P�w�� | DEC-E �P�w�P��J | ��Ĳ�o�]P2��P3 �F�вv�W�� 86.7%��89.3%�^ |\r\n�F�вv���U�� | �޲z�f�d���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-162 | �X | 0057 | ��10.3 / DEC-E �C / ������ | DEC-E �M�����e | �F�вv�U�� �B �D�n���βv�U���]P2��P3�^ | �Ͷժ�\r\n�e | �޲z�f�d���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-164 | �X | 0057 | ��10.3 �������׬q�F��11 �ɭz | �����ܽd���� | �ܽd�P�w�G�����ҵ{�B�j�Ʋ������]�w����ס^ |\r\n�� SF-157�A�D�w�֩w | �޲z�f�d���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-163 | �X | 0057 | ��10.3 / DEC-E �C / �����P�w�� | DEC-E �P�w�P��J | ��Ĳ�o�]P2��P3 �F�вv�W�� 86.7%��89.3%�^ |\r\n�F�вv���U�� | �޲z�f�d���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-165 | �X | 0057 | T9 / F2 �C / ������ | �ﵽ�� F2 ���� | 2026-12-31 | �i�l�ܡB�w�� | �޲z�f�d�֩w���� | ���ר�\r\n��]���ס^ | SYNTHETIC |\r\n| SF-0057-164 | �X | 0057 | ��10.3 �������׬q�F��11 �ɭz | �����ܽd���� | �ܽd�P�w�G�����ҵ{�B�j�Ʋ������]�w����ס^ |\r\n�� SF-157�A�D�w�֩w | �޲z�f�d���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-166 | �X | 0057 | T9 / F2 �C / �ؼ��� | �ﵽ�� F2 �ؼЭ� | �D�ۭz���ҥe�v ?55% | ���� F3 finding | �޲z�f�d��\r\n�w���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-165 | �X | 0057 | T9 / F2 �C / ������ | �ﵽ�� F2 ���� | 2026-12-31 | �i�l�ܡB�w�� | �޲z�f�d�֩w���� | ���ר�\r\n��]���ס^ | SYNTHETIC |\r\n| SF-0057-167 | �X | 0057 | T9 / F3 �C / ������ | �ﵽ�� F3 ���� | 2026-11-30 | �i�l�ܡB�w�� | �޲z�f�d�֩w���� | ���ר�\r\n��]���ס^ | SYNTHETIC |\r\n| SF-0057-166 | �X | 0057 | T9 / F2 �C / �ؼ��� | �ﵽ�� F2 �ؼЭ� | �D�ۭz���ҥe�v ?55% | ���� F3 finding | �޲z�f�d��\r\n�w���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-168 | �X | 0057 | T9 / F3 �C / �ؼ��� | �ﵽ�� F3 �ؼЭ� | �L��������βv ?65% | ���� F5 �s�ծt�� | �޲z�f�d��\r\n�w���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-167 | �X | 0057 | T9 / F3 �C / ������ | �ﵽ�� F3 ���� | 2026-11-30 | �i�l�ܡB�w�� | �޲z�f�d�֩w���� | ���ר�\r\n��]���ס^ | SYNTHETIC |\r\n| SF-0057-169 | �X | 0057 | T9 / F4 �C / ������ | �ﵽ�� F4 ���� | 2026-10-31 | �i�l�ܡB�w�� | �޲z�f�d�֩w���� | ���ר�\r\n��]���ס^ | SYNTHETIC |\r\n| SF-0057-168 | �X | 0057 | T9 / F3 �C / �ؼ��� | �ﵽ�� F3 �ؼЭ� | �L��������βv ?65% | ���� F5 �s�ծt�� | �޲z�f�d��\r\n�w���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-170 | �X | 0057 | T9 / F4 �C / �ؼ��� | �ﵽ�� F4 �ؼЭ� | ���������Ʋv ?90% | ������������² | �޲z�f�d�֩w\r\n���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-169 | �X | 0057 | T9 / F4 �C / ������ | �ﵽ�� F4 ���� | 2026-10-31 | �i�l�ܡB�w�� | �޲z�f�d�֩w���� | ���ר�\r\n��]���ס^ | SYNTHETIC |\r\n| SF-0057-171 | �X | 0057 | T9 / F5 �C / ������ | �ﵽ�� F5 ���� | 2027-01-31 | �i�l�ܡB�w�� | �޲z�f�d�֩w���� | ���ר�\r\n��]���ס^ | SYNTHETIC |\r\n| SF-0057-170 | �X | 0057 | T9 / F4 �C / �ؼ��� | �ﵽ�� F4 �ؼЭ� | ���������Ʋv ?90% | ������������² | �޲z�f�d�֩w\r\n���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-172 | �X | 0057 | T9 / F5 �C / �ؼ��� | �ﵽ�� F5 �ؼЭ� | �l�ܲ[�\\�v ?80% | �����l�ܾ��� | �޲z�f�d�֩w���� |\r\n ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-171 | �X | 0057 | T9 / F5 �C / ������ | �ﵽ�� F5 ���� | 2027-01-31 | �i�l�ܡB�w�� | �޲z�f�d�֩w���� | ���ר�\r\n��]���ס^ | SYNTHETIC |\r\n| SF-0057-173 | �X | 0057 | T9 / F1 �C / ������ | �ﵽ�� F1 ���� | 2027-02-28 | �i�l�ܡB�w�� | �޲z�f�d�֩w���� | ���ר�\r\n��]���ס^ | SYNTHETIC |\r\n| SF-0057-172 | �X | 0057 | T9 / F5 �C / �ؼ��� | �ﵽ�� F5 �ؼЭ� | �l�ܲ[�\\�v ?80% | �����l�ܾ��� | �޲z�f�d�֩w���� |\r\n ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-174 | �X | 0057 | T9 / F1 �C / �ؼ��� | �ﵽ�� F1 �ؼЭ� | �D�n���βv ?70% | ���� F2 finding | �޲z�f�d�֩w��\r\n�� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-173 | �X | 0057 | T9 / F1 �C / ������ | �ﵽ�� F1 ���� | 2027-02-28 | �i�l�ܡB�w�� | �޲z�f�d�֩w���� | ���ר�\r\n��]���ס^ | SYNTHETIC |\r\n| SF-0057-175 | �X | 0057 | T9 / F2 �C / owner�]���ס^�� | �ﵽ�� F2 ���� owner | �Ӥu���ɡ]���ס^ | �� PROPOSED�A�D�w��\r\n�� | ���������]�ݯu��^ | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-174 | �X | 0057 | T9 / F1 �C / �ؼ��� | �ﵽ�� F1 �ؼЭ� | �D�n���βv ?70% | ���� F2 finding | �޲z�f�d�֩w��\r\n�� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-176 | �X | 0057 | T9 / F3 �C / owner�]���ס^�� | �ﵽ�� F3 ���� owner | �V�m�ӿ�]���ס^ | �� PROPOSED | ����\r\n�����]�ݯu��^ | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-175 | �X | 0057 | T9 / F2 �C / owner�]���ס^�� | �ﵽ�� F2 ���� owner | �Ӥu���ɡ]���ס^ | �� PROPOSED�A�D�w��\r\n�� | ���������]�ݯu��^ | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-177 | �X | 0057 | T9 / F4 �C / owner�]���ס^�� | �ﵽ�� F4 ���� owner | �������u�@�p�ա]���ס^ | �� PROPOSED |\r\n ���������]�ݯu��^ | �������u�@�p�ա]���ס^ | SYNTHETIC |\r\n| SF-0057-176 | �X | 0057 | T9 / F3 �C / owner�]���ס^�� | �ﵽ�� F3 ���� owner | �V�m�ӿ�]���ס^ | �� PROPOSED | ����\r\n�����]�ݯu��^ | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-178 | �X | 0057 | T9 / F5 �C / owner�]���ס^�� | �ﵽ�� F5 ���� owner | �l�ܰ���̡]���ס^ | �� PROPOSED | ��\r\n�������]�ݯu��^ | �l�ܰ���̡]���ס^ | SYNTHETIC |\r\n| SF-0057-177 | �X | 0057 | T9 / F4 �C / owner�]���ס^�� | �ﵽ�� F4 ���� owner | �������u�@�p�ա]���ס^ | �� PROPOSED |\r\n ���������]�ݯu��^ | �������u�@�p�ա]���ס^ | SYNTHETIC |\r\n| SF-0057-179 | �X | 0057 | T9 / F1 �C / owner�]���ס^�� | �ﵽ�� F1 ���� owner | �V�m�ӿ�]���ס^ | �� PROPOSED | ����\r\n�����]�ݯu��^ | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-178 | �X | 0057 | T9 / F5 �C / owner�]���ס^�� | �ﵽ�� F5 ���� owner | �l�ܰ���̡]���ס^ | �� PROPOSED | ��\r\n�������]�ݯu��^ | �l�ܰ���̡]���ס^ | SYNTHETIC |\r\n| SF-0057-180 | �X | 0057 | T9 / F2 �C / ���A��FT9 / F3 �C / ���A��FT9 / F4 �C / ���A��FT9 / F5 �C / ���A��FT9 / F1\r\n�C / ���A��F��11 �l�ܾ����A�q | T9 �l�ܾ����A�]���C�^ | �w�������֩w | ���o�Фw�֩w���w���� | �޲z�f�d�֩w���� | ���ר�\r\n��]���ס^ | SYNTHETIC |\r\n| SF-0057-179 | �X | 0057 | T9 / F1 �C / owner�]���ס^�� | �ﵽ�� F1 ���� owner | �V�m�ӿ�]���ס^ | �� PROPOSED | ����\r\n�����]�ݯu��^ | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-181 | SYN-0057-CASE-01 | 0057 | T7 / T0 �C / �����F��12.1 �V�m����F��12.1 �l�ܮɶ� | �ӮװV�m����]T0�^ | 20\r\n25-03-15 | ���� P2 �������A�X�� | �Z�� | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-180 | �X | 0057 | T9 / F2 �C / ���A��FT9 / F3 �C / ���A��FT9 / F4 �C / ���A��FT9 / F5 �C / ���A��FT9 / F1\r\n�C / ���A��F��11 �l�ܾ����A�q | T9 �l�ܾ����A�]���C�^ | �w�������֩w | ���o�Фw�֩w���w���� | �޲z�f�d�֩w���� | ���ר�\r\n��]���ס^ | SYNTHETIC |\r\n| SF-0057-182 | SYN-0057-CASE-01 | 0057 | T7 / T0 �C / ���X���q����F��12.1 �ҫ��ǡ]T0�^�F��12.1 ���ҡ]�ҡ^ | �Ӯ׽ҫ�\r\n���q�o�� | 24/30�]?21 �F�С^ | �i�� T0 ��O��ǡ]�D���Φ��ҡ^ | ���q��l�� | ���q�]�p�̡]���ס^ | SYNTHETIC |\r\n| SF-0057-181 | SYN-0057-CASE-01 | 0057 | T7 / T0 �C / �����F��12.1 �V�m����F��12.1 �l�ܮɶ� | �ӮװV�m����]T0�^ | 20\r\n25-03-15 | ���� P2 �������A�X�� | �Z�� | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-183 | SYN-0057-CASE-01 | 0057 | T7 / T+30 �C / �����F��12.1 �l�ܮɶ� | �Ӯ� T+30 ��� | 2025-04-14 | T0+30�A\r\n�ɧǥ��T | �l�ܰݨ��^�� | �l�ܰ���̡]���ס^ | SYNTHETIC |\r\n| SF-0057-182 | SYN-0057-CASE-01 | 0057 | T7 / T0 �C / ���X���q����F��12.1 �ҫ��ǡ]T0�^�F��12.1 ���ҡ]�ҡ^ | �Ӯ׽ҫ�\r\n���q�o�� | 24/30�]?21 �F�С^ | �i�� T0 ��O��ǡ]�D���Φ��ҡ^ | ���q��l�� | ���q�]�p�̡]���ס^ | SYNTHETIC |\r\n| SF-0057-184 | SYN-0057-CASE-01 | 0057 | T7 / T+30 �C / ���X���q����F��12.1 ���ҡ]�A�^�F��12.2 �l�ܵ��G T+30 �C | �Ӯ�\r\nT+30 �ۭz Q1 | Q1=2 �� | �ۭz�F�л� Q1?1�F�Ȧۭz���i G | �l�ܰݨ��^�� | �l�ܰ���̡]���ס^ | SYNTHETIC |\r\n| SF-0057-183 | SYN-0057-CASE-01 | 0057 | T7 / T+30 �C / �����F��12.1 �l�ܮɶ� | �Ӯ� T+30 ��� | 2025-04-14 | T0+30�A\r\n�ɧǥ��T | �l�ܰݨ��^�� | �l�ܰ���̡]���ס^ | SYNTHETIC |\r\n| SF-0057-185 | SYN-0057-CASE-01 | 0057 | T7 / T+60 �C / �����F��12.1 �l�ܮɶ� | �Ӯ� T+60 ��� | 2025-05-14 | T0+60�A\r\n�ɧǥ��T | �����[����� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-184 | SYN-0057-CASE-01 | 0057 | T7 / T+30 �C / ���X���q����F��12.1 ���ҡ]�A�^�F��12.2 �l�ܵ��G T+30 �C | �Ӯ�\r\nT+30 �ۭz Q1 | Q1=2 �� | �ۭz�F�л� Q1?1�F�Ȧۭz���i G | �l�ܰݨ��^�� | �l�ܰ���̡]���ס^ | SYNTHETIC |\r\n| SF-0057-186 | SYN-0057-CASE-01 | 0057 | T7 / T+60 �C / ���X���q����F��12.1 ���ҡ]���^�F��12.2 �l�ܵ��G T+60 �C | �Ӯ�\r\nT+60 �[�� R1 | R1=3 | �[��q�� `R1`�]��������ʡ^0�V3 �����FT+60 ����� Tier-B �[�� | �����[��q�� | �Ӥu���ɡ]���ס^ |\r\nSYNTHETIC |\r\n| SF-0057-185 | SYN-0057-CASE-01 | 0057 | T7 / T+60 �C / �����F��12.1 �l�ܮɶ� | �Ӯ� T+60 ��� | 2025-05-14 | T0+60�A\r\n�ɧǥ��T | �����[����� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-187 | SYN-0057-CASE-01 | 0057 | T7 / T+90 �C / �����F��12.1 �l�ܮɶ� | �Ӯ� T+90 ��� | 2025-06-13 | T0+90�A\r\n�D�i�� | ��Ĳ������d | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-186 | SYN-0057-CASE-01 | 0057 | T7 / T+60 �C / ���X���q����F��12.1 ���ҡ]���^�F��12.2 �l�ܵ��G T+60 �C | �Ӯ�\r\nT+60 �[�� R1 | R1=3 | �[��q�� `R1`�]��������ʡ^0�V3 �����FT+60 ����� Tier-B �[�� | �����[��q�� | �Ӥu���ɡ]���ס^ |\r\nSYNTHETIC |\r\n| SF-0057-188 | SYN-0057-CASE-01 | 0057 | T7 / T+90 �C / ���X���q����F��12.1 ���������[��F��12.1 ���ҡ]�B�^�F��12.2 �l��\r\n���G T+90 �C | �Ӯ� T+90 ��Ĳ�������ơ]Tier-A�^ | 3 �� | �i�� T+90 �e Tier-A ���ҡ]��@���ƭȡ^ | �A�ȱ�Ĳ����ï | �Ӥu\r\n���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-187 | SYN-0057-CASE-01 | 0057 | T7 / T+90 �C / �����F��12.1 �l�ܮɶ� | �Ӯ� T+90 ��� | 2025-06-13 | T0+90�A\r\n�D�i�� | ��Ĳ������d | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-189 | SYN-0057-CASE-01 | 0057 | T7 / T+180 �C / �����F��12.1 �l�ܮɶ� | �Ӯ� T+180 ��� | 2025-09-11 | T0+18\r\n0�A�y�z�� | �@�[�ʩ�d���� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-188 | SYN-0057-CASE-01 | 0057 | T7 / T+90 �C / ���X���q����F��12.1 ���������[��F��12.1 ���ҡ]�B�^�F��12.2 �l��\r\n���G T+90 �C | �Ӯ� T+90 ��Ĳ�������ơ]Tier-A�^ | 3 �� | �i�� T+90 �e Tier-A ���ҡ]��@���ƭȡ^ | �A�ȱ�Ĳ����ï | �Ӥu\r\n���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-190 | SYN-0057-CASE-01 | 0057 | T7 / T+180 �C / ���X���q����F��12.2 �l�ܵ��G T+180 �C | �Ӯ� T+180 �y�z�ʲ��X\r\n | �򦳬����B�榡��í�]�X���ܽd�^ | �ȴy�z�ʡB���i����v | �@�[�ʩ�d���� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-189 | SYN-0057-CASE-01 | 0057 | T7 / T+180 �C / �����F��12.1 �l�ܮɶ� | �Ӯ� T+180 ��� | 2025-09-11 | T0+18\r\n0�A�y�z�� | �@�[�ʩ�d���� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-191 | SYN-0057-CASE-01 | 0057 | ��12.2 / �����C | �Ӯצ�ʭp�e�������Τ�� | 2025-04-15 | SMART ��������]�V�m\r\n�� 30 �Ѥ��������ΡF��@����^ | �Ӥu���Ȫ� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-190 | SYN-0057-CASE-01 | 0057 | T7 / T+180 �C / ���X���q����F��12.2 �l�ܵ��G T+180 �C | �Ӯ� T+180 �y�z�ʲ��X\r\n | �򦳬����B�榡��í�]�X���ܽd�^ | �ȴy�z�ʡB���i����v | �@�[�ʩ�d���� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-192 | SYN-0057-CASE-01 | 0057 | ��12.2 / �ǲ߯�O�]�Ǩ줰��^�C | �Ӯצ�ʭp�e�G�ǲ߯�O C2 | C2 ���c�Ʊ�Ĳ��\r\n����g | �����ҵ{��O���]��@��O�^ | �ҵ{�]�p��� | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-191 | SYN-0057-CASE-01 | 0057 | ��12.2 / �����C | �Ӯצ�ʭp�e�������Τ�� | 2025-04-15 | SMART ��������]�V�m\r\n�� 30 �Ѥ��������ΡF��@����^ | �Ӥu���Ȫ� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-193 | SYN-0057-CASE-01 | 0057 | ��12.2 / �u��@�ɥܽd���ȡ]�Φb���^�C | �Ӯצ�ʭp�e�G�ܽd���� | ���I�ȯZ�ɧ�\r\n�������Ʊ�Ĳ�����F�W�X�d��̬ɽu�W�h�u�O�����श�v | �������α��� | �Ӥu���Ȫ� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-192 | SYN-0057-CASE-01 | 0057 | ��12.2 / �ǲ߯�O�]�Ǩ줰��^�C | �Ӯצ�ʭp�e�G�ǲ߯�O C2 | C2 ���c�Ʊ�Ĳ��\r\n����g | �����ҵ{��O���]��@��O�^ | �ҵ{�]�p��� | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-194 | SYN-0057-CASE-01 | 0057 | ��12.2 / �W�v�C | �Ӯצ�ʭp�e�G�����ɭ� | �C���ȯZ�� 24 �p�ɤ����� | SMART ��\r\n��ơ]��@�ɭ��ȡ^ | �Ӥu���Ȫ� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-193 | SYN-0057-CASE-01 | 0057 | ��12.2 / �u��@�ɥܽd���ȡ]�Φb���^�C | �Ӯצ�ʭp�e�G�ܽd���� | ���I�ȯZ�ɧ�\r\n�������Ʊ�Ĳ�����F�W�X�d��̬ɽu�W�h�u�O�����श�v | �������α��� | �Ӥu���Ȫ� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-195 | SYN-0057-CASE-01 | 0057 | ��12.2 / ��ĳ����C | �Ӯצ�ʭp�e�G�������]�Ҧ��d�^�X�^ | ���ɩ�C��ҷ|\r\n��d 1 �������æ^�X | ��ĳ�B�D�w����]��@�������^ | �Ӥu���Ȫ� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-194 | SYN-0057-CASE-01 | 0057 | ��12.2 / �W�v�C | �Ӯצ�ʭp�e�G�����ɭ� | �C���ȯZ�� 24 �p�ɤ����� | SMART ��\r\n��ơ]��@�ɭ��ȡ^ | �Ӥu���Ȫ� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-196 | SYN-0057-CASE-01 | 0057 | ��12.2 / owner�]�d������APROPOSED�^�C | �Ӯצ�ʭp�e�Gowner | �Ӥu���ɡ]����\r\n����A�ݯu����v�����^ | �� PROPOSED�A�D�{�Ы��� | ���������]�ݯu��^ | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-195 | SYN-0057-CASE-01 | 0057 | ��12.2 / ��ĳ����C | �Ӯצ�ʭp�e�G�������]�Ҧ��d�^�X�^ | ���ɩ�C��ҷ|\r\n��d 1 �������æ^�X | ��ĳ�B�D�w����]��@�������^ | �Ӥu���Ȫ� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-197 | SYN-0057-CASE-01 | 0057 | ��12.2 / ���\\�ǫh�C | �Ӯצ�ʭp�e�G���\\�ǫh | T+90 �ɳs�� 3 �����������ơA\r\n�B�ܤ� 1 �����T�����श�ɽu�P�_ | SMART �i�q���B�D�w�F�� | �~��W�� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-196 | SYN-0057-CASE-01 | 0057 | ��12.2 / owner�]�d������APROPOSED�^�C | �Ӯצ�ʭp�e�Gowner | �Ӥu���ɡ]����\r\n����A�ݯu����v�����^ | �� PROPOSED�A�D�{�Ы��� | ���������]�ݯu��^ | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-198 | SYN-0057-CASE-01 | 0057 | ��12.2 / ��ê�C | �Ӯצ�ʭp�e�G��ê�]�ɶ��^ | �ɶ����� | �����ݨ� Q4�]��@��\r\nê�^ | �ݨ��^�� | �l�ܰ���̡]���ס^ | SYNTHETIC |\r\n| SF-0057-197 | SYN-0057-CASE-01 | 0057 | ��12.2 / ���\\�ǫh�C | �Ӯצ�ʭp�e�G���\\�ǫh | T+90 �ɳs�� 3 �����������ơA\r\n�B�ܤ� 1 �����T�����श�ɽu�P�_ | SMART �i�q���B�D�w�F�� | �~��W�� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-199 | SYN-0057-CASE-01 | 0057 | ��12.2 / �Ҿکw��C | �Ӯצ�ʭp�e�G�Ҿڡ]��Ĳ������d�^ | ��Ĳ������d 3 �� |\r\n �i�l���� SF-188 | ��Ĳ����ï | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-198 | SYN-0057-CASE-01 | 0057 | ��12.2 / ��ê�C | �Ӯצ�ʭp�e�G��ê�]�ɶ��^ | �ɶ����� | �����ݨ� Q4�]��@��\r\nê�^ | �ݨ��^�� | �l�ܰ���̡]���ס^ | SYNTHETIC |\r\n| SF-0057-200 | SYN-0057-CASE-01 | 0057 | ��12.2 / �l�ܵ��G T+90�]�D�i���P�w�^�C�F��12.1 �Ӯ��˰Q���� | �Ӯ� T+90 �D�i��\r\n�P�w | �P�w�u�����ΥB��D�ۭz���ҡv�]�p�J `G`�^ | �D�i���P�w�F��p�ư�¦�]T+90 �e 3 �������B�䤤 1 ��Ĳ�o�ɽu�^���C�� S\r\nF-188 �P SF-210 | ��Ĳ�����B�[��� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-199 | SYN-0057-CASE-01 | 0057 | ��12.2 / �Ҿکw��C | �Ӯצ�ʭp�e�G�Ҿڡ]��Ĳ������d�^ | ��Ĳ������d 3 �� |\r\n �i�l���� SF-188 | ��Ĳ����ï | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-201 | �X | 0057 | ��9 ��3 / �`�I(1) | �� 3 �`�I(1) ��r | �u�ǲߡG��O�� C1 �A�����O������C2 ���c�Ƭ�����g��C3\r\n �श�ɽu�P�_�v | �϶����i����y�{�ϡB�D��r���N | �ҵ{�]�p���B�l�ܬ��� | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-200 | SYN-0057-CASE-01 | 0057 | ��12.2 / �l�ܵ��G T+90�]�D�i���P�w�^�C�F��12.1 �Ӯ��˰Q���� | �Ӯ� T+90 �D�i��\r\n�P�w | �P�w�u�����ΥB��D�ۭz���ҡv�]�p�J `G`�^ | �D�i���P�w�F��p�ư�¦�]T+90 �e 3 �������B�䤤 1 ��Ĳ�o�ɽu�^���C�� S\r\nF-188 �P SF-210 | ��Ĳ�����B�[��� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-202 | �X | 0057 | ��3 �ϥγW�h�q�F��4 �t�V��ɪ� | ����s�����A | `CROSS_DOCUMENT_LINK_PENDING`�]�� sidecar�A\r\n���C����^ | ���v�줸���ҫe���ź٦@�� case_id | �L��v�줸���� | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-201 | �X | 0057 | ��9 ��3 / �`�I(1) | �� 3 �`�I(1) ��r | �u�ǲߡG��O�� C1 �A�����O������C2 ���c�Ƭ�����g��C3\r\n �श�ɽu�P�_�v | �϶����i����y�{�ϡB�D��r���N | �ҵ{�]�p���B�l�ܬ��� | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-203 | �X | 0057 | ��1 �ѧO�����q�F��1.1 �M�g���A�q | �ݨD����ء���I�ѧO | `0057`�]��I�^��`I13-E01`�]�ݨD�^��`\r\n061`�]��ء^�T�̤��� | �� sidecar�A����Φ۵M���� | registry readback | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-202 | �X | 0057 | ��3 �ϥγW�h�q�F��4 �t�V��ɪ� | ����s�����A | `CROSS_DOCUMENT_LINK_PENDING`�]�� sidecar�A\r\n���C����^ | ���v�줸���ҫe���ź٦@�� case_id | �L��v�줸���� | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-204 | SYN-0057-CASE-01 | 0057 | T7 / T+30 �C / ���X���q����F��12.1 ���ҡ]�A�^�F��12.2 �l�ܵ��G T+30 �C | �Ӯ�\r\nT+30 �ۭz Q2 | Q2=4 | �ۭz�F�л� Q2?4�F��ȵn�� | �l�ܰݨ��^�� | �l�ܰ���̡]���ס^ | SYNTHETIC |\r\n| SF-0057-203 | �X | 0057 | ��1 �ѧO�����q�F��1.1 �M�g���A�q | �ݨD����ء���I�ѧO | `0057`�]��I�^��`I13-E01`�]�ݨD�^��`\r\n061`�]��ء^�T�̤��� | �� sidecar�A����Φ۵M���� | registry readback | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-205 | SYN-0057-CASE-01 | 0057 | T7 / T+30 �C / ���X���q����F��12.1 ���ҡ]�A�^�F��12.2 �l�ܵ��G T+30 �C | �Ӯ�\r\nT+30 �ۭz Q3 | Q3=5 | �ۭz�F�л� Q3?4�F��ȵn�� | �l�ܰݨ��^�� | �l�ܰ���̡]���ס^ | SYNTHETIC |\r\n| SF-0057-204 | SYN-0057-CASE-01 | 0057 | T7 / T+30 �C / ���X���q����F��12.1 ���ҡ]�A�^�F��12.2 �l�ܵ��G T+30 �C | �Ӯ�\r\nT+30 �ۭz Q2 | Q2=4 | �ۭz�F�л� Q2?4�F��ȵn�� | �l�ܰݨ��^�� | �l�ܰ���̡]���ס^ | SYNTHETIC |\r\n| SF-0057-206 | SYN-0057-CASE-01 | 0057 | T7 / T+60 �C / ���X���q����F��12.1 ���ҡ]���^�F��12.2 �l�ܵ��G T+60 �C | �Ӯ�\r\nT+60 �[�� R2 | R2=2 | �[��q�� `R2`�]�A�����O�������T�ʡ^0�V3 �����F��ȵn�� | �����[��q�� | �Ӥu���ɡ]���ס^ | SYNTHET\r\nIC |\r\n| SF-0057-205 | SYN-0057-CASE-01 | 0057 | T7 / T+30 �C / ���X���q����F��12.1 ���ҡ]�A�^�F��12.2 �l�ܵ��G T+30 �C | �Ӯ�\r\nT+30 �ۭz Q3 | Q3=5 | �ۭz�F�л� Q3?4�F��ȵn�� | �l�ܰݨ��^�� | �l�ܰ���̡]���ס^ | SYNTHETIC |\r\n| SF-0057-207 | SYN-0057-CASE-01 | 0057 | T7 / T+60 �C / ���X���q����F��12.1 ���ҡ]���^�F��12.2 �l�ܵ��G T+60 �C | �Ӯ�\r\nT+60 �[�� R3 | R3=3 | �[��q�� `R3`�]�श�ɽu�P�_���T�ʡ^0�V3 �����F��ȵn�� | �����[��q�� | �Ӥu���ɡ]���ס^ | SYNTHET\r\nIC |\r\n| SF-0057-206 | SYN-0057-CASE-01 | 0057 | T7 / T+60 �C / ���X���q����F��12.1 ���ҡ]���^�F��12.2 �l�ܵ��G T+60 �C | �Ӯ�\r\nT+60 �[�� R2 | R2=2 | �[��q�� `R2`�]�A�����O�������T�ʡ^0�V3 �����F��ȵn�� | �����[��q�� | �Ӥu���ɡ]���ס^ | SYNTHET\r\nIC |\r\n| SF-0057-208 | SYN-0057-CASE-01 | 0057 | T7 / T+60 �C / ���X���q����F��12.1 ���ҡ]���^�F��12.2 �l�ܵ��G T+60 �C | �Ӯ�\r\nT+60 �[�� R4 | R4=2 | �[��q�� `R4`�]�ɮġ^0�V3 �����F��ȵn�� | �����[��q�� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-207 | SYN-0057-CASE-01 | 0057 | T7 / T+60 �C / ���X���q����F��12.1 ���ҡ]���^�F��12.2 �l�ܵ��G T+60 �C | �Ӯ�\r\nT+60 �[�� R3 | R3=3 | �[��q�� `R3`�]�श�ɽu�P�_���T�ʡ^0�V3 �����F��ȵn�� | �����[��q�� | �Ӥu���ɡ]���ס^ | SYNTHET\r\nIC |\r\n| SF-0057-209 | SYN-0057-CASE-01 | 0057 | T7 / T+60 �C / ���X���q����F��12.1 ���ҡ]���^�F��12.2 �l�ܵ��G T+60 �C | �Ӯ�\r\nT+60 �[��X�p | R1�VR4 �X�p = 10/12 | �����[�`�F`?9/12` �F�Ъ��e�� SF-152 | �����[��q�� | �Ӥu���ɡ]���ס^ | SYNTHETIC\r\n|\r\n| SF-0057-208 | SYN-0057-CASE-01 | 0057 | T7 / T+60 �C / ���X���q����F��12.1 ���ҡ]���^�F��12.2 �l�ܵ��G T+60 �C | �Ӯ�\r\nT+60 �[�� R4 | R4=2 | �[��q�� `R4`�]�ɮġ^0�V3 �����F��ȵn�� | �����[��q�� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-210 | SYN-0057-CASE-01 | 0057 | T7 / T+90 �C / ���X���q����F��12.1 ���������[��F��12.2 �l�ܵ��G T+90 �C | ��\r\n�� T+90 Ĳ�o�श�ɽu���� | 1 �� | Tier-A ���Ҥ�Ĳ�o `C3` �ɽu������ | �A�ȱ�Ĳ����ï | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-209 | SYN-0057-CASE-01 | 0057 | T7 / T+60 �C / ���X���q����F��12.1 ���ҡ]���^�F��12.2 �l�ܵ��G T+60 �C | �Ӯ�\r\nT+60 �[��X�p | R1�VR4 �X�p = 10/12 | �����[�`�F`?9/12` �F�Ъ��e�� SF-152 | �����[��q�� | �Ӥu���ɡ]���ס^ | SYNTHETIC\r\n|\r\n| SF-0057-211 | SYN-0057-CASE-01 | 0057 | ��12.2 / �����C | �Ӯצ�ʭp�e����ܤ�� | 2025-06-13 | `T+90` �D�i���I��]��\r\n�@����^ | �Ӥu���Ȫ� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-210 | SYN-0057-CASE-01 | 0057 | T7 / T+90 �C / ���X���q����F��12.1 ���������[��F��12.2 �l�ܵ��G T+90 �C | ��\r\n�� T+90 Ĳ�o�श�ɽu���� | 1 �� | Tier-A ���Ҥ�Ĳ�o `C3` �ɽu������ | �A�ȱ�Ĳ����ï | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-212 | SYN-0057-CASE-01 | 0057 | ��12.2 / �ǲ߯�O�]�Ǩ줰��^�C | �Ӯצ�ʭp�e�G�ǲ߯�O C3 | C3 �श�ɽu�P�_\r\n| �����ҵ{��O���]��@��O�^ | �ҵ{�]�p��� | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-211 | SYN-0057-CASE-01 | 0057 | ��12.2 / �����C | �Ӯצ�ʭp�e����ܤ�� | 2025-06-13 | `T+90` �D�i���I��]��\r\n�@����^ | �Ӥu���Ȫ� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-213 | SYN-0057-CASE-01 | 0057 | ��12.2 / �W�v�C | �Ӯצ�ʭp�e�G�C��Z�� | �C�� 2 �Z | SMART �����W�v�]��ȡ^\r\n| �Ӥu���Ȫ� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-212 | SYN-0057-CASE-01 | 0057 | ��12.2 / �ǲ߯�O�]�Ǩ줰��^�C | �Ӯצ�ʭp�e�G�ǲ߯�O C3 | C3 �श�ɽu�P�_\r\n| �����ҵ{��O���]��@��O�^ | �ҵ{�]�p��� | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-214 | SYN-0057-CASE-01 | 0057 | ��12.2 / ��ĳ����C | �Ӯצ�ʭp�e�G�������]�ɽu�P�ǥd�^ | ���Ѥ@�����ɽu�P\r\n�ǥd | ��ĳ�B�D�w����]��@�������^ | �Ӥu���Ȫ� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-213 | SYN-0057-CASE-01 | 0057 | ��12.2 / �W�v�C | �Ӯצ�ʭp�e�G�C��Z�� | �C�� 2 �Z | SMART �����W�v�]��ȡ^\r\n| �Ӥu���Ȫ� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-215 | SYN-0057-CASE-01 | 0057 | ��12.2 / ��ê�C�FT9 / F4 �C / ���D�� | �Ӯצ�ʭp�e�G��ê�]��������찾�h�^ |\r\n��������찾�h�]18 ��^ | �����ݨ� Q4�F�������� 18 ��]��ȡA���P��L��ê�֦C�^ | �ݨ��^�� | �l�ܰ���̡]���ס^ | SYNTH\r\nETIC |\r\n| SF-0057-214 | SYN-0057-CASE-01 | 0057 | ��12.2 / ��ĳ����C | �Ӯצ�ʭp�e�G�������]�ɽu�P�ǥd�^ | ���Ѥ@�����ɽu�P\r\n�ǥd | ��ĳ�B�D�w����]��@�������^ | �Ӥu���Ȫ� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-216 | SYN-0057-CASE-01 | 0057 | ��12.2 / ��ê�C | �Ӯצ�ʭp�e�G��ê�]�ʥF�Y�ɦ^�X�^ | �ʥF�Y�ɦ^�X | �����ݨ�\r\n Q4�]��@��ê�^ | �ݨ��^�� | �l�ܰ���̡]���ס^ | SYNTHETIC |\r\n| SF-0057-215 | SYN-0057-CASE-01 | 0057 | ��12.2 / ��ê�C�FT9 / F4 �C / ���D�� | �Ӯצ�ʭp�e�G��ê�]��������찾�h�^ |\r\n��������찾�h�]18 ��^ | �����ݨ� Q4�F�������� 18 ��]��ȡA���P��L��ê�֦C�^ | �ݨ��^�� | �l�ܰ���̡]���ס^ | SYNTH\r\nETIC |\r\n| SF-0057-217 | SYN-0057-CASE-01 | 0057 | ��12.2 / �Ҿکw��C | �Ӯצ�ʭp�e�G�Ҿڡ]�[��q�ء^ | �����[��q�� 10/12 | ��\r\n�� SF-209 �[��X�p | �����[��q�� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-216 | SYN-0057-CASE-01 | 0057 | ��12.2 / ��ê�C | �Ӯצ�ʭp�e�G��ê�]�ʥF�Y�ɦ^�X�^ | �ʥF�Y�ɦ^�X | �����ݨ�\r\n Q4�]��@��ê�^ | �ݨ��^�� | �l�ܰ���̡]���ס^ | SYNTHETIC |\r\n| SF-0057-218 | �X | 0057 | ��9 ��3 / �`�I(2) | �� 3 �`�I(2) ��r | �u�w�w���α��ҡG�������h���I�ȯZ���A�ȱ�Ĳ�����P�श\r\n�ɽu�B�z�v | �϶����i����y�{�ϡB�D��r���N | �ҵ{�]�p���B�l�ܬ��� | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-217 | SYN-0057-CASE-01 | 0057 | ��12.2 / �Ҿکw��C | �Ӯצ�ʭp�e�G�Ҿڡ]�[��q�ء^ | �����[��q�� 10/12 | ��\r\n�� SF-209 �[��X�p | �����[��q�� | �Ӥu���ɡ]���ס^ | SYNTHETIC |\r\n| SF-0057-219 | �X | 0057 | ��9 ��3 / �`�I(3) | �� 3 �`�I(3) ��r | �u�����ʭp�e�G�W�v������������覡��owner�]���ס^��\r\n���\\�ǫh�v | �϶����i����y�{�ϡB�D��r���N | �ҵ{�]�p���B�l�ܬ��� | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-218 | �X | 0057 | ��9 ��3 / �`�I(2) | �� 3 �`�I(2) ��r | �u�w�w���α��ҡG�������h���I�ȯZ���A�ȱ�Ĳ�����P�श\r\n�ɽu�B�z�v | �϶����i����y�{�ϡB�D��r���N | �ҵ{�]�p���B�l�ܬ��� | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-220 | �X | 0057 | ��9 ��3 / �`�I(4) | �� 3 �`�I(4) ��r | �u��������ҾڡGT+30 �ۭz�BT+60 �[��BT+90 �����v |\r\n�϶����i����y�{�ϡB�D��r���N | �ҵ{�]�p���B�l�ܬ��� | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-219 | �X | 0057 | ��9 ��3 / �`�I(3) | �� 3 �`�I(3) ��r | �u�����ʭp�e�G�W�v������������覡��owner�]���ס^��\r\n���\\�ǫh�v | �϶����i����y�{�ϡB�D��r���N | �ҵ{�]�p���B�l�ܬ��� | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-221 | �X | 0057 | ��9 ��3 / �`�I(5) | �� 3 �`�I(5) ��r | �u���G�P���Ҥ��h�GTier-A ����������Tier-B �����[���T\r\nier-C �Ȧۭz�v | �϶����i����y�{�ϡB�D��r���N | �ҵ{�]�p���B�l�ܬ��� | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-220 | �X | 0057 | ��9 ��3 / �`�I(4) | �� 3 �`�I(4) ��r | �u��������ҾڡGT+30 �ۭz�BT+60 �[��BT+90 �����v |\r\n�϶����i����y�{�ϡB�D��r���N | �ҵ{�]�p���B�l�ܬ��� | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-222 | �X | 0057 | ��9 ��3 / �`�I(6) | �� 3 �`�I(6) ��r | �u�˰Q�P��i�G�o�{ �� �M���]�ܽd�P�w�^ �� �ﵽ�� �� �A�l\r\n�ܡv | �϶����i����y�{�ϡB�D��r���N | �ҵ{�]�p���B�l�ܬ��� | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-221 | �X | 0057 | ��9 ��3 / �`�I(5) | �� 3 �`�I(5) ��r | �u���G�P���Ҥ��h�GTier-A ����������Tier-B �����[���T\r\nier-C �Ȧۭz�v | �϶����i����y�{�ϡB�D��r���N | �ҵ{�]�p���B�l�ܬ��� | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-223 | �X | 0057 | T9 / F2 �C / ����� | �ﵽ�� F2 ��� | �C 3 ����Ĳ������ 1 ���ѷ��ɦ@�Pñ�� | ����i��ʡB�i\r\n�l�� | �޲z�f�d�֩w���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-222 | �X | 0057 | ��9 ��3 / �`�I(6) | �� 3 �`�I(6) ��r | �u�˰Q�P��i�G�o�{ �� �M���]�ܽd�P�w�^ �� �ﵽ�� �� �A�l\r\n�ܡv | �϶����i����y�{�ϡB�D��r���N | �ҵ{�]�p���B�l�ܬ��� | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n| SF-0057-224 | �X | 0057 | T9 / F3 �C / ����� | �ﵽ�� F3 ��� | �}�� 2 �g���߳���]�s�§Ӥu�t��^ | ����i��ʡB�i�l\r\n�� | �޲z�f�d�֩w���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-223 | �X | 0057 | T9 / F2 �C / ����� | �ﵽ�� F2 ��� | �C 3 ����Ĳ������ 1 ���ѷ��ɦ@�Pñ�� | ����i��ʡB�i\r\n�l�� | �޲z�f�d�֩w���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-225 | �X | 0057 | T9 / F4 �C / ����� | �ﵽ�� F4 ��� | ��²�� 12 ��ëO�d����Х� | ����i��ʡB�i�l�� | ��\r\n�z�f�d�֩w���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-224 | �X | 0057 | T9 / F3 �C / ����� | �ﵽ�� F3 ��� | �}�� 2 �g���߳���]�s�§Ӥu�t��^ | ����i��ʡB�i�l\r\n�� | �޲z�f�d�֩w���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-226 | �X | 0057 | T9 / F5 �C / ����� | �ﵽ�� F5 ��� | �l�ܵ��� 45��7 �ѨüW�@���q�ܴ��� | ����i��ʡB�i�l��\r\n | �޲z�f�d�֩w���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-225 | �X | 0057 | T9 / F4 �C / ����� | �ﵽ�� F4 ��� | ��²�� 12 ��ëO�d����Х� | ����i��ʡB�i�l�� | ��\r\n�z�f�d�֩w���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-227 | �X | 0057 | T9 / F1 �C / ����� | �ﵽ�� F1 ��� | �ҫ�� 30 �ѥ[�@�� 30 �����u�W�^�X�|ĳ | ����i��ʡB\r\n�i�l�� | �޲z�f�d�֩w���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-226 | �X | 0057 | T9 / F5 �C / ����� | �ﵽ�� F5 ��� | �l�ܵ��� 45��7 �ѨüW�@���q�ܴ��� | ����i��ʡB�i�l��\r\n | �޲z�f�d�֩w���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-228 | �X | 0057 | T9 / F2 �C / �A�l�ܫ����� | �ﵽ�� F2 �A�l�ܫ��� | �D�ۭz���ҥe�v | ���� T9 / F2 ���D��]�D\r\n�ۭz���ҥe�v < 50%�^ | �޲z�f�d�֩w���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-227 | �X | 0057 | T9 / F1 �C / ����� | �ﵽ�� F1 ��� | �ҫ�� 30 �ѥ[�@�� 30 �����u�W�^�X�|ĳ | ����i��ʡB\r\n�i�l�� | �޲z�f�d�֩w���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-229 | �X | 0057 | T9 / F4 �C / �A�l�ܫ����� | �ﵽ�� F4 �A�l�ܫ��� | ���������Ʋv | ���� T9 / F4 ���D��]��\r\n������찾�h�^ | �޲z�f�d�֩w���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-228 | �X | 0057 | T9 / F2 �C / �A�l�ܫ����� | �ﵽ�� F2 �A�l�ܫ��� | �D�ۭz���ҥe�v | ���� T9 / F2 ���D��]�D\r\n�ۭz���ҥe�v < 50%�^ | �޲z�f�d�֩w���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-230 | �X | 0057 | T9 / F5 �C / �A�l�ܫ����� | �ﵽ�� F5 �A�l�ܫ��� | �l�ܲ[�\\�v | ���� T9 / F5 ���D��]�l�ܲ[\r\n�\\�v���� 72.0%�^ | �޲z�f�d�֩w���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-229 | �X | 0057 | T9 / F4 �C / �A�l�ܫ����� | �ﵽ�� F4 �A�l�ܫ��� | ���������Ʋv | ���� T9 / F4 ���D��]��\r\n������찾�h�^ | �޲z�f�d�֩w���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-231 | �X | 0057 | T9 / F1 �C / �A�l�ܫ����� | �ﵽ�� F1 �A�l�ܫ��� | �D�n���βv | ���� T9 / F1 ���D��]���βv\r\n���H�F�вv�P�B�W�ɡ^ | �޲z�f�d�֩w���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-230 | �X | 0057 | T9 / F5 �C / �A�l�ܫ����� | �ﵽ�� F5 �A�l�ܫ��� | �l�ܲ[�\\�v | ���� T9 / F5 ���D��]�l�ܲ[\r\n�\\�v���� 72.0%�^ | �޲z�f�d�֩w���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-232 | �X | 0057 | ��11 �ɭz / �U�@�� 0057 ��s�y | �U�����˴��]�ܽd�^ | 2027 �W�b�~���� | �ܽd���w���A�˰Q���I\r\n�]��@�ȡ^ | �޲z�f�d�֩w���� | ���ר���]���ס^ | SYNTHETIC |\r\n| SF-0057-231 | �X | 0057 | T9 / F1 �C / �A�l�ܫ����� | �ﵽ�� F1 �A�l�ܫ��� | �D�n���βv | ���� T9 / F1 ���D��]���βv\r\n���H�F�вv�P�B�W�ɡ^ | �޲z�f�d�֩w���� | ���ר���]���ס^ | SYNTHETIC |\r\n\r\n| SF-0057-232 | �X | 0057 | ��11 �ɭz / �U�@�� 0057 ��s�y | �U�����˴��]�ܽd�^ | 2027 �W�b�~���� | �ܽd���w���A�˰Q���I\r\n�]��@�ȡ^ | �޲z�f�d�֩w���� | ���ר���]���ס^ | SYNTHETIC |\r\n> **�л\\�w�W�h**�G���n�����л\\**�C�@��**�ܽd����B�H�ƶq�B��v�B�רҡB�q���ȡB�[��B�M���P���Ҧ�m�F�� R04 �w**�v�ȭ�l\r\n��**�]�� R03 ����l�ơA�øɱj�ݾl�h�ȦC�F�@�C�@�ȡB�@�C�@�w��B�@�C�@ `fact_id`�F�P�@�ȩ�h�B��ܪ̡A��P�C�C�X**����**\r\n��T�w��^�C�Z����]���� DOCX �Υ� Blueprint ����^�s�W����X���ȡA���P�B�s�W�n���C�A�_�h���o�q�L�C�X���ȻP REAL �Ҿ�**\r\n���Ϧs��**�F�n���X**�u�s sidecar**�A�H�� Word ���夣�C�L���� `fact_id`�C\r\n> **�л\\�w�W�h**�G���n�����л\\**�C�@��**�ܽd����B�H�ƶq�B��v�B�רҡB�q���ȡB�[��B�M���P���Ҧ�m�F�� R04 �w**�v�ȭ�l\r\n��**�]�� R03 ����l�ơA�øɱj�ݾl�h�ȦC�F�@�C�@�ȡB�@�C�@�w��B�@�C�@ `fact_id`�F�P�@�ȩ�h�B��ܪ̡A��P�C�C�X**����**\r\n��T�w��^�C�Z����]���� DOCX �Υ� Blueprint ����^�s�W����X���ȡA���P�B�s�W�n���C�A�_�h���o�q�L�C�X���ȻP REAL �Ҿ�**\r\n���Ϧs��**�F�n���X**�u�s sidecar**�A�H�� Word ���夣�C�L���� `fact_id`�C\r\n---\r\n---\r\n## 14. �ɮ�e���ݤ� REAL �ƹ�P�ӷ��w��]`PENDING_REAL_SOURCE`�F�H���iŪ���P sidecar �æs�^\r\n## 14. �ɮ�e���ݤ� REAL �ƹ�P�ӷ��w��]`PENDING_REAL_SOURCE`�F�H���iŪ���P sidecar �æs�^\r\n| �N�� | ���ݯu��ƹ� | �i�����ӷ����� | �ӷ��w��n�D | �ثe���A |\r\n\r\n|---|---|---|---|---|\r\n| �N�� | ���ݯu��ƹ� | �i�����ӷ����� | �ӷ��w��n�D | �ثe���A |\r\n| RQ-01 | �U����ڰV�m���O���Z���P��� | �~�װV�m�p�e�B�Z�� | �ɦW�Ϥ���d��ϥD�ޮ֥i�w�� | `PENDING_REAL_SOURCE` |\r\n|---|---|---|---|---|\r\n| RQ-02 | ���V�W�U�P���V�H�ơ]�h�ѧO�^ | �ǭ��W�U�]�t�h�ѧO��^ | �W�U�����ϵ��ơϥh�ѧO�{�ǻ��� | `PENDING_REAL_SOURCE\r\n` |\r\n| RQ-01 | �U����ڰV�m���O���Z���P��� | �~�װV�m�p�e�B�Z�� | �ɦW�Ϥ���d��ϥD�ޮ֥i�w�� | `PENDING_REAL_SOURCE` |\r\n| RQ-03 | �ҫ���q��l���G�P���e�̾� | ���q���B�����W�� | ���O���D�ơϪ��e�ӷ� | `PENDING_REAL_SOURCE` |\r\n| RQ-02 | ���V�W�U�P���V�H�ơ]�h�ѧO�^ | �ǭ��W�U�]�t�h�ѧO��^ | �W�U�����ϵ��ơϥh�ѧO�{�ǻ��� | `PENDING_REAL_SOURCE\r\n` |\r\n| RQ-04 | �l�ܰݨ��^�Э�l�ɡ]�t T+90 �D�i���^ | �ݨ����x�ץX���ȥ� | �ץX�ɶ��ϥ��ơϲ[�\\�v�p����� | `PENDING_REAL_SO\r\nURCE` |\r\n| RQ-03 | �ҫ���q��l���G�P���e�̾� | ���q���B�����W�� | ���O���D�ơϪ��e�ӷ� | `PENDING_REAL_SOURCE` |\r\n| RQ-05 | �A�ȱ�Ĳ�����]Tier-A�^ | ����ï���t�ά��� | �����s���ϩ�d���ơϫO�s��m | `PENDING_REAL_SOURCE` |\r\n| RQ-04 | �l�ܰݨ��^�Э�l�ɡ]�t T+90 �D�i���^ | �ݨ����x�ץX���ȥ� | �ץX�ɶ��ϥ��ơϲ[�\\�v�p����� | `PENDING_REAL_SO\r\nURCE` |\r\n| RQ-06 | �[��q�ج����]Tier-B�^ | ���ɡ��P���[��� | �[��̨���Ϥ���ϬO�_�W�� | `PENDING_REAL_SOURCE` |\r\n| RQ-05 | �A�ȱ�Ĳ�����]Tier-A�^ | ����ï���t�ά��� | �����s���ϩ�d���ơϫO�s��m | `PENDING_REAL_SOURCE` |\r\n| RQ-07 | �F�Ъ��e�B�D�i���P�l�ܵ��������̾� | �V�m�~��������W | �����Ϯ֩w���A | `PENDING_REAL_SOURCE` |\r\n| RQ-06 | �[��q�ج����]Tier-B�^ | ���ɡ��P���[��� | �[��̨���Ϥ���ϬO�_�W�� | `PENDING_REAL_SOURCE` |\r\n| RQ-08 | �˰Q���׻P�ﵽ�M�����֩w | �޲z�f�d���� | �|ĳ����ϨMĳ�ƶ��w�� | `PENDING_REAL_SOURCE` |\r\n| RQ-07 | �F�Ъ��e�B�D�i���P�l�ܵ��������̾� | �V�m�~��������W | �����Ϯ֩w���A | `PENDING_REAL_SOURCE` |\r\n| RQ-09 | ���p�P�O�s�F���]�^�Ъ̭Ӹ�B�z�^ | �Ӹ�B�z���� | �s���v���ϫO�s�~�� | `PENDING_REAL_SOURCE` |\r\n| RQ-08 | �˰Q���׻P�ﵽ�M�����֩w | �޲z�f�d���� | �|ĳ����ϨMĳ�ƶ��w�� | `PENDING_REAL_SOURCE` |\r\n| RQ-10 | �ҵ{�����P��������쪩�� | �ҵ{�]�p��� | �������ϥͮĤ� | `PENDING_REAL_SOURCE` |\r\n| RQ-09 | ���p�P�O�s�F���]�^�Ъ̭Ӹ�B�z�^ | �Ӹ�B�z���� | �s���v���ϫO�s�~�� | `PENDING_REAL_SOURCE` |\r\n\r\n| RQ-10 | �ҵ{�����P��������쪩�� | �ҵ{�]�p��� | �������ϥͮĤ� | `PENDING_REAL_SOURCE` |\r\n> **�ɮ�W�h**�G�����ɮ�e�A�C�@ `SF-0057-0xx` ���H���v�ӷ��v������A�ëO�d�ӷ��w��P����̡]���ר���^�Ϥ���F��������\r\n���� `SYNTHETIC`�A������̺��� `PENDING_REAL_SOURCE`�A**���o**�� `REAL_VERIFIED`�C����ثe**����**���X���ܽd�C�H�����\r\n����������**�۵M�y��**���M��F`RQ-*` ��l�N���P `fact_id` ��Ӫ��u�s sidecar�C\r\n> **�ɮ�W�h**�G�����ɮ�e�A�C�@ `SF-0057-0xx` ���H���v�ӷ��v������A�ëO�d�ӷ��w��P����̡]���ר���^�Ϥ���F��������\r\n���� `SYNTHETIC`�A������̺��� `PENDING_REAL_SOURCE`�A**���o**�� `REAL_VERIFIED`�C����ثe**����**���X���ܽd�C�H�����\r\n����������**�۵M�y��**���M��F`RQ-*` ��l�N���P `fact_id` ��Ӫ��u�s sidecar�C\r\n---\r\n---\r\n## 15. PASS / PARTIAL / FAIL �P�w�ǫh\r\n## 15. PASS / PARTIAL / FAIL �P�w�ǫh\r\n**PASS�]�������ߤ~��^**\r\n\r\n1. Genre �� `analysis_report`�A�B�������e�]�B�h���D�����ɦW��^�i���Ѭ�**�������P�F���˰Q**�C\r\n**PASS�]�������ߤ~��^**\r\n2. �t�x��v�r�ޤ�ϲ� 4 �����X�h�ũw��F����L���� SHA/JSON/�s��/`fact_id`/���A��~�S�C\r\n1. Genre �� `analysis_report`�A�B�������e�]�B�h���D�����ɦW��^�i���Ѭ�**�������P�F���˰Q**�C\r\n3. �������P��ƺI�I�����G`P3` ������ `2026-01-01��2026-03-31`�B�I�I `2026-06-30`�B�D�i�� `T+90` �����B`P3 T+180` �� `NO\r\nT YET DUE`�F`P3-Q2` ���C�J�����C\r\n2. �t�x��v�r�ޤ�ϲ� 4 �����X�h�ũw��F����L���� SHA/JSON/�s��/`fact_id`/���A��~�S�C\r\n4. `T2/T4/T5/T6` �ƭȻ��ơA������v**�v��i����**�A`G?E?D?C?A` �P `F?B?A` �O�M���ߡA�C����ۥ[�@�P�FTier-A/B/C �����B�M\r\n��`E`�C\r\n3. �������P��ƺI�I�����G`P3` ������ `2026-01-01��2026-03-31`�B�I�I `2026-06-30`�B�D�i�� `T+90` �����B`P3 T+180` �� `NO\r\nT YET DUE`�F`P3-Q2` ���C�J�����C\r\n5. �t�i�����ϥΤ��l�ܰݨ��]�D�ءϤثסϮ��I�ϭp���ϥD�i���W�h�^�P�[��q�ء]���I�ϤثסϪ��e�^�A�çt�D�^��/���A��/�����\r\n�B�z�C\r\n4. `T2/T4/T5/T6` �ƭȻ��ơA������v**�v��i����**�A`G?E?D?C?A` �P `F?B?A` �O�M���ߡA�C����ۥ[�@�P�FTier-A/B/C �����B�M\r\n��`E`�C\r\n6. �ܤ֤@�ӧ���B�����@�P���X���Ӯס]�ܽd�Ӯ� A�]�X���^�^�A�t�T�h���ҡ]�t T+180 �y�z�ʡ^�B����P�˰Q���סC\r\n5. �t�i�����ϥΤ��l�ܰݨ��]�D�ءϤثסϮ��I�ϭp���ϥD�i���W�h�^�P�[��q�ء]���I�ϤثסϪ��e�^�A�çt�D�^��/���A��/�����\r\n�B�z�C\r\n7. �t **T12 ���� SMART �ӤH�����ʭp�e**�]�ǲ߯�O/����/�W�v/����/���/owner(PROPOSED)/���\\�ǫh/��ê/�Ҿ�/30-60-90-180\r\n ���G�^�A�B���ܨ䬰 061 ����ʭn���B�D 062 ���ӤH��ʤ�ץ����C\r\n6. �ܤ֤@�ӧ���B�����@�P���X���Ӯס]�ܽd�Ӯ� A�]�X���^�^�A�t�T�h���ҡ]�t T+180 �y�z�ʡ^�B����P�˰Q���סC\r\n8. �t�Ϫ��W��P**�T���ƭ�**�]�� 1�B�� 2�B�� 3 ���|�^�A�B�ϥi����B�D�H��r�N���F�Ϥ��t�X�ּƦC�C\r\n7. �t **T12 ���� SMART �ӤH�����ʭp�e**�]�ǲ߯�O/����/�W�v/����/���/owner(PROPOSED)/���\\�ǫh/��ê/�Ҿ�/30-60-90-180\r\n ���G�^�A�B���ܨ䬰 061 ����ʭn���B�D 062 ���ӤH��ʤ�ץ����C\r\n9. �t findings�Blimitations�Bdecision logic�A�B**�M�����e�ȸj�w `P3`**�A�X�ֲv�Ь��y�z�ʡB�D�M���F�ɥX**�ܽd�P�w**�C\r\n8. �t�Ϫ��W��P**�T���ƭ�**�]�� 1�B�� 2�B�� 3 ���|�^�A�B�ϥi����B�D�H��r�N���F�Ϥ��t�X�ּƦC�C\r\n10. �t�ﵽ�l�ܾ��]owner �� `PROPOSED`�B�����B�A�l�ܫ��СB�ؼЭȡB���A�^�C\r\n9. �t findings�Blimitations�Bdecision logic�A�B**�M�����e�ȸj�w `P3`**�A�X�ֲv�Ь��y�z�ʡB�D�M���F�ɥX**�ܽd�P�w**�C\r\n11. �t `SYNTHETIC_REPLACEMENT_REGISTER` schema �P**����T�|**�n���A�л\\�C���ܽd�ƹ�F���夣�C�L�n���X�C\r\n10. �t�ﵽ�l�ܾ��]owner �� `PROPOSED`�B�����B�A�l�ܫ��СB�ؼЭȡB���A�^�C\r\n12. �t REAL �ƹ�M��P�ӷ��w��]�� 14 �`�^�A���A `PENDING_REAL_SOURCE`�C\r\n11. �t `SYNTHETIC_REPLACEMENT_REGISTER` schema �P**����T�|**�n���A�л\\�C���ܽd�ƹ�F���夣�C�L�n���X�C\r\n13. �������T�Х� `SAMPLE/SYNTHETIC`�F�L���yñ�W���֭�����D���ҷӡ��ĤT�������ڰѻP�̡��u������F���㤣�t�ܨ�|��\r\n�ڿ�V�ιF�����G�C\r\n12. �t REAL �ƹ�M��P�ӷ��w��]�� 14 �`�^�A���A `PENDING_REAL_SOURCE`�C\r\n14. ���N�X���v�٧@ TTQS ���ơF���Ѥp�˥��ź٦]�G�F����u����I�v�g���u�w�F�Сv�C\r\n13. �������T�Х� `SAMPLE/SYNTHETIC`�F�L���yñ�W���֭�����D���ҷӡ��ĤT�������ڰѻP�̡��u������F���㤣�t�ܨ�|��\r\n�ڿ�V�ιF�����G�C\r\n15. ���D�����q�L�F�B**���i**�Q�~�{����� 062 �� 063�C\r\n14. ���N�X���v�٧@ TTQS ���ơF���Ѥp�˥��ź٦]�G�F����u����I�v�g���u�w�F�Сv�C\r\n16. �ƪ��ŦX���� ?10.5 pt�B���� ?9.5 pt�B�󭶭��ƪ��Y�C\r\n15. ���D�����q�L�F�B**���i**�Q�~�{����� 062 �� 063�C\r\n\r\n16. �ƪ��ŦX���� ?10.5 pt�B���� ?9.5 pt�B�󭶭��ƪ��Y�C\r\n**PARTIAL�]�i�סA�������h�^**�G�D����Ʀ��� 1 ���B�D�۫H���ʳ��A�Ҧp�ʹ� 3�B�έӮץ��t T+180 �y�z�ʡB�άY�v���v�歫��B\r\n�εn������|�@�C�B�ΰl�ܾ��ʥؼЭȡCPARTIAL ���צ� PASS ��i�ɮ�C\r\n**PARTIAL�]�i�סA�������h�^**�G�D����Ʀ��� 1 ���B�D�۫H���ʳ��A�Ҧp�ʹ� 3�B�έӮץ��t T+180 �y�z�ʡB�άY�v���v�歫��B\r\n�εn������|�@�C�B�ΰl�ܾ��ʥؼЭȡCPARTIAL ���צ� PASS ��i�ɮ�C\r\n**FAIL���h��]���@�Y�h�^**�G���� 16 �`�C\r\n**FAIL���h��]���@�Y�h�^**�G���� 16 �`�C\r\n---\r\n---\r\n## 16. HOLD���h�����\r\n## 16. HOLD���h�����\r\n**HOLD�]���o�ɮ�A�ݸɡ^**\r\n\r\n- registry ��Ū�^�T�{ `0057 �� I13-E01 �� 061` �e�A���o�ź٬M�g�w�禬�]�������ץi�f�Կ�u�@�^�C\r\n**HOLD�]���o�ɮ�A�ݸɡ^**\r\n- ���@ REAL �ƹꥼ�����Υ�����A���� `SYNTHETIC / PENDING_REAL_SOURCE`�C\r\n- registry ��Ū�^�T�{ `0057 �� I13-E01 �� 061` �e�A���o�ź٬M�g�w�禬�]�������ץi�f�Կ�u�@�^�C\r\n- `P3` `T+180` ����������ƻP `P3-Q2` ���C�J���������Υ����S�C\r\n- ���@ REAL �ƹꥼ�����Υ�����A���� `SYNTHETIC / PENDING_REAL_SOURCE`�C\r\n- ��������n�����[�\\�C�@���ܽd�ƹ�]�ȥN���C�^�C\r\n- `P3` `T+180` ����������ƻP `P3-Q2` ���C�J���������Υ����S�C\r\n\r\n- ��������n�����[�\\�C�@���ܽd�ƹ�]�ȥN���C�^�C\r\n**�h��]�w���ѡ^**\r\n\r\n1. �L�u��ӷ��o�� `REAL`��`REAL_VERIFIED`�A�Χ�X�����G�g���u��|��~������˰Q���G�v�C\r\n**�h��]�w���ѡ^**\r\n2. ���������B�D�^�Х���N�B�θ���f�|���@�P�]�� `P3` ������~�סB�� `P3-Q2` �C�J�����B�εu���P�����V��^�C\r\n1. �L�u��ӷ��o�� `REAL`��`REAL_VERIFIED`�A�Χ�X�����G�g���u��|��~������˰Q���G�v�C\r\n3. �H�ۭz�_�R�D�ۭz���ҡ]�� Tier-C �p�J `G`�^�F�Χ� Tier-A ����**����**�P�H�ƲV��C\r\n2. ���������B�D�^�Х���N�B�θ���f�|���@�P�]�� `P3` ������~�סB�� `P3-Q2` �C�J�����B�εu���P�����V��^�C\r\n4. **�H�X�֡]`P1+P2+P3`�^�vĲ�o����M��**�A�Ϋź� `P3` `T+180` �����G�C\r\n3. �H�ۭz�_�R�D�ۭz���ҡ]�� Tier-C �p�J `G`�^�F�Χ� Tier-A ����**����**�P�H�ƲV��C\r\n5. �ѷ��p�X���˥��@�]�G���סA�Ϋź١u�ҵ{�y���v����/�Z�Ĵ��ɡC\r\n4. **�H�X�֡]`P1+P2+P3`�^�vĲ�o����M��**�A�Ϋź� `P3` `T+180` �����G�C\r\n6. ��c��|�֭�Bñ�W�B�ҵ{�B�ǭ��B���D�βĤT�覨�G�C\r\n5. �ѷ��p�X���˥��@�]�G���סA�Ϋź١u�ҵ{�y���v����/�Z�Ĵ��ɡC\r\n7. ��X����v���x�� TTQS ���ơA�μg����|�J�w�F�����J�w���СC\r\n6. ��c��|�֭�Bñ�W�B�ҵ{�B�ǭ��B���D�βĤT�覨�G�C\r\n8. �X�{�u�ݶ���ݮ֡��ťժ����O���ťա��|���g�v������]���M���j���� REAL �����Ϩåt�������ܽd�~�^�C\r\n7. ��X����v���x�� TTQS ���ơA�μg����|�J�w�F�����J�w���СC\r\n9. ���e�i���N��� 062�]�ӤH��ʤ�׻P�ζ�/��´�Z�ġ^�� 063�]�^�V/�߱o/�ҷ�/��߾���B�@���i�^�C\r\n8. �X�{�u�ݶ���ݮ֡��ťժ����O���ťա��|���g�v������]���M���j���� REAL �����Ϩåt�������ܽd�~�^�C\r\n10. �h�Ƭ��ާ@��U�B�ťժ���B�¦�ʭp�e�B���N�׳��i�� 0056 ���Ҿڨ��o/�A�Ω�/HOLD �u�@�y�C\r\n9. ���e�i���N��� 062�]�ӤH��ʤ�׻P�ζ�/��´�Z�ġ^�� 063�]�^�V/�߱o/�ҷ�/��߾���B�@���i�^�C\r\n11. ����~�S SHA/queue/JSON/���|/�����s��/`fact_id`/���A��A�Φr�ŧC��a�O�C\r\n10. �h�Ƭ��ާ@��U�B�ťժ���B�¦�ʭp�e�B���N�׳��i�� 0056 ���Ҿڨ��o/�A�Ω�/HOLD �u�@�y�C\r\n\r\n11. ����~�S SHA/queue/JSON/���|/�����s��/`fact_id`/���A��A�Φr�ŧC��a�O�C\r\n---\r\n---\r\n## 17. �f�d�̴��ա]���D������062�B063 �V�c���t�V�F�~�^\r\n## 17. �f�d�̴��ա]���D������062�B063 �V�c���t�V�F�~�^\r\n1. **���D����**�G�������D�P�ɮצW�B�uŪ�������e�A�f�d�̶���Ѫ����c�]`T2` �h���������B`T4` ���Ҥ��h�B`T5` �s�աB`T7` ��\r\n����B�� 1 �Ͷա^�P�w���󬰡u**����V�m���G����P�F���˰Q**�v�C\r\n\r\n2. **���i�~�{�� 062**�G�Y�������󪺸���������P���Ҥ��h�A���e�O�_�|�ܦ��@���u�ӤH��ʤ�סϹζ�/��´�Z�ġv���i�H�Y����\r\n���u�O�v�A�Y�h��C`T12` �Ȭ� 061 ����@�����ʥܨҡA���t�ζ�/��´�Z�ġC\r\n1. **���D����**�G�������D�P�ɮצW�B�uŪ�������e�A�f�d�̶���Ѫ����c�]`T2` �h���������B`T4` ���Ҥ��h�B`T5` �s�աB`T7` ��\r\n����B�� 1 �Ͷա^�P�w���󬰡u**����V�m���G����P�F���˰Q**�v�C\r\n3. **���i�~�{�� 063**�G����O�_�ܦ��^�V/�߱o/�ҷ�/��ߪ�**����B�@���i**�H��������B�z�ȭ��u�O�_���U����v�C\r\n2. **���i�~�{�� 062**�G�Y�������󪺸���������P���Ҥ��h�A���e�O�_�|�ܦ��@���u�ӤH��ʤ�סϹζ�/��´�Z�ġv���i�H�Y����\r\n���u�O�v�A�Y�h��C`T12` �Ȭ� 061 ����@�����ʥܨҡA���t�ζ�/��´�Z�ġC\r\n4. **�t�V�F�~�]0055/0056/0058/0059�^**�G������v���B�]�Ʀw��/��O�B��ʤ�סB����B�@�A����b�o�ǥD�D�W�����u���ߡv�C\r\n3. **���i�~�{�� 063**�G����O�_�ܦ��^�V/�߱o/�ҷ�/��ߪ�**����B�@���i**�H��������B�z�ȭ��u�O�_���U����v�C\r\n5. **�u���**�G�����L�r�y�֭�Bñ�W�B���D�B�ҷӡB�ĤT����B��ڰѻP�̩ίu������F�ʪ̬� `UNKNOWN/PENDING`�F���㬰�u\r\n�X���ܽd�p���˰Q�v�C\r\n4. **�t�V�F�~�]0055/0056/0058/0059�^**�G������v���B�]�Ʀw��/��O�B��ʤ�סB����B�@�A����b�o�ǥD�D�W�����u���ߡv�C\r\n6. **�i����**�G�����v�P `T2/T4/T5/T6` �����l�����ҥi�W�߭���A�O�M���ߡA�C/��ۥ[�@�P�F`T4` �� Tier-A ���ƻP�H�Ƥ����C\r\n5. **�u���**�G�����L�r�y�֭�Bñ�W�B���D�B�ҷӡB�ĤT����B��ڰѻP�̩ίu������F�ʪ̬� `UNKNOWN/PENDING`�F���㬰�u\r\n�X���ܽd�p���˰Q�v�C\r\n7. **�����۹�**�G`P3` �������� `2026-01-01��2026-03-31`�B�I�I `2026-06-30`�B`T+180` �� `NOT YET DUE`�F�L����u2026 ���~\r\n�v�t�ܡC\r\n6. **�i����**�G�����v�P `T2/T4/T5/T6` �����l�����ҥi�W�߭���A�O�M���ߡA�C/��ۥ[�@�P�F`T4` �� Tier-A ���ƻP�H�Ƥ����C\r\n8. **�M���۹�**�G�M���ȥ� `P3`�F�X�ֲv�Ь��y�z�ʡF�L�X�ֲvĲ�o�M���C\r\n7. **�����۹�**�G`P3` �������� `2026-01-01��2026-03-31`�B�I�I `2026-06-30`�B`T+180` �� `NOT YET DUE`�F�L����u2026 ���~\r\n�v�t�ܡC\r\n9. **�L�]�G/�L�x�����**�G���T�n���s�ծt���D�]�G�B�X���v�D TTQS ���ơC\r\n8. **�M���۹�**�G�M���ȥ� `P3`�F�X�ֲv�Ь��y�z�ʡF�L�X�ֲvĲ�o�M���C\r\n10. **�˥��i�l��**�G�ܽd�Ӯ� A�]�X���^�C�@�ȥi�^���� 13 �`�n���F�L���󥼵n�����X���ƹ�F����L�n���X�C\r\n9. **�L�]�G/�L�x�����**�G���T�n���s�ծt���D�]�G�B�X���v�D TTQS ���ơC\r\n11. **�ƪ��P���p**�G���� ?10.5 pt�B���� ?9.5 pt�B�󭶭��ƪ��Y�F�L�u��ӷP�Ӹ�βĤT���󤺮e�C\r\n10. **�˥��i�l��**�G�ܽd�Ӯ� A�]�X���^�C�@�ȥi�^���� 13 �`�n���F�L���󥼵n�����X���ƹ�F����L�n���X�C\r\n\r\n11. **�ƪ��P���p**�G���� ?10.5 pt�B���� ?9.5 pt�B�󭶭��ƪ��Y�F�L�u��ӷP�Ӹ�βĤT���󤺮e�C\r\n---\r\n---\r\n## 18. �ƪ��P�iŪ�ʳW�h�]writer �w�ʡ^\r\n## 18. �ƪ��P�iŪ�ʳW�h�]writer �w�ʡ^\r\n- ����w�a�O **10.5 pt**�F����w�a�O **9.5 pt**�F���o�Y�r����C\r\n\r\n- �󭶪���**���ƪ��Y�C**�F�קK�t���P�j���ťժ��C\r\n- ����w�a�O **10.5 pt**�F����w�a�O **9.5 pt**�F���o�Y�r����C\r\n- ���� 30 ���ɤޤ��o�����㭶�Өϥ���u�ѪŮ�C\r\n- �󭶪���**���ƪ��Y�C**�F�קK�t���P�j���ťժ��C\r\n- �Ϭ� Word ��͹Ϫ�/�ϮשβM���Ϥ��A����ƪ��i�^���F�� 3 �����|�ܷN�ϡC\r\n- ���� 30 ���ɤޤ��o�����㭶�Өϥ���u�ѪŮ�C\r\n- �H�����夣�o�X�{�����W�BJSON�B�A����ȡB�����s���BSHA�B���|�BCLI ���~��ơB`fact_id`�B`SYN-*`�B`DEC-*`�B`IMP-*`�B`C\r\nROSS_DOCUMENT_LINK_PENDING`�C\r\n- �Ϭ� Word ��͹Ϫ�/�ϮשβM���Ϥ��A����ƪ��i�^���F�� 3 �����|�ܷN�ϡC\r\n\r\n- �H�����夣�o�X�{�����W�BJSON�B�A����ȡB�����s���BSHA�B���|�BCLI ���~��ơB`fact_id`�B`SYN-*`�B`DEC-*`�B`IMP-*`�B`C\r\nROSS_DOCUMENT_LINK_PENDING`�C\r\n---\r\n---\r\n## 19. Writer ��I�ˬd�M��\r\n## 19. Writer ��I�ˬd�M��\r\n- [ ] �wŪ�^ registry�A�T�{ `0057 �� I13-E01 �� 061`�B`analysis_report`�B�x�譶�X�@�P�]�_�h���� rebase�F�����ץi�f�Կ�^\r\n�C\r\n\r\n- [ ] �x��v�r�ޤ�ϲ� 4 ���w��m�󥿤�FSHA/�M�g�Ȧb sidecar�C\r\n- [ ] �wŪ�^ registry�A�T�{ `0057 �� I13-E01 �� 061`�B`analysis_report`�B�x�譶�X�@�P�]�_�h���� rebase�F�����ץi�f�Կ�^\r\n�C\r\n- [ ] �������P��ƺI�I�����G`P3` ������ `2026-01-01��2026-03-31`�B�I�I `2026-06-30`�B�D�i�� `T+90` �����B`P3 T+180` ��\r\n`NOT YET DUE`�F`P3-Q2` ���C�J�����C\r\n- [ ] �x��v�r�ޤ�ϲ� 4 ���w��m�󥿤�FSHA/�M�g�Ȧb sidecar�C\r\n- [ ] `T1�VT12` �������ơF`T2/T4/T5/T6` ���l�����v��i����B�O�M���ߡB�ۥ[�@�P�F`T4` Tier-A ���ƻP�H�Ƥ����C\r\n- [ ] �������P��ƺI�I�����G`P3` ������ `2026-01-01��2026-03-31`�B�I�I `2026-06-30`�B�D�i�� `T+90` �����B`P3 T+180` ��\r\n`NOT YET DUE`�F`P3-Q2` ���C�J�����C\r\n- [ ] �l�ܰݨ��]Q1�VQ6�A�t�ث�/���I/�p��/�D�i���W�h�^�P�[��q�ء]R1�VR4�A0�V3�A?9 �F�С^���ơC\r\n- [ ] `T1�VT12` �������ơF`T2/T4/T5/T6` ���l�����v��i����B�O�M���ߡB�ۥ[�@�P�F`T4` Tier-A ���ƻP�H�Ƥ����C\r\n- [ ] �D�^��/���A��/������B�z�W�h���T�A�B�P `T6`�B�� 5.1 �`�@�P�C\r\n- [ ] �l�ܰݨ��]Q1�VQ6�A�t�ث�/���I/�p��/�D�i���W�h�^�P�[��q�ء]R1�VR4�A0�V3�A?9 �F�С^���ơC\r\n- [ ] �ܽd�Ӯ� A�]�X���^����B�T�h���ҡ]�t T+180 �y�z�ʡ^�B����P�˰Q���׻��ơC\r\n- [ ] �D�^��/���A��/������B�z�W�h���T�A�B�P `T6`�B�� 5.1 �`�@�P�C\r\n- [ ] `T12` �ӤH�����ʭp�e���� SMART�Aowner �� `PROPOSED`�F���ܫD 062 ���ӤH��ʤ�ץ����C\r\n- [ ] �ܽd�Ӯ� A�]�X���^����B�T�h���ҡ]�t T+180 �y�z�ʡ^�B����P�˰Q���׻��ơC\r\n- [ ] �� 1�B�� 2 �t�T���ƭȡB�b�]�w�P�X���ϵ��F�� 3 ��������|�ܷN�ϡF�Ϥ��t�X�ּƦC�C\r\n- [ ] `T12` �ӤH�����ʭp�e���� SMART�Aowner �� `PROPOSED`�F���ܫD 062 ���ӤH��ʤ�ץ����C\r\n- [ ] findings�Blimitations�Bdecision logic ���ơF**�M�����e�ȸj�w `P3`**�F�ɥX `IMPROVE_TRANSFER_SUPPORT` �ܽd�P�w�C\r\n- [ ] �� 1�B�� 2 �t�T���ƭȡB�b�]�w�P�X���ϵ��F�� 3 ��������|�ܷN�ϡF�Ϥ��t�X�ּƦC�C\r\n- [ ] �ﵽ�l�ܾ� owner ���� `PROPOSED`�B���A `�w��/���֩w`�A�t����/����/�ؼЭȡC\r\n- [ ] findings�Blimitations�Bdecision logic ���ơF**�M�����e�ȸj�w `P3`**�F�ɥX `IMPROVE_TRANSFER_SUPPORT` �ܽd�P�w�C\r\n- [ ] `SYNTHETIC_REPLACEMENT_REGISTER` **����T�|**�C�@���ܽd�ƹ�F���夣�C�L�n���X�C\r\n- [ ] �ﵽ�l�ܾ� owner ���� `PROPOSED`�B���A `�w��/���֩w`�A�t����/����/�ؼЭȡC\r\n- [ ] REAL �ƹ�M��]RQ-01��RQ-10�^�P�ӷ��w����ơA���A `PENDING_REAL_SOURCE`�C\r\n- [ ] `SYNTHETIC_REPLACEMENT_REGISTER` **����T�|**�C�@���ܽd�ƹ�F���夣�C�L�n���X�C\r\n- [ ] ���T�n���G�X���v�D TTQS ���ơB�D��|���Z�F�s�ծt���D�]�G�F����ܽd�u�p��v�˰Q�ӫD��|���Z�C\r\n- [ ] REAL �ƹ�M��]RQ-01��RQ-10�^�P�ӷ��w����ơA���A `PENDING_REAL_SOURCE`�C\r\n- [ ] ����H�۵M���Ҩ��N�u�{ ID�]�ܽd�Ӯ� A�]�X���^�B�˰Q�W�h�]�@�^��]���^�B�ﵽ���]�@�^��]���^�^�C\r\n- [ ] ���T�n���G�X���v�D TTQS ���ơB�D��|���Z�F�s�ծt���D�]�G�F����ܽd�u�p��v�˰Q�ӫD��|���Z�C\r\n- [ ] �L���y�֭�/ñ�W/���D/�ҷ�/�ĤT����/��ڰѻP��/�u������C\r\n- [ ] ����H�۵M���Ҩ��N�u�{ ID�]�ܽd�Ӯ� A�]�X���^�B�˰Q�W�h�]�@�^��]���^�B�ﵽ���]�@�^��]���^�^�C\r\n- [ ] ���D�����q�L�F���i�~�{�� 062 �� 063�C\r\n- [ ] �L���y�֭�/ñ�W/���D/�ҷ�/�ĤT����/��ڰѻP��/�u������C\r\n- [ ] �r���a�O�P���ƪ��Y����F����L SHA/JSON/�����s��/`fact_id`�C\r\n- [ ] ���D�����q�L�F���i�~�{�� 062 �� 063�C\r\n\r\n- [ ] �r���a�O�P���ƪ��Y����F����L SHA/JSON/�����s��/`fact_id`�C\r\n�]Blueprint R04 �����^\r\n�]Blueprint R04 �����^\r\n\r\n\r\n\r\n\r\n=== line counts ===\r\nR04 lines: 1026  R05 lines: 1028\r\n\n\n[showing lines 1468-2076 of 2076; full output saved to C:\\Users\\J\\.local\\share\\opencode\\shell\\f27b9df25437c3cad719f47428a6820888a43c04\\sh_14a8f91ba001D7l9Mj7HFJ4xHH.out]"
+              }
+            ],
+            "metadata": {
+              "status": "completed",
+              "truncated": true,
+              "exit": 0
+            }
+          },
+          "time": {
+            "created": 1792252285241,
+            "ran": 1792252285361,
+            "completed": 1792252286301
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 785,
+        "output": 303,
+        "reasoning": 73,
+        "cache": {
+          "read": 24832,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14a8f956e001ip0JiBAFh22aLA",
+      "time": {
+        "created": 1792252286332,
+        "streamed": 1792252291195,
+        "completed": 1792252291836
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "The Compare-Object without -SyncWindow produced a messy interleaved output. The output got mangled due to encoding. But line counts: R04 1026, R05 1028 (+2 net: removed 2 schema lines, added 4 lines: 追蹤波次, 主波次最晚到期... wait let me recount.\n\nSchema change: removed 2 lines (資料截點, and 主波次 `T+90` 最晚到期 replaced). Actually: original schema had 9 field rows. New has 9 field rows. Let me count: original rows: period_id, 完成窗起, 完成窗迄, 期類型, 資料截點, 主波次 T+90 最晚到期, T+90 狀態, T+180 狀態, 是否列入分母 = 9 rows. New: period_id, 完成窗起, 完成窗迄, 期類型, 追蹤波次, 主波次最晚到期, T+90 狀態, T+180 狀態, 列入分母 = 9 rows. So same line count for schema.\n\nNote added: +2 lines (blank line + note line). Actually I added \"\\n\\n> 註...\" Hmm. The original had P3-Q2 row then blank then existing note. I inserted \"\\n\\n> 註：本表...\\n\" between. Let me think: oldString ended with the P3-Q2 row + \"\\n\\n> 註：`P2`...\". newString = P3-Q2 row + \"\\n\\n> 註：本表...\\n\\n> 註：`P2`...\". So added one blank line + one note line = +2 lines. Total 1026+2 = 1028. ✓.\n\nGood, consistent.\n\nNow the garbled output is due to console encoding. Let me use a proper diff with UTF-8 handling. Better: use Python to compare, or use git diff --no-index. Let me use python.\n\nLet me write a verification script in Python (check if python available). Let me do a robust check: compare bytes and find differing line ranges.\n\nAlso verify:\n- T1 schema names vs example header EXACT match.\n- Register IDs 001-232 contiguous/unique.\n- No other changes.\n\nLet me use a Python script.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1792252288264,
+            "completed": 1792252291187
+          }
+        },
+        {
+          "type": "text",
+          "text": "The diff output was garbled by console encoding. Let me run a proper UTF-8 verification with Python."
+        },
+        {
+          "type": "tool",
+          "id": "call_00_kqoypumzmhx148lrz8l7qc5z",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "command": "python --version; py --version"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Python 3.10.8\r\nPython 3.13.2\r\n"
+              }
+            ],
+            "metadata": {
+              "status": "completed",
+              "truncated": false,
+              "exit": 0
+            }
+          },
+          "time": {
+            "created": 1792252291158,
+            "ran": 1792252291191,
+            "completed": 1792252291834
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 31513,
+        "output": 64,
+        "reasoning": 499,
+        "cache": {
+          "read": 25600,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14a8fab0a001JR79rUaBBej6k5",
+      "time": {
+        "created": 1792252291862,
+        "streamed": 1792252302035,
+        "completed": 1792252302061
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "tool",
+          "id": "call_00_a0r2jk3j20e5y5tcamwpj18d",
+          "name": "write",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "path": "C:\\Users\\J\\AppData\\Local\\Temp\\opencode\\verify_r05.py",
+              "content": "# -*- coding: utf-8 -*-\nimport hashlib, re, sys, difflib\n\nbase = r\"E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\inputs\"\nr04 = base + r\"\\0057_UNIQUE_BLUEPRINT_R04.md\"\nr05 = base + r\"\\0057_UNIQUE_BLUEPRINT_R05.md\"\n\ndef rb(p):\n    return open(p, \"rb\").read()\n\nb4 = rb(r04); b5 = rb(r05)\nprint(\"R04 SHA256:\", hashlib.sha256(b4).hexdigest())\nprint(\"R05 SHA256:\", hashlib.sha256(b5).hexdigest())\n\nt4 = b4.decode(\"utf-8\"); t5 = b5.decode(\"utf-8\")\nl4 = t4.split(\"\\n\"); l5 = t5.split(\"\\n\")\nprint(\"R04 lines:\", len(l4), \" R05 lines:\", len(l5))\n\nprint(\"\\n=== UNIFIED DIFF (R04 -> R05) ===\")\nfor line in difflib.unified_diff(l4, l5, fromfile=\"R04\", tofile=\"R05\", lineterm=\"\", n=2):\n    print(line)\n\n# --- T1 schema field names vs example header ---\ndef cells(row):\n    # markdown table row -> list of cell texts (stripped)\n    s = row.strip()\n    if not s.startswith(\"|\"):\n        return None\n    parts = s.split(\"|\")\n    # drop leading/trailing empty\n    parts = parts[1:-1]\n    return [p.strip() for p in parts]\n\nlines5 = l5\n# find T1 schema table: header | 欄 | 型別/說明 |\nschema_start = None\nfor i, ln in enumerate(lines5):\n    if ln.strip() == \"| 欄 | 型別/說明 |\" and \"完成窗起\" in lines5[i+2]:\n        schema_start = i\n        break\nprint(\"\\nT1 schema table starts at line (1-based):\", schema_start+1)\nschema_names = []\ni = schema_start + 2\nwhile i < len(lines5) and lines5[i].strip().startswith(\"|\"):\n    c = cells(lines5[i])\n    if c is None or len(c) < 2:\n        break\n    schema_names.append(c[0])\n    i += 1\nprint(\"T1 schema field names:\", schema_names)\n\n# find T1 example header: line containing period_id and 完成窗起 and 追蹤波次\nex_hdr = None\nfor j in range(i, i+6):\n    c = cells(lines5[j])\n    if c and c[0] == \"period_id\" and \"完成窗起\" in c:\n        ex_hdr = c\n        ex_idx = j\n        break\nprint(\"T1 example header (line %d):\" % (ex_idx+1), ex_hdr)\n\n# normalize: strip backticks for comparison\ndef norm(x):\n    return x.replace(\"`\", \"\").strip()\nsn = [norm(x) for x in schema_names]\nen = [norm(x) for x in ex_hdr]\nprint(\"schema normalized:\", sn)\nprint(\"example normalized:\", en)\nprint(\"EXACT_MATCH (ordered, normalized):\", sn == en)\nprint(\"EXACT_MATCH (ordered, raw):\", schema_names == ex_hdr)\nprint(\"order same:\", sn == en)\n\n# --- register IDs ---\nids = []\nfor ln in lines5:\n    m = re.match(r\"^\\|\\s*SF-0057-(\\d{3})\\s*\\|\", ln)\n    if m:\n        ids.append(int(m.group(1)))\nids_sorted = sorted(ids)\nprint(\"\\nregister rows found:\", len(ids))\nprint(\"min/max:\", min(ids), max(ids))\nprint(\"unique:\", len(set(ids)))\nprint(\"contiguous 1..232:\", ids_sorted == list(range(1, 233)))\n# duplicates\nfrom collections import Counter\ndups = [k for k, v in Counter(ids).items() if v > 1]\nprint(\"duplicates:\", dups)\n\n# --- confirm note & SF-001 locator ---\nprint(\"\\ncutoff note present:\", \"本表所有 cohort 共用單一資料截點（data cutoff）`2026-06-30`\" in t5)\nfor ln in lines5:\n    if ln.startswith(\"| SF-0057-001 \"):\n        print(\"SF-0057-001 row:\", ln)\n        break\n# ensure removed schema row gone\nprint(\"Schema '資料截點' row removed:\", \"| 資料截點 | 日期（全數 = `2026-06-30`） |\" not in t5)\nprint(\"Schema 追蹤波次 row present:\", \"| 追蹤波次 | 30/60/90/180（主波次 `T+90`） |\" in t5)\nprint(\"Schema 主波次最晚到期 row present:\", \"| 主波次最晚到期 | 日期 |\" in t5)\nprint(\"Schema 列入分母 row present:\", \"| 列入分母 | 是／否 |\" in t5)\nprint(\"Old label gone (主波次 `T+90` 最晚到期):\", \"| 主波次 `T+90` 最晚到期 | 日期 |\" not in t5)\nprint(\"Old label gone (是否列入分母):\", \"| 是否列入分母 | 是／否 |\" not in t5)\nprint(\"Old SF-001 locator gone:\", \"T1 欄定義 / 「資料截點」列\" not in t5)\n\n# --- other `資料截點` value occurrences for SF-001 locators retained ---\nfor pat in [\"§5.1 段首（單一資料截點）\", \"§5.1 硬規則1（完成窗≠截點）\", \"§5.1 硬規則2（最早 `T+90` > 截點）\", \"§8.3 規則5（未到期處理）\", \"T1 註（`P3-Q2` 未到期）\"]:\n    print(\"retained locator:\", pat, \"->\", pat in t5)\n\n# --- BOM / line endings ---\nprint(\"\\nR05 BOM:\", b5[:3] == b\"\\xef\\xbb\\xbf\")\nprint(\"R05 has CR:\", b\"\\r\" in b5)\n"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Created file successfully: C:/Users/J/AppData/Local/Temp/opencode/verify_r05.py"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1792252301286,
+            "ran": 1792252302032,
+            "completed": 1792252302058
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 618,
+        "output": 1512,
+        "reasoning": 0,
+        "cache": {
+          "read": 57088,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14a8fd2fd001BiNu09nfG3zncB",
+      "time": {
+        "created": 1792252302092,
+        "streamed": 1792252304131,
+        "completed": 1792252304808
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "tool",
+          "id": "call_00_jr1v8qd92pna0kfjq5xk8a1l",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "command": "python \"C:\\Users\\J\\AppData\\Local\\Temp\\opencode\\verify_r05.py\""
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "R04 SHA256: af88b80542585e85e2d25e8b2011b8f1770b6aa049b7f8de9e067ac8a9af4552\r\nR05 SHA256: efdfcfa52a4b7338ae7688e118f6b700cf1e6f4ee3ef423aa89ac3f253bc3f95\r\nR04 lines: 1027  R05 lines: 1029\r\n\r\n=== UNIFIED DIFF (R04 -> R05) ===\r\n--- R04\r\n+++ R05\r\n@@ -243,9 +243,9 @@\r\n | �������� | ��� |\r\n | ������ | ����~�ס����ɧ��� cohort |\r\n-| ��ƺI�I | ����]���� = `2026-06-30`�^ |\r\n-| �D�i�� `T+90` �̱ߨ�� | ��� |\r\n+| �l�ܪi�� | 30/60/90/180�]�D�i�� `T+90`�^ |\r\n+| �D�i���̱ߨ�� | ��� |\r\n | `T+90` ���A | ������`NOT YET DUE` |\r\n | `T+180` ���A | �����]�y�z�ʡ^��`NOT YET DUE` |\r\n-| �O�_�C�J���� | �O���_ |\r\n+| �C�J���� | �O���_ |\r\n \r\n | period_id | �������_ | �������� | ������ | �l�ܪi�� | �D�i���̱ߨ�� | `T+90` ���A | `T+180` ���A | �C�J���� |\r\n@@ -255,4 +255,6 @@\r\n | P3 | 2026-01-01 | 2026-03-31 | ���ɧ��� cohort | 30/60/90/180 | 2026-06-29 | ���� | **NOT YET DUE** | �O�]�M�� cohort�^ |\r\n | P3-Q2 | 2026-04-01 | 2026-06-30 | ���ɧ��� cohort | 30/60/90/180 | 2026-07-01��2026-09-24�]�̦���̱ߡF��ڧ�����̦� 2026-04-02�^ | **NOT YET DUE** | **NOT YET DUE** | **�_**�]��T�^ |\r\n+\r\n+> ���G�����Ҧ� cohort �@�γ�@��ƺI�I�]data cutoff�^`2026-06-30`�A�U���l�ܦ����ק��H���P�w�C\r\n \r\n > ���G`P2` �� `T+180` �̱ߨ���� `2026-06-29`�A�K��I�I�A�ȧ@�y�z�ʡB���@�M���F`P3` �� `T+180` �̱ߨ�� `2026-09-27`�A**�����**�A���夣�o�X�{��Ʀr�C\r\n@@ -668,5 +670,5 @@\r\n | fact_id | case_id | doc_id | locator | ��� | �X���� | �]�Ȳz�� | �u������ӷ� | ���稤��]���ס^ | �ɮ檬�A |\r\n |---|---|---|---|---|---|---|---|---|---|\r\n-| SF-0057-001 | �X | 0057 | T1 ��w�q / �u��ƺI�I�v�C�]���O���O�u���� = `2026-06-30`�v�^�F��5.1 �q���]��@��ƺI�I�^�F��5.1 �w�W�h1�]�������ںI�I�^�F��5.1 �w�W�h2�]�̦� `T+90` > �I�I�^�F��8.3 �W�h5�]������B�z�^�FT1 ���]`P3-Q2` ������^ | ��ƺI�I | 2026-06-30 | �����] 2026 ������~�סF�� cohort �����׳�@�P�� | ��ڸ�ƺI�I���� | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n+| SF-0057-001 | �X | 0057 | T1 �����]�@�P��ƺI�I = `2026-06-30`�^�F��5.1 �q���]��@��ƺI�I�^�F��5.1 �w�W�h1�]�������ںI�I�^�F��5.1 �w�W�h2�]�̦� `T+90` > �I�I�^�F��8.3 �W�h5�]������B�z�^�FT1 ���]`P3-Q2` ������^ | ��ƺI�I | 2026-06-30 | �����] 2026 ������~�סF�� cohort �����׳�@�P�� | ��ڸ�ƺI�I���� | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n | SF-0057-002 | �X | 0057 | T1 / P1 �C / �������_��F��5.1 / P1 �C / �������� | �������_�]P1�^ | 2024-01-01 | ����~�װ_�I�A�K������� | �~�װV�m�p�e�B�Z�� | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\n | SF-0057-003 | �X | 0057 | T1 / P1 �C / ����������F��5.1 / P1 �C / �������� | ���������]P1�^ | 2024-12-31 | �ʳ�����~�ר��I | �~�װV�m�p�e�B�Z�� | �V�m�ӿ�]���ס^ | SYNTHETIC |\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\J\\AppData\\Local\\Temp\\opencode\\verify_r05.py\", line 41, in <module>\r\n    print(\"\\nT1 schema table starts at line (1-based):\", schema_start+1)\r\nTypeError: unsupported operand type(s) for +: 'NoneType' and 'int'\r\n"
+              },
+              {
+                "type": "text",
+                "text": "Exited with code 1"
+              }
+            ],
+            "metadata": {
+              "status": "completed",
+              "truncated": false,
+              "exit": 1
+            }
+          },
+          "time": {
+            "created": 1792252304036,
+            "ran": 1792252304129,
+            "completed": 1792252304805
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 1653,
+        "output": 59,
+        "reasoning": 0,
+        "cache": {
+          "read": 57600,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14a8fddb6001BZ3NXWZAXREduw",
+      "time": {
+        "created": 1792252304834,
+        "streamed": 1792252317154,
+        "completed": 1792252317178
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "The diff is clean: exactly 3 hunks (schema, note, SF-001 locator). Good. But the schema detection failed because my condition `\"完成窗起\" in lines5[i+2]` — the schema table first row is period_id at i+2; line i+1 is separator, i+2 is period_id. Let me fix detection: header line \"| 欄 | 型別/說明 |\" appears twice? Actually T1 and T2 both have \"| 欄 | 型別 |\". T1 header is \"| 欄 | 型別/說明 |\". Let me just find it by exact match of first occurrence. My condition required 完成窗起 in lines5[i+2], but lines5[i+2] is \"| period_id | ... |\", not containing 完成窗起. That's the bug. Let me fix: check that lines5[i+3] contains 完成窗起.\n\nAlso note diff shows the T1 example header row now includes `追蹤波次` and `主波次最晚到期` and `列入分母` already in R04 — yes R04 example header already had those. Good.\n\nLet me fix the script. Also note the note line I added: diff shows \"+> 註：本表所有 cohort 共用單一資料截點（data cutoff）`2026-06-30`，各期成熟度均以此判定。\" Wait, the garbled text shows `�U���l�ܦ����ק��H���P�w` which decodes to \"各期追蹤成熟度均以此判定\"? Let me re-check. Actually my newString was \"本表所有 cohort 共用單一資料截點（data cutoff）`2026-06-30`，各期追蹤成熟度均以此判定。\" Hmm wait, in the edit I wrote \"各期追蹤成熟度均以此判定\"? Let me recheck the edit. I wrote: `> 註：本表所有 cohort 共用單一資料截點（data cutoff）`2026-06-30`，各期追蹤成熟度均以此判定。` Actually no. Let me look: I wrote in newString: \"> 註：本表所有 cohort 共用單一資料截點（data cutoff）`2026-06-30`，各期追蹤成熟度均以此判定。\"\n\nHmm, actually I typed: `> 註：本表所有 cohort 共用單一資料截點（data cutoff）`2026-06-30`，各期追蹤成熟度均以此判定。` Let me just print the actual line to be sure. The script's check `\"本表所有 cohort 共用單一資料截點（data cutoff）`2026-06-30`\" in t5` will confirm.\n\nWait, actually in my edit I wrote \"各期追蹤成熟度均以此判定\"? Let me scroll: the newString was:\n\n\"> 註：本表所有 cohort 共用單一資料截點（data cutoff）`2026-06-30`，各期追蹤成熟度均以此判定。\"\n\nHmm, I need to verify. Actually I recall typing \"各期追蹤成熟度均以此判定\". Let me just print the line.\n\nLet me fix the script and rerun.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1792252312837,
+            "completed": 1792252317143
+          }
+        },
+        {
+          "type": "text",
+          "text": "Diff is clean — exactly 3 intended hunks. Let me fix the script's T1 detection bug and rerun."
+        },
+        {
+          "type": "tool",
+          "id": "call_00_8tyw3yg4y3meqg0p1k8sa66g",
+          "name": "edit",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "path": "C:\\Users\\J\\AppData\\Local\\Temp\\opencode\\verify_r05.py",
+              "oldString": "    if ln.strip() == \"| 欄 | 型別/說明 |\" and \"完成窗起\" in lines5[i+2]:",
+              "newString": "    if ln.strip() == \"| 欄 | 型別/說明 |\" and \"完成窗起\" in lines5[i+1]:"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Edited C:/Users/J/AppData/Local/Temp/opencode/verify_r05.py (1 replacement)"
+              }
+            ],
+            "metadata": {
+              "files": [
+                {
+                  "file": "C:/Users/J/AppData/Local/Temp/opencode/verify_r05.py",
+                  "patch": "Index: C:/Users/J/AppData/Local/Temp/opencode/verify_r05.py\n===================================================================\n--- C:/Users/J/AppData/Local/Temp/opencode/verify_r05.py\n+++ C:/Users/J/AppData/Local/Temp/opencode/verify_r05.py\n@@ -34,9 +34,9 @@\n lines5 = l5\n # find T1 schema table: header | 欄 | 型別/說明 |\n schema_start = None\n for i, ln in enumerate(lines5):\n-    if ln.strip() == \"| 欄 | 型別/說明 |\" and \"完成窗起\" in lines5[i+2]:\n+    if ln.strip() == \"| 欄 | 型別/說明 |\" and \"完成窗起\" in lines5[i+1]:\n         schema_start = i\n         break\n print(\"\\nT1 schema table starts at line (1-based):\", schema_start+1)\n schema_names = []\n",
+                  "status": "modified",
+                  "additions": 1,
+                  "deletions": 1
+                }
+              ],
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1792252317048,
+            "ran": 1792252317149,
+            "completed": 1792252317176
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 1808,
+        "output": 174,
+        "reasoning": 708,
+        "cache": {
+          "read": 59136,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14a900e0a001khlxAWk0w08Vvu",
+      "time": {
+        "created": 1792252317206,
+        "streamed": 1792252321435,
+        "completed": 1792252321458
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "Wait, i+1 is the separator line, i+2 is first data row \"period_id\". 完成窗起 is in i+3. Hmm. Let me reconsider. Header line index i = \"| 欄 | 型別/說明 |\". i+1 = \"|---|-------|\" separator. i+2 = \"| period_id | ... |\". i+3 = \"| 完成窗起 | 日期 |\".\n\nSo condition should be `\"完成窗起\" in lines5[i+3]`. But simpler: check `lines5[i+2].startswith(\"| period_id\")`. Let me set that.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1792252320248,
+            "completed": 1792252321428
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_00_rmnc9e36kafrm6lj60q7ctu1",
+          "name": "edit",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "newString": "    if ln.strip() == \"| 欄 | 型別/說明 |\" and lines5[i+2].startswith(\"| period_id\"):",
+              "oldString": "    if ln.strip() == \"| 欄 | 型別/說明 |\" and \"完成窗起\" in lines5[i+1]:",
+              "path": "C:\\Users\\J\\AppData\\Local\\Temp\\opencode\\verify_r05.py"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Edited C:/Users/J/AppData/Local/Temp/opencode/verify_r05.py (1 replacement)"
+              }
+            ],
+            "metadata": {
+              "files": [
+                {
+                  "file": "C:/Users/J/AppData/Local/Temp/opencode/verify_r05.py",
+                  "patch": "Index: C:/Users/J/AppData/Local/Temp/opencode/verify_r05.py\n===================================================================\n--- C:/Users/J/AppData/Local/Temp/opencode/verify_r05.py\n+++ C:/Users/J/AppData/Local/Temp/opencode/verify_r05.py\n@@ -34,9 +34,9 @@\n lines5 = l5\n # find T1 schema table: header | 欄 | 型別/說明 |\n schema_start = None\n for i, ln in enumerate(lines5):\n-    if ln.strip() == \"| 欄 | 型別/說明 |\" and \"完成窗起\" in lines5[i+1]:\n+    if ln.strip() == \"| 欄 | 型別/說明 |\" and lines5[i+2].startswith(\"| period_id\"):\n         schema_start = i\n         break\n print(\"\\nT1 schema table starts at line (1-based):\", schema_start+1)\n schema_names = []\n",
+                  "status": "modified",
+                  "additions": 1,
+                  "deletions": 1
+                }
+              ],
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1792252321393,
+            "ran": 1792252321432,
+            "completed": 1792252321455
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 933,
+        "output": 152,
+        "reasoning": 136,
+        "cache": {
+          "read": 60928,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14a901ec0001L2U4PC84BG8BSC",
+      "time": {
+        "created": 1792252321485,
+        "streamed": 1792252325264,
+        "completed": 1792252326082
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "tool",
+          "id": "call_00_inlvbekf3j7jddym3vbs8j2p",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "command": "$env:PYTHONIOENCODING=\"utf-8\"; python \"C:\\Users\\J\\AppData\\Local\\Temp\\opencode\\verify_r05.py\" 2>&1 | Select-Object -Skip 30"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "-| SF-0057-001 | ??| 0057 | T1 欄�?�?/ ?��??�截點」�?（�??�註記「全??= `2026-06-30`?��?；�?.1 段�?（單一資�??��?）�?§5.1 硬�???（�??��??�截點�?；�?.1 硬�???（�???`T+90` > ?��?）�?§8.3 規�?5（未?��??��?）�?T1 註�?`P3-Q2` ?�到?��? | 資�??��? | 2026-06-30 | 不�?�?2026 ?��??�年度�???cohort ?��?度單一?��? | 實�?資�??��?紀??| 訓練?�辦（�?案�? | SYNTHETIC |\r\n+| SF-0057-001 | ??| 0057 | T1 表註（共?��??�截�?= `2026-06-30`）�?§5.1 段�?（單一資�??��?）�?§5.1 硬�???（�??��??�截點�?；�?.1 硬�???（�???`T+90` > ?��?）�?§8.3 規�?5（未?��??��?）�?T1 註�?`P3-Q2` ?�到?��? | 資�??��? | 2026-06-30 | 不�?�?2026 ?��??�年度�???cohort ?��?度單一?��? | 實�?資�??��?紀??| 訓練?�辦（�?案�? | SYNTHETIC |\r\n | SF-0057-002 | ??| 0057 | T1 / P1 ??/ 完�?窗起欄�?§5.1 / P1 ??/ 完�?窗�? | 完�?窗起（P1�?| 2024-01-01 | 完整年度起�?，便?�跨?��?�?| 年度訓練計畫?�班�?| 訓練?�辦（�?案�? | SYNTHETIC |\r\n | SF-0057-003 | ??| 0057 | T1 / P1 ??/ 完�?窗�?欄�?§5.1 / P1 ??/ 完�?窗�? | 完�?窗�?（P1�?| 2024-12-31 | 封�?完整年度迄�? | 年度訓練計畫?�班�?| 訓練?�辦（�?案�? | SYNTHETIC |\r\n\r\nT1 schema table starts at line (1-based): 239\r\nT1 schema field names: ['period_id', '完�?窗起', '完�?窗�?', '?��???, '追蹤波次', '主波次�??�到??, '`T+90` ?�??, '`T+180` ?�??, '?�入?��?']\r\nT1 example header (line 251): ['period_id', '完�?窗起', '完�?窗�?', '?��???, '追蹤波次', '主波次�??�到??, '`T+90` ?�??, '`T+180` ?�??, '?�入?��?']\r\nschema normalized: ['period_id', '完�?窗起', '完�?窗�?', '?��???, '追蹤波次', '主波次�??�到??, 'T+90 ?�??, 'T+180 ?�??, '?�入?��?']\r\nexample normalized: ['period_id', '完�?窗起', '完�?窗�?', '?��???, '追蹤波次', '主波次�??�到??, 'T+90 ?�??, 'T+180 ?�??, '?�入?��?']\r\nEXACT_MATCH (ordered, normalized): True\r\nEXACT_MATCH (ordered, raw): True\r\norder same: True\r\n\r\nregister rows found: 232\r\nmin/max: 1 232\r\nunique: 232\r\ncontiguous 1..232: True\r\nduplicates: []\r\n\r\ncutoff note present: True\r\nSF-0057-001 row: | SF-0057-001 | ??| 0057 | T1 表註（共?��??�截�?= `2026-06-30`）�?§5.1 段�?（單一資�??��?）�?§5.1 硬�???（�??��??�截點�?；�?.1 硬�???（�???`T+90` > ?��?）�?§8.3 規�?5（未?��??��?）�?T1 註�?`P3-Q2` ?�到?��? | 資�??��? | 2026-06-30 | 不�?�?2026 ?��??�年度�???cohort ?��?度單一?��? | 實�?資�??��?紀??| 訓練?�辦（�?案�? | SYNTHETIC |\r\nSchema '資�??��?' row removed: True\r\nSchema 追蹤波次 row present: True\r\nSchema 主波次�??�到??row present: True\r\nSchema ?�入?��? row present: True\r\nOld label gone (主波�?`T+90` ?�?�到??: True\r\nOld label gone (?�否?�入?��?): True\r\nOld SF-001 locator gone: True\r\nretained locator: §5.1 段�?（單一資�??��?�?-> True\r\nretained locator: §5.1 硬�???（�??��??�截點�? -> True\r\nretained locator: §5.1 硬�???（�???`T+90` > ?��?�?-> True\r\nretained locator: §8.3 規�?5（未?��??��?�?-> True\r\nretained locator: T1 註�?`P3-Q2` ?�到?��? -> True\r\n\r\nR05 BOM: False\r\nR05 has CR: False\r\n"
+              }
+            ],
+            "metadata": {
+              "status": "completed",
+              "truncated": false,
+              "exit": 0
+            }
+          },
+          "time": {
+            "created": 1792252325239,
+            "ran": 1792252325259,
+            "completed": 1792252326080
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 360,
+        "output": 86,
+        "reasoning": 0,
+        "cache": {
+          "read": 61824,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14a9030d1001NSRdAB2Cu9s1WF",
+      "time": {
+        "created": 1792252326110,
+        "streamed": 1792252335258,
+        "completed": 1792252335940
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "Console encoding garbled the CJK display, but the boolean results are what matter:\n\n- T1 schema field names (9) and T1 example header (9): EXACT_MATCH (ordered, raw) = True. \n- Register rows: 232, unique 232, contiguous 1..232 = True, no duplicates.\n- cutoff note present: True.\n- Schema 資料截點 row removed: True.\n- 追蹤波次 / 主波次最晚到期 / 列入分母 rows present: True.\n- Old labels gone: True.\n- Old SF-001 locator gone: True.\n- Retained locators: all True.\n- No BOM, no CR.\n\nNow, one thing to note: the diff showed the note line as `> 註：本表所有 cohort 共用單一資料截點（data cutoff）`2026-06-30`，各期追蹤成熟度均以此判定。` Wait, the garbled showed `�U���l�ܦ����ק��H���P�w` — decoding: `各期追蹤成熟度均以此判定`? Let me verify: the newString I actually typed was \"各期追蹤成熟度均以此判定\". Hmm, the script's check `\"本表所有 cohort 共用單一資料截點（data cutoff）`2026-06-30`\" in t5` returned True, and that's the key requirement (states shared cutoff is 2026-06-30). Good.\n\nWait, but I want to double-check what I actually wrote. Let me look at the raw line. Let me print it via Python to a file to read properly. Actually let me just read the file lines 255-262 with the read tool.\n\nNow also verify R04 unchanged — hash af88b805... confirmed again by script. Good.\n\nAlso need to confirm \"all other R04 content unchanged apart from the T1 schema/note and SF-001 locator\". The unified diff showed only 3 hunks, exactly those. \n\nNow also the task mentions \"unchanged 232 IDs\" — confirmed.\n\nNow, one more consideration: the patch says \"Add `追蹤波次` as a column definition with its existing displayed values `30/60/90/180`.\" I used type/description \"30/60/90/180（主波次 `T+90`）\". That's consistent with example table values \"30/60/90/180\" and existing SF-025 fact value \"30/60/90/180（主波次 T+90）\". Good.\n\n\"Match the exact example labels `主波次最晚到期` and `列入分母`.\" Done.\n\nNow \"Preserve R01-R04 byte-for-byte.\" R01, R02, R03 untouched (I didn't touch them). Let me verify R01/R02/R03 hashes are unchanged. I don't have their original hashes from the task, but I never wrote to them. Still, I could report their current hashes. The R04 audit mentions R03 SHA = 8f3b404cad787975d06444603ca647702afc7f21df1d526d3ea2daeb800effb4. Let me verify R03 still matches that. And R01, R02 — no reference given. Let me just hash all and report.\n\nLet me also double check the actual note text by reading lines.\n\nLet me read lines 237-262 of R05.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1792252328642,
+            "completed": 1792252335242
+          }
+        },
+        {
+          "type": "text",
+          "text": "All checks pass. Let me view the exact edited T1 region and confirm R01–R03 are untouched."
+        },
+        {
+          "type": "tool",
+          "id": "call_00_3tq0me1fvkoqkwkdmw9vvc58",
+          "name": "read",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "path": "E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\inputs\\0057_UNIQUE_BLUEPRINT_R05.md",
+              "offset": 237,
+              "limit": 26
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Read file E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\inputs\\0057_UNIQUE_BLUEPRINT_R05.md, lines 237-262\n237: ### T1 完成窗、資料截點與成熟度表（defects 3、9）\n238: \n239: | 欄 | 型別/說明 |\n240: |---|---|\n241: | period_id | `P1`/`P2`/`P3`/`P3-Q2` |\n242: | 完成窗起 | 日期 |\n243: | 完成窗迄 | 日期 |\n244: | 期類型 | 完整年度／有界完成 cohort |\n245: | 追蹤波次 | 30/60/90/180（主波次 `T+90`） |\n246: | 主波次最晚到期 | 日期 |\n247: | `T+90` 狀態 | 成熟／`NOT YET DUE` |\n248: | `T+180` 狀態 | 成熟（描述性）／`NOT YET DUE` |\n249: | 列入分母 | 是／否 |\n250: \n251: | period_id | 完成窗起 | 完成窗迄 | 期類型 | 追蹤波次 | 主波次最晚到期 | `T+90` 狀態 | `T+180` 狀態 | 列入分母 |\n252: |---|---|---|---|---|---|---|---|---|\n253: | P1 | 2024-01-01 | 2024-12-31 | 完整年度 | 30/60/90/180 | 2025-03-31 | 成熟 | 成熟 | 是 |\n254: | P2 | 2025-01-01 | 2025-12-31 | 完整年度 | 30/60/90/180 | 2026-03-31 | 成熟 | 成熟（描述性） | 是 |\n255: | P3 | 2026-01-01 | 2026-03-31 | 有界完成 cohort | 30/60/90/180 | 2026-06-29 | 成熟 | **NOT YET DUE** | 是（決策 cohort） |\n256: | P3-Q2 | 2026-04-01 | 2026-06-30 | 有界完成 cohort | 30/60/90/180 | 2026-07-01～2026-09-24（最早～最晚；實際完成日最早 2026-04-02） | **NOT YET DUE** | **NOT YET DUE** | **否**（資訊） |\n257: \n258: > 註：本表所有 cohort 共用單一資料截點（data cutoff）`2026-06-30`，各期追蹤成熟度均以此判定。\n259: \n260: > 註：`P2` 之 `T+180` 最晚到期為 `2026-06-29`，貼近截點，僅作描述性、不作決策；`P3` 之 `T+180` 最晚到期 `2026-09-27`，**未到期**，正文不得出現其數字。\n261: > 註：`P3-Q2` 之 14 筆合成完成日為 2026-04-02～2026-06-26（逐人分布見第 5.1 節），最早 `T+90` = 2026-07-01 > 截點 `2026-06-30`，故**全數未到期**，並依預先宣告之 cohort 成熟度政策排除於所有率之分子與分母。\n262: \n[Output truncated. Continue reading with offset: 263]"
+              }
+            ],
+            "metadata": {
+              "truncated": true
+            }
+          },
+          "time": {
+            "created": 1792252335149,
+            "ran": 1792252335246,
+            "completed": 1792252335302
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_01_1viepzgsxlxknirq7d8bv976",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "command": "$d=\"E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\inputs\"; foreach($f in \"0057_UNIQUE_BLUEPRINT_R01.md\",\"0057_UNIQUE_BLUEPRINT_R02.md\",\"0057_UNIQUE_BLUEPRINT_R03.md\",\"0057_UNIQUE_BLUEPRINT_R04.md\",\"0057_UNIQUE_BLUEPRINT_R05.md\"){ \"$f  $((Get-FileHash -Algorithm SHA256 \"$d\\$f\").Hash)\" }"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "0057_UNIQUE_BLUEPRINT_R01.md  DA3396B969512E131154A5702781D110FB6194DC92A765B9C49D6D268EADF0D5\r\n0057_UNIQUE_BLUEPRINT_R02.md  3D5E778B384E53E7B51CFFADAF56A67F2E381807A6B16BBF334FE0FE81667D10\r\n0057_UNIQUE_BLUEPRINT_R03.md  8F3B404CAD787975D06444603CA647702AFC7F21DF1D526D3EA2DAEB800EFFB4\r\n0057_UNIQUE_BLUEPRINT_R04.md  AF88B80542585E85E2D25E8B2011B8F1770B6AA049B7F8DE9E067AC8A9AF4552\r\n0057_UNIQUE_BLUEPRINT_R05.md  EFDFCFA52A4B7338AE7688E118F6B700CF1E6F4EE3EF423AA89AC3F253BC3F95\r\n"
+              }
+            ],
+            "metadata": {
+              "status": "completed",
+              "truncated": false,
+              "exit": 0
+            }
+          },
+          "time": {
+            "created": 1792252335199,
+            "ran": 1792252335251,
+            "completed": 1792252335936
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 1730,
+        "output": 311,
+        "reasoning": 740,
+        "cache": {
+          "read": 62080,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14a905755001jGCb12ND2dr14D",
+      "time": {
+        "created": 1792252335972,
+        "streamed": 1792252339661,
+        "completed": 1792252339677
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "Everything verified:\n- R03 SHA matches audit's stated R03 SHA (8f3b404...) — preserved byte-for-byte.\n- R04 unchanged.\n- R05 new SHA: EFDFCFA52A4B7338AE7688E118F6B700CF1E6F4EE3EF423AA89AC3F253BC3F95.\n\nNow write the build receipt: build/0057_R05_blueprint_repair_receipt.md.\n\nThe patch says \"Write a new 0057_UNIQUE_BLUEPRINT_R05.md and a concise build receipt.\" Task says create build/0057_R05_blueprint_repair_receipt.md.\n\nLet me look at the R04 receipt for format reference. Let me read it briefly.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1792252338344,
+            "completed": 1792252339653
+          }
+        },
+        {
+          "type": "text",
+          "text": "All byte-preservation checks confirmed. Let me review the existing R04 receipt format for consistency, then write the R05 receipt."
+        },
+        {
+          "type": "tool",
+          "id": "call_00_o2zbwvikfogu48ld1sf2ijl2",
+          "name": "read",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "path": "E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\build\\0057_R04_blueprint_repair_receipt.md"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Read file E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\build\\0057_R04_blueprint_repair_receipt.md, lines 1-62\n1: # 0057 Blueprint R04 — build receipt (bounded sidecar repair)\n2: \n3: ## Input lock\n4: \n5: | Item | Value |\n6: |---|---|\n7: | Repair brief | `inputs/0057_BLUEPRINT_REPAIR_PATCH_R04.md` — SHA-256 `c665da83f3e62f54d128c6a7a2c35c3cd08df9534f2af6cf0a77ca519949ec48` (matches declared SHA; verified before writing) |\n8: | Source candidate | `inputs/0057_UNIQUE_BLUEPRINT_R03.md` — SHA-256 `8f3b404cad787975d06444603ca647702afc7f21df1d526d3ea2daeb800effb4` (matches brief; **unchanged after this build**) |\n9: | Defect list | `review/0057_R03_semantic_review_GLM_R01.md` (verdict `PARTIAL`; Section A = 10 bundled rows, Section B = 6 coverage/locator gaps) |\n10: | Output | `inputs/0057_UNIQUE_BLUEPRINT_R04.md` — SHA-256 `af88b80542585e85e2d25e8b2011b8f1770b6aa049b7f8de9e067ac8a9af4552` (computed only after all writes completed) |\n11: \n12: Preserved unchanged (byte-for-byte): R01 `da3396b969512e131154a5702781d110fb6194dc92a765b9c49d6d268eadf0d5`, R02 `3d5e778b384e53e7b51cffadaf56a67f2e381807a6b16bbf334fe0fe81667d10`, R03 `8f3b404c…eﬀb4`. **No DOCX was created or altered anywhere under `0057_R01`.** This is a reversible sidecar repair; it does **not** establish DOCX readiness, formal acceptance, or independent PASS. No association fact was invented; no official requirement text or Blueprint identity was altered.\n13: \n14: ## Repair groups applied\n15: \n16: **G1 — §13.2 register atomicity (one value per row).** Ten flagged rows were split so each row carries one independently displayed fact. The original ID is kept for the first atomic fact; additional facts take fresh sequential IDs from the current maximum. Repeated-display locators were updated on every affected row (T7 cell + §12.1 佐證 index + §12.2 追蹤結果 cell now all carried where the same value repeats).\n17: \n18: | Split of | Atomic facts now separate | New IDs |\n19: |---|---|---|\n20: | SF-0057-184 | `Q1=2 次` / `Q2=4` / `Q3=5` | 204, 205 |\n21: | SF-0057-186 | `R1=3` / `R2=2` / `R3=3` / `R4=2` / 合計 `10/12` | 206, 207, 208, 209 |\n22: | SF-0057-188 | 接觸紀錄筆數 `3 筆` / 觸發轉介界線筆數 `1 筆` | 210 |\n23: | SF-0057-191 | `2025-04-15` / `2025-06-13` | 211 |\n24: | SF-0057-192 | `C2` / `C3` | 212 |\n25: | SF-0057-194 | 時限 `24 小時內` / `每月 2 班` | 213 |\n26: | SF-0057-195 | 例會抽查回饋 / 界線判準卡 | 214 |\n27: | SF-0057-198 | `時間不足` / `紀錄表欄位偏多（18 欄）` / `缺乏即時回饋` | 215, 216 |\n28: | SF-0057-199 | 接觸紀錄抽查 `3 筆` / 觀察量尺 `10/12` | 217 |\n29: | SF-0057-201 | 圖 3 節點 (1)–(6) 六段節點文字 | 218–222 |\n30: \n31: **G2 — T8 locators (values unchanged).** Added the exact T8 cell locator to `SF-0057-115` (`T8 / P1 列 / 陪伴組應用率欄`), `118` (`T8 / P1 列 / 無陪伴組應用率欄`), `121` (`T8 / P2 列 / 陪伴組應用率欄`), `124` (`T8 / P2 列 / 無陪伴組應用率欄`), `127` (`T8 / P3 列 / 陪伴組應用率欄`), `130` (`T8 / P3 列 / 無陪伴組應用率欄`).\n32: \n33: **G3 — T9 coverage + §11 date.** Registered the five F1–F5 action texts (`SF-0057-223`–`227`), the four missing F1/F2/F4/F5 re-tracking indicators (`SF-0057-228`–`231`; F3 coverage retained via `SF-0057-130`), and the `2027 上半年重檢` date (`SF-0057-232`, §11 補述).\n34: \n35: **G4 — `SF-0057-001` locator.** Removed the ambiguous \"T1 data-cell\" reading. The locator now names only occurrences that actually display `2026-06-30`: the `T1` 欄定義 / 資料截點列 (type note「全數 = 2026-06-30」), §5.1 段首, §5.1 硬規則1, §5.1 硬規則2, §8.3 規則5, and the T1 註. No T1 column was added and no unregistered repeated value was introduced (smallest schema-preserving locator correction).\n36: \n37: **G5 — schema/table consistency (computed values unchanged).** `T3`: the field schema now uses one canonical column set identical to the T3 example table (`period_id` / `能力項` / `滿分` / `總分門檻` / `該期達標率`); `評量題數` was removed with a stated reason (total-score design, no per-item item counts — listing it would fabricate item statistics), and `各項滿分`→`滿分`, `達門檻標準`→`總分門檻`. `T8`: a `欄 | 型別` schema table was added whose column names are identical to the T8 example table, plus a note that T5 rate values are repeated displays logged under the same `fact_id`.\n38: \n39: ## New IDs allocated (29 total)\n40: \n41: `SF-0057-204` … `SF-0057-232` (contiguous, no gaps, no duplicates; next free = `SF-0057-233`). Grouped: 204–222 (atomicity), 223–232 (T9 coverage + §11 date). Every new fact row is marked `SYNTHETIC`; actual association records/decisions remain `UNKNOWN / PENDING_REAL_SOURCE`.\n42: \n43: ## Deterministic checks run (all before reporting)\n44: \n45: A script re-read the written R04 bytes and ran **100 checks, 0 failures**:\n46: - **Register integrity**: 232 `fact_id` rows; IDs unique and contiguous 1–232; every row has exactly 10 cells.\n47: - **T2 arithmetic**: six rates × P1/P2/P3 recomputed from their own numerator/denominator cells (all match); merged row = column-wise sums of P1+P2+P3; `P3-Q2` left `—` with `A=14` informational only; nesting `G≤E≤D≤C≤A` and `F≤B≤A` per cohort.\n48: - **T4**: `Tier-A + Tier-B + Tier-C = E` and `G = Tier-A + Tier-B` per cohort; `G/E` recomputed; Tier-A record-count column kept separate from persons.\n49: - **T5**: group 涵蓋/應用 sums equal the period `D`/`E`; every group rate recomputed; merged `33+41=74`, `26+22=48`; P3 gap `75.0 − 50.0 = 25.0` pp.\n50: - **T6**: `失聯 + 拒訪 = C − D` per cohort and per merged row.\n51: - **Schema reconciliation**: T3 has no `評量題數` row; T3 schema names equal T3 example header; T8 schema names equal T8 example header.\n52: - **Atomicity spot-check**: value cells of the split rows (184/186/188/191/192/194/195/198/199/200/201/204) contain no `；`/`、` bundling.\n53: - **Date invariants**: P1/P2/P3 `T+90`, `P2`/`P3` `T+180`, `P3-Q2` earliest/latest `T+90` and latest `T+180`, and case `T+30/+60/+90/+180` all re-derived by calendar arithmetic and matched.\n54: - **Boundary invariants confirmed intact**: `0057` = `I13-E01` = official checkbox `061` remain three distinct fields clear of `062`/`063`; decisions still bound to mature `P3` only; merged rates still labelled descriptive/non-decision.\n55: \n56: ## Interpretation notes, additions beyond the enumerated minimum, and residual issues\n57: \n58: 1. **Brief wording \"§13.1 T3 field schema\"** was read as the T3 field-schema table in §7 (the reviewer's own Section B row is \"§13.1／§7 T3 欄不一致\"); §13.1 itself is the register-row schema and was left intact.\n59: 2. **`SF-0057-200` normalized** (no new ID): it bundled the T+90 record count + referral flag + the main-wave decision, the same defect class as `SF-0057-188`. Its 合成值 is now the decision only; the count/flag remain covered by `SF-0057-188`/`210` (which now also carry the §12.2 追蹤結果 T+90 locator). Content-preserving, no data change.\n60: 3. **Two extra repeated-display locators added** so T9 問題欄 displays that repeat a registered value are locatored: `SF-0057-160` gains `T9 / F3 列 / 問題欄` (`≥15 百分點`), `SF-0057-215` gains `T9 / F4 列 / 問題欄` (`18 欄`). No new IDs.\n61: 4. **Residual (not flagged by the reviewer, left untouched to stay bounded):** T9 `F1 問題欄` (\"應用率未隨達標率同步上升\") is narrative-only with no numeric synthetic value, consistent with §10.1 finding narratives not carrying their own rows; `SF-0057-193` (示範任務) and `SF-0057-197` (成功準則) each carry one compound descriptive/rule sentence rather than a category in the brief's bundle list; the T1 field schema lists `資料截點` while the T1 example table instead shows `追蹤波次` (pre-existing T1 naming difference, outside the brief's T3/T8 scope — `SF-0057-001` now points explicitly at the schema definition row). None of these were raised by the R03 reviewer.\n62: 5. **No unresolved blocker.** The only open items remain the pre-existing promotion HOLDs already declared in the Blueprint (§16.1: historical 142-registry readback not performed → mapping stays a crosswalk-supported candidate; all facts still `SYNTHETIC`/`PENDING_REAL_SOURCE`). No independent PASS is claimed; a fresh independent exact-SHA review is required."
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1792252339635,
+            "ran": 1792252339657,
+            "completed": 1792252339673
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 2256,
+        "output": 119,
+        "reasoning": 166,
+        "cache": {
+          "read": 63744,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14a9065ee001RM1ACZVhiuNury",
+      "time": {
+        "created": 1792252339706,
+        "streamed": 1792252346739,
+        "completed": 1792252347383
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "Now I'll write the R05 receipt. Include: input lock with SHAs, repair description, deterministic checks, output SHA, unresolved issues, scope statement.\n\nLet me compute the patch R05 SHA too for the record — the patch file is an input. The task said read the patch; I can record its SHA. Let me hash it.\n\nAlso hash the R04 audit file for record.\n\nLet me get those hashes.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1792252345362,
+            "completed": 1792252346732
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_00_5xqghh1mjdw8rgop37l5z7xi",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "command": "$b=\"E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\"; foreach($f in \"$b\\inputs\\0057_BLUEPRINT_REPAIR_PATCH_R05.md\",\"$b\\review\\0057_R04_independent_deterministic_audit_R01.md\"){ \"$([System.IO.Path]::GetFileName($f))  $((Get-FileHash -Algorithm SHA256 $f).Hash)\" }"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "0057_BLUEPRINT_REPAIR_PATCH_R05.md  11CA22101745F25FAE15DE5359B34605B8AEBB6C617AE9661CF24B510DF384BE\r\n0057_R04_independent_deterministic_audit_R01.md  DE14999DBDBBE18DB98A0D0F31DAFD68774B8A81E4A685BCBE1550AA6509CB24\r\n"
+              }
+            ],
+            "metadata": {
+              "status": "completed",
+              "truncated": false,
+              "exit": 0
+            }
+          },
+          "time": {
+            "created": 1792252346687,
+            "ran": 1792252346736,
+            "completed": 1792252347381
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 3232,
+        "output": 158,
+        "reasoning": 87,
+        "cache": {
+          "read": 65920,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14a908406001Uu4uhnPJTtRdYs",
+      "time": {
+        "created": 1792252347411,
+        "streamed": 1792252362163,
+        "completed": 1792252362186
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "Patch R05 SHA matches the declared 11ca2210... in the task. Good.\n\nNow write the receipt. Keep it concise but complete per the \"Verify and report\" requirements:\n- source SHA confirmed before write; R04 re-hashed after (unchanged)\n- T1 schema field names vs example header EXACT_MATCH\n- T1 note displays 2026-06-30; SF-0057-001 points to that note\n- register IDs unique/contiguous 001-232, no add/remove, all other R04 content unchanged\n- output R05 exact SHA, build receipt, scope, checks, unresolved issues\n- bounded candidate repair, not independent PASS\n\nLet me write.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1792252351769,
+            "completed": 1792252362152
+          }
+        },
+        {
+          "type": "text",
+          "text": "Patch SHA matches the declared value. Now writing the build receipt."
+        },
+        {
+          "type": "tool",
+          "id": "call_00_0cv8ey0nid4mfcc06zbcizqa",
+          "name": "write",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "content": "# 0057 Blueprint R05 — build receipt (bounded T1 schema repair)\n\n## Input lock\n\n| Item | Value |\n|---|---|\n| Repair patch (brief) | `inputs/0057_BLUEPRINT_REPAIR_PATCH_R05.md` — SHA-256 `11ca22101745f25fae15de5359b34605b8aebb6c617ae9661cf24b510df384be` (matches declared SHA; verified before writing) |\n| Source candidate | `inputs/0057_UNIQUE_BLUEPRINT_R04.md` — SHA-256 `af88b80542585e85e2d25e8b2011b8f1770b6aa049b7f8de9e067ac8a9af4552` (matches patch's required source SHA; re-hashed **after** the build and **unchanged**) |\n| Independent audit | `review/0057_R04_independent_deterministic_audit_R01.md` — SHA-256 `de14999dbdbbe18db98a0d0f31dafd68774b8a81e4a685bcbe1550aa6509cb24` (verdict `R04 = CANDIDATE / DETERMINISTIC_AUDIT_FAIL_REPAIRABLE`) |\n| Output | `inputs/0057_UNIQUE_BLUEPRINT_R05.md` — SHA-256 `efdfcfa52a4b7338ae7688e118f6b700cf1e6f4ee3ef423aa89ac3f253bc3f95` (computed only after all writes completed) |\n\nPreserved unchanged (byte-for-byte): R01 `da3396b969512e131154a5702781d110fb6194dc92a765b9c49d6d268eadf0d5`, R02 `3d5e778b384e53e7b51cffadaf56a67f2e381807a6b16bbf334fe0fe81667d10`, R03 `8f3b404cad787975d06444603ca647702afc7f21df1d526d3ea2daeb800effb4` (matches the R03 SHA quoted in the R04 audit), R04 `af88b805…af4552`. **No DOCX was created or altered anywhere under `0057_R01`.** This is a reversible sidecar repair; it does **not** establish DOCX readiness, formal acceptance, or independent PASS.\n\n## Scope of repair (only the four enumerated items)\n\n1. **Remove `資料截點` from the T1 column list** (`| 資料截點 | 日期（全數 = `2026-06-30`） |` deleted). The T1 example table has no such column; the constant now lives in a table note (item 4).\n2. **Add `追蹤波次`** as a column definition, carrying its existing displayed values `30/60/90/180（主波次 `T+90`）` (same value registered at `SF-0057-025`; no new synthetic value).\n3. **Match the exact example labels**: `主波次 `T+90` 最晚到期` → `主波次最晚到期`; `是否列入分母` → `列入分母`.\n4. **One T1 table note** added stating the shared data cutoff: `> 註：本表所有 cohort 共用單一資料截點（data cutoff）`2026-06-30`，各期追蹤成熟度均以此判定。` No column was added and no duplicate synthetic value introduced; the existing `P3-Q2` row and the two pre-existing notes are left intact.\n5. **`SF-0057-001` locator** changed from the schema-row reading to the actual T1 note: `T1 表註（共同資料截點 = `2026-06-30`）`, retaining every valid §5.1 / §8.3 locator where the same value is displayed (`§5.1 段首`, `§5.1 硬規則1`, `§5.1 硬規則2`, `§8.3 規則5`, `T1 註（`P3-Q2` 未到期）`).\n\nNet effect on the file: **+2 lines** (one blank line + one note line); schema row count unchanged at 9; all other content identical.\n\n## Deterministic checks run (all before reporting)\n\nA script re-read the written R05 bytes and compared them against R04:\n\n- **Source lock**: R04 re-hashed after build = `af88b805…af4552` (unchanged); R03 still `8f3b404c…effb4`.\n- **Scope / no-other-change**: `difflib.unified_diff` reports exactly **3 hunks** — T1 schema block, T1 note insertion, `SF-0057-001` row. No other line changed.\n- **T1 header match**: parsed 9 T1 schema field names `['period_id','完成窗起','完成窗迄','期類型','追蹤波次','主波次最晚到期','`T+90` 狀態','`T+180` 狀態','列入分母']` and the 9 T1 example header cells; ordered comparison is **EXACT_MATCH** (both raw and backtick-normalized).\n- **Register integrity**: 232 `SF-0057-0NN` rows; IDs unique; contiguous 001–232; **no ID added or removed**; no duplicates.\n- **Cutoff fact**: the new T1 note contains `2026-06-30`; `SF-0057-001` locator names that note and the fact label/value (`資料截點` / `2026-06-30`) is unchanged.\n- **Encoding**: R05 written as UTF-8 with **no BOM** and **LF-only** line endings, matching R01–R04.\n\nResult: **exact T1 header match = PASS; 232 IDs unchanged = PASS; R04 unchanged = PASS; no out-of-scope edits = PASS.**\n\n## Unresolved issues / boundaries\n\n1. This is a **bounded candidate repair**, not independent semantic PASS or formal acceptance. Exact-SHA semantic review of R05 remains deferred to a fresh reviewer context (R04's determinism audit failed only on this T1 schema defect).\n2. No cohort windows, dates, maturity classifications, rates, arithmetic, narrative, T2/T3/T8/T9 content, atomic rows, or other register rows were touched.\n3. Identity boundaries preserved: `0057` / `I13-E01` / checkbox `061` remain three distinct fields, clear of `062`/`063`; SAMPLE/SYNTHETIC and REAL boundaries intact; all facts remain `SYNTHETIC` or `PENDING_REAL_SOURCE`.\n4. Pre-existing promotion HOLDs declared in Blueprint §16 remain open (historical 142-registry readback pending; mapping stays a crosswalk-supported candidate). No new synthetic facts, no official-requirement or Blueprint-identity changes.\n5. No DOCX created, edited, or generated.\n\n## Output\n\n- `inputs/0057_UNIQUE_BLUEPRINT_R05.md` — SHA-256 **`efdfcfa52a4b7338ae7688e118f6b700cf1e6f4ee3ef423aa89ac3f253bc3f95`**\n- This receipt: `build/0057_R05_blueprint_repair_receipt.md`\n",
+              "path": "E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\build\\0057_R05_blueprint_repair_receipt.md"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "Created file successfully: _TTQS_ONE_REVIEW_SYNC_0036_R08_20261016/docs/ttqs-quality-20261016/quality-review/0057_R01/build/0057_R05_blueprint_repair_receipt.md"
+              }
+            ],
+            "metadata": {
+              "truncated": false
+            }
+          },
+          "time": {
+            "created": 1792252361801,
+            "ran": 1792252362157,
+            "completed": 1792252362184
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 395,
+        "output": 1786,
+        "reasoning": 147,
+        "cache": {
+          "read": 69120,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14a90bdd9001yToT2PwjRLZp8o",
+      "time": {
+        "created": 1792252362215,
+        "streamed": 1792252365368,
+        "completed": 1792252366204
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "Now final confirmation of outputs present and no DOCX. Let me list the directory to confirm only the two new files were created and no DOCX.\n\nAlso confirm no DOCX anywhere. Let me check for docx files under 0057_R01.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1792252364318,
+            "completed": 1792252365358
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_00_lf4vt42upw572ous1v2bv4nc",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "command": "$b=\"E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\"; \"New/changed files:\"; Get-ChildItem \"$b\\inputs\\0057_UNIQUE_BLUEPRINT_R05.md\",\"$b\\build\\0057_R05_blueprint_repair_receipt.md\" | Select-Object FullName,Length,LastWriteTime | Format-List; \"DOCX under 0057_R01:\"; (Get-ChildItem -Recurse -Include *.docx \"$b\" | Measure-Object).Count"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "New/changed files:\r\n\r\nFullName      : E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\inpu\r\n                ts\\0057_UNIQUE_BLUEPRINT_R05.md\r\nLength        : 125494\r\nLastWriteTime : 2026/10/17 �U�� 11:51:22\r\n\r\nFullName      : E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0057_R01\\buil\r\n                d\\0057_R05_blueprint_repair_receipt.md\r\nLength        : 5176\r\nLastWriteTime : 2026/10/17 �U�� 11:52:44\r\n\r\nDOCX under 0057_R01:\r\n0\r\n"
+              }
+            ],
+            "metadata": {
+              "status": "completed",
+              "truncated": false,
+              "exit": 0
+            }
+          },
+          "time": {
+            "created": 1792252365305,
+            "ran": 1792252365364,
+            "completed": 1792252366200
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 2012,
+        "output": 180,
+        "reasoning": 51,
+        "cache": {
+          "read": 69504,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14a90cd9200108DFn4eYCoubtC",
+      "time": {
+        "created": 1792252366238,
+        "streamed": 1792252369930,
+        "completed": 1792252370684
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "Done. Let me provide the final summary report. Also mention which outputs were created, the SHA, checks, unresolved issues.\n\nAlso I created a temp verification script in temp dir — that's outside the deliverable scope, acceptable (temp allowed). Maybe clean it up? It's in temp, approved. I'll leave it, or remove it. The task says \"No unrelated deliverables.\" A temp script isn't a deliverable in the repo, but to be safe I can remove it. Let me remove it.",
+          "state": {
+            "reasoningField": "reasoning_content"
+          },
+          "time": {
+            "created": 1792252369073,
+            "completed": 1792252369924
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_00_2t29d80t8gnf15v093gs4421",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "command": "Remove-Item \"C:\\Users\\J\\AppData\\Local\\Temp\\opencode\\verify_r05.py\" -Force; \"cleaned\""
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "cleaned\r\n"
+              }
+            ],
+            "metadata": {
+              "status": "completed",
+              "truncated": false,
+              "exit": 0
+            }
+          },
+          "time": {
+            "created": 1792252369906,
+            "ran": 1792252369928,
+            "completed": 1792252370681
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 557,
+        "output": 68,
+        "reasoning": 104,
+        "cache": {
+          "read": 71424,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14a90df0c001WDKHsZ3Or5Utaf",
+      "time": {
+        "created": 1792252370715,
+        "streamed": 1792252381010,
+        "completed": 1792252381013
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Done. Two files created, nothing else touched.\n\n## Input verification (before any write)\n- **Source R04 SHA** = `af88b80542585e85e2d25e8b2011b8f1770b6aa049b7f8de9e067ac8a9af4552` → **matches the required lock**. Proceeded only after confirming this.\n- Patch R05 SHA = `11ca22101745f25fae15de5359b34605b8aebb6c617ae9661cf24b510df384be` (matches declared).\n- R04 audit SHA = `de14999dbdbbe18db98a0d0f31dafd68774b8a81e4a685bcbe1550aa6509cb24`.\n\n## Outputs created\n| File | SHA-256 |\n|---|---|\n| `inputs/0057_UNIQUE_BLUEPRINT_R05.md` | `efdfcfa52a4b7338ae7688e118f6b700cf1e6f4ee3ef423aa89ac3f253bc3f95` |\n| `build/0057_R05_blueprint_repair_receipt.md` | (build receipt) |\n\n## Repair applied (only the enumerated items)\n1. Removed `資料截點` from the T1 column list.\n2. Added `追蹤波次` with its existing displayed value `30/60/90/180（主波次 T+90）`.\n3. Relabeled to exact example names: `主波次最晚到期` and `列入分母`.\n4. Added one T1 table note stating the shared cutoff `2026-06-30` (no new column, no duplicate synthetic value; existing `P3-Q2` row and prior notes intact).\n5. Updated `SF-0057-001` locator to the actual T1 note `T1 表註（共同資料截點 = 2026-06-30）`, retaining all valid §5.1/§8.3 locators.\n\nNet: **+2 lines** (blank + note); schema still 9 rows.\n\n## Independent checks (all PASS)\n- **Exact T1 header match**: schema field names and T1 example header — ordered comparison `EXACT_MATCH` (raw and normalized).\n- **232 IDs unchanged**: 232 `SF-0057-0NN` rows, unique, contiguous 001–232, no adds/removes, no duplicates.\n- **R04 unchanged**: re-hashed after write = `af88b805…af4552`.\n- **R01–R03 byte-for-byte preserved**: R01 `da3396b9…`, R02 `3d5e778b…`, R03 `8f3b404c…effb4` (R03 matches the audit's quoted SHA).\n- **No out-of-scope edits**: unified diff shows exactly 3 hunks (schema block, note insert, SF-001 row).\n- **Cutoff fact**: note displays `2026-06-30`; SF-001 points to it.\n- **Encoding**: UTF-8, no BOM, LF-only (matches R01–R04).\n- **No DOCX** anywhere under `0057_R01` (0 files).\n\n## Unresolved / scope\n- This is a **bounded candidate repair**, not independent PASS or formal acceptance; exact-SHA semantic review of R05 is deferred to a fresh reviewer.\n- Blueprint §16 promotion HOLDs remain open; all facts stay `SYNTHETIC`/`PENDING_REAL_SOURCE`; identity boundaries `0057`/`I13-E01`/`061` preserved. No other deliverables produced."
+        }
+      ],
+      "finish": "stop",
+      "rawFinish": "stop",
+      "cost": 0,
+      "tokens": {
+        "input": 68073,
+        "output": 811,
+        "reasoning": 0,
+        "cache": {
+          "read": 4096,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14a91075d001GE266ZgC1U4APq",
+      "time": {
+        "created": 1792252381021
+      },
+      "type": "idle",
+      "outcome": "succeeded"
+    }
+  ]
+}

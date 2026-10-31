@@ -1,0 +1,176 @@
+{
+  "receipt_id": "TTQS-0110-I18-E19-R07-R11-DETERMINISTIC-MAPPING-MATH-VALIDATION",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0110",
+  "requirement_id": "I18-E19",
+  "official_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+  "validated_at_local": "2026-10-23T22:21:52.810914+08:00",
+  "source_github_head": "f696303aa2cb937eb7ed3131275504e7fdb511f3",
+  "source_commit_for_original_source_lock": "db0cd977151dd8623ca6055acdc55dd9c852aa08",
+  "current_official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "source_packet_sha256": "e3db8f4ed82b21de4dc8cfb5886c4387c123d49a0465356354a18a9be39a8d38",
+  "unique_blueprint_sha256": "81ec1fc96c9d48fa2a088fbe32ecf8bc31abd88a3d8945ba22585226440a8796",
+  "candidate_path": "candidate/0110_I18-E19_完整問卷暨行動計畫工具_R07.docx",
+  "candidate_sha256": "9a306bf5712437ee578867b745e7d0811959decaa862ed540a82e7e8553bd3c2",
+  "candidate_bytes": 70594,
+  "local_mapping_source_sha256": "a8cc0514d19e2bfb564439fa7a0088b2f2866877879a0f283c8d93bf69603894",
+  "mapped_item_count": 14,
+  "mapped_item_ids": [
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "L01",
+    "L02",
+    "L03",
+    "L04",
+    "L05",
+    "L06",
+    "L07",
+    "L08",
+    "L09"
+  ],
+  "candidate_table_sequence_number": 7,
+  "candidate_table_count": 37,
+  "table_header": [
+    "編號",
+    "觀察焦點",
+    "分析構面",
+    "回答尺度與使用規則"
+  ],
+  "candidate_item_rows": [
+    {
+      "item_id": "C03",
+      "construct": "服務體驗變化",
+      "scale_rule": "由指定期間內直接觀察者作答"
+    },
+    {
+      "item_id": "C04",
+      "construct": "資料物資完整正確變化",
+      "scale_rule": "改用前後比較，不用滿意度錨點"
+    },
+    {
+      "item_id": "C05",
+      "construct": "服務連續性變化",
+      "scale_rule": "明列觀察期間及比較基準"
+    },
+    {
+      "item_id": "C06",
+      "construct": "應變回應時間變化",
+      "scale_rule": "改為可觀察的比較題，不用同意度錨點"
+    },
+    {
+      "item_id": "C07",
+      "construct": "整體績效變化",
+      "scale_rule": "單題報告；不與 C03–C06 合成分數"
+    },
+    {
+      "item_id": "L01",
+      "construct": "操作指引理解",
+      "scale_rule": "同意尺度；單題呈現"
+    },
+    {
+      "item_id": "L02",
+      "construct": "自我效能感知（非組織績效）",
+      "scale_rule": "變化尺度；題幹須寫明比較基準"
+    },
+    {
+      "item_id": "L03",
+      "construct": "查核步驟執行",
+      "scale_rule": "同意尺度；單題呈現"
+    },
+    {
+      "item_id": "L04",
+      "construct": "實際使用頻率",
+      "scale_rule": "專用頻率代碼；不作Likert平均或有利率"
+    },
+    {
+      "item_id": "L05",
+      "construct": "情境處置能力",
+      "scale_rule": "同意尺度；單題呈現"
+    },
+    {
+      "item_id": "L06",
+      "construct": "交接執行能力",
+      "scale_rule": "同意尺度；單題呈現"
+    },
+    {
+      "item_id": "L07",
+      "construct": "資料完整度變化",
+      "scale_rule": "變化尺度；與可追溯操作紀錄分開呈現"
+    },
+    {
+      "item_id": "L08",
+      "construct": "交接流程變化",
+      "scale_rule": "變化尺度；不與資料完整度平均"
+    },
+    {
+      "item_id": "L09",
+      "construct": "協作變化",
+      "scale_rule": "改為明確、可觀察的比較題；使用變化尺度"
+    }
+  ],
+  "four_historical_label_deltas": [
+    {
+      "item_id": "L02",
+      "actual_docx_construct": "自我效能感知（非組織績效）",
+      "matches_current_mapping_label": true
+    },
+    {
+      "item_id": "L08",
+      "actual_docx_construct": "交接流程變化",
+      "matches_current_mapping_label": true
+    },
+    {
+      "item_id": "C04",
+      "actual_docx_construct": "資料物資完整正確變化",
+      "matches_current_mapping_label": true
+    },
+    {
+      "item_id": "C07",
+      "actual_docx_construct": "整體績效變化",
+      "matches_current_mapping_label": true
+    }
+  ],
+  "all_14_item_checks_bound_to_R07": true,
+  "case_id": "SYN-0110-CASE-01",
+  "case_status": "SAMPLE/SYNTHETIC ONLY",
+  "arithmetic_recomputed": {
+    "baseline": {
+      "numerator": 6,
+      "denominator": 8,
+      "percent": 75.0
+    },
+    "D0_plus_30": {
+      "numerator": 7,
+      "denominator": 8,
+      "percent": 87.5
+    },
+    "change_percentage_points": 12.5,
+    "target_percent": 90.0,
+    "target_met_at_D0_plus_30": false,
+    "correct_sample_decision": "REVISE"
+  },
+  "direct_docx_token_presence": {
+    "case_id": true,
+    "baseline_fraction": true,
+    "baseline_pct_text": true,
+    "post_fraction": true,
+    "post_pct_text": true,
+    "change_pct_points_text": true,
+    "target_pct_text": true,
+    "decision_text": true,
+    "sample_label": true,
+    "synthetic_label": true
+  },
+  "existing_exact_sha_reviews_and_visual_receipts": {
+    "technical_sha256": "43cfbc116adda9abc38ed9b26a130dcda54ecfce273a534e04a69fe92935cfbf",
+    "visual_sha256": "29ad9676fb91f2a344d17857b521c96e6ee6d297c6fefdac65b8cdbbf6f930c8",
+    "semantic_sha256": "5e2387629c39e137a0c68e0bc6fd64bf5bd643fe70902aa18866c1dbee70ee56",
+    "semantic_verdict": "PASS_CONTENT_TEXT_ONLY",
+    "visual_scope": "26 Word-native pages per existing exact-SHA visual receipt"
+  },
+  "result": "PASS_DETERMINISTIC_MAPPING_AND_ARITHMETIC_ONLY",
+  "scope_limit": "Direct OpenXML check of the exact DOCX, 14 item rows, four revised labels and SAMPLE arithmetic. This receipt is not an independent semantic review, visual review, REAL evidence, or formal acceptance."
+}

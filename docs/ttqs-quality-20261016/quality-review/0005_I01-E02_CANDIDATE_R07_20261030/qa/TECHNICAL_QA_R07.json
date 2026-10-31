@@ -1,0 +1,151 @@
+{
+  "doc_id": "0005",
+  "requirement_id": "I01-E02",
+  "revision": "R07",
+  "candidate_sha256": "a36c501893bcb4d2dadaf0adfa7d8638df5e426650a8876182a8f83aebfa1a7c",
+  "observed_at_tpe": "2026-10-30T06:01:26.163564+08:00",
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "docx_zip_integrity",
+      "status": "PASS",
+      "detail": "bad_member=None"
+    },
+    {
+      "check": "register_43_unique_facts",
+      "status": "PASS",
+      "detail": "rows=43"
+    },
+    {
+      "check": "register_all_sample",
+      "status": "PASS",
+      "detail": "all 43 status rows"
+    },
+    {
+      "check": "register_delta_scoped",
+      "status": "PASS",
+      "detail": "['SYN-0005-004', 'SYN-0005-035', 'SYN-0005-041']"
+    },
+    {
+      "check": "q1_label",
+      "status": "PASS",
+      "detail": "SYN-0005-004 exact"
+    },
+    {
+      "check": "threshold_limit",
+      "status": "PASS",
+      "detail": "SYN-0005-035 explicitly illustrative"
+    },
+    {
+      "check": "group_label",
+      "status": "PASS",
+      "detail": "SYN-0005-041"
+    },
+    {
+      "check": "flow_arithmetic",
+      "status": "PASS",
+      "detail": "5=1+4; 4=2+1+1; 2=1+1; 3=2+1"
+    },
+    {
+      "check": "metric_arithmetic",
+      "status": "PASS",
+      "detail": "['4 ÷ 5＝80.0%', '2 ÷ 4＝50.0%', '1 ÷ 2＝50.0%', '1 ÷ 4＝25.0%', '4 ÷ 1＝4.0／5', '1 ÷ 1＝100.0%', '2 ÷ 1＝2.0／5']"
+    },
+    {
+      "check": "delta_arithmetic",
+      "status": "PASS",
+      "detail": "4.0-2.0=2.0"
+    },
+    {
+      "check": "register_table_count",
+      "status": "PASS",
+      "detail": "rows=44"
+    },
+    {
+      "check": "register_docx_csv_match",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "check": "crosswalk_serial",
+      "status": "PASS",
+      "detail": "explicitly project only"
+    },
+    {
+      "check": "sample_period",
+      "status": "PASS",
+      "detail": "synthetic batch period"
+    },
+    {
+      "check": "u005_hold",
+      "status": "PASS",
+      "detail": "unrecomputable criterion disclosed"
+    },
+    {
+      "check": "dictionary",
+      "status": "PASS",
+      "detail": "8 indicators plus header"
+    },
+    {
+      "check": "response_statuses",
+      "status": "PASS",
+      "detail": "codes and no imputation"
+    },
+    {
+      "check": "cross_source_partial",
+      "status": "PASS",
+      "detail": "Q3 source limitation disclosed"
+    },
+    {
+      "check": "sample_real_boundary",
+      "status": "PASS",
+      "detail": "no real acceptance claim"
+    },
+    {
+      "check": "no_stale_label",
+      "status": "PASS",
+      "detail": "stale label absent"
+    },
+    {
+      "check": "body_direct_font_floor",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "check": "table_direct_font_floor",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "check": "manifest_docx_hash",
+      "status": "PASS",
+      "detail": "a36c501893bcb4d2dadaf0adfa7d8638df5e426650a8876182a8f83aebfa1a7c vs a36c501893bcb4d2dadaf0adfa7d8638df5e426650a8876182a8f83aebfa1a7c"
+    },
+    {
+      "check": "manifest_register_hash",
+      "status": "PASS",
+      "detail": "e9598f6ffac5cf89d4ad834b49aaf6a55f455044918f6750622c8a6f0d489ca6 vs e9598f6ffac5cf89d4ad834b49aaf6a55f455044918f6750622c8a6f0d489ca6"
+    },
+    {
+      "check": "manifest_packet_hash",
+      "status": "PASS",
+      "detail": "c8307b7f9af5e63034123a66af2e14bcfe0b06ce71d0c601c85efd663b995b12 vs c8307b7f9af5e63034123a66af2e14bcfe0b06ce71d0c601c85efd663b995b12"
+    },
+    {
+      "check": "packet_embedded_docx_hash",
+      "status": "PASS",
+      "detail": "a36c501893bcb4d2dadaf0adfa7d8638df5e426650a8876182a8f83aebfa1a7c"
+    },
+    {
+      "check": "packet_embedded_register_hash",
+      "status": "PASS",
+      "detail": "e9598f6ffac5cf89d4ad834b49aaf6a55f455044918f6750622c8a6f0d489ca6"
+    },
+    {
+      "check": "parent_unchanged",
+      "status": "PASS",
+      "detail": "b6ae9cd46a2bae5dd07a55f2a453762bb8ac33c7dd4dc1bf93aea3420c06b9c7"
+    }
+  ],
+  "scope": "deterministic integrity, source mapping, 43-row SAMPLE register, arithmetic, metric dictionary, Q1 parity, U005 HOLD, response-code boundaries, and direct font-size floor; excludes Word render/visual, independent semantic, REAL, and formal acceptance"
+}

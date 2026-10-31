@@ -1,0 +1,43 @@
+{
+  "schema": "TTQS_ONE_0142_R01_BASELINE_BYTES_RECONCILIATION_V1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0142-LINEAGE-RECONCILIATION-20261029",
+  "doc_id": "0142",
+  "requirement_id": "I19-E32",
+  "official_checkbox_index": 156,
+  "observed_at": "2026-10-29T13:35:28+08:00",
+  "historical_r12_observation": "2026-10-28 R12 lineage inventory said R01 original bytes not found in searched source tree.",
+  "recovered_r01_file": {
+    "relative_path": "WORK/CANDIDATES/0142__組織近三年營業額與收入趨勢核對報告.docx",
+    "bytes": 44970,
+    "expected_historical_sha256": "59f9b500eafd0b283a6df898d337e888da37cb6bcfc98cb180a6fd452b8034a6",
+    "recomputed_sha256": "59f9b500eafd0b283a6df898d337e888da37cb6bcfc98cb180a6fd452b8034a6",
+    "sha256_match": true,
+    "filesystem_mtime_observed_not_build_date": "2026-10-04T04:31:08+08:00",
+    "recorded_build_date": "UNKNOWN",
+    "content_classification": "Historical SAMPLE/SYNTHETIC; not effective, per source packet tied to this exact SHA."
+  },
+  "current_r08_candidate": {
+    "sha256_before": "7efc848ed18decf665c423c03d4784e681a5d911ae5185885f614b391d92cc78",
+    "sha256_after": "7efc848ed18decf665c423c03d4784e681a5d911ae5185885f614b391d92cc78",
+    "bytes": 53207,
+    "docx_bytes_changed": false,
+    "technical_qa": "Existing PASS receipt reused; exact candidate SHA unchanged.",
+    "visual_qa": "Existing Word-native visual QA PASS 14/14 reused; exact candidate SHA unchanged.",
+    "independent_semantic_review": "Existing OpenCode v2 R02 PASS_TEXT_ONLY_EXACT_SHA reused; exact candidate SHA unchanged.",
+    "review_repeated": false
+  },
+  "acceptance_boundary": {
+    "candidate_status": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN/HOLD",
+    "official_score": "NOT_ASSIGNED",
+    "historical_build_date": "UNKNOWN"
+  },
+  "prior_evidence": {
+    "source_packet_sha256": "e3e8b3a8ee1effe758608fee183440add4f37381988c5e352912b1a3d55c9e49",
+    "prior_lineage_json_sha256": "c7cb1888f72aeee30b22d84362aa268c95a2ef06d70de244bf05903d1137a682",
+    "prior_lineage_annex_sha256": "ef44a720a9857d6455c76a25496bbc4a6fe82eb2b634bc955f8bc28c94bf435c",
+    "prior_status_json_sha256": "8258cf3b0f359503069d3bd69ce1393fc50bfdc5c174943191dfbb3700078db4"
+  }
+}

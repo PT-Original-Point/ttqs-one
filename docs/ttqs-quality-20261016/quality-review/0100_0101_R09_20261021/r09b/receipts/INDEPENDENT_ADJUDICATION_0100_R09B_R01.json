@@ -1,0 +1,78 @@
+{
+  "receipt_id": "TTQS-0100-I18-E08-R09B-INDEPENDENT-SEMANTIC-ADJUDICATION-R01",
+  "generated_local": "2026-10-26T06:22:30.184191+08:00",
+  "doc_id": "0100",
+  "official_requirement_id": "I18-E08",
+  "project_internal_index": 109,
+  "official_printed_checkbox_serial": "UNKNOWN",
+  "candidate_state": "CANDIDATE",
+  "candidate_docx_sha256": "0262d68826181a4b5f6209c3422a2d5c61a0b9820790c4e43a2e483b94de884c",
+  "candidate_bytes": 58934,
+  "body_extraction_sha256": "0c3c7370db89e529d7fd963f69eedaae2701956fea0c65956f7432066f71734e",
+  "base_candidate_sha256": "debd41e7ca1b18b88cad37db118c5b3474df411b3e2d1c87a8351d456245e0b2",
+  "base_semantic_result": "PASS_SEMANTIC_ONLY for baseline exact SHA only; not transferred",
+  "independent_reviewer": {
+    "route": "Antigravity CLI",
+    "work_id": "TTQS-0100-I18-E08-R09B-DELTA-SEMANTIC-REVIEW-W2-R01",
+    "cli_version": "1.4.7 (agy.exe --version, local)",
+    "requested_model": "gemini-3.8-flash-high",
+    "cli_init_model_reported": "gemini-3.8-flash-high",
+    "actual_backend_model": "UNKNOWN",
+    "no_fallback_event_observed": true,
+    "terminal_status": "SUCCESS",
+    "exit_code": 0,
+    "conversation_id": "80fbd724-e5d7-4210-9e6f-a0d0781e3541",
+    "tool_steps": [],
+    "computer_use_or_browser_tools_called": false,
+    "usage": {
+      "input_tokens": 16708,
+      "output_tokens": 4948,
+      "thinking_tokens": 4008,
+      "cache_read_tokens": 0,
+      "total_tokens": 21656
+    },
+    "prompt_sha256": "d40c592c7dc7fcd7349514a22c0590533dcaf5511c13e8e82eb59d4e7b1cce91",
+    "reviewer_response_sha256": "7835f9215e7db029cc555f3f4f538ed699ce76dd0e30b39f0535a6472cc03ab0",
+    "reviewer_response_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0100_0101_R08_SOURCE_BLUEPRINT_20261021\\candidate_R09b\\review\\W2_DELTA_R01\\AGY_RESPONSE_R01.txt"
+  },
+  "reviewer_verdict": "PASS",
+  "review_scope": "Exact R09b DOCX SHA delta review covering every changed paragraph and table row, findings F1-F4, consistency with the 0100/0101 handoff, and inherited baseline review for unchanged body. Reviewer did not inspect visual pages.",
+  "criteria": {
+    "F1": "PASS",
+    "F2": "PASS",
+    "F3": "PASS",
+    "F4": "PASS",
+    "no_new_material_contradiction": "PASS",
+    "sample_real_boundary": "PASS",
+    "scope_inheritance": "PASS"
+  },
+  "findings": [],
+  "local_adjudication": "PASS_SEMANTIC_DELTA_FOR_EXACT_SHA_WITH_BASELINE_INHERITANCE",
+  "local_basis": [
+    "Reviewer response JSON parsed and matched candidate SHA and body extraction SHA.",
+    "R09a baseline SHA equals the independently reviewed prior candidate SHA; current structured body diff identifies the targeted R09b edits.",
+    "F1-F4 all PASS in reviewer result; unchanged 80-cell synthetic matrix was independently checked against source packet by the local deterministic QA.",
+    "Technical QA exact-SHA receipt and separate 16-page visual receipt both bind to the current DOCX SHA."
+  ],
+  "technical_qa": {
+    "result": "TECHNICAL_PASS_FOR_EXACT_SHA; VISUAL_REVIEW_RECORDED_SEPARATELY; CANDIDATE_NOT_FORMALLY_ACCEPTED",
+    "receipt_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0100_0101_R08_SOURCE_BLUEPRINT_20261021\\candidate_R09b\\TECHNICAL_QA_0100_R09B.json",
+    "receipt_sha256": "bfa88bde02ca984194273cecc33164f5cdb806c249aac5f7d17c3d8b086db1f6"
+  },
+  "visual_qa": {
+    "result": "VISUAL_PASS_WITH_NONBLOCKING_WHITESPACE_FOR_EXACT_SHA; CANDIDATE_NOT_FORMALLY_ACCEPTED",
+    "receipt_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0100_0101_R08_SOURCE_BLUEPRINT_20261021\\candidate_R09b\\VISUAL_QA_0100_R09B.json",
+    "receipt_sha256": "5a20b1604f8857594244c82b01838454b421685edb99a5fb1618d05d914dea9b",
+    "scope": "1-16 individually at rendered page size; current layout2 set",
+    "nonblocking_observation": "Page 13 has substantial white space before section 9 on page 14; readable and no clipping. No further layout edit made."
+  },
+  "real_evidence": "UNKNOWN/HOLD; no real learner records provided",
+  "formal_acceptance": "NOT_GRANTED",
+  "promotion": "NOT_PROMOTED",
+  "limitations": [
+    "Backend-serving model identity remains UNKNOWN despite the CLI init reporting the requested slug.",
+    "Semantic reviewer performed text-only delta review; visual inspection is separate.",
+    "Prior semantic PASS applies only to baseline SHA, with inheritance limited to unchanged body; this receipt adjudicates the R09b delta.",
+    "No physical print test or association acceptance."
+  ]
+}

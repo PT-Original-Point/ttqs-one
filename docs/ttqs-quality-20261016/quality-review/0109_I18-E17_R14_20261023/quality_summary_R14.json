@@ -1,0 +1,45 @@
+{
+  "schema": "ttqs.document_quality_summary_public.v1",
+  "doc_id": "0109",
+  "official_requirement_id": "I18-E17",
+  "candidate_state": "CANDIDATE",
+  "candidate_filename": "0109_I18-E17_社群網站知識討論區使用頻率分析報告_R14.docx",
+  "candidate_sha256": "6f846e1737ff0d9b8baf40f459071f9258d51c267935d95222a89e7a05804a63",
+  "technical_status": "PASS",
+  "technical_receipt_sha256": "da069833b781ee9c5a4ad5cbcec6c9593794360036ae603c0313026461e9f411",
+  "technical_supplement_status": "PASS",
+  "technical_supplement_sha256": "16fb2b4def76f72861da64ca0f169bc520eb985fa9fd20e3964e90a75541eaae",
+  "visual_status": "PASS",
+  "visual_receipt_sha256": "34cde4940bc22a800d4c22bd8e55dc8b135ad0d88d24ee4c8f388d2f5e51ed70",
+  "semantic_status": "PASS",
+  "reviewer_model": "opencode/deepseek-v4.1-flash-free#default",
+  "reviewer_response_sha256": "eb1fcb9dd72a9c4d73fe13c50bc620217cc2a6d953e84f198ee52b3971397856",
+  "review_packet_sha256": "5a80741cbc2a4e2c666c0bc2f62f6e601bd33e2694a4130eeca575e97cc48de1",
+  "formal_acceptance": "NOT_GRANTED",
+  "blocking_findings": 0,
+  "nonblocking_notes": [
+    "Per-row legal basis remains an UNKNOWN/HOLD prerequisite until an authorized REAL basis exists.",
+    "O-05 appears in the fixed-source, replacement and decision tables; it is not required in unrelated forms.",
+    "No blank event-log collection form; the sample analysis and evidence replacement register are present."
+  ],
+  "real_evidence": "UNKNOWN; synthetic sample only",
+  "crosswalk": {
+    "source_commit": "93b13adc14470817b13e79aef39410f4885def8a",
+    "source_path": "docs/ttqs-quality-20261016/quality-review/0098_R08_20261021/inputs/official_129_to_142_crosswalk.csv",
+    "git_blob_sha": "1ac4a8419088d947947031b758e29c35a3606514",
+    "verified_row": "I18-E17,1,0,0109,社群網站知識討論區，人員使用網站頻率高_分析報告",
+    "verified_row_utf8_sha256": "f8d44f7ec65ec7d41a6dfa12a3b588dc8a091173721c9089113441393d25ebae",
+    "role": "PRIMARY_OFFICIAL_CROSSWALK"
+  },
+  "negative_neighbor_crosswalk": {
+    "source_commit": "93b13adc14470817b13e79aef39410f4885def8a",
+    "source_path": "docs/ttqs-quality-20261016/quality-review/0098_R08_20261021/inputs/official_129_to_142_crosswalk.csv",
+    "git_blob_sha": "1ac4a8419088d947947031b758e29c35a3606514",
+    "verified_row": "I18-E08,2,1,0100 | 0101,學員培訓前後自我評量表 | 能力提升雷達分析報告",
+    "verified_row_utf8_sha256": "fff3f19500fdc444d1d4712fefa6faecdfe2a00f82546609d283b2ae15598f4c",
+    "role": "NEGATIVE_NEIGHBOR_ONLY",
+    "neighbor_requirement_id": "I18-E08",
+    "neighbor_doc_ids": "0100 | 0101"
+  },
+  "source_provenance_status": "PRIMARY_I18-E17_TO_0109_VERIFIED; I18-E08_RETAINED_AS_NEGATIVE_NEIGHBOR_ONLY"
+}

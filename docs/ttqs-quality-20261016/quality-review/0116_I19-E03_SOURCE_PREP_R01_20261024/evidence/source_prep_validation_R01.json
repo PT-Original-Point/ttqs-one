@@ -1,0 +1,40 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0116",
+  "requirement_id": "I19-E03",
+  "source_prep": "R01",
+  "status": "PASS_SOURCE_PREP_VALIDATION_ONLY",
+  "synthetic_rows": 8,
+  "responded": 6,
+  "nonresponse_unknown": 2,
+  "self_report_employed": 4,
+  "response_rate": {
+    "numerator": 6,
+    "denominator": 8,
+    "percent": 75.0
+  },
+  "respondent_self_report_ratio": {
+    "numerator": 4,
+    "denominator": 6,
+    "percent": 66.7
+  },
+  "documentary_evidence_provided_in_synthetic_case": {
+    "numerator": 0,
+    "denominator": 4,
+    "percent": 0.0
+  },
+  "real_evidence": "UNKNOWN_NOT_PROVIDED",
+  "official_printed_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+  "dataset_sha256": "e792772ab554f64e349ac855d0ae32afc0be0519441ed613eac1c8cd5f3397f6",
+  "register_sha256": "6d3071d7b9ba8091ccd0fbed1af7bb38ea5c85467d2f8b70a30272dfac6d4650",
+  "packet_sha256": "3430b1a95755ad773e12380cf1c0b599dbf4b057d1a0f34f47b7dee51fa08c9d",
+  "blueprint_sha256": "6932127686187f201bc41315fb2e6ae98003767053f7dad2d4061e6d46428263",
+  "assertions": [
+    "eight unique synthetic IDs",
+    "6/8 response rate",
+    "4/6 respondents self-report employed/self-employed",
+    "0/4 sample claims have evidence provided",
+    "two nonresponders remain UNKNOWN",
+    "consent flags are explicitly synthetic"
+  ]
+}

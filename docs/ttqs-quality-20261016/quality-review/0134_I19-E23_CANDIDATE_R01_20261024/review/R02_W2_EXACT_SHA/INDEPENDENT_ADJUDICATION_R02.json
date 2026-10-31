@@ -1,0 +1,70 @@
+{
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0134-I19-E23-R01-EXACT-SHA-INDEPENDENT-SEMANTIC-REVIEW-W2-R02",
+  "doc_id": "0134",
+  "requirement_id": "I19-E23",
+  "reviewer": "W2 Antigravity CLI (independent semantic reviewer)",
+  "adjudication": "VERIFIED_TEXT_SEMANTIC_PASS",
+  "candidate_status": "CANDIDATE_QA_RESULT; FORMAL_ACCEPTANCE_NOT_GRANTED",
+  "candidate_sha256": "a003ad1906194d1cb30a37a313f2ebd004cee129d6c231c6a3bef40b321cee08",
+  "remote_git_blob_sha1": "14a5fb7cca55e25fee2370c4d32a5749580954a2",
+  "local_git_blob_sha1": "14a5fb7cca55e25fee2370c4d32a5749580954a2",
+  "body_extraction_sha256": "1cb02f5d0a8db96605f1e2d29e50448a4874fe6ed8e3908853a362c1b73ad5f1",
+  "review_response_sha256": "86f40cf0d830767557bf0e9d3924968453b1c66630b064863abdb4da6fb2b509",
+  "dispatch_receipt_sha256": "5a4be529bada450d58e7841a44cebe420f13902ed83ea2b5fe921e5b4e9667ad",
+  "request_sha256": "92e03acc38272a8a6f074cd49af58b92a60b08ef84c37717c65f312282bf31f6",
+  "checks": {
+    "review_exact_doc_requirement_sha_binding": true,
+    "full_text_response_json_parse": true,
+    "cli_exit_zero_and_terminal_success": true,
+    "response_captured_and_hash_matches": true,
+    "candidate_unchanged_through_review": true,
+    "no_tool_steps_or_computer_use": true,
+    "actual_backend_model_identity": "UNKNOWN",
+    "requested_and_cli_reported_model": "gemini-3.8-flash-high",
+    "criteria_all_pass": true,
+    "findings_only_nonblocking_synthetic_boundary_note": true,
+    "technical_receipt_same_sha": true,
+    "independent_visual_receipt_same_sha": true,
+    "word_visual_scope": "20/20 page images inspected; PASS_WITH_NONBLOCKING_LAYOUT_NOTES",
+    "remote_docx_git_blob_matches_local_raw_file": true
+  },
+  "independently_recomputed_calculations": {
+    "members_2024": 48,
+    "members_2025": 54,
+    "member_growth_2024_pct": 14.3,
+    "member_growth_2025_pct": 12.5,
+    "fees_2023": 102000,
+    "fees_2024": 111000,
+    "fees_2025": 126000,
+    "fee_growth_2024_pct": 8.8,
+    "fee_growth_2025_pct": 13.5
+  },
+  "technical_receipt_math_crosscheck": "PASS; values agree with TECHNICAL_QA_0134_R01.json",
+  "source_bindings": {
+    "SOURCE_PACKET_0134_I19-E23_R01.md": {
+      "local_sha256": "e4bd32038a1f1e4993e79504b7871622226cc3a7d84f644856f62dfbef77b99e",
+      "remote_git_blob": "ca6d5ed175e8daaaf9467afff15520678058c34d"
+    },
+    "UNIQUE_BLUEPRINT_0134_I19-E23_R01.md": {
+      "local_sha256": "eb18f71a12fb89d030e38441070051a85c4705c723acb308a16c104a1294a149",
+      "remote_git_blob": "deeaa061dd6249a96211a9014c073514ed189316"
+    },
+    "OFFICIAL_SOURCE_PAGE8_TEXT.txt": {
+      "local_sha256": "3c232c1b570c1b2f329723db421905b262215579e4f88f8d57aecf0b5949995f",
+      "remote_git_blob": "2f71c607e59407e03dbd4f94354d70a55888d008"
+    },
+    "CROSSWALK_NEIGHBORS_0133_0134_0135.csv": {
+      "local_sha256": "828842277cb74b1fee9909d5d434983b2c063efa88680aa1a78af927f9e9fce4",
+      "remote_git_blob": "f5868311ca4a103e00943dc4003ffa89275529a2"
+    }
+  },
+  "scope_limitations": [
+    "Review is strictly restricted to text extraction from candidate markdown body (SHA-256: 1cb02f5d0a8db96605f1e2d29e50448a4874fe6ed8e3908853a362c1b73ad5f1); no visual, binary, DOCX layout, or typography inspection was conducted.",
+    "No verification of external physical ledgers, bank statements, or official membership records was performed; all underlying association data remains UNKNOWN/HOLD.",
+    "No formal acceptance, certification, or official TTQS approval is granted by this semantic evaluation."
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "adjudicated_local": "2026-10-26"
+}

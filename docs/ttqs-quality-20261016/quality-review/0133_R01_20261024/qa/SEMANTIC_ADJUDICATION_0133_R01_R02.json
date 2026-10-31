@@ -1,0 +1,40 @@
+{
+  "schema": "ttqs-one-semantic-adjudication/v1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS_ONE_0133_I19-E22_R01_SEMANTIC_REVIEW_R02",
+  "doc_id": "0133",
+  "requirement_id": "I19-E22",
+  "candidate_sha256": "25116afb8206e0828c8b3a4a763845a9c3e672a4cb49969a64a2a3737d87256b",
+  "candidate_git_blob_sha": "091ad8c37f364250c0b11222582d3b37bbb2ec0f",
+  "independent_review": "PASS_TEXT_ONLY_WITH_NONBLOCKING_FINDINGS",
+  "review_response_sha256": "437a43e31542249f093f9f68e8e8777d9e92939f75305fa74ace0bb2f4f62d1f",
+  "dispatch_receipt_sha256": "833c88ab2cf3f281a5b5efdd36885948c520acc19ba68ae992cb7d0d919b6690",
+  "reviewer": "OpenCode v2 CLI / opencode-glm-5.3-flash-free (native session metadata matches request)",
+  "scope": "Complete candidate text and supplied official/source/unique-blueprint context; no binary/image/layout reinspection; no real-world association validation.",
+  "review_checks": {
+    "official_requirement_and_genre": "PASS",
+    "negative_neighbor_separation_0132_0134": "PASS",
+    "operational_completeness": "PASS",
+    "sample_math": "PASS",
+    "person_time_definition": "PASS",
+    "sample_real_boundary": "PASS",
+    "title_blind_test": "PASS",
+    "identity_traceability": "PASS",
+    "layout_and_visual": "EXCLUDED; separate existing exact-SHA visual receipt applies"
+  },
+  "nonblocking_findings": [
+    "F1: cross-year REAL attribution should be aligned to a verified association rule before REAL use; current sample has no cross-year class and HOLD controls exist.",
+    "F2: field dictionary omits an explicit output-use column; purpose is inferable from procedure outputs.",
+    "F3: only four exception types have worked rows; remaining types are handled in definitions/SOP.",
+    "F4: official source edition/date is not restated; do not invent it, and keep the unknown/source-version limit explicit before REAL upgrade."
+  ],
+  "blocking_findings": [],
+  "technical_qa": "PASS; existing TECHNICAL_QA_0133_R01.json bound to same SHA",
+  "visual_qa": "PASS_SELF_INSPECTION_11_PAGES; existing VISUAL_QA_0133_R01.json bound to same SHA; independent reviewer did not inspect visual layout",
+  "new_docx_rebuild_required": false,
+  "candidate_sha_changed": false,
+  "candidate_status": "CANDIDATE",
+  "real_evidence": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED",
+  "adjudicated_local": "2026-10-26T14:06:10+08:00"
+}

@@ -1,0 +1,19 @@
+{
+  "work_id": "TTQS-0140-I19-E30-R11-QA-EXPECTATION-REPAIR",
+  "prior_qa_receipt_sha256": "b950c692634a161ed6024c94489cb4ad7a9c0a73a136986583bb566c801ddc82",
+  "prior_qa_status": "FAIL",
+  "failed_assertions": [
+    "targeted_learner_distribution",
+    "human_facing_status_cells"
+  ],
+  "cause": "Assertions expected R10 wording even though the independent reviewer required those phrases to change in R11",
+  "repair": "Assert the R11 literal replacement and the retained duty to obtain role-holder approval",
+  "candidate_sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d",
+  "candidate_unchanged": true,
+  "qa_script_sha256": "1321115cbb95f34ee1c6f6e4fbbcaa821343949e623afa5b4b33d87acd37578d",
+  "observed_at": "2026-10-25T13:26:30.5613798+08:00",
+  "recovered_qa_status": "PASS",
+  "final_qa_receipt_sha256": "bc3655dbe60bebfe4bc7dda65514808ae3ccb50cf85098e4f7fcb059ab5028d2",
+  "final_candidate_sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d",
+  "candidate_unchanged_after_assertion_repair": true
+}

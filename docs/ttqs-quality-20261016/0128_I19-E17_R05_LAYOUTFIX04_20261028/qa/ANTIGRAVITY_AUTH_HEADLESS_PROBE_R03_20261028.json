@@ -1,0 +1,69 @@
+{
+  "schema": "TTQS_ONE_ANTIGRAVITY_HEADLESS_AUTH_PROBE_R03",
+  "project_id": "TTQS_ONE",
+  "command": "RESTORE_ANTIGRAVITY_HEADLESS_AUTH_WITHOUT_RELOGIN",
+  "observed_at_local": "2026-10-28T22:59:32+08:00",
+  "prior_tui_evidence": {
+    "auth": "PASS_AT_SCREENSHOT_TIME",
+    "google_ai_pro": "CONFIRMED_AT_SCREENSHOT_TIME",
+    "cli_version_reported": "1.4.9",
+    "same_windows_user_reported": true,
+    "current_live_tui": "UNKNOWN"
+  },
+  "cli": {
+    "version": "1.4.9",
+    "path": "%LOCALAPPDATA%\\agy\\bin\\agy.exe",
+    "principal_matches_codex_process": true,
+    "exact_windows_identifier": "REDACTED_FROM_PUBLIC_RECEIPT"
+  },
+  "credential_access": {
+    "credential_target_present": true,
+    "secret_read_or_exported": false,
+    "cli_keyring_auth": "loaded unexpired token; ChainedAuth authenticated via keyring"
+  },
+  "argument_preflight": {
+    "exit_code": 2,
+    "model_request_sent": false,
+    "failure": "--print-timeout requires a duration unit; initial value 60 was corrected to 60s"
+  },
+  "actual_probe": {
+    "requested_model": "gemini-3.8-flash-high",
+    "prompt": "Reply with exactly AGY_HEADLESS_OK. Do not use tools.",
+    "mode": "plan",
+    "sandbox": true,
+    "timeout": "60s",
+    "exit_code": 0,
+    "stdout": "AGY_HEADLESS_OK",
+    "stderr": "EMPTY",
+    "stdout_sha256": "AD469F03757A9AC0FF6DAA4CDE3C4AFED963F91F7D2F7C3C8C50FE186BA61E84",
+    "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+    "started_local": "2026-10-28T22:59:20+08:00",
+    "ended_local": "2026-10-28T22:59:32+08:00",
+    "duration_seconds": 11.84,
+    "cli_log_sha256": "090427B23991CB02E47A2B4CF3109EC5FCE031AC2239EA2157145E0C09C579FE",
+    "local_receipt_sha256": "6C2CBE3F60E63C84C327CB461F55D00A9BB16858DF80C84AC49F4DCBEFC752A9"
+  },
+  "model_route": {
+    "startup_note": "Resolver initially defaulted to CCPA while unauthenticated and local model config lacked the requested ID. After keyring authentication/model-list fetch, logs resolved and propagated gemini-3.8-flash-high (Gemini 3.8 Flash High) before streamGenerateContent.",
+    "inference_time_fallback_observed": false,
+    "provider_attested_served_model": "UNKNOWN",
+    "model_response_available": true
+  },
+  "result": {
+    "headless_auth": "PASS_AT_TEST_TIME",
+    "current_persistent_auth": "NOT_GUARANTEED",
+    "historical_2026_10_28_21_39_root_cause": "UNKNOWN",
+    "finding": "Current run recovered auth silently from existing keyring; persistent login loss is not supported by this test."
+  },
+  "doc_0128": {
+    "candidate_sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
+    "visual_qa": "PASS_13_OF_13_EXACT_SHA",
+    "semantic_review": "PASS_TEXT_ONLY_EXACT_SHA already recorded on the same candidate",
+    "new_review_dispatch": "NOT_DISPATCHED_DUPLICATE_NOT_REQUIRED",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "secrets": {
+    "account_email_or_token_recorded": false,
+    "raw_cli_log_uploaded": false
+  }
+}

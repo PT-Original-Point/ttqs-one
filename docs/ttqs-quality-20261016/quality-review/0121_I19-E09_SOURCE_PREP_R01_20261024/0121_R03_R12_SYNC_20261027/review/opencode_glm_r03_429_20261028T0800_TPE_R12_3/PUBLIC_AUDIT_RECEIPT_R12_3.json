@@ -1,0 +1,148 @@
+{
+  "schema": "TTQS_ONE_R12_OPENCODE_REVIEW_ATTEMPT_PUBLIC_EVIDENCE_V1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0121-I19-E09-R03-W1-OPENCODE-GLM-EXACT-SHA-REVIEW-R12_3-20261028",
+  "doc_id": "0121",
+  "requirement_id": "I19-E09",
+  "candidate": {
+    "state": "CANDIDATE",
+    "sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+    "bytes": 72632,
+    "unchanged_before_after": true,
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "source_readback": {
+    "github_pr": 92,
+    "github_branch": "work/ttqs-one-document-quality-contract-20261016",
+    "source_pr_head": "3c42b6d4ce0c53f98c6dcfd0d657bed93f78d1c2",
+    "candidate_path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R03_20261027/candidate/0121_I19-E09_R03.docx",
+    "candidate_git_blob": "820d586734c62ddaad3905ba8b8ea74ede5c9813",
+    "remote_sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+    "exact_bytes_match": true
+  },
+  "dispatch": {
+    "requested_model": "opencode/glm-5.3-flash-free",
+    "session_selected_model": "glm-5.3-flash-free",
+    "session_provider_id": "opencode",
+    "upstream_serving_model": "UNKNOWN",
+    "actual_inference": "NOT_REACHED",
+    "cli_version": "2.1.4",
+    "runner_pid": 6404,
+    "worker_pid": 74468,
+    "session_id": "REDACTED_IN_PUBLIC_COPY",
+    "started_local": "2026-10-28T08:00:48.704116+08:00",
+    "finished_local": "2026-10-28T08:00:51.459617+08:00",
+    "exit_code": 1,
+    "duration_seconds": 2.75,
+    "fallback_allowed": false,
+    "computer_use": false,
+    "auto_approval": false,
+    "visible_window_opened": false
+  },
+  "result": {
+    "status": "BLOCKED_PROVIDER_FREE_LIMIT_HTTP_429_BEFORE_INFERENCE",
+    "http_status": 429,
+    "provider_error": "Free usage limit reached. Connect a provider or subscribe to OpenCode Go to keep going, or switch models.",
+    "tokens": {
+      "input": 0,
+      "output": 0,
+      "reasoning": 0,
+      "cache_read": 0,
+      "cache_write": 0
+    },
+    "reported_cost": 0,
+    "response": "NONE",
+    "retry_after_ms": 86349000.0,
+    "retry_eligible_at_local": "2026-10-29T08:00:00.2120000+08:00",
+    "raw_stdout_redacted": "{\"type\":\"error\",\"timestamp\":1793145651212,\"sessionID\":\"[REDACTED_SESSION_ID]\",\"error\":{\"type\":\"provider.free-limit\",\"message\":\"Free usage limit reached. Connect a provider or subscribe to OpenCode Go to keep going, or switch models.\",\"status\":429,\"response\":{\"body\":\"{\\\"type\\\":\\\"error\\\",\\\"error\\\":{\\\"type\\\":\\\"FreeUsageLimitError\\\",\\\"message\\\":\\\"Free usage limit reached. Free models work in OpenCode (https://opencode.ai); subscribe to OpenCode Go to keep going: https://opencode.ai/go\\\"}}\"},\"retryAfterMs\":86349000}}\r\n",
+    "stderr_empty": true,
+    "semantic_status": "UNVERIFIED_ROUTE_IDENTITY",
+    "candidate_rebuilt": false
+  },
+  "local_original_artifacts": {
+    "DISPATCH_START.json": {
+      "sha256": "39fc8c74a7ce15eb550af174f2f117cc82abe614c3839e409b09d96cc86a4767",
+      "bytes": 1220
+    },
+    "DISPATCH_TERMINAL.json": {
+      "sha256": "02a39d1be77778edfc87870a63c8ccb7db8923d175a7cb8f5a2251efde8a2075",
+      "bytes": 1248
+    },
+    "RAW_STDOUT.jsonl": {
+      "sha256": "00c690956fc6fdb4156048070c5988f7dbe99414902dbda986b7ec03bccc8395",
+      "bytes": 528
+    },
+    "RAW_STDERR.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "SESSION_EXPORT_SANITIZED.json": {
+      "sha256": "89d93ff33589f7cbcf228fedf91f234293af4ba40d8b02156f215f5659c19da6",
+      "bytes": 2976
+    },
+    "DISPATCH_PROMPT.txt": {
+      "sha256": "f4ead71381280ef8210f19c226425fa448ba42275d4e5d7f4e81184d23ae564e",
+      "bytes": 1223
+    },
+    "run_opencode_review_R12_3.py": {
+      "sha256": "8b1252040cce02fdf9fd0226eca6896a0eb35a0a6ca5a23ca0f468f5bf5e277a",
+      "bytes": 7459
+    },
+    "RUNNER_HOST_STDOUT.txt": {
+      "sha256": "d51e17f68c898d85b302b1c9519ac2a6b6263779898d3d7c84ae826b28119f25",
+      "bytes": 1179
+    },
+    "RUNNER_HOST_STDERR.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  },
+  "privacy": {
+    "session_id_redacted_from_public_copy": true,
+    "session_export_content_not_embedded": "Raw sanitized export remains local; its exact SHA-256 is listed above.",
+    "raw_sanitized_session_export": "RETAINED_LOCALLY; NOT PUBLISHED",
+    "local_session_export_sha256": "89d93ff33589f7cbcf228fedf91f234293af4ba40d8b02156f215f5659c19da6",
+    "redactions": [
+      "opaque session id removed from public terminal/status/stdout",
+      "per-message and project identifiers retained only in local sanitized session export",
+      "Windows user profile path removed from public CLI argv"
+    ]
+  },
+  "context": {
+    "user_report_sha256": "ff3ca9886e3a345d78be358b2883296b7e5454408d23bc940fee239ba826c900",
+    "user_report_cutoff": "2026-10-27 08:17 Asia/Taipei",
+    "interpretation": "Public service report is historical and has no account-level test; it does not override the direct local 429."
+  },
+  "public_payloads": [
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_SOURCE_PREP_R01_20261024/0121_R03_R12_SYNC_20261027/review/opencode_glm_r03_429_20261028T0800_TPE_R12_3/DISPATCH_PROMPT.txt",
+      "bytes": 1223,
+      "sha256": "f4ead71381280ef8210f19c226425fa448ba42275d4e5d7f4e81184d23ae564e"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_SOURCE_PREP_R01_20261024/0121_R03_R12_SYNC_20261027/review/opencode_glm_r03_429_20261028T0800_TPE_R12_3/DISPATCH_START.json",
+      "bytes": 1207,
+      "sha256": "3e1e06b8a608402ee0826d51b4752fa38c229a0d8714b7e323a438c10fef698e"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_SOURCE_PREP_R01_20261024/0121_R03_R12_SYNC_20261027/review/opencode_glm_r03_429_20261028T0800_TPE_R12_3/DISPATCH_TERMINAL.json",
+      "bytes": 1294,
+      "sha256": "779e5372e28acb1911cf405cb86e4d75ae43d9f780d100e63b8d4dad9bcd7ef4"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_SOURCE_PREP_R01_20261024/0121_R03_R12_SYNC_20261027/review/opencode_glm_r03_429_20261028T0800_TPE_R12_3/RAW_STDERR.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_SOURCE_PREP_R01_20261024/0121_R03_R12_SYNC_20261027/review/opencode_glm_r03_429_20261028T0800_TPE_R12_3/RAW_STDOUT_REDACTED.jsonl",
+      "bytes": 520,
+      "sha256": "88b3064375502c198cf12224798271e00f17b4a796e198613fb1363eb118a939"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_SOURCE_PREP_R01_20261024/0121_R03_R12_SYNC_20261027/candidate/R12_CURRENT_ROUTE_STATUS_R03_20261028.json",
+      "bytes": 4294,
+      "sha256": "6920092070424ff87232ff6b9aa0340af884974f2174798285d74cc2143af022"
+    }
+  ]
+}

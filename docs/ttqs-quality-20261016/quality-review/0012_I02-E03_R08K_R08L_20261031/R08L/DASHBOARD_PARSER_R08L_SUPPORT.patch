@@ -1,0 +1,88 @@
+--- a/dashboard_server.py
++++ b/dashboard_server.py
+@@ -634,7 +634,85 @@
+         return False
+ 
+ 
++def _ttqs_0012_r08l_technical_pass(obj, receipt_path, expected_sha):
++    """Validate the source-bound R08L delta receipt and its R08K font baseline."""
++    try:
++        if (receipt_path is None or str(obj.get("candidate_sha256", "")).lower() != str(expected_sha or "").lower() or
++                obj.get("technical_verdict") != "PASS" or obj.get("python_docx_open") != "PASS" or
++                obj.get("openxml_zip_crc") != "PASS" or obj.get("exact_locator_fix") != "PASS" or
++                int(obj.get("table_count", 0)) != 18 or
++                obj.get("package_member_diff") != ["word/document.xml"] or
++                obj.get("all_other_package_parts_identical") is not True or
++                "single exact text substitution" not in str(obj.get("document_xml_diff", "")).lower() or
++                "unchanged_from_r08k" not in str(obj.get("font_properties", "")).lower() or
++                not str(obj.get("numerics", "")).upper().startswith("UNCHANGED")):
++            return False
++        parent_sha = str(obj.get("parent_sha256", "")).lower()
++        for key in ("source_pdf_sha256", "blueprint_file_sha256", "blueprint_row_sha256"):
++            if not re.fullmatch(r"[0-9a-f]{64}", str(obj.get(key, "")).lower()):
++                return False
++        if not re.fullmatch(r"[0-9a-f]{64}", parent_sha):
++            return False
++        qa_root = receipt_path.parent.parent
++        for baseline_path in qa_root.rglob("TECHNICAL_QA_R08K.json"):
++            baseline = read_json(baseline_path)
++            if (str(baseline.get("candidate_sha256", "")).lower() == parent_sha and
++                    baseline.get("verdict") == "PASS" and
++                    float(baseline.get("body_min_font_pt", 0)) >= 10.5 and
++                    float(baseline.get("table_min_font_pt", 0)) >= 9.5):
++                return True
++        return False
++    except (OSError, TypeError, ValueError, AttributeError):
++        return False
++
++
++def _ttqs_0012_r08l_visual_pass(obj, receipt_path, expected_sha):
++    """Validate the Word-rendered R08L page delta against the exact R08K baseline."""
++    try:
++        if (receipt_path is None or str(obj.get("candidate_sha256", "")).lower() != str(expected_sha or "").lower() or
++                obj.get("visual_verdict") != "PASS" or obj.get("all_other_pages_pixel_identical") is not True or
++                "microsoft word" not in str(obj.get("render_engine", "")).lower()):
++            return False
++        page_count = int(obj.get("page_count", 0))
++        parent_sha = str(obj.get("parent_candidate_sha256", "")).lower()
++        if page_count != 29 or not re.fullmatch(r"[0-9a-f]{64}", parent_sha):
++            return False
++        identical = {int(x) for x in obj.get("pixel_identical_pages", [])}
++        changed_rows = obj.get("changed_pages")
++        if not isinstance(changed_rows, list) or len(changed_rows) != 1:
++            return False
++        row = changed_rows[0]
++        direct_note = str(row.get("direct_original_size_inspection", ""))
++        if (int(row.get("page", 0)) != 16 or not PASS_WORD.search(direct_note) or
++                re.search(r"FAIL|PARTIAL|BLOCKED|未通過", direct_note, re.I) or
++                not all(token in direct_note.lower() for token in ("no clipping", "overlap")) or
++                identical != (set(range(1, page_count + 1)) - {16})):
++            return False
++        qa_root = receipt_path.parent.parent
++        parent_ok = False
++        for baseline_path in qa_root.rglob("VISUAL_QA_R08K.json"):
++            baseline = read_json(baseline_path)
++            if (str(baseline.get("candidate_sha256", "")).lower() == parent_sha and
++                    baseline.get("visual_verdict") == "PASS" and
++                    int(baseline.get("rendered_page_count", 0)) == page_count):
++                parent_ok = True
++                break
++        if not parent_ok:
++            return False
++        pdf_sha = str(obj.get("pdf_sha256", "")).lower()
++        if not re.fullmatch(r"[0-9a-f]{64}", pdf_sha):
++            return False
++        return any(p.is_file() and sha256_file(p).lower() == pdf_sha
++                   for p in qa_root.rglob("*.pdf"))
++    except (OSError, TypeError, ValueError, AttributeError):
++        return False
++
++
+ def pass_receipt(obj, category, receipt_path=None, expected_sha=None):
++    if category == "technical" and isinstance(obj, dict) and obj.get("receipt_id") == "0012_I02-E03_R08L_TECHNICAL_QA":
++        return _ttqs_0012_r08l_technical_pass(obj, receipt_path, expected_sha)
++    if category == "visual" and isinstance(obj, dict) and obj.get("receipt_id") == "0012_I02-E03_R08L_WORD_NATIVE_VISUAL_QA":
++        return _ttqs_0012_r08l_visual_pass(obj, receipt_path, expected_sha)
+     flat = pairs(obj)
+     if category == "semantic":
+         # Prefer an explicit semantic verdict; a document-level PARTIAL may

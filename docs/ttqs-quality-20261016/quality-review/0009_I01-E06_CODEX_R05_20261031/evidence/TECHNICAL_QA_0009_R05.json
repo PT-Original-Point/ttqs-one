@@ -1,0 +1,43 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0009",
+  "requirement_id": "I01-E06",
+  "revision": "R05",
+  "status": "PASS_WITHIN_SCOPED_DETERMINISTIC_REPAIR",
+  "parent_candidate_sha256": "B7C6945BF6033C4741BAD52B7DEFF397531FDFF42FCCCF977A7587B200239B27",
+  "candidate_sha256": "85C215306E18928552ABC4BA9221DF932FD6B526FAA3F88BA1ACC62AC7974188",
+  "candidate_bytes": 138928,
+  "parent_r04_semantic_finding_response_sha256": "53F17FADDB82794C029227C900593DDFE6DBB214E6908A480C9426C845653967",
+  "checks": {
+    "docx_zip_integrity": true,
+    "docx_reopens": true,
+    "revision_marker_R05": true,
+    "five_summary_rows_found_exactly_once": true,
+    "five_ranges_match_semantic_finding": true,
+    "visible_text_diff_limited_to_revision_and_five_ranges": true,
+    "parent_R04_technical_qa_inherited_by_parent_sha": true,
+    "source_row_register_inherited_unchanged": true,
+    "119_row_register_export_matches_candidate_table": true,
+    "source_mapping_exact_row_sha": true
+  },
+  "remaining_gates": [
+    "fresh Word render and scoped visual review for R05",
+    "fresh independent semantic review bound to R05 exact SHA",
+    "GitHub publish and raw-byte readback"
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "NOT_ASSERTED",
+  "created_at_tpe": "2026-10-31T05:52:56.639196+08:00",
+  "source_crosswalk": {
+    "official_source_pdf_sha256": "805386B77DF045B396FABAFED7A47D12491C25A0B5744EDD9A04876CAEE34709",
+    "unique_blueprint_file_sha256": "406D0495365D0970DCF8113A42842663B8A54372A4E204CC492B7C3F8156EF3E",
+    "unique_blueprint_row_sha256": "4D00595289266D8126E8E890FC9E503037ACC43D296C0A176DB5025EC01BC3F0"
+  },
+  "synthetic_register_export": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0009_I01-E06_LUNA_TEXT_DRAFT_R01_20261029\\0009_I01-E06_R05_FACT_RANGE_REPAIR_20261031\\source\\SYNTHETIC_REPLACEMENT_REGISTER_0009_R05.csv",
+    "sha256": "FD5E07ABDF5A16307D972685B9184F67E5BFE477BF818CA2408DBA3494133F77",
+    "data_rows": 119,
+    "unique_key_count": 119,
+    "candidate_sha256_bound": "85C215306E18928552ABC4BA9221DF932FD6B526FAA3F88BA1ACC62AC7974188"
+  }
+}

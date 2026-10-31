@@ -1,0 +1,57 @@
+{
+  "schema": "TTQS_DOCUMENT_VISUAL_QA_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0092",
+  "requirement_id": "I17D-E06",
+  "official_checkbox_serial": "099",
+  "candidate_revision": "R03",
+  "candidate_sha256": "ed577847dba59d29cd1da0d1d64372a21ed07d8aee164ff044c3870ff958391b",
+  "render": {
+    "method": "Microsoft Word COM ExportAsFixedFormat + Poppler pdftoppm",
+    "pdf_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0092_R01_OPENCODE_WRITER_R01\\0092_R03_final_render2\\candidate.pdf",
+    "pdf_sha256": "242fb54cc2ff976a769e02da73ba7af8f0820fa51d8610613508aa3782bca722",
+    "page_count_word": 18,
+    "page_count_png": 18,
+    "dpi": 140,
+    "receipt_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0092_R01_OPENCODE_WRITER_R01\\0092_R03_final_render2\\export_receipt.json"
+  },
+  "visual_inspection": {
+    "all_pages_full_resolution_inspected": true,
+    "inspected_page_numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "hash_inheritance_scope": "Pages 1-3 and 7-18 have PNG SHA identical to first full-resolution inspected render of this same post-Section-12-break DOCX SHA; pages 4-6 were inspected directly from the final render after the Section 3.3 pagination correction.",
+    "findings": [
+      "No clipping, overlap, unreadable glyphs, or broken table rows observed.",
+      "Page 4 ends cleanly after the complete §3.2 table; §3.3 heading and its table begin together at page 5.",
+      "The §4.1 five-column dictionary is readable at 140 dpi.",
+      "Page 17 ends after the complete §11 replacement-register table; §12 begins at top of page 18 with its complete appendix/version tables.",
+      "SAMPLE/SYNTHETIC boundary remains visible in the running header and body."
+    ],
+    "status": "PASS_VISUAL_LAYOUT"
+  },
+  "candidate_state": "CANDIDATE_SAMPLE_SYNTHETIC_NOT_ACCEPTED",
+  "independent_semantic_review": {
+    "verdict": "PASS_WITH_NONBLOCKING_OBSERVATIONS",
+    "receipt": "opencode_0092_R03_review_receipt.json",
+    "receipt_sha256": "d63a6b3b62b53873723cf573367d00605cf0152bc81fce725506d6af98a96584"
+  },
+  "formal_acceptance": "NOT_GRANTED"
+}

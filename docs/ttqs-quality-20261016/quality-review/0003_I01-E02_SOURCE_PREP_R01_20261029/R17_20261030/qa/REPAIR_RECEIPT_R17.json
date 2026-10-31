@@ -1,0 +1,43 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0003",
+  "requirement_id": "I01-E02",
+  "blueprint_revision": "R03",
+  "project_crosswalk_serial": "002",
+  "revision": "R17",
+  "status": "CANDIDATE",
+  "parent_candidate_sha256": "19a54bb7e73396f1445f82f90fff56582e74ef7459e2b2c9166f6d2feabc00b4",
+  "candidate_sha256": "206dce1d471ea5cdda2a6af15d65cc0c59c7909e55d8fe4475e0ad0b05507281",
+  "parent_register_sha256": "3f1e4e82099e8a4dde4781b9e25137360b1abf513f09cbf430fc5eec230ac350",
+  "register_sha256": "646a5dff8a540d53033d1cf161a6d4839bbf9928d0ae4fece6b6a256764604e1",
+  "parent_semantic_review_sha256": "6a0c7106d8a1c6912dadc0cee5ac35728d60c84e93cb98178836f6643a456984",
+  "findings_repaired": [
+    "For valid Q3 routing, respondent-facing Q4/Q5 instructions define single-select invalid handling, preserve all raw marks and reasons, and exclude only the affected item denominator.",
+    "Q4/Q5 matrices and codebook align to INVALID_SINGLE_SELECT while preserving valid responses to the independent item.",
+    "For invalid/unshown Q3 with residual Q4/Q5 marks, parent routing NOT_ASKED(PARENT_INVALID/MISSING/DECLINED) takes precedence over child single-select invalid coding.",
+    "Added and registered three deterministic SAMPLE/SYNTHETIC test vectors SYN-018..020; no test result is represented as real survey evidence."
+  ],
+  "sample_answer_values_changed": false,
+  "register_sample_facts_changed": false,
+  "page_number_field_preserved": true,
+  "source_hashes": {
+    "official_requirement.pdf": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "BLUEPRINT_ROW_0003_I01-E02_R03.json": "9ca8530d276ed7afff1b65f066e049c5ba74de5d65546c02cc04423ca98898f2",
+    "UNIQUE_BLUEPRINT_0003_I01-E02_R03.md": "2733e5f8aec6951f9e475a2d12d854e8f6950d3fb6eef85b29c8dfbb12ae0dbf"
+  },
+  "source_packet_sha256": "c41d67261de8806bcabd20d8354b8163ae3409cb5d64fff05b0c8448052164ca",
+  "technical_qa_status": "PASS",
+  "visual_status": "PASS_WORD_NATIVE_12_PAGES_VISUAL_INSPECTION_INHERITED_BY_PIXEL_IDENTITY",
+  "semantic_status": "PASS_EXACT_SHA_SEMANTIC_DELTA_REVIEW",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_data_status": "UNKNOWN",
+  "technical_qa_sha256": "a45f6d4f80dc019ce7b31c6be1ad8307e77c8de73596bf9b8e887cb833903dda",
+  "technical_status": "Exact official requirement/Blueprint binding; targeted parent-aware Q4/Q5 single-select coding; raw-mark retention; item denominator isolation; three registered SAMPLE/SYNTHETIC vectors; source/candidate/register SHA binding; unchanged sample-answer parity; package/page-field integrity; readability floors and truth boundary.",
+  "visual_receipt_sha256": "e5fc39db5c4ed172c0beadc7951bdc39d9258fe04209cda62f41de5bfe47ba8b",
+  "rendered_pdf_sha256": "b66bfe83965add5cfa31a27a1b6ab09a3381180ad479236183c96e36bbb097a1",
+  "previous_candidate_sha256_pre_metadata": "0a6e74f45145fb0975a9455c3a89d065242b25b06af1774c174b3ff7c849b73e",
+  "metadata_delta_receipt_sha256": "5b46321e3e9b6eaad685cd4409fc0654dfb98e266f349a8966e5ab33c58edd6b",
+  "semantic_receipt_sha256": "ce6e86c338e0c24d6bd9ff9f97f74e4e94f85ae3c398c9445cbea0e167ba383d",
+  "semantic_response_sha256": "1810ed0c6c8d45a59b84a8a30935e83c4c4bbe1b059d42ff3090d209959d6f16",
+  "semantic_review_candidate_sha256": "206dce1d471ea5cdda2a6af15d65cc0c59c7909e55d8fe4475e0ad0b05507281"
+}

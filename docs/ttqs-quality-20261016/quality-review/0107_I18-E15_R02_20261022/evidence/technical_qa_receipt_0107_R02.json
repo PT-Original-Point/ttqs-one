@@ -1,0 +1,48 @@
+{
+  "doc_id": "0107",
+  "requirement_id": "I18-E15",
+  "candidate_sha256": "66160c8fdf8d674317c895687182f2883c2447a5294e926c4d6f412a3190767e",
+  "candidate_bytes": 60140,
+  "source_manuscript_sha256": "32a9c666e7dd3d7a82a8197bf4d0de89978c5db220620f1ab6a706b47e081a8a",
+  "source_commit": "2080a1eb89c6b3ea73a99f73f4bb7d9324cdeeba",
+  "checks": {
+    "docx_zip_integrity": true,
+    "official_binding_doc_0107_i18_e15": true,
+    "sample_synthetic_and_real_boundary": true,
+    "eight_synthetic_people": true,
+    "seven_attempts": true,
+    "math_4_6_66_7": true,
+    "math_5_6_83_3": true,
+    "math_5_8_62_5": true,
+    "explicit_blueprint_cutoff_column_and_four_rows": true,
+    "other_metric_cells_unchanged": true,
+    "all_non_target_tables_unchanged": true,
+    "all_body_paragraphs_unchanged": true,
+    "body_min_font_10_5pt": true,
+    "table_min_font_9_5pt": true,
+    "no_formal_acceptance_or_real_outcome_claim": true
+  },
+  "synthetic_people_ids": [
+    "SYN-P01",
+    "SYN-P02",
+    "SYN-P03",
+    "SYN-P04",
+    "SYN-P05",
+    "SYN-P06",
+    "SYN-P07",
+    "SYN-P08"
+  ],
+  "exam_attempt_rows": 7,
+  "metrics_rows_with_cutoff_date": 4,
+  "cutoff_date": "2026-07-29",
+  "formulae": {
+    "first_pass": "4/6=66.7%",
+    "pass_by_cutoff_exam_takers": "5/6=83.3%",
+    "pass_by_cutoff_full_cohort": "5/8=62.5%"
+  },
+  "visual_render": "BLOCKED_RENDERER_LANE_ONLY; not attempted to avoid competing with the active 0102 Word COM export. Packaged LibreOffice renderer previously failed because soffice.exe unavailable.",
+  "active_process_snapshot": "[{\"ProcessId\":66060,\"ParentProcessId\":67620,\"Name\":\"pwsh.exe\",\"CommandLine\":\"\\\"C:\\\\Users\\\\J\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\\\" -Command \\\"try { [Console]::OutputEncoding=[System.Text.Encoding]::UTF8 } catch {}\\n$ErrorActionPreference=\\u0027Stop\\u0027;\\n$base=\\u0027E:\\\\PT-Original-Point\\\\ttqs-one\\\\docs\\\\ttqs-quality-20261016\\\\quality-review\\\\0102_I18-E09_R06_20261021\\u0027;\\n$pdf=Join-Path $base \\u0027render\\\\R09_final\\\\0102_R09_Word_native_export.pdf\\u0027;\\nif(Test-Path -LiteralPath $pdf){throw \\u0027Refusing to overwrite existing R09 PDF\\u0027};\\n$script=Join-Path $base \\u0027evidence\\\\R09\\\\export_0102_R09_word_native.ps1\\u0027;\\n$code=@\\u0027\\n$ErrorActionPreference=\\u0027Stop\\u0027\\n$base=\\u0027E:\\\\PT-Original-Point\\\\ttqs-one\\\\docs\\\\ttqs-quality-20261016\\\\quality-review\\\\0102_I18-E09_R06_20261021\\u0027\\n$cdir=Join-Path $base \\u0027candidate\\u0027\\n$matches=@(Get-ChildItem -LiteralPath $cdir -File -Filter \\u0027*_R09.docx\\u0027)\\nif($matches.Count -ne 1){throw \\\\\\\"Expected one R09 DOCX, got $($matches.Count)\\\\\\\"}\\n$docx=$matches[0].FullName\\n$pdf=Join-Path $base \\u0027render\\\\R09_final\\\\0102_R09_Word_native_export.pdf\\u0027\\n$log=Join-Path $base \\u0027evidence\\\\R09\\\\word_export_receipt_0102_R09.json\\u0027\\n$started=(Get-Date).ToString(\\u0027o\\u0027)\\n$before=@(Get-Process WINWORD -ErrorAction SilentlyContinue | ForEach-Object Id)\\n$word=$null;$doc=$null;$owned=$null;$version=$null;$failure=$null;$stage=\\u0027create\\u0027\\ntry {\\n $word=New-Object -ComObject Word.Application\\n Start-Sleep -Seconds 2\\n $after=@(Get-Process WINWORD -ErrorAction SilentlyContinue | ForEach-Object Id)\\n $delta=@($after | Where-Object {$_ -notin $before})\\n if($delta.Count -ne 1){$stage=\\u0027ownership_ambiguous\\u0027; throw \\\\\\\"Refusing export: new WINWORD count=$($delta.Count); process ownership is ambiguous.\\\\\\\"}\\n $owned=[int]$delta[0]\\n $version=$word.Version\\n $word.Visible=$false;$word.DisplayAlerts=0\\n $stage=\\u0027open_readonly\\u0027\\n $doc=$word.Documents.Open($docx,$false,$true,$false)\\n $stage=\\u0027export_pdf\\u0027\\n $doc.ExportAsFixedFormat($pdf,17)\\n $stage=\\u0027close_document\\u0027\\n $doc.Close(0);$doc=$null\\n $stage=\\u0027quit_owned_word\\u0027\\n $word.Quit();$word=$null\\n} catch { $failure=$_.Exception.Message; throw } finally {\\n if($doc){try{$doc.Close(0)}catch{}}\\n if($word -and $owned){try{$word.Quit()}catch{}}\\n}\\n$exists=Test-Path -LiteralPath $pdf\\n$hash=$null;$size=0\\nif($exists){$hash=(Get-FileHash -LiteralPath $pdf -Algorithm SHA256).Hash.ToLowerInvariant();$size=(Get-Item -LiteralPath $pdf).Length}\\n$docxHash=(Get-FileHash -LiteralPath $docx -Algorithm SHA256).Hash.ToLowerInvariant()\\n$rec=[ordered]@{doc_id=\\u00270102\\u0027;requirement_id=\\u0027I18-E09\\u0027;candidate_sha256=$docxHash;pdf_path=\\u0027render/R09_final/0102_R09_Word_native_export.pdf\\u0027;pdf_sha256=$hash;pdf_bytes=$size;word_version=$version;owned_word_pid=$owned;preexisting_word_pids=$before;exporter=\\u0027Microsoft Word COM\\u0027;read_only=$true;stage=$stage;created=$exists;created_at=$started;finished_at=(Get-Date).ToString(\\u0027o\\u0027);error=$failure;status=$(if($exists){\\u0027PDF_EXPORTED\\u0027}else{\\u0027FAILED\\u0027})}\\n$rec|ConvertTo-Json -Depth 5|Set-Content -LiteralPath $log -Encoding UTF8\\n$rec|ConvertTo-Json -Compress\\n\\u0027@;\\n[IO.File]::WriteAllText($script,$code,[Text.UTF8Encoding]::new($false)); \\u0026 powershell.exe -NoProfile -ExecutionPolicy Bypass -File $script\\\"\"},{\"ProcessId\":70808,\"ParentProcessId\":66060,\"Name\":\"powershell.exe\",\"CommandLine\":\"\\\"C:\\\\Windows\\\\System32\\\\WindowsPowerShell\\\\v1.0\\\\powershell.exe\\\" -NoProfile -ExecutionPolicy Bypass -File E:\\\\PT-Original-Point\\\\ttqs-one\\\\docs\\\\ttqs-quality-20261016\\\\quality-review\\\\0102_I18-E09_R06_20261021\\\\evidence\\\\R09\\\\export_0102_R09_word_native.ps1\"},{\"ProcessId\":15600,\"ParentProcessId\":1104,\"Name\":\"WINWORD.EXE\",\"CommandLine\":\"\\\"C:\\\\Program Files\\\\Microsoft Office\\\\Root\\\\Office16\\\\WINWORD.EXE\\\" /Automation -Embedding\"}]",
+  "independent_semantic_review": "PENDING_R02_EXACT_SHA_DELTA_REVIEW",
+  "formal_acceptance": "NOT_GRANTED",
+  "checked_at_local": "2026-10-22T22:39:11+08:00"
+}

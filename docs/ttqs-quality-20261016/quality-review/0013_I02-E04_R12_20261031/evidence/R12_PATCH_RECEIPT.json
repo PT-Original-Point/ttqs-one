@@ -1,0 +1,17 @@
+{
+  "schema": "ttqs-scoped-docx-repair-v1",
+  "document_id": "0013",
+  "requirement_id": "I02-E04",
+  "source_candidate_sha256": "c6570ac11ac06e889628937069c4d66944e4a59e287f8df3cbcd3fa468f5dc95",
+  "candidate_sha256": "978672ae999bbcb1a71137739428ae6d37ce475b96eb59abc8d939d3cbcdc260",
+  "change": "Table 11.1 first data-row first cell reduced to the requirement identifier I02-E04; full official title remains in the document body and second-column evidence narrative.",
+  "locator": "DOCX table index 15 (1-based table 16), data row 1 (excluding header), cell 1; §11.1 on rendered page 16.",
+  "patch_method": "OOXML word/document.xml text-node patch; all other DOCX package entries preserved byte-for-byte.",
+  "static_checks": {
+    "docx_opens": true,
+    "table_count": 20,
+    "target_cell_exact": true,
+    "official_title_remains_in_document": true
+  },
+  "state": "CANDIDATE_SAMPLE_SYNTHETIC_NOT_ACCEPTED"
+}

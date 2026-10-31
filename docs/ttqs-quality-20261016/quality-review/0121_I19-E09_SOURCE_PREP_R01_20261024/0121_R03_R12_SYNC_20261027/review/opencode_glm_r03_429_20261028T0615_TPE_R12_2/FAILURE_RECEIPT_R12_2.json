@@ -1,0 +1,89 @@
+{
+  "schema": "TTQS_ONE_OPENCODE_FAILURE_RECEIPT_R12_2_V1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0121-I19-E09-R03-W1-OPENCODE-GLM-EXACT-SHA-REVIEW-AFTER-0122-SUCCESS-20261028",
+  "doc_id": "0121",
+  "requirement_id": "I19-E09",
+  "revision": "R03",
+  "attempt_number": 2,
+  "observed_at_local": "2026-10-28T06:17:12.335400+08:00",
+  "dispatch": {
+    "requested_model": "opencode/glm-5.3-flash-free",
+    "session_provider_id": "opencode",
+    "session_model_id": "glm-5.3-flash-free",
+    "actual_inference": "NOT_REACHED",
+    "fallback_allowed": false,
+    "computer_use": false,
+    "auto_approval": false,
+    "pid": 77644,
+    "cli_version": "2.1.4",
+    "exit_code": 1,
+    "timeout": false,
+    "duration_seconds": 1.906
+  },
+  "outcome": {
+    "status": "BLOCKED_PROVIDER_FREE_LIMIT_HTTP_429_BEFORE_INFERENCE",
+    "http_status": 429,
+    "error_type": "provider.free-limit",
+    "retry_after_ms": 6168000,
+    "do_not_retry_before_local": "2026-10-28T08:00:00.296+08:00",
+    "response": "NONE",
+    "tokens": {
+      "input": 0,
+      "output": 0,
+      "reasoning": 0,
+      "cache_read": 0,
+      "cache_write": 0
+    },
+    "session_metadata_cost_field": 0,
+    "invoice_or_upstream_cost": "UNKNOWN"
+  },
+  "candidate": {
+    "sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+    "git_blob_sha1": "820d586734c62ddaad3905ba8b8ea74ede5c9813",
+    "mutated": "NO; local hash unchanged and remote Git blob matches"
+  },
+  "inputs": {
+    "body_sha256": "4ea875c255a3d1f852788a258725150729787f83dad96efa997dd491a8f01552",
+    "source_packet_sha256": "fbeb11b96648fff29a49a0fca74bf0cc3b3d1d29934f07dfaa3cf7e410a557fd",
+    "unique_blueprint_sha256": "99320fdc9078615ad04087c43bcbd22c5bbf751a22127c51e048e909726a5fca",
+    "review_packet_sha256": "d5935a49c75152ff3e68451e9e78271f4ec4d746645bab49f89086a621576b1d"
+  },
+  "route_decision": {
+    "basis": "0122 had just completed an exact-SHA GLM review, so one bounded 0121 attempt was tried; this did not establish 0121 quota release.",
+    "process_deviation": "This second 0121 request occurred before the first attempt retry-after estimate (~08:00 TPE). The first server backoff should have been treated as a no-retry boundary; the second attempt again received 429 and yielded no inference.",
+    "next_action": "No identical 0121 retry before latest server retry-after estimate; proceed on independent READY work."
+  },
+  "previous_attempt": {
+    "work_id": "TTQS-0121-I19-E09-R03-W1-OPENCODE-GLM-5.3-FLASH-FREE-EXACT-SHA-REVIEW",
+    "status": "BLOCKED_PROVIDER_FREE_LIMIT_HTTP_429",
+    "session_id": "ses_e82b1ca2cffeCEinyXAtf6PmLK",
+    "http_status": 429,
+    "retry_after_ms": 41958000,
+    "retry_eligible_estimate_local": "2026-10-28T08:00:00.403+08:00"
+  },
+  "evidence": {
+    "input_manifest_sha256": "d4509e11ad3ab2ba64d23ac62ac6f7d2706496ea70599ea88d170f44b077a7ee",
+    "dispatch_prompt_sha256": "f4ead71381280ef8210f19c226425fa448ba42275d4e5d7f4e81184d23ae564e",
+    "dispatch_start_original_sha256": "1d3f3951a193d3d93cfcc1a66e41dc85eb2215110589889dd194da62b3d1d302",
+    "dispatch_start_public_sha256": "b179ab0bca0fdd2614807e17fa9f102e84cb315c764b03e9e88263dbe9eb5542",
+    "dispatch_terminal_sha256": "dbae967b707fc7ae822c1e1d8d54c71f2421fb1c35826f1125d01bd958334a06",
+    "raw_stdout_sha256": "a61bc6d3552ec5c173919fc378ccb3b5ef825f27e8e39ac7281bfed00fec742d",
+    "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "session_export_sanitized_sha256": "7ff94b7a364503ba6632dbc8a8f61e1d3c6e1ef424113cc5ec90d6929496842d",
+    "session_export_receipt_sha256": "dfee795a58fa806d42b7f13731b78e7298a693129cc41ed53d6ca32e054777ef",
+    "session_export_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "quality_state": {
+    "semantic": "UNVERIFIED_ROUTE_IDENTITY",
+    "technical_visual": "PASS_EXISTING_EXACT_SHA_SCOPE",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "NOT_PROVIDED",
+    "promotion": "NOT_PROMOTED"
+  },
+  "public_context": {
+    "user_supplied_opencode_report_sha256": "ff3ca9886e3a345d78be358b2883296b7e5454408d23bc940fee239ba826c900",
+    "report_cutoff": "2026-10-27 08:17 TPE",
+    "interpretation": "Public service/model report only; it explicitly lacks account-level tests and does not override this local HTTP 429."
+  }
+}

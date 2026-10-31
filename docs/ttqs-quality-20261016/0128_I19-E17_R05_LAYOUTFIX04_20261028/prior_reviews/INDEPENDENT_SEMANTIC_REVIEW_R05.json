@@ -1,0 +1,57 @@
+{
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0128-I19-E17-SEMANTIC-REVIEW-R05",
+  "doc_id": "0128",
+  "official_requirement_id": "I19-E17",
+  "candidate_docx_sha256": "e9fe9b87751dd588f290a84cc2c134c367d1f8f6a15dd679013dcc9e5fe0f242",
+  "candidate_extracted_text_sha256": "363183d3bab6f502141801e711b9150c7fddfcb325fd1799c0a4283b66ebaadd",
+  "worker": "Antigravity CLI",
+  "cli_version": "1.4.7",
+  "requested_model": "gemini-3.8-flash-high",
+  "actual_serving_model": "UNKNOWN",
+  "conversation_id": "8c032003-8ca3-4fd9-812e-c0ba4fb7e89c",
+  "verdict": "PASS",
+  "review_type": "INDEPENDENT_TEXT_ONLY_DELTA_RECHECK",
+  "prior_full_review": {
+    "work_id": "TTQS-0128-I19-E17-REVIEW-R04",
+    "docx_sha256": "cff3bee61639136230fd11d1528bcb07b6906fc2a91b6045aa1ae6491dd2114c",
+    "verdict": "PASS",
+    "raw_response_sha256": "04f1408e1c6d3865a1e3716871470dc4d061cea1ad17591b0aa360cd769a0d15"
+  },
+  "delta": {
+    "status": true,
+    "edit_count": 2,
+    "changes_verified": [
+      {
+        "location": "Section 玖 (REAL 實際資料替換表單)",
+        "from": "三、干擾變數排除審核簽核表（逐案勾稽）",
+        "to": "四、干擾變數排除審核簽核表（逐案勾稽）"
+      },
+      {
+        "location": "Section 玖 (REAL 實際資料替換表單)",
+        "from": "四、審核決策與核決簽章欄",
+        "to": "五、審核決策與核決簽章欄"
+      }
+    ],
+    "unintended_changes": "None. All underlying data, mathematical crosswalks, sample bounds, disclaimers, and governance policies remain strictly untouched."
+  },
+  "prior_semantic_verdict_reused_for_unchanged_content": {
+    "reused_from_work_id": "TTQS-0128-I19-E17-REVIEW-R04",
+    "prior_verdict": "PASS",
+    "rationale": "All underlying content, mathematical formulas, sample vs. real governance boundaries, and indicator mappings were comprehensively validated in R04 and are preserved without modification."
+  },
+  "limitations": "Strictly limited to text-only delta semantic verification. No visual layout, typography, pagination, or rendered DOCX page inspection was conducted. Does not certify visual or layout QA.",
+  "raw_response_path": "ANTIGRAVITY_REVIEW_DELTA_STDOUT_R05.json",
+  "raw_response_sha256": "6ddce6bc9b59357193e0482cb0b5e1fc6c1ad993ebdf21dc7a5e9199d467ee12",
+  "stderr_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+  "native_usage": {
+    "input_tokens": 42242,
+    "output_tokens": 10945,
+    "thinking_tokens": 8816,
+    "cache_read_tokens": 0,
+    "total_tokens": 53187
+  },
+  "computer_use": "not used",
+  "formal_acceptance": "NOT_GRANTED",
+  "visual_review": "NOT_IN_SCOPE"
+}

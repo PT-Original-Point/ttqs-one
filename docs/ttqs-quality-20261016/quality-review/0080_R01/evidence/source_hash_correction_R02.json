@@ -1,0 +1,26 @@
+{
+  "schema": "TTQS_ONE_0080_SOURCE_HASH_CORRECTION_R02.v1",
+  "document_id": "0080",
+  "requirement_id": "I17B-E02",
+  "official_checkbox_serial": "085",
+  "status": "VERIFIED",
+  "historical_r01_inputs": {
+    "blueprint_sha256": "e9df2b8e5b97fad4f4b96bfe8ed40004d3ad6d47ab476aab77bf2c801312a0b5",
+    "source_packet_sha256": "cab1755bce63900f1329d761c422067f8e2f0352b408f5abf45d406c2af9ed0d",
+    "body_sha256": "85e6954df7c41e8a76444505106f5eb2c5fabd7c1d1561424158701900452fc9"
+  },
+  "wrong_hash_claim": "3bdce0a1675a5b377dfafe2d7519f9f877e51530f5edc4ba3551a116bc6e985",
+  "verified_upstream_file": "quality-review/0077_R01/inputs/REFLECTION_SYNTHETIC_DATA_0077_R01.csv",
+  "verified_upstream_sha256": "3bdce0a1675a5b377dfafe2d75139d1f877e51530f5edc4ba3551a116bc6e985",
+  "corrected_r02_inputs": {
+    "blueprint_path": "inputs/UNIQUE_BLUEPRINT_0080_R02.md",
+    "blueprint_sha256": "a1feb7b8598ff810e3910e360eab2749c7d115035fad878ac189760350d4f891",
+    "source_packet_path": "inputs/SOURCE_PACKET_0080_R02.md",
+    "source_packet_sha256": "7efb7670e78a0b9c03d8ec2bf6be7b3bf42fe517448ddd66b9575ba3296215ae",
+    "body_path": "candidate/0080_R02_body.md",
+    "body_sha256": "3d57844ef5e66714ff9e663e140fa452094f02c6f97c54eff42cc023c1115ab6"
+  },
+  "correction_scope": "Corrected the transcribed 0077 CSV digest in the R02 Blueprint and source packet; updated the 0080 body source appendix and removed its now-obsolete discrepancy note. No 0077 source bytes were changed. R01 writer files remain preserved.",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD"
+}

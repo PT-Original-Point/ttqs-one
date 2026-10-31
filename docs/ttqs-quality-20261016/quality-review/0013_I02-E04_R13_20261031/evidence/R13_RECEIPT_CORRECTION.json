@@ -1,0 +1,14 @@
+{
+  "doc_id": "0013",
+  "revision": "R13",
+  "original_receipt_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\GITHUB_STAGING\\0013_I02-E04_R13_20261031\\evidence\\R13_PATCH_RECEIPT.json",
+  "original_receipt_sha256": "42a8026da1b992aa9e17b73a72741a44cbe678816cce9adc2d0a0ad044110c62",
+  "correction": "The original patch receipt reported modified_package_parts as an empty list because its comparison used the post-patch payload as the baseline. Independent comparison of the exact R12 source DOCX and R13 candidate confirms only word/document.xml changed; all other package parts and entry names are unchanged.",
+  "authoritative_delta_receipt_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\GITHUB_STAGING\\0013_I02-E04_R13_20261031\\evidence\\R13_PACKAGE_DELTA_VERIFICATION.json",
+  "authoritative_delta_receipt_sha256": "2c8ba245f57815e12c9bfeb2d1275432bb664ce13a0bba668c1548506d6a5075",
+  "corrected_modified_package_parts": [
+    "word/document.xml"
+  ],
+  "all_other_package_parts_preserved": true,
+  "candidate_docx_bytes_unchanged": true
+}

@@ -1,0 +1,133 @@
+# Structured review — 0110 / I18-E19 / candidate R06
+
+**Citation note.** No printed page numbers are visible in the supplied Markdown. Citations below use section, item, and table labels. Identity reviewed: `doc_id=0110`, `requirement=I18-E19`, `checkbox serial=UNKNOWN`; candidate DOCX SHA-256 `e8baec…4912`; source packet `e3db8f…8d38`; Blueprint `81ec1f…8796`; official PDF `805386…4709`, page 7, indicator 18. `REAL` remains `UNKNOWN`; all worked answers are `SAMPLE/SYNTHETIC`.
+
+## Overall verdict
+
+**FAIL.** The candidate is structurally strong and genuinely matches the required genre, but the synthetic demonstration and the client-form coding contain blocking internal contradictions. It is not usable as-is as a “directly usable finished product.”
+
+## Domain verdicts
+
+| Review domain | Verdict |
+|---|---|
+| 1. Exact requirement fit and genre | **PASS** — correct dual-questionnaire plus action-plan genre; official sentence and page are correctly identified; “顯著” is not converted into a statistical claim. Caveat: learner organizational-performance linkage is indirect through L07–L09. |
+| 2. Practical usability by a small volunteer association | **PARTIAL** — clear quick-use guide and forms, but client administration, coding, and tracking gaps prevent direct use. |
+| 3. Learner/client population separation and eligibility | **PARTIAL** — forms and reporting are separated, but the sample includes an ineligible learner and the client form lacks a respondent-tracking mechanism. |
+| 4. Item wording, response options, scales, 0/blank/invalid/duplicate, denominators | **PARTIAL** — scales, 0, blank, L04 frequency, and denominators are mostly defined; C08, C10, and invalid/duplicate rules are defective or incomplete. |
+| 5. Sample completeness, item/response-rate calculations, arithmetic | **FAIL** — displayed arithmetic is correct, but the sample inputs violate eligibility and temporal rules, so the response rate and item results are not valid. |
+| 6. Action-plan linkage, 30-day follow-up, HOLD/REVISE/CLOSE | **PARTIAL** — required fields and disposition logic exist, but the synthetic linkage, target timing, and barrier/action trail are inconsistent. |
+| 7. Separation from 0109/I18-E17 and 0111/I18-E20 | **PASS** — no social-platform-frequency content, no special-performance/social-impact register, and no copied metrics or actors are visible. |
+| 8. Evidence traceability and replacement-register adequacy | **PARTIAL/UNKNOWN** — traceability table exists but overstates the learner link; the 198-entry replacement register is supplied only by hash/summary and cannot be verified. |
+| 9. Truth boundary / no fabricated REAL claims or unsupported significance/causality | **FAIL** — mostly well controlled, but the client form asserts an unsupported real-association employment fact and hardcodes the association name. |
+| 10. Exact-SHA/build-version clarity | **PARTIAL** — the identity block distinguishes R06 file revision from R03 form edition, but the body only shows R03 and the DOCX SHA cannot be byte-verified from the Markdown body. |
+| 11. Content that makes the tool impractical or misleading | **FAIL** — the invalid client coding, undefined items, baseline/observation confusion, and ineligible sample response make the tool misleading if used as printed. |
+
+---
+
+## Material findings
+
+1. **Ineligible learner counted as valid — blocking.**  
+   **Location:** 學員問卷, 二、誰適合填答; L04; L10; L12; SAMPLE/SYNTHETIC 完整示範, 學員逐份原始答案 row L06; 逐題計算.  
+   L06 reports `L04=0` and `L10=X`, and L12 says `本期沒有符合資格的服務班次可實際操作`, yet L06 is counted in `收回有效答卷 8` and contributes scores to L01–L03/L05–L09. Under the form’s own eligibility rule (`親自執行或現場看過...至少一次`) and rejection rule (`未觀察者猜答`), L06 cannot be a valid response without a valid observation basis. The 8/8 learner response rate and all affected denominators are therefore overstated.
+
+2. **Client observation window is the baseline — blocking.**  
+   **Location:** 目標客戶與服務夥伴問卷, C02; 課後行動計畫, D-2 and H-1; 完整示範, C01–C06 C02 values.  
+   All client C02 values are `D−30至D0`; the action plan labels `D−30 至 D0` as the baseline and sets follow-up at `基線期間末日＋30天`. C03–C07 ask for change `與基準相比`. If D−30–D0 is the baseline, the clients observed only the baseline and have no post-training observation; if it is the observation window, the action plan’s baseline label is wrong. Either way, the change scores are not temporally anchored.
+
+3. **C10 coding does not match the form — blocking.**  
+   **Location:** 目標客戶與服務夥伴問卷, C10 and C10 code key; sample rows C02, C04, C05, C03/C06.  
+   C10 offers `同期間有其他人員或制度調整`, `同期間業務量或環境改變`, `我自己觀察的條件或經驗不足`, `無法判斷是何因素`, `無／不知道`, `其他`. The code key and sample use `b=流程／表格／工具改版`, `c=特殊事件`, `d=自然熟練`, and distinguish `n=未發現其他因素` from `x=不清楚`. The sample’s C02=b and C04=c are not valid C10 responses, and C05=n/C03=x cannot be distinguished from the single `無／不知道` option.
+
+4. **C08 has no defined referent — blocking.**  
+   **Location:** 目標客戶與服務夥伴問卷, 工作人員設定欄 `指定的服務／工作實務名稱`; C08 `本表所指的那一項指定課程練習`.  
+   No setting defines a `指定課程練習`. The respondent is asked to identify a trained practice that the form never names. The sample’s C08 answers (`是／否／不確定`) cannot be traced to a defined practice.
+
+5. **Client response tracking is not operational — blocking.**  
+   **Location:** 目標客戶與服務夥伴問卷, 填寫說明 `本表不收集...任何可辨識身分的代碼`; sample C01–C06; 示範設定與回覆勾稽; 尺度及計算 `回覆率＝...`.  
+   The client form has no anonymous respondent code or fill date. The administrator therefore cannot reconcile invitations, returns, duplicates, or eligibility, and cannot compute the stated response rate from actual forms. The sample’s C01–C06 codes are not represented on the form. An anonymous random code, not linked to identity, or a defined tracking method is required.
+
+6. **Invalid/duplicate/blank rules are named but not defined — blocking.**  
+   **Location:** 題項對應、計分與判讀, 尺度及計算 `0、空白、無效及重複回答各自清點`; 學員問卷, 五、作答方式; 目標客戶與服務夥伴問卷, 填寫說明.  
+   The document does not define what makes a response invalid (multiple marks where one is required, out-of-range value, contradictory answer), how a duplicate is detected (same code, same person with two codes), or how client blanks are coded. The categories exist, but the coding rules do not.
+
+7. **Action-plan linkage is broken — blocking.**  
+   **Location:** 課後行動計畫與追蹤表, B-1/B-2/B-3; full sample B-3; instruments L01–L13/C01–C13.  
+   B-3 cites `示範課後問卷題項 SYN-Q-01`, but no such item exists; the actual items are L01–L13 and C01–C13. B-1 is an activity (`將課後感知資料與服務流程檢核值並列檢視`), not a concrete organizational outcome; B-2 is only `一個示範服務流程（SYN）`, not a defined scope. The operational indicator `完成服務簽到紀錄比率` is not linked to a specific questionnaire item.
+
+8. **30-day follow-up and target timing are ambiguous — blocking.**  
+   **Location:** 課後行動計畫, E-2 `D0＋60`, H-1 `基線期間末日＋30天`, J; sample I-1 `REVISE（87.5%＜90.0%，未達目標）`; H-4.  
+   The 30-day check occurs at D0+30 while the target deadline is D0+60. The sample declares `未達目標` without labeling the check as interim or explaining why REVISE is chosen over CONTINUE. H-4 says the barrier was `已於 F-2 調整`, but F-2 shows only tracking sampling, and the audit trail adjusts only F-1. The disposition logic is present but not coherently demonstrated.
+
+9. **Unsupported real-association fact — blocking truth-boundary issue.**  
+   **Location:** 目標客戶與服務夥伴問卷 header `（原始點協會　訓練後外部觀察問卷...）`, 工作人員設定欄 `協會全名 | 原始點協會`, and `本協會沒有僱用關係或支薪員工的前提`; cover `尚未正式核准...不得據此宣稱原始點協會已辦理課程或取得成效`.  
+   The source packet does not establish the association’s employment model. The sentence converts the blueprint’s assumption (`No employment relationship is assumed`) into a real-world fact. The hardcoded association name is also inconsistent with the learner form’s blank `協會名稱由協會自行填入`. Use neutral template wording or explicitly label the association as the intended user, not a verified fact.
+
+10. **Client stop instruction conflicts with per-item 0 — material.**  
+    **Location:** 目標客戶與服務夥伴問卷, 填寫說明 `如果您沒有直接觀察、不確定、或沒有可以比較的依據，請停止填寫`; C03–C07 `0 沒觀察到／不適用`; sample C06.  
+    C06 answers C01=是 but all C03–C07=0 and returns the form. The form should say: stop only if there was no direct observation of the specified service; if a particular outcome was not observed, mark 0. As written, eligible partial observers may abandon the whole form, reducing valid data.
+
+11. **C02 period and frequency do not match the form — material.**  
+    **Location:** C02 `＿＿＿＿年＿＿月 至 ＿＿＿＿年＿＿月` and options `單次、短時間觀察／多次、不定期觀察／持續、經常性觀察`; sample C02 `每月約1–2次；觀察2次` etc.  
+    The settings use full dates, but C02 records only month/year, so the HOLD rule `若您觀察的期間與本表設定的期間不同` cannot be applied precisely. The sample’s frequency text is not one of the form’s offered options.
+
+12. **Traceability table overstates the learner link — material.**  
+    **Location:** 官方需求逐句追溯, row `訓練對組織績效改善及提升 | L02、L07–L09；C03–C07；另列操作指標`.  
+    L02 is `受訓前後獨立執行信心變化` (self-efficacy), not an organizational-performance measure. L07–L09 are process-change proxies. The table should distinguish direct measures from proxies and map the operational indicator to a specific item. C07 is the only explicit overall organizational/service performance item and is client-only.
+
+13. **Version/SHA clarity is only partial.**  
+    **Location:** cover `版次 R03`; candidate identity `Candidate file revision R06`, `visible body text is unchanged`, `Candidate DOCX SHA-256 e8ba...`.  
+    The packet explains that R03 is the form edition and R06 the file revision, but the body itself does not. The Markdown reading copy cannot be byte-verified against the DOCX SHA. Keep the form edition as R03 only if clearly distinguished from the R06 build/review revision in the sidecar, and ensure the reviewed body is the exact DOCX.
+
+14. **Replacement register cannot be verified.**  
+    **Location:** candidate identity `Synthetic replacement register SHA-256... (198 cell-level entries; attached here by summary/hash, not expanded)`.  
+    The register is not supplied in expanded form, so the claim that every synthetic value has a replaceable real-source cell cannot be checked. This is an evidence gap, not a proven content defect; it prevents PASS on domain 8.
+
+---
+
+## Arithmetic check
+
+The arithmetic printed in the scoring table recomputes correctly for the values as listed:
+
+- L01: `33÷8=4.125`; `7÷8=87.5%`
+- L02: `30÷8=3.750`; `5÷8=62.5%`
+- L03: `31÷8=3.875`; `6÷8=75.0%`
+- L04 distribution: `1=1, 2=2, 3=3, 4=1, 0=1`; total 8
+- L05: `25÷7=3.571`; `4÷7=57.1%`
+- L06: `31÷8=3.875`; `6÷8=75.0%`
+- L07: `27÷7=3.857`; `5÷7=71.4%`
+- L08: `23÷7=3.286`; `3÷7=42.9%`
+- L09: `24÷7=3.429`; `3÷7=42.9%`
+- C03: `20÷5=4.000`; `4÷5=80.0%`
+- C04: `20÷5=4.000`; `4÷5=80.0%`
+- C05: `18÷5=3.600`; `3÷5=60.0%`
+- C06: `18÷5=3.600`; `3÷5=60.0%`
+- C07: `19÷5=3.800`; `4÷5=80.0%`
+- Operational check: `6÷8=75.0%`; `7÷8=87.5%`; change `+12.5 pp`; target gaps `−15.0 pp` and `−2.5 pp`
+
+**The error is not the displayed division.** The error is that the sample’s eligibility, observation-period, and coding inputs are invalid, so the denominators and response rates are not substantiated.
+
+---
+
+## Blocking changes
+
+1. **Fix learner L06.** Mark L06 `HOLD/invalid`, or replace it with an eligible response that has a valid observation basis. Recompute the learner response rate (`7÷8=87.5%`, not `100.0%`) and every affected item denominator/mean/percentage.
+
+2. **Define a distinct post-training client observation window.** Make C02 use the same full dates as the settings, and ensure C03–C07 compare that post-training window to the defined baseline. Do not use the baseline period as the observation period.
+
+3. **Align C10 with its code key.** Add the missing options for process/form/tool change, special event, and natural proficiency; separate `none` from `don’t know`; recode the sample’s C02=b, C04=c, C05=n, and C03/C06=x accordingly.
+
+4. **Define or remove C08’s “指定課程練習.”** Either add a setting field naming the trained practice or change C08 to refer to the defined `指定的服務／工作實務`. The sample must answer the defined construct.
+
+5. **Add an anonymous client respondent code and fill date, or an equivalent tracking method.** The code must not link to identity. Add explicit duplicate, invalid, and blank rules for both forms, including multiple marks, out-of-range values, and same-code returns.
+
+6. **Repair the action plan.** B-3 must cite actual item IDs, not `SYN-Q-01`. B-1 must state a concrete organizational outcome; B-2 must define scope. Map the operational indicator to a specific item. Align H-1 with E-2, or label D0+30 as an interim check and explain REVISE vs CONTINUE. Fix the H-4/F-2/audit-trail linkage.
+
+7. **Remove the unsupported real-association employment assertion.** Replace `本協會沒有僱用關係或支薪員工的前提` with neutral wording such as “本表不以受僱身分為前提.” Treat `原始點協會` as the intended user/template, not a verified fact, and make the learner and client forms consistent.
+
+8. **Clarify the client stop instruction and C02 options.** Stop only when there was no direct observation at all; use 0 for an unobserved specific item. Bring the sample’s frequency responses within the form’s actual options.
+
+9. **For a future PASS:** provide the expanded 198-entry replacement register and verify the exact DOCX SHA/build against the reviewed body. Clearly distinguish R03 form edition from R06 file revision without inserting engineering metadata into the human-facing questionnaire.
+
+**Non-blocking corrections:** inconsistent learner response order (`5→1` versus `1→5`); L10’s `上述以外` option lacks a code; the traceability table should label L02 as a self-efficacy proxy, not an organizational-performance measure.
+
+**Final verdict: FAIL.**

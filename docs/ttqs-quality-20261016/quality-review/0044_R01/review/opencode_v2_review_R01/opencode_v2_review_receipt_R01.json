@@ -1,0 +1,65 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0044",
+  "requirement_id": "I09-E04",
+  "official_checkbox_sequence": "045",
+  "candidate_revision": "R01",
+  "reviewer_route": "OpenCode CLI v2, read-only; Antigravity and Computer Use were not used",
+  "cli_version": "2.0.29",
+  "requested_model": "opencode/deepseek-v4.1-flash-free",
+  "runtime_model_identity": "NOT_RETURNED",
+  "session_id": "ses_eb820cf2affe1PcdXjuavk51g1",
+  "started_at_taipei": "2026-10-17T11:19:33.637+08:00",
+  "completed_at_taipei": "2026-10-17T11:23:28.138+08:00",
+  "duration_seconds": 234.501,
+  "exit_code": 0,
+  "verdict": "PASS",
+  "substantive_criteria_passed": 14,
+  "material_findings": 0,
+  "non_material_p3_findings": 3,
+  "candidate_sha256": "76bde5df4209abc6f102a15a02c5e51a5816ef3df309aaed0a0ab44ea9075644",
+  "candidate_sha256_before": "76bde5df4209abc6f102a15a02c5e51a5816ef3df309aaed0a0ab44ea9075644",
+  "candidate_sha256_after": "76bde5df4209abc6f102a15a02c5e51a5816ef3df309aaed0a0ab44ea9075644",
+  "candidate_bytes": 49849,
+  "candidate_changed_by_review": false,
+  "final_response_path": "review/opencode_v2_review_R01/opencode_v2_review_result_R01.md",
+  "final_response_sha256": "3199e4bb2243c4f991b591f76f5b3eed1d9384a9d6b10dfa6e42cf01d1964cc5",
+  "raw_stdout_local_path": "review/opencode_v2_review_R01/opencode_v2_review_stdout_R01.txt",
+  "raw_stdout_bytes": 4916823,
+  "raw_stdout_sha256": "08b826d32d829bf349947ab29468fa431f1458a2d852d2ea4ab5a9e00daa55d0",
+  "raw_stdout_published": false,
+  "raw_stdout_exclusion_reason": "The full CLI event stream contains unrelated filesystem listings and tool trace; the exact final reviewer response and this receipt are published.",
+  "stderr_bytes": 0,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "review_scope": {
+    "official_requirement": "PASS",
+    "unique_blueprint_and_neighbors": "PASS",
+    "exact_candidate_sha": "PASS_BEFORE_AND_AFTER",
+    "arithmetic": "PASS",
+    "replacement_register": "PASS_WITH_LOCATOR_PRECISION_NOTES",
+    "title_blind_use": "PASS",
+    "sample_real_boundary": "PASS",
+    "visual_pages": "8_OF_8_PROVIDED_FINAL_PNGS_DIRECTLY_INSPECTED",
+    "independent_docx_rerender": "NOT_PERFORMED",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "findings": [
+    {
+      "id": "P3-1",
+      "status": "REPAIRED_REGISTER_ONLY",
+      "scope": "21 X01 fact locators now direct to §3/§8; SYN-ATT-010 attachment row points to §7; DOCX unchanged."
+    },
+    {
+      "id": "P3-2",
+      "status": "REPAIRED_REGISTER_ONLY",
+      "scope": "meeting deadline/place locators point to §4; email time values point to EM01–EM04 in §6; email medium points to the exact §6 introductory sentence; DOCX unchanged."
+    },
+    {
+      "id": "P3-3",
+      "status": "REPAIRED_MANIFEST_ONLY",
+      "scope": "top-level package manifest regenerated from staged Git blobs; DOCX/render artifacts unchanged."
+    }
+  ],
+  "sample_real_boundary": "SAMPLE/SYNTHETIC only; no real association event, signature, authority, approval, or archive is asserted.",
+  "formal_acceptance": "NOT_GRANTED"
+}

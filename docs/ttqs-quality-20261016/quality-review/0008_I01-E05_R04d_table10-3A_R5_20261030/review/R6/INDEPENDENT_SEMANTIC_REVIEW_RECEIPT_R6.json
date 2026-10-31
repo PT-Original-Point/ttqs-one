@@ -1,0 +1,47 @@
+{
+  "schema": "TTQS_ONE_INDEPENDENT_SEMANTIC_REVIEW_RECEIPT_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0008",
+  "official_requirement_id": "I01-E05",
+  "unique_blueprint_id": "I01-E05",
+  "candidate_sha256": "471946bd3725c4538e5d648fe73c7f516889c1365e85f29aa6da5767171910e9",
+  "review_packet_sha256": "bff26ae19bbd0dc7d9ec2496f9aa99c7bdab0f75a7006b98c9fdd1c7d4cae628",
+  "reviewer_name": "OpenCode v2.2.2 plan reviewer",
+  "reviewer_route": "OpenCode v2 CLI --standalone run --agent plan; hidden noninteractive",
+  "reviewer_id": "ses_e74f846f0ffel4PpOlPxKZDKGq",
+  "reviewer_model_requested": "opencode/deepseek-v4.1-flash-free",
+  "reviewer_model_attested": "UNKNOWN",
+  "reviewer_model_attestation_status": "CLI session/harness label self-reported; upstream provider model not independently attested",
+  "response_classification": "INDEPENDENT_SEMANTIC_DELTA_REVIEW",
+  "verdict": "PASS",
+  "reviewer_verdict": "PASS",
+  "combined_semantic_verdict": "PASS",
+  "reviewed_fact_ids": "SF-00689–SF-00717",
+  "reviewed_fact_count": 29,
+  "r5_packet_gap_disposition": "CLOSED",
+  "r5_low_findings_disposition": [
+    {
+      "ref": "L1 header says 目標/差異 without explicitly saying completed seats",
+      "disposition": "NONBLOCKING"
+    },
+    {
+      "ref": "L2 caption 差異閉環 vs all rows OPEN",
+      "disposition": "NONBLOCKING"
+    },
+    {
+      "ref": "L3 one-decimal rates vs two-decimal rule",
+      "disposition": "NONBLOCKING"
+    },
+    {
+      "ref": "L4 23/24=95.83% vs 95% threshold not stated explicitly",
+      "disposition": "NONBLOCKING"
+    }
+  ],
+  "raw_cli_stdout_sha256": "cdc19ccf1abfe301f424277cbc4a11771720e1141138cda55c1a42ba62c0ed4b",
+  "normalized_review_json_sha256": "304f6869ab28a8a69d0c95b4280f4ed0a8db020b30100a58c0de560fe16bc4a2",
+  "candidate_modified": false,
+  "visual_review_claimed": false,
+  "real_evidence_verified": false,
+  "formal_acceptance_granted": false,
+  "completed_local": "2026-10-30T12:19:51.1427735+08:00"
+}

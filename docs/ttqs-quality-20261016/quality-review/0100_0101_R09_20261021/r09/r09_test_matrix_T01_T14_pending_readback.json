@@ -1,0 +1,84 @@
+{
+  "receipt_id": "TTQS-R09-TEST-MATRIX-20261021",
+  "source_commit": "c3cd0c64ed80498c989695ca07a64eab57d84cd4",
+  "contract_blob_06": "4c7eff55748ff265b1e5a7d1122852b0d101acbd",
+  "evaluated_at_local": "2026-10-21T19:34:49.558519+08:00",
+  "tests": [
+    {
+      "id": "T01",
+      "status": "PASS_OBSERVED",
+      "evidence": "OpenCode serve PID 45628 is classified only as a service; R09a reviewer was a distinct run PID/session with a work_id and has completed."
+    },
+    {
+      "id": "T02",
+      "status": "PASS_OBSERVED",
+      "evidence": "19 WINWORD /Automation processes observed; only PID 69032 mapped to current export. Other 18 have no current work_id mapping and are not claimed/killed as writers."
+    },
+    {
+      "id": "T03",
+      "status": "PASS_STALE_DETECTED",
+      "evidence": "Legacy panel source state timestamps Oct 5/10, current live PR head c3cd0c64...; panel inactive. Marked PANEL_STALE, not accepted as current."
+    },
+    {
+      "id": "T04",
+      "status": "UNKNOWN_NO_LIVE_PANEL",
+      "evidence": "Legacy TTQS panel files found, but no live listener or current screen/status response; desktop Dashboard.lnk opens WD SSD Dashboard. Current panel/project alignment cannot be directly tested."
+    },
+    {
+      "id": "T05",
+      "status": "FAIL_GOAL_RESUME_UNVERIFIED",
+      "evidence": "Native Goal status is paused; no supported active/resume transition exposed by current native Goal API. 120m schedule configuration exists, but actual timer run history is unavailable."
+    },
+    {
+      "id": "T06",
+      "status": "PASS_READY_DERIVED",
+      "evidence": "Stale BUILD_QUEUE has 142 records / 115 PENDING, yet 0100 source packet+Blueprint+candidate exist and 0101 source packet+unique Blueprint are available. Did not use absent READY label to stop."
+    },
+    {
+      "id": "T07",
+      "status": "PASS_LANE_ISOLATED",
+      "evidence": "0097 PDF export failure remains isolated to its render lane; 0100 R09a DOCX and QA were completed in this run."
+    },
+    {
+      "id": "T08",
+      "status": "PASS_EXIT0_NOT_DELIVERABLE",
+      "evidence": "Antigravity R03 exit 0 produced text JSON only; no DOCX from that CLI attempt. Not counted as final DOCX acceptance."
+    },
+    {
+      "id": "T09",
+      "status": "NOT_TESTED_NO_APPLICABLE_CASE",
+      "evidence": "No observed nonzero-exit attempt in the current window with a complete stable DOCX and matching receipts to salvage; do not fabricate a test."
+    },
+    {
+      "id": "T10",
+      "status": "PASS_EXACT_SHA_BOUND",
+      "evidence": "0100 semantic PASS is bound to exact SHA debd41e7...45e0b2. R1 PARTIAL on prior e27d... is explicitly historical and not carried forward."
+    },
+    {
+      "id": "T11",
+      "status": "UNKNOWN_MODEL_IDENTITY_HANDLED",
+      "evidence": "Antigravity R03 requested gemini-3.8-flash-high, but stdout has no model/provider field. Actual model/fallback/quota unknown; no Gemini success credited and no new probe dispatched."
+    },
+    {
+      "id": "T12",
+      "status": "PASS_WITH_MINOR_REVIEW_NOTES",
+      "evidence": "0100 contains complete usable questionnaire, synthetic dataset, replacement register and no false approval; exact-SHA semantic PASS and technical/visual PASS. Reviewer lists F1-F4 minor/trivial follow-ups; candidate not formal acceptance."
+    },
+    {
+      "id": "T13",
+      "status": "PENDING_REMOTE_READBACK",
+      "evidence": "Will be updated after fetching remote DOCX/PDF/register/receipts from the new PR head and comparing SHA-256."
+    },
+    {
+      "id": "T14",
+      "status": "PENDING_REMOTE_READBACK",
+      "evidence": "No new writer/reviewer is active; update_ref will use expected head SHA and remote readback; status pending until operation completes."
+    }
+  ],
+  "summary": {
+    "pass_observed": 8,
+    "fail": 1,
+    "unknown_or_not_tested": 5,
+    "all_14_tested_to_terminal": false
+  }
+}

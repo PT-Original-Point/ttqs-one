@@ -1,0 +1,60 @@
+{
+  "schema": "ttqs-one-exact-sha-semantic-composite-v1",
+  "doc_id": "0114",
+  "requirement_id": "I19-E01",
+  "final_sha256": "fe8c9c793cc1b0f196bfbe6c204695b5fd525eec52e86bf6f3c512f2bab13878",
+  "verdict": "PASS_WITH_BOUNDED_DELTA_REVIEW",
+  "full_review": {
+    "sha256": "a93f6cad3e9462be41264c30aa821753ea223710dea1f6487d99ca3ede5c88b9",
+    "verdict": "PASS",
+    "findings": [
+      {
+        "locator": "第七章/7.2節",
+        "finding": "指標二（顧客價值三步驟任務達成率）後期百分比計算項之條目標題與文字誤植為指標一之「後期契合百分比」與「後期主題契合率」，雖數值計算（8/10 = 80.0%）與差距（+30.0 pp）完全正確，但文字標籤出現複製筆誤。",
+        "severity": "MINOR",
+        "action": "將第 7.2 節後期計算之標籤修正為「後期達成百分比」與「後期顧客任務達成率」，維持指標名稱一致性。"
+      }
+    ],
+    "checks": {
+      "correct_type_and_mapping": "PASS",
+      "usable_workflow": "PASS",
+      "sample_real_boundary": "PASS",
+      "math_and_cross_references": "PASS",
+      "neighbor_separation": "PASS",
+      "association_use": "PASS",
+      "formal_acceptance_claim": "PASS"
+    },
+    "stdout_sha256": "a090a22bd8bbb9bb303167999574ba235b6d79923d29fe662e5c423e78211490",
+    "model": "gemini-3.8-flash-high",
+    "token_usage": {
+      "input_tokens": 23143,
+      "output_tokens": 6271,
+      "thinking_tokens": 5876,
+      "cache_read_tokens": 0,
+      "total_tokens": 29414
+    },
+    "conversation_id": "4d029843-7f9d-4233-ae51-5c78e81c3fb1"
+  },
+  "repair": {
+    "scope": "§7.2 C_VAL label only",
+    "final_sha256": "fe8c9c793cc1b0f196bfbe6c204695b5fd525eec52e86bf6f3c512f2bab13878"
+  },
+  "final_sha_delta_review": {
+    "sha256": "fe8c9c793cc1b0f196bfbe6c204695b5fd525eec52e86bf6f3c512f2bab13878",
+    "verdict": "PASS",
+    "scope": "delta-only section 7.2; previous full review bound to prior SHA; no visual or REAL evidence review",
+    "stdout_sha256": "2dd5e8dea7e6118fe8f99c3e7532a2f62d6c7ab8ebfdabe6ca55857c05bfeca9",
+    "model": "gemini-3.8-flash-high",
+    "token_usage": {
+      "input_tokens": 7746,
+      "output_tokens": 1981,
+      "thinking_tokens": 1735,
+      "cache_read_tokens": 0,
+      "total_tokens": 9727
+    },
+    "conversation_id": "59dfacc3-8fa7-4b76-93cb-27080ec88477"
+  },
+  "limitation": "Full review is bound to predecessor SHA; exact final SHA received independent delta review of the only changed section. Reviewer did not inspect layout or REAL evidence.",
+  "real_evidence": "UNKNOWN",
+  "formal_acceptance": "NOT_GRANTED"
+}

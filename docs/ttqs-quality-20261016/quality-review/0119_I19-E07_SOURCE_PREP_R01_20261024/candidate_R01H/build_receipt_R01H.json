@@ -1,0 +1,25 @@
+{
+  "action": "TARGETED_LAYOUT_AND_VERSION_LABEL_REPAIR",
+  "doc_id": "0119",
+  "requirement_id": "I19-E07",
+  "parent_candidate": "R01G",
+  "parent_sha256": "effc5faaf957a42719da89f8457bdc1ae4865090f7d6957b8ec49eb1523d1da1",
+  "candidate": "R01H",
+  "candidate_sha256": "60169b73895fc24bb1a0397534aa0ede37776c1ca3b7631a848bf4b69a9d312a",
+  "content_scope": "No substantive body/table value changes; only orphan caption page break and three visible R01G-to-R01H version labels. Body/table text matches parent after normalizing that exact version-label substitution.",
+  "candidate_version_occurrences": {
+    "body_paragraphs": 2,
+    "table_cells": 1,
+    "footer": 1
+  },
+  "native_word_render_sha256": "365f1b9cc1d3190cd796b0bed775e8ce4b37d76a625cc63cdf03bbd8f3f8afd9",
+  "render_docx_sha256": "60169b73895fc24bb1a0397534aa0ede37776c1ca3b7631a848bf4b69a9d312a",
+  "render_pages": 23,
+  "technical_QA": "see technical_content_QA_R01H.json",
+  "visual_review": "PASS_LAYOUT_ALL_23_PAGES",
+  "semantic_review": "PASS_EXACT_SHA_SEMANTIC_SCOPE",
+  "formal_acceptance": "NOT_GRANTED",
+  "SAMPLE_SYNTHETIC_ONLY": true,
+  "semantic_review_receipt": "qa_R01H/independent_semantic_review_receipt_R01H.json",
+  "semantic_review_receipt_sha256": "9279bb0dbf7995c0a41f1339f3f365ae7896c674d669272ab0699061ecc1b9ec"
+}

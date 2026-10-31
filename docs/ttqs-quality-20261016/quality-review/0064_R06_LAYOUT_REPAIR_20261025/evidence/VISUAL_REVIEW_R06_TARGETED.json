@@ -1,0 +1,32 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0064",
+  "requirement_id": "I14-E05",
+  "official_checkbox_serial": "069",
+  "candidate_revision": "R06",
+  "candidate_sha256": "7dd39bffc4aa7ac94eeace73bec6135bfd1c9b8c216e2de7579d0cc4c35d2764",
+  "pdf_sha256": "cadcd2be30cc6f162d5fa4967046e45a0df8b92d8cc692af7e3e86fd5cda48f0",
+  "page_count": 28,
+  "renderer": "Microsoft Word COM ExportAsFixedFormat + pypdfium2 rasterization",
+  "native_render_started_at": "2026-10-25T19:14:00.0367698+08:00",
+  "native_render_finished_at": "2026-10-25T19:14:18.9553377+08:00",
+  "word_pid": 85820,
+  "word_pid_closed": true,
+  "page_manifest_sha256": "16ece4a6b33d758707ea4fd879fd131b8294766c382c8e594ef80ae70059d712",
+  "page_hash_delta": {
+    "changed_pages": [
+      19
+    ],
+    "unchanged_pages_count": 27,
+    "page_20_sha256": "a8656ccfa64705cc4811cb9cae12082f22ce15b8bddf0af994a7db1ef265b8fa"
+  },
+  "targeted_inspection": {
+    "page_19_sha256": "3ec9d2e022eff8dfcd1aed59a1386c322b17c8df5084152f6e1361dfd8c29a88",
+    "inspected_at_local": "2026-10-25T19:18:00+08:00",
+    "result": "PASS",
+    "observation": "§13.3 table header no longer appears alone at page 19 bottom; section text and shaded note remain readable; page 20 still contains repeated table header and complete data rows."
+  },
+  "coverage": "All unchanged page PNGs match the 28-page R05 full visual inspection by SHA; the only changed page, 19, was directly inspected at original resolution.",
+  "status": "PASS_TARGETED_REPAIR_WITH_HASH_INHERITED_UNCHANGED_PAGES",
+  "formal_acceptance": "NOT_GRANTED"
+}

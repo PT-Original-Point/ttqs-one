@@ -1,0 +1,57 @@
+{
+  "schema": "TTQS_ONE_R12_EXACT_SHA_SEMANTIC_ADJUDICATION_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0124",
+  "requirement_id": "I19-E12",
+  "work_id": "TTQS-0124-I19-E12-R01-ANTIGRAVITY-R12-EXACT-SHA-SEMANTIC-REVIEW",
+  "observed_at_local": "2026-10-27T00:58:47.492316+08:00",
+  "candidate_sha256": "0a6567c2779d9ad8014ab6d1c892779a98892351a38ceda0dea9fa8b24ff2988",
+  "source_packet_sha256": "83a03deb7cbef3f07ef8b7ce0b2b25e1744baa6bc2e96b29e3259453558ccfee",
+  "unique_blueprint_sha256": "d0d8b0990d96fb7dab5d02a34d9f507b6434e57778646c920c488f01c1ab0f42",
+  "review_input_sha256": "28fd462a35929895d283e82127bc32664ff94bd9fd882217533d6764f88d2c14",
+  "review_request_sha256": "e1220635787d81b93b3ff6e1c23b4ce2114a75e3cfe745e06d47cbbaf4f0df34",
+  "current_source_readback": {
+    "head": "17deacf71e23a183b682f8eb52ffa244cae09982",
+    "source_packet_raw_match": true,
+    "unique_blueprint_raw_match": true,
+    "review_input_raw_match": true,
+    "source_snapshot_note": "The embedded packets identify earlier source snapshot 0e377a92599b16d438c62819e299b6d7579f6490; the exact source packet, Unique Blueprint and review-input bytes were independently compared against current PR #92 HEAD and match."
+  },
+  "reviewer_route": "Antigravity CLI v1.4.7, separate CLI review invocation; requested gemini-3.8-flash-high; model catalog listed requested identifier; actual backend model UNKNOWN.",
+  "execution": {
+    "pid": 87452,
+    "started_local": "2026-10-27T00:56:14.139965+08:00",
+    "finished_local": "2026-10-27T00:57:12.299188+08:00",
+    "exit_code": 0,
+    "duration_seconds": 54.495082,
+    "stdout_sha256": "e03885e07e43bb42437040028fd0c191b19b169efa81dc93de99399179b18b13",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "usage": {
+      "input_tokens": 22138,
+      "output_tokens": 6412,
+      "thinking_tokens": 4028,
+      "cache_read_tokens": 0,
+      "total_tokens": 28550
+    },
+    "computer_use": "NOT_USED",
+    "filesystem_network_tools": "NO_TOOL_CALLS_OBSERVED"
+  },
+  "independent_response_sha256": "a4665ce8e60f6c2fe690a501806f860df9b40587e129dd050d2d0d15da73c515",
+  "reviewer_verdict": "PASS",
+  "adjudicated_verdict": "PASS_TEXT_ONLY",
+  "rubric_sections": 8,
+  "rubric_findings": "all eight explicitly PASS with section/table/form locators",
+  "scope_limits": [
+    "text-only; no direct binary inspection",
+    "no visual layout claim",
+    "actual model identity/fallback not verified",
+    "review source narrative cites earlier snapshot, but bound source packet/Blueprint/input bytes match current HEAD"
+  ],
+  "technical_visual_scope": "Existing exact-SHA technical and Word-native visual QA remain separate; 14-page PDF and 14 individually hashed page images are verified. This semantic review does not replace them.",
+  "candidate_changed_after_review": false,
+  "candidate_state": "CANDIDATE",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "NOT_VERIFIED",
+  "promotion": "NOT_PERFORMED",
+  "response_normalization_note": "Derived Markdown removes trailing spaces and extra terminal blank lines for clean repository diff; unmodified raw CLI JSON remains the authoritative original response."
+}

@@ -1,0 +1,426 @@
+{
+  "meta": {
+    "doc_id": "0064",
+    "candidate": "R01",
+    "requirement_id": "I14-E05",
+    "official_checkbox": "069",
+    "official_text": "資訊系統化程度及檢索速度。",
+    "generated_utc": "2026-10-18T11:02:53Z",
+    "host_os": "Windows-10-10.0.19045-SP0",
+    "python": "3.12.14",
+    "clock": "time.perf_counter_ns (monotonic, high-resolution)",
+    "clock_resolution_ns": 100.0,
+    "repeats_per_spec": 20,
+    "corpus_size": 30,
+    "percentile_method": "nearest-rank: rank=ceil(p/100*n), value=sorted[rank-1]",
+    "fixture_json_sha256": "4C24FF120863B70E877B5925C9496157E7E1E6418BFFEE4DA6DC34D2940877DF",
+    "limit_statement": "本數據僅代表本次 Windows 本機、載入合成索引後之程式查找時間，不代表協會正式系統、真人操作、雲端效能或 TTQS 官方門檻。"
+  },
+  "specs": [
+    {
+      "spec_id": "Q01",
+      "type": "EXACT_ID",
+      "label": "精確檔案 ID 查詢",
+      "role": "R01",
+      "param": {
+        "file_id": "F-0064-2026-0007"
+      },
+      "expected_outcome": "HIT",
+      "n_runs": 20,
+      "correct_runs": 20,
+      "expected_outcome_rate_pct": 100.0,
+      "error_runs": 0,
+      "observed_outcomes": {
+        "HIT": 20
+      },
+      "result_count_min": 1,
+      "result_count_last": 1,
+      "leaked_any": false,
+      "latency_ns": {
+        "min": 3200,
+        "p50": 3300,
+        "p95": 4800,
+        "max": 6800,
+        "mean": 3665
+      }
+    },
+    {
+      "spec_id": "Q02",
+      "type": "KEYWORD",
+      "label": "關鍵字查詢",
+      "role": "R02",
+      "param": {
+        "keyword": "滿意度"
+      },
+      "expected_outcome": "HIT_LIST",
+      "n_runs": 20,
+      "correct_runs": 20,
+      "expected_outcome_rate_pct": 100.0,
+      "error_runs": 0,
+      "observed_outcomes": {
+        "HIT_LIST": 20
+      },
+      "result_count_min": 3,
+      "result_count_last": 3,
+      "leaked_any": false,
+      "latency_ns": {
+        "min": 5200,
+        "p50": 5400,
+        "p95": 5600,
+        "max": 7100,
+        "mean": 5455
+      }
+    },
+    {
+      "spec_id": "Q03",
+      "type": "DATE_RANGE",
+      "label": "日期區間查詢",
+      "role": "R04",
+      "param": {
+        "date_from": "2026-09-01",
+        "date_to": "2026-09-30"
+      },
+      "expected_outcome": "HIT_LIST",
+      "n_runs": 20,
+      "correct_runs": 20,
+      "expected_outcome_rate_pct": 100.0,
+      "error_runs": 0,
+      "observed_outcomes": {
+        "HIT_LIST": 20
+      },
+      "result_count_min": 17,
+      "result_count_last": 17,
+      "leaked_any": false,
+      "latency_ns": {
+        "min": 14000,
+        "p50": 14200,
+        "p95": 14500,
+        "max": 15300,
+        "mean": 14265
+      }
+    },
+    {
+      "spec_id": "Q04",
+      "type": "CATEGORY",
+      "label": "類別查詢",
+      "role": "R01",
+      "param": {
+        "category": "出席紀錄"
+      },
+      "expected_outcome": "HIT_LIST",
+      "n_runs": 20,
+      "correct_runs": 20,
+      "expected_outcome_rate_pct": 100.0,
+      "error_runs": 0,
+      "observed_outcomes": {
+        "HIT_LIST": 20
+      },
+      "result_count_min": 3,
+      "result_count_last": 3,
+      "leaked_any": false,
+      "latency_ns": {
+        "min": 5300,
+        "p50": 5400,
+        "p95": 5600,
+        "max": 6900,
+        "mean": 5480
+      }
+    },
+    {
+      "spec_id": "Q05",
+      "type": "NOT_FOUND",
+      "label": "無資料查詢（關鍵字）",
+      "role": "R01",
+      "param": {
+        "keyword": "量子電腦"
+      },
+      "expected_outcome": "NOT_FOUND",
+      "n_runs": 20,
+      "correct_runs": 20,
+      "expected_outcome_rate_pct": 100.0,
+      "error_runs": 0,
+      "observed_outcomes": {
+        "NOT_FOUND": 20
+      },
+      "result_count_min": 0,
+      "result_count_last": 0,
+      "leaked_any": false,
+      "latency_ns": {
+        "min": 3700,
+        "p50": 3800,
+        "p95": 4200,
+        "max": 4600,
+        "mean": 3880
+      }
+    },
+    {
+      "spec_id": "Q06",
+      "type": "AMBIGUOUS",
+      "label": "歧義查詢（單筆指定，命中多筆）",
+      "role": "R01",
+      "param": {
+        "keyword": "結案報告",
+        "single": true
+      },
+      "expected_outcome": "HOLD_AMBIGUOUS",
+      "n_runs": 20,
+      "correct_runs": 20,
+      "expected_outcome_rate_pct": 100.0,
+      "error_runs": 0,
+      "observed_outcomes": {
+        "HOLD_AMBIGUOUS": 20
+      },
+      "result_count_min": 0,
+      "result_count_last": 0,
+      "leaked_any": false,
+      "latency_ns": {
+        "min": 4000,
+        "p50": 4000,
+        "p95": 4400,
+        "max": 4900,
+        "mean": 4110
+      }
+    },
+    {
+      "spec_id": "Q07",
+      "type": "ACCESS_DENIED",
+      "label": "未授權精確查詢（敏感級）",
+      "role": "R06",
+      "param": {
+        "file_id": "F-0064-2026-0008"
+      },
+      "expected_outcome": "ACCESS_DENIED",
+      "n_runs": 20,
+      "correct_runs": 20,
+      "expected_outcome_rate_pct": 100.0,
+      "error_runs": 0,
+      "observed_outcomes": {
+        "ACCESS_DENIED": 20
+      },
+      "result_count_min": 0,
+      "result_count_last": 0,
+      "leaked_any": false,
+      "latency_ns": {
+        "min": 3100,
+        "p50": 3200,
+        "p95": 4100,
+        "max": 5600,
+        "mean": 3355
+      }
+    },
+    {
+      "spec_id": "Q08",
+      "type": "ACCESS_DENIED",
+      "label": "未識別角色關鍵字查詢",
+      "role": "R99",
+      "param": {
+        "keyword": "學員"
+      },
+      "expected_outcome": "ACCESS_DENIED",
+      "n_runs": 20,
+      "correct_runs": 20,
+      "expected_outcome_rate_pct": 100.0,
+      "error_runs": 0,
+      "observed_outcomes": {
+        "ACCESS_DENIED": 20
+      },
+      "result_count_min": 0,
+      "result_count_last": 0,
+      "leaked_any": false,
+      "latency_ns": {
+        "min": 5600,
+        "p50": 5700,
+        "p95": 6700,
+        "max": 7300,
+        "mean": 5850
+      }
+    },
+    {
+      "spec_id": "Q09",
+      "type": "NOT_FOUND",
+      "label": "無資料查詢（ID 格式合法但不存在）",
+      "role": "R01",
+      "param": {
+        "file_id": "F-0064-2026-9999"
+      },
+      "expected_outcome": "NOT_FOUND",
+      "n_runs": 20,
+      "correct_runs": 20,
+      "expected_outcome_rate_pct": 100.0,
+      "error_runs": 0,
+      "observed_outcomes": {
+        "NOT_FOUND": 20
+      },
+      "result_count_min": 0,
+      "result_count_last": 0,
+      "leaked_any": false,
+      "latency_ns": {
+        "min": 2700,
+        "p50": 2700,
+        "p95": 2800,
+        "max": 3300,
+        "mean": 2740
+      }
+    },
+    {
+      "spec_id": "Q10",
+      "type": "KEYWORD",
+      "label": "複合查詢（關鍵字＋類別＋日期）",
+      "role": "R01",
+      "param": {
+        "keyword": "出席",
+        "category": "出席紀錄",
+        "date_from": "2026-09-01",
+        "date_to": "2026-09-30"
+      },
+      "expected_outcome": "HIT_LIST",
+      "n_runs": 20,
+      "correct_runs": 20,
+      "expected_outcome_rate_pct": 100.0,
+      "error_runs": 0,
+      "observed_outcomes": {
+        "HIT_LIST": 20
+      },
+      "result_count_min": 2,
+      "result_count_last": 2,
+      "leaked_any": false,
+      "latency_ns": {
+        "min": 5600,
+        "p50": 5700,
+        "p95": 7500,
+        "max": 7500,
+        "mean": 5930
+      }
+    }
+  ],
+  "by_type": {
+    "EXACT_ID": {
+      "type": "EXACT_ID",
+      "n_runs": 20,
+      "correct_runs": 20,
+      "expected_outcome_rate_pct": 100.0,
+      "error_runs": 0,
+      "leaked_runs": 0,
+      "leak_rate_pct": 0.0,
+      "latency_ms": {
+        "min": 0.0032,
+        "p50": 0.0033,
+        "p95": 0.0048,
+        "max": 0.0068,
+        "mean": 0.0037
+      }
+    },
+    "KEYWORD": {
+      "type": "KEYWORD",
+      "n_runs": 40,
+      "correct_runs": 40,
+      "expected_outcome_rate_pct": 100.0,
+      "error_runs": 0,
+      "leaked_runs": 0,
+      "leak_rate_pct": 0.0,
+      "latency_ms": {
+        "min": 0.0052,
+        "p50": 0.0056,
+        "p95": 0.0071,
+        "max": 0.0075,
+        "mean": 0.0057
+      }
+    },
+    "DATE_RANGE": {
+      "type": "DATE_RANGE",
+      "n_runs": 20,
+      "correct_runs": 20,
+      "expected_outcome_rate_pct": 100.0,
+      "error_runs": 0,
+      "leaked_runs": 0,
+      "leak_rate_pct": 0.0,
+      "latency_ms": {
+        "min": 0.014,
+        "p50": 0.0142,
+        "p95": 0.0145,
+        "max": 0.0153,
+        "mean": 0.0143
+      }
+    },
+    "CATEGORY": {
+      "type": "CATEGORY",
+      "n_runs": 20,
+      "correct_runs": 20,
+      "expected_outcome_rate_pct": 100.0,
+      "error_runs": 0,
+      "leaked_runs": 0,
+      "leak_rate_pct": 0.0,
+      "latency_ms": {
+        "min": 0.0053,
+        "p50": 0.0054,
+        "p95": 0.0056,
+        "max": 0.0069,
+        "mean": 0.0055
+      }
+    },
+    "NOT_FOUND": {
+      "type": "NOT_FOUND",
+      "n_runs": 40,
+      "correct_runs": 40,
+      "expected_outcome_rate_pct": 100.0,
+      "error_runs": 0,
+      "leaked_runs": 0,
+      "leak_rate_pct": 0.0,
+      "latency_ms": {
+        "min": 0.0027,
+        "p50": 0.0033,
+        "p95": 0.0041,
+        "max": 0.0046,
+        "mean": 0.0033
+      }
+    },
+    "AMBIGUOUS": {
+      "type": "AMBIGUOUS",
+      "n_runs": 20,
+      "correct_runs": 20,
+      "expected_outcome_rate_pct": 100.0,
+      "error_runs": 0,
+      "leaked_runs": 0,
+      "leak_rate_pct": 0.0,
+      "latency_ms": {
+        "min": 0.004,
+        "p50": 0.004,
+        "p95": 0.0044,
+        "max": 0.0049,
+        "mean": 0.0041
+      },
+      "ambiguous_hold_runs": 20,
+      "ambiguity_safe_hold_rate_pct": 100.0
+    },
+    "ACCESS_DENIED": {
+      "type": "ACCESS_DENIED",
+      "n_runs": 40,
+      "correct_runs": 40,
+      "expected_outcome_rate_pct": 100.0,
+      "error_runs": 0,
+      "leaked_runs": 0,
+      "leak_rate_pct": 0.0,
+      "latency_ms": {
+        "min": 0.0031,
+        "p50": 0.0056,
+        "p95": 0.006,
+        "max": 0.0073,
+        "mean": 0.0046
+      },
+      "denied_runs": 40
+    }
+  },
+  "overall": {
+    "total_runs": 200,
+    "total_correct": 200,
+    "overall_correct_rate_pct": 100.0,
+    "total_leaked_runs": 0,
+    "latency_ms": {
+      "min": 0.0027,
+      "p50": 0.0053,
+      "p95": 0.0142,
+      "max": 0.0153,
+      "mean": 0.0055
+    }
+  }
+}

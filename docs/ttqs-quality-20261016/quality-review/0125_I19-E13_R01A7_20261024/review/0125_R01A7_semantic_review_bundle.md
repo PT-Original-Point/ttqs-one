@@ -1,0 +1,544 @@
+# Read-only independent semantic review bundle for 0125 / I19-E13 / R01A7
+Candidate DOCX SHA-256: 1de398e4361dcacf843996b4d93b3c2dbf499b494c26887fa9d207fec299b131
+Only the DOCX extraction is the candidate body. Other sections are authority or audit references. Do not edit files; this review is semantic only, not visual/layout review.
+
+## EXACT DOCX TEXT EXTRACT
+FILE_SHA256=f9c501fde819db2d55723448c454bd757f8438919dc13992a5d33dd732328d44
+0125 / I19-E13 R01A7 exact-DOCX semantic review extraction
+DOCX_SHA256=1de398e4361dcacf843996b4d93b3c2dbf499b494c26887fa9d207fec299b131
+The following text and table rows were extracted directly from the exact DOCX bytes above. Review semantic content only; do not infer layout PASS from this extraction.
+
+P0001 [Title]: 0125__學員職務運用追蹤紀錄
+P0002 [Normal]: 【文件狀態聲明】   / 當前狀態： SAMPLE / SYNTHETIC ONLY（全數值均為模擬示範資料）   / 真實憑證狀態： REAL EVIDENCE NOT PROVIDED（本階段未提供機構真實佐證原件）   / 官方核定狀態： FORMAL ACCEPTANCE NOT GRANTED（未獲評核正式認可）   / 免責與邊界聲明： 本文件為「TTQS 訓練品質評核系統」指標 I19-E13（官方佐證要求：部份學員能運用所學於職務中。）之專屬改善與行動追蹤工具。本件不代表任何學員與雇主之真實身分、實際人事考核、薪資異動或協會年度正式辦訓實績；所有示範案例均採用角色代碼與模擬定位標籤，不得作為真實業務成效之背書。
+P0003 [Heading 1]: 第一章 文件首頁與 30 秒快速指引
+P0004 [Heading 2]: 1.1 文件基本資訊表
+
+TABLE T001 rows=6 cols=3
+T001-R001: 欄位 | 本候選工具內容 | 使用界線
+T001-R002: 文件編號／官方要求 | 0125／I19-E13；部份學員能運用所學於職務中。 | 官方原文與本文件映射依來源包；不等同正式接受。
+T001-R003: 文類與目的 | 改善／行動追蹤工具：追蹤個別學員在職務中的學習運用。 | 記錄機會、工作產出、可觀察差距、措施與覆驗；不評定雇主滿意或薪資效果。
+T001-R004: 主要使用者 | 執行本追蹤流程的承辦角色、工作產出覆核角色及案件決定者。 | 以下職能角色為流程建議，須由協會依現行職務與授權指定，不表示已有人員任命。
+T001-R005: 觀察時點 | 可採結訓後分段追蹤；本文件樣例以結訓日為第 0 日展示第 31–60 日觀察及第 90 日覆驗。 | 期間是可調整的 SAMPLE 流程設計，不是官方或法定期限。正式使用前由協會依課程與證據取得條件設定。
+T001-R006: 本候選狀態 | SAMPLE / SYNTHETIC ONLY；REAL EVIDENCE NOT PROVIDED；FORMAL ACCEPTANCE NOT GRANTED。 | 任何真實案件均須另用合法、獲授權的原始證據；不可把示範值移植為協會實績。
+P0006 [Heading 2]: 1.2 30 秒快速執行指引
+P0007 [List Number]: 建案與機會判定：依可查的結訓紀錄建立案件；核實觀察期內是否有與課程目標相符的工作任務機會。無機會須另列，不計為未運用。
+P0008 [List Number]: 收集與保護：取得去識別且經適當授權的工作產出或可核實觀察紀錄；只保存安全索引，不在一般追蹤表複製不必要個資或商業機密。
+P0009 [List Number]: 依規準檢查：逐項寫明來源定位、工作技能、判斷理由及缺失。缺證據列 HOLD/UNKNOWN；已使用但有缺失列 PARTIAL_USE。
+P0010 [List Number]: 開立行動並覆驗：把原因標為已證實或待驗證假設；每項措施寫負責職能、到期日、資源、可驗收證據。不得倒填或改寫原件。
+P0011 [List Number]: 記錄案件狀態：結案只能在本工具的驗證條件均有證據且由協會實際授權者作出決定後記錄。本文件的合成案例停在 HOLD/REVISE，沒有協會核准。
+P0012 [Heading 1]: 第二章 追蹤目的、收案資格與觀察期規範
+P0013 [Heading 2]: 2.1 追蹤目的
+P0014 [Normal]: 本機制旨在建立小型產業協會於訓練結束後，客觀驗證學員將課堂所學技能（如流程規範、表單填寫、技術操作）轉移至其日常崗位職務之微觀證據鏈。本工具不評量組織巨觀營運成果，專注於「學員個人是否有機會、是否嘗試運用、產出是否符合驗收標準、未達標時如何採取補救措施」。
+P0015 [Heading 2]: 2.2 收案範圍、資料來源及觀察期
+P0016 [Normal]: 本官方要求未在來源包中規定出席率門檻、測驗門檻、同意書格式、固定分母或固定觀察天數。不得把下列工具口徑稱為法定條件或官方標準。
+
+TABLE T002 rows=5 cols=3
+T002-R001: 作業項目 | 可操作規則 | 必要留痕／例外
+T002-R002: 案件母體 | 先由一個有來源的班次／課程名冊界定本次追蹤群體；課程與結訓狀態只依現存訓練紀錄登錄。 | 找不到來源時標 HOLD/UNKNOWN，不補造名冊或資格。
+T002-R003: 工作機會 | 對每位學員記錄觀察期內是否有執行對應工作任務的機會，及判定依據。 | 沒有機會列 NO_OPPORTUNITY 並另報人數；不得列作未運用。
+T002-R004: 資料使用依據 | 在收集前確認實際適用的授權、隱私及機密處理規則；以最少必要、去識別資料執行。 | 權限或依據不明就不收件、不公開，案件列 HOLD，交有權者確認。
+T002-R005: SAMPLE 期間 | 本例以結訓日 2026-07-01 為第 0 日：第 31–60 日為 2026-08-01 至 2026-08-30；第 90 日為 2026-09-29。 | 這是可重算的合成示例，不是官方期限。真實案件依課程、工作機會及正式作業規則設定。
+P0018 [Heading 2]: 2.3 狀態、分母與計算口徑
+P0019 [Normal]: 以本次已界定且具任務機會的人數作為「有機會追蹤分母」。每次報告須同時列出母體、無機會、未知、部分運用及完整運用人數；不得把未知列成功。以下口徑僅供一致描述，並非官方通過門檻。
+
+TABLE T003 rows=6 cols=3
+T003-R001: 狀態 | 操作定義 | 樣例計算處理
+T003-R002: COMPLETE_USE | 有可定位工作產出或經核實的直接觀察，且本工具所列關鍵檢核點均符合。 | 納入任何運用分子及完整運用分子。
+T003-R003: PARTIAL_USE | 有證據顯示曾運用，但一項或多項檢核點未達；需列差距與措施。 | 納入任何運用分子，另列部分運用，不等於完整運用。
+T003-R004: VERIFIED_NO_USE | 有機會且經適當查證，在觀察範圍內未見使用；須列查核方法及來源。 | 留在有機會分母，不列運用分子。
+T003-R005: HOLD_UNKNOWN | 證據缺漏、讀取權限未確認、來源不清或尚未核實。 | 暫列有機會分母並單獨報告，不得列成功或失敗定論。
+T003-R006: NO_OPPORTUNITY | 觀察期內無相符工作任務機會，且有可核實原因。 | 不納入有機會分母，另列人數及原因。
+P0021 [Normal]: 公式：任何運用率＝(COMPLETE_USE＋PARTIAL_USE)／有機會追蹤分母；完整運用率＝COMPLETE_USE／分母；未知率＝HOLD_UNKNOWN／分母。百分比須附分子、分母、期間及四捨五入方式。結果只描述此樣本，不宣稱因果，也不據此推導官方評等。
+P0022 [Heading 1]: 第三章 角色職責與權限邊界（小型協會情境）
+P0023 [Normal]: 小型協會通常無獨立人資部門（HR），追蹤職責由秘書處現有同仁兼任。為防範球員兼裁判與推論失真，訂定明確權限矩陣：
+P0024 [Heading 2]: 3.1 流程職能分工（待協會依現況指定）
+P0025 [Normal]: 以下是可配置的職能，不代表原始點協會已設有該職稱、已任命人員或授予核決權。開始真實作業前，應在案件表填入實際職能名稱及授權依據；未確認者不得以本文件代替核准。
+
+TABLE T004 rows=5 cols=3
+T004-R001: 流程職能 | 工作責任 | 不可逾越的界線
+T004-R002: 案件承辦 | 建立案件索引、核對來源完整性、通知收件、維護狀態與期限。 | 不得代替學員或雇主製作工作原件；不得自行判定授權存在。
+T004-R003: 工作樣本覆核 | 依本次課程目標和已確認的工作規準記錄符合／差距及理由。 | 不作僱傭、法律或雇主績效判斷；與承辦為同一人時需揭露自覆核風險。
+T004-R004: 案件決定職能 | 確認措施是否經覆驗，決定維持列管或結案。 | 僅由協會實際授權者執行；本候選稿沒有任何真實核准或簽章。
+T004-R005: 資料保管／隱私諮詢 | 指定允許的資料位置、存取人員及保存處置。 | 權限、法源／授權或保存規則不明時先限制存取並列 HOLD。
+P0027 [Heading 2]: 3.2 與相鄰文件之嚴格邊界表（拒絕混淆）
+
+TABLE T005 rows=5 cols=4
+T005-R001: 檢驗維度 | 0124 雇主聘僱與回饋 (I19-E12) | 0125 學員職務運用紀錄 (I19-E13) [本文件] | 0126 訓後薪資變化調查 (I19-E14)
+T005-R002: 核心目的 | 評估雇主滿意度與企業端留任意願 | 追蹤學員微觀工作物是否展現課堂所學技能 | 評估學員經濟收益與職務晉升回饋
+T005-R003: 主要佐證物 | 聘僱證明書、雇主問卷、訪談紀錄 | 去識別化工作日誌、客訴紀錄單、操作檢核表 | 薪資明細表、調薪通知書、所得扣繳憑單
+T005-R004: 禁止推論事項 | 不得以雇主滿意推斷學員產出完全合規 | 不得以產出合規推論獲得調薪或雇主永久背書 | 不得以薪資調整直接宣稱為單一培訓因果
+T005-R005: 因果宣稱限制 | 僅呈現雇主主觀評價 | 僅呈現工作物檢驗結果，嚴禁宣稱因果必然性 | 僅呈現薪資變動客觀數據
+P0030 [Heading 1]: 第四章 學員職務運用追蹤標準作業程序（SOP）
+P0031 [Heading 2]: 4.1 作業流程與分支
+P0032 [Normal]: 建案（來源可查）→ 判定工作任務機會 → 依已確認的資料授權取得去識別樣本 → 對照課程目標及可觀察規準 → 記錄 COMPLETE_USE、PARTIAL_USE、VERIFIED_NO_USE、HOLD_UNKNOWN 或 NO_OPPORTUNITY → 有差距時建立措施 → 取得後續樣本覆驗 → 留存結案／維持列管理由與決定者授權來源。
+P0033 [Normal]: 分支規則：
+P0034 [List Bullet]: NO_OPPORTUNITY：記錄任務機會為何不存在，另列統計；不把它判成失敗。
+P0035 [List Bullet]: HOLD_UNKNOWN：指出缺少的來源、負責取得者及下次檢視日；在核實前不結案、不列成功。
+P0036 [List Bullet]: PARTIAL_USE／VERIFIED_NO_USE：具體列出可觀察差距及改善措施；不可倒填原始記錄。
+P0037 [List Bullet]: 發現疑似變造、隱私或安全風險：停止複製／傳送受影響資料，保留原始狀態並交有權職能處理。
+P0038 [Heading 2]: 4.2 輸入、控制點、輸出及異常處理
+
+TABLE T006 rows=7 cols=5
+T006-R001: 步驟 | 輸入 | 控制與判定 | 輸出 | 異常處理
+T006-R002: 1. 定義群體 | 有來源的課程及結訓紀錄 | 以可追溯來源界定名冊與觀察期，不另造出席／測驗門檻。 | 去識別案件索引 | 來源不足列 HOLD，不估填。
+T006-R003: 2. 判定機會 | 工作職務描述或經授權的學員說明 | 記錄任務、觀察期及判斷依據。 | OPPORTUNITY／NO_OPPORTUNITY | 工作機會尚不能確認列 HOLD_UNKNOWN。
+T006-R004: 3. 收取佐證 | 工作樣本或可核實的觀察紀錄 | 收件前檢查授權、最少必要、去識別及安全傳遞。 | 受限存取的證據定位碼 | 未授權／含不必要識別資訊時退回安全處理，不放入公開附件。
+T006-R005: 4. 覆核樣本 | 課程目標、規準、樣本 | 每一項判斷須有頁／欄／樣本定位與理由；重大缺漏不得平均抵銷。 | 檢核結果與差距 | 證據不清列 HOLD；不同覆核者意見不一時保留兩種理由並送實際授權職能決定。
+T006-R006: 5. 改善及覆驗 | 已定位差距、可行措施 | 一措施一責任職能、期限、所需資源、完成證據、覆驗標準。 | 行動清單與覆驗結果 | 原件保留；修正以具日期的補充紀錄關聯，不覆寫原件。
+T006-R007: 6. 狀態決定 | 完整案件及行動證據 | 工具建議：未決、逾期或未通過維持 HOLD/REVISE；只有實際授權者可決定正式結案。 | 決定依據與狀態歷程 | 授權者或依據不明時不得記成正式核准；保留候選狀態。
+P0041 [Heading 1]: 第五章 實際操作表單與 SAMPLE 對照
+P0042 [Normal]: 本章先列可供真實案件使用的空白欄位，再由第六、七章展示已填完整的 SAMPLE。空白表僅是工作工具，不是實際證據。未取得正式授權前不得填入個資或外部原件。
+P0043 [Heading 2]: 表 5-1：職務運用追蹤案件表（REAL use only）
+
+TABLE T007 rows=12 cols=2
+T007-R001: 欄位 | 真實作業記錄
+T007-R002: 案件代碼／課程及班次來源 | 由承辦依正式來源填入；定位碼：____________
+T007-R003: 結訓日期／觀察起訖日 | 日期及 day-count 規則：____________
+T007-R004: 課程目標／對應工作任務 | 目標來源與段落：____________；任務描述：____________
+T007-R005: 機會判定 | □ 有機會 □ 無機會 □ 待核；依據定位：____________
+T007-R006: 資料使用授權／存取限制 | 核對依據及批准的保管位置：____________；不在本表抄錄敏感資料。
+T007-R007: 工作樣本編碼／日期 | 去識別碼：____________；日期：____________；安全位置的受限 locator：____________
+T007-R008: 可觀察檢核點與結果 | 檢核點：____________；□ 符合 □ 有差距 □ 無法判定；理由及定位：____________
+T007-R009: 個案狀態 | □ COMPLETE_USE □ PARTIAL_USE □ VERIFIED_NO_USE □ HOLD_UNKNOWN □ NO_OPPORTUNITY
+T007-R010: 覆核及異議 | 覆核職能：____________；日期：____________；異議／限制：____________
+T007-R011: 下一步與期限 | 措施：____________；責任職能：____________；期限：____________；完成證據定位：____________
+T007-R012: 決定與授權 | □ 維持列管 □ 建議結案 □ 正式結案（須填授權依據）；決定者職能／依據／日期：____________
+P0045 [Heading 2]: 表 5-2：差距改善與有效性覆驗表（REAL use only）
+
+TABLE T008 rows=12 cols=2
+T008-R001: 欄位 | 記錄
+T008-R002: 案件代碼／原始差距定位 | ____________
+T008-R003: 已證實事實 | ____________
+T008-R004: 原因假設（如尚未證實，明確標示） | 假設：____________；如何驗證：____________
+T008-R005: 措施編號／具體產出 | ____________
+T008-R006: 責任職能／協同資源 | ____________
+T008-R007: 設定期限及設定依據 | ____________
+T008-R008: 完成證據受限定位碼 | ____________
+T008-R009: 驗收標準與逐項結果 | 標準：____________；結果：____________；缺失：____________
+T008-R010: 有效性覆驗 | 後續抽樣範圍：____________；通過件／抽查件：____／____；計算：____________
+T008-R011: 狀態與重開原因 | □ 完成 □ 未完成 □ 逾期 □ HOLD；新證據／重開原因：____________
+T008-R012: 實際授權決定 | 決定：____________；授權依據及安全定位碼：____________（不得仿簽）
+P0047 [Normal]: 表單留白屬明確的 REAL replacement area；示範值只出現在標為 SAMPLE / SYNTHETIC 的章節。正式使用時須另存新案件記錄，原始樣本不得被本候選示範取代。
+P0049 [Heading 1]: 第六章 SAMPLE 群體追蹤明細與可重算指標
+P0050 [Normal]: SAMPLE / SYNTHETIC ONLY。 本章是用於測試表單與分母口徑的虛構數據，不是協會辦訓或學員績效。樣本課程日為 2026-07-01，課程名稱與 16 小時均屬合成設定。日數以結訓日為第 0 日計。
+P0051 [Heading 2]: 6.1 群體明細
+
+TABLE T009 rows=13 cols=6
+T009-R001: 學員代碼 | 合成職務角色 | 任務機會 | 樣本定位 | 狀態 | 判定說明
+T009-R002: SYN-L01 | 門市客服助理 | 有 | SIM-LOC-01 | COMPLETE_USE | 核心檢核點均有示例證據
+T009-R003: SYN-L02 | 櫃檯接待組長 | 有 | SIM-LOC-02 | COMPLETE_USE | 核心檢核點均符合
+T009-R004: SYN-L03 | 售後服務專員 | 有 | SIM-LOC-03 | COMPLETE_USE | 核心檢核點均符合
+T009-R005: SYN-L04 | 線上客服專員 | 有 | SIM-LOC-04 | COMPLETE_USE | 核心檢核點均符合
+T009-R006: SYN-L05 | 電話客服人員 | 有 | SIM-LOC-05 | COMPLETE_USE | 核心檢核點均符合
+T009-R007: SYN-L06 | 現場營運助理 | 有 | SIM-LOC-06 | COMPLETE_USE | 核心檢核點均符合
+T009-R008: SYN-L07 | 客服調度助理 | 有 | SIM-LOC-07 | PARTIAL_USE | 有使用紀錄，缺後續追蹤欄
+T009-R009: SYN-L08 | 門市服務助理 | 有 | SIM-LOC-08 | PARTIAL_USE | 有使用紀錄，改善個案見第七章
+T009-R010: SYN-L09 | 倉儲協調助理 | 有 | SIM-LOC-09 | VERIFIED_NO_USE | 合成查核顯示有任務機會但未見使用
+T009-R011: SYN-L10 | 專案客服助理 | 有 | SIM-LOC-10 | HOLD_UNKNOWN | 樣本缺漏，不能判定使用結果
+T009-R012: SYN-L11 | 行政後勤助理 | 無 | SIM-LOC-11 | NO_OPPORTUNITY | 合成設定為觀察期無對應任務
+T009-R013: SYN-L12 | 門市支援人員 | 無 | SIM-LOC-12 | NO_OPPORTUNITY | 合成設定為觀察期無對應任務
+P0053 [Heading 2]: 6.2 公式與計算
+P0054 [List Bullet]: 追蹤群體：12 人。
+P0055 [List Bullet]: 無任務機會：2 人（SYN-L11、SYN-L12），單獨列報。
+P0056 [List Bullet]: 有機會追蹤分母：12 − 2 = 10 人；其中 COMPLETE 6、PARTIAL 2、VERIFIED_NO_USE 1、HOLD_UNKNOWN 1，合計 10。
+P0057 [List Bullet]: 任何運用率：(6 + 2) ÷ 10 = 8 ÷ 10 = 80.0%。
+P0058 [List Bullet]: 完整運用率：6 ÷ 10 = 60.0%。
+P0059 [List Bullet]: 部分運用率：2 ÷ 10 = 20.0%。
+P0060 [List Bullet]: 確認未運用率：1 ÷ 10 = 10.0%。
+P0061 [List Bullet]: 未決率：1 ÷ 10 = 10.0%。
+P0062 [List Bullet]: 無機會比例：2 ÷ 12 = 16.7%（四捨五入至小數一位）。
+P0063 [Normal]: 以上僅為這組合成樣本的描述性計算，不是官方合格標準或最低門檻。未知者仍留在分母並單獨揭露；不可把未知當成功，也不可由這組資料推論課程造成工作績效改變。
+
+TABLE T010 rows=7 cols=5
+T010-R001: 指標 | 分子 | 分母 | 結果 | 解讀
+T010-R002: 任何運用 | 8（6＋2） | 10 | 80.0% | 僅描述至少有一項運用證據
+T010-R003: 完整運用 | 6 | 10 | 60.0% | 依本工具的 SAMPLE 檢核點全部符合
+T010-R004: 部分運用 | 2 | 10 | 20.0% | 有使用但仍有差距
+T010-R005: 確認未運用 | 1 | 10 | 10.0% | 有機會且示範查核未見使用
+T010-R006: 未決 | 1 | 10 | 10.0% | 待補證，無成功或失敗結論
+T010-R007: 無機會 | 2 | 12 | 16.7% | 分母外獨立揭露
+P0065 [Heading 2]: 6.3 解讀限制
+P0066 [Normal]: 本例只有 12 筆虛構記錄，無抽樣代表性；任務機會與工作物判定也只是示範。任何真實報告須保留原始樣本定位、納入／排除理由、觀察期與計算表；不可把 80.0% 寫成協會績效、官方門檻或訓練因果。
+P0067 [Heading 1]: 第七章 完整 SAMPLE 改善閉環：SYN-0125-CASE-01
+P0068 [Normal]: SAMPLE / SYNTHETIC ONLY。 此案所有課程、角色、日期、工作樣本、原因、措施及結果均為虛構。定位碼不連到實際檔案；沒有真人、雇主、簽章、核准或協會決議。
+P0069 [Heading 2]: 7.1 課程目標、工作任務及觀察窗
+P0070 [List Bullet]: 案件：SYN-0125-CASE-01；群體代碼 SYN-L08。
+P0071 [List Bullet]: 合成結訓日：2026-07-01，第 0 日；合成課程：顧客抱怨處理與客訴紀錄實務，16 小時。
+P0072 [List Bullet]: 示範目標：依情境記錄問題、確認需求、在既有授權範圍內處理或轉介，並記錄後續追蹤。這是示例課程目標，不是協會現行課程紀錄。
+P0073 [List Bullet]: 合成職務任務：門市接待及客訴收件。此角色不代表真實任職。
+P0074 [List Bullet]: 觀察窗：第 31–60 日，即 2026-08-01 至 2026-08-30；結訓第 90 日示範覆驗日為 2026-09-29。
+P0075 [Heading 2]: 7.2 五件工作樣本與檢核結果
+P0076 [Normal]: 樣本以四個示範檢核點判斷：事件／時間可辨識、學員操作與課程目標對應、處理或轉介理由可理解、後續追蹤可定位。每件樣本均為合成記錄。
+
+TABLE T011 rows=6 cols=6
+T011-R001: 樣本 | 日期 | 合成定位碼 | 核心檢查 | 結果 | 說明
+T011-R002: SYN-D01 | 2026-08-05 | SIM-LOC-CASE01-D01 | 事件與時間、需求摘要 | 通過 | 合成例中兩項均可辨識
+T011-R003: SYN-D02 | 2026-08-11 | SIM-LOC-CASE01-D02 | 處理／轉介理由及權限界線 | 通過 | 不表示有真實主管簽章
+T011-R004: SYN-D03 | 2026-08-17 | SIM-LOC-CASE01-D03 | 理由及後續追蹤定位 | 未通過 | 合成重大缺口：缺處理依據及追蹤日期
+T011-R005: SYN-D04 | 2026-08-22 | SIM-LOC-CASE01-D04 | 技能步驟與記錄可讀性 | 通過 | 合成例中檢核點可追溯
+T011-R006: SYN-D05 | 2026-08-28 | SIM-LOC-CASE01-D05 | 後續處置或轉介結果 | 通過 | 合成例中可找到後續狀態
+P0078 [Normal]: 樣本計算：4 件符合本工具示範檢核點 ÷ 5 件抽查 = 80.0%。這是描述值，不是官方或法定門檻。由於 D03 缺關鍵依據及追蹤日期，不能用其他通過項目平均抵銷；整案判為 PARTIAL_USE 並啟動改善示範。
+P0079 [Heading 2]: 7.3 原因分析：假設與驗證分開
+P0080 [Normal]: 現有合成資料只能指出 D03 的欄位缺漏，不能證實原因。下列為待驗證假設：忙碌時遺漏追蹤欄、表單提示不明、覆核時未發現。建議驗證方式：查看經授權的後續樣本、詢問使用者如何完成該欄位、比較表單欄位提示；若沒有資料，原因狀態保持 UNKNOWN，不得寫成已證實根因。
+
+TABLE T012 rows=4 cols=4
+T012-R001: 分析面向 | 待驗證假設 | 可用驗證資料 | 未驗證時處置
+T012-R002: 人員操作 | 使用者可能不清楚記錄處理理由 | 後續樣本、流程說明回顧 | 不把猜測寫成個人失職
+T012-R003: 表單工具 | 欄位提示可能不明顯 | 表單版本、可讀性檢視 | 僅提出改善建議
+T012-R004: 流程覆核 | 交接時可能沒有欄位完整性檢查 | 授權後可用的流程記錄 | 無來源即標 UNKNOWN
+P0082 [Heading 2]: 7.4 措施、責任職能、期限與驗收證據
+P0083 [Normal]: 所有日期、角色與行動均為合成；表中「完成」只代表示例資料內有對應合成紀錄，不代表任何人實際執行。
+
+TABLE T013 rows=5 cols=6
+T013-R001: 行動 | 具體產出與驗收標準 | 責任職能（示例） | 資源 | 期限 | 合成完成狀態與定位
+T013-R002: ACT-01 | 以 D03 做欄位回顧；學員能說明哪些資訊需記錄。驗收：使用一份新合成情境完成欄位演練。 | 承辦職能 | 情境卡、欄位清單 | 2026-08-20 | 合成示例完成 2026-08-20；SIM-ACT-01
+T013-R003: ACT-02 | 修訂欄位提示草稿，清楚指出處理理由與追蹤日期。驗收：桌面檢視可找到兩欄及填寫提示。 | 表單維護職能 | 表單草稿 | 2026-08-24 | 合成示例完成 2026-08-24；SIM-ACT-02
+T013-R004: ACT-03 | 建立附加說明，記錄 D03 原始缺漏及後續補充資訊；保留原始版本，不回填、不覆寫、不仿簽。驗收：原記錄及補充記錄互相引用，日期可辨。 | 案件承辦 | 原記錄受限定位、補充紀錄欄 | 2026-08-27 | 合成示例完成 2026-08-27；SIM-ACT-03
+T013-R005: ACT-04 | 對三份後續新樣本重做同一檢核，記錄分子／分母及每件差距。驗收：三份均可定位且有逐件判定。 | 樣本覆核職能 | 抽樣清單、檢核表 | 2026-09-24 | 截至 2026-09-29 尚未完成；SIM-ACT-04；OVERDUE（僅示例）
+P0085 [Heading 2]: 7.5 覆驗、計算及示範狀態決定
+P0086 [List Bullet]: 應到期改善行動：4 項；示例中已完成並具合成驗收定位：3 項。
+P0087 [List Bullet]: 改善完成率：3 ÷ 4 = 75.0%。分子只計有完成且可定位的 ACT-01～03；未完成 ACT-04 留在分母。
+P0088 [List Bullet]: D01～D05 初次抽查符合率：4 ÷ 5 = 80.0%，僅為本 SAMPLE 規準描述。
+P0089 [List Bullet]: 示範狀態：HOLD / REVISE。理由：ACT-04 有效性抽查尚未完成；無法證明改善已維持。
+P0090 [List Bullet]: 下一步示範計畫：完成三份新樣本的逐件覆驗，若仍有缺口，維持列管並開新措施；全數通過後再由真實獲授權者依實際規則決定案件狀態。
+P0091 [List Bullet]: 本表是流程示範，沒有實際主管核准、會議決議、簽名或理事會通報。
+P0092 [Heading 1]: 第八章 可觀察檢核規準與證據定位
+P0093 [Heading 2]: 8.1 樣本檢核 Rubric（本工具示範，非官方評等量尺）
+P0094 [Normal]: 正式使用前應把下列項目與該班課程目標、工作任務及現行流程核對。分數是操作輔助，不代表 TTQS 官方分數。每一檢核點須有「來源定位＋理由」；重大風險或缺少必要授權時直接 HOLD/FAIL，不可由平均分數抵銷。
+
+TABLE T014 rows=5 cols=5
+T014-R001: 檢核構面 | 4：清楚完整 | 3：可接受但可改善 | 2：明顯缺漏 | 1：無法採信／重大不符
+T014-R002: 任務與時間 | 任務、日期及樣本範圍可定位 | 核心資訊可定位，次要描述不足 | 日期或任務其中一項不清 | 無來源、無法辨認任務
+T014-R003: 課程技能運用 | 可從工作產出指出目標技能如何使用 | 有使用跡象但步驟說明不完整 | 僅有結論，缺少可觀察步驟 | 看不出技能使用或與課程無關
+T014-R004: 處理依據及界線 | 理由、轉介或授權界線可理解 | 有理由但細節不足 | 理由含糊，需補查 | 顯示越權或缺重要依據
+T014-R005: 後續狀態 | 有可定位的追蹤結果或下一步 | 已記錄待追蹤事項 | 後續欄位缺漏 | 宣稱結案但沒有覆驗
+P0096 [Normal]: SAMPLE 判定規則：每項均達 3 分以上且無重大缺失才記本工具示例的「通過」；此規則只供本工具示範，協會須以實際課程與工作規準調整。遇到隱私、授權、疑似變造或關鍵安全問題立即 HOLD 並依有權流程處理。
+P0097 [Heading 2]: 8.2 受限證據定位
+P0098 [Normal]: SAMPLE 標籤 SIM-LOC-CASE01-D03 僅是示範字串，沒有對應實體檔案。REAL 案件使用協會核准且限權的定位碼，例如案件系統中的隨機 ID；文件內不得放公開絕對路徑、姓名或可識別連結。定位表至少記錄案件碼、樣本碼、日期、來源類型、欄位／頁次、存取角色及核對時間。受限原件只保存在有權限的正式位置。
+P0099 [Heading 1]: 第九章 逾期、無效證據與重開處理
+P0100 [Heading 2]: 9.1 逾期跟催流程
+P0101 [Normal]: 逾期天數與升級層級須依協會實際設定並記錄依據。本候選提供一個可調整的內部流程示例，不是法定期限、正式會議或既有協會規章。
+
+TABLE T015 rows=5 cols=3
+T015-R001: 條件 | 建議跟催動作（部署前由協會確認） | 記錄
+T015-R002: 到期日未收到資料 | 先確認收件地址／聯絡方式與是否有客觀障礙；記錄通知日期及回覆狀態。 | 通知事件碼、案件碼、回覆狀態
+T015-R003: 仍未補件或無法判定 | 設定新的檢視日，說明所需資料及安全傳送方式；期間標 HOLD_UNKNOWN。 | 缺項、責任職能、下次檢視日
+T015-R004: 逾期影響有效性覆驗 | 維持 HOLD/REVISE，不以未執行視為通過；依實際授權矩陣升級。 | 逾期天數、風險、授權對象
+T015-R005: 疑似個資外洩或造假 | 停止非必要複製與傳送，保存原始狀態，依協會既有資安／隱私流程處理。 | 受限事件紀錄，不公開敏感內容
+P0103 [Heading 2]: 9.2 無效或不足證據的處理
+P0104 [List Number]: 樣本日期不在明確觀察期內：退回重新確認範圍，不能納入該期分子。
+P0105 [List Number]: 無法證明樣本與受追蹤學員／職務任務的關聯：列 HOLD，不自行推定。
+P0106 [List Number]: 內容不可辨識、來源不明或缺少關鍵欄位：列 HOLD/UNKNOWN 並指出缺項。
+P0107 [List Number]: 有疑似修改痕跡：保留收到時原始版本及雜湊／受限定位，交實際授權者查證；不直接指控也不將其當有效證據。
+P0108 [List Number]: 僅有自我陳述，無工作產出或可核實觀察：不列為已驗證使用。
+P0109 [List Number]: 使用無關的請假、打卡或其他文件：不得用來證明課程技能實際應用。
+P0110 [Heading 2]: 9.3 結案與重開條件
+P0111 [Normal]: 本工具的候選建議是：有任何未驗證關鍵證據、未到期／逾期措施未覆驗、重大缺失尚未處理，或決定者權限不明時，維持 HOLD/REVISE。不得預先勾選結案條件。正式結案由協會實際授權者依已核定規則作成並留存依據；本例沒有作成正式結案。
+P0112 [Normal]: 若結案後取得新的可核實資訊、發現原樣本關聯錯誤、出現疑似造假或原覆驗被證明不足，依協會適用的文件更正及重開規則處理。未找到正式重開期限時不得自行編造 180 日等期限；須保留原始版本並建立可追蹤的補充紀錄。
+P0114 [Heading 1]: 第十章 隱私、保管、證據索引及版次管理
+P0115 [Heading 2]: 10.1 資料最小化與安全處理
+P0116 [List Bullet]: 僅收集判斷任務機會與技能運用所需的最少資料；優先使用隨機代碼及遮蔽後的工作樣本。
+P0117 [List Bullet]: 不以保留姓名首字等方式假定資料已匿名；可重新識別的代碼對照表須與工作樣本分離並限制存取。
+P0118 [List Bullet]: 收件前由實際資料保管職能確認適用的授權、隱私及機密規則。無法確認時不收集、不公開，案件列 HOLD。
+P0119 [List Bullet]: 不將顧客識別資料、帳號、聯絡方式、健康資料或企業機密放入追蹤表或公開附件。需要核驗時使用安全位置的受限定位碼。
+P0120 [List Bullet]: 發現不必要識別資料時，不將其拷貝到候選文件；按有權流程請來源保管者提供適當遮蔽版本。
+P0121 [Heading 2]: 10.2 保存及調閱
+P0122 [Normal]: 本候選不設定協會保存年限、雲端位置、2FA、保管角色或外部調閱核准規則，因目前沒有可用正式來源支持。真實部署前，資料保管職能須引用協會現行文件及適用規則，記錄核准的位置、期限、存取者、刪除／封存方式。未確認時標示 UNKNOWN，不自行宣稱已有控制措施。
+P0123 [Heading 2]: 10.3 證據與文件版次索引
+P0124 [Normal]: 本索引用來連結本件記錄、樣本、觀察、改善措施及覆驗資料。下列 SIM 項目只代表本文件中的合成示範，沒有對應的實際原件。真實使用時，應由有權資料保管職能填入受限定位碼、來源版本、核對日期及授權依據；不得把合成定位碼當成實體檔案。
+
+TABLE T016 rows=7 cols=5
+T016-R001: 索引碼 | 資料類型及用途 | 示範日期／版次 | 正文位置 | 目前狀態及真實替換方式
+T016-R002: SIM-0125-COURSE-01 | 合成課程、結訓日及技能目標 | 2026-07-01；SAMPLE | 6.1、7.1 | 僅供示範；真實使用時核對正式課程計畫及結訓紀錄。
+T016-R003: SIM-0125-WORK-01 | 合成工作任務、機會判定及 D03 樣本 | 2026-08-05；SAMPLE | 7.2、8.1 | 定位碼不連結實體檔案；真實使用時核對經授權的工作樣本及欄位位置。
+T016-R004: SIM-0125-OBS-01 | 合成 day 31、day 60、day 90 觀察期間 | 2026-08-01 至 2026-09-29；SAMPLE | 7.1、7.2 | 日期是計算示例；真實使用時依實際結訓日、觀察窗及來源紀錄重算。
+T016-R005: SIM-0125-ACTION-01 | ACT-01 至 ACT-04 改善及覆驗示例 | 2026-08-20 至 2026-09-29；SAMPLE | 7.4、7.5 | 三項示例已完成、ACT-04 標示逾期；不代表協會曾執行。
+T016-R006: REAL-SOURCE-INDEX | 真實課程、工作樣本、觀察及覆驗原件索引 | 由實際使用者填寫 | 表 5-1、表 5-2、表 8-1 | 本候選未提供真實證據；記錄受限定位碼、來源版本、授權依據及核對者。
+T016-R007: TOOL-VERSION-LOG | 本工具實際使用版次、更改日期、依據及覆核紀錄 | 由實際管理者填寫 | 本節 | 未提供協會核定版次；未經授權前不得標示為正式生效。
+P0126 [Normal]: 原始來源須保留。發現原記錄錯誤時，依協會適用規則建立有日期的補充紀錄並連回原件，不得覆寫、補簽或改造原始樣本。
+P0128 [Heading 1]: 第十一章 SAMPLE / SYNTHETIC 事實替換登錄表
+P0129 [Normal]: 本表所有示範資料皆虛構。正式替換時逐項使用合法來源建立新記錄；不得覆寫本候選或把合成資料標成 REAL。所有真實定位碼只保存在有權限的受限位置。
+P0130 [Heading 2]: 表 11-1：逐項替換清冊
+
+TABLE T017 rows=36 cols=4
+T017-R001: 登錄鍵 | 合成事實（每列一組同一記錄的關聯欄位） | 正文定位 | REAL 替換來源及核對方式
+T017-R002: REG-0125-001 | 課程名稱「顧客抱怨處理與客訴紀錄實務」 | 6.1、7.1 | 正式課程計畫／班次資料，核對版本及日期
+T017-R003: REG-0125-002 | 結訓日 2026-07-01；day 0 計日法 | 6.1、7.1 | 結訓紀錄及經確認的期間定義
+T017-R004: REG-0125-003 | 課程時數 16 小時 | 7.1 | 正式課程紀錄；未核實前不填入 REAL
+T017-R005: REG-0125-004 | 觀察窗 day 31–60：2026-08-01 至 2026-08-30 | 6.1、7.1 | 真實課程日期及經核定觀察期間
+T017-R006: REG-0125-005 | 合成第 90 日覆驗日 2026-09-29 | 7.1、7.5 | 真實觀察日曆與實際覆驗證據
+T017-R007: REG-0125-006 | 群體 12 人、其中有機會 10、無機會 2 | 6.1–6.3 | 去識別後的可核實追蹤母體與機會判定依據
+T017-R008: REG-0125-007 | SYN-L01；合成角色：門市客服助理；機會／狀態：COMPLETE_USE；定位：SIM-LOC-01；合成樣本核心點符合 | 6.1 | 真實去識別學員代碼、職務任務機會判定及可核實樣本定位；先確認使用授權
+T017-R009: REG-0125-008 | SYN-L02；合成角色：櫃檯接待組長；機會／狀態：COMPLETE_USE；定位：SIM-LOC-02；合成樣本核心點符合 | 6.1 | 真實去識別學員代碼、職務任務機會判定及可核實樣本定位；先確認使用授權
+T017-R010: REG-0125-009 | SYN-L03；合成角色：售後服務專員；機會／狀態：COMPLETE_USE；定位：SIM-LOC-03；合成樣本核心點符合 | 6.1 | 真實去識別學員代碼、職務任務機會判定及可核實樣本定位；先確認使用授權
+T017-R011: REG-0125-010 | SYN-L04；合成角色：線上客服專員；機會／狀態：COMPLETE_USE；定位：SIM-LOC-04；合成樣本核心點符合 | 6.1 | 真實去識別學員代碼、職務任務機會判定及可核實樣本定位；先確認使用授權
+T017-R012: REG-0125-011 | SYN-L05；合成角色：電話客服人員；機會／狀態：COMPLETE_USE；定位：SIM-LOC-05；合成樣本核心點符合 | 6.1 | 真實去識別學員代碼、職務任務機會判定及可核實樣本定位；先確認使用授權
+T017-R013: REG-0125-012 | SYN-L06；合成角色：現場營運助理；機會／狀態：COMPLETE_USE；定位：SIM-LOC-06；合成樣本核心點符合 | 6.1 | 真實去識別學員代碼、職務任務機會判定及可核實樣本定位；先確認使用授權
+T017-R014: REG-0125-013 | SYN-L07；合成角色：客服調度助理；機會／狀態：PARTIAL_USE；定位：SIM-LOC-07；有使用，缺後續追蹤欄 | 6.1 | 真實去識別學員代碼、職務任務機會判定及可核實樣本定位；先確認使用授權
+T017-R015: REG-0125-014 | SYN-L08；合成角色：門市服務助理；機會／狀態：PARTIAL_USE；定位：SIM-LOC-08；有使用，個案見第七章 | 6.1 | 真實去識別學員代碼、職務任務機會判定及可核實樣本定位；先確認使用授權
+T017-R016: REG-0125-015 | SYN-L09；合成角色：倉儲協調助理；機會／狀態：VERIFIED_NO_USE；定位：SIM-LOC-09；有機會但合成查核未見使用 | 6.1 | 真實去識別學員代碼、職務任務機會判定及可核實樣本定位；先確認使用授權
+T017-R017: REG-0125-016 | SYN-L10；合成角色：專案客服助理；機會／狀態：HOLD_UNKNOWN；定位：SIM-LOC-10；樣本缺漏、無結論 | 6.1 | 真實去識別學員代碼、職務任務機會判定及可核實樣本定位；先確認使用授權
+T017-R018: REG-0125-017 | SYN-L11；合成角色：行政後勤助理；機會／狀態：NO_OPPORTUNITY；定位：SIM-LOC-11；合成設定無相符任務機會 | 6.1 | 真實去識別學員代碼、職務任務機會判定及可核實樣本定位；先確認使用授權
+T017-R019: REG-0125-018 | SYN-L12；合成角色：門市支援人員；機會／狀態：NO_OPPORTUNITY；定位：SIM-LOC-12；合成設定無相符任務機會 | 6.1 | 真實去識別學員代碼、職務任務機會判定及可核實樣本定位；先確認使用授權
+T017-R020: REG-0125-019 | SYN-D01；日期 2026-08-05；定位 SIM-LOC-CASE01-D01；合成判定 通過；任務及時間可辨識 | 7.2 | 真實工作樣本原件、日期、來源定位及逐項檢核理由；不得以合成定位替代原件
+T017-R021: REG-0125-020 | SYN-D02；日期 2026-08-11；定位 SIM-LOC-CASE01-D02；合成判定 通過；處理理由及權限界線可理解 | 7.2 | 真實工作樣本原件、日期、來源定位及逐項檢核理由；不得以合成定位替代原件
+T017-R022: REG-0125-021 | SYN-D03；日期 2026-08-17；定位 SIM-LOC-CASE01-D03；合成判定 未通過；缺處理依據與後續追蹤日期 | 7.2 | 真實工作樣本原件、日期、來源定位及逐項檢核理由；不得以合成定位替代原件
+T017-R023: REG-0125-022 | SYN-D04；日期 2026-08-22；定位 SIM-LOC-CASE01-D04；合成判定 通過；技能步驟及可讀性符合 | 7.2 | 真實工作樣本原件、日期、來源定位及逐項檢核理由；不得以合成定位替代原件
+T017-R024: REG-0125-023 | SYN-D05；日期 2026-08-28；定位 SIM-LOC-CASE01-D05；合成判定 通過；後續處置可定位 | 7.2 | 真實工作樣本原件、日期、來源定位及逐項檢核理由；不得以合成定位替代原件
+T017-R025: REG-0125-024 | ACT-01；措施 表單欄位回顧與情境演練；責任職能 承辦職能；期限 2026-08-20；完成 2026-08-20；狀態 合成完成 | 7.4–7.5 | 真實措施紀錄、責任職能授權、期限設定依據、原始及覆驗證據
+T017-R026: REG-0125-025 | ACT-02；措施 欄位提示草稿；責任職能 表單維護職能；期限 2026-08-24；完成 2026-08-24；狀態 合成完成 | 7.4–7.5 | 真實措施紀錄、責任職能授權、期限設定依據、原始及覆驗證據
+T017-R027: REG-0125-026 | ACT-03；措施 保留原件並建立附加說明；責任職能 案件承辦；期限 2026-08-27；完成 2026-08-27；狀態 合成完成 | 7.4–7.5 | 真實措施紀錄、責任職能授權、期限設定依據、原始及覆驗證據
+T017-R028: REG-0125-027 | ACT-04；措施 三份新樣本有效性覆驗；責任職能 樣本覆核職能；期限 2026-09-24；完成 未完成至2026-09-29；狀態 合成逾期 | 7.4–7.5 | 真實措施紀錄、責任職能授權、期限設定依據、原始及覆驗證據
+T017-R029: REG-0125-028 | 合成群體 COMPLETE_USE 6/10 = 60.0% | 6.2 | 以真實母體、逐件分類及原始計算重算；不得沿用示範比例
+T017-R030: REG-0125-029 | 合成群體 PARTIAL_USE 2/10 = 20.0% | 6.2 | 以真實母體、逐件分類及原始計算重算；不得沿用示範比例
+T017-R031: REG-0125-030 | 合成群體任何運用 (6+2)/10 = 80.0% | 6.2 | 以真實母體、逐件分類及原始計算重算；不得沿用示範比例
+T017-R032: REG-0125-031 | 合成群體 VERIFIED_NO_USE 1/10 = 10.0% | 6.2 | 以真實母體、逐件分類及原始計算重算；不得沿用示範比例
+T017-R033: REG-0125-032 | 合成群體 HOLD_UNKNOWN 1/10 = 10.0% | 6.2 | 以真實母體、逐件分類及原始計算重算；不得沿用示範比例
+T017-R034: REG-0125-033 | 合成 NO_OPPORTUNITY 2/12 = 16.7%，四捨五入一位 | 6.2 | 以真實母體、逐件分類及原始計算重算；不得沿用示範比例
+T017-R035: REG-0125-034 | 個案樣本 4/5 = 80.0%，僅描述工具檢核結果 | 7.2 | 以真實母體、逐件分類及原始計算重算；不得沿用示範比例
+T017-R036: REG-0125-035 | 改善行動 3/4 = 75.0%，ACT-04 未完成 | 7.5 | 以真實母體、逐件分類及原始計算重算；不得沿用示範比例
+P0133 [Heading 1]: 第十二章 登記前檢查與案件結案檢查
+P0134 [Normal]: 每次登記或覆驗前，依下表逐項核對。任一必要來源、機會判定、可觀察證據或授權依據缺少時，先維持 HOLD／未結案；不得以平均分數或其他個案補足缺漏。
+
+TABLE T018 rows=7 cols=4
+T018-R001: 檢查時點 | 必須確認的事項 | 可接受的記錄 | 不符合時的處理
+T018-R002: 開案前 | 課程及結訓來源、學員去識別代碼、相關工作任務、觀察期間 | 可追溯的課程記錄與任務說明；如無任務機會，另記 NO_OPPORTUNITY | 來源或工作機會不明列 HOLD／HOLD_UNKNOWN；不得估填人數或期間。
+T018-R003: 收件時 | 資料授權、最少必要、去識別、受限定位碼 | 記錄來源類型、欄位／頁次及核對日期；不在本工具複製機密原件 | 未授權或含不必要識別資料時停止收件並安全退回處理。
+T018-R004: 判定時 | 課程目標、實際工作產出、逐項規準及判定理由 | COMPLETE_USE、PARTIAL_USE、VERIFIED_NO_USE、HOLD_UNKNOWN 或 NO_OPPORTUNITY，並附可查定位 | 缺件或無法驗證時列 HOLD；重大缺失不得被其他合格項目平均抵銷。
+T018-R005: 改善到期時 | 措施、責任職能、期限、資源、完成證據及覆驗方法 | 原始紀錄加具日期的補充紀錄；逐項記錄覆驗結果 | 未完成、逾期或未達標維持 OPEN／HOLD／REVISE，依有權流程跟催或升級。
+T018-R006: 結案前 | 關鍵證據是否完整、改善是否覆驗、計算分母是否含部分／未知／無機會個案 | 逐項核對案件、母數、分子、期間、證據定位及決定依據 | 仍有未驗證關鍵證據或授權不明時不得結案；保留理由並設定下次檢視。
+T018-R007: 結案後 | 新資料、來源錯誤、疑似變造或覆驗不足是否要求補充或重開 | 依協會適用規則連回原件的更正／重開紀錄 | 未找到正式規則時標示 UNKNOWN，交有權職能確認；不自訂期限或補簽。
+P0136 [Normal]: 本記錄只追蹤學員在職務中的技能運用，不證明雇用或雇主滿意（I19-E12），也不證明薪資變化（I19-E14）。本候選的所有示例均為 SAMPLE／SYNTHETIC；實際資料、正式核准及規則須由合法來源另行確認。
+
+
+## OFFICIAL SOURCE PACKET
+FILE_SHA256=2933ccd6d9e848e8e1bab1da0ff354d99b19877291fb67c00d63d51a347bf52f
+# DOCX 0125 / I19-E13 source packet R01
+
+## Authority and exact mapping
+
+- Project: TTQS ONE.
+- Document ID: **0125**.
+- Official checkbox / requirement ID: **I19-E13**. These identifiers are distinct.
+- Official requirement text: **部份學員能運用所學於職務中。**
+- Deliverable title from the current mapping: **0125__學員職務運用追蹤紀錄.docx**
+- Genre from current unique Blueprint: **改善／行動追蹤工具｜學員職務運用追蹤紀錄**
+- Crosswalk row (local current control): `I19-E13 | 1 | 0 | 0125 | 學員職務運用追蹤紀錄`
+- Negative neighbors: 0124 / I19-E12 is employer hiring and employer feedback; 0126 / I19-E14 is post-training salary change. Neither can replace this work-use follow-up record.
+
+## Source readback
+
+- Official evidence source: `docs/ttqs-quality-20261016/quality-review/0037_R07/inputs/official_source.pdf`, page 8.
+- Local PDF SHA-256: `805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709`; GitHub blob SHA at PR head `2ab6b22e30a751018da6a64d28399e6b70d58a7f`: `9c7621decdad585b743bf2b3d949ee5518b7bee0`.
+- Page-8 text extraction: pypdf page index 7 (printed page 8); extracted text SHA-256 `57c6b33d70b665bd41b8d58ff58f5c0d78f9c2c751ccd9c6dd1b740b2fbf374e`. The official sentence is found after normalizing PDF line breaks/whitespace.
+- Current 142-ID source: `docs/ttqs-quality-20261016/quality-review/0040_R04/inputs/BLUEPRINT_CURRENT.jsonl`; local file SHA-256 `406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e`; remote blob SHA `cab446ede479001334289d18062e6b8bb2340dc3`. Exact source-row byte SHA-256: `65a5b354ca2cddc6ccc2f927d69390787f07bac48aaa57d29b7d089c24458115`.
+- Supporting local crosswalk file SHA-256: `1ddfbb608bcad25170683ddb42a1dbb27bafa6f1f35ff0498f1b8d75b24f0679`.
+
+## Evidence meaning and boundary
+
+This document must make the work-use chain traceable: graduate and completed course -> learned objective/skill -> actual job duty and eligible opportunity -> dated work-use instance -> observable evidence and acceptance criteria -> issue/root cause when not used -> action, owner, deadline and resources -> follow-up verification -> close/reopen decision. The official checkbox asks whether some learners apply learning in their jobs; it does not authorize a general association performance, employer approval, or causal claim.
+
+No REAL learner, course record, job assignment, work product, supervisor observation, association approval, consent, or signature is supplied for this candidate stage. Any future worked example must be explicitly `SAMPLE / SYNTHETIC ONLY`, use an item-level replacement register, and never be described as association performance. Real evidence requires the original lawful source, exact locator, role and access authority, dates, course/learner linkage, privacy authorization, observation window, and independent verification.
+
+## Ready use
+
+The current unique Blueprint row is copied into `UNIQUE_BLUEPRINT_0125_I19-E13_R01.md`. It specifies the complete genre, sections, tables, questions, calculations, neighbor distinctions, sample boundary, and acceptance tests. No historical Word body is used as a writing template.
+
+## Current stage state
+
+- Source packet: complete.
+- Unique Blueprint: complete.
+- Candidate DOCX: not created at this stage.
+- REAL evidence: `NOT_PROVIDED`.
+- Formal acceptance: `NOT_GRANTED`.
+
+
+## UNIQUE BLUEPRINT
+FILE_SHA256=d6cdd1420f53736bd3d9e32673f306d54df63a37cbe3afa256020a3d7215d0c5
+# Unique Blueprint DOCX 0125 / I19-E13 R01
+
+## Identity
+
+- Document ID: 0125
+- Official checkbox: I19-E13
+- Official text: 部份學員能運用所學於職務中。
+- Genre: 改善／行動追蹤工具｜學員職務運用追蹤紀錄
+- Purpose: 本件專屬焦點：學員職務運用追蹤紀錄；需直接回應的官方佐證要求為：部份學員能運用所學於職務中。；產出一份可實際執行、可閱讀並可追溯的專屬成品；本分件職責與同要求其他分件清楚分開。
+- Primary reader: 供責任人登記原因、措施、完成證據及有效性覆核，供主管結案或升級。
+- Evidence role: 呈現問題到改善、驗證、結案的閉環；示例須完整且標示合成。 本文件只擁有 I19-E13 的直接紀錄／分析口徑；不得吞併其他要求的事實。
+- Official source page: 8
+
+## Required document structure (from current exact Blueprint row)
+
+追蹤目的與啟動條件；問題／差距及可核實依據；原因分析步驟與合成案例；風險分級與優先順序；措施、責任、期限及資源；完成證據及通過標準；有效性抽查、計算與覆驗；逾期、無效及升級處理；完整示範閉環；狀態定義與結案授權；真實事件替換與保留紀錄；證據及版本索引
+
+## Required tables / tracking instruments
+
+問題—依據—原因—風險—措施—責任—期限；完成證據—驗收標準—覆核結果—結案決定；無效／逾期—升級—重開案件處理；合成改善閉環逐步示例
+
+## Required fields / questions
+
+合成案件代碼；差距描述及來源定位；原因分類與根據；措施責任角色／期限；有效性抽查結果及重新開案條件
+
+## Required calculations and denominator rules
+
+如有抽查，展示有效率=通過件數/抽查件數及改善完成率=驗收完成數/應完成數；逐步計算合成值、說明分母與失敗升級。
+
+If the worked example reports a work-use verification rate, define its eligible population and follow-up period first. Report task opportunity separately. A learner without a relevant job task in the observation window is `NO_OPPORTUNITY` and must not be counted as a training failure. A missing or unverified work product is `HOLD/UNKNOWN`, not verified use. Report partial use separately from complete use. Any action closure rate must use due actions with completed verification as its denominator; show each numerator and denominator.
+
+## Source and evidence path
+
+官方查核佐證表精確原文『部份學員能運用所學於職務中。』，表內頁次 8，讀取狀態 PDF_TEXT_EXACT_PAGE_MATCH；REQ_157_MAP 對應 I19-E13；本行文件名稱與 ID 以 R04 142 交付 crosswalk/seed 為準。Phase2 歷史 Blueprint 僅作需求拆解參考，絕非可複製正文或現行標題權威。
+
+Required trace: completed training objective -> job duty/opportunity -> dated work-use attempt -> original or lawfully verified work artifact/observation -> observable criteria -> obstacle/root cause (if any) -> action and responsible role -> due date -> follow-up sample check -> closure or reopen. Every key must identify a source and location.
+
+## Real evidence and non-fabrication
+
+- Before `REAL`, obtain the source fields required by the row: 升格為 REAL 前逐項取得可核實來源：正式日期；真實人名/角色；核准/簽章；真實班次/課程；實際數字/比例；真實附件與檔案位置。在無原件時標示 SAMPLE/SYNTHETIC；合成事實須登錄 replacement register，不得宣稱機構實績。
+- Third-party evidence: 若結論依賴外部機關／第三方／真人正式簽章或證書，必須由合法來源取得可核對原件；本文件可提供清楚索引與合成流程示範，絕不代製、仿簽、補作或冒充第三方正式原件。
+- Prohibited fabrication: 不得把擬真工作稿標成REAL；不得偽造核准、簽章、真人參與、辦訓、成績、成果或不存在的外部事實。；不得將舊檔內容、示範數據、未查證Drive候選或歷史草案標成 REAL；不得偽造核准、簽章、真人參與、辦訓、成績、成果、外部證據或來源定位。
+- Sample rule: 缺 REAL 即生成完整連貫 SAMPLE/SYNTHETIC worked example；事實粒度一筆一列登錄 SYNTHETIC_REPLACEMENT_REGISTER，含值、類型、定位、替換原件與責任；不得留待填或冒充 REAL。
+- Candidate state must say `SAMPLE / SYNTHETIC ONLY`, `REAL EVIDENCE NOT PROVIDED`, and `FORMAL ACCEPTANCE NOT GRANTED` unless authoritative evidence changes those fields.
+
+## Cross-document boundaries
+
+同要求分件 無；相鄰要求 I19-E12, I19-E14；共用原始來源時只引用核實結果，不複製別份文件正文。
+
+0124《結訓學員雇用與雇主回饋佐證表》（I19-E12）：應證明不同工作物；本件不得代替、合併或複製其專屬事實。
+0126《訓後薪資變化調查與分析表》（I19-E14）：應證明不同工作物；本件不得代替、合併或複製其專屬事實。
+
+If future examples share a case with 0124, use one identical case ID and identical sourced synthetic facts in both documents; otherwise label each example as a separate synthetic case. Do not infer job-use evidence from an employer saying training was effective. Do not infer employment from job use or salary change.
+
+## Acceptance tests
+
+移除標題及檔名後，讀者可由正文專屬欄位、操作或分析辨認為『學員職務運用追蹤紀錄』，且能指出直接回應『部份學員能運用所學於職務中。』的頁節／表格。
+逐項呈現官方要求、資料來源、記錄欄位、判定、證據定位及覆核；官方原文不被歷史草案改寫。
+依本文件文類實際可用：問卷含題目選項量尺；SOP含角色、輸入、判斷、控制點、異常和輸出；會議紀錄含議題、證據、決議、責任、期限；報告含資料、分母、公式、逐步計算、限制和決策。
+若沒有可驗證 REAL 資料，提供前後一致、完整填入的 SAMPLE/SYNTHETIC 案例；不得用空表、待填、待核或未來式充當完成品。
+每一項合成日期、角色、數字、比例、金額、決議、來源路徑與結果皆有逐事實替換簿記錄鍵、所在文件／頁表／欄位及真實替換方式。
+絕不偽造第三方原件、真人簽名、核准、出席、證書、政府、銀行、會計或外部機構事實；需要該等原件時只說明所需原件與取得路徑。
+所有公式可由展示數據重算；分母、單位、期間、四捨五入及N/A條件清楚，交叉引用不重複創造相異版本。
+對照負向鄰項，正文可拒絕至少兩個錯誤近鄰；指出可核對的差異欄位或章節。
+首頁30秒內說明目的、讀者、使用時點、操作、輸出和SAMPLE／REAL狀態；無評核工程內部術語。
+正文可供日常協會作業及評核閱讀；標題層級、欄位、步驟、表格能直接執行，無複製同儕 DOCX 正文。
+字體下限：正文至少10.5pt、表格至少9.5pt；資訊不足時加頁，不縮小字體。
+來源定位與交叉引用使用本 Blueprint 登錄的官方頁次／文件 ID；所有結論不超出來源支持範圍。
+
+Additional operational rejection conditions: missing work-task locator; no observation window; denominator omits unknown/partial cases without explanation; closure claimed without verification; result implies REAL, causality, or association approval; a `NO_OPPORTUNITY` learner is scored as failure; a real file or signature is simulated. Any such defect is `FAIL/HOLD` and blocks only this document lane.
+
+
+## OFFICIAL BLUEPRINT ROW
+FILE_SHA256=62101a33612b5f88b61609f9c7179c9163b1667b4b803acb7ed485dcee57e280
+{
+  "deliverable_id": "0125",
+  "requirement_id": "I19-E13",
+  "final_filename": "0125__學員職務運用追蹤紀錄.docx",
+  "document_genre": "改善／行動追蹤工具｜學員職務運用追蹤紀錄",
+  "document_purpose": "本件專屬焦點：學員職務運用追蹤紀錄；需直接回應的官方佐證要求為：部份學員能運用所學於職務中。；產出一份可實際執行、可閱讀並可追溯的專屬成品；本分件職責與同要求其他分件清楚分開。",
+  "primary_user_or_reader": "供責任人登記原因、措施、完成證據及有效性覆核，供主管結案或升級。",
+  "evidence_role": "呈現問題到改善、驗證、結案的閉環；示例須完整且標示合成。 本文件只擁有 I19-E13 的直接紀錄／分析口徑；不得吞併其他要求的事實。",
+  "source_of_truth": "官方查核佐證表精確原文『部份學員能運用所學於職務中。』，表內頁次 8，讀取狀態 PDF_TEXT_EXACT_PAGE_MATCH；REQ_157_MAP 對應 I19-E13；本行文件名稱與 ID 以 R04 142 交付 crosswalk/seed 為準。Phase2 歷史 Blueprint 僅作需求拆解參考，絕非可複製正文或現行標題權威。",
+  "required_sections": "追蹤目的與啟動條件；問題／差距及可核實依據；原因分析步驟與合成案例；風險分級與優先順序；措施、責任、期限及資源；完成證據及通過標準；有效性抽查、計算與覆驗；逾期、無效及升級處理；完整示範閉環；狀態定義與結案授權；真實事件替換與保留紀錄；證據及版本索引",
+  "required_tables_or_figures": "問題—依據—原因—風險—措施—責任—期限；完成證據—驗收標準—覆核結果—結案決定；無效／逾期—升級—重開案件處理；合成改善閉環逐步示例",
+  "required_fields_or_questions": "合成案件代碼；差距描述及來源定位；原因分類與根據；措施責任角色／期限；有效性抽查結果及重新開案條件",
+  "required_calculations_or_analysis": "如有抽查，展示有效率=通過件數/抽查件數及改善完成率=驗收完成數/應完成數；逐步計算合成值、說明分母與失敗升級。",
+  "required_cross_references": "同要求分件 無；相鄰要求 I19-E12, I19-E14；共用原始來源時只引用核實結果，不複製別份文件正文。",
+  "real_data_required": "升格為 REAL 前逐項取得可核實來源：正式日期；真實人名/角色；核准/簽章；真實班次/課程；實際數字/比例；真實附件與檔案位置。在無原件時標示 SAMPLE/SYNTHETIC；合成事實須登錄 replacement register，不得宣稱機構實績。",
+  "third_party_evidence_required": "若結論依賴外部機關／第三方／真人正式簽章或證書，必須由合法來源取得可核對原件；本文件可提供清楚索引與合成流程示範，絕不代製、仿簽、補作或冒充第三方正式原件。",
+  "prohibited_fabrication": "不得把擬真工作稿標成REAL；不得偽造核准、簽章、真人參與、辦訓、成績、成果或不存在的外部事實。；不得將舊檔內容、示範數據、未查證Drive候選或歷史草案標成 REAL；不得偽造核准、簽章、真人參與、辦訓、成績、成果、外部證據或來源定位。",
+  "title_blind_test": "遮蔽本件標題、檔名與編號，只讀正文應可由專屬機制辨認為『學員職務運用追蹤紀錄』並證明『部份學員能運用所學於職務中。』；若可無修改移作其他要求即失敗。",
+  "negative_choice_neighbors": "0124《結訓學員雇用與雇主回饋佐證表》（I19-E12）：應證明不同工作物；本件不得代替、合併或複製其專屬事實。\n0126《訓後薪資變化調查與分析表》（I19-E14）：應證明不同工作物；本件不得代替、合併或複製其專屬事實。",
+  "acceptance_tests": "移除標題及檔名後，讀者可由正文專屬欄位、操作或分析辨認為『學員職務運用追蹤紀錄』，且能指出直接回應『部份學員能運用所學於職務中。』的頁節／表格。\n逐項呈現官方要求、資料來源、記錄欄位、判定、證據定位及覆核；官方原文不被歷史草案改寫。\n依本文件文類實際可用：問卷含題目選項量尺；SOP含角色、輸入、判斷、控制點、異常和輸出；會議紀錄含議題、證據、決議、責任、期限；報告含資料、分母、公式、逐步計算、限制和決策。\n若沒有可驗證 REAL 資料，提供前後一致、完整填入的 SAMPLE/SYNTHETIC 案例；不得用空表、待填、待核或未來式充當完成品。\n每一項合成日期、角色、數字、比例、金額、決議、來源路徑與結果皆有逐事實替換簿記錄鍵、所在文件／頁表／欄位及真實替換方式。\n絕不偽造第三方原件、真人簽名、核准、出席、證書、政府、銀行、會計或外部機構事實；需要該等原件時只說明所需原件與取得路徑。\n所有公式可由展示數據重算；分母、單位、期間、四捨五入及N/A條件清楚，交叉引用不重複創造相異版本。\n對照負向鄰項，正文可拒絕至少兩個錯誤近鄰；指出可核對的差異欄位或章節。\n首頁30秒內說明目的、讀者、使用時點、操作、輸出和SAMPLE／REAL狀態；無評核工程內部術語。\n正文可供日常協會作業及評核閱讀；標題層級、欄位、步驟、表格能直接執行，無複製同儕 DOCX 正文。\n字體下限：正文至少10.5pt、表格至少9.5pt；資訊不足時加頁，不縮小字體。\n來源定位與交叉引用使用本 Blueprint 登錄的官方頁次／文件 ID；所有結論不超出來源支持範圍。",
+  "document_role": "action_tracking",
+  "official_requirement_text": "部份學員能運用所學於職務中。",
+  "official_checkbox_text": "部份學員能運用所學於職務中。",
+  "official_evidence_table_page": "8",
+  "official_source_readback_status": "PDF_TEXT_EXACT_PAGE_MATCH",
+  "official_visually_checked_pages": "",
+  "requirement_deliverable_siblings": "0125",
+  "docx_body_template_policy": "FROM_SOURCE_ONLY; old body is discovery evidence only and prohibited as rebuild template; Wave005 R3 0031-0040 quality-height references only; Wave001-004 tainted; old Wave005 invalid; Wave006 prohibited.",
+  "synthetic_population_rule": "缺 REAL 即生成完整連貫 SAMPLE/SYNTHETIC worked example；事實粒度一筆一列登錄 SYNTHETIC_REPLACEMENT_REGISTER，含值、類型、定位、替換原件與責任；不得留待填或冒充 REAL。",
+  "historical_blueprint_source": "c82e9582f76203b5ab002117d7aeedd61ec2eac12df6edaeb0a2c1ab94985ae0",
+  "historical_body_use": "PROHIBITED",
+  "source_map_notes": "129 exact official requirement rows + reconciled 142-ID crosswalk; official source PDF and exact Drive readback evidence are recorded in runtime SOURCE/CONTROL maps."
+}
+
+
+## MAPPING EVIDENCE
+FILE_SHA256=f0bd85dde069f888c6d5366e586720f9618e2aba659816fd4cfba2d8e6c7e09e
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0125",
+  "requirement_id": "I19-E13",
+  "official_requirement": "部份學員能運用所學於職務中。",
+  "crosswalk_row": [
+    "I19-E13",
+    "1",
+    "0",
+    "0125",
+    "學員職務運用追蹤紀錄"
+  ],
+  "crosswalk_file_sha256": "1ddfbb608bcad25170683ddb42a1dbb27bafa6f1f35ff0498f1b8d75b24f0679",
+  "blueprint_current_local_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+  "blueprint_current_remote_blob_sha": "cab446ede479001334289d18062e6b8bb2340dc3",
+  "blueprint_row_sha256": "65a5b354ca2cddc6ccc2f927d69390787f07bac48aaa57d29b7d089c24458115",
+  "official_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "official_pdf_remote_blob_sha": "9c7621decdad585b743bf2b3d949ee5518b7bee0",
+  "official_page": 8,
+  "official_page8_pypdf_text_sha256": "57c6b33d70b665bd41b8d58ff58f5c0d78f9c2c751ccd9c6dd1b740b2fbf374e",
+  "checks": {
+    "unique_blueprint_doc_id_0125": true,
+    "unique_blueprint_requirement_I19_E13": true,
+    "crosswalk_exact_id_and_requirement": true,
+    "official_requirement_matches_pdf_page8": true,
+    "source_pdf_sha_expected": true,
+    "unique_row_source_blob_matches_known_current": true
+  },
+  "source_packet_sha256": "2933ccd6d9e848e8e1bab1da0ff354d99b19877291fb67c00d63d51a347bf52f",
+  "unique_blueprint_sha256": "d6cdd1420f53736bd3d9e32673f306d54df63a37cbe3afa256020a3d7215d0c5",
+  "candidate_docx": "NOT_CREATED",
+  "real_evidence": "NOT_PROVIDED",
+  "formal_acceptance": "NOT_GRANTED",
+  "status": "SOURCE_PREP_VERIFIED_READY_FOR_WRITER"
+}
+
+
+## SYNTHETIC REPLACEMENT REGISTER
+FILE_SHA256=66b663593998eddde856bd39643a189ac9cd304b4db507bdc73ed4dba33f2f2f
+登錄鍵,合成事實（每列一組同一記錄的關聯欄位）,正文定位,REAL 替換來源及核對方式
+REG-0125-001,課程名稱「顧客抱怨處理與客訴紀錄實務」,6.1、7.1,正式課程計畫／班次資料，核對版本及日期
+REG-0125-002,結訓日 2026-07-01；day 0 計日法,6.1、7.1,結訓紀錄及經確認的期間定義
+REG-0125-003,課程時數 16 小時,7.1,正式課程紀錄；未核實前不填入 REAL
+REG-0125-004,觀察窗 day 31–60：2026-08-01 至 2026-08-30,6.1、7.1,真實課程日期及經核定觀察期間
+REG-0125-005,合成第 90 日覆驗日 2026-09-29,7.1、7.5,真實觀察日曆與實際覆驗證據
+REG-0125-006,群體 12 人、其中有機會 10、無機會 2,6.1–6.3,去識別後的可核實追蹤母體與機會判定依據
+REG-0125-007,SYN-L01；合成角色：門市客服助理；機會／狀態：COMPLETE_USE；定位：SIM-LOC-01；合成樣本核心點符合,6.1,真實去識別學員代碼、職務任務機會判定及可核實樣本定位；先確認使用授權
+REG-0125-008,SYN-L02；合成角色：櫃檯接待組長；機會／狀態：COMPLETE_USE；定位：SIM-LOC-02；合成樣本核心點符合,6.1,真實去識別學員代碼、職務任務機會判定及可核實樣本定位；先確認使用授權
+REG-0125-009,SYN-L03；合成角色：售後服務專員；機會／狀態：COMPLETE_USE；定位：SIM-LOC-03；合成樣本核心點符合,6.1,真實去識別學員代碼、職務任務機會判定及可核實樣本定位；先確認使用授權
+REG-0125-010,SYN-L04；合成角色：線上客服專員；機會／狀態：COMPLETE_USE；定位：SIM-LOC-04；合成樣本核心點符合,6.1,真實去識別學員代碼、職務任務機會判定及可核實樣本定位；先確認使用授權
+REG-0125-011,SYN-L05；合成角色：電話客服人員；機會／狀態：COMPLETE_USE；定位：SIM-LOC-05；合成樣本核心點符合,6.1,真實去識別學員代碼、職務任務機會判定及可核實樣本定位；先確認使用授權
+REG-0125-012,SYN-L06；合成角色：現場營運助理；機會／狀態：COMPLETE_USE；定位：SIM-LOC-06；合成樣本核心點符合,6.1,真實去識別學員代碼、職務任務機會判定及可核實樣本定位；先確認使用授權
+REG-0125-013,SYN-L07；合成角色：客服調度助理；機會／狀態：PARTIAL_USE；定位：SIM-LOC-07；有使用，缺後續追蹤欄,6.1,真實去識別學員代碼、職務任務機會判定及可核實樣本定位；先確認使用授權
+REG-0125-014,SYN-L08；合成角色：門市服務助理；機會／狀態：PARTIAL_USE；定位：SIM-LOC-08；有使用，個案見第七章,6.1,真實去識別學員代碼、職務任務機會判定及可核實樣本定位；先確認使用授權
+REG-0125-015,SYN-L09；合成角色：倉儲協調助理；機會／狀態：VERIFIED_NO_USE；定位：SIM-LOC-09；有機會但合成查核未見使用,6.1,真實去識別學員代碼、職務任務機會判定及可核實樣本定位；先確認使用授權
+REG-0125-016,SYN-L10；合成角色：專案客服助理；機會／狀態：HOLD_UNKNOWN；定位：SIM-LOC-10；樣本缺漏、無結論,6.1,真實去識別學員代碼、職務任務機會判定及可核實樣本定位；先確認使用授權
+REG-0125-017,SYN-L11；合成角色：行政後勤助理；機會／狀態：NO_OPPORTUNITY；定位：SIM-LOC-11；合成設定無相符任務機會,6.1,真實去識別學員代碼、職務任務機會判定及可核實樣本定位；先確認使用授權
+REG-0125-018,SYN-L12；合成角色：門市支援人員；機會／狀態：NO_OPPORTUNITY；定位：SIM-LOC-12；合成設定無相符任務機會,6.1,真實去識別學員代碼、職務任務機會判定及可核實樣本定位；先確認使用授權
+REG-0125-019,SYN-D01；日期 2026-08-05；定位 SIM-LOC-CASE01-D01；合成判定 通過；任務及時間可辨識,7.2,真實工作樣本原件、日期、來源定位及逐項檢核理由；不得以合成定位替代原件
+REG-0125-020,SYN-D02；日期 2026-08-11；定位 SIM-LOC-CASE01-D02；合成判定 通過；處理理由及權限界線可理解,7.2,真實工作樣本原件、日期、來源定位及逐項檢核理由；不得以合成定位替代原件
+REG-0125-021,SYN-D03；日期 2026-08-17；定位 SIM-LOC-CASE01-D03；合成判定 未通過；缺處理依據與後續追蹤日期,7.2,真實工作樣本原件、日期、來源定位及逐項檢核理由；不得以合成定位替代原件
+REG-0125-022,SYN-D04；日期 2026-08-22；定位 SIM-LOC-CASE01-D04；合成判定 通過；技能步驟及可讀性符合,7.2,真實工作樣本原件、日期、來源定位及逐項檢核理由；不得以合成定位替代原件
+REG-0125-023,SYN-D05；日期 2026-08-28；定位 SIM-LOC-CASE01-D05；合成判定 通過；後續處置可定位,7.2,真實工作樣本原件、日期、來源定位及逐項檢核理由；不得以合成定位替代原件
+REG-0125-024,ACT-01；措施 表單欄位回顧與情境演練；責任職能 承辦職能；期限 2026-08-20；完成 2026-08-20；狀態 合成完成,7.4–7.5,真實措施紀錄、責任職能授權、期限設定依據、原始及覆驗證據
+REG-0125-025,ACT-02；措施 欄位提示草稿；責任職能 表單維護職能；期限 2026-08-24；完成 2026-08-24；狀態 合成完成,7.4–7.5,真實措施紀錄、責任職能授權、期限設定依據、原始及覆驗證據
+REG-0125-026,ACT-03；措施 保留原件並建立附加說明；責任職能 案件承辦；期限 2026-08-27；完成 2026-08-27；狀態 合成完成,7.4–7.5,真實措施紀錄、責任職能授權、期限設定依據、原始及覆驗證據
+REG-0125-027,ACT-04；措施 三份新樣本有效性覆驗；責任職能 樣本覆核職能；期限 2026-09-24；完成 未完成至2026-09-29；狀態 合成逾期,7.4–7.5,真實措施紀錄、責任職能授權、期限設定依據、原始及覆驗證據
+REG-0125-028,合成群體 COMPLETE_USE 6/10 = 60.0%,6.2,以真實母體、逐件分類及原始計算重算；不得沿用示範比例
+REG-0125-029,合成群體 PARTIAL_USE 2/10 = 20.0%,6.2,以真實母體、逐件分類及原始計算重算；不得沿用示範比例
+REG-0125-030,合成群體任何運用 (6+2)/10 = 80.0%,6.2,以真實母體、逐件分類及原始計算重算；不得沿用示範比例
+REG-0125-031,合成群體 VERIFIED_NO_USE 1/10 = 10.0%,6.2,以真實母體、逐件分類及原始計算重算；不得沿用示範比例
+REG-0125-032,合成群體 HOLD_UNKNOWN 1/10 = 10.0%,6.2,以真實母體、逐件分類及原始計算重算；不得沿用示範比例
+REG-0125-033,合成 NO_OPPORTUNITY 2/12 = 16.7%，四捨五入一位,6.2,以真實母體、逐件分類及原始計算重算；不得沿用示範比例
+REG-0125-034,個案樣本 4/5 = 80.0%，僅描述工具檢核結果,7.2,以真實母體、逐件分類及原始計算重算；不得沿用示範比例
+REG-0125-035,改善行動 3/4 = 75.0%，ACT-04 未完成,7.5,以真實母體、逐件分類及原始計算重算；不得沿用示範比例
+

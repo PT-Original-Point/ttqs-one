@@ -1,0 +1,75 @@
+{
+  "schema": "ttqs-one-status-reconciliation-delta/v1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0140-I19-E30-R11-R12-STATUS-RECONCILIATION",
+  "doc_id": "0140",
+  "requirement_id": "I19-E30",
+  "official_registry_index": 154,
+  "printed_checkbox_serial": "UNKNOWN",
+  "candidate_status": "CANDIDATE_ONLY",
+  "candidate_revision": "R11",
+  "candidate_docx_sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d",
+  "candidate_bytes": 127801,
+  "docx_bytes_modified": false,
+  "previous_manifest_sha256": "8e625f4827154768a807127288ef028c35d38af20b6fa42252af0530894b3443",
+  "updated_manifest_sha256": "e6f0141fa95eb08548642a34240896a9c37a321a3f9097dc0b39e60b577cae79",
+  "chart_reconciliation": {
+    "result": "PASS",
+    "receipt_sha256": "24f02e58122533feb1f52d894f030ececbbc68f49b6e387b306596a4256c076a"
+  },
+  "full_body_semantic": {
+    "result": "VERIFIED_TEXT_SEMANTIC_PASS_WITH_NONBLOCKING_NOTE",
+    "candidate_sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d",
+    "request_sha256": "faeb4f0c488f13ccd5f151ba0c842af69d507720aab2eeff7adcc06ab71169e7",
+    "input_manifest_sha256": "ce8975492d6f890cde5da76a9a4d020ce4c23c7ca7592fd29647bb70c1877d3b",
+    "dispatch_sha256": "0165ea57c58eb8febd8f35e77c3ac048fd82b0771ef7a27760139f79642810fc",
+    "raw_response_sha256": "fe6400c7a5cd350a84d0349bbe9ca7f0e6d7baa83eda3f4d72230051f527f4e8",
+    "adjudication_sha256": "4a4f4bc08b0ec3d6e7abba692c25da227d9aa97da1dd657d6e3213663a753d84",
+    "backend_model": "UNKNOWN",
+    "fallback": "UNKNOWN"
+  },
+  "technical_qa": "PASS_21_OF_21",
+  "visual_review": {
+    "status": "PASS_WITH_NONBLOCKING_LAYOUT_NOTE",
+    "pages": 29,
+    "receipt_sha256": "e077d1662a8d23706ad5de51f794ea908c69cfbc4682e608dd63fc301c8aa96a",
+    "pdf_sha256": "ed2b1cb66440eb5f4db83023d794587467c8836197fed4ca686fc86de49bc5bc"
+  },
+  "real_evidence": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED",
+  "remote_prestate": {
+    "pr": 92,
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "pr_head": "b2750f70a9579fc4cdbb2e57dc9d39aa672e0f8d",
+    "pr_head_matches_branch": true,
+    "docx_blob": "a4c1545eaa9887195dae72623846dc9eea6cc120",
+    "docx_raw_byte_readback": "PASS",
+    "manifest_blob": "f53bc6a7d3ea26b475855d560811ca800e38ccc8",
+    "manifest_raw_byte_readback": "PASS"
+  },
+  "new_status_sync": "VERIFIED_RAW_BYTES_EQUAL_AT_COMMIT_4142ED10F92E3F366FDA2FC7B6236A5D63250D3D",
+  "limitations": [
+    "Candidate QA is not Human formal acceptance.",
+    "Antigravity requested model slug does not prove backend serving model; identity and fallback UNKNOWN.",
+    "R12 semantic review scope binds only to the exact R11 candidate SHA."
+  ],
+  "status_readback": {
+    "status": "PASS_3_OF_3_RAW_BYTES_EQUAL",
+    "commit": "4142ed10f92e3f366fda2fc7b6236a5d63250d3d",
+    "pr_head_matched": true,
+    "files": [
+      {
+        "path": "candidate/0140__訓練資訊系統使用普及率盤點與分析表_R11.docx",
+        "sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d"
+      },
+      {
+        "path": "MANIFEST_R11.json",
+        "sha256": "e6f0141fa95eb08548642a34240896a9c37a321a3f9097dc0b39e60b577cae79"
+      },
+      {
+        "path": "R12_COMPLETION_STATUS_DELTA_0140_20261027.json",
+        "sha256": "1c87c7b953a595c5fcb85e4ca8d4c0c5a2d27986314a0d137afdfc90e07540d9"
+      }
+    ]
+  }
+}

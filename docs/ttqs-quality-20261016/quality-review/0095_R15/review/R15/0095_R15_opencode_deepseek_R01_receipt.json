@@ -1,0 +1,51 @@
+{
+  "doc_id": "0095",
+  "requirement_id": "I18-E02",
+  "revision": "R15",
+  "state": "PASS_BOUNDED_EXACT_SHA_DELTA_REVIEW",
+  "reviewer_route": "OpenCode CLI v2.0.32",
+  "requested_model": "opencode/deepseek-v4.1-flash-free",
+  "provider_model_identity": "UNKNOWN; native output does not attest upstream provider/model identity",
+  "native_session_id": "ses_ea62f7cd3ffeKjIHgCyBwf6YcX",
+  "exit_code": 0,
+  "packet_sha256": "d4d11ca2dde1e070b933e3b1841ee22decba4bb525f2c6cd8b49558ca93469a0",
+  "reviewed_docx_sha256": "c70521d50fbec6cdc3b53ce3dc35fa2613069e60c58625b7eb2f96a5a6fd3658",
+  "reviewed_pdf_sha256": "b106d9c8a66b7c3eae8ecd6c58d71adb797d03e0b7982de9f414c6e744006a04",
+  "reviewed_register_sha256": "163796fb365509ddda1d03fe2db7f795feb4f45fba30cbb138fd50857eafd1c9",
+  "reviewed_manifest_sha256": "b75a1df5e57343565d05e6b72f2ee1f13681c2765a2cc7ffccd4f9b53f549b21",
+  "response_sha256": "2d182b9b0d2384268f3fd2ecb977bbb6b705e1ab94c23c986fd58059b08723f3",
+  "raw_stdout_sha256": "83546b6cf1f95d29d69b7db272aaebfe81277dcdc7b9c2304c85a25c03d3535e",
+  "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "verdict": "PASS",
+  "blocking": 0,
+  "finding_id": "R14-F-01",
+  "finding_status": "CLOSED",
+  "finding_resolution": "The exact register key UNK-0095-UNK_FORMAL_EFFECTIVE_DATE now points §9.5 row 3 to R15 PDF p.39; manuscript §1.4/§9.5 and high-resolution page image agree; R15 DOCX binds the current CSV SHA; one cell only changed vs R14; real dates remain UNKNOWN.",
+  "scope": "Bounded R14 F-01 closure only. Reviewer opened the supplied packet, R15 manuscript, CSV, p.39 image, official-source excerpt and unique Blueprint row. Not a fresh full review of unchanged content.",
+  "new_findings": [],
+  "limitations": [
+    "No direct byte hashing by reviewer; exact hashes were packet-declared and locally bound.",
+    "No formal TTQS acceptance or REAL association evidence asserted."
+  ],
+  "tokens": {
+    "input": 223106,
+    "output": 3053,
+    "reasoning": 2930,
+    "cache_read": 688000,
+    "cache_write": 0
+  },
+  "session_reported_cost_per_step": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "provider_billing": "UNKNOWN",
+  "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "completed_at_local": "2026-10-20T22:58:34+08:00"
+}

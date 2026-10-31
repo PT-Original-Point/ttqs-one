@@ -1,0 +1,50 @@
+{
+  "receipt_id": "0013_I02-E04_R09_INDEPENDENT_SEMANTIC_REVIEW",
+  "document_id": "0013",
+  "requirement_id": "I02-E04",
+  "candidate_sha256": "dd5ff6cc55c649952872e03a77e77f844375df3db9a86f2bf664aefe1554df3f",
+  "reviewer_route": "Codex multi-agent independent context (Bernoulli; distinct from deterministic Writer)",
+  "reviewed_at_tpe": "2026-10-30T03:37:17.8690287+08:00",
+  "verdict": "PARTIAL",
+  "scope": [
+    "direct exact-SHA candidate read and verification",
+    "official requirement PDF and unique Blueprint row",
+    "R09 synthetic replacement register crosswalk",
+    "genre, workflow gates, sample/real, arithmetic, title-blind and negative-neighbor checks"
+  ],
+  "not_in_scope": [
+    "visual layout (separate R09 visual receipt)",
+    "formal Human acceptance",
+    "real public listing evidence"
+  ],
+  "findings": [
+    {
+      "locator": "§13 表19, Fact ID SYN-0013-F002",
+      "id": "F002",
+      "required_repair": "Correct the locator to §§6.2–6.5 表7–10 date/period cells, or add an explicit 2027 SAMPLE scope sentence to §6.1 and locate it precisely.",
+      "severity": "minor_locator_accuracy",
+      "finding": "The register maps the 2027 annual range sentence to §6.1, but the 2027 year appears in the course tables under §§6.2–6.5."
+    },
+    {
+      "locator": "§13 表19, Fact ID SYN-0013-F013",
+      "id": "F013",
+      "required_repair": "Separate locator for course count in §6.1 and course details in §§6.2–6.5 表7–10.",
+      "severity": "minor_locator_accuracy",
+      "finding": "The register maps tables 7–10 to §6.1; the four course detail tables are actually §§6.2–6.5. The count of four courses itself is in §6.1."
+    }
+  ],
+  "positive_checks": [
+    "Official requirement and genre",
+    "Pre-publication vs post-publication readback",
+    "F016-F024 values and R09 CSV row-by-row agreement",
+    "separate fill rate vs usable-channel status",
+    "30 training hours / 74 planned seats",
+    "SAMPLE/REAL boundary",
+    "title-blind use and negative-neighbor separation"
+  ],
+  "candidate_state": "CANDIDATE_SAMPLE_SYNTHETIC_NOT_ACCEPTED",
+  "formal_acceptance": "UNKNOWN",
+  "real_publication": "UNKNOWN_HOLD",
+  "original_response_sha256": "2fef03b7ee1a6eea5c0174adcaa70246d693088d16d5d82d1d777016c33aec05",
+  "reviewer_response_path": "evidence/receipts/semantic_review_R09_original_response.md"
+}

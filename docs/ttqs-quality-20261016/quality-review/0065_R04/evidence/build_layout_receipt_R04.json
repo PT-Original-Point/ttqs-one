@@ -1,0 +1,72 @@
+{
+  "document_id": "0065",
+  "revision": "R04",
+  "requirement_id": "I15-E01",
+  "official_checkbox_serial": "071",
+  "status": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "source_body": "candidate/0065_R04_body.md",
+  "source_body_sha256": "d802ae1c6b885da69675229fb465e1f3d50db51d238f486f26dd3932802eecd7",
+  "docx_path": "candidate/0065_R04.docx",
+  "docx_bytes": 59960,
+  "docx_sha256": "4b6a0116e8ebd4a3700c4d3243532eeb54e7dea1f6c40e56f7e8a5e7806e654d",
+  "generated_utc": "2026-10-18T16:30:46.530086+00:00",
+  "layout_transformation": "Markdown tables with more than five columns are rendered as readable two-column record cards; all headers and cell values are retained.",
+  "revision_parent": {
+    "revision": "R03",
+    "docx_sha256": "7a1c70120da229cac5691aab3dbf34959598735cf4d5191d1b8a465e6de0ad7f",
+    "independent_semantic_verdict": "PASS for candidate status; exact appendix label reference and page-split layout correction pending R04 verification"
+  },
+  "revision_change_summary": "Aligned Section 6 appendix reference with its exact heading and forced the HOLD appendix to a new page after R03 visual review found an orphaned heading/item at the bottom of page 21; no case facts or calculations changed.",
+  "layout_iteration_history": [
+    {
+      "iteration": 1,
+      "docx_sha256": "d3fe88674a3115f05de3f0f2f5ee4801701ac9b7db099df9fb91cbf74347c744",
+      "finding": "Visual inspection found action A-03 and blank-form record rows could split across pages; the wide dashboard/action register also used unnecessarily tall individual field rows.",
+      "disposition": "Preliminary build, not externally reviewed or a stable candidate."
+    },
+    {
+      "iteration": 2,
+      "layout_fixes": [
+        "group related dashboard fields while preserving their original values",
+        "compact action cards without removing facts",
+        "keep each record card together where page space permits",
+        "raise standard table text to 9.5 pt"
+      ],
+      "disposition": "Current layout iteration; requires fresh full render and inspection."
+    },
+    {
+      "iteration": 3,
+      "finding": "Inspection of iteration 2 found grouped wide-table cards displayed the final source-header label repeatedly instead of each grouped label.",
+      "layout_fixes": [
+        "render each group label from its explicit display label",
+        "reinspect metric, action-register and blank-form cards"
+      ],
+      "disposition": "Current iteration; requires fresh full render and inspection."
+    },
+    {
+      "iteration": 4,
+      "finding": "Technical style audit raised standard table header text from 9.4 pt to 9.5 pt to match the document's table readability floor.",
+      "layout_fixes": [
+        "standard table headers now use 9.5 pt"
+      ],
+      "disposition": "R03 rendered and reviewed; see R03 exact-SHA receipts."
+    },
+    {
+      "iteration": 5,
+      "finding": "R03 visual inspection found appendix heading and item 1 orphaned at the end of page 21, with items 2-10 alone on page 22.",
+      "layout_fixes": [
+        "start the HOLD/return appendix on a new page; align cross-reference with exact heading"
+      ],
+      "disposition": "Current R04 build; requires full final render, visual inspection, and exact-SHA independent review."
+    }
+  ],
+  "block_counts": {
+    "headings": 29,
+    "tables": 15,
+    "wide_tables_stacked": 4,
+    "quotes": 9,
+    "list_items": 72
+  },
+  "independent_semantic_review": "PENDING",
+  "formal_human_acceptance": "PENDING"
+}

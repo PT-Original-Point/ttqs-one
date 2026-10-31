@@ -1,0 +1,172 @@
+# 0142 R06 Targeted Independent Delta Review
+
+{
+  "doc_id": "0142",
+  "requirement_id": "I19-E32",
+  "candidate_sha256": "5b2ee12dfd2c2a942ca5f89e9e95af453b310f65240463ee7d49f4fae540ace6",
+  "parent_partial_candidate_sha256": "0e53bdcae4bb86cb369c1c6d41685b1e79280b39cf61f45208854d2f4b593bad",
+  "official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "source_commit": "abdf18ec5cb1a81bca7e62cd50c3dbaaa6f49764",
+  "blueprint_blob_sha": "8c2bbe7ca9dcbb03088a48934b9e57e7147ede63",
+  "source_packet_sha256": "e3e8b3a8ee1effe758608fee183440add4f37381988c5e352912b1a3d55c9e49",
+  "unique_blueprint_sha256": "4841161d6e9aad3ace2a0b4ec4a5a3e1b7e92b68ff2b20f95e9edeae2b84070b",
+  "official_excerpt_sha256": "0733c1e3a7fa7b88b79846aabf8667391e032165e78cf9bfc06b7363e71ffe11",
+  "blueprint_excerpt_sha256": "9cc71e28910043fe20017702ce81f4efc0fbda3af821dfedffb17549f1573734",
+  "R03_findings": [
+    "Six-column account mapping table missing.",
+    "Embedded sample replacement list missing from Word.",
+    "Percentages not consistently displayed to two decimals."
+  ],
+  "R06_scope": "Confirm only whether the three R03 findings are closed on the exact R06 source-bound sections, and whether the visual/layout changes introduce a material defect. Do not re-review the entire document.",
+  "mapping_table": [
+    [
+      "原帳科目（示例名）",
+      "分類",
+      "是否納入營業額",
+      "決定依據",
+      "權責確認",
+      "版本"
+    ],
+    [
+      "【SAMPLE】訓練服務收入（合成科目名）",
+      "服務收入（示例）",
+      "示例假設納入；REAL待核",
+      "僅假設為當期訓練服務對價；真實須核對報表列、總帳、明細、期間、退款及折讓。",
+      "REAL未核；財務權責者記科目/期間/日期，第二人獨立覆核；不得補造姓名。",
+      "R04 SAMPLE／未生效"
+    ],
+    [
+      "【SAMPLE】捐助或政府補助（合成科目名）",
+      "其他收入（示例）",
+      "示例不納入；REAL待核",
+      "先核用途限制、核銷條件及會計政策；不得僅因收入增加併入營業額。",
+      "REAL未核；權責確認及覆核資料待真實作業留痕。",
+      "R04 SAMPLE／未生效"
+    ],
+    [
+      "【SAMPLE】會員會費（合成科目名）",
+      "其他收入（示例）",
+      "示例不納入；REAL待核",
+      "按正式科目表及收入性質核對；分類不明先列例外。",
+      "REAL未核；權責確認及覆核資料待真實作業留痕。",
+      "R04 SAMPLE／未生效"
+    ],
+    [
+      "【SAMPLE】利息收入（合成科目名）",
+      "其他收入（示例）",
+      "示例不納入；REAL待核",
+      "與服務收入分列，不得用總收入變動替代營業額趨勢。",
+      "REAL未核；權責確認及覆核資料待真實作業留痕。",
+      "R04 SAMPLE／未生效"
+    ],
+    [
+      "【SAMPLE】代收／暫收款（合成科目名）",
+      "待判／代收性質",
+      "不納入；差異未解即HOLD",
+      "查交易本質、債權債務及正式入帳依據；不得將代收款視作服務收入。",
+      "REAL未核；須有原始交易與權責判定。",
+      "R04 SAMPLE／未生效"
+    ],
+    [
+      "【SAMPLE】退款／折讓／沖銷（合成科目名）",
+      "營業額調整（示例）",
+      "按正式口徑調減；REAL待核",
+      "須連回原服務收入及年度，按一致會計基礎處理，避免重複扣抵。",
+      "REAL未核；須留交易原件、調整理由及獨立覆核。",
+      "R04 SAMPLE／未生效"
+    ]
+  ],
+  "replacement_register": [
+    [
+      "sample_fact_id",
+      "表／列／欄",
+      "合成值",
+      "真實來源定位（待填）",
+      "覆核狀態",
+      "替換日期"
+    ],
+    [
+      "SYN-0142-I19-E32-2023-OPERATING_REVENUE",
+      "表5／2023／營業額",
+      "1,200,000 TWD",
+      "UNKNOWN；待填正式財報年度/頁碼/列、總帳科目及受控原件位置。",
+      "SAMPLE/SYNTHETIC；REAL HOLD；未核",
+      "未替換；待實際作業日期"
+    ],
+    [
+      "SYN-0142-I19-E32-2023-OTHER_INCOME",
+      "表5／2023／其他收入",
+      "280,000 TWD",
+      "UNKNOWN；待填正式財報年度/頁碼/列、總帳科目及受控原件位置。",
+      "SAMPLE/SYNTHETIC；REAL HOLD；未核",
+      "未替換；待實際作業日期"
+    ],
+    [
+      "SYN-0142-I19-E32-2023-TOTAL_INCOME",
+      "表5／2023／總收入",
+      "1,480,000 TWD",
+      "UNKNOWN；待填正式財報年度/頁碼/列、總帳科目及受控原件位置。",
+      "SAMPLE/SYNTHETIC；REAL HOLD；未核",
+      "未替換；待實際作業日期"
+    ],
+    [
+      "SYN-0142-I19-E32-2024-OPERATING_REVENUE",
+      "表5／2024／營業額",
+      "1,320,000 TWD",
+      "UNKNOWN；待填正式財報年度/頁碼/列、總帳科目及受控原件位置。",
+      "SAMPLE/SYNTHETIC；REAL HOLD；未核",
+      "未替換；待實際作業日期"
+    ],
+    [
+      "SYN-0142-I19-E32-2024-OTHER_INCOME",
+      "表5／2024／其他收入",
+      "260,000 TWD",
+      "UNKNOWN；待填正式財報年度/頁碼/列、總帳科目及受控原件位置。",
+      "SAMPLE/SYNTHETIC；REAL HOLD；未核",
+      "未替換；待實際作業日期"
+    ],
+    [
+      "SYN-0142-I19-E32-2024-TOTAL_INCOME",
+      "表5／2024／總收入",
+      "1,580,000 TWD",
+      "UNKNOWN；待填正式財報年度/頁碼/列、總帳科目及受控原件位置。",
+      "SAMPLE/SYNTHETIC；REAL HOLD；未核",
+      "未替換；待實際作業日期"
+    ],
+    [
+      "SYN-0142-I19-E32-2025-OPERATING_REVENUE",
+      "表5／2025／營業額",
+      "1,452,000 TWD",
+      "UNKNOWN；待填正式財報年度/頁碼/列、總帳科目及受控原件位置。",
+      "SAMPLE/SYNTHETIC；REAL HOLD；未核",
+      "未替換；待實際作業日期"
+    ],
+    [
+      "SYN-0142-I19-E32-2025-OTHER_INCOME",
+      "表5／2025／其他收入",
+      "300,000 TWD",
+      "UNKNOWN；待填正式財報年度/頁碼/列、總帳科目及受控原件位置。",
+      "SAMPLE/SYNTHETIC；REAL HOLD；未核",
+      "未替換；待實際作業日期"
+    ],
+    [
+      "SYN-0142-I19-E32-2025-TOTAL_INCOME",
+      "表5／2025／總收入",
+      "1,752,000 TWD",
+      "UNKNOWN；待填正式財報年度/頁碼/列、總帳科目及受控原件位置。",
+      "SAMPLE/SYNTHETIC；REAL HOLD；未核",
+      "未替換；待實際作業日期"
+    ]
+  ],
+  "sample_math": {
+    "2023_total": 1480000,
+    "2024_total": 1580000,
+    "2025_total": 1752000,
+    "2024_yoy": "10.00",
+    "2025_yoy": "10.00",
+    "three_year_operating": "21.00",
+    "three_year_total": "18.38"
+  },
+  "real_evidence": "No genuine financial source originals supplied; actual financial trend remains UNKNOWN/HOLD. No association approval is asserted.",
+  "local_docx_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0142_I19-E32_SOURCE_PREP_R01_20261025\\R04_STRUCTURED_SEMANTIC_REPAIR_R11_20261025\\0142_I19-E32_R06_CANDIDATE.docx"
+}

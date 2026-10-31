@@ -1,0 +1,12 @@
+{
+  "schema": "TTQS_ONE_0079_R05_STATUS_CORRECTION.v1",
+  "evidence_location": "R05 PDF page 19; candidate/0079_R01_body.md rows 490-491; extracted DOCX table rows 8-9.",
+  "prior_candidate_sha256": "d6689cef08d43f92b7110f3371856ad49991db69147334d5a494b1f7e5637cd2",
+  "disposition": "Preserve R05 bytes and all prior receipts as history; issue a targeted R06 correction and require technical, visual, and independent exact-SHA semantic review before restoring candidate PASS.",
+  "document_id": "0079",
+  "discovered_at_local": "2026-10-19",
+  "defect": "The document mapping table rows used 085 and 086 in the 文件 column; these are official checkbox serials, not DOCX IDs. Historical sequence maps DOCX 0080 to I17B-E02/checkbox 085 and DOCX 0081 to I17B-E03/checkbox 086.",
+  "real_evidence": "UNKNOWN/HOLD",
+  "prior_quality_gate": "PASS_REVOKED_FOR_CANDIDATE_USE_AFTER_CONCRETE_MAPPING_DEFECT",
+  "formal_acceptance": "NOT_GRANTED"
+}

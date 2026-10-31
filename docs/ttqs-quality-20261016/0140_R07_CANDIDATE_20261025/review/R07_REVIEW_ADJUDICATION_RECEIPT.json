@@ -1,0 +1,44 @@
+{
+  "schema": "ttqs-one-0140-r07-independent-review-adjudication-v1",
+  "doc_id": "0140",
+  "requirement_id": "I19-E30",
+  "official_157_index": 154,
+  "printed_checkbox_serial": "UNKNOWN",
+  "candidate_sha256": "7343688549e213f26ab22e58436a8d6915a679b72d75803a3c25566f94829ebe",
+  "candidate_bytes_unchanged": true,
+  "review_packet_sha256": "21701263b1921dde332a702c7416e764d2f8d59c524620c8227a66d5a0392206",
+  "review_request_sha256": "a8a0148d31585653a92156025788bdcd64a8cbce73a04a7e6c258290d371cd41",
+  "original_response_sha256": "593ef37bc8065e27d4179c786c6b4fb432ca2031cba222f28f0dd0b9d40bde81",
+  "original_stdout_sha256": "7611fd6cce0154b8a2d066bfb3b810dadc0c11453faeeca8052212ffa0aa138c",
+  "review_route": {
+    "cli": "OpenCode v2 CLI 2.1.4",
+    "requested_model": "opencode/mimo-v2.6-flash-free",
+    "actual_model": "UNKNOWN",
+    "cli_exit_code": "UNKNOWN_NOT_CAPTURED",
+    "provider_billing": "UNKNOWN",
+    "computer_use": "NOT_USED",
+    "tools_authorized": false,
+    "window_style": "Hidden",
+    "session_id": "ses_e8ee2716fffeHyvZzg52x5Tlaw",
+    "response_received": true
+  },
+  "reviewer_printed_verdict": "PASS semantic/text-only",
+  "codex_effective_adjudication": "PARTIAL_PENDING_TARGETED_REPAIR",
+  "basis": [
+    "The reviewer explicitly flags R07 5.3/T05 without a SAMPLE marker and says it is B1-class and requires PARTIAL if the contract requires each sample table to carry a marker. The official Blueprint/source scope requires clear SAMPLE marking on each sample table/page; T05 contains numeric sample cases, so the conditional is met.",
+    "T11 R005/R009 retains exact-SHA reviewer, typesetting/visual QA receipt and mixed script terms; this contradicts the deterministic QA claim no_internal_builder_vocab=true and the evaluator-facing prose requirement.",
+    "Builder clean_heading strips all parenthetical text and punctuation, causing the DOCX to lose the SAMPLE/尚未核定 heading suffixes and the 第七部分 comma enumeration present in the source manuscript."
+  ],
+  "other_targeted_findings": [
+    "N5 8.3 year column says 2024 年進展; change to explicitly synthetic period label.",
+    "N6 cover-card completion rate label does not state the eligible-user denominator.",
+    "N7 named association appears in a disclaimer without being in the official source packet; replace with neutral scope wording.",
+    "N8 reviewer reports caption typo 智及率, but direct DOCX paragraph P92 reads 圖 1 SAMPLE 普及率; finding rejected as unsupported by the exact candidate text.",
+    "N9 split A1/A2 tables need an ID join but reviewer found the data integrity intact; retain as a non-blocking usability note.",
+    "N10 heading separator punctuation is present in manuscript but stripped by clean_heading; fix builder root cause."
+  ],
+  "action": "Preserve R07 bytes and its original review. Create R08 with targeted source and builder repairs only; rebuild a new candidate, rerun targeted QA, then obtain independent semantic review on R08 exact SHA and native Word visual review when Office COM is available.",
+  "native_visual_review": "NOT_PERFORMED",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_data": "UNKNOWN/HOLD"
+}

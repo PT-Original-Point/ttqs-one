@@ -1,0 +1,231 @@
+{
+  "technical_delta": {
+    "official_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+    "candidate_state": "CANDIDATE_PENDING_INDEPENDENT_SEMANTIC_REVIEW",
+    "review_limit": "This is a deterministic change-scope check, not a new full technical or semantic review.",
+    "project_id": "TTQS_ONE",
+    "source_candidate_sha256": "7f154df3ae9e9b5a9b91195fdd8c3abc8c1a88e7b2fcd9a87d47faa10fdf137e",
+    "structural_comparison": {
+      "literal_backslash_ge_tokens_R01": 2,
+      "table_count_R02": 20,
+      "result": "PASS",
+      "table_count_R01": 20,
+      "paragraph_count_R02": 299,
+      "all_table_cell_text_unchanged": true,
+      "changed_paragraphs": [
+        {
+          "change": "removed 80-character equals-only divider",
+          "index": 57
+        },
+        {
+          "change": "removed 80-character equals-only divider",
+          "index": 63
+        },
+        {
+          "change": "removed 80-character equals-only divider",
+          "index": 149
+        },
+        {
+          "change": "replaced literal \\\\ge with ≥ in Q03 opportunity count",
+          "index": 232
+        },
+        {
+          "change": "replaced literal \\\\ge with ≥ in Q04 applied count",
+          "index": 233
+        }
+      ],
+      "equals_only_dividers_R02": 0,
+      "paragraph_count_R01": 299,
+      "literal_backslash_ge_tokens_R02": 0,
+      "equals_only_dividers_R01": 3,
+      "method": "python-docx extracted 299 top-level paragraphs and 20 tables from R01 and R02"
+    },
+    "candidate_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+    "source_packet_sha256": "8301b3e12467370086dfccd86c4dbcd50d339f0ed54cda93c2bfcc051b793c3d",
+    "observed_at_local": "2026-10-25T23:04:14.0167187+08:00",
+    "unique_blueprint_sha256": "cbfd0760a03870151d9bc083b8db76655d53107757706f4b1f4449e997553420",
+    "doc_id": "0122",
+    "work_id": "TTQS-0122-I19-E10-R11-TARGETED-REPAIR-R02",
+    "requirement_id": "I19-E10",
+    "official_requirement": "提出課後追蹤調查與分析結果、證照通過情形（學習技能面）",
+    "official_page": 8,
+    "official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "math_boundary": {
+      "reference": "R01 exact-SHA technical QA and calculation receipt; R02 XML/text delta confirms no numbers or table cells changed",
+      "numeric_data_changed": false,
+      "displayed_counts_preserved": {
+        "valid_responses": 8,
+        "Q04_applied_count": 6,
+        "Q03_opportunity_count": 7
+      },
+      "new_full_recalculation": "NOT_RUN"
+    }
+  },
+  "word_native_render": {
+    "official_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+    "render_engine": "Microsoft Word COM ExportAsFixedFormat",
+    "project_id": "TTQS_ONE",
+    "output_pdf": {
+      "pages": 28,
+      "pdf_version": "1.7",
+      "bytes": 874075,
+      "producer": "Microsoft Word",
+      "creator": "Microsoft Word",
+      "path": "render/0122_R02_WordNative.pdf",
+      "sha256": "5cf146107a8b0bf94339f4becf9bdc8e72ca9fd79da9df06de3c78a883ad5794",
+      "paper": "A4"
+    },
+    "candidate_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+    "source_packet_sha256": "8301b3e12467370086dfccd86c4dbcd50d339f0ed54cda93c2bfcc051b793c3d",
+    "observed_at_local": "2026-10-25T23:04:14.0167187+08:00",
+    "unique_blueprint_sha256": "cbfd0760a03870151d9bc083b8db76655d53107757706f4b1f4449e997553420",
+    "render_execution": {
+      "wrapper_error": "Post-export verification helper failed after PDF creation because this Windows PowerShell Get-Content version did not accept -Encoding Byte; independent file signature, pdfinfo, and SHA-256 checks succeeded.",
+      "new_word_process_closed": true,
+      "pdf_signature": "%PDF-",
+      "artifact_created_and_independently_verified": true,
+      "wrapper_exit_code": 1,
+      "other_word_processes_killed": 0,
+      "winword_count_observed_after_export": 52
+    },
+    "doc_id": "0122",
+    "work_id": "TTQS-0122-I19-E10-R11-TARGETED-REPAIR-R02",
+    "requirement_id": "I19-E10",
+    "pdfinfo_page_count": 28,
+    "official_requirement": "提出課後追蹤調查與分析結果、證照通過情形（學習技能面）",
+    "official_page": 8,
+    "official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "word_file_version": "16.0.20326.20232",
+    "receipt_scope": "Word-native rendering and artifact identity only; not semantic acceptance."
+  },
+  "project_id": "TTQS_ONE",
+  "public_visual_artifact": {
+    "encoding": "JPEG; full-document contact sheets plus enlarged page-22 formula region",
+    "bytes": 218917,
+    "path": "render/R02_visual_contact_and_repair_detail.jpg",
+    "sha256": "2cdcdc6008433c00498545d7ad61f3327adf5db8c2eb1c8e7397f446ddbdc525"
+  },
+  "official_requirement": "提出課後追蹤調查與分析結果、證照通過情形（學習技能面）",
+  "candidate_status": {
+    "official_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+    "visual_qa": "PASS_VISUAL_SCOPE; all 28 pages reviewed in contact sheets and pages 7/10/22 full-resolution",
+    "technical_delta": "PASS; exact R01-to-R02 text/table diff contains only three divider removals and two inequality glyph substitutions",
+    "real_evidence": "NOT_PROVIDED; sample/synthetic only",
+    "formal_acceptance": "NOT_GRANTED",
+    "candidate_state": "CANDIDATE_PENDING_INDEPENDENT_SEMANTIC_REVIEW",
+    "project_id": "TTQS_ONE",
+    "github_existing_candidate_readback": "PENDING_THIS_TURN",
+    "source_packet_sha256": "8301b3e12467370086dfccd86c4dbcd50d339f0ed54cda93c2bfcc051b793c3d",
+    "candidate_docx_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+    "unique_blueprint_sha256": "cbfd0760a03870151d9bc083b8db76655d53107757706f4b1f4449e997553420",
+    "updated_at_local": "2026-10-25T23:04:14.0167187+08:00",
+    "doc_id": "0122",
+    "work_id": "TTQS-0122-I19-E10-R11-TARGETED-REPAIR-R02",
+    "requirement_id": "I19-E10",
+    "semantic_review": "PENDING; no independent exact-SHA semantic receipt for R02",
+    "official_requirement": "提出課後追蹤調查與分析結果、證照通過情形（學習技能面）",
+    "official_page": 8,
+    "official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "word_native_render": "PASS; 28-page Word-generated PDF, SHA 5cf146107a8b0bf94339f4becf9bdc8e72ca9fd79da9df06de3c78a883ad5794",
+    "github_readback": {
+      "new_visual_evidence_sync": "PENDING",
+      "unique_blueprint_sha256": "cbfd0760a03870151d9bc083b8db76655d53107757706f4b1f4449e997553420",
+      "verified_at_local": "2026-10-25T23:05:53.2168059+08:00",
+      "source_packet_bytes": "PASS_SHA256_EXACT_MATCH",
+      "source_packet_sha256": "8301b3e12467370086dfccd86c4dbcd50d339f0ed54cda93c2bfcc051b793c3d",
+      "head": "0628f3bbf45ac54ba9d198b82feaa702735c7022",
+      "candidate_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+      "candidate_remote_path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R02_candidate_pending_word_visual/0122_I19-E10_R02.docx",
+      "candidate_bytes": "PASS_SHA256_EXACT_MATCH",
+      "branch": "work/ttqs-one-document-quality-contract-20261016",
+      "unique_blueprint_bytes": "PASS_SHA256_EXACT_MATCH"
+    }
+  },
+  "official_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+  "visual_review": {
+    "render_pdf_sha256": "5cf146107a8b0bf94339f4becf9bdc8e72ca9fd79da9df06de3c78a883ad5794",
+    "formal_human_acceptance": "NOT_GRANTED",
+    "official_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+    "nonblocking_observations": [
+      "Some pages retain substantial lower-page whitespace; consistent with prior R01 observations and does not obscure content.",
+      "This inspection verifies layout and the localized display fixes, not every text character or the semantic adequacy of every questionnaire item."
+    ],
+    "schema": "ttqs-one-visual-review/v1",
+    "page_contact_sheets": [
+      {
+        "file": "contact_01_14.jpg",
+        "sha256": "78e18d49bb343acfb6dc6ff0949a8d9214d6e138d1d754ba2a4e2100d7dbbfb3",
+        "bytes": 472341
+      },
+      {
+        "file": "contact_15_28.jpg",
+        "sha256": "c25aa1838a977ab5e6410088a022e34e3ca07bd9b37f2282ce9e9d05f534814e",
+        "bytes": 415090
+      }
+    ],
+    "findings": [
+      {
+        "pages": [
+          7,
+          10
+        ],
+        "observation": "Three 80-character equals-only paragraphs are absent; headings and surrounding questionnaire/table content remain visible and readable.",
+        "id": "V-01",
+        "result": "PASS"
+      },
+      {
+        "pages": [
+          22
+        ],
+        "observation": "Both Q03 and Q04 comparison tokens render as ≥; counts 7 and 6 remain legible.",
+        "id": "V-02",
+        "result": "PASS"
+      },
+      {
+        "pages": "1-28",
+        "observation": "28-page pagination retained; contact sheets show no blank, missing, duplicate, or visibly clipped page content and no table visibly extends beyond page bounds.",
+        "id": "V-03",
+        "result": "PASS"
+      }
+    ],
+    "candidate_state": "CANDIDATE",
+    "full_resolution_repair_pages": [
+      {
+        "file": "page-7.png",
+        "sha256": "3700817b860ee666a258de9504fa9918aae0ad49afc9ec800115c475ab6e32c9",
+        "bytes": 345262
+      },
+      {
+        "file": "page-10.png",
+        "sha256": "f2ceb97954b9c46c4712f4122a05463f65a4ce3a831f0053d26c09b8fdaa1adf",
+        "bytes": 254492
+      },
+      {
+        "file": "page-22.png",
+        "sha256": "811b27b789f8f85ad844b66f2f23bc1c335e26842c62b2bca9ceb31da993420c",
+        "bytes": 366648
+      }
+    ],
+    "project_id": "TTQS_ONE",
+    "real_evidence": "NOT_PROVIDED_ALL_DEMONSTRATION_DATA_SAMPLE_SYNTHETIC",
+    "inspection_scope": "All 28 pages reviewed in two full-document contact sheets for page flow, missing/clipped blocks, table splits, blank/duplicate pages and overall readability; pages 7, 10 and 22 also inspected as full-resolution page images because they contain the R02 repairs.",
+    "candidate_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+    "source_packet_sha256": "8301b3e12467370086dfccd86c4dbcd50d339f0ed54cda93c2bfcc051b793c3d",
+    "observed_at_local": "2026-10-25T23:04:14.0167187+08:00",
+    "unique_blueprint_sha256": "cbfd0760a03870151d9bc083b8db76655d53107757706f4b1f4449e997553420",
+    "rendered_pages": 28,
+    "doc_id": "0122",
+    "work_id": "TTQS-0122-I19-E10-R11-TARGETED-REPAIR-R02",
+    "requirement_id": "I19-E10",
+    "semantic_review": "PENDING_NOT_RUN_ON_R02_EXACT_SHA",
+    "reviewed_pages": "1-28",
+    "official_requirement": "提出課後追蹤調查與分析結果、證照通過情形（學習技能面）",
+    "official_page": 8,
+    "official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "verdict": "PASS_VISUAL_SCOPE"
+  },
+  "doc_id": "0122",
+  "qa_state": "VISUAL_PASS_SCOPE; INDEPENDENT_SEMANTIC_REVIEW_PENDING; FORMAL_ACCEPTANCE_NOT_GRANTED",
+  "schema": "ttqs-one-candidate-qa-bundle/v1",
+  "requirement_id": "I19-E10"
+}

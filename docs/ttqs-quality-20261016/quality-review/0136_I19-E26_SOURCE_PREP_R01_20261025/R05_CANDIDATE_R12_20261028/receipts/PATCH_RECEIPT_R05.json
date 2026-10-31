@@ -1,0 +1,66 @@
+{
+  "schema": "TTQS_ONE_0136_R05_TARGETED_REPAIR_V1",
+  "doc_id": "0136",
+  "requirement_id": "I19-E26",
+  "source_candidate": "R02",
+  "source_sha256": "a9bd0fb528a1e22865fa5e07df44b314d48c1fd826a08149ecdd1d5915048b39",
+  "new_candidate": "0136_I19-E26_R05_CANDIDATE_20261028.docx",
+  "new_sha256": "6d02df68d9dcdd0024aec8d32b38b12e8c66ce112165663836427739c0af5611",
+  "bytes": 55729,
+  "table_count": 32,
+  "changes": [
+    {
+      "table": 1,
+      "row": 8,
+      "column": 2,
+      "old": "R01 CANDIDATE｜建置日 2026-10-25｜未正式接受、未核准生效",
+      "new": "R05 CANDIDATE｜本次修訂日 2026-10-28｜未正式接受、未核准生效"
+    },
+    {
+      "table": 21,
+      "row": 4,
+      "column": 2,
+      "old": "來源方、來源標題、日期、格式、頁／段／項、取得方式、原件狀態",
+      "new": "來源方、來源標題、來源記載日期、協會取得／收件日期、取得方式、格式／版本、頁／段／項、原件狀態"
+    },
+    {
+      "table": 21,
+      "row": 4,
+      "column": 3,
+      "old": "未取得填 NONE；不是實際檔案就沒有來源 SHA。",
+      "new": "來源尚未取得填 NONE；來源記載日期與協會取得／收件日期分欄，未知各自填 UNKNOWN；沒有實際檔案不得填原件 SHA。"
+    },
+    {
+      "table": 21,
+      "row": 6,
+      "column": 2,
+      "old": "查核管道／日期／結果、相關性、重複鍵、隱私級別、限制",
+      "new": "查核管道／日期／結果、相關性、重複鍵、隱私級別、公開限制、保存／複查日期"
+    },
+    {
+      "table": 21,
+      "row": 6,
+      "column": 3,
+      "old": "標清楚誰核了哪項；一項通過不代表其他項通過。",
+      "new": "逐項標明查核項目；一項通過不代表其他項通過。保存／複查日期只依協會正式規則與來源填寫；未查得規則或日期填 UNKNOWN，不自行設定期限。"
+    },
+    {
+      "table": 22,
+      "row": 4,
+      "column": 1,
+      "old": "來源方／來源標題／日期",
+      "new": "來源方／標題／來源記載日期／協會取得（收件）日期／取得方式"
+    },
+    {
+      "table": 22,
+      "row": 8,
+      "column": 1,
+      "old": "隱私／公開限制／重複鍵",
+      "new": "隱私／公開限制／重複鍵／保存複查日（無正式依據填 UNKNOWN）"
+    }
+  ],
+  "layout_change": "page break before T1 blank form for complete table pagination",
+  "other_paragraph_or_cell_text_changed": false,
+  "technical_check": "reopen, 32 tables, seven exact cell deltas, page-break assertion PASS",
+  "no_other_docx_written": true
+}

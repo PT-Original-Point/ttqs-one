@@ -1,0 +1,30 @@
+{
+  "schema": "ttqs-one-semantic-review-adjudication-r11-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0136",
+  "official_requirement_id": "I19-E26",
+  "project_157_index": 150,
+  "official_printed_checkbox_serial": "UNKNOWN",
+  "candidate_sha256": "a9bd0fb528a1e22865fa5e07df44b314d48c1fd826a08149ecdd1d5915048b39",
+  "candidate_git_blob": "78c3e26c55523e8eec58253c7a2b91dd2e0d8d21",
+  "candidate_bytes": 55525,
+  "source_commit": "a19293ffae3096c5f7306d851b1fc1659ee8e82e",
+  "unique_blueprint_sha256": "32c1b818cc0b3957a23e319606f77b176a7979d1ee4ff58db72b9ae32ada8399",
+  "review_packet_git_blob": "76051ba7fa8236e33a2fc4fa21c7376b723a5187",
+  "external_cli_status": "SUCCESS",
+  "external_reviewer_verdict": "PASS",
+  "adjudicated_semantic_gate": "PARTIAL_ROUTE_IDENTITY_UNVERIFIED",
+  "bounded_crosscheck": "Candidate structure confirmed 106 paragraphs and 32 tables; spot checks of Table 9 evidence categories, Tables 16/18/20 synthetic examples, Tables 28/29 replacement conditions, and Table 32 CANDIDATE/REAL UNKNOWN/formal NOT_GRANTED agree with the response. No concrete content defect was identified in this bounded cross-check.",
+  "candidate_modified": false,
+  "rebuild_required": false,
+  "visual_qa": "Existing 14/14 page visual PASS exact SHA; not repeated",
+  "technical_qa": "Existing exact-SHA technical PASS; not repeated",
+  "real_evidence": "UNKNOWN_NO_REAL_SOURCE",
+  "formal_acceptance": "NOT_GRANTED",
+  "limitations": [
+    "Actual serving model identity is UNKNOWN; CLI log contains a CCPA default-resolution line followed by a Gemini 3.8 Flash (High) override and a Google endpoint response. No claim of verified Gemini serving or no fallback is made.",
+    "CLI warned plan mode was ineffective with slash expansion disabled; terminal sandbox unavailable on Windows 10. No tool call was observed in the one-turn response, but complete tool isolation is not independently proven.",
+    "Reviewer used the exact-SHA text packet only; it did not perform visual QA, verify REAL association records, or grant formal acceptance."
+  ],
+  "next_action": "Do not rebuild 0136. Keep the model-identity limitation attached to this review; continue the independent 0110 deterministic source/math mapping lane."
+}

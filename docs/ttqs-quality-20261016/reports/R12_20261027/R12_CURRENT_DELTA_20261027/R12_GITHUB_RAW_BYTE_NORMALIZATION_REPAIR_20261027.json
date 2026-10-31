@@ -1,0 +1,15 @@
+{
+  "schema": "TTQS_ONE_R12_GITHUB_RAW_BYTE_NORMALIZATION_REPAIR_V1",
+  "project_id": "TTQS_ONE",
+  "detected_after_commit": "888d45dde20e127375c13106b0e080cecbe205bf",
+  "detected_head": "888d45dde20e127375c13106b0e080cecbe205bf",
+  "initial_readback_receipt": "GITHUB_RAW_BYTE_READBACK_R12_COMMIT_888d45dde20e127375c13106b0e080cecbe205bf.json",
+  "initial_files": 39,
+  "initial_raw_exact": 13,
+  "initial_mismatch": 26,
+  "root_cause": "Windows Git system core.autocrlf=true normalized CRLF text receipts to LF in Git blobs. All 26 mismatches were confirmed by byte comparison as remote LF derived from local CRLF; binary DOCX/PDF/PNG were among exact matches.",
+  "repair": "Add narrowly scoped .gitattributes -text rules only to the newly synchronized candidate/receipt directories and restage the same local source bytes. Preserve initial commit as history; append a correction commit, do not force-push.",
+  "scope": "Only 0139 R09 evidence package, 0136/0137/0138 current readback/status receipts, and the R12 reconciliation receipt. No DOCX content changed by the synchronization repair.",
+  "verification_required": "Compare every local byte array with the fetched GitHub blob after the correction commit; publish final receipt only after exact comparison.",
+  "observed_at_local": "2026-10-27T09:19:58.8880087+08:00"
+}

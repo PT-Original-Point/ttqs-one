@@ -1,0 +1,15 @@
+{
+  "receipt_id": "TTQS-0105-RENDERER-AVAILABILITY-R04",
+  "observed_at_tpe": "2026-10-22T05:19:47+08:00",
+  "doc_id": "0105",
+  "candidate_docx_sha256": "17f7d680cbb992db93a6f67df84415500050953eecf426b477f675810177b4cb",
+  "platform": "Windows 10",
+  "checked_renderer": "Codex documents skill render_docx.py",
+  "renderer_behavior": "On Windows the packaged renderer resolves soffice.exe from PATH; it does not use a bundled LibreOffice binary on Windows.",
+  "soffice_exe_on_path": false,
+  "soffice_exe_in_bundled_dependencies": false,
+  "renderer_invoked": false,
+  "reason_not_invoked": "The required executable is absent. Reusing the Word COM route would repeat three already recorded stalled output methods without new diagnostic evidence.",
+  "visual_status": "BLOCKED",
+  "formal_acceptance": "NOT_GRANTED"
+}

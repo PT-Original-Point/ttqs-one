@@ -1,0 +1,30 @@
+{
+  "schema": "ttqs-one-r11-antigravity-invocation-recovery-v1",
+  "project_id": "TTQS_ONE",
+  "scope": "0120 I19-E08 exact-SHA semantic-review lane only",
+  "prior_incident": "5 pre-prompt invocation/parser errors; 0 accepted prompts; the 5th showed --print requires inline prompt and --print-timeout requires a duration unit.",
+  "adapter_fix": "Used agy 1.4.7 with --print=<prompt>, --print-timeout 210s, --model=gemini-3.8-flash-high, --sandbox, --input-format=text, --output-format=json; hidden Windows process; first length check rejected 52,864 UTF-16 units before CLI launch; corrected prompt packaging to 28,391 units.",
+  "dispatch_result": "ONE_PROMPT_ACCEPTED_AND_RESPONSE_RETURNED; exit 0; one turn; 67.79 seconds.",
+  "requested_model": "gemini-3.8-flash-high",
+  "actual_model": "UNKNOWN",
+  "usage_tokens": {
+    "input_tokens": 23668,
+    "output_tokens": 9093,
+    "thinking_tokens": 7137,
+    "cache_read_tokens": 0,
+    "total_tokens": 32761
+  },
+  "cost": "UNKNOWN",
+  "computer_use": "NOT_USED_BY_CODEX; no GUI window; model tool-event trace not exposed",
+  "candidate_sha256": "d99e4caec0f2ede04ed607d0e7a897065213c06c8e93bcadb83e638e3b54e57a",
+  "semantic_verdict": "PASS exact SHA; zero findings in raw response; not formal acceptance.",
+  "writer_lane_0110": "REMAINS_PAUSED; this review does not resume or certify the 0110 Writer lane.",
+  "no_retry": "Do not repeat this exact-SHA review; provider/model identity remains unresolved and OpenCode provider cooldown is active.",
+  "evidence": {
+    "dispatch_receipt_sha256": "b0fb7836918646ee1dd46e3254f8a997ed12b664acfcaa44a8dfd4e176576166",
+    "raw_stdout_sha256": "8a83211608066282a5e204a52615277f9da938dd78b08c396b9e612e6d477b63",
+    "semantic_receipt_sha256": "ac36431371207808e168dee9c7f385fb9db928af332d3fc1b9b9746fd9b1f374",
+    "adapter_preflight_sha256": "ac6b3a27a01eca619b0133c3f47cdbd84ff43e2e7d65d78f8918d3458c8ea1df"
+  },
+  "created_at_local": "2026-10-25T21:11:02+08:00"
+}

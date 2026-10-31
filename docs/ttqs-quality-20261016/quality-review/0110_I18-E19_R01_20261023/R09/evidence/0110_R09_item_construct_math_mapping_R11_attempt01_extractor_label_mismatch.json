@@ -1,0 +1,299 @@
+{
+  "schema": "ttqs-one-0110-item-construct-math-qa-r11-v1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0110-I18-E19-R09-ITEM-CONSTRUCT-MATH-QA-R11",
+  "doc_id": "0110",
+  "requirement_id": "I18-E19",
+  "official_checkbox_serial": "UNKNOWN",
+  "candidate_file": "0110_I18-E19_完整問卷暨行動計畫工具_R09.docx",
+  "candidate_sha256": "7fc82ba7ae25ba3fd422d7abcae2618176f64d4e2e118021122912440d9b740f",
+  "source_packet_sha256": "e3db8f4ed82b21de4dc8cfb5886c4387c123d49a0465356354a18a9be39a8d38",
+  "unique_blueprint_sha256": "81ec1fc96c9d48fa2a088fbe32ecf8bc31abd88a3d8945ba22585226440a8796",
+  "observed_at_tpe": "2026-10-25T04:15:32+08:00",
+  "mapping": {
+    "question_ids": [
+      "L01",
+      "L02",
+      "L03",
+      "L04",
+      "L05",
+      "L06",
+      "L07",
+      "L08",
+      "L09",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07"
+    ],
+    "rows": [
+      {
+        "item_id": "L01",
+        "observation_focus": "標準作業指引理解",
+        "construct": "操作指引理解",
+        "scale_and_rule": "同意尺度；單題呈現"
+      },
+      {
+        "item_id": "L02",
+        "observation_focus": "受訓前後自覺執行信心變化（學員主觀自我效能）",
+        "construct": "自我效能感知（非組織績效）",
+        "scale_and_rule": "變化尺度；題幹須寫明比較基準"
+      },
+      {
+        "item_id": "L03",
+        "observation_focus": "交接紀錄查核要點執行",
+        "construct": "查核步驟執行",
+        "scale_and_rule": "同意尺度；單題呈現"
+      },
+      {
+        "item_id": "L04",
+        "observation_focus": "符合條件班次的實際使用頻率",
+        "construct": "實際使用頻率",
+        "scale_and_rule": "專用頻率代碼；不作Likert平均或有利率"
+      },
+      {
+        "item_id": "L05",
+        "observation_focus": "突發情境依流程處置",
+        "construct": "情境處置能力",
+        "scale_and_rule": "同意尺度；單題呈現"
+      },
+      {
+        "item_id": "L06",
+        "observation_focus": "換班口頭及書面交接",
+        "construct": "交接執行能力",
+        "scale_and_rule": "同意尺度；單題呈現"
+      },
+      {
+        "item_id": "L07",
+        "observation_focus": "報到資料完整度的前後變化",
+        "construct": "資料完整度變化",
+        "scale_and_rule": "變化尺度；與可追溯操作紀錄分開呈現"
+      },
+      {
+        "item_id": "L08",
+        "observation_focus": "交接等待時間的前後變化",
+        "construct": "交接流程變化",
+        "scale_and_rule": "變化尺度；不與資料完整度平均"
+      },
+      {
+        "item_id": "L09",
+        "observation_focus": "團隊協作的前後變化",
+        "construct": "協作變化",
+        "scale_and_rule": "改為明確、可觀察的比較題；使用變化尺度"
+      },
+      {
+        "item_id": "C03",
+        "observation_focus": "接待流暢及服務表現變化",
+        "construct": "服務體驗變化",
+        "scale_and_rule": "由指定期間內直接觀察者作答"
+      },
+      {
+        "item_id": "C04",
+        "observation_focus": "物資及資料正確、齊全程度變化",
+        "construct": "資料物資完整正確變化",
+        "scale_and_rule": "改用前後比較，不用滿意度錨點"
+      },
+      {
+        "item_id": "C05",
+        "observation_focus": "交接時段服務連續性變化",
+        "construct": "服務連續性變化",
+        "scale_and_rule": "明列觀察期間及比較基準"
+      },
+      {
+        "item_id": "C06",
+        "observation_focus": "突發狀況回應時間前後變化",
+        "construct": "應變回應時間變化",
+        "scale_and_rule": "改為可觀察的比較題，不用同意度錨點"
+      },
+      {
+        "item_id": "C07",
+        "observation_focus": "整體可觀察的組織績效變化",
+        "construct": "整體績效變化",
+        "scale_and_rule": "單題報告；不與 C03–C06 合成分數"
+      }
+    ],
+    "reverse_scored_items": [],
+    "scoring_policy": "No reverse-scored item identified; agreement/change items are forward-coded as printed.",
+    "construct_aggregation_or_weights": "NONE: report item-by-item; no pooled learner/client score and no construct-weighted composite. L04 frequency is a separate distribution, not a Likert score.",
+    "item_denominator": "Valid responses coded 1-5 for that specific item only; 0, blank, invalid, duplicate excluded and separately counted."
+  },
+  "sample_row_counts": {
+    "learner_rows": 8,
+    "learner_eligible_rows": 7,
+    "learner_excluded_row": "L06 (explicit HOLD/INVALID in sample table)",
+    "client_rows": 6,
+    "client_C01_gate": "All six synthetic sample rows show C01=Yes; C08 is practice-identification, not eligibility."
+  },
+  "recalculated_item_results": [
+    {
+      "item_id": "L01",
+      "valid_N": 7,
+      "zero_count": 0,
+      "blank_invalid_duplicate_count": 0,
+      "sum": 29,
+      "mean_3dp": 4.143,
+      "favorable_4_5_n": 6,
+      "favorable_4_5_pct_1dp": 85.7
+    },
+    {
+      "item_id": "L02",
+      "valid_N": 7,
+      "zero_count": 0,
+      "blank_invalid_duplicate_count": 0,
+      "sum": 26,
+      "mean_3dp": 3.714,
+      "favorable_4_5_n": 4,
+      "favorable_4_5_pct_1dp": 57.1
+    },
+    {
+      "item_id": "L03",
+      "valid_N": 7,
+      "zero_count": 0,
+      "blank_invalid_duplicate_count": 0,
+      "sum": 27,
+      "mean_3dp": 3.857,
+      "favorable_4_5_n": 5,
+      "favorable_4_5_pct_1dp": 71.4
+    },
+    {
+      "item_id": "L04",
+      "eligible_answers": 7,
+      "frequency_counts": {
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 1
+      },
+      "zero_or_not_observed": 1,
+      "score_mean": "NOT_APPLICABLE",
+      "favorable_4_5": "NOT_APPLICABLE"
+    },
+    {
+      "item_id": "L05",
+      "valid_N": 6,
+      "zero_count": 1,
+      "blank_invalid_duplicate_count": 0,
+      "sum": 20,
+      "mean_3dp": 3.333,
+      "favorable_4_5_n": 3,
+      "favorable_4_5_pct_1dp": 50.0
+    },
+    {
+      "item_id": "L06",
+      "valid_N": 7,
+      "zero_count": 0,
+      "blank_invalid_duplicate_count": 0,
+      "sum": 28,
+      "mean_3dp": 4.0,
+      "favorable_4_5_n": 6,
+      "favorable_4_5_pct_1dp": 85.7
+    },
+    {
+      "item_id": "L07",
+      "valid_N": 6,
+      "zero_count": 1,
+      "blank_invalid_duplicate_count": 0,
+      "sum": 24,
+      "mean_3dp": 4.0,
+      "favorable_4_5_n": 5,
+      "favorable_4_5_pct_1dp": 83.3
+    },
+    {
+      "item_id": "L08",
+      "valid_N": 6,
+      "zero_count": 1,
+      "blank_invalid_duplicate_count": 0,
+      "sum": 20,
+      "mean_3dp": 3.333,
+      "favorable_4_5_n": 3,
+      "favorable_4_5_pct_1dp": 50.0
+    },
+    {
+      "item_id": "L09",
+      "valid_N": 6,
+      "zero_count": 1,
+      "blank_invalid_duplicate_count": 0,
+      "sum": 21,
+      "mean_3dp": 3.5,
+      "favorable_4_5_n": 3,
+      "favorable_4_5_pct_1dp": 50.0
+    },
+    {
+      "item_id": "C03",
+      "valid_N": 5,
+      "zero_count": 1,
+      "blank_invalid_duplicate_count": 0,
+      "sum": 20,
+      "mean_3dp": 4.0,
+      "favorable_4_5_n": 4,
+      "favorable_4_5_pct_1dp": 80.0
+    },
+    {
+      "item_id": "C04",
+      "valid_N": 5,
+      "zero_count": 1,
+      "blank_invalid_duplicate_count": 0,
+      "sum": 20,
+      "mean_3dp": 4.0,
+      "favorable_4_5_n": 4,
+      "favorable_4_5_pct_1dp": 80.0
+    },
+    {
+      "item_id": "C05",
+      "valid_N": 5,
+      "zero_count": 1,
+      "blank_invalid_duplicate_count": 0,
+      "sum": 18,
+      "mean_3dp": 3.6,
+      "favorable_4_5_n": 3,
+      "favorable_4_5_pct_1dp": 60.0
+    },
+    {
+      "item_id": "C06",
+      "valid_N": 5,
+      "zero_count": 1,
+      "blank_invalid_duplicate_count": 0,
+      "sum": 18,
+      "mean_3dp": 3.6,
+      "favorable_4_5_n": 3,
+      "favorable_4_5_pct_1dp": 60.0
+    },
+    {
+      "item_id": "C07",
+      "valid_N": 5,
+      "zero_count": 1,
+      "blank_invalid_duplicate_count": 0,
+      "sum": 19,
+      "mean_3dp": 3.8,
+      "favorable_4_5_n": 4,
+      "favorable_4_5_pct_1dp": 80.0
+    }
+  ],
+  "printed_summary_table": "Table 34",
+  "operational_example": {
+    "baseline": "6/8=75.0%",
+    "D0_plus_30": "7/8=87.5%",
+    "change_pp": 12.5,
+    "target": ">=90.0%; with fixed N=8 requires 8/8=100.0%",
+    "decision": "REVISE at D0+30; D0+60 final remains unknown; not CLOSE",
+    "checks": {
+      "baseline_6_of_8": true,
+      "followup_7_of_8": true,
+      "change_12_5pp": true,
+      "target_90_needs_8_of_8": true,
+      "decision_revise_for_midpoint": true
+    }
+  },
+  "identifier_collision_note": "L06 is both a synthetic respondent code and a questionnaire item ID. The DOCX explicitly distinguishes respondent codes from question numbers (paragraphs 263-264) and labels exclusion versus item result in Table 34; this QA preserves those separate namespaces.",
+  "synthetic_boundary": "All sample data are SAMPLE/SYNTHETIC; no real association performance is established.",
+  "result": "FAIL",
+  "errors": [
+    "TABLE34_ROW_MISSING:學員／L04"
+  ],
+  "scope_limitations": [
+    "Deterministic extraction and arithmetic consistency only; not an independent semantic review.",
+    "Does not establish actual serving model/provider identity.",
+    "Does not establish REAL evidence or Human formal acceptance."
+  ]
+}

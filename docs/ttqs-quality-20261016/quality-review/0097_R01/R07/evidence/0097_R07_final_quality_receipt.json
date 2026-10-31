@@ -1,0 +1,53 @@
+{
+  "schema": "ttqs.candidate_quality_receipt.v1",
+  "document_id": "0097",
+  "requirement_id": "I18-E05",
+  "official_checkbox_serial": "UNKNOWN",
+  "revision": "R07",
+  "artifact_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "candidate_docx": "writer/0097_R07_I18-E05_CANDIDATE.docx",
+  "candidate_docx_sha256": "026288491716d626a7bcac14a515313da7846f5a204703da9bad3a9010edf214",
+  "candidate_docx_bytes": 62584,
+  "blueprint": "BLUEPRINT_CURRENT_row_0097.json",
+  "source_binding": "source_binding_0097_R01.json",
+  "source_head_at_binding": "5bc59d0205826a92ad81e6ccc3ff87daa22a9bb2",
+  "source_contract_blobs": {
+    "blueprints_03": "8c2bbe7ca9dcbb03088a48934b9e57e7147ede63",
+    "genre_02": "4ff863d9f534b6359fc1c7c1685bd8cce02da886",
+    "audit_06": "263aaca84891bba8dca087875804343c3670e921",
+    "mission_01": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e",
+    "hourly_05": "60ae010c58140e1710ed24016085c6dfaf6ffaee",
+    "execution_04": "62e3dd7dfd8579b6bc97952ffa6236e7494f3b4d"
+  },
+  "sample_register_sha256": "879a3781405ef748b14b27f3ebe04325e200f4bea380c2d977cb6bea8d421a0e",
+  "sample_register_rows": 199,
+  "real_data_claimed": false,
+  "technical": {
+    "tables": 22,
+    "zip_integrity": "PASS",
+    "minimum_table_font_pt": 9.5,
+    "minimum_body_font_pt": 10.5,
+    "text_extraction_sha256": "8e9ae4c5bc7176d4e1d7c4f2451ee389ba831300ff7b2b33ac53d51a0a51e79f",
+    "paragraphs": 888
+  },
+  "semantic": {
+    "review_receipt": "0097_R07_semantic_delta_receipt.json",
+    "R07_exact_sha_delta": "PASS",
+    "reviewed_exact_sha": "026288491716d626a7bcac14a515313da7846f5a204703da9bad3a9010edf214",
+    "R06_full_review": "PARTIAL solely F2/F3; nine other rubric rows passed"
+  },
+  "visual_layout": {
+    "reason": "Word open succeeds but both PDF export paths stalled; no R07 PDF exists",
+    "R06_visual_receipt_inherited": false,
+    "receipt": "0097_R07_word_render_blocker_receipt.json",
+    "status": "UNKNOWN_BLOCKED"
+  },
+  "overall_status": "PARTIAL_NOT_FINAL",
+  "formal_acceptance": "NOT_ACCEPTED",
+  "constraints": [
+    "All example data are SAMPLE/SYNTHETIC; no REAL association operation or outcomes asserted.",
+    "Do not infer an official printed checkbox serial from document ID or 157-sequence value.",
+    "Do not promote candidate until R07 visual verification and remaining applicable full acceptance gates are satisfied."
+  ],
+  "created_at_local": "2026-10-21T06:47:10.7186760+08:00"
+}

@@ -1,0 +1,278 @@
+{
+  "command": "TTQS_ONE_R09_WIN10_PANEL_WORKER_FULL_CLOSED_LOOP_20261021",
+  "test_run_id": "R09_T01_T14_20261022_1752_TPE",
+  "executed_at": "2026-10-22T17:50:03.000971+08:00",
+  "test_mode": "native host/readback checks plus deterministic contract fixtures; simulated fixtures are not product integration tests, not independent QA, and not Goal acceptance",
+  "source_contract": {
+    "commit": "f0ba14fc6347296779e57d4aa85a215c1e26f56e",
+    "blob_06": "4c7eff55748ff265b1e5a7d1122852b0d101acbd",
+    "tests_section": "06 §6.11 T01-T14"
+  },
+  "github": {
+    "repo": "PT-Original-Point/ttqs-one",
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "head": "e7ef91c756af30a0a0243707b1ee29617fa24ce0",
+    "pr": 92,
+    "state": "open draft"
+  },
+  "live_state": {
+    "opencode_service_pid": 45628,
+    "active_0105_export_script_pid": 60760,
+    "active_0105_word_pid": 16684,
+    "winword_count": 22,
+    "winword_pids": [
+      3976,
+      7140,
+      7412,
+      9504,
+      9536,
+      9584,
+      10412,
+      16684,
+      18440,
+      23864,
+      24824,
+      38288,
+      46960,
+      47824,
+      60148,
+      62204,
+      65944,
+      69032,
+      69360,
+      72848,
+      73016,
+      73668
+    ],
+    "dashboard_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\MASTER\\dashboard.html",
+    "dashboard_mtime_utc": "2026-10-05T14:14:08+00:00",
+    "panel_listeners_8765_8766": [],
+    "0100_0101_source_files": [
+      "SOURCE_PACKET_I18-E08_0100_0101_R09.md",
+      "UNIQUE_BLUEPRINT_0100_I18-E08_R09.md",
+      "UNIQUE_BLUEPRINT_0101_I18-E08_R09.md"
+    ],
+    "0100_0101_remote_docx": {
+      "0100": {
+        "path": "docs/ttqs-quality-20261016/quality-review/0100_0101_R09_20261021/candidate/0100_I18-E08_R09.docx",
+        "bytes": 58574,
+        "sha256": "debd41e7ca1b18b88cad37db118c5b3474df411b3e2d1c87a8351d456245e0b2"
+      },
+      "0101": {
+        "path": "docs/ttqs-quality-20261016/quality-review/0100_0101_R09_20261021/0101_final9/candidate/0101_I18-E08_R09_FINAL9.docx",
+        "bytes": 166586,
+        "sha256": "56f433e095f32378f2fd8241c1a27948d2bfe6748da003af5623d265885edb68"
+      }
+    }
+  },
+  "0104_R16_raw_readback": {
+    "path": "docs/ttqs-quality-20261016/quality-review/0104_I18-E11_R16_20261022/candidate/0104__證照獲取率_分析報告_R16.docx",
+    "local_sha256": "9a074b207e7a57f1448cf96868f3cc3f30a72834a021f9b04392909ea3183d7b",
+    "remote_sha256": "9a074b207e7a57f1448cf96868f3cc3f30a72834a021f9b04392909ea3183d7b",
+    "byte_equal": true,
+    "bytes": 87368
+  },
+  "test_summary": {
+    "total": 14,
+    "observed_only": 6,
+    "simulated_only": 6,
+    "mixed_observed_and_simulated": 2,
+    "contract_fixture_assertions_passed": 8,
+    "direct_live_readback_assertions_passed": 6,
+    "system_recovery_pass": false,
+    "natural_120_minute_trigger_tested": false
+  },
+  "tests": [
+    {
+      "id": "T01",
+      "basis": "OBSERVED",
+      "result": "PASS_GUARD",
+      "description": "Service is not manuscript writer.",
+      "evidence": {
+        "service_pid": 45628,
+        "writer_pid": null,
+        "separate_export_script_pid": 60760
+      }
+    },
+    {
+      "id": "T02",
+      "basis": "OBSERVED",
+      "result": "PASS_GUARD",
+      "description": "No Word process was terminated; only current export-created PID is attributable, other ownership unknown.",
+      "evidence": {
+        "count": 22,
+        "pids": [
+          3976,
+          7140,
+          7412,
+          9504,
+          9536,
+          9584,
+          10412,
+          16684,
+          18440,
+          23864,
+          24824,
+          38288,
+          46960,
+          47824,
+          60148,
+          62204,
+          65944,
+          69032,
+          69360,
+          72848,
+          73016,
+          73668
+        ],
+        "current_export_word_pid": 16684,
+        "other_owners": "UNKNOWN",
+        "termination": false
+      }
+    },
+    {
+      "id": "T03",
+      "basis": "OBSERVED",
+      "result": "PASS_REJECTED_STALE_PANEL",
+      "description": "Static dashboard is old and status listeners absent; it cannot establish live alignment.",
+      "evidence": {
+        "mtime_utc": "2026-10-05T14:14:08+00:00",
+        "ports": [],
+        "github_head": "e7ef91c756af30a0a0243707b1ee29617fa24ce0"
+      }
+    },
+    {
+      "id": "T04",
+      "basis": "SIMULATED",
+      "result": "PASS_FIXTURE_REJECTED",
+      "description": "Project mismatch rejected.",
+      "evidence": {
+        "assertion": true
+      }
+    },
+    {
+      "id": "T05",
+      "basis": "SIMULATED",
+      "result": "PASS_FIXTURE_REJECTED",
+      "description": "Scheduled message alone does not resume paused Goal.",
+      "evidence": {
+        "assertion": true
+      }
+    },
+    {
+      "id": "T06",
+      "basis": "OBSERVED",
+      "result": "PASS_DERIVED_STATE",
+      "description": "Source packet/Blueprints and existing GitHub candidate artifacts are present; do not duplicate.",
+      "evidence": {
+        "sources": [
+          "SOURCE_PACKET_I18-E08_0100_0101_R09.md",
+          "UNIQUE_BLUEPRINT_0100_I18-E08_R09.md",
+          "UNIQUE_BLUEPRINT_0101_I18-E08_R09.md"
+        ],
+        "remote_candidates": {
+          "0100": {
+            "path": "docs/ttqs-quality-20261016/quality-review/0100_0101_R09_20261021/candidate/0100_I18-E08_R09.docx",
+            "bytes": 58574,
+            "sha256": "debd41e7ca1b18b88cad37db118c5b3474df411b3e2d1c87a8351d456245e0b2"
+          },
+          "0101": {
+            "path": "docs/ttqs-quality-20261016/quality-review/0100_0101_R09_20261021/0101_final9/candidate/0101_I18-E08_R09_FINAL9.docx",
+            "bytes": 166586,
+            "sha256": "56f433e095f32378f2fd8241c1a27948d2bfe6748da003af5623d265885edb68"
+          }
+        }
+      }
+    },
+    {
+      "id": "T07",
+      "basis": "SIMULATED",
+      "result": "PASS_LANE_ISOLATION",
+      "description": "A failed 0097 render does not stop an independent READY lane.",
+      "evidence": {
+        "assertion": true
+      }
+    },
+    {
+      "id": "T08",
+      "basis": "SIMULATED",
+      "result": "PASS_FAIL_CLOSED",
+      "description": "Exit 0 with no text or DOCX is rejected.",
+      "evidence": {
+        "assertion": true
+      }
+    },
+    {
+      "id": "T09",
+      "basis": "SIMULATED",
+      "result": "PASS_SALVAGE_PENDING_REVIEW",
+      "description": "Stable candidate on nonzero exit is kept for QA, not accepted automatically.",
+      "evidence": {
+        "assertion": true
+      }
+    },
+    {
+      "id": "T10",
+      "basis": "OBSERVED",
+      "result": "PASS_SCOPE_GUARD",
+      "description": "0104 R16 semantic reviewer is TEXT_ONLY exact-SHA; not visual/usability evidence.",
+      "evidence": {
+        "candidate_sha": "9a074b207e7a57f1448cf96868f3cc3f30a72834a021f9b04392909ea3183d7b",
+        "scope": "TEXT_ONLY"
+      }
+    },
+    {
+      "id": "T11",
+      "basis": "OBSERVED",
+      "result": "PASS_FAIL_CLOSED",
+      "description": "No current-window Antigravity execution evidence; identity/fallback remains UNKNOWN.",
+      "evidence": {
+        "agy_process": "absent",
+        "invocation_count": "UNKNOWN",
+        "model_identity": "UNKNOWN"
+      }
+    },
+    {
+      "id": "T12",
+      "basis": "SIMULATED",
+      "result": "PASS_FIXTURE_REJECTED",
+      "description": "Synthetic/REAL conflict rejected.",
+      "evidence": {
+        "assertion": true
+      }
+    },
+    {
+      "id": "T13",
+      "basis": "MIXED",
+      "result": "PASS_READBACK_TAMPER_GUARD",
+      "description": "0104 DOCX local binary equals remote; simulated tamper rejected.",
+      "evidence": {
+        "local_sha": "9a074b207e7a57f1448cf96868f3cc3f30a72834a021f9b04392909ea3183d7b",
+        "remote_sha": "9a074b207e7a57f1448cf96868f3cc3f30a72834a021f9b04392909ea3183d7b",
+        "equal": true,
+        "tamper_rejected": true
+      }
+    },
+    {
+      "id": "T14",
+      "basis": "MIXED",
+      "result": "PASS_SERIALIZE_NO_DUPLICATE",
+      "description": "Current 0105 export is separate; hypothetical unknown push is serialized and dispatch is not duplicated.",
+      "evidence": {
+        "active_doc": "0105",
+        "export_script_pid": 60760,
+        "guard": {
+          "wait": true,
+          "duplicate_dispatch": false
+        }
+      }
+    }
+  ],
+  "open_gaps": [
+    "Automation card does not provide exact native last/next execution timestamps; natural 120-minute trigger not tested.",
+    "Dashboard is stale/offline; live data producer unverified.",
+    "Antigravity exact dispatch count, auth, served model/fallback and quota effects UNKNOWN.",
+    "0105 R07 Word export remains active with no final PDF/receipt.",
+    "0104 R16 semantic review is TEXT_ONLY; no human usability or formal acceptance evidence."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "attempt_receipt_sha256": "93511b67fed91c5dd336c813ed1a98653770de8becc73146916189c5a9d46ea6",
+  "attempt_result": "FAIL_FALSE_NEGATIVE",
+  "root_cause": [
+    "Rate formatting compared str(60.0) to a CSV display string formatted with two decimals (60.00); recomputed and visual chart values were actually equal.",
+    "The visual receipt identifies pages by name and sha256, not page/page_number; checker used the wrong key.",
+    "Word receipt stores pdf_pages as a string, while the checker compared it to integers without conversion."
+  ],
+  "candidate_docx_was_not_modified": true,
+  "resolution": "Corrected exact decimal formatting, matched page-09 by name, and normalized native Word page count to integer; reran deterministic comparison."
+}

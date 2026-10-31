@@ -1,0 +1,48 @@
+# Independent Semantic Review — 0103 / I18-E10 / Blueprint 111 (R02)
+
+## Verdict
+
+**PASS** — bound to the exact candidate `candidate_docx_sha256 = 82380e64672229d1f3d9a55094a1badd24f17555c85d45a35e8626b1c412e87c` (101,816 bytes; 278 paragraphs / 26 tables / 13 sections), reviewed as `CANDIDATE_ONLY`.
+
+This is a semantic review of the DOCX package and extracted content as supplied in the packet. **No tools were used, no files were edited, and no visual/page-layout conclusion is made** (render was blocked; page fit is therefore out of scope, per the packet's own `review_scope`). SHA binding is accepted from the packet's integrity chain (`zip_crc_ok`, `python_docx_opened`, `text_extract_sha256 = e8df71e0…`); any later change to the file voids this verdict.
+
+## 1. R01 correction verification (keyed to the packet's `checks`)
+
+| Expected R01→R02 fix | Confirmed at locator |
+|---|---|
+| Register rows 38, S-01..S-38 exactly once, no duplicate S-07 | 合成替換登記表 (7 rows, S-01–S-07 incl. S-07 關係=SAMPLE-REL-01) + 續表 (31 rows, S-08–S-38); sequential, no repeats |
+| No old "section 4.0" / "Form 4.7" refs | Absent from full extracted text; forms are Form A–F; closest refs are internal cross-refs (1.2節, 1.4節, 第6節, 第7節) — consistent usage |
+| Visible access-log title | standalone heading 存取、更正與保存位置紀錄 + 用途 paragraph + table caption 存取、更正與保存位置紀錄　寬版表格 (rows A-00..A-04) |
+| Unsent case uses a defined primary state | Case 1: Form A 主要狀態=REQUEST_DRAFT_ONLY, Form B 狀態=REQUEST_DRAFT_ONLY（未寄出）, Form F=REQUEST_DRAFT_ONLY, case summary 最終狀態=REQUEST_DRAFT_ONLY — all defined in 共用狀態碼 (12 codes) |
+| No standalone NOT_SENT status | "NOT SENT" appears only in the template heading SAMPLE TEMPLATE｜NOT SENT and 未寄出版本 checklist; no NOT_SENT status row exists |
+| D15 gate present ≥2× | Form F 處分指示 ("D01～D14…並確認 D15 無重大未解矛盾；若…有未解矛盾，維持 HOLD"), 判定規則 table VERIFIED_REAL row, 三個關鍵規則 #3, plus Form D 判定規則 and D15 row (Case 2 = CONFLICT／HOLD) |
+
+Note: the packet does not include the verbatim R01 finding texts; my confirmation is of each corrected condition, independently re-checked in the candidate text.
+
+## 2. Source fit (official page 7 / I18-E10)
+- 官方脈絡與證據界線 quotes the 4-point context 「目標客戶及學員認為訓練有顯著具體績效。」 and 「感謝函。」 exactly, and states the page-7 list is 例示清單, not an auto-scoring rule — matching the packet's scope note.
+- Inference limiter: 可以看到／不能直接推論 table correctly blocks causality, scoring, endorsement, and privacy apart from "letter exists/authentic".
+- Genre matches blueprint item 111 direction 真實取得流程，不偽造 and the packet's permitted "internal acquisition + unissued request template" genre; it explicitly says 本文件不是感謝函 and cannot substitute the external original. Fit is good.
+
+## 3. Usability
+Form A–F have field definitions, allowed states, current-case values, and two sample columns; 15-row Form D checklist (≥10 required); shared status codes; 16-step process with branches and deadlines; pre-send checklist on the template; two fully populated synthetic case flow tables (steps 1–10 each); exception table; close-out checklist (every claim I re-tested holds, e.g., 指標分母 0／0＝N/A; 覆核性質=示範判定). Directly operable.
+
+## 4. SAMPLE/REAL boundary — PASS
+- 目前真實狀態 paragraph: NOT RECEIVED / UNKNOWN across issuer, recipient, date, course, number, signature, consent, custody; 人類正式驗收 NOT GRANTED. 目前已知與未知 table reiterates handling per field.
+- Case-1/Case-2 SAMPLE tag has its own register row all SAMPLE-ORG-A/B, ROLES, COURSE, DATES, LOC, CHANNEL, REQ, IN, OUTCOME, REVIEW all S-01..S-38 covered. Unregistered synthetic residue is negligible: Form E row id "E-02" (a structural id, content-covered by S-24) and Form B 追蹤日=SAMPLE-DATE-04 (value covered by S-17; locator field lists Form A,F only). Neither introduces an untagged fact.
+
+## 5. Non-fabrication — PASS
+The template's paragraph 三 forbids asking the issuer to create praise, rewrite, backdate, pre-sign, or guarantee results; 寄送前檢查 re-checks it. Case 2 never reproduces letter text (Form E 可引用陳述=未取得可引用文本；不摘錄; step 2 不重製內容), never invents an issuer reply or approval, and no score, award, or association performance is claimed anywhere. No fabricated third-party evidence or association approval found.
+
+## 6. Internal consistency — PASS (with three wording nitpicks, non-gating)
+- Status usage, dates (SAMPLE-DATE-01→06 sequential), case/role/locator IDs, and 0/0=N/A all align across forms, flows, register, and checklist. Case-level vs item-level states are coherently layered (Case 2: item RECEIVED_UNVERIFIED in Form C, case HOLD in Form A/F); REJECTED only with documentary proof; 缺少證據≠造假 maintained.
+- Nitpicks: (a) the 共用狀態碼 preface cites "REQUEST_DRAFT_ONLY／HOLD_CONTACT" as a 子原因 example while the same table defines REQUEST_DRAFT_ONLY as a primary state (usable as a pair notation, but ambiguous sentence-level); (b) SENT_UNCONFIRMED (step 9) and row-level NOT_APPLICABLE (Form B Case 2) are defined-on-use, not in the shared status list — case-level primary states remain defined; (c) cross-refs to 節 numbers rely on Word auto-numbering not visible in the text extract. None affect gates or claims.
+
+## 7. D15 HOLD gate — PASS
+Gate is operative, not decorative: Case 2 terminates at Form D D15=CONFLICT／HOLD → Form F HOLD with release conditions, owner (SAMPLE-ROLE-PRIVACY), deadline (SAMPLE-DATE-06), and monthly review; VERIFIED_REAL cannot be reached while D15 unresolved. Consistent with the packet's mandate.
+
+## 8. Distinction from 0096 / I18-E03 — PASS
+與鄰近項目的區隔 forbids merging, reusing 0096's case IDs, facts, conclusions, photos, locators, or history; 常見錯誤 row 把 0096 的資料搬過來→各自建案； 官方來源與欄位對照 marks 已分離； page/context difference (page-7 4-point context vs 0096's own I18-E03 context) is stated; no 0096-derived body content appears in the extracted text. Neighbors 0102/0100/0101/0097 likewise separated.
+
+## 9. Review status
+This PASS is the semantic (`independent_semantic_review`) gate for SHA `82380e64…87c` only. It is **not** a formal acceptance: the packet remains CANDIDATE_ONLY, no real original exists (NOT RECEIVED), and human acceptance stays NOT GRANTED. Remaining open items: (i) page-render/visual inspection was blocked and must still be bound to this same SHA; (ii) the three wording nitpicks may be tidied in a later revision without altering the verdict.

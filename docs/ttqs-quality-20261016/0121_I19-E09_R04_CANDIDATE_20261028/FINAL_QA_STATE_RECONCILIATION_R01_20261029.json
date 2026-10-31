@@ -1,0 +1,51 @@
+{
+  "schema": "TTQS_ONE_0121_R04_FINAL_QA_STATE_RECONCILIATION_R01",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0121",
+  "official_requirement_id": "I19-E09",
+  "candidate_state": "CANDIDATE_ONLY",
+  "candidate_docx": {
+    "path": "0121_I19-E09_R04.docx",
+    "sha256": "a80535a46b457404c8c1bf93404b124ce6d74c53f653cf0b3dfa128ec82c6e89",
+    "bytes": 73687,
+    "body_extract_sha256": "480f8121caf5ff37e1768081281c86d3f31198616ca2965d181ec27fa05e6e35"
+  },
+  "sources": {
+    "official_source_pdf": "official_source_0108_r11.pdf",
+    "official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "source_packet_sha256": "fbeb11b96648fff29a49a0fca74bf0cc3b3d1d29934f07dfaa3cf7e410a557fd",
+    "unique_blueprint_sha256": "99320fdc9078615ad04087c43bcbd22c5bbf751a22127c51e048e909726a5fca"
+  },
+  "qa": {
+    "technical_visual_status": "PASS_TECHNICAL_VISUAL",
+    "technical_checks": "34/34 PASS per exact-SHA technical/visual receipt",
+    "native_word_pdf_sha256": "3e523f2adc4b03f0202b1d56eaffdb19b5311e4dbc079cfef13d1705e6dc5f5d",
+    "semantic_verdict": "PASS_REVIEWER_REPORTED_EXACT_CANDIDATE_SHA",
+    "semantic_scope": "Complete extracted body P001-P196, tables T01-T18, sections 1-12; text-only independent semantic review; no visual inspection claimed by semantic reviewer.",
+    "semantic_response_sha256": "53a9b6a3d47df7fb9e5990fc966a0b1aa5eb07f93b0633c6cbbb4d93b154db83",
+    "semantic_parsed_response_sha256": "d3cfff2ba6a353c5bc9ef1ae0f8d79327245648a8472502379d2b3e42a88ec59",
+    "review_provider": "opencode",
+    "session_model": "glm-5.3-flash-free",
+    "upstream_served_model": "UNKNOWN"
+  },
+  "reconciliation": {
+    "stale_receipt": "TECHNICAL_VISUAL_QA_R04.json recorded independent_semantic_review=PENDING when the technical/visual receipt was created.",
+    "superseding_receipt": "SEMANTIC_REVIEW_STATUS_R04.json records PASS on the same exact DOCX SHA and exact body extraction SHA.",
+    "interpretation": "Keep the earlier technical/visual receipt unchanged as a historical snapshot; the later semantic result closes the semantic review stage for this candidate. Model metadata matches the OpenCode request, but upstream serving identity is not independently proven. The separate 2026-10-29 R13 failed attempt reviewed older R03 bytes and does not invalidate R04."
+  },
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "github": {
+    "repository": "PT-Original-Point/ttqs-one",
+    "pull_request": 92,
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "candidate_package_commit": "d0b46b89f74f50ba9b5ce614de47992e6ca120d0",
+    "previous_package_files_verified": 26,
+    "previous_package_mismatches": 0,
+    "readback_result": "PASS"
+  },
+  "non_mutation": {
+    "docx_bytes_changed": false,
+    "existing_receipts_overwritten": false
+  }
+}

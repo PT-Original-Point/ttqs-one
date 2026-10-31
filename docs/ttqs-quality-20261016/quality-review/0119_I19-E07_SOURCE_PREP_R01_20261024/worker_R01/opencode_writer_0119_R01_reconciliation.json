@@ -1,0 +1,62 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0119",
+  "requirement_id": "I19-E07",
+  "work_id": "0119-I19-E07-MANUSCRIPT-R01",
+  "worker": "OpenCode v2 CLI",
+  "cli_version": "2.0.32",
+  "requested_model": "opencode/glm-5.3-flash-free",
+  "actual_model": "UNKNOWN",
+  "provider_cost": "UNKNOWN",
+  "original_dispatch_receipt_path": "worker_R01/opencode_writer_0119_R01_dispatch.json",
+  "original_dispatch_receipt_sha256": "4f94bdfe2e0cc179b4faeefa14c0c5d87efdf38febcf3961ebebaebfc3f218bf",
+  "original_initial_status": "RUNNING",
+  "initial_adopted_into_docx_flag": false,
+  "pid": 36712,
+  "pid_alive_at_readback": false,
+  "session_id": "ses_e948aeb3cfferyq7J33QLUKDeq",
+  "last_stdout_event": "step_finish",
+  "last_event_reason": "stop",
+  "last_event_reported_cost": 0,
+  "last_event_reported_tokens": {
+    "input": 7398,
+    "output": 12778,
+    "reasoning": 13372,
+    "cache": {
+      "read": 2944,
+      "write": 0
+    }
+  },
+  "cli_exit_code": "UNKNOWN_NOT_RECORDED",
+  "stdout_sha256": "b56eca871fa304d7731965ffd3306838a58989473f853bcd5ea8caebdd4218a3",
+  "writer_response_path": "worker_R01/writer_R01_response.md",
+  "writer_response_sha256": "2e91b0051ce09ea37bf0e1f74db3658c588c7fde7ea57682585ab8d41fd4fbdd",
+  "writer_response_bytes": 35219,
+  "adoption_status": "VERIFIED_BY_BUILDER_INPUT_AND_RECEIPT_CHAIN",
+  "adoption_evidence": [
+    {
+      "candidate": "R01A",
+      "builder": "worker_R01/build_candidate_R01A.py",
+      "adopted_manuscript_sha256": "800cfd9997b62bf621745af720d035e970b9d10ea941f2a395481c1629d5122e",
+      "receipt_source_writer_sha256": "2e91b0051ce09ea37bf0e1f74db3658c588c7fde7ea57682585ab8d41fd4fbdd"
+    },
+    {
+      "candidate": "R01G",
+      "builder": "worker_R01/build_candidate_R01G.py",
+      "adopted_manuscript_sha256": "01fe2393ec8a089823698fdef4620653e4fdb68ebd11bf39a62d1cfc82d8747a",
+      "receipt_source_writer_sha256": "2e91b0051ce09ea37bf0e1f74db3658c588c7fde7ea57682585ab8d41fd4fbdd"
+    },
+    {
+      "candidate": "R01H",
+      "parent_candidate_sha256": "effc5faaf957a42719da89f8457bdc1ae4865090f7d6957b8ec49eb1523d1da1",
+      "docx_sha256": "60169b73895fc24bb1a0397534aa0ede37776c1ca3b7631a848bf4b69a9d312a"
+    }
+  ],
+  "observed_at_local": "2026-10-24T11:29:54.0025667+08:00",
+  "limits": [
+    "Dispatch receipt is a launch-time snapshot and still says RUNNING; it was not rewritten.",
+    "Process absence plus final step_finish event establishes no current writer, but does not recover the original CLI process exit code.",
+    "Actual served model and provider cost remain unknown.",
+    "Final R01H content derives from Writer R01 through builder lineage; OpenCode did not write the DOCX file directly."
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "verdict": "PASS",
+  "exact_docx_sha256": "d99e4caec0f2ede04ed607d0e7a897065213c06c8e93bcadb83e638e3b54e57a",
+  "doc_id": "0120",
+  "requirement_id": "I19-E08",
+  "actual_genre": "訓練班期初步學習成果證據彙整與評量工作表（含完整可重算示範案例、操作型空白表單、逐筆替換清冊與品質覆核機制）",
+  "findings": [],
+  "arithmetic_crosscheck": {
+    "status": "VERIFIED_ACCURATE",
+    "cohort_n": 8,
+    "completion_rate": "8/8 = 100.0%（依出席>=80%與課堂演練之合成規則）",
+    "paired_sample": {
+      "paired_n": 6,
+      "pretest_sum": 320,
+      "pretest_mean": "320 / 6 = 53.33/100",
+      "posttest_sum": 400,
+      "posttest_mean": "400 / 6 = 66.67/100",
+      "paired_mean_gain": "80 / 6 = +13.33分",
+      "individual_distribution": "5上升 (83.3%)、1持平 (16.7%)、0下降 (0.0%)",
+      "paired_pretest_pass_rate_70": "1/6 = 16.7%",
+      "paired_posttest_pass_rate_70": "3/6 = 50.0%"
+    },
+    "unpaired_and_missing_data": {
+      "pretest_valid_count": "7/8 = 87.5%（SYN-L08前測缺測）",
+      "posttest_valid_count": "7/8 = 87.5%（SYN-L07後測缺測）",
+      "one_sided_missing_rate": "2/8 = 25.0%（未補值、未補零、保留缺測註記）",
+      "effective_posttest_pass_rate_70": "4/7 = 57.1%（SYN-L02, L03, L05, L08）",
+      "cohort_confirmed_pass_rate_70": "4/8 = 50.0%"
+    },
+    "test_item_subscores": {
+      "verified_rows": 14,
+      "subscore_formula": "T01+T02+T03+T04+T05 = Total",
+      "consistency": "14筆測前/測後5題分項成績加總與個人總分完全一致 (SYN-L01至SYN-L08各項合計分別為40, 60, 50, 70, 60, 70, 55, 55, 70, 80, 45, 65, 50, 75)"
+    },
+    "satisfaction_assessment": {
+      "invited_n": 8,
+      "valid_response_n": "7/8 = 87.5%",
+      "non_response_n": "1/8 = 12.5%（SYN-L08未作答標示NO_RESPONSE，未補值，個人均值NOT_CALCULABLE）",
+      "sum_of_means": 30.0,
+      "cohort_satisfaction_mean": "30 / 7 = 4.29/5",
+      "ten_items_consistency": "7位回覆者逐題加總與個人均值 (5.00, 4.00, 4.00, 5.00, 3.00, 4.00, 5.00) 完全相符"
+    },
+    "follow_up_30d": {
+      "invited_n": 8,
+      "response_rate": "6/8 = 75.0%",
+      "non_response_count": "2/8 = 25.0%（SYN-L07, SYN-L08未登錄）",
+      "applied_among_respondents": "4/6 = 66.7%",
+      "applied_among_full_cohort": "4/8 = 50.0%",
+      "nature": "明記為學員自我回報 (self-report)，未當作第三方外部查證"
+    }
+  },
+  "sample_real_boundary": {
+    "boundary_integrity": "STRICT_AND_SOUND",
+    "sample_synthetic_labels": "所有示範課程、學員代號 (SYN-L01~L08)、日期 (2026-08-01/2026-08-31)、分數、問卷答錄、追蹤自陳與證據索引 (SYN-EV01~04) 均明確標記 SAMPLE/SYNTHETIC",
+    "real_operational_readiness": "提供12組 REAL 空白作業表單 (REAL-FORM-01 至 REAL-FORM-12)，欄位保留下劃線或空格待填",
+    "governance_and_signature_hygiene": "承辦、覆核、資料保管及決策者均以中性功能角色標示；所有簽名、日期與正式接受欄位嚴格留白，無虛構簽署、無虛構任命、無虛構第三方外證或協會既定核准"
+  },
+  "cross_document_scope": {
+    "neighboring_indicators_differentiation": "已清晰劃定邊界，明確區隔 0116/I19-E03（就業）、0117/I19-E04（證照/考試）、0118/I19-E05（教材/活動實施）、0119/I19-E07（市場與顧客價值）、0121/I19-E09（滿意度與學習評量報告）",
+    "cohort_independence": "嚴格禁止跨文件自動併為同一 cohort，明文規範僅在同班期、同目標且具授權追溯鏈時方得交叉參照；滿意度與技能測驗結果維持嚴格分軌"
+  },
+  "replacement_register_check": {
+    "structure_verified": "PASS",
+    "baseline_rows_count": 15,
+    "baseline_rows_preserved": "R-01 至 R-15 完整保留，逐項定義當前SAMPLE、所需REAL來源、核驗規則及待取得狀態",
+    "category_summaries_count": 2,
+    "category_summaries_details": "包含『十題逐題滿意度答錄』與『五題測驗逐題分數』兩項類別摘要",
+    "satisfaction_records_count": 8,
+    "satisfaction_records_details": "SAT-01 至 SAT-08 共8筆（7筆具體逐題作答平均，加1筆 SYN-L08 明確記錄 NO_RESPONSE、未補值且均值標記 NOT_CALCULABLE）",
+    "test_score_records_count": 14,
+    "test_score_records_details": "TEST-01 至 TEST-14 共14筆測前/測後逐題明細，精確綁定合成學員代碼、時點、五題分項分數與總分",
+    "substantive_utility": "每筆記錄均完整包含合成案例值、所需真實來源清單（受限區管理原卷及去識別名冊）、雙人覆核檢核條件與 HOLD/待REAL來源狀態，非單純列數填充"
+  },
+  "visual_scope": "NOT_EXAMINED",
+  "model_identity_observed": "UNKNOWN",
+  "formal_acceptance": "NOT_GRANTED"
+}

@@ -1,0 +1,1 @@
+{"status":"PROPOSAL_READY_NO_FILE_MUTATION","finding_B2_replacement_sentence":"依官方證據表第 7 頁，I18 共通參考證據清單列有「指導學員參加技能競賽獲獎」，該項位於另行標示之 3 分與 4 分參考清單之前；本文件僅將該項列為可對應之參考證據，不主張其屬 4 分專屬區塊，亦不主張任何分數門檻、分數保證或因果證明。","finding_B3_table9_case02_evidence_state":"RECEIVED_UNVERIFIED（已收截圖，未驗證）","explicit_case_disposition_preserved":true,"no_other_body_changes":true}

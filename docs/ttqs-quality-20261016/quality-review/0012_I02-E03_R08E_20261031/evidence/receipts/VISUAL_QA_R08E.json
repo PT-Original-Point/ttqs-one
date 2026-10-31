@@ -1,0 +1,168 @@
+{
+  "receipt_id": "0012-I02-E03-R08E-VISUAL-QA",
+  "observed_at_local": "2026-10-31T00:42:26+08:00",
+  "document_id": "0012",
+  "requirement_id": "I02-E03",
+  "candidate_sha256": "37a01e561fb8e93d8316ba7cde3af02590e1a5e8d58370122537d251dcf1508e",
+  "pdf_sha256": "6d81b4d486ba90086db2cb4bc67720a69d64a4160b58f7035e55b26b6cc2fd8a",
+  "render_index_sha256": "232d8ceb269ad942d1a4506526581d7e2fa11e4f41d07f56d02198694a8ba212",
+  "page_count": 26,
+  "page_images_complete": true,
+  "direct_visual_inspection_pages": [
+    14,
+    15,
+    16
+  ],
+  "direct_page_png_sha256": {
+    "14": "977d0ea9bf18740df48da94f02299857a3022721be9cbe05d53c52c58ef6569d",
+    "15": "95fc0310a17a46e7ec272ef8f50edd17b3587a9246a910405e13d298558f01ea",
+    "16": "9ef7022eb5b41f3a1873533e0df04c7378e44602361dc130b25a63754242e863"
+  },
+  "inspection_results": {
+    "page14": "PASS — prior R07 schedule control section ends cleanly; the monthly-report heading and table header are absent, no clipping or orphan title.",
+    "page15": "PASS — R08 SAMPLE monthly-report heading, SAMPLE context, all six metric rows and reconciliation paragraph appear together; readable with no clipping or orphan header.",
+    "page16": "PASS — §11 heading and its table begin together; no isolated table header."
+  },
+  "delta_comparison_against_R08D": {
+    "changed_page_numbers": [
+      14,
+      15
+    ],
+    "pixel_comparison": [
+      {
+        "page": 1,
+        "changed_pixels": 0,
+        "changed": false
+      },
+      {
+        "page": 2,
+        "changed_pixels": 0,
+        "changed": false
+      },
+      {
+        "page": 3,
+        "changed_pixels": 0,
+        "changed": false
+      },
+      {
+        "page": 4,
+        "changed_pixels": 0,
+        "changed": false
+      },
+      {
+        "page": 5,
+        "changed_pixels": 0,
+        "changed": false
+      },
+      {
+        "page": 6,
+        "changed_pixels": 0,
+        "changed": false
+      },
+      {
+        "page": 7,
+        "changed_pixels": 0,
+        "changed": false
+      },
+      {
+        "page": 8,
+        "changed_pixels": 0,
+        "changed": false
+      },
+      {
+        "page": 9,
+        "changed_pixels": 0,
+        "changed": false
+      },
+      {
+        "page": 10,
+        "changed_pixels": 0,
+        "changed": false
+      },
+      {
+        "page": 11,
+        "changed_pixels": 0,
+        "changed": false
+      },
+      {
+        "page": 12,
+        "changed_pixels": 0,
+        "changed": false
+      },
+      {
+        "page": 13,
+        "changed_pixels": 0,
+        "changed": false
+      },
+      {
+        "page": 14,
+        "changed_pixels": 20666,
+        "changed": true
+      },
+      {
+        "page": 15,
+        "changed_pixels": 406350,
+        "changed": true
+      },
+      {
+        "page": 16,
+        "changed_pixels": 0,
+        "changed": false
+      },
+      {
+        "page": 17,
+        "changed_pixels": 0,
+        "changed": false
+      },
+      {
+        "page": 18,
+        "changed_pixels": 0,
+        "changed": false
+      },
+      {
+        "page": 19,
+        "changed_pixels": 0,
+        "changed": false
+      },
+      {
+        "page": 20,
+        "changed_pixels": 0,
+        "changed": false
+      },
+      {
+        "page": 21,
+        "changed_pixels": 0,
+        "changed": false
+      },
+      {
+        "page": 22,
+        "changed_pixels": 0,
+        "changed": false
+      },
+      {
+        "page": 23,
+        "changed_pixels": 0,
+        "changed": false
+      },
+      {
+        "page": 24,
+        "changed_pixels": 0,
+        "changed": false
+      },
+      {
+        "page": 25,
+        "changed_pixels": 0,
+        "changed": false
+      },
+      {
+        "page": 26,
+        "changed_pixels": 0,
+        "changed": false
+      }
+    ],
+    "unchanged_pages_inherit_prior_visual_review": true
+  },
+  "visual_status": "PASS_SCOPED_LAYOUT",
+  "semantic_status": "PENDING",
+  "formal_acceptance": "NOT_GRANTED"
+}

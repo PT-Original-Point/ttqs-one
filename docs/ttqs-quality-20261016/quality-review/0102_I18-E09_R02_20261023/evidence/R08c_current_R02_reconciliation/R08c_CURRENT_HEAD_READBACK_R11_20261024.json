@@ -1,0 +1,70 @@
+{
+  "schema": "ttqs-one-evidence-reconciliation-v1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0102-I18-E09-R08C-R11-CURRENT-HEAD-RAW-READBACK-20261024",
+  "observed_at_tpe": "2026-10-24T03:19:15.4177073+08:00",
+  "github": {
+    "repository": "PT-Original-Point/ttqs-one",
+    "pull_request": 92,
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "verified_branch_head_before_delta": "14a02591f13a8eb0c85712842fb59395d9bbe6f0"
+  },
+  "binding": {
+    "doc_id": "0102",
+    "official_requirement_id": "I18-E09",
+    "project_registry_index": 110,
+    "official_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+    "source_packet_sha256": "54d9c05f70b4fef993bd92b656694030878a236e1a2d0c6a21af5d24d94fa1bd",
+    "unique_blueprint_sha256": "d6ab10107f42d6f913e1c94df45c8cd179babaa2603a8a7e628c2db78a0cce75",
+    "candidate_revision": "R08c",
+    "candidate_sha256": "84c279d09484b88724dd59ae8a5155cb8d0be284133258e166269a80c26c67b4",
+    "candidate_bytes": 97846,
+    "candidate_mutated": false
+  },
+  "remote_byte_readback": {
+    "method": "GitHub connected fetch_file at live branch ref; remote Git blob SHA compared with Windows git hash-object on local DOCX",
+    "remote_git_blob_sha": "ab7713f8da425a7e7f1f642e68d2d4962e07234f",
+    "local_git_blob_sha": "ab7713f8da425a7e7f1f642e68d2d4962e07234f",
+    "local_sha256": "84c279d09484b88724dd59ae8a5155cb8d0be284133258e166269a80c26c67b4",
+    "exact_blob_match": true,
+    "prior_package_readback": {
+      "commit": "e5167fbdeae5c963fe8e195a1fad097c8a4e3c4f",
+      "files_exact_byte_matches": "26/26",
+      "historical_only": true
+    }
+  },
+  "reused_exact_sha_qa": {
+    "semantic": {
+      "verdict": "PASS",
+      "scope": "SEMANTIC_SCOPE_ONLY",
+      "candidate_sha256": "84c279d09484b88724dd59ae8a5155cb8d0be284133258e166269a80c26c67b4",
+      "receipt_sha256": "236d3ff9b7294c4efdbd34296dbccee8130a92238eb91f22195265f2212afb54",
+      "reviewer_response_sha256": "604117e890e9d2db8b9aaf8263459254c7e40152a644c9232117ba5114f647ca",
+      "provider_backend_fallback_billing": "UNKNOWN"
+    },
+    "technical": {
+      "verdict": "PASS",
+      "scope": "package integrity 41 tables/396 rows and font floors 10.5pt body/9.5pt table",
+      "receipt_sha256": "72a4c6f1f76f473a87dab21ccd7777be2204e5bbba4540c9e7528f76ec9963a5"
+    },
+    "visual": {
+      "verdict": "PASS_FOR_VISUAL_LAYOUT_SCOPE",
+      "pages": 57,
+      "coverage": "55 pages inherited from exact reviewed R08a contact sheets; R08c-specific pages 1 and 57 directly inspected",
+      "receipt_sha256": "f2eef003b225e441679499b954a38243518fb58053d62572b31a6634d21dc869",
+      "pdf_sha256": "c73b667abd9213cf6f1e93fb8a9343bba6f9a94cf30fc7884c68a23286bfc6a0"
+    }
+  },
+  "branch_decision": {
+    "r35_candidate_sha256": "04f71db94dd8949b2e0fc67fc0df5577c2a647138b95e3beadd3be2dea4457aa",
+    "r35_current_r02_review": "NOT_APPLICABLE_TO_R02; no PASS transferred",
+    "action": "Preserve unchanged R08c bytes; do not merge R35 PASS or any review across candidate SHAs."
+  },
+  "status": {
+    "candidate": "CANDIDATE",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN",
+    "prior_status_file_readback": "PENDING_AFTER_COMMIT",
+    "this_delta": "Resolves PENDING for candidate bytes only; does not claim full package readback at current head or a new semantic review"
+  }
+}

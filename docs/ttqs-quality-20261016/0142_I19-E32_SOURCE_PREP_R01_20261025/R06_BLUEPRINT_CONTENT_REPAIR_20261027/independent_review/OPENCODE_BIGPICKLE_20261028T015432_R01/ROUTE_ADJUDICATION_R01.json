@@ -1,0 +1,51 @@
+{
+  "schema": "TTQS_ONE_R12_OPENCODE_ROUTE_ADJUDICATION_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0142",
+  "requirement_id": "I19-E32",
+  "revision": "R06",
+  "work_id": "TTQS-0142-I19-E32-R06-W1-OPENCODE-BIG-PICKLE-FREE-EXACT-SHA-SEMANTIC-REVIEW-20261028T015432",
+  "observed_at_local": "2026-10-28T01:54:42.6462062+08:00",
+  "requested_model": "opencode/big-pickle",
+  "actual_serving_model": "NOT_REACHED_PROVIDER_REJECTED",
+  "candidate_sha256": "3781cb4cb2d26625fb5676181f4faa4176ca0bb80e2e3fac518245bbdc42f97e",
+  "candidate_sha256_after": "3781cb4cb2d26625fb5676181f4faa4176ca0bb80e2e3fac518245bbdc42f97e",
+  "candidate_unchanged": true,
+  "source_request_sha256": "356f5d3795673939a5b1ed0b245cb434f243eb6d773aeb11e47428bc54d56d2b",
+  "raw_stdout_sha256": "609b86f50fa360c02a9488a8fb3f0fa9f34ce4f3e262b39c79e68c5279791731",
+  "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "cli_exit_code": 1,
+  "provider_error_type": "provider.free-limit",
+  "http_status": 429,
+  "retry_after_ms": 21925000,
+  "retry_eligible_estimate_local": "2026-10-28T07:59:57.0000000+08:00",
+  "provider_reported_tokens": "NONE",
+  "reported_cost": "UNKNOWN",
+  "inference": "NOT_REACHED",
+  "review_response": "NONE",
+  "semantic_review": "PENDING_INDEPENDENT_EXACT_SHA_REVIEW",
+  "fallback": "NOT_USED",
+  "computer_use": "NOT_USED",
+  "auto_approve": "NOT_USED",
+  "candidate_mutation": "NONE",
+  "interpretation": "This is a free-usage-limit rejection before inference. The live OpenCode status page showed hosted/free inference operational during this turn; its policy says balance/budget/usage-limit refusals are excluded from service failure metrics. These facts are compatible. A shared account-wide quota is plausible but not proven from this response alone.",
+  "prior_related_attempt": {
+    "doc_id": "0142",
+    "model_usage": "NOT_REACHED",
+    "retry_eligible_estimate_local": "2026-10-28T07:59:57+08:00",
+    "http_status": 429,
+    "requested_model": "opencode/glm-5.3-flash-free"
+  },
+  "next_action": "Do not retry this exact request before the provider retry time. At/after the retry time, make one exact-SHA review attempt only if provider/account state or model route has materially changed; otherwise continue another READY document lane.",
+  "official_sources": [
+    {
+      "url": "https://status.opencode.ai/",
+      "finding": "All systems operational; balance/budget/usage-limit refusals are not counted as service failures.",
+      "observed_local": "2026-10-28 around 01:50 +08:00"
+    },
+    {
+      "finding": "Big Pickle is listed Free; provider privacy terms state free-period data may be used to improve the model. Submitted review material is synthetic and no REAL financial originals are included.",
+      "url": "https://opencode.ai/v2/docs/console/models/"
+    }
+  ]
+}

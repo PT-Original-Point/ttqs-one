@@ -1,0 +1,53 @@
+{
+  "schema": "TTQS_ONE_0079_R07_VISUAL_REVIEW.v1",
+  "document_id": "0079",
+  "requirement_id": "I17B-E01",
+  "official_checkbox_serial": "084",
+  "candidate_docx_sha256": "0361cf65557733cb3e1af93d5e59197aa96d307622a840800d008d8c580c66a7",
+  "renderer": "Microsoft Word COM ExportAsFixedFormat to PDF; Poppler pdftoppm rasterized at 115 DPI",
+  "pdf_path": "evidence/render_R07/0079_R07_word_export.pdf",
+  "pdf_sha256": "a523f633b8f5f12d372198be97ab09d3e7eaa66ea67bd3d5e1ca409078fb7e9e",
+  "page_count": 21,
+  "page_png_sha256": {
+    "page-01.png": "6e7f3d2ba4872e700437e8e22d35be2f8d479b11578d71efa01bbff8d401afba",
+    "page-02.png": "61aa14539f943230498900e89a67db329f9e682163225d179344bdc01f844be0",
+    "page-03.png": "bb3d40027cec97e07ee2fe4a63a5c74f16a2df9435de19045001260a6796b0de",
+    "page-04.png": "09393f5514fb8f93d64839aefc02ae573c3b8ec22ac222c39ad8c80149e04882",
+    "page-05.png": "002ce9bd654dc52a47bb31218e8c3b0905415868ae5bc68aa2e8caa18dc4768f",
+    "page-06.png": "98f16343459bff9a78b7f92b25b0554b3cf9104aa452fbf849969ee799933948",
+    "page-07.png": "410d80ab17043d32c071cebc703263c546e2c521e1e27930f7127b3d5cc77fbf",
+    "page-08.png": "ef08cad61b15c519b14985671a981599bc87e6aa0c0f918d065fcf9da78f5670",
+    "page-09.png": "7650101e47382360cf91f6a4965e5b7e39974a4cb8fffaf5ea161a29bc54fed0",
+    "page-10.png": "df27e2563748ef80d25ed15bab80f0d3725c1558b5e920758ce238e0c94e9fc8",
+    "page-11.png": "c82c0298fc94ddeadd78d8c43a35e61ca4187504e14072a16608f96e43109aff",
+    "page-12.png": "6f07d15d7e819849c6e0c48e0852bd0dd7a5ff1c7c7a6e4eacba6a2a3381d830",
+    "page-13.png": "87c0383ec20048658ae3aeddf3e5ed6fef12ecd88a63660095f0a231f4107a8e",
+    "page-14.png": "2671c2e55152dfcbb44720c77262d639b75f4c65a1687aee98ef284cb94ddbb4",
+    "page-15.png": "d2612c8f838311f991c9579a4028b6888b1ac7ab145f2f2e9cb832a32198983a",
+    "page-16.png": "c8ce0d7756eb2a00eb5331a8fce07e631fb882208cca193602caf909fbf68baa",
+    "page-17.png": "e325fa6b96ca6f8adda2b652010f68a75ce9fea9fbf44014fedbcf37d6347b8c",
+    "page-18.png": "8928fc34de9cfd846836c2a60cacf8f417ed1a21815b025e2ac543225e51e3c7",
+    "page-19.png": "23aa364fbb9d3df21136d2a7bdf71f98304926f6fa298b3123b8d13c7303d496",
+    "page-20.png": "df9bad4a7ae9bc3016eb7e1f8fa969ea2f06aa019d017efd69105c91d00530f5",
+    "page-21.png": "b91f32aa59a528296a1a6e290746dc1bb721057459048ca8a5308cee8503fb12"
+  },
+  "comparison_base": "R06 full 21-page render; R06 pages 1,2,19,20,21 were visually inspected, and pages 1-19 of R05 were pixel-identical to its reviewed R02 baseline.",
+  "changed_pages_vs_R06": [
+    "page-01.png",
+    "page-02.png",
+    "page-19.png",
+    "page-20.png"
+  ],
+  "visual_scope": "R07 pages 1,2,19,20 directly inspected at original raster resolution. Page 21 is byte-identical to inspected R06; pages 3-18 are byte-identical to R06, which inherited full-page R05 visual coverage. Thus every R07 page is visually covered by direct inspection or exact-render identity to inspected evidence.",
+  "observations": [
+    "The corrected 0080 / I17B-E02 / official checkbox 085 and 0081 / I17B-E03 / official checkbox 086 cross-reference rows are readable on page 19.",
+    "The status dictionary has all eight rows together on page 19; page 20 starts with the next section, without a repeated header and orphaned PLANNED_NOT_EXECUTED row.",
+    "Page 1 and page 2 identity/revision labels display DOCX 0079, I17B-E01, checkbox 084 and R07; content remains readable.",
+    "No clipping, overlap, blank trailing page, or broken table borders observed on changed pages; unchanged pages are hash-identical to inspected R06 renders."
+  ],
+  "layout_result": "PASS",
+  "semantic_review": "PENDING",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "checkbox_084": "PARTIAL/HOLD"
+}

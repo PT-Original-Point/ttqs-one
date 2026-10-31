@@ -1,0 +1,80 @@
+{
+  "schema": "TTQS_ONE_0119_QA_SCOPE_R01",
+  "work_id": "TTQS-0119-I19-E07-W2-ANTIGRAVITY-R01",
+  "doc_id": "0119",
+  "requirement_id": "I19-E07",
+  "candidate_sha256": "1d626fdbcceb06668777315b73535799b28aadd51e3b32bf3be010f35557e5c0",
+  "source_commit": "33a66d2f3cbdf9ef7f026994482660fa6138b973",
+  "unique_blueprint_blob_sha": "a3d963145c2a7c2e6cb721478ed64f57f377ea62",
+  "source_snapshot_manifest_sha256": "04a9512ed116e57c3998a04647753c67461f3fbdedc5a13715834e416054a62f",
+  "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "writer_model_requested": "gemini-3.8-flash-high",
+  "provider_attested_served_model": "UNKNOWN",
+  "codex_material_corrections": [
+    "Replaced synthetic claims of signed participant consent and second-person review with explicit NOT_PROVIDED / NOT_REVIEWED states.",
+    "Corrected F18/F19 example source names and ranges to align with E01-E04; marked all sample paths as illustrative and unattached.",
+    "Unified incompatible-population/channel/question handling as NO_COMPARABLE_BASELINE; removed an unsupported five-working-day deadline and blanket 100% review requirement.",
+    "Converted wide ASCII neighbor mapping, decision flow, and SOP diagram into readable Word tables and numbered steps."
+  ],
+  "technical_checks": {
+    "docx_zip_integrity": "PASS",
+    "python_docx_reopen": "PASS",
+    "table_count": 9,
+    "replacement_register_rows": 50,
+    "math": {
+      "market_base": "8/20=40.0%",
+      "market_comparison": "12/25=48.0%",
+      "market_delta": "+8.0 pp",
+      "value_base": "10/16=62.5%",
+      "value_comparison": "15/20=75.0%",
+      "value_delta": "+12.5 pp",
+      "response_rates": "16/20=80.0%; 20/25=80.0%"
+    },
+    "body_minimum_pt": 10.5,
+    "table_minimum_pt": 9.5,
+    "false_real_consent_or_review_scan": "PASS"
+  },
+  "visual_qa": {
+    "status": "BLOCKED_RESOURCE_PRESSURE_NOT_RUN",
+    "observed_free_physical_gb": 1.33,
+    "observed_total_physical_gb": 15.94,
+    "observed_winword_process_count": 53,
+    "libreoffice_executable_on_path": false,
+    "action": "No new Word process started; rerender when safe resource headroom is available."
+  },
+  "independent_semantic_review": {
+    "status": "PENDING",
+    "required_scope": "exact DOCX SHA; official I19-E07 mapping, genre, usability, neighboring requirement separation, all calculations, synthetic/real boundary, register completeness, title-blind use, Word readability."
+  },
+  "created_local": "2026-10-29T05:43:00+08:00",
+  "other_worker_attempt": {
+    "worker": "OpenCode v2 CLI 2.1.4",
+    "work_id": "TTQS-0119-I19-E07-W1-OPENCODE-R02",
+    "requested_model": "opencode/glm-5.3-flash-free",
+    "process_id": 97516,
+    "process_user": "DESKTOP-VMV4Q60\\J",
+    "exit_code": 1,
+    "elapsed_ms": 1578,
+    "result": "NO_WRITER_OUTPUT_PROVIDER_FREE_LIMIT_429",
+    "stdout_sha256": "DB7EECED5191F28DEFC56EFFC73ACE219942FD553EEEB8D59FC7B02EA285FAEB",
+    "stdout_bytes": 528,
+    "retry_after_ms": 11121000,
+    "same_request_retry": "NOT_DISPATCHED"
+  },
+  "auth_readback": {
+    "windows_user": "DESKTOP-VMV4Q60\\J",
+    "agy_cli_version": "1.4.9",
+    "headless_test": "PASS_AGY_HEADLESS_OK",
+    "headless_test_exit_code": 0,
+    "requested_model": "gemini-3.8-flash-high",
+    "provider_attested_served_model": "UNKNOWN",
+    "latest_tui": "UNKNOWN_CURRENT; prior user screenshot PASS_AT_SCREENSHOT_TIME",
+    "root_cause_of_prior_2026-10-28_21:39_event": "UNKNOWN"
+  },
+  "source_readback": {
+    "source_commit": "33a66d2f3cbdf9ef7f026994482660fa6138b973",
+    "unique_blueprint_git_blob": "a3d963145c2a7c2e6cb721478ed64f57f377ea62",
+    "local_blueprint_sha256": "D097C7491235E323EBCA4A31FF147EE5BE2E6E5F893041087FD3076664AA0473",
+    "local_snapshot_matches_packet": "PASS_GIT_BLOB_VERIFIED_FROM_PACKET"
+  }
+}

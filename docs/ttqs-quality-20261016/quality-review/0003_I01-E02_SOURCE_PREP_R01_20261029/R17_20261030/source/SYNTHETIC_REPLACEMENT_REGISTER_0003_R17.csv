@@ -1,0 +1,21 @@
+﻿fact_id,field,synthetic_value,note,location,real_replacement_rule,status
+SYN-001,SampleDate,2026-10-28,合成日期,DOCX完整合成答卷；題號由field標示,以合法取得之匿名實際回覆替換；施測證據另見0004,SAMPLE_SYNTHETIC_ONLY
+SYN-002,RespondentCode,SYN-0003-001,匿名合成代碼,DOCX完整合成答卷；題號由field標示,以合法取得之匿名實際回覆替換；施測證據另見0004,SAMPLE_SYNTHETIC_ONLY
+SYN-003,Q1_GROUP,志工,SAMPLE/SYNTHETIC 類別值；與問卷Q1顯示選項「志工」逐字一致,DOCX完整合成答卷；題號由field標示,以合法取得之匿名實際回覆替換；施測證據另見0004,SAMPLE_SYNTHETIC_ONLY
+SYN-004,Q2_PRIOR,沒有（合成）,R10精確對應Q2單選選項「沒有」；表示過去兩年未接觸本問卷界定的相關學習活動，不等於沒有服務工作經驗。Q5仍獨立記錄主觀信心，不因Q2=NO改記NA。,DOCX 0003 R17／Table 3 row 4（Q2）,未來以實際匿名受訪者在Q2的單選原始值替換，並保留本題兩年期間與相關學習活動定義；施測流程由0004記錄。,SAMPLE_SYNTHETIC_ONLY
+SYN-005,Q3_NEED1,服務流程與紀錄,合成排序1,DOCX完整合成答卷；題號由field標示,以合法取得之匿名實際回覆替換；施測證據另見0004,SAMPLE_SYNTHETIC_ONLY
+SYN-006,Q3_NEED2,溝通與轉介界線,合成排序2,DOCX完整合成答卷；題號由field標示,以合法取得之匿名實際回覆替換；施測證據另見0004,SAMPLE_SYNTHETIC_ONLY
+SYN-007,Q3_NEED3,志工合作與安全,合成排序3,DOCX完整合成答卷；題號由field標示,以合法取得之匿名實際回覆替換；施測證據另見0004,SAMPLE_SYNTHETIC_ONLY
+SYN-008,Q4_URG,4/5,合成個人分數；非門檻,DOCX完整合成答卷；題號由field標示,以合法取得之匿名實際回覆替換；施測證據另見0004,SAMPLE_SYNTHETIC_ONLY
+SYN-009,Q5_CONF,2/5,合成自我信心2/5；可在Q2=沒有時作答；不是能力測驗或客觀表現。,DOCX 0003 R17／Table 3 row 7（Q5）,以合法取得之匿名實際回覆替換；施測證據另見0004,SAMPLE_SYNTHETIC_ONLY
+SYN-010,Q6_OUTCOME,能依清單完成服務前確認、過程紀錄與結束交接，並知道何時應轉介。（合成期待，非成果）,合成期待；非實績,DOCX完整合成答卷；題號由field標示,以合法取得之匿名實際回覆替換；施測證據另見0004,SAMPLE_SYNTHETIC_ONLY
+SYN-011,Q7_MODE,面對面,合成偏好,DOCX完整合成答卷；題號由field標示,以合法取得之匿名實際回覆替換；施測證據另見0004,SAMPLE_SYNTHETIC_ONLY
+SYN-012,Q8_TIME,週末上午,合成偏好,DOCX完整合成答卷；題號由field標示,以合法取得之匿名實際回覆替換；施測證據另見0004,SAMPLE_SYNTHETIC_ONLY
+SYN-013,Q9_DURATION,單次3小時,合成偏好；非核定,DOCX完整合成答卷；題號由field標示,以合法取得之匿名實際回覆替換；施測證據另見0004,SAMPLE_SYNTHETIC_ONLY
+SYN-014,Q10_BARRIER,交通距離、時間安排,合成障礙,DOCX完整合成答卷；題號由field標示,以合法取得之匿名實際回覆替換；施測證據另見0004,SAMPLE_SYNTHETIC_ONLY
+SYN-015,Q11_COST,0元（合成個人偏好；非定價）,R10精確對應Q11互斥單選級距「0元」，不再使用跨越0元與1–300元級距的「0–300元」。僅為個人偏好，不是價格、預算或支付承諾。,DOCX 0003 R17／Table 3 row 13（Q11）,未來以實際匿名受訪者Q11單選原始級距替換；協會定價須另依真實成本及正式權責程序決定。,SAMPLE_SYNTHETIC_ONLY
+SYN-016,Q12_FOLLOWUP,不需要後續聯絡,合成回答,DOCX完整合成答卷；題號由field標示,以合法取得之匿名實際回覆替換；施測證據另見0004,SAMPLE_SYNTHETIC_ONLY
+SYN-017,Q13_ACCESS,講義字體清楚，提供紙本或電子閱讀方式。（合成意見）,合成意見,DOCX完整合成答卷；題號由field標示,以合法取得之匿名實際回覆替換；施測證據另見0004,SAMPLE_SYNTHETIC_ONLY
+SYN-018,QA_Q4_MULTI,"Q3有效；Q4={2,4}；Q5=3",合成單選違規測試輸入；非受訪者或施測資料,DOCX 0003 R17／第6節測試向量1；測試收據另存QA,以合法取得的匿名逐題原始答覆替換；測試輸入不作市場分析,SAMPLE_SYNTHETIC_ONLY
+SYN-019,QA_Q5_MULTI,"Q3有效；Q4=4；Q5={1,5}",合成單選違規測試輸入；非受訪者或施測資料,DOCX 0003 R17／第6節測試向量2；測試收據另存QA,以合法取得的匿名逐題原始答覆替換；測試輸入不作市場分析,SAMPLE_SYNTHETIC_ONLY
+SYN-020,QA_PARENT_INVALID_RESIDUAL,"Q3=INVALID_Q3_EXCLUSIVE_OPTION；Q4={2,4}；Q5={1,5}",合成跳題矛盾測試；父題無效優先於子題多選碼,DOCX 0003 R17／第6節測試向量3；測試收據另存QA,不得當作真實答卷；未來按合法匿名原始作答及父題路由規則處理,SAMPLE_SYNTHETIC_ONLY

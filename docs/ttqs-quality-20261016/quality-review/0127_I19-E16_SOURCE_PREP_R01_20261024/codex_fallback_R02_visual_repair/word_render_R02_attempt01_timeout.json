@@ -1,0 +1,21 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0127",
+  "candidate": "R02",
+  "status": "BLOCKED_WORD_NATIVE_RENDER_TIMEOUT",
+  "observed_at": "2026-10-28T19:08:40.2346000+08:00",
+  "attempt": "R02 native Word render attempt 01",
+  "elapsed_minutes": 6.7,
+  "runner_pid": 86312,
+  "runner_command": "\"C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoProfile -NonInteractive -ExecutionPolicy Bypass -File E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0127_I19-E16_SOURCE_PREP_R01_20261024\\codex_fallback_R02_visual_repair\\render_word_native_isolated_R02.ps1",
+  "runner_cpu_seconds": 292.578125,
+  "owned_word_pid": 77428,
+  "owned_word_command": "\"C:\\Program Files\\Microsoft Office\\Root\\Office16\\WINWORD.EXE\" /Automation -Embedding",
+  "owned_word_cpu_seconds": 110.890625,
+  "newly_created_word_pids": [],
+  "preexisting_word_pids_preserved": false,
+  "pdf_created": false,
+  "render_receipt_created": false,
+  "diagnosis": "Word/Powershell remained responsive with CPU growth; exact stalled COM phase UNKNOWN because current renderer lacks stage breadcrumbs.",
+  "action": "Ownership not proven; do not terminate the Word process."
+}

@@ -1,0 +1,82 @@
+{
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS_ONE-0120-I19-E08-R01-R11-SEMANTIC-REVIEW-RECOVERY",
+  "doc_id": "0120",
+  "requirement_id": "I19-E08",
+  "source_packet_sha256": "2b04bc2bc232b45247b37ab93bf00e25d8d2fff8402366e771b960c8fe096b9d",
+  "unique_blueprint_sha256": "09a3aec874c14f97d5d6a1bed85d3cd75d617a9cf4bd33871973e5cb27c088ad",
+  "candidate_sha256": "7dfc32e23d0be9e5c5749b3e721ae47d7a472dd913d9d247ce76a70eaa8ebaf4",
+  "candidate_bytes": 56031,
+  "candidate_state": "CANDIDATE_UNCHANGED",
+  "writer": "LOCAL_DETERMINISTIC_DOCX_ASSEMBLY; no worker manuscript adopted",
+  "worker_result_adopted": false,
+  "technical_qa": {
+    "receipt": "0120_R01_technical_review_final.json",
+    "receipt_sha256": "3d34ad7d2e70fa69edd8eb03eb74614caf1793d9b2f4a09d44dfc0cfeed07d94",
+    "bound_candidate_sha256": "7dfc32e23d0be9e5c5749b3e721ae47d7a472dd913d9d247ce76a70eaa8ebaf4",
+    "all_checks_pass": true,
+    "scope": "mechanical and arithmetic only"
+  },
+  "visual_qa": {
+    "receipt": "0120_R01_visual_review_final.json",
+    "receipt_sha256": "b1dd250beaa4c26b0e56070d3508ddcfa34c776ae2857f0979aea1a072a64a39",
+    "bound_candidate_sha256": "7dfc32e23d0be9e5c5749b3e721ae47d7a472dd913d9d247ce76a70eaa8ebaf4",
+    "page_count": 12,
+    "pages_inspected": 12,
+    "all_page_results_pass": true,
+    "pdf_sha256": "d5a8420ed7566331b8480cf12e007a311c0614843031adb8125f4d7ef270f407"
+  },
+  "semantic_qa": "PENDING_NO_VALID_INDEPENDENT_EXACT_SHA_RECEIPT",
+  "formal_acceptance": "NOT_GRANTED",
+  "stale_unbound_receipt": {
+    "file": "0120_R01_technical_review_final3.json",
+    "sha256": "f4e616d39488aea82ceaae567b25f8b68ce599c3f61c08d390c91bc553993a6a",
+    "bound_candidate_sha256": "eb69c5c93a880f137671e93a045bf978181e1cfda12ab23da34d0010e02b0873",
+    "does_not_apply_to_current_candidate": true
+  },
+  "antigravity": {
+    "cli_path": "C:\\Users\\J\\AppData\\Local\\agy\\bin\\agy.exe",
+    "version": "1.4.7",
+    "requested_model": "gemini-3.8-flash-high",
+    "native_actual_model": "UNKNOWN",
+    "cli_process_invocations": 5,
+    "accepted_prompt_submissions": 0,
+    "review_responses": 0,
+    "provider_usage": "UNKNOWN",
+    "tool_or_computer_use_events": "NONE_OBSERVED",
+    "dispatch_status": "PAUSED_FOR_THIS_REVIEW_LANE_AFTER_REPEATED_CALLER_ERRORS",
+    "root_cause": "CLI flag grammar: --print requires inline prompt argument; --print-timeout requires duration unit; local receipt booleans also needed PowerShell syntax",
+    "next_action": "Correct/validate invocation adapter offline before any later authorized resume"
+  },
+  "opencode": {
+    "cli": "2.1.4-x64 path",
+    "existing_service_pid": 79496,
+    "service_is_writer": false,
+    "requested_free_model": "opencode/deepseek-v4.1-flash-free",
+    "exit_code": 1,
+    "response": "HTTP 429 Free usage limit reached",
+    "retry_after_ms": 41436000,
+    "actual_model": "UNKNOWN",
+    "worker_output_adopted": false,
+    "paid_fallback": "NOT_USED",
+    "retry": "NOT_PERFORMED",
+    "dispatch_attempts_for_0120": 1,
+    "provider_inference_accepted": false,
+    "global_free_limit_observed": true,
+    "prior_same_provider_0110": {
+      "receipt_path": "docs/ttqs-quality-20261016/quality-review/0110_I18-E19_R01_20261023/R09/evidence/opencode_0110_R09_narrow_review_R11_dispatch_receipt.json",
+      "receipt_sha256": "654f3cd7d8eba79b2620046e6e4411e9455915dac741c3b7c4d19b6560542401",
+      "started_local": "2026-10-25T19:26:36+08:00",
+      "requested_model": "opencode/deepseek-v4.1-flash-free",
+      "http_status": 429,
+      "retry_after_ms": 45203000,
+      "actual_model": "UNKNOWN",
+      "token_usage": "UNKNOWN_NO_MODEL_RESPONSE"
+    },
+    "shared_provider_dispatches_since_0110": 2,
+    "cooldown_precheck_missed": true,
+    "correction": "Do not dispatch any OpenCode free model while shared provider retryAfter is active; before future dispatches reconcile same-provider failures across document lanes."
+  },
+  "real_evidence": "No REAL association performance or formal records asserted; candidate uses SAMPLE/SYNTHETIC",
+  "observed_at_local": "2026-10-25T20:39:56.9120850+08:00"
+}

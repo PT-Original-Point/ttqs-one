@@ -1,0 +1,50 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0045",
+  "requirement_id": "I10-E01",
+  "checkbox_sequence": "047",
+  "candidate_sha256": "2ea8937143c5360e03d3db74cf531b8ddffccaecaf4058c89bb3df2ede06d031",
+  "review_status": "PASS_FOR_SAMPLE_ARTIFACT_WITH_DECLARED_SCOPE",
+  "reviewer_verdict": "PASS",
+  "blocking_findings": 0,
+  "nonblocking_findings": [
+    "N-1 RACI roles are described in prose instead of a formal R/A/C/I grid",
+    "N-2 process fields are combined into fewer columns than Blueprint labels",
+    "N-3 exception table has no dedicated escalation-deadline column",
+    "N-4 clarify service-delivery feedback is not training-effectiveness assessment",
+    "O-1 source-pending phrases are real-use stop markers, not blank placeholders",
+    "O-2 packet question says 105 register rows while actual register has 108"
+  ],
+  "candidate_sha256_before_review": "2ea8937143c5360e03d3db74cf531b8ddffccaecaf4058c89bb3df2ede06d031",
+  "candidate_sha256_after_review": "2ea8937143c5360e03d3db74cf531b8ddffccaecaf4058c89bb3df2ede06d031",
+  "candidate_unchanged": true,
+  "review_packet_sha256": "bc53ffef8302e983dcc2bf2618958c7c7aa9b991f64f9364aa66861661682c90",
+  "review_prompt_sha256": "cdcf6930f2c01a88bfaa4f31b4726464092415cdfa86e108431840cd54106a7f",
+  "raw_stdout_sha256": "ac948e7213007885a9743dfbcf150242a0b24d3b195a07f15c4cbe4fc79b19ba",
+  "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "review_report_sha256": "55875a12281cbfa2e388606d0b094e218290a33e88980b9d60162f3a6fef34a0",
+  "session_id": "ses_eb887c17bffehOc1Qt6vLW3qEJ",
+  "cli_version": "2.0.29",
+  "requested_model": "opencode/deepseek-v4.1-flash-free",
+  "runtime_model_identity_returned": false,
+  "event_types": [
+    "step_start",
+    "text"
+  ],
+  "tool_calls_observed": 0,
+  "cli_exit_code": 0,
+  "checks": {
+    "requirement_and_genre": "PASS",
+    "title_blind": "PASS",
+    "negative_neighbors": "PASS",
+    "direct_usability": "PASS",
+    "sample_real_boundary": "PASS",
+    "math_recalculation": "PASS",
+    "register_108_rows": "PASS",
+    "layout_scope": "PASS_WITH_BUILDER_RECEIPT_CONTEXT",
+    "cross_document_shared_facts": "UNKNOWN_NOT_CLAIMED"
+  },
+  "promotion": "NOT_PROMOTED",
+  "formal_acceptance": "NOT_GRANTED",
+  "status": "CANDIDATE_ONLY"
+}

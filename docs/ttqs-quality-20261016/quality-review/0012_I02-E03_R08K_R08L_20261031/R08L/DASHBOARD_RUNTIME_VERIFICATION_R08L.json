@@ -1,0 +1,48 @@
+{
+  "project_id": "TTQS_ONE",
+  "artifact": "LOCAL_WIN10_DASHBOARD_R08L_RECEIPT_SUPPORT",
+  "observed_at_tpe": "2026-10-31T15:36:40+08:00",
+  "dashboard_url": "http://127.0.0.1:8765/",
+  "dashboard_server_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\MASTER\\dashboard_server.py",
+  "dashboard_server_backup_sha256": "611bb1b311a0ab990a98e74d64c0e71810fe9cf1a202316572ddc8ac80761af8",
+  "dashboard_server_sha256": "e53e88832c025c63e7355fab7b8b92047daac476bf67acb8a3f50d8b16c35adb",
+  "patch_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0012_I02-E03_LUNA_TEXT_DRAFT_R01_20261029\\qa\\R08L_SCOPED_XREF_FIX_20261031\\DASHBOARD_PARSER_R08L_SUPPORT.patch",
+  "patch_sha256": "66d481dfa1326eed818edbec9d6a4d6f7e69989c7f3feffca7d811896eff4a8b",
+  "checks": {
+    "python_compile": "PASS",
+    "technical_receipt_recognition": "PASS",
+    "visual_receipt_recognition": "PASS",
+    "semantic_receipt_recognition": "PASS",
+    "dashboard_http": "FRESH",
+    "snapshot_updated_at": "2026-10-31T15:36:01+08:00",
+    "snapshot_age_seconds": 1.7,
+    "candidate_sha256": "529bd78f6a0013ac1e42af2b2c0ee854db91d6ceea5925831420617037ea910f",
+    "candidate_gates": {
+      "technical": "PASS",
+      "visual": "PASS",
+      "semantic": "PASS"
+    },
+    "three_gate_exact_sha_pass": true,
+    "quality_ok": true,
+    "github_head": "37da3dbe8905dbef80c040d9540dd4b6c3dbc3d3",
+    "remote_git_blob_sha1": "44cfd74e6eb5d37d71ce91ea380f0afd7f010005",
+    "local_git_blob_sha1": "44cfd74e6eb5d37d71ce91ea380f0afd7f010005",
+    "remote_state": "MATCH",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN/HOLD",
+    "quality_ok_count": 17,
+    "same_sha_three_gate_pass_count": 21,
+    "formal_acceptance_count": 0,
+    "W1": "IDLE; last dispatch FAILED_HTTP_429; retry_not_before=2026-11-01T08:02:37+08:00",
+    "W2": "IDLE/PARKED; requested gemini-3.8-flash-high but CCPA fallback detected; actual model UNKNOWN",
+    "active_W1_writer": false,
+    "active_W2_writer": false,
+    "resident_opencode_service_is_writer": false,
+    "dashboard_process_restart": {
+      "previous_pid": 19036,
+      "current_pid": 109356,
+      "window_style": "Hidden"
+    }
+  },
+  "scope_note": "Dashboard parser validates exact R08L technical and Word visual receipt schemas against the R08K baseline and rendered PDF. This changes only monitoring interpretation; it does not alter DOCX bytes, formal acceptance, or Worker routing."
+}

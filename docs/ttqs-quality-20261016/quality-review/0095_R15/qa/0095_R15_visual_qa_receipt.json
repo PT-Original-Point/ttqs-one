@@ -1,0 +1,73 @@
+{
+  "doc_id": "0095",
+  "requirement_id": "I18-E02",
+  "revision": "R15",
+  "state": "PASS_WITH_NONBLOCKING_WHITESPACE_NOTES",
+  "docx_sha256": "c70521d50fbec6cdc3b53ce3dc35fa2613069e60c58625b7eb2f96a5a6fd3658",
+  "pdf_sha256": "b106d9c8a66b7c3eae8ecd6c58d71adb797d03e0b7982de9f414c6e744006a04",
+  "pdf_pages": 46,
+  "method": "Microsoft Word native PDF export; every page inspected in three contact sheets; high-resolution pages inspected individually.",
+  "all_pages_contact_sheet_inspected": true,
+  "contact_sheets": [
+    {
+      "file": "contact_01_16.jpg",
+      "sha256": "dbb05074fbfd6437d56c8b8f367838949a474d4ab1246e7bca1b89bdda9ad83b"
+    },
+    {
+      "file": "contact_17_32.jpg",
+      "sha256": "fb70097443b3f1366d88cbf9b655019011e3f2620428d387fb39ec91ed83f434"
+    },
+    {
+      "file": "contact_33_46.jpg",
+      "sha256": "e2a232c460a2d5c86df64a13592599a015ec7abfe55233bbe8faf9cece4d2f51"
+    }
+  ],
+  "high_resolution_pages_inspected": [
+    1,
+    4,
+    5,
+    9,
+    20,
+    39,
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "findings": [
+    {
+      "page": 5,
+      "severity": "NONBLOCKING",
+      "finding": "The §1.4 comparison table continues from page 4; continuation header is repeated and remaining row is readable, with substantial unused lower page area."
+    },
+    {
+      "page": 9,
+      "severity": "NONBLOCKING",
+      "finding": "The final two workflow rows are readable at the top; remaining lower page area is unused, with no clipping or overlap."
+    },
+    {
+      "page": 20,
+      "severity": "NONBLOCKING",
+      "finding": "Short §4 continuation paragraphs appear at top; substantial lower page area is unused, with no clipping or overlap."
+    },
+    {
+      "page": 46,
+      "severity": "NONBLOCKING",
+      "finding": "Closing candidate-state panel is readable; no content is clipped."
+    }
+  ],
+  "targeted_repair_check": {
+    "page": 39,
+    "register_key": "UNK-0095-UNK_FORMAL_EFFECTIVE_DATE",
+    "result": "The §9.5 row 3 is visibly on p.39 and the displayed locator says R15 final PDF p.39."
+  },
+  "clipping_or_overlap_observed": false,
+  "orphaned_table_header_observed": false,
+  "limitations": [
+    "This is producer visual inspection, not independent semantic acceptance.",
+    "No formal association acceptance or REAL evidence is asserted."
+  ],
+  "inspected_at_utc": "2026-10-20T14:54:37.903785+00:00",
+  "manifest_sha256": "7cf9cf0f9c494ff0f12513b3c4ab2e473dd26a6eefa4472c6028e38e4caac3b2"
+}

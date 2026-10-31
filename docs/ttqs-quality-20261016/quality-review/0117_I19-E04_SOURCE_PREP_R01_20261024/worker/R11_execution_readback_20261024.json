@@ -1,0 +1,70 @@
+{
+  "project_id": "TTQS_ONE",
+  "human_spec": "R11 2026-10-23",
+  "attachment_sha256": "a0b2d24f60abe4c7819ca64505bb0fb1aae181db5ab0136f0527f4b121679493",
+  "observed_at": "2026-10-24T07:45:09.0142100+08:00",
+  "github_head": "a7c8917d2c70453006da690970c9be8a1a0490b7",
+  "github_control_blobs": {
+    "AGENTS": "2e8d4eddd68c650f38db8cb48d421b838e693ecb",
+    "04_CODEX_GOAL_24X7_EXECUTION.md": "65e7fd5a406877e875174402a0d3ddc68b6111a1",
+    "05_HOURLY_NATIVE_WAKE_RESUME.md": "dbdb2e567e8e5c2b7eb0632f060a45a7ae371a49",
+    "06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md": "b566c5c71d1a88e012eca2eeac90c8a3e4ecc06c"
+  },
+  "native_automation": {
+    "id": "ttqs-one-hourly-quality-goal-resume",
+    "status": "ACTIVE",
+    "rule": "FREQ=HOURLY;INTERVAL=2",
+    "bound_thread": "01a14098-b269-79e3-b07c-56e96557fe07",
+    "effective_prompt_source": "C:\\Users\\J\\.codex\\automations\\ttqs-one-hourly-quality-goal-resume\\automation.toml",
+    "source_prompt_sha256": "EEF68C9F8921ED8BDB68E06AEBB8220317A25D62C97117F70142160D919E7472",
+    "effective_normalized_prompt_sha256": "828c6668b3bc5ca99cd26870842174e64a10e0061a987911b66c8f0da1a805af",
+    "prompt_readback": "MATCH_AFTER_TERMINAL_NEWLINE_NORMALIZATION",
+    "last_trigger": "UNKNOWN",
+    "next_run": "UNKNOWN",
+    "natural_120m_test": "NOT_VERIFIED"
+  },
+  "windows": {
+    "host": "DESKTOP-VMV4Q60",
+    "user": "desktop-vmv4q60\\j",
+    "os": "Windows 10 Pro 10.0.19045",
+    "observed_at": "2026-10-24T07:38:27.0929895+08:00",
+    "free_ram_gb": 4.59,
+    "legacy_supervisor": "TTQS_ONE_Codex_Supervisor disabled",
+    "panel_ports_8765_8766": "no listener",
+    "current_writer": "none observed in scoped process snapshot",
+    "local_AGENTS": "not found at E:\\AGENTS.md, E:\\TTQS\\AGENTS.md, runtime CONTROL\\AGENTS.md"
+  },
+  "document_0117": {
+    "doc_id": "0117",
+    "requirement": "I19-E04",
+    "blueprint_index": 128,
+    "revision": "R03",
+    "candidate_sha256": "b9fdd4b3ab7ad455ada053cef3d70839bbe19d56d7636b9506778819d3b91020",
+    "source_packet_sha256": "6607741c8178f7a84097f06f76671d63871c2710b30c3da7a19e25e9fb4217a1",
+    "blueprint_sha256": "3535cd80790687ce7a6c031b3f5e6ee61ff3f0136e772638cd24899d30f332fb",
+    "extraction_sha256": "67a90293ff499f001dd5881e43114d0fdd7e55b764e81c3ffee21815e8e4e918",
+    "reviewer": "OpenCode v2 selected model opencode/mimo-v2.6-flash-free; provider serving identity UNKNOWN",
+    "semantic": "PASS for full extracted text and supplied source, exact candidate SHA as stated by dispatch packet; reviewer did not independently hash/open DOCX",
+    "review_receipt_sha256": "a51bd16c168fd694d4240f4838a09512af1ac972c9ff8fe63fbc556d12fff5c2",
+    "nonblocking_findings": 5,
+    "visual": "BLOCKED; Word PDF export and SaveAs2 stalled; no R03 PDF",
+    "candidate_state": "CANDIDATE",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN/HOLD"
+  },
+  "document_0102": {
+    "decision": "Use R08c only; R35 excluded because its five-core Form F summary does not meet R02 ten explicit checks; do not transfer R35 PASS",
+    "R08c_sha256": "84c279d09484b88724dd59ae8a5155cb8d0be284133258e166269a80c26c67b4",
+    "R35_sha256": "04f71db94dd8949b2e0fc67fc0df5577c2a647138b95e3beadd3be2dea4457aa",
+    "semantic": "R08c prior exact-SHA PASS",
+    "current_remote_readback": "PENDING"
+  },
+  "document_0110": {
+    "candidate_sha256": "9a306bf5712437ee578867b745e7d0811959decaa862ed540a82e7e8553bd3c2",
+    "mapping": "existing deterministic math/mapping PASS only; 6/8=75%, 7/8=87.5%, 90% target REVISE; do not rebuild",
+    "writer_lane": "Antigravity PAUSED; OpenCode full writer not currently observed"
+  },
+  "panel": "OFFLINE/UNKNOWN; no listener on 8765/8766; do not claim aligned",
+  "goal_status": "UNKNOWN",
+  "formal_acceptance": "NOT_GRANTED"
+}

@@ -1,0 +1,230 @@
+{
+  "schema": "TTQS_ONE_R12_0124_CURRENT_STATUS_AND_REGISTER_RECONCILIATION_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0124",
+  "requirement_id": "I19-E12",
+  "candidate_state": "CANDIDATE",
+  "observed_at_local": "2026-10-27T12:47:39+08:00",
+  "candidate_docx_sha256": "0a6567c2779d9ad8014ab6d1c892779a98892351a38ceda0dea9fa8b24ff2988",
+  "candidate_docx_unchanged_after_review": true,
+  "source_packet_sha256": "83a03deb7cbef3f07ef8b7ce0b2b25e1744baa6bc2e96b29e3259453558ccfee",
+  "unique_blueprint_sha256": "d0d8b0990d96fb7dab5d02a34d9f507b6434e57778646c920c488f01c1ab0f42",
+  "technical_qa": {
+    "result": "PASS_DETERMINISTIC_SCOPE",
+    "receipt_sha256": "4f1632db2fb27d73cdb29fec6ceb234f341f4969352df45a6fe31b7ce4a35a21"
+  },
+  "visual_qa": {
+    "result": "PASS_FOR_14_PAGE_DIRECT_VISUAL_SCOPE",
+    "page_count": 14,
+    "page_images_hashed": 14,
+    "receipt_sha256": "7a7b889c99be8902e88a7bab5ef94991f23a30c0cad326369836ac3c46a8c381"
+  },
+  "semantic_review": {
+    "result": "NOT_ACCEPTED_MODEL_IDENTITY_UNVERIFIED",
+    "rubric_sections": 8,
+    "review_response_sha256": "a4665ce8e60f6c2fe690a501806f860df9b40587e129dd050d2d0d15da73c515",
+    "dispatch_terminal_sha256": "e96a99cd7147c2059bc2d11190de8d609c1449b00b31a0a5871a3f55897a4e7c",
+    "work_id": "TTQS-0124-I19-E12-R01-ANTIGRAVITY-R12-EXACT-SHA-SEMANTIC-REVIEW",
+    "pid": 87452,
+    "exit_code": 0,
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model": "UNKNOWN",
+    "fallback": "UNKNOWN_NOT_VERIFIED; no fallback authorized",
+    "computer_use": "NOT_USED_BY_LAUNCH; verify response transcript for any tool claim",
+    "tokens": {
+      "input_tokens": 22138,
+      "output_tokens": 6412,
+      "thinking_tokens": 4028,
+      "cache_read_tokens": 0,
+      "total_tokens": 28550
+    },
+    "reviewer_reported_result": "PASS_TEXT_ONLY",
+    "acceptance_state": "UNRESOLVED",
+    "limitation": "Antigravity response reported PASS_TEXT_ONLY but actual serving model UNKNOWN; OpenCode Mimo request was rejected with provider.free-limit HTTP 429 before any semantic response. Neither supports verified model identity or formal acceptance.",
+    "independent_review_attempts": [
+      {
+        "work_id": "TTQS-0124-I19-E12-R01-W1-MIMO-EXACT-SHA-REVIEW-R02-20261027",
+        "requested_model": "opencode/mimo-v2.6-flash-free",
+        "actual_model": "UNKNOWN_NOT_RETURNED",
+        "candidate_sha256": "0a6567c2779d9ad8014ab6d1c892779a98892351a38ceda0dea9fa8b24ff2988",
+        "review_packet_sha256": "28fd462a35929895d283e82127bc32664ff94bd9fd882217533d6764f88d2c14",
+        "terminal": "PROVIDER_FREE_LIMIT_HTTP_429_NO_RESPONSE",
+        "session_id": "ses_e8454999bffe262YcQ4WaXBdtl",
+        "stdout_sha256": "61eb2f1e26e732d11c02e33115b4393f0e092bd5deec4c12d8a155744e9d22e8",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "process_exit_code": "UNKNOWN_NOT_CAPTURED",
+        "retry_eligible_local": "2026-10-28T08:00:00.372000+08:00",
+        "receipt_path": "qa/OPENCODE_MIMO_REVIEW_ATTEMPT_R02.json"
+      }
+    ]
+  },
+  "register_count_correction": {
+    "reviewer_reported_key_count": 27,
+    "native_docx_table_index_1_based": 12,
+    "data_rows": 30,
+    "unique_keys": 30,
+    "all_document_unique_keys": 30,
+    "duplicate_keys": 0,
+    "all_keys_mapped_in_table": true,
+    "all_real_replacements": "NOT_PROVIDED",
+    "note": "Reviewer response reported 27 keys; deterministic extraction from exact candidate SHA finds 30 unique keys, all present in Table 12. This corrects the review count; it does not mutate the DOCX or assert any REAL evidence.",
+    "entries": [
+      {
+        "table_row": 1,
+        "sample_key": "SAMPLE-KEY-COHORT-01",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 2,
+        "sample_key": "SAMPLE-KEY-CLAIMS-01",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 3,
+        "sample_key": "SAMPLE-KEY-VERIFIED-01",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 4,
+        "sample_key": "SAMPLE-KEY-INVITES-01",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 5,
+        "sample_key": "SAMPLE-KEY-RESPONSES-01",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 6,
+        "sample_key": "SAMPLE-KEY-POSITIVE-01",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 7,
+        "sample_key": "SAMPLE-KEY-CASE-01",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 8,
+        "sample_key": "SAMPLE-KEY-LEARNER-A",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 9,
+        "sample_key": "SAMPLE-KEY-COURSE-A",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 10,
+        "sample_key": "SAMPLE-KEY-COMPLETION-01",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 11,
+        "sample_key": "SAMPLE-KEY-EMPLOYER-A",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 12,
+        "sample_key": "SAMPLE-KEY-HIRE-START-01",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 13,
+        "sample_key": "SAMPLE-KEY-HIRE-LOCATOR-01",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 14,
+        "sample_key": "SAMPLE-KEY-RESPONDENT-A",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 15,
+        "sample_key": "SAMPLE-KEY-OBSERVATION-01",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 16,
+        "sample_key": "SAMPLE-KEY-E3-01",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 17,
+        "sample_key": "SAMPLE-KEY-E4-01",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 18,
+        "sample_key": "SAMPLE-KEY-E5-01",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 19,
+        "sample_key": "SAMPLE-KEY-OTHER-01",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 20,
+        "sample_key": "SAMPLE-KEY-E6-01",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 21,
+        "sample_key": "SAMPLE-KEY-E8-01",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 22,
+        "sample_key": "SAMPLE-KEY-CONSENT-01",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 23,
+        "sample_key": "SAMPLE-KEY-STATE-01",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 24,
+        "sample_key": "SAMPLE-KEY-DECISION-01",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 25,
+        "sample_key": "SAMPLE-KEY-CALC-VERIFY-01",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 26,
+        "sample_key": "SAMPLE-KEY-CALC-RESPONSE-01",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 27,
+        "sample_key": "SAMPLE-KEY-CALC-AFFIRM-01",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 28,
+        "sample_key": "SAMPLE-KEY-NO-EMPLOYMENT-RATE",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 29,
+        "sample_key": "SAMPLE-KEY-CASE-02",
+        "real_replacement_status": "NOT_PROVIDED"
+      },
+      {
+        "table_row": 30,
+        "sample_key": "SAMPLE-KEY-CASE-03",
+        "real_replacement_status": "NOT_PROVIDED"
+      }
+    ]
+  },
+  "real_evidence": "NOT_VERIFIED",
+  "formal_acceptance": "NOT_GRANTED",
+  "promotion": "NOT_PERFORMED",
+  "remote_candidate_readback": "PASS_RAW_GIT_BLOB_READBACK_9_OF_9_AT_fbd63da1f51b70e33a8739c41ba70d7e43898351_PRE_MANIFEST_CORRECTION",
+  "remote_candidate_readback_verified_at_local": "2026-10-27T06:26:59.2399908+08:00",
+  "remote_candidate_readback_scope": "Nine package files at the R12 package path; readback is pre-manifest-correction and candidate DOCX bytes are unchanged."
+}

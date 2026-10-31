@@ -1,0 +1,94 @@
+{
+  "schema": "TTQS_ONE_ANTIGRAVITY_HEADLESS_AUTH_DIAGNOSTIC_R06",
+  "project_id": "TTQS_ONE",
+  "command": "RESTORE_ANTIGRAVITY_HEADLESS_AUTH_WITHOUT_RELOGIN",
+  "observed_at_local": "2026-10-29T07:01:31.8297587+08:00",
+  "source_branch_head_at_preflight": "b7edab070544b6fbf8937cdec20970767706ef4f",
+  "windows_context": {
+    "windows_identity_matches_human_tui_screenshot": true,
+    "identity_value_publicly_redacted": true,
+    "userprofile": "%USERPROFILE%",
+    "localappdata": "%LOCALAPPDATA%",
+    "agy_executable": "%LOCALAPPDATA%\\agy\\bin\\agy.exe",
+    "cli_version": "1.4.9",
+    "version_matches_human_screenshot": true,
+    "current_tui_process": "NOT_RUNNING; human screenshot remains PASS at screenshot time",
+    "credential_manager_target": "PRESENT: gemini:antigravity",
+    "credential_values_read_or_exported": false
+  },
+  "single_headless_probe": {
+    "pid": 79724,
+    "process_user_matches_codex_windows_user": true,
+    "working_directory": "%LOCALAPPDATA%\\agy-login-check",
+    "hidden_noninteractive": true,
+    "sandbox_enabled": true,
+    "mode": "plan",
+    "timeout": "90s",
+    "requested_model": "gemini-3.8-flash-high",
+    "started_at_local": "2026-10-29T06:48:41.1491107+08:00",
+    "finished_at_local": "2026-10-29T06:48:50.5488531+08:00",
+    "duration_seconds": 9.4,
+    "exit_code": 0,
+    "stdout_classification": "EXACT_MATCH_AGY_HEADLESS_OK",
+    "stdout_sha256": "ad469f03757a9ac0ff6daa4cde3c4afed963f91f7d2f7c3c8c50fe186ba61e84",
+    "stderr_classification": "EMPTY",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "local_process_receipt_sha256": "c394cec6492977417c4a3585b1b1fb4f12b7acf8330a14f6cb87888eff271a9e",
+    "native_cli_log_sha256": "3bbf1363f74018aaae9f32fa759cac80fa5dc0b0924d7cf5dc2b4aa4a2a2718b"
+  },
+  "auth_and_route_readback": {
+    "auth_result": "PASS_AT_TEST_TIME",
+    "observed_sequence": [
+      "startup logged unauthenticated and initial token-source refresh errors",
+      "print mode initiated silent auth",
+      "Credential Manager keyring loaded an unexpired token",
+      "ChainedAuth authenticated via keyring",
+      "Google Cloud Code loadCodeAssist and fetchAvailableModels completed"
+    ],
+    "model_catalog": {
+      "command": "agy models",
+      "exit_code": 0,
+      "requested_model_listed": "gemini-3.8-flash-high"
+    },
+    "model_route": {
+      "selected_override_logged": "Gemini 3.8 Flash (High)",
+      "inference_endpoint": "Google daily-cloudcode-pa.googleapis.com streamGenerateContent",
+      "final_fallback_observed_in_native_log": false,
+      "provider_served_model": "UNKNOWN",
+      "token_usage": "UNKNOWN"
+    },
+    "assessment": "Headless authentication and the requested Gemini route selection were observed working at test time. Provider-attested served-model identity was not returned; do not claim Gemini PASS from this receipt."
+  },
+  "root_cause": {
+    "current_test_startup_behavior": "VERIFIED_TRANSIENT_STARTUP_AUTH_INITIALIZATION; the initial auth errors were followed by successful silent keyring auth",
+    "historical_2026_10_28_21_39_failure": "UNKNOWN_NOT_REPRODUCED",
+    "oauth_action_required": false
+  },
+  "doc_0128": {
+    "doc_id": "0128",
+    "requirement_id": "I19-E17",
+    "candidate_sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
+    "docx_mutation": "NONE",
+    "visual_qa": "PASS_13_OF_13_PAGES_SAME_EXACT_SHA",
+    "existing_semantic_response": "PASS_TEXT_ONLY_EXACT_SHA_SAME_CANDIDATE",
+    "existing_review_served_model": "UNKNOWN",
+    "reviewer_route": "AUTHENTICATED_AND_AVAILABLE_FOR_BOUNDED_USE; reuse existing exact-SHA review and do not duplicate",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "other_ready_work": {
+    "global_goal": "NOT_PAUSED",
+    "doc_0110_I18_E19": {
+      "candidate_revision": "R09",
+      "local_and_github_raw_bytes_match": true,
+      "candidate_sha256": "7fc82ba7ae25ba3fd422d7abcae2618176f64d4e2e118021122912440d9b740f",
+      "existing_deterministic_mapping_math_receipt": "PASS; 14 item rows; 6/8=75.0%, 7/8=87.5%, +12.5 percentage points; target requires 8/8 and decision REVISE"
+    },
+    "doc_0111_I18_E20": {
+      "candidate_revision": "R05",
+      "candidate_sha256": "28d6d2a1adce11dee53fe7b1b1db300c28f81dac48a58538e772ae82cf609364",
+      "existing_exact_sha_semantic_and_visual_receipts": "PASS; 21-page candidate; no rebuild",
+      "formal_acceptance": "NOT_GRANTED"
+    }
+  },
+  "secret_handling": "No token, cookie, credential value, or account email was read into this public receipt."
+}

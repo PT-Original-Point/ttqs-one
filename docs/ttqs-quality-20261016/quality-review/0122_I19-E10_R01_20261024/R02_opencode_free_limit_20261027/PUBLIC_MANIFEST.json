@@ -1,0 +1,63 @@
+{
+  "schema": "TTQS_ONE_R12_PUBLIC_INCIDENT_MANIFEST_V1",
+  "work_id": "TTQS-0122-I19-E10-R02-W1-GLM53-FREE-EXACT-SHA-REVIEW",
+  "doc_id": "0122",
+  "requirement_id": "I19-E10",
+  "candidate_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+  "provider_error": "provider.free-limit",
+  "provider_code": "provider.free-limit",
+  "provider_status": 429,
+  "retry_after_ms": 44111000,
+  "retry_not_before_local": "2026-10-28T08:00:00.09+08:00",
+  "session_metadata_model": "glm-5.3-flash-free",
+  "session_metadata_provider": "opencode",
+  "inference_outcome": "failed",
+  "reported_cost": 0,
+  "tokens": {
+    "input": 0,
+    "output": 0,
+    "reasoning": 0,
+    "cache": {
+      "read": 0,
+      "write": 0
+    }
+  },
+  "candidate_unchanged": true,
+  "files": [
+    {
+      "name": "DISPATCH_START_PUBLIC.json",
+      "bytes": 1014,
+      "sha256": "91c2420b7eef747bce62fbb7cda8f5728dbe49af057eb60e4c9ad0f0009f9450"
+    },
+    {
+      "name": "DISPATCH_TERMINAL.json",
+      "bytes": 1217,
+      "sha256": "506f7c4185c050cbcdfdedae533bba61e5044d208fe49c028c6d86e528fd5a22"
+    },
+    {
+      "name": "FAILURE_ADJUDICATION.md",
+      "bytes": 1549,
+      "sha256": "a5db7848901b8283b5464b76fdda8c66bf5e49655a51968e91f2b2bb91994ccf"
+    },
+    {
+      "name": "OPENCODE_SESSION_EXPORT_SANITIZED.json",
+      "bytes": 2547,
+      "sha256": "022d8044c910884717dea03815df95bf8aec6177017311c6d5472446a8d20d04"
+    },
+    {
+      "name": "RAW_STDERR.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "RAW_STDOUT.jsonl",
+      "bytes": 528,
+      "sha256": "619e685d461503305bbc35ce56bd9a1cb70d25a88baa5104a8bd56754d41e6b6"
+    },
+    {
+      "name": "SESSION_EXPORT_STDERR.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

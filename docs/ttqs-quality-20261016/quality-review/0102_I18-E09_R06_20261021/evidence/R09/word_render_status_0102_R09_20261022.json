@@ -1,0 +1,41 @@
+{
+  "receipt_id": "TTQS-0102-I18-E09-WORD-RENDER-STATUS-R09",
+  "captured_at_local": "2026-10-22T18:37:15.2083173+08:00",
+  "doc_id": "0102",
+  "requirement_id": "I18-E09",
+  "candidate_sha256": "b7c9d82667971097313514aaaa0939d912730b63cd7a8e2dd25d4999a8659b92",
+  "output_path": "E:\\PT-Original-Point\\ttqs-one\\docs\\ttqs-quality-20261016\\quality-review\\0102_I18-E09_R06_20261021\\render\\R09_final\\0102_R09_Word_native_export.pdf",
+  "output_exists": false,
+  "processes": [
+    {
+      "pid": 70808,
+      "name": "powershell",
+      "started_local": "2026-10-22T18:06:32.0756061+08:00",
+      "cpu_seconds": 901.640625,
+      "responding": true
+    },
+    {
+      "pid": 15600,
+      "name": "WINWORD",
+      "started_local": "2026-10-22T18:06:33.007095+08:00",
+      "cpu_seconds": 374.234375,
+      "responding": true
+    },
+    {
+      "pid": 66060,
+      "name": "pwsh",
+      "started_local": "2026-10-22T18:06:30.4301873+08:00",
+      "cpu_seconds": 1.71875,
+      "responding": true
+    }
+  ],
+  "prior_cpu_sample": {
+    "captured_local": "2026-10-22T18:31:57.983698+08:00",
+    "powershell_pid_70808": 722.234375,
+    "word_pid_15600": 301.234375
+  },
+  "cpu_progress_observed": true,
+  "elapsed_minutes": 30.7,
+  "status": "IN_PROGRESS_NO_PDF_AT_CAPTURE",
+  "interpretation": "CPU increased since previous sample and processes respond. Preserve this exact candidate render attempt; do not start a duplicate. No visual PASS."
+}

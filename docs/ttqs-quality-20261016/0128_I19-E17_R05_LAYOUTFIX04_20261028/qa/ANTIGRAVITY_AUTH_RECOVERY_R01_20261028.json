@@ -1,0 +1,117 @@
+{
+  "schema": "TTQS_ONE_ANTIGRAVITY_HEADLESS_AUTH_RECOVERY_R01",
+  "project_id": "TTQS_ONE",
+  "command": "RESTORE_ANTIGRAVITY_HEADLESS_AUTH_WITHOUT_RELOGIN",
+  "observed_at_local": "2026-10-28T22:27:23+08:00",
+  "github": {
+    "repository": "PT-Original-Point/ttqs-one",
+    "pr_number": 92,
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "head_at_prewrite": "ba3fbd1435c47a8a6ea8dcadc27b2335eb71766e",
+    "pr_state": "open_draft",
+    "0128_visual_receipt_git_blob_sha1_at_head": "5e42839c3abc47c96e3f51e80bda7c6e2c5a37af",
+    "0142_semantic_status_git_blob_sha1_at_head": "6b0f5521c8a4be36cd97049fc6f4a12b2dc59519"
+  },
+  "human_supplied_interactive_evidence": {
+    "tui_auth": "PASS_AT_SCREENSHOT_TIME",
+    "google_ai_pro": "CONFIRMED_AT_SCREENSHOT_TIME",
+    "cli_version_reported": "1.4.9",
+    "same_windows_user_reported": true,
+    "screenshot_time": "2026-10-28 (exact screenshot timestamp not independently extracted)",
+    "current_tui_auth": "UNVERIFIED_BY_CODEX"
+  },
+  "windows_readback": {
+    "whoami": "desktop-vmv4q60\\<redacted>",
+    "userprofile": "C:\\Users\\<redacted>",
+    "localappdata": "%LOCALAPPDATA%",
+    "agy_exe": "%LOCALAPPDATA%\\agy\\bin\\agy.exe",
+    "cli_version": "1.4.9",
+    "cli_help_confirmed_print_model_output_format_and_print_timeout": true,
+    "credential_manager": {
+      "gemini_related_target_count": 1,
+      "credential_contents_read": false,
+      "target_presence_proves_valid_token": false
+    },
+    "current_process_identity_matches_reported_human_tui_user": "PASS_BY_HUMAN_SCREENSHOT_AND_CURRENT_OS_READBACK"
+  },
+  "model_catalog_readback": {
+    "command": "agy models",
+    "exit_code": 0,
+    "requested_model_available": "gemini-3.8-flash-high",
+    "stdout_sha256": "85e245eeb6ee6aa8450b0a953be6bc93480da5086eaa233722cfd9057961fa32",
+    "receipt_sha256": "a7e350b58d644b04b798ab7f37322636b7f57f92a53af1a2357e17afa8f10c15"
+  },
+  "single_headless_probe": {
+    "model_requested": "gemini-3.8-flash-high",
+    "command_mode": "hidden_noninteractive_print",
+    "sandbox": true,
+    "slash_commands_disabled": true,
+    "print_timeout": "30s",
+    "tools_requested": false,
+    "computer_use": false,
+    "oauth_or_credential_mutation": false,
+    "stdout_classification": "EXACT_EXPECTED_REPLY",
+    "stdout_text": "AGY_HEADLESS_OK",
+    "stdout_sha256": "ad469f03757a9ac0ff6daa4cde3c4afed963f91f7d2f7c3c8c50fe186ba61e84",
+    "stderr_classification": "EMPTY",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "child_exit_code": "UNKNOWN_NOT_CAPTURED_AFTER_CHILD_RETURN",
+    "outer_wrapper_exit_code": 1,
+    "wrapper_failure": "PowerShell receipt-writing syntax error after the child returned; not the child exit.",
+    "headless_auth": "PASS_AT_PROBE_TIME",
+    "actual_served_model_identity": "UNKNOWN",
+    "silent_fallback": "UNKNOWN",
+    "second_model_probe_performed": false
+  },
+  "0128_candidate": {
+    "docx_path_relative": "0128_I19-E17_R05_LAYOUTFIX04_20261028/0128_I19-E17_R05_LAYOUTFIX04_CANDIDATE.docx",
+    "docx_sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
+    "candidate_bytes_changed": false,
+    "visual_qa_state": "PASS_13_OF_13_PAGES_COVERED",
+    "visual_qa_git_blob_sha1_at_live_head": "5e42839c3abc47c96e3f51e80bda7c6e2c5a37af",
+    "previous_antigravity_semantic_pass_candidate_sha256": "e9fe9b87751dd588f290a84cc2c134c367d1f8f6a15dd679013dcc9e5fe0f242",
+    "previous_semantic_pass_applies_to_current_docx_sha": false,
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "0128_antigravity_reviewer_dispatch": {
+    "review_input_sha256": "b0cdd21ea9d453f3d92ef13a3187e1a7a9376b0437c2cc1e01a99990d55e2ca4",
+    "input_bytes": 48762,
+    "requested_candidate_sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
+    "request_sent_hidden": true,
+    "failure_observed": "PowerShell stdin write failed: pipe ended after process launch.",
+    "stdout_receipt": "MISSING",
+    "stderr_receipt": "MISSING",
+    "child_exit_code": "UNKNOWN",
+    "provider_inference_started": "UNKNOWN",
+    "review_result": "NONE",
+    "external_effect": "UNRESOLVED",
+    "same_request_retries_allowed_without_new_readback": false,
+    "route_state": "PAUSED_FOR_THIS_EXACT_UNKNOWN_EFFECT"
+  },
+  "other_lane_reconciliation": {
+    "doc_id": "0142",
+    "requirement_id": "I19-E32",
+    "candidate_revision": "R08-TR01",
+    "candidate_sha256": "7efc848ed18decf665c423c03d4784e681a5d911ae5185885f614b391d92cc78",
+    "semantic_state": "PASS_TEXT_ONLY_EXACT_SHA",
+    "semantic_route_reported_in_receipt": "OpenCode v2.1.4 opencode/glm-5.3-flash-free",
+    "same_sha_visual_qa": "PASS_14_OF_14_WORD_NATIVE_PAGES",
+    "same_sha_technical_qa": "PASS_RECORDED",
+    "current_live_head_status_readback": "PASS",
+    "current_live_head": "ba3fbd1435c47a8a6ea8dcadc27b2335eb71766e",
+    "formal_acceptance": "NOT_GRANTED",
+    "docx_rebuilt_during_this_recovery": false
+  },
+  "root_cause": {
+    "earlier_2026_10_28_21_39_not_logged_in_event": "UNKNOWN",
+    "persistent_login_loss": "NOT_SUPPORTED_BY_CURRENT_SINGLE_HEADLESS_PROBE",
+    "reviewer_pipe_failure_cause": "UNKNOWN",
+    "keyringAuth_vs_ChainedAuth_order": "UNKNOWN",
+    "current_action": "Do not request OAuth again; resolve the single 0128 reviewer attempt from native process/session evidence before any retry."
+  },
+  "secrets_policy": {
+    "tokens_or_cookies_recorded": false,
+    "credential_contents_recorded": false,
+    "account_email_recorded": false
+  }
+}

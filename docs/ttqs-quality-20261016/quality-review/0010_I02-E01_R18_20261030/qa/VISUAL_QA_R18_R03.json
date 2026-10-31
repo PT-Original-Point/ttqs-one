@@ -1,0 +1,67 @@
+{
+  "work_id": "TTQS-0010-R18-R03-VISUAL-QA-20261030",
+  "doc_id": "0010",
+  "requirement_id": "I02-E01",
+  "official_checkbox_serial": "008",
+  "candidate_status": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "candidate_docx_sha256": "f985ed84afe0373abb2de530002f656e63c2bd8af2524c0e8ad1014c573489c2",
+  "native_word_pdf_sha256": "ac72c1fb0d6314dba201226e5734ca4aba5874c83382dc9038d726388d68a617",
+  "native_word_pdf_page_count": 51,
+  "render_receipt_sha256": "4ac879bb116702a3bf1695703d55b6cb379a30d1f427582a2bdc355fdafd42d6",
+  "rasterization": "Poppler pdftoppm, 96 dpi, all 51 pages",
+  "page_png_count": 51,
+  "contact_sheets": [
+    {
+      "file": "R18_R03_contact_01.jpg",
+      "sha256": "aa9dc4e15c3bbe865949c602e79f0101c9ca086a233d7a12b9d37b4902d03f95",
+      "pages": "1-9"
+    },
+    {
+      "file": "R18_R03_contact_02.jpg",
+      "sha256": "fef55841f818ba02a38caa72b229d1944759825811dc7488702337b1acb64ae4",
+      "pages": "10-18"
+    },
+    {
+      "file": "R18_R03_contact_03.jpg",
+      "sha256": "e37d7c2287dcc36c52880c17343da03a6015846072e1e7e220f1123fb80b9695",
+      "pages": "19-27"
+    },
+    {
+      "file": "R18_R03_contact_04.jpg",
+      "sha256": "f860882a990f5354f4b38a942102601ef5695f112e042b3fc1563310054c37f8",
+      "pages": "28-36"
+    },
+    {
+      "file": "R18_R03_contact_05.jpg",
+      "sha256": "7bd461e1547faf42cd168d890950e74df67d837ffe01a8d98cb596d226d25d76",
+      "pages": "37-45"
+    },
+    {
+      "file": "R18_R03_contact_06.jpg",
+      "sha256": "0d319d09ce9d7433099a68acaa384e21ce9a6dbf2613a84393b809999e490a2f",
+      "pages": "46-51"
+    }
+  ],
+  "visual_inspection_scope": {
+    "all_pages_overview": "contact sheets 1-6 inspected",
+    "full_size_pages": [
+      15,
+      16,
+      17,
+      18,
+      19
+    ]
+  },
+  "checks": {
+    "all_51_pages_present_in_overview": true,
+    "repaired_retest_ev_table_raw_behavior_column_legible": true,
+    "retest_ev_table_no_character_stacking_or_horizontal_overflow": true,
+    "retest_ev_rows_and_headers_readable_on_pages_15_16": true,
+    "section_12_to_14_pagination_readable_on_pages_17_19": true,
+    "no_clipped_or_missing_content_observed_in_inspected_scope": true
+  },
+  "finding": "R18 R02 had a 0.60-inch raw-behavior column. R18 R03 assigns 4.20 inches to that column; page 16 shows the five retest EV rows with readable multi-line narratives and no character stacking.",
+  "residual_limitations": "Page 2 is relatively sparse; appendix pages were reviewed in contact-sheet overview rather than full-size individually. No clipping or missing rows were observed in the overview. This is a candidate visual QA result, not association acceptance.",
+  "result": "PASS_WITH_SCOPED_VISUAL_REVIEW",
+  "checked_at_taipei": "2026-10-30T17:13:12.290049+08:00"
+}

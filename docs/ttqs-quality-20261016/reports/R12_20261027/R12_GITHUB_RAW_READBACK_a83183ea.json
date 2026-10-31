@@ -1,0 +1,733 @@
+{
+  "schema": "TTQS_ONE_R12_NATIVE_GITHUB_RAW_READBACK_V1",
+  "project_id": "TTQS_ONE",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "pr_number": 92,
+  "readback_commit": "a83183eadee16ab4b97371349853ffe0b52bb044",
+  "observed_at_local": "2026-10-27T01:34:25.709440+08:00",
+  "method": "git fetch; ls-tree; cat-file --batch; SHA-256 and byte-for-byte local comparison",
+  "scope": {
+    "candidate_package_artifacts": 58,
+    "candidate_package_manifest": 1,
+    "r12_report_files": 40,
+    "r12_report_manifest": 1,
+    "r12_gitattributes": 1
+  },
+  "total_compared": 101,
+  "exact_raw_matches": 101,
+  "mismatch_count": 0,
+  "missing_count": 0,
+  "candidate_docx_sha256": "b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d",
+  "files": [
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/0122_I19-E10_R03.docx",
+      "git_blob_sha1": "639b2adda47553c26da934d8ffeea0040ef3778f",
+      "sha256": "b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d",
+      "bytes": 74234,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/evidence/DOCX_BODY_EXTRACT_R03.txt",
+      "git_blob_sha1": "a11f760fc64532dced544f05c39200fa95fb11a4",
+      "sha256": "a6f9b879203ab5234d6f5c918c7b3b7b5109c641a66bbbae3d72ebbb9b409991",
+      "bytes": 44536,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/evidence/R03_Q12_TIMELINE_REPAIR_RECEIPT.json",
+      "git_blob_sha1": "8a12b516788dfa333f3189a90698dde53da76b5f",
+      "sha256": "3fc57040df58c22efb7523150ee0612f659ee4397e0d4fa11231fae421d6e4c4",
+      "bytes": 2357,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/evidence/R03_TECHNICAL_QA_RECEIPT.json",
+      "git_blob_sha1": "0e7b47236aa7026f592b9b4ab080d227c02fb5f8",
+      "sha256": "58e35edcf21b25b6f51cb619762099dc90cc16850e1f0258c1e733b565cd3118",
+      "bytes": 1715,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/evidence/R03_VISUAL_REVIEW_RECEIPT.json",
+      "git_blob_sha1": "ff8c09dae190aacbf60e93214e044df7e2f1bba2",
+      "sha256": "90a34e9c237c7c3cb0a3c5d71e177b3559a389566a04f4411ad603b204ea03dc",
+      "bytes": 1649,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/evidence/R03_WORD_NATIVE_EXPORT_RECEIPT.json",
+      "git_blob_sha1": "c1e7ab8e7c12d8d9c3cd52a71bf162770d78fbca",
+      "sha256": "8fbd33097b99afeeb792a96e5b41940b55755e863633fcaeebb9a6ebf50d0f05",
+      "bytes": 736,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/evidence/R03_FINAL_QA_STATUS.json",
+      "git_blob_sha1": "690b4c986726aad85dad868811263c0292b0008f",
+      "sha256": "15837d523e84e2ff6a68da9a9aa4cdae86fb9e2f65f8d4ceeaa9ced1f021b9b6",
+      "bytes": 7121,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/evidence/R03_ANTIGRAVITY_READ_PERMISSION_DENIAL.json",
+      "git_blob_sha1": "b3857ed575cdfab315b95639cf459f8f5f7e0dde",
+      "sha256": "6ea517af6461a8c86a3ea5ad882fffd65e2f029bf03500219f814f8b52b5c87c",
+      "bytes": 1512,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/evidence/R03_OPENCODE_FREE_LIMIT_429.json",
+      "git_blob_sha1": "10868edddb04dacc0299a76120ad91ca3a201868",
+      "sha256": "373458ceb74c4c3c3ea64a065781cf299f831f9c680fb2a9d313010ea5df19f2",
+      "bytes": 894,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/render/0122_I19-E10_R03_WordNative.pdf",
+      "git_blob_sha1": "9e7f47c67baae5ad8c690c12998661170ab808f6",
+      "sha256": "4817560b5739a506ce6d4227924eb7b35c0b70d8543cb5d609b19148f264d5a4",
+      "bytes": 874072,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/visual/pages/0122_I19-E10_R03_page-15.png",
+      "git_blob_sha1": "b05e49b03a0c3bfbeb8c269fad5034a8d02d9ee0",
+      "sha256": "dc24ad837f20edba4848a3e0f784c856947219dfa0a87d8e8ffea58c7231209f",
+      "bytes": 99307,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/visual/pages/0122_I19-E10_R03_page-16.png",
+      "git_blob_sha1": "f66d004284afa0067846e80cfa295b87f0719971",
+      "sha256": "c39c2df4dbf69477df213cd418d0a2d5245516b038869780de75d4c1e29432b1",
+      "bytes": 89463,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/visual/pages/0122_I19-E10_R03_page-21.png",
+      "git_blob_sha1": "fc3bf8e050ae9fe3b0485eb6460910ff6454c34f",
+      "sha256": "f41d231720c600dce3deb1f41891c088bd479056e7f23ca0ba4e8c77516b7847",
+      "bytes": 97360,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/R03_EXACT_SHA_REVIEW_PACKET.md",
+      "git_blob_sha1": "78f6b57768105b84d0894ff25a0efc8bf189278f",
+      "sha256": "02d51a689b77b255479b499779efaff1d18f77be2c94d1f92f419efba53cde79",
+      "bytes": 65688,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/R03_DELTA_REVIEW_REQUEST_INLINE.md",
+      "git_blob_sha1": "c541c516caba77a8d548e575b2140a1ae224f532",
+      "sha256": "17710bde2b2af4796be63bb9846959fab8502db84d94d75d580e53ec77daef3a",
+      "bytes": 22727,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R03_EXACT_SHA/REVIEW_PROMPT.txt",
+      "git_blob_sha1": "27d608a68ee7d95863261bf254d1a85b1fb57d65",
+      "sha256": "cf87eb9bbbd63e6395da91ff9e6b8e94a905b7a59b2b84cd373df4757c2b176d",
+      "bytes": 1294,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R03_EXACT_SHA/MODEL_LIST_STDOUT.txt",
+      "git_blob_sha1": "e912625f26acab77dd6950929829584ef016c0c0",
+      "sha256": "85e245eeb6ee6aa8450b0a953be6bc93480da5086eaa233722cfd9057961fa32",
+      "bytes": 281,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R03_EXACT_SHA/ATTEMPT01_RAW_STDOUT.json",
+      "git_blob_sha1": "70673ab6327bec5e77e9148a849b215e4e662647",
+      "sha256": "95be5dcd88310f6d781f43a31193666997da4611727852d2529ef81247eac22f",
+      "bytes": 322,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R03_EXACT_SHA/ATTEMPT01_RAW_STDERR.txt",
+      "git_blob_sha1": "27cfe5c39dd5e86218b16dd71071b524591e7ffa",
+      "sha256": "d69ea3c7c4bca02da38e38c57b5e7d6ad4bd8112913a54c5345f7c83e742b88a",
+      "bytes": 385,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R03_EXACT_SHA/ATTEMPT02_RAW_STDOUT.json",
+      "git_blob_sha1": "67234a4d111c746e75572a68a18f6b1ab3117770",
+      "sha256": "11aaaf0ce39ff4a973f8bfe4207aaf4810886a9cef97f8f2bfc5c1dcc5614a90",
+      "bytes": 345,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R03_EXACT_SHA/ATTEMPT02_RAW_STDERR.txt",
+      "git_blob_sha1": "da62417eaa667459a7f5232cef4d13329d7d87b3",
+      "sha256": "65a963c8c913088798e71e3ca130e6bf4af4f10416ea987d3a6386434f54c17e",
+      "bytes": 145,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R03_EXACT_SHA/ATTEMPT02_DISPATCH_RECEIPT.json",
+      "git_blob_sha1": "ff0ea93c0b3f8a536ba0d580ce75f989af5b3249",
+      "sha256": "db8ef43f2a17fd94f0c946c87d34f1e24eea456fea071a21043820fd153e5635",
+      "bytes": 1465,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R03_EXACT_SHA/ATTEMPT03_RAW_STDOUT.json",
+      "git_blob_sha1": "96c3d6e0136a1b33f7813e7a921661776ddbc06b",
+      "sha256": "ebcb7ac280491bae06dc54da67e090ab3491a8a6e019eb308d4cc5bc07499820",
+      "bytes": 8959,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R03_EXACT_SHA/ATTEMPT03_RAW_STDERR.txt",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R03_EXACT_SHA/ATTEMPT03_DISPATCH_RECEIPT.json",
+      "git_blob_sha1": "54bfd0333faeef56db8b838d20ae19296f322bb4",
+      "sha256": "f0727721d49778933aa5b87fb1b1a8ca20557b963fbdbb4c1f0deaa99aa2e637",
+      "bytes": 1524,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R03_EXACT_SHA/ATTEMPT03_REVIEWER_RESPONSE.md",
+      "git_blob_sha1": "0b2d1db351b0a2c6d68b1e886a675f7726ac9713",
+      "sha256": "2300f1a46f55b743d2da2b9bfdb8ebb230ff556e711ca55252121c083a97352d",
+      "bytes": 8614,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/history/PRIOR_R02_ANTIGRAVITY_RAW_STDOUT.json",
+      "git_blob_sha1": "7723877632bda3b3d66b80073cdcfcdb5868f21b",
+      "sha256": "653ecc9ec77c8acd09dd05ca8f89bddb3b39e0682927f2bc3f11a06c51dd6ce1",
+      "bytes": 13500,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/history/PRIOR_R02_ANTIGRAVITY_DISPATCH_RECEIPT.json",
+      "git_blob_sha1": "c35ab3c374bf85682fc6e06a7edae91fab4085c1",
+      "sha256": "21d11c091d4db3d8917200331d4d1c2ba139a7b636ce65fab993ba82fc32a27e",
+      "bytes": 2581,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/history/PRIOR_R02_EXACT_SHA_REVIEW_REQUEST.md",
+      "git_blob_sha1": "ba55a0ba207d93717fa51e37b60392108e0eec8e",
+      "sha256": "501f07bfe715b90e3d8640e17feefc05488d9cce24c5ca0db26a953cc9c06c6a",
+      "bytes": 48031,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/history/R02_REVIEWER_RESPONSE_AND_ADJUDICATION.md",
+      "git_blob_sha1": "33b8600d6bcd0652fb6a72b98ce00597a77b4272",
+      "sha256": "366e99c03eec42cf365350fb8495ad7eda6f83b785c49fa382f7887bcd57a40d",
+      "bytes": 1185,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/OPENCODE_R03_EXACT_SHA/RAW_STDOUT.json",
+      "git_blob_sha1": "3c86425c83723ef240405d05a52000e2bb56652c",
+      "sha256": "2a1032db64b57b6522791a9045beedcd88d56af63e7e290c14b6917c7b25fe80",
+      "bytes": 528,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/OPENCODE_R03_EXACT_SHA/RAW_STDERR.txt",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/OPENCODE_R03_EXACT_SHA/DISPATCH_RECEIPT.json",
+      "git_blob_sha1": "631182b916f1e980b368c0712bb5fb533722dfba",
+      "sha256": "04b58fb50507e5f5884ab5c51f3254f289d750fd351654942aaa9cc04bd483ce",
+      "bytes": 985,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/OPENCODE_MODELS_STDOUT.txt",
+      "git_blob_sha1": "c28bf89cf2099a3a566ab6d7773b2edbeff859a5",
+      "sha256": "f659e9bdf0bb3799c00e42bda0253d86a87b8fffbb40864a7099c74f587f5fdf",
+      "bytes": 268,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/.gitattributes",
+      "git_blob_sha1": "fa1385d99a319b43c06f5309d1aae9fdd3adea46",
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+      "bytes": 8,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/evidence/R03_GITHUB_RAW_READBACK_RECEIPT.json",
+      "git_blob_sha1": "bd1f78f71ddac7bba91ed7b3391413a871cdc91a",
+      "sha256": "5a37ef72cb2abe6ff1156b45fbe40ee11aaca8dd910bf63a4082902753f3513b",
+      "bytes": 635,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R12_FULL_BODY_REVIEW_20261027/CLI_VERSION_STDERR.txt",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R12_FULL_BODY_REVIEW_20261027/CLI_VERSION_STDOUT.txt",
+      "git_blob_sha1": "be05bba9829581391ff682daa1fe46b14fa20d14",
+      "sha256": "794d9bfd2d064be2041cba080923b3e39ba3bec84c35794780482852b5f4007e",
+      "bytes": 6,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R12_FULL_BODY_REVIEW_20261027/DISPATCH_START.json",
+      "git_blob_sha1": "5448321b28bce01f1b8331910fe45023b9872c6d",
+      "sha256": "7884cdc1857e1dd2da95869ae1c8b38b548206a510496aa10fccf550dd7cdd9d",
+      "bytes": 1024,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R12_FULL_BODY_REVIEW_20261027/DISPATCH_TERMINAL.json",
+      "git_blob_sha1": "82dc19f5ce834748e5b5b23b642f38e50b23cbf2",
+      "sha256": "7b323b3bd430a90e2e264899f1758b730f97082cfb93cefba4a15b12cb75dacd",
+      "bytes": 1195,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R12_FULL_BODY_REVIEW_20261027/INPUT_MANIFEST.json",
+      "git_blob_sha1": "265552d6bbabdfac4ab5a76ddfe306ca2a0d22de",
+      "sha256": "0db7e98d61d1ed2637e5be567c6427d297ca3d7d341fe6312c2495bd1146242a",
+      "bytes": 3081,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R12_FULL_BODY_REVIEW_20261027/MODEL_CATALOG_STDERR.txt",
+      "git_blob_sha1": "6bb234241c4e3487b6b6f1f8511f2c8b40421c69",
+      "sha256": "53f588bc9a928f4a66908deacaca57dddc7e7ce177a0cc3586b5a501be26e1e8",
+      "bytes": 29,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R12_FULL_BODY_REVIEW_20261027/MODEL_CATALOG_STDOUT.txt",
+      "git_blob_sha1": "e912625f26acab77dd6950929829584ef016c0c0",
+      "sha256": "85e245eeb6ee6aa8450b0a953be6bc93480da5086eaa233722cfd9057961fa32",
+      "bytes": 281,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R12_FULL_BODY_REVIEW_20261027/RAW_STDERR.txt",
+      "git_blob_sha1": "40f9c58a00d70fd3e283e6f5d5777f29bf25bf19",
+      "sha256": "6f9b232ca1f3b43aa72e2ba63698c09b0796b612d5a17cf05efee31e6c79b713",
+      "bytes": 303,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R12_FULL_BODY_REVIEW_20261027/RAW_STDOUT.json",
+      "git_blob_sha1": "a8a171911a17101034a9d2da8f6b27c33d0d2b42",
+      "sha256": "254a8a5fb4d972eb2d43d8b3c8234a2a510a10a64746738932280e1309489f15",
+      "bytes": 330,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R12_FULL_BODY_REVIEW_20261027/REVIEW_REQUEST.md",
+      "git_blob_sha1": "e9fa58947fae16e7e61333b1c075d9ffc5c54c33",
+      "sha256": "2894039b42213fb9ff1d157287e3e85b0120271fed13c958d34a4c6489c9c2ab",
+      "bytes": 47926,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R12_FULL_BODY_REVIEW_20261027/REVIEW_RESPONSE.md",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R12_FULL_BODY_REVIEW_20261027_ATTEMPT02_NO_TOOL/CLI_VERSION_STDERR.txt",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R12_FULL_BODY_REVIEW_20261027_ATTEMPT02_NO_TOOL/CLI_VERSION_STDOUT.txt",
+      "git_blob_sha1": "be05bba9829581391ff682daa1fe46b14fa20d14",
+      "sha256": "794d9bfd2d064be2041cba080923b3e39ba3bec84c35794780482852b5f4007e",
+      "bytes": 6,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R12_FULL_BODY_REVIEW_20261027_ATTEMPT02_NO_TOOL/DISPATCH_START.json",
+      "git_blob_sha1": "a7886546fb0d48a16299124b121e77833cc19b8a",
+      "sha256": "b3a9c37fc610870c4a85361063e5689aa93ab407bd8beebdcc548d0755d36533",
+      "bytes": 1033,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R12_FULL_BODY_REVIEW_20261027_ATTEMPT02_NO_TOOL/DISPATCH_TERMINAL.json",
+      "git_blob_sha1": "f7796691795dcfadac80fba4843d288f7c2e6431",
+      "sha256": "c60ce7ac073ed3c41539b1ab57a75c6b9dd7c734f8e61f953b7ce7f8d48d3267",
+      "bytes": 1198,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R12_FULL_BODY_REVIEW_20261027_ATTEMPT02_NO_TOOL/INPUT_MANIFEST.json",
+      "git_blob_sha1": "ed6c8491fc8cba6ac4da7d9ed0c245acaccae7de",
+      "sha256": "26cdffde84641e75cadaa81cffb387c25be91cc234feab06d61e933091e454b6",
+      "bytes": 1788,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R12_FULL_BODY_REVIEW_20261027_ATTEMPT02_NO_TOOL/MODEL_CATALOG_STDERR.txt",
+      "git_blob_sha1": "6bb234241c4e3487b6b6f1f8511f2c8b40421c69",
+      "sha256": "53f588bc9a928f4a66908deacaca57dddc7e7ce177a0cc3586b5a501be26e1e8",
+      "bytes": 29,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R12_FULL_BODY_REVIEW_20261027_ATTEMPT02_NO_TOOL/MODEL_CATALOG_STDOUT.txt",
+      "git_blob_sha1": "e912625f26acab77dd6950929829584ef016c0c0",
+      "sha256": "85e245eeb6ee6aa8450b0a953be6bc93480da5086eaa233722cfd9057961fa32",
+      "bytes": 281,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R12_FULL_BODY_REVIEW_20261027_ATTEMPT02_NO_TOOL/RAW_STDERR.txt",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R12_FULL_BODY_REVIEW_20261027_ATTEMPT02_NO_TOOL/RAW_STDOUT.json",
+      "git_blob_sha1": "7de12c2be30966610e2ffe2f906bc74c0e249bfa",
+      "sha256": "063fd89c3f746705dc91132bbf6d2dd0850aa19bc3f6c98c1a4d649d3fa471a0",
+      "bytes": 14615,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R12_FULL_BODY_REVIEW_20261027_ATTEMPT02_NO_TOOL/REVIEW_REQUEST.md",
+      "git_blob_sha1": "ce6aba93a2bddd5b4048756ed16423a4c2bdb218",
+      "sha256": "b62cb19c3e6e0bd99a24b9176389a833881e96dc5abf563e0086b261db527ce9",
+      "bytes": 48315,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/ANTIGRAVITY_R12_FULL_BODY_REVIEW_20261027_ATTEMPT02_NO_TOOL/REVIEW_RESPONSE.md",
+      "git_blob_sha1": "41eaa5df70724d1dd84a3de966dde2438a3e8adc",
+      "sha256": "1695e65738d405ae74223d5acb27752021941765436aa816c8eedc5a3c6eb664",
+      "bytes": 14085,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/SYNC_MANIFEST.json",
+      "git_blob_sha1": "b1274584485dad89ab6cae06b99100ae7c7a50d4",
+      "sha256": "ff0c957815c8aa45d413245f859dab4fdb2bb2157eb289808fdc75392b77fd65",
+      "bytes": 27232,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0121_REVIEW_SYNC_POINTER.json",
+      "git_blob_sha1": "f8474d273c1004268da71ef02528d5193da56875",
+      "sha256": "1ec2017157881f936fa388476f485cbddee758b561e61854fbb3ecc95ee3a5b6",
+      "bytes": 894,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0122_REVIEW_SYNC_POINTER.json",
+      "git_blob_sha1": "7b658e04027943d37e9961d7e38b6cfbaaca0f4e",
+      "sha256": "d4826c3ebb803a6bcf3838d0de444d2d263a7b54746ab3bc39d618a64751c176",
+      "bytes": 1438,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_R12_pages/page-01.png",
+      "git_blob_sha1": "5c69a6cc1783b18c3a08653696ad83c219a798a8",
+      "sha256": "b42a0075ac9e1323b254c7c018fe20e591b880ed92c22355543c51a3ea98d0c4",
+      "bytes": 298486,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_R12_pages/page-02.png",
+      "git_blob_sha1": "3eb2b03fef68240c8556a4183d628bd2d34ed7da",
+      "sha256": "a97d6ad898867566962649cbdeebd3f0a7559a0d1159ec9c954e4937924087df",
+      "bytes": 235978,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_R12_pages/page-03.png",
+      "git_blob_sha1": "1b563b9e94a910450d21a0cbca86292e7acca3d5",
+      "sha256": "2519154710cf749deec93ad340db4e4cebe1e8f21e193a5b123161e62a9200f5",
+      "bytes": 290802,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_R12_pages/page-04.png",
+      "git_blob_sha1": "787ec9602c7d326532a408378e066c1febf7f59d",
+      "sha256": "c07ac90f428076c9481739b7fb961627bb20f4417cf9caa435b43ad09f9727e5",
+      "bytes": 237487,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_R12_pages/page-05.png",
+      "git_blob_sha1": "f450348344c9a5dcbe5d4a2158503b2372d23894",
+      "sha256": "86c33e4a4ed6989f9a76dbe7c6fbadce01ad3f414ebfb9c3e33e188e7682d12f",
+      "bytes": 261488,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_R12_pages/page-06.png",
+      "git_blob_sha1": "55c4df27a555b4be21562736d141ed0470737c1c",
+      "sha256": "4a23441a49466130e6e6dd446392ca8d5a7ad93c36137e884b29f3270bae3dd9",
+      "bytes": 173783,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_R12_pages/page-07.png",
+      "git_blob_sha1": "968fad9dcc181c2e9045e3cc9c0a0ca807a649ca",
+      "sha256": "255759f3051f67ba5e294ca3653d903ca7004c76bc241d4758e3918200ae796d",
+      "bytes": 271098,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_R12_pages/page-08.png",
+      "git_blob_sha1": "00a0df2d0ec5a3a1a62fa48ae47823c453747e43",
+      "sha256": "7058d1cb170b3e62e66b4767637be9d864ebef5499aaedbb24dd01831ddc00ec",
+      "bytes": 240330,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_R12_pages/page-09.png",
+      "git_blob_sha1": "f44ebbd752b4e9cc488ffd99f7a64103f2749836",
+      "sha256": "b57aa08d96b387d0af588e9fc75f963c5549cb11455725b91f08c703a1f8c3f2",
+      "bytes": 266141,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_R12_pages/page-10.png",
+      "git_blob_sha1": "fc0a48f93dfc14a10fadbae209fc62be3b009345",
+      "sha256": "6048406f51ff2e26ab9c0a11e4652eafdf5eb79dea2438e82f842b70f044babc",
+      "bytes": 289351,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_R12_pages/page-11.png",
+      "git_blob_sha1": "397268bd1d599b96ed25509a5d849c2e77b2ca2c",
+      "sha256": "971309688d54253f4b2a89bb2e7a5f3982e24ec755ff0d5e322b152d86937368",
+      "bytes": 280163,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_R12_pages/page-12.png",
+      "git_blob_sha1": "f322b2a5dceeaa9321aac07603623f20be454259",
+      "sha256": "416916f1d2bd52ba6e948d51fa118afbf311d946f6d0be321326e0e4441fb6a1",
+      "bytes": 248236,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_R12_pages/page-13.png",
+      "git_blob_sha1": "f0adc86d50eec7d42774a80d2513c768ed420f30",
+      "sha256": "4c8fed1845efb2c3c6fd404b343c0f6327f3cfbf9c3fd5e7c89aa1516d8f0d45",
+      "bytes": 223412,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_R12_pages/page-14.png",
+      "git_blob_sha1": "89999f9ea52e6fe0acdc1318c7b12c387c8973e5",
+      "sha256": "50bbfe997436f96a21fc70a99f6ad09c73d7a579cfe86074ba705806d876ccc5",
+      "bytes": 66809,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_VISUAL_AND_EXPORT_RECOVERY.json",
+      "git_blob_sha1": "ffa2c4d2ce9b91c89f13e27ed65a8bb018e8ee90",
+      "sha256": "05e45840112b25b8e09595b14ec0fab9d983d686a1d1f74c2246c22aed88466f",
+      "bytes": 7955,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_worker_R12/ADJUDICATION_R12.json",
+      "git_blob_sha1": "08eef959c749977af19f44a16bd09866123374ef",
+      "sha256": "a24300220c665617c01207f27a8b3060851ffade7ad79cd5437e1f993175220d",
+      "bytes": 3197,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_worker_R12/ANTIGRAVITY_R12_REVIEW_REQUEST.md",
+      "git_blob_sha1": "ceb49458d72231ec97f730bb5f78f43211f5f17f",
+      "sha256": "e1220635787d81b93b3ff6e1c23b4ce2114a75e3cfe745e06d47cbbaf4f0df34",
+      "bytes": 42539,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_worker_R12/DISPATCH_START.json",
+      "git_blob_sha1": "2a8c3c298845eb855c08cfc1f961e97c46f8de71",
+      "sha256": "29c6ef9a6433472e1b39c94b5db749d812c5acb6460d0a98c485db31d94c8321",
+      "bytes": 1248,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_worker_R12/DISPATCH_TERMINAL.json",
+      "git_blob_sha1": "785e4c8e2dff01b453371b3354536d6e99b2dcc3",
+      "sha256": "e96a99cd7147c2059bc2d11190de8d609c1449b00b31a0a5871a3f55897a4e7c",
+      "bytes": 1640,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_worker_R12/INPUT_MANIFEST.json",
+      "git_blob_sha1": "eb78cdb1b1715e231f7f63b74dcc5d41e01ba811",
+      "sha256": "9c88666efba42cd90fdcca0b141b43aa9bc38d036f7378205b0c586c0cc5a43d",
+      "bytes": 1048,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_worker_R12/MODEL_CATALOG_STDERR.txt",
+      "git_blob_sha1": "6bb234241c4e3487b6b6f1f8511f2c8b40421c69",
+      "sha256": "53f588bc9a928f4a66908deacaca57dddc7e7ce177a0cc3586b5a501be26e1e8",
+      "bytes": 29,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_worker_R12/MODEL_CATALOG_STDOUT.txt",
+      "git_blob_sha1": "e912625f26acab77dd6950929829584ef016c0c0",
+      "sha256": "85e245eeb6ee6aa8450b0a953be6bc93480da5086eaa233722cfd9057961fa32",
+      "bytes": 281,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_worker_R12/RAW_STDERR.txt",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_worker_R12/RAW_STDOUT.json",
+      "git_blob_sha1": "d768764a84f46de8e6a4f9da51a96aca195a2b99",
+      "sha256": "e03885e07e43bb42437040028fd0c191b19b169efa81dc93de99399179b18b13",
+      "bytes": 9327,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_worker_R12/REVIEW_RESPONSE.md",
+      "git_blob_sha1": "1ea6abd31e8e89c86ff392fd68010e4f8cc76958",
+      "sha256": "a4665ce8e60f6c2fe690a501806f860df9b40587e129dd050d2d0d15da73c515",
+      "bytes": 8902,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0133_README_STATUS_RECONCILIATION.json",
+      "git_blob_sha1": "9436caa07f7b89875455c52ff97f284cf4a2c075",
+      "sha256": "52cb409c91939ed4706e38c9cde548275910b83505a21728a8881483fa384e52",
+      "bytes": 6405,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0135_EXISTING_CANDIDATE_READBACK.json",
+      "git_blob_sha1": "dd453535db5839646ab730bfc6a17be11ec5091e",
+      "sha256": "f4711e238fd8ade53c837b415b37e1091adcf4649aaf907c2140286044619602",
+      "bytes": 715,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0135_OPENCODE_R03_TERMINAL.json",
+      "git_blob_sha1": "8c4dde043cbb7f302c220b7aa0e69a609b2c304f",
+      "sha256": "198386f9a314465d2f181c5ba695870cca73a50fd938963afecb9c8f7e2999b0",
+      "bytes": 1919,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0135_SOURCE_MAPPING_RECONCILIATION.json",
+      "git_blob_sha1": "f0720f2b0a421a32ab200d122086acd836eaae83",
+      "sha256": "7df64949e78b7a80f9720f1fdf4b71150836d12ac8e6c469ef83aa17d5451f65",
+      "bytes": 2495,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0135_worker_R03/DISPATCH_START.json",
+      "git_blob_sha1": "66fb81938025f0a003e99dec5b3014e01e51cf3b",
+      "sha256": "33287a5ef6a2b788db710fabf1ecfbb704f608b3aa0a20b09f0bc00f5791cdec",
+      "bytes": 1296,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0135_worker_R03/DISPATCH_TERMINAL.json",
+      "git_blob_sha1": "8c4dde043cbb7f302c220b7aa0e69a609b2c304f",
+      "sha256": "198386f9a314465d2f181c5ba695870cca73a50fd938963afecb9c8f7e2999b0",
+      "bytes": 1919,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0135_worker_R03/INPUT_MANIFEST.json",
+      "git_blob_sha1": "b38df302de93e217e7e4a16abe17c36b58157b82",
+      "sha256": "3221d96c9732e740f3484a9ce2140a92048418437fa02a05f39c3c060d2dff2e",
+      "bytes": 857,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0135_worker_R03/RAW_STDERR.txt",
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0135_worker_R03/RAW_STDOUT.jsonl",
+      "git_blob_sha1": "a0ce1fa1a993a6552c3c9d31fdf310dbef806f78",
+      "sha256": "cea225644ce43c6944627cd203a616cbbac28de63270d9d6dde63c874c0a407b",
+      "bytes": 527,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0135_worker_R03/REVIEW_REQUEST.md",
+      "git_blob_sha1": "c7aa96868300b856b7d805dc2a47b65a3b1919a7",
+      "sha256": "5aab3c21c9f4824527dca0d45d8b028b13abe5583074194ef5f860141a6ec319",
+      "bytes": 37295,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/R12_GITHUB_RAW_READBACK_b53296b6.json",
+      "git_blob_sha1": "2e09dbc0455c2f8e2fb2ccc6f705d4b4fb24b24a",
+      "sha256": "3387120eb18fd9afdf3b5f9a311c7f39d1716e599873706f528e20d7c16afbee",
+      "bytes": 2463,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/R12_T01_T24_TEST_RESULTS.json",
+      "git_blob_sha1": "67b5d0e6f24ea39d08716e4a2f462a7053c19635",
+      "sha256": "9fdb3bdb66c213fe03f5740948a8d1ac27d6cb0edd5976bfe08906bd3ec8353c",
+      "bytes": 7150,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/T01_GITHUB_COMMIT_WINDOW.json",
+      "git_blob_sha1": "156314f0d8ac0ce640f8ccbcf406a0564a9158ed",
+      "sha256": "40b450d022d1fb375cb717b6491690f830c2a7317a335d4605d14fb35ad25cdd",
+      "bytes": 11083,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/R12_CONTENT_MANIFEST.json",
+      "git_blob_sha1": "5800c1760b1d664e10082530527a8b686bb935c9",
+      "sha256": "d43d8056869b2448f2542d24f0724fbd6ac524a33663d704efdd3df93b565d25",
+      "bytes": 9052,
+      "exact_raw_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/reports/R12_20261027/.gitattributes",
+      "git_blob_sha1": "fa1385d99a319b43c06f5309d1aae9fdd3adea46",
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+      "bytes": 8,
+      "exact_raw_match": true
+    }
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "NOT_PROVIDED"
+}

@@ -1,0 +1,168 @@
+{
+  "verdict": "PASS",
+  "bound_docx_sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
+  "review_scope": {
+    "project_id": "TTQS_ONE",
+    "doc_id": "0128",
+    "official_requirement_id": "I19-E17",
+    "candidate_docx_sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
+    "extracted_text_sha256": "854d7e2c60c989a05d1b0a467fd7706e2f2f506f991f32aa16a9b9a6b44ce504",
+    "source_packet_sha256": "94699015ab0a316f09e500bd44f8fa6e7474e613557a6cffc322548f7c94307b",
+    "unique_blueprint_sha256": "f396793da8db5f7d0092ae5bb90f36b93098fdc4d9f25093db74760864796ffb",
+    "mapping_evidence_sha256": "5086a5b50eb72d46090e1781796cc73325d1e4581fa44beb803adb2302ace12b",
+    "sample_csv_sha256": "831cf00c91fd5078a4128c2576ff5a005c3e3243b71edced5599d18c1c3c91a4",
+    "replacement_register_sha256": "ea06f9aa1083bd7c48f959a85dfd2ede1a480df485b51652087ce7fae7037826",
+    "review_boundary_note": "Semantic and data alignment evaluation only; layout, pagination, typography, and visual rendering excluded per review mandate."
+  },
+  "criterion_results": {
+    "substantive_purpose_and_mechanics": {
+      "status": "PASS",
+      "evidence_locator": "Header line 4 ('官方審查要旨：相關證據顯示個人訓練後之績效改善成果'); Section 壹-一 ('評估個別人員之課堂學習成果是否有效轉移至日常工作任務'); Section 貳-一 ('確認工作任務與能力缺口' 至 '作出描述性判讀並追蹤')",
+      "rationale": "Directly targets TTQS Indicator 19 (Training Outcomes Evaluation) Tier 3 item E17. The mechanics demonstrate individual post-training task performance tracking on a specific job task rather than aggregate organizational indicators."
+    },
+    "genre_and_document_structure": {
+      "status": "PASS",
+      "evidence_locator": "Header line 5 ('文件性質：訓練行政作業與 TTQS 評核專用個案分析報告暨標準表單（非一般問卷、非滿意度調查、非人事升遷考績單）'); Section 玖 ('REAL 實際資料替換表單')",
+      "rationale": "Correctly pairs an analytical case report (Sections 壹-捌) with a blank, operational standard replacement form (Section 玖). It explicitly excludes and avoids Kirkpatrick Level 1 satisfaction surveys, written exams, and HR appraisal/promotion forms."
+    },
+    "task_level_measurement_and_traceability": {
+      "status": "PASS",
+      "evidence_locator": "Section 貳-二 Table ('工作指標：報名資料首次核對正確率；只描述指定工作任務，不代表整體工作表現'); Section 肆-二 ('工作 KPI 逐式重算')",
+      "rationale": "Specifies unambiguous task definitions, numerator (first-pass correct forms), denominator (comparable reviewed forms, n=20), measurement windows, and traceable evidence locators without confusing classroom demonstrations with job KPIs."
+    },
+    "synthetic_cases_and_aggregate_reconciliation": {
+      "status": "PASS",
+      "evidence_locator": "Section 參 Table ('六案個案績效前後對比分析總表'); Section 參 Table summary row ('合併分子分母 / 加權 | 93 / 120 | 77.50% | 101 / 120 | 84.17% | +6.67 pp'); Section 肆 ('S-EMP-01 完整計算示範')",
+      "rationale": "All six cases (S-EMP-01 to S-EMP-06) exactly match the CSV source. Heterogeneity is preserved (4 improved, 1 declined, 1 unchanged). The aggregate calculation correctly pools numerators and denominators (93/120 -> 101/120 = +6.6667 pp / +6.67 pp) instead of taking an unweighted mean of percentages."
+    },
+    "sample_synthetic_vs_real_boundary": {
+      "status": "PASS",
+      "evidence_locator": "Header '資料提醒｜CAUTION'; Section 參 '資料提醒｜NOTE'; Section 伍 Table column '本範例狀態'; Section 拾 Table ('真實資料替換清單 RR-01 至 RR-12'); Section 拾壹 ('治理聲明與限制邊界公告')",
+      "rationale": "Consistently labels all names, codes, dates, and metrics as synthetic/SAMPLE. Real sources are strictly marked UNKNOWN_UNTIL_SOURCE. Disclaims universal passing thresholds and causality."
+    },
+    "practical_fields_and_evidence_linking": {
+      "status": "PASS",
+      "evidence_locator": "Section 伍 Table ('佐證節點'); Section 陸 Table ('訓後 30、60、90 日追蹤'); Section 玖 ('REAL 實際資料替換表單')",
+      "rationale": "Provides an intact P-D-Do-R-O evidence chain from gap identification to 30/60/90-day post-training follow-up and an actionable operational form with detailed sign-off blocks."
+    },
+    "confounder_checks_and_hold_reject_rules": {
+      "status": "PASS",
+      "evidence_locator": "Section 柒 Table ('資料品質與混雜因素檢查'); Section 捌 Table ('後續處理'); Section 玖-四 ('干擾變數排除審核簽核表')",
+      "rationale": "Systematically addresses 10 confounder check dimensions (task difficulty, workload, tool versions, seasonality, co-interventions, etc.). Details exact operational criteria for 'Observed Increase', 'Observed Neutral', 'Observed Decrease', 'HOLD', and 'REJECT'."
+    },
+    "truthful_claims_and_signature_integrity": {
+      "status": "PASS",
+      "evidence_locator": "Section 玖-五 Table ('簽名/日期：＿＿＿＿＿＿＿'); Section 拾壹 ('無正式簽核效力聲明：...本文件目前未具備任何特定公協會或機構之真實主管簽章、正式印信或合法決策授權')",
+      "rationale": "Contains zero fabricated signatures, stamps, fictitious committee resolutions, or false institutional claims. Signature lines in Section 玖 are completely blank for organizational adoption."
+    },
+    "title_blind_and_negative_neighbor_distinction": {
+      "status": "PASS",
+      "evidence_locator": "Section 壹-二 ('嚴格區隔於指標 19-E14（薪資/升遷紀錄）與 19-E16（市場/客戶價值延伸效益）'); Section 參 '資料提醒｜IMPORTANT' item 1",
+      "rationale": "Passes title-blind identification based purely on workflow, data fields, and decision rules. Explicitly delineates boundaries against I19-E14 (compensation/promotion) and I19-E16 (market/customer business value), and strictly separates Kirkpatrick Level 2 learning exercises from Level 3 job behavior/results."
+    }
+  },
+  "math_recheck": {
+    "individual_cases": [
+      {
+        "case_id": "S-EMP-01",
+        "baseline": "14/20 = 70.00%",
+        "post": "18/20 = 90.00%",
+        "delta_pp": "+20.00 pp",
+        "skill_demo": "4 -> 8 (+4)",
+        "reconciled": true
+      },
+      {
+        "case_id": "S-EMP-02",
+        "baseline": "16/20 = 80.00%",
+        "post": "18/20 = 90.00%",
+        "delta_pp": "+10.00 pp",
+        "skill_demo": "5 -> 8 (+3)",
+        "reconciled": true
+      },
+      {
+        "case_id": "S-EMP-03",
+        "baseline": "15/20 = 75.00%",
+        "post": "14/20 = 70.00%",
+        "delta_pp": "-5.00 pp",
+        "skill_demo": "6 -> 7 (+1)",
+        "reconciled": true
+      },
+      {
+        "case_id": "S-EMP-04",
+        "baseline": "18/20 = 90.00%",
+        "post": "19/20 = 95.00%",
+        "delta_pp": "+5.00 pp",
+        "skill_demo": "7 -> 9 (+2)",
+        "reconciled": true
+      },
+      {
+        "case_id": "S-EMP-05",
+        "baseline": "13/20 = 65.00%",
+        "post": "15/20 = 75.00%",
+        "delta_pp": "+10.00 pp",
+        "skill_demo": "3 -> 7 (+4)",
+        "reconciled": true
+      },
+      {
+        "case_id": "S-EMP-06",
+        "baseline": "17/20 = 85.00%",
+        "post": "17/20 = 85.00%",
+        "delta_pp": "0.00 pp",
+        "skill_demo": "8 -> 9 (+1)",
+        "reconciled": true
+      }
+    ],
+    "pooled_kpi_baseline": "93 / 120 = 77.50%",
+    "pooled_kpi_post": "101 / 120 = 84.1667% (reported as 84.17%)",
+    "pooled_delta_percentage_points": "+6.6667 pp (reported as +6.67 pp and +6.6667 pp)",
+    "pooled_skill_demo_baseline": "33 / 60 = 55.00%",
+    "pooled_skill_demo_post": "48 / 60 = 80.00%",
+    "pooled_skill_demo_delta": "+25.00 pp",
+    "distribution_breakdown": "4 improved, 1 declined (S-EMP-03: -5.00 pp), 1 unchanged (S-EMP-06: 0.00 pp)",
+    "math_reconciliation_verdict": "PASS"
+  },
+  "sample_real_boundary": {
+    "status": "PASS",
+    "synthetic_markers": [
+      "Header CAUTION box disclaiming all course codes (S-COURSE-01), employee IDs (S-EMP-01..06), dates, and log IDs (SAMPLE/SYS-LOG-*) as synthetic.",
+      "Explicit warning that TTQS official guidance provides no generic numerical threshold.",
+      "Clear disclaimer that correlation does not imply direct causality."
+    ],
+    "real_unknown_handling": [
+      "All operational sources in Section 伍, 陸, and 拾 are marked UNKNOWN / UNKNOWN_UNTIL_SOURCE / NOT COLLECTED.",
+      "Replacement register (RR-01 to RR-12) comprehensively maps out the 12 required real-world operational documents prior to formal review adoption.",
+      "Pseudonym key requirement mandates strict physical/access isolation from public audit portfolios."
+    ]
+  },
+  "title_blind_and_negative_neighbor": {
+    "status": "PASS",
+    "title_blind_test": "Strip all titles and identifiers: the text systematically guides an evaluator through task-level individual baseline measurement, post-training cooldown tracking on identical tasks, skill demonstration vs job outcome separation, confounder isolation, and individual follow-up intervention. This uniquely matches TTQS Indicator 19 Tier 3 item E17 ('相關證據顯示個人訓練後之績效改善成果').",
+    "negative_neighbor_distinctions": [
+      {
+        "neighbor": "I19-E14 (Doc 0126) - Salary and Promotion Records",
+        "differentiation": "Candidate explicitly clarifies in Section 壹-二 and Header that individual job task accuracy is strictly distinguished from compensation and promotion, disallowing wage growth as a proxy for job performance."
+      },
+      {
+        "neighbor": "I19-E16 (Doc 0127) - Market and Customer Value",
+        "differentiation": "Candidate distinguishes individual task performance from external market value, customer satisfaction, or macro business indicators in Section 壹-二."
+      },
+      {
+        "neighbor": "Kirkpatrick Level 1 & Level 2 Exams/Surveys",
+        "differentiation": "Candidate differentiates classroom skill demonstrations (33/60 -> 48/60) from job KPI accuracy (93/120 -> 101/120) across Sections 貳-二, 參, 肆-三, and 玖-三, explicitly barring satisfaction surveys or test scores from standing in as workplace KPIs."
+      }
+    ]
+  },
+  "findings": [
+    "Complete semantic fidelity to Source Packet 0128 and Unique Blueprint R01.",
+    "Full mathematical precision across individual and aggregate rows, with correct weighted pooled rates (+6.67 pp) instead of unweighted means.",
+    "Preservation of negative and neutral cases (S-EMP-03 declined by -5 pp, S-EMP-06 remained unchanged at 85%), demonstrating genuine evaluation rigor without survivorship bias.",
+    "Clean structural bifurcation between the synthetic explanatory case report (Sections 壹-捌) and the blank operational form (Section 玖).",
+    "Exemplary governance posture: disclaims unverified causality, asserts no official common numeric threshold, supplies RR-01 to RR-12 replacement register, and leaves signature blocks blank."
+  ],
+  "limitations": [
+    "Review is strictly semantic and textual, based on candidate extracted text and input source packets.",
+    "Binary DOCX layout, fonts, margins, page breaks, and visual rendering were excluded from this semantic review scope.",
+    "No live external organizational database, LMS, or HRIS records were queried; review confirms adherence to CANDIDATE status."
+  ],
+  "reviewer_reported_model_identity": "Gemini 3.8 Flash"
+}

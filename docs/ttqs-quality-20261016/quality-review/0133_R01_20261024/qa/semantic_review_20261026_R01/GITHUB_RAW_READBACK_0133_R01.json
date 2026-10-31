@@ -1,0 +1,119 @@
+{
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS_ONE_0133_I19-E22_SEMANTIC_R01",
+  "doc_id": "0133",
+  "requirement_id": "I19-E22",
+  "candidate_sha256": "25116afb8206e0828c8b3a4a763845a9c3e672a4cb49969a64a2a3737d87256b",
+  "readback_at_local": "2026-10-26T04:22:38+08:00",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "pr_number": 92,
+  "verified_commit": "ac819617e0ded0c4954cd5e943ad6c20664526a9",
+  "pr_head_at_readback": "ac819617e0ded0c4954cd5e943ad6c20664526a9",
+  "source_commit_for_review": "765203c23e60210587321a3cc8db073385783dec",
+  "verification_method": "Each GitHub contents readback at the verified commit returned the same Git blob object ID as local git hash-object over the exact local bytes; candidate DOCX remote blob matched unchanged local candidate. This proves byte identity for text receipts and candidate artifact.",
+  "review_receipts": {
+    "semantic": "PASS exact candidate SHA; semantic reviewer actual backend model identity UNKNOWN",
+    "technical": "PASS, remote existing TECHNICAL_QA_0133_R01.json includes the exact candidate SHA",
+    "visual": "VISUAL_QA_PASS_SELF_INSPECTION; remote existing VISUAL_QA_0133_R01.json includes exact candidate SHA; no full independent visual review"
+  },
+  "files_verified": 13,
+  "files_total": 13,
+  "all_matches": true,
+  "files": [
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0133_R01_20261024/qa/semantic_review_20261026_R01/review_prompt.md",
+      "local_sha256": "7ccbc4b60c30d67920366e1ccea18563920e8b256f92f96af2baf2d46965e591",
+      "local_git_blob_oid": "943e30b8e3bbd06941a4a263f6ec20fd56d98922",
+      "remote_git_blob_oid": "943e30b8e3bbd06941a4a263f6ec20fd56d98922",
+      "byte_identity": "VERIFIED"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0133_R01_20261024/qa/semantic_review_20261026_R01/review_input_extraction.md",
+      "local_sha256": "e87aa01d465eb70fdd28f002fe064dbd2a549eed7059ef7969a44cbe6ca4d963",
+      "local_git_blob_oid": "953237e66781d8af9831830ef75ec308866766c2",
+      "remote_git_blob_oid": "953237e66781d8af9831830ef75ec308866766c2",
+      "byte_identity": "VERIFIED"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0133_R01_20261024/qa/semantic_review_20261026_R01/antigravity_raw_response.json",
+      "local_sha256": "8a8f57af36cd40a606fa279f1c2a07cbfbd1a62f617bb6795b171b357bc23720",
+      "local_git_blob_oid": "8d8bec7e392240778f636c99654671682ae8151b",
+      "remote_git_blob_oid": "8d8bec7e392240778f636c99654671682ae8151b",
+      "byte_identity": "VERIFIED"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0133_R01_20261024/qa/semantic_review_20261026_R01/antigravity_normalized_response.json",
+      "local_sha256": "9696d6fab346fe93a5a610ea969078740c2969108a66d49b6b31c4a79a3b927c",
+      "local_git_blob_oid": "f46674ef1ed97921ed1d97fff0b706db041bbae6",
+      "remote_git_blob_oid": "f46674ef1ed97921ed1d97fff0b706db041bbae6",
+      "byte_identity": "VERIFIED"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0133_R01_20261024/qa/semantic_review_20261026_R01/antigravity_attempt01_dispatch.json",
+      "local_sha256": "8380710b3b3ca5e79a02d1c37d6d18892adb4cd039ea3a73e9470468ce09c56b",
+      "local_git_blob_oid": "f85165012fe4f2bd720d9202294857b853f40c7a",
+      "remote_git_blob_oid": "f85165012fe4f2bd720d9202294857b853f40c7a",
+      "byte_identity": "VERIFIED"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0133_R01_20261024/qa/semantic_review_20261026_R01/antigravity_attempt01_stderr.txt",
+      "local_sha256": "4cb01e42c36d7235625054e37698ff638a43c91898eb1f4237c28ba9bd5849b1",
+      "local_git_blob_oid": "757df228a008bb2d75e41f1a5b6b98ce886c1d57",
+      "remote_git_blob_oid": "757df228a008bb2d75e41f1a5b6b98ce886c1d57",
+      "byte_identity": "VERIFIED"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0133_R01_20261024/qa/semantic_review_20261026_R01/antigravity_attempt02_dispatch.json",
+      "local_sha256": "d4229559ed1dacfd27754206fb5eb4bf9101eb789e8b076bf227fd5630a3ce71",
+      "local_git_blob_oid": "cc54b2b479e5b98bff97a276b13dadf95dca8c12",
+      "remote_git_blob_oid": "cc54b2b479e5b98bff97a276b13dadf95dca8c12",
+      "byte_identity": "VERIFIED"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0133_R01_20261024/qa/semantic_review_20261026_R01/antigravity_attempt02_stderr.txt",
+      "local_sha256": "1fdd3ff70687131818c82128abecc3266d701e4ea7118d8fb977aee0c1a828fe",
+      "local_git_blob_oid": "4308213b2abf562778bff3501f4e74c3e0c31b0e",
+      "remote_git_blob_oid": "4308213b2abf562778bff3501f4e74c3e0c31b0e",
+      "byte_identity": "VERIFIED"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0133_R01_20261024/qa/semantic_review_20261026_R01/antigravity_attempt03_dispatch.json",
+      "local_sha256": "a155c1f0ef424e53668af62cbc9e271f453e0d0133d825e928f94d595a9ae0d2",
+      "local_git_blob_oid": "7f6a5410c096fdda1a6ab458006ac06e9e7ca0bd",
+      "remote_git_blob_oid": "7f6a5410c096fdda1a6ab458006ac06e9e7ca0bd",
+      "byte_identity": "VERIFIED"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0133_R01_20261024/qa/semantic_review_20261026_R01/antigravity_attempt03_stderr.txt",
+      "local_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+      "local_git_blob_oid": "0c6fcbb12c652a3f563e0a62515d63434d6281dc",
+      "remote_git_blob_oid": "0c6fcbb12c652a3f563e0a62515d63434d6281dc",
+      "byte_identity": "VERIFIED"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0133_R01_20261024/qa/semantic_review_20261026_R01/semantic_adjudication_addendum.json",
+      "local_sha256": "746ae0db795deabeb411092f1899559dc7fe3b993a4cc1dd3df315d991ebc66a",
+      "local_git_blob_oid": "d1fd54f51ca9bc6dbfe984da8e788c434836a752",
+      "remote_git_blob_oid": "d1fd54f51ca9bc6dbfe984da8e788c434836a752",
+      "byte_identity": "VERIFIED"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0133_R01_20261024/qa/semantic_review_20261026_R01/current_candidate_status.json",
+      "local_sha256": "1877201151d8be3f872194379586b0bcf0a6cf9d145cd54c1eed0acd2e92c6cc",
+      "local_git_blob_oid": "3cd98cf04d3040860115b3c562c4e2b65e2255ca",
+      "remote_git_blob_oid": "3cd98cf04d3040860115b3c562c4e2b65e2255ca",
+      "byte_identity": "VERIFIED"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0133_R01_20261024/candidate/0133_I19-E22_CANDIDATE_R01.docx",
+      "local_sha256": "25116afb8206e0828c8b3a4a763845a9c3e672a4cb49969a64a2a3737d87256b",
+      "local_git_blob_oid": "091ad8c37f364250c0b11222582d3b37bbb2ec0f",
+      "remote_git_blob_oid": "091ad8c37f364250c0b11222582d3b37bbb2ec0f",
+      "byte_identity": "VERIFIED_UNCHANGED"
+    }
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN",
+  "candidate_state": "CANDIDATE_ONLY"
+}

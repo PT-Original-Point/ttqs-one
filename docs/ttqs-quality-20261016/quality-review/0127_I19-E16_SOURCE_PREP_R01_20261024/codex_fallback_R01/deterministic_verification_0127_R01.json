@@ -1,0 +1,51 @@
+{
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS_ONE_0127_I19-E16_DETERMINISTIC_VERIFICATION_R01",
+  "doc_id": "0127",
+  "official_checkbox": "I19-E16",
+  "verified_at_local": "2026-10-24T18:16:15+08:00",
+  "artifact_sha256": "1fa7dd73f2e62520c0d27dedfadebe8c8ddf3096f40b7928b8c715794fe4b59a",
+  "method": "Native Windows bundled Python reading candidate DOCX with python-docx, opening DOCX package and recomputing source CSV aggregates. This is deterministic verification, not independent semantic review.",
+  "checks": {
+    "docx_zip_crc": "PASS",
+    "paragraph_count": 90,
+    "table_count": 20,
+    "sections": 2,
+    "market_rows": 8,
+    "customer_pairs": 24,
+    "unique_customer_ids": 24,
+    "official_requirement_mapping": "PASS",
+    "SAMPLE_SYNTHETIC_boundary": "PASS",
+    "neighbor_document_ids_0126_0128": "PRESENT",
+    "market_A_reach": 32,
+    "market_B_reach": 48,
+    "reach_delta_percent": 50,
+    "market_A_conversions": 8,
+    "market_B_conversions": 15,
+    "conversion_A_percent": 25,
+    "conversion_B_percent": 31.25,
+    "conversion_delta_percentage_points": 6.25,
+    "customer_A_total_item_points": 234,
+    "customer_B_total_item_points": 288,
+    "customer_A_mean": 3.25,
+    "customer_B_mean": 4.0,
+    "mean_delta": 0.75,
+    "relative_mean_delta_percent": 23.08,
+    "item_sums_A": {
+      "usefulness": 66,
+      "convenience": 78,
+      "benefit_vs_price_time": 90
+    },
+    "item_sums_B": {
+      "usefulness": 90,
+      "convenience": 96,
+      "benefit_vs_price_time": 102
+    }
+  },
+  "limitations": {
+    "page_render_and_visual_inspection": "NOT_COMPLETED",
+    "independent_semantic_review": "PENDING",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN_UNTIL_SOURCE"
+  }
+}

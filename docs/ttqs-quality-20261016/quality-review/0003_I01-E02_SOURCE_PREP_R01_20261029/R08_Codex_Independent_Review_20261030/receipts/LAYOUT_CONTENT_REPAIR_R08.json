@@ -1,0 +1,19 @@
+{
+  "schema": "ttqs-one-minimal-content-layout-repair-v1",
+  "doc_id": "0003",
+  "requirement_id": "I01-E02",
+  "candidate_sha256_before": "1da63f1d640386ba93faaf9dd1550a7e4f40e72d1d55063ecd9cc677db1bdaa9",
+  "candidate_sha256_after": "ded1ed45ba736d0767d611fc1a2278e1ef5c64fdcddc3ce3deaafb5954c91b7b",
+  "changes": [
+    "Final source table now identifies official page and sibling documents without Git/blob/Blueprint/Mission hashes.",
+    "Footer version label R07->R08",
+    "Removed visually empty navy source-table header row; first source row now labels source and page locator directly.",
+    "Corrected merged source table cells using actual visible grid positions (left cell 0, right cell 2)."
+  ],
+  "qa_scope": "Footer revision consistency and end-user source table readability; all question text, scales, sample answer data and replacement register remain unchanged.",
+  "internal_hashes_removed_from_docx_body": true,
+  "footer_field_preserved": true,
+  "old_render_superseded": true,
+  "previous_render_sha256": "f2385682ea77166347d924ef376b03d4be4d9fb9590e228c47b24ce576a1f642",
+  "previous_render_status": "SUPERSEDED_AFTER_VISUAL_INSPECTION"
+}

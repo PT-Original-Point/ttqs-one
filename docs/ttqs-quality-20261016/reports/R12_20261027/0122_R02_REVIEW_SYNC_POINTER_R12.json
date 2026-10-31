@@ -1,0 +1,52 @@
+{
+  "schema": "TTQS_ONE_R12_0122_R02_REVIEW_SYNC_POINTER_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0122",
+  "requirement_id": "I19-E10",
+  "candidate_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+  "candidate_git_blob_sha1": "4ff7c0c43593d6a2f732c2db605d4e7021e38cc3",
+  "body_sha256": "61a732058927a033f268171084db05f3a86cac44fe9e92dd21a7a6f77fcb47ea",
+  "prior_unbound_body_sha256": "81d144264640265ec015d412bdb08f3e74578b001b7621e7d4462863fb1a1e33",
+  "source_packet_sha256": "8301b3e12467370086dfccd86c4dbcd50d339f0ed54cda93c2bfcc051b793c3d",
+  "source_packet_git_blob_sha1": "853d2308afaaf8fa1f1e83abd5ca13ab65818bfb",
+  "unique_blueprint_sha256": "cbfd0760a03870151d9bc083b8db76655d53107757706f4b1f4449e997553420",
+  "unique_blueprint_git_blob_sha1": "28c6f45538853177f85ec694a9eb6e2e731e2699",
+  "semantic_review": "REVIEWER_REPORTED_PASS_TEXT_ONLY_EXACT_SHA_BOUND",
+  "reviewer_route": "Antigravity CLI 1.4.7; requested gemini-3.8-flash-high; actual model UNKNOWN; fallback UNKNOWN; tools/Computer Use not used.",
+  "attempts": [
+    {
+      "attempt": 1,
+      "pid": 79408,
+      "exit_code": 2,
+      "result": "CLI parser error; model not reached."
+    },
+    {
+      "attempt": 2,
+      "pid": 69660,
+      "exit_code": 2,
+      "result": "CLI timeout duration parser error; model not reached."
+    },
+    {
+      "attempt": 3,
+      "pid": 79588,
+      "conversation_id": "23e03be6-ef46-4a80-93b3-1eff0a3123f0",
+      "exit_code": 0,
+      "result": "Nonempty response; requested model only, actual model UNKNOWN; 36,634 CLI-reported tokens; billing UNKNOWN."
+    }
+  ],
+  "reviewer_response_sha256": "0bfa5a69fb327fed4d28a57fadebe73c499b53a37fd177d145da8a2cb214ea92",
+  "raw_stdout_sha256": "653ecc9ec77c8acd09dd05ca8f89bddb3b39e0682927f2bc3f11a06c51dd6ce1",
+  "reconciliation_sha256": "5488253ffef6a6761f7a3519b3a05bf179ba067bc602829f67bccdb9dce7035f",
+  "technical_qa": "PASS_SAME_SHA_DELTA",
+  "visual_qa": "PASS_VISUAL_SCOPE; 28 pages contact sheets, pages 7/10/22 full-resolution; PDF SHA 5cf146107a8b0bf94339f4becf9bdc8e72ca9fd79da9df06de3c78a883ad5794",
+  "docx_rebuilt": false,
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN_HOLD",
+  "github_sync": "PASS_RAW_GIT_BLOB_READBACK_18_OF_18_AT_4dec4be",
+  "readback_receipt_path": "evidence/R12_GITHUB_RAW_READBACK_0122_R02_20261027.json",
+  "readback_receipt_sha256": "4fb8f5a1580bff7cb392ecb1472c4bd51ea26a0c26d171a46c9ca562b86cdc54",
+  "remote_readback_commit": "4dec4beaa1295c2917783893ef0882286ed3db81",
+  "readback_files_verified": 18,
+  "readback_all_exact": true,
+  "updated_at_local": "2026-10-27T05:53:11.9236309+08:00"
+}

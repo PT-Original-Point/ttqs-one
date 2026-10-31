@@ -1,0 +1,72 @@
+{
+  "receipt_id": "TTQS-0112-I18-E21-R01-SYNTHETIC-DATA-MATH-VALIDATION",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0112",
+  "requirement_id": "I18-E21",
+  "official_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+  "source_packet_sha256": "5bcafc54c03ed636d8aa5fb6ce4d260360a02a59d25078f227138292c820c266",
+  "unique_blueprint_sha256": "d6b23672850b8b69098320025d51d6b88a1bbe64692696e0d6f3e295bbb93a0d",
+  "dataset_sha256": "1a116070afc94a6211f1e57ba5433c231389ab337d14b8ba020e2239380725d5",
+  "replacement_register_sha256": "91ff9e9a07293aa77dfaf2afece6edfbe9e4dd21c83c3b8d08df557283295552",
+  "case_id": "SYN-0112-CASE-01",
+  "state": "SAMPLE/SYNTHETIC ONLY",
+  "row_count": 54,
+  "certification_rows": 24,
+  "retraining_rows": 30,
+  "duplicate_case_measure_period_learner_keys": 0,
+  "rules": {
+    "certification_rate": "verified credential earned / eligible coached learners with matured window",
+    "retraining_rate": "verified completed retraining / retraining-eligible learners with matured window",
+    "do_not_pool": true,
+    "inference_or_causality": "NOT CLAIMED"
+  },
+  "aggregates": [
+    {
+      "period": "SYN-P1",
+      "certification_coached_eligible_n": 8,
+      "verified_certificate_earned_n": 3,
+      "certification_rate_percent": 37.5,
+      "retraining_eligible_n": 10,
+      "verified_retraining_completed_n": 4,
+      "retraining_rate_percent": 40.0,
+      "evidence_state": "SAMPLE_SYNTHETIC_ONLY"
+    },
+    {
+      "period": "SYN-P2",
+      "certification_coached_eligible_n": 8,
+      "verified_certificate_earned_n": 4,
+      "certification_rate_percent": 50.0,
+      "retraining_eligible_n": 10,
+      "verified_retraining_completed_n": 6,
+      "retraining_rate_percent": 60.0,
+      "evidence_state": "SAMPLE_SYNTHETIC_ONLY"
+    },
+    {
+      "period": "SYN-P3",
+      "certification_coached_eligible_n": 8,
+      "verified_certificate_earned_n": 5,
+      "certification_rate_percent": 62.5,
+      "retraining_eligible_n": 10,
+      "verified_retraining_completed_n": 7,
+      "retraining_rate_percent": 70.0,
+      "evidence_state": "SAMPLE_SYNTHETIC_ONLY"
+    }
+  ],
+  "trend_changes_pp": {
+    "certification": [
+      12.5,
+      12.5
+    ],
+    "retraining": [
+      20.0,
+      10.0
+    ],
+    "period1_to_period3": {
+      "certification": 25.0,
+      "retraining": 30.0
+    }
+  },
+  "math_checks_pass": true,
+  "result": "PASS_DETERMINISTIC_SYNTHETIC_DATA_AND_ARITHMETIC_ONLY",
+  "limits": "Not a Word candidate, not independent semantic review, not visual review, not REAL evidence, not official acceptance. Operational denominators are Blueprint proposals and require authorization before REAL use."
+}

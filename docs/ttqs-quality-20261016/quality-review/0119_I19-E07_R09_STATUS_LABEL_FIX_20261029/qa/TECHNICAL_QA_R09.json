@@ -1,0 +1,56 @@
+{
+  "schema": "TTQS_ONE_0119_R09_TECHNICAL_DELTA_QA",
+  "doc_id": "0119",
+  "official_requirement_id": "I19-E07",
+  "candidate_state": "CANDIDATE_ONLY",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0119_I19-E07_SOURCE_PREP_R01_20261024\\R09_STATUS_LABEL_FIX_20261029\\0119_I19-E07_CANDIDATE_R07.docx",
+  "candidate_sha256": "9c61f74ee95dd21fc0c069072bdca1baccf98d464e4330fa11b320f3e52766f7",
+  "candidate_bytes": 57871,
+  "predecessor_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0119_I19-E07_SOURCE_PREP_R01_20261024\\R08_HEADER_KEEP_REPAIR_20261029\\0119_I19-E07_CANDIDATE_R06.docx",
+  "predecessor_sha256": "da0fbaa8a2063bf0d59766085cc19d25581a9d2b293469566ab7b5a7a63007c7",
+  "changed_ooxml_parts": [
+    "word/document.xml"
+  ],
+  "status_label_repair": {
+    "from": "SOURCE_PREPARED｜候選分析工作稿（未正式核定）",
+    "to": "CANDIDATE｜候選分析工作稿（未正式核定）",
+    "other_paragraphs_and_all_table_cells_unchanged": true
+  },
+  "source_packet_sha256": "935a5cbc91c7dadfdcd0d9f3a7a45f56dcc5013ee9dd81fef1cfedd6b5b73656",
+  "unique_blueprint_sha256": "d097c7491235e323ebca4a31ff147ee5be2e6e5f893041087fd3076664aa0473",
+  "official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "technical_result": "PASS_TECHNICAL_DELTA",
+  "checks": {
+    "zip_crc": "PASS",
+    "python_docx_reopen": "PASS",
+    "only_document_xml_changed": true,
+    "tables": 9,
+    "body_min_font_pt": 10.5,
+    "table_min_font_pt": 9.5,
+    "arithmetic": {
+      "market_base": 40.0,
+      "market_compare": 48.0,
+      "market_delta_pp": 8.0,
+      "value_base": 62.5,
+      "value_compare": 75.0,
+      "value_delta_pp": 12.5,
+      "response_rate_base": 80.0,
+      "response_rate_compare": 80.0
+    },
+    "synthetic_register_rows": 50,
+    "synthetic_register_sha256": "dc32e9693ba80d00d03315519f221b8847d8fb5a49be4522a5500ee6e6387d29"
+  },
+  "visual_review": "PASS_SCOPED_DELTA_EXACT_SHA",
+  "independent_semantic_review": "PENDING_NEW_SHA",
+  "formal_acceptance": "NOT_GRANTED",
+  "verified_at_utc": "2026-10-29T09:52:25.469217+00:00",
+  "visual_receipt_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0119_I19-E07_SOURCE_PREP_R01_20261024\\R09_STATUS_LABEL_FIX_20261029\\VISUAL_QA_R09.json",
+  "visual_receipt_sha256": "8e4dd2cc07e895c178107c0136612d64ba9f9663f911c3bd871c8568072d2688",
+  "native_render_cleanup": {
+    "exported": true,
+    "own_process_proven": true,
+    "process_exited": true,
+    "cleanup_errors": [],
+    "verification_pdf_sha256": "adb2e96057b196b4d88c234e790aebde02ddb923a9efabbf829a3cfbcde1e06a"
+  }
+}

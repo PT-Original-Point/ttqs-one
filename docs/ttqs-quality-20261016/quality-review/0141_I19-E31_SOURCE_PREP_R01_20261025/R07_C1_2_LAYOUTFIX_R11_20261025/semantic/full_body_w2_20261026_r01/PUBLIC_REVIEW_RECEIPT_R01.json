@@ -1,0 +1,207 @@
+{
+  "schema": "TTQS_ONE_INDEPENDENT_SEMANTIC_REVIEW_R01",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0141-I19-E31-R07-C1-2-FULL-SEMANTIC-REVIEW-W2-R01",
+  "status": "CANDIDATE_QA_RESULT; FORMAL_ACCEPTANCE_NOT_GRANTED",
+  "pr": {
+    "number": 92,
+    "repository": "PT-Original-Point/ttqs-one",
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "head_before_sync": "82a0114562db9633edb01c57de0fbdf4bf51d067"
+  },
+  "artifact": {
+    "doc_id": "0141",
+    "official_requirement_id": "I19-E31",
+    "official_157_checkbox_index": 155,
+    "candidate_path_in_repo": "docs/ttqs-quality-20261016/quality-review/0141_I19-E31_SOURCE_PREP_R01_20261025/R07_C1_2_LAYOUTFIX_R11_20261025/candidate/0141_I19-E31_R07_C1_2_CANDIDATE.docx",
+    "sha256": "b40ea2f5b5c5467cdc31c2e5b1595ac8de4d679b7f4763aa00860727f5d3f1a0",
+    "bytes": 164838,
+    "real_evidence": "UNKNOWN/HOLD",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "reviewer_execution": {
+    "route": "Antigravity CLI headless, hidden no-window process",
+    "cli_version": "1.4.7",
+    "requested_model_slug": "gemini-3.8-flash-high",
+    "cli_init_reported_model_slug": "gemini-3.8-flash-high",
+    "backend_serving_model_identity": "UNKNOWN",
+    "effort": "high",
+    "mode": "plan",
+    "sandbox": true,
+    "permission_bypass": false,
+    "computer_use": false,
+    "tool_steps": 0,
+    "pid": 16424,
+    "conversation_id": "7be5fc03-1d5e-49ef-9e4d-11f071c92489",
+    "start_local": "2026-10-26T01:49:14.780129+08:00",
+    "end_local": "2026-10-26T01:51:29.348360+08:00",
+    "exit_code": 0,
+    "terminal_status": "SUCCESS",
+    "timeout": false,
+    "duration_seconds": 130.9268404,
+    "turns": 1,
+    "usage": {
+      "input_tokens": 77394,
+      "output_tokens": 20443,
+      "thinking_tokens": 17467,
+      "cache_read_tokens": 0,
+      "total_tokens": 97837
+    }
+  },
+  "review_scope": {
+    "body_extraction_sha256": "8410743cf1525aa5a2fd8ddf19b7b1439da4c2f502319a2fb87acd11d19390fa",
+    "body_bytes": 60823,
+    "scope": "Independent semantic review covers all extracted paragraphs [P1]-[P233] and tables [TABLE 1]-[TABLE 18] of the extracted DOCX candidate. Visual layout, page numbering, font typography, and image rendering are outside the reviewer's scope.",
+    "verdict": "PASS",
+    "findings": [],
+    "visual_review": "Not in this semantic call; prior exact-SHA visual receipt states 26/26 pages inspected with nonblocking notes."
+  },
+  "deterministic_checks": {
+    "candidate_local_sha256": "b40ea2f5b5c5467cdc31c2e5b1595ac8de4d679b7f4763aa00860727f5d3f1a0",
+    "candidate_sha256_matches_reviewer": true,
+    "body_extraction_sha256_matches_reviewer": true,
+    "remote_candidate_sha256_verified_at_live_branch_head": "b40ea2f5b5c5467cdc31c2e5b1595ac8de4d679b7f4763aa00860727f5d3f1a0",
+    "doc_id_requirement_checkbox_binding": true,
+    "reviewer_verdict": "PASS",
+    "reviewer_findings_count": 0,
+    "cli_exit_and_status": true,
+    "cli_model_slug_reported": "gemini-3.8-flash-high",
+    "backend_serving_model_identity": "UNKNOWN",
+    "no_tool_steps": true,
+    "computer_use_called": false,
+    "csv_rows": 36,
+    "unique_case_ids": 36,
+    "appendix3_word_rows": 36,
+    "appendix3_all_36_rows_and_7_quant_columns_exact": true,
+    "all_case_ids_in_replacement_register": true,
+    "Q8_all_rows_explicitly_marked_no_actual_comment": true,
+    "Q8_actual_canonical_comment_count": 0,
+    "filled_Q8_is_explicitly_synthetic_example": true,
+    "docx_unchanged_post_review": true
+  },
+  "computed_period_summary": {
+    "2023": {
+      "records": 12,
+      "invited": 15,
+      "valid_numeric_n": 12,
+      "response_rate_pct": 80.0,
+      "Q1_Q6_means": {
+        "Q1_need_fit": 3.5,
+        "Q2_content_applicability": 3.4167,
+        "Q3_instructor_support": 3.5,
+        "Q4_materials_resources": 3.5833,
+        "Q5_admin_communication": 3.5,
+        "Q6_learning_environment": 3.4167
+      },
+      "Q1_Q6_pooled": 3.4861,
+      "Q7_mean": 3.5833,
+      "Q7_top2_count": 7,
+      "Q7_top2_pct": 58.33,
+      "Q2_top2_count": 5,
+      "Q2_top2_pct": 41.67,
+      "Q8_no_text_marker_count": 12,
+      "Q8_actual_comment_count": 0
+    },
+    "2024": {
+      "records": 12,
+      "invited": 15,
+      "valid_numeric_n": 12,
+      "response_rate_pct": 80.0,
+      "Q1_Q6_means": {
+        "Q1_need_fit": 3.5,
+        "Q2_content_applicability": 3.4167,
+        "Q3_instructor_support": 3.5,
+        "Q4_materials_resources": 3.5833,
+        "Q5_admin_communication": 4.0,
+        "Q6_learning_environment": 3.4167
+      },
+      "Q1_Q6_pooled": 3.5694,
+      "Q7_mean": 3.9167,
+      "Q7_top2_count": 10,
+      "Q7_top2_pct": 83.33,
+      "Q2_top2_count": 5,
+      "Q2_top2_pct": 41.67,
+      "Q8_no_text_marker_count": 12,
+      "Q8_actual_comment_count": 0
+    },
+    "2025": {
+      "records": 12,
+      "invited": 15,
+      "valid_numeric_n": 12,
+      "response_rate_pct": 80.0,
+      "Q1_Q6_means": {
+        "Q1_need_fit": 3.5,
+        "Q2_content_applicability": 3.9167,
+        "Q3_instructor_support": 3.5,
+        "Q4_materials_resources": 3.5833,
+        "Q5_admin_communication": 4.25,
+        "Q6_learning_environment": 3.4167
+      },
+      "Q1_Q6_pooled": 3.6944,
+      "Q7_mean": 4.25,
+      "Q7_top2_count": 11,
+      "Q7_top2_pct": 91.67,
+      "Q2_top2_count": 9,
+      "Q2_top2_pct": 75.0,
+      "Q8_no_text_marker_count": 12,
+      "Q8_actual_comment_count": 0
+    }
+  },
+  "notable_limitation": "The 36-row canonical sample dataset uses the explicit SAMPLE_ONLY; no actual respondent text marker for Q8; the document supplies a separate explicitly synthetic filled Q8 example and does not mix it into numeric results. Real Q8 analysis remains pending genuine responses.",
+  "inputs": {
+    "candidate_docx": {
+      "sha256": "b40ea2f5b5c5467cdc31c2e5b1595ac8de4d679b7f4763aa00860727f5d3f1a0",
+      "bytes": 164838
+    },
+    "manuscript_md": {
+      "sha256": "1fd435fd5d238a405f5673dcdcd7d644f413a4fdb52cfe227a8ef68d1af8681f",
+      "bytes": 61090
+    },
+    "source_packet": {
+      "sha256": "43c0e1bda5dfeb12c1ba8fc8805b876641f5184e4bf95eb4ef6c3182cf8ee964",
+      "bytes": 5505
+    },
+    "unique_blueprint": {
+      "sha256": "e19761674045b2defa7090ba1d8f1224943a89e54811180c20b9ea362de59cda",
+      "bytes": 8639
+    },
+    "official_row": {
+      "sha256": "d18d41bd68b7dc45a78b5c26292cca6ba422902da83d8b7dbed25a7a34af7fb6",
+      "bytes": 1581
+    },
+    "crosswalk": {
+      "sha256": "d09422ce4bca4ff442b1c4fa266c56181c0f4c162d269f9cc02933d45ea4f786",
+      "bytes": 1143
+    },
+    "official_excerpt": {
+      "sha256": "0733c1e3a7fa7b88b79846aabf8667391e032165e78cf9bfc06b7363e71ffe11",
+      "bytes": 2221
+    },
+    "survey_csv": {
+      "sha256": "723259199dd51973fc6473ec000234cc853fa1511be05864fdfd7b08bb452862",
+      "bytes": 5852
+    },
+    "replacement_register": {
+      "sha256": "55f932a8b1dbc27bba002ad076aad6e4c51f47a2166bf09f2736f8dc70cefc37",
+      "bytes": 37186
+    },
+    "157_blueprint_excerpt": {
+      "sha256": "9cc71e28910043fe20017702ce81f4efc0fbda3af821dfedffb17549f1573734",
+      "bytes": 1087
+    }
+  },
+  "request": {
+    "prompt_sha256": "e88686e8415f43e65dc979255d46d8a21c5f6ff26eca6042d43d74ddc1e599e8",
+    "prompt_bytes": 190868,
+    "required_model_slug": "gemini-3.8-flash-high",
+    "full_text_extraction_embedded": true
+  },
+  "raw_outputs": {
+    "response_sha256": "191de891b1857bf6b9e7b20d0c116cc4b19820f54591eb295b8be9b4b822ead1",
+    "response_bytes": 8151,
+    "stdout_sha256": "c306e1894428e94a78abbdbf50ebd0e1cfa2a759aca3dde40fe46b1546b52984",
+    "stderr_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459"
+  },
+  "local_paths_redacted": true,
+  "candidate_bytes_changed_by_review": false
+}

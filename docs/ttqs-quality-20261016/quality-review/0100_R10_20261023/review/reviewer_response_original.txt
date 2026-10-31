@@ -1,0 +1,47 @@
+## Verdict
+
+**PASS — semantic review of 0100 R10, bound to the packet-declared exact SHA values.**
+
+- Candidate DOCX: `1563f89a1b83119c5f7c57a21cbf6b89cc0c213231c5d12f90fc4d58fa06039e`
+- Candidate Markdown: `3d9f29e0b32b8c5428fd06e93877953ad5f8661c29d74b2cca401f03be8b8809`
+- Word-render PDF: `c27271ef7fa7d973ddbb34c653ea19a0b4098a1a167e1731da97649523a66ac4`
+
+This is a semantic verdict only. I did not recompute file bytes, perform technical QA, or perform visual QA. **Formal acceptance remains NOT_GRANTED.**
+
+## Requirement mapping
+
+The official source extract, PDF p.7, requires learner pre/post self-assessment **and** radar analysis showing perceived change. 0100 correctly supplies the self-assessment form and completed synthetic fixture; 0101 is the separate radar report. 0100 therefore passes its scoped role, but it does **not** by itself complete I18-E08.
+
+## Criteria check
+
+| Criterion | Verdict | Section / page evidence |
+|---|---|---|
+| Official source fit | **PASS** | Official extract p.7; p.1 §1.1 identifies `I18-E08`, DOC_ID 0100, and 0101; p.2 §1.2 explains the form’s purpose and handoff; p.4 §3.1 supplies the five dimensions; p.11 §8.1 supplies the synthetic data. |
+| Genre / anti-substitution | **PASS** | p.1 title; p.2 §1.2 expressly says this is not a skill test, skill rubric, satisfaction survey, sign-in sheet, or objective training-result proof; pp.5–8 are respondent-facing forms, not a radar report or narrative case report. |
+| Respondent-operability | **PASS** | Pre form pp.5–6; post form pp.7–8. Fields include code, version, stage, date, five prompts, five 0–4 checkboxes, optional example, and completeness check. |
+| Complete pre/post forms | **PASS** | Pre pp.5–6; post pp.7–8. Prompts are identical: A p.6/p.7; B p.6/p.7; C p.6/p.7; D p.6/p.7; E p.6/p.8. Same version `SR-0100-v1.0-SAMPLE`, same course code, separate stage/date fields. |
+| Five dimensions | **PASS** | p.4 §3.1: A source facts/context; B record completeness/traceability; C task-to-output application; D data minimization/privacy awareness; E follow-up planning. Matches the Blueprint. |
+| 0–4 anchors | **PASS** | pp.4–5 §3.2. Definitions match the Blueprint: 0 unable; 1 only with step-by-step support; 2 parts with example/checklist; 3 typical task independently; 4 explain/check/adapt to a new example. Quick scales pp.6–7 match. No pass threshold: p.5 reminder; p.16 §11.2.4. |
+| Exact 8×5×2 matrix | **PASS** | p.11 §8.1. A01–A08, five pre and five post scores, pre total, post total, change. Exactly **80 original score cells**; totals/change are identified as derived. |
+| Mathematical consistency | **PASS** | p.12 §8.2 and p.13 §8.3. Pre totals 8/10/11/9/12/7/10/8 = **75**; post 15/16/14/13/18/12/15/14 = **117**; changes +7/+6/+3/+4/+6/+5/+5/+6 = **+42**; means **9.375 → 14.625**, mean change **+5.25**. Dimension totals A 17/25, B 16/24, C 13/22, D 14/24, E 15/22; all means and changes match p.12. Cross-checks p.13 are correct. |
+| Pairing and code-collision limits | **PASS** | pp.3–4 §2.4: private four-digit code, same code pre/post, no identity-derived code; same-stage duplicate HOLD then REJECT if unresolved; code mismatch/loss HOLD/REJECT. §2.4.5 explicitly says identical four digits cannot prove the same natural person and cross-person collision cannot be excluded. Also p.8 §5.4; p.9 §6.1; p.14 §9.1. |
+| Privacy handling | **PASS** | p.10 §7.1–7.8: no name, phone, address, birthday, ID, signature, photo, employer, client, department, project, or location; roster kept separate; no code-to-name key; free-text HOLD/de-identify/exclude; public examples only SAMPLE; retention and legal authority left to the institution, with no claim of consent or legal compliance. |
+| HOLD / REJECT / no imputation | **PASS** | pp.8–10 §6.1–6.3. Covers out-of-range, blank, duplicate, multiple selection, code mismatch/loss, version/item mismatch, date order, identifying free text, staff filling/guessing, and undisclosed denominator. p.10 states no imputation by 0, mean, peer score, pre/post inference, or staff judgment. §9.1 records “無，未使用 0 或平均代入.” |
+| Synthetic / real boundary | **PASS** | Every page header/footer: “SAMPLE／SYNTHETIC｜非核准或實施紀錄.” p.1; p.2 §1.2–1.3; p.11 §8.1; p.13 §8.3; p.14 §9.1; p.16 §11.2. Explicitly denies real training results, real learners, association approval, and objective skill proof. |
+| 0101 handoff | **PASS** | pp.14–15 §9.1–9.4. Fixed handoff fields; 8 pairs; 80 raw cells; pre 75/post 117/diff +42; valid/held/rejected 8/0/0; no imputation; limitations attached. Fixed CSV field order §9.2. 0101 must recalculate, disclose n=8/denominator, label SAMPLE, and must not modify or write back §9.3–9.4. |
+| Cross-document fixture fidelity | **PASS for 0100 side** | p.2 §1.3 and p.16 §11.2.3: fixture reused from 0099 R17 only as a synthetic cross-document demonstration; explicitly says 0099 is skill scoring, 0100 is self-rating, not the same measurement, no agreement/correlation/independent evidence, and no 0099 threshold. The p.11 matrix matches the source packet fixture exactly. Actual 0101 candidate is not attached, so 0101-side agreement is not verified here. |
+| Readability and reject/hold criteria | **PASS** | Clear numbered sections, TOC, repeated table headers, operational forms, §6 HOLD/REJECT table, §10 administrator sequence and common mistakes. Minor visual observations: orphaned “現況” row on p.2, post-test E row on p.8, and TOC without page numbers. These are layout matters, not semantic defects. |
+
+## Unmet criteria / repairs
+
+**No criterion is PARTIAL or FAIL.** No mandatory repair is required for this semantic PASS.
+
+Non-blocking observations, if the writer chooses to harden the document:
+
+1. **Free-text privacy warning at point of entry.** The “我的例子” grids on pp.6 and 8 do not print the warning found in §7.3 (p.10) that respondents must not write names, employers, clients, etc. The administrator is instructed to give the warning orally, and §6.1/§7.3 handle any identifying content afterward, so this is not a privacy-control failure. A minimal repair would add one printed sentence above each example table. That changes Word bytes and requires re-render/re-hash.
+
+2. **Explicit Human-override wording.** p.2 §1.3.1 and p.16 §11.2.3 say the 0099 R17 reuse is “依現行契約” rather than naming the current 04/05 Human override. The substantive limitation is stated correctly, so this is traceability precision, not a semantic defect. A minimal repair would change the phrase to “依現行 04/05 Human override.” That changes Word bytes and requires re-render/re-hash.
+
+3. **Dangling anchor reference on the copied form.** pp.6–7 say “完整行為錨點見第 3.2 節,” but the copied two-page form does not include §3.2. The printed quick scale still makes the form operable. If standalone copying is intended, reprint the five anchors or a compact version on the form. That changes Word bytes.
+
+**Final: PASS (semantic, exact-SHA bound, 0100 R10). Not formal acceptance.**

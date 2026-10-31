@@ -1,0 +1,41 @@
+{
+  "work_id": "TTQS-0111-I18-E20-WORD-EXPORT-BLOCKER-R03-20261023",
+  "doc_id": "0111",
+  "requirement_id": "I18-E20",
+  "official_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+  "candidate_docx": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0111_I18-E20_SOURCE_PREP_20261023\\candidate\\0111_I18-E20_特殊績效及社會面成果證據登錄表_R03.docx",
+  "candidate_docx_sha256": "f427ed898a79393a91d6d8fadcde960a8126e90697325aa94c1b764b8b537a50",
+  "candidate_docx_bytes": 75015,
+  "status": "BLOCKED_NATIVE_WORD_RENDER",
+  "pdf_created": false,
+  "page_images_created": 0,
+  "direct_visual_inspection": "NOT_PERFORMED_FOR_R03",
+  "attempts": [
+    {
+      "attempt": 1,
+      "started_at": "2026-10-23T15:42:56+08:00",
+      "outcome": "FAIL_BEFORE_NEW_WORD_PID",
+      "observed_error": "You cannot call a method on a null-valued expression",
+      "script_encoding_observation": "UTF-8 without BOM was used for the PowerShell script containing a Unicode DOCX path; console/receipt showed a corrupted path; BOM was added before the next attempt",
+      "root_cause": "ENCODING_FAILURE_SUPPORTED_BY_PATH_MOJIBAKE; precise null expression UNKNOWN",
+      "receipt": "evidence/word_export_receipt_0111_R03.json"
+    },
+    {
+      "attempt": 2,
+      "started_at": "2026-10-23T15:43:12+08:00",
+      "powershell_pid": 66968,
+      "word_pid": 69624,
+      "window_style": "hidden",
+      "word_visible": false,
+      "word_responding": true,
+      "outcome": "NO_PDF_AFTER_MORE_THAN_3_MINUTES",
+      "action": "Stopped only the exact R03 export PowerShell PID and its newly created Word PID after bounded stall",
+      "preexisting_word_process_count_before": 23,
+      "preexisting_word_process_count_after": 23,
+      "candidate_modified": false,
+      "exact_root_cause": "UNKNOWN"
+    }
+  ],
+  "checked_at_local": "2026-10-23T15:48:44.5948012+08:00",
+  "scope": "This is a truthful export-attempt status, not a visual QA PASS. The exact R03 DOCX remained unchanged; no page-image or visual result is inferred."
+}

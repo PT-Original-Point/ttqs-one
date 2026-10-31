@@ -1,0 +1,72 @@
+{
+  "schema": "TTQS_ONE_0084_BLUEPRINT_REVIEW.v1",
+  "document_id": "0084",
+  "requirement_id": "I17C-E03",
+  "official_checkbox_serial": "090",
+  "writer_route": "OpenCode CLI v2.0.29",
+  "writer_model": "opencode/deepseek-v4.1-flash-free",
+  "writer_session_id": "ses_eacfded6affeoGIzPOMznmvdNV",
+  "writer_exit_code": 0,
+  "writer_session_outcome": "succeeded",
+  "blueprint_r01_sha256": "1978e0c261caa14f26bf03c6307e364d83468fbe1ee476e6e543eb55e98142e7",
+  "blueprint_r02_sha256": "72729eab74a1cc61e84854668a7ae4afc37ef4b5eefdcab8956b90c6e0c1a5f3",
+  "source_packet_sha256": "6c2e928a889f0e01fe6aeca2ed0ed5b6a0dca6b3a12f591ba493a969dd4d3f1d",
+  "verified_sources": [
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0077_R01/inputs/upstream_snapshots/03_157_CHECKBOX_BLUEPRINTS.md",
+      "sha256": "ad03323d591cbea62814a8a59d233110587f2741bed8f944380b1faa2d04d216",
+      "git_blob": "8c2bbe7ca9dcbb03088a48934b9e57e7147ede63"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0077_R01/inputs/upstream_snapshots/02_GENRE_WRITING_MANUAL.md",
+      "sha256": "7fc23191efdb60ca4a9b48bc306799a9f15916b1160b63292d164bd4f4cf49aa",
+      "git_blob": "4ff863d9f534b6359fc1c7c1685bd8cce02da886"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0077_R01/inputs/upstream_snapshots/01_HUMAN_MISSION_AND_ACCEPTANCE.md",
+      "sha256": "07c4b0beb30ebe9919818977d6eb0255e9f467955e9190e515ae3e2b963d1dd8",
+      "git_blob": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0077_R01/inputs/upstream_snapshots/official_evidence_table_source.pdf",
+      "sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+      "git_blob": "9c7621decdad585b743bf2b3d949ee5518b7bee0"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0078_R01/evidence/official_evidence_table_page6-6.png",
+      "sha256": "b7bd4c09b7d7e22993a1577647e10a421fb240222b46b531ba3f01ee047fa1d1",
+      "git_blob": "7cce2401a3230cb86875df79396538d0adea41d5"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0083_R01/candidate/0083_R02_body.md",
+      "sha256": "65adee0f9be4643b612817250484407cd1833daa3a2fa6a0a93e797ba68c324e",
+      "git_blob": "999ac66d22e1065624a8d216a3d518cf53bc9583"
+    }
+  ],
+  "review_outcome_r01": "PARTIAL; item-level anchors and case evidence/score alignment needed correction",
+  "targeted_repairs_r02": [
+    "added B1-B4 level-specific observation anchors and prompt-count rules",
+    "corrected O0 B3 from 2 to 1 based on omitted role/status fields",
+    "added synthetic valid exception opportunities supporting O1 and O2 B4 ratings",
+    "added O3 B3 record evidence and feedback",
+    "explicitly linked local case SYN-0084-B01 to source case SYN-0083-B01",
+    "recomputed paired direction counts to 9 rises, 0 ties, 0 declines over n=9"
+  ],
+  "deterministic_checks": {
+    "identity": true,
+    "official_scale_separate": true,
+    "behavior_anchor_matrix": true,
+    "zero_vs_no_opportunity": true,
+    "case_cross_link": true,
+    "case_dates": true,
+    "recomputed_totals": true,
+    "complete_blank_and_sample": true,
+    "return_hold_reject": true,
+    "46_register_rows": true,
+    "no_old_baseline_b3": true,
+    "no_unsupported_b4_future": true
+  },
+  "r02_state": "READY_FOR_DOCX_WRITER; blueprint only, not document acceptance",
+  "real_state": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED"
+}

@@ -1,0 +1,40 @@
+{
+  "schema": "TTQS_ONE_0080_INDEPENDENT_SEMANTIC_REVIEW_RECEIPT_R05.v1",
+  "document_id": "0080",
+  "requirement_id": "I17B-E02",
+  "official_checkbox_serial": "085",
+  "candidate_docx_path": "candidate/0080_R05.docx",
+  "candidate_docx_sha256": "5a4d400b472d2b6f0cfcec23bd1cd908f468d3ba857aea19dba8b699b375055b",
+  "candidate_docx_bytes": 70027,
+  "source_head": "500960f4cdbf2b8aa439344aa42c7bbf8da35ab6",
+  "reviewer_route": "OpenCode CLI v2",
+  "cli_version": "2.0.29",
+  "model": "opencode/beam-free",
+  "review_prompt_sha256": "de42c8f881110200dcb87abbb98ce9e5d9ea173ef2a1738ea12b8dc409ceeee5",
+  "raw_cli_stdout_sha256": "52013532b9785cba7ef09cc279ade0109ab965a1376b9beeb6a2601e1c930767",
+  "normalized_review_sha256": "8dc4f3c1b6fd8062e5cb27acea06d2bdaacfd9b963157466e04e4ad43bb537f6",
+  "process_id": 35204,
+  "exit_code": 0,
+  "stderr_bytes": 0,
+  "review_verdict": "PASS",
+  "scope": [
+    "exact DOCX byte identity including nested tables, headers and footers",
+    "official requirement and genre",
+    "mature operational usability",
+    "recomputed arithmetic and source consistency",
+    "157-item adjacent document mapping",
+    "SAMPLE/SYNTHETIC versus REAL boundary",
+    "wrong-document substitution test",
+    "23-page rendered layout"
+  ],
+  "nonblocking_note": "docProps/app.xml contains stale Pages=1/Words=0/Characters=0 metadata; rendered document is 23 pages and the note has no semantic effect.",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "official_checkbox_status": "PARTIAL/HOLD",
+  "completed_local": "2026-10-19T11:34:04+08:00",
+  "local_windows_sha256": {
+    "review/semantic_review_prompt_R05.md": "782e4deaa92787289f290fb3e9eb69e84ad303be02d8d20288bf08f7ed92b6da",
+    "review/opencode_semantic_R05_stdout.jsonl": "7976287922cfed438bf6f1bd11179be96cc2f41302cd40635bde4f3f806e26ab"
+  },
+  "git_blob_hash_scope": "Primary prompt/stdout SHA fields identify the UTF-8 Git tree blobs after Windows line-ending normalization; local_windows_sha256 preserves the Windows file-byte hashes from execution."
+}

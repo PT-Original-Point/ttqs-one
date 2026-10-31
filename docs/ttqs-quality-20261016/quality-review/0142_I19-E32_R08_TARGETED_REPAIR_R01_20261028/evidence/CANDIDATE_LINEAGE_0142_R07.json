@@ -1,0 +1,265 @@
+{
+  "schema": "TTQS_ONE_0142_CANDIDATE_LINEAGE_V1",
+  "created_local": "2026-10-28",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0142",
+  "requirement_id": "I19-E32",
+  "official_checkbox_index": 156,
+  "printed_checkbox_serial": "UNKNOWN",
+  "authoritative_inputs": {
+    "source_packet_sha256": "e3e8b3a8ee1effe758608fee183440add4f37381988c5e352912b1a3d55c9e49",
+    "unique_blueprint_sha256": "4841161d6e9aad3ace2a0b4ec4a5a3e1b7e92b68ff2b20f95e9edeae2b84070b",
+    "official_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "official_pdf_local_check": "2026-10-28; 9 pages; publication/download date UNKNOWN"
+  },
+  "baseline": {
+    "candidate_sha256": "59f9b500eafd0b283a6df898d337e888da37cb6bcfc98cb180a6fd452b8034a6",
+    "version": "1.0",
+    "last_changed": "2026-10-04 per source packet R01"
+  },
+  "historical_parallel_branches": [
+    {
+      "branch": "R02 math/flow/semantic sequence (historical; not parent of selected R06)",
+      "transitions": [
+        {
+          "label": "R02 sample-math candidate",
+          "parent_candidate_sha256": "59f9b500eafd0b283a6df898d337e888da37cb6bcfc98cb180a6fd452b8034a6",
+          "candidate_sha256": "f975cf01dc4bdfeed923008c54d263ba026b71d14fb15b91bce156a6b33e7f11",
+          "receipts": [
+            {
+              "path": "R02_VISUALFIX_R11_20261025/receipts/SAMPLE_MATH_QA_RECEIPT_0142_R02.json",
+              "sha256": "c5be0bbe6127242147039f1becfff895e74fb925da5eb8d0ed3da0b938413afe"
+            },
+            {
+              "path": "R02_VISUALFIX_R11_20261025/receipts/TECHNICAL_QA_RECEIPT_0142_R02.json",
+              "sha256": "f6d5c532c6cb83d18ab332a4d8318c1a5305192be7a72a370dfb903553d07dc5"
+            }
+          ],
+          "notes": []
+        },
+        {
+          "label": "R03 flow fix",
+          "parent_candidate_sha256": "f975cf01dc4bdfeed923008c54d263ba026b71d14fb15b91bce156a6b33e7f11",
+          "candidate_sha256": "0e53bdcae4bb86cb369c1c6d41685b1e79280b39cf61f45208854d2f4b593bad",
+          "receipts": [
+            {
+              "path": "R03_FLOWFIX_R11_20261025/receipts/PATCH_RECEIPT_0142_R03.json",
+              "sha256": "56d063f3a0c2979dca0e7564649379dbfbd4892b04f1e13d2a7bfc4a96ba2b23"
+            },
+            {
+              "path": "R03_FLOWFIX_R11_20261025/receipts/SAMPLE_MATH_QA_RECEIPT_0142_R03.json",
+              "sha256": "0ca8fddfd0b0164425e9114123ab8bae5e97d5e23d4ed3b26265ad2695c49dcd"
+            },
+            {
+              "path": "R03_FLOWFIX_R11_20261025/receipts/TECHNICAL_QA_RECEIPT_0142_R03.json",
+              "sha256": "9918cdae36ce0f46fa3e5072582822ff62cc719766d253aee3cc463572a73a1e"
+            }
+          ],
+          "notes": []
+        },
+        {
+          "label": "R04 structured repair",
+          "parent_candidate_sha256": "0e53bdcae4bb86cb369c1c6d41685b1e79280b39cf61f45208854d2f4b593bad",
+          "candidate_sha256": "8b4eaf85a8c52284885d1c92417a947c4acaed8dda59cbe946400e9adc4272f5",
+          "receipts": [
+            {
+              "path": "R04_STRUCTURED_SEMANTIC_REPAIR_R11_20261025/receipts/PATCH_RECEIPT_0142_R04.json",
+              "sha256": "daf6d961ed0a6b1d54bccb34882983125fa456676c4450cd0bd2545a5143fb3c"
+            },
+            {
+              "path": "R04_STRUCTURED_SEMANTIC_REPAIR_R11_20261025/receipts/SAMPLE_MATH_QA_RECEIPT_0142_R04.json",
+              "sha256": "9cab9a79e0c234cd1aba6ee5294f4b4bfa0403fb41e51b063882279e297ab2d9"
+            },
+            {
+              "path": "R04_STRUCTURED_SEMANTIC_REPAIR_R11_20261025/receipts/TECHNICAL_QA_RECEIPT_0142_R04.json",
+              "sha256": "a2bc7470b6cd9d4f2d962432a731a014211ff510c5722fcbe0a70560cdb1feaf"
+            }
+          ],
+          "notes": []
+        },
+        {
+          "label": "R05 page-flow repair",
+          "parent_candidate_sha256": "8b4eaf85a8c52284885d1c92417a947c4acaed8dda59cbe946400e9adc4272f5",
+          "candidate_sha256": "ecaf3107236bcf413a55c1302004c8fa40c01d094b184d44e6822afb4904e261",
+          "receipts": [
+            {
+              "path": "R04_STRUCTURED_SEMANTIC_REPAIR_R11_20261025/receipts/PATCH_RECEIPT_0142_R05.json",
+              "sha256": "8046b6f97276740f98819dd7bec1d941d9d4e4c6e880ab869db5c3c0a4080860"
+            }
+          ],
+          "notes": []
+        },
+        {
+          "label": "R06 title and closing navigation",
+          "parent_candidate_sha256": "ecaf3107236bcf413a55c1302004c8fa40c01d094b184d44e6822afb4904e261",
+          "candidate_sha256": "5b2ee12dfd2c2a942ca5f89e9e95af453b310f65240463ee7d49f4fae540ace6",
+          "receipts": [
+            {
+              "path": "R04_STRUCTURED_SEMANTIC_REPAIR_R11_20261025/receipts/PATCH_RECEIPT_0142_R06.json",
+              "sha256": "a31d392974cc241a610412007168a07b2670c06dfdb96a1a6673f9144272adfc"
+            },
+            {
+              "path": "R04_STRUCTURED_SEMANTIC_REPAIR_R11_20261025/receipts/SAMPLE_MATH_QA_RECEIPT_0142_R06.json",
+              "sha256": "e2a258ead6885414b9a434df81c051a6f6168f63f8305ab6dab94df4d516d95a"
+            },
+            {
+              "path": "R04_STRUCTURED_SEMANTIC_REPAIR_R11_20261025/receipts/TECHNICAL_QA_RECEIPT_0142_R06.json",
+              "sha256": "9a10810b0584a4e098590899a8ecc9bd7795d96669d39f7198d7cc8df0f9bb65"
+            }
+          ],
+          "notes": []
+        },
+        {
+          "label": "R07 caption size",
+          "parent_candidate_sha256": "5b2ee12dfd2c2a942ca5f89e9e95af453b310f65240463ee7d49f4fae540ace6",
+          "candidate_sha256": "dee4b45dcac7e32685f56cbf23d956443aa2810110b359472ab557dfcc0e8eea",
+          "receipts": [
+            {
+              "path": "R04_STRUCTURED_SEMANTIC_REPAIR_R11_20261025/receipts/PATCH_RECEIPT_0142_R07.json",
+              "sha256": "b76016bc7c8ce96df4c5c2cb1d2bcf8df1f05ae384552dd4b92a5c0cfd54aef2"
+            },
+            {
+              "path": "R04_STRUCTURED_SEMANTIC_REPAIR_R11_20261025/receipts/SAMPLE_MATH_QA_RECEIPT_0142_R07.json",
+              "sha256": "11f406183d607cb27c89ce0ea020b19aaa09ab0f7748a23c82bd6e36247ad12a"
+            },
+            {
+              "path": "R04_STRUCTURED_SEMANTIC_REPAIR_R11_20261025/receipts/TECHNICAL_QA_RECEIPT_0142_R07.json",
+              "sha256": "a8629bb70199f4db185472fa3d8d1f010287eb0980020326ed37a36da6d54247"
+            }
+          ],
+          "notes": []
+        }
+      ],
+      "note": "These historical exact-SHA results are not transferred to the selected R06/R07 candidate."
+    },
+    {
+      "branch": "selected layout and structural sequence used by current R06",
+      "transitions": [
+        {
+          "label": "R02 table pagination trial (parallel branch, not selected parent)",
+          "parent_candidate_sha256": "59f9b500eafd0b283a6df898d337e888da37cb6bcfc98cb180a6fd452b8034a6",
+          "candidate_sha256": "f52f81e74ca31097bca4e5949fc0def74db21be1ce3c54b424f0e16ccb9fe388",
+          "receipts": [
+            {
+              "path": "R02_TABLE3_PAGINATION_PATCH_RECEIPT.json",
+              "sha256": "58f82cce553f37315fd0d30bc41edf2a63472c5364e56c4719a83f90736883d0"
+            }
+          ],
+          "notes": [
+            "Parallel layout trial; not the parent of the selected chain."
+          ]
+        },
+        {
+          "label": "R03 table-cell margin candidate",
+          "parent_candidate_sha256": "59f9b500eafd0b283a6df898d337e888da37cb6bcfc98cb180a6fd452b8034a6",
+          "candidate_sha256": "c731c94ec54ea2980564fd580907a291d7bd93a050933e28a3fde7643d15a861",
+          "receipts": [
+            {
+              "path": "R03_TABLE3_CELL_MARGIN_PATCH_RECEIPT.json",
+              "sha256": "fc152fe35753ffcaa542968b9c7b45a474d8bb772c7f6edf8a1ebf0911bf2dd6"
+            }
+          ],
+          "notes": [
+            "Receipt source_sha256 identifies the exact baseline."
+          ]
+        },
+        {
+          "label": "R04 redundant page-break removal",
+          "parent_candidate_sha256": "c731c94ec54ea2980564fd580907a291d7bd93a050933e28a3fde7643d15a861",
+          "candidate_sha256": "e43ab1564e19d9cf024a57bebaf0bd8cf898fa364155800a404409d69fa5181c",
+          "receipts": [
+            {
+              "path": "R04_REMOVE_REDUNDANT_PAGEBREAK_RECEIPT.json",
+              "sha256": "94b13af0adf470e1b17fd29d92f74019b426eafef6792491173486d58501c7c5"
+            }
+          ],
+          "notes": []
+        },
+        {
+          "label": "R05 header contrast repair",
+          "parent_candidate_sha256": "e43ab1564e19d9cf024a57bebaf0bd8cf898fa364155800a404409d69fa5181c",
+          "candidate_sha256": "a213a30cd949948f7ce8c2b5d76fc79b5fdcd90117f6fba77139af6660c5ab6e",
+          "receipts": [
+            {
+              "path": "R05_HEADER_CONTRAST_PATCH_RECEIPT.json",
+              "sha256": "7e8ff61c0c578eb671d9fbe4ea10b394c6662ded91cc313b828f5092c7d73c40"
+            },
+            {
+              "path": "R05_TECHNICAL_SAMPLE_MATH_QA_RECEIPT.json",
+              "sha256": "f7a06a5159bfda13b720f2a78b2251ba7fbf55341f868ca91e8b783e3efd184e"
+            }
+          ],
+          "notes": []
+        },
+        {
+          "label": "R06 structural completion used as R07 parent",
+          "parent_candidate_sha256": "a213a30cd949948f7ce8c2b5d76fc79b5fdcd90117f6fba77139af6660c5ab6e",
+          "candidate_sha256": "60563d4a56ac4502e522feb2665edef07771824ab4c2b2fb596862bb0e84f0e6",
+          "receipts": [
+            {
+              "path": "R06_STRUCTURAL_COMPLETION_R12_20261028/BUILD_RECEIPT_0142_R06.json",
+              "sha256": "c5070a8417cf990c211751d5db97e05a89f133c961906c222b41b7173c601967"
+            },
+            {
+              "path": "R06_STRUCTURAL_COMPLETION_R12_20261028/TECHNICAL_SEMANTIC_STRUCTURE_QA_0142_R06.json",
+              "sha256": "f3838cde695754c572c4a0d732a21bf241c55be12747cf01c6107cf97537ea6b"
+            },
+            {
+              "path": "R06_STRUCTURAL_COMPLETION_R12_20261028/R06_REVIEW/WORD_NATIVE_RENDER_RECEIPT_0142_R06.json",
+              "sha256": "52c31076ef73bec6353096a6c9e6896ed1badb90b19e7b791f89194675ce18af"
+            },
+            {
+              "path": "R06_STRUCTURAL_COMPLETION_R12_20261028/R06_REVIEW/VISUAL_QA_RECEIPT_0142_R06.json",
+              "sha256": "0eb073a014e499266c9f20a9001c4f12ed9ae6ed6e5990c42b7c673f9e169258"
+            },
+            {
+              "path": "R06_STRUCTURAL_COMPLETION_R12_20261028/R06_REVIEW/PAGE_IMAGE_MANIFEST_0142_R06.json",
+              "sha256": "e5703381250ac0b369da523c631014f31eead181d5e7b365a719fa0032f0d994"
+            }
+          ],
+          "notes": []
+        }
+      ],
+      "note": "Current R07 is based on exact R06 SHA 60563...f0e6, whose builder receipt names R05 candidate a213...5ab6 as base. No R06/R07 result from the other branch is combined."
+    }
+  ],
+  "selected_r07": {
+    "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0142_I19-E32_SOURCE_PREP_R01_20261025\\R06_STRUCTURAL_COMPLETION_R12_20261028\\R06_REVIEW\\R07_TARGETED_REPAIR_FINAL_20261028\\0142_I19-E32_CANDIDATE_R07.docx",
+    "parent_candidate_sha256": "60563d4a56ac4502e522feb2665edef07771824ab4c2b2fb596862bb0e84f0e6",
+    "candidate_sha256": "35f7e3c42d599a3c123786c997a4e4ee010e6b623d6cf93a919469fd59a044cd",
+    "candidate_bytes": 52863,
+    "replacement_register_sha256": "63654ff68b87116aa4ddf914445be79f59e417ff8b4e1e414bdab0b9c4620528",
+    "technical_qa_result": "PASS",
+    "technical_qa_scope": "Deterministic source identity, structure, table fields, sample/real labels, arithmetic and font floor only; not visual or semantic acceptance.",
+    "previous_r06_review": {
+      "reviewed_candidate_sha256": "60563d4a56ac4502e522feb2665edef07771824ab4c2b2fb596862bb0e84f0e6",
+      "verdict": "PARTIAL",
+      "provider_session_export": "R06_STRUCTURAL_COMPLETION_R12_20261028/R06_REVIEW/OPENCODE_DEEPSEEK_R06_SHA60563_R01/OPENCODE_SESSION_EXPORT_SANITIZED_R01.json",
+      "session_export_sha256": "a88aa728f2e98ee55763f99e85edd144715bca1094666d253d15499c1ca1ed2c",
+      "review_request": "R06_STRUCTURAL_COMPLETION_R12_20261028/R06_REVIEW/OPENCODE_DEEPSEEK_R06_SHA60563_R01/REVIEW_REQUEST_R01.md",
+      "review_request_sha256": "926708bc1cfac86fccca3d999caeacca413bab0f060ab40e6612237273118945",
+      "raw_response": "R06_STRUCTURAL_COMPLETION_R12_20261028/R06_REVIEW/OPENCODE_DEEPSEEK_R06_SHA60563_R01/RAW_STDOUT.jsonl",
+      "raw_response_sha256": "9a6d9d0d1d4414e3b1ae37dc4477fb0e98455a6a8634b8968593e8f6ecebad30",
+      "note": "R06 PARTIAL is evidence about R06 only; it neither passes nor fails R07 by inheritance."
+    },
+    "review_state": "PENDING_EXACT_SHA_R07_REVIEW",
+    "visual_state": "PENDING_R07_WORD_NATIVE_RENDER_AND_PAGE_INSPECTION",
+    "real_evidence": "UNKNOWN/HOLD",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "rejected_attempts": [
+    {
+      "label": "R07 initial targeted build, rejected local intermediate",
+      "candidate_sha256": "bb334cee555719449441e56065273fca7072a59e28acf8fe461fdab08810647a",
+      "state": "NOT_SELECTED; exact SHA of local intermediate recorded in prior QA; issue was companion F19 register mismatch and incomplete checker matching, not permission to reuse as template."
+    }
+  ],
+  "historical_source_policy": "SOURCE_PACKET R01 remains the exact historical source snapshot. R06/R07 repairs are defect-driven candidate changes; packet timestamp/commit differences alone do not trigger rebuilding.",
+  "truth_boundary": {
+    "candidate": "CANDIDATE",
+    "sample": "SAMPLE/SYNTHETIC",
+    "real": "UNKNOWN/HOLD",
+    "official_score": "NOT_ASSIGNED",
+    "formal_acceptance": "NOT_GRANTED"
+  }
+}

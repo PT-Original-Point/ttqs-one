@@ -1,0 +1,19 @@
+{
+  "artifact": "0073_R07.docx",
+  "docx_sha256": "25f33eb58f9401b33d3ed9f56bb0d99985be564677050848a68937bdca51221c",
+  "pdf_sha256": "4dbfb2b8740cb9312c886b026b0899207512115d05d82f80c1d3a649fc333ae8",
+  "page_count": 19,
+  "dpi": 144,
+  "method": "Word COM read-only PDF export; Poppler PNG rasterization; direct visual inspection",
+  "inspection_scope": {
+    "pages_1_16": "PASS; rendered PNG SHA-256 exactly matches previously inspected 0073 R04 pages 1-16",
+    "page_17": "PASS; exact PNG matches inspected R06 page 17; evidence locator now fixed-width and readable",
+    "pages_18_19": "PASS; directly inspected R07; replacement-register columns are readable; table headers repeat; no clipped text or overlap"
+  },
+  "specific_fixes": {
+    "R04": "removed inherited Title paragraph rule; changed numbered Markdown to literal paragraph numbers, preventing cross-list continuation",
+    "R06": "fixed evidence locator widths and disabled table autofit",
+    "R07": "fixed four-column replacement register widths"
+  },
+  "visual_status": "PASS for 19 rendered pages; semantic review remains pending"
+}
