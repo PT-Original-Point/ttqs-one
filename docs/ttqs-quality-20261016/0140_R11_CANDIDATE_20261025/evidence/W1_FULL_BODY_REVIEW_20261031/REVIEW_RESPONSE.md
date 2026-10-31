@@ -1,0 +1,85 @@
+# Independent Full Semantic/Usability Review — TTQS ONE DOCX 0140 (I19-E30)
+
+**Review basis:** source_packet, Blueprint R01, official excerpt/row, crosswalk, sample_dataset (80 rows), sample_register, and full extracted candidate body as supplied in the request. Read-only; no tools used; no files modified; no visual/Word review claimed (that is covered by the separate exact-SHA receipt and is out of scope here). SHA of the reviewed candidate body: `ff5e43108d3833b92b16eaa7e66e8c16a73d15659f9cf9621746d40c22ce0ed5`.
+
+## VERDICT: **PASS**
+
+No Blueprint rejection trigger is met; no blocking defect found. Two minor, non-blocking observations are listed at the end.
+
+---
+
+## 1. Dataset integrity (sample_dataset vs sample_register vs candidate Appendix A)
+
+**Status: PASS.** Reconciled independently, row by row, from the supplied CSV:
+
+| Period | Eligible | Active | Complete | Matches Blueprint | Matches candidate §8.2 |
+|---|---|---|---|---|---|
+| 2023 | 20 (ADM 3 / INS 4 / LRN 13) | 12 (2/2/8) | 9 (2/1/6) | ✓ | ✓ |
+| 2024 | 28 (3/5/20) | 22 (3/4/15) | 18 (3/3/12) | ✓ | ✓ |
+| 2025 | 32 (3/6/23) | 28 (3/5/20) | 25 (3/5/17) | ✓ | ✓ |
+| Total | 80 | 62 | 52 | ✓ | ✓ |
+
+- CSV row count = 80 user-year records (20+28+32); no duplicate IDs; all `eligible_unique_user=1`.
+- **Completion implies active:** verified — no register row (CSV or Appendix A2) has `all_required_tasks_complete=1` with `active_user=0`. ✔
+- **Excluded non-users:** none excluded; all `active=0` rows retained in register and counted in denominators (e.g., locator: Appendix A2, rows `SYN-2023-ADM-03`, `SYN-2023-LRN-09…13`). ✔
+- **Numerator ≤ denominator** everywhere; per-role data identical across CSV, sample_register (`SF-SYN-*` rows spot-checked across all three years, incl. 2025-LRN-18…20 actions_done=2), and candidate Appendix A2. ✔
+
+## 2. Arithmetic (candidate §8.2, §8.3, Part 1, §9.1)
+
+**Status: PASS.** All recomputed independently:
+
+- Adoption: 12/20 = 60.00%; 22/28 = 78.57%; 28/32 = 87.50% — candidates match ($§$8.2, §8.3, §9.1, Part 1 card).
+- Eligible completion: 9/20 = 45.00%; 18/28 = 64.29%; 25/32 = 78.13% — match.
+- Active completion: 9/12 = 75.00%; 18/22 = 81.82%; 25/28 = 89.29% — match (separate denominators labeled, $§$8.1 item 3, §8.2 columns).
+- Percentage-point changes: +18.57 pp, +8.93 pp, +27.50 pp (adoption); +19.29, +13.84, +33.13 pp (eligible completion); +6.82, +7.47, +14.29 pp (active completion) — all match §8.3.
+- Relative changes (§8.3 italics): +30.95%, +11.36%, +45.83% — match `(later−earlier)/earlier`, and §8.1 item 7 / §8.3 notes explicitly forbid conflating pp vs percent change, with base-zero → N/A rule.
+- Per-role cells (e.g., 2023 LRN 13/8/61.54%, complete 6 = 46.15%/75.00%; 2025 INS 6/5/83.33%/100.00%; 3-year 80/62/77.50%/52/65.00%/83.87%) — all correct, all recomputable from Appendix A rows; the 3-year row is correctly labeled 使用者－年度列 (user-years, not 80 distinct persons; disclaimer present in Part 1 card and §8.2 footnote).
+
+## 3. Title-blind purpose and neighbor discrimination
+
+**Status: PASS.**
+- Title `訓練資訊系統使用普及率盤點與分析表` and Part 1 purpose unmistakably identify a training-information-system **adoption/penetration inventory + analysis**, not retrieval speed or outcome reporting.
+- Distinction from **0064/I14-E05** and **0139/I19-E29** is explicit with a boundary table, including what each document *cannot substitute* ($§$第三部分 table: 檔案查找速度／證照或就業結果不能當成使用人數或操作記錄), plus "no cross-document numbers without a verified shared source key."
+- The official phrase 「運用資訊系統普及率。」 is quoted verbatim and repeatedly marked as an example-tier reference, **not a score** ($§$2.1, §2.2 item 1, Part 1 對應官方規範 row).
+
+## 4. Official mapping and traceability
+
+**Status: PASS.** Locator: $§$2.1 — DOCX ID 0140; I19-E30 (indicator 19, page 9); 157-item index 154; printed checkbox serial **UNKNOWN with an explicit no-inference rule** (嚴禁由其他代號推斷); official source named with exact wording; 157-item instruction 資訊系統普及率：定義／期間／數據 quoted. All match official_row/crosswalk/excerpt. Section 12 restates the mapping for reviewer verification.
+
+## 5. Usability (administrator can actually execute)
+
+**Status: PASS.**
+- **Denominator derivation:** $§$5.1 items 2–8 (period pinning, dedup to one row/person/year, non-users retained, exclusion only by pre-rules, rounding half-up 2dp, zero-denominator N/A) + $§$5.2 five-step decision flow + $§$5.3 five worked SAMPLE scenarios (login-only → not active; unaccounted assignee stays in denominator; external visitor excluded with mandatory logged reason).
+- **Activity classification:** $§$6 role-task matrix (ADMIN 3 / INS 2 / LRN 3 task codes matching the register exactly), explicitly not on the association's behalf.
+- **Calculations & reconciliation:** $§$8.1 formulas, §8.2 reconciled table, $§$7.3 discrepancy stop-rules (active>eligible stops issuance).
+- **Exception/HOLD rules:** $§$7.3, $§$11.2 (HOLD / REVISE / REJECT definitions), §5.2 item 5 UNKNOWN/HOLD.
+- **Blank operational forms:** $§$13.1/13.1A/13.1B (per-row capture + SHA-256 integrity note), 13.2 (reconciliation with A=0/B=0 → N/A, not 0%), 13.3A/13.3B (exception log with disposition/review fields), 13.4 (sign-off flow explicitly 空白未簽署 — workflow fields, no fabricated signatures), continuation-row rule for >10 entries.
+- **Action plan:** $§第十部分 — 3 rows with owner role (existence to be verified), due interval (e.g., 5 working days after class end), measurable checks (e.g., separate evaluation-completion rate, ≥90% target pending approval), HOLD/REVISE triggers, explicit 未核定/未採行 status.
+
+## 6. Synthetic/real status, no fabrication
+
+**Status: PASS.**
+- Top status banner `CANDIDATE | SAMPLE / SYNTHETIC | REAL = UNKNOWN / HOLD · NOT_GRANTED` (before Part 1) + 真實資料狀態宣告 row in Part 1 + §13.4 unsigned flow + closing 結語.
+- No vendor/product names other than the declared fictional label **SAMPLE-TIS-01** (§4, §6, with "not evidence of any deployment" statements in Part 1, §11.1); no people, signatures, approvals, dates-as-completed, scores, or performance claims anywhere in the body. The 結語 confirms REAL=UNKNOWN/HOLD and that official scoring/Human acceptance was not granted.
+- No login-only or account-creation metric anywhere; login/password-reset explicitly excluded ($§$5.1 item 3, §7.1 item 3, §4 活躍判準 row).
+
+## 7. Replacement register and evidence checklist
+
+**Status: PASS.** $§$11.1 maps every synthetic fact class — period/years (with "don't treat synthetic years as real delivery years"), system label & task codes (→ UNKNOWN/HOLD if unverifiable), SYN-* user-year IDs (opaque local key, lookup table withheld), SAMPLE-LOG-YYYY-SYN-* index (80 unique per-row refs in Appendix A2, declared "not a real log"), formula/rounding parameters, active/complete flags, aggregates/conclusions, and the action plan. The companion sample_register supplies fact-level rows for all 80 records plus two control facts (`SF-SYN-LOG-INDEX-0140`, `SF-SYN-FORMULA-ROUNDING-0140`) — fully consistent with the CSV and Appendix A2. $§$第十二部分 checklist distinguishes document status (SAMPLE) from required real evidence per checkpoint.
+
+## 8. Blueprint coverage of required sections 1–12
+
+**Status: PASS.** All located: 1→第一部分; 2→第二部分; 3→第四部分; 4→第五部分; 5→第六部分; 6→附錄A1+A2 (all Blueprint register columns covered across A1/A2, non-users included); 7→§8.2; 8→§8.3+§9.1–9.3 (adoption vs completion kept separate, interpretation limits in 9.3, role-gap diagnosis in 9.2); 9→第十三部分; 10→第十部分; 11→§11.1; 12→第十二部分.
+
+## 9. In-scope criteria that could not be assessed here (declared, not fails)
+
+- **Typography (body ≥10.5 pt, table ≥9.5 pt), page breaks, repeated table headers, page numbers:** not assessable from extracted text; this review makes **no visual claim** — these belong to the separate Word/PDF exact-SHA visual receipt. The candidate itself defers this ($§$12 行 Word 與使用前檢查 row).
+
+## Minor non-blocking observations
+
+1. **Course labels in §11.1 (severity: minor/cosmetic).** `SAMPLE-COURSE-01…03` (§4 納入活動) are not itemized as named facts in the §11.1 replacement table; they are covered generically via the 年度與起訖日 row's 適用課程範圍. No rejection trigger (no fabricated real course is claimed).
+2. **SAMPLE marking granularity in appendix tables (severity: minor; rendering-dependent).** Appendix A1/A2 bodies carry no per-table SAMPLE/SYNTHETIC cell; the marking is at the appendix heading/intro level. Whether this is "prominent on each sample page" is partly a rendering/visual question, excluded from this review scope.
+
+## Conclusion
+
+**PASS.** All acceptance controls in the Blueprint are satisfied in the extracted text: totals roll exactly from 80 rows; every rate, pp change, and relative change is correct; completion⇒active holds; non-users retained; SAMPLE/SYNTHETIC over REAL=UNKNOWN/HOLD throughout with no fabricated deployment, approval, signature, score, person, or third-party proof; document is usable end-to-end by an administrator; and it remains cleanly distinct from I14-E05 and I19-E29 with full traceability to the official page-9 source, official_row, crosswalk, and Blueprint. No repair blocker exists; the two minor observations above may optionally be addressed in a future revision and the typography/page-break items remain with the visual receipt.
