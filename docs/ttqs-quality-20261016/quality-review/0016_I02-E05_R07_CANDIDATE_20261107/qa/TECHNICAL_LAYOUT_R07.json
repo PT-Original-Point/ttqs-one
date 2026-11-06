@@ -1,0 +1,48 @@
+{
+  "receipt_type": "docx_technical_layout_qa",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0016",
+  "requirement_id": "I02-E05",
+  "revision": "R07",
+  "candidate_state": "CANDIDATE",
+  "status": "PASS_DETERMINISTIC_TECHNICAL_AND_RENDERED_FILE_BINDING",
+  "observed_at": "2026-11-07T02:11:36.540531+08:00",
+  "hashes": {
+    "docx_sha256": "45268ba65095fb65ca91289adc163cd0b17a1f82abf420726a53bb2a5a6e6540",
+    "build_receipt_sha256": "55575c08aa9fe955423d4cb60b813f973d09aafb2feee04b9638abc416797e56",
+    "source_text_sha256": "bc825eb9712a60b8ed6b1860768119a2b483c3c0565423c5f51e829e52fa58d1",
+    "source_receipt_sha256": "b863bff9ceb7b579cf3d9f0dccfd725c5c8cd4cfe8d8dd2a4dea17be27aececf",
+    "register_sha256": "8f7cf823b535046109b3ed470d9cceb8bc6c1b109f3c2da406547f2eb17f2f7a",
+    "deterministic_source_qa_sha256": "04be24eaeb54389f4f7f72069fe20dbb977c24bef3a3ad34e40f6b225a2c7451",
+    "pdf_sha256": "1656deaac702091c2ce2a0eb8a7fdd0ac656efe8a2bd935dba0007c93945e53c"
+  },
+  "checks": {
+    "python_docx_opened": true,
+    "builder_receipt_matches_docx": true,
+    "source_register_receipts_match": true,
+    "deterministic_source_math_status_pass": true,
+    "register_rows_28_contiguous": true,
+    "body_min_font_pt_at_least_10_5": true,
+    "table_min_font_pt_at_least_9_5": true,
+    "word_pdf_pages_equal_15_pngs": true,
+    "pdf_a4_portrait": true,
+    "png_dimensions_consistent": true,
+    "revision_and_sample_markers_in_docx": true,
+    "old_pending_marker_absent": true
+  },
+  "metrics": {
+    "body_min_pt": 10.5,
+    "table_min_pt": 9.5,
+    "pdf_pages": 15,
+    "png_count": 15,
+    "png_size_px": [
+      992,
+      1404
+    ],
+    "register_rows": 28
+  },
+  "limitations": [
+    "No independent semantic acceptance is asserted.",
+    "No formal TTQS acceptance, REAL status, authorization, release, or actual campaign is asserted."
+  ]
+}
