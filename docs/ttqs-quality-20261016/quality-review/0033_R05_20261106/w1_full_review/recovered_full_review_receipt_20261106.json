@@ -1,0 +1,35 @@
+{
+  "schema": "ttqs-one-recovered-w1-full-review-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0033",
+  "requirement_id": "I07-E01",
+  "candidate_sha256": "a9f4e1c97ea54731207e39104375698b81367b375f22778034b68125d42727fe",
+  "work_id": "TTQS-0033-R05-W1-FULL-TEXT-20261106",
+  "session_id": "ses_e4ff0602cffefA6wV2OpEkqbLg",
+  "prior_cli_status": "TIMEOUT",
+  "later_session_outcome": "succeeded",
+  "assistant_finish": "stop",
+  "requested_model": "opencode/glm-5.3-flash-free",
+  "native_session_model": "opencode/glm-5.3-flash-free",
+  "actual_provider_serving_identity": "UNKNOWN",
+  "token_usage": {
+    "input": 41716,
+    "output": 1663,
+    "reasoning": 11373,
+    "cache": {
+      "read": 4352,
+      "write": 0
+    }
+  },
+  "reported_cost": 0,
+  "reviewer_verdict": "PASS_WITH_ADVISORIES",
+  "adjudicated_verdict": "PARTIAL_Q07_OPTION_MISMATCH",
+  "finding": "Q07 SAMPLE answer includes 工作界線不清 but Q07 options do not list it and answer does not mark 其他; candidate table 6 row 8, table 21 row 8 and register fact F0033_R01_Q07.",
+  "scope": "Full text and provided source/Blueprint/register packet; reviewer did not hash DOCX or inspect visual pages; Codex separately verified candidate SHA and Q07 locators.",
+  "response_sha256": "ee3f100901cee7cf4310540f07a0158cd3f07bb9da3ec9e6f8f56141faaa4ccd",
+  "session_export_sanitized_sha256": "864859e0c6e1ab499960c51d085f06ff4f2f79dd0475a44f4d5309c7bb8b3a72",
+  "raw_session_export_local_sha256": "7d1e5a3165f32ace169d9fee3e52c8d4bace260d051fbf8d34939042bbc79ab8",
+  "raw_export_policy": "Local only: contains full transcript and reasoning; public sync uses original assistant text and sanitized session metadata.",
+  "formal_acceptance": "NOT_GRANTED",
+  "observed_at": "2026-11-06T18:12:50.6897902+08:00"
+}
