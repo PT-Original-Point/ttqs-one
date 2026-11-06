@@ -1,0 +1,189 @@
+{
+  "schema": "ttqs-one-independent-semantic-review-delta-v1",
+  "recorded_date_local": "2026-11-06",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0033",
+  "requirement_id": "I07-E01",
+  "revision": "R03",
+  "candidate_state": "CANDIDATE_NOT_PROMOTED",
+  "candidate_local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0033_R03\\candidate\\0033__訓練課程計畫配合客戶及受訓者需求、職能需求的_可直接使用成品_R03.docx",
+  "candidate_remote_path": "docs/ttqs-quality-20261016/quality-review/0033_R03/candidate/0033_R03.docx",
+  "candidate_sha256": "fe5f3cfd84c761da86435a71e0fd899daa725be78628c4d2d3f2324c1fdb5f4f",
+  "candidate_bytes_local": 58475,
+  "candidate_bytes_remote": 58475,
+  "candidate_git_blob_sha1": "96a55a93e372058b662e356fbbcb72266bffe018",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "observed_branch_head": "47f189a5158367a8392de133ec733a88cf941ffc",
+  "branch_head_commit_message": "Verify 0038 R05 artifacts and visual pages",
+  "review_type": "FRESH_READ_ONLY_EXACT_SHA_SEMANTIC_DELTA",
+  "review_scope": [
+    "current AGENTS.md anti-garbage rule 7",
+    "official I07-E01 requirement and source binding",
+    "Unique Blueprint row and negative neighbors",
+    "SAMPLE/REAL boundary and replacement-register consistency",
+    "survey and priority calculations",
+    "existing exact-SHA evidence scope and status reconciliation",
+    "existing visual and technical evidence coverage"
+  ],
+  "reviewer_context": {
+    "reviewer": "Codex current task context",
+    "fresh_context_not_involved_in_candidate_build": true,
+    "candidate_builder_identity": "UNKNOWN",
+    "reviewer_agent_id": null,
+    "reviewer_model_identity": "UNKNOWN",
+    "native_model_identity_proven": false,
+    "external_agent_dispatched": false,
+    "computer_use": false,
+    "paid_route_used": false
+  },
+  "authorities": {
+    "current_user_instruction": "AGENTS.md anti-garbage rule 7: 待填|待核|空白表|保持空白|會後填寫 outside an explicitly labeled REAL replacement area is a hard fail.",
+    "branch_mission_file": {
+      "path": "docs/ttqs-quality-20261016/01_HUMAN_MISSION_AND_ACCEPTANCE.md",
+      "sha1_blob": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e",
+      "related_section": "6.3; bars using these terms as completed content and permits clearly isolated REAL replacement areas."
+    }
+  },
+  "source_bindings": {
+    "official_requirement_text": "訓練課程計畫配合客戶及受訓者需求、職能需求的調查規劃的證明。",
+    "official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "official_source_page": 2,
+    "source_requirement_map_sha256": "405b987797d1558ecac182cea8e1adfbd1aead7754c880db32db43c235d5024e",
+    "official_checkbox_sequence": "033",
+    "unique_blueprint_file_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+    "unique_blueprint_row_sha256": "5d3942b13f2f07e142b921bbd27b01dde41b50656948bec72398339c6f457263",
+    "negative_neighbors": [
+      {
+        "doc_id": "0032",
+        "requirement_id": "I06-E03",
+        "purpose": "institutional training capability"
+      },
+      {
+        "doc_id": "0034",
+        "requirement_id": "I07-E02",
+        "purpose": "individual learner competency inventory"
+      }
+    ]
+  },
+  "existing_evidence": {
+    "local_semantic_review": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0033_R03\\qa\\0033_semantic_review_r03.json",
+      "sha256": "3f64f2991d11413894d00b301d067daefccf476349a1610d020e696eef12335b",
+      "candidate_sha256": "fe5f3cfd84c761da86435a71e0fd899daa725be78628c4d2d3f2324c1fdb5f4f",
+      "recorded_verdict": "PASS",
+      "recorded_reviewer_agent_id": "01a1435e-f156-7a52-ade0-b76f38bb6230",
+      "native_model_identity": "UNKNOWN"
+    },
+    "remote_semantic_review": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0033_R03/evidence/qa_original/0033_semantic_review_r03.json",
+      "sha256": "b1c141c58d17414894d00b301d067daefccf476349a1610d020e696eef12335b",
+      "candidate_sha256": "fe5f3cfd84c761da86435a71e0fd899daa725be78628c4d2d3f2324c1fdb5f4f",
+      "recorded_verdict": "PASS"
+    },
+    "local_visual_review": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0033_R03\\qa\\0033_full_page_visual_review_r03.json",
+      "sha256": "ba135db64da2274746b7c10a1ffa7ac62f770366fb1e986861907c7e50336b2c",
+      "scope": "12-page contact sheets; pages 6-8 full resolution",
+      "recorded_verdict": "PASS"
+    },
+    "local_technical_review": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0033_R03\\qa\\0033_technical_integrity_qa_r03.json",
+      "sha256": "02140218760752d84c6a845b7b5a503a3371b1e77d820e1b6b054b438a3347ee",
+      "scope": "technical integrity, page count, register mapping, recomputed capability gaps and weighted scores",
+      "recorded_verdict": "PASS_TECHNICAL_ONLY"
+    },
+    "render_pdf_sha256": "978967f83be3634069776c5f0da016328287a9470955c71f7527c8ce5c045c5f",
+    "local_replacement_register_sha256": "d114f36d9c4852cda2239bf22fcc709bdc0a40aad62418e076c6b9c2ae523247",
+    "replacement_register_rows": 196,
+    "local_build_receipt_sha256": "460a1bbc4c9058356189da4afd744d2c32736d65a05116b87c943150a731ecb1",
+    "local_source_manifest_sha256": "bc0a5d37333a94ec7b85a8bcef3d6886c48119ef35cf77bd5efcc3bde72e0a0b",
+    "existing_raw_readback_sidecar": {
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0033_R03\\qa\\GITHUB_RAW_BYTE_READBACK_R03_CURRENT_HEAD_20261101.json",
+      "sha256": "dca66ed26ce83e362ef6ef8001037381dd71929352f7cc4947ee9ffa8c834300",
+      "limitation": "records requirement I06-E03 and an older branch head; not used as current I07-E01 readback."
+    }
+  },
+  "checks": {
+    "current_branch_candidate_identity": "PASS",
+    "official_requirement_mapping": "PASS",
+    "unique_blueprint_binding": "PASS",
+    "sample_real_boundary": "PASS",
+    "replacement_register_row_identity_local_remote": "PASS",
+    "arithmetic": "PASS",
+    "negative_neighbor_distinction": "PASS",
+    "visual_evidence": "PASS_DECLARED_SCOPE",
+    "technical_evidence": "PASS_TECHNICAL_ONLY",
+    "current_user_agents_rule_7": "FAIL"
+  },
+  "findings": [
+    {
+      "id": "SEM-HARDGATE-01",
+      "severity": "P1",
+      "result": "FAIL",
+      "policy": "Current user-supplied AGENTS.md anti-garbage rule 7",
+      "candidate_sha256": "fe5f3cfd84c761da86435a71e0fd899daa725be78628c4d2d3f2324c1fdb5f4f",
+      "occurrence_count": 5,
+      "locations": [
+        {
+          "page": 2,
+          "locator": "paragraph 20",
+          "text": "資源或權限未確認時，方案保持待核"
+        },
+        {
+          "page": 3,
+          "locator": "Word table 5, row 8, cell 3",
+          "text": "真實授權者待核"
+        },
+        {
+          "page": 7,
+          "locator": "Word table 13, row 4, cell 3",
+          "text": "已列資源及限制，仍有待核項"
+        },
+        {
+          "page": 7,
+          "locator": "Word table 15, row 2, cell 2",
+          "text": "資源與授權仍待核"
+        },
+        {
+          "page": 12,
+          "locator": "Word table 25, row 12, cell 2",
+          "text": "否則維持待核"
+        }
+      ],
+      "interpretation": "These are not blank answer fields; however, all five occurrences are outside the explicitly labeled REAL replacement area and the current higher-priority AGENTS.md rule is unconditional."
+    },
+    {
+      "id": "EVIDENCE-STATUS-01",
+      "severity": "P2",
+      "result": "INCONSISTENT",
+      "details": [
+        "PROGRESS.json records semantic PASS.",
+        "The build receipt checks.independent_exact_sha_semantic_review remains PENDING while semantic_review says PASS_INDEPENDENT_EXACT_SHA.",
+        "The source manifest says independent exact-SHA semantic review is PENDING.",
+        "The build receipt reports 58,209 bytes; exact local and remote candidate bytes are 58,475."
+      ]
+    }
+  ],
+  "summary": {
+    "semantic_verdict": "FAIL",
+    "promotion_status": "NOT_PROMOTED",
+    "formal_acceptance": "NOT_GRANTED",
+    "docx_changed": false,
+    "register_changed": false,
+    "github_changed": false,
+    "monitor_panel_changed": false
+  },
+  "limitations": [
+    "No native raw source proves the prior reviewer model identity; report UNKNOWN.",
+    "The original builder identity is UNKNOWN.",
+    "This is a scoped delta review, not a new full-corpus review.",
+    "The current DOCX was not edited."
+  ],
+  "review_result_artifact": {
+    "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0033_R03\\qa\\0033_SEMANTIC_REVIEW_DELTA_R03_20261106.md",
+    "sha256": "596cb43a3f6287740d5bd7cfa65e57fd9e4e9ed0ab03fac30da173d0357551ce",
+    "bytes": 5478,
+    "format": "Markdown"
+  }
+}
