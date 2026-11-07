@@ -1,0 +1,64 @@
+{
+  "schema": "TTQS_ONE_DOCX_REPAIR_RECEIPT_R1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0016",
+  "requirement_id": "I02-E05",
+  "work_id": "TTQS-0016-DOCX-REPAIR-R14-R13A-F1F2-20261107",
+  "revision": "R14",
+  "parent_revision": "R13",
+  "parent_candidate_sha256": "AF9239FD9A22E9BF25DD5DF9808C0A933A2E78FE1EBEDEC4BC6D643E7B372F42",
+  "candidate_sha256": "5082D0BE4E42CD3E5EA1643CD4CBB75F663B75B79487EB4CB6C5B7DFD36082D0",
+  "candidate_bytes": 49957,
+  "triggering_findings": [
+    "R13A-F1: DOCX referenced superseded R13 replacement register rather than current R13A.",
+    "R13A-F2: §10.1 retained dangling example-path wording."
+  ],
+  "changes": [
+    {
+      "paragraph": 5,
+      "before": "文件版本：R13｜SAMPLE 候選｜2026-11-07",
+      "after": "文件版本：R14｜SAMPLE 候選｜2026-11-07"
+    },
+    {
+      "paragraph": 84,
+      "before": "SAMPLE：見第6.1節；本版 R13。",
+      "after": "SAMPLE：見第6.1節；本版 R14。"
+    },
+    {
+      "paragraph": 179,
+      "before": "本候選工作包包含正文及供內部維護的合成事實替換清冊（R13，共28筆），檔名為「SYNTHETIC_REPLACEMENT_REGISTER_0016_R13.csv」。清冊用於識別示例值及其替換要求，不是課程教材或核准原件。下表列示本文引用與實際附件，避免把代碼或來源定位說成已交付檔案。",
+      "after": "本候選工作包包含正文及供內部維護的合成事實替換清冊（R13A，共28筆），檔名為「SYNTHETIC_REPLACEMENT_REGISTER_0016_R13A.csv」。清冊用於識別示例值及其替換要求，不是課程教材或核准原件。下表列示本文引用與實際附件，避免把代碼或來源定位說成已交付檔案。"
+    },
+    {
+      "paragraph": 187,
+      "before": "正文與R13替換清冊；不含課程教材或核准原件。",
+      "after": "正文與R13A替換清冊；不含課程教材或核准原件。"
+    },
+    {
+      "paragraph": 188,
+      "before": "R13清冊檔名：SYNTHETIC_REPLACEMENT_REGISTER_0016_R13.csv；另附技術檢查紀錄。",
+      "after": "R13A清冊檔名：SYNTHETIC_REPLACEMENT_REGISTER_0016_R13A.csv；另附技術檢查紀錄。"
+    },
+    {
+      "paragraph": 478,
+      "before": "本節只定義候選 EDM 的可追溯控制方法，不表示協會已採用下列示例路徑、帳號權限或完成任何簽核。正式使用須先核對協會現行核准的文件保存、個資及存取規範。",
+      "after": "本節只定義候選 EDM 的可追溯控制方法，不表示協會已採用本節所述保存安排、帳號權限或完成任何簽核。正式使用須先核對協會現行核准的文件保存、個資及存取規範。"
+    },
+    {
+      "paragraph": 487,
+      "before": "建立檔案前先核對正式儲存庫、責任人、備份及權限；不得把示例路徑當成已存在位置。",
+      "after": "建立檔案前先核對正式儲存庫、責任人、備份及權限；不得將文件中的示例說明視為實際存在位置或已核准的保存方式。"
+    }
+  ],
+  "changed_paragraph_count": 7,
+  "changed_package_members": [
+    "word/document.xml"
+  ],
+  "current_register_path": "source/SYNTHETIC_REPLACEMENT_REGISTER_0016_R13A.csv",
+  "current_register_sha256": "5C53C9080E5977E65DEE4D5001495B5186F6579750644D6D68F3BBF9FB889D61",
+  "superseded_register_path": "source/SYNTHETIC_REPLACEMENT_REGISTER_0016_R13.csv",
+  "superseded_register_sha256": "D1060C88B48262509569CB163C9AF51A310DC6D4BC67435DD76435149FE889E6",
+  "synthetic_fact_values_changed": false,
+  "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "created_at_tpe": "2026-11-07T17:17:09.643099+08:00"
+}
