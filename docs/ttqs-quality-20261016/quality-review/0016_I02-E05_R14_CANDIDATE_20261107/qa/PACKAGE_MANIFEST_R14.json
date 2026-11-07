@@ -6,7 +6,7 @@
   "requirement_id": "I02-E05",
   "revision": "R14",
   "candidate_state": "CANDIDATE",
-  "observed_at": "2026-11-07T17:17:09.678924+08:00",
+  "observed_at": "2026-11-07T17:25:49.959710+08:00",
   "github_branch": "work/ttqs-one-document-quality-contract-20261016",
   "publication_scope": "R14 candidate DOCX, parent and register lineage, exact-SHA technical/font/visual/scoped-semantic receipts, raw OpenCode session evidence, and Word-native exported PDF. Page PNGs remain local; the visual receipt records their per-page hashes and inspection results.",
   "candidate": {
@@ -20,7 +20,7 @@
     "font_floor": "PASS",
     "full_page_visual": "PASS",
     "independent_semantic": "PASS_SCOPED_LIMITED_SCOPE",
-    "github_raw_byte_readback": "PENDING",
+    "github_raw_byte_readback": "MATCH_EXACT_SHA256",
     "formal_acceptance": "NOT_GRANTED",
     "real_evidence": "NOT_ESTABLISHED"
   },
@@ -124,11 +124,17 @@
       "path": "qa/OPENCODE_REVIEW_R14/R14_REVIEW_PACKET.txt",
       "bytes": 4484,
       "sha256": "D6897392B8A30102BFA5CE7F4160507B9740E02024AC812F8DB3BF73D71D06AA"
+    },
+    {
+      "path": "qa/GITHUB_RAW_BYTE_READBACK_R14.json",
+      "bytes": 2919,
+      "sha256": "6B364CBF98D38C9263F9F41C2C2CC99E717E2C70E5F2C9F023981F83281A8D70"
     }
   ],
   "limitations": [
     "The semantic review covers only R13A-F1/F2 closure excerpts and SAMPLE/REAL boundary; it is not a full-document acceptance.",
     "Actual OpenCode serving model identity UNKNOWN.",
     "No association approval or formal acceptance is claimed."
-  ]
+  ],
+  "readback_ref": "2000f02c8731d286e8b7f6f9ec365455467cec81"
 }
