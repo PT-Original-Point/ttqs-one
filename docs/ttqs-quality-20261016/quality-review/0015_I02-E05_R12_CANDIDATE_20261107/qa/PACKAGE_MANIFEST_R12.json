@@ -1,0 +1,223 @@
+{
+  "manifest_type": "ttqs_candidate_github_core_manifest",
+  "schema_version": 1,
+  "project_id": "TTQS_ONE",
+  "doc_id": "0015",
+  "requirement_id": "I02-E05",
+  "revision": "R12",
+  "candidate_state": "CANDIDATE",
+  "observed_at": "2026-11-07T18:27:29.027893+08:00",
+  "github_branch": "work/ttqs-one-document-quality-contract-20261016",
+  "publication_scope": "R12 candidate DOCX, R11 parent, official source packet, R12 replacement register, worker draft provenance, scoped technical/font/visual/semantic receipts, original W1/W2 outputs, and Word-native PDF. Full-resolution page PNGs remain local; visual receipt captures their per-page evidence.",
+  "candidate": {
+    "path": "candidate/0015_I02-E05_R12.docx",
+    "sha256": "c6ffeea28b9bfd28d78ca90724221dbcef600516c647aa12a47fc1ab41cfa96f",
+    "bytes": 61633,
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "acceptance_summary": {
+    "technical": "PASS_DETERMINISTIC_SCOPED_CHAIN_RECONCILED",
+    "font_floor": "PASS_BODY_10.5_TABLE_9.5",
+    "full_page_visual": "PASS_VISUAL_DELTA_INSPECTED_22_PAGES",
+    "independent_semantic": "PASS_SCOPED_REVIEW_ACTUAL_MODEL_UNKNOWN",
+    "external_register_crosscheck": "PASS_EXACT_81_ROWS",
+    "github_raw_byte_readback": "PENDING",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "NOT_ESTABLISHED"
+  },
+  "lineage": {
+    "parent_revision": "R11",
+    "parent_sha256": "2eb5ba8e29662bc9f02bc319ec5a98b1b7c336c59a120613ea661a591b4cb256",
+    "candidate_sha256": "c6ffeea28b9bfd28d78ca90724221dbcef600516c647aa12a47fc1ab41cfa96f",
+    "replacement_register_sha256": "e9f6a0316c632873ccc1fbc6bad18dd4a0dc912d46a85895a6876be2cc2526b9"
+  },
+  "workers": {
+    "W1": "OpenCode v2 requested free route returned HTTP 429; exact retryAfter retained; route parked.",
+    "W2": "Antigravity CLI requested gemini-3.8-flash-high; scoped response captured; actual serving model UNKNOWN. First valid response was obtained only after a text-only prompt with no tool calls.",
+    "packet_work_id_reconciliation": "The supplied review packet labels its embedded work_id W1; dispatch/terminal receipts identify actual W2 executor. This metadata mismatch is disclosed; candidate SHA and response bytes are preserved."
+  },
+  "limitations": [
+    "Semantic result is limited to the listed scoped R11/R12 questions, not full formal acceptance.",
+    "Antigravity actual serving model identity UNKNOWN.",
+    "External register rows were omitted from reviewer packet; a separate deterministic 81-row exact comparison closes only that cross-file check.",
+    "No association approval, REAL evidence, or formal acceptance is claimed."
+  ],
+  "github_raw_byte_readback": "PENDING",
+  "included_artifacts": [
+    {
+      "path": "candidate/0015_I02-E05_R11.docx",
+      "bytes": 61525,
+      "sha256": "2eb5ba8e29662bc9f02bc319ec5a98b1b7c336c59a120613ea661a591b4cb256"
+    },
+    {
+      "path": "candidate/0015_I02-E05_R12.docx",
+      "bytes": 61633,
+      "sha256": "c6ffeea28b9bfd28d78ca90724221dbcef600516c647aa12a47fc1ab41cfa96f"
+    },
+    {
+      "path": "worker/luna_subagent_draft_R01.md",
+      "bytes": 43746,
+      "sha256": "e77db0bd91316c5d22cbb51222eaa93dd0d1db8b0533cfb816ce1d9610ff2fb8"
+    },
+    {
+      "path": "worker/source_delivery_receipt_R01.json",
+      "bytes": 2535,
+      "sha256": "bcd500ebeb478ac57aecbd4fd818ed4438939c804617d7ae77ab00832e21685f"
+    },
+    {
+      "path": "worker/source_receipt_R05.json",
+      "bytes": 993,
+      "sha256": "030302af784f5dbd8b16509a87171286715b3936426d36d324d0a4809468a442"
+    },
+    {
+      "path": "source/SOURCE_PACKET_0015_R01.json",
+      "bytes": 9379,
+      "sha256": "3776e7d9c3378cad23dbe83a246566b352dafbba6fdeece388855b85c19ee477"
+    },
+    {
+      "path": "source/SYNTHETIC_REGISTER_0015_R12.csv",
+      "bytes": 12713,
+      "sha256": "e9f6a0316c632873ccc1fbc6bad18dd4a0dc912d46a85895a6876be2cc2526b9"
+    },
+    {
+      "path": "qa/render_R12/0015_I02-E05_R12.pdf",
+      "bytes": 767012,
+      "sha256": "4f59f71ad324549268a6be89dcdad767195d42ada151603003aab1d7e9c8c5fe"
+    },
+    {
+      "path": "build/SCOPED_REPAIR_RECEIPT_R12.json",
+      "bytes": 2961,
+      "sha256": "e01c36d67846e06b6a0d75d496ebbfa606fb04cf14d948af881292d852c751f9"
+    },
+    {
+      "path": "qa/QA_CHAIN_RECONCILIATION_R12.json",
+      "bytes": 1812,
+      "sha256": "2e15862234b41c342a38f0ce3a28721f3f07f18177dddcd3172c02fe146baba1"
+    },
+    {
+      "path": "qa/TECHNICAL_DELTA_R12.json",
+      "bytes": 3037,
+      "sha256": "d454df9c5c5ec2feaf79977f6496e024ab58eb02cea6a491b35051b454e11c18"
+    },
+    {
+      "path": "qa/TECHNICAL_DELTA_R12_CHAIN_RECONCILED.json",
+      "bytes": 4143,
+      "sha256": "84da2b61bf2494fde36b2e9a7e6a2d4bbe2fc7aa17c0fb1cec18b3662bf12ced"
+    },
+    {
+      "path": "qa/VISUAL_R12.json",
+      "bytes": 6602,
+      "sha256": "51db89374c083ea5efc01e337ffa0e2ae324800c2c3e053a1a2092bd21659a8c"
+    },
+    {
+      "path": "qa/SEMANTIC_REVIEW_R11_FRESH.json",
+      "bytes": 2342,
+      "sha256": "bd06cb3be3f677fb504949b447d6dc7ddf4c05545150c26b66627335a0111823"
+    },
+    {
+      "path": "qa/OPENCODE_REVIEW_R12_20261107/REVIEW_PACKET_R12.md",
+      "bytes": 13446,
+      "sha256": "a9e38958f4ce032797c4ec74454589e37bec4fa44c473fa71384774006534645"
+    },
+    {
+      "path": "qa/OPENCODE_REVIEW_R12_20261107/dispatch_receipt.json",
+      "bytes": 1184,
+      "sha256": "4983564f5e9da4342fcfdaa46df23de356b6162f0914f860033daeaa18f2468a"
+    },
+    {
+      "path": "qa/OPENCODE_REVIEW_R12_20261107/stdout.jsonl",
+      "bytes": 9466,
+      "sha256": "4601ac3c8ddfeceed62f6d98a85b106931fc1765097de17668718305f2b8ea2e"
+    },
+    {
+      "path": "qa/OPENCODE_REVIEW_R12_20261107/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "qa/OPENCODE_REVIEW_R12_20261107/terminal_receipt_R12.json",
+      "bytes": 1887,
+      "sha256": "571af81fae0dbafc5b770822acb45b839fe51f3cec042a560bed8a6d34945b30"
+    },
+    {
+      "path": "qa/OPENCODE_REVIEW_R12_20261107/W1_ROUTE_FAILURE_R12.json",
+      "bytes": 676,
+      "sha256": "28131e6782d628af1e027c9fe87748b963aa4ead7e3c4211109a0df79fe560a5"
+    },
+    {
+      "path": "qa/OPENCODE_REVIEW_R12_20261107/W2_TOOLCHAIN_OBSERVATION_R12.json",
+      "bytes": 1076,
+      "sha256": "d59c2caf81b9778ccb123c78898c0ea145b9596cb1e6a475322221d7e2ef5f13"
+    },
+    {
+      "path": "qa/OPENCODE_REVIEW_R12_20261107/antigravity_dispatch_R12.json",
+      "bytes": 1364,
+      "sha256": "68ac0a49aa6116177355dd57dfdccb386aa83289a42ea0fc172420183d44d047"
+    },
+    {
+      "path": "qa/OPENCODE_REVIEW_R12_20261107/antigravity_terminal_receipt_R12.json",
+      "bytes": 1685,
+      "sha256": "708f291d2f66cb35f941aa55bd9d8c6cbca9a5edd33f3cf0b65df1c04bf5d3e5"
+    },
+    {
+      "path": "qa/OPENCODE_REVIEW_R12_20261107/antigravity_dispatch_R12_retry1.json",
+      "bytes": 699,
+      "sha256": "42b1bf3db248aa639324db46481ff4647e93d8f614e5e2ac44b9ae4e1aca271a"
+    },
+    {
+      "path": "qa/OPENCODE_REVIEW_R12_20261107/antigravity_retry1_stdout.json",
+      "bytes": 319,
+      "sha256": "22ee0baa11189d489dbf7b9bc73e19e9884fb7fe1f174b7afeacba7713ec8722"
+    },
+    {
+      "path": "qa/OPENCODE_REVIEW_R12_20261107/antigravity_retry1_stderr.txt",
+      "bytes": 381,
+      "sha256": "04a3fd7b53540108a5ddd980fe2cbad6d681c6fa15eeb5fb69a969fb581fe0c0"
+    },
+    {
+      "path": "qa/OPENCODE_REVIEW_R12_20261107/antigravity_terminal_receipt_R12_retry1.json",
+      "bytes": 1295,
+      "sha256": "bf227858ed57b8b7b524a9792e3477beff30944a8aae44501a3713dd462befe6"
+    },
+    {
+      "path": "qa/OPENCODE_REVIEW_R12_20261107/antigravity_dispatch_R12_retry2.json",
+      "bytes": 733,
+      "sha256": "d958f5609dfda0d5235750ab439842c0a0bf2041d94bc22912466ce3d31a0d05"
+    },
+    {
+      "path": "qa/OPENCODE_REVIEW_R12_20261107/antigravity_retry2_stdout.json",
+      "bytes": 4687,
+      "sha256": "e7225ae67a57cba2e99bc5c09484d05260b952bce251ecf18f9c4016edce73b1"
+    },
+    {
+      "path": "qa/OPENCODE_REVIEW_R12_20261107/antigravity_retry2_stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "qa/OPENCODE_REVIEW_R12_20261107/antigravity_review_response_R12_retry2.md",
+      "bytes": 4342,
+      "sha256": "09f06977d3d1ae1087c63b5cd08c72cbac073dbaf9bebecc69779fc9d80eef67"
+    },
+    {
+      "path": "qa/OPENCODE_REVIEW_R12_20261107/antigravity_terminal_receipt_R12_retry2.json",
+      "bytes": 2170,
+      "sha256": "33d00d58cce5dbfabc33e6b188eab822e258dd637d04a6e7f4da43b0f4bfc5e7"
+    },
+    {
+      "path": "qa/OPENCODE_REVIEW_R12_20261107/external_register_crosscheck_R12.json",
+      "bytes": 1117,
+      "sha256": "67917596adceff06784abd32ca8753d2399f9fcd1aea667d4ee5d368fd072f85"
+    },
+    {
+      "path": "qa/OPENCODE_REVIEW_R12_20261107/FONT_FLOOR_AUDIT_R12.json",
+      "bytes": 1024,
+      "sha256": "0bcded611ae04ee2096641d6b275f19ef2d676dca397502ff257371fee4128fb"
+    },
+    {
+      "path": "qa/OPENCODE_REVIEW_R12_20261107/HARD_RULE_TEXT_SCAN_R12.json",
+      "bytes": 552,
+      "sha256": "2ffb1642fc1da09a924f8f08e6c28b01a0145ce697796538ba6cca17d0c9cf54"
+    }
+  ]
+}
