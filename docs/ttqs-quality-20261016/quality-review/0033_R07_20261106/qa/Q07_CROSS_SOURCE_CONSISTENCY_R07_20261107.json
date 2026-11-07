@@ -1,0 +1,64 @@
+{
+  "schema": "ttqs-one-0033-r07-q07-source-crosswalk-qa-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0033",
+  "requirement_id": "I07-E01",
+  "revision": "R07",
+  "candidate_sha256": "edc739ea99571ba5b83daff96402a5240cf56aace8c993a1ba6e695f32809087",
+  "candidate_bytes": 59251,
+  "source": {
+    "pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "page": 2,
+    "official_requirement_text": "訓練課程計畫配合客戶及受訓者需求、職能需求的調查規劃的證明。",
+    "page2_contains_requirement_after_whitespace_normalization": true
+  },
+  "blueprint": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\SYNC\\pr92-audit-89b4829400ae484381703900de3dca3f\\docs\\ttqs-quality-20261016\\quality-review\\0033_R03\\inputs\\unique_blueprint_row.json",
+    "sha256": "ab0487337cd977085b637fe0cdc353d942cfcc157d356c4e51b17b55a2181913",
+    "row_sha256_without_newline": "5d3942b13f2f07e142b921bbd27b01dde41b50656948bec72398339c6f457263",
+    "deliverable_id": "0033",
+    "requirement_id": "I07-E01",
+    "official_requirement_text": "訓練課程計畫配合客戶及受訓者需求、職能需求的調查規劃的證明。",
+    "genre": "策略／計畫文件｜訓練課程計畫配合客戶及受訓者需求、職能需求的_可直接使用成品",
+    "container_file_sha256": "ab0487337cd977085b637fe0cdc353d942cfcc157d356c4e51b17b55a2181913",
+    "source_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e"
+  },
+  "q07": {
+    "table_6_row_8_cells": [
+      "Q07",
+      "最需要改善哪種情境？最多2項",
+      "不確定責任者；需求交接遺漏；說明服務範圍困難；流程不清；紀錄過多／過少；其他。"
+    ],
+    "table_21_row_8_cells": [
+      "Q07",
+      "需求交接遺漏；其他：工作界線不清。"
+    ],
+    "synthetic_fact_id": "F0033_R01_Q07",
+    "register_value": "需求交接遺漏；其他：工作界線不清。",
+    "register_sha256": "12615a055d2c415903927c595d514b9cdcf490989ac109376623956efb8474e6",
+    "selection_cap": 2
+  },
+  "checks": {
+    "candidate_sha_matches_r07_anchor": true,
+    "blueprint_doc_requirement_match": true,
+    "blueprint_sha_matches_review_receipt": true,
+    "official_pdf_sha_matches_review_receipt": true,
+    "official_requirement_present_on_page_2": true,
+    "table_6_q07_options_include_other_and_named_options": true,
+    "table_6_q07_cap_is_two": true,
+    "table_21_q07_answer_is_explicitly_other": true,
+    "synthetic_register_matches_candidate_answer": true,
+    "register_sha_matches_review_receipt": true,
+    "review_receipt_binds_same_candidate_sha": true
+  },
+  "result": "PASS_LOCAL_DETERMINISTIC_Q07_CONSISTENCY",
+  "semantic_review_credit": "NOT_COUNTED_ACTUAL_MODEL_UNKNOWN",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "NOT_ESTABLISHED",
+  "observed_at_local": "2026-11-07T22:26:51.590933+08:00",
+  "validation_comparison_correction": {
+    "previous_local_receipt_sha256": "8a39a6009fdd80bc2c80930513783b46836adb6b6ea495f5257395a6f8dac7e0",
+    "reason": "Initial checker compared the wrapper JSON file SHA-256 to the terminal receipt Blueprint source SHA-256. Correct binding is wrapper.source_sha256 to terminal.blueprint_sha256; wrapper file SHA and Blueprint row SHA are separately recorded. This was a QA comparator correction only; candidate DOCX unchanged."
+  },
+  "corrected_at_local": "2026-11-07T22:27:44.040069+08:00"
+}
