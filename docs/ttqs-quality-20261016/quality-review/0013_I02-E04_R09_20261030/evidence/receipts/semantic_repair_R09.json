@@ -1,0 +1,19 @@
+{
+  "receipt_id": "0013_I02-E04_R09_TARGETED_REPAIR_STATUS",
+  "document_id": "0013",
+  "requirement_id": "I02-E04",
+  "candidate_sha256": "dd5ff6cc55c649952872e03a77e77f844375df3db9a86f2bf664aefe1554df3f",
+  "repair_script_sha256": "65c5946d4e81a036242eb47436e8403288b40d191aebce8f1967feae69a9f40e",
+  "repairs": [
+    "Split the pre-publication label from its regular-weight body run and state public-page readback is a post-publication check.",
+    "Reconciled T19 fact values F016,F017,F018,F019,F020,F021,F024 with the R09 replacement register.",
+    "Fixed the R09 content-preflight script to read the R09 register, not R07."
+  ],
+  "content_preflight": "PASS_SCOPED",
+  "native_word_render": "PASS_PDF_AND_25_PAGE_IMAGES",
+  "visual": "PASS_LAYOUT_ONLY",
+  "semantic": "PENDING_INDEPENDENT_EXACT_SHA_REVIEW",
+  "formal_acceptance": "UNKNOWN",
+  "first_R09_render_attempt": "No PDF and no phase log; bounded stop after last observed process remained responsive with increasing CPU; exact stage/root cause UNKNOWN.",
+  "instrumented_render": "Word opened the exact candidate (25 pages), exported PDF in 10.6 seconds, and the unique Word PID exited cleanly. The instrumented method produced the current PDF and page images."
+}

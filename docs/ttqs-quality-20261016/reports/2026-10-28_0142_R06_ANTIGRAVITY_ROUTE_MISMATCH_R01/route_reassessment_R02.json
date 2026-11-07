@@ -1,0 +1,76 @@
+{
+  "schema": "ttqs-one-antigravity-route-reassessment/v1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0142-I19-E32-R06-REVIEW-W2-ROUTE-REASSESSMENT",
+  "doc_id": "0142",
+  "requirement_id": "I19-E32",
+  "official_index": 156,
+  "candidate_state": "CANDIDATE_ONLY",
+  "candidate_sha256": "3781cb4cb2d26625fb5676181f4faa4176ca0bb80e2e3fac518245bbdc42f97e",
+  "body_sha256": "cd838170a432cb31a0be7f490bb92019b9be046a5f503d3f9a8bb53ba8539150",
+  "source_packet_sha256": "e3e8b3a8ee1effe758608fee183440add4f37381988c5e352912b1a3d55c9e49",
+  "unique_blueprint_sha256": "4841161d6e9aad3ace2a0b4ec4a5a3e1b7e92b68ff2b20f95e9edeae2b84070b",
+  "observed_at_local": "2026-10-28T01:43:00.1452317+08:00",
+  "prior_route_adjudication": "REJECTED_WRONG_ROUTE_NOT_GEMINI",
+  "prior_adjudication_disposition": "OVERSTATED; preserve historical artifact but do not treat it as definitive route proof",
+  "dispatch": {
+    "work_id": "TTQS-0142-I19-E32-R06-REVIEW-W2-20261028-02",
+    "cli_path": "C:\\Users\\J\\AppData\\Local\\agy\\bin\\agy.exe",
+    "cli_version": "1.4.8",
+    "pid": 79968,
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model": "UNKNOWN",
+    "exit_code": 0,
+    "duration_seconds": 100.8926141,
+    "response_chars": 6066,
+    "cli_reported_usage": {
+      "input_tokens": 19607,
+      "output_tokens": 14676,
+      "thinking_tokens": 10646,
+      "total_tokens": 34283
+    },
+    "billing": "UNKNOWN",
+    "candidate_sha256_before": "3781cb4cb2d26625fb5676181f4faa4176ca0bb80e2e3fac518245bbdc42f97e",
+    "candidate_sha256_after": "3781cb4cb2d26625fb5676181f4faa4176ca0bb80e2e3fac518245bbdc42f97e",
+    "computer_use_authorized": false,
+    "external_tools_authorized": false,
+    "dangerous_permission_bypass": false,
+    "fallback_allowed": false
+  },
+  "route_evidence": {
+    "model_catalog_listed_requested_model": true,
+    "initial_resolver_log": "Model ID gemini-3.8-flash-high not in local config, defaulting to CCPA",
+    "later_auth_evidence": "Windows keyring token loaded; token expiry recorded 2026-10-28 01:38:46 +0800",
+    "later_model_resolution": "Resolving model gemini-3.8-flash-high; selected backend label Gemini 3.8 Flash (High)",
+    "provider_endpoint": "daily-cloudcode-pa.googleapis.com/v1internal:streamGenerateContent",
+    "response_model_id_in_payload": "NOT_PRESENT",
+    "captured_tool_events": 0,
+    "absolute_tool_absence": "NOT_ESTABLISHED",
+    "mode_warning": "--mode plan had no effect while slash command expansion was disabled",
+    "actual_fallback": "UNKNOWN"
+  },
+  "review": {
+    "worker_response_verdict": "PASS",
+    "response_sha256": "1d1c90ca3b3bef6850786299cdb97564065b6af7b9bdd4855774ef42ec2a8428",
+    "response_binds_exact_candidate_sha": true,
+    "independent_worker_response": "AVAILABLE",
+    "semantic_response_disposition": "TEXT_PASS_RETURNED_MODEL_ROUTE_UNVERIFIED",
+    "qualified_gemini_review": "NOT_VERIFIED",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN/HOLD"
+  },
+  "reassessment": {
+    "route_classification": "GEMINI_MODEL_SELECTION_AND_GOOGLE_ENDPOINT_EVIDENCE_PRESENT; ACTUAL_SERVING_MODEL_UNKNOWN",
+    "route_acceptance": "NOT_QUALIFIED_AS_GEMINI_PASS",
+    "reason": "The initial CCPA resolver line is followed by a Windows keyring token load, a successful model catalog call, resolution of the requested Gemini slug, propagation of the exact Gemini 3.8 Flash (High) backend label, and model-generation calls to Google Cloud Code Assist. These logs make a definitive non-Gemini rejection unsupported. They do not expose a response model identifier, so actual serving model and fallback remain UNKNOWN.",
+    "next_action": "Preserve the response as an unqualified independent review. Do not claim Gemini PASS. Future Antigravity dispatch must verify the resolved backend label before accepting a result; keep actual serving identity UNKNOWN unless provider evidence exposes it."
+  },
+  "raw_receipts": {
+    "dispatch_start_sha256": "e4582901b4c7d4abbad883222ced9f716e8714b87da996094f2c17677ca8a1c3",
+    "dispatch_terminal_sha256": "14c82777da973d0b7c4c5e6e22e8f3602f40a332fbde9fc6fd87d52d512670e2",
+    "cli_log_sha256": "89806177705dea719b745fb3c7dc510a937bc24e8d7cd8e17d36b59d74304594",
+    "stdout_sha256": "1d1c90ca3b3bef6850786299cdb97564065b6af7b9bdd4855774ef42ec2a8428",
+    "stderr_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+    "model_catalog_sha256": "85e245eeb6ee6aa8450b0a953be6bc93480da5086eaa233722cfd9057961fa32"
+  }
+}

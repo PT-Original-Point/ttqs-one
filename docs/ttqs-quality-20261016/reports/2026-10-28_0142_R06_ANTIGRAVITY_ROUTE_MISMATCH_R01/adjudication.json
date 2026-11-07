@@ -1,0 +1,53 @@
+{
+  "work_id": "TTQS-0142-I19-E32-R06-REVIEW-W2-20261028-02",
+  "doc_id": "0142",
+  "requirement_id": "I19-E32",
+  "candidate_state": "CANDIDATE_ONLY",
+  "requested_model": "gemini-3.8-flash-high",
+  "actual_model": "UNKNOWN",
+  "resolver_route": "CCPA default route",
+  "route_adjudication": "REJECTED_WRONG_ROUTE_NOT_GEMINI",
+  "accept_reviewer_verdict": false,
+  "antigravity_account_auth": "CLI log says not logged into Antigravity",
+  "attempt_01": "CLI argument parse rejected before inference; no provider call evidence; preserved under ATTEMPT01_CLI_PARSE_REJECTED_BEFORE_INFERENCE",
+  "attempt_02": {
+    "started_local": "2026-10-28T00:44:50.7601212+08:00",
+    "finished_local": "2026-10-28T00:46:37.4367122+08:00",
+    "pid": 79968,
+    "exit_code": 0,
+    "cli_status": "SUCCESS",
+    "conversation_id": "22afa445-5efa-4ede-a82f-9a73aff159ad",
+    "response_chars": 6066,
+    "cli_reported_usage": {
+      "input_tokens": 19607,
+      "output_tokens": 14676,
+      "thinking_tokens": 10646,
+      "cache_read_tokens": 0,
+      "total_tokens": 34283
+    },
+    "usage_attribution": "UNKNOWN; response came through CCPA default resolver",
+    "billing": "UNKNOWN",
+    "candidate_sha256_before": "3781cb4cb2d26625fb5676181f4faa4176ca0bb80e2e3fac518245bbdc42f97e",
+    "candidate_sha256_after": "3781cb4cb2d26625fb5676181f4faa4176ca0bb80e2e3fac518245bbdc42f97e",
+    "candidate_changed": false,
+    "cli_stderr": "warning: --mode plan has no effect while slash command expansion is disabled.",
+    "tool_events_in_captured_cli_log": 0,
+    "tool_use_conclusion": "No tool event matches found in captured log; absolute absence not established",
+    "plan_mode": "Requested; CLI stderr warns it has no effect while slash-command expansion is disabled",
+    "sandbox": "Requested; effective restrictions not independently verified"
+  },
+  "input_hashes": {
+    "candidate_sha256": "3781cb4cb2d26625fb5676181f4faa4176ca0bb80e2e3fac518245bbdc42f97e",
+    "request_sha256": "356f5d3795673939a5b1ed0b245cb434f243eb6d773aeb11e47428bc54d56d2b",
+    "body_sha256": "cd838170a432cb31a0be7f490bb92019b9be046a5f503d3f9a8bb53ba8539150",
+    "source_packet_sha256": "e3e8b3a8ee1effe758608fee183440add4f37381988c5e352912b1a3d55c9e49",
+    "blueprint_sha256": "4841161d6e9aad3ace2a0b4ec4a5a3e1b7e92b68ff2b20f95e9edeae2b84070b"
+  },
+  "raw_receipts": {
+    "stdout_sha256": "1d1c90ca3b3bef6850786299cdb97564065b6af7b9bdd4855774ef42ec2a8428",
+    "stderr_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+    "cli_log_sha256": "89806177705dea719b745fb3c7dc510a937bc24e8d7cd8e17d36b59d74304594",
+    "attempt01_summary_sha256": "9241fd823c7c50822ebb75068310c246679e220c6fcf9a65b739e0f656670266"
+  },
+  "next_action": "Do not dispatch Antigravity again until native model binding and authentication are resolved; continue an independent lawful READY lane."
+}

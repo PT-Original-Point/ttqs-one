@@ -1,0 +1,60 @@
+{
+  "schema": "ttqs.r07_append_only_sync_update.v1",
+  "command": "TTQS_ONE_20261021_DEEP_AUDIT_SCOPED_RECOVERY_R07",
+  "r07_source_sha256": "9241c5e2047373e3fe669ed278977107df182a0979e17d51fb68d7d8e8582f2a",
+  "supersedes_scope": "Only the pending/stale GitHub synchronization status in the earlier R07 execution receipt; historical findings and receipts remain unchanged.",
+  "source_identity_correction_0096": {
+    "status": "VERIFIED",
+    "doc_id": "0096",
+    "requirement_id": "I18-E03",
+    "revision": "R13",
+    "candidate_docx_sha256": "6ece53befed3ecb1b42e523b80da80decd33b0a7d55e4e1fe75ddf79b905d445",
+    "docx_changed": false,
+    "remote_original_files_checked": 13,
+    "R02_hash_matches_remote": 12,
+    "mismatch_count": 1,
+    "mismatch_path": "docs/ttqs-quality-20261016/quality-review/0096_R13_20261021/README.md",
+    "disposition": "Original README preserved unchanged; appended R03 records its exact remote Git blob/SHA and corrected I18-E03/index104/unprinted-serial interpretation."
+  },
+  "remote_sync": {
+    "source_head_before_sync": "c8466efcca722743c4f295d541b46015c0cde5c3",
+    "commit": "53505259d30d0a095e3c0a3c399369463562b39b",
+    "head_after": "53505259d30d0a095e3c0a3c399369463562b39b",
+    "readback_method": "fresh ls-remote, fast-forward push, fetch, exact full-tree path map, cat-file byte SHA-256/length check",
+    "files": [
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0096_R13_R07_FRESH_REVIEW_20261021/mapping/source_identity_correction_R03_remote_reconciliation.json",
+        "git_blob_sha": "0f1e391455e18d33ac8120ddcea8fe563d6f319b",
+        "sha256": "106f8b6f379db31a83f0a00dbc29b05b85b5fcacf1204643a1cc09b328bfb5cf",
+        "bytes": 9410,
+        "remote_blob": "0f1e391455e18d33ac8120ddcea8fe563d6f319b",
+        "remote_sha256": "106f8b6f379db31a83f0a00dbc29b05b85b5fcacf1204643a1cc09b328bfb5cf",
+        "remote_bytes": 9410,
+        "match": true
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0096_R13_R07_FRESH_REVIEW_20261021/SHA256SUMS.json",
+        "git_blob_sha": "03e887de0e8bb57c06c432192e4b4b2fb37c4544",
+        "sha256": "57b874dd2d8ef502a82b089629da61e1bcf20d8d47e3b556556b88db8819efa1",
+        "bytes": 2814,
+        "remote_blob": "03e887de0e8bb57c06c432192e4b4b2fb37c4544",
+        "remote_sha256": "57b874dd2d8ef502a82b089629da61e1bcf20d8d47e3b556556b88db8819efa1",
+        "remote_bytes": 2814,
+        "match": true
+      }
+    ],
+    "verified": true
+  },
+  "candidate_and_acceptance": {
+    "text_semantic_review": "PASS_TEXT_ONLY on exact DOCX-derived body",
+    "reviewer_technical_visual_scope": "UNKNOWN",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "unchanged_lanes": {
+    "0098": "R10 DOCX unchanged; exact SHA retained.",
+    "0099": "R02 Blueprint only; R17 SHA retained; R01 not rebuilt.",
+    "0097": "R08 PDF/visual export remains blocked/UNKNOWN; R07 visual evidence not inherited."
+  },
+  "active_writer_at_check": "NONE; only long-lived OpenCode service process, no document Writer command.",
+  "recorded_at_local": "2026-10-21T16:07:49+08:00"
+}

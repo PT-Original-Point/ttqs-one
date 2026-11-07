@@ -1,0 +1,100 @@
+{
+  "schema": "TTQS_ONE_ANTIGRAVITY_R02_ROUTE_ADJUDICATION_V1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0142-I19-E32-R06-W2-ANTIGRAVITY-GEMINI38-FLASH-HIGH-EXACT-SHA-SEMANTIC-REVIEW-R02-20261028",
+  "doc_id": "0142",
+  "requirement_id": "I19-E32",
+  "candidate_sha256": "3781cb4cb2d26625fb5676181f4faa4176ca0bb80e2e3fac518245bbdc42f97e",
+  "review_packet_sha256": "4a1df93a2a7ea945b8c486b270e67026f4371c8961cf95cd249281489a6f79a0",
+  "prompt_sha256": "8ce077beecf2dde1df3177805b0e3a4cbfe03a9677fdd92659064810b8259846",
+  "dispatch": {
+    "requested_model": "gemini-3.8-flash-high",
+    "model_catalog_match": true,
+    "cli_version": "1.4.8",
+    "exit_code": 0,
+    "duration_seconds": 52.66,
+    "pid": 79752,
+    "visible_window": false,
+    "computer_use": false,
+    "candidate_unchanged": true
+  },
+  "model_identity": {
+    "status": "UNKNOWN",
+    "evidence": [
+      "CLI log: requested model ID was not in local config and resolver defaulted to CCPA.",
+      "CLI log later propagated selected override label Gemini 3.8 Flash (High) to backend.",
+      "No actual serving-model ID was exposed in captured response/session metadata."
+    ],
+    "disposition": "Do not claim Gemini PASS; possible CCPA/default routing cannot be ruled out."
+  },
+  "authentication": {
+    "cli_log_reports_antigravity_signed_in_user_lookup_failed": "not logged into Antigravity",
+    "inference_response_received": true,
+    "provider_account_identity": "UNKNOWN"
+  },
+  "tool_restriction": {
+    "launch_cwd": "isolated empty temp workspace",
+    "sandbox": true,
+    "prompt_requested_no_tools": true,
+    "cli_warning": "--mode plan has no effect while slash command expansion is disabled",
+    "shared_permissions_summary": {
+      "allow_rules": 34,
+      "deny_rules": 0,
+      "ask_rules": 0,
+      "read_file_rules_present": true
+    },
+    "explicit_tool_call_markers_found": false,
+    "tool_use_status": "UNKNOWN_NOT_STRUCTURALLY_DISABLED"
+  },
+  "response": {
+    "cli_status": "SUCCESS",
+    "reported_verdict": "PASS",
+    "response_candidate_sha256": "3781cb4cb2d26625fb5676181f4faa4176ca0bb80e2e3fac518245bbdc42f97e",
+    "response_packet_sha256": "4a1df93a2a7ea945b8c486b270e67026f4371c8961cf95cd249281489a6f79a0",
+    "response_work_id": "TTQS-0142-I19-E32-R06-W1-OPENCODE-GLM53-FREE-EXACT-SHA-SEMANTIC-REVIEW-20261028T0830",
+    "expected_work_id": "TTQS-0142-I19-E32-R06-W2-ANTIGRAVITY-GEMINI38-FLASH-HIGH-EXACT-SHA-SEMANTIC-REVIEW-R02-20261028",
+    "work_id_mismatch": true,
+    "response_sha256": "0547fe1a88da9f3a2c45560f4a628fd676b1941296cf3b03b3bf1fc7aab03bcb",
+    "admissibility": "UNVERIFIED_RESPONSE_ONLY; NOT A SEMANTIC PASS"
+  },
+  "usage": {
+    "cli_reported": {
+      "input_tokens": 17547,
+      "output_tokens": 7603,
+      "thinking_tokens": 5911,
+      "cache_read_tokens": 0,
+      "total_tokens": 25150
+    },
+    "actual_cost": "UNKNOWN_NOT_INDEPENDENTLY_VERIFIED"
+  },
+  "local_raw_evidence": {
+    "stdout_sha256": "58c80cc841102c5afb1e8951a36f250adc14dc90cbcb78f88dbe46447237d08b",
+    "stderr_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+    "cli_log_sha256": "4b5d51759932a6663082c2f4aad25cba492ffdde56fe300bfe597c3e09236160",
+    "prompt_sha256": "8ce077beecf2dde1df3177805b0e3a4cbfe03a9677fdd92659064810b8259846",
+    "cli_log_published": false,
+    "raw_stdout_published_as_exact_bytes": false,
+    "session_conversation_id_redacted_publicly": true
+  },
+  "related_prior_error": {
+    "schema": "TTQS_ONE_ANTIGRAVITY_R01_PREINFERENCE_FAILURE_V1",
+    "work_id": "TTQS-0142-I19-E32-R06-W2-ANTIGRAVITY-GEMINI38-FLASH-HIGH-EXACT-SHA-SEMANTIC-REVIEW-20261028",
+    "attempt": "R01",
+    "pid": 82408,
+    "started_local": "2026-10-28T09:18:21.551394+08:00",
+    "finished_local": "2026-10-28T09:18:21.904020+08:00",
+    "duration_seconds": 0.353,
+    "exit_code": 2,
+    "failure_stage": "LOCAL_ARGUMENT_PARSE_BEFORE_PROVIDER_REQUEST",
+    "error": "invalid value \"900\" for flag -print-timeout: time: missing unit in duration \"900\"",
+    "stdout_bytes": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3597092aa837b2f264651c6812c9fc1706f1c10cc5999a2dfeed0a16647f5fe",
+    "model_request": "NOT_STARTED",
+    "candidate_sha256_after": "3781cb4cb2d26625fb5676181f4faa4176ca0bb80e2e3fac518245bbdc42f97e",
+    "repair_applied": "Changed timeout argument to 900s for R02; no DOCX bytes changed."
+  },
+  "route_disposition": "PAUSED_FOR_NEW_ANTIGRAVITY_DISPATCH_UNTIL_MODEL_IDENTITY_NO_FALLBACK_AND_TOOL_RESTRICTIONS_ARE_VERIFIABLE",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD"
+}

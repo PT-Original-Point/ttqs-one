@@ -1,0 +1,1445 @@
+{
+  "receipt_id": "TTQS_ONE_OPENCODE_V2_ROLLING24H_SESSION_RECONCILIATION_R09_20261022",
+  "source_database": "C:/Users/J/.local/share/opencode/opencode.db (read-only query)",
+  "captured_at_local": "2026-10-22T18:19:21.288751+08:00",
+  "summary": {
+    "window_start_local": "2026-10-21T18:19:21.288751+08:00",
+    "window_end_local": "2026-10-22T18:19:21.288751+08:00",
+    "scope": "OpenCode v2 database sessions with TTQS in directory or title; one CLI run/session; only exact DB fields",
+    "session_count": 46,
+    "outcomes": {
+      "succeeded": 43,
+      "interrupted": 2,
+      "active_or_pending": 1
+    },
+    "selected_model_counts": {
+      "opencode/deepseek-v4.1-flash-free": 27,
+      "opencode/glm-5.3-flash-free": 2,
+      "opencode/mimo-v2.6-flash-free": 17
+    },
+    "tokens_total": {
+      "tokens_input": 2348577,
+      "tokens_output": 425910,
+      "tokens_reasoning": 742662,
+      "tokens_cache_read": 9985152,
+      "tokens_cache_write": 0
+    },
+    "token_totals_by_selected_model": {
+      "opencode/deepseek-v4.1-flash-free": {
+        "tokens_input": 1327842,
+        "tokens_output": 214398,
+        "tokens_reasoning": 522906,
+        "tokens_cache_read": 4419200,
+        "tokens_cache_write": 0
+      },
+      "opencode/glm-5.3-flash-free": {
+        "tokens_input": 51987,
+        "tokens_output": 16535,
+        "tokens_reasoning": 2676,
+        "tokens_cache_read": 4352,
+        "tokens_cache_write": 0
+      },
+      "opencode/mimo-v2.6-flash-free": {
+        "tokens_input": 968748,
+        "tokens_output": 194977,
+        "tokens_reasoning": 217080,
+        "tokens_cache_read": 5561600,
+        "tokens_cache_write": 0
+      }
+    },
+    "local_reported_cost_total": 0.0,
+    "provider_billing": "UNKNOWN",
+    "provider_attested_model_count": 0,
+    "active_or_pending_session_ids": [
+      "ses_e9ce6d3ceffecnApJfED1m3jCg"
+    ],
+    "session_id_uses": "One OpenCode CLI run/session, not proof of a complete delivered document"
+  },
+  "sessions": [
+    {
+      "session_id": "ses_ea1fa8e3affeGuvkDX7BfP7Ya1",
+      "work_title": "TTQS_I18_E08_0100_R09_WRITER_20261021",
+      "doc_id_inferred_from_title_only": "UNKNOWN",
+      "worker_role_inferred_from_title_only": "Writer",
+      "directory": "E:/TTQS/TTQS_ONE_CODEX_RUNTIME/WORK/QUALITY_REBUILD_20261016/0100_0101_R08_SOURCE_BLUEPRINT_20261021/worker/opencode_R09_0100",
+      "created_local": "2026-10-21T18:32:57.718000+08:00",
+      "updated_local": "2026-10-21T18:34:02.907000+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 8751,
+        "tokens_output": 7185,
+        "tokens_reasoning": 6964,
+        "tokens_cache_read": 0,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 21848,
+      "assistant_text_response_sha256": "df5164d90e86fb7823fe50f3bf6b8c166320d5321de23a3bd6b10e0bfc9451b5",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_ea1e5de09ffer40AnunZbXn6Uf",
+      "work_title": "TTQS 0100 R09 exact-SHA semantic review",
+      "doc_id_inferred_from_title_only": "0100",
+      "worker_role_inferred_from_title_only": "Reviewer",
+      "directory": "E:/TTQS/TTQS_ONE_CODEX_RUNTIME/WORK/QUALITY_REBUILD_20261016/0100_0101_R08_SOURCE_BLUEPRINT_20261021/candidate_R09/review/opencode_semantic_exact_sha_20261021",
+      "created_local": "2026-10-21T18:55:33.871000+08:00",
+      "updated_local": "2026-10-21T19:04:54.297000+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 130125,
+        "tokens_output": 12078,
+        "tokens_reasoning": 61592,
+        "tokens_cache_read": 1746432,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 12057,
+      "assistant_text_response_sha256": "eba32891eb21766cf3b751d1a0f2cd0d523f109f21a2beb4ed811eb6f6edb8a2",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_ea1cf5503ffe00DhJ9tzXxSzPG",
+      "work_title": "TTQS 0100 R09a exact SHA semantic review",
+      "doc_id_inferred_from_title_only": "0100",
+      "worker_role_inferred_from_title_only": "Reviewer",
+      "directory": "E:/TTQS",
+      "created_local": "2026-10-21T19:20:10.399000+08:00",
+      "updated_local": "2026-10-21T19:27:04.142000+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 196596,
+        "tokens_output": 14196,
+        "tokens_reasoning": 45375,
+        "tokens_cache_read": 2321408,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 16209,
+      "assistant_text_response_sha256": "c8f34cdc4d9965a63cbaba0c491b9243bb3a073b2518fd12de360b51494c0f9c",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_ea1a826fcffeumwDg7f4giu6By",
+      "work_title": "TTQS-0101-I18-E08-R09-Writer-20261021",
+      "doc_id_inferred_from_title_only": "0101",
+      "worker_role_inferred_from_title_only": "Writer",
+      "directory": "E:/TTQS",
+      "created_local": "2026-10-21T20:02:57.937000+08:00",
+      "updated_local": "2026-10-21T20:08:20.482000+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": null,
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 69056,
+        "tokens_output": 21626,
+        "tokens_reasoning": 46701,
+        "tokens_cache_read": 33152,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 59859,
+      "assistant_text_response_sha256": "c661572706e2abd38ac4aeda36b6e63b3ff5eb429e617fbdbddedbd25af3ea60",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_ea185d5dcffeX0MK9kaWgYDj86",
+      "work_title": "Semantic review of DOCX 0101 for I18-E08",
+      "doc_id_inferred_from_title_only": "0101",
+      "worker_role_inferred_from_title_only": "Reviewer",
+      "directory": "E:/TTQS/TTQS_ONE_CODEX_RUNTIME/WORK/QUALITY_REBUILD_20261016/0100_0101_R08_SOURCE_BLUEPRINT_20261021/candidate_R09_0101",
+      "created_local": "2026-10-21T20:40:27.406000+08:00",
+      "updated_local": "2026-10-21T20:41:41.677000+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 60887,
+        "tokens_output": 4594,
+        "tokens_reasoning": 12935,
+        "tokens_cache_read": 2304,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 13817,
+      "assistant_text_response_sha256": "581e1837ae497fa933a0c2287906bd94d8beb90ff1a06877e71f21fa2037c331",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_ea171cd1affe7zkRFsdAvpV1qr",
+      "work_title": "R09 0101 final exact-SHA semantic review",
+      "doc_id_inferred_from_title_only": "0101",
+      "worker_role_inferred_from_title_only": "Reviewer",
+      "directory": "E:/TTQS/TTQS_ONE_CODEX_RUNTIME/WORK/QUALITY_REBUILD_20261016/0100_0101_R08_SOURCE_BLUEPRINT_20261021/candidate_R09_0101",
+      "created_local": "2026-10-21T21:02:19.887000+08:00",
+      "updated_local": "2026-10-21T21:03:21.297000+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 34640,
+        "tokens_output": 4314,
+        "tokens_reasoning": 9669,
+        "tokens_cache_read": 0,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 13517,
+      "assistant_text_response_sha256": "3dbae0b8d01ec02188224aa816a49460a0d8ae6d3eb09c47b91340b72373a1cb",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_ea14a8d52ffeDCmePqZoatSC3H",
+      "work_title": "R09 0101 final8 exact-SHA semantic review",
+      "doc_id_inferred_from_title_only": "0101",
+      "worker_role_inferred_from_title_only": "Reviewer",
+      "directory": "E:/TTQS/TTQS_ONE_CODEX_RUNTIME/WORK/QUALITY_REBUILD_20261016/0100_0101_R08_SOURCE_BLUEPRINT_20261021/candidate_R09_0101",
+      "created_local": "2026-10-21T21:45:12.116000+08:00",
+      "updated_local": "2026-10-21T21:47:19.502000+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 71766,
+        "tokens_output": 4516,
+        "tokens_reasoning": 24191,
+        "tokens_cache_read": 0,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 14321,
+      "assistant_text_response_sha256": "bd1da8be4460ade7e29071f6a8c5542dfc0ed9ae574e3128f75dd6915453e824",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_ea142a4b5ffeDVFhelB5TIrBrN",
+      "work_title": "R09 0101 final9 exact-SHA semantic review",
+      "doc_id_inferred_from_title_only": "0101",
+      "worker_role_inferred_from_title_only": "Reviewer",
+      "directory": "E:/TTQS/TTQS_ONE_CODEX_RUNTIME/WORK/QUALITY_REBUILD_20261016/0100_0101_R08_SOURCE_BLUEPRINT_20261021/candidate_R09_0101",
+      "created_local": "2026-10-21T21:53:50.456000+08:00",
+      "updated_local": "2026-10-21T21:57:31.001000+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 100493,
+        "tokens_output": 4106,
+        "tokens_reasoning": 40828,
+        "tokens_cache_read": 76416,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 13070,
+      "assistant_text_response_sha256": "aac585973bccdb69165f592ec8a2ebce851b4de3ef1b9af3945c291bf42b49c8",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_ea1138b8affeE0hp0toS2tPCKj",
+      "work_title": "TTQS ONE 0102 I18-E09 R01 Writer",
+      "doc_id_inferred_from_title_only": "0102",
+      "worker_role_inferred_from_title_only": "Writer",
+      "directory": "E:/TTQS",
+      "created_local": "2026-10-21T22:45:17.049000+08:00",
+      "updated_local": "2026-10-21T22:48:14.824000+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 17341,
+        "tokens_output": 13808,
+        "tokens_reasoning": 2401,
+        "tokens_cache_read": 10368,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 65994,
+      "assistant_text_response_sha256": "753e15bcf29739cbbaad01719aca3dc59b24547b276b854f3e28940a300711f6",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_ea0bb8dcdffeCEYoH8nEmm3tet",
+      "work_title": "TTQS-0103-I18-E10-R01-Writer",
+      "doc_id_inferred_from_title_only": "0103",
+      "worker_role_inferred_from_title_only": "Writer",
+      "directory": "E:/TTQS/_r09_publish_0102/docs/ttqs-quality-20261016/quality-review/0103_I18-E10_R01_20261022/writer",
+      "created_local": "2026-10-22T00:21:24.372000+08:00",
+      "updated_local": "2026-10-22T00:25:48.800000+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 40105,
+        "tokens_output": 17467,
+        "tokens_reasoning": 20766,
+        "tokens_cache_read": 11520,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 57519,
+      "assistant_text_response_sha256": "f99813acfc243d44a1616d6acaa00db9e876ef4e9de50d74d9382ed71e9a440f",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_ea0ad8427ffe8iQYR5XIm7KuUg",
+      "work_title": "TTQS-0103-I18-E10-R01-Independent-Review",
+      "doc_id_inferred_from_title_only": "0103",
+      "worker_role_inferred_from_title_only": "Reviewer",
+      "directory": "E:/TTQS",
+      "created_local": "2026-10-22T00:36:43.614000+08:00",
+      "updated_local": "2026-10-22T00:38:12.844000+08:00",
+      "selected_model": "opencode/glm-5.3-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 23676,
+        "tokens_output": 1859,
+        "tokens_reasoning": 2676,
+        "tokens_cache_read": 4352,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 6968,
+      "assistant_text_response_sha256": "fbc7bdfd003f41f0390906bdbfd602f2b1133bb7669bf18b423572d466f93247",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_ea0a8b186ffeybrhKyR37rxlGz",
+      "work_title": "TTQS-0103-I18-E10-R02-Independent-Review",
+      "doc_id_inferred_from_title_only": "0103",
+      "worker_role_inferred_from_title_only": "Reviewer",
+      "directory": "E:/TTQS",
+      "created_local": "2026-10-22T00:41:59.677000+08:00",
+      "updated_local": "2026-10-22T00:43:01.172000+08:00",
+      "selected_model": "opencode/glm-5.3-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 28311,
+        "tokens_output": 14676,
+        "tokens_reasoning": 0,
+        "tokens_cache_read": 0,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 6911,
+      "assistant_text_response_sha256": "1c06a4170c6a1e6d070cf53e5555579e6fded7f32f9f345d9b4d18343f48f73b",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_ea08d9c2affed8eMuPFmtMpS0q",
+      "work_title": "TTQS-0104-I18-E11-R01-WRITER",
+      "doc_id_inferred_from_title_only": "0104",
+      "worker_role_inferred_from_title_only": "Writer",
+      "directory": "E:/TTQS/TTQS_ONE_CODEX_RUNTIME/WORK/QUALITY_REBUILD_20261016/0104_I18-E11_SOURCE_PREP_20261022",
+      "created_local": "2026-10-22T01:11:34.806000+08:00",
+      "updated_local": "2026-10-22T01:17:29.961000+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 40258,
+        "tokens_output": 16107,
+        "tokens_reasoning": 44686,
+        "tokens_cache_read": 11776,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 45757,
+      "assistant_text_response_sha256": "bea16d71e8bb16e528d162bc5ea88267f3caa21e435250d5ccdfadb7c48e1969",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_ea08692a6ffeaR6WbdTxP8LHwG",
+      "work_title": "TTQS-0104-I18-E11-R01-WRITER-20261022-R2",
+      "doc_id_inferred_from_title_only": "0104",
+      "worker_role_inferred_from_title_only": "Writer",
+      "directory": "E:/TTQS",
+      "created_local": "2026-10-22T01:19:15.809000+08:00",
+      "updated_local": "2026-10-22T01:21:57.940000+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 8128,
+        "tokens_output": 18001,
+        "tokens_reasoning": 11752,
+        "tokens_cache_read": 1792,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 50408,
+      "assistant_text_response_sha256": "f39487f92e3fd752c0e8006709d5a1b7e3b478508b23468f16961c25730331b2",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_ea047f5cfffeVdnhYi9rEaJgee",
+      "work_title": "TTQS 0104 R14 independent semantic review",
+      "doc_id_inferred_from_title_only": "0104",
+      "worker_role_inferred_from_title_only": "Reviewer",
+      "directory": "E:/TTQS/TTQS_ONE_CODEX_RUNTIME/WORK/QUALITY_REBUILD_20261016/0104_I18-E11_SOURCE_PREP_20261022/evidence/independent_semantic_review_0104_R14",
+      "created_local": "2026-10-22T02:27:39.387000+08:00",
+      "updated_local": "2026-10-22T02:37:04.850000+08:00",
+      "selected_model": "opencode/mimo-v2.6-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 62400,
+        "tokens_output": 5445,
+        "tokens_reasoning": 32700,
+        "tokens_cache_read": 284800,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 13256,
+      "assistant_text_response_sha256": "17f8eba040fb3a83b1ee1e25705fd8b06b85b0672ae03a8f9e11baca34417809",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_ea030cfffffeWft8qAw18cKX1E",
+      "work_title": "TTQS 0104 R15 independent semantic review",
+      "doc_id_inferred_from_title_only": "0104",
+      "worker_role_inferred_from_title_only": "Reviewer",
+      "directory": "E:/TTQS",
+      "created_local": "2026-10-22T02:52:56.196000+08:00",
+      "updated_local": "2026-10-22T03:18:49.244000+08:00",
+      "selected_model": "opencode/mimo-v2.6-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 70570,
+        "tokens_output": 8130,
+        "tokens_reasoning": 41871,
+        "tokens_cache_read": 680960,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 17009,
+      "assistant_text_response_sha256": "caac693ddf527fddbc5e302431926ede7f35039cc09c2ab26eed4a88dd885b98",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_ea00e6c9bffeRq91HBDZl6RZBb",
+      "work_title": "TTQS 0104 R16 bounded patch writer",
+      "doc_id_inferred_from_title_only": "0104",
+      "worker_role_inferred_from_title_only": "Writer",
+      "directory": "E:/PT-Original-Point/ttqs-one/docs/ttqs-quality-20261016/quality-review/0104_I18-E11_R15_20261022",
+      "created_local": "2026-10-22T03:30:30.127000+08:00",
+      "updated_local": "2026-10-22T03:31:38.974000+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 28168,
+        "tokens_output": 4916,
+        "tokens_reasoning": 10527,
+        "tokens_cache_read": 1792,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 13388,
+      "assistant_text_response_sha256": "00a31972a3dd0c21c35d9caf530d14160bb7ba60d9c3a78ad287ad94d1c0d66c",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_ea002ffe1ffefP6DIiuFo8fPbr",
+      "work_title": "TTQS 0104 R16 exact-SHA independent semantic review",
+      "doc_id_inferred_from_title_only": "0104",
+      "worker_role_inferred_from_title_only": "Reviewer",
+      "directory": "E:/PT-Original-Point/ttqs-one/docs/ttqs-quality-20261016/quality-review/0104_I18-E11_R15_20261022",
+      "created_local": "2026-10-22T03:42:58.776000+08:00",
+      "updated_local": "2026-10-22T03:49:06.195000+08:00",
+      "selected_model": "opencode/mimo-v2.6-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 13000,
+        "tokens_output": 3947,
+        "tokens_reasoning": 95,
+        "tokens_cache_read": 38272,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 11272,
+      "assistant_text_response_sha256": "dfe6448b46a1efb27bacda3129930dd679dc4f30828fb2ea3a88c732e9752989",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9fd5249fffen0drtH1VHbVyDL",
+      "work_title": "0105 R01 Traditional Chinese manuscript",
+      "doc_id_inferred_from_title_only": "0105",
+      "worker_role_inferred_from_title_only": "Writer",
+      "directory": "E:/TTQS",
+      "created_local": "2026-10-22T04:33:03.920000+08:00",
+      "updated_local": "2026-10-22T04:38:16.241000+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": null,
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 42667,
+        "tokens_output": 14416,
+        "tokens_reasoning": 34633,
+        "tokens_cache_read": 14464,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 40826,
+      "assistant_text_response_sha256": "5f081890ac6836d545b5151a97e4110df5ec5e26b9ffd621ad8500a387f0d5da",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9fcfb03fffei14peImX7nIbeF",
+      "work_title": "0105 R01 complete manuscript writer",
+      "doc_id_inferred_from_title_only": "0105",
+      "worker_role_inferred_from_title_only": "Writer",
+      "directory": "E:/TTQS",
+      "created_local": "2026-10-22T04:39:01.316000+08:00",
+      "updated_local": "2026-10-22T04:41:12.036000+08:00",
+      "selected_model": "opencode/mimo-v2.6-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": null,
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 8165,
+        "tokens_output": 5844,
+        "tokens_reasoning": 404,
+        "tokens_cache_read": 1024,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 16636,
+      "assistant_text_response_sha256": "2f77e918942eb8750b5e38dd957de0ff5f87cf3716814ba7edd5118d7a709000",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9f9d5427ffeA8zE0q5GWoZh9r",
+      "work_title": "ttqs-one-0106-R01",
+      "doc_id_inferred_from_title_only": "0106",
+      "worker_role_inferred_from_title_only": "OTHER_UNCLASSIFIED",
+      "directory": "E:/PT-Original-Point/ttqs-one",
+      "created_local": "2026-10-22T05:34:01.918000+08:00",
+      "updated_local": "2026-10-22T05:53:55.042000+08:00",
+      "selected_model": "opencode/mimo-v2.6-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "build",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 58981,
+        "tokens_output": 28295,
+        "tokens_reasoning": 27803,
+        "tokens_cache_read": 60032,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 65922,
+      "assistant_text_response_sha256": "a1b237f8d5fd90bcfaa823df32f840f7cb9c92e5e742662322525e23fd35e901",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9f9a27baffeOVEvJCqeg08qPn",
+      "work_title": "ttqs-one-0106-R01-attempt03",
+      "doc_id_inferred_from_title_only": "0106",
+      "worker_role_inferred_from_title_only": "OTHER_UNCLASSIFIED",
+      "directory": "E:/PT-Original-Point/ttqs-one",
+      "created_local": "2026-10-22T05:37:29.992000+08:00",
+      "updated_local": "2026-10-22T05:45:17.378000+08:00",
+      "selected_model": "opencode/mimo-v2.6-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "build",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 14195,
+        "tokens_output": 20364,
+        "tokens_reasoning": 4357,
+        "tokens_cache_read": 0,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 47947,
+      "assistant_text_response_sha256": "f79c4db58b11043ee480180366a4b5477103edf7eb9e7ee8d3711a458642d2e6",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9f7ed283ffef4H4ff3mzggYm7",
+      "work_title": "Independent semantic review of 0106 report",
+      "doc_id_inferred_from_title_only": "0106",
+      "worker_role_inferred_from_title_only": "Reviewer",
+      "directory": "E:/PT-Original-Point/ttqs-one",
+      "created_local": "2026-10-22T06:07:21.141000+08:00",
+      "updated_local": "2026-10-22T06:08:18.478000+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 44197,
+        "tokens_output": 3431,
+        "tokens_reasoning": 7782,
+        "tokens_cache_read": 2304,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 11213,
+      "assistant_text_response_sha256": "76ca5336aa9012b317dd2a18d20c44d60ebb6dbc9388e60f07bc2703a605385e",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9f79845dffeifFyQQ5ccCyKDL",
+      "work_title": "Exact-SHA semantic repair follow-up review",
+      "doc_id_inferred_from_title_only": "UNKNOWN",
+      "worker_role_inferred_from_title_only": "Writer",
+      "directory": "E:/PT-Original-Point/ttqs-one",
+      "created_local": "2026-10-22T06:13:08.824000+08:00",
+      "updated_local": "2026-10-22T06:13:37.266000+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 12173,
+        "tokens_output": 1514,
+        "tokens_reasoning": 3532,
+        "tokens_cache_read": 6656,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 4845,
+      "assistant_text_response_sha256": "d9e1ceb53d160ad10e015ec5a0f272047788b88090d84391c4a8c6faa0debf24",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9f76d8d7ffebs5LKbuGo5S8jR",
+      "work_title": "R09 source-boundary cleanup verification",
+      "doc_id_inferred_from_title_only": "UNKNOWN",
+      "worker_role_inferred_from_title_only": "OTHER_UNCLASSIFIED",
+      "directory": "E:/PT-Original-Point/ttqs-one",
+      "created_local": "2026-10-22T06:16:03.801000+08:00",
+      "updated_local": "2026-10-22T06:16:16.890000+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 5601,
+        "tokens_output": 819,
+        "tokens_reasoning": 1429,
+        "tokens_cache_read": 6656,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 2519,
+      "assistant_text_response_sha256": "3f0ce09ea82aa89e33f426e937c7e0bcb3579cf9383761af8c3482d5c1741fa4",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9f71df36ffepUdBpgCOdefnVT",
+      "work_title": "Bounded text-only review of DOCX 0106 candidate",
+      "doc_id_inferred_from_title_only": "0106",
+      "worker_role_inferred_from_title_only": "Reviewer",
+      "directory": "E:/PT-Original-Point/ttqs-one",
+      "created_local": "2026-10-22T06:21:29.857000+08:00",
+      "updated_local": "2026-10-22T06:22:22.905000+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 20351,
+        "tokens_output": 2856,
+        "tokens_reasoning": 6623,
+        "tokens_cache_read": 6656,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 10379,
+      "assistant_text_response_sha256": "e8755be3c0247279cbbea31a1faec7c97da1dedda67e5e9e9187a93aa3f35cbd",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9f6c8246ffeyKovefDAN6od06",
+      "work_title": "Semantic review of 0106 R01 text bundle",
+      "doc_id_inferred_from_title_only": "0106",
+      "worker_role_inferred_from_title_only": "Reviewer",
+      "directory": "E:/PT-Original-Point/ttqs-one",
+      "created_local": "2026-10-22T06:27:21.427000+08:00",
+      "updated_local": "2026-10-22T06:28:56.426000+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 49795,
+        "tokens_output": 3937,
+        "tokens_reasoning": 14241,
+        "tokens_cache_read": 6656,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 13806,
+      "assistant_text_response_sha256": "b249084acac5cd997c9453d324b8361fb820bf3d21bc371c336d2cc8013f94b5",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9f5586c8ffe0Ns6HHDVsPk36T",
+      "work_title": "Independent semantic review of 0106 attempt05",
+      "doc_id_inferred_from_title_only": "0106",
+      "worker_role_inferred_from_title_only": "Reviewer",
+      "directory": "E:/PT-Original-Point/ttqs-one",
+      "created_local": "2026-10-22T06:52:27.712000+08:00",
+      "updated_local": "2026-10-22T06:53:59.377000+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 65449,
+        "tokens_output": 3701,
+        "tokens_reasoning": 13332,
+        "tokens_cache_read": 6656,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 12431,
+      "assistant_text_response_sha256": "8b1a1fb7b37395d49cce20431528059ef701bc1acf594d8d7c1449391d4fdc66",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9f42ec15ffen5lXZJ0mrClJ34",
+      "work_title": "Independent semantic review of 0106 exact SHA a061814",
+      "doc_id_inferred_from_title_only": "0106",
+      "worker_role_inferred_from_title_only": "Reviewer",
+      "directory": "E:/PT-Original-Point/ttqs-one",
+      "created_local": "2026-10-22T07:12:46.808000+08:00",
+      "updated_local": "2026-10-22T07:13:41.914000+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 29385,
+        "tokens_output": 4147,
+        "tokens_reasoning": 7289,
+        "tokens_cache_read": 6144,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 13093,
+      "assistant_text_response_sha256": "c1292e122286ab62a77b8cae1b7c1221b8bcba0d83021696ed69d3751aa016d7",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9f3d11b2ffe0Y8RIfyVhjXIvo",
+      "work_title": "Independent semantic review of 0106 exact SHA 204bc47",
+      "doc_id_inferred_from_title_only": "0106",
+      "worker_role_inferred_from_title_only": "Reviewer",
+      "directory": "E:/PT-Original-Point/ttqs-one",
+      "created_local": "2026-10-22T07:19:10.394000+08:00",
+      "updated_local": "2026-10-22T07:20:07.923000+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 30446,
+        "tokens_output": 4850,
+        "tokens_reasoning": 7578,
+        "tokens_cache_read": 6144,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 15504,
+      "assistant_text_response_sha256": "7a18f59a135a93af4c36483aaea0126be593dd49f0da853139013a73398dc71f",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9f2afeb7ffekUkn5SnevUFRll",
+      "work_title": "TTQS 0105 R04 independent exact-SHA semantic review R09",
+      "doc_id_inferred_from_title_only": "0105",
+      "worker_role_inferred_from_title_only": "Reviewer",
+      "directory": "E:/PT-Original-Point/ttqs-one",
+      "created_local": "2026-10-22T07:38:54.889000+08:00",
+      "updated_local": "2026-10-22T07:40:18+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 22088,
+        "tokens_output": 4234,
+        "tokens_reasoning": 8742,
+        "tokens_cache_read": 6144,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 16839,
+      "assistant_text_response_sha256": "3525c124cb3cdb99d3ac8766b6dc242f7dc453016481072dd86f0792cd970326",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9f1fed6affeA577WCLlg07nNw",
+      "work_title": "TTQS 0105 R05 complete manuscript repair",
+      "doc_id_inferred_from_title_only": "0105",
+      "worker_role_inferred_from_title_only": "Writer",
+      "directory": "E:/TTQS/_r09_0105_R05_work/docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022",
+      "created_local": "2026-10-22T07:51:00.141000+08:00",
+      "updated_local": "2026-10-22T07:57:45.459000+08:00",
+      "selected_model": "opencode/mimo-v2.6-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "interrupted",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 20647,
+        "tokens_output": 1044,
+        "tokens_reasoning": 1801,
+        "tokens_cache_read": 128,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 9704,
+      "assistant_text_response_sha256": "f9db2c0b3fd1b085cd3294142643149f418e00e8aea6215371d29364d6df34ce",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9f1d5ed9ffeU00GksmAC6IyHw",
+      "work_title": "TTQS 0105 R05 complete manuscript repair retry01",
+      "doc_id_inferred_from_title_only": "0105",
+      "worker_role_inferred_from_title_only": "Writer",
+      "directory": "E:/TTQS/_r09_0105_R05_work/docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022",
+      "created_local": "2026-10-22T07:53:47.565000+08:00",
+      "updated_local": "2026-10-22T07:57:45.612000+08:00",
+      "selected_model": "opencode/mimo-v2.6-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "build",
+      "idle_outcome": "interrupted",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 0,
+        "tokens_output": 0,
+        "tokens_reasoning": 0,
+        "tokens_cache_read": 0,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 0,
+      "assistant_text_response_sha256": null,
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9f1969d2ffedwIaAmOjJoFGZL",
+      "work_title": "TTQS 0105 R05 complete manuscript repair retry02",
+      "doc_id_inferred_from_title_only": "0105",
+      "worker_role_inferred_from_title_only": "Writer",
+      "directory": "E:/TTQS/_r09_0105_R05_work/docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022",
+      "created_local": "2026-10-22T07:58:06.898000+08:00",
+      "updated_local": "2026-10-22T08:04:41.278000+08:00",
+      "selected_model": "opencode/mimo-v2.6-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "build",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 48561,
+        "tokens_output": 18132,
+        "tokens_reasoning": 18890,
+        "tokens_cache_read": 24704,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 50274,
+      "assistant_text_response_sha256": "7c968028268b12374a02e72b1e6114a83ad8a5755371862c7c69119e922a49a1",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9efa5177ffeVeib1kQ5VeGtrJ",
+      "work_title": "TTQS 0105 R05 exact SHA independent semantic review R09",
+      "doc_id_inferred_from_title_only": "0105",
+      "worker_role_inferred_from_title_only": "Reviewer",
+      "directory": "E:/TTQS",
+      "created_local": "2026-10-22T08:32:04.748000+08:00",
+      "updated_local": "2026-10-22T08:35:21.486000+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": null,
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 53389,
+        "tokens_output": 1544,
+        "tokens_reasoning": 32497,
+        "tokens_cache_read": 29312,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 5989,
+      "assistant_text_response_sha256": "981c6d93d7b9855abe936638743f73b78d222b86e233560fa0cbdbfb8aebe370",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9ef67a21ffetB20YhU5TgF9bK",
+      "work_title": "TTQS 0105 R06 bounded semantic repair Writer R09",
+      "doc_id_inferred_from_title_only": "0105",
+      "worker_role_inferred_from_title_only": "Writer",
+      "directory": "E:/TTQS",
+      "created_local": "2026-10-22T08:36:16.481000+08:00",
+      "updated_local": "2026-10-22T08:58:47.183000+08:00",
+      "selected_model": "opencode/mimo-v2.6-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": null,
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 161989,
+        "tokens_output": 35664,
+        "tokens_reasoning": 34677,
+        "tokens_cache_read": 1521664,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 1298,
+      "assistant_text_response_sha256": "c35cd29d438a1d4c0275a9bd4a4eb8970a0b528e5c811d529d7c7711b97c3561",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9dc29c14ffeaey0eTfQb8VDTC",
+      "work_title": "TTQS 0105 R06 exact-SHA independent semantic review",
+      "doc_id_inferred_from_title_only": "0105",
+      "worker_role_inferred_from_title_only": "Reviewer",
+      "directory": "E:/PT-Original-Point/ttqs-one",
+      "created_local": "2026-10-22T14:12:33.103000+08:00",
+      "updated_local": "2026-10-22T14:16:52.362000+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 75019,
+        "tokens_output": 13808,
+        "tokens_reasoning": 25769,
+        "tokens_cache_read": 46336,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 40470,
+      "assistant_text_response_sha256": "c3c8eb7a221bc55b269ddd7fabd2a7b39e2ed62d9b51971d878682439915e048",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9dbf29ecffezyKKuDcvrAkzLU",
+      "work_title": "TTQS 0105 R06 exact-SHA independent semantic review attempt02",
+      "doc_id_inferred_from_title_only": "0105",
+      "worker_role_inferred_from_title_only": "Reviewer",
+      "directory": "E:/PT-Original-Point/ttqs-one",
+      "created_local": "2026-10-22T14:16:18.882000+08:00",
+      "updated_local": "2026-10-22T14:19:43.142000+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "build",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 69162,
+        "tokens_output": 12056,
+        "tokens_reasoning": 20322,
+        "tokens_cache_read": 51968,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 35953,
+      "assistant_text_response_sha256": "1973be97d2e1e82ce33eb4dd6facf5d09abc8dd7945b7d67fb8173ae766afdc2",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9d8ad904ffem4gPIhUbjbWV4U",
+      "work_title": "TTQS_0105_WRITER_R07_20261022",
+      "doc_id_inferred_from_title_only": "UNKNOWN",
+      "worker_role_inferred_from_title_only": "Writer",
+      "directory": "E:/PT-Original-Point/ttqs-one",
+      "created_local": "2026-10-22T15:13:27.469000+08:00",
+      "updated_local": "2026-10-22T15:17:10.189000+08:00",
+      "selected_model": "opencode/mimo-v2.6-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 106166,
+        "tokens_output": 4592,
+        "tokens_reasoning": 2299,
+        "tokens_cache_read": 102400,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 12889,
+      "assistant_text_response_sha256": "f5b4772fc0700b236b202d58751c630e0b7a14f40fe762f5b90bdcad35f22aef",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9d858be9ffeR53uwL0FL4qS3v",
+      "work_title": "TTQS_0105_WRITER_R07_build_20261022",
+      "doc_id_inferred_from_title_only": "UNKNOWN",
+      "worker_role_inferred_from_title_only": "Writer",
+      "directory": "E:/PT-Original-Point/ttqs-one",
+      "created_local": "2026-10-22T15:19:14.892000+08:00",
+      "updated_local": "2026-10-22T15:54:56.747000+08:00",
+      "selected_model": "opencode/mimo-v2.6-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "build",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 200267,
+        "tokens_output": 54315,
+        "tokens_reasoning": 19783,
+        "tokens_cache_read": 2823808,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 2713,
+      "assistant_text_response_sha256": "513babd96e85d2515d7312fb4c1acef541cde58e6e9d13a7be7dfd356f109532",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9d4f1562ffefAEhlf2U03V4kk",
+      "work_title": "Independent semantic review of doc 0105 I18-E13",
+      "doc_id_inferred_from_title_only": "0105",
+      "worker_role_inferred_from_title_only": "Reviewer",
+      "directory": "E:/PT-Original-Point/ttqs-one",
+      "created_local": "2026-10-22T16:18:44.175000+08:00",
+      "updated_local": "2026-10-22T16:24:06.421000+08:00",
+      "selected_model": "opencode/mimo-v2.6-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 97475,
+        "tokens_output": 2921,
+        "tokens_reasoning": 7468,
+        "tokens_cache_read": 6656,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 8221,
+      "assistant_text_response_sha256": "2ab4c17142d62d618ba0f70c5704a8b5fbc46fd1382dace9a7ffdcb875bed64c",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9d40afceffe7ErzglGTTF0a2g",
+      "work_title": "Semantic review of doc 0102 I18-E09",
+      "doc_id_inferred_from_title_only": "0102",
+      "worker_role_inferred_from_title_only": "Reviewer",
+      "directory": "E:/TTQS",
+      "created_local": "2026-10-22T16:34:27.510000+08:00",
+      "updated_local": "2026-10-22T16:39:28.146000+08:00",
+      "selected_model": "opencode/mimo-v2.6-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 63399,
+        "tokens_output": 2344,
+        "tokens_reasoning": 6220,
+        "tokens_cache_read": 4864,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 7596,
+      "assistant_text_response_sha256": "fe28c79e28100edd6954cc3db97328795fa9f93acc5f1d02d99ce2565adbff47",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "candidate_sha256": "7275d99844ffb0a96773872ccca99f44a6523c827eca76af2a24ef85e23f27da",
+        "result": "R06 semantic review PARTIAL; historical result, not R09 acceptance"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9d3953f1ffel0WoQWOn2OSeW5",
+      "work_title": "TTQS 0102 R06 R09 semantic repair insert",
+      "doc_id_inferred_from_title_only": "0102",
+      "worker_role_inferred_from_title_only": "Writer",
+      "directory": "E:/PT-Original-Point/ttqs-one",
+      "created_local": "2026-10-22T16:42:29.958000+08:00",
+      "updated_local": "2026-10-22T16:44:54.950000+08:00",
+      "selected_model": "opencode/mimo-v2.6-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": null,
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 1849,
+        "tokens_output": 501,
+        "tokens_reasoning": 2338,
+        "tokens_cache_read": 6144,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 1518,
+      "assistant_text_response_sha256": "1456ab678b5f4e0463ae2edbf4959a5af4ed54808bb0d60568121b5b454564a0",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "status": "NOT_CROSSWALKED_TO_A_SEPARATE_ARTIFACT_RECEIPT"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9d2aa11effe0yYUZ4jHJOKZIk",
+      "work_title": "TTQS 0102 R08 independent semantic review",
+      "doc_id_inferred_from_title_only": "0102",
+      "worker_role_inferred_from_title_only": "Reviewer",
+      "directory": "E:/PT-Original-Point/ttqs-one",
+      "created_local": "2026-10-22T16:58:33.241000+08:00",
+      "updated_local": "2026-10-22T17:10:32.051000+08:00",
+      "selected_model": "opencode/mimo-v2.6-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": null,
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 41084,
+        "tokens_output": 3439,
+        "tokens_reasoning": 16374,
+        "tokens_cache_read": 6144,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 12136,
+      "assistant_text_response_sha256": "3ce88f3a9fc8cc2525cbc620414e63bc533f6bbaaa43a7ba35066eb0ec9feeb9",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "candidate_sha256": "40d0b9ecaebfdc3fba435811f57d89b797ec5512105995e808328f39a819cac9",
+        "result": "R08 semantic review PARTIAL 12/14 with B2/B3; superseded by R09 candidate; not reused"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9cf40e40ffeQ5EDQSaBYxqbU8",
+      "work_title": "TTQS 0102 R08 targeted semantic patch",
+      "doc_id_inferred_from_title_only": "0102",
+      "worker_role_inferred_from_title_only": "Writer",
+      "directory": "E:/PT-Original-Point/ttqs-one",
+      "created_local": "2026-10-22T17:58:10.461000+08:00",
+      "updated_local": "2026-10-22T17:58:47.867000+08:00",
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": null,
+      "idle_outcome": "succeeded",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 1806,
+        "tokens_output": 171,
+        "tokens_reasoning": 750,
+        "tokens_cache_read": 6144,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 572,
+      "assistant_text_response_sha256": "aa79cad055b3065bce98c216e9d208ee1d3b2c9f0db94ac563bd66006814f7ba",
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "candidate_sha256_before": "40d0b9ecaebfdc3fba435811f57d89b797ec5512105995e808328f39a819cac9",
+        "candidate_sha256_after": "b7c9d82667971097313514aaaa0939d912730b63cd7a8e2dd25d4999a8659b92",
+        "result": "Writer returned bounded proposal only; no file mutation by worker; source was checked and two-node deterministic repair applied; scoped technical QA PASS"
+      },
+      "provider_fallback": "UNKNOWN"
+    },
+    {
+      "session_id": "ses_e9ce6d3ceffecnApJfED1m3jCg",
+      "work_title": "TTQS 0102 R09 exact SHA semantic review",
+      "doc_id_inferred_from_title_only": "0102",
+      "worker_role_inferred_from_title_only": "Reviewer",
+      "directory": "E:/PT-Original-Point/ttqs-one",
+      "created_local": "2026-10-22T18:12:37.482000+08:00",
+      "updated_local": "2026-10-22T18:13:06.855000+08:00",
+      "selected_model": "opencode/mimo-v2.6-flash-free",
+      "provider_attested_actual_model": "UNKNOWN",
+      "session_agent": "plan",
+      "idle_outcome": "ACTIVE_OR_PENDING",
+      "local_cost_reported": 0.0,
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "tokens_input": 0,
+        "tokens_output": 0,
+        "tokens_reasoning": 0,
+        "tokens_cache_read": 0,
+        "tokens_cache_write": 0
+      },
+      "assistant_text_response_bytes": 0,
+      "assistant_text_response_sha256": null,
+      "os_pid": "UNKNOWN_NOT_RETAINED_IN_OPENCODE_DB",
+      "candidate_or_source_sha": "UNKNOWN_UNLESS_SEPARATE_RECEIPT_MATCHED",
+      "adoption_and_qa": {
+        "candidate_sha256": "b7c9d82667971097313514aaaa0939d912730b63cd7a8e2dd25d4999a8659b92",
+        "result": "Exact-SHA R09 semantic review dispatched; still active with zero tokens/no response at capture"
+      },
+      "provider_fallback": "UNKNOWN"
+    }
+  ]
+}

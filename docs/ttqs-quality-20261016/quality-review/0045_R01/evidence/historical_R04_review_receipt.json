@@ -1,0 +1,260 @@
+{
+  "deliverable_id": "0045",
+  "verdict": "FAIL",
+  "inferred_genre": "制度性標準作業程序／訓練資源採購與甄選管理辦法；正文以師資、教材及合作廠商之需求、詢比價、評選、簽約、驗收及後續考核為主。",
+  "inferred_requirement_id": "I10-E01",
+  "inferred_requirement": "由第2至7章的權責分離、採購級距、評選門檻、契約控制與異常處置，以及表2、表6的完整資源取得流程，辨認為訓練資源採購制度分件。官方要求原文：完整文書手冊與紀錄分析相關資料（具體明確紀錄展現課程設計時，有適當的流程進行師資、教材或合作廠商評估選擇，且流程應有適當的辦法進行評估、採購、簽約及後續管理作業流程）。",
+  "requirement_genre_mechanics": false,
+  "title_blind_identification": "PASS",
+  "substantive_duplication": "PASS",
+  "sample_real_truth_boundary": "PASS",
+  "body_locators": [
+    "定位方式：P為word/document.xml中body直屬段落的順序（含空段落），T為body直屬表格順序，R為表格列序（含表頭）；未將這些序號當作Word頁碼。",
+    "P2：文件編號、版本、示範狀態、修訂日期及未生效。",
+    "T1 R2至R6：用途、使用人、使用時機、操作方式與產出。",
+    "第2章P17至P22／T3：角色、利益迴避、職能分離及代理限制。",
+    "第3章P24至P29：啟動條件、內部盤點及輸入表單。",
+    "第4章P32至P35／T2／T6：七階段時點、輸入、責任、控制、例外及輸出。",
+    "第5章P38至P44／T8：採購級距及評選、教材合格門檻。",
+    "第7章P55至P60／T4：流標、同分、棄權及危機通報。",
+    "第8章P63至P68／T5／P116至P123與T10：同一智慧製造班示範。",
+    "第9章P71至P76：卷宗、保存與交接；第10章P79至P84：監測與定期檢討。",
+    "第11章P86至P91：示範非實績、原件與核准界線；第12章P93至P97：相關文件及生效管理。"
+  ],
+  "negative_choice_results": [
+    {
+      "neighbor": "0044｜I09-E04｜所有的討論、 會議或E-mail均留有完整紀錄並經簽核後存檔。",
+      "verdict": "REJECT",
+      "reason": "本件建立採購決策與資源取得制度，沒有以討論、會議或郵件內容、形成時點、簽核及存檔紀錄為核心工作物；P10明確將一般課程規劃溝通另行歸檔。",
+      "body_locator": "第1章P10；T2 R2至R8；第9章P71。"
+    },
+    {
+      "neighbor": "0047｜I10-E02｜相關文件能記錄近年來對於課程之評估、採購、簽約與後續管理作業的檢討及改善。",
+      "verdict": "REJECT",
+      "reason": "P10將歷年制度檢討、成效統計及修訂分析交由獨立文件；第10章是未生效示範制度中的監測規則，沒有近年資料、前後比較或改善效果分析，不能代替該分析報告。",
+      "body_locator": "第1章P10；第10章P79至P84。"
+    },
+    {
+      "neighbor": "0046｜I10-E01｜師資教材廠商評選紀錄表（同一官方要求的作業表單分件）",
+      "verdict": "REJECT",
+      "reason": "本件覆蓋需求至履約結案的制度，P47規定評選表應填欄位，P93另指向專用評選紀錄表；T10只是制度走讀的候選人摘要，不是含個別委員原始評分、完整案別資料與覆核軌跡的單案作業表單。",
+      "body_locator": "第1章P10；第6章P47至P52；第12章P93；T10。"
+    }
+  ],
+  "defects": [
+    {
+      "id": "D01",
+      "issue": "採購50,000元邊界重疊，分支不唯一。",
+      "body_locator": "第5章P38、P41至P42；T8 R2。",
+      "evidence": "P38把小額定為50,000元以下，一般定為50,000元以上至200,000元以下；同段讓恰好50,000元同時適用單一詢價與兩家比價。P41與T8又改成小額未達50,000元，形成不同版本。",
+      "required_resolution": "全篇統一互斥級距，讓50,000元只能走一條核決與詢價分支。"
+    },
+    {
+      "id": "D02",
+      "issue": "師資候選最低人數及小額例外未一致落入程序。",
+      "body_locator": "第4章P32；第5章P38；T5 R3；T6 R3。",
+      "evidence": "P32要求三名以上候選師資；P38的一般採購要求至少二位講師；T5 R3基準亦為至少2名；T6 R3又要求一般與重大採購推薦3位候選講師。T6同列對有效詢價不足2家一律要求延長或專案核准，未排除可單一詢價的小額採購。",
+      "required_resolution": "依採購類別与金額明定候選／報價最低數量，並使不足額的例外規則隨分支適用。"
+    },
+    {
+      "id": "D03",
+      "issue": "滿意度未達85分的處置分支不完整。",
+      "body_locator": "T5 R8；T6 R8；T8 R5；T4 R6。",
+      "evidence": "結案合格與年度目標要求平均滿意度至少85.0分，但異常处置僅針對低於80.0分。80.0至未滿85.0分不合格時應否結案、列管或補救未定義；低於80分的次年處置又分別寫為暫停聘任、原則不續聘，以及連續兩次未達標才暫停一年。",
+      "required_resolution": "補齊80至未滿85分的判定和行動，統一低分／連續未達標的續聘與列管規則。"
+    },
+    {
+      "id": "D04",
+      "issue": "示範比率與平均分數缺少可重算依據，教材指标混用。",
+      "body_locator": "第8章P64、P68；T5 R6至R8；T10；P123。",
+      "evidence": "T10四項分數加總可重算為88.5、81.0、73.5分，權重合計100，排名與80分門檻正確。但94.0%教材得分率、98.5%出席率及30份問卷平均92.4分没有相應分子分母、總分／總應得分或轉換與四捨五入口徑。P123將94.0%改稱教材檢查完成率，不能直接代替教材品質得分率來判驗收。三名委員的評分彙整方法亦未在示範中展示。",
+      "required_resolution": "保留SOP所需的簡短彙總算例，提供相關計算母數、公式與精度；統一教材品質指標名稱，不必複製整份問卷或外部原件。"
+    },
+    {
+      "id": "D05",
+      "issue": "要求的修訂紀錄缺席，正文引用不存在的版本修訂紀錄表。",
+      "body_locator": "第12章P94至P97；全文件T1至T10。",
+      "evidence": "P94稱修訂管制歷程詳載於版本修訂紀錄表，但10張表依序為使用說明、流程、RACI、例外、走讀、步驟、量尺、門檻、權重及評量摘要，沒有修訂紀錄。首頁修訂日期已補齊，不能代替Blueprint另要求的相關文件與修訂紀錄。",
+      "required_resolution": "提供最精簡的示範版本修訂紀錄，或指向實際存在的受控修訂紀錄；不得虛構已核准。"
+    },
+    {
+      "id": "D06",
+      "issue": "同一程序、門檻與案例重複敘述，18頁篇幅有可具體刪併的內容。",
+      "body_locator": "第4章P32至P35、T2與T6；第5章P38至P44及T7至T9；第8章P63至P68、T5、P116至P123及T10。",
+      "evidence": "七階段程序先長段敘述，再由兩張大表重列；智慧製造案例先逐步長述，再由T5重述，又以完整示範和T10重列。每章長段後多附重複短句，且門檻因重述產生版本矛盾。不是僅因18頁就判失敗，而是同一資訊重複占用篇幅。",
+      "required_resolution": "保留一套可操作主流程和一套完整走讀，刪併不增加新用途的段落與表格。"
+    },
+    {
+      "id": "D07",
+      "issue": "部分現行替換指引把品質門檻／目標與實測結果混為一談。",
+      "body_locator": "第5章P39、P44；第10章P79、P83；現行receipt的0045-FE1-008、0045-FE1-018。",
+      "evidence": "FE1-008定位為教材合格門檻85.0%，替換指引卻要求以實際教材得分率替換；FE1-018定位為履約異常率管制上限3.0%，替換指引卻要求以年度實際異常統計填列。實測結果不應覆寫事前合格門檻或目標，否則失去可比較的控制準則。角色本身合理，替換證據類型與被替換事實不合理。",
+      "required_resolution": "門檻與目標由真實核定規範／品質目標取代，另以審查或統計原件替換實測結果；兩類事實分開。"
+    },
+    {
+      "id": "D08",
+      "issue": "示範制度把合成人數、欄位及保存期限表述為法定／政府或TTQS要求，支持範圍不足。",
+      "body_locator": "第3章P24；第6章P46；第9章P69、P72、P74；現行receipt的0045-FE1-009、0045-FE1-015。",
+      "evidence": "正文稱法定前置條件、法定欄位與7年法定保存，P72援引政府會計法規與TTQS追溯要求；receipt將小組人數與保存期限列為SAMPLE/SYNTHETIC。receipt所列官方I10-E01原文没有提供這些具體法律年限或法定組成。此處不作外部法律正誤判斷；缺失是以合成制度規則宣稱已有外部法定權威。",
+      "required_resolution": "無核實依據的期限與人數改稱示範內部管理規則；若保留法定表述，需有適用且可核對的法源支持。"
+    }
+  ],
+  "readability_30s": "PASS",
+  "association_usable": false,
+  "committee_professional": false,
+  "no_unnecessary_content": false,
+  "first_page_30s_complete": "PASS",
+  "document_control": "PASS",
+  "layout_density_review": "PASS",
+  "evaluator_facing": false,
+  "reviewed_sha256": "aebdeeef7da6944c5bb092f6e23c7f0825357e6866006e32971b3c8d8c81b535",
+  "prior_defect_resolution": {
+    "feedback_sha256": "145da139615f86e7fece2042804064ad526cd6b6c9ae5f294cc726a44268c427",
+    "status": "PASS",
+    "items": [
+      {
+        "issue": "DOCUMENT_CONTROL_STRIP_INCOMPLETE:revision_date",
+        "status": "PASS",
+        "body_locator": "正文P2，標題下的文件控制列。",
+        "evidence": "文件編號：TTQS-0045｜版本：1.0｜狀態：示範資料｜非本會實際紀錄｜修訂日期：2026-10-05｜生效日期：未生效。修訂日期已明確出現，與生效狀態分開；本項回歸缺失已解決。"
+      }
+    ]
+  },
+  "promotion_question_answers": [
+    {
+      "question": "國中生能否30秒知道這是什麼、誰用、何時、怎麼用與產出？",
+      "answer": "YES",
+      "evidence": "T1 R2至R6以五個明確欄位交代用途、角色、開班前時機、七步驟和產出；P2與P6交代示範未生效。"
+    },
+    {
+      "question": "協會人員能否直接用於日常作業？",
+      "answer": "NO",
+      "evidence": "D01至D04的級距、候選數量、未達標處置及計算口徑仍不能一致執行。未生效的示範狀態本身不是本項失敗理由。"
+    },
+    {
+      "question": "委員是否會看到專業機構文件而非AI工廠產物？",
+      "answer": "NO",
+      "evidence": "正文没有工廠路徑、SHA、fact_id或receipt資訊，形式已像制度文件；但D05的不存在修訂表、D08的未支持法定權威及D06重複敘述，仍不足以認定為專業可抽查的機構成品。"
+    },
+    {
+      "question": "是否沒有不必要篇幅、重複說明或內部工程資訊？",
+      "answer": "NO",
+      "evidence": "未見內部工程資訊；D06定位出具體三重程序及示範重述，違反最短合理篇幅要求。"
+    }
+  ],
+  "first_page_use_context_assessment": "PASS：標題後P2控制列及T1五個用途欄位具備用途、使用人、時機、方式與產出，並明示示範非實際紀錄；不以表頭存在代替後續操作內容的實質檢查。",
+  "document_control_assessment": "PASS：P1文件名稱、P2編號TTQS-0045、版本1.0、示範非實際紀錄、修訂日期2026-10-05及未生效齊備；没有虛構核准人或簽名。所讀本件權威來源未提供可核實協會全名，不另推造。修訂紀錄缺失另列D05。",
+  "layout_density_assessment": {
+    "status": "PASS",
+    "basis": "僅採用使用者提供、綁定同一SHA的hidden Word pagination readback；未啟動Word/COM或產生PDF/PNG。",
+    "pages": 18,
+    "reported_status": "PASS_LAYOUT",
+    "blank_pages": [],
+    "sparse_pages": [],
+    "word_visible": false,
+    "error": null,
+    "limitation": "所提供資料未含逐頁文字預覽或頁面影像；不宣稱已逐頁視覺檢查。沒有具體裁切或破表異常可支持另行繪製頁面。版面密度PASS不免除D06的語意重複與篇幅檢查。"
+  },
+  "substantive_duplication_assessment": {
+    "status": "PASS",
+    "static_report": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\QA\\0045__訓練資源採購與甄選管理辦法.docx.static.json",
+    "candidate_sha256": "aebdeeef7da6944c5bb092f6e23c7f0825357e6866006e32971b3c8d8c81b535",
+    "peer_docs_compared": 35,
+    "findings": [],
+    "note": "精確static報告substantive_duplication_screen.status為PASS。本件內部重述另評D06，不推翻跨文件篩檢結果。"
+  },
+  "synthetic_traceability_assessment": {
+    "current_receipt_fact_count": 20,
+    "current_register_rows_with_receipt_fact_id": 0,
+    "register_filter": "以CSV實際欄位fact_id篩選receipt中的0045-FE1-001至0045-FE1-020；本次沒有符合列，未使用任何歷史列。",
+    "ownership_note": "已讀指定receipt與register。receipt提供現行值、章節定位、替換行動與責任角色；不要求在DOCX重複完整簿記。中央register精确收錄與字段一致性仍屬Static Gate，不以他件或舊列補證，也不將receipt視為REAL執行原件。",
+    "locator_checks": [
+      {
+        "facts": [
+          "0045-FE1-001",
+          "0045-FE1-002",
+          "0045-FE1-003"
+        ],
+        "body_locator": "第8章P63至P66，另P119",
+        "assessment": "課程名稱、120,000元與外聘師資及教材需求相符；真實課程計畫、預算簽呈、契約標的及各對應承辦／主管角色合理。"
+      },
+      {
+        "facts": [
+          "0045-FE1-004",
+          "0045-FE1-005",
+          "0045-FE1-006",
+          "0045-FE1-007",
+          "0045-FE1-008"
+        ],
+        "body_locator": "第5章P38至P44",
+        "assessment": "現行值可定位；財務核決表／首長授權作金額門檻替換依據合理，但小額邊界前後矛盾見D01。師資合格線需正式決議；教材門檻替換為實測得分率的語意錯誤見D07。"
+      },
+      {
+        "facts": [
+          "0045-FE1-009"
+        ],
+        "body_locator": "第2章P18",
+        "assessment": "至少3人且單數的組成可定位；訓練主管與真實核派名冊合理，但合成規則稱法定組成的權威不足見D08。"
+      },
+      {
+        "facts": [
+          "0045-FE1-010",
+          "0045-FE1-011",
+          "0045-FE1-012"
+        ],
+        "body_locator": "第8章P64、P67，T10 R2至R4",
+        "assessment": "A88.5、B81.0、C73.5及正備取相符；分項加總正確。真實委員原始評審總表及召集人責任合理。"
+      },
+      {
+        "facts": [
+          "0045-FE1-013"
+        ],
+        "body_locator": "第4章P32",
+        "assessment": "開課日前7個工作天可定位；契約交付日期及課程企劃承辦員合理。其他重述省略工作天，正式執行時應统一時間單位。"
+      },
+      {
+        "facts": [
+          "0045-FE1-014"
+        ],
+        "body_locator": "第8章P64、P68",
+        "assessment": "平均滿意度92.4可定位；實際L1統計報告及承辦員合理，正文缺可重算彙總依據見D04。"
+      },
+      {
+        "facts": [
+          "0045-FE1-015"
+        ],
+        "body_locator": "第9章P72至P75",
+        "assessment": "7年合約／憑證和5年評審保存可定位，採購行政點交責任合理；實際造冊只能證明保管作業，不能證明所聲稱的外部法定年限，見D08。"
+      },
+      {
+        "facts": [
+          "0045-FE1-016",
+          "0045-FE1-017",
+          "0045-FE1-018"
+        ],
+        "body_locator": "第10章P79至P83",
+        "assessment": "95%準時、85分滿意度及3%異常率上限可定位；前兩項以核定品質目標替換及品質管理／主管責任合理。3%管制目標以實際異常率替換的錯誤見D07。"
+      },
+      {
+        "facts": [
+          "0045-FE1-019"
+        ],
+        "body_locator": "第7章P56、P60",
+        "assessment": "一般48小時、重大24小時可定位；真實通報紀錄與承辦員合理。"
+      },
+      {
+        "facts": [
+          "0045-FE1-020"
+        ],
+        "body_locator": "第8章P64，另T5 R5、P122",
+        "assessment": "TR-CONT-2026-003可定位；正式收發用印合約字號與行政採購責任合理；仅为示範字號，不作真實契約證據。"
+      }
+    ],
+    "complete_sample_assessment": "有完整七階段示範走讀與候選分項評分，非空白表單；但D04的比率與平均值算例不足，以及D01至D03的分支矛盾，仍未達前後一致、可直接運作的完整SAMPLE。",
+    "real_boundary_assessment": "P2、P6、P86至P91與P118明確示範非本會實際紀錄、未生效及需要真實原件；示範中的簽約、用印和成功結案不被當作本會REAL活動證明。外部法定權威的支持問題另列D08。"
+  },
+  "controlling_revision": "WIN10_ANTIGRAVITY_QUOTA_GOVERNED_FACTORY_20261004_R03",
+  "review_scope": "Fresh exact-SHA local semantic/usability/evaluator review；静態字段、OOXML、字体和來源精确綁定屬Static Gate；沒有修DOCX、無渲染、無網路、無Word/COM、無GUI、無派出子代理。",
+  "review_worker_id": "codex_cross_review_0045_20261005_051351",
+  "review_owner": "CODEX_FRESH_ISOLATED_REVIEWER"
+}

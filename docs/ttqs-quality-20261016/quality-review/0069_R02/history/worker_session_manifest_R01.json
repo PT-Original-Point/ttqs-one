@@ -1,0 +1,51 @@
+{
+  "doc_id": "0069",
+  "history_revision": "R01 writer outputs, preserved as unqualified drafts",
+  "route": "OpenCode CLI v2.0.29",
+  "computer_use_used": false,
+  "attempts": [
+    {
+      "attempt": 1,
+      "session_id": "ses_eafcc0d12ffeLf7dznQ5IZhCTV",
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "result": "SUCCEEDED",
+      "created_local": "2026-10-19T02:09:04+08:00",
+      "body_written_local": "2026-10-19T02:12:30+08:00",
+      "body_file": "writer_attempt01_body.md",
+      "body_bytes": 27912,
+      "body_sha256": "e2fa5c2a3337b4133824e86bbc154ecd4436808ec4bf1877e53ff726c6787dd4",
+      "tokens": {
+        "input": 49152,
+        "output": 11303,
+        "reasoning": 20918,
+        "cache_read": 117504,
+        "cache_write": 0
+      }
+    },
+    {
+      "attempt": 2,
+      "session_id": "ses_eafcb4b13ffe4UnPIy0SrCZptV",
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "result": "SUCCEEDED",
+      "created_local": "2026-10-19T02:09:53+08:00",
+      "body_written_local": "2026-10-19T02:11:50+08:00",
+      "body_file": "writer_attempt02_body.md",
+      "body_bytes": 29225,
+      "body_sha256": "5c9f09ea540c278265a6338c81a024ad9b1174c74f2e5d4f9c12964244252772",
+      "tokens": {
+        "input": 20708,
+        "output": 10948,
+        "reasoning": 6168,
+        "cache_read": 54528,
+        "cache_write": 0
+      }
+    }
+  ],
+  "overlap_local": "2026-10-19 02:09:53 to 02:11:50 Asia/Taipei",
+  "cause": "wrapper error misread as completed failure; second writer dispatched before first OpenCode session completion; both wrote same path",
+  "winning_file": "attempt 1 wrote last at 02:12:30; both full bodies are preserved",
+  "classification": "orchestration/session-state and same-path contention, not model-provider failure",
+  "repaired_action": "one-writer check; inspect session list/export after wrapper error before any retry",
+  "current_route_state": "no active 0069 Writer at time R02 dispatch; only one R02 Writer dispatched and completed",
+  "raw_reasoning_included": false
+}

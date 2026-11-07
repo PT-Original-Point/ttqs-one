@@ -1,0 +1,24 @@
+{
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0128-I19-E17-CODEX-BOUNDED-REPAIR-R02",
+  "doc_id": "0128",
+  "official_requirement_id": "I19-E17",
+  "input_sha256": "0dcbfd8fbf2c4c8dac74484780e2fa831216d566c5b551add64d0d972450a5a2",
+  "output_sha256": "0b28267a91ad98475c42002c4d80fbe2ec844feb34293c95f2d5edfb6941036b",
+  "repair_scope": [
+    "removed unsupported sample event/course/system/sampling assertions",
+    "removed unsupported thresholds and significance language",
+    "set unverified REAL evidence states to UNKNOWN_UNTIL_SOURCE",
+    "replaced decision rules with descriptive sign-based classifications and source/ comparability HOLD checks",
+    "retained all six supplied sample rows and arithmetic",
+    "kept REAL blank form distinctly labeled"
+  ],
+  "result": "TARGETED_REPAIR_APPLIED_NOT_INDEPENDENTLY_ACCEPTED",
+  "performed_at_local": "2026-10-24T18:41:56.049339+08:00",
+  "remaining_review": [
+    "semantic reviewer exact DOCX SHA",
+    "DOCX technical package",
+    "Word render and every-page visual inspection",
+    "public GitHub raw-byte readback"
+  ]
+}

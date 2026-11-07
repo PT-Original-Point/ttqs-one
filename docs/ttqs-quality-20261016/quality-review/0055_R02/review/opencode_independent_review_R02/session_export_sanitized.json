@@ -1,0 +1,111 @@
+{
+  "info": {
+    "id": "ses_eb62fd5b9ffej666kK7HhyqpCA",
+    "projectID": "dabde63a0c1352871a938f25dd682407d3b42064",
+    "model": {
+      "id": "glm-5.3-flash-free",
+      "providerID": "opencode",
+      "variant": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 93557,
+      "output": 21267,
+      "reasoning": 0,
+      "cache": {
+        "read": 0,
+        "write": 0
+      }
+    },
+    "outcome": "succeeded",
+    "time": {
+      "created": 1792239741773,
+      "updated": 1792240006627,
+      "idle": 1792240006633
+    },
+    "title": "[redacted:session-title:ses_eb62fd5b9ffej666kK7HhyqpCA]",
+    "subpath": "docs/ttqs-quality-20261016/quality-review/0055_R02",
+    "location": {
+      "directory": "/[redacted:session-directory:ses_eb62fd5b9ffej666kK7HhyqpCA]"
+    }
+  },
+  "messages": [
+    {
+      "id": "msg_149d02b610015rNwYhqXVee9q7",
+      "time": {
+        "created": 1792239741843
+      },
+      "text": "[redacted:text:msg_149d02b610015rNwYhqXVee9q7]",
+      "files": [
+        {
+          "data": "",
+          "mime": "application/octet-stream",
+          "source": {
+            "type": "inline"
+          },
+          "name": "[redacted:file-name:0]"
+        }
+      ],
+      "type": "user"
+    },
+    {
+      "id": "msg_149d02ba3001lkIyuCj0yWJ91D",
+      "time": {
+        "created": 1792239741877,
+        "streamed": 1792240006186,
+        "completed": 1792240006627
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "glm-5.3-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_149d02ba3001lkIyuCj0yWJ91D]",
+          "state": {
+            "redacted": "reasoning-state:msg_149d02ba3001lkIyuCj0yWJ91D"
+          },
+          "time": {
+            "created": 1792239748407,
+            "completed": 1792240006177
+          }
+        },
+        {
+          "type": "text",
+          "text": "[redacted:text:msg_149d02ba3001lkIyuCj0yWJ91D]"
+        }
+      ],
+      "snapshot": {
+        "start": "73b70b3fc08a3b7aac4800d22eb3531bd94ed81e",
+        "end": "71d89102f86a5adca0cc144fc0c56ad61dea2147",
+        "files": [
+          "docs/ttqs-quality-20261016/quality-review/0055_R02/review/opencode_independent_review_R02/stdout.json"
+        ]
+      },
+      "finish": "stop",
+      "rawFinish": "stop",
+      "cost": 0,
+      "tokens": {
+        "input": 93557,
+        "output": 21267,
+        "reasoning": 0,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_149d435e9001AGsYQjJ6IYivVu",
+      "time": {
+        "created": 1792240006633
+      },
+      "type": "idle",
+      "outcome": "succeeded"
+    }
+  ]
+}

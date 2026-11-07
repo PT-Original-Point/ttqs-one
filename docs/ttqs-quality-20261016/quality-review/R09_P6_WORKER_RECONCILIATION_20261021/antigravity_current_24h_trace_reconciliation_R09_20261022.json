@@ -1,0 +1,79 @@
+{
+  "receipt_id": "TTQS_R09_ANTIGRAVITY_CURRENT_24H_TRACE_RECONCILIATION_20261022",
+  "observed_at_tpe": "2026-10-22T17:43:20+08:00",
+  "window_start_tpe": "2026-10-21T17:43:20+08:00",
+  "window_end_tpe": "2026-10-22T17:43:20+08:00",
+  "scoped_search": [
+    "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME recent files and prior raw attempt ledger",
+    "C:\\Users\\J\\AppData\\Local\\agy (only bin executable observed)",
+    "C:\\Users\\J\\AppData\\Roaming\\agy (no log directory observed)",
+    "live Win32 process snapshot (no agy.exe observed)"
+  ],
+  "verified_retained_attempt_receipts_in_current_window": 0,
+  "exact_actual_cli_invocation_count": "UNKNOWN_NO_DURABLE_CURRENT_WINDOW_PROCESS_INVOCATION_LEDGER",
+  "active_agy_processes_observed": 0,
+  "model_catalog_query": "agy models returned gemini-3.8-flash-high among listed choices; this proves catalog availability only",
+  "cli_authentication": "UNKNOWN",
+  "actual_serving_model": "UNKNOWN",
+  "fallback": "UNKNOWN",
+  "quota_delta": "UNKNOWN",
+  "billing": "UNKNOWN",
+  "latest_prior_retained_ledger": {
+    "receipt_id": "TTQS-ANTIGRAVITY-CLI-24H-ATTEMPT-LEDGER-20261021",
+    "sha256": "da17467ae6520daed7a931af06ca669bdaa2cd2faa27078827656ea0e2d64278",
+    "window_end_tpe": "2026-10-21T19:33:20.905137+08:00",
+    "attempt_count": 3,
+    "attempts": [
+      {
+        "attempt": "R01",
+        "start_local": "2026-10-21T11:59:05.130000+08:00",
+        "end_local": "2026-10-21T11:59:06+08:00",
+        "exit_code": 2,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "requested_model_in_task": "gemini-3.8-flash-high",
+        "actual_model_id": "UNKNOWN (CLI stdout has no model/provider field)",
+        "provider_identity": "UNKNOWN",
+        "quota_or_billing": "UNKNOWN",
+        "error": "--print treated --model as prompt; intended model/prompt arguments not accepted; empty stdout."
+      },
+      {
+        "attempt": "R02",
+        "start_local": "2026-10-21T11:59:24.220000+08:00",
+        "end_local": "2026-10-21T11:59:26+08:00",
+        "exit_code": 2,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "requested_model_in_task": "gemini-3.8-flash-high",
+        "actual_model_id": "UNKNOWN (CLI stdout has no model/provider field)",
+        "provider_identity": "UNKNOWN",
+        "quota_or_billing": "UNKNOWN",
+        "error": "--print-timeout value 480000 lacked duration unit; empty stdout."
+      },
+      {
+        "attempt": "R03",
+        "start_local": "2026-10-21T12:03:32+08:00",
+        "end_local": "2026-10-21T12:03:32+08:00",
+        "exit_code": 0,
+        "stdout_bytes": 71657,
+        "stdout_sha256": "f069e10b6a72498c1df2b5985a0015deb033d9d4b218d8445d9aeeca009c80b8",
+        "requested_model_in_task": "gemini-3.8-flash-high",
+        "actual_model_id": "UNKNOWN (CLI stdout has no model/provider field)",
+        "provider_identity": "UNKNOWN",
+        "quota_or_billing": "UNKNOWN",
+        "error": null
+      }
+    ],
+    "all_retained_attempt_times_before_current_rolling_24h_start": true
+  },
+  "overlapping_prior_reconciliation": {
+    "receipt_id": "TTQS-ANTIGRAVITY-CLI-ROLLING-24H-RECONCILIATION-R09-P6-20261021",
+    "sha256": "a2b89dc5e092d62dd4f2aa361862b722e165c7d82a330d141db4b7ab1a5ae154",
+    "window_end_tpe": "2026-10-21T22:10:07.745228+08:00",
+    "attempt_count": 3,
+    "latest_attempt_end_tpe": "2026-10-21T12:03:32+08:00",
+    "all_retained_attempts_before_current_rolling_24h_start": true
+  },
+  "decision": "NO_NEW_ANTIGRAVITY_DISPATCH_IN_THIS_WINDOW: current eligible document stages already have stable artifacts or a separate active lane; no new Antigravity result could be counted as Gemini without current auth/model/provider proof. No quota-consuming probe was run.",
+  "status": "NO_VERIFIED_CURRENT_WINDOW_ATTEMPTS; ROUTE_IDENTITY_AND_ACCOUNT_STATE_UNKNOWN"
+}

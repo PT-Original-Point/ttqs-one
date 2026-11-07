@@ -1,0 +1,36 @@
+{
+  "schema": "ttqs.r07_scoped_recovery_execution_receipt.v1",
+  "command": "TTQS_ONE_20261021_DEEP_AUDIT_SCOPED_RECOVERY_R07",
+  "r07_sha256": "9241c5e2047373e3fe669ed278977107df182a0979e17d51fb68d7d8e8582f2a",
+  "pr92_head_before": "3308da622ed43f2bb37f3f757e4744ae359c43a6",
+  "findings": {
+    "F01": "VERIFIED: new OpenCode review returns PASS_TEXT_ONLY on the exact DOCX-derived R13 body; old R12-bound return receipt is preserved and not promoted.",
+    "F02_F03": "0098 human-body/path issues confirmed in sidecar, R10 body clean; DOCX unchanged.",
+    "F04": "VERIFIED: append-only identity correction R02 maps I18-E03 to project index104 and official serial not printed; all retained stale-099 metadata paths are enumerated. DOCX unchanged.",
+    "F05": "One bounded OpenCode CLI call useful PASS_TEXT_ONLY; serving model UNKNOWN.",
+    "F06": "R07 visual evidence bound and Q12 defect confirmed; R08 narrow repair but Word export blocked.",
+    "F07_F08": "0099 R02 8x2x5=80 verified; R17 built, R01 not redone.",
+    "F09": "Short incremental receipts; no nested report.",
+    "F10": "SAMPLE/SYNTHETIC retained.",
+    "F11": "No Antigravity dispatch; Gemini identity UNKNOWN.",
+    "F12": "VERIFIED body-only distinction: 0092 I17D-E06 requests/authenticates a third-party work/cooperation letter; 0096 I18-E03 records voluntary target-customer/learner feedback about training function. Shared real original UNKNOWN; no Word changed."
+  },
+  "active_writer": "NONE; long-lived OpenCode service is not an active writer.",
+  "candidate_sha": {
+    "0094_R18": "ecf9717cdc7f7785ed6c7b18b9dd8e29af21a5b2641e13acf3b4b813371b5e18",
+    "0096_R13": "6ece53befed3ecb1b42e523b80da80decd33b0a7d55e4e1fe75ddf79b905d445",
+    "0097_R07": "026288491716d626a7bcac14a515313da7846f5a204703da9bad3a9010edf214",
+    "0097_R08": "daf85320fc7b2304da353a0c41d3bf32d585f2edfb3349938bff877dd0f5a2cb",
+    "0098_R10": "6310a71f6fb540b22572f823e7becb7a8198c12dc068eebff2794599e5a88152",
+    "0099_R17": "293be2dc0e3e0162fa368272851baed27e92990b4ac1871228ec37b51546776b"
+  },
+  "S10": "PASS 10/10 disposable cases",
+  "S11": "metrics recorded; invoice/token fields UNKNOWN",
+  "github_sync": {
+    "state": "PENDING_NEW_0096_REVIEW_SUPPLEMENT",
+    "last_verified_head": "e3580b736e57d6f042a5f86f41457a9fba65cac2",
+    "new_supplement": "0096_R13_R07_FRESH_REVIEW_20261021",
+    "candidate_sha256": "6ece53befed3ecb1b42e523b80da80decd33b0a7d55e4e1fe75ddf79b905d445",
+    "readback_required": true
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "work_id": "TTQS-0129-I19-E18-INDEPENDENT-TECHNICAL-QA-R03",
+  "observed_at": "2026-10-24T19:47:41.753272+08:00",
+  "doc_id": "0129",
+  "official_requirement": "I19-E18",
+  "candidate_state": "CANDIDATE",
+  "candidate_sha256": "73c856a6c31b9997e084b443f30bb0eadb1763320d2c7818626e40d431fc848a",
+  "candidate_bytes": 61464,
+  "manuscript_sha256": "173b168ab2dd75a6dbe768d01f48780358edaed755e45324df68235c21a26264",
+  "prior_R01C_manuscript_sha256": "8aeaf775860dedfc0b2a85c90f5f5cafe75ae7d6c53824c0406c3f0ac6568104",
+  "manuscript_diff_lines_including_headers": 5,
+  "manuscript_diff_preview": [
+    "--- \n",
+    "+++ \n",
+    "@@ -5 +5 @@\n",
+    "-**版次編號**：R01  ",
+    "+**版次編號**：R03（版面與可讀性修復）  "
+  ],
+  "builder_receipt_sha256": "38583711df01677c485a5eabdca944357c7390b3f58c09dfdd40e9bb57131bda",
+  "prior_content_qa_sha256": "2721345f88526cb4f35980aa2308f962271fa57d51fd1f900d19c24b6557462c",
+  "math_qa_input_sha256": "873d03688ded0723fd988e2cd4a07ca0aaa790cbf4e46f22bf77873c2c31124c",
+  "sample_csv_sha256": "8ee4e3039354f8d1bb941d5de5bbee2ff8b4e26a5a5212ecd7fb263eae75f8bb",
+  "technical_checks": {
+    "python_docx_open": "PASS",
+    "ooxml_zip_test": "PASS",
+    "zip_bad_member": null,
+    "zip_members": 19,
+    "tables": 8,
+    "sections": 9,
+    "paragraphs": 217,
+    "explicit_body_min_pt": 10.5,
+    "explicit_table_min_pt": 9.5,
+    "raw_markdown_heading_markers_in_paragraphs": 0
+  },
+  "manuscript_equivalence": "MATERIAL_DIFF_REQUIRES_REVIEW",
+  "independent_csv_recalculation": {
+    "periods": {
+      "SAMPLE_PRE": {
+        "n": 80,
+        "first_pass": 55,
+        "rework": 25,
+        "workdays": 400,
+        "cost_ntd": 200,
+        "evidence_statuses": [
+          "SAMPLE/SYNTHETIC"
+        ],
+        "first_pass_rate_pct": 68.75,
+        "rework_rate_pct": 31.25,
+        "mean_workdays": 5.0,
+        "cost_per_case_ntd": 2.5
+      },
+      "SAMPLE_POST": {
+        "n": 80,
+        "first_pass": 66,
+        "rework": 14,
+        "workdays": 265,
+        "cost_ntd": 112,
+        "evidence_statuses": [
+          "SAMPLE/SYNTHETIC"
+        ],
+        "first_pass_rate_pct": 82.5,
+        "rework_rate_pct": 17.5,
+        "mean_workdays": 3.3125,
+        "cost_per_case_ntd": 1.4
+      }
+    },
+    "S_B03": {
+      "SAMPLE_PRE": {
+        "n": 10,
+        "first_pass": 5
+      },
+      "SAMPLE_POST": {
+        "n": 10,
+        "first_pass": 4
+      }
+    },
+    "derived": {
+      "first_pass_rate_change_pp": 13.75,
+      "mean_workdays_change_pct": -33.75,
+      "cost_change_pct": -44.0
+    },
+    "source_rows": 160,
+    "source_row_statuses": [
+      "SAMPLE/SYNTHETIC"
+    ]
+  },
+  "recalc_matches_prior_math_qa": true,
+  "visual_QA": "BLOCKED_TIMEOUT_NO_PDF",
+  "semantic_QA": "PASS_TEXT_ONLY",
+  "formal_acceptance": "NOT_GRANTED",
+  "REAL_evidence": "UNKNOWN_UNTIL_SOURCE",
+  "status": "PASS_STATIC_AND_MATH_ONLY",
+  "semantic_review": {
+    "verdict": "PASS_TEXT_ONLY",
+    "candidate_docx_sha256": "73c856a6c31b9997e084b443f30bb0eadb1763320d2c7818626e40d431fc848a",
+    "extracted_text_sha256": "1b848e5c826763f09ecf6513ebbf6ea8b66c64b26e25413f9c131d6e1fcda757",
+    "review_response_sha256": "132a5735562029662c425c115667df7bdd371370b5b8f4a487a513a3172f10e6",
+    "review_stdout_sha256": "db2b51b17ebc38264039fb11c3063b420cfd31eadb63f5767c242da60df2ec94",
+    "review_receipt_sha256": "b7a2ed63919b1c073adf26fce7e9421faf851a93213c9286972f27fcc6c6841f",
+    "review_request_sha256": "4eee4a093397f6c235f53fe5f1124013d044cb336d064e70238b122dc00bd43d",
+    "reviewer": "Antigravity CLI fresh conversation; independent of builder conversation",
+    "conversation_id": "b2127ed1-7dd0-47ed-a025-d56378251129",
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model": "UNKNOWN",
+    "scope": "TEXT_ONLY semantic, usability and arithmetic; no visual inspection",
+    "reported_major_findings": 0,
+    "reported_moderate_findings": 0,
+    "reported_informational_findings": 2,
+    "remaining_visual_observation": "Verify table/caption adjacency if and when Word-native render becomes available",
+    "review_usage": {
+      "input_tokens": 19879,
+      "output_tokens": 15005,
+      "thinking_tokens": 10021,
+      "cache_read_tokens": 0,
+      "total_tokens": 34884
+    },
+    "receipt_file_hashes_reconciled": true
+  },
+  "overall_candidate_status": "CANDIDATE_NOT_ACCEPTED_VISUAL_GATE_BLOCKED",
+  "local_original_receipt_sha256": "50d1955297ce9244f3ee8d31d789a718b3aa0e76f87fe4e6a76b12ca35d09f68",
+  "public_sanitization": "Absolute local paths removed; exact candidate and evidence hashes retained."
+}

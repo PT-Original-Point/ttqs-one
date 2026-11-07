@@ -1,0 +1,39 @@
+{
+  "schema": "ttqs-one-github-raw-byte-readback-v1",
+  "status": "VERIFIED_RAW_BYTE_READBACK",
+  "project_id": "TTQS_ONE",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "doc_id": "0103",
+  "requirement_id": "I18-E10",
+  "candidate_state": "CANDIDATE",
+  "candidate_revision": "R25",
+  "candidate_sha256": "0968cee79b351bf2293e7eee78b35adf9a3fbdede364dc8e660e632d59609d92",
+  "semantic_review_verdict": "PASS_DELTA_WITH_INHERITED_R24_BASELINE",
+  "semantic_review_scope": "R24 full-body review found only one cover provenance blocker; R25 exact-SHA PASS_DELTA reviewed the repaired paragraph. Deterministic check confirms all other paragraphs and all tables unchanged.",
+  "reviewer": "reviewer_name=W1 OpenCode v2 CLI; separate R24 full-baseline and R25 exact-SHA delta sessions; reviewer_role=Independent semantic evidence composed with deterministic exact-byte scope verification",
+  "reviewer_model": "UNKNOWN_UPSTREAM_SERVING_IDENTITY",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "sample_boundary": "SAMPLE/SYNTHETIC only",
+  "readback_commit": "7071ee2e510c5ea16caf8883057cd3e46c87b765",
+  "head_after": "7071ee2e510c5ea16caf8883057cd3e46c87b765",
+  "observed_at_local": "2026-11-01T01:10:07+08:00",
+  "readback_method": "Fetched the exact DOCX at the immutable live branch commit via GitHub connector as base64; Node crypto computed remote SHA-256 and Git blob SHA-1 from decoded bytes, matching the Windows candidate and byte count.",
+  "expected_file_count": 1,
+  "verified_file_count": 1,
+  "errors": [],
+  "files": [
+    {
+      "doc_id": "0103",
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0103_I18-E10_R25_20261031/candidate/0103__I18-E10__\u611f\u8b1d\u51fd\u53d6\u5f97\u8207\u771f\u507d\u67e5\u6838\u5de5\u4f5c\u7d00\u9304_R25.docx",
+      "local_sha256": "0968cee79b351bf2293e7eee78b35adf9a3fbdede364dc8e660e632d59609d92",
+      "remote_sha256": "0968cee79b351bf2293e7eee78b35adf9a3fbdede364dc8e660e632d59609d92",
+      "local_bytes": 112886,
+      "remote_bytes": 112886,
+      "local_git_blob_sha1": "895899a535df9722377c428fee136c5e50b7f973",
+      "remote_git_blob_sha1": "895899a535df9722377c428fee136c5e50b7f973",
+      "exact_byte_match": true
+    }
+  ]
+}

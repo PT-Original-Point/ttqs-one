@@ -1,0 +1,91 @@
+{
+  "receipt_id": "TTQS_ONE_0105_R07_WORKER_RETURN_ADOPTION_20261022",
+  "observed_at_tpe": "2026-10-22T16:29:05+08:00",
+  "doc_id": "0105",
+  "official_requirement_id": "I18-E13",
+  "project_blueprint_index": 114,
+  "official_checkbox_serial": "NOT_ASSERTED",
+  "source_packet_sha256": "166338523fad5550511cd5f16fd7b347b28a23ef295fdc9396c21bb8728ae99e",
+  "unique_blueprint_sha256": "0a457287fcc005e13408ad85763f4e7065dd1915f3f9b11757928c64715cb826",
+  "writer": {
+    "worker": "OpenCode CLI v2",
+    "cli_version": "2.0.32",
+    "selected_model": "opencode/mimo-v2.6-flash-free",
+    "actual_serving_model": "UNKNOWN",
+    "provider_billing": "UNKNOWN; native local DB cost field reports 0.0",
+    "attempts": [
+      {
+        "attempt": 1,
+        "pid": 70476,
+        "native_session_id": null,
+        "cli_exit_code": 1,
+        "result": "CLI invocation syntax error; no model session/manuscript."
+      },
+      {
+        "attempt": 2,
+        "pid": 72520,
+        "native_session_id": "ses_e9d8ad904ffem4gPIhUbjbWV4U",
+        "cli_exit_code": 0,
+        "result": "Native session succeeded but did not return an adoptable manuscript; no adoption.",
+        "usage_native_db": {
+          "input": 106166,
+          "output": 4592,
+          "reasoning": 2299,
+          "cache_read": 102400,
+          "cache_write": 0,
+          "local_cost": 0.0
+        }
+      },
+      {
+        "attempt": 3,
+        "pid": 65076,
+        "native_session_id": "ses_e9d858be9ffeR53uwL0FL4qS3v",
+        "native_session_outcome": "succeeded",
+        "outer_cli_exit_code": "UNKNOWN",
+        "result": "Complete raw manuscript recovered from native session; adopted as source for deterministic cleanup.",
+        "usage_native_db": {
+          "input": 200267,
+          "output": 54315,
+          "reasoning": 19783,
+          "cache_read": 2823808,
+          "cache_write": 0,
+          "local_cost": 0.0
+        }
+      }
+    ],
+    "adopted_raw_manuscript": {
+      "path": "writer/opencode_writer_manuscript_0105_R07_raw.md",
+      "sha256": "31b7de140f4cd93169c709f30e111ca0994267b59fa6a76ec06ccc1fda5cea12",
+      "bytes": 127585,
+      "stdout_session_export_path": "writer/opencode_writer_0105_R07_attempt03_stdout.jsonl",
+      "stdout_session_export_sha256": "3dbaf71edb9d4ce377e34fb5024466820533f23ee5f1f20339e701780db4daeb"
+    },
+    "released_manuscript": {
+      "path": "writer/opencode_writer_manuscript_0105_R07_release.md",
+      "sha256": "d580c7e14c83b09cd2c0c4608eabdf65465ef9d7856e77ac019b9195a8418a86",
+      "bytes": 125726,
+      "transformation": "deterministic removal of internal revision/Finding markers; source/blueprint hashes separated; raw manuscript preserved"
+    },
+    "candidate_docx": {
+      "path": "candidate/0105_I18-E13_績效改善調查與課後行動計畫追蹤套件_R07.docx",
+      "sha256": "32bc0b8d7efe767e584b2a848206507d4da73ffa344378143b22186705302027",
+      "bytes": 111167,
+      "tables": 23
+    },
+    "replacement_register": {
+      "path": "evidence/synthetic_replacement_register_0105_R07.csv",
+      "sha256": "cca91ba69eaac6af6698a197fc6a41d6a6807f1a27747be93ee3eaf347468fab",
+      "rows_excluding_header": 162,
+      "fact_ids": "F001-F162",
+      "all_sample_synthetic": true
+    },
+    "adoption_status": "CANDIDATE_BUILT; technical checks PASS; visual render pending; formal acceptance NOT_GRANTED"
+  },
+  "technical_qa_receipt_path": "evidence/technical_qa_0105_R07.json",
+  "technical_qa_receipt_sha256": "409db040db0bc7873f8a7eb8c21bd775f2d0181c324d7d05f9f24ea6ea6dc731",
+  "limitations": [
+    "Word export has not yet produced a PDF/page render.",
+    "Outer CLI exit for attempt 3 and provider billing are UNKNOWN.",
+    "No REAL association evidence, approval, signature, or formal acceptance is represented."
+  ]
+}

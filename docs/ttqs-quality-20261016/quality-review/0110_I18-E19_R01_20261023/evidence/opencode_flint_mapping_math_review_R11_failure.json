@@ -1,0 +1,67 @@
+{
+  "receipt_id": "TTQS_ONE_0110_I18-E19_R11_OPENCODE_FLINT_QUOTA_FAILURE",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0110",
+  "requirement_id": "I18-E19",
+  "candidate_sha256": "9a306bf5712437ee578867b745e7d0811959decaa862ed540a82e7e8553bd3c2",
+  "packet_path": "worker/opencode_flint_mapping_math_review_R11_packet.md",
+  "packet_sha256": "f78bff07765c3f836ac0e69cde954a675407507211c032588b89b3642e7ede03",
+  "worker": "OpenCode v2 CLI",
+  "cli_bundle": "ai.opencode.desktop/cli/2.0.32-x64",
+  "cli_file_version_metadata": "1.4.2",
+  "requested_model": "opencode/flint-40b-free",
+  "actual_model": "UNKNOWN; quota rejection occurred before assistant response",
+  "fallback_allowed": false,
+  "fallback_observed": false,
+  "session_id": "ses_e96d1cbfeffesVJ60HchXzoCQT",
+  "worker_pid": 2388,
+  "worker_process_exited": true,
+  "started_at": "2026-10-23T22:33:17.2800641+08:00",
+  "completed_at": "2026-10-23T22:33:19.7830080+08:00",
+  "duration_ms": 2503,
+  "cli_exit_code": 1,
+  "status": "BLOCKED_PROVIDER_FREE_QUOTA_429",
+  "error_type": "provider.quota",
+  "http_status": 429,
+  "error_message": "Free usage limit reached. Subscribe to OpenCode Go to keep going: https://opencode.ai/go",
+  "assistant_review_response": "NONE",
+  "artifact_produced": "NONE",
+  "tokens": "UNKNOWN",
+  "billing": "UNKNOWN",
+  "candidate_modified": false,
+  "rebuild_required": false,
+  "retry_decision": "Do not retry this model or send the same free-quota request again without new quota-restoration evidence.",
+  "route_scope": "Only this opencode/flint-40b-free review attempt is confirmed blocked. Other free model IDs have not been tested in this attempt; do not infer all OpenCode models unavailable from this receipt alone.",
+  "original_stdout_jsonl_sha256": "6275951a5a666c94fbfb7e4d6451178ffe4a43c6a7ad3aa820523faa59062c0b",
+  "original_stdout_bytes": 681,
+  "original_stdout_base64": "eyJ0eXBlIjoic3RlcF9zdGFydCIsInRpbWVzdGFtcCI6MTc5Mjc2NTk5OTcwNSwic2Vzc2lvbklEIjoic2VzX2U5NmQxY2JmZWZmZXNWSjYwSGNoWHpvQ1FUIiwicGFydCI6eyJpZCI6InBydF8xNjkyZTNhNTkwMDFEY09UVTIyaTZsVnY3SSIsInNlc3Npb25JRCI6InNlc19lOTZkMWNiZmVmZmVzVko2MEhjaFh6b0NRVCIsIm1lc3NhZ2VJRCI6Im1zZ18xNjkyZTM2YTkwMDE1ZFZOQnJoWU50ZkJQViIsInR5cGUiOiJzdGVwLXN0YXJ0In19DQp7InR5cGUiOiJlcnJvciIsInRpbWVzdGFtcCI6MTc5Mjc2NTk5OTcwOSwic2Vzc2lvbklEIjoic2VzX2U5NmQxY2JmZWZmZXNWSjYwSGNoWHpvQ1FUIiwiZXJyb3IiOnsidHlwZSI6InByb3ZpZGVyLnF1b3RhIiwibWVzc2FnZSI6IkZyZWUgdXNhZ2UgbGltaXQgcmVhY2hlZC4gU3Vic2NyaWJlIHRvIE9wZW5Db2RlIEdvIHRvIGtlZXAgZ29pbmc6IGh0dHBzOi8vb3BlbmNvZGUuYWkvZ28iLCJzdGF0dXMiOjQyOSwicmVzcG9uc2UiOnsiYm9keSI6IntcInR5cGVcIjpcImVycm9yXCIsXCJlcnJvclwiOntcInR5cGVcIjpcIkZyZWVVc2FnZUxpbWl0RXJyb3JcIixcIm1lc3NhZ2VcIjpcIkZyZWUgdXNhZ2UgbGltaXQgcmVhY2hlZC4gU3Vic2NyaWJlIHRvIE9wZW5Db2RlIEdvIHRvIGtlZXAgZ29pbmc6IGh0dHBzOi8vb3BlbmNvZGUuYWkvZ29cIn19In19fQ0K",
+  "original_stdout_events": [
+    {
+      "type": "step_start",
+      "timestamp": 1792765999705,
+      "sessionID": "ses_e96d1cbfeffesVJ60HchXzoCQT",
+      "part": {
+        "id": "prt_1692e3a59001DcOTU22i6lVv7I",
+        "sessionID": "ses_e96d1cbfeffesVJ60HchXzoCQT",
+        "messageID": "msg_1692e36a90015dVNBrhYNtfBPV",
+        "type": "step-start"
+      }
+    },
+    {
+      "type": "error",
+      "timestamp": 1792765999709,
+      "sessionID": "ses_e96d1cbfeffesVJ60HchXzoCQT",
+      "error": {
+        "type": "provider.quota",
+        "message": "Free usage limit reached. Subscribe to OpenCode Go to keep going: https://opencode.ai/go",
+        "status": 429,
+        "response": {
+          "body": "{\"type\":\"error\",\"error\":{\"type\":\"FreeUsageLimitError\",\"message\":\"Free usage limit reached. Subscribe to OpenCode Go to keep going: https://opencode.ai/go\"}}"
+        }
+      }
+    }
+  ],
+  "stderr_bytes": 0,
+  "verification_scope": "Exact candidate SHA and review packet were bound before dispatch. Hidden, non-interactive CLI invocation; no Computer Use, paid fallback, DOCX edit, or reviewer result.",
+  "review_packet_text": "# TTQS ONE 0110 / I18-E19 R11 bounded independent review packet\n\nPurpose: independent review of item-to-construct/scale alignment and one synthetic calculation in the exact candidate. This is a narrow review only; do not infer full-document semantic, visual, REAL-evidence, or formal acceptance.\n\n## Artifact and source binding\n\n- doc_id: 0110\n- requirement_id: I18-E19\n- checkbox serial: UNKNOWN_NOT_ASSERTED\n- candidate: candidate/0110_I18-E19_完整問卷暨行動計畫工具_R07.docx\n- candidate SHA-256: 9a306bf5712437ee578867b745e7d0811959decaa862ed540a82e7e8553bd3c2\n- official source PDF SHA-256: 805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709\n- source packet SHA-256: e3db8f4ed82b21de4dc8cfb5886c4387c123d49a0465356354a18a9be39a8d38\n- unique Blueprint SHA-256: 81ec1fc96c9d48fa2a088fbe32ecf8bc31abd88a3d8945ba22585226440a8796\n- mapping input SHA-256: a8cc0514d19e2bfb564439fa7a0088b2f2866877879a0f283c8d93bf69603894\n- mapping validation receipt SHA-256: 02eb6eabcdbdff134f94c14d9ea0767333644abd08f2e8de7f77122636456c1e\n\n## Official requirement\n\n「問卷調查及課後行動計畫評估表等顯示目標客戶及學員認為訓練對組織績效的改善及提升均有顯著的效果。」\n\n## Blueprint controls relevant to this review\n\n- Keep learner and target-client/service-partner outcomes separate; do not pool populations or infer causality from descriptive pre/post change.\n- L02 is learner self-efficacy and must not be mislabeled as organizational performance.\n- L04 is a separate usage-frequency code, not a Likert average or favorable proportion.\n- L07 (data completeness) and L08 (handover-process change) must remain distinct and must not be averaged together.\n- C04 measures observable data/material completeness/correctness, not satisfaction.\n- C07 is a separately reported overall perceived organizational-performance item, not a composite with C03-C06.\n- Client/partner items concern directly observable outcomes; do not ask clients to assess internal learning or attendance.\n- A zero/N/A, blank, invalid and duplicate answer are not valid 1–5 scores.\n- The worked case must be explicitly SAMPLE/SYNTHETIC and must not claim actual association results.\n- A result below its stated target must not be called PASS; use the documented decision rule.\n\n## Exact contents extracted from candidate table 7\n\n| Item | Question / observation focus | Construct | Scale / use rule |\n|---|---|---|---|\n| L01 | 標準作業指引理解 | 操作指引理解 | 同意尺度；單題呈現 |\n| L02 | 受訓前後自覺執行信心變化（學員主觀自我效能） | 自我效能感知（非組織績效） | 變化尺度；題幹須寫明比較基準 |\n| L03 | 交接紀錄查核要點執行 | 查核步驟執行 | 同意尺度；單題呈現 |\n| L04 | 符合條件班次的實際使用頻率 | 實際使用頻率 | 專用頻率代碼；不作Likert平均或有利率 |\n| L05 | 突發情境依流程處置 | 情境處置能力 | 同意尺度；單題呈現 |\n| L06 | 換班口頭及書面交接 | 交接執行能力 | 同意尺度；單題呈現 |\n| L07 | 報到資料完整度的前後變化 | 資料完整度變化 | 變化尺度；與可追溯操作紀錄分開呈現 |\n| L08 | 交接等待時間的前後變化 | 交接流程變化 | 變化尺度；不與資料完整度平均 |\n| L09 | 團隊協作的前後變化 | 協作變化 | 改為明確、可觀察的比較題；使用變化尺度 |\n| C03 | 接待流暢及服務表現變化 | 服務體驗變化 | 由指定期間內直接觀察者作答 |\n| C04 | 物資及資料正確、齊全程度變化 | 資料物資完整正確變化 | 改用前後比較，不用滿意度錨點 |\n| C05 | 交接時段服務連續性變化 | 服務連續性變化 | 明列觀察期間及比較基準 |\n| C06 | 突發狀況回應時間前後變化 | 應變回應時間變化 | 改為可觀察的比較題，不用同意度錨點 |\n| C07 | 整體可觀察的組織績效變化 | 整體績效變化 | 單題報告；不與 C03–C06 合成分數 |\n\n## Synthetic arithmetic to independently recompute\n\nCase ID SYN-0110-CASE-01; SAMPLE/SYNTHETIC ONLY. Baseline: 6 of 8 eligible valid responses; follow-up D0+30: 7 of 8; target: 90%. Candidate states baseline 75.0%, follow-up 87.5%, change +12.5 percentage points, target not met, disposition REVISE.\n\nRecompute fractions, percentages, percentage-point change, and target disposition. Do not describe this as statistical significance or REAL evidence.\n\n## Requested answer\n\nReturn one compact JSON object with keys: verdict (PASS/PARTIAL/FAIL for this narrow scope only), candidate_sha256, actual_model (only if visible in your response context; otherwise UNKNOWN), item_findings (array with item_id, verdict, evidence), arithmetic (fractions, percentages, pp_change, target_met, disposition), sample_real_boundary, substantive_risks, scope_limit. Do not edit files, invoke tools, alter the DOCX, or claim checks not performed. If evidence is insufficient, say UNKNOWN.\n"
+}

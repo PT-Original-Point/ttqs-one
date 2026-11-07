@@ -1,0 +1,2131 @@
+{
+  "info": {
+    "id": "ses_eb05be946ffeR2JhXJbfgeMg0d",
+    "projectID": "f27b9df25437c3cad719f47428a6820888a43c04",
+    "model": {
+      "id": "beam-free",
+      "providerID": "opencode",
+      "variant": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 70135,
+      "output": 5149,
+      "reasoning": 14039,
+      "cache": {
+        "read": 1598976,
+        "write": 0
+      }
+    },
+    "outcome": "succeeded",
+    "time": {
+      "created": 1792337516367,
+      "updated": 1792337650582,
+      "idle": 1792337650586
+    },
+    "title": "[redacted:session-title:ses_eb05be946ffeR2JhXJbfgeMg0d]",
+    "location": {
+      "directory": "/[redacted:session-directory:ses_eb05be946ffeR2JhXJbfgeMg0d]"
+    }
+  },
+  "messages": [
+    {
+      "id": "msg_14fa41776001pEBVhXAUTrkt9T",
+      "time": {
+        "created": 1792337516529
+      },
+      "text": "[redacted:text:msg_14fa41776001pEBVhXAUTrkt9T]",
+      "files": [
+        {
+          "data": "",
+          "mime": "application/octet-stream",
+          "source": {
+            "type": "inline"
+          },
+          "name": "[redacted:file-name:0]"
+        }
+      ],
+      "type": "user"
+    },
+    {
+      "id": "msg_14fa418030010XsuC9FaQ9zdTQ",
+      "time": {
+        "created": 1792337516566,
+        "streamed": 1792337517981,
+        "completed": 1792337518821
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa418030010XsuC9FaQ9zdTQ]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa418030010XsuC9FaQ9zdTQ"
+          },
+          "time": {
+            "created": 1792337517795,
+            "completed": 1792337517972
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-f2348bf6-c4c4-46bb-becd-5e0816b25c72",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa418030010XsuC9FaQ9zdTQ"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa418030010XsuC9FaQ9zdTQ]"
+              },
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa418030010XsuC9FaQ9zdTQ]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa418030010XsuC9FaQ9zdTQ"
+            }
+          },
+          "time": {
+            "created": 1792337517943,
+            "ran": 1792337517977,
+            "completed": 1792337518817
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 19220,
+        "output": 22,
+        "reasoning": 64,
+        "cache": {
+          "read": 1728,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa420f6001m0cd6Heqtz0Hqt",
+      "time": {
+        "created": 1792337518854,
+        "streamed": 1792337519519,
+        "completed": 1792337520359
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa420f6001m0cd6Heqtz0Hqt]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa420f6001m0cd6Heqtz0Hqt"
+          },
+          "time": {
+            "created": 1792337519405,
+            "completed": 1792337519510
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-36e6bc1b-b3fb-4e99-b915-82a873ce1f4b",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa420f6001m0cd6Heqtz0Hqt"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa420f6001m0cd6Heqtz0Hqt]"
+              },
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa420f6001m0cd6Heqtz0Hqt]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa420f6001m0cd6Heqtz0Hqt"
+            }
+          },
+          "time": {
+            "created": 1792337519478,
+            "ran": 1792337519516,
+            "completed": 1792337520357
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 140,
+        "output": 22,
+        "reasoning": 21,
+        "cache": {
+          "read": 20928,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa426f6001O0mFoUNbPDzH4P",
+      "time": {
+        "created": 1792337520391,
+        "streamed": 1792337521018,
+        "completed": 1792337522022
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa426f6001O0mFoUNbPDzH4P]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa426f6001O0mFoUNbPDzH4P"
+          },
+          "time": {
+            "created": 1792337520958,
+            "completed": 1792337521012
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-76d7fe1d-e678-440e-8c45-4fe82e423983",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa426f6001O0mFoUNbPDzH4P"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa426f6001O0mFoUNbPDzH4P]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa426f6001O0mFoUNbPDzH4P"
+            }
+          },
+          "time": {
+            "created": 1792337520993,
+            "ran": 1792337521016,
+            "completed": 1792337522019
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 91,
+        "output": 16,
+        "reasoning": 21,
+        "cache": {
+          "read": 21056,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa42d75001o00TRrcRwnlUkD",
+      "time": {
+        "created": 1792337522050,
+        "streamed": 1792337523727,
+        "completed": 1792337566761
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa42d75001o00TRrcRwnlUkD]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa42d75001o00TRrcRwnlUkD"
+          },
+          "time": {
+            "created": 1792337523530,
+            "completed": 1792337523720
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-7ae7c622-8c4e-4dab-9aea-3b7dc358d75c",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa42d75001o00TRrcRwnlUkD"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa42d75001o00TRrcRwnlUkD]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa42d75001o00TRrcRwnlUkD"
+            }
+          },
+          "time": {
+            "created": 1792337523686,
+            "ran": 1792337523725,
+            "completed": 1792337566757
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 17564,
+        "output": 48,
+        "reasoning": 75,
+        "cache": {
+          "read": 21120,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa4dc3b001OmdXRQ3s8GxiOS",
+      "time": {
+        "created": 1792337566795,
+        "streamed": 1792337568197,
+        "completed": 1792337570012
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa4dc3b001OmdXRQ3s8GxiOS]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa4dc3b001OmdXRQ3s8GxiOS"
+          },
+          "time": {
+            "created": 1792337567746,
+            "completed": 1792337568190
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-9b620afe-2b20-4557-8af1-c6a9f95d2036",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa4dc3b001OmdXRQ3s8GxiOS"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa4dc3b001OmdXRQ3s8GxiOS]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa4dc3b001OmdXRQ3s8GxiOS"
+            }
+          },
+          "time": {
+            "created": 1792337568117,
+            "ran": 1792337568194,
+            "completed": 1792337570010
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 7030,
+        "output": 79,
+        "reasoning": 155,
+        "cache": {
+          "read": 38656,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa4e8ec00142lFVS87H3iEyT",
+      "time": {
+        "created": 1792337570044,
+        "streamed": 1792337571624,
+        "completed": 1792337572316
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa4e8ec00142lFVS87H3iEyT]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa4e8ec00142lFVS87H3iEyT"
+          },
+          "time": {
+            "created": 1792337571373,
+            "completed": 1792337571617
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-07f2e94f-d34c-44d3-8518-8e462f67c01d",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa4e8ec00142lFVS87H3iEyT"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa4e8ec00142lFVS87H3iEyT]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa4e8ec00142lFVS87H3iEyT"
+            }
+          },
+          "time": {
+            "created": 1792337571521,
+            "ran": 1792337571621,
+            "completed": 1792337572314
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 3051,
+        "output": 89,
+        "reasoning": 94,
+        "cache": {
+          "read": 45632,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa4f1eb001LK6lcMgXWwqVsf",
+      "time": {
+        "created": 1792337572348,
+        "streamed": 1792337573592,
+        "completed": 1792337574257
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa4f1eb001LK6lcMgXWwqVsf]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa4f1eb001LK6lcMgXWwqVsf"
+          },
+          "time": {
+            "created": 1792337573458,
+            "completed": 1792337573586
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-46c7b96b-7b35-4532-bc87-b8d1529c8921",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa4f1eb001LK6lcMgXWwqVsf"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa4f1eb001LK6lcMgXWwqVsf]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa4f1eb001LK6lcMgXWwqVsf"
+            }
+          },
+          "time": {
+            "created": 1792337573488,
+            "ran": 1792337573590,
+            "completed": 1792337574254
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 263,
+        "output": 93,
+        "reasoning": 20,
+        "cache": {
+          "read": 48640,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa4f98000141sitFHGuoorAl",
+      "time": {
+        "created": 1792337574288,
+        "streamed": 1792337576267,
+        "completed": 1792337577004
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa4f98000141sitFHGuoorAl]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa4f98000141sitFHGuoorAl"
+          },
+          "time": {
+            "created": 1792337575891,
+            "completed": 1792337576259
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-48847b64-09fe-4f30-95f5-3e490012ed81",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa4f98000141sitFHGuoorAl"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa4f98000141sitFHGuoorAl]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa4f98000141sitFHGuoorAl"
+            }
+          },
+          "time": {
+            "created": 1792337576167,
+            "ran": 1792337576264,
+            "completed": 1792337577002
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 224,
+        "output": 87,
+        "reasoning": 143,
+        "cache": {
+          "read": 48896,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa5043a001nJleP4Gh4YsOLZ",
+      "time": {
+        "created": 1792337577030,
+        "streamed": 1792337578442,
+        "completed": 1792337579580
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa5043a001nJleP4Gh4YsOLZ]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa5043a001nJleP4Gh4YsOLZ"
+          },
+          "time": {
+            "created": 1792337578190,
+            "completed": 1792337578436
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-8b4dd785-daaa-48bc-b79c-bad1cb7ef4ac",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa5043a001nJleP4Gh4YsOLZ"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa5043a001nJleP4Gh4YsOLZ]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa5043a001nJleP4Gh4YsOLZ"
+            }
+          },
+          "time": {
+            "created": 1792337578423,
+            "ran": 1792337578439,
+            "completed": 1792337579578
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 2845,
+        "output": 28,
+        "reasoning": 97,
+        "cache": {
+          "read": 49088,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa50e49001hc5sGKdoyRzVxq",
+      "time": {
+        "created": 1792337579606,
+        "streamed": 1792337581174,
+        "completed": 1792337581797
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa50e49001hc5sGKdoyRzVxq]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa50e49001hc5sGKdoyRzVxq"
+          },
+          "time": {
+            "created": 1792337580735,
+            "completed": 1792337581168
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-1f818ac3-7d86-48a5-8950-e4766b9a6672",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa50e49001hc5sGKdoyRzVxq"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa50e49001hc5sGKdoyRzVxq]"
+              },
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa50e49001hc5sGKdoyRzVxq]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa50e49001hc5sGKdoyRzVxq"
+            }
+          },
+          "time": {
+            "created": 1792337580851,
+            "ran": 1792337581171,
+            "completed": 1792337581795
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 167,
+        "output": 293,
+        "reasoning": 45,
+        "cache": {
+          "read": 51904,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa516f4001Jabl8evr5DTa8O",
+      "time": {
+        "created": 1792337581823,
+        "streamed": 1792337583677,
+        "completed": 1792337584648
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa516f4001Jabl8evr5DTa8O]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa516f4001Jabl8evr5DTa8O"
+          },
+          "time": {
+            "created": 1792337583218,
+            "completed": 1792337583672
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-6ddd52cc-9442-40eb-b693-dbfbaa60cdba",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa516f4001Jabl8evr5DTa8O"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa516f4001Jabl8evr5DTa8O]"
+              },
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa516f4001Jabl8evr5DTa8O]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa516f4001Jabl8evr5DTa8O"
+            }
+          },
+          "time": {
+            "created": 1792337583308,
+            "ran": 1792337583675,
+            "completed": 1792337584646
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 455,
+        "output": 356,
+        "reasoning": 27,
+        "cache": {
+          "read": 52032,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa52216001JdHYPLh2og5Eyz",
+      "time": {
+        "created": 1792337584675,
+        "streamed": 1792337587256,
+        "completed": 1792337588031
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa52216001JdHYPLh2og5Eyz]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa52216001JdHYPLh2og5Eyz"
+          },
+          "time": {
+            "created": 1792337586010,
+            "completed": 1792337587249
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-4a8d253b-192f-46d0-a9e3-57134f5d82d7",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa52216001JdHYPLh2og5Eyz"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa52216001JdHYPLh2og5Eyz]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa52216001JdHYPLh2og5Eyz"
+            }
+          },
+          "time": {
+            "created": 1792337587204,
+            "ran": 1792337587253,
+            "completed": 1792337588028
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 956,
+        "output": 32,
+        "reasoning": 511,
+        "cache": {
+          "read": 52480,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa52f4e001jV2O4r4tX9uk5H",
+      "time": {
+        "created": 1792337588059,
+        "streamed": 1792337589654,
+        "completed": 1792337590217
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa52f4e001jV2O4r4tX9uk5H]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa52f4e001jV2O4r4tX9uk5H"
+          },
+          "time": {
+            "created": 1792337588737,
+            "completed": 1792337589649
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-4f7446f4-f450-4e61-9de8-b19b3859cb5f",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa52f4e001jV2O4r4tX9uk5H"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa52f4e001jV2O4r4tX9uk5H]"
+              },
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa52f4e001jV2O4r4tX9uk5H]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa52f4e001jV2O4r4tX9uk5H"
+            }
+          },
+          "time": {
+            "created": 1792337589036,
+            "ran": 1792337589652,
+            "completed": 1792337590215
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 768,
+        "output": 469,
+        "reasoning": 106,
+        "cache": {
+          "read": 53376,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa537d7001F2NCYr9q8Ya4si",
+      "time": {
+        "created": 1792337590243,
+        "streamed": 1792337591411,
+        "completed": 1792337592285
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa537d7001F2NCYr9q8Ya4si]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa537d7001F2NCYr9q8Ya4si"
+          },
+          "time": {
+            "created": 1792337591319,
+            "completed": 1792337591406
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-68789d6f-2580-4cfe-848f-58712383f234",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa537d7001F2NCYr9q8Ya4si"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa537d7001F2NCYr9q8Ya4si]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa537d7001F2NCYr9q8Ya4si"
+            }
+          },
+          "time": {
+            "created": 1792337591392,
+            "ran": 1792337591409,
+            "completed": 1792337592283
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 594,
+        "output": 37,
+        "reasoning": 24,
+        "cache": {
+          "read": 54144,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa53feb0015oD7miq7P9uo1L",
+      "time": {
+        "created": 1792337592311,
+        "streamed": 1792337593224,
+        "completed": 1792337593877
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa53feb0015oD7miq7P9uo1L]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa53feb0015oD7miq7P9uo1L"
+          },
+          "time": {
+            "created": 1792337593054,
+            "completed": 1792337593219
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-71439b85-ec5d-4c4a-9094-34e7c21f0b9e",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa53feb0015oD7miq7P9uo1L"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa53feb0015oD7miq7P9uo1L]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa53feb0015oD7miq7P9uo1L"
+            }
+          },
+          "time": {
+            "created": 1792337593216,
+            "ran": 1792337593222,
+            "completed": 1792337593875
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 95,
+        "output": 35,
+        "reasoning": 78,
+        "cache": {
+          "read": 54720,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa54622001Y2ssxiSycINLg5",
+      "time": {
+        "created": 1792337593901,
+        "streamed": 1792337595715,
+        "completed": 1792337595738
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa54622001Y2ssxiSycINLg5]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa54622001Y2ssxiSycINLg5"
+          },
+          "time": {
+            "created": 1792337594584,
+            "completed": 1792337595704
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-ee338017-5aed-497e-892c-a1165df3acd8",
+          "name": "write",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa54622001Y2ssxiSycINLg5"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa54622001Y2ssxiSycINLg5]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa54622001Y2ssxiSycINLg5"
+            }
+          },
+          "time": {
+            "created": 1792337595295,
+            "ran": 1792337595708,
+            "completed": 1792337595736
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 674,
+        "output": 431,
+        "reasoning": 255,
+        "cache": {
+          "read": 54784,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa54d680016YLCeZTAWbYJcy",
+      "time": {
+        "created": 1792337595767,
+        "streamed": 1792337596528,
+        "completed": 1792337597278
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa54d680016YLCeZTAWbYJcy]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa54d680016YLCeZTAWbYJcy"
+          },
+          "time": {
+            "created": 1792337596445,
+            "completed": 1792337596521
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-fb0cbe7d-74e2-4227-8e4e-749ad601c28f",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa54d680016YLCeZTAWbYJcy"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa54d680016YLCeZTAWbYJcy]"
+              },
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa54d680016YLCeZTAWbYJcy]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa54d680016YLCeZTAWbYJcy"
+            }
+          },
+          "time": {
+            "created": 1792337596518,
+            "ran": 1792337596525,
+            "completed": 1792337597276
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 751,
+        "output": 33,
+        "reasoning": 22,
+        "cache": {
+          "read": 55424,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa5536c0010IdBexBLr0QbAB",
+      "time": {
+        "created": 1792337597305,
+        "streamed": 1792337599232,
+        "completed": 1792337599864
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa5536c0010IdBexBLr0QbAB]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa5536c0010IdBexBLr0QbAB"
+          },
+          "time": {
+            "created": 1792337598816,
+            "completed": 1792337599226
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-f4162e30-63ae-4f3d-9887-21f4a5927b03",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa5536c0010IdBexBLr0QbAB"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa5536c0010IdBexBLr0QbAB]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa5536c0010IdBexBLr0QbAB"
+            }
+          },
+          "time": {
+            "created": 1792337599168,
+            "ran": 1792337599230,
+            "completed": 1792337599861
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 242,
+        "output": 54,
+        "reasoning": 165,
+        "cache": {
+          "read": 56128,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa55d86001wT4uSGFIJS3yJG",
+      "time": {
+        "created": 1792337599890,
+        "streamed": 1792337606769,
+        "completed": 1792337606798
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa55d86001wT4uSGFIJS3yJG]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa55d86001wT4uSGFIJS3yJG"
+          },
+          "time": {
+            "created": 1792337600956,
+            "completed": 1792337606761
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-4e5977d1-8dd7-40c6-a11f-df93938b1b0f",
+          "name": "write",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa55d86001wT4uSGFIJS3yJG"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa55d86001wT4uSGFIJS3yJG]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa55d86001wT4uSGFIJS3yJG"
+            }
+          },
+          "time": {
+            "created": 1792337606309,
+            "ran": 1792337606766,
+            "completed": 1792337606796
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 1886,
+        "output": 241,
+        "reasoning": 2318,
+        "cache": {
+          "read": 56320,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa5789d001WeiN4o6Vo5TxwX",
+      "time": {
+        "created": 1792337606826,
+        "streamed": 1792337607913,
+        "completed": 1792337608615
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa5789d001WeiN4o6Vo5TxwX]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa5789d001WeiN4o6Vo5TxwX"
+          },
+          "time": {
+            "created": 1792337607806,
+            "completed": 1792337607907
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-64192779-3b24-4e64-8b73-4f8e90814d58",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa5789d001WeiN4o6Vo5TxwX"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa5789d001WeiN4o6Vo5TxwX]"
+              },
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa5789d001WeiN4o6Vo5TxwX]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa5789d001WeiN4o6Vo5TxwX"
+            }
+          },
+          "time": {
+            "created": 1792337607840,
+            "ran": 1792337607911,
+            "completed": 1792337608613
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 2621,
+        "output": 34,
+        "reasoning": 20,
+        "cache": {
+          "read": 58176,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa57fb5001W3IWA6Tc5n1vGb",
+      "time": {
+        "created": 1792337608642,
+        "streamed": 1792337609954,
+        "completed": 1792337610704
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa57fb5001W3IWA6Tc5n1vGb]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa57fb5001W3IWA6Tc5n1vGb"
+          },
+          "time": {
+            "created": 1792337609548,
+            "completed": 1792337609949
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-95611255-9154-4e1b-88aa-d39182549e58",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa57fb5001W3IWA6Tc5n1vGb"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa57fb5001W3IWA6Tc5n1vGb]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa57fb5001W3IWA6Tc5n1vGb"
+            }
+          },
+          "time": {
+            "created": 1792337609781,
+            "ran": 1792337609952,
+            "completed": 1792337610702
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 409,
+        "output": 137,
+        "reasoning": 91,
+        "cache": {
+          "read": 60736,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa587de001zE3LUQwvP9BB3R",
+      "time": {
+        "created": 1792337610730,
+        "streamed": 1792337612523,
+        "completed": 1792337613222
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa587de001zE3LUQwvP9BB3R]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa587de001zE3LUQwvP9BB3R"
+          },
+          "time": {
+            "created": 1792337611476,
+            "completed": 1792337612517
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-ebe7cdbf-e75a-4be2-ba71-0645c590a160",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa587de001zE3LUQwvP9BB3R"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa587de001zE3LUQwvP9BB3R]"
+              },
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa587de001zE3LUQwvP9BB3R]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa587de001zE3LUQwvP9BB3R"
+            }
+          },
+          "time": {
+            "created": 1792337612229,
+            "ran": 1792337612521,
+            "completed": 1792337613221
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 978,
+        "output": 141,
+        "reasoning": 184,
+        "cache": {
+          "read": 61120,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa591b5001f07pFGovw30JLA",
+      "time": {
+        "created": 1792337613249,
+        "streamed": 1792337614471,
+        "completed": 1792337614490
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa591b5001f07pFGovw30JLA]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa591b5001f07pFGovw30JLA"
+          },
+          "time": {
+            "created": 1792337614263,
+            "completed": 1792337614464
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-5bdc6da3-7115-4ed3-a446-d22b623fda90",
+          "name": "write",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa591b5001f07pFGovw30JLA"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa591b5001f07pFGovw30JLA]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa591b5001f07pFGovw30JLA"
+            }
+          },
+          "time": {
+            "created": 1792337614337,
+            "ran": 1792337614468,
+            "completed": 1792337614488
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 391,
+        "output": 149,
+        "reasoning": 21,
+        "cache": {
+          "read": 62080,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa596a6001zC4LO7YI5ECC23",
+      "time": {
+        "created": 1792337614512,
+        "streamed": 1792337615246,
+        "completed": 1792337615899
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa596a6001zC4LO7YI5ECC23]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa596a6001zC4LO7YI5ECC23"
+          },
+          "time": {
+            "created": 1792337615193,
+            "completed": 1792337615241
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-6559f672-de3c-45ab-bf1d-8289627a363d",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa596a6001zC4LO7YI5ECC23"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa596a6001zC4LO7YI5ECC23]"
+              },
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa596a6001zC4LO7YI5ECC23]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa596a6001zC4LO7YI5ECC23"
+            }
+          },
+          "time": {
+            "created": 1792337615229,
+            "ran": 1792337615244,
+            "completed": 1792337615897
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 207,
+        "output": 33,
+        "reasoning": 15,
+        "cache": {
+          "read": 62464,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa59c28001y0B6UyMbl8ZSXy",
+      "time": {
+        "created": 1792337615924,
+        "streamed": 1792337617286,
+        "completed": 1792337617307
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa59c28001y0B6UyMbl8ZSXy]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa59c28001y0B6UyMbl8ZSXy"
+          },
+          "time": {
+            "created": 1792337616632,
+            "completed": 1792337617281
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-8b713192-f9bc-4b1f-9c34-91c73dbd1e0f",
+          "name": "write",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa59c28001y0B6UyMbl8ZSXy"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa59c28001y0B6UyMbl8ZSXy]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa59c28001y0B6UyMbl8ZSXy"
+            }
+          },
+          "time": {
+            "created": 1792337617147,
+            "ran": 1792337617284,
+            "completed": 1792337617305
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 1268,
+        "output": 137,
+        "reasoning": 186,
+        "cache": {
+          "read": 62656,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa5a1a7001IWAtpQ0tpuyuzT",
+      "time": {
+        "created": 1792337617332,
+        "streamed": 1792337618065,
+        "completed": 1792337618746
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa5a1a7001IWAtpQ0tpuyuzT]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa5a1a7001IWAtpQ0tpuyuzT"
+          },
+          "time": {
+            "created": 1792337617988,
+            "completed": 1792337618060
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-6b9b91a1-2b3b-42fe-8a95-a18720b07b66",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa5a1a7001IWAtpQ0tpuyuzT"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa5a1a7001IWAtpQ0tpuyuzT]"
+              },
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa5a1a7001IWAtpQ0tpuyuzT]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa5a1a7001IWAtpQ0tpuyuzT"
+            }
+          },
+          "time": {
+            "created": 1792337618022,
+            "ran": 1792337618063,
+            "completed": 1792337618744
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 406,
+        "output": 32,
+        "reasoning": 17,
+        "cache": {
+          "read": 63872,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa5a748001ztFl460FliS0zx",
+      "time": {
+        "created": 1792337618772,
+        "streamed": 1792337620743,
+        "completed": 1792337620772
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa5a748001ztFl460FliS0zx]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa5a748001ztFl460FliS0zx"
+          },
+          "time": {
+            "created": 1792337619473,
+            "completed": 1792337620738
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-6bca8500-edee-45b3-9c68-11c98e1abee9",
+          "name": "write",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa5a748001ztFl460FliS0zx"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa5a748001ztFl460FliS0zx]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa5a748001ztFl460FliS0zx"
+            }
+          },
+          "time": {
+            "created": 1792337620425,
+            "ran": 1792337620741,
+            "completed": 1792337620770
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 178,
+        "output": 166,
+        "reasoning": 463,
+        "cache": {
+          "read": 64256,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa5af31001mD2FUes1eyd3tf",
+      "time": {
+        "created": 1792337620797,
+        "streamed": 1792337621566,
+        "completed": 1792337622217
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa5af31001mD2FUes1eyd3tf]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa5af31001mD2FUes1eyd3tf"
+          },
+          "time": {
+            "created": 1792337621509,
+            "completed": 1792337621560
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-199522a1-9778-4066-a387-16c447ef066e",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa5af31001mD2FUes1eyd3tf"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa5af31001mD2FUes1eyd3tf]"
+              },
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa5af31001mD2FUes1eyd3tf]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa5af31001mD2FUes1eyd3tf"
+            }
+          },
+          "time": {
+            "created": 1792337621540,
+            "ran": 1792337621564,
+            "completed": 1792337622215
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 709,
+        "output": 37,
+        "reasoning": 11,
+        "cache": {
+          "read": 64384,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa5b4d7001gRhBr04swo4ef1",
+      "time": {
+        "created": 1792337622244,
+        "streamed": 1792337630497,
+        "completed": 1792337630516
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa5b4d7001gRhBr04swo4ef1]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa5b4d7001gRhBr04swo4ef1"
+          },
+          "time": {
+            "created": 1792337623067,
+            "completed": 1792337630491
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-d813376e-ac0e-4b40-a6e6-b40de2077923",
+          "name": "write",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa5b4d7001gRhBr04swo4ef1"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa5b4d7001gRhBr04swo4ef1]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa5b4d7001gRhBr04swo4ef1"
+            }
+          },
+          "time": {
+            "created": 1792337629822,
+            "ran": 1792337630494,
+            "completed": 1792337630514
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 1898,
+        "output": 156,
+        "reasoning": 3022,
+        "cache": {
+          "read": 65088,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa5d5420018UPqiLa77m3iaG",
+      "time": {
+        "created": 1792337630542,
+        "streamed": 1792337631760,
+        "completed": 1792337632419
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa5d5420018UPqiLa77m3iaG]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa5d5420018UPqiLa77m3iaG"
+          },
+          "time": {
+            "created": 1792337631645,
+            "completed": 1792337631754
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call-982c36fd-05b2-4462-8577-098efed507e4",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_14fa5d5420018UPqiLa77m3iaG"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa5d5420018UPqiLa77m3iaG]"
+              },
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_14fa5d5420018UPqiLa77m3iaG]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_14fa5d5420018UPqiLa77m3iaG"
+            }
+          },
+          "time": {
+            "created": 1792337631717,
+            "ran": 1792337631758,
+            "completed": 1792337632417
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 3251,
+        "output": 32,
+        "reasoning": 19,
+        "cache": {
+          "read": 66944,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa5dcb3001neQBUFEq54Dvkr",
+      "time": {
+        "created": 1792337632449,
+        "streamed": 1792337650580,
+        "completed": 1792337650582
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14fa5dcb3001neQBUFEq54Dvkr]",
+          "state": {
+            "redacted": "reasoning-state:msg_14fa5dcb3001neQBUFEq54Dvkr"
+          },
+          "time": {
+            "created": 1792337633573,
+            "completed": 1792337650575
+          }
+        },
+        {
+          "type": "text",
+          "text": "[redacted:text:msg_14fa5dcb3001neQBUFEq54Dvkr]"
+        }
+      ],
+      "finish": "stop",
+      "rawFinish": "stop",
+      "cost": 0,
+      "tokens": {
+        "input": 803,
+        "output": 1630,
+        "reasoning": 5749,
+        "cache": {
+          "read": 70144,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14fa6239a001gbG5ibNFpXzYy3",
+      "time": {
+        "created": 1792337650586
+      },
+      "type": "idle",
+      "outcome": "succeeded"
+    }
+  ]
+}

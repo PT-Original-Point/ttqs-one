@@ -1,0 +1,77 @@
+{
+  "work_id": "TTQS_ONE_0133_I19-E22_SEMANTIC_R01",
+  "recorded_at_local": "2026-10-26T04:19:59+08:00",
+  "doc_id": "0133",
+  "official_requirement_id": "I19-E22",
+  "official_indicator": "I19-L3",
+  "blueprint_157_index": 146,
+  "official_printed_checkbox_serial": "UNKNOWN",
+  "candidate_docx_sha256": "25116afb8206e0828c8b3a4a763845a9c3e672a4cb49969a64a2a3737d87256b",
+  "candidate_state": "CANDIDATE_ONLY",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN",
+  "sources": {
+    "pr_head_at_dispatch": "765203c23e60210587321a3cc8db073385783dec",
+    "source_packet_sha256": "097dcc766a8c2b0f320cb51e084e46681e85deef23a9476b94890726654b2863",
+    "unique_blueprint_sha256": "edb8d241b1604790b36daf1622b907a9985ec7901c6d1e0a79f440be5fcb42fd",
+    "review_prompt_sha256": "7ccbc4b60c30d67920366e1ccea18563920e8b256f92f96af2baf2d46965e591",
+    "review_input_extraction_sha256": "e87aa01d465eb70fdd28f002fe064dbd2a549eed7059ef7969a44cbe6ca4d963"
+  },
+  "independent_semantic_review": {
+    "route": "Antigravity CLI",
+    "requested_model": "gemini-3.8-flash-high",
+    "model_catalog_listed": true,
+    "actual_backend_model": "UNKNOWN; native CLI output did not attest backend identity",
+    "dispatch_pid": 89360,
+    "exit_code": 0,
+    "elapsed_ms": 110698,
+    "conversation_id": "b15c7c5d-8aaa-42cb-89e5-72b23229bd0a",
+    "cli_status": "SUCCESS",
+    "verdict": "PASS",
+    "reviewer_response_raw_sha256": "8a8f57af36cd40a606fa279f1c2a07cbfbd1a62f617bb6795b171b357bc23720",
+    "normalized_response_sha256": "9696d6fab346fe93a5a610ea969078740c2969108a66d49b6b31c4a79a3b927c",
+    "scope": "69 body paragraphs, 18 tables, inline shape metadata, supplied chart description; exact candidate SHA; visual pixel/layout excluded",
+    "checklist_pass_count": 7,
+    "checklist_count": 7,
+    "blocking_findings": 0,
+    "informational_findings": 2
+  },
+  "adjudication_note": {
+    "reviewer_report_accuracy": "PASS_WITH_NONMATERIAL_WORDING_CORRECTION",
+    "correction": "Reviewer states that zero product/manufacturing terms appear in DOCX 0133. The document intentionally names 0132/I19-E21 and its product-defect scope in the negative-neighbor boundary (Section 1, paragraph 2; Table 17, row R2). This is correct exclusion language, not neighbor-data leakage. No 0132 product metric or 0134 membership/dues value is used as 0133 evidence. The semantic PASS remains supported.",
+    "evidence": "The exact text extraction contains: “0132／I19-E21 處理產品不良件數與產品檢驗分母；0134／I19-E23 處理會員人數及會費收入。不得把產品品質、會員數、會費、證照或就業數據放進本件，也不得讓本表取代相鄰文件。” Table 17 R2-R3 explicitly records the adjacent scopes as exclusions."
+  },
+  "other_quality_evidence": {
+    "technical_math": "PASS per existing exact-SHA technical QA; semantic review independently recomputed annual totals and rates",
+    "visual": "Existing 11-page Word-native render receipt is builder/self-inspection; page-8 to 10 direct reinspections and inherited exact-pixel pages documented; Codex directly viewed the embedded chart image and confirmed labels/values/disclaimer; no independent full-page visual review",
+    "overall_candidate_quality": "SEMANTIC_PASS_AND_TECHNICAL_MATH_PASS; VISUAL_QA_SELF_INSPECTION; NOT_FORMALLY_ACCEPTED"
+  },
+  "cli_attempt_history": [
+    {
+      "attempt": 1,
+      "exit_code": 2,
+      "stage": "CLI argument parsing; no model response",
+      "cause": "--print consumed --model as its prompt",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "attempt": 2,
+      "exit_code": 2,
+      "stage": "CLI argument parsing; no model response",
+      "cause": "--print-timeout value 240 lacked a duration unit",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "attempt": 3,
+      "exit_code": 0,
+      "stage": "model response received",
+      "cause": "Corrected prompt syntax to --print=<prompt> and timeout to 4m",
+      "actual_model_identity": "UNKNOWN"
+    }
+  ],
+  "token_usage": "UNKNOWN",
+  "model_fallback": "No fallback was requested; actual backend/fallback cannot be proven because the native response exposed no backend model identity. Do not claim Gemini identity PASS.",
+  "computer_use": "NOT_USED",
+  "filesystem_tools": "NOT_USED",
+  "docx_modified": false
+}

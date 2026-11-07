@@ -1,0 +1,180 @@
+{
+  "project": "TTQS_ONE",
+  "handoff_revision": "WIN10_ANTIGRAVITY_QUOTA_GOVERNED_FACTORY_20261004_R03",
+  "official_checkbox_total": 157,
+  "named_non_other_requirements": 129,
+  "blocked_other_rows": 28,
+  "planned_docx": 142,
+  "primary_executor": "WIN10_ANTIGRAVITY_LOCAL_NATIVE",
+  "factory_mcp_dependency": false,
+  "win11_factory_dependency": false,
+  "docx_primary_artifact": true,
+  "full_pdf_png_default": false,
+  "runtime_root": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME",
+  "current_publish_dir": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CURRENT",
+  "efficiency_policy": {
+    "one_attempt_per_lane_per_scheduler_turn": true,
+    "salvage_stable_candidate_after_nonzero_builder_exit": true,
+    "builder_no_duplicate_self_qa": true,
+    "reviewer_semantic_only": true,
+    "reviewer_forbid_word_com_cua_render_by_default": true,
+    "max_active_workers": {
+      "build": 1,
+      "review": 1
+    },
+    "shared_writes_serialized": true,
+    "source_cache_key": "source_sha256 + blueprint_row_hash",
+    "delta_only_verification_during_production": true,
+    "acceptance_contract_freeze_after_two_consecutive_canary_pass": true,
+    "throughput_must_not_weaken_quality": true,
+    "peer_document_body_reuse": false,
+    "generated_prose_cache_reuse": false,
+    "promotion_requires": [
+      "exact_requirement_and_genre_mechanics",
+      "title_blind_identification",
+      "negative_neighbor_rejection",
+      "substantive_duplication_gate",
+      "evaluator_facing_readability",
+      "sample_real_truth_boundary"
+    ],
+    "acceptance_contract_freeze_condition": "two consecutive PASS canaries from different document families plus duplication/negative-neighbor PASS"
+  },
+  "canary_policy": {
+    "required_representative_canaries": [
+      "0001",
+      "0003",
+      "0025",
+      "0039",
+      "0066",
+      "0067",
+      "0071",
+      "0076",
+      "0087",
+      "0092",
+      "0100",
+      "0142"
+    ],
+    "passing_canary_publish_immediately": true,
+    "failing_canary_parks_exact_lane_only": true,
+    "two_failed_repairs_is_human_gate": false,
+    "full_production_requires_required_canary_set_pass": false,
+    "production_block_scope": "EXACT_LANE_OR_PROVEN_AFFECTED_FAMILY_ONLY"
+  },
+  "human_gate_policy": "Only Mission/spec change, genuine SAMPLE-vs-REAL or third-party authority ambiguity, legal/signature/identity/OAuth/MFA, missing real-world prerequisite that changes the deliverable and cannot be obtained automatically, unresolved external side effect after bounded readback, or final package acceptance. Single-doc/canary failures and repeated repair failures are NOT Human Gates.",
+  "next_legal_action": "Use one Antigravity Gemini 3.8 Flash High worker as the primary long-running builder. Record official five-hour/weekly usage data if exposed and measure quota cost across up to three successful real documents. Do not start a second Antigravity worker until verified headroom and empirical cost support it. Reconstruct prior OpenCode/Muse consumption offline from existing logs/session exports only; send no new OpenCode requests.",
+  "updated_at": "2026-10-04",
+  "runtime_ui_policy": {
+    "visible_console_for_ttqs_automation": false,
+    "focus_stealing_for_ttqs_automation": false,
+    "require_hidden_launcher_readback": true,
+    "disable_visible_launcher_if_hidden_replacement_not_verified": true
+  },
+  "evaluator_docx_policy": {
+    "first_page_30s_plain_language": true,
+    "forbid_internal_control_metadata_in_body": true,
+    "blank_page_hard_fail": true,
+    "sparse_orphan_page_review": true,
+    "full_corpus_pdf_png_default": false,
+    "replacement_register_internal_sidecar": true
+  },
+  "agent_bus": {
+    "enabled": true,
+    "root": "E:\\TTQS\\TTQS_ONE_AGENT_BUS",
+    "codex_role": "DISPATCH_REVIEW_INTEGRATION_PROMOTION_OWNER",
+    "human_progress_relay": false,
+    "chatgpt_web_runtime_dependency": false,
+    "max_concurrency": {
+      "antigravity_content_workers_default": 1,
+      "antigravity_content_workers_max_without_verified_quota_headroom": 1,
+      "codex_review_control_workers": 1
+    },
+    "exact_sha_binding": true,
+    "review_required_before_promotion": true,
+    "visible_console_allowed": false,
+    "antigravity_role": "PRIMARY_CONTENT_FACTORY"
+  },
+  "dual_agent_pipeline": {
+    "codex": "CANONICAL_DISPATCH_STATIC_LAYOUT_CONTROL_REVIEW_PROMOTION_OWNER",
+    "antigravity": "PRIMARY_CONTENT_BUILDER_AND_INDEPENDENT_SEMANTIC_REVIEWER",
+    "model": "Gemini 3.8 Flash High",
+    "pipeline": [
+      "CONTENT_BUILD",
+      "FIXED_RENDERER",
+      "STATIC_LAYOUT_RECEIPT_PASS",
+      "FRESH_INDEPENDENT_REVIEW",
+      "PROMOTE_CURRENT"
+    ],
+    "no_self_review": true,
+    "canonical_shared_writes": "CODEX_ONLY",
+    "opencode_disabled": true
+  },
+  "deadline": "2026-10-05T09:00:00+08:00",
+  "dual_worker_sprint": {
+    "armed": true,
+    "workers": [
+      "ANTIGRAVITY_PRIMARY",
+      "CODEX_CONTROL_REVIEW"
+    ],
+    "no_self_review": true,
+    "codex_canonical_integrator": true,
+    "preferred_long_running_builder": "ANTIGRAVITY_PRIMARY",
+    "antigravity_model": "Gemini 3.8 Flash High",
+    "antigravity_default_workers": 1,
+    "antigravity_max_workers_without_verified_quota_headroom": 1,
+    "second_worker_requires_verified_usage_headroom": true,
+    "second_worker_requires_empirical_cost_sample_docs": 3,
+    "codex_long_build_default": false,
+    "opencode_active_dispatch": false,
+    "shared_fact_collision_avoidance": true,
+    "promotion_serialized": true,
+    "target_docx": 142
+  },
+  "deadline_execution": {
+    "active": true,
+    "deadline": "2026-10-05T09:00:00+08:00",
+    "control_plane_freeze": true,
+    "global_canary_block": false,
+    "first_ready_doc_can_serve_as_family_canary": true,
+    "semantic_review_route": {
+      "preferred": "CROSS_REVIEW_BY_OTHER_ACTIVE_AGENT",
+      "antigravity_build_review": "FRESH_ISOLATED_CODEX_EXACT_SHA",
+      "codex_build_review": "ANTIGRAVITY_GEMINI_3_8_FLASH_HIGH_EXACT_SHA",
+      "opencode_allowed": false
+    },
+    "policy_change_not_retroactive_artifact_defect": true,
+    "restore_unchanged_prior_current_if_demoted_only_for_missing_new_review_metadata": true,
+    "max_identical_transient_retries_before_queue_tail": 2,
+    "no_third_identical_attempt_without_material_delta": true,
+    "opencode_route": {
+      "disabled": true,
+      "reason": "HUMAN_EXPLICIT_DEPRECATION_20261004"
+    },
+    "antigravity_route": {
+      "host": "WIN10_LOCAL",
+      "mcp_required": false,
+      "model": "Gemini 3.8 Flash High",
+      "discover_official_route": true,
+      "visible_gui_automation_default": false,
+      "outsource_as_much_long_running_model_work_as_possible": true
+    },
+    "antigravity_primary_factory": {
+      "enabled": true,
+      "quota_governed": true,
+      "long_running_model_work_owner": "ANTIGRAVITY",
+      "codex_focus": [
+        "DISPATCH",
+        "EXACT_REVIEW",
+        "INTEGRATION",
+        "PROMOTION",
+        "QUOTA_LEDGER"
+      ],
+      "host_deterministic_pipeline_parallel": true,
+      "default_workers": 1,
+      "max_workers_without_verified_quota_headroom": 1,
+      "measure_first_n_successful_docs": 3,
+      "no_periodic_provider_probe": true,
+      "reconstruct_opencode_usage_offline": true
+    }
+  },
+  "secondary_executor": "WIN10_CODEX_LOCAL_NATIVE_CONTROL_REVIEW"
+}

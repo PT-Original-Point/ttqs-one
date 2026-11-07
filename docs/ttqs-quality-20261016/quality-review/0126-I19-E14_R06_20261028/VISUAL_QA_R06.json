@@ -1,0 +1,46 @@
+{
+  "schema": "ttqs-one-visual-qa-receipt/v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0126",
+  "requirement_id": "I19-E14",
+  "candidate_docx_sha256": "1f82a5ac21a105310aad23b96305e00c0396551f358fa8dc2252288973366130",
+  "render_method": "Microsoft Word 16.0 COM -> PDF; PDF rasterized at 108 DPI with pypdfium2",
+  "word_render_receipt_sha256": "746b56637f72d1d03ceae72da6e01033bbcd0ab0547e71bc628c34bbcd290530",
+  "word_pdf_sha256": "ae735b89aa137e8dfce1fbce11accbd5c222e680bdc77e46d66ba81747194a0e",
+  "page_render_manifest_sha256": "29cfa68cf074131aeeb8ed0aca5b675ba4a6f2caae3d7c7f4e91945893d6a685",
+  "page_count": 10,
+  "pages_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "page_image_sha256": {
+    "1": "bdf1562caa54c1e3fc8b30ccbeb2edf6ce8da91e4bd5828afe215f5f3b670214",
+    "2": "015fa910437b601ab6bd4681223fe91d4884c6442ca5053056c93aca020806ef",
+    "3": "4a8438bf24dee0a1f44fa99f0a94f1835fba39649c5b0ead4227042e09430c33",
+    "4": "4de480b4d62c3db8e0233c256d8fc6fca6b4748049a5fb464cb91515d7f7762b",
+    "5": "c71bb3036e68433b2480370120952b3285ff7a59eb34d53e5e0eaf5bd136977b",
+    "6": "e0ddb3be016a0270533d2456acbca9832334c3ac7f4cf3cfb8af4770f7aef197",
+    "7": "9a187952fbf56a7f3b3ced99e20542606ced0c1d5ec76075c48028209b7037ac",
+    "8": "c9f55721a17756730afac8aed74c19f1b69446ce9533407115d905557787ad89",
+    "9": "0ffb03b07aa93ec9563c09bd2cdd34d1dc8cea8626dd8b510d52edb3ed2e5a28",
+    "10": "3dbc131a1e15780ed4ce2c23c82ed7717193b67870c8c168a45ffc7275c3e84c"
+  },
+  "visual_findings": {
+    "R04": "font-floor defect prevented a build receipt; retained as failed candidate.",
+    "R05": "closing note moved to page 10 but Word emitted a blank page 11 after a terminal table.",
+    "R06": "terminal note is a shaded paragraph; 10 pages, no blank trailing page, no clipped content, no split/overlapping text, and tables remain within printable width."
+  },
+  "result": "PASS_VISUAL_SCOPE_ONLY",
+  "reviewer_role": "Codex visual inspection; same production thread, not an independent semantic review",
+  "semantic_acceptance": "PENDING_INDEPENDENT_EXACT_SHA_REVIEW",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "NOT_PROVIDED"
+}

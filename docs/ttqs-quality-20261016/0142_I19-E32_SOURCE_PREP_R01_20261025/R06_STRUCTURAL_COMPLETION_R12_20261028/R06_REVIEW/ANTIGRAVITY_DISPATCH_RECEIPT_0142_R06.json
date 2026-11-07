@@ -1,0 +1,125 @@
+{
+  "schema": "TTQS_ONE_0142_R06_ANTIGRAVITY_REVIEW_DISPATCH_RECEIPT_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0142",
+  "requirement_id": "I19-E32",
+  "official_checkbox_index": 156,
+  "printed_checkbox_serial": "UNKNOWN",
+  "candidate_sha256": "60563d4a56ac4502e522feb2665edef07771824ab4c2b2fb596862bb0e84f0e6",
+  "source_packet_sha256": "e3e8b3a8ee1effe758608fee183440add4f37381988c5e352912b1a3d55c9e49",
+  "unique_blueprint_sha256": "4841161d6e9aad3ace2a0b4ec4a5a3e1b7e92b68ff2b20f95e9edeae2b84070b",
+  "review_input": {
+    "path": "R06_REVIEW/ANTIGRAVITY_SEMANTIC_REVIEW_0142_R06_REQUEST.txt",
+    "sha256": "65f3d0df237e5771bd9074c3ab24110962461076abcee86261d9d9dda27a4633",
+    "utf8_bytes": 32397,
+    "candidate_body_extracted_in_document_order": true,
+    "visual_review_not_claimed": true
+  },
+  "cli": {
+    "path": "C:\\Users\\J\\AppData\\Local\\agy\\bin\\agy.exe",
+    "version": "1.4.8",
+    "invocation_model": "gemini-3.8-flash-high",
+    "effort": "high",
+    "print_mode": true,
+    "sandbox": true,
+    "dangerously_skip_permissions": false,
+    "computer_use_used": false,
+    "process_id": 75888,
+    "process_exit_code": 0,
+    "started_taipei": "2026-10-28T11:07:38.2447186+08:00",
+    "finished_taipei": "2026-10-28T11:08:33.5956112+08:00",
+    "elapsed_seconds": 55.35,
+    "conversation_id": "eb226e65-0f89-4111-a87c-7691b25decc7",
+    "usage": {
+      "input_tokens": 19830,
+      "output_tokens": 7024,
+      "thinking_tokens": 5045,
+      "cache_read_tokens": 0,
+      "total_tokens": 26854
+    },
+    "stderr_warning": "--mode plan has no effect while slash command expansion is disabled.",
+    "authentication_observation": "Initial token-source cache errors stated not logged in; later keyring token load was unexpired and silent authentication succeeded. Account identifier excluded."
+  },
+  "model_routing": {
+    "requested_model_id": "gemini-3.8-flash-high",
+    "model_list_returned_exact_id": true,
+    "cli_log_initial_resolver": "Model ID gemini-3.8-flash-high not in local config, defaulting to CCPA",
+    "later_resolver": "gemini-3.8-flash-high",
+    "selected_model_override": "Gemini 3.8 Flash (High)",
+    "generation_metadata_contains": "gemini-3.8-flash-high",
+    "conversation_backend": "BACKEND_TYPE_UNSPECIFIED",
+    "provider_served_model_attestation": "UNKNOWN",
+    "fallback_status": "UNKNOWN",
+    "route_disposition": "Exact model selection is logged; startup default-provider message and unspecified backend prevent a provider-side no-fallback attestation.",
+    "no_model_id_in_final_stdout": true,
+    "log_evidence_lines": {
+      "initial_resolver": 1,
+      "available_models_fetch": 156,
+      "selected_model_resolution": [
+        157,
+        169,
+        173,
+        175
+      ],
+      "selected_override_propagated": [
+        158,
+        170,
+        174
+      ],
+      "conversation_backend": 179,
+      "request_forwarded": 194,
+      "generation_response_ids": [
+        214,
+        215
+      ]
+    },
+    "model_identity_disposition": "Selected model ID gemini-3.8-flash-high is present in local generation metadata and resolver logs; provider-served identity remains UNKNOWN because conversation backend is BACKEND_TYPE_UNSPECIFIED and final CLI response contains no model ID."
+  },
+  "conversation_audit": {
+    "step_types": [
+      {
+        "has_subtrajectory": 0,
+        "count": 1,
+        "step_type": 14,
+        "status": 3
+      },
+      {
+        "has_subtrajectory": 0,
+        "count": 1,
+        "step_type": 15,
+        "status": 3
+      }
+    ],
+    "observed_tool_steps": 0,
+    "observed_subtrajectory": false,
+    "database_read_only": true,
+    "computer_use_not_invoked_by_dispatcher": true,
+    "step_count_readback_source": "Read-only SQLite conversation DB; exactly one step_type 14 and one step_type 15, both status 3 and has_subtrajectory=0."
+  },
+  "review_response": {
+    "response_verdict": "PASS",
+    "response_sha256": "63187ce22dd8f06d6f08627d2b49dd468500404ab293f928ac5a8a806a41d0e6",
+    "response_bytes": 5634,
+    "reviewer_echoed_candidate_sha256": "60563d4a56ac4502e522feb2665edef07771824ab4c2b2fb596862bb0e84f0e6",
+    "review_qualification": "PENDING_ROUTE_IDENTITY",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN/HOLD",
+    "official_score": "NOT_ASSIGNED"
+  },
+  "failed_parser_attempt": {
+    "process_exit_code": 2,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "36542a28a3a9f9b2929fceca26eb1c019083ad8c879a9ec15bfd34d47e3e1a12",
+    "stderr": "CLI parse error: --print took --prompt as its prompt; intended prompt was left as an argument and ignored.",
+    "classification": "LOCAL_ARGUMENT_PARSE_FAILURE_BEFORE_A_VALID_REVIEW_REQUEST"
+  },
+  "artifact_paths": {
+    "request": "R06_REVIEW/ANTIGRAVITY_SEMANTIC_REVIEW_0142_R06_REQUEST.txt",
+    "attempt1_stdout": "R06_REVIEW/ANTIGRAVITY_SEMANTIC_REVIEW_0142_R06_STDOUT.json",
+    "attempt1_stderr": "R06_REVIEW/ANTIGRAVITY_SEMANTIC_REVIEW_0142_R06_STDERR.txt",
+    "attempt2_stdout": "R06_REVIEW/ANTIGRAVITY_SEMANTIC_REVIEW_0142_R06_ATTEMPT02_STDOUT.json",
+    "attempt2_stderr": "R06_REVIEW/ANTIGRAVITY_SEMANTIC_REVIEW_0142_R06_ATTEMPT02_STDERR.txt",
+    "cli_raw_log_not_published": "Local Antigravity CLI log; retained on the Windows host; identifying account data excluded.",
+    "conversation_database_not_published": "Local Antigravity conversation DB; retained on the Windows host; not published."
+  }
+}

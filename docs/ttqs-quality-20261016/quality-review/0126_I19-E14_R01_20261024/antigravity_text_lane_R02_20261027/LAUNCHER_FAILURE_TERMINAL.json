@@ -1,0 +1,62 @@
+{
+  "schema": "TTQS_ONE_WORKER_LAUNCHER_FAILURE_V1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0126-I19-E14-R02-ANTIGRAVITY-GEMINI-WRITER-20261027",
+  "doc_id": "0126",
+  "requirement_id": "I19-E14",
+  "stage": "WRITER_TEXT_ONLY",
+  "observed_at_local": "2026-10-27T23:08:39.0552156+08:00",
+  "requested_model": "gemini-3.8-flash-high",
+  "model_catalog_exact_match": true,
+  "model_catalog_sha256": "d60a9e49491214bdb3e26c96045de00651d26c9dbdec5422282174219a39772e",
+  "request_sha256": "b61ada853cf55508ff13a94c87c6c0b5fef6cc2c2e5ce71a0ebf3211850f045a",
+  "launcher_failure": "PowerShell reserved read-only $PID variable collision after Process.Start; reader tasks, process wait, stdout/stderr persistence, exit/session readback, and terminal receipt were not reached.",
+  "process_start_called": true,
+  "pid": "UNKNOWN",
+  "process_exit_code": "UNKNOWN",
+  "session_id": "UNKNOWN",
+  "model_request_sent": "UNKNOWN",
+  "actual_model": "UNKNOWN",
+  "fallback": "UNKNOWN",
+  "token_usage": "UNKNOWN",
+  "stdout_capture": "NOT_CAPTURED",
+  "stderr_capture": "NOT_CAPTURED",
+  "native_log_file_present": false,
+  "remaining_processes_at_followup": [],
+  "local_output_files": [
+    {
+      "Name": "DISPATCH_START.json",
+      "Length": 1099,
+      "LastWriteTime": "2026-10-27T23:07:06+08:00"
+    },
+    {
+      "Name": "LAUNCHER_EXCEPTION.txt",
+      "Length": 176,
+      "LastWriteTime": "2026-10-27T23:08:40+08:00"
+    },
+    {
+      "Name": "MODEL_CATALOG_PRE_FLIGHT.stderr.txt",
+      "Length": 32,
+      "LastWriteTime": "2026-10-27T23:07:06+08:00"
+    },
+    {
+      "Name": "MODEL_CATALOG_PRE_FLIGHT.txt",
+      "Length": 284,
+      "LastWriteTime": "2026-10-27T23:07:06+08:00"
+    },
+    {
+      "Name": "writer_request_R02.md",
+      "Length": 5562,
+      "LastWriteTime": "2026-10-27T23:06:28+08:00"
+    }
+  ],
+  "candidate_docx_sha256": "NOT_BUILT",
+  "candidate_modified": false,
+  "semantic_review": "NOT_RUN",
+  "formal_acceptance": "NOT_GRANTED",
+  "external_effect_status": "UNKNOWN",
+  "lane_status": "PAUSED_PENDING_NATIVE_SESSION_OR_PROVIDER_EFFECT_READBACK",
+  "retry_authorized_now": false,
+  "next_action": "Inspect provider/session history using a supported read-only native path. Do not repeat this prompt until prior external effect is resolved; independent READY documents may continue.",
+  "exception_sha256": "2eee1a1f21eb02feefafd8305511181ff91ea90906350a8ff0fc4a73b4bc8082"
+}

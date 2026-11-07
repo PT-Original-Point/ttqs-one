@@ -1,0 +1,285 @@
+{
+  "project_id": "TTQS_ONE",
+  "work_id": "0103-R19-TARGETED-SEMANTIC-REPAIR",
+  "doc_id": "0103",
+  "official_requirement_id": "I18-E10",
+  "unique_blueprint_item": "111",
+  "official_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+  "parent_sha256": "07728568bab741562f6bdaed00c4237b786957dc5a41067eeafe9fb03f2a53fd",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0103_I18-E10_SOURCE_PREP_20261022\\candidate\\0103__I18-E10__感謝函取得與真偽查核工作紀錄_R19.docx",
+  "candidate_sha256": "d48e52ff5a1c0e9eb9ad26e1d8e231d770ed28b89d0c331ef1e7ebad54f0dbee",
+  "source_packet_sha256": "05b94f0469fa5b03ec1b204adcd5bdadc9bd8ae22a7f1b67aa7e71dcd830aede",
+  "unique_blueprint_sha256": "c4f0c3b93373aaea7ba9af1e13da40af4c72eec01e2bdb0d41a8f4919b1b8f1c",
+  "changes": [
+    {
+      "locator": "T7 R1 C1",
+      "old": "狀態碼",
+      "new": "案件主狀態碼"
+    },
+    {
+      "locator": "T7 R7 C3",
+      "old": "已隔離、已登錄、尚未判定",
+      "new": "案件主狀態；有來件且已隔離、登錄、真偽尚未判定。Form C「本附件收件狀態」只記附件層級，不取代本主狀態。"
+    },
+    {
+      "locator": "T8 R12 C1",
+      "old": "權限狀態",
+      "new": "收件人代表權／機構書面寄送授權狀態（分別記錄）"
+    },
+    {
+      "locator": "T8 R12 C2",
+      "old": "UNKNOWN／PENDING／AUTHORIZED_WRITTEN／DENIED",
+      "new": "UNKNOWN／PENDING／AUTHORIZED_WRITTEN／DENIED；收件人代表權與機構書面寄送授權須分別記錄，不得互相推定。"
+    },
+    {
+      "locator": "T8 R12 C4",
+      "old": "SAMPLE-AUTH-01（未確認）",
+      "new": "SAMPLE-AUTH-01（收件人代表權與機構書面寄送授權均未確認）"
+    },
+    {
+      "locator": "T8 R12 C5",
+      "old": "SAMPLE-AUTH-02（未知）",
+      "new": "SAMPLE-AUTH-02（收件人代表權與機構書面寄送授權均未知）"
+    },
+    {
+      "locator": "T8 R17 C1",
+      "old": "目前記錄來源／預期取得方式（SAMPLE；非核定通道）",
+      "new": "目前記錄來源／預期取得方式與通道核定狀態"
+    },
+    {
+      "locator": "T8 R17 C2",
+      "old": "未核定或來源不明就標 UNKNOWN",
+      "new": "分別記錄來源或預期方式，以及通道是否已核定；來源不明或通道未核定不得寄送。"
+    },
+    {
+      "locator": "T9 R7 C3",
+      "old": "SAMPLE-AUTH-01（未確認）",
+      "new": "SAMPLE-AUTH-01（收件人代表權與機構書面寄送授權均未確認）"
+    },
+    {
+      "locator": "T9 R7 C4",
+      "old": "SAMPLE-AUTH-02（未知）",
+      "new": "SAMPLE-AUTH-02（收件人代表權與機構書面寄送授權均未知）"
+    },
+    {
+      "locator": "T10 R21 C1",
+      "old": "來件狀態（本附件）",
+      "new": "本附件收件狀態（附件層級；非案件主狀態）"
+    },
+    {
+      "locator": "T19 R2 C4",
+      "old": "狀態 RECEIVED_UNVERIFIED",
+      "new": "附件收件狀態 RECEIVED_UNVERIFIED（Form C T10 R21）；案件主狀態維持 HOLD。"
+    },
+    {
+      "locator": "T12 R3 C2",
+      "old": "沒有發文者可供身分或代表權限核對。定位：Form C「發文者」；Form A「來源組織」。",
+      "new": "沒有發文者可供身分或代表權限核對。定位：Form C「發文者（文件所示）」（T10 R8）；Form A「來源類別」（T8 R7）與「收件人代表權／機構書面寄送授權」（T8 R12）。"
+    },
+    {
+      "locator": "T12 R5 C2",
+      "old": "沒有原始標頭、檔案或傳輸中繼資料。定位：Form C「標頭／檔案資訊」。",
+      "new": "沒有原始標頭、檔案或傳輸中繼資料。定位：Form C「送達證據」（T10 R6）、「格式」（T10 R7）、「文件／參考編號」（T10 R11）及「檔案特徵／雜湊」（T10 R14）；未設原始標頭欄，亦未取得相關資料。"
+    },
+    {
+      "locator": "T12 R9 C2",
+      "old": "沒有全文可檢查缺頁、完整性或變造。定位：Form C「內容／頁數／版本」。",
+      "new": "沒有全文可檢查缺頁、完整性或變造。定位：Form C「格式」（T10 R7）、「頁數」（T10 R13）及「檔案特徵／雜湊」（T10 R14）；本案未取得全文，這些欄位不取代全文檢驗。"
+    },
+    {
+      "locator": "T12 R14 C2",
+      "old": "沒有函件內容可作個資欄位盤點或最小化。定位：Form C「個資／附件」；Form F「存取限制」。",
+      "new": "沒有函件內容可作個資欄位盤點或最小化。定位：Form A「最小資料」（T8 R10）；Form C「存取限制」（T10 R16）；Form F「限制」（T14 R7）。"
+    },
+    {
+      "locator": "T12 R16 C2",
+      "old": "沒有文件內容可做矛盾比對；目前是無查核對象，不代表已證明無矛盾。定位：Form C「來件狀態」；Form D「矛盾清單」。",
+      "new": "沒有文件內容可做矛盾比對；目前是無查核對象，不代表已證明無矛盾。定位：Form C「本附件收件狀態」（T10 R21）；Form D「D15 是否有未解矛盾」（T11 R16；必要證據為差異清單、說明與補件）。"
+    },
+    {
+      "locator": "T13 R2 C4",
+      "old": "E-02",
+      "new": "SAMPLE-CLAIM-02"
+    },
+    {
+      "locator": "T14 R10 C4",
+      "old": "維持 HOLD；非承辦覆核逐項確認後才可解除：原件/可驗證副本、來源與發文代表權、完整性/日期/服務關聯、書面同意(目的/範圍)或核驗法定免同意依據、個資最小化/存取限制、D01-D15 適用性。重大矛盾未解，或適用項仍為 UNKNOWN/FAIL/CONFLICT/未覆核之 N/A，均不得解除；原件持續隔離。",
+      "new": "維持HOLD；全部條件成就後，須由機構書面授權之非承辦覆核角色逐項留證（本例 SAMPLE-ROLE-REVIEWER 僅為示例、非人類驗收）：原件/可驗證副本、來源與代表權、完整性/日期/服務關聯、書面同意或核驗免同意依據、個資最小化/存取限制、D01-D15適用性。SAMPLE-DATE-06屆期未成就→維持HOLD、原件續隔離、不得自動解除/結案；記錄新期限並依機構核定週期複查。重大矛盾或適用項 UNKNOWN/FAIL/CONFLICT/未覆核 N/A 不得解除；升級/結案須另有機構書面授權。"
+    },
+    {
+      "locator": "T20 R4 C4",
+      "old": "案例一／Form A、Form B、Form E「需求承辦」及存取紀錄 A-01 / 需求承辦角色",
+      "new": "案例一／Form A「需求承辦角色」（T8 R14）；存取紀錄 A-01「角色」（T15 R3）"
+    },
+    {
+      "locator": "T20 R5 C4",
+      "old": "案例一／Form A、Form B、Form C、Form E、Form F「案件負責人」及存取紀錄 A-02",
+      "new": "案例一／Form A「案件負責人」（T8 R15）、Form B「負責人」（T9 R14）、Form C「處理人」（T10 R20）；存取紀錄 A-02「角色」（T15 R4）"
+    },
+    {
+      "locator": "T21 R3 C5",
+      "old": "SAMPLE-AUTH-01（未確認）",
+      "new": "SAMPLE-AUTH-01（收件人代表權與機構書面寄送授權均未確認）"
+    },
+    {
+      "locator": "T21 R12 C4",
+      "old": "案例一／Form F / 結果與狀態",
+      "new": "案例一／Form F「主要狀態」（T14 R3 C3）"
+    },
+    {
+      "locator": "T21 R12 C5",
+      "old": "SAMPLE-OUTCOME-01：無寄送、無回覆、無原件；REQUEST_DRAFT_ONLY",
+      "new": "REQUEST_DRAFT_ONLY"
+    },
+    {
+      "locator": "T21 R13 C4",
+      "old": "案例一／Form F / 覆核意見",
+      "new": "案例一／Form F「覆核性質」（T14 R13 C3）"
+    },
+    {
+      "locator": "T21 R13 C5",
+      "old": "SAMPLE-REVIEW-01：示範判定",
+      "new": "示範判定（非人類驗收）"
+    },
+    {
+      "locator": "T21 R16 C4",
+      "old": "案例二／Form A、Form C、Form F、Form E「查核角色」及存取紀錄 A-03",
+      "new": "案例二／Form A「案件負責人」（T8 R15）、Form B「負責人」（T9 R14）、Form C「處理人」（T10 R20）；存取紀錄 A-03「角色」（T15 R5）"
+    },
+    {
+      "locator": "T21 R21 C5",
+      "old": "SAMPLE-AUTH-02（未知）",
+      "new": "SAMPLE-AUTH-02（收件人代表權與機構書面寄送授權均未知）"
+    },
+    {
+      "locator": "T21 R25 C4",
+      "old": "案例二／Form F / 結果與狀態",
+      "new": "案例二／Form F「主要狀態」（T14 R3 C4）"
+    },
+    {
+      "locator": "T21 R25 C5",
+      "old": "SAMPLE-OUTCOME-02：僅截圖、無原件、未接觸；HOLD",
+      "new": "HOLD"
+    },
+    {
+      "locator": "T21 R26 C4",
+      "old": "案例二／Form F / 覆核意見",
+      "new": "案例二／Form F「覆核性質」（T14 R13 C4）"
+    },
+    {
+      "locator": "T21 R26 C5",
+      "old": "SAMPLE-REVIEW-02：示範判定",
+      "new": "示範判定（非人類驗收）"
+    },
+    {
+      "locator": "T21 R31 C4",
+      "old": "案例一、二／Form F「隱私／資料存取角色」；案例二流程步驟10；存取紀錄 A-04",
+      "new": "案例一、二／Form F「下一位負責人」（T14 R8 C3–C4）；案例一流程步驟10（T17 R11）；案例二流程步驟10（T19 R11）；存取紀錄 A-04「角色」（T15 R6）"
+    },
+    {
+      "locator": "T21 R34 C1",
+      "old": "S-39",
+      "new": "S-40"
+    },
+    {
+      "locator": "T21 R34 C2",
+      "old": "0103",
+      "new": "0103"
+    },
+    {
+      "locator": "T21 R34 C3",
+      "old": "SAMPLE-CASE-02",
+      "new": "SAMPLE-CASE-02"
+    },
+    {
+      "locator": "T21 R34 C4",
+      "old": "案例二 / Form A / field: 合法目的",
+      "new": "案例二／Form E（T13）R2「claim_id」"
+    },
+    {
+      "locator": "T21 R34 C5",
+      "old": "SAMPLE-PURPOSE-02（真偽查核演練）",
+      "new": "SAMPLE-CLAIM-02"
+    },
+    {
+      "locator": "T21 R34 C6",
+      "old": "真實用途及閱覽層級之權責書面核定",
+      "new": "經權責核定、可回查且與案件一致的真實主張識別碼；無法確認時填 UNKNOWN"
+    },
+    {
+      "locator": "T21 R34 C7",
+      "old": "隱私／資料存取權責",
+      "new": "承辦／覆核人"
+    },
+    {
+      "locator": "T21 R34 C8",
+      "old": "目的、閱覽者及範圍以書面核定；核定前不接觸",
+      "new": "以可查的核定來源替換；未核定不得引用"
+    },
+    {
+      "locator": "T21 R34 C9",
+      "old": "SAMPLE_ONLY",
+      "new": "SAMPLE_ONLY"
+    },
+    {
+      "locator": "T27 R2 C4",
+      "old": "「官方脈絡與證據界線」；Form E「主張與訓練連結矩陣」的 claim_text、linkage_type、evidence_limit；Form F「處分與覆核紀錄」的 disposition_scope",
+      "new": "「官方脈絡與證據界線」；Form E「可引用陳述」（T13 R4）、「連結類型」（T13 R11）、「限制與下一步」（T13 R12）；Form F「判定範圍」（T14 R6）。"
+    },
+    {
+      "locator": "T27 R3 C4",
+      "old": "Form C：source_locator；Form D：D01-D15；Form E：原文範圍與限制",
+      "new": "Form C「本附件收件狀態」（T10 R21）及「保管位置」（T10 R15）；Form D D01-D15（T11）；Form E「可引用陳述」（T13 R4）及「限制與下一步」（T13 R12）。"
+    },
+    {
+      "locator": "T27 R7 C4",
+      "old": "Form A：source_requested、source category；Form C：incoming source_locator",
+      "new": "Form A「來源類別」（T8 R7）及「source_requested」（T8 R21）；Form C「incoming_id」（T10 R2）、「來件通道」（T10 R5）及「保管位置」（T10 R15）。"
+    },
+    {
+      "locator": "T27 R9 C5",
+      "old": "SOURCE_READY_ONLY；REAL original UNKNOWN",
+      "new": "來源封包狀態 SOURCE_READY_ONLY；本 DOCX 狀態 CANDIDATE；正式接受 NOT_GRANTED；REAL 原件 UNKNOWN/HOLD。"
+    },
+    {
+      "locator": "P4 cover status",
+      "old": "候選狀態：CANDIDATE（以本檔 exact SHA-256 識別），尚待獨立 exact-SHA 語意審查及 Human 正式驗收。真實感謝函 NOT RECEIVED；發函者、收件者、日期、課程、原件編號、簽署、同意、保管位置均為 UNKNOWN；真實訓練績效與因果均為 UNKNOWN；人類正式驗收 NOT GRANTED。",
+      "new": "候選狀態：CANDIDATE（版本 R19；精確 DOCX SHA-256 由同版外部收據綁定，本檔不內嵌自我雜湊）。R18 exact-SHA 語意審查為 PARTIAL；R19 等待新的 exact-SHA 獨立審查及 Human 正式驗收。真實感謝函 NOT RECEIVED；發函者、收件者、日期、課程、原件編號、簽署、同意、保管位置均為 UNKNOWN；真實訓練績效與因果均為 UNKNOWN；人類正式驗收 NOT GRANTED。"
+    },
+    {
+      "locator": "Form A send gate",
+      "old": "填寫指示：只要「合法目的」、「收件人代表權」、「寄送授權」、「同意或書面不需同意依據」、「揭露範圍」或「核定通道」任一為 UNKNOWN，Form A 不得進入寄送階段。僅在請求中詢問同意不構成同意，也不能補正寄送前權限。選 NOT_REQUIRED_BY_AUTHORITY 時，必須在本表記錄書面依據文件、權責核定者、日期及適用範圍；缺任一項即視為 UNKNOWN。沒有真實案件時，不要填入猜測值。",
+      "new": "填寫指示：寄送前逐欄核對 Form A「合法目的」（T8 R9）、「同意狀態」（T8 R11）、「收件人代表權／機構書面寄送授權狀態」（T8 R12）、「揭露範圍」（T8 R13）及「目前記錄來源／預期取得方式與通道核定狀態」（T8 R17）；任一為 UNKNOWN、必要書面核定未完成或通道未核定，均不得寄送。僅在請求中詢問同意不構成同意，也不能補正寄送前權限。選 NOT_REQUIRED_BY_AUTHORITY 時，必須記錄書面依據文件、權責核定者、日期及適用範圍；缺任一項即視為 UNKNOWN。沒有真實案件時不要填入猜測值。"
+    },
+    {
+      "locator": "Form A send limit",
+      "old": "寄送限制：本段是 SAMPLE / SYNTHETIC 且 NOT SENT。實際使用前須另行確認合法目的、收件人代表權、書面寄送授權、同意或具體書面不需同意依據、揭露範圍及核定通道；有一項 UNKNOWN 即不得寄送。本段不是協會決定、真實聯絡或第三方回覆。",
+      "new": "寄送限制：本段是 SAMPLE / SYNTHETIC 且 NOT SENT。實際使用前須確認 Form A T8 R9、R11、R12、R13 及 R17：合法目的、同意／法定依據、收件人代表權與機構寄送授權（分別記錄）、揭露範圍及通道核定狀態；任何必要項目 UNKNOWN 或通道未核定即不得寄送。本段不是協會決定、真實聯絡或第三方回覆。"
+    }
+  ],
+  "table_count_before": 27,
+  "register_rows_including_header": 42,
+  "checks": {
+    "exact_parent_sha": true,
+    "official_source_packet_sha": true,
+    "unique_blueprint_sha": true,
+    "R19_title_status_present": true,
+    "claim_id_registered": true,
+    "attachment_status_disambiguated": true,
+    "no_unsupported_monthly_review": true,
+    "hold_deadline_rule_present": true,
+    "source_only_status_scoped": true,
+    "no_orphan_E02": false,
+    "register_40_rows": true,
+    "no_sha_self_reference": false,
+    "formal_acceptance_not_granted": true,
+    "sample_real_boundary": true,
+    "form_F_row_nonsplitting": true
+  },
+  "result": "FAIL",
+  "candidate_state": "CANDIDATE_NOT_ACCEPTED",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "scope": "Targeted repair only for R18 exact-SHA reviewer PARTIAL findings: crosswalk locators, register locators/claim id, attachment-vs-case status, HOLD deadline disposition and Form A send-gate field mapping. No real facts added.",
+  "observed_at_utc": "2026-10-23T12:32:54.448357+00:00"
+}

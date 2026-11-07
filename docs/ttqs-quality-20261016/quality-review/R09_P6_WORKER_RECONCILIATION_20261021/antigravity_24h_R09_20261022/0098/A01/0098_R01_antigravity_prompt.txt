@@ -1,0 +1,82 @@
+你是受託的純文字內容 Writer。只使用下方完整來源 packet，不呼叫工具、不瀏覽、不開啟或修改任何檔案、不使用 Computer Use、不捏造來源事實。請為 doc_id 0098 / I18-E06 寫一份成熟、直接可用的繁體中文 Word 正文 Markdown，以及逐事實 SAMPLE/SYNTHETIC 替換清冊 CSV。這是執行與樣本紀錄，不是能力提升問卷、不是能力提升說明，也不是實際協會業務紀錄。
+
+硬性要求：
+1. 只依 Unique Blueprint、官方原文及提供的示範資料。不得使用舊版0098正文作模板。文件須遮住標題仍可辨認為「目標客戶及學員滿意度調查執行系統、樣本流向、覆核及結果交接紀錄」；與0097/I18-E05能力提升問卷、0099/I18-E07技能/能力提升說明明確區別。
+2. 第一頁30秒可掌握目的、讀者、何時用、步驟、輸出與合成界線。控制資料寫：doc_id 0098；requirement I18-E06；revision R01；修訂日2026-10-21；狀態「SAMPLE/SYNTHETIC 示範稿，非本會實際紀錄、未核准」；生效日「未核定」；官方打印序號 UNKNOWN。不可填真人撰寫/覆核/核准/簽章。
+3. 覆蓋母體、抽樣框、納入/排除、執行管道與時序、邀請/提醒/回收/有效/排除流向、重複、缺答、偏差、去識別與權限、覆核、異常升級、同工具與後續分析交接、真實替換核對清單。寫成可操作流程與可直接填用表格，不用治理術語充頁數。
+4. 只用以下完整SAMPLE情境（獨立於0097）：案例碼 SYN-I18E06-2026-01；邀請12人：學員 L01–L08共8人、目標客戶代表 C01–C04共4人。合成寄送日2026-09-05、一次提醒2026-09-09、收件截止2026-09-12。L01–L07各回一份、L02另多一筆重複提交（須隔離、不重複計入）；L08未回；C01–C04各回一份。獨立唯一回覆11、原始表單提交12、重複1、有效完整10（L01–L06與C01–C04）、不完整排除1（L07）、無回覆1（L08）。不得改動任何人數或碼。
+5. 10份有效表單的五題1至5分SAMPLE原始分數，順序 Q1課程內容實用、Q2講師說明清楚、Q3練習時間足夠、Q4教材/資訊取得便利、Q5整體滿意：
+L01=5,5,4,4,5; L02=4,4,3,4,4; L03=4,4,4,5,4; L04=4,5,3,4,4; L05=3,4,3,4,3; L06=5,5,4,3,5; C01=4,4,4,5,4; C02=4,3,2,4,4; C03=5,4,3,3,4; C04=4,5,4,4,5。所有題均有效，N=10 each。
+6. 逐步算：原始表單提交12；重複1；唯一回覆11；有效10；排除1；未回1。回覆率=唯一回覆/邀請=11/12=91.7%；回覆中有效率=10/11=90.9%；邀請到有效產出率=10/12=83.3%。分題總分為42,43,34,40,42，均值4.2,4.3,3.4,4.0,4.2；50個有效題項總分201，總題項均值4.02。學員6份、客戶4份分開報告：學員各題總分25,27,21,24,25、N=6、均值4.17,4.50,3.50,4.00,4.17；客戶各題總分17,16,13,16,17、N=4、均值4.25,4.00,3.25,4.00,4.25。只作小樣本描述，不推論母體、不推斷訓練造成能力/績效改變。
+7. 分析需指出Q3練習時間全體均值最低，精確為3.4；客戶群的Q3=3.25。若示範使用「<=3.5觸發檢討」，明確說這是合成示範用門檻，並非協會核定標準或TTQS標準；對應一項清楚標成「示範建議，未核准、未執行」的改善提案，例如下一輪加強實作時間及操作示範。不得寫成已決議或已改善。
+8. 必須有完整12個對象逐筆流向表、L02重複隔離記錄、10×5原始分數表、分題和分組計算、異常/缺答/偏差處理、流程步驟表、責任角色(角色不是真人)、交接記錄、重複核對與拒收條件。保留日期、角色、ID、所有分數、總數、比率、門檻、分析、提案等合成事實。
+9. 構建 `SYNTHETIC_REPLACEMENT_REGISTER` CSV，至少逐筆列出每一參與者碼、日期、邀請/回覆/去向、每筆有效題分、樣本分母與計數、計算結果、描述性發現、提案/期限/角色。欄位：fact_id,document_id,requirement_id,field_or_locator,value,classification,source_or_basis,real_replacement_needed,real_replacement_source,owner_role,verification_rule。所有 facts 都 SAMPLE/SYNTHETIC；目前沒有任何REAL證據。任何無法給出合法真實替換來源者標為UNKNOWN/由協會合法取得，不要捏造。
+10. 語氣給志工行政人員與評核委員，白話、完成式案例、避免工程內部詞。正文建議6–9個實質章節，不可只有空白模板或泛用SOP。無真人簽核/實際執行宣稱。輸出內容不得包含模型思考或自評PASS。
+
+輸出僅兩段：
+`<<<BEGIN_MANUSCRIPT_MARKDOWN>>>` 完整Markdown正文 `<<<END_MANUSCRIPT_MARKDOWN>>>`
+`<<<BEGIN_SYNTHETIC_REPLACEMENT_REGISTER_CSV>>>` 完整CSV `<<<END_SYNTHETIC_REPLACEMENT_REGISTER_CSV>>>`
+
+來源 packet：# 0098 I18-E06 writer source packet
+
+## Source binding
+- Deliverable `0098`, requirement `I18-E06`; official printed checkbox serial: `UNKNOWN`.
+- Official evidence table page 7 requirement: execute the target-customer and learner satisfaction survey and analyze it (system/process aspect). Source text is a survey-execution process requirement, not an ability-gain claim.
+- Unique Blueprint: `sources/unique_blueprint_row_0098.json`; extracted from `E:\TTQS\TTQS_ONE_CODEX_RUNTIME\CONTROL\BLUEPRINT_CURRENT.jsonl` SHA-256 `406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e`.
+- Official evidence-table page-7 readback: `sources/official_evidence_table_page7_readback.txt`, SHA-256 `2238fda775d4d72e281275a2df745f578e6b44b5eec9e99d8979e8da72f21db2`; source PDF SHA-256 recorded by current 0097 source binding: `805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709`.
+- Official 129-to-142 crosswalk: `sources/official_129_to_142_crosswalk.csv`; source file SHA-256 `1ddfbb608bcad25170683ddb42a1dbb27bafa6f1f35ff0498f1b8d75b24f0679`; exact row follows.
+- Blueprint seed: `sources/blueprint_seed_142.csv`.
+- Quality contract `03_157_CHECKBOX_BLUEPRINTS.md` source blob at existing branch snapshot: `8c2bbe7ca9dcbb03088a48934b9e57e7147ede63`; applicable sequence `107` says: “目標客戶/學員滿意調查實際分析與改善”. This sequence is separate from an official printed checkbox serial.
+- Branch snapshot used for this action: `work/ttqs-one-document-quality-contract-20261016` at `d6fb472914078e82f4277bd122ea01e5fb2d743b` (R07 evidence sync); source contract blobs 01-06 were unchanged at source hashes recorded in 0097 package.
+
+## Current unique Blueprint row (authoritative for this document)
+```json{
+  "deliverable_id": "0098",
+  "requirement_id": "I18-E06",
+  "final_filename": "0098__執行目標客戶及學員滿意度調查及分析（系統及流_分析報告.docx",
+  "document_genre": "執行與樣本紀錄｜執行目標客戶及學員滿意度調查及分析（系統及流_分析報告",
+  "document_purpose": "本件專屬焦點：執行目標客戶及學員滿意度調查及分析（系統及流_分析報告；需直接回應的官方佐證要求為：執行目標客戶及學員滿意度調查及分析（系統及流程面）。；產出一份可實際執行、可閱讀並可追溯的專屬成品；本分件職責與同要求其他分件清楚分開。",
+  "primary_user_or_reader": "供承辦人逐次登錄執行、樣本流向、缺失與覆核，供主管追溯資料品質。",
+  "evidence_role": "證明蒐集或執行如何發生及資料如何納入；合成例必須明確標示。 本文件只擁有 I18-E06 的直接紀錄／分析口徑；不得吞併其他要求的事實。",
+  "source_of_truth": "官方查核佐證表精確原文『執行目標客戶及學員滿意度調查及分析（系統及流程面）。』，表內頁次 7，讀取狀態 PDF_TEXT_EXACT_PAGE_MATCH；REQ_157_MAP 對應 I18-E06；本行文件名稱與 ID 以 R04 142 交付 crosswalk/seed 為準。Phase2 歷史 Blueprint 僅作需求拆解參考，絕非可複製正文或現行標題權威。",
+  "required_sections": "執行目的及本次紀錄範圍；計畫母體、抽樣框與納入規則；執行步驟、管道與時序；樣本／案件流水欄位定義；邀請、回收、有效及排除流向；缺失、重複與偏差處理；資料保管、權限與去識別；完整合成批次逐筆示例；覆核、修正及異常升級；與工具及後續分析的交接；真實紀錄替換與查核清單；證據位置與版本索引",
+  "required_tables_or_figures": "執行階段—責任角色—操作—控制點—輸出；邀請／接觸／回收／有效／排除流向明細；完整合成樣本逐筆紀錄及納入判定；官方要求—紀錄欄位—來源—覆核追溯表",
+  "required_fields_or_questions": "合成個案代碼；接觸或執行日期（合成）；來源管道與同意狀態；納入／排除判定及理由；缺失／重複／更正軌跡",
+  "required_calculations_or_analysis": "逐步呈現接觸數、回收數、有效數及排除數；有效率=有效數/回收數。分母為0時標示N/A及原因；樣本皆為合成記錄並逐項登錄替換簿。",
+  "required_cross_references": "同要求分件 無；相鄰要求 I18-E05, I18-E07；共用原始來源時只引用核實結果，不複製別份文件正文。",
+  "real_data_required": "升格為 REAL 前逐項取得可核實來源：正式日期；真實人名/角色；核准/簽章；真實班次/課程；實際數字/比例；真實附件與檔案位置。在無原件時標示 SAMPLE/SYNTHETIC；合成事實須登錄 replacement register，不得宣稱機構實績。",
+  "third_party_evidence_required": "若結論依賴外部機關／第三方／真人正式簽章或證書，必須由合法來源取得可核對原件；本文件可提供清楚索引與合成流程示範，絕不代製、仿簽、補作或冒充第三方正式原件。",
+  "prohibited_fabrication": "不得把擬真工作稿標成REAL；不得偽造核准、簽章、真人參與、辦訓、成績、成果或不存在的外部事實。；不得將舊檔內容、示範數據、未查證Drive候選或歷史草案標成 REAL；不得偽造核准、簽章、真人參與、辦訓、成績、成果、外部證據或來源定位。",
+  "title_blind_test": "遮蔽本件標題、檔名與編號，只讀正文應可由專屬機制辨認為『執行目標客戶及學員滿意度調查及分析（系統及流_分析報告』並證明『執行目標客戶及學員滿意度調查及分析（系統及流程面）。』；若可無修改移作其他要求即失敗。",
+  "negative_choice_neighbors": "0097《問卷調查等顯示目標客戶及學員認為訓練有達成能_分析報告》（I18-E05）：應證明不同工作物；本件不得代替、合併或複製其專屬事實。\n0099《提出目標客戶及學員對訓練達能力提升之說明（學_分析報告》（I18-E07）：應證明不同工作物；本件不得代替、合併或複製其專屬事實。",
+  "acceptance_tests": "移除標題及檔名後，讀者可由正文專屬欄位、操作或分析辨認為『執行目標客戶及學員滿意度調查及分析（系統及流_分析報告』，且能指出直接回應『執行目標客戶及學員滿意度調查及分析（系統及流程面）。』的頁節／表格。\n逐項呈現官方要求、資料來源、記錄欄位、判定、證據定位及覆核；官方原文不被歷史草案改寫。\n依本文件文類實際可用：問卷含題目選項量尺；SOP含角色、輸入、判斷、控制點、異常和輸出；會議紀錄含議題、證據、決議、責任、期限；報告含資料、分母、公式、逐步計算、限制和決策。\n若沒有可驗證 REAL 資料，提供前後一致、完整填入的 SAMPLE/SYNTHETIC 案例；不得用空表、待填、待核或未來式充當完成品。\n每一項合成日期、角色、數字、比例、金額、決議、來源路徑與結果皆有逐事實替換簿記錄鍵、所在文件／頁表／欄位及真實替換方式。\n絕不偽造第三方原件、真人簽名、核准、出席、證書、政府、銀行、會計或外部機構事實；需要該等原件時只說明所需原件與取得路徑。\n所有公式可由展示數據重算；分母、單位、期間、四捨五入及N/A條件清楚，交叉引用不重複創造相異版本。\n對照負向鄰項，正文可拒絕至少兩個錯誤近鄰；指出可核對的差異欄位或章節。\n首頁30秒內說明目的、讀者、使用時點、操作、輸出和SAMPLE／REAL狀態；無評核工程內部術語。\n正文可供日常協會作業及評核閱讀；標題層級、欄位、步驟、表格能直接執行，無複製同儕 DOCX 正文。\n字體下限：正文至少10.5pt、表格至少9.5pt；資訊不足時加頁，不縮小字體。\n來源定位與交叉引用使用本 Blueprint 登錄的官方頁次／文件 ID；所有結論不超出來源支持範圍。",
+  "document_role": "execution_record",
+  "official_requirement_text": "執行目標客戶及學員滿意度調查及分析（系統及流程面）。",
+  "official_checkbox_text": "執行目標客戶及學員滿意度調查及分析（系統及流程面）。",
+  "official_evidence_table_page": "7",
+  "official_source_readback_status": "PDF_TEXT_EXACT_PAGE_MATCH",
+  "official_visually_checked_pages": "",
+  "requirement_deliverable_siblings": "0098",
+  "docx_body_template_policy": "FROM_SOURCE_ONLY; old body is discovery evidence only and prohibited as rebuild template; Wave005 R3 0031-0040 quality-height references only; Wave001-004 tainted; old Wave005 invalid; Wave006 prohibited.",
+  "synthetic_population_rule": "缺 REAL 即生成完整連貫 SAMPLE/SYNTHETIC worked example；事實粒度一筆一列登錄 SYNTHETIC_REPLACEMENT_REGISTER，含值、類型、定位、替換原件與責任；不得留待填或冒充 REAL。",
+  "historical_blueprint_source": "a990f42148b4cb3ec9f29a7f738234283f4385127709fc59e4bac7a03ff1ebdb",
+  "historical_body_use": "PROHIBITED",
+  "source_map_notes": "129 exact official requirement rows + reconciled 142-ID crosswalk; official source PDF and exact Drive readback evidence are recorded in runtime SOURCE/CONTROL maps."
+}
+```
+
+## Exact 142 crosswalk row
+```csvI18-E06,1,0,0098,執行目標客戶及學員滿意度調查及分析（系統及流_分析報告```
+
+## Official page-7 wording官方查核佐證表第7頁 readback（I18-E06）：
+「執行目標客戶及學員滿意度調查及分析（系統及流程面）。」
+在此文字沒有可確認的官方打印序號；正式序號必須標 UNKNOWN，不可用文件 ID、157契約序列或評核分數推算。## Negative-neighbor distinction
+- 0097 / I18-E05 concerns ability-gain questionnaire evidence; it is a different work product. Do not copy its capability scores, sample responses, tables or conclusions. You may explicitly state that the cases in this 0098 manuscript are a separate synthetic process demonstration.
+- 0099 / I18-E07 concerns an explanation of capability gain at the learning/skills level; 0098 must remain a satisfaction-survey execution/process record and must not claim skill improvement or causation.
+- The 157 contract sequence number 107 is not an official printed serial. Keep the printed serial UNKNOWN.
+
+## Source-use boundaries
+- Previous 0098 legacy DOCX bodies are discovery/history only and prohibited as writing templates. Start from the current Unique Blueprint and the official requirement text above.
+- No real association survey, course, participant, staff member, signature, approval, decision, contact, or outcome has been supplied. The complete worked case must be conspicuously `SAMPLE / SYNTHETIC` and must never imply it actually occurred.
+- The association has volunteer context; use role labels only as hypothetical operating roles. Do not claim a named staff roster, approved policy, retention schedule, or actual survey system. Any proposed control threshold or retention period must be labeled as a sample proposal requiring local approval.
+- No personal or sensitive information. Use synthetic participant codes only.

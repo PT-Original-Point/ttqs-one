@@ -1,0 +1,101 @@
+{
+  "info": {
+    "id": "ses_eb067cd86ffeonmRdzWrBy0xs1",
+    "projectID": "dabde63a0c1352871a938f25dd682407d3b42064",
+    "model": {
+      "id": "deepseek-v4.1-flash-free",
+      "providerID": "opencode",
+      "variant": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 5393,
+      "output": 7656,
+      "reasoning": 5052,
+      "cache": {
+        "read": 6144,
+        "write": 0
+      }
+    },
+    "outcome": "succeeded",
+    "time": {
+      "created": 1792336737096,
+      "updated": 1792336811587,
+      "idle": 1792336811592
+    },
+    "title": "[redacted:session-title:ses_eb067cd86ffeonmRdzWrBy0xs1]",
+    "location": {
+      "directory": "/[redacted:session-directory:ses_eb067cd86ffeonmRdzWrBy0xs1]"
+    }
+  },
+  "messages": [
+    {
+      "id": "msg_14f98335c00190V0jUk53O4oWf",
+      "time": {
+        "created": 1792336737154
+      },
+      "text": "[redacted:text:msg_14f98335c00190V0jUk53O4oWf]",
+      "files": [],
+      "type": "user"
+    },
+    {
+      "id": "msg_14f98338b001ZvL6xblyTmsDMr",
+      "time": {
+        "created": 1792336737183,
+        "streamed": 1792336810885,
+        "completed": 1792336811587
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_14f98338b001ZvL6xblyTmsDMr]",
+          "state": {
+            "redacted": "reasoning-state:msg_14f98338b001ZvL6xblyTmsDMr"
+          },
+          "time": {
+            "created": 1792336739962,
+            "completed": 1792336810876
+          }
+        },
+        {
+          "type": "text",
+          "text": "[redacted:text:msg_14f98338b001ZvL6xblyTmsDMr]"
+        }
+      ],
+      "snapshot": {
+        "start": "8de238478a31bc28856c3e19a256e9bd05d09573",
+        "end": "48d461c19de74c51ce6fee4bae9b1ad180b4c2de",
+        "files": [
+          "docs/ttqs-quality-20261016/quality-review/0066_R01/worker/opencode_deepseek_R01/stdout_R01.jsonl"
+        ]
+      },
+      "finish": "stop",
+      "rawFinish": "stop",
+      "cost": 0,
+      "tokens": {
+        "input": 5393,
+        "output": 7656,
+        "reasoning": 5052,
+        "cache": {
+          "read": 6144,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_14f995648001T2DlK7TYVHTcuV",
+      "time": {
+        "created": 1792336811592
+      },
+      "type": "idle",
+      "outcome": "succeeded"
+    }
+  ]
+}

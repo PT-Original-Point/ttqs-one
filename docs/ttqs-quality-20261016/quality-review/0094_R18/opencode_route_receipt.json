@@ -1,0 +1,51 @@
+{
+  "doc_id": "0094",
+  "revision": "R18",
+  "candidate_docx_sha256": "ecf9717cdc7f7785ed6c7b18b9dd8e29af21a5b2641e13acf3b4b813371b5e18",
+  "review_status": "BLOCKED_NO_INDEPENDENT_SEMANTIC_VERDICT",
+  "provider_route_status": "OPENCode_FREE_INFERENCE_FROM_CLI_RETURNED_403_ON_TWO_MODELS",
+  "provider_runtime_identity": "UNKNOWN_BEYOND_CLI_SESSION_METADATA",
+  "formal_acceptance": "NOT_GRANTED",
+  "attempts": [
+    {
+      "n": 1,
+      "requested_model": "opencode/minimax-m3.1-flash-free",
+      "agent": "build",
+      "session_id": "ses_ea7ad8aa3ffeRgxhT5DngdOTg6",
+      "state": "INTERRUPTED_NO_FINAL_VERDICT",
+      "tool_requests": 26,
+      "tool_requests_executed": 0,
+      "session_cost_reported": 0,
+      "tokens": {
+        "input": 91352,
+        "output": 7878,
+        "reasoning": 18223,
+        "cache_read": 1168092,
+        "cache_write": 0
+      },
+      "sanitized_session_export_sha256": "1ad273379d012ef23d9f0e459f002d20f46f42962998c9d1c0af7118df95854a"
+    },
+    {
+      "n": 2,
+      "requested_model": "opencode/minimax-m3.1-flash-free",
+      "agent": "ttqs_r18_semantic_review",
+      "session_id": "ses_ea7a1c53cffe6z44hR9Aszleyu",
+      "exit_code": 1,
+      "response": "HTTP 403 FreeTierError: OpenCode free tier can only be used from within OpenCode.",
+      "stdout_sha256": "b6063f0648c013c36bea48583ae596638bed287d866d908cb9ed620f1b342c75",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "n": 3,
+      "requested_model": "opencode/mimo-v2.6-flash-free",
+      "agent": "ttqs_r18_semantic_review",
+      "session_id": "ses_ea7a138b9ffe3kictQlrGJ3G1L",
+      "exit_code": 1,
+      "response": "HTTP 403 FreeTierError: OpenCode free tier can only be used from within OpenCode.",
+      "stdout_sha256": "a16d5b8eae8c1b708172a054b280d0297169b76a339599f09c9ae39f955ca0d3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "read_only_repair": "Attempt 1 used default Build permissions; all 26 tool requests were marked executed=false. Attempts 2-3 used a temporary agent with permission *: deny. No CLI semantic verdict or document write was observed. The temporary active agent definition is copied into this evidence folder.",
+  "cost_note": "CLI session reported cost 0 for attempt 1; billing/account debit remains UNKNOWN."
+}

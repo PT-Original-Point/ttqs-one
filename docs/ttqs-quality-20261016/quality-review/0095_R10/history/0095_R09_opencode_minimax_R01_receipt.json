@@ -1,0 +1,55 @@
+{
+  "doc_id": "0095",
+  "revision": "R09",
+  "requirement_id": "I18-E02",
+  "official_checkbox": "建立目標客戶及學員滿意度調查機制（系統及流程面）。",
+  "reviewer_route": "OpenCode CLI v2.0.32",
+  "requested_model": "opencode/minimax-m3.1-flash-free",
+  "provider_model_identity": "UNKNOWN",
+  "reviewer_session_id": "ses_ea6bb354cffexYXYJtsp2ssyge",
+  "review_scope": "Independent packet-only semantic review; current PDF text, official source, Blueprint, R08 findings and register reconciliation; no visual inspection or binary SHA recomputation",
+  "reviewed_docx_sha256": "e1be4a9e9a0c61216416f6ff955bb1be3ed5d1f636550ea82bea4b5431e0ed8e",
+  "pdf_sha256": "ab78192fb5297b88ecd240eee21ed08f52d7e8a0f5c53e9edf04568f8217a23f",
+  "packet_sha256": "c054be1b88e97b7a4e759d179b5671518ddff29d93b49180df80969f8910981f",
+  "raw_stdout_sha256": "c6df9a5bb3f53d513d84df06da8d0cd8f7285a3efd65f6f6e7637d2c5a0fc19b",
+  "normalized_response_sha256": "4a10c02eb0aa6af0214782b03662c794568a93995f576148ca53ce082b19c530",
+  "verdict": "PARTIAL",
+  "blocking_findings": 0,
+  "nonblocking_findings": [
+    "NB-R09-01",
+    "NB-R09-02",
+    "NB-R09-03",
+    "NB-R09-04",
+    "NB-R09-05"
+  ],
+  "criterion_verdicts": [
+    "1. Official I18-E02 wording, DOCX 0095, analysis-report genre, case mapping, title-blind identifiability, separation from 0094/I18-E01 and 0096/I18-E03=PASS",
+    "2. All Unique Blueprint sections, required tables/figure/analysis, questions, calculations, direct usability and acceptance tests=PASS",
+    "3. Reassessment of the five R08 findings (R08-01 page-map precision; R08-02 uncounted CUSTOMER_VALID_RETURN_SHARE; R08-03 sample class wording; R08-04 review receipt status; R08-05 small-sample sensitivity)=PARTIAL",
+    "4. Recomputation of all learner/customer raw counts, sums, means, positive counts/rates, rankings, gaps, single-record sensitivity, outcome figures, denominators, missing/N/A rules, rounding and suppression; no merging of distinct respondent populations=PASS",
+    "5. Direct administration of both tools: eligibility, consent, scale, N/A, incomplete/withdrawn/invalid/valid status, REAL blank dates, invitation/delivery/return, population boundary, privacy/storage, aggregation and hold/reject criteria; proposed controls distinct from implemented operation=PASS",
+    "6. SAMPLE/SYNTHETIC vs REAL boundaries and replacement-register traceability; no fabricated people, approvals, signatures, courses, respondents, survey execution, outcomes or third-party records; missing REAL items remain UNKNOWN with safe source paths=PASS",
+    "7. Usability for a small volunteer association: SOP, data dictionary, worked case, ranked recommendations, decision criteria, responsibility/deadline/metric fields and follow-up; recommendations separate from authorization/execution=PASS",
+    "8. Negative-neighbour and title-blind tests reject at least two wrong documents by concrete body-level fields/sections=PASS",
+    "9. §1.4 page locators against the current 43-page R09 export; no nonexistent subsection cited; §4.1/§4.2/§4.3 page spans cover their actual sections; §7.3–§7.4 point to their actual page; register page locators remain correct; R09 appendices/version lineage and exact R06/R07/R08 history preserved without rewriting prior artefacts=PARTIAL",
+    "10. Remaining material contradiction, unsupported claim, ambiguous field, unusable form, arithmetic mismatch, overclaim, required omission or traceability defect=PARTIAL"
+  ],
+  "r08_findings": [
+    "R08-01=PARTIALLY_CLOSED",
+    "R08-02=CLOSED",
+    "R08-03=CLOSED",
+    "R08-04=OPEN",
+    "R08-05=CLOSED"
+  ],
+  "limitations": [
+    "Packet-only review: no shell, filesystem, browser, GUI or other tooling was used or attempted; no DOCX binary rehash, no PDF re-render, no DOCX XML extraction, and no font-size or layout measurement.",
+    "No visual inspection of the 43-page export was performed; every page, table, row, cell and heading reference above is read from the packet's page-bounded PDF text. Image presence or absence (including whether 附圖 A exists as a drawn object) and typography could not be confirmed.",
+    "All arithmetic was recomputed by hand from the raw response rows printed in §6.1, §6.2 and §6.4 and from the CSV body reproduced in the packet; no spreadsheet or calculation engine was used.",
+    "SHA-256 values (DOCX, PDF, CSV, manifest, official sources, Blueprint row) were compared for internal consistency only and were not independently recomputed; the reviewed DOCX SHA is bound exactly as supplied by the packet.",
+    "Findings are bound to the DOCX SHA-256 e1be4a9e…0ed8e as supplied. Any re-export, re-layout or content change invalidates this verdict and requires a new exact-SHA review.",
+    "This is a semantic review of the supplied candidate only. It is not a TTQS assessment, not a score, not an evaluation of the association's real practice, and not formal association acceptance. The deliverable remains CANDIDATE.",
+    "R08's five findings were reassessed independently from the current R09 evidence and the deterministic R06/R08 key-set reconciliation; where the reconciliation contradicts an allegation (R08-02), the allegation was not repeated, and no prior artefact was rewritten in the process."
+  ],
+  "formal_acceptance": "NOT_ASSERTED",
+  "created_utc": "2026-10-20T12:26:28Z"
+}

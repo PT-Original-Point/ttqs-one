@@ -1,0 +1,61 @@
+{
+  "schema": "TTQS_ONE_OPENCODE_REVIEW_TERMINAL_V1",
+  "work_id": "TTQS-0124-I19-E12-R02-W1-GLM53-EXACT-SHA-SEMANTIC-R03",
+  "doc_id": "0124",
+  "requirement_id": "I19-E12",
+  "pid": 76724,
+  "session_id": "ses_e83dc3c6effeGLVOn26lJ7z1r6",
+  "cli_exit_code": 1,
+  "timed_out": false,
+  "duration_seconds": 1.672,
+  "stdout_bytes": 528,
+  "stdout_sha256": "b02d298321e737b2631e646ae7544778a8af6809395dcbc64e2279b37d06bfce",
+  "stderr_bytes": 0,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "session_export_exit": 0,
+  "session_export_stderr": "",
+  "requested_model": "opencode/glm-5.3-flash-free",
+  "actual_model_ids": [],
+  "actual_provider_ids": [
+    "opencode"
+  ],
+  "actual_model_status": "SESSION_SELECTED_MODEL_CONFIRMED; INFERENCE_MODEL_UNKNOWN_NO_RESPONSE",
+  "tokens": "NOT_REPORTED",
+  "reported_cost": "UNKNOWN_NOT_RETURNED",
+  "fallback_allowed": false,
+  "computer_use": false,
+  "auto_approve": false,
+  "candidate_sha256_before": "5ea20da675395954e5587859ddc3ca4b483abaeff90509a86c66950581afec07",
+  "candidate_sha256_after": "5ea20da675395954e5587859ddc3ca4b483abaeff90509a86c66950581afec07",
+  "candidate_unchanged": true,
+  "response_text_events": 0,
+  "status": "DISPATCH_FAILED_UPSTREAM_FREE_LIMIT_429",
+  "response_available": false,
+  "next_action": "Reconcile exact response if present; if provider rejects, preserve terminal evidence and do not repeat identical input without new availability evidence.",
+  "upstream_error": {
+    "type": "provider.free-limit",
+    "http_status": 429,
+    "message": "Free usage limit reached. Connect a provider or subscribe to OpenCode Go to keep going, or switch models.",
+    "retry_after_ms": 61518000,
+    "observed_at_local": "2026-10-27T14:54:42.197+08:00",
+    "provider_next_eligible_estimate_local": "2026-10-28T08:00:00.197+08:00",
+    "estimate_not_guarantee": true
+  },
+  "wrapper_note": "The invoking PowerShell guard emitted a nonfatal Test-Path parameter-binding error before launch; directory creation and CLI execution completed. This is a harness warning, not a model response. Do not use that guard expression again.",
+  "session_model_selection": {
+    "model_id": "glm-5.3-flash-free",
+    "provider_id": "opencode",
+    "source": "sanitized native OpenCode session export"
+  },
+  "inference_served_model": "UNKNOWN_NO_GENERATED_RESPONSE",
+  "session_reported_tokens": {
+    "input": 0,
+    "output": 0,
+    "reasoning": 0,
+    "cache": {
+      "read": 0,
+      "write": 0
+    }
+  },
+  "session_reported_cost_usd": 0
+}

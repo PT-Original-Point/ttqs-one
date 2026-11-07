@@ -1,0 +1,404 @@
+{
+  "schema": "ttqs-one.visual-review.v1",
+  "receipt_id": "TTQS_ONE_0108_I18-E16_R01-C08_VISUAL_R11",
+  "observed_tpe": "2026-10-24T02:38:47.7805495+08:00",
+  "host": "DESKTOP-VMV4Q60",
+  "windows_user": "DESKTOP-VMV4Q60\\J",
+  "doc_id": "0108",
+  "official_requirement_id": "I18-E16",
+  "official_checkbox_serial": "UNKNOWN",
+  "internal_blueprint_index": 117,
+  "source_packet_sha256": "f11df2f92edb7c63bc7dbddefe8461188dfdf90c4be9e0c0c4ae284f15457d5f",
+  "unique_blueprint_sha256": "41713064e2744c12831cb56098cc3ceb5661279048eb16123583f6c26d2f64ab",
+  "official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "candidate_state": "CANDIDATE",
+  "candidate_docx_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\GITHUB_SYNC_0065_R04\\docs\\ttqs-quality-20261016\\quality-review\\0108_I18-E16_R01_20261022\\candidates\\R01-C08\\candidate\\0108_I18-E16_candidate_R01-C08.docx",
+  "candidate_docx_sha256": "e4c5b662384d84f6c11d0a1d69860935992216437088febfb791e767075d7f4f",
+  "candidate_mutated": false,
+  "technical_qa": "PASS (existing exact-SHA technical receipt; not a visual or formal acceptance)",
+  "independent_semantic_review": {
+    "verdict": "PASS",
+    "route": "OpenCode v2 CLI",
+    "model_requested_and_session": "opencode/deepseek-v4.1-flash-free",
+    "provider_serving_and_billing": "UNKNOWN",
+    "scope": "TEXT_ONLY_TARGETED_DELTA; no DOCX/PDF/image review",
+    "candidate_docx_sha256": "e4c5b662384d84f6c11d0a1d69860935992216437088febfb791e767075d7f4f",
+    "receipt_path": "candidates/R01-C08/evidence/opencode_semantic_review_R01-C08_receipt.json"
+  },
+  "word_export": {
+    "result": "SUCCESS",
+    "renderer": "Microsoft Word COM, isolated hidden read-only instance; no explicit Repaginate call",
+    "owned_word_pid": 68868,
+    "pdf_path": "visual/R01-C08_R11/0108_I18-E16_R01-C08.pdf",
+    "pdf_sha256": "b4c8af9d847f3369fabaacdc91a553e99d36eb770f977262f9dfb0d9758de7ea",
+    "pdf_bytes": 981443,
+    "page_count": 38
+  },
+  "rasterization": {
+    "renderer": "pypdfium2",
+    "scale": 2.0,
+    "page_count": 38,
+    "dimensions_px": "1191x1684",
+    "inspection_scope": "all 38 full-page PNGs individually inspected"
+  },
+  "findings": [
+    {
+      "id": "V01",
+      "severity": "MAJOR",
+      "pages": [
+        6,
+        7
+      ],
+      "location": "Table 2, SYN-P01",
+      "finding": "The record is split across the page break. Page 7 begins with continuation fields but no repeated table header or record identifier, so the continuation is not self-identifying.",
+      "required_repair": "Keep the full SYN-P01 record together where feasible, or repeat the header and carry the record identifier in the continuation."
+    },
+    {
+      "id": "V02",
+      "severity": "MAJOR",
+      "pages": [
+        11,
+        12
+      ],
+      "location": "Table 5 caption and body",
+      "finding": "The Table 5 caption is isolated at the bottom of page 11; its table body begins on page 12.",
+      "required_repair": "Keep the caption with at least the first body rows or move the caption with the complete table."
+    },
+    {
+      "id": "V03",
+      "severity": "MODERATE",
+      "pages": [
+        4,
+        5
+      ],
+      "location": "Table 1, SYN-P03",
+      "finding": "The record continues over the page break; the continuation begins without a repeated table header. The content remains readable but its table context is weakened.",
+      "required_repair": "Keep the record together or repeat header and record ID on the continuation."
+    },
+    {
+      "id": "V04",
+      "severity": "MODERATE",
+      "pages": [
+        12,
+        13
+      ],
+      "location": "Section 6 evidence-control table",
+      "finding": "The table continues over the page break with continuation rows at the top of page 13 and no repeated header.",
+      "required_repair": "Repeat the table header on continuation pages and avoid splitting a single logical row."
+    }
+  ],
+  "visual_verdict": "FAIL",
+  "verdict_reason": "Two major pagination defects (SYN-P01 continuation without header/identifier; isolated Table 5 caption) prevent visual acceptance. Additional moderate table-continuation issues are listed above.",
+  "limitations": [
+    "Visual inspection performed on the rendered page images; no external visual reviewer receipt exists.",
+    "The independent semantic reviewer explicitly did not inspect DOCX/PDF/page images.",
+    "This candidate contains SAMPLE/SYNTHETIC material only; REAL payroll evidence is UNKNOWN / NOT PROVIDED.",
+    "Formal Human acceptance remains NOT_GRANTED."
+  ],
+  "page_images": [
+    {
+      "file": "page-001.png",
+      "bytes": 364613,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "0f630434cb65a8f9c6efce9fa44895998cd8cecddc269d1de332db08cdb3c61c",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-002.png",
+      "bytes": 423496,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "3c32746d3098bba86284c123bbc1e8415470d74396e5246343d479ac763768ec",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-003.png",
+      "bytes": 374869,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "d83bbfd894ae73c410d1713162585f148fb9afce34d4497d9257653e2254b610",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-004.png",
+      "bytes": 214149,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "12bc1aea7bbfd523add18530db0ec91c918e81d358f329fd7a728e157af7775c",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-005.png",
+      "bytes": 133030,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "97fde12ad7caf0935e122ce1170202dc35a13bf491c61fa5c14d03c10a893a5b",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-006.png",
+      "bytes": 275892,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "78e0a31b6ff48a5319377b62b2d37a96c4a085982b56d8377910e84d12a426c5",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-007.png",
+      "bytes": 148353,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "0e361bf109f894823dfe324d46e2a8b3bbcc57d01a9d6c18ad3e37000ff4c0d2",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-008.png",
+      "bytes": 178466,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "e25d9bf8758fef6740890f7e47130709198c81ce6d66126bc5f095e8d402807b",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-009.png",
+      "bytes": 299853,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "3409897686c2683b09aa01e989054e491e59048066f77ece68dd957a4de01bd3",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-010.png",
+      "bytes": 251609,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "fb4da3721836d04a76e5fa2789a0a40de3fc3c754bb03fa35dde93d5ab5a4f28",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-011.png",
+      "bytes": 308260,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "4449961c399a009a03c4d4b62f8cf0672b8cba6c46da85764e4ec705d13261e1",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-012.png",
+      "bytes": 211666,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "28eedcc7ab8532ac21e7e41610293eff882a3e25c2bfd3d307df4587217c08a9",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-013.png",
+      "bytes": 211725,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "80e82b65f769164f754e69ddaed61a475063f62e656fa901e7e8edec42913caa",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-014.png",
+      "bytes": 391013,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "714d03b28cb081d5b2abf1b4b56d36a5fb59a0fd638f487de85dbea682b5d124",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-015.png",
+      "bytes": 358691,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "66158fea8f4ffd67be6dcecd984aaef8f35a55065c15b45bef11f9c3a1bb3ef5",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-016.png",
+      "bytes": 246694,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "1b5654dc905e7a0c9ac6950501ab29a1dc475d8e54501074b5e2082cc7d0c65f",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-017.png",
+      "bytes": 316416,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "0e90506782d5da582228ab86ad145ba9625183f5662db03d65ed7486f299b871",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-018.png",
+      "bytes": 248502,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "1bc8fff589668d2249bba823d4971c7cddadc571d410f45fe9ab90a918f4d4e3",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-019.png",
+      "bytes": 208777,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "dc38351e78d46ce33c7954e364d6b7aa99bbc437e49b859a801c392f3504c771",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-020.png",
+      "bytes": 251328,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "b6cbbd020a10f646d6dab1acbb71d6827c72004c70f8b24e57ed4c0c0a006935",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-021.png",
+      "bytes": 334553,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "a49a7fdcf7ca42e0a81c5c32365a69b2098c8125163613f9a0c5e938982adedd",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-022.png",
+      "bytes": 351907,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "7eed4ed202f7802e9343526e60b2ee3cd7d235bbfd7bdc3fca1c6707d7df6b30",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-023.png",
+      "bytes": 336214,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "4e8a388e2a060ded30837c6b8878f0c9079298165b78bc8f23bf22e332fbc5ab",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-024.png",
+      "bytes": 325576,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "3a7cf9ee5770318ee6df71166fba87acd957c14c1590a95a520d36958e82ebab",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-025.png",
+      "bytes": 305592,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "842c84521563f8ded3005bf6b9a015269f6615fa0941797d200109b5e255ce22",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-026.png",
+      "bytes": 202244,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "ca0de87f853ec74740c1b7eed0803ab3471fb0007f34c6c4d19f3cab1e4c701d",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-027.png",
+      "bytes": 154622,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "7a52034dd242a7f503b89cfd407d5d84000cb5ae337d595fdd21faf385c5f286",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-028.png",
+      "bytes": 162732,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "8268ee8905348e7e7d652ea69ed551a96dcc729a138ab9edfe43c0f35681cc60",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-029.png",
+      "bytes": 170475,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "999c842aa46cf6993bce729b786b005eedc1a517942d357b273266222b7194f8",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-030.png",
+      "bytes": 149781,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "68ab8d5b9b7888b04b1b050ac88b18815a8ad72f104f96a7be2b0ade587ff25b",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-031.png",
+      "bytes": 132692,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "6c9aef282f6f1be0741a61d78ce28ca5b89354f488624e7b091be0e954603909",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-032.png",
+      "bytes": 187273,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "99ce439a0f2a8777e40fc58db86e896416cba318a992d414aefefcb53b5c7cd5",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-033.png",
+      "bytes": 150815,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "6a49b15c52f8d1042f8e6c1035f52fd496eb19fcc4bc8369926cf3313b8734a4",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-034.png",
+      "bytes": 104179,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "555a5a438e8df3c09bab5d55a863c7d939adb0fed9d468f31f816e6e182ee19c",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-035.png",
+      "bytes": 108397,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "45c04d40ac9018ee0f3754a341a569ad2fd9a477c6a609a182f31581733dcd89",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-036.png",
+      "bytes": 257174,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "118d47dccfc4ffb228980f649147028133bebee0db87428532bc6bb936b86451",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-037.png",
+      "bytes": 294242,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "a7729852309585278d07fbdd20a59c55900110634e8abe06acc1b0fc0bfc9788",
+      "full_page_inspected": true
+    },
+    {
+      "file": "page-038.png",
+      "bytes": 389328,
+      "width_px": 1191,
+      "height_px": 1684,
+      "sha256": "5f326f12bac973ff6e0c86a9d2973f2adae7d975921922b4386a98d92be84480",
+      "full_page_inspected": true
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0100-I18-E08-R09B-OPENCode-GLM-DELTA-ADJUDICATION-R02",
+  "doc_id": "0100",
+  "official_requirement_id": "I18-E08",
+  "candidate_state": "CANDIDATE_PENDING_FORMAL_HUMAN_ACCEPTANCE",
+  "candidate_docx_sha256": "0262d68826181a4b5f6209c3422a2d5c61a0b9820790c4e43a2e483b94de884c",
+  "candidate_docx_bytes": 58934,
+  "candidate_unchanged_during_review": true,
+  "reviewer_route": "OpenCode v2 CLI plan agent",
+  "requested_model": "opencode/glm-5.3-flash-free",
+  "actual_model_from_session_export": "opencode/glm-5.3-flash-free",
+  "provider_upstream_identity": "UNKNOWN_NOT_EXPOSED",
+  "fallback_status": "NOT_OBSERVED_IN_CAPTURED_SESSION",
+  "session_id": "ses_e7f2010eaffe1aI0REtLC466cm",
+  "session_export_sha256": "72828792f79114ed4c936889a7b975e382acd79992e17095fd2c59b8df98353a",
+  "raw_stdout_sha256": "42fcaa071a64a9226b8aa379ef6b5d2d520b99f75951a2c47e9b54d65fb5bcbb",
+  "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "response_sha256": "83e6f5c5b1b4ec96662da3a74465e0c6c0fee7a965847ed84704ffcebf27aba4",
+  "prompt_sha256": "b9aa485c0829297a434e2f1dbd03509f991463bc79c3a4934422f384a963ff86",
+  "usage": {
+    "input": 41849,
+    "output": 2684,
+    "reasoning": 2801,
+    "cache": {
+      "read": 4352,
+      "write": 0
+    }
+  },
+  "reported_cost": 0,
+  "tool_events_observed": 0,
+  "reviewer_verdict": "PASS",
+  "adjudicated_semantic_status": "PASS_TEXT_ONLY_EXACT_SHA_WITH_BASELINE_INHERITANCE",
+  "review_scope": "Read-only semantic delta review of candidate R09b vs baseline R09a (debd41e7ca1b18b88cad37db118c5b3474df411b3e2d1c87a8351d456245e0b2), covering every changed paragraph/table row in the supplied diff (P002, P064 rewrite, P069 removal with downstream paragraph renumber, P087, P094, P131, P141, T01R07, T01R09, T12R02, T12R03, T12R06–T12R12, T17R11) plus full current-candidate body verification against the source packet (81caa978…) and Unique Blueprint (c407af27…), including the unchanged 80-cell T13 matrix, T14/T15 arithmetic, intake/QC rules, 0101 handoff (P127–P137, T16), and SAMPLE/REAL boundary statements.",
+  "criteria": {
+    "F1": {
+      "status": "PASS",
+      "assessment": "Closed. New check-table row T12R06 ('前後測各一份同碼，未確認為同一人 | 身分配對未證實') establishes HOLD-first handling, respondent in-person identity confirmation with version and date-order check and audit note, mutual REJECT of both sheets with exclusion from the valid denominator when unverified or on code collision, and the explicit rule '不得只因代碼相同就推定同一人'. Consistent with P042 (same-stage duplicate HOLD/reject) and P102 REJECT list ('無法安全確認的配對'). T16R04 unchanged (8 pairs A01–A08) and T16R08 shows 8/0/0 only for the synthetic demo, which is not affected by the identity rule.",
+      "locator": "T12R06; cross-refs P042, P102"
+    },
+    "F2": {
+      "status": "PASS",
+      "assessment": "Closed. Employer/workplace, client, and service-recipient identifiers are now named in the operational checklists: P064 (pre-test self-check covers free-text examples), P087 (post-test self-check covers name/contact/workplace/employer/client/service-recipient identifiers), P094 (administrator step 5 extends code and free-text inspection to 姓名、電話、地址、任職單位全名、雇主／客戶／服務對象名稱 with HOLD → mask/refill → dispose per §7). Matches the standing §7 prohibitions at P105–P106 instead of contradicting them.",
+      "locator": "P064, P087, P094; cross-refs P105–P106"
+    },
+    "F3": {
+      "status": "PASS",
+      "assessment": "Closed. Version/status terminology is now explicit and non-overstating: P002 '版次 R09b', T01R07 'R09b（由 R09a 定點修補）', T01R09 states the R09a PASS attaches to the OLD SHA only, that R09b is a local-repair candidate pending this delta re-review, and '正式驗收 NOT_GRANTED'. P163 keeps acceptance dependent on the external exact-SHA receipt, not the status column.",
+      "locator": "P002, T01R07, T01R09, P163"
+    },
+    "F4": {
+      "status": "PASS",
+      "assessment": "Closed. (a) Shorthand '4碼' replaced with '四位數字配對代碼' at P141, consistent with P038, P051–P052, P072, T06R02, T09R02. (b) Blank-value classification consolidated: T12R02 now covers only out-of-range (5、6、負數)/illegible scores, T12R03 covers 未勾選（空白）—blank is no longer double-classified and no imputation path exists (P103, P121 removed-list unchanged). (c) Handoff CSV header at P131 rewritten without leading spaces ('代碼,前A,前B,…') with field order otherwise identical to P132 rules. (d) T17R11 annotated '（沿用未改動的 R09 清冊）' clarifying register retention with unchanged SHA 889c202a…, matching the technical QA input.",
+      "locator": "P141, T12R02, T12R03, P131, T17R11"
+    },
+    "no_new_material_contradiction": {
+      "status": "PASS",
+      "assessment": "No material contradiction introduced. All 80 raw cells in T13R02–T13R09 are byte-exact against the R09 source packet fixture (A01–A08 pre/post vectors identical); T14 totals (75/117/+42, n=8, 9.375/14.625/+5.25) and T15 per-dimension sums (A 17/25, B 16/24, C 13/22, D 14/24, E 15/22 with changes +1.000/+1.000/+1.125/+1.250/+0.875) re-verified arithmetically, including row means (e.g., C pre 1+2+2+1+2+1+2+2=13 →1.625). Removed pre-test checkbox P069 is fully absorbed into P064 ('後測同碼同版'), leaving no orphaned requirement; the one-checked-box-per-question instruction (P051, P085) and four-digit code rule remain everywhere consistent. Hold/never-impute principle preserved across P092, P101–P103, T12R02–T12R03.",
+      "locator": "T13R02–T13R09, T14R01–T14R10, T15R01–T15R06, P038–P042, P051, P063–P068, P072, P092–P103"
+    },
+    "sample_real_boundary": {
+      "status": "PASS",
+      "assessment": "SAMPLE/SYNTHETIC boundary fully preserved in unchanged text (P021, P023–P026, P115–P125, P163–P166) and not weakened by any delta edit; T16R05/T17 rows keep the synthetic-flag on dates and scores; 0099 reuse disclaimers and the R08 historical-file warning remain intact.",
+      "locator": "P021, P023–P026, P115–P125, P163–P166, T16R05, T17R11"
+    },
+    "cross_document_handoff": {
+      "status": "PASS",
+      "assessment": "T16R01–T16R12 handoff package unchanged and identical to 0101 needs (fixed field order P131/P132, recalculated totals re-verified by 0101, TRACE: SAMPLE labeling, n=8 denominator); crossdoc receipt R01 (a99dd00a…) confirms all 80 raw scores and pre 75/post 117/+42 match 0101 R09 (56f433e0…) within its declared scope; T16R10 correctly defers the 0100 SHA computation to 0101 at receipt, with no self-asserted SHA.",
+      "locator": "P127–P137, T16R01–T16R12"
+    }
+  },
+  "review_findings": [
+    {
+      "locator": "P064",
+      "evidence_excerpt": "☐ 配對代碼為四位數字（0–9）；自由文字例子不含姓名、聯絡方式或任職單位／雇主／客戶／服務對象名稱；後測同碼同版。",
+      "defect": "MINOR (below REJECT/HOLD threshold): three distinct self-check conditions are merged into a single checkbox, slightly reducing per-condition tick granularity versus the prior six-item pre-test checklist.",
+      "required_change": "Optional: split into separate ☐ items at the next revision; no blocking action required."
+    },
+    {
+      "locator": "P069–P166 (paragraph numbering)",
+      "evidence_excerpt": "P069 (R09a checkbox) removed; all subsequent paragraphs shift one index earlier in R09b.",
+      "defect": "TRIVIAL: paragraph locator indices differ from baseline after P068; all section-level cross-references use section numbers, so no broken reference.",
+      "required_change": "None; noted only for receipt cross-referencing."
+    },
+    {
+      "locator": "Review input header vs supplied CURRENT_R09B_BODY block",
+      "evidence_excerpt": "Header declares body extraction SHA-256 0c3c7370db89e529d7fd963f69eedaae2701956fea0c65956f7432066f71734e; the body block itself is annotated SHA256=846bb5ab42b7a8c779eb76d3d3d4949ffae51c1d94a2686997218b88157e633a.",
+      "defect": "TRIVIAL (receipt-level): the two named hashes are not reconcilable from text inspection alone; reviewer reports the header-declared extraction value and cannot recompute hashes read-only.",
+      "required_change": "Confirm which hash denotes the paragraph-indexed extraction (0c3c7370…) versus the body-block file (846bb5ab…) in the review ledger; no content defect."
+    }
+  ],
+  "finding_resolution": {
+    "locator": "Review input header / body block",
+    "status": "RESOLVED_RECEIPT_REPRESENTATION",
+    "evidence": "Normalized LF UTF-8 extracted body hash recomputes to 0c3c7370...; raw Windows CRLF body file bytes hash to 846bb5ab.... Both identify distinct representations of the same extracted text.",
+    "blocking": false
+  },
+  "nonblocking_observations": [
+    "P064 combines multiple self-check conditions into one checkbox; reviewer classified optional and below reject/hold threshold.",
+    "Paragraph locator indices shift after removed P069; section cross-references are unaffected."
+  ],
+  "technical_qa": "PASS_DETERMINISTIC_SCOPE; exact candidate SHA retained",
+  "visual_qa": "PASS_VISUAL_DELTA_SCOPE; 16/16 rendered pages inspected; whitespace observation nonblocking",
+  "cross_document_qa": "PASS for 0100 R09b / 0101 R09 final pair in declared scope",
+  "real_evidence": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED",
+  "promotion": "NOT_PROMOTED",
+  "limitations": [
+    "Text-only independent semantic review; reviewer did not inspect pages.",
+    "Visual and technical receipts are separate and remain bounded to their declared scopes.",
+    "OpenCode session model metadata matches the requested free model, but upstream serving/billing infrastructure is not exposed.",
+    "Prior Antigravity R01 model identity remains UNKNOWN and is not counted."
+  ],
+  "observed_local": "2026-10-28T13:02:10.140148+08:00"
+}

@@ -1,0 +1,99 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0067",
+  "requirement_id": "I15-E03",
+  "official_checkbox_serial": "073",
+  "revision": "R03",
+  "candidate_sha256": "f9985cce5ed4b5fdc65a961efe2ccbee754e8f73db773d0604c8695db9ff4e8a",
+  "candidate_bytes": 64732,
+  "previous_R01_sha256": "57895a9daecea908630897ccd95cf7763ae9457d18829225ee9d92e4638141f2",
+  "previous_R02_sha256": "74e086337bc4ccca6c779dd5005d47cf97415122ca8b79e7745e99b567b5156d",
+  "source_body_sha256": "13d77ca1968360395b9a1c75f00d88e78794e534cb8674a9b84a04a567f0bfe7",
+  "dataset_sha256": "b6309a108a71c8d58c25993eadc29e0d5bef6407c4f8cfaff8f57a9fa7be730d",
+  "replacement_register_sha256": "9abc9974af0e57082f28bbeb16153588d81c0a68d2d4f745877c1bf42e77b2a3",
+  "pdf_sha256": "79dcb9e1d6b98077d5f4579d4dedf45d616d5e03e1aeec707c2479b6deb4d35f",
+  "pdf_pages": 21,
+  "render_method": "Microsoft Word read-only COM PDF export; pypdfium2 rasterization scale 2.2",
+  "visual_pages_mapped_and_verified": 21,
+  "visual_pages_total": 21,
+  "all_page_mappings_pass": true,
+  "layout_fixes": "Removed final empty table spacer paragraph before landscape appendix section; preserved report body; R02 already removed title border, moved section 3 to new page, and widened KPI 7.1 via landscape section.",
+  "metrics": {
+    "attendance_rate": "32/37=86.5%",
+    "completion_registered": "30/37=81.1%",
+    "completion_attendee": "30/32=93.8%",
+    "assessment_coverage": "30/32=93.8%",
+    "assessment_pass_weighted": "24/30=80.0%",
+    "survey_response": "30/32=93.8%",
+    "positive_response": "26/30=86.7%",
+    "budget_utilization": "24630/25000=98.5%",
+    "budget_variance_spend_minus_plan": -370,
+    "absence_count": 5,
+    "uncompleted_attendees": 2,
+    "no_valid_assessment": 2,
+    "valid_assessment_failures": 6,
+    "invalid_surveys": 2,
+    "nonpositive_valid_surveys": 4,
+    "unweighted_pass_mean": "79.6%"
+  },
+  "cohort_identities": {
+    "C1": {
+      "registrants_attendee_absent": true,
+      "attendee_assessment_missing": true,
+      "assessment_pass_fail": true,
+      "survey_issued_valid_invalid": true,
+      "budget_variance": -350
+    },
+    "C2": {
+      "registrants_attendee_absent": true,
+      "attendee_assessment_missing": true,
+      "assessment_pass_fail": true,
+      "survey_issued_valid_invalid": true,
+      "budget_variance": -300
+    },
+    "C3": {
+      "registrants_attendee_absent": true,
+      "attendee_assessment_missing": true,
+      "assessment_pass_fail": true,
+      "survey_issued_valid_invalid": true,
+      "budget_variance": 280
+    }
+  },
+  "checks": {
+    "docx_zip_integrity": true,
+    "docx_opened_with_python_docx": true,
+    "r03_content_unchanged_from_r02_except_empty_spacer": true,
+    "body_headings_13_required_sections_detected": true,
+    "replacement_register_rows": 49,
+    "replacement_register_unique_fact_ids": true,
+    "dataset_cohort_count": 3,
+    "cohort_bridge_and_calculation_identities": {
+      "C1": {
+        "registrants_attendee_absent": true,
+        "attendee_assessment_missing": true,
+        "assessment_pass_fail": true,
+        "survey_issued_valid_invalid": true,
+        "budget_variance": -350
+      },
+      "C2": {
+        "registrants_attendee_absent": true,
+        "attendee_assessment_missing": true,
+        "assessment_pass_fail": true,
+        "survey_issued_valid_invalid": true,
+        "budget_variance": -300
+      },
+      "C3": {
+        "registrants_attendee_absent": true,
+        "attendee_assessment_missing": true,
+        "assessment_pass_fail": true,
+        "survey_issued_valid_invalid": true,
+        "budget_variance": 280
+      }
+    },
+    "all_visual_page_mappings_match_inspected_r02_except_footer": true,
+    "blank_appendix_page_removed": true,
+    "candidate_status": "CANDIDATE_ONLY; no formal association acceptance"
+  },
+  "semantic_review": "PENDING exact-SHA independent review",
+  "output_text_path": "E:\\TTQS\\_github_sync_0064\\docs\\ttqs-quality-20261016\\quality-review\\0067_R01\\review\\candidate_text_R03.md"
+}

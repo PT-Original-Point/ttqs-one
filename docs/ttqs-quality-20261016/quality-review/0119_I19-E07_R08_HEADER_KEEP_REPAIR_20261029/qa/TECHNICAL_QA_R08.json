@@ -1,0 +1,56 @@
+{
+  "schema": "TTQS_ONE_0119_R08_TECHNICAL_QA",
+  "doc_id": "0119",
+  "official_requirement_id": "I19-E07",
+  "source_commit": "76ce3866f8ab09fba263a3da3ad658ba2f829075",
+  "candidate_state": "CANDIDATE_ONLY",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0119_I19-E07_SOURCE_PREP_R01_20261024\\R08_HEADER_KEEP_REPAIR_20261029\\0119_I19-E07_CANDIDATE_R06.docx",
+  "candidate_sha256": "da0fbaa8a2063bf0d59766085cc19d25581a9d2b293469566ab7b5a7a63007c7",
+  "candidate_bytes": 57877,
+  "input_candidate_sha256": "f70daef4c43144ffb7bcb08f21c059f7b19504f0ced1a59cb289e5226bcc68b2",
+  "source_packet_sha256": "935a5cbc91c7dadfdcd0d9f3a7a45f56dcc5013ee9dd81fef1cfedd6b5b73656",
+  "unique_blueprint_sha256": "d097c7491235e323ebca4a31ff147ee5be2e6e5f893041087fd3076664aa0473",
+  "official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "changed_ooxml_parts_vs_r07": [
+    "word/document.xml"
+  ],
+  "qa_status": "PASS_TECHNICAL",
+  "checks": {
+    "docx_sha256": "da0fbaa8a2063bf0d59766085cc19d25581a9d2b293469566ab7b5a7a63007c7",
+    "zip_crc": "PASS",
+    "python_docx_reopen": "PASS",
+    "table_count": 9,
+    "only_section_5_3_page_break_changed": true,
+    "missing_rows": [],
+    "wrong_rows": [],
+    "body_min_font_pt": 10.5,
+    "table_min_font_pt": 9.5,
+    "sample_arithmetic": {
+      "market_base": 40.0,
+      "market_comp": 48.0,
+      "market_delta_pp": 8.0,
+      "value_base": 62.5,
+      "value_comp": 75.0,
+      "value_delta_pp": 12.5,
+      "response_base": 80.0,
+      "response_comp": 80.0
+    },
+    "truth_table_case_count": 9,
+    "decision_outcomes": [
+      "BOTH_PARTIAL_CANDIDATE",
+      "DECLINE / NEGATIVE",
+      "NO_POSITIVE_CHANGE",
+      "ONE_DIMENSION_ONLY"
+    ]
+  },
+  "boundaries": {
+    "all_outcome_numbers_sample_synthetic": true,
+    "real_association_performance_asserted": false
+  },
+  "replacement_register_rows": 50,
+  "replacement_register_sha256": "dc32e9693ba80d00d03315519f221b8847d8fb5a49be4522a5500ee6e6387d29",
+  "visual_qa": "PENDING_WORD_NATIVE_RENDER",
+  "independent_semantic_review": "PENDING_EXACT_CANDIDATE_SHA",
+  "formal_acceptance": "NOT_GRANTED",
+  "verified_at_utc": "2026-10-29T09:06:41.038342+00:00"
+}

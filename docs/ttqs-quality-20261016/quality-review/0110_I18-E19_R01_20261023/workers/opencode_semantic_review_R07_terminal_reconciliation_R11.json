@@ -1,0 +1,59 @@
+{
+  "schema": "ttqs-one-worker-terminal-reconciliation/v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0110",
+  "requirement_id": "I18-E19",
+  "work_id": "0110-SEMANTIC-REVIEW-R07",
+  "observed_at_tpe": "2026-10-23T21:56:52.441+08:00",
+  "state": "TERMINAL_RECONCILED",
+  "purpose": "Correct stale dispatch RUNNING label; preserve original dispatch as launch snapshot.",
+  "original_dispatch": {
+    "local_path": "worker/opencode_semantic_review_R07_dispatch.json",
+    "local_sha256": "248bd11609e41de6b0dec4f7009cb1b5c2cd854c6c1f8a52663d29560ff09a40",
+    "remote_path": "docs/ttqs-quality-20261016/quality-review/0110_I18-E19_R01_20261023/workers/opencode_semantic_review_R07_dispatch.json",
+    "remote_git_blob_sha1": "0ca60c9309eeacd7411aa68858bc22b408bc0ccd",
+    "recorded_status": "RUNNING"
+  },
+  "terminal_evidence": {
+    "pid": 45448,
+    "pid_alive_at_reconciliation": false,
+    "pid_creation_at_dispatch": "2026-10-23T12:32:18.1285035+08:00",
+    "native_session_id": "ses_e98f805ffffeeg1EngR4tw3kme",
+    "session_started_tpe": "2026-10-23T12:32:18.572+08:00",
+    "session_completed_tpe": "2026-10-23T12:38:20.236+08:00",
+    "native_session_outcome": "succeeded",
+    "cli_exit_code": "UNKNOWN_NOT_CAPTURED",
+    "requested_model": "opencode/mimo-v2.6-flash-free",
+    "native_session_selected_model": "opencode/mimo-v2.6-flash-free",
+    "provider_billing": "UNKNOWN",
+    "stdout_bytes": 13348,
+    "stdout_sha256": "c5a15b81e32a07d3b9a8ff67fd3dc741d89054cc9419be4626300a710f8815e9",
+    "stdout_last_write_tpe": "2026-10-23T12:38:22+08:00",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "response_sha256": "dcace3aa5eea2c711051e7fae8c77ecaee35add299d70d20c30648fdf985c644"
+  },
+  "candidate": {
+    "path": "candidate/0110_R07.docx (see package manifest for exact filename)",
+    "sha256": "9a306bf5712437ee578867b745e7d0811959decaa862ed540a82e7e8553bd3c2",
+    "bytes": 70594,
+    "changed_by_reconciliation": false,
+    "state": "CANDIDATE_NOT_FORMALLY_ACCEPTED"
+  },
+  "qa": {
+    "semantic_verdict": "PASS_CONTENT_TEXT_ONLY",
+    "semantic_scope": "Full extracted DOCX text P001-P302 and T01-T37, official packet, unique Blueprint, R06 review, 213-record R07 synthetic register; reviewer recomputed arithmetic.",
+    "semantic_receipt_sha256": "5e2387629c39e137a0c68e0bc6fd64bf5bd643fe70902aa18866c1dbee70ee56",
+    "technical": "PASS",
+    "technical_receipt_sha256": "43cfbc116adda9abc38ed9b26a130dcda54ecfce273a534e04a69fe92935cfbf",
+    "visual": "PASS",
+    "visual_scope": "All 26 Word-native rendered pages; 24 unchanged final pixels, final pages 25-26 directly inspected, page 14 inspected and pixel-identical in final render.",
+    "visual_receipt_sha256": "29ad9676fb91f2a344d17857b521c96e6ee6d297c6fefdac65b8cdbbf6f930c8",
+    "mapping_math": "PASS",
+    "mapping_math_receipt_sha256": "a8cc0514d19e2bfb564439fa7a0088b2f2866877879a0f283c8d93bf69603894",
+    "mapping_items": "14/14"
+  },
+  "terminal_status": "SESSION_SUCCEEDED_CLI_EXIT_UNKNOWN",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN"
+}

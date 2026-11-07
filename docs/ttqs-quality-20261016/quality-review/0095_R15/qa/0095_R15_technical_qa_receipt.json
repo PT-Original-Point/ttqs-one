@@ -1,0 +1,190 @@
+{
+  "doc_id": "0095",
+  "requirement_id": "I18-E02",
+  "revision": "R15",
+  "state": "PASS_BOUNDED_TECHNICAL_READBACK",
+  "docx_sha256": "c70521d50fbec6cdc3b53ce3dc35fa2613069e60c58625b7eb2f96a5a6fd3658",
+  "docx_bytes": 264685,
+  "docx_zip_crc_bad_member": null,
+  "paragraphs": 383,
+  "tables": 29,
+  "sections": 19,
+  "pdf_sha256": "b106d9c8a66b7c3eae8ecd6c58d71adb797d03e0b7982de9f414c6e744006a04",
+  "pdf_pages": 46,
+  "register_sha256": "163796fb365509ddda1d03fe2db7f795feb4f45fba30cbb138fd50857eafd1c9",
+  "register_rows": 211,
+  "register_columns": 13,
+  "register_unique_keys": 211,
+  "manifest_sha256": "7cf9cf0f9c494ff0f12513b3c4ab2e473dd26a6eefa4472c6028e38e4caac3b2",
+  "page_reference_rows": 211,
+  "expanded_page_references": 258,
+  "page_reference_out_of_bounds": [],
+  "references_to_empty_pages": [],
+  "required_text_missing": [],
+  "body_run_font_floor_pt": 10.5,
+  "explicit_body_run_sizes_count": 515,
+  "table_run_font_floor_pt": 9.5,
+  "explicit_table_run_sizes_count": 1001,
+  "score_table_results": [
+    {
+      "n": 14,
+      "items": [
+        {
+          "sum": 57,
+          "mean": 4.0714,
+          "positive": 11,
+          "rate_pct": 78.6
+        },
+        {
+          "sum": 56,
+          "mean": 4.0,
+          "positive": 11,
+          "rate_pct": 78.6
+        },
+        {
+          "sum": 55,
+          "mean": 3.9286,
+          "positive": 10,
+          "rate_pct": 71.4
+        },
+        {
+          "sum": 56,
+          "mean": 4.0,
+          "positive": 11,
+          "rate_pct": 78.6
+        },
+        {
+          "sum": 58,
+          "mean": 4.1429,
+          "positive": 12,
+          "rate_pct": 85.7
+        }
+      ],
+      "rows": 14
+    },
+    {
+      "n": 5,
+      "items": [
+        {
+          "sum": 21,
+          "mean": 4.2,
+          "positive": 4,
+          "rate_pct": 80.0
+        },
+        {
+          "sum": 20,
+          "mean": 4.0,
+          "positive": 4,
+          "rate_pct": 80.0
+        },
+        {
+          "sum": 20,
+          "mean": 4.0,
+          "positive": 4,
+          "rate_pct": 80.0
+        },
+        {
+          "sum": 21,
+          "mean": 4.2,
+          "positive": 4,
+          "rate_pct": 80.0
+        },
+        {
+          "sum": 21,
+          "mean": 4.2,
+          "positive": 4,
+          "rate_pct": 80.0
+        }
+      ],
+      "rows": 5
+    }
+  ],
+  "sample_anchor_checks": {
+    "24": {
+      "SYN-L01": true,
+      "SYN-L08": true
+    },
+    "27": {
+      "6.3.1": true,
+      "57": true
+    },
+    "28": {
+      "6.3.3": true
+    },
+    "29": {
+      "6.4": true
+    },
+    "30": {
+      "6.4.1": true
+    },
+    "31": {
+      "7.1": true,
+      "7.2": true
+    },
+    "33": {
+      "7.2": true,
+      "SAMPLE": true
+    },
+    "34": {
+      "7.3": true,
+      "7.4": true
+    },
+    "35": {
+      "8.1": true
+    },
+    "36": {
+      "8.4": true
+    },
+    "37": {
+      "8.5": true
+    },
+    "39": {
+      "9.5": true,
+      "UNK-0095-UNK_FORMAL_EFFECTIVE_DATE": true
+    },
+    "40": {
+      "UNK-0095-UNK_REAL_RESPONSES": true
+    },
+    "41": {
+      "UNK-0095-UNK_IMPROVEMENT_ORIGINALS": true
+    },
+    "42": {
+      "10.1": true,
+      "R15 current register": true
+    },
+    "43": {
+      "A-5": true,
+      "0095_R15_synthetic_replacement_register.csv": true
+    },
+    "44": {
+      "10.2": true,
+      "R15 current QA receipts": true
+    },
+    "45": {
+      "R15": true
+    },
+    "46": {
+      "候選狀態": true
+    }
+  },
+  "checks": {
+    "docx_zip_crc_clean": true,
+    "paragraphs": true,
+    "tables": true,
+    "sections": true,
+    "pdf_46_pages": true,
+    "register_211_rows_13_columns": true,
+    "register_unique_keys": true,
+    "all_rows_have_page_reference": true,
+    "all_page_refs_in_bounds": true,
+    "all_referenced_pages_nonempty": true,
+    "body_font_floor_10_5": true,
+    "table_font_floor_9_5": true,
+    "required_text_present": true,
+    "score_tables_found": true,
+    "sample_anchors_present": true
+  },
+  "limitations": [
+    "Bounded technical, arithmetic, register bounds and anchor checks; not independent semantic acceptance or proof of REAL association evidence."
+  ]
+}

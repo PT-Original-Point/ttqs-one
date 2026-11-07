@@ -1,0 +1,40 @@
+{
+  "doc_id": "0111",
+  "revision": "R03",
+  "candidate_sha256": "f427ed898a79393a91d6d8fadcde960a8126e90697325aa94c1b764b8b537a50",
+  "findings": [
+    {
+      "attempt": 1,
+      "status": "FAILED_BEFORE_DISPATCH",
+      "reason": "Launcher used PSHOME\\\\powershell.exe, which does not exist in this runtime",
+      "worker_spawned": false,
+      "word_spawned": false,
+      "pdf_created": false
+    },
+    {
+      "attempt": 2,
+      "worker_pid": 74592,
+      "exit_code": 1,
+      "elapsed_seconds": 5.1,
+      "status": "FAILED_BEFORE_WORD_OPEN",
+      "observed_error": "Windows PowerShell child could not resolve Get-FileHash while writing its error receipt; receipt absent",
+      "word_owner_marker_present": false,
+      "new_word_pid_delta": 0,
+      "pdf_created": false
+    },
+    {
+      "attempt": 3,
+      "worker_pid": 66368,
+      "exit_code": 1,
+      "elapsed_seconds": 5.1,
+      "status": "FAILED_BEFORE_WORD_OPEN",
+      "observed_error": "Windows PowerShell child could not resolve Get-FileHash in preflight and again in error handling",
+      "word_owner_marker_present": false,
+      "new_word_pid_delta": 0,
+      "pdf_created": false
+    }
+  ],
+  "root_cause": "Native PS 5.1 child inherits a module environment where Get-FileHash is not discoverable; standard utility module files exist, but the cmdlet is absent in the hidden child. This is a launcher-runtime dependency issue, not a DOCX or Word rendering failure.",
+  "repair": "Use a local .NET SHA256 helper in the exporter and retain explicit native process ownership checks.",
+  "verified_at": "2026-10-23T17:10:43.3418294+08:00"
+}

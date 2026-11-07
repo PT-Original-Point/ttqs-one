@@ -1,0 +1,53 @@
+# 0137 R02 exact-SHA semantic delta review packet
+
+DOCX 0137; official requirement I19-E27; 157-project index 151; official printed serial UNKNOWN.
+Candidate SHA-256: `3899167f0437ec76df42e6229685564d910250c6a822b627ec15b5f9cfcfecc8`. State CANDIDATE only; formal acceptance NOT_GRANTED; REAL media originals UNKNOWN/HOLD.
+Source packet SHA-256: `7597c1346607c7c218bca7b9d92bbcd6fa4cfbba25bc793a6ff30e2b26e6b733`.
+Unique Blueprint SHA-256: `7590fe026b53010cd40664d23f53880e7c717a6e93c6f19d59212ef5312d6cf9`.
+
+## Review scope
+Review only the semantic delta from the exact R01 baseline SHA `7271c89f59aab0455b72a5b17cb55da2eb6ea6c3a162214418930f9c924484f3`. The R01 full semantic review was PASS with two minor findings: Table 11 fact/case IDs were concatenated, and Tables 2/8 lacked explicit codes for I19-E29 and I19-E14. R02 addresses those. Unchanged semantic scope may inherit R01 PASS only; do not claim a fresh full-document or visual review. Check whether the R02 additions introduce contradictions, misbind official/neighbor requirements, or falsely imply a shared case/source.
+
+## Official requirement and binding
+Official source page 9 states: 「提出報章雜誌採訪或電子媒體訪問之正面消息（其他）」. Crosswalk: `I19-E27,1,0,0137,媒體採訪與正面報導原件查驗表`. Project index 151 is the project-specific 157 index; official printed serial remains UNKNOWN.
+
+## Unique Blueprint limits
+This is a third-party media-original verification/content comparison/page index tool for a small volunteer association. It must not become a press release, outcome evaluation, award, contract, membership analysis or market trend report. Neighbor boundaries: 0136/I19-E26 is social impact/recognition/collaboration evidence; 0135/I19-E25 is market-value trend; 0139/I19-E29 employment/outcome evidence; 0126/I19-E14 salary evidence. Cross-document linkage requires an authorized, verified same case/source key; no shared key must remain separate. Media wording does not prove outcomes. Synthetic content never becomes association REAL evidence.
+
+## R02 changed content as extracted from the candidate
+First-page status cell: `R02；候選文件，不是協會正式核定或 TTQS 評分`.
+Table 2 (complete boundary table):
+- 邊界項目 | 0137 的處理方式 | 不能推論的內容
+- 官方 crosswalk | I19-E27 → DOCX 0137「媒體採訪與正面報導原件查驗表」。 | 不能把內部序號或檔名當作官方方框印刷流水號。
+- 157 專案索引 151 | 必須定位真實報導來源、核心內容/示例、判讀結果及與其他文件的事實連結。 | 不能只交一張空白登錄表，也不能把示範改名當成真實報導。
+- 0136／I19-E26 | 記公益、表揚、產學/研發社會影響的原件與來源。 | 0137 的新聞內容不會取代獎狀、合作文件或社會影響原始證據。
+- 0135／I19-E25 | 記市場價值及長期趨勢。 | 新聞提到市場或服務，不會自動變成量化市場趨勢。
+- 0139／I19-E29 | 考照與就業成果的期間、分母和來源由 0139 獨立記錄。 | 證照通過率或就業率不能證明媒體身分、報導標題、作者、發布日、網址或原文，不得代替 0137 媒體原件查驗。
+- 0126／I19-E14 | 訓後薪資調查及其來源由 0126 獨立保存。 | 薪資問卷或彙總差異不能驗證報導發布者、原文、刊物頁次／節目時間碼或來源完整性，不得代替媒體原件。
+- 媒體報導可證明 | 經核實的出版/播出來源、時間、上下文及報導實際文字。 | 報導文字不自動證明訓練造成改善、組織績效或正式核定。
+
+Table 8 (complete cross-document boundary table):
+- 文件/requirement | 可共享的欄位 | 連結成立條件 | 禁止的替代
+- 0136／I19-E26 | case_id、活動/合作/表揚識別、報導 source_id。 | 同一事件可由媒體原件和相應原始活動/合作/表揚原件共同定位；兩份各保留自己的來源 hash。 | 媒體文章不能取代獎狀、合作協議或公益活動原件。
+- 0135／I19-E25 | 市場/服務主題、觀察期間、來源識別。 | 同一 market fact_id 必須在報導與可重算的市場資料都存在，且範圍一致。 | 單篇正面新聞不能當作長期趨勢或市場價值數據。
+- 0139／I19-E29 | 觀察期間、合法匿名 cohort key；各文件來源 SHA 分別保存。 | 僅在授權來源證實同一 cohort、期間與可追溯共享 key 後連結；目前無共同 key，保持分離。 | 證照／就業率不得替代媒體原件、媒體身分、發布日或報導內容。
+- 0126／I19-E14 | 薪資調查期別、課程範圍、合法匿名 cohort key；來源 SHA 分別保存。 | 僅在授權來源證實同一對象、期間與可追溯 key 後連結；目前無共同 key，保持分離。 | 薪資問卷、平均差額或個人薪資不能替代媒體原件；未授權個資不得公開。
+- 0110／I18-E19 | 只有 same_case_id 確認後，才可能對照課程設計/評估。 | 先用同一真實來源記錄核對課程、日期、對象；目前示例 case_id 為 SYN-0137-CASE-01，不與 0110 真實個案共用。 | 不得因兩文件相鄰或題材相似就拼接不同案例。
+
+Table 11 first-column fact/case identifiers (nine SAMPLE facts):
+- SYN-0137-F01 / SYN-0137-CASE-01
+- SYN-0137-F02 / SYN-0137-CASE-01
+- SYN-0137-F03 / SYN-0137-CASE-01
+- SYN-0137-F04 / SYN-0137-CASE-01
+- SYN-0137-F05 / SYN-0137-CASE-01
+- SYN-0137-F06 / SYN-0137-CASE-01
+- SYN-0137-F07 / SYN-0137-CASE-01
+- SYN-0137-F08 / SYN-0137-CASE-01
+- SYN-0137-F09 / SYN-0137-CASE-01
+
+## Exact checks requested
+1. Do the added I19-E29/I19-E14 rows correctly separate these requirements from I19-E27, without implying their evidence is interchangeable?
+2. Do Table 8 conditions correctly prohibit shared-key linkage unless a real, authorized, mutually traceable source establishes it?
+3. Are slash-separated fact_id/case_id values unambiguous and still tied to the same synthetic case?
+4. Does the R02 label accurately identify this revision, and do all additions preserve SAMPLE/SYNTHETIC, UNKNOWN/HOLD, and NOT_GRANTED boundaries?
+5. Identify any semantic defect with exact table/row/cell locator. Verdict only for the R02 semantic delta: PASS, PARTIAL, or FAIL. Return concise JSON with candidate_sha256 exactly as above, reviewed_scope, checks, findings, limitations and formal_acceptance=NOT_GRANTED. No tools, filesystem, browser, Computer Use, edits, or external lookup. Do not claim visual inspection; separate final Word-native 9-page visual receipt exists. Serving model identity must remain UNKNOWN unless runtime metadata proves it.

@@ -1,0 +1,117 @@
+{
+  "project_id": "TTQS_ONE",
+  "command": "TTQS_ONE_ANTIGRAVITY_DISPATCH_QUOTA_FORENSIC_R05",
+  "record_type": "BOUNDED_FOLLOWUP_RECEIPT",
+  "status": "CANDIDATE_FORENSIC_EVIDENCE_NOT_FORMAL_ACCEPTANCE",
+  "observed_at_local": "2026-10-20T00:12:48.1645337+08:00",
+  "os": {
+    "caption": "Microsoft Windows 10 專業版",
+    "version": "10.0.19045",
+    "build": "19045"
+  },
+  "github": {
+    "repository": "PT-Original-Point/ttqs-one",
+    "pr": 92,
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "prewrite_head": "4298950fa2d2649980a46c4f5740b63dc7d523f1",
+    "latest_finding_comment_id": 6267528691,
+    "execution_receipt_comment_id": 6270710682,
+    "existing_r05_receipt_git_blob": "717c56540d5cb3b48e499193d77c20547cd78b10",
+    "existing_r05_receipt_sha256": "1c4a01f007024931b6037d01d9d600bda447f38372ff2e445330593045a13c3a"
+  },
+  "source": {
+    "attachment": "TTQS_ONE_ANTIGRAVITY_CLI_QUOTA_FORENSIC_R05_20261019.md",
+    "attachment_sha256": "08537c533ff7e0e8fc070cbc06d1a9814ac5ae0c20538587e128a823d4d5aae5",
+    "historical_r05_receipt_sha256": "1c4a01f007024931b6037d01d9d600bda447f38372ff2e445330593045a13c3a"
+  },
+  "dispatch_audit": {
+    "window": "rolling 72 hours ending 2026-10-19 local audit; does not fully cover current 2026-10-20 observation",
+    "receipt_backed_attempts": 35,
+    "complete_actual_count": "UNKNOWN; at least 35 evidenced, one unmatched session prevents complete count",
+    "exact_last_48_hours": "UNKNOWN",
+    "substantive_nonempty_responses": 14,
+    "successful_smoke_only": 2,
+    "no_usable_substantive_result": 19,
+    "content_response_ratio": "14/35 evidenced attempts = 40%; not an endpoint success rate or DOCX count",
+    "provider_billing": "UNKNOWN",
+    "dispatches_since_prior_R05_audit": "No generation dispatch in that audited turn; this turn performed only CLI diagnostics, no model generation"
+  },
+  "attempts_by_document": {
+    "0044": "4 attempts; 0 usable",
+    "0054": "2 attempts; 1 exact-SHA review response, 1 blocked/other; historical dangerous-permission flag discrepancy",
+    "0055": "9 attempts across file Writer and text smoke; file Writer no usable artifact; smoke returned short text",
+    "0057": "3 attempts; 2 substantive review responses",
+    "0058": "8 attempts; 4 substantive responses, including one review PASS",
+    "0059": "5 attempts; 4 substantive Writer responses",
+    "0061": "3 attempts with recorded responses/artifacts",
+    "0085": "1 text-only full-draft attempt, about 66,454 characters, output-limit error and no complete returned artifact"
+  },
+  "current_os": {
+    "processes": [
+      {
+        "name": "opencode-cli.exe",
+        "pid": 45628,
+        "created": "2026-10-19T20:49:10.184664+08:00",
+        "command": "serve --service"
+      }
+    ],
+    "antigravity_process": "NONE_OBSERVED",
+    "opencode_service_pid": 45628,
+    "opencode_service_is_not_evidence_of_live_generation": true,
+    "active_writer": "NONE_OBSERVED",
+    "latest_0086_reviewer": {
+      "id": "ses_eab208864ffenyhsaFu5sicHxh",
+      "model": "opencode/mimo-v2.6-flash-free",
+      "cli_version": "opencode v2.0.32",
+      "outcome": "succeeded",
+      "cost_reported": 0,
+      "tokens": {
+        "input": 31205,
+        "output": 4633,
+        "reasoning": 18335,
+        "cache_read": 4736,
+        "cache_write": 0
+      },
+      "exit_code": 0
+    },
+    "opencode_session_export_outcome": "succeeded",
+    "review_exit_code": 0
+  },
+  "antigravity": {
+    "cli_version": "agy 1.4.2",
+    "requested_model": "gemini-3.8-flash-high",
+    "model_listed_locally": true,
+    "provider_override_present": false,
+    "GEMINI_API_KEY_present": false,
+    "GOOGLE_GEMINI_BASE_URL_present": false,
+    "provider_model_attestation": "UNKNOWN",
+    "last_native_tui_observation": "2026-10-19 evening: Not signed in; workspace trust denied; /usage not run",
+    "current_tui_read": "NOT_PERFORMED",
+    "text_only_lane": "BLOCKED_PENDING_HUMAN_CLI_SIGN_IN",
+    "file_write_lane": "PAUSED",
+    "new_model_dispatch_this_turn": 0,
+    "no_computer_use": true,
+    "no_permission_bypass": true,
+    "historical_permission_flag_finding": "OPEN: 0054 R14 receipt says dangerously_skip_permissions=true; original argv unresolved"
+  },
+  "quota": {
+    "cli_last_snapshot": "2026-10-19 21:14 Asia/Taipei: Gemini weekly 92% remaining, 5h 98% remaining; CLI-side historical only",
+    "gui_last_snapshot": "2026-10-18 11:10 Asia/Taipei screenshot: weekly 94%, 5h 95%, overage OFF",
+    "same_account": "UNKNOWN",
+    "fresh_simultaneous_readback": "UNKNOWN",
+    "quota_pool_attribution": "UNKNOWN",
+    "official_design": "Google docs say CLI/app use unified authentication and account determines entitlements; local same-account identity not confirmed"
+  },
+  "root_cause": "UNDERUTILIZATION_BY_DISPATCH_POLICY supported by receipt: Antigravity file Writer was paused while OpenCode continued; no quota exhaustion/429 evidence. Current CLI sign-in block separately prevents safe text-only dispatch. Exact last-48 dispatch count and provider billing remain UNKNOWN.",
+  "document_0086": {
+    "candidate_docx_sha256": "55265fb26ae6641e58e476d6b930253bb26a70dbccedb5761d15c4f01074fa05",
+    "semantic_review": "PARTIAL",
+    "review_receipt_path": "quality-review/0086_R01/evidence/independent_semantic_review_receipt_R01.json",
+    "review_response_path": "quality-review/0086_R01/review/independent_semantic_review_R01.md",
+    "raw_response_sha256": "8181a9b51e92d672a8795909c7312ff1379fb9ca67ee76662e9f04aefa476600",
+    "visual_independent_review": "NOT_DONE",
+    "docx_rebuilt_during_R05": "false"
+  },
+  "next_legal_action": "Human authenticates in the native Antigravity CLI; then run only one scoped text-only content task with requested Gemini model, no tools, no file access, no Computer Use, no bypass. Meanwhile 0086 needs only the six documented content/form fixes before new build and exact-SHA review.",
+  "human_gate": "Native CLI sign-in is required; do not alter OAuth/MFA or grant workspace trust programmatically."
+}

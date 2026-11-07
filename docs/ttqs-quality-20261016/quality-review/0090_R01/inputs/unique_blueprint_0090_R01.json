@@ -1,0 +1,123 @@
+{
+  "project_id": "TTQS_ONE",
+  "document_id": "0090",
+  "requirement_id": "I17D-E04",
+  "official_requirement_text": "派訓單位主管對參訓學員的學習成效評估表。",
+  "official_checkbox_serial": "097",
+  "serial_provenance": "Current 03_157_CHECKBOX_BLUEPRINTS.md, row 097; do not confuse with DOCX ID 0090 or I17C behavior checkbox 090.",
+  "document_genre": "Supervisor learning-outcome evaluation form with anchored rubric, completed synthetic case, calculations, decision, follow-up and evidence register.",
+  "intended_users": [
+    "Volunteer training administrator",
+    "Dispatching-unit supervisor",
+    "TTQS evaluator"
+  ],
+  "unique_design": {
+    "purpose": "Assess whether a named training objective was learned and later applied, using source-located evidence and a supervisor decision.",
+    "dimensions": [
+      "Immediate demonstrated knowledge/skill",
+      "Transfer to an eligible task",
+      "Observed work-result indicator when available",
+      "Limits and alternative explanations"
+    ],
+    "mandatory_distinction": "Learning/satisfaction, observed behavior and aggregate organizational result must not be conflated. This document is the supervisor outcome-evaluation instrument; it does not replace I17C workplace-observation evidence or an I17D defect-rate table.",
+    "forms": [
+      "Blank use-ready supervisor assessment with objective, baseline, assessment timing, evidence locator, anchored ratings, N/O handling, conclusion, hold/reject/continue decision and follow-up fields.",
+      "Fully completed SAMPLE/SYNTHETIC example with one individual score vector, denominator-safe cohort calculations and an explicit hold decision."
+    ],
+    "rating_rule": {
+      "scale": "1-4, each level anchored to observable performance",
+      "not_observed": "N/O is not zero and is excluded from assessed denominator; record reason and next observation opportunity.",
+      "decision_threshold": "Mean >=3.0 and every designated critical item >=3 for PASS; any critical item below 3 is HOLD with targeted practice/reassessment; insufficient eligible observations is INSUFFICIENT_EVIDENCE."
+    },
+    "synthetic_case": {
+      "case_id": "SYN-0090-C01",
+      "course": "行政服務紀錄完整性與資料保護實作（假設示範，不代表協會實際課程）",
+      "cohort_n": 6,
+      "baseline_all_critical_steps_pass": "2/6 = 33.3%",
+      "immediate_post_all_critical_steps_pass": "5/6 = 83.3%",
+      "percentage_point_change": "+50.0 pp",
+      "relative_change": "+150.0%",
+      "day_30_eligible_observations": "4/6 had an eligible task; 3/4 passed = 75.0%; 2/6 were N/O because no relevant task was assigned.",
+      "individual_sample": "SYN-P04 scores [3,4,3,3,2], mean 3.0/4; critical exception-escalation item=2, therefore HOLD despite meeting the mean threshold.",
+      "limitations": [
+        "All persons, course, dates-as-relative-periods, scores and records are synthetic.",
+        "Small n; simulation and eligible-task results do not prove association-wide causal impact.",
+        "No shared case with DOCX 0088 or 0089 is asserted."
+      ]
+    },
+    "rating_anchors": [
+      {
+        "item": "Source and consent",
+        "critical": true,
+        "anchors": [
+          "No source/required authority check before handling.",
+          "Checks only after prompt and still misses source or consent.",
+          "Verifies source and required consent before handling; stops if unknown.",
+          "Independently checks scope and refuses out-of-scope use with evidence locator."
+        ]
+      },
+      {
+        "item": "Completeness without invented values",
+        "critical": false,
+        "anchors": [
+          "Missing critical fields or invents unknowns.",
+          "Needs prompt; still treats an unknown as known or misses a required field.",
+          "Completes required fields and marks unknowns for follow-up.",
+          "Rechecks completeness and separates facts, unknowns and not-applicable with reasons."
+        ]
+      },
+      {
+        "item": "Source comparison and correction trace",
+        "critical": true,
+        "anchors": [
+          "Does not compare against source; error remains.",
+          "Partial check or untraceable correction; needs prompt.",
+          "Checks required fields and records correction of discrepancies.",
+          "Finds subtle mismatch and preserves before/after locator and escalation."
+        ]
+      },
+      {
+        "item": "Minimum necessary and secure handling",
+        "critical": true,
+        "anchors": [
+          "Over-shares/transmits or stores in an unauthorized place.",
+          "Needs prompt and retains a minimum-necessary lapse.",
+          "Uses permitted channel and limits the record to necessary data.",
+          "Checks recipient/access, minimizes copies and confirms secure close-out."
+        ]
+      },
+      {
+        "item": "Exception stop and escalation",
+        "critical": true,
+        "anchors": [
+          "Continues on ambiguity without flagging.",
+          "Stops only after prompt or escalation is incomplete.",
+          "Pauses the case, records the exception and escalates before proceeding.",
+          "Anticipates exception, documents handoff and avoids unauthorized conclusions."
+        ]
+      }
+    ]
+  },
+  "historical_142_crosswalk": {
+    "status": "HISTORICAL_DISCOVERY_ONLY",
+    "doc_id_0090": "I17D-E04",
+    "similar_doc_id_0084": "I17C-E03",
+    "warning": "DOCX ID 0090 is not official checkbox 090; the 17c behavior record and 17d outcome assessment are distinct."
+  },
+  "historical_failure": {
+    "status": "FAIL_REPAIR",
+    "reasons": [
+      "FONT_LT_8",
+      "FONT_LT_9_MATERIAL",
+      "GOVERNANCE_CLUTTER"
+    ],
+    "disposition": "Do not reuse the failed historical body or layout. Preserve it as discovery-only."
+  },
+  "current_state": {
+    "state": "SOURCE_BOUND_BLUEPRINT_READY_NOT_A_DOCX",
+    "candidate_docx_sha256": null,
+    "formal_acceptance": "NOT_GRANTED",
+    "real_association_evidence": "NOT_PROVIDED",
+    "synthetic_only": true
+  }
+}

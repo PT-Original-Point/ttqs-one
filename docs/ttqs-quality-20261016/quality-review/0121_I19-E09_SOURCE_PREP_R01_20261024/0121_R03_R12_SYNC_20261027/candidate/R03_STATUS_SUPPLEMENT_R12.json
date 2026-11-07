@@ -1,0 +1,71 @@
+{
+  "schema": "TTQS_ONE_0121_R03_STATUS_SUPPLEMENT_R12_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0121",
+  "official_requirement_id": "I19-E09",
+  "official_mapping_evidence_sha256": "fc9e9704748e58847c14c707078acf66ed07f024e2b83c67201b2372ead8208d",
+  "source_blueprint_row_sha256": "e5956462565186757b6a20f53cff22e9e53cd5abca1e2b69e6942a24c91f5b08",
+  "source_packet_sha256": "fbeb11b96648fff29a49a0fca74bf0cc3b3d1d29934f07dfaa3cf7e410a557fd",
+  "unique_blueprint_sha256": "99320fdc9078615ad04087c43bcbd22c5bbf751a22127c51e048e909726a5fca",
+  "candidate": {
+    "revision": "R03",
+    "state": "CANDIDATE",
+    "sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+    "bytes": 72632,
+    "unchanged_during_review_and_QA": true
+  },
+  "reconciliation": {
+    "baseline_status_file": "R03_FINAL_QA_STATUS.json",
+    "baseline_status_sha256": "f6618ada94571abf0eb291f09807435ae9a5cc9affcdd7c3c1d4cb5584608205",
+    "note": "The baseline status recorded the exact-SHA R03 delta review. This additive supplement records the later completed full-body review on the same unchanged candidate SHA; the baseline file is preserved."
+  },
+  "semantic_review": {
+    "reviewer_route": "Antigravity CLI",
+    "work_id": "TTQS-0121-I19-E09-R03-ANTIGRAVITY-R12-FULL-SEMANTIC-REVIEW",
+    "reviewer_reported_verdict": "PASS",
+    "blockers_reported": 0,
+    "scope": "Full candidate text: paragraphs P001-P194 and tables T01-T17; requirement, genre, neighbors, calculations, SAMPLE/REAL and usability. The reviewer explicitly marks visual layout outside its scope.",
+    "candidate_sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+    "body_extract_sha256": "4ea875c255a3d1f852788a258725150729787f83dad96efa997dd491a8f01552",
+    "response_sha256": "9f68f37a3427aee265f54f3f895fa832cca6580a3f6fdc0de07916f47865ed4d",
+    "raw_stdout_sha256": "93770fa08a7e4714c6b6e65d38c699f81bd4b26169a33e5f05741c951b5cdb10",
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model": "UNKNOWN",
+    "fallback": "NOT_AUTHORIZED; actual model not exposed",
+    "cli_exit_code": 0,
+    "cli_pid": 18328,
+    "reported_tokens": {
+      "input": 28821,
+      "output": 23965,
+      "thinking": 17128,
+      "cache_read": 0,
+      "total": 52786
+    },
+    "computer_use": "NOT_USED_BY_LAUNCH",
+    "tools_allowed": false
+  },
+  "technical_visual_QA": {
+    "receipt": "TECHNICAL_VISUAL_QA_R03.json",
+    "receipt_sha256": "5a7478d792a5e9cd0e884e5bdda78fa34cab611ba36b64d592b93a2a726b4015",
+    "result": "PASS",
+    "checks": 27,
+    "word_native_pdf_sha256": "fa3fd36e716372d47ae36a3eaf4a5f28ec5c395d9800e6764bf69325abed0f70",
+    "pages": 23,
+    "changed_pages_inspected": [
+      1,
+      18
+    ],
+    "unchanged_pixel_identical_pages": 21,
+    "body_min_font_pt": 10.5,
+    "table_min_font_pt": 9.5
+  },
+  "sample_real_boundary": {
+    "replacement_register_sha256": "96837dfbabcc81693256042e4c326825c6e0f847982a63add3eb72945c5d100e",
+    "real_evidence": "NOT_PROVIDED",
+    "real_status": "UNKNOWN/HOLD",
+    "official_score": "NOT_ASSIGNED",
+    "formal_acceptance": "NOT_GRANTED",
+    "promotion": "NOT_PROMOTED"
+  },
+  "combined_status": "EXACT_SHA_CANDIDATE_HAS_TEXT_SEMANTIC_PASS_AND_SEPARATE_WORD_TECHNICAL_VISUAL_PASS; MODEL_IDENTITY_UNKNOWN; CANDIDATE_ONLY"
+}

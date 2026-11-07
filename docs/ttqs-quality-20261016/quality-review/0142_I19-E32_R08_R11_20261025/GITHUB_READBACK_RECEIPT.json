@@ -1,0 +1,267 @@
+{
+  "schema": "ttqs-one-github-raw-readback-v1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0142-I19-E32-R08-R11-PACKAGE-RAW-READBACK",
+  "observed_at_tpe": "2026-10-25T17:24:27+08:00",
+  "repository": "PT-Original-Point/ttqs-one",
+  "pull_request": 92,
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "verified_remote_commit": "4b3e226d39679f0e2c7e54fa59251c27d59d44b6",
+  "readback_method": "Fetched GitHub branch with native git; compared raw bytes from Git object database against each local package file and the package index SHA256/byte count.",
+  "candidate_sha256": "dd6bfd2bb75ed9708065578f435b54fc7c85c9492f35edcddf614f962db41e0a",
+  "index_before_sha256": "1d366bd20b8b690f0b9a794dc068188c941265d7d54062bdeddef871e1942cb2",
+  "verified_file_count": 31,
+  "exact_raw_byte_matches": 31,
+  "mismatch_count": 0,
+  "receipt_excludes_itself_from_precommit_readback": true,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 58,
+      "sha256": "95a5c4989a6eea4031dc9899bc6c5bdc38ffac4ab15488a005c4c037f21903b2",
+      "remote_sha256": "95a5c4989a6eea4031dc9899bc6c5bdc38ffac4ab15488a005c4c037f21903b2",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "d7b911ff3974a93b663bef873dfdeedf51c6d22b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1422,
+      "sha256": "65a5752e99f62d4b1b61cfb81dfaf83dde4a1bcb5ec2379848f41ad1de3a18e6",
+      "remote_sha256": "65a5752e99f62d4b1b61cfb81dfaf83dde4a1bcb5ec2379848f41ad1de3a18e6",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "56714010e490d9d4934159deba67a757333edf41"
+    },
+    {
+      "path": "candidate/0142_I19-E32_R08_CANDIDATE.docx",
+      "bytes": 51226,
+      "sha256": "dd6bfd2bb75ed9708065578f435b54fc7c85c9492f35edcddf614f962db41e0a",
+      "remote_sha256": "dd6bfd2bb75ed9708065578f435b54fc7c85c9492f35edcddf614f962db41e0a",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "bc414bb98324d47d1e185a2c8c3516b3aae6b1dc"
+    },
+    {
+      "path": "render/0142_I19-E32_R08_WordNative.pdf",
+      "bytes": 507121,
+      "sha256": "0eafab118f94fca57b18051de112d4d8b9aa27ae7e5d55a6747b374fd7c22774",
+      "remote_sha256": "0eafab118f94fca57b18051de112d4d8b9aa27ae7e5d55a6747b374fd7c22774",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "6b80ecef17c1965f0ec9fa0ded942c4cb3c82326"
+    },
+    {
+      "path": "render/pages/page-01.png",
+      "bytes": 237279,
+      "sha256": "2089a68c7236a9b203465c02cc34c14c96440c5589d0dd96be0fd2008b261708",
+      "remote_sha256": "2089a68c7236a9b203465c02cc34c14c96440c5589d0dd96be0fd2008b261708",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "5fcf4cb169561fbe4f8b10f61edf8cede44beac1"
+    },
+    {
+      "path": "render/pages/page-02.png",
+      "bytes": 383785,
+      "sha256": "2ca591b9d83742b9d9c401f9cc2b430925a78065cd4fd12a03607fc8f5d82f61",
+      "remote_sha256": "2ca591b9d83742b9d9c401f9cc2b430925a78065cd4fd12a03607fc8f5d82f61",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "c4dcff2aae8636c60d85f96d446ddff5162cf95d"
+    },
+    {
+      "path": "render/pages/page-03.png",
+      "bytes": 387379,
+      "sha256": "701b39922cba9fe3b72cfcaac1cfb9e550ea3df6f91daf4a5b7f2c228dc2570b",
+      "remote_sha256": "701b39922cba9fe3b72cfcaac1cfb9e550ea3df6f91daf4a5b7f2c228dc2570b",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "be42b96ef9c518c49700dff4209a9c6a8ce791aa"
+    },
+    {
+      "path": "render/pages/page-04.png",
+      "bytes": 292290,
+      "sha256": "10610cf1d985a3db0283ce3c3767cd86e6367bd5fc1c0967b0da2adac84a847e",
+      "remote_sha256": "10610cf1d985a3db0283ce3c3767cd86e6367bd5fc1c0967b0da2adac84a847e",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "8b931e2c080a7294400b8e9825e3e18c66bb69d1"
+    },
+    {
+      "path": "render/pages/page-05.png",
+      "bytes": 327508,
+      "sha256": "cea8a71418627c78741e205a7b978d060869ac53753f0598cae7061d9ffbe230",
+      "remote_sha256": "cea8a71418627c78741e205a7b978d060869ac53753f0598cae7061d9ffbe230",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "0a08bdc8f1515e68d810dc4cd3ef2f0e8663e3f3"
+    },
+    {
+      "path": "render/pages/page-06.png",
+      "bytes": 431031,
+      "sha256": "ae0c5a4545d98b92c98062c3b247ff460eec379e4f0ade03f5bb983d5b160996",
+      "remote_sha256": "ae0c5a4545d98b92c98062c3b247ff460eec379e4f0ade03f5bb983d5b160996",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "29b3697ec781a23ae390180a06b48f01497c84a9"
+    },
+    {
+      "path": "render/pages/page-07.png",
+      "bytes": 434729,
+      "sha256": "249a7b747cc33027e7ba432afa3a6e4606196ed0ebd8e6b0f833063a5f6bfd82",
+      "remote_sha256": "249a7b747cc33027e7ba432afa3a6e4606196ed0ebd8e6b0f833063a5f6bfd82",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "d5de420e78681b6cbdb3e1460bb047d4126911a8"
+    },
+    {
+      "path": "render/pages/page-08.png",
+      "bytes": 320794,
+      "sha256": "538a4277389d0f07fac234b0e633b3b6103c42ff8f95b2de7b244993ff91d61e",
+      "remote_sha256": "538a4277389d0f07fac234b0e633b3b6103c42ff8f95b2de7b244993ff91d61e",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "55b2ee0c702bda42db9361e9a55eea329842f235"
+    },
+    {
+      "path": "render/pages/page-09.png",
+      "bytes": 253959,
+      "sha256": "f67e28f626e5e290ab796fdf5b0db28a556bec770225fccbcf50fdc445831461",
+      "remote_sha256": "f67e28f626e5e290ab796fdf5b0db28a556bec770225fccbcf50fdc445831461",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "c172bc02cbb8868598002952367f182de7ae0ce9"
+    },
+    {
+      "path": "render/pages/page-10.png",
+      "bytes": 309656,
+      "sha256": "ec45fb747a05b8c2b7c1d50605c9c3f9a3c87b107bd19750c2fb012f4adefb66",
+      "remote_sha256": "ec45fb747a05b8c2b7c1d50605c9c3f9a3c87b107bd19750c2fb012f4adefb66",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "1d2b250353a4f893d8ba1403211ee9840c66f1aa"
+    },
+    {
+      "path": "review/ANTIGRAVITY_FULL_SEMANTIC_REVIEW_0142_R07_PARENT.json",
+      "bytes": 7876,
+      "sha256": "42b83b928933b120e4b6aa19b6343f17238aabc9579b1f3dba9c61b18ac26ae1",
+      "remote_sha256": "42b83b928933b120e4b6aa19b6343f17238aabc9579b1f3dba9c61b18ac26ae1",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "c888484364364ada3aa81108fb21db44612190bc"
+    },
+    {
+      "path": "review/ANTIGRAVITY_PROCESS_RECOVERED_0142_R08.json",
+      "bytes": 2012,
+      "sha256": "8ca2f526887a18655ecc0b9c405cb578290c1f112e22051e275aaeb19d1234e0",
+      "remote_sha256": "8ca2f526887a18655ecc0b9c405cb578290c1f112e22051e275aaeb19d1234e0",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "dfc4a6dce44b422674d8da8618d6ea4aca13905f"
+    },
+    {
+      "path": "review/ANTIGRAVITY_REVIEW_RAW_RESPONSE_0142_R08.json",
+      "bytes": 4447,
+      "sha256": "7225ce1e24aefc3de0e54ae3571275dcbe13eef8180b329dac2af182f1f9afc7",
+      "remote_sha256": "7225ce1e24aefc3de0e54ae3571275dcbe13eef8180b329dac2af182f1f9afc7",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "d7c09eb381c2c231639ab9268945d2e0b3f66fa0"
+    },
+    {
+      "path": "review/ANTIGRAVITY_SEMANTIC_DELTA_REVIEW_0142_R08_RECEIPT.json",
+      "bytes": 6419,
+      "sha256": "9cc2efb1fcca2e50d03b87e39183bd281371dda86a9b8849356cc15715499692",
+      "remote_sha256": "9cc2efb1fcca2e50d03b87e39183bd281371dda86a9b8849356cc15715499692",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "8d9c784e945e0876ed05c96e0b9a8eae698a2383"
+    },
+    {
+      "path": "review/ANTIGRAVITY_SEMANTIC_DELTA_REVIEW_PACKET_0142_R08.md",
+      "bytes": 45021,
+      "sha256": "2131df5210d0e01a6f67ff830988f34a02305753832611bc3e5fa293a273d0af",
+      "remote_sha256": "2131df5210d0e01a6f67ff830988f34a02305753832611bc3e5fa293a273d0af",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "de316e28841f43727911d3708eecd9ebd1ef84f5"
+    },
+    {
+      "path": "review/ANTIGRAVITY_TRANSCRIPT_0142_R08.jsonl",
+      "bytes": 55115,
+      "sha256": "65f29d945b464d72bb8f75049140b0e0760c9cc0d83de8e0b2bd8dfcfc69481d",
+      "remote_sha256": "65f29d945b464d72bb8f75049140b0e0760c9cc0d83de8e0b2bd8dfcfc69481d",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "aa614457142701a5da65876cdd2d5c8deebd8323"
+    },
+    {
+      "path": "review/PAGE_IMAGE_MANIFEST_0142_R08.json",
+      "bytes": 3096,
+      "sha256": "d95a62bfcb734de6cb76f1ddd13efc12ea874acc140f9092c97748d22dc07622",
+      "remote_sha256": "d95a62bfcb734de6cb76f1ddd13efc12ea874acc140f9092c97748d22dc07622",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "6bfb8a069e941233529e260c84d26ea1028e8478"
+    },
+    {
+      "path": "review/PATCH_RECEIPT_0142_R08.json",
+      "bytes": 1458,
+      "sha256": "575ca705a9d0c3f2942e9fcf0d715ffcefc11f98b93113e0c2a33ea48999181a",
+      "remote_sha256": "575ca705a9d0c3f2942e9fcf0d715ffcefc11f98b93113e0c2a33ea48999181a",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "7fd5d34521eb85b81c5769079931854263a75fcc"
+    },
+    {
+      "path": "review/SAMPLE_REPLACEMENT_REGISTER_0142_R08.json",
+      "bytes": 1051,
+      "sha256": "2087a41d34892e92d29adf3b3e6c1ed8878af3a1bdb3461c103e610d0e80ac34",
+      "remote_sha256": "2087a41d34892e92d29adf3b3e6c1ed8878af3a1bdb3461c103e610d0e80ac34",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "feb6a115d06a6fa6c31bc70c81bb815daf8c0ed3"
+    },
+    {
+      "path": "review/SEMANTIC_FINDING_CLOSURE_0142_R08.json",
+      "bytes": 5306,
+      "sha256": "937247cc6f294c308f95fd0b33c22b2873d99cfa868031684b99a8cc07d64f5f",
+      "remote_sha256": "937247cc6f294c308f95fd0b33c22b2873d99cfa868031684b99a8cc07d64f5f",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "7f418ac19522a77107cbab864589489c8e85c402"
+    },
+    {
+      "path": "review/TECHNICAL_AND_MATH_QA_RECEIPT_0142_R08.json",
+      "bytes": 1467,
+      "sha256": "9d2e100779ed167b6fef7f490685af6eb72e55b04224e3f384a6be85065ba274",
+      "remote_sha256": "9d2e100779ed167b6fef7f490685af6eb72e55b04224e3f384a6be85065ba274",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "57fd8a54babb954be3e1851c7d2005a79cf7ecdf"
+    },
+    {
+      "path": "review/VISUAL_QA_RECEIPT_0142_R08.json",
+      "bytes": 1262,
+      "sha256": "94c63efeade739b985326379c3b2136d0cc2952c6de266cbe0423fa626db5356",
+      "remote_sha256": "94c63efeade739b985326379c3b2136d0cc2952c6de266cbe0423fa626db5356",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "b4002a5b7d97591281d46c8bcd527cd658feca95"
+    },
+    {
+      "path": "review/WORD_NATIVE_RENDER_RECEIPT_0142_R08.json",
+      "bytes": 1412,
+      "sha256": "6192cadbc1e7da0174c5e753bbacc83652aff943a8a0420f36d35be0047e6d7f",
+      "remote_sha256": "6192cadbc1e7da0174c5e753bbacc83652aff943a8a0420f36d35be0047e6d7f",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "27c2547a39d4e83e03e42c8f181fa17f254601a6"
+    },
+    {
+      "path": "source/CROSSWALK_ROW_I19-E32.json",
+      "bytes": 202,
+      "sha256": "e060fd313fc5c553f9f53e6ac246ab12d7ac83d728a7918a3dfd65b448af5891",
+      "remote_sha256": "e060fd313fc5c553f9f53e6ac246ab12d7ac83d728a7918a3dfd65b448af5891",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "f12e7a85cf5f95c6dfd43b9d3ccb05a7d5c3e6d3"
+    },
+    {
+      "path": "source/OFFICIAL_REQUIREMENT_ROW_I19-E32.json",
+      "bytes": 1194,
+      "sha256": "b6abdafe457e7aa9353a963bb8606bdecf21e92d289878cf80bfc1885d5c4033",
+      "remote_sha256": "b6abdafe457e7aa9353a963bb8606bdecf21e92d289878cf80bfc1885d5c4033",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "2af69376bb07baba2a16ccece905bd8e04772c9b"
+    },
+    {
+      "path": "source/SOURCE_PACKET_0142_I19-E32_R01.md",
+      "bytes": 3748,
+      "sha256": "e3e8b3a8ee1effe758608fee183440add4f37381988c5e352912b1a3d55c9e49",
+      "remote_sha256": "e3e8b3a8ee1effe758608fee183440add4f37381988c5e352912b1a3d55c9e49",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "3954e411faedc21f51abc54ae3eb3c673c40c8ff"
+    },
+    {
+      "path": "source/UNIQUE_BLUEPRINT_0142_I19-E32_R01.md",
+      "bytes": 4447,
+      "sha256": "4841161d6e9aad3ace2a0b4ec4a5a3e1b7e92b68ff2b20f95e9edeae2b84070b",
+      "remote_sha256": "4841161d6e9aad3ace2a0b4ec4a5a3e1b7e92b68ff2b20f95e9edeae2b84070b",
+      "exact_raw_bytes_match": true,
+      "git_blob_sha1": "85b739d50a9ee1ff41f2b9abdd7d0eccffa09289"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+# 0121 / I19-E09 — R12 status reconciliation
+
+- Candidate remains CANDIDATE, DOCX SHA-256 `ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539`; no DOCX mutation.
+- Current semantic state is a full-body, text-only PASS bound to that exact R03 SHA. Raw reviewer response SHA-256 `9f68f37a3427aee265f54f3f895fa832cca6580a3f6fdc0de07916f47865ed4d`; stdout SHA-256 `93770fa08a7e4714c6b6e65d38c699f81bd4b26169a33e5f05741c951b5cdb10`. Requested model `gemini-3.8-flash-high`; actual serving model UNKNOWN. Review did not inspect layout.
+- Separate technical/visual receipt is `TECHNICAL_VISUAL_QA_R03.json` (SHA-256 `5a7478d792a5e9cd0e884e5bdda78fa34cab611ba36b64d592b93a2a726b4015`), 27/27 deterministic checks. Its embedded `independent_semantic_review=PENDING` is a time-of-check snapshot from before the R12 review and is superseded by the exact-R03 status JSON in this folder.
+- Word-native visual scope: 23 pages; pages 1 and 18 directly inspected; 21 remaining pages pixel-identical to the R02 baseline; PDF SHA-256 `fa3fd36e716372d47ae36a3eaf4a5f28ec5c395d9800e6764bf69325abed0f70`; minimum body/table fonts 10.5/9.5 pt.
+- Source packet SHA-256 `fbeb11b96648fff29a49a0fca74bf0cc3b3d1d29934f07dfaa3cf7e410a557fd`; Unique Blueprint SHA-256 `99320fdc9078615ad04087c43bcbd22c5bbf751a22127c51e048e909726a5fca`. Existing candidate/source/Blueprint and R12 reviewer artifacts were fetched at PR head `633c5c4ad0397479f481921f55347fcc0fdf7f39` and matched their local raw Git blob SHA-1.
+- SAMPLE register has 21 data rows; all replacements remain `NOT_PROVIDED`. REAL evidence is NOT_PROVIDED; formal association acceptance is NOT_GRANTED.

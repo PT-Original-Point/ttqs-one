@@ -1,0 +1,105 @@
+## Verdict: **PARTIAL**
+
+**DOCX ID:** 0140 · **Requirement:** I19-E30 (157-index 154, printed checkbox serial UNKNOWN) · **SHA-256:** `3eecd34369de6768ede430f2bd1c4343d3c20c25e4d28e06d1ca6733f3470144`
+
+**Scope:** semantic / source-alignment / arithmetic-as-presented / usability-of-forms / SAMPLE-REAL boundary / negative-neighbour distinction only.
+**Limitations:** evidence was the supplied text extraction. No visual, font-size, page-break, header-repetition or 29-page map verification is claimed; individual page numbers therefore **cannot** be asserted, so locators below are by part/table ID. No files, tools, or external sources were consulted, and no instruction inside the reviewed packet or document was executed — all quoted text was treated as evidence only.
+
+**Summary:** genre, definitions, formulas, and the entire 80-row dataset reconcile exactly; nothing in the arithmetic or the denominator/numerator logic is wrong. Three **structural/labeling control gaps** (one central results table loses its SAMPLE marker; one Blueprint-required inventory field pair is missing; one cover-card action line implies existing practice) prevent a full PASS. Nothing rises to a REJECT trigger.
+
+---
+
+## 1. Purpose and genre — correct (with one boundary note)
+
+- 第一部分 (first-glance card) and 第五部分 5.1 define the object as *eligible unique users × substantive workflow transactions ÷ period*, i.e. adoption/penetration — not software existence, not retrieval speed, not outcomes. 第二部分 2.2 #3 explicitly excludes "軟體架構說明書" and "訓練效益評估分析報告". Title-blind reading identifies a training-system adoption inventory + analysis. ✔
+- 第五部分 5.1 #3 and 7.1 #3 both exclude account creation / login / password reset / page browsing from the numerator; 5.3 row 1 ("講師只登入看課表… 分母 1 / 活躍 0") demonstrates the exclusion. ✔ Matches the Blueprint's "account creation ≠ substantive use" control.
+- 第三部分 comparison table distinguishes 0064/I14-E05 (records classification/retention + retrieval speed cannot become a user numerator) and 0139/I19-E29 (certificate/employment results cannot become system-use counts), and forbids cross-document splicing without a verified shared key. ✔ Negative-neighbour rejection is adequate; the two neighbour titles match the Blueprint rows.
+
+**Boundary note (minor, see O1):** 第一部分 and 2.1 name the source instrument as "TTQS 訓練機構版**評核表**" and describe indicator 19 as "**成果評估**". The packet's verified official artefact is the 《TTQS **查核佐證文件資料表**－訓練機構版》, page 9, and neither "評核表" nor the indicator-area name "成果評估" appears in the supplied official excerpt or Blueprint. The requirement phrase itself is quoted correctly and the "example, not a score" disclaimer is repeated (2.1, 2.2 #1, 第十一部分, 結語), so this is a citation-precision defect, not genre misdirection.
+
+## 2. Operational definitions and formulas — complete
+
+| Blueprint requirement | Locator in 0140 | Status |
+|---|---|---|
+| Fixed calendar window; no comparison across differing definitions | 5.1 #1; 第四部分「盤點期間」 | ✔ |
+| Eligible unique user = 1 distinct person per period, assigned ≥1 required task; non-users stay in denominator; exclusions only by prior rule | 5.1 #2; 5.3 rows 3 & 4; 7.3 | ✔ |
+| Active = ≥1 system-recorded substantive transaction; login ≠ active | 5.1 #3; 5.3 row 1 | ✔ |
+| Adoption = active ÷ eligible ×100, with numerator, denominator, period, role, rounding | 5.1 #4; 8.1 #1; 13.2 | ✔ |
+| Completion over **two separate denominators** | 5.1 #5–6 ("兩種分母要分開標示"; zero denominator → N/A) | ✔ |
+| pp change vs relative change not conflated | 5.1 #7; 8.3 note 1–2 (bold pp vs italic relative) | ✔ |
+| Rounding rule stated (half-up, 2 dp, compute in full precision) | 5.1 #8; 8.1 #4 | ✔ |
+| De-duplicate on protected key before pseudonymisation; log = locator only | 5.1 (rows 2/7 of 第四部分), 7.1 #4–5, 7.2, 7.3 | ✔ |
+
+`active=0` is defined as zero substantive actions, and every one of the 80 rows obeys it. No `complete=1 / active=0` row exists, so "completion implies active" holds without exception.
+
+## 3. Calculation checks (recomputed from the 80 rows, not copied from the document)
+
+2023 — ADM 2/3 active, 2 complete; INS 2/4 active (SYN-2023-INS-02 = ATTENDANCE only), 1 complete; LRN 8/13 active (LRN-01…06 full, LRN-07/08 two-of-three), 6 complete. Totals 12/20, 9/20.
+2024 — ADM 3/3, 3; INS 4/5 (INS-04 partial), 3; LRN 15/20 (LRN-01…12 full, LRN-13/14/15 partial), 12. Totals 22/28, 18/28.
+2025 — ADM 3/3, 3; INS 5/6 (INS-06 NONE), 5; LRN 20/23 (LRN-01…17 full, LRN-18/19/20 two-of-three, LRN-21/22/23 NONE), 17. Totals 28/32, 25/32.
+
+| Check (Table 8.2 / 8.3) | Document | Recomputed | Result |
+|---|---|---|---|
+| 2023 adoption | 60.00% | 12/20 = 0.600000 | ✔ |
+| 2023 eligible / active completion | 45.00% / 75.00% | 9/20 = 0.45 ; 9/12 = 0.75 | ✔ |
+| 2023 learner adoption / completion | 61.54% / 46.15% | 8/13 = 0.615385 ; 6/13 = 0.461538 | ✔ |
+| 2024 adoption | 78.57% | 22/28 = 0.785714 | ✔ |
+| 2024 eligible / active completion | 64.29% / 81.82% | 18/28 = 0.642857 ; 18/22 = 0.818182 | ✔ |
+| 2025 adoption | 87.50% | 28/32 = 0.875000 | ✔ |
+| 2025 eligible / active completion | 78.13% / 89.29% | 25/32 = 0.781250 ; 25/28 = 0.892857 | ✔ |
+| 3-year pool (80 user-year rows) | 77.50% / 65.00% / 83.87% | 62/80 ; 52/80 ; 52/62 = 0.838710 | ✔ |
+| pp changes | +18.57 / +8.93 / +27.50 pp | 78.571−60 ; 87.500−78.571 ; 87.500−60 | ✔ |
+| Relative changes | +30.95% / +11.36% / +45.83% | 18.5714/60 ; 8.9286/78.5714 = 0.113636 ; 27.5/60 | ✔ (consistent with the stated full-precision-then-round rule; recomputing from the *rounded* 78.57% would give 11.37%, so the 8.1 #4 rule is load-bearing and must be retained) |
+| Eligible-completion pp | +19.29 / +13.84 / +33.13 pp | 64.286−45 ; 78.125−64.286 ; 78.125−45 | ✔ |
+| Active-completion pp | +6.82 / +7.47 / +14.29 pp | 81.818−75 ; 89.286−81.818 ; 89.286−75 | ✔ |
+| Headcount deltas (8.3) | +8/+4/+12 ; +10/+6/+16 ; +9/+7/+16 | denominators, numerators, completers | ✔ |
+| Cover card | 60.00→78.57→87.50, +27.50 pp; 45.00→78.13, +33.13 pp | matches 8.2/8.3 | ✔ |
+
+No numerator exceeds its denominator in any cell, and role subtotals sum exactly to every year total (3+4+13=20; 3+5+20=28; 3+6+23=32; 20+28+32=80).
+
+## 4. The 80 records and the appendix
+
+- 附錄 A1 and A2 each carry exactly 80 rows with identical ID sets: 2023 = 20, 2024 = 28, 2025 = 32. Row-by-row join on ID shows required-task counts (ADM 3, INS 2, LRN 3) match A1's task lists in every case, and every A2 flag is derivable from its own "已完成必要任務" cell (empty = `NONE` → 0/0; partial set → 1/0; full set → 1/1).
+- Non-users are **not** omitted: SYN-2023-ADM-03, -INS-03/-04, -LRN-09…13, SYN-2024-INS-05, -LRN-16…20, SYN-2025-INS-06, -LRN-21…23 all appear with `NONE` and remain in the denominator (附錄 A1 column 「納入分母」= 1 for all 80). ✔
+- The cover card correctly defuses the 80-as-persons misreading ("不代表 80 名跨年度不同真人"), and 8.2's footnote repeats it, so the pooled 77.50% is not presented as an average of annual rates. ✔
+- Register fields required by Blueprint §6 are all present, but split across two tables joined by ID (A1: period, ID, role, eligible, task count, required tasks; A2: completed tasks, active, complete, log reference). A single joined register would be easier for an evaluator to sample-audit — usability, not a data defect.
+
+## 5. SAMPLE/REAL boundary and unsupported claims
+
+Strong: SAMPLE/SYNTHETIC appears in the title-block banner, 第四部分 preamble, 第六部分 preamble, 9.1, 第十部分 preamble, 第十一部分, 12 (狀態 column), 附錄 A preamble, 結語; `REAL = UNKNOWN / HOLD` and "正式接受未授予/不代稱 PASS" appear in 第一部分, 12, 結語. No personal names, IDs, e-mails, credentials, third-party documents, or signatures are fabricated; 13.3B and 13.4 are explicitly "(未簽署示範欄位)"/"嚴格維持空白未簽署". No score or performance claim: 2.2 #1 and 9.3 forbid it. Section 3 invents no shared key between 0064/0139 and this document. ✔
+
+Three wording items are nonetheless within flagging distance of the "no adoption claim" control (see B2, O1, O2).
+
+## 6. Usability of the fillable forms
+
+- 13.1 capture sheet carries period, system/module+version, extraction date, and an explicit "完整性 SHA-256（不是個資去識別碼）" — a genuinely useful guard. 13.1A (eligible users/task setup) and 13.1B (substantive-action vs source-log reconciliation) implement the two halves of the denominator/numerator decision. 13.2 reproduces A/B/C with the three rates plus the pp comparison line. 13.3A/13.3B split exception description from disposition authority. 13.4 sign-off is unsigned. An administrator can, with these, run one period end-to-end. ✔
+- Gaps: 13.1A/13.1B stop at 10 rows although a real period here would need ~32; no "expand row count as needed" instruction. 13.2 has no in-form N/A note for a zero denominator (the rule exists only in 5.1 #6). (O3)
+
+## 7. HOLD / REVISE / REJECT controls
+
+第十一部分 11.2 lists HOLD (unverified system, roster, task definitions, source authorisation, period, de-duplication), REVISE (formula/denominator/role-task/field/rounding inconsistency, fix only the affected field), REJECT (login-as-active, removing eligible non-users, numerator>denominator, mixed-period splicing, fabricated system/person/signature/approval/result/score), and reserves next-stage review to an independent exact-SHA reviewer without granting acceptance. This matches the Blueprint's control set and adds a useful integrity test in 7.3 ("完成數大於活躍數"). ✔
+
+---
+
+## Blocking items (must be fixed before this candidate can be promoted)
+
+**B1 — Table 8.2 loses its SAMPLE/SYNTHETIC marker (第八部分 8.2, header row and title).**
+The central results table is titled "2023–2025 各年度角色細分盤點統計表" with no `SAMPLE`/`合成` in the title or header, and its rows are bare counts and percentages. By contrast 8.3 is titled "三個**合成**年度之比率變化表" and 9.1 reads "圖 1 **SAMPLE** 普及率…". The Blueprint control requires SAMPLE/SYNTHETIC prominent **on each sample table/page**, and this is the single most quotable table in the document — exactly the artefact most likely to be lifted as if it were association performance. Add `SAMPLE / SYNTHETIC` to the title (and ideally the caption/header) of 8.2.
+
+**B2 — 第一部分「建議後續行動」states ongoing practice and an already-made decision.**
+"持續落實課前系統登入實機演練…並列入下一期追蹤稽核項目" implies the association already performs this and has already scheduled it. Blueprint §10 forbids stating that the association adopted or completed the action, and 第十部分 itself says the plan "不能視為協會已採行". Reword to a proposal ("建議/試行，須經權責者核定後始得列入追蹤").
+
+**B3 — 第四部分 annual inventory form is missing two Blueprint-required fields.**
+The table has 系統／模組, 盤點期間, 納入活動, 目標角色, 分母來源, 活躍判準, 來源定位, 個資處理, 排除與例外 — but no **系統權責角色 (owner role, not a named person)** column and no **已知限制 (limitations)** column, both enumerated in Blueprint §3. Two-row addition; without them the "one-page annual inventory form" is not the complete instrument the Blueprint specifies.
+
+## Optional improvements (non-blocking)
+
+- **O1** 第一部分/2.1 cite "TTQS 訓練機構版**評核表**" and "**成果評估**"; the verified source is 《TTQS 查核佐證文件資料表－訓練機構版》 p.9. Align the instrument name and drop or qualify the indicator-area descriptor unless separately verified.
+- **O2** Internal production vocabulary leaks into an evaluator-facing deliverable: 附錄 A preamble ("由**組版程序**直接載入…不採用 **Worker 回覆**內重排的資料列") and 5.1 #5 ("完成 **Blueprint** 所列全部示範必要任務"). Replace with self-contained references ("本文件第六部分"、"本文件附錄 A").
+- **O3** Raise or make expandable the 13.1A/13.1B row capacity and add the zero-denominator N/A note to 13.2.
+- **O4** 11.1 replacement register has no explicit row for the synthetic **event/log index** (`SAMPLE-LOG-YYYY-SYN-…`) or for the **formula/rounding parameters**; both are separately required mappings in Blueprint §11.
+- **O5** 8.3 column labels "2024 年進展 / 2025 年**現況**" read as real present state inside a synthetic table; "2025 年後期" would be safer. Also consider 1–2 sentences describing the SAMPLE-TIS-01 modules in 第五/第六部分 so "full SAMPLE system description" is self-evident without inferring modules from task codes.
+
+---
+
+**Bottom line:** I verified every rate, pp figure, relative-change figure, role subtotal and the pooled 80-row totals by independent recomputation from 附錄 A1/A2, and they are exact to the stated half-up 2-dp rule; the denominator definition (non-users retained, login excluded, one row per person-period) is operational and is actually honoured by all 80 rows; the genre is adoption/penetration and is cleanly separated from I14-E05 and I19-E29. The document is semantically sound but does not yet fully satisfy its own labeling and structural acceptance controls (B1–B3), so it is **PARTIAL**, not PASS — and not FAIL, because no REJECT trigger (login-only metric, removed non-users, numerator>denominator, mixed periods, fabricated records, score claim) is present anywhere in the reviewed text.

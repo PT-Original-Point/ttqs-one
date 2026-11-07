@@ -1,0 +1,1477 @@
+{
+  "info": {
+    "id": "ses_eae23172effeo9THUAK48KPMLs",
+    "projectID": "dabde63a0c1352871a938f25dd682407d3b42064",
+    "model": {
+      "id": "mimo-v2.6-flash-free",
+      "providerID": "opencode",
+      "variant": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 100906,
+      "output": 4241,
+      "reasoning": 12927,
+      "cache": {
+        "read": 806080,
+        "write": 0
+      }
+    },
+    "time": {
+      "created": 1792374794663,
+      "updated": 1792375473645
+    },
+    "title": "[redacted:session-title:ses_eae23172effeo9THUAK48KPMLs]",
+    "location": {
+      "directory": "/[redacted:session-directory:ses_eae23172effeo9THUAK48KPMLs]"
+    }
+  },
+  "messages": [
+    {
+      "id": "msg_151dce9b200197EKOGql5bSzEI",
+      "time": {
+        "created": 1792374794747
+      },
+      "text": "[redacted:text:msg_151dce9b200197EKOGql5bSzEI]",
+      "files": [
+        {
+          "data": "",
+          "mime": "application/pdf",
+          "source": {
+            "type": "inline"
+          },
+          "name": "[redacted:file-name:0]"
+        }
+      ],
+      "type": "user"
+    },
+    {
+      "id": "msg_151dcea1f001qwndAio1GKOtuT",
+      "time": {
+        "created": 1792374794801,
+        "streamed": 1792374921326,
+        "completed": 1792374926830
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_151dcea1f001qwndAio1GKOtuT]",
+          "state": {
+            "redacted": "reasoning-state:msg_151dcea1f001qwndAio1GKOtuT"
+          },
+          "time": {
+            "created": 1792374801130,
+            "completed": 1792374921307
+          }
+        },
+        {
+          "type": "text",
+          "text": "[redacted:text:msg_151dcea1f001qwndAio1GKOtuT]"
+        },
+        {
+          "type": "tool",
+          "id": "call_421acf65ac5d41fe90b50122",
+          "name": "glob",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151dcea1f001qwndAio1GKOtuT"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151dcea1f001qwndAio1GKOtuT]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151dcea1f001qwndAio1GKOtuT"
+            }
+          },
+          "time": {
+            "created": 1792374920135,
+            "ran": 1792374921315,
+            "completed": 1792374921427
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_ac12151090824c0a8c9f3c5a",
+          "name": "glob",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151dcea1f001qwndAio1GKOtuT"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151dcea1f001qwndAio1GKOtuT]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151dcea1f001qwndAio1GKOtuT"
+            }
+          },
+          "time": {
+            "created": 1792374920882,
+            "ran": 1792374921320,
+            "completed": 1792374921435
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 39543,
+        "output": 87,
+        "reasoning": 4946,
+        "cache": {
+          "read": 4352,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_151deee07001kHaPznnMPyFSq0",
+      "time": {
+        "created": 1792374926872,
+        "streamed": 1792374943555,
+        "completed": 1792374949738
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_151deee07001kHaPznnMPyFSq0]",
+          "state": {
+            "redacted": "reasoning-state:msg_151deee07001kHaPznnMPyFSq0"
+          },
+          "time": {
+            "created": 1792374931797,
+            "completed": 1792374943541
+          }
+        },
+        {
+          "type": "text",
+          "text": "[redacted:text:msg_151deee07001kHaPznnMPyFSq0]"
+        },
+        {
+          "type": "tool",
+          "id": "call_1836830af2d94a2cbd1b1a93",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151deee07001kHaPznnMPyFSq0"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151deee07001kHaPznnMPyFSq0]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151deee07001kHaPznnMPyFSq0"
+            }
+          },
+          "time": {
+            "created": 1792374931807,
+            "ran": 1792374943547,
+            "completed": 1792374944358
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_6d2e8d0202e84790b632df1d",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151deee07001kHaPznnMPyFSq0"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151deee07001kHaPznnMPyFSq0]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151deee07001kHaPznnMPyFSq0"
+            }
+          },
+          "time": {
+            "created": 1792374937204,
+            "ran": 1792374943551,
+            "completed": 1792374944348
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 5543,
+        "output": 591,
+        "reasoning": 57,
+        "cache": {
+          "read": 43840,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_151df477c001fD5KSNs1uM40qg",
+      "time": {
+        "created": 1792374949778,
+        "streamed": 1792374962902,
+        "completed": 1792374968955
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_151df477c001fD5KSNs1uM40qg]",
+          "state": {
+            "redacted": "reasoning-state:msg_151df477c001fD5KSNs1uM40qg"
+          },
+          "time": {
+            "created": 1792374954829,
+            "completed": 1792374962889
+          }
+        },
+        {
+          "type": "text",
+          "text": "[redacted:text:msg_151df477c001fD5KSNs1uM40qg]"
+        },
+        {
+          "type": "tool",
+          "id": "call_814f5de324d540ffad65d666",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151df477c001fD5KSNs1uM40qg"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151df477c001fD5KSNs1uM40qg]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151df477c001fD5KSNs1uM40qg"
+            }
+          },
+          "time": {
+            "created": 1792374954837,
+            "ran": 1792374962893,
+            "completed": 1792374963683
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_1ade440cfe9b4995947284a8",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151df477c001fD5KSNs1uM40qg"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151df477c001fD5KSNs1uM40qg]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151df477c001fD5KSNs1uM40qg"
+            }
+          },
+          "time": {
+            "created": 1792374960724,
+            "ran": 1792374962898,
+            "completed": 1792374963648
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 1391,
+        "output": 457,
+        "reasoning": 22,
+        "cache": {
+          "read": 49344,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_151df928c001uXrZ9tABmNd9SZ",
+      "time": {
+        "created": 1792374968986,
+        "streamed": 1792375042785,
+        "completed": 1792375048802
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_151df928c001uXrZ9tABmNd9SZ]",
+          "state": {
+            "redacted": "reasoning-state:msg_151df928c001uXrZ9tABmNd9SZ"
+          },
+          "time": {
+            "created": 1792374976949,
+            "completed": 1792375042763
+          }
+        },
+        {
+          "type": "text",
+          "text": "[redacted:text:msg_151df928c001uXrZ9tABmNd9SZ]"
+        },
+        {
+          "type": "tool",
+          "id": "call_2f697c006ea344958e493ddd",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151df928c001uXrZ9tABmNd9SZ"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151df928c001uXrZ9tABmNd9SZ]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151df928c001uXrZ9tABmNd9SZ"
+            }
+          },
+          "time": {
+            "created": 1792375039385,
+            "ran": 1792375042767,
+            "completed": 1792375043477
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_138ea02cd6a8411f83ac1722",
+          "name": "glob",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151df928c001uXrZ9tABmNd9SZ"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151df928c001uXrZ9tABmNd9SZ]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151df928c001uXrZ9tABmNd9SZ"
+            }
+          },
+          "time": {
+            "created": 1792375041583,
+            "ran": 1792375042771,
+            "completed": 1792375042892
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_4ccc288d29b34ec9a0d148f8",
+          "name": "glob",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151df928c001uXrZ9tABmNd9SZ"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151df928c001uXrZ9tABmNd9SZ]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151df928c001uXrZ9tABmNd9SZ"
+            }
+          },
+          "time": {
+            "created": 1792375042220,
+            "ran": 1792375042775,
+            "completed": 1792375042906
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 843,
+        "output": 220,
+        "reasoning": 2550,
+        "cache": {
+          "read": 50688,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_151e0ca74001nkNwXAgAz6rror",
+      "time": {
+        "created": 1792375048835,
+        "streamed": 1792375060930,
+        "completed": 1792375065126
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_151e0ca74001nkNwXAgAz6rror]",
+          "state": {
+            "redacted": "reasoning-state:msg_151e0ca74001nkNwXAgAz6rror"
+          },
+          "time": {
+            "created": 1792375053771,
+            "completed": 1792375060923
+          }
+        },
+        {
+          "type": "text",
+          "text": "[redacted:text:msg_151e0ca74001nkNwXAgAz6rror]"
+        },
+        {
+          "type": "tool",
+          "id": "call_761331b2040d403c99772e7c",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151e0ca74001nkNwXAgAz6rror"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151e0ca74001nkNwXAgAz6rror]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151e0ca74001nkNwXAgAz6rror"
+            }
+          },
+          "time": {
+            "created": 1792375053779,
+            "ran": 1792375060927,
+            "completed": 1792375061606
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 3783,
+        "output": 387,
+        "reasoning": 77,
+        "cache": {
+          "read": 51520,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_151e10a36001ERB0VluT8HwN90",
+      "time": {
+        "created": 1792375065156,
+        "streamed": 1792375122771,
+        "completed": 1792375128881
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_151e10a36001ERB0VluT8HwN90]",
+          "state": {
+            "redacted": "reasoning-state:msg_151e10a36001ERB0VluT8HwN90"
+          },
+          "time": {
+            "created": 1792375074946,
+            "completed": 1792375122741
+          }
+        },
+        {
+          "type": "text",
+          "text": "[redacted:text:msg_151e10a36001ERB0VluT8HwN90]"
+        },
+        {
+          "type": "tool",
+          "id": "call_987b3dac77084af6a304bb87",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151e10a36001ERB0VluT8HwN90"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151e10a36001ERB0VluT8HwN90]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151e10a36001ERB0VluT8HwN90"
+            }
+          },
+          "time": {
+            "created": 1792375120954,
+            "ran": 1792375122754,
+            "completed": 1792375123514
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_ed6b2fd09b8c491d9823823c",
+          "name": "glob",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151e10a36001ERB0VluT8HwN90"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151e10a36001ERB0VluT8HwN90]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151e10a36001ERB0VluT8HwN90"
+            }
+          },
+          "time": {
+            "created": 1792375121566,
+            "ran": 1792375122759,
+            "completed": 1792375122901
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_ee20bd065a104b378038fa6b",
+          "name": "glob",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151e10a36001ERB0VluT8HwN90"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151e10a36001ERB0VluT8HwN90]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151e10a36001ERB0VluT8HwN90"
+            }
+          },
+          "time": {
+            "created": 1792375122640,
+            "ran": 1792375122763,
+            "completed": 1792375122896
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 886,
+        "output": 277,
+        "reasoning": 1491,
+        "cache": {
+          "read": 55296,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_151e20344001pVf9Zr6u2YZ4vX",
+      "time": {
+        "created": 1792375128913,
+        "streamed": 1792375142054,
+        "completed": 1792375148144
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_151e20344001pVf9Zr6u2YZ4vX]",
+          "state": {
+            "redacted": "reasoning-state:msg_151e20344001pVf9Zr6u2YZ4vX"
+          },
+          "time": {
+            "created": 1792375134044,
+            "completed": 1792375142043
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_20ae98c06c154f4595f3937c",
+          "name": "glob",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151e20344001pVf9Zr6u2YZ4vX"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151e20344001pVf9Zr6u2YZ4vX]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151e20344001pVf9Zr6u2YZ4vX"
+            }
+          },
+          "time": {
+            "created": 1792375136982,
+            "ran": 1792375142047,
+            "completed": 1792375142206
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_2222900dfbb441048b59a206",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151e20344001pVf9Zr6u2YZ4vX"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151e20344001pVf9Zr6u2YZ4vX]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151e20344001pVf9Zr6u2YZ4vX"
+            }
+          },
+          "time": {
+            "created": 1792375137519,
+            "ran": 1792375142051,
+            "completed": 1792375142799
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 2108,
+        "output": 212,
+        "reasoning": 106,
+        "cache": {
+          "read": 56128,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_151e24e810018sT1ulH6ly10Dg",
+      "time": {
+        "created": 1792375148175,
+        "streamed": 1792375159675,
+        "completed": 1792375167396
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_151e24e810018sT1ulH6ly10Dg]",
+          "state": {
+            "redacted": "reasoning-state:msg_151e24e810018sT1ulH6ly10Dg"
+          },
+          "time": {
+            "created": 1792375153238,
+            "completed": 1792375159667
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_df64675310094314a808e3fe",
+          "name": "grep",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151e24e810018sT1ulH6ly10Dg"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151e24e810018sT1ulH6ly10Dg]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151e24e810018sT1ulH6ly10Dg"
+            }
+          },
+          "time": {
+            "created": 1792375155872,
+            "ran": 1792375159670,
+            "completed": 1792375160093
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_83c83cc18de547eb8132d23d",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151e24e810018sT1ulH6ly10Dg"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151e24e810018sT1ulH6ly10Dg]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151e24e810018sT1ulH6ly10Dg"
+            }
+          },
+          "time": {
+            "created": 1792375156702,
+            "ran": 1792375159674,
+            "completed": 1792375162030
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 537,
+        "output": 208,
+        "reasoning": 138,
+        "cache": {
+          "read": 58176,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_151e299b5001vzmNzw6lBI2wLM",
+      "time": {
+        "created": 1792375167426,
+        "streamed": 1792375234569,
+        "completed": 1792375241444
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_151e299b5001vzmNzw6lBI2wLM]",
+          "state": {
+            "redacted": "reasoning-state:msg_151e299b5001vzmNzw6lBI2wLM"
+          },
+          "time": {
+            "created": 1792375196647,
+            "completed": 1792375234550
+          }
+        },
+        {
+          "type": "text",
+          "text": "[redacted:text:msg_151e299b5001vzmNzw6lBI2wLM]"
+        },
+        {
+          "type": "tool",
+          "id": "call_9a676aab543e4cb0a8e0bbef",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151e299b5001vzmNzw6lBI2wLM"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151e299b5001vzmNzw6lBI2wLM]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151e299b5001vzmNzw6lBI2wLM"
+            }
+          },
+          "time": {
+            "created": 1792375230771,
+            "ran": 1792375234554,
+            "completed": 1792375236114
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_c189bdf3d61645f5a7ba2754",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151e299b5001vzmNzw6lBI2wLM"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151e299b5001vzmNzw6lBI2wLM]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151e299b5001vzmNzw6lBI2wLM"
+            }
+          },
+          "time": {
+            "created": 1792375232520,
+            "ran": 1792375234558,
+            "completed": 1792375236067
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_f0d45897787d4fbe89693dbe",
+          "name": "glob",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151e299b5001vzmNzw6lBI2wLM"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151e299b5001vzmNzw6lBI2wLM]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151e299b5001vzmNzw6lBI2wLM"
+            }
+          },
+          "time": {
+            "created": 1792375234169,
+            "ran": 1792375234562,
+            "completed": 1792375234692
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 1303,
+        "output": 262,
+        "reasoning": 1042,
+        "cache": {
+          "read": 58688,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_151e3baf7001bQimfZlq2g4A0v",
+      "time": {
+        "created": 1792375241477,
+        "streamed": 1792375252430,
+        "completed": 1792375258414
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_151e3baf7001bQimfZlq2g4A0v]",
+          "state": {
+            "redacted": "reasoning-state:msg_151e3baf7001bQimfZlq2g4A0v"
+          },
+          "time": {
+            "created": 1792375246624,
+            "completed": 1792375252420
+          }
+        },
+        {
+          "type": "text",
+          "text": "[redacted:text:msg_151e3baf7001bQimfZlq2g4A0v]"
+        },
+        {
+          "type": "tool",
+          "id": "call_0e34f13cfc2c4b9abdcbf9d6",
+          "name": "grep",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151e3baf7001bQimfZlq2g4A0v"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151e3baf7001bQimfZlq2g4A0v]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151e3baf7001bQimfZlq2g4A0v"
+            }
+          },
+          "time": {
+            "created": 1792375249961,
+            "ran": 1792375252423,
+            "completed": 1792375252503
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_e2be9388814d43b99682fd8f",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151e3baf7001bQimfZlq2g4A0v"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151e3baf7001bQimfZlq2g4A0v]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151e3baf7001bQimfZlq2g4A0v"
+            }
+          },
+          "time": {
+            "created": 1792375250768,
+            "ran": 1792375252426,
+            "completed": 1792375253144
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 2347,
+        "output": 253,
+        "reasoning": 199,
+        "cache": {
+          "read": 59968,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_151e3fd3f0019fe2sMHNovY7su",
+      "time": {
+        "created": 1792375258446,
+        "streamed": 1792375269015,
+        "completed": 1792375276186
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_151e3fd3f0019fe2sMHNovY7su]",
+          "state": {
+            "redacted": "reasoning-state:msg_151e3fd3f0019fe2sMHNovY7su"
+          },
+          "time": {
+            "created": 1792375263461,
+            "completed": 1792375269004
+          }
+        },
+        {
+          "type": "text",
+          "text": "[redacted:text:msg_151e3fd3f0019fe2sMHNovY7su]"
+        },
+        {
+          "type": "tool",
+          "id": "call_d7f26aabc5a24d08916e82a9",
+          "name": "grep",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151e3fd3f0019fe2sMHNovY7su"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151e3fd3f0019fe2sMHNovY7su]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151e3fd3f0019fe2sMHNovY7su"
+            }
+          },
+          "time": {
+            "created": 1792375266299,
+            "ran": 1792375269007,
+            "completed": 1792375269081
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_1948321b38a04519a3066d8f",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151e3fd3f0019fe2sMHNovY7su"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151e3fd3f0019fe2sMHNovY7su]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151e3fd3f0019fe2sMHNovY7su"
+            }
+          },
+          "time": {
+            "created": 1792375267983,
+            "ran": 1792375269011,
+            "completed": 1792375270852
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 653,
+        "output": 199,
+        "reasoning": 132,
+        "cache": {
+          "read": 62272,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_151e442ab001aP4Dv3mBGoKBVw",
+      "time": {
+        "created": 1792375276216,
+        "streamed": 1792375323719,
+        "completed": 1792375330167
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_151e442ab001aP4Dv3mBGoKBVw]",
+          "state": {
+            "redacted": "reasoning-state:msg_151e442ab001aP4Dv3mBGoKBVw"
+          },
+          "time": {
+            "created": 1792375320169,
+            "completed": 1792375323707
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_ca312da968d24adeb4c0ef90",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151e442ab001aP4Dv3mBGoKBVw"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151e442ab001aP4Dv3mBGoKBVw]"
+              },
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151e442ab001aP4Dv3mBGoKBVw]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151e442ab001aP4Dv3mBGoKBVw"
+            }
+          },
+          "time": {
+            "created": 1792375320695,
+            "ran": 1792375323712,
+            "completed": 1792375324857
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_d9b16377c7414990aa5ff68e",
+          "name": "read",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151e442ab001aP4Dv3mBGoKBVw"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151e442ab001aP4Dv3mBGoKBVw]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151e442ab001aP4Dv3mBGoKBVw"
+            }
+          },
+          "time": {
+            "created": 1792375323177,
+            "ran": 1792375323716,
+            "completed": 1792375323769
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 455,
+        "output": 193,
+        "reasoning": 28,
+        "cache": {
+          "read": 62912,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_151e5158c001tjpqCgQD08tLBi",
+      "time": {
+        "created": 1792375330206,
+        "streamed": 1792375339016,
+        "completed": 1792375345424
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_151e5158c001tjpqCgQD08tLBi]",
+          "state": {
+            "redacted": "reasoning-state:msg_151e5158c001tjpqCgQD08tLBi"
+          },
+          "time": {
+            "created": 1792375335503,
+            "completed": 1792375339007
+          }
+        },
+        {
+          "type": "text",
+          "text": "[redacted:text:msg_151e5158c001tjpqCgQD08tLBi]"
+        },
+        {
+          "type": "tool",
+          "id": "call_64d23d551c434bc9b51d1b43",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151e5158c001tjpqCgQD08tLBi"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151e5158c001tjpqCgQD08tLBi]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151e5158c001tjpqCgQD08tLBi"
+            }
+          },
+          "time": {
+            "created": 1792375336121,
+            "ran": 1792375339011,
+            "completed": 1792375340156
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 1060,
+        "output": 194,
+        "reasoning": 69,
+        "cache": {
+          "read": 63360,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_151e551260013shvNC0wlA8Uld",
+      "time": {
+        "created": 1792375345462,
+        "streamed": 1792375350649,
+        "completed": 1792375355821
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_151e551260013shvNC0wlA8Uld]",
+          "state": {
+            "redacted": "reasoning-state:msg_151e551260013shvNC0wlA8Uld"
+          },
+          "time": {
+            "created": 1792375350634,
+            "completed": 1792375350642
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_a0316e8a72124ca6b4419058",
+          "name": "read",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151e551260013shvNC0wlA8Uld"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151e551260013shvNC0wlA8Uld]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151e551260013shvNC0wlA8Uld"
+            }
+          },
+          "time": {
+            "created": 1792375350638,
+            "ran": 1792375350646,
+            "completed": 1792375350659
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 313,
+        "output": 33,
+        "reasoning": 17,
+        "cache": {
+          "read": 64384,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_151e579c0001al5nMLv4bK43lM",
+      "time": {
+        "created": 1792375355855,
+        "streamed": 1792375428206,
+        "completed": 1792375433696
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_151e579c0001al5nMLv4bK43lM]",
+          "state": {
+            "redacted": "reasoning-state:msg_151e579c0001al5nMLv4bK43lM"
+          },
+          "time": {
+            "created": 1792375361248,
+            "completed": 1792375428193
+          }
+        },
+        {
+          "type": "text",
+          "text": "[redacted:text:msg_151e579c0001al5nMLv4bK43lM]"
+        },
+        {
+          "type": "tool",
+          "id": "call_1d4d87ad06fa44fb99ba8244",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151e579c0001al5nMLv4bK43lM"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151e579c0001al5nMLv4bK43lM]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151e579c0001al5nMLv4bK43lM"
+            }
+          },
+          "time": {
+            "created": 1792375416334,
+            "ran": 1792375428198,
+            "completed": 1792375428988
+          }
+        },
+        {
+          "type": "tool",
+          "id": "call_25a842392f974281bc0e8f29",
+          "name": "shell",
+          "executed": false,
+          "state": {
+            "status": "completed",
+            "input": {
+              "redacted": "tool-input:msg_151e579c0001al5nMLv4bK43lM"
+            },
+            "content": [
+              {
+                "type": "text",
+                "text": "[redacted:tool-output:msg_151e579c0001al5nMLv4bK43lM]"
+              }
+            ],
+            "metadata": {
+              "redacted": "tool-metadata:msg_151e579c0001al5nMLv4bK43lM"
+            }
+          },
+          "time": {
+            "created": 1792375421256,
+            "ran": 1792375428202,
+            "completed": 1792375429044
+          }
+        }
+      ],
+      "finish": "tool-calls",
+      "rawFinish": "tool_calls",
+      "cost": 0,
+      "tokens": {
+        "input": 1376,
+        "output": 652,
+        "reasoning": 2018,
+        "cache": {
+          "read": 64640,
+          "write": 0
+        }
+      }
+    }
+  ]
+}

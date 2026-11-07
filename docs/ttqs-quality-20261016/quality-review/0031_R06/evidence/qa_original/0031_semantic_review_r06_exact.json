@@ -1,0 +1,182 @@
+{
+  "schema": "ttqs.independent_semantic_review.v1",
+  "review_id": "0031_R06_exact_sha_independent_semantic_review",
+  "reviewed_at_local": "2026-10-16",
+  "reviewer_route": {
+    "basis": "CONTROL/CURRENT_STATE.json",
+    "current_state_sha256": "1345b6330b01c7b71293eeaf58aa7409a78681b7cf011b65a065c91888f972d6",
+    "review_lane": "WIN10_CODEX_LOCAL_NATIVE_CONTROL_REVIEW (secondary executor)",
+    "primary_builder_lane": "WIN10_ANTIGRAVITY_LOCAL_NATIVE",
+    "independence": "Direct read-only reviewer inspection and recalculation; no Builder invocation or reliance on Builder semantic assertions."
+  },
+  "candidate": {
+    "doc_id": "0031",
+    "revision": "R06",
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0031_R06\\candidate\\0031__專業訓練人員職能評估方法等證明_可直接使用成品_R06.docx",
+    "sha256": "a35be13fe320aedf431f9a2ee7db4a5866d69ef42d87a61496a3c82ad804b4d3",
+    "verified_sha256": "a35be13fe320aedf431f9a2ee7db4a5866d69ef42d87a61496a3c82ad804b4d3",
+    "state": "CANDIDATE",
+    "promotion_status": "NOT_PROMOTED",
+    "human_acceptance": "PENDING"
+  },
+  "official_mapping": {
+    "requirement_id": "I06-E02",
+    "official_checkbox_sequence": "030",
+    "official_requirement_text": "專業訓練人員職能評估方法等證明。",
+    "official_source_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\SOURCES\\TTQS查核佐證文件資料表-訓練機構版 (2).pdf",
+    "official_source_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "official_page": "2",
+    "source_map_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\SOURCE_REQUIREMENT_MAP_WAVE005_R03.csv",
+    "source_map_sha256": "405b987797d1558ecac182cea8e1adfbd1aead7754c880db32db43c235d5024e",
+    "source_map_evidence_id": "030",
+    "unique_blueprint_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\BLUEPRINT_CURRENT.jsonl",
+    "unique_blueprint_line": 31,
+    "unique_blueprint_row_sha256": "007820ead76cff476ef6fc1bcf145ddb397f723bf94b11b68cc05a2c150424eb",
+    "unique_blueprint_role": "analysis_report"
+  },
+  "reviewed_supporting_artifacts": {
+    "rendered_pdf_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0031_R06\\render\\0031_R06_Word_export.pdf",
+    "rendered_pdf_sha256": "acf88d1113191869fb75edf330dc3609ed17c5907cfe154faf32cf753f044bb2",
+    "rendered_page_count": 19,
+    "existing_page_pngs_inspected": [
+      "page-01.png",
+      "page-02.png",
+      "page-03.png",
+      "page-04.png",
+      "page-05.png",
+      "page-06.png",
+      "page-07.png",
+      "page-08.png",
+      "page-09.png",
+      "page-10.png",
+      "page-11.png",
+      "page-12.png",
+      "page-13.png",
+      "page-14.png",
+      "page-15.png",
+      "page-16.png",
+      "page-17.png",
+      "page-18.png",
+      "page-19.png"
+    ],
+    "replacement_register_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0031_R06\\sources\\0031_逐筆示範資料替換與追溯清冊_R06.csv",
+    "replacement_register_sha256": "c9640a8de344b389c68c78cad0ef884a659ac707af34113aaf9739036d44f286",
+    "row_count": 49,
+    "unique_fact_id_count": 49,
+    "all_rows_bound_to_candidate_sha256": true,
+    "all_required_trace_fields_nonblank": true,
+    "content_contract_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\INPUTS\\HUMAN_MISSION_CONTENT_CONTRACT_20261003.md",
+    "content_contract_sha256": "7946333c0555ba956dfd52b84390fbf3043da1dbb4e7a945ba7cf3f639786c76"
+  },
+  "gates": [
+    {
+      "gate": "exact_sha_and_identity",
+      "verdict": "PASS",
+      "evidence": "Recomputed candidate SHA equals the requested exact SHA; DOCX 0031 is mapped by the current source map to I06-E02 and evidence_id 030. Official sequence is taken from the mapping, not inferred from doc_id."
+    },
+    {
+      "gate": "official_requirement_and_genre",
+      "verdict": "PASS",
+      "locators": [
+        "Official source PDF p.2, section 6, evidence bullet 2",
+        "DOCX p.1 “官方佐證要求”",
+        "DOCX p.2, §1, source table row 1",
+        "DOCX p.1 title and pp.3-15 analysis/method sections"
+      ],
+      "evidence": "The official phrase is quoted accurately. The document is an analysis/evaluation method report with operational criteria, assessment, findings, follow-up, and a reusable form; it is not an experience certificate or organizational-capacity report."
+    },
+    {
+      "gate": "title_blind_purpose_and_practical_method",
+      "verdict": "PASS",
+      "locators": [
+        "DOCX p.1, “30秒內知道怎麼用” table and decision question",
+        "DOCX pp.3-4, §2-3, Tables 6-10",
+        "DOCX pp.16-18, §8 and Tables 31-34"
+      ],
+      "evidence": "With title hidden, body identifies evaluation of designated training-task competency, defines five observable competencies and four-level anchors, gives a five-step process, interview prompts, return/correction controls, and complete fillable assessment/conclusion fields."
+    },
+    {
+      "gate": "sample_real_authority_and_third_party_boundary",
+      "verdict": "PASS",
+      "locators": [
+        "DOCX p.1 cover/status box and footer",
+        "DOCX p.2, §1 Table 4 and “本次 REAL 資料狀態” box",
+        "DOCX pp.5-14 sample cases and retest",
+        "DOCX p.19, §9 and quality/adoption boundary"
+      ],
+      "evidence": "All roles, scores, dates, observations, and retests are clearly SAMPLE/SYNTHETIC. The body says it does not prove actual assessment, approval, personnel competence, or performance. The legal-entity name is limited to the official registry entry; the official Judiciary record confirms the name/case 113年度法登他字第000069號/registration 660 and does not establish current training activity or approval."
+    },
+    {
+      "gate": "durable_source_locator_and_human_facing_metadata",
+      "verdict": "PASS",
+      "locators": [
+        "DOCX p.2, §1 Table 4, Judiciary source row",
+        "DOCX p.1 cover; running header/footer on pp.1-19",
+        "DOCX p.19, §9"
+      ],
+      "evidence": "The unstable list position is absent; the source locator uses court, case number, and registration number 660. Cover/header show reader-facing TTQS requirement label and sample/version disclosure; no candidate revision, DOCX id, SHA, Blueprint/register path/id, or official requirement-to-page evidence map appears in the body."
+    },
+    {
+      "gate": "calculations_dates_and_case_consistency",
+      "verdict": "PASS",
+      "locators": [
+        "DOCX p.5 Table 5-A and “公式與口徑”",
+        "DOCX p.6 §4-A",
+        "DOCX p.7 Table 5-B and chart",
+        "DOCX pp.8-10, completed cases SYN-P01–03",
+        "DOCX pp.11-14, Tables 6-A/6-B and §6-A retest"
+      ],
+      "evidence": "Independent recomputation from the 15 cells: P01 2/5, P02 2/5, P03 3/5; overall 7/15=46.666…%=46.7%, 8/15=53.3% below target; positive gaps 3+3+2=8 level-points. Skill rates A 2/3=66.7%, B 1/3=33.3%, C 2/3=66.7%, D 0/3=0%, E 2/3=66.7%. Retest actions cover 3+4+1=8 initially unmet cells and each displayed retest reaches its pre-set target. Assessment dates 2026-09-11/14/15 and retest 2026-09-25/28 are chronologically consistent and marked synthetic."
+    },
+    {
+      "gate": "register_traceability",
+      "verdict": "PASS",
+      "locators": [
+        "Internal register rows 1-49; corresponding body/render locators pp.5-14 and p.19 replacement categories"
+      ],
+      "evidence": "Register SHA c9640a8de344b389c68c78cad0ef884a659ac707af34113aaf9739036d44f286; 49 rows, 49 unique fact_ids, all 49 bound to this candidate SHA. Required value, source/formula, real-replacement source, action, role, status, body locator, and rendered-page locator fields are nonblank. Sample case, summary, action, and retest locators were checked against the body and the 19 rendered pages."
+    },
+    {
+      "gate": "negative_neighbor_distinction",
+      "verdict": "PASS",
+      "locators": [
+        "DOCX pp.1-2, explicit I06-E01/I06-E03 boundary",
+        "Official source PDF p.2, section 6, three adjacent evidence bullets",
+        "Current Blueprint rows 0030/I06-E01, 0031/I06-E02, 0032/I06-E03"
+      ],
+      "evidence": "I06-E01 concerns work experience/training proof; I06-E02 concerns the competency assessment method and results; I06-E03 concerns institution-wide training-operation competencies/resources. The document evaluates individual/function-role task competency and explicitly does not claim qualifications or organizational capacity."
+    },
+    {
+      "gate": "association_admin_and_evaluator_usability",
+      "verdict": "PASS",
+      "locators": [
+        "DOCX p.1 quick-use table",
+        "DOCX pp.3-4, §2-3",
+        "DOCX pp.11-15, findings, action, retest, and daily controls",
+        "DOCX pp.16-19, reusable form, completion control, replacement checklist"
+      ],
+      "evidence": "A small association can identify authority/target/evaluator, record evidence and disagreements, calculate gaps, return incomplete items, assign synthetic example actions and acceptance criteria, reassess with new evidence, and hand off records. The blank form covers identifiers, source, target, evaluator/conflicts, evidence, status, outcome, retest, access, and storage."
+    },
+    {
+      "gate": "full_page_readability",
+      "verdict": "PASS",
+      "locators": [
+        "Existing Word export PDF, pp.1-19; page-01.png through page-19.png"
+      ],
+      "evidence": "All 19 existing page PNGs were inspected individually. Text and table cells are readable; no blank page, cut table, overlap, missing glyph, or clipped content observed. The Table 6-A/6-B pages (pp.11-12) and form pages (pp.16-18) are sparse but contain complete, intentional sections; the pp.13-14 table continuation repeats its header and remains legible."
+    },
+    {
+      "gate": "R05_blocker_regression",
+      "verdict": "PASS",
+      "locators": [
+        "DOCX p.19 §9",
+        "DOCX p.1 cover and pp.1-19 header/footer",
+        "DOCX p.2 §1 Table 4"
+      ],
+      "evidence": "The p.19 internal official-requirement-to-page/evidence lookup is absent and has been replaced by a human-facing source/replacement checklist. Candidate lifecycle text is absent from cover/header; the official I06-E02 label and sample/version disclosure remain reader-facing. Stable official source locator is present."
+    }
+  ],
+  "verdict": "PASS",
+  "blocking_defects": [],
+  "nonblocking_boundary": "This is an exact-SHA candidate-level semantic review only. It does not establish real association adoption, actual personnel assessment, real outcomes, promotion, or Human acceptance."
+}

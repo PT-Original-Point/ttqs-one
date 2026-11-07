@@ -1,0 +1,6 @@
+Independent read-only semantic review. Scope: TTQS ONE DOCX 0111, official ID I18-E20, candidate R05 only.
+
+Read the entire review packet at: E:\TTQS\TTQS_ONE_CODEX_RUNTIME\WORK\QUALITY_REBUILD_20261016\0111_I18-E20_SOURCE_PREP_20261023\review\semantic_review_packet_R05.md
+The packet contains the exact candidate SHA, full extracted paragraphs and tables, official requirement/source mapping, Unique Blueprint, and prior R03 findings. Review only the evidence in the packet; do not edit/create/delete files, do not invoke Computer Use, do not submit anything, and do not infer REAL association activity from SAMPLE/SYNTHETIC examples.
+
+Return a concise but evidence-specific verdict PASS, PARTIAL, or FAIL bound to the packet's exact R05 DOCX SHA. Reassess the six prior R03 nonblocking findings individually and state whether each is resolved, remains, or is invalid. Check official requirement fit; document type and neighbor distinction; operational completeness; sample/real boundary; cross-document consistency; math and denominator logic; hold/rejection criteria; human usability. For each finding give section/table/paragraph locator and concrete evidence. A title-only or generic assessment is insufficient. State review scope/limitations, and state the serving model only if the CLI evidence gives it; otherwise UNKNOWN. Do not label formal acceptance.

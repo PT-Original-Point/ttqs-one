@@ -1,0 +1,33 @@
+{
+  "schema": "ttqs-one-targeted-content-repair-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0003",
+  "requirement_id": "I01-E02",
+  "official_checkbox_serial": "002",
+  "source_candidate_sha256": "265da610608edc4a97c4c592c4c556d16dd5b8288c20f0cf46a8477436a05357",
+  "candidate_sha256": "ded1ed45ba736d0767d611fc1a2278e1ef5c64fdcddc3ce3deaafb5954c91b7b",
+  "repair_scope": "Cover revision label R07->R08 and replace final internal worker/build/QA status paragraph with association-facing SAMPLE and handoff text; no question, answer, scale, sample fact, table, or replacement-register row changed.",
+  "paragraph_changes": [
+    {
+      "locator": "Cover revision status",
+      "old": "候選R07",
+      "new": "候選R08"
+    },
+    {
+      "locator": "Section 七 final paragraph",
+      "old": "Internal Writer/worker/QA status note",
+      "new": "Association-facing SAMPLE boundary and 0004/0005 handoff"
+    }
+  ],
+  "sample_facts_changed": false,
+  "register_changed": false,
+  "docx_package_integrity": "PASS",
+  "forbidden_internal_text_scan": "PASS",
+  "initial_receipt_write_attempt": "FAILED_PATH_TARGET_WAS_DOCX_FILE_AFTER_DOCX_SAVED; recovered by writing receipt beside candidate; DOCX bytes unchanged during recovery",
+  "visual_precheck_finding": "First R08 render showed footer still labelled R07 and DOCX body exposed internal source hashes. Targeted fixes recorded in LAYOUT_CONTENT_REPAIR_R08.json; initial visual render is superseded.",
+  "source_hashes_removed_from_body": true,
+  "candidate_sha256_before_layout_repair": "7feeaabf435db98cde50e736e542b058893da77c3de5c6c804fd7d2936101d16",
+  "final_source_table_rows": 7,
+  "empty_header_row_removed": true,
+  "source_table_locator": "Official first page; exact requirement text; human readable; no hashes"
+}

@@ -1,0 +1,100 @@
+{
+  "schema": "TTQS_ONE_0077_SEMANTIC_REVIEW_DISPATCH_R01.v1",
+  "document_id": "0077",
+  "requirement_id": "I17B-E01",
+  "official_checkbox_serial": "084",
+  "candidate_docx_sha256": "cc545510cf503e9ecb16238c2b8dcdf6b15cbc43a28360b3b76f97513017edf7",
+  "candidate_docx_bytes": 71197,
+  "route": "OpenCode CLI v2",
+  "cli_path": "C:\\Users\\J\\AppData\\Roaming\\ai.opencode.desktop\\cli\\2.0.29-x64\\opencode-cli.exe",
+  "cli_version": "2.0.29",
+  "model": "opencode/beam-free",
+  "process_id": 41732,
+  "computer_use": false,
+  "review_only": true,
+  "started_observed_utc": "2026-10-19T01:12:22.505773+00:00",
+  "prompt_sha256": "9aaae6fdcd2660fb7cb5eee216716abb1783244cb20859d0250c6427c911dd71",
+  "stdout_path": "review/opencode_semantic_R01_stdout.jsonl",
+  "stderr_path": "review/opencode_semantic_R01_stderr.txt",
+  "exit_path": "review/opencode_semantic_R01_exit.txt",
+  "attached_inputs": [
+    {
+      "path": "review/semantic_review_prompt_R01.md",
+      "sha256": "9aaae6fdcd2660fb7cb5eee216716abb1783244cb20859d0250c6427c911dd71",
+      "bytes": 2147
+    },
+    {
+      "path": "inputs/UNIQUE_BLUEPRINT_0077_R01.md",
+      "sha256": "da17d42570dc39a55ed1581bad0ff502184173023109618eae780c8835168376",
+      "bytes": 4456
+    },
+    {
+      "path": "inputs/SOURCE_PACKET_0077_R01.md",
+      "sha256": "b260095370a624483d7b2e17315e7b8428f938d6b3f0f694dc199cfd4beb5842",
+      "bytes": 4052
+    },
+    {
+      "path": "inputs/upstream_snapshots/02_GENRE_WRITING_MANUAL.md",
+      "sha256": "7fc23191efdb60ca4a9b48bc306799a9f15916b1160b63292d164bd4f4cf49aa",
+      "bytes": 16215
+    },
+    {
+      "path": "inputs/upstream_snapshots/03_157_CHECKBOX_BLUEPRINTS.md",
+      "sha256": "ad03323d591cbea62814a8a59d233110587f2741bed8f944380b1faa2d04d216",
+      "bytes": 36868
+    },
+    {
+      "path": "inputs/upstream_snapshots/official_evidence_table_source.pdf",
+      "sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+      "bytes": 303044
+    },
+    {
+      "path": "evidence/docx_extracted_R01.md",
+      "sha256": "8979f87a9d61dfd2f585e5052f6255eceaf8db34f3f9ff55e9ef00d5461c2139",
+      "bytes": 47461
+    },
+    {
+      "path": "candidate/0077_R01_body.md",
+      "sha256": "6ca1eeb224285bd8fe43e9754ec0a44f3b6b03ce42fa72db0176bbdfda326ed6",
+      "bytes": 49205
+    },
+    {
+      "path": "inputs/REFLECTION_SYNTHETIC_DATA_0077_R01.csv",
+      "sha256": "3bdce0a1675a5b377dfafe2d75139d1f877e51530f5edc4ba3551a116bc6e985",
+      "bytes": 8241
+    },
+    {
+      "path": "inputs/SYNTHETIC_REPLACEMENT_REGISTER_0077_R01.csv",
+      "sha256": "d9c950c16445de26d304b347f146bcb919c19e46d7fcf73be009900af8766d91",
+      "bytes": 45187
+    },
+    {
+      "path": "evidence/technical_review_R01.json",
+      "sha256": "54dda897f6e5b91cac6183d5439a67ed1bdaceea4ee9a56341a8ced541381fed",
+      "bytes": 1242
+    },
+    {
+      "path": "evidence/visual_review_R01.json",
+      "sha256": "58edfcea4176b2b24fbfd3de6f9d6273355ccf84961ca31e531a6b48a2ccec4b",
+      "bytes": 1151
+    }
+  ],
+  "status": "COMPLETED",
+  "session_id": "ses_eae49b4e1ffeDCz6ToNFHcOog4",
+  "process_exit_code": 0,
+  "stdout_sha256": "77757945279836ab9b152b1f1361e993bc65834f26dc1b9767ff2e8608af4e85",
+  "stdout_bytes": 70788,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0,
+  "review_path": "review/independent_semantic_review_R01.md",
+  "review_sha256": "710ad78c8c297d01c873d3df5a9d51c6f1dc6a7fcdc7fff826e220a8a3cce303",
+  "review_bytes": 3880,
+  "verdict": "PASS",
+  "scope_limitations": [
+    "Reviewer relied on the source packet and supplied extraction; the official PDF was not directly readable in its session.",
+    "Reviewer did not independently inspect page images; the separate 23-page visual receipt is relied upon."
+  ],
+  "reviewed_extraction_sha256_at_dispatch": "8979f87a9d61dfd2f585e5052f6255eceaf8db34f3f9ff55e9ef00d5461c2139",
+  "final_extraction_sha256": "b1fac89d20df49a2dba1e9e2913e9a54abcc414336a3244b5cfeca6405fade10",
+  "post_review_normalization": "Removed trailing whitespace only from extracted Markdown and readable review copy; no text, values, candidate DOCX bytes, raw model response, or verdict changed. Review is not rerun because exact candidate SHA is unchanged."
+}

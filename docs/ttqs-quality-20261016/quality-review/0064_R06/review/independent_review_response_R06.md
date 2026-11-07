@@ -1,0 +1,15 @@
+Verdict: PASS
+
+Candidate bound to exact R06 DOCX SHA-256 `f83eeda42589da66c23918d522ad983178a252da9b6dd2240b725e9c9cfb50a1`; candidate text extraction SHA-256 `94632ca1a814050a35d695d7cff8c5474cc7306ae1f1377bcad5c80c1caa76b6`; source commit `ac9a13e394fcb25414d69a6f538f95c700cc26c9`. Semantic text review only; no visual/layout inspection, no approval or promotion claim.
+
+Key evidence:
+- Official mapping: §2.1 quotes the item 14 wording and checkbox 069 “資訊系統化程度及檢索速度。”; §1/§2.2 align with the “明確測試環境、時間、統計” prompt.
+- Genre/Blueprint fit: §0.1, §2.2, and §16 define a short test report plus repeatable low-cost SOP; §3 separates roles from neighboring documents.
+- Repeatable closed-corpus test: §5 provides 16 test conditions; §6 provides 12 task cards; §11 provides a 10-step SOP and record tables; §12 provides 10 HOLD/REJECT triggers.
+- Data and aggregates: §7 contains the complete 24 paired observations. Independently recomputed: folder sum 2442, mean 101.75 s, median 95.5 s, P90 rank 22 = 137 s, max 156 s; index sum 783, mean 32.625 s, median 28.5 s, P90 rank 22 = 47 s, max 62 s; paired saving sum 1659 s, mean 69.125 s/task, total reduction 67.9361%; folder accuracy 22/24 = 91.7%, index accuracy 24/24 = 100%.
+- A-0062-08: §3.1, §4.1–4.2, §6 T08, §7 rows 8 and 20, and §13.4 M08 keep it HOLD and disclose only `artifact_id + HOLD + H-0062-0001`; no version, filename, path, or content is revealed.
+- SAMPLE/REAL boundary: §0, §0.3, §3.2, §4.1, §10, and §13.2/§13.6 consistently state synthetic, non-executed, non-REAL status and do not claim Association systems, KPIs, or approval.
+- Replacement register/exceptions/usability: §13.1–§13.6 contains the 24-pair/48-value register; §12 contains exception handling; §11 contains reusable SOP and records.
+- Negative-neighbor separation: §2.2 and §3 state that 0064 does not perform 0061 permission/backup design, 0062 full registry, or 0063 query-service improvement work.
+
+Material gaps requiring rework: none identified in the semantic text. Remaining acceptance items are non-semantic sidecar/visual/Human Gate items outside this semantic review.

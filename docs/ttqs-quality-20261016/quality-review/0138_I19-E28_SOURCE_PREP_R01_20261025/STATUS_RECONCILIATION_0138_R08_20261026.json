@@ -1,0 +1,68 @@
+{
+  "schema": "ttqs-one-0138-r08-status-reconciliation/v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0138",
+  "requirement_id": "I19-E28",
+  "project_157_index": 152,
+  "printed_checkbox_serial": "UNKNOWN",
+  "reconciliation_type": "METADATA_ONLY_NO_DOCX_REBUILD",
+  "previous_readme_sha256": "bdbac3a74819586c1e7d7fba5f3e8257cfdfb9e112101051cae642322194de8d",
+  "previous_readme_state": "SOURCE_READY_NO_DOCX_CANDIDATE",
+  "current_candidate": {
+    "revision": "R08",
+    "sha256": "f06439849ba70d0ad665d760d0a422382d9f4a991ca449b36f05fae39abd5a27",
+    "bytes": 60387,
+    "builder": "build_0138_r08.py",
+    "builder_sha256": "b15e145dd1af9821b6ca76d734dee11f405e013b7f9b27cae88fdd91fd2e78ff",
+    "manuscript_sha256": "4920b301904760bc87bb963cda0d470f7bd64ef7f541fda24497baa4b627cc26"
+  },
+  "technical_qa": {
+    "status": "PASS_SCOPED",
+    "receipt_sha256": "2b9f362e3fa20ad9f8ad556ce208945e376fede2bdc1b1433b4c8557735a1a3c"
+  },
+  "visual_qa": {
+    "status": "PASS_VISUAL_SCOPE_ONLY",
+    "pages": 15,
+    "receipt_sha256": "36bfcc9a7b8b79b3f8f80f07c2867b61b4e3c81ccf91aa3833f1cee3b79a3468",
+    "pdf_sha256": "fa28010481f34ddab55fcf071c53db5c72c8868857603e24a58579a6aa997650"
+  },
+  "semantic_review": {
+    "worker": "Antigravity CLI",
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model": "UNKNOWN",
+    "review_verdict": "PASS",
+    "adjudication": "PASS_RECORDED_MODEL_IDENTITY_UNKNOWN",
+    "scope": "Exact-SHA packet review with selected anchor checks; not an exhaustive independent verification of every semantic proposition.",
+    "receipt_sha256": "7269c0d5dfa2ae3446beab0d8a4a1ebdfa8ec08ee41cd8e16673058e652e07d6"
+  },
+  "workers": {
+    "antigravity_writer": {
+      "response_chars": 26482,
+      "cli_reported_tokens": 31110,
+      "adopted": false,
+      "run_receipt_sha256": "1a1dc68e15175a02239411eb4187546d4210379d3106c0ea9cb32c05dc6ce352"
+    },
+    "opencode_review": {
+      "requested_model": "opencode/glm-5.3-flash-free",
+      "status": "EXIT_NONZERO_NO_REVIEW",
+      "adopted": false,
+      "run_receipt_sha256": "75b14c6c79979232708bbb6b9fd168b476f67517229cec9f26b7644da21725fd"
+    }
+  },
+  "github_readback": {
+    "receipt_sha256": "ae5689e54dc7facedc65444789368876bad9fa07d680939fe9098eddeba33189",
+    "source_commit": "48b3380af283b8c8f23a954e8c79e1f5816e8851",
+    "file_count": 16,
+    "all_exact_raw_bytes_equal": false,
+    "all_content_equal_after_lf_and_optional_bom_normalization": true,
+    "binary_docx_and_pdf_exact": true
+  },
+  "truth_boundary": {
+    "candidate_state": "CANDIDATE_ONLY",
+    "real_evidence": "UNKNOWN/HOLD",
+    "formal_acceptance": "NOT_GRANTED",
+    "official_score": "NOT_ASSIGNED"
+  },
+  "source_readme_conflict": "The original README described the preparation baseline before R08 existed. This additive delta records the later R08 candidate and review state without changing prior time-scoped receipts.",
+  "reconciled_at_local": "2026-10-26T00:48:10+08:00"
+}

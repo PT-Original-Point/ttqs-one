@@ -1,0 +1,15 @@
+## 結論：PASS（限本次獨立複核，不代表正式接受）
+
+目標 DOCX SHA-256 在審查前、後均為 **`8fe5abdc8b90592b47af67c5ef5d0d37947eec0cdbd55f6034fce82d3723a561`**；指定 WordNative PDF SHA-256 為 **`3ccaf47a6c03132d49196929d7fed86a9f6d0eeeda06905d96c238f545cb2d1d`**。來源 manuscript 與 SAMPLE register 雜湊亦吻合。:codex-file-citation{path="E:/TTQS/TTQS_ONE_CODEX_RUNTIME/WORK/QUALITY_REBUILD_20261016/0004_I01-E02_SOURCE_PREP_R03_20261030/docx/0004_I01-E02_R05_L06.docx" purpose="source" artifact_kind="document" page_number="13"} :codex-file-citation{path="E:/TTQS/TTQS_ONE_CODEX_RUNTIME/WORK/QUALITY_REBUILD_20261016/0004_I01-E02_SOURCE_PREP_R03_20261030/render/0004_I01-E02_R05_L06_WordNative.pdf" purpose="source"} :codex-file-citation{path="E:/TTQS/TTQS_ONE_CODEX_RUNTIME/WORK/QUALITY_REBUILD_20261016/0004_I01-E02_SOURCE_PREP_R03_20261030/worker/0004_WRITER_MANUSCRIPT_CANDIDATE_R05.md" purpose="source"} :codex-file-citation{path="E:/TTQS/TTQS_ONE_CODEX_RUNTIME/WORK/QUALITY_REBUILD_20261016/0004_I01-E02_SOURCE_PREP_R03_20261030/SYNTHETIC_REPLACEMENT_REGISTER_PLAN_0004_R05.csv" purpose="source"}
+
+**L05 舊缺陷已解決。** L06 第 13–14 頁 §6.2 的平衡式編號為 1–4；第 15 頁 §8.1、第 16 頁 §8.2 與 §8.3 各自從 1 起算。第 13–16 頁已目視核對，編號與表格清晰，未見因此產生的截斷或重疊。與 L05 比較，DOCX 的 977 個文字節點序列完全相同，OOXML 僅 `document.xml` 與 `numbering.xml` 改變；21 頁預覽中只有第 13–16 頁影像不同。:codex-file-citation{path="E:/TTQS/TTQS_ONE_CODEX_RUNTIME/WORK/QUALITY_REBUILD_20261016/0004_I01-E02_SOURCE_PREP_R03_20261030/docx/0004_I01-E02_R05_L05.docx" purpose="source" artifact_kind="document" page_number="13"} :codex-file-citation{path="E:/TTQS/TTQS_ONE_CODEX_RUNTIME/WORK/QUALITY_REBUILD_20261016/0004_I01-E02_SOURCE_PREP_R03_20261030/docx/0004_I01-E02_R05_L06.docx" purpose="source" artifact_kind="document" page_number="16"}
+
+### 必要語意與可用性核對
+
+官方 I01-E02「目標市場需求調查」與 0004「執行與樣本紀錄」文類相符；第 3 頁追溯表連結官方要求、0004 欄位、來源、覆核與輸出。0003 問卷、0005 分析，以及 0001／0006 的負向近鄰邊界清楚。:codex-file-citation{path="E:/TTQS/TTQS_ONE_CODEX_RUNTIME/WORK/QUALITY_REBUILD_20261016/0004_I01-E02_SOURCE_PREP_R03_20261030/source/official_requirement.pdf" purpose="source"} :codex-file-citation{path="E:/TTQS/TTQS_ONE_CODEX_RUNTIME/WORK/QUALITY_REBUILD_20261016/0004_I01-E02_SOURCE_PREP_R03_20261030/UNIQUE_BLUEPRINT_0004_I01-E02_R03.md" purpose="source"} :codex-file-citation{path="E:/TTQS/TTQS_ONE_CODEX_RUNTIME/WORK/QUALITY_REBUILD_20261016/0004_I01-E02_SOURCE_PREP_R03_20261030/source/BLUEPRINT_CURRENT_ROW_0004.jsonl" purpose="source"} :codex-file-citation{path="E:/TTQS/TTQS_ONE_CODEX_RUNTIME/WORK/QUALITY_REBUILD_20261016/0004_I01-E02_SOURCE_PREP_R03_20261030/SOURCE_PACKET_0004_I01-E02_R03.md" purpose="source"}
+
+U004 outcome/reason、U005 consent 與 register 值一致；四筆邀請是未外送 SAMPLE 情境，U004 截止點為 `2026-10-29 23:59 Asia/Taipei`。XREF-0003-SYN-001 綁定 U001 的日期與 Fact ID；XREF-0003-SYN-002 用於 0005 交接。104 個 register ID 全數出現在 DOCX；PDF 文字層移除換行空白後亦全數匹配。
+
+四條平衡式及四率 `50.0%`、`50.0%`、`25.0%`、`80.0%` 均正確。Table 7-1 明列共用 SAMPLE 期間及非實績界線；Table 10 保留 locator、截止及 retention gate 對照，責任欄標示為建議角色／待實際指派。SAMPLE／REAL、未知保存政策、未實際執行或簽核等界線維持清楚。文件足供 SAMPLE 流程演練；不構成 REAL 執行證據。
+
+第 12 頁兩個長 Fact ID 仍因換行而不一定能在 PDF 文字層以完整連續字串搜尋，但視覺內容完整；這是 L05 已有的換行情形，並非 L06 新缺陷。除此之外，沒有發現新重大語意或版面問題。**未修改任何檔案；本 PASS 僅屬獨立審查結論，不授予正式接受。**

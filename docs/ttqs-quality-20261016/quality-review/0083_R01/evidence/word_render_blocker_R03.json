@@ -1,0 +1,34 @@
+{
+  "schema": "ttqs-0083-word-render-blocker-v1",
+  "document_id": "0083",
+  "revision": "R03",
+  "candidate_sha256": "60c18ccbb6f5b723de7cd69efca28c4c14774617c13d90784604427895ab8b07",
+  "first_logged_full_pdf_attempt": {
+    "log": "evidence/word_render_steps_R03.log",
+    "last_step": "export PDF",
+    "started_local": "2026-10-19T14:42:29+08:00",
+    "observed_until_local": "2026-10-19T14:47:02+08:00",
+    "duration_seconds": 273,
+    "pdf_created": false,
+    "process_action": "Only the exact headless PowerShell/Word PIDs from this attempt were stopped after no PDF output."
+  },
+  "page_1_pdf_probe": {
+    "log": "evidence/R03_page1_probe.log",
+    "started_local": "2026-10-19T14:48:09+08:00",
+    "duration_seconds": 60,
+    "docx_opened": true,
+    "pdf_created": false
+  },
+  "page_1_xps_probe": {
+    "log": "evidence/R03_page1_xps_probe.log",
+    "started_local": "2026-10-19T14:51:34+08:00",
+    "duration_seconds": 60,
+    "docx_opened": true,
+    "xps_created": false
+  },
+  "alternate_renderer": "LibreOffice/soffice absent; headless Microsoft Word COM opens DOCX but PDF and XPS export calls stall without output.",
+  "status": "BLOCKED_VISUAL_VERIFICATION",
+  "scope": "R03 exact candidate is not visually accepted. R02 visual findings are not inherited as resolved; R03 code places the adjacent heading into the landscape section and omits the trailing empty portrait section, but result is unverified.",
+  "candidate_modified_by_render_attempts": false,
+  "candidate_sha256_after_attempts": "60c18ccbb6f5b723de7cd69efca28c4c14774617c13d90784604427895ab8b07"
+}

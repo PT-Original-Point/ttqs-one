@@ -1,0 +1,84 @@
+{
+  "schema": "ttqs-one-exact-candidate-reconciliation-v1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0102-I18-E09-R08C-R35-R11-CURRENT-HEAD-20261025",
+  "observed_at_tpe": "2026-10-25T04:04:04+08:00",
+  "github": {
+    "repository": "PT-Original-Point/ttqs-one",
+    "pull_request": 92,
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "readback_head": "e4387ab27f5ec7f276e1b77853c7287fc7271cad",
+    "current_control_blobs": {
+      "AGENTS": "2e8d4eddd68c650f38db8cb48d421b838e693ecb",
+      "04_CODEX_GOAL_24X7_EXECUTION.md": "65e7fd5a406877e875174402a0d3ddc68b6111a1",
+      "05_HOURLY_NATIVE_WAKE_RESUME.md": "dbdb2e567e8e5c2b7eb0632f060a45a7ae371a49",
+      "06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md": "b566c5c71d1a88e012eca2eeac90c8a3e4ecc06c"
+    }
+  },
+  "requirement_binding": {
+    "doc_id": "0102",
+    "official_requirement_id": "I18-E09",
+    "project_registry_index": 110,
+    "printed_official_checkbox_serial": "UNKNOWN_PER_CURRENT_UNIQUE_BLUEPRINT",
+    "source_packet_sha256": "54d9c05f70b4fef993bd92b656694030878a236e1a2d0c6a21af5d24d94fa1bd",
+    "unique_blueprint_sha256": "d6ab10107f42d6f913e1c94df45c8cd179babaa2603a8a7e628c2db78a0cce75"
+  },
+  "candidates": [
+    {
+      "revision": "R08c",
+      "role": "CURRENT_R02_CANDIDATE",
+      "github_path": "docs/ttqs-quality-20261016/quality-review/0102_I18-E09_R02_20261023/candidate/0102__技能競賽獲獎證據取得與查核工作紀錄_R08c.docx",
+      "bytes": 97846,
+      "local_sha256": "84c279d09484b88724dd59ae8a5155cb8d0be284133258e166269a80c26c67b4",
+      "local_git_blob_sha": "ab7713f8da425a7e7f1f642e68d2d4962e07234f",
+      "github_git_blob_sha": "ab7713f8da425a7e7f1f642e68d2d4962e07234f",
+      "exact_current_head_match": true,
+      "semantic": {
+        "verdict": "PASS",
+        "scope": "SEMANTIC_SCOPE_ONLY",
+        "candidate_sha256": "84c279d09484b88724dd59ae8a5155cb8d0be284133258e166269a80c26c67b4",
+        "receipt_sha256": "236d3ff9b7294c4efdbd34296dbccee8130a92238eb91f22195265f2212afb54",
+        "provider_backend_fallback_billing": "UNKNOWN"
+      },
+      "technical": {
+        "verdict": "PASS",
+        "candidate_sha256": "84c279d09484b88724dd59ae8a5155cb8d0be284133258e166269a80c26c67b4",
+        "scope": "41 tables / 396 rows; body font floor 10.5 pt and table floor 9.5 pt",
+        "receipt_sha256": "72a4c6f1f76f473a87dab21ccd7777be2204e5bbba4540c9e7528f76ec9963a5"
+      },
+      "visual": {
+        "verdict": "PASS_FOR_VISUAL_LAYOUT_SCOPE",
+        "candidate_sha256": "84c279d09484b88724dd59ae8a5155cb8d0be284133258e166269a80c26c67b4",
+        "pages": 57,
+        "coverage": "55 pages inherited from inspected R08a contact sheets; R08c-specific pages 1 and 57 directly inspected",
+        "receipt_sha256": "f2eef003b225e441679499b954a38243518fb58053d62572b31a6634d21dc869",
+        "pdf_sha256": "c73b667abd9213cf6f1e93fb8a9343bba6f9a94cf30fc7884c68a23286bfc6a0"
+      },
+      "nonblocking_findings": [
+        "Version history latest row says R08 while cover/footer say R08c.",
+        "Form F lacks explicit evidence-used field and uses generic deadline labels; related dates/evidence are captured elsewhere."
+      ]
+    },
+    {
+      "revision": "R35",
+      "role": "SEPARATE_INCOMPATIBLE_CANDIDATE",
+      "github_path": "docs/ttqs-quality-20261016/quality-review/0102_I18-E09_R06_20261021/candidate/0102__技能競賽獲獎證據取得與查核工作紀錄_R35.docx",
+      "bytes": 111982,
+      "local_sha256": "04f71db94dd8949b2e0fc67fc0df5577c2a647138b95e3beadd3be2dea4457aa",
+      "local_git_blob_sha": "8f7a43e4510e3c830e8ba29757deca29c81aeda9",
+      "github_git_blob_sha": "8f7a43e4510e3c830e8ba29757deca29c81aeda9",
+      "exact_current_head_match": true,
+      "current_r02_semantic_verdict": "NOT_APPLICABLE_TO_R02",
+      "reason": "R35 Form F records five core checks; current R02 Unique Blueprint requires ten explicit checks before ELIGIBLE_FOR_HUMAN_REVIEW. Locators P0043, P0264, T0045-R0017. No R35 PASS is transferred."
+    }
+  ],
+  "decision": {
+    "retain_current_r02_candidate": "R08c",
+    "rebuild_required": false,
+    "candidate_bytes_changed": false,
+    "cross_sha_qa_combination": "PROHIBITED_AND_NOT_DONE",
+    "candidate_state": "CANDIDATE",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN"
+  }
+}

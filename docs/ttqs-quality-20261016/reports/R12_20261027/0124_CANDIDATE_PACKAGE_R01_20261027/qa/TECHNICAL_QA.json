@@ -1,0 +1,142 @@
+{
+  "artifact": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0124_I19-E12_SOURCE_PREP_R01_20261024\\candidate_R01\\0124__結訓學員雇用與雇主回饋佐證表_R01_candidate.docx",
+  "sha256": "0a6567c2779d9ad8014ab6d1c892779a98892351a38ceda0dea9fa8b24ff2988",
+  "bytes": 60133,
+  "paragraphs": 68,
+  "tables": 16,
+  "question_ids": [
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "E6",
+    "E7",
+    "E8",
+    "E9"
+  ],
+  "synthetic_case_ids": [
+    "SYN-0124-CASE-01",
+    "SYN-0124-CASE-02",
+    "SYN-0124-CASE-03"
+  ],
+  "explicit_font_stats": {
+    "min": 9.5,
+    "body_min": 10.5,
+    "table_min": 9.5,
+    "normal_style_pt": 10.5,
+    "heading1_style_pt": 15.5
+  },
+  "checks": {
+    "docx_zip_integrity": {
+      "status": "PASS",
+      "detail": "ZIP container readable"
+    },
+    "docx_id_0124": {
+      "status": "PASS",
+      "detail": "DOCX identity appears in extracted body/table text"
+    },
+    "requirement_mapping": {
+      "status": "PASS",
+      "detail": "Unique mapping I19-E12 appears in extracted body/table text"
+    },
+    "official_requirement_phrase": {
+      "status": "PASS",
+      "detail": "Official I19-E12 phrase exact match"
+    },
+    "unique_genre": {
+      "status": "PASS",
+      "detail": "Employer evidence form and effectiveness affirmation are document-specific"
+    },
+    "synthetic_boundary": {
+      "status": "PASS",
+      "detail": "Synthetic, sample and real states are explicitly distinguished"
+    },
+    "formal_acceptance_boundary": {
+      "status": "PASS",
+      "detail": "Formal acceptance remains ungranted in candidate"
+    },
+    "no_real_original_claim": {
+      "status": "PASS",
+      "detail": "No real employer original supplied; replacement checklist states not provided"
+    },
+    "no_raw_markdown_tokens": {
+      "status": "PASS",
+      "detail": "No obvious raw markdown heading/fence/table separator artifacts"
+    },
+    "no_common_draft_placeholders": {
+      "status": "PASS",
+      "detail": "No generic draft placeholders"
+    },
+    "question_ids_E1_E9": {
+      "status": "PASS",
+      "detail": "Detected IDs: E1,E2,E3,E4,E5,E6,E7,E8,E9"
+    },
+    "three_synthetic_cases": {
+      "status": "PASS",
+      "detail": "Detected: SYN-0124-CASE-01,SYN-0124-CASE-02,SYN-0124-CASE-03"
+    },
+    "sample_calculations": {
+      "status": "PASS",
+      "detail": "Hire verification 2/3=66.7%, response 2/2=100%, explicit positive 1/2=50%; matches synthetic case counts"
+    },
+    "employment_rate_withheld": {
+      "status": "PASS",
+      "detail": "Overall employment rate withheld when denominator/outcomes are unknown"
+    },
+    "adequate_tables": {
+      "status": "PASS",
+      "detail": "16 Word tables"
+    },
+    "explicit_font_floor": {
+      "status": "PASS",
+      "detail": "explicit runs min=9.5 pt; body min=10.5; table min=9.5"
+    },
+    "no_macro_payload": {
+      "status": "PASS",
+      "detail": "No VBA project detected"
+    },
+    "replacement_register_30_unique_keys": {
+      "status": "PASS",
+      "detail": "30 rows; 30 unique keys; all SAMPLE-KEY-prefixed"
+    }
+  },
+  "overall": "PASS",
+  "scope": "technical structure/content/math checks only; independent semantic review pending; candidate not formally accepted",
+  "replacement_register": {
+    "rows": 30,
+    "unique_keys": 30,
+    "keys": [
+      "SAMPLE-KEY-COHORT-01",
+      "SAMPLE-KEY-CLAIMS-01",
+      "SAMPLE-KEY-VERIFIED-01",
+      "SAMPLE-KEY-INVITES-01",
+      "SAMPLE-KEY-RESPONSES-01",
+      "SAMPLE-KEY-POSITIVE-01",
+      "SAMPLE-KEY-CASE-01",
+      "SAMPLE-KEY-LEARNER-A",
+      "SAMPLE-KEY-COURSE-A",
+      "SAMPLE-KEY-COMPLETION-01",
+      "SAMPLE-KEY-EMPLOYER-A",
+      "SAMPLE-KEY-HIRE-START-01",
+      "SAMPLE-KEY-HIRE-LOCATOR-01",
+      "SAMPLE-KEY-RESPONDENT-A",
+      "SAMPLE-KEY-OBSERVATION-01",
+      "SAMPLE-KEY-E3-01",
+      "SAMPLE-KEY-E4-01",
+      "SAMPLE-KEY-E5-01",
+      "SAMPLE-KEY-OTHER-01",
+      "SAMPLE-KEY-E6-01",
+      "SAMPLE-KEY-E8-01",
+      "SAMPLE-KEY-CONSENT-01",
+      "SAMPLE-KEY-STATE-01",
+      "SAMPLE-KEY-DECISION-01",
+      "SAMPLE-KEY-CALC-VERIFY-01",
+      "SAMPLE-KEY-CALC-RESPONSE-01",
+      "SAMPLE-KEY-CALC-AFFIRM-01",
+      "SAMPLE-KEY-NO-EMPLOYMENT-RATE",
+      "SAMPLE-KEY-CASE-02",
+      "SAMPLE-KEY-CASE-03"
+    ]
+  }
+}

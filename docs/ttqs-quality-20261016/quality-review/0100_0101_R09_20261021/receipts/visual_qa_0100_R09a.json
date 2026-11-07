@@ -1,0 +1,63 @@
+{
+  "receipt_id": "TTQS-I18E08-DOC0100-R09A-VISUAL-QA-20261021",
+  "doc_id": "0100",
+  "official_requirement_id": "I18-E08",
+  "revision": "R09a",
+  "state": "CANDIDATE",
+  "candidate_docx_sha256": "debd41e7ca1b18b88cad37db118c5b3474df411b3e2d1c87a8351d456245e0b2",
+  "rendered_pdf_sha256": "0bf60e3e10edf236ea2d2201a2363a84ddc1834c5e3b9c5c116771b858616150",
+  "rendered_pdf_bytes": 645049,
+  "page_count": 16,
+  "page_size": "A4",
+  "visual_method": "Microsoft Word native COM PDF export; Poppler page count/size; page PNGs produced from exact exported PDF; rendered page images visually checked.",
+  "visual_coverage": "PASS: all 16 pages covered. Current layout8 p1 was directly inspected after the R09a version-label change; p2-p16 byte-identical to layout7 image set with its recorded full-page inspection. In this pass p5, p6, p15 and p16 were also re-opened and directly visually checked.",
+  "changed_pages_from_prior_render": [
+    "page-01.png"
+  ],
+  "unchanged_pages_from_prior_render": [
+    "page-02.png",
+    "page-03.png",
+    "page-04.png",
+    "page-05.png",
+    "page-06.png",
+    "page-07.png",
+    "page-08.png",
+    "page-09.png",
+    "page-10.png",
+    "page-11.png",
+    "page-12.png",
+    "page-13.png",
+    "page-14.png",
+    "page-15.png",
+    "page-16.png"
+  ],
+  "page_image_sha256": {
+    "page-01.png": "dea8efbc9ce30d73f5d57a56b9b6d1b2b06b66381fca402cf698c23267b43c70",
+    "page-02.png": "f4741f5433ad7d0c026b2dc1dbe1470f82ebad7c1385958c31cb73d1390c346b",
+    "page-03.png": "2357fae67fc3da3322973abccf3f3e61bf6c47fd81fea667e300b15045d169bf",
+    "page-04.png": "fdca699b4f9a3369aa3eb7f550b2b1ac4ae04148902a19966ac6d3a00dcdf545",
+    "page-05.png": "9341216e01bde3b2bbbe0a1243ac243530cffe52220978c94c132f151b8e9459",
+    "page-06.png": "b460a427a417a8ded4d789cbba7465703482f6ac7b05d9bbbf155707d2151d89",
+    "page-07.png": "9a2e5e5bc03db7bc3e08fb848018d043cb39f4120a75b1722b60d2c7c1b875ad",
+    "page-08.png": "900164d267d7e2e6ac8aac28298eff1025c94f0879f701c1e7ac3399c5ace79f",
+    "page-09.png": "d54707b65ce92cc6fd04176cea24293880f38b04b0ec136bcaabe8513d157718",
+    "page-10.png": "1729a47ea864f265d9fc58b0f9b010e097fa4f3087387b2753bc259bc755d1a2",
+    "page-11.png": "264197a106b3e3a50fbb21835067a48cab146d844267241ee9da07a4c3bb24fd",
+    "page-12.png": "2715d3edcb74d481c5ae2d5eefb12062a87f3d40dd74742e05e43f312a39af30",
+    "page-13.png": "2bd558929971d8d8f2f989d535e59a33e69a4775eae88c7bf023b9e32265a88f",
+    "page-14.png": "c6abac921c8a7ad10e15f91aa1c57ba2e795377ea273551861f7895e7b0534ff",
+    "page-15.png": "f63d5d3590902632ab523a9f2b20350954b2aa3330b13a2f891ab3e2bf32b7ab",
+    "page-16.png": "3865c36e6d0a7c46f7f4cfa0bcc1fc4461233b2bc936581d4fa563cb8c536c26"
+  },
+  "observations": [
+    "Cover correctly identifies 0100/I18-E08 and SAMPLE/SYNTHETIC candidate; says no real learner response and no formal approval.",
+    "Pre-form pages 5-6 remain a complete two-page instrument; page 6 shows all five dimensions, 0-4 choices, example boxes and hold checklist.",
+    "Page 15 section 9.4/10 has no orphaned header; page 16 contains the full replacement register and version-limit notes.",
+    "No clipping, overlap, or broken table continuation observed in the inspected pages; page 16 register filename wraps across two lines but remains legible."
+  ],
+  "limitations": [
+    "Semantic reviewer did not perform visual inspection; this is a separate native visual receipt.",
+    "No formal print test or association acceptance."
+  ],
+  "status": "PASS_VISUAL_FOR_EXACT_DOCX_SHA; candidate remains unformally accepted"
+}

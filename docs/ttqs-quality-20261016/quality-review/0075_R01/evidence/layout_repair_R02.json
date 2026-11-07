@@ -1,0 +1,19 @@
+{
+  "schema": "TTQS_ONE_0075_LAYOUT_REPAIR_R02.v1",
+  "document_id": "0075",
+  "requirement_id": "I17A-E03",
+  "official_checkbox_serial": "082",
+  "predecessor": {
+    "path": "candidate/0075_R01.docx",
+    "sha256": "f361f577a7fdd6e34a8b397457d34a84166d1d380484eb9d39aaddedf749b09c",
+    "status": "SUPERSEDED_LAYOUT_DEFECT"
+  },
+  "finding": "On Word-rendered page 15, the 10.1 pre-course checklist heading and its repeated header were stranded at the page foot without a body row; page 16 repeated the header and contained all rows.",
+  "repair": "R02 builder sets keep-with-next on the specific 10.1 checklist header cell paragraphs; heading and header now move with the first body row to page 16.",
+  "scope": "Layout-only; OOXML body-order text extraction is identical between R01 and R02.",
+  "extracted_text_sha256": "8e2939355b5eedc7bf859b6b2b6884350a91bf27cd839312f8c152a80e6e948f",
+  "final_candidate_sha256": "ca81a4791febbe6f303a755f441705e41fb465c869098e17cc3c5c222a2c6961",
+  "final_pages": 21,
+  "rebuild_justified": true,
+  "remaining_layout_defects": "NONE_OBSERVED in all 21 rendered pages."
+}

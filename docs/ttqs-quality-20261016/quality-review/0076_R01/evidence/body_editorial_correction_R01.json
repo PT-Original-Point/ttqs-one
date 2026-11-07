@@ -1,0 +1,35 @@
+{
+  "schema": "TTQS_ONE_0076_PREBUILD_EDIT_RECEIPT.v1",
+  "original_worker_body_path": "worker\\opencode_original_0076_R01_body.md",
+  "original_sha256": "bc63345b236416bc40e3dd6c6fd877ccb0ceed7d27c8f63dc376e3c75c0769f4",
+  "revised_body_path": "candidate\\0076_R01_body.md",
+  "revised_body_sha256": "00266efaeefb061c61c84c2478f5cc96ad09289c7f711286e6c4a31181cbe95f",
+  "changes": [
+    {
+      "locator": "document title",
+      "reason": "Apply document title style cleanly and remove punctuation per document title standard",
+      "before": "# 志工服務溝通與紀錄交接實務｜考試暨實作評量紀錄（含試題、逐筆作答、實作評分與勾稽）",
+      "after": "# 志工服務溝通與紀錄交接實務考試暨實作評量紀錄"
+    },
+    {
+      "locator": "section 1.2 table",
+      "reason": "Correct obvious generated typo without changing scope",
+      "before": "勾選 084 複合影像",
+      "after": "勾選 084 複合佐證"
+    },
+    {
+      "locator": "opening callout",
+      "reason": "Place the status statement after the title so the first heading can use Word Title style",
+      "before": "Callout preceded the title",
+      "after": "Title followed by callout"
+    }
+  ],
+  "worker_temporary_helper": {
+    "source": "C:\\Users\\J\\AppData\\Local\\Temp\\opencode\\validate_tables0076.py",
+    "evidence_copy": "worker\\worker_created_validate_tables0076.py",
+    "sha256": "5aa19d208d42101a93feb1ea18839ff45ee914e59f2c1f72616f82d9cb16be4d",
+    "bytes": 1536
+  },
+  "writer_body_sha256_before": "bc63345b236416bc40e3dd6c6fd877ccb0ceed7d27c8f63dc376e3c75c0769f4",
+  "status": "TARGETED_PREBUILD_EDIT_ONLY"
+}

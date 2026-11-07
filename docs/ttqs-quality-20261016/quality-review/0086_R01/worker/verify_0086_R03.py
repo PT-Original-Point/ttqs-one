@@ -1,0 +1,50 @@
+import csv, hashlib, json, re, zipfile
+from datetime import datetime, timezone
+from pathlib import Path
+from docx import Document
+root=Path(r"E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0086_R01")
+docx=root/"candidate/0086_R03.docx"; bodyp=root/"candidate/0086_R03_body.md"; regp=root/"evidence/synthetic_replacement_register_R03.csv"
+def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
+body=bodyp.read_text(encoding="utf-8"); doc=Document(docx); alltext="\n".join([p.text for p in doc.paragraphs]+[c.text for t in doc.tables for r in t.rows for c in r.cells])
+with zipfile.ZipFile(docx) as z: bad=z.testzip(); member_count=len(z.namelist())
+with regp.open(encoding="utf-8-sig",newline="") as f: rows=list(csv.DictReader(f))
+expected_headers={"fact_id","case_id","doc_id","locator","field","value","assumption_basis","real_source_to_replace","owner_role","status","跨文件引用狀態"}
+form_counts={}
+for letter in "ABCDEFGH":
+    pat=rf"(?ms)^### 表 {letter}｜[^\n]*\n(.*?)(?=^### 表 [A-H]｜|^## |\Z)"
+    m=re.search(pat,body)
+    if not m: form_counts[letter]=0; continue
+    block=m.group(1); form_counts[letter]=len([x for x in block.splitlines() if x.strip().startswith("|") and not re.match(r"\s*\|?\s*:?-{3,}",x)])
+formula={}
+for line in body.splitlines():
+    m=re.match(r"\| (S-0[123]) \| ([^|]+) \| (\d+) \| (\d+) \| ([0-9.]+)% \|",line)
+    if m:
+        sid,vals,reported,maxp,reported_pct=m.groups(); nums=re.findall(r"\d+|NA",vals); score=sum(int(x) for x in nums if x!="NA"); denom=2*sum(x!="NA" for x in nums); pct=round(score/denom*100+1e-9,1)
+        formula[sid]={"score":score,"reported_score":int(reported),"denominator":denom,"reported_denominator":int(maxp),"pct":pct,"reported_pct":float(reported_pct),"pass":score==int(reported) and denom==int(maxp) and pct==float(reported_pct)}
+font_sizes=[]; table_sizes=[]
+for p in doc.paragraphs:
+    for r in p.runs:
+        if r.text and r.font.size: font_sizes.append(r.font.size.pt)
+for t in doc.tables:
+    for row in t.rows:
+        for cell in row.cells:
+            for p in cell.paragraphs:
+                for r in p.runs:
+                    if r.text and r.font.size: table_sizes.append(r.font.size.pt)
+repeat_headers=0
+for t in doc.tables:
+    if t.rows and t.rows[0]._tr.trPr is not None and t.rows[0]._tr.trPr.find("{http://schemas.openxmlformats.org/wordprocessingml/2006/main}tblHeader") is not None: repeat_headers+=1
+checks={"zip_integrity":bad is None,"identity":all(s in alltext for s in ["0086","I17C-E05","092"]),"sample_boundary":all(s in alltext for s in ["SAMPLE","SYNTHETIC","REAL=UNKNOWN","HOLD"]),"no_unrepaired_typo":"揭霱" not in alltext,"no_writer_markers":all(s not in alltext for s in ["<<<REGISTER_CSV>>>","<<<END_REGISTER_CSV>>>"]),"required_thresholds":all(s in alltext for s in ["≥90.0%","75.0–89.9%","<75.0%"]),"forms_A_to_H":all(v>=5 for v in form_counts.values()),"register_schema":bool(rows) and set(rows[0])==expected_headers,"register_rows_synthetic":all(r["status"]=="SYNTHETIC_REPLACE_BEFORE_REAL_USE" and r["doc_id"]=="0086" for r in rows),"register_fact_ids_unique":len({r["fact_id"] for r in rows})==len(rows),"sample_math":bool(formula) and all(v["pass"] for v in formula.values()),"repeat_header_all_tables":repeat_headers==len(doc.tables),"body_font_min_10_5":bool(font_sizes) and min(font_sizes)>=10.5,"table_font_min_9_5":bool(table_sizes) and min(table_sizes)>=9.5}
+checks.update({"register_cross_document_no_link":len(rows)==56 and all(r["跨文件引用狀態"]=="NO_LINK" for r in rows),"complete_sample_selection":all(s in body for s in ["S-01＝SYN-CASE-003", "S-02＝SYN-CASE-007", "S-03＝SYN-CASE-011"]) and "### 8.3 抽樣（續）" not in body,"D_anchor_reconciled":"D=SYN-2026-07-22" in body and "SYN-2026-07-24 為 D+2" in body,"NA_preapproval_traceable":"SYN-NA-APPROVAL-03" in body and "SYN-NA-APPROVAL-03" in alltext,"finding_ids_consistent":not any(x in alltext for x in ["F-01", "F-02", "F-03"]),"finding_01_unit_consistent":"3 件不同服務案件" in body and "3 次觀察有確認理解" not in body,"register_pointer_in_body":"synthetic_replacement_register_R03.csv" in alltext and "跨文件引用狀態" in alltext})
+
+p=json.loads(__import__('base64').b64decode('eyJyZXBsYWNlbWVudHMiOltbIjMg5qyh6YCj57qM6KeA5a+f77yM54ShIDHvvI8wIiwi6YCj57qMIDMg5Lu25LiN5ZCM5pyN5YuZ5qGI5Lu277yI5ZCE5YW35ZSv5LiAIGNhc2VfaWTjgIHml6XmnJ/oiIforYnmk5ogSUTvvInop4Dlr5/lnYfnhKEgMe+8jzAiXSxbIue8uuesrCAzIOasoeingOWvn++8m0hPTEQiLCLnvLrnrKwgMyDku7bkuI3lkIzmoYjku7bop4Dlr5/vvJtIT0xEIl0sWyJTWU4tUk9MRS1BUFBSLTAxIOaWvCBTWU4tMjAyNi0wNy0xM++8iOaoo+acrOWHjee1kOWJje+8ieS7pSBTWU4tTkEtQVBQUk9WQUwtMDMg5LqL5YmN5qC45YeGIiwiU1lOLVJPTEUtQVBQUi0wMSDmlrwgU1lOLTIwMjYtMDctMTTvvIjmqKPmnKzlh43ntZDlvozjgIHop4Dlr5/liY3vvInku6UgU1lOLU5BLUFQUFJPVkFMLTAzIOS6i+WJjeaguOWHhiJdLFsi5pys5YCZ6YG4IFIwMiDnmoTmiYDmnInmvJTnpLrml6XmnJ/jgIHop5LoibLku6PnorzjgIHmoYjku7bjgIHliIbmlbjjgIHnmbznj77jgIHooYzli5XoiIfntZDoq5bvvIzpgJDnrYbliJfmlrzpmqjpmYQgYHF1YWxpdHktcmV2aWV3LzAwODZfUjAxL2V2aWRlbmNlL3N5bnRoZXRpY19yZXBsYWNlbWVudF9yZWdpc3Rlcl9SMDIuY3N2YOOAgiIsIuacrOWAmemBuCBSMDMg55qE5omA5pyJ5ryU56S65pel5pyf44CB6KeS6Imy5Luj56K844CB5qGI5Lu244CB5YiG5pW444CB55m854++44CB6KGM5YuV6IiH57WQ6KuW77yM6YCQ562G5YiX5pa86Zqo6ZmEIGBxdWFsaXR5LXJldmlldy8wMDg2X1IwMS9ldmlkZW5jZS9zeW50aGV0aWNfcmVwbGFjZW1lbnRfcmVnaXN0ZXJfUjAzLmNzdmDjgIIiXV0sImNyb3NzQ29sdW1uIjoi6Leo5paH5Lu25byV55So54uA5oWLIiwib3ZlcnJpZGVzIjp7IkYwMTAiOnsibG9jYXRvciI6IueLgOaFi+WNgOWhiu+8j8KnMTEuMyJ9LCJGMDM1Ijp7ImxvY2F0b3IiOiLooahGIn0sIkYwNDYiOnsidmFsdWUiOiJTWU4tRk5ELTAx77yPaXRlbSA177ybU1lOLUZORC0wMu+8j2l0ZW0gN++8m1NZTi1GTkQtMDPvvI9pdGVtIDjvvJvmoLnlm6DohbPmnKzvvI/ooajllq7vvI/nmbvpjITmqZ/liLbvvJvnn6/mraPoiIfnn6/mraPmjqrmlr3lt7LliJfvvJvpmrHnp4HlvbHpn7/nhKEifSwiRjA0NyI6eyJ2YWx1ZSI6IlNZTi1BQ1QtMDHvvJvplovlp4sgMjAyNi0wOC0xMO+8m+acn+mZkCAyMDI2LTA5LTE177yb5o+Q5LqkIDIwMjYtMDktMTjvvJvopobmoLggMjAyNi0wOS0zMO+8m+W+heijnOS7tu+8m09QRU4ifSwiRjA1MCI6eyJ2YWx1ZSI6IkgtdjEuMO+8m1MtMDHvvJtTWU4tUlBULTAwMe+8m0dhdGUgMCDoiIflm5vnoazplpjploAgUEFTU++8iFNZTiBPTkxZ77yJ77ybMTLvvI8xNu+8nTc1LjAl77ybU1lOLUZORC0wMe+8j1NZTi1GTkQtMDIgT1BFTu+8m1NZTi1GTkQtMDMg54Sh6K2J5pOaIn0sIkYwNTIiOnsidmFsdWUiOiJTWU4tTkEtQVBQUk9WQUwtMDPvvJtTWU4tUk9MRS1BUFBSLTAxIOaWvCBTWU4tMjAyNi0wNy0xNO+8iOaoo+acrOWHjee1kOW+jOOAgeingOWvn+WJje+8ieS6i+WJjeaguOWHhu+8m+a8lOekuuaDheWig+acquWHuuePvumiqOmaqu+8j+i9ieS7i+inuOeZvO+8iFNZTlRIRVRJQ++8j0RFTU/vvIkiLCJhc3N1bXB0aW9uX2Jhc2lzIjoiUjAxIOW3suS9v+eUqCBOQSDkuKbmiaPpmaTliIbmr40gMiDliIbvvJtSMDMg5bCH5Y+v6L+95rqv55qE5ryU56S65LqL5YmN5qC45YeG5o6S5Zyo5qij5pys5YeN57WQ5b6M44CB6KeA5a+f5YmN77yM5YOF5L6b5pa55rOV5ryU57e0In19LCJuZXdSb3dzIjpbeyJmYWN0X2lkIjoiRjA1NSIsImNhc2VfaWQiOiJTWU4tQ0FTRS0wMDMiLCJkb2NfaWQiOiIwMDg2IiwibG9jYXRvciI6IsKnOC4277yP6KGoRe+8j+ihqEYiLCJmaWVsZCI6IuiyrOS7u+inkuiJsuS7o+eivCIsInZhbHVlIjoiU1lOLVJPTEUtVFJOLTAx77yb6KiT57e05om/6L6m77yIU1lOVEhFVElD77yJIiwiYXNzdW1wdGlvbl9iYXNpcyI6Iua8lOekuueUqOiyrOS7u+inkuiJsuS7o+eivO+8jOS4jeaMh+a2ieecn+WvpuWToeW3pSIsInJlYWxfc291cmNlX3RvX3JlcGxhY2UiOiLnnJ/lr6boqJPnt7Tmib/ovqbogbfli5nlj4rmjojmrIrmjIfmtL4iLCJvd25lcl9yb2xlIjoi5qyK6LKs5Li7566hIiwic3RhdHVzIjoiU1lOVEhFVElDX1JFUExBQ0VfQkVGT1JFX1JFQUxfVVNFIn0seyJmYWN0X2lkIjoiRjA1NiIsImNhc2VfaWQiOiJTWU4tQ0FTRS0wMDMiLCJkb2NfaWQiOiIwMDg2IiwibG9jYXRvciI6IsKnOC4277yP6KGoRSIsImZpZWxkIjoi6LKs5Lu76KeS6Imy5Luj56K8IiwidmFsdWUiOiJTWU4tUk9MRS1NR1ItMDHvvJvllq7kvY3kuLvnrqHvvIhTWU5USEVUSUPvvIkiLCJhc3N1bXB0aW9uX2Jhc2lzIjoi5ryU56S655So6LKs5Lu76KeS6Imy5Luj56K877yM5LiN5oyH5raJ55yf5a+m5ZOh5belIiwicmVhbF9zb3VyY2VfdG9fcmVwbGFjZSI6Iuecn+WvpuWWruS9jeS4u+euoeiBt+WLmeWPiuaOiOasiuaMh+a0viIsIm93bmVyX3JvbGUiOiLmrIrosqzkuLvnrqEiLCJzdGF0dXMiOiJTWU5USEVUSUNfUkVQTEFDRV9CRUZPUkVfUkVBTF9VU0UifSx7ImZhY3RfaWQiOiJGMDU3IiwiY2FzZV9pZCI6IlNZTi1DQVNFLTAwMyIsImRvY19pZCI6IjAwODYiLCJsb2NhdG9yIjoi6KGoRCIsImZpZWxkIjoi54++5aC06KeS6Imy5Luj56K8IiwidmFsdWUiOiJTWU4tUk9MRS1TSVRFLTAx77yb54++5aC06Zmq5ZCM6KeS6Imy77yIU1lOVEhFVElD77yJIiwiYXNzdW1wdGlvbl9iYXNpcyI6Iua8lOekuueUqOePvuWgtOinkuiJsuS7o+eivO+8jOS4jeaMh+a2ieecn+WvpuS6uuWToeaIluecn+WvpuWgtOWdgCIsInJlYWxfc291cmNlX3RvX3JlcGxhY2UiOiLnnJ/lr6bpmarlkIzop5LoibLjgIHloLTlnYDlj4rlhaXloLTmjojmrIrntIDpjIQiLCJvd25lcl9yb2xlIjoi5aeU6KiX56qX5Y+jIiwic3RhdHVzIjoiU1lOVEhFVElDX1JFUExBQ0VfQkVGT1JFX1JFQUxfVVNFIn1dfQ==').decode('utf-8'))
+checks.update({
+ 'table_f_closure_uses_distinct_cases': p['replacements'][0][1] in body and '3 次連續觀察' not in body,
+ 'na_approval_after_freeze_before_observation': p['replacements'][2][1] in body and 'SYN-2026-07-13（樣本凍結前）' not in body,
+ 'register_locators_corrected': next(r for r in rows if r['fact_id']=='F010')['locator'].endswith('§11.3') and next(r for r in rows if r['fact_id']=='F035')['locator']=='表F',
+ 'register_finding_action_ids_match_body': all(x in next(r for r in rows if r['fact_id']==fid)['value'] for fid,x in [('F046','SYN-FND-01'),('F046','SYN-FND-02'),('F046','SYN-FND-03'),('F047','SYN-ACT-01'),('F050','SYN-FND-01'),('F050','SYN-FND-03')]),
+ 'register_role_codes_covered': all(code in next(r for r in rows if r['fact_id']==fid)['value'] for fid,code in [('F055','SYN-ROLE-TRN-01'),('F056','SYN-ROLE-MGR-01'),('F057','SYN-ROLE-SITE-01')])
+})
+
+receipt={"project_id":"TTQS_ONE","document_id":"0086","requirement_id":"I17C-E05","official_checkbox_serial":"092","revision":"R03","docx_sha256":sha(docx),"docx_bytes":docx.stat().st_size,"pdf_sha256":None,"paragraphs":len(doc.paragraphs),"tables":len(doc.tables),"table_rows_total":sum(len(t.rows) for t in doc.tables),"form_table_pipe_rows_in_markdown":form_counts,"synthetic_replacement_rows":len(rows),"formula_rechecks":formula,"repeat_header_tables":repeat_headers,"paragraph_font_size_min_pt":min(font_sizes) if font_sizes else None,"table_font_size_min_pt":min(table_sizes) if table_sizes else None,"checks":checks,"technical_status":"PASS" if all(checks.values()) else "FAIL","verified_at_utc":datetime.now(timezone.utc).isoformat()}
+p=root/"evidence/technical_qa_R03.json"; p.write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+"\n",encoding="utf-8"); print(json.dumps(receipt,ensure_ascii=False))

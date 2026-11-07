@@ -1,0 +1,37 @@
+{
+  "schema": "ttqs-one-github-raw-byte-readback-v1",
+  "status": "VERIFIED_RAW_BYTE_READBACK",
+  "project_id": "TTQS_ONE",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "doc_id": "0101",
+  "requirement_id": "I18-E08",
+  "candidate_state": "CANDIDATE",
+  "candidate_revision": "R09_FINAL9",
+  "candidate_sha256": "56f433e095f32378f2fd8241c1a27948d2bfe6748da003af5623d265885edb68",
+  "semantic_review_verdict": "PASS_DELTA_INHERITING_FINAL8_BASELINE",
+  "semantic_review_scope": "Bounded final9 delta closure only; inherits the final8 semantic baseline for unchanged content. No visual review is claimed by this readback receipt.",
+  "actual_serving_model": "UNKNOWN",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN",
+  "readback_commit": "15ebef39d21714d6587d9c08ea81d9507fb2a9af",
+  "head_after": "15ebef39d21714d6587d9c08ea81d9507fb2a9af",
+  "observed_at_local": "2026-11-01T00:49:17+08:00",
+  "readback_method": "Fetched the DOCX from GitHub by immutable commit with encoding=base64, decoded the returned bytes, computed SHA-256 with Node crypto, and compared SHA-256, byte length, and Git blob SHA-1 to the local candidate.",
+  "expected_file_count": 1,
+  "verified_file_count": 1,
+  "errors": [],
+  "files": [
+    {
+      "doc_id": "0101",
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0100_0101_R09_20261021/0101_final9/candidate/0101_I18-E08_R09_FINAL9.docx",
+      "local_sha256": "56f433e095f32378f2fd8241c1a27948d2bfe6748da003af5623d265885edb68",
+      "remote_sha256": "56f433e095f32378f2fd8241c1a27948d2bfe6748da003af5623d265885edb68",
+      "local_bytes": 166586,
+      "remote_bytes": 166586,
+      "local_git_blob_sha1": "94624ae436571dba496f42dec10996baa4109a63",
+      "remote_git_blob_sha1": "94624ae436571dba496f42dec10996baa4109a63",
+      "exact_byte_match": true
+    }
+  ]
+}

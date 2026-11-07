@@ -1,0 +1,84 @@
+{
+  "artifact_state": "CANDIDATE",
+  "candidate": {
+    "bytes": 73687,
+    "git_blob_sha1": "b7c58c5fbef0a5e6ed0eb99392a8d6caeedb49a2",
+    "github_path": "docs/ttqs-quality-20261016/0121_I19-E09_R04_CANDIDATE_20261028/0121_I19-E09_R04.docx",
+    "local_runtime_relative_path": "0121_I19-E09_SOURCE_PREP_R01_20261024/candidate_R04/0121_I19-E09_R04.docx",
+    "mutated_by_this_audit": false,
+    "sha256": "a80535a46b457404c8c1bf93404b124ce6d74c53f653cf0b3dfa128ec82c6e89"
+  },
+  "candidate_remote_readback": {
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "bytes": 73687,
+    "commit_sha": "ecfbf5c2da2ce2418e4541c27f0fc2f40b3cfd8c",
+    "exact_bytes_match": true,
+    "git_blob_sha1": "b7c58c5fbef0a5e6ed0eb99392a8d6caeedb49a2",
+    "http_status": 200,
+    "raw_url": "https://raw.githubusercontent.com/PT-Original-Point/ttqs-one/ecfbf5c2da2ce2418e4541c27f0fc2f40b3cfd8c/docs/ttqs-quality-20261016/0121_I19-E09_R04_CANDIDATE_20261028/0121_I19-E09_R04.docx",
+    "repository": "PT-Original-Point/ttqs-one",
+    "sha256": "a80535a46b457404c8c1bf93404b124ce6d74c53f653cf0b3dfa128ec82c6e89"
+  },
+  "deterministic_audit": {
+    "audit_version": "R12_FONT_FLOOR_1",
+    "metrics": {
+      "applied_table_style_ids": [
+        "TableNormal"
+      ],
+      "body_below_10_5_count": 0,
+      "body_max_pt": 25.0,
+      "body_min_pt": 10.5,
+      "body_resolution_sources": {
+        "paragraph-style": 3,
+        "run-direct": 257
+      },
+      "body_runs": 260,
+      "body_unresolved_count": 0,
+      "conditional_table_style_font_size_override_count": 0,
+      "conditional_table_style_font_size_overrides": [],
+      "table_below_9_5_count": 0,
+      "table_max_pt": 10.5,
+      "table_min_pt": 9.5,
+      "table_resolution_sources": {
+        "paragraph-style": 31,
+        "run-direct": 1028
+      },
+      "table_runs": 1059,
+      "table_unresolved_count": 0,
+      "visible_main_story_runs_only": true
+    },
+    "python_docx_version": "1.2.0",
+    "python_version": "3.10.8",
+    "scope": "Visible text-bearing runs in Word main story: body paragraphs and table-cell paragraphs; resolves run direct formatting, character style, paragraph style basedOn, default character style, and docDefaults; checks applied/default table style conditional size overrides.",
+    "script_github_path": "docs/ttqs-quality-20261016/quality-review/_tools/verify_docx_font_floor_r12.py",
+    "script_local_runtime_relative_path": "_qa_tools/verify_docx_font_floor_r12.py",
+    "script_sha256": "3f9433d242112b9e2139f637a545a4a0c33dfd9c27a0dc3b4562f86a3b38f8b1",
+    "status": "PASS_SCOPED_FONT_FLOOR_ONLY",
+    "thresholds_pt": {
+      "body_minimum": 10.5,
+      "table_minimum": 9.5
+    }
+  },
+  "document_id": "0121",
+  "observed_at_tpe": "2026-11-01T09:58:45.475372+00:00",
+  "observed_at_utc": "2026-11-01T01:58:45.475372+00:00",
+  "official_requirement_id": "I19-E09",
+  "project_id": "TTQS_ONE",
+  "receipt_id": "TTQS_ONE_0121_FONT_FLOOR_R12_20261101",
+  "result": "PASS_SCOPED_FONT_FLOOR_ONLY",
+  "scope_limits": [
+    "This receipt covers font floors only.",
+    "It does not certify page rendering, visual readability, semantic correctness, math, SAMPLE/REAL truth boundary, independent review, formal acceptance, or REAL evidence.",
+    "Headers/footers and footnotes/endnotes are outside this scoped main-story check."
+  ],
+  "source_binding": {
+    "source_packet_sha256": "fbeb11b96648fff29a49a0fca74bf0cc3b3d1d29934f07dfaa3cf7e410a557fd",
+    "unique_blueprint_sha256": "99320fdc9078615ad04087c43bcbd22c5bbf751a22127c51e048e909726a5fca"
+  },
+  "status_separation": {
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "NOT_ASSESSED",
+    "semantic_review": "UNCHANGED; not established by this receipt",
+    "visual_review": "UNCHANGED; not established by this receipt"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "doc_id": "0118",
+  "requirement_id": "I19-E05",
+  "blueprint_index": 129,
+  "candidate_state": "CANDIDATE",
+  "candidate_docx_sha256": "aa6ee02e2b3ae7c0ef06e74cad6333f2ddcc3bc306651f4e3e5694ecf5838707",
+  "render_method": "Microsoft Word COM PrintOut to Microsoft Print to PDF; rendered PNGs with pypdfium2 scale 1.65",
+  "pdf_sha256": "9111274aa0b3932b43d4ceab6d42a27dae8cde3e6a155962715103e9ebd5e9e0",
+  "pdf_page_count": 11,
+  "render_manifest_sha256": "93c04d38df892c9b9521469e2950dae6c3671752b0cb977b7009652762dab024",
+  "verdict": "PASS",
+  "inspected_pages": [
+    {
+      "page": 1,
+      "png_sha256": "4c233d056c7df95d2a5b4c762102f3dc34c9e0ce2428ca1f23adc672f55dc537",
+      "inspection": "PASS"
+    },
+    {
+      "page": 2,
+      "png_sha256": "6018d74729a9f5d69c30e8744babbbcadbf9f8e3bc183c58a022e9c6fa180909",
+      "inspection": "PASS"
+    },
+    {
+      "page": 3,
+      "png_sha256": "e7ca94c9dfefcb306d7e265e1c0c826676f49b613ceaddbb7213f804e7fff7b2",
+      "inspection": "PASS"
+    },
+    {
+      "page": 4,
+      "png_sha256": "53604b107a10df42ac07b2dd33cb3240571d464b03a20cf2e0820ac2d5007d25",
+      "inspection": "PASS"
+    },
+    {
+      "page": 5,
+      "png_sha256": "98604b51009ee3a041217bf74bcd413854f896373c60e06a638625ce19de48b1",
+      "inspection": "PASS"
+    },
+    {
+      "page": 6,
+      "png_sha256": "6795f9e2f5cbc119396ace0853024ffac0b1b98bd2e2d8ed426ebcd9d0d13c3a",
+      "inspection": "PASS"
+    },
+    {
+      "page": 7,
+      "png_sha256": "3d15898026f2ed22903c15f751522e009d4a9f8d7c1737424c4b2421c36c0675",
+      "inspection": "PASS"
+    },
+    {
+      "page": 8,
+      "png_sha256": "0aa2042a73f3d998808dba39316619bf9bf371f29146f2162961873e5aea2a5c",
+      "inspection": "PASS"
+    },
+    {
+      "page": 9,
+      "png_sha256": "de4378431a44fb4dc6f343bfbe440780e2a91e3fb8718a68a559f8c3eca522ca",
+      "inspection": "PASS"
+    },
+    {
+      "page": 10,
+      "png_sha256": "a181de81797b7384bb57e1c972b43c0730a0ac1b0bdb9fce64834e1c12a622a8",
+      "inspection": "PASS"
+    },
+    {
+      "page": 11,
+      "png_sha256": "754898fcdb691abb8836eea4c3fd739a6453e8d8f193fda63a1e8583a63d22eb",
+      "inspection": "PASS"
+    }
+  ],
+  "page_specific_checks": {
+    "1": "R05 title black; no title rule; no clipping.",
+    "2": "Source-form codes SCAN_FROM_ORIGINAL and FORWARDED_CONTENT fit without mid-token splits.",
+    "3": "Table C integrity notice stays together; no orphaned final word.",
+    "4": "Tables D and E readable and intact.",
+    "5": "Table F heading and header are together at page start; table body readable.",
+    "6": "Checklist and decision matrix readable; long state identifiers break only at underscores.",
+    "7": "Decision rules readable; synthetic example clearly introduced and separated.",
+    "8": "Worked synthetic decision table complete and readable.",
+    "9": "Replacement register continuation readable; no clipped columns.",
+    "10": "Cross-document boundary table readable; I19-E05 routing steps restart and run (1) through (4).",
+    "11": "Pre-use checklist, status and footer readable; no clipping/overlap."
+  },
+  "resolved_findings_from_R03": [
+    "Title blue bottom border removed; title/headings black.",
+    "Table C notice row no longer breaks at its final word.",
+    "Table F caption/header no longer stranded on the previous page.",
+    "Long form-code identifiers no longer split inside a word.",
+    "Section 7.1 numbering restarts at (1); no inherited list continuation.",
+    "Table 2 OOXML grid widths now match every row cell width."
+  ],
+  "limitations": [
+    "Visual inspection does not constitute semantic acceptance.",
+    "No REAL thank-you letter, third-party identity, approval or receipt is present.",
+    "Formal association acceptance is NOT_GRANTED."
+  ]
+}

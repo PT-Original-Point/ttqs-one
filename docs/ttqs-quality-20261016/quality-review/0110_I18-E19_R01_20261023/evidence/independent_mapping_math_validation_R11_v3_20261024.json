@@ -1,0 +1,77 @@
+{
+  "receipt_id": "TTQS-0110-I18-E19-R07-R11-MAPPING-MATH-VALIDATION-V3-20261024",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0110",
+  "requirement_id": "I18-E19",
+  "official_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+  "candidate_sha256": "9a306bf5712437ee578867b745e7d0811959decaa862ed540a82e7e8553bd3c2",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0110_I18-E19_R01_20261023\\candidate\\0110_I18-E19_完整問卷暨行動計畫工具_R07.docx",
+  "mapping_sha256": "d5ee2b7c78d36e28abb0f9775a20e3bd00e54962ff76b3da514aa06613381dff",
+  "source_mapping_sha256": "a599fadaa0aaf9342739c211be053ba2f77aeb4cc875193d47185f05ed6e64ef",
+  "source_packet_sha256": "e3db8f4ed82b21de4dc8cfb5886c4387c123d49a0465356354a18a9be39a8d38",
+  "unique_blueprint_sha256": "81ec1fc96c9d48fa2a088fbe32ecf8bc31abd88a3d8945ba22585226440a8796",
+  "prior_validation_sha256": "02eb6eabcdbdff134f94c14d9ea0767333644abd08f2e8de7f77122636456c1e",
+  "mapped_item_count": 14,
+  "mapped_item_ids": [
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "L01",
+    "L02",
+    "L03",
+    "L04",
+    "L05",
+    "L06",
+    "L07",
+    "L08",
+    "L09"
+  ],
+  "sample_math": {
+    "baseline": {
+      "fraction": "6/8",
+      "percent": 75.0,
+      "candidate_shows_6_over_8_and_75_percent": true
+    },
+    "D0_plus_30": {
+      "fraction": "7/8",
+      "percent": 87.5,
+      "candidate_shows_7_over_8_and_87_5_percent": true
+    },
+    "change_percentage_points": {
+      "recomputed": 12.5,
+      "source_mapping": 12.5,
+      "candidate_shows_plus_12_5_pp": true
+    },
+    "target_and_action": {
+      "target_percent": 90.0,
+      "interim_below_target": true,
+      "source_mapping_target_met": false,
+      "source_mapping_decision": "REVISE",
+      "candidate_marks_REVISE": true,
+      "D0_plus_60_unavailable": true,
+      "candidate_prohibits_CLOSE": true,
+      "fixed_8_requires_8_of_8_equals_100": true
+    }
+  },
+  "checks": {
+    "candidate_sha_matches_mapping_and_prior_receipt": true,
+    "source_packet_sha_matches_mapping": true,
+    "unique_blueprint_sha_matches_mapping": true,
+    "source_mapping_sha_matches_mapping": true,
+    "exactly_14_unique_mapped_items": true,
+    "all_14_current_docx_rows_match_prior_extraction": true,
+    "sample_baseline_is_6_of_8_75_percent": true,
+    "sample_followup_is_7_of_8_87_5_percent": true,
+    "sample_change_is_12_5_percentage_points": true,
+    "below_90_percent_target_is_revise_not_close": true,
+    "sample_synthetic_boundary_present": true,
+    "existing_reviews_bind_exact_current_candidate": true
+  },
+  "result": "PASS_DETERMINISTIC_MAPPING_AND_ARITHMETIC_ONLY",
+  "scope_limit": "Deterministic exact-byte and current table/source/mapping/math checks. Not a new full semantic, visual or REAL-evidence review; existing same-SHA receipts are hash-rebound only.",
+  "candidate_state": "CANDIDATE_NOT_ACCEPTED",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD"
+}

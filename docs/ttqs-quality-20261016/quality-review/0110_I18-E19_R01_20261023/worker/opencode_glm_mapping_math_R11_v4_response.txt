@@ -1,0 +1,100 @@
+```json
+{
+  "verdict": "PASS",
+  "candidate_sha256": "9a306bf5712437ee578867b745e7d0811959decaa862ed540a82e7e8553bd3c2",
+  "actual_model": "GLM-5.3-Flash-Free (provider: opencode); model name visible in agent configuration",
+  "item_findings": [
+    {
+      "item_id": "L01",
+      "verdict": "PASS",
+      "evidence": "操作指引理解 mapped to 同意尺度單題; construct distinct, no pooling with outcomes."
+    },
+    {
+      "item_id": "L02",
+      "verdict": "PASS",
+      "evidence": "Explicitly labeled 自我效能感知（非組織績效）, satisfying the control that L02 must not be mislabeled as organizational performance; 變化尺度 with 比較基準 required in 題幹."
+    },
+    {
+      "item_id": "L03",
+      "verdict": "PASS",
+      "evidence": "查核步驟執行 as single 同意尺度 item; separate from L07/L08."
+    },
+    {
+      "item_id": "L04",
+      "verdict": "PASS",
+      "evidence": "專用頻率代碼 with explicit rule 不作Likert平均或有利率; only eligible班次 covered, consistent with frequency-as-usage-code control."
+    },
+    {
+      "item_id": "L05",
+      "verdict": "PASS",
+      "evidence": "情境處置能力 as observable single-item 同意尺度."
+    },
+    {
+      "item_id": "L06",
+      "verdict": "PASS",
+      "evidence": "交接執行能力 single-item; distinct from L07/L08 process-change measures."
+    },
+    {
+      "item_id": "L07",
+      "verdict": "PASS",
+      "evidence": "資料完整度變化 uses 變化尺度 and is separated from 可追溯操作紀錄; not averaged with L08 per table rule."
+    },
+    {
+      "item_id": "L08",
+      "verdict": "PASS",
+      "evidence": "交接流程變化 explicitly 不與資料完整度平均; distinct from L07 as required."
+    },
+    {
+      "item_id": "L09",
+      "verdict": "PASS",
+      "evidence": "協作變化 converted to 明確、可觀察的比較題 with 變化尺度; descriptive change framing, no causality claimed."
+    },
+    {
+      "item_id": "C03",
+      "verdict": "PASS",
+      "evidence": "服務體驗變化 answered by 直接觀察者 within 指定期間; learner and client populations kept separate."
+    },
+    {
+      "item_id": "C04",
+      "verdict": "PASS",
+      "evidence": "資料物資完整正確變化 uses 前後比較, 不用滿意度錨點 — matches control that C04 measures completeness/correctness, not satisfaction."
+    },
+    {
+      "item_id": "C05",
+      "verdict": "PASS",
+      "evidence": "服務連續性變化 with 明列觀察期間及比較基準; observable client-side item."
+    },
+    {
+      "item_id": "C06",
+      "verdict": "PASS",
+      "evidence": "應變回應時間變化 as 可觀察比較題, 不用同意度錨點; consistent with observable-outcome control."
+    },
+    {
+      "item_id": "C07",
+      "verdict": "PASS",
+      "evidence": "整體績效變化 as 單題報告, explicit rule 不與C03–C06合成分數; matches separate-reporting control."
+    }
+  ],
+  "arithmetic": {
+    "fractions": {
+      "baseline": "6/8",
+      "follow_up": "7/8"
+    },
+    "percentages": {
+      "baseline": 75.0,
+      "follow_up": 87.5
+    },
+    "pp_change": 12.5,
+    "target_met": false,
+    "disposition": "REVISE"
+  },
+  "sample_real_boundary": "SYN-0110-CASE-01 is SAMPLE/SYNTHETIC ONLY; 6/8=75.0%, 7/8=87.5%, +12.5 pp < 90% target → not met → REVISE per documented decision rule. This is descriptive arithmetic only; no statistical significance and no REAL-evidence status are asserted.",
+  "substantive_risks": [
+    "Descriptive pre/post change (+12.5 pp, n of 8) cannot support any causal or significance claim; wording elsewhere in candidate must not imply such (not verifiable in this narrow packet).",
+    "Pre-post fractions denominators differ in eligible valid responses (6 vs 7 of 8); INVALID/blank/zero-N/A handling is asserted by candidate rules but actual scoring pipeline was not inspected here.",
+    "Result below target correctly marked REVISE; risk only if any downstream text relabels it as PASS — not observed in packet, not affirmatively checked in full document.",
+    "Checkbox serial is UNKNOWN_NOT_ASSERTED; formal acceptance evidence not reviewed."
+  ],
+  "scope_limit": "Narrow review of table 7 item-construct/scale alignment and the SYN-0110-CASE-01 arithmetic only, based solely on the attached packet. No tool use, file edits, DOCX alteration, source re-verification, visual/semantic full-document review, REAL-evidence validation, or formal acceptance judgment. SHA-256 values are transcribed as stated and were not independently recomputed."
+}
+```

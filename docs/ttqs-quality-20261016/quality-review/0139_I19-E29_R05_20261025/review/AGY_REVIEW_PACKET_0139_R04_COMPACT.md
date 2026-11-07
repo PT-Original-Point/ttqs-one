@@ -1,0 +1,476 @@
+# DOCX 0139 R04 semantic review packet
+DOCX SHA256: 0c3415ebe452fb2d7f343ec67878c03c6cff510c2f2aa94887cb2ddcdfb28601
+Official Source SHA256: 3c9c310e086a86c03d38bea68bba1ca53bcb2fc927d8949fb6b91c45379d9d47
+Unique Blueprint SHA256: 090169968e3df59a6cecaac665a99b2cb625a9cbc355bf84528d08b27c98052a
+Scope: new isolated text-only reviewer context; exact extracted candidate content. Table 13 is compacted only because Table 5 provides the same 34 values; all 34 register keys/locators and one copy of repeated replacement rule/role wording are retained. Do not claim visual inspection; local native Word visual inspection is a separate receipt. Return exact SHA, PASS/FAIL/PARTIAL, blockers and non-blocking observations with locators. Evaluate official mapping, genre and nearest neighbors, association usability, math and denominators, sample/real truth boundary, replacement register and action/hold criteria. Never infer REAL or formal acceptance.
+
+## Official Source Packet (complete)
+# DOCX 0139 / I19-E29 Source Packet R01
+
+## Identity and source authority
+- Project: TTQS ONE; live source branch: `work/ttqs-one-document-quality-contract-20261016`; read at source commit `c5202072d83d72b2e17fa5f2bf9ed621ec22721b`.
+- DOCX ID: `0139`; official requirement ID: `I19-E29`; 157-item Blueprint index: `153`. These are distinct namespaces. Printed checkbox serial: `UNKNOWN`; do not infer it from any of the other IDs.
+- Official p.9 wording: **「證照通過率高及就業率大幅提升。」**
+- Crosswalk title: **證照通過率與就業率跨年度改善分析報告**; deliverable mapping: `0139`.
+- Document genre: `分析／評估報告｜證照通過率與就業率跨年度改善分析報告`.
+- 157 index 153 wording: `高考照/就業率：追蹤分母與時期`.
+- Unique Blueprint source is the current 142-row registry; historical body use is `PROHIBITED`.
+
+## Exact official-source excerpt
+Source text is the p.8–9 official PDF text extract with the registered `PDF_TEXT_EXACT_PAGE_MATCH` provenance. The relevant p.9 excerpt in context is:
+
+```text
+ 個人績效提 升（薪資提 升或獎勵
+升遷之紀錄） 。
+ 證照通過率高及就業率大幅提
+升。
+ 運用資訊系統普及率。
+ 顧客滿意度提升。
+```
+
+## Required purpose and limits
+Produce a practical analysis/evaluation report answering the official requirement with traceable denominators, periods, calculations and evidence locations. It must analyze both qualification examination pass rate and employment rate, show the population, inclusion/exclusion rules, follow-up window, unknown/nonrespondent/lost-contact counts, rate definitions, cross-period comparisons, trend interpretation, evidence strength and actionable decisions. Use source-linked tables and an auditable synthetic worked case if genuine association data are absent.
+
+No verified real training, exam, certificate, employment result, learner, agency record or association approval was supplied in this source packet. Every illustrative number, cohort, date, role or finding must be labelled `SAMPLE / SYNTHETIC`; do not claim association performance, fabricate external documents or assert training causation. Keep `REAL=UNKNOWN/HOLD` and formal acceptance `NOT_GRANTED` unless separately evidenced.
+
+## Required calculations and denominator controls
+- Qualification pass rate = number passed / number who actually sat the relevant examination. Separately list eligible-to-sit, actually sat, absent/not sat, pass, fail and unknown; do not quietly exclude absences or change the denominator between periods.
+- Employment confirmation rate = number with employment confirmed / predefined valid follow-up population. State the population rule before presenting results; disclose unknown/no-response/unreachable cases and the lost-contact rate. For a conservative demonstration, an eligible graduate with unknown status is not counted as confirmed employed.
+- Change rate = (later period rate - comparison period rate) / comparison period rate, only when the comparison base is nonzero and cohorts/definitions are comparable. Report percentage-point change separately from relative percent change. Mark zero/invalid denominators `N/A` with a reason.
+- Recalculate every synthetic subtotal, rate, percentage-point delta and displayed rounding from the row-level data. Do not infer causality from a post-training trend.
+
+## Must-have report contents
+Use the unique blueprint below as the acceptance contract: executive decision brief; scope and official mapping; source/population/method dictionary; denominator and follow-up rules; complete row-level sample data; separately calculated examination and employment rates over comparable periods; subgroup/trend/difference analysis; charts with labels and limitations; evidence-strength grading; finding-to-recommendation-to-owner-to-deadline tracker; official requirement traceability; negative-neighbor distinctions from `0138/I19-E28` and `0140/I19-E30`; synthetic-to-real replacement register at fact level; and reviewer/quality-control checklist. Include realistic HOLD/REVISE/REJECT conditions and next actions, without issuing an actual association decision.
+
+## Current source hashes
+See `SOURCE_PREP_RECEIPT_0139_R01.json` for exact Git blob IDs, SHA-256 values, byte counts and extracted-row hashes. Supporting exact source rows are preserved in `source/`.
+
+
+## Unique Blueprint (all applicable fields; historical body policy omitted)
+# Identity
+- DOCX `0139`; official requirement `I19-E29`; 157 index `153`; printed checkbox serial `UNKNOWN`.
+- Official p.9 requirement: **「證照通過率高及就業率大幅提升。」**
+- Crosswalk title: **證照通過率與就業率跨年度改善分析報告**. Genre: `分析／評估報告｜證照通過率與就業率跨年度改善分析報告`.
+- Current source commit: `c5202072d83d72b2e17fa5f2bf9ed621ec22721b`.
+# Blueprint fields (verbatim from current registry row)
+
+# Document purpose
+
+# Primary reader
+
+# Evidence role
+
+# Source of truth
+
+# Required sections
+
+# Required tables/figures
+
+# Required fields/questions
+
+# Required calculations/analysis
+
+# Cross-references
+
+# Real data required
+
+# Third-party evidence required
+
+# Prohibited fabrication
+
+# Title-blind test
+
+# Negative neighbors
+
+# Acceptance tests
+
+# Synthetic population rule
+
+# Verbatim current registry row
+```json
+{
+  "deliverable_id": "0139",
+  "requirement_id": "I19-E29",
+  "final_filename": "0139__證照通過率與就業率跨年度改善分析報告.docx",
+  "document_genre": "分析／評估報告｜證照通過率與就業率跨年度改善分析報告",
+  "document_purpose": "本件專屬焦點：證照通過率與就業率跨年度改善分析報告；需直接回應的官方佐證要求為：證照通過率高及就業率大幅提升。；產出一份可實際執行、可閱讀並可追溯的專屬成品；本分件職責與同要求其他分件清楚分開。",
+  "primary_user_or_reader": "供主管與決策者讀取資料、理解計算、判斷差距並採取具體決策。",
+  "evidence_role": "呈現方法、完整合成或已驗證結果、分析、限制及可追溯決策；不得冒充實績。 本文件只擁有 I19-E29 的直接紀錄／分析口徑；不得吞併其他要求的事實。",
+  "source_of_truth": "官方查核佐證表精確原文『證照通過率高及就業率大幅提升。』，表內頁次 9，讀取狀態 PDF_TEXT_EXACT_PAGE_MATCH；REQ_157_MAP 對應 I19-E29；本行文件名稱與 ID 以 R04 142 交付 crosswalk/seed 為準。Phase2 歷史 Blueprint 僅作需求拆解參考，絕非可複製正文或現行標題權威。",
+  "required_sections": "摘要、用途與決策問題；官方要求及分析範圍；資料來源、樣本與納入排除；指標定義、分母與計算方法；完整示範資料及逐步計算；分群／趨勢／差異結果；圖表解讀及品質限制；發現、原因與證據強度；結論與可執行建議；責任人、期限與追蹤指標；合成資料聲明及真實替換清單；附件索引、覆核與版本",
+  "required_tables_or_figures": "資料欄位—定義—分母—來源—限制字典；合成明細／彙總結果與逐步計算；分群比較／差距優先排序矩陣；結論—證據—建議—責任—追蹤指標表；官方要求—結果—證據位置—覆核追溯表",
+  "required_fields_or_questions": "分母是誰？；資料來自何處？；未回覆如何處理？；此成果能否合理歸因於訓練？；本文件中哪一段/哪一表直接證明：「證照通過率高及就業率大幅提升。」？；目前證據強度對應哪一分級？缺什麼資料才可升到下一級？；分析母數及排除說明；計算口徑與四捨五入；建議決策及適用限制；合成事實替換登錄鍵",
+  "required_calculations_or_analysis": "成果率=符合成果人數/可評估人數；變化率=(後測或後期-前測或前期)/前測或前期；證照通過率=通過人數/實際應考人數；須同列未應考與失聯；就業率=已確認就業人數/可追蹤有效母體；另列失聯率。不得稱為組織實績。",
+  "required_cross_references": "同要求分件 無；相鄰要求 I19-E28, I19-E30；共用原始來源時只引用核實結果，不複製別份文件正文。",
+  "real_data_required": "升格為 REAL 前逐項取得可核實來源：正式日期；真實人名/角色；核准/簽章；真實班次/課程；實際數字/比例；真實附件與檔案位置；成果母體與分母；追蹤期間；個資/授權；可驗證原始紀錄。在無原件時標示 SAMPLE/SYNTHETIC；合成事實須登錄 replacement register，不得宣稱機構實績。",
+  "third_party_evidence_required": "若結論依賴外部機關／第三方／真人正式簽章或證書，必須由合法來源取得可核對原件；本文件可提供清楚索引與合成流程示範，絕不代製、仿簽、補作或冒充第三方正式原件。",
+  "prohibited_fabrication": "不得把擬真工作稿標成REAL；不得偽造核准、簽章、真人參與、辦訓、成績、成果或不存在的外部事實。；不得將舊檔內容、示範數據、未查證Drive候選或歷史草案標成 REAL；不得偽造核准、簽章、真人參與、辦訓、成績、成果、外部證據或來源定位。",
+  "title_blind_test": "遮蔽本件標題、檔名與編號，只讀正文應可由專屬機制辨認為『證照通過率與就業率跨年度改善分析報告』並證明『證照通過率高及就業率大幅提升。』；若可無修改移作其他要求即失敗。",
+  "negative_choice_neighbors": "0138《學員訓後薪資與獎勵升遷第三方驗證表》（I19-E28）：應證明不同工作物；本件不得代替、合併或複製其專屬事實。\n0140《訓練資訊系統使用普及率盤點與分析表》（I19-E30）：應證明不同工作物；本件不得代替、合併或複製其專屬事實。",
+  "acceptance_tests": "移除標題及檔名後，讀者可由正文專屬欄位、操作或分析辨認為『證照通過率與就業率跨年度改善分析報告』，且能指出直接回應『證照通過率高及就業率大幅提升。』的頁節／表格。\n逐項呈現官方要求、資料來源、記錄欄位、判定、證據定位及覆核；官方原文不被歷史草案改寫。\n依本文件文類實際可用：問卷含題目選項量尺；SOP含角色、輸入、判斷、控制點、異常和輸出；會議紀錄含議題、證據、決議、責任、期限；報告含資料、分母、公式、逐步計算、限制和決策。\n若沒有可驗證 REAL 資料，提供前後一致、完整填入的 SAMPLE/SYNTHETIC 案例；不得用空表、待填、待核或未來式充當完成品。\n每一項合成日期、角色、數字、比例、金額、決議、來源路徑與結果皆有逐事實替換簿記錄鍵、所在文件／頁表／欄位及真實替換方式。\n絕不偽造第三方原件、真人簽名、核准、出席、證書、政府、銀行、會計或外部機構事實；需要該等原件時只說明所需原件與取得路徑。\n所有公式可由展示數據重算；分母、單位、期間、四捨五入及N/A條件清楚，交叉引用不重複創造相異版本。\n對照負向鄰項，正文可拒絕至少兩個錯誤近鄰；指出可核對的差異欄位或章節。\n首頁30秒內說明目的、讀者、使用時點、操作、輸出和SAMPLE／REAL狀態；無評核工程內部術語。\n正文可供日常協會作業及評核閱讀；標題層級、欄位、步驟、表格能直接執行，無複製同儕 DOCX 正文。\n字體下限：正文至少10.5pt、表格至少9.5pt；資訊不足時加頁，不縮小字體。\n來源定位與交叉引用使用本 Blueprint 登錄的官方頁次／文件 ID；所有結論不超出來源支持範圍。",
+  "document_role": "analysis_report",
+  "official_requirement_text": "證照通過率高及就業率大幅提升。",
+  "official_checkbox_text": "證照通過率高及就業率大幅提升。",
+  "official_evidence_table_page": "9",
+  "official_source_readback_status": "PDF_TEXT_EXACT_PAGE_MATCH",
+  "official_visually_checked_pages": "",
+  "requirement_deliverable_siblings": "0139",
+  "docx_body_template_policy": "FROM_SOURCE_ONLY; old body is discovery evidence only and prohibited as rebuild template; Wave005 R3 0031-0040 quality-height references only; Wave001-004 tainted; old Wave005 invalid; Wave006 prohibited.",
+  "synthetic_population_rule": "缺 REAL 即生成完整連貫 SAMPLE/SYNTHETIC worked example；事實粒度一筆一列登錄 SYNTHETIC_REPLACEMENT_REGISTER，含值、類型、定位、替換原件與責任；不得留待填或冒充 REAL。",
+  "historical_blueprint_source": "6d7bae6161b1dca5715cb297054f9d85444766ca2a2f38bba4a7002bc5b75834",
+  "historical_body_use": "PROHIBITED",
+  "source_map_notes": "129 exact official requirement rows + reconciled 142-ID crosswalk; official source PDF and exact Drive readback evidence are recorded in runtime SOURCE/CONTROL maps."
+}
+```
+
+## Candidate body paragraphs
+P1: 證照通過率與就業率跨年度改善分析報告
+P2: 文件識別編碼：DOCX-0139｜官方指標對應：I19-E29｜157 清單索引：153 官方佐證要求原文：『證照通過率高及就業率大幅提升。』（佐證表頁次：第 9 頁） 當前資料狀態：SAMPLE / SYNTHETIC（全篇示範數據及推論均屬合成算術範例） 真實組織實績狀態：REAL=UNKNOWN/HOLD｜正式評核認可狀態：NOT_GRANTED 印刷勾選序號：UNKNOWN（保留未知，嚴禁自其他編號或鄰項推定）
+P3: 1. 首頁 30 秒快速導讀指南
+P4: 本導讀專供管理決策者、評核委員及訓練行政人員於 30 秒內掌握本報告之核心範疇、數據狀態與操作限制。
+P5: 管理摘要與示範決策
+P6: 以上均為合成算術示範。它可用來檢查計算、追蹤及資料品質流程；在真實名冊、考照原件及合法 D+180 就業佐證逐筆核實前，不得用來宣稱協會達成「高」或「大幅提升」。各年是不同合成群組，沒有同一學員配對追蹤，不能推論個人變化或訓練效果。
+P7: 2. 官方要求對應、評核範圍與文件定位
+P8: 2.1 官方佐證要求精確引錄與跨網對應
+P9: 依據勞動部勞動力發展署人才發展品質管理系統（TTQS）官方查核佐證表第 9 頁之登錄原文，本文件之官方體系定位與需求依據如下：
+P10: 官方佐證表第 9 頁精確原文：『證照通過率高及就業率大幅提升。』
+P11: 官方讀取狀態：PDF_TEXT_EXACT_PAGE_MATCH
+P12: 官方指標項目代碼：I19-E29（指標 19：訓練成果之評估與展現）
+P13: 157 項清單索引序號：153（項目名稱：高考照/就業率：追蹤分母與時期）
+P14: 交付清冊標準文件全名：證照通過率與就業率跨年度改善分析報告（DOCX 0139）
+P15: 印刷勾選框序號：UNKNOWN（依資料治理規範，嚴禁從 DOCX 編號 0139 或索引 153 混淆推定）
+P16: 2.2 評核範圍與專屬業務範疇
+P17: 本報告以原始點協會志工及專業服務人員培訓為情境，演示「專業技能證照取得」與「訓後勞動市場轉銜（就業／就業提升）」成果的計算口徑；所有 2023–2025 群組、筆數與結果均為 SAMPLE/SYNTHETIC，不代表協會實際班別、名冊、考照或就業狀態。示範考照觀察窗及 D+180 狀態截點僅用於演示重算；實際認列期與追蹤時點須依核定課程、協會正式政策及可核實來源設定。
+P18: 2.3 盲測識別機制（Title-Blind Test Mechanism）
+P19: 若將本報告之標題、檔名、文件編號及頁首資訊完全遮蔽，任何合規評核員或讀者仍可經由下列本件專屬之技術機制辨識其唯一性，絕無法移作他項指標使用：
+P20: 1. 考照與就業雙軌分母控制架構：正文嚴格定義考照分母為「實際應考人數」（排拒未應考但獨立列計未應考量），就業分母為「有效追蹤母體人數」（未回覆/失聯者全數保留於分母採保守認定），此為 I19-E29 專屬技術規範。
+P21: 2. 訓後追蹤時點示範（D+180）：本例以結訓後 180 日作為示範狀態截點，並演示 U 保留在分母的計算；實際時點、聯繫程序及判定口徑須由協會依正式政策與合法來源核定。
+P22: 3. 雙重變化率衡量體系：同時呈現絕對百分點變動（pp）與相對變化率（%），並鎖定回應「通過率高」與「就業率大幅提升」之語意分析。
+P23: 3. 負向鄰項邊界與職責劃分（Negative Neighbors Distinction）
+P24: 為確保文件專屬職責不被稀釋，防止事實吞併或混淆評核範圍，特此聲明本文件與前後相鄰交付文件之界限：
+P25: 4. 資料欄位、母體、來源與方法字典
+P26: 4.1 資料字典（Data Dictionary）
+P27: 4.2 母體界定與納入排除規則
+P28: 1. 示範母體：本例以各年度合成群組中的 10、12、12 筆記錄演示分母控制，不代表協會實際辦訓名冊。
+P29: 2. 真實資料納入：先依核定課程計畫及可查核的報名／結訓條件界定母體，保存完整名冊與版本；各年度比較須明列母體定義是否一致。
+P30: 3. 真實資料排除：不得自行套用「出席率 80%」或其他未核實的法定門檻。只有在結算前已有正式、適用且可追溯的排除規則時，才可逐筆排除，並列出人數、原因、原件及覆核者。
+P31: 4. 未回覆及失聯：不得只因無法聯繫或缺少就業結果而自就業母體刪除；按本報告保守示範口徑保留於分母並列為 U。若採其他口徑，須先說明正式依據並另列敏感度分析。
+P32: 4.3 追蹤期程規範
+P33: SAMPLE 作業假設，非協會既定政策或官方期限：為演示可重算流程，本例假設考照觀察窗為結訓後 90 天內最近一期測驗，並於結訓後 D+180 彙整就業狀態；聯繫窗示例為 D+170 至 D+190（含首尾，共 21 個日曆日）。期間須由協會依真實課程、正式政策及合法追蹤安排核定，不能直接當成 REAL 作業紀錄。
+P34: 真實報告須列明實際結訓日、測驗日、資料截點、聯繫窗及原始來源；不得用本例期間替代實際日期。
+P35: 若觀察期尚未到期、資料不足或聯繫未完成，應標為待追蹤／U，不可把未完成當成零結果或逕行剔除。
+P36: 4.4 異常狀態處理機制
+P37: 缺考（Absent, 代碼 A）：表示學員具報考資格且完成報名，但測驗日未到考。於「考照通過率」計算中，缺考者自實考分母中排除，但必須於報表中獨立列出缺考人數與缺考率，嚴禁隱匿。
+P38: 失聯／未回覆（Unknown / Lost Contact, 代碼 U）：於「就業確認率」計算中，基於資料審查之最保守原則，失聯者必須全額保留於有效追蹤分母中，且分子不得列入就業人數；同時計算「追蹤涵蓋率」以反映資料品質。
+P39: 5. 指標定義、分母控制與運算公式
+P40: 5.1 證照通過率
+P41: 證照通過率 = 通過人數 P ÷ 實際應考人數 (P + F) × 100%。
+P42: 缺考率 = 缺考人數 A ÷ 應考資格母體 (P + F + A) × 100%。
+P43: 若 P + F = 0，通過率標示 N/A（無人到考）；不得填 0%。
+P44: A 不進入實考通過率分母，但須獨立列示人數及缺考率。
+P45: 5.2 保守就業確認率與資料涵蓋率
+P46: 保守就業確認率 = 已確認就業 E ÷ 有效追蹤母體 (E + N + U) × 100%。
+P47: 追蹤涵蓋率 = 狀態已確認人數 (E + N) ÷ 有效追蹤母體 (E + N + U) × 100%。
+P48: 失聯／未回覆率 = U ÷ 有效追蹤母體 (E + N + U) × 100%。
+P49: U 保留於分母且不計入 E；N 與 U 不得混為一類。
+P50: 5.3 跨期變化的兩種表示
+P51: 百分點變動（pp）= 後期比率（%）− 前期比率（%）。
+P52: 相對變化率（%）= (後期比率 − 前期比率) ÷ 前期比率 × 100%。
+P53: 前期比率為 0 時，相對變化率標 N/A；仍可列百分點變動。
+P54: 先用未修約數值計算，最後四捨五入至小數點後兩位；百分點與相對百分比不可混稱。
+P55: 6. 完整 34 筆合成示範明細資料表
+P56: 本表每筆均為 SAMPLE/SYNTHETIC。學員代碼及 SYN-DOC 索引為虛構示範值，不是協會名冊或外部憑證。
+P57: 7. 獨立可重算之年度彙總與逐步運算驗證
+P58: 7.1 各年度各項原始計數彙總表
+P59: 7.2 逐年算術推導與中間步驟明細
+P60: A. 2023 年度（Cohort 2023, n=10）
+P61: 1. 證照應考指標：
+P62: 應考總資格人數 = 10 人。
+P63: 實際到考人數 = P(5) + F(3) = 8 人；缺考人數 = A(2) 人。
+P64: 缺考率 = 2/10 × 100% = 20.00%。
+P65: 證照通過率 = 5/8 = 0.625 × 100% = 62.50%。
+P66: 2. 訓後就業追蹤指標（D+180）：
+P67: 有效追蹤母體人數 = 10 人。
+P68: 已確認就業人數 = E(4) 人；未就業人數 = N(2) 人；失聯人數 = U(4) 人。
+P69: 保守就業確認率 = 4/10 = 0.400 × 100% = 40.00%。
+P70: 追蹤狀態涵蓋率 = 4 + 2/10 = 6/10 = 60.00%。
+P71: 失聯／未回覆率 = 4/10 = 40.00%。
+P72: B. 2024 年度（Cohort 2024, n=12）
+P73: 1. 證照應考指標：
+P74: 應考總資格人數 = 12 人。
+P75: 實際到考人數 = P(7) + F(3) = 10 人；缺考人數 = A(2) 人。
+P76: 缺考率 = 2/12 = 0.16666... × 100% ≈ 16.67%。
+P77: 證照通過率 = 7/10 = 0.700 × 100% = 70.00%。
+P78: 2. 訓後就業追蹤指標（D+180）：
+P79: 有效追蹤母體人數 = 12 人。
+P80: 已確認就業人數 = E(7) 人；未就業人數 = N(2) 人；失聯人數 = U(3) 人。
+P81: 保守就業確認率 = 7/12 = 0.58333... × 100% ≈ 58.33%。
+P82: 追蹤狀態涵蓋率 = 7 + 2/12 = 9/12 = 75.00%。
+P83: 失聯／未回覆率 = 3/12 = 25.00%。
+P84: C. 2025 年度（Cohort 2025, n=12）
+P85: 1. 證照應考指標：
+P86: 應考總資格人數 = 12 人。
+P87: 實際到考人數 = P(8) + F(3) = 11 人；缺考人數 = A(1) 人。
+P88: 缺考率 = 1/12 = 0.08333... × 100% ≈ 8.33%。
+P89: 證照通過率 = 8/11 = 0.72727... × 100% ≈ 72.73%。
+P90: 2. 訓後就業追蹤指標（D+180）：
+P91: 有效追蹤母體人數 = 12 人。
+P92: 已確認就業人數 = E(8) 人；未就業人數 = N(2) 人；失聯人數 = U(2) 人。
+P93: 保守就業確認率 = 8/12 = 0.66666... × 100% ≈ 66.67%。
+P94: 追蹤狀態涵蓋率 = 8 + 2/12 = 10/12 = 83.33%。
+P95: 失聯／未回覆率 = 2/12 = 16.67%。
+P96: 7.3 跨年度成效變動比較矩陣（全距閉合推導）
+P97: 算術校核說明：
+P98: 1. 2023→2025 考照通過率百分點變動：72.7273% - 62.5000% = +10.2273% → +10.23 pp。
+P99: 2. 2023→2025 考照通過率相對變化率：72.7273% - 62.5000%/62.5000% = 10.2273%/62.5% ≈ +16.36%。
+P100: 3. 2023→2025 就業確認率百分點變動：66.6667% - 40.0000% = +26.6667% → +26.67 pp。
+P101: 4. 2023→2025 就業確認率相對變化率：66.6667% - 40.0000%/40.0000% = 26.6667%/40.0% ≈ +66.67%。
+P102: 8. 趨勢圖表展示與資料品質解讀限制
+P103: 8.1 跨年度趨勢折線圖（SAMPLE/SYNTHETIC）
+P104: 圖 1 三年度 SAMPLE/SYNTHETIC 趨勢。各點由第 6 節明細重算；線條呈現合成群組差異，不代表同一學員的縱向變化。
+P105: 8.2 數據品質限制與邊界警示
+P106: 1. 極小樣本數限制（Small-Denominator Effect）：
+P107: 各年度有效樣本數僅 10 至 12 人（總計 34 人）。在此等小母體結構下，任一人員的狀態異動（例如 1 人自未就業轉為就業）即可造成整體比率變動達 8.33 至 10.00 個百分點，極易產生統計假象，不具備大數法則之統計顯著性。
+P108: 2. 官方佐證表之無量化門檻限制：
+P109: 官方查核佐證表第 9 頁原文僅宣稱「證照通過率高及就業率大幅提升」，完全未界定何謂「高」（例如是否須達 80% 或高於全國平均）及何謂「大幅提升」（例如年增率須達多少百分比或多少百分點）。本報告所示之 +10.23 pp 與 +26.67 pp 僅為算術示範，不得逕行推定已滿足官方之定性要求。
+P110: 3. 因果推論斷裂限制（Non-Causality Principle）：
+P111: 就業確認率之提昇（40.00% → 66.67%）與追蹤失聯率之大幅下降（40.00% → 16.67%）高度相關。因本模型採保守認列（失聯者視同未就業），追蹤涵蓋率的提高自然直接拉抬就業確認率；此外，勞動需求、薪資條件、學員既有工作與其他外部因素都可能影響結果；本示範沒有量測這些因素，不得把跨年差異歸因於訓練課程。
+P112: 9. 內部示範性證據強度評級體系與歸因分析
+P113: [!IMPORTANT]
+P114: 宣告：本評級體系係為本分析報告所建立之「內部示範性證據強度規準（Internal Demonstration Rubric）」，旨在評估資料可信度與佐證完備性，絕非 TTQS 官方之評分等級或法定評核規準。
+P115: 9.1 內部示範評級架構
+P116: 9.2 本文件目前證據狀態與升級缺口
+P117: 目前狀態：SAMPLE ONLY / NOT RATEABLE。34 筆資料及佐證索引皆為合成，不能評為 L-1 至 L-4，也不構成協會內部結構紀錄。
+P118: 升級前逐項需要：
+P119: 1. 考照端：真實且合法可查的適用考試名稱、報名／應考名冊、官方成績或證照核驗結果，以及逐筆可追溯的資格母體。
+P120: 2. 就業端：具合法依據的 D+180 狀態資料；依情形使用學員授權的訪查紀錄、可核實的保險資料或雇主回覆。只收集核實所需的最少個資。
+P121: 3. 追蹤端：依協會已採行的聯絡與保存政策，保留必要日期、聯繫方式、結果及覆核紀錄。錄音、私人訊息截圖不是一律必備，不得未經授權收集。
+P122: 4. 分析端：確認真實母體、排除規則、年度群組可比性、未回覆處理、資料授權及計算版本；完成逐筆核對後才作結論。
+P123: L-1 至 L-4 僅為本文內部示範分類，不是 TTQS 官方評分規準；正式使用須依協會政策及合法證據判斷。
+P124: 10. 發現、原因剖析、可執行建議與行動追蹤表
+P125: 10.1 核心分析發現
+P126: 本節只描述 34 筆 SAMPLE/SYNTHETIC 群組，不是協會實際狀態、已執行訪查結果或核定決策。
+P127: 1. 合成考照率逐年提高：通過率由 2023 年 5/8（62.50%）至 2025 年 8/11（72.73%），相差 +10.23 個百分點；樣本另有 5 筆缺考。這只證明示範公式可重算，不能證明實際改善。
+P128: 2. 合成就業確認率與涵蓋率同時上升：確認率由 4/10（40.00%）至 8/12（66.67%），涵蓋率由 60.00% 至 83.33%。各年是不同群組且沒有配對資料，無法分解差異來自真實就業變化、追蹤涵蓋或群組差異。
+P129: 3. 不能由六筆 N 狀態推論主要未就業原因：示範備註包含不同線索，沒有一致原因分類或充分訪談資料；真實分析須保留「未就業」原始狀態，另以合法、明確題目蒐集原因，不得把升學、公職或家庭因素當成已證實原因。
+P130: 10.2 優先差距與決策矩陣（SAMPLE）
+P131: 10.3 改善行動追蹤管制表（Action Tracker）
+P132: 期程聲明：以下行動方案之執行期程均採相對天數（SAMPLE D+xx）標註，各角色與措施均屬示範性流程管理。
+P133: 10.4 異常處置判定標準（HOLD / REVISE / REJECT）
+P134: HOLD（暫緩審查）：佐證文件已提交但缺少關鍵章戳（如雇主未蓋負責人章、技術士證影本模糊無法辨識證號），由查核人員限期 7 日內補正。
+P135: REVISE（退回修正）：分母計算口徑與標準定義不符（例如將缺考者私自納入考照通過率計算、或逕自將失聯者剔除分母者），退回分析專員重新計算並覆核。
+P136: REJECT（停止採用並保全）：若發現資料疑似失真、期間不符或無法核實，先停止採用相關結論、保全原始紀錄，交由有權責單位依正式程序處理；本示範不授權懲處或替協會作成決議。
+P137: 10.5 結論與目前處置
+P138: 本示範資料的三年通過率與保守就業確認率呈上升，缺考率與 U 比率下降；這是按示範口徑計算的描述性結果。由於沒有 REAL 名冊、官方考照結果、合法 D+180 原件及同群組追蹤資料，本報告不能判定原始點協會的證照通過率已達「高」、就業率已「大幅提升」，或訓練造成改善。目前只適合供流程演練及計算教學，真實績效結論維持 REAL=UNKNOWN/HOLD。
+P139: 11. 官方佐證表 p.9 追溯矩陣
+P140: 本矩陣逐一對應官方查核佐證表第 9 頁要求，確保各審查要項均能精確溯源：
+P141: 12. 事實級 SAMPLE 轉 REAL 替換登錄清單
+P142: SYN-DOC 編碼、群組、計算值、角色、期間、行動和處置均為合成示範。任何一項未取得合法原件前都不能改標 REAL。涉及個資時依最少必要、授權及保存政策處理。
+P143: 12.1 群組、指標、期間、角色與行動值
+P144: 12.2 34 筆個別合成紀錄逐筆替換簿
+P145: 每筆列明唯一替換鍵、樣本狀態與值、正文位置、對應真實來源類型及覆核責任。SAMPLE/SYNTHETIC 原始欄位不會因此成為真實證據。
+P146: 13. 文件審查與品質管控檢核清單
+P147: 以下為待審檢核表，不是作者自評或獨立審查結論。審查者應在取得本版候選及 exact SHA 後逐項填寫。
+P148: 13.1 審查員稽核檢核清單
+P149: 13.2 最終簽核管制紀錄
+P150: 候選技術與語意驗收：PENDING（須以本機與獨立 exact-SHA 收據完成；本表不是驗收證明）
+P151: 協會實績認定狀態：REAL=UNKNOWN/HOLD（實體佐證未核實前一律暫緩列入實績）
+P152: TTQS 正式評核認可狀態：NOT_GRANTED（未經評核委員現場實地核驗）
+P153: 印刷勾選序號核定：UNKNOWN（留存空白待正式作業時填入）
+P154: 14. 附件索引、版本與使用條件
+P155: 文件版本：DOCX 0139 候選 R04；來源包及唯一 Blueprint 維持 R01；正文源自 Antigravity CLI 原始回覆，依已定位缺陷作有限、可追溯修正。
+P156: 需求定位：官方要求 I19-E29；DOCX ID 0139；157 清單索引 153；官方佐證表 p.9。印刷 checkbox 序號維持 UNKNOWN。
+P157: 附件索引：第 6 節為 34 筆 SAMPLE 明細；第 7 節為分母、彙總及逐步計算；第 11 節為官方原文追溯；第 12 節為逐事實替換清冊。
+P158: 使用條件：供計算口徑演練、資料缺口辨識及行政流程討論。不得把合成資料、SYN-DOC 代碼、樣本結論或示範處置作為協會實績、正式決議、第三方證據或評核接受。
+P159: REAL 接手前：取得合法母體、實際考照結果、追蹤窗、就業核實資料、授權與來源定位；完成逐筆覆核後才另行編製 REAL 報告。
+
+## Candidate tables
+TABLE 1
+快速項目 | 本件可直接使用的內容
+文件目的 | 以同一計算口徑整理跨年度證照通過率、D+180 就業確認率及資料涵蓋狀態，支持管理者檢視證據與決策缺口。
+主要讀者 | 協會訓練行政、主管與評核閱讀者。
+使用時點 | 年度訓練成果彙整及追蹤資料檢核時；實際時點依協會採行程序。
+核心操作 | 核對資格母體；區分實考與缺考；把失聯保留在就業分母；重算各率及跨期差異。
+預期產出 | 年度彙總、趨勢圖、資料品質差距、原件替換清冊與後續行動。
+數據狀態 | 34 筆及所有推算均為 SAMPLE/SYNTHETIC；REAL=UNKNOWN/HOLD；正式評核認可 NOT_GRANTED。
+關鍵警示 | 官方 p.9 未提供「高」或「大幅提升」的量化門檻。本示範不代表協會成效，也不證明訓練因果。
+
+TABLE 2
+指標 | 2023 SAMPLE | 2024 SAMPLE | 2025 SAMPLE | 2023→2025
+實際應考通過率 | 62.50% | 70.00% | 72.73% | +10.23 個百分點
+保守就業確認率 | 40.00% | 58.33% | 66.67% | +26.67 個百分點
+就業狀態未確認率 | 40.00% | 25.00% | 16.67% | -23.33 個百分點
+
+TABLE 3
+鄰近文件 | 專屬問題與本件界線
+DOCX 0138 / I19-E28 | 《學員訓後薪資與獎勵升遷第三方驗證表》處理薪資、獎勵及升遷之個人第三方佐證。本件不納入個人薪資或升遷事實。
+DOCX 0139 / I19-E29 | 本件專責群體證照實考通過率、D+180 就業確認率、分母、跨年比較與資料限制。
+DOCX 0140 / I19-E30 | 《訓練資訊系統使用普及率盤點與分析表》處理平台與資訊系統使用。本件不以登入、系統操作或流量資料替代就業或考照結果。
+
+TABLE 4
+欄位名稱 | 變數代號 | 欄位定義與口徑 | 分母歸屬 | 資料來源類型 | 使用限制與品質說明
+學員識別碼 | UID | 示範學員唯一編號，格式 Cyy-nn | 不適用 | 合成名冊編碼 | 僅供算術稽核，去識別化處理
+年度梯次 | YEAR | 訓練結訓所屬年度（2023, 2024, 2025） | 不適用 | 訓練行政日誌 | 年度群組為合成示範，不表示實際招生背景或課綱曾有差異
+報考資格 | ELIG | 依核定課程計畫及正式考照規則判定；本示範未提供可核實的資格原件 | 示範應考資格母體 | 待填真實名冊、課程計畫及報考規則 | 本示範不表示協會曾排除任何人；未取得適用規則與逐筆原件前，不作資格排除結論
+實考狀態 | SIT | 是否於指定測驗日出現在考場並交卷 | 應考分析母體 | 考場簽到名冊 | 缺考者（A）不納入通過率分母
+考照結果 | EXAM | 通過（P）、未通過（F）、缺考（A） | 考照率分子/分母 | 測驗機構及格清冊 | 實際證照名稱及認列範圍須依核定課程計畫與可核實考照資料填明；本示範不指定證照
+D+180狀態 | EMP | 就業（E）、未就業（N）、失聯（U） | 就業率分子/分母 | 追蹤調查電訪紀錄 | 未回覆者（U）強制列入分母
+驗證來源 | VERI | 支持考照或就業之佐證文件編碼 | 審查核實母體 | 外部憑證或問卷紀錄 | 目前示範資料標註為 SYNTHETIC
+
+TABLE 5
+學員代碼（SAMPLE） | 年度梯次 | 應考狀態與結果 | D+180 就業狀態 | 合成佐證索引與稽核線索
+C23-01 | 2023 | 實考；通過 (P) | 已就業 (E) | SYN-DOC-23-01；測驗及格名冊 / 勞保加保憑證
+C23-02 | 2023 | 實考；通過 (P) | 已就業 (E) | SYN-DOC-23-02；測驗及格名冊 / 雇主在職證明
+C23-03 | 2023 | 實考；通過 (P) | 未就業 (N) | SYN-DOC-23-03；測驗及格名冊 / 電訪問卷確認待業
+C23-04 | 2023 | 實考；通過 (P) | 已就業 (E) | SYN-DOC-23-04；測驗及格名冊 / 勞保投保明細
+C23-05 | 2023 | 實考；通過 (P) | 失聯 (U) | SYN-DOC-23-05；測驗及格名冊 / 3次電訪無應答
+C23-06 | 2023 | 實考；不及格 (F) | 失聯 (U) | SYN-DOC-23-06；成績單不合格 / 門號成空號
+C23-07 | 2023 | 實考；不及格 (F) | 未就業 (N) | SYN-DOC-23-07；成績單不合格 / 書面回覆進修中
+C23-08 | 2023 | 實考；不及格 (F) | 失聯 (U) | SYN-DOC-23-08；成績單不合格 / 郵件退件且無回應
+C23-09 | 2023 | 缺考 A；不列入實考分母 | 失聯 (U) | SYN-DOC-23-09；考場缺考紀錄 / 戶籍地址無人回覆
+C23-10 | 2023 | 缺考 A；不列入實考分母 | 已就業 (E) | SYN-DOC-23-10；考場缺考紀錄 / 在職證明自主提供
+C24-01 | 2024 | 實考；通過 (P) | 已就業 (E) | SYN-DOC-24-01；測驗及格清冊 / 勞保投保記錄
+C24-02 | 2024 | 實考；通過 (P) | 已就業 (E) | SYN-DOC-24-02；測驗及格清冊 / 雇主錄取通知書
+C24-03 | 2024 | 實考；通過 (P) | 未就業 (N) | SYN-DOC-24-03；測驗及格清冊 / 訪談記錄待業中
+C24-04 | 2024 | 實考；通過 (P) | 已就業 (E) | SYN-DOC-24-04；測驗及格清冊 / 勞保在保證明
+C24-05 | 2024 | 實考；通過 (P) | 失聯 (U) | SYN-DOC-24-05；測驗及格清冊 / 兩週聯繫無回音
+C24-06 | 2024 | 實考；通過 (P) | 已就業 (E) | SYN-DOC-24-06；測驗及格清冊 / 勞保加保通知
+C24-07 | 2024 | 實考；通過 (P) | 失聯 (U) | SYN-DOC-24-07；測驗及格清冊 / 電話暫停使用
+C24-08 | 2024 | 實考；不及格 (F) | 已就業 (E) | SYN-DOC-24-08；測驗成績單 / 訓前原職留任證明
+C24-09 | 2024 | 實考；不及格 (F) | 未就業 (N) | SYN-DOC-24-09；測驗成績單 / 就服站求職登記中
+C24-10 | 2024 | 實考；不及格 (F) | 失聯 (U) | SYN-DOC-24-10；測驗成績單 / 電郵退件且簡訊未讀
+C24-11 | 2024 | 缺考 A；不列入實考分母 | 已就業 (E) | SYN-DOC-24-11；考場缺席表 / 自營作業切結佐證
+C24-12 | 2024 | 缺考 A；不列入實考分母 | 已就業 (E) | SYN-DOC-24-12；考場缺席表 / 勞保加保證明單
+C25-01 | 2025 | 實考；通過 (P) | 已就業 (E) | SYN-DOC-25-01；專業證照影本 / 勞保投保證明
+C25-02 | 2025 | 實考；通過 (P) | 已就業 (E) | SYN-DOC-25-02；專業證照影本 / 雇主開立聘書
+C25-03 | 2025 | 實考；通過 (P) | 未就業 (N) | SYN-DOC-25-03；專業證照影本 / 備試公職非勞動力
+C25-04 | 2025 | 實考；通過 (P) | 已就業 (E) | SYN-DOC-25-04；專業證照影本 / 勞保局投保紀錄
+C25-05 | 2025 | 實考；通過 (P) | 失聯 (U) | SYN-DOC-25-05；專業證照影本 / 電話轉語音信箱
+C25-06 | 2025 | 實考；通過 (P) | 已就業 (E) | SYN-DOC-25-06；專業證照影本 / 在職證明核章本
+C25-07 | 2025 | 實考；通過 (P) | 失聯 (U) | SYN-DOC-25-07；專業證照影本 / 簡訊與 LINE 未讀
+C25-08 | 2025 | 實考；通過 (P) | 已就業 (E) | SYN-DOC-25-08；專業證照影本 / 勞工保險在保證明
+C25-09 | 2025 | 實考；不及格 (F) | 已就業 (E) | SYN-DOC-25-09；成績不合格聯 / 新進任職報到單
+C25-10 | 2025 | 實考；不及格 (F) | 未就業 (N) | SYN-DOC-25-10；成績不合格聯 / 接受職訓中
+C25-11 | 2025 | 實考；不及格 (F) | 已就業 (E) | SYN-DOC-25-11；成績不合格聯 / 勞保在保記錄
+C25-12 | 2025 | 缺考 A；不列入實考分母 | 已就業 (E) | SYN-DOC-25-12；考場缺席記錄 / 雇主證明書
+
+TABLE 6
+年度群組 | 母體人數 | 實考／通過／未通過／缺考 | 通過率（通過／實考） | 就業 E／N／U | 保守就業確認率 | 狀態涵蓋率
+2023 SAMPLE | 10 | 8／5／3／2 | 62.50% | 4／2／4 | 40.00% | 60.00%
+2024 SAMPLE | 12 | 10／7／3／2 | 70.00% | 7／2／3 | 58.33% | 75.00%
+2025 SAMPLE | 12 | 11／8／3／1 | 72.73% | 8／2／2 | 66.67% | 83.33%
+合計 SAMPLE | 34 | 29／20／9／5 | 68.97%（20／29） | 19／6／9 | 55.88%（19／34） | 73.53%（25／34）
+
+TABLE 7
+比較維度與評估項目 | 2023 基準年 | 2024 改進年 | 2025 穩健年 | 2023→2024 變動 | 2024→2025 變動 | 2023→2025 跨期總變動
+報考總人數 (人) | 10 | 12 | 12 | +2 人 | 0 人 | +2 人
+實考人數 (人) | 8 | 10 | 11 | +2 人 | +1 人 | +3 人
+證照通過人數 (人) | 5 | 7 | 8 | +2 人 | +1 人 | +3 人
+證照通過率 (%) | 62.50% | 70.00% | 72.73% | +7.50 pp | +2.73 pp | +10.23 pp
+通過率相對變化率 (%) | 基準 | — | — | +12.00% | +3.90% | +16.36%
+缺考率 (%) | 20.00% | 16.67% | 8.33% | -3.33 pp | -8.34 pp | -11.67 pp
+就業追蹤母體 (人) | 10 | 12 | 12 | +2 人 | 0 人 | +2 人
+確認就業人數 (人) | 4 | 7 | 8 | +3 人 | +1 人 | +4 人
+保守就業確認率 (%) | 40.00% | 58.33% | 66.67% | +18.33 pp | +8.33 pp | +26.67 pp
+就業率相對變化率 (%) | 基準 | — | — | +45.83% | +14.29% | +66.67%
+追蹤涵蓋率 (%) | 60.00% | 75.00% | 83.33% | +15.00 pp | +8.33 pp | +23.33 pp
+失聯／未回覆率 (%) | 40.00% | 25.00% | 16.67% | -15.00 pp | -8.33 pp | -23.33 pp
+
+TABLE 8
+示範狀態／級別 | 證據定位 | 進入條件與限制
+SAMPLE/SYNTHETIC | 算術案例；不是任何證據等級 | 不含真人、協會原件或第三方核實，不得評為內部紀錄或實績。
+L-1 內部自述 | 未核實的口頭或草稿敘述 | 只能作為待查線索，不能支持正式結論。
+L-2 可追溯內部紀錄 | 有版本、來源與責任鏈的真實名冊、出席或訪談紀錄 | 須同期、可追溯且合法保存；只有表格格式不算。
+L-3 外部間接佐證 | 可核對的外部測驗結果、保險資料或雇主回覆 | 須核實來源、對象、日期及授權；學員自述不等於第三方核實。
+L-4 權威直接驗證 | 依法可查證的主管機關或第三方原始資料 | 須由合法管道核實；不得自行製作或補簽原件。
+
+TABLE 9
+優先序 | 合成資料呈現的差距 | 可重算依據 | 合法下一步 | 決策限制
+P1 | 尚無 REAL 原件，率值不可當作協會成果 | 34 筆明細及 SYN-DOC 索引均為合成 | 取得真實母體、考照結果及合法 D+180 佐證；逐筆核對來源與授權 | 完成前 REAL=UNKNOWN/HOLD，不宣稱已達官方要求
+P2 | 樣本 U 由 4/10 降至 2/12 | U 比率 40.00%→16.67%；涵蓋率 60.00%→83.33% | 真實作業記錄聯繫窗、方式、結果及覆核；維持 U 在分母 | 不得把追蹤率提升等同就業能力提升
+P3 | 樣本缺考共 5/34，年度缺考數 2、2、1 | 缺考率 20.00%、16.67%、8.33% | 取得正式報名與到考資料，再決定是否需改善提醒流程 | 不得描述成協會實際缺考
+P4 | 群組人數與成員不同，不能推論訓練因果 | N=10、12、12，無個人配對資料 | 先定義可比母體、追蹤方式與外部因素 | 本報告只示範描述性比較
+
+TABLE 10
+改善項目 | 發現問題與證據定位 | 建議具體措施 | 負責角色 (SAMPLE) | 執行期限 (SAMPLE) | 追蹤管制指標 | 示範處置（非協會決議）
+ACT-01 | 三年累積 5 人缺考 （表 7.1，實考率偏低） | 建立結訓考照衝刺保證班，於考前 7 天進行電話提醒與交通路線指引 | 培訓組長 | SAMPLE D+14 | 缺考率降至 5% 以下 | SAMPLE: HOLD；不得視為已核定
+ACT-02 | 追蹤失聯人數偏高 （2023 年達 40%） | 導入雙軌聯絡人機制，參訓切結書增列第二聯絡人及 LINE 官方帳號 | 就業輔導專員 | SAMPLE D+30 | 失聯率維持於 15% 以下 | SAMPLE: REVISE；僅為建議情境
+ACT-03 | 就業佐證強度僅 L-2 （第 9 節評級分析） | 建立「訓後就業憑證上傳獎勵機制」，提供驗證通過者專業複訓折價券 | 行政主任 | SAMPLE D+45 | L-3 以上憑證涵蓋率 ≥ 80% | SAMPLE: HOLD；費用方案須另依權限審查
+ACT-04 | 排除除外標準未標準化 （未就業中有非勞動力） | 修訂《訓後就業成效追蹤 SOP》，明確定義兵役、升學等法定扣除分母標準 | 訓練處長 | SAMPLE D+60 | 完成修訂並提理事會核備 | SAMPLE: HOLD；不得視為已召會或決議
+
+TABLE 11
+官方查核佐證表 p.9 項目原文 | 本分析報告對應章節 | 關鍵表格與計算定位 | 稽核佐證原件需求清單 | 示範狀態（非正式認定）
+證照通過率高 | 第 5.1 節、第 7.1 節、第 7.3 節 | 表 7.1（原始計數）、表 7.3（考照通過率 62.50% → 72.73%） | 1. 勞動部合格名冊 2. 考場簽到名冊 3. 技術士證號清冊 | SAMPLE/SYNTHETIC REAL=UNKNOWN/HOLD；未核實
+及（雙軌分立要求） | 第 3 節、第 4.1 節 | 矩陣 3（鄰項職責隔離）、表 4.1（資料字典雙軌定義） | 1. 訓練行政分工規程 2. 指標分軌管制表 | SAMPLE/SYNTHETIC REAL=UNKNOWN/HOLD；未核實
+就業率大幅提升 | 第 5.2 節、第 7.2 節、第 7.3 節 | 表 7.3（就業率 40.00% → 66.67%，增幅 +26.67 pp） | 1. 訓後 D+180 訪查表 2. 勞保在保憑證 3. 雇主在職證明正本 | SAMPLE/SYNTHETIC REAL=UNKNOWN/HOLD；未核實
+追蹤分母與時期 （157 索引 153） | 第 4.2 節、第 4.3 節、第 5 節 | 第 4.3 節規範（D+180 窗口）、第 5.1/5.2 節分母公式 | 1. 訓後追蹤標準作業書 2. 調查時窗管制紀錄 | SAMPLE/SYNTHETIC REAL=UNKNOWN/HOLD；未核實
+
+TABLE 12
+登錄鍵 | 合成值／類型 | 正文定位 | 轉為 REAL 必須取得的原件與核驗方式 | 覆核責任（職務，不指定真人）
+KEY-COH-001 | 2023 SAMPLE 群組 n=10 | §6、§7 | 真實課程名冊、資格與結訓依據；逐筆核對母體 | 依實際權責指定的資料保管人及覆核者
+KEY-COH-002 | 2024 SAMPLE 群組 n=12 | §6、§7 | 同上；核對年度母體定義是否一致 | 同上
+KEY-COH-003 | 2025 SAMPLE 群組 n=12 | §6、§7 | 同上；核對年度母體定義是否一致 | 同上
+KEY-EXM-001 | 2023 SAMPLE 5/8=62.50% | §7.1、§7.2、§7.3 | 正式資格、報名、到考及成績原件 | 考照資料保管人及獨立覆核者
+KEY-EXM-002 | 2024 SAMPLE 7/10=70.00% | §7.1、§7.2、§7.3 | 同上 | 同上
+KEY-EXM-003 | 2025 SAMPLE 8/11=72.73% | §7.1、§7.2、§7.3 | 同上 | 同上
+KEY-EMP-001 | 2023 SAMPLE E=4/10=40.00%; U=4 | §7.1、§7.2、§7.3 | 合法 D+180 訪查與可核實保險／雇主證明；U 須有聯繫紀錄 | 就業資料保管人及覆核者
+KEY-EMP-002 | 2024 SAMPLE E=7/12=58.33%; U=3 | §7.1、§7.2、§7.3 | 同上；核對追蹤窗及授權 | 同上
+KEY-EMP-003 | 2025 SAMPLE E=8/12=66.67%; U=2 | §7.1、§7.2、§7.3 | 同上；核對追蹤窗及授權 | 同上
+KEY-ROLE-001 | 職務名稱均為流程範例，未指定真人 | §9、§10 | 依正式組織規程及人事任命核實實際權責；不補造姓名 | 依協會實際權限
+KEY-DATE-001 | 90 日考照窗、D+180、D+170 至 D+190 | §4.3、§10.3 | 正式核定的追蹤政策及真實日期；SAMPLE 期間不可自動採用 | 政策核定權責者
+KEY-ACTION-001 | ACT-01 至 ACT-04 措施、指標、角色與狀態均為 SAMPLE | §10.2 至 §10.5 | 正式決議、核定計畫、實際責任人及期限；不得把本例當已決議 | 依正式決策權限
+KEY-RUBRIC-001 | L-1 至 L-4 為本文內部示範分類；SAMPLE 本身不定級 | §9 | 正式使用須由協會核定可採證據標準；非 TTQS 官方評分 | 協會權責主管
+
+TABLE 13 REGISTER COMPACT VIEW: Table 5 above contains the full synthetic values; this table contains 34 replacement keys and exact document locators. All 34 keys are preserved below; common replacement and review-role cell text is preserved once.
+KEYS_AND_LOCATORS
+KEY-ROW-C23-01 | §6 C23-01
+KEY-ROW-C23-02 | §6 C23-02
+KEY-ROW-C23-03 | §6 C23-03
+KEY-ROW-C23-04 | §6 C23-04
+KEY-ROW-C23-05 | §6 C23-05
+KEY-ROW-C23-06 | §6 C23-06
+KEY-ROW-C23-07 | §6 C23-07
+KEY-ROW-C23-08 | §6 C23-08
+KEY-ROW-C23-09 | §6 C23-09
+KEY-ROW-C23-10 | §6 C23-10
+KEY-ROW-C24-01 | §6 C24-01
+KEY-ROW-C24-02 | §6 C24-02
+KEY-ROW-C24-03 | §6 C24-03
+KEY-ROW-C24-04 | §6 C24-04
+KEY-ROW-C24-05 | §6 C24-05
+KEY-ROW-C24-06 | §6 C24-06
+KEY-ROW-C24-07 | §6 C24-07
+KEY-ROW-C24-08 | §6 C24-08
+KEY-ROW-C24-09 | §6 C24-09
+KEY-ROW-C24-10 | §6 C24-10
+KEY-ROW-C24-11 | §6 C24-11
+KEY-ROW-C24-12 | §6 C24-12
+KEY-ROW-C25-01 | §6 C25-01
+KEY-ROW-C25-02 | §6 C25-02
+KEY-ROW-C25-03 | §6 C25-03
+KEY-ROW-C25-04 | §6 C25-04
+KEY-ROW-C25-05 | §6 C25-05
+KEY-ROW-C25-06 | §6 C25-06
+KEY-ROW-C25-07 | §6 C25-07
+KEY-ROW-C25-08 | §6 C25-08
+KEY-ROW-C25-09 | §6 C25-09
+KEY-ROW-C25-10 | §6 C25-10
+KEY-ROW-C25-11 | §6 C25-11
+KEY-ROW-C25-12 | §6 C25-12
+COMMON_REPLACEMENT_RULE_TEXT
+正式母體／資格原件 + 官方報名、到考與成績核驗；合法 D+180 狀態回覆；需要時核對經授權的保險資料或雇主回覆。
+COMMON_REVIEW_ROLE_TEXT
+資料保管人 + 獨立覆核者（依實際權責指定）
+
+TABLE 14
+檢核項目代碼 | 具體檢核內容與品質要求 | 獨立覆核狀態 | 稽核員抽查驗證重點
+QC-01 | 是否全數列出 34 筆逐列明細資料且無空白遺漏？ | 待獨立覆核 | 稽核第 6 節，確認 C23-01~10、C24-01~12、C25-01~12 無缺漏
+QC-02 | 算術數值是否完全閉合且無隱藏變更分母？ | 待獨立覆核 | 稽核第 7 節，考照通過率 62.50%、70.00%、72.73% 均可由明細重算
+QC-03 | 考照缺考者與就業失聯者是否均依規定獨立列計？ | 待獨立覆核 | 考照缺考排拒於實考分母但另計缺考率；失聯者全額保留於就業分母
+QC-04 | 百分點變動（pp）與相對變化率（%）是否嚴格區分？ | 待獨立覆核 | 考照變動分別標註為 +10.23 pp 與 +16.36%，無混淆使用
+QC-05 | 是否明確標註小樣本限制且無推定辦訓因果？ | 待獨立覆核 | 第 8.2 節已載明樣本數 n=10\sim 12 之極小限制及非因果關係宣告
+QC-06 | 證據強度規準是否標明為「內部示範」而非官方評分？ | 待獨立覆核 | 第 9 節已以重點宣告標明為內部規準，非 TTQS 官方標準
+QC-07 | 負向鄰項邊界（0138、0140）是否已徹底劃分？ | 待獨立覆核 | 第 3 節明確排除薪資升遷（0138）與資訊系統使用率（0140）
+QC-08 | 所有合成事實是否均建立事實級替換登錄鍵？ | 待獨立覆核 | 第 12 節已登錄自 KEY-COH-001 至 KEY-DAT-001 等全要素管制鍵
+QC-09 | 官方佐證要求原文與頁次是否完全精確？ | 待獨立覆核 | 採用第 9 頁『證照通過率高及就業率大幅提升。』精確字串
+QC-10 | 全文是否杜絕偽造外部憑證或冒充組織實績？ | 待獨立覆核 | 全文明確標記 SAMPLE/SYNTHETIC，未捏造真實外部核可公文

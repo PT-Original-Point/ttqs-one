@@ -1,0 +1,43 @@
+{
+  "doc_id": "0095",
+  "requirement_id": "I18-E02",
+  "revision": "R14",
+  "reviewer_route": "OpenCode CLI v2.0.32",
+  "requested_model": "opencode/deepseek-v4.1-flash-free",
+  "provider_model_identity": "UNKNOWN; CLI event contained no upstream provider attestation",
+  "native_session_id": "ses_ea63db218ffebllQ0oXJZcqFl3",
+  "exit_code": 0,
+  "packet_sha256": "56ddfd5ef56498e00abef08733a783aca930ff52686b5207c2d5eb2c8b84c05e",
+  "reviewed_docx_sha256": "bde9a803c18137c98cf64992d75066b0722b5c3d3794eb7d6ab38667b88d0f19",
+  "reviewed_pdf_sha256": "6220a5641d6963badad457da99a05cb13e5c76d92088136e504da5bddb4a4918",
+  "reviewed_register_sha256": "e1331efc3f5109bcc1502821bb132b71cce682ec08926741915b0e0c906ad5b6",
+  "reviewed_manifest_sha256": "40bea6a4bec6d133a4a8ee80afb875e01f926075e6083817c69f897493680fc4",
+  "response_sha256": "19e93153345f208840efe71d1a91592f328d8b82ed7f519c2fe728ec1de10cd3",
+  "raw_stdout_sha256": "f683e20b53b688f7aeafb6695180018790e3b6379043447b9da0e4d0e191bced",
+  "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "verdict": "PARTIAL",
+  "blocking": 1,
+  "finding_id": "F-01",
+  "finding": "Register key UNK-0095-UNK_FORMAL_EFFECTIVE_DATE cites §9.5 row 3 at PDF p.38; current R14 PDF places row 3 at p.39. CSV hash is embedded in DOCX, so correct current row and rebuild/rebind candidate.",
+  "r12_observations": {
+    "OB-R12-01": "CLOSED",
+    "OB-R12-02": "CLOSED",
+    "OB-R12-03": "CLOSED",
+    "OB-R12-04": "CLOSED"
+  },
+  "limitations": [
+    "Packet-only consistency review; no file rehash or direct PDF/image inspection by reviewer.",
+    "No formal TTQS acceptance or REAL evidence is asserted."
+  ],
+  "tokens": {
+    "input": 5921,
+    "output": 1202,
+    "reasoning": 27112,
+    "cache": {
+      "read": 4992,
+      "write": 0
+    }
+  },
+  "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "completed_at_utc": "2026-10-20T14:43:59.814323+00:00"
+}

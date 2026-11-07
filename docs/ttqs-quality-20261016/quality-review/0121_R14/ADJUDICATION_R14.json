@@ -1,0 +1,42 @@
+{
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS_ONE_0121_R03_OPENCODE_GLM_EXACT_SHA_REVIEW_R14",
+  "doc_id": "0121",
+  "requirement_id": "I19-E09",
+  "candidate_sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+  "candidate_changed": false,
+  "reviewer_reported_verdict": "PASS",
+  "reconciled_status": "PARTIAL",
+  "reviewer_selected_model": "opencode/glm-5.3-flash-free",
+  "actual_serving_model": "UNKNOWN",
+  "cli_exit_code": 0,
+  "session_outcome": "succeeded",
+  "cost_usd": 0,
+  "tokens": {
+    "input": 25118,
+    "output": 1837,
+    "reasoning": 8316,
+    "cache": {
+      "read": 0,
+      "write": 0
+    }
+  },
+  "duration_seconds": 154.151,
+  "response_machine_parse": "FAIL_INVALID_JSON",
+  "visual_review_by_R14": "NOT_PERFORMED",
+  "limitations": [
+    "Blueprint sections 6 and 11 were omitted from review packet; compliance PARTIAL/UNKNOWN.",
+    "Typography and page-level visual findings UNKNOWN in text-only review.",
+    "Official source page 8 not directly viewed by reviewer."
+  ],
+  "findings": [
+    "NBL-01 exact punctuation of official quote; byte exactness requires source confirmation.",
+    "NBL-02 improvement-priority dimension is not a scored 1-5 instrument item.",
+    "NBL-03 SAMPLE absence reason differs between T06/T11 and section 8.2.",
+    "NBL-04 REP-0121-004-RATE key missing from replacement register T16.",
+    "NBL-05 declared case ID SAMPLE-0121-C01 differs from register key REP-0121-CASE-001."
+  ],
+  "acceptance": "NOT_GRANTED",
+  "source_raw_stdout_sha256": "8658499a8ca3bf98ab0813cc6d5b42439783280089c91139a61f9a0516e8126b",
+  "extracted_response_sha256": "5d05a03cedd3df6a2176f6e2163a2986c64a917173c402b7b7ba31e5dafe8941"
+}

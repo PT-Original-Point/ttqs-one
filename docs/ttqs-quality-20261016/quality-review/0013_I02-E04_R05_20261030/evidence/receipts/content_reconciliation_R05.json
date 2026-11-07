@@ -1,0 +1,117 @@
+{
+  "receipt_id": "0013_I02-E04_R05_CONTENT_RECONCILIATION",
+  "document_id": "0013",
+  "requirement_id": "I02-E04",
+  "supersedes_candidate_sha256": "276434c0b2fd10386c3bf39298fbad69056bf87c81ca9ed025ae5b8abb2a4c23",
+  "worker_source_sha256": "0f8f3961ec945e9e7fd6aa91464bb73ed65afcf0a31a3523ff303d7534175d4f",
+  "source_packet_sha256": "b87440b249ec78c6bbe69ff001fe9d7dbb5060d65f27fe61d21ec48cdb5bfa63",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0013_I02-E04_LUNA_TEXT_DRAFT_R01_20261029\\candidate\\0013_I02-E04_R05.docx",
+  "candidate_sha256": "2bf0407de7f24ad580cbb39df8365cbf2bc69feef97d069575daa3012a1b16d6",
+  "candidate_bytes": 65885,
+  "basis": "Independent semantic review of exact R04 SHA found 3 contradictions; only source status, version/deliverable identity, section locator and handoff boundary were changed. Content, sample courses, calculations and substantive operating tables were preserved.",
+  "changes": [
+    {
+      "locator": "封面／版本段",
+      "before": "版本： R01（文字草稿）",
+      "after": "版本： R05（Word 候選；SAMPLE/SYNTHETIC）"
+    },
+    {
+      "locator": "封面／目前處置",
+      "before": "目前處置： TEXT_DRAFT_ONLY_NOT_QA。這是內部工作簿，不是已核准或已公開的課程公告。不得直接對外發布。",
+      "after": "目前處置： DOCX_CANDIDATE_SAMPLE_SYNTHETIC。此檔供協會內部依流程核對、修訂與判定，不是已核准或已公開的課程公告；正式公開前須取得可核實的 REAL 資料、權責核准及公開讀回證據。"
+    },
+    {
+      "locator": "第 2.1 節／來源包狀態",
+      "before": "本次沒有可用的 0013 專屬 source packet；依本任務限定，只以已核對的完整 Blueprint row 和官方 PDF 第 1 頁作為權威需求來源。",
+      "after": "本候選已核對 0013 專屬 source_packet_R01.json（SHA-256 b87440b249ec78c6bbe69ff001fe9d7dbb5060d65f27fe61d21ec48cdb5bfa63），狀態為 VERIFIED_SOURCE_AND_UNIQUE_BLUEPRINT；來源包記錄的 Worker 原稿 SHA-256 0f8f3961ec945e9e7fd6aa91464bb73ed65afcf0a31a3523ff303d7534175d4f 與採用原稿一致，並將官方 PDF 第 1 頁與唯一 Blueprint row 分別綁定其 SHA。故原始初稿所述「沒有可用 source packet」不再是本候選的目前狀態。"
+    },
+    {
+      "locator": "第 2.3 節／表 1／附件索引與版本",
+      "before": "第 12、13 節",
+      "after": "第 12、14 節；SYNTHETIC 事實清冊在第 13 節"
+    },
+    {
+      "locator": "第 14 節／表 20／row 1",
+      "before": "0013／I02-E04 專屬工作簿文字草稿",
+      "after": "0013／I02-E04 年度訓練課程公開清單 DOCX 候選"
+    },
+    {
+      "locator": "第 14 節／表 20／row 2",
+      "before": "R01",
+      "after": "R05"
+    },
+    {
+      "locator": "第 14 節／表 20／row 3",
+      "before": "2026-10-29",
+      "after": "2026-10-30"
+    },
+    {
+      "locator": "第 14 節／表 20／row 4",
+      "before": "指定 Blueprint 唯一 row + 官方 PDF 第 1 頁",
+      "after": "官方 PDF 第 1 頁 + 唯一 Blueprint row；source_packet_R01.json SHA-256 b87440b249ec78c6bbe69ff001fe9d7dbb5060d65f27fe61d21ec48cdb5bfa63"
+    },
+    {
+      "locator": "第 14 節／表 20／row 8",
+      "before": "尚未執行；不得標 QA PASS",
+      "after": "語意與版面 QA 以各自外置收據綁定本候選 exact SHA；本表不自報 PASS"
+    },
+    {
+      "locator": "第 14 節／表 20／row 9",
+      "before": "TEXT_DRAFT_ONLY_NOT_QA",
+      "after": "CANDIDATE_SAMPLE_SYNTHETIC_NOT_ACCEPTED"
+    },
+    {
+      "locator": "文件末段／交付邊界",
+      "before": "交付邊界： 本件是 Markdown 文字草稿；沒有製作 DOCX，也沒有改動共享控制、dashboard 或 GitHub。此狀態只描述本稿交付種類，不構成獨立品質驗收或正式接受。",
+      "after": "交付邊界：本件是 0013／I02-E04 年度訓練課程公開清單 DOCX 候選，含完整 SAMPLE/SYNTHETIC 示例與內部核對流程。它不證明原始點協會已核准或公開課程、已有人報名／受訓或取得任何訓練成果，也不替代官方、第三方或協會真實原件；正式使用前須依清冊逐項以可核實 REAL 資料替換並由權責人員確認。"
+    }
+  ],
+  "source_fragments_explicitly_revised": [
+    {
+      "raw": "**版本：** R01（文字草稿）",
+      "normalized": "版本r01文字草稿"
+    },
+    {
+      "raw": "**目前處置：** TEXT_DRAFT_ONLY_NOT_QA。這是內部工作簿，不是已核准或已公開的課程公告。不得直接對外發布。",
+      "normalized": "目前處置textdraftonlynotqa這是內部工作簿不是已核准或已公開的課程公告不得直接對外發布"
+    },
+    {
+      "raw": "- 本次沒有可用的 0013 專屬 source packet；依本任務限定，只以已核對的完整 Blueprint row 和官方 PDF 第 1 頁作為權威需求來源。",
+      "normalized": "本次沒有可用的0013專屬sourcepacket依本任務限定只以已核對的完整blueprintrow和官方pdf第1頁作為權威需求來源"
+    },
+    {
+      "raw": "| 附件索引與版本 | 第 12、13 節 | 列出本稿內部示例、官方來源和版本狀態 |",
+      "normalized": "附件索引與版本第1213節列出本稿內部示例官方來源和版本狀態"
+    },
+    {
+      "raw": "| 文件 | 0013／I02-E04 專屬工作簿文字草稿 |",
+      "normalized": "文件0013i02e04專屬工作簿文字草稿"
+    },
+    {
+      "raw": "| 版本 | R01 |",
+      "normalized": "版本r01"
+    },
+    {
+      "raw": "| 草稿日期 | 2026-10-29 |",
+      "normalized": "草稿日期20261029"
+    },
+    {
+      "raw": "| 來源口徑 | 指定 Blueprint 唯一 row + 官方 PDF 第 1 頁 |",
+      "normalized": "來源口徑指定blueprint唯一row官方pdf第1頁"
+    },
+    {
+      "raw": "| 獨立語意／版面 QA | 尚未執行；不得標 QA PASS |",
+      "normalized": "獨立語意版面qa尚未執行不得標qapass"
+    },
+    {
+      "raw": "| 文件狀態 | TEXT_DRAFT_ONLY_NOT_QA |",
+      "normalized": "文件狀態textdraftonlynotqa"
+    },
+    {
+      "raw": "**交付邊界：** 本件是 Markdown 文字草稿；沒有製作 DOCX，也沒有改動共享控制、dashboard 或 GitHub。此狀態只描述本稿交付種類，不構成獨立品質驗收或正式接受。",
+      "normalized": "交付邊界本件是markdown文字草稿沒有製作docx也沒有改動共享控制dashboard或github此狀態只描述本稿交付種類不構成獨立品質驗收或正式接受"
+    }
+  ],
+  "formal_acceptance": "UNKNOWN",
+  "human_real_evidence": "NOT_INCLUDED"
+}

@@ -1,0 +1,205 @@
+{
+  "work_id": "TTQS-0140-I19-E30-R11-COMPREHENSIVE-QA",
+  "doc_id": "0140",
+  "requirement_id": "I19-E30",
+  "official_checklist_index": 154,
+  "printed_checkbox_serial": "UNKNOWN",
+  "candidate_status": "CANDIDATE",
+  "real_data_status": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED",
+  "candidate_sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d",
+  "candidate_bytes": 127801,
+  "parent_R08_sha256": "a6feeb119c14731b63c92833411721e6613db5a011a26f8e38334de9ecacc970",
+  "checks": {
+    "docx_hash_matches_build_receipt": {
+      "result": "PASS",
+      "evidence": {
+        "docx_sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d",
+        "receipt_sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d",
+        "bytes": 127801
+      }
+    },
+    "docx_zip_integrity": {
+      "result": "PASS",
+      "evidence": "ZIP CRC test"
+    },
+    "python_docx_open": {
+      "result": "PASS",
+      "evidence": {
+        "paragraphs": 154,
+        "tables": 18,
+        "inline_shapes": 1
+      }
+    },
+    "official_mapping": {
+      "result": "PASS",
+      "evidence": {
+        "requirement": "DOCX 0140 -> I19-E30 -> 157 index 154; printed checkbox UNKNOWN"
+      }
+    },
+    "sample_real_formal_status": {
+      "result": "PASS",
+      "evidence": {
+        "candidate": "CANDIDATE",
+        "real": "UNKNOWN/HOLD",
+        "formal_acceptance": "NOT_GRANTED"
+      }
+    },
+    "targeted_instructor_distribution": {
+      "result": "PASS",
+      "evidence": "Section 9.2 states all three years without unsupported cause"
+    },
+    "targeted_learner_distribution": {
+      "result": "PASS",
+      "evidence": "Section 9.2 states 2023=2, 2024=3, 2025=3"
+    },
+    "human_facing_status_cells": {
+      "result": "PASS",
+      "evidence": [
+        [
+          "官方映射",
+          "DOCX 0140 是否仍對 I19-E30、157 index 154、官方第9頁？",
+          "官方第9頁出處已核對；本文件為示範，不代表正式評核結果",
+          "最新官方來源頁及本文件對照紀錄"
+        ],
+        [
+          "Word 與使用前檢查",
+          "頁碼、表格可讀性與附件是否齊全？",
+          "使用前須逐頁檢視頁碼、表格可讀性與附件，並由權責人員核定",
+          "頁碼檢查紀錄、附件清單、權責人員核定紀錄"
+        ]
+      ]
+    },
+    "pipeline_jargon_removed_from_checklist": {
+      "result": "PASS",
+      "evidence": [
+        [
+          "官方映射",
+          "DOCX 0140 是否仍對 I19-E30、157 index 154、官方第9頁？",
+          "官方第9頁出處已核對；本文件為示範，不代表正式評核結果",
+          "最新官方來源頁及本文件對照紀錄"
+        ],
+        [
+          "Word 與使用前檢查",
+          "頁碼、表格可讀性與附件是否齊全？",
+          "使用前須逐頁檢視頁碼、表格可讀性與附件，並由權責人員核定",
+          "頁碼檢查紀錄、附件清單、權責人員核定紀錄"
+        ]
+      ]
+    },
+    "canonical_dataset_80_rows": {
+      "result": "PASS",
+      "evidence": {
+        "rows": 80,
+        "dataset_sha256": "d1322d85bb809f3606a2edf4a8e0a26b9bb461dee4577e91ea0522972694c63d"
+      }
+    },
+    "annual_math_and_incomplete_cases_recomputed": {
+      "result": "PASS",
+      "evidence": {
+        "annual_rates": {
+          "2023": [
+            "60.00%",
+            "45.00%",
+            "75.00%"
+          ],
+          "2024": [
+            "78.57%",
+            "64.29%",
+            "81.82%"
+          ],
+          "2025": [
+            "87.50%",
+            "78.13%",
+            "89.29%"
+          ]
+        },
+        "incomplete_active_by_role_year": {
+          "INSTRUCTOR": {
+            "2023": 1,
+            "2024": 1,
+            "2025": 0
+          },
+          "LEARNER": {
+            "2023": 2,
+            "2024": 3,
+            "2025": 3
+          }
+        }
+      }
+    },
+    "register_80_ids_and_controls_match": {
+      "result": "PASS",
+      "evidence": {
+        "dictreader_records": 82,
+        "physical_lines": 83,
+        "dataset_ids": 80,
+        "matched_ids": 80,
+        "control_rows": 2,
+        "register_sha256": "9a207c162cc36b08896d4f1ad04ccdcfdefa62bd2b038be31dc715702982e19f"
+      }
+    },
+    "register_header_description_corrected": {
+      "result": "PASS",
+      "evidence": "82 data records + header = 83 physical lines"
+    },
+    "chart_embedded_and_captioned": {
+      "result": "PASS",
+      "evidence": {
+        "inline_shapes": 1
+      }
+    },
+    "R07_unchanged": {
+      "result": "PASS",
+      "evidence": {
+        "sha256": "7343688549e213f26ab22e58436a8d6915a679b72d75803a3c25566f94829ebe"
+      }
+    },
+    "R08_unchanged": {
+      "result": "PASS",
+      "evidence": {
+        "sha256": "a6feeb119c14731b63c92833411721e6613db5a011a26f8e38334de9ecacc970"
+      }
+    },
+    "R09_unchanged": {
+      "result": "PASS",
+      "evidence": {
+        "sha256": "49afdcfa11b6f91952590995b4c0152d76271b2169b2a4433bb08bbbba46db4e"
+      }
+    },
+    "markdown_italics_render_without_literal_markup": {
+      "result": "PASS",
+      "evidence": {
+        "asterisks_in_extracted_docx": 2,
+        "legitimate_SYN_wildcards": 2,
+        "visible_markup_absent": true
+      }
+    },
+    "no_unsupported_real_or_approval_claims": {
+      "result": "PASS",
+      "evidence": "Sample/real and no-approval statements present"
+    },
+    "structure_matches_R07_baseline": {
+      "result": "PASS",
+      "evidence": {
+        "tables": 18,
+        "rows": 277,
+        "sections": 8,
+        "landscape_sections": 4
+      }
+    },
+    "minimum_explicit_font_at_least_9_5pt": {
+      "result": "PASS",
+      "evidence": {
+        "min_pt": 9.5,
+        "run_count": 1697
+      }
+    }
+  },
+  "status": "PASS",
+  "scope_limitations": [
+    "No visual inspection yet.",
+    "No independent semantic review of this R11 SHA yet.",
+    "No formal Human acceptance or REAL evidence claim."
+  ]
+}

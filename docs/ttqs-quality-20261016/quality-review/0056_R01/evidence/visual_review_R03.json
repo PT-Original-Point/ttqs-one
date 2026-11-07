@@ -1,0 +1,37 @@
+{
+  "status": "PASS_WITH_NONBLOCKING_FINDINGS",
+  "scope": "All 14 full-page PNGs visually inspected at original resolution after Microsoft Word COM PDF export, rasterized at 120 dpi.",
+  "page_count": 14,
+  "method": "Microsoft Word COM ExportAsFixedFormat; bundled render_docx.py attempted first but could not locate soffice.exe.",
+  "checks": {
+    "all_pages_present_and_inspected": true,
+    "page_3_state_dictionary_no_two_row_tail": true,
+    "page_8_T5_complete_table_on_one_landscape_page": true,
+    "blank_or_sparse_tail_page": false,
+    "clipping_or_overlap_observed": false,
+    "tables_borders_and_headers_readable": true,
+    "finding": "In dense A4-landscape T1-T4/T7 forms, short Latin status tokens such as UNKNOWN wrap at arbitrary character boundaries in narrow cells. Text remains visible and recoverable; no clipping was seen, but code-token readability is reduced. Page 8 retains intentional whitespace because all T5 rows are kept together."
+  },
+  "candidate_sha256": "1960c37ee335d0af4872d2c41100a26c3f0c38a4475ec2e185993708c3028f3d",
+  "pdf_sha256": "93d10fb28681796ef15123b074fce0343be34c72c3cb29acce7887c83a0cbb59",
+  "page_sha256": {
+    "page-01.png": "b9d907777f4267868f029cafa702a646f2863b99a9367500108a074c8d65b99c",
+    "page-02.png": "6ffadaecae3ef652d566a46040d66130a597961c30110f92e6aa2622f65fc9db",
+    "page-03.png": "7f71c76bb32476c7be2ec85a86aa9a04e049a1222f36aabbae213d40969dc342",
+    "page-04.png": "fd91578a3edbf1de8cb521a8c5abfb4e8d1828738f46808be3d18b41158c8920",
+    "page-05.png": "2bf6b1b2e7238fc87992bbf2d79c6e373b9d19288394e937ba3966ffe473a43a",
+    "page-06.png": "8dd61bea9d7cf3ceb3db0992877198b11c8b17a42382f5d61b269d1869007162",
+    "page-07.png": "7457d15b49dff6fdb3ae0d2b7a145d4bf9444c2cf7d0833d6949a688736755cf",
+    "page-08.png": "7fe21e04a8ee660f773db5c1b6e4559bdd992576b80f783e6d6688dc81db17e0",
+    "page-09.png": "ef6e5f91316e85674f44bcaeaa1088559275361395f02c1fd3479584d0a59991",
+    "page-10.png": "6c03f1a2e368f963ba685ee53dc5ddd75f865e43a98f90b1ef82b652fe8153e4",
+    "page-11.png": "7698fbfc0f373e11a804dc08ebfbd1ca37abf5d7b60e1a792a4a075c1d33c930",
+    "page-12.png": "6542d4c449058545b7c1961baa4c655cb4077609275f26558b53f9ae9d170a63",
+    "page-13.png": "859afc1025cf94a2eb60c81d52d33dc017175c5e6c31699c8bf36c9cd7978595",
+    "page-14.png": "e24b447176ccd807430f4b249e7e616d40f4be2781a7ebf369a17abaff0ffa6c"
+  },
+  "packet_sha256": "a85366f223c16a038832dbb8caf2f454a575ed0d9ae8fc943555ee939052c1c3",
+  "blueprint_sha256": "b3a66a78dac86dfe56f1c3747e044038ed675f13a4400cdd2417bbb255d80c35",
+  "semantic_review": "NOT_YET_PERFORMED",
+  "formal_acceptance": "NOT_ACCEPTED"
+}

@@ -1,0 +1,97 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0012",
+  "requirement_id": "I02-E03",
+  "work_id": "TTQS-0012-R06-WORD-VISUAL-QA-20261030",
+  "candidate_sha256": "f4c7a8242cb5ae0c4c038d546b2d45cac938028a521ea6ffcb5cc02334c03d13",
+  "pdf_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0012_I02-E03_LUNA_TEXT_DRAFT_R01_20261029\\qa\\render_R06\\0012_I02-E03_R06_WORD_NATIVE.pdf",
+  "pdf_sha256": "10bbf705680be2b2a8c15fe66fbb4ee236e6c6fa7c842ee5967c4bd4dab97488",
+  "pdf_bytes": 696783,
+  "render_method": "Microsoft Word COM ExportAsFixedFormat, then Poppler pdftoppm at 120 dpi",
+  "observed_at_local": "2026-10-30T19:19:07.4101593+08:00",
+  "page_count": 17,
+  "visual_coverage": "ALL_17_PAGES_OVERVIEW; full-resolution direct inspection on changed pages 5,6,7,8,9,15,17 and prior direct inspection of page 16; pages 1-4,10-14,16 pixel-identical to inspected R05 render",
+  "r05_pixel_identical_pages": [
+    "page-01.png",
+    "page-02.png",
+    "page-03.png",
+    "page-04.png",
+    "page-10.png",
+    "page-11.png",
+    "page-12.png",
+    "page-13.png",
+    "page-14.png",
+    "page-16.png"
+  ],
+  "changed_pages": [
+    {
+      "page": "page-05.png",
+      "reason": "pixels changed"
+    },
+    {
+      "page": "page-06.png",
+      "reason": "pixels changed"
+    },
+    {
+      "page": "page-07.png",
+      "reason": "pixels changed"
+    },
+    {
+      "page": "page-08.png",
+      "reason": "pixels changed"
+    },
+    {
+      "page": "page-09.png",
+      "reason": "pixels changed"
+    },
+    {
+      "page": "page-15.png",
+      "reason": "pixels changed"
+    },
+    {
+      "page": "page-17.png",
+      "reason": "pixels changed"
+    }
+  ],
+  "direct_inspection_findings": [
+    "All changed pages 5, 6, 7, 8, 9, 15 and 17 inspected at full resolution; no clipping, overlap or table overflow observed.",
+    "§5 sample service-time additions remain legible and within page margins.",
+    "Pages 6-9 application, review and calculation tables remain readable; page 9 worked arithmetic is internally rendered without clipping.",
+    "Page 15 SYN register rows remain readable and within landscape page bounds.",
+    "SYN-037 to SYN-039 and section 13 remain readable on pages 16-17; page 16 is pixel-identical to R05.",
+    "All 17 pages are present; no blank trailing page."
+  ],
+  "scope_limitations": [
+    "Visual/layout only; not semantic acceptance, legal review, association approval or formal acceptance."
+  ],
+  "visual_verdict": "PASS_LAYOUT_ONLY_EXACT_SHA",
+  "changed_pages_directly_inspected": [
+    "page-05.png",
+    "page-06.png",
+    "page-07.png",
+    "page-08.png",
+    "page-09.png",
+    "page-15.png",
+    "page-17.png"
+  ],
+  "page_image_sha256": {
+    "page-12.png": "42039f6acd630eb4f8d89a79f26a9a5b8d0ba0eef3e54bc1594866bd67b181a6",
+    "page-15.png": "720560ee2dc3486ece85acd2d2c94679ea6ebb1beebbfc6d5aeef21447ee91d1",
+    "page-10.png": "2c328a8789f9d333157d23b23c02e15549bb293e152b6370a955629f39c602b7",
+    "page-16.png": "a5b5d9623f54e341bd5ba909a1bb8c5822b063485cdb6a360e20c0fe2cb68f52",
+    "page-02.png": "99b4bb438b28ba434cf0454cf33efbc9eac4126398436c9882401ac96482893b",
+    "page-08.png": "7a90a6dea8925ced1a59cf117b7d94bb2355327d145c56eda613f470ca4ec0cd",
+    "page-06.png": "be9e96c4311b2f44dbc42883952e40498f37444e82ec46f1f7618f11da92eb6a",
+    "page-05.png": "64759ca2ede849821f115ebe13786b1648e5366c5c6f33d6fff3db00558c1008",
+    "page-11.png": "d7d6e95769517dde8e23f5bf3fcefe6cb7a412cbb531d255d8ac609202dfe6e9",
+    "page-01.png": "f1f1bc06e6e01d9319ac5c0e9ae37c9c33c514839dee2b6c2c62cf4535517104",
+    "page-04.png": "5d1dce9354f2d7bfa2280bb0f94edc065f11b792304bb6a7874b140c84ea5cfe",
+    "page-07.png": "a3fcc2a711eca176ccc324f16b788d316a3fa1af50574139604654dff59b229a",
+    "page-14.png": "cc5f39ec4d5643a6b736b53a54e5e9c7e592c1e5b477c2fdc3fa542ed1c50f75",
+    "page-09.png": "6819c50dba0ee3e0f926504d865890d180790f553fb2172a5882edf5d40c3947",
+    "page-03.png": "5f5199ac9035c22e52cae6976a6a02733f16d8fc3662306d36cc553ce27bc33f",
+    "page-17.png": "61ad01c3fc394d532c84bf4fbea0de2a38dcbdc821aed61039abce772adc4aaf",
+    "page-13.png": "bfa6bf574c1c7b70818577e14c009b1949f1538fd269de9642a118b1beb7b8f3"
+  },
+  "contact_sheet_sha256": "2dc9c9ad2ad19b168502e0ba70c9c8b166270e888c3e73e1946916a40a1449ff"
+}

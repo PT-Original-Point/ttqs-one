@@ -1,0 +1,22 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0127",
+  "candidate_sha256": "abba46bcdd0919c4511df025cd90d65cd302fe3f9f59c86d0fa8b7efe2015285",
+  "status": "BLOCKED_WORD_NATIVE_EXPORT_TIMEOUT",
+  "attempt": 2,
+  "observed_at": "2026-10-28T19:13:25.5467190+08:00",
+  "elapsed_seconds": 207.0,
+  "last_recorded_stage": "DOCUMENT_OPENED",
+  "stage_time": "2026-10-28T19:10:04.6623457+08:00",
+  "runner_pid": 79468,
+  "runner_cpu_seconds": 149.9375,
+  "owned_word_pid": 74520,
+  "owned_word_command": "\"C:\\Program Files\\Microsoft Office\\Root\\Office16\\WINWORD.EXE\" /Automation -Embedding",
+  "unique_new_word_pids": [
+    74520
+  ],
+  "pdf_exists": false,
+  "render_receipt_exists": false,
+  "diagnosis": "Documents.Open completed; renderer remained at ExportAsFixedFormat beyond 120 seconds. CPU continued rising; both processes responsive. No PDF/receipt.",
+  "cleanup": "Stop only the hidden renderer and unique automation Word PID from this attempt; preserve earlier Word PIDs."
+}

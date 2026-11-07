@@ -1,0 +1,80 @@
+{
+  "schema": "ttqs-one-0141-r07-c1-1-version-review-receipt-v1",
+  "work_id": "TTQS_ONE_0141_I19-E31_R07_C1_1_VERSION_DELTA_REVIEW",
+  "doc_id": "0141",
+  "requirement_id": "I19-E31",
+  "candidate_docx_sha256": "8e0252ac4ba18edbd364e29c7f143744e801b062b3c2cd8d69f5c4a83aee7c2c",
+  "extracted_text_sha256": "ea52796e8609a38732f8b960eb81464813b4c88181da403b66d425dc77cd4815",
+  "packet_sha256": "31f21350a0579b10d5fe230055704e0941bd7cceeb9e28d753de95a340682407",
+  "prior_candidate_docx_sha256": "0922f737c19598b4448b60f25a6c39391bb444a1dde2536f8eef4e83cf44673a",
+  "prior_review_raw_sha256": "045e7f75e6bc8c405a4754abfc2305c4bc998d710a899827b07978a3d95b8e81",
+  "current_raw_response_path": "OPENCODE_R07_C1_1_VERSION_REVIEW_STDOUT.jsonl",
+  "current_raw_response_sha256": "cc0ca1193e28fa9ffc7448b55dc8cf82c291285ca212e7d72b89d3e01e54e99c",
+  "parsed_review_sha256": "8c6e8cf3c05a7b14e154ebfa338b7961c9ae4cfe5c3b87f8b6ae84953ba5457e",
+  "requested_model": "opencode/deepseek-v4.1-flash-free",
+  "catalog_listed_free_sku": true,
+  "reviewer_runtime_model_claim": "DeepSeek V4.1 Flash Free",
+  "actual_model_identity": "UNKNOWN",
+  "runtime_model_identity_attested": false,
+  "tokens_runtime_reported": {
+    "input": 2252,
+    "output": 1208,
+    "reasoning": 15242,
+    "cache_read": 4096
+  },
+  "runtime_cost_reported": 0,
+  "provider_billing_verified": false,
+  "cli_process_id": 87888,
+  "process_exit_code": "UNKNOWN",
+  "session_id": "ses_e8f1993bbffedzZxDS2OBZW5c9",
+  "semantic_scope": "SEMANTIC_VERSION_DELTA_ONLY",
+  "verdict": "PASS",
+  "findings": [
+    {
+      "id": "R07-C1.1-V01",
+      "locator": "封面「版本界線」段第1句 (cover/version-boundary paragraph, sentence 1)",
+      "status": "RESOLVED",
+      "severity": "INFO",
+      "observation": "Identifies the candidate as R07-C1.1 and expressly labels it a document-control subrevision of R07-C1. No competing candidate identifier appears."
+    },
+    {
+      "id": "R07-C1.1-V02",
+      "locator": "基本資料表「版次」欄 (basic-information table, version cell)",
+      "status": "RESOLVED",
+      "severity": "INFO",
+      "observation": "The cell reads 「正文修訂 R07-C1.1（R07-C1 之版控一致性子修訂）」, matching the cover identifier and the same subrevision characterization."
+    },
+    {
+      "id": "R07-C1.1-V03",
+      "locator": "修訂歷史表最新一列 R07-C1.1-SYN (latest revision-history row)",
+      "status": "RESOLVED",
+      "severity": "INFO",
+      "observation": "The inserted latest row is R07-C1.1-SYN and describes only version-field consistency. The -SYN suffix follows the retained R07-C1-SYN history-row convention; the row embeds R07-C1.1 and does not create a competing candidate version."
+    },
+    {
+      "id": "R07-C1.1-V04",
+      "locator": "封面「版本界線」段第2–3句 (cover paragraph, sentences 2–3)",
+      "status": "RESOLVED",
+      "severity": "INFO",
+      "observation": "The four prior C1 repair scopes are explicit: (1) link the ASCII source-gap note to the complaint condition; (2) unify the replacement process to five steps; (3) state the Q2 Top-2 strict >75.00% threshold; (4) remove the old analysis floor."
+    },
+    {
+      "id": "R07-C1.1-V05",
+      "locator": "封面「版本界線」段末句 (cover paragraph, final sentence)",
+      "status": "RESOLVED",
+      "severity": "INFO",
+      "observation": "The text says 「36 筆合成分數」 (synthetic scores), not REAL data, and states that C1.1 still awaits this exact-SHA review and does not constitute formal acceptance. No false claim of REAL data or Human acceptance is made."
+    },
+    {
+      "id": "R07-C1.1-V06",
+      "locator": "Deterministic parent-to-candidate text-diff receipt header / candidate binding",
+      "status": "RESOLVED",
+      "severity": "INFO",
+      "observation": "The receipt is recorded as parent 0922f737c19598b4448b60f25a6c39391bb444a1dde2536f8eef4e83cf44673a to candidate 8e0252ac4ba18edbd364e29c7f143744e801b062b3c2cd8d69f5c4a83aee7c2c; the stated candidate DOCX SHA matches candidate_docx_sha256 and no alternate candidate SHA appears. The bounded diff is one changed paragraph plus two table operations (basic-information cell and history-row insertion)."
+    }
+  ],
+  "visual_review": "NOT_PERFORMED",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_data_status": "UNKNOWN/HOLD",
+  "official_score": "NOT_ASSIGNED"
+}

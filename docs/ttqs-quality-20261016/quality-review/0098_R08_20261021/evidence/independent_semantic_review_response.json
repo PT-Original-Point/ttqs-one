@@ -1,0 +1,82 @@
+{
+  "verdict": "PASS",
+  "candidate_docx_sha256": "a5d4bb14c884ff2d19db7bb6a86f999de0604d9ac6bacd9eb26f0b5db2c9cdba",
+  "reviewed_requirement_id": "I18-E06",
+  "reviewed_extraction_sha256": "75156190b5e7a52072e130c10b202a07b09dc56e52d276f34953e977c6082179",
+  "reviewed_register_sha256": "9fa51aef4394a3e0f8ae8e42a42cdfa8b49356802427614e1ac439cb512e29e4",
+  "findings": [
+    {
+      "severity": "note",
+      "location": "Cover | document-control block | official_serial field",
+      "quote": "官方打印序號：UNKNOWN（註：評核契約項目序號非官方印製序號，依規定標記為 UNKNOWN）",
+      "finding": "Official printed serial correctly marked UNKNOWN per policy; no official checkbox serial exists for this deliverable.",
+      "required_action": "None; this is correct handling."
+    },
+    {
+      "severity": "note",
+      "location": "§8.2.2 | R03 retired ID mapping",
+      "quote": "R03 的FACT-0098-074–FACT-0098-085是重複的調查流程事實，已整併到 R04/R05 canonical FACT-0098-022–FACT-0098-033",
+      "finding": "Register correctly preserves historical ID gaps (074–091, 089–091) without reuse; 192 unique FACT IDs in R08 register match declared count.",
+      "required_action": "None; version lineage correctly documented."
+    }
+  ],
+  "arithmetic_checks": [
+    {
+      "measure": "Flow counts (N_invite, N_sub, N_dup, N_resp, N_valid, nonresponse)",
+      "inputs": "12 invite codes (8L+4C); 12 raw submissions incl. L02 duplicate; 1 duplicate isolated; L07 incomplete; L08 nonresponse",
+      "calculation": "N_invite=12; N_sub=12; N_dup=1; N_resp=12-1=11; N_valid=11-1=10; nonresponse=1",
+      "result": "All counts match §4.1 Table 4.1 and §5.2 items 1–4",
+      "status": "PASS"
+    },
+    {
+      "measure": "Response rate, valid-among-responses, valid yield, nonresponse ratio",
+      "inputs": "N_resp=11, N_invite=12, N_valid=10",
+      "calculation": "Response rate=11/12=91.6667%→91.7%; Valid among responses=10/11=90.9091%→90.9%; Valid yield=10/12=83.3333%→83.3%; Nonresponse=1/12=8.3333%→8.3%",
+      "result": "All displayed values match §5.2 items 6 and 130",
+      "status": "PASS"
+    },
+    {
+      "measure": "Q3 v2 overall mean and grand mean",
+      "inputs": "10 valid forms Q3 scores: L01=4, L02=3, L03=3, L04=3, L05=3, L06=4, C01=4, C02=2, C03=3, C04=4; 50 total item scores",
+      "calculation": "Q3 sum=33, mean=33/10=3.30; Grand total=42+43+33+40+42=200, grand mean=200/50=4.00",
+      "result": "Matches §5.2 item 5, §5.3, §5.4, and register FACT-0098-056, -059, -116, -203",
+      "status": "PASS"
+    },
+    {
+      "measure": "Group descriptive statistics (learner N=6, client N=4)",
+      "inputs": "Table 5.1 v2 scores split by group",
+      "calculation": "Learner Q3 sum=4+3+3+3+3+4=20, mean=20/6=3.33; Client Q3 sum=4+2+3+4=13, mean=13/4=3.25; Learner total=121/30=4.03; Client total=79/20=3.95",
+      "result": "Matches §5.4 Table 5.4 and register FACT-0098-060, -061, -177–181, -200, -201",
+      "status": "PASS"
+    },
+    {
+      "measure": "Zero-denominator rule behavior",
+      "inputs": "Synthetic test fixture: N=0 group",
+      "calculation": "Mean=N/A (not 0); excluded from weighted average; disclosed with reason",
+      "result": "Rule correctly specified in §5.2 item 7, §5.4, register FACT-0098-117, -125; no division-by-zero error",
+      "status": "PASS"
+    }
+  ],
+  "blueprint_tests": {
+    "official_requirement_match": "PASS",
+    "title_blind_identity": "PASS",
+    "genre_and_daily_usability": "PASS",
+    "required_sections_tables_fields": "PASS",
+    "sample_register_complete": "PASS",
+    "real_boundary_and_no_fabrication": "PASS",
+    "cross_document_neighbor_rejection": "PASS",
+    "source_locator_accuracy": "PASS"
+  },
+  "neighbor_distinction": {
+    "0097_I18-E05": "0097 crosswalk title: '問卷調查等顯示目標客戶及學員認為訓練有達成能_分析報告' (I18-E05). 0098 §1.3 table and §5.5 item 2 explicitly exclude capability/learning claims; 0098 Q1–Q5 measure only system/process satisfaction (notification, contact, reminders, info access, admin flow). Distinct scope proven.",
+    "0099_I18-E07": "0099 crosswalk title: '提出目標客戶及學員對訓練達能力提升之說明（學_分析報告' (I18-E07). 0098 §1.3 table and §5.5 item 2 state 0098 does not substitute learning-skill or capability improvement explanations. 0098 records only execution system, flow control, and process-face descriptive stats. Distinct scope proven."
+  },
+  "sample_real_boundary": "All 192 register facts classified SAMPLE/SYNTHETIC with real_replacement_needed=YES and real_replacement_source=UNKNOWN/由協會合法取得. DOCX §3.4 consent preamble and register FACT-0098-099–110 explicitly condition REAL consent on (1) authorized approved notice/consent text AND (2) verifiable individual affirmative response; fixture flags (SYN-YES-FIXTURE, SYN-2-SUBMIT-FIXTURE, SYN-PAPER-FIXTURE) are process traceability only. No synthetic fact claimed as REAL. Replacement checklist §8.1 requires item-by-item verifiable source substitution before REAL upgrade. Boundary fully enforced.",
+  "limitations": [
+    "Visual layout (font sizes, page breaks) not verified; only exact-SHA body text and register reviewed.",
+    "Official printed serial (checkbox number) remains UNKNOWN per candidate; not validated against authoritative source.",
+    "No REAL source documents (invitation logs, raw exports, signed receipts, approved notices, correction requests, review signatures, handover receipts) were supplied or verified; all REAL fields remain UNKNOWN/HOLD.",
+    "R07 prior receipts not transferred; R08 stands on its own exact SHA."
+  ],
+  "formal_acceptance": "NOT_GRANTED"
+}

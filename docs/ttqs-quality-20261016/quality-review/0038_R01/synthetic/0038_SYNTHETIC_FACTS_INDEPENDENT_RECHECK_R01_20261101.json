@@ -1,0 +1,190 @@
+{
+  "schema": "ttqs-one-0038-synthetic-independent-recheck-v1",
+  "doc_id": "0038",
+  "requirement_id": "I08-E02",
+  "official_checkbox": "039",
+  "observed_at_tpe": "2026-11-01T12:03:54+08:00",
+  "method": "Separate PowerShell CSV re-import and recomputation; no model",
+  "facts_csv_sha256": "031725229542a647690a5d9826ba4545d3c29c0cb0b272c64284140d6b322579",
+  "calculation_receipt_sha256": "35eafbe08c2bed1e506a92511203051e3571aea9e838b8a70668ea2835266c8e",
+  "row_count": 165,
+  "checks": [
+    {
+      "check": "unique_ids",
+      "actual": "165",
+      "expected": "165",
+      "pass": true
+    },
+    {
+      "check": "doc_id_singleton",
+      "actual": "1",
+      "expected": "1",
+      "pass": true
+    },
+    {
+      "check": "requirement_singleton",
+      "actual": "1",
+      "expected": "1",
+      "pass": true
+    },
+    {
+      "check": "official_checkbox_singleton",
+      "actual": "1",
+      "expected": "1",
+      "pass": true
+    },
+    {
+      "check": "case_id_singleton",
+      "actual": "1",
+      "expected": "1",
+      "pass": true
+    },
+    {
+      "check": "source_sha_singleton",
+      "actual": "1",
+      "expected": "1",
+      "pass": true
+    },
+    {
+      "check": "blueprint_sha_singleton",
+      "actual": "1",
+      "expected": "1",
+      "pass": true
+    },
+    {
+      "check": "paired_cases",
+      "actual": "0",
+      "expected": "8",
+      "pass": false
+    },
+    {
+      "check": "pre_rows",
+      "actual": "0",
+      "expected": "8",
+      "pass": false
+    },
+    {
+      "check": "post_rows",
+      "actual": "0",
+      "expected": "8",
+      "pass": false
+    },
+    {
+      "check": "pre_total",
+      "actual": "",
+      "expected": "27",
+      "pass": false
+    },
+    {
+      "check": "post_total",
+      "actual": "",
+      "expected": "33",
+      "pass": false
+    },
+    {
+      "check": "pre_pass",
+      "actual": "0",
+      "expected": "4",
+      "pass": false
+    },
+    {
+      "check": "post_pass",
+      "actual": "0",
+      "expected": "7",
+      "pass": false
+    },
+    {
+      "check": "pre_rate",
+      "actual": "0",
+      "expected": "50",
+      "pass": false
+    },
+    {
+      "check": "post_rate",
+      "actual": "0",
+      "expected": "87.5",
+      "pass": false
+    },
+    {
+      "check": "percentage_point_delta",
+      "actual": "0",
+      "expected": "37.5",
+      "pass": false
+    },
+    {
+      "check": "mean_pre",
+      "actual": "0",
+      "expected": "3.375",
+      "pass": false
+    },
+    {
+      "check": "mean_post",
+      "actual": "0",
+      "expected": "4.125",
+      "pass": false
+    },
+    {
+      "check": "mean_delta",
+      "actual": "0",
+      "expected": "0.75",
+      "pass": false
+    },
+    {
+      "check": "weight_sum",
+      "actual": "100",
+      "expected": "100",
+      "pass": true
+    },
+    {
+      "check": "option_A",
+      "actual": "67",
+      "expected": "67",
+      "pass": true
+    },
+    {
+      "check": "option_B",
+      "actual": "93",
+      "expected": "93",
+      "pass": true
+    },
+    {
+      "check": "option_C",
+      "actual": "70",
+      "expected": "70",
+      "pass": true
+    },
+    {
+      "check": "S08_decline",
+      "actual": "->",
+      "expected": "4->3",
+      "pass": false
+    },
+    {
+      "check": "real_unknown_hold_rows",
+      "actual": "9",
+      "expected": "12",
+      "pass": false
+    },
+    {
+      "check": "criteria_count",
+      "actual": "5",
+      "expected": "5",
+      "pass": true
+    },
+    {
+      "check": "incomplete_rows",
+      "actual": "0",
+      "expected": "0",
+      "pass": true
+    },
+    {
+      "check": "receipt_sha_binding",
+      "actual": "031725229542a647690a5d9826ba4545d3c29c0cb0b272c64284140d6b322579",
+      "expected": "031725229542a647690a5d9826ba4545d3c29c0cb0b272c64284140d6b322579",
+      "pass": true
+    }
+  ],
+  "failed_count": 15,
+  "overall": "FAIL",
+  "scope_limit": "Arithmetic, fact-row binding, mapping labels, SAMPLE/REAL statuses only; not DOCX, visual or independent semantic QA."
+}

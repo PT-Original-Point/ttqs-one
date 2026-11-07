@@ -1,0 +1,394 @@
+# Independent semantic review request
+Project TTQS_ONE. Review only the attached source and exact candidate text. Candidate doc_id=0003, requirement I01-E02, official checkbox serial 002, exact DOCX SHA-256=265DA610608EDC4A97C4C592C4C556D16DD5B8288C20F0CF46A8477436A05357. Do not edit files, call tools, infer association approval, or use any other candidate version.
+
+Return a concise but evidence-based review with: overall PASS / FAIL / PARTIAL; each finding with severity and exact section/question/table locator; source-to-requirement match; correct genre and actual usability as an administerable questionnaire; complete Q1-Q13 mechanics; complete SAMPLE/SYNTHETIC response and replacement boundary; missing/refused/NA/invalid multiselect rules; scale/math consistency (especially Q4 urgency and Q5 confidence must remain separate); separation from 0004 administration/sample log and 0005 analysis, and negative-neighbor checks against 0001/I01-E01 and 0006/I01-E03; title-blind purpose; usability for association administrators/evaluators; any material factual, privacy, truth-boundary, or cross-document issue. State explicitly what cannot be verified from this candidate. Do not award PASS for page layout or builder assertions alone.
+
+## Authoritative source packet
+# 0003 目標市場需求調查問卷｜來源封包 R01
+
+狀態：SOURCE_READY / CANDIDATE SOURCE PREPARATION
+文件序號 0003；具名需求 I01-E02；官方逐項規格方框 002。
+分件：0003 問卷；0004 實際施測與樣本紀錄；0005 需求分析報告。
+
+## 權威與範圍
+官方《TTQS 查核佐證文件資料表—訓練機構版》第1頁對應文字：「目標市場需求調查。」專案候選逐項規格 03 的 I01 第002項為「目標市場需求調查：實際問卷＋完整樣本資料＋分析報告」。142 文件 crosswalk 將 I01-E02 對應 0003、0004、0005；此件僅提供可直接施測問卷及單筆完整合成答卷，不承擔實際發放/回收、樣本框或統計報告。
+
+## 來源身份
+- branch HEAD commit SHA-1: ecc39550e0d45df4f6bc5dc94f0e7ebc3b623806
+- R12 contract Git blob SHA-1: 63f26f0708249b211611d51b34a7fb90b4cd26a9
+- Human Mission Git blob SHA-1: 538bedb9d87e8465f43151933b4a5c1bfa4bbc4e；此檔為候選施工規格。
+- 03 checkbox specification Git blob SHA-1: 8c2bbe7ca9dcbb03088a48934b9e57e7147ede63
+- 129-to-142 crosswalk Git blob SHA-1: 1ac4a8419088d947947031b758e29c35a3606514
+- 官方佐證表 PDF 本機 SHA-256: 805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709；source cache 定位第1頁。
+- BLUEPRINT_CURRENT.jsonl 本機 SHA-256: 406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e
+- deliverable_id=0003 canonical JSON row SHA-256: 65fb2ec38527e18ae31318e26d1395da254d03bdd4c8a2699a62230562f01e19
+- SOURCE_READBACK_CACHE/0003.json SHA-256: d3d2859c853ce4f390134b7fd4dcff08d7c3599cba20487e5b83b44d53623eae；其原始來源 SHA 與 canonical row SHA 均已重算核對。
+
+## 文件責任
+Q1-Q2 對象類別與學習接觸；Q3-Q5需求排序、急迫度及信心；Q6可觀察期待；Q7-Q9方式、時段、時數；Q10-Q11障礙與非承諾費用區間；Q12-Q13聯絡意願與可近性。不同量尺不加總。拒答、缺答、不適用分開編碼。問卷不收姓名、身份證、電話、地址、診斷或財務識別資料。
+
+## SAMPLE / REAL
+問卷示範中的代碼、日期、類別、選項、分數及敘述均為SAMPLE/SYNTHETIC，逐筆登錄 replacement register；不是協會實際施測、真人志工、開班或收費事實。沒有真實原始回覆時，REAL樣本數、統計、需求結論與決議均為UNKNOWN。實際施測與回收證據由0004記錄；0005按逐題有效分母分析。核准與簽章只能依真實程序取得。
+
+## 歷史檔隔離
+本機10/03 CURRENT舊DOCX、10/02 ROOT_CAUSE舊候選、10/05 proposal僅作歷史狀態，不作正文或版面模板。當前遠端樹只有送審封存和舊示範DOCX，沒有本輪quality-review/0003候選包。本R01依現行唯一Blueprint row重展內容。
+
+## 驗收界線
+本封包不代表DOCX技術/版面/獨立語意驗收、GitHub binary上傳或協會正式接受。
+
+
+## Unique Blueprint
+# 0003 目標市場需求調查問卷｜Unique Blueprint R01
+
+doc_id=0003；requirement_id=I01-E02；官方逐項方框=002；官方佐證表第1頁。
+Blueprint JSONL file SHA-256=406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e；canonical row SHA-256=65fb2ec38527e18ae31318e26d1395da254d03bdd4c8a2699a62230562f01e19。
+
+## 唯一工作責任
+一份可直接施測、可編輯的需求問卷，附清楚作答規則、量尺、跳答、編碼、無效/缺漏處理及完整SAMPLE/SYNTHETIC填答示例。不能以說明文章代替問卷。
+
+## 專屬正文大綱
+1 文件控制及SAMPLE/SYNTHETIC、候選、未生效標示。
+2 用途、閱讀者、填答時間、自願及匿名說明。
+3 對象範圍及資料最小化，不假設現有會員/學員名冊。
+4 構面和Q1-Q13映射。
+5 完整問卷題目、選項、尺度、單選/多選上限、跳答及開放欄。
+6 編碼字典：MISSING、DECLINED、NA分開；不得插補。
+7 全部題目有值的單筆合成答卷。
+8 回收品質控制和異常退件條件。
+9 問卷至0004施測紀錄、再至0005分析報告的交接。
+10 SAMPLE→REAL替換、來源索引及鄰項拒絕。
+
+## 題目映射
+Q1 GROUP類別單選；Q2 PRIOR相關學習接觸；Q3 NEED1..3最多三個排序主題；Q4 URG第一順位急迫度1-5；Q5 CONF自評信心1-5或NA；Q6 OUTCOME可觀察期待；Q7 MODE方式；Q8 TIME最多二時段；Q9 DURATION時數偏好；Q10 BARRIER複選；Q11 COST自付級距且非價格承諾；Q12 FOLLOWUP後續聯絡但不收聯絡資料；Q13 ACCESS可近性文字且不收診斷/識別資料。
+
+## 無效與退件
+不同意/撤回不納入有效回答；單題缺漏不插補；拒答和NA不當零。多選超限且匿名無法更正，標INVALID_MULTI_SELECT並保留原值。只以匿名收件碼/確定提交ID檢查重複，禁止IP或猜測身份。統計必須按每題有效分母，屬0005職責。單一合成答卷不得產生群體統計或開班決議。
+
+## 完整合成答卷要求
+SYN-0003-001；日期2026-10-28；志工類別；無相關訓練經驗；需求排序為服務流程與紀錄、溝通與轉介界線、志工合作與安全；Q4 4/5、Q5 2/5；期待能按清單完成確認、紀錄、交接並理解轉介界線；偏好面對面、週末上午、3小時；障礙交通和時間；費用級距0-300元；不需聯絡；希望講義清楚且有紙本或電子閱讀方式。每一合成事實均列replacement register。
+
+## 鄰項排除
+0004記錄實際施測/樣本流程，本件沒有實際發放數；0005作逐題分析，本件沒有市場統計；0001策略地圖、0006業務發展/人力計畫均非本件用途。
+
+## 驗收
+同一最終DOCX SHA須綁定正確官方映射、完整可用問卷、完整合成答卷、逐事實替換簿、數學/量尺一致、全頁Word視覺與獨立語意PASS。Builder不核發PASS；候選不等於REAL或Human接受。
+
+
+## Canonical Blueprint row
+{
+  "acceptance_tests": "移除標題及檔名後，讀者可由正文專屬欄位、操作或分析辨認為『目標市場需求調查問卷』，且能指出直接回應『目標市場需求調查。』的頁節／表格。\n逐項呈現官方要求、資料來源、記錄欄位、判定、證據定位及覆核；官方原文不被歷史草案改寫。\n依本文件文類實際可用：問卷含題目選項量尺；SOP含角色、輸入、判斷、控制點、異常和輸出；會議紀錄含議題、證據、決議、責任、期限；報告含資料、分母、公式、逐步計算、限制和決策。\n若沒有可驗證 REAL 資料，提供前後一致、完整填入的 SAMPLE/SYNTHETIC 案例；不得用空表、待填、待核或未來式充當完成品。\n每一項合成日期、角色、數字、比例、金額、決議、來源路徑與結果皆有逐事實替換簿記錄鍵、所在文件／頁表／欄位及真實替換方式。\n絕不偽造第三方原件、真人簽名、核准、出席、證書、政府、銀行、會計或外部機構事實；需要該等原件時只說明所需原件與取得路徑。\n所有公式可由展示數據重算；分母、單位、期間、四捨五入及N/A條件清楚，交叉引用不重複創造相異版本。\n對照負向鄰項，正文可拒絕至少兩個錯誤近鄰；指出可核對的差異欄位或章節。\n首頁30秒內說明目的、讀者、使用時點、操作、輸出和SAMPLE／REAL狀態；無評核工程內部術語。\n正文可供日常協會作業及評核閱讀；標題層級、欄位、步驟、表格能直接執行，無複製同儕 DOCX 正文。\n字體下限：正文至少10.5pt、表格至少9.5pt；資訊不足時加頁，不縮小字體。\n來源定位與交叉引用使用本 Blueprint 登錄的官方頁次／文件 ID；所有結論不超出來源支持範圍。",
+  "deliverable_id": "0003",
+  "document_genre": "可直接施測的問卷／訪談工具｜目標市場需求調查問卷",
+  "document_purpose": "本件專屬焦點：目標市場需求調查問卷；需直接回應的官方佐證要求為：目標市場需求調查。；產出一份可實際執行、可閱讀並可追溯的專屬成品；本分件職責與同要求其他分件清楚分開。",
+  "document_role": "questionnaire",
+  "docx_body_template_policy": "FROM_SOURCE_ONLY; old body is discovery evidence only and prohibited as rebuild template; Wave005 R3 0031-0040 quality-height references only; Wave001-004 tainted; old Wave005 invalid; Wave006 prohibited.",
+  "evidence_role": "提供可直接使用的題目、作答機制與需求構面映射；不得以文字說明代替工具。 本文件只擁有 I01-E02 的直接紀錄／分析口徑；不得吞併其他要求的事實。",
+  "final_filename": "0003__目標市場需求調查問卷.docx",
+  "historical_blueprint_source": "63979f94245e0d8bf805c81ad8ff44477d90f1e41786ae09bd28e4411e5ee55f",
+  "historical_body_use": "PROHIBITED",
+  "negative_choice_neighbors": "0001《中長程業務發展策略地圖》（I01-E01）：應證明不同工作物；本件不得代替、合併或複製其專屬事實。\n0006《業務發展計畫與人力資源訓練規劃》（I01-E03）：應證明不同工作物；本件不得代替、合併或複製其專屬事實。\n0004《目標市場調查執行與樣本紀錄》（I01-E02）：應證明不同工作物；本件不得代替、合併或複製其專屬事實。\n0005《目標市場需求分析報告》（I01-E02）：應證明不同工作物；本件不得代替、合併或複製其專屬事實。",
+  "official_checkbox_text": "目標市場需求調查。",
+  "official_evidence_table_page": "1",
+  "official_requirement_text": "目標市場需求調查。",
+  "official_source_readback_status": "PDF_TEXT_EXACT_PAGE_MATCH",
+  "official_visually_checked_pages": "",
+  "primary_user_or_reader": "供承辦人直接施測，供填答者按明確題目、選項與量尺作答。",
+  "prohibited_fabrication": "不得把擬真工作稿標成REAL；不得偽造核准、簽章、真人參與、辦訓、成績、成果或不存在的外部事實。；不得將舊檔內容、示範數據、未查證Drive候選或歷史草案標成 REAL；不得偽造核准、簽章、真人參與、辦訓、成績、成果、外部證據或來源定位。",
+  "real_data_required": "升格為 REAL 前逐項取得可核實來源：正式日期；真實人名/角色；核准/簽章；真實班次/課程；實際數字/比例；真實附件與檔案位置。在無原件時標示 SAMPLE/SYNTHETIC；合成事實須登錄 replacement register，不得宣稱機構實績。",
+  "required_calculations_or_analysis": "工具本體不宣稱實際統計；附完整合成答卷及示範編碼。若展示有效回收率=有效答卷/回收答卷、構面平均=有效分數總和/有效作答數，須逐步算例並登錄每一示範值。",
+  "required_cross_references": "同要求分件 0004, 0005；相鄰要求 I01-E01, I01-E03；共用原始來源時只引用核實結果，不複製別份文件正文。",
+  "required_fields_or_questions": "目前最需要提升哪三項能力？；需求緊急度1–5分？；偏好課程時段/時數/方式？；可接受費用區間？；完成後希望改善什麼具體工作/生活結果？；目前參訓障礙為何？；本文件中哪一段/哪一表直接證明：「目標市場需求調查。」？；作答者代碼（合成示例碼）；作答日期欄位（僅合成示例日期）；題目答案／跳題原因；匿名意見與後續授權",
+  "required_sections": "施測目的與決策用途；對象、納入排除條件與倫理說明；構面定義及題目對照；作答說明與完整題目／選項；量尺、跳題與必答規則；施測方式、時間及資料保護；合成填答示例與編碼示例；缺答、無效答案及重複作答處理；題目結果如何連至決策；品質檢核與試測修訂；限制與真實施測替換欄；官方要求逐項追溯索引",
+  "required_tables_or_figures": "題目—構面—選項／量尺—跳題—用途對照；完整問卷題目與選項清單；合成填答示例及編碼字典；官方要求—題號—資料欄位—決策用途追溯表",
+  "requirement_deliverable_siblings": "0003 | 0004 | 0005",
+  "requirement_id": "I01-E02",
+  "source_map_notes": "129 exact official requirement rows + reconciled 142-ID crosswalk; official source PDF and exact Drive readback evidence are recorded in runtime SOURCE/CONTROL maps.",
+  "source_of_truth": "官方查核佐證表精確原文『目標市場需求調查。』，表內頁次 1，讀取狀態 PDF_TEXT_EXACT_PAGE_MATCH；REQ_157_MAP 對應 I01-E02；本行文件名稱與 ID 以 R04 142 交付 crosswalk/seed 為準。Phase2 歷史 Blueprint 僅作需求拆解參考，絕非可複製正文或現行標題權威。",
+  "synthetic_population_rule": "缺 REAL 即生成完整連貫 SAMPLE/SYNTHETIC worked example；事實粒度一筆一列登錄 SYNTHETIC_REPLACEMENT_REGISTER，含值、類型、定位、替換原件與責任；不得留待填或冒充 REAL。",
+  "third_party_evidence_required": "若結論依賴外部機關／第三方／真人正式簽章或證書，必須由合法來源取得可核對原件；本文件可提供清楚索引與合成流程示範，絕不代製、仿簽、補作或冒充第三方正式原件。",
+  "title_blind_test": "遮蔽本件標題、檔名與編號，只讀正文應可由專屬機制辨認為『目標市場需求調查問卷』並證明『目標市場需求調查。』；若可無修改移作其他要求即失敗。"
+}
+
+
+## Candidate text extracted from the exact SHA above
+目標市場需求調查問卷
+可直接施測工具與完整合成填答示範
+SAMPLE / SYNTHETIC 示範｜候選R07｜未生效、未核准
+本問卷供承辦人了解可能的訓練需求，將回答整理為後續規劃訊號。填答約8–10分鐘；非必答題可略過。合成答卷只示範填寫與編碼，不是協會實際施測或市場結果。
+文件控制
+ | 內容
+ | 
+ | 序號／要求
+ | 0003／I01-E02；官方逐項規格方框002
+ | 
+ | 用途
+ | 蒐集需求、偏好與障礙；施測見0004，彙總分析見0005
+ | 
+ | 資料狀態
+ | 答卷值均為SAMPLE/SYNTHETIC；REAL施測資料未提供
+ | 
+ | 生效與核准
+ | 候選稿，未生效；沒有核准或簽章
+ | 
+ | 官方定位
+ | 官方佐證表第1頁：目標市場需求調查。
+ | 
+ | 一 使用前先確認
+• 自願填寫；可拒答或略過非必答題。
+• 不填姓名、身份證、電話、地址、診斷或財務識別資料。
+• 聯絡資料須另表另行告知同意，不能併入匿名答卷。
+• 偏好不是協會開班、師資、時程、收費或補助承諾。
+承辦人應先按實際目的確定施測對象，再使用同一版本發放。發放、回收、有效樣本數由0004記錄；彙總和限制由0005分析。
+二 題目與需求構面
+構面
+ | 題號
+ | 用途
+ | 
+ | 對象與接觸
+ | Q1–Q2
+ | 描述類別和學習接觸
+ | 
+ | 主題與優先度
+ | Q3–Q5
+ | 排序、急迫度、信心；不加總
+ | 
+ | 學習期待
+ | Q6
+ | 可觀察期待，非成果
+ | 
+ | 交付安排
+ | Q7–Q9
+ | 方式、時段、時數偏好
+ | 
+ | 參與限制
+ | Q10–Q11
+ | 障礙與非承諾費用區間
+ | 
+ | 後續與可近性
+ | Q12–Q13
+ | 聯絡同意與輔助需求
+ | 
+ | 三 問卷作答
+單選選一項；多選遵守上限。Q4急迫度與Q5信心分開記錄，不相加。
+Q1｜您最接近哪一類身分
+單選；僅作需求分層，不查核個人身分。
+□ 社區居民　□ 志工　□ 家屬／照顧者　□ 服務或訓練相關工作者
+□ 其他：_____________________　□ 不願回答
+Q2｜過去兩年是否接觸相關學習活動
+單選。
+□ 有　□ 沒有　□ 不確定　□ 不願回答
+Q3｜目前最希望了解或提升哪些主題
+最多三項，依優先順序填寫。
+第1：□ 服務流程與紀錄　□ 溝通與轉介界線　□ 志工合作與安全
+　　 □ 課程規劃與學習評估　□ 其他：________________
+第2：□ 服務流程與紀錄　□ 溝通與轉介界線　□ 志工合作與安全
+　　 □ 課程規劃與學習評估　□ 其他：________________
+第3：□ 服務流程與紀錄　□ 溝通與轉介界線　□ 志工合作與安全
+　　 □ 課程規劃與學習評估　□ 其他：________________
+□ 目前沒有特定主題　□ 不願回答
+Q4｜第一順位主題的需求急迫程度
+單選；個人感受，不是核定門檻。
+1 □ 不急　2 □ 稍不急　3 □ 普通　4 □ 急　5 □ 非常急
+□ 不適用　□ 不願回答
+Q5｜目前處理第一順位主題的自信程度
+單選；不是能力測驗。
+1 □ 很沒有把握　2 □ 比較沒有把握　3 □ 普通　4 □ 有把握　5 □ 很有把握
+□ 無相關經驗／不適用　□ 不願回答
+三 問卷作答（續）
+Q6｜完成相關學習後，您希望自己能做到什麼
+開放題；描述可觀察任務，勿填個案識別資料。
+我希望能：
+________________________________________________________________
+________________________________________________________________
+Q7｜較能參與的學習方式
+單選。
+□ 面對面　□ 線上同步　□ 預錄或自學　□ 混合方式
+□ 其他：____________　□ 不確定　□ 不願回答
+Q8｜較方便參與的時段
+最多二項。
+□ 平日上午　□ 平日下午　□ 平日晚上
+□ 週末上午　□ 週末下午　□ 其他：________　□ 不確定
+Q9｜較能接受的單次學習時數
+單選；不是正式課程時程。
+□ 1–2小時　□ 3小時　□ 4–6小時　□ 分多次
+□ 其他：________　□ 不確定
+Q10｜哪些因素可能妨礙參與
+可複選；無障礙請選目前沒有。
+□ 時間　□ 交通　□ 照顧責任　□ 費用　□ 場地可近性
+□ 語言或閱讀　□ 設備或網路　□ 目前沒有　□ 其他：____　□ 不願回答
+Q11｜若需自付費用，可接受的單次範圍
+自願作答；不代表協會價格或補助。
+□ 0元　□ 1–300元　□ 301–500元　□ 501–1,000元
+□ 1,001元以上　□ 不確定　□ 不願回答
+Q12｜是否願意日後另行留下聯絡方式
+本問卷不收聯絡資料；願意不等於已提交。
+□ 不需要　□ 願意先看另表用途再決定　□ 不確定　□ 不願回答
+Q13｜其他學習支持或可近性需求
+自願；勿填診斷或可識別資訊。
+補充意見：
+________________________________________________________________
+________________________________________________________________
+
+四 完整合成填答與編碼示範
+以下一筆虛構答卷只示範題號、選項及編碼。所有日期、類別、分數、代碼與文字皆為SAMPLE/SYNTHETIC，不代表協會實際人員、施測、訓練或市場統計。
+題目
+ | 完整合成回答
+ | 
+ | 代碼／日期
+ | SYN-0003-001；2026-10-28（合成日期）
+ | 
+ | Q1
+ | 志工類別（合成）
+ | 
+ | Q2
+ | 沒有相關訓練經驗（合成）
+ | 
+ | Q3
+ | 第1服務流程與紀錄；第2溝通與轉介界線；第3志工合作與安全（合成）
+ | 
+ | Q4
+ | 4/5（合成個人回答；非門檻）
+ | 
+ | Q5
+ | 2/5（合成自評；非能力測驗）
+ | 
+ | Q6
+ | 能依清單完成服務前確認、過程紀錄與結束交接，並知道何時應轉介。（合成期待，非成果）
+ | 
+ | Q7
+ | 面對面（合成偏好）
+ | 
+ | Q8
+ | 週末上午（合成偏好）
+ | 
+ | Q9
+ | 單次3小時（合成偏好，非核定）
+ | 
+ | Q10
+ | 交通距離、時間安排（合成）
+ | 
+ | Q11
+ | 新臺幣0–300元（合成偏好，非定價）
+ | 
+ | Q12
+ | 不需要後續聯絡（合成；無聯絡資料）
+ | 
+ | Q13
+ | 講義字體清楚，提供紙本或電子閱讀方式。（合成意見）
+ | 
+ | 編碼例：Q4=URG 4；Q5=CONF 2。兩者分屬不同構面，不可相加為6分。只有一筆合成回答，不計回收率、平均、比例或課程優先順序。
+五 編碼與退件處理
+變數
+ | 合法值／規則
+ | 用途
+ | 
+ | Q1 GROUP
+ | 類別代碼／DECLINED
+ | 不識別個人
+ | 
+ | Q2 PRIOR
+ | YES/NO/UNSURE/DECLINED
+ | 學習接觸非能力
+ | 
+ | Q3 NEED1..3
+ | 最多三項排序
+ | 分開保存
+ | 
+ | Q4 URG
+ | 1–5/NA/DECLINED/MISSING
+ | 急迫度
+ | 
+ | Q5 CONF
+ | 1–5/NA/DECLINED/MISSING
+ | 自評信心
+ | 
+ | Q6 OUTCOME
+ | 去識別原意摘要
+ | 期待不是結果
+ | 
+ | Q7–Q9
+ | 方式、時段、時數代碼
+ | 偏好非承諾
+ | 
+ | Q10 BARRIER
+ | 複選；NONE與MISSING分開
+ | 障礙
+ | 
+ | Q11 COST
+ | 級距/UNSURE/DECLINED
+ | 非實際收費
+ | 
+ | Q12 FOLLOWUP
+ | NO/SEPARATE_FORM/UNSURE/DECLINED
+ | 不收聯絡資料
+ | 
+ | Q13 ACCESS
+ | 去識別文字
+ | 可近性
+ | 
+ | • 缺答MISSING、拒答DECLINED、不適用NA分開，不作零分、不插補。
+• 多選超限可在取得同意且能聯絡時請其更正；匿名無法確認則標INVALID_MULTI_SELECT並保留原值。
+• 只依匿名收件碼或確定提交識別判斷重複；不得用IP、姓名或猜測身份合併。
+• 0004記錄流程計數與異常；0005按每題有效分母分析並揭露限制。
+六 真實資料交接
+步驟
+ | 操作
+ | 後續證據
+ | 
+ | 1 發放
+ | 匿名、自願、用途說明；同版發放
+ | 0004日期、管道、版本
+ | 
+ | 2 回收
+ | 檢查同意、缺漏、越界、多選
+ | 0004回收/有效/排除數與理由
+ | 
+ | 3 編碼
+ | 保留原答；不補值
+ | 核對資料字典
+ | 
+ | 4 分析
+ | 逐題用有效分母、揭露限制
+ | 0005計算底稿
+ | 
+ | 5 決議
+ | 由有權人員依真實資料另行討論
+ | 實際決議原件；本問卷不核定
+ | 
+ | 沒有真實回覆與施測紀錄時，REAL樣本數、需求比例與決議均為UNKNOWN。
+七 鄰項排除與來源
+對照
+ | 本件責任
+ | 不能取代
+ | 
+ | I01-E02／方框002
+ | 可施測問卷及合成答卷
+ | 0004樣本流程；0005需求分析
+ | 
+ | I01-E01／0001
+ | 不制定策略或KPI
+ | 策略地圖
+ | 
+ | I01-E03／0006
+ | 不核定人力或年度計畫
+ | 業務發展／訓練規劃
+ | 
+ | 來源
+ | 定位
+ | 
+ | 官方佐證表
+ | 第1頁；PDF SHA-256 805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709
+ | 
+ | 03逐項規格
+ | Git blob SHA-1 8c2bbe7ca9dcbb03088a48934b9e57e7147ede63
+ | 
+ | 129→142 crosswalk
+ | Git blob SHA-1 1ac4a8419088d947947031b758e29c35a3606514
+ | 
+ | Blueprint
+ | file SHA-256 406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e；row SHA-256 65fb2ec38527e18ae31318e26d1395da254d03bdd4c8a2699a62230562f01e19
+ | 
+ | Mission／R12
+ | blobs 538bedb9d87e8465f43151933b4a5c1bfa4bbc4e / 63f26f0708249b211611d51b34a7fb90b4cd26a9；HEAD ecc39550e0d45df4f6bc5dc94f0e7ebc3b623806
+ | 
+ | Writer：Codex fallback。W1最近路由為HTTP429且無回覆；W2最新實際模型UNKNOWN。本候選未經獨立exact-SHA語意審查；建置者不核發PASS。

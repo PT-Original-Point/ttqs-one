@@ -1,0 +1,38 @@
+{
+  "project_id": "TTQS_ONE",
+  "document_id": "0055",
+  "revision": "R04",
+  "official_requirement_id": "I12-E03",
+  "official_checkbox_sequence": "058",
+  "candidate_status": "CANDIDATE_ONLY",
+  "candidate_docx_sha256": "0c4abf37856611a8226361cedb9bf58fd7c769a4cec27574920ed5d93ff4687b",
+  "register_sha256": "66f660e24cfe12bd0c1351be577a6e4602f5a5454ba4914c0b736926cf9c0af7",
+  "builder_receipt_sha256": "14ab11fbe7541c6a491a409d7ecf9639061bb763f103b024c5379a72e7ad3ae4",
+  "technical_status": "PASS_TECHNICAL_SCOPE",
+  "checks": {
+    "predecessor_docx_sha256_verified": true,
+    "predecessor_register_sha256_verified": true,
+    "docx_zip_integrity": true,
+    "docx_xml_parses": true,
+    "docx_changed_members_exactly": [
+      "word/document.xml"
+    ],
+    "anchor_exact_once": true,
+    "inserted_paragraph_exact_once_and_immediately_after_anchor": true,
+    "register_rows": 52,
+    "register_columns": 12,
+    "register_changed_rows_exactly": [
+      "FAC-0055-010"
+    ],
+    "all_other_register_lines_byte_identical": true,
+    "evidence_status_remains_SYNTHETIC": true,
+    "candidate_sha_matches_builder_receipt": true
+  },
+  "visual_status": "PASS_VISUAL_SCOPE_ONLY",
+  "rendered_page_count": 11,
+  "renderer": "Microsoft Word COM export to PDF; bundled Poppler pdftoppm rasterization at 150 DPI",
+  "pdf_sha256": "12e8eefed72ae97057b0257b423c92d4daf473562d0bc60f4bf5d8c8e41e0f3b",
+  "render_route_limitation": "The packaged render_docx.py route was attempted first but could not locate soffice.exe on PATH; this receipt records the actual Microsoft Word COM renderer and does not claim LibreOffice equivalence.",
+  "semantic_status": "PENDING_INDEPENDENT_EXACT_SHA_REVIEW",
+  "human_acceptance": "NOT_GRANTED"
+}

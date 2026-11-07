@@ -1,0 +1,131 @@
+{
+  "project_id": "TTQS_ONE",
+  "work_id": "0103-R20-EXACT-SHA-SEMANTIC-REVIEW-AGY-GEMINI01",
+  "doc_id": "0103",
+  "requirement_id": "I18-E10",
+  "unique_blueprint_index": 111,
+  "candidate_sha256": "3433ee3df8ff7088a5047b15fbc24f9b59de05b28be26956598b0da4c5459c09",
+  "candidate_sha256_after_review": "3433ee3df8ff7088a5047b15fbc24f9b59de05b28be26956598b0da4c5459c09",
+  "candidate_unchanged": true,
+  "review_packet_sha256": "20cce62c3a3fe46b91ff606c7b51a8f1cf1184e2d7fc0e0ef6db6630d4bbc08a",
+  "prompt_sha256": "1e99830da0d42d754f5bf474ddeaa9507ed7f2304e3a5ee288f5a6e4c9463c11",
+  "review_role": "INDEPENDENT_SEMANTIC_REVIEW",
+  "cli_path": "C:\\Users\\J\\AppData\\Local\\agy\\bin\\agy.exe",
+  "cli_version": "1.4.6",
+  "cli_sha256": "a6a1a638cbf4874b31b683d728d9343ee71bd30077934d2448eea881264e1250",
+  "requested_model": "gemini-3.8-flash-high",
+  "actual_serving_model": "UNKNOWN_NATIVE_ENVELOPE_HAS_NO_MODEL_FIELD",
+  "model_identity_note": "CLI model catalog listed the requested SKU, but this conversation envelope includes no actual-serving-model attestation; do not claim Gemini PASS.",
+  "conversation_id": "b40bbf59-2032-49d1-ada1-0d4e846d2de6",
+  "cli_exit_code": 0,
+  "timed_out": false,
+  "elapsed_seconds": 120.652,
+  "window_hidden": true,
+  "create_no_window": true,
+  "sandbox_requested": true,
+  "empty_working_directory": true,
+  "add_dir_granted": false,
+  "computer_use_invoked_by_codex": false,
+  "cli_envelope_keys": [
+    "conversation_id",
+    "status",
+    "response",
+    "duration_seconds",
+    "num_turns",
+    "usage"
+  ],
+  "token_usage": {
+    "input_tokens": 21244,
+    "output_tokens": 16467,
+    "thinking_tokens": 14800,
+    "cache_read_tokens": 0,
+    "total_tokens": 37711
+  },
+  "billing": "UNKNOWN_PROVIDER_BILLING_NOT_RETURNED",
+  "review_response_verdict": "PASS",
+  "review_response": {
+    "verdict": "PASS",
+    "candidate_sha256": "3433ee3df8ff7088a5047b15fbc24f9b59de05b28be26956598b0da4c5459c09",
+    "doc_id": "0103",
+    "requirement": "I18-E10",
+    "blueprint_index": 111,
+    "blockers": [],
+    "nonblocking_issues": [
+      {
+        "locator": "Page 30 / Scope and visual status",
+        "type": "editorial_pagination",
+        "description": "Page 30 contains an underfilled portrait introductory section immediately preceding the unified replacement register on pages 31-32; nonblocking as content is complete and readable."
+      },
+      {
+        "locator": "Official source packet / Primary official source",
+        "type": "source_render_reference",
+        "description": "official_source_page7_render.png is an external official raster scan; candidate text references its semantic context accurately without fabricating visual contents."
+      }
+    ],
+    "checks": {
+      "d01_d15_na_and_eval_logic": {
+        "status": "PASS",
+        "locator": "Section 'Form D 來源與真偽查核清單' & 'SAMPLE-CASE-01：NOT_APPLICABLE 逐項核定紀錄'",
+        "details": "D01-D15 N/A statuses in SAMPLE-CASE-01 have explicit per-item structural justifications (target document nonexistent), cross-locators to Form A/B/C/F, synthetic reviewer role, and date. SAMPLE-CASE-02 has discrete D01-D15 evaluations (D01-D02 missing source/authority, D03 screenshot FAIL, D04-D10 missing headers/dates/service link/signatures, D11-D15 missing cross-checks/consent, D15 UNKNOWN). D12 statutory exception is strictly distinguished from N/A. D14 performance causality dependency rules are explicitly defined."
+      },
+      "replacement_register_and_crosswalk": {
+        "status": "PASS",
+        "locator": "Section '合成替換登記表' & pages 31-32",
+        "details": "40 synthetic replacement items consolidated into a single continuous table covering S-01 through S-13 without pagination fragmentation. Exact replacement principles require replacing case/source, authority/consent/scope, and status/review in strict dependency order."
+      },
+      "form_a_send_authority_gates_and_form_c_fields": {
+        "status": "PASS",
+        "locator": "Section 'Form A 案件建檔與受理' & 'Form C 來件與原件登錄'",
+        "details": "Form A send gates explicitly verify T8 R9 (legal purpose), T8 R11 (consent status), T8 R12 (recipient representation / institutional written send authorization), T8 R13 (disclosure scope), and T8 R17 (channel approval). Request text inquiries are barred from substituting for pre-send authorization. Form C strictly distinguishes forwarded screenshots from originals, enforces quarantine, hash verification, and PII segregation."
+      },
+      "attachment_receipt_vs_case_status": {
+        "status": "PASS",
+        "locator": "Section '共用狀態碼', 'Form C', & 'SAMPLE CASE 02'",
+        "details": "Screenshot receipt in Case 02 is logged as an isolated attachment without elevating case status to original receipt; primary case status correctly resolves to HOLD. Mutually exclusive primary statuses (NOT_RECEIVED, REQUEST_DRAFT_ONLY, REQUEST_AUTHORIZED, SENT, AWAITING_REPLY, CLOSED_NO_RESPONSE, HOLD, REJECTED, VERIFIED_REAL) are preserved, and sub-codes (HOLD_CONTACT, SENT_UNCONFIRMED, NOT_APPLICABLE) are barred from replacing primary statuses."
+      },
+      "hold_release_authority_and_expiry": {
+        "status": "PASS",
+        "locator": "Section '停止接觸條件', '端到端流程', & 'Form F 處分與覆核紀錄'",
+        "details": "HOLD mandates explicit verifiable release conditions, designated responsible role, procedural authority, deadline, monthly re-examination, and an active close-out mechanism upon non-resolution, preventing indefinite unmonitored holding."
+      },
+      "sample_real_boundary_and_no_inventions": {
+        "status": "PASS",
+        "locator": "Candidate preamble, '一分鐘開場指引', Form B, & '關帳前檢查清單'",
+        "details": "Candidate boundary strictly maintained as CANDIDATE R20; real letter is NOT RECEIVED; issuer, recipient, date, course, number, signature, consent, storage location, and causality are UNKNOWN; Human acceptance is NOT GRANTED. No external letter, signer, issuer, consent, approval, response, performance claim, association decision, or formal acceptance is fabricated."
+      },
+      "negative_neighbor_distinction": {
+        "status": "PASS",
+        "locator": "Section '與鄰近項目的區隔'",
+        "details": "Strict separation documented: 0103 / I18-E10 maps to official p. 7 4-point context ('目標客戶及學員認為訓練有顯著具體績效'), whereas 0096 / I18-E03 maps to p. 6 1-point context ('目標客戶及學員認為訓練有部分效果，然而未有具體紀錄及評量'). Reusing case numbers, facts, conclusions, attachments, or locators from 0096 is prohibited. Clear boundaries maintained against 0102 / I18-E09 (competitions), 0100/0101 / I18-E08 (self-assessment/radar), and 0097 (surveys)."
+      },
+      "genre_and_title_blind_identity": {
+        "status": "PASS",
+        "locator": "Candidate title, '文件識別', & '文件性質'",
+        "details": "Identifies unambiguously as an internal acquisition, provenance-verification, privacy-scope, and archiving work record with an unissued request template, not a third-party thank-you letter or performance certificate."
+      },
+      "metrics_and_math_consistency": {
+        "status": "PASS",
+        "locator": "Section '指標與分母'",
+        "details": "Process metric strictly defined as verified originals over received originals; denominator strictly excludes requests, drafts, and screenshots; 0 received originals correctly results in 0/0 = N/A rather than 0%."
+      }
+    },
+    "exclusions": [
+      "Word-native visual layout and PDF render inspection (attested by separate local visual check receipt).",
+      "DOCX package OpenXML binary structure and relationship schema validation (covered by technical validation receipt).",
+      "Human formal acceptance (NOT GRANTED; expressly excluded from candidate scope).",
+      "Physical third-party original letter custody (NOT RECEIVED; external evidence pending)."
+    ],
+    "figures_reproducible_from_text": false
+  },
+  "review_scope": "Text-only review of exact-SHA-bound extracted DOCX body, official source, unique Blueprint, calculations and SAMPLE/REAL boundaries; not Word binary or visual review.",
+  "review_output_adoption": "NOT_ADOPTED_AS_APPROVED_GEMINI_REVIEWER; actual serving model identity remains UNKNOWN",
+  "semantic_gate_status": "BLOCKED_UNVERIFIED_MODEL_IDENTITY",
+  "stdout_bytes": 6681,
+  "stdout_sha256": "326a515a3406180dfefe16886c807d9086bb0897cc2a5eb8eb0d5cea6afc9e5c",
+  "stdout_base64": "eyJjb252ZXJzYXRpb25faWQiOiJiNDBiYmY1OS0yMDMyLTQ5ZDEtYWRhMS0wZDRlODQ2ZDJkZTYiLCJzdGF0dXMiOiJTVUNDRVNTIiwicmVzcG9uc2UiOiJ7XG4gIFwidmVyZGljdFwiOiBcIlBBU1NcIixcbiAgXCJjYW5kaWRhdGVfc2hhMjU2XCI6IFwiMzQzM2VlM2RmOGZmNzA4OGE1MDQ3YjE1ZmJjMjRmOWI1OWRlMDViMjhiZTI2OTU2NTk4YjBkYTRjNTQ1OWMwOVwiLFxuICBcImRvY19pZFwiOiBcIjAxMDNcIixcbiAgXCJyZXF1aXJlbWVudFwiOiBcIkkxOC1FMTBcIixcbiAgXCJibHVlcHJpbnRfaW5kZXhcIjogMTExLFxuICBcImJsb2NrZXJzXCI6IFtdLFxuICBcIm5vbmJsb2NraW5nX2lzc3Vlc1wiOiBbXG4gICAge1xuICAgICAgXCJsb2NhdG9yXCI6IFwiUGFnZSAzMCAvIFNjb3BlIGFuZCB2aXN1YWwgc3RhdHVzXCIsXG4gICAgICBcInR5cGVcIjogXCJlZGl0b3JpYWxfcGFnaW5hdGlvblwiLFxuICAgICAgXCJkZXNjcmlwdGlvblwiOiBcIlBhZ2UgMzAgY29udGFpbnMgYW4gdW5kZXJmaWxsZWQgcG9ydHJhaXQgaW50cm9kdWN0b3J5IHNlY3Rpb24gaW1tZWRpYXRlbHkgcHJlY2VkaW5nIHRoZSB1bmlmaWVkIHJlcGxhY2VtZW50IHJlZ2lzdGVyIG9uIHBhZ2VzIDMxLTMyOyBub25ibG9ja2luZyBhcyBjb250ZW50IGlzIGNvbXBsZXRlIGFuZCByZWFkYWJsZS5cIlxuICAgIH0sXG4gICAge1xuICAgICAgXCJsb2NhdG9yXCI6IFwiT2ZmaWNpYWwgc291cmNlIHBhY2tldCAvIFByaW1hcnkgb2ZmaWNpYWwgc291cmNlXCIsXG4gICAgICBcInR5cGVcIjogXCJzb3VyY2VfcmVuZGVyX3JlZmVyZW5jZVwiLFxuICAgICAgXCJkZXNjcmlwdGlvblwiOiBcIm9mZmljaWFsX3NvdXJjZV9wYWdlN19yZW5kZXIucG5nIGlzIGFuIGV4dGVybmFsIG9mZmljaWFsIHJhc3RlciBzY2FuOyBjYW5kaWRhdGUgdGV4dCByZWZlcmVuY2VzIGl0cyBzZW1hbnRpYyBjb250ZXh0IGFjY3VyYXRlbHkgd2l0aG91dCBmYWJyaWNhdGluZyB2aXN1YWwgY29udGVudHMuXCJcbiAgICB9XG4gIF0sXG4gIFwiY2hlY2tzXCI6IHtcbiAgICBcImQwMV9kMTVfbmFfYW5kX2V2YWxfbG9naWNcIjoge1xuICAgICAgXCJzdGF0dXNcIjogXCJQQVNTXCIsXG4gICAgICBcImxvY2F0b3JcIjogXCJTZWN0aW9uICdGb3JtIEQg5L6G5rqQ6IiH55yf5YG95p+l5qC45riF5ZauJyBcdTAwMjYgJ1NBTVBMRS1DQVNFLTAx77yaTk9UX0FQUExJQ0FCTEUg6YCQ6aCF5qC45a6a57SA6YyEJ1wiLFxuICAgICAgXCJkZXRhaWxzXCI6IFwiRDAxLUQxNSBOL0Egc3RhdHVzZXMgaW4gU0FNUExFLUNBU0UtMDEgaGF2ZSBleHBsaWNpdCBwZXItaXRlbSBzdHJ1Y3R1cmFsIGp1c3RpZmljYXRpb25zICh0YXJnZXQgZG9jdW1lbnQgbm9uZXhpc3RlbnQpLCBjcm9zcy1sb2NhdG9ycyB0byBGb3JtIEEvQi9DL0YsIHN5bnRoZXRpYyByZXZpZXdlciByb2xlLCBhbmQgZGF0ZS4gU0FNUExFLUNBU0UtMDIgaGFzIGRpc2NyZXRlIEQwMS1EMTUgZXZhbHVhdGlvbnMgKEQwMS1EMDIgbWlzc2luZyBzb3VyY2UvYXV0aG9yaXR5LCBEMDMgc2NyZWVuc2hvdCBGQUlMLCBEMDQtRDEwIG1pc3NpbmcgaGVhZGVycy9kYXRlcy9zZXJ2aWNlIGxpbmsvc2lnbmF0dXJlcywgRDExLUQxNSBtaXNzaW5nIGNyb3NzLWNoZWNrcy9jb25zZW50LCBEMTUgVU5LTk9XTikuIEQxMiBzdGF0dXRvcnkgZXhjZXB0aW9uIGlzIHN0cmljdGx5IGRpc3Rpbmd1aXNoZWQgZnJvbSBOL0EuIEQxNCBwZXJmb3JtYW5jZSBjYXVzYWxpdHkgZGVwZW5kZW5jeSBydWxlcyBhcmUgZXhwbGljaXRseSBkZWZpbmVkLlwiXG4gICAgfSxcbiAgICBcInJlcGxhY2VtZW50X3JlZ2lzdGVyX2FuZF9jcm9zc3dhbGtcIjoge1xuICAgICAgXCJzdGF0dXNcIjogXCJQQVNTXCIsXG4gICAgICBcImxvY2F0b3JcIjogXCJTZWN0aW9uICflkIjmiJDmm7/mj5vnmbvoqJjooagnIFx1MDAyNiBwYWdlcyAzMS0zMlwiLFxuICAgICAgXCJkZXRhaWxzXCI6IFwiNDAgc3ludGhldGljIHJlcGxhY2VtZW50IGl0ZW1zIGNvbnNvbGlkYXRlZCBpbnRvIGEgc2luZ2xlIGNvbnRpbnVvdXMgdGFibGUgY292ZXJpbmcgUy0wMSB0aHJvdWdoIFMtMTMgd2l0aG91dCBwYWdpbmF0aW9uIGZyYWdtZW50YXRpb24uIEV4YWN0IHJlcGxhY2VtZW50IHByaW5jaXBsZXMgcmVxdWlyZSByZXBsYWNpbmcgY2FzZS9zb3VyY2UsIGF1dGhvcml0eS9jb25zZW50L3Njb3BlLCBhbmQgc3RhdHVzL3JldmlldyBpbiBzdHJpY3QgZGVwZW5kZW5jeSBvcmRlci5cIlxuICAgIH0sXG4gICAgXCJmb3JtX2Ffc2VuZF9hdXRob3JpdHlfZ2F0ZXNfYW5kX2Zvcm1fY19maWVsZHNcIjoge1xuICAgICAgXCJzdGF0dXNcIjogXCJQQVNTXCIsXG4gICAgICBcImxvY2F0b3JcIjogXCJTZWN0aW9uICdGb3JtIEEg5qGI5Lu25bu65qqU6IiH5Y+X55CGJyBcdTAwMjYgJ0Zvcm0gQyDkvobku7boiIfljp/ku7bnmbvpjIQnXCIsXG4gICAgICBcImRldGFpbHNcIjogXCJGb3JtIEEgc2VuZCBnYXRlcyBleHBsaWNpdGx5IHZlcmlmeSBUOCBSOSAobGVnYWwgcHVycG9zZSksIFQ4IFIxMSAoY29uc2VudCBzdGF0dXMpLCBUOCBSMTIgKHJlY2lwaWVudCByZXByZXNlbnRhdGlvbiAvIGluc3RpdHV0aW9uYWwgd3JpdHRlbiBzZW5kIGF1dGhvcml6YXRpb24pLCBUOCBSMTMgKGRpc2Nsb3N1cmUgc2NvcGUpLCBhbmQgVDggUjE3IChjaGFubmVsIGFwcHJvdmFsKS4gUmVxdWVzdCB0ZXh0IGlucXVpcmllcyBhcmUgYmFycmVkIGZyb20gc3Vic3RpdHV0aW5nIGZvciBwcmUtc2VuZCBhdXRob3JpemF0aW9uLiBGb3JtIEMgc3RyaWN0bHkgZGlzdGluZ3Vpc2hlcyBmb3J3YXJkZWQgc2NyZWVuc2hvdHMgZnJvbSBvcmlnaW5hbHMsIGVuZm9yY2VzIHF1YXJhbnRpbmUsIGhhc2ggdmVyaWZpY2F0aW9uLCBhbmQgUElJIHNlZ3JlZ2F0aW9uLlwiXG4gICAgfSxcbiAgICBcImF0dGFjaG1lbnRfcmVjZWlwdF92c19jYXNlX3N0YXR1c1wiOiB7XG4gICAgICBcInN0YXR1c1wiOiBcIlBBU1NcIixcbiAgICAgIFwibG9jYXRvclwiOiBcIlNlY3Rpb24gJ+WFseeUqOeLgOaFi+eivCcsICdGb3JtIEMnLCBcdTAwMjYgJ1NBTVBMRSBDQVNFIDAyJ1wiLFxuICAgICAgXCJkZXRhaWxzXCI6IFwiU2NyZWVuc2hvdCByZWNlaXB0IGluIENhc2UgMDIgaXMgbG9nZ2VkIGFzIGFuIGlzb2xhdGVkIGF0dGFjaG1lbnQgd2l0aG91dCBlbGV2YXRpbmcgY2FzZSBzdGF0dXMgdG8gb3JpZ2luYWwgcmVjZWlwdDsgcHJpbWFyeSBjYXNlIHN0YXR1cyBjb3JyZWN0bHkgcmVzb2x2ZXMgdG8gSE9MRC4gTXV0dWFsbHkgZXhjbHVzaXZlIHByaW1hcnkgc3RhdHVzZXMgKE5PVF9SRUNFSVZFRCwgUkVRVUVTVF9EUkFGVF9PTkxZLCBSRVFVRVNUX0FVVEhPUklaRUQsIFNFTlQsIEFXQUlUSU5HX1JFUExZLCBDTE9TRURfTk9fUkVTUE9OU0UsIEhPTEQsIFJFSkVDVEVELCBWRVJJRklFRF9SRUFMKSBhcmUgcHJlc2VydmVkLCBhbmQgc3ViLWNvZGVzIChIT0xEX0NPTlRBQ1QsIFNFTlRfVU5DT05GSVJNRUQsIE5PVF9BUFBMSUNBQkxFKSBhcmUgYmFycmVkIGZyb20gcmVwbGFjaW5nIHByaW1hcnkgc3RhdHVzZXMuXCJcbiAgICB9LFxuICAgIFwiaG9sZF9yZWxlYXNlX2F1dGhvcml0eV9hbmRfZXhwaXJ5XCI6IHtcbiAgICAgIFwic3RhdHVzXCI6IFwiUEFTU1wiLFxuICAgICAgXCJsb2NhdG9yXCI6IFwiU2VjdGlvbiAn5YGc5q2i5o6l6Ke45qKd5Lu2JywgJ+err+WIsOerr+a1geeoiycsIFx1MDAyNiAnRm9ybSBGIOiZleWIhuiIh+imhuaguOe0gOmMhCdcIixcbiAgICAgIFwiZGV0YWlsc1wiOiBcIkhPTEQgbWFuZGF0ZXMgZXhwbGljaXQgdmVyaWZpYWJsZSByZWxlYXNlIGNvbmRpdGlvbnMsIGRlc2lnbmF0ZWQgcmVzcG9uc2libGUgcm9sZSwgcHJvY2VkdXJhbCBhdXRob3JpdHksIGRlYWRsaW5lLCBtb250aGx5IHJlLWV4YW1pbmF0aW9uLCBhbmQgYW4gYWN0aXZlIGNsb3NlLW91dCBtZWNoYW5pc20gdXBvbiBub24tcmVzb2x1dGlvbiwgcHJldmVudGluZyBpbmRlZmluaXRlIHVubW9uaXRvcmVkIGhvbGRpbmcuXCJcbiAgICB9LFxuICAgIFwic2FtcGxlX3JlYWxfYm91bmRhcnlfYW5kX25vX2ludmVudGlvbnNcIjoge1xuICAgICAgXCJzdGF0dXNcIjogXCJQQVNTXCIsXG4gICAgICBcImxvY2F0b3JcIjogXCJDYW5kaWRhdGUgcHJlYW1ibGUsICfkuIDliIbpkJjplovloLTmjIflvJUnLCBGb3JtIEIsIFx1MDAyNiAn6Zec5biz5YmN5qqi5p+l5riF5ZauJ1wiLFxuICAgICAgXCJkZXRhaWxzXCI6IFwiQ2FuZGlkYXRlIGJvdW5kYXJ5IHN0cmljdGx5IG1haW50YWluZWQgYXMgQ0FORElEQVRFIFIyMDsgcmVhbCBsZXR0ZXIgaXMgTk9UIFJFQ0VJVkVEOyBpc3N1ZXIsIHJlY2lwaWVudCwgZGF0ZSwgY291cnNlLCBudW1iZXIsIHNpZ25hdHVyZSwgY29uc2VudCwgc3RvcmFnZSBsb2NhdGlvbiwgYW5kIGNhdXNhbGl0eSBhcmUgVU5LTk9XTjsgSHVtYW4gYWNjZXB0YW5jZSBpcyBOT1QgR1JBTlRFRC4gTm8gZXh0ZXJuYWwgbGV0dGVyLCBzaWduZXIsIGlzc3VlciwgY29uc2VudCwgYXBwcm92YWwsIHJlc3BvbnNlLCBwZXJmb3JtYW5jZSBjbGFpbSwgYXNzb2NpYXRpb24gZGVjaXNpb24sIG9yIGZvcm1hbCBhY2NlcHRhbmNlIGlzIGZhYnJpY2F0ZWQuXCJcbiAgICB9LFxuICAgIFwibmVnYXRpdmVfbmVpZ2hib3JfZGlzdGluY3Rpb25cIjoge1xuICAgICAgXCJzdGF0dXNcIjogXCJQQVNTXCIsXG4gICAgICBcImxvY2F0b3JcIjogXCJTZWN0aW9uICfoiIfphLDov5HpoIXnm67nmoTljYDpmpQnXCIsXG4gICAgICBcImRldGFpbHNcIjogXCJTdHJpY3Qgc2VwYXJhdGlvbiBkb2N1bWVudGVkOiAwMTAzIC8gSTE4LUUxMCBtYXBzIHRvIG9mZmljaWFsIHAuIDcgNC1wb2ludCBjb250ZXh0ICgn55uu5qiZ5a6i5oi25Y+K5a245ZOh6KqN54K66KiT57e05pyJ6aGv6JGX5YW36auU57i+5pWIJyksIHdoZXJlYXMgMDA5NiAvIEkxOC1FMDMgbWFwcyB0byBwLiA2IDEtcG9pbnQgY29udGV4dCAoJ+ebruaomeWuouaItuWPiuWtuOWToeiqjeeCuuiok+e3tOaciemDqOWIhuaViOaenO+8jOeEtuiAjOacquacieWFt+mrlOe0gOmMhOWPiuiplemHjycpLiBSZXVzaW5nIGNhc2UgbnVtYmVycywgZmFjdHMsIGNvbmNsdXNpb25zLCBhdHRhY2htZW50cywgb3IgbG9jYXRvcnMgZnJvbSAwMDk2IGlzIHByb2hpYml0ZWQuIENsZWFyIGJvdW5kYXJpZXMgbWFpbnRhaW5lZCBhZ2FpbnN0IDAxMDIgLyBJMTgtRTA5IChjb21wZXRpdGlvbnMpLCAwMTAwLzAxMDEgLyBJMTgtRTA4IChzZWxmLWFzc2Vzc21lbnQvcmFkYXIpLCBhbmQgMDA5NyAoc3VydmV5cykuXCJcbiAgICB9LFxuICAgIFwiZ2VucmVfYW5kX3RpdGxlX2JsaW5kX2lkZW50aXR5XCI6IHtcbiAgICAgIFwic3RhdHVzXCI6IFwiUEFTU1wiLFxuICAgICAgXCJsb2NhdG9yXCI6IFwiQ2FuZGlkYXRlIHRpdGxlLCAn5paH5Lu26K2Y5YilJywgXHUwMDI2ICfmlofku7bmgKfos6onXCIsXG4gICAgICBcImRldGFpbHNcIjogXCJJZGVudGlmaWVzIHVuYW1iaWd1b3VzbHkgYXMgYW4gaW50ZXJuYWwgYWNxdWlzaXRpb24sIHByb3ZlbmFuY2UtdmVyaWZpY2F0aW9uLCBwcml2YWN5LXNjb3BlLCBhbmQgYXJjaGl2aW5nIHdvcmsgcmVjb3JkIHdpdGggYW4gdW5pc3N1ZWQgcmVxdWVzdCB0ZW1wbGF0ZSwgbm90IGEgdGhpcmQtcGFydHkgdGhhbmsteW91IGxldHRlciBvciBwZXJmb3JtYW5jZSBjZXJ0aWZpY2F0ZS5cIlxuICAgIH0sXG4gICAgXCJtZXRyaWNzX2FuZF9tYXRoX2NvbnNpc3RlbmN5XCI6IHtcbiAgICAgIFwic3RhdHVzXCI6IFwiUEFTU1wiLFxuICAgICAgXCJsb2NhdG9yXCI6IFwiU2VjdGlvbiAn5oyH5qiZ6IiH5YiG5q+NJ1wiLFxuICAgICAgXCJkZXRhaWxzXCI6IFwiUHJvY2VzcyBtZXRyaWMgc3RyaWN0bHkgZGVmaW5lZCBhcyB2ZXJpZmllZCBvcmlnaW5hbHMgb3ZlciByZWNlaXZlZCBvcmlnaW5hbHM7IGRlbm9taW5hdG9yIHN0cmljdGx5IGV4Y2x1ZGVzIHJlcXVlc3RzLCBkcmFmdHMsIGFuZCBzY3JlZW5zaG90czsgMCByZWNlaXZlZCBvcmlnaW5hbHMgY29ycmVjdGx5IHJlc3VsdHMgaW4gMC8wID0gTi9BIHJhdGhlciB0aGFuIDAlLlwiXG4gICAgfVxuICB9LFxuICBcImV4Y2x1c2lvbnNcIjogW1xuICAgIFwiV29yZC1uYXRpdmUgdmlzdWFsIGxheW91dCBhbmQgUERGIHJlbmRlciBpbnNwZWN0aW9uIChhdHRlc3RlZCBieSBzZXBhcmF0ZSBsb2NhbCB2aXN1YWwgY2hlY2sgcmVjZWlwdCkuXCIsXG4gICAgXCJET0NYIHBhY2thZ2UgT3BlblhNTCBiaW5hcnkgc3RydWN0dXJlIGFuZCByZWxhdGlvbnNoaXAgc2NoZW1hIHZhbGlkYXRpb24gKGNvdmVyZWQgYnkgdGVjaG5pY2FsIHZhbGlkYXRpb24gcmVjZWlwdCkuXCIsXG4gICAgXCJIdW1hbiBmb3JtYWwgYWNjZXB0YW5jZSAoTk9UIEdSQU5URUQ7IGV4cHJlc3NseSBleGNsdWRlZCBmcm9tIGNhbmRpZGF0ZSBzY29wZSkuXCIsXG4gICAgXCJQaHlzaWNhbCB0aGlyZC1wYXJ0eSBvcmlnaW5hbCBsZXR0ZXIgY3VzdG9keSAoTk9UIFJFQ0VJVkVEOyBleHRlcm5hbCBldmlkZW5jZSBwZW5kaW5nKS5cIlxuICBdLFxuICBcImZpZ3VyZXNfcmVwcm9kdWNpYmxlX2Zyb21fdGV4dFwiOiBmYWxzZVxufVxuIiwiZHVyYXRpb25fc2Vjb25kcyI6MTEzLjcyNTU2NTksIm51bV90dXJucyI6MSwidXNhZ2UiOnsiaW5wdXRfdG9rZW5zIjoyMTI0NCwib3V0cHV0X3Rva2VucyI6MTY0NjcsInRoaW5raW5nX3Rva2VucyI6MTQ4MDAsImNhY2hlX3JlYWRfdG9rZW5zIjowLCJ0b3RhbF90b2tlbnMiOjM3NzExfX0K",
+  "stderr_bytes": 0,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_base64": "",
+  "formal_acceptance": "NOT_GRANTED",
+  "candidate_state": "CANDIDATE"
+}

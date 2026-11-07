@@ -1,0 +1,434 @@
+{
+  "schema": "TTQS_ONE_R08_P6_ROLLING_24H_SNAPSHOT_V1",
+  "project_id": "TTQS_ONE",
+  "command": "TTQS_ONE_R08_P6_WORKER_DISPATCH_RECOVERY_ENFORCEMENT",
+  "observed_at_tpe": "2026-10-22T15:53:21+08:00",
+  "window_start_tpe": "2026-10-21T15:53:21+08:00",
+  "window_end_tpe": "2026-10-22T15:53:21+08:00",
+  "source_ledger": {
+    "path": "docs/ttqs-quality-20261016/quality-review/0104_I18-E11_R15_20261022/evidence/worker_dispatch_24h_R08_P6_20261022T1438_TPE.json",
+    "source_remote_head": "0984808673fd5953560dec1f556491cd317304ec",
+    "git_blob_sha1": "9d1742c7aa2b64d98be92a66656a0ec8a297b0f3",
+    "remote_blob_sha256": "0783afb8eb0fcaa5559d0ef2c0d959643a5b9bb9dea56350bdfa59114ce98f50",
+    "historical_window_end_tpe": "2026-10-22T15:25:53+08:00"
+  },
+  "opencode_v2": {
+    "source": "read-only native OpenCode SQLite session_v2/session_message query plus Win32 process verification",
+    "native_session_records": 41,
+    "user_prompt_messages": 43,
+    "outcomes": {
+      "succeeded": 38,
+      "interrupted": 2,
+      "active": 1
+    },
+    "selected_model_sessions": {
+      "nemotron-3-ultra-free": {
+        "sessions": 1,
+        "user_prompt_messages": 0,
+        "input_tokens": 95850,
+        "output_tokens": 2174,
+        "reasoning_tokens": 2988,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "local_cost_field": 0.0
+      },
+      "deepseek-v4.1-flash-free": {
+        "sessions": 26,
+        "user_prompt_messages": 0,
+        "input_tokens": 1326036,
+        "output_tokens": 214227,
+        "reasoning_tokens": 522156,
+        "cache_read_tokens": 4413056,
+        "cache_write_tokens": 0,
+        "local_cost_field": 0.0
+      },
+      "glm-5.3-flash-free": {
+        "sessions": 2,
+        "user_prompt_messages": 0,
+        "input_tokens": 51987,
+        "output_tokens": 16535,
+        "reasoning_tokens": 2676,
+        "cache_read_tokens": 4352,
+        "cache_write_tokens": 0,
+        "local_cost_field": 0.0
+      },
+      "mimo-v2.6-flash-free": {
+        "sessions": 12,
+        "user_prompt_messages": 0,
+        "input_tokens": 743965,
+        "output_tokens": 184583,
+        "reasoning_tokens": 184291,
+        "cache_read_tokens": 5503552,
+        "cache_write_tokens": 0,
+        "local_cost_field": 0.0
+      }
+    },
+    "persisted_token_totals": {
+      "input_tokens": 2217838,
+      "output_tokens": 417519,
+      "reasoning_tokens": 712111,
+      "cache_read_tokens": 9920960,
+      "cache_write_tokens": 0
+    },
+    "local_cost_field_sum": 0.0,
+    "actual_serving_model_identity": "UNKNOWN absent provider attestation",
+    "provider_billing": "UNKNOWN; local cost field zero is not invoice evidence",
+    "exact_cli_invocation_count": "UNKNOWN; session rows are not process launch telemetry",
+    "active_sessions": [
+      {
+        "session_id": "ses_e9d858be9ffeR53uwL0FL4qS3v",
+        "title": "TTQS_0105_WRITER_R07_build_20261022",
+        "selected_model_id": "mimo-v2.6-flash-free",
+        "idle_outcome": "ACTIVE",
+        "tokens": {
+          "input": 179291,
+          "output": 53126,
+          "reasoning": 19394,
+          "cache_read": 2789568,
+          "cache_write": 0,
+          "local_cost_field": 0.0
+        }
+      }
+    ],
+    "active_writer": {
+      "work_id": "TTQS-0105-WRITER-R07-20261022-01",
+      "doc_id": "0105",
+      "requirement_id": "I18-E13",
+      "os_pid": 65076,
+      "process_alive": true,
+      "process_exit_code": 259,
+      "native_session_id": "ses_e9d858be9ffeR53uwL0FL4qS3v",
+      "native_outcome": "ACTIVE",
+      "native_last_updated_tpe": "2026-10-22T15:52:09.020+08:00",
+      "selected_model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode"
+      },
+      "actual_serving_model": "UNKNOWN",
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "input": 179291,
+        "output": 53126,
+        "reasoning": 19394,
+        "cache_read": 2789568,
+        "cache_write": 0,
+        "local_cost_field": 0.0,
+        "not_final": true
+      },
+      "native_message_count": 21,
+      "tool_calls": [
+        {
+          "seq": 7,
+          "tool": "write",
+          "state": "completed"
+        },
+        {
+          "seq": 18,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 27,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 36,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 45,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 54,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 63,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 72,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 81,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 90,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 99,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 108,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 117,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 126,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 135,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 144,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 153,
+          "tool": "grep",
+          "state": "completed"
+        },
+        {
+          "seq": 153,
+          "tool": "read",
+          "state": "completed"
+        },
+        {
+          "seq": 166,
+          "tool": "read",
+          "state": "completed"
+        }
+      ],
+      "output": {
+        "path": "docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022/writer/opencode_writer_manuscript_0105_R07_raw.md",
+        "bytes": 127585,
+        "sha256": "31b7de140f4cd93169c709f30e111ca0994267b59fa6a76ec06ccc1fda5cea12",
+        "last_write_tpe": "2026-10-22T15:50:58+08:00",
+        "adoption": "NONE; in-progress raw output"
+      },
+      "cli_exit_code": "PENDING",
+      "status": "ACTIVE_PROGRESSING_BUT_NO_TERMINAL_RETURN"
+    },
+    "stage_reconciled": {
+      "doc_id": "0101",
+      "requirement_id": "I18-E08",
+      "work_id": "UNKNOWN_NOT_RECORDED_IN_NATIVE_RECEIPT",
+      "official_checkbox_serial": "UNKNOWN",
+      "source_packet_sha256": "81caa978a17dda522850628e6e9b4b16453145a986d2bafd2598b6f5ac96b886",
+      "unique_blueprint_sha256": "51b5a85d08c85550fa18de656ab7e9cdb3923831f4584ea7e9bf4da3ce35e8ce",
+      "dispatch": {
+        "worker": "OpenCode v2 CLI",
+        "native_session_id": "ses_ea1a826fcffeumwDg7f4giu6By",
+        "selected_model_id": "deepseek-v4.1-flash-free",
+        "actual_serving_model": "UNKNOWN",
+        "cli_exit_code": 0,
+        "raw_manuscript_sha256": "1ebae3f14dd34210311f1bbc7c269b3ba8c471ae31199faf2cd62e741e76b227"
+      },
+      "candidate": {
+        "path": "docs/ttqs-quality-20261016/quality-review/0100_0101_R09_20261021/0101_final9/candidate/0101_I18-E08_R09_FINAL9.docx",
+        "sha256": "56f433e095f32378f2fd8241c1a27948d2bfe6748da003af5623d265885edb68",
+        "bytes": 166586,
+        "state": "CANDIDATE_NOT_FORMALLY_ACCEPTED"
+      },
+      "quality": {
+        "technical_status": "PASS_TECHNICAL_ONLY",
+        "technical_checks": "38/38",
+        "semantic_overall": "PASS",
+        "arithmetic": "PASS",
+        "semantic_scope_limitations_count": 7,
+        "visual_status": "PASS_VISUAL_ALL_32_PAGES_EXACT_IMAGE_COVERAGE",
+        "visual_page_count": 32,
+        "direct_original_resolution_pages": [
+          3,
+          6,
+          7,
+          8,
+          9,
+          19,
+          31,
+          32
+        ],
+        "inherited_exact_image_pages": [
+          1,
+          2,
+          4,
+          5,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        "formal_acceptance": "NOT_GRANTED"
+      },
+      "github_readback": {
+        "verified_remote_head": "0984808673fd5953560dec1f556491cd317304ec",
+        "package_artifacts": "41/41 exact SHA-256 and byte lengths",
+        "manifest_path": "docs/ttqs-quality-20261016/quality-review/0100_0101_R09_20261021/0101_final9/evidence/0101_R09_final9_package_manifest.json"
+      }
+    }
+  },
+  "antigravity_cli": {
+    "rolling_attempt_count": 4,
+    "verified_gemini_3_8_flash_high_count": 0,
+    "attempts": [
+      {
+        "attempt_id": "AGY-0105-R04-RETRY01",
+        "window_time_tpe": "2026-10-22T05:09:26+08:00",
+        "work_id": "TTQS_ONE-0105-R04-SEMANTIC-REVIEW",
+        "doc_id": "0105",
+        "requirement_id": "I18-E13",
+        "requested_model": "gemini-3.8-flash-high",
+        "candidate_sha256": "17f7d680cbb992db93a6f67df84415500050953eecf426b477f675810177b4cb",
+        "input_packet_sha256": "c6e3eedbce21d5d7bc7c42783fe4e9aa4956a6586a36d10f4cab418bd86ad90c",
+        "os_pid": "UNKNOWN_NOT_CAPTURED",
+        "cli_exit_code": 2,
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_bytes": 3033,
+        "stderr_sha256": "6ad756a6651d5814d3c24fb9897a923408b322de086f3673826cfc297aea4ce2",
+        "error": "CLI argument parse failure: --print-timeout received \"180\" without duration unit; no model call evidenced.",
+        "actual_serving_model": "NOT_INVOKED",
+        "usable_return": "NO",
+        "attempt_id_type": "LOCAL_RECONCILIATION_ALIAS_NOT_NATIVE_ID",
+        "conversation_id": "NOT_CREATED_OR_NOT_CAPTURED; CLI argument parsing failed before model session"
+      },
+      {
+        "attempt_id": "AGY-0105-R04-ATTEMPT02",
+        "window_time_tpe": "2026-10-22T05:09:40+08:00",
+        "work_id": "TTQS_ONE-0105-R04-SEMANTIC-REVIEW",
+        "doc_id": "0105",
+        "requirement_id": "I18-E13",
+        "requested_model": "gemini-3.8-flash-high",
+        "candidate_sha256": "17f7d680cbb992db93a6f67df84415500050953eecf426b477f675810177b4cb",
+        "input_packet_sha256": "c6e3eedbce21d5d7bc7c42783fe4e9aa4956a6586a36d10f4cab418bd86ad90c",
+        "os_pid": "UNKNOWN_NOT_CAPTURED",
+        "cli_exit_code": 0,
+        "stdout_bytes": 10889,
+        "stdout_sha256": "f80b2e8237063208a750748a746987e5a2a1989d013e7e1cc06023d911d214cb",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "response_status": "SUCCESS; verdict PASS",
+        "requested_model_actual": "UNKNOWN",
+        "tokens_reported_by_receipt": {
+          "input": 36407,
+          "output": 10150,
+          "thinking": 6535,
+          "total": 46557
+        },
+        "fallback_status": "UNKNOWN",
+        "adoption": "Not accepted as Gemini-verified evidence; no DOCX produced; candidate remains historical/sample.",
+        "attempt_id_type": "LOCAL_RECONCILIATION_ALIAS_NOT_NATIVE_ID",
+        "conversation_id": "f6e00140-2f41-4735-970d-5ea804b6a2e2",
+        "duration_seconds": 76.3361629,
+        "raw_response_path": "docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022/evidence/antigravity_semantic_review_0105_R04_stdout.json",
+        "raw_stderr_path": "docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022/evidence/antigravity_semantic_review_0105_R04_stderr.txt"
+      },
+      {
+        "attempt_id": "AGY-0106-R01-ATTEMPT01",
+        "window_time_tpe": "2026-10-22T05:59:34+08:00",
+        "work_id": "UNKNOWN_NOT_RECORDED",
+        "doc_id": "0106",
+        "requirement_id": "I18-E14",
+        "requested_model": "gemini-3.8-flash-high",
+        "candidate_sha256": "ff019256f77dad59b4c0547c223ae28d90727836ed300f4ad83e82d9d0654bbe",
+        "input_packet_sha256": "7b646f2dd199f185eb1de8ec029defc6159a91df6b385a233e514a5ca7586a97",
+        "os_pid": "UNKNOWN_NOT_CAPTURED",
+        "cli_exit_code": "UNKNOWN_NOT_CAPTURED",
+        "stdout_bytes": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_bytes": 304,
+        "stderr_sha256": "ca7a482730a0d566f91155ae9ba897a5fa431b55e7e750992acccc8ea8b1dcbc",
+        "resolver_evidence": "log line 1: requested Gemini ID not in local config; defaulting to CCPA. Later log shows tool confirmation approved=false.",
+        "actual_serving_model": "NO_USABLE_MODEL_RETURN; resolver fallback attempted, request blocked by tool permission",
+        "usable_return": "NO",
+        "attempt_id_type": "LOCAL_RECONCILIATION_ALIAS_NOT_NATIVE_ID",
+        "conversation_id": "2d934221-2584-4648-bc5e-1d16a705c883"
+      },
+      {
+        "attempt_id": "AGY-0106-R01-ATTEMPT02",
+        "window_time_tpe": "2026-10-22T06:01:23+08:00",
+        "work_id": "UNKNOWN_NOT_RECORDED",
+        "doc_id": "0106",
+        "requirement_id": "I18-E14",
+        "requested_model": "gemini-3.8-flash-high",
+        "candidate_sha256": "ff019256f77dad59b4c0547c223ae28d90727836ed300f4ad83e82d9d0654bbe",
+        "input_packet_sha256": "74f2cdcca30da9283fd752fc60f4818a1160e94d7a488f4598588db09e99cd05",
+        "os_pid": "UNKNOWN_NOT_CAPTURED",
+        "cli_exit_code": "UNKNOWN_NOT_CAPTURED",
+        "stdout_bytes": 9716,
+        "stdout_sha256": "9c9d8e079b4455e34635df974e2b3eda1f91e70814fef347cf0849ab7e4bcdf6",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "resolver_evidence": "log line 1: requested Gemini ID not in local config; defaulting to CCPA; prompt output returned.",
+        "actual_serving_model": "CCPA fallback is logged; exact provider model execution UNKNOWN",
+        "usable_return": "Nonempty response, invalid as Gemini-specific review; no DOCX produced or adopted.",
+        "attempt_id_type": "LOCAL_RECONCILIATION_ALIAS_NOT_NATIVE_ID",
+        "conversation_id": "ca077130-fe26-4b17-a7bc-3cb3ba49c5ef",
+        "duration_seconds": 112.7839145,
+        "tokens_reported_by_receipt": {
+          "input": 30924,
+          "output": 16502,
+          "thinking": 12718,
+          "total": 47426
+        },
+        "raw_response_path": "docs/ttqs-quality-20261016/quality-review/0106_I18-E14_R01_20261022/writer/antigravity_semantic_review_0106_R01_attempt02_stdout.json",
+        "raw_stderr_path": "docs/ttqs-quality-20261016/quality-review/0106_I18-E14_R01_20261022/writer/antigravity_semantic_review_0106_R01_attempt02_stderr.txt"
+      }
+    ],
+    "known_zero_exit_count": 1,
+    "known_nonzero_exit_count": 1,
+    "unknown_exit_count": 2,
+    "nonempty_response_count": 2,
+    "empty_or_no_response_count": 2,
+    "reported_token_sum_receipts_only": 93983,
+    "reported_token_usage_scope": "Sum of two explicit nonempty response usage receipts only; Gemini identity and vendor billing UNKNOWN.",
+    "provider_billing": "UNKNOWN",
+    "route_state": "PAUSED_FOR_GEMINI_SPECIFIC_DISPATCH; no retry made"
+  },
+  "current_os_process_snapshot": {
+    "OpenCode_service_pid": 45628,
+    "active_writer_pid": 65076,
+    "active_writer_alive": true,
+    "Antigravity_process": "NONE_OBSERVED",
+    "other_opencode_run_writer": "NONE_OBSERVED",
+    "Word_long_lived_processes": 20,
+    "Word_document_owner_mapping": "UNKNOWN"
+  },
+  "efficiency_findings": [
+    "Attempt 1 failed before model invocation: positional message missing.",
+    "Attempt 2 completed plan-only; no manuscript; 106166 input tokens, 4592 output, 2299 reasoning; no content adopted.",
+    "Attempt 3 is the sole build session; 19 file-only read/write/edit/grep calls observed so far, terminal response pending, no duplicate writer.",
+    "Antigravity had four attempts, zero verified Gemini; returned CCPA/fallback material is not eligible Gemini evidence."
+  ],
+  "next_legal_action": "Await the same OpenCode R07 writer terminal return; freeze its final raw-manuscript SHA; deterministically check F-01..F-10; only then native Word export, exact-SHA independent review, and GitHub sync/readback. No other same-doc writer."
+}

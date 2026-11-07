@@ -1,0 +1,57 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0040",
+  "revision": "R02",
+  "candidate_state": "CANDIDATE",
+  "promotion_status": "NOT_PROMOTED",
+  "human_acceptance": "PENDING",
+  "parent_candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0040_R01\\candidate\\0040__訓練評估方法與成效指標對照表_R01.docx",
+  "parent_candidate_sha256": "04a0c76651fab1b74f451f4c18c4135bafbab846bd23b537355c9f874e6eeb51",
+  "parent_independent_review_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0040_R01\\qa\\0040_semantic_review_r01_exact.json",
+  "parent_independent_review_sha256": "0bb8bf218de35390e38cc62b103e2018aab2e01e3ad691056b8cb2d9ea9a06e3",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0040_R02\\candidate\\0040__訓練評估方法與成效指標對照表_R02.docx",
+  "candidate_sha256": "0152b0aadd854d79b1db7b3803743724af670d8d4902f6ef581d54a23c9accf7",
+  "replacement_register_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0040_R02\\sources\\0040_SOURCES_AND_SYNTHETIC_REPLACEMENT_REGISTER_R02.csv",
+  "replacement_register_sha256": "103b566ef0d24fc1b289f217eeddec072418bb2fa6f820a96ce17f0e7a96a62c",
+  "replacement_register_rows": 34,
+  "repair_scope": [
+    "Correct official source locator from PDF p.2 to printed/PDF p.3 in body and register.",
+    "Remove internal document, indicator, checkbox and cross-document identifiers from the evaluator-facing body; retain mappings in sidecars.",
+    "Synchronize Word fixed table geometry across header cells, body cells, grid, explicit table width and zero indent to remove first-column clipping.",
+    "Classify the public official source reference separately from synthetic case data and bind every register row to the exact candidate SHA."
+  ],
+  "official_source": {
+    "path": "E:\\TTQS\\_official_TTQS_checklist.pdf",
+    "sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "pdf_page": 3,
+    "printed_page": 3
+  },
+  "official_mapping_sidecar_only": {
+    "doc_id": "0040",
+    "requirement_id": "I08-E03",
+    "evidence_id": "040",
+    "source_map_sha256": "405b987797d1558ecac182cea8e1adfbd1aead7754c880db32db43c235d5024e"
+  },
+  "current_blueprint": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\BLUEPRINT_CURRENT.jsonl",
+    "serialized_row_sha256": "ab080a2e6d85cc13a706f0c10bda7c208ddc191a1fea20a670fd5a174ab14943",
+    "historical_blueprint_source_sha256": "4b6ebe093bc083642ac9329855c0ced1c5dddccbe465936cc8e464dcbc7da947"
+  },
+  "companion_sample_source_sidecar_only": {
+    "doc_id": "0039",
+    "revision": "R09",
+    "case_id": "SAMPLE-0039-01",
+    "sha256": "3e7ed5f173dc4604803f477289f1d6190e95a5c58d3a229420eaee67037080f5"
+  },
+  "limitations": [
+    "All course, role, baseline, score and result values remain SAMPLE/SYNTHETIC.",
+    "No association approval, actual course delivery or trainee result is asserted.",
+    "R02 remains candidate, not promoted; Human acceptance pending."
+  ],
+  "render": {
+    "pdf_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0040_R02\\render\\R02_final_review\\0040_R02_word_export.pdf",
+    "pdf_sha256": "b9bab29dc8870f37ff901a6c7939fb4acdb55398ee619d72fe7f0cbb8fe73947",
+    "page_count": 6,
+    "renderer": "Microsoft Word ExportAsFixedFormat; Poppler rasterization at 110 dpi"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0127",
+  "official_requirement": "I19-E16",
+  "candidate_sha256": "abba46bcdd0919c4511df025cd90d65cd302fe3f9f59c86d0fa8b7efe2015285",
+  "status": "BLOCKED_WORD_NATIVE_RENDER",
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": "BLOCKED_WORD_NATIVE_RENDER_TIMEOUT",
+      "elapsed_minutes": 6.7,
+      "runner_pid": 86312,
+      "word_pid": 77428,
+      "last_stage": "UNKNOWN",
+      "pdf_created": false,
+      "render_receipt_created": false,
+      "initial_ownership_record": "Initially misreported preexisting Word processes as not preserved; corrected by word_render_R02_attempt01_ownership_correction.json. Only the unique Word process started by this attempt was stopped; prior Word processes were preserved."
+    },
+    {
+      "attempt": 2,
+      "status": "BLOCKED_WORD_NATIVE_EXPORT_TIMEOUT",
+      "elapsed_seconds": 207,
+      "runner_pid": 79468,
+      "word_pid": 74520,
+      "last_stage": "DOCUMENT_OPENED; stalled at ExportAsFixedFormat",
+      "pdf_created": false,
+      "render_receipt_created": false,
+      "cleanup": "The exact newly created hidden Word and runner PIDs were stopped after ownership confirmation; prior Word instances were preserved."
+    }
+  ],
+  "latest_process_reconciliation": {
+    "checked_at_local": "2026-10-28T19:20:00+08:00",
+    "r02_renderer_pids_present": false,
+    "owned_word_pids_present": false,
+    "scope": "Process list contained no PIDs 86312, 77428, 79468, or 74520 at the check. Other older Word automation processes were not terminated."
+  },
+  "overall": "No DOCX visual PASS. The first attempt stalled with phase unknown; the second opened the file but stalled in PDF export."
+}

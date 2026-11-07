@@ -1,0 +1,109 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0047",
+  "requirement_id": "I10-E02",
+  "official_checkbox_sequence": 48,
+  "revision": "R08",
+  "candidate_status": "CANDIDATE_ONLY",
+  "candidate_docx": "candidate/0047_R08.docx",
+  "candidate_sha256": "b8cc8e4473e9cd7ad93f21c0cb9503865e683e3b802ac70577fbd8db3524d447",
+  "candidate_bytes": 47609,
+  "repair_source_revision": "R07",
+  "repair_source_sha256": "50538abd0ea8f9ab5c471005df4528fed946fc2835e0e40c2f4c6c08c3873e27",
+  "repair_scope": "one heading character: simplified 相邻 -> traditional 相鄰; no paragraph or table values changed",
+  "render_tool": "documents skill render_docx.py with project-bundled LibreOffice",
+  "rendered_pdf": "evidence/render_R08/0047_R08.pdf",
+  "rendered_pdf_sha256": "e828097ba100efba6d67a1937bdf163199566087161e97f2b7ba4079042fb2a5",
+  "rendered_page_count": 8,
+  "direct_visual_inspection": {
+    "scope": "all pages 1-8 directly inspected from R08 PNG renders",
+    "result": "PASS",
+    "pages": [
+      {
+        "page": 1,
+        "path": "evidence\\render_R08\\page-1.png",
+        "sha256": "e65348b719b103b093353f8b63c4c3b57852f95d35ba528fe841e1358caa3a7a",
+        "bytes": 471179
+      },
+      {
+        "page": 2,
+        "path": "evidence\\render_R08\\page-2.png",
+        "sha256": "8006e44f118e6cf82f58c616da0b9d9003980a4a35bd726edf83ebd4173379ce",
+        "bytes": 631877
+      },
+      {
+        "page": 3,
+        "path": "evidence\\render_R08\\page-3.png",
+        "sha256": "0c1f0867d38c8d1d88ea60861b296f4e2a9a1f1bdbcaf53e2c4f040d8081dfef",
+        "bytes": 558635
+      },
+      {
+        "page": 4,
+        "path": "evidence\\render_R08\\page-4.png",
+        "sha256": "7d2c453784dfe707a8421b00c658530108135a7088b58dbc2288859a98208673",
+        "bytes": 527444
+      },
+      {
+        "page": 5,
+        "path": "evidence\\render_R08\\page-5.png",
+        "sha256": "928888a4b048563b1b9cb738592b683984d445d16e1d4dd67db78e4b66106244",
+        "bytes": 393857
+      },
+      {
+        "page": 6,
+        "path": "evidence\\render_R08\\page-6.png",
+        "sha256": "1f81e6692b4473c1d7c7a1a6edf59dcdae2708ff50d7f0d5a405bb6d93d1830e",
+        "bytes": 287460
+      },
+      {
+        "page": 7,
+        "path": "evidence\\render_R08\\page-7.png",
+        "sha256": "b2e79046be178e2283b05945687197a3de74e5367c60ba571c108721b46201b0",
+        "bytes": 469339
+      },
+      {
+        "page": 8,
+        "path": "evidence\\render_R08\\page-8.png",
+        "sha256": "169899c02c83d687f4734b0560552c018d4177b131918d28c05373016a47868b",
+        "bytes": 168355
+      }
+    ],
+    "observations": [
+      "Page 1: report identity, usage guide, official requirement and summary legible.",
+      "Page 2: corrected Traditional Chinese heading; 0045/0048 boundaries, source/sample controls and formulas readable.",
+      "Pages 3-4: calculation, trend, findings, actions, replacement guide and source notes readable.",
+      "Pages 4-5: data dictionary continues with repeated table header; no clipped or orphaned row.",
+      "Pages 5-6: annual scoring, weighted totals, fulfillment and comparison tables readable.",
+      "Page 7: conclusions, action tracking, official requirement mapping, and evaluation criteria readable.",
+      "Page 8: complete five-level scale, four checkpoints and thresholds; page is not blank or orphaned.",
+      "No clipping, overlap, broken table, unreadable font, or content outside page bounds observed."
+    ]
+  },
+  "technical_integrity": {
+    "docx_zip_test": "PASS",
+    "python_docx_open": "PASS",
+    "pdf_page_count_matches_pngs": true,
+    "synthetic_register_rows": 25,
+    "unique_fact_ids": 25,
+    "all_facts_sample_synthetic": true,
+    "all_facts_have_replacement_action": true,
+    "math_recalculation": {
+      "score_2024": 3.25,
+      "fulfillment_2024": 75.0,
+      "score_2025": 4.0,
+      "fulfillment_2025": 100.0,
+      "combined_fulfillment": 87.5,
+      "mean_score": 3.625,
+      "score_delta": 0.75,
+      "fulfillment_delta_pp": 25.0
+    }
+  },
+  "font_direct_size_scan": {
+    "body_min_explicit_pt": 10.5,
+    "table_min_explicit_pt": 9.5,
+    "inherited_sizes": "inherited from paragraph/table styles and visually inspected; no direct run-size decrease in R08"
+  },
+  "independent_semantic_review": "PASS_SEMANTIC_ONLY exact candidate SHA; OpenCode CLI V2 review of the exact-SHA supplied packet; runtime model identity not returned; no pixels/font/source-PDF review by that reviewer.",
+  "formal_acceptance": "NOT_CLAIMED; candidate remains SAMPLE/SYNTHETIC and not association-approved.",
+  "independent_semantic_review_response_sha256": "8b322f0fb3e37e8a58026efde20a5fe05c884288c89ac408ad8eb292617715a1"
+}

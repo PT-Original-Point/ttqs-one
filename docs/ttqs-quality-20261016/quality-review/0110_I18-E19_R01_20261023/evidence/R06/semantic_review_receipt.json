@@ -1,0 +1,39 @@
+{
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0110-I18-E19-R06-INDEPENDENT-SEMANTIC-REVIEW",
+  "doc_id": "0110",
+  "official_requirement_id": "I18-E19",
+  "candidate_revision": "R06",
+  "candidate_docx_sha256": "e8baec1f7d2dd5057d58a020d2e094173e0357371bf2cd6dff625daed5ca4912",
+  "review_packet_sha256": "1e669b7475c13b00c48109965166c2d9b91965e63e983cd536c9329f640bc287",
+  "raw_stdout_sha256": "f86d6d52350c19c91c3130000bdc35d654edcae96b1d42daf827cc4a8c305f60",
+  "original_response_path": "worker/semantic_review_response_R06_original.md",
+  "original_response_sha256": "5864552e9ddf47f438f76f0e2b8f342c58e16b0312adf7313010cae132f69686",
+  "reviewer_session_id": "ses_e991f2c81ffeef4cLHgiOf6Fc7",
+  "worker": "OpenCode v2 CLI",
+  "requested_model": "opencode/deepseek-v4.1-flash-free",
+  "actual_model": "UNKNOWN",
+  "fallback_status": "UNKNOWN",
+  "reported_cost": 0,
+  "billing_independently_verified": false,
+  "token_usage": {
+    "input": 53967,
+    "output": 3942,
+    "reasoning": 41221,
+    "cached_read": 30080
+  },
+  "process_terminal_observed": true,
+  "process_exit_code": "UNKNOWN_NOT_CAPTURED",
+  "stdout_terminal_event": "step_finish:stop",
+  "material_findings": 14,
+  "blocking_findings": 9,
+  "verdict": "FAIL",
+  "replacement_register": {
+    "sha256": "13858eebf8eb2cc6cb7105bab04be70ee5cc0de16152570e17a92ff9018940d7",
+    "records": 198,
+    "expanded_in_review_packet": false,
+    "semantic_domain_status": "PARTIAL_UNKNOWN"
+  },
+  "scope": "Independent text review bound to exact candidate R06 SHA; original response returned a FAIL; the replacement register was summarized by hash rather than expanded in that review packet. Does not establish formal acceptance or real evidence.",
+  "formal_acceptance": "NOT_GRANTED"
+}

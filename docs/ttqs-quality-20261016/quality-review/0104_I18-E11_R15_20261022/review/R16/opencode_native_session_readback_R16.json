@@ -1,0 +1,48 @@
+{
+  "receipt_id": "TTQS-0104-R16-OPENCODE-NATIVE-SESSION-READBACK",
+  "session_id": "ses_ea002ffe1ffefP6DIiuFo8fPbr",
+  "title": "TTQS 0104 R16 exact-SHA independent semantic review",
+  "directory_class": "TTQS ONE repository package (local path redacted)",
+  "agent": "plan",
+  "selected_model": {
+    "id": "mimo-v2.6-flash-free",
+    "providerID": "opencode"
+  },
+  "idle_outcome": "succeeded",
+  "time_created_tpe": "2026-10-22T03:42:58.776+08:00",
+  "time_updated_tpe": "2026-10-22T03:49:06.195+08:00",
+  "usage": {
+    "input_tokens": 13000,
+    "output_tokens": 3947,
+    "reasoning_tokens": 95,
+    "cache_read_tokens": 38272,
+    "cache_write_tokens": 0,
+    "local_cost": 0.0
+  },
+  "actual_serving_model": "UNKNOWN; native session records selected model/provider only",
+  "provider_billing": "UNKNOWN; local SQLite cost is not vendor billing",
+  "cli_execution": {
+    "requested_model": "opencode/mimo-v2.6-flash-free",
+    "os_pid": 71336,
+    "cli_exit_code": 1,
+    "timed_out": false,
+    "elapsed_seconds": 367.828,
+    "stdout_sha256": "7e9e520a31c1e3b8923139397102db46bc486a4f1c9e345f74218acf99af16b4",
+    "stdout_bytes": 12590,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_bytes": 0,
+    "provider_error_event": [
+      {
+        "type": "provider.invalid-output",
+        "message": "OpenAI Chat stream ended without finish_reason",
+        "status": 200
+      }
+    ],
+    "recovered_text_event_count": 1
+  },
+  "review_packet_sha256": "c4fbb96925af6997429590201a49b2f3c94404572e728c6ff8f2b8194ba6a4c2",
+  "candidate_sha256_local_recomputed": "9a074b207e7a57f1448cf96868f3cc3f30a72834a021f9b04392909ea3183d7b",
+  "candidate_sha256_in_review_response": "9a074b207e7a57f1448cf96868f3cc3f30a72834a021f9b04392909ea3183d7b",
+  "candidate_sha256_recomputed_by_reviewer": false,
+  "verdict": "PASS_TEXT_ONLY; CLI exit 1 preserved; native session idle_outcome=succeeded; reviewer response recovered in same invocation"
+}

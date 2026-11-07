@@ -1,0 +1,112 @@
+{
+  "info": {
+    "id": "ses_e95549875ffeKEASIh6vNxRC4H",
+    "projectID": "d1779ffa1b18a77f83b6e6e7d6de5bedba256162",
+    "agent": "plan",
+    "model": {
+      "id": "glm-5.3-flash-free",
+      "providerID": "opencode",
+      "variant": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 7164,
+      "output": 485,
+      "reasoning": 1538,
+      "cache": {
+        "read": 0,
+        "write": 0
+      }
+    },
+    "outcome": "succeeded",
+    "time": {
+      "created": 1792790980626,
+      "updated": 1792790996069,
+      "idle": 1792790996074
+    },
+    "title": "[redacted:session-title:ses_e95549875ffeKEASIh6vNxRC4H]",
+    "location": {
+      "directory": "/[redacted:session-directory:ses_e95549875ffeKEASIh6vNxRC4H]"
+    }
+  },
+  "messages": [
+    {
+      "id": "msg_16aab68240016kjleiPJU6rsdZ",
+      "time": {
+        "created": 1792790980644
+      },
+      "type": "agent-switched",
+      "agent": "plan",
+      "previous": "plan"
+    },
+    {
+      "id": "msg_16aab6816001V6EX51hhRHCjkk",
+      "time": {
+        "created": 1792790980771
+      },
+      "text": "[redacted:synthetic:msg_16aab6816001V6EX51hhRHCjkk]",
+      "type": "synthetic"
+    },
+    {
+      "id": "msg_16aab68200016dZWZF7doAMvZ0",
+      "time": {
+        "created": 1792790980775
+      },
+      "text": "[redacted:text:msg_16aab68200016dZWZF7doAMvZ0]",
+      "files": [],
+      "type": "user"
+    },
+    {
+      "id": "msg_16aab68b8001aVnlQcOjmxlxdp",
+      "time": {
+        "created": 1792790980807,
+        "streamed": 1792790996066,
+        "completed": 1792790996069
+      },
+      "type": "assistant",
+      "agent": "plan",
+      "model": {
+        "id": "glm-5.3-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_16aab68b8001aVnlQcOjmxlxdp]",
+          "native": {
+            "redacted": "reasoning-native:msg_16aab68b8001aVnlQcOjmxlxdp"
+          },
+          "time": {
+            "created": 1792790983939,
+            "completed": 1792790996059
+          }
+        },
+        {
+          "type": "text",
+          "text": "[redacted:text:msg_16aab68b8001aVnlQcOjmxlxdp]"
+        }
+      ],
+      "finish": "stop",
+      "rawFinish": "stop",
+      "cost": 0,
+      "tokens": {
+        "input": 5916,
+        "output": 470,
+        "reasoning": 1174,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_16aaba46a001rvuvJpiqTYOrlU",
+      "time": {
+        "created": 1792790996074
+      },
+      "type": "idle",
+      "outcome": "succeeded"
+    }
+  ]
+}

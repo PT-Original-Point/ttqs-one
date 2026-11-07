@@ -1,0 +1,67 @@
+**VERDICT: PASS** (no blockers; three criteria provable only as UNKNOWN and four nonblocking observations as listed at the end)
+
+Binding: This review applies to the candidate DOCX SHA-256 `b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d` and its deterministic extracted body SHA-256 `a6f9b879203ab5234d6f5c918c7b3b7b5109c641a66bbbae3d72ebbb9b409991`, as asserted in the packet's identity block. One caveat stated plainly: from the packet alone I cannot recompute either hash against actual bytes; the binding is therefore asserted, not mechanically proven. No visual inspection is claimed anywhere below; every finding is from text only.
+
+---
+
+## 1. Indicator identity, genre, negative neighbors — VERIFIED
+
+- Genre: the body header (top of extracted body) names 課後追蹤與證照通過分析表, DOCX 0122, I19-E10, and quotes the official wording 「提出課後追蹤調查與分析結果、證照通過情形（學習技能面）」 verbatim, identical to the page-8 text block and to Source packet / Blueprint / §14.1. Title-blind usability passes: Sections 1–2 alone identify a post-course follow-up + certification analysis without the title.
+- Negative neighbors: §2.2 has three explicit separation blocks — 0120/I19-E08 (immediate assessment), 0121/I19-E09 (same-day satisfaction), and 157-item 116 (high pass-rate provenance). No 0121 satisfaction material and no 116 "proof" substitution appears anywhere in the body. Printing the serial as UNKNOWN_NOT_ASSERTED (header and §2.1) is correct and refuses both the 116 and 0122 conflations.
+- One textual note (non-affecting): in the packet's embedded official page-8 column text, the「提出課後追蹤調查與分析結果、證照通過情形（學習技能面）」sentence sits inside the 2分 common-evidence list. The candidate never claims a 3/4-point outcome, so no score assertion conflict exists; whether the raster/page cross-numbering matches is not provable from the packet (see UNKNOWN-2).
+
+## 2. Operating completeness — VERIFIED
+
+- 30/90-day workflow: §3.1 (windows, closing days 40/100), §3.2 (three-contact procedure with consent limits), Tables 4–6 (flow), §7.2 (reconciliations).
+- Instrument mechanics: §4 Table 2 (Q01–Q12 construct/scale/decision map), §5 full 12-question instrument with anchors, explicit missing option on Q06, judgment hints on Q03/Q04 (2–5 = opportunity/applied), open Q11 (50–200字), Q12 result taxonomy.
+- Row-level data: Tables 8–11 (per-person answers), Tables 5–6 (per-person wave states).
+- Denominators/decisions/actions: §10 (all formulae), §11 Table 18 (limits), §12 Tables 19 + reopen/hold thresholds, §13 replacement register + REAL hold checklist, §6 observer form kept NOT_AVAILABLE_HELD.
+
+## 3. Timeline — VERIFIED
+
+From §3.1, Day 0 = `[SAMPLE-DATE-D0]` 2026-05-15. So Wave 1 (Day 30) = 2026-06-14 and Wave 2 (Day 90) = 2026-08-13, exactly matching the review test's expected citca dates. Exam date (Table 7, rows P01–P08) = 2026-07-10 — after Wave 1 and before Wave 2, and importantly **inside neither collection window's closure is contradicted**. Internal timeline consistency also holds directionally: Wave 1 Q12 all code 3 (registered, awaiting) per Table 16 row 3, exam not yet taken; Wave 2 reflects final Table 7 statuses. No cross-wave date contradiction found.
+
+## 4. Q12 arithmetic and denominators — VERIFIED (independently recomputed)
+
+- Wave 1 Q12 (Table 16): 8/8 code 3 = 100.0%; codes 1, 2, 4, 5 each 0/8 — denominators sum to 8, which equals the Wave 1 valid-respondent set P01–P08 (Table 8/9). ✓
+- Wave 2 Q12 (Table 16): code 1 = 6/7 = 85.7% ✓; code 4 = 1/7 = 14.3% ✓; sums to 7 = valid set P01–P06+P09 (Table 10/11). P01–P06 = 1, P09 = 4 matches Table 11 exactly. ✓
+- The 6/7 distribution also cross-matches Table 7: P01–P06 ≥ 70 (88/84/82/79/75/72, 達門檻), P07 = 64 and P08 = 58 (未達), P09 deferred, P10 not attempted; category counts 6+2+2 = 10 = eligible cohort. ✓
+- Distinct-responders rule honored: Table 6 shows P07/P08 drop out and P09 enters at Wave 2 ("Responders Differ Across Waves", §7.1), satisfying the blueprint's requirement not to assume repeat responders.
+- All other recomputed checks pass: Wave 1 scale sums Q01=32, Q02=30, Q03=26, Q04=25, Q05=28, Q06=25 (n=7), Q07=28, Q10=27 with correct means and favorable rates (Table 12); Wave 2 sums Q01=30 … Q10=27 all correct (Table 13); cohort flow Wave 1 (9+1=10, 8+1=9, 8+0=8) and Wave 2 (8+2=10, 7+1=8, 7+0=7) balance (§7.2); reach/response/valid rates in §10.1 recompute exactly (8/9 = 88.9%, 7/8 = 87.5% correct roundings); Q08/Q09 tabulations (Tables 14–15) trace to Tables 9/11 row by row; skill-use dual denominators (§10.5) 6/8 = 75.0% and 6/7 = 85.7% recompute from Tables 8 rows (Q03≥2: 7; Q04≥2: 6); certification block (§10.6): 8/10 = 80.0%, 6/8 = 75.0%, 6/10 = 60.0% all recomputed exact, with the explicit "not an Association pass rate" declaration following. P05's Q06 missing is handled as n=7, not zero-filled (Table 5 note, §9.1, Table 12 Q06, key `SAMPLE-MISSING-W1-P05-Q06`).
+
+## 5. SAMPLE/REAL boundaries — VERIFIED
+
+- Governance frame at body top declares SAMPLE/SYNTHETIC and no real records. §13.1 replacement register covers every fact family with keys; §13.2 holds all REAL items UNAVAILABLE_HELD. Footer flags REAL_ASSOCIATION_DATA=NOT_PROVIDED and THIRD_PARTY_CREDENTIAL_ORIGINAL=NOT_PROVIDED.
+- No fabricated third-party evidence: §6 observer form is blank with NOT_AVAILABLE_HELD; no signatures, observer names, or confirmations anywhere.
+- No fabricated Association approval: Table 19 actions are SAMPLE_PLAN_NOT_APPROVED; closure list C-01–C-03 marked not closed.
+- No causal/overclaim: §2.2 and §11 (Table 18, causality row) forbid causal and significance claims; no chi-square/t-test is run; the 75%/60% figures are explicitly fenced as N=10 demonstration (§10.6 declaration).
+- Boundary nuance noted (nonblocking, see OBS-3): instrument Q12 code 1 is worded "外部資料證實通過", while the synthetic data populate code 1 with synthetic sample-test results; Table 7/16 relabel the status as 合成達示範門檻 and §8.1/§10.6 restate the boundary, so the REAL/SAMPLE wall holds textually.
+
+## 6. Operational usability — VERIFIED
+
+A small-association administrator can initiate waves from Table 1 (inputs, roles, hold conditions), execute contact per §3.2 consent rules, use the §5 instrument directly, and trace every rate from §10 worked blocks; an evaluator gets §2 mapping, reconciliations in §7.2, and Table 18 interpretation limits. Hold/rejection criteria (Blueprint §8) are mirrored operationally in Table 1 row 暫緩/擱置條件 and §12.2 thresholds R-01/R-02/H-01.
+
+## 7. FORMAL_ACCEPTANCE
+
+**FORMAL_ACCEPTANCE=NOT_GRANTED** — confirmed at §14.2 (`HUMAN_FORMAL_ACCEPTANCE=NOT_GRANTED`), consistent with `INDEPENDENT_SEMANTIC_REVIEW=PENDING` (this review resolves that pending item) and no acceptance language anywhere in the body.
+
+---
+
+### UNKNOWN (not provable from the packet; marked per your instruction)
+
+1. **UNKNOWN-1 — Hash-byte binding**: candidate DOCX/body SHA values cannot be recomputed from the packet; binding is asserted, not mechanically verified.
+2. **UNKNOWN-2 — Official source cross-check**: the printed page-8 wording matches textually, but correspondence of the PDF/raster bytes and their SHAs (805386… etc.) cannot be verified packet-only; no visual inspection performed.
+3. **UNKNOWN-3 — Native rendering QA**: fonts (≥10.5pt body / ≥9.5pt table), clipped cells, and line-graphic checks are mechanical, not derivable from extracted text.
+
+### Nonblocking observations
+
+1. **OBS-1**: The Blueprint §7 named 17-field data dictionary (attempt_count, due_date, record_locator, evidence_type, confirmer_consent, etc.) has no consolidated field-definition table in the body; the underlying information exists but is distributed across Tables 1, 4–7, 16, 19. Per-person contact attempt counts are only present as a rule (§3.2, max 3), not per-row.
+2. **OBS-2**: §9.3 reflections are framed as 【SAMPLE例句】("情境可寫成…") — i.e., template-style example sentences rather than fully written-in reflective text; they are three, distinct, barrier-diverse, and clearly synthetic, but a strictest reading of "populated qualitative datum" is slightly thin. Wave attribution of reflections A/B/C is unlabeled (C=P07 aligns with Wave 1, where P07 responded).
+3. **OBS-3**: Q12 scale semantics — code 1 worded as externally verified pass, populated with synthetic sample-test results; mitigated by §8.1/§10.6/Table 7 relabeling, but a REAL deployment should reword code 1 or the population rule.
+4. **OBS-4**: §10.5 uses Wave 1 data only for the dual skill-use denominators; the tables that feed it (Table 8) are the Wave 1 rows, which is correct but the section does not name the wave explicitly in its first line.
+
+### Blockers
+
+None found.
+
+**PASS** — bound to candidate SHA-256 `b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d`, extracted body SHA-256 `a6f9b879203ab5234d6f5c918c7b3b7b5109c641a66bbbae3d72ebbb9b409991`. FORMAL_ACCEPTANCE=NOT_GRANTED.

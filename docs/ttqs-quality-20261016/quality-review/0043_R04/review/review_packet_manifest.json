@@ -1,0 +1,167 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0043",
+  "requirement_id": "I09-E03",
+  "candidate_sha256": "23e2218ccd297d82cd0fc8298fc242c66df278cb7708d824ebfb4b15449478ab",
+  "reviewer": "Antigravity CLI read-only; no Computer Use",
+  "model_requested": "gemini-3.8-flash-high",
+  "effort_requested": "high",
+  "input_count": 31,
+  "inputs": [
+    {
+      "path": "0043_R04_antigravity_review_prompt_R01.txt",
+      "size_bytes": 5526,
+      "sha256": "2222ab23519ca31cc556bc473dcc24fd1b4c89bfce11d075c5681c8d4b284d30"
+    },
+    {
+      "path": "inputs\\blueprint_unique_and_negative_neighbors.jsonl",
+      "size_bytes": 23597,
+      "sha256": "5b833a4680eb3b843e4e4dd496b2590108d887a5cb507e430752519293ced07d"
+    },
+    {
+      "path": "inputs\\candidate_0043_R04.docx",
+      "size_bytes": 61212,
+      "sha256": "23e2218ccd297d82cd0fc8298fc242c66df278cb7708d824ebfb4b15449478ab"
+    },
+    {
+      "path": "inputs\\candidate_0043_R04_Word.pdf",
+      "size_bytes": 628715,
+      "sha256": "0fd45dc48c3ee7861aa2bc7f7fd1f7b966e9a4c6b509c20a4d88967256a847fa"
+    },
+    {
+      "path": "inputs\\candidate_interleaved_text.txt",
+      "size_bytes": 36136,
+      "sha256": "e01726d5e47edd823282d3ebb7935978718dadfd793426682a577e7c1c068f6e"
+    },
+    {
+      "path": "inputs\\candidate_pages\\page-01.png",
+      "size_bytes": 268962,
+      "sha256": "038f72a6b157c0a0b45c041e11673ea6c57a9ea794bc2fc529b818123b88b305"
+    },
+    {
+      "path": "inputs\\candidate_pages\\page-02.png",
+      "size_bytes": 361021,
+      "sha256": "670688b2ca021d2a66eade1e7fe1116f2208dcd161830e5df28516e54325c71f"
+    },
+    {
+      "path": "inputs\\candidate_pages\\page-03.png",
+      "size_bytes": 229225,
+      "sha256": "59ac5a7fd42d8e9dda60876e85d90b5fc2cd57b97632d560e011c4e7cb0379ba"
+    },
+    {
+      "path": "inputs\\candidate_pages\\page-04.png",
+      "size_bytes": 395984,
+      "sha256": "5a1a85b459863be3e1d2ff438cad1e8ab6115372c11ae9ff7f84c9731f57360b"
+    },
+    {
+      "path": "inputs\\candidate_pages\\page-05.png",
+      "size_bytes": 312666,
+      "sha256": "8d5ec0be79206a45e6af8921851ad46c88e4bbf4a69bd1d531abc4272e130760"
+    },
+    {
+      "path": "inputs\\candidate_pages\\page-06.png",
+      "size_bytes": 325200,
+      "sha256": "018e8e4a6ce1571a60d2345defb4a3fcb30203083d02a943f7028be26e4aef29"
+    },
+    {
+      "path": "inputs\\candidate_pages\\page-07.png",
+      "size_bytes": 375292,
+      "sha256": "e95a933d8edc4cc0675bf57d05ce2d6349ac51168ed6c956bb923d677dc84347"
+    },
+    {
+      "path": "inputs\\candidate_pages\\page-08.png",
+      "size_bytes": 377066,
+      "sha256": "b64a868022b42101e50e536123bc10d5b96fdcd1c2d884d58e8c00371e9a5f41"
+    },
+    {
+      "path": "inputs\\candidate_pages\\page-09.png",
+      "size_bytes": 377206,
+      "sha256": "05d8a6d1955f9d7828f992ffb53eaf653ad4658b8d4e1bb245e98a6e8c0d0d72"
+    },
+    {
+      "path": "inputs\\candidate_pages\\page-10.png",
+      "size_bytes": 203627,
+      "sha256": "fe08f749fe60eab509ceab0431123c1ad5cf401c32300e50aeae1ffd7246ef09"
+    },
+    {
+      "path": "inputs\\candidate_pages\\page-11.png",
+      "size_bytes": 224020,
+      "sha256": "dde3af8235add05803063968b9e754ef66628b46fb1f50c25f5f7b1eb4860e7d"
+    },
+    {
+      "path": "inputs\\candidate_pages\\page-12.png",
+      "size_bytes": 273963,
+      "sha256": "9b57d03160eaa61e6a62f752eb7d60859ee2f97c3dd2233ceca4bed304fbd5d5"
+    },
+    {
+      "path": "inputs\\candidate_pages\\page-13.png",
+      "size_bytes": 238555,
+      "sha256": "fdcb226ac2f0b7c0326ce72f45722b4a8c6135c7c2930c9993b0f49d2465bc93"
+    },
+    {
+      "path": "inputs\\candidate_pages\\page-14.png",
+      "size_bytes": 332797,
+      "sha256": "c84d7d8a6e975f19216e5618aebfc3e16f663e33952d9779277625e8037d565e"
+    },
+    {
+      "path": "inputs\\candidate_pages\\page-15.png",
+      "size_bytes": 355845,
+      "sha256": "ae033bbdc96fb242312ebacd1aa93b85378f777fb88cab9324cf6d11e2ff49bc"
+    },
+    {
+      "path": "inputs\\candidate_pages\\page-16.png",
+      "size_bytes": 400711,
+      "sha256": "5da6e09ca5bec2621df5f5bbfd8fff0f98df9d245541bb7cfe1b7598bbc68df8"
+    },
+    {
+      "path": "inputs\\candidate_pages\\page-17.png",
+      "size_bytes": 162129,
+      "sha256": "6c05481dfd864a178033fb6ccfa27786a8c7ee41d2a588792e813e09e1901ebe"
+    },
+    {
+      "path": "inputs\\candidate_word_page_text.txt",
+      "size_bytes": 35550,
+      "sha256": "0bd38551881e67a92d98f8c7574242c462a1ffb34ca060af5245038a68f04555"
+    },
+    {
+      "path": "inputs\\official_checklist_full_source.pdf",
+      "size_bytes": 303044,
+      "sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709"
+    },
+    {
+      "path": "inputs\\official_requirement_and_numbering.txt",
+      "size_bytes": 536,
+      "sha256": "3011d30453df4d0b997f9edd60f3fc60ffc274f0deb943530466430eb6ce2d7b"
+    },
+    {
+      "path": "inputs\\official_source_page_03.png",
+      "size_bytes": 392645,
+      "sha256": "58f3c876f7ced30ce444e208238094248958c7df08764228a30cf7cc8b456b50"
+    },
+    {
+      "path": "inputs\\R01_provenance_context_only.json",
+      "size_bytes": 2189,
+      "sha256": "3cd8aed456f205335c2b440229f55557290198ee3a8b188c27b2bac404b1b0c7"
+    },
+    {
+      "path": "inputs\\R03_style_repair_context_only.json",
+      "size_bytes": 1384,
+      "sha256": "bf450e8c00c91af8ed1751656c25ed949e2e0df0303bfc61982d6ff61a2c2ee0"
+    },
+    {
+      "path": "inputs\\R04_pagination_repair_context_only.json",
+      "size_bytes": 1218,
+      "sha256": "528af9b576a7e559b9f785b01b3ff7b16f835d06744f74e03ae56ba037520c1f"
+    },
+    {
+      "path": "inputs\\R04_Word_render_receipt_context_only.json",
+      "size_bytes": 937,
+      "sha256": "cbb2ceaf341e6cd426f07abe5997bc77ec89f5997456e2c94425d4328957f5a3"
+    },
+    {
+      "path": "inputs\\synthetic_replacement_register_248_rows.csv",
+      "size_bytes": 90562,
+      "sha256": "ad43c11c33299526a93c673fd2183bb39f739ddebdd1f16d743f59e03ebdc31d"
+    }
+  ]
+}

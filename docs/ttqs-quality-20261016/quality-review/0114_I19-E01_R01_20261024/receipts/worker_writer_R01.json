@@ -1,0 +1,48 @@
+{
+  "schema": "ttqs-one-worker-receipt-v1",
+  "work_id": "TTQS-0114-I19-E01-R01-WRITER",
+  "doc_id": "0114",
+  "requirement_id": "I19-E01",
+  "official_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+  "internal_blueprint_index": 125,
+  "worker": "Antigravity CLI",
+  "request_model": "gemini-3.8-flash-high",
+  "actual_model_from_cli_init": "gemini-3.8-flash-high",
+  "identity_limit": "CLI model field verified; separate provider billing attestation unavailable.",
+  "exit_code": 0,
+  "result_status": "SUCCESS",
+  "duration_seconds": 188.4230001,
+  "conversation_id": "8620fb34-32f2-4757-9225-356c030f6949",
+  "os_pid": "UNKNOWN_NOT_DURABLY_RECORDED",
+  "pid_note": "Spawned PID not preserved in the writer receipt; wrapper PID is not used as a substitute.",
+  "prompt_sha256": "dc87471b91920d1f3d7c434d4892b80a59d7a2ed862e126781d5f5c386e04e85",
+  "source_packet_sha256": "d42ca5b1b656ffa01be20022a3508224275dcd693f25a0863dc1dac774e279a4",
+  "blueprint_sha256": "7dcd0c33b1a9acd38fc6ced26880c41be5a927da359c317d7a5b194afee988d2",
+  "stdout_ndjson": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0114_I19-E01_R01_20261024\\worker\\antigravity_writer_0114_R01.stdout.ndjson",
+    "bytes": 682537,
+    "sha256": "a0e0799110ab42bd7412c321efa03fee3ab1a497af2c4e5ae91d27e280513478",
+    "events": {
+      "init": 1,
+      "step_update": 3271,
+      "result": 1
+    },
+    "non_init_tool_call_markers": 0
+  },
+  "stderr_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+  "returned_manuscript": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0114_I19-E01_R01_20261024\\worker\\antigravity_writer_0114_R01_manuscript.md",
+    "bytes": 54362,
+    "sha256": "8f474bc0b494e6ec5c81172b39cd991a68739e258e2976354e0541335844170c",
+    "exact_response_match": true
+  },
+  "token_usage": {
+    "input_tokens": 12098,
+    "output_tokens": 19503,
+    "thinking_tokens": 3433,
+    "cache_read_tokens": 0,
+    "total_tokens": 31601
+  },
+  "tool_usage_note": "Non-init records had no tool-call keys/events; init tool list is capability disclosure only. No Computer Use call observed.",
+  "adoption": "Original response retained; separate deterministic normalization and Word build produced adopted manuscript and candidate."
+}

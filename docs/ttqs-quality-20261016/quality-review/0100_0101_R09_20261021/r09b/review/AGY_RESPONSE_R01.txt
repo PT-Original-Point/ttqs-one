@@ -1,0 +1,40 @@
+{
+  "doc_id": "0100",
+  "requirement_id": "I18-E08",
+  "candidate_sha256": "0262d68826181a4b5f6209c3422a2d5c61a0b9820790c4e43a2e483b94de884c",
+  "body_extraction_sha256": "0c3c7370db89e529d7fd963f69eedaae2701956fea0c65956f7432066f71734e",
+  "verdict": "PASS",
+  "findings": [],
+  "criterion_results": {
+    "F1": {
+      "status": "PASS",
+      "assessment": "Closed. T12R06 explicitly establishes that a matching pre/post code across stages without identity verification must be placed on HOLD, requires respondent verification of identity, identical version, and chronological order with audit notes, and mandates REJECT with exclusion from the denominator if unverified or if collision occurs, prohibiting presumptive matching."
+    },
+    "F2": {
+      "status": "PASS",
+      "assessment": "Closed. Operational privacy checklists and handler checks in P064, P087, and P094 explicitly name employer/workplace, client, and service-recipient identifiers alongside personal contact data."
+    },
+    "F3": {
+      "status": "PASS",
+      "assessment": "Closed. P002, T01R07, T01R09, and P163 clearly differentiate prior R09a PASS on the old SHA from the pending R09b delta candidate review, and explicitly state that formal acceptance is NOT_GRANTED."
+    },
+    "F4": {
+      "status": "PASS",
+      "assessment": "Closed. Standardized to '四位數字配對代碼' in P064 and P141; blanks are consolidated into a single classification ('缺漏') in T12R03 while T12R02 is restricted to out-of-range/illegible; CSV header in P131 has all leading spaces removed; T17R11 explicitly notes retention of the unchanged R09 register."
+    },
+    "no_new_material_contradiction": {
+      "status": "PASS",
+      "assessment": "The targeted delta maintains internal consistency across learner forms, handler instructions, validation tables, and handoff specifications to 0101 without introducing contradictions or altering score matrices."
+    },
+    "sample_real_boundary": {
+      "status": "PASS",
+      "assessment": "SAMPLE/SYNTHETIC designations remain prominent; REAL UNKNOWN / HOLD statuses and NOT_GRANTED formal acceptance remain explicit across headers, metadata, and limitation sections."
+    },
+    "scope_inheritance": {
+      "status": "PASS",
+      "assessment": "All unchanged text and tables inherit coverage from the prior exact-SHA baseline PASS (debd41e7ca1b18b88cad37db118c5b3474df411b3e2d1c87a8351d456245e0b2); delta is strictly bounded to F1-F4 repairs."
+    }
+  },
+  "review_scope": "Independent semantic delta review of candidate R09b against baseline R09a for doc_id 0100 (requirement I18-E08), covering structured text diff for paragraphs P001-P166 and table rows T01-T17, verification of F1-F4 closures, and cross-stage handoff coherence with 0101.",
+  "limitations": "Text-only semantic review based strictly on the provided structured extraction diff and candidate metadata; no visual layout inspection performed; relies on cited baseline PASS and local deterministic checks for unchanged 80-cell synthetic matrices and register row counts."
+}

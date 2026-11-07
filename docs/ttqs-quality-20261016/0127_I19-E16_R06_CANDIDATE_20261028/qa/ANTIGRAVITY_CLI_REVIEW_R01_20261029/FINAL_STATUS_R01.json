@@ -1,0 +1,52 @@
+{
+  "schema": "TTQS_ONE_0127_INDEPENDENT_REVIEW_STATUS_R01",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0127",
+  "official_requirement_id": "I19-E16",
+  "unique_blueprint_row_sha256": "8e0f7650307842de1c98513f9a056db74c1169e271249220c7e206b7d70d2a77",
+  "source_packet_sha256": "058663e200fd0207196c08a02e4d159c6e3eaa7f167094cd7b409b4050b18675",
+  "unique_blueprint_sha256": "9a249a2e398407469bd82c9bf5d7a6188c9e3d28be79172bd4cc33b213c700ff",
+  "candidate_sha256": "c6c9a6270f429052aa959f9ae6fdca10ebd02a308a33b9d28c84e7d36ad48008",
+  "candidate_unchanged": true,
+  "reviewer": "Antigravity CLI, separate process from Builder",
+  "cli_version": "1.4.9",
+  "requested_model": "gemini-3.8-flash-high",
+  "actual_served_model": "UNKNOWN",
+  "fallback_status": "UNKNOWN; CLI startup CCPA default resolver marker was present; explicit Gemini resolution and Google endpoint observed",
+  "reviewer_reported_verdict": "PASS",
+  "review_response_sha256": "deb72137f3f68b65cd5248735043a4b8e31e4a884654038f6308f02db6c1168f",
+  "criteria_count": 9,
+  "blocking_findings_count": 0,
+  "nonblocking_findings": [
+    {
+      "finding_id": "NB-0127-01",
+      "locator": "Candidate Document Header; 文件身分與用途",
+      "description": "Visual layout and multi-column pagination across pages within the native Word environment remain to be confirmed via native Word visual inspection, though all required sections, tables, and extracted textual contents are complete."
+    },
+    {
+      "finding_id": "NB-0127-02",
+      "locator": "Section 4 Table 3A vs Blueprint Summary",
+      "description": "Composite customer value relative change is calculated and reported as 23.08% in Table 3A (0.75 / 3.25 = 23.0769%), whereas the Blueprint overview text cites 23.1%; both representations are mathematically accurate at 2 vs 1 decimal places."
+    },
+    {
+      "finding_id": "NB-0127-03",
+      "locator": "Section 7 Table 6",
+      "description": "Action roles and completion deadlines are maintained as unassigned placeholders ('待指派', '核定後'), which appropriately preserves organizational governance boundaries prior to official authorization."
+    }
+  ],
+  "review_scope": "Independent read-only semantic, mathematical, usability, traceability, boundary, and negative neighbor review of candidate doc_id 0127 corresponding to official requirement I19-E16, based on candidate extracted DOCX text, tables, and R01 evidence packets.",
+  "tool_calls": "NO_INVOCATION_MARKERS_OBSERVED; allowlist initialization present",
+  "computer_use": false,
+  "token_usage": "UNKNOWN",
+  "cli_warning": "warning: --mode plan has no effect while slash command expansion is disabled.",
+  "existing_candidate_qa": {
+    "visual": "PASS 12-page Word-native render; existing exact-SHA receipt",
+    "formal_acceptance": "NOT_GRANTED",
+    "technical": "PASS deterministic/math/layout scope on exact SHA"
+  },
+  "adjudication": "REVIEWER_REPORTED_PASS_RETAINED_AS_EVIDENCE; NOT GEMINI-VERIFIED; NOT PROMOTED",
+  "raw_log_uploaded": false,
+  "raw_log_sha256": "6ee8fc8730e14e2293594d6ef03a4a6061b23d8b4f5f353413a7284b4a516d0e",
+  "receipt_sha256": "58c51bfb88b1d01c3fb58715beb5da0b7e053929bcf140ed8d62e43bb238698a",
+  "checked_at_local": "2026-10-29T07:17:39.3990516+08:00"
+}

@@ -1,0 +1,41 @@
+{
+  "deliverable_id": "0045",
+  "requirement_id": "I10-E01",
+  "official_checkbox_sequence": "047",
+  "candidate_revision": "R02",
+  "candidate_docx_sha256": "099c10e7039b370ca39066e9baf15267a5f8122aab1aad59ae90a0b4440885fb",
+  "reviewer_route": "OpenCode CLI v2",
+  "requested_model": "opencode/deepseek-v4.1-flash-free",
+  "runtime_model_attestation": "NOT_PROVIDED_BY_CLI_SESSION_METADATA",
+  "session_id": "ses_eb8989fcbffe0ydW9UGb5GGmqT",
+  "packet_path": "review/opencode_v2_review_R02/REVIEW_PACKET_R02.md",
+  "packet_sha256": "33712197b99061fa6eb22b8fa2cdea370b1583aaabc4f55a7073cb548fd47e3f",
+  "cli_stdout_path": "review/opencode_v2_review_R02/RAW_OPENCODE_STDOUT.json",
+  "cli_stdout_sha256": "884815ded9d46c801bb2af91e9266068e21bf6c795c0c774ee1cbda20e5fd76f",
+  "cli_stderr_path": "review/opencode_v2_review_R02/RAW_OPENCODE_STDERR.txt",
+  "cli_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "cli_exit_code": 0,
+  "event_types": [
+    "step_start",
+    "text"
+  ],
+  "tool_calls_observed": 0,
+  "reviewer_reported_no_tools_or_file_modifications": true,
+  "reviewer_verdict": "PARTIAL",
+  "blocking_defect_count": 0,
+  "nonblocking_repair_items": [
+    "§5 pricing criterion 1–2 point wording contradicts the worked price bands and the 82-point A example; genuine internal inconsistency.",
+    "Internal-instructor evaluation path is absent despite official indicator-10 inclusion of internal instructors.",
+    "Table 5 cross-reference to Table 6 cannot be verified as printed table labels are absent; use descriptive heading reference or add printed labels.",
+    "Optional: visually clarify that official checkbox 047 is not DOCX 0047."
+  ],
+  "candidate_bytes_changed_during_review": false,
+  "reviewed_at_epoch_ms": 1792199437062,
+  "promotion": "NOT_PROMOTED",
+  "scope_limitations": [
+    "Reviewer did not call tools or independently hash/re-extract the DOCX; coordinator recomputed candidate SHA before dispatch and after completion.",
+    "Reviewer relied on packet page locators and production-side visual receipt rather than independently rendering pages.",
+    "Peer document full bodies were not included; cross-document body non-duplication remains UNKNOWN.",
+    "Actual Association rules, authority, procurement and performance remain unverified; examples are synthetic."
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "schema": "TTQS_ONE_R12_0135_CANONICAL_CANDIDATE_READBACK_CORRECTION_V1",
+  "project_id": "TTQS_ONE",
+  "command": "TTQS_ONE_20261026_R12_FULL_RECOVERY_DELIVERY",
+  "observed_at_local": "2026-10-27T11:40:11.6189058+08:00",
+  "repository": "PT-Original-Point/ttqs-one",
+  "pull_request": 92,
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "verified_head": "bdf1442614500118978217c2ef2d414375fe8b2e",
+  "doc_id": "0135",
+  "requirement_id": "I19-E25",
+  "candidate": {
+    "state": "CANDIDATE",
+    "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0135_I19-E25_SOURCE_PREP_R01_20261024\\candidate\\0135__目標市場與顧客價值具體提升成效分析報告_R01.docx",
+    "remote_path": "docs/ttqs-quality-20261016/quality-review/0135_I19-E25_CANDIDATE_R01_20261025/candidate/0135__目標市場與顧客價值具體提升成效分析報告_R01.docx",
+    "local_bytes": 52820,
+    "remote_bytes": 52820,
+    "local_sha256": "cae8be8280456b51a1294ee90eafca0ac1ae8a12738289d6ebbca35b3a05a3da",
+    "remote_sha256": "cae8be8280456b51a1294ee90eafca0ac1ae8a12738289d6ebbca35b3a05a3da",
+    "git_blob_sha1": "f3b01de845fa21f30d1af7dc5d8d8d2a370b4e0c",
+    "raw_byte_equal": true,
+    "method": "Windows PowerShell Invoke-WebRequest from raw.githubusercontent.com at immutable branch HEAD; compare bytes, SHA-256, and Git blob SHA-1"
+  },
+  "prior_readback_correction": {
+    "local_receipt": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\R12_20261027\\R12_CURRENT_DELTA_20261027\\GITHUB_RAW_READBACK_0135_R12_0bb706ec.json",
+    "commit": "0bb706ece28a6a52a3e40900f9626521489db7f2",
+    "prior_result": "28 of 29 package entries exact; the candidate entry returned FETCH_ERROR",
+    "root_cause": "The old sync manifest referenced candidate/0135__...docx relative to the R12 staging package, but the DOCX was absent from that staging directory. The candidate is present in the canonical CANDIDATE_R01 folder.",
+    "corrected_interpretation": "The earlier FETCH_ERROR is a staging-relative-path mismatch, not evidence that the canonical candidate was missing from GitHub.",
+    "historical_sidecar_note": "The prior 28 matching entries were reported at commit 0bb706e; this receipt does not claim a new 28-file raw readback at bdf1442."
+  },
+  "qa": {
+    "technical": "PASS_WITH_SCOPE",
+    "visual": "PASS_WITH_SCOPE_10_OF_10_PAGES",
+    "opencode_semantic": {
+      "verdict": "PASS_TEXT_ONLY_WITH_TWO_NONBLOCKING_FINDINGS",
+      "requested_model": "opencode/glm-5.3-flash-free",
+      "actual_model": "opencode/glm-5.3-flash-free per sanitized session export",
+      "candidate_sha256": "cae8be8280456b51a1294ee90eafca0ac1ae8a12738289d6ebbca35b3a05a3da",
+      "response_sha256": "f5d73a8d010da4ceec811f5cb3754af1d8baf100f53b1211ba5b679275ca7af7",
+      "usage": {
+        "input": 14697,
+        "output": 1791,
+        "reasoning": 718,
+        "cache_read": 2432
+      },
+      "reported_cost_usd": 0,
+      "limitation": "Reviewer used supplied text and echoed the supplied DOCX SHA; it did not open or rehash the DOCX binary."
+    },
+    "antigravity_semantic": {
+      "verdict": "REVIEWER_REPORTED_PASS_TEXT_ONLY",
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_serving_model": "UNKNOWN",
+      "candidate_sha256": "cae8be8280456b51a1294ee90eafca0ac1ae8a12738289d6ebbca35b3a05a3da",
+      "response_sha256": "e1d401cf008db13e7e836684b05a9877efc838011235d5c7abec4ad1c653b519",
+      "reported_tokens": 28286,
+      "limitation": "Model identity, billing, DOCX binary inspection, and visual review are not established by this response."
+    },
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN"
+  },
+  "candidate_mutated": false,
+  "docx_rebuilt": false,
+  "next_action": "Preserve exact candidate bytes; use this correction to supersede the staging-path fetch error and continue another genuinely READY document stage."
+}

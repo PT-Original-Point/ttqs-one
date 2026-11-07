@@ -1,0 +1,53 @@
+{
+  "document_id": "0065",
+  "official_requirement_id": "I15-E01",
+  "official_checkbox_serial": "071",
+  "candidate_revision": "R02",
+  "candidate_path": "E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0065_R01\\candidate\\TTQS_ONE_0065_R02.docx",
+  "candidate_sha256": "43eac240f56e1dc3dcd2d26820ae2a309b3db98eff7ef26af129f73ec1bbb856",
+  "verdict": "PASS",
+  "state": "CANDIDATE_EXACT_SHA_SEMANTIC_PASS_NOT_FORMALLY_ACCEPTED",
+  "review_route": "OpenCode v2 CLI independent reviewer; separate from DeepSeek V4.1 Flash Free writer",
+  "requested_model": "opencode/beam-free",
+  "session_export_model": {
+    "id": "beam-free",
+    "providerID": "opencode",
+    "variant": "default"
+  },
+  "session_id": "ses_eb084e890ffeJSh0ua6Y77dun3",
+  "session_outcome": "succeeded",
+  "reported_cost": 0,
+  "reported_tokens": {
+    "input": 48834,
+    "output": 4617,
+    "reasoning": 8812,
+    "cache": {
+      "read": 219200,
+      "write": 0
+    }
+  },
+  "raw_response_jsonl": "E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0065_R01\\review\\opencode_beam_R02\\stdout_R02.jsonl",
+  "raw_response_sha256": "92bb8157fa2eff55a0579e3b68d4f1627cd4d436238b7c665380c0f36a6db13a",
+  "response_markdown": "E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0065_R01\\review\\opencode_beam_R02\\independent_review_response_R02.md",
+  "response_sha256": "abbf5ee8d5c766b7cd8046f6f3df0c405d0500a199ce0d854020f034f6021e6d",
+  "session_export_sha256": "c0368ea258f053e364192688626b90148cd2ff2133db8dd5ac8ce2fc35c39c73",
+  "review_packet_sha256": "af2fe050b2ea8a8d73fd4ff3e702f087da6650a9805713884877089ac38e5729",
+  "computer_use": "NOT_USED",
+  "file_modification_by_reviewer": "NONE",
+  "review_scope": "official fit, genre/scope, usable workflow and completed SAMPLE meeting record, needs-goals-methods, learner/instructor feedback, calculations, decisions/owners/deadlines/follow-up/rejection rules, cross-document references and SAMPLE/REAL boundary",
+  "review_coverage_limitations_reported": [
+    "reviewer did not independently review rendered layout",
+    "reviewer did not independently compare the sidecar CSV",
+    "reviewer did not re-extract DOCX text or inspect XML/styles"
+  ],
+  "separate_covering_receipts": [
+    "visual_review_R02.json: 21 pages; 12 directly inspected on R02 and 9 inherited only by identical R01 raster hash",
+    "technical_review_R02.json: DOCX ZIP integrity, exact required content, arithmetic, font sizes, repeated page warning",
+    "parity_review_R02.json: 912 Markdown atoms present in exact-SHA DOCX extraction; 19/19 appendix rows match sidecar; all referenced SYN-0060 facts covered"
+  ],
+  "nonblocking_observation": "Reviewer noted both sample feedback items are recommended for adoption; sample also explicitly demonstrates missing data/UNKNOWN/HOLD gaps and rejection rule. Unique Blueprint requires an actual dissent or evidence gap example; the missing-data examples satisfy that requirement. No repair required.",
+  "remaining_gates": [
+    "Human formal acceptance",
+    "REAL association meeting, authority, attendance, approval and original evidence remain UNKNOWN/HOLD"
+  ]
+}

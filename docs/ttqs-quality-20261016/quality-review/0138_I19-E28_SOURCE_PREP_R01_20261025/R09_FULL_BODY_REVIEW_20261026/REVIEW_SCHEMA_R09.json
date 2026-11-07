@@ -1,0 +1,180 @@
+{
+  "type": "object",
+  "required": [
+    "doc_id",
+    "requirement_id",
+    "blueprint_index",
+    "candidate_sha256",
+    "review_scope",
+    "verdict",
+    "title_blind_genre",
+    "criteria",
+    "findings",
+    "math_recalculation",
+    "negative_neighbors",
+    "sample_real_boundary",
+    "real_evidence_status",
+    "formal_acceptance",
+    "visual_review",
+    "limitations"
+  ],
+  "properties": {
+    "doc_id": {
+      "const": "0138"
+    },
+    "requirement_id": {
+      "const": "I19-E28"
+    },
+    "blueprint_index": {
+      "const": 152
+    },
+    "candidate_sha256": {
+      "const": "f06439849ba70d0ad665d760d0a422382d9f4a991ca449b36f05fae39abd5a27"
+    },
+    "review_scope": {
+      "type": "object",
+      "required": [
+        "paragraphs_total",
+        "paragraphs_reviewed",
+        "tables_total",
+        "table_rows_total",
+        "table_review"
+      ],
+      "properties": {
+        "paragraphs_total": {
+          "const": 140
+        },
+        "paragraphs_reviewed": {
+          "const": 140
+        },
+        "tables_total": {
+          "const": 21
+        },
+        "table_rows_total": {
+          "const": 149
+        },
+        "table_review": {
+          "type": "array",
+          "minItems": 21,
+          "maxItems": 21,
+          "items": {
+            "type": "object",
+            "required": [
+              "table",
+              "rows_total",
+              "rows_reviewed"
+            ],
+            "properties": {
+              "table": {
+                "type": "integer"
+              },
+              "rows_total": {
+                "type": "integer"
+              },
+              "rows_reviewed": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    },
+    "verdict": {
+      "enum": [
+        "PASS",
+        "PARTIAL",
+        "FAIL"
+      ]
+    },
+    "title_blind_genre": {
+      "type": "string"
+    },
+    "criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "verdict",
+          "locators",
+          "evidence"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "verdict": {
+            "enum": [
+              "PASS",
+              "PARTIAL",
+              "FAIL"
+            ]
+          },
+          "locators": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "evidence": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "severity",
+          "locator",
+          "issue",
+          "required_fix"
+        ],
+        "properties": {
+          "severity": {
+            "enum": [
+              "BLOCKER",
+              "MAJOR",
+              "MINOR"
+            ]
+          },
+          "locator": {
+            "type": "string"
+          },
+          "issue": {
+            "type": "string"
+          },
+          "required_fix": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "math_recalculation": {
+      "type": "object"
+    },
+    "negative_neighbors": {
+      "type": "object"
+    },
+    "sample_real_boundary": {
+      "type": "string"
+    },
+    "real_evidence_status": {
+      "const": "UNKNOWN/HOLD"
+    },
+    "formal_acceptance": {
+      "const": "NOT_GRANTED"
+    },
+    "visual_review": {
+      "const": "NOT_PERFORMED"
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

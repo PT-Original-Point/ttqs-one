@@ -1,0 +1,44 @@
+{
+  "project_id": "TTQS_ONE",
+  "document_id": "0088",
+  "official_requirement_id": "I17D-E02",
+  "official_checkbox_text": "就業及考照追蹤紀錄。",
+  "official_checkbox_serial": "UNKNOWN_NOT_IN_VERIFIED_SERIAL_REGISTER",
+  "revision": "R07",
+  "status": "SAMPLE_SYNTHETIC_CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "verdict": "PASS",
+  "docx_sha256": "83ff96699e8c3e01852524047c822f912323207b2c22eb7e6fdb2cc561a5b5dc",
+  "body_sha256": "04bc085c8a843dda41ce3c7ec87d40bd8a589650e8d087ff9874b9d89518814e",
+  "source_packet_sha256": "d4d17971d2801b9176486a27042373ff69e954db2d2bfe8e13eac9fb489a8717",
+  "unique_blueprint_sha256": "21ac733e57c4aff54d7b61c8f1cee9f557d23aa9765897e181e713d057703bcb",
+  "synthetic_register_sha256": "5d319fae7bd37ca5800fc622d96971cad99f888f008c23fd37d8c2df62855c5a",
+  "reviewer": {
+    "route": "OpenCode CLI v2.0.32",
+    "model": "opencode/mimo-v2.6-flash-free",
+    "model_catalog_listed_as_free": true,
+    "session_id": "ses_eaa5374ceffeuNLn3eYe1yP6P5",
+    "independent_from_builder": true,
+    "exit_code": 0,
+    "session_outcome": "succeeded",
+    "tools_called": false,
+    "cost_and_token_usage": "UNKNOWN_NOT_REPORTED_IN_CAPTURED_OUTPUT"
+  },
+  "review_input_bundle_sha256": "28a270c838179e9339f34f3eb6c7ebd7c0cc73399244f5f2c5282e259ce44681",
+  "raw_stdout_sha256": "27beee24281bef46fa2fadc75d6b8af5947456c59ac6bac04cdc038220286b4c",
+  "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "normalized_report_sha256": "497064293e887ae6f1478ecbf52579ba779cf3c10da9fbcacc1850972e182d38",
+  "review_scope": "Exact-SHA semantic review of source packet, Unique Blueprint, extracted R07 body, 199-row replacement register, and prior R05 finding. Text only; no DOCX binary/layout review.",
+  "resolved_prior_blocker": "R05 real stop/close vocabulary and blank-form state mismatch: resolved in R07 sections 3.3, 7.2, 11, 11.1, and 12.1.",
+  "nonblocking_findings": [
+    "C02/C09 HOLD owner or review date absent from sample handoff rows.",
+    "Replacement register has non-blocking repeated C11-specific note and several locator imprecisions.",
+    "Blank form 12.2 lacks explicit E0-E3 evidence grade; 12.4 case_id is structurally awkward.",
+    "No turnkey procedure for a small association to obtain its own eligibility/contact basis."
+  ],
+  "unknowns": [
+    "157-item official serial.",
+    "All real learner/employment/exam records, consent, eligibility, reviews, signatures, approvals and third-party originals.",
+    "DOCX binary/fonts/layout from semantic reviewer perspective."
+  ],
+  "formal_acceptance": "NOT_GRANTED"
+}

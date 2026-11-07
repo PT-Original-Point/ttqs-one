@@ -1,0 +1,14 @@
+from pathlib import Path
+from datetime import datetime,timezone
+import hashlib,json
+root=Path(r"E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0086_R01")
+render=root/"evidence/render_R01_final3"
+pdf=render/"0086_R01.pdf"; pages=sorted((render/"pages").glob("page-*.png"),key=lambda p:int(p.stem.split("-")[-1]))
+old=sorted((root/"evidence/render_R01_final2/pages").glob("page-*.png"),key=lambda p:int(p.stem.split("-")[-1]))
+changed=[]
+for i,p in enumerate(pages):
+ if i>=len(old) or hashlib.sha256(p.read_bytes()).digest()!=hashlib.sha256(old[i].read_bytes()).digest():changed.append(i+1)
+receipt={"project_id":"TTQS_ONE","document_id":"0086","requirement_id":"I17C-E05","official_checkbox_serial":"092","docx_sha256":hashlib.sha256((root/"candidate/0086_R01.docx").read_bytes()).hexdigest(),"pdf_sha256":hashlib.sha256(pdf.read_bytes()).hexdigest(),"renderer":"Microsoft Word 16.0 ExportAsFixedFormat PDF","rasterizer":"Poppler pdftoppm 96 DPI","page_count":len(pages),"page_png_sha256":[{"page":i+1,"sha256":hashlib.sha256(p.read_bytes()).hexdigest()} for i,p in enumerate(pages)],"prior_reviewed_render_comparison":{"baseline_pdf_sha256":hashlib.sha256((root/"evidence/render_R01_final2/0086_R01.pdf").read_bytes()).hexdigest(),"pixel_different_pages":changed,"pages_1_through_19_inherited_by_exact_png_sha256":changed==[20,21]},"visual_scope":"All 21 final candidate pages covered: pages 1-19 were directly visually reviewed in the immediately prior render and have byte-identical PNGs; pages 20-21 were visually inspected after the final page-break change. Dense tables, repeated headers, row breaks, footer/page numbers and blank/overflow pages checked.","visual_status":"PASS_LAYOUT_WITH_INTENTIONAL_SECTION_BREAK_BEFORE_SECTION_14","completed_at_utc":datetime.now(timezone.utc).isoformat()}
+(root/"evidence/visual_qa_R01.json").write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+qa=json.loads((root/"evidence/technical_qa_R01.json").read_text(encoding="utf-8"));qa["pdf_sha256"]=receipt["pdf_sha256"];qa["pdf_page_count"]=len(pages);qa["visual_receipt_sha256"]=hashlib.sha256((root/"evidence/visual_qa_R01.json").read_bytes()).hexdigest();(root/"evidence/technical_qa_R01.json").write_text(json.dumps(qa,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+print("VISUAL_RECEIPT_SHA256="+hashlib.sha256((root/"evidence/visual_qa_R01.json").read_bytes()).hexdigest());print("TECHNICAL_RECEIPT_SHA256="+hashlib.sha256((root/"evidence/technical_qa_R01.json").read_bytes()).hexdigest());print("PDF_SHA256="+receipt["pdf_sha256"]);print("PAGE_COUNT="+str(len(pages)));print("PIXEL_CHANGED_PAGES="+str(changed));print("DOCX_SHA256="+receipt["docx_sha256"])

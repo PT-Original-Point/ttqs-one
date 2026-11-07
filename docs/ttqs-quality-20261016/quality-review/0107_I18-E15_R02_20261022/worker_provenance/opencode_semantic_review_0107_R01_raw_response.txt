@@ -1,0 +1,140 @@
+{
+  "docx_sha256": "748ac062b33c1da0db75aa882905c4d0e8c624b0ab50189b7b37146bc6968651",
+  "extracted_text_sha256": "0dfd7360e0da5b330faefcc1fd91fa48be7012e8f99ff6aeb37ac228fb059301",
+  "review_mode": "TEXT_ONLY_EXACT_SHA_BOUND",
+  "verdict": "PASS",
+  "summary": "Text-only semantic review of the exact-SHA-bound extracted candidate 0107 / I18-E15 evidence record. The candidate implements the unique Blueprint faithfully: one fixed SYNTHETIC cohort (SYN-COHORT-0107-A, 2026-04-01..2026-04-30), 8-person population table, 7-row attempt table, 15-entry SYN source register, three recomputable metrics with explicit numerator/denominator ID sets, HOLD/EXCLUDE_WITH_REASON/REJECTED_RECORD mechanics, role matrix without personal names, and a 9-item REAL replacement checklist. All arithmetic, dedup logic, denominator rules, window rules, and SAMPLE/REAL boundary labeling match the Blueprint; no fabrication of third-party documents, seals, signatures, or official serials was found. Two LOW findings only: (1) the recorded writer work ID ends in -02 while the Blueprint states -01, a provenance reconciliation item; (2) the metric recompute table lacks an explicit cutoff-date column required by Blueprint 5.D (the cutoff is stated elsewhere in the cohort card and Section 6). Limitations: no binary DOCX opened, no pages/images/font sizes inspected, no hashes recomputed, no PDF opened; formula rendering (LaTeX-source strings appear in the extracted text), page-number fields, and table layout remain VISUAL_PENDING. This verdict covers semantic content of the extracted text only; the candidate remains CANDIDATE / VISUAL_PENDING and is not promoted or formally accepted.",
+  "verified": [
+    {
+      "item": "Genre and purpose match I18-E15 evidence_record: exam/certification pass-rate record with traceable, deduplicated, recomputable original-record mechanics (cohort card, population table, attempt table, formulas, source codes, review roles).",
+      "evidence_locator": "Title, quick-nav table (文件角色 evidence_record), Sections 3-7, 9-10"
+    },
+    {
+      "item": "Official mapping and internal index handled correctly: I18-E15, official PDF page 7, internal blueprint index 116 explicitly labeled as a project-internal index, official printed serial left UNKNOWN rather than fabricated.",
+      "evidence_locator": "Quick-nav table rows 157 項檢核藍圖索引 / 官方印製流水號; Section 2.1"
+    },
+    {
+      "item": "Official-source paraphrase is faithful: page 7 lists 證照獲取率 as common reference evidence and 高證照通過率之證明資料 under 3分之常見參考佐證資料; document states these are illustrative reference evidence that guarantee no score and no causal effect.",
+      "evidence_locator": "Section 2.1 規範正確認知"
+    },
+    {
+      "item": "Fixed SAMPLE dataset implemented exactly as mandated, with no second invented dataset: P01-P04 first-attempt pass, P05 fail then retake pass, P06 fail with no later pass, P07/P08 no attempt; 8 completers, 6 unique examinees, 7 attempts.",
+      "evidence_locator": "Sections 3, 5 (8-row table), 6 (7-row table)"
+    },
+    {
+      "item": "Denominator integrity: P07/P08 marked NOT_ATTEMPTED, excluded from exam denominator (N) but retained in completion denominator (Y), never written as FAIL; retake for P05 collapses to one unique candidate (duplicate_check=RETAKE_RECORD).",
+      "evidence_locator": "Section 5 rows 7-8 and 口徑檢驗確認說明 1-2; Section 6 考次數據去重說明"
+    },
+    {
+      "item": "Per-row source traceability complete: every one of the 8 persons and all 7 attempts maps to a distinct SYN source code, all marked as not really verified; authorization/review columns use role names only, no real personal names.",
+      "evidence_locator": "Section 7.1 (15 rows), Sections 7.2, 9.1, 10"
+    },
+    {
+      "item": "Analysis limitations section covers small-sample instability, absence-of-attempt handling, missing-value prohibition (never fill 0), exam-pass versus certificate-issuance decoupling with certificate status UNKNOWN, and non-exclusive causation.",
+      "evidence_locator": "Sections 8.1-8.4"
+    },
+    {
+      "item": "REAL replacement checklist present with 9 items covering roster, exam eligibility, score proof, certificate authenticity, certification type/validity, 90-day window compliance, dedup/retake logic, personal-data authorization, and independent recomputation; all statuses UNKNOWN with fillable controlled-storage and status columns; document explicitly states no simulated seals are used.",
+      "evidence_locator": "Section 10 checklist rows 1-9 and 管理人員實務作業規範 note"
+    },
+    {
+      "item": "No fabricated third-party artifacts: issuing body and exam name are explicitly fictional demo entities; no certificate images, badges, QR codes, real agency serial numbers, seals, or signatures appear; synthetic IDs used throughout.",
+      "evidence_locator": "Section 3 rows 對應測驗／證照名稱 and 主考／發證機構性質; Section 10 note"
+    }
+  ],
+  "findings": [
+    {
+      "id": "F-01",
+      "severity": "LOW",
+      "locator": "Quick-nav table, row 版本號／工作 ID: R01／TTQS-0107-I18-E15-SAMPLE-WRITER-R01-20261022-02",
+      "evidence": "Unique Blueprint section 8 states Writer 工作 ID = TTQS-0107-I18-E15-SAMPLE-WRITER-R01-20261022-01, but the candidate records suffix -02.",
+      "issue": "Provenance metadata mismatch between the Blueprint-defined writer job ID and the work ID embedded in the candidate; traceability/control-record inconsistency only, no effect on content, arithmetic, or SAMPLE/REAL boundaries.",
+      "required_action": "Single write owner reconciles via the build receipt/sidecar: record which writer job actually produced this exact SHA, then either correct the control record or, only if the embedded ID is genuinely wrong, regenerate the DOCX. Do not mutate DOCX bytes for a sidecar-only discrepancy."
+    },
+    {
+      "id": "F-02",
+      "severity": "LOW",
+      "locator": "Section 4.1 指標定義與算術驗收表 (metrics A/B/C rows)",
+      "evidence": "Blueprint section 5.D requires the metric recompute table to carry 指標名稱、分子 ID 集合、分子數、分母 ID 集合、分母數、公式、結果、截止日、限制. The candidate table contains all columns except an explicit 截止日 (cutoff-date) column; the 2026-05-01..2026-07-29 window appears in the cohort card (Section 3) and Section 6 intro instead.",
+      "issue": "Minor per-table completeness gap versus the minimum field spec; information is present in the document and the arithmetic is unaffected, but a per-metric cutoff field is absent from the recompute table itself.",
+      "required_action": "Next revision by the builder owner adds a 截止日/observation-window column to the Section 4.1 table (or an explicit cross-reference column naming Section 3), then re-run exact-SHA static and semantic review on the new candidate."
+    }
+  ],
+  "unverified": [
+    {
+      "item": "Binary DOCX bytes and extracted-text hash were not independently recomputed; the packet's SHA bindings (DOCX 748ac062...68651, extracted text 0dfd7360...9301) are accepted as declared, per text-only no-tool review mode."
+    },
+    {
+      "item": "Formula rendering in Word: extracted text shows LaTeX-source markup (frac/text expressions and inline math such as $(4/6)$) for the metric formulas. Whether these render as proper equations or as raw markup in Word is a native-visual question and must be confirmed before CURRENT promotion; raw-markup display would be an evaluator-facing readability defect requiring builder formula-pipeline repair."
+    },
+    {
+      "item": "Page-level layout: table column widths, text wrapping, the box-drawing boundary diagram in Section 2.2, merged heading/paragraph line breaks visible in extraction, and the footer page-number field (extracted as 第 [blank] 頁) were not visually inspected."
+    },
+    {
+      "item": "Typography floors (body text >= 10.5 pt, tables >= 9.5 pt) and overall pagination (13 repeated header/footer blocks suggest a multi-page document) cannot be confirmed from text extraction."
+    },
+    {
+      "item": "Official PDF page 7 raw text and the render PNG were not opened; official source statements were reviewed only as quoted in the packet. The official title of indicator I18 rendered as 訓練成果評估 could not be confirmed from the packet either."
+    },
+    {
+      "item": "Source commit/blob SHAs (SOURCE_COMMIT 2080a1eb..., blueprint blob 8c2bbe7c..., mapping blob ee3fc17e..., PDF blob 9c7621de...) were not verified against the repository."
+    },
+    {
+      "item": "REAL status of the association's actual certification records is UNKNOWN by design; no real roster, exam results, or certificates were provided, so no real pass rate is verified."
+    },
+    {
+      "item": "Word-native full-page visual inspection is not complete; per Blueprint section 8 the candidate can only be labeled CANDIDATE / VISUAL_PENDING until that check is performed."
+    }
+  ],
+  "title_blind_test": "PASS. With the title hidden, the body still identifies as a certification/exam pass-rate evidence record: it is organized around one named cohort, an eligibility rule, an observation window anchored to the completion date, unique-candidate deduplication, first-attempt versus cumulative pass rates, per-attempt records, and per-record source codes. It cannot be mistaken for a questionnaire, an SOP-only document, an ability-radar analysis, or a competition-award record, and it contains real functional mechanics rather than generic headings.",
+  "nearest_requirement_distinction": "PASS. The candidate explicitly distinguishes 0100/0101 (I18-E08, pre/post self-assessment and ability-radar change) as subjective self-evaluation that cannot serve as objective exam evidence, and 0102 (I18-E09, external skills-competition awards) whose participant/award counts cannot be used as exam denominators or pass proof. No scores, cases, or statistics were copied from those neighbors, and the document states its SYN cohort and IDs have no known link to 0099/0100/0101/0102 or any real association class, with future sharing requiring source-ID cross-referencing and independent recomputation.",
+  "sample_real_boundary": "PASS. SAMPLE/SYNTHETIC labeling is pervasive and consistent: title prefix, header status table, a dedicated full-page warning statement stating the document proves nothing about real student outcomes, issuance, or approval, per-row verification_state values (SAMPLE_RECOMPUTED_ONLY_NOT_REAL_VERIFIED, SAMPLE_NO_EXAM_LOG_NOT_REAL_VERIFIED, SAMPLE_FAIL_LOGGED_NOT_REAL_VERIFIED), and a SAMPLE/SYNTHETIC marker in the header and footer of every page. REAL status is UNKNOWN and formal acceptance NOT_GRANTED inside the document itself. Certificate issuance and validity are decoupled from exam pass and held at UNKNOWN. Pending-real-source language (authorization/legality confirmation cells and fill-in storage paths) appears only inside the REAL replacement checklist and real-data authorization columns, where it is explicitly marked as not established in this demo, which is acceptable under the REAL-UNKNOWN state. No empty or placeholder-only operational form exists; no real-organization document, seal, signature, badge, QR, or serial is simulated.",
+  "arithmetic_recheck": {
+    "observation_window": {
+      "rule": "90 days starting the day after completion (completion 2026-04-30)",
+      "recomputed": "2026-05-01 through 2026-07-29 inclusive = 90 days",
+      "document_value": "2026-05-01 至 2026-07-29（結訓翌日起 90 日）",
+      "match": true
+    },
+    "attempt_dates_in_window": {
+      "recomputed": "all 7 attempts dated 2026-05-15 or 2026-06-20, inside window",
+      "match": true
+    },
+    "metric_A_first_attempt_pass_rate": {
+      "recomputed": "4 first-attempt passes (P01-P04) / 6 first-attempt takers (P01-P06) = 0.6667 = 66.7%",
+      "document_value": "4/6 = 66.7%",
+      "match": true
+    },
+    "metric_B_90day_unique_candidate_pass_rate": {
+      "recomputed": "5 candidates passing at least once in window (P01-P05, P05 via retake 2026-06-20) / 6 unique examinees (P01-P06) = 0.8333 = 83.3%",
+      "document_value": "5/6 = 83.3%",
+      "match": true
+    },
+    "metric_C_completion_to_pass_conversion": {
+      "recomputed": "5 passers (P01-P05) / 8 completers (P01-P08) = 0.625 = 62.5%",
+      "document_value": "5/8 = 62.5%",
+      "match": true
+    },
+    "attempt_count_check": {
+      "recomputed": "6 first attempts (P01-P06) + 1 retake (P05 attempt 2) = 7 attempts; population table and attempt table rows agree row-by-row",
+      "document_value": "7 次（首次 6 + 重考 1）",
+      "match": true
+   ",
+    "forbidden_denominator_guard": {
+      "recomputed": "5/7 = 0.7143 = 71.4%",
+      "document_handling": "shown only as a prohibited example, explicitly forbidden as a unique-candidate pass rate",
+      "match": true
+    },
+    "small_sample_sensitivity_claim": {
+      "recomputed": "1/8 = 12.5%, 1/6 = 16.7%",
+      "document_value": "12.5% 至 16.7%，1/6 約 16.7%",
+      "match": true
+    },
+    "cross_table_consistency": {
+      "recomputed": "population table (8 rows) and attempt table (7 rows) agree on per-person first results, retake counts, and pass-by-cutoff status; numerator/denominator ID sets in Section 4.1 match the row-level data; source register covers all 8 persons and all 7 attempts (15 entries)",
+      "match": true
+    }
+  },
+  "human_usability": "Strong for a small-association administrator: a six-step one-minute procedure specifying which originals to obtain, the cohort/date anchor, dedup rules, independent second-person review, and HOLD for missing items; explicit HOLD / EXCLUDE_WITH_REASON / REJECTED_RECORD semantics including a no-premature-reporting rule; a role matrix using position titles rather than personal names with a segregation-of-duties anti-self-review line; recomputable metric tables exposing numerator and denominator ID sets; and a 9-item REAL replacement checklist with controlled-storage and status fill-in columns. Residual usability risk is limited to visual rendering (formula display, table layout, page numbers), which is pending native Word inspection.",
+  "formal_acceptance": "NOT_GRANTED"
+}

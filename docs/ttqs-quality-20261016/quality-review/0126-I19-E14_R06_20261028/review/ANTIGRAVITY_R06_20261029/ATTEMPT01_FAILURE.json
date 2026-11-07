@@ -1,0 +1,12 @@
+{
+  "raw_local_input_sha256": "b390fa3261a85a89f36bb54fc060b51f71ed9db84c6396d1672aafb426b962f4",
+  "root_cause": "PowerShell redirected-stdin encoding corrupted non-ASCII stream JSON; CLI parser rejected malformed escape before model inference",
+  "repair": "Serialize NDJSON with ensure_ascii=true and use binary stdin; corrected attempt 02 completed successfully",
+  "model_inference": "NOT_OBSERVED",
+  "status": "FAILED_BEFORE_INFERENCE",
+  "work_id": "0126-I19-E14-R06-SEMANTIC-REVIEW",
+  "exit_code": "UNKNOWN",
+  "attempt": "01",
+  "requested_model": "gemini-3.8-flash-high",
+  "token_usage": "UNKNOWN"
+}

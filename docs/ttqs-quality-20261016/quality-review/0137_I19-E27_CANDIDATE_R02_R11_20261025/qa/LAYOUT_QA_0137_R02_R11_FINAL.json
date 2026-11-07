@@ -1,0 +1,95 @@
+{
+  "schema": "ttqs-one-0137-layout-qa-r02-r11-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0137",
+  "requirement_id": "I19-E27",
+  "checkbox_index_157": 151,
+  "candidate_state": "CANDIDATE",
+  "candidate_sha256": "3899167f0437ec76df42e6229685564d910250c6a822b627ec15b5f9cfcfecc8",
+  "renderer": "Microsoft Word COM ExportAsFixedFormat + Poppler pdftoppm",
+  "source_sha_unchanged_during_render": true,
+  "page_count_word": 9,
+  "page_count_images": 9,
+  "pdf": {
+    "file": "render_final_versionfix/candidate.pdf",
+    "sha256": "e6f0488bd20d92ed586fbe1cae1da645749fb28bfa07266f0f2edc0ea14e2581",
+    "bytes": 516990
+  },
+  "render_receipt_sha256": "a8b3ff0c0af4a8be111de4e38d6f835fd55f5687e8cfabbd3b929217b8cd4168",
+  "pages": [
+    {
+      "page": 1,
+      "file": "page-1.png",
+      "sha256": "34ff0aad4f673e748dc355a92fa5596fb7595782457a60f405f40be9d74c62a8",
+      "bytes": 379262,
+      "visual_inspection": "PASS_MANUAL_FULL_PAGE"
+    },
+    {
+      "page": 2,
+      "file": "page-2.png",
+      "sha256": "7ca85bc0a0b2eaa476b249f9b466f3c980be1ca2f84527405736250feb3aede9",
+      "bytes": 346206,
+      "visual_inspection": "PASS_MANUAL_FULL_PAGE"
+    },
+    {
+      "page": 3,
+      "file": "page-3.png",
+      "sha256": "bce7057a36f98c5e89814ba490ffbf40fc0895d52e1e2f5f8c01037e401935a3",
+      "bytes": 243946,
+      "visual_inspection": "PASS_MANUAL_FULL_PAGE"
+    },
+    {
+      "page": 4,
+      "file": "page-4.png",
+      "sha256": "64bec8d468fbe453834f5ffa05723d264c48faafd7c2489c085e13c730f116b9",
+      "bytes": 221956,
+      "visual_inspection": "PASS_MANUAL_FULL_PAGE"
+    },
+    {
+      "page": 5,
+      "file": "page-5.png",
+      "sha256": "6123e652e4266490149d8f3aa7bc78a25ff3dc7f6b9249613e338c5640565dc8",
+      "bytes": 318074,
+      "visual_inspection": "PASS_MANUAL_FULL_PAGE"
+    },
+    {
+      "page": 6,
+      "file": "page-6.png",
+      "sha256": "8c5db964436adb2b80f8b37406b6653d529ebe66bd9f3a1d020b5b1e77e4499e",
+      "bytes": 365494,
+      "visual_inspection": "PASS_MANUAL_FULL_PAGE"
+    },
+    {
+      "page": 7,
+      "file": "page-7.png",
+      "sha256": "049d252cbe88f4f4312cd6fbc54fe4eaf21af9e1d7ae6eb69afc7890ed6855bc",
+      "bytes": 316099,
+      "visual_inspection": "PASS_MANUAL_FULL_PAGE"
+    },
+    {
+      "page": 8,
+      "file": "page-8.png",
+      "sha256": "263b25f41e27a63a86247dc72be8a921a659fb179c96d6596762c907e301c868",
+      "bytes": 360192,
+      "visual_inspection": "PASS_MANUAL_FULL_PAGE"
+    },
+    {
+      "page": 9,
+      "file": "page-9.png",
+      "sha256": "8c3b63b0bb45f56479439fa7a002b27e7679319c14483e487de8b9744e9ca439",
+      "bytes": 259034,
+      "visual_inspection": "PASS_MANUAL_FULL_PAGE"
+    }
+  ],
+  "visual_result": "PASS_ALL_9_PAGES",
+  "findings": [
+    "Page 1: R02 version label corrected; no title underline; status and SAMPLE/REAL boundary legible.",
+    "Pages 2-3: explicit negative-neighbor boundaries and repeated table header remain readable; no clipping or overlap.",
+    "Pages 4-7: worked SAMPLE and cross-document controls readable; forms and decision tables remain intact across page breaks.",
+    "Pages 8-9: all nine synthetic register IDs separated; continuation header present; summary and UNKNOWN/HOLD status readable; no orphaned blank page."
+  ],
+  "scope": "Manual page-by-page visual inspection of the final render images for this candidate SHA. Does not prove independent semantic acceptance, real source evidence, or formal acceptance.",
+  "real_media_source": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED",
+  "inspected_at_tpe": "2026-10-25T15:57:32.299191+08:00"
+}

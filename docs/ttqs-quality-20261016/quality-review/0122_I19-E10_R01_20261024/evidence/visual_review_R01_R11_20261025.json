@@ -1,0 +1,63 @@
+{
+  "schema": "ttqs-one-visual-review/v1",
+  "observed_at_local": "2026-10-25T22:08:21.456+08:00",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0122",
+  "requirement_id": "I19-E10",
+  "official_printed_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+  "official_requirement": "提出課後追蹤調查與分析結果、證照通過情形（學習技能面）",
+  "official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "source_packet_sha256": "8301b3e12467370086dfccd86c4dbcd50d339f0ed54cda93c2bfcc051b793c3d",
+  "unique_blueprint_sha256": "cbfd0760a03870151d9bc083b8db76655d53107757706f4b1f4449e997553420",
+  "github_source_packet_blob_sha1": "853d2308afaaf8fa1f1e83abd5ca13ab65818bfb",
+  "github_unique_blueprint_blob_sha1": "28c6f45538853177f85ec694a9eb6e2e731e2699",
+  "github_head_at_review": "62be26e64b9e90c115e458f7cdd46fa1fb1a5975",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0122_I19-E10_SOURCE_PREP_R01_20261024\\candidate_R01\\0122_課後追蹤與證照通過分析表_R01.docx",
+  "candidate_sha256": "7f154df3ae9e9b5a9b91195fdd8c3abc8c1a88e7b2fcd9a87d47faa10fdf137e",
+  "candidate_state": "CANDIDATE_LOCAL_ONLY",
+  "candidate_bytes_unchanged_during_review": true,
+  "render_directory": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0122_I19-E10_SOURCE_PREP_R01_20261024\\candidate_R01\\word_render_R01_7f154df3_formula_fix",
+  "render_pdf_sha256": "53e04819169d82fdb953e08722d17e31b8c1465e3a3fe3d019b9759342f9f9ba",
+  "rendered_pages": 28,
+  "render_source_docx_sha256": "7f154df3ae9e9b5a9b91195fdd8c3abc8c1a88e7b2fcd9a87d47faa10fdf137e",
+  "reviewed_pages": "1-28",
+  "inspection_scope": "Full-page visual review of all 28 rendered page images; pages 1-4 were inspected earlier in this same active work sequence with the same candidate SHA, pages 5-28 inspected at this timestamp. This is a preliminary visual review, not final acceptance.",
+  "visual_verdict": "FAIL_REPAIR_REQUIRED",
+  "findings": [
+    {
+      "severity": "major",
+      "required_repair": "Replace only divider-only paragraphs with a clean single-line Word separator or remove them while retaining section headings; rerender and verify pagination.",
+      "id": "V-01",
+      "pages": [
+        7,
+        10
+      ],
+      "observation": "80-character ASCII equals-only divider paragraphs wrap to two visible lines and look like raw markup rather than a document separator."
+    },
+    {
+      "severity": "major",
+      "required_repair": "Correct the source text and Word output to display ≥, then recalculate/check the two counts and rerender.",
+      "id": "V-02",
+      "pages": [
+        22
+      ],
+      "observation": "Two formulas display the literal LaTeX token \\ge in the Q03 and Q04 opportunity/application counts instead of the comparison symbol ≥."
+    }
+  ],
+  "other_observations": [
+    "Pages 4, 6, 17, 23, and 28 contain substantial lower-page whitespace after a section/table/end block; content remains readable and no clipping was seen in these reviewed images."
+  ],
+  "semantic_review": "PENDING",
+  "semantic_review_exact_sha": "NOT_RUN",
+  "real_evidence": "NOT_PROVIDED",
+  "formal_human_acceptance": "NOT_GRANTED",
+  "github_candidate_readback": "404_NOT_PRESENT_AT_HEAD",
+  "resource_gate": {
+    "available_physical_memory_gib": 0.83,
+    "winword_automation_process_count": 52,
+    "new_word_export_started": false,
+    "reason": "Avoid starting another Word COM export while 52 WINWORD automation processes are present and free memory is below 1 GiB."
+  },
+  "next_action": "When Word export capacity is safely available, make only the two listed repairs in a new candidate copy, render with Microsoft Word, verify the new exact SHA and affected pages, then obtain independent semantic review on that exact SHA."
+}
+

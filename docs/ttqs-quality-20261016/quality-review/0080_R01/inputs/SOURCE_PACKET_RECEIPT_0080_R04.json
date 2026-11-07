@@ -1,0 +1,40 @@
+{
+  "schema": "TTQS_ONE_0080_SOURCE_PACKET_RECEIPT_R04.v1",
+  "document_id": "0080",
+  "requirement_id": "I17B-E02",
+  "official_checkbox_serial": "085",
+  "official_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "status": "READY_FOR_BUILD",
+  "source_head": "500960f4cdbf2b8aa439344aa42c7bbf8da35ab6",
+  "inputs": [
+    {
+      "path": "inputs/UNIQUE_BLUEPRINT_0080_R03.md",
+      "sha256": "a13ba084a2eba26ba36cd695ea227b0b13cce1ecd1a2d7dffc0c724821560a1c",
+      "bytes": 8355
+    },
+    {
+      "path": "inputs/SOURCE_PACKET_0080_R03.md",
+      "sha256": "1a4f761e63a151dffb1910eeb6a9dbc044facf18dc0456095c83fb1ffd6e3535",
+      "bytes": 6286
+    },
+    {
+      "path": "candidate/0080_R04_body.md",
+      "sha256": "9434e0349f7813cb756cba583c0c7727354c8b702578096434f2daa8d4d0549b",
+      "bytes": 40370
+    },
+    {
+      "path": "inputs/SYNTHETIC_REVIEW_DATA_0080_R01.csv",
+      "sha256": "3f1f1582fc4d1418053547ef1948b089ce8dbba693ddb3100eb637b5f7905bd0"
+    },
+    {
+      "path": "inputs/SYNTHETIC_REPLACEMENT_REGISTER_0080_R01.csv",
+      "sha256": "4a0633072b721ddd6930dde47ec052a23b7fb2c734806feb6d82a17dc2643457"
+    }
+  ],
+  "verified_upstream": {
+    "0077_reflection_csv_sha256": "3bdce0a1675a5b377dfafe2d75139d1f877e51530f5edc4ba3551a116bc6e985",
+    "0079_current_candidate_docx_sha256": "0361cf65557733cb3e1af93d5e59197aa96d307622a840800d008d8c580c66a7",
+    "0079_exact_sha_review_sha256": "2476e6330ecaf79c1bcae18e8dc242b958ceb8477967d9cb22b7ec79e6b06070"
+  },
+  "history": "R01 preserved with transcription error; R02 corrected the 0077 SHA; R03 additionally binds 0079 to reviewed R07 candidate."
+}

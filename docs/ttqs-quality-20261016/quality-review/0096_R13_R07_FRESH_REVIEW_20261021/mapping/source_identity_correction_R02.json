@@ -1,0 +1,88 @@
+{
+  "schema": "ttqs.source_identity_correction_overlay.v2",
+  "project_id": "TTQS_ONE",
+  "document_id": "0096",
+  "requirement_id": "I18-E03",
+  "revision": "R13",
+  "candidate_docx_sha256": "6ece53befed3ecb1b42e523b80da80decd33b0a7d55e4e1fe75ddf79b905d445",
+  "candidate_docx_bytes": 98816,
+  "project_157_item_index": 104,
+  "project_157_source_blob": "8c2bbe7ca9dcbb03088a48934b9e57e7147ede63",
+  "official_printed_checkbox_serial": "NOT_PRINTED_ON_OFFICIAL_PDF_PAGE_6",
+  "official_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "official_page_extract_sha256": "e0ecd2d7b1fd8c20e03b9e651083ee767ccaf3c4a6297f9cb0e7709d07620f02",
+  "docx_explicit_serial_label_found": false,
+  "prior_overlay": "mapping/source_identity_correction_R01.json",
+  "supersedes_prior_overlay_scope": "This R02 overlay expands correction coverage to every retained metadata/QA/review file listed below; it does not replace or delete any historical receipt.",
+  "affected_preserved_files": [
+    {
+      "path_in_preserved_R13_package": "README.md",
+      "sha256": "f4ca93d2a7072e83b9be435a52ee39b012199246ed83dd408f705b37a4afe4fc",
+      "stale_claim": "official_checkbox_serial or official_serial 099 where present; historical content is not rewritten"
+    },
+    {
+      "path_in_preserved_R13_package": "mapping/candidate_status_receipt.json",
+      "sha256": "4fbf26989b36d1d29ffcbc1f568c6c90a294aaadd7dae030df3f401774291a80",
+      "stale_claim": "official_checkbox_serial or official_serial 099 where present; historical content is not rewritten"
+    },
+    {
+      "path_in_preserved_R13_package": "mapping/metadata_correction_receipt.json",
+      "sha256": "7152f1a79b0e8e2c1a2aacb58f4bd61c67987ab2dfc4abddd28b8513c8a9a5cc",
+      "stale_claim": "official_checkbox_serial or official_serial 099 where present; historical content is not rewritten"
+    },
+    {
+      "path_in_preserved_R13_package": "mapping/source_binding_as_reviewed.json",
+      "sha256": "3cbcb6ab41a4d4bd968275a082125aaeaa66d9800093b79625ad9449517a2657",
+      "stale_claim": "official_checkbox_serial or official_serial 099 where present; historical content is not rewritten"
+    },
+    {
+      "path_in_preserved_R13_package": "mapping/source_binding_corrected.json",
+      "sha256": "8eb765f2b5423bd29989d24323987f37c0af199e7743d11d057b1ecee67f80c6",
+      "stale_claim": "official_checkbox_serial or official_serial 099 where present; historical content is not rewritten"
+    },
+    {
+      "path_in_preserved_R13_package": "qa/body_repair_log.json",
+      "sha256": "7cb0bc5fba3b2fca8eb7f6c49fa0a60bc35854016ebc668d4096a80b6f4b2022",
+      "stale_claim": "official_checkbox_serial or official_serial 099 where present; historical content is not rewritten"
+    },
+    {
+      "path_in_preserved_R13_package": "qa/build_receipt.json",
+      "sha256": "b930c543d70c9e41034212ad9bc1682d42dbfb0e40e54db0c373408f2a91679f",
+      "stale_claim": "official_checkbox_serial or official_serial 099 where present; historical content is not rewritten"
+    },
+    {
+      "path_in_preserved_R13_package": "qa/static_technical_audit.json",
+      "sha256": "dfde048953c226b6234d424907811b5baed297ab6aba21609cf0213d27308fbe",
+      "stale_claim": "official_checkbox_serial or official_serial 099 where present; historical content is not rewritten"
+    },
+    {
+      "path_in_preserved_R13_package": "qa/visual_review_receipt.json",
+      "sha256": "27c97e6c345a68f050e5856bdcf2799e25401c9f22466e806a5276693cafdd54",
+      "stale_claim": "official_checkbox_serial or official_serial 099 where present; historical content is not rewritten"
+    },
+    {
+      "path_in_preserved_R13_package": "review/return_receipt.json",
+      "sha256": "d5aba688b0face402022e7bbea21ba83345a473efd0172fd01a0e6357c140454",
+      "stale_claim": "official_checkbox_serial or official_serial 099 where present; historical content is not rewritten"
+    },
+    {
+      "path_in_preserved_R13_package": "review/review_input_manifest.json",
+      "sha256": "5a901774a924b9f0127642ef153aecb66fc35e8b19856dc235823841ac216c9b",
+      "stale_claim": "official_checkbox_serial or official_serial 099 where present; historical content is not rewritten"
+    },
+    {
+      "path_in_preserved_R13_package": "review/review_packet.md",
+      "sha256": "5142964a890f990fa3e3b128722639fd69bdb379d360d073d2a0a1ca275959c6",
+      "stale_claim": "official_checkbox_serial or official_serial 099 where present; historical content is not rewritten"
+    },
+    {
+      "path_in_preserved_R13_package": "review/independent_semantic_review_response.md",
+      "sha256": "11df70ab1e8f927b274337044eb53a98101dd32236d4acbf8284fb5109ab6980",
+      "stale_claim": "official_checkbox_serial or official_serial 099 where present; historical content is not rewritten"
+    }
+  ],
+  "disposition": "Interpret every listed 099 metadata claim as a stale incorrect serial label; use project index 104 and official printed serial not printed. The DOCX binary itself has no explicit serial label and remains unchanged.",
+  "fresh_review_packet_sha256": "5a003d14aa232416518663a84b0dd518fa8c4e0a6d2051ae68f09262a2662ec9",
+  "fresh_reviewer_response_sha256": "668d74b5b3f56d66bf04d6a0926bb3b70c8c85465e7480e0234587bf085603f7",
+  "fresh_review": "PASS_TEXT_ONLY on exact DOCX-derived body hash; technical/visual UNKNOWN to reviewer; formal acceptance not granted."
+}

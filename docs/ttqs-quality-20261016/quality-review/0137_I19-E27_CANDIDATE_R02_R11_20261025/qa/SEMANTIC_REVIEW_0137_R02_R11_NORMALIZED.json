@@ -1,0 +1,59 @@
+{
+  "schema": "ttqs-one-independent-semantic-review-normalized-v1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0137-I19-E27-R02-EXACT-SHA-DELTA-REVIEW-R11",
+  "doc_id": "0137",
+  "requirement_id": "I19-E27",
+  "official_checkbox_index_157": 151,
+  "official_printed_checkbox": "UNKNOWN",
+  "candidate_state": "CANDIDATE_ONLY",
+  "candidate_sha256": "3899167f0437ec76df42e6229685564d910250c6a822b627ec15b5f9cfcfecc8",
+  "reviewer_route": "Antigravity CLI text-only delta review",
+  "requested_model": "gemini-3.8-flash-high",
+  "actual_serving_model": "UNKNOWN",
+  "fallback_observed": "UNKNOWN",
+  "raw_response_sha256": "637d9e7617addff2de98feacfa3662bd15cbe84f4d352baaed146600675acc26",
+  "raw_process_receipt_sha256": "7279e5dde44acc0b1899d5bc5be53a38107612d0983d51231d2cdfbe101ee091",
+  "review_packet_sha256": null,
+  "baseline": {
+    "revision": "R01",
+    "candidate_sha256": "7271c89f59aab0455b72a5b17cb55da2eb6ea6c3a162214418930f9c924484f3",
+    "receipt_sha256": "9c67ef2ab5ba5d0a80d3ec360028c13337307b4589346452d227c96d2220feaa",
+    "verdict": "PASS",
+    "scope": "Complete extracted DOCX body in body order, source packet, official page 8-9 excerpt, crosswalk row and unique Blueprint; text only, no page image review."
+  },
+  "delta_verdict": "PASS",
+  "delta_scope": "Text-only semantic delta review of DOCX 0137 (I19-E27, project index 151) R02 modifications relative to the R01 baseline SHA 7271c89f59aab0455b72a5b17cb55da2eb6ea6c3a162214418930f9c924484f3. Scope is strictly confined to the R02 changes: first-page revision status cell, Table 2 additions (0139/I19-E29, 0126/I19-E14), Table 8 additions (0139/I19-E29, 0126/I19-E14), and Table 11 slash-separated fact/case identifiers. Unchanged sections inherit the baseline R01 PASS. Does not constitute a fresh full-document or visual/layout review.",
+  "checks": {
+    "official_binding_and_neighbor_separation": {
+      "status": "PASS",
+      "details": "Table 2 (rows 0139／I19-E29 and 0126／I19-E14) and Table 8 (rows 0139／I19-E29 and 0126／I19-E14) explicitly isolate outcome/certification evidence and salary survey evidence from I19-E27 media original verification. Clear negative boundaries and non-substitutability rules prevent interchangeability of evidence."
+    },
+    "conditional_cross_document_linking_no_shared_key": {
+      "status": "PASS",
+      "details": "Table 8 conditions mandate verified common source keys before any cross-document linking, explicitly noting that 0139 and 0126 have no common key ('目前無共同 key，保持分離') and that synthetic case SYN-0137-CASE-01 is isolated from 0110 real cases ('不與 0110 真實個案共用'). No unauthorized shared keys are claimed."
+    },
+    "fact_case_id_unambiguity": {
+      "status": "PASS",
+      "details": "Table 11 first column provides nine distinct, unambiguous slash-separated identifiers (SYN-0137-F01 / SYN-0137-CASE-01 through SYN-0137-F09 / SYN-0137-CASE-01), resolving prior concatenation while consistently associating all nine facts with the same synthetic case."
+    },
+    "r02_label_and_truth_boundary_preservation": {
+      "status": "PASS",
+      "details": "First-page status cell correctly identifies revision 'R02；候選文件，不是協會正式核定或 TTQS 評分'. CANDIDATE state, SAMPLE/SYNTHETIC status, UNKNOWN/HOLD media original status, and NOT_GRANTED formal boundaries are rigorously maintained."
+    },
+    "semantic_consistency_and_contradiction_check": {
+      "status": "PASS",
+      "details": "No contradictions, false inferences, or scope overextensions detected in the R02 delta additions."
+    }
+  },
+  "findings": [],
+  "limitations": [
+    "Text-only semantic review strictly bounded to the supplied delta packet; does not access runtime filesystem, shell, or external repositories.",
+    "Unchanged text relies on inherited R01 PASS baseline; this review does not constitute a full-document semantic re-audit.",
+    "No visual, typography, page-budget, or Word COM rendering inspection performed (covered under separate visual receipt).",
+    "Official printed serial number remains UNKNOWN; real media originals remain UNKNOWN/HOLD."
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "real_media_source": "UNKNOWN/HOLD",
+  "interpretation": "PASS applies only to the listed R02 delta. Unchanged scope inherits R01 exact-SHA semantic PASS; no fresh full-document R02 semantic review was performed."
+}

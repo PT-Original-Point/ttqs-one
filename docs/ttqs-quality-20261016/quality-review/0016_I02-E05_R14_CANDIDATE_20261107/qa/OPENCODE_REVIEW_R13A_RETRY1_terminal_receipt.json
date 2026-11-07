@@ -1,0 +1,26 @@
+{
+  "schema": "TTQS_ONE_OPENCODE_TERMINAL_RECEIPT_R1",
+  "work_id": "TTQS-0016-W1-SCOPED-REVIEW-R13A-RETRY1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0016",
+  "candidate_sha256": "AF9239FD9A22E9BF25DD5DF9808C0A933A2E78FE1EBEDEC4BC6D643E7B372F42",
+  "register_sha256": "5C53C9080E5977E65DEE4D5001495B5186F6579750644D6D68F3BBF9FB889D61",
+  "review_packet_sha256": "6E58B9A28B4BC43516114272CFA8DC45ACB2B3FED2A382E916D8C9ADF1DC0EB0",
+  "session_id": "ses_e4c018a74ffeW8mBoVxGxfVyBq",
+  "process_state": "EXITED_CONFIRMED_BY_LIVE_PROCESS_QUERY",
+  "process_exit_code": "UNKNOWN_NOT_CAPTURED",
+  "session_finish_reason": "stop",
+  "stdout_file": "OPENCODE_REVIEW_R13A_RETRY1_stdout.jsonl",
+  "stdout_sha256": "890D3A099B30D2DD600CDA9B20E2C10BC3168ADA186890FE611AA35C91D23BC4",
+  "stdout_bytes": 236928,
+  "response_utf8_sha256": "09838E7BD24BF0C75B0DC96B38753321D0272E3AEB480CD338D906D7ACF3DCD7",
+  "stderr_bytes": 0,
+  "actual_model": "UNKNOWN",
+  "verdict": "REPAIRABLE",
+  "acceptance_state": "SCOPED_FINDINGS_NOT_ACCEPTED",
+  "findings": [
+    "R13A-F1: register pointer stale in DOCX, requiring R14 revision",
+    "R13A-F2: dangling example path wording in §10.1, requiring R14 revision"
+  ],
+  "recovered_at_tpe": "2026-11-07T16:59:58.693203+08:00"
+}

@@ -1,0 +1,16 @@
+Antigravity CLI routing excerpt - TTQS 0102 R09
+Source log SHA-256: 168dd5fe52940998f3478d9321a2f4d12e3d09a92de777e3332c0565c6153ee0
+Original log is kept locally; this sanitized excerpt excludes credential/keyring metadata.
+
+I1022 17:16:02.902128       1 resolver.go:85] Model ID gemini-3.8-flash-high not in local config, defaulting to CCPA
+I1022 17:16:03.020434       1 resolver.go:111] Model resolved via default
+I1022 17:16:03.022057       6 server.go:1790] Language server version: 1.4.5
+W1022 17:16:03.337160      29 cache.go:135] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1022 17:16:03.337160      29 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+E1022 17:16:03.340298      29 errorreport.go:224] Failed to poll ListExperiments: error getting token source: You are not logged into Antigravity.
+W1022 17:16:03.364564       6 cache.go:135] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1022 17:16:03.364564       6 errorreport.go:224] error getting token source: You are not logged into Antigravity.
+W1022 17:16:03.364564       6 cache.go:135] Cache(userInfo): Singleflight refresh failed: failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+E1022 17:16:03.364564       6 errorreport.go:224] failed to get load code assist response: error getting token source: You are not logged into Antigravity.
+W1022 17:16:03.365563      69 cache.go:135] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+E1022 17:16:03.365563      69 errorreport.go:224] error getting token source: You are not logged into Antigravity.

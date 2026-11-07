@@ -1,0 +1,72 @@
+{
+  "receipt_type": "Word-render visual QA",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0095",
+  "requirement_id": "I18-E02",
+  "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "revision": "R10",
+  "docx_sha256": "4c52fe99188b726f1e62754484aec8604abae83d73643c46a263f7e6a7ee3630",
+  "pdf_path": "qa/render_0095_R10_final04/0095_R10_CANDIDATE.pdf",
+  "pdf_sha256": "de40911be70a852798e285141b7f8536c7ae48c4e2285a715685d5d74bd65b4d",
+  "pdf_pages": 44,
+  "render_method": "Microsoft Word COM ExportAsFixedFormat; Poppler PNG page render at 90 dpi",
+  "all_pages_overview_inspected": true,
+  "contact_sheets": [
+    {
+      "file": "contact_01_16.jpg",
+      "sha256": "852c31bc71e224d2b7b31e4bfcf4f7b8f08481d0fae8ffb902847f9961ccf411"
+    },
+    {
+      "file": "contact_17_32.jpg",
+      "sha256": "4093cd2deddcd91ab3943a9f06d35506802d93cb888cf6bfc3a172d04c851bd3"
+    },
+    {
+      "file": "contact_33_44.jpg",
+      "sha256": "d56487650268110ab95e633eb361eb29af4a85da57d6aef3082adf64d1679c61"
+    }
+  ],
+  "high_resolution_pages_inspected": [
+    4,
+    6,
+    7,
+    19,
+    20,
+    21,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "inherited_pixel_identical_page_review": {
+    "baseline_render": "qa/render_0095_R10_final03",
+    "identical_pages": 43,
+    "changed_pages": [
+      4
+    ],
+    "comparison": "SHA-256 of all 44 rendered page PNGs; only p4 differs between final03 and final04; p4 independently re-inspected at high resolution after final locator edit"
+  },
+  "findings": [
+    "All 44 pages are present and the three R10 final04 contact sheets were visually inspected.",
+    "The corrected §1.4 locator table fits on PDF p.4; the §8.1–§8.5 row now points to pp.34–37.",
+    "The complete §5.1 data-dictionary table, including SUB_SUPPRESS, fits on PDF p.20; formula library begins p.21, removing the isolated last-row page seen in the first R10 render.",
+    "The two-population figure is visibly embedded on p.32 and its specification and limits continue on p.33.",
+    "The conclusion and candidate-use boundary occupy the final page (p.44) as intentional closing callouts.",
+    "No clipping, unreadable overflow, orphaned data-dictionary row or missing rendered page observed in the inspected scope."
+  ],
+  "status": "PASS_WITH_SCOPE_LIMITS",
+  "scope_limit": "Technical/layout review only; does not establish semantic acceptance or association adoption.",
+  "font_floor_receipt": "qa/0095_R10_font_floor_receipt.json",
+  "build_receipt": "qa/0095_R10_docx_build_receipt.json",
+  "semantic_review_status": "PENDING_EXACT_SHA_REVIEW"
+}

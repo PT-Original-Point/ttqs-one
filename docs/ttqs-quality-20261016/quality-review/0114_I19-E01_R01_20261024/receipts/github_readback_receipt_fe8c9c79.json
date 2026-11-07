@@ -1,0 +1,241 @@
+{
+  "schema": "ttqs-one-github-readback-receipt-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0114",
+  "requirement_id": "I19-E01",
+  "readback_at": "2026-10-24T04:25:15+08:00",
+  "files_verified_at_commit": "0c3b93919c0863bc3cfc67110e50c0dee7f2c387",
+  "file_count": 25,
+  "all_local_git_blob_sha_equal_remote_blob_sha": true,
+  "method": "Fetched every path through the GitHub file reader at the exact delivery commit. Compared each returned Git blob SHA with SHA-1(blob header + local raw bytes). Local SHA-256 retained alongside each path. GitHub did not return base64 content for the >1 MiB PDF; its remote blob SHA matched the local raw-byte Git blob hash.",
+  "files": [
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0114_I19-E01_R01_20261024/candidate/0114_I19-E01_R01.docx",
+      "bytes": 67398,
+      "local_sha256": "fe8c9c793cc1b0f196bfbe6c204695b5fd525eec52e86bf6f3c512f2bab13878",
+      "local_git_blob_sha": "c74f61275bbfc66739e99213e3eacee5ff67115e",
+      "remote_blob_sha": "c74f61275bbfc66739e99213e3eacee5ff67115e",
+      "base64_returned": true,
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0114_I19-E01_R01_20261024/candidate/0114_I19-E01_R01_word_native.pdf",
+      "bytes": 1107865,
+      "local_sha256": "529340d2c19d87853e29b7aaa514f2fbb52580701c5f9ca72ed3a5f76a494942",
+      "local_git_blob_sha": "eb938759e1341280b175a31406058d3e81c0f43c",
+      "remote_blob_sha": "eb938759e1341280b175a31406058d3e81c0f43c",
+      "base64_returned": false,
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0114_I19-E01_R01_20261024/manuscript/antigravity_original_response_R01.md",
+      "bytes": 54362,
+      "local_sha256": "8f474bc0b494e6ec5c81172b39cd991a68739e258e2976354e0541335844170c",
+      "local_git_blob_sha": "02979fcc006e489fa9e0b5a57f2a374e027fab82",
+      "remote_blob_sha": "02979fcc006e489fa9e0b5a57f2a374e027fab82",
+      "base64_returned": true,
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0114_I19-E01_R01_20261024/manuscript/adopted_manuscript_R01.md",
+      "bytes": 53890,
+      "local_sha256": "2436b9821319d855c9b18957fb48f4aea1be8b060319dca53445a96cd6006c84",
+      "local_git_blob_sha": "6a762c6efadfae24fd4cafcf0f20436f79490851",
+      "remote_blob_sha": "6a762c6efadfae24fd4cafcf0f20436f79490851",
+      "base64_returned": true,
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0114_I19-E01_R01_20261024/review/antigravity_full_review_predecessor_a93f6cad.stdout.ndjson",
+      "bytes": 13007,
+      "local_sha256": "a090a22bd8bbb9bb303167999574ba235b6d79923d29fe662e5c423e78211490",
+      "local_git_blob_sha": "a7358c8c90bae06fa4a356a3e1b9068a2114d573",
+      "remote_blob_sha": "a7358c8c90bae06fa4a356a3e1b9068a2114d573",
+      "base64_returned": true,
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0114_I19-E01_R01_20261024/review/antigravity_delta_review_final_fe8c9c79.stdout.ndjson",
+      "bytes": 7949,
+      "local_sha256": "2dd5e8dea7e6118fe8f99c3e7532a2f62d6c7ab8ebfdabe6ca55857c05bfeca9",
+      "local_git_blob_sha": "bbd723e930573eb43d1af35c38917489af9f9a6e",
+      "remote_blob_sha": "bbd723e930573eb43d1af35c38917489af9f9a6e",
+      "base64_returned": true,
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0114_I19-E01_R01_20261024/worker/semantic_delta_review_R01_prompt.md",
+      "bytes": 2459,
+      "local_sha256": "0c7c8a89ea6e94dc376e6c1b1ac5df90ae7ed6a086b1c99b6faa3875ce458a5b",
+      "local_git_blob_sha": "96bc1666215d7e57a1dddb06e3390a0de10e20bc",
+      "remote_blob_sha": "96bc1666215d7e57a1dddb06e3390a0de10e20bc",
+      "base64_returned": true,
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0114_I19-E01_R01_20261024/worker/review_invocation_attempt01_receipt_original.json",
+      "bytes": 839,
+      "local_sha256": "1cc41a4d445fd018e331625d19483dd06ab0888ecdfc35402eb8714036ff90fa",
+      "local_git_blob_sha": "6746f306a70e16d1a6853e00c8bef3e0626f8d4a",
+      "remote_blob_sha": "6746f306a70e16d1a6853e00c8bef3e0626f8d4a",
+      "base64_returned": true,
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0114_I19-E01_R01_20261024/worker/review_invocation_attempt01_stderr.txt",
+      "bytes": 209,
+      "local_sha256": "36542a28a3a9f9b2929fceca26eb1c019083ad8c879a9ec15bfd34d47e3e1a12",
+      "local_git_blob_sha": "45be6ab4f7e62c909a6e43157fdb9e7389a68c18",
+      "remote_blob_sha": "45be6ab4f7e62c909a6e43157fdb9e7389a68c18",
+      "base64_returned": true,
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0114_I19-E01_R01_20261024/worker/antigravity_writer_R01_stderr.txt",
+      "bytes": 78,
+      "local_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+      "local_git_blob_sha": "0c6fcbb12c652a3f563e0a62515d63434d6281dc",
+      "remote_blob_sha": "0c6fcbb12c652a3f563e0a62515d63434d6281dc",
+      "base64_returned": true,
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0114_I19-E01_R01_20261024/worker/antigravity_delta_review_R01_stderr.txt",
+      "bytes": 78,
+      "local_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+      "local_git_blob_sha": "0c6fcbb12c652a3f563e0a62515d63434d6281dc",
+      "remote_blob_sha": "0c6fcbb12c652a3f563e0a62515d63434d6281dc",
+      "base64_returned": true,
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0114_I19-E01_R01_20261024/receipts/technical_qa_candidate_fe8c9c79.json",
+      "bytes": 1379,
+      "local_sha256": "7b2d900ed0b4913e6560fc99d00154db57972c731cde66edbb19867f62973e73",
+      "local_git_blob_sha": "64e1ba6021068730977f3e70e565ae819672c150",
+      "remote_blob_sha": "64e1ba6021068730977f3e70e565ae819672c150",
+      "base64_returned": true,
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0114_I19-E01_R01_20261024/receipts/word_visual_fe8c9c79.json",
+      "bytes": 389,
+      "local_sha256": "79ad2ba2b73d706a998f7e6ce9929399271766fecfdaf75011b9a9e9866c50dd",
+      "local_git_blob_sha": "95c6f0ce0abda4bdd11b8004f0962253227d53aa",
+      "remote_blob_sha": "95c6f0ce0abda4bdd11b8004f0962253227d53aa",
+      "base64_returned": true,
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0114_I19-E01_R01_20261024/receipts/worker_writer_R01.json",
+      "bytes": 2346,
+      "local_sha256": "0891211aa255e71ef27e401be735e5c12d86aeb3564c5cb7a08bd07c1612d450",
+      "local_git_blob_sha": "0d042cff27f39f99cc411f876bcdf57a9dfb111f",
+      "remote_blob_sha": "0d042cff27f39f99cc411f876bcdf57a9dfb111f",
+      "base64_returned": true,
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0114_I19-E01_R01_20261024/receipts/semantic_review_composite_fe8c9c79.json",
+      "bytes": 2684,
+      "local_sha256": "ad4776b5eac2ff768e8ce8b3d91c22ae54de3e77f5c1db0365cc943754744454",
+      "local_git_blob_sha": "178ed3087b7957fa1a93a4060e930868a92ffdaa",
+      "remote_blob_sha": "178ed3087b7957fa1a93a4060e930868a92ffdaa",
+      "base64_returned": true,
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0114_I19-E01_R01_20261024/receipts/candidate_manifest_fe8c9c79.json",
+      "bytes": 3995,
+      "local_sha256": "c8633c1848b0eb0095c41e71f835f5d104424f36a0af9e6455bf6a185140fd71",
+      "local_git_blob_sha": "e55ecdb235ea2ac18c5a4621840800508658e7d4",
+      "remote_blob_sha": "e55ecdb235ea2ac18c5a4621840800508658e7d4",
+      "base64_returned": true,
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0114_I19-E01_R01_20261024/receipts/semantic_full_review_dispatch_fe8c9c79.json",
+      "bytes": 1282,
+      "local_sha256": "84b7635b663047a3435caf36b4bdf227527deca1d8bb7514946edf5dd088ad1a",
+      "local_git_blob_sha": "309a40196316b6f99cc8762841a68cef98645880",
+      "remote_blob_sha": "309a40196316b6f99cc8762841a68cef98645880",
+      "base64_returned": true,
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0114_I19-E01_R01_20261024/receipts/semantic_delta_review_dispatch_fe8c9c79.json",
+      "bytes": 1285,
+      "local_sha256": "f7d27e58376f28e9ff5e44ab3eaf76d1b89c421f9e3233a412b9feac9daeaf3d",
+      "local_git_blob_sha": "efd31479e00cd388dc0b4d7438ce797905440c4d",
+      "remote_blob_sha": "efd31479e00cd388dc0b4d7438ce797905440c4d",
+      "base64_returned": true,
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0114_I19-E01_R01_20261024/WORK_SUMMARY_R01.md",
+      "bytes": 2767,
+      "local_sha256": "78572421fb0645e812cd7b335bc0800609cb87af788e90fb79cf5de062239a2a",
+      "local_git_blob_sha": "53aecc79f1536d6024be14413380e507a5495969",
+      "remote_blob_sha": "53aecc79f1536d6024be14413380e507a5495969",
+      "base64_returned": true,
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0114_I19-E01_R01_20261024/source/SOURCE_PACKET_0114_I19-E01_R01.md",
+      "bytes": 5520,
+      "local_sha256": "d42ca5b1b656ffa01be20022a3508224275dcd693f25a0863dc1dac774e279a4",
+      "local_git_blob_sha": "48ec109a76c2d7358c5587c077b1fe8e3436e5c9",
+      "remote_blob_sha": "48ec109a76c2d7358c5587c077b1fe8e3436e5c9",
+      "base64_returned": true,
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0114_I19-E01_R01_20261024/source/UNIQUE_BLUEPRINT_0114_I19-E01_R01.md",
+      "bytes": 6189,
+      "local_sha256": "7dcd0c33b1a9acd38fc6ced26880c41be5a927da359c317d7a5b194afee988d2",
+      "local_git_blob_sha": "50d051fcdab7b961d998b1c88379018c58af1353",
+      "remote_blob_sha": "50d051fcdab7b961d998b1c88379018c58af1353",
+      "base64_returned": true,
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0114_I19-E01_R01_20261024/synthetic/SYNTHETIC_DATASET_0114_R01.csv",
+      "bytes": 1517,
+      "local_sha256": "e216d24ca98635089ae39816677ee14adae4b2563dcaeeed7e53a78afdf360d2",
+      "local_git_blob_sha": "0c4adb6fcb2a5c86f92511f369183b15c66c37f0",
+      "remote_blob_sha": "0c4adb6fcb2a5c86f92511f369183b15c66c37f0",
+      "base64_returned": true,
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0114_I19-E01_R01_20261024/synthetic/SYNTHETIC_REPLACEMENT_REGISTER_0114_R01.csv",
+      "bytes": 1771,
+      "local_sha256": "0f1ce3199e01cfd5b0d457d0b430bd9552b87735830441c28b204a76652144eb",
+      "local_git_blob_sha": "89d10d021d188a682d81715079fca789e394005b",
+      "remote_blob_sha": "89d10d021d188a682d81715079fca789e394005b",
+      "base64_returned": true,
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0114_I19-E01_R01_20261024/receipts/R01_math_check.json",
+      "bytes": 747,
+      "local_sha256": "35794851b658e866e424e6f380bc75b8a32e15c46f2505afb9c34bf17e479845",
+      "local_git_blob_sha": "1fd8589ec0af0abb64edeed4332701b3a7e2f5d6",
+      "remote_blob_sha": "1fd8589ec0af0abb64edeed4332701b3a7e2f5d6",
+      "base64_returned": true,
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0114_I19-E01_R01_20261024/receipts/source_manifest_0114_R01.json",
+      "bytes": 4362,
+      "local_sha256": "461ed1eafd06d752b30694b7956e8b1ea5f66d88d28d0a245a8e8cdc2d7ce461",
+      "local_git_blob_sha": "c10d7632a4156e072c1db1558d66cf1f002048fc",
+      "remote_blob_sha": "c10d7632a4156e072c1db1558d66cf1f002048fc",
+      "base64_returned": true,
+      "match": true
+    }
+  ],
+  "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "real_evidence": "UNKNOWN",
+  "formal_acceptance": "NOT_GRANTED"
+}

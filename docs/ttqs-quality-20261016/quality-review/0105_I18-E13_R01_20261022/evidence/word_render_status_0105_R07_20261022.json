@@ -1,0 +1,37 @@
+{
+  "receipt_id": "TTQS_ONE_0105_R07_WORD_RENDER_STATUS_20261022",
+  "observed_at_tpe": "2026-10-22T16:36:30+08:00",
+  "doc_id": "0105",
+  "candidate_sha256": "32bc0b8d7efe767e584b2a848206507d4da73ffa344378143b22186705302027",
+  "render_attempts": [
+    {
+      "attempt": "attempt01",
+      "pid": 72848,
+      "started_at_tpe": "2026-10-22T16:08:20+08:00",
+      "output_path": "docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022/visual/0105_R07/word_native/0105_I18-E13_R07.pdf",
+      "output_exists": false,
+      "output_sha256": null,
+      "status": "WINWORD alive/responding at latest native readback; no PDF output"
+    },
+    {
+      "attempt": "attempt02",
+      "pid": 16684,
+      "started_at_tpe": "2026-10-22T16:15:56+08:00",
+      "output_path": "docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022/visual/0105_R07/word_native/0105_I18-E13_R07_attempt02.pdf",
+      "output_exists": false,
+      "output_sha256": null,
+      "status": "WINWORD alive/responding at latest native readback; no PDF output"
+    }
+  ],
+  "alternate_renderer": {
+    "tool": "render_docx.py",
+    "status": "UNAVAILABLE",
+    "reason": "LibreOffice soffice.exe not installed on host"
+  },
+  "scope": "visual/render lane only; content, candidate bytes and independent exact-SHA semantic verdict remain intact",
+  "no_process_terminated": true,
+  "no_third_blind_retry": true,
+  "visual_qa": "PENDING_NO_RENDERED_PDF_OR_PAGE_IMAGES",
+  "formal_acceptance": "NOT_GRANTED",
+  "next_action": "Allow the two existing Word processes to finish without killing or duplicating. If an output appears, hash and inspect it. If they do not finish, keep render lane blocked and continue a different READY document stage."
+}

@@ -1,0 +1,86 @@
+{
+  "record_type": "bounded exact-SHA semantic review adjudication",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0130",
+  "official_requirement_id": "I19-E19",
+  "unique_blueprint": "143 / I19-L3",
+  "candidate_sha256": "ea67d33b6bcca83b9640614b60e0363b2f5186fa2f03a9a196c3a5e59de83c0b",
+  "candidate_unchanged": true,
+  "external_review_verdict": "PASS",
+  "adjudicated_candidate_semantic_status": "PASS_WITH_LIMITATIONS",
+  "formal_association_acceptance": "NOT_GRANTED",
+  "real_case_status": "UNKNOWN; sample-only case; no real records or approvals asserted",
+  "review_scope": "Complete supplied adopted Markdown body, official extract, crosswalk, source packet and unique Blueprint; candidate DOCX exact SHA is explicitly bound. Candidate tables had a prior deterministic Markdown/DOCX equivalence check and Word visual QA is separate.",
+  "reviewer_response_adjudication": [
+    {
+      "severity": "NONBLOCKING_ACCURACY_NOTE",
+      "locator": "Reviewer response / REQUIREMENT_AND_GENRE, item 2",
+      "observation": "Reviewer says the candidate enforces signed consent. The candidate actually requires an applicable authorization or other verification authority confirmed for the purpose and scope; it does not declare a signed consent form the sole permissible basis. Do not treat the review wording as an official requirement or a mandatory form rule. This misdescription does not alter the candidate’s sample HOLD outcome."
+    },
+    {
+      "severity": "SCOPE_LIMITATION",
+      "locator": "Reviewer response / UNIQUE_BLUEPRINT_AND_NEIGHBOR_CHECK",
+      "observation": "The response maps the full body by its 12 main sections but does not enumerate table-row counts. Its full-body review claim is preserved; the response is not a row-count audit receipt."
+    }
+  ],
+  "bounded_cross_checks": [
+    {
+      "item": "official requirement and identifier mapping",
+      "result": "PASS",
+      "evidence": "Official p.8 wording is “學員訓後創業案例。”; DOCX 0130 maps internally to I19-E19; Blueprint 143 maps to I19-L3; official printed checkbox serial remains UNKNOWN."
+    },
+    {
+      "item": "unique genre and neighbor separation",
+      "result": "PASS",
+      "evidence": "Operational case intake, provenance/verification, chronology, linkage, decision/HOLD and follow-up; explicit distinction from 0129 financial comparison, 0131 employment/certification, and I19-L2 appreciation letter."
+    },
+    {
+      "item": "sample arithmetic",
+      "result": "PASS",
+      "evidence": "2025-05-30 to 2025-10-01 = 124 days; 2025-10-01 to 2025-10-08 = 7 days; 2025-10-08 to 2025-10-10 = 2 days; sample 0/1 = 0.0%. The sample denominator is an exercise dataset only; all REAL denominator/rate fields remain UNKNOWN."
+    },
+    {
+      "item": "sample/real and authority boundary",
+      "result": "PASS",
+      "evidence": "All case identity, dates, roles and evidence descriptions are sample/synthetic; absent third-party source and authorization trigger HOLD; no association action or approval is claimed."
+    },
+    {
+      "item": "candidate and remote source bytes",
+      "result": "PASS",
+      "evidence": "Local SHA-256 is bound to the GitHub candidate blob at live PR head 91039b8c623fad98eff26ae871b48668bf789d00; local git blob IDs for candidate and all supplied text sources match remote blob IDs."
+    }
+  ],
+  "cli_execution": {
+    "worker": "Antigravity CLI",
+    "requested_model": "gemini-3.8-flash-high",
+    "cli_reported_model": "gemini-3.8-flash-high",
+    "actual_serving_model_identity": "UNKNOWN",
+    "fallback": "not requested; none observed in native transcript; provider-side serving/fallback identity not independently attested",
+    "exit_code": 0,
+    "duration_seconds": 81.5569458,
+    "pid": 66920,
+    "started_local": "2026-10-26T06:52:18.386281+08:00",
+    "ended_local": "2026-10-26T06:53:43.683263+08:00",
+    "computer_use_called": false,
+    "tool_steps": [],
+    "provider_billing": "UNKNOWN",
+    "usage": {
+      "input_tokens": 21180,
+      "output_tokens": 11508,
+      "thinking_tokens": 9023,
+      "cache_read_tokens": 0,
+      "total_tokens": 32688
+    },
+    "stdout_sha256": "e443f309b2f9dd4ccd1b30a39a32d47990fbace5e27d1edcee2e0bdacce90183",
+    "stderr_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+    "response_sha256": "19d74ac74ed5e4fb1d213f86bad7fbc71135fe65a12601d37115302e9097a231",
+    "prompt_sha256": "e90a69826b0510023046043f7eaaf4a06eccb1bbc1a83ceb393e949c09147e62"
+  },
+  "limitations": [
+    "This is a candidate semantic review, not formal association acceptance.",
+    "Actual provider serving model and billing are UNKNOWN even though the CLI init model matched the requested model.",
+    "No REAL case evidence was supplied; REAL results remain UNKNOWN.",
+    "Visual QA is a separate existing receipt and was not performed by this reviewer."
+  ],
+  "adjudicated_at_local": "2026-10-26T06:55:42.637720+08:00"
+}

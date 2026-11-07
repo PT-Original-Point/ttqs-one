@@ -1,0 +1,443 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0122",
+  "requirement_id": "I19-E10",
+  "candidate_state": "CANDIDATE_PENDING_FORMAL_HUMAN_ACCEPTANCE",
+  "candidate_docx_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0122_I19-E10_SOURCE_PREP_R01_20261024\\candidate_R03\\0122_I19-E10_R03.docx",
+  "candidate_docx_sha256": "b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d",
+  "candidate_docx_bytes": 74234,
+  "extracted_body_sha256": "a6f9b879203ab5234d6f5c918c7b3b7b5109c641a66bbbae3d72ebbb9b409991",
+  "source_packet_sha256": "8301b3e12467370086dfccd86c4dbcd50d339f0ed54cda93c2bfcc051b793c3d",
+  "unique_blueprint_sha256": "cbfd0760a03870151d9bc083b8db76655d53107757706f4b1f4449e997553420",
+  "official_requirement_page8_sha256": "c34ead45cad406150de5622e157f44727157776ce5c6abf5343c7db5dca42520",
+  "material_repair": "Wave 1 Q12 chronology and exact distribution corrected; 90-day values and July 10 sample test register unchanged.",
+  "technical_review": {
+    "status": "PASS_DETERMINISTIC_SCOPE",
+    "receipt_sha256": "58e35edcf21b25b6f51cb619762099dc90cc16850e1f0258c1e733b565cd3118",
+    "body_min_font_pt": 10.5,
+    "table_min_font_pt": 9.5,
+    "q12_math": "Wave 1 8/8=100.0%; Wave 2 7/7=100.0% response distribution; final attempt pass 6/8=75.0%, cohort 6/10=60.0%."
+  },
+  "word_visual_review": {
+    "status": "PASS_VISUAL_DELTA_SCOPE",
+    "receipt_sha256": "90a34e9c237c7c3cb0a3c5d71e177b3559a389566a04f4411ad603b204ea03dc",
+    "word_native_pdf_sha256": "4817560b5739a506ce6d4227924eb7b35c0b70d8543cb5d609b19148f264d5a4",
+    "pages": 28,
+    "changed_visual_pages": [
+      15,
+      16,
+      21
+    ],
+    "unchanged_pixel_identical_pages": 25
+  },
+  "independent_semantic_review": {
+    "scope": "Full-body semantic and usability review on exact candidate SHA; text-only scope; no visual inspection claimed",
+    "candidate_sha256": "b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d",
+    "candidate_body_sha256": "a6f9b879203ab5234d6f5c918c7b3b7b5109c641a66bbbae3d72ebbb9b409991",
+    "review_packet_sha256": "02d51a689b77b255479b499779efaff1d18f77be2c94d1f92f419efba53cde79",
+    "reviewer": "OpenCode v2 CLI fresh plan session",
+    "reviewer_context_separate_from_builder": true,
+    "cli_version": "2.1.4",
+    "session_id": "ses_e80a031c6ffel3fs9p6RJXrhzL",
+    "session_model_provider": "opencode",
+    "session_model_id": "glm-5.3-flash-free",
+    "requested_model": "opencode/glm-5.3-flash-free",
+    "actual_model": "opencode/glm-5.3-flash-free",
+    "fallback_status": "NO_DIFFERENT_MODEL_RECORDED_IN_NATIVE_SESSION_EXPORT; provider internal serving chain not separately exposed",
+    "process_id": 59216,
+    "process_exit_code": 0,
+    "raw_stdout_sha256": "0708aeef1583132e8612d48414f3090315ce3b8abcdf3c32bcd166d2e8ac9e2d",
+    "normalized_response_sha256": "a1d9294df8d4cc638473b56b388b21e7e68aca548f833e83debf09a97e8b41e0",
+    "reviewer_verdict": "PASS",
+    "adjudication_status": "PASS_TEXT_ONLY_EXACT_SHA",
+    "blocking_findings": [],
+    "visual_review": "NOT_IN_SCOPE_FOR_REVIEWER; existing visual receipt remains separately applicable",
+    "formal_acceptance": "NOT_GRANTED",
+    "promotion": "NOT_PROMOTED"
+  },
+  "worker_routing": {
+    "opencode_v2": {
+      "state": "BLOCKED_BY_FREE_USAGE_429_FOR_REQUESTED_DEEPSEEK_FREE_MODEL",
+      "status_code": 429,
+      "retry_after_ms": 30210000,
+      "model_usage": "UNKNOWN_NOT_REACHED",
+      "same_input_retry": "NOT_ATTEMPTED"
+    },
+    "antigravity_cli": {
+      "version": "1.4.7",
+      "model_listed": "gemini-3.8-flash-high",
+      "provider_model_identity": "UNKNOWN",
+      "attempts": {
+        "attempt01_permission_denied_usage": {
+          "input_tokens": 34125,
+          "output_tokens": 3550,
+          "thinking_tokens": 3089,
+          "cache_read_tokens": 0,
+          "total_tokens": 37675
+        },
+        "attempt02_model_effort_conflict": "pre-model CLI rejection; no provider usage field",
+        "attempt03_delta_review_usage": {
+          "input_tokens": 14256,
+          "output_tokens": 8088,
+          "thinking_tokens": 4924,
+          "cache_read_tokens": 0,
+          "total_tokens": 22344
+        }
+      },
+      "computer_use": "NOT_USED",
+      "dangerous_permission_bypass": "NOT_USED"
+    }
+  },
+  "truth_boundary": {
+    "sample_synthetic": "YES",
+    "real_evidence": "NOT_PROVIDED",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "github_sync": "VERIFIED_RAW_BYTE_READBACK_R12",
+  "observed_at_local": "2026-10-26T23:44:29.340349+08:00",
+  "github_remote_readback": {
+    "repository": "PT-Original-Point/ttqs-one",
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "verified_commit": "a83183eadee16ab4b97371349853ffe0b52bb044",
+    "verified_at_local": "2026-10-27T01:34:25.70944+08:00",
+    "scope_artifact_count": 101,
+    "exact_raw_byte_matches": 101,
+    "mismatch_count": 0,
+    "missing_count": 0,
+    "candidate_docx_sha256": "b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d",
+    "receipt_path": "docs/ttqs-quality-20261016/reports/R12_20261027/R12_GITHUB_RAW_READBACK_a83183ea.json",
+    "receipt_sha256": "4e4ab81759b3a6f82f6237ccb34ab7fa6ec24a58c0c2120de6f691c82964a665"
+  },
+  "full_body_semantic_review_R12": {
+    "status": "UNVERIFIED_ROUTE_IDENTITY",
+    "scope": "Full candidate body semantic/usability review for this exact R03 DOCX and extracted body; no visual inspection claimed.",
+    "candidate_docx_sha256": "b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d",
+    "candidate_body_sha256": "a6f9b879203ab5234d6f5c918c7b3b7b5109c641a66bbbae3d72ebbb9b409991",
+    "source_packet_sha256": "8301b3e12467370086dfccd86c4dbcd50d339f0ed54cda93c2bfcc051b793c3d",
+    "unique_blueprint_sha256": "cbfd0760a03870151d9bc083b8db76655d53107757706f4b1f4449e997553420",
+    "official_requirement_page8_sha256": "c34ead45cad406150de5622e157f44727157776ce5c6abf5343c7db5dca42520",
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model": "UNKNOWN",
+    "provider_fallback": "UNKNOWN; no provider identity metadata; do not attribute output to Gemini as verified",
+    "attempts": [
+      {
+        "attempt": 1,
+        "work_id": "TTQS-0122-I19-E10-R03-ANTIGRAVITY-R12-FULL-BODY-REVIEW",
+        "request_sha256": "2894039b42213fb9ff1d157287e3e85b0120271fed13c958d34a4c6489c9c2ab",
+        "stdout_sha256": "254a8a5fb4d972eb2d43d8b3c8234a2a510a10a64746738932280e1309489f15",
+        "stderr_sha256": "6f9b232ca1f3b43aa72e2ba63698c09b0796b612d5a17cf05efee31e6c79b713",
+        "exit_code": 0,
+        "response": "NONE",
+        "root_cause": "Headless command permission denied; no reviewer text returned; no dangerous-permission bypass used.",
+        "usage_tokens": 28334,
+        "adopted": false
+      },
+      {
+        "attempt": 2,
+        "work_id": "TTQS-0122-I19-E10-R03-ANTIGRAVITY-R12-FULL-BODY-REVIEW-REPAIR02",
+        "request_sha256": "b62cb19c3e6e0bd99a24b9176389a833881e96dc5abf563e0086b261db527ce9",
+        "stdout_sha256": "063fd89c3f746705dc91132bbf6d2dd0850aa19bc3f6c98c1a4d649d3fa471a0",
+        "response_sha256": "1695e65738d405ae74223d5acb27752021941765436aa816c8eeddc5a3c6eb664",
+        "terminal_receipt_sha256": "c60ce7ac073ed3c41539b1ab57a75c6b9dd7c734f8e61f953b7ce7f8d48d3267",
+        "exit_code": 0,
+        "status": "COMPLETED",
+        "tool_indicators": [],
+        "visual_review": "NOT_IN_SCOPE",
+        "usage_tokens": 44051,
+        "adopted": true
+      }
+    ],
+    "review_response_verdict": "REVIEWER_REPORTED_PASS_TEXT_ONLY",
+    "technical_qa": "PASS_DETERMINISTIC_SCOPE; existing receipt unchanged",
+    "visual_qa": "PASS_VISUAL_DELTA_SCOPE; existing receipt unchanged; no full 28-page visual pass asserted",
+    "candidate_mutated": false,
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "NOT_PROVIDED",
+    "promotion": "NOT_PROMOTED",
+    "reviewer_reported_verdict": "PASS_TEXT_ONLY",
+    "adjudication_status": "NOT_ACCEPTED",
+    "acceptance_eligible": false,
+    "adjudication_reason": "Exact candidate/body/source hashes match, but actual serving model and fallback are UNKNOWN; the response cannot be attributed to the permitted Gemini route."
+  },
+  "prior_github_remote_readback": {
+    "repository": "PT-Original-Point/ttqs-one",
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "verified_commit": "a33dcbef10cd561f568694cfb20dee87cfc1f4ee",
+    "artifact_count": 35,
+    "exact_raw_byte_matches": 35,
+    "manifest_sha256_at_verified_commit": "f4691cb73624d09cc002f1e146130155086fc8c30bac2135b9ce6c4d0351c613",
+    "mismatch_count": 0
+  },
+  "semantic_review_route_adjudication_R12_1": {
+    "observed_at_local": "2026-10-27T20:08:00+08:00",
+    "candidate_sha256": "b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d",
+    "status": "UNVERIFIED_ROUTE_IDENTITY",
+    "reviewer_reported_verdicts": {
+      "delta": "PASS",
+      "full_body": "PASS_TEXT_ONLY"
+    },
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model": "UNKNOWN",
+    "fallback_status": "UNKNOWN_NOT_VERIFIED",
+    "response_evidence": {
+      "delta_response_sha256": "ebcb7ac280491bae06dc54da67e090ab3491a8a6e019eb308d4cc5bc07499820",
+      "delta_human_readable_response_sha256": "2300f1a46f55b743d2da2b9bfdb8ebb230ff556e711ca55252121c083a97352d",
+      "full_body_response_sha256": "1695e65738d405ae74223d5acb27752021941765436aa816c8eeddc5a3c6eb664",
+      "full_body_request_sha256": "b62cb19c3e6e0bd99a24b9176389a833881e96dc5abf563e0086b261db527ce9",
+      "tool_calls": 0
+    },
+    "independent_semantic_pass_counted": false,
+    "formal_acceptance": "NOT_GRANTED",
+    "candidate_docx_changed": false,
+    "technical_and_visual_receipts": "UNCHANGED_AND_RETAINED",
+    "next_action": "Obtain an exact-SHA independent semantic review from a permitted route whose serving model identity and no-fallback status can be verified; do not rebuild this DOCX."
+  },
+  "latest_semantic_review_R12_2_20261028": {
+    "project_id": "TTQS_ONE",
+    "doc_id": "0122",
+    "requirement_id": "I19-E10",
+    "official_printed_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+    "observed_at_local": "2026-10-28T06:05:10.1909073+08:00",
+    "candidate_state": "CANDIDATE_PENDING_FORMAL_HUMAN_ACCEPTANCE",
+    "candidate_docx_sha256": "b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d",
+    "candidate_body_sha256": "a6f9b879203ab5234d6f5c918c7b3b7b5109c641a66bbbae3d72ebbb9b409991",
+    "review_packet_sha256": "02d51a689b77b255479b499779efaff1d18f77be2c94d1f92f419efba53cde79",
+    "source_packet_sha256": "8301b3e12467370086dfccd86c4dbcd50d339f0ed54cda93c2bfcc051b793c3d",
+    "unique_blueprint_sha256": "cbfd0760a03870151d9bc083b8db76655d53107757706f4b1f4449e997553420",
+    "official_requirement_page8_text_sha256": "c34ead45cad406150de5622e157f44727157776ce5c6abf5343c7db5dca42520",
+    "reviewer": "OpenCode v2 CLI fresh plan session",
+    "reviewer_context_separate_from_local_R03_repair": true,
+    "builder_identity": "Not named in original repair receipt; reviewer session is a distinct native OpenCode session from local deterministic repair execution",
+    "cli_version": "2.1.4",
+    "session_id": "ses_e80a031c6ffel3fs9p6RJXrhzL",
+    "session_model_provider": "opencode",
+    "session_model_id": "glm-5.3-flash-free",
+    "requested_model": "opencode/glm-5.3-flash-free",
+    "actual_model": "opencode/glm-5.3-flash-free",
+    "fallback_status": "NO_DIFFERENT_MODEL_RECORDED_IN_NATIVE_SESSION_EXPORT; provider internal serving chain not separately exposed",
+    "process_id": 59216,
+    "parent_pid": 15680,
+    "process_exit_code": 0,
+    "process_timeout": false,
+    "duration_seconds": 130.54,
+    "raw_stdout_sha256": "0708aeef1583132e8612d48414f3090315ce3b8abcdf3c32bcd166d2e8ac9e2d",
+    "raw_stdout_bytes": 9838,
+    "normalized_response_sha256": "a1d9294df8d4cc638473b56b388b21e7e68aca548f833e83debf09a97e8b41e0",
+    "normalized_response_bytes": 9202,
+    "sanitized_session_export_sha256": "5b2814e0199bad4a51f7e1c6a3c3cf8ca28c214e32a48209da40ff27b78895be",
+    "token_usage": {
+      "input": 22467,
+      "output": 2709,
+      "reasoning": 8488,
+      "cache_read": 4352,
+      "cache_write": 0,
+      "session_cost_recorded": 0,
+      "billing_invoice_independently_verified": false
+    },
+    "tool_calls": 0,
+    "agent": "plan",
+    "auto_approval": "NOT_USED",
+    "visual_review": "NOT_IN_SCOPE_FOR_REVIEWER",
+    "reviewer_verdict": "PASS",
+    "adjudicated_semantic_status": "PASS_TEXT_ONLY_EXACT_SHA",
+    "blocking_findings": [],
+    "nonblocking_observations": [
+      "Blueprint data dictionary fields are distributed across tables rather than consolidated in one field-definition table.",
+      "Three Q11 synthetic reflections are labeled examples and read more like example prompts than participant-style entries.",
+      "Q12 code-1 external-verification wording is adapted to clearly labeled synthetic demonstration status; preserve SAMPLE boundary in any REAL deployment.",
+      "The dual skill-use denominator section could label Wave 1 explicitly in its opening sentence."
+    ],
+    "unknowns": [
+      "Reviewer did not inspect PDF/page raster; separate R03 Word visual delta receipt is checked.",
+      "OpenCode metadata identifies the selected model ID but does not expose any lower-level infrastructure identity."
+    ],
+    "github_current_head": "d7b4d3503e99dcbf3c669ac80c79c555f77e300b",
+    "local_remote_git_blob_match": {
+      "docx": {
+        "local": "639b2adda47553c26da934d8ffeea0040ef3778f",
+        "remote": "639b2adda47553c26da934d8ffeea0040ef3778f",
+        "exact": true
+      },
+      "body": {
+        "local": "a11f760fc64532dced544f05c39200fa95fb11a4",
+        "remote": "a11f760fc64532dced544f05c39200fa95fb11a4",
+        "exact": true
+      },
+      "packet": {
+        "local": "78f6b57768105b84d0894ff25a0efc8bf189278f",
+        "remote": "78f6b57768105b84d0894ff25a0efc8bf189278f",
+        "exact": true
+      }
+    },
+    "technical_receipt": "PASS_DETERMINISTIC_SCOPE; exact candidate SHA",
+    "visual_receipt": "PASS_VISUAL_DELTA_SCOPE; 28 pages, 25 pixel-identical baseline pages, 3 changed pages directly inspected",
+    "real_evidence": "NOT_PROVIDED",
+    "formal_acceptance": "NOT_GRANTED",
+    "promotion": "NOT_PROMOTED",
+    "remote_sync": "PENDING"
+  },
+  "current_candidate_quality_state": {
+    "status": "CANDIDATE_QA_COMPLETE_PENDING_HUMAN_FORMAL_ACCEPTANCE",
+    "semantic": "PASS_TEXT_ONLY_EXACT_SHA",
+    "technical": "PASS_DETERMINISTIC_SCOPE",
+    "visual": "PASS_VISUAL_DELTA_SCOPE",
+    "candidate_sha256": "b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d",
+    "observed_at_local": "2026-10-28T06:05:10.2795018+08:00",
+    "real_evidence": "NOT_PROVIDED",
+    "formal_acceptance": "NOT_GRANTED",
+    "promotion": "NOT_PROMOTED"
+  },
+  "latest_github_sync_state": "VERIFIED_RAW_BYTE_READBACK",
+  "r12_2_github_raw_byte_readback": {
+    "schema_version": 1,
+    "project_id": "TTQS_ONE",
+    "doc_id": "0122",
+    "requirement_id": "I19-E10",
+    "status": "VERIFIED_RAW_BYTE_READBACK",
+    "verified_at_local": "2026-10-27T22:10:55.828Z",
+    "repository": "PT-Original-Point/ttqs-one",
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "pull_request": 92,
+    "readback_commit": "bb622ad3526588a5e80baf6573589f541ab71be7",
+    "pr_head_at_verification": "bb622ad3526588a5e80baf6573589f541ab71be7",
+    "candidate_docx": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/0122_I19-E10_R03.docx",
+      "bytes": 74234,
+      "sha256": "b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d",
+      "git_blob_sha1": "639b2adda47553c26da934d8ffeea0040ef3778f",
+      "readback": "VERIFIED"
+    },
+    "review_artifacts": [
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/OPENCODE_GLM_R03_EXACT_SHA_REVIEW_20261028/DISPATCH_START_PUBLIC.json",
+        "bytes": 827,
+        "raw_sha256": "832cf42067d9b49e92888d797268d35c26a781d60cebbb0ab1d6074a4531cecf",
+        "git_blob_sha1": "011f14803a5a783b809019b53e9a4a59f2ed538e",
+        "readback": "VERIFIED"
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/OPENCODE_GLM_R03_EXACT_SHA_REVIEW_20261028/DISPATCH_TERMINAL.json",
+        "bytes": 1104,
+        "raw_sha256": "1d7317b92839288f8c69e930ac2ee2f2b17d283c77a2de37c430af7622602aa4",
+        "git_blob_sha1": "2f7e4527542adee9ad097fae65499cff9a23eb64",
+        "readback": "VERIFIED"
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/OPENCODE_GLM_R03_EXACT_SHA_REVIEW_20261028/GITHUB_SYNC_MANIFEST_R12_2.json",
+        "bytes": 1946,
+        "raw_sha256": "5e21dc6af79f00f96367298decb37aebd1a51dd4ca0fdf6cf0ea92dc8019f3a3",
+        "git_blob_sha1": "e3eb2cccf2a2e59f2c9592425d0ffd3624dc5e48",
+        "readback": "VERIFIED"
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/OPENCODE_GLM_R03_EXACT_SHA_REVIEW_20261028/RAW_STDERR.txt",
+        "bytes": 0,
+        "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "readback": "VERIFIED"
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/OPENCODE_GLM_R03_EXACT_SHA_REVIEW_20261028/REVIEW_INSTRUCTIONS.txt",
+        "bytes": 520,
+        "raw_sha256": "86bcbc358ae32a6ba3b41c555a82c29382dbfb22e87a90687af97f36dbb17efe",
+        "git_blob_sha1": "ed34913b1f5925ee9a05b9d156e0d2a0d75b4a58",
+        "readback": "VERIFIED"
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/OPENCODE_GLM_R03_EXACT_SHA_REVIEW_20261028/RAW_STDOUT.json",
+        "bytes": 9838,
+        "raw_sha256": "0708aeef1583132e8612d48414f3090315ce3b8abcdf3c32bcd166d2e8ac9e2d",
+        "git_blob_sha1": "d142cf6f12fa298d1b2c92c330baae31b4b3d821",
+        "readback": "VERIFIED"
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/OPENCODE_GLM_R03_EXACT_SHA_REVIEW_20261028/REVIEW_ADJUDICATION.json",
+        "bytes": 4259,
+        "raw_sha256": "36f0b54e60165d45820f0b067bc15387598dd858a4deb4f82bdd566917a2e762",
+        "git_blob_sha1": "1483771bd4c98725f23bb190e4eb17a97a9a2b47",
+        "readback": "VERIFIED"
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/OPENCODE_GLM_R03_EXACT_SHA_REVIEW_20261028/REVIEW_RESPONSE.md",
+        "bytes": 9202,
+        "raw_sha256": "a1d9294df8d4cc638473b56b388b21e7e68aca548f833e83debf09a97e8b41e0",
+        "git_blob_sha1": "b78c36f7b002669858502b932a74e8da3f69484b",
+        "readback": "VERIFIED"
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/OPENCODE_GLM_R03_EXACT_SHA_REVIEW_20261028/ROUTE_AND_USAGE_READBACK.json",
+        "bytes": 1304,
+        "raw_sha256": "b67e7c19a513a281816d63819af9ca64dbe82d65891a554e71ecfe8c70f68d3a",
+        "git_blob_sha1": "de2ec11d1a4257e449ff22a638afa98575d90fbf",
+        "readback": "VERIFIED"
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/OPENCODE_GLM_R03_EXACT_SHA_REVIEW_20261028/SESSION_EXPORT_SANITIZED.json",
+        "bytes": 2590,
+        "raw_sha256": "5b2814e0199bad4a51f7e1c6a3c3cf8ca28c214e32a48209da40ff27b78895be",
+        "git_blob_sha1": "801c37555958f71fbbb7c7f43cb819f106e69dcf",
+        "readback": "VERIFIED"
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/evidence/R03_FINAL_QA_STATUS.json",
+        "bytes": 15290,
+        "raw_sha256": "b756514c616e68d488062180d5296ae4b8ef68c10461ab9822f2922e34d2a24c",
+        "git_blob_sha1": "6115cf737237e175e3ec365ef4eaad25a3b6f790",
+        "readback": "VERIFIED"
+      }
+    ]
+  },
+  "latest_github_sync_commit": "bb622ad3526588a5e80baf6573589f541ab71be7",
+  "independent_semantic_review_R12_1_historical": {
+    "delta_verdict": "UNVERIFIED_ROUTE_IDENTITY",
+    "scope": "R03 exact-SHA delta only; unaffected content coverage inherited from R02 full-body reviewer, with R02 overall PASS rejected for the timeline defect.",
+    "response_sha256": "ebcb7ac280491bae06dc54da67e090ab3491a8a6e019eb308d4cc5bc07499820",
+    "human_readable_response_sha256": "2300f1a46f55b743d2da2b9bfdb8ebb230ff556e711ca55252121c083a97352d",
+    "review_request_sha256": "17710bde2b2af4796be63bb9846959fab8502db84d94d75d580e53ec77daef3a",
+    "candidate_sha256_verified_in_response": true,
+    "body_sha256_verified_in_response": true,
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model": "UNKNOWN",
+    "reviewer_self_reported_model": "Gemini 3.8 Flash (High); not corroborated by provider metadata",
+    "reported_usage": {
+      "input_tokens": 14256,
+      "output_tokens": 8088,
+      "thinking_tokens": 4924,
+      "cache_read_tokens": 0,
+      "total_tokens": 22344
+    },
+    "tool_calls": [],
+    "formal_acceptance": "NOT_GRANTED",
+    "reviewer_reported_delta_verdict": "PASS",
+    "adjudication_status": "NOT_ACCEPTED",
+    "acceptance_status": "NOT_GRANTED_ROUTE_IDENTITY_UNKNOWN",
+    "adjudication_reason": "Reviewer response is present and exact-SHA bound, but the requested Antigravity model is not corroborated by provider metadata and fallback status is UNKNOWN. Under the Gemini-only route rule, its PASS is recorded as self-reported evidence and is not counted as an independently verified semantic PASS.",
+    "fallback_status": "UNKNOWN_NOT_VERIFIED"
+  },
+  "status_projection_reconciliation_R12_3": {
+    "project_id": "TTQS_ONE",
+    "doc_id": "0122",
+    "requirement_id": "I19-E10",
+    "revision": "R12.3",
+    "observed_at_local": "2026-10-29T00:44:13.960+08:00",
+    "change_type": "STATUS_PROJECTION_ONLY_NO_DOCX_BYTES_CHANGED",
+    "candidate_docx_sha256": "b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d",
+    "previous_projection": {
+      "adjudication_status": "NOT_ACCEPTED",
+      "delta_verdict": "UNVERIFIED_ROUTE_IDENTITY",
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_serving_model": "UNKNOWN",
+      "fallback_status": "UNKNOWN_NOT_VERIFIED"
+    },
+    "current_semantic_projection": "PASS_TEXT_ONLY_EXACT_SHA",
+    "source_receipt": "latest_semantic_review_R12_2_20261028",
+    "review_response_sha256": "a1d9294df8d4cc638473b56b388b21e7e68aca548f833e83debf09a97e8b41e0",
+    "review_packet_sha256": "02d51a689b77b255479b499779efaff1d18f77be2c94d1f92f419efba53cde79",
+    "actual_session_model": "opencode/glm-5.3-flash-free",
+    "route_note": "OpenCode v2 CLI session export records glm-5.3-flash-free and no different model; provider internal serving chain is not separately exposed",
+    "technical_and_visual_receipts": "UNCHANGED",
+    "formal_acceptance": "NOT_GRANTED",
+    "promotion": "NOT_PROMOTED",
+    "github_raw_byte_readback": "PENDING"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "doc_id": "0033",
+  "requirement_id": "I07-E01",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0033_R03\\candidate\\0033__訓練課程計畫配合客戶及受訓者需求、職能需求的_可直接使用成品_R03.docx",
+  "candidate_sha256": "fe5f3cfd84c761da86435a71e0fd899daa725be78628c4d2d3f2324c1fdb5f4f",
+  "reviewer": "Confucius independent cross-review",
+  "reviewer_agent_id": "01a1435e-f156-7a52-ade0-b76f38bb6230",
+  "result": "PASS",
+  "review_scope": "Exact-SHA semantic review of official requirement match, genre and title-blind purpose; synthetic/real boundary; survey flow and denominator; competency priority rule; separate course-option ranking; source traceability, replacement controls, nearby requirement boundaries, practical use and page readability.",
+  "findings": [
+    {
+      "location": "第1–2頁 表1–3",
+      "result": "PASS",
+      "detail": "Purpose, user, operation, and sample boundary are clear; distinguishes 0032 training operations and 0034 individual competency assessment."
+    },
+    {
+      "location": "第5頁 表7",
+      "result": "PASS",
+      "detail": "Returned 10/12=83.3%; valid 9/12=75.0%; valid among returns 9/10=90.0%; denominator and records traceable."
+    },
+    {
+      "location": "第6頁 表10–11",
+      "result": "PASS",
+      "detail": "Importance threshold >=4.00/5 and skill gap >=1.20 both required; D rank1, A rank2, B rank3; C retained for risk check."
+    },
+    {
+      "location": "第7–8頁 表12",
+      "result": "PASS",
+      "detail": "Course option ranking is separate from skill priority; weights 40/30/20/10 total 100%; A=4.80, B=4.00, C=3.50; rationale continues with repeated header."
+    },
+    {
+      "location": "第8–9頁 表13–17",
+      "result": "PASS",
+      "detail": "Objectives, measures, roles and follow-up map to usable forms and return conditions."
+    },
+    {
+      "location": "第1–2頁及替換清冊",
+      "result": "PASS",
+      "detail": "Current association data/approval/results remain UNKNOWN; synthetic responses are not represented as real survey or third-party evidence."
+    }
+  ],
+  "nonblocking_sidecar_finding": "R03 source manifest filename is R03 but internal heading says R02; body exact SHA and R03 revision note are correct; does not affect DOCX verdict.",
+  "route": "CURRENT_STATE semantic_review_route preferred CROSS_REVIEW_BY_OTHER_ACTIVE_AGENT; OpenCode disabled",
+  "promotion_status": "NOT_PROMOTED",
+  "human_acceptance": "PENDING",
+  "reviewed_date_local": "2026-10-16",
+  "nonblocking_sidecar_finding_resolved": "Source manifest heading corrected from R02 to R03; DOCX bytes and exact SHA unchanged."
+}

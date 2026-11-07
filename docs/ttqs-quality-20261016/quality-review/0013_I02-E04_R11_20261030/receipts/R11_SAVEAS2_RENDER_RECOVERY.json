@@ -1,0 +1,80 @@
+{
+  "receipt_id": "0013_I02-E04_R11_SAVEAS2_RENDER_RECOVERY",
+  "observed_at_tpe": "2026-10-30T23:24:41.988253+08:00",
+  "candidate_sha256": "c6570ac11ac06e889628937069c4d66944e4a59e287f8df3cbcd3fa468f5dc95",
+  "candidate_unchanged": true,
+  "attempts": [
+    {
+      "method": "Word COM ExportAsFixedFormat",
+      "result": "TIMEOUT_NO_PDF",
+      "prior_status_sha256": "8071cfcd4229450950807a6f5a24857bf0c01e888867c029a1fa70bb36f7803d",
+      "owned_word_pid": 103848,
+      "process_absent_at_prior_observation": true
+    },
+    {
+      "method": "SaveAs2 startup preflight",
+      "result": "FAILED_BEFORE_COM",
+      "cause": "child PowerShell did not auto-load Microsoft.PowerShell.Utility; Get-FileHash unavailable",
+      "word_process_started": false
+    },
+    {
+      "method": "Word COM hidden SaveAs2 PDF",
+      "result": "PDF_GENERATED",
+      "word_pid": 114208,
+      "pdf_sha256": "e6d5f7b132eead34583b00f1d5a52d8eaaf9c0cf24c35aca63ca713711b50094",
+      "pdf_pages": 25,
+      "post_export_cleanup_call_error": "PowerShell COM Close() call required by-reference argument; PDF was already fully written",
+      "cleanup": "verified PID 114208 was the unique newly created WINWORD.EXE /Automation -Embedding process and stopped only that PID"
+    }
+  ],
+  "progress_log_sha256": "0da388f350ece3e69f219267898c337873318d7ffb7f1a9f73ac2d8387038780",
+  "output_pdf_sha256": "e6d5f7b132eead34583b00f1d5a52d8eaaf9c0cf24c35aca63ca713711b50094",
+  "visual_receipt_sha256": "d7d1ee09da928a1c941897ae32234e9949023a10f2c6bdfacfc21dce57cf0e9e",
+  "candidate_modified": false,
+  "formal_acceptance": "UNKNOWN",
+  "visual_receipt_remote_path": "docs/ttqs-quality-20261016/quality-review/0013_I02-E04_R11_20261030/receipts/visual_qa_R11.json",
+  "progress_log_remote_path": "docs/ttqs-quality-20261016/quality-review/0013_I02-E04_R11_20261030/receipts/R11_SAVEAS2_PROGRESS.jsonl",
+  "reproduction_script_remote_path": "docs/ttqs-quality-20261016/quality-review/0013_I02-E04_R11_20261030/reproduction/render_0013_R11_saveas2.ps1",
+  "remote_files": [
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0013_I02-E04_R11_20261030/render_R11_saveas2/contact_01_08.jpg",
+      "sha256": "2b9227cede0dde3a23156ff0552c9b33750c8cce8c66da70eb1d6a6158f20165",
+      "bytes": 262651
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0013_I02-E04_R11_20261030/render_R11_saveas2/contact_09_16.jpg",
+      "sha256": "d80a170c4fe8b85cef47377ba21de578a0a9604a09b81f8f2ac096148ece7e9f",
+      "bytes": 221851
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0013_I02-E04_R11_20261030/render_R11_saveas2/contact_17_24.jpg",
+      "sha256": "8a867096873f1e492a7c46e4cf3fb97c8553b0c751e574eb2fd35043c4deed85",
+      "bytes": 178677
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0013_I02-E04_R11_20261030/render_R11_saveas2/contact_25_25.jpg",
+      "sha256": "2451fe0df6d177c15c8222ba31ddb2ad00e5b11e1cb18796d4939bb0d88e05a0",
+      "bytes": 28126
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0013_I02-E04_R11_20261030/render_R11_saveas2/page-01.jpg",
+      "sha256": "cba9c60f8a6aac782f033d23f9c7bdf0de89ddf196286505cf42098b3b2e1ec6",
+      "bytes": 194983
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0013_I02-E04_R11_20261030/render_R11_saveas2/page-19.jpg",
+      "sha256": "b82f9b5275eaa087993b1ccd1532154605cb967b026953e9fd2e3baf99923fe7",
+      "bytes": 157597
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0013_I02-E04_R11_20261030/render_R11_saveas2/page-20.jpg",
+      "sha256": "d0dda760d6cb6012579ba7b7d7179340080b7c947a5103a2697ba84d9334b6e5",
+      "bytes": 175685
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0013_I02-E04_R11_20261030/render_R11_saveas2/page-25.jpg",
+      "sha256": "00a78527dd931f0f0a47dfc1a10b65678ab95372ff71097b2cce0a1fa9d4bfef",
+      "bytes": 97479
+    }
+  ]
+}

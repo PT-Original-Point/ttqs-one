@@ -1,0 +1,41 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0038",
+  "requirement_id": "I08-E02",
+  "official_checkbox_sequence": "039",
+  "candidate": "0038_R03",
+  "candidate_sha256": "3a887bd3835b3a30b9fdb489257c8a09f79d3c2ce25c10565fae2b4e173f7efa",
+  "candidate_bytes": 152753,
+  "render_pdf_sha256": "85974e68937426d2a7b80844527098a0370cbe39200f3563ee773fdf15543f2a",
+  "page_count": 14,
+  "reviewer_route": "Independent external model via OpenCode CLI v2.0.29; separate from DOCX builder",
+  "model": "opencode/deepseek-v4.1-flash-free",
+  "reviewer_session_ids": [
+    "ses_eb85b6ac2ffe52pmJ2gwwOOnql"
+  ],
+  "cli_exit_code": 0,
+  "stderr_bytes": 0,
+  "verdict": "PASS",
+  "criteria_passed": 8,
+  "criteria_total": 8,
+  "blocking_findings": 0,
+  "nonblocking_notes": 4,
+  "semantic_scope": [
+    "official wording and Unique Blueprint mapping; 0038 vs sequence 039 vs DOCX 0039",
+    "genre and title-blind distinction from I08-E01 and I08-E03",
+    "volunteer association operational use",
+    "24-row score recomputation and aggregate math",
+    "synthetic/real/authority boundary",
+    "24 case to register and crosswalk consistency",
+    "full ordered text and forbidden placeholder scan",
+    "direct inspection of all 14 page PNGs and both official source images"
+  ],
+  "review_raw_file": "review/independent_semantic_review_R03_raw.md",
+  "review_raw_sha256": "e7e0d60f45d4fdbe22c7875389647eeb60e8bcbb4df5b63da54c749abf76a561",
+  "transcript_file": "review/opencode_R03_stdout.jsonl.gz",
+  "transcript_uncompressed_sha256": "591247be9fab73ec0d00fc7bb40711803a21e3148acefc7701b59817e4ac9ddf",
+  "transcript_uncompressed_bytes": 8270903,
+  "transient_review_tool_issue": "One reviewer helper script had an unpacking error, repaired within the same run; final checks completed successfully; no outsourced route pause threshold reached.",
+  "formal_acceptance": "NOT_GRANTED",
+  "promotion": "NOT_PROMOTED"
+}

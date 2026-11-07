@@ -1,0 +1,76 @@
+{
+  "project_id": "TTQS_ONE",
+  "command": "TTQS_ONE_ANTIGRAVITY_DISPATCH_QUOTA_FORENSIC_R05",
+  "record_type": "BOUNDED_NATIVE_CLI_VALIDATION",
+  "source_attachment_sha256": "08537c533ff7e0e8fc070cbc06d1a9814ac5ae0c20538587e128a823d4d5aae5",
+  "observed_at_local": "2026-10-20T00:57:02+08:00",
+  "os": "Windows 10 Pro 10.0.19045",
+  "cli_version": "agy 1.4.2",
+  "requested_model": "gemini-3.8-flash-high",
+  "cli_model_listed": true,
+  "calls": [
+    {
+      "sequence": 1,
+      "type": "ARGUMENT_PARSE_ONLY",
+      "command": "agy --print --model=gemini-3.8-flash-high --mode=plan --print-timeout=60s --prompt=<short fixed prompt>",
+      "exit_code": 2,
+      "model_generation_dispatched": false,
+      "stderr": "CLI interpreted --model as the --print prompt; no intended prompt was passed.",
+      "repair": "Moved prompt onto --print=<prompt> and retained --model=gemini-3.8-flash-high; no permission-bypass flag."
+    },
+    {
+      "sequence": 2,
+      "type": "TEXT_ONLY_PRINT_SMOKE",
+      "command": "agy --model=gemini-3.8-flash-high --mode=plan --print-timeout=60s --print=<short fixed prompt>",
+      "exit_code": 0,
+      "stdout": "AGY_TEXT_ROUTE_READY",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": "624df2ef2b09412b236120b3fe7d53be19dc821fa3c8db8325323ff575fc981a",
+      "meaning": "One short CLI print response returned. This verifies the command path produced text; it is not a full article, provider attestation, quota receipt, GUI/CLI account match, or completed work artifact.",
+      "computer_use": false,
+      "dangerously_skip_permissions": false,
+      "file_access_requested": false,
+      "workspace_trust_granted": false
+    }
+  ],
+  "tui": {
+    "usage_command": "/usage not run; trust prompt exited before signed-in usage readback",
+    "login_banner": "Currently not signed in",
+    "workspace_trust_prompt": "Read, edit, and execute files here",
+    "workspace": "E:\\TTQS",
+    "launch": "interactive native Antigravity CLI",
+    "exit_code": 0,
+    "decision": "No, exit",
+    "model_label_displayed": "Gemini 3.8 Flash · high"
+  },
+  "current_status": {
+    "full_article_writer": "NOT_TESTED",
+    "quota_debit_for_smoke": "UNKNOWN",
+    "file_writer": "PAUSED",
+    "fresh_cli_usage": "UNKNOWN",
+    "antigravity_processes_after_exit": [],
+    "quota_pool_attribution": "UNKNOWN",
+    "cli_tui_login": "NOT_SIGNED_IN_AT_TUI_READ",
+    "provider_model_attestation": "UNKNOWN",
+    "cli_gui_account_match": "UNKNOWN",
+    "fresh_gui_usage": "UNKNOWN",
+    "no_new_fee_evidence": "No API key or provider override was configured in R05 diagnostics; no billing/quota ledger was read, so debit/attribution remains UNKNOWN.",
+    "text_only_print": "SMOKE_RESPONSE_OBSERVED"
+  },
+  "root_cause_update": "Policy/dispatch underuse remains supported by the 35 receipt-backed historical attempts and prior file-writer pause; no 429 evidence. A safe --mode=plan --print text response succeeded, so the prior blanket text-only-blocked label is narrowed to partial capability. Full writing still unverified; the native TUI currently reports not signed in and the broader workspace trust prompt was explicitly declined.",
+  "next_safe_action": "Use --print-only with the named model and no tools when an actually READY, fully sourced document-specific writing task is available; do not grant broad E:\\TTQS trust or run another test. Then Windows-native build and exact-SHA OpenCode review.",
+  "evidence_files": [
+    {
+      "sha256": "624df2ef2b09412b236120b3fe7d53be19dc821fa3c8db8325323ff575fc981a",
+      "path": "agy_text_smoke_20261020_stdout.txt"
+    },
+    {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "agy_text_smoke_20261020_stderr.txt"
+    },
+    {
+      "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "path": "agy_text_smoke_20261020_exit.txt"
+    }
+  ]
+}

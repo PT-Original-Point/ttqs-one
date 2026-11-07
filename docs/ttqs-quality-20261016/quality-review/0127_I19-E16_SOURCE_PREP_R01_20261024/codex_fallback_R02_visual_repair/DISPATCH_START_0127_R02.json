@@ -1,0 +1,42 @@
+{
+  "work_id": "TTQS-0127-I19-E16-R02-W1-OPENCODE-GLM53-FREE-EXACT-SHA-SEMANTIC-REVIEW",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0127",
+  "requirement_id": "I19-E16",
+  "role": "INDEPENDENT_SEMANTIC_REVIEWER",
+  "candidate_sha256": "abba46bcdd0919c4511df025cd90d65cd302fe3f9f59c86d0fa8b7efe2015285",
+  "candidate_text_sha256": "c9abae6452d88f2ec694251b37589a734da10e3154db3dc75138738582c7a0e5",
+  "review_packet_sha256": "74e363927d57ba75cea8b62c26ede11900f92d3d4710599b0a5bbe7602705d49",
+  "source_hashes": {
+    "SOURCE_PACKET_0127_I19-E16_R01.md": "058663e200fd0207196c08a02e4d159c6e3eaa7f167094cd7b409b4050b18675",
+    "UNIQUE_BLUEPRINT_0127_I19-E16_R01.md": "9a249a2e398407469bd82c9bf5d7a6188c9e3d28be79172bd4cc33b213c700ff",
+    "SOURCE_MARKET_CSV": "9d188e1c8c4b2a488cac2a989a029358dfae8c022ac30a9298518126d137fa36",
+    "SOURCE_CUSTOMER_CSV": "ca7d92fc02a98ae32e0d306c0a42ff2fd9d6cd58a25b53cb34e89203325b15b6"
+  },
+  "requested_model": "opencode/glm-5.3-flash-free",
+  "cli_version": "opencode v2.1.4",
+  "cli_sha256": "404110f618d557de383044de86aafb1126bd69fdc312c5a3e6e7aba137568e3c",
+  "argv": [
+    "C:\\Users\\J\\AppData\\Roaming\\ai.opencode.desktop\\cli\\2.1.4-x64\\opencode-cli.exe",
+    "run",
+    "--model",
+    "opencode/glm-5.3-flash-free",
+    "--agent",
+    "plan",
+    "--format",
+    "json",
+    "--title",
+    "TTQS 0127 R02 exact-SHA semantic review",
+    "--file",
+    "REVIEW_PACKET_0127_R02.md",
+    "Review the complete attached packet and return only the requested JSON verdict."
+  ],
+  "fallback_allowed": false,
+  "computer_use": false,
+  "automatic_approval": false,
+  "tools_requested": false,
+  "window": "CREATE_NO_WINDOW",
+  "stdin": "DEVNULL",
+  "timeout_seconds": 240,
+  "started_at_local": "2026-10-28T19:15:34.372052+08:00"
+}

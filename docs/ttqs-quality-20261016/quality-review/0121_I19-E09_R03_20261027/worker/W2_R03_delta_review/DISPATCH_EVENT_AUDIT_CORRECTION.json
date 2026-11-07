@@ -1,0 +1,22 @@
+{
+  "schema": "ttqs-antigravity-cli-stream-audit-correction-v1",
+  "work_id": "TTQS-0121-I19-E09-R03-EXACT-SHA-DELTA-W2-R12-20261027",
+  "doc_id": "0121",
+  "candidate_sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+  "raw_stdout_sha256": "112b725e3bb71a83991dabcd985b5cfae4bab2cd03da3c58fdc1046e6e156a5d",
+  "raw_stdout_bytes": 11829,
+  "raw_stream_lines": 6,
+  "step_types": [
+    "user_input",
+    "agent_response",
+    "tool",
+    "finish"
+  ],
+  "raw_protocol_tool_events": 1,
+  "finish_control_events": 1,
+  "external_tool_actions": 0,
+  "computer_use_actions": 0,
+  "interpretation": "The raw stream contains one protocol step_type=tool event named finish; it is a final-response control event, not an external OS/file/browser/Computer-Use action. Preserve original receipt field tool_calls_observed=1 and use this correction to disambiguate it.",
+  "requested_model": "gemini-3.8-flash-high",
+  "actual_serving_model_identity": "UNKNOWN_PROVIDER_METADATA_NOT_EXPOSED"
+}

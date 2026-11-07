@@ -1,0 +1,51 @@
+TTQS_ONE scoped semantic repair review
+work_id: TTQS-0016-W1-SCOPED-SEMANTIC-R14-20261107
+project_id: TTQS_ONE
+doc_id / requirement_id: 0016 / I02-E05
+candidate: 0016_I02-E05_R14.docx
+candidate_sha256: 5082D0BE4E42CD3E5EA1643CD4CBB75F663B75B79487EB4CB6C5B7DFD36082D0
+candidate_text_projection_sha256: 6B7EB95AB87085966971AEEF63DEE9A0B6ADC0F09E79B02E4C96EE18411EEF0A
+parent_candidate_sha256: AF9239FD9A22E9BF25DD5DF9808C0A933A2E78FE1EBEDEC4BC6D643E7B372F42
+current_register: SYNTHETIC_REPLACEMENT_REGISTER_0016_R13A.csv
+current_register_sha256: 5C53C9080E5977E65DEE4D5001495B5186F6579750644D6D68F3BBF9FB889D61
+old_register_sha256 (retained as historical source): D1060C88B48262509569CB163C9AF51A310DC6D4BC67435DD76435149FE889E6
+
+ROLE AND SCOPE
+Independent, read-only semantic check of closure of two findings from the prior scoped R13A register review. Do not perform a full-document review. Do not edit files. The requested model is not evidence of the serving model. Return PASS_SCOPED or REPAIRABLE and exact locator/reason.
+
+PRIOR FINDINGS
+F1 (moderate): DOCX §3.3 named the R13 register in the introduction and ATT-00, although the reviewed current register was R13A; the old R13 file still contained a retired S-027 sample path. R13A has corrected locators and S-027 marked RETIRED.
+F2 (minor): §10.1 referred to “下列示例路徑” and “示例路徑” after the S-027 path had been retired, leaving dangling references.
+
+R14 EXCERPTS
+§3.3 introduction and ATT-00:
+本候選工作包包含正文及供內部維護的合成事實替換清冊（R13A，共28筆），檔名為「SYNTHETIC_REPLACEMENT_REGISTER_0016_R13A.csv」。清冊用於識別示例值及其替換要求，不是課程教材或核准原件。下表列示本文引用與實際附件，避免把代碼或來源定位說成已交付檔案。
+ATT-00
+正文與R13A替換清冊；不含課程教材或核准原件。
+R13A清冊檔名：SYNTHETIC_REPLACEMENT_REGISTER_0016_R13A.csv；另附技術檢查紀錄。
+
+§9 register-related lines:
+9. 逐事實 SAMPLE／SYNTHETIC 替換清冊
+定位使用本稿節次、表格列或欄位，不代表存在外部檔案。凡標成 SAMPLE 的值均不得直接搬入真實寄送設定。
+取得課程日期、時間、地點／平台、容量及可用報名連結的正式讀回；確認不是 SAMPLE 或預留值。
+替換所有 example.invalid 網址與示例信箱，逐一測試實際目的地、聯絡回覆及退訂阻擋。
+只在有原始資料、期間、母體、分母和計算方法時陳述點擊、報名、滿意度或成果；無資料即刪除，不得把本稿的 SAMPLE A/B 表格當成實績。
+保存最終對外版、來源位置、核准者與日期、發送批次設定及退訂測試結果。任何未核實欄位應刪除或維持明顯 SAMPLE，不得以推測補齊。
+
+§10.1 revised lines:
+本節只定義候選 EDM 的可追溯控制方法，不表示協會已採用本節所述保存安排、帳號權限或完成任何簽核。正式使用須先核對協會現行核准的文件保存、個資及存取規範。
+保存位置
+建立檔案前先核對正式儲存庫、責任人、備份及權限；不得將文件中的示例說明視為實際存在位置或已核准的保存方式。
+
+R13A S-027 row:
+[{"合成事實／示例值": "已撤銷：R13 正文未採用示例儲存路徑；本列僅保留更正軌跡，不代表路徑存在。", "本稿定位": "RETIRED｜不屬於 R13 正文", "登錄狀態": "RETIRED", "登錄鍵": "S-027", "真實替換時所需原件或核查": "不適用；不得由已撤銷列推論任何實際路徑或檔案系統狀態。", "責任角色": "文件保管人／整合者"}]
+
+DETERMINISTIC REFERENCE COUNTS FROM THIS CANDIDATE
+{"current_register_filename": 2, "dangling_path_phrases": 0, "old_register_filename": 0, "old_register_label": 0}
+
+REVIEW QUESTIONS
+1. Do §3.3 and §9 point consistently to R13A, and do they avoid directing a reader to the superseded R13 register?
+2. Does §10.1 read coherently without implying a path exists or leaving an ungrounded “following/example path” reference?
+3. Is the R13A S-027 retired status described without asserting filesystem truth, REAL facts, or formal acceptance?
+4. Are the SAMPLE/REAL, authorization, and no-publication boundaries preserved in the quoted scope?
+Limit verdict to the supplied excerpts and declared candidate/text hashes. A semantic verdict is not a binary hash verification, font/layout pass, or TTQS formal acceptance.

@@ -1,0 +1,318 @@
+
+> build · glm-5.3-flash-free
+✱ Glob "**/*" 26 matches
+> build · glm-5.3-flash-free
+→ Read source/OFFICIAL_AND_NEIGHBOR_REQUIREMENT_R02.md 
+→ Read source/UNIQUE_BLUEPRINT_0052.jsonl 
+$ Get-FileHash -Algorithm SHA256 -LiteralPath "candidate\0052_R02.docx" | Format-List; Get-Item -LiteralPath "candidate\0052_R02.docx" | Select-Object FullName,Length,LastWriteTime | Format-List
+Algorithm : SHA256
+Hash      : 9129AFF2BB730D31F76A5CB457ED069F1CAFD2460B4069219F697B35D2C11AFA
+Path      : [ISOLATED_REVIEW_PACKET]\candidate\0052_R02.docx
+
+
+FullName      : [ISOLATED_REVIEW_PACKET]\candidate\0052_R02.docx
+Length        : 63283
+LastWriteTime : 2026/10/17 �U�� 5:43:02
+> build · glm-5.3-flash-free
+→ Read source/02_GENRE_WRITING_MANUAL_CURRENT.md 
+→ Read source/03_157_CHECKBOX_BLUEPRINTS_CURRENT.md 
+$ Get-ChildItem -LiteralPath "source" | Select-Object Name,Length | Format-Table -AutoSize
+Name                                     Length
+----                                     ------
+02_GENRE_WRITING_MANUAL_CURRENT.md        16379
+03_157_CHECKBOX_BLUEPRINTS_CURRENT.md     37247
+OFFICIAL_AND_NEIGHBOR_REQUIREMENT_R02.md   5248
+official_evidence_table_page4.png        534778
+SYNTHETIC_REPLACEMENT_REGISTER_R02.csv    33612
+UNIQUE_BLUEPRINT_0052.jsonl                7645
+> build · glm-5.3-flash-free
+> build · glm-5.3-flash-free
+> build · glm-5.3-flash-free
+> build · glm-5.3-flash-free
+> build · glm-5.3-flash-free
+> build · glm-5.3-flash-free
+→ Read source/SYNTHETIC_REPLACEMENT_REGISTER_R02.csv 
+→ Read source/official_evidence_table_page4.png 
+$ where.exe python; where.exe py
+[PYTHON_EXECUTABLE]
+[PYTHON_ALIAS]
+[PY_LAUNCHER]
+> build · glm-5.3-flash-free
+$ python -c "
+import zipfile, re, hashlib, sys
+p = r'[ISOLATED_REVIEW_PACKET]\candidate\0052_R02.docx'
+data = open(p,'rb').read()
+print('SHA256:', hashlib.sha256(data).hexdigest())
+print('bytes:', len(data))
+z = zipfile.ZipFile(p)
+for n in z.namelist(): print(n, z.getinfo(n).file_size)
+import xml.etree.ElementTree as ET
+ns = {'w':'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
+root = ET.fromstring(z.read('word/document.xml'))
+body = root.find('w:body', ns)
+# count paragraphs and tables at top level
+paras = body.findall('w:p', ns)
+tables = body.findall('w:tbl', ns)
+print('top-level paragraphs:', len(paras), 'tables:', len(tables))
+allp = root.iter('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}p')
+print('total w:p anywhere:', len(list(root.iter('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}p'))))
+print('total w:tbl anywhere:', len(list(root.iter('{http://schemas.openxmlformats.org/wordprocessingml/2006/main}tbl'))))
+"
+
+SHA256: 9129aff2bb730d31f76a5cb457ed069f1cafd2460b4069219f697b35d2c11afa
+bytes: 63283
+[Content_Types].xml 1994
+_rels/.rels 734
+docProps/core.xml 951
+docProps/app.xml 1132
+word/document.xml 455074
+word/_rels/document.xml.rels 1484
+word/styles.xml 349890
+word/stylesWithEffects.xml 438131
+word/settings.xml 2535
+word/webSettings.xml 438
+word/fontTable.xml 2811
+word/theme/theme1.xml 10939
+customXml/item1.xml 262
+customXml/_rels/item1.xml.rels 295
+customXml/itemProps1.xml 354
+word/numbering.xml 5513
+word/header1.xml 1561
+word/footer1.xml 2033
+docProps/thumbnail.jpeg 8324
+top-level paragraphs: 78 tables: 32
+total w:p anywhere: 794
+total w:tbl anywhere: 32
+> build · glm-5.3-flash-free
+$ python -X utf8 -c "
+import zipfile, xml.etree.ElementTree as ET
+W='{http://schemas.openxmlformats.org/wordprocessingml/2006/main}'
+z = zipfile.ZipFile(r'[ISOLATED_REVIEW_PACKET]\candidate\0052_R02.docx')
+root = ET.fromstring(z.read('word/document.xml'))
+body = root.find(W+'body')
+def ptext(p): return ''.join(t.text or '' for t in p.iter(W+'t'))
+# headers/footers
+for f in ['word/header1.xml','word/footer1.xml']:
+    r = ET.fromstring(z.read(f))
+    print('==',f,'==')
+    print(' | '.join(ptext(p) for p in r.iter(W+'p')))
+print('== CORE PROPS ==')
+print(z.read('docProps/core.xml').decode('utf-8')[:900])
+print('== TOP-LEVEL PARAGRAPHS ==')
+i=0
+for p in body.findall(W+'p'):
+    t = ptext(p)
+    if t.strip(): print(i,'|',t)
+    i+=1
+print('== TABLES: rows x cols ==')
+for ti,tbl in enumerate(body.findall(W+'tbl'),1):
+    rows = tbl.findall(W+'tr')
+    print(f'--- TABLE {ti}: {len(rows)} rows')
+"
+
+== word/header1.xml ==
+原始點協會｜課程意見回流與課程規劃
+== word/footer1.xml ==
+SAMPLE / SYNTHETIC 示範｜未經協會核定｜第  頁
+== CORE PROPS ==
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dcmitype="http://purl.org/dc/dcmitype/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><dc:title>課程意見回流與課程規劃閉環｜0052 R01 SAMPLE/SYNTHETIC</dc:title><dc:subject>I11-E04／官方第054方框；策略／計畫文件候選</dc:subject><dc:creator>TTQS ONE 候選文件建置</dc:creator><cp:keywords>SAMPLE; SYNTHETIC; I11-E04; 0052; course feedback plan</cp:keywords><dc:description>generated by python-docx</dc:description><cp:lastModifiedBy/><cp:revision>1</cp:revision><dcterms:created xsi:type="dcterms:W3CDTF">2013-12-23T23:15:00Z</dcterms:created><dcterms:modified xsi:type="dcterms:W3CDTF">2013-12-23T23:15:00Z</dcterms:modified><cp:category/></cp:coreProperties>
+== TOP-LEVEL PARAGRAPHS ==
+0 | 課程意見回流與課程規劃閉環
+1 | 依學員及結訓學員意見形成可追溯的課程修訂計畫
+2 | 範例涵蓋意見蒐集、資料檢核、方案取捨、執行責任與下一輪驗證。
+4 | 30 秒使用說明
+6 | 本件對應與範圍
+7 | 官方原文：規劃課程依學員及結訓學員意見訂定訓練課程，且流程有完整紀錄。
+8 | 本件說明課程計畫如何吸收在訓及結訓學員意見，經資料檢核、分析取捨、授權及下一輪驗證形成可追蹤修訂。它不取代訓練需求調查、課程需求與排課計畫、單元教案與評量設計、正式會議決議或課程適切性檢討；各項原始紀錄應分別保存。
+10 | 1｜來源、決策邊界與合成案例
+11 | 本計畫依課程意見回流的官方要求編製，示範如何將在訓學員及結訓學員意見連結至資料檢核、分析取捨、課程修訂、授權確認及下一輪驗證；本文件不取代需求調查、課程計畫、單元教案、正式會議決議或課程適切性檢討的原始紀錄。
+14 | 2｜計畫的運作流程
+15 | 流程每步均要留可讀回的輸出。若來源、資料權限、核准者或真實課程版本不明，承辦者只可記錄未知與待取得項目，不得把示範值轉成正式事實。
+17 | 3｜責任與權限配置（待真實授權替換）
+19 | 建議最小分工：P1 不得單獨核定自己的課程修訂；P2 檢查個資與去識別；P3 重算分母和加權表、核對跨文件版本；P4 必須具實際授權；P5 按已核定計畫授課並保留評量。若協會現況沒有這些職務，不可在文件中寫成既有委員會或制度。
+21 | 4｜學員課後意見工具（可直接改作正式問卷）
+22 | 示範發送點：課程結束後；填答約 3–5 分鐘；不要求姓名。使用前核對告知、保存與刪除政策。採 1–5 單選量尺，1=非常不同意、2=不同意、3=普通／不確定、4=同意、5=非常同意；另設「不適用／不願回答」為缺答代碼，不納入平均，必須報數。
+24 | 問卷操作欄位
+26 | 5｜學員完整合成資料列
+29 | 完整計算示例：Q3 練習充分度的 8 個分數為 1,2,2,3,3,3,5,4；合計 23，平均=23÷8=2.875，顯示到小數三位。五級頻數由低至高為 1/2/3/1/1。不可把平均 2.875 說成 287.5%，也不可把頻數當成百分比。
+30 | 6｜學員意見彙總與判讀
+32 | 樣本回覆率（示範）=8 份有效答卷÷12 個邀請名額×100=66.7%；若實際邀請分母不同，必須重算。 Q3 平均 2.875 低於本例預先設定的 3.5 觸發線，列為優先改進；Q4 恰為 3.500，不低於觸發線，但不能因此忽視個別安全意見。Q5 4.000、Q6 4.250 是合成的感受評分，不代表客觀行為或隱私合規已通過。
+33 | 小樣本僅做描述性整理。沒有母體抽樣框、代表性設計或推論檢定，不對所有志工、全協會或未來班級推論。此數據也不能證明課程造成工作表現變化。任何可識別開放留言需另外去識別並依真實保存規則處理。
+34 | 7｜結訓學員 30 日追蹤工具與完整合成資料
+35 | 追蹤工具以課程結束日為 D0，在約 D+30 發送。請受訪者先回覆是否有機會在相關任務中使用課程方法；沒有遇到相符任務時選「沒有機會／不適用」，不得當成不會使用。若答否或沒有機會，再選一項原因。後續三題沿用 1–5 量尺；三項支持需求可複選，「目前不需要」為互斥選項。
+38 | 合成追蹤受邀分母假設 12 人，5 份完整有效追蹤；5÷12×100=41.7%。其中 3/5=60% 自陳曾使用，2/5 自陳未使用；沒有外部工作紀錄可驗證其陳述，亦不推論未使用原因。
+39 | 8｜結訓意見分析及與課程修訂的連結
+42 | 合成訊號：G3=16÷5=3.200、G5=17÷5=3.400，低於本例 3.5 觸發線；4/5=80% 勾選快速參考卡，3/5 勾選角色演練，2/5 勾選來源查證情境。三項可重疊支持需求共 9 次勾選；另 1/5=20% 選「目前不需要」，此項與其他支持互斥。不可把多選比例相加當人口比例。G4=20÷5=4.000 只表示樣本自評較高，仍不能推翻個資風險檢核。
+44 | 9｜方案比較與示範取捨
+45 | 比較尺度為 1 至 5 分，5 分表示依本項準則最有利。權重及分數均為合成規劃判斷，不是受訪者量測或正式協會決策。每一格加權分 = 準則權重 × 方案評分；總分除以 100 得加權平均。
+50 | 10｜課程修訂提案與執行計畫（草案，待授權）
+52 | 設計衝突處理：本方案把練習加在 G1，並在 G2/G3 的既有演練中嵌入卡片，不從 G3 挪時；如果真實教師或課程版本無法在現有單元完成，應重新比較方案，不可默默把 360 改成 375。任何變更先由 P3 重算與核對，再送真實 P4 核定。
+53 | 下一期指標、公式與預先判定規則
+56 | 11｜例外、修正及覆核追蹤
+58 | 本表列出的 EX-S01 至 EX-S05 是風險情境與控制示例，不表示原始點協會曾發生事故。真實例外須另用正式受限紀錄，避免公開個資；公開分支只放去識別的必要摘要。
+59 | 12｜完整合成閉環紀錄與版本追蹤
+61 | 草案變更對照：來源意見（Q3 低、畢業追蹤的 G3/G5 低且快速卡需求多）→方案 A（同時數內增加 G1 引導練習，G2/G3 加工具與未知／責任欄）→驗證（同版 Q3、既有 G1-G4 量規、D+30 G3/G5）→再議（若未改善或出現安全例外，開新一輪比較）。只有真實核定版才可生成正式發布紀錄。
+62 | 13｜正式替換與上線檢核
+64 | 14｜官方要求—操作欄位—附件定位追溯
+66 | 附錄 A｜學員課後問卷可複製表
+67 | 基本欄：課程代碼______ 課程版次______ 課程日期______（由核定版本填）；匿名代碼______；本問卷告知版本______。請逐題圈選 1–5 或 NA。請勿填寫姓名或服務對象可識別資訊。
+69 | 可選意見（不得填個人或服務對象可識別資料）：最有幫助的情境______；仍不確定的步驟______；建議增加／調整的練習______。正式使用時另附告知、資料保存及申訴說明。
+70 | 附錄 B｜結訓學員 30 日追蹤表
+71 | 課程版本______；結訓日期______；追蹤日期______；匿名代碼______。G1：曾使用／未使用／沒有機會／不願回答；未使用或沒有機會者選一原因。G2 多選：快速卡／角色演練／來源查證／其他去識別建議；「目前不需要」須單獨選擇。G3-G5 各選 1–5 或 NA。沒有使用機會者不納入「已使用」比例分母。
+73 | 附錄 C｜課程修訂追蹤記錄（合成範例已填）
+75 | 15｜正式使用前的資料與權限確認
+== TABLES: rows x cols ==
+--- TABLE 1: 1 rows
+--- TABLE 2: 2 rows
+--- TABLE 3: 4 rows
+--- TABLE 4: 6 rows
+--- TABLE 5: 1 rows
+--- TABLE 6: 9 rows
+--- TABLE 7: 6 rows
+--- TABLE 8: 8 rows
+--- TABLE 9: 6 rows
+--- TABLE 10: 1 rows
+--- TABLE 11: 9 rows
+--- TABLE 12: 8 rows
+--- TABLE 13: 6 rows
+--- TABLE 14: 6 rows
+--- TABLE 15: 4 rows
+--- TABLE 16: 5 rows
+--- TABLE 17: 4 rows
+--- TABLE 18: 6 rows
+--- TABLE 19: 4 rows
+--- TABLE 20: 4 rows
+--- TABLE 21: 1 rows
+--- TABLE 22: 6 rows
+--- TABLE 23: 6 rows
+--- TABLE 24: 6 rows
+--- TABLE 25: 8 rows
+--- TABLE 26: 6 rows
+--- TABLE 27: 6 rows
+--- TABLE 28: 8 rows
+--- TABLE 29: 4 rows
+--- TABLE 30: 6 rows
+--- TABLE 31: 7 rows
+--- TABLE 32: 1 rows
+> build · glm-5.3-flash-free
+$ python -X utf8 -c "
+import zipfile, xml.etree.ElementTree as ET
+W='{http://schemas.openxmlformats.org/wordprocessingml/2006/main}'
+z = zipfile.ZipFile(r'[ISOLATED_REVIEW_PACKET]\candidate\0052_R02.docx')
+root = ET.fromstring(z.read('word/document.xml'))
+body = root.find(W+'body')
+tbls = body.findall(W+'tbl')
+def cells(tr):
+    return [''.join(t.text or '' for t in c.iter(W+'t')) for c in tr.findall(W+'tc')]
+for ti in (11,14,19,20):
+    print(f'==== TABLE {ti} ====')
+    for tr in tbls[ti-1].findall(W+'tr'):
+        print(' | '.join(cells(tr)))
+print('footer xml raw:')
+print(z.read('word/footer1.xml').decode('utf-8'))
+"
+
+==== TABLE 11 ====
+代碼 | Q1 | Q2 | Q3 | Q4 | Q5 | Q6 | Q7
+L01 | 2 | 2 | 1 | 2 | 3 | 3 | 2
+L02 | 3 | 3 | 2 | 3 | 3 | 4 | 3
+L03 | 3 | 3 | 2 | 3 | 4 | 4 | 3
+L04 | 4 | 4 | 3 | 3 | 4 | 4 | 4
+L05 | 4 | 4 | 3 | 4 | 4 | 4 | 4
+L06 | 4 | 4 | 3 | 4 | 4 | 5 | 4
+L07 | 5 | 5 | 5 | 4 | 5 | 5 | 4
+L08 | 5 | 5 | 4 | 5 | 5 | 5 | 5
+==== TABLE 14 ====
+代碼 | G1 使用／原因 | G3 | G4 | G5 | G2 支持需求
+G01 | 是／不適用－曾使用 | 2 | 3 | 2 | 快速參考卡、情境角色演練
+G02 | 是／不適用－曾使用 | 3 | 4 | 3 | 快速參考卡、來源查證情境
+G03 | 是／不適用－曾使用 | 3 | 4 | 3 | 快速參考卡、情境角色演練
+G04 | 否／未遇到相符任務 | 4 | 4 | 4 | 快速參考卡、情境角色演練、來源查證情境
+G05 | 否／尚無使用機會 | 4 | 5 | 5 | 目前不需要
+==== TABLE 19 ====
+方案 | F130% | F225% | F320% | F415% | F510% | 加權分 (w×s) | 平均／5
+A｜同時數增練與工具 | 4 | 4 | 5 | 4 | 5 | 120 + 100 + 100 + 60 + 50 = 430 | 430/100 = 4.30
+B｜由 G3 移時數給 G1 | 5 | 4 | 3 | 4 | 5 | 150 + 100 + 60 + 60 + 50 = 420 | 420/100 = 4.20
+C｜總時數增加 15 分 | 5 | 5 | 2 | 4 | 5 | 150 + 125 + 40 + 60 + 50 = 425 | 425/100 = 4.25
+==== TABLE 20 ====
+方案 | 內容 | 限制與依據
+A｜4.30 | 維持 360 分鐘；在 G1 原 90 分鐘內把提案分段由合成基準 35/20/35 改為 20/20/50（說明/示範/引導練習），增加 15 分鐘演練；G2/G3 加入快速參考卡使用，不加總時數。 | 最高分，但與方案 C 僅差 0.05，屬示範評分的小幅差異；35/20/35 為本件合成比較基準，不代表協會既有紀錄。
+B｜4.20 | 把 15 分鐘由 G3 挪到 G1，G1 105 分、G3 105 分，G2/G4 不變，總時數仍 360。 | 較直接增練，但壓縮 G3 的最小必要紀錄練習；可能與學員想要快速工具的訊號不如 A 平衡。
+C｜4.25 | 在原 360 分鐘上新增 15 分鐘，總教學時數 375 分鐘。 | 練習時間足，但增加學員與師資負擔；場地、志工時間與預算尚無 REAL 證據。
+footer xml raw:
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<w:ftr xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mo="http://schemas.microsoft.com/office/mac/office/2008/main" xmlns:mv="urn:schemas-microsoft-com:mac:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" mc:Ignorable="w14 wp14"><w:p><w:pPr><w:pStyle w:val="Footer"/><w:jc w:val="right"/></w:pPr><w:r><w:rPr><w:rFonts w:ascii="Microsoft JhengHei" w:hAnsi="Microsoft JhengHei" w:eastAsia="Microsoft JhengHei"/><w:b w:val="0"/><w:color w:val="9A4A00"/><w:sz w:val="17"/></w:rPr><w:t>SAMPLE / SYNTHETIC 示範｜未經協會核定｜</w:t></w:r><w:r><w:rPr><w:rFonts w:ascii="Microsoft JhengHei" w:hAnsi="Microsoft JhengHei" w:eastAsia="Microsoft JhengHei"/><w:b w:val="0"/><w:color w:val="617783"/><w:sz w:val="17"/></w:rPr><w:t xml:space="preserve">第 </w:t></w:r><w:fldSimple w:instr="PAGE"/><w:r><w:rPr><w:rFonts w:ascii="Microsoft JhengHei" w:hAnsi="Microsoft JhengHei" w:eastAsia="Microsoft JhengHei"/><w:b w:val="0"/><w:color w:val="617783"/><w:sz w:val="17"/></w:rPr><w:t xml:space="preserve"> 頁</w:t></w:r></w:p></w:ftr>
+> build · glm-5.3-flash-free
+$ python -X utf8 -c "
+import zipfile, xml.etree.ElementTree as ET
+W='{http://schemas.openxmlformats.org/wordprocessingml/2006/main}'
+z = zipfile.ZipFile(r'[ISOLATED_REVIEW_PACKET]\candidate\0052_R02.docx')
+root = ET.fromstring(z.read('word/document.xml'))
+body = root.find(W+'body')
+tbls = body.findall(W+'tbl')
+def cells(tr):
+    return [''.join(t.text or '' for t in c.iter(W+'t')) for c in tr.findall(W+'tc')]
+for ti in (12,15,16,22,25):
+    print(f'==== TABLE {ti} ====')
+    for tr in tbls[ti-1].findall(W+'tr'):
+        print(' | '.join(cells(tr)))
+"
+
+==== TABLE 12 ====
+題號 | 題目簡稱 | 有效 n | 分數合計 | 平均／5 | 頻數 1/2/3/4/5
+Q01 | 角色／任務配適 | 8 | 30 | 3.750 | 0/1/2/3/2
+Q02 | 目標／邊界清楚 | 8 | 30 | 3.750 | 0/1/2/3/2
+Q03 | 引導練習充分 | 8 | 23 | 2.875 | 1/2/3/1/1
+Q04 | 未知／查證路徑 | 8 | 28 | 3.500 | 0/1/3/3/1
+Q05 | 案例相關性 | 8 | 32 | 4.000 | 0/0/2/4/2
+Q06 | 最小必要資料 | 8 | 34 | 4.250 | 0/0/1/4/3
+Q07 | 未解事項責任路徑 | 8 | 29 | 3.625 | 0/1/2/4/1
+==== TABLE 15 ====
+題號 | 追蹤題目 | n | 合計 | 平均／5 | 頻數 1/2/3/4/5
+G3 | 我能在來源不明時辨認應交由哪一責任角色查證。 | 5 | 16 | 3.200 | 0/1/2/2/0
+G4 | 我能在紀錄及交接中採取最小必要資料原則。 | 5 | 20 | 4.000 | 0/0/1/3/1
+G5 | 我能把未解事項、下一步及接手責任記錄清楚。 | 5 | 17 | 3.400 | 0/1/2/1/1
+==== TABLE 16 ====
+支持需求 | 選取人數 | 有效 n | 比例算式 | 讀法
+快速參考卡 | 4 | 5 | 4/5 = 80.0% | 複選；可與其他支持重疊
+情境角色演練 | 3 | 5 | 3/5 = 60.0% | 複選；可與其他支持重疊
+來源查證情境 | 2 | 5 | 2/5 = 40.0% | 複選；可與其他支持重疊
+目前不需要 | 1 | 5 | 1/5 = 20.0% | 互斥；選此項不再勾支持
+==== TABLE 22 ====
+單元／合成時數 | 維持的既有目標（同一示範課程） | 本件提案變更 | 評量與預定留存
+G1｜90 分 | 辨認越出受訓角色範圍的請求，停止越權承諾並按正式路徑交接。 | 合成分段提案 20 分重點說明+20 分示範+50 分引導演練；對原合成比較基準把 15 分說明轉為練習。 | 五個情境至少 4 題判斷正確且無越權承諾；留匿名作答與錯誤類型。
+G2｜90 分 | 開放提問、重述、界線辨識、確認下一步，四項至少三項達標且無關鍵隱私違規。 | 把「來源不明→標示未知→停止推測→確認下一責任角色與期限」納入既有角色演練；總時數不變。 | 未核實的事實不得以推測補填；應標示待查，並記錄查核來源與責任人。
+G3｜120 分 | 完成任務、狀態、未結事項、下一步、接手角色五欄；不記不必要個資。 | 加一頁參考卡：來源/核對狀態、未解事項、下一步、接手角色、期限；用匿名合成案例練習。 | 沿用五欄完整度；P2 檢核不必要資料，留版本與去識別作品。
+G4｜60 分 | 把界線、需求確認、紀錄、責任及未知資訊串成完整模擬交接。 | 整合演練時強制說出「未確認來源」及正式追問路徑；未達者按同一檢核點補練。 | 四項整合檢核全完成；未達及未重評者不得登錄通過。
+合計｜360 分 | 90+90+120+60=360 教學分鐘；休息及行政排除。 | 示範 A 不改總分鐘；所有分段與卡片均是提案，不構成核定課表。 | 下一版需核對實際已核定總時數、師資、教材、場地與版本。
+==== TABLE 25 ====
+示範日期 | 記錄／責任角色 | 可核對內容與判定 | 狀態／下一步
+2026-08-03 至 08-14 | 同一示範案例的需求調查資料；案例代碼 SYN-0033-PLAN-01。 | 本文件僅承接同一示範案例的合成需求背景，不重貼需求調查表，也不代表已完成真人調查。 | SYNTHETIC 上游。
+2026-08-20 | 同一示範案例的課程需求及計畫形成日。 | 沿用同一案例的課程名稱、12 人規劃假設、四個單元及 360 分鐘示範時數；日期為合成示例，不是協會實際排課。 | SYNTHETIC 上游計畫。
+2026-08-28 | 本件假設課後回饋情境；功能角色 P1/P2 均為示例代碼。 | 假設邀請數 12、有效學員問卷 8；按 Q1-Q7 匿名逐列統計。沒有真實出席／回收原件。 | SAMPLE；計算見 §§5-6。
+2026-09-27 | 假設結訓 D+30 追蹤。 | 假設向 12 人邀請、5 份有效；3/5 自陳使用，需求多選與 G3-G5 分數逐列列於 §7。 | SAMPLE；沒有真實服務紀錄。
+2026-09-30 | P1 彙總，P3 示範重算。 | Q3=2.875；G3=3.200；G5=3.400；快速卡 4/5。按示範觸發規則比較 A/B/C。 | SYNTHETIC 派生數字，非實際審查會議。
+2026-10-02 | P1 起草方案 A；P3 只示範重算；P4 實際權限未知。 | 方案 A 4.30/5；建議 G1 加 15 分鐘練習、在 G2/G3 嵌入快速卡、總時數仍 360。分數接近，取捨屬合成判斷。 | 僅草案；未核定、未發布、未開課。
+下一期（日期由協會確認） | 真實授權者核定後才排程；P1/P2/P3/P5 依正式指派工作。 | 以原始匿名答卷、課程版本、量規、D+30 追蹤及例外處理驗證，並記錄未回覆分母。 | 未取得核准及真實來源前不得標示已完成。
+> build · glm-5.3-flash-free
+→ Read render/page-01.png 
+→ Read render/page-04.png 
+→ Read render/page-03.png 
+→ Read render/page-02.png 
+> build · glm-5.3-flash-free
+→ Read render/page-06.png 
+→ Read render/page-05.png 
+→ Read render/page-07.png 
+→ Read render/page-08.png 
+> build · glm-5.3-flash-free
+→ Read render/page-10.png 
+→ Read render/page-12.png 
+→ Read render/page-09.png 
+→ Read render/page-11.png 
+> build · glm-5.3-flash-free
+→ Read render/page-14.png 
+→ Read render/page-16.png 
+→ Read render/page-13.png 
+→ Read render/page-15.png 
+> build · glm-5.3-flash-free

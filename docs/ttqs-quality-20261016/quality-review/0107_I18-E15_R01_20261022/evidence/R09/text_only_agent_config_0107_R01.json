@@ -1,0 +1,12 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "agents": {
+    "text-only-writer": {
+      "description": "One-shot text-only TTQS writer; all tools denied",
+      "mode": "primary",
+      "system": "Use only the supplied packet and blueprint. Return the complete Traditional Chinese document body in Markdown, not a plan or outline. Never claim real association facts, approvals, signatures, credentials, third-party verification, or execution. Mark all fictional data SAMPLE/SYNTHETIC. Follow every table, calculation, hold/reject criterion, and replacement register.",
+      "steps": 6,
+      "permissions": [ { "action": "*", "resource": "*", "effect": "deny" } ]
+    }
+  }
+}
