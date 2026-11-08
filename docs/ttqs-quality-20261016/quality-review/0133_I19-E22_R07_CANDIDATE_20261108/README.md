@@ -13,10 +13,10 @@
 ## Review and rendering
 
 - The parent R06 full-document review was `PASS_WITH_MINOR` on the parent SHA. Its two minor locator findings were the exact scope repaired here; the parent review is retained under `history/` and is not represented as an R07 full-document review.
-- W2 returned `PASS` for a fresh, exact-R07-SHA semantic review of all four repaired locators and their section contexts. No full-document re-review or formal acceptance is claimed. The raw W2 stream, response, input packet and dispatch receipt are retained under `worker_review/w2_antigravity_scoped_review/`.
+- W2 returned `PASS` for a fresh, exact-R07-SHA full-document text-only semantic review: 9/9 checks passed, zero findings. Raw stream, exact response, input packet, dispatch/terminal receipts, parser reconciliation and hash validation are retained under `worker_review/w2_antigravity_full_review/`. The earlier four-locator scoped review remains separately retained under `worker_review/w2_antigravity_scoped_review/`.
 - Microsoft Word COM 16.0 rendered 12 pages. Compared with R06, pages 1–10 and 12 are byte-identical; page 11 was visually inspected and all four updated locators fit their cells without clipping, overlap or pagination change.
 - Actual Antigravity serving model identity is UNKNOWN. `gemini-3.8-flash-high` is the requested route only.
 
 ## Evidence boundaries
 
-The R07 semantic review is scoped to the four locator repairs. REAL organizational records remain unverified. This candidate is not formally accepted, approved or promoted.
+R07 now has both a scoped locator review and a fresh full-document text-only semantic PASS bound to the exact candidate SHA. Visual PASS is a separate existing exact-SHA receipt; the full semantic review did not repeat visual checks. Antigravity serving model identity is UNKNOWN. REAL organizational records remain unverified. This candidate is not formally accepted, approved or promoted.
