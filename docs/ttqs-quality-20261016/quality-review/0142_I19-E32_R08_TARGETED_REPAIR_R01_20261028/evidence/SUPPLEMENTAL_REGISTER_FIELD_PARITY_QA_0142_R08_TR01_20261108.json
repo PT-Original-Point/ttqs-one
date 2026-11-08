@@ -1,0 +1,241 @@
+{
+  "schema": "TTQS_ONE_SUPPLEMENTAL_DETERMINISTIC_QA_V1",
+  "timestamp_local": "2026-11-08T04:37:35+08:00",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0142",
+  "requirement_id": "I19-E32",
+  "revision": "R08-TR01",
+  "candidate_version": "1.3/R08",
+  "paths": {
+    "candidate": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0142_I19-E32_SOURCE_PREP_R01_20261025\\R06_STRUCTURAL_COMPLETION_R12_20261028\\R06_REVIEW\\R08_TARGETED_REPAIR_R01_20261028\\0142_I19-E32_CANDIDATE_R08_TARGETED_REPAIR_R01.docx",
+    "source_packet": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0142_I19-E32_SOURCE_PREP_R01_20261025\\R06_STRUCTURAL_COMPLETION_R12_20261028\\R06_REVIEW\\R08_TARGETED_REPAIR_R01_20261028\\SOURCE_PACKET_0142_I19-E32_R01.md",
+    "unique_blueprint": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0142_I19-E32_SOURCE_PREP_R01_20261025\\R06_STRUCTURAL_COMPLETION_R12_20261028\\R06_REVIEW\\R08_TARGETED_REPAIR_R01_20261028\\UNIQUE_BLUEPRINT_0142_I19-E32_R01.md",
+    "official_requirement_locator": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0142_I19-E32_SOURCE_PREP_R01_20261025\\R06_STRUCTURAL_COMPLETION_R12_20261028\\R06_REVIEW\\R08_TARGETED_REPAIR_R01_20261028\\mapping\\OFFICIAL_REQUIREMENT_ROW_I19-E32.json",
+    "crosswalk_locator": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0142_I19-E32_SOURCE_PREP_R01_20261025\\R06_STRUCTURAL_COMPLETION_R12_20261028\\R06_REVIEW\\R08_TARGETED_REPAIR_R01_20261028\\mapping\\CROSSWALK_ROW_I19-E32.json",
+    "register": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0142_I19-E32_SOURCE_PREP_R01_20261025\\R06_STRUCTURAL_COMPLETION_R12_20261028\\R06_REVIEW\\R08_TARGETED_REPAIR_R01_20261028\\SAMPLE_REPLACEMENT_REGISTER_0142_R08.csv",
+    "qa_folder": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0142_I19-E32_SOURCE_PREP_R01_20261025\\R06_STRUCTURAL_COMPLETION_R12_20261028\\R06_REVIEW\\R08_TARGETED_REPAIR_R01_20261028\\qa",
+    "receipt": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0142_I19-E32_SOURCE_PREP_R01_20261025\\R06_STRUCTURAL_COMPLETION_R12_20261028\\R06_REVIEW\\R08_TARGETED_REPAIR_R01_20261028\\qa\\SUPPLEMENTAL_REGISTER_FIELD_PARITY_QA_0142_R08_TR01_20261108.json"
+  },
+  "input_sha256": {
+    "candidate_docx": "7efc848ed18decf665c423c03d4784e681a5d911ae5185885f614b391d92cc78",
+    "source_packet": "e3e8b3a8ee1effe758608fee183440add4f37381988c5e352912b1a3d55c9e49",
+    "unique_blueprint": "4841161d6e9aad3ace2a0b4ec4a5a3e1b7e92b68ff2b20f95e9edeae2b84070b",
+    "official_requirement_locator": "b6abdafe457e7aa9353a963bb8606bdecf21e92d289878cf80bfc1885d5c4033",
+    "crosswalk_locator": "e060fd313fc5c553f9f53e6ac246ab12d7ac83d728a7918a3dfd65b448af5891",
+    "register": "b9ef1b7f1c9b703377f0284582cc72c4251d483cbeeae3adf8f6279e6aaa372b"
+  },
+  "prior_same_sha_deterministic_receipt": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0142_I19-E32_SOURCE_PREP_R01_20261025\\R06_STRUCTURAL_COMPLETION_R12_20261028\\R06_REVIEW\\R08_TARGETED_REPAIR_R01_20261028\\TECHNICAL_QA_R08_TARGETED_REPAIR_R01.json",
+    "sha256": "474094109308849a9bcfeddb7d94b0c068f93199082b8c72e19e48b81b38b1f1",
+    "candidate_sha256": "7efc848ed18decf665c423c03d4784e681a5d911ae5185885f614b391d92cc78",
+    "result": "PASS",
+    "covered_scopes": [
+      "DOCX ZIP integrity",
+      "font floors 10.5 pt body / 9.5 pt table",
+      "sample math",
+      "SAMPLE/REAL controls",
+      "placeholder checks",
+      "register row count and IDs",
+      "F19 exact register/document value"
+    ]
+  },
+  "scope_gap_evidence": {
+    "prior_verifier_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0142_I19-E32_SOURCE_PREP_R01_20261025\\R06_STRUCTURAL_COMPLETION_R12_20261028\\R06_REVIEW\\R08_TARGETED_REPAIR_R01_20261028\\VERIFY_0142_R08_TARGETED_REPAIR_R01.py",
+    "prior_verifier_sha256": "c4aec25ed99a000b231b45bb37129f9dcbf566747eb41c8de65ec2894119cf0e",
+    "prior_checks": [
+      "register_19_rows_and_ids checks CSV row count and ordered display IDs",
+      "f19_register_matches_document checks only F19 synthetic_value against Table 16"
+    ],
+    "missing_scope": "one-to-one DOCX Table 16 row mapping and F01-F18 register core value/locator/REAL-status parity"
+  },
+  "scope": "Bounded no-model deterministic register-to-DOCX core-field parity for F01-F18 plus one-to-one F01-F19 row IDs and locator table anchors. Existing exact-SHA PASS lanes were not rerun. No semantic, visual, Word COM, or candidate mutation.",
+  "tests": [
+    {
+      "test": "register_IDs_map_one_to_one_to_DOCX_Table16",
+      "result": "PASS",
+      "details": {
+        "register_rows": 19,
+        "DOCX_Table16_data_rows": 19,
+        "matched_ids": 19,
+        "prior_scope_checked_register_ids_only": true
+      }
+    },
+    {
+      "test": "register_document_locator_table_anchors",
+      "result": "PASS",
+      "details": {
+        "rows_checked": 19,
+        "rows_passed": 19,
+        "expected_table_anchor_map": "F01-F19 defined by authoritative register field locators"
+      }
+    },
+    {
+      "test": "F01_F18_register_core_values_locator_fields_and_REAL_status_match_DOCX",
+      "result": "PASS",
+      "details": {
+        "rows_checked": 18,
+        "rows_passed": 18,
+        "row_results": [
+          {
+            "id": "F01",
+            "pass": true,
+            "year": "2023",
+            "real_status": "UNKNOWN/HOLD"
+          },
+          {
+            "id": "F02",
+            "pass": true,
+            "year": "2023",
+            "real_status": "UNKNOWN/HOLD"
+          },
+          {
+            "id": "F03",
+            "pass": true,
+            "year": "2023",
+            "real_status": "UNKNOWN/HOLD"
+          },
+          {
+            "id": "F04",
+            "pass": true,
+            "year": "2023",
+            "real_status": "UNKNOWN/HOLD"
+          },
+          {
+            "id": "F05",
+            "pass": true,
+            "year": "2024",
+            "real_status": "UNKNOWN/HOLD"
+          },
+          {
+            "id": "F06",
+            "pass": true,
+            "year": "2024",
+            "real_status": "UNKNOWN/HOLD"
+          },
+          {
+            "id": "F07",
+            "pass": true,
+            "year": "2024",
+            "real_status": "UNKNOWN/HOLD"
+          },
+          {
+            "id": "F08",
+            "pass": true,
+            "year": "2024",
+            "real_status": "UNKNOWN/HOLD"
+          },
+          {
+            "id": "F09",
+            "pass": true,
+            "year": "2025",
+            "real_status": "UNKNOWN/HOLD"
+          },
+          {
+            "id": "F10",
+            "pass": true,
+            "year": "2025",
+            "real_status": "UNKNOWN/HOLD"
+          },
+          {
+            "id": "F11",
+            "pass": true,
+            "year": "2025",
+            "real_status": "UNKNOWN/HOLD"
+          },
+          {
+            "id": "F12",
+            "pass": true,
+            "year": "2025",
+            "real_status": "UNKNOWN/HOLD"
+          },
+          {
+            "id": "F13",
+            "pass": true,
+            "year": "2024",
+            "real_status": "UNKNOWN/HOLD"
+          },
+          {
+            "id": "F14",
+            "pass": true,
+            "year": "2025",
+            "real_status": "UNKNOWN/HOLD"
+          },
+          {
+            "id": "F15",
+            "pass": true,
+            "year": null,
+            "real_status": "UNKNOWN/HOLD"
+          },
+          {
+            "id": "F16",
+            "pass": true,
+            "year": null,
+            "real_status": "UNKNOWN/HOLD"
+          },
+          {
+            "id": "F17",
+            "pass": true,
+            "year": null,
+            "real_status": "UNKNOWN/HOLD"
+          },
+          {
+            "id": "F18",
+            "pass": true,
+            "year": null,
+            "real_status": "UNKNOWN/HOLD"
+          }
+        ],
+        "F19_value_comparison_skipped": "same-SHA prior technical receipt already checks exact F19 register/document match"
+      }
+    }
+  ],
+  "overall_result": "PASS",
+  "findings": [],
+  "tool_evidence": {
+    "command": "PowerShell here-string piped to py -3.10 -",
+    "python_version": "3.10.8",
+    "libraries": [
+      "zipfile",
+      "xml.etree.ElementTree",
+      "csv",
+      "hashlib",
+      "re"
+    ],
+    "method": "Read-only ZIP member extraction of word/document.xml; parsed OOXML and UTF-8-sig CSV in memory; no model or filesystem extraction.",
+    "candidate_sha256_before_and_after_check": [
+      "7efc848ed18decf665c423c03d4784e681a5d911ae5185885f614b391d92cc78",
+      "7efc848ed18decf665c423c03d4784e681a5d911ae5185885f614b391d92cc78"
+    ],
+    "supporting_receipts_read": [
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0142_I19-E32_SOURCE_PREP_R01_20261025\\R06_STRUCTURAL_COMPLETION_R12_20261028\\R06_REVIEW\\R08_TARGETED_REPAIR_R01_20261028\\TECHNICAL_QA_R08_TARGETED_REPAIR_R01.json",
+        "sha256": "474094109308849a9bcfeddb7d94b0c068f93199082b8c72e19e48b81b38b1f1"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0142_I19-E32_SOURCE_PREP_R01_20261025\\R06_STRUCTURAL_COMPLETION_R12_20261028\\R06_REVIEW\\R08_TARGETED_REPAIR_R01_20261028\\VISUAL_QA_R08_TARGETED_REPAIR_R01.json",
+        "sha256": "0f08c04c7b9ae98ae3888703f1126537b16c5a37b2d8b74c19219997499530dc"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0142_I19-E32_SOURCE_PREP_R01_20261025\\R06_STRUCTURAL_COMPLETION_R12_20261028\\R06_REVIEW\\R08_TARGETED_REPAIR_R01_20261028\\WORD_NATIVE_RENDER_RECEIPT_0142_R08_TARGETED_REPAIR_R01.json",
+        "sha256": "d2d93a1fd7c8fb54c14da3ff180257ea02547bba60d9b5696c56d6f220eefc0e"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0142_I19-E32_SOURCE_PREP_R01_20261025\\R06_STRUCTURAL_COMPLETION_R12_20261028\\R06_REVIEW\\R08_TARGETED_REPAIR_R01_20261028\\PAGE_IMAGE_MANIFEST_0142_R08_TARGETED_REPAIR_R01.json",
+        "sha256": "d5b7ab71332583549b1971f3599dae5cbc712712bc5e697f8f84a0c2ba5a561f"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0142_I19-E32_SOURCE_PREP_R01_20261025\\R06_STRUCTURAL_COMPLETION_R12_20261028\\R06_REVIEW\\R08_TARGETED_REPAIR_R01_20261028\\PATCH_RECEIPT_0142_R08_TARGETED_REPAIR_R01.json",
+        "sha256": "f962120bece01518d54f465c76e1e2c47e68490ec50f07006cd6c39a6fc29cc5"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0142_I19-E32_SOURCE_PREP_R01_20261025\\R06_STRUCTURAL_COMPLETION_R12_20261028\\R06_REVIEW\\R08_TARGETED_REPAIR_R01_20261028\\0142_WORD_OWNER_R08_TARGETED_REPAIR_R01.json",
+        "sha256": "67f20cdd23b53a46c0728629e1c8ffc30e763ba1f6b5f1fb0808fcdd25424b71"
+      }
+    ],
+    "owner_check": "Recorded worker PID 86012 and WINWORD PID 82740 were absent; no other process command line matched this candidate path at the pre-check."
+  },
+  "candidate_disposition": "CANDIDATE_ONLY; supplemental deterministic parity PASS; NOT_PROMOTED; REAL UNKNOWN/HOLD; official score NOT_ASSIGNED.",
+  "formal_acceptance": false,
+  "real_evidence": "UNKNOWN/HOLD",
+  "official_score": "NOT_ASSIGNED"
+}
