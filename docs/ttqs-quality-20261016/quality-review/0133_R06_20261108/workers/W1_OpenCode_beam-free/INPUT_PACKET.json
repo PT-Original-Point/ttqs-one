@@ -1,0 +1,25 @@
+{
+  "project_id":"TTQS_ONE",
+  "work_id":"TTQS_ONE_0133_R05_SYNEX01_REPAIR_PROPOSAL_20261108",
+  "doc_id":"0133",
+  "requirement_id":"I19-E22",
+  "candidate":"R05",
+  "candidate_sha256":"7f9cf468358d43ab866a1f11f29149faf0ee21ff99c7966f7754bc1a7978eb6e",
+  "official_requirement_page_sha256":"805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "unique_blueprint_sha256":"edb8d241b1604790b36daf1622b907a9985ec7901c6d1e0a79f440be5fcb42fd",
+  "stage":"READY_SCOPED_REPAIR_PROPOSAL",
+  "writer_role":"bounded text proposal only; no file edits",
+  "scope":"Resolve the single W1 R05 review advisory: SYN-EX-01 says 20 daily attendance entries deduplicate to 11, but lacks a daily split to reproduce 11.",
+  "current_table_10_row":"SYN-EX-01 | 20筆日簽到誤當人次，去重為11 | REJECT 20 作為人次；先 HOLD 等來源核對 | 以「班次×去識別學員」重算 11；保存舊值20、新值11、來源鍵、原因與第二人覆核",
+  "current_table_15_register_row":"SYN-EX-01 | §8/p8; §10/p10 | 20筆日簽到誤當人次，去重為11 | REAL需原始簽到及去識別學員×班次清單；示例不併年度數",
+  "review_advisory":"20筆日簽到去重為11 is feasible but not independently recomputable without day-level split.",
+  "constraints":[
+    "Preserve the existing 20 sign-in entries and 11 unique learner/person-time outcome; do not alter annual totals.",
+    "All added details must be explicitly SYNTHETIC, not real association data.",
+    "Prefer the smallest exact replacement for Table 10 and its Table 15 register entry; do not redesign the document.",
+    "A simple two-day example may use 10 entries on each day with 9 repeated learners, yielding 10+10-9=11 unique learners. Do not invent dates or named people.",
+    "State that this is an illustrative computation only and excluded from annual totals; REAL use still requires source attendance records and de-identified learner-by-class mapping.",
+    "Output must preserve operational correction semantics: HOLD source verification, reject 20 as unique person-times, keep old/new values and second-person review trail."
+  ],
+  "acceptance":"Return concise JSON with exact replacement text for Table 10 row and Table 15 register row; list arithmetic and truth-boundary checks; identify any ambiguity or source/Blueprint conflict. No claims of DOCX modification, QA PASS, or formal acceptance."
+}

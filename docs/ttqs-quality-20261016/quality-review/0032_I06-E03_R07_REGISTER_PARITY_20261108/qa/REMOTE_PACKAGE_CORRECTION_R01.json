@@ -1,0 +1,36 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0032",
+  "package_revision": "REGISTER_PARITY_R01",
+  "work_id": "TTQS_ONE_0032_R07_REMOTE_PACKAGE_BYTES_CORRECTION_20261108",
+  "parent_commit": "704e94cd72678025f2a36f5ec43dc891a1b6a6f2",
+  "correction_scope": "Replace only PACKAGE_MANIFEST_R01.json and TTQS_ONE_0032_R07_REGISTER_PARITY_R01_20261108.zip with the already finalized local package bytes; add this correction receipt. No DOCX or register content changes.",
+  "observed_remote": [
+    {
+      "path": "PACKAGE_MANIFEST_R01.json",
+      "bytes": 4000,
+      "sha256": "bc615c68d49c3aa04c68c1c4fff7b226f9a9d08de0ced6f34a5ce97a495c0e29"
+    },
+    {
+      "path": "TTQS_ONE_0032_R07_REGISTER_PARITY_R01_20261108.zip",
+      "bytes": 4000,
+      "sha256": "560e0228fcb461d81650e30247f8e6b13ec67c4c5b1b95c51f35c61b65311a56"
+    }
+  ],
+  "replacement": [
+    {
+      "path": "PACKAGE_MANIFEST_R01.json",
+      "bytes": 6083,
+      "sha256": "f1aefa80f4ce12d9af9e1a423840355e8912e4487e55113f69e6fd894c55e790"
+    },
+    {
+      "path": "TTQS_ONE_0032_R07_REGISTER_PARITY_R01_20261108.zip",
+      "bytes": 81301,
+      "sha256": "6f8c97343e85e7d4394b42e37ecadf2eaaa4d0a57174b655c71ec58bff3fef85"
+    }
+  ],
+  "zip_validation": "CRC PASS; 22 members; all 21 manifest file entries byte/SHA-256 matched",
+  "cause": "UNKNOWN",
+  "formal_acceptance": "NOT_GRANTED",
+  "same_source_readback": "PENDING"
+}
