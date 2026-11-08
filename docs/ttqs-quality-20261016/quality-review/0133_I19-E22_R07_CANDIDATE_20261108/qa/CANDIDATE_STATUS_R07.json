@@ -1,0 +1,51 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0133",
+  "requirement_id": "I19-E22",
+  "candidate_state": "CANDIDATE",
+  "candidate_revision": "R07",
+  "candidate_sha256": "a8cc1a7740c854fc3cad1dfa229bc829d54d12153b477c7049aafc5e62e0bfb2",
+  "parent_candidate_revision": "R06",
+  "parent_candidate_sha256": "cceae5b8781fe503bd15993409ba616adb53a99d9923816d44afe019ee48b821",
+  "repair_scope": "four Table 10 internal locator cells only",
+  "repair_owner": "OpenCode v2 CLI; selected route opencode/beam-free; serving identity UNKNOWN",
+  "repair_execution_exit": 0,
+  "deterministic_patch_qa": "PASS",
+  "scoped_semantic_review": {
+    "status": "PASS",
+    "reviewer": "Antigravity CLI 1.5.3; requested model gemini-3.8-flash-high; actual serving model UNKNOWN",
+    "candidate_sha256": "a8cc1a7740c854fc3cad1dfa229bc829d54d12153b477c7049aafc5e62e0bfb2",
+    "scope": "four locator cells and their surrounding sections only"
+  },
+  "parent_full_semantic_review": {
+    "status": "PASS_WITH_MINOR",
+    "candidate_sha256": "cceae5b8781fe503bd15993409ba616adb53a99d9923816d44afe019ee48b821",
+    "note": "Two minor locator mismatches were repaired; parent review is not relabeled as an R07 full-document review."
+  },
+  "r07_full_document_semantic_review": "NOT_CLAIMED",
+  "visual_review": {
+    "status": "PASS",
+    "page_count": 12,
+    "candidate_sha256": "a8cc1a7740c854fc3cad1dfa229bc829d54d12153b477c7049aafc5e62e0bfb2",
+    "changed_render_pages": [
+      11
+    ],
+    "unchanged_render_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12
+    ]
+  },
+  "formal_acceptance": false,
+  "real_evidence": "NOT_VERIFIED",
+  "promotion": "NONE",
+  "updated_at_tpe": "2026-11-08T23:10:17.766969+08:00"
+}
