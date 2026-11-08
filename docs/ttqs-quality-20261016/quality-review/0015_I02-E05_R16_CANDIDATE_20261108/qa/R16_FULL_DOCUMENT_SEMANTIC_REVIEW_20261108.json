@@ -1,0 +1,40 @@
+{
+  "schema": "ttqs_one_independent_semantic_review_receipt.v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0015",
+  "requirement_id": "I02-E05",
+  "work_id": "TTQS_ONE_0015_R16_FULL_SEMANTIC_REVIEW_FRESH_CONTEXT_20261108",
+  "recorded_at_tpe": "2026-11-08T14:36:05+08:00",
+  "reviewer_worker": "Multi-agent independent reviewer Hilbert",
+  "reviewer_agent_id": "01a1b9c9-3149-7521-b3dc-d6926aa95959",
+  "candidate_sha256": "b0914f436bcb3ca317f39a12856aa7439fa8d5cf3f2c10636ca7fb28134236aa",
+  "register_sha256": "884b343cc563d0145c11f8bc80cd5e8375d480089d25e691966ef7f42a4df9d1",
+  "candidate_rehashed_after_review": true,
+  "register_rehashed_after_review": true,
+  "source_packet_sha256": "3776e7d9c3378cad23dbe83a246566b352dafbba6fdeece388855b85c19ee477",
+  "official_requirement_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "official_page": "1",
+  "blueprint_current_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+  "blueprint_row_number": 15,
+  "blueprint_row_sha256": "e8e2a3cd98d2f5249b72ae9c36b32177682367315b95c39fbb72b794702fd160",
+  "result": "PASS_SCOPED_FULL_DOCUMENT_SEMANTIC",
+  "scope": "Exact R16 candidate whole-document semantic/usability review; no visual or font-floor claim; no formal TTQS acceptance",
+  "findings": [],
+  "key_checks": {
+    "genre_and_operational_mechanics": "PASS",
+    "synthetic_calculation": "PASS; weighted 290/5=58 maps to HOLD",
+    "synthetic_cost_arithmetic": "PASS; NT$35,000 plus NT$3,500 = NT$38,500; sample balance NT$9,500",
+    "sample_real_truth_boundary": "PASS",
+    "title_blind_identification": "PASS",
+    "negative_neighbor_separation": "PASS",
+    "docx_register_parity": "PASS; 85 IDs/425 populated fields",
+    "R15_prior_review_reuse": "Only unchanged scope; R15 overall FAIL not rewritten as PASS"
+  },
+  "scoped_repair": "SYN-045 now states only expected week is supplied and no actual date or availability exists; SAMPLE/SYNTHETIC retained; prior 待核 removed from target field; paired register matches",
+  "limitations": [
+    "No visual inspection or new layout render in this semantic review.",
+    "This PASS does not establish formal association acceptance, REAL status, or promotion."
+  ],
+  "formal_ttqs_acceptance": false,
+  "promotion_authorized": false
+}

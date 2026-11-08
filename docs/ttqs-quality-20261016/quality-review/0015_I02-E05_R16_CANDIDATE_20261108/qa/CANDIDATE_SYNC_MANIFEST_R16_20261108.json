@@ -1,0 +1,153 @@
+{
+  "schema": "ttqs_one_candidate_evidence_manifest.v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0015",
+  "requirement_id": "I02-E05",
+  "revision": "R16",
+  "candidate_state": "CANDIDATE",
+  "candidate_sha256": "b0914f436bcb3ca317f39a12856aa7439fa8d5cf3f2c10636ca7fb28134236aa",
+  "paired_register_sha256": "884b343cc563d0145c11f8bc80cd5e8375d480089d25e691966ef7f42a4df9d1",
+  "source_packet_sha256": "3776e7d9c3378cad23dbe83a246566b352dafbba6fdeece388855b85c19ee477",
+  "official_requirement_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "blueprint_current_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+  "blueprint_row_sha256": "e8e2a3cd98d2f5249b72ae9c36b32177682367315b95c39fbb72b794702fd160",
+  "prior_defect": "R15-F03: prohibited literal 待核 in Table 16 row 46 cell 2 / SYN-045 sample_value",
+  "repair": "Replaced the prohibited marker with a factual limitation; paired register updated; non-target payload preserved.",
+  "qa": {
+    "deterministic_technical": "PASS exact SHA",
+    "word_visual": "PASS exact SHA; 23-page render; contact sheet, PDF and target page 17 preserved",
+    "independent_semantic": "PASS exact SHA full-document semantic/usability scope",
+    "w1_opencode_scoped_syn045": "PASS scoped wording only; explicit GLM free route; serving implementation UNKNOWN",
+    "w2_antigravity": "UNVERIFIED; excluded from PASS because route/model identity was not established",
+    "formal_ttqs_acceptance": false,
+    "promotion_authorized": false
+  },
+  "github_same_source_readback": "PENDING until push readback",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 41,
+      "sha256": "3df225de17d9c77c6dd494c7c3f50f4354f0b21fadb96c0fde32bb53a1e27026"
+    },
+    {
+      "path": "candidate/0015_I02-E05_R16.docx",
+      "bytes": 62428,
+      "sha256": "b0914f436bcb3ca317f39a12856aa7439fa8d5cf3f2c10636ca7fb28134236aa"
+    },
+    {
+      "path": "register/SYNTHETIC_REGISTER_0015_R16.csv",
+      "bytes": 14627,
+      "sha256": "884b343cc563d0145c11f8bc80cd5e8375d480089d25e691966ef7f42a4df9d1"
+    },
+    {
+      "path": "source/BLUEPRINT_ROW_0015_I02-E05.jsonl",
+      "bytes": 8302,
+      "sha256": "e8e2a3cd98d2f5249b72ae9c36b32177682367315b95c39fbb72b794702fd160"
+    },
+    {
+      "path": "source/SOURCE_PACKET_0015_R01.json",
+      "bytes": 9379,
+      "sha256": "3776e7d9c3378cad23dbe83a246566b352dafbba6fdeece388855b85c19ee477"
+    },
+    {
+      "path": "history/R15_INDEPENDENT_SEMANTIC_REVIEW_20261108.json",
+      "bytes": 15524,
+      "sha256": "f2acd61bc564de11f90336638432e2e980b0ae70e2c4a58e8b4369e59e351e90"
+    },
+    {
+      "path": "history/R15_SCOPED_REPAIR_WRITER_RECEIPT_20261108.json",
+      "bytes": 8019,
+      "sha256": "dcdf0fa93569feafb26fd97645e62e6002fd6cf3c80d4520c7ceaf865401d28f"
+    },
+    {
+      "path": "qa/R16_DETERMINISTIC_TECHNICAL_QA_20261108.json",
+      "bytes": 1188,
+      "sha256": "d7dc26633326848f18b4836271005cd1c7c72f90ab92ca98f63b780a7ab94dbe"
+    },
+    {
+      "path": "qa/R16_FULL_DOCUMENT_SEMANTIC_REVIEW_20261108.json",
+      "bytes": 2342,
+      "sha256": "1e320ad9b322520a9a94f0a4b811e5b146b2008808b73651060f90b5964a8a9e"
+    },
+    {
+      "path": "qa/R16_SCOPED_REPAIR_REVIEW_EXECUTION_20261108.json",
+      "bytes": 2419,
+      "sha256": "d14ccb2d2a1af5e2d6489c74aec59f63a709e82f5dbf72c084f416cb37eb1694"
+    },
+    {
+      "path": "qa/R16_SCOPED_REPAIR_WRITER_RECEIPT_20261108.json",
+      "bytes": 3415,
+      "sha256": "8c71da1e4839e55e6076a30bee2d771cea8ade200e4f0525ed534f98d39a2e75"
+    },
+    {
+      "path": "qa/R16_WORD_VISUAL_REVIEW_20261108.json",
+      "bytes": 1483,
+      "sha256": "4104158816bb335d64cfbe193f595b1ed90d0f61f881905cf13038154cb505c3"
+    },
+    {
+      "path": "qa/render_evidence/0015_I02-E05_R16.pdf",
+      "bytes": 778582,
+      "sha256": "48e59a3a88442cc7c4766802ac149a36c562ffb47aaf12ad492b07f5672b9537"
+    },
+    {
+      "path": "qa/render_evidence/contact_sheet.png",
+      "bytes": 1216527,
+      "sha256": "8f9f8a17e8e3b6ec79c2e10495a3573180ef0dd3102276e57728513b2868b003"
+    },
+    {
+      "path": "qa/render_evidence/page-17.png",
+      "bytes": 204805,
+      "sha256": "5a5b7d05b08dc935d0abb06dec389a3fe7e3f33815dc7b50a7e2b0e7c1378105"
+    },
+    {
+      "path": "worker_review/w1_glm_scoped_syn045/DISPATCH_RECEIPT.json",
+      "bytes": 4010,
+      "sha256": "4b9e7c45885c54e7be95e00145c39122787f39f1c29091309b0e2767649ac0d6"
+    },
+    {
+      "path": "worker_review/w1_glm_scoped_syn045/DISPATCH_START.json",
+      "bytes": 933,
+      "sha256": "30a496e15effeb990ff21e9c00d6ae3416779219803703b473518ee7025615ab"
+    },
+    {
+      "path": "worker_review/w1_glm_scoped_syn045/RAW_STDERR.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "worker_review/w1_glm_scoped_syn045/RAW_STDOUT.json",
+      "bytes": 2407,
+      "sha256": "ac7271804def505fe775173a586fae197067fa9bb50ca60942307ac16494984e"
+    },
+    {
+      "path": "worker_review/w1_glm_scoped_syn045/WORK_PACKAGE.txt",
+      "bytes": 1929,
+      "sha256": "f3c343e58f86d417f00563a7741f25c3cb309e17deea26b20c44c97c390d14de"
+    },
+    {
+      "path": "worker_review/w2_writer_proposal/DISPATCH_RECEIPT.json",
+      "bytes": 1866,
+      "sha256": "5069bd37ec8a17b5f60c604a2f0cbe8c9e9e7b8a0514cdc8401daae1d14ba956"
+    },
+    {
+      "path": "worker_review/w2_writer_proposal/DISPATCH_START.json",
+      "bytes": 970,
+      "sha256": "00ead9f3bdabb1636f2354b36512c7d56db57f534c3796317c519f482fa3ce46"
+    },
+    {
+      "path": "worker_review/w2_writer_proposal/RAW_STDERR.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "worker_review/w2_writer_proposal/RAW_STDOUT.json",
+      "bytes": 848,
+      "sha256": "89d4b72a17d65e17d1c567174ae690e8f8d610120ce3d7e9de2884bf15002bef"
+    },
+    {
+      "path": "worker_review/w2_writer_proposal/WORK_PACKAGE.txt",
+      "bytes": 1635,
+      "sha256": "32cd64c248b2e992b790b287970815eebbfd21d372248095a26579ac80492bb2"
+    }
+  ]
+}

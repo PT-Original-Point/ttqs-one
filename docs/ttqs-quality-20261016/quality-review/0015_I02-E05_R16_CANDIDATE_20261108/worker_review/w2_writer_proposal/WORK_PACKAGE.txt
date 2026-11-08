@@ -1,0 +1,8 @@
+TTQS_ONE scoped text-only worker task.
+work_id: TTQS_ONE_0015_R16_SYN045_REPLACEMENT_TEXT_W2_ANTIGRAVITY_20261108
+role: propose one replacement cell value; do not edit or create project files; do not call tools or commands.
+doc_id/requirement: 0015 / I02-E05. Candidate SHA-256: ef1e122b86b94368e9cb301dc6d1261080c1dcdd67c3e992848b4a096b31a8ef. Paired register SHA-256: 2da6cf11a26872690cad03c4b7a38c9d904888955971005f7fbf2bd70a057419.
+source packet SHA-256: 3776e7d9c3378cad23dbe83a246566b352dafbba6fdeece388855b85c19ee477. Official requirement PDF SHA-256: 805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709. Unique Blueprint row SHA-256: e8e2a3cd98d2f5249b72ae9c36b32177682367315b95c39fbb72b794702fd160.
+Exact current SYN-045 value: SAMPLE/SYNTHETIC 評分：時段與執行安排 3 分（M；僅有期望週次，真實確切日期及執行可用性待核）
+R15 independent semantic review found only this remaining hard-rule issue: the literal 待核 is prohibited outside the explicitly labeled REAL replacement area. Retain SAMPLE/SYNTHETIC, score 3 and M, and state that the example supplies only an expected week. Do not invent a date, available slot, actual assessment, real-world action, or result. Use plain Taiwan Traditional Chinese. The replacement must not contain any of these literal strings: 待填, 待核, 空白表, 保持空白, 會後填寫.
+Return exactly one compact JSON object with: work_id, candidate_sha256, register_sha256, recommended_value, boundary_check. recommended_value <= 100 Chinese characters. boundary_check must be one short sentence. No markdown, no extra keys, no other text.
