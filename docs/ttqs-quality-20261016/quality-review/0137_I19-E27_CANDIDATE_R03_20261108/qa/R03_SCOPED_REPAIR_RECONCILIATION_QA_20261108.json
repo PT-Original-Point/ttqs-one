@@ -1,0 +1,268 @@
+{
+  "schema": "ttqs-one-0137-r03-scoped-repair-reconciliation-qa-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0137",
+  "requirement_id": "I19-E27",
+  "candidate_state": "CANDIDATE",
+  "candidate_docx": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0137_I19-E27_CANDIDATE_R03_20261108\\candidate\\0137_I19-E27_媒體採訪與正面報導原件查驗表_R03.docx",
+  "candidate_sha256": "fa7240da13f5140d0896d1c2e3c7a74dce7f57d861d1100c0315628708c477db",
+  "candidate_bytes": 51654,
+  "scope": "Repair the two findings from the exact-SHA R02 review and correct the R03 front-matter version label.",
+  "input_r02": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0137_I19-E27_CANDIDATE_R02_R11_20261025\\0137_I19-E27_媒體採訪與正面報導原件查驗表_R02.docx",
+    "sha256": "3899167f0437ec76df42e6229685564d910250c6a822b627ec15b5f9cfcfecc8",
+    "unchanged": true
+  },
+  "replacement_register": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0137_I19-E27_CANDIDATE_R02_R11_20261025\\SAMPLE_REPLACEMENT_REGISTER_0137_R02_R11.csv",
+    "sha256": "53932b71cf046465c11fdfa064cfb09e645802d66c5aeb53e51e83a9521a6084",
+    "unchanged": true,
+    "reason": "No synthetic facts changed; unresolved REAL media-original fields are explicitly UNKNOWN/HOLD."
+  },
+  "prior_r02_review": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\OPEN_CODE_REVIEW_0137_R02_20261108T0807_TPE\\INDEPENDENT_FULL_SEMANTIC_REVIEW_0137_R02.json",
+    "sha256": "bc971fee1ca396ceb7d04b7c9c13d790a3bc47d11b2dfa2cd4c054952d8adaab",
+    "candidate_sha256": "3899167f0437ec76df42e6229685564d910250c6a822b627ec15b5f9cfcfecc8",
+    "result": "PASS_WITH_FINDINGS",
+    "inheritance": "Historical context only; not an R03 PASS."
+  },
+  "writer_stages": [
+    {
+      "route": "OpenCode v2.2.5 CLI",
+      "agent": "build",
+      "requested_model": "opencode/beam-free",
+      "actual_serving_model": "UNKNOWN",
+      "work_id": "TTQS_ONE_0137_R03_BOUNDED_REPAIR_20261108",
+      "process_receipt_sha256": "2b8b1cbe3e495dc9da4d3ee51b6c681ab73ed19eb9f513527233e234147a82c6",
+      "stdout_sha256": "8374af3ecd2fb28a911df55d426b4e6d5bff08948f093e9c7d98cd434ebf5dba",
+      "worker_receipt_sha256": "032e860f9cc24d2ed4bc414deed58a1c3c77a0c59e2488219158373ef9808af3",
+      "worker_receipt_utf8_replacement_char_count": 0,
+      "worker_receipt_trust": "VALID_UTF8_AND_JSON; PowerShell terminal display was mojibake, raw receipt text is intact."
+    },
+    {
+      "route": "OpenCode v2.2.5 CLI",
+      "agent": "build",
+      "requested_model": "opencode/beam-free",
+      "actual_serving_model": "UNKNOWN",
+      "work_id": "TTQS_ONE_0137_R03_VERSION_LABEL_FIX_20261108",
+      "input_sha256": "66577936e66ab74d94831f36028577c68f88d008219aa882b069b5dd1513dc7d",
+      "output_sha256": "fa7240da13f5140d0896d1c2e3c7a74dce7f57d861d1100c0315628708c477db",
+      "process_receipt_sha256": "f3161ac8b85d00877e1dcae7d17ee44527071d516f83e1208ff3f0183b1c5525",
+      "worker_receipt_sha256": "a5cee9112c8955637e3e738a7a16460aa56dfd8bb36ba3fde0839e3e61785636",
+      "worker_receipt_utf8_replacement_char_count": 0,
+      "worker_receipt_trust": "VALID_UTF8_AND_EXACT_SHA_BOUND."
+    }
+  ],
+  "exact_diff_from_r02": {
+    "diff_count": 16,
+    "locators": [
+      [
+        "P",
+        15
+      ],
+      [
+        "P",
+        4
+      ],
+      [
+        "T",
+        0,
+        2,
+        1
+      ],
+      [
+        "T",
+        3,
+        1,
+        1
+      ],
+      [
+        "T",
+        3,
+        10,
+        1
+      ],
+      [
+        "T",
+        3,
+        11,
+        1
+      ],
+      [
+        "T",
+        3,
+        12,
+        1
+      ],
+      [
+        "T",
+        3,
+        13,
+        1
+      ],
+      [
+        "T",
+        3,
+        2,
+        1
+      ],
+      [
+        "T",
+        3,
+        3,
+        1
+      ],
+      [
+        "T",
+        3,
+        4,
+        1
+      ],
+      [
+        "T",
+        3,
+        5,
+        1
+      ],
+      [
+        "T",
+        3,
+        6,
+        1
+      ],
+      [
+        "T",
+        3,
+        7,
+        1
+      ],
+      [
+        "T",
+        3,
+        8,
+        1
+      ],
+      [
+        "T",
+        3,
+        9,
+        1
+      ]
+    ],
+    "matches_authorized_scope": true,
+    "paragraph_replacement_indices_zero_based": [
+      4,
+      15
+    ],
+    "version_label": "R03",
+    "table4_rows_filled": 13,
+    "unknown_hold_cells": 12,
+    "hold_decision_cells": 1,
+    "unexpected_content_differences": 0
+  },
+  "deterministic_checks": {
+    "docx_opens": true,
+    "shape_unchanged": true,
+    "r02_unchanged": true,
+    "register_unchanged": true,
+    "table4_fields_explicit": true,
+    "no_fabricated_real_media_data": true,
+    "old_org_name_absent": true,
+    "modified_run_min_font_pt": 9.5,
+    "table_font_floor_pt": 9.5,
+    "result": "PASS"
+  },
+  "word_visual_check": {
+    "renderer": "Microsoft Word COM ExportAsFixedFormat + Poppler pdftoppm",
+    "pdf_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0137_I19-E27_CANDIDATE_R03_20261108\\qa\\0137_R03_FINAL_Office.pdf",
+    "pdf_sha256": "43d15c8d76d5359969f08c7c490556e1cb893c9c5686aa31a8cd37f703428045",
+    "pdf_bytes": 516011,
+    "word_pages": 9,
+    "rendered_pages": 9,
+    "pages": [
+      {
+        "page": 1,
+        "sha256": "dc3bd71670b4d47e983ddbd35ff30bf3f8b241d824c8aab9200ea67f9ed2ac78",
+        "bytes": 288993,
+        "same_as_prelabel_fix_render": false,
+        "diff_bbox": [
+          327,
+          308,
+          335,
+          321
+        ]
+      },
+      {
+        "page": 2,
+        "sha256": "177b6803836ae029796e51885c713b10833e934cf355f1822c86ec4ca0db2e70",
+        "bytes": 258898,
+        "same_as_prelabel_fix_render": true,
+        "diff_bbox": null
+      },
+      {
+        "page": 3,
+        "sha256": "745462661b5b5fca64b0d4267d9b5e66f6659f06ccc371474233e6623414c544",
+        "bytes": 225406,
+        "same_as_prelabel_fix_render": true,
+        "diff_bbox": null
+      },
+      {
+        "page": 4,
+        "sha256": "0f26665407f33a89b2965892a1c439ea6a23fc0c7120614bfafc99511760430f",
+        "bytes": 204510,
+        "same_as_prelabel_fix_render": true,
+        "diff_bbox": null
+      },
+      {
+        "page": 5,
+        "sha256": "82dae5bca12dee7b85b58b36121ff76ca3ed8ae0d4e268e7e5a6ecde8ef44000",
+        "bytes": 237942,
+        "same_as_prelabel_fix_render": true,
+        "diff_bbox": null
+      },
+      {
+        "page": 6,
+        "sha256": "515eaf582970fcfe6f865a6d6cda89220373589180496bb3a9580dc73ee9b045",
+        "bytes": 255086,
+        "same_as_prelabel_fix_render": true,
+        "diff_bbox": null
+      },
+      {
+        "page": 7,
+        "sha256": "6f7809f1c5f06cb267d580f890913a1da9c0c23adbfb5f045cfd51a8fa9063e1",
+        "bytes": 237346,
+        "same_as_prelabel_fix_render": true,
+        "diff_bbox": null
+      },
+      {
+        "page": 8,
+        "sha256": "1d394afbcb05a37a6a56f5286b6efbed2dbe55bbee71023388148e52e261e34e",
+        "bytes": 269419,
+        "same_as_prelabel_fix_render": true,
+        "diff_bbox": null
+      },
+      {
+        "page": 9,
+        "sha256": "69f691f36794d170ca300259962d5d1d7e56faef80252491df4b9507a8cfe5d0",
+        "bytes": 191192,
+        "same_as_prelabel_fix_render": true,
+        "diff_bbox": null
+      }
+    ],
+    "manual_inspection": [
+      "page 1",
+      "page 3",
+      "page 4",
+      "all-page contact sheet"
+    ],
+    "result": "PASS_LIMITED_VISUAL",
+    "scope": "Page 1 version label is legible; pages 3-4 new fields fit the repeated table header/page break without observed clipping or overlap. Pages 2-9 are pixel-identical to the pre-label-fix R03 render."
+  },
+  "independent_semantic_review": {
+    "candidate_sha256": "fa7240da13f5140d0896d1c2e3c7a74dce7f57d861d1100c0315628708c477db",
+    "status": "PENDING",
+    "scope": "Repaired table 4, normalized organization name, R03 label, official source/Blueprint alignment, SAMPLE/REAL boundary."
+  },
+  "formal_acceptance": "NOT_GRANTED",
+  "promoted_to_current": false
+}
