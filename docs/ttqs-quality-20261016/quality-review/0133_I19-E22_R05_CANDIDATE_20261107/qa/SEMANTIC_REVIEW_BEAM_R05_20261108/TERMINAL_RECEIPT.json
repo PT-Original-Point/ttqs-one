@@ -1,0 +1,49 @@
+{
+  "schema": "ttqs-one-external-semantic-review-terminal-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0133",
+  "requirement_id": "I19-E22",
+  "work_id": "TTQS_ONE_0133_R05_FULL_SEMANTIC_REVIEW_W1_BEAM_20261108",
+  "worker": "W1_OpenCode_v2",
+  "requested_route": "opencode/beam-free",
+  "session_model": null,
+  "upstream_serving_model": "UNKNOWN",
+  "cli_version": "v2.2.5",
+  "agent": "plan",
+  "session_id": "ses_e45dba3d5ffeBMbVWE3qARadP6",
+  "wrapper_pid": 20836,
+  "exit_code": 0,
+  "status": "PASS_TEXT_ONLY_WITH_NONBLOCKING_LIMITATION",
+  "candidate_sha256": "7f9cf468358d43ab866a1f11f29149faf0ee21ff99c7966f7754bc1a7978eb6e",
+  "candidate_bytes": 103814,
+  "remote_readback_commit": "cf566a0cb50cc2fc39f4900f330f30eb6d03911a",
+  "remote_raw_readback_sha256": "7f9cf468358d43ab866a1f11f29149faf0ee21ff99c7966f7754bc1a7978eb6e",
+  "review_input_sha256": "6708236f4d1b559f08acb3327924d58f00247b6d8582c5772d1a15d0494191aa",
+  "worker_response_sha256": "df3533511683e45a5c21e984ae49777812a0127f69f95fe153faa9fb3b828253",
+  "raw_stdout_sha256": "6c37232b1f939c9d52c6dd829780cc1a1ebccab79f0c416c1eb671590dd308f8",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "usage": null,
+  "reviewer_verdict": "PASS",
+  "checks": {
+    "official_fit": true,
+    "complete_mechanics": true,
+    "calculations_and_denominators": true,
+    "sample_real_boundary": true,
+    "roles_and_corrections": true,
+    "negative_neighbors_rejected": true
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "MINOR",
+      "locator": "§8/p8 Table 10 SYN-EX-01; §10/p10 replacement register SYN-EX-01",
+      "finding": "The SYN-EX-01 correction example records 20 daily sign-in entries deduplicated to 11 unique learner-class associations, but provides no day-by-day or learner-level breakdown, so the deduplication cannot be independently reproduced from the document text alone.",
+      "effect": "Limits standalone verifiability of one synthetic correction demonstration; does not affect annual totals, growth rates, or the correction-record format.",
+      "bounded_remedy": "Add a small synthetic day-by-day/learner breakdown or explicitly label the example as illustrative-only and reproducible only from preserved REAL sign-in sources; keep the example excluded from annual totals."
+    }
+  ],
+  "formal_acceptance": false,
+  "candidate_mutated": false,
+  "review_scope": "TEXT_ONLY_SEMANTIC_USABILITY",
+  "note": "F1 is a non-blocking synthetic-example reproducibility limitation; it is excluded from annual totals and does not justify changing the candidate."
+}

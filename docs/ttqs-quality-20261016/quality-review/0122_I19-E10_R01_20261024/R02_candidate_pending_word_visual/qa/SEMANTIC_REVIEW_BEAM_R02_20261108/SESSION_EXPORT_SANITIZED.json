@@ -1,0 +1,113 @@
+{
+  "info": {
+    "id": "ses_e45d04ca4ffeUogsHzk4oTDFcv",
+    "projectID": "f27b9df25437c3cad719f47428a6820888a43c04",
+    "agent": "plan",
+    "model": {
+      "id": "beam-free",
+      "providerID": "opencode",
+      "variant": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 46704,
+      "output": 410,
+      "reasoning": 9029,
+      "cache": {
+        "read": 2240,
+        "write": 0
+      }
+    },
+    "outcome": "succeeded",
+    "time": {
+      "created": 1794125050844,
+      "updated": 1794125184097,
+      "busy": 1794125050868,
+      "idle": 1794125184101
+    },
+    "title": "[redacted:session-title:ses_e45d04ca4ffeUogsHzk4oTDFcv]",
+    "location": {
+      "directory": "/[redacted:session-directory:ses_e45d04ca4ffeUogsHzk4oTDFcv]"
+    }
+  },
+  "messages": [
+    {
+      "id": "msg_1ba2fb3ea0018iDsyA9oydsMQD",
+      "time": {
+        "created": 1794125050858
+      },
+      "type": "agent-switched",
+      "agent": "plan",
+      "previous": "plan"
+    },
+    {
+      "id": "msg_1ba2fb3de001YuucT9ruSiEr8a",
+      "time": {
+        "created": 1794125050875
+      },
+      "text": "[redacted:synthetic:msg_1ba2fb3de001YuucT9ruSiEr8a]",
+      "type": "synthetic"
+    },
+    {
+      "id": "msg_1ba2fb3e800115HaUk93PgzQKL",
+      "time": {
+        "created": 1794125050876
+      },
+      "text": "[redacted:text:msg_1ba2fb3e800115HaUk93PgzQKL]",
+      "files": [],
+      "type": "user"
+    },
+    {
+      "id": "msg_1ba2fb40a0012wOWTZW4J0OLdu",
+      "time": {
+        "created": 1794125050894,
+        "streamed": 1794125184094,
+        "completed": 1794125184097
+      },
+      "type": "assistant",
+      "agent": "plan",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_1ba2fb40a0012wOWTZW4J0OLdu]",
+          "native": {
+            "redacted": "reasoning-native:msg_1ba2fb40a0012wOWTZW4J0OLdu"
+          },
+          "time": {
+            "created": 1794125052799,
+            "completed": 1794125184089
+          }
+        },
+        {
+          "type": "text",
+          "text": "[redacted:text:msg_1ba2fb40a0012wOWTZW4J0OLdu]"
+        }
+      ],
+      "finish": "stop",
+      "rawFinish": "stop",
+      "cost": 0,
+      "tokens": {
+        "input": 25873,
+        "output": 396,
+        "reasoning": 8620,
+        "cache": {
+          "read": 1792,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_1ba31bc65001hVAmAXiuD3Nz0q",
+      "time": {
+        "created": 1794125184101
+      },
+      "type": "idle",
+      "outcome": "succeeded"
+    }
+  ]
+}

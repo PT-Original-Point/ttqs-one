@@ -1,0 +1,35 @@
+{
+  "schema": "ttqs-one-0142-r07-build-public-v1",
+  "work_id": "TTQS_ONE_0142_R07_SCOPED_REPAIR_W1_DEEPSEEK_20261108",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0142",
+  "requirement_id": "I19-E32",
+  "official_157_index": 156,
+  "revision": "R07",
+  "candidate_state": "CANDIDATE_NOT_ACCEPTED",
+  "candidate_sha256": "50d911809834a3d607aa084ede054a8fecfb0b6fd12d0b7704a7f2158c941b9b",
+  "candidate_bytes": 51717,
+  "body_sha256": "ef47b5dd8855c50958a2ebc1a5ef3267a809e55381b7ced316ec2aec7f0c926a",
+  "builder": "Deterministic Python/python-docx local build; exact builder human/agent identity UNKNOWN",
+  "input_sha256s": {
+    "R06_docx": "3781cb4cb2d26625fb5676181f4faa4176ca0bb80e2e3fac518245bbdc42f97e",
+    "R06_body": "cd838170a432cb31a0be7f490bb92019b9be046a5f503d3f9a8bb53ba8539150",
+    "R07_initial_docx": "bd81634c5bebb05793bfd93f9c2255440c9e299237f3ba298f7c91ad57c68729"
+  },
+  "material_delta": "One scoped table-column insertion in Table 3: adds verification source/procedure; R07 control revision/date updated; sample financial amounts, trend formulas, all other tables/paragraphs and 19-row in-document synthetic register preserved by deterministic checks.",
+  "w1_writer_attempt": {
+    "worker": "OpenCode v2 / W1",
+    "requested_route": "opencode/beam-free",
+    "serving_identity": "UNKNOWN",
+    "cli_version": "v2.2.5",
+    "exit_code": 0,
+    "timeout": "UNKNOWN",
+    "terminal_session_id": "ses_e45bbee85ffefC3jpnlMwl4sGr",
+    "raw_stdout_sha256": "12b435d103e7cbe62fa32ae0ce08e6dfce4b41d389025b847ed74c0278f6bf77",
+    "raw_stdout_bytes": 613648,
+    "patch_spec_sha256": "5761d30a6b40c27921e14317cbba6f97ee12b67d497201f8483abc6630c0682d",
+    "outcome": "Nonzero/unknown wrapper termination; patch specification recovered and deterministic builder produced stable candidate. Does not credit W1 as successful DOCX binary write."
+  },
+  "formal_acceptance": false,
+  "real_evidence": "NOT PROVIDED; REAL=UNKNOWN/HOLD"
+}
