@@ -1,0 +1,374 @@
+{
+  "project_id": "TTQS_ONE",
+  "goal_thread_id": "01a14098-b269-79e3-b07c-56e96557fe07",
+  "source_repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "source_command_path": "docs/ttqs-quality-20261016/06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md",
+  "historical_anchor_commit": "92d3d97acbd3c0a8c4dcad66e66468f5cafc3536",
+  "live_branch_head_verified_before_build": "688ffdd76623798912bcdd5b4925a2f69c40b088",
+  "source_command_blob_sha": "70449889fd464106fe204496004bee13018d4a51",
+  "DISCOVERED": {
+    "status": "PASS",
+    "evidence": "Full 06 command read from live head e6dcfd6284522fbf69202f499ab503b64f632a57; blob SHA 70449889fd464106fe204496004bee13018d4a51."
+  },
+  "APPLICABLE": {
+    "status": "PASS",
+    "evidence": "Human-authorized reversible candidate QA and existing PR synchronization; no formal acceptance or protected source change."
+  },
+  "APPLIED": {
+    "status": "PASS",
+    "evidence": "06 Findings F-01 through F-04 applied or reused without unnecessary DOCX rebuild; 0048 R03 exact-SHA independent review passed and was synced; 0036 R13 stale review receipt status reconciled. F-05 route rule remains unchanged and no new failure was induced. 0044 R01 OpenCode v2 independent exact-SHA PASS and sidecar-only repairs synced at 21e544d8e32d5711914aba7c76521f49901955b5; candidate DOCX unchanged."
+  },
+  "VERIFIED": {
+    "status": "PASS_FOR_PREFLIGHT_AND_GITHUB_SYNC; SCHEDULED_WAKE_UNVERIFIED",
+    "evidence": "The latest branch head 21e544d8e32d5711914aba7c76521f49901955b5 was fetched from GitHub. 0044 R01 artifact manifest verified 61/61 remote Git blobs with zero mismatches, including candidate SHA 76bde5df..., reviewer response and receipt. Existing native automation remains active by config, but native scheduled-wake execution history is not exposed/verified."
+  },
+  "BLOCKED": {
+    "status": "NONE_FOR_0047_LAYOUT",
+    "evidence": "No current layout blocker; semantic independent review is in progress."
+  },
+  "candidate_sha256": "be27651b17ac2759b6eab5391fb330df6b68a978d41c47fe618fef9f3a6c0976",
+  "automation": "Existing automation unchanged: ttqs-one-hourly-quality-goal-resume; no second scheduler created.",
+  "scope_remaining": [
+    "Verify current 0047/0049 READY and active Writer state; continue next valid document-specific work.",
+    "Complete the overall 129 requirement coverage and all independent exact-SHA acceptance gates.",
+    "Await Human formal acceptance; actual scheduled-wake history remains unverified."
+  ],
+  "candidate_state": "CANDIDATE_ONLY_SAMPLE_SYNTHETIC_NOT_HUMAN_ACCEPTED",
+  "latest_application": {
+    "recorded_at_utc": "2026-10-17T03:29:04.459Z",
+    "recovery_run": "TTQS_GITHUB_COMMAND_PREFLIGHT_20261017_R03",
+    "source": {
+      "repository": "PT-Original-Point/ttqs-one",
+      "branch": "work/ttqs-one-document-quality-contract-20261016",
+      "pr": 92,
+      "live_head_sha_before_this_sync": "21e544d8e32d5711914aba7c76521f49901955b5",
+      "command_path": "docs/ttqs-quality-20261016/06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md",
+      "command_blob_sha": "70449889fd464106fe204496004bee13018d4a51",
+      "historical_anchor_commit": "92d3d97acbd3c0a8c4dcad66e66468f5cafc3536"
+    },
+    "authorization": "Human directly instructed execution in the current thread; scope is reversible candidate review, stale review metadata correction, existing PR synchronization, and continuation. Formal acceptance and protected originals were not changed.",
+    "command_intake": {
+      "DISCOVERED": "PASS: live branch source 06 was already freshly read at exact blob SHA 70449889fd464106fe204496004bee13018d4a51; source unchanged at this readback.",
+      "APPLICABLE": "PASS: applies to existing TTQS ONE goal, candidate review and existing PR #92; no protected or formal-acceptance gate crossed.",
+      "APPLIED": "PASS: 0036 R13 and 0048 R03 outcomes retained; 0044 R01 exact-SHA independent PASS completed; three non-material sidecar observations repaired without rebuilding DOCX; outcome synced.",
+      "VERIFIED": "PASS: GitHub remote manifest readback verified all 61/61 entries at commit 21e544d8e32d5711914aba7c76521f49901955b5.",
+      "BLOCKED": "NONE_FOR_0044_REVIEW_OR_SYNC"
+    },
+    "automation": {
+      "id": "ttqs-one-hourly-quality-goal-resume",
+      "kind": "heartbeat",
+      "status": "ACTIVE",
+      "interval": "RRULE:FREQ=HOURLY;INTERVAL=1",
+      "target_thread_id": "01a14098-b269-79e3-b07c-56e96557fe07",
+      "workspace": "E:\\TTQS",
+      "prompt_sha256": "d2a07e151e9108478d1f037bf141b62fc6bc689b5f375eccf0337a8a4f31d7ea",
+      "preflight_marker_present": true,
+      "command_ingestion_marker_present": true,
+      "native_view_invoked": true,
+      "windows_supervisor_state": "DISABLED",
+      "duplicate_active_scheduler_count": 1,
+      "actual_scheduled_wake": "NOT_VERIFIED_BY_NATIVE_READBACK",
+      "next_run_time": "NOT_EXPOSED",
+      "persistent_prompt_update_this_turn": "NOT_NEEDED; current native heartbeat prompt already contains both required markers and full recovery rules",
+      "functional_preflight_test": "PASS; live GitHub head and full 06 command discovered/read, authority/scope validated, live candidate state reconciled, no duplicate worker dispatched",
+      "scheduled_wake_test": "NOT_VERIFIED; native view did not expose execution history or next run time"
+    },
+    "findings": {
+      "F-01": {
+        "status": "VERIFIED_FOR_SAMPLE_CANDIDATE",
+        "preserved_R08_sha256": "e2d4b3f5e906faaf3d473c7351bd79618a78dcf2c8f91a32a4e952d005ac5eae",
+        "latest_R13_sha256": "0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f",
+        "evidence": "R08 exact bytes remained unchanged. R13 reviewer PASS plus direct 19-page visual review closed the page-5 flowchart concern and prior appendix/header findings. Candidate remains sample-only/not promoted."
+      },
+      "F-02": {
+        "status": "VERIFIED_REMOTE_READBACK_PASS",
+        "live_head": "e6dcfd6284522fbf69202f499ab503b64f632a57",
+        "verified_candidate_bytes": {
+          "0031_R06": "a35be13fe320aedf431f9a2ee7db4a5866d69ef42d87a61496a3c82ad804b4d3",
+          "0032_R04": "22dfa33b9c010c4c33f7e1c19ac0bfee999119c4732aca13e611a7c7ab552d3d",
+          "0033_R03": "fe5f3cfd84c761da86435a71e0fd899daa725be78628c4d2d3f2324c1fdb5f4f",
+          "0039_R09": "3e7ed5f173dc4604803f477289f1d6190e95a5c58d3a229420eaee67037080f5",
+          "0036_R08": "e2d4b3f5e906faaf3d473c7351bd79618a78dcf2c8f91a32a4e952d005ac5eae",
+          "0036_R13": "0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f",
+          "0043_R04": "23e2218ccd297d82cd0fc8298fc242c66df278cb7708d824ebfb4b15449478ab",
+          "0048_R03": "d029d291425447f20d59cb54b9a30190cd8ac0621041d2233b4a1bb8d081cc39"
+        },
+        "evidence": "At fetched remote commit a873bafa2618dfc8a2e7f0a94b36918b87b802a2, DOCX 0048 R03, original reviewer response, receipt and two updated manifests were hashed from GitHub blobs. 0048 manifest 30/30 entries and 0036 R13 manifest 110/110 entries match. Existing candidate DOCX hashes also matched live head before this sync."
+      },
+      "F-03": {
+        "status": "APPLIED",
+        "evidence": "Reused unchanged exact-SHA reviews. One necessary independent review was run for 0048 R03 after the R02 font defect repair; no repeated review of unchanged DOCX. Invocation cost is not independently available."
+      },
+      "F-04": {
+        "status": "VERIFIED_CANDIDATE_ONLY",
+        "doc_id": "0043",
+        "revision": "R04",
+        "sha256": "23e2218ccd297d82cd0fc8298fc242c66df278cb7708d824ebfb4b15449478ab",
+        "evidence": "Existing independent review PASS 9/9, all 17 pages, zero findings; local and live GitHub candidate bytes match. No rebuild."
+      },
+      "F-05": {
+        "status": "NO_NEW_FAILURE; ROUTE_THRESHOLD_NOT_RETESTED",
+        "evidence": "The 0048 OpenCode v2 invocation exited 0. Antigravity route was not dispatched or retested; no artificial failures were created. Existing route incident/pause evidence remains historical and distinct."
+      },
+      "F-06": {
+        "status": "VERIFIED_REMOTE_READBACK_CANDIDATE_ONLY",
+        "doc_id": "0044",
+        "revision": "R01",
+        "requirement_id": "I09-E04",
+        "official_checkbox_sequence": "045",
+        "candidate_sha256": "76bde5df4209abc6f102a15a02c5e51a5816ef3df309aaed0a0ab44ea9075644",
+        "independent_verdict": "PASS",
+        "criteria_passed": 14,
+        "material_findings": 0,
+        "non_material_p3_findings": 3,
+        "sidecar_repairs": "replacement register and package manifest only",
+        "candidate_unchanged": true,
+        "formal_acceptance": "NOT_GRANTED",
+        "evidence": "OpenCode CLI v2 read-only result; all 8 supplied final page images directly inspected; no independent DOCX rerender."
+      }
+    },
+    "prior_document_0048_R03": {
+      "candidate_sha256": "d029d291425447f20d59cb54b9a30190cd8ac0621041d2233b4a1bb8d081cc39",
+      "independent_verdict": "PASS",
+      "criteria": "18/18",
+      "findings": 0,
+      "candidate_unchanged": true,
+      "formal_acceptance": "NOT_GRANTED",
+      "review_result_sha256": "42285397a5a44c174e6724d1a1214948763ab0b35b0bd2c1a1fd95a5aa3ff3f",
+      "review_receipt_sha256": "f78e74242bcaddb736e53e7fdfa92e6f9dac50a3f24b47144e35bfb088ae2a2a",
+      "remote_readback": "PASS",
+      "review_receipt_worktree_sha256": "b705b2165f24e9bfcc670fe03119c8030a0070bb587483436272177b050bacfd"
+    },
+    "document_0044_R01": {
+      "candidate_sha256": "76bde5df4209abc6f102a15a02c5e51a5816ef3df309aaed0a0ab44ea9075644",
+      "bytes": 49849,
+      "independent_verdict": "PASS",
+      "criteria_passed": "14/14",
+      "material_findings": 0,
+      "non_material_p3_findings": 3,
+      "p3_sidecar_repairs": "replacement register locators and 61-entry artifact manifest",
+      "candidate_unchanged": true,
+      "official_mapping": "DOCX 0044 = I09-E04 = official checkbox 045",
+      "sample_real_boundary": "SAMPLE/SYNTHETIC; no real association action or approval asserted",
+      "formal_acceptance": "NOT_GRANTED",
+      "review_result_sha256": "3199e4bb2243c4f991b591f76f5b3eed1d9384a9d6b10dfa6e42cf01d1964cc5",
+      "review_receipt_sha256": "c862cd83bddb1e7c74fb3d4547d6c65981e53c64ba1450262ab736f5d0fabad5",
+      "manifest_entries": 61,
+      "manifest_mismatches": 0,
+      "visual_scope": "8/8 supplied final PNGs directly inspected; independent DOCX rerender not performed."
+    },
+    "sync_commit_sha": "21e544d8e32d5711914aba7c76521f49901955b5",
+    "remote_readback": {
+      "status": "PASS",
+      "readback_head": "21e544d8e32d5711914aba7c76521f49901955b5",
+      "pr_head_matches": true,
+      "pr_state": "OPEN_DRAFT_NOT_MERGED",
+      "manifest_0044_R01_entries": 61,
+      "manifest_0044_R01_verified": 61,
+      "manifest_0044_R01_mismatches": 0,
+      "candidate_0044_R01": "76bde5df4209abc6f102a15a02c5e51a5816ef3df309aaed0a0ab44ea9075644",
+      "review_0044_R01": "3199e4bb2243c4f991b591f76f5b3eed1d9384a9d6b10dfa6e42cf01d1964cc5",
+      "receipt_0044_R01": "c862cd83bddb1e7c74fb3d4547d6c65981e53c64ba1450262ab736f5d0fabad5",
+      "method": "Fetch live GitHub branch, hash each remote Git blob and compare bytes/SHA-256 to artifact_manifest.json."
+    },
+    "next_actions": [
+      "Inspect current 0047/0049 candidate, reviewer, READY and live Writer state; continue one lawful READY item without duplicating an active Writer.",
+      "Retain a single existing hourly task; do not create another scheduler. Real scheduler-triggered execution remains unverified by native readback."
+    ],
+    "true_human_gate": "Formal acceptance of candidates and any real association evidence remain Human-controlled; no promotion was performed.",
+    "overall_goal_complete": false,
+    "overall_acceptance": "0044 EXACT-SHA CANDIDATE REVIEW PASS AND GITHUB READBACK PASS; FORMAL ACCEPTANCE NOT_GRANTED; OVERALL GOAL INCOMPLETE; SCHEDULED WAKE EXECUTION UNVERIFIED"
+  },
+  "application_history": [
+    {
+      "recorded_at_utc": "2026-10-17T00:46:09.603Z",
+      "source": {
+        "repository": "PT-Original-Point/ttqs-one",
+        "branch": "work/ttqs-one-document-quality-contract-20261016",
+        "pr": 92,
+        "live_head_sha": "bc30fcab0790594230dc7260c26df56521688af9",
+        "command_path": "docs/ttqs-quality-20261016/06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md",
+        "command_blob_sha": "70449889fd464106fe204496004bee13018d4a51",
+        "historical_anchor_commit": "92d3d97acbd3c0a8c4dcad66e66468f5cafc3536"
+      },
+      "authorization": "Human directly instructed execution in this thread; scope is reversible candidate QA, persistent automation preflight update, and public audit synchronization. No formal acceptance or protected source was changed.",
+      "command_intake": {
+        "DISCOVERED": "PASS: full current command read from GitHub; its blob SHA matches the local branch tree.",
+        "APPLICABLE": "PASS: applies to existing TTQS_ONE GOAL and authorized candidate workflow.",
+        "APPLIED": "PASS_WITH_PENDING_SCHEDULE_WAKE: native existing hourly heartbeat prompt updated in place; the one-time findings were reconciled against current local and GitHub artifacts.",
+        "VERIFIED": "PARTIAL: same-source automation config readback and a live GitHub preflight passed; an actual scheduler-triggered wake is not yet evidenced.",
+        "BLOCKED": "NONE_FOR_PROMPT_OR_PREFLIGHT; real scheduled-wake evidence and Antigravity route-state recheck remain pending."
+      },
+      "automation": {
+        "id": "ttqs-one-hourly-quality-goal-resume",
+        "kind": "heartbeat",
+        "status": "ACTIVE",
+        "rrule": "RRULE:FREQ=HOURLY;INTERVAL=1",
+        "target_thread_id": "01a14098-b269-79e3-b07c-56e96557fe07",
+        "update_method": "Codex native automation_update(mode=update), preserving the existing ID, thread, hourly rule and failed-runs-only notifications.",
+        "same_source_readback": "PASS",
+        "persistent_prompt_sha256": "d2a07e151e9108478d1f037bf141b62fc6bc689b5f375eccf0337a8a4f31d7ea",
+        "preflight_marker_present": true,
+        "command_ingestion_marker_present": true,
+        "stale_R12_checkpoint_replaced_with_live_read_rule": true,
+        "scheduled_wake_test": "NOT_VERIFIED; the available native tool supports view/update but exposed no safe run-now operation or execution-history payload in this turn."
+      },
+      "findings": {
+        "F-01": {
+          "status": "VERIFIED_FOR_SAMPLE_CANDIDATE",
+          "preserved_R08_sha256": "e2d4b3f5e906faaf3d473c7351bd79618a78dcf2c8f91a32a4e952d005ac5eae",
+          "latest_R13_sha256": "0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f",
+          "evidence": "R13 progress records the page-5 flowchart correction, direct visual coverage of all 19 final pages, exact-SHA independent semantic PASS_FOR_SAMPLE_ARTIFACT, no real checkbox evidence, and no promotion. Local and live-branch DOCX SHA-256 match. R08 bytes were not rebuilt."
+        },
+        "F-02": {
+          "status": "VERIFIED_REMOTE_BYTES_MATCH",
+          "candidates": {
+            "0031_R06": "a35be13fe320aedf431f9a2ee7db4a5866d69ef42d87a61496a3c82ad804b4d3",
+            "0032_R04": "22dfa33b9c010c4c33f7e1c19ac0bfee999119c4732aca13e611a7c7ab552d3d",
+            "0033_R03": "fe5f3cfd84c761da86435a71e0fd899daa725be78628c4d2d3f2324c1fdb5f4f",
+            "0036_R13": "0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f",
+            "0037_R07": "0a66a439be8fc67e358b59ecace73ae59dae2369a90e0c13adc354e49c3ae77d",
+            "0039_R09": "3e7ed5f173dc4604803f477289f1d6190e95a5c58d3a229420eaee67037080f5",
+            "0043_R04": "23e2218ccd297d82cd0fc8298fc242c66df278cb7708d824ebfb4b15449478ab",
+            "0047_R08": "b8cc8e4473e9cd7ad93f21c0cb9503865e683e3b802ac70577fbd8db3524d447"
+          },
+          "note": "Each listed local candidate DOCX was SHA-256 compared with its Git blob at the live branch head; all matched. Candidate status is retained."
+        },
+        "F-03": {
+          "status": "APPLIED",
+          "evidence": "Existing exact-SHA receipts were reused; no unchanged semantic review was rerun in this turn. Actual historical model cost remains unknown."
+        },
+        "F-04": {
+          "status": "VERIFIED_CANDIDATE_ONLY",
+          "doc_id": "0043",
+          "revision": "R04",
+          "sha256": "23e2218ccd297d82cd0fc8298fc242c66df278cb7708d824ebfb4b15449478ab",
+          "evidence": "Local and live branch DOCX bytes match. Existing receipt reports independent semantic PASS with register crosswalk and inspection of pages 1-17; requested model identity was not returned. No rebuild performed."
+        },
+        "F-05": {
+          "status": "PARTIAL_RECORDED_PAUSE_NOT_RETESTED",
+          "evidence": "0047 R08 progress says Antigravity new dispatch was not attempted because of the 0044 permission-denial/repair incident. This turn did not dispatch Antigravity or manufacture failures; live route control was not independently re-tested."
+        }
+      },
+      "next_actions": [
+        "Commit and push the already staged 0047 R08 text-byte preservation changes without changing its DOCX bytes; then read back every manifest entry from GitHub.",
+        "Continue the actual READY document queue after checking for a live document-specific Writer; preserve exact-SHA reviews and do not rebuild stable candidates."
+      ],
+      "formal_acceptance": "NOT_GRANTED"
+    },
+    {
+      "recorded_at_utc": "2026-10-17T03:14:12.177Z",
+      "recovery_run": "TTQS_GITHUB_COMMAND_PREFLIGHT_20261017_R02",
+      "source": {
+        "repository": "PT-Original-Point/ttqs-one",
+        "branch": "work/ttqs-one-document-quality-contract-20261016",
+        "pr": 92,
+        "live_head_sha_before_sync": "e6dcfd6284522fbf69202f499ab503b64f632a57",
+        "command_path": "docs/ttqs-quality-20261016/06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md",
+        "command_blob_sha": "70449889fd464106fe204496004bee13018d4a51",
+        "historical_anchor_commit": "92d3d97acbd3c0a8c4dcad66e66468f5cafc3536"
+      },
+      "authorization": "Human directly instructed execution in the current thread; scope is reversible candidate review, stale review metadata correction, existing PR synchronization, and continuation. Formal acceptance and protected originals were not changed.",
+      "command_intake": {
+        "DISCOVERED": "PASS: live PR #92 head resolved; full 06 file reread at exact blob SHA.",
+        "APPLICABLE": "PASS: compatible with Human-authorized TTQS ONE candidate QA and existing thread-bound GOAL.",
+        "APPLIED": "PASS_PENDING_REMOTE_READBACK: F-01 resolved through 0036 R13; F-02 candidate bytes verified; F-03 no unchanged review rerun; F-04 0043 R04 exact review reused; 0048 R03 exact-SHA review completed PASS and receipt prepared.",
+        "VERIFIED": "PASS_FOR_LIVE_PREFLIGHT_AND_GITHUB_SYNC; the actual scheduled-wake execution history remains NOT_VERIFIED.",
+        "BLOCKED": "NONE_FOR_CURRENT_CANDIDATE_REVIEW_OR_SYNC"
+      },
+      "automation": {
+        "id": "ttqs-one-hourly-quality-goal-resume",
+        "kind": "heartbeat",
+        "status": "ACTIVE",
+        "interval": "RRULE:FREQ=HOURLY;INTERVAL=1",
+        "target_thread_id": "01a14098-b269-79e3-b07c-56e96557fe07",
+        "workspace": "E:\\TTQS",
+        "prompt_sha256": "d2a07e151e9108478d1f037bf141b62fc6bc689b5f375eccf0337a8a4f31d7ea",
+        "preflight_marker_present": true,
+        "command_ingestion_marker_present": true,
+        "native_view_invoked": true,
+        "windows_supervisor_state": "DISABLED",
+        "duplicate_active_scheduler_count": 1,
+        "actual_scheduled_wake": "NOT_VERIFIED_BY_NATIVE_READBACK",
+        "next_run_time": "NOT_EXPOSED",
+        "persistent_prompt_update_this_turn": "NOT_NEEDED; current native heartbeat prompt already contains both required markers and full recovery rules",
+        "functional_preflight_test": "PASS; live GitHub head and full 06 command discovered/read, authority/scope validated, live candidate state reconciled, no duplicate worker dispatched",
+        "scheduled_wake_test": "NOT_VERIFIED; native view did not expose execution history or next run time"
+      },
+      "findings": {
+        "F-01": {
+          "status": "VERIFIED_FOR_SAMPLE_CANDIDATE",
+          "preserved_R08_sha256": "e2d4b3f5e906faaf3d473c7351bd79618a78dcf2c8f91a32a4e952d005ac5eae",
+          "latest_R13_sha256": "0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f",
+          "evidence": "R08 exact bytes remained unchanged. R13 reviewer PASS plus direct 19-page visual review closed the page-5 flowchart concern and prior appendix/header findings. Candidate remains sample-only/not promoted."
+        },
+        "F-02": {
+          "status": "VERIFIED_REMOTE_READBACK_PASS",
+          "live_head": "e6dcfd6284522fbf69202f499ab503b64f632a57",
+          "verified_candidate_bytes": {
+            "0031_R06": "a35be13fe320aedf431f9a2ee7db4a5866d69ef42d87a61496a3c82ad804b4d3",
+            "0032_R04": "22dfa33b9c010c4c33f7e1c19ac0bfee999119c4732aca13e611a7c7ab552d3d",
+            "0033_R03": "fe5f3cfd84c761da86435a71e0fd899daa725be78628c4d2d3f2324c1fdb5f4f",
+            "0039_R09": "3e7ed5f173dc4604803f477289f1d6190e95a5c58d3a229420eaee67037080f5",
+            "0036_R08": "e2d4b3f5e906faaf3d473c7351bd79618a78dcf2c8f91a32a4e952d005ac5eae",
+            "0036_R13": "0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f",
+            "0043_R04": "23e2218ccd297d82cd0fc8298fc242c66df278cb7708d824ebfb4b15449478ab",
+            "0048_R03": "d029d291425447f20d59cb54b9a30190cd8ac0621041d2233b4a1bb8d081cc39"
+          },
+          "evidence": "At fetched remote commit a873bafa2618dfc8a2e7f0a94b36918b87b802a2, DOCX 0048 R03, original reviewer response, receipt and two updated manifests were hashed from GitHub blobs. 0048 manifest 30/30 entries and 0036 R13 manifest 110/110 entries match. Existing candidate DOCX hashes also matched live head before this sync."
+        },
+        "F-03": {
+          "status": "APPLIED",
+          "evidence": "Reused unchanged exact-SHA reviews. One necessary independent review was run for 0048 R03 after the R02 font defect repair; no repeated review of unchanged DOCX. Invocation cost is not independently available."
+        },
+        "F-04": {
+          "status": "VERIFIED_CANDIDATE_ONLY",
+          "doc_id": "0043",
+          "revision": "R04",
+          "sha256": "23e2218ccd297d82cd0fc8298fc242c66df278cb7708d824ebfb4b15449478ab",
+          "evidence": "Existing independent review PASS 9/9, all 17 pages, zero findings; local and live GitHub candidate bytes match. No rebuild."
+        },
+        "F-05": {
+          "status": "NO_NEW_FAILURE; ROUTE_THRESHOLD_NOT_RETESTED",
+          "evidence": "The 0048 OpenCode v2 invocation exited 0. Antigravity route was not dispatched or retested; no artificial failures were created. Existing route incident/pause evidence remains historical and distinct."
+        }
+      },
+      "document_0048_R03": {
+        "candidate_sha256": "d029d291425447f20d59cb54b9a30190cd8ac0621041d2233b4a1bb8d081cc39",
+        "independent_verdict": "PASS",
+        "criteria": "18/18",
+        "findings": 0,
+        "candidate_unchanged": true,
+        "formal_acceptance": "NOT_GRANTED",
+        "review_result_sha256": "42285397a5a44c174e6724d1a1214948763ab0b35b0bd2c1a1fd95a5aa3ff3f",
+        "review_receipt_sha256": "f78e74242bcaddb736e53e7fdfa92e6f9dac50a3f24b47144e35bfb088ae2a2a",
+        "remote_readback": "PASS",
+        "review_receipt_worktree_sha256": "b705b2165f24e9bfcc670fe03119c8030a0070bb587483436272177b050bacfd"
+      },
+      "next_actions": [
+        "Commit and push the 0048 R03 exact-SHA reviewer response/receipt and corrected 0036 R13 status metadata to existing PR #92; read back each changed blob.",
+        "Inspect current 0047 and 0049 candidate/reviewer/Writer state after sync; continue only a verified READY item with no active Writer."
+      ],
+      "true_human_gate": "Formal association acceptance, REAL records, signatures/approvals, protected originals, submission and external irreversible action remain Human-gated.",
+      "overall_goal_complete": false,
+      "sync_commit_sha": "a873bafa2618dfc8a2e7f0a94b36918b87b802a2",
+      "remote_readback": {
+        "status": "PASS",
+        "readback_head": "a873bafa2618dfc8a2e7f0a94b36918b87b802a2",
+        "docx_0048_R03": "d029d291425447f20d59cb54b9a30190cd8ac0621041d2233b4a1bb8d081cc39",
+        "review_0048_R03": "42285397a5a44c174e6724d1a1214948763ab0b35b0bd2c1a1fd95a5aa3ff3f2",
+        "receipt_0048_R03": "f78e74242bcaddb736e53e7fdfa92e6f9dac50a3f24b47144e35bfb088ae2a2a",
+        "manifest_0048_R03": "e46cce0cb268689992f9fb8a28426ef744db064bcc5986518dfe46cbed8f9d10",
+        "manifest_0048_R03_entries": 30,
+        "manifest_0048_R03_mismatches": 0,
+        "docx_0036_R13": "0ea26e673d363f3d16c2cd8e66611c4920a70d111f3705c617a1cfc62687242f",
+        "manifest_0036_R13": "1ee238517d70cba0cd50deda591739271393fe65ea4ab26091362ed9ee156175",
+        "manifest_0036_R13_entries": 110,
+        "manifest_0036_R13_mismatches": 0,
+        "method": "git fetch from GitHub at the live branch then hash remote Git blob bytes; compare candidate DOCX, reviewer response, receipts, and every manifest-listed blob."
+      },
+      "overall_acceptance": "PREFLIGHT_AND_GITHUB_COMMAND_INGESTION_PASS; SCHEDULED_WAKE_EXECUTION_UNVERIFIED"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS_ONE_0127_I19-E16_SEMANTIC_REVIEW_R01",
+  "doc_id": "0127",
+  "official_checkbox": "I19-E16",
+  "candidate_docx_sha256": "1fa7dd73f2e62520c0d27dedfadebe8c8ddf3096f40b7928b8c715794fe4b59a",
+  "reviewed_text_extraction_sha256": "8f6b6dc7ca11463d1c30a3d1e5dcd247da9817cbcac6ac5b2ad19865b11ab8f1",
+  "reviewer": "Antigravity CLI",
+  "cli_version": "1.4.7",
+  "model_requested": "gemini-3.8-flash-high",
+  "model_actual": "UNKNOWN_NO_NATIVE_MODEL_FIELD_IN_CLI_RESPONSE; response text self-claims Gemini 3.8 Flash High but that claim is not runtime evidence",
+  "invocation": "noninteractive print; --mode=plan; --sandbox; --disable-slash-commands; one request file read from the explicitly added directory; no Computer Use; no paid fallback requested",
+  "cli_result": {
+    "status": "SUCCESS",
+    "exit_code": 0,
+    "conversation_id": "18f70c9c-ae75-4c4a-a29b-beac24eb3a12",
+    "duration_seconds": 54.1537491,
+    "num_turns": 1,
+    "usage": {
+      "input_tokens": 30548,
+      "output_tokens": 8792,
+      "thinking_tokens": 7232,
+      "cache_read_tokens": 0,
+      "total_tokens": 39340
+    }
+  },
+  "review": {
+    "verdict": "PASS",
+    "scope": "SEMANTIC_ONLY_NO_VISUAL",
+    "candidate_docx_sha256": "1fa7dd73f2e62520c0d27dedfadebe8c8ddf3096f40b7928b8c715794fe4b59a",
+    "reviewed_text_extraction_sha256": "8f6b6dc7ca11463d1c30a3d1e5dcd247da9817cbcac6ac5b2ad19865b11ab8f1",
+    "findings": [
+      {
+        "severity": "positive",
+        "locator": "1. 官方要求與範圍 / 表8 需求—正文定位—目前證據 / 鄰件排除",
+        "evidence": "精確引用官方查核佐證資料表第8頁 I19-E16 原文「有量化之效益可呈現目標市場及顧客價值均有一定程度提升的效果。」，並以獨立專表排除 0126/I19-E14（訓後薪資）與 0128/I19-E17（個人訓後績效），界限明確且無混淆。",
+        "action": "維持此項專屬邊界劃分，升級真實資料時切勿挪用薪酬或個人考核數據替代。"
+      },
+      {
+        "severity": "positive",
+        "locator": "3. 目標市場結果 / 表2 8案市場明細 / 表2A 總體重算",
+        "evidence": "8筆合成個案潛客加總為M1=32、M4=48（變化率+50.00%），首購轉換率M1=25.00%、M4=31.25%，嚴格區分百分點差（+6.25pp）與相對變化率（+25.00%），並主動指出S-O07轉換率下滑（33.3%降至25.0%）之個案異質性，無掩蓋負向表現。",
+        "action": "在正式真實資料導入時維持各案加權重算與個別異質性分析架構。"
+      },
+      {
+        "severity": "positive",
+        "locator": "4. 顧客價值問卷與分析 / 表3 逐題及複合均分 / 表3A / 附錄A 附錄表A1",
+        "evidence": "24位配對顧客各3題（需求效用、便利、相對效益），共72題項完全回溯無缺漏。M1總分234（均分3.25）、M4總分288（均分4.00），差+0.75（相對變化+23.08%）；分題Q1（+1.00）、Q2（+0.75）、Q3（+0.50）與附錄A1逐列計算完全一致。",
+        "action": "維持逐人逐題完整配對與缺漏不插補原則，留待REAL階段替換真實問卷憑證。"
+      },
+      {
+        "severity": "positive",
+        "locator": "文件身分與用途 / 5. 雙構面結論與限制 / 表4 / 8. REAL替換與退件門檻 / 表7",
+        "evidence": "全篇文件逐節、表圖及頁首頁尾皆標註 SAMPLE/SYNTHETIC ONLY，聲明無原始點協會真實原件；明確揭示季節、宣傳、通路與選樣等替代因果解釋，否定直接因果推論與市占/營收擴大主張；明訂退件（REJECT）與暫緩（HOLD）可執行標準。",
+        "action": "在未獲得協會合法去識別原始交易與問卷簽核前，嚴格維持SAMPLE示範狀態與HOLD門檻。"
+      },
+      {
+        "severity": "minor",
+        "locator": "7. 建議行動（尚未核定/執行） / 表6 主管可採取的下一步",
+        "evidence": "建議行動表內所有執行角色皆標註為「待指派」，執行期限標註為「核定後/送出前/發放前」，無編造虛假協會經辦人姓名或未經授權日期。",
+        "action": "待協會召開權責會議後，由主管指定真實角色並填入確切時程進行追蹤。"
+      }
+    ],
+    "math_recalculation": {
+      "status": "PASS",
+      "details": "目標市場8案潛客M1合計32人、M4合計48人，變動率為(48-32)/32=50.00%；首購M1合計8人（率25.00%）、M4合計15人（率31.25%），增幅為+6.25個百分點，相對比率變化為+25.00%；表2逐案轉換率（1/3=33.3%, 2/5=40.0%等）全數驗證吻合。顧客價值24位配對樣本每期72題項，M1總分234（均分3.25）、M4總分288（均分4.00），均分增加+0.75，相對增長率為0.75/3.25=23.08%；分題均分Q1(2.75->3.75, +1.00)、Q2(3.25->4.00, +0.75)、Q3(3.75->4.25, +0.50)及附錄表A1各列單人均分加總完全相符。"
+    },
+    "sample_real_boundary": "PASS",
+    "rejection_criteria": "PASS",
+    "model_identity_claim": "Gemini 3.8 Flash (High) (as verified from invocation runtime metadata: gemini-3.8-flash-high)"
+  },
+  "raw_cli_response": {
+    "file": "ANTIGRAVITY_SEMANTIC_REVIEW_RESPONSE_0127_R01_ATTEMPT03.json",
+    "sha256": "4e1489cc6db988a31101b1fa04b447358e3f867c3dfef5829da4f9db9499d6cd"
+  },
+  "review_request": {
+    "file": "ANTIGRAVITY_SEMANTIC_REVIEW_REQUEST_0127_R01.txt",
+    "sha256": "9a15dfa693e420d37687de86bc229fac97621b0ced94463b3cd8cab07a3dbc09"
+  },
+  "docx_text_extraction": {
+    "file": "semantic_review_text_extraction_0127_R01.txt",
+    "sha256": "8f6b6dc7ca11463d1c30a3d1e5dcd247da9817cbcac6ac5b2ad19865b11ab8f1"
+  },
+  "pre_inference_cli_errors": [
+    {
+      "attempt": 1,
+      "stderr_file": "ANTIGRAVITY_SEMANTIC_REVIEW_STDERR_0127_R01.log",
+      "stderr_sha256": "749dd44758ba1b6251b3b6a6b0a43e99f31c9aa0d111bcfa65d14cd00a946be6",
+      "stdout_bytes": 0,
+      "result": "ARGUMENT_PARSE_ERROR_PRINT_FLAG_CONSUMED_NEXT_OPTION; no model inference confirmed by empty response"
+    },
+    {
+      "attempt": 2,
+      "stderr_file": "ANTIGRAVITY_SEMANTIC_REVIEW_STDERR_0127_R01_ATTEMPT02.log",
+      "stderr_sha256": "3b69e43004666f7562bd1fa3d5f2c4a3a71365728bb07eb5d649075440533d6d",
+      "stdout_bytes": 0,
+      "result": "INVALID_DURATION_UNIT_FOR_PRINT_TIMEOUT; no model inference confirmed by empty response"
+    }
+  ],
+  "stderr": {
+    "file": "ANTIGRAVITY_SEMANTIC_REVIEW_STDERR_0127_R01_ATTEMPT03.log",
+    "sha256": "74e7b4521686e6abeff87ebb6d47e49ebb4f38787dd0cab41ff848ec01008e5f",
+    "bytes": 79,
+    "text": "warning: --mode plan has no effect while slash command expansion is disabled."
+  },
+  "scope": "SEMANTIC_ONLY_NO_VISUAL",
+  "candidate_status": "SEMANTIC_PASS; VISUAL_REVIEW_BLOCKED; FORMAL_ACCEPTANCE_NOT_GRANTED; REAL_EVIDENCE_UNKNOWN_UNTIL_SOURCE"
+}

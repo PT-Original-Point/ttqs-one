@@ -1,0 +1,80 @@
+{
+  "work_id": "TTQS_ONE_0133_R06_FULL_SEMANTIC_REVIEW_W2_GEMINI_20261108",
+  "candidate_sha256": "cceae5b8781fe503bd15993409ba616adb53a99d9923816d44afe019ee48b821",
+  "body_extract_sha256": "c03b6fb6f9959fe336385133316487b283ec6f44770fd8cc74e010e8750fd032",
+  "input_source_packet_sha256": "9aae753623921d3d582e7cadb1a64363063eabc54e697e53361b26e84f7d0b50",
+  "reviewer_verdict": "PASS_WITH_MINOR",
+  "checks": [
+    {
+      "check_id": "CHK-01-OFFICIAL-ALIGNMENT",
+      "name": "Official Quote and Requirement Mapping",
+      "status": "PASS",
+      "detail": "Accurately quotes the official reference phrase '每年訓練班次、人次均持續成長。' from PDF page 8. Correctly identifies document metadata (0133 / I19-E22 / index 146) while explicitly acknowledging the official printed box serial number as UNKNOWN. Does not claim official scores or association achievement."
+    },
+    {
+      "check_id": "CHK-02-NEGATIVE-NEIGHBOR-BOUNDARY",
+      "name": "Distinct Neighboring Scope and Isolation",
+      "status": "PASS",
+      "detail": "Strictly isolates training class count and attendance person-times from 0132/I19-E21 (product defect trends and post-training defect rates) and 0134/I19-E23 (member counts and dues income). Contains no leaked product metrics, member records, or financial dues data. Passes blind test via class run IDs, class status tracking, and adjacent-year growth analysis."
+    },
+    {
+      "check_id": "CHK-03-STATISTICAL-COUNTING-RULES",
+      "name": "Class, Cohort, Person-Times, and Adjacent-Year Logic",
+      "status": "PASS",
+      "detail": "Clearly operationalizes class counting (same cohort multi-day equals one class; distinct cohort equals new class; canceled/postponed classes excluded). Defines attendance person-times as 'class ID x de-identified learner ID' with at least one attendance (deduplicating multi-day attendance within the same class, while allowing cross-class attendance). Implements rigorous adjacent-year growth formula requiring both indicators to show net increase (>0) for every adjacent year, properly forbidding end-to-end masking of intermediate dips and specifying N/A for zero or missing denominators."
+    },
+    {
+      "check_id": "CHK-04-SYNTHETIC-DATA-ARITHMETIC",
+      "name": "Synthetic Case Recomputability and Boundary",
+      "status": "PASS",
+      "detail": "Verifies 24 synthetic held classes and 1 canceled exception (SYN-25-X01) across 2023-2025 under SYN-0133-CASE-01. Annual totals match exactly: 2023 (6 classes, 72 person-times), 2024 (8 classes, 104 person-times), 2025 (10 classes, 141 person-times; 1 canceled excluded), totaling 24 classes and 317 person-times. Growth rates are mathematically precise to one decimal place: 2024 vs 2023 (+33.3% classes, +44.4% person-times) and 2025 vs 2024 (+25.0% classes, +35.6% person-times). Supplementary 2025 vs 2023 is correctly calculated as +66.7% and +95.8%."
+    },
+    {
+      "check_id": "CHK-05-SYN-EX-01-REPAIR-AUDIT",
+      "name": "Audit of 10+10-9=11 Synthetic Deduplication Example",
+      "status": "PASS",
+      "detail": "Table 8 and Table 10 properly document the repaired synthetic split: 10 day-1 signatures + 10 day-2 signatures - 9 overlapping attendees = 11 deduplicated person-times (resolving the raw 20 daily signatures). The example is internally coherent, mathematically sound (|A∪B| = 10+10-9 = 11), explicitly designated as SYNTHETIC, explicitly excluded from annual totals, and preserves the original 20-entry raw and 11-unique recomputed values without altering annual totals."
+    },
+    {
+      "check_id": "CHK-06-PRACTICAL-USABILITY-AND-TRACEABILITY",
+      "name": "Administrative Usability and Evaluator Audit Trail",
+      "status": "PASS",
+      "detail": "Provides an actionable 8-step SOP for training administrators, a complete field dictionary with designated operational roles (SYN-ROLE-REG, SYN-ROLE-REV), an exception handling matrix covering 9 scenarios (cancellation, postponement, zero attendance, cross-year classes, missing registers, duplicate IDs, missing closing reports, policy changes), and reusable blank template tables. Evaluators can trace each synthetic class to distinct source keys (SYN-PLAN/ATT/CLOSE-xx-yy)."
+    },
+    {
+      "check_id": "CHK-07-TRUTH-BOUNDARY-AND-GOVERNANCE",
+      "name": "SAMPLE vs REAL Demarcation and Gating",
+      "status": "PASS",
+      "detail": "Prominently identifies all data, dates, and names as SAMPLE/SYNTHETIC. Explicitly records REAL_EVIDENCE=UNKNOWN. Defines clear operational gates (READY, HOLD, REJECT) and provides an exhaustive replacement register (Section 10) specifying exact REAL document types and permissions required before removing the SAMPLE label."
+    },
+    {
+      "check_id": "CHK-08-INTERNAL-CROSS-REFERENCES",
+      "name": "Internal Section and Locator Consistency",
+      "status": "PASS_WITH_MINOR",
+      "detail": "Cross-references between Section 10 (Replacement Register) and candidate body sections are largely intact, but two minor internal section locator discrepancies were identified for sample keys SYN-0133-CORR-01 and SYN-LEARNER-014."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "MINOR",
+      "locator": "Section 10 (逐事實替換簿) row SYN-0133-CORR-01",
+      "observation": "Table 10 lists the document location of SYN-0133-CORR-01 as '§9 更正示例', but the narrative definition and demonstration of SYN-0133-CORR-01 actually reside at the conclusion of Section 8 ('8. 例外、差異更正及覆核'). Section 9 contains the blank reproducible registration templates ('9. 可複製的年度登錄表').",
+      "impact": "Minor internal locator mismatch. An auditor or administrator seeking the correction record example based on Table 10's reference must inspect Section 8 rather than Section 9. Does not affect data validity, mathematical accuracy, or semantic truth boundaries.",
+      "recommendation": "Update the locator in Section 10 for SYN-0133-CORR-01 to reference '§8 更正示例' (or '§8/p8') for strict internal cross-referencing alignment."
+    },
+    {
+      "severity": "MINOR",
+      "locator": "Section 10 (逐事實替換簿) rows SYN-LEARNER-014, SYN-CLASS-A, SYN-CLASS-B",
+      "observation": "Table 10 references '§4 學員去重示例' / '§4 去重示例' for synthetic test keys SYN-LEARNER-014, SYN-CLASS-A, and SYN-CLASS-B. However, the specific illustrative narrative employing these literal identifiers is located in Section 7 ('7. 為什麼數量口徑不能混用'), while Section 4 Step 4 only outlines the generic procedural step ('4. 建立參訓關聯').",
+      "impact": "Minor cross-referencing inaccuracy for synthetic demonstration keys. Does not impair operational execution or data truth.",
+      "recommendation": "Adjust the locator in Section 10 for SYN-LEARNER-014, SYN-CLASS-A, and SYN-CLASS-B to reference '§7 全合成去重示例' (or '§4 步驟4 / §7') to facilitate direct navigation."
+    }
+  ],
+  "limitations": [
+    "Text-only semantic and usability review performed on candidate extracted text; does not include physical DOCX rendering inspection, layout validation, typography measurement (pt size), or ZIP container CRC checks.",
+    "Real institutional evidence remains UNKNOWN and NOT_VERIFIED; this review does not verify Yuan Shi Dian Association's actual internal training archives or historical records.",
+    "Does not constitute official TTQS accreditation, reviewer sign-off, or regulatory agency approval."
+  ],
+  "formal_acceptance": false,
+  "real_evidence": "NOT_VERIFIED"
+}

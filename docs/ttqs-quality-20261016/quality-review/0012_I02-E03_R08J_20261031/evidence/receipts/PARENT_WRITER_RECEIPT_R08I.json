@@ -1,0 +1,56 @@
+{
+  "receipt_id": "0012_I02-E03_R08I_WRITER_RECEIPT",
+  "revision": "R08I",
+  "document_id": "0012",
+  "requirement_id": "I02-E03",
+  "created_at": "2026-10-31T02:19:40.2499128+08:00",
+  "timezone": "Asia/Taipei",
+  "scope": "Only new R08I worker source and sidecars in the specified output directory",
+  "input_sha256": {
+    "R08H_INTEGRATED_SOURCE_md": "1E2FBBB39CA1ABF171EB302B3715829BAE1426B109CED032D97A64A1079BE325",
+    "SYNTHETIC_REPLACEMENT_REGISTER_R08H_csv": "6870F67B8B180D06642F8659248BABC0D46BCC7BA09591705B2078D0FC822291",
+    "INDEPENDENT_SEMANTIC_REVIEW_R08H_md": "9366DA6B95C4AA53776B7F2EBBDBB5AC627D4D05AD0318F3136CEBC657E0B9E8",
+    "candidate_0012_I02_E03_R08H_docx": "0DBDB80ADF595DBB6BF04F3CED57989D98CB38CEE866DBAEDA8D19D6BEBC93A0",
+    "official_blueprint_mapping_json": "C500BAD9855B85CCF4B2E4A750EAE41FDDB4A6BB569F3FF6E1DD50A7ADF98F1D",
+    "official_requirement_pdf": "805386B77DF045B396FABAFED7A47D12491C25A0B5744EDD9A04876CAEE34709",
+    "unique_blueprint_row": "0EBF302B8B3601BE6C645573E9E12887242C8E64A2244D5CF738A35EE2F5FC04"
+  },
+  "output_sha256": {
+    "R08I_INTEGRATED_SOURCE.md": "3BA02E851187ADD3F07EF05CF2DA193CD53B7CEBE406AC454B6E883C1AABA82D",
+    "SYNTHETIC_REPLACEMENT_REGISTER_R08I.csv": "B33A9667E920A7214DB92307298E503F67544DB49355331DE107863A6AE956A7",
+    "CHANGELOG_R08I.md": "349511F9CAC19F51FD2218A02CD49BD0461896DA0595D35C519187032C201A6C"
+  },
+  "receipt_self_sha256": "OMITTED_TO_AVOID_SELF_REFERENCE",
+  "modified_locators": [
+    "§7 application form instructions and rows: P, U, payment source locator, verification status",
+    "§7 field definition/source/responsibility/validation matrix: same four fields",
+    "§9.1 P and U definitions, B formula, verification and HOLD controls",
+    "§9.2 SAMPLE P=0 assumption, U=6000 calculation, source/status disclosure, B cap and remaining balance",
+    "§9.3 payment evidence completeness rule",
+    "§12 register summary, SYN-028 calculation meaning, SYN-042 correction, SYN-044 role map, new SYN-066 to SYN-068",
+    "CSV register rows SYN-028, SYN-042 and SYN-044; append SYN-066 to SYN-068"
+  ],
+  "synthetic_delta": {
+    "corrected_existing_fact_id": "SYN-042",
+    "updated_existing_mapping_fact_id": "SYN-044",
+    "new_fact_ids": [
+      "SYN-066",
+      "SYN-067",
+      "SYN-068"
+    ],
+    "assumptions": [
+      "P=NTD 0 is an explicitly synthetic no-payment assumption and is not evidence of an actual transaction",
+      "U=NTD 6000 is derived from the SAMPLE E=NTD 6000 and assumed P=NTD 0",
+      "No payment source is supplied; verification status is UNKNOWN and the case remains HOLD"
+    ],
+    "updated_existing_calculation_fact_id": "SYN-028",
+    "updated_existing_calculation_fact_note": "NTD 4800 is now described as sample remaining eligible fee after discount U-B; amount is unchanged but its calculation meaning and required payment source are clarified."
+  },
+  "candidate_docx_built": false,
+  "candidate_status": "SOURCE_CANDIDATE_ONLY_NOT_BUILT",
+  "qa_run": false,
+  "reviewer_dispatched": false,
+  "github_pushed": false,
+  "pass_claim": false,
+  "receipt_status": "WRITER_OUTPUT_RECORDED; NO_QA_OR_ACCEPTANCE_CLAIM"
+}

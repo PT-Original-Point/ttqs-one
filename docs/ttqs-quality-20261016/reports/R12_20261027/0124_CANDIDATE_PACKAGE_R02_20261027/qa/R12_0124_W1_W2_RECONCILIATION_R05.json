@@ -1,0 +1,91 @@
+{
+  "schema": "TTQS_ONE_R12_0124_W1_W2_RECONCILIATION_V1",
+  "observed_local": "2026-10-27T15:46:00+08:00",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0124",
+  "requirement_id": "I19-E12",
+  "user_report": {
+    "sha256": "ff3ca9886e3a345d78be358b2883296b7e5454408d23bc940fee239ba826c900",
+    "scope": "Global service and community observations; not account-specific route proof.",
+    "recommendations": [
+      "DeepSeek V4.1 Flash Free: priority short bug tests",
+      "GLM-5.3-Flash Free: capability comparator",
+      "MiMo-V2.6-Flash Free: backup",
+      "Beam Free: simple-task candidate"
+    ]
+  },
+  "candidate_r02": {
+    "sha256": "5ea20da675395954e5587859ddc3ca4b483abaeff90509a86c66950581afec07",
+    "technical": "PASS",
+    "visual": "PASS_PER_EXISTING_14_PAGE_RECEIPT",
+    "semantic_acceptance": "NOT_GRANTED",
+    "formal_acceptance": "NOT_GRANTED",
+    "candidate_mutated_by_reviewers": false
+  },
+  "w1_opencode_attempts": [
+    {
+      "work_id": "TTQS-0124-I19-E12-R01-W1-MIMO-EXACT-SHA-REVIEW-R02-20261027",
+      "candidate_sha256": "0a6567c2779d9ad8014ab6d1c892779a98892351a38ceda0dea9fa8b24ff2988",
+      "requested_model": "opencode/mimo-v2.6-flash-free",
+      "outcome": "HTTP_429_PROVIDER_FREE_LIMIT",
+      "actual_model": "UNKNOWN_NOT_RETURNED",
+      "retry_eligible_local": "2026-10-28T08:00:00.372000+08:00",
+      "response": "NONE"
+    },
+    {
+      "work_id": "TTQS-0124-I19-E12-R01-W1-GLM-EXACT-SHA-SEMANTIC-R03-20261027T132725",
+      "candidate_sha256": "0a6567c2779d9ad8014ab6d1c892779a98892351a38ceda0dea9fa8b24ff2988",
+      "requested_model": "opencode/glm-5.3-flash-free",
+      "session_model": "glm-5.3-flash-free",
+      "process_exit": 1,
+      "session_outcome": "succeeded",
+      "stream_error": "HTTP 200 stream ended without finish_reason; first response truncated; retry yielded trailing fragment",
+      "tokens": {"input": 24850, "output": 21, "reasoning": 485, "cache_read": 4352},
+      "reviewer_claimed": "PASS",
+      "adjudicated": "NOT_ACCEPTED_INVALID_INCOMPLETE_RESPONSE",
+      "raw_stdout_sha256": "79c1cdf56929ab688894ab145a7881d75e4da886e7b8f2585ffaad25760f5988"
+    },
+    {
+      "work_id": "TTQS-0124-I19-E12-R02-W1-DEEPSEEK-EXACT-SHA-SEMANTIC-R01-20261027",
+      "candidate_sha256": "5ea20da675395954e5587859ddc3ca4b483abaeff90509a86c66950581afec07",
+      "requested_model": "opencode/deepseek-v4.1-flash-free",
+      "outcome": "HTTP_429_PROVIDER_FREE_LIMIT",
+      "actual_model": "UNKNOWN_PROVIDER_REJECTED_BEFORE_MODEL_RESPONSE",
+      "response": "NONE",
+      "retry_eligible_estimate": "2026-10-28T08:00:00+08:00"
+    },
+    {
+      "work_id": "TTQS-0124-I19-E12-R02-W1-GLM53-EXACT-SHA-SEMANTIC-R03",
+      "candidate_sha256": "5ea20da675395954e5587859ddc3ca4b483abaeff90509a86c66950581afec07",
+      "requested_model": "opencode/glm-5.3-flash-free",
+      "outcome": "HTTP_429_PROVIDER_FREE_LIMIT",
+      "actual_model": "UNKNOWN_NO_GENERATED_RESPONSE",
+      "response": "NONE",
+      "retry_eligible_estimate": "2026-10-28T08:00:00.197+08:00"
+    },
+    {
+      "work_id": "TTQS-0124-I19-E12-R02-W1-MIMO26-EXACT-SHA-SEMANTIC-R04",
+      "candidate_sha256": "5ea20da675395954e5587859ddc3ca4b483abaeff90509a86c66950581afec07",
+      "requested_model": "opencode/mimo-v2.6-flash-free",
+      "outcome": "CLI_EXIT_1_NO_RESPONSE_TEXT",
+      "actual_model": "UNKNOWN",
+      "tokens": "NOT_REPORTED"
+    }
+  ],
+  "w2_antigravity_r02": {
+    "work_id": "TTQS-0124-I19-E12-R02-ANTIGRAVITY-EXACT-SHA-SEMANTIC-REVIEW",
+    "candidate_sha256": "5ea20da675395954e5587859ddc3ca4b483abaeff90509a86c66950581afec07",
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model": "UNKNOWN",
+    "fallback": "UNKNOWN_NOT_VERIFIED",
+    "cli_exit": 0,
+    "response_sha256": "be62ff4bd2a214f864f7252b8bbc315615ce8d8805b0ba39781a0aad872a2ec7",
+    "usage": {"input": 22839, "output": 8768, "thinking": 6607, "total": 31607},
+    "tool_indicators": 0,
+    "reviewer_claimed": "PASS",
+    "adjudicated_response": "PASS_TEXT_ONLY",
+    "semantic_acceptance": "NOT_GRANTED_ROUTE_IDENTITY_UNKNOWN",
+    "candidate_mutated": false
+  },
+  "result": "OpenCode produced no valid exact-R02 response. Antigravity produced a complete exact-R02 text-only PASS response, but Gemini serving identity and fallback are unverified; keep semantic acceptance NOT_GRANTED. Do not transfer the R01 results to R02."
+}

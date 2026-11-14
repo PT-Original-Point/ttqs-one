@@ -1,0 +1,59 @@
+{
+  "worker_response": {
+    "work_id": "TTQS_ONE_0133_R06_SYNEX01_SCOPED_REVIEW_20261108",
+    "candidate_sha256": "cceae5b8781fe503bd15993409ba616adb53a99d9923816d44afe019ee48b821",
+    "verdict": "PASS_SCOPED",
+    "finding_count": 0,
+    "findings": [],
+    "prior_finding_closed": true,
+    "synthetic_real_boundary_ok": true,
+    "annual_totals_unchanged_supported": true,
+    "limitations": [
+      "Review is strictly bounded to the semantic adequacy of the four modified register cells in Table 10 and Table 15 across the R05→R06 delta.",
+      "Does not constitute full-document review, layout verification, visual inspection, technical DOCX compliance, or formal TTQS accreditation.",
+      "Physical DOCX opening and independent hash recomputation were not performed by the W2 runtime; assessment relies on coordinator-supplied text excerpts and cryptographic metadata."
+    ],
+    "claimed_full_document_review": false,
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_model_identity": "UNKNOWN",
+    "recommendation": "Accept the R05→R06 scoped delta as it resolves the deduplication arithmetic ambiguity with explicit Day 1/Day 2 splits while strictly preserving the synthetic/real boundary and HOLD status."
+  },
+  "raw_stdout_sha256": "6560e7bb0defb9d62a8a1a32a0013c326c5f243ba3e241f5ca6246f59089e416",
+  "prompt_sha256": "ed63af960e396640ef412a2590be8daa8b19b71c01fd8bed8bfc693548a0fb77",
+  "candidate_docx_sha256_verified_locally": "cceae5b8781fe503bd15993409ba616adb53a99d9923816d44afe019ee48b821",
+  "validation_checks": {
+    "envelope_success": true,
+    "work_id_match": true,
+    "candidate_sha_match": true,
+    "scoped_verdict": true,
+    "zero_findings": true,
+    "full_document_claim_false": true,
+    "actual_model_unknown_preserved": true
+  },
+  "w2_process_receipt": {
+    "work_id": "TTQS_ONE_0133_R06_SYNEX01_SCOPED_REVIEW_20261108",
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model": "UNKNOWN",
+    "cli_path": "C:\\Users\\J\\AppData\\Local\\agy\\bin\\agy.exe",
+    "cli_version": "1.5.3 (prior local version readback; not re-queried in this invocation)",
+    "arguments_mode": "noninteractive --mode plan --sandbox --output-format json",
+    "pid": 32348,
+    "started_at_tpe": "2026-11-08T10:20:05.591811+08:00",
+    "finished_at_tpe": "2026-11-08T10:20:39.043196+08:00",
+    "duration_seconds": 33.451,
+    "exit_code": 0,
+    "timed_out": false,
+    "prompt_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\0133_R05_SYNEX01_REPAIR_20261108\\W2_SCOPED_REVIEW_PROMPT.txt",
+    "prompt_bytes": 4009,
+    "prompt_sha256": "ed63af960e396640ef412a2590be8daa8b19b71c01fd8bed8bfc693548a0fb77",
+    "stdout_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\0133_R05_SYNEX01_REPAIR_20261108\\W2_RAW_STDOUT.txt",
+    "stdout_bytes": 1500,
+    "stdout_sha256": "6560e7bb0defb9d62a8a1a32a0013c326c5f243ba3e241f5ca6246f59089e416",
+    "stderr_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\0133_R05_SYNEX01_REPAIR_20261108\\W2_RAW_STDERR.txt",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "candidate_docx_sha256": "cceae5b8781fe503bd15993409ba616adb53a99d9923816d44afe019ee48b821",
+    "pdf_sha256": "c628f0a9012bc7f4bda877d92e53f1fc898b517410608d0f2c2067e8a82203bd",
+    "scope": "only four R05-R06 register cells; not full document, technical/layout, or formal acceptance"
+  }
+}

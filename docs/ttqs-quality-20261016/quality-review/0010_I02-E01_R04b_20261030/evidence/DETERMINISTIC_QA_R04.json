@@ -1,0 +1,31 @@
+{
+  "receipt_type": "deterministic_scoped_repair_qa",
+  "doc_id": "0010",
+  "requirement_id": "I02-E01",
+  "revision": "R04",
+  "candidate_text_sha256": "131b703267feebfbef3ec49fc8aa9beaab2ded0818415e9e5d86771b84925d90",
+  "sidecar_register_sha256": "6a424099b25613ad930cfc638bcb846b4914294d092c01902a943229186deecc",
+  "checks": {
+    "official_pdf_hash_matches_r03_binding": true,
+    "blueprint_file_hash_matches_r03_binding": true,
+    "unique_blueprint_row_hash_matches_r03_binding": true,
+    "embedded_register_157_unique_rows": true,
+    "sidecar_register_157_unique_rows": true,
+    "embedded_sidecar_ids_identical_and_ordered": true,
+    "gfm_header_separator_valid_both_tables": true,
+    "no_blank_line_splits_any_data_row": true,
+    "scenario_case_keys_and_field_locators_repaired": true,
+    "retest_locators_are_specific": true,
+    "numeric_fact_values_unchanged": true,
+    "retest_arithmetic_unchanged": true,
+    "blueprint_scope_unknown_preserved": true,
+    "writer_receipt_157_count_reconciled": true
+  },
+  "status": "PASS_WITHIN_DETERMINISTIC_SCOPE",
+  "limitations": [
+    "No semantic PASS; independent exact-SHA review still required.",
+    "No DOCX or Word visual QA; later stages must bind to the R04 text SHA.",
+    "Blueprint applicability conflict, real data and formal acceptance remain UNKNOWN."
+  ],
+  "checked_at_utc": "2026-10-29T16:06:21.603220+00:00"
+}

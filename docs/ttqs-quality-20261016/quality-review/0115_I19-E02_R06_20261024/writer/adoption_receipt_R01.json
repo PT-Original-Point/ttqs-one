@@ -1,0 +1,64 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0115",
+  "requirement_id": "I19-E02",
+  "worker_requested_model": "opencode/deepseek-v4.1-flash-free",
+  "actual_provider_model": "UNKNOWN",
+  "session_id": "ses_e95837714ffeTbx3WVVXYTgKwj",
+  "cli_exit_code": 0,
+  "cli_elapsed_seconds": 222.278,
+  "cli_reported_cost": 0,
+  "usage": {
+    "input_tokens": 7934,
+    "output_tokens": 8440,
+    "reasoning_tokens": 23560,
+    "cache_read_tokens": 1792
+  },
+  "raw_stdout_sha256": "a4042e86bc8db01799b209f2912832612a2f2b9e0dd0fa6b499e6d219cbf3574",
+  "raw_response_sha256": "7e307aeaf9e43399a838ed1d957c43a1ea3b64eefb957d2984f8cefae9b218fc",
+  "raw_response_bytes": 41692,
+  "adopted_manuscript_sha256": "bf5c8cacc06ff980ca566858373345ff30f8272e3bfb317c208d6e2f3a484c62",
+  "adopted_manuscript_bytes": 41798,
+  "removed_terminal_marker": true,
+  "normalization": "Only obvious Simplified Chinese terms and two malformed English words in one sentence were normalized to Traditional Chinese. Raw response preserved unchanged; no facts, values or decisions changed.",
+  "replacement_counts": [
+    {
+      "from": "已经",
+      "to": "已",
+      "replacements": 1
+    },
+    {
+      "from": "结果",
+      "to": "結果",
+      "replacements": 1
+    },
+    {
+      "from": "不作为",
+      "to": "不作為",
+      "replacements": 1
+    },
+    {
+      "from": "依据",
+      "to": "依據",
+      "replacements": 4
+    },
+    {
+      "from": "它们",
+      "to": "它們",
+      "replacements": 1
+    },
+    {
+      "from": "否则",
+      "to": "否則",
+      "replacements": 1
+    },
+    {
+      "from": "它們不顯示訓練 effectiveness、不顯示協會 performance",
+      "to": "它們不顯示訓練成效，也不顯示協會表現",
+      "replacements": 1
+    }
+  ],
+  "no_tools_or_computer_use": true,
+  "additional_deterministic_edit": "Split one 14-column case table into two linked views keyed by fact_id and reflection_id (9-column intake/review and 6-column disposition/reuse) for Word readability; all eight data rows and values preserved.; Removed a redundant per-row SAMPLE label column because the immediately preceding case boundary marks both linked views SAMPLE/SYNTHETIC.",
+  "table_split_rows_per_view": 8
+}

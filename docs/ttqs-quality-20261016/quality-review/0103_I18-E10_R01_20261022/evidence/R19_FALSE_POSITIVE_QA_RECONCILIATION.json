@@ -1,0 +1,20 @@
+{
+  "status": "RECONCILED_FALSE_POSITIVE_ASSERTIONS",
+  "historical_receipt_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0103_I18-E10_SOURCE_PREP_20261022\\evidence\\R19_TARGETED_REPAIR_RECEIPT.json",
+  "historical_receipt_sha256": "19f3a6502c3b9b2f1b183041b6b7fdd5c6b4359a9674c0da7ee8f194d0f75b5c",
+  "historical_candidate_sha256": "d48e52ff5a1c0e9eb9ad26e1d8e231d770ed28b89d0c331ef1e7ebad54f0dbee",
+  "false_checks": [
+    "no_orphan_E02",
+    "no_sha_self_reference"
+  ],
+  "evidence": {
+    "no_orphan_E02": "The first assertion matched the substring E-02 inside SAMPLE-CASE-02; the corrected exact-cell check confirms no standalone unregistered E-02 value.",
+    "no_sha_self_reference": "The first assertion expected wording that differed from the document phrase; the corrected check verifies the external-hash note and confirms the final candidate SHA does not occur in the body."
+  },
+  "superseding_receipt_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0103_I18-E10_SOURCE_PREP_20261022\\evidence\\R19_TECHNICAL_QA_CORRECTED.json",
+  "superseding_receipt_sha256": "6df07a8d65fa5aeeda6307fbaef7455ef97125f017e0feceb0a0902e295418e2",
+  "superseding_result": "PASS",
+  "superseding_candidate_sha256": "f72387005f2e230fa702bbe98f888ae0297067055152ac094fc767fc65a77415",
+  "historical_receipt_preserved": true,
+  "checked_at_utc": "2026-10-23T12:48:24.751637+00:00"
+}

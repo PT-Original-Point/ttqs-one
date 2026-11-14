@@ -1,0 +1,47 @@
+{
+  "schema": "TTQS_ONE_GITHUB_RAW_READBACK_RECEIPT_R11",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0103",
+  "requirement_id": "I18-E10",
+  "candidate_revision": "R20",
+  "candidate_sha256": "3433ee3df8ff7088a5047b15fbc24f9b59de05b28be26956598b0da4c5459c09",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "readback_commit": "61819120ad48920073cedb1cb2ff66a4b5d9360e",
+  "pr_and_branch_head_match": true,
+  "files": [
+    {
+      "name": "R20_ANTIGRAVITY_GEMINI01_SEMANTIC_RESPONSE_R11.json",
+      "path": "docs/ttqs-quality-20261016/quality-review/0103_I18-E10_R01_20261022/evidence/R20_ANTIGRAVITY_GEMINI01_SEMANTIC_RESPONSE_R11.json",
+      "bytes": 17854,
+      "sha256": "016952264cbdeba53f7c758c236ff676ceb2fbc6b171a23de432dcaf09c71900",
+      "github_blob_sha": "9bd256b89a7e49823e5462b8175aa4493a47fd42",
+      "raw_bytes_exact": true
+    },
+    {
+      "name": "R20_R11_SEMANTIC_STATUS_ADDENDUM.json",
+      "path": "docs/ttqs-quality-20261016/quality-review/0103_I18-E10_R01_20261022/evidence/R20_R11_SEMANTIC_STATUS_ADDENDUM.json",
+      "bytes": 3086,
+      "sha256": "3073be01783806d616569892ee60a0f0960285bffcb726ef51814a27e44f6857",
+      "github_blob_sha": "a97f214dc807465b5b420561b351272c48645da6",
+      "raw_bytes_exact": true
+    },
+    {
+      "name": "R20_R11_ARTIFACT_DELTA_MANIFEST.json",
+      "path": "docs/ttqs-quality-20261016/quality-review/0103_I18-E10_R01_20261022/evidence/R20_R11_ARTIFACT_DELTA_MANIFEST.json",
+      "bytes": 981,
+      "sha256": "66140536228a229e98a4577aa2c2ea718d81cebd72004e8492bc162afee1f1d2",
+      "github_blob_sha": "c241319226ce62544ae54973875915b70a37b093",
+      "raw_bytes_exact": true
+    }
+  ],
+  "all_raw_bytes_exact": true,
+  "exact_file_count": 3,
+  "semantic_response_verdict": "PASS",
+  "requested_model": "gemini-3.8-flash-high",
+  "actual_model": "UNKNOWN",
+  "semantic_gate_status": "BLOCKED_UNVERIFIED_MODEL_IDENTITY",
+  "candidate_state": "CANDIDATE",
+  "formal_acceptance": "NOT_GRANTED",
+  "note": "The exact-SHA response and R11 status delta match the local bytes. The response is preserved; unknown actual model identity prevents claiming an approved Gemini-specific reviewer result."
+}

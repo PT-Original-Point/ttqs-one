@@ -1,0 +1,75 @@
+{
+  "schema": "ttqs_one_worker_dispatch_manifest_v1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS_ONE_0137_R03_FULL_SEMANTIC_REVIEW_W2_GEMINI_20261109",
+  "worker": "W2_Antigravity_CLI",
+  "attempt": 1,
+  "requested_route": "gemini-3.8-flash-high",
+  "actual_serving_model": "UNKNOWN",
+  "cli_version": "1.5.3",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "head": "bc7b679d880c7ec0108901b9577bb2a3d1c97081",
+  "remote_head": "bc7b679d880c7ec0108901b9577bb2a3d1c97081",
+  "candidate_path": "docs/ttqs-quality-20261016/quality-review/0137_I19-E27_CANDIDATE_R03_20261108/candidate/0137_I19-E27_媒體採訪與正面報導原件查驗表_R03.docx",
+  "candidate_sha256": "fa7240da13f5140d0896d1c2e3c7a74dce7f57d861d1100c0315628708c477db",
+  "candidate_bytes": 51654,
+  "body_extract_sha256": "02b233275ebaba6c338c947c5b91fa3005a951265cb08107e016f3d95e055e05",
+  "source_packet_sha256": "7597c1346607c7c218bca7b9d92bbcd6fa4cfbba25bc793a6ff30e2b26e6b733",
+  "unique_blueprint_sha256": "7590fe026b53010cd40664d23f53880e7c717a6e93c6f19d59212ef5312d6cf9",
+  "official_source_text_sha256": "06a158a6c3dbbd9a2be8958fa3c76914aef804c46fda4d1244dd6dcf01f7b383",
+  "source_inputs": [
+    {
+      "label": "SOURCE_PACKET",
+      "path": "docs/ttqs-quality-20261016/quality-review/0137_I19-E27_CANDIDATE_R01_20261025/SOURCE_PACKET_0137_I19-E27_R01.md",
+      "bytes": 2547,
+      "sha256": "7597c1346607c7c218bca7b9d92bbcd6fa4cfbba25bc793a6ff30e2b26e6b733"
+    },
+    {
+      "label": "UNIQUE_BLUEPRINT",
+      "path": "docs/ttqs-quality-20261016/quality-review/0137_I19-E27_CANDIDATE_R01_20261025/UNIQUE_BLUEPRINT_0137_I19-E27_R01.md",
+      "bytes": 3154,
+      "sha256": "7590fe026b53010cd40664d23f53880e7c717a6e93c6f19d59212ef5312d6cf9"
+    },
+    {
+      "label": "OFFICIAL_SOURCE_TEXT",
+      "path": "docs/ttqs-quality-20261016/quality-review/0137_I19-E27_CANDIDATE_R01_20261025/source/official_source_pages8_9_text.txt",
+      "bytes": 3859,
+      "sha256": "06a158a6c3dbbd9a2be8958fa3c76914aef804c46fda4d1244dd6dcf01f7b383"
+    },
+    {
+      "label": "OFFICIAL_CROSSWALK",
+      "path": "docs/ttqs-quality-20261016/quality-review/0137_I19-E27_CANDIDATE_R01_20261025/source/official_crosswalk.csv",
+      "bytes": 10578,
+      "sha256": "1ddfbb608bcad25170683ddb42a1dbb27bafa6f1f35ff0498f1b8d75b24f0679"
+    },
+    {
+      "label": "PROJECT_NEIGHBORS",
+      "path": "docs/ttqs-quality-20261016/quality-review/0137_I19-E27_CANDIDATE_R01_20261025/source/project_index149_151.md",
+      "bytes": 876,
+      "sha256": "3dfba461c97a9f511b420658b2634526e185fd05dad4d98287dd613dfd8a9883"
+    },
+    {
+      "label": "SCOPED_REVIEW_R03",
+      "path": "docs/ttqs-quality-20261016/quality-review/0137_I19-E27_CANDIDATE_R03_20261108/qa/INDEPENDENT_SCOPED_SEMANTIC_REVIEW_0137_R03.json",
+      "bytes": 5187,
+      "sha256": "b2127356fa2e837b1681c9cee1148823a329b53974a5410f569c319140969b15"
+    },
+    {
+      "label": "FINAL_QA_INDEX_R03",
+      "path": "docs/ttqs-quality-20261016/quality-review/0137_I19-E27_CANDIDATE_R03_20261108/qa/R03_FINAL_QA_INDEX_20261108.json",
+      "bytes": 1148,
+      "sha256": "95f391f59bd35a79d94ee737a7678734f1bf706cc8ae669c3399e4847eb1d0f8"
+    },
+    {
+      "label": "REPAIR_QA_R03",
+      "path": "docs/ttqs-quality-20261016/quality-review/0137_I19-E27_CANDIDATE_R03_20261108/qa/R03_SCOPED_REPAIR_RECONCILIATION_QA_20261108.json",
+      "bytes": 8347,
+      "sha256": "51c95378248e15e215f762d322ca3f876c1095aed66614cfec01a99e62ae5166"
+    }
+  ],
+  "input_packet_sha256": "4c98ec1540e9090e76fbc3089b8137f0ddab82c5e15ed3c6983e83133f2917ad",
+  "input_packet_bytes": 63084,
+  "packet_derivation": "Exact W1 packet bytes with only WORK_ID line replaced after W1 terminal 429; candidate/source/Blueprint body unchanged.",
+  "write_scope": "NONE; isolated read-only text review; no candidate/repository mutation."
+}

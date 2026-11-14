@@ -1,0 +1,73 @@
+{
+  "schema": "TTQS_ONE_0142_R08_REVIEW_INPUT_MANIFEST_R02",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0142",
+  "requirement_id": "I19-E32",
+  "candidate_sha256": "7efc848ed18decf665c423c03d4784e681a5d911ae5185885f614b391d92cc78",
+  "candidate_bytes": 53207,
+  "candidate_body_sha256": "350713d9b10e258edc819eb294a2b1456cf129537b98a58b8b3547f26f165e4d",
+  "review_packet": {
+    "filename": "REVIEW_PACKET_R02.md",
+    "bytes": 82984,
+    "sha256": "1596034a408637f2496d65893dd9b2a3c0d9c70e75479b858baeeeb100cf491e"
+  },
+  "embedded_inputs": {
+    "official_requirement_page9_excerpt": {
+      "filename": "OFFICIAL_SOURCE_PAGE9_EXCERPT.txt",
+      "bytes": 2221,
+      "sha256": "0733c1e3a7fa7b88b79846aabf8667391e032165e78cf9bfc06b7363e71ffe11"
+    },
+    "official_requirement_row": {
+      "filename": "OFFICIAL_REQUIREMENT_ROW_I19-E32.json",
+      "bytes": 1194,
+      "sha256": "b6abdafe457e7aa9353a963bb8606bdecf21e92d289878cf80bfc1885d5c4033"
+    },
+    "source_packet": {
+      "filename": "SOURCE_PACKET_0142_I19-E32_R01.md",
+      "bytes": 3748,
+      "sha256": "e3e8b3a8ee1effe758608fee183440add4f37381988c5e352912b1a3d55c9e49"
+    },
+    "unique_blueprint": {
+      "filename": "UNIQUE_BLUEPRINT_0142_I19-E32_R01.md",
+      "bytes": 4447,
+      "sha256": "4841161d6e9aad3ace2a0b4ec4a5a3e1b7e92b68ff2b20f95e9edeae2b84070b"
+    },
+    "candidate_body_extract": {
+      "filename": "BODY_TEXT_EXTRACT_R08_TARGETED_REPAIR_R01.txt",
+      "bytes": 28948,
+      "sha256": "350713d9b10e258edc819eb294a2b1456cf129537b98a58b8b3547f26f165e4d"
+    },
+    "sample_replacement_register": {
+      "filename": "SAMPLE_REPLACEMENT_REGISTER_0142_R08.csv",
+      "bytes": 11131,
+      "sha256": "b9ef1b7f1c9b703377f0284582cc72c4251d483cbeeae3adf8f6279e6aaa372b"
+    },
+    "candidate_lineage_chain": {
+      "filename": "LINEAGE_CHAIN_0142_R08_TARGETED_REPAIR_R01.md",
+      "bytes": 8014,
+      "sha256": "ef44a720a9857d6455c76a25496bbc4a6fe82eb2b634bc955f8bc28c94bf435c"
+    },
+    "candidate_lineage_machine_record": {
+      "filename": "CANDIDATE_LINEAGE_0142_R08_TARGETED_REPAIR_R01.json",
+      "bytes": 14524,
+      "sha256": "c7cb1888f72aeee30b22d84362aa268c95a2ef06d70de244bf05903d1137a682"
+    },
+    "technical_qa_receipt": {
+      "filename": "TECHNICAL_QA_R08_TARGETED_REPAIR_R01.json",
+      "bytes": 2775,
+      "sha256": "474094109308849a9bcfeddb7d94b0c068f93199082b8c72e19e48b81b38b1f1"
+    },
+    "visual_qa_receipt": {
+      "filename": "VISUAL_QA_R08_TARGETED_REPAIR_R01.json",
+      "bytes": 1709,
+      "sha256": "0f08c04c7b9ae98ae3888703f1126537b16c5a37b2d8b74c19219997499530dc"
+    }
+  },
+  "review_scope": "Exact candidate-body semantic plus official/Blueprint/source/register/lineage evidence; no visual inspection.",
+  "reviewer": "OpenCode v2 CLI",
+  "requested_model": "opencode/glm-5.3-flash-free",
+  "fallback_allowed": false,
+  "computer_use": false,
+  "auto_approve": false,
+  "created_local": "2026-10-28T14:52:22.635825+08:00"
+}

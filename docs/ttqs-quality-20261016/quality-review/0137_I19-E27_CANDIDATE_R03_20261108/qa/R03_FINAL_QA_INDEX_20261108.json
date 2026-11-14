@@ -1,0 +1,76 @@
+{
+  "schema": "ttqs-one-0137-r03-final-qa-index-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0137",
+  "requirement_id": "I19-E27",
+  "candidate_state": "CANDIDATE",
+  "candidate_sha256": "fa7240da13f5140d0896d1c2e3c7a74dce7f57d861d1100c0315628708c477db",
+  "deterministic_repair_and_visual_receipt": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0137_I19-E27_CANDIDATE_R03_20261108\\qa\\R03_SCOPED_REPAIR_RECONCILIATION_QA_20261108.json",
+    "sha256": "51c95378248e15e215f762d322ca3f876c1095aed66614cfec01a99e62ae5166",
+    "result": "PASS + PASS_LIMITED_VISUAL"
+  },
+  "independent_semantic_receipt": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\OPEN_CODE_REVIEW_0137_R03_20261108\\INDEPENDENT_SCOPED_SEMANTIC_REVIEW_0137_R03.json",
+    "sha256": "b2127356fa2e837b1681c9cee1148823a329b53974a5410f569c319140969b15",
+    "result": "PASS",
+    "reviewer_role": "OpenCode fresh plan reviewer",
+    "exact_candidate_sha_bound": true
+  },
+  "conclusion": "CANDIDATE_FULL_TEXT_SEMANTIC_PASS; deterministic repair PASS; visual scope PASS_LIMITED_VISUAL; no promotion to CURRENT/REAL/FORMAL_ACCEPTED.",
+  "formal_acceptance": "NOT_GRANTED",
+  "full_independent_semantic_receipt": {
+    "path": "docs/ttqs-quality-20261016/quality-review/0137_I19-E27_CANDIDATE_R03_20261108/qa/INDEPENDENT_FULL_SEMANTIC_REVIEW_0137_R03_20261109.json",
+    "sha256": "397e84ae60986691454a5c457673b36b66ec7fc1ee03dfdc73947d02d4873d43",
+    "result": "PASS",
+    "findings_count": 0,
+    "validation": "PASS",
+    "validation_receipt_path": "docs/ttqs-quality-20261016/quality-review/0137_I19-E27_CANDIDATE_R03_20261108/workers/dispatches/20261109_W2_ANTIGRAVITY_0137_FULL_REVIEW/RESPONSE_VALIDATION.json",
+    "validation_receipt_sha256": "be3af25a9b95d762c9429389db9da992384f735172c597c2fb67c2db6330aa61",
+    "work_id": "TTQS_ONE_0137_R03_FULL_SEMANTIC_REVIEW_W2_GEMINI_20261109",
+    "reviewer_role": "W2 Antigravity CLI fresh independent text-only reviewer",
+    "requested_route": "gemini-3.8-flash-high",
+    "actual_serving_model_identity": "UNKNOWN",
+    "fallback": "UNKNOWN",
+    "candidate_sha256": "fa7240da13f5140d0896d1c2e3c7a74dce7f57d861d1100c0315628708c477db",
+    "body_extract_sha256": "02b233275ebaba6c338c947c5b91fa3005a951265cb08107e016f3d95e055e05",
+    "source_packet_sha256": "7597c1346607c7c218bca7b9d92bbcd6fa4cfbba25bc793a6ff30e2b26e6b733",
+    "unique_blueprint_sha256": "7590fe026b53010cd40664d23f53880e7c717a6e93c6f19d59212ef5312d6cf9",
+    "official_source_text_sha256": "06a158a6c3dbbd9a2be8958fa3c76914aef804c46fda4d1244dd6dcf01f7b383",
+    "exact_candidate_sha_bound": true,
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "NOT_VERIFIED"
+  },
+  "worker_attempts": [
+    {
+      "work_id": "TTQS_ONE_0137_R03_FULL_SEMANTIC_REVIEW_W1_DEEPSEEK_20261109",
+      "worker": "W1 OpenCode v2",
+      "requested_route": "opencode/deepseek-v4.1-flash-free",
+      "result": "BLOCKED_PROVIDER_FREE_LIMIT_429",
+      "pid": 19520,
+      "exit_code": 1,
+      "timed_out": false,
+      "retry_after_ms": 27739000,
+      "response_produced": false,
+      "raw_stdout_sha256": "009953c7f975a143f6fd344e30b75f7d18153f50e408a62e566c2ddf2ae9bf4d",
+      "terminal_receipt_sha256": "85c191fdcc53af9bc06edfbe922d95f6230ed7c69c24ef5f29dd94f99ff647d2",
+      "same_route_retry_authorized": false
+    },
+    {
+      "work_id": "TTQS_ONE_0137_R03_FULL_SEMANTIC_REVIEW_W2_GEMINI_20261109",
+      "worker": "W2 Antigravity CLI",
+      "requested_route": "gemini-3.8-flash-high",
+      "result": "PASS",
+      "pid": 10404,
+      "exit_code": 0,
+      "timed_out": false,
+      "findings_count": 0,
+      "raw_stdout_sha256": "90e5edda1622a287c4b2032a0a9e6ca7c7d9710d5697b788c98079aebaeacf01",
+      "terminal_receipt_sha256": "d4eaec1c5bfd3e84cfe30db720e0fa57e1c1cd8dfa38a3b4011e4f210f4890f2",
+      "validation": "PASS",
+      "actual_serving_model_identity": "UNKNOWN",
+      "fallback": "UNKNOWN",
+      "exact_candidate_sha_bound": true
+    }
+  ]
+}

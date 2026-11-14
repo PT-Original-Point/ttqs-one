@@ -1,0 +1,121 @@
+{
+  "schema": "TTQS_ONE_0121_R03_CURRENT_HEAD_RAW_READBACK_R15_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0121",
+  "requirement_id": "I19-E09",
+  "revision": "R03",
+  "observed_at_local": "2026-10-28 06:24:53",
+  "repository": "PT-Original-Point/ttqs-one",
+  "pr": 92,
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "verified_pr_head": "0d26ba1a9a759ea0606ec7d6db5f70e5da53b7da",
+  "method": "GitHub Contents API base64 readback; decoded remote bytes compared to exact local base64; Git blob SHA-1 tracked separately from file SHA-256.",
+  "verification_count": 11,
+  "all_raw_bytes_equal": true,
+  "candidate": {
+    "state": "CANDIDATE_ONLY",
+    "sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+    "bytes": 72632,
+    "local_git_blob_sha1": "820d586734c62ddaad3905ba8b8ea74ede5c9813",
+    "remote_git_blob_sha1": "820d586734c62ddaad3905ba8b8ea74ede5c9813",
+    "unchanged": true
+  },
+  "quality": {
+    "technical_visual": "PASS_EXISTING_EXACT_SHA_SCOPE",
+    "semantic": "UNVERIFIED_ROUTE_IDENTITY",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "NOT_PROVIDED"
+  },
+  "latest_worker_attempt": {
+    "work_id": "TTQS-0121-I19-E09-R03-W1-OPENCODE-GLM-EXACT-SHA-REVIEW-AFTER-0122-SUCCESS-20261028",
+    "requested_model": "opencode/glm-5.3-flash-free",
+    "selected_session_model": "glm-5.3-flash-free",
+    "provider_id": "opencode",
+    "actual_inference": "NOT_REACHED",
+    "http_status": 429,
+    "retry_after_ms": 6168000,
+    "tokens": {
+      "input": 0,
+      "output": 0,
+      "reasoning": 0,
+      "cache_read": 0,
+      "cache_write": 0
+    },
+    "same_scope_attempt": 2,
+    "process_deviation": "Attempt 2 started before attempt 1 retry-after estimate; recorded and corrected. Do not repeat the same input.",
+    "do_not_retry_before_local": "2026-10-28T08:00:00.296+08:00"
+  },
+  "artifacts": [
+    {
+      "path": "review/opencode_glm_r03_429_20261028T0615_TPE_R12_2/DISPATCH_PROMPT.txt",
+      "bytes": 1223,
+      "sha256": "f4ead71381280ef8210f19c226425fa448ba42275d4e5d7f4e81184d23ae564e",
+      "git_blob_sha1": "2f5ec092e0e54512468c6693117272708b08797c",
+      "raw_bytes_equal": true
+    },
+    {
+      "path": "review/opencode_glm_r03_429_20261028T0615_TPE_R12_2/INPUT_MANIFEST.json",
+      "bytes": 1363,
+      "sha256": "d4509e11ad3ab2ba64d23ac62ac6f7d2706496ea70599ea88d170f44b077a7ee",
+      "git_blob_sha1": "9c2900d46d6782d15476638d73e2357dba356b02",
+      "raw_bytes_equal": true
+    },
+    {
+      "path": "review/opencode_glm_r03_429_20261028T0615_TPE_R12_2/DISPATCH_START_PUBLIC.json",
+      "bytes": 1083,
+      "sha256": "b179ab0bca0fdd2614807e17fa9f102e84cb315c764b03e9e88263dbe9eb5542",
+      "git_blob_sha1": "9011e5e2f70d59f434f96f5fa8d68f62b0b6efad",
+      "raw_bytes_equal": true
+    },
+    {
+      "path": "review/opencode_glm_r03_429_20261028T0615_TPE_R12_2/DISPATCH_TERMINAL.json",
+      "bytes": 929,
+      "sha256": "dbae967b707fc7ae822c1e1d8d54c71f2421fb1c35826f1125d01bd958334a06",
+      "git_blob_sha1": "054c3313e6a35f679bda1195fa384c9d9fde8554",
+      "raw_bytes_equal": true
+    },
+    {
+      "path": "review/opencode_glm_r03_429_20261028T0615_TPE_R12_2/RAW_STDOUT.jsonl",
+      "bytes": 527,
+      "sha256": "a61bc6d3552ec5c173919fc378ccb3b5ef825f27e8e39ac7281bfed00fec742d",
+      "git_blob_sha1": "a94f2ef13b25ff2e83bd250d2285f9f56e0a0623",
+      "raw_bytes_equal": true
+    },
+    {
+      "path": "review/opencode_glm_r03_429_20261028T0615_TPE_R12_2/OPENCODE_SESSION_EXPORT_SANITIZED.json",
+      "bytes": 2974,
+      "sha256": "7ff94b7a364503ba6632dbc8a8f61e1d3c6e1ef424113cc5ec90d6929496842d",
+      "git_blob_sha1": "976c9d0f15c0a032fe5b81eca9c0653b81893586",
+      "raw_bytes_equal": true
+    },
+    {
+      "path": "review/opencode_glm_r03_429_20261028T0615_TPE_R12_2/SESSION_EXPORT_RECEIPT.json",
+      "bytes": 800,
+      "sha256": "dfee795a58fa806d42b7f13731b78e7298a693129cc41ed53d6ca32e054777ef",
+      "git_blob_sha1": "a7dbd632a5e9ceb831411569a073600eff7bbe59",
+      "raw_bytes_equal": true
+    },
+    {
+      "path": "review/opencode_glm_r03_429_20261028T0615_TPE_R12_2/FAILURE_RECEIPT_R12_2.json",
+      "bytes": 4359,
+      "sha256": "203e58e8517c0f6bc3f864efd638859cd6aea29776d80e9fb23df3ca133274e2",
+      "git_blob_sha1": "522f4ab9c3dc617abcf8750f89ba8ca03f2a43da",
+      "raw_bytes_equal": true
+    },
+    {
+      "path": "candidate/R03_FINAL_QA_STATUS.json",
+      "bytes": 4640,
+      "sha256": "cc0144fb89bb8c794bb52aee78b1347c938ff787881613e281e31317202bd85c",
+      "git_blob_sha1": "6fde188322a056f8d333d39c1aee37024b098512",
+      "raw_bytes_equal": true
+    },
+    {
+      "path": "candidate/0121_I19-E09_R03.docx",
+      "bytes": 72632,
+      "sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+      "git_blob_sha1": "820d586734c62ddaad3905ba8b8ea74ede5c9813",
+      "raw_bytes_equal": true
+    }
+  ],
+  "result": "PASS_CURRENT_HEAD_RAW_READBACK_11_OF_11; DOCX UNCHANGED; SEMANTIC UNVERIFIED; NOT FORMALLY ACCEPTED"
+}

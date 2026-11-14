@@ -1,0 +1,9 @@
+# 0065 R04 public source and mapping record
+
+- Candidate identity: DOCX `0065` = requirement `I15-E01` = official checkbox `071`; Unique Blueprint `0065|I15-E01|071|R01`.
+- Official source: Evaluator Evidence Table, official page 5, Indicator 15, Review; example is a post-training periodic review / management-review meeting record. Official source PDF SHA-256: `805386B77DF045B396FABAFED7A47D12491C25A0B5744EDD9A04876CAEE34709`. The exact source PDF is identified by this SHA-256; it is not duplicated in this candidate package.
+- 129-to-142 crosswalk SHA-256: `1DDFBB608BCAD25170683DDB42A1DBB27BAFA6F1F35FF0498F1B8D75B24F0679`; row `I15-E01 → 0065`.
+- Governing quality-contract source: PR #92 branch head before this artifact sync `556e0c1aa545ab802030fc0cd6cf901905f70ccb`. Exact 01–06 Git blob IDs: 01 `538bedb9d87e8465f43151933b4a5c1bfa4bbc4e`; 02 `4ff863d9f534b6359fc1c7c1685bd8cce02da886`; 03 `8c2bbe7ca9dcbb03088a48934b9e57e7147ede63`; 04 `62e3dd7dfd8579b6bc97952ffa6236e7494f3b4d`; 05 `60ae010c58140e1710ed24016085c6dfaf6ffaee`; 06 `263aaca84891bba8dca087875804343c3670e921`.
+- Adjacent case source: DOCX 0066 R01 SHA-256 `c9ec333f27c967eb5bbd28c49f3c54d218783cd659feec936ba9c0c566d1f8d6`; source extraction blob `956ad1c717aaa0ce0a6ad6e1559dfdeb43c55c9e`.
+- Shared case ID: `SYN-0060-2026-A01`; all figures, meeting details, role-only attendees, decisions, dates, thresholds and conclusions in 0065 are `SAMPLE/SYNTHETIC`. They are not association records. No actual association meeting, approval, signature, receipt, respondent quote or executed action is supplied. All REAL evidence remains `UNKNOWN/HOLD`.
+- Shared figures retained from 0066: course date 2026-08-15; 12 registered / 10 attended; 9 valid assessments / 8 passes; survey 10 issued / 9 valid / 8 positive; follow-up target 10 / 8 replies / 6 self-reported use; sample budget NT$8,000 / spend NT$7,650; practice 50 planned / 35 actual plus 15 demo/Q&A.

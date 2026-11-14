@@ -1,0 +1,71 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0121",
+  "requirement_id": "I19-E09",
+  "revision": "R03",
+  "source_candidate_revision": "R02",
+  "source_candidate_sha256": "ae5da09e834f5a8e9097a85ac87d4fe2f76acf9626049d3b0bea7c5f35042efe",
+  "candidate_sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+  "candidate_bytes": 72632,
+  "body_extract_sha256": "4ea875c255a3d1f852788a258725150729787f83dad96efa997dd491a8f01552",
+  "body_extract_chars": 22731,
+  "patches": [
+    {
+      "locator": "P002",
+      "before_revision": "R02 / 2026-10-26",
+      "after_revision": "R03 / 2026-10-27",
+      "kind": "candidate revision/date label"
+    },
+    {
+      "locator": "P163",
+      "before": "示範表中的前後測分數有所提高",
+      "after": "我覺得物資清點流程容易記憶；練習後測時，我更能依步驟完成清點與核對。下次希望增加後續服務情境練習，讓我把物資清點及核對流程用得更熟。",
+      "basis": "Exact-SHA R02 semantic finding; aligned to synthetic T08 Q11/Q12 and P07 paired-score tables"
+    }
+  ],
+  "synthetic_replacement_register": "existing REP-0121-REF-P02/P04/P07 row covers the three complete synthetic reflections; P07 remains SAMPLE, not interview/original quote",
+  "real_evidence": "NOT_PROVIDED",
+  "formal_acceptance": "NOT_GRANTED",
+  "independent_review_status": "PASS_R03_DELTA_EXACT_SHA_WITH_INHERITED_R02_FULL_BODY_SCOPE",
+  "created_at_local": "2026-10-27T00:03:11.819411+08:00",
+  "body_extract_bytes": 45148,
+  "body_extract_hash_convention": "SHA-256 of the UTF-8 extraction file produced by the same R02 QA extraction routine (Windows newline bytes preserved).",
+  "r02_review": {
+    "verdict": "PARTIAL",
+    "candidate_sha256": "ae5da09e834f5a8e9097a85ac87d4fe2f76acf9626049d3b0bea7c5f35042efe",
+    "response_sha256": "d368269b4c1349b7871bff81e339b7c60254928cda2bf47fd0e2120357a5059c",
+    "finding_locator": "P162-P163",
+    "actual_serving_model_identity": "UNKNOWN",
+    "usage_tokens": 51751
+  },
+  "r03_word_technical_visual": {
+    "status": "PASS_TECHNICAL_VISUAL",
+    "candidate_sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+    "receipt_path": "TECHNICAL_VISUAL_QA_R03.json",
+    "receipt_sha256": "5a7478d792a5e9cd0e884e5bdda78fa34cab611ba36b64d592b93a2a726b4015",
+    "word_native_pdf_sha256": "fa3fd36e716372d47ae36a3eaf4a5f28ec5c395d9800e6764bf69325abed0f70",
+    "page_count": 23,
+    "changed_pages_vs_R02": [
+      1,
+      18
+    ],
+    "unchanged_pixel_identical_pages": 21,
+    "body_min_font_pt": 10.5,
+    "table_min_font_pt": 9.5,
+    "typography_unresolved_runs": 0
+  },
+  "r03_independent_review": {
+    "verdict": "PASS",
+    "candidate_sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+    "response_sha256": "d0d502350dc5a5178dd0c4d077b66591661aca1574f59b77f39c7a8f87414d",
+    "raw_stdout_sha256": "112b725e3bb71a83991dabcd985b5cfae4bab2cd03da3c58fdc1046e6e156a5d",
+    "request_sha256": "29482ad5ed6f02340b7455ec3dd02401f002a6ac3fadff903f2dd3fb21d20e10",
+    "scope": "R03 delta P002 and P163; unchanged body relies on full R02 exact-SHA review, whose only issue was P163 and whose worker PASS is not accepted as-is.",
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model_identity": "UNKNOWN_PROVIDER_METADATA_NOT_EXPOSED",
+    "external_tool_actions": 0,
+    "protocol_finish_events": 1,
+    "usage_tokens": 18607,
+    "formal_acceptance": "NOT_GRANTED"
+  }
+}

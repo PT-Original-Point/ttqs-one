@@ -1,0 +1,9 @@
+{
+  "candidate": "candidate/0046_R02.docx",
+  "sha256_before": "6e595e91204852a13a96474dbebbd0b7036239fe8e6c074ba6a02c8f6d144f11",
+  "sha256_after": "aacde219a62e11f90dfc2b1f04382817949cbb58ba7ed2f2f3c005c78e34fd9e",
+  "repair": "Removed the explicit page-break-only paragraph immediately before section 6; retained all section content and other explicit section breaks.",
+  "root_cause": "The paragraph-level page break was pushed onto an otherwise blank page after the preceding section had filled page 5, then forced section 6 to page 7.",
+  "docx_content_rebuilt": false,
+  "layout_xml_changed": true
+}

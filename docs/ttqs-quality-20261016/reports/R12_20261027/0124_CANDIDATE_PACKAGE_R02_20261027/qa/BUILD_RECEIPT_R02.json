@@ -1,0 +1,56 @@
+{
+  "schema": "TTQS_ONE_R12_BUILD_RECEIPT_V1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0124-I19-E12-R02-CANDIDATE-REPAIR",
+  "doc_id": "0124",
+  "requirement_id": "I19-E12",
+  "official_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+  "recorded_at_taipei": "2026-10-27T14:11:26.3611701+08:00",
+  "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "baseline": {
+    "revision": "R01",
+    "sha256": "0a6567c2779d9ad8014ab6d1c892779a98892351a38ceda0dea9fa8b24ff2988"
+  },
+  "candidate": {
+    "revision": "R02",
+    "sha256": "5ea20da675395954e5587859ddc3ca4b483abaeff90509a86c66950581afec07",
+    "path": "candidate/0124_I19-E12_R02_candidate.docx",
+    "bytes": 60468
+  },
+  "source_packet_sha256": "83a03deb7cbef3f07ef8b7ce0b2b25e1744baa6bc2e96b29e3259453558ccfee",
+  "unique_blueprint_sha256": "d0d8b0990d96fb7dab5d02a34d9f507b6434e57778646c920c488f01c1ab0f42",
+  "source_snapshot_commit": "0e377a92599b16d438c62819e299b6d7579f6490",
+  "local_change_owner": "Codex local candidate repair; no external CLI Writer output is evidenced for R02",
+  "changes": [
+    "Table 3: added offer-only/planned-start decision gate; offer is not verified hire; separate CLAIM_ONLY, HOLD, HIRE_ONLY, FEEDBACK_ONLY, NOT_ELIGIBLE states.",
+    "Table 6: E3-E5 response formats explicitly separate NOT OBSERVED, NOT APPLICABLE, DECLINED and UNKNOWN from the 1-5 scale.",
+    "Table 15: version field advanced from R01 to R02.",
+    "Existing layout repairs: bordered offer-only decision row; Section XIII list restarts 1-5."
+  ],
+  "table_text_diff": {
+    "path": "qa/R01_R02_TABLE_DIFF_R02.json",
+    "sha256": "0a27d9970240e1c4cbc1251464048f75fe65c169ec85b690e132a46d6279c86f"
+  },
+  "repair_basis": {
+    "git_blob_sha1": "1bef99deaf4752cda08d9437d19e9822208394c6",
+    "status": "PARTIAL_RESPONSE_NOT_ACCEPTED",
+    "source_path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_worker_R12/GLM_REVIEW_R03_20261027T132725/ADJUDICATION_R03.json",
+    "findings_applied": [
+      "N1",
+      "N2"
+    ],
+    "note": "R01 GLM response was malformed/incomplete; recovered N1/N2 are specific repair inputs, not an acceptance verdict."
+  },
+  "worker_contribution": {
+    "opencode": "R02 exact-SHA reviewer request only; provider returned HTTP 429 before response, no content produced.",
+    "antigravity": "No R02 writer or reviewer dispatch evidenced."
+  },
+  "qa": {
+    "technical": "PASS",
+    "promotion": "NOT_PERFORMED",
+    "visual": "PASS_WITHIN_RECORDED_14_PAGE_SCOPE",
+    "semantic": "PENDING_QUOTA_BLOCKED",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "NOT_PROVIDED"
+  }
+}

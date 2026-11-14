@@ -1,0 +1,73 @@
+{
+  "work_id": "TTQS-0108-I18-E16-SYNTHETIC-MANUSCRIPT-WRITER-R01-20261022-01",
+  "session_id": "ses_e9c98acaeffevBQw6hAGRt0Ulr",
+  "model": {
+    "provider_id": "opencode",
+    "model_id": "deepseek-v4.1-flash-free",
+    "selection_source": "OpenCode SQLite session metadata"
+  },
+  "process_id": 5432,
+  "agent": "plan",
+  "sequence_notes": [
+    {
+      "sequence": 8,
+      "chars": 4684,
+      "ending": "ABLE（SAMPLE） | 是 | 同一雇主、組成可比 |\n| SYN-P02 | SYN-P02-B | SYN-P02-F | SYNTHETIC_COMPLETE | COMPARABLE（SAMPLE） | 是 | 同一雇主、組成可比 |\n| SYN-P03 | SYN-P03-B | SYN-P03-F |"
+    },
+    {
+      "sequence": 18,
+      "chars": 6861,
+      "ending": " BASELINE_NOT_APPLICABLE，處置為 EMPLOYMENT_TRANSITION。\n\n### 7.4 案例共同控制\n\n三個案例都只使用合成代碼與合成金額；不包含真實姓名、雇主、薪資單、扣繳憑單、投保資料、同意書、簽名、章戳或第三方文件。示例中的「覆核」僅展示應有欄位與步驟，不代表已完成真實獨立覆核。"
+    },
+    {
+      "sequence": 30,
+      "chars": 11082,
+      "ending": " 保管位置 | UNKNOWN（TODO：受控資料夾） |\n| 來源錨定 | 見 12.1；UNKNOWN 項目待補 |\n| REAL 替換清冊 | 未執行；UNKNOWN／TODO |\n| 決策紀錄 | UNKNOWN（TODO） |\n| 下一步 | TODO：完成 REAL 來源、授權、遮罩、雙人覆核與版本更新 |"
+    }
+  ],
+  "outputs": [
+    {
+      "sequence": 8,
+      "type": "assistant",
+      "path": "E:\\TTQS\\_r09_opencode_0108_text_only_20261022_R01\\evidence\\worker_raw_returns\\worker_assistant_seq008.md",
+      "chars": 4684,
+      "bytes": 9649,
+      "sha256": "8333be1226ff70f35253f697ba511cec4ca04f8c297ccc2c5264c4a4d2292c8b",
+      "visible_text_blocks": 1
+    },
+    {
+      "sequence": 18,
+      "type": "assistant",
+      "path": "E:\\TTQS\\_r09_opencode_0108_text_only_20261022_R01\\evidence\\worker_raw_returns\\worker_assistant_seq018.md",
+      "chars": 6861,
+      "bytes": 13138,
+      "sha256": "7e131ccab962eda64dc5ae1fbe35fe8f8d3494c59ce5de46669d62d9f5d80d53",
+      "visible_text_blocks": 1
+    },
+    {
+      "sequence": 30,
+      "type": "assistant",
+      "path": "E:\\TTQS\\_r09_opencode_0108_text_only_20261022_R01\\evidence\\worker_raw_returns\\worker_assistant_seq030.md",
+      "chars": 11082,
+      "bytes": 19093,
+      "sha256": "3f0b521f65910293407c44153e478b4ca22f454ec87bac071a22aea5206cdc25",
+      "visible_text_blocks": 1
+    }
+  ],
+  "session_readback": {
+    "title": "0108 I18-E16 提高薪資紀錄證據稿",
+    "directory": "E:/TTQS/_r09_opencode_0108_text_only_20261022_R01",
+    "agent": "plan",
+    "model_json": "{\"id\":\"deepseek-v4.1-flash-free\",\"providerID\":\"opencode\"}",
+    "local_cost": 0.0,
+    "tokens_input": 53259,
+    "tokens_output": 13388,
+    "tokens_reasoning": 41513,
+    "tokens_cache_read": 53888,
+    "tokens_cache_write": 0,
+    "created_tpe": "2026-10-22T19:37:58.830000+08:00",
+    "updated_tpe": "2026-10-22T19:46:01.623000+08:00",
+    "idle_tpe": "2026-10-22T19:46:01.634000+08:00",
+    "idle_outcome": "succeeded"
+  }
+}

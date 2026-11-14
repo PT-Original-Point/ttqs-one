@@ -1,0 +1,126 @@
+{
+  "receipt_id": "TTQS-R09-TEST-EXECUTION-T01-T14-20261021",
+  "source_spec_commit": "c3cd0c64ed80498c989695ca07a64eab57d84cd4",
+  "source_06_blob": "4c7eff55748ff265b1e5a7d1122852b0d101acbd",
+  "artifact_readback_commit": "15f984b7440ffd79d4092b90b4b0ee3c5e14cf77",
+  "executed_local": "2026-10-21T19:55:47.1940783+08:00",
+  "environment": "Windows 10 Pro 10.0.19045",
+  "candidate_docx_sha256": "debd41e7ca1b18b88cad37db118c5b3474df411b3e2d1c87a8351d456245e0b2",
+  "observed_tests": [
+    "T01",
+    "T02",
+    "T03",
+    "T06",
+    "T08",
+    "T13"
+  ],
+  "deterministic_simulations": [
+    "T04",
+    "T05",
+    "T07",
+    "T09",
+    "T10",
+    "T11",
+    "T12",
+    "T14"
+  ],
+  "results": [
+    {
+      "id": "T01",
+      "status": "PASS_OBSERVED_SERVICE_NOT_WRITER",
+      "mode": "WINDOWS_OBSERVED",
+      "evidence": "OpenCode service PIDs=45628; separate writer-like CLI processes=0; Antigravity processes=0."
+    },
+    {
+      "id": "T02",
+      "status": "PASS_OBSERVED_UNKNOWN_OWNERS_PRESERVED",
+      "mode": "WINDOWS_RECEIPT",
+      "evidence": "Snapshot: 19 WINWORD, 18 unmapped; none killed."
+    },
+    {
+      "id": "T03",
+      "status": "PASS_STALE_HEAD_DETECTED",
+      "mode": "WINDOWS_GITHUB_OBSERVED",
+      "evidence": "Panel head=c3cd0c64ed80498c989695ca07a64eab57d84cd4; artifact commit=15f984b7440ffd79d4092b90b4b0ee3c5e14cf77; panel offline/stale."
+    },
+    {
+      "id": "T04",
+      "status": "PASS_SIMULATED_PROJECT_MISMATCH_REJECTED",
+      "mode": "DETERMINISTIC_SIMULATION",
+      "evidence": "Fixture PTYSD/Issue407/DESKTOP-1B6PD2P => PANEL_PROJECT_MISMATCH; not a live panel observation."
+    },
+    {
+      "id": "T05",
+      "status": "PASS_SIMULATED_BLOCK_DETECTED",
+      "mode": "DETERMINISTIC_SIMULATION_PLUS_LIVE_STATE",
+      "evidence": "Live Goal=paused, schedule=RRULE:FREQ=HOURLY;INTERVAL=2, natural history unavailable; fixture => TRIGGER_PASS/WORK_RESUME_FAIL."
+    },
+    {
+      "id": "T06",
+      "status": "PASS_READY_DERIVED_WITHOUT_QUEUE_READY_LABEL",
+      "mode": "WINDOWS_SOURCE_OBSERVED",
+      "evidence": "Queue snapshot: 142 records/115 pending; 0100/0101 source packet and unique Blueprints exist."
+    },
+    {
+      "id": "T07",
+      "status": "PASS_SIMULATED_RENDER_LANE_ISOLATION",
+      "mode": "DETERMINISTIC_SIMULATION",
+      "evidence": "R09 fixture: 0097 PDF lane timeout at 180 seconds; 0100 DOCX exists and completed independently. Local report records a 0097 export timeout but does not preserve the exact elapsed seconds; 180s is the contract simulation, not an observed duration."
+    },
+    {
+      "id": "T08",
+      "status": "PASS_EXIT0_TEXT_NOT_DELIVERABLE",
+      "mode": "WINDOWS_WORKER_LEDGER",
+      "evidence": "Antigravity exit0=1, text=1, accepted DOCX=0."
+    },
+    {
+      "id": "T09",
+      "status": "PASS_SIMULATED_STABLE_DOCX_SALVAGE",
+      "mode": "DETERMINISTIC_SIMULATION_USING_REAL_CANDIDATE",
+      "evidence": "Fixture CLI exit=2; existing DOCX SHA=debd41e7ca1b18b88cad37db118c5b3474df411b3e2d1c87a8351d456245e0b2 and all 3 exact-SHA receipts match; bounded action=salvage/reuse, no rebuild; no actual nonzero-exit incident claimed."
+    },
+    {
+      "id": "T10",
+      "status": "PASS_STALE_REVIEW_BINDING_REJECTED",
+      "mode": "DETERMINISTIC_FIXTURE_PLUS_EXACT_REVIEW",
+      "evidence": "Old PARTIAL SHA=e27d80951e633fd3d32dc92aab10725de06ba35fb18547f7c63d70f3071f9f6d rejected for current SHA=debd41e7ca1b18b88cad37db118c5b3474df411b3e2d1c87a8351d456245e0b2; current receipt binds current SHA."
+    },
+    {
+      "id": "T11",
+      "status": "PASS_SIMULATED_FALLBACK_REJECTED",
+      "mode": "DETERMINISTIC_SIMULATION",
+      "evidence": "Fallback fixture => GEMINI_ROUTE_NOT_VERIFIED; actual Antigravity identity/provider/fallback remain UNKNOWN."
+    },
+    {
+      "id": "T12",
+      "status": "PASS_SIMULATED_BAD_DOCUMENT_REJECTED",
+      "mode": "DETERMINISTIC_SIMULATION",
+      "evidence": "Bad fixture flags=blank_questionnaire,internal_sha,fake_official_certificate,title_mismatch => QUALITY_FAIL; 0100 remains candidate, not formal acceptance."
+    },
+    {
+      "id": "T13",
+      "status": "PASS_EXACT_REMOTE_SHA_AND_MISMATCH_REJECTED",
+      "mode": "GITHUB_BYTE_READBACK_PLUS_SIMULATED_TAMPER",
+      "evidence": "Commit=15f984b7440ffd79d4092b90b4b0ee3c5e14cf77; exact DOCX SHA=debd41e7ca1b18b88cad37db118c5b3474df411b3e2d1c87a8351d456245e0b2; Git blob SHA-1=4a3ab3721ddfa0ea946bf73c48305767066b40ba; 27/27 artifacts exact; in-memory one-byte tamper differs."
+    },
+    {
+      "id": "T14",
+      "status": "PASS_SIMULATED_SCOPED_HOLD",
+      "mode": "DETERMINISTIC_SIMULATION",
+      "evidence": "Unknown push plus active writer fixture => readback only, no duplicate dispatch, other READY lanes continue; actual R09 push outcome is known."
+    }
+  ],
+  "summary": {
+    "cases": 14,
+    "passed": 14,
+    "failed": 0,
+    "simulated": 8,
+    "not_tested": 0
+  },
+  "open_system_gaps": [
+    "Goal remains paused",
+    "natural 120-minute trigger not proven",
+    "live TTQS panel remains offline/stale",
+    "Antigravity actual model/provider/fallback UNKNOWN"
+  ]
+}

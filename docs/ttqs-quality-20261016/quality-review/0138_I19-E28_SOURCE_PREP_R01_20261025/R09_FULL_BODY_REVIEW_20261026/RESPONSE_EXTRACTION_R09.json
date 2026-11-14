@@ -1,0 +1,18 @@
+{
+  "record": "TTQS-0138-R09-RESPONSE-EXTRACTION",
+  "raw_response_file": "RESPONSE_R09.txt",
+  "raw_response_sha256": "d5ff31cdf6d8e8a8e65f08c52f842171207866cf26a9380fd9d986de466f7f9d",
+  "raw_stdout_file": "RAW_STDOUT_R09.jsonl",
+  "raw_stdout_sha256": "8c2acc3bedbef7d938b2e70fb8731511e2ce392d1486ede771c4e4e1a9f3d73b",
+  "response_objects": 2,
+  "finish_tool_calls": [
+    "ACTIVE",
+    "ERROR",
+    "ACTIVE"
+  ],
+  "first_finish_attempt": "ERROR: schema rejected real_evidence_status=UNKNOWN_HOLD and visual_review=NOT_PERFORMED_LOCAL_RECEIPT_GOVERNS; corrected in same CLI turn without redispatch",
+  "final_finish_attempt": "ACTIVE then finish event DONE; last parameters extracted from final validated finish call",
+  "final_review_file": "FINAL_REVIEW_R09.json",
+  "final_review_sha256": "573d51a97c02c504f269a9fa00ac61010bdd308f5b79476353b86ccdfeea9a7f",
+  "independent_adjudication": "Use final schema-valid finish parameters only; preserve the concatenated raw response unchanged."
+}

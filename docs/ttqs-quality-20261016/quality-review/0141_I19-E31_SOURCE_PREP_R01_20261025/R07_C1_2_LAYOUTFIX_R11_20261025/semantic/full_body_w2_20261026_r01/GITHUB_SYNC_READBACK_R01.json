@@ -1,0 +1,270 @@
+{
+  "schema": "TTQS_ONE_GITHUB_SYNC_READBACK_R01",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0141-I19-E31-R07-C1-2-FULL-SEMANTIC-REVIEW-W2-R01",
+  "recorded_utc": "2026-10-25 18:26:35 UTC",
+  "source_branch": "work/ttqs-one-document-quality-contract-20261016",
+  "head_before_receipt": "49b9e34e9e96d84a9aa7ec5da627d63265f083c0",
+  "doc": {
+    "doc_id": "0141",
+    "official_requirement_id": "I19-E31",
+    "official_checkbox_index": 155,
+    "unique_blueprint": "UNIQUE_BLUEPRINT_0141_I19-E31_R02.md",
+    "state": "CANDIDATE",
+    "real_evidence": "UNKNOWN/HOLD",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "candidate": {
+    "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0141_I19-E31_SOURCE_PREP_R01_20261025\\R07\\R07_C1_2_LAYOUTFIX_R11_20261025\\candidate\\0141_I19-E31_R07_C1_2_CANDIDATE.docx",
+    "bytes": 164838,
+    "sha256": "b40ea2f5b5c5467cdc31c2e5b1595ac8de4d679b7f4763aa00860727f5d3f1a0",
+    "remote_path": "docs/ttqs-quality-20261016/quality-review/0141_I19-E31_SOURCE_PREP_R01_20261025/R07_C1_2_LAYOUTFIX_R11_20261025/candidate/0141_I19-E31_R07_C1_2_CANDIDATE.docx",
+    "remote_git_blob_sha": "ba350f5bf8ce2093f533b626162478ef2607b655",
+    "remote_readback": "EXACT_GIT_BLOB_MATCH",
+    "changed_by_review": false
+  },
+  "review": {
+    "verdict": "PASS",
+    "review_type": "independent full-body semantic review",
+    "worker": "Antigravity CLI (W2)",
+    "work_id": "TTQS-0141-I19-E31-R07-C1-2-FULL-SEMANTIC-REVIEW-W2-R01",
+    "requested_model": "gemini-3.8-flash-high",
+    "cli_init_model_reported": "gemini-3.8-flash-high",
+    "backend_serving_model_identity": "UNKNOWN",
+    "candidate_sha256": "b40ea2f5b5c5467cdc31c2e5b1595ac8de4d679b7f4763aa00860727f5d3f1a0",
+    "extracted_body_sha256": "8410743cf1525aa5a2fd8ddf19b7b1439da4c2f502319a2fb87acd11d19390fa",
+    "scope": {
+      "paragraphs": 233,
+      "tables": 18,
+      "title_blind_genre": true,
+      "official_binding": true,
+      "unique_blueprint_and_neighbors": true,
+      "sample_real_boundary": true,
+      "usable_procedure_and_forms": true,
+      "calculations_and_cross_document_consistency": true,
+      "limitations": "semantic/text scope; visual inspection is evidenced separately"
+    },
+    "findings": 0,
+    "cli": {
+      "pid": 16424,
+      "exit_code": 0,
+      "terminal_status": "SUCCESS",
+      "conversation_id": "7be5fc03-1d5e-49ef-9e4d-11f071c92489",
+      "started_local": "2026-10-26T01:49:14.780129+08:00",
+      "ended_local": "2026-10-26T01:51:29.348360+08:00",
+      "duration_seconds": 130.9268404,
+      "num_turns": 1,
+      "tool_steps": 0,
+      "computer_use": false,
+      "permission_mode": "request-review"
+    },
+    "usage": {
+      "input_tokens": 77394,
+      "output_tokens": 20443,
+      "thinking_tokens": 17467,
+      "total_tokens": 97837
+    },
+    "sample_math_crosschecks": {
+      "survey_rows": 36,
+      "unique_synthetic_case_ids": 36,
+      "annual_invited": 15,
+      "annual_valid": 12,
+      "response_rate": "80%",
+      "q1_q6_pooled_means": {
+        "2023": 3.4861,
+        "2024": 3.5694,
+        "2025": 3.6944
+      },
+      "q7_means": {
+        "2023": 3.5833,
+        "2024": 3.9167,
+        "2025": 4.25
+      },
+      "q7_top2": {
+        "2023": "7/12 = 58.33%",
+        "2024": "10/12 = 83.33%",
+        "2025": "11/12 = 91.67%"
+      },
+      "q2_2025_top2": "9/12 = 75%; >75% target requires at least 10/12 = 83.33%",
+      "q5_means": {
+        "2023": 3.5,
+        "2024": 4,
+        "2025": 4.25
+      },
+      "q8_real_canonical_comments": 0,
+      "q8_example": "explicit synthetic sample only"
+    },
+    "preserved_boundaries": {
+      "candidate_only": true,
+      "real_evidence": "UNKNOWN/HOLD",
+      "formal_acceptance": "NOT_GRANTED",
+      "official_score": "NOT_ASSIGNED"
+    }
+  },
+  "technical_and_visual": {
+    "technical_verdict": "PASS exact candidate SHA",
+    "technical_qa_sha256": "104662cfc195156b7e6c758170f7059e6b8b7a955c07128a9d8cae6a964835fe",
+    "technical_qa_remote_git_blob": "03d46fed4acb72300dbda755d5a4e38e6059ff28",
+    "visual_verdict": "PASS_WITH_NONBLOCKING_LAYOUT_NOTE",
+    "visual_scope": "All 26 Word-native rendered pages inspected; 26-page PDF; minor page-7 bullets continue after break and Appendix 5 table continues on p.26 without repeated header; readable with no clipping or overlap.",
+    "visual_receipt_sha256": "57aabcc665da47b600da1d69d06c0adb1a15b72b7c1b0bff29f6c4fca0b17ca8",
+    "visual_receipt_remote_git_blob": "1cc3b3a80fd7999e03da1f50ca80d902a55eaa4f",
+    "visual_manifest_sha256": "34e5f701beecb9dab260f851b4a50518be9a767891988e39bd1464f095ebd4c2",
+    "visual_manifest_remote_git_blob": "8bf434e414c7fdfd854833058e817d4cf25f2bac",
+    "word_native_pdf": {
+      "sha256": "42cb62c989a5b807bf8090f3bab82ab03359f2265aa01cfc6231e19ba3f9c022",
+      "remote_git_blob": "b8bc3e87aa3124b32e3cab3efef15eecdde70746"
+    },
+    "contact_sheets": [
+      {
+        "file": "contact-01.jpg",
+        "sha256": "a019144ffeb60cf6f9980a5dde345bd934a4ff9be51fd1297c9d6610b76d7e8f",
+        "remote_git_blob": "3346adaea32478246261d32972907c5a076c8a8c"
+      },
+      {
+        "file": "contact-02.jpg",
+        "sha256": "0ab02021b50cf7fea22e514a25193da418684caaff4af8e73e4642689d2d0dfb",
+        "remote_git_blob": "22b29f979652ddc5900dd50e6a6f036744e0baba"
+      },
+      {
+        "file": "contact-03.jpg",
+        "sha256": "16037f0202d73f85f980f140c69842d94fd545330ee99d974f87bb393271b11f",
+        "remote_git_blob": "679a61df96064084dfe5d0c33d674826b3871daf"
+      }
+    ],
+    "historical_readback": {
+      "file": "GITHUB_RAW_READBACK_R11_C1_2.json",
+      "sha256": "046b76d1adce1e63997e6e5a5b9074e32ed99507620330bda5cf9efd9dfb1447",
+      "remote_git_blob": "12159747250922b30e62766338ab4dbc23260df2",
+      "note": "historical state recorded no fresh full-body C1.2 review; superseded by the present exact-SHA full-body W2 review"
+    }
+  },
+  "artifacts": [
+    {
+      "file": "DISPATCH_MANIFEST.json",
+      "local_sha256": "b4d8b5ed837a5aa2dc656071c69e4fea2a492a219f17984ef3af47186862196d",
+      "bytes": 4246,
+      "remote_git_blob": "f84898730fa0b2b9a91b30a646e039eb4644c257",
+      "readback_exact": true
+    },
+    {
+      "file": "AGY_DISPATCH_RECEIPT.json",
+      "local_sha256": "b86f758e0110180e318ac60f4704639f7ffcd02b40a7c80e4bbeb9eb2c9e6a6a",
+      "bytes": 2904,
+      "remote_git_blob": "985b9e724a6ac1ac08b758dc5aead25ed3b5d608",
+      "readback_exact": true
+    },
+    {
+      "file": "INDEPENDENT_REVIEW_PROMPT.txt",
+      "local_sha256": "e88686e8415f43e65dc979255d46d8a21c5f6ff26eca6042d43d74ddc1e599e8",
+      "bytes": 190868,
+      "remote_git_blob": "eee568bd575b48d374fa65a971f26993cd1b610d",
+      "readback_exact": true
+    },
+    {
+      "file": "PUBLIC_REVIEW_RECEIPT_R01.json",
+      "local_sha256": "9dd0ab1446889b0c70f3fc7a80e986991b503bfe3a8fe30ee52c20acc3f61af8",
+      "bytes": 7711,
+      "remote_git_blob": "5b23ed156dd59eddf334a64e54313bd2af468cdc",
+      "readback_exact": true
+    },
+    {
+      "file": "INDEPENDENT_ADJUDICATION_R01.json",
+      "local_sha256": "1bd7063ffd451caa8a510c892b8d17895d9caee80b7ff05643a513aea38c424a",
+      "bytes": 3980,
+      "remote_git_blob": "bcaa4e7dfefee09d41bccc9f4f371b1df70f8964",
+      "readback_exact": true
+    },
+    {
+      "file": "INDEPENDENT_SEMANTIC_REVIEW.json",
+      "local_sha256": "e715b856e7a1d91f4b4123e4bb9de348b4aca81ae50a9ba81106d5f3751c8a53",
+      "bytes": 9054,
+      "remote_git_blob": "0c320d13412808830635d795fda2742bec6a4f3c",
+      "readback_exact": true
+    },
+    {
+      "file": "AGY_RESPONSE.txt",
+      "local_sha256": "191de891b1857bf6b9e7b20d0c116cc4b19820f54591eb295b8be9b4b822ead1",
+      "bytes": 8151,
+      "remote_git_blob": "41e12b991971827abb49daa7eb84af13b9d967d8",
+      "readback_exact": true
+    },
+    {
+      "file": "AGY_STREAM_STDOUT.jsonl",
+      "local_sha256": "c306e1894428e94a78abbdbf50ebd0e1cfa2a759aca3dde40fe46b1546b52984",
+      "bytes": 77029,
+      "remote_git_blob": "260ad84cf8cc3d98fb0ef71636b5097944c7a035",
+      "readback_exact": true
+    },
+    {
+      "file": "AGY_STDERR.txt",
+      "local_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+      "bytes": 78,
+      "remote_git_blob": "0c6fcbb12c652a3f563e0a62515d63434d6281dc",
+      "readback_exact": true
+    }
+  ],
+  "source_mapping": [
+    {
+      "name": "SOURCE_PACKET_0141_I19-E31_R02.md",
+      "local_sha256": "43c0e1bda5dfeb12c1ba8fc8805b876641f5184e4bf95eb4ef6c3182cf8ee964",
+      "remote_git_blob": "a084a8cf1aa8cb4663168ccf1ff1362c6128a2a8"
+    },
+    {
+      "name": "UNIQUE_BLUEPRINT_0141_I19-E31_R02.md",
+      "local_sha256": "e19761674045b2defa7090ba1d8f1224943a89e54811180c20b9ea362de59cda",
+      "remote_git_blob": "68835df9afe0db4d5cbae3a9d4e173c40018ad36"
+    },
+    {
+      "name": "OFFICIAL_REQUIREMENT_ROW_I19-E31.json",
+      "local_sha256": "d18d41bd68b7dc45a78b5c26292cca6ba422902da83d8b7dbed25a7a34af7fb6",
+      "remote_git_blob": "19115f643150b498c6b250ff7e8aff334aa6c4fb"
+    },
+    {
+      "name": "CROSSWALK_ROW_0141_AND_NEIGHBORS.json",
+      "local_sha256": "d09422ce4bca4ff442b1c4fa266c56181c0f4c162d269f9cc02933d45ea4f786",
+      "remote_location": "embedded in exact review prompt; no separate remote file"
+    },
+    {
+      "name": "OFFICIAL_SOURCE_PAGE9_EXCERPT.txt",
+      "local_sha256": "0733c1e3a7fa7b88b79846aabf8667391e032165e78cf9bfc06b7363e71ffe11",
+      "remote_git_blob": "521136e3d6b55e0f5302f94515be4f1038095ba0"
+    },
+    {
+      "name": "SAMPLE_SURVEY_RESPONSES_0141_R01.csv",
+      "local_sha256": "723259199dd51973fc6473ec000234cc853fa1511be05864fdfd7b08bb452862",
+      "remote_git_blob": "2dd959a20838ea094a684b736a92e8db778843c0"
+    },
+    {
+      "name": "SAMPLE_REPLACEMENT_REGISTER_0141_R07_C1_1.csv",
+      "local_sha256": "55f932a8b1dbc27bba002ad076aad6e4c51f47a2166bf09f2736f8dc70cefc37",
+      "remote_git_blob": "43d67c3af1f3cada27fbf01b78ac124bff488b34"
+    },
+    {
+      "name": "BLUEPRINT_157_INDEX_153_TO_156_EXCERPT.txt",
+      "local_sha256": "9cc71e28910043fe20017702ce81f4efc0fbda3af821dfedffb17549f1573734",
+      "remote_git_blob": "29337d89202cd2b1c838696e5dd15c4e731823c7"
+    }
+  ],
+  "remote_sync": {
+    "remote_branch": "work/ttqs-one-document-quality-contract-20261016",
+    "raw_worker_evidence_created": [
+      {
+        "file": "DISPATCH_MANIFEST.json",
+        "commit": "393449309aa025bb9e278a6be1d3b3bad6cf5654"
+      },
+      {
+        "file": "AGY_DISPATCH_RECEIPT.json",
+        "commit": "49b9e34e9e96d84a9aa7ec5da627d63265f083c0"
+      }
+    ],
+    "readback_method": "GitHub Contents API; fetched content text matched local file text; remote blob SHA recorded per artifact",
+    "status": "candidate and all listed audit evidence are on PR branch; formal acceptance remains separate"
+  },
+  "limitations": [
+    "requested model and CLI init model are gemini-3.8-flash-high; actual backend-serving model identity is UNKNOWN.",
+    "the visual review contains nonblocking page-break/table-header notes; no visual defect requiring rebuild was identified.",
+    "no REAL association records, approval/signature, or formal acceptance are claimed.",
+    "review did not modify the DOCX bytes."
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "candidate_identity": {
+    "doc_id": "0051",
+    "requirement_id": "I11-E03",
+    "official_checkbox_sequence": "053",
+    "required_official_text": "各項課程產出均經討論後確認，且留有完整紀錄與主管核定。",
+    "official_text_present": true,
+    "candidate_sha256": "6f575ebb41c6c26b4d6b36262fb4d9a5abdae53cbdc1ff4e75acda46d5f0b495",
+    "candidate_bytes": 56098
+  },
+  "document_structure": {
+    "table_count": 28,
+    "paragraph_count": 99,
+    "body_min_explicit_font_pt": 10.5,
+    "table_min_explicit_font_pt": 9.5,
+    "empty_table_cells": [],
+    "literal_backslash_n_count": 0,
+    "sample_banner_in_header": true,
+    "sample_banner_in_footer": true
+  },
+  "replacement_register": {
+    "rows": 227,
+    "unique_fact_ids": 227,
+    "all_rows_have_locator_and_real_replacement": true,
+    "all_rows_sample_only_unverified": true,
+    "register_sha256": "57da26117ebaf3a517af4fe040d54661ca1021faa1202d19d651b3a51866f707",
+    "register_checks_pass": true
+  },
+  "arithmetic_recalculation": {
+    "agenda_segments_minutes": [
+      10,
+      20,
+      20,
+      15,
+      5,
+      5
+    ],
+    "agenda_sum_minutes": 75,
+    "agenda_expected_minutes": 75,
+    "unit_minutes": [
+      90,
+      90,
+      120,
+      60
+    ],
+    "unit_sum_teaching_minutes": 360,
+    "unit_expected_minutes": 360,
+    "option_weights": [
+      30,
+      25,
+      20,
+      15,
+      10
+    ],
+    "weight_sum": 100,
+    "option_weighted_totals": {
+      "A_slides": 270,
+      "B_scenario_cards": 445,
+      "C_selfstudy_pdf": 365
+    },
+    "maximum_points": 500,
+    "option_percentages": {
+      "A_slides": 54.0,
+      "B_scenario_cards": 89.0,
+      "C_selfstudy_pdf": 73.0
+    },
+    "expected_totals": [
+      270,
+      445,
+      365
+    ],
+    "expected_percentages": [
+      54,
+      89,
+      73
+    ]
+  },
+  "render_visual": {
+    "renderer": "Microsoft Word COM export to PDF; bundled PDFium rasterization at scale 1.7",
+    "pdf_sha256": "a1ea110fa7ba1182947707906b8b3b4d9f56338121c5b7deab1ca560b735711b",
+    "pdf_bytes": 575979,
+    "pdf_pages": 14,
+    "page_png_count": 14,
+    "contact_sheet_count": 4,
+    "manual_full_page_set_visual_check": "PASS - all 14 pages reviewed in four contact sheets",
+    "full_resolution_pages_manually_checked": [
+      6,
+      10
+    ],
+    "visual_findings": "Two located layout issues were corrected before this SHA was fixed: literal backslash-n in six agenda row labels, and wrapping of an action evidence number. The final render shows actual line breaks and one-line dates and 360-minute closure text."
+  },
+  "independent_semantic_review": {
+    "status": "PASS_EXACT_DOCX_SHA",
+    "reviewer": "OpenCode CLI v2.0.29; opencode/deepseek-v4.1-flash-free",
+    "reviewed_docx_sha256": "6f575ebb41c6c26b4d6b36262fb4d9a5abdae53cbdc1ff4e75acda46d5f0b495",
+    "reviewed_register_sha256": "cddc262b205850d9bbdc9297c316d901783b56b66d03d05e3e7af33889d94266",
+    "current_register_sha256": "57da26117ebaf3a517af4fe040d54661ca1021faa1202d19d651b3a51866f707",
+    "current_register_locator_correction": "PASS_DETERMINISTIC_ONLY; not part of semantic reviewer scope",
+    "review_result": "review/opencode_v2_R01/semantic_review_result_R01.md",
+    "review_metadata": "review/opencode_v2_R01/REVIEW_METADATA_R01.json"
+  },
+  "formal_human_acceptance": "NOT_GRANTED",
+  "promotion": "NOT_AUTHORIZED",
+  "overall_technical_visual_result": "PASS"
+}

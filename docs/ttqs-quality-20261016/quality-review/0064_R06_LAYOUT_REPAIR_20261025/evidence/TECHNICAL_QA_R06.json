@@ -1,0 +1,62 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0064",
+  "requirement_id": "I14-E05",
+  "official_checkbox_serial": "069",
+  "candidate_revision": "R06",
+  "candidate_sha256": "7dd39bffc4aa7ac94eeace73bec6135bfd1c9b8c216e2de7579d0cc4c35d2764",
+  "technical_result": "PASS_TARGETED_DELTA",
+  "checks": [
+    {
+      "name": "zip_integrity",
+      "pass": true
+    },
+    {
+      "name": "python_docx_reopen",
+      "pass": true,
+      "tables": 22
+    },
+    {
+      "name": "mapping_and_revision",
+      "pass": true,
+      "document_id": "0064",
+      "requirement_id": "I14-E05",
+      "checkbox": "069",
+      "revision": "R06"
+    },
+    {
+      "name": "body_text_identity",
+      "pass": true,
+      "sha256": "f36d9406f395f0f32416c600b165d0c5810d9040d0c4265e1838e3761b76aedf"
+    },
+    {
+      "name": "only_requested_ooxml_delta",
+      "pass": true,
+      "zip_members_changed": [
+        "word/document.xml"
+      ],
+      "canonical_xml_equal_after_removing_six_keepNext": true
+    },
+    {
+      "name": "table_inventory",
+      "pass": true,
+      "table_count": 22,
+      "target_table_rows": 25,
+      "target_table_columns": 6
+    },
+    {
+      "name": "prior_full_technical_checks_inherited",
+      "pass": true,
+      "source_receipt_sha256": "a34d84c8faf81744b6d38127f03952f28e387f1a15ecc6531319c6d10a7f79b2",
+      "reason": "All content-bearing XML, styles, media and package members are unchanged; visible text and data are identical."
+    },
+    {
+      "name": "sample_real_boundary",
+      "pass": true,
+      "prior_receipt": "R05 technical QA exact source SHA; no text change"
+    }
+  ],
+  "semantic_review": "INHERITED_CONTENT_EQUIVALENCE_ONLY_NOT_FRESH_R06_PASS",
+  "visual_review": "SEE_EXACT_R06_VISUAL_RECEIPT",
+  "formal_acceptance": "NOT_GRANTED"
+}

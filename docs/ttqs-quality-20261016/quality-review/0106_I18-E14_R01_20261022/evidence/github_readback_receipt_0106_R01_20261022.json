@@ -1,0 +1,87 @@
+{
+  "schema": "ttqs-one-github-raw-readback-v1",
+  "observed_at_taipei": "2026-10-22T21:41:35+08:00",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "pull_request": 92,
+  "readback_commit": "8b0d8cf3b299f55dbdf6e551f20cc91fec37aec7",
+  "method": "Fresh PR API head plus raw.githubusercontent.com bytes pinned to immutable commit SHA; SHA-256 recomputed locally",
+  "candidate": {
+    "path": "docs/ttqs-quality-20261016/quality-review/0106_I18-E14_R01_20261022/candidate/0106_I18-E14_R01.docx",
+    "local_sha256": "204bc47e1d7049b872c667a07b1f9fe7d9148bb867ca13b59c89ccaad36d515e",
+    "remote_sha256": "204bc47e1d7049b872c667a07b1f9fe7d9148bb867ca13b59c89ccaad36d515e",
+    "bytes": 351339,
+    "match": true
+  },
+  "receipts": [
+    {
+      "match": true,
+      "local_sha256": "351988e9cbb9d0c6e962957e90f1c289f36c35c119e55ec32d13c3b5edb30bbf",
+      "path": "evidence/technical_qa_receipt_0106_R01.json",
+      "remote_sha256": "351988e9cbb9d0c6e962957e90f1c289f36c35c119e55ec32d13c3b5edb30bbf"
+    },
+    {
+      "match": true,
+      "local_sha256": "6bfba7644b2ace8eb635707fe4de3a165f893e9564b0c82ec11b22169876fff1",
+      "path": "evidence/visual_review_receipt_0106_R01_204bc47e1d70.json",
+      "remote_sha256": "6bfba7644b2ace8eb635707fe4de3a165f893e9564b0c82ec11b22169876fff1"
+    },
+    {
+      "match": true,
+      "local_sha256": "6aba53b55c84c97c8bc20562dc4d2238fc29597de4199723b31acc7da4f124de",
+      "path": "evidence/page_render_manifest_0106_R01_204bc47e1d70.json",
+      "remote_sha256": "6aba53b55c84c97c8bc20562dc4d2238fc29597de4199723b31acc7da4f124de"
+    },
+    {
+      "match": true,
+      "local_sha256": "b81141e22e5963d9879ab6341c887a38e05895296d6192787dd06aee38e1d518",
+      "path": "review/0106_R01_independent_semantic_review_attempt07_response.md",
+      "remote_sha256": "b81141e22e5963d9879ab6341c887a38e05895296d6192787dd06aee38e1d518"
+    },
+    {
+      "match": true,
+      "local_sha256": "ee98dbbf592fdc3ea4fb8dfedc3011b9f1b7544ef30f389918db957977d59162",
+      "path": "evidence/r09_incremental_reconciliation_0106_R01_20261022.json",
+      "remote_sha256": "ee98dbbf592fdc3ea4fb8dfedc3011b9f1b7544ef30f389918db957977d59162"
+    },
+    {
+      "match": true,
+      "local_sha256": "94b44ba1805612f1da7620d1b922db1b1d60471b71e9a26e0b9ff52e57aeb9ad",
+      "path": "visual/0106_R01/full_render_204bc47e1d70/0106-I18-E14-R01.pdf",
+      "remote_sha256": "94b44ba1805612f1da7620d1b922db1b1d60471b71e9a26e0b9ff52e57aeb9ad"
+    }
+  ],
+  "sources": [
+    {
+      "raw_byte_match": true,
+      "local_sha256": "6e39bdeff9c8f0955aca5c382346bdd4d897cb7c1a9d22a4a2e438632b333238",
+      "path": "source/SOURCE_PACKET_0106_I18-E14_R01.md",
+      "remote_sha256": "6e39bdeff9c8f0955aca5c382346bdd4d897cb7c1a9d22a4a2e438632b333238"
+    },
+    {
+      "raw_byte_match": true,
+      "local_sha256": "dad70f1d1772ed20636d50956e3464aa9ac6918df242f7f11cb5a12f0b63a97d",
+      "path": "source/UNIQUE_BLUEPRINT_0106_I18-E14_R01.md",
+      "remote_sha256": "dad70f1d1772ed20636d50956e3464aa9ac6918df242f7f11cb5a12f0b63a97d"
+    },
+    {
+      "raw_byte_match": true,
+      "local_sha256": "f40f1d00b238e72b225e467970d54aeb8d6cfbd75964f48397f80aa94d2454f7",
+      "path": "source/crosswalk_row_0106_I18-E14.csv",
+      "remote_sha256": "f40f1d00b238e72b225e467970d54aeb8d6cfbd75964f48397f80aa94d2454f7"
+    },
+    {
+      "remote_sha256": "8e0fab9fb67153d0004d6af0b73c6f753552a404dc4bbe57e1024e1343a01f46",
+      "path": "source/official_requirement_page7.txt",
+      "normalized_line_content_match": true,
+      "local_sha256": "f8e21ea6edce71760c9f7cdff582b819e8823affb5328ddaf9fa0f01d7ce6e8a",
+      "difference": "Line-ending/encoding byte representation only; Compare-Object found no changed text lines.",
+      "raw_byte_match": false
+    }
+  ],
+  "overall_readback": "PASS_FOR_LISTED_ARTIFACTS_AND_SOURCE_TEXT",
+  "semantic_review_scope": "PASS_TEXT_SEMANTIC_ONLY",
+  "visual_scope": "PASS_29_PAGE_CONTACT_SHEETS_PLUS_8_NATIVE_PAGES",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN_UNTIL_RECEIVED"
+}

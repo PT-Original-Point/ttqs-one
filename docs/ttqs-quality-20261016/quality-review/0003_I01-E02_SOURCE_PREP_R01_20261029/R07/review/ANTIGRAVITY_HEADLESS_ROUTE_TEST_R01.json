@@ -1,0 +1,40 @@
+{
+  "schema": "ttqs-one-antigravity-headless-route-check-v1",
+  "work_id": "TTQS-AGY-HEADLESS-AUTH-CHECK-20261029-204710",
+  "worker": "Antigravity CLI",
+  "windows_user": "DESKTOP-VMV4Q60\\J",
+  "cli_path": "C:\\Users\\J\\AppData\\Local\\agy\\bin\\agy.exe",
+  "cli_version": "1.4.10",
+  "model_catalog_has_exact_requested_model": true,
+  "requested_model": "gemini-3.8-flash-high",
+  "test_mode": "hidden noninteractive; plan requested; sandbox; no tools requested; no permission bypass; isolated working directory",
+  "attempts": [
+    {
+      "attempt": "preflight syntax",
+      "exit_code": 2,
+      "classification": "NOT_DISPATCHED_INVALID_DURATION_UNIT",
+      "model_call_made": false,
+      "stderr_sha256": "B2DED5897F9DDD395783C94DE78BBDABE7EFD5A3891D14768E7B22D02B18B381"
+    },
+    {
+      "attempt": "corrected bounded text",
+      "exit_code": 0,
+      "classification": "EXACT_OK",
+      "model_call_made": true,
+      "stdout_sha256": "AD469F03757A9AC0FF6DAA4CDE3C4AFED963F91F7D2F7C3C8C50FE186BA61E84",
+      "stderr_sha256": "3A7F8550106D86ABB322E8ED0FB30A0296C0E97C6BE03D5A8033B99D16737459",
+      "stdout_bytes": 16
+    }
+  ],
+  "actual_served_model": "UNKNOWN",
+  "provider_attestation": "UNKNOWN",
+  "result": "HEADLESS_TEXT_ROUTE_RESPONDED_AT_TEST_TIME",
+  "observed_at": "2026-10-29T20:47:20+08:00",
+  "exact_test_prompt": "Reply with exactly AGY_HEADLESS_OK. Do not use tools.",
+  "exact_model_argument": "--model gemini-3.8-flash-high",
+  "cli_arguments_summary": "--model gemini-3.8-flash-high --mode plan --sandbox --disable-slash-commands -p <exact_test_prompt> --output-format text --print-timeout 25s",
+  "plan_mode_effective": false,
+  "plan_mode_warning": "CLI reported plan mode has no effect while slash command expansion is disabled; the test itself requested no tools and made no file or external edits.",
+  "duration_seconds": "UNKNOWN_NOT_CAPTURED",
+  "process_pid": "UNKNOWN_NOT_CAPTURED"
+}

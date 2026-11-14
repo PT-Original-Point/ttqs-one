@@ -1,0 +1,91 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0064",
+  "requirement_id": "I14-E05",
+  "official_checkbox_serial": "069",
+  "candidate_revision": "R05",
+  "candidate_path": "E:\\TTQS\\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\\docs\\ttqs-quality-20261016\\quality-review\\0064_R01\\candidate\\0064_R05.docx",
+  "candidate_sha256": "54888e13f954478051a49839d8b67ff845992c72811e41e09d90045e512c69e1",
+  "checks": [
+    {
+      "check": "exact_mapping",
+      "pass": true,
+      "detail": "DOCX 0064 / I14-E05 / official checkbox 069 present"
+    },
+    {
+      "check": "candidate_disclaimer",
+      "pass": true,
+      "detail": "candidate and non-real-test boundary present in footer/body"
+    },
+    {
+      "check": "internal_version_matches_candidate",
+      "pass": true,
+      "detail": "document version field=['R05']; candidate revision=R05"
+    },
+    {
+      "check": "table_inventory",
+      "pass": true,
+      "detail": "tables=22; catalog=12; conditions=16; timings=24; register_raw=24; replacement_map=12"
+    },
+    {
+      "check": "body_font_floor",
+      "pass": true,
+      "detail": "min_body_run_pt=10.5; runs_below_10.5pt=0; tables separately require >=9.5pt"
+    },
+    {
+      "check": "chart_embedded",
+      "pass": true,
+      "detail": "inline chart images=1"
+    },
+    {
+      "check": "no_embedded_sha",
+      "pass": true,
+      "detail": "no engineering SHA in human-facing body"
+    },
+    {
+      "check": "restricted_code_absent",
+      "pass": true,
+      "detail": "restricted category code absent"
+    },
+    {
+      "check": "raw_pairs_and_saved_seconds",
+      "pass": true,
+      "detail": "folder_n=24 index_n=24 saved_n=24; every saved value equals folder-index"
+    },
+    {
+      "check": "statistics_recomputed",
+      "pass": true,
+      "detail": "{\"folder\": {\"sum\": 2442, \"mean\": 101.75, \"median\": 95.5, \"p90_rank\": 22, \"p90\": 137, \"max\": 156, \"no_hit\": 2, \"hold\": 2}, \"index\": {\"sum\": 783, \"mean\": 32.625, \"median\": 28.5, \"p90_rank\": 22, \"p90\": 47, \"max\": 62, \"no_hit\": 0, \"hold\": 2}}"
+    },
+    {
+      "check": "aggregate_recomputed",
+      "pass": true,
+      "detail": "saved_sum=1659; total_reduction_pct=67.9361; mean_saved=69.125"
+    },
+    {
+      "check": "twelve_task_cards",
+      "pass": true,
+      "detail": "distinct task IDs=['T01', 'T02', 'T03', 'T04', 'T05', 'T06', 'T07', 'T08', 'T09', 'T10', 'T11', 'T12']"
+    },
+    {
+      "check": "restricted_A08_row_safe",
+      "pass": true,
+      "detail": "M08 row returns only ID + HOLD + H-0062-0001; protected artifact version/content/path remain undisclosed in query fields"
+    },
+    {
+      "check": "no_real_execution_claim",
+      "pass": true,
+      "detail": "sample and synthetic boundaries explicitly state no real execution"
+    },
+    {
+      "check": "rendered_page_count",
+      "pass": true,
+      "detail": "Word COM render binds exact candidate to 28 page images"
+    }
+  ],
+  "technical_result": "PASS",
+  "semantic_review": "PENDING",
+  "visual_review": "PENDING",
+  "formal_acceptance": "NOT_GRANTED",
+  "generated_local": "2026-10-18T21:42:01.001502+08:00"
+}

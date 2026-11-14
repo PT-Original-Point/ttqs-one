@@ -1,0 +1,58 @@
+{
+  "schema": "TTQS_ONE_0124_R02_REVIEW_ROUTE_DELTA_V1",
+  "project_id": "TTQS_ONE",
+  "observed_at_local": "2026-10-27T14:55:52.9441343+08:00",
+  "doc_id": "0124",
+  "requirement_id": "I19-E12",
+  "candidate_sha256": "5ea20da675395954e5587859ddc3ca4b483abaeff90509a86c66950581afec07",
+  "candidate_unchanged": true,
+  "semantic_status": "PENDING_NO_REVIEW_ARTIFACT",
+  "attempts": [
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "result": "429 provider.free-limit before inference",
+      "model_identity": "SESSION_SELECTED_MODEL_CONFIRMED; INFERENCE_MODEL_UNKNOWN_NO_RESPONSE",
+      "at_local": "2026-10-27T13:57:18+08:00",
+      "retry_after_ms": 64963000,
+      "selected_session_model_id": "deepseek-v4.1-flash-free",
+      "inference_served_model": "UNKNOWN_NO_GENERATED_RESPONSE"
+    },
+    {
+      "model": "opencode/glm-5.3-flash-free",
+      "result": "429 provider.free-limit before inference",
+      "model_identity": "SESSION_SELECTED_MODEL_CONFIRMED; INFERENCE_MODEL_UNKNOWN_NO_RESPONSE",
+      "at_local": "2026-10-27T14:54:42.197+08:00",
+      "retry_after_ms": 61518000,
+      "selected_session_model_id": "glm-5.3-flash-free",
+      "inference_served_model": "UNKNOWN_NO_GENERATED_RESPONSE"
+    }
+  ],
+  "free_model_report": {
+    "sha256": "ff3ca9886e3a345d78be358b2883296b7e5454408d23bc940fee239ba826c900",
+    "used_as": "routing_context_only",
+    "global_status_does_not_prove_account_level_inference": true
+  },
+  "usage": "Session exports report zero tokens for both attempts; CLI stream reported no usage",
+  "cost": "CLI_SESSION_REPORTED_0; UPSTREAM_BILLING_UNKNOWN",
+  "fallback": false,
+  "computer_use": false,
+  "candidate_rebuilt": false,
+  "existing_qa": {
+    "technical": "PASS",
+    "visual": "PASS_WITHIN_RECORDED_14_PAGE_SCOPE",
+    "semantic": "PENDING_QUOTA_BLOCKED",
+    "human_acceptance": "NOT_GRANTED",
+    "real": "NOT_PROVIDED"
+  },
+  "wrapper": {
+    "warning": "Outer PowerShell Test-Path guard had a nonfatal LiteralPath parameter-binding error; CLI continued after directory creation.",
+    "effect": "No candidate mutation and no model response; correct guard syntax before future use."
+  },
+  "disposition": {
+    "route": "OpenCode free-provider inference denied for the two explicitly attempted models in these attempts",
+    "scope": "Do not generalize to every model or future availability; do not repeat identical inputs before provider estimates/new availability evidence.",
+    "next": "Keep 0124 as candidate with semantic review pending; continue unrelated READY work."
+  },
+  "session_reported_cost_usd": 0,
+  "upstream_billing": "UNKNOWN"
+}

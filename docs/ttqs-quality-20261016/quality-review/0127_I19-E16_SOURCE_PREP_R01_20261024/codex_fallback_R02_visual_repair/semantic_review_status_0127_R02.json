@@ -1,0 +1,110 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0127",
+  "official_requirement": "I19-E16",
+  "candidate_sha256": "abba46bcdd0919c4511df025cd90d65cd302fe3f9f59c86d0fa8b7efe2015285",
+  "review_packet_sha256": "74e363927d57ba75cea8b62c26ede11900f92d3d4710599b0a5bbe7602705d49",
+  "work_id": "TTQS_ONE_0127_R02_FULL_SEMANTIC_REVIEW_W2_GEMINI_20261109",
+  "reviewer": "Antigravity CLI v1.5.3",
+  "requested_model": "gemini-3.8-flash-high",
+  "actual_serving_model": "UNKNOWN_NO_PROVIDER_ATTESTATION",
+  "dispatch_terminal": {
+    "exit_code": 0,
+    "status": "COMPLETE",
+    "timed_out": false,
+    "duration_seconds": 58.0420696,
+    "session_id": "a539d05d-14c3-4529-9e5f-fbfe9e38172a",
+    "token_usage": {
+      "input_tokens": 30950,
+      "output_tokens": 8865,
+      "thinking_tokens": 7918,
+      "cache_read_tokens": 0,
+      "total_tokens": 39815
+    },
+    "reported_cost": "UNKNOWN"
+  },
+  "provider_response": {
+    "type": "provider.free-limit",
+    "http_status": 429,
+    "message": "Free usage limit reached",
+    "retry_after_ms": 47951000,
+    "raw_stdout_sha256": "0a8ec8a80c55ce79582c47db720843fbcd9b1e8b3be1822fbb1b9c764afdade1",
+    "raw_stdout_bytes": 528
+  },
+  "fallback_attempted": false,
+  "review_content_returned": false,
+  "status": "PASS_TEXT_ONLY",
+  "verdict": "PASS_TEXT_ONLY",
+  "limitations": [
+    "Text-only PASS applies to this candidate SHA.",
+    "Word-native visual review remains blocked.",
+    "Serving model and cost are unknown.",
+    "Formal acceptance and REAL evidence were not granted."
+  ],
+  "prior_attempts": [
+    {
+      "work_id": "TTQS-0127-I19-E16-R02-W1-OPENCODE-GLM53-FREE-EXACT-SHA-SEMANTIC-REVIEW",
+      "reviewer": "OpenCode v2.1.4 CLI",
+      "requested_model": "opencode/glm-5.3-flash-free",
+      "actual_serving_model": "UNKNOWN",
+      "dispatch_terminal": {
+        "exit_code": 1,
+        "elapsed_seconds": 1.4,
+        "status": "FAILED"
+      },
+      "provider_response": {
+        "type": "provider.free-limit",
+        "http_status": 429,
+        "message": "Free usage limit reached",
+        "retry_after_ms": 47951000,
+        "raw_stdout_sha256": "0a8ec8a80c55ce79582c47db720843fbcd9b1e8b3be1822fbb1b9c764afdade1",
+        "raw_stdout_bytes": 528
+      },
+      "fallback_attempted": false,
+      "review_content_returned": false,
+      "status": "BLOCKED_PROVIDER_FREE_LIMIT",
+      "verdict": "NO_VERDICT",
+      "limitations": [
+        "No semantic PASS or FAIL was returned.",
+        "No alternate model retry was attempted after the provider-wide free-limit response.",
+        "Requested model is known; actual serving-model identity is not independently attested."
+      ]
+    }
+  ],
+  "review_scope": "INDEPENDENT_FULL_DOCUMENT_TEXT_ONLY",
+  "response_sha256": "7fa49273aab03e4deb0a03e990026bac2403bffa9c9e9039487d425a88906cbb",
+  "checks": {
+    "requirement_and_genre": "PASS",
+    "operational_usability": "PASS",
+    "calculations_and_cross_references": "PASS",
+    "sample_real_boundary": "PASS",
+    "title_blind_and_negative_neighbors": "PASS"
+  },
+  "findings": [
+    {
+      "severity": "nonblocking",
+      "locator": "Section 7 / Table 6",
+      "evidence": "角色/期限標示為「市場資料承辦(待指派)」、「核定後」等",
+      "impact": "符合合成示範文件規範，未假造機構真實人事指派；升級真實佐證時需填入協會正式權責人員與核定時程",
+      "required_action": "none"
+    },
+    {
+      "severity": "nonblocking",
+      "locator": "Section 4 / Table 3A & Table 4",
+      "evidence": "0.75/3.25=23.08%",
+      "impact": "正文採兩位小數（+23.08%），來源包敘述採一位小數（+23.1%），兩者算術基礎完全一致且無矛盾",
+      "required_action": "none"
+    }
+  ],
+  "visual_review": "NOT_PERFORMED",
+  "visual_lane_status": "BLOCKED_WORD_NATIVE_RENDER",
+  "real_evidence_verified": false,
+  "formal_acceptance": "NOT_GRANTED",
+  "source_pins": {
+    "candidate_body_text_sha256": "57f94b9f7f605e2d05903871bea9ec0a897b3737cc696f9924b0bf600a271554",
+    "source_packet_sha256": "058663e200fd0207196c08a02e4d159c6e3eaa7f167094cd7b409b4050b18675",
+    "unique_blueprint_sha256": "9a249a2e398407469bd82c9bf5d7a6188c9e3d28be79172bd4cc33b213c700ff",
+    "input_packet_sha256": "3a250d9324fff24b64abffe1fee9d5d5111ca2b5e8feeb15cf6563e6a3c593be"
+  },
+  "updated_at_local": "2026-11-09T02:54:18+08:00"
+}

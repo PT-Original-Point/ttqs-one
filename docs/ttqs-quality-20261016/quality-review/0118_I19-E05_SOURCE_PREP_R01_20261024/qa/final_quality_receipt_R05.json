@@ -1,0 +1,83 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0118",
+  "requirement_id": "I19-E05",
+  "internal_blueprint_index": 129,
+  "official_printed_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+  "candidate_state": "CANDIDATE",
+  "formal_acceptance": "NOT_GRANTED",
+  "candidate": {
+    "path": "candidate/0118__感謝函原件收存與核驗登錄表_R05.docx",
+    "sha256": "aa6ee02e2b3ae7c0ef06e74cad6333f2ddcc3bc306651f4e3e5694ecf5838707",
+    "bytes": 54957
+  },
+  "purpose": "Register and operational controls for receiving, verifying, storing, tracking and returning an actual third-party thank-you letter original; not the thank-you request letter or a fabricated original.",
+  "source_mapping": {
+    "crosswalk_sha256": "1ddfbb608bcad25170683ddb42a1dbb27bafa6f1f35ff0498f1b8d75b24f0679",
+    "blueprint_seed_sha256": "280783e0df4dc0b7aaaf4a8fbe826bc65e9ed9c683146eea1dfd25c0ae1c92e0",
+    "official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "official_page8_excerpt_sha256": "57c6b33d70b665bd41b8d58ff58f5c0d78f9c2c751ccd9c6dd1b740b2fbf374e",
+    "official_page": 8,
+    "current_github_blueprint_blob": "8c2bbe7ca9dcbb03088a48934b9e57e7147ede63",
+    "source_commit": "6225298b40dab2d439848ad881da63c2dd07c915",
+    "printed_checkbox": "UNKNOWN_NOT_ASSERTED"
+  },
+  "content_and_boundary": {
+    "real_thank_you_letter_supplied": false,
+    "real_third_party_identity_or_signature_present": false,
+    "association_approval_or_decision_asserted": false,
+    "synthetic_dataset_and_examples_labeled": true,
+    "replacement_register_included": true,
+    "neighbor_distinction": "0092 is a draft/request for a thank-you letter; 0118 is custody and verification of a received original."
+  },
+  "qa": {
+    "technical": {
+      "status": "PASS",
+      "scope": "DOCX package integrity/reopen, body extraction and required text controls, 25 tables/166 rows, selected OOXML grid-width and autofit checks",
+      "receipt_sha256": "a0dc16e53d20e17b0687136b551842c1b5b1881d187f474961837dee144656f6",
+      "warnings": []
+    },
+    "visual": {
+      "status": "PASS",
+      "method": "Microsoft Word COM PrintOut to Microsoft Print to PDF; rendered PNGs with pypdfium2 scale 1.65",
+      "pages": 11,
+      "all_pages_inspected": true,
+      "pdf_sha256": "9111274aa0b3932b43d4ceab6d42a27dae8cde3e6a155962715103e9ebd5e9e0",
+      "render_manifest_sha256": "93c04d38df892c9b9521469e2950dae6c3671752b0cb977b7009652762dab024",
+      "receipt_sha256": "02d344c32f228b004079aa8a64baa5e3b90e2b068851dd7241c9cd6fb3210bb9",
+      "scope": "All 11 rendered page images visually inspected; reviewer did not perform visual review."
+    },
+    "semantic": {
+      "status": "PASS",
+      "reviewer": "OpenCode v2 CLI plan agent, separate from Builder",
+      "requested_model": "opencode/glm-5.3-flash-free",
+      "session_model_metadata": {
+        "id": "glm-5.3-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "actual_upstream_serving_model": "UNKNOWN",
+      "provider_account_billing": "UNKNOWN (session reports cost 0 only)",
+      "reviewed_candidate_sha256": "aa6ee02e2b3ae7c0ef06e74cad6333f2ddcc3bc306651f4e3e5694ecf5838707",
+      "reviewer_recomputed_sha": false,
+      "reviewer_final_response_sha256": "a393ba54616fe4ac604b3d02cd4ff06309e5e2086cde74b7e0aee42dd4d04cc8",
+      "receipt_sha256": "1160758c66141040c6b37560c8a731508a56efdafe2fb20cc15e8a4608707498",
+      "limitations": [
+        "No visual inspection by reviewer.",
+        "Reviewer did not recompute DOCX or body SHA; values were accepted from the supplied packet.",
+        "No REAL original, third-party identity, receipt, approval or association decision.",
+        "Formal acceptance NOT_GRANTED."
+      ]
+    },
+    "arithmetic": "No performance totals or outcome ratios are asserted; form-level sample is synthetic."
+  },
+  "R05_repairs": [
+    "R04-to-R05: synchronized OOXML grid widths and row cell widths in table 2.",
+    "R04-to-R05: restarted section 7.1 sequence at (1)-(4).",
+    "R03 layout defects already repaired in R04 and retained: black title/headings, no title rule, intact notice/table heading, wrapped long identifiers."
+  ],
+  "not_inherited": [
+    "Older R02 semantic PASS and older renders do not transfer to R05; this receipt binds each R05 check to R05 exact SHA."
+  ],
+  "created_at_local": "2026-10-24T08:40:00+08:00"
+}

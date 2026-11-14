@@ -1,0 +1,163 @@
+{
+  "receipt_id": "TTQS_ONE_R09_WORKER_24H_RECONCILIATION_20261022T1636",
+  "observed_at_tpe": "2026-10-22T16:37:13+08:00",
+  "window_start_tpe": "2026-10-21T16:37:13+08:00",
+  "window_end_tpe": "2026-10-22T16:37:13+08:00",
+  "open_code": {
+    "native_ttqs_session_rows": 42,
+    "exact_cli_invocation_count": "UNKNOWN; SQLite session rows are not a complete OS invocation ledger",
+    "model_session_counts": {
+      "opencode/deepseek-v4.1-flash-free": 26,
+      "opencode/glm-5.3-flash-free": 2,
+      "opencode/mimo-v2.6-flash-free": 14
+    },
+    "native_usage_aggregate": {
+      "tokens_input": 2272225,
+      "tokens_output": 419472,
+      "tokens_reasoning": 717091,
+      "tokens_cache_read": 9961856,
+      "tokens_cache_write": 0,
+      "cost": 0
+    },
+    "actual_serving_model": "UNKNOWN; selected route fields are not provider-side serving attestations",
+    "billing": "native DB cost is 0.0; provider billing UNKNOWN",
+    "known_current_work": {
+      "0105_R07_writer_attempts": 3,
+      "0105_R07_adopted_complete_manuscripts": 1,
+      "0105_R07_incomplete_nonadopted_returns": 1,
+      "0105_R07_syntax_failure_before_session": 1,
+      "0105_R07_semantic_review": "succeeded, exact candidate SHA semantic PASS",
+      "0102_R06_semantic_review": {
+        "session_id": "ses_e9d40afceffe7ErzglGTTF0a2g",
+        "status": "RUNNING",
+        "session_usage": [
+          {
+            "id": "ses_e9d40afceffe7ErzglGTTF0a2g",
+            "title": "Semantic review of doc 0102 I18-E09",
+            "model_selected": {
+              "id": "mimo-v2.6-flash-free",
+              "providerID": "opencode"
+            },
+            "input": 31786,
+            "output": 17,
+            "reasoning": 111,
+            "cache_read": 0,
+            "local_cost": 0.0,
+            "idle_outcome": null
+          }
+        ]
+      }
+    },
+    "current_model_selected_for_new_review": "opencode/mimo-v2.6-flash-free"
+  },
+  "antigravity": {
+    "retained_cli_attempt_count": 4,
+    "unlogged_invocations": "UNKNOWN",
+    "attempt_outcome_counts": {
+      "exit_2_no_output": 1,
+      "permission_denied_no_output_exit_unknown": 1,
+      "exit_0_response_returned": 1,
+      "success_response_outer_exit_unknown": 1
+    },
+    "returned_response_count": 2,
+    "reported_response_tokens_total": 93983,
+    "confirmed_gemini_serving_count": 0,
+    "CCPA_fallback_observed_count": 2,
+    "writer_dispatches_in_window": 0,
+    "provider_quota_delta": "UNKNOWN",
+    "provider_billing": "UNKNOWN",
+    "current_route_status": "BLOCKED_FOR_NEW_MODEL_DISPATCH: local model config resolves Gemini request to CCPA and CLI logs report unauthenticated",
+    "attempts": [
+      {
+        "attempt_id": "0105-R04-retry01",
+        "doc_id": "0105",
+        "task": "semantic review",
+        "started_at_tpe": "2026-10-22T05:09:26+08:00",
+        "requested_model": "gemini-3.8-flash-high",
+        "cli_exit_code": 2,
+        "stdout_bytes": 0,
+        "result": "parser rejected --print-timeout=180 because it lacked a duration unit; no returned response",
+        "native_conversation_id": "NONE_RECORDED",
+        "cli_pid": "UNKNOWN",
+        "evidence_hashes": {
+          "antigravity_semantic_review_0105_R04_receipt.json": "4e482d89f4893dab34a751d1b6b7b3d03d5d6035e12168ec9f3a50f28911c61c",
+          "antigravity_semantic_review_0105_R04_stdout.json": "f80b2e8237063208a750748a746987e5a2a1989d013e7e1cc06023d911d214cb",
+          "antigravity_semantic_review_0105_R04_retry01_stderr.txt": "6ad756a6651d5814d3c24fb9897a923408b322de086f3673826cfc297aea4ce2",
+          "antigravity_semantic_review_0105_R04_retry01_exit_code.txt": "df4e26a04a444901b95afef44e4a96cfae34690fff2ad2c66389c70079cdff2b"
+        }
+      },
+      {
+        "attempt_id": "0105-R04-main",
+        "doc_id": "0105",
+        "task": "semantic review of historical R04 candidate",
+        "started_at_tpe": "2026-10-22T05:11:12+08:00",
+        "completed_at_tpe": "2026-10-22T05:12:28+08:00",
+        "requested_model": "gemini-3.8-flash-high",
+        "cli_exit_code": 0,
+        "response_status": "SUCCESS",
+        "response_tokens": 46557,
+        "native_conversation_id": "f6e00140-2f41-4735-970d-5ea804b6a2e2",
+        "reviewed_candidate_sha256": "17f7d680cbb992db93a6f67df84415500050953eecf426b477f675810177b4cb",
+        "actual_model": "UNKNOWN",
+        "adoption": "semantic PASS for historical R04 SHA only; not reusable on R07",
+        "evidence_hashes": {
+          "antigravity_semantic_review_0105_R04_receipt.json": "4e482d89f4893dab34a751d1b6b7b3d03d5d6035e12168ec9f3a50f28911c61c",
+          "antigravity_semantic_review_0105_R04_stdout.json": "f80b2e8237063208a750748a746987e5a2a1989d013e7e1cc06023d911d214cb",
+          "antigravity_semantic_review_0105_R04_retry01_stderr.txt": "6ad756a6651d5814d3c24fb9897a923408b322de086f3673826cfc297aea4ce2",
+          "antigravity_semantic_review_0105_R04_retry01_exit_code.txt": "df4e26a04a444901b95afef44e4a96cfae34690fff2ad2c66389c70079cdff2b"
+        }
+      },
+      {
+        "attempt_id": "0106-R01-attempt01",
+        "doc_id": "0106",
+        "task": "semantic review",
+        "started_at_tpe": "2026-10-22T05:59:14+08:00",
+        "requested_model": "gemini-3.8-flash-high",
+        "cli_exit_code": "UNKNOWN_NOT_CAPTURED",
+        "stdout_bytes": 0,
+        "cli_pid": "UNKNOWN",
+        "native_conversation_id": "NONE_CAPTURED",
+        "result": "headless command permission auto-denied; CLI log says requested model absent from config and defaulting to CCPA, and reports not logged in to Antigravity",
+        "model_resolution": "CCPA fallback observed; no usable response",
+        "evidence_hashes": {
+          "antigravity_semantic_review_0106_R01_cli.log": "5da14d029e607ea45963d24b9126f97b479ec194f0df0ef3503d23b42ea16b42",
+          "antigravity_semantic_review_0106_R01_stderr.txt": "ca7a482730a0d566f91155ae9ba897a5fa431b55e7e750992acccc8ea8b1dcbc",
+          "antigravity_semantic_review_0106_R01_stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "antigravity_semantic_review_0106_R01_attempt02_cli.log": "316eabd75da60a155ded10fee8c1115c7e1c12b3f172e375342321f5896ecb7a",
+          "antigravity_semantic_review_0106_R01_attempt02_stdout.json": "9c9d8e079b4455e34635df974e2b3eda1f91e70814fef347cf0849ab7e4bcdf6",
+          "antigravity_semantic_review_0106_R01_attempt02_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      {
+        "attempt_id": "0106-R01-attempt02",
+        "doc_id": "0106",
+        "task": "semantic review of candidate 204bc47e...",
+        "started_at_tpe": "2026-10-22T06:01:23+08:00",
+        "completed_at_tpe": "2026-10-22T06:03:16+08:00",
+        "requested_model": "gemini-3.8-flash-high",
+        "cli_exit_code": "UNKNOWN_NOT_CAPTURED",
+        "response_status": "SUCCESS",
+        "response_tokens": 47426,
+        "cli_pid": "UNKNOWN",
+        "native_conversation_id": "ca077130-fe26-4b17-a7bc-3cb3ba49c5ef",
+        "reviewed_candidate_sha256": "ff019256f77dad59b4c0547c223ae28d90727836ed300f4ad83e82d9d0654bbe",
+        "model_resolution": "CLI log explicitly defaults to CCPA; also reports not logged in to Antigravity",
+        "adoption": "review text exists but not counted as a verified Gemini result",
+        "evidence_hashes": {
+          "antigravity_semantic_review_0106_R01_cli.log": "5da14d029e607ea45963d24b9126f97b479ec194f0df0ef3503d23b42ea16b42",
+          "antigravity_semantic_review_0106_R01_stderr.txt": "ca7a482730a0d566f91155ae9ba897a5fa431b55e7e750992acccc8ea8b1dcbc",
+          "antigravity_semantic_review_0106_R01_stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "antigravity_semantic_review_0106_R01_attempt02_cli.log": "316eabd75da60a155ded10fee8c1115c7e1c12b3f172e375342321f5896ecb7a",
+          "antigravity_semantic_review_0106_R01_attempt02_stdout.json": "9c9d8e079b4455e34635df974e2b3eda1f91e70814fef347cf0849ab7e4bcdf6",
+          "antigravity_semantic_review_0106_R01_attempt02_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    ]
+  },
+  "risk_controls": [
+    "No Computer Use.",
+    "No permission-bypass flag used.",
+    "No new Antigravity dispatch after fallback evidence.",
+    "No claim that a requested model equals the serving model."
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS_ONE_0121_R03_OPENCODE_GLM_EXACT_SHA_REVIEW_R14",
+  "doc_id": "0121",
+  "requirement_id": "I19-E09",
+  "pid": 91332,
+  "session_id": "ses_e73c78b9bffefJhzE8jgelNxF6",
+  "cli_exit_code": 0,
+  "timed_out": false,
+  "started_local": "2026-10-30T17:51:12.236056+08:00",
+  "finished_local": "2026-10-30T17:53:46.386973+08:00",
+  "duration_seconds": 154.151,
+  "stdout_bytes": 6741,
+  "stdout_sha256": "8658499a8ca3bf98ab0813cc6d5b42439783280089c91139a61f9a0516e8126b",
+  "stderr_bytes": 0,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "requested_model": "opencode/glm-5.3-flash-free",
+  "session_selected_model": "opencode/glm-5.3-flash-free",
+  "actual_serving_model": "UNKNOWN",
+  "candidate_sha256_before": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+  "candidate_sha256_after": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+  "semantic_verdict": "PENDING_OUTPUT_PARSE",
+  "tokens": {
+    "input": 25118,
+    "output": 1837,
+    "reasoning": 8316,
+    "cache": {
+      "read": 0,
+      "write": 0
+    }
+  },
+  "session_outcome": "succeeded",
+  "session_cost_usd": 0,
+  "raw_response_text_sha256": "5d05a03cedd3df6a2176f6e2163a2986c64a917173c402b7b7ba31e5dafe8941",
+  "raw_stdout_sha256": "8658499a8ca3bf98ab0813cc6d5b42439783280089c91139a61f9a0516e8126b",
+  "response_machine_parse": "FAIL_INVALID_JSON",
+  "reviewer_reported_verdict": "PASS",
+  "review_scope_reconciliation": "PARTIAL",
+  "reconciliation_reason": "The response claims PASS but explicitly leaves typography/rendering UNKNOWN, omits Blueprint sections 6 and 11 from packet coverage, and lists NBL-02 through NBL-05 requiring candidate-specific completeness/traceability adjudication. No formal acceptance is granted.",
+  "nonblocking_finding_ids": [
+    "NBL-01",
+    "NBL-02",
+    "NBL-03",
+    "NBL-04",
+    "NBL-05"
+  ],
+  "candidate_unchanged": true
+}

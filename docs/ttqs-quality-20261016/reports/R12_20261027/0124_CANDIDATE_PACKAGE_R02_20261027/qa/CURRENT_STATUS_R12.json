@@ -1,0 +1,141 @@
+{
+  "schema": "TTQS_ONE_DOC_CURRENT_STATUS_R12_V1",
+  "observed_at_local": "2026-10-27T16:07:26.374890+08:00",
+  "project_id": "TTQS_ONE",
+  "github_repo": "PT-Original-Point/ttqs-one",
+  "pull_request": 92,
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "doc_id": "0124",
+  "requirement_id": "I19-E12",
+  "official_printed_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+  "candidate_state": "CANDIDATE",
+  "candidate": {
+    "path": "reports/R12_20261027/0124_CANDIDATE_PACKAGE_R02_20261027/candidate/0124_I19-E12_R02_candidate.docx",
+    "sha256": "5ea20da675395954e5587859ddc3ca4b483abaeff90509a86c66950581afec07",
+    "git_blob_sha1": "319283191b9d51568b7a148a3611c8c0f780235e",
+    "bytes": 60468
+  },
+  "source_packet_sha256": "83a03deb7cbef3f07ef8b7ce0b2b25e1744baa6bc2e96b29e3259453558ccfee",
+  "unique_blueprint_sha256": "d0d8b0990d96fb7dab5d02a34d9f507b6434e57778646c920c488f01c1ab0f42",
+  "quality": {
+    "technical": {
+      "status": "PASS",
+      "receipt": "qa/TECHNICAL_QA_R02.json",
+      "receipt_sha256": "38c151ee435d9f730f4754d1d1e8942b6d084d131d494dc3784e8abb9ca76ba8",
+      "scope": "69 paragraphs, 16 tables, body >=10.5pt, table >=9.5pt, 30 SAMPLE register entries, deterministic structure/content checks"
+    },
+    "visual": {
+      "status": "PASS_PER_EXISTING_RECEIPT",
+      "receipt": "qa/VISUAL_QA_R02.json",
+      "receipt_sha256": "e1648f48f04513c84fb131bf0199d51090f5524a5f057f37a2e9c7f24c1735f6",
+      "page_count": 14,
+      "candidate_sha256": "5ea20da675395954e5587859ddc3ca4b483abaeff90509a86c66950581afec07"
+    },
+    "semantic": {
+      "status": "NOT_GRANTED",
+      "reason": "R02 has a complete Antigravity text-only PASS response but actual serving model/fallback remain UNKNOWN; a separate OpenCode Beam review was rejected before inference with HTTP 429 and produced no review. No exact-SHA independent semantic acceptance is granted.",
+      "r01_review_verdict": "PASS_TEXT_ONLY",
+      "r01_review_response_sha256": "a4665ce8e60f6c2fe690a501806f860df9b40587e129dd050d2d0d15da73c515",
+      "r01_candidate_sha256": "0a6567c2779d9ad8014ab6d1c892779a98892351a38ceda0dea9fa8b24ff2988",
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_serving_model": "UNKNOWN",
+      "fallback_status": "UNKNOWN_NOT_VERIFIED",
+      "total_tokens": 28550,
+      "reusable_for_r02": false,
+      "latest_review": {
+        "review_scope": "Exact-SHA semantic text review; no visual",
+        "adjudication_receipt": "qa/review_r05_antigravity_r02/ADJUDICATION_R05.json",
+        "work_id": "TTQS-0124-I19-E12-R02-ANTIGRAVITY-EXACT-SHA-SEMANTIC-REVIEW",
+        "acceptance_status": "NOT_GRANTED_ROUTE_IDENTITY_UNKNOWN",
+        "fallback_status": "UNKNOWN_NOT_VERIFIED; no fallback authorized",
+        "requested_model": "gemini-3.8-flash-high",
+        "actual_serving_model": "UNKNOWN",
+        "reviewer_declared_verdict": "PASS",
+        "adjudicated_response": "PASS_TEXT_ONLY",
+        "candidate_sha256": "5ea20da675395954e5587859ddc3ca4b483abaeff90509a86c66950581afec07",
+        "review_response_sha256": "be62ff4bd2a214f864f7252b8bbc315615ce8d8805b0ba39781a0aad872a2ec7"
+      },
+      "latest_route_attempt": {
+        "work_id": "TTQS-0124-I19-E12-R02-W1-BEAM-TABLE-DELTA-REVIEW",
+        "requested_model": "opencode/beam-free",
+        "actual_serving_model": "UNKNOWN_NO_INFERENCE_RESPONSE",
+        "outcome": "HTTP_429_PROVIDER_FREE_LIMIT",
+        "session_id": "ses_e839a7011ffesBjvTESRXRnlM9",
+        "cli_exit_code": 1,
+        "retry_after_ms": 57205000,
+        "next_eligible_estimate_local": "2026-10-28T08:00:00+08:00",
+        "candidate_sha256": "5ea20da675395954e5587859ddc3ca4b483abaeff90509a86c66950581afec07",
+        "candidate_mutated": false,
+        "response": "NONE",
+        "tokens": "NOT_REPORTED_NO_MODEL_RESPONSE"
+      }
+    }
+  },
+  "r01_to_r02": {
+    "source_packet_identical": true,
+    "unique_blueprint_identical": true,
+    "r01_extracted_text_sha256": "d151e6021144db96dc2b975583dc307a39ce087528eedc60474eed5205cb5947",
+    "r02_extracted_text_sha256": "39c96a171eff281fbd02fbf3c85d5e03503146cdf600a3fb58d47a160978210d",
+    "r01_chars": 12294,
+    "r02_chars": 12590,
+    "table_diff_receipt_sha256": "0a27d9970240e1c4cbc1251464048f75fe65c169ec85b690e132a46d6279c86f",
+    "material_changes": [
+      "Table 3: added offer/expected-start disposition and distinct CLAIM_ONLY/HOLD/HIRE_ONLY/FEEDBACK_ONLY/NOT_ELIGIBLE rules.",
+      "Table 6: E3-E5 answer set distinguishes NOT APPLICABLE, DECLINED and UNKNOWN and adds response constraints.",
+      "Table 15: candidate revision identifier updated."
+    ]
+  },
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN_NOT_SUPPLIED",
+  "promotion": "NOT_PERFORMED",
+  "pre_sync_pr_head": "e130ab75a75e73574ed1a6a7914db4dd00c0e670",
+  "worker_reconciliation": {
+    "current_candidate_sha256": "5ea20da675395954e5587859ddc3ca4b483abaeff90509a86c66950581afec07",
+    "sha256": "3b71df6dc686978ccf342b40f7d8d68108f365aa57a2f3a448ddea654878efc6",
+    "path": "qa/R12_0124_W1_W2_RECONCILIATION_R05.json",
+    "status": "RECORDED"
+  },
+  "route_attempt_history": [
+    {
+      "work_id": "TTQS-0124-I19-E12-R02-W1-GLM53-TABLE-DELTA-REVIEW-R07",
+      "requested_model": "opencode/glm-5.3-flash-free",
+      "actual_serving_model": "UNKNOWN_NO_INFERENCE_RESPONSE",
+      "outcome": "HTTP_429_PROVIDER_FREE_LIMIT",
+      "provider_id_observed": "opencode",
+      "session_id": "ses_e7e81caacffeJ1zRArqHBdRODy",
+      "pid": 89356,
+      "cli_exit_code": 1,
+      "response": "NONE",
+      "response_text_events": 0,
+      "retry_after_ms": 58104000,
+      "next_eligible_estimate_local": "2026-10-29T07:59:59.469000+08:00",
+      "estimate_is_guarantee": false,
+      "candidate_sha256": "5ea20da675395954e5587859ddc3ca4b483abaeff90509a86c66950581afec07",
+      "candidate_mutated": false,
+      "tokens": "NOT_REPORTED_NO_MODEL_RESPONSE",
+      "reported_cost": "UNKNOWN_NOT_RETURNED",
+      "fallback": "NOT_USED; NOT_AUTHORIZED"
+    }
+  ],
+  "latest_route_attempt": {
+    "work_id": "TTQS-0124-I19-E12-R02-W1-GLM53-TABLE-DELTA-REVIEW-R07",
+    "requested_model": "opencode/glm-5.3-flash-free",
+    "actual_serving_model": "UNKNOWN_NO_INFERENCE_RESPONSE",
+    "outcome": "HTTP_429_PROVIDER_FREE_LIMIT",
+    "provider_id_observed": "opencode",
+    "session_id": "ses_e7e81caacffeJ1zRArqHBdRODy",
+    "pid": 89356,
+    "cli_exit_code": 1,
+    "response": "NONE",
+    "response_text_events": 0,
+    "retry_after_ms": 58104000,
+    "next_eligible_estimate_local": "2026-10-29T07:59:59.469000+08:00",
+    "estimate_is_guarantee": false,
+    "candidate_sha256": "5ea20da675395954e5587859ddc3ca4b483abaeff90509a86c66950581afec07",
+    "candidate_mutated": false,
+    "tokens": "NOT_REPORTED_NO_MODEL_RESPONSE",
+    "reported_cost": "UNKNOWN_NOT_RETURNED",
+    "fallback": "NOT_USED; NOT_AUTHORIZED"
+  },
+  "observed_at_local_r07_update": "2026-10-28T15:53:43.735717+08:00"
+}

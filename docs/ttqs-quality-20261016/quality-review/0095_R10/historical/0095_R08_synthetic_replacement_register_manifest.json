@@ -1,0 +1,58 @@
+{
+  "doc_id": "0095",
+  "requirement_id": "I18-E02",
+  "official_checkbox": "建立目標客戶及學員滿意度調查機制（系統及流程面）。",
+  "state": "CANDIDATE_QA_PENDING",
+  "register_file": "0095_R08_synthetic_replacement_register.csv",
+  "row_count": 211,
+  "column_count": 13,
+  "unique_register_key": true,
+  "fact_status_counts": {
+    "SYNTHETIC_FACT": 134,
+    "UNKNOWN_NOT_PROVIDED": 13,
+    "PROPOSED_CONTROL": 7,
+    "PROPOSED_ROLE": 4,
+    "DERIVED_SYNTHETIC_METRIC": 53
+  },
+  "r08_current_rows_from_r06": 205,
+  "r08_added_unknown_index_rows": 6,
+  "r06_historical_register_sha256": "7f2034e3a7cc77e3a327a59a49ad90d3e2970c7ac01d7c03336b2ad4d572347f",
+  "r06_historical_row_count": 208,
+  "r07_historical_register_sha256": "ba5e5e1c8f0191e7298502976e5f9d02a164d4e799a1de2a7f1514f66a7fc3d4",
+  "r07_historical_row_count": 214,
+  "prior_r08_register_sha256": "615b282278d8c95fa632ed709cc1e358fc9ddcf33fa511ef5b605d9a419b04e9",
+  "current_csv_sha256": "203583e4aa51f6c370b5dcee904922856c5d118b02d6184a5518b1174840202c",
+  "retired_r08_rows": [
+    "SYN-0095-COMBINED_RETURN_RATE",
+    "SYN-0095-COMBINED_VALID_RATE",
+    "SYN-0095-POOLED_POSITIVE_RATE"
+  ],
+  "retirement_basis": "The three combined/pooled derived metrics were removed from current R08 after §6.3.3 was changed to preserve learner and target-customer populations separately; historical R06/R07 files remain unchanged.",
+  "preserved_nonlocation_fields_vs_r07": true,
+  "page_locator_basis": "Companion R08 Word-exported PDF, exact 43-page export inspected; its exact SHA is bound in the separate visual QA receipt.",
+  "sample_real_boundary": "All synthetic facts remain SAMPLE/SYNTHETIC; six UNKNOWN rows mark missing real-source classes; no real evidence is asserted.",
+  "source_refs": {
+    "official_source_page6_sha256": "e0ecd2d7b1fd8c20e03b9e651083ee767ccaf3c4a6297f9cb0e7709d07620f02",
+    "unique_blueprint_sha256": "9a22b3acd4bdafb15f18c15ee89088f4fb5ee334bfef9a1917fcc5740b7979c2"
+  },
+  "r08_added_keys_vs_r06": [
+    "UNK-0095-UNK_APPROVAL_SIGNATURE",
+    "UNK-0095-UNK_ATTACHMENT_STORAGE_LOCATION",
+    "UNK-0095-UNK_AUTHOR_REVIEWER_IDENTITY",
+    "UNK-0095-UNK_FORMAL_EFFECTIVE_DATE",
+    "UNK-0095-UNK_IMPROVEMENT_ORIGINALS",
+    "UNK-0095-UNK_REAL_COURSE_COHORT"
+  ],
+  "r08_retained_rows_from_r06": 205,
+  "r06_omitted_keys_from_r08": [
+    "SYN-0095-COMBINED_RETURN_RATE",
+    "SYN-0095-COMBINED_VALID_RATE",
+    "SYN-0095-POOLED_POSITIVE_RATE"
+  ],
+  "register_revision_history": [
+    {
+      "previous_csv_sha256": "323b5bcd890cf4811f277e89e407650fb295edcf9e9aef8fa3afa28f0a54be6a",
+      "reason": "Rebound PDF page locators to the directly inspected 43-page Word export; no fact values changed."
+    }
+  ]
+}

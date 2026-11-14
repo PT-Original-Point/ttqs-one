@@ -1,0 +1,66 @@
+{
+  "work_id": "TTQS-0140-I19-E30-R10-INDEPENDENT-SEMANTIC-REVIEW",
+  "reviewer": "OpenCode CLI v2.1.4",
+  "requested_model": "opencode/mimo-v2.6-flash-free",
+  "session_reported_model": "mimo-v2.6-flash-free",
+  "session_reported_provider": "opencode",
+  "model_identity_limit": "Session metadata only; no independent provider-side attestation.",
+  "result": "PASS",
+  "scope": "Full supplied text manuscript, official requirement and Unique Blueprint mapping, 80-row SAMPLE dataset, replacement register (82 data rows plus header), arithmetic/distributions, usability, genre/neighbor distinction, SAMPLE/REAL boundary, false-claim risk, and Markdown italic leakage.",
+  "limitations": [
+    "Reviewer did not independently recompute binary DOCX SHA; host packet bound extracted text to the stated candidate SHA.",
+    "Reviewer did not inspect Word rendering or page images.",
+    "This is not Human formal acceptance."
+  ],
+  "candidate_docx_sha256": "de9525e42a391d0ed002d23d54d5a9b9c1e042f7c194b71f00b61bd98ff48c16",
+  "review_packet_sha256": "e9d5f92c17b9f078f2fc1d7bdd9a5695317eb6f0ca403765b5e91d7801bdd692",
+  "original_response_file": "OPENCODE_R10_REVIEW_RESPONSE.md",
+  "original_response_sha256": "73400bfceec096a794a211c85347e93a19c0a274e734e7c8882672ea9953c0cd",
+  "token_usage_reported_by_session": {
+    "input": 43224,
+    "output": 2986,
+    "reasoning": 9049,
+    "cache": {
+      "read": 3456,
+      "write": 0
+    }
+  },
+  "cost_reported_by_session": 0,
+  "token_and_cost_note": "OpenCode session metadata reports tokens and cost; no external billing-meter readback was available.",
+  "findings": [
+    {
+      "locator": "Table 11 header and final row",
+      "issue": "Residual candidate/review workflow language remains in operational checklist.",
+      "minimal_repair": "Change status header to 本文件狀態; replace final cell with practical page/table/attachment checks.",
+      "severity": "LOW",
+      "id": "F1"
+    },
+    {
+      "locator": "Table 9 column 3, three rows",
+      "issue": "待核 wording may resemble a placeholder.",
+      "minimal_repair": "Use explicit wording that the responsible person must verify whether the real role exists.",
+      "severity": "LOW",
+      "id": "F2"
+    },
+    {
+      "locator": "P97",
+      "issue": "2025 COURSE_EVALUATION omission wording omits the same 2023/2024 cases.",
+      "minimal_repair": "State that all three synthetic years omit COURSE_EVALUATION; individual causes are not recorded.",
+      "severity": "LOW",
+      "id": "F3"
+    },
+    {
+      "locator": "Figure 1, P92",
+      "issue": "Text-only review cannot verify plotted points.",
+      "minimal_repair": "Use the separate 29-page visual receipt; do not infer from text review.",
+      "severity": "OBS",
+      "id": "F4"
+    }
+  ],
+  "cli_exit_code": "UNKNOWN_WRAPPER_TIMED_OUT_AFTER_240S",
+  "terminal_event_reason": "stop",
+  "finished_response_captured_after_wrapper_timeout": true,
+  "computer_use": "NOT_USED",
+  "auto_approve": "NOT_ENABLED",
+  "fallback_allowed": false
+}

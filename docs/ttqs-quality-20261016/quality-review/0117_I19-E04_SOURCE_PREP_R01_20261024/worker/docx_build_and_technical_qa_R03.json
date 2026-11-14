@@ -1,0 +1,79 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0117",
+  "requirement_id": "I19-E04",
+  "blueprint_internal_index": 128,
+  "official_printed_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+  "revision": "R03",
+  "state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "builder_route": "Windows Python 3.10 + python-docx deterministic formatting of recovered OpenCode v2 R01 manuscript",
+  "writer_manuscript_r01_sha256": "31bbae2775a723538e010ebea3b58171dd03595af117bbcc921d68c4e32c4448",
+  "adopted_manuscript_r02_sha256": "edbeeb69e61d1aa89e381d74da7c15f75c910f59ba26c62787b144f048e0eb0d",
+  "docx_sha256": "b9fdd4b3ab7ad455ada053cef3d70839bbe19d56d7636b9506778819d3b91020",
+  "docx_bytes": 61089,
+  "source_sha256": {
+    "SOURCE_PACKET": "6607741c8178f7a84097f06f76671d63871c2710b30c3da7a19e25e9fb4217a1",
+    "UNIQUE_BLUEPRINT": "3535cd80790687ce7a6c031b3f5e6ee61ff3f0136e772638cd24899d30f332fb",
+    "DATASET": "3f914d9d53f82c05d69ba80aa317437cd4e96766e85f0e671bd46a5c3b2acb1c",
+    "REPLACEMENT_REGISTER": "6c331d4cfc13b0e8a5b439a809461031cbdabb8b0af29cabd9ebed5417eb50a1"
+  },
+  "dataset_rows": 18,
+  "dataset_unique_aliases": 18,
+  "synthetic_calculations": {
+    "SYN-0117-BASE": {
+      "eligible": 8,
+      "first_sittings": 6,
+      "first_pass": 3,
+      "eventual_pass": 4,
+      "no_attempt": 2,
+      "M1_first_pass_rate_pct": 50.0,
+      "M2_participation_pct": 75.0,
+      "M3_eventual_pass_pct": 66.7,
+      "M4_eligible_yield_pct": 50.0
+    },
+    "SYN-0117-CURR": {
+      "eligible": 10,
+      "first_sittings": 8,
+      "first_pass": 5,
+      "eventual_pass": 6,
+      "no_attempt": 2,
+      "M1_first_pass_rate_pct": 62.5,
+      "M2_participation_pct": 80.0,
+      "M3_eventual_pass_pct": 75.0,
+      "M4_eligible_yield_pct": 60.0
+    }
+  },
+  "pp_differences": {
+    "M1": 12.5,
+    "M2": 5.0,
+    "M3": 8.3,
+    "M4": 10.0
+  },
+  "bounded_content_changes": [
+    "Set document revision to R03.",
+    "Removed source file paths, GitHub/mapping references and SHA-256 values from the evaluator-facing body; provenance remains in this receipt.",
+    "Removed an incorrect replacement-register hash note from the body; source register bytes were not modified.",
+    "Removed Builder-authored final self-check with unverified checkmarks."
+  ],
+  "layout_policy": {
+    "portrait_body_pt": 11,
+    "table_min_pt": 9.5,
+    "wide_tables_landscape": true,
+    "10_column_action_log": "reflowed without value changes to one field/value card per record",
+    "header_footer": "doc id, revision, sample boundary and page number"
+  },
+  "structural_qa": {
+    "zip_test": "PASS",
+    "all_18_dataset_aliases_present": true,
+    "internal_sha_or_repo_paths_in_body": false,
+    "self_asserted_pass_checklist_in_body": false,
+    "tables": 31,
+    "log_cards": 3,
+    "minimum_table_font_pt": 9.5,
+    "layout_visual": "PENDING_WORD_NATIVE_RENDER",
+    "semantic_review": "PENDING_INDEPENDENT_EXACT_SHA"
+  },
+  "output_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0117_I19-E04_SOURCE_PREP_R01_20261024\\candidate\\0117_學員考照通過率追蹤及分析表_R03.docx",
+  "extraction_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0117_I19-E04_SOURCE_PREP_R01_20261024\\worker_0117_R01\\candidate_text_extraction_R03.txt",
+  "receipt_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0117_I19-E04_SOURCE_PREP_R01_20261024\\worker_0117_R01\\docx_build_and_technical_qa_R03.json"
+}

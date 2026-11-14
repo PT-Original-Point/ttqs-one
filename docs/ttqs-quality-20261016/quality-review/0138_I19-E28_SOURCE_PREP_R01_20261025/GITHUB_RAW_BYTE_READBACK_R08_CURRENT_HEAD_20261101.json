@@ -1,0 +1,47 @@
+{
+  "schema": "ttqs-one-github-raw-byte-readback-v1",
+  "status": "VERIFIED_RAW_BYTE_READBACK",
+  "project_id": "TTQS_ONE",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "doc_id": "0138",
+  "official_requirement_id": "I19-E28",
+  "project_157_index": 152,
+  "official_printed_checkbox": "UNKNOWN",
+  "candidate_state": "CANDIDATE",
+  "candidate_revision": "R08",
+  "candidate_sha256": "f06439849ba70d0ad665d760d0a422382d9f4a991ca449b36f05fae39abd5a27",
+  "semantic_review_verdict": "PASS_EXACT_SHA_SEMANTIC_SCOPE",
+  "semantic_review_scope": "Antigravity CLI R09 full-body text review bound to the exact candidate: 140/140 paragraphs, 21/21 tables and 149/149 table rows; visual inspection was separate and covered all 15 pages. Requested/CLI-reported model gemini-3.8-flash-high; actual backend serving identity UNKNOWN.",
+  "reviewer": "Antigravity CLI; Python builder is separately identified in BUILD_RECEIPT_0138_R08.json.",
+  "reviewer_model": "UNKNOWN",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "sample_boundary": "SAMPLE/SYNTHETIC only",
+  "readback_commit": "9e02f36ff43274165a85a8d929de06d08646893c",
+  "head_after": "9e02f36ff43274165a85a8d929de06d08646893c",
+  "observed_at_local": "2026-11-01T01:15:48+08:00",
+  "readback_method": "Fetched the DOCX from the live branch with GitHub connector (base64), decoded the remote bytes in-process, computed SHA-256, and compared byte count, SHA-256, and connector-reported Git blob SHA-1 against the Windows candidate at the same ref.",
+  "expected_file_count": 1,
+  "verified_file_count": 1,
+  "errors": [],
+  "source_receipts": {
+    "build_receipt_sha256": "78f0c040038635e9e09cd43dba05d0c6dd19fadf844064bbe4ef2575371b4e39",
+    "technical_qa_sha256": "2b9f362e3fa20ad9f8ad556ce208945e376fede2bdc1b1433b4c8557735a1a3c",
+    "visual_qa_sha256": "36bfcc9a7b8b79b3f8f80f07c2867b61b4e3c81ccf91aa3833f1cee3b79a3468",
+    "semantic_adjudication_sha256": "f19cd9e114d9961c3ae63f04b6d9316febb4ac5ed6db1f8029099c3b902541b7"
+  },
+  "files": [
+    {
+      "doc_id": "0138",
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0138_I19-E28_SOURCE_PREP_R01_20261025/0138_I19-E28_學員訓後薪資與獎勵升遷第三方驗證表_R08.docx",
+      "local_sha256": "f06439849ba70d0ad665d760d0a422382d9f4a991ca449b36f05fae39abd5a27",
+      "remote_sha256": "f06439849ba70d0ad665d760d0a422382d9f4a991ca449b36f05fae39abd5a27",
+      "local_bytes": 60387,
+      "remote_bytes": 60387,
+      "local_git_blob_sha1": "ad0b6a5e4de65860352410398f138c27145d23e8",
+      "remote_git_blob_sha1": "ad0b6a5e4de65860352410398f138c27145d23e8",
+      "exact_byte_match": true
+    }
+  ]
+}

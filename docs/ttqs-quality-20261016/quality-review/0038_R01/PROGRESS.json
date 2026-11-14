@@ -1,0 +1,63 @@
+{
+  "project": "TTQS_ONE",
+  "document_id": "0038",
+  "requirement_id": "I08-E02",
+  "official_checkbox_sequence": "039",
+  "candidate": "0038_R01",
+  "candidate_path": "candidate/0038_R01.docx",
+  "candidate_sha256": "75065568b801506d736297441ee30abd3eaccc4fa3748ef6da2a11c67715088a",
+  "status": "CANDIDATE_BUILT; technical=PASS; visual=PASS; independent_semantic_review=PENDING; formal_acceptance=NOT_GRANTED",
+  "source_spec_branch": "work/ttqs-one-document-quality-contract-20261016",
+  "source_spec_head": "92e986ba6883f7f5d0ea6cf5f6978c7d5875fb5c",
+  "source_spec_blob_ids": {
+    "01": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e",
+    "02": "4ff863d9f534b6359fc1c7c1685bd8cce02da886",
+    "03": "8c2bbe7ca9dcbb03088a48934b9e57e7147ede63"
+  },
+  "official_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "blueprint_file_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+  "blueprint_row_sha256": "2504485c1698a5c83ac2205938c05b532edc8d697f2441ad1d6a0c324897b73e",
+  "case_id": "SYN-I08E02-2026-01",
+  "sample_boundary": "All dates, roles, course facts, options, participant codes, scores, calculations and decisions are SYNTHETIC.",
+  "sample_calculation": {
+    "group_a": {
+      "n": 12,
+      "pre_sum": 44,
+      "post_sum": 57,
+      "gain": 13,
+      "pass": 3,
+      "critical_zero": 2
+    },
+    "group_b": {
+      "n": 12,
+      "pre_sum": 44,
+      "post_sum": 79,
+      "gain": 35,
+      "pass": 11,
+      "critical_zero": 0
+    },
+    "valid_pairs": 24,
+    "returned_pairs": 24,
+    "valid_rate": "24/24=100%",
+    "gain_difference": 1.8333333333333333
+  },
+  "review": {
+    "technical": "PASS",
+    "visual": "PASS",
+    "visual_page_count": 11,
+    "semantic": "PENDING",
+    "exact_sha_bound_review": false,
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "remote": {
+    "status": "PENDING_UPLOAD",
+    "github_path": null,
+    "verified_readback": false
+  },
+  "created_local": "2026-10-17",
+  "last_material_change": {
+    "reason": "Moved the execution-control table off a page that stranded its final row and removed the resulting sparse spill; consolidated it with the candidate-state page.",
+    "previous_candidate_sha256": "09d348829792d67c235d7a9d300ddae54cc8c28703198d0ac3d6f93b340a9e41",
+    "new_candidate_sha256": "75065568b801506d736297441ee30abd3eaccc4fa3748ef6da2a11c67715088a"
+  }
+}

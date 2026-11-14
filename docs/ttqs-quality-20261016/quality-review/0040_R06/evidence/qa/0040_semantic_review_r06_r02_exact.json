@@ -1,0 +1,65 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0040",
+  "revision": "R06",
+  "requirement_id": "I08-E03",
+  "official_checkbox_sequence": "040",
+  "review_id": "R02_TARGETED_REGISTER_LOCATOR_FOLLOWUP",
+  "reviewer_route": "Independent read-only cross-review agent",
+  "reviewer_id": "01a1435e-f156-7a52-ade0-b76f38bb6230",
+  "submission_id": "01a14615-5526-75f2-a3e8-5691995deed4",
+  "verdict": "UNBOUND_SHA_MISMATCH",
+  "scope": "The response contains a bounded locator PASS, but its returned DOCX SHA does not match the actual candidate SHA; therefore this response cannot be counted as exact-SHA acceptance.",
+  "candidate": {
+    "path": "candidate/0040_R06.docx",
+    "expected_sha256": "115caf94165263040b27dbea5a2c83e02f94253d361e16784da398cefd3562d7",
+    "reviewer_reported_sha256": "115caf94165263040b27bdea5a2c83e02f94253d361e16784da398cefd3562d7",
+    "sha_binding_matches": false
+  },
+  "register": {
+    "path": "evidence/SYNTHETIC_REPLACEMENT_REGISTER_R06.csv",
+    "sha256": "a75092ac268bc4d0e37bf677f2b3ea6e7cf8be808a5bed1cb52e39e1cb0eaa2d",
+    "rows_checked": 40,
+    "unique_fact_ids": 40,
+    "all_fields_populated": true,
+    "all_rows_bound_to_candidate_sha": true,
+    "additional_material_locator_findings": 0
+  },
+  "render_evidence": {
+    "pdf_sha256": "76d1239f37b87c78388f94a7cd7282062424dbd4dffe7ba5ce8d8f773539edc7",
+    "printed_pages_directly_inspected": [3, 4],
+    "page_3_png_sha256": "3105d7deeb9249a706af0bfe31b60f45368925064de628ed3a50dab2b85bff6e",
+    "page_4_png_sha256": "fb06b1da3ffab073fe77a3843226ecc0cc0cef76be5eb5860afb8354f8898ed9"
+  },
+  "finding_resolution": [
+    {
+      "finding_id": "R06-R01-F01",
+      "fact_id": "0040-SYN-004",
+      "status": "PASS",
+      "locator": "printed p.3 assessment matrix, all K1-K4 baseline/target/gap rows"
+    },
+    {
+      "finding_id": "R06-R01-F02",
+      "fact_id": "0040-SYN-BL-K3",
+      "status": "PASS",
+      "locator": "printed p.3 K3 row, first column; baseline 1.2/2, target 2, gap 0.8"
+    },
+    {
+      "finding_id": "R06-R01-F03",
+      "fact_id": "0040-SYN-BL-K4",
+      "status": "PASS",
+      "locator": "printed p.3 K4 row, first column; baseline 0.6/2, target 2, gap 1.4"
+    }
+  ],
+  "interaction_with_r01": {
+    "r01_verdict_at_review_time": "PARTIAL",
+    "r01_record_preserved_unchanged": true,
+    "combined_review_interpretation": "R01 supplies the candidate content/semantic review scope but remains PARTIAL at its review time. R02's locator checks cannot close that finding until an independent follow-up is bound to the exact candidate SHA."
+  },
+  "candidate_state": "CANDIDATE_NOT_PROMOTED",
+  "formal_acceptance": "NOT_GRANTED",
+  "sample_state": "SAMPLE_SYNTHETIC_ONLY",
+  "raw_response_path": "evidence/qa/0040_semantic_review_r06_r02_register_recheck_raw.md",
+  "raw_response_sha256": "61f8251751fa513c8e4030486ed120898941925bc6b48b7bf9778759a8c15d96",
+  "followup_required": "R03 exact-SHA binding and bounded locator recheck"
+}

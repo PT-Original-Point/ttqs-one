@@ -1,0 +1,9 @@
+# 0137 R02 source traceability — R11
+
+Project TTQS_ONE; doc_id 0137; official requirement I19-E27; project index 151; official printed checkbox serial UNKNOWN. Binding row: I19-E27,1,0,0137,媒體採訪與正面報導原件查驗表. Current candidate SHA-256: 3899167f0437ec76df42e6229685564d910250c6a822b627ec15b5f9cfcfecc8.
+
+Authoritative source pins are inherited from SOURCE_MANIFEST_0137_R01.json (Git blob 8650d95536e1e72471a41ba1b7f1991a82d81372; declared github_ref 09e16f84d392c194c6327007ff8db0f5f769d2cf). Official PDF page 9: blob 9c7621decdad585b743bf2b3d949ee5518b7bee0, SHA-256 805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709. 129→142 crosswalk: blob 1ac4a8419088d947947031b758e29c35a3606514, SHA-256 1ddfbb608bcad25170683ddb42a1dbb27bafa6f1f35ff0498f1b8d75b24f0679. Project index excerpt: blob 40f5f357ac0b88b29536aef6f6463df21b7c3c1e, SHA-256 3dfba461c97a9f511b420658b2634526e185fd05dad4d98287dd613dfd8a9883. Unique Blueprint: UNIQUE_BLUEPRINT_0137_I19-E27_R01.md, blob 63f7bc47f4fa5a115e164b9589a7f4fcc6b83412, local SHA-256 7590fe026b53010cd40664d23f53880e7c717a6e93c6f19d59212ef5312d6cf9.
+
+The immutable R01 source packet (blob 64c985043ac491a5ba47521e7381fe4969cc14b9) contains a literal +REF+ in its branch/source field. This metadata defect is disclosed, not treated as a valid pin. R02 instead records the source manifest and exact official-source blobs above.
+
+R02 parent is R01 SHA 7271c89f59aab0455b72a5b17cb55da2eb6ea6c3a162214418930f9c924484f3; the R01 exact-SHA full text semantic PASS receipt SHA-256 is 9c67ef2ab5ba5d0a80d3ec360028c13337307b4589346452d227c96d2220feaa. R02 independent semantic review is PASS for the bounded delta only; unchanged sections inherit R01 review. No fresh full-document R02 semantic re-review was done. All examples are SAMPLE/SYNTHETIC; real media remains UNKNOWN/HOLD; formal acceptance is NOT_GRANTED.

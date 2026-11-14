@@ -1,0 +1,86 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0096",
+  "requirement_id": "I18-E03",
+  "official_checkbox_serial": "099",
+  "revision": "R13",
+  "state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "official_source": {
+    "page": "6",
+    "exact_checkbox_text": "感謝函。",
+    "pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "page_extract_sha256": "e0ecd2d7b1fd8c20e03b9e651083ee767ccaf3c4a6297f9cb0e7709d07620f02"
+  },
+  "blueprint": {
+    "title": "感謝函_可直接使用成品",
+    "unique_blueprint_sha256": "13f7738f47b158bcd733a7bf855fe905585274dab48b6d6fab01b0facbe796ae",
+    "source_file": "CONTROL/BLUEPRINT_CURRENT.jsonl",
+    "source_file_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e"
+  },
+  "crosswalk": {
+    "source_file": "CONTROL/TTQS_ONE_129_REQUIREMENT_TO_142_DELIVERABLE_CROSSWALK_R01.csv",
+    "source_file_sha256": "1ddfbb608bcad25170683ddb42a1dbb27bafa6f1f35ff0498f1b8d75b24f0679",
+    "row": {
+      "requirement_id": "I18-E03",
+      "deliverable_count": "1",
+      "split_extra_count": "0",
+      "deliverable_ids": "0096",
+      "document_titles": "感謝函_可直接使用成品"
+    },
+    "official_serial": "099"
+  },
+  "artifacts": {
+    "docx_sha256": "6ece53befed3ecb1b42e523b80da80decd33b0a7d55e4e1fe75ddf79b905d445",
+    "docx_bytes": 98816,
+    "manuscript_sha256": "e27c03fc386b092d4be26652b83705c680857ef0f53b198e62c691917d0099ea",
+    "csv_sha256": "16d238c7fde83318c3d9f5c5c4c8a295ee210c34edf9ba68759a78991a0c1a91",
+    "csv_rows": 121,
+    "pdf_sha256": "b9e7e1389be8d2440abd8a79752e9d0e9443d17c108152f175bf3d735f43526d",
+    "pdf_pages": 69
+  },
+  "technical": {
+    "status": "PASS",
+    "receipt_sha256": "dfde048953c226b6234d424907811b5baed297ab6aba21609cf0213d27308fbe",
+    "all_checks_pass": true
+  },
+  "visual": {
+    "status": "PASS",
+    "receipt_sha256": "27c97e6c345a68f050e5856bdcf2799e25401c9f22466e806a5276693cafdd54",
+    "all_69_pages_covered": true,
+    "inspected_full_pages": [
+      5,
+      6,
+      14,
+      15,
+      16,
+      17,
+      29,
+      30,
+      35,
+      36,
+      37,
+      38,
+      63,
+      68,
+      69
+    ]
+  },
+  "semantic": {
+    "status": "PASS_EXACT_SHA_TEXT_ONLY",
+    "reviewer_response_sha256": "11df70ab1e8f927b274337044eb53a98101dd32236d4acbf8284fb5109ab6980",
+    "reviewer": "OpenCode v2 CLI independent reviewer",
+    "limitations": "Reviewer did not inspect DOCX binary/layout/pages; visual evidence is separately recorded."
+  },
+  "metadata_correction_receipt_sha256": "7152f1a79b0e8e2c1a2aacb58f4bd61c67987ab2dfc4abddd28b8513c8a9a5cc",
+  "formal_acceptance": "NOT_GRANTED",
+  "remaining_nonblocking_editorial_notes": [
+    "INV-05 table header duplicates field 1.",
+    "Section 13 A5 says five columns while the table/CSV have six.",
+    "Section 9 synthetic correction example lacks a change-date row.",
+    "CASE-003 wording says counting from the review date although the first counted workday is the next workday.",
+    "INV-05 escalation-recipient shorthand could name the designated approval role.",
+    "Section 4 framing says two different contents although category A is routed to 0098 and not collected by 0096.",
+    "Some SAMPLE-COMPLETENESS and PENDING register locators are section/table-level rather than field-level."
+  ],
+  "next_state": "Ready for audit sync; then continue next lawful READY document. No Human formal acceptance inferred."
+}

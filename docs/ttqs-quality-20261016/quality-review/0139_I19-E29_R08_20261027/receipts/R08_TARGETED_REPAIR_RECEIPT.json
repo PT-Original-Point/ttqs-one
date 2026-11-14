@@ -1,0 +1,60 @@
+{
+  "schema": "ttqs-one-0139-r08-targeted-repair-v1",
+  "doc_id": "0139",
+  "requirement_id": "I19-E29",
+  "blueprint_index": 153,
+  "candidate": "R08",
+  "candidate_state": "CANDIDATE",
+  "parent_candidate": "R07",
+  "parent_docx_sha256": "9e9f65b962f2a6b0e3b1a14c8d4615b6a70c98b140d672943adb5de636843241",
+  "candidate_docx_sha256": "d31ef2d8b8615f3dd314572c4e50b6604198e8f24faafb144bcbaea7373c696f",
+  "source_packet_sha256": "3c9c310e086a86c03d38bea68bba1ca53bcb2fc927d8949fb6b91c45379d9d47",
+  "unique_blueprint_sha256": "090169968e3df59a6cecaac665a99b2cb625a9cbc355bf84528d08b27c98052a",
+  "changes": [
+    {
+      "change": "denominator_parentheses",
+      "old": "追蹤狀態涵蓋率 = 4 + 2/10 = 6/10 = 60.00%。",
+      "new": "追蹤狀態涵蓋率 = (4 + 2)/10 = 6/10 = 60.00%。",
+      "paragraph_index_0_based": 378
+    },
+    {
+      "change": "denominator_parentheses",
+      "old": "追蹤狀態涵蓋率 = 7 + 2/12 = 9/12 = 75.00%。",
+      "new": "追蹤狀態涵蓋率 = (7 + 2)/12 = 9/12 = 75.00%。",
+      "paragraph_index_0_based": 390
+    },
+    {
+      "change": "denominator_parentheses",
+      "old": "追蹤狀態涵蓋率 = 8 + 2/12 = 10/12 = 83.33%。",
+      "new": "追蹤狀態涵蓋率 = (8 + 2)/12 = 10/12 = 83.33%。",
+      "paragraph_index_0_based": 402
+    },
+    {
+      "change": "register_key",
+      "table_index_1_based": 14,
+      "row_index_1_based": 9,
+      "old": "KEY-DAT-001",
+      "new": "KEY-DATE-001"
+    },
+    {
+      "change": "visible_version_label",
+      "paragraph_index_0_based": 957,
+      "old": "R07",
+      "new": "R08"
+    }
+  ],
+  "change_count": 5,
+  "unchanged_scope": "All other DOCX XML package parts preserved; only three denominator expression paragraphs, QC-08 register-key text and visible version-label paragraph changed.",
+  "math": "(4+2)/10=6/10=60.00%; (7+2)/12=9/12=75.00%; (8+2)/12=10/12=83.33%.",
+  "semantic_review": "PASS_DELTA_EXACT_R08_SHA",
+  "technical_qa": "PASS_STATIC_DELTA",
+  "word_visual_qa": "PASS_ALL_23_PAGES_DIRECT_INSPECTION",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "method": "UTF-8 byte-preserving replacement of only five exact text strings within word/document.xml; all other ZIP parts verified unchanged.",
+  "failed_initial_attempt": {
+    "sha256": "50554321eaf576f660a8ae77c155ae164455174a708720de6e428a7fb72171ed",
+    "word_open": "FAIL",
+    "root_cause": "ElementTree changed original namespace prefixes while mc:Ignorable retained w14/wp14 tokens; Word rejected package. The failed file and native Word receipt are retained under failed_OOXML_ET_serialize/."
+  }
+}

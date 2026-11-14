@@ -1,0 +1,51 @@
+{
+  "project_id": "TTQS_ONE",
+  "document_id": "0086",
+  "requirement": "I17C-E05",
+  "official_checkbox_serial": "092",
+  "mapping_status": "PROVISIONAL_CANDIDATE",
+  "review_id": "0086_R01_INDEPENDENT_SEMANTIC_R01",
+  "outcome": "PARTIAL",
+  "candidate_status": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "candidate_docx_sha256": "55265fb26ae6641e58e476d6b930253bb26a70dbccedb5761d15c4f01074fa05",
+  "reviewer_model": "opencode/mimo-v2.6-flash-free",
+  "reviewer_cli_version": "opencode v2.0.32",
+  "reviewer_session_id": "ses_eab208864ffenyhsaFu5sicHxh",
+  "reviewer_session_outcome": "succeeded",
+  "reviewer_exit_code": 0,
+  "reviewer_reported_cost": 0,
+  "usage": {
+    "input": 31205,
+    "output": 4633,
+    "reasoning": 18335,
+    "cache_read": 4736,
+    "cache_write": 0
+  },
+  "raw_response_path": "quality-review/0086_R01/worker/opencode_independent_review_R01_stdout.jsonl",
+  "raw_response_sha256": "8181a9b51e92d672a8795909c7312ff1379fb9ca67ee76662e9f04aefa476600",
+  "normalized_response_path": "quality-review/0086_R01/review/independent_semantic_review_R01.md",
+  "normalized_response_sha256": "dcb3e010be1e382c42b51b29c605f43edeb685bf19e02c708d09bb23d4135c13",
+  "task_path": "quality-review/0086_R01/worker/INDEPENDENT_REVIEW_TASK_R01.md",
+  "coverage": "TEXT_ONLY",
+  "rendered_pdf_review": "NOT_INSPECTED_PDF_UNSUPPORTED",
+  "page_png_review": "NOT_ATTACHED_TO_REVIEWER",
+  "visual_receipt_is_producer_assertion_only": true,
+  "actionable_findings": {
+    "major": [
+      "§8.3 truncated sample-selection sentence and duplicate continuation heading",
+      "Blueprint C15 replacement-register content absent from body; CSV lacks cross-document-reference-status column"
+    ],
+    "minor": [
+      "D+2 business-day baseline ambiguous against demo dates",
+      "finding IDs F-01…F-03 conflict with SYN-FND-01…03",
+      "Form D lacks NA/NE approval-and-explanation field for S-03 item 4",
+      "three more cases versus three consecutive observations unit mismatch"
+    ],
+    "advisory": [
+      "Independent visual review of rendered pages not completed",
+      "mapping authority remains provisional without 142-sequence source"
+    ]
+  },
+  "recalculation": "Reviewer independently recalculated 12/16=75.0%, 13/16=81.3%, 13/14=92.9%; found threshold disposition consistent.",
+  "next_action": "Repair only the documented content/form defects, rebuild and visually inspect a new exact SHA, then obtain a fresh independent review."
+}

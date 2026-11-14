@@ -1,0 +1,123 @@
+{
+  "schema": "ttqs-one-current-head-raw-readback/v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0141",
+  "requirement_id": "I19-E31",
+  "candidate_state": "CANDIDATE",
+  "candidate_sha256": "de111911a549a0be0bd6381a6b22ed694881ba6b3f83528d2b4a4e153002142b",
+  "observed_at_utc": "2026-10-27T14:28:54.409Z",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "pr": 92,
+  "verified_precommit_head": "6343398c658d9e4f7eedc1800c35c536829e6d7b",
+  "result": {
+    "technical": "PASS",
+    "visual": "PASS_WITH_SCOPE",
+    "semantic": "BLOCKED_NO_REVIEW_RESPONSE",
+    "worker": "OpenCode v2 CLI",
+    "requested_model": "opencode/mimo-v2.6-flash-free",
+    "actual_model": "UNKNOWN_NO_MODEL_RESPONSE",
+    "provider_http": 429,
+    "token_usage": "UNKNOWN_NO_COMPLETION",
+    "candidate_mutated": false,
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN/HOLD",
+    "retry_eligible_at_local": "2026-10-28T07:59:59.875+08:00"
+  },
+  "external_monitor_context": {
+    "attachment_sha256": "ff3ca9886e3a345d78be358b2883296b7e5454408d23bc940fee239ba826c900",
+    "observed_local": "2026-10-27 08:17 Asia/Taipei",
+    "free_inference_status_at_observation": "Operational",
+    "reported_24h_incidents": "2 events, total 3h39m",
+    "account_specific_model_availability": "NOT_ESTABLISHED"
+  },
+  "verified_files": [
+    {
+      "path": "docs/ttqs-quality-20261016/0141_I19-E31_R07_20261027/worker_OPENCODE_REVIEW_R04_MIMO_R01/ADJUDICATION.json",
+      "local_sha256": "187e24acc4ce39c0540d1f3701d84963d4043b16839c15e285442054420fb37b",
+      "expected_git_blob_sha": "5480ebd73835dca6409f2ad32b4e02da7593fcde",
+      "observed_git_blob_sha": "5480ebd73835dca6409f2ad32b4e02da7593fcde",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0141_I19-E31_R07_20261027/worker_OPENCODE_REVIEW_R04_MIMO_R01/DISPATCH_START.json",
+      "local_sha256": "d27f685667996776d3024ec41debf36d5640fc317ef15997b03fdb30dfaffdaa",
+      "expected_git_blob_sha": "62cae5a934de2b68c82b397e2daceb7456a40484",
+      "observed_git_blob_sha": "62cae5a934de2b68c82b397e2daceb7456a40484",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0141_I19-E31_R07_20261027/worker_OPENCODE_REVIEW_R04_MIMO_R01/DISPATCH_TERMINAL.json",
+      "local_sha256": "dcc5bd35ba2c440f420dea3f1632668ae2bb43c4a61ebf9b8d7742b152b82669",
+      "expected_git_blob_sha": "a961c49356eb5d389cd7d1787a6395024cc002ad",
+      "observed_git_blob_sha": "a961c49356eb5d389cd7d1787a6395024cc002ad",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0141_I19-E31_R07_20261027/worker_OPENCODE_REVIEW_R04_MIMO_R01/INPUT_MANIFEST.json",
+      "local_sha256": "6a5fa873c06305c4f7ea8e961f02da4b43b70ffeab318b91712d00a101686236",
+      "expected_git_blob_sha": "5335c8a4f38a19d60154db187cb0d1455e8529c1",
+      "observed_git_blob_sha": "5335c8a4f38a19d60154db187cb0d1455e8529c1",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0141_I19-E31_R07_20261027/worker_OPENCODE_REVIEW_R04_MIMO_R01/opencode.json",
+      "local_sha256": "c27420f9038e78439d1637425562607fdd7c3cff42f5d53b5611d60544172c04",
+      "expected_git_blob_sha": "d4b7860cc4b12a508ea336552c573ca406e4730b",
+      "observed_git_blob_sha": "d4b7860cc4b12a508ea336552c573ca406e4730b",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0141_I19-E31_R07_20261027/worker_OPENCODE_REVIEW_R04_MIMO_R01/RAW_STDERR.txt",
+      "local_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected_git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "observed_git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0141_I19-E31_R07_20261027/worker_OPENCODE_REVIEW_R04_MIMO_R01/RAW_STDOUT.jsonl",
+      "local_sha256": "ef62b2a602c25c88bd2853b6403bdc79ac101fd1663f185a3530376f64946c9b",
+      "expected_git_blob_sha": "9b2d58ba522fa5ef00693848633507ca26dcd356",
+      "observed_git_blob_sha": "9b2d58ba522fa5ef00693848633507ca26dcd356",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0141_I19-E31_R07_20261027/worker_OPENCODE_REVIEW_R04_MIMO_R01/README.md",
+      "local_sha256": "6aa9fae856c75ae6e3b875c5d392bfdcc57033c421736bf5f0aa075e43f09784",
+      "expected_git_blob_sha": "b98ca0375edb5fce460abd4e32b04535f862915f",
+      "observed_git_blob_sha": "b98ca0375edb5fce460abd4e32b04535f862915f",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0141_I19-E31_R07_20261027/worker_OPENCODE_REVIEW_R04_MIMO_R01/REVIEW_MESSAGE.txt",
+      "local_sha256": "46274979d577ca90326b2bcf857567dd2ae030d865a8f1b4f1703da1ae89657a",
+      "expected_git_blob_sha": "55a50afa89b99b36273eae2701c75e0d9fdafe54",
+      "observed_git_blob_sha": "55a50afa89b99b36273eae2701c75e0d9fdafe54",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0141_I19-E31_R07_20261027/R04_STATUS.md",
+      "local_sha256": "aa9dbfb5acb17be9a42f0e80859c7ba309cdb11b8bb08f8a4212922379febd61",
+      "expected_git_blob_sha": "bb4cae9fc3be496b77a00df87cdf9c367af3b2e9",
+      "observed_git_blob_sha": "bb4cae9fc3be496b77a00df87cdf9c367af3b2e9",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0141_I19-E31_R07_20261027/R04_SEMANTIC_REVIEW_ROUTE_DISPOSITION_R02_20261027.json",
+      "local_sha256": "780191a5b092c178132ab9903ffc4bd27b00de7ea8afba66ecdfca48e8b9842c",
+      "expected_git_blob_sha": "1d04483d3011b51d6a90a1676b93fede610b054a",
+      "observed_git_blob_sha": "1d04483d3011b51d6a90a1676b93fede610b054a",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0141_I19-E31_R07_20261027/worker_OPENCODE_REVIEW_R04_MIMO_R01/UPLOAD_MANIFEST.json",
+      "local_sha256": "023fbbb0f561ca35fc35c8b5cfe8348d86ec6ec14f6146d57eeefa5e53269b1d",
+      "expected_git_blob_sha": "7a65ae4e1142fec1b20ba43bcf67b3cb85a7d402",
+      "observed_git_blob_sha": "7a65ae4e1142fec1b20ba43bcf67b3cb85a7d402",
+      "match": true
+    }
+  ],
+  "verification_state": "LOCAL_MANIFEST_AND_CURRENT_HEAD_BLOBS_MATCH; NEW_RECEIPT_TO_BE_READ_BACK",
+  "no_docx_rebuild": true,
+  "no_model_call": true
+}

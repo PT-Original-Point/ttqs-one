@@ -1,0 +1,23 @@
+{
+  "schema": "TTQS_ONE_0119_R05_CANDIDATE_CHANGE_RECEIPT",
+  "doc_id": "0119",
+  "requirement_id": "I19-E07",
+  "state": "CANDIDATE_ONLY",
+  "input_candidate_sha256": "201466977e84188e6a5fa58b7b345924fec9d707199102feafb62677f735c676",
+  "output_candidate_sha256": "446485ffc2e1244f2e3ff204f989cf6ffdc24b4f0b92e9be97acb8ce8d151be7",
+  "changed_docx_parts": [
+    "word/document.xml",
+    "word/footer1.xml"
+  ],
+  "changes": [
+    "renderable formulas and variables",
+    "move landscape section break before Unit 4 heading/table",
+    "remove duplicate footer markers/page fields",
+    "correct incomplete REAL workflow claim to UNKNOWN/HOLD template"
+  ],
+  "technical_qa": "PASS",
+  "visual_qa": "PASS all 14 pages, Word native PDF exact candidate SHA",
+  "semantic_qa": "PASS_REVIEWER_REPORTED exact candidate SHA",
+  "real_data": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED"
+}

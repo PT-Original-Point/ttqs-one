@@ -1,0 +1,27 @@
+﻿register_key,fact_type,sample_value,doc_locator,real_replacement_source,truth_status
+SYN-001,示範完訓日,2026-01-15,封面、§2,以正式完訓紀錄替換；否則保留合成標示。,SAMPLE_SYNTHETIC_ONLY
+SYN-002,示範追蹤日,2026-04-15（距完訓90日）,封面、§2,以核准追蹤窗及真實聯絡日期替換。,SAMPLE_SYNTHETIC_ONLY
+SYN-003,完訓母數,12,§1、§3,以具名班次完成名冊及排除核對替換。,SAMPLE_SYNTHETIC_ONLY
+SYN-004,有效同意配對數,6,§1、§3,需同意記錄與前後配對原件。,SAMPLE_SYNTHETIC_ONLY
+SYN-005,無薪資機會狀態,1 人；SYN-0126-07,§3,以實際狀態替換；不得填零薪資。,SAMPLE_SYNTHETIC_ONLY
+SYN-006,未授權狀態,2 人；SYN-0126-08、09,§3,以流程數量替換，不保存未授權金額。,SAMPLE_SYNTHETIC_ONLY
+SYN-007,未回覆狀態,1 人；SYN-0126-10,§3,以邀請及追蹤紀錄替換；結果未知。,SAMPLE_SYNTHETIC_ONLY
+SYN-008,未驗證自陳,1 人；SYN-0126-11,§3,取得合法來源後重新判定；之前維持 HOLD。,SAMPLE_SYNTHETIC_ONLY
+SYN-009,缺基準狀態,1 人；SYN-0126-12,§3,補到合法基準資料才可配對；不得以零補值。,SAMPLE_SYNTHETIC_ONLY
+SYN-010,SYN-0126-01 基準月薪,"32,000 NTD/月",§5、§6、圖1,以同意範圍內的基準月份可核驗來源替換。,SAMPLE_SYNTHETIC_ONLY
+SYN-016,SYN-0126-01 追蹤月薪,"33,000 NTD/月",§5、§6、圖1,以同一匿名配對碼的追蹤月份來源替換。,SAMPLE_SYNTHETIC_ONLY
+SYN-011,SYN-0126-02 基準月薪,"28,000 NTD/月",§5、§6、圖1,以同意範圍內的基準月份可核驗來源替換。,SAMPLE_SYNTHETIC_ONLY
+SYN-017,SYN-0126-02 追蹤月薪,"28,500 NTD/月",§5、§6、圖1,以同一匿名配對碼的追蹤月份來源替換。,SAMPLE_SYNTHETIC_ONLY
+SYN-012,SYN-0126-03 基準月薪,"40,000 NTD/月",§5、§6、圖1,以同意範圍內的基準月份可核驗來源替換。,SAMPLE_SYNTHETIC_ONLY
+SYN-018,SYN-0126-03 追蹤月薪,"40,000 NTD/月",§5、§6、圖1,以同一匿名配對碼的追蹤月份來源替換。,SAMPLE_SYNTHETIC_ONLY
+SYN-013,SYN-0126-04 基準月薪,"36,000 NTD/月",§5、§6、圖1,以同意範圍內的基準月份可核驗來源替換。,SAMPLE_SYNTHETIC_ONLY
+SYN-019,SYN-0126-04 追蹤月薪,"37,000 NTD/月",§5、§6、圖1,以同一匿名配對碼的追蹤月份來源替換。,SAMPLE_SYNTHETIC_ONLY
+SYN-014,SYN-0126-05 基準月薪,"30,000 NTD/月",§5、§6、圖1,以同意範圍內的基準月份可核驗來源替換。,SAMPLE_SYNTHETIC_ONLY
+SYN-020,SYN-0126-05 追蹤月薪,"29,000 NTD/月",§5、§6、圖1,以同一匿名配對碼的追蹤月份來源替換。,SAMPLE_SYNTHETIC_ONLY
+SYN-015,SYN-0126-06 基準月薪,"45,000 NTD/月",§5、§6、圖1,以同意範圍內的基準月份可核驗來源替換。,SAMPLE_SYNTHETIC_ONLY
+SYN-021,SYN-0126-06 追蹤月薪,"46,000 NTD/月",§5、§6、圖1,以同一匿名配對碼的追蹤月份來源替換。,SAMPLE_SYNTHETIC_ONLY
+SYN-022,合成基準總額,"211,000 NTD/月",§1、§6、§7,由真實有效配對基準值重新加總。,SAMPLE_SYNTHETIC_ONLY
+SYN-023,合成追蹤總額,"213,500 NTD/月",§1、§6、§7,由真實有效配對追蹤值重新加總。,SAMPLE_SYNTHETIC_ONLY
+SYN-024,合成總額差,"+2,500 NTD/月",§1、§6、§7,重新相減；不得手動沿用示例結果。,SAMPLE_SYNTHETIC_ONLY
+SYN-025,描述性微幅分組,0% < 變化率 ≤ 5%,§1、§4、§8,依經核准的真實分析目的重新定義；非官方門檻。,SAMPLE_SYNTHETIC_ONLY
+SYN-026,基準薪資帶切點,"35,000 NTD/月",§7、圖1,重新檢查切點適切性；樣本不足時取消分群。,SAMPLE_SYNTHETIC_ONLY

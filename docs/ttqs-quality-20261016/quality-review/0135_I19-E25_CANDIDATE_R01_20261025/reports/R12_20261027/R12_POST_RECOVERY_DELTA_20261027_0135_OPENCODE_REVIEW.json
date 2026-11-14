@@ -1,0 +1,90 @@
+{
+  "schema": "TTQS_ONE_R12_POST_RECOVERY_DELTA_V1",
+  "project_id": "TTQS_ONE",
+  "command": "TTQS_ONE_20261026_R12_FULL_RECOVERY_DELIVERY",
+  "observed_at_local": "2026-10-27T08:22:29.5248404+08:00",
+  "source_instruction_blob_sha1": "63f26f0708249b211611d51b34a7fb90b4cd26a9",
+  "source_test_matrix_blob_sha1": "b214de0aea55c7741a361e46703bdc656ff25e98",
+  "baseline_matrix_observed_at": "2026-10-27T00:48:48.983887+08:00",
+  "fresh_remote_head_before": "4e4f122cd161fc2fd28bc6de42e875a55733c800",
+  "doc_id": "0135",
+  "requirement_id": "I19-E25",
+  "candidate_state": "CANDIDATE",
+  "candidate_sha256": "cae8be8280456b51a1294ee90eafca0ac1ae8a12738289d6ebbca35b3a05a3da",
+  "candidate_bytes_changed": false,
+  "work_id": "TTQS-0135-I19-E25-R03-W1-EXACT-SHA-REVIEW-AFTER-429-RELEASE",
+  "worker": "OpenCode v2 CLI",
+  "requested_model": "opencode/glm-5.3-flash-free",
+  "actual_model": "opencode/glm-5.3-flash-free",
+  "actual_model_evidence": "Sanitized session export: providerID=opencode, model id=glm-5.3-flash-free",
+  "cli_exit": 0,
+  "pid": 92176,
+  "session_id": "ses_e8544289bffeNRi5T4R1l2X87Y",
+  "elapsed_seconds": 56.686,
+  "token_usage": {
+    "input": 14697,
+    "output": 1791,
+    "cache_write": 0,
+    "cache_read": 2432,
+    "reasoning": 718
+  },
+  "reported_cost_usd": 0,
+  "fallback": "NOT_OBSERVED_IN_CAPTURED_SESSION",
+  "tool_events": false,
+  "computer_use": false,
+  "semantic_verdict": "PASS_TEXT_ONLY_WITH_TWO_NONBLOCKING_FINDINGS",
+  "blocking_findings": 0,
+  "nonblocking_findings": 2,
+  "technical_qa": "PASS_WITH_SCOPE",
+  "visual_qa": "PASS_WITH_SCOPE",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN_UNTIL_SOURCE",
+  "github_sync": "PENDING",
+  "remote_raw_byte_readback": "PENDING",
+  "test_deltas": [
+    {
+      "id": "T03",
+      "status": "UPDATED_PASS_EXACT_SHA_BOUND_R02_REVIEW",
+      "finding": "The old mismatched response remains rejected; a separate R12 response is now bound to 0122 R02 exact DOCX SHA and matching extracted-text/request data. No R02/R03 SHA inheritance."
+    },
+    {
+      "id": "T04",
+      "status": "UPDATED_ONE_BOUNDED_W1_REVIEW_SUCCEEDED",
+      "finding": "After the recorded retry release, one 0135 OpenCode free-model semantic review completed. This proves one successful invocation, not global or persistent route health."
+    },
+    {
+      "id": "T06",
+      "status": "UNKNOWN_ANTIGRAVITY_SERVING_IDENTITY",
+      "finding": "The 0135 Gemini request remains unverified as to serving model/fallback; the successful OpenCode route is separate."
+    },
+    {
+      "id": "T12",
+      "status": "UNKNOWN_CURRENT_NATIVE_READBACK",
+      "finding": "Automation card view exposed no native enabled/paused, interval, budget, prompt, history or local path fields in this operation."
+    },
+    {
+      "id": "T13",
+      "status": "UNKNOWN_NATURAL_TRIGGER",
+      "finding": "No new native scheduledAt/trigger receipt was exposed; no claim that this manual active turn proves recurrence."
+    },
+    {
+      "id": "T19",
+      "status": "UNKNOWN_PANEL_ALIGNMENT",
+      "finding": "No live native panel source/readback verified in this operation."
+    },
+    {
+      "id": "T20",
+      "status": "PENDING_THIS_DELTA_REMOTE_READBACK",
+      "finding": "The previous baseline readback does not verify this new delta; exact raw-byte check is required after sync."
+    },
+    {
+      "id": "T24",
+      "status": "PASS_CANDIDATE_ONLY",
+      "finding": "Candidate, real evidence and formal acceptance remain separate."
+    }
+  ],
+  "overall": "PARTIAL_WITH_VERIFIED_MATERIAL_DELTA",
+  "goal_complete": false,
+  "next_ready_stage": "PENDING_LIVE_QUEUE_RECONCILIATION",
+  "unresolved": "Native automation fields/natural trigger, live panel alignment, and complete 129-item final acceptance remain unverified."
+}

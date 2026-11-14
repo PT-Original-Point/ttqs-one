@@ -1,0 +1,166 @@
+{
+  "schema": "TTQS_ONE_SCOPED_REPAIR_WRITER_RECEIPT_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0015",
+  "requirement_id": "I02-E05",
+  "revision": "R15",
+  "work_id": "W-0015-I02-E05-R15-SCOPED-REPAIR-20261108-B45ACB8C",
+  "recorded_at_utc": "2026-11-07T21:24:52.480360+00:00",
+  "recorded_at_taipei": "2026-11-08T05:24:52.480360+08:00",
+  "status": "CANDIDATE_ONLY",
+  "candidate_only": true,
+  "formal_acceptance": false,
+  "promotion": "NOT_PROMOTED",
+  "executor_identity": {
+    "worker_thread_id": "01a1b7d9-89e2-70a3-b43a-855715f06bca",
+    "nickname": "Jason",
+    "identity_basis": "User supplied for this bounded repair task",
+    "service_or_model_identity": "NOT_CLAIMED"
+  },
+  "writer_ownership_check": {
+    "checked_before_ownership": true,
+    "same_scope_writer_found": false,
+    "evidence": [
+      {
+        "source": "Codex thread readback",
+        "thread_id": "01a1b7a5-58a8-7df0-beea-fd791f687ab5",
+        "status": "completed",
+        "scope": "Prior 0015/I02-E05 R14 writer task; completedAt epoch 1794084645"
+      },
+      {
+        "source": "Active parent GOAL thread overview",
+        "thread_id": "01a14098-b269-79e3-b07c-56e96557fe07",
+        "status": "active",
+        "result": "Prior R14 artifacts were being read back; no active R15 writer was identified for this output path"
+      },
+      {
+        "source": "Windows process command-line scan",
+        "result": "0 matches for the R14/R13/R15 scoped paths, excluding the inspection process"
+      },
+      {
+        "source": "R15 output path readback",
+        "result": "Output root and all three target files absent before write"
+      }
+    ],
+    "limitations": "The process scan is not standalone proof of file ownership; no process was attached or terminated and no OS file-handle attribution was performed."
+  },
+  "inputs": {
+    "r14_docx_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0015-I02-E05-R13-REGISTER-SCORING-REPAIR_20261108\\candidate\\0015_I02-E05_R14.docx",
+    "r14_docx_sha256": "f2a8f1202f1b39e22a17c3a53a62bb0c91b1d70e6161a99005967036496d0c5d",
+    "r13_register_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0015-I02-E05-R13-REGISTER-SCORING-REPAIR_20261108\\source\\SYNTHETIC_REGISTER_0015_R13.csv",
+    "r13_register_sha256": "07069ff0436d0f716bfd936ceb2dc13d598b2d31b71bb95e82a865e6b8cbf880",
+    "r14_independent_review_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0015-I02-E05-R13-REGISTER-SCORING-REPAIR_20261108\\qa\\R14_INDEPENDENT_SEMANTIC_REVIEW_20261108.json",
+    "r14_independent_review_sha256": "9c987c4dc5f0d54bfa1147427a23a6fd0855c5d7666f3b1068df954e5a1cd152",
+    "r14_writer_receipt_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0015-I02-E05-R13-REGISTER-SCORING-REPAIR_20261108\\qa\\R14_SCOPED_REPAIR_WRITER_RECEIPT_20261108.json",
+    "r14_writer_receipt_sha256": "c55d8d4463d36ca17becda65c4731e2528be590644dacc812944f6e6a86cd1fd"
+  },
+  "outputs": {
+    "r15_docx_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0015-I02-E05-R15-SCOPED-REPAIR_20261108\\candidate\\0015_I02-E05_R15.docx",
+    "r15_docx_sha256": "ef1e122b86b94368e9cb301dc6d1261080c1dcdd67c3e992848b4a096b31a8ef",
+    "r15_register_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0015-I02-E05-R15-SCOPED-REPAIR_20261108\\register\\SYNTHETIC_REGISTER_0015_R15.csv",
+    "r15_register_sha256": "2da6cf11a26872690cad03c4b7a38c9d904888955971005f7fbf2bd70a057419",
+    "writer_receipt_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0015-I02-E05-R15-SCOPED-REPAIR_20261108\\qa\\R15_SCOPED_REPAIR_WRITER_RECEIPT_20261108.json"
+  },
+  "changes": [
+    {
+      "artifact": "DOCX",
+      "location": "Front matter paragraph 4",
+      "field": "Current candidate revision label",
+      "before": "本稿狀態：R13 CANDIDATE；尚未取得正式 TTQS 接受；完整工作案例均為 SAMPLE／SYNTHETIC。",
+      "after": "本稿狀態：R15 CANDIDATE；尚未取得正式 TTQS 接受；完整工作案例均為 SAMPLE／SYNTHETIC。"
+    },
+    {
+      "artifact": "DOCX",
+      "location": "Table 11, row 4, cell 2",
+      "field": "Current document revision label; R01 reply-draft version retained separately",
+      "before": "R01（回覆草稿版次；與本文 R13 修訂版次分開）",
+      "after": "R01（回覆草稿版次；與本文 R15 修訂版次分開）"
+    },
+    {
+      "artifact": "CSV",
+      "location": "CSV line 86, CTRL-12, document_locator",
+      "before": "§8.2；Table 15 row 3「事實更正」",
+      "after": "§8.3；Table 15 row 3「事實更正」"
+    }
+  ],
+  "unchanged_invariants": {
+    "table9_row3_cell3": "HOLD／暫緩；逐項解除後仍由有權角色重新決定（不代表通過）",
+    "table9_explicit_hold_and_not_pass": true,
+    "table16_row86_ctrl12_locator": "§8.3；Table 15 row 3「事實更正」",
+    "score": {
+      "weighted_numerator": 290,
+      "denominator": 5,
+      "total": 58,
+      "equation": "290/5=58",
+      "arithmetic_pass": true,
+      "score_paragraph_byte_text_unchanged": true
+    },
+    "embedded_register": {
+      "data_rows": 85,
+      "unique_ids": 85,
+      "fields_per_row": 5,
+      "populated_data_cells": 425
+    },
+    "paired_register": {
+      "data_rows": 85,
+      "unique_ids": 85,
+      "fields_per_row": 5,
+      "populated_data_cells": 425,
+      "only_changed_cell": "CTRL-12.document_locator"
+    },
+    "all_other_docx_text_and_package_parts_unchanged": true,
+    "all_other_csv_values_and_bytes_unchanged": true,
+    "font_size_and_style_properties_changed": false,
+    "revision_replacement_lengths_equal": true,
+    "sample_real_facts_added": false
+  },
+  "verification": {
+    "docx_zip_crc": "PASS",
+    "all_xml_and_rels_parse": "PASS",
+    "changed_docx_package_members": [
+      "word/document.xml"
+    ],
+    "changed_docx_text_run_count": 2,
+    "all_other_docx_package_member_payloads_byte_identical": true,
+    "docx_xml_reverts_to_input_after_reversing_two_tokens": true,
+    "csv_parses": "PASS",
+    "csv_changed_data_row": 85,
+    "csv_changed_line": 86,
+    "csv_changed_fields": [
+      "CTRL-12.document_locator"
+    ],
+    "candidate_and_register_sha256_bound": true,
+    "post_write_disk_readback": "PASS",
+    "post_write_disk_readback_at_utc": "2026-11-07T21:27:51.940304+00:00",
+    "post_write_disk_sha256": {
+      "r15_docx": "ef1e122b86b94368e9cb301dc6d1261080c1dcdd67c3e992848b4a096b31a8ef",
+      "r15_register": "2da6cf11a26872690cad03c4b7a38c9d904888955971005f7fbf2bd70a057419"
+    },
+    "post_write_readability": {
+      "docx_zip_crc_and_xml_parse": "PASS",
+      "csv_parse": "PASS",
+      "writer_receipt_json_parse": "PASS_AFTER_FINAL_WRITE"
+    }
+  },
+  "scope_limits": {
+    "semantic_review_performed": false,
+    "visual_review_performed": false,
+    "visual_pass_claimed": false,
+    "github_or_pr_touched": false,
+    "current_or_shared_register_touched": false,
+    "source_packet_or_blueprint_touched": false,
+    "r13_csv_modified": false,
+    "r14_docx_modified": false,
+    "existing_artifact_overwritten": false,
+    "word_com_used": false
+  },
+  "issues": [
+    "Fresh independent semantic review remains separate and was not performed in this Writer repair.",
+    "Visual review remains separate; no visual PASS is claimed."
+  ],
+  "tools": {
+    "runtime": "Bundled Python 3.12.14; Python standard library zipfile/csv/xml.etree",
+    "artifact_operation_started_hook": "SUCCESS; operation-kind=edit; expected-output-count=3; output-format=docx",
+    "method": "Exact UTF-8 token replacement in word/document.xml for two current revision labels; copy every other DOCX member payload unchanged; exact UTF-8 locator replacement on the CTRL-12 CSV line; exclusive-create outputs."
+  }
+}

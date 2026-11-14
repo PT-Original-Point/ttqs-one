@@ -1,0 +1,112 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0038",
+  "requirement_id": "I08-E02",
+  "official_checkbox_sequence": "039",
+  "candidate": "0038_R03",
+  "candidate_sha256": "3a887bd3835b3a30b9fdb489257c8a09f79d3c2ce25c10565fae2b4e173f7efa",
+  "candidate_bytes": 152753,
+  "source_candidate": "0038_R02",
+  "source_sha256": "bdb6ef07c1aacd31f638cdad511012777d2f1b9d2c9f5f307252dd62de0170a4",
+  "source_spec_head": "639b9eacce93f84f49ee20714f1bad337c6a961e",
+  "blueprint_file_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+  "blueprint_row_sha256": "2504485c1698a5c83ac2205938c05b532edc8d697f2441ad1d6a0c324897b73e",
+  "pdf_sha256": "85974e68937426d2a7b80844527098a0370cbe39200f3563ee773fdf15543f2a",
+  "pdf_pages": 14,
+  "renderer": "Codex documents skill render_docx.py using E:/TTQS project-controlled renderer recovery LibreOffice; rasterized by packaged Poppler",
+  "body_min_effective_pt": 10.5,
+  "table_min_effective_pt": 9.5,
+  "scoring_summary": {
+    "A": {
+      "pre": 44,
+      "post": 57,
+      "pass": 3,
+      "critical_zero": 2,
+      "n": 12
+    },
+    "B": {
+      "pre": 44,
+      "post": 79,
+      "pass": 11,
+      "critical_zero": 0,
+      "n": 12
+    }
+  },
+  "replacement_register_rows": 37,
+  "checks": [
+    {
+      "name": "candidate_exact_sha",
+      "status": "PASS",
+      "detail": "3a887bd3835b3a30b9fdb489257c8a09f79d3c2ce25c10565fae2b4e173f7efa"
+    },
+    {
+      "name": "docx_package_crc",
+      "status": "PASS",
+      "detail": "all members CRC valid"
+    },
+    {
+      "name": "content_preserved_from_semantic_pass_R02",
+      "status": "PASS",
+      "detail": "all top-level paragraph and table cell text identical to R02; R02 review itself remains bound only to R02 SHA"
+    },
+    {
+      "name": "body_font_floor_10_5pt",
+      "status": "PASS",
+      "detail": "minimum_effective_body_pt=10.5; nonempty_runs=83; style_inherited=0"
+    },
+    {
+      "name": "table_font_floor_9_5pt",
+      "status": "PASS",
+      "detail": "minimum_effective_table_pt=9.5; nonempty_runs=611; style_inherited=0"
+    },
+    {
+      "name": "two_12_case_batches_and_recomputed_math",
+      "status": "PASS",
+      "detail": "{\"results\": {\"A\": {\"pre\": 44, \"post\": 57, \"pass\": 3, \"critical_zero\": 2, \"n\": 12}, \"B\": {\"pre\": 44, \"post\": 79, \"pass\": 11, \"critical_zero\": 0, \"n\": 12}}, \"errors\": []}"
+    },
+    {
+      "name": "aggregate_calculations",
+      "status": "PASS",
+      "detail": "A=13/12; B=35/12; delta=22/12=1.8333"
+    },
+    {
+      "name": "24_case_execution_trace",
+      "status": "PASS",
+      "detail": "rows=24; expected unique A01-A12/B01-B12"
+    },
+    {
+      "name": "official_requirement_to_fields_source_decision_review_crosswalk",
+      "status": "PASS",
+      "detail": "crosswalk_rows=4"
+    },
+    {
+      "name": "replacement_register_37_rows_and_24_case_lineage",
+      "status": "PASS",
+      "detail": "rows=37; trace_rows=24"
+    },
+    {
+      "name": "candidate_mapping_and_sample_boundary",
+      "status": "PASS",
+      "detail": "0038 / I08-E02 / official sequence 039; SAMPLE/SYNTHETIC marked in document"
+    },
+    {
+      "name": "all_page_images_match_pdf",
+      "status": "PASS",
+      "detail": "pdf_pages=14; pngs=14; names=['page-1.png', 'page-2.png', 'page-3.png', 'page-4.png', 'page-5.png', 'page-6.png', 'page-7.png', 'page-8.png', 'page-9.png', 'page-10.png', 'page-11.png', 'page-12.png', 'page-13.png', 'page-14.png']"
+    },
+    {
+      "name": "render_output_images_nonempty",
+      "status": "PASS",
+      "detail": "{\"page-1.png\": [1414, 2000], \"page-2.png\": [1414, 2000], \"page-3.png\": [1414, 2000], \"page-4.png\": [1414, 2000], \"page-5.png\": [1414, 2000], \"page-6.png\": [1414, 2000], \"page-7.png\": [1414, 2000], \"page-8.png\": [1414, 2000], \"page-9.png\": [1414, 2000], \"page-10.png\": [1414, 2000], \"page-11.png\": [1414, 2000], \"page-12.png\": [1414, 2000], \"page-13.png\": [1414, 2000], \"page-14.png\": [1414, 2000]}"
+    }
+  ],
+  "status": "PASS",
+  "visual_review": "PASS_ALL_14_PAGES_BY_DIRECT_INSPECTION",
+  "independent_semantic_review": "PASS",
+  "formal_acceptance": "NOT_GRANTED",
+  "semantic_review_receipt": "review/semantic_review_receipt_R03.json",
+  "semantic_review_raw_sha256": "e7e0d60f45d4fdbe22c7875389647eeb60e8bcbb4df5b63da54c749abf76a561",
+  "semantic_review_candidate_sha256": "3a887bd3835b3a30b9fdb489257c8a09f79d3c2ce25c10565fae2b4e173f7efa",
+  "semantic_review_scope": "8/8 criteria; reviewer independently inspected all 14 page PNGs and both official source images",
+  "nonblocking_review_notes": 4
+}

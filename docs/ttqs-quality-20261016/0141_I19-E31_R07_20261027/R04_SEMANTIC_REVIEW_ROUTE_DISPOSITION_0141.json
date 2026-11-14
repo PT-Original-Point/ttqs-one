@@ -1,0 +1,96 @@
+{
+  "schema": "ttqs-one-0141-r07-r04-semantic-review-route-disposition-v1",
+  "observed_at_local": "2026-10-27T21:40:45+08:00",
+  "work_id": "TTQS_ONE_0141_I19-E31_R07_R04_SEMANTIC_REVIEW_DISPOSITION",
+  "doc_id": "0141",
+  "requirement_id": "I19-E31",
+  "blueprint_index_157": 155,
+  "printed_checkbox_serial": "UNKNOWN",
+  "candidate_state": "CANDIDATE",
+  "candidate_sha256": "de111911a549a0be0bd6381a6b22ed694881ba6b3f83528d2b4a4e153002142b",
+  "candidate_bytes": 164740,
+  "source_binding": {
+    "source_packet_r02_sha256": "43c0e1bda5dfeb12c1ba8fc8805b876641f5184e4bf95eb4ef6c3182cf8ee964",
+    "unique_blueprint_r02_sha256": "e19761674045b2defa7090ba1d8f1224943a89e54811180c20b9ea362de59cda",
+    "sample_response_csv_sha256": "723259199dd51973fc6473ec000234cc853fa1511be05864fdfd7b08bb452862",
+    "sample_replacement_register_r07_sha256": "6af002082a63fd443cea748890f07b9d779de50f14306bfb92fffba42fce3968",
+    "real_data": "UNKNOWN/HOLD",
+    "human_formal_acceptance": "NOT_GRANTED"
+  },
+  "technical_and_visual": {
+    "deterministic_qa": "PASS",
+    "qa_receipt_sha256": "35d785708d5a50e299db0b0e4a0207a7954d993c2e274b1447ab6079902c22ce",
+    "qa_validator_sha256": "aec2c2ec4dcd89675360537d5f4a6ec6aaf21bb492337ad54dfbcf23f922257d",
+    "native_word_pages": 28,
+    "render_receipt_sha256": "bd79e6fd88b6eb014c7bdf57955ae1220e02a9c0690fbf081e3594fc9664e47e",
+    "page_manifest_sha256": "e238775cfe7a2f20f4b73cce26950a50efb7fb7fe9254a4c971c88aa652deda1",
+    "visual_receipt_sha256": "26dd77f1c55958ff7bbe5ea6b861ef8f5e994416d8448cb35abff0ec066faecb",
+    "visual_scope": "All 28 pages covered by exact page raster manifest; pages 23-24 directly inspected; other 26 exact raster hashes match R03.",
+    "layout_patch_receipt_sha256": "e533cb837ccd3237b5cf61e7f74b81c0c08b8d12355ca024ed2f59a75fe63059",
+    "patch_scope": "Only word/document.xml changed; visible text unchanged; targeted page-break-before on synthetic row SYN-0141-2025-010."
+  },
+  "semantic_review": "BLOCKED_NO_REVIEW_RESPONSE",
+  "review_packet": {
+    "path": "OPENCODE_REVIEW_PACKET_0141_R04.md",
+    "sha256": "86a280661e6a3a1b78996d71ca77d07a05f7f9394538212a9902a1a47272542c",
+    "text_extraction_sha256": "e1cf2080d86aa67d7bb9667067db1cbd655ae8682ecdaa5c3517dd98c0e5789d",
+    "receipt_sha256": "d8a3aee59ca62391dc92d9a98b2b0340aea43eea1f9aeb652c8fdd6bd89228e8",
+    "complete_text_extracted_from_exact_candidate": true
+  },
+  "attempts": [
+    {
+      "worker": "OpenCode v2 CLI",
+      "candidate_sha256": "bfdb9ae9e048dd43f87e84d9e541d63f655335d7d1478297969fe68debcea56e",
+      "requested_model": "opencode/deepseek-v4.1-flash-free",
+      "actual_model": "UNKNOWN",
+      "status": "BLOCKED_PROVIDER_FREE_LIMIT",
+      "http_status": 429,
+      "stdout_sha256": "50abbdf0212405872b4364dda0cde232f000b851e543e145b9c5732ccdefb929",
+      "session_id": "ses_e82774dd8ffeC61cm0VPXxcOTa",
+      "review_result": "NO_RESPONSE",
+      "scope_note": "Historical attempt on R03. R04 text was verified unchanged, but this is not an exact-R04 semantic review."
+    },
+    {
+      "worker": "OpenCode v2 CLI",
+      "candidate_sha256": "de111911a549a0be0bd6381a6b22ed694881ba6b3f83528d2b4a4e153002142b",
+      "requested_model": "opencode/glm-5.3-flash-free",
+      "actual_model": "UNKNOWN_NO_MODEL_RESPONSE",
+      "status": "BLOCKED_PROVIDER_FREE_LIMIT",
+      "http_status": 429,
+      "process_receipt_sha256": "2945627343bef741f25c2b9e1a7d8f3be0404b8294d5592520559876746bddd3",
+      "stdout_sha256": "0cbf02ae7fc28ed5292e1278119f44481fad10e28d469b35c183a4d84358dc4c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "session_id": "ses_e826a73f1ffeC4ZHZzCv68Q503",
+      "pid": 82340,
+      "exit_code": 1,
+      "retry_after_ms": 37284000,
+      "retry_at_utc": "2026-10-28T00:00:00.379+00:00",
+      "retry_at_local_taipei": "2026-10-28T08:00:00.379+08:00",
+      "token_usage": "UNKNOWN_NO_MODEL_RESPONSE",
+      "review_result": "NO_RESPONSE",
+      "exact_candidate_and_packet_bound": true
+    },
+    {
+      "worker": "Antigravity CLI",
+      "candidate_sha256": "bfdb9ae9e048dd43f87e84d9e541d63f655335d7d1478297969fe68debcea56e",
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_model": "UNKNOWN",
+      "historical_route_disposition_sha256": "9cd229abdddaa284fdfcd04fd2ac0f8a52d14bc9d31de6b7ed90140207385a86",
+      "attempt_summary": "Three CLI argument failures (exit 2) despite three syntax corrections; fourth process exit 0 but empty response and RunCommand permission denied. No Computer Use or dangerous skip-permissions used; no exact-R04 review response.",
+      "lane_status": "PAUSED_FOR_THIS_REVIEW_AFTER_REPEATED_CLI_FAILURE_AND_EMPTY_MODEL_TURN"
+    }
+  ],
+  "route_decision": {
+    "opencode": "No retry before provider reset. The exact GLM attempt returned free-limit 429 with retry-after aligned to 2026-10-28 00:00 UTC; a fresh availability signal is required before another bounded call.",
+    "antigravity": "Remain paused for this review; do not use Computer Use or dangerous permission bypass. Resume only with changed, documented safe CLI-input evidence.",
+    "fallback": "No model fallback occurred.",
+    "next_action": "At/after the reset, first read live route evidence and active-worker state; then allow at most one new exact-SHA semantic review if a free model is demonstrably available. Otherwise keep 0141 semantic status blocked and proceed with other legal READY lanes."
+  },
+  "report_source": {
+    "file_name": "貼上的文字.txt",
+    "sha256": "ff3ca9886e3a345d78be358b2883296b7e5454408d23bc940fee239ba826c900",
+    "decision_basis": "The user-provided 2026-10-27 report lists GLM-5.3-Flash Free as a primary capability comparison, but explicitly leaves account-level availability uncertain; this R04 call independently returned HTTP 429."
+  },
+  "formal_acceptance": "NOT_GRANTED",
+  "result": "BLOCKED"
+}

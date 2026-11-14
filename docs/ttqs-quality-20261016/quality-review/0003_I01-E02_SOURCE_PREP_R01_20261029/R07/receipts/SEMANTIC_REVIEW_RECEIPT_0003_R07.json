@@ -1,0 +1,51 @@
+{
+  "schema": "ttqs-one-independent-semantic-review-v1",
+  "work_id": "TTQS-0003-I01-E02-R07-ANTIGRAVITY-SEMANTIC-REVIEW",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0003",
+  "requirement_id": "I01-E02",
+  "official_checkbox_serial": "002",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0003_I01-E02_SOURCE_PREP_R01_20261029\\candidate_R07\\0003__目標市場需求調查問卷_R07.docx",
+  "candidate_sha256": "265DA610608EDC4A97C4C592C4C556D16DD5B8288C20F0CF46A8477436A05357",
+  "source_packet_sha256": "37D8066A5A85A5134D0DA5F3942C178E2FECC50D7CFDF00F915AF6FDF1C4A34E",
+  "unique_blueprint_sha256": "6ACAF95FE052738540402977E9F4B2CA3AFD5B4D42F3B544B02636159609F9F2",
+  "replacement_register_sha256": "7A21CF2FB6E8FD3600ABA6733D176AD45C4A7003957F7A8875F7CB6095257423",
+  "replacement_register_rows": 17,
+  "replacement_register_required_columns_present": true,
+  "reviewer": {
+    "role": "independent semantic/usability reviewer",
+    "worker": "Antigravity CLI",
+    "windows_user": "DESKTOP-VMV4Q60\\J",
+    "pid": 109776,
+    "cli_version": "1.4.10"
+  },
+  "requested_model": "gemini-3.8-flash-high",
+  "review_model": "gemini-3.8-flash-high",
+  "model_selection_evidence": "Exact --model CLI flag and installed model catalog entry; successful headless route test",
+  "actual_served_model": "UNKNOWN",
+  "provider_attestation": "UNKNOWN",
+  "fallback_allowed": false,
+  "prompt_sha256": "759215AF51D63FD2DDA306F636D33AD61D32A0024088F95B3A1C7DE80BFB37AF",
+  "raw_response_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0003_I01-E02_SOURCE_PREP_R01_20261029\\candidate_R07\\review\\antigravity_R07\\raw.stdout.json",
+  "raw_response_sha256": "3F92300610A08458673B374D4DD3612DBBF0517D6E3803163768042BA541CE16",
+  "response_json_status": "SUCCESS",
+  "conversation_id": "06dae087-4cfe-45c2-855f-adebd34dc6bf",
+  "reviewer_verdict": "PASS",
+  "advisory_findings": [
+    "F-10: suggestion to use a four-column synthetic replacement mapping table"
+  ],
+  "advisory_reconciliation": "Local 17-row CSV has fact_id, field, synthetic_value and real_replacement_rule columns; plus note, locator and SAMPLE_SYNTHETIC_ONLY status. Advisory is met by existing register; no DOCX mutation required.",
+  "review_scope": "Text-based independent semantic/usability review of exact candidate; all questions, genre, sample boundary, coding, math, requirement mapping, adjacent-neighbor separation, title-blind purpose and association usability",
+  "visual_review": "NOT_IN_SCOPE; separate exact-SHA Word-native visual receipt applies",
+  "duration_seconds": 102.0780488,
+  "usage": {
+    "input_tokens": 16122,
+    "output_tokens": 12129,
+    "thinking_tokens": 8268,
+    "cache_read_tokens": 0,
+    "total_tokens": 28251
+  },
+  "candidate_mutated": false,
+  "formal_acceptance": "NOT_GRANTED",
+  "observed_at": "2026-10-29T20:49:00+08:00"
+}

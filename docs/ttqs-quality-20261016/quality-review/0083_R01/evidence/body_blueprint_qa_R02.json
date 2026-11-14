@@ -1,0 +1,48 @@
+{
+  "schema": "ttqs-0083-body-blueprint-qa-v1",
+  "document_id": "0083",
+  "requirement_id": "I17C-E02",
+  "checkbox": "089",
+  "body_sha256": "65adee0f9be4643b612817250484407cd1833daa3a2fa6a0a93e797ba68c324e",
+  "blueprint_sha256": "21f76376621c5dd22d002a62202f41ea7335bbf872a965b0bbf8fb86955d0178",
+  "body_bytes": 75397,
+  "register_groups": [
+    [
+      81,
+      461,
+      541
+    ],
+    [
+      81,
+      1055,
+      1135
+    ]
+  ],
+  "blueprint_register_rows": 81,
+  "checks": {
+    "two_complete_register_tables": true,
+    "register_tables_match_blueprint": true,
+    "register_table_1_exact": true,
+    "register_table_2_exact": true,
+    "sample_boundaries_permanent": true,
+    "general_applicability": true,
+    "no_real_association_claim": true,
+    "cumulative_threshold_correct": true,
+    "appendices_A_to_E": true,
+    "all_28_negative_tests": true,
+    "appendix_sha_lock": true,
+    "no_remove_sample_instruction": true,
+    "core_identity": true,
+    "aid02_status_and_dates": true,
+    "required_calcs": true,
+    "G1_field_definition_ids_exact": true,
+    "T1_field_definition_ids_exact": true,
+    "A1_field_definition_ids_exact": true,
+    "E1_field_definition_ids_exact": true,
+    "all_tables_same_columns": true
+  },
+  "failed_checks": [],
+  "table_width_findings": [],
+  "scope": "Deterministic crosswalk/source text checks only; not semantic or visual acceptance.",
+  "result": "PASS_STRUCTURAL"
+}

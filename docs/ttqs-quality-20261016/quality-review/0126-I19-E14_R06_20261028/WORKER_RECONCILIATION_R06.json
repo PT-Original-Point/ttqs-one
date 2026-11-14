@@ -1,0 +1,167 @@
+{
+  "schema": "TTQS_ONE_WORKER_RECONCILIATION_R06_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0126",
+  "requirement_id": "I19-E14",
+  "observed_at_local": "2026-10-28T03:37:44.7970144+08:00",
+  "current_versions": {
+    "opencode": "v2.1.4",
+    "antigravity": "1.4.8"
+  },
+  "current_owner_check": {
+    "agy_writer": "NONE_DETECTED",
+    "active_0126_writer": "NONE_DETECTED",
+    "word_com_pid": "84268",
+    "service_is_writer": false,
+    "opencode_service_pid": 79496,
+    "word_document_owner": "UNKNOWN",
+    "word_com_created_at": "2026-10-27T13:38:46+08:00",
+    "no_process_terminated": true
+  },
+  "attempts": [
+    {
+      "result": "HTTP 429 before inference; no manuscript; actual model NOT_REACHED; tokens/cost UNKNOWN",
+      "attempt": "W1 OpenCode R01",
+      "request_sha256": "fa226354dc2723e05284d4d2697d39e0311b4eaeb492a2918f47bc3a49cb7856",
+      "requested_model": "opencode/glm-5.3-flash-free",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "8d1d78ee230c2715ed932ee7fe618b3b863899b352d3fbff31c74f958c4726e0",
+      "exit": 1,
+      "work_id": "0126-I19-E14-WRITER-R01"
+    },
+    {
+      "work_id": "NOT_RECORDED",
+      "attempt": "W2 Antigravity R01 #1",
+      "result": "invalid print-timeout argument; CLI rejected before generation; no output adopted",
+      "requested_model": "gemini-3.8-flash-high"
+    },
+    {
+      "work_id": "NOT_RECORDED",
+      "attempt": "W2 Antigravity R01 #2",
+      "result": "headless command permission denied; empty response; actual serving model/token UNKNOWN",
+      "requested_model": "gemini-3.8-flash-high",
+      "stdout_bytes": 0,
+      "exit": 0
+    },
+    {
+      "work_id": "TTQS-0126-I19-E14-R02-ANTIGRAVITY-GEMINI-WRITER-20261027",
+      "attempt": "W2 Antigravity R02",
+      "process_start_called": true,
+      "requested_model": "gemini-3.8-flash-high",
+      "request_sha256": "b61ada853cf55508ff13a94c87c6c0b5fef6cc2c2e5ce71a0ebf3211850f045a",
+      "result": "reserved $PID collision after Process.Start; streams/session/exit uncollected; external effect UNKNOWN; no candidate; lane parked"
+    }
+  ],
+  "adopted_worker_content": "NONE",
+  "candidate_writer": "Codex fallback",
+  "usage_tokens": "UNKNOWN",
+  "usage_cost": "UNKNOWN",
+  "paid_fallback": "NOT_USED",
+  "computer_use": "NOT_USED",
+  "dangerous_permission_bypass": "NOT_USED",
+  "credential_pattern_scan": "0 matches in selected worker raw files; this is not a full privacy guarantee",
+  "raw_worker_files": [
+    {
+      "sha256": "3358141f802fe7d1193d8c755a8dc4cbd867e5b39e0d9f2bc7e041e199ae954b",
+      "lane": "antigravity_r02",
+      "file": "DISPATCH_START.json",
+      "bytes": 1099
+    },
+    {
+      "sha256": "4ddf9f76a999c7c2b919b282d7a16625438153d21d61b2fcbc14c6dfda77a549",
+      "lane": "antigravity_r02",
+      "file": "GITHUB_RAW_READBACK_R02.json",
+      "bytes": 2802
+    },
+    {
+      "sha256": "2eee1a1f21eb02feefafd8305511181ff91ea90906350a8ff0fc4a73b4bc8082",
+      "lane": "antigravity_r02",
+      "file": "LAUNCHER_EXCEPTION.txt",
+      "bytes": 176
+    },
+    {
+      "sha256": "b3322a7ed3b1c8617d3bd8d31f6fb0ab3233c7afbf11df2f80ca37d8f90fab7d",
+      "lane": "antigravity_r02",
+      "file": "LAUNCHER_FAILURE_TERMINAL.json",
+      "bytes": 2475
+    },
+    {
+      "sha256": "309f6f9f156d2ca3b617417902a225b5c18c2813e745be5302330fa86ed895d4",
+      "lane": "antigravity_r02",
+      "file": "MODEL_CATALOG_PRE_FLIGHT.stderr.txt",
+      "bytes": 32
+    },
+    {
+      "sha256": "d60a9e49491214bdb3e26c96045de00651d26c9dbdec5422282174219a39772e",
+      "lane": "antigravity_r02",
+      "file": "MODEL_CATALOG_PRE_FLIGHT.txt",
+      "bytes": 284
+    },
+    {
+      "sha256": "b61ada853cf55508ff13a94c87c6c0b5fef6cc2c2e5ce71a0ebf3211850f045a",
+      "lane": "antigravity_r02",
+      "file": "writer_request_R02.md",
+      "bytes": 5562
+    },
+    {
+      "sha256": "276680413a5dd94aa774bf2751e43b92b4d2652410dbcaee26a552c079f3769f",
+      "lane": "opencode",
+      "file": "0126_I19-E14_writer_dispatch.json",
+      "bytes": 1117
+    },
+    {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "lane": "opencode",
+      "file": "0126_I19-E14_writer_stderr.txt",
+      "bytes": 0
+    },
+    {
+      "sha256": "8d1d78ee230c2715ed932ee7fe618b3b863899b352d3fbff31c74f958c4726e0",
+      "lane": "opencode",
+      "file": "0126_I19-E14_writer_stdout.jsonl",
+      "bytes": 430
+    },
+    {
+      "sha256": "cf6db997d2bada515e02a095b556779557defd5a57d18ff7dc7cdc58a22b0df7",
+      "lane": "antigravity_r01",
+      "file": "0126_I19-E14_writer_attempt02_cli.log",
+      "bytes": 37923
+    },
+    {
+      "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "lane": "antigravity_r01",
+      "file": "0126_I19-E14_writer_attempt02_exit.txt",
+      "bytes": 1
+    },
+    {
+      "sha256": "151149b107b4425cda676e9670d2094ecfe8050655ab64d6657f923384f998d4",
+      "lane": "antigravity_r01",
+      "file": "0126_I19-E14_writer_attempt02_stderr.txt",
+      "bytes": 383
+    },
+    {
+      "sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+      "lane": "antigravity_r01",
+      "file": "0126_I19-E14_writer_exit.txt",
+      "bytes": 1
+    },
+    {
+      "sha256": "fa226354dc2723e05284d4d2697d39e0311b4eaeb492a2918f47bc3a49cb7856",
+      "lane": "antigravity_r01",
+      "file": "0126_I19-E14_writer_request_R01.md",
+      "bytes": 15296
+    },
+    {
+      "sha256": "a1c377bc602bd1c0f09f4064d0d342a3eb86e494fc3d3140a082ccad98401d33",
+      "lane": "antigravity_r01",
+      "file": "0126_I19-E14_writer_stderr.txt",
+      "bytes": 3033
+    },
+    {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "lane": "antigravity_r01",
+      "file": "0126_I19-E14_writer_stdout.md",
+      "bytes": 0
+    }
+  ]
+}

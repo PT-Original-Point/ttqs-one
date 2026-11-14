@@ -1,0 +1,50 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0036",
+  "requirement_id": "I07-E04",
+  "official_checkbox_serial": "036",
+  "revision": "R10",
+  "status": "TARGETED_SEMANTIC_REPAIR_CANDIDATE_ONLY",
+  "source_revision": "R09",
+  "source_sha256": "91d749d00b153227bb3db67a60c552c0e17fa2b5364c799dee7de6bf69117815",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0036_R10\\candidate\\0036__課程設計進度與訓練規劃_R10.docx",
+  "candidate_sha256": "765e36f07c5e92964d3d5aa438564ef4578e0b2d6ca684b2123687cff5686a6a",
+  "candidate_bytes": 228466,
+  "changed_package_parts": [
+    "word/document.xml"
+  ],
+  "repairs": [
+    {
+      "locator": "§13, paragraph immediately after the exception matrix",
+      "finding": "No explicit escalation time limit",
+      "repair": "Added explicit, visibly SAMPLE/SYNTHETIC timing for urgent privacy/safety/unauthorized-use issues, schedule-impacting changes, and general missing items; requires replacement with association-approved timing before real use."
+    },
+    {
+      "locator": "§6, progress-schedule maintenance bullet",
+      "finding": "Reader was instructed to update the internal replacement-register sidecar",
+      "repair": "Changed to operational version/source/authorization and course-record change control without naming an internal register."
+    },
+    {
+      "locator": "§15 heading/table and first-page quick locator",
+      "finding": "Body contained an internal official-requirement-to-body-location/evaluator map",
+      "repair": "Replaced with a usable course-design handoff checklist; retained official source identification in the document opening."
+    }
+  ],
+  "content_scope": "Only the located semantic and verified layout defects were changed. The existing 75-row SAMPLE/SYNTHETIC register was preserved and extended to 84 rows (nine new facts); the existing case values, calculations, flowchart, and assessment content were not regenerated.",
+  "package_integrity": "PASS",
+  "candidate_open_check": "PASS",
+  "synthetic_boundary": "PASS; all introduced timing values are marked SAMPLE/SYNTHETIC and are not represented as approved association policy.",
+  "independent_semantic_review": "PARTIAL_EXACT_SHA_REVIEW",
+  "layout_review": "PASS_VISUAL_DELTA",
+  "layout_followup": {
+    "source_sha256": "a19924c855a7e6a140ead60b341543ebc12c0ad11b6786ba2188b98a8f2e7d2d",
+    "finding": "The fifth handoff row orphaned onto a mostly blank page and the repeated dark-blue header text had insufficient contrast.",
+    "repair": "Condensed the five operational checklist rows without dropping checks; applied white direct run color to all three dark-blue header labels.",
+    "package_part": "word/document.xml",
+    "status": "PENDING_FINAL_RERENDER",
+    "contrast_fix": "Set direct white run color in valid rPr-before-text OOXML order for the three dark-blue checklist header cells.",
+    "pagination_root_cause": "The five-row table now fits on page 16; the preserved forced page break immediately before §16 moved from page 16 to an otherwise blank page after the earlier paragraph reflow. Removed only that redundant break paragraph so §16 flows naturally."
+  },
+  "sample_register_rows": 84,
+  "sample_register_sha256": "d9861a08650c06b8d14eded74184785836a0f3a4bb68136f3ddaaf8174cb2578"
+}

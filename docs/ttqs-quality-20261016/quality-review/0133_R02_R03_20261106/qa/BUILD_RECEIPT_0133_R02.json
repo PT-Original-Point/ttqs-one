@@ -1,0 +1,64 @@
+{
+  "schema": "ttqs-one-0133-build-receipt-r02-v1",
+  "doc_id": "0133",
+  "requirement_id": "I19-E22",
+  "built_at_utc": "2026-11-06T02:26:19.569442+00:00",
+  "builder_script": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0133_I19-E22_SOURCE_PREP_R01_20261024\\worker\\build_0133_R02.py",
+  "source_candidate": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0133_I19-E22_SOURCE_PREP_R01_20261024\\candidate\\0133_I19-E22_CANDIDATE_R01.docx",
+  "source_candidate_sha256": "25116afb8206e0828c8b3a4a763845a9c3e672a4cb49969a64a2a3737d87256b",
+  "output_candidate": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0133_I19-E22_SOURCE_PREP_R01_20261024\\candidate\\0133_I19-E22_CANDIDATE_R02.docx",
+  "output_candidate_sha256": "91a8dd17988525ba9700483c40d5d2477fa5d863d8f5138141ca89305f8a4c30",
+  "output_candidate_bytes": 102425,
+  "operations": [
+    {
+      "locator": "§2.1 年度",
+      "change": "Made last substantive teaching activity year the cross-year default; a verifiable REAL policy conflict now triggers HOLD until reviewed for comparability."
+    },
+    {
+      "locator": "§8 exception table",
+      "change": "Added SYN-EX-05 boundary test using existing sample class SYN-24-08; no extra class/person-times added."
+    },
+    {
+      "locator": "§10 synthetic replacement register",
+      "change": "Registered SYN-EX-05 and its evidence/review requirements."
+    }
+  ],
+  "original_paragraph": "示範採曆年，即 1 月 1 日至 12 月 31 日。REAL 使用時須依協會實際採用且可核實的年度規則；規則固定後不得為製造成長而改變。以實際教學活動日期歸屬年度。同一班次如跨年，依實際結案規則指定一個年度，並列開課日、結訓日、歸屬理由及覆核人；不得將同一班拆成兩年各算一班。",
+  "sample_totals_before": {
+    "2023": [
+      6,
+      72
+    ],
+    "2024": [
+      8,
+      104
+    ],
+    "2025": [
+      10,
+      141
+    ]
+  },
+  "sample_totals_after": {
+    "2023": [
+      6,
+      72
+    ],
+    "2024": [
+      8,
+      104
+    ],
+    "2025": [
+      10,
+      141
+    ]
+  },
+  "sample_totals_invariant": true,
+  "sample_cancelled_exception_excluded": true,
+  "synthetic_delta": [
+    "SYN-EX-05 boundary scenario only; does not enter annual totals."
+  ],
+  "r01_overwritten": false,
+  "independent_semantic_status": "PENDING_NOT_PASS",
+  "formal_acceptance": "NOT_GRANTED",
+  "external_effects": "No GitHub write/push; no shared register or dashboard change."
+}

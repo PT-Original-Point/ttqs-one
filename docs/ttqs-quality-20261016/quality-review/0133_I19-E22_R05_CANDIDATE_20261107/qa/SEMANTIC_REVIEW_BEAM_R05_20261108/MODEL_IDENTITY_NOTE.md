@@ -1,0 +1,3 @@
+# Route and identity note
+
+OpenCode CLI was invoked with the requested `opencode/beam-free` route (CLI v2.2.5, plan agent). The sanitized session export did not preserve session-model metadata, and the upstream serving model is unverified. This receipt therefore records the requested route only; it does not claim verified upstream model identity. Review is text-only and exact-SHA scoped. The DOCX was not modified, and the result is not formal acceptance.

@@ -1,0 +1,43 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0064",
+  "revision_reviewed": "R05",
+  "model_recommendation_source": "C:\\Users\\J\\.codex\\attachments\\dca829f7-9ae1-4775-b6c0-256399855a27\\貼上的文字.txt",
+  "model_recommendation_source_sha256": "2854ed92ff7d013b6bf74baf6de56d1916632e420d13900651d72dc6ae13e308",
+  "report_recommendations_applied": [
+    {
+      "recommendation": "DeepSeek V4.1 Flash Free — first-priority isolated test",
+      "actual_model": "opencode/deepseek-v4.1-flash-free",
+      "role": "manuscript writer",
+      "receipt": "worker/opencode_deepseek_manuscript_R01/invocation_receipt_R01.json",
+      "exit_code": 0
+    },
+    {
+      "recommendation": "Beam Free — elevated test priority",
+      "actual_model": "opencode/beam-free",
+      "role": "independent exact-SHA semantic reviewer",
+      "receipt": "review/opencode_beam_semantic_R05/semantic_review_R05_receipt.json",
+      "verdict": "PASS"
+    }
+  ],
+  "cli_version_actual": "opencode v2.0.29",
+  "cli_version_reported_latest": "v2.0.32",
+  "cli_version_alignment": "NOT_ALIGNED; local CLI is older than report snapshot",
+  "provider_billing": "UNKNOWN",
+  "model_id_version_binding": "DeepSeek free endpoint is deepseek-v4.1-flash-free; report says whether it uses 1017 weights is UNKNOWN.",
+  "computer_use_used": false,
+  "reviewer_shell_incident": "Windows shell commands using POSIX head, nested PowerShell $_, and Bash heredoc failed; same OpenCode server session recovered via temporary Python scripts. One redundant Beam invocation was started, then separately recorded and excluded from the canonical review count.",
+  "canonical_review_session_id": "ses_eb0bdce14ffep7f4jpjUVBqnmg",
+  "canonical_review_outcome": "succeeded",
+  "reported_session_cost": 0,
+  "reported_tokens": {
+    "input": 334114,
+    "output": 11617,
+    "reasoning": 8418,
+    "cache": {
+      "read": 8746240,
+      "write": 0
+    }
+  },
+  "billing_cost_claim": "No claim of provider billing amount; session cost field is the OpenCode-reported value only."
+}

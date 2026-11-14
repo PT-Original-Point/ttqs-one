@@ -1,0 +1,233 @@
+{
+  "schema": "TTQS_ONE_VISUAL_QA_EXACT_SHA_R01",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0129",
+  "official_requirement_id": "I19-E18",
+  "revision": "R03",
+  "reviewed_at_local": "2026-10-29T03:40:08.6377886+08:00",
+  "reviewer": "Codex visual review",
+  "review_scope": "Visual/layout inspection of all 20 Word-native exported page images; semantic and formal acceptance are outside this receipt.",
+  "candidate_docx_sha256": "73c856a6c31b9997e084b443f30bb0eadb1763320d2c7818626e40d431fc848a",
+  "candidate_unchanged": true,
+  "word_export_receipt": {
+    "path": "render/WORD_NATIVE_RENDER_0129_R03_EXPORTFIXED_R01.json",
+    "sha256": "6bd74d8630fa43d7928fea976786b903a82f4a39d2f4188ce39de896cb3d501f",
+    "status": "PASS",
+    "word_version": "16.0",
+    "page_count": 20
+  },
+  "pdf": {
+    "path": "render/0129_I19-E18_R03_WordNative_ExportAsFixed_R01.pdf",
+    "sha256": "68bdd0b982d392f10eef80dded54d74ae0b542aacb02ac976344f33681a8ce89",
+    "bytes": 756719
+  },
+  "visual_inspection": {
+    "pages_inspected": 20,
+    "page_range": "1-20",
+    "result": "PASS",
+    "checks": [
+      "No observed text or table clipping",
+      "No observed overlap or content outside page bounds",
+      "No observed missing glyphs or unreadable text",
+      "Headers and footers remain legible",
+      "Landscape and portrait pages render at the intended orientation"
+    ],
+    "page_specific_notes": [
+      "Pages 5 and 7 contain deliberate transition/heading whitespace; no content loss observed.",
+      "Page 12 is a sparse monitoring-draft page; its content remains legible.",
+      "Page 13 is a deliberately sparse REAL-use form page.",
+      "Pages 14-16 show clearly labeled blank REAL replacement forms and fields; blanks are confined to the REAL replacement area.",
+      "Page 15 is a wide landscape REAL replacement table; columns and headers are readable.",
+      "Pages 17-18 mark unavailable real evidence as UNKNOWN_UNTIL_SOURCE.",
+      "Pages 19-20 show hold/reject conditions and a clear SAMPLE/REAL boundary."
+    ],
+    "findings": [],
+    "nonblocking_notes": [
+      "Whitespace on pages 5, 7, 12 and 13 is not a verified defect; no reflow was made."
+    ],
+    "page_images": [
+      {
+        "page": 1,
+        "file": "page-01.png",
+        "sha256": "0a4ce6c6dac2dc77f89e2383446779093900724806b53208a4c174b4d91d19d3",
+        "width_px": 993,
+        "height_px": 1403,
+        "bytes": 368005
+      },
+      {
+        "page": 2,
+        "file": "page-02.png",
+        "sha256": "56002732c5f2fd1936241d90e025ce5971c416feae366249ae05a67f99e72532",
+        "width_px": 993,
+        "height_px": 1403,
+        "bytes": 365409
+      },
+      {
+        "page": 3,
+        "file": "page-03.png",
+        "sha256": "3a7cf6def394cc0f0525873caca55f8b756b773e1e31c5e4dd1fa9ca7dc714c6",
+        "width_px": 993,
+        "height_px": 1403,
+        "bytes": 290620
+      },
+      {
+        "page": 4,
+        "file": "page-04.png",
+        "sha256": "d3d13212bb631055374756e070d8a79ec168c57f2bdf5b1bb89ed6ec903d658a",
+        "width_px": 993,
+        "height_px": 1403,
+        "bytes": 257703
+      },
+      {
+        "page": 5,
+        "file": "page-05.png",
+        "sha256": "f3e2e85493886e4bd81d8065f2766b71cc1227545c267b5c3a478c0b4ab4ad32",
+        "width_px": 993,
+        "height_px": 1403,
+        "bytes": 83525
+      },
+      {
+        "page": 6,
+        "file": "page-06.png",
+        "sha256": "9388742b32c3499981f70a529439817f57561aa3771a65f8a1b686a76e26372f",
+        "width_px": 1403,
+        "height_px": 993,
+        "bytes": 139930
+      },
+      {
+        "page": 7,
+        "file": "page-07.png",
+        "sha256": "2df4326c8b3407fcc6565f221cb420a53060e80eb89767a37dfc8703c2d4a6d0",
+        "width_px": 993,
+        "height_px": 1403,
+        "bytes": 140677
+      },
+      {
+        "page": 8,
+        "file": "page-08.png",
+        "sha256": "5c327395d26241f31113c0e3ce8060e36b58591c83ee5beae30c3fa7cca899e9",
+        "width_px": 1403,
+        "height_px": 993,
+        "bytes": 172425
+      },
+      {
+        "page": 9,
+        "file": "page-09.png",
+        "sha256": "f98f8da20165125a3641598fcad6705c038389694f0280ba1551668f6dd66f91",
+        "width_px": 993,
+        "height_px": 1403,
+        "bytes": 268053
+      },
+      {
+        "page": 10,
+        "file": "page-10.png",
+        "sha256": "e56772d957daa31aae1a632cde877494a89689df86bc3b419b662afe0ae707de",
+        "width_px": 993,
+        "height_px": 1403,
+        "bytes": 303848
+      },
+      {
+        "page": 11,
+        "file": "page-11.png",
+        "sha256": "97cee612441b87c02791108e606b4673ced4c2dfc067b611b0ae146b53bddd84",
+        "width_px": 993,
+        "height_px": 1403,
+        "bytes": 268465
+      },
+      {
+        "page": 12,
+        "file": "page-12.png",
+        "sha256": "05bc83a392ace12d0e78c74391f222c5e05b60a6a361222994667073060f5408",
+        "width_px": 993,
+        "height_px": 1403,
+        "bytes": 176388
+      },
+      {
+        "page": 13,
+        "file": "page-13.png",
+        "sha256": "3bbe3edecf7284d9e97e5083e78c67334db4ba75d4caf9fa85cec05693a1ba7d",
+        "width_px": 1403,
+        "height_px": 993,
+        "bytes": 102908
+      },
+      {
+        "page": 14,
+        "file": "page-14.png",
+        "sha256": "8ee80c813320e376ec7d8ff4dfddda3e5b88600e03c285bd38b5a89a9bf2793f",
+        "width_px": 993,
+        "height_px": 1403,
+        "bytes": 236686
+      },
+      {
+        "page": 15,
+        "file": "page-15.png",
+        "sha256": "05bb85bdb093605046e63dba354f86a451b33b77fb8b1f89bc5b8018177030f9",
+        "width_px": 1403,
+        "height_px": 993,
+        "bytes": 64252
+      },
+      {
+        "page": 16,
+        "file": "page-16.png",
+        "sha256": "3b02721fcfdf906a26cbc6731dbb8eed0240a406f4d77300715dc666048cc2b9",
+        "width_px": 993,
+        "height_px": 1403,
+        "bytes": 239400
+      },
+      {
+        "page": 17,
+        "file": "page-17.png",
+        "sha256": "2974abc67edc32b986dd108ba94234ffbe0586a25a1b531a0be112ce66ddae4c",
+        "width_px": 993,
+        "height_px": 1403,
+        "bytes": 248086
+      },
+      {
+        "page": 18,
+        "file": "page-18.png",
+        "sha256": "1437f5314c594e845f943e23b23393c668cd3238285b934a073828b1a34eaf59",
+        "width_px": 993,
+        "height_px": 1403,
+        "bytes": 298011
+      },
+      {
+        "page": 19,
+        "file": "page-19.png",
+        "sha256": "794e12cd4b1fbfd562e11770c483163373212953f6b18c568af700b257cba97b",
+        "width_px": 993,
+        "height_px": 1403,
+        "bytes": 308200
+      },
+      {
+        "page": 20,
+        "file": "page-20.png",
+        "sha256": "b03c6bcc17ff2da95145ba6b9fe34cd541dac65dec07f18ffb06eb7af7947326",
+        "width_px": 993,
+        "height_px": 1403,
+        "bytes": 242007
+      }
+    ]
+  },
+  "semantic_review_reference": {
+    "receipt_path": "review/ANTIGRAVITY_SEMANTIC_REVIEW_RECEIPT_0129_R03.json",
+    "receipt_sha256": "b7a2ed63919b1c073adf26fce7e9421faf851a93213c9286972f27fcc6c6841f",
+    "candidate_sha256": "73c856a6c31b9997e084b443f30bb0eadb1763320d2c7818626e40d431fc848a",
+    "verdict": "PASS_TEXT_ONLY",
+    "actual_model": "UNKNOWN"
+  },
+  "candidate_state": "CANDIDATE",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN",
+  "limitations": [
+    "This is visual/layout QA only.",
+    "No REAL association evidence, approvals, signatures, or formal acceptance is asserted."
+  ],
+  "remote_sync": {
+    "repo": "PT-Original-Point/ttqs-one",
+    "pull_request": 92,
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "receipt_path": "docs/ttqs-quality-20261016/reports/2026-10-29_0129_R03_WORD_VISUAL_QA_R01.json",
+    "receipt_sync": "THIS_VISUAL_QA_RECEIPT_ONLY",
+    "candidate_docx_and_render_pdf_in_this_commit": false
+  }
+}

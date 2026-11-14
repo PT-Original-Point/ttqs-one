@@ -1,0 +1,363 @@
+{
+  "receipt_type": "technical_and_visual_review_R04b",
+  "doc_id": "0010",
+  "requirement_id": "I02-E01",
+  "candidate_state": "CANDIDATE_SAMPLE_SYNTHETIC",
+  "candidate_docx": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0010_I02-E01_ASSESSMENT_STANDARD_R04_20261030\\candidate\\0010_I02-E01_R04b.docx",
+  "candidate_docx_sha256": "9e0cf56a96bd6139c6f90915e94ae820f9eb4fffed063b75c199b8da2e8965fe",
+  "candidate_text_sha256": "b16f1c4e9f674b6b6a1258a09192a87f40d4e92430810091fe2eadfe228aba47",
+  "source_binding_sha256": "ba6d5563500a77482160eaad3b1426962d7d69a488e0db3709aaca929685ea66",
+  "blueprint_copy_sha256": "47b3387d2f97aeed2b42efe602ffcc9070c664d2e9da4a119d50d378354d3236",
+  "register_sha256": "6a424099b25613ad930cfc638bcb846b4914294d092c01902a943229186deecc",
+  "native_pdf_sha256": "d1d1cf56a8b886e5e776b1a00cd105d2fce1d77670507edff202d2ea65a58707",
+  "native_pdf_pages": 28,
+  "technical_status": "PASS_WITHIN_LISTED_DETERMINISTIC_SCOPE",
+  "visual_status": "INSPECTED_WITH_LAYOUT_NOTE",
+  "visual_scope": "All 28 pages inspected through seven contact sheets; full-resolution review of pages 5, 14, 16, 24, 27 and 28. Page 28 continues the final two synthetic-register rows with repeated header; the page is sparse but is not blank and has no clipped rows. No independent semantic review is implied.",
+  "semantic_review": "PENDING_INDEPENDENT_EXACT_SHA_REVIEW",
+  "formal_acceptance": "NOT_ACCEPTED",
+  "real_evidence": "UNKNOWN_NOT_PROVIDED",
+  "checks": {
+    "docx_sha_bound_to_native_render": {
+      "pass": true,
+      "detail": {
+        "docx_sha256": "9e0cf56a96bd6139c6f90915e94ae820f9eb4fffed063b75c199b8da2e8965fe",
+        "render_input_sha256": "9e0cf56a96bd6139c6f90915e94ae820f9eb4fffed063b75c199b8da2e8965fe"
+      }
+    },
+    "docx_zip_integrity": {
+      "pass": true,
+      "detail": null
+    },
+    "python_docx_parse": {
+      "pass": true,
+      "detail": {
+        "paragraphs": 44,
+        "tables": 12,
+        "sections": 8
+      }
+    },
+    "exact_official_requirement_and_locator": {
+      "pass": true,
+      "detail": {
+        "requirement": "對學員訓練成果有評核標準的訂定及說明。",
+        "official_extract_sha256": "65ab23c7a778753d7fb60160bc54621c0978f1776262bfc46b6a3f95626a7823"
+      }
+    },
+    "official_pdf_hash_matches_binding": {
+      "pass": true,
+      "detail": {
+        "actual": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+        "bound": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709"
+      }
+    },
+    "unique_blueprint_file_and_row_hashes_match_binding": {
+      "pass": true,
+      "detail": {
+        "matching_rows": 1,
+        "current_file_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+        "bound_file_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+        "row_sha256": "3d8181714ecc1058dcf98d653eff45149287b27521ba176701c69881f83cec2d",
+        "bound_row_sha256": "3d8181714ecc1058dcf98d653eff45149287b27521ba176701c69881f83cec2d",
+        "copy_matches_current_row": true
+      }
+    },
+    "candidate_status_and_real_boundary": {
+      "pass": true,
+      "detail": {
+        "contains_candidate": true,
+        "contains_sample_synthetic": true,
+        "contains_not_approved_not_effective": true,
+        "stale_not_built_phrase_present": false
+      }
+    },
+    "synthetic_register_157_rows_and_exact_order_match": {
+      "pass": true,
+      "detail": {
+        "sidecar_rows": 157,
+        "sidecar_unique_ids": 157,
+        "embedded_rows": 157,
+        "ids_equal_ordered": true,
+        "sidecar_sha256": "6a424099b25613ad930cfc638bcb846b4914294d092c01902a943229186deecc"
+      }
+    },
+    "learning_objective_rows": {
+      "pass": true,
+      "detail": {
+        "table_row_counts": [
+          6,
+          6,
+          21,
+          6,
+          13,
+          5,
+          49,
+          5,
+          3,
+          6,
+          9,
+          158
+        ]
+      }
+    },
+    "questionnaire_20_items_4_options": {
+      "pass": true,
+      "detail": {
+        "table_row_counts": [
+          6,
+          6,
+          21,
+          6,
+          13,
+          5,
+          49,
+          5,
+          3,
+          6,
+          9,
+          158
+        ]
+      }
+    },
+    "rubric_12_construct_indicators": {
+      "pass": true,
+      "detail": {
+        "table_row_counts": [
+          6,
+          6,
+          21,
+          6,
+          13,
+          5,
+          49,
+          5,
+          3,
+          6,
+          9,
+          158
+        ]
+      }
+    },
+    "four_synthetic_cases": {
+      "pass": true,
+      "detail": {
+        "table_row_counts": [
+          6,
+          6,
+          21,
+          6,
+          13,
+          5,
+          49,
+          5,
+          3,
+          6,
+          9,
+          158
+        ]
+      }
+    },
+    "evidence_and_review_tables_complete": {
+      "pass": true,
+      "detail": {
+        "table_row_counts": [
+          6,
+          6,
+          21,
+          6,
+          13,
+          5,
+          49,
+          5,
+          3,
+          6,
+          9,
+          158
+        ]
+      }
+    },
+    "summary_and_register_table_present": {
+      "pass": true,
+      "detail": {
+        "table_row_counts": [
+          6,
+          6,
+          21,
+          6,
+          13,
+          5,
+          49,
+          5,
+          3,
+          6,
+          9,
+          158
+        ]
+      }
+    },
+    "four_case_answer_key_weighted_math_and_outcomes": {
+      "pass": true,
+      "detail": {
+        "answer_key_count": 20,
+        "cases": [
+          {
+            "case_id": "SYN-001",
+            "computed": [
+              16.0,
+              35.0,
+              21.25,
+              12.5,
+              84.75
+            ],
+            "displayed": [
+              16.0,
+              35.0,
+              21.25,
+              12.5,
+              84.75
+            ],
+            "arithmetic_matches": true,
+            "displayed_outcome_matches_thresholds": true
+          },
+          {
+            "case_id": "SYN-002",
+            "computed": [
+              13.0,
+              30.0,
+              17.5,
+              10.0,
+              70.5
+            ],
+            "displayed": [
+              13.0,
+              30.0,
+              17.5,
+              10.0,
+              70.5
+            ],
+            "arithmetic_matches": true,
+            "displayed_outcome_matches_thresholds": true
+          },
+          {
+            "case_id": "SYN-003",
+            "computed": [
+              17.0,
+              17.5,
+              22.5,
+              12.5,
+              69.5
+            ],
+            "displayed": [
+              17.0,
+              17.5,
+              22.5,
+              12.5,
+              69.5
+            ],
+            "arithmetic_matches": true,
+            "displayed_outcome_matches_thresholds": true
+          },
+          {
+            "case_id": "SYN-004",
+            "computed": [
+              11.0,
+              30.0,
+              22.5,
+              11.25,
+              74.75
+            ],
+            "displayed": [
+              11.0,
+              30.0,
+              22.5,
+              11.25,
+              74.75
+            ],
+            "arithmetic_matches": true,
+            "displayed_outcome_matches_thresholds": true
+          }
+        ]
+      }
+    },
+    "retest_arithmetic_matches_written_results": {
+      "pass": true,
+      "detail": {
+        "SYN-003": 82.0,
+        "SYN-004": 80.25
+      }
+    },
+    "retest_answers_new_ratings_provenance_and_all_thresholds": {
+      "pass": true,
+      "detail": {
+        "retests": [
+          {
+            "case_id": "SYN-003",
+            "answer_vector_count": 20,
+            "displayed_knowledge": 17,
+            "computed_knowledge": 17,
+            "practical": 30.0,
+            "P3": 3,
+            "total": 82.0,
+            "expected_total": 82.0,
+            "all_four_thresholds_pass": true,
+            "arithmetic_matches": true
+          },
+          {
+            "case_id": "SYN-004",
+            "answer_vector_count": 20,
+            "displayed_knowledge": 14,
+            "computed_knowledge": 14,
+            "practical": 32.5,
+            "P3": 3,
+            "total": 80.25,
+            "expected_total": 80.25,
+            "all_four_thresholds_pass": true,
+            "arithmetic_matches": true
+          }
+        ]
+      }
+    },
+    "font_floor_body_10_5_and_table_9_5": {
+      "pass": true,
+      "detail": {
+        "body_min_pt": 10.5,
+        "table_min_pt": 9.5,
+        "missing_size_runs": {
+          "body": 0,
+          "table": 0
+        }
+      }
+    },
+    "native_word_pdf_and_all_page_rasters_match": {
+      "pass": true,
+      "detail": {
+        "pdf_pages": 28,
+        "png_pages": 28,
+        "contact_sheets": 7,
+        "pdf_sha256": "d1d1cf56a8b886e5e776b1a00cd105d2fce1d77670507edff202d2ea65a58707",
+        "render_receipt": {
+          "route": "Microsoft Word COM native export",
+          "input_docx": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0010_I02-E01_ASSESSMENT_STANDARD_R04_20261030\\candidate\\0010_I02-E01_R04b.docx",
+          "input_docx_sha256": "9e0cf56a96bd6139c6f90915e94ae820f9eb4fffed063b75c199b8da2e8965fe",
+          "pdf_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0010_I02-E01_ASSESSMENT_STANDARD_R04_20261030\\qa\\render_R04b_native\\0010_I02-E01_R04b.pdf",
+          "opened": true,
+          "page_count": 28,
+          "paragraph_count": 2039,
+          "table_count": 12,
+          "exported": true,
+          "pdf_sha256": "d1d1cf56a8b886e5e776b1a00cd105d2fce1d77670507edff202d2ea65a58707",
+          "new_word_process_ids": [],
+          "error": null
+        }
+      }
+    }
+  },
+  "failed_checks": [],
+  "limitations": [
+    "No independent semantic PASS is claimed.",
+    "Blueprint outward training-policy/public-disclosure fields applicability remains PARTIAL/UNKNOWN.",
+    "No actual roster, authorization, learner, assessment, or association record was supplied; all cases are SAMPLE/SYNTHETIC.",
+    "Page 28 is a short continuation page; all rows are readable, but the page retains substantial whitespace."
+  ],
+  "checked_at_taipei": "2026-10-30T00:53:46+08:00"
+}

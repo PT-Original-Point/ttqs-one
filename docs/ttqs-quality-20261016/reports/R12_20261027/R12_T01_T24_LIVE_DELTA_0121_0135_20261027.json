@@ -1,0 +1,377 @@
+{
+  "schema": "TTQS_ONE_R12_0135_0121_LIVE_DELTA_V1",
+  "project_id": "TTQS_ONE",
+  "command": "TTQS_ONE_20261026_R12_FULL_RECOVERY_DELIVERY",
+  "r12_source_blob_sha1": "63f26f0708249b211611d51b34a7fb90b4cd26a9",
+  "observed_at_local": "2026-10-27T06:14:24.4148758+08:00",
+  "repo": "PT-Original-Point/ttqs-one",
+  "pr": 92,
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "remote_head_before_sync": "923b7cb03d888818a9a39be4e0ba1b668a9c6a55",
+  "prior_test_matrix": {
+    "path": "docs/ttqs-quality-20261016/reports/R12_20261027/R12_T01_T24_TEST_RESULTS.json",
+    "git_blob_sha1": "b214de0aea55c7741a361e46703bdc656ff25e98",
+    "t01_t24_preserved": true
+  },
+  "native_state": {
+    "host": "DESKTOP-VMV4Q60",
+    "user": "DESKTOP-VMV4Q60\\J",
+    "windows": "Windows 10 Pro build 19045",
+    "goal_thread": "01a14098-b269-79e3-b07c-56e96557fe07",
+    "goal_status": "ACTIVE",
+    "thread_automation_id": "ttqs-one-hourly-quality-goal-resume",
+    "thread_automation_interval_minutes": 120,
+    "thread_automation_config_sha256": "0984df0e4ff24498890644cb9d1b41b0646a134230a7ae1606e388fac5ed32b6",
+    "thread_automation_config_status": "ACTIVE",
+    "natural_last_run": "UNKNOWN",
+    "natural_next_run": "UNKNOWN",
+    "natural_trigger": "UNKNOWN",
+    "standalone_automation_id": "ttqs-one-standalone-quality-resume",
+    "standalone_status": "PAUSED",
+    "standalone_pause_reason": "UNKNOWN_NOT_EXPOSED",
+    "windows_supervisor": "DISABLED",
+    "opencode_service_pid": 79496,
+    "active_cli_writer": "NONE_OBSERVED",
+    "winword_count": 52,
+    "winword_ownership": "UNKNOWN",
+    "mass_termination": false,
+    "panel_alignment": "UNKNOWN"
+  },
+  "attempts": [
+    {
+      "work_id": "TTQS-0135-I19-E25-R03-W1-EXACT-SHA-REVIEW",
+      "doc_id": "0135",
+      "worker": "OpenCode v2 CLI 2.1.4",
+      "pid": 87916,
+      "session_id": "ses_e86ea3741ffej8R07EciB36je8",
+      "requested_model": "opencode/glm-5.3-flash-free",
+      "actual_model": "UNKNOWN_NOT_REACHED",
+      "candidate_sha256": "cae8be8280456b51a1294ee90eafca0ac1ae8a12738289d6ebbca35b3a05a3da",
+      "provider_error": "HTTP 429 provider.free-limit",
+      "retry_after_ms": 26365000,
+      "next_eligible_local": "2026-10-27T08:00:00.267+08:00",
+      "cli_exit_code": "UNKNOWN_NOT_CAPTURED",
+      "tokens": "UNKNOWN_NOT_REACHED",
+      "review_response": "NONE",
+      "adopted_content": "NONE",
+      "candidate_mutated": false
+    },
+    {
+      "work_id": "TTQS-0121-I19-E09-R03-ANTIGRAVITY-R12-FULL-SEMANTIC-REVIEW",
+      "doc_id": "0121",
+      "worker": "Antigravity CLI",
+      "pid": 18328,
+      "conversation_id": "41187bc5-1777-419f-a359-48b85d55aaf8",
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_serving_model": "UNKNOWN",
+      "exit_code": 0,
+      "reported_tokens": 52786,
+      "reviewer_reported_result": "PASS_FULL_BODY_TEXT_ONLY",
+      "review_response_sha256": "9f68f37a3427aee265f54f3f895fa832cca6580a3f6fdc0de07916f47865ed4d",
+      "raw_stdout_sha256": "93770fa08a7e4714c6b6e65d38c699f81bd4b26169a33e5f05741c951b5cdb10",
+      "candidate_sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+      "body_sha256": "4ea875c255a3d1f852788a258725150729787f83dad96efa997dd491a8f01552",
+      "source_packet_sha256": "fbeb11b96648fff29a49a0fca74bf0cc3b3d1d29934f07dfaa3cf7e410a557fd",
+      "blueprint_sha256": "99320fdc9078615ad04087c43bcbd22c5bbf751a22127c51e048e909726a5fca",
+      "reviewer_visual_scope": "NOT_REVIEWED",
+      "candidate_mutated": false,
+      "formal_acceptance": "NOT_GRANTED",
+      "real_evidence": "NOT_PROVIDED"
+    }
+  ],
+  "doc_0121_qa": {
+    "technical": "PASS_27_DETERMINISTIC_CHECKS",
+    "visual": "PASS_WITH_DELTA_SCOPE",
+    "page_count": 23,
+    "directly_inspected_pages": [
+      1,
+      18
+    ],
+    "unchanged_pixel_identical_pages_vs_r02": 21,
+    "minimum_body_pt": 10.5,
+    "minimum_table_pt": 9.5,
+    "pdf_sha256": "fa3fd36e716372d47ae36a3eaf4a5f28ec5c395d9800e6764bf69325abed0f70",
+    "printed_checkbox_serial": "UNKNOWN_NOT_ASSERTED"
+  },
+  "doc_0122_r02": {
+    "candidate_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+    "fresh_body_sha256": "61a732058927a033f268171084db05f3a86cac44fe9e92dd21a7a6f77fcb47ea",
+    "original_unbound_body_sha256": "81d144264640265ec015d412bdb08f3e74578b001b7621e7d4462863fb1a1e33",
+    "original_review_not_inherited": true,
+    "r12_review_request_sha256": "501f07bfe715b90e3d8640e17feefc05488d9cce24c5ca0db26a953cc9c06c6a",
+    "reviewer_response_sha256": "0bfa5a69fb327fed4d28a57fadebe73c499b53a37fd177d145da8a2cb214ea92",
+    "raw_stdout_sha256": "653ecc9ec77c8acd09dd05ca8f89bddb3b39e0682927f2bc3f11a06c51dd6ce1",
+    "r12_reconciliation_sha256": "5488253ffef6a6761f7a3519b3a05bf179ba067bc602829f67bccdb9dce7035f",
+    "result": "REVIEWER_REPORTED_PASS_TEXT_ONLY_EXACT_SHA_BOUND",
+    "actual_model": "UNKNOWN",
+    "fallback": "UNKNOWN",
+    "attempts": [
+      {
+        "attempt": 1,
+        "exit_code": 2,
+        "result": "CLI_ARGUMENT_PARSE_ERROR_NO_MODEL_RESPONSE",
+        "repair": "Corrected prompt attachment; no model response; no tokens attributed."
+      },
+      {
+        "attempt": 2,
+        "exit_code": 2,
+        "result": "CLI_ARGUMENT_PARSE_ERROR_NO_MODEL_RESPONSE",
+        "repair": "Corrected --print-timeout duration unit; no model response; no tokens attributed."
+      },
+      {
+        "attempt": 3,
+        "exit_code": 0,
+        "result": "COMPLETED_NONEMPTY_REVIEWER_RESPONSE",
+        "reported_tokens": 36634,
+        "requested_model": "gemini-3.8-flash-high",
+        "actual_model": "UNKNOWN",
+        "fallback": "UNKNOWN"
+      }
+    ],
+    "review_scope": "Full extracted document text only; visual/technical QA is separately bound to same candidate SHA.",
+    "technical_visual": "Existing same-SHA technical delta and 28-page Word-render visual scope PASS; no DOCX rebuild.",
+    "qa_bundle_raw_sync": "Local previous copy was 11,351 bytes, SHA-256 cea52759e660d6564f42f482b53eb96b57c597b0ea7f13375c3b68dc7a41d933; remote was 11,353 bytes, SHA-256 ec0fac1cf68b2d2c3b38ebc44810872794d4ecf10004a63dee2f733b58ef770e, differing only by terminal CRLF. Preserved old local copy and aligned current local copy to remote bytes.",
+    "docx_rebuilt": false,
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN_HOLD",
+    "github_raw_readback": "PASS_EXACT_GIT_BLOB_READBACK_18_OF_18_AT_4DEC_ONLY",
+    "github_sync_status": "PASS_RAW_GIT_BLOB_READBACK_18_OF_18",
+    "verified_commit": "4dec4beaa1295c2917783893ef0882286ed3db81",
+    "readback_receipt_sha256": "4fb8f5a1580bff7cb392ecb1472c4bd51ea26a0c26d171a46c9ca562b86cdc54",
+    "readback_scope_note": "The linked receipt verifies 18 files at commit 4dec4beaa1295c2917783893ef0882286ed3db81. It does not establish 19/19 at commit 56539434541938ccdc27434b1b8fadd3a1d18cc7; later delta/status/pointer/readback files require their own current-head verification."
+  },
+  "doc_0122_r03": {
+    "candidate_sha256": "b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d",
+    "result": "SEPARATE_PASS_TEXT_ONLY_SCOPE; actual model UNKNOWN; not merged with R02"
+  },
+  "doc_0133": {
+    "candidate_sha256": "25116afb8206e0828c8b3a4a763845a9c3e672a4cb49969a64a2a3737d87256b",
+    "result": "PASS_TEXT_ONLY_WITH_NONBLOCKING_FINDINGS; status metadata reconciled; no DOCX rebuild"
+  },
+  "tests_delta": [
+    {
+      "id": "T03",
+      "status": "PASS_GUARD_NO_INHERITANCE_PLUS_EXACT_SHA_REVIEW",
+      "finding": "The historical reviewer packet body SHA 81d144... is not inherited. A new bounded Antigravity CLI reviewer response is bound to candidate d3a6a122... and extracted body SHA 61a73205...; reported text-only PASS, actual provider model/fallback UNKNOWN; candidate remains unaccepted."
+    },
+    {
+      "id": "T04",
+      "status": "PASS_GUARD_ROUTE_PARKED",
+      "finding": "0135 OpenCode free route returned HTTP 429; next eligible local time 08:00; no same-input retry before release."
+    },
+    {
+      "id": "T06",
+      "status": "UNKNOWN_PROVIDER_IDENTITY",
+      "finding": "Antigravity requested Gemini but actual serving model is not established."
+    },
+    {
+      "id": "T10",
+      "status": "PASS_SCOPE_17_SELECTED_0138_ARTIFACTS",
+      "finding": "17 selected 0138 files were raw-byte verified at the referenced readback head; not the full package."
+    },
+    {
+      "id": "T12",
+      "status": "PARTIAL_NATIVE_CONFIG_ONLY",
+      "finding": "120-minute thread-bound config is ACTIVE; standalone is PAUSED with reason unavailable; Supervisor disabled."
+    },
+    {
+      "id": "T13",
+      "status": "UNKNOWN_NATURAL_TRIGGER",
+      "finding": "No native last/next scheduled execution receipt."
+    },
+    {
+      "id": "T15",
+      "status": "PASS_NO_DOCX_REBUILD",
+      "finding": "0121 exact candidate retained; only review/status evidence changed."
+    },
+    {
+      "id": "T16",
+      "status": "PARTIAL_OWNER_UNKNOWN",
+      "finding": "No live CLI Writer observed; 52 WINWORD owners unknown."
+    },
+    {
+      "id": "T19",
+      "status": "UNKNOWN_PANEL_ALIGNMENT",
+      "finding": "No confirmed TTQS panel source/live readback."
+    },
+    {
+      "id": "T20",
+      "status": "PASS_RAW_READBACK_BASELINE_PLUS_0140_PLUS_0122_R02_18_OF_18",
+      "finding": "Baseline: 0121 selected 8/8 at 3138a480611db4491ac0b9a1df0096328bf90411; 0140 selected 6/6 at 4a8fd77a2c11b1b7a1218507ef7d40ac94e424a1; 0122 R02 candidate/source/Unique Blueprint/body/QA/visual and R12 review/status/delta/pointer package verified 18/18 exact local-vs-remote Git blob SHA-1 at 4dec4beaa1295c2917783893ef0882286ed3db81. Candidate SHA d3a6... unchanged; no DOCX rebuild; formal acceptance NOT_GRANTED."
+    },
+    {
+      "id": "T22",
+      "status": "PARTIAL_0135_REVIEW_ROUTE_BLOCKED",
+      "finding": "0135 review remains outstanding until the actual 08:00 route release; unrelated READY work is not declared exhausted."
+    },
+    {
+      "id": "T23",
+      "status": "PASS_DISTINCT_EXACT_SHA_SCOPES",
+      "finding": "0121 text-only review is separate from the same-candidate Word visual/technical QA."
+    },
+    {
+      "id": "T24",
+      "status": "PASS_CANDIDATE_ONLY",
+      "finding": "No formal Human acceptance or REAL evidence granted."
+    }
+  ],
+  "material_delta": "0121 received a new exact-SHA full-body text-only reviewer result; 0135 W1 failure was reconciled and parked. No DOCX was rebuilt.; exact selected raw-byte readback verified; 0140 adjudication status corrected and exact raw bytes read back; no DOCX rebuild; 0122 R02 received a new exact-SHA text-only reviewer response after two CLI parser corrections; actual provider model/fallback UNKNOWN; no DOCX rebuild. Corrected the local-vs-remote QA bundle raw-byte discrepancy (two trailing CRLF bytes), preserved the prior local copy, and will sync the reconciliation/request/raw response with exact readback.; 0122 R02 raw-byte/Git-blob readback completed 18/18 at 4dec4be; previous QA bundle raw-equality claim corrected after preserving pre-alignment copy and matching its terminal CRLF.",
+  "github_readback": {
+    "status": "PASS_SELECTED_8_OF_8",
+    "verified_head": "3138a480611db4491ac0b9a1df0096328bf90411",
+    "selected_files": [
+      {
+        "path": "docs/ttqs-quality-20261016/reports/R12_20261027/R12_W1_W2_ORIGINAL_WORKER_EVIDENCE_0121_0135_20261027.md",
+        "git_blob_sha1": "e0f4adc9d5cb0c0f64d0b70707b73528daac3be2",
+        "raw_bytes_equal": true
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R03_20261027/README.md",
+        "git_blob_sha1": "0986f7cdb23a4f1e786b5d1c55ba2725282f18af",
+        "raw_bytes_equal": true
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R03_20261027/candidate/SAMPLE_REPLACEMENT_REGISTER_R03.csv",
+        "git_blob_sha1": "4840b4aa6f3e1067a210ef296931397d647ecc19",
+        "raw_bytes_equal": true
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R03_20261027/candidate/0121_I19-E09_R03.docx",
+        "git_blob_sha1": "820d586734c62ddaad3905ba8b8ea74ede5c9813",
+        "raw_bytes_equal": true
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R03_20261027/render/0121_I19-E09_R03_WordNative.pdf",
+        "git_blob_sha1": "7b61669f25857f0367d466f0454cbfcaed1220ae",
+        "raw_bytes_equal": true
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R03_20261027/evidence/R03_FINAL_QA_STATUS_R12.json",
+        "git_blob_sha1": "69b2a9a843fc566049208c49447508220332709e",
+        "raw_bytes_equal": true
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R03_20261027/evidence/TECHNICAL_VISUAL_QA_R03.json",
+        "git_blob_sha1": "20463448694102bfc345d6a9124025a8a8186ed2",
+        "raw_bytes_equal": true
+      }
+    ],
+    "additional_readbacks": [
+      {
+        "scope": "0140 R11 candidate + R12 review evidence + corrected adjudication",
+        "verified_head": "4a8fd77a2c11b1b7a1218507ef7d40ac94e424a1",
+        "count": "6_OF_6",
+        "adjudication_blob_sha1": "126613256c82fe6be92803912628c00344feb2f0",
+        "candidate_sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d",
+        "actual_model": "UNKNOWN",
+        "human_acceptance": "NOT_GRANTED"
+      },
+      {
+        "scope": "0122 R02 exact-SHA review package",
+        "verified_head": "4dec4beaa1295c2917783893ef0882286ed3db81",
+        "count": "18_OF_18",
+        "raw_blob_matches": 18,
+        "readback_receipt_path": "docs/ttqs-quality-20261016/reports/R12_20261027/R12_GITHUB_RAW_READBACK_0122_R02_20261027.json",
+        "readback_receipt_sha256": "4fb8f5a1580bff7cb392ecb1472c4bd51ea26a0c26d171a46c9ca562b86cdc54",
+        "candidate_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+        "formal_acceptance": "NOT_GRANTED"
+      }
+    ]
+  },
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "NOT_PROVIDED",
+  "remote_head_after_first_sync": "4dec4beaa1295c2917783893ef0882286ed3db81",
+  "github_readback_status": "PASS_R02_18_OF_18_EXACT_GIT_BLOB_READBACK",
+  "doc_0140": {
+    "doc_id": "0140",
+    "official_requirement_id": "I19-E30",
+    "candidate_sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d",
+    "technical_qa": "PASS_21_OF_21",
+    "visual_qa": "PASS_WITH_NONBLOCKING_LAYOUT_NOTE_29_PAGES",
+    "chart_data_reconciliation": "PASS",
+    "semantic_scope": "PASS_TEXT_BODY_ONLY_WITH_NONBLOCKING_NOTE",
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model": "UNKNOWN",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN_HOLD",
+    "docx_rebuilt": false,
+    "github_raw_readback_before_metadata_update": {
+      "live_head": "163ae69d017a4fc6180eb9cd6425cec441100599",
+      "exact_paths_count": "5_OF_5",
+      "git_blob_sha1s": {
+        "request_packet": "47727f25bfcbd7271f4fc6c328c09a902c20c8d9",
+        "input_manifest": "d340f9c84c12ec08030f689c9890682aeae00d53",
+        "dispatch": "90c122c13032c57a9daaaf07e8ca620628ee3a68",
+        "raw_response": "2dd98f729c3f10730ab587e498aa7d4873641a2a",
+        "candidate_docx": "a4c1545eaa9887195dae72623846dc9eea6cc120"
+      }
+    },
+    "adjudication_sync": {
+      "update_commit": "4a8fd77a2c11b1b7a1218507ef7d40ac94e424a1",
+      "sidecar_git_blob_sha1": "126613256c82fe6be92803912628c00344feb2f0",
+      "local_sha256_after_raw_readback": "4a4f4bc08b0ec3d6e7abba692c25da227d9aa97da1dd657d6e3213663a753d84",
+      "exact_raw_readback": "PASS",
+      "formal_acceptance": "NOT_GRANTED"
+    }
+  },
+  "doc_0135": {
+    "doc_id": "0135",
+    "official_requirement_id": "I19-E25",
+    "project_157_item": 140,
+    "official_printed_checkbox_serial": "UNKNOWN",
+    "candidate_sha256": "cae8be8280456b51a1294ee90eafca0ac1ae8a12738289d6ebbca35b3a05a3da",
+    "source_packet_sha256": "fe4e433924b21b9891ca61ca52907e56a9dbd9ac62a4fd6fc43a9e4faef19696",
+    "unique_blueprint_sha256": "cb936466e92bb2d5976a2be1a013d85ccdd3a8bbe434dd8b51ac3d77e12d25c1",
+    "review_packet_sha256": "120ebf90abc83e931c5a34f505142d706d0c0ae6c11dcc98989302981878c9f9",
+    "technical": "PASS_WITH_SCOPE",
+    "visual": "PASS_WITH_SCOPE_10_OF_10_PAGES",
+    "semantic": {
+      "status": "REVIEWER_REPORTED_PASS_TEXT_ONLY_WITH_PROVIDER_IDENTITY_UNKNOWN",
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_model": "UNKNOWN",
+      "response_sha256": "e1d401cf008db13e7e836684b05a9877efc838011235d5c7abec4ad1c653b519",
+      "stdout_sha256": "0c88c061431a39b0c3c7c2ba5e793445b935bc217aba662053c54b2862a59a6f",
+      "pid": 82660,
+      "session": "b1dcba37-8eb8-49ec-8515-9628ad18c090",
+      "tokens_reported": {
+        "input": 20300,
+        "output": 7986,
+        "thinking": 6175,
+        "total": 28286
+      },
+      "provider_billing": "UNKNOWN",
+      "scope": "Text-only semantics, arithmetic, sample/real boundary, neighbor separation and usability; no binary/layout review."
+    },
+    "opencode_free_route": {
+      "status": "BLOCKED_SHARED_FREE_LIMIT_429",
+      "attempts": [
+        {
+          "model": "opencode/glm-5.3-flash-free",
+          "http": 429,
+          "next_eligible_local": "2026-10-27T08:00:00.267+08:00",
+          "review_body": false
+        },
+        {
+          "model": "opencode/deepseek-v4.1-flash-free",
+          "http": 429,
+          "retry_after_ms": 27461000,
+          "actual_model": "UNKNOWN_NOT_REACHED",
+          "usage": "UNKNOWN_NOT_REACHED"
+        },
+        {
+          "model": "opencode/mimo-v2.6-flash-free",
+          "http": 429,
+          "retry_after_ms": 22505000,
+          "actual_model": "UNKNOWN_NOT_REACHED",
+          "usage": "UNKNOWN_NOT_REACHED"
+        }
+      ],
+      "common_release_local": "2026-10-27T08:00:00+08:00",
+      "action": "No further free-model attempt before common release; other models were not tested."
+    },
+    "candidate_mutated": false,
+    "docx_rebuilt": false,
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN/HOLD"
+  }
+}

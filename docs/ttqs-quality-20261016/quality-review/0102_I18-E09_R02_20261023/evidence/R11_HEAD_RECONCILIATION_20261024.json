@@ -1,0 +1,90 @@
+{
+  "schema": "ttqs-one-evidence-reconciliation-v1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0102-I18-E09-R08C-R35-R11-CURRENT-HEAD-READBACK-20261024",
+  "observed_at_tpe": "2026-10-24T20:06:17.3539350+08:00",
+  "github": {
+    "repository": "PT-Original-Point/ttqs-one",
+    "pull_request": 92,
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "verified_head_before_receipt": "612c20e02f834d513740984166addd210ca6fde8",
+    "readback_method": "native git show raw bytes from fetched branch head; compared local SHA-256 and byte length"
+  },
+  "source_binding": {
+    "AGENTS_blob": "2e8d4eddd68c650f38db8cb48d421b838e693ecb",
+    "04_blob": "65e7fd5a406877e875174402a0d3ddc68b6111a1",
+    "05_blob": "dbdb2e567e8e5c2b7eb0632f060a45a7ae371a49",
+    "06_blob": "b566c5c71d1a88e012eca2eeac90c8a3e4ecc06c"
+  },
+  "requirement_binding": {
+    "doc_id": "0102",
+    "official_requirement_id": "I18-E09",
+    "project_registry_index": 110,
+    "printed_official_checkbox_serial": "UNKNOWN_PER_CURRENT_UNIQUE_BLUEPRINT",
+    "source_packet_sha256": "54d9c05f70b4fef993bd92b656694030878a236e1a2d0c6a21af5d24d94fa1bd",
+    "unique_blueprint_sha256": "d6ab10107f42d6f913e1c94df45c8cd179babaa2603a8a7e628c2db78a0cce75"
+  },
+  "candidate_readbacks": [
+    {
+      "revision": "R08c",
+      "path": "docs/ttqs-quality-20261016/quality-review/0102_I18-E09_R02_20261023/candidate/0102__\u6280\u80fd\u7af6\u8cfd\u7372\u734e\u8b49\u64da\u53d6\u5f97\u8207\u67e5\u6838\u5de5\u4f5c\u7d00\u9304_R08c.docx",
+      "local_bytes": 97846,
+      "remote_bytes": 97846,
+      "local_sha256": "84c279d09484b88724dd59ae8a5155cb8d0be284133258e166269a80c26c67b4",
+      "remote_sha256": "84c279d09484b88724dd59ae8a5155cb8d0be284133258e166269a80c26c67b4",
+      "exact_match": true
+    },
+    {
+      "revision": "R35",
+      "path": "docs/ttqs-quality-20261016/quality-review/0102_I18-E09_R06_20261021/candidate/0102__\u6280\u80fd\u7af6\u8cfd\u7372\u734e\u8b49\u64da\u53d6\u5f97\u8207\u67e5\u6838\u5de5\u4f5c\u7d00\u9304_R35.docx",
+      "local_bytes": 111982,
+      "remote_bytes": 111982,
+      "local_sha256": "04f71db94dd8949b2e0fc67fc0df5577c2a647138b95e3beadd3be2dea4457aa",
+      "remote_sha256": "04f71db94dd8949b2e0fc67fc0df5577c2a647138b95e3beadd3be2dea4457aa",
+      "exact_match": true
+    }
+  ],
+  "R08c_exact_sha_quality": {
+    "candidate_sha256": "84c279d09484b88724dd59ae8a5155cb8d0be284133258e166269a80c26c67b4",
+    "semantic": {
+      "verdict": "PASS",
+      "scope": "SEMANTIC_SCOPE_ONLY",
+      "receipt_path": "docs/ttqs-quality-20261016/quality-review/0102_I18-E09_R02_20261023/evidence/independent_semantic_review_R08c_R02.json",
+      "receipt_sha256": "236d3ff9b7294c4efdbd34296dbccee8130a92238eb91f22195265f2212afb54",
+      "reviewer_response_sha256": "604117e890e9d2db8b9aaf8263459254c7e40152a644c9232117ba5114f647ca",
+      "provider_backend_fallback_billing": "UNKNOWN"
+    },
+    "technical": {
+      "verdict": "PASS",
+      "scope": "package integrity, 41 tables/396 rows, body font floor 10.5pt and table floor 9.5pt",
+      "receipt_path": "docs/ttqs-quality-20261016/quality-review/0102_I18-E09_R02_20261023/evidence/technical_qa_supplement_R08c.json",
+      "receipt_sha256": "72a4c6f1f76f473a87dab21ccd7777be2204e5bbba4540c9e7528f76ec9963a5"
+    },
+    "visual": {
+      "verdict": "PASS_FOR_VISUAL_LAYOUT_SCOPE",
+      "pages": 57,
+      "coverage": "55 pages inherited from inspected R08a contact sheets; R08c-specific pages 1 and 57 directly inspected",
+      "receipt_path": "docs/ttqs-quality-20261016/quality-review/0102_I18-E09_R02_20261023/evidence/visual_qa_R08c.json",
+      "receipt_sha256": "f2eef003b225e441679499b954a38243518fb58053d62572b31a6634d21dc869",
+      "pdf_sha256": "c73b667abd9213cf6f1e93fb8a9343bba6f9a94cf30fc7884c68a23286bfc6a0"
+    }
+  },
+  "R35_R02_noninheritance": {
+    "candidate_sha256": "04f71db94dd8949b2e0fc67fc0df5577c2a647138b95e3beadd3be2dea4457aa",
+    "compatibility_receipt_path": "docs/ttqs-quality-20261016/quality-review/0102_I18-E09_R02_20261023/evidence/R35_R02_COMPATIBILITY_RECONCILIATION_R11.json",
+    "compatibility_receipt_sha256": "c22511717f0253d979e9958c987094989591eb435e758d6b320383b59f876cce",
+    "current_R02_semantic_verdict": "NOT_APPLICABLE_TO_R02; no PASS transferred",
+    "reason": "R35 Form F describes five core checks and conflicts with current R02 Unique Blueprint requiring ten explicit checks before ELIGIBLE_FOR_HUMAN_REVIEW; locators P0043, P0264, T0045-R0017.",
+    "R01_PASS": "HISTORICAL_ONLY_NOT_INHERITED"
+  },
+  "decision": {
+    "retain_R08c_as_current_R02_candidate": true,
+    "rebuild_required": false,
+    "candidate_bytes_mutated": false,
+    "candidate_state": "CANDIDATE_NOT_ACCEPTED",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN",
+    "R35_scope": "SEPARATE_CANDIDATE_NO_R02_PASS",
+    "note": "This receipt verifies current-head candidate and QA bytes only; it does not grant formal acceptance or claim REAL evidence."
+  }
+}

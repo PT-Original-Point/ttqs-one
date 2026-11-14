@@ -1,0 +1,185 @@
+{
+  "receipt_id": "TTQS-0104-R16-WRITER-PATCH-PLAN-LINEAGE",
+  "work_id": "TTQS-0104-I18-E11-R16-BOUNDED-REPAIR-20261022",
+  "doc_id": "0104",
+  "requirement_id": "I18-E11",
+  "candidate_sha256": "9a074b207e7a57f1448cf96868f3cc3f30a72834a021f9b04392909ea3183d7b",
+  "writer_session_id": "ses_ea00e6c9bffeRq91HBDZl6RZBb",
+  "writer_response_sha256": "bb68d47471df801178cc30d7fb9ebc98bbc818cc62821238a3590a75bc8c11e9",
+  "writer_input_candidate_sha256_claim": "9bbb96da74ba9da845ab0e063421d04f035e79496209a02de1f04b0c98ec7eb8",
+  "verified_input_candidate_sha256_local": "9bbb96da74ba9da845ab0e063421d04f035e79496209a02de1f04b0c98ec7eb8",
+  "writer_input_manuscript_sha256_claim": null,
+  "verified_input_manuscript_sha256_local": "86e51bb34727d3b4cf622020d1cc396448ff8b823c32bd13bb6e8a36e18da6f1",
+  "final_manuscript_sha256": "5b0713817207cd984e7cfde61e2ecefbc788cb5ddbdf82514007fd4f13120241",
+  "patches_in_native_response": 19,
+  "patch_payloads_found_in_final": 18,
+  "patch_payload_checks": [
+    {
+      "patch": 1,
+      "finding": "RF-1",
+      "exact_payload_in_final": true
+    },
+    {
+      "patch": 2,
+      "finding": "RF-1",
+      "exact_payload_in_final": false
+    },
+    {
+      "patch": 3,
+      "finding": "RF-2",
+      "exact_payload_in_final": true
+    },
+    {
+      "patch": 4,
+      "finding": "RF-2",
+      "exact_payload_in_final": true
+    },
+    {
+      "patch": 5,
+      "finding": "RF-3",
+      "exact_payload_in_final": true
+    },
+    {
+      "patch": 6,
+      "finding": "RF-3",
+      "exact_payload_in_final": true
+    },
+    {
+      "patch": 7,
+      "finding": "RF-4",
+      "exact_payload_in_final": true
+    },
+    {
+      "patch": 8,
+      "finding": "RF-4",
+      "exact_payload_in_final": true
+    },
+    {
+      "patch": 9,
+      "finding": "RF-4",
+      "exact_payload_in_final": true
+    },
+    {
+      "patch": 10,
+      "finding": "RF-4",
+      "exact_payload_in_final": true
+    },
+    {
+      "patch": 11,
+      "finding": "RF-4",
+      "exact_payload_in_final": true
+    },
+    {
+      "patch": 12,
+      "finding": "RF-4",
+      "exact_payload_in_final": true
+    },
+    {
+      "patch": 13,
+      "finding": "RF-5",
+      "exact_payload_in_final": true
+    },
+    {
+      "patch": 14,
+      "finding": "RF-6",
+      "exact_payload_in_final": true
+    },
+    {
+      "patch": 15,
+      "finding": "RF-7",
+      "exact_payload_in_final": true
+    },
+    {
+      "patch": 16,
+      "finding": "RF-8",
+      "exact_payload_in_final": true
+    },
+    {
+      "patch": 17,
+      "finding": "RF-9",
+      "exact_payload_in_final": true
+    },
+    {
+      "patch": 18,
+      "finding": "RF-9",
+      "exact_payload_in_final": true
+    },
+    {
+      "patch": 19,
+      "finding": "RF-10",
+      "exact_payload_in_final": true
+    }
+  ],
+  "plan_replay_equals_final_manuscript": false,
+  "plan_replay_sha256": "968e52365c9efef36e72d116b098fbd648105aa0b1ab938a4c97f54599b1137c",
+  "manual_or_supplemental_diff_hunks": [
+    {
+      "operation": "replace",
+      "replay_lines": [
+        335,
+        335
+      ],
+      "final_lines": [
+        335,
+        335
+      ],
+      "replay_excerpt": [
+        "**排序與同分規則（SAMPLE）**：缺口列（D 列）依差距絕對值由大到小排序（本表為 12.50 pp > 5.00 pp > 3.64 pp，依序 D-1→D-3）；差距相同時，先以「是否直接影響對外佐證」優先，再依四段乘法鏈順序（申請→到考→通過→簽發查證）決定。達標之正差距不佔缺口次序，另列 M 列並依正差距由小到大排序（M-1→M-2）；B 期無缺口，僅列 REF-B 供參考，不參與排序。表內門檻均為 `SAMPLE—待協會核定`。"
+      ],
+      "final_excerpt": [
+        "**排序與同分規則（SAMPLE）**：缺口列（D 列）依差距絕對值由大到小排序（本表為 12.50 pp > 5.00 pp > 3.64 pp，依序 D-1→D-3）；D 列同差距時，先以「是否直接影響對外佐證」優先，再依四段乘法鏈順序（申請→到考→通過→簽發查證）決定。達標之正差距不佔缺口次序，另列 M 列並依正差距由小到大排序（M-1→M-2）；M 列同正差距時亦依四段乘法鏈順序排列。B 期無缺口，僅列 REF-B 供參考，不參與排序。表內門檻均為 `SAMPLE—待協會核定`。"
+      ]
+    },
+    {
+      "operation": "replace",
+      "replay_lines": [
+        582,
+        586
+      ],
+      "final_lines": [
+        582,
+        586
+      ],
+      "replay_excerpt": [
+        "| F-GP-01 | −12.50 pp；5 人 | A期已驗證取證率距 SAMPLE 門檻 | §12/T-13 row 1 | (19/40−60%)；最低24/40，與19相差5 | 品保 | S |",
+        "| F-GP-02 | −3.64 pp；1 件 | A期簽發查證完成率距 SAMPLE 門檻 | §12/T-13 row 2 | 19/22−90%；達標最低整數分子20，差1 | 品保 | S |",
+        "| F-GP-03 | −5.00 pp；2 人 | A期申請率距 SAMPLE 門檻 | §12/T-13 row 3 | 32/40−85%；最低34人，與32相差2 | 品保 | S |"
+      ],
+      "final_excerpt": [
+        "| F-GP-01 | −12.50 pp；5 人 | A期已驗證取證率距 SAMPLE 門檻 | §12/T-13 D-1 | (19/40−60%)；最低24/40，與19相差5 | 品保 | S |",
+        "| F-GP-02 | −3.64 pp；1 件 | A期簽發查證完成率距 SAMPLE 門檻 | §12/T-13 D-3 | 19/22−90%；達標最低整數分子20，差1 | 品保 | S |",
+        "| F-GP-03 | −5.00 pp；2 人 | A期申請率距 SAMPLE 門檻 | §12/T-13 D-2 | 32/40−85%；最低34人，與32相差2 | 品保 | S |"
+      ]
+    },
+    {
+      "operation": "replace",
+      "replay_lines": [
+        750,
+        750
+      ],
+      "final_lines": [
+        750,
+        750
+      ],
+      "replay_excerpt": [
+        "| 版本 | R15（SAMPLE／SYNTHETIC 候選工作版） |"
+      ],
+      "final_excerpt": [
+        "| 版本 | R16（SAMPLE／SYNTHETIC 候選工作版） |"
+      ]
+    }
+  ],
+  "independent_review_session_id": "ses_ea002ffe1ffefP6DIiuFo8fPbr",
+  "review_input_sha256": "6aa82e6199399d9fb7bed0410ee0be462028fa6ac6f8d4ece8de2f17f1afc164",
+  "review_response_sha256": "88b242d07ebd43509d7fd2553fa28208c15b08292d1d7193156f8b441fdfb73a",
+  "reviewer_candidate_sha256_claim": "9a074b207e7a57f1448cf96868f3cc3f30a72834a021f9b04392909ea3183d7b",
+  "reviewer_scope": "TEXT_ONLY; reviewer reported packet-bound SHA and did not re-hash binary; no visual or human usability review",
+  "lineage_result": "PARTIAL_PROVENANCE; final artifact/QA/review are bound, all 19 issue changes are textually present or addressed, but native writer patch response does not deterministically reproduce the final manuscript; supplemental final-text edits lack a separate application receipt. This does not change the exact local candidate hash or the reviewer’s text-only verdict.",
+  "formal_acceptance": "NOT_GRANTED",
+  "receipt_candidate_bindings": {
+    "evidence/docx_build_receipt_0104_R16.json": "9a074b207e7a57f1448cf96868f3cc3f30a72834a021f9b04392909ea3183d7b",
+    "evidence/technical_qa_receipt_0104_R16.json": "9a074b207e7a57f1448cf96868f3cc3f30a72834a021f9b04392909ea3183d7b",
+    "evidence/word_export_receipt_0104_R16.json": "9a074b207e7a57f1448cf96868f3cc3f30a72834a021f9b04392909ea3183d7b",
+    "evidence/visual_qa_receipt_0104_R16.json": null
+  }
+}

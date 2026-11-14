@@ -1,0 +1,25 @@
+{
+  "receipt_id": "0012_I02-E03_R08J_VISUAL_QA",
+  "observed_at_local": "2026-10-31T02:54:19+08:00",
+  "document_id": "0012",
+  "requirement_id": "I02-E03",
+  "candidate_state": "CANDIDATE_SAMPLE_SYNTHETIC_NOT_ACCEPTED",
+  "candidate_sha256": "1b2ad16bb36d9ba867fd517067d0e2c61529b1bfe390e045e01cd05fca7795e6",
+  "word_native_pdf_sha256": "5a6c9c249a0ad6c02d7f00fda457cc2cdee4096ff7ef6362021a2f16eb47da2b",
+  "render_manifest_sha256": "5ad518e276d139882efb850757fe6f4d733fad474a9e6b29234a0c3179e6a354",
+  "pages_rendered": 28,
+  "all_page_images_exist": true,
+  "inspection_scope": {
+    "all_pages": "28 rendered pages reviewed in four contact sheets for pagination, blank pages, table splits, clipping and broad layout consistency",
+    "page_14": "full-size check of revised §9 calculation table and surrounding text",
+    "page_22": "full-size check of SYN-028..SYN-030 replacement-register rows"
+  },
+  "findings": [
+    "The two amounts are now visually and semantically distinguished: NTD 4,800 is remaining unpaid eligible tuition; NTD 5,800 is remaining sample budget.",
+    "The revised labels wrap within their table cells; no clipping, overlap, or broken table detected on inspected pages.",
+    "The 68-row register continues across landscape pages with repeated table headers; no visible layout defect identified."
+  ],
+  "visual_status": "PASS_LAYOUT_FOR_EXACT_SHA",
+  "semantic_status": "PENDING_INDEPENDENT_EXACT_SHA_REVIEW",
+  "formal_acceptance": "NOT_GRANTED"
+}

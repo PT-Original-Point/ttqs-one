@@ -1,0 +1,33 @@
+{
+  "schema": "ttqs-one-0141-r07-r04-semantic-review-route-disposition-v2",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0141",
+  "requirement_id": "I19-E31",
+  "candidate_sha256": "de111911a549a0be0bd6381a6b22ed694881ba6b3f83528d2b4a4e153002142b",
+  "candidate_state": "CANDIDATE",
+  "source_packet_sha256": "43c0e1bda5dfeb12c1ba8fc8805b876641f5184e4bf95eb4ef6c3182cf8ee964",
+  "unique_blueprint_sha256": "e19761674045b2defa7090ba1d8f1224943a89e54811180c20b9ea362de59cda",
+  "previous_disposition_sha256": "4fd1ae95b1f81d16a5260578f83aacb0d75ccebb34284be7cc08d4bcf112b56e",
+  "observed_at_local": "2026-10-27T22:08:44.239579+08:00",
+  "attempts_added": [
+    {
+      "work_id": "TTQS-0141-I19-E31-R04-W1-MIMO-EXACT-SHA-REVIEW-20261027",
+      "worker": "OpenCode v2 CLI",
+      "requested_model": "opencode/mimo-v2.6-flash-free",
+      "actual_model": "UNKNOWN_NO_MODEL_RESPONSE",
+      "provider_status": 429,
+      "result": "REJECTED_BEFORE_MODEL_RESPONSE",
+      "stdout_sha256": "ef62b2a602c25c88bd2853b6403bdc79ac101fd1663f185a3530376f64946c9b",
+      "terminal_sha256": "dcc5bd35ba2c440f420dea3f1632668ae2bb43c4a61ebf9b8d7742b152b82669",
+      "retry_after_ms": 35561000,
+      "retry_eligible_at_local": "2026-10-28T07:59:59.875000+08:00"
+    }
+  ],
+  "prior_glm_attempt": "BLOCKED_PROVIDER_FREE_LIMIT_HTTP_429; see original R04 disposition and worker receipt",
+  "antigravity_lane": "PAUSED_FOR_THIS_REVIEW; no safe material CLI input change",
+  "current_semantic_status": "BLOCKED_NO_REVIEW_RESPONSE",
+  "next_action": "At or after 2026-10-28T07:59:59.875000+08:00, inspect fresh free-route evidence and active-worker state before at most one lawful exact-SHA review; if unavailable, continue other READY lanes. No same-input retry before eligibility.",
+  "candidate_rebuilt": false,
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD"
+}

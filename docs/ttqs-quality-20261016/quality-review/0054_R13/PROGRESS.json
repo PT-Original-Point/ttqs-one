@@ -1,0 +1,45 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0054",
+  "requirement_id": "I12-E02",
+  "official_checkbox_sequence": "057",
+  "revision": "R13",
+  "candidate_sha256": "7b14bcfc09ad38c42b73ffebbfaee1c09939e7b9f7ae578240168cd1aa13b6ea",
+  "status": "REVIEW_FAILED_TO_EXECUTE_NO_VERDICT",
+  "static_gate": "PASS_STATIC",
+  "layout_gate": "PASS_LAYOUT; 10 pages",
+  "semantic_review": "NO_VERDICT; OpenCode CLI v2 provider returned 503 before a review response",
+  "external_error_count": 1,
+  "corrections_on_failed_dispatch": 0,
+  "opencode_route_paused": false,
+  "candidate_only": true,
+  "formal_acceptance": "NOT_GRANTED",
+  "next_action": "R14 exact-SHA independent review and remote package readback are complete. Keep R13 as a no-verdict historical candidate; continue the next lawful READY document.",
+  "remote_readback": {
+    "status": "PENDING_CROSSWALK_METADATA_SYNC",
+    "previous_verified_commit": "f7d89dd305168d54f22a6984095b45f202c47983",
+    "manifest_entries_expected": 37,
+    "candidate_sha256": "7b14bcfc09ad38c42b73ffebbfaee1c09939e7b9f7ae578240168cd1aa13b6ea",
+    "scope": "Awaiting push and exact readback of corrected progress metadata; R13 remains a no-verdict historical candidate."
+  },
+  "updated_at_taipei": "2026-10-17T17:30:27+08:00",
+  "official_sequence_correction": {
+    "status": "CORRECTED_FROM_OFFICIAL_SOURCE_CROSSWALK",
+    "source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "mapping": "DOCX 0054 / I12-E02 is official sequence 057; R13 remains NO_VERDICT and superseded by R14.",
+    "docx_bytes_changed": false,
+    "correction_note": "../0054_R14/review/official_checkbox_sequence_correction_R01.md"
+  },
+  "remote_readback_history": [
+    {
+      "status": "PASS",
+      "verified_commit": "408648bae3a9f516a1201d75e51dadc76f0e903c",
+      "manifest_entries_total": 37,
+      "manifest_entries_matching": 37,
+      "manifest_mismatch_count": 0,
+      "candidate_sha256": "7b14bcfc09ad38c42b73ffebbfaee1c09939e7b9f7ae578240168cd1aa13b6ea",
+      "readback_source": "Fetched live branch and independently SHA-256 checked each artifact using the manifest declared raw or text_lf basis; all 37 entries match.",
+      "scope": "Package byte/readback only; revision R13 retains NO_VERDICT and R14 remains candidate-only with independent semantic PASS. No formal acceptance or promotion."
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "schema": "ttqs-one-candidate-status-r12-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0121",
+  "requirement_id": "I19-E09",
+  "revision": "R03",
+  "candidate_state": "CANDIDATE",
+  "candidate_docx_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0121_I19-E09_SOURCE_PREP_R01_20261024\\candidate_R03\\0121_I19-E09_R03.docx",
+  "candidate_docx_sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+  "candidate_bytes": 72632,
+  "body_extract_sha256": "4ea875c255a3d1f852788a258725150729787f83dad96efa997dd491a8f01552",
+  "source_packet_sha256": "fbeb11b96648fff29a49a0fca74bf0cc3b3d1d29934f07dfaa3cf7e410a557fd",
+  "unique_blueprint_sha256": "99320fdc9078615ad04087c43bcbd22c5bbf751a22127c51e048e909726a5fca",
+  "official_mapping_evidence_sha256": "fc9e9704748e58847c14c707078acf66ed07f024e2b83c67201b2372ead8208d",
+  "source_blueprint_row_sha256": "e5956462565186757b6a20f53cff22e9e53cd5abca1e2b69e6942a24c91f5b08",
+  "technical_visual": {
+    "status": "PASS",
+    "checks": 27,
+    "receipt_sha256": "5a7478d792a5e9cd0e884e5bdda78fa34cab611ba36b64d592b93a2a726b4015",
+    "word_native_pdf_sha256": "fa3fd36e716372d47ae36a3eaf4a5f28ec5c395d9800e6764bf69325abed0f70",
+    "pages": 23,
+    "changed_pages_inspected": [
+      1,
+      18
+    ],
+    "unchanged_pixel_identical_pages": 21,
+    "body_min_font_pt": 10.5,
+    "table_min_font_pt": 9.5
+  },
+  "semantic": {
+    "status": "UNVERIFIED_ROUTE_IDENTITY",
+    "exact_candidate_sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+    "review_response_sha256": "d0d502350dc5a5178dd0c4d077b66591661aca1574f59b77f39c7a8f87414d",
+    "scope": "Prior R02/R03 reviewer responses are reviewer-reported text evidence; actual Gemini provider identity is UNKNOWN, so they are not counted as a verified independent semantic PASS. OpenCode attempt R12_20261027T2017 was rejected before inference by HTTP 429; no replacement verdict exists.",
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model_identity": "UNKNOWN_PROVIDER_METADATA_NOT_EXPOSED",
+    "formal_acceptance": "NOT_GRANTED",
+    "reviewer_reported_verdict": "PASS_WITH_DELTA_SCOPE",
+    "adjudication_status": "NOT_ACCEPTED",
+    "adjudication_reason": "Prior Antigravity reviewer model identity remains UNKNOWN; OpenCode GLM attempt 1 returned 429, and attempt 2 also returned HTTP 429 before inference with zero token fields. No replacement verdict."
+  },
+  "sample_real": {
+    "synthetic_register_sha256": "96837dfbabcc81693256042e4c326825c6e0f847982a63add3eb72945c5d100e",
+    "real_evidence": "NOT_PROVIDED",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "docx_changed_during_qa_or_review": false,
+  "promotion": "NOT_PROMOTED",
+  "opencode_attempt": {
+    "work_id": "TTQS-0121-I19-E09-R03-W1-OPENCODE-GLM-5.3-FLASH-FREE-EXACT-SHA-REVIEW",
+    "status": "BLOCKED_PROVIDER_FREE_LIMIT_HTTP_429",
+    "evidence_bundle_sha256": "a8299e8230cb19b8d3b2ee0b21e36c60aa39fae6eaf0492f6d63ff1a97d02f1d",
+    "requested_model": "opencode/glm-5.3-flash-free",
+    "selected_session_model": "glm-5.3-flash-free",
+    "actual_inference": "NOT_REACHED",
+    "session_id": "ses_e82b1ca2cffeCEinyXAtf6PmLK",
+    "provider_error_status": 429,
+    "retry_after_ms": 41958000,
+    "retry_eligible_estimate_local": "2026-10-28T08:00:00.403+08:00",
+    "cli_exit_code": "UNKNOWN_NOT_CAPTURED",
+    "response": "NONE",
+    "same_input_retry": "NOT_ATTEMPTED",
+    "candidate_docx_sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539"
+  },
+  "opencode_attempt_latest": {
+    "work_id": "TTQS-0121-I19-E09-R03-W1-OPENCODE-GLM-EXACT-SHA-REVIEW-AFTER-0122-SUCCESS-20261028",
+    "status": "BLOCKED_PROVIDER_FREE_LIMIT_HTTP_429_BEFORE_INFERENCE",
+    "attempt_number": 2,
+    "requested_model": "opencode/glm-5.3-flash-free",
+    "selected_session_model": "glm-5.3-flash-free",
+    "session_provider_id": "opencode",
+    "actual_inference": "NOT_REACHED",
+    "http_status": 429,
+    "retry_after_ms": 6168000,
+    "retry_eligible_estimate_local": "2026-10-28T08:00:00.296+08:00",
+    "tokens": {
+      "input": 0,
+      "output": 0,
+      "reasoning": 0,
+      "cache_read": 0,
+      "cache_write": 0
+    },
+    "response": "NONE",
+    "pid": 77644,
+    "exit_code": 1,
+    "candidate_docx_sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+    "candidate_changed": false,
+    "receipt_sha256": "203e58e8517c0f6bc3f864efd638859cd6aea29776d80e9fb23df3ca133274e2",
+    "process_deviation": "Attempt occurred before prior server backoff estimate; honor latest retry boundary and do not repeat identical input."
+  }
+}

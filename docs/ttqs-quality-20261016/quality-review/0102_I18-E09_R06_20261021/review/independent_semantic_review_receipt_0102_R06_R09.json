@@ -1,0 +1,41 @@
+{
+  "receipt_id": "TTQS_ONE_0102_R06_R09_SEMANTIC_REVIEW",
+  "work_id": "TTQS-0102-I18-E09-SEMANTIC-REVIEW-R06-R09-20261022-01",
+  "doc_id": "0102",
+  "requirement_id": "I18-E09",
+  "candidate_sha256": "7275d99844ffb0a96773872ccca99f44a6523c827eca76af2a24ef85e23f27da",
+  "packet_sha256": "22c828d8f07151a2110c2bbeb201860c1db97f0e610caccafa52f447930cdf14",
+  "reviewer": "OpenCode CLI v2",
+  "requested_model": "opencode/mimo-v2.6-flash-free",
+  "actual_serving_model": "UNKNOWN",
+  "native_session_id": "ses_e9d40afceffe7ErzglGTTF0a2g",
+  "pid": 73664,
+  "cli_exit_code": 0,
+  "completed_at_tpe": "2026-10-22T16:39:30+08:00",
+  "verdict": "PARTIAL",
+  "criteria_pass": 13,
+  "criteria_fail": 1,
+  "blocking_finding": "The candidate body omits the required negative-neighbor scope and doc_id collision warning listed in its Blueprint.",
+  "body_locators": [
+    "Blueprint Negative neighbors: lines 28-33",
+    "Reviewer criterion 10 and blocker B1",
+    "Candidate ordered body text: no negative-neighbor scope found"
+  ],
+  "nonblocking_findings": [
+    "CASE-01 screenshot vs NOT_RECEIVED taxonomy mismatch",
+    "due wording with unset date",
+    "scattered simplified-character forms",
+    "technical receipt field needs reconciliation"
+  ],
+  "scope_limits": [
+    "Reviewer did not independently hash DOCX bytes; SHA bound from packet",
+    "No visual review",
+    "2-point scoring PDF absent from packet",
+    "Remote GitHub HEAD not independently verified by reviewer",
+    "Review based on party-supplied ordered text and supplied replacement register"
+  ],
+  "real_evidence": "UNKNOWN",
+  "formal_acceptance": "NOT_GRANTED",
+  "response_path": "independent_semantic_review_0102_R06_R09_raw_response.md",
+  "response_sha256": "fe28c79e28100edd6954cc3db97328795fa9f93acc5f1d02d99ce2565adbff47"
+}

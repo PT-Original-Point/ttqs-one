@@ -1,0 +1,167 @@
+{
+  "info": {
+    "id": "ses_e842c1b15ffexDIb7gWOuNILXs",
+    "projectID": "1878e2f84e7bf6f3a6461f2d66dd987fbfda950f",
+    "agent": "plan",
+    "model": {
+      "id": "glm-5.3-flash-free",
+      "providerID": "opencode",
+      "variant": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 24850,
+      "output": 21,
+      "reasoning": 485,
+      "cache": {
+        "read": 4352,
+        "write": 0
+      }
+    },
+    "outcome": "succeeded",
+    "time": {
+      "created": 1793078846853,
+      "updated": 1793078915424,
+      "idle": 1793078915429
+    },
+    "title": "[redacted:session-title:ses_e842c1b15ffexDIb7gWOuNILXs]",
+    "location": {
+      "directory": "/[redacted:session-directory:ses_e842c1b15ffexDIb7gWOuNILXs]"
+    }
+  },
+  "messages": [
+    {
+      "id": "msg_17bd3e5a5001CIm0Sb3sQYbFxP",
+      "time": {
+        "created": 1793078846885
+      },
+      "type": "agent-switched",
+      "agent": "plan",
+      "previous": "plan"
+    },
+    {
+      "id": "msg_17bd3e58c001lW3j4uf0F5P1k7",
+      "time": {
+        "created": 1793078847060
+      },
+      "text": "[redacted:synthetic:msg_17bd3e58c001lW3j4uf0F5P1k7]",
+      "type": "synthetic"
+    },
+    {
+      "id": "msg_17bd3e5a1001wKqD15LMIrQ42U",
+      "time": {
+        "created": 1793078847064
+      },
+      "text": "[redacted:text:msg_17bd3e5a1001wKqD15LMIrQ42U]",
+      "files": [],
+      "type": "user"
+    },
+    {
+      "id": "msg_17bd3e662001XGyvcsX6wvLA47",
+      "time": {
+        "created": 1793078847092,
+        "streamed": 1793078904554,
+        "completed": 1793078904558
+      },
+      "type": "assistant",
+      "agent": "plan",
+      "model": {
+        "id": "glm-5.3-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_17bd3e662001XGyvcsX6wvLA47]",
+          "native": {
+            "redacted": "reasoning-native:msg_17bd3e662001XGyvcsX6wvLA47"
+          },
+          "time": {
+            "created": 1793078848758,
+            "completed": 1793078904550
+          }
+        },
+        {
+          "type": "text",
+          "text": "[redacted:text:msg_17bd3e662001XGyvcsX6wvLA47]"
+        }
+      ],
+      "finish": "error",
+      "error": {
+        "type": "provider.invalid-output",
+        "message": "OpenAI Chat stream ended without finish_reason",
+        "status": 200
+      },
+      "retry": {
+        "attempt": 2,
+        "at": 1793078906683,
+        "error": {
+          "type": "provider.invalid-output",
+          "message": "OpenAI Chat stream ended without finish_reason",
+          "status": 200
+        }
+      }
+    },
+    {
+      "id": "msg_17bd4cf3b0011IhVX2wMZnduES",
+      "time": {
+        "created": 1793078906683
+      },
+      "text": "[redacted:synthetic:msg_17bd4cf3b0011IhVX2wMZnduES]",
+      "type": "synthetic"
+    },
+    {
+      "id": "msg_17bd4cf3e001YXYDjYthIERySV",
+      "time": {
+        "created": 1793078906722,
+        "streamed": 1793078915422,
+        "completed": 1793078915424
+      },
+      "type": "assistant",
+      "agent": "plan",
+      "model": {
+        "id": "glm-5.3-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_17bd4cf3e001YXYDjYthIERySV]",
+          "native": {
+            "redacted": "reasoning-native:msg_17bd4cf3e001YXYDjYthIERySV"
+          },
+          "time": {
+            "created": 1793078909744,
+            "completed": 1793078915417
+          }
+        },
+        {
+          "type": "text",
+          "text": "[redacted:text:msg_17bd4cf3e001YXYDjYthIERySV]"
+        }
+      ],
+      "finish": "stop",
+      "rawFinish": "stop",
+      "cost": 0,
+      "tokens": {
+        "input": 24850,
+        "output": 21,
+        "reasoning": 485,
+        "cache": {
+          "read": 4352,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_17bd4f1650014KRctGMUEMd8sE",
+      "time": {
+        "created": 1793078915429
+      },
+      "type": "idle",
+      "outcome": "succeeded"
+    }
+  ]
+}

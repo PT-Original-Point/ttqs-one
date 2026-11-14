@@ -1,0 +1,230 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0036",
+  "requirement_id": "I07-E04",
+  "official_checkbox_serial": "036",
+  "revision": "R09",
+  "status": "FULL_VISUAL_PASS_CANDIDATE_ONLY",
+  "candidate_sha256": "91d749d00b153227bb3db67a60c552c0e17fa2b5364c799dee7de6bf69117815",
+  "candidate_bytes": 228271,
+  "source_revision": "R08",
+  "source_candidate_sha256": "e2d4b3f5e906faaf3d473c7351bd79618a78dcf2c8f91a32a4e952d005ac5eae",
+  "render_engine": "Microsoft Word COM export, 144 dpi PNG; same renderer family as the R08 baseline",
+  "render_pdf_sha256": "b68da17dd6fae66eb05db8c2c8a6d91bc44abb53487d34880975533a2639b677",
+  "render_pdf_bytes": 903319,
+  "page_count": 19,
+  "page_image_count": 19,
+  "package_diff_parts": [
+    "word/document.xml"
+  ],
+  "package_integrity": "PASS",
+  "text_integrity": "PASS_AFTER_EXCLUDING_ONE_DUPLICATED_HEADER_ROW",
+  "original_rubric_rows": 9,
+  "output_rubric_rows_first_table": 8,
+  "output_rubric_rows_continuation_table": 2,
+  "visual_finding_fixed": {
+    "page": 13,
+    "finding": "The final row of the 8-item service-record rubric was stranded on page 13 without visible column labels.",
+    "repair": "Split only the final row into a continuation table with the same four-column header; use the existing blank paragraph as a page break. No prose, sample values, calculations, or decisions changed."
+  },
+  "visual_review": {
+    "pages_01_11": "PASS; pixel-identical to R08 Word COM baseline and directly inspected from the source render; page 5 flowchart directly re-inspected after final render.",
+    "pages_12_19": "PASS; every page directly inspected after patch.",
+    "page_13": "PASS; continuation heading is visible above rubric item 8.",
+    "clipping_overlap_blank_page_or_footer_defect": "NONE_OBSERVED"
+  },
+  "semantic_review_status": "R08 exact-SHA independent semantic PASS_WITH_DECLARED_SCOPE remains linked to R08 SHA. R09 changes only table structure and duplicates the column heading; no fresh R09 exact-SHA semantic review is claimed.",
+  "candidate_disposition": "CANDIDATE_ONLY_NOT_PROMOTED",
+  "page_images": [
+    {
+      "page": 1,
+      "path": "evidence/render/page-01.png",
+      "sha256": "79315a9aa79f88af34d0c49f55490473e5c7d135ee5675ba7912c42659214103",
+      "size_px": [
+        1191,
+        1684
+      ],
+      "inspected": "R08_VISUAL_DIRECT_PLUS_R09_PIXEL_IDENTITY"
+    },
+    {
+      "page": 2,
+      "path": "evidence/render/page-02.png",
+      "sha256": "5a8d0621c34301e6438a7b91399c5ae48eecdbe2be296c7cfbf40710a4c7d911",
+      "size_px": [
+        1191,
+        1684
+      ],
+      "inspected": "R08_VISUAL_DIRECT_PLUS_R09_PIXEL_IDENTITY"
+    },
+    {
+      "page": 3,
+      "path": "evidence/render/page-03.png",
+      "sha256": "261854b0348e864d78217b13439021b0b831a4dd78918c41637234fcd8e3969c",
+      "size_px": [
+        1191,
+        1684
+      ],
+      "inspected": "R08_VISUAL_DIRECT_PLUS_R09_PIXEL_IDENTITY"
+    },
+    {
+      "page": 4,
+      "path": "evidence/render/page-04.png",
+      "sha256": "b64afa701be963c7238d7f8890b93754d92438012c3414cd2779bdca454fac17",
+      "size_px": [
+        1191,
+        1684
+      ],
+      "inspected": "R08_VISUAL_DIRECT_PLUS_R09_PIXEL_IDENTITY"
+    },
+    {
+      "page": 5,
+      "path": "evidence/render/page-05.png",
+      "sha256": "9de609525071cd8ccb5c1ec13b44d6e2c40e0c9329b3344e2fe964872d593b4b",
+      "size_px": [
+        1191,
+        1684
+      ],
+      "inspected": "DIRECT_FINAL_RENDER"
+    },
+    {
+      "page": 6,
+      "path": "evidence/render/page-06.png",
+      "sha256": "8370a3eafa52ff6a9150a343f840cb53103fec540a2dd5d1e3d5abd608cbd473",
+      "size_px": [
+        1191,
+        1684
+      ],
+      "inspected": "R08_VISUAL_DIRECT_PLUS_R09_PIXEL_IDENTITY"
+    },
+    {
+      "page": 7,
+      "path": "evidence/render/page-07.png",
+      "sha256": "fcc5fd4d4b45cf4600adadf7c9e83fa487cce7448b315449381b3a5a982baa2e",
+      "size_px": [
+        1191,
+        1684
+      ],
+      "inspected": "R08_VISUAL_DIRECT_PLUS_R09_PIXEL_IDENTITY"
+    },
+    {
+      "page": 8,
+      "path": "evidence/render/page-08.png",
+      "sha256": "4482f93ad2f535dfbbdd7a83947ef1b6bf6bfe79e5bd1cac8ace906f78c11779",
+      "size_px": [
+        1191,
+        1684
+      ],
+      "inspected": "R08_VISUAL_DIRECT_PLUS_R09_PIXEL_IDENTITY"
+    },
+    {
+      "page": 9,
+      "path": "evidence/render/page-09.png",
+      "sha256": "af7e2f6d8bc0aefbe28cebbcee83c0090adde510716344d232408be7a8478996",
+      "size_px": [
+        1191,
+        1684
+      ],
+      "inspected": "R08_VISUAL_DIRECT_PLUS_R09_PIXEL_IDENTITY"
+    },
+    {
+      "page": 10,
+      "path": "evidence/render/page-10.png",
+      "sha256": "1ded6db9d7c01438360ad3e1deda65250efb03bf035a4a31e6a37eac89845103",
+      "size_px": [
+        1191,
+        1684
+      ],
+      "inspected": "R08_VISUAL_DIRECT_PLUS_R09_PIXEL_IDENTITY"
+    },
+    {
+      "page": 11,
+      "path": "evidence/render/page-11.png",
+      "sha256": "9b7913f28a360ef89dd9f75b0b4211cf5faef892190ce7499348198dbad4902a",
+      "size_px": [
+        1191,
+        1684
+      ],
+      "inspected": "R08_VISUAL_DIRECT_PLUS_R09_PIXEL_IDENTITY"
+    },
+    {
+      "page": 12,
+      "path": "evidence/render/page-12.png",
+      "sha256": "ae94edc1106d9644226a67c755c53e7953ad9f843f3bd9c97a6a206d8cfd875d",
+      "size_px": [
+        1191,
+        1684
+      ],
+      "inspected": "DIRECT"
+    },
+    {
+      "page": 13,
+      "path": "evidence/render/page-13.png",
+      "sha256": "5d001899b980b335e63d24babb0c259a41eb9e36c202a0f9be51b81c0d35ac2d",
+      "size_px": [
+        1191,
+        1684
+      ],
+      "inspected": "DIRECT"
+    },
+    {
+      "page": 14,
+      "path": "evidence/render/page-14.png",
+      "sha256": "27eac281e8894e6e586f35748357c2e49f46366b59975c464448c9090d9f4991",
+      "size_px": [
+        1191,
+        1684
+      ],
+      "inspected": "DIRECT"
+    },
+    {
+      "page": 15,
+      "path": "evidence/render/page-15.png",
+      "sha256": "1e5e4f881f933f52501caf3629a2078ed08074087cddefadf46a9336a84f8df6",
+      "size_px": [
+        1191,
+        1684
+      ],
+      "inspected": "DIRECT"
+    },
+    {
+      "page": 16,
+      "path": "evidence/render/page-16.png",
+      "sha256": "6d734bd3f6fc7314769a2a49a46e2fc3233fad088475a42dd7be89511862d291",
+      "size_px": [
+        1191,
+        1684
+      ],
+      "inspected": "DIRECT"
+    },
+    {
+      "page": 17,
+      "path": "evidence/render/page-17.png",
+      "sha256": "252c2f5e4f14291dacaba8246dba4f8bff0d30d10b2eb06d7d99896847cd73a3",
+      "size_px": [
+        1191,
+        1684
+      ],
+      "inspected": "DIRECT"
+    },
+    {
+      "page": 18,
+      "path": "evidence/render/page-18.png",
+      "sha256": "42f5dd2a1a71ab0fbee71b6bd3b151a960391c14e73ee6e583b26ee7f7de37a3",
+      "size_px": [
+        1191,
+        1684
+      ],
+      "inspected": "DIRECT"
+    },
+    {
+      "page": 19,
+      "path": "evidence/render/page-19.png",
+      "sha256": "4ae264efa07492aa831a2b411567f4c41bba776e73dadf36ac92d7b3a1a377a6",
+      "size_px": [
+        1191,
+        1684
+      ],
+      "inspected": "DIRECT"
+    }
+  ]
+}

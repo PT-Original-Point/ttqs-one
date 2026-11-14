@@ -1,0 +1,75 @@
+{
+  "project_id": "TTQS_ONE",
+  "document_id": "0111",
+  "official_requirement_id": "I18-E20",
+  "official_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+  "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "candidate_file": "0111_I18-E20_特殊績效及社會面成果證據登錄表_R05.docx",
+  "candidate_sha256": "28d6d2a1adce11dee53fe7b1b1db300c28f81dac48a58538e772ae82cf609364",
+  "review_route": "Antigravity CLI noninteractive read-only text review",
+  "cli_executable": "C:\\Users\\J\\AppData\\Local\\agy\\bin\\agy.exe",
+  "cli_version": "1.4.6",
+  "requested_model": "gemini-3.8-flash-high",
+  "actual_serving_model": "UNKNOWN",
+  "model_log_evidence": "CLI log records resolution and override to Gemini 3.8 Flash High and streamGenerateContent response IDs; it does not expose a backend serving-model attestation.",
+  "cli_status": "SUCCESS",
+  "cli_exit_code": "UNKNOWN_NOT_CAPTURED",
+  "conversation_id": "3d32bb57-1e17-4ac0-88c8-232f2c9d5b11",
+  "duration_seconds": 119.9334167,
+  "turns": 1,
+  "usage": {
+    "input_tokens": 37959,
+    "output_tokens": 14875,
+    "thinking_tokens": 10512,
+    "cache_read_tokens": 45940,
+    "total_tokens": 52834
+  },
+  "verdict": "PASS",
+  "blocking_findings": 0,
+  "nonblocking_findings": 6,
+  "review_scope": "Full packet text/tables; exact R05 SHA; no direct DOCX binary inspection or fresh visual inspection; layout is covered by separate R05 visual receipt.",
+  "prior_R03_findings": [
+    {
+      "locator": "§2.2, Table 2 Row 3, Table 7",
+      "status": "REMAINS_NONBLOCKING",
+      "summary": "8 synthetic statements across four aspects lack direct aspect column/tally.",
+      "id": 1
+    },
+    {
+      "locator": "Table 5 Row 8, §3.3, Tables 7-8, Table 15 A2-A3",
+      "status": "REMAINS_NONBLOCKING",
+      "summary": "per-record referent is not populated; sample remains E0/HOLD.",
+      "id": 2
+    },
+    {
+      "locator": "Table 13 Row 5, Table 14, Table 16 Row 8",
+      "status": "REMAINS_NONBLOCKING",
+      "summary": "some target metric/date lack individual SYN register keys.",
+      "id": 3
+    },
+    {
+      "locator": "Table 13, Table 16, Table 14 SYN-0111-002/012",
+      "status": "REMAINS_NONBLOCKING",
+      "summary": "sample milestones predate build dates; simulated-calendar distinction is implicit in nearby evidence, not Table 13 itself.",
+      "id": 4
+    },
+    {
+      "locator": "§5.4, Tables 7-8",
+      "status": "REMAINS_NONBLOCKING",
+      "summary": "row K1/K2 labels could be confused with two-category denominator despite explicit denominator explanation.",
+      "id": 5
+    },
+    {
+      "locator": "§7, Unique Blueprint required_tables_or_figures",
+      "status": "REMAINS_INFORMATIONAL",
+      "summary": "no embedded chart; Blueprint accepts required tables and section gives plotting instructions.",
+      "id": 6
+    }
+  ],
+  "review_packet_sha256": "39813e52ca9003cac3d197c98c0bb0277352b6406c929f5f6611ce234c6fc4b0",
+  "prompt_sha256": "98e798b30b0c60f5a0ab0b7e7919aa73d806ae9c7712ff601cad6cb85240788c",
+  "raw_cli_json_sha256": "19814dea1d0887c17633b2767dffb86306e22387b654017d90ca4b8e4945397e",
+  "response_markdown_sha256": "5d0db2b4dfcfbe3cd4335858b0e3abed547b93606e446462483d1601b5524bdb",
+  "cli_log_sha256": "de178227b3c3314115e67a412c0ca559f4d6ec8c70d64097f510ca39c0bd3727",
+  "operator_note": "The first invocation failed argument parsing before model dispatch; one syntax correction also failed argument ordering before model dispatch. The third invocation completed with SUCCESS. --mode plan emitted a warning that it has no effect when slash expansion is disabled; task was explicitly read-only and sandboxed. No fallback evidence was found; actual serving identity remains UNKNOWN. Personal account identifier omitted."
+}

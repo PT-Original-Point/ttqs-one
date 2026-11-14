@@ -1,0 +1,42 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0040",
+  "revision": "R03",
+  "requirement_id": "I08-E03",
+  "official_checkbox_sequence": "040",
+  "status": "INDEPENDENT_SEMANTIC_PARTIAL_CANDIDATE_ONLY",
+  "candidate_sha256": "c84e200ff11d2e9f46360b4e03b7867e22fb03ac4ec298d022c9d1f3d76ffdf8",
+  "register_sha256": "91ec0ab6b0a37fa38293e18bb2121adde75ff6c132d448f6779466217c207b07",
+  "register_rows": 39,
+  "sample_state": "SAMPLE_SYNTHETIC_ONLY; 38 synthetic association facts and one public-source reference explicitly not association evidence.",
+  "official_source_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "source_map_sha256": "405b987797d1558ecac182cea8e1adfbd1aead7754c880db32db43c235d5024e",
+  "unique_blueprint_file_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+  "unique_blueprint_row_sha256": "ab080a2e6d85cc13a706f0c10bda7c208ddc191a1fea20a670fd5a174ab14943",
+  "companion_0039_r09_candidate_sha256": "3e7ed5f173dc4604803f477289f1d6190e95a5c58d3a229420eaee67037080f5",
+  "pdf_sha256": "60616c48bd60da87b6596379883b9adcca95a843d20cdbc5752840aa97d0ebaf",
+  "page_count": 6,
+  "technical_status": "PASS",
+  "primary_visual_status": "PASS",
+  "independent_semantic_verdict": "PARTIAL",
+  "candidate_state": "CANDIDATE_NOT_PROMOTED",
+  "formal_acceptance": "NOT_GRANTED",
+  "remote_readback": {
+    "status": "PASS_EXACT_BLOBS_READ_FROM_GITHUB",
+    "verified_branch_head": "0f66c95b56acdc41d6df3db701f5ffef702e33d3",
+    "artifact_manifest_sha256": "0d49d1b78da51ee6bc3796a444d06117173bbf4d4b94bbefbe5e72b9c6a208fa",
+    "manifest_entries_read_back": 33,
+    "candidate_sha256": "c84e200ff11d2e9f46360b4e03b7867e22fb03ac4ec298d022c9d1f3d76ffdf8",
+    "raw_independent_review_sha256": "418021f7ad554ebf66abb7283712c26dce8f0d527572cb5c77f079d84e5d518b",
+    "normalized_review_receipt_sha256": "bcc8b8c9b828ceb1296c312646163daf42f4e73e439df6a597254c832006073e",
+    "method": "Fetched the existing GitHub branch and SHA-256 hashed all exact Git blob bytes listed in the manifest; separately read back the candidate, raw review, normalized receipt, manifest and progress status."
+  },
+  "independent_review_receipt_path": "evidence/qa/0040_semantic_review_r03_exact.json",
+  "independent_review_receipt_sha256": "bcc8b8c9b828ceb1296c312646163daf42f4e73e439df6a597254c832006073e",
+  "raw_independent_review_path": "evidence/qa/0040_semantic_review_r03_crossreview_raw.md",
+  "raw_independent_review_sha256": "418021f7ad554ebf66abb7283712c26dce8f0d527572cb5c77f079d84e5d518b",
+  "independent_review_blockers": [
+    "Blueprint line 40 requires visible current matrix version/revision history and a consolidated audit index to printed content locations.",
+    "34/39 register locators use nonprinted section markers; replace with exact page/table-header/row/column locators."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "TTQS_ONE_SCOPED_SEMANTIC_REVIEW_R1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0016",
+  "revision": "R14",
+  "work_id": "TTQS-0016-W1-SCOPED-SEMANTIC-R14-20261107",
+  "candidate_sha256": "5082D0BE4E42CD3E5EA1643CD4CBB75F663B75B79487EB4CB6C5B7DFD36082D0",
+  "candidate_text_sha256": "6B7EB95AB87085966971AEEF63DEE9A0B6ADC0F09E79B02E4C96EE18411EEF0A",
+  "review_packet_sha256": "D6897392B8A30102BFA5CE7F4160507B9740E02024AC812F8DB3BF73D71D06AA",
+  "terminal_receipt_sha256": "83ADF88CE0C146F5522284018852ABE47F362CA080DFA59534687B7E32EF5455",
+  "reviewer": "OpenCode plan agent (distinct CLI reviewer context)",
+  "requested_model": "opencode/deepseek-v4.1-flash-free",
+  "actual_model": "UNKNOWN",
+  "verdict": "PASS_SCOPED",
+  "scope": "R13A register pointer and retired S-027 correction; §10.1 dangling example-path references; SAMPLE/REAL and authorization boundary in quoted excerpts.",
+  "findings": [],
+  "source_response_sha256": "619DE8D7B2FA5BFC0810868BF8405A9EDAB3974ABC832AA30DB792BB9388D006",
+  "raw_stdout_sha256": "D05B51D6EF368DAF64C04A8ECAD1D2A7F4C8A8730C464484AC51F78EF14D0306",
+  "limitations": [
+    "Not a full-document review.",
+    "Reviewer treated declared hashes/counts as metadata and did not independently verify them.",
+    "No DOCX/ZIP/XML inspection, font/layout/visual QA, or formal acceptance by reviewer.",
+    "Serving model identity was not verified."
+  ],
+  "formal_acceptance": false,
+  "candidate_status": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "reviewed_at_tpe": "2026-11-07T17:11:19.339063+08:00"
+}

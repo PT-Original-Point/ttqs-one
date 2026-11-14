@@ -1,0 +1,3 @@
+請做一次獨立的 exact-SHA 最終確認，不要修改檔案或呼叫 Computer Use。此前你（OpenCode CLI v2.0.29 requested model opencode/beam-free）審查 DOCX 0072 SHA 94005e3b37b998b0c914f613d41d18d918250fb26ee9c6d94c8d8bd5c5f81040，結論 PARTIAL；唯一已定位缺陷是 14 個正文行內標籤低於 10.5 pt。現版只將 builder 的非表格 inline-code 字級從 10.2 提高到 10.5，表格仍維持 9.5；候選 DOCX 新 SHA 為 3327fdc5200770dde695fc822eca3653feed0f562b156d4529e89cdecbdf052e。
+
+請只以附上的新 DOCX、抽取文字、先前完整審查、官方來源與 Unique Blueprint、技術及視覺收據為證據。確認：(a) 新 DOCX exact SHA；(b) 前後抽取語意文字 SHA 都是 16aeaae9e4055b22585bed0aacf2228f44b53896a6fe293de18a89cc54115788，故正文未變；(c) 原先全部實質語意結論可否沿用；(d) 字級缺陷是否真正修正至正文≥10.5pt、表格≥9.5pt；(e) 40頁渲染及記錄的目視範圍有無新布局問題。若有證據不足或新缺陷，回 PARTIAL/FAIL；不要複述一份新的全篇報告，只列 exact-SHA、核對項目及剩餘問題。首行明確寫 PASS/PARTIAL/FAIL，並聲明未修改檔案。

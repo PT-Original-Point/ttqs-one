@@ -1,0 +1,38 @@
+{
+  "schema": "ttqs-one-semantic-review-reconciliation-v1",
+  "doc_id": "0012",
+  "requirement_id": "I02-E03",
+  "candidate_sha256": "1b2ad16bb36d9ba867fd517067d0e2c61529b1bfe390e045e01cd05fca7795e6",
+  "candidate_state": "CANDIDATE_SAMPLE_SYNTHETIC_NOT_ACCEPTED",
+  "reviews": [
+    {
+      "review": "existing GitHub R08J review",
+      "verdict": "PARTIAL",
+      "scope": "official mapping, genre, key arithmetic, 4800/5800 separation, SAMPLE/REAL, negative neighbors; not all 68 register items or visual layout",
+      "remote_blob_sha1_json": "62a3910cd1cb0b7330db7ce69e04b3ff1c3d7674",
+      "remote_blob_sha1_markdown": "3a4160e66adac786dc4fe61e2e8b950c78035908"
+    },
+    {
+      "review": "W1 supplemental full-register review",
+      "work_id": "TTQS-0012-W1-SEMANTIC-R08J-FULL-20261031-01",
+      "verdict": "PASS_WITH_NONBLOCKING_FINDINGS",
+      "scope": "full extracted body + all tables + all 68 synthetic register rows + official PDF page 1 + unique Blueprint row and neighbors; semantic only",
+      "requested_model": "opencode/glm-5.3-flash-free",
+      "actual_model": "UNKNOWN",
+      "candidate_sha256": "1b2ad16bb36d9ba867fd517067d0e2c61529b1bfe390e045e01cd05fca7795e6",
+      "response_sha256": "ecc19159763392d7f65a2669cc7f5653afb6edce3a8844e976932c48c76f2855",
+      "stdout_sha256": "3b469fb894d609c530be00f8296cd72053c22e0e4f935c7479007d662c548866",
+      "input_packet_sha256": "810786f91cd9fd2bfc5a48b9efa68b094bc6b7926c13e9a20adf9d3f3dcd4bd"
+    }
+  ],
+  "reconciliation": "The two results are not contradictory: the earlier review was PARTIAL for external real-policy authority and limited register scope. The supplemental reviewer found candidate-scope semantic coverage and all 68 register mappings coherent, but found F-01 MEDIUM (missing a single explicit requirement→form-field→attachment-locator traceability table). The prior real-policy/Human acceptance limitation remains. The candidate is not promoted to fully resolved quality or formally accepted.",
+  "open_findings": [
+    "F-01 MEDIUM: add compact 3-column official requirement / form fields / attachment locator mapping table in §11.",
+    "F-02 LOW: distinguish completeness vs formal-source verification metric denominators in §10.3.",
+    "F-03 LOW: correct grouping of SYN-043..SYN-056 in §12 preamble.",
+    "F-04 INFO: deduplicate or differentiate two §13 SAMPLE/SYNTHETIC bullets."
+  ],
+  "status": "SEMANTIC_EVIDENCE_RECONCILED; CANDIDATE_REPAIR_STILL_READY; NO_FORMAL_ACCEPTANCE",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_policy_authority": "UNKNOWN_HOLD"
+}

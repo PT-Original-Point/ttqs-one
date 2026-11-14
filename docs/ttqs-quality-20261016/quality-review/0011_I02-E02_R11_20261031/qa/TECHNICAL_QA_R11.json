@@ -1,0 +1,85 @@
+{
+  "schema": "ttqs-one-technical-qa-r11-v1",
+  "receipt_id": "0011_I02-E02_R11_DETERMINISTIC_TECHNICAL_QA",
+  "observed_at_tpe": "2026-10-31T14:09:50+08:00",
+  "doc_id": "0011",
+  "requirement_id": "I02-E02",
+  "official_checkbox_serial": "UNKNOWN",
+  "official_requirement_text": "與訓練政策有關之訓練產品與市場定位。",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0011_I02-E02_LUNA_TEXT_DRAFT_R01_20261029\\candidate\\0011_I02-E02_R11.docx",
+  "candidate_sha256": "cce86967e17b6ff2a5af5bec7e37e0d6f850b069ad3845a8d04ebb1065b37f3d",
+  "candidate_bytes": 76343,
+  "base_candidate_R10_sha256": "f539798262faaf9aac358e9839f5bfa7d65dd0c89969c765738fcd02abc17426",
+  "change_receipt_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0011_I02-E02_LUNA_TEXT_DRAFT_R01_20261029\\qa\\PATCH_RECEIPT_R11.json",
+  "change_receipt_sha256": "6103da27bc1ca6debf01e6e733ce1b395f011fb1062b4132a59037dd24539d0e",
+  "blueprint_file_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+  "blueprint_row_sha256_raw_line": "115b34f20b7f8106f5aa45d06da39ecae99a85a75f5276b79970911b428b32ec",
+  "blueprint_row_sha256_canonical_sorted_compact": "6243ec2921c7af4be7ed1d3538003f3cb2d4474d427a394a7146cbf8f0806dd5",
+  "crosswalk_file_sha256": "1ddfbb608bcad25170683ddb42a1dbb27bafa6f1f35ff0498f1b8d75b24f0679",
+  "official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "official_phrase_extraction": "pypdf page 1 whitespace-normalized exact phrase match",
+  "checks": {
+    "zip_integrity": true,
+    "python_docx_open": true,
+    "candidate_sha_computed": true,
+    "correct_doc_and_requirement_binding": true,
+    "revision_label_matches_candidate": true,
+    "only_one_expected_paragraph_changed": true,
+    "all_tables_identical_to_R10": true,
+    "exactly_27_tables": true,
+    "no_empty_table_cells": true,
+    "body_min_font_ge_10_5": true,
+    "table_min_font_ge_9_5": true,
+    "formula_recomputed": true,
+    "formula_outputs_present": true,
+    "fact_ids_unchanged_from_R10": true,
+    "unique_fact_ids_83": true,
+    "attachment_index_present": true,
+    "official_source_sha_expected": true,
+    "official_requirement_page1_phrase_match": true,
+    "blueprint_file_sha_expected": true,
+    "blueprint_unique_row_matches": true,
+    "crosswalk_sha_expected": true,
+    "crosswalk_maps_only_0011": true
+  },
+  "failed_checks": [],
+  "tables": 27,
+  "table_rows_including_headers": 260,
+  "empty_cells": [],
+  "paragraph_delta": [
+    {
+      "index": 2,
+      "old": "文件代碼：0011／I02-E02　　版本：R09　　草案撰寫日：2026-10-29",
+      "new": "文件代碼：0011／I02-E02　　版本：R11　　草案撰寫日：2026-10-29"
+    }
+  ],
+  "body_min_font_pt": 10.5,
+  "table_min_font_pt": 9.5,
+  "formula_recalculation": {
+    "weights": [
+      25,
+      25,
+      20,
+      15,
+      15
+    ],
+    "weights_total": 100,
+    "weighted_points": {
+      "A": 340,
+      "B": 430,
+      "C": 380
+    },
+    "standardized_scores": {
+      "A": 68.0,
+      "B": 86.0,
+      "C": 76.0
+    }
+  },
+  "fact_ids_unique_count": 83,
+  "semantic_review": "PENDING_FULL_EXACT_SHA_REVIEW",
+  "visual_qa": "PENDING_R11_WORD_NATIVE_RENDER",
+  "formal_acceptance": "NOT_GRANTED",
+  "candidate_state": "CANDIDATE_SAMPLE_SYNTHETIC",
+  "real_evidence": "UNKNOWN_NOT_CLAIMED",
+  "status": "TECHNICAL_PASS"
+}

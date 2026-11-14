@@ -1,0 +1,32 @@
+{
+  "receipt_id": "TTQS-R09-GITHUB-FINAL-READBACK-0102-R06",
+  "observed_at_utc": "2026-10-21T16:01:31.548881+00:00",
+  "repository": "PT-Original-Point/ttqs-one",
+  "pull_request": 92,
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "verified_content_commit": "faf4655c722691d6b0bf73c40c9902219f965a8d",
+  "verification_method": "Fetch the branch, then read each committed path with git show <commit>:<path>; compare raw remote blob byte length and SHA-256 against the package manifest.",
+  "manifest_sha256_at_verified_content_commit": "0ab769a0fe9e86c8caef1515b0a8281c78e641858767980243ce24ee0f9daaeb",
+  "manifest_entries_checked": 33,
+  "manifest_mismatches": 0,
+  "pr_metadata_readback": {
+    "state": "open",
+    "draft": true,
+    "head_ref": "work/ttqs-one-document-quality-contract-20261016",
+    "head_sha": "faf4655c722691d6b0bf73c40c9902219f965a8d"
+  },
+  "artifact_sha256": {
+    "0102_docx": "7275d99844ffb0a96773872ccca99f44a6523c827eca76af2a24ef85e23f27da",
+    "0102_word_native_pdf": "39713509ecbfbb7445f7b5b293a3cbed17838069063443c50794cb3f1f30f537",
+    "0102_r09_guard_test_run_receipt": "2cbf03d1a6221617e0fd92beea323202e31a326932bbdb3a59c116107bcec6b9",
+    "0100_docx": "debd41e7ca1b18b88cad37db118c5b3474df411b3e2d1c87a8351d456245e0b2",
+    "0100_semantic_receipt": "986c00397f2e075c56cb6874b7c18ee0262c441925cdc8cb257e7adbdc37df1b",
+    "0101_docx": "56f433e095f32378f2fd8241c1a27948d2bfe6748da003af5623d265885edb68",
+    "0101_semantic_receipt": "f67614291f90bfe379b55a2e01cb451c2d076371c905249e2b286ee2bfe588c7"
+  },
+  "candidate_state": "0102 is a candidate; independent exact-SHA semantic review pending; formal acceptance not granted.",
+  "limitations": [
+    "This receipt records readback at the verified content commit above. It does not claim the new receipt or following manifest update is already present at that commit.",
+    "0100 and 0101 remain candidates despite matching prior semantic receipts; no Human formal acceptance is implied."
+  ]
+}

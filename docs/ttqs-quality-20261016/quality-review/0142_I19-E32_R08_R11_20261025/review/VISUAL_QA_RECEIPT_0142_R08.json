@@ -1,0 +1,17 @@
+{
+  "doc_id": "0142",
+  "requirement_id": "I19-E32",
+  "candidate_sha256": "dd6bfd2bb75ed9708065578f435b54fc7c85c9492f35edcddf614f962db41e0a",
+  "render_engine": "Microsoft Word COM ExportAsFixedFormat; read-only",
+  "pdf_sha256": "0eafab118f94fca57b18051de112d4d8b9aa27ae7e5d55a6747b374fd7c22774",
+  "page_count": "10",
+  "page_image_manifest_sha256": "d95a62bfcb734de6cb76f1ddd13efc12ea874acc140f9092c97748d22dc07622",
+  "visual_review_scope": "All 10 rendered page images inspected individually at original 120-DPI raster size before the localized table-header contrast correction; after correction page 5 was re-rendered and re-inspected. The correction changed only Table 9 header text/fill styling; Word page count stayed 10. Contact sheets for pages 1-3, 7-9, and 10 retained identical hashes; page 4-6 sheet changed due the page-5 correction.",
+  "verdict": "PASS_SCOPED_LAYOUT_AND_READABILITY",
+  "findings": [
+    "Table 9 six-column header contrast was corrected to white bold text on blue fill and re-inspected on page 5.",
+    "No clipping, overlap, split rows, unreadable table, or broken page flow observed in the 10-page render."
+  ],
+  "candidate_sha_before_after_word_render": "UNCHANGED",
+  "formal_acceptance": "NOT_GRANTED"
+}

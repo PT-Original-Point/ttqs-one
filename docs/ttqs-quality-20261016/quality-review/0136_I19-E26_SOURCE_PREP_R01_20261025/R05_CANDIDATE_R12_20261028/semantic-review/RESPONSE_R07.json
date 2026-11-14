@@ -1,0 +1,132 @@
+{
+  "work_id": "TTQS-0136-I19-E26-R05-W1-OPENCODE-GLM53-FREE-DELTA-REVIEW-R07",
+  "doc_id": "0136",
+  "requirement_id": "I19-E26",
+  "target_candidate_sha256": "6d02df68d9dcdd0024aec8d32b38b12e8c66ce112165663836427739c0af5611",
+  "review_type": "independent exact-SHA semantic delta review (text-only; changed fields + version marker; model opencode/glm-5.3-flash-free; no tools used)",
+  "verdict": "PASS",
+  "summary": "Independently re-derived from the seven changed cells (verdict not copied from baseline). R05 (a) splits the former generic 日期 into two named T1 fields — 來源記載日期 (source-record date) and 協會取得／收件日期 (association received/acquired date) — in both the T1 field dictionary and the blank T1 form, with per-field UNKNOWN handling, NONE only when the source has not been obtained, and no original SHA without an actual file; (b) adds an explicit named 保存／複查日期 (retention/review date) field in dictionary and blank form, filled only from the association's own formal rules and the source, defaulting to UNKNOWN with no self-imposed deadline; (c) updates the page-1 marker to 'R05 CANDIDATE｜本次修訂日 2026-10-28｜未正式接受、未核准生效', recording the revision date while explicitly retaining non-acceptance/non-approval; and (d) adds one page break before the blank T1 form so the dictionary ends page 9 and the blank form starts page 10 with no row split. This resolves baseline findings 1 and 3 without inventing policy, dates, rules, approval, or formal acceptance, and introduces no REAL facts or fabricated governance. The only residual item is baseline finding 2 (caption rendering), which was always allocated to separately recorded Word visual QA and is untouched by the deltas.",
+  "checks": [
+    {
+      "criterion": "T1 field dictionary explicitly separates source-record date from association received/acquired date, with explicit unknown handling",
+      "result": "PASS",
+      "locator": "TABLE 21 (T1 欄位字典) row 4, columns 2–3",
+      "evidence": "Candidate row lists '來源方、來源標題、來源記載日期、協會取得／收件日期、取得方式、格式／版本、頁／段／項、原件狀態' with instruction '來源尚未取得填 NONE；來源記載日期與協會取得／收件日期分欄，未知各自填 UNKNOWN；沒有實際檔案不得填原件 SHA。' Each date fails independently to UNKNOWN; NONE is scoped to 'source not yet obtained'; the no-SHA-without-actual-file rule matches the VERIFIED_PRIMARY hashing requirement (exact bytes hashed only for a held original)."
+    },
+    {
+      "criterion": "Blank T1 form mirrors the dictionary's split dates so real rows cannot silently merge or omit them",
+      "result": "PASS",
+      "locator": "TABLE 22 (blank T1) row 4, column 1",
+      "evidence": "Candidate cell '來源方／標題／來源記載日期／協會取得（收件）日期／取得方式' names both dates as separate slots. Wording '協會取得（收件）日期' vs the dictionary's '協會取得／收件日期' is an equivalent denotation of the same field, not a semantic conflict."
+    },
+    {
+      "criterion": "Retention/review date is a named T1 field, tied only to real association policy, defaulting to UNKNOWN, with no invented deadline",
+      "result": "PASS",
+      "locator": "TABLE 21 row 6, columns 2–3",
+      "evidence": "Candidate row '查核管道／日期／結果、相關性、重複鍵、隱私級別、公開限制、保存／複查日期' plus instruction '保存／複查日期只依協會正式規則與來源填寫；未查得規則或日期填 UNKNOWN，不自行設定期限。' No retention number, period, or rule is fabricated; it stays aligned with the baseline TABLE 4 principle that retention rules come solely from the association's formal internal rules, else UNKNOWN. The added 公開限制 in the dictionary also now matches the blank form's existing 公開限制 slot."
+    },
+    {
+      "criterion": "Blank T1 form carries the retention/review date field with the UNKNOWN default visible to the filler",
+      "result": "PASS",
+      "locator": "TABLE 22 row 8, column 1",
+      "evidence": "Candidate cell '隱私／公開限制／重複鍵／保存複查日（無正式依據填 UNKNOWN）' — the parenthetical makes the no-invented-rule default explicit at point of entry; mirrors dictionary row 6."
+    },
+    {
+      "criterion": "Page-1 candidate revision/date status is accurate and claims no approval or formal acceptance",
+      "result": "PASS",
+      "locator": "TABLE 1 row 8, column 2",
+      "evidence": "Candidate 'R05 CANDIDATE｜本次修訂日 2026-10-28｜未正式接受、未核准生效' — version marker and revision date updated while non-acceptance/non-approval is explicitly retained; 2026-10-28 is a document-control date only, not an association or source fact. Consistent with the rule that reviewer review can never constitute Human acceptance."
+    },
+    {
+      "criterion": "No unsupported REAL facts, fabricated retention rules, approval, or formal acceptance introduced anywhere in the delta",
+      "result": "PASS",
+      "locator": "All seven changed cells (TABLE 1 r8c2; TABLE 21 r4c2/r4c3/r6c2/r6c3; TABLE 22 r4c1/r8c1)",
+      "evidence": "The delta contains only field naming, splitting, instruction text, UNKNOWN defaults, and the document-control revision date. No certificate, issuer, school, date, count, outcome, rule text, approval wording, or acceptance claim appears."
+    },
+    {
+      "criterion": "Exact SHA and change scope are internally bound",
+      "result": "PASS (packet-bound, not independently recomputed)",
+      "locator": "Deterministic diff: seven cells above, plus a single paragraph-format delta (page break before the blank T1 form); COM layout read: 15 pages, full T1 dictionary on page 9, blank T1 form beginning on page 10 with no row split",
+      "evidence": "The scope assertion is consistent with the layout read supplied in the packet and the candidate is bound to SHA 6d02df68d9dcdd0024aec8d32b38b12e8c66ce112165663836427739c0af5611; this is a text-only review, so the hash and visual render were not independently recomputed or rendered by the reviewer."
+    },
+    {
+      "criterion": "Deltas do not disturb verified baseline semantics (official sentence framing, identity binding, neighbor routing, status machinery, synthetic non-counting rules)",
+      "result": "PASS",
+      "locator": "Per the stated diff, no cells outside TABLE 1 r8c2 and TABLE 21/22 r4/r6/r8 changed",
+      "evidence": "Verbatim official p8–9 sentence framing, DOCX 0136 ↔ I19-E26 ↔ index 150 binding with printed serial UNKNOWN, routing to 0135/0137/0133/0134, status definitions, and SAMPLE_ONLY non-counting wording are all outside the changed set, and the three new/clarified fields operate consistently with those unchanged mechanisms."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "minor",
+      "locator": "Section 2 headings 編號不可互換/相鄰文類分流/不足時的處置/狀態轉換的控制點 vs adjacent TABLE captions (inherited baseline finding 2)",
+      "evidence": "R05 made no changes to these headings or captions; the only paragraph-format delta is a page break before the blank T1 form, which improves pagination (dictionary ends page 9, blank T1 starts page 10 intact) but does not address caption rendering.",
+      "why_it_matters": "Standalone readability of the printed body remains unconfirmed inside this text-only review scope.",
+      "required_action": "Keep this item open in the separately recorded Word visual QA bound to the same candidate SHA 6d02df68d9dcdd0024aec8d32b38b12e8c66ce112165663836427739c0af5611; confirm the lines render as table titles/lead-ins rather than dangling headings. Nonblocking for this delta verdict."
+    },
+    {
+      "severity": "minor",
+      "locator": "TABLE 21 r4c2 vs TABLE 22 r4c1; TABLE 21 r6c2 vs TABLE 22 r8c1",
+      "evidence": "Equivalent fields are spelled slightly differently between dictionary and blank form: '協會取得／收件日期' vs '協會取得（收件）日期', and '保存／複查日期' vs '保存複查日'.",
+      "why_it_matters": "Semantically identical naming, so no operational risk of misfilling was found; harmonized wording would merely polish cross-referencing in future revisions.",
+      "required_action": "Optional cosmetic harmonization in a later revision; no action required for this SHA."
+    }
+  ],
+  "inherited_baseline_scope": {
+    "baseline_docx_sha256": "a9bd0fb528a1e22865fa5e07df44b314d48c1fd826a08149ecdd1d5915048b39",
+    "baseline_review_verdict": "PASS with three minor findings",
+    "baseline_review_normalized_response_sha256": "41fbf5e638576f2514461faaec652c5eebfbdb303ca0b6e25b6facbcb57b9c67",
+    "scope_of_inheritance": "This delta review covers only the seven changed cells and the version marker; the unchanged body's semantic coverage is inherited from the baseline full review, cross-checked here only against the three findings.",
+    "finding_status": [
+      "Finding 1 (retention/review date field) — ADDRESSED by R05 in TABLE 21 r6c2/r6c3 and TABLE 22 r8c1, with UNKNOWN default and no invented deadline.",
+      "Finding 2 (caption rendering / dangling headings) — NOT ADDRESSED by the delta; remains open, correctly allocated to separately recorded visual QA bound to the same SHA. Verified against the changed cells, not presumed from the baseline.",
+      "Finding 3 (source-record date and receipt date naming) — ADDRESSED by R05 in TABLE 21 r4c2/r4c3 and TABLE 22 r4c1, with per-field UNKNOWN handling."
+    ],
+    "verdict_basis": "Re-derived cell-by-cell from the candidate values; the baseline normalized verdict was used only to locate the findings, not as the verdict source."
+  },
+  "changed_field_assessment": [
+    {
+      "locator": "TABLE 1 row 8 column 2",
+      "change": "R01 → R05 revision marker; 建置日 replaced by 本次修訂日 2026-10-28",
+      "assessment": "CONSISTENT — operational version/date status; '未正式接受、未核准生效' retained, so no approval or formal acceptance is claimed."
+    },
+    {
+      "locator": "TABLE 21 row 4 column 2",
+      "change": "Generic 日期 split into 來源記載日期 and 協會取得／收件日期; 取得方式 repositioned; 格式／版本 named with version",
+      "assessment": "CONSISTENT — matches the Blueprint's required source-record and receipt/capture fields; separate slots prevent silent merging of the two dates; addresses baseline finding 3."
+    },
+    {
+      "locator": "TABLE 21 row 4 column 3",
+      "change": "Instruction: NONE only when source not yet obtained; each date independently UNKNOWN; no original SHA without an actual file",
+      "assessment": "CONSISTENT — unknown handling is explicit and per-field; the no-file/no-SHA rule reinforces the VERIFIED_PRIMARY hashing boundary."
+    },
+    {
+      "locator": "TABLE 21 row 6 column 2",
+      "change": "Adds 公開限制 and 保存／複查日期 as named dictionary fields",
+      "assessment": "CONSISTENT — 保存／複查日期 is the Blueprint-required retention/review date field (addresses baseline finding 1); 公開限制 now aligns the dictionary with the existing blank-form slot."
+    },
+    {
+      "locator": "TABLE 21 row 6 column 3",
+      "change": "Instruction: retention/review date filled only from association formal rules and the source; UNKNOWN when rule/date not found; no self-set deadline",
+      "assessment": "CONSISTENT — no retention policy is invented; no default period or fabricated governance appears; per-item checkpoint wording retained."
+    },
+    {
+      "locator": "TABLE 22 row 4 column 1",
+      "change": "Blank T1 source row now carries 來源方／標題／來源記載日期／協會取得（收件）日期／取得方式",
+      "assessment": "CONSISTENT — mirrors the dictionary split at point of entry; the parenthetical naming variant is semantically identical."
+    },
+    {
+      "locator": "TABLE 22 row 8 column 1",
+      "change": "Blank T1 adds 保存複查日（無正式依據填 UNKNOWN）",
+      "assessment": "CONSISTENT — the UNKNOWN default is embedded in the form so a filler cannot silently omit it; mirrors dictionary row 6 without inventing a rule."
+    }
+  ],
+  "sample_real_boundary": "The delta touches no SAMPLE/SYNTHETIC walkthrough rows, no synthetic fact, and no T6 replacement-register entry; the three new/clarified fields are defined generically for real intake and remain governed by the unchanged SAMPLE_ONLY non-counting rules. No REAL fact (source, issuer, school, date, count, outcome, recipient, or association performance) is introduced by any changed cell; the only date added, 2026-10-28, is a document-control revision date. SAMPLE rows continue to carry no attached originals, no hashes, and NOT FOR EXTERNAL USE boundaries, unchanged by this delta.",
+  "limitations": [
+    "Text-only delta review performed on the provided packet content without tool use, file access, SHA recomputation, or git inspection; the candidate SHA and seven-cell change scope are accepted as internally bound per the packet's deterministic diff and read-only COM layout export.",
+    "Word visual rendering and caption layout are explicitly out of scope and separately recorded; baseline finding 2 therefore remains open and must be closed in that visual QA bound to the same SHA.",
+    "The official printed checkbox serial remains UNKNOWN and was not verified; no serial substitution occurred in the delta.",
+    "The delta's consistency with the unchanged body is verified against the unchanged-set boundary asserted in the diff; unchanged body text itself was not re-extracted for full re-review.",
+    "This review cannot constitute Human acceptance and grants no formal acceptance or approval."
+  ]
+}

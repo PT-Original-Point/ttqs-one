@@ -1,0 +1,20 @@
+{
+  "doc_id": "0013",
+  "requirement_id": "I02-E04",
+  "candidate_sha256": "978672ae999bbcb1a71137739428ae6d37ce475b96eb59abc8d939d3cbcdc260",
+  "renderer": "Microsoft Word native ExportAsFixedFormat",
+  "pdf_sha256": "e54b5a605b4ebc09c5674818c52b316243fd71b2c0d491a9650dbb27019d5dc8",
+  "pdf_pages": 25,
+  "directly_inspected_pages": [
+    16
+  ],
+  "page16_result": "PASS_LOCALIZED_LAYOUT",
+  "scope": "PARTIAL",
+  "limitations": [
+    "R12 PDF generated successfully; this turn directly inspected page 16 only. Other pages inherit R11 content/layout except the localized table-cell XML edit, but this is not a full R12 page-by-page visual PASS.",
+    "Independent semantic review is pending because OpenCode free route returned HTTP 429."
+  ],
+  "state": "CANDIDATE_NOT_ACCEPTED",
+  "page16_png_sha256": "bfea66bc9d9826eef4606ea77e7a323253d86069fe2a7867a4861a9a2d6b8a8a",
+  "observed_at_tpe": "2026-10-31T09:06:50.0573743+08:00"
+}

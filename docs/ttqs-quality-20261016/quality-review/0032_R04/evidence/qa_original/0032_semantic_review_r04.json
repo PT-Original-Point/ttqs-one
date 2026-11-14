@@ -1,0 +1,97 @@
+{
+  "doc_id": "0032",
+  "requirement_id": "I06-E03",
+  "review_round": "R04_INDEPENDENT_EXACT_SHA_DELTA",
+  "verdict": "PASS",
+  "review_type": "independent exact-SHA delta semantic and traceability review",
+  "reviewer": "Confucius independent cross-review",
+  "reviewer_agent_id": "01a1435e-f156-7a52-ade0-b76f38bb6230",
+  "review_route": "CROSS_REVIEW_BY_OTHER_ACTIVE_AGENT; OpenCode disabled",
+  "submission_ids": [
+    "01a143b0-7dba-7993-89ad-d0de298566b8",
+    "01a143b2-d92b-74e0-a86c-2c92da80f590"
+  ],
+  "reviewed_at_local": "2026-10-16T15:53:16+08:00",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0032_R04\\candidate\\0032__訓練機構辦訓作業職能與執行程序說明暨完整示範_R04.docx",
+  "candidate_sha256": "22dfa33b9c010c4c33f7e1c19ac0bfee999119c4732aca13e611a7c7ab552d3d",
+  "parent_candidate_sha256": "1a5d59c610928db560c2d379784fa380f5a4503a62f5ba61e5ea5193b05bcea7",
+  "replacement_register_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0032_R04\\sources\\SYNTHETIC_REPLACEMENT_REGISTER_0032_R04.csv",
+  "replacement_register_sha256": "e9a3b06e3905c9d123d14baaca1921ddd6af252cc426f09132955ed500ae9955",
+  "unique_blueprint_row_sha256": "8edcf9bc9cf412657d6a702e0da3c8dc5ddb22b4aa6c53ff52e1fbe8f310f07f",
+  "official_requirement": "訓練機構版查核佐證文件資料表 p.2: 訓練機構具備執行訓練業務相關職能的說明。",
+  "resolved_findings": [
+    {
+      "fact_ids": [
+        "SYN-032-007"
+      ],
+      "locator": "p.7 Table09 and p.11 Table14 completion threshold; 108 minutes and 120×90%=108 verified",
+      "status": "PASS"
+    },
+    {
+      "fact_ids": [
+        "SYN-032-013",
+        "SYN-032-014",
+        "SYN-032-015",
+        "SYN-032-016",
+        "SYN-032-017"
+      ],
+      "locator": "p.4 Tables05-06 role/RACI; p.7 Tables09-10 code usage",
+      "status": "PASS"
+    },
+    {
+      "fact_ids": [
+        "SYN-032-053"
+      ],
+      "locator": "p.11 section 08 calculation/conclusion, zero denominator N/A rule",
+      "status": "PASS"
+    },
+    {
+      "body_text": [
+        "Table11 C03",
+        "Table11 C05"
+      ],
+      "locator": "p.8, 電話邀請 appears once in each row",
+      "status": "PASS"
+    }
+  ],
+  "unchanged_inherited_r03_gates": "R03 full exact-SHA review had PASS for I06-E03 genre, operation workflow, SAMPLE/REAL boundary, flow arithmetic, attendance/batch results, negative-neighbor distinction and 16-page layout; R04 delta does not change those sections or calculations.",
+  "page_render": {
+    "page_count": 16,
+    "pdf_sha256": "22e4e54b17c890de0fe38b99ce1adf927d56e095b0cbf2d6b66b9ac97876df3f",
+    "changed_pages": [
+      8
+    ],
+    "pixel_identical_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "status": "PASS"
+  },
+  "ooxml_delta": {
+    "changed_parts": [
+      "word/document.xml"
+    ],
+    "semantic_scope": "two duplicate invitation words removed in Table11 C03/C05; no other body data changed"
+  },
+  "candidate_state": "CANDIDATE",
+  "promotion_status": "NOT_PROMOTED",
+  "human_acceptance": "PENDING",
+  "limitations": [
+    "Applies only to the exact DOCX and register SHAs above.",
+    "Synthetic demonstration remains distinct from real association records.",
+    "No canonical promotion or Human acceptance implied."
+  ]
+}

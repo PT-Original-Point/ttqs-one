@@ -1,0 +1,35 @@
+{
+  "schema": "ttqs_one_independent_semantic_review_receipt.v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0014",
+  "requirement_id": "I02-E05",
+  "work_id": "TTQS_ONE_0014_R18_FULL_SEMANTIC_REVIEW_W1_CROUTON_20261108",
+  "recorded_at_tpe": "2026-11-08T15:15:25+08:00",
+  "reviewer_worker": "W1 OpenCode v2 via explicit opencode/crouton-alpha-free",
+  "serving_model": "UNKNOWN",
+  "candidate_sha256": "f010470828aad653f691d164c50fdc8e2e0359a88b52286c92eb6f6d1b994846",
+  "register_sha256": "92c35585cfd1a53a88807c89a6a5ba39ebcbe46af876a1530eb9c51c45435860",
+  "source_packet_sha256": "30ade83ab55d9ed185dae519252e114ebfb33c8ef276c8005cf77cb355e82b91",
+  "blueprint_row_sha256": "ec6fc82addd4474a9d7d664b137bd8e35a2fe6a7bb04e7ca028f048e21d1e5d3",
+  "text_extraction_sha256": "9ab5ba0ec2024088dc8802699449eabae97641c2ae2631c4116f41622050cb66",
+  "dispatch_receipt_sha256": "c251a79e585faff8cf0e93605bde2d232f03f12147db11b3526fa03a1df49381",
+  "result": "PASS_FULL_DOCUMENT_SEMANTIC_TEXT_SCOPE",
+  "scope": "Full-document semantic/usability review of extracted text only, including genre mechanics, worked SAMPLE completeness, numerical consistency, SAMPLE/REAL boundaries, official requirement fit, title-blind identification, negative-neighbor rejection, duplication and anomalies; binary layout and formal acceptance not evaluated",
+  "findings": [],
+  "checks": {
+    "requirement_fit": true,
+    "genre_mechanics": true,
+    "operational_usability": true,
+    "synthetic_example_and_calculations": true,
+    "truth_boundary": true,
+    "title_blind_identification": true,
+    "negative_neighbor_rejection": true,
+    "duplication": true
+  },
+  "limitations": [
+    "Reviewer received ordered text extraction, not DOCX binary.",
+    "No visual, font-floor, formal association acceptance, REAL status, or promotion was reviewed."
+  ],
+  "formal_ttqs_acceptance": false,
+  "promotion_authorized": false
+}

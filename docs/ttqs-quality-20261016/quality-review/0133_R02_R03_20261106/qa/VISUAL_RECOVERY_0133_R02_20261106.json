@@ -1,0 +1,78 @@
+{
+  "schema": "ttqs-one-0133-r02-visual-recovery-v1",
+  "doc_id": "0133",
+  "candidate_sha256": "91a8dd17988525ba9700483c40d5d2477fa5d863d8f5138141ca89305f8a4c30",
+  "pdf_sha256": "56215654b9f4e09bda03e64e5cae55eae53f5edcd98e406871dad53e60220080",
+  "pdf_bytes": 624263,
+  "render_source": "2026-11-06 native Word COM ExportAsFixedFormat; original tool command exit 0",
+  "page_count": 12,
+  "pages_inspected": 12,
+  "pages": [
+    {
+      "file": "page-01.png",
+      "sha256": "6e28d554b49508345eb222921d8a0c14052f2b6d69ae6d94415c05d191c17e3c",
+      "bytes": 395987
+    },
+    {
+      "file": "page-02.png",
+      "sha256": "6e39ac3f472bb3d743af39d294a7bf71dc972f2f92881caee41029e4b7d2553a",
+      "bytes": 465357
+    },
+    {
+      "file": "page-03.png",
+      "sha256": "46a8c7e38ccf125de57f86d5e276fc38158c982ed13a3846d504ec69cb508370",
+      "bytes": 370380
+    },
+    {
+      "file": "page-04.png",
+      "sha256": "363770db186e35a7f59cf93b01eb4bcb2228b0732f90902e99c763764a922a7a",
+      "bytes": 386330
+    },
+    {
+      "file": "page-05.png",
+      "sha256": "66a9b8be2f2dc0cf5dd5fc6c46c9900dffa907c0a21bd9729ac64b059e2d7500",
+      "bytes": 288939
+    },
+    {
+      "file": "page-06.png",
+      "sha256": "3417de20750e61788a714bbc2ba73a537b51ad5db085b9000b85465c15ed1253",
+      "bytes": 251554
+    },
+    {
+      "file": "page-07.png",
+      "sha256": "dc88408ac8923b3c0cfa79e7a7968dc009c531e9b88bb6f98d80fec3069b6276",
+      "bytes": 271892
+    },
+    {
+      "file": "page-08.png",
+      "sha256": "54073fe484c6908ecf52810c24102d2a3363514097e9a0a8d896f08fbc76566e",
+      "bytes": 384223
+    },
+    {
+      "file": "page-09.png",
+      "sha256": "90553eea3df86bc9b9aba52dc7d1eab4e2b2eba29c9073363ef1decc32a47016",
+      "bytes": 327676
+    },
+    {
+      "file": "page-10.png",
+      "sha256": "3dd61cf6bec2cb0dbc32ffece643aad2d28dc8fc846c74698f945599460fe683",
+      "bytes": 396692
+    },
+    {
+      "file": "page-11.png",
+      "sha256": "46325d7ea43c4d01e08a7348ef68ddb9fcaf12e1315ad26e89fb4f7c9d7016c3",
+      "bytes": 275492
+    },
+    {
+      "file": "page-12.png",
+      "sha256": "fac2db1b1eb81fbd9e8cdfa6878496e62fd824a59a2ac5574b557275fafca0a0",
+      "bytes": 71785
+    }
+  ],
+  "visual_result": "FAIL",
+  "finding": "Page 8 ends with a table header alone; its first data row is on page 9. Repeat header on page 9 does not remove the orphan header on page 8.",
+  "other_observations": "Pages 1-7 and 9-12 inspected; no obvious clipping or overlap at viewed resolution; page 12 is sparse but readable.",
+  "semantic": "PENDING_INDEPENDENT_REVIEW",
+  "formal_acceptance": "NOT_GRANTED",
+  "observed_at": "2026-11-06T18:25:38.1859166+08:00"
+}

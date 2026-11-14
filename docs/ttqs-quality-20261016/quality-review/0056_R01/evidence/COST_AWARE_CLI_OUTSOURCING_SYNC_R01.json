@@ -1,0 +1,142 @@
+{
+  "command_id": "TTQS_ONE_COST_AWARE_CLI_OUTSOURCING_SYNC_R01",
+  "project_id": "TTQS_ONE",
+  "status": "APPLIED_AND_VERIFIED_FOR_OPENCODE_ROUTE",
+  "source": {
+    "human_command_commit": "fdfd3b4dbd7c8cc52dd0e315406294bab83f1093",
+    "source_commit_is_ancestor_of_live_head": true,
+    "source_file": "docs/ttqs-quality-20261016/06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md",
+    "source_blob_sha1": "263aaca84891bba8dca087875804343c3670e921",
+    "section": "5.2-5.4",
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "pr_number": 92,
+    "branch_head_before_candidate_sync": "18fcf321f4023cebe4e8a6447616bb0de08dbd49",
+    "branch_head_after_candidate_sync": "0e4ce1534a84f60dc548d5f8b61b33da59774659"
+  },
+  "work": {
+    "0055": {
+      "requirement": "I12-E03",
+      "checkbox": "058",
+      "local_writer": "none found",
+      "docx_sha256": "747218b1ac4deb1e4ffc49b788eabd095e04f0cae894e4491bd2822e93898f71",
+      "remote_docx_bytes_match": true,
+      "technical_layout": "PASS",
+      "independent_semantic": "PASS_WITH_NONBLOCKING_FINDINGS",
+      "rebuilt_this_command": false
+    },
+    "0056": {
+      "requirement": "I12-E04",
+      "checkbox": "059",
+      "docx_sha256": "1960c37ee335d0af4872d2c41100a26c3f0c38a4475ec2e185993708c3028f3d",
+      "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+      "build": "PASS; deterministic rerun matched exact SHA",
+      "independent_technical": "PASS_WITH_SCOPE_LIMITS",
+      "visual": "PASS_WITH_NONBLOCKING_FINDINGS; all 14 pages inspected",
+      "independent_semantic": "PASS; exact-SHA review; observations recorded",
+      "remote_candidate_commit": "0e4ce1534a84f60dc548d5f8b61b33da59774659",
+      "remote_readback": {
+        "committed_files": 25,
+        "normalized_content_matches": 25,
+        "binary_byte_exact_matches": 16,
+        "text_eol_normalized_matches": 9,
+        "remote_docx_sha256": "1960c37ee335d0af4872d2c41100a26c3f0c38a4475ec2e185993708c3028f3d"
+      }
+    }
+  },
+  "nonblocking_open_findings": [
+    "Narrow table columns split some status codes across lines (reviewer cites pages 2, 4, 10; page 4 has an isolated final N). Text is present and not clipped.",
+    "T2 label 到期／需求日 may be confused with T5 evidence expiry/review date; reviewer recommends explicitly saying T2 is a need date, not evidence expiry.",
+    "No real inspection certificate, insurance policy, issuer, coverage, site, signature, request sent, approval or association decision is available; 0056 remains HOLD/PENDING_REAL_SOURCE and synthetic-only."
+  ],
+  "open_code": {
+    "cli_version": "2.0.29",
+    "catalog_models_verified": [
+      "opencode/deepseek-v4.1-flash-free",
+      "opencode/mimo-v2.6-flash-free"
+    ],
+    "catalog_readback": "PASS",
+    "separate_short_probe": "Not run; both actual task invocations returned nonempty final outputs and provider-reported cost was 0.",
+    "computer_use": "not used",
+    "builder": {
+      "session_id": "ses_eb602dce4ffeDY9Yepg4BiEh9G",
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "exit_code": 0,
+      "outcome": "succeeded",
+      "r03_prompt_path": "build/opencode_v2_builder_prompt_R03.md",
+      "r03_prompt_sha256": "265e59d1ed2493921ce77eafc50b8de2f611eb51332b490f4f230f1a805fa798",
+      "input_visual_brief_sha256": "a1b7a46dfe41de54cea10d7089f80d1235987d190b774b4bcee1c9871b0c785b",
+      "input_r02_builder_sha256": "864ae40561ae045460f128243bda647f6135a364464891c24db29376e947a6b1",
+      "input_r02_docx_sha256": "599b28655c491947dfe026d74a7b671faf84d62a37e2252ae25a4ecdc56ad58c",
+      "output_docx_sha256": "1960c37ee335d0af4872d2c41100a26c3f0c38a4475ec2e185993708c3028f3d",
+      "original_final_response_path": "build/opencode_v2_builder_response_R03.md",
+      "original_final_response_sha256": "d16d21efcea0cc65d5571cd624a92558df4f46b5fbe57beb37b38de9915a7945",
+      "modified_files": [
+        "build/build_0056_R03.py",
+        "0056_R03.docx",
+        "build/BUILD_NOTES_R03.md"
+      ],
+      "preserved_r01_docx_sha256": "30b9e28fe33dcacac2cf8a34f6586168df0e7a41eea8b71f8587e8737e58c362",
+      "preserved_r02_docx_sha256": "599b28655c491947dfe026d74a7b671faf84d62a37e2252ae25a4ecdc56ad58c",
+      "r03_run_usage": {
+        "input": 268139,
+        "output": 13939,
+        "reasoning": 41686,
+        "cache_read": 4469888,
+        "cache_write": 0,
+        "provider_reported_cost": 0
+      },
+      "entire_reused_session_usage_R01_to_R03": {
+        "input": 546699,
+        "output": 52580,
+        "reasoning": 102340,
+        "cache_read": 9762176,
+        "cache_write": 0,
+        "provider_reported_cost": 0
+      },
+      "notes": "One build self-check initially failed its T5 keep-together assertion; the verifier was corrected to test paragraph keep_with_next. Final build self-check passed and consecutive final builds produced the same SHA."
+    },
+    "reviewer": {
+      "session_id": "ses_eb5dd6754fferpBgRphDf29Bdw",
+      "model": "opencode/mimo-v2.6-flash-free",
+      "exit_code": 0,
+      "outcome": "succeeded",
+      "candidate_sha256": "1960c37ee335d0af4872d2c41100a26c3f0c38a4475ec2e185993708c3028f3d",
+      "prompt_path": "review/opencode_v2_semantic_R03/REVIEW_PACKET_R03.md",
+      "prompt_sha256": "b7e68b011e9ac959af1b824bd6df85301fe79a8aeafc370855ca0a0300487b6a",
+      "original_response_path": "review/opencode_v2_semantic_R03/INDEPENDENT_REVIEW_R03.md",
+      "original_response_sha256": "c45214a70270c7a43e146fe1fb7159ab685c3f17f6c3045df60f07a63e904fa0",
+      "stdout_jsonl_sha256": "d6c3f0d0d4c8ef2330bbdfece8c4db3bf080f20fa48eb9e0cf2c96b21e883392",
+      "stderr_bytes": 0,
+      "reported_usage": {
+        "input": 83897,
+        "output": 7792,
+        "reasoning": 9983,
+        "cache_read": 901632,
+        "cache_write": 0,
+        "provider_reported_cost": 0
+      },
+      "verdict": "PASS",
+      "inspected_rendered_pages": 14,
+      "reviewer_modified_files": false
+    }
+  },
+  "antigravity_cli": {
+    "status": "NOT_DISPATCHED_ROUTE_REMAINS_PAUSED",
+    "only_allowed_model_if_resumed": "gemini-3.8-flash-high",
+    "reason": "Current 06 section 5.2 records four permission-denied attempts and three fixes on 0044, and requires native-source proof explaining lawful resumption after later 0054 R14 success. No such restoration proof was read back; no dispatch or permission bypass was attempted."
+  },
+  "next_work": {
+    "active_0056_writer": "none",
+    "active_0056_reviewer": "none",
+    "next_sequence_candidate": "0057 / I13-E01 / checkbox 061",
+    "ready_status": "NOT_VERIFIED",
+    "reason": "No current 0057_R01 scoped packet or Unique Blueprint exists in the active quality-review workspace. Only historical 0057 DOCX versions were found; they are not templates.",
+    "next_legal_action": "Prepare and hash the 0057 official-source packet and document-specific Unique Blueprint before dispatching its Writer."
+  },
+  "final_status": {
+    "candidate_formal_acceptance": "NOT_GRANTED",
+    "candidate_sha256": "1960c37ee335d0af4872d2c41100a26c3f0c38a4475ec2e185993708c3028f3d",
+    "formal_submission_or_production": "NOT_PERFORMED",
+    "record_at_local_time": "2026-10-17T22:00:00+08:00"
+  }
+}

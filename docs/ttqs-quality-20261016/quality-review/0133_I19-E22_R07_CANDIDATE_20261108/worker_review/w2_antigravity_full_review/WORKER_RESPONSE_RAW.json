@@ -1,0 +1,68 @@
+{
+  "schema": "ttqs_one_full_semantic_review_v1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS_ONE_0133_R07_FULL_SEMANTIC_REVIEW_W2_GEMINI_20261109",
+  "doc_id": "0133",
+  "requirement_id": "I19-E22",
+  "requested_model": "gemini-3.8-flash-high",
+  "actual_serving_model": "UNKNOWN",
+  "candidate_sha256": "a8cc1a7740c854fc3cad1dfa229bc829d54d12153b477c7049aafc5e62e0bfb2",
+  "body_extract_sha256": "4e284a0db339a8e7ca1202fd798207c982d5da21dfec663a1fe7fcf3c647689e",
+  "source_packet_sha256": "9aae753623921d3d582e7cadb1a64363063eabc54e697e53361b26e84f7d0b50",
+  "blueprint_sha256": "edb8d241b1604790b36daf1622b907a9985ec7901c6d1e0a79f440be5fcb42fd",
+  "review_scope": "FULL_DOCUMENT_TEXT_ONLY",
+  "verdict": "PASS",
+  "checks": [
+    {
+      "id": "1",
+      "status": "PASS",
+      "evidence": "Verified exact requirement identity (doc_id 0133, crosswalk I19-E22, 157 blueprint index 146 / I19-L3, official quote '每年訓練班次、人次均持續成長。' from PDF p.8) with official checkbox sequence preserved as UNKNOWN. Document genre is correctly structured as an annual log and multi-year trend analysis. Title-blind identification passes through distinct run IDs (SYN-23-*, SYN-24-*, SYN-25-*), class status tracking, and adjacent-year growth formulas. Negative neighbors 0132 (product defect counts) and 0134 (membership and dues) are explicitly excluded in Section 1 and Section 12."
+    },
+    {
+      "id": "2",
+      "status": "PASS",
+      "evidence": "Operational completeness is fully achieved: distinct roles for entry (SYN-ROLE-REG) and verification (SYN-ROLE-REV) are defined in Section 3; annual calendar cadence and timing are specified in Section 2.1; input sources (curriculum plans, completion rosters, de-identified attendance) and outputs are detailed in Section 3; an 8-step execution SOP with decision control points is detailed in Section 4; and clear HOLD/REJECT/READY audit criteria are established in Section 8 and Section 11."
+    },
+    {
+      "id": "3",
+      "status": "PASS",
+      "evidence": "Requirement-specific table mechanics are substantive and complete: Section 5 provides 24 fully detailed synthetic completed classes across 2023 (6 classes), 2024 (8 classes), and 2025 (10 classes), plus 1 explicit cancelled class (SYN-25-X01). Section 8 provides 5 concrete exception scenarios (SYN-EX-01 to SYN-EX-05) and 4 formal handling rules. Section 9 provides fully structured, usable operational blank templates. None of the evidence consists of generic or unpopulated placeholder headers."
+    },
+    {
+      "id": "4",
+      "status": "PASS",
+      "evidence": "All mathematical counts, sums, net additions, percentages, and date spans were independently recomputed and verified. 2023: 6 classes, 72 attendances (12*6). 2024: 8 classes, 104 attendances (13*8). 2025: 10 completed classes, 141 attendances (12+13+14*4+15*4=141), with 1 cancelled class properly excluded (0 attendances). Three-year totals: 24 classes, 317 attendances. 2024 vs 2023: classes +2 (+33.3%), attendances +32 (+44.4%). 2025 vs 2024: classes +2 (+25.0%), attendances +37 (+35.6%). Supplemental 2025 vs 2023: classes +4 (+66.7%), attendances +69 (+95.8%). Deduplication test (SYN-EX-01): 10 + 10 - 9 = 11. All roundings to one decimal place are mathematically accurate."
+    },
+    {
+      "id": "5",
+      "status": "PASS",
+      "evidence": "SAMPLE/SYNTHETIC boundaries are strictly maintained throughout the document. Every mock datum, course title, role, date, and key carries the SYN-/SAMPLE prefix. Disclaimers in the header, 30-second summary, and Sections 1, 5, 6, 7, 8, 9, 10, and 11 explicitly state that real organizational evidence, policies, and formal approvals remain UNKNOWN. Section 10 replacement register exhaustively maps every synthetic element (SYN-23-01..06, SYN-24-01..08, SYN-25-01..10, SYN-25-X01, derived metrics, roles, and exception cases) to required real-world authorized sources."
+    },
+    {
+      "id": "6",
+      "status": "PASS",
+      "evidence": "Document claims strictly adhere to authoritative source constraints. The official checklist phrase from PDF p.8 is quoted verbatim and framed as common reference evidence rather than verified organizational performance. The text contains zero unsupported claims of accreditation, official scores, formal approval, third-party certification, or physical signatures. It explicitly notes that official TTQS rules mandate no minimum threshold percentage or statistical significance test."
+    },
+    {
+      "id": "7",
+      "status": "PASS",
+      "evidence": "Cross-section consistency is confirmed across all 12 sections. The four Table 10 replacement register locator cells repaired in R06/R07 were specifically verified against actual target sections: SYN-LEARNER-014, SYN-CLASS-A, and SYN-CLASS-B accurately point to '§7 全合成去重示例' where their narratives reside; SYN-0133-CORR-01 accurately points to '§8 更正示例'. Counts, annual totals, and rates in the 30-second summary, Section 5, Section 6, Section 8, and Section 10 are completely congruent without internal contradiction."
+    },
+    {
+      "id": "8",
+      "status": "PASS",
+      "evidence": "Evaluator-facing clarity and auditability are exemplary. The candidate provides unambiguous operational definitions separating class counts from participant attendances (class ID × de-identified learner ID), defines rules for multi-day cohort deduplication and cancelled/cross-year classes, and mandates side-by-side reporting of year-by-year adjacent metrics to prevent hiding intermediate drops behind multi-year cumulative totals. Clear pointers designate where real evidence must be verified prior to removing HOLD status."
+    },
+    {
+      "id": "9",
+      "status": "PASS",
+      "evidence": "Exact-SHA scope integrity is maintained: this full-document review is independently executed against candidate SHA a8cc1a7740c854fc3cad1dfa229bc829d54d12153b477c7049aafc5e62e0bfb2, body extract SHA 4e284a0db339a8e7ca1202fd798207c982d5da21dfec663a1fe7fcf3c647689e, source packet SHA 9aae753623921d3d582e7cadb1a64363063eabc54e697e53361b26e84f7d0b50, and unique blueprint SHA edb8d241b1604790b36daf1622b907a9985ec7901c6d1e0a79f440be5fcb42fd. Prior R06 review outcomes are not borrowed or substituted; formal acceptance remains false and promotion remains NONE."
+    }
+  ],
+  "findings": [],
+  "visual_review": "NOT_PERFORMED_EXISTING_EXACT_SHA_RECEIPT_ONLY",
+  "real_world_verification": "NOT_PERFORMED",
+  "formal_acceptance": false,
+  "promotion": "NONE",
+  "summary": "Independent text-only full semantic review of candidate document 0133 (R07, candidate SHA a8cc1a7740c854fc3cad1dfa229bc829d54d12153b477c7049aafc5e62e0bfb2) confirms complete compliance across all nine review criteria. All requirement identifiers, official citations from PDF p.8 ('每年訓練班次、人次均持續成長。'), and negative-neighbor exclusions (0132, 0134) are correctly established. Operational workflows, SOPs, two-role separation (SYN-ROLE-REG and SYN-ROLE-REV), and audit control gates (HOLD/REJECT/READY) are fully functional. The synthetic dataset comprises 24 completed classes across 2023-2025 (6, 8, 10 classes; 72, 104, 141 attendances) and 1 cancelled class (SYN-25-X01), all of which were recalculated and confirmed along with adjacent-year growth rates (+33.3%, +44.4%, +25.0%, +35.6%) and cumulative end-to-end gains (+66.7%, +95.8%). The four repaired Table 10 locator cells (SYN-LEARNER-014, SYN-CLASS-A, SYN-CLASS-B pointing to §7, and SYN-0133-CORR-01 pointing to §8) are fully aligned with target narrative sections. All synthetic boundaries are strictly preserved, no claims of official accreditation or real organizational performance are made, and real-world evidence remains unverified (formal_acceptance=false, promotion=NONE)."
+}

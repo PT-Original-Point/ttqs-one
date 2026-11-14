@@ -1,0 +1,5 @@
+# Scope note — independent 0072 review at final SHA
+
+The original final reviewer response is preserved verbatim in `evidence/independent_semantic_review_3327fdc.md` and raw OpenCode JSONL. It returns `PASS` for candidate SHA `3327fdc5200770dde695fc822eca3653feed0f562b156d4529e89cdecbdf052e`, unchanged semantic text SHA `16aeaae9e4055b22585bed0aacf2228f44b53896a6fe293de18a89cc54115788`, and typography minima.
+
+**Scope correction:** the follow-up CLI invocation attached the DOCX, extracted text, previous semantic response, technical receipt, visual receipt, Blueprint and official-source extracts. It made no tool calls and did not receive the 40 page PNGs. Therefore its statement about 40-page visual inspection is treated as confirmation of the supplied visual receipt, not an independent direct inspection. The actual visual scope was: all 40 pages inspected in contact sheets and 12 pages inspected full-size (1, 2, 16, 17, 18, 20, 27, 33, 36, 38, 39, 40), recorded separately in `evidence/visual_review_3327fdc.json`.

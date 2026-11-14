@@ -1,0 +1,48 @@
+{
+  "receipt_id": "0013_I02-E04_R05_INDEPENDENT_SEMANTIC_REVIEW",
+  "project_id": "TTQS_ONE",
+  "document_id": "0013",
+  "requirement_id": "I02-E04",
+  "candidate_state": "CANDIDATE_SAMPLE_SYNTHETIC_NOT_ACCEPTED",
+  "candidate_sha256": "2bf0407de7f24ad580cbb39df8365cbf2bc69feef97d069575daa3012a1b16d6",
+  "candidate_bytes": 65885,
+  "reviewer_context": "Independent Codex sub-agent; read-only",
+  "reviewer_agent_id": "01a188ea-c2ed-78a2-82f5-9ccdaac3cc04",
+  "reviewer_model": "UNKNOWN_NOT_EXPOSED_BY_NATIVE_TOOL",
+  "review_response_path": "semantic_review_R05_original_response.md",
+  "review_response_sha256": "9a4b882898ef2c3b4ba6bd33316facc1ac272e72088965f832b72cbc28b8ba80",
+  "review_scope": "Exact-SHA semantic review against official source, unique Blueprint and body; no visual inspection",
+  "verdict": "PARTIAL",
+  "formal_acceptance": "UNKNOWN",
+  "source_packet_sha256": "b87440b249ec78c6bbe69ff001fe9d7dbb5060d65f27fe61d21ec48cdb5bfa63",
+  "official_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "blueprint_file_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+  "blueprint_row_sha256": "b529f3c13e964b6edbec124158d3559df988b401ce3b97fd1984e90b0582d35b",
+  "findings": [
+    {
+      "locator": "§7.1; Table 5 row 10; §4.2 Table 4; §9 Table 13 row 2",
+      "status": "PARTIAL",
+      "finding": "35/36 and 36/36 arithmetic is correct as populated-field completeness only. It is not a passed usability-validation rate because all four sample registration URLs use reserved .invalid domains and the document requires usable-link testing. Keep release HOLD."
+    },
+    {
+      "locator": "§13 Table 19; §4 Table 3; §10 Table 15",
+      "status": "PARTIAL",
+      "finding": "67 unique synthetic rows and replacement approach exist, but per-fact accountable role codes are not linked and some locations identify only a section rather than a specific paragraph/table/field."
+    },
+    {
+      "locator": "BUILD_RECEIPT_R05.json",
+      "status": "RECEIPT_INCONSISTENCY",
+      "finding": "visual_review is PASS_LAYOUT_ONLY while visual_status is PENDING; reconcile sidecar only."
+    }
+  ],
+  "passed_scopes": [
+    "Official requirement and unique Blueprint identities match",
+    "Title-blind purpose and negative-neighbor distinctions",
+    "Four complete sample courses and nine fields",
+    "Hours total 30 and planned seats total 74",
+    "SAMPLE/REAL, authorization and publication boundary",
+    "R04 semantic findings repaired: source packet, version/deliverable identity, and section locator"
+  ],
+  "visual_inspection": "NOT_PERFORMED",
+  "next_action": "Targeted R06 repair: separate populated-field rate from link usability/release readiness; add per-fact owner code and precise locator to Table 19 and replacement register; reconcile R05 build QA metadata. Do not alter R05."
+}

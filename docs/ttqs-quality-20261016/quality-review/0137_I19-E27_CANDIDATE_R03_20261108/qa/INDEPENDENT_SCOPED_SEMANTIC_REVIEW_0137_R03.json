@@ -1,0 +1,43 @@
+{
+  "schema": "ttqs-one-independent-scoped-semantic-review-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0137",
+  "requirement_id": "I19-E27",
+  "candidate_state": "CANDIDATE",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0137_I19-E27_CANDIDATE_R03_20261108\\candidate\\0137_I19-E27_媒體採訪與正面報導原件查驗表_R03.docx",
+  "candidate_sha256": "fa7240da13f5140d0896d1c2e3c7a74dce7f57d861d1100c0315628708c477db",
+  "result": "PASS",
+  "reviewed_by": {
+    "route": "OpenCode v2.2.5 CLI",
+    "role": "independent fresh plan reviewer",
+    "requested_model": "opencode/beam-free",
+    "actual_serving_model": "UNKNOWN",
+    "session_id": "ses_e475f4fb1ffeJ7OvxsrB4yAkRN",
+    "pid": 18344,
+    "exit_code": 0,
+    "timed_out": false
+  },
+  "input_packet": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\OPEN_CODE_REVIEW_0137_R03_20261108\\review_packet_0137_R03_scoped.md",
+    "sha256": "5aab89c643285796338dfdf912596b0f8b121d933690cc503b1c7e24a0352b80"
+  },
+  "raw_output": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\OPEN_CODE_REVIEW_0137_R03_20261108\\opencode_review.stdout.jsonl",
+    "sha256": "9125d5c1d4e4c3b1f793e7d99f870c02444d247602a02f879652a6e5a7c25b19",
+    "bytes": 156471,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_bytes": 0
+  },
+  "prior_findings_resolved": [
+    "Table 4 all 13 real-source fields explicitly UNKNOWN/HOLD or HOLD",
+    "Two inconsistent association name occurrences normalized to 本會"
+  ],
+  "new_material_semantic_defects": "NONE_IDENTIFIED",
+  "scope_limits": [
+    "Text-only review of the exact-SHA candidate extraction and supplied packet",
+    "Official source PDF not directly re-inspected by reviewer; source binding came from packet",
+    "No visual re-inspection by reviewer",
+    "No formal TTQS acceptance or promotion"
+  ],
+  "full_review_text": "# Independent Exact-SHA Semantic Review — TTQS ONE 0137 R03\n\n## Candidate binding\n- Candidate SHA-256: `fa7240da13f5140d0896d1c2e3c7a74dce7f57d861d1100c0315628708c477db`\n- Requirement: I19-E27; official checkbox index 151/157; official source p.9 text present in candidate.\n- Candidate state remains CANDIDATE; formal acceptance NOT_GRANTED.\n\n## Result\n**PASS**\n\n## Prior findings (R02) — resolution\n1. **R02 finding 1 (medium) — Table 4, rows R2–R14 blank “實際登錄內容” cells: RESOLVED.**  \n   In exact R03, the real-source registration table (document Table 3 / packet “Table 4”) now has all 13 field rows populated:\n   - Rows 1–11 and 13: `UNKNOWN/HOLD：尚無可回查真實媒體原件`\n   - Row 12 (decision field): `HOLD：尚無可回查真實媒體原件`\n   - Exact evidence, e.g. row 1: `case_id / media_id / claim_id | UNKNOWN/HOLD：尚無可回查真實媒體原件`\n\n2. **R02 finding 2 (low) — “原始點協會” inconsistency: RESOLVED.**  \n   No occurrence of “原始點協會” remains. Both sentences now use “本會”:\n   - P004: `目前沒有可回查的本會媒體報導原件。本候選只建立可操作工具並示範核驗方式；REAL_MEDIA_SOURCE=UNKNOWN/HOLD，正式接受=NOT_GRANTED。`\n   - P015: `官方查核資料表第 9 頁列出「提出報章雜誌採訪或電子媒體訪問之正面消息（其他）」。這是可供查核的佐證類型，不表示本會已受訪、已被報導、已獲正面評價或已達成任何分數。`\n\n## Front-matter / version check\n- T0 R02: `候選版本 | R03；候選文件，不是協會正式核定或 TTQS 評分` — correct R03 label present.\n\n## UNKNOWN/HOLD vs HOLD distinction\n- Clear and consistent: 12 non-decision fields are `UNKNOWN/HOLD` (no real source yet); the decision field is `HOLD` (explicit decision state). This matches the document’s own rule that HOLD is the decision state for missing source/context/fact checks.\n\n## SAMPLE register coherence with real-source HOLD fields\n- Retained SAMPLE/SYNTHETIC register (T10) remains coherent: all facts are tied to `SYN-0137-CASE-01`, statuses remain `HOLD`/unknown until real sources exist, and no fabricated real-media data, fake hash, or real association acceptance is introduced.\n- Arithmetic remains internally consistent: `22/24=91.7%`, `20/22=90.9%`, with `SYN-C04` retained as HOLD.\n\n## New material semantic defects\n- None identified. The exact delta is limited to the 13 status cells, the two association-name normalizations, and the R03 version label; no change alters the official requirement meaning or implies real media evidence.\n\n## Scope limits\n- Text-only semantic review of the exact-SHA DOCX extraction and supplied packet; no files written or modified.\n- Official source PDF not directly re-inspected by this reviewer; binding taken from packet (official p.9 text present verbatim in P015).\n- No visual re-inspection performed here; visual/render checks are recorded in the reconciliation receipt, not re-verified by this review.\n- Official printed serial remains UNKNOWN; real media originals remain UNKNOWN/HOLD; no formal TTQS acceptance or promotion is granted."
+}

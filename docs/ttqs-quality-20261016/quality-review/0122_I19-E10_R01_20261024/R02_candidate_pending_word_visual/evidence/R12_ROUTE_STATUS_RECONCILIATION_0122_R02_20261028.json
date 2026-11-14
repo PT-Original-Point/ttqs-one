@@ -1,0 +1,116 @@
+{
+  "schema": "TTQS_ONE_R12_ROUTE_STATUS_RECONCILIATION_0122_R02_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0122",
+  "requirement_id": "I19-E10",
+  "unique_blueprint_index": 155,
+  "printed_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+  "observed_at_local": "2026-10-28T08:56:37+08:00",
+  "github_prechange_commit": "1f3a49448d65fa48aa899fdf7d4288fe304ff04d",
+  "prior_status_sha256": "35abb4d21aecf5b1bfe56bd3f202f15f93e3761e45342dd17d8ad71657503cc8",
+  "updated_status_sha256": "faf295107ebae9966121b099a10d094a7eec312d54f38d6df7f0fbf0d540a1b0",
+  "candidate_docx_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+  "body_extract_sha256": "61a732058927a033f268171084db05f3a86cac44fe9e92dd21a7a6f77fcb47ea",
+  "review_request_sha256": "501f07bfe715b90e3d8640e17feefc05488d9cce24c5ca0db26a953cc9c06c6a",
+  "reviewer_response_sha256": "0bfa5a69fb327fed4d28a57fadebe73c499b53a37fd177d145da8a2cb214ea92",
+  "request_contains_exact_extracted_body": true,
+  "response_quotes_candidate_and_body_sha": true,
+  "prior_reviewer_attempt03_reported_verdict": "PASS_TEXT_ONLY",
+  "prior_actual_model_identity": "UNKNOWN",
+  "semantic_pass_granted": false,
+  "latest_0122_opencode_attempt": {
+    "requested_model": "opencode/deepseek-v4.1-flash-free",
+    "actual_model": "NOT_REACHED",
+    "provider_status": 429,
+    "error_type": "provider.free-limit",
+    "retry_after_ms": 19234000,
+    "retry_eligible_at_local": "2026-10-28T07:59:59.968+08:00",
+    "no_response": true,
+    "token_usage": "UNKNOWN_NOT_RETURNED",
+    "candidate_sha256_unchanged": true
+  },
+  "latest_same_route_observation": {
+    "scope": "OpenCode free inference route availability only; distinct document work, not a review of 0122",
+    "work_id": "TTQS_ONE_0141_I19-E31_R04_SEMANTIC_REVIEW",
+    "doc_id": "0141",
+    "candidate_sha256": "de111911a549a0be0bd6381a6b22ed694881ba6b3f83528d2b4a4e153002142b",
+    "requested_model": "opencode/deepseek-v4.1-flash-free",
+    "actual_model": "NOT_REACHED_PROVIDER_REJECTED_BEFORE_INFERENCE",
+    "observed_at_local": "2026-10-28T08:44:27.706033+08:00",
+    "provider_error_type": "provider.free-limit",
+    "provider_status": 429,
+    "retry_after_ms": 83732000,
+    "retry_eligible_at_local": "2026-10-29T07:59:59.706+08:00",
+    "public_receipt_path": "docs/ttqs-quality-20261016/0141_I19-E31_R07_20261027/OPENCODE_R04_DEEPSEEK_ATTEMPT_R01_PUBLIC.json"
+  },
+  "prechange_github_readback": [
+    {
+      "key": "candidate",
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R02_candidate_pending_word_visual/0122_I19-E10_R02.docx",
+      "bytes": 74242,
+      "local_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+      "github_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+      "git_blob_sha1": "4ff7c0c43593d6a2f732c2db605d4e7021e38cc3",
+      "byte_equal": true
+    },
+    {
+      "key": "body",
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R02_candidate_pending_word_visual/evidence/DOCX_BODY_EXTRACT_R12.txt",
+      "bytes": 44536,
+      "local_sha256": "61a732058927a033f268171084db05f3a86cac44fe9e92dd21a7a6f77fcb47ea",
+      "github_sha256": "61a732058927a033f268171084db05f3a86cac44fe9e92dd21a7a6f77fcb47ea",
+      "git_blob_sha1": "5fe3f92681d08e111b623e333f2a401fd9e75c96",
+      "byte_equal": true
+    },
+    {
+      "key": "request",
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R02_candidate_pending_word_visual/review/R12_EXACT_SHA_SEMANTIC_REVIEW_REQUEST.md",
+      "bytes": 48031,
+      "local_sha256": "501f07bfe715b90e3d8640e17feefc05488d9cce24c5ca0db26a953cc9c06c6a",
+      "github_sha256": "501f07bfe715b90e3d8640e17feefc05488d9cce24c5ca0db26a953cc9c06c6a",
+      "git_blob_sha1": "ba55a0ba207d93717fa51e37b60392108e0eec8e",
+      "byte_equal": true
+    },
+    {
+      "key": "response",
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R02_candidate_pending_word_visual/review/R12_ANTIGRAVITY_EXACT_SHA_ATTEMPT03/REVIEW_RESPONSE_R12.md",
+      "bytes": 12898,
+      "local_sha256": "0bfa5a69fb327fed4d28a57fadebe73c499b53a37fd177d145da8a2cb214ea92",
+      "github_sha256": "0bfa5a69fb327fed4d28a57fadebe73c499b53a37fd177d145da8a2cb214ea92",
+      "git_blob_sha1": "c7002b2bd23b0b8a8befbfd3de1f1b8d74614bb7",
+      "byte_equal": true
+    },
+    {
+      "key": "dispatch",
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R02_candidate_pending_word_visual/evidence/OPENCODE_DEEPSEEK_SEMANTIC_R12_20261028T0236_R01/DISPATCH_TERMINAL.json",
+      "bytes": 1226,
+      "local_sha256": "d1c3d18407541b082aa91cc39f2656ce70578a06ab6afa9378cbbcb78f6c78bb",
+      "github_sha256": "d1c3d18407541b082aa91cc39f2656ce70578a06ab6afa9378cbbcb78f6c78bb",
+      "git_blob_sha1": "6028f9bc80bac7de0949fcd49f27bea31240217e",
+      "byte_equal": true
+    },
+    {
+      "key": "raw",
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R02_candidate_pending_word_visual/evidence/OPENCODE_DEEPSEEK_SEMANTIC_R12_20261028T0236_R01/RAW_STDOUT.jsonl",
+      "bytes": 528,
+      "local_sha256": "ad775e14fa2be3d92ada4e2a59d7207347090b9cdd8c347af12dcea89a823c88",
+      "github_sha256": "ad775e14fa2be3d92ada4e2a59d7207347090b9cdd8c347af12dcea89a823c88",
+      "git_blob_sha1": "e756127f2e4865cc324e17af49eda69d9ede4e4a",
+      "byte_equal": true
+    },
+    {
+      "key": "terminal",
+      "path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R02_candidate_pending_word_visual/evidence/OPENCODE_DEEPSEEK_SEMANTIC_R12_20261028T0236_R01/R12_OPENCODE_DEEPSEEK_TERMINAL_RECEIPT_R01.json",
+      "bytes": 9025,
+      "local_sha256": "fc422288c6f8c064acc44f80a7e1cdb5f1b80cb8eaac6782271635fea7dcba9f",
+      "github_sha256": "fc422288c6f8c064acc44f80a7e1cdb5f1b80cb8eaac6782271635fea7dcba9f",
+      "git_blob_sha1": "e86d8baf3b0a6674c3547dfddf101ab5b55e81e1",
+      "byte_equal": true
+    }
+  ],
+  "docx_rebuilt": false,
+  "docx_bytes_changed": false,
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "next_action": "Do not retry this OpenCode free route before the latest same-model provider retry estimate; continue only other genuinely READY and permitted lanes."
+}

@@ -1,0 +1,38 @@
+{
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0122-I19-E10-R11-TARGETED-REPAIR-R02",
+  "doc_id": "0122",
+  "requirement_id": "I19-E10",
+  "official_checkbox_serial": "UNKNOWN",
+  "candidate_state": "CANDIDATE_PENDING_WORD_RENDER",
+  "source_candidate_sha256": "7f154df3ae9e9b5a9b91195fdd8c3abc8c1a88e7b2fcd9a87d47faa10fdf137e",
+  "candidate_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+  "source_packet_sha256": "8301b3e12467370086dfccd86c4dbcd50d339f0ed54cda93c2bfcc051b793c3d",
+  "unique_blueprint_sha256": "cbfd0760a03870151d9bc083b8db76655d53107757706f4b1f4449e997553420",
+  "official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "repairs": [
+    {
+      "count": 3,
+      "change": "removed three divider-only paragraphs of 80 equals characters",
+      "location": "render R01 page 7/10"
+    },
+    {
+      "count": 2,
+      "change": "replaced the visible backslash-ge escape sequence in Q03/Q04 with the mathematical symbol ≥",
+      "location": "render R01 page 22"
+    }
+  ],
+  "technical_check": {
+    "visual": "PENDING",
+    "real_evidence": "NO_NEW_REAL_EVIDENCE",
+    "text_delta": "ONLY_THREE_LONG_DIVIDERS_AND_TWO_GE_TOKENS",
+    "python_docx": "1.2.0",
+    "formal_acceptance": "NOT_GRANTED",
+    "rendered": "PENDING",
+    "paragraph_count_preserved": 1249,
+    "package_integrity": "PASS",
+    "semantic": "NOT_RERUN"
+  },
+  "blocker": "52 WINWORD /Automation -Embedding processes; owners unknown; free RAM observed 0.77 GiB; no new Word process launched",
+  "remote_sync": "PENDING_UNTIL_WORD_RENDER_AND_VISUAL_QA"
+}

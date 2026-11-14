@@ -1,0 +1,108 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0064",
+  "candidate": "R02",
+  "repair_scope": [
+    "remove exact-SHA jargon from human-facing status sentence",
+    "correct 不捷造 to 不臆造",
+    "replace 側車 with 另附電子檔 in appendix index"
+  ],
+  "benchmark_rerun": false,
+  "benchmark_inputs": {
+    "evidence/fixture/synthetic_index_0064_R01.json": "4C24FF120863B70E877B5925C9496157E7E1E6418BFFEE4DA6DC34D2940877DF",
+    "evidence/benchmark_runs_0064_R01.csv": "6D5D649285327C1B4C1C564A797E9E4168500B02FC1EC5F3ECFC6020328827BE",
+    "evidence/benchmark_summary_0064_R01.json": "854EE852B68E10698E93F14CE4E275F5A54A207715B589C36756180588FC9AC4",
+    "evidence/0064_R01_SYNTHETIC_REPLACEMENT_REGISTER.csv": "B1D96E5985D676FCBE675F5ADD94EDC2B6FDA2A164BD01E2487BCB6BCEB4698F",
+    "inputs/0060_R08_SYNTHETIC_REPLACEMENT_REGISTER.csv": "ADD1F2BCF77C77DF6BA921E1DFA68494AC867A3E3368B795AA56C439AA824C4B"
+  },
+  "generated_utc": "2026-10-18T11:24:42Z",
+  "host_os": "Windows-10-10.0.19045-SP0",
+  "python": "3.12.14",
+  "steps": [
+    {
+      "step": "docx",
+      "script": "build/build_docx_0064.py",
+      "exit_code": 0,
+      "stdout_tail": [
+        "OK docx=E:\\TTQS\\docs\\ttqs-quality-20261016\\quality-review\\0064_R02\\candidate\\0064_R02.docx"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "step": "technical_qa",
+      "script": "build/qa_docx_0064.py",
+      "exit_code": 0,
+      "stdout_tail": [
+        "  \"num_numbered_headings\": 13,",
+        "  \"page_count_probe\": \"word-com-unavailable\",",
+        "  \"checks_passed\": true",
+        "}"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "step": "word_render",
+      "script": "build/render_docx_0064.py",
+      "exit_code": 0,
+      "stdout_tail": [
+        "OK docx_sha256=32361FE578CD1A493DF17D37CD3BA0C25AD38AA54B829EDDBC6EFA20E5B1A113 pages=11 pdf_sha256=23F2AA5F2D70D8DA1B580453B0C7F39938EF236AC2B7B3FB7A70A4FE5DE4C6E7"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "step": "text_and_crosscheck",
+      "script": "review/independent_qa_0064_R02.py",
+      "exit_code": 0,
+      "stdout_tail": [
+        "  ],",
+        "  \"text_extraction_path\": \"review\\\\docx_text_0064_R02.txt\",",
+        "  \"text_extraction_sha256\": \"871609F9D451EF29A359800E1469CE59F01B5BBF8CEE4E0F2F33216DEA0C1660\"",
+        "}"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "step": "final_integrity",
+      "script": "review/final_integrity_check_0064_R02.py",
+      "exit_code": 0,
+      "stdout_tail": [
+        "  \"semantic_reviewer\": \"PENDING\",",
+        "  \"candidate_status\": \"CANDIDATE_ONLY\",",
+        "  \"human_formal_acceptance\": \"NOT_GRANTED\"",
+        "}"
+      ],
+      "stderr_tail": []
+    }
+  ],
+  "all_exit_zero": true,
+  "outputs": {
+    "candidate/0064_R02.docx": {
+      "sha256": "32361FE578CD1A493DF17D37CD3BA0C25AD38AA54B829EDDBC6EFA20E5B1A113",
+      "bytes": 53599
+    },
+    "evidence/0064_R02.pdf": {
+      "sha256": "23F2AA5F2D70D8DA1B580453B0C7F39938EF236AC2B7B3FB7A70A4FE5DE4C6E7",
+      "bytes": 624369
+    },
+    "evidence/technical_qa_0064_R02.json": {
+      "sha256": "0865C7D1F08788BCBAD57971C2EF0B190A420934E08B76C667A6F8E4646A3009",
+      "bytes": 378
+    },
+    "evidence/visual_review_0064_R02.json": {
+      "sha256": "2E27B8C90AB7A4CE70B735FFB7122C9687D9FD8BF6E04AA3EDE68D825A12A56A",
+      "bytes": 577
+    },
+    "review/docx_text_0064_R02.txt": {
+      "sha256": "871609F9D451EF29A359800E1469CE59F01B5BBF8CEE4E0F2F33216DEA0C1660",
+      "bytes": 21167
+    },
+    "review/independent_qa_0064_R02.json": {
+      "sha256": "4E1922D514052249447CB3F88CBDD08549CEAFA28F809F79B0F4DA53F09CEF49",
+      "bytes": 3926
+    },
+    "review/final_integrity_check_0064_R02.json": {
+      "sha256": "191A033A131D7E73BDC0074EED4360E858A917018A2A66A160D799450F86579C",
+      "bytes": 7141
+    }
+  }
+}

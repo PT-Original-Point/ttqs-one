@@ -1,0 +1,142 @@
+{
+  "receipt_type": "targeted_revision_source_and_output_binding",
+  "receipt_version": "R02",
+  "status": "TEXT_DRAFT_ONLY_NOT_QA",
+  "semantic_verdict": "NOT_CLAIMED",
+  "document": {
+    "deliverable_id": "0008",
+    "requirement_id": "I01-E05",
+    "genre": "各類別訓練課程年度成長計畫",
+    "output_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0008_I01-E05_LUNA_TEXT_DRAFT_R02_20261029\\worker\\luna_subagent_draft_R02.md",
+    "output_sha256": "e925452120978d1c688c940fdb1ab1e48c80047b15ef74693ffadcce98bccd9e",
+    "bytes": 223281,
+    "word_count_method": "每個中文字元及每個拉丁字母／數字連續詞元各計一詞，含逐原子替換清冊",
+    "word_count": 58358,
+    "section_heading_count": 28,
+    "markdown_table_count": 20,
+    "atomic_fact_register_rows": 594,
+    "limitations": [
+      "全部資料均為SAMPLE／SYNTHETIC；沒有協會核准、實施、真人學員、真實支出或第三方證據主張。",
+      "未製作DOCX；未進行R02獨立語意審查、版面QA或正式驗收。",
+      "Q3缺項檢索與覆核為合成狀態鏈；REAL使用須有既存原件及未涉入來源的獨立覆核者。"
+    ],
+    "register_extraction_note": "每個數值／日期 token 各列唯一 fact_id；四位數年度、千分位金額及完整日期均納入；版本日期、官方章節導覽及固定欄位標籤排除；文字類別、角色、來源與狀態另列。",
+    "source_key_corrections": {
+      "baseline": 17,
+      "target": 17,
+      "growth": 62,
+      "evidence": 20,
+      "recovery": 48
+    }
+  },
+  "bound_inputs": {
+    "r01_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0008_I01-E05_LUNA_TEXT_DRAFT_R01_20261029\\worker\\luna_subagent_draft_R01.md",
+    "r01_sha256": "053d5935e639bfc447274c6966f8a1dbfe13d2bcf99ae6ab5e19d56cf3ee5a33",
+    "review_receipt_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0008_I01-E05_LUNA_TEXT_DRAFT_R01_20261029\\reviewer\\SEMANTIC_REVIEW_R01.json",
+    "review_receipt_sha256": "215fbc4d0722f0d502a837d83584af3320b5244017f5d71949a6f2d3bf9cafe9",
+    "official_pdf_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\SOURCES\\TTQS查核佐證文件資料表-訓練機構版 (2).pdf",
+    "official_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "official_requirement_locator": "PDF第1頁，抽文確認官方原句",
+    "blueprint_file_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\BLUEPRINT_CURRENT.jsonl",
+    "blueprint_file_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+    "blueprint_row_locator": "JSONL第8行；deliverable_id=0008；requirement_id=I01-E05",
+    "blueprint_row_sha256": "0f63ae5f5fc03577fec9a93c6842b85ccb3bd75d5c0f4d28629f65790eeae2b4",
+    "blueprint_row_hash_method": "精確UTF-8 JSONL row bytes，不含行尾",
+    "blueprint_source_commit": "a4edc36fb7275930ebe580f0969c0cc17cdcc71d",
+    "blueprint_source_git_path": "docs/ttqs-quality-20261016/quality-review/0040_R04/inputs/BLUEPRINT_CURRENT.jsonl",
+    "blueprint_source_git_blob": "cab446ede479001334289d18062e6b8bb2340dc3",
+    "source_commit_note": "唯讀來源提交中同路徑Blueprint整檔SHA-256與runtime CONTROL檔一致；PDF另以SHA-256綁定。",
+    "control_readback_note": "活動checkout未含任務提供docs路徑；已讀取唯讀R12 readback snapshot之04/05/06最新覆寫。"
+  },
+  "review_findings_addressed": [
+    {
+      "id": "B-01",
+      "change": "SF唯一fact_id與case_id；逐數值定位表號、資料列、欄位或段落錨句；基準、目標、成長率、證據完整與Q3/Q4回收列分別綁定對應REAL原件及查核規則鍵。"
+    },
+    {
+      "id": "B-02",
+      "change": "每班固定四類；Q3 23/24，Q4找回一項後同分母24/24，再新增一班四項成28/28；合成日期、來源類型、ER-1檢索、PC-1獨立覆核與事件列均綁定SRC-RECOVERY。"
+    },
+    {
+      "id": "N-01",
+      "change": "逐槽逐季分配PC-1、IN-A/B/C、ER-1時數和授課／備課拆分；列兼任、備援資格、工時與獨立覆核衝突規則。"
+    },
+    {
+      "id": "N-02",
+      "change": "移除重複標題；新增完整Q1覆核紀錄及限定REAL原件轉錄區的可複製空表。"
+    }
+  ],
+  "arithmetic_checks": {
+    "baseline_totals": {
+      "classes": 4,
+      "capacity": 64,
+      "enrollment": 58,
+      "completions": 50
+    },
+    "target_totals": {
+      "classes": 7,
+      "capacity": 116,
+      "enrollment": 103,
+      "completions": 90
+    },
+    "growth_percent": {
+      "classes": 75.0,
+      "capacity": 81.25,
+      "enrollment": 77.59,
+      "completions": 80.0
+    },
+    "completion_rate_percent": 87.38,
+    "planned_budget_ntd": 56310,
+    "scenario_expense_ntd": 56200,
+    "budget_variance_percent": -0.2,
+    "satisfaction": {
+      "score_sum": 393,
+      "responses": 92,
+      "mean_5pt": 4.27
+    },
+    "response_rate_percent": 89.32,
+    "evidence_transition": {
+      "q3": "23/24",
+      "q4_recovered_same_denominator": "24/24",
+      "q4_add_four_units": "28/28"
+    },
+    "staffing_hours": {
+      "quarter_totals": [
+        40,
+        43,
+        54,
+        35
+      ],
+      "pc_annual": 96,
+      "instructor_delivery": 32,
+      "instructor_preparation": 16,
+      "er_annual": 28,
+      "annual_total": 172
+    }
+  },
+  "change_list": [
+    "保留並重核R01類別基準與目標、成長率、成本、KPI及季度數值。",
+    "僅建立0008 R02指定Markdown及JSON收據；不寫0005或其他文件，不製作DOCX或修改GitHub。"
+  ],
+  "write_scope": [
+    "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0008_I01-E05_LUNA_TEXT_DRAFT_R02_20261029\\worker\\luna_subagent_draft_R02.md",
+    "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0008_I01-E05_LUNA_TEXT_DRAFT_R02_20261029\\worker\\luna_subagent_draft_R02.receipt.json"
+  ],
+  "postwrite_integrity": {
+    "r01_sha256_unchanged": "053d5935e639bfc447274c6966f8a1dbfe13d2bcf99ae6ab5e19d56cf3ee5a33",
+    "review_receipt_sha256_unchanged": "215fbc4d0722f0d502a837d83584af3320b5244017f5d71949a6f2d3bf9cafe9",
+    "output_matches_receipt": true,
+    "unique_fact_ids": 594,
+    "staffing_quarter_totals_checked": [
+      40,
+      43,
+      54,
+      35
+    ],
+    "no_0005_output_path_or_document_scope": true,
+    "r01_numeric_values_preserved": true,
+    "numeric_values_missing_from_R01_body": [],
+    "register_source_keys_valid": true,
+    "q3_q4_recovery_rows_use_SRC_RECOVERY": 33
+  }
+}

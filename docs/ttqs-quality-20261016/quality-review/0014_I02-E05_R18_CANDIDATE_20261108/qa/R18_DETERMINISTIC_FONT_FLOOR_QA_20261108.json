@@ -1,0 +1,69 @@
+{
+  "schema": "ttqs_one_deterministic_readonly_qa_receipt.v1",
+  "receipt_id": "0014-I02-E05-R18-FONT-FLOOR-QA-20261108",
+  "started_at": "2026-11-08T14:20:47.9074595+08:00",
+  "finished_at": "2026-11-08T14:20:48.3857914+08:00",
+  "lane": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R18-SCOPED_REPAIR_20261108",
+  "qa_scope": "DOCX visible main-story body/table font floors only; 10.5 pt body and 9.5 pt table",
+  "stage_status": "PASS_SCOPED_GATE_ONLY",
+  "gate": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\_qa_tools\\verify_docx_font_floor_r12.py",
+    "sha256": "3f9433d242112b9e2139f637a545a4a0c33dfd9c27a0dc3b4562f86a3b38f8b1",
+    "entrypoint": "python <gate.py> <docx>",
+    "executable": "C:\\Users\\J\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+  },
+  "candidate": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R18-SCOPED_REPAIR_20261108\\candidate\\0014_I02-E05_R18.docx",
+    "sha256_before": "f010470828aad653f691d164c50fdc8e2e0359a88b52286c92eb6f6d1b994846",
+    "sha256_after": "f010470828aad653f691d164c50fdc8e2e0359a88b52286c92eb6f6d1b994846"
+  },
+  "paired_register": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R18-SCOPED_REPAIR_20261108\\register\\SYNTHETIC_REGISTER_DRAFT_0014_R18.csv",
+    "sha256_before": "92c35585cfd1a53a88807c89a6a5ba39ebcbe46af876a1530eb9c51c45435860",
+    "sha256_after": "92c35585cfd1a53a88807c89a6a5ba39ebcbe46af876a1530eb9c51c45435860"
+  },
+  "gate_result": "PASS_SCOPED_FONT_FLOOR_ONLY",
+  "exit_code": 0,
+  "stdout": "{\"audit_version\": \"R12_FONT_FLOOR_1\", \"results\": [{\"applied_table_style_ids\": [\"a3\", \"aff2\"], \"artifact_bytes\": 72042, \"artifact_path\": \"E:\\\\TTQS\\\\TTQS_ONE_CODEX_RUNTIME\\\\WORK\\\\QUALITY_REBUILD_20261016\\\\0014-I02-E05-R18-SCOPED_REPAIR_20261108\\\\candidate\\\\0014_I02-E05_R18.docx\", \"artifact_sha256\": \"f010470828aad653f691d164c50fdc8e2e0359a88b52286c92eb6f6d1b994846\", \"body_below_10_5_count\": 0, \"body_max_pt\": 26.0, \"body_min_pt\": 10.5, \"body_resolution_sources\": {\"paragraph-style\": 331, \"run-direct\": 120}, \"body_runs\": 451, \"body_unresolved_count\": 0, \"conditional_table_style_font_size_override_count\": 0, \"conditional_table_style_font_size_overrides\": [], \"python_docx_version\": \"1.2.0\", \"result\": \"PASS_SCOPED_FONT_FLOOR_ONLY\", \"table_below_9_5_count\": 0, \"table_max_pt\": 9.5, \"table_min_pt\": 9.5, \"table_resolution_sources\": {\"run-direct\": 1782}, \"table_runs\": 1782, \"table_unresolved_count\": 0, \"visible_main_story_runs_only\": true}]}\r\n",
+  "stdout_sha256": "1365559d61cf90628b32572f47820704011b6220b93dfdc79a34cbccf51ba526",
+  "stderr": "",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "execution_attempts": [
+    {
+      "attempt": 1,
+      "executable": "C:\\Users\\J\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe",
+      "command": [
+        "C:\\Users\\J\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe",
+        "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\_qa_tools\\verify_docx_font_floor_r12.py",
+        "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R18-SCOPED_REPAIR_20261108\\candidate\\0014_I02-E05_R18.docx"
+      ],
+      "exit_code": 9009,
+      "stdout": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "note": "WindowsApps python alias returned 9009; the gate did not execute"
+    },
+    {
+      "attempt": 2,
+      "executable": "C:\\Users\\J\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "command": [
+        "C:\\Users\\J\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\_qa_tools\\verify_docx_font_floor_r12.py",
+        "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R18-SCOPED_REPAIR_20261108\\candidate\\0014_I02-E05_R18.docx"
+      ],
+      "started_at": "2026-11-08T14:20:47.9074595+08:00",
+      "finished_at": "2026-11-08T14:20:48.3857914+08:00",
+      "exit_code": 0,
+      "stdout": "{\"audit_version\": \"R12_FONT_FLOOR_1\", \"results\": [{\"applied_table_style_ids\": [\"a3\", \"aff2\"], \"artifact_bytes\": 72042, \"artifact_path\": \"E:\\\\TTQS\\\\TTQS_ONE_CODEX_RUNTIME\\\\WORK\\\\QUALITY_REBUILD_20261016\\\\0014-I02-E05-R18-SCOPED_REPAIR_20261108\\\\candidate\\\\0014_I02-E05_R18.docx\", \"artifact_sha256\": \"f010470828aad653f691d164c50fdc8e2e0359a88b52286c92eb6f6d1b994846\", \"body_below_10_5_count\": 0, \"body_max_pt\": 26.0, \"body_min_pt\": 10.5, \"body_resolution_sources\": {\"paragraph-style\": 331, \"run-direct\": 120}, \"body_runs\": 451, \"body_unresolved_count\": 0, \"conditional_table_style_font_size_override_count\": 0, \"conditional_table_style_font_size_overrides\": [], \"python_docx_version\": \"1.2.0\", \"result\": \"PASS_SCOPED_FONT_FLOOR_ONLY\", \"table_below_9_5_count\": 0, \"table_max_pt\": 9.5, \"table_min_pt\": 9.5, \"table_resolution_sources\": {\"run-direct\": 1782}, \"table_runs\": 1782, \"table_unresolved_count\": 0, \"visible_main_story_runs_only\": true}]}\r\n",
+      "stdout_sha256": "1365559d61cf90628b32572f47820704011b6220b93dfdc79a34cbccf51ba526",
+      "stderr": "",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gate_result": "PASS_SCOPED_FONT_FLOOR_ONLY"
+    }
+  ],
+  "exact_sha_equivalent_precheck": "none found before first attempt; this single lane receipt records both attempts",
+  "same_scope_process_precheck": "none observed before gate execution",
+  "no_candidate_or_register_write": true,
+  "semantic_review_status": "PENDING; this scoped font-floor gate does not resolve the R17 Table 16 traceability finding"
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "TTQS_ONE_0077_INDEPENDENT_SEMANTIC_REVIEW_R01.v1",
+  "document_id": "0077",
+  "requirement_id": "I17B-E01",
+  "official_checkbox_serial": "084",
+  "candidate_docx_sha256": "cc545510cf503e9ecb16238c2b8dcdf6b15cbc43a28360b3b76f97513017edf7",
+  "reviewer_route": "OpenCode CLI v2",
+  "cli_version": "2.0.29",
+  "model_requested": "opencode/beam-free",
+  "session_id": "ses_eae49b4e1ffeDCz6ToNFHcOog4",
+  "process_exit_code": 0,
+  "verdict": "PASS",
+  "verdict_scope": "SAMPLE/SYNTHETIC candidate only; no formal acceptance",
+  "review_path": "review/independent_semantic_review_R01.md",
+  "review_sha256": "710ad78c8c297d01c873d3df5a9d51c6f1dc6a7fcdc7fff826e220a8a3cce303",
+  "review_bytes": 3880,
+  "stdout_path": "review/opencode_semantic_R01_stdout.jsonl",
+  "stdout_sha256": "77757945279836ab9b152b1f1361e993bc65834f26dc1b9767ff2e8608af4e85",
+  "stdout_bytes": 70788,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0,
+  "limitations": [
+    "Reviewer relied on the source packet and supplied extraction; the official PDF was not directly readable in its session.",
+    "Reviewer did not independently inspect page images; the separate 23-page visual receipt is relied upon."
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "checkbox_084": "PARTIAL/HOLD",
+  "completed_at_utc": "2026-10-19T01:14:37.854441+00:00",
+  "post_review_normalization": "Removed trailing whitespace only from extracted Markdown and readable review copy; no text, values, candidate DOCX bytes, raw model response, or verdict changed. Review is not rerun because exact candidate SHA is unchanged.",
+  "reviewed_extraction_sha256_at_dispatch": "8979f87a9d61dfd2f585e5052f6255eceaf8db34f3f9ff55e9ef00d5461c2139",
+  "final_extraction_sha256": "b1fac89d20df49a2dba1e9e2913e9a54abcc414336a3244b5cfeca6405fade10"
+}

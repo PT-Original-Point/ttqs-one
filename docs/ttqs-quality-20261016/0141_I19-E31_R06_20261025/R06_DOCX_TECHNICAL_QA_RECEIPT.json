@@ -1,0 +1,211 @@
+{
+  "schema": "ttqs-one-0141-r06-docx-technical-qa-v1",
+  "observed_at_local": "2026-10-25T09:29:34+08:00",
+  "doc_id": "0141",
+  "requirement_id": "I19-E31",
+  "docx_sha256": "e2a5a981fd364b87a9bd3e096dbc97abeb6b58ed7fb27891d575f12e1d75bdc2",
+  "docx_bytes": 163709,
+  "pdf_sha256": "c3a52474035e4c4239a763c565922f071e7c071af817fd1faf89284b1a76367e",
+  "pdf_pages": 25,
+  "text_extraction_path": "DOCX_TEXT_EXTRACTION_0141_R06_CANDIDATE.txt",
+  "text_extraction_sha256": "b9d23ec3a917c13a3824a5f06a41f44a7be5f9d848d1f3537d1c8a22933b9416",
+  "native_tables": 18,
+  "table_dimensions": [
+    [
+      13,
+      2
+    ],
+    [
+      5,
+      2
+    ],
+    [
+      5,
+      3
+    ],
+    [
+      7,
+      4
+    ],
+    [
+      9,
+      3
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      9,
+      7
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      5,
+      3
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      5,
+      2
+    ],
+    [
+      9,
+      3
+    ],
+    [
+      5,
+      2
+    ],
+    [
+      9,
+      3
+    ],
+    [
+      37,
+      8
+    ],
+    [
+      9,
+      4
+    ],
+    [
+      9,
+      2
+    ],
+    [
+      6,
+      5
+    ]
+  ],
+  "sections": 3,
+  "embedded_media_sha256": [
+    "83353077c44d0eb53509a6004767ce9137f67771f283a14b66e9a0031489aa08"
+  ],
+  "checks": [
+    {
+      "check": "zip_crc",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "docx_loads",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "18_native_tables",
+      "pass": true,
+      "detail": 18
+    },
+    {
+      "check": "3_sections",
+      "pass": true,
+      "detail": 3
+    },
+    {
+      "check": "one_chart",
+      "pass": true,
+      "detail": 1
+    },
+    {
+      "check": "36_csv_rows_match_docx_table_exactly",
+      "pass": true,
+      "detail": {
+        "docx_data_table_rows": 36,
+        "csv_rows": 36,
+        "table_shape": [
+          37,
+          8
+        ]
+      }
+    },
+    {
+      "check": "document_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "version_tag",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sample_boundary",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "acceptance_boundary",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "correct_q1_q6_header",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unknown_source_label",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_unrendered_chart_marker",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_warning_marker",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "math_receipt_pass_and_bound",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "build_receipt_binds_exact_docx",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "word_render_same_docx_bytes",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "rasterized_all_pages",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "visual_receipt_exact_sha_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "correct_embedded_chart_bytes",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "replacement_register_44_rows_and_r06_locators",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "all_checks_pass": true,
+  "visual_receipt_sha256": "6a94d19e5534c05a8600c1af7d3acf242c691b858eae5cbcf4a07484b7dc1386",
+  "visual_verdict": "PASS",
+  "independent_semantic_review": "PENDING",
+  "human_formal_acceptance": "NOT_GRANTED",
+  "real_data_status": "UNKNOWN/HOLD"
+}

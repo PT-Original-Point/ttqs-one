@@ -1,0 +1,39 @@
+{
+  "schema": "ttqs-one-worker-loop-diagnostic.v1",
+  "doc_id": "0072",
+  "attempt": "R01",
+  "model_requested": "opencode/deepseek-v4.1-flash-free",
+  "cli_version": "opencode v2.0.29",
+  "session_id_sha256": "2678591096260366c34143d18413ff7c5c7b4c36331ccd28fd1104f26ff8bc7d",
+  "state": "INTERRUPTED_FOR_CONTEXT_CHURN",
+  "reason": "Writer made no body file and repeatedly read neighboring DOCX 0070 evidence/build package despite the source packet being attached; no model/provider error was reported.",
+  "session_counters": {
+    "message_count": 11,
+    "tool_calls": 21,
+    "tool_calls_by_name": {
+      "read": 19,
+      "glob": 2
+    },
+    "input_tokens": 37636,
+    "output_tokens": 1320,
+    "reasoning_tokens": 626,
+    "cache_read_tokens": 117632,
+    "reported_cost": 0
+  },
+  "neighbor_paths_read": [
+    "quality-review/0070_R01/candidate/0070_R01_body.md",
+    "quality-review/0070_R01/README.md",
+    "quality-review/0070_R01/worker/writer_summary_R01.md",
+    "quality-review/0070_R01/build/build_0070_R01.py",
+    "quality-review/R04_P0_P8_20261019/R04_EXECUTION_RECEIPT.json"
+  ],
+  "candidate_body_created": false,
+  "candidate_docx_created": false,
+  "session_export_local": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\R04_P0_P8_20261019\\opencode_0072_writer_R01_preinterrupt.json",
+  "session_export_sha256": "c5cbd57a3676b1c31dca23241f357c2779471c1b9a0260f61a36450cdd170606",
+  "cli_run_stdout_sha256": "e3256eb36f2f301c24f0c3a11e7bfebc0d83c7002e329a081d650100ebc6193b",
+  "cli_run_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "cli_exit_code": null,
+  "interrupt_api_result": "{\"interrupted\":true}",
+  "recovery": "Keep model route active; R02 will run from a sandbox containing one consolidated source packet, with no access to neighboring document packages; one writer only."
+}

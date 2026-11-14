@@ -1,0 +1,202 @@
+TTQS ONE 0098 / I18-E06 bounded R04 patch design. Text-only suggestion task: do not open tools, files or Computer Use; do not edit files, generate DOCX, claim approval, or mark PASS. Return one compact valid JSON object with: verdict; section_replacements (exact heading + complete replacement Markdown for only named subsections or exact insert-after anchors); register_updates (fact_id + changed columns); register_additions (all current 12 columns); retired_id_lineage; role_alias_mapping; R03_to_R04_lineage; unresolved_questions. No Markdown fences.
+
+BINDING R03: DOCX SHA 74bbb3da5e8bdb26f9c0c42f7ae6eb0f8b0582d8c98db8f440fded3037308da6; manuscript SHA fe2e5d504723db74ed8514031b66be3fc3d7a4110150bb36f07df441ea749873; register SHA c191180a07f8f9866dd587715491a406d881900de5a81672bef234dbd9323301. Requirement I18-E06 exact official text: 執行目標客戶及學員滿意度調查及分析（系統及流程面）。Unique Blueprint SHA cba2e2d175907021f237992a346b750d33c41fb8a1810b6040c5f4c603be3d48. Keep doc_id 0098 distinct from checkbox serial (UNKNOWN).
+
+REQUIRED EXACT-SHA REVIEW FINDINGS:
+B01 C04 is paper SYN-PAPER-01 in §3.4 and §3.4.1, but FACT-110 says web. Align register exactly, including paper batch and synthetic consent wording.
+B02 Add a separate replacement-register row for nonresponse share 1/12=8.3333%→8.3% (currently absent).
+B03 Update FACT-061 client group total and mean to 79/20=3.95.
+B04 Register locators: N_resp=11 is body item 3; N_valid=10 plus incomplete=1 and nonresponse=1 are item 4 subfacts. Existing 047-050 are off.
+B05 FACT-116 must describe Q3-only v1/v2 delta; FACT-128 must separately describe overall 50-item total/mean delta.
+B06 Retired IDs 074–085 map in order to 022–033; 089–091 map in order to 051–053. Record only in sidecar lineage, never Word.
+B07 Consent: all affirmative values are fictional test fixtures, NOT actual consent, legal consent, or association approval. REAL sending is HOLD until authorized notice/authority and system fields are verified; do not infer consent from missing response.
+F01 Standardize all register owner_role values to one of four §3.1 SAMPLE functions or N/A source/control; create exact alias mapping in sidecar. All REAL appointees/authority remain UNKNOWN.
+F02 FACT-119 include cohort name verbatim `2026年第三季志願服務與行政技能精進訓練班`, period 2026 Q3, and SAMPLE boundary plus REAL replacement sources.
+F03 FACT-126 withdrawal case and FACT-127 paper receipt currently bundle multiple facts. Split into atomic register facts; keep hold/no deletion and counts unchanged.
+F04 §2.3 define non-adopted SAMPLE-only cleaning rule ID/version `SYN-CLEAN-v1`; REAL use is HOLD unless an authorized rule exists. Define N_sub=12 raw submissions incl duplicate, N_dup=1, N_resp=11 unique responses; incomplete L07 is one unique response, N_valid=10; L08 is one nonresponse.
+F05 §7.1/§7.2 add a complete sample-only review/handoff drill: synthetic reviewer and receiver codes, date/time, item list, status and acknowledgement. Explicitly state this is not an actual independent review, signature, receipt, association acceptance or event. Register every invented ID/date/status as atomic SAMPLE rows.
+F06 Write role-alias crosswalk in sidecar. In Word clarify canonical functions do not assert current association posts.
+F07 Split FACT-126/127 and any over-broad 116/128 with R03→R04 row lineage; do not erase provenance.
+
+Preserve the complete 12-invite/11-unique/10-valid case, 10x5 scores and all existing arithmetic. Calculations: v1 Q3 34/10=3.40, total 201/50=4.02, learner Q3 21/6=3.50; v2 Q3 33/10=3.30, total 200/50=4.00; client 79/20=3.95; nonresponse 1/12=8.3%. No fabricated real people, approval, consent, signatures or actual event. Engineering hashes/lineage stay in sidecars, not Word正文. Propose precise minimal edits only; preserve the R03 Word as historical.
+
+CURRENT SOURCE EXCERPTS (R03):### 2.1 調查母體與接觸範圍
+本件只建立一個可重算的 SAMPLE/SYNTHETIC 情境，名稱「2026年第三季志願服務與行政技能精進訓練班」是虛構案例標籤，不是原始點協會的開班、合作機構或訓練計畫。為避免把無法查證的概念母體寫成實際全體，本例把可操作的合成抽樣框明確限為 8 個學員代碼（L01–L08）及 4 個目標客戶代表代碼（C01–C04），共 12 個邀請代碼；它只代表本示範中的封閉名單，不推論協會實際母體數或調查涵蓋率。真人班期、結訓狀態、目標客戶資格、合作機構及抽樣框均為 UNKNOWN，須由核定計畫、在冊名單與客戶指定／服務紀錄逐項確認後才能替換。來源未齊時停在 UNKNOWN，不以本例代填。
+
+--- SOURCE EXCERPT ---
+
+### 2.3 樣本納入、排除與隔離規則
+為確保進入統計分析之數據具備真實性與有效性，訂定下列標準化處理規則：
+1. **納入標準（有效完整表單）**：
+   - 受訪者代碼於抽樣名冊內，具備合法邀請資格。
+   - 於規定期限內完成回覆。線上回覆保留平台時間戳；紙本由收件角色在收件當日記錄收件日期與時間、代碼及登錄角色，並連結紙本批次識別，不得把人工收件時間稱為電子時間戳。
+   - 滿意度 5 個量化題項（Q1 至 Q5）皆有明確評分。填答衝突定義為同題多個答案、分值不在1至5、或答案格式無法按量尺判讀；不得自行猜填，應暫存待更正／覆核或依事前完整性規則排除。
+2. **重複提交隔離標準（Duplicate Quarantine）**：
+   - 同一參與者代碼若出現兩筆（含）以上之提交紀錄，依事前核定的清洗規則，保留一筆符合完整性要求的代表回覆，並留存選擇原則、時間戳與判定紀錄。若未核定去重規則，應先標示 `UNKNOWN` 並暫停該筆統計，不自行選擇。
+   - 第二筆及其後的重複提交應另列於隔離紀錄，不重複計入統計；真實作業須記錄原始列、實際保存位置、存取權限與覆核結果。
+3. **不完整表單排除標準（Incomplete Exclusion）**：
+   - 表單內 5 項核心評問題若有任一題缺答、跳題或填答格式無效者，視為不完整表單。
+   - 不完整表單列入「回收總數」，但判定為「有效性排除」，不進入分項分數計算。
+4. **無回覆處理標準（Non-response）**：
+   - 經正式通知及指定催收作業後，於截止日前仍未提交者，列為「未回覆」，結案歸檔。
+
+---
+
+--- SOURCE EXCERPT ---
+
+### 3.1 執行階段與操作控制點
+以下列出可直接採用的執行順序、責任角色、控制點與輸出。角色名稱是流程示範用稱呼，不代表協會現有職稱、任命或組織編制；真實負責人均為 UNKNOWN：
+
+| 執行階段 | 責任角色 | 具體操作內容 | 關鍵控制點（Checkpoints） | 階段產出產物 |
+| :--- | :--- | :--- | :--- | :--- |
+| **階段一：名冊建置** | 滿意度調查執行員 | 匯入學員與客戶代表名單，產生去識別代碼 L01–L08 及 C01–C04。 | 確認無重複對象、確認聯絡電子管道有效性。 | 受邀名冊與發送清單 |
+| **階段二：正式發送** | 滿意度調查執行員 | 依正式授權管道發送問卷與填答告知；逐代碼記錄管道、發送批次、名冊版次、邀請依據及同意狀態，連結表3.4與原始發送日誌。 | 核對寄送結果與受邀框；無回覆者不得記為已同意；保存告知版本與退信／失敗狀態。 | 逐筆邀請／同意日誌及發送日誌 |
+| **階段三：進度催收** | 滿意度調查執行員 | 於發送後指定間隔比對未填名單，執行一次性溫馨提醒通知。 | 排除已回覆者，避免對同一對象過度打擾。 | 提醒通知寄送紀錄 |
+| **階段四：收件截件** | 滿意度調查執行員 | 到達設定截止時間時停止本期收件；若調查平台支援即關閉提交，否則記錄人工截件時間，逾期回覆另行標記。隨後匯出原始作答資料。 | 將原始匯出檔另存唯讀副本，或採經核定的保全方式，記錄檔名、時間、版本及 SHA-256（若可取得）。 | 原始回覆資料庫（Raw CSV） |
+| **階段五：數據清洗** | 教學行政覆核員 | 逐筆核對重複作答、缺漏作答，劃分有效與排除樣本。 | 執行 L02 重複隔離、標註 L07 不完整排除。 | 樣本流向判定總表 |
+| **階段六：交接分析** | 教學行政覆核員 | 計算指標、產出統計矩陣、記錄異常，交接教學課務組。 | 依正式授權程序完成交接確認，記錄資料清單、版本、接收時間及存取權限；若未指派覆核責任，先填 `UNKNOWN`。 | 調查交接紀錄表 |
+
+#### 作業角色對照與雙人覆核設計（SAMPLE/SYNTHETIC；未授權）
+下表是小型志願服務團隊可討論的工作分工樣例，不是協會現行職稱、任命、制度或已核定的雙人控制規則。實際人名、職稱、授權範圍及證據保管人均為 UNKNOWN，必須對照正式章程、權責文件或個別指派紀錄；文件缺少授權時，停止發送、資料匯出、刪除及核准等需權限的操作。
+
+| SAMPLE 作業角色（與§3.1用語一致） | 建議工作界線 | REAL 職稱／授權來源 | 覆核、退回或暫停條件 |
+| :--- | :--- | :--- | :--- |
+| **滿意度調查執行員** | 維護合成邀請清單與版本欄；實際調查只依核定名冊及授權管道操作。 | UNKNOWN；以正式指派及名冊使用權限核實。 | 名冊、告知版本或受邀資格缺一，即暫停發送並退回補證。 |
+| **教學行政覆核員** | 核對重複、缺答、分母與版本差異；不得覆寫原始資料。 | UNKNOWN；以具名指派與覆核範圍核實。 | 原始列、清洗規則或更正依據不全，即標 UNKNOWN，不納入結果。 |
+| **調查資料管理員（SAMPLE alias）** | 保管匯出副本與存取紀錄；僅在授權範圍內保全資料。 | UNKNOWN；以系統角色、資料保管授權或正式交接核實。 | 權限、存放位置或保存規則未核實時，不匯出、不刪除、不外傳。 |
+| **核定／處置權責人（SAMPLE function）** | 審議實際告知、保存、撤回及改善決議；本候選不代作決策。 | UNKNOWN；必須有正式授權或會議／核決原件。 | 無權責來源時只可提出待核事項，不得聲稱已核准或已採行。 |
+
+--- SOURCE EXCERPT ---
+
+### 3.4 合成逐筆邀請來源、名冊版次與同意狀態對照表
+本表是合成日誌欄位的完整填寫示例，不是實際聯絡紀錄。所有代碼、批次、名冊版次、管道、告知版本及勾選狀態均為 SAMPLE/SYNTHETIC；實際資料應以獲授權的發送日誌與告知版本替換。回覆事件以表4.1的同代碼列追溯。
+
+#### 示範問卷告知暨同意條款（SYN-NOTICE-v1）與題本版本（SYN-Q-v1）
+以下全部是供流程測試的 SAMPLE/SYNTHETIC 草案，不是原始點協會正式告知、隱私政策或法律意見；沒有法律審查、協會核准、真人聯絡窗口或真實調查紀錄。實際使用前，須由有權者填完 UNKNOWN 欄、核實適用規則及系統實收欄位，並留下正式版次與核准來源；未完成不得直接發送。
+
+| 版本欄位 | 合成示範值 | REAL 使用前必填／核實 |
+| :--- | :--- | :--- |
+| 告知版本 | `SYN-NOTICE-v1`；示範期間 2026-09-05 至 2026-09-12 | 正式版本號、生效日、核准者與核准依據：UNKNOWN |
+| 問卷版本 | `SYN-Q-v1`；表5.1 Q1–Q5；每題 1–5 分 | 核對正式題本、量尺、必填欄與系統匯出欄：UNKNOWN |
+| 調查目的／用途 | 本示範只測試系統操作與行政流程滿意度 | 核准目的、使用者範圍、保存期限及刪除／隔離程序：UNKNOWN |
+| 聯絡與權責 | 不提供真人聯絡資料或職務任命 | 申訴／查詢窗口、資料保管人與處置權責：UNKNOWN |
+
+**受邀者可讀告知樣例（不可直接視為正式版）**：您好，本份問卷是合成示範，用來演練課程資訊通知、報名聯繫、提醒、課務資訊及行政流程的回饋；它不評定個人成績、資格、能力或服務權益。您可自行決定是否填答，也可跳過或停止；不填不視為同意，不得因此推定您同意或使您受不利處置。本題本以代碼及群體別呈現五個流程題項；本示範資料不含姓名、聯絡方式或簽名影像，但實際系統欄位與存取者尚未查證。正式調查的資料用途、存取、保存期限、聯絡窗口及撤回方式目前均為 UNKNOWN，須由獲授權者核定後另行告知；若尚未核定，請勿啟動真人調查。
+
+**合成同意欄位**：□ 我已閱讀正式核定版本並自願同意（只有正式版本已核定時才可使用）　□ 不同意／不填答（不收集答卷、不推定同意）。本文件內所有勾選狀態都是合成示範值，不是任何真人的意思表示。
+
+#### 表 3.4 合成逐筆邀請來源、名冊版次、告知版本與同意狀態對照表
+| 對象代碼 | 來源管道 | 發送批次 | 名冊版次 | 告知／問卷版本 | 邀請依據 | 個別同意狀態 | 回覆流向索引 |
+| :---: | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| L01 | 網頁表單連結（合成） | SYN-SEND-01 | SYN-LIST-v1 | SYN-NOTICE-v1 / SYN-Q-v1 | 合成抽樣框內代碼 | 提交時勾選告知同意（合成） | 表4.1 L01 |
+| L02 | 網頁表單連結（合成） | SYN-SEND-01 | SYN-LIST-v1 | SYN-NOTICE-v1 / SYN-Q-v1 | 合成抽樣框內代碼 | 兩次提交均示範勾選告知同意 | 表4.1 L02；重複件見§4.2 |
+| L03 | 網頁表單連結（合成） | SYN-SEND-01 | SYN-LIST-v1 | SYN-NOTICE-v1 / SYN-Q-v1 | 合成抽樣框內代碼 | 提交時勾選告知同意（合成） | 表4.1 L03；更正見§4.4 |
+| L04 | 網頁表單連結（合成） | SYN-SEND-01 | SYN-LIST-v1 | SYN-NOTICE-v1 / SYN-Q-v1 | 合成抽樣框內代碼 | 提交時勾選告知同意（合成） | 表4.1 L04 |
+| L05 | 網頁表單連結（合成） | SYN-SEND-01 | SYN-LIST-v1 | SYN-NOTICE-v1 / SYN-Q-v1 | 合成抽樣框內代碼 | 提交時勾選告知同意（合成） | 表4.1 L05 |
+| L06 | 網頁表單連結（合成） | SYN-SEND-01 | SYN-LIST-v1 | SYN-NOTICE-v1 / SYN-Q-v1 | 合成抽樣框內代碼 | 提交時勾選告知同意（合成） | 表4.1 L06 |
+| L07 | 網頁表單連結（合成） | SYN-SEND-01 | SYN-LIST-v1 | SYN-NOTICE-v1 / SYN-Q-v1 | 合成抽樣框內代碼 | 提交時勾選告知同意；Q3缺答 | 表4.1 L07；排除見§4.3 |
+| L08 | 網頁表單連結（合成） | SYN-SEND-01 | SYN-LIST-v1 | SYN-NOTICE-v1 / SYN-Q-v1 | 合成抽樣框內代碼 | 截止前未回覆；無個別同意紀錄 | 表4.1 L08 |
+| C01 | 網頁表單連結（合成） | SYN-SEND-01 | SYN-LIST-v1 | SYN-NOTICE-v1 / SYN-Q-v1 | 合成抽樣框內代碼 | 提交時勾選告知同意（合成） | 表4.1 C01 |
+| C02 | 網頁表單連結（合成） | SYN-SEND-01 | SYN-LIST-v1 | SYN-NOTICE-v1 / SYN-Q-v1 | 合成抽樣框內代碼 | 提交時勾選告知同意（合成） | 表4.1 C02 |
+| C03 | 網頁表單連結（合成） | SYN-SEND-01 | SYN-LIST-v1 | SYN-NOTICE-v1 / SYN-Q-v1 | 合成抽樣框內代碼 | 提交時勾選告知同意（合成） | 表4.1 C03 |
+| C04 | 紙本實體問卷（合成批次） | SYN-SEND-01（紙本派發 SYN-PAPER-01） | SYN-LIST-v1 | SYN-NOTICE-v1 / SYN-Q-v1 | 合成抽樣框內代碼 | 示範勾選告知同意欄（合成；不含簽名影像） | 表4.1 C04；紙本簽收見下方日誌 |
+
+#### 表 3.4.1 合成紙本問卷批次簽收與收件登錄日誌（SAMPLE/SYNTHETIC；無 REAL 紙本原件）
+以下把既有合成代碼 C04 放入假設紙本流程演練，僅示範如何記錄收件與登錄；沒有實際紙本問卷、簽收單、掃描件或真人原件。這不是協會已發生的收件事件，**不新增受邀對象或額外回覆**；全案合成計數仍是 12 筆接觸、11 筆唯一回覆、10 份有效表單：
+
+| 紙本批次編號 | 對象代碼 | 實體簽收時間戳記（Receipt Timestamp） | 簽收／登錄責任角色 | 告知／問卷版本 | 實體保全與電子登錄保存方式 | 對應表4.1系統登錄時間 | 樣本計數影響聲明 |
+| :--- | :---: | :--- | :--- | :--- | :--- | :--- | :--- |
+| **SYN-PAPER-01** | C04 | 2026-09-11 15:30:00（Asia/Taipei） | 滿意度調查執行員（示範稱呼） | SYN-NOTICE-v1 / SYN-Q-v1 | 示範欄位表示紙本原件應依正式授權流程保管，並將題項逐筆核對至電子登錄；本文件不含簽名影像或真人簽名，也不表示已存在紙本原件。 | 2026-09-11 16:05:50（合成登錄時間；無實際簽收單可查） | 仍屬既有 C04 單一回覆，未增加邀請或回覆數，分母計數不變。 |
+
+--- SOURCE EXCERPT ---
+
+### 5.2 調查流向指標逐步計算
+本示範期間為 2026-09-05 09:30 至 2026-09-12 17:00（Asia/Taipei；合成時間），更正事件發生於其後，只改變分析資料版本，不新增或刪除回覆。
+1. **接觸邀請數（N_invite）**：12 人（學員8人、目標客戶4人）。
+2. **原始表單提交數（N_sub）**：12 筆（含 L02 的兩筆提交）。
+3. **重複提交隔離數（N_dup）**：1 筆；唯一回覆數 N_resp = N_sub − N_dup = 12 − 1 = 11。
+4. **有效完整回覆數（N_valid）**：10 份；不完整排除數1份（L07），未回覆數1人（L08）。
+5. **合成更正版本與歷史基準（Synthetic History & Version Tracking）**：
+   - **歷史版本 SYN-DATA-v1 基準結果（SAMPLE/SYNTHETIC 歷史資料）**：
+     - 題項 Q3 總分為 34 分，Q3 題項均值 = 34 / 10 = **3.40** 分。
+     - 全量表 50 個題項總分為 201 分，總題項均值 = 201 / 50 = **4.02** 分。
+     - 學員組 Q3 總分為 21 分，學員組 Q3 均值 = 21 / 6 = **3.50** 分，恰好達到合成預警門檻（<= 3.50 分，觸發課務流程檢討機制）。
+     - （此處標註為合成歷史演練數據，用於展示數據修訂前後軌跡與預警機制，非協會真實開班評核結果）。
+   - **合成當前版本 SYN-DATA-v2 分析示範結果**：
+     - 依 §4.4 執行 L03 之 Q3 分數更正（由 4 分修正為 3 分），更正後 Q3 總分降為 33 分，Q3 均值 = 33 / 10 = **3.30** 分；全量表總分降為 200 分，總題項均值 = 200 / 50 = **4.00** 分。
+     - 邀請數 12、唯一回覆數 11、有效表單數 10、有效題項數 50 均維持完全不變。
+6. **核心比率**：
+   - 回覆率 = 唯一回覆數 / 接觸邀請數 = 11 / 12 = 91.6667% → **91.7%**。
+   - 回覆中有效率 = 有效完整回覆數 / 唯一回覆數 = 10 / 11 = 90.9091% → **90.9%**。
+   - 邀請到有效產出率 = 有效完整回覆數 / 接觸邀請數 = 10 / 12 = 83.3333% → **83.3%**。
+   - 未回覆比例 = 未回覆數 / 接觸邀請數 = 1 / 12 = 8.3333% → **8.3%**。
+7. **分母為零計算規則示範案例（Zero-Denominator Vignette；合成示範）**：
+   - 為嚴格防範無效數值滲入統計矩陣，示範當某特定對照子群體（例如：外部觀摩組或未開班分組）之有效樣本數 N=0 時的計算與揭露標準：
+     - **均值判定**：群體 N=0 時，其滿意度均值一律顯示為 `N/A（分母為0，無法計算）`，嚴禁顯示或代入為 `0` 分或 `0%`（因 0 代表極度不滿意之數值，而非無資料）。
+     - **加權總均值排除**：分母為 0 之分組直接排除於加權平均之外，絕不納入分子與分母計算，亦不得拉低其他有效組別之均值。
+     - **揭露要求**：報告中必須具體揭露其有效樣本數 N=0 與無資料原因。
+     - **本案樣本不變性**：本規則為獨立示範計算邏輯，本案主分析群體之學員有效數 6 份、客戶有效數 4 份、總體有效數 10 份均大於 0，主樣本計數完全不受影響。
+     - **§5.4 交叉參照**：本規則於 §5.4 分組交叉統計中一體適用（若 §5.4 任一分析子維度出現分母為零，均強制以 N/A 呈現並自整體加權中排除）。
+
+#### v1／v2 可重建與合成門檻邊界測試（測試列不計入主樣本）
+`SYN-DATA-v1` 可由表5.1的 v2 矩陣完整重建：只有 L03 的 Q3 為 4（v2 為 3），其餘 49 個格值完全相同；因此 Q3 總分由 33 加 1 得 34，總題項總分由 200 加 1 得 201，分母仍為 10 與 50。下列門檻只是假設性流程測試，不是協會已核定的預警政策；真人門檻為 UNKNOWN。
+
+| 合成測試情境 | 輸入 | 計算結果 | SAMPLE 門檻（≤3.50）處置 |
+| :--- | :--- | :--- | :--- |
+| 歷史 v1 | Q3 34分／10份 | 3.40 | 觸發示範檢討；不代表協會實際預警。 |
+| 修正 v2 | Q3 33分／10份 | 3.30 | 觸發示範檢討；與表5.1一致。 |
+| 等於門檻 | 測試夾具 35分／10份 | 3.50 | 等於門檻，依本例 `≤` 規則觸發。 |
+| 高於門檻 | 測試夾具 36分／10份 | 3.60 | 不觸發本例門檻；仍保留描述性結果。 |
+| 零分母 | 0份有效回答；無分數總和 | N/A（分母為0，無法計算） | 排除加權平均並揭露原因；不是0分。 |
+
+以上兩筆門檻測試夾具及零分母夾具均是計算示範，不增加邀請、回覆、有效樣本或 Q1–Q5 主矩陣資料。
+
+**計算與顯示規則**：百分比先以未四捨五入的原始分數計算，再採十進位四捨五入（half-up）顯示至小數第1位；量表均值同樣先用未四捨五入值計算，顯示至小數第2位。結果須同列分子、分母、單位與本例期間。若任何計算的分母為0，顯示 `N/A（分母為0，無法計算）`，不得顯示為0%或0分；該項不併入整體平均，並說明缺少的母數。
+
+--- SOURCE EXCERPT ---
+
+### 5.4 分組描述性統計比較（學員群體 vs. 目標客戶群體）
+為掌握不同利害關係人之感受差異，將學員（$N=6$）與客戶代表（$N=4$）分開獨立報告：
+
+> **分母為零的共通規則**：若任何分組有效樣本數 N=0，均值須列為 `N/A（分母為0，無法計算）`，不得以0代替，且不得併入整體加權平均；完整邊界情境見§5.2第7項。此規則不改變本案學員6份、目標客戶4份及總體10份的樣本。
+
+
+| 評問題項名稱 | 學員群體（N=6）總分 | 學員平均值 | 客戶群體（N=4）總分 | 客戶平均值 | 全體（N=10）總分 | 全體平均值 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Q1 資訊通知清楚** | 25 | **4.17** | 17 | **4.25** | 42 | **4.20** |
+| **Q2 報名聯繫便利** | 27 | **4.50** | 16 | **4.00** | 43 | **4.30** |
+| **Q3 提醒截止適切（v2）** | 20 | **3.33** | 13 | **3.25** | 33 | **3.30** |
+| **Q4 課務資訊取得** | 24 | **4.00** | 16 | **4.00** | 40 | **4.00** |
+| **Q5 行政流程整體滿意** | 25 | **4.17** | 17 | **4.25** | 42 | **4.20** |
+| **群體總平均（題項總分/有效項數；v2）** | 121 / 30 | **4.03** | 79 / 20 | **3.95** | 200 / 50 | **4.00** |
+
+--- SOURCE EXCERPT ---
+
+### 7.1 合成案例核對表與真實覆核欄位
+下表是本稿依合成資料重算的示範，不是獨立審查、真人覆核或已簽章紀錄。實際執行時，應由獲授權的第二位人員依原始檔重核並簽認。
+
+| 核對項目 | 核對方式 | 本示範重算結果 | 真實執行時的覆核責任／證據 |
+| :--- | :--- | :--- | :--- |
+| 抽樣框與邀請範圍 | 核對表3.4各代碼、管道、批次、名冊版次、邀請依據及同意狀態 | 12個合成代碼逐筆有管道／同意欄；L08未回覆且無個別同意紀錄 | 以正式名冊、告知版本與發送日誌逐碼覆核；真人責任者 UNKNOWN |
+| 收件時間與截止 | 比對表4.1及合成截止 2026-09-12 17:00 | 最後有效回覆早於合成截止；更正日期另列，不冒充回覆日期 | 對照原始匯出時間戳及經授權的截止版本；本文無真人簽章 |
+| 重複與不完整 | 對照 L02隔離及L07缺答紀錄 | L02只有1筆納入、1筆隔離；L07不列入10×5矩陣 | 比對原始列、隔離紀錄及既定清洗規則 |
+| 更正與版本 | 依§4.4比對 SYN-CORR-01、v1、v2及不可覆寫原始列 | L03 Q3 4→3；10份、50題項、11唯一回覆及12邀請的分母不變 | 比對更正原件、受理權限、覆核者與版本差異；此例未發生 REAL 更正 |
+| 計數、分母及算式 | 由表5.1矩陣重算表5.2–5.4 | v2總分200、50題項、總均值4.00；所有流向分子分母相符 | 由另一位獲授權人員重算；本稿示範重算不等於獨立簽認 |
+
+#### 分母為零實際演算例（SAMPLE/SYNTHETIC；手算示範，非軟體驗證收據）
+| 測試欄位 | 合成輸入／步驟 | 預期及演算結果 | 對主分析的影響 |
+| :--- | :--- | :--- | :--- |
+| 測試案例 | 一個預先定義的群體沒有任何有效答卷；N=0，無可加總分數 | 均值 = 無分子／0；顯示 `N/A（分母為0，無法計算）`，不輸出 0。 | 這是獨立邊界夾具，不是本案新增群體或回覆。 |
+| 加權處理 | 將 N=0 群體排除於加權式的分子及分母 | 例：主體 200/50=4.00；空群體不加入，結果仍 4.00。 | 表5.1的10份／50題項與總分200不變。 |
+| 待驗真人控制 | 未取得本會計算系統、公式設定或測試記錄 | REAL 系統是否依此規則運作：UNKNOWN；須由獲授權覆核人實測並留存結果。 | 本手算不等同系統測試、獨立簽認或正式接受。 |
+
+### 7.2 後續分析交接示例
+以下只是一份合成資料如何交接的示例，不表示曾發生實際簽收或已建立所列檔案：
+- **交接清冊編號**：`SYN-HO-2026-09-001`（合成識別碼）
+- **示範日期**：2026-09-14（合成日期）
+- **示範交接物**：去識別化作答資料、重複／排除流向表、10×5 合成分數矩陣及 `SYN-PROP-2026-01` 分析備忘。文件名稱只是例示，沒有可核實的實際檔案附於本稿。
+- **移交、接收與覆核欄**：由正式指派的執行角色、分析接收角色及第二覆核角色填入；本文僅以角色欄位示範，未填真人姓名或簽章。
+- **交接確認**：真實作業應記錄雙方收到的檔案清單、版次、來源 SHA 或其他可核驗識別碼、時間、權限與缺件；本合成案例不代表實際已完成交接。
+
+SELECTED CURRENT REGISTER ROWS (JSON):
+[{"fact_id":"FACT-0098-047","document_id":"0098","requirement_id":"I18-E06","field_or_locator":"§5.2 | numbered count item 4 | count and definition","value":"11","classification":"SAMPLE/SYNTHETIC","source_or_basis":"Calculation (12-1=11)","real_replacement_needed":"YES","real_replacement_source":"UNKNOWN/由協會合法取得","owner_role":"教學行政覆核員","verification_rule":"核對去重後獨立填答者數量","printed_page":"P18"},{"fact_id":"FACT-0098-048","document_id":"0098","requirement_id":"I18-E06","field_or_locator":"§5.2 | numbered count item 5 | count and definition","value":"10","classification":"SAMPLE/SYNTHETIC","source_or_basis":"Calculation (11-1=10)","real_replacement_needed":"YES","real_replacement_source":"UNKNOWN/由協會合法取得","owner_role":"教學行政覆核員","verification_rule":"核對有效統計分析樣本筆數","printed_page":"P18"},{"fact_id":"FACT-0098-049","document_id":"0098","requirement_id":"I18-E06","field_or_locator":"§5.2 | numbered count item 6 | count and definition","value":"1","classification":"SAMPLE/SYNTHETIC","source_or_basis":"Task scenario specification","real_replacement_needed":"YES","real_replacement_source":"UNKNOWN/由協會合法取得","owner_role":"教學行政覆核員","verification_rule":"核對不完整作廢檔案筆數","printed_page":"P18"},{"fact_id":"FACT-0098-050","document_id":"0098","requirement_id":"I18-E06","field_or_locator":"§5.2 | numbered count item 7 | count and definition","value":"1","classification":"SAMPLE/SYNTHETIC","source_or_basis":"Task scenario specification","real_replacement_needed":"YES","real_replacement_source":"UNKNOWN/由協會合法取得","owner_role":"教學行政覆核員","verification_rule":"核對未回覆名冊筆數","printed_page":"P18"},{"fact_id":"FACT-0098-051","document_id":"0098","requirement_id":"I18-E06","field_or_locator":"§5.2 | response-rate formula | numerator/denominator/display","value":"91.7%","classification":"SAMPLE/SYNTHETIC","source_or_basis":"Calculation (11/12=91.67%)","real_replacement_needed":"YES","real_replacement_source":"UNKNOWN/由協會合法取得","owner_role":"統計主辦人","verification_rule":"依真實唯一回覆數除以邀請數重算","printed_page":"P18"},{"fact_id":"FACT-0098-052","document_id":"0098","requirement_id":"I18-E06","field_or_locator":"§5.2 | valid-among-responses formula | numerator/denominator/display","value":"90.9%","classification":"SAMPLE/SYNTHETIC","source_or_basis":"Calculation (10/11=90.91%)","real_replacement_needed":"YES","real_replacement_source":"UNKNOWN/由協會合法取得","owner_role":"統計主辦人","verification_rule":"依真實有效數除以唯一回覆數重算","printed_page":"P18"},{"fact_id":"FACT-0098-053","document_id":"0098","requirement_id":"I18-E06","field_or_locator":"§5.2 | valid-yield formula | numerator/denominator/display","value":"83.3%","classification":"SAMPLE/SYNTHETIC","source_or_basis":"Calculation (10/12=83.33%)","real_replacement_needed":"YES","real_replacement_source":"UNKNOWN/由協會合法取得","owner_role":"統計主辦人","verification_rule":"依真實有效數除以邀請數重算","printed_page":"P18"},{"fact_id":"FACT-0098-061","document_id":"0098","requirement_id":"I18-E06","field_or_locator":"§5.4 | Table 5.4 | group rows, Q1–Q5 and group total cells","value":"Q1:4.25;Q2:4.00;Q3:3.25;Q4:4.00;Q5:4.25","classification":"SAMPLE/SYNTHETIC","source_or_basis":"Calculation (N=4 sums: 17,16,13,16,17)","real_replacement_needed":"YES","real_replacement_source":"UNKNOWN/由協會合法取得","owner_role":"統計主辦人","verification_rule":"依真實客戶群體有效分數重新計算","printed_page":"P21"},{"fact_id":"FACT-0098-110","document_id":"0098","requirement_id":"I18-E06","field_or_locator":"§3.4 | Table 3.4 row C04 | channel, send-batch, roster-version, invitation-basis and consent cells","value":"網頁表單連結（SYN）；SYN-SEND-01；SYN-LIST-v1；合成抽樣框內代碼；提交時勾選告知同意（合成）","classification":"SAMPLE/SYNTHETIC","source_or_basis":"Synthetic invitation/consent log; no REAL communication or consent record is provided","real_replacement_needed":"YES","real_replacement_source":"正式發送日誌、實際抽樣名冊版本、問卷告知版本及個別同意紀錄","owner_role":"調查執行角色（示範稱呼，非協會實有人員）","verification_rule":"按對象代碼核對管道、批次、名冊版次、邀請資格及同意狀態；無回覆不得標為已同意。","printed_page":"P11"},{"fact_id":"FACT-0098-116","document_id":"0098","requirement_id":"I18-E06","field_or_locator":"§4.4 Table 4.4; §5.1–5.4; §6.2 | cited score and formula cells","value":"Q3 score sum 34→33; total score 201→200; means and triggers recomputed on v2","classification":"SAMPLE/SYNTHETIC","source_or_basis":"Synthetic worked case or explicit calculation-control demonstration; not REAL association evidence","real_replacement_needed":"YES","real_replacement_source":"Recompute from current 10×5 v2 matrix and compare versioned v1 adjustment","owner_role":"依實際更正／調查程序正式指派；本稿未指派真人","verification_rule":"以獲授權的原始來源、版本、計算與覆核紀錄驗證；來源缺失時維持 UNKNOWN。","printed_page":"P15, P17–P22"},{"fact_id":"FACT-0098-119","document_id":"0098","requirement_id":"I18-E06","field_or_locator":"§2.1 | cohort name, training period, and target population boundary paragraph","value":"合成封閉框：8個學員代碼 L01–L08 + 4個目標客戶代表代碼 C01–C04 = 12個邀請代碼；不是協會實際班期、真人母體或實際邀請數。","classification":"SAMPLE/SYNTHETIC","source_or_basis":"SYNTHETIC scenario in §2.1–§2.2; no real class, client, roster, or training plan supplied.","real_replacement_needed":"YES","real_replacement_source":"正式核定之年度訓練計畫公文、開班通知書及在冊結訓學員簽到退名冊","owner_role":"SAMPLE alias only; REAL roster owner/appointment UNKNOWN","verification_rule":"Before REAL use, verify approved training plan, attendance/completion roster, client eligibility source, and actual invitation frame; otherwise retain UNKNOWN.","printed_page":"P5"},{"fact_id":"FACT-0098-121","document_id":"0098","requirement_id":"I18-E06","field_or_locator":"§3.1 & §8.1 | operational role alias matrix and dual-control authorization rule","value":"Four SAMPLE functions in §3.1: survey operator, administrative reviewer, data manager, and authorized decision function; all REAL titles, appointments, and dual-control policies remain UNKNOWN.","classification":"SAMPLE/SYNTHETIC","source_or_basis":"Proposed responsibility design only; not evidence of association roles, appointments, or current policy.","real_replacement_needed":"YES","real_replacement_source":"協會正式組織編制表、分層負責明細表與專案人事指派派令","owner_role":"SAMPLE role aliases; all REAL appointees UNKNOWN","verification_rule":"Verify each actual role and authority against governing documents or appointment evidence; unresolved authority blocks the corresponding real operation.","printed_page":"P7, P25–P26"},{"fact_id":"FACT-0098-126","document_id":"0098","requirement_id":"I18-E06","field_or_locator":"§4.3 item 4 and Table 4.3.1 synthetic hold worksheet","value":"SYN-W01 is an isolated hypothetical request. Authority/rule UNKNOWN means HOLD, restrict use and isolate; no deletion, real request, approval, notice, or closure is claimed; main sample impact 0.","classification":"SAMPLE/SYNTHETIC","source_or_basis":"Synthetic isolated workflow case only; no actual request, personal data, association decision, or adopted procedure represented.","real_replacement_needed":"YES","real_replacement_source":"適用之撤回／個資處理規則、正式授權程序及真實申請紀錄；權限或規則未核實時不得逕行刪除。","owner_role":"SAMPLE case-handler alias; REAL authority UNKNOWN","verification_rule":"For a real event, verify receipt, scope, authority, approved procedure and actual disposition evidence; if any is UNKNOWN, keep HOLD and do not delete or claim closed.","printed_page":"P13–P14"},{"fact_id":"FACT-0098-127","document_id":"0098","requirement_id":"I18-E06","field_or_locator":"§3.4 Table 3.4.1 & Table 3.4 row C04 | synthetic paper batch receipt log","value":"SYN-PAPER-01 is a hypothetical C04 paper-channel demonstration. Both timestamps are synthetic; no paper form, receipt, signature, scan or actual back-office entry exists. Invite/reply/valid counts do not change.","classification":"SAMPLE/SYNTHETIC","source_or_basis":"Synthetic paper-flow record only; no real paper questionnaire, receipt, scan, or signature supplied.","real_replacement_needed":"YES","real_replacement_source":"紙本問卷簽收遞送清冊、實體問卷彌封存檔箱、掃描建檔紀錄與後台鍵入對照日誌","owner_role":"SAMPLE survey-operator alias; REAL collector/record custodian UNKNOWN","verification_rule":"Only a real signed receipt, authorization, and matched back-office entry can establish a REAL event; this sample does not.","printed_page":"P11"},{"fact_id":"FACT-0098-128","document_id":"0098","requirement_id":"I18-E06","field_or_locator":"§5.2 item 5, v1/v2 reconstruction and threshold test table","value":"v1 reconstructs from v2 by changing only learner L03 Q3 3 to 4: Q3 34/10=3.40; total 201/50=4.02; learner Q3 21/6=3.50. v2: Q3 33/10=3.30; total 200/50=4.00.","classification":"SAMPLE/SYNTHETIC","source_or_basis":"Synthetic version history; one-cell delta only, no real association performance history.","real_replacement_needed":"YES","real_replacement_source":"更正前原始匯出資料檔 SYN-DATA-v1、更正申請單 SYN-CORR-01 及試算表修改歷程記錄","owner_role":"SAMPLE calculation-review alias; REAL reviewer UNKNOWN","verification_rule":"Recompute v1/v2 from Table 5.1 plus the single L03 Q3 delta; confirm denominator 10/50 unchanged and do not represent threshold as association policy.","printed_page":"P18–P19"}]

@@ -1,0 +1,30 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0088",
+  "requirement_id": "I17D-E02",
+  "from_revision": "R06",
+  "to_revision": "R07",
+  "source_packet_sha256": "d4d17971d2801b9176486a27042373ff69e954db2d2bfe8e13eac9fb489a8717",
+  "unique_blueprint_sha256": "21ac733e57c4aff54d7b61c8f1cee9f557d23aa9765897e181e713d057703bcb",
+  "input_body_sha256": "c9158452e9a10c94f1a5da268fdce4ff85b203824c3ff51b59df0454bffd61ea",
+  "output_body_sha256": "04bc085c8a843dda41ce3c7ec87d40bd8a589650e8d087ff9874b9d89518814e",
+  "input_docx_sha256": "2e42fcbf224bbbe18454f111a9fa99f9722e6a47a54b79d5ed787ae551cb8da0",
+  "output_docx_sha256": "83ff96699e8c3e01852524047c822f912323207b2c22eb7e6fdb2cc561a5b5dc",
+  "change_summary": [
+    "Removed the R06 internal control paragraph from the human-facing cover body; mapping remains in sidecar receipts.",
+    "Set keep_with_next on the four 7.3 bold contact-example labels to prevent orphan headings.",
+    "No substantive case data, sample register values, or official requirement mapping changed."
+  ],
+  "register_sha256_R06": "5d319fae7bd37ca5800fc622d96971cad99f888f008c23fd37d8c2df62855c5a",
+  "register_sha256_R07": "5d319fae7bd37ca5800fc622d96971cad99f888f008c23fd37d8c2df62855c5a",
+  "register_bytes_identical": true,
+  "body_unified_diff": [
+    "--- 0088_R06_body.md\n",
+    "+++ 0088_R07_body.md\n",
+    "@@ -2,3 +2,2 @@\n",
+    " ",
+    "-> **文件身分與控制（SAMPLE / SYNTHETIC ONLY）：** doc_id=`0088`；requirement_id=`I17D-E02`；官方方框文字=`就業及考照追蹤紀錄。`（《TTQS 查核佐證文件資料表－訓練機構版》第 6 頁「17d 成果評估」）；官方 157 項流水號 serial=`UNKNOWN`（不得由 doc_id 或鄰項推算）；本候選為 `R06 / SAMPLE / SYNTHETIC ONLY`，非協會實績、非正式核准。候選 DOCX SHA 以本版建置與驗收收據為準。",
+    " "
+  ],
+  "candidate_state": "SAMPLE_SYNTHETIC_CANDIDATE_NOT_FORMALLY_ACCEPTED"
+}

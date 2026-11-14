@@ -1,0 +1,58 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0089",
+  "candidate_sha256": "42bebbdfcaba93a753467260d5e1865b93b6bc2fee652a03d39b8fb385ef8476",
+  "packet_sha256": "2511bf46f03115283bcd0a715c2e50ff6883e9e7f793f7fbcef300f908fa4065",
+  "prompt_sha256": "18d19b9ec0ffd0618cf439097f9ba7f9b30cc6ea8b7a5163b05e7df124a35ee1",
+  "cli": "OpenCode v2.0.32",
+  "lane": "RESUMED_AFTER_SCOPED_MIMO_SUCCESS_R01",
+  "attempts": [
+    {
+      "time_local": "2026-10-20T04:44:13+08:00",
+      "requested_model": "opencode/deepseek-v4.1-flash-free",
+      "catalog_present": true,
+      "exit_code": 1,
+      "provider_error": "provider.quota HTTP 429 FreeUsageLimitError",
+      "response": "NONE",
+      "raw_stdout_sha256": "ba580fb8c61b801e897b059a463d0bd1151d8121d998796830cd11e3e2831eca",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "time_local": "2026-10-20T04:45:02+08:00",
+      "requested_model": "opencode/glm-5.3-flash-free",
+      "catalog_present": true,
+      "exit_code": 1,
+      "provider_error": "provider.quota HTTP 429 FreeUsageLimitError",
+      "response": "NONE",
+      "raw_stdout_sha256": "3ae36ed91bf7455714c0d991ca040ee3ed7d06b33d8619f327b668e2328aeb92",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "time_local": "2026-10-20T04:45:44+08:00",
+      "requested_model": "opencode/space-bunny-free",
+      "catalog_present": true,
+      "exit_code": 1,
+      "provider_error": "provider.no-route model unavailable",
+      "response": "NONE",
+      "raw_stdout_sha256": "032b9025499d186f096c65ebab4e5619632be7f21073a8db2b95abf301e49d9c",
+      "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "dispatch_selection_note": "DeepSeek was the first attempt. The subsequent GLM and Space Bunny fallbacks deviated from the report-listed fallback order (MiMo/Muse); record as a routing error. MiMo was not tried after the three-error pause threshold.",
+  "billing_or_token_usage": "UNKNOWN_NOT_RETURNED",
+  "raw_session_ids_and_local_paths": "NOT_PUBLISHED; raw local outputs remain in the private working tree and are SHA-bound above",
+  "independent_semantic_verdict": "PASS_TEXT_ONLY",
+  "next_action": "R04 exact-SHA text semantic review completed PASS with nonblocking observations. Do not rebuild unchanged DOCX for these low/cosmetic items. Continue 0090 writer packet as next document; monitor current MiMo route without paid fallback. Full model backend identity, cost and usage remain UNKNOWN.",
+  "updated_at_local": "2026-10-20T04:52:10.101132+08:00",
+  "recovery_call": {
+    "completed_at": "2026-10-20T05:25:55.9383647+08:00",
+    "exit_code": 0,
+    "raw_stdout_sha256": "90da1cc443c3d8e4c6ac90067756b877abb579d7bd5b80882657c3b0fae1973b",
+    "cost_or_token_usage": "UNKNOWN_NOT_RETURNED",
+    "requested_model": "opencode/mimo-v2.6-flash-free",
+    "response_sha256": "7fa3f1818a67dc13b70944dd921a8b54c946aff1c2f632d1d988d264bfb732c7",
+    "started_at": "2026-10-20T05:18:28.9671327+08:00",
+    "runtime_model_identity": "UNKNOWN_NOT_EMITTED",
+    "candidate_docx_sha256": "42bebbdfcaba93a753467260d5e1865b93b6bc2fee652a03d39b8fb385ef8476"
+  }
+}

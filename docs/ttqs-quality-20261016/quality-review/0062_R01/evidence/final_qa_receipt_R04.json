@@ -1,0 +1,105 @@
+{
+  "project_id": "TTQS_ONE",
+  "document_id": "0062",
+  "official_requirement_id": "I14-E03",
+  "official_checkbox_serial": "067",
+  "candidate_status": "QUALITY_GATES_PASS; CANDIDATE ONLY; FORMAL HUMAN ACCEPTANCE PENDING",
+  "candidate_file": "candidate/0062_R04.docx",
+  "candidate_sha256": "460C4FCA4E685BDBF93B53B9CC3EECFC0EA72EDE07DAB209A68EC7F34476D924",
+  "candidate_bytes": 85655,
+  "official_mapping": {
+    "requirement_pdf": "TTQS查核佐證文件資料表-訓練機構版 (2).pdf",
+    "requirement_pdf_sha256": "805386B77DF045B396FABAFED7A47D12491C25A0B5744EDD9A04876CAEE34709",
+    "official_page": 5,
+    "crosswalk": "TTQS_ONE_129_REQUIREMENT_TO_142_DELIVERABLE_CROSSWALK_R01.csv",
+    "crosswalk_sha256": "1DDFBB608BCAD25170683DDB42A1DBB27BAFA6F1F35FF0498F1B8D75B24F0679",
+    "unique_blueprint": "inputs/0062_UNIQUE_BLUEPRINT_R04.md",
+    "unique_blueprint_sha256": "800DC3C4E799A194B6D49F077B6A6BC75D0ECDE4E32DCE9EFC0A55BBFE4156AD",
+    "body_sha256": "B6F17FDB213DEDF297C7981FA9C3AB0220C91779760D69879DAF799E1735CA82"
+  },
+  "build": {
+    "receipt": "evidence/build_receipt_R04.json",
+    "sha256": "4BF7B0CF6D529A693A5CF2AD3CEC0FA2FB596EDE9BF9B962563128A68425AD07",
+    "repair_delta_receipt": "evidence/repair_delta_receipt_R03_to_R04.json",
+    "repair_delta_receipt_sha256": "988F1E03E4F5AE73ABBBB6C590F59C31B51F0908C02A071E562B1EA9139925D6"
+  },
+  "technical_qa": {
+    "status": "PASS_TECHNICAL_SCOPE",
+    "receipt": "evidence/technical_qa_receipt_R04.json",
+    "receipt_sha256": "27D0C2782AF11C9D97AB931AF9FBC84ADA3176748006802F75A6315744B26C51",
+    "failures": [],
+    "page_count": 44,
+    "table_count": 20,
+    "register_rows": 173,
+    "math_and_sample_hold_checks": "PASS"
+  },
+  "visual_qa": {
+    "status": "PASS_VISUAL_SCOPE",
+    "receipt": "evidence/visual_review_receipt_R04.json",
+    "receipt_sha256": "747F3D7E7314108A5CE8BDFCB889BAF7289B7A4D6D97AD8EE66DD5FED7ED3B5A",
+    "pdf": "evidence/render_R04/0062_R04.pdf",
+    "pdf_sha256": "9B02EA5F19401D922F2BB2945F4A62401159A08F434E9386C3DE29E231214F3D",
+    "pages": 44,
+    "identical_to_R03_pixels": 42,
+    "changed_pages_directly_inspected": [
+      41,
+      42
+    ],
+    "render_manifest_sha256": "A5118AC00BF1658C791F42517827880ECE0B6BF0E88DC767F027521674E9FD7B",
+    "coverage": "All 44 R04 page contact sheets directly inspected; changed pages 41-42 also full-resolution inspected.",
+    "export_method": "Word COM SaveAs2 to PDF succeeded. Full-document and page-range ExportAsFixedFormat attempts timed out; both receipts and progress logs are preserved."
+  },
+  "independent_semantic_review": {
+    "status": "PASS",
+    "provider_route": "OpenCode CLI v2",
+    "model": "opencode/nemotron-3-ultra-free",
+    "process_exit_code": 0,
+    "candidate_sha256": "460C4FCA4E685BDBF93B53B9CC3EECFC0EA72EDE07DAB209A68EC7F34476D924",
+    "receipt": "evidence/independent_review_R04/opencode_nemotron_R04_receipt.json",
+    "receipt_sha256": "94E0E9017F0C8CBE461D4F256D0A813EBACB9BFD43762D203F991D16D8995EA0",
+    "raw_response": "evidence/independent_review_R04/opencode_nemotron_R04_response.md",
+    "raw_response_sha256": "F0576B222A62AA45F82B6A60592331A3398BEB292F168F35A6A2685A1CF7F74E",
+    "review_packet_sha256": "149DB1BD87273530686AD48AEDA1ECCF09DDF2BE26437926B3329A38143D8D9D"
+  },
+  "real_evidence_boundary": {
+    "real_source_categories": 12,
+    "status": "UNKNOWN / HOLD for every category",
+    "sample_register_rows": 173,
+    "replacement_register": "sidecar/0062_R04_SYNTHETIC_REPLACEMENT_REGISTER.csv",
+    "replacement_register_sha256": "9F1A8FA21B57D65D9D2DEDC5FB8BD07DEA295809FE88AA981F7BF285645EEEC7",
+    "association_approval_signatures_credentials_originals_or_real_execution_claimed": false
+  },
+  "remaining_gate": "Human formal acceptance and substitution of authorized REAL records; this candidate is not formal acceptance or a real evidence package.",
+  "render_attempts": {
+    "word_exportasfixedformat": "TIMEOUT; no output PDF within bounded attempts; receipt files preserved",
+    "word_saveas2": "PASS; used to generate the hashed 44-page PDF"
+  },
+  "checked_at_local": "2026-10-18T13:29:31.265940+08:00",
+  "external_work_provenance": {
+    "blueprint_worker": {
+      "route": "OpenCode CLI v2",
+      "final_repair_prompt": "worker/opencode_blueprint_R01_retry03/repair_prompt.txt",
+      "final_repair_prompt_sha256": "2968FE4D2A4DFA468244DC1CB35396BF71542ABC839E8A27771D62BFE06FF024",
+      "raw_cli_output": "worker/opencode_blueprint_R01_retry03/stdout.json",
+      "raw_cli_output_sha256": "D29E50C5B9BC97DC13507779D672F1DE2503474A9167677B60BCC15EC2052545",
+      "exit_code_file": "worker/opencode_blueprint_R01_retry03/exit_code.txt",
+      "exit_code": 0,
+      "final_blueprint_sha256": "800DC3C4E799A194B6D49F077B6A6BC75D0ECDE4E32DCE9EFC0A55BBFE4156AD",
+      "raw_response_matches_final_blueprint_except_final_newline": true
+    },
+    "body_writer": {
+      "route": "OpenCode CLI v2",
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "raw_response": "worker/opencode_docx_writer_R01/response_R01.md",
+      "raw_response_sha256": "334CCD97ECB3C13D0FC8FB27E1C1BC72C5E5863D5CD63DE07E537D547F5B0EB1",
+      "stdout": "worker/opencode_docx_writer_R01/stdout.jsonl",
+      "stdout_sha256": "08B50C667EC1D8EDC1EB98ADF71085C0A9B27FBC8C5D87196AB2EAE38DF10137",
+      "exit_code_file": "worker/opencode_docx_writer_R01/exit_code.txt",
+      "exit_code": 0,
+      "normalization_receipt": "evidence/response_normalization_R01.json",
+      "normalization_receipt_sha256": "DE7822EF76BD83534057C2AE07B9837AEE3A6F7BACE72AABADE4137010A5EB36",
+      "normalized_body": "inputs/0062_BODY_R01_HUMAN_READY.md",
+      "normalized_body_sha256": "B6F17FDB213DEDF297C7981FA9C3AB0220C91779760D69879DAF799E1735CA82"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "work_id": "TTQS_ONE_0133_R05_SYNEX01_REPAIR_PROPOSAL_20261108",
+  "candidate_sha256": "7f9cf468358d43ab866a1f11f29149faf0ee21ff99c7966f7754bc1a7978eb6e",
+  "table_10_replacement_cells": [
+    "SYN-EX-01",
+    "20筆日簽到誤當人次，去重為11；補充 SYNTHETIC 示例：第1日10筆、第2日10筆、重複9人，10+10-9=11",
+    "REJECT 20 作為人次；先 HOLD 等來源核對",
+    "以「班次×去識別學員」重算 11；SYNTHETIC 示例僅說明去重，不計入年度總數；保存舊值20、新值11、來源鍵、原因與第二人覆核"
+  ],
+  "table_15_register_replacement_cells": [
+    "SYN-EX-01",
+    "§8/p8; §10/p10",
+    "20筆日簽到誤當人次，去重為11；SYNTHETIC 示例：10+10-9=11",
+    "REAL 需原始簽到及去識別學員×班次清單；SYNTHETIC 值 10、10、9、11 僅登錄說明，不併年度數；HOLD 來源核對"
+  ],
+  "calculation": "SYNTHETIC illustrative only: 10 + 10 - 9 = 11 (two example days, 9 repeated learners); original 20 entries and 11 unique learner/person-time outcome unchanged; excluded from annual totals.",
+  "synthetic_fact_ids_or_values_to_register": [
+    "SYN-EX-01_DAY1_ENTRIES=10",
+    "SYN-EX-01_DAY2_ENTRIES=10",
+    "SYN-EX-01_REPEATED_LEARNERS=9",
+    "SYN-EX-01_UNIQUE_LEARNERS=11"
+  ],
+  "checks_passed": [
+    "20 original sign-in entries preserved",
+    "11 unique learner/person-time outcome preserved",
+    "annual totals unchanged",
+    "added 10/10/9 values marked SYNTHETIC",
+    "no real dates or named people invented",
+    "HOLD source verification retained",
+    "20 rejected as unique person-times",
+    "old value 20 and new value 11 retained",
+    "second-person review trail retained"
+  ],
+  "ambiguities": [
+    "Exact Table 10 and Table 15 column headers were not supplied in the packet; cell order is inferred from the current rows.",
+    "The register row's exact source-key placeholder format is unspecified.",
+    "Candidate SHA and Blueprint/official-page SHAs are recorded from the packet but not independently recomputed in this proposal."
+  ],
+  "limitations": [
+    "Proposal only; no DOCX or other file was modified.",
+    "No QA PASS, formal acceptance, or document modification is claimed.",
+    "REAL acceptance still requires source attendance records and de-identified learner-by-class mapping.",
+    "No dates, names, or source keys were invented."
+  ]
+}

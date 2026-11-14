@@ -1,0 +1,13 @@
+# Independent exact-SHA semantic review — DOCX 0064 R06
+
+Review the complete attached candidate text against the official checkbox page extract, Unique Blueprint R02, synthetic replacement register, and exact-source cross-document excerpts.
+
+Identity: TTQS_ONE; DOCX 0064; official requirement I14-E05; checkbox 069; candidate revision R06. DOCX SHA-256 `f83eeda42589da66c23918d522ad983178a252da9b6dd2240b725e9c9cfb50a1`; candidate text extraction SHA-256 `94632ca1a814050a35d695d7cff8c5474cc7306ae1f1377bcad5c80c1caa76b6`; current source commit `ac9a13e394fcb25414d69a6f538f95c700cc26c9`. The body is unchanged from R05 except the document-control version label R05 -> R06; the layout repair adds keep-with-next to the six paragraphs in the §13.3 table header. Do not inherit the R05 verdict: independently inspect the full candidate text and bind your response to the exact R06 DOCX SHA.
+
+Official source page 5, indicator 14, checkbox text: “資訊系統化程度及檢索速度。” The document must provide a repeatable retrieval-efficiency test report/procedure for a small volunteer association, without claiming the Association already has a real information system or measured retrieval performance.
+
+Return exactly one verdict: PASS, PARTIAL, or FAIL. Cite exact section/table anchors, evidence, material gaps and resolution. Review (1) official mapping, genre and Blueprint fit; (2) repeatable closed-corpus test/SOP, roles, inputs, endpoints, errors and HOLD criteria; (3) all 24 paired observations and 48 values, formulas, units, median/P90 nearest-rank, accuracy and savings; independently recompute aggregates; (4) cross-document consistency against attached exact-source extracts 0060 R08, 0061 R03, 0062 R04, 0063 R02; (5) A-0062-08 remains HOLD and reveals no protected version/name/path/content; (6) SAMPLE/SYNTHETIC vs REAL, no actual test, Association approval, system or KPI claims; (7) replacement register, exceptions and usability; and (8) negative-neighbor separation: this is I14-E05, not I14-E01 classification, I14-E02 system/access control, I14-E03 inventory or I14-E04 query-improvement procedure.
+
+Verify independently these reported values: folder n=24, sum=2442, mean=101.75s, median=95.5s, P90 rank 22/value 137s, max 156s; index sum 783, mean 32.625s, median 28.5s, P90 rank 22/value 47s, max 62s; paired saving sum 1659s, mean 69.125s/task, total reduction 67.9361%. Folder safe-correct=HIT plus safe HOLD (22/24); index=24/24.
+
+Semantic only. Do not claim visual inspection, model identity attestation beyond CLI selection, Association approval, formal acceptance or promotion. No Computer Use, permission bypass, file tools, or edits. Cite exact R06 SHA.

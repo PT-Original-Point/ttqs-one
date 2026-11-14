@@ -1,0 +1,24 @@
+{
+  "doc_id": "0137",
+  "requirement_id": "I19-E27",
+  "checkbox_index": 151,
+  "candidate_sha256": "3899167f0437ec76df42e6229685564d910250c6a822b627ec15b5f9cfcfecc8",
+  "parent_sha256": "7271c89f59aab0455b72a5b17cb55da2eb6ea6c3a162214418930f9c924484f3",
+  "result": "PASS",
+  "checks": [
+    "parent R01 exact SHA preserved",
+    "all non-final body paragraphs unchanged; final conclusion remains the R02 scope statement",
+    "only first-page candidate-version cell changed from R01 to R02 outside the three intended delta tables",
+    "Tables 2/8 include distinct I19-E29 and I19-E14 negative-neighbor boundaries without shared key claims",
+    "Table 11 all nine SAMPLE fact/case IDs separated",
+    "Title style has no bottom border",
+    "SAMPLE/REAL boundary and no formal acceptance preserved"
+  ],
+  "tables": {
+    "count": 12,
+    "T2_rows": 8,
+    "T8_rows": 6,
+    "T11_rows": 10
+  },
+  "scope": "Deterministic OOXML/content/style QA only; Word visual inspection and independent exact-SHA semantic review are separate."
+}

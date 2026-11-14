@@ -1,0 +1,12 @@
+Independent bounded semantic delta review. Do not use GUI, Computer Use, file tools, browser, MCP, or any external action. Review only the supplied text facts; do not claim visual inspection or formal acceptance.
+
+Exact candidate: DOCX ID 0139, official requirement I19-E29, 157-list index 153; printed checkbox serial UNKNOWN.
+Exact candidate DOCX SHA-256 at dispatch: 9bb154830d7d3cf9790e3e43fd44e9af8b6e3a059b9e28fd910fca80c0e8e947
+Official source packet SHA-256: 3c9c310e086a86c03d38bea68bba1ca53bcb2fc927d8949fb6b91c45379d9d47
+Unique Blueprint SHA-256: 090169968e3df59a6cecaac665a99b2cb625a9cbc355bf84528d08b27c98052a
+Official source wording: 「證照通過率高及就業率大幅提升。」
+Parent R04 exact SHA: 0c3415ebe452fb2d7f343ec67878c03c6cff510c2f2aa94887cb2ddcdfb28601. Parent independent semantic review returned PASS, covering full requirement fit, genre, complete synthetic case, calculations, action/hold criteria, sample/real boundary, title-blind use and nearest-neighbor distinction. It noted Table 7 2024→2025 absence-rate delta as -8.34 pp from subtracting displayed rounded rates versus -8.33 pp from raw 1/12-2/12, calling both defensible.
+R05 logical diff is exactly two items, verified locally against the parent DOCX: (1) candidate label R04→R05; (2) Table 7, §7.3, 2024→2025 absence-rate percentage-point delta -8.34 pp→-8.33 pp. No dataset or other logical text changed.
+The report's declared rule is to calculate with unrounded values, then round to two decimals. Raw computation: (1/12 - 2/12) * 100 = -8.333333... percentage points, therefore the displayed result is -8.33 pp. The prior -8.34 pp came from subtracting 8.33%-16.67% rounded cells and violates that declared rule.
+Exact relevant R05 display: Table 7, row 「缺考率（%）」, 2024→2025 cell = -8.33 pp. The same report gives 2024 A=2 of n=12 (16.67%), 2025 A=1 of n=12 (8.33%); total 2023→2025 absence delta remains -11.67 pp.
+Question: On this exact SHA-bound delta, is the corrected value arithmetically right under the document's stated calculation rule, does the correction preserve the parent review's semantic conclusion, and is there any concrete remaining blocking issue introduced by these two changes? Return a concise independent verdict PASS/PARTIAL/FAIL for this delta only; state exact mathematical check and textual locator; explicitly say full-document review is inherited from parent R04 and you did not independently inspect the Word file or pages. Do not assert actual serving-model identity.

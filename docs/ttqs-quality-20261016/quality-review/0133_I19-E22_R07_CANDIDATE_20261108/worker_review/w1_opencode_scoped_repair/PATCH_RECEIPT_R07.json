@@ -1,0 +1,68 @@
+{
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS_ONE_0133_R06_SCOPED_LOCATOR_REPAIR_W1_BEAM_20261108",
+  "doc_id": "0133",
+  "requirement": "I19-E22",
+  "input_candidate": "INPUT_CANDIDATE_R06.docx",
+  "output_candidate": "OUTPUT_CANDIDATE_R07.docx",
+  "parent_candidate_sha256": "cceae5b8781fe503bd15993409ba616adb53a99d9923816d44afe019ee48b821",
+  "new_candidate_sha256": "a8cc1a7740c854fc3cad1dfa229bc829d54d12153b477c7049aafc5e62e0bfb2",
+  "parent_body_extract_sha256": "c03b6fb6f9959fe336385133316487b283ec6f44770fd8cc74e010e8750fd032",
+  "source_packet_sha256": "9aae753623921d3d582e7cadb1a64363063eabc54e697e53361b26e84f7d0b50",
+  "parent_candidate_bytes": 103935,
+  "output_candidate_bytes": 102898,
+  "changed_table": "Table 10 / synthetic-key replacement register (document table 15; section 10)",
+  "changed_column": "locator (second cell, document position)",
+  "changed_rows": [
+    {
+      "row_key": "SYN-0133-CORR-01",
+      "old_cell_text": "§9 更正示例",
+      "new_cell_text": "§8 更正示例"
+    },
+    {
+      "row_key": "SYN-LEARNER-014",
+      "old_cell_text": "§4 學員去重示例",
+      "new_cell_text": "§7 全合成去重示例"
+    },
+    {
+      "row_key": "SYN-CLASS-A",
+      "old_cell_text": "§4 去重示例",
+      "new_cell_text": "§7 全合成去重示例"
+    },
+    {
+      "row_key": "SYN-CLASS-B",
+      "old_cell_text": "§4 去重示例",
+      "new_cell_text": "§7 全合成去重示例"
+    }
+  ],
+  "other_content_changed": false,
+  "verification": {
+    "method": "in-place XML text-node replacement within word/document.xml; all other zip entries copied byte-identical",
+    "zip_entry_list_identical": true,
+    "non_document_zip_entries_byte_identical": true,
+    "document_xml_well_formed": true,
+    "body_table_count_unchanged": 18,
+    "document_w_t_node_count_unchanged": 724,
+    "changed_w_t_nodes": 4,
+    "changed_w_t_texts": [
+      [
+        "§4 學員去重示例",
+        "§7 全合成去重示例"
+      ],
+      [
+        "§4 去重示例",
+        "§7 全合成去重示例"
+      ],
+      [
+        "§4 去重示例",
+        "§7 全合成去重示例"
+      ],
+      [
+        "§9 更正示例",
+        "§8 更正示例"
+      ]
+    ],
+    "rendering_or_visual_comparison_performed": false
+  },
+  "scope_note": "Four-cell locator repair proposal only; no numeric, mapping, scope, usability, or SAMPLE/REAL changes claimed."
+}

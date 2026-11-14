@@ -1,0 +1,124 @@
+{
+  "schema": "TTQS_ONE_R12_LIVE_DELTA_0139_R07_V1",
+  "project_id": "TTQS_ONE",
+  "command": "TTQS_ONE_20261026_R12_FULL_RECOVERY_DELIVERY",
+  "observed_at_local": "2026-10-27T07:30:19.7180133+08:00",
+  "r12_source_blob_sha1": "63f26f0708249b211611d51b34a7fb90b4cd26a9",
+  "pr": 92,
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "remote_head_before_sync": "6e16e2546c381f7f9dad151625e15b4a1007782f",
+  "document": {
+    "doc_id": "0139",
+    "requirement_id": "I19-E29",
+    "unique_blueprint_index": 153,
+    "official_printed_checkbox_serial": "UNKNOWN",
+    "source_packet_sha256": "3c9c310e086a86c03d38bea68bba1ca53bcb2fc927d8949fb6b91c45379d9d47",
+    "unique_blueprint_sha256": "090169968e3df59a6cecaac665a99b2cb625a9cbc355bf84528d08b27c98052a",
+    "candidate_revision": "R07",
+    "candidate_sha256": "9e9f65b962f2a6b0e3b1a14c8d4615b6a70c98b140d672943adb5de636843241",
+    "candidate_bytes": 116366,
+    "state": "CANDIDATE",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN_HOLD",
+    "synthetic_rows": 34
+  },
+  "delta": {
+    "r06_formula_defect": "Two relative-change formula groupings were lost in rendered text",
+    "r06_repair": "Corrected equations; exact counts yield +16.36% exam pass-rate relative change and +66.67% employment-confirmation relative change",
+    "r07_repair": "Only stale R05 candidate label on page 23 changed to R07; 14 tables and all other body paragraphs are identical to R06",
+    "no_unnecessary_rebuild": true
+  },
+  "quality": {
+    "static": "PASS",
+    "word_native_export": "PASS",
+    "word_native_pdf_sha256": "82e6bee31a944e3e1b65b0c62e8297bb403fb934369729a8a3571641649757cb",
+    "pages": 23,
+    "visual": "PASS_DELTA_VISUAL_INHERITANCE",
+    "directly_inspected_r07_pages": [
+      23
+    ],
+    "pixel_identical_to_r06_pages": "1-22",
+    "r06_page9_visual": "Direct inspection after formula correction; R07 page 9 pixel-identical to R06",
+    "independent_semantic": "PENDING_R07_EXACT_SHA",
+    "r06_reviewer_result": "Reviewer-reported PASS bound only to R06 SHA 75e7a55461e3ffd067c154cfd48a4e67256bf432e379affcda84b2ed04e33938",
+    "r06_actual_serving_model": "UNKNOWN",
+    "minimum_body_pt": 10.5,
+    "minimum_table_pt": 9.5
+  },
+  "windows": {
+    "host": "DESKTOP-VMV4Q60",
+    "user": "DESKTOP-VMV4Q60\\J",
+    "observed_at": "2026-10-27T07:27:37.5229187+08:00",
+    "opencode_service_pid": 79496,
+    "opencode_service_is_writer": false,
+    "active_opencode_writer": "NONE_OBSERVED",
+    "active_antigravity_cli": "NONE_OBSERVED",
+    "winword_process_count": 52,
+    "winword_owner": "UNKNOWN",
+    "mass_termination": false
+  },
+  "automation": {
+    "goal_thread_id": "01a14098-b269-79e3-b07c-56e96557fe07",
+    "goal_status": "ACTIVE",
+    "thread_bound_id": "ttqs-one-hourly-quality-goal-resume",
+    "last_native_config_snapshot_interval_minutes": 120,
+    "last_native_config_snapshot_state": "ACTIVE at 2026-10-27T00:49 local snapshot",
+    "standalone_id": "ttqs-one-standalone-quality-resume",
+    "standalone_state": "PAUSED",
+    "standalone_pause_reason": "UNKNOWN",
+    "windows_supervisor": "DISABLED",
+    "natural_last_run": "UNKNOWN",
+    "natural_next_run": "UNKNOWN",
+    "natural_trigger": "UNKNOWN",
+    "native_view_fields_this_turn": "NOT_EXPOSED"
+  },
+  "other_documents": {
+    "doc_0133": {
+      "candidate_sha256": "25116afb8206e0828c8b3a4a763845a9c3e672a4cb49969a64a2a3737d87256b",
+      "local_remote_blobs": "4/4 MATCH",
+      "docx_rebuilt": false,
+      "semantic_scope": "OpenCode exact-SHA text PASS; visual is separate same-candidate evidence",
+      "formal_acceptance": "NOT_GRANTED"
+    },
+    "doc_0122": {
+      "candidate_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+      "local_remote_docx_blob": "4ff7c0c43593d6a2f732c2db605d4e7021e38cc3",
+      "review_response_blob": "c7002b2bd23b0b8a8befbfd3de1f1b8d74614bb7",
+      "reconciliation_blob": "2cb2ad227a7806d389b2d3e2963168d3f08672a6",
+      "review": "REVIEWER_REPORTED_PASS_TEXT_ONLY_EXACT_SHA_BOUND",
+      "actual_model": "UNKNOWN",
+      "fallback": "UNKNOWN",
+      "visual": "SEPARATE_SAME_SHA_RECEIPT",
+      "docx_rebuilt": false,
+      "formal_acceptance": "NOT_GRANTED"
+    },
+    "doc_0121": {
+      "candidate_sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+      "w2": "PASS_FULL_BODY_TEXT_ONLY_REVIEWER_REPORTED",
+      "actual_model": "UNKNOWN",
+      "visual": "SEPARATE_WORD_QA",
+      "w1": "429_FREE_LIMIT_NO_REVIEW_RESPONSE"
+    },
+    "doc_0135": {
+      "w1": "429_FREE_LIMIT",
+      "next_eligible_local": "2026-10-27T08:00:00.267+08:00",
+      "no_retry_before_release": true
+    }
+  },
+  "existing_r12_test_matrix": {
+    "path": "docs/ttqs-quality-20261016/reports/R12_20261027/R12_T01_T24_TEST_RESULTS.json",
+    "git_blob_sha1": "b214de0aea55c7741a361e46703bdc656ff25e98",
+    "result": "Existing matrix preserved; not rewritten",
+    "known_nonpass": "T01/T11 PARTIAL; T06/T13/T19 UNKNOWN; T15 FAIL_DUPLICATE_REVIEW_DISPATCH",
+    "other_statuses": "As recorded in exact source matrix"
+  },
+  "panel": {
+    "alignment": "UNKNOWN",
+    "ports_8765_8766": "OFFLINE in prior same-day native snapshot",
+    "source_readback": "NOT_ESTABLISHED"
+  },
+  "github_sync": {
+    "state": "PENDING_AT_RECEIPT_CREATION",
+    "readback": "Must compare local Git blob SHA-1 to remote API blobs after push"
+  }
+}

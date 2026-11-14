@@ -1,0 +1,65 @@
+{
+  "schema": "TTQS_INDEPENDENT_REVIEW_RECEIPT_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0092",
+  "requirement_id": "I17D-E06",
+  "official_checkbox_serial": "099",
+  "candidate_revision": "R03",
+  "candidate_sha256": "ed577847dba59d29cd1da0d1d64372a21ed07d8aee164ff044c3870ff958391b",
+  "review_route": "OpenCode v2 CLI",
+  "cli_version": "2.0.32",
+  "agent": "plan",
+  "requested_model": "opencode/mimo-v2.6-flash-free",
+  "session_model_metadata": {
+    "session_id": "ses_ea8e20b55ffeqL4P8BCJjleP1c",
+    "provider_id": "opencode",
+    "model_id": "mimo-v2.6-flash-free",
+    "variant": "default",
+    "agent": "plan",
+    "reported_cost": 0,
+    "provider_billing": "UNKNOWN",
+    "usage": {
+      "input": 16120,
+      "output": 3871,
+      "reasoning": 5802,
+      "cache": {
+        "read": 4736,
+        "write": 0
+      }
+    },
+    "actual_provider_model_attestation": false
+  },
+  "session_metadata_source": "native `opencode session export` readback; provider-side identity attestation is unavailable",
+  "exit_code": 0,
+  "review_verdict": "PASS_WITH_NONBLOCKING_OBSERVATIONS",
+  "review_scope": "Independent semantic and practical-utility review of the complete ordered text extraction in the exact-SHA review packet, cross-checked against official text, unique Blueprint, source map, and neighbor distinctions. Reviewer did not access/hash binary or view pages; local technical and visual QA are separate. Exact section/table locators given; page positions UNKNOWN.",
+  "review_input_packet_file": "0092_R03_INDEPENDENT_SEMANTIC_REVIEW_PACKET.md",
+  "review_input_packet_sha256": "4db7b87a7ffdb1c556b4172be44698c82ded87e77946f958cfe2fda3186aba67",
+  "raw_stdout_file": "opencode_0092_R03_review.stdout.json",
+  "raw_stdout_sha256": "637bde92b7002a1732b429220ab717e0fb10bab06d1db1624b848b034d071374",
+  "raw_response_file": "opencode_0092_R03_review_response.md",
+  "raw_response_sha256": "a0af0f250d295105407b785dd6c36abeaf1edf00fc7f06c9230adc6952cad288",
+  "stderr_file": "opencode_0092_R03_review.stderr.txt",
+  "stderr_bytes": 0,
+  "reported_usage": {
+    "input": 16120,
+    "output": 3871,
+    "reasoning": 5802,
+    "cache": {
+      "read": 4736,
+      "write": 0
+    }
+  },
+  "reported_cost": 0,
+  "provider_billing": "UNKNOWN",
+  "blocking_findings": [],
+  "nonblocking_observations": [
+    "Six of 27 replacement-register locators use paraphrased rather than verbatim target labels, but each resolves unambiguously by the value in its named section: F003, F005, F010, F011, F012, F017.",
+    "Section 9.3 future-use worksheet remains blank by design; explicit text says the blank cells do not represent past access or completed review.",
+    "R02/R03 version dates are packet/document assertions and are not independently verified as association events.",
+    "Reviewer cannot independently recompute DOCX binary SHA or page locations from text."
+  ],
+  "candidate_state": "CANDIDATE_SAMPLE_SYNTHETIC_NOT_ACCEPTED",
+  "formal_acceptance": "NOT_GRANTED",
+  "promotion_status": "NOT_PROMOTED"
+}

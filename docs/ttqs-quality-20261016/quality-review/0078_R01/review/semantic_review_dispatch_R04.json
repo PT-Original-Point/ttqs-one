@@ -1,0 +1,89 @@
+{
+  "schema": "TTQS_ONE_0078_SEMANTIC_REVIEW_DISPATCH_R04.v1",
+  "document_id": "0078",
+  "requirement_id": "I17B-E01",
+  "official_checkbox_serial": "084",
+  "candidate_docx_sha256": "95436f7d8d01ea4153084de90e5f6b7a50d6d34224dfdab5ebbe3d348e8b2b174",
+  "route": "OpenCode CLI v2",
+  "cli_version": "2.0.29",
+  "model": "opencode/beam-free",
+  "process_id": 42612,
+  "started_utc": "2026-10-19T10:09:35.739543+08:00",
+  "computer_use": false,
+  "review_only": true,
+  "prompt_sha256": "7f7509d81c6c1fa34d4783177ac1598f93772dded0e4de60e959d5717efbe75a",
+  "attached_inputs": [
+    {
+      "path": "review/semantic_review_prompt_R04.md",
+      "sha256": "7f7509d81c6c1fa34d4783177ac1598f93772dded0e4de60e959d5717efbe75a"
+    },
+    {
+      "path": "evidence/docx_extracted_R03.md",
+      "sha256": "dcdd9225ba9b8bfe00f57d4576c250b658b8bb3aeffcd14cf8b4dfb80483c6c0"
+    },
+    {
+      "path": "candidate/0078_R03_body.md",
+      "sha256": "f4c55be7ff1ee104c68813f9efd6d56d618025d7d9c516e1d6406a063e1f3e1d"
+    },
+    {
+      "path": "inputs/UNIQUE_BLUEPRINT_0078_R01.md",
+      "sha256": "5d64632062bd07a82e30bbc8480f836bd1d533e994fbdf395875cca7d219a5d7"
+    },
+    {
+      "path": "inputs/SOURCE_PACKET_0078_R01.md",
+      "sha256": "8f648688fef2292dfb4c72db70446e4d169425b827508767c37b9f00d0528ae0"
+    },
+    {
+      "path": "inputs/OFFICIAL_PAGE6_EXCERPT_R03.md",
+      "sha256": "914bf2cbe9844b5c26633c9d70f43897b617022300879e99e0714212a95b1844"
+    },
+    {
+      "path": "inputs/SYNTHETIC_ACTIVITY_INDEX_0078_R01.csv",
+      "sha256": "bab502803794d05cbff9538b10910209a58a46920ab7ece1e34c05671fba5f33"
+    },
+    {
+      "path": "inputs/SYNTHETIC_REPLACEMENT_REGISTER_0078_R01.csv",
+      "sha256": "f5c2e27ead45c768e395e7649614481fd938947c972d33ec71692b5bf7713230"
+    },
+    {
+      "path": "evidence/technical_review_R03.json",
+      "sha256": "3522d1a86ef9c3c86a3b0770333b29e769ba595fa8be5d41c409d5fb75aa873a"
+    },
+    {
+      "path": "evidence/visual_review_R03.json",
+      "sha256": "5c0b2df693b2e9895dbeace4d9bc0f4a2dc797372089fc7ea81a89171abfa339"
+    },
+    {
+      "path": "evidence/cross_document_sha_readback_R03.json",
+      "sha256": "c17dee8630a179213ddcaab723a9f0d8f954e2c15e7bb792aa58505b0dadfb4a"
+    }
+  ],
+  "status": "COMPLETED_VERDICT_RETURNED",
+  "stdout_path": "review/opencode_semantic_R04_stdout.txt",
+  "stderr_path": "review/opencode_semantic_R04_stderr.txt",
+  "completed_utc": "2026-10-19T10:10:32.072823+08:00",
+  "process_exit_code": "UNKNOWN_NOT_CAPTURED",
+  "candidate_docx_sha256_after_review": "95436f7d8d01ea4153084de90e5f6b7a50d6d34224dfdab5ebe3d348e8b2b174",
+  "stdout_sha256": "1c7a10dd481c8f3b2c74f03c878e4c16889e29b8d43f2a4ecb2a7d88b4e27b53",
+  "stdout_bytes": 3559,
+  "review_path": "review/independent_semantic_review_R03.md",
+  "review_sha256": "1c7a10dd481c8f3b2c74f03c878e4c16889e29b8d43f2a4ecb2a7d88b4e27b53",
+  "verdict": "PASS",
+  "scope_limitations": [
+    "Reviewer did not inspect page images; visual review is a separate receipt.",
+    "Reviewer noted DOCX text extraction flattens the §4.2 cards; body/visual evidence show the intended layout.",
+    "PASS applies to this synthetic candidate only; REAL photos, consent, sources and formal acceptance remain held."
+  ],
+  "session_id": "ses_eae141d9effeFTmAYfhVqNa4xU",
+  "usage_observed": {
+    "assistant_turns": 1,
+    "tool_calls": 0,
+    "input_tokens": 42578,
+    "output_tokens": 930,
+    "reasoning_tokens": 5815,
+    "provider_reported_cost": 0,
+    "basis": "sanitized OpenCode session export"
+  },
+  "session_finish": "stop",
+  "candidate_unchanged_after_review": false
+}

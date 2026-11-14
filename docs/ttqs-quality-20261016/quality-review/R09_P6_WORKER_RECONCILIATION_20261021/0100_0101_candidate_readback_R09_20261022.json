@@ -1,0 +1,35 @@
+{
+  "receipt_id": "TTQS_ONE_0100_0101_EXACT_CANDIDATE_READBACK_R09_20261022",
+  "observed_at_local": "2026-10-22T04:02:14+08:00",
+  "timezone_source": "Windows host local timezone; observed environment configured Asia/Taipei",
+  "remote_ref": "refs/remotes/origin/pr-92-head",
+  "remote_commit": "4259e2d1d06182f3958f87aca5412560881dbb74",
+  "readback_method": "git cat-file blob from freshly fetched PR head; compare raw bytes and SHA-256",
+  "documents": [
+    {
+      "doc_id": "0100",
+      "path": "docs/ttqs-quality-20261016/quality-review/0100_0101_R09_20261021/candidate/0100_I18-E08_R09.docx",
+      "local_bytes": 58574,
+      "local_sha256": "debd41e7ca1b18b88cad37db118c5b3474df411b3e2d1c87a8351d456245e0b2",
+      "remote_bytes": 58574,
+      "remote_sha256": "debd41e7ca1b18b88cad37db118c5b3474df411b3e2d1c87a8351d456245e0b2",
+      "expected_previous_sha256": "debd41e7ca1b18b88cad37db118c5b3474df411b3e2d1c87a8351d456245e0b2",
+      "exact_bytes_equal": true,
+      "expected_sha_matches": true,
+      "not_rebuilt": true
+    },
+    {
+      "doc_id": "0101",
+      "path": "docs/ttqs-quality-20261016/quality-review/0100_0101_R09_20261021/0101_final9/candidate/0101_I18-E08_R09_FINAL9.docx",
+      "local_bytes": 166586,
+      "local_sha256": "56f433e095f32378f2fd8241c1a27948d2bfe6748da003af5623d265885edb68",
+      "remote_bytes": 166586,
+      "remote_sha256": "56f433e095f32378f2fd8241c1a27948d2bfe6748da003af5623d265885edb68",
+      "expected_previous_sha256": "56f433e095f32378f2fd8241c1a27948d2bfe6748da003af5623d265885edb68",
+      "exact_bytes_equal": true,
+      "expected_sha_matches": true,
+      "not_rebuilt": true
+    }
+  ],
+  "status": "PASS_EXACT_REMOTE_BYTES_MATCH; candidates reused without rebuild"
+}

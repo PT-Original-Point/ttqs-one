@@ -1,0 +1,42 @@
+{
+  "source_sha256": "e6612f51f5025a52b0725064cd83b1140b018976113547aecd94dd31a53b9a7a",
+  "adopted_sha256": "32005e9477a3e650f779aa890306caef810e9dc84b98939c60a2e292f0b17da7",
+  "changes": [
+    {
+      "change": "complete_malformed_table_row",
+      "count": 1,
+      "old": "| 是否涉及保密或用途限制（是／否） |",
+      "new": "| 是否涉及保密或用途限制（是／否） | ____________________ |"
+    },
+    {
+      "change": "complete_authorization_field",
+      "count": 1,
+      "old": "| 使用授權狀態（已取得／未取得／待釐清） |",
+      "new": "| 使用授權狀態（已取得／未取得／待釐清） | ____________________ |"
+    },
+    {
+      "change": "complete_restricted_location_field",
+      "count": 1,
+      "old": "| 不適合公開之細節之受限位置 `[受限]` |",
+      "new": "| 不適合公開之細節之受限位置 `[受限]` | ____________________ |"
+    },
+    {
+      "change": "clarify_missing_original_start_state",
+      "count": 1,
+      "old": "`HOLD_NO_ORIGINAL` 是**唯一起點狀態**，用於一切缺件情形；",
+      "new": "未收到原件時，起始狀態是 `HOLD_NO_ORIGINAL`；"
+    },
+    {
+      "change": "qualify_native_sender_file",
+      "count": 1,
+      "old": "| `SENDER_NATIVE_FILE` | 由寄件者直接發出之原生電子檔 | 不適用 | 是 |",
+      "new": "| `SENDER_NATIVE_FILE` | 寄件者提供之原生電子檔（來源仍須獨立核驗） | 不適用 | 是 |"
+    },
+    {
+      "change": "limit_public_hash_disclosure",
+      "count": 1,
+      "old": "| **公開證據包** | 去識別化證據代碼、檔案雜湊、必要核驗摘要 | 可對外之證據包 |",
+      "new": "| **公開證據包** | 經授權可公開之去識別化代碼及摘要；檔案雜湊依資料規則核准後提供 | 可對外之證據包 |"
+    }
+  ]
+}

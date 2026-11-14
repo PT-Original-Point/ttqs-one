@@ -1,0 +1,41 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0137",
+  "requirement_id": "I19-E27",
+  "checkbox_index_157": 151,
+  "parent_r01_sha256": "7271c89f59aab0455b72a5b17cb55da2eb6ea6c3a162214418930f9c924484f3",
+  "source_packet_sha256": "7597c1346607c7c218bca7b9d92bbcd6fa4cfbba25bc793a6ff30e2b26e6b733",
+  "unique_blueprint_sha256": "7590fe026b53010cd40664d23f53880e7c717a6e93c6f19d59212ef5312d6cf9",
+  "revision_chain": [
+    {
+      "revision": "R02 pre-metadata correction",
+      "sha256": "943b0aeb321f47b9fd0dd2f79b4bf579ebbca0de26b2699f93f7c36588da0c15",
+      "status": "SUPERSEDED_BY_LOCATED_FIRST_PAGE_VERSION_LABEL_FIX"
+    },
+    {
+      "revision": "R02 final",
+      "sha256": "3899167f0437ec76df42e6229685564d910250c6a822b627ec15b5f9cfcfecc8",
+      "status": "CURRENT_CANDIDATE"
+    }
+  ],
+  "bounded_changes": [
+    "explicit negative neighbors 0139/I19-E29 and 0126/I19-E14 in Table 2/Table 8 with separate-source/no-shared-key rule",
+    "slashes between nine SYN-0137-Fxx and SYN-0137-CASE-01 identifiers in Table 11",
+    "remove title style bottom border and compact Table 2/Table 8 and conclusion to eliminate extra page",
+    "correct first-page candidate version cell R01 to R02"
+  ],
+  "quality": {
+    "technical": "PASS",
+    "layout": "PASS_ALL_9_PAGES",
+    "independent_semantic_delta": "PASS_DELTA_ONLY",
+    "real_media_source": "UNKNOWN/HOLD",
+    "formal_acceptance": "NOT_GRANTED",
+    "unchanged_scope_semantic": "INHERITED_R01_EXACT_SHA_PASS",
+    "full_fresh_r02_semantic": "NOT_PERFORMED"
+  },
+  "updated_at_tpe": "2026-10-25T15:57:32.304189+08:00",
+  "semantic_receipt_sha256": "d9e6bffff9af32d898aafbf8b9c0d187955192ccd65c67a8d0f7c5c89015dde7",
+  "semantic_raw_response_sha256": "637d9e7617addff2de98feacfa3662bd15cbe84f4d352baaed146600675acc26",
+  "baseline_semantic_receipt_sha256": "9c67ef2ab5ba5d0a80d3ec360028c13337307b4589346452d227c96d2220feaa",
+  "source_packet_metadata_issue": "R01 source packet blob 64c985043ac491a5ba47521e7381fe4969cc14b9 contains literal +REF+; R02 traceability uses pinned manifest and source blobs."
+}

@@ -1,0 +1,14 @@
+# DOCX 0055 R02 review receipt
+
+- **State:** CANDIDATE; formal Human acceptance and real appointment evidence are not granted.
+- **Official mapping:** DOCX 0055 → I12-E03 → official checkbox 058, page 4 indicator 12c. These identifiers are distinct.
+- **Candidate SHA-256:** `2d69f2e515c424a8717bfb189e8c9de861580d636fafd82f79d332bab8cfe827` (unchanged during visual and semantic review).
+- **Rendered PDF:** 11 pages, SHA-256 `055d6453ada9a6ae077174ffd1cfb6cb7837e64176f8c43036c6ea163073f5e0`.
+- **Writer recovery:** Three OpenCode v2 free-model calls built R02 and applied two specific page-break repairs; each exited 0. Native usage totals: 202,922 input / 22,435 output / 43,018 reasoning / 2,236,544 cache-read tokens; reported cost USD 0. Session IDs, per-run candidate SHAs, raw logs and output hashes are in `review/opencode_writer_R02/execution_receipt_R02.json`.
+- **Technical/layout:** PASS; OOXML valid; 26 tables; body minimum 10.5 pt; table minimum 9.5 pt; 13 sections; calculations and 360-minute plan pass.
+- **Direct visual review:** PASS; all 11 rendered pages inspected across three contact sheets; pages 8–10 additionally checked at original resolution. No blank/duplicate pages, clipping, overlap, or unreadable tables. Details in `evidence/visual_review_R02.json`.
+- **Independent semantic review:** OpenCode CLI v2.0.29, free model `opencode/glm-5.3-flash-free`; reviewer verdict PASS with nonblocking notes. Raw response and native CLI results are retained in `review/opencode_independent_review_R02/`. Reviewer input was bound to the exact candidate SHA and original register SHA. Exact candidate SHA was independently recomputed locally before and after review.
+- **Register correction after review:** 52-row CSV retained. FAC-0055-015–017 now identify S-C01–03 as sample indexes without attached resume/qualification files; FAC-0055-038 now lists synthetic roles P-01, M-01/M-02/M-03 and S-01. Corrected register SHA: see `evidence/TECHNICAL_LAYOUT_QA_R02.json`.
+- **Nonblocking note:** The unique Blueprint's tie-break rule is not restated in R02; the three sample totals are distinct. The candidate is not an adopted real-world policy and remains subject to Human review.
+- **Cross-document check:** Same-case facts agree with the four linked source DOCX. Local negative-neighbor comparison: 0053 R03 is the I12-E01/056 fit-and-adjustment report (SHA `cc75583238dba42eede61de990992770f8de75e96d1bcfe1313e57629551f8e8`); 0054 R14 is the I12-E02/057 learner/material selection and review procedure (SHA `3d000e580b9cb1247fd984ebb0c8f5f817fce08ce7c368cc1799c95a111a979c`). R02 remains a separate instructor selection/appointment package.
+- **Antigravity attempt:** No review verdict. The CLI returned an empty response after `read_file` permission denial; no permission bypass was used and no Computer Use occurred. See `review/antigravity_review_R02/attempt_receipt.md`.

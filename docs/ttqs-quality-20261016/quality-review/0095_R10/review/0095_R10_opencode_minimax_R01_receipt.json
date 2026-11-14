@@ -1,0 +1,123 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0095",
+  "requirement_id": "I18-E02",
+  "revision": "R10",
+  "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "reviewer_route": "OpenCode CLI v2.0.32",
+  "requested_model": "opencode/minimax-m3.1-flash-free",
+  "session_model_id": "minimax-m3.1-flash-free",
+  "session_id": "ses_ea6a9ccbcffe4ymF4O3XEyws5m",
+  "provider_model_identity": "UNKNOWN",
+  "exit_code": 0,
+  "verdict": "PARTIAL",
+  "blocking_findings": 0,
+  "nonblocking_findings": [
+    {
+      "id": "NB-R10-01",
+      "severity": "LOW_MEDIUM",
+      "title": "§10.1 附件 A prints the register CSV SHA-256 as a 65-character string that does not equal the bound value"
+    },
+    {
+      "id": "NB-R10-02",
+      "severity": "LOW_MEDIUM",
+      "title": "Replacement-register row-level PDF page anchors and the manifest page_locator_basis are anchored to the 43-page R08 export and are one page behind the current 44-page R10 export for all chapter-6-and-later entries"
+    },
+    {
+      "id": "NB-R10-03",
+      "severity": "LOW",
+      "title": "Three §1.4 locator spans remain imprecise against the current 44-page R10 export"
+    },
+    {
+      "id": "NB-R10-04",
+      "severity": "INFORMATIONAL",
+      "title": "R10's own QA chain is open at the semantic receipt by design"
+    },
+    {
+      "id": "NB-R10-05",
+      "severity": "INFORMATIONAL",
+      "title": "Improvement-candidate robustness continues to rest on a 14-respondent synthetic learner sample and a 5-respondent synthetic customer sample"
+    }
+  ],
+  "review_scope": "Packet-only independent semantic review of the R10 candidate for DOCX 0095 / I18-E02. All findings derive solely from the packet-supplied current R10 Word-exported PDF text (44 pages), the supplied R08 replacement-register CSV body (211 rows, 13 columns), the supplied register manifest, the Unique Blueprint and source binding, the R08 exact-SHA review and the deterministic R06/R08 register key-set reconciliation, the R09 exact-SHA review response and targeted repair manifest, and the R10 technical / visual / font-floor receipts (scope only). No shell, filesystem, browser, GUI, DOCX-binary rehash, PDF re-render, or visual inspection was performed or claimed; no prior PASS was inherited from the builder or from the R08/R09 reviews, and each R08/R09 finding was re-derived from the current R10 text. The DOCX SHA-256 4c52fe99…ee3630 is bound as the review target exactly as supplied by the packet and was not independently rehashed. This review assesses semantic content only; it is not a TTQS assessment, not a score, and not formal association acceptance. The candidate remains CANDIDATE.",
+  "reviewed_sha256": "4c52fe99188b726f1e62754484aec8604abae83d73643c46a263f7e6a7ee3630",
+  "pdf_sha256": "de40911be70a852798e285141b7f8536c7ae48c4e2285a715685d5d74bd65b4d",
+  "packet_sha256": "040daf98a877c873c836c2e992c5a9e0388ba810ddde5741f5e3a62ec4e5246c",
+  "raw_stdout_sha256": "e5a5f866463fc6bb825a3aa71304a764283814e8a24d77042af0b68a27a64682",
+  "normalized_response_sha256": "6fe4399f240b92cd7f19e742376ebe46eb139dfe175c0ba0f0b6ba5da85f8ffd",
+  "r08_finding_disposition": [
+    {
+      "id": "R08-01",
+      "disposition": "PARTIALLY_CLOSED",
+      "exact_locator": "§1.4 evidence-locator table, PDF p.4, third column (文件證據定位), rows 1–4; actual section locations in the current 44-page export: §4.1 p.10, §4.2 p.13, §4.3 p.17, §5.1 pp.20–21, §5.2 p.21, §6.1 p.23, §6.3.3 p.27, §6.4 pp.28–29, §6.4.1 p.29, §7.1 p.30, §7.2 pp.30–32, 附圖 A pp.32–33, §7.3/§7.4 p.33, §8.1–§8.5 pp.34–37, §9.5 pp.38–41, §10 pp.41–44",
+      "rationale": "The defect R08-01 named is fixed: §7.3–§7.4 is cited to the single page where both headings print (p.33), and the R08 row-1/row-2 spans for §4.1/§4.2/§4.3 and §2–§3 now agree with the observed section starts in the 44-page export. The table is also itemised per section and self-limited by the pagination-anchor warning at PDF p.5 and the R08 lineage note at p.41. It is not fully closed because three spans remain mis-anchored: '§5.1 → p.20' omits §5.1's closing paragraph on p.21; '§5.2 → pp.21–22' includes p.22, which opens chapter 6; and '§9.5 → pp.38–40' omits §9.5's closing paragraph on p.41. These are audit-trail precision defects in the document's primary navigation table, not false pointers, so the finding is marked PARTIALLY_CLOSED and the residuals are itemised as NB-R10-03."
+    },
+    {
+      "id": "R08-02",
+      "disposition": "CLOSED",
+      "exact_locator": "CSV body row SYN-0095-CUSTOMER_VALID_RETURN_SHARE (fact_status DERIVED_SYNTHETIC_METRIC, fact_type rate, value 83.3, unit percent, document_location '§6.3.2 …；PDF p. 28'); deterministic R06/R08 register lineage countercheck in the packet; §10 lineage sentence PDF p.41 ('208 − 3 + 6 = 211；205 = 208 − 3'); manifest r06_historical_row_count 208, r08_current_rows_from_r06 205, r08_added_unknown_index_rows 6, retired_r08_rows 3, row_count 211",
+      "rationale": "R08-02 alleged an uncounted added key. The exact key set disproves it: SYN-0095-CUSTOMER_VALID_RETURN_SHARE is present in the supplied current CSV body and in the R06 row quoted in the packet's deterministic R06/R08 key-set reconciliation with identical fact_status, fact_type, value and unit (only document_location gained a page locator), so it is among the 205 retained keys and is neither an addition nor a retirement. The complete key-set difference is exactly the three listed removals and six listed UNKNOWN additions, and I confirmed by counting the supplied body that it holds 211 rows with 13 columns and status counts 134/13/7/4/53. I therefore do not repeat the allegation. The R10 body additionally closes the lineage arithmetic on its face by naming the 208-key R06 base, so the presentational gap R09 identified is also resolved."
+    },
+    {
+      "id": "R08-03",
+      "disposition": "CLOSED",
+      "exact_locator": "§4.1 PDF p.10, block 【未提供任何經核實並核定的真實班次識別碼；下列代碼僅為合成示範】 immediately above the blank REAL 班次編號 field; §4.1 PDF p.11, 示範班次代號（SAMPLE／SYNTHETIC 合成值；未核定，非正式班次）: SYN-TRN-01 and 示範培訓日期 2026-07-11; §4.2 PDF p.14, same block; §4.2 PDF p.15, 示範填答日期（SAMPLE／SYNTHETIC 合成值，非真實施測結果）：2026-07-11 above the four blank REAL date fields with the no-backfill instruction",
+      "rationale": "R08-03 flagged that a literal 'no approved class identifier' statement sat one line above a filled-in synthetic identifier and a pre-filled sample date, creating a residual risk of the sample value being read as an administration fact. R10 (unchanged from R09 here) has closed this: each instrument states in a header block that no verified and approved real class identifier is provided and that the following code is synthetic only; the sample class code and the sample dates are individually labelled SAMPLE／SYNTHETIC／未核定／非正式班次／非實際辦訓日期; every REAL field is blank with format instructions; the 欄位分區說明 legend states the sample sheet leaves every REAL field blank; and the form explicitly forbids back-filling the sample date into the REAL fields. The wording risk R08-03 identified is not present in the current text."
+    },
+    {
+      "id": "R08-04",
+      "disposition": "OPEN",
+      "exact_locator": "§10.1 附件 D (0095_R10_CANDIDATE.pdf; 'PDF SHA-256 及頁數由同套件最終 QA 清冊綁定') and 附件 E ('R10 各收據須明列 DOCX exact SHA…本索引不自行宣告 PASS，R10 收據於本版製稿時待執行'), PDF p.42; §10.2 R10 row PDF p.43 ('R10 仍為 CANDIDATE；本版 own exact-SHA QA 待執行'); manifest state CANDIDATE_QA_PENDING",
+      "rationale": "This is a workflow state rather than a document-body defect and it remains open by design: the candidate's own QA chain is open at the semantic receipt for R10, Attachment D binds the Word-exported PDF only through an external final-QA list, and the body consistently refuses to self-declare PASS, deferring the independent result to the external package receipt bound to this version's DOCX SHA. The packet now supplies R10 technical, visual and font-floor receipts, so the body's '待執行' statement is conservative and stale-by-drafting-time rather than false, and the semantic receipt is what this review constitutes. I record it as OPEN because the R10 semantic receipt did not exist in the supplied evidence when the candidate body was written; it is not counted as a material semantic defect and does not affect the body assessment."
+    },
+    {
+      "id": "R08-05",
+      "disposition": "CLOSED",
+      "exact_locator": "§7.2 低分回覆計數與敏感度註記, PDF p.32 (L-03 非正向 4 份: 1 份 2 分 SYN-L14, 2 份 3 分 SYN-L04/SYN-L11, 1 份未逐筆識別; 情境演算 n=13, 總分 53, 平均約 4.08, 10/13＝76.9%, 差距收斂為 8.8 個百分點與 0.07 分; 目標客戶端 n=5 每題各 1 份非正向回覆，單一填答者對應 20 個百分點); §7.3 items 1–4, PDF p.33; §7.4, PDF p.33; §6.4 追蹤遺漏處理, PDF p.28; §8.4 PDF p.35; §8.5 PDF pp.36–37",
+      "rationale": "R08-05 concerned the residual inherent limitation of a 14-respondent synthetic sample and of the customer track's n=5 giving each respondent 20 percentage points of influence. R10 keeps both sensitivities disclosed with causes UNKNOWN and an explicit prohibition on inferring group differences: the L-03 single-2-point scenario is recomputed and shown not to change the P1 ordering and is expressly not a re-test result nor a basis for excluding the response; the customer20-point effect is stated with the reading limit that the five facets share the same 4/5 positive count and therefore cannot be read as agreement or representativeness. §7.3 adds small-sample, nonresponse-causality and paired-subset limits, §6.4 excludes the two unpaired learners from the paired denominator without treating them as failures, and §8.4/§8.5 keep cause, owner, deadline and status UNKNOWN or blank. The limitation is disclosed rather than concealed and the R10 repairs did not alter any of this text, so the finding is closed; the underlying small-sample limitation persists as an inherent property of the SAMPLE/SYNTHETIC design and is carried as NB-R10-05 and in unknowns."
+    }
+  ],
+  "r09_finding_disposition": [
+    {
+      "id": "NB-R09-01",
+      "disposition": "PARTIALLY_CLOSED",
+      "exact_locator": "§1.4 locator column, PDF p.4, rows 1–4, third column; actual locations in the supplied 44-page export: §2.1 p.5, §2.4 p.6, §3.1 p.6, §3.2 pp.7–9, §4.1 pp.10–13, §4.2 pp.13–17, §4.3 pp.17–19, §5.1 pp.20–21, §5.2 p.21, §6.1–§6.4 pp.23–29, §6.3.3 p.27, §6.4.1 p.29, §7.1 p.30, §7.2 pp.30–33 (附圖 A pp.32–33), §7.3/§7.4 p.33, §8.1–§8.5 pp.34–37, §9.5 pp.38–41, §10 pp.41–44",
+      "rationale": "I re-derived every §1.4 locator against the current 44-page export rather than reusing R09's 43-page anchors. All four spans R09 named as defective are repaired: §5.1 now points to p.20 (its heading and the complete dictionary table, SUB_SUPPRESS included, print on p.20 after the R10 layout repair), §6.3.3/§6.4/§6.4.1 are itemised to p.27 / pp.28–29 / p.29 and match the observed headings, §7.1/§7.2 are itemised to p.30 / pp.30–33 with 附圖 A at pp.32–33, and §2.1–§2.4 → pp.5–6 now fully contains the §2.4 boundary table that R09 found completing later. The §7.3–§7.4 → p.33 pointer remains correct. The finding is not fully closed because three residual spans remain imprecise against the 44-page export: '§5.1 → p.20' omits §5.1's closing paragraph on p.21; '§5.2 → pp.21–22' includes p.22, which opens chapter 6; and '§9.5 → pp.38–40' omits §9.5's closing paragraph on p.41 (the same one-page drift is visible in the document's own cross-reference at p.38, where §9.5 row 3 states '索引本列見 PDF p.39' although that row prints on p.38). These are navigation-precision defects in the audit trail, not false pointers, so NB-R09-01 is PARTIALLY_CLOSED and the residuals are itemised as NB-R10-03."
+    },
+    {
+      "id": "NB-R09-02",
+      "disposition": "CLOSED",
+      "exact_locator": "§10 body PDF p.41 ('R06 原有 208 個鍵；R08 移除 3 個…保留其餘 205 鍵，再新增 6 個 UNKNOWN 升格索引鍵，故清冊為 208 − 3 + 6 = 211 筆資料列、13 欄'); R08 補充說明 (3) PDF p.41 ('R06 原有 208 鍵…205 = 208 − 3…208 − 3 + 6 = 211；R06、R07 歷史 CSV 與 manifest 均維持原件，不回溯改寫'); manifest r06_historical_row_count 208, r08_current_rows_from_r06 205, r08_added_unknown_index_rows 6, retired_r08_rows 3, row_count 211, column_count 13",
+      "rationale": "R09's finding was that the §10 lineage sentence gave 205 + 6 − 3 without naming the 208-key R06 base, so it did not visibly close to the delivered 211 rows. R10 repairs this in two places, not one: both the §10 body paragraph and the R08 補充說明 (3) now state the R06 base of 208 keys, the removal of 3 merged/pooled keys, the 205 retained keys and the 6 added UNKNOWN index keys, and both print the closing equation 208 − 3 + 6 = 211 with 205 = 208 − 3. I independently verified the arithmetic against the supplied CSV body (211 rows, 13 columns, three retired keys absent, six added UNKNOWN keys present, contested key retained) and against the manifest, so the lineage now closes on its face and no row is unaccounted for."
+    },
+    {
+      "id": "NB-R09-03",
+      "disposition": "CLOSED",
+      "exact_locator": "§9.5 row 6, PDF p.39 ('共 40 個題項鍵；另有 5 個分軌分母／回收衍生鍵（SYN-0095-LEARNER_RETURN_RATE、LEARNER_VALID_RATE、CUSTOMER_RETURN_RATE、CUSTOMER_VALID_RATE、CUSTOMER_VALID_RETURN_SHARE）及 8 個訓後追蹤計算鍵。全清冊共 53 個 DERIVED_SYNTHETIC_METRIC 鍵'); CSV body derived rows; manifest fact_status_counts.DERIVED_SYNTHETIC_METRIC 53",
+      "rationale": "R09 found that §9.5 row 6 stated '40 列' for the derived item-metric subset while its own parenthetical named only two of the four derived rate keys, leaving SYN-0095-LEARNER_VALID_RATE and SYN-0095-CUSTOMER_VALID_RATE outside the sentence and making the '40' read as the whole derived population. R10 now names all five rate keys explicitly and re-scopes the count as '共 40 個題項鍵' alongside '5 個分軌分母／回收衍生鍵' and '8 個訓後追蹤計算鍵', summing to 53. I verified this by counting the actual CSV body by key name rather than by inheriting the categories: 10 items × 4 (SUM/MEAN/POSN/POSRATE) = 40 item-metric keys, 5 rate keys and 8 follow-up keys = 53 DERIVED_SYNTHETIC_METRIC rows, equal to the manifest count, with every stated value matching my recomputation."
+    },
+    {
+      "id": "NB-R09-04",
+      "disposition": "CLOSED",
+      "exact_locator": "§10.1 附件 E, PDF p.42 ('R09 exact-SHA 收據已完成；R09 外部語意審查為 PARTIAL、0 blocking、5 nonblocking…provider model identity UNKNOWN…本索引不自行宣告 PASS，R10 收據於本版製稿時待執行'); §10.2 R09 row PDF p.43 ('R09 exact-SHA OpenCode review 為 PARTIAL、0 blocking、5 nonblocking…provider model identity UNKNOWN；本件仍為 CANDIDATE'); §10.2 R10 row PDF p.43 ('R10 仍為 CANDIDATE；本版 own exact-SHA QA 待執行'); closing statement PDF p.44",
+      "rationale": "R09 asked for two things: that the historical R09 exact-SHA receipt and result be recorded faithfully, and that R10 not self-declare its own QA complete in the body. Both hold in the current R10 text. 附件 E records the R09 receipt as completed with the result PARTIAL, 0 blocking, 5 nonblocking, the response and receipt paths, the requested route and provider model identity UNKNOWN, and the packet-only/no-visual/no-rehash scope — all consistent with the R09 receipt in the packet. R10's own receipts are recorded as 待執行 and the document states expressly 本索引不自行宣告 PASS, repeats that the independent semantic result must come from the external package receipt bound to this version's DOCX SHA (PDF p.43), and the closing statement on p.44 again restricts the review to the specified exact SHA and disclaims association approval. Manifest state remains CANDIDATE_QA_PENDING. The only residual is informational (NB-R10-04): the body statement is conservative relative to the R10 technical/visual receipts now supplied in the package."
+    },
+    {
+      "id": "NB-R09-05",
+      "disposition": "CLOSED",
+      "exact_locator": "§7.2 低分回覆計數與敏感度註記, PDF p.32; §7.3 items 1–4, PDF p.33; §7.4, PDF p.33; §6.4 追蹤遺漏處理, PDF p.28; §6.3.3, PDF p.27; §1.3 item 2, PDF p.2; §8.5, PDF pp.36–37",
+      "rationale": "R09 asked that the improvement candidate's robustness not rest on the 14-respondent learner sample and 5-respondent customer sample without disclosure. The R10 text keeps the same disclosures unchanged: the L-03 single-record sensitivity is recomputed (n=13, sum 53, mean ≈4.08, 10/13＝76.9%, gap narrowing to 8.8 points and 0.07 points, P1 unchanged) with the explicit statements that it is a情境演算, not a re-test result and not a basis for excluding the response; the customer track's 20-percentage-point-per-respondent effect is stated; nonresponse reasons are UNKNOWN with no bias direction inferred; the n<5 suppression rule is defined and no sub-group data is published; the paired sub-set is limited to 12 records with the other 2 excluded rather than treated as failures; §6.3.3 forbids pooling or cross-group comparison; §1.3 separates satisfaction from performance; and §8.4/§8.5 keep cause, owner, deadline and status UNKNOWN or blank. The samples are therefore disclosed and are nowhere promoted as association performance, and no R10 repair broadened the evidential claim. The inherent limitation itself persists as NB-R10-05 and in unknowns."
+    }
+  ],
+  "limitations": [
+    "Packet-only review: no shell, filesystem, browser, GUI or other tooling was used or attempted; no DOCX binary rehash, no PDF re-render, no DOCX XML extraction, no font-size or layout measurement, no spreadsheet or calculation engine.",
+    "No visual inspection of the 44-page export was performed; every page, table, row, cell and heading reference above is read from the packet's page-bounded PDF text. Image presence or absence (including whether 附圖 A exists as a drawn object), typography, column fit, orphan headings and blank pages could not be confirmed, and I did not re-inspect the R10 contact sheets or page images; where I refer to the R10 visual receipt's statements, they are cited as receipt claims.",
+    "All arithmetic was recomputed by hand from the raw response rows printed in §6.1, §6.2 and §6.4 and the full CSV body reproduced in the packet; register rows, status classes and key names were counted by reading the supplied body rather than by executing code.",
+    "SHA-256 values (DOCX, PDF, CSV, manifest, official sources, Blueprint row) were compared for internal consistency only and were not independently recomputed; the reviewed DOCX SHA is bound exactly as supplied by the packet.",
+    "Findings are bound to the DOCX SHA-256 4c52fe99…ee3630 as supplied. Any re-export, re-layout or content change invalidates this verdict and requires a new exact-SHA review.",
+    "This is a semantic review of the supplied candidate only. It is not a TTQS assessment, not a score, not an evaluation of the association's real practice, and not formal association acceptance. The deliverable remains CANDIDATE.",
+    "R08's and R09's findings were reassessed independently from the current R10 text and the deterministic R06/R08 key-set reconciliation; where the reconciliation or the key set contradicts an allegation (R08-02), the allegation was not repeated, and no prior artefact was rewritten in the process."
+  ],
+  "formal_acceptance": "NOT_ASSERTED",
+  "created_local": "2026-10-20T20:53:03.0540471+08:00"
+}

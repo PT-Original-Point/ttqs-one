@@ -1,0 +1,41 @@
+{
+  "work_id": "TTQS_ONE_0109_R14_W1_MIMO_FULL_SEMANTIC_REVIEW_20261031_01",
+  "doc_id": "0109",
+  "worker": "W1 OpenCode CLI",
+  "requested_model": "opencode/mimo-v2.6-flash-free",
+  "actual_model": "UNKNOWN_NOT_PROVIDER_IDENTITY_VERIFIED",
+  "fallback": "NOT_OBSERVED",
+  "candidate_sha256": "6f846e1737ff0d9b8baf40f459071f9258d51c267935d95222a89e7a05804a63",
+  "packet_sha256": "5a113f11bc92be8fa9d84d9b1a647754d70f1bc7b7f33e334099f19f4d3f0837",
+  "candidate_unchanged": true,
+  "session_id": "ses_e6fe55e00ffeQvjRBkDf530T9f",
+  "pid": 113776,
+  "process_state": "EXITED",
+  "exit_code": "UNKNOWN_NOT_CAPTURED_AT_PROCESS_EXIT",
+  "started_at": "2026-10-31T11:57:06.5147083+08:00",
+  "ended_at": "2026-10-31T12:00:16.0000000+08:00",
+  "status": "COMPLETED_PASS",
+  "verdict": "PASS",
+  "review_scope": "full extracted body semantic/usability review; official I18-E17/Blueprint/crosswalk fit; negative neighbors; dates/denominators/math; sample/real; privacy; operations and rejection/hold; reviewer did not independently rehash DOCX binary or repeat visual review",
+  "nonblocking_findings": [
+    "D-1: one body citation omits the word 網站 from crosswalk display name; reviewer calls nonblocking and recommends a one-word correction",
+    "D-2: executive summary does not explicitly name intended reader; optional/nonblocking",
+    "Visual and technical gates rely on exact-SHA receipts, not this semantic reviewer"
+  ],
+  "step_tokens": {
+    "input": 23308,
+    "output": 3142,
+    "reasoning": 5548,
+    "cache": {
+      "read": 4480,
+      "write": 0
+    }
+  },
+  "step_cost": 0,
+  "stdout_sha256": "d6d8d95020aa3b4e1e09ef22da80b7e3b38ab865aa829bc5a968f05c03f9fddf",
+  "stderr_bytes": 0,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "response_sha256": "6471cbcd40807a2f61af47862eb34e423b63de4a986965b88c08cd97ff0e237e",
+  "candidate_modified": false,
+  "result_adopted": true
+}

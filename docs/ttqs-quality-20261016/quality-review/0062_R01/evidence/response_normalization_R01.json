@@ -1,0 +1,41 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0062",
+  "requirement_id": "I14-E03",
+  "official_checkbox": "067",
+  "worker": "OpenCode v2",
+  "model_requested": "opencode/deepseek-v4.1-flash-free",
+  "writer_response_sha256": "334CCD97ECB3C13D0FC8FB27E1C1BC72C5E5863D5CD63DE07E537D547F5B0EB1",
+  "normalized_body_sha256": "B6F17FDB213DEDF297C7981FA9C3AB0220C91779760D69879DAF799E1735CA82",
+  "normalization_actions": [
+    "修正候選示範錯字",
+    "將識別欄位與案例代碼改為人類可讀名稱",
+    "移除內部來源階層、代理人代碼及序列化狀態術語",
+    "將首頁規格改成評核者可直接操作的快速查核順序",
+    "重寫真實資料進件及退件條件為人類用語",
+    "將快速查核章節轉為實際操作步驟並補正段落換行",
+    "修正案例代碼的 Markdown 標記",
+    "修正文句中的案例代碼標示"
+  ],
+  "checks": {
+    "no_doc_id": true,
+    "no_forbidden_blank_word": true,
+    "no_agents": true,
+    "no_build_owner": true,
+    "no_requirement_id": true,
+    "markers_each_once": {
+      "T-0062-09": 1,
+      "T-0062-06": 1,
+      "T-0062-07": 1,
+      "T-0062-08": 1,
+      "T-0062-02": 1,
+      "T-0062-05": 1,
+      "T-0062-03": 1,
+      "T-0062-10": 1,
+      "T-0062-04": 1,
+      "T-0062-02R": 1,
+      "T-0062-01": 1
+    }
+  },
+  "status": "NORMALIZED; TABLES_AND_DOCX_QA_PENDING"
+}

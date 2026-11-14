@@ -1,0 +1,80 @@
+{
+  "receipt_id": "TTQS-I18E08-DOC0101-R09-FINAL9-SEMANTIC-DELTA-REVIEW",
+  "work_id": "TTQS-I18E08-DOC0101-R09-FINAL9-SEMANTIC-DELTA-CLOSURE-20261023",
+  "doc_id": "0101",
+  "requirement_id": "I18-E08",
+  "internal_157_index": 109,
+  "official_printed_checkbox": "UNKNOWN",
+  "candidate_sha256": "56f433e095f32378f2fd8241c1a27948d2bfe6748da003af5623d265885edb68",
+  "reviewer": "OpenCode v2 CLI; same reviewer context as full final8 baseline; independent from Writer",
+  "requested_model": "opencode/deepseek-v4.1-flash-free",
+  "actual_serving_model": "UNKNOWN",
+  "native_session_id": "ses_ea14a8d52ffeDCmePqZoatSC3H",
+  "packet_sha256": "37518ce28ac83d8a5c4a0aa1c719ac097f8501a8f34de453f9259dbb27a9c17e",
+  "reviewer_response_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0100_0101_R08_SOURCE_BLUEPRINT_20261021\\candidate_R09_0101\\review_final9_delta\\reviewer_response_original.txt",
+  "reviewer_response_sha256": "ebea9a2f2da673f15439d02608aa4af08ab2d0793fdeb56f69da8b7f9cecdb21",
+  "raw_stdout_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0100_0101_R08_SOURCE_BLUEPRINT_20261021\\candidate_R09_0101\\review_final9_delta\\opencode_stdout.jsonl",
+  "raw_stdout_sha256": "6235d1aa339f261976d8e02978357365c8110bce740ff449b5a577b48558568b",
+  "review_scope": "Bounded final9 delta closure only: presence of the four cited wording corrections in the extracted word/document.xml text, closure of the two final8 H-level slips, and inheritance of the final8 full semantic baseline for unchanged content. No tool use, no independent SHA recomputation, and no direct PDF/page-image inspection.",
+  "verdict": "PASS_DELTA_INHERITING_FINAL8_BASELINE",
+  "inherited_baseline": {
+    "candidate_sha256": "92edebeff1703104c30486e18cf568f6666310a20ae8a945ab9d03789ec21fdb",
+    "overall": "PARTIAL",
+    "reason": "The only open items were the §1.5 pointer to nonexistent §8.4 and the 'A4 直向' wording against 12 landscape wide-table pages; all substantive criteria and the 80-cell arithmetic passed."
+  },
+  "closure": [
+    {
+      "id": "H-1",
+      "locator": "p.3 §1.5",
+      "prior_issue": "Pointer to §8.4 although §8 ended at §8.3.",
+      "closure_status": "RESOLVED",
+      "evidence": "Extracted final9 text now says '第 8.3 節'; §8.3 is the relevant boundary section."
+    },
+    {
+      "id": "H-2",
+      "locator": "p.19 §10.2; p.31 §12.1 E",
+      "prior_issue": "'A4 直向' conflicted with actual landscape wide tables.",
+      "closure_status": "RESOLVED",
+      "evidence": "Both locations now specify A4 mixed orientation, body portrait and wide tables landscape, matching the technical receipt's 12 landscape pages; no new layout claim contradicts that receipt."
+    }
+  ],
+  "corrections": [
+    {
+      "correction": "§1.5 cross-reference",
+      "locator": "p.3 §1.5",
+      "present_text": "決策者宜先讀第 2 節與第 8.3 節……",
+      "closure": "RESOLVED — §8.3 exists and is the self-assessment/implementation boundary section; no dangling reference remains."
+    },
+    {
+      "correction": "§10.2 orientation wording",
+      "locator": "p.19 §10.2",
+      "present_text": "A4 混合頁面方向（正文直向、寬表橫向）……",
+      "closure": "RESOLVED — consistent with the technical receipt's 12 landscape wide-table pages (10, 18–28)."
+    },
+    {
+      "correction": "§12.1 E orientation wording",
+      "locator": "p.31 §12.1 E",
+      "present_text": "DOCX 採 A4 混合頁面方向（正文直向、寬表橫向）……",
+      "closure": "RESOLVED — same corrected orientation description; no contradictory all-portrait claim remains."
+    },
+    {
+      "correction": "Table 3-2 pairing-code boundary",
+      "locator": "p.6–7 表3-2",
+      "present_text": "合成識別碼；正式使用應採可安全配對的去識別代碼",
+      "closure": "PRESENT AND CONSISTENT — A01–A08 remain synthetic identifiers, while real use requires safe de-identified pairing; this agrees with §4.1 and §10.2/S-07 and introduces no privacy-rule conflict."
+    }
+  ],
+  "remaining_nonblocking": [
+    "The dense landscape register/locator pages (p.20–28) retain the prior usability observation; final9 does not materially worsen it.",
+    "Evidence-note only: the final9 technical QA receipt's verification_scope string still says 'Exact final8 DOCX SHA' although its checks and details bind final9; the receipt label should be corrected. This is not a defect in the 0101 candidate text."
+  ],
+  "limitations": [
+    "DOCX/PDF SHA values were not recomputed.",
+    "PDF pages, chart pixels and rendered layout were not inspected by this reviewer.",
+    "The technical and visual receipts are accepted only as supplied provenance, not as independent empirical evidence."
+  ],
+  "real_results": "NOT_CERTIFIED",
+  "formal_acceptance": "NOT_GRANTED",
+  "provider_billing": "UNKNOWN",
+  "native_token_usage": "UNKNOWN_NOT_EXPOSED_IN_CAPTURED_STDOUT"
+}

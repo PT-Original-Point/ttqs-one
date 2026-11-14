@@ -1,0 +1,29 @@
+{
+  "schema": "TTQS_ONE_0067_STATUS_CORRECTION_R04.v1",
+  "project_id": "TTQS_ONE",
+  "document_id": "0067",
+  "requirement_id": "I15-E03",
+  "official_checkbox_serial": "073",
+  "source_head_before_correction": "500960f4cdbf2b8aa439344aa42c7bbf8da35ab6",
+  "finding": "README_R01.md incorrectly said no candidate existed and work was READY for a writer, while exact R03 candidate and technical/visual/semantic PASS receipts already existed.",
+  "old_candidate_status": "READY_FOR_ONE_WRITER_DELIVERABLE; candidate_not_built",
+  "corrected_candidate_status": "CANDIDATE_R03_QUALITY_PASS; formal_acceptance_NOT_GRANTED; real_evidence_UNKNOWN/HOLD",
+  "candidate_path": "candidate/0067_R03.docx",
+  "candidate_sha256": "f9985cce5ed4b5fdc65a961efe2ccbee754e8f73db773d0604c8695db9ff4e8a",
+  "supporting_status_path": "STATUS_R03.md",
+  "supporting_status_sha256": "6a7eb0967f6a28ae661288894b73d8462bd46151d7463eba492b82cbee9fd735",
+  "semantic_receipt_sha256": "d7870ff7ba686d3fd484ab2a39b7b50c7a9532c65bd9e9e6a7c97cac492fe03b",
+  "technical_receipt_sha256": "4c01aed3a2670845013f955a315ed7b81bbe7f6de313379c6f87ba244b46ccb0",
+  "visual_receipt_sha256": "26469dbd1e4eaf95709d498455eecadf623bf6c4f54c5b8b7adea5383777de2a",
+  "readme_sha256_after_correction": "3e5a1d01ad8d0199518c957534dd2844773bb0afadcf77fb1aee0d991a1ab58c",
+  "action": "metadata/status correction only; DOCX bytes unchanged; no worker dispatched",
+  "corrected_local": "2026-10-19T11:36:27+08:00",
+  "local_windows_sha256": {
+    "README_R01.md": "3e5a1d01ad8d0199518c957534dd2844773bb0afadcf77fb1aee0d991a1ab58c",
+    "STATUS_R03.md": "6a7eb0967f6a28ae661288894b73d8462bd46151d7463eba492b82cbee9fd735",
+    "review/independent_review_receipt_R03.json": "d7870ff7ba686d3fd484ab2a39b7b50c7a9532c65bd9e9e6a7c97cac492fe03b",
+    "review/technical_review_R03.json": "4c01aed3a2670845013f955a315ed7b81bbe7f6de313379c6f87ba244b46ccb0",
+    "evidence/visual_review_R03.json": "26469dbd1e4eaf95709d498455eecadf623bf6c4f54c5b8b7adea5383777de2a"
+  },
+  "git_blob_hash_scope": "Receipt references identify exact Git tree bytes (existing unchanged source evidence from HEAD; corrected README from the staged tree). Local pre-normalization hashes are retained under local_windows_sha256."
+}

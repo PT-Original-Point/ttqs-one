@@ -1,0 +1,111 @@
+{
+  "schema": "ttqs.r07_s10_disposable_gate_tests.v1",
+  "scope": "Synthetic disposable fixtures only; no candidate bytes or production gates changed.",
+  "result": "PASS",
+  "passed": 10,
+  "total": 10,
+  "cases": [
+    {
+      "case": "0096 R13/R12 mismatch",
+      "fixture": {
+        "manifest": "R13",
+        "receipt": "R12"
+      },
+      "expected": "REVIEW_BINDING_CONFLICT",
+      "actual": "REVIEW_BINDING_CONFLICT",
+      "pass": true
+    },
+    {
+      "case": "0096 serial 099",
+      "fixture": {
+        "doc": "0096",
+        "serial": "099"
+      },
+      "expected": "SOURCE_IDENTITY_MISMATCH",
+      "actual": "SOURCE_IDENTITY_MISMATCH",
+      "pass": true
+    },
+    {
+      "case": "0099 160 instead of 8x2x5",
+      "fixture": {
+        "cells": 160,
+        "n": 8,
+        "stages": 2,
+        "dims": 5
+      },
+      "expected": "BLUEPRINT_PREFLIGHT_FAIL",
+      "actual": "BLUEPRINT_PREFLIGHT_FAIL",
+      "pass": true
+    },
+    {
+      "case": "engineering SHA in body",
+      "fixture": {
+        "hash_leak": true,
+        "bad_path": true
+      },
+      "expected": "HUMAN_BODY_CONTRACT_FAIL",
+      "actual": "HUMAN_BODY_CONTRACT_FAIL",
+      "pass": true
+    },
+    {
+      "case": "0094 403/no verdict",
+      "fixture": {
+        "doc": "0094",
+        "http": 403
+      },
+      "expected": "NO_VERDICT/ROUTE_BLOCKED",
+      "actual": "NO_VERDICT/ROUTE_BLOCKED",
+      "pass": true
+    },
+    {
+      "case": "0097 no exact-SHA PDF",
+      "fixture": {
+        "doc": "0097",
+        "same_sha_pdf": false
+      },
+      "expected": "VISUAL_UNKNOWN",
+      "actual": "VISUAL_UNKNOWN",
+      "pass": true
+    },
+    {
+      "case": "duplicate DOCX SHA plus PNG",
+      "fixture": {
+        "dupe_sha": 2,
+        "png": 1
+      },
+      "expected": "ONE_CANDIDATE_DEDUPED",
+      "actual": "ONE_CANDIDATE_DEDUPED",
+      "pass": true
+    },
+    {
+      "case": "exit 0 empty",
+      "fixture": {
+        "exit": 0,
+        "usable": false
+      },
+      "expected": "NO_USABLE_ARTIFACT",
+      "actual": "NO_USABLE_ARTIFACT",
+      "pass": true
+    },
+    {
+      "case": "exit 1 partial",
+      "fixture": {
+        "exit": 1,
+        "partial": true
+      },
+      "expected": "PARTIAL_RECOVERABLE",
+      "actual": "PARTIAL_RECOVERABLE",
+      "pass": true
+    },
+    {
+      "case": "no material delta",
+      "fixture": {
+        "delta": false
+      },
+      "expected": "L0_NO_MATERIAL_DELTA",
+      "actual": "L0_NO_MATERIAL_DELTA",
+      "pass": true
+    }
+  ],
+  "recorded_at_local": "2026-10-21T15:46:21.522245+08:00"
+}

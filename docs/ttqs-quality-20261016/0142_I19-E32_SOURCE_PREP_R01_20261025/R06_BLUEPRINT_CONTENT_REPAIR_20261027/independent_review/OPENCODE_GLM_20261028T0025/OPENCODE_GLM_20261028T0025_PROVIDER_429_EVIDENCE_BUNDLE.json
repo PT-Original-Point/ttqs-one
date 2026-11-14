@@ -1,0 +1,43 @@
+{
+  "schema": "TTQS_ONE_R12_OPENCODE_0142_R06_PROVIDER_429_EVIDENCE_BUNDLE_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0142",
+  "requirement_id": "I19-E32",
+  "official_registry_index": 156,
+  "work_id": "TTQS-0142-I19-E32-R06-W1-OPENCODE-GLM-5.3-FLASH-FREE-EXACT-SHA-SEMANTIC-REVIEW",
+  "candidate_sha256": "3781cb4cb2d26625fb5676181f4faa4176ca0bb80e2e3fac518245bbdc42f97e",
+  "body_sha256": "cd838170a432cb31a0be7f490bb92019b9be046a5f503d3f9a8bb53ba8539150",
+  "source_packet_sha256": "e3e8b3a8ee1effe758608fee183440add4f37381988c5e352912b1a3d55c9e49",
+  "unique_blueprint_sha256": "4841161d6e9aad3ace2a0b4ec4a5a3e1b7e92b68ff2b20f95e9edeae2b84070b",
+  "remote_head_before_sync": "8c027ce6ad46570231f0af56b164643b5bb186d0",
+  "local_observed_outcome": "BLOCKED_PROVIDER_FREE_LIMIT_HTTP_429_BEFORE_INFERENCE",
+  "actual_model": "NOT_REACHED_PROVIDER_REJECTED",
+  "fallback": "NOT_USED",
+  "candidate_mutated": false,
+  "retry_eligible_estimate_local": "2026-10-28T07:59:57+08:00",
+  "token_usage": "NONE_REPORTED_IN_PREFLIGHT_REJECTION",
+  "reported_cost_usd": "UNKNOWN",
+  "computer_use": "NOT_USED",
+  "human_report_context": {
+    "as_of": "2026-10-27T08:17:00+08:00",
+    "sha256": "ff3ca9886e3a345d78be358b2883296b7e5454408d23bc940fee239ba826c900",
+    "meaning": "Global status snapshot only; does not establish local account quota or current endpoint availability."
+  },
+  "receipts": {
+    "DISPATCH_TERMINAL.json": {
+      "local_sha256": "dfb4e697b2c7c24b196e7f312c3532e2d2f3f609f3a506ab0ba567915fc76bd1",
+      "bytes": 2148,
+      "utf8_text": "{\n  \"schema\": \"TTQS_ONE_R06_OPENCODE_DISPATCH_TERMINAL_V1\",\n  \"project_id\": \"TTQS_ONE\",\n  \"doc_id\": \"0142\",\n  \"requirement_id\": \"I19-E32\",\n  \"work_id\": \"TTQS-0142-I19-E32-R06-W1-OPENCODE-GLM-5.3-FLASH-FREE-EXACT-SHA-SEMANTIC-REVIEW\",\n  \"pid\": 84172,\n  \"started_at_local\": \"2026-10-28T00:26:22.69578+08:00\",\n  \"ended_at_local\": \"2026-10-28T00:26:49.4125317+08:00\",\n  \"process_state\": \"NOT_RUNNING\",\n  \"cli_exit_code\": \"UNKNOWN_NOT_CAPTURED_BY_WRAPPER\",\n  \"requested_model\": \"opencode/glm-5.3-flash-free\",\n  \"actual_model\": \"NOT_REACHED_PROVIDER_REJECTED\",\n  \"candidate_sha256\": \"3781cb4cb2d26625fb5676181f4faa4176ca0bb80e2e3fac518245bbdc42f97e\",\n  \"candidate_sha256_after\": \"3781cb4cb2d26625fb5676181f4faa4176ca0bb80e2e3fac518245bbdc42f97e\",\n  \"candidate_unchanged\": true,\n  \"request_sha256\": \"3b84ee560c2193070a1e8581370091ab656f8e75559e6c7152576082f4ae51d1\",\n  \"body_sha256\": \"cd838170a432cb31a0be7f490bb92019b9be046a5f503d3f9a8bb53ba8539150\",\n  \"response\": \"NONE\",\n  \"provider_error_type\": \"provider.free-limit\",\n  \"http_status\": 429,\n  \"provider_error_message\": \"Free usage limit reached. Connect a provider or subscribe to OpenCode Go to keep going, or switch models.\",\n  \"session_id\": \"ses_e81d0d30dffei7kTx5Ad9VisPG\",\n  \"retry_after_ms\": 27215000,\n  \"retry_eligible_estimate_local\": \"2026-10-28T07:59:57.0000000+08:00\",\n  \"token_usage\": \"NONE_REPORTED_IN_PREFLIGHT_REJECTION\",\n  \"reported_cost_usd\": \"UNKNOWN\",\n  \"fallback\": \"NOT_USED; fallback forbidden\",\n  \"computer_use\": \"NOT_USED\",\n  \"tool_events\": \"NONE_OBSERVED\",\n  \"stdout_bytes\": 528,\n  \"stdout_sha256\": \"95430176101ee4aa2d1efb2252f46a4a00ae7d48233c411bd85c2aa6846c6282\",\n  \"stderr_bytes\": 0,\n  \"stderr_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\n  \"result\": \"BLOCKED_PROVIDER_FREE_LIMIT_HTTP_429_BEFORE_INFERENCE\",\n  \"retry_policy\": \"No identical retry before the provider-returned retry window; other READY work continues.\",\n  \"receipt_writer_issue\": \"Initial receipt finalizer used ambiguous PowerShell SHA256.HashData overload and wrote invalid null placeholder; this terminal record replaces it using Get-FileHash. Dispatch was not repeated.\"\n}\n"
+    },
+    "R06_SEMANTIC_REVIEW_STATUS_R12.json": {
+      "local_sha256": "e5e8309316266d46cb313f4372f81dc19f9f0d4f394bd53126ad18064b0946f8",
+      "bytes": 1984,
+      "utf8_text": "{\n  \"schema\": \"TTQS_ONE_R06_SEMANTIC_REVIEW_STATUS_R12_V1\",\n  \"observed_at_local\": \"2026-10-28T00:27:46.1552288+08:00\",\n  \"project_id\": \"TTQS_ONE\",\n  \"doc_id\": \"0142\",\n  \"requirement_id\": \"I19-E32\",\n  \"official_index\": 156,\n  \"printed_checkbox_serial\": \"UNKNOWN\",\n  \"candidate_sha256\": \"3781cb4cb2d26625fb5676181f4faa4176ca0bb80e2e3fac518245bbdc42f97e\",\n  \"body_sha256\": \"cd838170a432cb31a0be7f490bb92019b9be046a5f503d3f9a8bb53ba8539150\",\n  \"source_packet_sha256\": \"e3e8b3a8ee1effe758608fee183440add4f37381988c5e352912b1a3d55c9e49\",\n  \"unique_blueprint_sha256\": \"4841161d6e9aad3ace2a0b4ec4a5a3e1b7e92b68ff2b20f95e9edeae2b84070b\",\n  \"reviewer_work_id\": \"TTQS-0142-I19-E32-R06-W1-OPENCODE-GLM-5.3-FLASH-FREE-EXACT-SHA-SEMANTIC-REVIEW\",\n  \"requested_model\": \"opencode/glm-5.3-flash-free\",\n  \"actual_model\": \"NOT_REACHED_PROVIDER_REJECTED\",\n  \"dispatch_status\": \"BLOCKED_PROVIDER_FREE_LIMIT_HTTP_429_BEFORE_INFERENCE\",\n  \"http_status\": 429,\n  \"retry_eligible_estimate_local\": \"2026-10-28T07:59:57+08:00\",\n  \"response\": \"NONE\",\n  \"semantic_review\": \"PENDING\",\n  \"reason\": \"OpenCode public free-limit rejected the request before inference. No reviewer output or verdict exists. No identical retry before the provider retry window.\",\n  \"candidate_mutated\": false,\n  \"technical_qa\": \"PASS_TECHNICAL_CONTENT_GATES_ONLY; exact SHA unchanged\",\n  \"visual_qa\": \"PASS_LAYOUT_READABILITY; all 10 pages inspected; exact SHA unchanged\",\n  \"real_evidence\": \"UNKNOWN/HOLD\",\n  \"official_score\": \"NOT_ASSIGNED\",\n  \"formal_acceptance\": \"NOT_GRANTED\",\n  \"routing_context\": {\n    \"report_as_of\": \"2026-10-27T08:17:00+08:00\",\n    \"human_report_sha256\": \"ff3ca9886e3a345d78be358b2883296b7e5454408d23bc940fee239ba826c900\",\n    \"global_status_does_not_override_local_rejection\": true,\n    \"report_global_snapshot\": \"Operational at cutoff; two free-inference events total 3h39; no account-level model testing\",\n    \"local_observation\": \"2026-10-28T00:26+08:00 provider.free-limit HTTP 429 before inference\"\n  }\n}\n"
+    },
+    "RAW_STDOUT.jsonl": {
+      "local_sha256": "95430176101ee4aa2d1efb2252f46a4a00ae7d48233c411bd85c2aa6846c6282",
+      "bytes": 528,
+      "utf8_text": "{\"type\":\"error\",\"timestamp\":1793118385231,\"sessionID\":\"ses_e81d0d30dffei7kTx5Ad9VisPG\",\"error\":{\"type\":\"provider.free-limit\",\"message\":\"Free usage limit reached. Connect a provider or subscribe to OpenCode Go to keep going, or switch models.\",\"status\":429,\"response\":{\"body\":\"{\\\"type\\\":\\\"error\\\",\\\"error\\\":{\\\"type\\\":\\\"FreeUsageLimitError\\\",\\\"message\\\":\\\"Free usage limit reached. Free models work in OpenCode (https://opencode.ai); subscribe to OpenCode Go to keep going: https://opencode.ai/go\\\"}}\"},\"retryAfterMs\":27215000}}\r\n"
+    }
+  }
+}

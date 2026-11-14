@@ -1,0 +1,47 @@
+{
+  "schema": "TTQS_ONE_R12_0139_R08_DELIVERY_V1",
+  "project_id": "TTQS_ONE",
+  "command": "TTQS_ONE_20261026_R12_FULL_RECOVERY_DELIVERY",
+  "observed_at_local": "2026-10-27T08:07:47.4452436+08:00",
+  "r12_source_blob_sha1": "63f26f0708249b211611d51b34a7fb90b4cd26a9",
+  "doc_id": "0139",
+  "requirement_id": "I19-E29",
+  "blueprint_index": 153,
+  "candidate": "R08",
+  "candidate_sha256": "d31ef2d8b8615f3dd314572c4e50b6604198e8f24faafb144bcbaea7373c696f",
+  "parent_R07_sha256": "9e9f65b962f2a6b0e3b1a14c8d4615b6a70c98b140d672943adb5de636843241",
+  "material_delta": [
+    "Three denominator formulas corrected with explicit grouping; outputs 60.00%, 75.00%, 83.33%.",
+    "QC-08 synthetic key corrected to KEY-DATE-001.",
+    "Visible candidate version label corrected R08."
+  ],
+  "static": "PASS",
+  "word_native": "PASS_23_PAGES",
+  "visual": "PASS_ALL_23_PAGES_DIRECT_INSPECTION",
+  "semantic": "PASS_DELTA_EXACT_R08_SHA",
+  "semantic_scope": "R07 full-body semantic evidence remains historical/inherited for unchanged body; W2 reviewed exact R08 delta (five authorized text edits) and returned PASS_DELTA, zero blockers. This is not a new full-body review.",
+  "review_requested_model": "gemini-3.8-flash-high",
+  "actual_serving_model": "UNKNOWN",
+  "worker_cli_exit": "UNKNOWN_CAPTURE_FAILURE",
+  "provider_result": "DONE transcript recovered from same provider conversation",
+  "worker_tokens": {
+    "input": 24767,
+    "output": 3849,
+    "cache_read": 0
+  },
+  "sample_synthetic": "34-row register retained; all illustrative figures marked SAMPLE/SYNTHETIC",
+  "real_evidence": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED",
+  "github_sync": {
+    "status": "VERIFIED_RAW_BYTE_READBACK",
+    "initial_upload_commit": "f1bd505040e018b069aa0c38901c8132c8b4e3d2",
+    "corrected_package_head": "118564adda974f077648bf0db862b23e063102f5",
+    "verified_file_count": 25,
+    "mismatched": 0,
+    "docx_sha256": "d31ef2d8b8615f3dd314572c4e50b6604198e8f24faafb144bcbaea7373c696f",
+    "readback_method": "remote base64 compared with each local file base64"
+  },
+  "github_readback": "PENDING",
+  "known_failure_and_repair": "An initial ElementTree serialization changed XML namespace prefixes and Word rejected that intermediate. The failed file and error receipt are preserved locally; final candidate was remade from R07 with exact byte-preserving text replacements, then successfully opened/exported by Word.",
+  "next_ready": "After remote readback, inspect next stage from current official named-requirement crosswalk; 0140 has an existing R11 candidate with semantic PASS and a remaining visual gate, subject to fresh writer/effect check."
+}

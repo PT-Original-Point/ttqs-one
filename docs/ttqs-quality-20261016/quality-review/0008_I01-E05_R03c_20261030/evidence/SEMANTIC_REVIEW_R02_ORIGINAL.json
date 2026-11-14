@@ -1,0 +1,170 @@
+{
+  "receipt_type": "independent_semantic_usability_review",
+  "receipt_version": "R02",
+  "created_at_utc": "2026-10-29T15:22:14Z",
+  "reviewer_context": {
+    "reviewer": "Codex independent review context",
+    "role": "Independent semantic/usability reviewer; not the R02 writer and not the LUNA drafting context.",
+    "independence_basis": "The reviewer did not create or edit the candidate. The review was bound to the expected draft SHA and independently checked against the exact official requirement, current Blueprint row, and local fact register.",
+    "writer_context": "LUNA R02 source-draft path and bound writer receipt; writer receipt claims TEXT_DRAFT_ONLY_NOT_QA and makes no semantic-verdict claim."
+  },
+  "target": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0008_I01-E05_LUNA_TEXT_DRAFT_R02_20261029\\worker\\luna_subagent_draft_R02.md",
+    "doc_id": "0008",
+    "requirement_id": "I01-E05",
+    "artifact_type": "Markdown text candidate; not a Word candidate and not accepted",
+    "expected_sha256": "e925452120978d1c688c940fdb1ab1e48c80047b15ef74693ffadcce98bccd9e",
+    "sha256_before_review": "e925452120978d1c688c940fdb1ab1e48c80047b15ef74693ffadcce98bccd9e",
+    "sha256_after_review": "e925452120978d1c688c940fdb1ab1e48c80047b15ef74693ffadcce98bccd9e",
+    "sha_match_before_and_after": true,
+    "hash_method": "SHA-256 over raw file bytes"
+  },
+  "bound_sources": [
+    {
+      "kind": "official_requirement_source",
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\SOURCES\\TTQS查核佐證文件資料表-訓練機構版 (2).pdf",
+      "sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+      "locator": "PDF printed page 1; Plan / indicator 1; exact checklist line",
+      "exact_text": "各類別訓練課程年度成長計畫。",
+      "readback": "Extracted page 1 text and confirmed exact phrase."
+    },
+    {
+      "kind": "current_blueprint",
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\BLUEPRINT_CURRENT.jsonl",
+      "file_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+      "locator": "JSONL line 8; deliverable_id=0008; requirement_id=I01-E05",
+      "row_sha256": "0f63ae5f5fc03577fec9a93c6842b85ccb3bd75d5c0f4d28629f65790eeae2b4",
+      "row_hash_method": "SHA-256 of exact UTF-8 JSONL row bytes excluding the line terminator",
+      "fields_reviewed": ["document_genre", "document_purpose", "required_sections", "required_tables_or_figures", "required_fields_or_questions", "required_calculations_or_analysis", "required_cross_references", "real_data_required", "prohibited_fabrication", "title_blind_test", "negative_choice_neighbors", "acceptance_tests"]
+    },
+    {
+      "kind": "writer_receipt",
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0008_I01-E05_LUNA_TEXT_DRAFT_R02_20261029\\worker\\luna_subagent_draft_R02.receipt.json",
+      "sha256": "37498005fb2fbaab3f394af04236ae663f27d13d79ce0c8928453cdd340bbd33",
+      "use": "Identity and declared-scope binding only; writer claims were independently checked where relevant."
+    },
+    {
+      "kind": "historical_R01_independent_review_receipt",
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0008_I01-E05_LUNA_TEXT_DRAFT_R01_20261029\\reviewer\\SEMANTIC_REVIEW_R01.json",
+      "sha256": "215fbc4d0722f0d502a837d83584af3320b5244017f5d71949a6f2d3bf9cafe9",
+      "prior_verdict": "FAIL",
+      "prior_findings_used_as_historical_check": ["B-01 atomic replacement-register coverage", "B-02 Q3/Q4 evidence recovery chain", "N-01 staffing realism", "N-02 duplicate heading and review usability"]
+    },
+    {
+      "kind": "official_legal_reference_for_privacy_scope_only",
+      "title": "Personal Data Protection Act, National Laws and Regulations Database",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=I0050021",
+      "sha256": null,
+      "hash_note": "Remote official webpage; no local source file was created or hashed.",
+      "locator": "Official consolidated page; purpose/necessity (Article 5), collection notice (Article 8), accuracy and deletion/cessation text (Article 11); page states some 2025 amendments have pending effective dates.",
+      "use_and_limit": "Used only to assess whether the candidate contains an actionable real-data handling workflow. No determination of the association's legal status, applicable legal basis, or compliance is made."
+    },
+    {
+      "kind": "official_legal_reference_for_privacy_scope_only",
+      "title": "Enforcement Rules of the Personal Data Protection Act, National Laws and Regulations Database",
+      "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=I0050022",
+      "sha256": null,
+      "hash_note": "Remote official webpage; no local source file was created or hashed.",
+      "locator": "Article 12; technical and organizational security measures and examples of related controls.",
+      "use_and_limit": "Context for the operational privacy finding only; not legal advice or a compliance determination."
+    }
+  ],
+  "verdict": "PARTIAL",
+  "summary": "The draft is a coherent, uniquely identifiable I01-E05 category-level annual growth plan. Recalculated plan, cost, quarterly KPI, workload, and Q3 recovery arithmetic reconcile; the sample/real boundary is strong. Full replacement-register traceability is not yet reliable: 17 entries route target facts to the wrong source key, and 32 entries misclassify counts, rates, or money as period/date values. The requested four-category check is only demonstrated for three sample categories. Real personal-data handling remains a high-level hold condition rather than an operational procedure.",
+  "scope": {
+    "reviewed": "Entire Markdown text and 20 Markdown table blocks, including the embedded 594-row replacement register; official requirement and exact Blueprint row; R01 receipt for historical findings; genre/purpose, title-blind identity, 0007/0009 distinction, growth-plan mechanics, arithmetic and cross-section consistency, staffing/backup/conflict, cost and SAMPLE examples, hold/reject criteria, synthetic/real boundaries, Q3 evidence chain, register IDs/locators/source keys, and privacy handling boundaries.",
+    "register_audit_method": "Checked all 594 register rows for unique sequential IDs, nonempty values/case IDs/locators/source keys/owners, and valid source-key names; semantically checked source mapping and fact-type classifications, including the cited row IDs.",
+    "not_reviewed": ["Word visual/layout QA", "DOCX generation or final DOCX review", "formal acceptance", "real association approvals, implementation, attendance, performance, spending, staffing, or source records", "a legal compliance opinion"],
+    "limitations": ["No REAL association source data were supplied or inferred.", "All dates, role slots, course categories, numbers, ratings, costs, events, statuses, and decisions in the worked example remain SAMPLE/SYNTHETIC.", "The official requirement and Blueprint do not prescribe exactly four categories; no real category inventory was supplied. The user's phrase '4 category' was tested literally as four sample categories, without inferring that the association actually has four.", "The privacy review identifies missing operational detail; it does not assert a legal violation. The official statutory page notes pending effective dates for some amendments."]
+  },
+  "results_by_scope": {
+    "official_requirement_binding": "PASS — exact PDF page 1 text matches the specified I01-E05 requirement.",
+    "genre_and_title_blind_purpose": "PASS — §§1-10 remain specifically a category-by-category annual course growth plan when the title and ID are ignored.",
+    "negative_neighbors": {
+      "0007_I01-E04": "PASS — §1 line 38 reserves product/process review to 0007; this draft sets category growth targets, resources, and quarter tracking.",
+      "0009_I01-E06": "PASS — §1 line 38 reserves organization-wide performance-goal analysis to 0009; this draft uses course-category planning KPIs."
+    },
+    "four_category_scope_check": "PARTIAL — §§3-4 (Table 3-1 and Table 4-1) demonstrate three categories A/B/C. No fourth category is shown. This is a miss against a literal four-category reading of the requested scope, not an official-source or Blueprint count requirement.",
+    "annual_plan_mechanics": "PASS for the three presented sample categories — need assumptions, baseline/target, category growth path, capacity, costs, owners, quarterly milestones, review cadence, and hold/reject/corrective actions are present.",
+    "staffing_and_feasibility": "PASS as a synthetic planning model — Table 2-2 reconciles role-slot hours; §7.1 defines qualification/availability checks, backup requirements, role overlap and independent-review conflict controls. This does not prove actual volunteers or capacity.",
+    "cost_and_sample_examples": "PASS — assumptions are labeled; annual and quarterly estimates reconcile; no actual budget, quote, approval, or spending is asserted.",
+    "quarterly_procedures_and_thresholds": "PASS — Tables 6-2, 8-1, 9-1, 10-3 and 11-1 provide checks, cadence, thresholds, owners, correction/hold actions, and close-out conditions.",
+    "q3_q4_evidence_chain": "PASS — Table 10-2 retains six-class denominator 24 at Q3 23/24; retrieval stays pending at 23/24; independent verification changes it to 24/24; the new Q4 class adds four units and denominator to 28/28. All are explicitly synthetic, with SRC-RECOVERY used for the recovery chain.",
+    "replacement_register": "PARTIAL — 594 unique sequential fact IDs SF-00001 through SF-00594; all rows have a nonempty locator and valid source-key name. Exact locator/source routing and fact-type metadata contain material row-level errors listed below.",
+    "sample_real_boundary": "PASS — no association approval, real activity, attendance/performance, spending, meeting, or third-party evidence is claimed.",
+    "personal_data_handling": "PARTIAL — synthetic and de-identified boundaries are stated, but the REAL workflow does not specify operational controls; no legal compliance conclusion is made."
+  },
+  "recalculated_values": {
+    "demand_examples": {"9/12": "75.0%", "7/12": "58.3%", "5/12": "41.7%"},
+    "staffing_hours_by_quarter": {"Q1": 40, "Q2": 43, "Q3": 54, "Q4": 35, "annual": 172},
+    "staffing_hours_by_role": {"PC-1": 96, "IN-A": 21, "IN-B": 10, "IN-C": 17, "ER-1": 28},
+    "baseline_totals_2026": {"classes": 4, "capacity": 64, "enrollment": 58, "completions": 50},
+    "target_totals_2027": {"classes": 7, "capacity": 116, "enrollment": 103, "completions": 90},
+    "growth_percent": {"classes": 75.0, "capacity": 81.25, "enrollment": 77.59},
+    "completion_rate_percent": {"baseline": 86.21, "target": 87.38, "change_percentage_points": 1.17},
+    "target_capacity_use_percent": 88.79,
+    "category_completion_rates_percent": {"A": "24/30=80.0% -> 48/54=88.9%", "B": "12/14=85.7% -> 24/28=85.7%", "C": "14/14=100.0% -> 18/21=85.7%"},
+    "annual_budget_estimate_ntd": 56310,
+    "unit_cost_estimates_ntd": {"per_enrollment": "56310/103=546.70, rounded 547", "per_completion": "56310/90=625.67, rounded 626"},
+    "quarterly_enrollment_and_completion": {"enrollment": "18+32+42+11=103", "completions": "16+28+36+10=90"},
+    "scenario_spend_ntd": 56200,
+    "annual_scenario_budget_variance_percent": -0.20,
+    "annual_satisfaction": "393/92=4.27/5",
+    "annual_feedback_response_percent": 89.32,
+    "q3_q4_evidence": "23/24 -> 24/24 with unchanged denominator -> 28/28 after adding four units"
+  },
+  "register_integrity": {
+    "embedded_register_locator": "§12.2, Markdown lines 331-930",
+    "row_count": 594,
+    "unique_ids": 594,
+    "id_sequence_complete": true,
+    "empty_values_case_ids_locators_source_keys_or_owners": 0,
+    "invalid_source_key_names": 0,
+    "valid_source_key_count": 13,
+    "findings": ["Some source keys are valid names but do not match the fact they are attached to.", "32 rows labeled '期間／日期欄值' hold non-date, non-period values (counts, percentages, or NTD amounts)."]
+  },
+  "findings": [
+    {
+      "id": "F-01",
+      "severity": "MAJOR",
+      "acceptance_impact": "Correct before treating the register as a reliable REAL replacement map.",
+      "locator": "§4 paragraph 2-3 and §12.2 register; draft lines 521-539, fact IDs SF-00185-SF-00196, SF-00199-SF-00201, SF-00203; plus §10 Table 10-2 Q4 new-course row, SF-00588 at draft line 924.",
+      "finding": "Sixteen §4 facts that are 2027 target values or target-derived calculations are keyed SRC-BASELINE: SF-00185-SF-00196, SF-00199-SF-00201, and SF-00203. The source map defines SRC-BASELINE as comparison-year source material and SRC-TARGET/SRC-GROWTH for annual plan targets and comparisons. Separately, SF-00588 is the synthetic Q4 course ID but points to SRC-EVIDENCE, whose §12.1 sources are the four evidence types; the course ID should resolve to an authorized course schedule/target source such as SRC-QUARTER or SRC-TARGET. The displayed numbers and locators are readable, but the wrong keys can send a REAL replacement to the wrong source class.",
+      "resolution": "Remap each §4 row to the source key appropriate to its 2027 target or derived comparison, and remap SF-00588 to the real course schedule/plan source; retain the exact row and field locator."
+    },
+    {
+      "id": "F-02",
+      "severity": "MODERATE",
+      "acceptance_impact": "Correct the register's fact-type metadata before downstream typed replacement or automated checking.",
+      "locator": "§12.2; IDs SF-00185, SF-00186, SF-00199, SF-00200; SF-00206, SF-00209, SF-00212, SF-00216, SF-00219, SF-00222, SF-00225, SF-00229, SF-00232, SF-00235, SF-00238, SF-00242, SF-00245, SF-00250; SF-00304-SF-00306, SF-00308-SF-00310, SF-00312-SF-00313, SF-00316-SF-00317, SF-00321-SF-00322; SF-00518-SF-00519.",
+      "finding": "These 32 entries use fact_type '期間／日期欄值' for non-date values: class/capacity counts and evidence-unit counts, KPI numerators/denominators, and NTD amounts. Examples: SF-00206 labels NTD 9,000 as a date/period; SF-00250 labels NTD 56,310 as a date/period; SF-00304 labels 7 classes as a date/period. The value, locator and source key remain visible, so this does not erase the facts, but the type metadata is not dependable.",
+      "resolution": "Reclass each listed row according to its field as quantity, ratio/calculated value, or amount; retain valid duration/year entries in the period/date class."
+    },
+    {
+      "id": "F-03",
+      "severity": "SCOPE_COVERAGE",
+      "acceptance_impact": "Applies only if the requested '4 category' criterion means four distinct categories.",
+      "locator": "§3 Table 3-1 lines 79-85; §4 Table 4-1 lines 93-100.",
+      "finding": "The worked plan compares only A/B/C. It provides usable category-level mechanics, but no fourth example category. The official requirement and Blueprint do not set a four-category count, and no real association category list was supplied; therefore the absence is a limitation against the literal review-scope wording, not evidence that an actual association category was omitted.",
+      "resolution": "If four sample categories were intended, add a fourth fully linked sample category and recalculate all totals; otherwise confirm the intended scope outside this review. No fourth REAL category is inferred."
+    },
+    {
+      "id": "F-04",
+      "severity": "NONBLOCKING_FOR_SAMPLE; HOLD_FOR_REAL_USE",
+      "acceptance_impact": "Do not use the REAL replacement path with identifiable enrolment or feedback data until the applicable policy and handling steps are verified and documented.",
+      "locator": "§3 Table 3-1 B row line 84; §6 Table 6-2 line 154; §8 Table 8-2 enrolment/feedback rows lines 204-206; §10 Table 10-2 lines 247-250 and Table 10-4 lines 288-292; §12.1 SRC-NEED/SRC-QUARTER/SRC-EVIDENCE lines 318, 325-327; §13 steps 4 and 6 lines 939-941.",
+      "finding": "The draft correctly labels all worked data synthetic and mentions personal-data/file-management checks, de-identification, and stopping commitments when protection conditions are unclear. It does not define a practical REAL workflow for purpose and permitted fields, notice/authorization as applicable, role-based access, secure storage, retention/deletion, or incident handling, and it does not point to an association policy or competent review. Official privacy texts address purpose/necessity, collection notice, data maintenance/deletion, and security measures; see the bound legal references. This is a readiness gap, not a finding of unlawful collection or a statutory breach.",
+      "resolution": "Before REAL use, map the association's actual data sources and applicable policy/authority to a minimal-data, access, storage, retention/deletion, de-identification, and incident-response workflow; have the responsible privacy/legal authority verify the effective rules."
+    }
+  ],
+  "prior_R01_followup": {
+    "B-01_atomic_register": "SUBSTANTIALLY_RESOLVED — R02 has 594 unique sequential IDs and field-level/paragraph-anchor locators; current F-01/F-02 identify new register mapping/type defects.",
+    "B-02_q3_q4_recovery": "RESOLVED_IN_TEXT — Table 10-2 specifies same-denominator 23/24, retrieval pending, independent verification to 24/24, and the Q4 four-unit increase to 28/28.",
+    "N-01_staffing": "SUBSTANTIALLY_RESOLVED_AS_SAMPLE — role-slot quarterly hours, qualification/availability checks, backup and conflict rules are supplied; no actual staff capacity is established.",
+    "N-02_duplicate_heading": "RESOLVED — no duplicate quarterly-review heading was found; a filled Q1 review record and separately restricted REAL transcription form are present."
+  },
+  "sample_real_boundary": "PASS for the reviewed text only: the candidate consistently describes its course categories, staff slots, numbers, dates, costs, quarterly results, recovery events, and decisions as SAMPLE/SYNTHETIC; it does not assert association approval, implementation, actual attendance/performance/spending, or third-party proof.",
+  "acceptance_status": "PARTIAL review result; not accepted, not promoted, and not a formal acceptance decision.",
+  "visual_and_document_status": "TEXT_CANDIDATE_NOT_DOCX. No DOCX was created or inspected; no Word visual QA, final DOCX review, or formal acceptance is claimed.",
+  "write_scope": "Only the requested sibling reviewer\\SEMANTIC_REVIEW_R02.json was created. The Markdown candidate, writer receipt, official sources, Blueprint, and historical receipt were not modified."
+}

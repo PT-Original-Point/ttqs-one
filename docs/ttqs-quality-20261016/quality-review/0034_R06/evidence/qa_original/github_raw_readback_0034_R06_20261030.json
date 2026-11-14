@@ -1,0 +1,32 @@
+{
+  "schema": "ttqs-one-github-raw-byte-readback-v1",
+  "status": "VERIFIED_RAW_BYTE_READBACK",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0034",
+  "requirement_id": "I07-E02",
+  "official_checkbox_sequence": "034",
+  "candidate_state": "CANDIDATE_ONLY",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "pull_request": 92,
+  "readback_commit": "d391bb7418a9fe590b686d6ef50e6aa5633bc24b",
+  "observed_at_local": "2026-10-30T22:23:14+08:00",
+  "remote_path": "docs/ttqs-quality-20261016/quality-review/0034_R06/candidate/0034_R06.docx",
+  "readback_url": "https://raw.githubusercontent.com/PT-Original-Point/ttqs-one/d391bb7418a9fe590b686d6ef50e6aa5633bc24b/docs/ttqs-quality-20261016/quality-review/0034_R06/candidate/0034_R06.docx",
+  "candidate_sha256": "f220573a65ee7497b8be12d60eb06abd1e949ee08a5792687ddf45f5f60b407a",
+  "remote_sha256": "f220573a65ee7497b8be12d60eb06abd1e949ee08a5792687ddf45f5f60b407a",
+  "exact_byte_match": true,
+  "local_git_blob_sha1": "3de6309e6dbe21cbb75c9a0e5d5537f015656669",
+  "remote_git_blob_sha1": "3de6309e6dbe21cbb75c9a0e5d5537f015656669",
+  "local_bytes": 67492,
+  "remote_bytes": 67492,
+  "verification_method": "git fetch from origin branch; resolve exact remote path at FETCH_HEAD; stream git cat-file blob bytes; compare SHA-256, Git blob SHA-1 and byte count to local candidate",
+  "qa_receipt_sha256": {
+    "visual_qa_0034_full_page_exact_sha_codex_20261030.json": "6feac55a52e032ed333d20bded2e7e0a8e3e150eae351db4aaf65e1c603ceb6c",
+    "0034_final_technical_f220573a65ee.json": "767ada3568ae6dc976b713a613ef59c4e5022596dcf12507cffd6419718280c8",
+    "0034_semantic_review_r06.json": "eb29b7cfaa1408229867b202c1ddf4f21f5991458e68587ec3aae1597d3875d3"
+  },
+  "quality_scope": "Technical PASS; full 21-page visual PASS_WITH_NONBLOCKING_LAYOUT_NOTE; independent semantic PASS for exact candidate SHA; candidate only; Human formal acceptance pending."
+}

@@ -1,0 +1,30 @@
+### Independent Bounded Semantic Delta Review
+
+**Verdict: PASS (Delta Only)**
+
+---
+
+### 1. Mathematical Verification
+* **Textual Locator:** Table 7, §7.3, row `「缺考率（%）」`, cell `2024→2025`.
+* **Declared Rule:** Calculate using unrounded intermediate values, then round to two decimal places.
+* **Exact Computation:**
+  $$\Delta_{\text{2024}\to\text{2025}} = \left(\frac{1}{12} - \frac{2}{12}\right) \times 100\% = -\frac{1}{12} \times 100\% = -8.333333\dots\text{ pp}$$
+* **Rounding Result:** Rounded to two decimal places, $-8.333333\dots\text{ pp}$ yields **$-8.33\text{ pp}$**.
+* **Finding:** The updated value $-8.33\text{ pp}$ strictly satisfies the document’s stated unrounded calculation protocol, whereas the former $-8.34\text{ pp}$ resulted from subtracting previously rounded figures ($8.33\% - 16.67\%$). The arithmetic correction is strictly correct.
+
+---
+
+### 2. Semantic Impact & Parent Conclusion
+* **Preservation:** The correction resolves an internal arithmetic consistency ambiguity flagged in the parent review while preserving the underlying cohort sample counts ($n=12$, $A_{2024}=2$, $A_{2025}=1$) and the cumulative 2023→2025 trend ($-11.67\text{ pp}$).
+* **Conclusion:** The semantic findings, requirement fulfillment, and PASS determination established under parent R04 are fully preserved.
+
+---
+
+### 3. Blocking Issues
+* **Label Increment:** The revision mark update from `R04` to `R05` correctly indexes the iteration.
+* **Remaining Issues:** No new discrepancies, regressions, or blocking issues are introduced by these two changes.
+
+---
+
+> [!NOTE]
+> **Scope & Disclaimer:** This bounded evaluation is restricted strictly to the verified two-item delta (SHA candidate `9bb154830d7d3cf9790e3e43fd44e9af8b6e3a059b9e28fd910fca80c0e8e947` vs. parent `0c3415ebe452fb2d7f343ec67878c03c6cff510c2f2aa94887cb2ddcdfb28601`). Full-document semantic adequacy, format fidelity, and requirement coverage are inherited directly from parent R04; no independent visual inspection, page layout audit, or direct opening of the underlying Word (`.docx`) file was conducted.

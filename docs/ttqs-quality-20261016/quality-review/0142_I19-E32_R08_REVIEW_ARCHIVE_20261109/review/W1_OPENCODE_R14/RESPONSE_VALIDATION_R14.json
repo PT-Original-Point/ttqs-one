@@ -1,0 +1,42 @@
+{
+  "schema": "TTQS_ONE_W1_REVIEW_RESPONSE_VALIDATION_R14_V1",
+  "work_id": "TTQS_ONE_0142_R08_FULL_SEMANTIC_REVIEW_W1_GLM_20261109",
+  "valid_json": true,
+  "expected_binding_match": true,
+  "verdict": "PASS_TEXT_ONLY",
+  "checks": {
+    "requirement_and_genre": "PASS",
+    "operational_usability": "PASS",
+    "calculations_and_cross_references": "PASS",
+    "sample_real_boundary": "PASS",
+    "title_blind_and_negative_neighbors": "PASS"
+  },
+  "finding_count": 2,
+  "blocking_finding_count": 0,
+  "all_findings_nonblocking": true,
+  "visual_review": "NOT_PERFORMED",
+  "real_evidence_verified": false,
+  "formal_acceptance": "NOT_GRANTED",
+  "raw_stream_event_types": [
+    "step_start",
+    "text",
+    "step_finish"
+  ],
+  "tool_calls_observed": 0,
+  "cli_exit_code": 0,
+  "timed_out": false,
+  "actual_model": "UNKNOWN",
+  "cost_from_cli_finish_event": 0,
+  "token_usage": {
+    "input": 17266,
+    "output": 696,
+    "reasoning": 2774,
+    "cache": {
+      "read": 0,
+      "write": 0
+    }
+  },
+  "raw_stdout_sha256": "6d07bce10cafd5a0005b2b8b88a3bcb910e5f503d5014793bea0b8d706a36cf4",
+  "review_response_sha256": "7e1651842cb24417ac6e200a9e7fab6206fb29e1c7d825bcd9d660d362209f73",
+  "candidate_unchanged": true
+}

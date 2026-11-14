@@ -1,0 +1,68 @@
+{
+  "schema": "TTQS_ONE_R04_P7_MINIMAL_COUNTEREXAMPLE_TESTS.v1",
+  "project_id": "TTQS_ONE",
+  "document_id": "0073",
+  "requirement_id": "I17A-E01",
+  "official_checkbox_serial": "080",
+  "candidate_docx_sha256": "a454cf0691a53173ae7838c9cd84522cf419d1d940cb63a7ddc168b497bc9b13",
+  "updated_at_local": "2026-10-19T07:07:54.4561786+08:00",
+  "tests": {
+    "T1_no_material_delta": {
+      "mode": "fixture_only",
+      "input": {
+        "github_head_unchanged": true,
+        "candidate_sha_unchanged": true,
+        "no_active_owner": true
+      },
+      "expected": "NO_MATERIAL_DELTA; no writer, reviewer, report, or empty commit",
+      "actual": "NO_MATERIAL_DELTA",
+      "status": "PASS"
+    },
+    "T2_worker_empty_reply": {
+      "mode": "historical_R04_fixture",
+      "source_attachment_sha256": "3330de8de26275c5e51f299982d87c250bb7e030c9838badafc369e26ee29c35",
+      "input": {
+        "route": "Antigravity historical 0055 lane",
+        "exit_code": 0,
+        "stdout": "empty/denied",
+        "deliverable_exists": false
+      },
+      "expected": "NO_DELIVERABLE; pause only affected writer lane; continue other READY work",
+      "actual": "R04 records Antigravity paused for its route; this OpenCode 0073 work continued and produced exact-SHA review",
+      "status": "PASS"
+    },
+    "T3_exact_sha_review_reuse": {
+      "mode": "actual",
+      "review_receipt_sha256": "93f81d69bda436cb86cda2148f714fada5a465e31a935c8b3891adcc9b7f38b7",
+      "candidate_sha_matches_review": true,
+      "review_dispatch_count": 1,
+      "duplicate_R08_review_dispatches": 0,
+      "expected": "Reuse unchanged R08 exact-SHA receipt; no second review call or DOCX rewrite",
+      "status": "PASS"
+    },
+    "T4_remote_readback": {
+      "mode": "actual",
+      "status": "PASS",
+      "readback_receipt": "docs/ttqs-quality-20261016/quality-review/0073_R01/evidence/REMOTE_READBACK_R08.json",
+      "readback_commit": "1f51cef86dec101c6eb524fd4b9e133126a2ea50",
+      "paths_checked": 66,
+      "byte_exact": 28,
+      "eol_normalized_only": 38,
+      "mismatches": 0,
+      "candidate_docx_remote_sha256": "a454cf0691a53173ae7838c9cd84522cf419d1d940cb63a7ddc168b497bc9b13",
+      "expected": "Fetch Git blob bytes and compare SHA-256 for candidate DOCX and all manifest-listed artifacts"
+    },
+    "T5_real_source_not_verified": {
+      "mode": "actual",
+      "technical_acceptance": "CANDIDATE ONLY; REAL=UNKNOWN/HOLD",
+      "visual_status": "PASS_WITH_MINOR_NOTE",
+      "semantic_verdict": "PASS",
+      "candidate_text_has_sample": true,
+      "expected": "Keep SAMPLE/SYNTHETIC and REAL=UNKNOWN/HOLD; no fabricated real approval or promotion",
+      "status": "PASS"
+    }
+  },
+  "overall_after_sync": "5/5 tests PASS; actual remote fetch/readback verified with 0 mismatches",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD"
+}

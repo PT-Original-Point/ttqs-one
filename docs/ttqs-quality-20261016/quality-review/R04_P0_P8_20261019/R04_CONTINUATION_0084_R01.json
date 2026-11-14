@@ -1,0 +1,156 @@
+{
+  "schema": "TTQS_ONE_R04_CONTINUATION_0084_R01.v1",
+  "project_id": "TTQS_ONE",
+  "command": "TTQS_ONE_CODEX_NATIVE_WORKER_RECOVERY_SYNC_R04",
+  "updated_local": "2026-10-19T19:48:43.9856074+08:00",
+  "repo": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "pr": 92,
+  "head_before_sync": "e855eaaf5a08167adbc5c996992b3a7e02f16483",
+  "P0_preflight": {
+    "docx_id": "0084",
+    "requirement_id": "I17C-E03",
+    "checkbox": "090",
+    "local_docx_candidate_exists": false,
+    "remote_docx_candidate_exists": false,
+    "active_0084_writer": true,
+    "opencode_process": "resident service PID 3980 only; no active run at dispatch preflight",
+    "antigravity": "PAUSED; no dispatch and no Computer Use",
+    "stale_word_automation_pids": "Observed, all from previous dates; no command line or file ownership linking them to 0084; not counted as writer",
+    "active_writer_process": {
+      "pid": 43480,
+      "started_local": "2026-10-19T15:26:42.222891+08:00",
+      "opencode_session_id": "ses_eacf1cb26ffeUBxW4SruAR7csW",
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "task": "worker/opencode_docx_task_R01.md",
+      "status_at_receipt": "ACTIVE; no candidate files created yet"
+    }
+  },
+  "P1_source_reconciliation": {
+    "source_packet_sha256": "6c2e928a889f0e01fe6aeca2ed0ed5b6a0dca6b3a12f591ba493a969dd4d3f1d",
+    "verified_sources": [
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0077_R01/inputs/upstream_snapshots/03_157_CHECKBOX_BLUEPRINTS.md",
+        "sha256": "ad03323d591cbea62814a8a59d233110587f2741bed8f944380b1faa2d04d216",
+        "git_blob": "8c2bbe7ca9dcbb03088a48934b9e57e7147ede63"
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0077_R01/inputs/upstream_snapshots/02_GENRE_WRITING_MANUAL.md",
+        "sha256": "7fc23191efdb60ca4a9b48bc306799a9f15916b1160b63292d164bd4f4cf49aa",
+        "git_blob": "4ff863d9f534b6359fc1c7c1685bd8cce02da886"
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0077_R01/inputs/upstream_snapshots/01_HUMAN_MISSION_AND_ACCEPTANCE.md",
+        "sha256": "07c4b0beb30ebe9919818977d6eb0255e9f467955e9190e515ae3e2b963d1dd8",
+        "git_blob": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e"
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0077_R01/inputs/upstream_snapshots/official_evidence_table_source.pdf",
+        "sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+        "git_blob": "9c7621decdad585b743bf2b3d949ee5518b7bee0"
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0078_R01/evidence/official_evidence_table_page6-6.png",
+        "sha256": "b7bd4c09b7d7e22993a1577647e10a421fb240222b46b531ba3f01ee047fa1d1",
+        "git_blob": "7cce2401a3230cb86875df79396538d0adea41d5"
+      },
+      {
+        "path": "docs/ttqs-quality-20261016/quality-review/0083_R01/candidate/0083_R02_body.md",
+        "sha256": "65adee0f9be4643b612817250484407cd1833daa3a2fa6a0a93e797ba68c324e",
+        "git_blob": "999ac66d22e1065624a8d216a3d518cf53bc9583"
+      }
+    ],
+    "official_17c_scale": "Institution-level 0–3 kept unscored and separate from the proposed individual behavior rubric",
+    "cross_document": "0084 local form SYN-0084-B01 explicitly linked to 0083 parent case SYN-0083-B01; all appended observations synthetic"
+  },
+  "P2_worker_routes": {
+    "writer": "OpenCode CLI v2.0.29",
+    "model": "opencode/deepseek-v4.1-flash-free",
+    "blueprint_session_id": "ses_eacfded6affeoGIzPOMznmvdNV",
+    "blueprint_session_outcome": "succeeded",
+    "blueprint_writer_exit_code": 0,
+    "antigravity": "paused; unused",
+    "docx_writer": {
+      "status": "ACTIVE",
+      "pid": 43480,
+      "session_id": "ses_eacf1cb26ffeUBxW4SruAR7csW",
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "started_local": "2026-10-19T15:26:42.222891+08:00",
+      "exit_code": null,
+      "candidate_body": "PENDING",
+      "candidate_docx": "PENDING"
+    }
+  },
+  "P3_blueprint_action": {
+    "R01_sha256": "1978e0c261caa14f26bf03c6307e364d83468fbe1ee476e6e543eb55e98142e7",
+    "R01_result": "PARTIAL: item anchors and evidence/score consistency gaps",
+    "R02_sha256": "72729eab74a1cc61e84854668a7ae4afc37ef4b5eefdcab8956b90c6e0c1a5f3",
+    "R02_review_receipt_sha256": "7dfa84aa3c178d9b3aad7f92c75aad39980db1b60e0367af9a448337de4f90ec",
+    "R02_state": "READY_FOR_DOCX_WRITER",
+    "targeted_repairs": [
+      "specific B1–B4 level anchors",
+      "O0 B3 corrected 2 to 1 and directions recalculated",
+      "O1/O2 B4 observation opportunities and O3 B3 facts aligned to scores",
+      "source case ID cross-link registered"
+    ]
+  },
+  "P4_sync": {
+    "status": "VERIFIED_REMOTE_READBACK",
+    "readback_commit": "c7daf76083852914d613d3721006b15d1ea0a695",
+    "checked_files": 13,
+    "byte_exact": 1,
+    "text_eol_only": 12,
+    "missing": 0,
+    "mismatches": 0,
+    "blueprint_local_sha256": "72729eab74a1cc61e84854668a7ae4afc37ef4b5eefdcab8956b90c6e0c1a5f3",
+    "blueprint_remote_content_sha256": "63450ec38056980710951571a9ca1b29d6816fe58d58c53ecb67b1e6474db30d",
+    "blueprint_git_blob": "52471714fd567f71841e2de947f3e7bce0b46771",
+    "readback_receipt_path": "docs/ttqs-quality-20261016/quality-review/0084_R01/evidence/remote_readback_blueprint_R02.json",
+    "readback_receipt_local_sha256": "a3fe38e5d4fad1497cdc393cae980228664421d6055d389e0b5ce590303afd17",
+    "manifest_includes_readback_receipt": true,
+    "readback_receipt_remote_sha256": "61dce5852b62612b140719f7666e125b440f50ef1c845dccfdd9fdebf70ef33a",
+    "readback_receipt_git_blob": "3d782b320731a5e63c4e86e4d9e36be0b4a6f924"
+  },
+  "P6_next": {
+    "doc_id": "0084",
+    "requirement_id": "I17C-E03",
+    "checkbox": "090",
+    "next_action": "Do not redispatch 0084. Keep the single active OpenCode Writer; after it exits, inspect the returned body/DOCX, run deterministic technical and boundary checks, then independent semantic and bounded visual review."
+  },
+  "P8_state": {
+    "blueprint": "R02 ready for Writer; not document acceptance",
+    "candidate_docx": "NOT_BUILT",
+    "REAL": "UNKNOWN/HOLD",
+    "FORMAL_ACCEPTANCE": "NOT_GRANTED"
+  },
+  "current_reconciliation": {
+    "checked_at_local": "2026-10-19T19:48:43.9524533+08:00",
+    "source_branch_head": "717f08733d4cda7d84af21db346e44f41f7854fb",
+    "latest_candidate": {
+      "doc_id": "0084",
+      "requirement_id": "I17C-E03",
+      "official_checkbox": "090",
+      "revision": "R11",
+      "docx_sha256": "cf4376b3287db4f3a900fe7a39012e7dc6a49b419e586371b1eb1e0190a245d8",
+      "remote_git_blob_match": true,
+      "technical_verdict": "PASS",
+      "visual_verdict": null,
+      "semantic_verdict": "PASS",
+      "semantic_result": "PASS_WITH_FOUR_NON_BLOCKING_FINDINGS",
+      "semantic_response_sha256": "da7f36484ffd1960f016fb6bad68e72d7b63b2d3e7843490aa49fb7c7cc4a4f3",
+      "semantic_review_receipt_sha256": "be2fbfb084c88e43339b89fabdd50954a45c76a49fbc23417cb417eb092802c9",
+      "nonblocking_findings": 4
+    },
+    "writer_session": {
+      "session_id": "ses_eacf1cb26ffeUBxW4SruAR7csW",
+      "model": "deepseek-v4.1-flash-free",
+      "outcome": "succeeded",
+      "updated_utc": "2026-10-19T11:22:22.1530000+00:00",
+      "active_writer": false
+    },
+    "candidate_state": "CANDIDATE_QUALITY_PASS; NOT_FORMALLY_ACCEPTED",
+    "real_evidence": "UNKNOWN/HOLD",
+    "formal_acceptance": "NOT_GRANTED",
+    "next_ready": "0085 / I17C-E04 / checkbox 091; one OpenCode Blueprint worker active"
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "review_type": "independent_read_only_semantic_and_evidence_review_exact_sha",
+  "review_date_local": "2026-10-16",
+  "project": "TTQS_ONE",
+  "doc_id": "0040",
+  "revision": "R01",
+  "verdict": "PARTIAL",
+  "candidate_state": "CANDIDATE",
+  "promotion_status": "NOT_PROMOTED",
+  "human_acceptance": "PENDING",
+  "reviewer_identity": "Independent reviewer in the existing Codex local control-review task; not the Builder; no new agent created.",
+  "reviewer_route": {
+    "current_state_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\CURRENT_STATE.json",
+    "current_state_sha256": "1345b6330b01c7b71293eeaf58aa7409a78681b7cf011b65a065c91888f972d6",
+    "preferred_route": "CROSS_REVIEW_BY_OTHER_ACTIVE_AGENT",
+    "effective_route": "WIN10_CODEX_LOCAL_NATIVE_CONTROL_REVIEW",
+    "basis": "CURRENT_STATE semantic_review_route.preferred and secondary_executor. Direct reads of candidate, official source, map, current Blueprint, register and companion DOCX; Builder receipts were not treated as semantic proof.",
+    "independent_of_builder": true,
+    "opencode_allowed": false,
+    "new_agent_created": false
+  },
+  "candidate": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0040_R01\\candidate\\0040__訓練評估方法與成效指標對照表_R01.docx",
+    "sha256": "04a0c76651fab1b74f451f4c18c4135bafbab846bd23b537355c9f874e6eeb51",
+    "expected_sha256": "04a0c76651fab1b74f451f4c18c4135bafbab846bd23b537355c9f874e6eeb51",
+    "size_bytes": 49120,
+    "sha_verified_before_review": true,
+    "sha_verified_after_review": true,
+    "candidate_modified": false
+  },
+  "official_mapping_and_authority": {
+    "mapping": "DOCX 0040 -> I08-E03 -> official checkbox/evidence sequence 040",
+    "source_map_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\SOURCE_REQUIREMENT_MAP_WAVE005_R03.csv",
+    "source_map_sha256": "405b987797d1558ecac182cea8e1adfbd1aead7754c880db32db43c235d5024e",
+    "source_map_row": {
+      "doc_id": "0040",
+      "indicator": "I08-E03",
+      "evidence_id": "040",
+      "official_requirement": "訓練評估方法與成效指標對照表。"
+    },
+    "official_pdf_path": "E:\\TTQS\\_official_TTQS_checklist.pdf",
+    "official_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "official_exact_checkbox_text": "課程規劃會議紀錄展現訓練課程設計流程，擬定訓練評估方法並作為訓練成效評估的依據，且有佐證資料可查。",
+    "actual_official_page": "PDF page 3 (printed page 3)",
+    "page_locator_discrepancy": "Candidate p.1, p.2 source table, p.6 and register row 0040-REF-001 cite PDF p.2; exact checkbox text is on printed PDF p.3. Current Blueprint also records official_evidence_table_page=3. Mapping/checkbox identity is correct; cited page is not.",
+    "blueprint_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\BLUEPRINT_CURRENT.jsonl",
+    "blueprint_file_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+    "blueprint_line": 40,
+    "blueprint_raw_row_sha256": "ab080a2e6d85cc13a706f0c10bda7c208ddc191a1fea20a670fd5a174ab14943",
+    "blueprint_genre": "專屬矩陣／檢核工具：訓練評估方法與成效指標對照表",
+    "blueprint_negative_neighbors": [
+      "0038 / I08-E02",
+      "0041 / I09-E01",
+      "0039 / I08-E03 companion minutes"
+    ],
+    "blueprint_current_serialized_row_sha256": "ab080a2e6d85cc13a706f0c10bda7c208ddc191a1fea20a670fd5a174ab14943",
+    "blueprint_historical_source_field": "historical_blueprint_source",
+    "blueprint_historical_source_value": "4b6ebe093bc083642ac9329855c0ced1c5dddccbe465936cc8e464dcbc7da947",
+    "blueprint_hash_usage_note": "Current row hash is SHA-256 of the exact serialized doc_id=0040/I08-E03 line in BLUEPRINT_CURRENT.jsonl. historical_blueprint_source is a distinct historical source identifier and is not the current row hash or signature."
+  },
+  "companion_check": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0039_R09\\candidate\\0039__課程規劃與設計審查會議紀錄_完整示範_R09.docx",
+    "sha256": "3e7ed5f173dc4604803f477289f1d6190e95a5c58d3a229420eaee67037080f5",
+    "case_id": "SAMPLE-0039-01",
+    "meeting_date": "2026-06-12",
+    "consistency": "0040 uses the same synthetic course context and meeting date. D01-D05 pre/post vectors, totals, K1-K4 means, 6/8 total threshold, K3>=1 critical threshold, measurement timing, missing-data rules, 4/5 pass count and 80% rate match 0039 R09 Tables 12-15 and M5-A. No evidence of mixing the separate 0033 case."
+  },
+  "register": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0040_R01\\sources\\0040_SOURCES_AND_SYNTHETIC_REPLACEMENT_REGISTER_R01.csv",
+    "sha256": "a684b4246d3200377e2ac3fe1e5ab122df18d7f9e48d7cdf8d9c780bfc983ddd",
+    "row_count": 34,
+    "unique_fact_id_count": 34,
+    "doc_ids": [
+      "0040"
+    ],
+    "case_ids": [
+      "OFFICIAL-040",
+      "SAMPLE-0039-01"
+    ],
+    "fact_type_counts": {
+      "coverage_calculation": 1,
+      "official_source_reference": 1,
+      "optional_followup_rule": 1,
+      "paired_mean_change": 1,
+      "posttest_aggregate": 1,
+      "posttest_dimension_means": 1,
+      "posttest_pass_count": 1,
+      "posttest_pass_rate": 1,
+      "pretest_aggregate": 1,
+      "pretest_dimension_means": 1,
+      "sample_case_id": 1,
+      "sample_course_title": 1,
+      "sample_followup_action": 1,
+      "sample_meeting_date": 1,
+      "sample_pass_rule": 1,
+      "sample_post_timing": 1,
+      "sample_pre_timing": 1,
+      "sample_role": 1,
+      "sample_scale": 1,
+      "sample_target_count": 1,
+      "synthetic_baseline_mean": 4,
+      "synthetic_posttest_score_vector": 5,
+      "synthetic_pretest_score_vector": 5
+    },
+    "status_counts": {
+      "SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD": 34
+    },
+    "all_body_locators_populated": true,
+    "all_real_source_fields_populated": true,
+    "all_owner_fields_populated": true,
+    "candidate_sha_binding_field_present": false,
+    "traceability_result": "34 unique rows cover official-source/case identity, K1-K4 baselines, five pretest vectors, five posttest vectors and aggregate calculations. Section/table/row locators checked against the DOCX body. Row 0040-REF-001 points to the correct source topic but repeats the wrong PDF page.",
+    "classification_caveat": "Row 0040-REF-001 is fact_type official_source_reference with case_id OFFICIAL-040, but status says SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD. The body correctly treats the public source as official and not association evidence; the register status should distinguish a real public-source citation from synthetic case data."
+  },
+  "render_review": {
+    "pdf_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0040_R01\\render\\R01_repair_review\\0040_R01_repair_word_export.pdf",
+    "pdf_sha256": "3e5a5ac86c55a9edb2546d36882c5c83b06013dc8bfda1bc7aaa040b610f6479",
+    "page_count": 6,
+    "existing_page_pngs": [
+      "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0040_R01\\render\\R01_repair_review\\page-1.png",
+      "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0040_R01\\render\\R01_repair_review\\page-2.png",
+      "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0040_R01\\render\\R01_repair_review\\page-3.png",
+      "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0040_R01\\render\\R01_repair_review\\page-4.png",
+      "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0040_R01\\render\\R01_repair_review\\page-5.png",
+      "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0040_R01\\render\\R01_repair_review\\page-6.png"
+    ],
+    "inspection": "All six existing Word ExportAsFixedFormat page PNGs individually inspected read-only; no COM, rerender or modification.",
+    "findings": "p.1 bottom workflow table and p.2 lower flow table extend to/through the left page edge; first-column header/labels are visibly clipped. p.3-p.5 tables are readable. p.6 has a sparse continuation with substantial unused lower area, but is not blank."
+  },
+  "policy_context": {
+    "current_state_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\CURRENT_STATE.json",
+    "current_state_sha256": "1345b6330b01c7b71293eeaf58aa7409a78681b7cf011b65a065c91888f972d6",
+    "forbid_internal_control_metadata_in_body": true,
+    "replacement_register_internal_sidecar": true,
+    "finding": "Body exposes internal document/requirement/checkbox identifiers and cross-document ID mappings: p.1 cover file number 0040 and source paragraph I08-E03/checkbox 040/DOCX 0039; p.2 comparison table cites DOCX0039, DOCX0033, DOCX0038/I08-E02 and DOCX0041/I09-E01; p.6 repeats identifiers and refers to attached replacement register. This conflicts with current evaluator-facing body policy."
+  },
+  "recalculated_math": {
+    "pre_totals": {
+      "D01": 2,
+      "D02": 3,
+      "D03": 4,
+      "D04": 3,
+      "D05": 5
+    },
+    "post_totals": {
+      "D01": 6,
+      "D02": 7,
+      "D03": 6,
+      "D04": 5,
+      "D05": 7
+    },
+    "paired_differences": {
+      "D01": 4,
+      "D02": 4,
+      "D03": 2,
+      "D04": 2,
+      "D05": 2
+    },
+    "pre_total_sum": 17,
+    "post_total_sum": 31,
+    "mean_pre": "17/5=3.4/8",
+    "mean_post": "31/5=6.2/8",
+    "mean_change": "14/5=+2.8/8",
+    "baseline_means_K1_K4": [
+      1.0,
+      0.6,
+      1.2,
+      0.6
+    ],
+    "target_scores": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "gaps_K1_K4": [
+      1.0,
+      1.4,
+      0.8,
+      1.4
+    ],
+    "dimension_pre_means": [
+      1.0,
+      0.6,
+      1.2,
+      0.6
+    ],
+    "dimension_post_means": [
+      2.0,
+      1.6,
+      1.6,
+      1.0
+    ],
+    "coverage": "4/4=100%",
+    "posttest_pass_ids": [
+      "D01",
+      "D02",
+      "D03",
+      "D05"
+    ],
+    "posttest_pass_rate": "4/5=80%",
+    "pass_rule": "all four scores complete, total >=6/8, and K3 >=1"
+  },
+  "gates": [
+    {
+      "gate": "official_mapping_and_genre",
+      "verdict": "PARTIAL",
+      "evidence": "Map and current Blueprint establish DOCX0040/I08-E03/checkbox040. Content is a direct-use assessment matrix companion to the 0039 minutes, not minutes itself or an I08-E02/I09-E01 deliverable. The cited source page is wrong: exact checkbox text is on PDF p.3, not p.2."
+    },
+    {
+      "gate": "matrix_coverage_and_operability",
+      "verdict": "PASS_WITH_LAYOUT_LIMITATION",
+      "evidence": "p.3 matrix covers K1-K4 target/gap, direct tool, timing/threshold and evidence fields/responsibility; pp.3-4 provide four-construct 0/1/2 rubric, full five-row before/after sample and calculations; pp.5-6 provide D04 worked non-pass example, exceptions and handoff. Intro workflow first-column clipping on pp.1-2 impairs navigation."
+    },
+    {
+      "gate": "case_math_and_0039_consistency",
+      "verdict": "PASS",
+      "evidence": "All D01-D05 vectors and totals match 0039 R09; baseline means 1.0/0.6/1.2/0.6 and gaps to 2 are 1.0/1.4/0.8/1.4; totals 17 and 31, average paired gain 2.8; pass IDs D01/D02/D03/D05, 4/5=80%; threshold is complete data, total>=6/8, K3>=1. Missing-data/N/A rules are consistent."
+    },
+    {
+      "gate": "sample_real_authority_and_third_party_boundary",
+      "verdict": "PASS_WITH_REGISTER_LABEL_CAVEAT",
+      "evidence": "p.1 marks SAMPLE/SYNTHETIC and disclaims association survey/course/outcomes; p.2 excludes inference of meeting/approval; pp.5-6 disclaim real attendance, scores, approval, execution and outcomes and real signatures. Register row 0040-REF-001 is an official-source reference, not association evidence, although its generic status label says SAMPLE/SYNTHETIC."
+    },
+    {
+      "gate": "title_blind_and_negative_neighbors",
+      "verdict": "PASS_WITH_POLICY_VIOLATION",
+      "evidence": "Matrix, K1-K4 rubric, timing, threshold, sample results and D04 follow-up make purpose clear without title; it is distinguishable from 0039 meeting minutes, 0038 system-improvement record and 0041 course plan. Body relies on internal IDs, contrary to the current evaluator-facing policy."
+    },
+    {
+      "gate": "register_coverage_and_traceability",
+      "verdict": "PARTIAL",
+      "evidence": "34 unique rows cover the synthetic case, tools, roles, timings, rules, baseline, D01-D05 vectors and calculations. Locators identify sections/tables/rows but no candidate SHA binding field exists. Official source row repeats p.2 error and its status label does not distinguish a real public source."
+    },
+    {
+      "gate": "rendered_page_readability",
+      "verdict": "PARTIAL",
+      "evidence": "All six existing pages inspected. p.1 and p.2 workflow tables have clipped first columns; p.6 is sparse but legible. Remaining pages are readable."
+    }
+  ],
+  "blocking_findings": [
+    {
+      "id": "0040-B1",
+      "severity": "BLOCKING",
+      "locator": "p.1 source paragraph; p.2 official-source comparison row; p.6 official requirement paragraph; register row 0040-REF-001.",
+      "finding": "Candidate/register cite official I08-E03 checkbox 040 on PDF p.2. In the exact supplied PDF, the checkbox text occurs on PDF page 3, printed page 3; current Blueprint line 40 also records page 3. The mapping is right but the evidence locator is false.",
+      "repair_needed": "Correct official source page locator to p.3 consistently in body and register."
+    },
+    {
+      "id": "0040-B2",
+      "severity": "BLOCKING",
+      "locator": "p.1 cover file-number field and source paragraph; p.2 document-comparison table; p.6 official-source and handoff text.",
+      "finding": "Evaluator-facing body exposes internal document/requirement/checkbox codes and cross-document ID mapping (0040, I08-E03, checkbox 040, DOCX 0039/0033/0038/0041), and points to the attached replacement register. CURRENT_STATE forbids internal control metadata in the body and keeps the register as an internal sidecar.",
+      "repair_needed": "Replace code-based mapping with plain-language descriptions of the companion minutes, separate needs-analysis example, system-improvement record and course-plan document; keep internal IDs and register details in sidecars."
+    },
+    {
+      "id": "0040-B3",
+      "severity": "BLOCKING",
+      "locator": "rendered p.1 bottom workflow table 步驟／操作／完成後留下的可查結果; rendered p.2 lower table 流程節點／可核對輸出.",
+      "finding": "The first column extends beyond the left page boundary; first-column header and step labels are visibly truncated, so readers cannot reliably identify workflow steps.",
+      "repair_needed": "Fit table width and indent within printable page area, preserving all first-column labels, then visually verify a new render."
+    }
+  ],
+  "nonblocking_observations": [
+    {
+      "locator": "register row 0040-REF-001",
+      "finding": "The row correctly identifies an official public-source reference and no replacement is required, but its status says SAMPLE/SYNTHETIC. Use a separate real-public-source-reference status."
+    },
+    {
+      "locator": "p.6 handoff table continuation",
+      "finding": "Sparse page with substantial unused lower space; content is legible and page is not blank."
+    },
+    {
+      "locator": "register schema",
+      "finding": "No bound_candidate_sha256 field; this receipt binds the exact candidate and register hashes together."
+    }
+  ],
+  "limitations": [
+    "No DOCX edits, rebuilds, Word COM or rerendering were performed.",
+    "All six existing render PNGs were inspected directly.",
+    "This is a candidate-level review only; no promotion or Human acceptance is implied."
+  ],
+  "required_status": "CANDIDATE / NOT_PROMOTED / Human acceptance PENDING"
+}

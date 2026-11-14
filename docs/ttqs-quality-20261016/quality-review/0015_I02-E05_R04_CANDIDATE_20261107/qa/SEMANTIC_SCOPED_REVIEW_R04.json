@@ -1,0 +1,37 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0015",
+  "revision": "R04",
+  "work_id": "TTQS-0015-R04-W1-SCOPED-20261106",
+  "reviewer_session": "ses_e4e7b9222fferDx0Wro9uU1ETV",
+  "review_owner": "OpenCode v2 independent text reviewer",
+  "requested_model": "opencode/glm-5.3-flash-free",
+  "actual_model": "UNKNOWN",
+  "candidate_sha256": "b6833138212359b2be99d9008f85d535733231de5b28cbab81060e14ffead718",
+  "parent_candidate_sha256": "384082390bc7322e3cb58d9c0dc4e195af2a5eff40506681e7f12e5c2a7af635",
+  "review_packet_sha256": "cd62728a66cc2b02fbe8068c0abaf6c66015ce748f6e16281dd6c7fb0e166e15",
+  "raw_stdout_sha256": "0e555a3c1f8b4afb6599c6321ddc9d9f10410c3e0cc48395cd8b98124f23aaec",
+  "review_scope": [
+    "R03-to-R04 changed hunks P003, P006, P049, T10 R003",
+    "D4 30-second reader block",
+    "D5 supplemental-deadline attribution",
+    "conditional locator drift",
+    "revision-axis consistency",
+    "changed text contradiction, synthetic-register and REAL-boundary checks"
+  ],
+  "review_verdict": "PASS_SCOPED_SEMANTIC_REVIEW",
+  "review_observations": [
+    "T10 R003 hard-codes revision R04; maintainability note only",
+    "P049 deadline depends on a real supplementary notice before use",
+    "P076 remains unnumbered; cosmetic"
+  ],
+  "review_accepted_by_wrapper": false,
+  "promotion": "NOT_PROMOTED",
+  "limitation": "Scoped changed-text semantic result only; not a full-document acceptance, formal TTQS acceptance, or REAL promotion.",
+  "dispatch_started_at": "2026-11-06T23:40:08.312493+08:00",
+  "dispatch_ended_at": "2026-11-06T23:42:06.254564+08:00",
+  "cli_exit_code": 0,
+  "stdout_bytes": 6804,
+  "stderr_bytes": 0,
+  "notes": "The wrapper receipt says review_accepted=false; the raw reviewer response explicitly returns PASS for the four changed semantic hunks. Preserve both fields; this receipt reconciles scope without upgrading the whole candidate."
+}

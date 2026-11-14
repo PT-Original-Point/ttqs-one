@@ -1,0 +1,9 @@
+Sanitized, minimal Antigravity CLI log excerpt. Full raw log is retained locally and not published.
+raw_log_sha256=89806177705dea719b745fb3c7dc510a937bc24e8d7cd8e17d36b59d74304594
+
+I1028 00:44:51.119848       1 resolver.go:85] Model ID gemini-3.8-flash-high not in local config, defaulting to CCPA
+I1028 00:44:51.204704       1 resolver.go:111] Model resolved via default
+W1028 00:44:51.524857      33 cache.go:135] Cache(loadCodeAssistResponse): Singleflight refresh failed: error getting token source: You are not logged into Antigravity.
+I1028 00:44:51.528354      33 model_configs.go:350] Auth mode is unspecified, skipping fetchAvailableModels and returning empty response
+I1028 00:44:51.678706       1 printmode.go:202] Print mode: starting (promptLength=37919, model="gemini-3.8-flash-high", conversationID="")
+I1028 00:44:51.678706       1 analytics.go:249] CLI startup completed (took 561.955ms, phases [main_entered=0ms ls_start=87ms ls_ready=550ms launch_cli=550ms backend_created=561ms project_resolved=561ms])

@@ -1,0 +1,65 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0133",
+  "requirement_id": "I19-E22",
+  "parent_candidate": "R05",
+  "candidate": "R06",
+  "source_ref": "work/ttqs-one-document-quality-contract-20261016",
+  "source_head": "704e94cd72678025f2a36f5ec43dc891a1b6a6f2",
+  "source_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\REMOTE_READBACK_PR92_704e94cd_20261108\\docs\\ttqs-quality-20261016\\quality-review\\0133_R05_20261106\\candidate\\0133_I19-E22_CANDIDATE_R05.docx",
+  "source_candidate_sha256": "7f9cf468358d43ab866a1f11f29149faf0ee21ff99c7966f7754bc1a7978eb6e",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\0133_R05_SYNEX01_REPAIR_20261108\\candidate\\0133_I19-E22_CANDIDATE_R06.docx",
+  "candidate_sha256": "cceae5b8781fe503bd15993409ba616adb53a99d9923816d44afe019ee48b821",
+  "candidate_bytes": 103935,
+  "writer_work_id": "TTQS_ONE_0133_R05_SYNEX01_REPAIR_PROPOSAL_20261108",
+  "writer_response_sha256": "0fc5e2dc151296e7e5f221c62d8c3fa6c1900e51f740635fbc276ba9e8078f98",
+  "scope": "Only the two cells in Table 10 SYN-EX-01 and the two cells in Table 15 SYN-EX-01 were changed; all other paragraph/table-cell text unchanged.",
+  "changes": [
+    {
+      "table": 9,
+      "row": 1,
+      "cell": 1,
+      "before": "20筆日簽到誤當人次，去重為11",
+      "after": "20筆日簽到誤當人次，去重為11；補充 SYNTHETIC 示例：第1日10筆、第2日10筆、重複9人，10+10-9=11"
+    },
+    {
+      "table": 9,
+      "row": 1,
+      "cell": 3,
+      "before": "以「班次×去識別學員」重算 11；保存舊值20、新值11、來源鍵、原因與第二人覆核",
+      "after": "以「班次×去識別學員」重算 11；SYNTHETIC 示例僅說明去重，不計入年度總數；保存舊值20、新值11、來源鍵、原因與第二人覆核"
+    },
+    {
+      "table": 14,
+      "row": 29,
+      "cell": 2,
+      "before": "20筆日簽到誤當人次，去重為11",
+      "after": "20筆日簽到誤當人次，去重為11；SYNTHETIC 示例：10+10-9=11"
+    },
+    {
+      "table": 14,
+      "row": 29,
+      "cell": 3,
+      "before": "REAL需原始簽到及去識別學員×班次清單；示例不併年度數",
+      "after": "REAL 需原始簽到及去識別學員×班次清單；SYNTHETIC 值 10、10、9、11 僅登錄說明，不併年度數；HOLD 來源核對"
+    }
+  ],
+  "synthetic_boundary": "All added numbers (10, 10, 9, 11) are illustrative SYNTHETIC values, no dates or names added, and excluded from annual totals.",
+  "technical_checks": {
+    "docx_reopens": true,
+    "zip_crc": "PASS",
+    "structure_counts_unchanged": true,
+    "only_four_scoped_table_cells_changed": true,
+    "updated_table_runs_pt": [
+      9.5,
+      9.5,
+      9.5,
+      9.5
+    ],
+    "calculation": "10+10-9=11",
+    "annual_totals_unchanged_by_text_delta": true
+  },
+  "status": "CANDIDATE_PENDING_VISUAL_AND_INDEPENDENT_SCOPED_REVIEW",
+  "formal_acceptance": "NOT_GRANTED",
+  "created_at": "2026-11-08T10:12:59.410629+08:00"
+}

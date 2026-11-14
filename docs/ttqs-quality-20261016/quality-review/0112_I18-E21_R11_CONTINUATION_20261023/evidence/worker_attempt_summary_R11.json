@@ -1,0 +1,110 @@
+{
+  "project_id": "TTQS_ONE",
+  "work_id": "0112-I18-E21-WORKER-CLOSEOUT-R11",
+  "doc_id": "0112",
+  "requirement_id": "I18-E21",
+  "observed_at_tpe": "2026-10-23T23:10:00+08:00",
+  "attempts": [
+    {
+      "worker": "Antigravity CLI",
+      "role": "WRITER",
+      "attempt": "R01",
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_model": "gemini-3.8-flash-high (native init event)",
+      "cli_exit": 0,
+      "conversation_id": "e66bda07-7b9b-4245-a9e5-3b63b4dae340",
+      "raw_stdout_sha256": "109cfdd04539831b98ff30be2afbac61c7dbcc1408f98122537d60ce10d44fee",
+      "manuscript_sha256": "ec086697904e3e47a8f7147279df1c75ee158199170019ce7d95847b38b46e8f",
+      "tool_calls_observed": 0,
+      "adoption": "NOT_ADOPTED",
+      "finding": "unsupported association approvals, named authorities, deadlines, policies and causal/real-world claims"
+    },
+    {
+      "worker": "Antigravity CLI",
+      "role": "WRITER_REPAIR",
+      "attempt": "R02",
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_model": "gemini-3.8-flash-high (native init event)",
+      "cli_exit": 0,
+      "conversation_id": "e66bda07-7b9b-4245-a9e5-3b63b4dae340",
+      "duration_seconds": 276.0274501,
+      "turns": 2,
+      "usage": {
+        "input_tokens": 27721,
+        "output_tokens": 20985,
+        "thinking_tokens": 7758,
+        "cache_read_tokens": 0,
+        "total_tokens": 48706
+      },
+      "raw_stdout_sha256": "3c442c45e7815e5c87a47cecfedb1cbbc1cd8f50b16dcf2318b1981360f703e4",
+      "manuscript_sha256": "e0f1cb83883c0d366e5f07aa74ecfc079a287fba006fc027909061c67fce230a",
+      "tool_calls_observed": 0,
+      "adoption": "NOT_ADOPTED_UNCHANGED",
+      "finding": "aggregates correct but fact IDs misbound across periods/measures; learner codes differ from dataset; Blueprint cohort register and action follow-up evidence/date fields missing"
+    },
+    {
+      "worker": "Antigravity CLI",
+      "role": "WRITER_DELTA",
+      "attempt": "R03_PARSE",
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_model": "NOT_DISPATCHED",
+      "cli_exit": "UNKNOWN_NOT_CAPTURED",
+      "result": "CLI_ARGUMENT_PARSE_FAILURE_NO_PROVIDER_REQUEST",
+      "prompt_sha256": "9606216442716a11361b4bf87719a4e752eb073f04d72da7eaf6730709731490",
+      "raw_stderr_sha256": "36542a8a3a9f9b2929fceca26eb1c019083ad8c879a9ec15bfd34d47e3e1a12",
+      "detail": "--print consumed --prompt; parser instructed --print=<prompt>. One command-construction repair followed."
+    },
+    {
+      "worker": "Antigravity CLI",
+      "role": "WRITER_DELTA",
+      "attempt": "R03_FIX1",
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_model": "gemini-3.8-flash-high (native init event)",
+      "cli_exit": 0,
+      "conversation_id": "b84f705a-ba7c-442e-95a0-c7beb06e13d7",
+      "duration_seconds": 8.4181894,
+      "turns": 1,
+      "usage": {
+        "input_tokens": 7957,
+        "output_tokens": 735,
+        "thinking_tokens": 686,
+        "cache_read_tokens": 0,
+        "total_tokens": 8692
+      },
+      "raw_stdout_sha256": "d57247629481528e12cf681fd91a59c303e6323dbd449cc0678d4ac324fe9df8",
+      "response_length": 0,
+      "tool_events": 2,
+      "tool": "run_command",
+      "command": "Get-ChildItem -Path . -Recurse -Depth 2",
+      "tool_result": "permission denied; no file read/list occurred",
+      "status": "NO_DELIVERABLE_PERMISSION_BLOCKED",
+      "retry": "NO_RETRY; permission denial expressly not bypassed"
+    },
+    {
+      "worker": "OpenCode v2 CLI",
+      "role": "WRITER_DELTA",
+      "attempt": "R01",
+      "requested_model": "opencode/deepseek-v4.1-flash-free",
+      "actual_model": "UNKNOWN_NO_RESPONSE",
+      "cli_exit": 1,
+      "session_id": "ses_e96b6a762ffezenxJqg43yo6Vx",
+      "raw_stdout_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0112_I18-E21_R11_CONTINUATION_20261023\\opencode_delta_R01_stdout.jsonl",
+      "raw_stdout_sha256": "48450c155f5b926d25da6bfaa99aef4097f4b9c11b6be52d4cea7650942e3ddb",
+      "stdout_bytes": 430,
+      "stderr_bytes": 0,
+      "provider_error": "HTTP 429 FreeUsageLimitError / Free usage limit reached",
+      "response": "NONE",
+      "adoption": "NONE",
+      "billing": "UNKNOWN; no invoice evidence",
+      "retry": "STOPPED; do not try paid upgrade or unchanged quota retries"
+    }
+  ],
+  "route_state": {
+    "antigravity_gemini_text": "PAUSED_FOR_THIS_0112_SUPPLEMENT_AFTER_PERMISSION_DENIAL; no dangerous permission bypass",
+    "opencode_free_writer": "BLOCKED_BY_PROVIDER_429_AT_THIS_OBSERVATION; no paid switch",
+    "open_code_service_pid_is_writer": false
+  },
+  "codex_takeover": "R02 was not adopted as-is; local R02 candidate authored/integrated only after both authorized text-worker supplement routes returned no usable delta. Codex token cost UNKNOWN.",
+  "candidate_sha256": "0cfb3d594b5ad13dbe6edd9f4c42feb38488938821736d621b23835a554908b0",
+  "candidate_state": "CANDIDATE_NOT_ACCEPTED; visual and independent review pending"
+}

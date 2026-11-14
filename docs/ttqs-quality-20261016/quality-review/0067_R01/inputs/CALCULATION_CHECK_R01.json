@@ -1,0 +1,45 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0067",
+  "revision": "R01",
+  "cohort_count": 3,
+  "input_fact_count": 49,
+  "assertions": "all cohort count constraints passed",
+  "totals": {
+    "registrants": 37,
+    "attendees": 32,
+    "absent": 5,
+    "completers": 30,
+    "not_completed_registered": 7,
+    "valid_assessments": 30,
+    "assessment_passes": 24,
+    "assessment_failures_valid": 6,
+    "no_valid_assessment": 2,
+    "survey_issued": 32,
+    "survey_valid": 30,
+    "survey_invalid": 2,
+    "positive_responses": 26,
+    "nonpositive_valid_responses": 4,
+    "planned_budget_twd": 25000,
+    "actual_spend_twd": 24630,
+    "budget_variance_spend_minus_plan_twd": -370
+  },
+  "metrics": {
+    "attendance_rate": "32/37=86.5%",
+    "completion_rate_registered": "30/37=81.1%",
+    "completion_rate_attendees": "30/32=93.8%",
+    "assessment_coverage": "30/32=93.8%",
+    "assessment_pass_rate_weighted": "24/30=80.0%",
+    "assessment_pass_rate_unweighted_class_mean": "79.6%",
+    "survey_response_rate": "30/32=93.8%",
+    "positive_rate": "26/30=86.7%",
+    "budget_utilization": "24630/25000=98.5%",
+    "cost_per_attendee_twd": "24630/32=769.69"
+  },
+  "cohort_budget_variances": {
+    "C1": -350,
+    "C2": -300,
+    "C3": 280
+  },
+  "scope_note": "All numbers are SAMPLE/SYNTHETIC. C1 is copied unchanged from candidate 0066 R01; C2/C3 are synthetic."
+}
