@@ -1,0 +1,53 @@
+{
+  "schema": "TTQS_ONE_W2_REVIEW_RESPONSE_VALIDATION_R01_V1",
+  "work_id": "TTQS_ONE_0127_R02_FULL_SEMANTIC_REVIEW_W2_GEMINI_20261109",
+  "valid_json": true,
+  "expected_binding_match": true,
+  "binding_checks": {
+    "candidate_docx_sha256": true,
+    "candidate_body_text_sha256": true,
+    "source_packet_sha256": true,
+    "unique_blueprint_sha256": true
+  },
+  "verdict": "PASS_TEXT_ONLY",
+  "checks": {
+    "requirement_and_genre": "PASS",
+    "operational_usability": "PASS",
+    "calculations_and_cross_references": "PASS",
+    "sample_real_boundary": "PASS",
+    "title_blind_and_negative_neighbors": "PASS"
+  },
+  "finding_count": 2,
+  "blocking_finding_count": 0,
+  "all_findings_nonblocking": true,
+  "all_findings_action_none": true,
+  "visual_review": "NOT_PERFORMED",
+  "real_evidence_verified": false,
+  "formal_acceptance": "NOT_GRANTED",
+  "candidate_unchanged": true,
+  "tools_observed": [
+    "read_file",
+    "read_file"
+  ],
+  "tool_paths": [
+    "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\DISPATCH_W2_0025_0127_R02_FULL_SEMANTIC_GEMINI_20261109\\TEXT_INPUT\\INPUT_PACKET.md",
+    "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\DISPATCH_W2_0025_0127_R02_FULL_SEMANTIC_GEMINI_20261109\\TEXT_INPUT\\INPUT_PACKET.md"
+  ],
+  "tool_policy_pass": true,
+  "response_sha256": "7fa49273aab03e4deb0a03e990026bac2403bffa9c9e9039487d425a88906cbb",
+  "response_bytes": 1908,
+  "replacement_chars": 0,
+  "raw_stdout_sha256": "2588054e6ba0cbc722ed3d4a85a7abf1227c0f9a91ffcadb1686f5f691e57163",
+  "raw_stderr_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+  "cli_exit_code": 0,
+  "timed_out": false,
+  "token_usage": {
+    "input_tokens": 30950,
+    "output_tokens": 8865,
+    "thinking_tokens": 7918,
+    "cache_read_tokens": 0,
+    "total_tokens": 39815
+  },
+  "actual_serving_model": "UNKNOWN",
+  "validation_result": "PASS"
+}

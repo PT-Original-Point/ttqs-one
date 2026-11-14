@@ -1,0 +1,36 @@
+{
+  "work_id":"TTQS_ONE_0142_R08_FULL_SEMANTIC_REVIEW_W1_GLM_20261109",
+  "doc_id":"0142",
+  "requirement_id":"I19-E32",
+  "candidate_docx_sha256":"dd6bfd2bb75ed9708065578f435b54fc7c85c9492f35edcddf614f962db41e0a",
+  "candidate_body_text_sha256":"02006f34f320fcb52e8d22ac5f342d86777c1d45296513580cea033395c2df65",
+  "source_packet_sha256":"e3e8b3a8ee1effe758608fee183440add4f37381988c5e352912b1a3d55c9e49",
+  "unique_blueprint_sha256":"4841161d6e9aad3ace2a0b4ec4a5a3e1b7e92b68ff2b20f95e9edeae2b84070b",
+  "verdict":"PASS_TEXT_ONLY",
+  "checks":{
+    "requirement_and_genre":"PASS",
+    "operational_usability":"PASS",
+    "calculations_and_cross_references":"PASS",
+    "sample_real_boundary":"PASS",
+    "title_blind_and_negative_neighbors":"PASS"
+  },
+  "findings":[
+    {
+      "severity":"nonblocking",
+      "locator":"Section 6.1 intro before Appendix A / Appendix A register",
+      "evidence":"Intro states「下列九筆只用於算式示範」but Appendix A lists 18 entries (9 per Table 5: 2023/2024/2025 OPERATING_REVENUE, OTHER_INCOME, TOTAL_INCOME; plus 9 Appendix C-1 breakdown rows: GRANT_OR_DONATION, MEMBERSHIP_DUES, INTEREST_INCOME per year)",
+      "impact":"The stated count of nine contradicts the 18-row replacement register; only the Table-5 values are used in the arithmetic demonstration, so the sentence is ambiguous and could cause a reviewer to under-verify the register",
+      "required_action":"Change「九筆」to「十八筆」or scope the sentence explicitly to the nine Table-5 source values while noting the nine Appendix C-1 breakdown rows separately"
+    },
+    {
+      "severity":"nonblocking",
+      "locator":"Section 3 field definitions / Table 10",
+      "evidence":"Non-comparable or non-positive denominator cases are marked「不適用」/「不套用一般增幅」where Blueprint wording specifies N/A plus HOLD",
+      "impact":"Terminology differs from the Blueprint's N/A convention, though the candidate does apply HOLD semantics elsewhere (e.g., 3.1代收款「差異未解即HOLD」, Table 9 REAL=UNKNOWN/HOLD) and the operational meaning is equivalent",
+      "required_action":"none"
+    }
+  ],
+  "visual_review":"NOT_PERFORMED",
+  "real_evidence_verified":false,
+  "formal_acceptance":"NOT_GRANTED"
+}

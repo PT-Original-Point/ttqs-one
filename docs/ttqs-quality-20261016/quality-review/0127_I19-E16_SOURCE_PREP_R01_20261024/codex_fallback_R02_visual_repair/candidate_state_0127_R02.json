@@ -21,19 +21,26 @@
     "technical_layout_pre_render": "PASS_TECHNICAL_PRE_RENDER",
     "standalone_figure_assets": "PASS_ASSET_ONLY_NOT_DOCUMENT_VISUAL_QA",
     "word_native_visual": "BLOCKED_WORD_NATIVE_RENDER",
-    "independent_semantic": "BLOCKED_PROVIDER_FREE_LIMIT"
+    "independent_semantic": "PASS_TEXT_ONLY"
   },
   "formal_acceptance": "NOT_GRANTED",
   "real_evidence": "UNKNOWN_HOLD",
   "sample_boundary": "All generated observations are SAMPLE/SYNTHETIC; no association approval, real-world execution, or external outcome is asserted.",
   "blocking_findings": [
-    "No final Word render or full-page visual inspection for R02.",
-    "No independent semantic verdict for R02 because the free provider returned HTTP 429 before review content."
+    "No final Word render or full-page visual inspection for R02."
   ],
   "next_legal_actions": [
     "Diagnose Word ExportAsFixedFormat stall from bounded traces or use a separately verified native render path without changing DOCX bytes.",
-    "Obtain an independent exact-SHA semantic review only after an evidenced available route or after the documented provider release window; do not retry the identical request prematurely.",
-    "Continue unrelated READY document lanes."
+    "Continue unrelated READY document lanes.",
+    "Keep Word-native visual lane blocked until a valid render and visual receipt are available; continue unrelated READY lanes."
   ],
-  "updated_at_local": "2026-10-28T19:20:00+08:00"
+  "updated_at_local": "2026-11-09T02:54:18+08:00",
+  "latest_semantic_review": {
+    "status": "PASS_TEXT_ONLY",
+    "work_id": "TTQS_ONE_0127_R02_FULL_SEMANTIC_REVIEW_W2_GEMINI_20261109",
+    "response_sha256": "7fa49273aab03e4deb0a03e990026bac2403bffa9c9e9039487d425a88906cbb",
+    "candidate_sha256": "abba46bcdd0919c4511df025cd90d65cd302fe3f9f59c86d0fa8b7efe2015285",
+    "visual_review": "NOT_PERFORMED",
+    "formal_acceptance": "NOT_GRANTED"
+  }
 }
