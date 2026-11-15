@@ -1,0 +1,38 @@
+{
+  "schema": "TTQS_ONE_W2_FULL_SEMANTIC_DISPATCH_TERMINAL_R01_V1",
+  "work_id": "TTQS_ONE_0127_R04_FULL_SEMANTIC_W2_GEMINI38_20261115_R01",
+  "attempt": 6,
+  "process_id": 20092,
+  "process_exit_code": 0,
+  "timed_out": false,
+  "status": "EXITED",
+  "completed_utc": "2026-11-15T13:23:28.171559+00:00",
+  "duration_seconds": 64.789,
+  "stdout_bytes": 11999,
+  "stdout_sha256": "6b4edbfb5ef48f1e3ee8dd429e95acb21641b4088a8b9f62d7bc959da26314f7",
+  "stderr_bytes": 78,
+  "stderr_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+  "candidate_docx_sha256": "d374fa890072edfbad55542b56fb43df22aeac6db51e3f9d2164ab2f0f82ae03",
+  "packet_sha256": "c0c0a5c355c5b39286963c613bcdcb706141d065aea95ae416ea32df90115847",
+  "requested_model": "gemini-3.8-flash-high",
+  "actual_serving_model": "UNKNOWN",
+  "event_count": 45,
+  "tool_call_event_count": 0,
+  "parse_errors": [],
+  "result_events": [
+    {
+      "conversation_id": "30c378ee-0e62-44da-9e44-4288d189bc34",
+      "status": "SUCCESS",
+      "response": "{\n  \"work_id\": \"TTQS_ONE_0127_R04_FULL_SEMANTIC_W2_GEMINI38_20261115_R01\",\n  \"doc_id\": \"0127\",\n  \"requirement_id\": \"I19-E16\",\n  \"candidate_docx_sha256\": \"d374fa890072edfbad55542b56fb43df22aeac6db51e3f9d2164ab2f0f82ae03\",\n  \"candidate_body_text_sha256\": \"00b009b1b9c2a24758372f44e3d70824bc4cba8dd4a2214d0ec213e18d69c632\",\n  \"paired_csv_sha256\": \"d5eb3b91ecc83d4e76b831804f85d0e5f81b24e5f66d8a7853aaebc475803b88\",\n  \"official_source_packet_sha256\": \"058663e200fd0207196c08a02e4d159c6e3eaa7f167094cd7b409b4050b18675\",\n  \"unique_blueprint_sha256\": \"9a249a2e398407469bd82c9bf5d7a6188c9e3d28be79172bd4cc33b213c700ff\",\n  \"verdict\": \"PASS\",\n  \"checks\": {\n    \"requirement_alignment\": \"PASS\",\n    \"genre_and_usability\": \"PASS\",\n    \"dual_constructs\": \"PASS\",\n    \"definitions_and_math\": \"PASS\",\n    \"synthetic_truth_boundary\": \"PASS\",\n    \"traceability_and_register\": \"PASS\",\n    \"negative_neighbor_boundaries\": \"PASS\",\n    \"actionability\": \"PASS\"\n  },\n  \"findings\": [],\n  \"scope_limitation\": \"semantic/usability review of full extracted body only; not visual QA or formal acceptance\",\n  \"visual_review\": \"NOT_PERFORMED\",\n  \"real_evidence_verified\": false,\n  \"formal_acceptance\": \"NOT_GRANTED\",\n  \"actual_serving_model\": \"UNKNOWN\"\n}\n",
+      "duration_seconds": 61.4663459,
+      "num_turns": 1,
+      "usage": {
+        "input_tokens": 29966,
+        "output_tokens": 6183,
+        "thinking_tokens": 5548,
+        "cache_read_tokens": 0,
+        "total_tokens": 36149
+      }
+    }
+  ]
+}
