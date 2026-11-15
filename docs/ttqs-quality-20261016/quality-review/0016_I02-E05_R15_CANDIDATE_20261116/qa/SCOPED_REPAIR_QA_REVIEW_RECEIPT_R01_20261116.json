@@ -1,0 +1,118 @@
+{
+  "schema": "TTQS_ONE_SCOPED_REPAIR_QA_REVIEW_RECEIPT_R1",
+  "work_id": "TTQS_ONE_0016_I02-E05_R14_TO_R15_VERSION_BOUNDARY_REPAIR_20261116",
+  "doc_id": "0016",
+  "requirement_id": "I02-E05",
+  "candidate_state": "CANDIDATE_ONLY",
+  "build_owner": "Codex local deterministic scoped repair; separate worker draft was rejected and not adopted",
+  "baseline_sha256": "5082d0be4e42cd3e5ea1643cd4cbb75f663b75b79487eb4cb6c5b7dfd36082d0",
+  "candidate_sha256": "8d353de8930d6074419def384b507ce2cd8d20bc271a6140391aae87ffa9cdff",
+  "candidate_bytes": 53192,
+  "register_baseline": "SYNTHETIC_REPLACEMENT_REGISTER_0016_R13A.csv",
+  "register_sha256": "a7f26286828ea7f6c7ecbe7b6aefe6d72a3608b2cc11e2e9ee9a8af7e2749487",
+  "register_rows": 28,
+  "register_changed_keys": [
+    "S-001",
+    "S-024"
+  ],
+  "register_delta": "僅兩筆合成示例值增加「R13/r13 是識別字串，不是文件版次 R15」的界線說明。",
+  "actual_material_delta": [
+    "封面文件版次更新至 R15、日期更新至 2026-11-16。",
+    "正文將 R13/r13 Campaign/UTM 識別碼明確界定為 SAMPLE ID；文件包版次為 R15。",
+    "R13A 引用更新為 R15A。",
+    "DOCX 原生開啟及 OOXML ZIP 完整性 PASS。"
+  ],
+  "deterministic_qa": {
+    "docx_reopen": "PASS",
+    "zip_integrity": "PASS",
+    "font_audit": {
+      "paragraphs_checked": 487,
+      "body_min_pt": 10.5,
+      "table_min_pt": 9.5,
+      "below_floor": 0,
+      "result": "PASS"
+    },
+    "cross_document_screen": "PASS_EXACT_BLOCK_SCREEN",
+    "cross_document_screen_file": "CROSS_DOCUMENT_EXACT_BLOCK_SCREEN_R15_R01_20261116.json"
+  },
+  "visual": {
+    "renderer": "Microsoft Word COM",
+    "rendered_pdf_sha256": "3d0d3843b84ee18d3c8b427ae427be8d5c4548ac4c7a441963bd2e6522e2591a",
+    "page_count": 14,
+    "pages_inspected": 14,
+    "page_image_size": "1241x1754 @ 150 dpi",
+    "result": "PASS_NO_CLIPPING; FINAL_PAGE_SPARSE",
+    "note": "未見截字、表格溢出或字形缺失；第14頁僅含一個來源追溯項目，版面留白較多。",
+    "page_png_sha256": [
+      {
+        "page": 1,
+        "sha256": "6786ac4e0dee39cf38ea77bcece8dce471b17553b9014de40e4d9b89c5c546c1"
+      },
+      {
+        "page": 2,
+        "sha256": "40534f77deff4682463f4689b309aa440be424805a759350bc46070b8ac142b5"
+      },
+      {
+        "page": 3,
+        "sha256": "df69638c7fad778fe987209328188f0b1936528e785088dd3bd82df2a2031d9c"
+      },
+      {
+        "page": 4,
+        "sha256": "af6af9c97f8b5a2bf26609db359f43e9181cf73a1b9b44b742ae29b58f88868f"
+      },
+      {
+        "page": 5,
+        "sha256": "389577d42f7cf24a489d21635bd0c5aaba34bb49bfe7bc0cfd8925c91df54439"
+      },
+      {
+        "page": 6,
+        "sha256": "0a683998763351dcdacd27fa0fd2df3f023c51db09dc557640f8e0660cf78afc"
+      },
+      {
+        "page": 7,
+        "sha256": "434f886eda4968357131a2d5e5c3d8d81b6a63691782772c370646719b234e50"
+      },
+      {
+        "page": 8,
+        "sha256": "4dbc7db8da1583a337a5c5ebf5afd8f5010c1e931cd236bd557339ced59aa4f7"
+      },
+      {
+        "page": 9,
+        "sha256": "df4250b05f1bbe84b276fc0529c5290b8c5dcd787ac2356c3f83c59b2b859faa"
+      },
+      {
+        "page": 10,
+        "sha256": "09a7b4e0decac39264ce7df12738161cc7940f313065be5a156ffd21791522af"
+      },
+      {
+        "page": 11,
+        "sha256": "c8310e8357ffedacf0134d314d3f157801082ac0e98d6ab21e6cfb6222e8af87"
+      },
+      {
+        "page": 12,
+        "sha256": "1f9cb197edb6fd73c9fdd82160dcd47b7c2df40221929fa08f6c13c2d912927e"
+      },
+      {
+        "page": 13,
+        "sha256": "b37c9636dd5f403b03f1728ea0e238173533b5b5661081673d1727702659114e"
+      },
+      {
+        "page": 14,
+        "sha256": "2debdd050ae00e285013dc05d33765ed400670718aa4b1db8019b965beef5933"
+      }
+    ]
+  },
+  "independent_semantic_review": {
+    "review_file": "INDEPENDENT_SEMANTIC_REVIEW_R15_R01_20261116.json",
+    "reviewer": "delegated fresh reviewer",
+    "reviewer_model": "UNKNOWN",
+    "candidate_sha256": "8d353de8930d6074419def384b507ce2cd8d20bc271a6140391aae87ffa9cdff",
+    "verdict": "PASS",
+    "formal_acceptance": false
+  },
+  "unresolved": [
+    "外部連結與信箱未實測；目前為 example.invalid SAMPLE。",
+    "不代表 Human 正式接受或 REAL 成效。"
+  ],
+  "observed_at_local": "2026-11-16T06:47:04.0128010+08:00"
+}

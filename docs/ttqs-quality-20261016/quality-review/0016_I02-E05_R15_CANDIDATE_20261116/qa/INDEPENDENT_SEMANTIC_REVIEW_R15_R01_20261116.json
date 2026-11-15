@@ -1,0 +1,44 @@
+{
+  "schema": "TTQS_ONE_INDEPENDENT_SEMANTIC_REVIEW_R1",
+  "work_id": "TTQS_ONE_0016_I02-E05_R15_INDEPENDENT_SEMANTIC_REVIEW_R01_20261116",
+  "reviewer_role": "fresh independent reviewer; did not author or edit R15",
+  "reviewer_agent_id": "01a1e13d-49e0-7e00-bf67-e21183c16f5e",
+  "reviewer_model": "UNKNOWN",
+  "doc_id": "0016",
+  "requirement_id": "I02-E05",
+  "candidate_sha256": "8d353de8930d6074419def384b507ce2cd8d20bc271a6140391aae87ffa9cdff",
+  "hash_match": "PASS",
+  "verdict": "PASS",
+  "formal_acceptance": false,
+  "findings": [
+    {
+      "locator": "§3.2 表39 R2；§6.1 表70 R2；§7.2；R15A S-001、S-024",
+      "status": "PASS",
+      "finding": "前次 F1 已修復。文件／套件版次為 R15；Campaign ID 的 R13 與 UTM 的 r13 明確為 SAMPLE 識別字串，不代表文件版次。清冊同步說明。"
+    },
+    {
+      "locator": "§3.3 表43 R2；R15A register",
+      "status": "PASS",
+      "finding": "R15A 清冊 28 筆、鍵值無重複；相較 R13A 僅 S-001、S-024 加入版本界線說明，識別碼與正文一致。"
+    },
+    {
+      "locator": "§6.1–§6.2 表86；§7.1–§7.3 表132",
+      "status": "PASS",
+      "finding": "樣例課程與 EDM 維持 SAMPLE；時段 180 分鐘扣 10 分鐘休息為 170 分鐘；A/B 寄送 50、送達 48/49、點擊率 25.00%/30.61%、合計 27.84%、差 5.61 個百分點，計算一致。"
+    },
+    {
+      "locator": "§1；§6.2；§8 表158",
+      "status": "PASS",
+      "finding": "文件可辨識為完整課程 EDM，並區隔 0014、0015、0017 近鄰用途；example.invalid、CTA 不進入報名、OPEN—SAMPLE 均未暗示真實寄送或事故。"
+    },
+    {
+      "locator": "R14→R15 DOCX 內容差異",
+      "status": "PASS",
+      "finding": "差異限於版次、R15A 指向及 R13/r13 識別字串說明，未見新正文迴歸。"
+    }
+  ],
+  "limitations": [
+    "文字／可操作性範圍；未測外部連結或信箱。",
+    "本候選仍為 SAMPLE/CANDIDATE，不代表正式接受。"
+  ]
+}
