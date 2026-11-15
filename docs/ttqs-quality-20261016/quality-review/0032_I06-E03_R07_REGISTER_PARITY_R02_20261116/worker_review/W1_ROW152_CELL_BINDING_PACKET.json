@@ -1,0 +1,31 @@
+{
+  "work_id": "TTQS_ONE_0032_R07_ROW152_CELL_BINDING_PROPOSAL_20261116",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0032",
+  "requirement_id": "I06-E03",
+  "candidate_revision": "R07",
+  "candidate_docx_sha256": "e1d6311e9828f464aba7b9bc47c20fa8b5392951dba96cf9a71d77be73fb691f",
+  "source_register_sha256": "31f0d02d35e6b244fde51e793bd05d498a64b5c9522ea13040d2e09a2e1a985e",
+  "derived_register_r01_sha256": "f423a9057185688695dcdeb96a50e7adde338d044a3b622db46130e22a8b2a32",
+  "fact_id": "SYN-032-152",
+  "candidate_locator_zero_based": {"table_index": 33, "row_index": 6, "cell_indices": [0,1,2,3]},
+  "candidate_cells_exact": {
+    "0": "責任與頻率 / SYN-032-152",
+    "1": "假設演練角色：主管說明方向並決策；承辦整理核驗鏈；不同角色覆核來源及交接。角色均不對應真人。",
+    "2": "以協會實際核准職責與授權文件替換；目前授權人員 UNKNOWN。",
+    "3": "年度方向訂定及重大修訂時執行；原件欠缺、授權不明或鏈條斷裂→HOLD並升級有權角色。"
+  },
+  "current_register_row": {
+    "field_name": "indicator6_demo_roles_frequency_escalation",
+    "synthetic_value": "假設演練責任與控制：主管說明方向並決策；承辦整理核驗鏈；不同角色覆核來源及交接；於年度方向訂定及重大修訂時檢視；來源欠缺、授權不明或鏈條斷裂時HOLD並升級有權角色。",
+    "assumption_rationale": "本文為演練配置的角色、頻率與升級控制，不是協會現行職務、頻率或授權事實。",
+    "document_locator": "§14「責任與頻率」列；SYN-032-152",
+    "required_real_replacement_source": "協會現行核准職責、權限文件、工作程序及正式檢視頻率。"
+  },
+  "prior_worker_findings": {
+    "W1_ROW152": "The existing register field is composite across candidate cells 1 and 3; cell 2 is replacement-source instruction. Cell 1 alone would drop cell 3. Existing schema cannot represent cell boundaries unambiguously; recommended retain and flag.",
+    "W1_ALLROWS": "Do not set row 152 synthetic_value to cell 1 alone. It combines cell 1 and cell 3 and also omits cell 1's final statement that roles do not correspond to real people.",
+    "W2_R01": "Accepted only rows 147-153 scope excluding 152 from global parity PASS; did not review a cell-binding schema."
+  },
+  "task": "Propose a minimal, backward-compatible, machine-readable sidecar mapping (JSON only) that makes this one composite register row unambiguous without changing the DOCX. Bind the synthetic_value exclusively to the complete scenario content in candidate cell 1 plus candidate cell 3, preserving all text in both cells, and explicitly exclude cell 0 label/ID and cell 2 replacement-source instruction. The sidecar must include exact candidate and source-register hashes, zero-based locator, included/excluded cells, exact source strings, join rule, and deterministic validation assertions. State whether the current register synthetic_value must be updated to the exact concatenation of the included source cells; if yes, provide that exact value. Never invent real roles or approvals. Output one JSON object only with a compact schema and no prose."
+}
