@@ -17,7 +17,7 @@
 - Deterministic OOXML/static checks: PASS; 15 tables, Markdown/DOCX table cells exact, no duplicate numbered paragraphs or incomplete source placeholder; body minimum 10.5 pt and table minimum 9.5 pt.
 - Native Microsoft Word export: PASS; 13-page PDF, SHA-256 `a22950c24a52597f4f7c9e8a29e91b292a4dcc7ecfc8b32c46212f37eaf5105d`.
 - Visual inspection: PASS for all 13 page images at original 894×1263 raster resolution. The source/claim matrices are five columns and readable. All three hard stops remain together on page 13; no orphan-only page. See `evidence/VISUAL_QA_0130_R01B.json`.
-- Independent semantic review: PENDING. One exact-SHA OpenCode v2 review request was rejected with HTTP 429 `FreeUsageLimitError`; no assistant review was returned. Do not treat this as PASS. See `review/opencode_semantic_R01B/`.
+- Independent semantic review: `PASS_WITH_LIMITATIONS` for exact DOCX SHA `ea67d33b6bcca83b9640614b60e0363b2f5186fa2f03a9a196c3a5e59de83c0b`. The Antigravity CLI response and adjudication bind this same candidate; requested model `gemini-3.8-flash-high`, actual serving model `UNKNOWN`. The separate OpenCode GLM HTTP 429 is a failed route attempt, not the review verdict. Review scope is text-semantic only; REAL evidence and formal acceptance remain unverified/not granted. See `evidence/SEMANTIC_STATUS_RECONCILIATION_0130_R01B_20261115.json`.
 - Formal acceptance: NOT GRANTED.
 
 ## SAMPLE / REAL boundary
