@@ -1,0 +1,21 @@
+{
+  "schema": "TTQS_ONE_WORD_VISUAL_QA_R1",
+  "doc_id": "0133",
+  "requirement_id": "I19-E22",
+  "work_id": "TTQS_ONE_0133_I19-E22_SOURCE_INDEX_AND_F1_REPAIR_R02_20261116",
+  "candidate_sha256": "3310246bd2ebd95d497bd28eb4443154fd33e1efc9ced9b65dc199fe7bec2b81",
+  "method": "Microsoft Word COM native PDF export, then pypdfium2 page render and visual review",
+  "pdf_sha256": "8b705c1c20259d6a3895ad1c23441bfcb1a2e12417500f63204f0798ba3064b9",
+  "pdf_bytes": 652073,
+  "page_count": 13,
+  "contact_sheet_sha256": "9cc522c09c8339daac996f9d62485ec5d10e46d52271a8c4f4a141d631d8bf64",
+  "font_floor_pt": {
+    "body_min": 10.5,
+    "table_min": 9.5,
+    "result": "PASS"
+  },
+  "visual_scope": "All 13 pages contact-sheet scan; high-resolution inspection of the §8 daily breakdown pages 8-9 on unchanged R06 content, §10 replacement-register page 11, and §12 source-version index page 13 after R07 change. No clipping, broken table, missing glyph, or overflow observed.",
+  "final_page_note": "Page 13 has a compact source table and version note with ample whitespace; no truncation.",
+  "candidate_state": "CANDIDATE_ONLY",
+  "formal_acceptance": false
+}
