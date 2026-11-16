@@ -1,0 +1,53 @@
+{
+  "schema": "TTQS_ONE_INDEPENDENT_REVIEW_READBACK_V1",
+  "readback_at_utc": "2026-11-16T20:22:05.622445+00:00",
+  "binding_checks": {
+    "work_id": true,
+    "candidate_docx_sha256": true,
+    "extracted_text_sha256": true,
+    "requested_model": true,
+    "decision": true
+  },
+  "raw_stdout_sha256": "193edc69ff0fe0ae7383d7287bab347f4d6b2b97c6b868cf58a6a91d9181300c",
+  "response_text_sha256": "429014573d9863ec5f27056bc39ab8aef6dfcd6aeb73b0518d488412c13c9c18",
+  "response": {
+    "work_id": "TTQS_ONE_0018_R02_W1_SEMANTIC_REVIEW_R42_20261117",
+    "candidate_docx_sha256": "7afe38e6d811f258a489664475e93c51425b751a4bd82fff7d57b9d5b914aa23",
+    "extracted_text_sha256": "49ef8905ac497666ffb39df19382ef2bba40de3643eccd42ce2e06d2df55e885",
+    "requested_model": "opencode/longcat-2.5-free",
+    "served_model": "opencode/longcat-2.5-free",
+    "review_scope": "獨立語意審查：整份 R42 候選提取本文（PDDRO訓練體系圖與核心訓練類別說明，I03-E01／0018），依附帶 Blueprint 列與官方第 1 頁要件，檢查標題遮蔽識別、PDDRO 圖解與核心類別機制、官方原文、追溯證據、SAMPLE 登記、計算、無空白/佔位、無虛構 REAL 結果/核准/簽章/第三方證明，以及至少兩個負向鄰項之拒絕；不重複視覺 QA，不修改檔案、不使用工具。",
+    "decision": "PASS",
+    "findings": [
+      {
+        "severity": "LOW",
+        "locator": "§1.2、§8.3",
+        "evidence": "對負向鄰項僅以邊界宣告為之（『本件只承接 I03-E01』『不把本件說成 I03-E02～E04 或 I02-E05 的證明』），未專段指出與 0014／0019 可核對的差異欄位或章節。",
+        "required_action": "建議（不阻斷認可）：增列簡短負向鄰項對照，明示 I02-E05 為對外揭露邊界、I03-E02 為事業發展證明，並列出可核對差異欄位。"
+      },
+      {
+        "severity": "LOW",
+        "locator": "§7.1 REC-FACT-002～005、REC-FACT-011～014",
+        "evidence": "類別層級事實的 requirement/classification 說明出現『C01 照護理念與安全服務基礎示範課程 B』等單一班次字樣，與該列為類別層級或 A+B 匯整之意涵不一致。",
+        "required_action": "建議（不阻斷認可）：將分類說明改為類別層級名稱，或並列 A/B 兩班。"
+      },
+      {
+        "severity": "LOW",
+        "locator": "§3.3『O 成果』列",
+        "evidence": "責任角色代碼連寫為『ROLE-SAMPLE-REVIEW-01ROLE-SAMPLE-PLAN-01』，缺分隔符。",
+        "required_action": "建議（不阻斷認可）：補『／』或『、』分隔。"
+      },
+      {
+        "severity": "LOW",
+        "locator": "§2.1",
+        "evidence": "『官方同列內涵說明』將官方『展示完整教育訓練規劃，此規劃適當的反應訓練定位，發展重點及核心能力』改寫為『展示完整教育訓練規劃，並適當反映訓練定位、發展重點及核心能力』；雖非唯一具名要求，但並列官方文字時宜保持原文。",
+        "required_action": "建議（不阻斷認可）：並列時改引官方原文，或明確標示為改寫。"
+      }
+    ],
+    "negative_neighbor_result": "PASS：正文符契約定的界線宣告，明確只承接 I03-E01，將 I02-E05 標為對外揭露邊界、I03-E02 標為相鄰獨立證據邊界，並宣告不複製其正文、不將其事實據為本件，亦不明示合併為 I03-E02～E04 或 I02-E05 的證明；可據以拒絕 0014／0019 之錯誤近鄰。可核對差異欄位/章節未專段列出（見 Findings#1，LOW）。",
+    "synthetic_register_result": "PASS：§7.1 登錄 30 筆 REC-FACT-001～030（version R04）＋REC-FACT-031（version R42）＋REC-CLS-001～008；§8.2 替換表 31 列（S18-SYN-001～030＋REC-FACT-031），逐列附 replacement_key、SAMPLE://0018/I03-E01/2027/ 定位、附件 SHA=UNKNOWN 與 UNKNOWN 管制狀態；全部標示 SAMPLE/SYNTHETIC，無 REAL 冒充，记录間無矛盾。",
+    "calculation_result": "PASS：四類別元組 C01 24/18/17/15/14/58/11、C02 24/19/18/17/16/69/12、C03 24/18/16/15/14/59/10、C04 24/17/15/13/10/42/8，階梯約束（名額≥錄取≥出席≥結訓≥問卷，結訓≥行動）與評分區間（Surveys×1～×5）全通過；加總 96/72/66/60/54/228/41 相符。六指標 75.00%、91.67%、90.91%、90.00%、4.22、68.33% 與落差 11.67 個百分點、SAMPLE 目標 48/60 均重算正確，§5.2 元組壓縮後語意一致。",
+    "source_alignment": "PASS：官方唯一具名要求『訓練體系圖解及核心訓練類別名稱。』於 §2.1 與全篇逐字引用；PDF SHA 805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709、crosswalk SHA 1ddfbb608bcad25170683ddb42a1dbb27bafa6f1f35ff0498f1b8d75b24f0679、blueprint SHA 406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e 與 PR #92 commit c139d76caa033868376b2427d31f69c6166eeb46 基線皆登錄；範疇僅 I03-E01，交叉參照限 I02-E05／I03-E02。",
+    "rationale": "R42 候選在官方要求、PDDRO 圖解與四大核心類別機制、四類別元組與所有計算、SAMPLE 登記與防偽標示、來源追溯及負向鄰項界線等方面語意一致且完整；未發現空白/佔位充數、虛構 REAL 成果/核准/簽章或第三方證明。R42 版本標籤替換與 §5.2 元組壓縮後的一致性均已確認；僅存 LOW 級表述與格式瑕疵，不影響接納。"
+  }
+}
