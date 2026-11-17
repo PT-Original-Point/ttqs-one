@@ -1,0 +1,80 @@
+{
+  "schema": "TTQS_ONE_W1_SEMANTIC_REVIEW_RECEIPT_V1",
+  "work_id": "TTQS_ONE_0026_I04-E05_W1_SEMANTIC_REVIEW_R12_ATTEMPT02_20261118",
+  "started_at_tpe": "2026-11-18T05:38:05.1429311+08:00",
+  "ended_at_tpe": "2026-11-18T05:40:17.2012724+08:00",
+  "candidate_sha256": "56E4449F06C8CF0D4DC13579A386EEEA88E59A8403FF9C1E1EF036FDCAAC7491",
+  "extracted_body_sha256": "BA5DC3A99A8B5D40930FDD68F40174CADED8DABAC310633C0CE44669054DB745",
+  "review_packet_sha256": "5921794A61BF48BF1D299FAB0D66AB306AE683346C246C8C78A057E08FF02AA2",
+  "requested_model_route": "opencode/nemotron-3.5-lightning-free",
+  "provider_served_model": "UNKNOWN",
+  "opencode_version": "2.2.5",
+  "session_id": "ses_e148de85fffeLaIFkeVI9fYZFo",
+  "pid": 21436,
+  "exit_code": 0,
+  "timeout": false,
+  "raw_stdout_sha256": "DF9137677553B9C37F6406129395AE5798CF944182D0FCD4F97C335F17E6CAFE",
+  "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "stdout_chars": 3283,
+  "model_usage_event": {
+    "input": 41426,
+    "output": 1110,
+    "reasoning": 15810,
+    "cache": {
+      "read": 0,
+      "write": 0
+    }
+  },
+  "verdict": "PASS",
+  "checks": {
+    "source_fit": "PASS",
+    "genre_mechanics": "PASS",
+    "scope_negative_neighbors": "PASS",
+    "authority_state_boundaries": "PASS",
+    "synthetic_truth_and_coherence": "PASS",
+    "functional_usability": "PASS",
+    "internal_consistency": "PASS",
+    "exact_sha_binding": "PASS"
+  },
+  "findings": [
+    {
+      "id": "F-001",
+      "severity": "none",
+      "location": "7.3 節「應簽收對象總數（含…兼任專案顧問）」",
+      "evidence": "候選文件已修正：一致顯示兼任專案顧問 3 人（ST-021/022/026），與表單二及應簽收總數 28 人一致。",
+      "required_repair": "N/A - 已於 R12 版本中修復"
+    },
+    {
+      "id": "F-002",
+      "severity": "none",
+      "location": "表一序號 2、16、17「示範保存期限」欄",
+      "evidence": "候選文件已修正：所有 CANDIDATE 件一致標示保存期限為 UNKNOWN，符合要求「所有 CANDIDATE 件一致標示保存期限 UNKNOWN」。",
+      "required_repair": "N/A - 已於 R12 版本中修復"
+    },
+    {
+      "id": "F-003",
+      "severity": "none",
+      "location": "封面版次行；表一序號 2；表單五 SMP-03",
+      "evidence": "候選文件已修正：版次標籤格式一致採用 V1.0-CANDIDATE 形式，覆蓋封面、表一及表單五皆為 V1.0-CANDIDATE。",
+      "required_repair": "N/A - 已於 R12 版本中修復"
+    },
+    {
+      "id": "F-004",
+      "severity": "none",
+      "location": "封面「最新生效日」行；表單六 TR-07；對比 2.5 節狀態定義",
+      "evidence": "候選文件已修正：明確標示 CANDIDATE 狀態，無誤導性 PENDING_APPROVAL 標記。封面顯示「無（CANDIDATE；尚未核准、未公告或未生效）」，與 2.5 節定義一致。",
+      "required_repair": "N/A - 已於 R12 版本中修復"
+    },
+    {
+      "id": "F-005",
+      "severity": "none",
+      "location": "synthetic_fact_register FACT-0026-024；對比 6.2 Plan 與表一",
+      "evidence": "候選文件已修正：FACT-0026-024 更正為「14 件 CURRENT；總清冊 17 筆；3 件 CANDIDATE（與文件表一及 6.2 一致）」。文件表一與 6.2 均為 14 件 CURRENT + 3 件 CANDIDATE 計 17 筆。",
+      "required_repair": "N/A - 已於 R12 版本中修復"
+    }
+  ],
+  "human_gate": "NONE",
+  "attempt_01": "INDETERMINATE_NOT_COUNTED_AS_REVIEW_PASS",
+  "dispatch_mode": "free-route-only; no tools or writes",
+  "result_source": "raw OpenCode JSONL exact readback"
+}
