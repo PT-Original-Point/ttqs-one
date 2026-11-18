@@ -1,0 +1,28 @@
+{
+  "schema": "TTQS_ONE_CANDIDATE_LINEAGE_R04_V1",
+  "doc_id": "0002",
+  "status": "CANDIDATE",
+  "final_revision": "R04",
+  "final_sha256": "317867355DBF0759918A65C9623BA0FEBD05D7E88774E3E349C5EC18102420C7",
+  "superseded": [
+    {
+      "revision": "R02",
+      "reason": "coverage formula and missing register entries",
+      "semantic": "FAIL",
+      "sha256": "8783FB3B687A1D596C8229ADCC09386CCD7A0CBF85FF6A0B3B55BE8CB525B4AA"
+    },
+    {
+      "reason": "superseded by redundant orphan-note cleanup",
+      "revision": "R03",
+      "technical": "PASS",
+      "sha256": "FCED18AF779B29ED9238F6E76B7B9969E4CC5AE26231F225F4D6345A8CC67F9D"
+    }
+  ],
+  "final_changes": [
+    "Corrected coverage formula grouping and formal N/A approval gate.",
+    "Registered five missing synthetic fact groups: SYN-PARTIAL-TIMELINE-01, SYN-FAIL-TIMELINE-01, SYN-SAMPLING-01, SYN-RETENTION-01, SYN-DOCCTRL-01.",
+    "Removed a redundant orphan note that caused a sparse page."
+  ],
+  "source_worker_markdown_sha256": "1BB6486C175E915BBF0E17E4A9EF4A14FC3A3DB5BA95CFE1D2B0E3CC5D851BC7",
+  "r04_technical_qa": "0002\\qa\\TECHNICAL_QA.json"
+}
