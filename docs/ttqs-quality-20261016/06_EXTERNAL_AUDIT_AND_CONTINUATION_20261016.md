@@ -1,3 +1,11 @@
+# TTQS ONE｜R12.2 現役指令索引（2026-11-18）
+
+以下舊 R12（2026-10-26）、R11/R10 等報告僅為歷史事故/查核定位，雖保留原文，不再每次復工完整讀取或重執行歷史待辦。Human 已修改原生 GOAL 為 R12.2；現役 GitHub 瘦身規則見 AGENTS.md、04_CODEX_GOAL_24X7_EXECUTION.md、05_HOURLY_NATIVE_WAKE_RESUME.md。實際 Windows GOAL/排程/Worker 是否套用，須現場原生讀回，GitHub 文件不自證。
+
+合法可用的 W1 OpenCode v2 / W2 Antigravity CLI 應優先承擔可獨立驗收之撰稿與語意；Codex 主要負責唯一派工、Word/確定性 QA、整合及 GitHub 讀回。保留必要品質、SAMPLE/REAL、安全及真正 Human Gate。下方歷史的「最新」「優先」皆限當時觀測，並非目前派工主權。
+
+---
+
 # TTQS ONE｜R12 2026-10-26 24h 最新增量：從已暫停排程恢復真正 Writer/Review 閉環
 
 **COMMAND=TTQS_ONE_20261026_R12_FULL_RECOVERY_DELIVERY**  
