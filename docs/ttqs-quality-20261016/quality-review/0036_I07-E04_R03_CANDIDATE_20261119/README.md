@@ -14,3 +14,5 @@ Evidence bound to the same DOCX SHA:
 All example course details remain SAMPLE/SYNTHETIC. Real schedules, approvals, instructors, learners, venue/resource facts, and outcomes remain UNKNOWN. Do not promote these examples to REAL.
 
 Repository source references and original bytes are included under source/inputs. The package manifest inventories file sizes and SHA-256 values, excluding itself.
+
+GitHub byte note: PACKAGE_MANIFEST hashes refer to exact raw Git blob bytes at the recorded ref. Windows Git core.autocrlf=true normalized text files from CRLF to LF during commit; DOCX/PDF binaries were unchanged. Original source and worker-response hashes in receipts describe pre-commit bytes; the package manifest records the stored GitHub copies.

@@ -11,3 +11,4 @@ This package preserves the exact R05 candidate and its scoped repair, determinis
 - Status remains CANDIDATE. This package does not assert formal acceptance or REAL evidence.
 
 The full raw OpenCode stdout remains in the local runtime at the path recorded in the W1 terminal receipt; its SHA-256 is recorded there. The bounded final response is preserved byte-for-byte in `evidence/semantic/W1/W1_REVIEW_RESPONSE_R05.json`.
+GitHub byte note: `PACKAGE_MANIFEST.json` hashes refer to exact raw Git blob bytes at the recorded readback ref. Windows Git `core.autocrlf=true` normalized text files from CRLF to LF during commit; the DOCX/PDF binaries were not transformed. Worker response and original source hashes in receipts describe their pre-commit source bytes; the package manifest records the stored GitHub copies.
