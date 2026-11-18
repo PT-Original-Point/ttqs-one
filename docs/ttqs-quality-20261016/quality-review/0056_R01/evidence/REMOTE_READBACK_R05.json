@@ -1,19 +1,18 @@
 {
-  "work_id": "TTQS_ONE_0056_R05_GITHUB_EXACT_READBACK_20261118",
-  "project": "TTQS_ONE",
-  "classification": "CANDIDATE_EVIDENCE",
-  "source_repository": "PT-Original-Point/ttqs-one",
-  "source_branch": "work/ttqs-one-document-quality-contract-20261016",
-  "source_head": "65f9512131d4101ab020365d34dc483bf6e9572f",
-  "candidate_path": "docs/ttqs-quality-20261016/quality-review/0056_R01/0056_R05.docx",
-  "candidate_bytes": 60746,
-  "candidate_sha256": "A8AC2F2487BD40FF00784980BBE2EF9A84C0CFE326C9B37E6DCEAEEBC3E750CF",
+  "schema": "TTQS_ONE_GITHUB_RAW_READBACK_R05",
+  "repository": "PT-Original-Point/ttqs-one",
+  "pull_request": 92,
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "ref": "e489fed55357331c7962d930b90cefd358bf8a99",
+  "path": "docs/ttqs-quality-20261016/quality-review/0056_R01/0056_R05.docx",
+  "raw_url": "https://raw.githubusercontent.com/PT-Original-Point/ttqs-one/e489fed55357331c7962d930b90cefd358bf8a99/docs/ttqs-quality-20261016/quality-review/0056_R01/0056_R05.docx",
+  "http_status": 200,
+  "bytes": 60746,
+  "file_sha256": "A8AC2F2487BD40FF00784980BBE2EF9A84C0CFE326C9B37E6DCEAEEBC3E750CF",
+  "expected_sha256": "A8AC2F2487BD40FF00784980BBE2EF9A84C0CFE326C9B37E6DCEAEEBC3E750CF",
+  "result": "PASS_EXACT_RAW_BYTES",
+  "read_at_tpe": "2026-11-18T11:21:01.306649+08:00",
+  "branch_tip_at_readback": "e489fed55357331c7962d930b90cefd358bf8a99",
   "git_blob_sha1": "b2dab74823d6133764241082f2ab5faf701e6a9b",
-  "readback_method": "git show from freshly fetched origin branch; raw bytes hashed locally",
-  "readback_at_tpe": "2026-11-18T07:50:29.2125370+08:00",
-  "status": "PASS",
-  "limits": [
-    "Does not imply formal acceptance",
-    "Does not replace source/semantic/visual QA"
-  ]
+  "readback_method": "fetch exact PR branch then git cat-file blob at immutable commit; SHA-256 computed on raw bytes"
 }
