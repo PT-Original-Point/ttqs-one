@@ -1,0 +1,25 @@
+$ErrorActionPreference='Stop'
+function HashFile([string]$p){(Get-FileHash -Algorithm SHA256 -LiteralPath $p).Hash}
+function WordProcs {@(Get-CimInstance Win32_Process -ErrorAction SilentlyContinue | Where-Object {$_.Name -eq 'WINWORD.EXE'} | ForEach-Object {[pscustomobject]@{Pid=[int]$_.ProcessId;Created=[datetime]$_.CreationDate;CommandLine=[string]$_.CommandLine}})}
+$src='E:\TTQS\TTQS_ONE_CODEX_RUNTIME\EXTERNAL_WORK\TTQS_ONE_0025_I04_E04_WORD_OPENREPAIR_R04_20261118\repaired_0025_R04.docx'
+$out='E:\TTQS\TTQS_ONE_CODEX_RUNTIME\EXTERNAL_WORK\TTQS_ONE_0025_I04_E04_WORD_OPENREPAIR_R04_20261118\0025_I04_E04_CANDIDATE_R05_SCOPED_REPAIR.docx'
+$job=Split-Path $out;$workId='TTQS_ONE_0025_I04-E04_SCOPED_REPAIR_R05_20261119';$started=Get-Date;$inputHash=HashFile $src;$before=WordProcs;$beforeIds=@($before|% Pid);$word=$null;$doc=$null;$owner=$null;$owned=$false;$version=$null;$changes=@();$err=$null;$result='BLOCKED_OR_FAILED'
+$start=[ordered]@{schema='TTQS_ONE_WORD_EDIT_START_V1';work_id=$workId;doc_id='0025';requirement_id='I04-E04';input_sha256=$inputHash;input_path=$src;output_path=$out;preexisting_word_processes=$before;started_at_tpe=$started.ToString('o');same_scope_writer_conflict='NONE_OBSERVED'}
+$startPath=Join-Path $job 'WORD_EDIT_START_R05.json';$start|ConvertTo-Json -Depth 7|Set-Content -LiteralPath $startPath -Encoding utf8
+try {
+  $type=[Type]::GetTypeFromProgID('Word.Application');if($null -eq $type){throw 'WORD_PROGID_UNAVAILABLE'}
+  $word=[Activator]::CreateInstance($type);$word.Visible=$false;$word.DisplayAlerts=0;$version=[string]$word.Version
+  $deadline=(Get-Date).AddSeconds(12)
+  do {$now=WordProcs;$new=@($now|Where-Object {$beforeIds -notcontains $_.Pid -and $_.Created -ge $started.AddSeconds(-2) -and $_.CommandLine -match '(?i)/Automation'});if($new.Count -eq 1){$owner=$new[0]};if($new.Count -gt 1){throw "AMBIGUOUS_NEW_WORD_PROCESSES count=$($new.Count)"};if($null -ne $owner){break};Start-Sleep -Milliseconds 400}while((Get-Date)-lt $deadline)
+  if($null -eq $owner){throw 'NO_UNIQUE_NEW_AUTOMATION_PID'};$owned=$true;$start.owner_pid=$owner.Pid;$start.owner_creation=$owner.Created.ToString('o');$start.word_version=$version;$start|ConvertTo-Json -Depth 7|Set-Content -LiteralPath $startPath -Encoding utf8
+  $missing=[Type]::Missing;$doc=$word.Documents.Open($src,$false,$false,$false,$missing,$missing,$false,$missing,$missing,$missing,$missing,$false,$false);if($null -eq $doc){throw 'WORD_OPEN_RETURNED_NULL'};if($doc.Tables.Count -ne 28){throw "TABLE_COUNT_MISMATCH=$($doc.Tables.Count)"}
+  $targets=@(
+    @{table=17;row=6;col=5;old='SAMPLE 個人門檻 80 分；REAL 門檻 UNKNOWN';new='無群體平均門檻（描述性）；個人後測 80 分為 SAMPLE 個人評量標準，不得套用於平均值；REAL 群體平均目標 UNKNOWN';finding='BF-02'},
+    @{table=22;row=6;col=7;old='描述性';new='描述性；個人後測 80 分僅適用個人通過率，不作群體平均門檻；REAL 群體平均目標 UNKNOWN';finding='BF-02'},
+    @{table=24;row=5;col=5;old='SAMPLE；4 模組、時數、講師、教材';new='SAMPLE；3 模組、時數、講師、教材';finding='BF-01'}
+  )
+  foreach($t in $targets){$cell=$doc.Tables.Item($t.table).Cell($t.row,$t.col);$current=([string]$cell.Range.Text).Replace([string][char]13,'').Replace([string][char]7,'').Trim();if($current -ne $t.old){throw "PRECONDITION_MISMATCH table=$($t.table) row=$($t.row) col=$($t.col) actual=<$current>"};$cell.Range.Text=$t.new;$changes += [pscustomobject]@{finding=$t.finding;table_index_zero_based=$t.table-1;row_index_zero_based=$t.row-1;column_index_zero_based=$t.col-1;before=$current;after=$t.new}}
+  $doc.SaveAs2($out,16);$doc.Close(0);$doc=$null;$result='SAVED_CANDIDATE_PENDING_QA'
+} catch {$err=$_.Exception.Message} finally {if($null -ne $doc){try{$doc.Close(0)}catch{}};if($owned -and $null -ne $word){$same=WordProcs|Where-Object {$_.Pid -eq $owner.Pid -and $_.Created -eq $owner.Created};if($null -ne $same){try{$word.Quit(0)}catch{}}};if($null -ne $doc){try{[void][Runtime.InteropServices.Marshal]::FinalReleaseComObject($doc)}catch{}};if($null -ne $word){try{[void][Runtime.InteropServices.Marshal]::FinalReleaseComObject($word)}catch{}};[GC]::Collect();[GC]::WaitForPendingFinalizers()}
+$after=WordProcs;$hash=if(Test-Path -LiteralPath $out){HashFile $out}else{$null};$receipt=[ordered]@{schema='TTQS_ONE_SCOPED_DOCX_REPAIR_RECEIPT_V1';work_id=$workId;doc_id='0025';requirement_id='I04-E04';result=$result;input_sha256=$inputHash;candidate_sha256=$hash;output_bytes=if(Test-Path -LiteralPath $out){(Get-Item $out).Length}else{$null};word_pid=if($owner){$owner.Pid}else{$null};word_creation=if($owner){$owner.Created.ToString('o')}else{$null};word_version=$version;changes=$changes;error=$err;started_at_tpe=$started.ToString('o');completed_at_tpe=(Get-Date).ToString('o');remaining_preexisting_word_pids=($beforeIds -join ',');current_word_pids=(($after|% Pid)-join ',')};$terminal=Join-Path $job 'REPAIR_RECEIPT_R05.json';$receipt|ConvertTo-Json -Depth 8|Set-Content -LiteralPath $terminal -Encoding utf8;$receipt|ConvertTo-Json -Depth 8
+if($result -ne 'SAVED_CANDIDATE_PENDING_QA'){throw "REPAIR_FAILED: $err"}
