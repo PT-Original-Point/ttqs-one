@@ -19,7 +19,7 @@
   "sample_register_entries": 34,
   "real_evidence": "UNKNOWN/HOLD",
   "formal_acceptance": "NOT_GRANTED",
-  "github_sync": "PENDING_CURRENT_REF_READBACK",
+  "github_sync": "PASS_CANDIDATE_RAW_BYTES_MATCH",
   "observed_local": "2026-11-19 02:31:57 +08:00",
   "worker_route_history": {
     "W1": "OpenCode v2.1.4 free GLM route returned 429 before review text; route paused until provider release/verified alternative",
@@ -37,5 +37,13 @@
     "blocking_findings": 0,
     "nonblocking_low": 6,
     "scope": "semantic/usability only; technical and visual receipts reused on same SHA"
-  }
+  },
+  "github_readback": {
+    "repository": "PT-Original-Point/ttqs-one",
+    "readback_ref": "1a04144063b499090c6aa6637e4388d5f1442c64",
+    "receipt": "receipts/GITHUB_RAW_BYTE_READBACK_R07_W1_20261119.json",
+    "candidate_sha256": "9e9f65b962f2a6b0e3b1a14c8d4615b6a70c98b140d672943adb5de636843241",
+    "verified_at_tpe": "2026-11-19T02:44:28.621+08:00"
+  },
+  "quality_status": "CANDIDATE_TECHNICAL_VISUAL_SEMANTIC_PASS_EXACT_SHA_GITHUB_RAW_BYTES_CONFIRMED"
 }
