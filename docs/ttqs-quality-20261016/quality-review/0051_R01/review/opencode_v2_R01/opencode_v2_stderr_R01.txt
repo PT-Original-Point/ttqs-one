@@ -1,0 +1,1025 @@
+
+> build · deepseek-v4.1-flash-free
+→ Read . 
+→ Read inputs/SOURCE_MAP_R01.md 
+> build · deepseek-v4.1-flash-free
+$ Get-FileHash -Algorithm SHA256 "E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\candidate\0051_R01.docx" | Format-List
+Algorithm : SHA256
+Hash      : 6F575EBB41C6C26B4D6B36262FB4D9A5ABDAE53CBDC1FF4E75ACDA46D5F0B495
+Path      : E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\candidat
+            e\0051_R01.docx
+$ Get-ChildItem -Recurse -File | Select-Object FullName, Length | Format-Table -AutoSize | Out-String -Width 300
+8
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render\page-04.png                                                                                                                                                                             7
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render\page-05.png                                                                                                                                                                             8
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render\page-06.png                                                                                                                                                                             6
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render\page-07.png                                                                                                                                                                             4
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render\page-08.png                                                                                                                                                                             1
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render\page-09.png                                                                                                                                                                             1
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render\page-10.png                                                                                                                                                                             9
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render\page-11.png                                                                                                                                                                             1
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render\page-12.png                                                                                                                                                                             0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render\page-13.png                                                                                                                                                                             8
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render\page-14.png                                                                                                                                                                             1
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_e35a5ead\0051_R01.pdf                                                                                                                                                             0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_e35a5ead\contact-01-04.png                                                                                                                                                        6
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_e35a5ead\contact-05-08.png                                                                                                                                                        4
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_e35a5ead\contact-09-12.png                                                                                                                                                        4
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_e35a5ead\contact-13-14.png                                                                                                                                                        7
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_e35a5ead\page-01.png                                                                                                                                                              5
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_e35a5ead\page-02.png                                                                                                                                                              4
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_e35a5ead\page-03.png                                                                                                                                                              4
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_e35a5ead\page-04.png                                                                                                                                                              8
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_e35a5ead\page-05.png                                                                                                                                                              1
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_e35a5ead\page-06.png                                                                                                                                                              9
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_e35a5ead\page-07.png                                                                                                                                                              1
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_e35a5ead\page-08.png                                                                                                                                                              3
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_e35a5ead\page-09.png                                                                                                                                                              4
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_e35a5ead\page-10.png                                                                                                                                                              4
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_e35a5ead\page-11.png                                                                                                                                                              8
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_e35a5ead\page-12.png                                                                                                                                                              4
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_e35a5ead\page-13.png                                                                                                                                                              1
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_e35a5ead\page-14.png                                                                                                                                                              8
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\registrymodifications.xcu                                                                                                                                             0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\SafeMode\extensions\buildid                                                                                                                                           0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\autotext\mytexts.bau                                                                                                                                                  7
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\config\autotbl.fmt                                                                                                                                                    3
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\database\biblio.odb                                                                                                                                                   2
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\database\evolocal.odb                                                                                                                                                 9
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\database\biblio\biblio.dbf                                                                                                                                            8
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\database\biblio\biblio.dbt                                                                                                                                            1
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\gallery\sg30.sdv                                                                                                                                                      8
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\gallery\sg30.thm                                                                                                                                                      5
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\basic\dialog.xlc                                                                                                                                                      9
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\basic\script.xlc                                                                                                                                                      9
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\basic\Standard\dialog.xlb                                                                                                                                             8
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\basic\Standard\Module1.xba                                                                                                                                            4
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\basic\Standard\script.xlb                                                                                                                                             9
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\uno_packages\cache\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\backenddb.xml                                                           5
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\uno_packages\cache\registry\com.sun.star.comp.deployment.help.PackageRegistryBackend\backenddb.xml                                                                    7
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\buildid                                                                                                                                                    0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\shared\lastsynchronized                                                                                                                                    1
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\shared\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\backenddb.xml                                                            5
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\shared\registry\com.sun.star.comp.deployment.help.PackageRegistryBackend\backenddb.xml                                                                     7
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\extensions.pmap                                                                                                                                    3
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\lastsynchronized                                                                                                                                   1
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.component.PackageRegistryBackend\unorc                                                                       0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\backenddb.xml                                                           8
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\configmgr.ini                                                           6
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmll.tmp\dictionaries.xcu                                      2
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmlm.tmp\dictionaries.xcu                                      4
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmlq.tmp\OptionsDialog.xcu                                     9
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmlr.tmp\Filter.xcu                                            5
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmlt.tmp\Paths.xcu                                             0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmlu.tmp\dictionaries.xcu                                      4
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmlv.tmp\dictionaries.xcu                                      2
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmlx.tmp\dictionaries.xcu                                      7
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmly.tmp\dictionaries.xcu                                      5
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmlz.tmp\OptionsDialog.xcu                                     8
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmm1.tmp\dictionaries.xcu                                      9
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmm2.tmp\dictionaries.xcu                                      2
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmm3.tmp\dictionaries.xcu                                      4
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmm4.tmp\dictionaries.xcu                                      0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmm5.tmp\dictionaries.xcu                                      2
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmm6.tmp\dictionaries.xcu                                      4
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmm8.tmp\dictionaries.xcu                                      3
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmm9.tmp\OptionsDialog.xcu                                     3
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmmb.tmp\dictionaries.xcu                                      3
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmmc.tmp\dictionaries.xcu                                      8
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmmd.tmp\dictionaries.xcu                                      3
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmme.tmp\dictionaries.xcu                                      4
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmmf.tmp\dictionaries.xcu                                      4
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmmg.tmp\dictionaries.xcu                                      7
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmmh.tmp\dictionaries.xcu                                      7
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmmi.tmp\dictionaries.xcu                                      0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmmj.tmp\dictionaries.xcu                                      4
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmmk.tmp\dictionaries.xcu                                      7
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmml.tmp\dictionaries.xcu                                      6
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmmm.tmp\OptionsDialog.xcu                                     4
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmmo.tmp\dictionaries.xcu                                      4
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmmp.tmp\dictionaries.xcu                                      4
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmmq.tmp\dictionaries.xcu                                      4
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmmr.tmp\dictionaries.xcu                                      6
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmms.tmp\dictionaries.xcu                                      6
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmmt.tmp\dictionaries.xcu                                      9
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmmu.tmp\dictionaries.xcu                                      0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmmv.tmp\dictionaries.xcu                                      1
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmmw.tmp\dictionaries.xcu                                      1
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmmx.tmp\dictionaries.xcu                                      1
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmmy.tmp\dictionaries.xcu                                      2
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmmz.tmp\dictionaries.xcu                                      2
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmn0.tmp\dictionaries.xcu                                      6
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmn1.tmp\dictionaries.xcu                                      4
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmn2.tmp\dictionaries.xcu                                      8
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmn3.tmp\dictionaries.xcu                                      4
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmn4.tmp\dictionaries.xcu                                      5
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmn5.tmp\dictionaries.xcu                                      6
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmn6.tmp\dictionaries.xcu                                      6
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmn7.tmp\dictionaries.xcu                                      9
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmn8.tmp\dictionaries.xcu                                      0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmn9.tmp\dictionaries.xcu                                      9
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmna.tmp\dictionaries.xcu                                      7
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmnb.tmp\OptionsDialog.xcu                                     0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmnd.tmp\dictionaries.xcu                                      1
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmne.tmp\dictionaries.xcu                                      5
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmnf.tmp\dictionaries.xcu                                      6
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmng.tmp\dictionaries.xcu                                      6
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmnh.tmp\dictionaries.xcu                                      2
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmni.tmp\dictionaries.xcu                                      0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmnj.tmp\dictionaries.xcu                                      9
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmnk.tmp\dictionaries.xcu                                      5
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmnl.tmp\dictionaries.xcu                                      6
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\lu234641ekmnm.tmp\dictionaries.xcu                                      1
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.help.PackageRegistryBackend\backenddb.xml                                                                    9
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.help.PackageRegistryBackend\lu234641ekmlw.tmp\da\help.db_                                                    2
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.help.PackageRegistryBackend\lu234641ekmlw.tmp\da\help.ht_                                                    0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.help.PackageRegistryBackend\lu234641ekmlw.tmp\da\help.jar                                                    0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.help.PackageRegistryBackend\lu234641ekmlw.tmp\da\help.key_                                                   0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.help.PackageRegistryBackend\lu234641ekmlw.tmp\da\caption\org.openoffice.da.hunspell.dictionaries%2Fpage1.xhp 9
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.help.PackageRegistryBackend\lu234641ekmlw.tmp\da\caption\org.openoffice.da.hunspell.dictionaries%2Fpage2.xhp 3
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.help.PackageRegistryBackend\lu234641ekmlw.tmp\da\content\org.openoffice.da.hunspell.dictionaries%2Fpage1.xhp 8
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.help.PackageRegistryBackend\lu234641ekmlw.tmp\da\content\org.openoffice.da.hunspell.dictionaries%2Fpage2.xhp 4
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.help.PackageRegistryBackend\lu234641ekmlw.tmp\en\help.db_                                                    0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.help.PackageRegistryBackend\lu234641ekmlw.tmp\en\help.ht_                                                    0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.help.PackageRegistryBackend\lu234641ekmlw.tmp\en\help.key_                                                   0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.help.PackageRegistryBackend\lu234641ekmm7.tmp\en\help.db_                                                    0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.help.PackageRegistryBackend\lu234641ekmm7.tmp\en\help.ht_                                                    0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.help.PackageRegistryBackend\lu234641ekmm7.tmp\en\help.key_                                                   0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.help.PackageRegistryBackend\lu234641ekmm7.tmp\hu\help.db_                                                    0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.help.PackageRegistryBackend\lu234641ekmm7.tmp\hu\help.ht_                                                    0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.help.PackageRegistryBackend\lu234641ekmm7.tmp\hu\help.jar                                                    2
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.help.PackageRegistryBackend\lu234641ekmm7.tmp\hu\help.key_                                                   9
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.help.PackageRegistryBackend\lu234641ekmm7.tmp\hu\caption\org.openoffice.hu.hunspell.dictionaries%2Fpage1.xhp 7
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.help.PackageRegistryBackend\lu234641ekmm7.tmp\hu\content\org.openoffice.hu.hunspell.dictionaries%2Fpage1.xhp 2
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.script.PackageRegistryBackend\backenddb.xml                                                                  0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\bundled\registry\com.sun.star.comp.deployment.bundle.PackageRegistryBackend\backenddb.xml                                                                  3
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\tmp\registry\com.sun.star.comp.deployment.configuration.PackageRegistryBackend\backenddb.xml                                                               5
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\user\extensions\tmp\registry\com.sun.star.comp.deployment.help.PackageRegistryBackend\backenddb.xml                                                                        7
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\lo_profile_e35a5ead\crash\dump.ini                                                                                                                                                             0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_6f575ebb\0051_R01.pdf                                                                                                                                                             9
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_6f575ebb\contact-01-04.png                                                                                                                                                        0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_6f575ebb\contact-05-08.png                                                                                                                                                        8
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_6f575ebb\contact-09-12.png                                                                                                                                                        4
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_6f575ebb\contact-13-14.png                                                                                                                                                        1
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_6f575ebb\page-01.png                                                                                                                                                              2
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_6f575ebb\page-02.png                                                                                                                                                              5
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_6f575ebb\page-03.png                                                                                                                                                              6
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_6f575ebb\page-04.png                                                                                                                                                              7
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_6f575ebb\page-05.png                                                                                                                                                              4
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_6f575ebb\page-06.png                                                                                                                                                              9
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_6f575ebb\page-07.png                                                                                                                                                              1
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_6f575ebb\page-08.png                                                                                                                                                              9
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_6f575ebb\page-09.png                                                                                                                                                              3
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_6f575ebb\page-10.png                                                                                                                                                              3
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_6f575ebb\page-11.png                                                                                                                                                              0
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_6f575ebb\page-12.png                                                                                                                                                              5
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_6f575ebb\page-13.png                                                                                                                                                              2
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_6f575ebb\page-14.png                                                                                                                                                              4
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\review\packet_R01\REVIEW_REQUEST_R01.md                                                                                                                                                                 9
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\review\opencode_v2_R01\exit_code.txt                                                                                                                                                                    1
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\review\opencode_v2_R01\opencode_v2_stderr_R01.txt                                                                                                                                                       5
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\review\opencode_v2_R01\opencode_v2_stdout_R01.txt                                                                                                                                                       0
+
+
+
+
+[showing lines 22-193 of 193; full output saved to C:\Users\J\.local\share\opencode\shell\dabde63a0c1352871a938f25dd682407d3b42064\sh_1486b2a06002Fq1kMN3s0ZJTAx.out]
+> build · deepseek-v4.1-flash-free
+$ Get-ChildItem -File "candidate","inputs","evidence" | Select-Object Directory,Name,Length | Format-Table -AutoSize | Out-String -Width 200
+Directory                                                                                                    Name                                   Length
+---------                                                                                                    ----                                   ------
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\candidate 0051_R01.docx                           56098
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\inputs    official_evidence_table_page4.png      534778
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\inputs    SOURCE_MAP_R01.md                        3496
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\inputs    UNIQUE_BLUEPRINT_0051.jsonl              7503
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence  SYNTHETIC_REPLACEMENT_REGISTER_R01.csv  60377
+$ python --version; Get-Command python | Format-List Source
+Python 3.10.8
+
+Source : C:\Users\J\AppData\Local\Programs\Python\Python310\python.exe
+> build · deepseek-v4.1-flash-free
+→ Read inputs/UNIQUE_BLUEPRINT_0051.jsonl 
+← Write C:/Users/J/AppData/Local/Temp/opencode/extract_0051.py
+Created file successfully: C:/Users/J/AppData/Local/Temp/opencode/extract_0051.py
+> build · deepseek-v4.1-flash-free
+$ python -c "import json;d=json.loads(open(r'E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\inputs\UNIQUE_BLUEPRINT_0051.jsonl',encoding='utf-8').readline());[print('KEY:',k,'\n',v,'\n') for k,v in d.items()]"
+KEY: deliverable_id 
+ 0051 
+
+KEY: requirement_id 
+ I11-E03 
+
+KEY: final_filename 
+ 0051__�U���ҵ{���X���g�Q�׫�T�{�A�B�d����������P_�i�����ϥΦ��~.docx 
+
+KEY: document_genre 
+ �M�ݦ��Ҭ����U�U���ҵ{���X���g�Q�׫�T�{�A�B�d����������P_�i�����ϥΦ��~ 
+
+KEY: document_purpose 
+ ����M�ݵJ�I�G�U���ҵ{���X���g�Q�׫�T�{�A�B�d����������P_�i�����ϥΦ��~�F�ݪ����^�����x����ҭn�D���G�U���ҵ{���X���g�Q�׫�T�{�A�B�d����������P�D�ޮ֩w�C�F���X�@���i��ڰ���B�i�\Ū�åi�l�����M�ݦ��~�F������¾�d�P�P�n�D��L����M�����}�C 
+
+KEY: primary_user_or_reader 
+ �Ѱ���H���B�D�޻P���־\Ū�̰l���n�D�B�ƹ�B�Ҿڦ�m���Ю֪��A�C 
+
+KEY: evidence_role 
+ �O�s�����n�D�M�ݪ���l�������Ҿگ��ޡF���N���ĤT����C �����u�֦� I11-E03 ���������������R�f�|�F���o�]�֨�L�n�D���ƹ�C 
+
+KEY: source_of_truth 
+ �x��d�֦��Ҫ���T���y�U���ҵ{���X���g�Q�׫�T�{�A�B�d����������P�D�ޮ֩w�C�z�A�������� 4�AŪ�����A PDF_TEXT_EXACT_PAGE_MATCH�FREQ_157_MAP ���� I11-E03�F������W�ٻP ID �H R04 142 ��I crosswalk/seed ���ǡCPhase2 ���v Blueprint �ȧ@�ݨD��ѰѦҡA���D�i�ƻs����β{����D�v�¡C 
+
+KEY: required_sections 
+ �����ت��B�d���ξA�άɽu�F�x��n�D��ѻP�ҩ����|�F�ӷ��B�Φ����I�ίǤJ�W�h�F���w�q���Ҿڦ�m�F����X�������ܨҡF�ֹ�B�p��P�@�P�ʧP�w�F�ҥ~�B���ҤΧ󥿭y��F�u����P�X���ܨҪ��ϧO�F�Ю֡B�O�ޤνվ\�W�h�F�����n�D�Τ���e�ޥΡF�u���ƴ����M��F������޻P���� 
+
+KEY: required_tables_or_figures 
+ ���X�w�q�X�ӷ��X��g�̡X���ҳW�h�F����X����g�C�����ѻ��F���D���ҥ~�X�ץ��X�Ю֤ΰl�ܡF�x��n�D�X�������X����w��l���� 
+
+KEY: required_fields_or_questions 
+ �X������ѧO�X�F������ΦX���ХܡF�d������N�X�F�ӷ��������m���F�P�w�B�z�ѡB�Ю֤Ϋ����� 
+
+KEY: required_calculations_or_analysis 
+ �Y�����榳�ƶq�B���B�B�����Τ�ҡA���C�w�q�B���l�����P�v�B��ҡF�Y�S���A���ܤ��A�Ψô��Ѧܤ֤@��������ҡ�����קP�_�ܨҡC 
+
+KEY: required_cross_references 
+ �P�n�D���� �L�F�۾F�n�D I11-E02, I11-E04�F�@�έ�l�ӷ��ɥu�ޥήֹ굲�G�A���ƻs�O����󥿤�C 
+
+KEY: real_data_required 
+ �ɮ欰 REAL �e�v�����o�i�ֹ�ӷ��G��������F�u��H�W/����F�֭�/ñ���F�u��Z��/�ҵ{�F��ڼƦr/��ҡF�u�����P�ɮצ�m�C�b�L���ɼХ� SAMPLE/SYNTHETIC�F�X���ƹ궷�n�� replacement register�A���o�źپ��c���Z�C 
+
+KEY: third_party_evidence_required 
+ �Y���ר̿�~���������ĤT����u�H����ñ�����ҮѡA�����ѦX�k�ӷ����o�i�ֹ���F�����i���ѲM�����޻P�X���y�{�ܽd�A�����N�s�B��ñ�B�ɧ@�Ϋ_�R�ĤT�西�����C 
+
+KEY: prohibited_fabrication 
+ ���o�����u�u�@�Z�Ц�REAL�F���o���y�֭�Bñ���B�u�H�ѻP�B��V�B���Z�B���G�Τ��s�b���~���ƹ�C�F���o�N���ɤ��e�B�ܽd�ƾڡB���d��Drive�Կ�ξ��v��׼Ц� REAL�F���o���y�֭�Bñ���B�u�H�ѻP�B��V�B���Z�B���G�B�~���ҾکΨӷ��w��C 
+
+KEY: title_blind_test 
+ �B��������D�B�ɦW�P�s���A�uŪ�������i�ѱM�ݾ����{���y�U���ҵ{���X���g�Q�׫�T�{�A�B�d����������P_�i�����ϥΦ��~�z���ҩ��y�U���ҵ{���X���g�Q�׫�T�{�A�B�d����������P�D�ޮ֩w�C�z�F�Y�i�L�קﲾ�@��L�n�D�Y���ѡC 
+
+KEY: negative_choice_neighbors 
+ 0050�m�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z�n�]I11-E02�^�G���ҩ����P�u�@���F���󤣱o�N���B�X�֩νƻs��M�ݨƹ�C
+0052�m�W���ҵ{�̾ǭ��ε��V�ǭ��N���q�w�V�m�ҵ{�A�B_�i�����ϥΦ��~�n�]I11-E04�^�G���ҩ����P�u�@���F���󤣱o�N���B�X�֩νƻs��M�ݨƹ�C 
+
+KEY: acceptance_tests 
+ �������D���ɦW��AŪ�̥i�ѥ���M�����B�ާ@�Τ��R��{���y�U���ҵ{���X���g�Q�׫�T�{�A�B�d����������P_�i�����ϥΦ��~�z�A�B����X�����^���y�U���ҵ{���X���g�Q�׫�T�{�A�B�d����������P�D�ޮ֩w�C�z�����`������C
+�v���e�{�x��n�D�B��ƨӷ��B�O�����B�P�w�B�Ҿکw����Ю֡F�x���夣�Q���v��ק�g�C
+�̥���������ڥi�ΡG�ݨ��t�D�ؿﶵ�q�ءFSOP�t����B��J�B�P�_�B�����I�B���`�M��X�F�|ĳ�����tĳ�D�B�ҾڡB�Mĳ�B�d���B�����F���i�t��ơB�����B�����B�v�B�p��B����M�M���C
+�Y�S���i���� REAL ��ơA���ѫe��@�P�B�����J�� SAMPLE/SYNTHETIC �רҡF���o�ΪŪ��B�ݶ�B�ݮ֩Υ��Ӧ��R�������~�C
+�C�@���X������B����B�Ʀr�B��ҡB���B�B�Mĳ�B�ӷ����|�P���G�Ҧ��v�ƹ����ï�O����B�Ҧb�������������ίu������覡�C
+�������y�ĤT����B�u�Hñ�W�B�֭�B�X�u�B�ҮѡB�F���B�Ȧ�B�|�p�Υ~�����c�ƹ�F�ݭn�ӵ����ɥu�����һݭ��P���o���|�C
+�Ҧ������i�Ѯi�ܼƾڭ���F�����B���B�����B�|�ˤ��J��N/A����M���A��e�ޥΤ����Ƴгy�۲������C
+��ӭt�V�F���A����i�ڵ��ܤ֨�ӿ��~��F�F���X�i�ֹ諸�t�����γ��`�C
+����30���������ت��BŪ�̡B�ϥή��I�B�ާ@�B��X�MSAMPLE��REAL���A�F�L���֤u�{�����N�y�C
+����i�Ѥ�`��|�@�~�ε��־\Ū�F���D�h�šB���B�B�J�B����ઽ������A�L�ƻs�P�� DOCX ����C
+�r��U���G����ܤ�10.5pt�B����ܤ�9.5pt�F��T�����ɥ[���A���Y�p�r��C
+�ӷ��w��P��e�ޥΨϥΥ� Blueprint �n�����x�譶������� ID�F�Ҧ����פ��W�X�ӷ�����d��C 
+
+KEY: document_role 
+ evidence_record 
+
+KEY: official_requirement_text 
+ �U���ҵ{���X���g�Q�׫�T�{�A�B�d����������P�D�ޮ֩w�C 
+
+KEY: official_checkbox_text 
+ �U���ҵ{���X���g�Q�׫�T�{�A�B�d����������P�D�ޮ֩w�C 
+
+KEY: official_evidence_table_page 
+ 4 
+
+KEY: official_source_readback_status 
+ PDF_TEXT_EXACT_PAGE_MATCH 
+
+KEY: official_visually_checked_pages 
+  
+
+KEY: requirement_deliverable_siblings 
+ 0051 
+
+KEY: docx_body_template_policy 
+ FROM_SOURCE_ONLY; old body is discovery evidence only and prohibited as rebuild template; Wave005 R3 0031-0040 quality-height references only; Wave001-004 tainted; old Wave005 invalid; Wave006 prohibited. 
+
+KEY: synthetic_population_rule 
+ �� REAL �Y�ͦ�����s�e SAMPLE/SYNTHETIC worked example�F�ƹ�ɫפ@���@�C�n�� SYNTHETIC_REPLACEMENT_REGISTER�A�t�ȡB�����B�w��B�������P�d���F���o�d�ݶ�Ϋ_�R REAL�C 
+
+KEY: historical_blueprint_source 
+ a0cc36fc8c4ee5b89d3b284d4acc575de5b5abc4e39b106a1cc4a4dc439ec72d 
+
+KEY: historical_body_use 
+ PROHIBITED 
+
+KEY: source_map_notes 
+ 129 exact official requirement rows + reconciled 142-ID crosswalk; official source PDF and exact Drive readback evidence are recorded in runtime SOURCE/CONTROL maps.
+$ python C:\Users\J\AppData\Local\Temp\opencode\extract_0051.py > C:\Users\J\AppData\Local\Temp\opencode\body_0051.txt 2>&1; Get-Item C:\Users\J\AppData\Local\Temp\opencode\body_0051.txt | Select-Object Length
+Length
+------
+ 28012
+> build · deepseek-v4.1-flash-free
+✗ Read C:/Users/J/AppData/Local/Temp/opencode/bp_0051.txt failed
+Error: File not found: C:\Users\J\AppData\Local\Temp\opencode\bp_0051.txt
+$ $env:PYTHONUTF8=1; python -X utf8 C:\Users\J\AppData\Local\Temp\opencode\extract_0051.py 2>&1 | Out-File -Encoding utf8 C:\Users\J\AppData\Local\Temp\opencode\body_0051.txt; python -X utf8 -c "import json,io,sys; sys.stdout.reconfigure(encoding='utf-8'); d=json.loads(open(r'E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\inputs\UNIQUE_BLUEPRINT_0051.jsonl',encoding='utf-8').readline()); open(r'C:\Users\J\AppData\Local\Temp\opencode\bp_0051.txt','w',encoding='utf-8').write('\n\n'.join(k+':\n'+str(v) for k,v in d.items()))"
+(no output)
+> build · deepseek-v4.1-flash-free
+$ $env:PYTHONUTF8=1; python -X utf8 C:\Users\J\AppData\Local\Temp\opencode\extract_0051.py 2>&1 | Out-File -Encoding utf8 C:\Users\J\AppData\Local\Temp\opencode\body_0051.txt; Get-Item C:\Users\J\AppData\Local\Temp\opencode\body_0051.txt | Select Length
+Length
+------
+ 30434
+> build · deepseek-v4.1-flash-free
+→ Read C:/Users/J/AppData/Local/Temp/opencode/body_0051.txt 
+> build · deepseek-v4.1-flash-free
+← Write C:/Users/J/AppData/Local/Temp/opencode/extract2.py
+Created file successfully: C:/Users/J/AppData/Local/Temp/opencode/extract2.py
+> build · deepseek-v4.1-flash-free
+$ python C:\Users\J\AppData\Local\Temp\opencode\extract2.py
+done 28
+> build · deepseek-v4.1-flash-free
+→ Read C:/Users/J/AppData/Local/Temp/opencode/body_0051.txt 
+> build · deepseek-v4.1-flash-free
+$ $base='E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016'; Get-ChildItem -Path $base -Recurse -File -Include '0049_R01.docx','0050_R01.docx','0033_R03.docx','*0049*R01*','*0050*R01*','*0033*R03*' -ErrorAction SilentlyContinue | Select-Object FullName,Length | Format-Table -AutoSize | Out-String -Width 250
+FullName                                                                                                                                                            Length
+--------                                                                                                                                                            ------
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\10\0911_0033_PRE_LAYOUT_R03_f94f75572dca.docx   44077
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\10\0918_0049_BATCH04_CANDIDATE_R01.docx         43118
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\10\0919_0050_BATCH04_CANDIDATE_R01.docx         43003
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\candidate\0033_R03.docx                                           58475
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\qa_original\0033_build_receipt_r03.json                   2603
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\qa_original\0033_full_page_visual_review_r03.json         1250
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\qa_original\0033_page_locator_receipt_r03.json            1361
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\qa_original\0033_semantic_review_r03.json                 2750
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\evidence\qa_original\0033_technical_integrity_qa_r03.json          1072
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\inputs\source_sidecars\0033_source_manifest_r03.md                 2382
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\candidate\0049_R01.docx                                           61773
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\build\build_0049_R01.py                                  63447
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\history\0049_R01_955f7138.docx                           61772
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\qa\verify_0049_R01.py                                     9300
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01\0049_R01.pdf                                1198361
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_4d321541\0049_R01.pdf                       1174409
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_7a793b67\0049_R01.pdf                       1191987
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_955f7138\0049_R01.pdf                        700845
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_a549ec5e\0049_R01.pdf                       1174045
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c064ed15\0049_R01.pdf                       1172364
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_c3b42d15\0049_R01.pdf                        701544
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\render_R01_e8212788\0049_R01.pdf                        700902
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\candidate\0050_R01.docx                                           62426
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\build\__pycache__\build_0050_R01.cpython-312.pyc         82808
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\build\build_0050_R01.py                                  72260
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\qa\audit_0050_R01.py                                      9755
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01\0050_R01.pdf                                 674706
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_031ef35a\0050_R01.pdf                        694390
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_3ef744d5\0050_R01.pdf                        708812
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_725bbb0f\0050_R01.pdf                        709921
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_861b4298\0050_R01.pdf                        689516
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\evidence\render_R01_d0d37c2c\0050_R01.pdf                        708773
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\inputs\0049_R01_SOURCE_MAP.md                                      6291
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\inputs\0049_R01_SYNTHETIC_REGISTER.csv                            94197
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\finalize_0050_R01.py                                                                                                 10246
+$ $base='E:\TTQS'; Get-ChildItem -Path $base -Recurse -File -Filter '*.docx' -ErrorAction SilentlyContinue | Where-Object { $_.Name -match '0049|0050|0033' } | Select-Object FullName,Length | Format-Table -AutoSize | Out-String -Width 250
+FullName
+--------                                                                                                                                                                                                                                                  
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\00_CONTROL\DOCX_FACTORY\ARCHIVE\BATCH_04_R01_CANDIDATES\0033\0033__I07-E01__01__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD���K
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\00_CONTROL\DOCX_FACTORY\QUALITY_RECOVERY_R01\BATCH_03_QUALITY_RECOVERY_R01\CANDIDATES\0033_BATCH03_CANDIDATE_R04.docx        
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\00_CONTROL\DOCX_FACTORY\QUALITY_RECOVERY_R01\BATCH_03_QUALITY_RECOVERY_R01\CANDIDATES\0033_BATCH03_CANDIDATE_R05.docx        
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\00_CONTROL\DOCX_FACTORY\QUALITY_RECOVERY_R01\BATCH_03_QUALITY_RECOVERY_R01\CANDIDATES\0033_BATCH03_CANDIDATE_R06.docx        
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\00_CONTROL\DOCX_FACTORY\QUALITY_RECOVERY_R01\BATCH_03_QUALITY_RECOVERY_R01\CANDIDATES\0033_BATCH03_CANDIDATE_R07.docx        
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\00_CONTROL\DOCX_FACTORY\QUALITY_RECOVERY_R01\BATCH_03_QUALITY_RECOVERY_R01\CANDIDATES\0033_BATCH03_CANDIDATE_R08.docx        
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\00_CONTROL\DOCX_FACTORY\QUALITY_RECOVERY_R01\BATCH_03_QUALITY_RECOVERY_R01\CANDIDATES\0033_BATCH03_CANDIDATE.docx            
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\00_CONTROL\DOCX_FACTORY\QUALITY_RECOVERY_R01\BATCH_03_QUALITY_RECOVERY_R01\CANONICAL_BACKUPS\0033_PRE_BATCH03_IMMUTABLE.docx 
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\00_CONTROL\DOCX_FACTORY\QUALITY_RECOVERY_R01\BATCH_03_QUALITY_RECOVERY_R01\LAYOUT_REPAIR_PRESTATE_R02\0033_PRE_LAYOUT_R02_9c�K
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\00_CONTROL\DOCX_FACTORY\QUALITY_RECOVERY_R01\BATCH_03_QUALITY_RECOVERY_R01\LAYOUT_REPAIR_PRESTATE_R03\0033_PRE_LAYOUT_R03_f9�K
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\00_CONTROL\DOCX_FACTORY\QUALITY_RECOVERY_R01\BATCH_04_QUALITY_RECOVERY_R01\CANDIDATES\0049_BATCH04_CANDIDATE_R01.docx        
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\00_CONTROL\DOCX_FACTORY\QUALITY_RECOVERY_R01\BATCH_04_QUALITY_RECOVERY_R01\CANDIDATES\0049_BATCH04_CANDIDATE_R03.docx        
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\00_CONTROL\DOCX_FACTORY\QUALITY_RECOVERY_R01\BATCH_04_QUALITY_RECOVERY_R01\CANDIDATES\0049_BATCH04_CANDIDATE_R20.docx        
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\00_CONTROL\DOCX_FACTORY\QUALITY_RECOVERY_R01\BATCH_04_QUALITY_RECOVERY_R01\CANDIDATES\0049_BATCH04_CANDIDATE_R24.docx        
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\00_CONTROL\DOCX_FACTORY\QUALITY_RECOVERY_R01\BATCH_04_QUALITY_RECOVERY_R01\CANDIDATES\0049_BATCH04_CANDIDATE_R25.docx        
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\00_CONTROL\DOCX_FACTORY\QUALITY_RECOVERY_R01\BATCH_04_QUALITY_RECOVERY_R01\CANDIDATES\0050_BATCH04_CANDIDATE_R01.docx        
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\00_CONTROL\DOCX_FACTORY\QUALITY_RECOVERY_R01\BATCH_04_QUALITY_RECOVERY_R01\CANDIDATES\0050_BATCH04_CANDIDATE_R02.docx        
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\00_CONTROL\DOCX_FACTORY\QUALITY_RECOVERY_R01\BATCH_04_QUALITY_RECOVERY_R01\CANDIDATES\0050_BATCH04_CANDIDATE_R03.docx        
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\00_CONTROL\DOCX_FACTORY\QUALITY_RECOVERY_R01\BATCH_04_QUALITY_RECOVERY_R01\CANDIDATES\0050_BATCH04_CANDIDATE_R20.docx        
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\00_CONTROL\DOCX_FACTORY\QUALITY_RECOVERY_R01\BATCH_04_QUALITY_RECOVERY_R01\CANDIDATES\0050_BATCH04_CANDIDATE_R24.docx        
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\00_CONTROL\DOCX_FACTORY\QUALITY_RECOVERY_R01\BATCH_04_QUALITY_RECOVERY_R01\CANDIDATES\0050_BATCH04_CANDIDATE_R25.docx        
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\00_CONTROL\DOCX_FACTORY\QUALITY_RECOVERY_R01\BATCH_04_QUALITY_RECOVERY_R01\CANONICAL_BACKUPS\0049_PRE_BATCH04.docx           
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\00_CONTROL\DOCX_FACTORY\QUALITY_RECOVERY_R01\BATCH_04_QUALITY_RECOVERY_R01\CANONICAL_BACKUPS\0050_PRE_BATCH04.docx           
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\99_FINAL_PACKAGE\07_����07\0033__I07-E01__01__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.docx               
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\99_FINAL_PACKAGE\11_����11\0049__I11-E01__01__�V�m�ҵ{�p�e�t�X�~�D�B���V�̥H��¾��ݨD����_�i�����ϥΦ��~.docx               
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\99_FINAL_PACKAGE\11_����11\0050__I11-E02__01__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z.docx                           
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\99_FINAL_PACKAGE\AUDIT_SAMPLE_RANDOM10_R01\0033__I07-E01__01__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.do�K
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\99_FINAL_PACKAGE\AUDIT_SAMPLE_RANDOM10_R01\0050__I11-E02__01__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z.docx           
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\99_FINAL_PACKAGE_B04_R02_STAGING\07_����07\0033__I07-E01__01__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.do�K
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\99_FINAL_PACKAGE_B05_R01_STAGING\11_����11\0049__I11-E01__01__�V�m�ҵ{�p�e�t�X�~�D�B���V�̥H��¾��ݨD����_�i�����ϥΦ��~.do�K
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\99_FINAL_PACKAGE_B05_R01_STAGING\11_����11\0050__I11-E02__01__�U�ҵ{�椸���e����F���V�m�W�����ؼ�.docx                      
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\99_FINAL_PACKAGE_B05_R02_STAGING\11_����11\0049__I11-E01__01__�V�m�ҵ{�p�e�t�X�~�D�B���V�̥H��¾��ݨD����_�i�����ϥΦ��~.do�K
+E:\TTQS\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\TTQS_DOCUMENT_FOUNDRY_RUN_ASTRA_20260925\99_FINAL_PACKAGE_B05_R02_STAGING\11_����11\0050__I11-E02__01__�U�ҵ{�椸���e����F���V�m�W�����ؼ�.docx                      
+E:\TTQS\TTQS_ONE_WIN10_MISSION_20261002\starter_R01\01_CURRENT_GOOD_REFERENCE\0033__I07-E01__R3_SAMPLE_SYNTHETIC_REBUILD.docx                                                                                                                             
+E:\TTQS\TTQS_ONE_WIN10_MISSION_20261002\R04\01_HUMANIZED_REFERENCE\0033__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.docx                                                                                                                 
+E:\TTQS\TTQS_ONE_CODEX_RUNTIME\INPUTS\R04\01_HUMANIZED_REFERENCE\0033__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.docx                                                                                                                   
+E:\TTQS\TTQS_ONE_CODEX_RUNTIME\CURRENT\0050__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z.docx                                                                                                                                                         
+E:\TTQS\TTQS_ONE_CODEX_RUNTIME\SUPERSEDED\0050__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z__WF_CODEX_SALVAGE_0050_20261004_215506_138630__650ba23dc603.docx                                                                                          
+E:\TTQS\TTQS_ONE_CODEX_RUNTIME\SUPERSEDED\0050__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z__WF_CODEX_SALVAGE_0050_20261005_014834_135764__d1a50ff6157c.docx                                                                                          
+E:\TTQS\TTQS_ONE_CODEX_RUNTIME\SUPERSEDED\0050__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z__WF_CODEX_SALVAGE_0050_20261005_020120_551313__cd69c48f933f.docx                                                                                          
+E:\TTQS\TTQS_ONE_CODEX_RUNTIME\WORK\CANDIDATES\0033__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.docx                                                                                                                                     
+E:\TTQS\TTQS_ONE_CODEX_RUNTIME\WORK\CANDIDATES\0050__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z.docx                                                                                                                                                 
+E:\TTQS\TTQS_ONE_CODEX_RUNTIME\WORK\QUALITY_REBUILD_20261016\0033_R02\candidate\0033__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.docx                                                                                                    
+E:\TTQS\TTQS_ONE_CODEX_RUNTIME\WORK\QUALITY_REBUILD_20261016\0033_R03\candidate\0033__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~_R03.docx                                                                                                
+E:\TTQS\TTQS_ONE_CODEX_RUNTIME\REFERENCE\0033__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.docx                                                                                                                                           
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\�H�~�o�i�~��޲z���q���s�@���ȥ]_20260923\01\0033_036_����7_���ҵ{�]�p�i�ת��B�ҵ{�W���y�{�ϻ����B�V�m�W����.docx                                                                       
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\�H�~�o�i�~��޲z���q���s�@���ȥ]_20260923\01\0049_057_����12_�̾ǭ����зǤάy�{���A�Ч������v���U�ݱ��˶�.docx                                                                      
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\�H�~�o�i�~��޲z���q���s�@���ȥ]_20260923\01\0050_058_����12_���v����u�̮v����зǤάy�{����øg�V�m�޲z�e.docx                                                                      
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\08\0705_0033__I07-E01__01__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.docx                                                         
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\08\0783_0033_BATCH03_CANDIDATE.docx                                                                                                                 
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\08\0800_0033_BATCH03_CANDIDATE_R04.docx                                                                                                             
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\09\0816_0033_BATCH03_CANDIDATE_R05.docx                                                                                                             
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\09\0826_0033_BATCH03_CANDIDATE_R06.docx                                                                                                             
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\09\0833_0033_BATCH03_CANDIDATE_R07.docx                                                                                                             
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\09\0865_0033_BATCH03_CANDIDATE_R08.docx                                                                                                             
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\09\0894_0033_PRE_BATCH03_IMMUTABLE.docx                                                                                                             
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\10\0906_0033_PRE_LAYOUT_R02_9c4c8963b05c.docx                                                                                                       
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\10\0911_0033_PRE_LAYOUT_R03_f94f75572dca.docx                                                                                                       
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\10\0918_0049_BATCH04_CANDIDATE_R01.docx                                                                                                             
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\10\0919_0050_BATCH04_CANDIDATE_R01.docx                                                                                                             
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\10\0971_0049_BATCH04_CANDIDATE_R03.docx                                                                                                             
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\10\0972_0050_BATCH04_CANDIDATE_R03.docx                                                                                                             
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\10\0992_0050_BATCH04_CANDIDATE_R02.docx                                                                                                             
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\10\0998_0049_BATCH04_CANDIDATE_R20.docx                                                                                                             
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\10\0999_0050_BATCH04_CANDIDATE_R20.docx                                                                                                             
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\11\1024_0049_BATCH04_CANDIDATE_R24.docx                                                                                                             
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\11\1025_0050_BATCH04_CANDIDATE_R24.docx                                                                                                             
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\11\1027_0049_BATCH04_CANDIDATE_R25.docx                                                                                                             
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\11\1028_0050_BATCH04_CANDIDATE_R25.docx                                                                                                             
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\11\1059_0049_PRE_BATCH04.docx                                                                                                                       
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\11\1060_0050_PRE_BATCH04.docx                                                                                                                       
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\16\1570_0033__I07-E01__01__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.docx                                                         
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\16\1586_0049__I11-E01__01__�V�m�ҵ{�p�e�t�X�~�D�B���V�̥H��¾��ݨD����_�i�����ϥΦ��~.docx                                                         
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\16\1587_0050__I11-E02__01__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z.docx                                                                     
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\18\1705_0050__I11-E02__01__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z.docx                                                                     
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\18\1712_0033__I07-E01__01__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.docx                                                         
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\18\1716_0033__I07-E01__01__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.docx                                                         
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\18\1732_0049__I11-E01__01__�V�m�ҵ{�p�e�t�X�~�D�B���V�̥H��¾��ݨD����_�i�����ϥΦ��~.docx                                                         
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\18\1733_0050__I11-E02__01__�U�ҵ{�椸���e����F���V�m�W�����ؼ�.docx                                                                                
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\18\1742_0049__I11-E01__01__�V�m�ҵ{�p�e�t�X�~�D�B���V�̥H��¾��ݨD����_�i�����ϥΦ��~.docx                                                         
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\18\1743_0050__I11-E02__01__�U�ҵ{�椸���e����F���V�m�W�����ؼ�.docx                                                                                
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_ONE_WIN10_MISSION_20261002\21\2050_0033__I07-E01__R3_SAMPLE_SYNTHETIC_REBUILD.docx                                                                                                   
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_ONE_WIN10_MISSION_20261002\21\2068_0033__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.docx                                                                            
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_ONE_CODEX_RUNTIME\21\2080_0033__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.docx                                                                                     
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_ONE_CODEX_RUNTIME\21\2100_0050__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z.docx                                                                                                 
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_ONE_CODEX_RUNTIME\22\2111_0050__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z__WF_CODEX_SALVAGE_0050_20261004_215506_.docx                                                         
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_ONE_CODEX_RUNTIME\22\2123_0050__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z__WF_CODEX_SALVAGE_0050_20261005_014834_.docx                                                         
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_ONE_CODEX_RUNTIME\22\2124_0050__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z__WF_CODEX_SALVAGE_0050_20261005_020120_.docx                                                         
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_ONE_CODEX_RUNTIME\22\2170_0033__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.docx                                                                                     
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_ONE_CODEX_RUNTIME\22\2175_0050__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z.docx                                                                                                 
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\04_�������P��������\TTQS_ONE_CODEX_RUNTIME\23\2213_0033__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.docx                                                                                     
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\02_�J����M���_���v���������s�禬\1570_0033__I07-E01__01__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.docx                                                                                     
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\02_�J����M���_���v���������s�禬\1586_0049__I11-E01__01__�V�m�ҵ{�p�e�t�X�~�D�B���V�̥H��¾��ݨD����_�i�����ϥΦ��~.docx                                                                                     
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\02_�J����M���_���v���������s�禬\1587_0050__I11-E02__01__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z.docx                                                                                                 
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\02_�J����M���_���v���������s�禬\1705_0050__I11-E02__01__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z.docx                                                                                                 
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\02_�J����M���_���v���������s�禬\1712_0033__I07-E01__01__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.docx                                                                                     
+E:\TTQS\�e�f�ַ�_20261005_222304\�e�f���\01_�ثe���_�禬���A�ЬݲM��\2100_0050__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z.docx                                                                                                                    
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\candidate\0033_R03.docx                                                                                                                                
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\evidence\history\0049_R01_955f7138.docx                                                                                                                
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\candidate\0049_R01.docx                                                                                                                                
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\candidate\0050_R01.docx                                                                                                                                
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\01_�ثe���_�禬���A�ЬݲM��\2100_0050__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z.docx                                                                                                     
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\02_�J����M���_���v���������s�禬\1570_0033__I07-E01__01__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.docx                                                                      
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\02_�J����M���_���v���������s�禬\1586_0049__I11-E01__01__�V�m�ҵ{�p�e�t�X�~�D�B���V�̥H��¾��ݨD����_�i�����ϥΦ��~.docx                                                                      
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\02_�J����M���_���v���������s�禬\1587_0050__I11-E02__01__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z.docx                                                                                  
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\02_�J����M���_���v���������s�禬\1705_0050__I11-E02__01__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z.docx                                                                                  
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\02_�J����M���_���v���������s�禬\1712_0033__I07-E01__01__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.docx                                                                      
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\08\0705_0033__I07-E01__01__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.docx                                          
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\08\0783_0033_BATCH03_CANDIDATE.docx                                                                                                  
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\08\0800_0033_BATCH03_CANDIDATE_R04.docx                                                                                              
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\09\0816_0033_BATCH03_CANDIDATE_R05.docx                                                                                              
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\09\0826_0033_BATCH03_CANDIDATE_R06.docx                                                                                              
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\09\0833_0033_BATCH03_CANDIDATE_R07.docx                                                                                              
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\09\0865_0033_BATCH03_CANDIDATE_R08.docx                                                                                              
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\09\0894_0033_PRE_BATCH03_IMMUTABLE.docx                                                                                              
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\10\0906_0033_PRE_LAYOUT_R02_9c4c8963b05c.docx                                                                                        
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\10\0911_0033_PRE_LAYOUT_R03_f94f75572dca.docx                                                                                        
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\10\0918_0049_BATCH04_CANDIDATE_R01.docx                                                                                              
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\10\0919_0050_BATCH04_CANDIDATE_R01.docx                                                                                              
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\10\0971_0049_BATCH04_CANDIDATE_R03.docx                                                                                              
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\10\0972_0050_BATCH04_CANDIDATE_R03.docx                                                                                              
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\10\0992_0050_BATCH04_CANDIDATE_R02.docx                                                                                              
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\10\0998_0049_BATCH04_CANDIDATE_R20.docx                                                                                              
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\10\0999_0050_BATCH04_CANDIDATE_R20.docx                                                                                              
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\11\1024_0049_BATCH04_CANDIDATE_R24.docx                                                                                              
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\11\1025_0050_BATCH04_CANDIDATE_R24.docx                                                                                              
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\11\1027_0049_BATCH04_CANDIDATE_R25.docx                                                                                              
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\11\1028_0050_BATCH04_CANDIDATE_R25.docx                                                                                              
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\11\1059_0049_PRE_BATCH04.docx                                                                                                        
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\11\1060_0050_PRE_BATCH04.docx                                                                                                        
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\16\1570_0033__I07-E01__01__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.docx                                          
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\16\1586_0049__I11-E01__01__�V�m�ҵ{�p�e�t�X�~�D�B���V�̥H��¾��ݨD����_�i�����ϥΦ��~.docx                                          
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\16\1587_0050__I11-E02__01__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z.docx                                                      
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\18\1705_0050__I11-E02__01__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z.docx                                                      
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\18\1712_0033__I07-E01__01__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.docx                                          
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\18\1716_0033__I07-E01__01__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.docx                                          
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\18\1732_0049__I11-E01__01__�V�m�ҵ{�p�e�t�X�~�D�B���V�̥H��¾��ݨD����_�i�����ϥΦ��~.docx                                          
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\18\1733_0050__I11-E02__01__�U�ҵ{�椸���e����F���V�m�W�����ؼ�.docx                                                                 
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\18\1742_0049__I11-E01__01__�V�m�ҵ{�p�e�t�X�~�D�B���V�̥H��¾��ݨD����_�i�����ϥΦ��~.docx                                          
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925\18\1743_0050__I11-E02__01__�U�ҵ{�椸���e����F���V�m�W�����ؼ�.docx                                                                 
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_ONE_CODEX_RUNTIME\21\2080_0033__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.docx                                                                      
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_ONE_CODEX_RUNTIME\21\2100_0050__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z.docx                                                                                  
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_ONE_CODEX_RUNTIME\22\2111_0050__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z__WF_CODEX_SALVAGE_0050_20261004_215506_.docx                                          
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_ONE_CODEX_RUNTIME\22\2123_0050__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z__WF_CODEX_SALVAGE_0050_20261005_014834_.docx                                          
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_ONE_CODEX_RUNTIME\22\2124_0050__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z__WF_CODEX_SALVAGE_0050_20261005_020120_.docx                                          
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_ONE_CODEX_RUNTIME\22\2170_0033__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.docx                                                                      
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_ONE_CODEX_RUNTIME\22\2175_0050__�U�ҵ{�椸���e����F���V�m�W�����ؼ�_����u�@�Z.docx                                                                                  
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_ONE_CODEX_RUNTIME\23\2213_0033__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.docx                                                                      
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_ONE_WIN10_MISSION_20261002\21\2050_0033__I07-E01__R3_SAMPLE_SYNTHETIC_REBUILD.docx                                                                                    
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\TTQS_ONE_WIN10_MISSION_20261002\21\2068_0033__�V�m�ҵ{�p�e�t�X�Ȥ�Ψ��V�̻ݨD�B¾��ݨD��_�i�����ϥΦ��~.docx                                                             
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\�H�~�o�i�~��޲z���q���s�@���ȥ]_20260923\01\0033_036_����7_���ҵ{�]�p�i�ת��B�ҵ{�W���y�{�ϻ����B�V�m�W����.docx                                                        
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\�H�~�o�i�~��޲z���q���s�@���ȥ]_20260923\01\0049_057_����12_�̾ǭ����зǤάy�{���A�Ч������v���U�ݱ��˶�.docx                                                       
+E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\�e�f���\04_�������P��������\�H�~�o�i�~��޲z���q���s�@���ȥ]_20260923\01\0050_058_����12_���v����u�̮v����зǤάy�{����øg�V�m�޲z�e.docx
+> build · deepseek-v4.1-flash-free
+$ $p='E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review'; Get-FileHash -Algorithm SHA256 "$p\0033_R03\candidate\0033_R03.docx","$p\0049_R01\candidate\0049_R01.docx","$p\0050_R01\candidate\0050_R01.docx","$p\0051_R01\inputs\official_evidence_table_page4.png","$p\0051_R01\evidence\SYNTHETIC_REPLACEMENT_REGISTER_R01.csv" | Select-Object Hash,Path | Format-List
+Hash : FE5F3CFD84C761DA86435A71E0FD899DAA725BE78628C4D2D3F2324C1FDB5F4F
+Path : E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0033_R03\candidate\003
+       3_R03.docx
+
+Hash : E8212788B1F7B201CA4AF4F4C5FB83AB131627DBFA815987F7CF6344EDFDA727
+Path : E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0049_R01\candidate\004
+       9_R01.docx
+
+Hash : D0D37C2C69B161A2CDD37EE3097306722C4A65A1AFD844AE92E1DFF58B43381A
+Path : E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0050_R01\candidate\005
+       0_R01.docx
+
+Hash : 0E00B46586AD0EE181046D4A13D0023654BB07537F7EEBC3429DAD3BFA29D35F
+Path : E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\inputs\offici
+       al_evidence_table_page4.png
+
+Hash : CDDC262B205850D9BBDC9297C316D901783B56B66D03D05E3E7AF33889D94266
+Path : E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\SYNT
+       HETIC_REPLACEMENT_REGISTER_R01.csv
+$ $p='E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence'; $c=Import-Csv "$p\SYNTHETIC_REPLACEMENT_REGISTER_R01.csv"; "ROWS: $($c.Count)"; "COLUMNS: $($c[0].PSObject.Properties.Name -join ', ')"; "UNIQUE FACT_ID: $(($c | Select-Object -ExpandProperty fact_id -Unique).Count)"
+ROWS: 227
+COLUMNS: synthetic_fact_id, synthetic_value, fact_type, document_location, source_or_provenance, real_replacement_source_required, replacement_responsible_role, status
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+Select-Object: Property "fact_id" cannot be found.
+UNIQUE FACT_ID: 0
+> build · deepseek-v4.1-flash-free
+← Write C:/Users/J/AppData/Local/Temp/opencode/src.py
+Created file successfully: C:/Users/J/AppData/Local/Temp/opencode/src.py
+← Write C:/Users/J/AppData/Local/Temp/opencode/reg.py
+Wrote file successfully: C:/Users/J/AppData/Local/Temp/opencode/reg.py
+> build · deepseek-v4.1-flash-free
+$ python C:\Users\J\AppData\Local\Temp\opencode\reg.py; python C:\Users\J\AppData\Local\Temp\opencode\src.py
+ok
+0033_R03 255 lines
+0049_R01 197 lines
+0050_R01 259 lines
+> build · deepseek-v4.1-flash-free
+→ Read C:/Users/J/AppData/Local/Temp/opencode/register_analysis.txt 
+> build · deepseek-v4.1-flash-free
+$ cd C:\Users\J\AppData\Local\Temp\opencode; Select-String -Path .\src_0050_R01.txt -Pattern 'SYN-0033-PLAN-01|志工服務紀錄|G1|G2|G3|G4|360|90|120|60|12|10題|8/10|8 /10|情境卡|五欄|前測|後測|答案鍵' | Select-Object -First 60 | ForEach-Object { "$($_.LineNumber): $($_.Line)" }
+15: �P�רӷ��G�ҵ{�W�١u�Ӥu�A�Ȭ����B�汵�P�u�@�ɽu��ȡv�A�u�� 0049 R01 ���P�@���X���p�e�P�רҽX SYN-0033-PLAN-01�C�椸�@�ܥ|�B�ܽd�W���H�� 12 �H�P 360 �оǤ������u�@�@�P�ʩӱ��A�����ܯu��Z�ũαƽҡC
+22: 0050�UI11-E02�U���052�]����^ | �U�椸�ؼСB���e�B�Юv���ʡB�m���ҾڻP�X��P�ǬO�_�v���@�P�C | ����֤߬O�|���椸�ЮסB��M���污���D�B�t�m�W�ǤΤ�������ܽd�C
+29: 0049 R01 �ҵ{�p�e | I11-E01�����051�F�P�׽ҵ{�BG1�VG4�B�|�椸�ήɼơC | ���ѥ���ݮi�}���X���p�e�ؼЩM�ɼƨӷ��C | ���ҩ��ӽҵ{�w�֭�Φs�b�u��ǭ��C
+33: ���ҽҵ{��V�ӱ� 0049 R01 ���u�Ӥu�A�Ȭ����B�汵�P�u�@�ɽu��ȡv�C�H�U G1�VG4 �O�P�׭p�e�ؼЪ��椸�ơF����u��ҵ{�Y�ؼФ�r�ΪA�Ƚd�򤣦P�A�������������ӷ��A�A���s�]�p�D�ػP���q�C
+36: G1�U����ɽu�P�A���汵 | �椸�@ | ���ӦX�����Ҥ���X�W�X���V����d�򪺽ШD�A����ۦ�ӿըÿ�ܫ��������|�汵�C | ���D�ܤ֥|�D�P�_���T�F���o�X�{�V�v�ӿաC | �����ҧP�_���P���~�����^�X�C
+37: G2�U�ݨD�T�{�P�U�@�B | �椸�G | �H�}�񴣰ݡB���z�B�ɽu���ѤΤU�@�B�T�{�������H�t�m�C | �|���t�m�欰�ܤ֤T���F�СA�B�L�������p�H�W�C | �[��W�ǡB����^�X�ΦA�t�m�����C
+38: G3�U�̤p���n���� | �椸�T | �ϥΰΦW�N�X�������ȡB���A�B�����ƶ��B�U�@�B�P�d�����⤭��C | ���槹��B���t�����n�Ӹ�C | ����ܽd�汵���P�P���ֹ���C
+39: G4�U��X�汵 | �椸�| | ��ɽu�P�_�B�ݨD�T�{�B��������B����d���M�����ƶ��s���@����������汵�C | ��X�ˮ֪����n�����������F���F�̸ɽm�æA���C | ��X���q���B�ΦW���G�d�Ҥέ׭qĲ�o�C
+42: �@�U90���� | ����ɽu�P�汵 | �ɽu�ܽd�B���ئX�����Ҥ����B�T�{�d�����|�C | ���D�P�_���F��Ϥ��i���B�ݽT�{�P���o�ӿաC
+43: �G�U90���� | �ݨD�T�{�P�U�@�B | ���H��ܺt�m�B�[��^�X�B�ΦP�@�W�ǭ��t�C | �|�欰�[����F���T�{�ƶ��O�d�������C
+44: �T�U120���� | �̤p���n���� | �ܽd����B�ΦW�רҶ�g�B�P���ֹ�έ׭q�C | ���槹��汵���F���s�W�����n������T�C
+45: �|�U60���� | ��X�t�m�P��� | ����רҦ걵�B��X�q�W�B�������θɽm�M�w�C | ��X�ˮ֡B�ΦW������ƻP�U�@�B�B�m�C
+46: �ɶ��ֹ�G90��90��120��60��360 �оǤ����C����O�J�椸�@�P�椸�|�A���t�[�b�`�ɼƥ~�F�𮧻P��F�ɶ�����оǤ����C�o�O 0049 �P�ץܽd�p�e���ɼơA���O���|�ƽҬ����C
+47: �� 3 �`�U�椸�@�G����ɽu�P�A���汵�]90 �����^
+51: 1 | 10 | �����ɽu�B������T�P�t�m�W�h | ��������d��ݥѥ����ӷ��T�{�A�ܽd�p�󻡩����T�w�C | ť���W�h�ÿ�{�i�����ݽT�{������T���C | �e���@���оǰ_�I�F���@�J�Z���C
+55: 5 | 15 | �W�ߤ������ˮ� | ���@�P��������\�ðO�����~�����A�����}�ӤH���ơC | �U�ۧ������D�P�_�P�z�ѡC | �ΦW�N�X���ҧP�_���C
+58: �Х��W�ߧP�_�C�i�d�G�ثe�i�T�{����B���Ǥ������λݮֹ�B�U�@�B�p��B�z�C������t�C��½Ҫ̱M�ΰϡA���H�ǭ��@�~�d�o��C
+59: �� 7�U���i�i�����o���ǭ����X���ɽu���ҥd
+66: �椸�@�P�w�C�ܤ� 4/5 �D�z�ѲŦX�½Ҫ̵�����A�B�S���V�v�ӿաA�~�ŦX���ܽd G1 �P�ǡC���F�̰w����D�A�m�F�o���O���ίu�H���{�����C
+67: �� 4 �`�U�椸�G�G�ݨD�T�{�P�U�@�B�]90 �����^
+74: 4 | 25 | ���H����t�m | �����ҥd�p���[��A���N���������v�y�{�C | �@�H���X�ݨD�B�@�H�T�{�û����U�@�B�A����洫�C | �[��̥|���W�ǡC
+84: �� 5 �`�U�椸�T�G�̤p���n�����]120 �����^
+85: �椸�ؼСGŪ���P�@��c�רҡA�H�N�X��������汵�����F����}�O���ƹ�B�����ƶ��Υ����ӷ��A���W�[�����n�ѧO��ơC�Ұ�d�Ҥ��t�u�H�m�W�B�q�ܡB�a�}�B�f�v�Υi�^���������զX��T�C
+86: �� 10�U�椸�T���q�ާ@�]�X�p 120 �����^
+89: 2 | 20 | �Юv�ܽd���� | �H��c�ШD�ܽd���ȡB���A�B�����ƶ��B�U�@�B�B�d������C | �v����X�ҾکΥ����ӷ��C | �ܽd���C
+93: 6 | 15 | �Юv�`�� | �ˬd����P���n��Ƭɽu�C | �۬d�����ëO�d���D�C | ���槹����ˬd�C
+94: �� 11�U�@�������J������ܽd�汵����
+101: ����P�ǡC���ȡB���A�B�����ƶ��B�U�@�B�γd�����⤭�泣�n����F�����ƶ��n���T�O�d�������A���o�ɳy�d���H�γB�z���G�C���󤣥��n�Ӹ곣�ϥ����ܨҧP�����F�A���M���í����C
+102: �� 6 �`�U�椸�|�G��X�汵�t�m�]60 �����^
+103: �椸�ؼСG�N�ɽu�P�_�B�ݨD�T�{�B��������α���d���s���@�q��������C���Ҥ���������|�u�O�@���ݥѥ����ӷ��������ܽd�]�p�F���ֹꪺ���⤣�o�Q�Ц���|��ڵ��f�C
+104: �� 12�U�椸�|��X�t�m�]�X�p 60 �����^
+108: 3 | 20 | �������H�t�m�P�汵�� | �[��ɽu�B�T�{�B�����P���|�����`�C | �@�H��t�ШD�̡B�@�H��t�Ӥu�F�A�洫�ˬd�C | ������������ܻP������C
+110: 5 | 10 | ������ | �o����������F�P�e���P�W��A�����ƦP�D�C | �W�ߧ@���C | ����ΦW���ƥܨҡC
+116: �̤p���n���� | ���槹��A�����P�����ƶ����C�A�L�����n�Ӹ�C | �������ܽd�汵���C
+118: �q�L�覡�G�|�����n�ˮֳ������A�~�ŦX���ܽd G4�F�Y�Y�@���ʺ|�A���X�ʤf�B�w�Ƥ@������ɽm�A�A�H�P�@�ˮ��I�����C�S�������Ҿڮɤ��o�g���q�L�C
+119: �� 7 �`�U�e�� A ���G�оǰ_�I�E�_
+120: �C�D 1 ���A�`�� 0�V10 ���C�e�����G�u�Ψӽվ�ܽd�A���@�ӤH���P�w�C�D�بӦۥ���W�߳]�p�F�����ϥΫe���ѱ��v����̲{��y�{�Ю֡C
+128: �� 7 �`�U�e�� A ���G�оǰ_�I�E�_�]��^
+129: �C�D 1 ���A�`�� 0�V10 ���C�e�����G�u�Ψӽվ�ܽd�A���@�ӤH���P�w�C�D�بӦۥ���W�߳]�p�F�����ϥΫe���ѱ��v����̲{��y�{�Ю֡C
+137: �p���f�|�C�C�D���� 1 ���A���˦��F���l�������D�ơA�����T�w�� 10 �D�C�e�B������� 0�V10 ���F�ܽd�X��Ѧ��I������ܤ� 8/10�C�����ϥΫe���ֹﵪ����P�{��֩w�y�{�C
+138: �� 8 �`�U��� B ���G������q
+139: �C�D 1 ���A�`�� 0�V10 ���C����P�e���ҦP�@�ؼнd����ϥΤ��P���ҡA�קK���������D�ءF�ܽd���e���ܤ� 8/10�C
+147: �� 8 �`�U��� B ���G������q�]��^
+148: �C�D 1 ���A�`�� 0�V10 ���C����P�e���ҦP�@�ؼнd����ϥΤ��P���ҡA�קK���������D�ءF�ܽd���e���ܤ� 8/10�C
+155: Q10 | ��X�t�m�����ɡA���Ǳ���~����]�p�P�w�����HA. �w�g�������ҡUB. �ɽu�B�ݨD�T�{�B��������B���⨤��P���������̳W�ǧ����UC. �ǭ��۵����N | ________________
+156: �p���f�|�C�C�D���� 1 ���A���˦��F���l�������D�ơA�����T�w�� 10 �D�C�e�B������� 0�V10 ���F�ܽd�X��Ѧ��I������ܤ� 8/10�C�����ϥΫe���ֹﵪ����P�{��֩w�y�{�C
+157: �� 9 �`�U�½Ҫ̱M�ε�����]���o�P�ǭ��D���@�ֵo��^
+158: �o�񱱨�C�� 24�V26 �ȨѸg���v���½ҡ����q����ƽһP�P���C�C�L�ǭ����ƮɡA�u���Ѫ� 7�B�� 14�B�� 15 ���@�����F�����䶷�t��O�ޡC
+159: �� 24�U�椸�@���i���ҥd�P�_���I�]�½Ҫ̪��^
+166: �� 25�U�e�� A �����׻P�v�D�P���z�ѡ]�½Ҫ̪��^
+178: �� 9 �`�U�½Ҫ̱M�ε�����]��^
+179: �� 26�U��� B �����׻P�v�D�P���z�ѡ]�½Ҫ̪��^
+195: �e�� A �� | 6/10 | 60% | �оǰ_�I�F���@�J�Z�ε��V�P�w�C
+196: ��� B �� | 8/10 | 80% | �F��ܽd���e�F�u�i�ܧP���y�{�C
+197: �椸�@ G1 | 4/5 | 4 �D���T | �F��|�D���e�F�ܽd���׵L�V�v�ӿաC
+198: �椸�G G2 | 3/4 | 3 ���F�� | �F��T�����e�F�ܽd�L�������p�H�W�C
+199: �椸�T G3 | 5/5 | ���槹�� | �F�������e�F�ܽd���O�����n�Ӹ�C
+200: �椸�| G4 | 4/4 | �|������ | ��X�ˮ֥��������C
+201: �⦡�G�e�� 6��10��60%�F��� 8��10��80%�F�t�� 8?6�׼W�[ 2 ���C���t�ȥu�ܽd��N�P���i�榡�F��@�X���O�������ҩ��ҵ{�y����O���ɡA�]������N��ھǭ��@�~�C
+204: �e���C�� 8/10 | �̿��D�D�D�վ�椸�ܨҡA���K�ӤH���ơC | �����оǫ�Υ������F�ܤ� 8/10 �~�ŦX�ҵ{�ܽd���e�C | �e���u�O�_�I�F����g�����V�̤��X��C
+> build · deepseek-v4.1-flash-free
+→ Read C:/Users/J/AppData/Local/Temp/opencode/src_0050_R01.txt [limit=120]
+> build · deepseek-v4.1-flash-free
+→ Read inputs/official_evidence_table_page4.png 
+$ Get-ChildItem -Path 'E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review' -Directory | Select-Object -ExpandProperty Name; "---RENDERFILES---"; Get-ChildItem 'E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_6f575ebb' | Select-Object Name,Length
+0031_R06
+0032_R04
+0033_R03
+0034_R06
+0035_R11
+0036_R08
+0036_R09
+0036_R10
+0036_R11
+0036_R12
+0036_R13
+0037_R07
+0038_R01
+0038_R02
+0038_R03
+0039_R09
+0040_R03
+0040_R04
+0040_R05
+0040_R06
+0041_R01
+0041_R02
+0041_R03
+0041_R04
+0042_R01
+0042_R02
+0042_R03
+0042_R04
+0043_R04
+0044_R01
+0045_R01
+0045_R02
+0045_R03
+0046_R01
+0046_R02
+0046_R03
+0047_R01
+0047_R02
+0047_R03
+0047_R04
+0047_R05
+0047_R06
+0047_R07
+0047_R08
+0048_R01
+0048_R02
+0048_R03
+0049_R01
+0050_R01
+0051_R01
+---RENDERFILES---
+
+Name              Length
+----              ------
+0051_R01.pdf      575979
+contact-01-04.png 417810
+contact-05-08.png 418338
+contact-09-12.png 426224
+contact-13-14.png 250601
+page-01.png       162702
+page-02.png       260545
+page-03.png       274796
+page-04.png       278427
+page-05.png       216754
+page-06.png       362129
+page-07.png       208121
+page-08.png       197259
+page-09.png       197863
+page-10.png       261283
+page-11.png       268390
+page-12.png       263605
+page-13.png       285402
+page-14.png       291694
+> build · deepseek-v4.1-flash-free
+→ Read evidence/render_final_6f575ebb/page-03.png 
+→ Read evidence/render_final_6f575ebb/page-02.png 
+→ Read evidence/render_final_6f575ebb/page-01.png 
+→ Read evidence/render_final_6f575ebb/page-04.png 
+> build · deepseek-v4.1-flash-free
+→ Read evidence/render_final_6f575ebb/page-05.png 
+→ Read evidence/render_final_6f575ebb/page-07.png 
+→ Read evidence/render_final_6f575ebb/page-08.png 
+→ Read evidence/render_final_6f575ebb/page-06.png 
+> build · deepseek-v4.1-flash-free
+→ Read evidence/render_final_6f575ebb/page-10.png 
+→ Read evidence/render_final_6f575ebb/page-09.png 
+→ Read evidence/render_final_6f575ebb/page-11.png 
+→ Read evidence/render_final_6f575ebb/page-12.png 
+> build · deepseek-v4.1-flash-free
+→ Read evidence/render_final_6f575ebb/page-14.png 
+→ Read evidence/render_final_6f575ebb/page-13.png 
+> build · deepseek-v4.1-flash-free
+$ cd C:\Users\J\AppData\Local\Temp\opencode; Select-String -Path .\body_0051.txt -Pattern '待填|待核|空白|保持空白|會後填寫|待查證|TBD|XXX|TODO|placeholder|＿＿＿|____' | ForEach-Object { "$($_.LineNumber): $($_.Line)" }
+149: �����P�O�s | SYN-R01�n�D�U��X�������B�z�ѡB�d���B�������Ю֡CSYN-R04���X�S���F�����N����񦨨�|�W�w�C | �ϥ�SYN-OUT�����X�MACT-01��06�C�O�s�~���u�ε�c�W�h�ܽd�F��ڬF���O���ݬd�ҡC
+285: [] ���ҥε�c�W�h�ܽd�p��O�����A���ź٪k�ߩΨ�|�O�s�~���C�����������ޥβ{��֭�F���F�S���F���������Ыݬd�ҡA���i�u�ΥܨҴ����C
+345: 5 �Ю֮֩w | �֪���M�Mĳ�@�P�A�A�Ѧ��v�̧@�M�w�C | �M�w�̡B�d��B����B����B��󧹾�C | ���ʥ��u�Ыݮ֩w�C
+$ cd C:\Users\J\AppData\Local\Temp\opencode; Select-String -Path .\body_0051.txt -Pattern 'SYN-APP|SYN-SUP|SYN-POL|2026-|2029-|354|445|270|365|89%|54%|73%|360' | ForEach-Object { "$($_.LineNumber): $($_.Line.Substring(0,[Math]::Min(120,$_.Line.Length)))" }
+50: �֩w���� | �ֹ�֩w�̨����B¾�x�B���v�B����B�d��έ��C | SYN-SUP-01�u�����y�{�F�u���v�����ҡC
+61: SYN-SUP-01 | �ܽd�D�ިM�w��������m�C | ���{�B���v�B�u��֩w�̩M�M�w���C
+73: ����P�ɶ� | 2026-05-18�A09:00�V10:15�A�@75�����C
+106: �[�v�I�ƦX�p | 100 | 270 / 500 | 445 / 500 | 365 / 500
+107: ������� | �X | 54% | 89% | 73%
+115: ���B�[�v�I�� | 30��5 + 25��5 + 20��4 + 15��4 + 10��3 = 150+125+80+60+30 = 445�C
+116: ���� | 445��(100��5)��100%=89%�FA=270��500=54%�FC=365��500=73%�C
+133: �����X�զX | SYN-R02�{���u����v�������d�U�m���ҾڡFSYN-R03�Ʊ����²�u�C�̪�7���A/B/C�AB��89%�AA��54%�AC��73%�C | ��u�u���ѡϳ歶���ҥd�����H�t�m�ϱ½Ҫ̵������I�v�C�O�d�\Ū�t��ü{�FACT-02�Y
+140: �椸��X�P�ɼ� | SYN-R02�ˬdG1�VG4�FSYN-R04�ֹ�0050��4�B��5�γ椸1�V4�C�|�椸��90�B90�B120�B60�����F���q�O�J�椸�A���t�[�@���C | �O�d�|�椸���ǡA90+90+120+60=360�оǤ����F�𮧻P��F��
+151: �ܽd�D�ިM�w | SYN-SUP-01����12�ֹ碌����X�ӷ��B�׭q�B�Ю֩M���M���I�C�����v���O��c�]�w�A�S��ñ�W�ΦL���C | �Mĳ�XSYN-APP-053-01�G�X�����Ҥ��u������֭�ܽd��X�]�v�C���O��|�֩w�C�u����v�B����B�Mĳ���M
+164: �d������ | SYN-R01��z�BSYN-R02�v�椸�ֹ�F�ܽd����2026-05-22�C
+175: �d������ | SYN-R01����BSYN-R04�W�߭���F2026-05-22�C
+176: �Ю� | 90+90+120+60=360�оǤ����F�𮧩M��F�t�C�A����оǤ����C
+189: �d������ | SYN-R02�ק�BSYN-R03��Ū�BSYN-R04�ֹ�F2026-05-22�C
+200: �d������ | SYN-R02�ֵ��סBSYN-R04�֭p���F2026-05-22�C
+214: �d������ | SYN-R02��z�ASYN-R03��Ū�ASYN-R04�֪����F2026-05-22�C
+224: �M�w�P�ק� | �u��SYNTHETIC_ROOT�PSYN-POL-RET-01�F�C�J�����F���B���|�B�v���B�֩w��������Fv0.1��v0.2�C
+225: �d������ | SYN-R04��z�BSYN-R01�T�{�d��F2026-05-22�C
+237: ACT-01 | SYN-OUT-01�[G1�VG4�оǡB�@�~�B�P�ǩM��m�C | SYN-R01��z�FR02�ֹ�FR04�Ю֡C | 2026-05-22 | �|�C�����ؼСB���ʤε��q��m�C
+238: ACT-02 | SYN-OUT-02�C�|�椸�ɼƤε��q�w�t�b�椸�C | R01����FR04�W�߭���C | 2026-05-22 | �X�p360�оǤ��C
+239: ACT-03 | SYN-OUT-03�����ѧO��ơA�[�J�����ӷ����δ��ܡC | R02�ק�FR03��Ū�FR04�ˬd�C | 2026-05-22 | ���i�X���d�v�i�ֹ�C
+240: ACT-04 | SYN-OUT-04����A/B���P������øj�ؼСC | R02�ֵ��סFR04��10�D�P���e�C | 2026-05-22 | A/B�U10�D�B1���F���e�u�O�ܽd�C
+241: ACT-05 | SYN-OUT-05����Юv�����ǭ����A�ɬ��ʩM�ɽm�B�J�C | R02�����FR03��Ū�FR04�֪����C | 2026-05-22 | �ǭ������t���סF�����i�ѧO�C
+242: ACT-06 | SYN-OUT-06�ɨӷ�SHA�B�֩w�B�O�s�M�վ\���ޡC | R04��z�FR01�T�{�d��C | 2026-05-22 | ���ާ���F�u���v���B�F���B�����ҡC
+249: SYN-OUT-02 | v0.1��v0.2 | �C�|�椸�ɶ��ε��q�O�_���ƭp�ɡC | 360��������C
+264: �M�w���� | SYN-SUP-01�F��c�D�ި���X�C | �m�W�B¾�ȡB���v�ӷ����v���C
+265: �M�w�ɶ� | 2026-05-18 10:10�V10:15�F�X���C | �u��|ĳ�ή�ñ�ɶ��C
+266: �M�w���e | SYN-APP-053-01�G�����u������֭�ܽd��X�]�v�C | �����Mĳ�B����B�����ҾڻP�֩w���C
+289: �O�s�W�h | SYN-POL-RET-01�F���]�ҵ{������O�s3�~�C | ���o�{��֭�F���B�������v�d�̾ڡC
+290: �ҵ{������ | 2026-06-01�F�X���C | �����֩w�Ҫ��ε��V�����C
+291: ������� | 2026-06-01 + 3�~ = 2029-06-01�C | ���֭�F������ðO�Ю̡֪C
+329: 0050 R01��I11-E02��052 | �|�椸�ЮסBG1�VG4�B90+90+120+60=360�FSHA d0d37c2c...�C | �����󥻥�|ĳ�����ΥD�ޮ֩w�C
+352: �D�ޱ��v�ʥ� | �u��SYN-SUP-01�A�S���������{�α��v���C | HOLD�F���o�令REAL�֩w�C | ���ҡB�������|�B�d���ΦA�f����C
+353: �ɼƤ��@�P | �Ҫ�354�����A�֩w�p�e360�����C | REJECT�F������v�T���C | �t���⦡�B�����B�׭q�P�Ю֡C
+> build · deepseek-v4.1-flash-free
+$ python -X utf8 -c "
+import csv,io
+p=r'E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\SYNTHETIC_REPLACEMENT_REGISTER_R01.csv'
+rows=list(csv.DictReader(io.open(p,encoding='utf-8-sig')))
+want=['合成單元目標','合成單元時數','合成評量數值','合成決議識別碼','合成模擬決定狀態','合成簽核狀態','合成保存期間','合成期限算例','合成加權總分','合成百分比','該準則合成權重','會議日期']
+out=[]
+for r in rows:
+    if r['fact_type'] in want:
+        out.append(' | '.join([r['synthetic_fact_id'],r['fact_type'],r['synthetic_value'][:40],r['document_location'],r['real_replacement_source_required'][:45],r['status']]))
+io.open(r'C:\Users\J\AppData\Local\Temp\opencode\reg_sample.txt','w',encoding='utf-8').write('\n'.join(out))
+print('rows',len(out))
+"
+rows 29
+> build · deepseek-v4.1-flash-free
+→ Read C:/Users/J/AppData/Local/Temp/opencode/reg_sample.txt 
+> build · deepseek-v4.1-flash-free
+→ Read C:/Users/J/AppData/Local/Temp/opencode/src_0049_R01.txt [limit=40]
+→ Read C:/Users/J/AppData/Local/Temp/opencode/src_0033_R03.txt [limit=25]
+> build · deepseek-v4.1-flash-free
+$ python -X utf8 -c "
+import re,glob,os
+p=r'E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_6f575ebb\0051_R01.pdf'
+b=open(p,'rb').read()
+n=len(re.findall(rb'/Type\s*/Page[^s]', b))
+print('PDF pages (approx):', n, 'size', len(b))
+print('PNG count:', len(glob.glob(r'E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_6f575ebb\page-*.png')))
+for f in glob.glob(r'E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_e35a5ead\*.pdf'):
+    print('older render pdf:', f, os.path.getsize(f))
+"
+PDF pages (approx): 14 size 575979
+PNG count: 14
+older render pdf: E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0051_R01\evidence\render_final_e35a5ead\0051_R01.pdf 949780
+> build · deepseek-v4.1-flash-free

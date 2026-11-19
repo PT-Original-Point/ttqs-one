@@ -1,0 +1,223 @@
+{
+  "doc_id": "0141",
+  "requirement_id": "I19-E31",
+  "candidate_docx_sha256": "e2a5a981fd364b87a9bd3e096dbc97abeb6b58ed7fb27891d575f12e1d75bdc2",
+  "text_sha256": "b9d23ec3a917c13a3824a5f06a41f44a7be5f9d848d1f3537d1c8a22933b9416",
+  "verdict": "PASS",
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "severity": "MINOR",
+      "body_locator": "Sidecar SAMPLE_REPLACEMENT_REGISTER_0141_R06.csv (sha256 862df595\u2026): docx_locator cells of the 36 per-row facts, e.g. FACT-SYN-0141-SAT-TREND-R01-2023-001 = \u300cAppendix 3 row 1; section 6 aggregates derive from this row\u300d",
+      "evidence": "The eight non-row facts (FRAME-2023/2024/2025, Q8-VIGNETTE, SOP-PARAMS, SUPPRESSION, ACT-01, ACT-02) were re-pointed to MANUSCRIPT_0141_R06_CANDIDATE.md with Chinese locators (\u300c\u00a7\u9678-\u4e00 \u5404\u671f\u6a23\u672c\u56de\u6536\u8207\u6709\u6548\u6bcd\u6578\u5f59\u7e3d\u8868\u300d, \u300c\u9644\u9304\u4e8c\u300d, \u300c\u00a7\u8086\u300d, \u300c\u00a7\u53c3-\u56db\u300d, \u300c\u00a7\u634c\u300d), which closes R05 minor finding 5 as stated in the R06 targeted-repair receipt. The 36 row-level locators, however, remain in English and still say the section-6 aggregates \u300cderive from this row\u300d \u2014 they derive from all 36 rows plus the invitation counts, not from one row. The DOCX itself uses \u9644\u9304\u4e09 and \u00a7\u9678 throughout, so an auditor matching sidecar locators to the document still meets a second vocabulary.",
+      "required_action": "Re-point the 36 row locators to \u300c\u9644\u9304\u4e09 \u7b2cN\u5217\uff08\u53e6\u898b\u00a7\u9678-\u4e00\u3001\u00a7\u9678-\u4e8c\u5f59\u7e3d\uff09\u300d and record the R06 manuscript SHA-256 in the register header/metadata. Byte-neutral for the DOCX."
+    },
+    {
+      "severity": "MINOR",
+      "body_locator": "\u00a7\u4f0d \u9996\u53e5 \u300c\u672c\u554f\u5377\u5305\u542b 7 \u984c\u6838\u5fc3\u91cf\u5316\u984c\u76ee\uff08\u5747\u63a1 1\u20135 \u5206 Likert \u91cf\u5c3a\uff09\u300d and \u00a7\u53c3-\u4e09 comparability row \u300c\u6838\u5fc3\u91cf\u5316 7 \u984c\uff08Q1\u2013Q7\uff09\u300d \u2014 read against \u00a7\u9678-\u4e00 column header \u300cQ1\u2013Q6 \u516d\u69cb\u9762\u6709\u6548\u586b\u7b54\u6b21\u6578\u300d and its \u8aaa\u660e \u300c\u6bcf\u5e74 Q1\u2013Q6 \u516d\u984c \u00d7 12 \u4efd = 72 \u6b21\u2026Q7 \u6574\u9ad4\u6eff\u610f\u5ea6\u70ba\u7368\u7acb\u984c\u2026\u4e0d\u5217\u5165\u672c\u6b04\u300d",
+      "evidence": "R05 minor finding 2 (72 vs 7\u00d712=84 misreading) is functionally resolved: the column is now explicitly Q1\u2013Q6 and the note states the Q7 exclusion. The word \u300c\u6838\u5fc3\u300d nonetheless still denotes seven items in two other places while the results column now implicitly reserves \u300c\u6838\u5fc3\u300d for six, so the same term carries two scopes in one document; the prose \u8aaa\u660e removes any arithmetic ambiguity.",
+      "required_action": "Cosmetic only: change \u00a7\u4f0d to \u300c7 \u984c\u91cf\u5316\u984c\u76ee\uff086 \u69cb\u9762\u984c Q1\u2013Q6 \uff0b 1 \u7368\u7acb\u6574\u9ad4\u984c Q7\uff09\u300d and align the comparability table wording. No numeric change."
+    },
+    {
+      "severity": "MINOR",
+      "body_locator": "\u00a7\u634c \u65b9\u6848\u4e00 \u300cQ5 \u6709\u6548\u5747\u503c\u61c9\u9054\u5230 3.8000 \u5206\u4ee5\u4e0a\uff1b\u6b64\u70ba\u672c\u65b9\u6848\u552f\u4e00\u53ef\u91cf\u6e2c\u4e4b\u6210\u529f\u9580\u6abb\u300d and \u65b9\u6848\u4e8c \u300cQ2 \u6709\u6548\u5747\u503c\u61c9\u9054\u5230 3.7000 \u5206\u4ee5\u4e0a\uff0c\u4e14 Top-2 \u4f54\u6bd4\u61c9\u7a81\u7834 75%\uff08\u5206\u6bcd\u70ba Q2 \u81ea\u8eab\u6709\u6548\u56de\u7b54\u6578\uff09\u300d",
+      "evidence": "Recomputed from the 36 CSV rows: terminal SAMPLE Q5 2025 = 4.2500, so the Q5 floor of 3.8000 is already exceeded at the demonstration end-point; Q2 2025 item-level Top-2 = 9/12 = 75.00%, exactly the stated 75% bar, so \u300c\u7a81\u7834 75%\u300d means strictly more than the last demonstrated value while the document publishes item-level Top-2 for Q7 only (\u00a7\u9678-\u4e09) and never states the Q2 baseline. The thresholds are therefore measurable against \u9644\u9304\u56db's item-level formula, but they are absolute floors not derived from a disclosed baseline, and an evaluator cannot see from the document what improvement the 75%/3.8000 combination would represent.",
+      "required_action": "Publish the Q2 (and Q5) item-level Top-2 baselines in \u00a7\u9678 or in the proposal, or restate the criteria as baseline + explicit point/percentage-point delta, and label them SAMPLE parameters. No change to existing published aggregates."
+    },
+    {
+      "severity": "MINOR",
+      "body_locator": "\u00a7\u634c \u65b9\u6848\u4e00 \u300c\u2026\u539f\u64ec\u9644\u52a0\u4e4b\u300c\u7121\u884c\u653f\u806f\u7e6b\u5ef6\u8aa4\u4e4b\u8ca0\u9762\u62b1\u6028\u300d\u689d\u4ef6\u5c6c UNKNOWN\u2011sourced\uff1a\u672c SAMPLE \u6a23\u672c\u6c92\u6709\u771f\u5be6\u62b1\u6028\u7d00\u9304\u6216 Q8 \u8b49\u64da\u2026\u300d",
+      "evidence": "R05 minor finding 3 is resolved in substance: the qualitative condition is now excluded from the success threshold and explicitly marked UNKNOWN-sourced with a requirement that an authorised role define source, owner, counting window and escalation rule before use. The token is written with U+2011 (non-breaking hyphen) per R06_LAYOUT_PATCH_RECEIPT to stop Word splitting it across pages 11/12, so a plain ASCII search for \u300cUNKNOWN-sourced\u300d in this candidate will not find it; the visual receipt's \u300cpagination_token_fix PASS\u300d is receipt metadata, not something I inspected.",
+      "required_action": "Optional: also state the same UNKNOWN provenance once in plain ASCII form (e.g. in \u00a7\u67d2-\u4e8c limitations or \u00a7\u7396 gate table) so the live condition remains machine-locatable. Cosmetic/searchability only."
+    }
+  ],
+  "checks": [
+    {
+      "id": "C01_identity_triangulation",
+      "result": "PASS",
+      "locator": "\u5831\u544a\u57fa\u672c\u8cc7\u8a0a\u8207\u72c0\u614b\u6a19\u8a3b \u8868\uff1b\u00a7\u8cb3-\u4e00\uff1b\u00a7\u7396 \u898f\u52471",
+      "evidence": "doc_id 0141, requirement I19-E31 and 157 index 155 appear as three separate identifiers; \u5370\u5237\u7248\u6838\u9078\u5e8f\u865f is declared \u300cUNKNOWN\uff08\u73fe\u6709\u6a94\u6848\u8cc7\u6599\u5eab\u5c1a\u672a\u8b49\u660e\u2026\uff09\u300d rather than guessed; gate rule 1 makes conflation of these IDs a reject condition. Matches the crosswalk row and Blueprint B."
+    },
+    {
+      "id": "C02_official_4pt_label_reading",
+      "result": "PASS",
+      "locator": "\u5831\u544a\u57fa\u672c\u8cc7\u8a0a \u8868\u300c\u5b98\u65b9\u7b2c 9 \u9801 4 \u5206\u6a19\u8a3b\u300d\uff1b\u00a7\u8cb3-\u4e00 \u300c\u8a55\u5206\u7d1a\u8ddd\u975e\u6b0a\u91cd\u6216\u5f97\u5206\u300d",
+      "evidence": "Text states the 4\u5206 sits in the 1\u20135 \u8a08\u5206\u7d1a\u8ddd on the page-9 extract with no weight column and expressly refuses to convert it into a weight, an association self-score or an evaluator-granted score (Official score = NOT_ASSIGNED). This matches OFFICIAL_SOURCE_PAGE9_EXCERPT.txt, whose tier list carries no weight column."
+    },
+    {
+      "id": "C03_genre_and_title_blind_identification",
+      "result": "PASS",
+      "locator": "Whole document; \u00a7\u58f9 / \u00a7\u53c3 / \u00a7\u9678 / \u00a7\u67d2 / \u00a7\u634c",
+      "evidence": "Title-blind, the body reads as a three-period customer-satisfaction survey-and-analysis report with comparability protocol, instrument, statistics, chart, limitations and a proposal loop. It is not a scoring sheet, blank questionnaire, information-system usage report, licensing/employment report or revenue report."
+    },
+    {
+      "id": "C04_blueprint_D_coverage",
+      "result": "PASS",
+      "locator": "\u58f9 (D1/D2), \u53c3 (D3), \u8086 (D4), \u4f0d (D5), \u9678 (D6), \u67d2 (D7), \u634c (D8/D9), \u62fe\u58f9 \u9644\u9304\u4e00\u2013\u4e94 (D10)",
+      "evidence": "Cover/status with SAMPLE/SYNTHETIC and REAL UNKNOWN/HOLD; executive figures with denominators and weakest dimension; audience/cohort/frame/denominator and four comparability conditions; dispatch, two-reminder cap, day-5 close, dedup, invalidity, no-imputation, per-item n and the 5/6 individual-index rule; full 1\u20135 anchors plus N/A and 8 items with metadata fields; counts, six-item means with n=12, separate Q7 mean and Top-2, multi-period table and same-axis line chart; three delta comparisons with weakest item and limits; two retrospective proposals with IDs, role, check window, success measure, HOLD/REVISE and NOT_ADOPTED/NOT_EXECUTED status; CONTINUE/CHANGE/HOLD table; blank printable form, filled example, 36 rows, dictionary/formulas, register template and revision record."
+    },
+    {
+      "id": "C05_frozen_wording_and_normalization_note",
+      "result": "PASS",
+      "locator": "\u00a7\u4f0d-\u4e8c \u984c\u9805\u8868; \u9644\u9304\u4e00 \u984c\u9805\u8868; \u9644\u9304\u4e8c \u8868\u4e0b\u8a3b; \u9644\u9304\u56db \u984c\u9805\u6a19\u7c64\u5c0d\u7167\u8868 \u53ca\u5176\u5f8c\u8aaa\u660e",
+      "evidence": "R05 minor finding 1 is resolved: \u9644\u9304\u4e8c now carries \u300cQ1\u2013Q7 \u984c\u76ee\u6587\u5b57\u9010\u5b57\u53d6\u81ea\u51cd\u7d50\u7248\u984c\u9805\u6a94 QUESTIONNAIRE_ITEMS_0141_R01.csv\u3002\u8a72 CSV \u4ee5\u6b63\u898f\u5316\u5f8c\u4e4b\u984c\u76ee\u5b57\u4e32\u5132\u5b58\uff0c\u672a\u542b\u4e2d\u6587\u5217\u8209\u9813\u865f\u8207\u53e5\u672b\u6a19\u9ede\uff1b\u5217\u5370\u7528\u6b63\u5f0f\u984c\u9805\u6587\u5b57\u898b\u7b2c\u4f0d\u7ae0\u8207\u9644\u9304\u4e00\u300d and \u9644\u9304\u56db repeats the same sentence, so the two renderings no longer compete for authority. The appendix cells are byte-identical to the CSV (e.g. Q2 \u300c\u8ab2\u7a0b\u5167\u5bb9\u80fd\u5c0d\u61c9\u6211\u9810\u8a08\u904b\u7528\u7684\u5de5\u4f5c\u5fd7\u5de5\u6216\u5b78\u7fd2\u60c5\u5883\u300d, Q3 \u300c\u8b1b\u5e2b\u7684\u8aaa\u660e\u793a\u7bc4\u8207\u56de\u61c9\u6709\u52a9\u65bc\u6211\u7406\u89e3\u8ab2\u7a0b\u300d); \u00a7\u4f0d/\u9644\u9304\u4e00 carry the printable punctuated form."
+    },
+    {
+      "id": "C06_scale_NA_and_missing_data_rules",
+      "result": "PASS",
+      "locator": "\u00a7\u4f0d-\u4e00 \u91cf\u5c3a\u6a19\u6e96\u5b9a\u7fa9\uff1b\u00a7\u8086-\u4e8c-3\uff1b\u00a7\u7396 \u898f\u52475",
+      "evidence": "1\u20135 anchors are defined with wording, N/A is excluded from that item's denominator, blanks are never imputed or scored zero, an item-specific valid n is required, and a personal six-item composite requires at least 5 of 6 valid answers while single-item answers stay usable. Gate rule 5 makes zeroing/imputation a data-pollution reject."
+    },
+    {
+      "id": "C07_denominators_and_return_rate",
+      "result": "PASS",
+      "locator": "\u00a7\u53c3-\u4e8c \u300c\u6709\u6548\u56de\u6536\u7387 = \u6709\u6548\u56de\u8986\u4efd\u6578 \u00f7 \u5be6\u969b\u767c\u51fa\u4e4b\u6709\u6548\u9080\u8acb\u4efd\u6578 \u00d7 100%\u300d; \u00a7\u9678-\u4e00 \u8868; \u9644\u9304\u56db \u516c\u5f0f\u5340",
+      "evidence": "Per-year 15 invited / 12 valid = 80.00%, three-year 45 / 36 / 80.00%. Denominators are the issued invitations, with an express prohibition on using all members or cumulative trainees as a denominator; gate rules 4 and 7 make missing denominators and disappearance of nonrespondents reject conditions."
+    },
+    {
+      "id": "C08_q1_q6_index_separate_from_q7",
+      "result": "PASS",
+      "locator": "\u00a7\u9678-\u4e00 \u6b04\u540d\u300cQ1\u2013Q6 \u516d\u69cb\u9762\u6709\u6548\u586b\u7b54\u6b21\u6578\u300d\u8207\u5176\u8aaa\u660e; \u00a7\u9678-\u4e8c \u516d\u69cb\u9762\u7d9c\u5408\u5747\u503c\u5217\u8207 Q7 \u5217; \u9644\u9304\u56db \u516d\u69cb\u9762\u7d9c\u5408\u6307\u6578\u516c\u5f0f",
+      "evidence": "R05 minor finding 2 is resolved at the point of risk: the column is renamed Q1\u2013Q6 and the note states \u300cQ7 \u6574\u9ad4\u6eff\u610f\u5ea6\u70ba\u7368\u7acb\u984c\uff0c\u53e6\u6309\u6bcf\u5e74 12 \u4efd\u8a08\u7b97\uff0c\u4e0d\u5217\u5165\u672c\u6b04\u300d. \u9644\u9304\u56db defines pooled index as Q1\u2013Q6 only, excludes Q7, and requires the pooled ratio (not the mean of six means) once item n differ. Residual terminology is the separate minor finding 2."
+    },
+    {
+      "id": "C09_aggregate_math_recomputed",
+      "result": "PASS",
+      "locator": "\u00a7\u9678-\u4e8c \u9010\u984c\u8868; \u00a7\u58f9-\u4e00-2/3; \u00a7\u67d2-\u4e00-1/2/3/4/5",
+      "evidence": "Recomputed from the 36 CSV rows without using the R01 period summary: 2023 Q1 42/12=3.5000, Q2 41/12=3.4167, Q3 3.5000, Q4 3.5833, Q5 42/12=3.5000, Q6 41/12=3.4167, Q7 43/12=3.5833; 2024 Q5 48/12=4.0000, Q7 47/12=3.9167; 2025 Q2 47/12=3.9167, Q5 51/12=4.2500, Q7 51/12=4.2500; pooled 251/72=3.4861, 257/72=3.5694, 266/72=3.6944. Deltas +0.0833/+0.1250/+0.2083 (index), Q5 +0.5000/+0.2500/+0.7500, Q2 0/+0.5000/+0.5000, Q7 +0.3333/+0.3333/+0.6667 all match the tables. Sensitivity 2/12=0.1667 points (\u00a7\u67d2-\u4e8c-1) is correct."
+    },
+    {
+      "id": "C10_q7_top2_table_internal_consistency",
+      "result": "PASS",
+      "locator": "\u00a7\u9678-\u4e09 \u8868\u8207 \u8a08\u7b97\u8a3b; \u9644\u9304\u56db Top-2 \u516c\u5f0f",
+      "evidence": "Recomputed counts: 2023 5 of 1\u20133 / 7 of 4 / 0 of 5 \u2192 7 (58.33%); 2024 2/9/1 \u2192 10 (83.33%); 2025 1/7/4 \u2192 11 (91.67%); \u5168\u671f\u8b8a\u5316 \u22124 / 0 / +4 / +4 and +25.00 pp, +8.33 pp, +33.33 pp all correct. The \u8a08\u7b97\u8a3b correctly warns that subtracting the rounded 91.67%\u221283.33% would give 8.34 rather than the unrounded 8.33 pp."
+    },
+    {
+      "id": "C11_chart_scope_and_axis_disclosure",
+      "result": "PASS",
+      "locator": "\u00a7\u9678-\u56db \u8aaa\u660e\u8207 \u5716\u8aaa\u8a3b\u8a18",
+      "evidence": "The caption states the chart plots the pooled Q1\u2013Q6 index, Q7 and the Q2/Q5/Q6 series on one shared 1\u20135 axis, discloses that Q1/Q3/Q4 appear only in the item table, and expressly forbids reading the pooled line as any single item or as Q7. Single embedded image with a build-receipt/technical-receipt SHA (83353077\u2026) \u2014 receipt metadata, not pixels I saw."
+    },
+    {
+      "id": "C12_retrospective_proposal_framing",
+      "result": "PASS",
+      "locator": "\u00a7\u634c preamble\uff1b\u65b9\u6848\u4e00/\u65b9\u6848\u4e8c \u300c\u65b9\u6848\u6027\u8cea\u300d\u300c\u5c0d\u61c9\u671f\u5225\u8f49\u6298\uff08\u56de\u6eaf\u5c0d\u7167\uff09\u300d\u300c\u56de\u67e5\u6aa2\u9a57\u671f\u7a0b\u300d",
+      "evidence": "R05 minor finding 3's timing half remains resolved: both items are declared retrospective demonstrations and the text says \u300c\u4e0d\u5b58\u5728\u300e\u5148\u63d0\u6848\u3001\u5f8c\u6539\u5584\u3001\u518d\u770b\u5230\u5206\u6578\u4e0a\u5347\u300f\u7684\u6642\u5e8f\u300d; check windows are \u300c\u5c1a\u672a\u767c\u751f\uff1b\u4e0b\u4e00\u500b\u53ef\u6bd4\u8f03\u9031\u671f\u5c6c\u672a\u4f86\u5de5\u4f5c\u300d with the 10-working-day figure labelled a SAMPLE parameter; status is SAMPLE_HYPOTHETICAL_NOT_ADOPTED."
+    },
+    {
+      "id": "C13_q5_unsupported_qualitative_condition",
+      "result": "PASS",
+      "locator": "\u00a7\u634c \u65b9\u6848\u4e00 \u300c\u5177\u9ad4\u6210\u6548\u6aa2\u9a57\u6307\u6a19\u300d\uff1b\u300c\u63d0\u6848\u6578\u64da\u4f9d\u64da\u300d",
+      "evidence": "R05 minor finding 3 is resolved: the complaint clause is removed from the measurable threshold, Q5 mean \u22653.8000 is declared the sole measurable success threshold, and the discarded qualitative condition is marked UNKNOWN\u2011sourced with an explicit bar on inferring absence of complaints from empty SAMPLE Q8 cells. \u63d0\u6848\u6578\u64da\u4f9d\u64da likewise states Q8 has no text and that \u300c\u4fe1\u4ef6\u6df7\u4e82\u300d/\u300c\u56de\u4fe1\u7a97\u53e3\u4e0d\u4e00\u300d are not supported. Searchability caveat is minor finding 4."
+    },
+    {
+      "id": "C14_item_level_top2_denominator_defined",
+      "result": "PASS",
+      "locator": "\u9644\u9304\u56db-2 \u300c\u55ae\u984c Top-2 \u6b63\u9762\u6eff\u610f\u7387\uff08Item-level Top-2 Proportion\uff09\u300d\uff1b\u00a7\u634c \u65b9\u6848\u4e8c \u6307\u6a19",
+      "evidence": "R05 minor finding 4 remains resolved: the general Qk formula restricts numerator and denominator to that item's valid answers, excludes invitation counts, total responses and other items, states \u65b9\u6848\u4e8c uses the Q2-specific denominator, and states Q7 keeps its own formula. Baseline transparency is the separate minor finding 3."
+    },
+    {
+      "id": "C15_label_consistency",
+      "result": "PASS",
+      "locator": "\u00a7\u67d2-\u4e00 \u9996\u53e5\uff1b\u00a7\u9678-\u4e8c \u5217\u6a19\u7c64\uff1b\u00a7\u58f9-\u4e00-4\uff1b\u9644\u9304\u56db \u984c\u9805\u6a19\u7c64\u5c0d\u7167\u8868",
+      "evidence": "R05 minor finding 4 is resolved: \u00a7\u58f9 now reads \u300cQ5 \u884c\u653f\u6e9d\u901a\u300d\u300cQ2 \u60c5\u5883\u5c0d\u61c9\u300d\u300cQ6 \u74b0\u5883\u8a2d\u5099\u300d, matching \u00a7\u67d2-\u4e00's declared single label set (\u9700\u6c42\u5951\u5408\u3001\u60c5\u5883\u5c0d\u61c9\u3001\u5e2b\u8cc7\u652f\u63f4\u3001\u6559\u6750\u8cc7\u6e90\u3001\u884c\u653f\u6e9d\u901a\u3001\u74b0\u5883\u8a2d\u5099\u3001\u6574\u9ad4\u6eff\u610f) and \u9644\u9304\u56db's frozen mapping (Q4\uff1d\u6559\u6750\u8cc7\u6e90, Q6\uff1d\u74b0\u5883\u8a2d\u5099). No residual alias strings for Q2/Q5/Q6 were found in the reviewed text."
+    },
+    {
+      "id": "C16_sample_real_boundary",
+      "result": "PASS",
+      "locator": "\u5831\u544a\u57fa\u672c\u8cc7\u8a0a \u8868\uff1b\u00a7\u58f9-\u4e8c\uff1b\u00a7\u9678-\u4e00 \u8cc7\u6599\u5c6c\u6027\u6b04\uff1b\u9644\u9304\u4e8c\uff1b\u9644\u9304\u4e09 \u72c0\u614b\u6b04\uff1b\u9644\u9304\u4e94\uff1b\u7d50\u5c3e\u53e5",
+      "evidence": "SAMPLE/SYNTHETIC is declared at document level and per table row; all 36 rows carry record_state=SAMPLE_SYNTHETIC with Q8 marker text; \u9644\u9304\u4e8c is declared outside the 36 rows and outside computation; REAL = UNKNOWN/HOLD; no invented approval, signature, certificate, complaint log, meeting decision or performance result appears anywhere in the text."
+    },
+    {
+      "id": "C17_current_vs_real_vs_formal_acceptance",
+      "result": "PASS",
+      "locator": "\u00a7\u62fe-\u4e00 \u6d41\u7a0b\u5716 \u6b65\u9a5f4\u20135 \u8207\u7d42\u7aef\u6846\uff1b\u00a7\u62fe-\u4e00-4\uff1b\u00a7\u62fe-\u4e8c-4\uff1b\u7d50\u5c3e\u53e5",
+      "evidence": "R05 minor finding 6 remains resolved and the \u300c\u4e0d\u53ef\u9006\u5c0d\u7167\u8868\u300d residual gap is closed: step 3 now requires a \u6a94\u6848\u7248\u672c\uff0fSHA-256\uff0f\u7b46\u6578\u6e05\u518a(manifest); step 4 states computation does not auto-promote or change data nature; step 5 is an authorised-role CURRENT gate; terminal box reads \u300cCURRENT \u2260 REAL\uff0c\u4e5f\u4e0d\u7b49\u65bc\u6b63\u5f0f\u63a5\u53d7\uff08formal acceptance\uff09\u300d and the closing line states REAL=UNKNOWN/HOLD, Human formal acceptance=NOT_GRANTED, Official score=NOT_ASSIGNED."
+    },
+    {
+      "id": "C18_neighbor_requirement_rejection",
+      "result": "PASS",
+      "locator": "\u00a7\u8cb3-\u4e8c \u6392\u9664\u8868; \u00a7\u7396 \u898f\u524710; \u9644\u9304\u4e94 \u6587\u4ef6\uff0f\u8981\u6c42 \u5c0d\u7167\u8868",
+      "evidence": "0139/I19-E29 (index 153, licensing/employment), 0140/I19-E30 (154, system uptake) and 0142/I19-E32 (156, revenue) are excluded by construct and substitution is made a reject condition, so a licensing/employment rate, LMS login rate or revenue figure cannot satisfy \u300c\u9867\u5ba2\u6eff\u610f\u5ea6\u63d0\u5347\u300d and this document cannot be substituted for them."
+    },
+    {
+      "id": "C19_gate_and_hold_rules_complete",
+      "result": "PASS",
+      "locator": "\u00a7\u7396 13 \u689d\uff1b\u00a7\u53c3-\u4e09 \u53ef\u6bd4\u6027\u8868; \u6b21\u671f\u8cc7\u6599\u5224\u8b80\u8207\u8655\u7f6e\u8868",
+      "evidence": "All 13 Blueprint-I conditions are represented (ID conflation, blank template, scale/wording change with TREND_NOT_COMPARABLE_HOLD, missing denominator, N/A-as-zero or imputation, Likert delta mislabelled as percent growth, unexplained nonresponse, unstratified segment blending, synthetic-as-real, construct substitution, uncited causality, missing owner/checkpoint/HOLD, missing SHA/source trace), and the CONTINUE/CHANGE/HOLD table attaches required evidence to each branch."
+    },
+    {
+      "id": "C20_dataset_and_register_alignment",
+      "result": "PASS",
+      "locator": "\u9644\u9304\u4e8c \u8868; \u9644\u9304\u4e09 36 \u5217; \u5831\u544a\u57fa\u672c\u8cc7\u8a0a \u300c\u5831\u544a\u7248\u672c\u8207\u5408\u6210\u4e8b\u5be6\u8b58\u5225\u78bc\u300d; \u9644\u9304\u56db sample_case_id \u5b9a\u7fa9",
+      "evidence": "\u9644\u9304\u4e09 reproduces all 36 CSV rows (status, year, cohort, case ID SYN-0141-YYYY-NNN, date, segment, Q1\u2192Q7 string, Q8 marker) with no divergence from SAMPLE_SURVEY_RESPONSES_0141_R01.csv found on inspection; the dataset-level ID FACT-SYN-0141-SAT-TREND-R01 is expressly not to be used as a row ID, and row fact IDs equal base + -YYYY-NNN, matching the R06 register's 36 row facts. \u9644\u9304\u4e8c's answers 4,5,3,4,5,3,4 match FACT-SYN-0141-Q8-VIGNETTE. Sidecar locator language is the separate minor finding 1."
+    },
+    {
+      "id": "C21_R05_finding_1_punctuation",
+      "result": "RESOLVED",
+      "locator": "\u9644\u9304\u4e8c \u8868\u4e0b\u8a3b; \u9644\u9304\u56db \u6a19\u7c64\u8868\u5f8c\u8aaa\u660e",
+      "evidence": "Normalization note added in both places, naming the CSV as the normalized source and \u00a7\u4f0d/\u9644\u9304\u4e00 as the printable canonical wording; semantics unchanged."
+    },
+    {
+      "id": "C22_R05_finding_2_column_name",
+      "result": "RESOLVED",
+      "locator": "\u00a7\u9678-\u4e00 \u6b04\u540d\u8207\u8aaa\u660e",
+      "evidence": "Column renamed \u300cQ1\u2013Q6 \u516d\u69cb\u9762\u6709\u6548\u586b\u7b54\u6b21\u6578\u300d (72/72/72/216) with the Q7 exclusion stated immediately beneath; arithmetic no longer invites a 7\u00d712=84 misreading."
+    },
+    {
+      "id": "C23_R05_finding_3_q5_criterion",
+      "result": "RESOLVED",
+      "locator": "\u00a7\u634c \u65b9\u6848\u4e00 \u5177\u9ad4\u6210\u6548\u6aa2\u9a57\u6307\u6a19",
+      "evidence": "Qualitative complaint condition removed from the measurable threshold and labelled UNKNOWN\u2011sourced with an explicit evidence requirement before future use; see C13."
+    },
+    {
+      "id": "C24_R05_finding_4_labels",
+      "result": "RESOLVED",
+      "locator": "\u00a7\u58f9-\u4e00-4",
+      "evidence": "Executive bullets now use the frozen short labels with item IDs (Q5 \u884c\u653f\u6e9d\u901a, Q2 \u60c5\u5883\u5c0d\u61c9, Q6 \u74b0\u5883\u8a2d\u5099); see C15."
+    },
+    {
+      "id": "C25_R05_finding_5_register_locators",
+      "result": "PARTIAL",
+      "locator": "SAMPLE_REPLACEMENT_REGISTER_0141_R06.csv",
+      "evidence": "The eight non-row facts were re-pointed to MANUSCRIPT_0141_R06_CANDIDATE.md with Chinese locators; the 36 row-level locators remain English and retain the imprecise \u300csection 6 aggregates derive from this row\u300d. Sidecar-only and byte-neutral for the DOCX \u2014 recorded as minor finding 1, not a document defect."
+    },
+    {
+      "id": "C26_no_causality_no_percent_growth",
+      "result": "PASS",
+      "locator": "\u00a7\u58f9-\u4e00 \u5404\u8da8\u52e2\u53e5; \u00a7\u8cb3-\u4e8c; \u00a7\u9678-\u4e8c \u91cd\u8981\u8aaa\u660e; \u00a7\u67d2-\u4e00 \u5168\u90e8; \u00a7\u67d2-\u4e8c-2/3; \u00a7\u7396 \u898f\u52476/11",
+      "evidence": "Every Likert change is reported in scale points, with explicit \u300c\u7d55\u4e0d\u53ef\u5ba3\u7a31\u70ba\u767e\u5206\u6bd4\u6210\u9577\u7387\u300d and \u300c\u56b4\u7981\u8a08\u7b97\u767e\u5206\u6bd4\u8b8a\u66f4\u300d; no passage claims the two proposals caused the Q5/Q2/Q7 movement; Hawthorne/self-selection/external-shift confounds are named and causality is blocked in \u00a7\u67d2-\u4e8c-3 and gate rule 11."
+    },
+    {
+      "id": "C27_privacy_and_small_cell_scoping",
+      "result": "PASS",
+      "locator": "\u00a7\u53c3-\u56db; \u00a7\u62fe-\u4e00-2; \u00a7\u62fe-\u4e8c-1",
+      "evidence": "Anonymisation, the n<5 suppression figure, retention period and access roles are all presented as SAMPLE proposals explicitly not law, not association policy and not completed privacy work; \u4fdd\u5b58\u671f\u9650 is `UNKNOWN / REFER_TO_APPROVED_POLICY`; no real personal data or re-identification key handling is asserted as existing."
+    },
+    {
+      "id": "C28_receipt_sha_binding_metadata",
+      "result": "PASS",
+      "locator": "Packet receipts (read as metadata only)",
+      "evidence": "Text SHA b9d23ec3\u2026 is declared bound to DOCX e2a5a981\u2026 by the technical QA receipt; the Word render receipt records identical docx SHA before/after with 25 pages and read_only=true; the visual receipt (6a94d19e\u2026) is bound to the same DOCX and PDF c3a52474\u2026; the math receipt binds manuscript 2c374341\u2026, register 862df595\u2026 and questionnaire/responses 72325919\u2026/310745e5\u2026; build and repair receipts bind the same DOCX and layout patch. These are supplied receipt claims, not my own native verification, and none of them grants acceptance."
+    }
+  ],
+  "review_scope": {
+    "mode": "SEMANTIC_TEXT_ONLY",
+    "target": "doc_id 0141 / requirement I19-E31 / 157 index 155 / candidate R06 (CANDIDATE only \u2014 not CURRENT, not REAL, not formally accepted)",
+    "inspected": "Only the text asserted to belong to DOCX SHA-256 e2a5a981fd364b87a9bd3e096dbc97abeb6b58ed7fb27891d575f12e1d75bdc2 (text SHA-256 b9d23ec3a917c13a3824a5f06a41f44a7be5f9d848d1f3537d1c8a22933b9416), plus the supplied official/source/blueprint/crosswalk artefacts and sidecar CSVs. No DOCX binary, Word COM render, page image, PDF text layer or chart pixel was inspected by this review.",
+    "independent_work": "Every published aggregate was recomputed directly from the 36 data rows of SAMPLE_SURVEY_RESPONSES_0141_R01.csv (sha256 723259199\u2026): per-item sums and means, the three pooled Q1\u2013Q6 ratios, Q7 means, Q7 Top-2 counts/rates and the 1\u20133/4/5 rows, all point deltas, the percentage-point deltas, return rates and the 15/12, 45/36, 72/216 and 2/12 sensitivity figures; additionally the item-level Q2 Top-2 series (2023 5/12=41.67%, 2024 5/12=41.67%, 2025 9/12=75.00%) was computed to test the \u65b9\u6848\u4e8c threshold and is not published in the document.",
+    "receipt_use": "The R06 build, math-QA, technical-QA, Word-render, visual and repair/layout receipts and the R05 review plus its receipt were read only as surrounding evidence with their stated SHAs; none of their PASS verdicts is inherited, and the visual receipt's page coverage is reported as its own claim rather than as my observation.",
+    "not_inherited": "R05 exact-SHA PASS (docx 3e9e6eef\u2026, reviewer response 39a50ae2\u2026) and its five minor findings were re-verified against the R06 text and sidecars, not carried forward as a verdict for this SHA.",
+    "status_boundaries": "REAL evidence = UNKNOWN/HOLD; Official score = NOT_ASSIGNED; Human formal acceptance = NOT_GRANTED; association acceptance not granted. This PASS is semantic-only for the exact SHA above and promotes nothing."
+  },
+  "not_reviewed": [
+    "DOCX binary, OOXML validity, native table geometry, section/orientation handling and embedded image bytes \u2014 covered by the technical QA receipt, not re-adjudicated here.",
+    "Word rendering, pagination, font floors, chart legibility and clipping \u2014 covered by the Word render and visual receipts (PASS claims, 25 pages, 8 full-resolution pages), not verified by me.",
+    "Whether the U+2011 token actually stays on one page in Word \u2014 the layout patch and visual receipts assert this; my review only notes the resulting searchability side-effect.",
+    "Truthfulness of the official page-9 label beyond the supplied excerpt (no weight column visible); the printed checkbox serial remains UNKNOWN and is only an authoritative printed source question.",
+    "Any content of adjacent deliverables 0139/0140/0142 beyond the crosswalk neighbour rows used for construct-distinction checking.",
+    "Whether the n<5 small-cell figure, retention period, or any SOP parameter is acceptable association policy \u2014 all are declared SAMPLE proposals with real status UNKNOWN."
+  ],
+  "real_data_status": "UNKNOWN/HOLD \u2014 every year, invitation count, response, score, date, cohort, comment and proposal in this candidate is SAMPLE/SYNTHETIC; Q8 is empty across all 36 rows; authorised roles, retention period, access control and privacy thresholds are deferred to approved policy; SAMPLE cannot become REAL by computation, formatting or this review.",
+  "formal_acceptance_status": "NOT_GRANTED \u2014 CANDIDATE only. Official score NOT_ASSIGNED; Human formal acceptance and association acceptance not granted; this semantic PASS neither promotes the document to CURRENT nor converts any synthetic figure into real evidence."
+}

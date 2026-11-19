@@ -1,0 +1,29 @@
+{
+  "schema": "TTQS_ONE_0081_BODY_REFLOW_R01.v1",
+  "doc_id": "0081",
+  "source_writer_body_sha256": "0f6e3bd83d00d6ba759a23c2b80b43d2d5c6c186e339cfb091b8b41b2feeceef",
+  "repair_response_sha256": "d2ecf34507a73c1e6f785bb073e57d15af11c586212dc48ab34198a05db39343",
+  "final_body_sha256": "653bc92095889fa0b3c39a3d126bce86245aa902f8649da054119a47ddb71640",
+  "changes": [
+    "3.1:6->4 columns",
+    "5.1:8->5 columns",
+    "5.2:transpose 9->3 columns",
+    "9:7->5 columns",
+    "12.1:6->3 columns"
+  ],
+  "synthetic_column_totals": [
+    20,
+    15,
+    18,
+    16,
+    16
+  ],
+  "grand_total": 85,
+  "pass": 6,
+  "hold": 6,
+  "critical_error_codes": [
+    "B01-P05",
+    "B01-P11"
+  ],
+  "authoring_note": "OpenCode authored body and corrected subsection; deterministic table reflow and arithmetic validation only."
+}

@@ -1,0 +1,24 @@
+One final bounded Blueprint repair. Return a complete version-consistent `0062_UNIQUE_BLUEPRINT_R04.md`, preserving the correct source IDs and math from R03. Do not create a DOCX. Use no tools/filesystem writes.
+
+Remaining acceptance blockers:
+1) `T-0062-02` still has no displayed sample filename or file format, so it is not an operational file inventory. Add explicit columns for a fictitious sample filename, extension/format, source locator reference, and sample storage path. Each name and path must be clearly SAMPLE/SYNTHETIC, must not claim an actual file exists, and must never have a fake file hash. Keep separate real existence/locator/policy as UNKNOWN and real status HOLD.
+2) Register each synthetic filename and extension one fact per row in `T-0062-09`. Use exactly these unique display names, all fictitious labels, and link each to its artifact/category:
+- A-0062-01 NEE: `SAMPLE__0062_NEE_需求來源樣張.docx`
+- A-0062-02 NAN: `SAMPLE__0062_NAN_需求分析樣張.docx`
+- A-0062-03 PLN: `SAMPLE__0062_PLN_訓練計畫樣張.docx`
+- A-0062-04 LSN: `SAMPLE__0062_LSN_教案大綱樣張.docx`
+- A-0062-05 RSC: `SAMPLE__0062_RSC_資源確認樣張.docx`
+- A-0062-06 ATT: `SAMPLE__0062_ATT_簽到出席樣張.xlsx`
+- A-0062-07 DLG: `SAMPLE__0062_DLG_教學流程樣張.docx`
+- A-0062-08 ASM: `SAMPLE__0062_ASM_評量彙整樣張.xlsx`
+- A-0062-09 FDB: `SAMPLE__0062_FDB_學員回饋樣張.xlsx`
+- A-0062-10 FUP: `SAMPLE__0062_FUP_課後追蹤樣張.docx`
+- A-0062-11 EXC: `SAMPLE__0062_EXC_分類異常樣張.docx`
+- A-0062-12 IMP: `SAMPLE__0062_IMP_改善追蹤樣張.docx`
+Use corresponding fictitious paths under `SAMPLE_ROOT/0062/SYN-0060-2026-A01/<category>/`; every path must end in the exact filename above. State `SAMPLE_ROOT` does not exist. For A-0062-08, whose source date is absent, use a neutral non-date locator/path and keep sample status HOLD; do not invent a course date or imply the locator is a REAL source.
+3) In `T-0062-08`, separate `local_event_id`, `source_scenario_id`, and `branch_code`. `HLD-2026-001`, `REJ-2026-002`, `HLD-2026-003`, `REJ-2026-004` are source scenario IDs from 0060 FACT-051..054, not branch codes. Map them respectively to appropriate declared branch codes (`BR-ACCESS-UNK` for unknown retention/access; `BR-MISSING` for missing source/origin/locator; use `BR-UNVERIFIED` only when source authenticity is unverified). For the RSC duplicate sequence 004→005, use an explicit `BR-CODE-DUPLICATE` and add it to the 0062 branch-code dictionary and the replacement register. Preserve ATT INT→RST as `BR-CLASS-DRIFT` and DLG missing locator as `BR-MISSING`. The statuses/decisions must indicate the corrected sample state, not a real event.
+4) Keep all `SYN-0060-FACT-###` references exact. `FACT-008` is attendance rate; `FACT-009` valid assessment count; `FACT-016` follow-up scope. Any shortened `FACT-###` form must be explicitly defined once as a prefix alias, and all important mapping rows must remain one-to-one or have a precise locator to the one-to-one source mapping.
+5) Reconcile `T-0062-02`, `T-0062-03`, `T-0062-04`, `T-0062-05`, `T-0062-08`, `T-0062-09`, and the 30-second page specification to the new filenames, exact paths, counts, test results, states, and decisions. Ensure there are exactly 12 sample filenames, 12 sample locators, 12 sample versions, 12 sample status/decision pairs, 12 REAL HOLD rows, six retrieval tests (five hits/one miss), 11 SAMPLE VERIFIED/one SAMPLE HOLD/zero SAMPLE RETURN, and no `HOLD` in any decision column. `REAL coverage` remains UNKNOWN, never 100%.
+6) Keep sample file labels distinct from actual original files: the only source is the 0060 candidate's synthetic descriptions. No fictional signatories, approvals, actual file records, storage permissions, or association policies. S3 is the single hypothetical 3-year sample retention code; actual retention stays UNKNOWN/HOLD. INT/RST are sample codes, not permissions.
+
+Return only the complete `0062_UNIQUE_BLUEPRINT_R04.md` Markdown with a matching heading.

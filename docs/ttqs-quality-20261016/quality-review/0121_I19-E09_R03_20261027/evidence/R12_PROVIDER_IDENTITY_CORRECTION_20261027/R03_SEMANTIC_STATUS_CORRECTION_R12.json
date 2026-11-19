@@ -1,0 +1,85 @@
+{
+  "schema": "TTQS_ONE_R12_0121_PROVIDER_IDENTITY_STATUS_CORRECTION_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0121",
+  "requirement_id": "I19-E09",
+  "corrected_at_local": "2026-10-27T12:29:44.9729520+08:00",
+  "candidate_sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+  "candidate_mutated": false,
+  "prior_aggregate_semantic_result": "PASS_TEXT_ONLY_FULL_BODY",
+  "corrected_semantic_status": "NOT_GRANTED_PROVIDER_IDENTITY_UNKNOWN",
+  "antigravity": {
+    "stdout_sha256": "93770fa08a7e4714c6b6e65d38c699f81bd4b26169a33e5f05741c951b5cdb10",
+    "reason": "Provider/model identity not exposed; requested model alone cannot prove Gemini route.",
+    "response_sha256": "9f68f37a3427aee265f54f3f895fa832cca6580a3f6fdc0de07916f47865ed4d",
+    "exit_code": 0,
+    "work_id": "TTQS-0121-I19-E09-R03-ANTIGRAVITY-R12-FULL-SEMANTIC-REVIEW",
+    "accepted_as_gemini_pass": false,
+    "actual_serving_model": "UNKNOWN",
+    "response_self_reported_verdict": "PASS",
+    "reported_tokens": 52786,
+    "requested_model": "gemini-3.8-flash-high"
+  },
+  "opencode": {
+    "retry_eligible_at_local": null,
+    "provider_error_type": null,
+    "provider_status": null,
+    "actual_model": "UNKNOWN_NOT_REACHED_DUE_FREE_LIMIT",
+    "reason": "HTTP 429 before model response.",
+    "requested_model": "opencode/glm-5.3-flash-free",
+    "verdict": "NOT_PRODUCED",
+    "work_id": "TTQS-0121-I19-E09-R03-W1-OPENCODE-GLM-FREE-FULL-BODY-EXACT-SHA-REVIEW-R12"
+  },
+  "technical_qa": "PASS exact candidate SHA",
+  "visual_qa": "PASS_WITH_DELTA_SCOPE; 23 pages; directly inspected 1,18; 21 unchanged pages pixel-identical",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "NOT_PROVIDED",
+  "supersedes": "README semantic PASS statement and R03_FINAL_QA_STATUS_R12 semantic_review.result",
+  "raw_antigravity_artifacts": [
+    {
+      "name": "DISPATCH_START.json",
+      "bytes": 843,
+      "sha256": "e518810b1a105629902ccdd5006e20a0bb981725695a84affa3cc47d6fc1834a"
+    },
+    {
+      "name": "DISPATCH_TERMINAL.json",
+      "bytes": 1246,
+      "sha256": "72144cdd41ff8aacf240919672ca0b7d9e98c7faa877896c355d20462c170dd9"
+    },
+    {
+      "name": "INPUT_MANIFEST.json",
+      "bytes": 1199,
+      "sha256": "c969abc9af1baef90a795f8df8ec34cf5f4ce57d47790b8c2f5f4ff1ff90b358"
+    },
+    {
+      "name": "MODEL_CATALOG_STDERR.txt",
+      "bytes": 29,
+      "sha256": "53f588bc9a928f4a66908deacaca57dddc7e7ce177a0cc3586b5a501be26e1e8"
+    },
+    {
+      "name": "MODEL_CATALOG_STDOUT.txt",
+      "bytes": 281,
+      "sha256": "85e245eeb6ee6aa8450b0a953be6bc93480da5086eaa233722cfd9057961fa32"
+    },
+    {
+      "name": "RAW_STDERR.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "RAW_STDOUT.json",
+      "bytes": 19211,
+      "sha256": "93770fa08a7e4714c6b6e65d38c699f81bd4b26169a33e5f05741c951b5cdb10"
+    },
+    {
+      "name": "REVIEW_REQUEST.md",
+      "bytes": 53771,
+      "sha256": "d5935a49c75152ff3e68451e9e78271f4ec4d746645bab49f89086a621576b1d"
+    },
+    {
+      "name": "REVIEW_RESPONSE.md",
+      "bytes": 18486,
+      "sha256": "9f68f37a3427aee265f54f3f895fa832cca6580a3f6fdc0de07916f47865ed4d"
+    }
+  ]
+}

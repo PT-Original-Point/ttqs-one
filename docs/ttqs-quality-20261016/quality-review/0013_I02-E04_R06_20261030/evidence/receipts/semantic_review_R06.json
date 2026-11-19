@@ -1,0 +1,38 @@
+{
+  "receipt_id": "0013_I02-E04_R06_INDEPENDENT_SEMANTIC_REVIEW",
+  "document_id": "0013",
+  "requirement_id": "I02-E04",
+  "candidate_sha256": "3e1b0ce939ea4e1b3fe22adec1cbdab492af78d6b9a5646f41ddd394c4aa3d09",
+  "candidate_state": "CANDIDATE_SAMPLE_SYNTHETIC_NOT_ACCEPTED",
+  "reviewer_route": "Fresh Codex subagent context; agent id 01a1890c-2515-7221-af03-04d2e1474feb",
+  "reviewer_model": "UNKNOWN",
+  "review_mode": "Independent read-only exact-SHA semantic review",
+  "verdict": "PARTIAL",
+  "raw_response_path": "semantic_review_R06_original_response.md",
+  "raw_response_sha256": "45dacf8f83eb83e250855dcb2563f890dd80182086364d217ccfd10e3168411f",
+  "scope": {
+    "formal_acceptance": "UNKNOWN",
+    "math": "PASS_WITH_CROSSWALK_WORDING_GAP",
+    "visual_layout": "NOT_REVIEWED_BY_SEMANTIC_REVIEWER",
+    "register_to_docx_fact_values": "PARTIAL_7_MISMATCHES",
+    "official_requirement_and_genre": "PASS",
+    "operational_process": "PARTIAL",
+    "sample_real_boundary": "PASS",
+    "title_blind_and_negative_neighbors": "PASS"
+  },
+  "findings": [
+    {
+      "finding": "§8 P094 circular publication gate",
+      "required": "Move public-page readback to post-publication verification; pre-publication should require verified source/approval/date/resources/usable route and approved content",
+      "locator": "Paragraph P094 / §8"
+    },
+    {
+      "finding": "T19 internal fact value vs external CSV",
+      "required": "Align exact synthetic value/type text for F016,F017,F018,F019,F020,F021,F024 with CSV; update deterministic verifier to compare value, locator, role",
+      "locator": "Table T19 rows keyed by seven Fact IDs"
+    }
+  ],
+  "exact_candidate_readback": "PASS",
+  "formal_acceptance": "UNKNOWN",
+  "created_at_taipei": "2026-10-30T03:09:32.5322655+08:00"
+}

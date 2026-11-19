@@ -1,0 +1,254 @@
+{
+  "doc_id": "0133",
+  "requirement_id": "I19-E22",
+  "candidate_sha256": "25116afb8206e0828c8b3a4a763845a9c3e672a4cb49969a64a2a3737d87256b",
+  "reviewer_scope": "Independent TTQS document semantic review based exclusively on supplied materials (text extraction of 69 body paragraphs, 18 tables bound to candidate DOCX SHA-256 25116afb8206e0828c8b3a4a763845a9c3e672a4cb49969a64a2a3737d87256b, source packet, and unique blueprint at PR #92 head 765203c23e60210587321a3cc8db073385783dec). No tools were executed, no files were accessed or altered, no real association performance was inferred, and builder self-inspections/layout receipts were not treated as semantic acceptance. Visual pixel rendering and Word layout inspection are excluded from this review.",
+  "status": "PASS",
+  "checklist": {
+    "check_1_identity_and_official_requirement": {
+      "status": "PASS",
+      "locators": [
+        "Header lines 1-2",
+        "Section '30 秒摘要', Paragraph 2",
+        "Section 1, Paragraph 1",
+        "Table 1, Rows R1-R7",
+        "Table 18, Rows R2-R5"
+      ],
+      "evidence": "Candidate document accurately cites the exact official requirement: '每年訓練班次、人次均持續成長。' located at 《TTQS 查核佐證文件資料表－訓練機構版》PDF 第 8 頁常見 3 分參考佐證 (Section 1, Paragraph 1; Table 1 R5; Table 18 R2). Identity metadata correctly separates and does not conflate doc_id '0133' (Table 1 R2: '142 序列內部 doc_id；不是官方方框流水號'), internal requirement 'I19-E22' (Table 1 R3: '142 序列 crosswalk 的識別碼；不是官方印刷序號'), 157 Blueprint 'index 146, I19-L3' (Table 1 R4; Table 18 R3), and official printed checkbox serial explicitly marked as 'UNKNOWN' (Table 1 R4: '專案具名佐證要求的位置；官方印刷方框序號仍為 UNKNOWN')."
+    },
+    "check_2_genre_and_title_blind_test": {
+      "status": "PASS",
+      "locators": [
+        "Section '30 秒摘要', Paragraph 1",
+        "Section 2, Paragraphs 2.1-2.4",
+        "Section 3, Paragraph 1 and Table 3",
+        "Section 5, Table 5",
+        "Section 6, Tables 6, 7, 8",
+        "Section 1, Paragraph 2",
+        "Section 12, Table 17, Rows R1-R4"
+      ],
+      "evidence": "Title-blind test passes completely. Ignoring the title '年度訓練班次與參訓人次趨勢表', the body text inherently identifies its genre as a multi-year class and participant register with adjacent-year comparative growth analysis. Text explicitly establishes cohort tracking, per-class attendance de-duplication, and dual-indicator growth evaluation across 2023-2025. Negative neighbor boundaries are explicitly guarded: Section 1 Paragraph 2 and Table 17 R2-R4 separate 0133 from 0132/I19-E21 (product defect counts/rates; zero defect or manufacturing terms appear in 0133) and 0134/I19-E23 (membership headcount and dues revenue; zero membership or dues data appear in 0133). No neighbor content bleeding exists."
+    },
+    "check_3_operational_maturity": {
+      "status": "PASS",
+      "locators": [
+        "Section 2, Paragraphs 2.1, 2.2, 2.3",
+        "Section 3, Paragraph 1 and Table 3, Rows R1-R10",
+        "Section 4, Table 4, Rows R1-R9",
+        "Section 7, Paragraph 1 and Table 9, Rows R1-R7",
+        "Section 8, Paragraphs 1-3 and Table 10, Rows R1-R5",
+        "Section 9, Tables 11-14",
+        "Section 10, Table 15, Rows R1-R30",
+        "Section 11, Table 16, Rows R1-R4"
+      ],
+      "evidence": "Operational maturity is fully verified: (a) Class/cohort definition (Section 2.2) requires unique class ID, specific course, and single cohort with actual teaching; multi-day courses for one cohort count as one class; (b) Calendar year attribution (Section 2.1) uses actual teaching date; cross-year classes require explicit completion rule attribution without splitting; (c) Exclusions (Section 2.2, 2.3, Table 5 R26, Table 10 R3) strictly omit cancelled, postponed, zero-attendance, and no-show cases from completed totals; (d) Person-times definition (Section 2.3, Section 7) specifies 'Class ID x de-identified Learner ID' attending at least once = 1 person-time, explicitly avoiding daily attendance summation or unique natural headcount; (e) Source chain and roles (Section 3, Table 3, Table 4) establish clear lineage from course plan to completion register, de-identified attendance, reconciliation, and two-person review (SYN-ROLE-REG, SYN-ROLE-REV); (f) Standard Operating Procedure (Section 4, Table 4) provides an actionable 8-step workflow; (g) Exception handling and audit trail (Section 8, Table 10, SYN-0133-CORR-01) specify mandatory retention of previous value, new value, reason, source, and reviewer without silent overwrite; (h) Reusable blank tables (Section 9, Tables 11-14) are provided; (i) HOLD/REJECT/READY criteria (Section 11, Table 16) and itemized synthetic replacement register (Section 10, Table 15) are thoroughly defined."
+    },
+    "check_4_arithmetic": {
+      "status": "PASS",
+      "locators": [
+        "Section 5, Table 5, Rows R2-R26 and end text",
+        "Section 6, Table 6, Rows R1-R4",
+        "Section 6, Table 7, Rows R1-R4",
+        "Section 6, Table 8, Rows R1-R5",
+        "Section 6, Paragraphs 2-3"
+      ],
+      "evidence": "Independent verification of all 25 rows in Table 5 confirms: (a) 2023 completed classes: 6 rows (SYN-23-01 to SYN-23-06) x 12 person-times = 6 classes, 72 person-times; (b) 2024 completed classes: 8 rows (SYN-24-01 to SYN-24-08) x 13 person-times = 8 classes, 104 person-times; (c) 2025 completed classes: 10 rows (SYN-25-01=12, SYN-25-02=13, SYN-25-03 to 06=14 each [56], SYN-25-07 to 10=15 each [60]) = 10 classes, 141 person-times; (d) Cancelled class: SYN-25-X01 (Row R26) has status '取消' and 0 person-times, correctly excluded; (e) 3-year total: 24 completed classes, 317 attendee person-times; (f) Adjacent-year growth recomputation: 2024 vs 2023 classes = (8-6)/6*100% = +33.3%; 2025 vs 2024 classes = (10-8)/8*100% = +25.0%; 2024 vs 2023 person-times = (104-72)/72*100% = +44.4%; 2025 vs 2024 person-times = (141-104)/104*100% = 37/104*100% = +35.6%; (g) Endpoint growth: 2025 vs 2023 classes = (10-6)/6*100% = +66.7%; person-times = (141-72)/72*100% = +95.8%, explicitly designated as supplemental and prohibited from substituting adjacent-year checks (Section 6, Paragraph 3; Table 2 R2-R3; Table 9 R6); (h) No zero denominators (base year marked N/A); consistent 1-decimal percentage rounding; no conflation with unique person headcounts."
+    },
+    "check_5_evidence_boundary": {
+      "status": "PASS",
+      "locators": [
+        "Header lines 3-4",
+        "Section '30 秒摘要', Paragraph 2",
+        "Section 1, Table 1, Row R7",
+        "Section 5, Paragraph 1",
+        "Section 8, Paragraph 2",
+        "Section 9, Paragraph 1 and end note",
+        "Section 10, Table 15, Rows R1-R30",
+        "Section 11, Table 16, Row R4 and end text"
+      ],
+      "evidence": "Evidence boundaries are rigorously maintained throughout the document. Every data point, course title, date, role code (SYN-ROLE-REG, SYN-ROLE-REV), source key (SYN-PLAN/ATT/CLOSE), count, and growth calculation is explicitly labeled SAMPLE / SYNTHETIC. The document unequivocally states that these do not represent Original Point Association real performance, official policy, signed records, third-party audits, or evaluator acceptance. REAL_EVIDENCE is systematically stated as UNKNOWN (Header line 4; Table 1 R7; Table 16 end text). The official printed checkbox serial is consistently maintained as UNKNOWN (Header line 2; Table 1 R4; Table 18 R4)."
+    },
+    "check_6_cross_document_facts_and_usability": {
+      "status": "PASS",
+      "locators": [
+        "Section '30 秒摘要', Paragraph 3",
+        "Section 1, Paragraph 2",
+        "Section 9, Tables 11-14",
+        "Section 10, Table 15",
+        "Section 11, Table 16",
+        "Section 12, Table 17"
+      ],
+      "evidence": "Cross-document integrity and usability are fully satisfied: internal evidence chains across Section 3, Table 3, Section 4, Table 4, Section 5, Table 5, and Section 10, Table 15 are mathematically and procedurally consistent; no neighboring indicator facts are borrowed; operational next steps are clearly defined in Section '30 秒摘要' Paragraph 3 and Section 9; robust HOLD/REJECT conditions are established in Section 11, Table 16. Technical receipts from the builder were not treated as semantic acceptance."
+    },
+    "check_7_scope_limitation": {
+      "status": "PASS",
+      "locators": [
+        "Extraction metadata (paragraph_count: 69, table_count: 18, inline_shape_count: 1)",
+        "Section 6, '趨勢圖讀法' and image placeholder paragraph"
+      ],
+      "evidence": "The reviewer acknowledges receipt of the full text extraction (69 body paragraphs, 18 tables) bound to candidate DOCX SHA-256 25116afb8206e0828c8b3a4a763845a9c3e672a4cb49969a64a2a3737d87256b, source packet, and unique blueprint. The embedded chart metadata (inline_shapes alt text: annual class counts 6, 8, 10 and attendee person-times 72, 104, 141; footer disclaimer) was reviewed semantically from extraction text. In accordance with scope limitations, raw pixel rendering and Word layout inspection are excluded and not attested to."
+    }
+  },
+  "arithmetic_recheck": {
+    "annual_reconciliation": {
+      "year_2023": {
+        "classes_completed": 6,
+        "classes_cancelled": 0,
+        "person_times_list": [
+          12,
+          12,
+          12,
+          12,
+          12,
+          12
+        ],
+        "person_times_sum": 72,
+        "reported_classes": 6,
+        "reported_person_times": 72,
+        "match": true
+      },
+      "year_2024": {
+        "classes_completed": 8,
+        "classes_cancelled": 0,
+        "person_times_list": [
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13
+        ],
+        "person_times_sum": 104,
+        "reported_classes": 8,
+        "reported_person_times": 104,
+        "match": true
+      },
+      "year_2025": {
+        "classes_completed": 10,
+        "classes_cancelled": 1,
+        "cancelled_class_id": "SYN-25-X01",
+        "cancelled_class_person_times": 0,
+        "person_times_list": [
+          12,
+          13,
+          14,
+          14,
+          14,
+          14,
+          15,
+          15,
+          15,
+          15
+        ],
+        "person_times_sum": 141,
+        "reported_classes": 10,
+        "reported_person_times": 141,
+        "match": true
+      },
+      "three_year_totals": {
+        "completed_classes_sum": 24,
+        "cancelled_classes_sum": 1,
+        "attendee_person_times_sum": 317,
+        "reported_completed_classes": 24,
+        "reported_person_times": 317,
+        "match": true
+      }
+    },
+    "growth_rate_recomputation": {
+      "adjacent_year_classes": {
+        "2024_vs_2023": {
+          "formula": "(8 - 6) / 6 * 100%",
+          "exact_value": 33.333333333333336,
+          "reported_value": "33.3%",
+          "match": true
+        },
+        "2025_vs_2024": {
+          "formula": "(10 - 8) / 8 * 100%",
+          "exact_value": 25.0,
+          "reported_value": "25.0%",
+          "match": true
+        }
+      },
+      "adjacent_year_person_times": {
+        "2024_vs_2023": {
+          "formula": "(104 - 72) / 72 * 100%",
+          "exact_value": 44.44444444444444,
+          "reported_value": "44.4%",
+          "match": true
+        },
+        "2025_vs_2024": {
+          "formula": "(141 - 104) / 104 * 100%",
+          "exact_value": 35.57692307692308,
+          "reported_value": "35.6%",
+          "match": true
+        }
+      },
+      "supplemental_endpoint_growth": {
+        "classes_2025_vs_2023": {
+          "formula": "(10 - 6) / 6 * 100%",
+          "exact_value": 66.66666666666667,
+          "reported_value": "66.7%",
+          "match": true,
+          "clearly_supplemental": true
+        },
+        "person_times_2025_vs_2023": {
+          "formula": "(141 - 72) / 72 * 100%",
+          "exact_value": 95.83333333333333,
+          "reported_value": "95.8%",
+          "match": true,
+          "clearly_supplemental": true
+        }
+      }
+    },
+    "denominator_and_rounding_checks": {
+      "zero_denominator_present": false,
+      "base_year_2023_growth_representation": "N/A",
+      "rounding_rule_followed": "Counts retain integers; growth percentages computed from unrounded values and displayed to 1 decimal place",
+      "person_times_vs_unique_persons_distinction": "Maintained strictly; text explicitly notes person-times is not registration count, seating capacity, daily attendance sum, or unique natural headcount."
+    }
+  },
+  "neighbor_distinction": {
+    "negative_neighbor_0132_I19_E21": {
+      "focus": "Product defect counts, inspection denominators, and post-training scrap reduction.",
+      "boundary_status": "PASS",
+      "evidence": "Section 1 Paragraph 2 and Table 17 Row R2 explicitly exclude product defect counts, defective units, inspected denominator units, and quality metrics from 0133. Zero product quality or manufacturing terms exist in 0133 text."
+    },
+    "negative_neighbor_0134_I19_E23": {
+      "focus": "Association membership headcount and membership dues revenue annual changes.",
+      "boundary_status": "PASS",
+      "evidence": "Section 1 Paragraph 2 and Table 17 Row R3 explicitly exclude membership rosters, membership fee accounting, and revenue figures from 0133. Zero membership or fee data appear in 0133 text."
+    }
+  },
+  "sample_real_boundary": {
+    "boundary_status": "PASS",
+    "declarations_verified": [
+      "Document header banner: 'SAMPLE / SYNTHETIC 示範版 ｜ REAL 原件與機構實績：目前 UNKNOWN'",
+      "Table 1 Row R7: '本版狀態 | SAMPLE / SYNTHETIC | 目前沒有可核驗協會年度課程及出席原件；REAL_EVIDENCE=UNKNOWN'",
+      "Section 5 intro: '以下 24 筆已辦班次和 1 筆取消班均為合成記錄...不表示原始點協會曾開課。SYN-PLAN、SYN-ATT、SYN-CLOSE 均為虛構來源鍵，沒有對應真實原件。'",
+      "Section 8 narrative: '這個更正只演示留痕方式，沒有真人、協會原件或實際簽核。'",
+      "Section 9 Tables 11-14: Blank operational templates explicitly marked '待補', '未填', '未取得', 'UNKNOWN', 'HOLD'.",
+      "Section 10 Table 15: Itemized 30-item replacement ledger for all synthetic keys (SYN-23-01 to SYN-EX-01) mapping required real authenticated sources.",
+      "Section 11 Table 16 end note: '目前原始點協會 REAL 資料、統計政策、覆核簽核及正式接受皆為 UNKNOWN；本候選只通過示範資料的內容及算式檢查。沒有官方成長率最低門檻，不能另造「合格百分比」。'",
+      "Official printed checkbox serial remains consistently UNKNOWN across Table 1 R4, Table 18 R4, and Section 1."
+    ],
+    "unsupported_claims_found": false
+  },
+  "findings": [
+    {
+      "severity": "INFO",
+      "locator": "Section 9 (Tables 11-14), Section 10 (Table 15), Section 11 (Table 16)",
+      "issue": "The document candidate is completely synthetic and non-formal. REAL evidence, actual association performance, approved attendance counting policies, and formal evaluator acceptance remain UNKNOWN.",
+      "required_action": "Prior to formal TTQS evaluation or official filing, training administration staff must populate Tables 11-14 and execute the replacement ledger (Table 15) using authenticated real course plans, completion registers, and de-identified attendance records under an authorized institutional counting policy, maintaining HOLD status until fully reconciled."
+    },
+    {
+      "severity": "INFO",
+      "locator": "Extraction metadata (inline_shapes 1), Section 6 ('趨勢圖讀法')",
+      "issue": "Chart verification in this review is semantic only (based on embedded shape title, alt-text description, and body text). Physical pixel rendering and Word layout formatting were not independently verified by this reviewer.",
+      "required_action": "Operational users must perform independent visual rendering inspection of the final DOCX file in Microsoft Word to confirm chart axis scaling and formatting before external distribution."
+    }
+  ],
+  "limitations": "Review is strictly semantic and confined to the provided text extraction (69 body paragraphs, 18 tables), inline shape metadata, source packet, and unique blueprint. No tool executions, no direct DOCX binary edits, and no pixel-level Word visual rendering inspections were conducted. The candidate remains non-formal, unaccepted, and based entirely on synthetic demonstration data.",
+  "conclusion": "Candidate DOCX 0133 (SHA-256 25116afb8206e0828c8b3a4a763845a9c3e672a4cb49969a64a2a3737d87256b) achieves PASS. All seven critical semantic checks—identity clarity, genre title-blind validation, operational maturity, mathematical accuracy, evidence boundary integrity, cross-document separation, and scope compliance—are fully satisfied with exact extraction locators and zero blocking defects."
+}

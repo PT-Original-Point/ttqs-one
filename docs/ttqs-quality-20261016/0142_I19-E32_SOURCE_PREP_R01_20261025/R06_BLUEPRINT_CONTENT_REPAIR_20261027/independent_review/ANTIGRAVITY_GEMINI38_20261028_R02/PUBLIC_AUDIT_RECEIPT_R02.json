@@ -1,0 +1,77 @@
+{
+  "schema": "TTQS_ONE_ANTIGRAVITY_R02_PUBLIC_AUDIT_RECEIPT_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0142",
+  "requirement_id": "I19-E32",
+  "candidate_sha256": "3781cb4cb2d26625fb5676181f4faa4176ca0bb80e2e3fac518245bbdc42f97e",
+  "github_head_at_dispatch": "152464f2088156885d5c9ec5c69c5dcae6a9f169",
+  "raw_local_sha256": {
+    "R01_stderr": "e3597092aa837b2f264651c6812c9fc1706f1c10cc5999a2dfeed0a16647f5fe",
+    "R02_stdout": "58c80cc841102c5afb1e8951a36f250adc14dc90cbcb78f88dbe46447237d08b",
+    "R02_stderr": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+    "R02_cli_log_local_only": "4b5d51759932a6663082c2f4aad25cba492ffdde56fe300bfe597c3e09236160",
+    "R02_prompt_local": "8ce077beecf2dde1df3177805b0e3a4cbfe03a9677fdd92659064810b8259846"
+  },
+  "cli_reported_usage": {
+    "input_tokens": 17547,
+    "output_tokens": 7603,
+    "thinking_tokens": 5911,
+    "cache_read_tokens": 0,
+    "total_tokens": 25150
+  },
+  "actual_billing": "UNKNOWN_NOT_INDEPENDENTLY_VERIFIED",
+  "redaction": {
+    "conversation_id_redacted": true,
+    "local_cli_log_not_published": true,
+    "full_prompt_not_published": "Prompt hash and source packet hash are public; full prompt remains local.",
+    "local_paths_and_shared_permissions_paths_not_published": true
+  },
+  "public_payloads": [
+    {
+      "path": "docs/ttqs-quality-20261016/0142_I19-E32_SOURCE_PREP_R01_20261025/R06_BLUEPRINT_CONTENT_REPAIR_20261027/independent_review/ANTIGRAVITY_GEMINI38_20261028_R02/R01_PREINFERENCE_FAILURE.json",
+      "bytes": 949,
+      "sha256": "efb097592a127c94bfe41a79649d95fb4a9dbc9cb48aa4678fb74802b5e8a347"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0142_I19-E32_SOURCE_PREP_R01_20261025/R06_BLUEPRINT_CONTENT_REPAIR_20261027/independent_review/ANTIGRAVITY_GEMINI38_20261028_R02/DISPATCH_START_PUBLIC.json",
+      "bytes": 1031,
+      "sha256": "174effd1c6c5b4c75a71de626acb2f0b75a41e309e61c62f5ce09ad70708ce9b"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0142_I19-E32_SOURCE_PREP_R01_20261025/R06_BLUEPRINT_CONTENT_REPAIR_20261027/independent_review/ANTIGRAVITY_GEMINI38_20261028_R02/DISPATCH_TERMINAL_PUBLIC.json",
+      "bytes": 1845,
+      "sha256": "8d2bfe0b54f300864321b19b36ac4acff2e8826a2273f6e9e37df23b26ab590c"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0142_I19-E32_SOURCE_PREP_R01_20261025/R06_BLUEPRINT_CONTENT_REPAIR_20261027/independent_review/ANTIGRAVITY_GEMINI38_20261028_R02/RAW_STDOUT_REDACTED.json",
+      "bytes": 5271,
+      "sha256": "c225cf2a081ef1e647a4285e77306f6d8a51139e4372f07ca04a62d94a84251c"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0142_I19-E32_SOURCE_PREP_R01_20261025/R06_BLUEPRINT_CONTENT_REPAIR_20261027/independent_review/ANTIGRAVITY_GEMINI38_20261028_R02/RAW_STDERR.txt",
+      "bytes": 78,
+      "sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0142_I19-E32_SOURCE_PREP_R01_20261025/R06_BLUEPRINT_CONTENT_REPAIR_20261027/independent_review/ANTIGRAVITY_GEMINI38_20261028_R02/REVIEW_RESPONSE_REPORTED_UNVERIFIED.json",
+      "bytes": 4714,
+      "sha256": "0547fe1a88da9f3a2c45560f4a628fd676b1941296cf3b03b3bf1fc7aab03bcb"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0142_I19-E32_SOURCE_PREP_R01_20261025/R06_BLUEPRINT_CONTENT_REPAIR_20261027/independent_review/ANTIGRAVITY_GEMINI38_20261028_R02/ROUTE_ADJUDICATION_R02.json",
+      "bytes": 4649,
+      "sha256": "5bf85a496d7c57b079fe3fcda80b96e8e2da1ce6bf520af2e7d1a9f6fddbf814"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0142_I19-E32_SOURCE_PREP_R01_20261025/R06_BLUEPRINT_CONTENT_REPAIR_20261027/independent_review/ANTIGRAVITY_GEMINI38_20261028_R02/SEMANTIC_REVIEW_STATUS_R02.json",
+      "bytes": 1042,
+      "sha256": "3014443bfd80e56f8bb58aedf6da19714ec4c2b5edce6f2a2cb6c5260c14e643"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0142_I19-E32_SOURCE_PREP_R01_20261025/R06_BLUEPRINT_CONTENT_REPAIR_20261027/R06_CURRENT_REVIEW_STATUS_R02.json",
+      "bytes": 2643,
+      "sha256": "3b40e4b0d9e7ea63a85f2c754c682c016345bc079a05c1b7481ab26eb0ff8f73"
+    }
+  ],
+  "adjudication": "The CLI returned a PASS-shaped response, but actual model is UNKNOWN, CCPA defaulting was observed, tool use was not structurally disabled, and the response contains a mismatched prior W1 work_id. Not accepted as semantic PASS."
+}

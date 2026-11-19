@@ -1,0 +1,84 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0056",
+  "revision": "R05",
+  "official_requirement_id": "I12-E04",
+  "official_checkbox_serial": "059",
+  "status": "CANDIDATE_QA_PASS_NOT_FORMALLY_ACCEPTED",
+  "predecessor": "0056_R04.docx",
+  "predecessor_sha256": "0cf37ad689906df1eadc8034d6aa39853e9d7d5454a13d000559ded790e456a6",
+  "candidate": "0056_R05.docx",
+  "candidate_sha256": "a8ac2f2487bd40ff00784980bbe2ef9a84c0cfe326c9b37e6dceaeebc3e750cf",
+  "candidate_bytes": 60746,
+  "script": "build/repair_0056_R05.py",
+  "script_sha256": "3e4fd1eb0832024905b17df4751fbde112fa2eab4c52167471a8831264b17f0f",
+  "change": "Single remaining status key translated to human-readable Traditional Chinese.",
+  "text_node_delta": {
+    "before": "REQUESTED_PENDING_RESPONSE",
+    "after": "已送出索取，待回覆"
+  },
+  "changed_package_members": [
+    "word/document.xml"
+  ],
+  "namespace_map_preserved": true,
+  "mc_ignorable_prefixes": [
+    "w14",
+    "wp14"
+  ],
+  "remaining_schema_keys": [],
+  "remaining_machine_status_codes": [],
+  "build_execution_note": "The first script run wrote the candidate and then raised because its package comparator compared the output to the already-mutated package map. The comparator was corrected in the script file; this exact existing candidate was independently verified against R04, without regenerating DOCX bytes.",
+  "independent_postbuild_check": {
+    "source_sha256": "0cf37ad689906df1eadc8034d6aa39853e9d7d5454a13d000559ded790e456a6",
+    "candidate_sha256": "a8ac2f2487bd40ff00784980bbe2ef9a84c0cfe326c9b37e6dceaeebc3e750cf",
+    "zip_integrity": true,
+    "changed_package_members": [
+      "word/document.xml"
+    ],
+    "only_document_xml_changed": true,
+    "text_node_delta_count": 1,
+    "text_node_delta": [
+      [
+        180,
+        "REQUESTED_PENDING_RESPONSE",
+        "已送出索取，待回覆"
+      ]
+    ],
+    "reversing_the_one_delta_restores_source_xml_tree": true,
+    "namespace_map_preserved": true,
+    "mc_ignorable_prefixes": [
+      "w14",
+      "wp14"
+    ],
+    "mc_ignorable_prefixes_resolved": true,
+    "remaining_machine_schema_keys": [],
+    "remaining_machine_status_codes": [],
+    "python_docx_open": "PASS",
+    "paragraph_count": 128,
+    "table_count": 17,
+    "sample_synthetic_markers_present": true,
+    "human_acceptance": "NOT_GRANTED"
+  },
+  "human_acceptance": "NOT_GRANTED",
+  "technical_visual_semantic_qa": "PASS_WITH_LAYOUT_NOTES",
+  "semantic_reviewer_receipt": "review/opencode_v2_semantic_R05/review_receipt_R05.json",
+  "semantic_reviewed_sha256": "a8ac2f2487bd40ff00784980bbe2ef9a84c0cfe326c9b37e6dceaeebc3e750cf",
+  "source_provenance": {
+    "repository": "PT-Original-Point/ttqs-one",
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "source_commit_at_build": "9fdfc1deda180997dbae6e93669c34cc8d442b37",
+    "source_commit_at_pre_sync_readback": "9fdfc1deda180997dbae6e93669c34cc8d442b37",
+    "mission_blob_sha1": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e",
+    "genre_manual_blob_sha1": "4ff863d9f534b6359fc1c7c1685bd8cce02da886",
+    "157_checkbox_contract_blob_sha1": "8c2bbe7ca9dcbb03088a48934b9e57e7147ede63",
+    "execution_contract_blob_sha1": "62e3dd7dfd8579b6bc97952ffa6236e7494f3b4d",
+    "hourly_wake_contract_blob_sha1": "60ae010c58140e1710ed24016085c6dfaf6ffaee",
+    "external_audit_contract_blob_sha1": "263aaca84891bba8dca087875804343c3670e921",
+    "unique_blueprint_blob_sha1": "6a4b940251c0954faa592d8814bbf93ee96556da",
+    "source_packet_blob_sha1": "016cd9a71cbc52f48ff3db41142cbc120beb8334"
+  },
+  "next_action": "Synchronize candidate and review evidence to PR #92; then continue next READY document.",
+  "writer_route": "Codex deterministic localized OOXML text repair; this was not an OpenCode-authored build. The source R03 candidate and earlier build artifacts remain intact.",
+  "independent_reviewer_route": "OpenCode V2 CLI 2.0.29, opencode/mimo-v2.6-flash-free, exact-SHA review.",
+  "antigravity_route": "No Antigravity dispatch in this recovery; the previously recorded Antigravity route remains paused under the three-failure rule."
+}

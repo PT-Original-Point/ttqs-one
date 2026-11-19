@@ -1,0 +1,60 @@
+{
+  "work_id": "TTQS-0008-I01-E05-R03C-DOCX-TECHNICAL-QA",
+  "doc_id": "0008",
+  "requirement_id": "I01-E05",
+  "unique_blueprint": "I01-E05",
+  "status": "PASS_WITHIN_TECHNICAL_SCOPE",
+  "observed_at_local": "2026-10-30T00:31:45.922595+08:00",
+  "candidate": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0008_I01-E05_LUNA_TEXT_DRAFT_R03_20261030\\candidate\\0008_I01-E05_R03c.docx",
+    "sha256": "39a41b63f2e7704d9b004923e8fbc9d9dadc54855e229646ccbf080e1e8a9487",
+    "bytes": 109493
+  },
+  "source_markdown": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0008_I01-E05_LUNA_TEXT_DRAFT_R03_20261030\\worker\\0008_I01-E05_R03.md",
+    "sha256": "16f9a19a46fedc9f2207e558df268460a6014c1b6ea8bd2deb56e8fa816c936b"
+  },
+  "native_word_pdf": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0008_I01-E05_LUNA_TEXT_DRAFT_R03_20261030\\qa\\render_R03c_native\\0008_I01-E05_R03c.pdf",
+    "sha256": "0142ac80bd551121b42b7f80da032c27120c17313c90f28cf1521bfcdffa292c",
+    "page_count": 117
+  },
+  "source_hashes": {
+    "official_requirement_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "unique_blueprint_file_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+    "unique_blueprint_row_sha256": "3d8181714ecc1058dcf98d653eff45149287b27521ba176701c69881f83cec2d"
+  },
+  "checks": {
+    "docx_zip_integrity": true,
+    "docx_parses_with_python_docx": true,
+    "table_count_matches_native_word_receipt": true,
+    "section_count_is_three": true,
+    "body_min_font_at_least_10_5pt": true,
+    "table_min_font_at_least_9_5pt": true,
+    "markdown_has_594_unique_fact_ids": true,
+    "docx_has_same_594_unique_fact_ids": true,
+    "native_pdf_pages_match_render_receipt": true,
+    "render_receipt_binds_current_docx_sha": true,
+    "rendered_pdf_sha_matches_receipt": true,
+    "all_117_page_renders_present": true,
+    "all_30_visual_contact_sheets_present": true,
+    "sample_boundary_present": true,
+    "hold_and_reject_controls_present": true
+  },
+  "metrics": {
+    "tables": 20,
+    "sections": 3,
+    "body_nonempty_runs": 124,
+    "body_min_pt": 10.5,
+    "table_nonempty_runs": 5068,
+    "table_min_pt": 9.5,
+    "markdown_fact_rows": 594,
+    "docx_fact_rows": 594,
+    "native_word_paragraph_count": 5690
+  },
+  "scope_exclusions": [
+    "No independent semantic review has been completed for this exact SHA.",
+    "No real association policy, roster, authorization, approval, or real evidence is asserted.",
+    "This is a CANDIDATE SAMPLE/SYNTHETIC artifact, not formal acceptance."
+  ]
+}

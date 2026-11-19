@@ -1,0 +1,126 @@
+{
+  "receipt_type": "TTQS_DOCX_BUILDER_RECEIPT",
+  "task": {
+    "doc_id": "0031",
+    "requirement_id": "I06-E02",
+    "crosswalk_title": "專業訓練人員職能評估方法等證明_可直接使用成品",
+    "candidate_revision": "R01",
+    "output_path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0031_SOURCE_PACKET_20261118\\candidate\\0031_I06_E02_CANDIDATE_R01.docx"
+  },
+  "status": "BUILT_CANDIDATE",
+  "created_at_local": "2026-11-18T01:18:23.053393+08:00",
+  "builder": {
+    "tool": "python-docx",
+    "python": "3.12.14",
+    "python_executable": "C:\\Users\\J\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "python_docx_version": "1.2.0",
+    "non_com_generation": true,
+    "office_com_used": false,
+    "builder_only_no_independent_semantic_review": true
+  },
+  "source_binding": {
+    "SOURCE_PACKET.md": {
+      "path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0031_SOURCE_PACKET_20261118\\SOURCE_PACKET.md",
+      "expected_sha256": "91C51C8AA7C1BE34227F9E0B2D66C49A450DCDCF27EE24EB060845A0C61E0BC8",
+      "actual_sha256": "91C51C8AA7C1BE34227F9E0B2D66C49A450DCDCF27EE24EB060845A0C61E0BC8",
+      "match": true
+    },
+    "UNIQUE_BLUEPRINT.md": {
+      "path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0031_SOURCE_PACKET_20261118\\UNIQUE_BLUEPRINT.md",
+      "expected_sha256": "CA2AFECED6487A797DBE80C9B31005F5DDA7012FF51FEA169C23ABA7074DEED1",
+      "actual_sha256": "CA2AFECED6487A797DBE80C9B31005F5DDA7012FF51FEA169C23ABA7074DEED1",
+      "match": true
+    }
+  },
+  "output": {
+    "path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0031_SOURCE_PACKET_20261118\\candidate\\0031_I06_E02_CANDIDATE_R01.docx",
+    "sha256": "D5BE8358498970AB57CEC249E49C1A80E2AC8399288C38E8FD17D7B1B30DBF31",
+    "bytes": 61482,
+    "zip_crc": "PASS",
+    "python_docx_open_readback": "PASS"
+  },
+  "content_scope": {
+    "rubric_scale": 4,
+    "sample_roles": 2,
+    "competency_indicators": 4,
+    "initial_role_indicator_rows": 8,
+    "improvement_actions": 3,
+    "reassessment_role_indicator_rows": 8,
+    "sample_unique_fact_ids": 120,
+    "all_synthetic_ids_unique": true,
+    "all_synthetic_ids_have_real_replacement_row": true,
+    "all_real_replacement_statuses": "UNKNOWN",
+    "no_real_person_names": true,
+    "no_fabricated_third_party_originals_or_signatures": true,
+    "no_claim_of_real_association_decision": true
+  },
+  "font_check": {
+    "scope": "all nonempty text runs in body paragraphs, table cells and header/footer of the exact saved DOCX",
+    "body": {
+      "body_text_run_count": 56,
+      "body_runs_missing_explicit_size": 0,
+      "body_min_pt": 11.0,
+      "body_under_10_5_pt": 0,
+      "table_text_run_count": 804,
+      "table_runs_missing_explicit_size": 0,
+      "table_min_pt": 9.5,
+      "table_under_9_5_pt": 0,
+      "header_footer_text_run_count": 2,
+      "header_footer_min_pt": 10.5
+    },
+    "required_body_min_pt": 10.5,
+    "required_table_min_pt": 9.5,
+    "body_floor_met": true,
+    "table_floor_met": true,
+    "does_not_cover_rendered_visual_layout": true
+  },
+  "process_safety": {
+    "office_com_launched": false,
+    "word_pids_opened_or_terminated": [],
+    "observed_user_pids_left_untouched": [
+      {
+        "pid": 6448,
+        "role": "0027 renderer PowerShell process"
+      },
+      {
+        "pid": 5060,
+        "role": "WINWORD process specified by user"
+      },
+      {
+        "pid": 13556,
+        "role": "other WINWORD; identity unknown"
+      },
+      {
+        "pid": 20052,
+        "role": "other WINWORD; identity unknown"
+      },
+      {
+        "pid": 9772,
+        "role": "other WINWORD; identity unknown"
+      }
+    ],
+    "same_scope_writer_found_before_build": false,
+    "candidate_output_absent_before_build": true
+  },
+  "rendering": {
+    "status": "NOT_RUN",
+    "reason": "The current tool list does not expose load_workspace_dependencies; the selected bundled runtime contains no soffice.exe. The skill renderer on Windows resolves soffice.exe from PATH, so it was not run without a verified bundled route. Word COM was excluded by the user.",
+    "visual_layout_qa": "NOT_PERFORMED",
+    "no_render_pass_claimed": true
+  },
+  "scope_controls": {
+    "other_candidate_docx_bodies_read": false,
+    "other_docx_written": false,
+    "shared_queue_current_dashboard_or_panel_modified": false,
+    "github_write_or_commit": false
+  },
+  "builder_checks": {
+    "source_hashes_match": true,
+    "synthetic_id_register_parity": true,
+    "body_font_floor": true,
+    "table_font_floor": true,
+    "docx_package_crc": true,
+    "exact_saved_docx_reopened": true,
+    "independent_semantic_review": "NOT_PERFORMED"
+  }
+}

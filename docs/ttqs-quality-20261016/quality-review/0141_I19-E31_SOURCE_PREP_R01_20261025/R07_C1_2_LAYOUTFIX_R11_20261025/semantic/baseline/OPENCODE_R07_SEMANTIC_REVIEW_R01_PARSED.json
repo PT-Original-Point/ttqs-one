@@ -1,0 +1,125 @@
+{
+  "schema": "ttqs-one-0141-r07-semantic-review-v1",
+  "doc_id": "0141",
+  "requirement_id": "I19-E31",
+  "candidate_docx_sha256": "f9ddb5c68f8cd2db21cd89fccc54c704dd7969c261a1e9a217818a857d22fe11",
+  "extracted_text_sha256": "293d3c7795cf9eb1e457f0a6c93ed731463c0a82824f99e4b76eae728ac4d7e2",
+  "verdict": "PARTIAL",
+  "major_findings": [],
+  "minor_findings": [
+    {
+      "id": "R07-M01",
+      "severity": "MINOR",
+      "body_locator": "§捌 方案一「原擬附加之...條件仍標示為 UNKNOWN‑sourced」；§玖 規則13「待補來源欄位可用 UNKNOWN-sourced 標示缺口」",
+      "evidence": "The live complaint condition still uses a non-breaking hyphen U+2011 in 「UNKNOWN‑sourced」. The only plain ASCII 「UNKNOWN-sourced」 is a generic gate-rule phrase in §玖 13 and is not tied to that condition, so the original R06 searchability point is only partly addressed.",
+      "required_action": "Add the same provenance once in ASCII next to the complaint condition, or state it once in §柒-二/§玖 with an explicit tie to that condition."
+    },
+    {
+      "id": "R07-M02",
+      "severity": "MINOR",
+      "body_locator": "§拾-一 標題「真實資料替換四步檢核流程（SAMPLE）」對照流程圖「步驟 1」至「步驟 5」",
+      "evidence": "The heading and numbered prose describe four steps, but the flowchart displays five boxes and treats authorization as a separate step 5. Administrative readers may not know whether authorization is a distinct gate or part of validation.",
+      "required_action": "Retitle as a five-step flow, or merge step 5 into step 4 and align the prose."
+    },
+    {
+      "id": "R07-M03",
+      "severity": "MINOR",
+      "body_locator": "附錄四-2「方案二之 Q2 Top-2（目標 75%）」；§捌 方案二「Top-2 成功條件為嚴格大於 75.00%」",
+      "evidence": "The formula sheet calls 75% the target, while the proposal says 9/12 = 75.00% fails and strictly more than 75% is required. 「目標 75%」 can be read as 75% being acceptable.",
+      "required_action": "Change the formula-sheet wording to 「門檻 >75.00%；n=12 至少 10/12」."
+    },
+    {
+      "id": "R07-M04",
+      "severity": "MINOR",
+      "body_locator": "§捌 方案一「既有 3.8000 分為分析下限」；方案二「既有 3.7000 分為分析下限」",
+      "evidence": "The report does not define what analysis these floors bound or derive them from the frozen data. They are retained legacy numbers and could still be mistaken for criteria despite being declared not to be improvement targets.",
+      "required_action": "Define them explicitly as retired SAMPLE parameters or remove them, leaving baseline + 1/12 as the only proposed target."
+    }
+  ],
+  "checks": [
+    {
+      "id": "C01_identity_and_source_mapping",
+      "result": "PASS",
+      "locator": "報告基本資訊 表「文件編號」「官方指標與要求編號」「157 方框清單索引」「印刷版核選序號」「官方第 9 頁 4 分標註」; §貳-一",
+      "evidence": "0141, I19-E31 and index 155 are kept as three distinct identifiers; printed checkbox serial is UNKNOWN; 「4 分」 is treated as a scoring tier, not a weight or association score."
+    },
+    {
+      "id": "C02_genre_and_blueprint_coverage",
+      "result": "PASS",
+      "locator": "Whole text; §壹–§拾壹 and 附錄一–五",
+      "evidence": "Title-blind, the body is a three-period customer-satisfaction survey and analysis report with comparability protocol, instrument, results, limitations, actions and hold rules. Blueprint D1–D10 are substantially covered."
+    },
+    {
+      "id": "C03_questionnaire_and_Q1_Q7_separation",
+      "result": "PASS",
+      "locator": "§伍 首句; §參-三 可比性表; 附錄一/二 題項表; 附錄四 標籤表",
+      "evidence": "Q1–Q6 are six domain items; Q7 is a separate overall item; Q8 is open text and not scored. The 1–5 anchors, N/A exclusion, item wording and printable/normalized wording note are present."
+    },
+    {
+      "id": "C04_denominators_and_dataset_alignment",
+      "result": "PASS",
+      "locator": "§參-二; §陸-一 表; 附錄三 36 列; 附錄五 登記表",
+      "evidence": "15 invitations and 12 valid returns each year give 80.00%; 45/36/80.00% overall; Q1–Q6 valid answers are 72/year and 216 total. All 36 Appendix 3 rows match the frozen CSV scores, IDs, years, cohorts and Q8 markers."
+    },
+    {
+      "id": "C05_recalculated_aggregates",
+      "result": "PASS",
+      "locator": "§益-一; §陸-二 逐題表; §柒-一",
+      "evidence": "Recomputed from the 36 rows: 2023 Q1–Q6 sums 42/41/42/43/42/41, pooled 251/72=3.4861, Q7 43/12=3.5833; 2024 42/41/42/43/48/41, 257/72=3.5694, Q7 47/12=3.9167; 2025 42/47/42/43/51/41, 266/72=3.6944, Q7 51/12=4.2500. Deltas +0.0833/+0.1250/+0.2083, Q5 +0.7500, Q2 +0.5000 and Q7 +0.6667 are correct."
+    },
+    {
+      "id": "C06_Q7_top2_and_Q2_baselines",
+      "result": "PASS",
+      "locator": "§陸-三 表與計算註; §捌 方案二 指標",
+      "evidence": "Q7 counts 2023 5/7/0→7=58.33%; 2024 2/9/1→10=83.33%; 2025 1/7/4→11=91.67%; deltas +25.00/+8.33/+33.33 pp are correct. Q2 item Top-2 5/12=41.67%, 5/12=41.67%, 9/12=75.00% is also correct."
+    },
+    {
+      "id": "C07_hypothetical_thresholds",
+      "result": "PARTIAL",
+      "locator": "§捌 方案一/二 具體成效檢驗指標; 附錄四-2 單題 Top-2",
+      "evidence": "Q5 4.2500+1/12=4.3333; Q2 3.9167+1/12=4.0000; strict >75% at n=12 requires 10/12 and 9/12 fails—all correct. Residual issues are the undefined 3.8000/3.7000 「分析下限」 and the formula sheet's 「目標 75%」 wording."
+    },
+    {
+      "id": "C08_SAMPLE_REAL_and_authority_boundary",
+      "result": "PASS",
+      "locator": "報告基本資訊; §壹-二; §陸-一 資料屬性; 附錄二/三; 結尾句",
+      "evidence": "All 36 rows are SAMPLE_SYNTHETIC; Q8 is marker text only; REAL=UNKNOWN/HOLD, formal acceptance=NOT_GRANTED and official score=NOT_ASSIGNED. No approvals, signatures, complaints, meeting decisions or real performance are asserted."
+    },
+    {
+      "id": "C09_neighbor_separation_and_causality",
+      "result": "PASS",
+      "locator": "§貳-二 排除表; §柒-二; §玖 規則10/11; 附錄五 文件/要求表",
+      "evidence": "0139/I19-E29/index153, 0140/I19-E30/index154 and 0142/I19-E32/index156 are excluded by construct. Likert changes are reported in scale points, and causal attribution is blocked."
+    },
+    {
+      "id": "C10_prior_R06_findings",
+      "result": "PARTIAL",
+      "locator": "§伍; §參-三; §陸-一; §捌; §玖 13; sidecar register not supplied",
+      "evidence": "R06 minor 2 and 3 are resolved in the text. R06 minor 1 is not independently verifiable because the register text is absent; the R07 QA receipt's locator claims are builder metadata, not semantic proof. R06 minor 4 is only partly resolved, as noted in R07-M01."
+    },
+    {
+      "id": "C11_administrative_usability",
+      "result": "PARTIAL",
+      "locator": "§肆 SOP; §捌 action loop; §拾 replacement flow",
+      "evidence": "Roles, check windows, success measures, HOLD/REVISE and NOT_ADOPTED/NOT_EXECUTED statuses are present. The four-step/five-step replacement-flow inconsistency remains a minor usability defect."
+    }
+  ],
+  "prior_findings_disposition": {
+    "R06_minor_1_register_locators": "NOT_INDEPENDENTLY_VERIFIABLE — the sidecar register text is not in the packet. The R07 QA receipt claims 36 Chinese row locators and 44 rows bound to the exact manuscript SHA, but that receipt is not treated as semantic evidence.",
+    "R06_minor_2_core_vs_Q7": "RESOLVED — §伍 and §參-三 now separate Q1–Q6 from Q7, and §陸-一 uses the Q1–Q6 six-item count.",
+    "R06_minor_3_thresholds": "RESOLVED IN SUBSTANCE — Q2/Q5 baselines, baseline+1/12 hypothetical targets and the strict >75% Q2 Top-2 rule are published. Undefined legacy 3.8000/3.7000 floors remain a minor clarity issue.",
+    "R06_minor_4_ascii_provenance": "PARTIAL — §捌 still uses U+2011 「UNKNOWN‑sourced」; ASCII 「UNKNOWN-sourced」 appears only as a generic gate-rule phrase in §玖 13, not at the live complaint condition."
+  },
+  "reviewer_scope": "SEMANTIC_TEXT_ONLY",
+  "actual_model_identity": "UNKNOWN",
+  "tool_use_events": [],
+  "limitations": [
+    "No DOCX binary, OOXML structure, Word render, page image, chart pixel or PDF visual layer was inspected.",
+    "The sidecar replacement register was not supplied for text inspection; QA receipt metadata was not used as semantic proof.",
+    "No native provider/model metadata was available; actual model identity remains UNKNOWN.",
+    "Review used only the supplied extracted text and frozen rows; no external assumptions or real evidence were introduced."
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "real_data_status": "UNKNOWN/HOLD",
+  "official_score": "NOT_ASSIGNED"
+}

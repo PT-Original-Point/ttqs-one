@@ -1,0 +1,66 @@
+{
+  "receipt_id": "TTQS-0104-OPENCODE-WRITER-RECOVERY-R01",
+  "captured_at_utc": "2026-10-21T17:23:08.441287+00:00",
+  "db_path": "C:\\Users\\J\\.local\\share\\opencode\\opencode.db",
+  "db_read_only": true,
+  "sessions": [
+    {
+      "attempt": "attempt01",
+      "session_id": "ses_ea08d9c2affed8eMuPFmtMpS0q",
+      "title": "TTQS-0104-I18-E11-R01-WRITER",
+      "recorded_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "agent": "plan",
+      "started_utc": "2026-10-21T17:11:34.806000+00:00",
+      "ended_utc": "2026-10-21T17:17:29.961000+00:00",
+      "idle_outcome": "succeeded",
+      "local_db_cost": 0.0,
+      "aggregate_tokens": {
+        "input": 40258,
+        "output": 16107,
+        "reasoning": 44686,
+        "cache_read": 11776,
+        "cache_write": 0
+      },
+      "final_message_seq": 15,
+      "finish": "stop",
+      "response_chars": 24273,
+      "response_bytes": 45757,
+      "response_sha256": "bea16d71e8bb16e528d162bc5ea88267f3caa21e435250d5ccdfadb7c48e1969",
+      "response_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0104_I18-E11_SOURCE_PREP_20261022\\writer\\opencode_writer_response_attempt01.md"
+    },
+    {
+      "attempt": "attempt02",
+      "session_id": "ses_ea08692a6ffeaR6WbdTxP8LHwG",
+      "title": "TTQS-0104-I18-E11-R01-WRITER-20261022-R2",
+      "recorded_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "agent": "plan",
+      "started_utc": "2026-10-21T17:19:15.809000+00:00",
+      "ended_utc": "2026-10-21T17:21:57.940000+00:00",
+      "idle_outcome": "succeeded",
+      "local_db_cost": 0.0,
+      "aggregate_tokens": {
+        "input": 8128,
+        "output": 18001,
+        "reasoning": 11752,
+        "cache_read": 1792,
+        "cache_write": 0
+      },
+      "final_message_seq": 9,
+      "finish": "stop",
+      "response_chars": 27674,
+      "response_bytes": 50408,
+      "response_sha256": "f39487f92e3fd752c0e8006709d5a1b7e3b478508b23468f16961c25730331b2",
+      "response_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0104_I18-E11_SOURCE_PREP_20261022\\writer\\opencode_writer_response_attempt02.md"
+    }
+  ],
+  "attempt01_shell_exit": "UNKNOWN_RECOVERED_SESSION_IDLE_SUCCEEDED",
+  "attempt02_shell_exit": 0,
+  "attempt02_stdout_sha256": "5149a9075d2b6a7e2f995f2132b386578d05e599cdfdd24d632a5af4addc0564",
+  "attempt02_stdout_bytes": 51696
+}

@@ -1,0 +1,76 @@
+{
+  "schema": "TTQS_ONE_0119_INDEPENDENT_SEMANTIC_REVIEW_R05_RESULT",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0119",
+  "requirement_id": "I19-E07",
+  "candidate_state": "CANDIDATE_ONLY",
+  "candidate_docx_sha256": "446485ffc2e1244f2e3ff204f989cf6ffdc24b4f0b92e9be97acb8ce8d151be7",
+  "candidate_bytes": 57330,
+  "candidate_extracted_text_sha256": "939e7deea6748d3a6da301ab5b0df5be09f182a97a0db9b975c461ddac187683",
+  "source_packet_sha256": "935a5cbc91c7dadfdcd0d9f3a7a45f56dcc5013ee9dd81fef1cfedd6b5b73656",
+  "unique_blueprint_sha256": "d097c7491235e323ebca4a31ff147ee5be2e6e5f893041087fd3076664aa0473",
+  "official_requirement": {
+    "source": "official_source_0108_r11.pdf",
+    "page": 8,
+    "sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "printed_checkbox_serial": "UNKNOWN_NOT_ASSERTED"
+  },
+  "replacement_register": {
+    "path": "R03_ANTIGRAVITY_WRITER_20261029/0119_SYNTHETIC_REPLACEMENT_REGISTER_R01.csv",
+    "rows": 50,
+    "raw_file_sha256": "dc32e9693ba80d00d03315519f221b8847d8fb5a49be4522a5500ee6e6387d29",
+    "normalized_utf8_text_sha256": "19d52a02d46c2e96d3280d4bac4f38b24c5f1ca570885ece0c868a9be2e2161f",
+    "review_prompt_used_normalized_text_hash": true,
+    "same_50_rows_content_included_in_prompt": true,
+    "reconciliation": "The prompt builder read text with universal newline conversion before hashing; 19d52... is the normalized text hash, while dc32... is the raw CSV byte SHA. This is a receipt-label discrepancy only; the exact 50-row content was included and the DOCX SHA/text SHA binding is exact."
+  },
+  "review": {
+    "verdict": "PASS_REVIEWER_REPORTED",
+    "blocking_findings": 0,
+    "scope": [
+      "official mapping",
+      "document genre and title-blind identification",
+      "two independent constructs and measurement mechanics",
+      "synthetic arithmetic and periods",
+      "SAMPLE/REAL boundary",
+      "HOLD/UNKNOWN and replacement register",
+      "negative neighbors",
+      "small-association usability",
+      "human-readable formula/markup"
+    ],
+    "response_sha256": "39e80f0eb7adc0e3481bb4d5d956ba0e9236e2a82a1b47174e1c6fa129938cec",
+    "response_chars": 5705,
+    "response_path": "worker/antigravity/attempt_02_timeout_240s_20261029/review_response_recovered.txt",
+    "transcript_sha256": "e6338e1b980463f66a94ea934197139c1507c07289e6c3b8b10cb33ce27272d6",
+    "transcript_conversation_id": "1329ea78-07e3-4f82-9262-71b7ffc63d62",
+    "transcript_status": "DONE",
+    "transcript_timestamp_utc": "2026-10-29T03:15:54Z",
+    "input_tokens": 24429,
+    "output_tokens": 8671,
+    "provider_served_model": "UNKNOWN"
+  },
+  "dispatch": {
+    "requested_model": "gemini-3.8-flash-high",
+    "cli_path": "%LOCALAPPDATA%/agy/bin/agy.exe",
+    "cli_version": "1.4.9",
+    "explicit_model_override_observed": true,
+    "selected_model_label_observed": "Gemini 3.8 Flash (High)",
+    "google_cloudcode_inference_endpoint_observed": true,
+    "startup_resolver_message": "model ID not in local config, defaulting to CCPA",
+    "fallback_after_explicit_override": "no marker observed in captured native log",
+    "provider_served_model": "UNKNOWN",
+    "startup_auth": "transient unauthenticated/keyring refresh messages followed by successful loadCodeAssist/model-list/generation requests",
+    "tool_calls_observed_in_full_transcript": 0,
+    "sandbox_mode": "plan + sandbox; tool non-use observed, not mechanically guaranteed"
+  },
+  "capture_incident": {
+    "initial_attempt": "exit 2 before model call because --print-timeout value lacked duration unit; corrected to 240s in attempt 02",
+    "attempt_02_pid": 72480,
+    "attempt_02_cli_exit_code": "UNKNOWN; parent wrapper failed immediately after process launch on assignment to read-only PowerShell $PID variable",
+    "stdout_capture": "original redirected pipe unavailable; full reviewer response recovered byte-for-byte from native transcript_full.jsonl",
+    "repeated_model_call": "NO; recovered from existing session; no retry after model completion"
+  },
+  "candidate_rechecked_after_review": "446485ffc2e1244f2e3ff204f989cf6ffdc24b4f0b92e9be97acb8ce8d151be7",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_association_evidence": "UNKNOWN/HOLD"
+}

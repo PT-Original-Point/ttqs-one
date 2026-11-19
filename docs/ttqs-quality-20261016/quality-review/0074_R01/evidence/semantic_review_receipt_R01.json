@@ -1,0 +1,37 @@
+{
+  "schema": "TTQS_ONE_0074_R01_INDEPENDENT_SEMANTIC_REVIEW.v1",
+  "document_id": "0074",
+  "requirement_id": "I17A-E02",
+  "official_checkbox_serial": "081",
+  "candidate_docx_sha256": "d5a15e087d7323dd0d9c44191ae26fc0cca6bef052de8af85daa94e621e1f190",
+  "status": "PASS",
+  "review_scope": "Text-only; exact candidate extraction and official/unique Blueprint, neighboring checkboxes, same-case source excerpt, replacement register, and calculations; visual scope excluded.",
+  "reviewer_route": "OpenCode v2 CLI opencode/beam-free",
+  "reviewer_session_id": "ses_eaea39d31ffe6TaYP5xRXqGHUe",
+  "writer_route": "OpenCode v2 CLI opencode/deepseek-v4.1-flash-free",
+  "raw_receipts": {
+    "opencode_semantic_R01_stdout.jsonl": "840ac7fbe65b04fff41d0cf935face0e5f65feed54c02044cd2e2097d0fe0e77",
+    "opencode_semantic_R01_citation_correction.jsonl": "8d0e6c973c79af13f9e04f7d2275ed1d065a31e1c7b146439c5b5f01a223ab3b",
+    "opencode_semantic_R01_authority_adjudication.jsonl": "ba09003723b4dc4638db5b21a906e2df759b666d2213c0a328b66d9c4c696f9f",
+    "opencode_semantic_R01_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "opencode_semantic_R01_exit.txt": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+    "opencode_semantic_R01_citation_correction_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "opencode_semantic_R01_citation_correction_exit.txt": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+    "opencode_semantic_R01_authority_adjudication_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "opencode_semantic_R01_authority_adjudication_exit.txt": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+  },
+  "review_packet_sha256": "f6a2b000649e031c4d98101071e1c418777a542efc7227eedfadbb527722e56e",
+  "docx_extraction_sha256": "f6541f2142c4873af8609771af28723c73cf89f0db614f61ba2cc2ded7d1e808",
+  "source_0073_sha256": "a454cf0691a53173ae7838c9cd84522cf419d1d940cb63a7ddc168b497bc9b13",
+  "correction_history": [
+    "Initial PASS contained an inaccurate Table 5 SHA citation; preserved.",
+    "A bounded correction temporarily returned PARTIAL based on an unsupported in-document hash requirement; preserved.",
+    "After official Blueprint/manual and R04 display-document rule were supplied, final targeted adjudication restored criterion 6 and overall verdict to PASS; no candidate change."
+  ],
+  "nonblocking_notes": [
+    "Companion replacement register remains a separate 70-row file.",
+    "Review is semantic/text-only; no visual/user/formal acceptance claim."
+  ],
+  "candidate_state": "CANDIDATE ONLY; REAL=UNKNOWN/HOLD; FORMAL_ACCEPTANCE=NOT_GRANTED",
+  "completed_at_local": "2026-10-19T07:35:46.400959+08:00"
+}

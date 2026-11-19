@@ -1,0 +1,39 @@
+{
+  "schema": "TTQS_ONE_R12_0122_R02_HISTORY_READBACK_V1",
+  "project_id": "TTQS_ONE",
+  "observed_at_local": "2026-10-27T15:04:58.9489782+08:00",
+  "repository": "PT-Original-Point/ttqs-one",
+  "pr": 92,
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "readback_started_at_head": "628b47fcdf5bf658fd1feadc93fe15fe6f09ee02",
+  "readback_final_head": "32d1fb5c404656805d28f3ec7b6afb29394ffcc7",
+  "doc_id": "0122",
+  "requirement_id": "I19-E10",
+  "candidate_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+  "candidate_changed": false,
+  "binding_finding": "Original request extracted-text claim 81d144264640265ec015d412bdb08f3e74578b001b7621e7d4462863fb1a1e33 differs from deterministic DOCX body extraction 61a732058927a033f268171084db05f3a86cac44fe9e92dd21a7a6f77fcb47ea; original self-reported PASS remains unbound and not adopted.",
+  "semantic": "NOT_GRANTED_UNBOUND_INPUT",
+  "formal_acceptance": "NOT_GRANTED",
+  "real": "UNKNOWN/HOLD",
+  "files": [
+    {
+      "name": "ANTIGRAVITY_REVIEW_REQUEST_R02.txt",
+      "sha256": "b08a2b98872e4efbc24eedb45b1b56a93dbcd6e2861a40c2e517bac4540b0313",
+      "remote_git_blob_sha1": "ef4cfc7b6c8c6050815f1f0ee9d73e753da05145",
+      "readback": "EXACT"
+    },
+    {
+      "name": "ANTIGRAVITY_R02_RESPONSE.md",
+      "sha256": "040c302a2b1a1fee701f6ca5ff1f2c06035b6d31bbe40144c29df148df8bd0f7",
+      "remote_git_blob_sha1": "e51f20b27ebd13c09f526fbf568cb6694b2ced9e",
+      "readback": "EXACT"
+    },
+    {
+      "name": "R12_SHA_BINDING_AUDIT_0122_R02.json",
+      "sha256": "c50f22a35947c7a32eee61967bd8b9880363167f376925e6c1857ddad4f14cb0",
+      "remote_git_blob_sha1": "d38b2ee25f7c6d3809f63a97d857406ef48187df",
+      "readback": "EXACT"
+    }
+  ],
+  "next_action": "Continue unrelated READY document stages; any fresh semantic review of 0122 must bind the exact candidate and deterministic extraction and use an actually available no-cost authorized route."
+}

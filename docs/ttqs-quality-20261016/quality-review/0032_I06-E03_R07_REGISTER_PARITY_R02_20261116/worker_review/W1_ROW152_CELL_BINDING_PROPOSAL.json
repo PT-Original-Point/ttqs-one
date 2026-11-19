@@ -1,0 +1,126 @@
+{
+  "sidecar_type": "register_cell_binding",
+  "sidecar_version": "1.0",
+  "work_id": "TTQS_ONE_0032_R07_ROW152_CELL_BINDING_PROPOSAL_20261116",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0032",
+  "requirement_id": "I06-E03",
+  "candidate_revision": "R07",
+  "fact_id": "SYN-032-152",
+  "register_field": "indicator6_demo_roles_frequency_escalation",
+  "backward_compatible": true,
+  "binding_mode": "additive_sidecar_only_no_docx_change",
+  "candidate_docx_sha256": "e1d6311e9828f464aba7b9bc47c20fa8b5392951dba96cf9a71d77be73fb691f",
+  "source_register_sha256": "31f0d02d35e6b244fde51e793bd05d498a64b5c9522ea13040d2e09a2e1a985e",
+  "derived_register_r01_sha256": "f423a9057185688695dcdeb96a50e7adde338d044a3b622db46130e22a8b2a32",
+  "candidate_locator_zero_based": {
+    "table_index": 33,
+    "row_index": 6,
+    "cell_indices": [0, 1, 2, 3]
+  },
+  "included_cells": [
+    {
+      "cell_index": 1,
+      "role": "scenario_content",
+      "exact_text": "假設演練角色：主管說明方向並決策；承辦整理核驗鏈；不同角色覆核來源及交接。角色均不對應真人。"
+    },
+    {
+      "cell_index": 3,
+      "role": "scenario_content",
+      "exact_text": "年度方向訂定及重大修訂時執行；原件欠缺、授權不明或鏈條斷裂→HOLD並升級有權角色。"
+    }
+  ],
+  "excluded_cells": [
+    {
+      "cell_index": 0,
+      "role": "label_and_fact_id",
+      "exact_text": "責任與頻率 / SYN-032-152",
+      "reason": "label_and_identifier_not_scenario_content"
+    },
+    {
+      "cell_index": 2,
+      "role": "replacement_source_instruction",
+      "exact_text": "以協會實際核准職責與授權文件替換；目前授權人員 UNKNOWN。",
+      "reason": "replacement_source_instruction_not_scenario_content"
+    }
+  ],
+  "join_rule": "concatenate included_cells exact_text in ascending cell_index order with no separator, normalization, trimming, or added punctuation",
+  "bound_synthetic_value": "假設演練角色：主管說明方向並決策；承辦整理核驗鏈；不同角色覆核來源及交接。角色均不對應真人。年度方向訂定及重大修訂時執行；原件欠缺、授權不明或鏈條斷裂→HOLD並升級有權角色。",
+  "register_update_required": true,
+  "register_update": {
+    "field": "indicator6_demo_roles_frequency_escalation",
+    "synthetic_value": "假設演練角色：主管說明方向並決策；承辦整理核驗鏈；不同角色覆核來源及交接。角色均不對應真人。年度方向訂定及重大修訂時執行；原件欠缺、授權不明或鏈條斷裂→HOLD並升級有權角色。"
+  },
+  "validation_assertions": [
+    {
+      "id": "V1",
+      "expression": "candidate_docx_sha256 == 'e1d6311e9828f464aba7b9bc47c20fa8b5392951dba96cf9a71d77be73fb691f'",
+      "expected": true
+    },
+    {
+      "id": "V2",
+      "expression": "source_register_sha256 == '31f0d02d35e6b244fde51e793bd05d498a64b5c9522ea13040d2e09a2e1a985e'",
+      "expected": true
+    },
+    {
+      "id": "V3",
+      "expression": "derived_register_r01_sha256 == 'f423a9057185688695dcdeb96a50e7adde338d044a3b622db46130e22a8b2a32'",
+      "expected": true
+    },
+    {
+      "id": "V4",
+      "expression": "candidate_locator_zero_based == {\"table_index\":33,\"row_index\":6,\"cell_indices\":[0,1,2,3]}",
+      "expected": true
+    },
+    {
+      "id": "V5",
+      "expression": "included_cell_indices == [1,3]",
+      "expected": true
+    },
+    {
+      "id": "V6",
+      "expression": "excluded_cell_indices == [0,2]",
+      "expected": true
+    },
+    {
+      "id": "V7",
+      "expression": "included_cells[0].exact_text == '假設演練角色：主管說明方向並決策；承辦整理核驗鏈；不同角色覆核來源及交接。角色均不對應真人。'",
+      "expected": true
+    },
+    {
+      "id": "V8",
+      "expression": "included_cells[1].exact_text == '年度方向訂定及重大修訂時執行；原件欠缺、授權不明或鏈條斷裂→HOLD並升級有權角色。'",
+      "expected": true
+    },
+    {
+      "id": "V9",
+      "expression": "bound_synthetic_value == included_cells[0].exact_text + included_cells[1].exact_text",
+      "expected": true
+    },
+    {
+      "id": "V10",
+      "expression": "register_update_required == true",
+      "expected": true
+    },
+    {
+      "id": "V11",
+      "expression": "register_update.synthetic_value == bound_synthetic_value",
+      "expected": true
+    },
+    {
+      "id": "V12",
+      "expression": "current_register_synthetic_value != bound_synthetic_value",
+      "expected": true
+    },
+    {
+      "id": "V13",
+      "expression": "excluded_cells[0].exact_text not in bound_synthetic_value",
+      "expected": true
+    },
+    {
+      "id": "V14",
+      "expression": "excluded_cells[1].exact_text not in bound_synthetic_value",
+      "expected": true
+    }
+  ]
+}

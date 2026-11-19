@@ -1,0 +1,82 @@
+{
+  "schema": "ttqs.independent_semantic_review_receipt.v1",
+  "work_id": "0102_R33_INDEPENDENT_SEMANTIC_REVIEW",
+  "doc_id": "0102",
+  "official_requirement_id": "I18-E09",
+  "candidate_docx_sha256": "F17048266910F962D2B5DADBA62CB91863F1CECD2684486D80D3C9A0CEEF1C3A",
+  "verdict": "PARTIAL",
+  "coverage": "All 78 pages of supplied page-by-page text plus complete source packet and unique Blueprint; reviewer did not directly recompute candidate SHA or assess visual layout.",
+  "reviewer": "OpenCode CLI v2.0.32",
+  "requested_model": "opencode/deepseek-v4.1-flash-free",
+  "actual_serving_model": "UNKNOWN",
+  "session_id": "ses_e9a353840ffe5ncQnNIp0Tt7jE",
+  "cli_pid": 73552,
+  "process_terminal": "ABSENT_ON_2026-10-23T06:56:xx+08:00",
+  "cli_exit_code": "UNKNOWN_NOT_PERSISTED",
+  "returned_response": true,
+  "raw_jsonl_sha256": "3E1E139F7366CA3F6570E6F44459274CFA82D960BB6AE2E4B20D15A21B914607",
+  "response_markdown_sha256": "ED255F45D9C8A746D7451C0AD2C1C12CEC90BA33A7389050DFBFE4E0745F7BBA",
+  "replacement_character_count": 0,
+  "findings": [
+    {
+      "id": 1,
+      "heading": "1. High — Case register is transposed and contradicts its own “one row per claim” rule",
+      "disposition": "OPEN_REPAIR"
+    },
+    {
+      "id": 2,
+      "heading": "2. High — R33’s locator repair is incomplete; several replacement-register locators are wrong or stale",
+      "disposition": "OPEN_REPAIR"
+    },
+    {
+      "id": 3,
+      "heading": "3. Medium — The two SAMPLE cases do not fully realize the Blueprint’s request-pending versus consent/identity-hold contrast",
+      "disposition": "OPEN_REPAIR"
+    },
+    {
+      "id": 4,
+      "heading": "4. Medium — `course_source` sample values do not follow the form’s allowed-value rule and are semantically ambiguous",
+      "disposition": "OPEN_REPAIR"
+    },
+    {
+      "id": 5,
+      "heading": "5. Medium — CASE-01 identity is mischaracterized as “對不上” when the record says UNKNOWN",
+      "disposition": "OPEN_REPAIR"
+    },
+    {
+      "id": 6,
+      "heading": "6. Medium — CASE-02’s internal review date is already past at the R33 date, with no replacement date",
+      "disposition": "OPEN_REPAIR"
+    },
+    {
+      "id": 7,
+      "heading": "7. Medium — Form F’s “not a second ten-item gate” instruction remains operationally ambiguous",
+      "disposition": "OPEN_REPAIR"
+    },
+    {
+      "id": 8,
+      "heading": "8. Medium — CASE-01’s HOLD reason and “缺少項目” list omit consent/authority",
+      "disposition": "OPEN_REPAIR"
+    },
+    {
+      "id": 9,
+      "heading": "9. Low/Medium — Replacement register contains a duplicate-index row that is not a fact and uses the training-link column for a duplicate marker",
+      "disposition": "OPEN_REPAIR"
+    },
+    {
+      "id": 10,
+      "heading": "10. Low — The blanket “no reply is fabricated” statement is overbroad",
+      "disposition": "OPEN_REPAIR"
+    }
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "candidate_state": "CANDIDATE_ONLY_SAMPLE_SYNTHETIC",
+  "dispatch_method_deviation": "Python subprocess CREATE_NO_WINDOW was used; saved automation requires PowerShell ProcessStartInfo. No visible window was observed. Do not repeat this dispatch method.",
+  "reviewer_limitations": [
+    "Reviewer did not independently recompute candidate SHA-256.",
+    "Reviewer did not inspect visuals/layout.",
+    "Underlying official PDFs were not reopened; source packet facts were used.",
+    "Actual serving model identity and provider billing are UNKNOWN."
+  ],
+  "recorded_at_local": "2026-10-23T07:02:43.314800+08:00"
+}

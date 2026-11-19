@@ -1,0 +1,12 @@
+{
+  "receipt_id": "TTQS-R09-CLI-WINDOW-INCIDENT-20261023-01",
+  "observed_local": "2026-10-23",
+  "process": "OpenCode v2 CLI reviewer",
+  "cause": "Codex-launched Start-Process omitted -WindowStyle Hidden on the first review attempt; visible console window was created",
+  "scheduler_cause": false,
+  "remediation": "The first visible reviewer process was stopped after it stalled without a verdict; the same session was continued with a hidden-window launch and stdout/stderr redirected. Future CLI launches use hidden mode and redirected logs.",
+  "current_process_readback": "Only opencode-cli.exe serve --service PID 45628 was present; it had no MainWindowTitle. No agy.exe or OpenCode Writer/Reviewer process was running at readback.",
+  "screenshot_matches": "OpenCode CLI console window",
+  "status": "CAUSE_CONFIRMED_REMEDIATED_FOR_THIS_RUN",
+  "no_schedule_change": true
+}

@@ -1,0 +1,56 @@
+{
+  "schema": "TTQS_ONE_ANTIGRAVITY_AUTH_RECORDER_FAULT_R08",
+  "project_id": "TTQS_ONE",
+  "command": "RESTORE_ANTIGRAVITY_HEADLESS_AUTH_WITHOUT_RELOGIN",
+  "observed_at_local": "2026-10-29T08:40+08:00",
+  "windows_context": {
+    "whoami_match": "same Windows user as previously confirmed TUI screenshot and 07:59 successful headless probe",
+    "user_profile": "%USERPROFILE%",
+    "local_app_data": "%LOCALAPPDATA%",
+    "agy_path": "%LOCALAPPDATA%\\agy\\bin\\agy.exe",
+    "cli_version": "1.4.9",
+    "credential_manager_target_present": true,
+    "credential_values_read": false
+  },
+  "latest_valid_probe": {
+    "time": "2026-10-29T07:59:39-07:59:46+08:00",
+    "exit_code": 0,
+    "stdout": "EXACT_AGY_HEADLESS_OK",
+    "stdout_sha256": "ad469f03757a9ac0ff6daa4cde3c4afed963f91f7d2f7c3c8c50fe186ba61e84",
+    "requested_model": "gemini-3.8-flash-high",
+    "explicit_route": "Gemini 3.8 Flash (High) override logged; Google streamGenerateContent endpoint observed; no fallback marker in captured log",
+    "provider_served_model": "UNKNOWN",
+    "native_log_sha256": "9b1a28ad2c934f819e1c153c252eb8433c1d245e019313d495ac28cc2b5a052e",
+    "local_receipt_sha256": "0e20d148f6149fc1ec4a707856b6d986ebe3d2d2338df9ad7d6d301c68449ecc"
+  },
+  "later_bounded_attempt": {
+    "attempt": "2026-10-29 08:23 local",
+    "process_start_claimed_by_local_fault_receipt": true,
+    "recorder_error": "PowerShell assignment to reserved read-only $PID immediately after Process.Start",
+    "stdout": "UNKNOWN_NO_ARTIFACT",
+    "stderr": "UNKNOWN_NO_ARTIFACT",
+    "exit_code": "UNKNOWN",
+    "post_readback_process": "not observed at 08:23",
+    "custom_log": "not found",
+    "model_request_or_charge": "UNKNOWN",
+    "retry": "NOT PERFORMED"
+  },
+  "authentication_assessment": {
+    "headless_auth": "PASS_AT_07:59_TEST_TIME; 08:23 ATTEMPT UNVERIFIED",
+    "tui_auth": "PASS_AT_HUMAN_SCREENSHOT_TIME; current live TUI not read",
+    "underlying_historical_21_39_failure": "UNKNOWN_NOT_REPRODUCED",
+    "oauth_action_required": false,
+    "root_cause": "08:23 missing result is VERIFIED_RECORDER_FAULT; no evidence establishes current account logout"
+  },
+  "document_0128": {
+    "candidate_sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
+    "docx_mutation": "NONE",
+    "visual_qa": "PASS_13_OF_13_PAGES",
+    "existing_semantic_review": "PASS_TEXT_ONLY_EXACT_SHA; reuse existing receipt, no duplicate dispatch",
+    "served_model_identity": "UNKNOWN",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "local_fault_receipt_sha256": "57be2243326078d97aa45d54758aa4762ae46abe60278e92504dc92d92e5c5d1",
+  "source_r07_receipt_github_blob_sha1": "e8d65621f07d095b0164fa7eb947ff61501fb1a6",
+  "no_tokens_cookies_or_credential_values_published": true
+}

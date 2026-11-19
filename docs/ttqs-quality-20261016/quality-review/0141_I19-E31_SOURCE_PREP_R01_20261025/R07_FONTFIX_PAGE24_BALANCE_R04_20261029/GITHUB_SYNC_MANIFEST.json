@@ -1,0 +1,92 @@
+{
+  "schema": "ttqs-one-candidate-sync-manifest-v1",
+  "generated_at_utc": "2026-10-28 21:10:12 UTC",
+  "project_id": "TTQS_ONE",
+  "pr": 92,
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "base_head": "25ade4aac63a8d1b058f408fc30e434c6865f4e4",
+  "document": {
+    "doc_id": "0141",
+    "official_requirement_id": "I19-E31",
+    "official_checkbox": "I19-E31",
+    "unique_blueprint_index_157": 155,
+    "source_packet_sha256": "43c0e1bda5dfeb12c1ba8fc8805b876641f5184e4bf95eb4ef6c3182cf8ee964",
+    "unique_blueprint_sha256": "e19761674045b2defa7090ba1d8f1224943a89e54811180c20b9ea362de59cda"
+  },
+  "candidate": {
+    "revision": "R04",
+    "status": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+    "sha256": "de111911a549a0be0bd6381a6b22ed694881ba6b3f83528d2b4a4e153002142b",
+    "technical_qa": "PASS",
+    "visual_qa": "PASS_WITH_SCOPED_VISUAL_COVERAGE",
+    "semantic_review": "PASS_EXACT_DOCX_AND_TEXT_SHA",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_data": "UNKNOWN"
+  },
+  "review_route": {
+    "worker": "Antigravity CLI",
+    "requested_model": "gemini-3.8-flash-high",
+    "cli_selected_model": "gemini-3.8-flash-high",
+    "provider_served_model": "UNKNOWN",
+    "provider_attestation": "UNKNOWN",
+    "tool_calls": 0
+  },
+  "qa_scope": {
+    "technical": "Deterministic checks bound to the exact candidate SHA; 28-page Word-native candidate; body minimum 10.5 pt, table minimum 9.5 pt; 36 SAMPLE responses and 44 replacement-register rows.",
+    "visual": "Direct visual inspection covered pages 23-24; other 26 page rasters match R03. This is not a fresh direct inspection of all 28 pages.",
+    "semantic": "Text semantic and factual consistency only; exact DOCX and extracted-text SHA; no required repairs."
+  },
+  "files": [
+    {
+      "role": "candidate_docx",
+      "path": "docs/ttqs-quality-20261016/quality-review/0141_I19-E31_SOURCE_PREP_R01_20261025/R07_FONTFIX_PAGE24_BALANCE_R04_20261029/candidate/0141_I19-E31_R07_FONTFIX_PAGE24_BALANCE_R04_CANDIDATE.docx",
+      "local_sha256": "de111911a549a0be0bd6381a6b22ed694881ba6b3f83528d2b4a4e153002142b",
+      "git_blob_sha": "4b2cb05a3eb68d475d2af6b86d393bb61141131b",
+      "bytes": 164740
+    },
+    {
+      "role": "technical_qa",
+      "path": "docs/ttqs-quality-20261016/quality-review/0141_I19-E31_SOURCE_PREP_R01_20261025/R07_FONTFIX_PAGE24_BALANCE_R04_20261029/qa/TECHNICAL_QA_0141_R04.json",
+      "local_sha256": "35d785708d5a50e299db0b0e4a0207a7954d993c2e274b1447ab6079902c22ce",
+      "git_blob_sha": "c4121743894a4540810e4c8c7b71d9684b54a8da",
+      "bytes": 8378
+    },
+    {
+      "role": "visual_qa",
+      "path": "docs/ttqs-quality-20261016/quality-review/0141_I19-E31_SOURCE_PREP_R01_20261025/R07_FONTFIX_PAGE24_BALANCE_R04_20261029/qa/VISUAL_REVIEW_RECEIPT_0141_R04.json",
+      "local_sha256": "26dd77f1c55958ff7bbe5ea6b861ef8f5e994416d8448cb35abff0ec066faecb",
+      "git_blob_sha": "3d8145fc19cc191843217573a90663d2d2b84213",
+      "bytes": 1585
+    },
+    {
+      "role": "quality_status_delta",
+      "path": "docs/ttqs-quality-20261016/quality-review/0141_I19-E31_SOURCE_PREP_R01_20261025/R07_FONTFIX_PAGE24_BALANCE_R04_20261029/qa/QUALITY_STATUS_DELTA.json",
+      "local_sha256": "905ab830235561043e95f78140f022835c97839468863c56cd4bbd40fdf0770a",
+      "git_blob_sha": "f69eca75cc98b5a7f53e415e3a4bbf13196e8f17",
+      "bytes": 1341
+    },
+    {
+      "role": "semantic_review_raw_response",
+      "path": "docs/ttqs-quality-20261016/quality-review/0141_I19-E31_SOURCE_PREP_R01_20261025/R07_FONTFIX_PAGE24_BALANCE_R04_20261029/review/ANTIGRAVITY_SEMANTIC_REVIEW_R04_R01.json",
+      "local_sha256": "eba62f86e35c576704b124cdc742f4bf56ce2ce08f9ceb3b057abcbd501b059a",
+      "git_blob_sha": "2f0cc1ae20cf71e17965ed7db20169ff802f89a3",
+      "bytes": 8879
+    },
+    {
+      "role": "review_receipt",
+      "path": "docs/ttqs-quality-20261016/quality-review/0141_I19-E31_SOURCE_PREP_R01_20261025/R07_FONTFIX_PAGE24_BALANCE_R04_20261029/review/PUBLIC_REVIEW_RECEIPT.json",
+      "local_sha256": "5d890a139fe603c9d79be5d243633ff2cd7e18bea6db00fa3144562e6c43f0b8",
+      "git_blob_sha": "0895e9691d1872d8df46c86b3f3147102cbd18b9",
+      "bytes": 3278
+    },
+    {
+      "role": "dispatch_terminal",
+      "path": "docs/ttqs-quality-20261016/quality-review/0141_I19-E31_SOURCE_PREP_R01_20261025/R07_FONTFIX_PAGE24_BALANCE_R04_20261029/review/DISPATCH_TERMINAL.json",
+      "local_sha256": "18e462e14d9ffdb49466893e5fd413c456fb10344adc5a49a3d4ef71ceb68445",
+      "git_blob_sha": "17984242bcccd188942ea383513776c150ff5849",
+      "bytes": 2335
+    }
+  ],
+  "note": "REAL operational evidence remains unavailable/UNKNOWN. SAMPLE/SYNTHETIC content is not represented as actual association execution, approval, or results. This sync does not grant formal acceptance."
+}

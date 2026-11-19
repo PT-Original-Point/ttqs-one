@@ -1,0 +1,21 @@
+{
+  "reviewer": "Bernoulli independent subagent",
+  "reviewer_agent_id": "01a188e1-1a59-7be2-a7a5-d3cbcd5cca04",
+  "reviewed_at_tpe": "2026-10-30",
+  "document_id": "0013",
+  "requirement_id": "I02-E04",
+  "candidate_path": "candidate/0013_I02-E04_R10.docx",
+  "candidate_sha256": "fb988f91f02653d408f67f94c5d24576b8ef27d2116ad32c99a49f48b6cdf514",
+  "verdict": "PARTIAL",
+  "scope": "Exact-SHA semantic review of official requirement, unique Blueprint row, 67 fact crosswalks and synthetic replacement register, calculations, publication controls, SAMPLE/REAL boundary, title-blind identification, negative-neighbor distinction, and operational usability. No visual review was included.",
+  "finding": {
+    "fact_id": "SYN-0013-F002",
+    "locator_in_candidate": "§6.2–§6.5 表7–10「開課日期／期間」欄（2027 年 SAMPLE）",
+    "issue": "The referenced field label is not exact. Tables 7–10 use 「日期與時段」.",
+    "repair": "Update only the F002 locator in the crosswalk and matching synthetic replacement register; then re-render and obtain a fresh exact-SHA semantic review."
+  },
+  "other_reviewed_items": "F013 locator, remaining 65 crosswalk entries, 67-row counts, 30 training hours, 74 places, enrollment ratios, publication gate, and SAMPLE/REAL boundary were PASS within the reviewed scope.",
+  "limitations": "No visual review; no REAL publication, approval, or association evidence was provided. Formal acceptance remains UNKNOWN.",
+  "raw_response_path": "qa/semantic_review_R10_original_response.md",
+  "raw_response_sha256": "D589CC7BC5E301FB7FA80D85A3BE3AC836112FA04149B580526A7D6E57B9DDE9"
+}

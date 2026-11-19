@@ -1,0 +1,23 @@
+{
+  "schema": "TTQS_ONE_0138_RAW_BYTE_NORMALIZATION_CORRECTION_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0138",
+  "candidate_sha256": "f06439849ba70d0ad665d760d0a422382d9f4a991ca449b36f05fae39abd5a27",
+  "base_head": "a40b9c7514de854ca766f4ab3aed72cd2f6268d6",
+  "observed_at_local": "2026-10-27T09:23:38.325930+08:00",
+  "pre_repair_readback": {
+    "files": 17,
+    "exact_raw_bytes": 13,
+    "mismatches": 4,
+    "mismatching_files": [
+      "BUILD_RECEIPT_0138_R08.json",
+      "TECHNICAL_QA_0138_R08.json",
+      "VISUAL_QA_0138_R08.json",
+      "SAMPLE_REAL_REPLACEMENT_REGISTER_0138_R08.md"
+    ]
+  },
+  "root_cause": "Windows Git core.autocrlf=true normalized four text sidecars when committed; earlier object-ID comparison was not raw-byte proof.",
+  "scope": "Four text evidence files only: BUILD_RECEIPT_0138_R08.json, TECHNICAL_QA_0138_R08.json, VISUAL_QA_0138_R08.json, SAMPLE_REAL_REPLACEMENT_REGISTER_0138_R08.md. The DOCX and PDF are already byte-exact.",
+  "repair": "Add scoped .gitattributes -text entries and recommit the original local byte arrays; no DOCX build or semantic review is authorized or needed.",
+  "verification": "Post-push raw byte comparison of all 17 listed files is pending."
+}

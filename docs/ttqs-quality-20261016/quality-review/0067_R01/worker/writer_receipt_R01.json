@@ -1,0 +1,44 @@
+{
+  "schema": "ttqs.worker_execution_receipt.v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0067",
+  "revision": "R01",
+  "result_state": "WRITER_RETURNED_CANDIDATE_BODY_PENDING_DOCX_QA",
+  "cli": "OpenCode v2.0.29",
+  "model": "opencode/beam-free",
+  "session_id": "ses_eaf331c17ffeItVk7JDXwrWHP6",
+  "input_commit": "1ce2960202fdab986f77e8eeb0a53bad0b0dce33",
+  "input_task_path": "docs/ttqs-quality-20261016/quality-review/0067_R01/worker/WRITER_TASK_R01.md",
+  "input_task_sha256": "47fedd4b5e6335ff3c5f96e92f64e2bad234f8ef7e88df628dfeaa8b5a0569d5",
+  "invocation_policy": {
+    "auto_approve": false,
+    "computer_use": false,
+    "writer_count": 1
+  },
+  "attempts": [
+    {
+      "attempt": 1,
+      "exit_code": 1,
+      "classification": "CLI_INVOCATION_ERROR_BEFORE_MODEL_RESPONSE",
+      "evidence_path": "opencode_writer_R01_stdout.jsonl",
+      "stderr_path": "opencode_writer_R01_stderr.txt"
+    },
+    {
+      "attempt": 2,
+      "exit_code": 0,
+      "stdout_path": "opencode_writer_R01_attempt2_stdout.jsonl",
+      "stdout_sha256": "747df533dbacd72c37e987d64bd946de3c84fe3b0a38e9efc0de4859d326d094",
+      "stderr_path": "opencode_writer_R01_attempt2_stderr.txt",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "body_path": "opencode_writer_R01_body.md",
+  "body_sha256": "13d77ca1968360395b9a1c75f00d88e78794e534cb8674a9b84a04a567f0bfe7",
+  "body_bytes": 41063,
+  "raw_stdout_jsonl_sha256": "747df533dbacd72c37e987d64bd946de3c84fe3b0a38e9efc0de4859d326d094",
+  "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "completed_local_time": "2026-10-19T04:59:43.669127+08:00",
+  "secret_scan": "PASS_PATTERN_SCAN_ONLY",
+  "credentials_found": 0,
+  "qa_status": "BODY_MATH_AND_REGISTER_CHECKS_PASS; DOCX_LAYOUT_AND_INDEPENDENT_SEMANTIC_REVIEW_PENDING"
+}

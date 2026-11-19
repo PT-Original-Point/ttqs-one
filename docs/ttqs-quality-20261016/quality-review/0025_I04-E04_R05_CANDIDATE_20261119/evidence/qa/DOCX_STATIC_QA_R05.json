@@ -1,0 +1,147 @@
+{
+  "schema": "TTQS_ONE_0025_R05_STATIC_QA/3",
+  "work_id": "TTQS_ONE_0025_I04-E04_STATIC_QA_R05_20261119",
+  "doc_id": "0025",
+  "requirement_id": "I04-E04",
+  "candidate_sha256": "B72A65EA05D118C6479747280DBA768AC27ECB0B2A335FDD61C0FA2A32D9FC2D",
+  "source_packet_sha256": "46112EDAD5C828AD4B53F4415A519E16BAD74151136D8795F75D053FEF075F23",
+  "blueprint_sha256": "D63626B36BE27FCB98EB51AFF7BAAAEB8019723B88661A349311420D9E259B90",
+  "blueprint_row_sha256": "35480951C5DF124DFD96F43A6BA613305F120C5D962A45C515343E0D94E6BB1C",
+  "table_count": 28,
+  "cell_count": 1142,
+  "empty_cells": 0,
+  "external_relationships": 0,
+  "only_three_scoped_cells_changed": true,
+  "changed_cells": [
+    {
+      "table": 16,
+      "row": 5,
+      "col": 4,
+      "before": "SAMPLE 個人門檻 80 分；REAL 門檻 UNKNOWN",
+      "after": "無群體平均門檻（描述性）；個人後測 80 分為 SAMPLE 個人評量標準，不得套用於平均值；REAL 群體平均目標 UNKNOWN"
+    },
+    {
+      "table": 21,
+      "row": 5,
+      "col": 6,
+      "before": "描述性",
+      "after": "描述性；個人後測 80 分僅適用個人通過率，不作群體平均門檻；REAL 群體平均目標 UNKNOWN"
+    },
+    {
+      "table": 23,
+      "row": 4,
+      "col": 4,
+      "before": "SAMPLE；4 模組、時數、講師、教材",
+      "after": "SAMPLE；3 模組、時數、講師、教材"
+    }
+  ],
+  "non_table_paragraphs_unchanged": true,
+  "style_font_proof": "word/styles.xml: Normal style w:sz=24 half-points (12pt); used paragraph styles 1/2/3 are 24/18/13.5pt, center/Web/small inherit Normal; used character styles a3/tag inherit default paragraph font, HTML=12pt; no direct w:sz or w:szCs in word/document.xml.",
+  "body_min_effective_pt": 12,
+  "table_min_effective_pt": 12,
+  "body_below_10_5": 0,
+  "table_below_9_5": 0,
+  "roster_recomputed": {
+    "students": 18,
+    "valid_scores": 16,
+    "attendance": 16,
+    "pretest_sum": 960,
+    "posttest_sum": 1360,
+    "initial_pass_80_or_higher": 14
+  },
+  "math_all_pass": true,
+  "math_checks": [
+    {
+      "id": "出席率",
+      "numerator": 16,
+      "denominator": 18,
+      "formula": "16÷18×100%",
+      "recorded_result": "88.89",
+      "recomputed_result": 88.89,
+      "present_and_consistent": true
+    },
+    {
+      "id": "實施符合度（模組）",
+      "numerator": 3,
+      "denominator": 3,
+      "formula": "3÷3×100%",
+      "recorded_result": "100",
+      "recomputed_result": 100.0,
+      "present_and_consistent": true
+    },
+    {
+      "id": "前測平均",
+      "numerator": 960,
+      "denominator": 16,
+      "formula": "960÷16",
+      "recorded_result": "60",
+      "recomputed_result": 60.0,
+      "present_and_consistent": true
+    },
+    {
+      "id": "後測平均",
+      "numerator": 1360,
+      "denominator": 16,
+      "formula": "1360÷16",
+      "recorded_result": "85",
+      "recomputed_result": 85.0,
+      "present_and_consistent": true
+    },
+    {
+      "id": "前後測平均差",
+      "numerator": 25,
+      "denominator": 16,
+      "formula": "後測平均−前測平均",
+      "recorded_result": "25",
+      "recomputed_result": 25.0,
+      "present_and_consistent": true
+    },
+    {
+      "id": "有效評量通過率（初次）",
+      "numerator": 14,
+      "denominator": 16,
+      "formula": "14÷16×100%",
+      "recorded_result": "87.5",
+      "recomputed_result": 87.5,
+      "present_and_consistent": true
+    },
+    {
+      "id": "問卷回覆率",
+      "numerator": 15,
+      "denominator": 16,
+      "formula": "15÷16×100%",
+      "recorded_result": "93.75",
+      "recomputed_result": 93.75,
+      "present_and_consistent": true
+    },
+    {
+      "id": "平均滿意度",
+      "numerator": 66,
+      "denominator": 15,
+      "formula": "66÷15",
+      "recorded_result": "4.4",
+      "recomputed_result": 4.4,
+      "present_and_consistent": true
+    },
+    {
+      "id": "補救成功率",
+      "numerator": 2,
+      "denominator": 2,
+      "formula": "2÷2×100%",
+      "recorded_result": "100",
+      "recomputed_result": 100.0,
+      "present_and_consistent": true
+    },
+    {
+      "id": "補救後出席者達標率",
+      "numerator": 16,
+      "denominator": 16,
+      "formula": "16÷16×100%",
+      "recorded_result": "100",
+      "recomputed_result": 100.0,
+      "present_and_consistent": true
+    }
+  ],
+  "status": "PASS_STATIC_PENDING_SEMANTIC",
+  "recorded_at_tpe": "2026-11-19T00:28:29.3249109+08:00"
+}

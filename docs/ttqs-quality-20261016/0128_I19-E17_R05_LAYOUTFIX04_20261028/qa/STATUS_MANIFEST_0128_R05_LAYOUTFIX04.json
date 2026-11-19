@@ -1,0 +1,159 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0128",
+  "official_requirement_id": "I19-E17",
+  "revision": "R05_LAYOUTFIX04",
+  "local_observed_at": "2026-10-28T20:19:00.200662+08:00",
+  "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "candidate_docx": {
+    "path": "candidate/0128_I19-E17_R05_LAYOUTFIX04_CANDIDATE.docx",
+    "sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
+    "bytes": 56424
+  },
+  "source_hashes": {
+    "unique_blueprint_sha256": "f396793da8db5f7d0092ae5bb90f36b93098fdc4d9f25093db74760864796ffb",
+    "source_packet_sha256": "94699015ab0a316f09e500bd44f8fa6e7474e613557a6cffc322548f7c94307b",
+    "official_mapping": {
+      "path": "source/MAPPING_EVIDENCE_0128_R01.json",
+      "sha256": "5086a5b50eb72d46090e1781796cc73325d1e4581fa44beb803adb2302ace12b",
+      "bytes": 1114
+    },
+    "source_packet": {
+      "path": "source/SOURCE_PACKET_0128_I19-E17_R01.md",
+      "sha256": "94699015ab0a316f09e500bd44f8fa6e7474e613557a6cffc322548f7c94307b",
+      "bytes": 6453
+    },
+    "unique_blueprint": {
+      "path": "source/UNIQUE_BLUEPRINT_0128_I19-E17_R01.md",
+      "sha256": "f396793da8db5f7d0092ae5bb90f36b93098fdc4d9f25093db74760864796ffb",
+      "bytes": 6809
+    },
+    "sample_data": {
+      "path": "source/SAMPLE_INDIVIDUAL_PERFORMANCE_PANEL_R01.csv",
+      "sha256": "831cf00c91fd5078a4128c2576ff5a005c3e3243b71edced5599d18c1c3c91a4",
+      "bytes": 2927
+    },
+    "synthetic_register": {
+      "path": "source/SYNTHETIC_REPLACEMENT_REGISTER_0128_R01.csv",
+      "sha256": "ea06f9aa1083bd7c48f959a85dfd2ede1a480df485b51652087ce7fae7037826",
+      "bytes": 2623
+    }
+  },
+  "quality": {
+    "technical_status": "PASS",
+    "technical_receipt_sha256": "f1bde03ac493487eb524ecd5f1cbc570acc3f4bfdbc6077c2233bbb19ef65ceb",
+    "visual_status": "PASS",
+    "visual_receipt_sha256": "bb4eb08e5ccb771b7333d03e15f39926a31578abfe27b005b2c4613f7556e290",
+    "visual_pages": {
+      "manual_reinspection_pages": [
+        9,
+        12,
+        13
+      ],
+      "inherited_byte_identical_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11
+      ],
+      "covered_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "all_pages_covered": true
+    },
+    "word_native_pdf_sha256": "e6e676c260abe7dd4a044af8ad0df098c0c2beb66c0900c3ec8595215b2b703a",
+    "word_native_page_count": 13,
+    "table_math": {
+      "sample_rows": 6,
+      "cases": 6,
+      "pre_correct": 93,
+      "pre_denominator": 120,
+      "pre_percent": 77.5,
+      "post_correct": 101,
+      "post_denominator": 120,
+      "post_percent": 84.17,
+      "percentage_point_change": 6.67,
+      "skill_demo_sum_before": 33,
+      "skill_demo_sum_after": 48
+    },
+    "font_floor": {
+      "minimum_explicit_body_half_points": 21,
+      "minimum_explicit_table_half_points": 19,
+      "body_explicit_runs_at_least_10_5pt": true,
+      "table_explicit_runs_at_least_9_5pt": true,
+      "document_default_half_points": 22,
+      "style_fallbacks": [
+        {
+          "style_id": "Normal",
+          "direct_run_half_points": 21,
+          "based_on": null
+        },
+        {
+          "style_id": "TableGrid",
+          "direct_run_half_points": null,
+          "based_on": "TableNormal"
+        },
+        {
+          "style_id": "Heading1",
+          "direct_run_half_points": 30,
+          "based_on": "Normal"
+        },
+        {
+          "style_id": "Title",
+          "direct_run_half_points": 38,
+          "based_on": "Normal"
+        }
+      ],
+      "assessment_scope": "direct body/table run sizes plus document default/style source values recorded; headers/footers use footer style"
+    },
+    "semantic_content_status": "INHERITED_SEMANTIC_SCOPE_ONLY",
+    "semantic_content_equivalence_receipt_sha256": "73b0c46e3940433114f0db3df141a4ff8374b1505b48d4c42ea6dd812e31e500",
+    "prior_semantic_review_docx_sha256": "e9fe9b87751dd588f290a84cc2c134c367d1f8f6a15dd679013dcc9e5fe0f242",
+    "fresh_independent_reviewer_on_current_exact_sha": "NOT_OBTAINED",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "worker_route": {
+    "opencode": {
+      "requested_model": "opencode/deepseek-v4.1-flash-free",
+      "actual_model": "UNKNOWN",
+      "state": "BLOCKED_TEMPORARY_FREE_LIMIT",
+      "http_status": 429,
+      "raw_attempt_sha256": "e553d7b1d41fcad102fba83799088a0a0fbcdd5d7669319b6914fa4cc90311da",
+      "same_request_retry": "FORBIDDEN_UNTIL_NEW_EVIDENCE_OR_RESET",
+      "paid_fallback": "NOT_USED"
+    },
+    "antigravity": "NOT_DISPATCHED_FOR_THIS_CANDIDATE"
+  },
+  "truth_boundary": {
+    "sample_data": "SYNTHETIC; six cases; 120 task observations in aggregate",
+    "real_evidence": "UNKNOWN_UNTIL_SOURCE",
+    "real_signatures_or_approvals": "NONE_CLAIMED"
+  },
+  "remote": {
+    "repository": "PT-Original-Point/ttqs-one",
+    "pull_request": 92,
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "head_before_publish": "91c6ffc5760ed6752b5d81b674ac5de06f1467b2",
+    "candidate_path_status": "NEW_PACKAGE_CREATED_FROM_BRANCH_HEAD_91c6ffc5760ed6752b5d81b674ac5de06f1467b2",
+    "readback": "PENDING",
+    "expected_remote_prefix": "docs/ttqs-quality-20261016/0128_I19-E17_R05_LAYOUTFIX04_20261028/"
+  }
+}

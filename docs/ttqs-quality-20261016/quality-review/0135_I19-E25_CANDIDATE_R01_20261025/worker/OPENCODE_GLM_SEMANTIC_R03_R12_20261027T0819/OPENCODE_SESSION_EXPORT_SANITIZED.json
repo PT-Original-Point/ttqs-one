@@ -1,0 +1,94 @@
+{
+  "info": {
+    "id": "ses_e8544289bffeNRi5T4R1l2X87Y",
+    "projectID": "6d9ab3c27b8434db85fc8b80232fb3e0deb4c9f2",
+    "model": {
+      "id": "glm-5.3-flash-free",
+      "providerID": "opencode",
+      "variant": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 14697,
+      "output": 1791,
+      "reasoning": 718,
+      "cache": {
+        "read": 2432,
+        "write": 0
+      }
+    },
+    "outcome": "succeeded",
+    "time": {
+      "created": 1793060493162,
+      "updated": 1793060549488,
+      "idle": 1793060549493
+    },
+    "title": "[redacted:session-title:ses_e8544289bffeNRi5T4R1l2X87Y]",
+    "location": {
+      "directory": "/[redacted:session-directory:ses_e8544289bffeNRi5T4R1l2X87Y]"
+    }
+  },
+  "messages": [
+    {
+      "id": "msg_17abbd77b001pbLQCWfGZjhTUd",
+      "time": {
+        "created": 1793060493273
+      },
+      "text": "[redacted:text:msg_17abbd77b001pbLQCWfGZjhTUd]",
+      "files": [],
+      "type": "user"
+    },
+    {
+      "id": "msg_17abbd7e30019LQif6O9I8z62e",
+      "time": {
+        "created": 1793060493297,
+        "streamed": 1793060549485,
+        "completed": 1793060549488
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "glm-5.3-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_17abbd7e30019LQif6O9I8z62e]",
+          "native": {
+            "redacted": "reasoning-native:msg_17abbd7e30019LQif6O9I8z62e"
+          },
+          "time": {
+            "created": 1793060495026,
+            "completed": 1793060549477
+          }
+        },
+        {
+          "type": "text",
+          "text": "[redacted:text:msg_17abbd7e30019LQif6O9I8z62e]"
+        }
+      ],
+      "finish": "stop",
+      "rawFinish": "stop",
+      "cost": 0,
+      "tokens": {
+        "input": 14697,
+        "output": 1791,
+        "reasoning": 718,
+        "cache": {
+          "read": 2432,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_17abcb375001uQ1vaY2LQRVuTy",
+      "time": {
+        "created": 1793060549493
+      },
+      "type": "idle",
+      "outcome": "succeeded"
+    }
+  ]
+}

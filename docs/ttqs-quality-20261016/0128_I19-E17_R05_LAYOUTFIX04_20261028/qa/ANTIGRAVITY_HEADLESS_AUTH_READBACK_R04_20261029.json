@@ -1,0 +1,75 @@
+{
+  "schema": "TTQS_ONE_ANTIGRAVITY_HEADLESS_AUTH_READBACK_R04",
+  "project_id": "TTQS_ONE",
+  "command": "RESTORE_ANTIGRAVITY_HEADLESS_AUTH_WITHOUT_RELOGIN",
+  "observed_at_local": "2026-10-29T05:18:04+08:00",
+  "windows": {
+    "whoami": "DESKTOP-VMV4Q60\\J",
+    "userprofile": "C:\\Users\\J",
+    "localappdata": "C:\\Users\\J\\AppData\\Local",
+    "cli_process_user": "DESKTOP-VMV4Q60\\J",
+    "tui_user_comparison": "CASE_INSENSITIVE_MATCH_TO_HUMAN_PROVIDED_SAME_USER_EVIDENCE",
+    "current_tui_screen_readback": "NOT_PERFORMED",
+    "credential_manager": {
+      "visible_target_count": 18,
+      "google_or_agy_matching_target_present": true,
+      "matching_target_count": 1,
+      "credential_values_read_or_recorded": false,
+      "exact_cli_keyring_retrieval_path": "UNKNOWN"
+    }
+  },
+  "cli": {
+    "path": "C:\\Users\\J\\AppData\\Local\\agy\\bin\\agy.exe",
+    "version": "1.4.9",
+    "version_matches_human_provided_tui_screenshot": true,
+    "help_confirmed_print_model_mode_sandbox_output_format": true
+  },
+  "test": {
+    "process_id": 98928,
+    "process_user": "DESKTOP-VMV4Q60\\J",
+    "requested_model": "gemini-3.8-flash-high",
+    "model_list_contains_requested_slug": true,
+    "arguments_safety": {
+      "mode": "plan",
+      "sandbox": true,
+      "disable_slash_commands": true,
+      "prompt": "Reply with exactly AGY_HEADLESS_OK. Do not use tools.",
+      "output_format": "text",
+      "wrapper_timeout_ms": 60000,
+      "window": "hidden"
+    },
+    "exit_code": 0,
+    "elapsed_ms": 6658,
+    "stdout_classification": "EXACT_AGY_HEADLESS_OK",
+    "stdout_sha256": "ad469f03757a9ac0ff6daa4cde3c4afed963f91f7d2f7c3c8c50fe186ba61e84",
+    "stderr_classification": "NONEMPTY_NO_AUTH_OR_FALLBACK_SIGNAL",
+    "stderr_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+    "stdout_path": "C:\\Users\\J\\AppData\\Local\\agy-login-check\\headless_20261029_051804.stdout.txt",
+    "stderr_path": "C:\\Users\\J\\AppData\\Local\\agy-login-check\\headless_20261029_051804.stderr.txt",
+    "provider_attested_served_model": "UNKNOWN",
+    "inference_fallback_observed_in_captured_stdout_stderr": false,
+    "tool_event_count": "UNKNOWN"
+  },
+  "auth_finding": {
+    "tui_auth": "PASS_AT_HUMAN_SCREENSHOT_TIME",
+    "headless_auth": "PASS_AT_TEST_TIME",
+    "previous_2026_10_28_21_39_login_error_root_cause": "UNKNOWN",
+    "persistent_login_loss_supported": false,
+    "oauth_action_required": false
+  },
+  "doc_0128": {
+    "doc_id": "0128",
+    "requirement_id": "I19-E17",
+    "candidate_revision": "R05_LAYOUTFIX04",
+    "candidate_docx_sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
+    "github_raw_readback_at_head": "3e2704ce29b6d2ff11a2a1f670791cd54cb6567a",
+    "github_raw_readback_sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
+    "visual_qa": "PASS_13_OF_13_PAGES_EXACT_SHA",
+    "semantic_review": "PASS_TEXT_ONLY_EXACT_SHA_ALREADY_RECORDED",
+    "reviewer_response_sha256": "d1da027af787e02178b74dc2bb5e3717ec43bec8d6ef35fa9c2ddb19255d0b4c",
+    "reviewer_provider_attested_model": "UNKNOWN",
+    "duplicate_review_dispatch": "NOT_REQUIRED_CANDIDATE_AND_SCOPE_UNCHANGED",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "other_ready_work": "NO_GLOBAL_STOP_OR_HOLD_FROM_THIS_REVIEWER_ROUTE"
+}

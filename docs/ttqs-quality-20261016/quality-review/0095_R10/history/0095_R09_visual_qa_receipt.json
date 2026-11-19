@@ -1,0 +1,61 @@
+{
+  "receipt_type": "Word-render visual QA",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0095",
+  "requirement_id": "I18-E02",
+  "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "revision": "R09",
+  "docx_sha256": "e1be4a9e9a0c61216416f6ff955bb1be3ed5d1f636550ea82bea4b5431e0ed8e",
+  "pdf_path": "qa/render_0095_R09_final02/0095_R09_CANDIDATE.pdf",
+  "pdf_sha256": "ab78192fb5297b88ecd240eee21ed08f52d7e8a0f5c53e9edf04568f8217a23f",
+  "pdf_pages": 43,
+  "render_method": "Microsoft Word COM ExportAsFixedFormat to PDF; Poppler PNG page renders at 90 dpi",
+  "all_pages_overview_inspected": true,
+  "contact_sheets": [
+    {
+      "file": "contact_01_16.jpg",
+      "sha256": "c3c7190a358f4681e447a593d13efa1dfb812bc736407de29463f144c87eae4c"
+    },
+    {
+      "file": "contact_17_32.jpg",
+      "sha256": "758dbf656a862752945b9b59cd4ba3068114658db3a9f1a9760a5b9e7fb366dc"
+    },
+    {
+      "file": "contact_33_43.jpg",
+      "sha256": "5acb7afaaa69190712bee491f5b7bc631eca0d5c9f901d994e6df1272e447d86"
+    }
+  ],
+  "high_resolution_pages_inspected": [
+    4,
+    9,
+    10,
+    11,
+    14,
+    15,
+    19,
+    21,
+    29,
+    30,
+    33,
+    34,
+    36,
+    39,
+    40,
+    41,
+    42,
+    43
+  ],
+  "findings": [
+    "All 43 pages are present in three inspected contact sheets; high-resolution inspection covered the listed pages.",
+    "PDF p.4 maps existing sections; nonexistent §3.3 removed; §7.3–§7.4 point to p.34.",
+    "Tool-A and Tool-B show blank REAL fields and distinguish synthetic identifier/date values; p.10 and p.14 wording was checked.",
+    "Figure A is visibly embedded on p.33 and its two populations remain separated.",
+    "The last page is p.43 and contains the conclusion/status boxes; no sparse orphan page was produced.",
+    "No clipping or unreadable overflow observed in the checked pages; table continuations and formulas remain readable."
+  ],
+  "status": "PASS_WITH_SCOPE_LIMITS",
+  "scope_limit": "All pages reviewed in contact sheets; listed pages inspected at high resolution. This verifies readability/layout at the stated scope, not semantic acceptance or actual association adoption.",
+  "font_floor_receipt": "qa/0095_R09_font_floor_receipt.json",
+  "build_receipt": "qa/0095_R09_docx_build_receipt.json",
+  "semantic_review_status": "PENDING_EXACT_SHA_REVIEW"
+}

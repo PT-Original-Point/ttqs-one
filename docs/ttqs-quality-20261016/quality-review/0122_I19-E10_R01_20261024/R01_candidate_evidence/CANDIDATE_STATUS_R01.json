@@ -1,0 +1,112 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0122",
+  "requirement_id": "I19-E10",
+  "official_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+  "official_page": 8,
+  "official_requirement": "提出課後追蹤調查與分析結果、證照通過情形（學習技能面）",
+  "source_packet_path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/source/SOURCE_PACKET_0122_I19-E10_R01.md",
+  "source_packet_sha256": "8301b3e12467370086dfccd86c4dbcd50d339f0ed54cda93c2bfcc051b793c3d",
+  "unique_blueprint_path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/source/UNIQUE_BLUEPRINT_0122_I19-E10_R01.md",
+  "unique_blueprint_sha256": "cbfd0760a03870151d9bc083b8db76655d53107757706f4b1f4449e997553420",
+  "candidate_state": "CANDIDATE",
+  "candidate_docx_path": "candidate/0122_課後追蹤與證照通過分析表_R01.docx",
+  "candidate_docx_sha256": "7f154df3ae9e9b5a9b91195fdd8c3abc8c1a88e7b2fcd9a87d47faa10fdf137e",
+  "technical_qa": "PASS; exact SHA bound; 20 checks including raw-LaTeX absence and denominator/math reconciliation",
+  "visual_qa": "PASS for 28-page Word-native render; full-page formula spot-check after repair",
+  "semantic_review": "PENDING; no independent exact-SHA semantic receipt",
+  "real_evidence": "NOT_PROVIDED; all worked data marked SAMPLE/SYNTHETIC",
+  "formal_acceptance": "NOT_GRANTED",
+  "repair_delta": {
+    "root_cause": "Whitespace before $$ prevented block-math detection; nested \\text{} wrapper prevented fraction regex from matching.",
+    "fix": "Trim only for block-math detection; unwrap \\text/\\mathrm before parsing \\frac.",
+    "superseded_candidate_sha256": "34a26edd221a7ec6ccb358d42313914b3b92c278a7a2d86e714993da177e62fb",
+    "intermediate_not_accepted_sha256": "e09568fe9d09c49316710315df751f9e22c502da48266b9b158b2a82bca8b936",
+    "current_candidate_sha256": "7f154df3ae9e9b5a9b91195fdd8c3abc8c1a88e7b2fcd9a87d47faa10fdf137e"
+  },
+  "builder_source_sha256": "6eef1b81bede65e36cac025f9e117c977ffddcd735b8bbe85cfdb2be9114eb38",
+  "technical_qa_script_sha256": "bb9b091ba2913c7b73e9ff631168697dd079783313e1bfc8b24bec9691dde6d9",
+  "writer_model_requested": "gemini-3.8-flash-high",
+  "writer_model_actual": "UNKNOWN",
+  "worker_usage": {
+    "input_tokens": 11906,
+    "output_tokens": 27066,
+    "thinking_tokens": 10921,
+    "cache_read_tokens": 0,
+    "total_tokens": 38972
+  },
+  "worker_cost": "UNKNOWN",
+  "response_redaction": "4 local path strings redacted from the public copy; exact raw worker response retained locally with its SHA in worker_dispatch_and_return_R01.json.",
+  "artifacts": [
+    {
+      "path": "candidate/0122_R01_repaired_manuscript.md",
+      "bytes": 48028,
+      "sha256": "fa38d082aacb1cda30e052c496568b93ae4f62eb776ff12079622aac94e63ca2"
+    },
+    {
+      "path": "candidate/0122_課後追蹤與證照通過分析表_R01.docx",
+      "bytes": 74255,
+      "sha256": "7f154df3ae9e9b5a9b91195fdd8c3abc8c1a88e7b2fcd9a87d47faa10fdf137e"
+    },
+    {
+      "path": "evidence/antigravity_attempt01_error.json",
+      "bytes": 319,
+      "sha256": "50d94b17f1c250575dbfa244c974501b0d032d9328b6eb567723b4cd93a659bb"
+    },
+    {
+      "path": "evidence/antigravity_attempt02_dispatch.json",
+      "bytes": 872,
+      "sha256": "b76a1487123027b2fa6afb3298b52b5c3aee0dc3e29aa9352f07aca0cf6929a0"
+    },
+    {
+      "path": "evidence/calculation_validation_R01.json",
+      "bytes": 6060,
+      "sha256": "5c014cf8c123ba82b214cde56c7660b130ed8fe8809830c95413c96aefcd8f74"
+    },
+    {
+      "path": "evidence/technical_qa_R01.json",
+      "bytes": 15990,
+      "sha256": "87814dd92f811b6d7b28d2ef4bdcc51da0f139f5e2014ac18364c8eeece1203e"
+    },
+    {
+      "path": "evidence/word_render_receipt_R01.json",
+      "bytes": 708,
+      "sha256": "9b3b39f39560a2b146e653d86ce8decd3445adb19a97071cd2882559e2575612"
+    },
+    {
+      "path": "evidence/worker_dispatch_and_return_R01.json",
+      "bytes": 1383,
+      "sha256": "82216de3c91356cadbf6d8be7700e3da1bf01cd5885b8f38c0602459e46ea6ce"
+    },
+    {
+      "path": "render/0122_R01_word.pdf",
+      "bytes": 849630,
+      "sha256": "53e04819169d82fdb953e08722d17e31b8c1465e3a3fe3d019b9759342f9f9ba"
+    },
+    {
+      "path": "render/visual_contact_01_14.png",
+      "bytes": 545944,
+      "sha256": "e18430565f0ca6dc0a2153ebd65d2e50362e65987b3d0200b27d6dccf7744f13"
+    },
+    {
+      "path": "render/visual_contact_15_28.png",
+      "bytes": 393401,
+      "sha256": "d356ce194c98a44bd86666b0cdcf2af061b93048370fbaf34432c9d2d598c65a"
+    },
+    {
+      "path": "source/antigravity_writer_response_R01_REDACTED.md",
+      "bytes": 47685,
+      "sha256": "8e29dcdb76deeed374a62f5c3bc6193c2cd86c98e9a488fe93489e91bcb28d6e"
+    },
+    {
+      "path": "source/independent_technical_qa_0122_R01.py",
+      "bytes": 10928,
+      "sha256": "bb9b091ba2913c7b73e9ff631168697dd079783313e1bfc8b24bec9691dde6d9"
+    },
+    {
+      "path": "source/repair_build_0122_candidate_R01.py",
+      "bytes": 63569,
+      "sha256": "6eef1b81bede65e36cac025f9e117c977ffddcd735b8bbe85cfdb2be9114eb38"
+    }
+  ]
+}

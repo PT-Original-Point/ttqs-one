@@ -1,0 +1,104 @@
+{
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0008-I01-E05-R03C-DOCX-VISUAL-REPAIR",
+  "observed_at_taipei": "2026-10-30T00:36:08.315689+08:00",
+  "github_head_before_sync": "513522d420488f062bdaa0f930e29e1d3deae850",
+  "document": {
+    "doc_id": "0008",
+    "official_requirement_id": "I01-E05",
+    "unique_blueprint_id": "I01-E05",
+    "official_checkbox": "I01-E05",
+    "state": "CANDIDATE_SAMPLE_SYNTHETIC_NOT_FORMALLY_ACCEPTED"
+  },
+  "authoritative_inputs": {
+    "official_requirement_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "unique_blueprint_file_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+    "unique_blueprint_row_sha256": "3d8181714ecc1058dcf98d653eff45149287b27521ba176701c69881f83cec2d"
+  },
+  "result": {
+    "candidate_docx_sha256": "39a41b63f2e7704d9b004923e8fbc9d9dadc54855e229646ccbf080e1e8a9487",
+    "technical_status": "PASS_WITHIN_TECHNICAL_SCOPE",
+    "visual_status": "PASS_WITHIN_VISUAL_LAYOUT_SCOPE",
+    "semantic_status": "PENDING_INDEPENDENT_EXACT_SHA_REVIEW",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "scope_note": "R03c fixes the fact_id column wrap and raises caption text to the 10.5pt body minimum. Microsoft Word native export contains 117 pages; all 117 pages were visually checked via 30 contact sheets, with pages 20, 116, and 117 inspected at full page resolution. The 594-row SAMPLE/SYNTHETIC fact register is preserved. No real association category, policy, approval, roster, or achievement is asserted.",
+  "prior_review_context": "The original R02 independent review is included and remains PARTIAL on R02. It is historical context, not an R03c semantic verdict.",
+  "artifacts": {
+    "candidate/0008_I01-E05_R03c.docx": {
+      "sha256": "39a41b63f2e7704d9b004923e8fbc9d9dadc54855e229646ccbf080e1e8a9487",
+      "bytes": 109493,
+      "source_relative": "candidate/0008_I01-E05_R03c.docx"
+    },
+    "candidate/0008_I01-E05_R03.md": {
+      "sha256": "16f9a19a46fedc9f2207e558df268460a6014c1b6ea8bd2deb56e8fa816c936b",
+      "bytes": 226725,
+      "source_relative": "worker/0008_I01-E05_R03.md"
+    },
+    "evidence/0008_I01-E05_R03c.pdf": {
+      "sha256": "0142ac80bd551121b42b7f80da032c27120c17313c90f28cf1521bfcdffa292c",
+      "bytes": 2226598,
+      "source_relative": "qa/render_R03c_native/0008_I01-E05_R03c.pdf"
+    },
+    "evidence/DOCX_TECHNICAL_QA_R03c.json": {
+      "sha256": "b1530bf4073287a5142fde80e9b50b44e71d391eeca9fcedd3260610b2b5dc61",
+      "bytes": 2722,
+      "source_relative": "qa/DOCX_TECHNICAL_QA_R03c.json"
+    },
+    "evidence/WORD_VISUAL_QA_R03c.json": {
+      "sha256": "b1d2445e62bf74ade575909a67c27cb4957fd1a700ffc2eb07b4f20e1717651a",
+      "bytes": 1623,
+      "source_relative": "qa/WORD_VISUAL_QA_R03c.json"
+    },
+    "evidence/WORD_NATIVE_RENDER_RECEIPT.json": {
+      "sha256": "e081943075a20b243c45881c56f6f13648c0d02d16a5848846debb0558795a7f",
+      "bytes": 727,
+      "source_relative": "qa/render_R03c_native/WORD_NATIVE_RENDER_RECEIPT.json"
+    },
+    "evidence/DETERMINISTIC_QA_R03.json": {
+      "sha256": "63ba27f0e377744754c0abd09fbc8855cf50884f550fca69228480b0252d5b21",
+      "bytes": 2077,
+      "source_relative": "qa/DETERMINISTIC_QA_R03.json"
+    },
+    "evidence/R03_REPAIR_RECEIPT.json": {
+      "sha256": "33e97460fab592455664f9c16dfc5500d0dc61ee96d1a92094d075842d3447d6",
+      "bytes": 2371,
+      "source_relative": "qa/R03_REPAIR_RECEIPT.json"
+    },
+    "evidence/SEMANTIC_REVIEW_R02_ORIGINAL.json": {
+      "sha256": "62e70314115e0ebc5fe2e78971629eff9a9b9cc10cf198396c6591cfcfc8524d",
+      "bytes": 18685,
+      "source_relative": "source/SEMANTIC_REVIEW_R02_ORIGINAL.json"
+    },
+    "evidence/WRITER_RECEIPT_R02_ORIGINAL.json": {
+      "sha256": "37498005fb2fbaab3f394af04236ae663f27d13d79ce0c8928453cdd340bbd33",
+      "bytes": 6582,
+      "source_relative": "source/WRITER_RECEIPT_R02_ORIGINAL.json"
+    },
+    "build/build_0008_r03_docx.py": {
+      "sha256": "b8f7cdb8fb4886143b43807a1b0a54405bac0e87ba3990b5a7707c2922dcb13e",
+      "bytes": 11137,
+      "source_relative": "qa/build_0008_r03_docx.py"
+    },
+    "build/audit_R03c.py": {
+      "sha256": "6de1e90879d96fe18385f8cde98b414c464e85d548d91c9ce15cc8d95091fc4a",
+      "bytes": 6450,
+      "source_relative": "qa/audit_R03c.py"
+    },
+    "build/make_contact_sheets_R03c.py": {
+      "sha256": "01cefe97446a70ae616014924a291fda5da4f3c0efc0615e89d7811febe8e6a1",
+      "bytes": 1624,
+      "source_relative": "qa/make_contact_sheets_R03c.py"
+    },
+    "build/make_manifest_R03c.py": {
+      "sha256": "9bfb94c1b32b9c4f17c336140459fb6034c526e6355adbff1023c663e31fda50",
+      "bytes": 5637,
+      "source_relative": "qa/make_manifest_R03c.py"
+    },
+    "build/word_native_render_R03.ps1": {
+      "sha256": "e5a87f257a64d94be8f4de617c829a544f1296a108f1dc35ecd65d65180aedd8",
+      "bytes": 2445,
+      "source_relative": "qa/word_native_render_R03.ps1"
+    }
+  }
+}

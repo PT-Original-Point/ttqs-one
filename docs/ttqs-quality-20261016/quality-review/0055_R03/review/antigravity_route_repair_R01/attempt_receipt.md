@@ -1,0 +1,12 @@
+# Antigravity CLI route repair receipt — TTQS ONE 0055
+
+- Date: 2026-10-18 Asia/Taipei
+- Purpose: repair and narrowly verify the headless read-only CLI route after the 0055 R02 review returned no verdict.
+- Prior failure evidence: `agy.exe` 1.4.0 returned `status=SUCCESS` with an empty response; `stderr` states a required `read_file` / `ViewFile` permission could not be prompted in headless mode and was auto-denied. The earlier malformed `--print-timeout 900` invocation was corrected to a duration (`15m`) before that attempt. No semantic verdict was produced.
+- Scoped remediation: the local Antigravity CLI `settings.json` now has only three `read_file(...)` allow rules for the 0055 R02 package, 0055 R03 package, and the single current Mission Markdown file. No `write_file`, shell `command`, network, MCP, wildcard, or blanket approval was added. The three exact path-scoped read-only grants are stored in the machine-level settings file. A local pre-change backup is retained at `C:\Users\J\.gemini\antigravity-cli\settings.json.ttqs-one-20261018.bak`; the machine configuration itself is intentionally not published.
+- Verification invocation: `agy.exe --print ... --model gemini-3.8-flash-high --effort high --mode plan --sandbox --print-timeout 2m --output-format json`, working directory restricted to `quality-review/0055_R03`; no Computer Use and no `--dangerously-skip-permissions`.
+- Target file: `REPAIR_ITERATION_LOG_R03.md`; its expected DOCX SHA-256 was independently checked from local bytes as `747218b1ac4deb1e4ffc49b788eabd095e04f0cae894e4491bd2822e93898f71`.
+- Native CLI result: exit `0`, status `SUCCESS`, response exactly `READ_OK 747218b1ac4deb1e4ffc49b788eabd095e04f0cae894e4491bd2822e93898f71`, duration 11.9008624 seconds, empty stderr. Conversation ID: `d28cb596-599e-4e7e-8c69-3d5e30a0a911`.
+- Native usage reported: input 33,054; output 1,414; thinking 1,235; cache read 0; total 34,468. Provider billing was not returned (`UNKNOWN`); do not infer zero cost. The CLI response did not return runtime model identity; only the requested model is confirmed, and `agy models` listed that exact model slug during this check.
+- Scope/result: this was a one-file permission-route smoke check only. It is **not** a semantic or visual review, does not change or accept DOCX 0055 R03, and does not clear any unrelated Antigravity failure lane. The exact R03 candidate remains unchanged.
+

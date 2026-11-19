@@ -1,0 +1,53 @@
+{
+  "schema": "ttqs-one-visual-qa-v1",
+  "doc_id": "0139",
+  "requirement_id": "I19-E29",
+  "unique_blueprint_index": 153,
+  "candidate": "R08",
+  "candidate_sha256": "d31ef2d8b8615f3dd314572c4e50b6604198e8f24faafb144bcbaea7373c696f",
+  "method": "Microsoft Word 16.0 hidden/read-only native PDF export, then direct visual inspection of each rendered page image",
+  "pdf_sha256": "0f9d1408082dcb14871c3f2d01a3c5989fe3e230cb6825747da30dc9aa75ebe7",
+  "page_count": 23,
+  "pages_directly_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "visual_result": "PASS",
+  "findings": [],
+  "changed_text_pages": [
+    8,
+    22,
+    23
+  ],
+  "targeted_page_images": [
+    "render/changed-pages/page-08.png",
+    "render/changed-pages/page-22.png",
+    "render/changed-pages/page-23.png"
+  ],
+  "scope": "All 23 pages inspected at 118.8 dpi; reviewed text, tables, page boundaries, clipping, overlap, density, and readability. The three pages with content-text changes are 8, 22, and 23. No clipping, overlap, cut-off, or unreadable table/text was observed.",
+  "baseline_comparison": "R07-to-R08 raster pixel equality is inconclusive because the R07 rasterizer/version settings were not recorded; the pixel-diff JSON is preserved as diagnostic evidence only. It does not indicate that all pages had layout defects. R08 native render was directly inspected.",
+  "semantic_review": "PASS_DELTA exact candidate SHA",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD"
+}

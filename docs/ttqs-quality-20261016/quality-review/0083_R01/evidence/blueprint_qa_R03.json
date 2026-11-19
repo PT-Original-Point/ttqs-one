@@ -1,0 +1,33 @@
+{
+  "schema": "ttqs-0083-blueprint-qa-v1",
+  "path": "docs/ttqs-quality-20261016/quality-review/0083_R01/inputs/UNIQUE_BLUEPRINT_0083_R03.md",
+  "sha256": "21f76376621c5dd22d002a62202f41ea7335bbf872a965b0bbf8fb86955d0178",
+  "bytes": 41855,
+  "register_ids": 81,
+  "register_first_last": [
+    1,
+    81
+  ],
+  "checks": {
+    "doc_identity": true,
+    "source_hashes": true,
+    "genre_volunteer_sample": true,
+    "sample_real_boundary": true,
+    "forms_and_sections": true,
+    "register_81_unique_contiguous": true,
+    "register_rows_have_atomic_ids": true,
+    "register_header_no_ranges": true,
+    "aid_append_only": true,
+    "dates_consistent": true,
+    "baseline_28_days": true,
+    "followup_dates_28_day_steps": true,
+    "arithmetic": true,
+    "three_layers_separated": true,
+    "all_decision_deadlines_proposed": true,
+    "negative_tests_at_least_12": true,
+    "not_acceptance_claim": true
+  },
+  "failed_checks": [],
+  "result": "PASS_BLUEPRINT_QA",
+  "acceptance_scope": "Blueprint structural and source-bound consistency only; does not accept any DOCX or REAL evidence."
+}

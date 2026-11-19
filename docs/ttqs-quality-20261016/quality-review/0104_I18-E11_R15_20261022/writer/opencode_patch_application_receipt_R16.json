@@ -1,0 +1,39 @@
+{
+  "receipt_id": "TTQS-0104-R15-TO-R16-PATCH-APPLICATION",
+  "work_id": "TTQS-0104-I18-E11-R16-BOUNDED-REPAIR-20261022",
+  "input_candidate_sha256": "9bbb96da74ba9da845ab0e063421d04f035e79496209a02de1f04b0c98ec7eb8",
+  "input_manuscript_sha256": "86e51bb34727d3b4cf622020d1cc396448ff8b823c32bd13bb6e8a36e18da6f1",
+  "worker_response_sha256": "bb68d47471df801178cc30d7fb9ebc98bbc818cc62821238a3590a75bc8c11e9",
+  "worker_patch_count": 19,
+  "worker_findings_claimed": [
+    "RF-1",
+    "RF-2",
+    "RF-3",
+    "RF-4",
+    "RF-5",
+    "RF-6",
+    "RF-7",
+    "RF-8",
+    "RF-9",
+    "RF-10"
+  ],
+  "worker_patch_anchor_validation": "ALL 19 exact anchors matched exactly once",
+  "deterministic_codex_corrections": [
+    "F-GP-01..05 locators changed to D-1,D-3,D-2,M-1,M-2; the worker narrative claimed this but its patch array omitted these edits.",
+    "T-13 tie rule extended to M-row ties.",
+    "Version row changed R15 to R16."
+  ],
+  "register_row_count_input": 121,
+  "register_row_count_output": 124,
+  "new_keys": [
+    "F-CHAIN-A",
+    "F-CHAIN-B",
+    "F-RET-01"
+  ],
+  "unique_register_keys": 124,
+  "output_path": "E:\\PT-Original-Point\\ttqs-one\\docs\\ttqs-quality-20261016\\quality-review\\0104_I18-E11_R15_20261022\\writer\\opencode_writer_manuscript_0104_R16_patched.md",
+  "output_sha256": "5b0713817207cd984e7cfde61e2ecefbc788cb5ddbdf82514007fd4f13120241",
+  "output_bytes": 58215,
+  "source_values_changed_by_deterministic_patch": false,
+  "formal_acceptance": "NOT_GRANTED"
+}

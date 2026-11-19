@@ -1,0 +1,52 @@
+{
+  "work_id": "TTQS_ONE_0133_R07_SCOPED_LOCATOR_REVIEW_W2_GEMINI_20261108",
+  "candidate_sha256": "a8cc1a7740c854fc3cad1dfa229bc829d54d12153b477c7049aafc5e62e0bfb2",
+  "body_extract_sha256": "4e284a0db339a8e7ca1202fd798207c982d5da21dfec663a1fe7fcf3c647689e",
+  "reviewer_verdict": "PASS",
+  "findings": [],
+  "checks": [
+    {
+      "check_id": "LOCATOR_SYN_0133_CORR_01",
+      "target_key": "SYN-0133-CORR-01",
+      "updated_locator": "§8 更正示例",
+      "status": "PASS",
+      "detail": "Verified that SYN-0133-CORR-01 narrative is defined at the conclusion of Section 8 ('更正記錄範例鍵 SYN-0133-CORR-01...'). Section 9 contains blank registration templates. Changing locator from §9 to §8 accurately aligns with the narrative location."
+    },
+    {
+      "check_id": "LOCATOR_SYN_LEARNER_014",
+      "target_key": "SYN-LEARNER-014",
+      "updated_locator": "§7 全合成去重示例",
+      "status": "PASS",
+      "detail": "Verified that SYN-LEARNER-014 appears directly within the narrative under Section 7 ('全合成去重示例（不併入前述年度總計）：SYN-LEARNER-014 在 SYN-CLASS-A 的兩個上課日均簽到...'). Updating from §4 to §7 points directly to its synthetic deduplication narrative."
+    },
+    {
+      "check_id": "LOCATOR_SYN_CLASS_A",
+      "target_key": "SYN-CLASS-A",
+      "updated_locator": "§7 全合成去重示例",
+      "status": "PASS",
+      "detail": "Verified that synthetic class key SYN-CLASS-A is defined and used in Section 7 under '全合成去重示例'. Locator correctly and unambiguously points to Section 7."
+    },
+    {
+      "check_id": "LOCATOR_SYN_CLASS_B",
+      "target_key": "SYN-CLASS-B",
+      "updated_locator": "§7 全合成去重示例",
+      "status": "PASS",
+      "detail": "Verified that synthetic class key SYN-CLASS-B is defined and used in Section 7 under '全合成去重示例'. Locator correctly and unambiguously points to Section 7."
+    },
+    {
+      "check_id": "SEMANTIC_INTEGRITY_AND_AMBIGUITY",
+      "target_key": "ALL_FOUR_TARGETS",
+      "updated_locator": "N/A",
+      "status": "PASS",
+      "detail": "Confirmed that the four locator repairs resolve the prior cross-reference mismatches identified in R06 without introducing semantic ambiguity, circular cross-references, or narrative conflicts."
+    }
+  ],
+  "limitations": [
+    "Scoped strictly to semantic verification of the four Table 10 locator updates; does not constitute a full-document R07 re-review.",
+    "Visual rendering, layout, DOCX packaging, and typographical presentation QA were not re-evaluated.",
+    "Real-world organizational data, evidence origins, and historical records were not verified; synthetic demonstration data remains strictly non-operational.",
+    "This review does not grant formal TTQS certification, accreditation, or official administrative acceptance."
+  ],
+  "formal_acceptance": false,
+  "real_evidence": "NOT_VERIFIED"
+}

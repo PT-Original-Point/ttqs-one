@@ -1,0 +1,23 @@
+VERDICT: PASS
+
+CANDIDATE_SHA256: d6689cef08d43f92b7110f3371856ad49991db69147334d5a494b1f7e5637cd2
+
+| Severity | Exact locator (section/table/case/field) | Evidence | Required correction or none |
+|---|---|---|---|
+| Info | Cover / §1.2 / §10.1 status block | CANDIDATE_ONLY, NOT_GRANTED, REAL=UNKNOWN/HOLD, checkbox 084 PARTIAL/HOLD, no 17b level claimed | none |
+| Info | §1.3 / §2.2 / §2.3 / §10.1 | Explicitly separates document 0079 from checkbox 084 and from 0076, 0077, 0078, 085, 086 functions | none |
+| Info | §5 cards P01–P04 / source-fact rows | P01 70/100, 18/20, NEEDS_CLARIFICATION; P02 75/100, 15/20, PRIVACY_CONSENT; P03 85/100, 14/20, HOLD, RECORD_ACCURACY; P04 80/100, 16/20, CLOSED_LOOP_HANDOFF; matches upstream 0076/0077 | none |
+| Info | §5 P03 card / P03 HOLD rows | Practical 14/20 remains HOLD_SAMPLE_RULE; no passing or independent sensitive-record-work claim | none |
+| Info | §6 blank form (甲–庚) | Includes minimization, source facts, conversation/confirmation, option comparison, actions, support/tracking, objection/withdrawal | none |
+| Info | §8 replacement-register reference | References SYNTHETIC_REPLACEMENT_REGISTER_0079_R01.csv; all rows stated SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD; no synthetic value presented as real | none |
+| Low (informational) | §8 replacement-register reference | Extracted text references the register by filename but does not state the 104-row count; the supplied CSV has 104 data rows | none; optional row-count label only |
+
+Source/number alignment: P01–P04 identifiers, course `志工服務溝通與紀錄交接實務`, scenario date 2026-08-15, written/practical scores, sample-rule statuses, reflection themes and unresolved questions, P03 HOLD, 0075 option B pending status, and 0078 sibling-document boundary all align with the supplied 0076/0077/0078 and source-packet facts. No P01–P04 mapping to S01–S16, A01–A08, or real people is asserted.
+
+Synthetic/real boundary: The document consistently labels SAMPLE/SYNTHETIC, PROPOSED, NOT_EXECUTED, PLANNED_NOT_EXECUTED, REAL=UNKNOWN/HOLD, and NOT_GRANTED. Cover signature/confirmation fields are blank; no interviews, actual learner consent/choice, signatures, dates, approvals, employment outcomes, association policy, or third-party evidence are represented as real.
+
+Practical usability: The form provides four complete planning cards with source facts, learner-stated vs. synthetic-generated distinction, three comparable options and reasons, learner choice/correction/consent fields, role-bounded actions with owner, planned date, observable output and verification source, support resources, follow-up questions/status, a reusable blank form, and return/hold/referral rules. It avoids paid-employment, job-offer, suitability, clinical/legal, or unsourced-authority claims.
+
+Material limitations: This remains a candidate only; no real source evidence, approval, consultation, or outcome is established. Sample thresholds are not official or association policy. Formal acceptance remains NOT_GRANTED, and checkbox 084 remains PARTIAL/HOLD. Visual render inspection is recorded separately and was not independently re-performed in this semantic review.
+
+No issue blocks semantic PASS. Formal acceptance is not granted, and checkbox 084 is not complete.

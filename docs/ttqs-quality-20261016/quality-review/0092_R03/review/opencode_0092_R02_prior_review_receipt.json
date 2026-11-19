@@ -1,0 +1,44 @@
+{
+  "schema": "TTQS_INDEPENDENT_REVIEW_RECEIPT_V1",
+  "doc_id": "0092",
+  "requirement_id": "I17D-E06",
+  "official_checkbox_serial": "099",
+  "candidate_revision": "R02",
+  "candidate_sha256": "33392cdbe71a56bfd57833d2ed7e9c26dd0e869ae86f66901fb36821c4d8baf2",
+  "review_route": "OpenCode v2 CLI",
+  "cli_version": "2.0.32",
+  "agent": "plan",
+  "requested_model": "opencode/mimo-v2.6-flash-free",
+  "session_id": "ses_ea8f6d596ffeKzT1euhFQMqyFb",
+  "exit_code": 0,
+  "review_verdict": "PASS_WITH_ACTIONABLE_NONBLOCKING_FINDINGS",
+  "review_scope": "Full extracted document text and exact source/Blueprint/neighbor packet; no visual review; page locations UNKNOWN; reviewer repeated the supplied candidate SHA but did not recompute artifact bytes.",
+  "review_input_packet_sha256": "9e39e6c1d5dc634e0282cfbb4ff7a1607deb980e89e37698a7f21b557e0589b5",
+  "raw_stdout_file": "opencode_0092_R02_review.stdout.json",
+  "raw_stdout_sha256": "b11e4fba29f968439b613ab1508fb027e5e1c49e4f976a26112ada562b0ecb9a",
+  "normalized_response_file": "opencode_0092_R02_review_response.md",
+  "normalized_response_sha256": "39f969dc016ba8f35b586304ac8a07e54267cedd7b6e69815868baee954ab645",
+  "stderr_bytes": 0,
+  "reported_usage": {
+    "cost": 0,
+    "input_tokens": 44507,
+    "output_tokens": 2497,
+    "reasoning_tokens": 11229,
+    "cache_read_tokens": 5440,
+    "provider_billing": "UNKNOWN"
+  },
+  "material_findings": [
+    "F001 and F002 source locators do not resolve to the cited body fields.",
+    "Blueprint 4.1 field dictionary lacks distinct source, responsible-role, and verification columns.",
+    "Unverified association name and category label appear in explanatory text; remove or source-bind."
+  ],
+  "nonblocking_observations": [
+    "No explicit follow-up interval / unknown policy handling",
+    "Blank future access log needs stronger not-yet-used label",
+    "Version history too thin",
+    "Role names lack stable role codes",
+    "Vague 待補 wording"
+  ],
+  "candidate_state": "CANDIDATE_SAMPLE_SYNTHETIC_NOT_ACCEPTED",
+  "formal_acceptance": "NOT_GRANTED"
+}

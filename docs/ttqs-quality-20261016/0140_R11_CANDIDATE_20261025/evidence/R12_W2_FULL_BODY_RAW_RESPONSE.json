@@ -1,0 +1,149 @@
+{
+  "work_id": "TTQS-0140-I19-E30-R11-W2-FULL-BODY-SEMANTIC-REVIEW-R12",
+  "doc_id": "0140",
+  "requirement_id": "I19-E30",
+  "candidate_sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d",
+  "body_extraction_sha256": "e0c5f4b863e29a874dc5107fd59a7801fe319f54eb6e1c38ad8412d0cebb3f1d",
+  "verdict": "PASS",
+  "criteria": {
+    "genre_and_scope_alignment": {
+      "status": "PASS",
+      "summary": "文件體裁精準符合『使用情形盤點表＋採用率分析報告＋可供真實填報的操作表單』。明確鎖定 I19-E30 官方指標文字『運用資訊系統普及率』，157 項清單索引 154，印鑑勾選序號如實維持 UNKNOWN。第三部分 [TABLE 3] 精確劃分與 0064/I14-E05（文件分類檢索速度）及 0139/I19-E29（證照通過與就業成效）之界限，無跨件領域混淆或替代冒充問題。"
+    },
+    "title_blind_purpose_recognition": {
+      "status": "PASS",
+      "summary": "遮蔽標題閱讀全文，核心正文具備清晰的系統應使用人口定義、實質作業判定規則、三年分年度與分角色普及率計算、完成率剖析、落差診斷及空白操作表單，明確呈現訓練資訊系統普及率盤點與分析報告之實質功能。"
+    },
+    "operational_usability": {
+      "status": "PASS",
+      "summary": "管理員與評核委員具備高度可操作性。第五部分 [P28]-[P45] 明確規範分母為受派任務之不重複合格應使用者（未登入者仍留在分母）、分子為完成至少一筆實質作業之活躍使用者（純登入/開帳號嚴格排除）。第十三部分提供表 13.1A/B 原始登記表、表 13.2 統計對帳單、表 13.3 例外處理簿及表 13.4 四階簽核流轉欄位（全數維持未簽署流程示範狀態）。第 11.2 節規範明確之 HOLD/REVISE/REJECT 內部處置門檻。"
+    },
+    "mathematical_integrity": {
+      "status": "PASS",
+      "summary": "依據附錄 A1/A2 共 80 列合成『使用者－年度』資料完整重新驗算，2023、2024、2025 各年度角色小計、年度總計、三年累計、普及率、合格者完成率、活躍者完成率、百分點變動（pp）及相對成長率皆 100% 吻合。浮點運算與四捨五入（half-up 至小數第二位）、零分母標示 N/A 規則嚴謹貫徹。"
+    },
+    "synthetic_id_and_dataset_traceability": {
+      "status": "PASS",
+      "summary": "候選文件本文、附錄 A1/A2（[TABLE 17]、[TABLE 18]）、合成資料集 CSV 與替換清冊 CSV 之 80 筆個案編號（SYN-YYYY-ROLE-NN）、任務代碼及合成日誌索引（SAMPLE-LOG-YYYY-SYN-...）逐列完全對齊，無斷鏈、遺漏或不一致。"
+    },
+    "evidence_boundary_and_anti_fabrication": {
+      "status": "PASS",
+      "summary": "邊界管控嚴密。全文字頭至字尾貫徹 SAMPLE/SYNTHETIC 標示，首頁卡、表格與各章節均標明 REAL = UNKNOWN / HOLD。系統名稱 SAMPLE-TIS-01、任務代碼、日誌索引及改善計畫均標註為虛構示例；簽核欄均為未簽署空白示範；明確警示身分代號雜湊非法律匿名化、SHA-256 僅為檔案完整性校驗；絕無虛構協會已部署系統、已獲評官方分數或已有真實績效情事。"
+    },
+    "professional_maturity_and_language": {
+      "status": "PASS",
+      "summary": "全篇採用成熟、流暢之繁體中文（台灣勞動培訓與 TTQS 專業術語），結構分層清晰，考量非營利志願性組織之運作實務（含紙本備援機制與本機對照表隔離保管），具備高度可落地性與查核追溯性。"
+    }
+  },
+  "verified_calculations": {
+    "year_2023": {
+      "eligible_unique_users": 20,
+      "active_users": 12,
+      "all_required_tasks_completed": 9,
+      "adoption_rate": "60.00% (12/20)",
+      "completion_rate_of_eligible": "45.00% (9/20)",
+      "completion_rate_among_active": "75.00% (9/12)",
+      "role_breakdown": {
+        "admin": { "eligible": 3, "active": 2, "complete": 2, "adoption": "66.67%", "eligible_comp": "66.67%", "active_comp": "100.00%" },
+        "instructor": { "eligible": 4, "active": 2, "complete": 1, "adoption": "50.00%", "eligible_comp": "25.00%", "active_comp": "50.00%" },
+        "learner": { "eligible": 13, "active": 8, "complete": 6, "adoption": "61.54%", "eligible_comp": "46.15%", "active_comp": "75.00%" }
+      }
+    },
+    "year_2024": {
+      "eligible_unique_users": 28,
+      "active_users": 22,
+      "all_required_tasks_completed": 18,
+      "adoption_rate": "78.57% (22/28, 22/28 = 0.785714...)",
+      "completion_rate_of_eligible": "64.29% (18/28, 18/28 = 0.642857...)",
+      "completion_rate_among_active": "81.82% (18/22, 18/22 = 0.818181...)",
+      "role_breakdown": {
+        "admin": { "eligible": 3, "active": 3, "complete": 3, "adoption": "100.00%", "eligible_comp": "100.00%", "active_comp": "100.00%" },
+        "instructor": { "eligible": 5, "active": 4, "complete": 3, "adoption": "80.00%", "eligible_comp": "60.00%", "active_comp": "75.00%" },
+        "learner": { "eligible": 20, "active": 15, "complete": 12, "adoption": "75.00%", "eligible_comp": "60.00%", "active_comp": "80.00%" }
+      }
+    },
+    "year_2025": {
+      "eligible_unique_users": 32,
+      "active_users": 28,
+      "all_required_tasks_completed": 25,
+      "adoption_rate": "87.50% (28/32)",
+      "completion_rate_of_eligible": "78.13% (25/32, 25/32 = 0.78125)",
+      "completion_rate_among_active": "89.29% (25/28, 25/28 = 0.892857...)",
+      "role_breakdown": {
+        "admin": { "eligible": 3, "active": 3, "complete": 3, "adoption": "100.00%", "eligible_comp": "100.00%", "active_comp": "100.00%" },
+        "instructor": { "eligible": 6, "active": 5, "complete": 5, "adoption": "83.33%", "eligible_comp": "83.33%", "active_comp": "100.00%" },
+        "learner": { "eligible": 23, "active": 20, "complete": 17, "adoption": "86.96%", "eligible_comp": "73.91%", "active_comp": "85.00%" }
+      }
+    },
+    "three_year_cumulative": {
+      "eligible_user_year_records": 80,
+      "active_records": 62,
+      "completed_all_records": 52,
+      "cumulative_adoption_rate": "77.50% (62/80)",
+      "cumulative_eligible_completion_rate": "65.00% (52/80)",
+      "cumulative_active_completion_rate": "83.87% (52/62, 52/62 = 0.838709...)"
+    },
+    "period_changes_and_trends": {
+      "adoption_pp_change": {
+        "2023_to_2024": "+18.57 pp (78.57% - 60.00%)",
+        "2024_to_2025": "+8.93 pp (87.50% - 78.57%)",
+        "three_year_total": "+27.50 pp (87.50% - 60.00%)"
+      },
+      "adoption_relative_change": {
+        "2023_to_2024": "+30.95% ((78.5714... - 60) / 60)",
+        "2024_to_2025": "+11.36% ((28/32 - 22/28) / (22/28) = 5/44 = 11.3636...%)",
+        "three_year_total": "+45.83% ((87.50 - 60) / 60 = 27.50 / 60)"
+      },
+      "eligible_completion_pp_change": {
+        "2023_to_2024": "+19.29 pp (64.29% - 45.00%)",
+        "2024_to_2025": "+13.84 pp (78.13% - 64.29%)",
+        "three_year_total": "+33.13 pp (78.13% - 45.00%)"
+      },
+      "active_completion_pp_change": {
+        "2023_to_2024": "+6.82 pp (81.82% - 75.00%)",
+        "2024_to_2025": "+7.47 pp (89.29% - 81.82%)",
+        "three_year_total": "+14.29 pp (89.29% - 75.00%)"
+      }
+    },
+    "zero_denominator_and_rounding_rules": {
+      "rounding_policy": "計算過程保留浮點精度，最終呈報數值四捨五入（half-up）至小數點後兩位。",
+      "zero_denominator_policy": "分母為零時嚴格呈報 N/A 並於附註說明原因與證據位置，嚴禁以 0% 混充；相對成長率基期為零時亦嚴格呈報 N/A。"
+    }
+  },
+  "findings": [
+    {
+      "type": "POSITIVE_VERIFICATION",
+      "locator": "[P10]-[P14], [TABLE 2] R3",
+      "note": "精準對應官方指標 I19-E30、157 項清單索引 154、PDF 第 9 頁『運用資訊系統普及率』，印刷序號恪守 UNKNOWN，明確聲明非機構獲評分數。"
+    },
+    {
+      "type": "POSITIVE_VERIFICATION",
+      "locator": "[P30]-[P32], [P55], [TABLE 4] R9, [TABLE 5] R2",
+      "note": "嚴格貫徹『實質作業』門檻，明確規定單純帳號建立、頁面瀏覽、密碼重設或登入不可計為活躍分子；母體分母去重複並強制保留未操作人員。"
+    },
+    {
+      "type": "POSITIVE_VERIFICATION",
+      "locator": "[TABLE 7], [TABLE 8], [P78]-[P88], [TABLE 17], [TABLE 18]",
+      "note": "80 筆合成個案逐筆完全重算，細分角色小計與跨年度變動分析（百分點與相對變動率）全數驗證無誤，數學精度完美吻合。"
+    },
+    {
+      "type": "POSITIVE_VERIFICATION",
+      "locator": "[P58]-[P59], [TABLE 4] R11",
+      "note": "法遵與隱私安全意識成熟，明確指出未加密雜湊身分證字號不可稱為匿名化，SHA-256 為檔案完整性校驗而非個資去識別方法，要求身分對照表隔離於本機不得上傳。"
+    },
+    {
+      "type": "POSITIVE_VERIFICATION",
+      "locator": "[TABLE 12]-[TABLE 16], [P140]-[P145]",
+      "note": "第十三部分提供完整之空白資料擷取表、計算對帳單、例外記錄簿及未簽署之四階簽核流轉欄，兼顧示範與未來真實作業落地。"
+    },
+    {
+      "type": "NON_BLOCKING_NOTE",
+      "locator": "[P148]-[P151], [TABLE 17], [TABLE 18]",
+      "note": "附錄 A1 與 A2 將 80 筆資料分列為納入設定與操作結果兩大表，結構清晰；未來導入真實資料時，應注意續頁表頭重覆呈現與裝訂邊界。"
+    }
+  ],
+  "text_only_limitations": "本審查僅限於純文字語意、數學運算邏輯、資料集交叉比對與章節結構之完整性核驗。DOCX 二進位實體、Word 原生版面編排、字型大小（本文≥10.5pt、表格≥9.5pt）、頁碼連續性、跨頁表頭重複設定及圖 1 視覺呈現品質，屬於獨立之 Word 視覺驗收範疇，不在本純文字審查範圍內，亦不代表視覺審查合格。",
+  "real_evidence": "UNKNOWN/HOLD",
+  "official_score": "NOT_ASSIGNED",
+  "formal_acceptance": "NOT_GRANTED"
+}

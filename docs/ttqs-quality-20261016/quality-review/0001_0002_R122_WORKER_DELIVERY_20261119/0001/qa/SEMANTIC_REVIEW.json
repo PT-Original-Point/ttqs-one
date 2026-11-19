@@ -1,0 +1,34 @@
+{
+  "schema": "TTQS_ONE_EXACT_SHA_SEMANTIC_REVIEW_V1",
+  "doc_id": "0001",
+  "candidate_docx_sha256": "2C643258ADD377789F1A04F9FFE0FAEBF53CB2AEEE38EC0B7234E5BDA92BC0BB",
+  "status": "PASS",
+  "reviewer": "W2 Antigravity CLI",
+  "work_id": "TTQS_ONE_0001_I01-E01_SEMANTIC_REVIEW_R01_20261119",
+  "requested_route": "gemini-3.8-flash-high",
+  "served_model": "UNKNOWN",
+  "os_pid": 11028,
+  "packet_sha256": "6FCE9C114AFEDAD9FF080D6E7BD77D2E23420D8F4623951E8B43FCDC1E59A4A5",
+  "stdout_sha256": "10DFD0929FC11E483F3ABC39A09C3ED683A08266C3AEC6BF6FF2FCEE014011CE",
+  "exit_code": 0,
+  "checks": [
+    "requirement_fit",
+    "genre_mechanics",
+    "title_blind_identification",
+    "evaluator_usability",
+    "SAMPLE_SYNTHETIC_boundary",
+    "synthetic_fact_register",
+    "calculation_consistency",
+    "evidence_scope_and_source_limits",
+    "negative_neighbor_separation"
+  ],
+  "blocking_findings": 0,
+  "nonblocking_findings": 1,
+  "nonblocking_note": "Reviewer suggested merging two comparison tables; suggestion is nonblocking and no content revision was made.",
+  "limitations": [
+    "Review used extracted DOCX text; official PDF page text was not re-extracted in the review packet.",
+    "Visual layout and font sizes were not assessed by the semantic reviewer; separately inspected by the integrator.",
+    "Actual institutional facts and formal acceptance are not asserted."
+  ],
+  "raw_review": "stdout.raw"
+}

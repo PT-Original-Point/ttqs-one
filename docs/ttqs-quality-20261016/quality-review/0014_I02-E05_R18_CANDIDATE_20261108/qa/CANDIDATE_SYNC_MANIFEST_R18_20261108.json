@@ -1,0 +1,191 @@
+{
+  "schema": "ttqs_one_candidate_evidence_manifest.v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0014",
+  "requirement_id": "I02-E05",
+  "revision": "R18",
+  "candidate_state": "CANDIDATE",
+  "created_at_tpe": "2026-11-08T15:29:18.4459990+08:00",
+  "candidate_sha256": "f010470828aad653f691d164c50fdc8e2e0359a88b52286c92eb6f6d1b994846",
+  "paired_register_sha256": "92c35585cfd1a53a88807c89a6a5ba39ebcbe46af876a1530eb9c51c45435860",
+  "source_packet_sha256": "30ade83ab55d9ed185dae519252e114ebfb33c8ef276c8005cf77cb355e82b91",
+  "official_requirement_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "blueprint_row_sha256": "ec6fc82addd4474a9d7d664b137bd8e35a2fe6a7bb04e7ca028f048e21d1e5d3",
+  "prior_defect": "R17 review found four Table 16 rows missing acquisition-source and verification/recalculation roles: SYN-0014-002, -003, -016, -040.",
+  "repair": "R18 adds procedure SAMPLE intake role 受理承辦人, independent 初審覆核人, source locators and verification/recalculation responsibilities for the four target rows. Target ratio remains explicitly a target, not an achieved result. Other content preserved per writer receipt.",
+  "qa": {
+    "deterministic_repair_integrity": "PASS: DOCX opens; CSV parses; 67 identifiers/rows align; 63 non-target rows preserved; exact candidate/register hashes recorded in receipts.",
+    "font_floor": "PASS exact candidate SHA; visible body minimum 10.5 pt; table minimum 9.5 pt.",
+    "word_render": "PASS exact candidate SHA; read-only Microsoft Word COM PDF export; 36 pages; candidate SHA unchanged.",
+    "independent_semantic": "W1 OpenCode explicit opencode/crouton-alpha-free; PASS full-document semantic/usability review of ordered text extraction; 8 checks true; zero findings; candidate+register+extraction hashes bound; serving model UNKNOWN.",
+    "independent_visual": "W1 OpenCode explicit opencode/nemotron-3.5-super-vl-free; PASS visual-only review; 36-page contact sheet plus full pages 16,18,20; zero findings; exact candidate/PDF/image hashes bound; serving model UNKNOWN.",
+    "scoped_traceability": "PASS scoped 4-row traceability review exact candidate SHA.",
+    "formal_ttqs_acceptance": false,
+    "promotion_authorized": false
+  },
+  "github_same_source_readback": "PENDING until push readback",
+  "worker_usage": {
+    "w1_semantic_input": 26536,
+    "w1_semantic_output": 283,
+    "w1_visual_input": 12100,
+    "w1_visual_output": 372,
+    "w1_visual_reasoning": 2085
+  },
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 8,
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": "candidate/0014_I02-E05_R18.docx",
+      "bytes": 72042,
+      "sha256": "f010470828aad653f691d164c50fdc8e2e0359a88b52286c92eb6f6d1b994846"
+    },
+    {
+      "path": "history/R17_INDEPENDENT_SEMANTIC_REVIEW_20261108.json",
+      "bytes": 13042,
+      "sha256": "0ad4e9e2f6fa1dc5579bb0ac572e20bb2c454e5cc0a7dbb3cb87a4ba0dfa242a"
+    },
+    {
+      "path": "qa/R18_DETERMINISTIC_FONT_FLOOR_QA_20261108.json",
+      "bytes": 6157,
+      "sha256": "842deeb4e24f418367158619b704c13afbe83c7aa7df6f4db36af918e46f2363"
+    },
+    {
+      "path": "qa/R18_FULL_DOCUMENT_SEMANTIC_REVIEW_W1_CROUTON_20261108.json",
+      "bytes": 1937,
+      "sha256": "db4e54c2398ec0b97995eb21ce8f2e2c0386bf4925731501590aca0924b27eac"
+    },
+    {
+      "path": "qa/R18_INDEPENDENT_VISUAL_REVIEW_W1_NEMOTRON_20261108.json",
+      "bytes": 1430,
+      "sha256": "17916b9b1ba4531cf99101086ffa0cd13288ca3f912aa03ee311d2a91a493d01"
+    },
+    {
+      "path": "qa/R18_PDF_PAGE_RENDER_RECEIPT_20261108.json",
+      "bytes": 8583,
+      "sha256": "59654f871b02c96dab69a6cf9968f6060f1136a0cd4b3b4caa1acf67674347b1"
+    },
+    {
+      "path": "qa/R18_SCOPED_REPAIR_WRITER_RECEIPT_20261108.json",
+      "bytes": 7034,
+      "sha256": "8d65a5119073887c6ef962dd27e824c1b724265b5a337b7cf800406608834566"
+    },
+    {
+      "path": "qa/R18_SCOPED_TRACEABILITY_SEMANTIC_REVIEW_20261108.json",
+      "bytes": 2278,
+      "sha256": "d4ca5c90dfa7d05ae17aa7794316d41a98e1e87311165d37256fdd5c9ccfce40"
+    },
+    {
+      "path": "qa/R18_WORD_COM_RENDER_RECEIPT_20261108.json",
+      "bytes": 1039,
+      "sha256": "d604ecd7ded7ee37d4981c57d908ec0f573c080f804ee5d4cbb33e3db44055cc"
+    },
+    {
+      "path": "qa/render_evidence/0014_I02-E05_R18.pdf",
+      "bytes": 899113,
+      "sha256": "42b8a58d76104d3fd770eed39b67703ed0e3b66f1c2ec78ac5338503ca7fc34b"
+    },
+    {
+      "path": "qa/render_evidence/contact_sheet.png",
+      "bytes": 1432875,
+      "sha256": "19c71b2266a49ffd203ebb96d2ddd41b4aff82d808300d0597f59ff374854492"
+    },
+    {
+      "path": "qa/render_evidence/page-16.png",
+      "bytes": 123619,
+      "sha256": "331fb0accbe9c7bd1c3327c8ad91fa156cbf734640e17e80a633ae9597f5ceb3"
+    },
+    {
+      "path": "qa/render_evidence/page-18.png",
+      "bytes": 159775,
+      "sha256": "e7ab1799e2c34ec0194f47a7bd284a8dd190cb614d8ae166c1533fbce4b73703"
+    },
+    {
+      "path": "qa/render_evidence/page-20.png",
+      "bytes": 137401,
+      "sha256": "d7db5889368f0021e1082d7b983cb3a66983e1f74a954972c0797c09d46083c6"
+    },
+    {
+      "path": "register/SYNTHETIC_REGISTER_DRAFT_0014_R18.csv",
+      "bytes": 10106,
+      "sha256": "92c35585cfd1a53a88807c89a6a5ba39ebcbe46af876a1530eb9c51c45435860"
+    },
+    {
+      "path": "source/BLUEPRINT_ROW_0014_I02-E05.jsonl",
+      "bytes": 7967,
+      "sha256": "ec6fc82addd4474a9d7d664b137bd8e35a2fe6a7bb04e7ca028f048e21d1e5d3"
+    },
+    {
+      "path": "source/SOURCE_PACKET_0014_R01.json",
+      "bytes": 9012,
+      "sha256": "30ade83ab55d9ed185dae519252e114ebfb33c8ef276c8005cf77cb355e82b91"
+    },
+    {
+      "path": "worker_review/w1_crouton_full_semantic/DISPATCH_RECEIPT.json",
+      "bytes": 3383,
+      "sha256": "c251a79e585faff8cf0e93605bde2d232f03f12147db11b3526fa03a1df49381"
+    },
+    {
+      "path": "worker_review/w1_crouton_full_semantic/DISPATCH_START.json",
+      "bytes": 975,
+      "sha256": "049da62de1b2cf8434b75cd9e91b66ef1692d89e192aacfc83c3544896b7f54e"
+    },
+    {
+      "path": "worker_review/w1_crouton_full_semantic/RAW_STDERR.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "worker_review/w1_crouton_full_semantic/RAW_STDOUT.json",
+      "bytes": 3986,
+      "sha256": "85a7bf409975084cb01c4f9b4fffba0dd1a5cd4e743eb1e0c22613f582f1ab3a"
+    },
+    {
+      "path": "worker_review/w1_crouton_full_semantic/RUN_STATUS.json",
+      "bytes": 112,
+      "sha256": "965f4b1073e167b312bc49e40f6885d2ff6d3b4aba8c8890bd6c9e0cc7f618ef"
+    },
+    {
+      "path": "worker_review/w1_crouton_full_semantic/WORK_PACKAGE.txt",
+      "bytes": 76044,
+      "sha256": "8d78d2981be43cc0c497b9283734f2c9e4d9a4fae38fa28cf8bfd10f5c6e2021"
+    },
+    {
+      "path": "worker_review/w1_nemotron_visual/DISPATCH_RECEIPT.json",
+      "bytes": 2652,
+      "sha256": "529b8ab78ba09dd101cd1ca623872e3927e80e74b93e768e69d79704ed5e1370"
+    },
+    {
+      "path": "worker_review/w1_nemotron_visual/DISPATCH_START.json",
+      "bytes": 824,
+      "sha256": "3ff49fe41dcc17efc7baa39be135ac50d12612328d69d7dbf6b8eb0fafa4de9c"
+    },
+    {
+      "path": "worker_review/w1_nemotron_visual/R18_VISUAL_REVIEW_COMPOSITE.png",
+      "bytes": 911292,
+      "sha256": "c2ea3d4952fa4901b83717ece495d0b2a4e88a6d30103ad044ba4782fac0e678"
+    },
+    {
+      "path": "worker_review/w1_nemotron_visual/RAW_STDERR.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "worker_review/w1_nemotron_visual/RAW_STDOUT.json",
+      "bytes": 1655,
+      "sha256": "b0eef146682293ffee0654870d594d8911e38386c5776c00040323c6108ee9b3"
+    },
+    {
+      "path": "worker_review/w1_nemotron_visual/RUN_STATUS.json",
+      "bytes": 112,
+      "sha256": "83c0c9d25da2aab26746eb556eab145b7eda09d3e4114b7bbf23cdd31ef9c0c1"
+    },
+    {
+      "path": "worker_review/w1_nemotron_visual/WORK_PACKAGE.txt",
+      "bytes": 2279,
+      "sha256": "1619575a9a69dd5e5fe1ab4827bfe3103ae540bf7e1ef2b347b09f18c26b34d4"
+    }
+  ]
+}

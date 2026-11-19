@@ -1,0 +1,192 @@
+{
+  "doc_id": "0102",
+  "official_requirement_id": "I18-E09",
+  "raw_writer_sha256": "2d9b2531ca8cc225965f4ff1aec2978b157d3613db75a21926589284e6070103",
+  "repaired_manuscript": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0102_I18-E09_R01_20261021\\writer\\opencode_writer_manuscript_0102_R01_repaired.md",
+  "repaired_sha256": "69aa121157ce9173198588055c20464166533022e77cc617f08e23e9967b9a03",
+  "bytes": 71696,
+  "characters": 34390,
+  "method": "bounded deterministic textual repairs; raw OpenCode output preserved",
+  "changes": [
+    {
+      "label": "remove stream-boundary duplicate",
+      "count": 1
+    },
+    {
+      "label": "case status consent",
+      "count": 1
+    },
+    {
+      "label": "case consent scope",
+      "count": 1
+    },
+    {
+      "label": "case dates",
+      "count": 1
+    },
+    {
+      "label": "case next actions",
+      "count": 1
+    },
+    {
+      "label": "full scenario boundary",
+      "count": 1
+    },
+    {
+      "label": "remove hardcoded email deadline",
+      "count": 1
+    },
+    {
+      "label": "form B deadline",
+      "count": 1
+    },
+    {
+      "label": "form B consent",
+      "count": 1
+    },
+    {
+      "label": "form C no search",
+      "count": 1
+    },
+    {
+      "label": "no invented official lookup",
+      "count": 1
+    },
+    {
+      "label": "no invented url",
+      "count": 1
+    },
+    {
+      "label": "form C next action",
+      "count": 1
+    },
+    {
+      "label": "form D case 1 channel",
+      "count": 1
+    },
+    {
+      "label": "form D case 1 consent",
+      "count": 1
+    },
+    {
+      "label": "form D case 1 locator",
+      "count": 1
+    },
+    {
+      "label": "form F case 1 internal date",
+      "count": 1
+    },
+    {
+      "label": "form F case 1 action",
+      "count": 1
+    },
+    {
+      "label": "form F case 2 date",
+      "count": 1
+    },
+    {
+      "label": "case 1 consent summary",
+      "count": 1
+    },
+    {
+      "label": "remove invented consent event",
+      "count": 1
+    },
+    {
+      "label": "remove invented official contact search",
+      "count": 1
+    },
+    {
+      "label": "case 1 internal date",
+      "count": 1
+    },
+    {
+      "label": "case 1 no followup",
+      "count": 1
+    },
+    {
+      "label": "case 1 hold",
+      "count": 1
+    },
+    {
+      "label": "case 2 consent summary",
+      "count": 1
+    },
+    {
+      "label": "case 2 no actual conversation",
+      "count": 1
+    },
+    {
+      "label": "case comparison consent",
+      "count": 1
+    },
+    {
+      "label": "case comparison next action",
+      "count": 1
+    },
+    {
+      "label": "KPI consent",
+      "count": 1
+    },
+    {
+      "label": "KPI independent channel",
+      "count": 1
+    },
+    {
+      "label": "case register column",
+      "count": 1
+    },
+    {
+      "label": "case register case 1",
+      "count": 1
+    },
+    {
+      "label": "case register case 2",
+      "count": 1
+    },
+    {
+      "label": "register date meaning",
+      "count": 1
+    },
+    {
+      "label": "register no invented page",
+      "count": 1
+    },
+    {
+      "label": "expand synthetic register",
+      "count": 1,
+      "rows_added": 21
+    },
+    {
+      "label": "mark filename examples only",
+      "count": 1
+    },
+    {
+      "label": "remove fake custody/consent record",
+      "count": 1
+    },
+    {
+      "label": "replace fake access log",
+      "count": 1
+    },
+    {
+      "label": "clarify no custody events",
+      "count": 1
+    },
+    {
+      "label": "clarify no access events",
+      "count": 1
+    }
+  ],
+  "invariants": {
+    "duplicate_checkbox_absent": true,
+    "no_fake_case01_signed_consent": true,
+    "no_fake_official_channel_lookup": true,
+    "outgoing_email_deadline_only_after_actual_send": true,
+    "case1_case2_no_valid_consent": true,
+    "consent_kpi": "0/2=0%",
+    "official_channel_location_kpi": "0/2=0%",
+    "replacement_register_rows": 39
+  },
+  "status": "REPAIRED_MANUSCRIPT_PENDING_WORD_BUILD_AND_INDEPENDENT_QA"
+}

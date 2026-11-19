@@ -1,0 +1,74 @@
+{
+  "schema": "ttqs-one.word-render-followup.v1",
+  "document_id": "0103",
+  "official_requirement": "I18-E10",
+  "official_checkbox_serial": 111,
+  "candidate_sha256": "4548a0fba48bb59c08389a6ec13edb1ffe61b58f6e3df3b302c5c4fa7cb39cb0",
+  "observed_at": "2026-10-23T06:45:00Z",
+  "timezone": "Asia/Taipei",
+  "outcome": "VISUAL_QA_BLOCKED",
+  "page_statistics": 31,
+  "page_statistics_method": "Word COM ComputeStatistics(2), receipt word_stats_R14.json",
+  "pdf_created": false,
+  "page_images_created": false,
+  "attempts": [
+    {
+      "attempt": "R02",
+      "status": "FAIL",
+      "started_at": "2026-10-23T14:34:53.901246+08:00",
+      "finished_at": "2026-10-23T14:34:54.0802521+08:00",
+      "candidate_sha256": "4548a0fba48bb59c08389a6ec13edb1ffe61b58f6e3df3b302c5c4fa7cb39cb0",
+      "pdf_exists": false,
+      "pdf_bytes": 0,
+      "new_word_pid": null,
+      "receipt_sha256": "1896fb5e0c285e11ec4519f264464ce206c5afe402d881c56a1e412620a20695",
+      "root_cause": "Child PowerShell could not resolve Get-FileHash; failed before Word render."
+    },
+    {
+      "attempt": "R03",
+      "status": "FAIL",
+      "started_at": "2026-10-23T14:35:22.5782256+08:00",
+      "finished_at": "2026-10-23T14:35:22.7476892+08:00",
+      "candidate_sha256": "4548a0fba48bb59c08389a6ec13edb1ffe61b58f6e3df3b302c5c4fa7cb39cb0",
+      "pdf_exists": false,
+      "pdf_bytes": 0,
+      "new_word_pid": null,
+      "receipt_sha256": "966aae9ef8bfcdae9e9a5254dd45bdc5bfb6d8195248247044c46bf9b013a13e",
+      "root_cause": "OpenRead received invalid path characters; failed before Word render."
+    },
+    {
+      "attempt": "R04",
+      "status": "FAIL",
+      "started_at": "2026-10-23T14:40:45.7381639+08:00",
+      "finished_at": "2026-10-23T14:40:49.1713521+08:00",
+      "candidate_sha256": "4548a0fba48bb59c08389a6ec13edb1ffe61b58f6e3df3b302c5c4fa7cb39cb0",
+      "pdf_exists": false,
+      "pdf_bytes": 0,
+      "new_word_pid": 68884,
+      "receipt_sha256": "b44f977f2a867317738c17993e06c46975e12ddeb1c244aba25704a5ad3030f6",
+      "root_cause": "Chinese candidate path was decoded as mojibake; Word rejected open."
+    },
+    {
+      "attempt": "R05",
+      "status": "FAIL",
+      "started_at": "2026-10-23T14:41:31.8324783+08:00",
+      "finished_at": "2026-10-23T14:41:41.9638985+08:00",
+      "candidate_sha256": "4548a0fba48bb59c08389a6ec13edb1ffe61b58f6e3df3b302c5c4fa7cb39cb0",
+      "pdf_exists": false,
+      "pdf_bytes": 0,
+      "new_word_pid": 18036,
+      "receipt_sha256": "abc5348d7a3fede1885cf657ec3a11f1dd795ec0cb7603be8233b711e01d186c",
+      "root_cause": "Word opened the candidate in the attempt; PrintOut COM binder rejected integer 0 for string parameter; no PDF generated."
+    }
+  ],
+  "os_snapshot": {
+    "word_process_count": 23,
+    "word_processes_are_automation_embedding": true,
+    "known_attempt_pids_18036_and_68884_currently_alive": false,
+    "opencode_service_present": true,
+    "opencode_service_is_writer": false,
+    "antigravity_cli_writer_present": false
+  },
+  "next_action": "Do not retry the same Word COM PrintOut call. Use a materially different safe render route only if its API and printer target are verified; continue unrelated READY documents.",
+  "acceptance": "CANDIDATE_SEMANTIC_PASS_VISUAL_QA_BLOCKED_NOT_FORMALLY_ACCEPTED"
+}

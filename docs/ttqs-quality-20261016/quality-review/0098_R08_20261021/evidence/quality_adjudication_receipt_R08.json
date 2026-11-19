@@ -1,0 +1,55 @@
+{
+  "document_id": "0098",
+  "requirement_id": "I18-E06",
+  "revision": "R08",
+  "docx_sha256": "a5d4bb14c884ff2d19db7bb6a86f999de0604d9ac6bacd9eb26f0b5db2c9cdba",
+  "candidate_status": "CANDIDATE_QA_COMPLETE_PENDING_FORMAL_ACCEPTANCE",
+  "semantic_review": {
+    "response_sha256": "bd82f9eba803f7cc4e33e5ad4f7f6450fec812ff6002f50e2140c038cc5d3adf",
+    "reviewer": "OpenCode CLI v2; independent of Writer",
+    "session_id": "ses_ea37b16fbffe5Io3P91yhHWIjk",
+    "note_findings": [
+      {
+        "severity": "note",
+        "location": "Cover | document-control block | official_serial field",
+        "quote": "官方打印序號：UNKNOWN（註：評核契約項目序號非官方印製序號，依規定標記為 UNKNOWN）",
+        "finding": "Official printed serial correctly marked UNKNOWN per policy; no official checkbox serial exists for this deliverable.",
+        "required_action": "None; this is correct handling."
+      },
+      {
+        "severity": "note",
+        "location": "§8.2.2 | R03 retired ID mapping",
+        "quote": "R03 的FACT-0098-074–FACT-0098-085是重複的調查流程事實，已整併到 R04/R05 canonical FACT-0098-022–FACT-0098-033",
+        "finding": "Register correctly preserves historical ID gaps (074–091, 089–091) without reuse; 192 unique FACT IDs in R08 register match declared count.",
+        "required_action": "None; version lineage correctly documented."
+      }
+    ],
+    "finding_count": 2,
+    "verdict": "PASS",
+    "model": "opencode/nemotron-3-ultra-free",
+    "substantive_blocking_findings": 0
+  },
+  "technical_review": {
+    "zip_integrity": "PASS_ALL_ENTRIES_READ",
+    "pending_page_locators": 0,
+    "unique_fact_ids": 192,
+    "receipt_sha256": "d55ee0d223888ed149ab105bb4d95aa1893eaaa38a3e033aab52687871615d23",
+    "page_count": 29,
+    "register_rows": 192,
+    "status": "PASS"
+  },
+  "visual_review": {
+    "receipt_sha256": "dde345e0a58f58433ac4adc686a843c7e53f585863aa2b8e7518092579f33117",
+    "status": "PASS_SCOPED",
+    "scope": "Direct pages 1, 9, 13, 27-29; remaining R08 pages 2-28 image-identical to R07 with inherited R06 full contact-sheet review."
+  },
+  "sample_real_boundary": "All 192 rows are SAMPLE/SYNTHETIC and require lawful REAL replacement. No actual survey logs, raw questionnaires, formal notices, consent evidence, signed approvals, or handover records were supplied; REAL values remain UNKNOWN/HOLD.",
+  "remaining_limits": [
+    "Official printed checkbox serial is UNKNOWN.",
+    "The independent semantic reviewer did not perform visual review; visual receipt is a separate scoped Codex inspection.",
+    "No real underlying evidence was supplied or verified.",
+    "Formal acceptance remains NOT_GRANTED."
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "decision": "R08 semantic PASS; technical PASS; scoped visual PASS; retain as candidate and sync evidence, do not claim TTQS formal acceptance."
+}

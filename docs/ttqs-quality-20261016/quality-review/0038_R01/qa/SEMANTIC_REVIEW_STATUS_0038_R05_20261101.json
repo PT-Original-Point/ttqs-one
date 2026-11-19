@@ -1,0 +1,59 @@
+{
+  "project_id": "TTQS_ONE",
+  "official_checkbox": "039",
+  "historical_sequence_index": "1575",
+  "evidence": {
+    "synthetic_register_sha256": "62047052b932164619ad0a07017ed24c591e4c05d56ed75d8380c9c013da27bf",
+    "unique_blueprint_sha256": "a651c496e0a699d2cb218d1c15ad88d2796f30a20d641a89412c4f167ba24340",
+    "r05_reviewer_response_sha256": "19c561698e248349728579741d37a88012ef883c220c1e99aa2fc50663f175e7",
+    "calculation_receipt_sha256": "44976da554ae62bbce77b5ea07c6dd9c2ce5c7959c5936fd53c791d50666be84",
+    "r04_reviewer_response_sha256": "cab7c07827a29e1ef7fcfb1af95749cbe580e69be061f41368b34dbf8d6020ed",
+    "technical_receipt_sha256": "cfcab83686a92bf8a4e0d470d78ae7b026b9dec0fb20cbac46d7933c89136e69",
+    "source_packet_sha256": "06ebdfa5fceb229ab609c4c873a21955aa8092a77fa91ba1557b1b7a6fde987a",
+    "visual_receipt_sha256": "9c48e445de624f85a920b275cf82c278eb59270b191d60d3a64af4007ce6aee7"
+  },
+  "semantic_review_scope": [
+    "Prior R04 full semantic review retained for every unchanged visible section after reviewer verified content identity outside §8.",
+    "R05 §8 corrected finding directly checked: synthetic label and sidecar explanation remain; technical/source/Blueprint/register hashes absent from DOCX visible text and kept in sidecar QA evidence.",
+    "Exact candidate SHA confirmed before and after R05 follow-up."
+  ],
+  "blocking_findings": [],
+  "verdict": "PASS_SCOPED_DELTA_WITH_UNCHANGED_SECTIONS_CARRIED_FORWARD",
+  "adjudicated_semantic_status": "PASS_SCOPED_DELTA",
+  "prior_review": {
+    "verdict": "PARTIAL",
+    "raw_response_sha256": "cab7c07827a29e1ef7fcfb1af95749cbe580e69be061f41368b34dbf8d6020ed",
+    "raw_response_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0038_PREFLIGHT\\SEMANTIC_REVIEW_0038_R04_PARTIAL_RAW_20261101.md",
+    "candidate_sha256": "A604805BC1FF922E67FEE496DD40285927487499CB7B4E2D1DE4F2B8F5B4399E",
+    "unchanged_body_scope": "Visible body text outside section 8, including headers and footers, matches R04; prior review remains applicable."
+  },
+  "formal_acceptance": false,
+  "reviewed_at_local": "2026-11-01T12:29:46.0761679+08:00",
+  "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "review_verdict": "PASS_SCOPED_DELTA_WITH_UNCHANGED_SECTIONS_CARRIED_FORWARD",
+  "candidate_sha256_before": "713c07c6bb956ad27f0e6b4f5c8a34bf4d1b6aba0273449f1ca02f3d839fee7b",
+  "delta_finding": "Section 8 reader-facing text exposed technical SHA-256 metadata. R05 removes those hashes from the DOCX body while preserving synthetic status and separately maintained register notice.",
+  "reviewer": {
+    "reviewer_name": "Hooke",
+    "name": "Hooke",
+    "reviewer_context_id": "01a19555-9479-7f01-ad4a-9514b643fdab",
+    "work_id": "TTQS-0038-I08-E02-SEMANTIC-REVIEW-R05-SCOPED-20261101",
+    "route": "independent Codex multi-agent review context",
+    "reviewer_role": "Independent semantic reviewer"
+  },
+  "candidate_docx_sha256": "713c07c6bb956ad27f0e6b4f5c8a34bf4d1b6aba0273449f1ca02f3d839fee7b",
+  "semantic_gate_status": "PASS",
+  "document_id": "0038",
+  "real_evidence": "NOT_ESTABLISHED",
+  "requirement_id": "I08-E02",
+  "schema": "ttqs-one-semantic-review-delta-carryforward-v1",
+  "candidate_sha256_after": "713c07c6bb956ad27f0e6b4f5c8a34bf4d1b6aba0273449f1ca02f3d839fee7b",
+  "candidate_sha256": "713c07c6bb956ad27f0e6b4f5c8a34bf4d1b6aba0273449f1ca02f3d839fee7b",
+  "visual_review": "NOT_PERFORMED_BY_SEMANTIC_REVIEWER",
+  "doc_id": "0038",
+  "revision": "R05",
+  "candidate_remote_path": "docs/ttqs-quality-20261016/quality-review/0038_R01/candidate/0038_I08-E02_R05_20261101.docx",
+  "remote_path": "docs/ttqs-quality-20261016/quality-review/0038_R01/candidate/0038_I08-E02_R05_20261101.docx",
+  "semantic_model": "UNKNOWN",
+  "semantic_model_identity_status": "UNKNOWN"
+}

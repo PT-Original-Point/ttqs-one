@@ -1,0 +1,80 @@
+{
+  "schema": "ttqs-one-candidate-status-r12-v2",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0121",
+  "requirement_id": "I19-E09",
+  "candidate_state": "CANDIDATE",
+  "candidate_revision": "R03",
+  "official_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+  "candidate": {
+    "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R03_20261027/candidate/0121_I19-E09_R03.docx",
+    "sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+    "bytes": 72632,
+    "body_extract_sha256": "4ea875c255a3d1f852788a258725150729787f83dad96efa997dd491a8f01552"
+  },
+  "sources": {
+    "source_packet_sha256": "fbeb11b96648fff29a49a0fca74bf0cc3b3d1d29934f07dfaa3cf7e410a557fd",
+    "unique_blueprint_sha256": "99320fdc9078615ad04087c43bcbd22c5bbf751a22127c51e048e909726a5fca",
+    "official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "source_row_sha256": "e5956462565186757b6a20f53cff22e9e53cd5abca1e2b69e6942a24c91f5b08"
+  },
+  "technical_qa": {
+    "result": "PASS",
+    "scope": "27 deterministic technical/visual checks bound to exact R03 candidate SHA",
+    "receipt_sha256": "5a7478d792a5e9cd0e884e5bdda78fa34cab611ba36b64d592b93a2a726b4015"
+  },
+  "visual_qa": {
+    "result": "PASS_WITH_DELTA_SCOPE",
+    "native_word_pdf_sha256": "fa3fd36e716372d47ae36a3eaf4a5f28ec5c395d9800e6764bf69325abed0f70",
+    "page_count": 23,
+    "directly_inspected_pages": [
+      1,
+      18
+    ],
+    "unchanged_pixel_identical_pages_vs_R02": 21,
+    "body_min_font_pt": 10.5,
+    "table_min_font_pt": 9.5,
+    "typography_unresolved_runs": 0
+  },
+  "semantic_review": {
+    "result": "NOT_ACCEPTED_PROVIDER_IDENTITY_UNKNOWN",
+    "candidate_sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+    "review_response_sha256": "9f68f37a3427aee265f54f3f895fa832cca6580a3f6fdc0de07916f47865ed4d",
+    "raw_stdout_sha256": "93770fa08a7e4714c6b6e65d38c699f81bd4b26169a33e5f05741c951b5cdb10",
+    "request_sha256": "d5935a49c75152ff3e68451e9e78271f4ec4d746645bab49f89086a621576b1d",
+    "input_manifest_sha256": "c969abc9af1baef90a795f8df8ec34cf5f4ce57d47790b8c2f5f4ff1ff90b358",
+    "work_id": "TTQS-0121-I19-E09-R03-ANTIGRAVITY-R12-FULL-SEMANTIC-REVIEW",
+    "worker": "Antigravity CLI",
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model": "UNKNOWN",
+    "usage_tokens_reported": 52786,
+    "reported_substantive_blockers": 0,
+    "reviewer_visual_scope": "NOT_REVIEWED_TEXT_ONLY",
+    "reviewer_reported_verdict": "PASS",
+    "acceptance_status": "NOT_GRANTED",
+    "status_reason": "Antigravity CLI response requested gemini-3.8-flash-high but terminal evidence records actual_serving_model=UNKNOWN; this Human-authorized route does not qualify as a Gemini PASS without verified serving identity. The OpenCode GLM attempt was rejected before model response by provider.free-limit HTTP 429.",
+    "opencode_followup": "NOT_REVIEWED; provider.free-limit 429 before response; no verdict produced."
+  },
+  "sample_register": {
+    "sha256": "96837dfbabcc81693256042e4c326825c6e0f847982a63add3eb72945c5d100e",
+    "data_rows": 21,
+    "all_examples": "SAMPLE_SYNTHETIC",
+    "real_replacements": "NOT_PROVIDED"
+  },
+  "remote_readback_existing_at_head_633c5c4": {
+    "candidate_git_blob_sha": "820d586734c62ddaad3905ba8b8ea74ede5c9813",
+    "source_packet_git_blob_sha": "f6e3938c55fabf5fc3875792f8ad643cc694b241",
+    "blueprint_git_blob_sha": "f4aa8ef470b4446e8f2fd4be4200f7bb7555bb5f",
+    "review_request_git_blob_sha": "cd3c7d3ddbbcc8415b35eeaa5b88240d285d6b28",
+    "review_response_git_blob_sha": "6a8a356baee7d1cfb5c09b9ba0a09305798b902f",
+    "raw_stdout_git_blob_sha": "0dfb58f66b10ba417cf197d35a4a521ba58d2712",
+    "dispatch_terminal_git_blob_sha": "accd8cb01857c18baeee7cb818923c7db92d0d11",
+    "input_manifest_git_blob_sha": "29c394e2f592ca1acd50630bb4214e6809325b67"
+  },
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "NOT_PROVIDED",
+  "candidate_mutated": false,
+  "observed_at_local": "2026-10-27T04:17:05.3880475+08:00",
+  "semantic_status_correction": "R12 provider identity correction; candidate bytes unchanged.",
+  "corrected_at_local": "2026-10-27T12:29:44.8166755+08:00"
+}

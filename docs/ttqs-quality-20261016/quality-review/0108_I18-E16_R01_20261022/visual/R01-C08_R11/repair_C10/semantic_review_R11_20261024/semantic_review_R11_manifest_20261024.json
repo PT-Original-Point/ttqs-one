@@ -1,0 +1,151 @@
+{
+  "schema": "ttqs-one-review-evidence-bundle-v1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0108-I18-E16-R01-C10-ANTIGRAVITY-SEMANTIC-REVIEW-R11",
+  "captured_at_tpe": "2026-10-24T03:34:45.6992420+08:00",
+  "github": {
+    "repository": "PT-Original-Point/ttqs-one",
+    "pull_request": 92,
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "head_before_sync": "5be2fdf40f72db56af523844518c070764fba5a9"
+  },
+  "document_binding": {
+    "doc_id": "0108",
+    "official_requirement_id": "I18-E16",
+    "official_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+    "candidate_revision": "R01-C10",
+    "candidate_sha256": "7162721a914bce8accdecf7b18732c85ade62a77dd6ed7f11feed59d9db8b537",
+    "candidate_bytes": 73473,
+    "candidate_remote_git_blob": "48d080a48d83e4e5062ac5861b6e66e787c0aad9",
+    "candidate_local_git_blob": "48d080a48d83e4e5062ac5861b6e66e787c0aad9",
+    "candidate_bytes_match": true,
+    "source_markdown_sha256": "f4bf23b791726256348d3223c6c204d8b88e5a542855b12b2e04c51f3b48179c",
+    "source_packet_sha256": "f11df2f92edb7c63bc7dbddefe8461188dfdf90c4be9e0c0c4ae284f15457d5f",
+    "source_packet_remote_git_blob": "409188b06b1f2d42dacbec1a600c3fe0ad552ce5",
+    "unique_blueprint_sha256": "41713064e2744c12831cb56098cc3ceb5661279048eb16123583f6c26d2f64ab",
+    "unique_blueprint_remote_git_blob": "da25d370fbfb2628e28e759017b3d3b7f46b7d90",
+    "canonical_157_blueprint_remote_git_blob": "8c2bbe7ca9dcbb03088a48934b9e57e7147ede63"
+  },
+  "review": {
+    "worker": "Antigravity CLI",
+    "cli_version": "1.4.6",
+    "conversation_id": "0dc83c96-e8c1-4dd7-976e-b563c479119b",
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_model_identity": "UNKNOWN",
+    "response_verdict_as_returned": "PASS",
+    "review_acceptance": "NOT_PROMOTED",
+    "response_sha256": "deaf7968e344a8909d2580262d2e81bbfec4ad7ad7db5b782bf1d03a4d20b187",
+    "raw_cli_json_sha256": "06d3b033e6fa93aedb5f6fb7c325a44095d4c25479d3042447b5ff7c8cc9f3d3",
+    "usage": {
+      "input_tokens": 28854,
+      "output_tokens": 14920,
+      "thinking_tokens": 11565,
+      "total_tokens": 43774
+    },
+    "duration_seconds": 92.8401295,
+    "scope": "semantic review of supplied source text bound to candidate SHA; explicitly excludes Word visual acceptance, TTQS formal acceptance, and REAL operational evidence"
+  },
+  "blueprint_attribution": {
+    "reviewer_reported_field": "blueprint_sha256",
+    "reported_value": "8c2bbe7ca9dcbb03088a48934b9e57e7147ede63 (Git blob: 03_157_CHECKBOX_BLUEPRINTS.md index 117)",
+    "field_note": "The cited value is the verified canonical master-file Git blob, not a SHA-256 of the supplied unique Blueprint. The exact unique Blueprint SHA and Git blob are recorded separately above, and its full text was in the review input.",
+    "citation_match": "MASTER_GIT_BLOB_MATCHES_CURRENT_GITHUB_FILE",
+    "official_serial": "UNKNOWN_NOT_ASSERTED"
+  },
+  "cli_attempts": [
+    {
+      "attempt": 1,
+      "exit_code": 2,
+      "stdout_chars": 0,
+      "error": "--print consumed --model as prompt; no inference."
+    },
+    {
+      "attempt": 2,
+      "exit_code": 2,
+      "stdout_chars": 0,
+      "error": "print-timeout lacked duration unit; no inference."
+    },
+    {
+      "attempt": 3,
+      "exit_code": 0,
+      "response_chars": 5699,
+      "model_identity": "UNKNOWN"
+    }
+  ],
+  "candidate_mutated": false,
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN",
+  "review_bundle": {
+    "file": "semantic_review_R11_evidence_20261024.zip",
+    "bytes": 41362,
+    "sha256": "b61067c1468a6bfa1913622e5d80bbede6557cab42d75dc1f30d16657c2c34da",
+    "members": [
+      {
+        "name": "review_input_R11.md",
+        "bytes": 60100,
+        "sha256": "ac5fc20ef3149a65d1aa3bda021cbeba970ff5885f438c4a5a886569586ca4ed"
+      },
+      {
+        "name": "source_packet_0108_R01.md",
+        "bytes": 3272,
+        "sha256": "f11df2f92edb7c63bc7dbddefe8461188dfdf90c4be9e0c0c4ae284f15457d5f"
+      },
+      {
+        "name": "UNIQUE_BLUEPRINT_0108_R01.md",
+        "bytes": 8163,
+        "sha256": "41713064e2744c12831cb56098cc3ceb5661279048eb16123583f6c26d2f64ab"
+      },
+      {
+        "name": "dispatch_intent_R11.json",
+        "bytes": 2296,
+        "sha256": "56dba761304393739facf2cc7512421969a9e770a4c56e19eeceed14b2e1b9f9"
+      },
+      {
+        "name": "dispatch_receipt_R11.json",
+        "bytes": 1276,
+        "sha256": "61678f70b0945b6baf627989cce42381a16cdb1378e0627615199ad796a96ae8"
+      },
+      {
+        "name": "dispatch_receipt_R11_attempt2.json",
+        "bytes": 1338,
+        "sha256": "c6f1ff6aadf47fd50f03e50e378ba92fc84319578a90385ffc315e664abf01f7"
+      },
+      {
+        "name": "dispatch_receipt_R11_attempt3.json",
+        "bytes": 1338,
+        "sha256": "9facf16ad64c51d9dc77394b08cb8259f4aace31ac2b6d17bec99b0ef438a60b"
+      },
+      {
+        "name": "raw_stderr_R11.txt",
+        "bytes": 207,
+        "sha256": "4cb01e42c36d7235625054e37698ff638a43c91898eb1f4237c28ba9bd5849b1"
+      },
+      {
+        "name": "raw_stderr_R11_attempt2.txt",
+        "bytes": 2999,
+        "sha256": "b802125e09b641fcede78229c95ea20b9b6964b9ce5e72bb4ffc6bf227d09e4d"
+      },
+      {
+        "name": "raw_stderr_R11_attempt3.txt",
+        "bytes": 78,
+        "sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459"
+      },
+      {
+        "name": "raw_stdout_R11_attempt3.json",
+        "bytes": 9928,
+        "sha256": "06d3b033e6fa93aedb5f6fb7c325a44095d4c25479d3042447b5ff7c8cc9f3d3"
+      },
+      {
+        "name": "semantic_review_assessment_R11.json",
+        "bytes": 3975,
+        "sha256": "18338d1b3c14c8b810fa8b31a378f5fbc38c5cfe2dbb032bdd3118ba182b19a2"
+      },
+      {
+        "name": "model_route_evidence_R11.txt",
+        "bytes": 600,
+        "sha256": "659db660ddf6ca6b2148ee73a8900e2394b29543b4ca97a8dcd4f1cb52f71ef5"
+      }
+    ]
+  },
+  "readback_required": true
+}

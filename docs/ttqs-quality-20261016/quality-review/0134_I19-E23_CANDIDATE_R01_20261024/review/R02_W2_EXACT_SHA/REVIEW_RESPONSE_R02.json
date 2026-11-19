@@ -1,0 +1,162 @@
+{
+  "work_id": "TTQS-0134-I19-E23-R01-EXACT-SHA-INDEPENDENT-SEMANTIC-REVIEW-W2-R02",
+  "doc_id": "0134",
+  "requirement_id": "I19-E23",
+  "candidate_sha256": "a003ad1906194d1cb30a37a313f2ebd004cee129d6c231c6a3bef40b321cee08",
+  "body_extraction_sha256": "1cb02f5d0a8db96605f1e2d29e50448a4874fe6ed8e3908853a362c1b73ad5f1",
+  "verdict": "PASS",
+  "criteria": {
+    "genre": "PASS. Document adheres strictly to the analysis/evaluation report genre (分析／評估報告) focused specifically on multi-year membership headcount and fee revenue trends. It passes title-blind inspection through dedicated member categorization, membership roll roll-forward reconciliations, fee collection/refund schedules, and accounting reconciliation frameworks.",
+    "requirement_binding": "PASS. Direct binding to official TTQS check sheet page 8 exact text: '會員人數及會費收入均逐年增加。' Printed official checkbox serial is correctly maintained as UNKNOWN. Internal 157 blueprint index 147 ('會員/會費：實際帳冊與敏感資料隔離') is directly operationalized in Sections 4, 7.1, and 11.",
+    "unique_blueprint": "PASS. Fully satisfies UNIQUE_BLUEPRINT_0134_I19-E23_R01 requirements: delivers all 12 required sections, 5 required core table families, dedicated replacement registers (SYN-0134-001 through SYN-0134-055), and exact numerator/denominator definitions with explicit zero-denominator handling.",
+    "math_and_internal_consistency": "PASS. 100% of arithmetic calculations, membership rolls (opening + additions - exits = closing), fee collections, refund deductions, arrears reconciliations, year-on-year percentage rates, and cumulative rates are mathematically verified and consistent across all sections and cross-reference tables.",
+    "sample_real_boundary": "PASS. Flawless maintenance of SAMPLE/SYNTHETIC vs. REAL boundaries. All figures, dates, and names are clearly marked as synthetic demonstration data (Grade S0). Roles are functional placeholders; no forged personal names, physical signatures, or unverified association performance claims exist.",
+    "operational_usability": "PASS. Excellent usability for administrators and evaluators: provides a 30-second reading card, concrete 7-step reconciliation workflow with role separation, clear hold/stop conditions (Table 6.2 and Section 10), and a structured REAL data ingestion worksheet (Section 13).",
+    "neighbor_distinction": "PASS. Strict isolation from negative neighbors: 0133 / I19-E22 (training classes and attendee person-times) is explicitly rejected in Sections 1, 2.3, and 12, barring any inclusion of attendee counts into membership; 0135 / I19-E25 (target market and customer value outcomes) is strictly excluded, explicitly barring training outcome causality claims from membership trends."
+  },
+  "verified_calculations": [
+    {
+      "locator": "Section 5.1 (Table 5.1) & Section 5.2 (Table 5.2)",
+      "calculation_type": "2023 Member Headcount Sum",
+      "formula": "30 (General) + 8 (Supporting) + 4 (Exempt) = 42",
+      "extracted_value": "42",
+      "verified_value": "42",
+      "status": "VERIFIED_EXACT"
+    },
+    {
+      "locator": "Section 5.1 (Table 5.1) & Section 5.2 (Table 5.2)",
+      "calculation_type": "2024 Member Headcount Sum",
+      "formula": "36 (General) + 8 (Supporting) + 4 (Exempt) = 48",
+      "extracted_value": "48",
+      "verified_value": "48",
+      "status": "VERIFIED_EXACT"
+    },
+    {
+      "locator": "Section 5.1 (Table 5.1) & Section 5.2 (Table 5.2)",
+      "calculation_type": "2025 Member Headcount Sum",
+      "formula": "40 (General) + 10 (Supporting) + 4 (Exempt) = 54",
+      "extracted_value": "54",
+      "verified_value": "54",
+      "status": "VERIFIED_EXACT"
+    },
+    {
+      "locator": "Section 5.2 (Table 5.2)",
+      "calculation_type": "2024 Total Member Roll-Forward",
+      "formula": "42 (Opening) + 10 (New) - 4 (Exit) = 48 (Closing)",
+      "extracted_value": "48",
+      "verified_value": "48",
+      "status": "VERIFIED_EXACT"
+    },
+    {
+      "locator": "Section 5.2 (Table 5.2)",
+      "calculation_type": "2025 Total Member Roll-Forward",
+      "formula": "48 (Opening) + 10 (New) - 4 (Exit) = 54 (Closing)",
+      "extracted_value": "54",
+      "verified_value": "54",
+      "status": "VERIFIED_EXACT"
+    },
+    {
+      "locator": "Section 5.1 (Table 5.1), Section 5.4 (Table 5.4), Section 6 (Table 6.1)",
+      "calculation_type": "2024 Member YoY Growth Rate",
+      "formula": "(48 - 42) / 42 * 100% = 6 / 42 * 100% = 14.2857% -> rounded to 1 decimal place",
+      "extracted_value": "14.3%",
+      "verified_value": "14.3%",
+      "status": "VERIFIED_EXACT"
+    },
+    {
+      "locator": "Section 5.1 (Table 5.1), Section 5.4 (Table 5.4), Section 6 (Table 6.1)",
+      "calculation_type": "2025 Member YoY Growth Rate",
+      "formula": "(54 - 48) / 48 * 100% = 6 / 48 * 100% = 12.5000% -> rounded to 1 decimal place",
+      "extracted_value": "12.5%",
+      "verified_value": "12.5%",
+      "status": "VERIFIED_EXACT"
+    },
+    {
+      "locator": "Section 5.4 (Table 5.4)",
+      "calculation_type": "2023-2025 Cumulative Member Growth Rate",
+      "formula": "(54 - 42) / 42 * 100% = 12 / 42 * 100% = 28.5714% -> rounded to 1 decimal place",
+      "extracted_value": "28.6%",
+      "verified_value": "28.6%",
+      "status": "VERIFIED_EXACT"
+    },
+    {
+      "locator": "Section 5.3 (Table 5.3b, Table 5.3c)",
+      "calculation_type": "2023 Demonstrated Net Fee Collection",
+      "formula": "(30 * 3,000) + (8 * 1,500) - 0 = 90,000 + 12,000 - 0 = NT$102,000",
+      "extracted_value": "NT$102,000",
+      "verified_value": "NT$102,000",
+      "status": "VERIFIED_EXACT"
+    },
+    {
+      "locator": "Section 5.3 (Table 5.3b, Table 5.3c)",
+      "calculation_type": "2024 Demonstrated Net Fee Collection",
+      "formula": "(34 * 3,000) + (8 * 1,500) - 3,000 = 102,000 + 12,000 - 3,000 = NT$111,000",
+      "extracted_value": "NT$111,000",
+      "verified_value": "NT$111,000",
+      "status": "VERIFIED_EXACT"
+    },
+    {
+      "locator": "Section 5.3 (Table 5.3b, Table 5.3c)",
+      "calculation_type": "2025 Demonstrated Net Fee Collection",
+      "formula": "(38 * 3,000) + (9 * 1,500) - 1,500 = 114,000 + 13,500 - 1,500 = NT$126,000",
+      "extracted_value": "NT$126,000",
+      "verified_value": "NT$126,000",
+      "status": "VERIFIED_EXACT"
+    },
+    {
+      "locator": "Section 5.4 (Table 5.4), Section 6 (Table 6.1)",
+      "calculation_type": "2024 Demonstrated Net Fee Collection YoY Growth Rate",
+      "formula": "(111,000 - 102,000) / 102,000 * 100% = 9,000 / 102,000 * 100% = 8.8235% -> rounded to 1 decimal place",
+      "extracted_value": "8.8%",
+      "verified_value": "8.8%",
+      "status": "VERIFIED_EXACT"
+    },
+    {
+      "locator": "Section 5.4 (Table 5.4), Section 6 (Table 6.1)",
+      "calculation_type": "2025 Demonstrated Net Fee Collection YoY Growth Rate",
+      "formula": "(126,000 - 111,000) / 111,000 * 100% = 15,000 / 111,000 * 100% = 13.5135% -> rounded to 1 decimal place",
+      "extracted_value": "13.5%",
+      "verified_value": "13.5%",
+      "status": "VERIFIED_EXACT"
+    },
+    {
+      "locator": "Section 5.4 (Table 5.4)",
+      "calculation_type": "2023-2025 Cumulative Demonstrated Net Fee Collection Growth Rate",
+      "formula": "(126,000 - 102,000) / 102,000 * 100% = 24,000 / 102,000 * 100% = 23.5294% -> rounded to 1 decimal place",
+      "extracted_value": "23.5%",
+      "verified_value": "23.5%",
+      "status": "VERIFIED_EXACT"
+    },
+    {
+      "locator": "Section 5.3 (Table 5.3c) & Section 9 (Table 9.1)",
+      "calculation_type": "2024 Arrears Headcount Reconciliation",
+      "formula": "36 (General closing) - 34 (General paid) = 2; 8 (Supporting closing) - 8 (Supporting paid) = 0; Total = 2",
+      "extracted_value": "2 位一般會員",
+      "verified_value": "2",
+      "status": "VERIFIED_EXACT"
+    },
+    {
+      "locator": "Section 5.3 (Table 5.3c) & Section 9 (Table 9.1)",
+      "calculation_type": "2025 Arrears Headcount Reconciliation",
+      "formula": "40 (General closing) - 38 (General paid) = 2; 10 (Supporting closing) - 9 (Supporting paid) = 1; Total = 3",
+      "extracted_value": "2 位一般會員及 1 位支持會員 (共 3 位)",
+      "verified_value": "3",
+      "status": "VERIFIED_EXACT"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "INFO",
+      "locator": "Section 11 (Table 11.1) / Section 13 (Table 13.1)",
+      "issue": "All data elements, dates, and roles are synthetic demonstration artifacts (Quality Grade S0, registered under SYN-0134-001 through SYN-0134-055); real association evidence is not yet bound.",
+      "required_action": "Prior to official TTQS submission or formal acceptance, obtain authorized membership rolls, financial ledgers, and executive sign-offs to populate the replacement register keys without altering established calculation formulas."
+    }
+  ],
+  "text_only_limitations": [
+    "Review is strictly restricted to text extraction from candidate markdown body (SHA-256: 1cb02f5d0a8db96605f1e2d29e50448a4874fe6ed8e3908853a362c1b73ad5f1); no visual, binary, DOCX layout, or typography inspection was conducted.",
+    "No verification of external physical ledgers, bank statements, or official membership records was performed; all underlying association data remains UNKNOWN/HOLD.",
+    "No formal acceptance, certification, or official TTQS approval is granted by this semantic evaluation."
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD"
+}

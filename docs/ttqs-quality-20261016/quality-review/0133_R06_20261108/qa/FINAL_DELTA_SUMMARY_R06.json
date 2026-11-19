@@ -1,0 +1,66 @@
+{
+  "project_id": "TTQS_ONE",
+  "requirement_id": "I19-E22",
+  "doc_id": "0133",
+  "parent_candidate": {
+    "revision": "R05",
+    "sha256": "7f9cf468358d43ab866a1f11f29149faf0ee21ff99c7966f7754bc1a7978eb6e"
+  },
+  "candidate": {
+    "revision": "R06",
+    "sha256": "cceae5b8781fe503bd15993409ba616adb53a99d9923816d44afe019ee48b821",
+    "bytes": 103935
+  },
+  "material_delta": "Only four cells in Table 10/15 SYN-EX-01 changed; explicit synthetic split 10+10-9=11; annual totals unchanged; REAL source verification remains HOLD.",
+  "writer": {
+    "worker": "OpenCode v2 CLI",
+    "work_id": "TTQS_ONE_0133_R05_SYNEX01_REPAIR_PROPOSAL_20261108",
+    "requested_model": "opencode/beam-free",
+    "actual_model": "UNKNOWN",
+    "pid": 18808,
+    "session_ids": [
+      "ses_e47151358ffeNMzobMg0Fxc22P"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "ad351aa1beac2502a6e94e956aff189425f98e719acfbf665929d61161a0e113"
+  },
+  "fresh_scoped_reviewer": {
+    "worker": "Antigravity CLI",
+    "work_id": "TTQS_ONE_0133_R06_SYNEX01_SCOPED_REVIEW_20261108",
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_model": "UNKNOWN",
+    "verdict": "PASS_SCOPED",
+    "finding_count": 0,
+    "prior_finding_closed": true,
+    "candidate_sha256": "cceae5b8781fe503bd15993409ba616adb53a99d9923816d44afe019ee48b821",
+    "limitations": [
+      "Review is strictly bounded to the semantic adequacy of the four modified register cells in Table 10 and Table 15 across the R05→R06 delta.",
+      "Does not constitute full-document review, layout verification, visual inspection, technical DOCX compliance, or formal TTQS accreditation.",
+      "Physical DOCX opening and independent hash recomputation were not performed by the W2 runtime; assessment relies on coordinator-supplied text excerpts and cryptographic metadata."
+    ]
+  },
+  "visual": {
+    "verdict": "PASS_SCOPED_VISUAL",
+    "pdf_sha256": "c628f0a9012bc7f4bda877d92e53f1fc898b517410608d0f2c2067e8a82203bd",
+    "pages_inspected": [
+      8,
+      10,
+      11,
+      12
+    ]
+  },
+  "technical": {
+    "docx_reopens": true,
+    "zip_crc": "PASS",
+    "four_cell_delta_only": true,
+    "all_unchanged_document_text_unchanged": true,
+    "table_font_pt": [
+      9.5,
+      9.5,
+      9.5,
+      9.5
+    ]
+  },
+  "current_stage": "CANDIDATE_DELTA_REPAIRED; SCOPED_SEMANTIC_AND_VISUAL_QA_PASS; FULL_DOCUMENT_REVIEW_NOT_CLAIMED; GITHUB_READBACK_PENDING; FORMAL_ACCEPTANCE_NOT_GRANTED",
+  "created_at_tpe": "2026-11-08T10:32:54.513841+08:00"
+}

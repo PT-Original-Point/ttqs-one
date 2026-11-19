@@ -1,0 +1,12 @@
+{
+  "decision": "No candidate visual verdict. Do not launch another Word COM until 0027 owner exits; retry renderer only when a supported converter is available.",
+  "winword_active_pid": 5060,
+  "exit_code": 1,
+  "candidate_sha256": "517C5BDB84033977505D691FC8983A7DDB023E0BD34213E35CFE007AE21B50AB",
+  "schema": "TTQS_ONE_0030_VISUAL_RENDER_BLOCK_R02_BUNDLED",
+  "renderer": "Codex documents render_docx.py with bundled Python",
+  "output": "Traceback (most recent call last):\r\n  File \"C:\\Users\\J\\.codex\\plugins\\cache\\openai-primary-runtime\\documents\\26.1112.11011\\skills\\documents\\render_docx.py\", line 546, in <module>\r\n    main()\r\n  File \"C:\\Users\\J\\.codex\\plugins\\cache\\openai-primary-runtime\\documents\\26.1112.11011\\skills\\documents\\render_docx.py\", line 538, in main\r\n    rasterize(render_input_path, out_dir, dpi, verbose=args.verbose, emit_pdf=args.emit_pdf)\r\n  File \"C:\\Users\\J\\.codex\\plugins\\cache\\openai-primary-runtime\\documents\\26.1112.11011\\skills\\documents\\render_docx.py\", line 418, in rasterize\r\n    pdf_path, debug = convert_to_pdf(\r\n                      ^^^^^^^^^^^^^^^\r\n  File \"C:\\Users\\J\\.codex\\plugins\\cache\\openai-primary-runtime\\documents\\26.1112.11011\\skills\\documents\\render_docx.py\", line 270, in convert_to_pdf\r\n    soffice = _resolve_soffice()\r\n              ^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\Users\\J\\.codex\\plugins\\cache\\openai-primary-runtime\\documents\\26.1112.11011\\skills\\documents\\render_docx.py\", line 79, in _resolve_soffice\r\n    raise FileNotFoundError(f\"LibreOffice {executable_name} was not found on PATH\")\r\nFileNotFoundError: LibreOffice soffice.exe was not found on PATH\r\n",
+  "active_owner": "0027 R03D render script PID 6448, fresh CPU observed",
+  "work_id": "TTQS_ONE_0030_I06-E01_WORD_VISUAL_R02_BUNDLED_20261118",
+  "recorded_at_tpe": "2026-11-18T01:03:49.3173492+08:00"
+}

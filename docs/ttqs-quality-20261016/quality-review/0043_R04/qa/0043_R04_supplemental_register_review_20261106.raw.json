@@ -1,0 +1,240 @@
+{
+  "record_type": "original_supplemental_review_result",
+  "review_id": "0043_R04_REGISTER_SUPPLEMENT_20261106",
+  "created_at_local": "2026-11-06T10:09:54.7033145+08:00",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0043",
+  "requirement_id": "I09-E03",
+  "candidate_revision": "R04",
+  "reviewer_role": "independent supplemental reviewer, separate from the prior Antigravity CLI review execution",
+  "reviewer_context": "Current Codex review context; no delegated agent or external model call was used for this supplement.",
+  "model_identity": "UNKNOWN_NOT_ASSERTED",
+  "scope": "Bounded review of the actual R04 replacement register, its row-level rebind from R01, the official requirement, current Blueprint rows 0042/0043/0044, and the prior review packet manifest.",
+  "evidence": [
+    {
+      "role": "R04 candidate DOCX",
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0043_R04\\candidate\\0043__針對需求單位進行訪談並留有紀錄與統計分析_可直接使用成品_R04.docx",
+      "sha256": "23e2218ccd297d82cd0fc8298fc242c66df278cb7708d824ebfb4b15449478ab"
+    },
+    {
+      "role": "R01 candidate DOCX",
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0043_R01\\candidate\\0043__針對需求單位進行訪談並留有紀錄與統計分析_可直接使用成品_R01.docx",
+      "sha256": "a33cc53cded4823334a318e91e3399da54554623f990ccaf2419007e4607d9a7"
+    },
+    {
+      "role": "R01 replacement register",
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0043_R01\\sources\\SYNTHETIC_REPLACEMENT_REGISTER_0043_R01.csv",
+      "sha256": "ad43c11c33299526a93c673fd2183bb39f739ddebdd1f16d743f59e03ebdc31d"
+    },
+    {
+      "role": "R04 replacement register",
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0043_R04\\sources\\SYNTHETIC_REPLACEMENT_REGISTER_0043_R04.csv",
+      "sha256": "6e7f99767c8c2562ae2453b8ee41ed25ee56bf6810db94ce82cf0fd15fd1421e"
+    },
+    {
+      "role": "original review manifest",
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0043_R04\\qa\\antigravity_review_R01\\review_packet_manifest.json",
+      "sha256": "bd1bf8f382bc82138133846f2a9a6dbfbe5852fa68d0243c1f6635ca446e2e76"
+    },
+    {
+      "role": "original review packet register copy",
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0043_R04\\qa\\antigravity_review_R01\\inputs\\synthetic_replacement_register_248_rows.csv",
+      "sha256": "ad43c11c33299526a93c673fd2183bb39f739ddebdd1f16d743f59e03ebdc31d"
+    },
+    {
+      "role": "current official checklist PDF",
+      "path": "E:\\TTQS\\_official_TTQS_checklist.pdf",
+      "sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709"
+    },
+    {
+      "role": "current Blueprint JSONL",
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\BLUEPRINT_CURRENT.jsonl",
+      "sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e"
+    },
+    {
+      "role": "manifest Blueprint subset",
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0043_R04\\qa\\antigravity_review_R01\\inputs\\blueprint_unique_and_negative_neighbors.jsonl",
+      "sha256": "5b833a4680eb3b843e4e4dd496b2590108d887a5cb507e430752519293ced07d"
+    },
+    {
+      "role": "original semantic review raw output",
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0043_R04\\qa\\antigravity_review_R01\\antigravity_cli_R01.stdout.raw",
+      "sha256": "207489cf8b6e60e21964dfd6ca4b0edc873c0f600e9fa54b71a03aec9f046398"
+    },
+    {
+      "role": "original semantic review execution receipt",
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0043_R04\\qa\\antigravity_review_R01\\antigravity_execution_receipt_R01.json",
+      "sha256": "9dda01b83e62d776588520753c63f68aea106d693d94d3c6ee9778b2111afd09"
+    },
+    {
+      "role": "original reviewer prompt",
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0043_R04\\qa\\antigravity_review_R01\\0043_R04_antigravity_review_prompt_R01.txt",
+      "sha256": "2222ab23519ca31cc556bc473dcc24fd1b4c89bfce11d075c5681c8d4b284d30"
+    }
+  ],
+  "checks": [
+    {
+      "check_id": "CANDIDATE_SHA",
+      "result": "PASS",
+      "observation": "Current R04 candidate SHA was re-read and is the exact SHA carried by the prior raw semantic result and R04 receipts.",
+      "candidate_sha256": "23e2218ccd297d82cd0fc8298fc242c66df278cb7708d824ebfb4b15449478ab"
+    },
+    {
+      "check_id": "REGISTER_ROW_RECONCILIATION",
+      "result": "PASS",
+      "r01_rows": 248,
+      "r04_rows": 248,
+      "ordered_headers_match": true,
+      "compared_non_candidate_sha_columns": [
+        "fact_id",
+        "fact_type",
+        "sample_value",
+        "body_locator",
+        "source_status",
+        "real_replacement_source_required",
+        "replacement_owner_role",
+        "replacement_instruction"
+      ],
+      "non_candidate_sha_differences": 0,
+      "changed_candidate_sha_cells": 248,
+      "r01_distinct_binding_values": [
+        "a33cc53cded4823334a318e91e3399da54554623f990ccaf2419007e4607d9a7"
+      ],
+      "r04_distinct_binding_values": [
+        "23e2218ccd297d82cd0fc8298fc242c66df278cb7708d824ebfb4b15449478ab"
+      ]
+    },
+    {
+      "check_id": "REGISTER_COMPLETENESS_AND_CLASSIFICATION",
+      "result": "PASS",
+      "rows": 248,
+      "unique_fact_ids": 248,
+      "all_columns_nonblank": true,
+      "fact_type_counts": {
+        "synthetic_desired_outcome": 8,
+        "synthetic_preference_count": 7,
+        "synthetic_role": 8,
+        "synthetic_derived_total": 7,
+        "synthetic_priority_choice": 24,
+        "synthetic_validity_status": 2,
+        "synthetic_delivery_preference": 8,
+        "synthetic_data_safety_answer": 8,
+        "synthetic_barrier_answer": 8,
+        "synthetic_derived_priority_mentions": 6,
+        "synthetic_finding_and_recommendation": 4,
+        "synthetic_barrier_count": 4,
+        "synthetic_exclusion_reason": 2,
+        "synthetic_urgency_score": 8,
+        "synthetic_duration_preference": 8,
+        "synthetic_derived_high_demand": 6,
+        "synthetic_need_rating": 48,
+        "synthetic_schedule_preference": 8,
+        "synthetic_recommended_action": 6,
+        "synthetic_primary_barrier_code": 8,
+        "synthetic_cost_preference_count": 3,
+        "synthetic_subgroup_mean": 12,
+        "synthetic_cost_preference": 8,
+        "official_public_source_reference": 1,
+        "synthetic_derived_mean": 7,
+        "synthetic_analysis_group": 8,
+        "synthetic_interview_date": 8,
+        "synthetic_derived_rate": 3,
+        "synthetic_invalid_record_date": 2,
+        "synthetic_readback_status": 8
+      },
+      "source_status_counts": {
+        "REAL_OFFICIAL_SOURCE_REFERENCE; NOT ASSOCIATION EVIDENCE": 1,
+        "SYNTHETIC_REPLACEMENT": 247
+      },
+      "all_rows_bound_to_current_r04_sha": true,
+      "official_public_reference_row": {
+        "fact_id": "OFFICIAL-PUBLIC-SOURCE-P3",
+        "fact_type": "official_public_source_reference",
+        "sample_value": "針對需求單位進行訪談並留有紀錄與統計分析。",
+        "body_locator": "§1、§11；訓練機構版查核佐證表第3頁",
+        "source_status": "REAL_OFFICIAL_SOURCE_REFERENCE; NOT ASSOCIATION EVIDENCE",
+        "real_replacement_source_required": "Official public checklist PDF at recorded SHA-256",
+        "replacement_owner_role": "來源覆核角色（待指派）",
+        "replacement_instruction": "Keep as a public-source citation only. Verify the official page and wording; never classify it as evidence of an association interview.",
+        "bound_candidate_sha256": "23e2218ccd297d82cd0fc8298fc242c66df278cb7708d824ebfb4b15449478ab"
+      }
+    },
+    {
+      "check_id": "OFFICIAL_REQUIREMENT_ALIGNMENT",
+      "result": "PASS",
+      "official_pdf_path": "E:\\TTQS\\_official_TTQS_checklist.pdf",
+      "official_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+      "official_page": 3,
+      "official_checkbox_sequence": 44,
+      "official_text": "針對需求單位進行訪談並留有紀錄與統計分析。",
+      "official_text_packet_sha256": "3011d30453df4d0b997f9edd60f3fc60ffc274f0deb943530466430eb6ce2d7b",
+      "register_official_reference_matches": true
+    },
+    {
+      "check_id": "BLUEPRINT_AND_NEGATIVE_NEIGHBORS",
+      "result": "PASS",
+      "blueprint_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\BLUEPRINT_CURRENT.jsonl",
+      "blueprint_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+      "manifest_subset_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0043_R04\\qa\\antigravity_review_R01\\inputs\\blueprint_unique_and_negative_neighbors.jsonl",
+      "manifest_subset_sha256": "5b833a4680eb3b843e4e4dd496b2590108d887a5cb507e430752519293ced07d",
+      "selected_rows": [
+        {
+          "deliverable_id": "0042",
+          "current_requirement_id": "I09-E02",
+          "packet_requirement_id": "I09-E02",
+          "selected_fields_match": true,
+          "official_requirement_text": "執行本項目與作業流程相關文件資料（展現利益關係人參與課程設計與審查，包括出席、 發言、意見溝通、核准、認同、 支持…等各種形式的參與）。",
+          "negative_neighbors": "0041《課程規劃書（能顯示包含講師、行政、企業學員、_完整工作稿》（I09-E01）：應證明不同工作物；本件不得代替、合併或複製其專屬事實。\n0043《針對需求單位進行訪談並留有紀錄與統計分析_可直接使用成品》（I09-E03）：應證明不同工作物；本件不得代替、合併或複製其專屬事實。"
+        },
+        {
+          "deliverable_id": "0043",
+          "current_requirement_id": "I09-E03",
+          "packet_requirement_id": "I09-E03",
+          "selected_fields_match": true,
+          "official_requirement_text": "針對需求單位進行訪談並留有紀錄與統計分析。",
+          "negative_neighbors": "0042《執行本項目與作業流程相關文件資料（展現利益關_完整工作稿》（I09-E02）：應證明不同工作物；本件不得代替、合併或複製其專屬事實。\n0044《所有的討論、會議或E-mail均留有完整紀錄_可直接使用成品》（I09-E04）：應證明不同工作物；本件不得代替、合併或複製其專屬事實。"
+        },
+        {
+          "deliverable_id": "0044",
+          "current_requirement_id": "I09-E04",
+          "packet_requirement_id": "I09-E04",
+          "selected_fields_match": true,
+          "official_requirement_text": "所有的討論、 會議或E-mail均留有完整紀錄並經簽核後存檔。",
+          "negative_neighbors": "0043《針對需求單位進行訪談並留有紀錄與統計分析_可直接使用成品》（I09-E03）：應證明不同工作物；本件不得代替、合併或複製其專屬事實。\n0045《訓練資源採購與甄選管理辦法》（I10-E01）：應證明不同工作物；本件不得代替、合併或複製其專屬事實。"
+        }
+      ]
+    },
+    {
+      "check_id": "PRIOR_REVIEW_MANIFEST_SCOPE",
+      "result": "PASS_WITH_HISTORICAL_LIMITATION",
+      "manifest_candidate_sha256": "23e2218ccd297d82cd0fc8298fc242c66df278cb7708d824ebfb4b15449478ab",
+      "manifest_input_count": 31,
+      "manifest_input_hash_mismatches": 0,
+      "register_input_path": "inputs\\synthetic_replacement_register_248_rows.csv",
+      "register_input_sha256": "ad43c11c33299526a93c673fd2183bb39f739ddebdd1f16d743f59e03ebdc31d",
+      "register_input_matches_r01": true,
+      "register_input_matches_r04": false,
+      "manifest_blueprint_subset_matches_current_selected_rows": true,
+      "original_review_recorded_verdict": "PASS",
+      "original_review_limitations": [
+        "Independent visual and semantic review was conducted directly on all 17 rendered candidate document page images (page-01.png through page-17.png), covering full text, tables, formulas, and appendices. Loose external CSV and blueprint JSON files were not mounted separately in the inputs directory, but all 48 rating entries, 10 case logs, formulas, calculations, and replacement procedures were fully present and recomputed from the candidate document itself."
+      ]
+    }
+  ],
+  "body_text_comparison": {
+    "method": "Read-only extraction of word/document.xml text nodes; whitespace normalized; page-break/layout XML excluded.",
+    "r01_paragraph_nodes": 655,
+    "r04_paragraph_nodes": 655,
+    "r01_tables": 14,
+    "r04_tables": 14,
+    "visible_body_text_equal": true
+  },
+  "conclusion": {
+    "supplemental_r04_register_review": "PASS_WITH_LIMITATION",
+    "current_register_gap": "Closed for the bounded R04 register/source/manifest checks by this supplement.",
+    "historical_original_reviewer_read_r04_register": "NOT_PROVEN",
+    "explanation": "The prior manifest binds the packet copy to the R01 register SHA, not the R04 register SHA. The prior prompt instructed the reviewer to read all inputs, but the raw result says the loose CSV/Blueprint were not mounted separately. These records do not prove the original reviewer read the R04 register. This supplement directly read and checked the actual R04 register; it does not rewrite the prior review history.",
+    "not_reperformed": "Full 248-row semantic fact-to-body-locator adjudication, arithmetic review, and visual review were not repeated here; the existing exact-R04-SHA raw review is preserved for the DOCX/page scope.",
+    "formal_acceptance": "PENDING; candidate remains not promoted."
+  }
+}

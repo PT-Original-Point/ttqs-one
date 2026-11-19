@@ -1,0 +1,72 @@
+{
+  "receipt_id": "TTQS-OPENCODE-V2-DOC0101-FINAL9-SEMANTIC-REVIEW-EXECUTION-20261021",
+  "work_id": "UNKNOWN_NOT_PRESENT_IN_WRITER_PACKET",
+  "doc_id": "0101",
+  "requirement_id": "I18-E08",
+  "official_checkbox_serial": "UNKNOWN",
+  "worker": "OpenCode v2 CLI",
+  "runtime_version": "2.0.32",
+  "native_session_id": "ses_ea142a4b5ffeDVFhelB5TIrBrN",
+  "native_project_id": "1e1cf7e7f6ed9fb52e0345467a44bff71e420cb0",
+  "session_title": "R09 0101 final9 exact-SHA semantic review",
+  "requested_model": "opencode/deepseek-v4.1-flash-free",
+  "native_session_model": {
+    "id": "deepseek-v4.1-flash-free",
+    "providerID": "opencode"
+  },
+  "actual_provider_serving_model": "UNKNOWN; native session records requested/runtime model only; no provider fallback telemetry",
+  "process_id": "UNKNOWN_NOT_PERSISTED_IN_NATIVE_SESSION_RECORD",
+  "cli_exit_code": 0,
+  "started_local": "2026-10-21T21:53:49.7226513+08:00",
+  "ended_local": "2026-10-21T21:57:31.3049968+08:00",
+  "elapsed_seconds": 221.582,
+  "input_packet_path": "review_packet_0101_R09_final9_exact_sha.md",
+  "input_packet_sha256": "ed9897ab4d0cdd7200b5771a618c5f259f3aebf6a0c308478594e6856917c11f",
+  "candidate_docx_sha256": "56f433e095f32378f2fd8241c1a27948d2bfe6748da003af5623d265885edb68",
+  "raw_stdout_sha256": "4c414120cba40ac92befd856f2d8002298b9a598b9e26e8064f355f74bfe26fc",
+  "stderr_bytes": 0,
+  "native_response_text_sha256": "aac585973bccdb69165f592ec8a2ebce851b4de3ef1b9af3945c291bf42b49c8",
+  "native_response_chars": 12294,
+  "reply_status": "COMPLETE_NONEMPTY; session idle_outcome=succeeded; final assistant finish=stop",
+  "verdict": "PASS",
+  "criteria": {
+    "A": "PASS",
+    "B": "PASS",
+    "C": "PASS",
+    "D": "PASS",
+    "E": "PASS",
+    "F": "PASS",
+    "G": "PASS",
+    "H": "PASS",
+    "I": "PASS"
+  },
+  "arithmetic": "PASS",
+  "blocking_defects": [],
+  "nonblocking_scope_limits": [
+    "Exact DOCX/PDF/0100 SHA values are not printed in the human-facing body; the technical receipt binds them externally. If in-artifact byte binding is required, add a controlled annex; otherwise record the deliberate choice.",
+    "The 2026-11-02 sample date is expressly labelled a synthetic placeholder on p.1 and p.7, but a non-date placeholder would still read more safely.",
+    "14/20 appears only in 0099 boundary/bypass contexts (§3.3, §7.4, §8.3, 表11-1) and must never migrate into 0101 figures or the radar.",
+    "The external 95-row replacement register mentioned in the technical receipt was not supplied for semantic review; only the in-document 表10-2 (S-01–S-15) and §10.5–10.8 locator maps were assessed.",
+    "The landscape register/locator pages p.20–28 are dense; readable, but heavy for a first-time reader."
+  ],
+  "review_scope_limitations": [
+    "This was a read-only, no-tool review; the DOCX and PDF SHA-256 values are taken as supplied and were not independently recomputed.",
+    "Review is bound to the supplied DOCX-table extract and page-labeled Word-native PDF text; the actual DOCX/PDF bytes were not opened.",
+    "Radar-chart pixels, axis-label legibility, legend placement, fonts, orientation and pagination were not independently inspected; the separate visual receipt is used only as scope/consistency evidence.",
+    "The paired 0100 content was checked against the supplied 0100 table (it matches all 80 cells), not by opening the 0100 DOCX; the exact 0100 SHA is external.",
+    "The 0097/0098/0099 source documents were not supplied; neighbour boundaries were assessed from 0101's own text and the packet.",
+    "The official printed checkbox serial remains UNKNOWN; no external verification was performed.",
+    "The external 95-row replacement register was not supplied; only the in-document replacement table and locator maps were assessed."
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "usage": {
+    "input": 100493,
+    "output": 4106,
+    "reasoning": 40828,
+    "cache_read": 76416,
+    "cache_write": 0,
+    "local_db_cost": 0.0
+  },
+  "provider_billing": "UNKNOWN; local SQLite cost=0 is not provider invoice/entitlement evidence",
+  "adoption": "review verdict is attached to the exact final9 SHA; no DOCX bytes were modified during review"
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "TTQS_ONE_EXACT_SHA_SEMANTIC_REVIEW_SCHEMA_V1",
+  "doc_id": "0102",
+  "requirement_id": "I18-E09",
+  "candidate_sha256": "7c988244ca0f402c0db439d50e62152ba5b0f7090b2753bfcdfc407b3a18ee1d",
+  "verdict": "PASS",
+  "exact_sha_binding": {
+    "bound_candidate_sha256": "7c988244ca0f402c0db439d50e62152ba5b0f7090b2753bfcdfc407b3a18ee1d",
+    "bound_candidate_bytes": 98482,
+    "bound_candidate_git_blob": "14e0831aaabaa90dda0299bf7592c0822a3b4487",
+    "r02_source_packet_sha256": "54d9c05f70b4fef993bd92b656694030878a236e1a2d0c6a21af5d24d94fa1bd",
+    "r02_blueprint_sha256": "d6ab10107f42d6f913e1c94df45c8cd179babaa2603a8a7e628c2db78a0cce75",
+    "replacement_register_sha256": "f28a54ddbf5146cf11fa4eba528d9603df3d42b912da04419f5a36708f624518",
+    "binding_status": "EXACT_SHA_MATCH_CONFIRMED"
+  },
+  "review_scope": {
+    "scope_type": "TEXT_SEMANTIC_AND_FACTUAL_CONSISTENCY_ONLY",
+    "included": [
+      "候選本文與 R02 來源包、唯一 Blueprint R02、官方摘錄之語意與結構對照",
+      "R08d 修訂項目（Form F 證據定位、期限拆分、案例編號、版次追蹤、替換清冊 40 列）核驗",
+      "盲測文類識別、負向鄰居辨識、推論界線、角色分工、決策分支與表單可用性",
+      "SAMPLE/REAL 界線、真偽查證機制、十項連言門檻與數學計算邏輯"
+    ],
+    "excluded": [
+      "DOCX 二進位重新雜湊計算",
+      "Word 原生版面排版與視覺覆蓋率檢查",
+      "真實第三方佐證或協會核准效力查證",
+      "授予正式人類驗收許可"
+    ]
+  },
+  "findings": [
+    {
+      "severity": "INFO",
+      "locator": "第9.1節及第9.3-9.4節 表Form F",
+      "claim": "R08d 候選版落實 Form F 之使用證據定位標示，明確參照替換清冊事實編號",
+      "evidence": "Form F 欄位明訂「本次使用證據（fact_id／來源定位；未取得填『未取得』）」，且在 CASE-01 精確標記 F-0102-019（自述與無網址截圖）、CASE-02 標記 F-0102-025 與 F-0102-030，兩案均無虛構第三方原件定位。",
+      "disposition": "VERIFIED_COMPLIANT"
+    },
+    {
+      "severity": "INFO",
+      "locator": "第4.1-4.2節 表Form A、第9.1及9.3-9.4節 表Form F、第12.1節 案例登錄表",
+      "claim": "R08d 候選版嚴格分離對外回覆期限（response_due_date）與內部檢視日（internal_review_date）",
+      "evidence": "Form A 定義及已填範例中，對外回覆期限均填寫「未設定（Form B 未送出）」，內部檢視日分別填寫「2026-10-26（合成內部檢視日）」與「2026-10-20（合成內部檢視日）」；Form F 與案例登錄表維持相同分離邏輯，未混淆外部催告與內部管制作業。",
+      "disposition": "VERIFIED_COMPLIANT"
+    },
+    {
+      "severity": "INFO",
+      "locator": "第4.1-4.2節、第7.2節、第9.1-9.2節、第12.1節",
+      "claim": "證據狀態（evidence_state）與案件處置（case_disposition）維持獨立分欄管制",
+      "evidence": "候選本文將 evidence_state 嚴格限定為 NOT_RECEIVED、RECEIVED_UNVERIFIED、VERIFIED_REAL；case_disposition 嚴格限定為 ELIGIBLE_FOR_HUMAN_REVIEW、HOLD、REJECTED。CASE-01 與 CASE-02 在無獨立查證來源下均標記為 RECEIVED_UNVERIFIED 與 HOLD，無混填或代用情形。",
+      "disposition": "VERIFIED_COMPLIANT"
+    },
+    {
+      "severity": "INFO",
+      "locator": "第9.1-9.2節 表Form F、第11.1節、第15.5節",
+      "claim": "Form F 判定門檻具備嚴格之十項連言條件，前五項核心查核非充分條件",
+      "evidence": "文本明確規定 Form F 十項檢查必須全部為「是」方可判定為 ELIGIBLE_FOR_HUMAN_REVIEW。前五項為來源與賽事核心條件，後五項（身分、同意、訓練關聯、無衝突、可定位保存）同樣為必備連言條件；任一項為否或未知即判 HOLD，符合 Blueprint R02 要求。",
+      "disposition": "VERIFIED_COMPLIANT"
+    },
+    {
+      "severity": "INFO",
+      "locator": "第12.2節 替換清冊 與 套件 CSV 清冊",
+      "claim": "嵌入替換清冊與外部複現 CSV 清冊結構與列數完全一致（40列含標頭）",
+      "evidence": "清冊涵蓋 F-0102-001 至 F-0102-039 共 39 項事實加 1 列標頭，總計 40 列。兩案案號全程使用 SYN-0102-CASE-01 與 SYN-0102-CASE-02，跨案列標記 GLOBAL。移除 CSV 內 Markdown 反引號（`）後，欄位內容與 DOCX 嵌入表格 40/40 逐列吻合，新合成事實完全覆蓋。",
+      "disposition": "VERIFIED_COMPLIANT"
+    },
+    {
+      "severity": "INFO",
+      "locator": "第15.4節 版本紀錄",
+      "claim": "候選版次完整保留並明確記錄 R08、R08c 及 R08d 之修訂履歷與界線",
+      "evidence": "版本紀錄詳細列出 R08（2026-10-23）、R08c（2026-10-23）及 R08d（2026-10-28）之修訂內容與修改角色，並於 R08d 註記「SAMPLE / SYNTHETIC；候選修訂，須以新 SHA 重驗；正式接受 NOT_GRANTED」，版本溯源完整。",
+      "disposition": "VERIFIED_COMPLIANT"
+    }
+  ],
+  "required_repairs": [],
+  "sample_real_assessment": "候選文件展現了極高規格的 SAMPLE/REAL 邊界控制：\n1. 封面、本文第4節、第10節、第12節與第15.5節均設置顯著的界線聲明，清楚說明所有案號（SYN-0102-CASE-01、SYN-0102-CASE-02）、學員代號（P-SYN-01、P-SYN-02）、課程名稱、競賽名稱（示範盃技能競賽）、主辦單位（示範技能發展協會）及日期均為合成演練資料，絕非真實獲獎事實。\n2. 文件中所有對外函稿（Form B、Form C）均以顯著字樣標註「SAMPLE TEMPLATE—NOT SENT」，無任何虛構之主辦單位回函、官方公告文號、理事會核准或評核委員簽名。\n3. 對於真實協會法制登記與現行授權人狀態，文件於第2.3節與清冊 F-0102-002 嚴格採取「待依章程及授權名冊確認」之保留表述，在未取得法定文件前一律停止對外揭露並標為 UNKNOWN，杜絕任何虛構職務或未經授權之背書行為。",
+  "math_assessment": "計算邏輯嚴密且一致，分子分母定義精確：\n1. 核心指標區分清晰：第11.1節明確將「來源已驗證案件數」與「可送人類複核案件數」公式拆開，確立來源真實性查證不因公開揭露授權不足而歸零，但案件能否送審受用途同意與訓練關聯嚴格限制。\n2. 合成資料集計算無誤：兩件合成案例均未取得第三方正式原件，故已收第三方原件數為 0，來源已驗證數為 0，Form F 全十項為「是」之案件數為 0。來源查證完成率計算為 0/2 = 0%，主張收件率為 2/2 = 100%，有效同意取得率為 0/2 = 0%，管道定位率為 0/2 = 0%。\n3. 概念界線防護周全：第11.3節詳細闡明「這個 0 不是什麼」，強調 0/2 僅代表合成流程演練之管制指標，既非協會對外實績，亦非獲獎率或評核給分，更不得將真實證據之「UNKNOWN」扭曲為數值「0」，計算與統計語意完全符合 TTQS 查核要求。",
+  "title_blind_assessment": "盲測評估結果完全符合預期之文類特徵與使用場景：\n1. 文件文類（Genre）：本文件並非獲獎獎狀範本，亦非公關成功案例，而是一套專為訓練機構設計之「第三方外部佐證資料取得、來源真實性查驗、訓練技能關聯性矩陣對照及案件登錄管制作業程序與表單工具」。\n2. 目標使用者（User）：明確設定為小型照護協會中無法律或資訊專業背景之全兼職行政志工，作業指示淺顯平實且具備防呆機制。\n3. 業務決策（Operational Decisions）：建立清晰之決策分支，引導承辦人員在各查證階段產出「可送人類複核（ELIGIBLE_FOR_HUMAN_REVIEW）」、「暫緩（HOLD）」或「拒收佐證（REJECTED）」之具體處置。\n4. 負向鄰居排除：正文徹底排除問卷統計圖表、感謝函撰寫或證照考照率計算，自起首至結尾皆聚焦於技能競賽第三方獲獎佐證之查證與因果推論限制。",
+  "negative_neighbor_assessment": "候選文件與鄰近要求及指標項目保持明確之作業邊界，無任何文類混淆或代用問題：\n1. 排除 I18-E08（專案索引 109 / 文件 0100、0101）：本文件專注於外部技能競賽獲獎佐證，完全未混入訓前訓後學員自評問卷或雷達圖分析模型。\n2. 排除 I18-L2 索引 111：文件清楚規範競賽主辦單位之查證管道與電話腳本，未生成或混同為機構受贈之「感謝函」收集作業。\n3. 排除 I18-L2 索引 112：本文件僅計算收件、查核與複核之內部流程指標，嚴禁將競賽得獎數或通過率充當「證照獲取率」之母體計算。\n4. 排除 I18-L4 索引 122：徹底與歷史歸檔曾誤植編號之「輔導考照及學員回訓率持續提高」劃分界線，未援用其回訓追蹤或考照輔導之舊有內文。",
+  "readability_assessment": "文件可讀性與實務可用性優良：\n1. 結構條理分明：涵蓋「一分鐘上手」、表單索引、五層次證據邊界、角色配置及十步驟端到端流程，文字平實無艱澀法言法語。\n2. 表單工具完備（Form A 至 Form F）：提供完整的欄位說明、允許值格式、已填示範值與填寫要點，基層志工無須語言模型輔助即可依表操課。\n3. 溝通話術實用：Form B 索取稿與 Form C 電話腳本提供具體之應對範例與「可說／不可說」對照表，兼顧禮貌、個資保護與合規要求。\n4. 異常處理具體：第14節提供包含16種情境之逐項門檻清單，對不同程度之缺件或異常給予明確之停損天數與權責角色，極具行政操作價值。",
+  "formal_acceptance": "NOT_GRANTED",
+  "reviewer_model_attestation": "UNKNOWN"
+}

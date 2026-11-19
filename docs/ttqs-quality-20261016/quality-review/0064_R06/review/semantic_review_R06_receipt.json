@@ -1,0 +1,63 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0064",
+  "requirement_id": "I14-E05",
+  "official_checkbox_serial": "069",
+  "candidate_revision": "R06",
+  "candidate_docx_sha256": "f83eeda42589da66c23918d522ad983178a252da9b6dd2240b725e9c9cfb50a1",
+  "candidate_text_sha256": "94632ca1a814050a35d695d7cff8c5474cc7306ae1f1377bcad5c80c1caa76b6",
+  "route": "OpenCode CLI v2.0.29",
+  "model_requested": "opencode/beam-free",
+  "runtime_model_identity": "NOT_ATTESTED_BY_CLI",
+  "session_id": "ses_eaf469e4effeUX6B7iMDv4I9Ei",
+  "started_event_epoch_ms": 1792355691135,
+  "finished_event_epoch_ms": 1792355715304,
+  "cli_exit_code": 0,
+  "stderr_bytes": 0,
+  "stdout_path": "opencode_semantic_R06_stdout.jsonl",
+  "stdout_sha256": "61856b9f3c7921b536d12bf063e1e3a5db35c559bdec677a19bb6fa6ff07299d",
+  "response_path": "independent_review_response_R06.md",
+  "response_sha256": "9fc720c5a1dcd116830cf47d1d7e69f5a74295a1db4098b42cdaad42770fb83a",
+  "prompt_path": "review_prompt_R06.md",
+  "prompt_sha256": "05a849ab6a0b5111ca5be290e27e1082d78a0d7c306e0e75a79cf8e9ae746c4d",
+  "review_packet_path": "review_packet_R06.md",
+  "review_packet_sha256": "448d1fd08ae04908e3a98748750d96b499eba27e81d5c5fef88974635879a38e",
+  "candidate_changed_during_review": false,
+  "model_usage_reported_by_cli": 0,
+  "provider_billing": "UNKNOWN",
+  "token_usage_reported_by_cli": {
+    "input": 46085,
+    "output": 815,
+    "reasoning": 8912,
+    "cache": {
+      "read": 1728,
+      "write": 0
+    }
+  },
+  "verdict": "PASS",
+  "scope": "Independent semantic review of exact candidate text bound to exact R06 DOCX SHA; technical and visual results are separate.",
+  "coverage": [
+    "official mapping and genre",
+    "Blueprint fit",
+    "closed-corpus test procedure and controls",
+    "24 paired rows and recalculated aggregates",
+    "cross-document source facts",
+    "A-0062-08 hold/privacy behavior",
+    "SAMPLE/SYNTHETIC versus REAL",
+    "replacement register and usable exceptions",
+    "negative-neighbor separation"
+  ],
+  "limitations": [
+    "No visual/layout inspection claimed.",
+    "Model runtime identity is not attested by CLI.",
+    "No formal Association acceptance or promotion."
+  ],
+  "safety": {
+    "computer_use": false,
+    "permission_bypass": false,
+    "auto_permission_flag": false,
+    "file_tools_requested": false
+  },
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence_status": "SAMPLE_SYNTHETIC_ONLY"
+}

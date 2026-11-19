@@ -1,0 +1,266 @@
+{
+  "review_type": "fresh_independent_exact_sha_semantic_and_visual_review",
+  "reviewed_at_local": "2026-10-16T20:27:01+08:00",
+  "reviewer_route": {
+    "current_state_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\CURRENT_STATE.json",
+    "current_state_sha256": "1345b6330b01c7b71293eeaf58aa7409a78681b7cf011b65a065c91888f972d6",
+    "primary_executor": "WIN10_ANTIGRAVITY_LOCAL_NATIVE",
+    "review_lane": "WIN10_CODEX_LOCAL_NATIVE_CONTROL_REVIEW",
+    "selected_route": "secondary executor / Codex control-review lane",
+    "independence_basis": "Performed in the Codex local control-review lane, separate from the configured Antigravity primary content factory. Builder technical/visual claims were not treated as semantic proof; prior R05 independent receipt was used only to define regression checks.",
+    "no_self_review_policy": true,
+    "opencode_disabled": true
+  },
+  "candidate": {
+    "doc_id": "0037",
+    "revision": "R06",
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0037_R06\\candidate\\0037__近年訓練方案檢討與改善紀錄_R06.docx",
+    "expected_sha256": "bafe484294a51a67892cd991cab1533c88bd34bd1f47c0df5caf4a89bce3580f",
+    "observed_sha256": "bafe484294a51a67892cd991cab1533c88bd34bd1f47c0df5caf4a89bce3580f",
+    "exact_sha_match": true,
+    "candidate_state": "CANDIDATE",
+    "promotion_status": "NOT_PROMOTED"
+  },
+  "official_mapping": {
+    "requirement_id": "I08-E01",
+    "official_checkbox_sequence": "038",
+    "mapping_basis": "Current source map row doc_id 0037 -> I08-E01 / evidence_id 038; not inferred from DOCX number.",
+    "official_source_pdf": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\SOURCES\\TTQS查核佐證文件資料表-訓練機構版 (2).pdf",
+    "official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "official_page": 2,
+    "official_text": "相關文件紀錄能顯示近年來訓練目標、訓練方法、課程時程安排、師資遴選、學員遴選條件、 訓練教材、設施與環境、訓練評估方法等的檢討及改善過程。",
+    "source_lock_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0037_R06\\sources\\0037_source_lock_R06.json",
+    "source_lock_sha256": "85df85acc0e88ceb9b041d32a91edd2fa7463584db3fb040ff9c3e14c04d88c2",
+    "source_map_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\SOURCE_REQUIREMENT_MAP_WAVE005_R03.csv",
+    "source_map_sha256": "405b987797d1558ecac182cea8e1adfbd1aead7754c880db32db43c235d5024e",
+    "source_map_row": {
+      "doc_id": "0037",
+      "indicator": "I08-E01",
+      "evidence_id": "038"
+    },
+    "unique_blueprint_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\BLUEPRINT_CURRENT.jsonl",
+    "unique_blueprint_file_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+    "unique_blueprint_line": 37,
+    "unique_blueprint_row_sha256": "f455f27e5accffbfb90a0a14a4286126b517d90010f2a4b4891adb256a3480c7",
+    "genre": "evidence_record",
+    "authority_readback": "R06 source lock and official PDF hashes match; current map and unique Blueprint row/hash match. Root manifest readback pointed to the R06 source lock."
+  },
+  "render_review": {
+    "pdf_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0037_R06\\render\\candidate.pdf",
+    "pdf_sha256": "ce3944ce42794e763d9ced69cc3b4c17fab909c441162c503d7d4b03d991e3e1",
+    "pdf_page_count": 18,
+    "pdf_creator": "Microsoft Word for Microsoft 365",
+    "page_image_directory": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0037_R06\\render",
+    "page_images_individually_inspected": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18"
+    ],
+    "rerendered": false,
+    "visual_result": "PASS",
+    "findings": [
+      {
+        "locator": "pp.1–18",
+        "severity": "none",
+        "finding": "All existing pages readable; no blank page, clipping, overlap, or cut-off table content. SAMPLE/SYNTHETIC footer repeats."
+      },
+      {
+        "locator": "p.8; §6.1 closeout and §6.2 opening",
+        "severity": "resolved_regression",
+        "finding": "2024 closeout flows into the 2025 opening; former sparse closeout page is gone."
+      },
+      {
+        "locator": "p.11; §6.2 raw learner table, calculation and closeout",
+        "severity": "nonblocking",
+        "finding": "Final P08 row continues beneath repeated header, fully legible; full calculation and closeout tables follow."
+      },
+      {
+        "locator": "p.13; §6.3 gap table continuation and following tables",
+        "severity": "nonblocking",
+        "finding": "O3 continuation row is legible beneath repeated header; further annual tables follow, no clipping."
+      }
+    ]
+  },
+  "register_review": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0037_R06\\sources\\SYNTHETIC_REPLACEMENT_REGISTER_0037_R06.csv",
+    "sha256": "8983ab469943689fd9a914da5ba12f306f115cfb52faaab7d4023793e6b5fbff",
+    "rows": 564,
+    "unique_fact_ids": 564,
+    "sequential_fact_ids": "S37-F0001 through S37-F0564",
+    "all_required_fields_nonblank": true,
+    "data_class_counts": {
+      "SAMPLE/SYNTHETIC": 564
+    },
+    "all_doc_id_0037": true,
+    "all_requirement_id_I08_E01": true,
+    "r05_to_r06_changed_rows": 20,
+    "changed_fact_ids": [
+      "S37-F0006",
+      "S37-F0007",
+      "S37-F0008",
+      "S37-F0009",
+      "S37-F0010",
+      "S37-F0011",
+      "S37-F0012",
+      "S37-F0013",
+      "S37-F0026",
+      "S37-F0027",
+      "S37-F0028",
+      "S37-F0029",
+      "S37-F0160",
+      "S37-F0161",
+      "S37-F0162",
+      "S37-F0163",
+      "S37-F0324",
+      "S37-F0325",
+      "S37-F0326",
+      "S37-F0327"
+    ],
+    "changed_rows_body_check": "PASS",
+    "changed_rows_evidence": [
+      {
+        "fact_ids": "S37-F0006–F0013",
+        "locator": "p.2 §2 official-dimension matrix, rows 訓練目標–訓練評估",
+        "result": "All eight values/locators match; old S37-TRACE keys absent."
+      },
+      {
+        "fact_ids": "S37-F0026–F0029",
+        "locator": "p.4 §6.1 annual-field table, 示範來源索引 row",
+        "result": "Match visible grouped SAMPLE/SYNTHETIC source-index text; not actual attachments."
+      },
+      {
+        "fact_ids": "S37-F0160–F0163",
+        "locator": "p.8 §6.2 annual-field table, 示範來源索引 row",
+        "result": "Match visible grouped synthetic source-index text; old EV identifiers absent."
+      },
+      {
+        "fact_ids": "S37-F0324–F0327",
+        "locator": "p.12 §6.3 annual-field table, 示範來源索引 row",
+        "result": "Match visible grouped synthetic source-index text; old EV identifiers absent."
+      }
+    ],
+    "overall_traceability_result": "PARTIAL",
+    "remaining_finding": {
+      "fact_id": "S37-F0004",
+      "severity": "blocking_for_full_PASS",
+      "register_sample_value": "SYN-037-ANNUAL-01 與 SYN-0033-PLAN-01 為不同示範個案",
+      "register_body_locator": "§2／跨文件案例界線",
+      "actual_body_locator": "p.1 §1 and p.1 Table 1 row 案例界線; body states the annual review and another course-plan sample are separate synthetic cases, but does not display SYN-0033-PLAN-01. §2 is the official-source section on p.2.",
+      "finding": "This register value/location does not trace to the exact visible body value/location. The natural-language separation is present, but the row retains a removed neighboring-case key and points to the wrong section. Sidecar traceability defect; not evidence that body cases were merged."
+    }
+  },
+  "regression_checks_vs_r05": [
+    {
+      "finding": "Visible evaluator-facing ID/mapping leakage",
+      "result": "PARTIAL",
+      "evidence": "Body/render no longer show DOCX/requirement/checkbox or neighboring-document mappings and former TRACE/EV keys. DOCX core properties still expose IDs; see metadata gate."
+    },
+    {
+      "finding": "Sparse 2024 closeout page",
+      "result": "PASS",
+      "evidence": "p.8 now joins the 2024 closeout with the 2025 opening."
+    },
+    {
+      "finding": "20 register corrections",
+      "result": "PASS_FOR_20_CHANGED_ROWS",
+      "evidence": "All 20 changed values/locators independently match body locations listed above."
+    },
+    {
+      "finding": "Annual sample data preservation",
+      "result": "PASS",
+      "evidence": "Direct R05/R06 comparison found no changes in annual tables 7–33 or summary table 34. Dates, learner rows, calculations, conclusions, and follow-up actions are retained."
+    }
+  ],
+  "calculation_review": {
+    "method": "Recomputed from current DOCX raw learner rows; checked against annual calculation and summary tables.",
+    "results": [
+      {
+        "year": 2024,
+        "locator": "pp.5–8 §§6.1; raw rows/calculation p.7; schedule p.6",
+        "recalculation": "O1 18/7=2.57/8 to 42/7=6.00/8; 5/7 at >=6/8. O2 not measured. O3 15/7=2.14/5 to 27/7=3.86/5; 5/7 at >=4/5. Coverage 2/3=66.7%; completion 7/8=87.5%; replies 3/7=42.9%; use among respondents 2/3=66.7%; schedule 20+20+40+10=90 minutes. PASS"
+      },
+      {
+        "year": 2025,
+        "locator": "pp.8–11 §§6.2; raw rows p.10–11; calculation p.11; schedule p.9",
+        "recalculation": "O1 25/8=3.13/8 to 55/8=6.88/8; 6/8 at >=7/8. O2 7/8=0.88/4 to 23/8=2.88/4; 6/8 at >=3/4. O3 16/8=2.00/5 to 33/8=4.13/5; 6/8 at >=4/5. Coverage 3/3=100%; completion 8/9=88.9%; replies 6/8=75%; use 4/6=66.7%; schedule 20+20+55+15+10=120 minutes. PASS"
+      },
+      {
+        "year": 2026,
+        "locator": "pp.12–15 §§6.3; raw rows p.14; calculation p.15; schedule p.13",
+        "recalculation": "O1 43/9=4.78/8 to 70/9=7.78/8; 7/9 at >=8/8. O2 10/9=1.11/4 to 32/9=3.56/4; 6/9 at >=4/4. O3 23/9=2.56/5 to 41/9=4.56/5; 6/9 at >=5/5. Coverage 3/3=100%; completion 9/10=90%; replies 7/9=77.8%; use 5/7=71.4%; schedule 15+20+60+25+20+10=150 minutes. PASS"
+      }
+    ],
+    "cross_year_summary": "p.15 §7 agrees with annual tables. The narrative prohibits causal/institution-performance claims across different cohorts and thresholds."
+  },
+  "gates": [
+    {
+      "gate": "exact_sha_and_source_authority",
+      "result": "PASS",
+      "evidence": "Candidate SHA matches; R06 source lock binds official PDF p.2, current map row, and Blueprint line 37. Unique row SHA f455...3480c7."
+    },
+    {
+      "gate": "official_requirement_and_genre",
+      "result": "PASS",
+      "evidence": "p.2 §2 quotes the exact official requirement; pp.4–15 present three annual review/improvement records, not meeting minutes or a design SOP."
+    },
+    {
+      "gate": "eight_dimension_coverage_and_operational_use",
+      "result": "PASS",
+      "evidence": "p.2 matrix; annual review tables p.6, p.10, pp.13–14 cover goals, methods, schedule, instructor selection, learner criteria, materials, environment, assessment. p.1 gives purpose/user/steps/output; §§3, 8–10 give source, role, validation, exception, correction and replacement rules."
+    },
+    {
+      "gate": "sample_real_authority_boundary",
+      "result": "PASS",
+      "evidence": "p.1, repeated footers, §§1, 6, 10, 12 mark synthetic values and disclaim actual approval, delivery, participation, outcomes, signatures and third-party evidence."
+    },
+    {
+      "gate": "dates_case_continuity_and_math",
+      "result": "PASS",
+      "evidence": "Annual dates, versions, enrollment/completion, actions and p.15 summary reconcile. 2026-08-31 action remains explicitly overdue/open. See recalculations."
+    },
+    {
+      "gate": "title_blind_and_negative_neighbors",
+      "result": "PASS_FOR_VISIBLE_BODY",
+      "evidence": "p.1 purpose/§1 plus exact official wording p.2 identify the annual-review record. §§1 and 11 distinguish design progress, system-design review, needs/course planning and meeting minutes; no neighboring case facts appear in body."
+    },
+    {
+      "gate": "evaluator_facing_internal_metadata_boundary",
+      "result": "PARTIAL",
+      "evidence": "Body/render omit IDs, but package part docProps/core.xml contains dc:title “近年訓練方案檢討與改善紀錄｜DOCX 0037｜I08-E01” and dc:subject “Official checkbox 038; evidence record; SAMPLE/SYNTHETIC”. These remain embedded in the Word artifact."
+    },
+    {
+      "gate": "replacement_register_traceability",
+      "result": "PARTIAL",
+      "evidence": "564/564 unique sequential IDs, all populated and SAMPLE/SYNTHETIC; all 20 changed rows verified. S37-F0004 retains the stale §2 locator/pair-key claim."
+    },
+    {
+      "gate": "all_page_readability",
+      "result": "PASS",
+      "evidence": "All 18 existing Word-export PNGs inspected individually; p.11/p.13 continuations are legible and nonblocking; p.8 sparse-page regression resolved."
+    }
+  ],
+  "overall_verdict": "PARTIAL",
+  "blocking_repairs": [
+    "Remove internal DOCX/requirement/checkbox identifiers from the DOCX package properties (docProps/core.xml), not just rendered body text.",
+    "Correct S37-F0004 so the sidecar value and locator trace the exact visible case-boundary text at p.1 §1/Table 1 row 案例界線, without claiming the non-visible SYN-0033-PLAN-01 in a body locator."
+  ],
+  "limitations": [
+    "Candidate-level review only; no promotion or Human acceptance implied.",
+    "No actual association source records supplied; this review does not authenticate real-world execution or outcomes."
+  ]
+}

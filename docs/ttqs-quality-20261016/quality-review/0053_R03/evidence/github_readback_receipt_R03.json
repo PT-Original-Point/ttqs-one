@@ -1,0 +1,554 @@
+{
+  "schema": "ttqs.github_readback_receipt.v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0053",
+  "revision": "R03",
+  "requirement_id": "I12-E01",
+  "official_checkbox_sequence": "056",
+  "status": "PASS_NO_CONTENT_MISMATCH",
+  "verification_time_taipei": "2026-10-17T16:21:39.283127+08:00",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "live_origin_head": "6bb048af63750b8ca0bb97f7acdb84b624c0b6bc",
+  "tracking_ref_head": "6bb048af63750b8ca0bb97f7acdb84b624c0b6bc",
+  "readback_method": "Fresh git fetch, live git ls-remote, then git show <live commit>:<path> for each artifact; local and remote SHA-256 recomputed independently.",
+  "candidate_sha256": "cc75583238dba42eede61de990992770f8de75e96d1bcfe1313e57629551f8e8",
+  "candidate_bytes": 68614,
+  "candidate_local_remote": "BYTE_EXACT",
+  "artifact_count": 65,
+  "byte_exact_count": 37,
+  "crlf_to_lf_only_count": 28,
+  "lf_to_crlf_only_count": 0,
+  "content_mismatch_count": 0,
+  "normalization_note": "Repository uses core.autocrlf=true. Text working-tree files classified CRLF_TO_LF_ONLY are content-identical after line-ending normalization. The raw independent reviewer JSONL has a scoped .gitattributes -text rule and is byte-exact remotely. DOCX/PDF/PNG/JPG and candidate CSV are byte-exact.",
+  "raw_reviewer_stdout": {
+    "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/review/opencode_v2_review_R03/opencode_v2_stdout_R03.jsonl",
+    "sha256": "d44808dbaf68c27a305a1c1b222b378d49d32d0e5ea367e1e100c0d8b411d24f",
+    "local_remote": "BYTE_EXACT",
+    "bytes": 18394
+  },
+  "formal_acceptance": "NOT_CLAIMED",
+  "promotion": "NOT_PROMOTED",
+  "real_evidence": "UNKNOWN_SAMPLE_SYNTHETIC_ONLY",
+  "artifacts": [
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/SYNTHETIC_REPLACEMENT_REGISTER_0053_R03.csv",
+      "local_bytes": 15666,
+      "remote_bytes": 15666,
+      "local_sha256": "65c5c4c7c8b5393481102a5e8f961640701c264454fdd53233a0dc0692909e9d",
+      "remote_blob_sha256": "65c5c4c7c8b5393481102a5e8f961640701c264454fdd53233a0dc0692909e9d",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/candidate/0053_R03.docx",
+      "local_bytes": 68614,
+      "remote_bytes": 68614,
+      "local_sha256": "cc75583238dba42eede61de990992770f8de75e96d1bcfe1313e57629551f8e8",
+      "remote_blob_sha256": "cc75583238dba42eede61de990992770f8de75e96d1bcfe1313e57629551f8e8",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/candidate_status_R03.md",
+      "local_bytes": 1807,
+      "remote_bytes": 1807,
+      "local_sha256": "540f297628f003e1adf78eb47fdc27b0f6f59891f3a358d7cdecabbd01b5fdb2",
+      "remote_blob_sha256": "540f297628f003e1adf78eb47fdc27b0f6f59891f3a358d7cdecabbd01b5fdb2",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/apply_review_findings_R03.py",
+      "local_bytes": 9697,
+      "remote_bytes": 9694,
+      "local_sha256": "41d759adef1368089d23e65c26158e31986ba070ed43918c5722abbf24564add",
+      "remote_blob_sha256": "a0f63f41de9f61461e26357cda9a56845823a758fae2253eacc609f421100a7f",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/build_receipt_R03.json",
+      "local_bytes": 1779,
+      "remote_bytes": 1779,
+      "local_sha256": "b59343bb4ce36e983b1bf573d72e9e8c2c93f62a46945b959aa1d403692d4fdd",
+      "remote_blob_sha256": "b59343bb4ce36e983b1bf573d72e9e8c2c93f62a46945b959aa1d403692d4fdd",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/candidate_quality_decision_R03.json",
+      "local_bytes": 1938,
+      "remote_bytes": 1938,
+      "local_sha256": "4eb53751d2a1332ddbe8a8978bad46ea8242a8630e0af49a2ac66429d088743b",
+      "remote_blob_sha256": "4eb53751d2a1332ddbe8a8978bad46ea8242a8630e0af49a2ac66429d088743b",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/correction_log_R03.md",
+      "local_bytes": 1061,
+      "remote_bytes": 1050,
+      "local_sha256": "b8bc9036d9e504b04028790e3025f4323e7f19ee451d5aa3b3b8e065794d56ad",
+      "remote_blob_sha256": "77d3fed069b6e15ae13612d0ca5fcb54bd0535d9a365ff50f9bd820f604feeab",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/finalize_hash_links_R03.py",
+      "local_bytes": 1715,
+      "remote_bytes": 1714,
+      "local_sha256": "b8bc9945cc148045ee66e8ea39832c16932cb0280f9b646dd5ea1ac416b157d2",
+      "remote_blob_sha256": "a76bcc1b433040d15027e899c394a9b377bbaea0b1b3847ccda150a51345f540",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/finalize_quality_receipts_R03.py",
+      "local_bytes": 6518,
+      "remote_bytes": 6517,
+      "local_sha256": "bfbf10324b3d4aa4aff858f3a31e3f91e68ec31f3c529202f837012a83011b09",
+      "remote_blob_sha256": "62d1560fc4b29899d1a3e3e92ca3b9e06eecd8c1e891a151b9c3c0059f102c31",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/font_size_qa_R03.py",
+      "local_bytes": 5559,
+      "remote_bytes": 5557,
+      "local_sha256": "b680c30b181f3bf1d360f098ea37dd6e02298938a447e02e510a97a18d4f9938",
+      "remote_blob_sha256": "d2313e6b42dfc221124e51d6fc1760234452a93a29b2476a0ced818b25ad6fa0",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/font_size_qa_receipt_R03.json",
+      "local_bytes": 4143,
+      "remote_bytes": 4143,
+      "local_sha256": "0c262138ae2b7e80dc38f159b8907dd44c44d9f51f54e108b5dd621906ccbc1e",
+      "remote_blob_sha256": "0c262138ae2b7e80dc38f159b8907dd44c44d9f51f54e108b5dd621906ccbc1e",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/make_compact_contact_sheet_R03.py",
+      "local_bytes": 862,
+      "remote_bytes": 861,
+      "local_sha256": "2db026707ee4bdbc9ba8b022c1f9f833e9f61fed16f80af32d6942ca11115581",
+      "remote_blob_sha256": "eef5f689630bdfb1ecff980f752974c2bdafe2852b563bb4efd05721f7de9dff",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/prepare_source_mapping_R03.py",
+      "local_bytes": 2426,
+      "remote_bytes": 2425,
+      "local_sha256": "f2eb28e23d2a80f41a7a1964d948401aed7c6f0b118de40809981d6f70b12fcd",
+      "remote_blob_sha256": "c2ef0b2cf910b7760b51112535e09db765cabdb6a531c7cfd9ae5f9fd04aa2ee",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/register_page_anchor_receipt_R03.json",
+      "local_bytes": 8899,
+      "remote_bytes": 8510,
+      "local_sha256": "8588934485fed9508875ffc014ba33716c1288c9321259a3c3129e6b3fe47ece",
+      "remote_blob_sha256": "36d435728cbd844f53cb1de216b2c306f3d74a2358ec95098d6821ce50795e89",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/render_R03.py",
+      "local_bytes": 2369,
+      "remote_bytes": 2368,
+      "local_sha256": "df926d96ee895abadcf479bb6b445f7a8419ddd20302da302e364e8c1886b203",
+      "remote_blob_sha256": "4e813592fe624f06d5411edb7ffe375cd1221e38340b222fae164057b0e40b81",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/render_final_R03/0053_R03_Word_export.pdf",
+      "local_bytes": 774662,
+      "remote_bytes": 774662,
+      "local_sha256": "ad9b3ce5cb6d87fb0c941635076fabb6e204ad304ce59dddbc4fd18ee92dc2e5",
+      "remote_blob_sha256": "ad9b3ce5cb6d87fb0c941635076fabb6e204ad304ce59dddbc4fd18ee92dc2e5",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/render_final_R03/page-01.png",
+      "local_bytes": 269632,
+      "remote_bytes": 269632,
+      "local_sha256": "e81929e06d26fc84a0e3d5ff856c8307dd1c75289188fd34d1639e78d492bd4a",
+      "remote_blob_sha256": "e81929e06d26fc84a0e3d5ff856c8307dd1c75289188fd34d1639e78d492bd4a",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/render_final_R03/page-02.png",
+      "local_bytes": 322767,
+      "remote_bytes": 322767,
+      "local_sha256": "7e76a4f6a0ffc0e8cc0822f3cde1366a07e1c78d536ddc11b8cb1ba8c1d9a86d",
+      "remote_blob_sha256": "7e76a4f6a0ffc0e8cc0822f3cde1366a07e1c78d536ddc11b8cb1ba8c1d9a86d",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/render_final_R03/page-03.png",
+      "local_bytes": 352079,
+      "remote_bytes": 352079,
+      "local_sha256": "e6acd13b48f1d464f66392d14e311f60dac2125db91a08c18050f40bb4e03b77",
+      "remote_blob_sha256": "e6acd13b48f1d464f66392d14e311f60dac2125db91a08c18050f40bb4e03b77",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/render_final_R03/page-04.png",
+      "local_bytes": 309370,
+      "remote_bytes": 309370,
+      "local_sha256": "0b62dd56976910257de5f20e258bd0e4bd3aec8f0928b35abd8627792b5d397b",
+      "remote_blob_sha256": "0b62dd56976910257de5f20e258bd0e4bd3aec8f0928b35abd8627792b5d397b",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/render_final_R03/page-05.png",
+      "local_bytes": 372420,
+      "remote_bytes": 372420,
+      "local_sha256": "2d1b3090b448ac5bbca9a2f35d9431369d27398eb106d077b00abe1526768100",
+      "remote_blob_sha256": "2d1b3090b448ac5bbca9a2f35d9431369d27398eb106d077b00abe1526768100",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/render_final_R03/page-06.png",
+      "local_bytes": 477753,
+      "remote_bytes": 477753,
+      "local_sha256": "8ca8107b3d8db194f75ec2fd29c20ce37d92ed10d117ca39e921477d616e7719",
+      "remote_blob_sha256": "8ca8107b3d8db194f75ec2fd29c20ce37d92ed10d117ca39e921477d616e7719",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/render_final_R03/page-07.png",
+      "local_bytes": 401852,
+      "remote_bytes": 401852,
+      "local_sha256": "1cce3953aa5d39af532c18d5259b500e028f52434e2523c328038f9649d89f35",
+      "remote_blob_sha256": "1cce3953aa5d39af532c18d5259b500e028f52434e2523c328038f9649d89f35",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/render_final_R03/page-08.png",
+      "local_bytes": 278352,
+      "remote_bytes": 278352,
+      "local_sha256": "ac86556195555a1aae49ebb5a1b3002e8d80bbd8d3454d81c6e56a8080dffa5d",
+      "remote_blob_sha256": "ac86556195555a1aae49ebb5a1b3002e8d80bbd8d3454d81c6e56a8080dffa5d",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/render_final_R03/page-09.png",
+      "local_bytes": 358653,
+      "remote_bytes": 358653,
+      "local_sha256": "c931115b81f72dbd5a0cf91075062826ae5b2d6a180232306570f0e72c029260",
+      "remote_blob_sha256": "c931115b81f72dbd5a0cf91075062826ae5b2d6a180232306570f0e72c029260",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/render_final_R03/page-10.png",
+      "local_bytes": 211047,
+      "remote_bytes": 211047,
+      "local_sha256": "29f303ae2bbb942208dcdac9eaa49acfe1e3cf44208b156e0c119abbe7dbff9b",
+      "remote_blob_sha256": "29f303ae2bbb942208dcdac9eaa49acfe1e3cf44208b156e0c119abbe7dbff9b",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/render_final_R03/page-11.png",
+      "local_bytes": 248332,
+      "remote_bytes": 248332,
+      "local_sha256": "7ea5fd0fc5a7c8d9942e4b4cefd64281d66ea0e444c2fec6c7ce9e58b398e3ee",
+      "remote_blob_sha256": "7ea5fd0fc5a7c8d9942e4b4cefd64281d66ea0e444c2fec6c7ce9e58b398e3ee",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/render_final_R03/page-12.png",
+      "local_bytes": 305270,
+      "remote_bytes": 305270,
+      "local_sha256": "24de499cd21519d184f39e36e3b9eef5ed6c6e3995b9ea61b12ea5f33abfb725",
+      "remote_blob_sha256": "24de499cd21519d184f39e36e3b9eef5ed6c6e3995b9ea61b12ea5f33abfb725",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/render_final_R03/page-13.png",
+      "local_bytes": 323633,
+      "remote_bytes": 323633,
+      "local_sha256": "b2057808ff6fdeb0ab300d40deaf8bb74915b99b6a7055226a55a240e78fec26",
+      "remote_blob_sha256": "b2057808ff6fdeb0ab300d40deaf8bb74915b99b6a7055226a55a240e78fec26",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/render_final_R03/page-14.png",
+      "local_bytes": 331697,
+      "remote_bytes": 331697,
+      "local_sha256": "8f7e367f06f29d8f8ef52bf285e4f975fe03c82f60c9955ee503540c68ed7742",
+      "remote_blob_sha256": "8f7e367f06f29d8f8ef52bf285e4f975fe03c82f60c9955ee503540c68ed7742",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/render_final_R03/page-15.png",
+      "local_bytes": 264582,
+      "remote_bytes": 264582,
+      "local_sha256": "5caf3d6ef5746a419f34b10cd650ec2b58f216af1dd7f934676a82cea1fd4352",
+      "remote_blob_sha256": "5caf3d6ef5746a419f34b10cd650ec2b58f216af1dd7f934676a82cea1fd4352",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/render_final_R03/page-16.png",
+      "local_bytes": 317600,
+      "remote_bytes": 317600,
+      "local_sha256": "eed9b021cc850c8141483a7adec21ba69fc5e2cb67462d06517979f185639430",
+      "remote_blob_sha256": "eed9b021cc850c8141483a7adec21ba69fc5e2cb67462d06517979f185639430",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/render_final_R03/page-17.png",
+      "local_bytes": 207217,
+      "remote_bytes": 207217,
+      "local_sha256": "0fc5ac42d725d15e03f3097753baedbebf3e427a9f03e03006d53acd5c052785",
+      "remote_blob_sha256": "0fc5ac42d725d15e03f3097753baedbebf3e427a9f03e03006d53acd5c052785",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/render_final_R03/page-18.png",
+      "local_bytes": 410931,
+      "remote_bytes": 410931,
+      "local_sha256": "007449f46b89f80f12d96323a394c908b4fcaa08ef051625f9cb49d479e5c493",
+      "remote_blob_sha256": "007449f46b89f80f12d96323a394c908b4fcaa08ef051625f9cb49d479e5c493",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/render_final_R03/render_manifest_R03.json",
+      "local_bytes": 6361,
+      "remote_bytes": 6224,
+      "local_sha256": "81874e9ced2733958e5c999db6b032c7c4e9e45e1e30a3205ffa34b5030cbba3",
+      "remote_blob_sha256": "ad422c8cfc520aabf63dd102007930194c01bc9186c4f0a79195db80fb0d94ed",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/render_final_R03/rendered_page_text_R03.txt",
+      "local_bytes": 36777,
+      "remote_bytes": 35682,
+      "local_sha256": "d44af67527fdc746064d82752277b29ca94b82757c5cc57c2891251faa81b2eb",
+      "remote_blob_sha256": "205e6444beedc0f78be0ee2539581406f2d21ef0589b2c836ce09cc4a6b8c1ae",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/source_build_receipt_R02.json",
+      "local_bytes": 2242,
+      "remote_bytes": 2204,
+      "local_sha256": "8a66525730aeb35e6ec8bc012a4092399dc86fddbcda6fd59e589c3843719d1a",
+      "remote_blob_sha256": "11e6763f28f8c0c39e92f881e509699fa47dd4a1c0e4823f01a1a62763411f78",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/technical_integrity_receipt_R03.json",
+      "local_bytes": 2547,
+      "remote_bytes": 2547,
+      "local_sha256": "0505e3011e7a1521ecbf8c02a7c17b1e950166c2998526e37ac654f19212a4a7",
+      "remote_blob_sha256": "0505e3011e7a1521ecbf8c02a7c17b1e950166c2998526e37ac654f19212a4a7",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/update_full_page_visual_receipt_R03.py",
+      "local_bytes": 3849,
+      "remote_bytes": 3848,
+      "local_sha256": "4e1105f024b7d78f2fd6eea4923a5bc86f34e5895b9dc23cf874d06a8f20ae5f",
+      "remote_blob_sha256": "79e9ad7ade0171ae9c3d2510186ea3a2e83f13529aaa81b3b3884b4552b21d4c",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/update_quality_decision_R03.py",
+      "local_bytes": 6844,
+      "remote_bytes": 6843,
+      "local_sha256": "c168147d5a28f4ee827358ddb8d327c2b7c615b8dc2567f536a70c7517dca456",
+      "remote_blob_sha256": "458069b5de13d91e32754c526aed32695532ec6a6650ecd641a12840bb9a41b8",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/validate_register_page_anchors_R03.py",
+      "local_bytes": 2173,
+      "remote_bytes": 2172,
+      "local_sha256": "0e087ff1d5488ab8f1fc58c2ab87df227e80f5d2ce35f102ef21c06ad5b58b3e",
+      "remote_blob_sha256": "aa84be0f4d92e7c5b9c8023e5d4360acda2572803ff843c54fe8e850a7493f1f",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/visual_contact_sheet_R03.png",
+      "local_bytes": 1347938,
+      "remote_bytes": 1347938,
+      "local_sha256": "04c4b43358471867b229c5ff19250763d5ef71647d4d452fcedff6a57f006bcf",
+      "remote_blob_sha256": "04c4b43358471867b229c5ff19250763d5ef71647d4d452fcedff6a57f006bcf",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/visual_contact_sheet_R03_compact.jpg",
+      "local_bytes": 354626,
+      "remote_bytes": 354626,
+      "local_sha256": "44ffe19838e40b1a626673a6b56d6a697a68c30f4e3532abe0e616ce5d011090",
+      "remote_blob_sha256": "44ffe19838e40b1a626673a6b56d6a697a68c30f4e3532abe0e616ce5d011090",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/evidence/visual_layout_receipt_R03.json",
+      "local_bytes": 2391,
+      "remote_bytes": 2391,
+      "local_sha256": "e927b2e04eb351a4f0accdb1f1692ee5ac28ef0ab602a144bf0b6762c0673e12",
+      "remote_blob_sha256": "e927b2e04eb351a4f0accdb1f1692ee5ac28ef0ab602a144bf0b6762c0673e12",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/inputs/CROSS_DOCUMENT_SOURCE_0052_R01.md",
+      "local_bytes": 1591,
+      "remote_bytes": 1576,
+      "local_sha256": "868096d39194cc3fb658062f932729d5fe9edfc37e812de33a1b6b8406be2e31",
+      "remote_blob_sha256": "f3c4827fbf9c08df652c9732d763a10f577c092340a4b2a8717659f517d16c6f",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/inputs/NEIGHBOR_CROSSWALK_AND_BLUEPRINT_R03.json",
+      "local_bytes": 5947,
+      "remote_bytes": 5858,
+      "local_sha256": "bedf213690039ae49fdd0f6206dd8e0c2e87c227e249f6c9e84af3d9f7abebcb",
+      "remote_blob_sha256": "cff6d52750922e6b43e3abd5f57e19958652cdc642725bfb45ef6670ed2838cb",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/inputs/SOURCE_MAP_0053_R03.md",
+      "local_bytes": 3918,
+      "remote_bytes": 3873,
+      "local_sha256": "0804854060b21618888179ccc25bc72dc4da48cf58ca429b56f79c9c34bf2dfa",
+      "remote_blob_sha256": "0594c1dceb81c42d8d4e766c7ae4fd1a0e767357b19fc902c7a5374e2077995e",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/inputs/UNIQUE_BLUEPRINT_0053.json",
+      "local_bytes": 10337,
+      "remote_bytes": 10280,
+      "local_sha256": "18befafc7ad08f922b9d55f689a24afe04b581c200cb81a8983abd72b6cc4e9b",
+      "remote_blob_sha256": "b23378fb7aa092eeb1741494e1118ecbeefbeb64ec32510d29c2f83f74550522",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/inputs/official_checklist_source.pdf",
+      "local_bytes": 303044,
+      "remote_bytes": 303044,
+      "local_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+      "remote_blob_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/inputs/official_evidence_table_page4.png",
+      "local_bytes": 534778,
+      "remote_bytes": 534778,
+      "local_sha256": "0e00b46586ad0ee181046d4a13d0023654bb07537f7eebc3429dad3bfa29d35f",
+      "remote_blob_sha256": "0e00b46586ad0ee181046d4a13d0023654bb07537f7eebc3429dad3bfa29d35f",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/inputs/official_evidence_table_page4.txt",
+      "local_bytes": 2606,
+      "remote_bytes": 2492,
+      "local_sha256": "6b213930166b53a8f0cfd4db7f6ff43da337798799d09c99936858bcfb807fc1",
+      "remote_blob_sha256": "8aa3a06a6dc5428b8bc11f9a9e1d96f496053382449a9dc088e97d43030a0f98",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/review/opencode_v2_review_R03/dispatch_receipt_R03.json",
+      "local_bytes": 3046,
+      "remote_bytes": 3016,
+      "local_sha256": "0e7d29f630c59f446bb92ea3402754709984bd1ca672a87def889eb029b384b4",
+      "remote_blob_sha256": "8e958afb7d75f51a4200f29b7add5831682b0750403ae959c77ea5e3b7b24bf1",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/review/opencode_v2_review_R03/exit_code_R03.txt",
+      "local_bytes": 3,
+      "remote_bytes": 2,
+      "local_sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "remote_blob_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/review/opencode_v2_review_R03/extract_review_result_R03.py",
+      "local_bytes": 3970,
+      "remote_bytes": 3969,
+      "local_sha256": "a5863c41b2212f53117fb7a3d476dc9029044264a2e5a298ac4d47ae0e67abbd",
+      "remote_blob_sha256": "2d5fa98616b19f025d31c3a9c6a1ea285bef46bed6b95b4c8cd9eaaba481b9d7",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/review/opencode_v2_review_R03/independent_review_receipt_R03.json",
+      "local_bytes": 3027,
+      "remote_bytes": 3027,
+      "local_sha256": "808cbbf2ce0cc6b448967011a032b5d18c6e5a92ed502c2af42ff63df29a52a1",
+      "remote_blob_sha256": "808cbbf2ce0cc6b448967011a032b5d18c6e5a92ed502c2af42ff63df29a52a1",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/review/opencode_v2_review_R03/independent_semantic_review_R03.md",
+      "local_bytes": 11029,
+      "remote_bytes": 11029,
+      "local_sha256": "47da319fcaa114f9ef28b9ed863a7cd1b3140d10d837aee3c7023cc73bbfbcfd",
+      "remote_blob_sha256": "47da319fcaa114f9ef28b9ed863a7cd1b3140d10d837aee3c7023cc73bbfbcfd",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/review/opencode_v2_review_R03/opencode_v2_stderr_R03.txt",
+      "local_bytes": 0,
+      "remote_bytes": 0,
+      "local_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "remote_blob_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/review/opencode_v2_review_R03/opencode_v2_stdout_R03.jsonl",
+      "local_bytes": 18394,
+      "remote_bytes": 18394,
+      "local_sha256": "d44808dbaf68c27a305a1c1b222b378d49d32d0e5ea367e1e100c0d8b411d24f",
+      "remote_blob_sha256": "d44808dbaf68c27a305a1c1b222b378d49d32d0e5ea367e1e100c0d8b411d24f",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/review/opencode_v2_review_R03/packet_R03/independent_review_packet_R03.md",
+      "local_bytes": 82701,
+      "remote_bytes": 81177,
+      "local_sha256": "aed931801c9f92ebb3ec88bfa67e74f6d19559fc6cf4e00361c47b8224b6183b",
+      "remote_blob_sha256": "caf7afe96898febefd271052f31fd872e29a19d2d0e399b666b0a00ed77e4002",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/review/opencode_v2_review_R03/packet_R03/review_packet_manifest_R03.json",
+      "local_bytes": 2181,
+      "remote_bytes": 2146,
+      "local_sha256": "9aeed1bad7925422499e6f264d3366b749bda3f124a208c153679732b6532814",
+      "remote_blob_sha256": "ac1bb651b388e6b115b510abe3f57888b27eb3d24868f88684b1b3729167ebd1",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/review/opencode_v2_review_R03/packet_R03/review_prompt_R03.txt",
+      "local_bytes": 1101,
+      "remote_bytes": 1098,
+      "local_sha256": "227620d0cb77e33e4c3c9ba1037ef4b04f945003d0a17642be10697c77a1d846",
+      "remote_blob_sha256": "5433e9aa05bb7f7c122a16d58501b1a3994c99108347d249e102c9d12257c6ed",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/review/opencode_v2_review_R03/prepare_review_packet_R03.py",
+      "local_bytes": 11891,
+      "remote_bytes": 11890,
+      "local_sha256": "01aae8ed67e436f4adc54683fecfa66365dd45f9bc4d5bb164777e5e416fb40d",
+      "remote_blob_sha256": "94537bc930bb1d9df716e0d37e1fd877197db2fa308a05040224f2659351e1ab",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R03/review/opencode_v2_review_R03/run_review_R03.py",
+      "local_bytes": 2856,
+      "remote_bytes": 2855,
+      "local_sha256": "1108a93edc8902b393f2ed8355c90fc9a85e3c602ea532dfce8b3bfdcaf7b364",
+      "remote_blob_sha256": "c99b700b6f80be9c904d03124e6420407f50aab3d12434a3d1529279b1351a8d",
+      "match": "CRLF_TO_LF_ONLY"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R01/candidate/0053_R01.docx",
+      "local_bytes": 68109,
+      "remote_bytes": 68109,
+      "local_sha256": "14a7b825d24059f2c339f95eabfa613d4cad43dea9534fa80fcffa8a2489f4f8",
+      "remote_blob_sha256": "14a7b825d24059f2c339f95eabfa613d4cad43dea9534fa80fcffa8a2489f4f8",
+      "match": "BYTE_EXACT"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0053_R02/candidate/0053_R02.docx",
+      "local_bytes": 68348,
+      "remote_bytes": 68348,
+      "local_sha256": "cbe519643ae53c36818ea56b7f3a03ac43653c1c7183ffa940b9cf97daa885a1",
+      "remote_blob_sha256": "cbe519643ae53c36818ea56b7f3a03ac43653c1c7183ffa940b9cf97daa885a1",
+      "match": "BYTE_EXACT"
+    }
+  ]
+}

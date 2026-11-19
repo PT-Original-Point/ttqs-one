@@ -1,0 +1,43 @@
+{
+  "schema": "TTQS_ONE_0080_SOURCE_PACKET_RECEIPT_R02.v1",
+  "requirement_id": "I17B-E02",
+  "official_checkbox_serial": "085",
+  "official_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "status": "READY_FOR_BUILD",
+  "inputs": [
+    {
+      "sha256": "a1feb7b8598ff810e3910e360eab2749c7d115035fad878ac189760350d4f891",
+      "bytes": 8262,
+      "path": "inputs/UNIQUE_BLUEPRINT_0080_R02.md"
+    },
+    {
+      "sha256": "7efb7670e78a0b9c03d8ec2bf6be7b3bf42fe517448ddd66b9575ba3296215ae",
+      "bytes": 6361,
+      "path": "inputs/SOURCE_PACKET_0080_R02.md"
+    },
+    {
+      "sha256": "3f1f1582fc4d1418053547ef1948b089ce8dbba693ddb3100eb637b5f7905bd0",
+      "bytes": 3830,
+      "path": "inputs/SYNTHETIC_REVIEW_DATA_0080_R01.csv"
+    },
+    {
+      "sha256": "4a0633072b721ddd6930dde47ec052a23b7fb2c734806feb6d82a17dc2643457",
+      "bytes": 4252,
+      "path": "inputs/SYNTHETIC_REPLACEMENT_REGISTER_0080_R01.csv"
+    },
+    {
+      "sha256": "fcc9c25afe6050d3e53d1e750559b09f136b53a8f1f7d540308ada46587db8d3",
+      "bytes": 3045,
+      "path": "worker/WRITE_PROMPT_0080_R01.md"
+    }
+  ],
+  "legacy_registry_blob": "3ee92744602321a7f27324e4a70b25aaaf015930",
+  "document_id": "0080",
+  "source_head": "500960f4cdbf2b8aa439344aa42c7bbf8da35ab6",
+  "source_hash_correction": {
+    "upstream_path": "quality-review/0077_R01/inputs/REFLECTION_SYNTHETIC_DATA_0077_R01.csv",
+    "previous_claimed_sha256": "3bdce0a1675a5b377dfafe2d7519f9f877e51530f5edc4ba3551a116bc6e985",
+    "verified_sha256": "3bdce0a1675a5b377dfafe2d75139d1f877e51530f5edc4ba3551a116bc6e985",
+    "verification": "SHA-256 computed from local source bytes; source packet and unique Blueprint R02 match."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "doc_id": "0139",
+  "requirement_id": "I19-E29",
+  "blueprint_index": 153,
+  "candidate_parent": "R04",
+  "candidate": "R05",
+  "source_docx_sha256": "0c3415ebe452fb2d7f343ec67878c03c6cff510c2f2aa94887cb2ddcdfb28601",
+  "candidate_docx_sha256": "9bb154830d7d3cf9790e3e43fd44e9af8b6e3a059b9e28fd910fca80c0e8e947",
+  "repair_type": "deterministic arithmetic display correction only; version label increment",
+  "reason": "The document states that percentage-point differences use unrounded values; 1/12 - 2/12 = -8.333... pp rounds to -8.33 pp, not the previous -8.34 pp derived by subtracting displayed rounded values.",
+  "source_packet_sha256": "3c9c310e086a86c03d38bea68bba1ca53bcb2fc927d8949fb6b91c45379d9d47",
+  "unique_blueprint_sha256": "090169968e3df59a6cecaac665a99b2cb625a9cbc355bf84528d08b27c98052a",
+  "substantive_dataset_changed": false,
+  "only_logical_text_changes": [
+    {
+      "kind": "paragraph",
+      "index": 172,
+      "before": "文件版本：DOCX 0139 候選 R04；來源包及唯一 Blueprint 維持 R01；正文源自 Antigravity CLI 原始回覆，依已定位缺陷作有限、可追溯修正。",
+      "after": "文件版本：DOCX 0139 候選 R05；來源包及唯一 Blueprint 維持 R01；正文源自 Antigravity CLI 原始回覆，依已定位缺陷作有限、可追溯修正。"
+    },
+    {
+      "kind": "table_cell",
+      "table_index_1based": 7,
+      "row_index_0based": 6,
+      "cell_index_0based": 5,
+      "before": "-8.34 pp",
+      "after": "-8.33 pp"
+    }
+  ],
+  "created_local": "2026-10-25T06:20:09.070186+08:00",
+  "formal_acceptance": "NOT_GRANTED"
+}

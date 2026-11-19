@@ -1,0 +1,160 @@
+{
+  "project_id": "TTQS_ONE",
+  "command": "TTQS_ONE_ANTIGRAVITY_DISPATCH_QUOTA_FORENSIC_R05",
+  "record_type": "R05_FORENSIC_RECONCILIATION_AND_ROUTE_STATUS",
+  "observed_at_local": "2026-10-20T03:44:15.462261+08:00",
+  "scope": "Concise sidecar to existing R05 receipts; not a new activity report or control platform.",
+  "source": {
+    "attachment_sha256": "08537c533ff7e0e8fc070cbc06d1a9814ac5ae0c20538587e128a823d4d5aae5",
+    "prior_execution_receipt_sha256": "1c4a01f007024931b6037d01d9d600bda447f38372ff2e445330593045a13c3a",
+    "prior_followup_sha256": "bb3728daee832b273c57678a499c183fcc4615bc3435d8689fd3d33f67e91ebb",
+    "prior_cli_validation_sha256": "27a3f93316dac148af5f971b21dc1f3e0f1f9711ba0d4ba6d55e50097ceb8df2"
+  },
+  "dispatch_count": {
+    "historical_through_2026_10_19_receipt_backed_attempt_records": 35,
+    "historical_substantive_nonempty_responses": 14,
+    "historical_smoke_only_responses": 2,
+    "historical_no_usable_substantive_result": 19,
+    "historical_exact_OS_invocation_or_endpoint_dispatch_count": "UNKNOWN; one unmatched session and several pre-model failures",
+    "2026_10_20_agy_commands": {
+      "argument_parse_only_no_generation": 1,
+      "text_print_invocations_returning_text": 4,
+      "content_requests": 3,
+      "smoke_requests": 1,
+      "content_response_complete_by_return_only": 2,
+      "partial_timeout": 1,
+      "final_document_artifacts_produced_by_Antigravity": 0,
+      "provider_endpoint_or_quota_debit_count": "UNKNOWN"
+    },
+    "denominator_warning": "Do not add receipt-backed attempts to endpoint dispatches or treat nonempty text as a usable DOCX. Historical 14/35 is only a response-record ratio (40%), not an API success rate."
+  },
+  "new_2026_10_20_content_calls": [
+    {
+      "id": "R01",
+      "kind": "TEXT_ONLY_CONTENT_RESPONSE",
+      "exit_code": 0,
+      "stdout_bytes": 1872,
+      "stdout_sha256": "21ef284936e480b44341c04a0c9662ac7647a30f66949a4a4e274b269c4d72a1",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "prompt_sha256": "592025b18ee206c0e5077ef2191d58d2e74179035c5d5ff9be979c9f03e52d6e",
+      "substantive_complete_response": true,
+      "artifact_integrated_into_R07": false
+    },
+    {
+      "id": "R02",
+      "kind": "TEXT_ONLY_PRINT_PARTIAL_TIMEOUT",
+      "exit_code": 0,
+      "stdout_bytes": 21920,
+      "stdout_sha256": "a2ad72e0b437c63188aea89e57d0e5ab1ec7b89e55e9aec4dd96b555c76e6f67",
+      "stderr_bytes": 80,
+      "stderr_sha256": "fe172e6515faae7e07ac85a7a1a00e33cf5a006cca976a646972aa6110a5b3ce",
+      "prompt_sha256": "56bd0b3d4049304b97f81ab5cfb8b53cea6f1498ed83ac2a4743b689c478cc30",
+      "substantive_complete_response": false,
+      "artifact_integrated_into_R07": false
+    },
+    {
+      "id": "repair01",
+      "kind": "TEXT_ONLY_REPAIR_RESPONSE",
+      "exit_code": 0,
+      "stdout_bytes": 12455,
+      "stdout_sha256": "6246254e24227eda57b4b90a3766ff72bef9842baaace70f11d8062f84c3ae72",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "prompt_sha256": "a89dfebb380244ebf6ae0c41368e295b0050625e6713244e402c7f8733c3894a",
+      "substantive_complete_response": true,
+      "artifact_integrated_into_R07": false
+    }
+  ],
+  "smoke_call": {
+    "stdout_sha256": "624df2ef2b09412b236120b3fe7d53be19dc821fa3c8db8325323ff575fc981a",
+    "stdout_bytes": 21,
+    "exit_code": 0,
+    "purpose": "21-byte route smoke only; not an article or model attestation"
+  },
+  "root_cause": {
+    "supported": "Dispatch-policy underuse and over-broad pause: file-writing lane being PAUSED was propagated to the safe text-only lane, despite --print returning text. No 429/quota-exhaustion evidence was found.",
+    "additional_blockers": [
+      "Current native Antigravity TUI reported not signed in; /usage was not read.",
+      "For 0088 full-text attempts, local CLI logs state requested model ID is not in local config and default to CCPA; other log entries say not logged in. Requested Gemini identity/provider therefore is not attested.",
+      "R02 returned partial output after a two-minute print timeout; long outputs are not reliably delivered complete.",
+      "No ledger or contemporaneous GUI/CLI usage comparison verifies account identity, quota pool, or debit."
+    ],
+    "account_match": "UNKNOWN",
+    "model_provider_attestation": "UNKNOWN",
+    "quota_debit_or_billing": "UNKNOWN",
+    "429_or_quota_denial": "NOT_OBSERVED_IN_AVAILABLE_EVIDENCE"
+  },
+  "lane_state": {
+    "antigravity_file_writer": "PAUSED; no broad workspace trust or file permissions granted.",
+    "antigravity_text_only": "Text can be returned, so it should not be disabled merely because file writing is paused; however gemini-3.8-flash-high account/provider/usage is unverified. Long writing on this route remains suspended until native sign-in and /usage/identity context can be safely read; no further test calls made.",
+    "opencode_v2_free_review": {
+      "status": "COMPLETED",
+      "model": "opencode/mimo-v2.6-flash-free",
+      "cli_version": "2.0.32",
+      "exact_doc_id": "0088",
+      "exact_docx_sha256": "83ff96699e8c3e01852524047c822f912323207b2c22eb7e6fdb2cc561a5b5dc",
+      "semantic_verdict": "PASS",
+      "independent_review_receipt_sha256": "07943c51f96e48a39d175f87d7c5cf722345c4fa595b9386ec228a7550731811",
+      "raw_response_sha256": "c5f3244bc1fef77d8fddb50390025d577dd96817bb2ea3ec7591820386783faa",
+      "review_duration_seconds": 217,
+      "tool_calls_detected": false,
+      "token_usage_and_billing": "UNKNOWN_NOT_RETURNED"
+    },
+    "windows_native_docx": {
+      "status": "R07_CANDIDATE_QA_COMPLETE",
+      "technical": "PASS_WITH_SCOPE_LIMITS; 47 checks",
+      "visual": "PASS_WITH_SCOPE_LIMITS; 26-page coverage via seven overview sheets and full-resolution p1,p10,p25,p26",
+      "semantic": "PASS exact-SHA OpenCode review",
+      "formal_acceptance": "NOT_GRANTED",
+      "docx_sha256": "83ff96699e8c3e01852524047c822f912323207b2c22eb7e6fdb2cc561a5b5dc"
+    }
+  },
+  "policy": {
+    "computer_use": false,
+    "permission_bypass": false,
+    "oauth_or_mfa_modified": false,
+    "workspace_trust_granted": false,
+    "new_cost_authorized_or_incurred": "UNKNOWN; no further Antigravity generation after the three content responses; model provider/debit cannot be confirmed."
+  },
+  "candidate": {
+    "doc_id": "0088",
+    "requirement_id": "I17D-E02",
+    "revision": "R07",
+    "docx_sha256": "83ff96699e8c3e01852524047c822f912323207b2c22eb7e6fdb2cc561a5b5dc",
+    "body_sha256": "04bc085c8a843dda41ce3c7ec87d40bd8a589650e8d087ff9874b9d89518814e",
+    "state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+    "next": "Sync R07 candidate and minimal source/QA/visual/semantic evidence to existing PR #92; remote-readback exact hashes. Then advance the real READY queue.",
+    "semantic_review": "PASS exact-SHA OpenCode v2.0.32"
+  },
+  "latest_github_finding": {
+    "pr": 92,
+    "branch_head_prewrite": "2ec98c24876dd96c4df0cc14767bfe3df08092fd",
+    "latest_relevant_comment_id": 6273199204,
+    "finding": "Legacy local 0088 baseline is not an active source-bound packet; candidate must be reconciled to packet and Unique Blueprint before READY.",
+    "applied": "R07 packet and Blueprint are bound in source_patch_integration_R07.json and technical/semantic receipts; candidate remains SAMPLE_SYNTHETIC and unaccepted."
+  },
+  "antigravity_log_evidence": [
+    {
+      "basename": "cli-20261020_020114.log",
+      "sha256_local_only": "06cb597fed53d69ceded5dc8d4cdde3b1f9f5644e96a47467b001f73ffb3e336",
+      "requested_model_fallback_warning_count": 1,
+      "not_logged_in_warning_count": 62,
+      "raw_log_publication": "EXCLUDED; local hash and redacted phrase/count only"
+    },
+    {
+      "basename": "cli-20261020_021635.log",
+      "sha256_local_only": "4726c6ace11e3e16296a822b3c1f5cc0ea944a4d1baabccfc45964384513766f",
+      "requested_model_fallback_warning_count": 1,
+      "not_logged_in_warning_count": 66,
+      "raw_log_publication": "EXCLUDED; local hash and redacted phrase/count only"
+    },
+    {
+      "basename": "cli-20261020_022028.log",
+      "sha256_local_only": "66dbdf2c7f16809540156995421fa4408c8c55d506979fda40a721f3dbeccb7e",
+      "requested_model_fallback_warning_count": 1,
+      "not_logged_in_warning_count": 66,
+      "raw_log_publication": "EXCLUDED; local hash and redacted phrase/count only"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "requested_model": "gemini-3.8-flash-high",
+  "exit_code": "UNKNOWN_POST_DISPATCH_RECEIPT_BUG",
+  "failure_class": "CLI_MODEL_EFFORT_CONFLICT",
+  "message": "invalid model selection (--model \"gemini-3.8-flash-high\" --effort \"low\"): --model gemini-3.8-flash-high conflicts with --effort=low",
+  "stdout_sha256": "5ba58a22be5f0a7a0f7f8588fe8d77cc1c362958ffb1d1479cd8c046300dffa3",
+  "stdout_bytes": 367,
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "thinking_tokens": 0,
+    "cache_read_tokens": 0,
+    "total_tokens": 0
+  },
+  "action": "Corrected by omitting conflicting --effort flag; original raw output preserved."
+}

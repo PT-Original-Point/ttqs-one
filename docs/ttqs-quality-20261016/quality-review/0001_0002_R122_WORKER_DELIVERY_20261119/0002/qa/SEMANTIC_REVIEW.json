@@ -1,0 +1,33 @@
+{
+  "schema": "TTQS_ONE_EXACT_SHA_SEMANTIC_REVIEW_V1",
+  "doc_id": "0002",
+  "candidate_docx_sha256": "317867355DBF0759918A65C9623BA0FEBD05D7E88774E3E349C5EC18102420C7",
+  "status": "PASS",
+  "reviewer": "W1 OpenCode v2",
+  "work_id": "TTQS_ONE_0002_I01-E01_SEMANTIC_REVIEW_R02_20261119",
+  "requested_route": "opencode/beam-free",
+  "served_model": "UNKNOWN",
+  "os_pid": 14812,
+  "packet_sha256": "E452690F2C9B8E830F07221B7D5FB1F16A57200D10704E9BE18414A3F688097B",
+  "stdout_sha256": "1D18BAFBEC4AFA033A319485EADC9A31E0314962331FD341C77156AF8E83D129",
+  "exit_code": 0,
+  "checks": [
+    "requirement_fit",
+    "genre_mechanics",
+    "title_blind_identification",
+    "evaluator_usability",
+    "SAMPLE_SYNTHETIC_boundary",
+    "synthetic_fact_register",
+    "calculation_consistency",
+    "evidence_scope_and_source_limits",
+    "negative_neighbor_separation"
+  ],
+  "blocking_findings": 0,
+  "findings": [],
+  "limitations": [
+    "Review used extracted DOCX text; official PDF page text was not independently extracted in this review.",
+    "Semantic review did not inspect rendering; separately inspected by the integrator.",
+    "All sample values and role/control metadata remain SAMPLE/UNKNOWN."
+  ],
+  "raw_review": "stdout.raw"
+}

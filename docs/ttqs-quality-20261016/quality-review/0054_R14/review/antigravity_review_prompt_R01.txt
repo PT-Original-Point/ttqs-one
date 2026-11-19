@@ -1,0 +1,43 @@
+You are an independent reviewer. This is a read-only audit; do not edit, rename, create, delete, or regenerate any candidate or source file. Do not use any GUI, Computer Use, screen capture, mouse, keyboard automation, or browser UI. Use only CLI/local file inspection.
+
+Target candidate:
+- DOCX ID 0054, revision R14.
+- Exact SHA-256 must be verified from the actual bytes before and after review: 3d000e580b9cb1247fd984ebb0c8f5f817fce08ce7c368cc1799c95a111a979c
+- Candidate: E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0054_R14\candidate\0054_R14.docx
+- Rendered PDF (10 pages): E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0054_R14\evidence\render\0054_R14.pdf
+- Candidate render pages: same evidence\render folder, page-1.png through page-10.png. If you cannot inspect the images directly, state the visual scope as NOT REVIEWED; do not infer visual pass from builder receipts.
+
+Authoritative inputs:
+- Unique Blueprint: E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0054_R14\inputs\mapping\UNIQUE_BLUEPRINT_0054.json
+- Official page-4 exact excerpt and source SHA/provenance: E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0054_R14\inputs\official\official_checkbox_page4_excerpt.txt
+- Official source PDF: E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0054_R14\inputs\official\official_evidence_table_source.pdf
+- 157-item official evidence table extracted text: E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0054_R14\inputs\official\official_evidence_table_fulltext.txt
+- 71-row fact-level replacement register: E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0054_R14\inputs\traceability\synthetic_replacement_register_R13.csv
+- Candidate extracted source text and content trace: E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0054_R14\inputs\traceability\candidate_text_R13.txt and content_R13.json
+- Negative neighbor 0053 candidate + Blueprint (I12-E01): E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0053_R03\candidate\0053_R03.docx and E:\TTQS\_TTQS_ONE_REVIEW_SYNC_0036_R08_20261016\docs\ttqs-quality-20261016\quality-review\0053_R03\inputs\UNIQUE_BLUEPRINT_0053.json
+
+Identity and requirement boundaries (do not confuse identifiers):
+- DOCX 0054 = official checkbox sequence 054 = requirement I12-E02.
+- The official exact requirement is: “依學員遴選標準及流程遴選，教材由講師及顧問推薦須經訓練管理委員會通過。”
+- Adjacent checkbox 053 / I12-E01 / DOCX 0053 concerns review/adjustment of learner selection, materials, faculty, teaching method and facilities in response to course fit; it is not the same work product.
+- Adjacent checkbox 055 / I12-E03 concerns selecting/engaging lecturers under faculty criteria and committee approval before issuing an appointment letter; it is not this work product. Compare the exact adjacent lines in the official excerpt. No 0055 candidate is included here; do not pretend to inspect one.
+
+Review the DOCX itself (read its zip/XML or use a document parser) and compare it against the official excerpt, Unique Blueprint, full replacement register, and neighbor 0053. Do not rely on prior reviewer summaries or builder claims. This is an SOP for the association’s volunteer training operations. Evaluate:
+1. Official requirement match, source locator, correct document genre and title-blind distinctiveness.
+2. Whether an administrator can actually execute the whole workflow: criteria, roles/separation, inputs, decision thresholds, step-by-step procedure, exceptions, escalation, outputs, handoff, retention and review.
+3. Whether both selection and lecturer/consultant recommended training materials receive documented Training Management Committee approval before use; distinguish that from separate participant/manager approval.
+4. Whether the worked example is complete, concrete, internally consistent and mathematically reproducible. Specifically recalculate 92×40% + 95×30% + 93×30% = 93.2; reconcile 32 received = 28 eligible + 4 ineligible; 28 scored, 25 meeting 75-point threshold, 20 primary + 5 reserve + 3 below threshold; reserve/offer example and 20/20 fill rate. Identify any contradiction with precise page/table/row locators.
+5. Every fictional date, person/role, count, score, decision, material and approval clearly remains SAMPLE/SYNTHETIC, with no implication the association held a real meeting, admitted real people, approved actual materials, signed or issued records. Check replacement register coverage; state any facts that lack an exact row/locator.
+6. Whether the content is wrongly merged with I12-E01 or I12-E03, using positive and negative examples and exact differentiating section/table locators. No invented facts about 0055.
+7. Practical usability by association volunteer administrators and evaluators; reject generic, empty-template, future-tense-only or misleading approval language.
+8. Direct visual readability only if actually examined; mention page/element issues. The independent Codex-side direct visual inspection is separately recorded and is not yours to claim.
+
+Return a concise but substantive review with:
+- exact candidate SHA observed before and after;
+- verdict for each criterion using PASS / PARTIAL / FAIL, and an overall semantic verdict PASS / PARTIAL / FAIL;
+- evidence locators (page and heading/table/row; include a short exact phrase where useful);
+- all findings, severity, and specific repair requested if any;
+- title-blind identification and distinctness from 0053/I12-E01 and 0055/I12-E03;
+- replacement-register audit count and any uncovered sample facts;
+- review scope and any files/pages you could not inspect.
+Do not mark PASS merely because the package claims PASS. Do not make or imply formal Human acceptance or REAL evidence status. Stop after returning the review.

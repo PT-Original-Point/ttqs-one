@@ -1,0 +1,84 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0110",
+  "requirement_id": "I18-E19",
+  "receipt_id": "TTQS-0110-R11-GITHUB-READBACK-C6AC3C2E",
+  "product_commit": "c6ac3c2ed7e40df97fb5e13641f47ebf33488959",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "candidate_sha256_expected": "7fc82ba7ae25ba3fd422d7abcae2618176f64d4e2e118021122912440d9b740f",
+  "candidate_remote_sha256": "7fc82ba7ae25ba3fd422d7abcae2618176f64d4e2e118021122912440d9b740f",
+  "candidate_remote_bytes": 70776,
+  "candidate_raw_bytes_match": true,
+  "files": [
+    {
+      "label": "mapping_crosscheck",
+      "path": "docs/ttqs-quality-20261016/quality-review/0110_I18-E19_R01_20261023/R09/evidence/0110_R11_mapping_crosscheck_R04.json",
+      "remote_sha256": "573ec7debafdaf990bbb7331770149a53dd010df5b9ee4594783c24db67c2311",
+      "remote_bytes": 4945,
+      "source_sha256": "573ec7debafdaf990bbb7331770149a53dd010df5b9ee4594783c24db67c2311",
+      "source_bytes": 4945,
+      "raw_bytes_equal": true,
+      "normalized_lf_equal": true
+    },
+    {
+      "label": "original_dispatch_receipt",
+      "path": "docs/ttqs-quality-20261016/quality-review/0110_I18-E19_R01_20261023/R09/evidence/opencode_0110_R09_narrow_review_R11_dispatch_receipt.json",
+      "remote_sha256": "f58ce8e6c2f7b5e39bd31b656a251d95c4bd280bd45110067cdf08a03dc7005e",
+      "remote_bytes": 2617,
+      "remote_blob_verified": true,
+      "note": "This is the dispatch receipt as committed in c6ac3c2; updated receipt with exact stdout archive is included in the follow-up commit."
+    },
+    {
+      "label": "packet",
+      "path": "docs/ttqs-quality-20261016/quality-review/0110_I18-E19_R01_20261023/R09/worker/opencode_0110_R09_narrow_review_packet_R11.md",
+      "remote_sha256": "7aa691904c9af11b4a6472689085364815626c36515d2147e99412e99c801c28",
+      "remote_bytes": 8511,
+      "source_sha256": "7aa691904c9af11b4a6472689085364815626c36515d2147e99412e99c801c28",
+      "source_bytes": 8511,
+      "raw_bytes_equal": true,
+      "normalized_lf_equal": true
+    },
+    {
+      "label": "request",
+      "path": "docs/ttqs-quality-20261016/quality-review/0110_I18-E19_R01_20261023/R09/worker/opencode_0110_R09_narrow_review_R11_request.txt",
+      "remote_sha256": "f39a8f332848ee2fa8726a227929982ba8c11346807c6dabf19316aa528b210f",
+      "remote_bytes": 708,
+      "source_sha256": "f39a8f332848ee2fa8726a227929982ba8c11346807c6dabf19316aa528b210f",
+      "source_bytes": 708,
+      "raw_bytes_equal": true,
+      "normalized_lf_equal": true
+    },
+    {
+      "label": "stdout_text_copy",
+      "path": "docs/ttqs-quality-20261016/quality-review/0110_I18-E19_R01_20261023/R09/worker/opencode_0110_R09_narrow_review_R11_stdout.jsonl",
+      "remote_sha256": "b0a176b76298c00381808c33f5ab90e89f7b173302d3fedafc897cc9449462c1",
+      "remote_bytes": 527,
+      "source_sha256": "19166ab0f2a8cc62edc76e104d3ef7850c79a65a6e2993e28b12df233d05d870",
+      "source_bytes": 528,
+      "raw_bytes_equal": false,
+      "normalized_lf_equal": true
+    },
+    {
+      "label": "stderr",
+      "path": "docs/ttqs-quality-20261016/quality-review/0110_I18-E19_R01_20261023/R09/worker/opencode_0110_R09_narrow_review_R11_stderr.txt",
+      "remote_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "remote_bytes": 0,
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bytes": 0,
+      "raw_bytes_equal": true,
+      "normalized_lf_equal": true
+    }
+  ],
+  "stdout_original_sha256": "19166ab0f2a8cc62edc76e104d3ef7850c79a65a6e2993e28b12df233d05d870",
+  "stdout_original_bytes": 528,
+  "stdout_text_copy_remote_sha256": "b0a176b76298c00381808c33f5ab90e89f7b173302d3fedafc897cc9449462c1",
+  "stdout_text_copy_eol_only_normalized": true,
+  "stdout_exact_base64_sidecar_sha256": "2a35de324b594421c02428422d435ffda8f3aed8299d6c46e6a23337907b44ea",
+  "stdout_exact_base64_sidecar_path": "docs/ttqs-quality-20261016/quality-review/0110_I18-E19_R01_20261023/R09/worker/opencode_0110_R09_narrow_review_R11_stdout.raw.b64",
+  "stdout_exact_base64_sidecar_in_followup_commit": true,
+  "method": "Fetched origin and read product Git blobs with git show; DOCX readback used raw bytes. JSON/Markdown/request compare raw bytes; stdout text copy was CRLF-normalized by Git and an exact base64 archive is included in the follow-up package.",
+  "result": "PASS_PRODUCT_READBACK_WITH_EXPLICIT_STDOUT_EOL_VARIANCE",
+  "semantic_review": "NOT_RETURNED_PROVIDER_FREE_LIMIT_HTTP_429",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD"
+}

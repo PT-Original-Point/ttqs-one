@@ -1,0 +1,44 @@
+{
+  "receipt_id": "TTQS-0103-I18-E10-R02-VISUAL-QA-STATUS",
+  "observed_at_tpe": "2026-10-22T01:00:21.3487722+08:00",
+  "doc_id": "0103",
+  "requirement_id": "I18-E10",
+  "revision": "R02",
+  "candidate_docx_sha256": "82380e64672229d1f3d9a55094a1badd24f17555c85d45a35e8626b1c412e87c",
+  "visual_status": "BLOCKED",
+  "rendered_pdf": "NOT_CREATED",
+  "rendered_pdf_sha256": "NOT_APPLICABLE",
+  "attempts": [
+    {
+      "attempt": 1,
+      "method": "Microsoft Word COM automation",
+      "observed_failure": "Word.Application.Hwnd was null/unavailable before a usable render could be produced",
+      "attempt_time": "UNKNOWN",
+      "raw_log_retained": false
+    },
+    {
+      "attempt": 2,
+      "method": "Microsoft Word COM automation",
+      "observed_failure": "No PDF or output artifact was produced within the bounded 30-second attempt",
+      "attempt_time": "UNKNOWN",
+      "raw_log_retained": false
+    }
+  ],
+  "observed_new_word_pids": [
+    64184,
+    72520
+  ],
+  "pid_to_attempt_mapping": "UNKNOWN",
+  "cleanup": "Only the two PIDs created by these bounded attempts were ended after exact creation-time/command-line verification; 19 older WINWORD automation processes were retained.",
+  "current_package_pdf_count": 0,
+  "page_images_count": 0,
+  "pages_visually_inspected": 0,
+  "visual_receipt": "NOT_PASS",
+  "layout_verdict": "UNKNOWN",
+  "no_same_path_retry_without_route_change": true,
+  "technical_qa": "PASS",
+  "independent_semantic": "PASS_SEMANTIC_ONLY",
+  "candidate_acceptance": "BLOCKED_PENDING_VISUAL_QA",
+  "formal_acceptance": "NOT_GRANTED",
+  "limitations": "Raw attempt stdout/stderr was not retained as a standalone file; exact attempt timestamps and mapping of the two PIDs to attempts are UNKNOWN. No visual conclusion is inferred from semantic or package checks."
+}

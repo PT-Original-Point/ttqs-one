@@ -1,0 +1,76 @@
+{
+  "schema": "TTQS_ONE_0119_R09_VISUAL_DELTA_QA",
+  "doc_id": "0119",
+  "official_requirement_id": "I19-E07",
+  "candidate_sha256": "9c61f74ee95dd21fc0c069072bdca1baccf98d464e4330fa11b320f3e52766f7",
+  "word_native_pdf_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0119_I19-E07_SOURCE_PREP_R01_20261024\\R09_STATUS_LABEL_FIX_20261029\\VISUAL_QA_WORD_R09_20261029\\0119_R09_WORD_NATIVE.pdf",
+  "word_native_pdf_sha256": "48ada0aba5428a5fb10dc551b367453ff9df30d0e99f4b57f4c74b16706b8bc2",
+  "page_count": 14,
+  "pages_rendered": 14,
+  "render_method": "Microsoft Word native COM PDF export; Poppler 120dpi PNGs",
+  "page_pixel_comparison": {
+    "baseline": "R08 Word-native render",
+    "identical_pages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "changed_pages": [
+      {
+        "page": 1,
+        "changed_bbox": [
+          202,
+          205,
+          625,
+          225
+        ]
+      }
+    ],
+    "page_png_sha256_r09": {
+      "1": "257deb48ea9b68ab424b392ba42a4777f38b4fdc205d90ae29d5b27dcf00b525",
+      "2": "2844237aea88f84a4d5dd751affbe773edf33a43f1af71d23c86aec5b9941352",
+      "3": "ae72c491c6b4284ef24236388c3604cb94290586b73a308a645a30fd2ab521c8",
+      "4": "32a9d6e687d4da954179763e3a62da06ceade5a943e655c0675d5a62ec6d0784",
+      "5": "805b463d731ce54500f599552e7fd2ffab3b173930164bc9a4c5b2eb22584b45",
+      "6": "4793b661f4afc9988e67fcd40c3c56769591e0586fc7303405bf7a85ab6d0932",
+      "7": "7c5a4f8524aa7cd2ac7b86ddb54ce76c3439749035f6d5f9c36d6393c20993db",
+      "8": "cb92f510df8e639a80b3992f3240a24e0b94d321ab515e848233dbc8f5b09631",
+      "9": "220bdf6a8b24a3a1b6fc52c9161d150ae0de1dc6ecb38c9676e1850e5d30aaf5",
+      "10": "204199442c9dc54d906106c881a09b245e659125a440dbe70beeee7754ed8dcd",
+      "11": "bb1b8634549e537a27d56775262da502d06b7a2335155b50646eed9642a147b0",
+      "12": "7c0a38ab6ec796d0697dac468b21e4f1773f68d145248eecc452835f7233c7c3",
+      "13": "f91b758cd8f02c178bd57b1146fe8767b893884c785a117e438d4d05dc7a70f8",
+      "14": "0d1c43a25a6dd0bb29986740f400633d7a2be752dcc8b1b803187b6c4266740c"
+    }
+  },
+  "visual_result": "PASS_SCOPED_DELTA_PENDING_SEMANTIC",
+  "manual_inspection": {
+    "page_1": "PASS; corrected candidate-state line visibly reads CANDIDATE; no clipping, table overflow, or changed layout issue in inspected area."
+  },
+  "inherited_visual_scope": "Pages 2-14 are pixel-identical to the R08 inspected baseline; R08 scope inspected pages 8-9 directly and inherited exact pixel matches from R07 on other pages.",
+  "render_process_note": "The initial Word-native export succeeded but the legacy Quit(0) call produced a COM argument error. A corrected Quit() render then exited cleanly with no new WINWORD process left; all 14 pages rasterized pixel-identically to the reviewed export.",
+  "independent_semantic_review": "PENDING_EXACT_SHA",
+  "formal_acceptance": "NOT_GRANTED",
+  "verified_at_utc": "2026-10-29T09:54:21.092178+00:00",
+  "render_cleanup_verification": {
+    "method": "Microsoft Word native COM export rerun after changing legacy Quit(0) to Quit()",
+    "exported": true,
+    "own_word_process_proven": true,
+    "new_word_process_exited": true,
+    "cleanup_errors": [],
+    "candidate_sha256": "9c61f74ee95dd21fc0c069072bdca1baccf98d464e4330fa11b320f3e52766f7",
+    "pdf_sha256": "adb2e96057b196b4d88c234e790aebde02ddb923a9efabbf829a3cfbcde1e06a",
+    "page_count": 14,
+    "raster_pixels_match_reviewed_render": true
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0009",
+  "requirement_id": "I01-E06",
+  "candidate_sha256": "00716123d55f1b07d5d18a6c68793f9d473dff7bcb1c4cd0a1afaa2d1bce10ff",
+  "scope": "DOCX package integrity, source binding, dataset completeness and counts, displayed calculation consistency, layout structure, font floors and synthetic boundary",
+  "technical_state": "PASS",
+  "checks": {
+    "source_sha_matches_r02": true,
+    "zip_integrity": true,
+    "docx_opens": true,
+    "dataset_rows": 119,
+    "dataset_expected_rows": 119,
+    "missing_dataset_records_in_word": [],
+    "datasets": {
+      "D1_annual_activity": {
+        "rows": 6,
+        "numerator": 5,
+        "denominator": 6,
+        "all_synthetic": true,
+        "unique_ids": true
+      },
+      "D2_annual_admin": {
+        "rows": 50,
+        "numerator": 45,
+        "denominator": 50,
+        "all_synthetic": true,
+        "unique_ids": true
+      },
+      "D3_valid_request": {
+        "rows": 20,
+        "numerator": 17,
+        "denominator": 20,
+        "all_synthetic": true,
+        "unique_ids": true
+      },
+      "D4_quarterly_review": {
+        "rows": 4,
+        "numerator": 3,
+        "denominator": 4,
+        "all_synthetic": true,
+        "unique_ids": true
+      },
+      "Q1_action_followup": {
+        "rows": 39,
+        "numerator": 37,
+        "denominator": 39,
+        "all_synthetic": true,
+        "unique_ids": true
+      }
+    },
+    "table_count": 20,
+    "image_count": 1,
+    "landscape_a4": true,
+    "body_min_pt": 10.5,
+    "table_min_pt": 9.5,
+    "numbered_lists": [
+      {
+        "n": 7,
+        "numIds": [
+          10
+        ]
+      },
+      {
+        "n": 5,
+        "numIds": [
+          11
+        ]
+      },
+      {
+        "n": 4,
+        "numIds": [
+          12
+        ]
+      },
+      {
+        "n": 7,
+        "numIds": [
+          13
+        ]
+      }
+    ],
+    "no_placeholder_hits": true,
+    "no_recurring_decimal_ellipsis_in_calc": true,
+    "sample_synthetic_labeled": true,
+    "final_candidate_sha256": "00716123d55f1b07d5d18a6c68793f9d473dff7bcb1c4cd0a1afaa2d1bce10ff",
+    "technical_pass": true
+  },
+  "visual_state": "PENDING_RENDER_REVIEW",
+  "semantic_state": "PENDING_INDEPENDENT_EXACT_SHA",
+  "formal_acceptance": "NOT_GRANTED",
+  "observed_at_local": "2026-10-31T05:29:30+08:00"
+}

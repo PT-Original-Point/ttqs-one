@@ -1,0 +1,97 @@
+{
+  "schema": "TTQS_ONE_0142_R10_SCOPED_UNIT_PATCH_V1",
+  "work_id": "TTQS_ONE_0142_R10_SCOPED_REPAIR_W1_UNIT_FINDING_20261115",
+  "created_at": "2026-11-15T22:56:57.0597514+08:00",
+  "source_r09_docx_sha256": "5002813a2492cddbd304051b3af4dd40feb35d580956fcb86c1f10cf2b3fea19",
+  "candidate_r10_docx_sha256": "127d419e4b3814f66669730212b474b1d1219fa1377374cfdacd424798b27e1c",
+  "source_r09_body_sha256": "de70205ef1ade9927e2b355b428786ba1694c447bc4bb0cfe7254423a72b8753",
+  "candidate_r10_body_sha256": "0fc364c97d6a559f0f0d4a013ac7bd1c0664a71d040726b7364b2c8ca5096bbd",
+  "patch_scope": "Table 7 result-unit cells only; four percentage rows changed from 新臺幣元 to %",
+  "changed_rows": [
+    {
+      "table": 8,
+      "row": 2,
+      "label": "2024營業額年增率",
+      "old": "新臺幣元",
+      "new": "%"
+    },
+    {
+      "table": 8,
+      "row": 3,
+      "label": "2025營業額年增率",
+      "old": "新臺幣元",
+      "new": "%"
+    },
+    {
+      "table": 8,
+      "row": 4,
+      "label": "三年營業額累計變動",
+      "old": "新臺幣元",
+      "new": "%"
+    },
+    {
+      "table": 8,
+      "row": 5,
+      "label": "三年總收入累計變動",
+      "old": "新臺幣元",
+      "new": "%"
+    }
+  ],
+  "body_delta_only_these_four_rows": true,
+  "word_com_open_and_cell_readback": "PASS",
+  "word_com_page_count": 10,
+  "pdf_sha256": "d0ef4fdf360cdc136acf0bc25091ad9e948ca261af2d021600a62f7798283225",
+  "arithmetic": [
+    {
+      "name": "2024 annual",
+      "numerator": 120000,
+      "denominator": 1200000,
+      "calculated_percent": "10.00",
+      "expected": "10.00",
+      "status": "PASS"
+    },
+    {
+      "name": "2025 annual",
+      "numerator": 132000,
+      "denominator": 1320000,
+      "calculated_percent": "10.00",
+      "expected": "10.00",
+      "status": "PASS"
+    },
+    {
+      "name": "3-year operating",
+      "numerator": 252000,
+      "denominator": 1200000,
+      "calculated_percent": "21.00",
+      "expected": "21.00",
+      "status": "PASS"
+    },
+    {
+      "name": "3-year total",
+      "numerator": 272000,
+      "denominator": 1480000,
+      "calculated_percent": "18.38",
+      "expected": "18.38",
+      "status": "PASS"
+    }
+  ],
+  "source_packet_sha256": "e3e8b3a8ee1effe758608fee183440add4f37381988c5e352912b1a3d55c9e49",
+  "unique_blueprint_sha256": "4841161d6e9aad3ace2a0b4ec4a5a3e1b7e92b68ff2b20f95e9edeae2b84070b",
+  "crosswalk_sha256": "1ddfbb608bcad25170683ddb42a1dbb27bafa6f1f35ff0498f1b8d75b24f0679",
+  "visual_review": "PASS",
+  "independent_exact_sha_semantic_review": "PASS_TEXT_ONLY",
+  "status": "CANDIDATE_QA_COMPLETE_NOT_ACCEPTED",
+  "visual_receipt_sha256": "406d6844fdf2c774437dc7d7469a6a1dfcf52b72929ee097943db4045cd0f9fa",
+  "visual_pdf_sha256": "d0ef4fdf360cdc136acf0bc25091ad9e948ca261af2d021600a62f7798283225",
+  "candidate_body_sha256": "0fc364c97d6a559f0f0d4a013ac7bd1c0664a71d040726b7364b2c8ca5096bbd",
+  "exact_docx_opened_and_reopened": true,
+  "candidate_status": "CANDIDATE_NOT_ACCEPTED",
+  "semantic_reviewer_work_id": "TTQS_ONE_0142_R10_FULL_SEMANTIC_REVIEW_GEMINI38_20261115",
+  "semantic_review_response_sha256": "aff40103711c794377a97210d0f5bf155fdbff3de40bc6b60866ca5a8758dc01",
+  "semantic_review_requested_model": "gemini-3.8-flash-high",
+  "semantic_review_actual_serving_model": "UNKNOWN",
+  "semantic_review_tool_calls": 0,
+  "semantic_review_findings": 0,
+  "semantic_review_tokens": 29380,
+  "semantic_review_limitations": "text-only; no actual financial records, visual QA, formal acceptance, or association performance verified by semantic worker"
+}

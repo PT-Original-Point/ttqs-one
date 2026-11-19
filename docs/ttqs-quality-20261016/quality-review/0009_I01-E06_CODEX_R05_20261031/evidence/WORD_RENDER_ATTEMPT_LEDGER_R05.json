@@ -1,0 +1,40 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0009",
+  "requirement_id": "I01-E06",
+  "revision": "R05",
+  "attempts": [
+    {
+      "attempt": 1,
+      "observed_at_tpe": "2026-10-31T05:54:27+08:00",
+      "result": "FAILED_BEFORE_DOCUMENT_OPEN",
+      "cause": "Initial wrapper cast null Word.Application.Hwnd to IntPtr. No PDF; DOCX unchanged. Original receipt retained as WORD_RENDER_RECEIPT_R05.json."
+    },
+    {
+      "attempt": 2,
+      "observed_at_tpe": "2026-10-31T05:54:42+08:00",
+      "result": "CANCELED_DUPLICATE_COM_LAUNCH",
+      "cause": "Retry wrapper was launched without preserving the returned session handle; a same-scope R05 COM process appeared without a terminal receipt. Exact R05 PowerShell/Word PIDs were inspected and stopped; no PDF was present."
+    },
+    {
+      "attempt": 3,
+      "observed_at_tpe": "2026-10-31T05:55:06+08:00",
+      "result": "CANCELED_DUPLICATE_COM_LAUNCH",
+      "cause": "The same wrapper was inadvertently launched again while an earlier render remained unobserved. The active tool session was interrupted and only its exact R05 COM process was terminated; no pre-existing Word process was touched."
+    },
+    {
+      "attempt": 4,
+      "observed_at_tpe": "2026-10-31T05:57:42.6149952+08:00",
+      "result": "PASS_EXPORTED",
+      "cause": "Switched to the already successful 0007 R12 pattern: exact SHA precheck, wait for unique new WINWORD PID, hidden/read-only open, explicit export, candidate post-hash, and owned PID cleanup.",
+      "owned_word_pid": 94636,
+      "finished_at": "2026-10-31T05:58:10.1599176+08:00",
+      "pdf_sha256": "5F9D57128C2C38D17737C7D88B1B382FB88CAD32CA23AA4D4703A4AE54856293",
+      "page_count": 48
+    }
+  ],
+  "root_cause": "The first script assumed Hwnd would be non-null; subsequent command orchestration failed to retain/check session handles, causing duplicate same-scope COM attempts. Corrected by using unique PID ownership and the known-good bounded renderer script.",
+  "preexisting_word_processes_preserved": true,
+  "candidate_mutated_by_render": false,
+  "next_prevention": "Do not issue another same-scope renderer while the existing exec session is active; poll its session_id and progress file before deciding whether to retry."
+}

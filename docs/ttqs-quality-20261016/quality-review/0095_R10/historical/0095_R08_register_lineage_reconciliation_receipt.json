@@ -1,0 +1,72 @@
+{
+  "receipt_type": "R08 register-lineage countercheck",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0095",
+  "requirement_id": "I18-E02",
+  "reviewed_docx_sha256": "e9322191eb70554311f506db2eedf0800c1e786012a6b854cbe4b31864ce31a1",
+  "R06": {
+    "rows": 208,
+    "columns": 13,
+    "sha256": "7f2034e3a7cc77e3a327a59a49ad90d3e2970c7ac01d7c03336b2ad4d572347f"
+  },
+  "R07": {
+    "rows": 214,
+    "columns": 13,
+    "sha256": "ba5e5e1c8f0191e7298502976e5f9d02a164d4e799a1de2a7f1514f66a7fc3d4"
+  },
+  "R08": {
+    "rows": 211,
+    "columns": 13,
+    "sha256": "203583e4aa51f6c370b5dcee904922856c5d118b02d6184a5518b1174840202c"
+  },
+  "R06_to_R08_removed_keys": [
+    "SYN-0095-COMBINED_RETURN_RATE",
+    "SYN-0095-COMBINED_VALID_RATE",
+    "SYN-0095-POOLED_POSITIVE_RATE"
+  ],
+  "R06_to_R08_added_keys": [
+    "UNK-0095-UNK_APPROVAL_SIGNATURE",
+    "UNK-0095-UNK_ATTACHMENT_STORAGE_LOCATION",
+    "UNK-0095-UNK_AUTHOR_REVIEWER_IDENTITY",
+    "UNK-0095-UNK_FORMAL_EFFECTIVE_DATE",
+    "UNK-0095-UNK_IMPROVEMENT_ORIGINALS",
+    "UNK-0095-UNK_REAL_COURSE_COHORT"
+  ],
+  "R06_retained_key_count": 205,
+  "key_contested_by_NB_R08_02": "SYN-0095-CUSTOMER_VALID_RETURN_SHARE",
+  "contested_key_present_in_R06": true,
+  "contested_key_present_in_R08": true,
+  "R06_row": {
+    "register_key": "SYN-0095-CUSTOMER_VALID_RETURN_SHARE",
+    "doc_id": "0095",
+    "requirement_id": "I18-E02",
+    "official_checkbox": "建立目標客戶及學員滿意度調查機制（系統及流程面）。",
+    "fact_status": "DERIVED_SYNTHETIC_METRIC",
+    "fact_type": "rate",
+    "value": "83.3",
+    "unit": "percent",
+    "document_location": "§6.3.2 / valid target-customer returns as share of delivered invitations",
+    "source_or_formula": "5 valid returned forms / 6 invitations delivered or handed over * 100 = 83.3%; traces to SYN-0095-CUSTOMER_VALID and SYN-0095-CUSTOMER_INVITED.",
+    "real_replacement_or_authorization_required": "Recalculate from verified delivered-invitation logs and the returned/valid-form ledger; keep delivered invitations distinct from dispatch-only counts.",
+    "real_source_status": "NOT_PROVIDED",
+    "notes": "SAMPLE/SYNTHETIC only; derivable from the displayed case, separately keyed for full replacement coverage."
+  },
+  "R08_row": {
+    "register_key": "SYN-0095-CUSTOMER_VALID_RETURN_SHARE",
+    "doc_id": "0095",
+    "requirement_id": "I18-E02",
+    "official_checkbox": "建立目標客戶及學員滿意度調查機制（系統及流程面）。",
+    "fact_status": "DERIVED_SYNTHETIC_METRIC",
+    "fact_type": "rate",
+    "value": "83.3",
+    "unit": "percent",
+    "document_location": "§6.3.2 / valid target-customer returns as share of delivered invitations；PDF p. 28",
+    "source_or_formula": "5 valid returned forms / 6 invitations delivered or handed over * 100 = 83.3%; traces to SYN-0095-CUSTOMER_VALID and SYN-0095-CUSTOMER_INVITED.",
+    "real_replacement_or_authorization_required": "Recalculate from verified delivered-invitation logs and the returned/valid-form ledger; keep delivered invitations distinct from dispatch-only counts.",
+    "real_source_status": "NOT_PROVIDED",
+    "notes": "SAMPLE/SYNTHETIC only; derivable from the displayed case, separately keyed for full replacement coverage."
+  },
+  "arithmetic": "208 R06 keys - 3 retired combined/pooled keys = 205 retained; + 6 new UNKNOWN keys = 211 R08 rows.",
+  "disposition": "NB-R08-02 is contradicted by direct key-set readback: CUSTOMER_VALID_RETURN_SHARE exists in R06 and R08 and is among the 205 retained keys, not an uncounted added row. The complete differences are exactly the three listed removals and six listed UNKNOWN additions.",
+  "limitation": "This is a local deterministic CSV/key-set reconciliation; it does not amend the independent reviewer response or claim the reviewer retracted the finding."
+}

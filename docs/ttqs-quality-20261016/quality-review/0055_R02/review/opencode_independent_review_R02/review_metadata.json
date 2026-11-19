@@ -1,0 +1,43 @@
+{
+  "project_id": "TTQS_ONE",
+  "document_id": "0055",
+  "revision": "R02",
+  "reviewer_route": "OpenCode CLI v2.0.29",
+  "model": "opencode/glm-5.3-flash-free",
+  "verdict": "PASS_WITH_NONBLOCKING_FINDINGS",
+  "candidate_sha256": "2d69f2e515c424a8717bfb189e8c9de861580d636fafd82f79d332bab8cfe827",
+  "reviewed_register_sha256": "28a131188c74014828a81fc2a4048a35a0dfe50d1d26fd4941b36532653b0557",
+  "review_context_sha256": "567b14ba0e7baf3491ed4448f5a523976d3ed48f875a450c44f88f9f959e8dff",
+  "raw_stdout_sha256": "5dd6a1141bebbcb2f0a25a38627538982ad8e3db6fb1cedaa481090d50d2a1a9",
+  "usage": {
+    "session_id": "ses_eb62fd5b9ffej666kK7HhyqpCA",
+    "model": "opencode/glm-5.3-flash-free",
+    "input_tokens": 93557,
+    "output_tokens": 21267,
+    "reasoning_tokens": 0,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "reported_cost_usd": 0,
+    "source": "OpenCode v2 session export; openCode stats current project confirms free model / cost 0"
+  },
+  "scope_limits": [
+    "Reviewer did not independently rehash DOCX or render PDF; local exact SHA and render receipt are separately verified.",
+    "Reviewer semantic pass excludes visual inspection.",
+    "Reviewer did not inspect complete corpus duplicates or same-type candidates 0053/0054; orchestrator performed a direct local negative-neighbor check on those exact SHAs.",
+    "Reviewer result applies to the listed original register SHA; later narrow register corrections are separately listed and not part of its input."
+  ],
+  "nonblocking_findings": [
+    "FAC-0055-038 did not enumerate all synthetic meeting attendance role codes.",
+    "Tie-break rule in Unique Blueprint is not restated in the document; the three example scores do not tie.",
+    "S-C01 to S-C03 sample resume indexes were not identified as unattached examples in the register."
+  ],
+  "register_correction_after_review": {
+    "current_register_sha256": "b7b2948b300e0c5ca36b838bdbca10d1470b0ddc1450257c742b32bd782d8531",
+    "changes": [
+      "FAC-0055-015..017 now state S-C01..03 are example indexes and no resume/qualification files are attached.",
+      "FAC-0055-038 now enumerates P-01, M-01/M-02/M-03, S-01, and 3/3 synthetic attendance."
+    ],
+    "candidate_docx_bytes_changed": false
+  },
+  "created_at_utc": "2026-10-17T12:32:43.775439+00:00"
+}

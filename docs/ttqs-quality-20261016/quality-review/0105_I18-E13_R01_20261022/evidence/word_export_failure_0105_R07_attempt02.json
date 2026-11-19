@@ -1,0 +1,49 @@
+{
+  "receipt_id": "TTQS-0105-I18-E13-WORD-EXPORT-FAILURE-R07-ATTEMPT02",
+  "work_id": "TTQS-0105-I18-E13-WORD-NATIVE-EXPORT-R07-ATTEMPT02",
+  "doc_id": "0105",
+  "requirement_id": "I18-E13",
+  "candidate_path": "E:\\PT-Original-Point\\ttqs-one\\docs\\ttqs-quality-20261016\\quality-review\\0105_I18-E13_R01_20261022\\candidate\\0105_I18-E13_績效改善調查與課後行動計畫追蹤套件_R07.docx",
+  "candidate_sha256": "32bc0b8d7efe767e584b2a848206507d4da73ffa344378143b22186705302027",
+  "exporter_script": "E:\\PT-Original-Point\\ttqs-one\\docs\\ttqs-quality-20261016\\quality-review\\0105_I18-E13_R01_20261022\\evidence\\scripts\\export_0105_R07_word_native_r02.ps1",
+  "exporter_script_sha256": "0af5ff4d902557bb8a5a4be8b8b01ba95bb6971cdad243d19f25edebe27a3d29",
+  "output_path": "E:\\PT-Original-Point\\ttqs-one\\docs\\ttqs-quality-20261016\\quality-review\\0105_I18-E13_R01_20261022\\visual\\0105_R07\\word_native\\0105_I18-E13_R07_attempt02.pdf",
+  "output_existed_before_stop": false,
+  "output_exists_after_stop": false,
+  "expected_receipt_path": "E:\\PT-Original-Point\\ttqs-one\\docs\\ttqs-quality-20261016\\quality-review\\0105_I18-E13_R01_20261022\\evidence\\word_export_receipt_0105_R07_attempt02.json",
+  "expected_receipt_existed_before_stop": false,
+  "runtime_seconds_before_stop": 8386.7,
+  "process_snapshot_before_stop": [
+    {
+      "pid": 60760,
+      "name": "powershell",
+      "cpu_seconds": 5510.90625,
+      "responding": true,
+      "started": "2026-10-22T16:15:56.3228474+08:00"
+    },
+    {
+      "pid": 6384,
+      "name": "pwsh",
+      "cpu_seconds": 1.265625,
+      "responding": true,
+      "started": "2026-10-22T16:15:55.6961365+08:00"
+    },
+    {
+      "pid": 16684,
+      "name": "WINWORD",
+      "cpu_seconds": 2121.265625,
+      "responding": true,
+      "started": "2026-10-22T16:15:56.7136618+08:00"
+    }
+  ],
+  "exact_owned_processes_stopped": [
+    60760,
+    16684
+  ],
+  "remaining_target_process_ids": [],
+  "candidate_sha_unchanged": true,
+  "outcome": "SCOPED_RENDER_TIMEOUT_NO_PDF",
+  "reason": "Owned read-only Word COM export ran over 120 minutes, used CPU, and produced neither target PDF nor export receipt.",
+  "scope": "0105 R07 render lane only; candidate and other document workers were not changed.",
+  "captured_at_local": "2026-10-22T18:35:45.0952580+08:00"
+}

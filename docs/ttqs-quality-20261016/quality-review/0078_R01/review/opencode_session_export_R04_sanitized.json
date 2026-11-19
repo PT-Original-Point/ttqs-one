@@ -1,0 +1,94 @@
+{
+  "info": {
+    "id": "ses_eae141d9effeFTmAYfhVqNa4xU",
+    "projectID": "dabde63a0c1352871a938f25dd682407d3b42064",
+    "model": {
+      "id": "beam-free",
+      "providerID": "opencode",
+      "variant": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 82745,
+      "output": 1884,
+      "reasoning": 13162,
+      "cache": {
+        "read": 2240,
+        "write": 0
+      }
+    },
+    "outcome": "succeeded",
+    "time": {
+      "created": 1792375776002,
+      "updated": 1792375795688,
+      "idle": 1792375795693
+    },
+    "title": "[redacted:session-title:ses_eae141d9effeFTmAYfhVqNa4xU]",
+    "location": {
+      "directory": "/[redacted:session-directory:ses_eae141d9effeFTmAYfhVqNa4xU]"
+    }
+  },
+  "messages": [
+    {
+      "id": "msg_151ebe30a001QbXVY0v2Yq5UFa",
+      "time": {
+        "created": 1792375776039
+      },
+      "text": "[redacted:text:msg_151ebe30a001QbXVY0v2Yq5UFa]",
+      "files": [],
+      "type": "user"
+    },
+    {
+      "id": "msg_151ebe343001LN85CA58cwAklE",
+      "time": {
+        "created": 1792375776082,
+        "streamed": 1792375792144,
+        "completed": 1792375795688
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "beam-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_151ebe343001LN85CA58cwAklE]",
+          "state": {
+            "redacted": "reasoning-state:msg_151ebe343001LN85CA58cwAklE"
+          },
+          "time": {
+            "created": 1792375781389,
+            "completed": 1792375792139
+          }
+        },
+        {
+          "type": "text",
+          "text": "[redacted:text:msg_151ebe343001LN85CA58cwAklE]"
+        }
+      ],
+      "finish": "stop",
+      "rawFinish": "stop",
+      "cost": 0,
+      "tokens": {
+        "input": 42578,
+        "output": 930,
+        "reasoning": 5815,
+        "cache": {
+          "read": 1728,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_151ec2fec001iNA7FJXuteIWOk",
+      "time": {
+        "created": 1792375795693
+      },
+      "type": "idle",
+      "outcome": "succeeded"
+    }
+  ]
+}

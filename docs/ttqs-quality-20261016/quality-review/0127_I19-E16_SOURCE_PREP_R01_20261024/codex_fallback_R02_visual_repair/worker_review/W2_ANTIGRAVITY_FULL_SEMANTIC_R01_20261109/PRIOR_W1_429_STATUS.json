@@ -1,0 +1,33 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0127",
+  "official_requirement": "I19-E16",
+  "candidate_sha256": "abba46bcdd0919c4511df025cd90d65cd302fe3f9f59c86d0fa8b7efe2015285",
+  "review_packet_sha256": "74e363927d57ba75cea8b62c26ede11900f92d3d4710599b0a5bbe7602705d49",
+  "work_id": "TTQS-0127-I19-E16-R02-W1-OPENCODE-GLM53-FREE-EXACT-SHA-SEMANTIC-REVIEW",
+  "reviewer": "OpenCode v2.1.4 CLI",
+  "requested_model": "opencode/glm-5.3-flash-free",
+  "actual_serving_model": "UNKNOWN",
+  "dispatch_terminal": {
+    "exit_code": 1,
+    "elapsed_seconds": 1.4,
+    "status": "FAILED"
+  },
+  "provider_response": {
+    "type": "provider.free-limit",
+    "http_status": 429,
+    "message": "Free usage limit reached",
+    "retry_after_ms": 47951000,
+    "raw_stdout_sha256": "0a8ec8a80c55ce79582c47db720843fbcd9b1e8b3be1822fbb1b9c764afdade1",
+    "raw_stdout_bytes": 528
+  },
+  "fallback_attempted": false,
+  "review_content_returned": false,
+  "status": "BLOCKED_PROVIDER_FREE_LIMIT",
+  "verdict": "NO_VERDICT",
+  "limitations": [
+    "No semantic PASS or FAIL was returned.",
+    "No alternate model retry was attempted after the provider-wide free-limit response.",
+    "Requested model is known; actual serving-model identity is not independently attested."
+  ]
+}

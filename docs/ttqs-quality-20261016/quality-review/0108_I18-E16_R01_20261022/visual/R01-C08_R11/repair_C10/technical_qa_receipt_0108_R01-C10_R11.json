@@ -1,0 +1,72 @@
+{
+  "schema": "TTQS_ONE_DOCX_TECHNICAL_QA_R11_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0108",
+  "official_requirement_id": "I18-E16",
+  "unique_blueprint_internal_index": 117,
+  "official_checkbox_serial": "UNKNOWN",
+  "candidate_state": "CANDIDATE",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN_NOT_PROVIDED",
+  "source_packet_sha256": "f11df2f92edb7c63bc7dbddefe8461188dfdf90c4be9e0c0c4ae284f15457d5f",
+  "unique_blueprint_sha256": "41713064e2744c12831cb56098cc3ceb5661279048eb16123583f6c26d2f64ab",
+  "official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "candidate_markdown_sha256": "f4bf23b791726256348d3223c6c204d8b88e5a542855b12b2e04c51f3b48179c",
+  "candidate_docx_sha256": "7162721a914bce8accdecf7b18732c85ade62a77dd6ed7f11feed59d9db8b537",
+  "structural_validation": {
+    "docx_archive_integrity": "PASS",
+    "paragraphs": 357,
+    "tables": 85,
+    "source_markdown_tables": 22,
+    "table_data_and_order_reproduced_by_documented_wide_table_card_mapping": "PASS",
+    "table_mismatch_indices": [],
+    "source_numbered_list_items": 36,
+    "numbered_list_source_text_missing_from_docx": 0,
+    "numbered_list_text_mapping": "PASS",
+    "explicit_run_font_min_pt": 9.5,
+    "explicit_run_font_max_pt": 24.0
+  },
+  "synthetic_payroll_recalculation": {
+    "eligible_rows": 6,
+    "baseline_sum": 205500,
+    "followup_sum": 212500,
+    "delta_sum": 7000,
+    "aggregate_percent_rounded_3dp": 3.406,
+    "excluded_ids": [
+      "SYN-P07",
+      "SYN-P08"
+    ],
+    "result": "PASS",
+    "row_deltas": {
+      "SYN-P01": 2000,
+      "SYN-P02": 1500,
+      "SYN-P03": -500,
+      "SYN-P04": 0,
+      "SYN-P05": 2000,
+      "SYN-P06": 2000
+    }
+  },
+  "word_native_export": {
+    "receipt_sha256": "7d73550cb6ab35012d086549fb10c754f0b8d8701e8837c4752284f1f4a349a9",
+    "pdf_sha256": "aadac15dfb3992efee61ec4aa71c708c98b4ca5ebd5ccbe7dfb120e5365eafd9",
+    "pdf_pages": 41,
+    "render_manifest_sha256": "407940f055c8fd365316ccf82395ae9ef668dca1fad6c0edecc452e31f19e574",
+    "rendered_pages": 41,
+    "render_receipt_status": "COMPLETED_CHECK_RECEIPT"
+  },
+  "visual_review": {
+    "verdict": "PASS",
+    "reviewer_scope": "All 41 rendered pages inspected at original resolution; checked clipping, readability, page flow, repeating identifiers, headings, table continuation, list numbering, SAMPLE/SYNTHETIC labels and page furniture.",
+    "pages_inspected": 41,
+    "independent_external_visual_reviewer": false,
+    "receipt_sha256": "da8cbb7c9dd143aabb3da0e4dd5770b497e29a9f221e65755103b287b69447d3"
+  },
+  "semantic_review": {
+    "verdict": "BLOCKED_NO_EXACT_C10_SEMANTIC_VERDICT",
+    "opencode_v2_attempt": "HTTP 429 FreeUsageLimitError before a review response; no retry without new quota evidence",
+    "requested_model": "opencode/deepseek-v4.1-flash-free",
+    "actual_serving_model": "UNKNOWN",
+    "C08_historical_text_review": "PASS but scope was TEXT_ONLY_TARGETED_DELTA, candidate SHA differs; not transferred to C10"
+  },
+  "scope_note": "C10 is a deterministic Markdown-to-DOCX presentation repair. Numbered list markers are rendered from source Markdown. Wide source tables are converted into two-column cards; sample IDs already present in source are exposed as the card identifier and repeated as a labeled field. Exact source table values/order and all numbered source item text were checked. These presentation mappings are not an independent exact-SHA semantic review."
+}

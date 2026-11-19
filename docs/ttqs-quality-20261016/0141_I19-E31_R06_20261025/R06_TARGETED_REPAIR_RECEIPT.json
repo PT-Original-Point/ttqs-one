@@ -1,0 +1,34 @@
+{
+  "schema": "ttqs-one-0141-r06-targeted-repair-receipt-v1",
+  "observed_at_local": "2026-10-25T09:22:27+08:00",
+  "doc_id": "0141",
+  "requirement_id": "I19-E31",
+  "source_review": "OPENCODE_REVIEWER_ORIGINAL_0141_R05.md",
+  "source_review_sha256": "39a50ae2c2d292155479e2c966f30c86731fc82d548451827635cf56300d78bc",
+  "repair_packet": "OPENCODE_R06_TARGETED_REPAIR_PACKET.md",
+  "repair_packet_sha256": "b3993a7204735664cd5637c42eabb00947af8ab6d92f64e98e98cb7d248d2b8a",
+  "writer": "OpenCode v2 CLI",
+  "requested_model": "opencode/deepseek-v4.1-flash-free",
+  "actual_model_identity": "UNKNOWN",
+  "writer_pid": 7420,
+  "writer_exit_code": 0,
+  "writer_tool_errors": 0,
+  "target": "MANUSCRIPT_0141_R06_CANDIDATE.md",
+  "target_sha256": "2c374341b936ab4e4bb13889f870f42c79e03f688b7e1d92478d1fe052d7d287",
+  "items_addressed": [
+    "punctuation-normalization note in Appendices II and IV",
+    "rename Q1-Q6 six-dimension answer count and separate Q7 count",
+    "make Q5 mean the sole measurable success threshold; qualitative complaint source UNKNOWN",
+    "align Q5/Q2/Q6 short labels",
+    "replace irreversible crosswalk wording with file hash/version/row manifest"
+  ],
+  "preserved": [
+    "R05 manuscript and DOCX bytes",
+    "R01 questionnaire CSV",
+    "R01 synthetic response CSV and period summary",
+    "Appendix III dataset text"
+  ],
+  "is_acceptance": false,
+  "status": "MANUSCRIPT_REPAIR_COMPLETE_PENDING_DOCX_AND_EXACT_SHA_REVIEW",
+  "layout_patch_receipt_sha256": "b74a8b82c5799b5a81268d0d58635b512de1c238c08811554fddbe245a0a17a7"
+}

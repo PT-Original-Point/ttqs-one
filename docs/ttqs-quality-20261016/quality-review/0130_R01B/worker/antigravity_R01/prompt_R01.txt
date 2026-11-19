@@ -1,0 +1,103 @@
+WORK_ID=TTQS-0130-I19-E19-SAMPLE-WRITER-R01-20261024
+DOC_ID=0130
+REQUIREMENT=I19-E19 (internal crosswalk identifier only)
+OFFICIAL_PROJECT_157_INDEX=143 (not a printed checkbox serial)
+
+Using the SOURCE_PACKET and UNIQUE_BLUEPRINT appended below only, write a fresh, complete, practical Traditional Chinese manuscript for the document 「學員訓後創業案例紀錄與佐證表」. Do not reuse any historical 0130 document body. This is a substantive evidence-acquisition and verification form, not a generic narrative or success story. Return only the complete Markdown manuscript body, with its title and tables; no preface or model commentary. Do not call tools, edit files, or claim to have verified external records.
+
+The document must be useful to a small training association's administrative/volunteer staff and an evaluator. Include the full required sections in the attached Blueprint: quick-start and status rules; privacy/consent; intake; training linkage and chronology; third-party source register with provenance/authentication fields; claim-to-evidence matrix; a complete worked synthetic case `SYN-ENT-01`; decision checklist; HOLD/reject/duplicate paths; follow-up, secure retention/deletion; summary counts and denominator rules; replacement checklist; negative-neighbor boundary. Include actual field labels, instructions, realistic operational rows, thresholds, owner roles, due dates and stop conditions. A reader should be able to use each form without inventing missing mechanics.
+
+Use only this wholly fictional exercise: participant `SAMPLE-P-01`, cohort `SAMPLE-C-2025-02`, course `SAMPLE-Course`, completion 2025-05-30, learner-reported venture start 2025-10-01, intake 2025-10-08, planned verification 2025-10-10. Mark every such value SAMPLE/SYNTHETIC in the document and replacement register. The mock reference is explicitly synthetic and is not a company, registry extract, third-party confirmation, interview, consent, signature, or association decision. No actual registry lookup or real consent has occurred. Therefore decide `HOLD_MISSING_SOURCE + HOLD_CONSENT`, verified sample cases `0/1` for this exercise only, REAL case count `UNKNOWN`, and no institutional performance claim. Distinguish participant report, internal sample training record, and missing authentic third-party evidence. Do not infer that training caused entrepreneurship.
+
+No real names, real company identifiers, fabricated evidence, copied source documents, official approvals, or signature blocks that could be mistaken for signed records. Provide a separate explicit REAL source-replacement area where staff may later record an actually authorized source; do not leave the overall document as a blank template. Keep dates and the `SYN-ENT-01` facts consistent across every table and conclusion. Any critical missing source, consent, course linkage, chronology conflict, authenticity problem or duplicate must force HOLD/NOT_VERIFIED or exclusion with reason and next action.
+
+Formatting in the Markdown must be Word-friendly: clear heading levels, moderate table widths, no code fences around tables, plain Taiwan Traditional Chinese, no dense wall-of-text. Do not claim a formal PASS, real achievement, or official acceptance.
+
+<<<SOURCE_PACKET>>>
+# 0130｜來源包｜I19-E19｜R01
+
+狀態：CANDIDATE_SOURCE_PREPARATION。用途是界定可逆文件施工的來源與範圍，不是正式評核結論，也不證明原始點協會已收集任何真實創業案例。
+
+## 文件與要求識別
+
+- 專案：TTQS_ONE；文件編號：0130。
+- 內部 142 序列映射：I19-E19 → 0130，文件名稱「學員訓後創業案例紀錄與佐證表」；該映射只用來銜接生產序列，不是官方方框流水號。
+- 現行 157 Blueprint 專案索引：143；位於 I19-L3（官方佐證資料表第 8 頁）。索引 143 不宣稱為官方印刷流水號。
+- 官方印刷方框流水號：UNKNOWN；來源頁只見方框與項目文字，未見可核實的印刷流水號。
+
+## 正式來源
+
+1. 官方《TTQS 查核佐證文件資料表－訓練機構版》PDF，第 8 頁，SHA-256 `805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709`。第 8 頁列有方框項目「學員訓後創業案例。」同頁說明將佐證項目作為常見參考，並要求註明資料來源及頁碼。這是佐證方向，不足以證明特定學員、公司或協會績效。
+2. 同一頁文字擷取的既有來源檔 `OFFICIAL_PAGE8_I19-E18_EXTRACT_R01.txt`，Git blob `f4cbdeeb44d46d61dda99cee14760d877c8b16fb`，SHA-256 `ba4939328d98e753da7e7fc0eb01cff284cdabeff1203fbb8c0df83802cf63e1`。本包另附第 8 頁的精確項目摘錄；摘錄不是 PDF 原件。
+3. 現行 157 方框 Blueprint `docs/ttqs-quality-20261016/03_157_CHECKBOX_BLUEPRINTS.md`，Git blob `8c2bbe7ca9dcbb03088a48934b9e57e7147ede63`，SHA-256 `ad03323d591cbea62814a8a59d233110587f2741bed8f944380b1faa2d04d216`。I19-L3／專案索引 143 的獨特要求為「學員創業：第三方真實個案查核」，並要求來源定位、核心正文／示範、決策或結果及跨文件事實連結；第三方原件索取型文件可有明確的待取原件欄位，不能以空白表單冒充已完成成果。
+4. 同一契約的 Human Mission：`01_HUMAN_MISSION_AND_ACCEPTANCE.md`，blob `538bedb9d87e8465f43151933b4a5c1bfa4bbc4e`；GENRE writing manual：`02_GENRE_WRITING_MANUAL.md`，blob `4ff863d9f534b6359fc1c7c1685bd8cce02da886`。Mission 要求可用的 SAMPLE／SYNTHETIC 完整示例、逐項替換清冊，並把真實證據、正式接受及 Human Gate 分開；不得捏造第三方原件、學員身份或協會決議。手冊要求各文件依其特定方框和文類設計，不得套用鄰件正文。
+5. 0129 R03 同包的內部鄰接 crosswalk 摘錄 Git blob `19a6c9b4dbfbdc539e4153c339495bd01c86deb0`，SHA-256 `556cbc29defe5ac32d2d3f285430c2f43edf4fe19ca1a49a16cea62d0c28a009`；其來源自標為內部 142 序列 crosswalk，原始 crosswalk SHA-256 `1ddfbb608bcad25170683ddb42a1dbb27bafa6f1f35ff0498f1b8d75b24f0679`。其中 I19-E19 → 0130；僅作內部對照，不提升為官方流水號。
+
+## 相鄰方框及錯件防止
+
+- I19-E18／0129 是組織營運財務面比較，非本件；不得挪用成本、收入或營運控制表作為創業證據。
+- I19-E20／0131 是證照通過與就業追蹤；不得把就業或證照通過等同創業。
+- I19-L2 索引 111 與感謝函／來源取得有關；不得將本件改寫成感謝函。
+- 0129 R03 審查人曾以相鄰文件說明 I19-E19／0130 是學員訓後創業案例。此為邊界提示；本件仍以官方第 8 頁、現行 index 143 Blueprint 與內部 crosswalk 交叉定位。
+
+## 真實資料狀態及可施工範圍
+
+未提供已同意公開的真實學員案例、真實公司登記、公司實際營運佐證、學員授權或第三方確認。故 REAL case、REAL achievement、原始點協會已查核或已接受均為 UNKNOWN／NOT_GRANTED。可施工範圍為完整可操作的 CANDIDATE 表單、明確標示的 SYNTHETIC worked example、真實原件取得與查核流程、缺件 HOLD／排除規則及替換清冊；不得以 SAMPLE 個案填補真實績效。
+<<<END_SOURCE_PACKET>>>
+
+<<<UNIQUE_BLUEPRINT>>>
+# UNIQUE BLUEPRINT｜0130｜I19-E19｜R01
+
+## 1. 身分與來源鎖定
+
+- `project_id`: TTQS_ONE
+- `doc_id`: 0130
+- `internal_requirement_id`: I19-E19（internal 142 sequence crosswalk only）
+- `project_157_index`: 143，I19-L3，official evidence table p.8
+- `printed_official_checkbox_serial`: UNKNOWN; the cited official source shows the checkbox and item wording but no verified printed sequence number. Never call index 143 the printed serial.
+- Official item: 「學員訓後創業案例。」
+- Unique genre: third-party post-training entrepreneurship case intake, source-provenance verification, training linkage, decision and follow-up record. Not a testimonial, success story, award document, or fabricated business registration.
+- Intended reader: small training-association administrative/volunteer staff and an evaluator checking whether a claimed learner entrepreneurship case is authentic, post-training, and traceable.
+- Official source PDF SHA-256: `805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709`; p.8.
+- Current 157 Blueprint SHA-256: `ad03323d591cbea62814a8a59d233110587f2741bed8f944380b1faa2d04d216`; internal crosswalk excerpt SHA-256: `556cbc29defe5ac32d2d3f285430c2f43edf4fe19ca1a49a16cea62d0c28a009`.
+- Source contract blobs: 01 `538bedb9d87e8465f43151933b4a5c1bfa4bbc4e`; 02 `4ff863d9f534b6359fc1c7c1685bd8cce02da886`; 03 `8c2bbe7ca9dcbb03088a48934b9e57e7147ede63`.
+
+## 2. Core acceptance purpose
+
+The document must let staff receive a claimed post-training entrepreneurship case, preserve provenance, verify a real third-party source with permission, establish timing and training linkage, decide whether the evidence is sufficient, and record a follow-up or HOLD without overstating causality or association performance. The document itself is a SAMPLE/CANDIDATE tool until genuine authorized evidence is supplied; no sample case can be counted as real TTQS performance.
+
+## 3. Required document body
+
+1. Reader-facing cover/quick guide: exact doc/requirement/index mapping, explicit CANDIDATE and SAMPLE/SYNTHETIC banner, one-paragraph scope, how to use, what the form does not prove.
+2. Definitions and decision states: `VERIFIED_FOR_REVIEW`, `HOLD_MISSING_SOURCE`, `HOLD_CONSENT`, `HOLD_LINKAGE`, `NOT_VERIFIED`, `EXCLUDED_DUPLICATE`, and `REAL_SOURCE_PENDING`. Explain the evidence threshold for each and who may change a state.
+3. Intake and privacy/authorization form: case ID; masked participant reference; cohort/course; completion date; reported venture name/type and start date; source contact role; consent scope/date/expiry; minimum necessary information; storage/access/deletion fields. Never put government ID, bank/tax credentials or private raw copies in a public package.
+4. Training-linkage and chronology table: enrollment/completion source; training end date; claimed launch date; first evidence date; verification date; discrepancy days; relevance of course skills; distinguish participant report from source-confirmed facts; no causal inference solely from timing.
+5. Third-party source register: evidence ID, claim tested, issuer/independent source, original-vs-copy, issue/effective date, acquisition channel/URL or retrieval locator, consent/authority, validation action, reviewer/date, redaction, SHA-256 (only for actual authorized source), result, limitation. A screenshot without issuer/date/location is not authentic proof by itself.
+6. Claim-to-evidence matrix: claim, required independent corroboration, source ID, exact locator, authenticity checks, training linkage, status, limitation, next action and due date.
+7. Complete usable synthetic worked case `SYN-ENT-01`: fictional participant/cohort/course and dates; sample-only self-report and clearly synthetic mock evidence descriptions; step-by-step checks; a filled chronology and evidence matrix; explicit missing authentic third-party source and consent; outcome `HOLD_*`, not verified; no invented actual organization, registry number, signature, interview or real association decision.
+8. Decision and review sheet: threshold checklist for identity linkage, post-training chronology, authentic independent source, source validity, consent/privacy, evidence-to-claim match, duplicate check, limitations, reviewer/second-check role, outcome and reason. Any unresolved critical check forces HOLD/NOT_VERIFIED.
+9. Follow-up and disposition: owner role, next action, due date, permitted contact script, reminder log, source received/not received, close/reopen criteria, retention and secure deletion. A sample follow-up is labeled synthetic.
+10. Summary table: cases received, cases verified, on hold, excluded; denominator rule and reporting window. For SAMPLE data, explicitly label all figures synthetic and prohibit using them as actual institutional rates.
+11. Replacement and real-source checklist: every fictional field with its real source required, acceptable custodian, minimum disclosure and verification; list third-party originals that remain unavailable.
+12. Negative-neighbor boundary: not 0129 financial performance, not 0131 certificate/employment, and not index 111 thank-you-letter evidence acquisition.
+
+## 4. Minimum sample facts and calculations
+
+Use one wholly synthetic case, `SYN-ENT-01`, and no real personal or organization identifiers. Sample chronology: course completion 2025-05-30; learner-reported venture start 2025-10-01; intake 2025-10-08; intended source verification 2025-10-10. The dates are illustrative only. In the worked exercise, staff can inspect a synthetic-only mock reference and the tool must visibly stop because there is no authentic third-party registry/operation source and no real consent. Decision: `HOLD_MISSING_SOURCE + HOLD_CONSENT`; verified count = 0 of 1 SAMPLE case; the 0/1 calculation is an exercise-only count, not an association rate. Report no verified real case and no performance claim.
+
+## 5. HOLD / reject rules
+
+- No independent source, no original or authorized verification route, source cannot be authenticated, no consent or disclosure authority, or inability to link the case to the training cohort: HOLD; do not count as verified.
+- Registration date before training completion: reject as post-training case unless an independently sourced material post-training start event is evidenced; never silently change dates.
+- Name/entity mismatch, conflicting dates, duplicate case, expired/inaccessible source, undated screenshot, altered copy, or source that only proves intent rather than actual operation: HOLD or EXCLUDE with a precise reason and route to appeal/reopen.
+- Participant self-report alone is not a third-party source. Training completion alone does not prove entrepreneurship. A registration alone does not prove active operation, income, success, or that training caused the outcome.
+- Any fabricated third-party artifact, signature, interview, official confirmation or association approval is a hard fail.
+
+## 6. Data integrity and cross-document facts
+
+All Sample facts must use one stable `case_id` and a replacement-register row. Dates must satisfy course completion ≤ claimed post-training start ≤ intake ≤ planned verification, unless the sample explicitly documents a discrepancy and HOLD. The worked-case status, summary counts, timeline, source matrix and conclusion must agree. The sample case cannot be linked to 0129's financial sample or 0131's employment/certificate sample absent a new source-backed shared fact; no such real link is established.
+
+## 7. Visual and semantic acceptance
+
+Body font ≥10.5 pt, table font ≥9.5 pt. Tables must fit and remain readable with repeated header rows as needed. The document must be a functioning case record when title/cover are hidden. Independent exact-SHA semantic review must test every required component, source/Blueprint mapping, negative neighbors, SAMPLE/REAL separation, date and count consistency, evidence threshold and HOLD behavior. Word open/render and actual visual review are separate checks. Candidate never equals REAL or formal acceptance.
+<<<END_UNIQUE_BLUEPRINT>>>

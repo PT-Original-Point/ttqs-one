@@ -1,0 +1,25 @@
+{
+  "document_id": "0097",
+  "requirement_id": "I18-E05",
+  "from_revision": "R07",
+  "to_revision": "R08",
+  "source_docx_sha256": "026288491716d626a7bcac14a515313da7846f5a204703da9bad3a9010edf214",
+  "candidate_docx_sha256": "daf85320fc7b2304da353a0c41d3bf32d585f2edfb3349938bff877dd0f5a2cb",
+  "candidate_bytes": 62589,
+  "root_cause": "R07 Word render placed only Q12 row on page 12; heading 3.4 had page_break_before=True, forcing the next section to page 13.",
+  "change_scope": "Only paragraph formatting for heading 3.4: clear page_break_before; set keep_with_next=True. No text/table/cell values changed.",
+  "before": {
+    "text": "3.4 觀察者表單題目對照",
+    "style": "Heading 3",
+    "page_break_before": true,
+    "keep_with_next": null
+  },
+  "after": {
+    "text": "3.4 觀察者表單題目對照",
+    "style": "Heading 3",
+    "page_break_before": false,
+    "keep_with_next": true
+  },
+  "text_content_identical": true,
+  "status": "LAYOUT_REPAIR_CANDIDATE_REQUIRES_WORD_RERENDER_AND_VISUAL_QA"
+}

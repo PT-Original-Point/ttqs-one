@@ -1,0 +1,36 @@
+{
+  "schema": "TTQS_ONE_0079_LAYOUT_REPAIR_CHAIN_R05.v1",
+  "document_id": "0079",
+  "requirement_id": "I17B-E01",
+  "body_sha256": "65ca13792f801ac7d94a2bd3bc51b10aa964ea0d51cb164e36ec3c8728ad7d15",
+  "revisions": [
+    {
+      "revision": "R01",
+      "docx_sha256": "9f107f58c4b20c5ed7deb7895a336daac107237ef44f8a77df5b3bd536d7707e",
+      "finding": "Baseline visual review found stray separator in blank learner-code card titles, isolated objection/withdrawal lead-in, and an extra blank final page."
+    },
+    {
+      "revision": "R02",
+      "docx_sha256": "abe2820a8ab4068431142a2e1c7906c4833757fbdd24ba5a7951fc7a3b9d5d58",
+      "repair": "Removed trailing separator from blank-record card titles; kept bold form lead-in with its table; minimized final table spacer. Appendix locator still began with a stranded title/header."
+    },
+    {
+      "revision": "R03",
+      "docx_sha256": "53d5c85ad0a99dd25bf3913c3b197ca895d0f08c3d771e09746a4e32bede70b6",
+      "trial": "Moved appendix locator to a new page; this isolated the final locator row on page 22 and was superseded."
+    },
+    {
+      "revision": "R04",
+      "docx_sha256": "886d01180d921c07d74bf40fc3b9e8d22e66880c6c801f95794f4fa315a616b2",
+      "repair": "Balanced locator columns and reduced cell padding/font; page count returned to 21, but title/header remained on prior page."
+    },
+    {
+      "revision": "R05",
+      "docx_sha256": "d6689cef08d43f92b7110f3371856ad49991db69147334d5a494b1f7e5637cd2",
+      "final_layout": "Placed Appendix A title and complete compact locator table on page 21; full 21-page render has no blank final page."
+    }
+  ],
+  "final_candidate_only": "R05",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD"
+}

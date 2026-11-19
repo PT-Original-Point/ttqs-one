@@ -1,0 +1,55 @@
+{
+  "schema": "TTQS_ONE_0028_MATH_QA_R07",
+  "work_id": "TTQS_ONE_0028_I05-E02_MATH_QA_R07_20261118",
+  "doc_id": "0028",
+  "requirement_id": "I05-E02",
+  "candidate_html_sha256": "0FBCE3F55EBCF87D4DD8D901ECCFBA3792D13159A8245BD22FDE149E2A949A14",
+  "candidate_html_bytes": 63397,
+  "static_qa_sha256": "55DBF6E0B3C6CB7C52159972C0590F4D32624747340FB0247BA5464892936D2D",
+  "source_packet_sha256": "5D1939E0C98AF5E3E115B55BA9D41F56203A7C3A5977C7134816E3AB36783243",
+  "blueprint_sha256": "4934FE46F7EAFCE899C7FEC7A8A08B06AC504E59CCAECB4EBBDDC50F08CE8095",
+  "calculations": {
+    "kpi2": {
+      "numerator": 2,
+      "denominator": 3,
+      "exact": "2/3",
+      "exact_target": "2/3",
+      "display_percent_1dp": "66.7",
+      "decision": "PASS_SAMPLE_ONLY"
+    },
+    "kpi3": {
+      "numerator": 5,
+      "denominator": 6,
+      "exact": "5/6",
+      "exact_target": "833/1000",
+      "actual_exceeds_target": true,
+      "display_percent_1dp": "83.3"
+    },
+    "rounding": "ROUND_HALF_UP, 1 decimal place"
+  },
+  "date_id_reconciliation": {
+    "retained": "SYN-0028-DATE-002",
+    "removed": "SYN-0028-DATE-006",
+    "reason": "same 2027-03-31 milestone and decision completion date"
+  },
+  "checks": {
+    "candidate_sha_matches_static": true,
+    "static_qa_pass": true,
+    "kpi2_register_denominator_3": true,
+    "kpi2_register_numerator_2": true,
+    "kpi2_exact_ratio_meets_2_3": true,
+    "kpi2_half_up_display_66_7": true,
+    "kpi3_register_denominator_6": true,
+    "kpi3_register_numerator_5": true,
+    "kpi3_exact_ratio_exceeds_833_1000": true,
+    "kpi3_half_up_display_83_3": true,
+    "kpi3_exact_threshold_registered": true,
+    "kpi3_monthly_cadence_registered": true,
+    "date002_registered_once": true,
+    "date006_duplicate_absent": true,
+    "source_packet_and_blueprint_bindings_present": true
+  },
+  "result": "PASS_DETERMINISTIC_MATH_AND_FACT_REGISTER_R07",
+  "candidate_status": "CANDIDATE; SAMPLE/SYNTHETIC; visual and independent semantic review pending; formal acceptance not claimed",
+  "measured_at_tpe": "2026-11-18T12:09:17.436823+08:00"
+}

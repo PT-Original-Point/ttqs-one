@@ -1,0 +1,98 @@
+{
+  "schema": "TTQS_DOCUMENT_BUILD_RECEIPT_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0092",
+  "requirement_id": "I17D-E06",
+  "official_list_serial": "099",
+  "candidate_revision": "R03",
+  "candidate_state": "CANDIDATE_SAMPLE_SYNTHETIC_NOT_ACCEPTED",
+  "formal_acceptance": "NOT_GRANTED",
+  "artifact_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0092_R01_OPENCODE_WRITER_R01\\0092_R03_SYNTHETIC_CANDIDATE.docx",
+  "artifact_sha256": "ed577847dba59d29cd1da0d1d64372a21ed07d8aee164ff044c3870ff958391b",
+  "artifact_bytes": 62545,
+  "parent_candidate": {
+    "revision": "R02",
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0092_R01_OPENCODE_WRITER_R01\\0092_R02_SYNTHETIC_CANDIDATE.docx",
+    "sha256": "33392cdbe71a56bfd57833d2ed7e9c26dd0e869ae86f66901fb36821c4d8baf2",
+    "independent_review_response_sha256": "39f969dc016ba8f35b586304ac8a07e54267cedd7b6e69815868baee954ab645",
+    "review_verdict": "PASS_WITH_ACTIONABLE_NONBLOCKING_FINDINGS"
+  },
+  "writer_lineage": {
+    "writer_route": "Antigravity CLI text output; sanitized and source-bound into a newly authored document-specific Word candidate",
+    "requested_model": "gemini-3.8-flash-high",
+    "runtime_model_identity": "UNKNOWN",
+    "raw_writer_output_sha256": "0ca9e2c6deb1223c16b36ca2d3c0fb9ad22928d013e6032688fd81f5f666d61a",
+    "note": "R03 is a targeted Windows-native repair of the R02 candidate; it is not a new Antigravity output."
+  },
+  "repairs_applied": [
+    "Corrected fact-level register locators F001 and F002 to resolve to actual body fields.",
+    "Expanded §4.1 field dictionary into distinct field, definition, source/location, writer and validation columns.",
+    "Removed unsupported category label and unverified association-specific assertion.",
+    "Defined synthetic ROLE-A..D boundaries and explicitly denied department, appointment or authority status.",
+    "Added authorized follow-up timing and hold rule; prevented invented deadlines, delivery, reply or closure.",
+    "Marked blank access log as future-use worksheet, not completed review evidence.",
+    "Expanded version history and replaced vague wait/hold language with actionable HOLD / missing evidence / role / next decision rules.",
+    "Moved §3.3 heading/table together to avoid orphan table header at page 4.",
+    "Moved §12 heading and its appendix/version tables together to page 18."
+  ],
+  "source_hashes": {
+    "official_checklist_pdf": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\SOURCES\\DRIVE_READBACKS\\DRIVE_OFFICIAL_EVIDENCE_TABLE.pdf",
+      "sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709"
+    },
+    "official_checkbox_inventory": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\MASTER\\SOURCE_CHECK_20261004\\checkbox_inventory.json",
+      "sha256": "0db907ef0173d4addacc53fbe2982e12555bc3e7a7c844e2e3033be892c9578a"
+    },
+    "official_full_text": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\MASTER\\ASSESSMENT_SELECTION_20261005\\official_full_text.txt",
+      "sha256": "ac3895968ec676ee69cbabf94ed8306a34a1def37d22b166588c3bc51749abe3"
+    },
+    "checkbox_mapping_compact": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\MASTER\\ASSESSMENT_SELECTION_20261005\\checkbox_mapping_compact.json",
+      "sha256": "4004b7c2f574606be520e016ace7377aefde3a978003adda303cc9a05326440d"
+    },
+    "blueprint_registry": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\BLUEPRINT_CURRENT.jsonl",
+      "sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e"
+    },
+    "source_requirement_map": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\SOURCE_REQUIREMENT_MAP_WAVE005_R03.csv",
+      "sha256": "405b987797d1558ecac182cea8e1adfbd1aead7754c880db32db43c235d5024e"
+    },
+    "129_to_142_crosswalk": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\TTQS_ONE_129_REQUIREMENT_TO_142_DELIVERABLE_CROSSWALK_R01.csv",
+      "sha256": "1ddfbb608bcad25170683ddb42a1dbb27bafa6f1f35ff0498f1b8d75b24f0679"
+    },
+    "142_inventory": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\BASELINE_142_DOCX_INVENTORY_READBACK.csv",
+      "sha256": "5eef25c42fd3473136149a91db21c5164c021afc73ff6602d1488511031fd7f5"
+    },
+    "source_build_receipt": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\BUILD_RECEIPTS\\0092.json",
+      "sha256": "f0b0fc9987f62fa643f78e2ee36cdde4caa50077a042ef1da6591b06283982ad"
+    },
+    "root_cause_record": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\STATUS\\ROOT_CAUSE_0092_E2.txt",
+      "sha256": "a7c4f538294ceef3e0ab8695aa12136034d8597619fc240095fcbadccaf4e35d"
+    }
+  },
+  "blueprint_row_sha256": "86a732b30ce881b43144da8217693570281b999801d41a1b53370bfdaa97a358",
+  "registered_synthetic_fact_count": 27,
+  "registered_real_facts_used": 0,
+  "real_third_party_original_received": false,
+  "request_sent": false,
+  "approval_or_signature_claimed": false,
+  "technical_qa_receipt": "0092_R03_TECHNICAL_QA.json",
+  "visual_qa_receipt": "0092_R03_VISUAL_QA.json",
+  "review_input_packet": "0092_R03_INDEPENDENT_SEMANTIC_REVIEW_PACKET.md",
+  "current_independent_semantic_review": "PENDING",
+  "promotion_status": "NOT_PROMOTED",
+  "independent_semantic_review": {
+    "verdict": "PASS_WITH_NONBLOCKING_OBSERVATIONS",
+    "receipt_path": "opencode_0092_R03_review_receipt.json",
+    "receipt_sha256": "d63a6b3b62b53873723cf573367d00605cf0152bc81fce725506d6af98a96584",
+    "raw_response_sha256": "a0af0f250d295105407b785dd6c36abeaf1edf00fc7f06c9230adc6952cad288",
+    "limitations": "Independent semantic and practical-utility review of the complete ordered text extraction in the exact-SHA review packet, cross-checked against official text, unique Blueprint, source map, and neighbor distinctions. Reviewer did not access/hash binary or view pages; local technical and visual QA are separate. Exact section/table locators given; page positions UNKNOWN."
+  }
+}

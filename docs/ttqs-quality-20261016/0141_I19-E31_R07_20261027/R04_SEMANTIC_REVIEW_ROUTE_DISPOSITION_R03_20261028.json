@@ -1,0 +1,80 @@
+{
+  "schema": "ttqs-one-0141-r07-r04-semantic-review-route-disposition-v3",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0141",
+  "requirement_id": "I19-E31",
+  "unique_blueprint_index": 155,
+  "candidate_sha256": "de111911a549a0be0bd6381a6b22ed694881ba6b3f83528d2b4a4e153002142b",
+  "candidate_state": "CANDIDATE",
+  "source_packet_sha256": "43c0e1bda5dfeb12c1ba8fc8805b876641f5184e4bf95eb4ef6c3182cf8ee964",
+  "unique_blueprint_sha256": "e19761674045b2defa7090ba1d8f1224943a89e54811180c20b9ea362de59cda",
+  "previous_disposition_path": "R04_SEMANTIC_REVIEW_ROUTE_DISPOSITION_R02_20261027.json",
+  "previous_disposition_sha256": "780191a5b092c178132ab9903ffc4bd27b00de7ea8afba66ecdfca48e8b9842c",
+  "observed_at_local": "2026-10-28T09:01:53.5590223+08:00",
+  "historical_attempts_from_prior_disposition": [
+    {
+      "work_id": "TTQS-0141-I19-E31-R04-W1-MIMO-EXACT-SHA-REVIEW-20261027",
+      "worker": "OpenCode v2 CLI",
+      "requested_model": "opencode/mimo-v2.6-flash-free",
+      "actual_model": "UNKNOWN_NO_MODEL_RESPONSE",
+      "provider_status": 429,
+      "result": "REJECTED_BEFORE_MODEL_RESPONSE",
+      "stdout_sha256": "ef62b2a602c25c88bd2853b6403bdc79ac101fd1663f185a3530376f64946c9b",
+      "terminal_sha256": "dcc5bd35ba2c440f420dea3f1632668ae2bb43c4a61ebf9b8d7742b152b82669",
+      "retry_after_ms": 35561000,
+      "retry_eligible_at_local": "2026-10-28T07:59:59.875000+08:00"
+    }
+  ],
+  "prior_glm_attempt": "BLOCKED_PROVIDER_FREE_LIMIT_HTTP_429; see original R04 disposition and worker receipt",
+  "new_attempt": {
+    "work_id": "TTQS_ONE_0141_R04_GLM53_R02_EXACT_SHA_REVIEW_20261028",
+    "worker": "OpenCode v2.1.4 CLI",
+    "requested_model": "opencode/glm-5.3-flash-free",
+    "actual_model": "NOT_REACHED_PROVIDER_REJECTED_BEFORE_INFERENCE",
+    "candidate_sha256": "de111911a549a0be0bd6381a6b22ed694881ba6b3f83528d2b4a4e153002142b",
+    "review_packet_sha256": "86a280661e6a3a1b78996d71ca77d07a05f7f9394538212a9902a1a47272542c",
+    "pid": 69944,
+    "session_id": "ses_e7ff8e337ffeAlaBSqe0RDR9dl",
+    "started_at_local": "2026-10-28T09:01:51.2675546+08:00",
+    "completed_at_local": "2026-10-28T09:01:53.5590223+08:00",
+    "exit_code": 1,
+    "provider_error_type": "provider.free-limit",
+    "provider_status": 429,
+    "retry_after_ms": 82686000,
+    "retry_eligible_at_local": "2026-10-29T07:59:59.513+08:00",
+    "stdout_sha256": "d75b719b4b142a7a06cacf0230f493a1c604b6dca7681cdd6b8d7047040d81fe",
+    "stdout_bytes": 528,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_bytes": 0,
+    "semantic_response": "NOT_PRODUCED",
+    "token_usage": "UNKNOWN_NOT_RETURNED",
+    "fallback": "NOT_APPLICABLE_NO_INFERENCE",
+    "candidate_sha256_after": "de111911a549a0be0bd6381a6b22ed694881ba6b3f83528d2b4a4e153002142b",
+    "docx_bytes_changed": false
+  },
+  "same_model_success_context": {
+    "doc_id": "0133",
+    "observed_at_local": "2026-10-28T04:02:25+08:00",
+    "requested_model": "opencode/glm-5.3-flash-free",
+    "session_metadata": "glm-5.3-flash-free",
+    "scope": "Different document; availability evidence only, not a review of 0141."
+  },
+  "current_semantic_status": "BLOCKED_NO_REVIEW_RESPONSE_PROVIDER_FREE_LIMIT_HTTP_429",
+  "semantic_pass_granted": false,
+  "opencode_free_inference_lane": "PAUSED_FOR_THIS_REVIEW_UNTIL_RETRY_ELIGIBILITY_OR_NEW_VERIFIED_ROUTE_EVIDENCE",
+  "retry_eligible_at_local": "2026-10-29T07:59:59.513+08:00",
+  "antigravity_lane": "UNCHANGED; requires its own current route/quota verification and exact-model identity; no fallback allowed",
+  "candidate_rebuilt": false,
+  "candidate_sha256_before_and_after": "de111911a549a0be0bd6381a6b22ed694881ba6b3f83528d2b4a4e153002142b",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "github_public_evidence_relative_paths": [
+    "R04_GITHUB_SYNC_PACKAGE/OPENCODE_R04_GLM53_RETRY_R02_20261028/ATTEMPT_R02_PUBLIC.json",
+    "R04_GITHUB_SYNC_PACKAGE/OPENCODE_R04_GLM53_RETRY_R02_20261028/RAW_STDOUT.jsonl"
+  ],
+  "github_public_evidence_paths": [
+    "docs/ttqs-quality-20261016/0141_I19-E31_R07_20261027/OPENCODE_R04_GLM53_RETRY_R02_20261028/ATTEMPT_R02_PUBLIC.json",
+    "docs/ttqs-quality-20261016/0141_I19-E31_R07_20261027/OPENCODE_R04_GLM53_RETRY_R02_20261028/RAW_STDOUT.jsonl",
+    "docs/ttqs-quality-20261016/0141_I19-E31_R07_20261027/R04_SEMANTIC_REVIEW_ROUTE_DISPOSITION_R03_20261028.json"
+  ]
+}

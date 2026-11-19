@@ -1,0 +1,118 @@
+{
+  "schema": "TTQS_ONE_R12_LOCAL_ROUTE_AND_QA_RECONCILIATION_V1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS_ONE_0128_I19-E17_R05_LAYOUTFIX04_ROUTE_AND_STATUS_RECONCILIATION_20261028",
+  "observed_at_local": "2026-10-28T21:44:39.9763765+08:00",
+  "doc_id": "0128",
+  "official_requirement_id": "I19-E17",
+  "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "candidate": {
+    "path": "candidate/0128_I19-E17_R05_LAYOUTFIX04_CANDIDATE.docx",
+    "sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
+    "bytes": 56424
+  },
+  "source": {
+    "source_packet_sha256": "94699015ab0a316f09e500bd44f8fa6e7474e613557a6cffc322548f7c94307b",
+    "sample_real": "SAMPLE/SYNTHETIC throughout example; REAL evidence unavailable",
+    "unique_blueprint_sha256": "f396793da8db5f7d0092ae5bb90f36b93098fdc4d9f25093db74760864796ffb"
+  },
+  "technical": {
+    "receipt_sha256": "4fab62c4a7095d6bde96c22359bf49f96f387aa47d2b12ec255ddea8513c69ee",
+    "status": "PASS",
+    "sample_math": {
+      "skill_before": 33,
+      "post": "101/120 = 84.17%",
+      "pre": "93/120 = 77.5%",
+      "change": "6.67 percentage points",
+      "skill_after": 48
+    },
+    "font_floor": "body 10.5 pt; tables 9.5 pt"
+  },
+  "visual": {
+    "pdf_sha256": "e6e676c260abe7dd4a044af8ad0df098c0c2beb66c0900c3ec8595215b2b703a",
+    "manual_reinspection_pages": [
+      9,
+      12,
+      13
+    ],
+    "covered_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "page_count": 13,
+    "inherited_byte_identical_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      11
+    ],
+    "status": "PASS",
+    "candidate_sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
+    "receipt_sha256": "bb4eb08e5ccb771b7333d03e15f39926a31578abfe27b005b2c4613f7556e290"
+  },
+  "stale_status_reconciliation": {
+    "resolution": "The lower-level patch receipt is stale status only. Do not rebuild DOCX; current technical and visual QA remain PASS.",
+    "stale_patch_receipt": "LAYOUT_PATCH_RECEIPT_0128_LAYOUTFIX04.json still says AWAITING_WORD_NATIVE_EXPORT_AND_FINAL_VISUAL_QA",
+    "superseding_evidence": "Word-native PDF and VISUAL_QA_R05_LAYOUTFIX04.json exist and bind to the same current candidate SHA; all 13 pages are covered"
+  },
+  "independent_semantic": {
+    "open_code": "provider free-limit HTTP 429; no current semantic response",
+    "previous_candidate_sha256": "e9fe9b87751dd588f290a84cc2c134c367d1f8f6a15dd679013dcc9e5fe0f242",
+    "current_exact_sha": "NOT_REVIEWED",
+    "antigravity": "BLOCKED_AUTHENTICATION_REQUIRED",
+    "equivalence_receipt": "normalized paragraphs/tables equal on current candidate; scope inherited only"
+  },
+  "antigravity_attempt": {
+    "token_usage": "UNKNOWN",
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model": "UNKNOWN",
+    "fallback": "not requested or observed",
+    "paid_fallback": "not used",
+    "model_inference": "NO EVIDENCE OF INFERENCE; native log shows token-source authentication failures and model-catalog fetch, no inference/session/response",
+    "native_log_path": "%USERPROFILE%\\.gemini\\antigravity-cli\\log\\cli-20261028_213931.log",
+    "pid": 72864,
+    "native_log_bytes": 18313,
+    "input_packet_bytes": 46893,
+    "input_packet_sha256": "50a08b3f7a2c87bf0043ea62e062d5cb5e9156fe0f6133411c2fa85b25c3f930",
+    "cli_model_catalog": "exact model listed; CLI log reports selected model override Gemini 3.8 Flash (High)",
+    "native_error_excerpt": "error getting token source: You are not logged into Antigravity.",
+    "crash_file_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native_log_sha256": "afb307be607d717eefeb06f5a348a681d9decf7f60b427e06119b30dfac5e0a3",
+    "computer_use": "not used",
+    "stdout_stderr": "not captured; process exited before the caller could persist redirected streams",
+    "exit_code": "UNKNOWN",
+    "cli": "agy 1.4.9",
+    "crash_file_bytes": 0
+  },
+  "remote_readback": {
+    "candidate_git_blob_sha1": "1160585000f35885663da8d3f28fbec591a1ba07",
+    "repository": "PT-Original-Point/ttqs-one",
+    "visual_receipt_git_blob_sha1": "5e42839c3abc47c96e3f51e80bda7c6e2c5a37af",
+    "all_four_git_blob_sha1_match_local": true,
+    "word_pdf_git_blob_sha1": "63ba4a35b980d33558389c7b3c2ff415e43bd060",
+    "prewrite_head": "5efd342e5f1c79e9fa209436aef454c4ecb8cd14",
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "technical_receipt_git_blob_sha1": "2b8d973847c8cdc0fea5e5d9d3be1f2f0d5209c7",
+    "all_four_files_fetched_from_prewrite_head": true,
+    "pr": 92
+  },
+  "next_action": "Keep Antigravity exact-SHA reviewer lane blocked until user completes native sign-in; continue unrelated READY work. Reuse the current DOCX and Word render; do not rebuild for the stale status receipt."
+}
+d68c62191c51eb429514cfe50e1b5fd44ff29e6a

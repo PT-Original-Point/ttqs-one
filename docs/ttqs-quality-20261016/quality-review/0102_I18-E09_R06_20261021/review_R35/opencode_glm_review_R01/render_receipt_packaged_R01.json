@@ -1,0 +1,15 @@
+{
+  "schema": "ttqs.docx_visual_render_attempt.v1",
+  "work_id": "TTQS-0102-I18E09-R35-PACKAGED-RENDER-R01",
+  "candidate_docx_sha256": "04f71db94dd8949b2e0fc67fc0df5577c2a647138b95e3beadd3be2dea4457aa",
+  "renderer": "Codex documents skill render_docx.py using bundled Python 26.1020.11348",
+  "command": "render_docx.py <candidate> --output_dir packaged_render_R01 --emit_pdf --verbose",
+  "exit_code": 1,
+  "result": "BLOCKED_RENDERER_UNAVAILABLE",
+  "error": "FileNotFoundError: LibreOffice soffice.exe was not found on PATH",
+  "pdf_created": false,
+  "png_page_count": 0,
+  "docx_mutated": false,
+  "environment_check": "Bundled runtime has no LibreOffice; common Windows installation paths checked and absent. Prior Word COM R01 path encoding failure and R02 bounded 180-second open/layout timeout remain separate historical attempts.",
+  "visual_review": "NOT_PERFORMED"
+}

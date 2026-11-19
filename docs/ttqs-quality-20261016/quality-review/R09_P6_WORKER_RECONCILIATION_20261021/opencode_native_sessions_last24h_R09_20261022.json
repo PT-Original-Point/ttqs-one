@@ -1,0 +1,1332 @@
+{
+  "receipt_id": "TTQS_R09_OPENCODE_NATIVE_SESSION_LEDGER_ROLLING_24H_20261022",
+  "window_start_tpe": "2026-10-21T17:36:42+08:00",
+  "window_end_tpe": "2026-10-22T17:36:42+08:00",
+  "source_database": "C:\\Users\\J\\.local\\share\\opencode\\opencode.db",
+  "source_table": "session_v2 plus first user and latest assistant session_message rows",
+  "captured_tpe": "2026-10-22T17:36:42+08:00",
+  "session_count": 44,
+  "exact_cli_process_invocation_count": "UNKNOWN_SESSION_ROWS_ARE_NOT_PROCESS_INVOCATION_RECORDS",
+  "model_totals": {
+    "opencode/deepseek-v4.1-flash-free": {
+      "sessions": 26,
+      "cost_usd_local": 0.0,
+      "input": 1326036,
+      "output": 214227,
+      "reasoning": 522156,
+      "cache_read": 4413056,
+      "cache_write": 0,
+      "outcomes": {
+        "succeeded": 26
+      }
+    },
+    "opencode/glm-5.3-flash-free": {
+      "sessions": 2,
+      "cost_usd_local": 0.0,
+      "input": 51987,
+      "output": 16535,
+      "reasoning": 2676,
+      "cache_read": 4352,
+      "cache_write": 0,
+      "outcomes": {
+        "succeeded": 2
+      }
+    },
+    "opencode/mimo-v2.6-flash-free": {
+      "sessions": 16,
+      "cost_usd_local": 0.0,
+      "input": 968748,
+      "output": 194977,
+      "reasoning": 217080,
+      "cache_read": 5561600,
+      "cache_write": 0,
+      "outcomes": {
+        "succeeded": 14,
+        "interrupted": 2
+      }
+    }
+  },
+  "sessions": [
+    {
+      "session_id": "ses_ea1fa8e3affeGuvkDX7BfP7Ya1",
+      "title": "TTQS_I18_E08_0100_R09_WRITER_20261021",
+      "selected_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 8751,
+        "output": 7185,
+        "reasoning": 6964,
+        "cache_read": 0,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-21T18:32:57+08:00",
+      "ended_tpe": "2026-10-21T18:34:02+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_15e057337001E0Hd9pIzYKnMjc",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 10547,
+      "final_assistant_text_sha256": "df5164d90e86fb7823fe50f3bf6b8c166320d5321de23a3bd6b10e0bfc9451b5",
+      "first_user_message_sha256": "aa79aeacea551621d0bab14954a38d4eab02b2c735a88a6a63cfc458d3ccd160",
+      "work_id_extracted": "TTQS-I18E08-DOC0100-R09-OPENCODE-WRITER-20261021",
+      "doc_id_extracted": "0100",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_ea1e5de09ffer40AnunZbXn6Uf",
+      "title": "TTQS 0100 R09 exact-SHA semantic review",
+      "selected_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 130125,
+        "output": 12078,
+        "reasoning": 61592,
+        "cache_read": 1746432,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-21T18:55:33+08:00",
+      "ended_tpe": "2026-10-21T19:04:54+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_15e2128c5001cheuVoNDljoRAw",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 11030,
+      "final_assistant_text_sha256": "eba32891eb21766cf3b751d1a0f2cd0d523f109f21a2beb4ed811eb6f6edb8a2",
+      "first_user_message_sha256": "0d76651b0885f2ac428a04d8ebb8f06a5f85076fb4c88119849e14cc863780ec",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0100",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_ea1cf5503ffe00DhJ9tzXxSzPG",
+      "title": "TTQS 0100 R09a exact SHA semantic review",
+      "selected_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 196596,
+        "output": 14196,
+        "reasoning": 45375,
+        "cache_read": 2321408,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-21T19:20:10+08:00",
+      "ended_tpe": "2026-10-21T19:27:04+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_15e365f43001LcFb9gN7QHPZIw",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 9213,
+      "final_assistant_text_sha256": "4f239484c39fd6d05cf7cec2f4a4299e241731eecf3112a7ed1bf9d3a10d2d8f",
+      "first_user_message_sha256": "ce886167ef8b8af27d11b039f1ba7349ec23a07c84f2956661bfa27d62601538",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0100",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_ea1a826fcffeumwDg7f4giu6By",
+      "title": "TTQS-0101-I18-E08-R09-Writer-20261021",
+      "selected_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 69056,
+        "output": 21626,
+        "reasoning": 46701,
+        "cache_read": 33152,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-21T20:02:57+08:00",
+      "ended_tpe": "2026-10-21T20:08:20+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_15e5c8647001O3W3FJvnmBV4N7",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 2127,
+      "final_assistant_text_sha256": "128287ea0f609bc195456bae08fd8ae2e14581f0e7c759eccf3696988d975293",
+      "first_user_message_sha256": "f38bcf426d271d1869a54e343cf8dd365e86d145b01a57f4be44fed0e9dead9a",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0101",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_ea185d5dcffeX0MK9kaWgYDj86",
+      "title": "Semantic review of DOCX 0101 for I18-E08",
+      "selected_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 60887,
+        "output": 4594,
+        "reasoning": 12935,
+        "cache_read": 2304,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-21T20:40:27+08:00",
+      "ended_tpe": "2026-10-21T20:41:41+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_15e7a2d8c001cV5ng1LEyVJpFT",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 13105,
+      "final_assistant_text_sha256": "581e1837ae497fa933a0c2287906bd94d8beb90ff1a06877e71f21fa2037c331",
+      "first_user_message_sha256": "412e35301ca2e4ceb75abf0dd9d540d92cfdb3af71ecfab5583d1d8e29556e4d",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0101",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_ea171cd1affe7zkRFsdAvpV1qr",
+      "title": "R09 0101 final exact-SHA semantic review",
+      "selected_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 34640,
+        "output": 4314,
+        "reasoning": 9669,
+        "cache_read": 0,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-21T21:02:19+08:00",
+      "ended_tpe": "2026-10-21T21:03:21+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_15e8e339e001uTvAUH3U59yCek",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 12922,
+      "final_assistant_text_sha256": "3dbae0b8d01ec02188224aa816a49460a0d8ae6d3eb09c47b91340b72373a1cb",
+      "first_user_message_sha256": "77d7a775b5767d484ff4a527a4bb710af1494cb9c61a3f217d38491b21078351",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0101",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_ea14a8d52ffeDCmePqZoatSC3H",
+      "title": "R09 0101 final8 exact-SHA semantic review",
+      "selected_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 71766,
+        "output": 4516,
+        "reasoning": 24191,
+        "cache_read": 0,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-21T21:45:12+08:00",
+      "ended_tpe": "2026-10-21T21:47:19+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_15eb57357001O6quxkOIUqQI2x",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 13509,
+      "final_assistant_text_sha256": "bd1da8be4460ade7e29071f6a8c5542dfc0ed9ae574e3128f75dd6915453e824",
+      "first_user_message_sha256": "9a798d5610495a349b9b1a72d3bb880496827f8f8522a8ba399cb5ee75dd7a41",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0101",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_ea142a4b5ffeDVFhelB5TIrBrN",
+      "title": "R09 0101 final9 exact-SHA semantic review",
+      "selected_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 100493,
+        "output": 4106,
+        "reasoning": 40828,
+        "cache_read": 76416,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-21T21:53:50+08:00",
+      "ended_tpe": "2026-10-21T21:57:31+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_15ebfbcf5001E3akYbrjS0yGS6",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 12294,
+      "final_assistant_text_sha256": "aac585973bccdb69165f592ec8a2ebce851b4de3ef1b9af3945c291bf42b49c8",
+      "first_user_message_sha256": "9767de7cac2e2fbfe3104975850217462b883cb65f2d2f66b697cfd200a38214",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0101",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_ea1138b8affeE0hp0toS2tPCKj",
+      "title": "TTQS ONE 0102 I18-E09 R01 Writer",
+      "selected_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 17341,
+        "output": 13808,
+        "reasoning": 2401,
+        "cache_read": 10368,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-21T22:45:17+08:00",
+      "ended_tpe": "2026-10-21T22:48:14+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_15eedf579001XTb27LpJ0Auzhg",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 21522,
+      "final_assistant_text_sha256": "99148de4842c7af4da9d34e7fe25d5b0882db32e9fd67b2eb96a17c7f19aaf8b",
+      "first_user_message_sha256": "eb28070b15273b99a3f449b186375c5d797a5aff67ccbc574b0a653f9aa414c8",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0102",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_ea0bb8dcdffeCEYoH8nEmm3tet",
+      "title": "TTQS-0103-I18-E10-R01-Writer",
+      "selected_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 40105,
+        "output": 17467,
+        "reasoning": 20766,
+        "cache_read": 11520,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T00:21:24+08:00",
+      "ended_tpe": "2026-10-22T00:25:48+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_15f47e5e3001JwCTAWRKItcphP",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 8528,
+      "final_assistant_text_sha256": "b357dd601d8cb6de94e05b04dbfb0b12388f07f8cab3d00f0fef656ff8df21fb",
+      "first_user_message_sha256": "8f15257dd2c1a4d1adae1756b357817d9db12ba7a7ebb612a7e84d552231af7b",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0103",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_ea0ad8427ffe8iQYR5XIm7KuUg",
+      "title": "TTQS-0103-I18-E10-R01-Independent-Review",
+      "selected_model": {
+        "id": "glm-5.3-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 23676,
+        "output": 1859,
+        "reasoning": 2676,
+        "cache_read": 4352,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T00:36:43+08:00",
+      "ended_tpe": "2026-10-22T00:38:12+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_15f527cac001P7Xk75OSYUYx1Q",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 6232,
+      "final_assistant_text_sha256": "fbc7bdfd003f41f0390906bdbfd602f2b1133bb7669bf18b423572d466f93247",
+      "first_user_message_sha256": "153dd1c609b047c9cd7756db6f40cc34c3288c44d976e9c07c26d1da950d4ff1",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0103",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_ea0a8b186ffeybrhKyR37rxlGz",
+      "title": "TTQS-0103-I18-E10-R02-Independent-Review",
+      "selected_model": {
+        "id": "glm-5.3-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 28311,
+        "output": 14676,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T00:41:59+08:00",
+      "ended_tpe": "2026-10-22T00:43:01+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_15f574ece001T1QBEUZo9FVkmp",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 6254,
+      "final_assistant_text_sha256": "1c06a4170c6a1e6d070cf53e5555579e6fded7f32f9f345d9b4d18343f48f73b",
+      "first_user_message_sha256": "dae077d6bc721ddc314f503c1f1d543dffe485aed48e6ce530d03c653bf3d46c",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0103",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_ea08d9c2affed8eMuPFmtMpS0q",
+      "title": "TTQS-0104-I18-E11-R01-WRITER",
+      "selected_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 40258,
+        "output": 16107,
+        "reasoning": 44686,
+        "cache_read": 11776,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T01:11:34+08:00",
+      "ended_tpe": "2026-10-22T01:17:29+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_15f757d920011HBznXuSRmrNGB",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 24273,
+      "final_assistant_text_sha256": "bea16d71e8bb16e528d162bc5ea88267f3caa21e435250d5ccdfadb7c48e1969",
+      "first_user_message_sha256": "f90793395bca0b710b9d5d90f3b4c3ea8c821c379d24abf31082db4699170ca4",
+      "work_id_extracted": "TTQS-0104-I18-E11-R01-WRITER-20261022",
+      "doc_id_extracted": "0104",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_ea08692a6ffeaR6WbdTxP8LHwG",
+      "title": "TTQS-0104-I18-E11-R01-WRITER-20261022-R2",
+      "selected_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 8128,
+        "output": 18001,
+        "reasoning": 11752,
+        "cache_read": 1792,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T01:19:15+08:00",
+      "ended_tpe": "2026-10-22T01:21:57+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_15f796db3001cn8aBme023IMwX",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 27674,
+      "final_assistant_text_sha256": "f39487f92e3fd752c0e8006709d5a1b7e3b478508b23468f16961c25730331b2",
+      "first_user_message_sha256": "f90793395bca0b710b9d5d90f3b4c3ea8c821c379d24abf31082db4699170ca4",
+      "work_id_extracted": "TTQS-0104-I18-E11-R01-WRITER-20261022",
+      "doc_id_extracted": "0104",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_ea047f5cfffeVdnhYi9rEaJgee",
+      "title": "TTQS 0104 R14 independent semantic review",
+      "selected_model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 62400,
+        "output": 5445,
+        "reasoning": 32700,
+        "cache_read": 284800,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T02:27:39+08:00",
+      "ended_tpe": "2026-10-22T02:37:04+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_15fbf2408001pZ8nW9rO4hMeHn",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 11843,
+      "final_assistant_text_sha256": "17f8eba040fb3a83b1ee1e25705fd8b06b85b0672ae03a8f9e11baca34417809",
+      "first_user_message_sha256": "109c5b7dd5a79076b16c74636f78caa97795d90e1c6e954cdca8cf1360f2c526",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0104",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_ea030cfffffeWft8qAw18cKX1E",
+      "title": "TTQS 0104 R15 independent semantic review",
+      "selected_model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 70570,
+        "output": 8130,
+        "reasoning": 41871,
+        "cache_read": 680960,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T02:52:56+08:00",
+      "ended_tpe": "2026-10-22T03:18:49+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_15fe421e60015Nj4gzO7cI1QQs",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 14982,
+      "final_assistant_text_sha256": "9766a6f30f21106a589b4ab8fa3cc2d4db90a26f32b0129f15213db96229b702",
+      "first_user_message_sha256": "72f6a2f4944e740edbc05825868d957dc3a98753b404ab27abfe43e699539ca2",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0104",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_ea00e6c9bffeRq91HBDZl6RZBb",
+      "title": "TTQS 0104 R16 bounded patch writer",
+      "selected_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 28168,
+        "output": 4916,
+        "reasoning": 10527,
+        "cache_read": 1792,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T03:30:30+08:00",
+      "ended_tpe": "2026-10-22T03:31:38+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_15ff194b2001n1uX9HhvNwB121",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 8721,
+      "final_assistant_text_sha256": "00a31972a3dd0c21c35d9caf530d14160bb7ba60d9c3a78ad287ad94d1c0d66c",
+      "first_user_message_sha256": "00fe9375efb1eaf8c32a7416b37af868befc58a6864a0d9c09edeed6b97078e3",
+      "work_id_extracted": "TTQS-0104-I18-E11-R16-BOUNDED-REPAIR-20261022",
+      "doc_id_extracted": "0104",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_ea002ffe1ffefP6DIiuFo8fPbr",
+      "title": "TTQS 0104 R16 exact-SHA independent semantic review",
+      "selected_model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 13000,
+        "output": 3947,
+        "reasoning": 95,
+        "cache_read": 38272,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T03:42:58+08:00",
+      "ended_tpe": "2026-10-22T03:49:06+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_160016f24001jeOGoGtmEa33He",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 10014,
+      "final_assistant_text_sha256": "dfe6448b46a1efb27bacda3129930dd679dc4f30828fb2ea3a88c732e9752989",
+      "first_user_message_sha256": "fae53cff5d17aa19b4409eee4a90dd049086babb94a1a7a649c629e7dc55fe60",
+      "work_id_extracted": "TTQS-0104-I18-E11-R16-INDEPENDENT-REVIEW-20261022",
+      "doc_id_extracted": "0104",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_e9fd5249fffen0drtH1VHbVyDL",
+      "title": "0105 R01 Traditional Chinese manuscript",
+      "selected_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 42667,
+        "output": 14416,
+        "reasoning": 34633,
+        "cache_read": 14464,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T04:33:03+08:00",
+      "ended_tpe": "2026-10-22T04:38:16+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_1602e562b001WtTEQDDdxKSjE7",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 23171,
+      "final_assistant_text_sha256": "5f081890ac6836d545b5151a97e4110df5ec5e26b9ffd621ad8500a387f0d5da",
+      "first_user_message_sha256": "8ee4086bf14f08d8616530addfaba73fdb746a461d0b0c732ef304f30d0d47b2",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0105",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_e9fcfb03fffei14peImX7nIbeF",
+      "title": "0105 R01 complete manuscript writer",
+      "selected_model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 8165,
+        "output": 5844,
+        "reasoning": 404,
+        "cache_read": 1024,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T04:39:01+08:00",
+      "ended_tpe": "2026-10-22T04:41:12+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_160304ff300197fxeBEiFFeENT",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 7920,
+      "final_assistant_text_sha256": "2f77e918942eb8750b5e38dd957de0ff5f87cf3716814ba7edd5118d7a709000",
+      "first_user_message_sha256": "6acf2a0ade7f7d5300b49b926a3ddebf9ce3934967b3f005f5ae37c535f96a25",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0105",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_e9f9d5427ffeA8zE0q5GWoZh9r",
+      "title": "ttqs-one-0106-R01",
+      "selected_model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 58981,
+        "output": 28295,
+        "reasoning": 27803,
+        "cache_read": 60032,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T05:34:01+08:00",
+      "ended_tpe": "2026-10-22T05:53:55+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_1606ff243001L1LQa38crSgrOE",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 24271,
+      "final_assistant_text_sha256": "9d63d0247d7008fde00a04eaf111337d9df393f82d6e06405f62894cf51c1d81",
+      "first_user_message_sha256": "563d82486975d1261eb20addd30d72d8e5097971eaa08abada02d38a5fd94155",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0106",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_e9f9a27baffeOVEvJCqeg08qPn",
+      "title": "ttqs-one-0106-R01-attempt03",
+      "selected_model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 14195,
+        "output": 20364,
+        "reasoning": 4357,
+        "cache_read": 0,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T05:37:29+08:00",
+      "ended_tpe": "2026-10-22T05:45:17+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_16065d9c6001NBgIoc9QDkoIov",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 27756,
+      "final_assistant_text_sha256": "f79c4db58b11043ee480180366a4b5477103edf7eb9e7ee8d3711a458642d2e6",
+      "first_user_message_sha256": "73aeaf44b2844d478f5fc83b45f3abe6f22a1da39a58bc1c1a11df26d973d169",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0106",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_e9f7ed283ffef4H4ff3mzggYm7",
+      "title": "Independent semantic review of 0106 report",
+      "selected_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 44197,
+        "output": 3431,
+        "reasoning": 7782,
+        "cache_read": 2304,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T06:07:21+08:00",
+      "ended_tpe": "2026-10-22T06:08:18+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_160812e8a001vaEwYERZc8Wa7j",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 10921,
+      "final_assistant_text_sha256": "76ca5336aa9012b317dd2a18d20c44d60ebb6dbc9388e60f07bc2703a605385e",
+      "first_user_message_sha256": "43c630077b30d72b8917c4f8eb8f6b63c9139a053bf734cd6698dd168461c6e6",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0106",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_e9f79845dffeifFyQQ5ccCyKDL",
+      "title": "Exact-SHA semantic repair follow-up review",
+      "selected_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 12173,
+        "output": 1514,
+        "reasoning": 3532,
+        "cache_read": 6656,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T06:13:08+08:00",
+      "ended_tpe": "2026-10-22T06:13:37+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_160867cb7001aQC03qyF6s7Z4j",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 4469,
+      "final_assistant_text_sha256": "d9e1ceb53d160ad10e015ec5a0f272047788b88090d84391c4a8c6faa0debf24",
+      "first_user_message_sha256": "92fc02eaf75cb753d5aa5feadbf4a0a36e8d26570fa420dd359cb01e578cc061",
+      "work_id_extracted": null,
+      "doc_id_extracted": null,
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_e9f76d8d7ffebs5LKbuGo5S8jR",
+      "title": "R09 source-boundary cleanup verification",
+      "selected_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 5601,
+        "output": 819,
+        "reasoning": 1429,
+        "cache_read": 6656,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T06:16:03+08:00",
+      "ended_tpe": "2026-10-22T06:16:16+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_160892835001hW9kRZ47497PRR",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 2393,
+      "final_assistant_text_sha256": "3f0ce09ea82aa89e33f426e937c7e0bcb3579cf9383761af8c3482d5c1741fa4",
+      "first_user_message_sha256": "ee1b197011058edc73f55fd325e3f4bbd98a20f3ea8de32978bf8c152e3aa2cf",
+      "work_id_extracted": null,
+      "doc_id_extracted": null,
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_e9f71df36ffepUdBpgCOdefnVT",
+      "title": "Bounded text-only review of DOCX 0106 candidate",
+      "selected_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 20351,
+        "output": 2856,
+        "reasoning": 6623,
+        "cache_read": 6656,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T06:21:29+08:00",
+      "ended_tpe": "2026-10-22T06:22:22+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_1608e21e0001jCTwbjWV6lKQzb",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 9469,
+      "final_assistant_text_sha256": "e8755be3c0247279cbbea31a1faec7c97da1dedda67e5e9e9187a93aa3f35cbd",
+      "first_user_message_sha256": "19189e416df702f3d532f3e3d67eda74dc3ef9847daf6deb9530b04ff2ca20ed",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0106",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_e9f6c8246ffeyKovefDAN6od06",
+      "title": "Semantic review of 0106 R01 text bundle",
+      "selected_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 49795,
+        "output": 3937,
+        "reasoning": 14241,
+        "cache_read": 6656,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T06:27:21+08:00",
+      "ended_tpe": "2026-10-22T06:28:56+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_160937f2e0019WlXxzvccilMf0",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 12224,
+      "final_assistant_text_sha256": "b249084acac5cd997c9453d324b8361fb820bf3d21bc371c336d2cc8013f94b5",
+      "first_user_message_sha256": "cd91b1e2afe8dee0ac2f2c8de0b819eb6c4349ec2b096213ec1358511ce7b094",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0106",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_e9f5586c8ffe0Ns6HHDVsPk36T",
+      "title": "Independent semantic review of 0106 attempt05",
+      "selected_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 65449,
+        "output": 3701,
+        "reasoning": 13332,
+        "cache_read": 6656,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T06:52:27+08:00",
+      "ended_tpe": "2026-10-22T06:53:59+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_160aa7b1c0015NBxRHvWphi4ad",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 10938,
+      "final_assistant_text_sha256": "8b1a1fb7b37395d49cce20431528059ef701bc1acf594d8d7c1449391d4fdc66",
+      "first_user_message_sha256": "e94bcd45370a322abada1f235fdd2084154ec99a9e1578635a713b5d9048d345",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0106",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_e9f42ec15ffen5lXZJ0mrClJ34",
+      "title": "Independent semantic review of 0106 exact SHA a061814",
+      "selected_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 29385,
+        "output": 4147,
+        "reasoning": 7289,
+        "cache_read": 6144,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T07:12:46+08:00",
+      "ended_tpe": "2026-10-22T07:13:41+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_160bd152a001PA5k0n3UaTlSzE",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 12214,
+      "final_assistant_text_sha256": "c1292e122286ab62a77b8cae1b7c1221b8bcba0d83021696ed69d3751aa016d7",
+      "first_user_message_sha256": "0b07cb1f7eda8578828fd639621ce92401cc57a251b7d11a8db046f8132120fe",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0106",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_e9f3d11b2ffe0Y8RIfyVhjXIvo",
+      "title": "Independent semantic review of 0106 exact SHA 204bc47",
+      "selected_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 30446,
+        "output": 4850,
+        "reasoning": 7578,
+        "cache_read": 6144,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T07:19:10+08:00",
+      "ended_tpe": "2026-10-22T07:20:07+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_160c2ef8e001d9xa2OFvHOdDoY",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 14575,
+      "final_assistant_text_sha256": "7a18f59a135a93af4c36483aaea0126be593dd49f0da853139013a73398dc71f",
+      "first_user_message_sha256": "1238bccb673f434651abaeedcf0371db392755ba8d6609a2af27b78337f1f5f2",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0106",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_e9f2afeb7ffekUkn5SnevUFRll",
+      "title": "TTQS 0105 R04 independent exact-SHA semantic review R09",
+      "selected_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 22088,
+        "output": 4234,
+        "reasoning": 8742,
+        "cache_read": 6144,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T07:38:54+08:00",
+      "ended_tpe": "2026-10-22T07:40:18+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_160d50275001oU11EuRSz1c3jo",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 15658,
+      "final_assistant_text_sha256": "3525c124cb3cdb99d3ac8766b6dc242f7dc453016481072dd86f0792cd970326",
+      "first_user_message_sha256": "76b179fb7ecce1e749c93e2051beeb06d75dcf7b0e38d0894cacf83893f06043",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0105",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_e9f1fed6affeA577WCLlg07nNw",
+      "title": "TTQS 0105 R05 complete manuscript repair",
+      "selected_model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 20647,
+        "output": 1044,
+        "reasoning": 1801,
+        "cache_read": 128,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T07:51:00+08:00",
+      "ended_tpe": "2026-10-22T07:57:45+08:00",
+      "idle_outcome": "interrupted",
+      "final_assistant_message_id": "msg_160e0fb06001NytEvgCBNcKCRK",
+      "final_assistant_finish": "error",
+      "final_assistant_error_type": "aborted",
+      "final_assistant_text_chars": 2760,
+      "final_assistant_text_sha256": "b4032bbb8baeb5dc864d7a0464919e54f5e698d851234077e1c0e6463aa94320",
+      "first_user_message_sha256": "319f7b8fa39daba8ecb64a08ba7a0a49dd94d2b9368f00ff8f29a2c2584c00cf",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0105",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_e9f1d5ed9ffeU00GksmAC6IyHw",
+      "title": "TTQS 0105 R05 complete manuscript repair retry01",
+      "selected_model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T07:53:47+08:00",
+      "ended_tpe": "2026-10-22T07:57:45+08:00",
+      "idle_outcome": "interrupted",
+      "final_assistant_message_id": "msg_160e2a16c001z869GS9rrD5pMW",
+      "final_assistant_finish": "error",
+      "final_assistant_error_type": "aborted",
+      "final_assistant_text_chars": 0,
+      "final_assistant_text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "first_user_message_sha256": "0efa5a01324e9dff67fb01cd860babb795158dde7b9e60d1b3ac6f2338e898cc",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0105",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_e9f1969d2ffedwIaAmOjJoFGZL",
+      "title": "TTQS 0105 R05 complete manuscript repair retry02",
+      "selected_model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 48561,
+        "output": 18132,
+        "reasoning": 18890,
+        "cache_read": 24704,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T07:58:06+08:00",
+      "ended_tpe": "2026-10-22T08:04:41+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_160eb9a15001WSp0BUJnY6QHC5",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 7133,
+      "final_assistant_text_sha256": "af83cec7373864b7de25ed02c17363378eeddbb12fe6bc1dcbc8a2dc70879f6b",
+      "first_user_message_sha256": "0efa5a01324e9dff67fb01cd860babb795158dde7b9e60d1b3ac6f2338e898cc",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0105",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_e9efa5177ffeVeib1kQ5VeGtrJ",
+      "title": "TTQS 0105 R05 exact SHA independent semantic review R09",
+      "selected_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 53389,
+        "output": 1544,
+        "reasoning": 32497,
+        "cache_read": 29312,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T08:32:04+08:00",
+      "ended_tpe": "2026-10-22T08:35:21+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_161087bb80016tsaGxRrFWcJKF",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 5739,
+      "final_assistant_text_sha256": "981c6d93d7b9855abe936638743f73b78d222b86e233560fa0cbdbfb8aebe370",
+      "first_user_message_sha256": "870d996aae4fa15ba3677dd5ea0b6b37eb2ad7ccb1c71d2d873cdd358e6f129f",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0105",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_e9ef67a21ffetB20YhU5TgF9bK",
+      "title": "TTQS 0105 R06 bounded semantic repair Writer R09",
+      "selected_model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 161989,
+        "output": 35664,
+        "reasoning": 34677,
+        "cache_read": 1521664,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T08:36:16+08:00",
+      "ended_tpe": "2026-10-22T08:58:47+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_1611df30a00158rZTh0NUndoRi",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 615,
+      "final_assistant_text_sha256": "c35cd29d438a1d4c0275a9bd4a4eb8970a0b528e5c811d529d7c7711b97c3561",
+      "first_user_message_sha256": "c801b2d141d1ff582633424a465c2dc40db520fae3e673aff48d0bc3234d8d0d",
+      "work_id_extracted": "TTQS_ONE-0105-R06-BOUNDED-SEMANTIC-REPAIR",
+      "doc_id_extracted": "0105",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_e9dc29c14ffeaey0eTfQb8VDTC",
+      "title": "TTQS 0105 R06 exact-SHA independent semantic review",
+      "selected_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 75019,
+        "output": 13808,
+        "reasoning": 25769,
+        "cache_read": 46336,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T14:12:33+08:00",
+      "ended_tpe": "2026-10-22T14:16:52+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_16240ab1d001DO5SSiZNUGkOfe",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 12400,
+      "final_assistant_text_sha256": "136d2d4bc4ef2b93334ffd3dbaee0b1aea563592160b2be0af9eff6b2b187265",
+      "first_user_message_sha256": "b861bca4896922d8fb3df9bba5ca2e4e5ed5221c28376d059ba2a1fc8278c6b2",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0105",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_e9dbf29ecffezyKKuDcvrAkzLU",
+      "title": "TTQS 0105 R06 exact-SHA independent semantic review attempt02",
+      "selected_model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 69162,
+        "output": 12056,
+        "reasoning": 20322,
+        "cache_read": 51968,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T14:16:18+08:00",
+      "ended_tpe": "2026-10-22T14:19:43+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_16243dc4f001LOuPfFH8szoyBq",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 618,
+      "final_assistant_text_sha256": "26e32fab8bab45298fa75d49dfe4e27cb61077f2c1dabf616dab557d29274760",
+      "first_user_message_sha256": "c76a30a8fd212eddc7fe79c9579ba924c1d38df66c32fb5912207d15a8bc3c29",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0105",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_e9d8ad904ffem4gPIhUbjbWV4U",
+      "title": "TTQS_0105_WRITER_R07_20261022",
+      "selected_model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 106166,
+        "output": 4592,
+        "reasoning": 2299,
+        "cache_read": 102400,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T15:13:27+08:00",
+      "ended_tpe": "2026-10-22T15:17:10+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_1627717de001P1i3L28PiY18eH",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 6102,
+      "final_assistant_text_sha256": "db18851b05534fce1e507e7a6b6e8cec85abcbfd52c34857a1903d06cffe63f9",
+      "first_user_message_sha256": "dbac6f7b9654be930615827b1c4d76aac206226d07b90fa2a788353a4543ce7a",
+      "work_id_extracted": null,
+      "doc_id_extracted": null,
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_e9d858be9ffeR53uwL0FL4qS3v",
+      "title": "TTQS_0105_WRITER_R07_build_20261022",
+      "selected_model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 200267,
+        "output": 54315,
+        "reasoning": 19783,
+        "cache_read": 2823808,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T15:19:14+08:00",
+      "ended_tpe": "2026-10-22T15:54:56+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_1629ab0110019qCkjHt7aJKLi7",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 1950,
+      "final_assistant_text_sha256": "58e90b7b94b7626d4cd8848a315b5e3bac24179da4da4339d0e360d8d060d90c",
+      "first_user_message_sha256": "f35c9f40d1335c2d67d7c2f6ea7959d6c13a9dd55b35acb2a1809f6fb9c244f8",
+      "work_id_extracted": null,
+      "doc_id_extracted": null,
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_e9d4f1562ffefAEhlf2U03V4kk",
+      "title": "Independent semantic review of doc 0105 I18-E13",
+      "selected_model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 97475,
+        "output": 2921,
+        "reasoning": 7468,
+        "cache_read": 6656,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T16:18:44+08:00",
+      "ended_tpe": "2026-10-22T16:24:06+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_162b0ebb8001Yg3EN1AJm65XxK",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 4705,
+      "final_assistant_text_sha256": "2ab4c17142d62d618ba0f70c5704a8b5fbc46fd1382dace9a7ffdcb875bed64c",
+      "first_user_message_sha256": "959159df23946dc23c70873990caa7907b26c817f513385127bfe104887c1370",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0105",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_e9d40afceffe7ErzglGTTF0a2g",
+      "title": "Semantic review of doc 0102 I18-E09",
+      "selected_model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 63399,
+        "output": 2344,
+        "reasoning": 6220,
+        "cache_read": 4864,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T16:34:27+08:00",
+      "ended_tpe": "2026-10-22T16:39:28+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_162bf50b00017Estsrxo8n7JeU",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 6878,
+      "final_assistant_text_sha256": "fe28c79e28100edd6954cc3db97328795fa9f93acc5f1d02d99ce2565adbff47",
+      "first_user_message_sha256": "244c8f5ed27540bfce46856bbbc2f2cd487a113b8c74db5eaf397618898e45cb",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0102",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_e9d3953f1ffel0WoQWOn2OSeW5",
+      "title": "TTQS 0102 R06 R09 semantic repair insert",
+      "selected_model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 1849,
+        "output": 501,
+        "reasoning": 2338,
+        "cache_read": 6144,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T16:42:29+08:00",
+      "ended_tpe": "2026-10-22T16:44:54+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_162c6ad0b001yvhbqH2HZZt7zO",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 632,
+      "final_assistant_text_sha256": "1456ab678b5f4e0463ae2edbf4959a5af4ed54808bb0d60568121b5b454564a0",
+      "first_user_message_sha256": "d39c6ac9829f834e6b573a7442837fd38feae7685baa3584fd4dd12bca9765aa",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0102",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    },
+    {
+      "session_id": "ses_e9d2aa11effe0yYUZ4jHJOKZIk",
+      "title": "TTQS 0102 R08 independent semantic review",
+      "selected_model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode"
+      },
+      "upstream_model_or_fallback": "UNKNOWN_NOT_EXPOSED_BY_SESSION_DB",
+      "cost_usd_local": 0.0,
+      "tokens": {
+        "input": 41084,
+        "output": 3439,
+        "reasoning": 16374,
+        "cache_read": 6144,
+        "cache_write": 0
+      },
+      "started_tpe": "2026-10-22T16:58:33+08:00",
+      "ended_tpe": "2026-10-22T17:10:32+08:00",
+      "idle_outcome": "succeeded",
+      "final_assistant_message_id": "msg_162d55ff00017JZUFM7LBef17P",
+      "final_assistant_finish": "stop",
+      "final_assistant_error_type": null,
+      "final_assistant_text_chars": 10917,
+      "final_assistant_text_sha256": "3ce88f3a9fc8cc2525cbc620414e63bc533f6bbaaa43a7ba35066eb0ec9feeb9",
+      "first_user_message_sha256": "51b2212739ad845e9bb2bbc06dc646357e7456f6135afaa82a685a708149981f",
+      "work_id_extracted": null,
+      "doc_id_extracted": "0102",
+      "adoption_status": "NOT_INFERRED_FROM_SESSION_STATUS"
+    }
+  ],
+  "scope_limitations": [
+    "OpenCode session rows identify selected provider/model values, not upstream serving identity or billing invoice.",
+    "Succeeded/interrupted is transport/session terminal state; it is not semantic QA or adoption.",
+    "Raw response text was separately preserved for the material R16 writer/reviewer and 0105 interrupted R05 sessions; other raw payloads remain in the native OpenCode database."
+  ]
+}

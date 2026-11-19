@@ -1,0 +1,99 @@
+{
+  "schema": "ttqs-one-0141-r06-visual-review-v1",
+  "observed_at_local": "2026-10-25T09:28:55+08:00",
+  "doc_id": "0141",
+  "requirement_id": "I19-E31",
+  "docx_sha256": "e2a5a981fd364b87a9bd3e096dbc97abeb6b58ed7fb27891d575f12e1d75bdc2",
+  "pdf_sha256": "c3a52474035e4c4239a763c565922f071e7c071af817fd1faf89284b1a76367e",
+  "page_count": 25,
+  "render_manifest_sha256": "c3b1e79ccdac263d26a3730ceea50b3b862336811cb02224a109e9f0df2673e0",
+  "coverage": "All 25 pages reviewed in contact sheets; 8 representative/high-risk pages also inspected full resolution.",
+  "checks": [
+    {
+      "check": "all_pages_contact_sheet_review",
+      "result": "PASS",
+      "pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "contact_sheets": [
+        {
+          "path": "R06_CONTACT_SHEET_1.jpg",
+          "sha256": "3bf3bb3425d3c14921783d20cd65d3c699ecd79ce0a8d0327b5be979b1993b74"
+        },
+        {
+          "path": "R06_CONTACT_SHEET_2.jpg",
+          "sha256": "e141c524d973c9a630eca8359c8a8434498ae2ee2f86e06249158268ad409a16"
+        },
+        {
+          "path": "R06_CONTACT_SHEET_3.jpg",
+          "sha256": "bfc84d38cc5133addbcae3aa726d2949d8241d21ea8da0b7de7f6658ba204aa6"
+        }
+      ]
+    },
+    {
+      "check": "selected_full_resolution_review",
+      "result": "PASS",
+      "pages": [
+        1,
+        8,
+        11,
+        12,
+        14,
+        16,
+        24,
+        25
+      ],
+      "page_image_sha256": {
+        "01": "a0b5b4164ac2e5640ca89fea16e52830e0f5e7572bd685934d90dfaf53a36fd0",
+        "08": "472efa49333d1e8cb0713d7eea18e0df29e4b707a0740f77c5fcb0d0aff134eb",
+        "11": "977ad2f4ac8034e9b4157da7f37b78336fcbf1e6487221d1af4de779f9061a21",
+        "12": "4317b33047bc2ee343ec5ad162c5bb51d8df3eb3b287bc50af66cd554a1b4229",
+        "14": "a4b34e1580c3036cec325771f8b54c053c2be26e95d4466417538e1fe339b890",
+        "16": "f82e57cbfa07818283e213f5d1738abf63398ccc8606b764432c98675fe4c9b8",
+        "24": "1b13e520a0e32d2c3c0c45c9e43c21c32f4be05ce0f1afe970012c753bd2a23a",
+        "25": "703c9e4b59e29427bcf971dd4c669e9dcd779dab48bd2ad828a9e6f81ac5d61d"
+      }
+    },
+    {
+      "check": "pagination_token_fix",
+      "result": "PASS",
+      "finding": "UNKNOWN-sourced is no longer split across pages 11/12; whole token starts page 12."
+    },
+    {
+      "check": "tables_and_chart",
+      "result": "PASS",
+      "finding": "Tables readable; chart legible; no clipping/overlap detected across 25 pages."
+    },
+    {
+      "check": "intentional_whitespace",
+      "result": "NONBLOCKING",
+      "finding": "Page 16 sample response form leaves lower-page whitespace; page 25 ends after revision history; no content appears clipped or orphaned."
+    }
+  ],
+  "visual_verdict": "PASS",
+  "independent_semantic_review": "PENDING"
+}

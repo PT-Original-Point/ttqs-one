@@ -1,0 +1,75 @@
+{
+  "receipt_id": "0012_I02-E03_R08J_INDEPENDENT_SEMANTIC_REVIEW",
+  "document_id": "0012",
+  "requirement_id": "I02-E03",
+  "official_checkbox_serial": "UNKNOWN_NOT_RECONSTRUCTED_HERE",
+  "candidate_state": "CANDIDATE_SAMPLE_SYNTHETIC_NOT_ACCEPTED",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0012_I02-E03_LUNA_TEXT_DRAFT_R01_20261029\\candidate\\0012_I02-E03_R08J.docx",
+  "candidate_sha256": "1b2ad16bb36d9ba867fd517067d0e2c61529b1bfe390e045e01cd05fca7795e6",
+  "reviewer": "Independent W1 OpenCode v2 CLI; separate from builder context",
+  "requested_model": "opencode/glm-5.3-flash-free",
+  "actual_model": "UNKNOWN",
+  "review_response_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0012_I02-E03_LUNA_TEXT_DRAFT_R01_20261029\\qa\\R08J_SCOPED_LABEL_CLARIFICATION_20261031\\W1_SEMANTIC_REVIEW_R08J_FULL_20261031\\REVIEW_RESPONSE.md",
+  "review_response_sha256": "ecc19159763392d7f65a2669cc7f5653afb6edce3a8844e976932c48c76f2855",
+  "review_packet_sha256": "810786f91cd9fd2bfc5a48b9efa68b094bc6b7926c13e9a20adaf9d3f3dcd4bd",
+  "verdict": "PASS",
+  "scope": "Full extracted document body, all 17 tables including 68-row synthetic register, official source page 1 extract, exact unique Blueprint row 0012, negative-neighbor rows 0011 and 0013; semantic/usability only. Visual and font gates excluded and covered by separate exact-SHA visual/technical receipts.",
+  "checks_passed": [
+    "official scope and genre",
+    "operational elements",
+    "calculation semantics and non-conflation",
+    "P/U source and SYN-042 current-text correction",
+    "synthetic register alignment",
+    "no fabricated REAL/third-party/signature/association decision",
+    "negative neighbors",
+    "title-blind usability"
+  ],
+  "findings": [
+    {
+      "id": "F-01",
+      "severity": "MEDIUM",
+      "status": "OPEN",
+      "locator": "§11",
+      "issue": "No single explicit official-requirement to form-field to attachment-locator traceability table; information is dispersed.",
+      "recommended_minimum_repair": "Add a compact 3-column traceability table joining official item, procedure/form fields and attachment locator."
+    },
+    {
+      "id": "F-02",
+      "severity": "LOW",
+      "status": "OPEN",
+      "locator": "§10.3 row 004",
+      "issue": "Completeness metric and formal-source verification completion metric use distinct denominators but wording may drift."
+    },
+    {
+      "id": "F-03",
+      "severity": "LOW",
+      "status": "OPEN",
+      "locator": "§12 preamble",
+      "issue": "Synthetic row grouping SYN-043..056 misdescribes SYN-043..045."
+    },
+    {
+      "id": "F-04",
+      "severity": "INFO",
+      "status": "OPEN",
+      "locator": "§13",
+      "issue": "Two near-duplicate SAMPLE/SYNTHETIC status bullets."
+    },
+    {
+      "id": "F-05",
+      "severity": "INFO",
+      "status": "LIMITATION",
+      "locator": "Review packet history sections",
+      "issue": "Prior R08H/R08I/R08J receipts were not included in packet; current text was directly reviewed."
+    },
+    {
+      "id": "F-06",
+      "severity": "INFO",
+      "status": "OUT_OF_SCOPE",
+      "locator": "DOCX layout/font",
+      "issue": "Reviewer did not assess visual rendering or font floors; exact-SHA Word visual and technical receipts are separate."
+    }
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN_HOLD",
+  "interpretation": "Semantic verdict PASS; medium F-01 remains an open improvement/traceability gap. Do not promote to complete-quality count until addressed or formally dispositioned."
+}

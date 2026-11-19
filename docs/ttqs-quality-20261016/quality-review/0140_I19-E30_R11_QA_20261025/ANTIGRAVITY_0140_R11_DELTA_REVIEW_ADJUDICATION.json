@@ -1,0 +1,61 @@
+{
+  "record": "0140 R11 independent semantic delta review adjudication",
+  "doc_id": "0140",
+  "requirement_id": "I19-E30",
+  "official_registry_index": 154,
+  "printed_checkbox_serial": "UNKNOWN",
+  "candidate_sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d",
+  "review_packet_sha256": "8A5EA829182A30216DD6DBE9EF81E62D867A738262B6FA976647A9B478AC0324",
+  "worker": "Antigravity CLI 1.4.7",
+  "requested_model": "gemini-3.8-flash-high",
+  "serving_model": "UNKNOWN",
+  "CLI_status": "SUCCESS",
+  "conversation_id": "fcc2dbba-823b-4d51-aeb0-4a8bbf69139a",
+  "cli_invocation_count": 3,
+  "model_turns": 1,
+  "first_two_invocations": "CLI syntax rejected before model request; raw stderr preserved",
+  "model_response_invocation": "attempt03",
+  "review_verdict": "PASS",
+  "verdict_scope": "R11 text/table delta only; not a new full-body review",
+  "response_exact_sha_claim": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d",
+  "response_exact_sha_matches_host": true,
+  "reviewer_hash_computation": "NOT_PERFORMED",
+  "review_response_raw_sha256": "559E04A8CE4DFA80572123E9B29EF5E08C3A5F25CE514F65CD1465BD0391A236",
+  "raw_response_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0140_I19-E30_CANDIDATE_R11_20261025\\review\\ANTIGRAVITY_0140_R11_DELTA_ATTEMPT03.stdout.json",
+  "findings": [
+    {
+      "locator": "Table 11, header (T11-R1) and item 9 (T11-R9)",
+      "severity": "LOW",
+      "evidence": "Changed '本候選狀態' to '本文件狀態'; changed cell to '使用前須逐頁檢視頁碼、表格可讀性與附件，並由權責人員核定'.",
+      "disposition": "RESOLVED"
+    },
+    {
+      "locator": "Table 9, column 3 (rows 1 and 2)",
+      "severity": "LOW",
+      "evidence": "Replaced '責任角色（待核）' and '課程承辦角色（是否存在待核）' with '（真實角色是否存在，須由權責者核實）'.",
+      "disposition": "RESOLVED"
+    },
+    {
+      "locator": "Section 9.2, Paragraph P97",
+      "severity": "LOW",
+      "evidence": "Updated to '2023、2024 同樣僅缺 COURSE_EVALUATION；三個年度均未記錄個案原因。以上分布不代表真實改善。'",
+      "disposition": "RESOLVED"
+    },
+    {
+      "locator": "Section 9.1, Figure 1 (P92)",
+      "severity": "OBS",
+      "evidence": "Visual rendering of plotted trend curves cannot be verified from text-only packet context.",
+      "disposition": "DEFERRED_TO_VISUAL_GATE"
+    }
+  ],
+  "limitations": [
+    "Text-only semantic review; candidate binary DOCX SHA-256 is accepted as asserted by the host packet and was not independently computed.",
+    "Word layout, typography, pagination, and Figure 1 graphic rendering were not visually inspected and depend on the separate visual QA gate.",
+    "All operational data, roles, logs, and systems are evaluated strictly as synthetic examples; real-world association facts, systems, and evidence remain UNKNOWN/HOLD.",
+    "Serving model identity is not asserted or guessed.",
+    "This review does not grant formal evaluation package acceptance."
+  ],
+  "adopted_for": "R11 delta review only; R10 full-body review remains historical and is not promoted to R11",
+  "formal_acceptance": "NOT_GRANTED",
+  "human_approval": "NOT_GRANTED"
+}

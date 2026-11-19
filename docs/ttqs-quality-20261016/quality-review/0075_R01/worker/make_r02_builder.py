@@ -1,0 +1,10 @@
+from pathlib import Path
+src=Path(r'E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0075_R01\worker\build_0075_R01_docx.py')
+out=Path(r'E:\TTQS\_github_sync_0064\docs\ttqs-quality-20261016\quality-review\0075_R01\worker\build_0075_R02_docx.py')
+s=src.read_text(encoding='utf-8')
+s=s.replace('OUTPUT = ROOT / "candidate" / "0075_R01.docx"','OUTPUT = ROOT / "candidate" / "0075_R02.docx"')
+s=s.replace('RECEIPT = ROOT / "evidence" / "build_receipt_R01.json"','RECEIPT = ROOT / "evidence" / "build_receipt_R02.json"')
+s=s.replace('    set_repeat_table_header(table.rows[0])\n    doc.add_paragraph().paragraph_format.space_after = Pt(1)', '    set_repeat_table_header(table.rows[0])\n    if rows[0] == ["#", "核對項", "對應紀錄", "狀態"]:\n        for cell in table.rows[0].cells:\n            cell.paragraphs[0].paragraph_format.keep_with_next = True\n    doc.add_paragraph().paragraph_format.space_after = Pt(1)')
+s=s.replace('TTQS_ONE_0075_R01_BUILD_RECEIPT.v1','TTQS_ONE_0075_R02_BUILD_RECEIPT.v1')
+out.write_text(s,encoding='utf-8',newline='\n')
+print(out)

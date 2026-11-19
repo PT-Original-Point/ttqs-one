@@ -1,0 +1,54 @@
+{
+  "schema": "ttqs-one-0139-r06-minimal-docx-repair-v1",
+  "doc_id": "0139",
+  "requirement_id": "I19-E29",
+  "blueprint_index": 153,
+  "candidate": "R06",
+  "candidate_state": "CANDIDATE",
+  "parent_candidate": "R05",
+  "parent_docx_sha256": "9bb154830d7d3cf9790e3e43fd44e9af8b6e3a059b9e28fd910fca80c0e8e947",
+  "candidate_docx_sha256": "75e7a55461e3ffd067c154cfd48a4e67256bf432e379affcda84b2ed04e33938",
+  "candidate_bytes": 116361,
+  "candidate_manuscript_sha256": "6cf9023827085aeca8652a31f2be63e81ce42ef6e2eaff57aaf8f3a886c3831e",
+  "source_packet_sha256": "3c9c310e086a86c03d38bea68bba1ca53bcb2fc927d8949fb6b91c45379d9d47",
+  "unique_blueprint_sha256": "090169968e3df59a6cecaac665a99b2cb625a9cbc355bf84528d08b27c98052a",
+  "synthetic_register_sha256": "01eca5f482240e0a7bf9c48f4ca7734b810e957b156107ed4da0b0b7f49e3f9d",
+  "root_cause": "The Markdown-to-DOCX converter removed fraction grouping and rendered numerator subtraction without parentheses, making relative-change formulas precedence-ambiguous.",
+  "scope": "Only DOCX paragraphs 106 and 108 (0-based), and their two matching manuscript formula lines; all other paragraph text and all 14 table cell text are unchanged.",
+  "manuscript_changes": [
+    {
+      "line_1_based": 238,
+      "before": "2. **2023→2025 考照通過率相對變化率**：$\\frac{72.7273\\% - 62.5000\\%}{62.5000\\%} = \\frac{10.2273\\%}{62.5\\%} \\approx \\mathbf{+16.36\\%}$。"
+    },
+    {
+      "line_1_based": 240,
+      "before": "4. **2023→2025 就業確認率相對變化率**：$\\frac{66.6667\\% - 40.0000\\%}{40.0000\\%} = \\frac{26.6667\\%}{40.0\\%} \\approx \\mathbf{+66.67\\%}$。"
+    }
+  ],
+  "paragraph_changes": [
+    {
+      "paragraph_index_0_based": 106,
+      "before": "2. 2023→2025 考照通過率相對變化率：72.7273% - 62.5000%/62.5000% = 10.2273%/62.5% ≈ +16.36%。",
+      "after": "2. 2023→2025 考照通過率相對變化率：(72.7273% − 62.5000%) / 62.5000% × 100% = 16.36368% ≈ +16.36%。"
+    },
+    {
+      "paragraph_index_0_based": 108,
+      "before": "4. 2023→2025 就業確認率相對變化率：66.6667% - 40.0000%/40.0000% = 26.6667%/40.0% ≈ +66.67%。",
+      "after": "4. 2023→2025 就業確認率相對變化率：(66.6667% − 40.0000%) / 40.0000% × 100% = 66.66675% ≈ +66.67%。"
+    }
+  ],
+  "arithmetic_check": {
+    "exam_relative_change_percent": "16.363636363636363636363636363637",
+    "exam_rounded_percent": "16.36",
+    "employment_relative_change_percent": "66.666666666666666666666666666668",
+    "employment_rounded_percent": "66.67"
+  },
+  "table_count": 14,
+  "paragraph_count": 177,
+  "sample_register_rows": 34,
+  "real_evidence": "REAL=UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED",
+  "independent_semantic_review": "PENDING_R06_EXACT_SHA",
+  "word_native_visual_review": "PENDING_R06",
+  "created_local": "2026-10-27T07:10:01.034841+08:00"
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "TTQS_ONE_DOCX_BUILD_RECEIPT_R1",
+  "work_id": "TTQS_ONE_0133_I19-E22_SOURCE_INDEX_AND_F1_REPAIR_R02_20261116",
+  "doc_id": "0133",
+  "requirement_id": "I19-E22",
+  "revision": "R07_SOURCE_INDEX_REPAIR",
+  "candidate_state": "CANDIDATE_ONLY",
+  "builder_identity": "Codex local deterministic python-docx scoped edit after independent review findings",
+  "baseline_candidate": {
+    "sha256": "bd93bf588275944310da45db949c2284e5f48392f823d88a5cbc4f4819b8cfbf"
+  },
+  "source_packet_sha256": "8202eb0a6eb4348ddd6003ed0c39e248c732c113f76e04ccb2aaca0bed9c7048",
+  "unique_blueprint_sha256": "edb8d241b1604790b36daf1622b907a9985ec7901c6d1e0a79f440be5fcb42fd",
+  "source_version_readback_sha256": "32b05716e244060dfc88718d74ae65cae15131da6b22bd5c2a3a53ae882cf271",
+  "output_candidate": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0133_I19-E22_SOURCE_PREP_R01_20261024\\candidate\\0133_I19-E22_CANDIDATE_R07_SOURCE_INDEX_REPAIR.docx",
+    "sha256": "3310246bd2ebd95d497bd28eb4443154fd33e1efc9ced9b65dc199fe7bec2b81",
+    "bytes": 104741
+  },
+  "changed_locators": [
+    "§10 SYN-EX-01 replacement-register locator corrected to §8 Table 10 and daily-detail table",
+    "§12 source index: exact PR #92 commit and four source fingerprints added; official issue date remains UNKNOWN"
+  ],
+  "deterministic_checks": {
+    "docx_reopen": "PASS",
+    "zip_integrity": "PASS",
+    "daily_entry_counts": [
+      5,
+      4,
+      3,
+      3,
+      5
+    ],
+    "daily_entry_total": 20,
+    "unique_learner_ids": 11,
+    "included_in_annual_totals": false,
+    "four_current_source_files_raw_readback_match": "PASS"
+  },
+  "semantic_review": "PASS_EXACT_SHA_SCOPED",
+  "visual_review": "PASS_EXACT_SHA_13_PAGES",
+  "formal_acceptance": false,
+  "limitations": [
+    "Official source PDF publication edition/date is UNKNOWN; metadata date is not represented as publication date.",
+    "Candidate remains CANDIDATE; no REAL evidence or formal acceptance claimed."
+  ],
+  "semantic_review_receipt_sha256": "a62da26cfbfff24a6a676cffaa32401312f0402b31b9449713ee3f244eff493f",
+  "visual_review_receipt_sha256": "e0d3d93f8e286a033867224b1f0a95727fa21c622b966610de45db4006e0a077"
+}

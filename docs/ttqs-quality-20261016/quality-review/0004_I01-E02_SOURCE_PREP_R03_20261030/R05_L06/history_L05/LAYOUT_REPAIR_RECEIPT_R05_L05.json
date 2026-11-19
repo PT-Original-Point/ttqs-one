@@ -1,0 +1,29 @@
+{
+  "receipt_id": "LAYOUT_REPAIR_RECEIPT_R05_L05",
+  "doc_id": "0004",
+  "requirement_id": "I01-E02",
+  "final_docx_sha256": "be55d8f06dd0179cf043cfd4c48ba76bbdb8c110de109a111d8c58dc91b48f85",
+  "layout_changes": [
+    {
+      "revision": "L03",
+      "defect": "group captions were 10.0 pt below 10.5 pt body minimum",
+      "repair": "raised group captions to 10.5 pt",
+      "result": "verified by TECHNICAL_QA_R05_L05"
+    },
+    {
+      "revision": "L04",
+      "defect": "raw LaTeX labels appeared literally; Title style inherited bottom rule; Table 4-1 group caption orphaned",
+      "repair": "convert text/math markers to readable plain text, remove Title paragraph border, keep group captions with following table",
+      "result": "verified in Word render and visual inspection"
+    },
+    {
+      "revision": "L05",
+      "defect": "manual page break left excessive unused space before Table 5-2 groups 2 and 3",
+      "repair": "remove forced break; allow groups to flow after keep-with-next captions",
+      "result": "21-page Word render; groups readable on pages 11-12"
+    }
+  ],
+  "remaining_observation": "On page 10, the final U005 data row of Table 4-1 group 3 continues without a repeated header; the full row is visible and the group header is directly above on page 9. No clipping observed.",
+  "status": "REPAIRED_WITH_NONBLOCKING_OBSERVATION",
+  "formal_acceptance": "UNKNOWN"
+}

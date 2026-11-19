@@ -1,0 +1,26 @@
+# 0061 R03 視覺版面檢查
+
+- 候選 DOCX SHA-256: `3D4FE20F7FB825E470ED5DFD71FCAF0F5BB8052DC7A63EF51EE08E2A11668C9C`
+- 渲染 PDF SHA-256: `9C14C3E91A097762177F70AD977107131A480039FCEBE66DFEF36A127A43FDFF`
+- 頁數：36；150 DPI；全部 36 頁逐頁聯絡頁目視檢查。
+- 渲染方式：Microsoft Word COM 以唯讀模式匯出 PDF，PDFium 轉成頁面 PNG。LibreOffice 不可用；匯出前後 DOCX SHA 未變。
+- 判定：PASS，附一項版面註記。
+
+## 結果
+
+- 第 3、5、9 節標題與相應表格已在同頁面方向內開始，修正了前版標題落在上一頁的問題。
+- 表格標頭重複、資料列完整、無文字裁切或互相覆蓋。
+- 最後七項正式採用前核實清單收在第 36 頁；沒有額外稀疏尾頁。
+- 第 21 頁是表 8-3 的四列續頁，有重複表頭，內容可讀；第 9 節自第 22 頁開始。
+
+## 頁面影像索引
+
+- `docs/ttqs-quality-20261016/quality-review/0061_R01/evidence/render_R03/contact-001-004.png` — SHA-256 `6D185B3BD98B2F1CAA03DCE2010BBCE8DA2947F813D39F45E7C186E9CAC4FC5F`, 1371561 bytes
+- `docs/ttqs-quality-20261016/quality-review/0061_R01/evidence/render_R03/contact-005-008.png` — SHA-256 `AAC09CCA703C4B74F541E8C91E5F9711812E095C47175F2294C2A67FB7F5808D`, 1146588 bytes
+- `docs/ttqs-quality-20261016/quality-review/0061_R01/evidence/render_R03/contact-009-012.png` — SHA-256 `9D9DC0F57E03C3F998AC7CE9A63D0DA28E44E6A7D4570C6B3D3DE6A88B3075EE`, 940565 bytes
+- `docs/ttqs-quality-20261016/quality-review/0061_R01/evidence/render_R03/contact-013-016.png` — SHA-256 `CC77DC71DC97A47184F45DA0122FED9FEAD3ABA6E030CBEEBF64305D2F36DEAD`, 964863 bytes
+- `docs/ttqs-quality-20261016/quality-review/0061_R01/evidence/render_R03/contact-017-020.png` — SHA-256 `3DA8E8E7915538F17C61F3428EB2FB61AF8E1470BE89B565EE819B11FFCA662D`, 1270237 bytes
+- `docs/ttqs-quality-20261016/quality-review/0061_R01/evidence/render_R03/contact-021-024.png` — SHA-256 `CB711366F3706F2CE028085DAAEE4F1BBD2090C0DE6AC88CDFE7AD4650FC01AC`, 928120 bytes
+- `docs/ttqs-quality-20261016/quality-review/0061_R01/evidence/render_R03/contact-025-028.png` — SHA-256 `D4901F374187CA264D686F1E524ED2F96980BCBF9B2A933D7185479C58B71716`, 1345805 bytes
+- `docs/ttqs-quality-20261016/quality-review/0061_R01/evidence/render_R03/contact-029-032.png` — SHA-256 `5B8DA3223EBE07D7E4E81FCF80959988079CE364EA1DEB08D4DD9032F77EA728`, 1484834 bytes
+- `docs/ttqs-quality-20261016/quality-review/0061_R01/evidence/render_R03/contact-033-036.png` — SHA-256 `3A8D958B10D32B2F56928D455577065798883F28DD3BFC0AA4FA4452DEE60390`, 1516140 bytes

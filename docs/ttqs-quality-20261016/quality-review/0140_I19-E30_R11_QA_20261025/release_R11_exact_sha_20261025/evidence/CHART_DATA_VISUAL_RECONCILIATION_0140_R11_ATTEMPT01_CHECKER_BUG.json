@@ -1,0 +1,92 @@
+{
+  "schema": "ttqs-one-0140-r11-chart-data-visual-reconciliation-v1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0140-I19-E30-R11-CHART-F4-RECONCILIATION",
+  "doc_id": "0140",
+  "official_requirement_id": "I19-E30",
+  "official_checklist_index": 154,
+  "candidate_state": "CANDIDATE",
+  "candidate_docx_sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d",
+  "candidate_bytes": 127801,
+  "inputs": {
+    "synthetic_dataset_sha256": "d1322d85bb809f3606a2edf4a8e0a26b9bb461dee4577e91ea0522972694c63d",
+    "period_summary_csv_sha256": "fe8c78984fc9e263212be7de724449b71747f50a1a5bffadbff1a4cca3b393ff",
+    "embedded_chart_sha256": "6863393aba501342057715f360c2a3651b266e6edd14a6a87ad58ad38e6c6e0b",
+    "word_native_pdf_sha256": "ed2b1cb66440eb5f4db83023d794587467c8836197fed4ca686fc86de49bc5bc",
+    "word_native_page9_png_sha256": "02b14a9341e78f731caf9ec20aaa231c864546b5a6bfd79b9c9b47c2bd39be0b",
+    "visual_qa_receipt_sha256": "e077d1662a8d23706ad5de51f794ea908c69cfbc4682e608dd63fc301c8aa96a",
+    "comprehensive_qa_receipt_sha256": "bc3655dbe60bebfe4bc7dda65514808ae3ccb50cf85098e4f7fcb059ab5028d2"
+  },
+  "annual_recomputed_and_visually_transcribed_values": [
+    {
+      "year": "2023",
+      "dataset_row_count": 20,
+      "eligible_denominator": 20,
+      "active_numerator": 12,
+      "adoption_pct_recomputed": "60.00%",
+      "complete_all_tasks_numerator": 9,
+      "completion_pct_of_eligible_recomputed": "45.00%",
+      "summary_csv_matches": false,
+      "chart_labels_seen_on_word_page9": {
+        "adoption": "60.00%",
+        "completion": "45.00%"
+      },
+      "chart_labels_match_recomputed": true
+    },
+    {
+      "year": "2024",
+      "dataset_row_count": 28,
+      "eligible_denominator": 28,
+      "active_numerator": 22,
+      "adoption_pct_recomputed": "78.57%",
+      "complete_all_tasks_numerator": 18,
+      "completion_pct_of_eligible_recomputed": "64.29%",
+      "summary_csv_matches": true,
+      "chart_labels_seen_on_word_page9": {
+        "adoption": "78.57%",
+        "completion": "64.29%"
+      },
+      "chart_labels_match_recomputed": true
+    },
+    {
+      "year": "2025",
+      "dataset_row_count": 32,
+      "eligible_denominator": 32,
+      "active_numerator": 28,
+      "adoption_pct_recomputed": "87.50%",
+      "complete_all_tasks_numerator": 25,
+      "completion_pct_of_eligible_recomputed": "78.13%",
+      "summary_csv_matches": false,
+      "chart_labels_seen_on_word_page9": {
+        "adoption": "87.50%",
+        "completion": "78.13%"
+      },
+      "chart_labels_match_recomputed": true
+    }
+  ],
+  "visual_inspection": {
+    "page": 9,
+    "page_png_sha256": "02b14a9341e78f731caf9ec20aaa231c864546b5a6bfd79b9c9b47c2bd39be0b",
+    "method": "Direct visual inspection of the exact Word-native page-09 PNG; the chart labels, legend, year axis, 0-100% scale, caption, and SAMPLE/SYNTHETIC label were read from the rendered page.",
+    "series": {
+      "blue": "普及率",
+      "orange": "合格者全任務完成率"
+    },
+    "result": "PASS_CHART_LABELS_MATCH_DATASET"
+  },
+  "checks": {
+    "candidate_matches_manifest": true,
+    "candidate_matches_build_receipt": true,
+    "candidate_matches_comprehensive_qa": true,
+    "dataset_matches_manifest": true,
+    "chart_matches_build_receipt": true,
+    "word_pdf_matches_render_receipt": true,
+    "page9_png_listed_in_visual_receipt": false,
+    "render_pages_equal_visually_reviewed_pages": false,
+    "all_annual_csv_and_chart_values_match": false
+  },
+  "result": "FAIL",
+  "real_data_status": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED",
+  "scope_limit": "This closes only visual finding F4 (chart-value reconciliation) for the exact R11 SHA. It is not a full independent semantic re-review or formal acceptance. Actual model/provider identity of the separate semantic review remains UNKNOWN."
+}

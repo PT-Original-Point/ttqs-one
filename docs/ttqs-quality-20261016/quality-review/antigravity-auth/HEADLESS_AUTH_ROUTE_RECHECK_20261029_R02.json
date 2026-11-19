@@ -1,0 +1,88 @@
+{
+  "schema": "TTQS_ONE_ANTIGRAVITY_HEADLESS_AUTH_ROUTE_RECHECK_R02",
+  "project_id": "TTQS_ONE",
+  "command": "RESTORE_ANTIGRAVITY_HEADLESS_AUTH_WITHOUT_RELOGIN",
+  "observed_at_local": "2026-10-29T13:01:06.4358408+08:00",
+  "evidence_scope": "Current Windows identity/version/keyring checks plus one hidden bounded explicitly model-selected text request. Private CLI log content and account identifiers excluded.",
+  "tui": {
+    "human_reported": "PASS_AT_SCREENSHOT_TIME",
+    "screenshot_cli_version": "1.4.9",
+    "screenshot_capture_time": "UNKNOWN",
+    "current_tui_auth": "UNKNOWN"
+  },
+  "windows_cli": {
+    "current_user_match": "PASS: headless process owner matched current Windows identity; Human-reported TUI used same Windows user",
+    "executable": "%LOCALAPPDATA%\\agy\\bin\\agy.exe",
+    "current_version": "1.4.10",
+    "screenshot_version": "1.4.9",
+    "version_match": false,
+    "path_in_current_shell_PATH": false,
+    "explicit_path_exists": true,
+    "credential_manager_gemini_target_present": true,
+    "credential_secret_read": false
+  },
+  "model_catalog": {
+    "command": "agy models",
+    "exit_code": 0,
+    "requested_model_listed": true,
+    "output_sha256": "85e245ee6b6eea8450b0a953be6bc93480da5086eaa233722cfd9057961fa32",
+    "catalog_listing_is_not_route_proof": true
+  },
+  "bounded_headless_test": {
+    "pid": 106300,
+    "process_owner_matches_current_identity": true,
+    "requested_model": "gemini-3.8-flash-high",
+    "explicit_model_flag_used": true,
+    "hidden_noninteractive": true,
+    "sandbox_enabled": true,
+    "started_at_local": "2026-10-29T13:00:55+08:00",
+    "finished_at_local": "2026-10-29T13:01:06.4358408+08:00",
+    "duration_seconds": 10.628,
+    "exit_code": 0,
+    "stdout_classification": "EXACT_MATCH_AGY_HEADLESS_OK",
+    "stdout_sha256": "AD469F03757A9AC0FF6DAA4CDE3C4AFED963F91F7D2F7C3C8C50FE186BA61E84",
+    "stderr_classification": "EMPTY",
+    "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+    "private_log_sha256": "DFD220C9394C38E2736732D157BAF7363B2950448B18DD026FA34A6AE4407430",
+    "token_usage": "UNKNOWN"
+  },
+  "auth_events": {
+    "keyring_target_present": true,
+    "cli_loaded_keyring_token_nonexpired": true,
+    "chained_auth": "authenticated_via_keyring",
+    "oauth_action_required": "NO",
+    "secret_values_read_or_published": false
+  },
+  "routing": {
+    "requested_model": "gemini-3.8-flash-high",
+    "catalog_listed": true,
+    "resolver_event": "Model ID gemini-3.8-flash-high not in local config; resolver defaulted to CCPA, even though --model was supplied.",
+    "actual_served_model": "UNKNOWN",
+    "gemini_route": "NOT_QUALIFIED",
+    "headless_auth": "PASS",
+    "ccpa_fallback_present": true
+  },
+  "launcher_diagnostics": {
+    "preflight_errors": 2,
+    "first": "Start-Process argument splitting caused unexpected argument with; no model request",
+    "second": "--print-timeout required a duration unit; exit 2; no model request",
+    "corrected_final_request_count": 1,
+    "no_retry_after_final_request": true
+  },
+  "document_route": {
+    "doc_id": "0128",
+    "review_route": "PAUSED_PENDING_GEMINI_ROUTE_QUALIFICATION",
+    "candidate_or_existing_receipts_modified": false,
+    "resumed": false,
+    "reason": "Headless auth passed, but resolver fallback prevents qualifying requested Gemini route."
+  },
+  "non_mutation": {
+    "oauth_login_or_logout": false,
+    "credential_store_changed": false,
+    "cli_reinstalled": false,
+    "computer_use": false,
+    "dangerous_permission_bypass": false
+  },
+  "next_action": "Keep 0128 Gemini review paused; inspect effective model-resolution/config mapping without changing credentials while independent READY TTQS work proceeds.",
+  "candidate_state": "CANDIDATE_ONLY; no formal acceptance implied."
+}

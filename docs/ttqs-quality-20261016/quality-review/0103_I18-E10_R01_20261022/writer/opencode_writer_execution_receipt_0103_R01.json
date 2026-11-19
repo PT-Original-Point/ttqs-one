@@ -1,0 +1,87 @@
+{
+  "work_id": "TTQS-0103-I18-E10-R01-WRITER-20261022",
+  "doc_id": "0103",
+  "requirement_id": "I18-E10",
+  "worker": "OpenCode v2 CLI",
+  "cli_version": "2.0.32",
+  "requested_model": "opencode/deepseek-v4.1-flash-free",
+  "agent": "plan",
+  "computer_use": false,
+  "auto_approve": false,
+  "start_tpe": "2026-10-22T00:21:22.9074418+08:00",
+  "end_tpe": "2026-10-22T00:25:48.8666275+08:00",
+  "elapsed_seconds": 265.96,
+  "input_packet_path": "writer/writer_packet_0103_R01.md",
+  "input_packet_bytes": 19393,
+  "input_packet_sha256": "3c3b24af5b26686f98391db4990aecefa0850847bc1c40c157d2a03e2b75ba7b",
+  "stdout_path": "writer/opencode_0103_R01_stdout.jsonl",
+  "stdout_bytes": 59741,
+  "stdout_sha256": "2b924969c3fd4bda669bb21c17f73cb1f6db946ba5707e1c67dd3ae226121e3e",
+  "stderr_path": "writer/opencode_0103_R01_stderr.txt",
+  "stderr_bytes": 0,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "exit_code": 0,
+  "requested_model_current_catalogued": true,
+  "official_open_code_pricing_source": "https://dev.opencode.ai/v2/docs/console/models",
+  "provider_billing_actual": "UNKNOWN",
+  "actual_provider_model_identity": "UNKNOWN_NOT_EMITTED_IN_JSONL",
+  "fallback_identity": "UNKNOWN_NOT_EMITTED_IN_JSONL",
+  "output": "PENDING_PARSE",
+  "session_id": "ses_ea0bb8dcdffeCEYoH8nEmm3tet",
+  "process_id": 59264,
+  "event_types": [
+    "step_finish:1",
+    "step_start:2",
+    "text:2"
+  ],
+  "tool_calls_observed": 0,
+  "steps": [
+    {
+      "reported_cost": 0,
+      "reason": "length",
+      "tokens": {
+        "input": 8004,
+        "output": 12185,
+        "reasoning": 19815,
+        "cache": {
+          "read": 1792,
+          "write": 0
+        }
+      }
+    }
+  ],
+  "aggregate_usage": "PARTIAL: second text segment has no step_finish event; only first step usage recorded",
+  "reported_first_step_usage": {
+    "input": 8004,
+    "output": 12185,
+    "reasoning": 19815,
+    "cache": {
+      "read": 1792,
+      "write": 0
+    }
+  },
+  "reported_first_step_cost": 0,
+  "raw_stdout_sha256": "2b924969c3fd4bda669bb21c17f73cb1f6db946ba5707e1c67dd3ae226121e3e",
+  "raw_stdout_bytes": 59741,
+  "manuscript_sha256": "e7955fab1e0b005052a20a2cfd64dd93a745ca5b2a80a1f98875bb64398dfb42",
+  "manuscript_chars": 29042,
+  "deterministic_checks": {
+    "title": true,
+    "has_form_A": true,
+    "has_form_B": true,
+    "has_form_C": true,
+    "has_form_D": true,
+    "has_form_E": true,
+    "has_form_F": true,
+    "request_not_sent": true,
+    "case_01_request_draft_only": true,
+    "case_02_hold": true,
+    "replacement_register": true,
+    "metric_zero_over_zero_na": true,
+    "real_original_unknown": true,
+    "formal_acceptance_not_granted": true,
+    "negative_neighbor_0096_separate": true,
+    "no_internal_sha_in_manuscript": true
+  },
+  "status": "TEXT_RECOVERED; EXIT_0; MANUSCRIPT_CONTENT_BOUNDARY_COMPLETE; TRACE_MISSING_FINAL_STEP_FINISH; SEMANTIC_REVIEW_PENDING; DOCX_NOT_BUILT"
+}

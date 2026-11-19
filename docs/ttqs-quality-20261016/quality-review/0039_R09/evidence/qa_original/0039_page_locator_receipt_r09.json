@@ -1,0 +1,135 @@
+{
+  "doc_id": "0039",
+  "requirement_id": "I08-E03",
+  "official_checkbox_sequence": "040",
+  "unique_blueprint_row_sha256": "2578c3db9d5f6faebef56c110038b974c1b0ec92cfb774ec8bf29a0391eecc28",
+  "candidate_sha256": "3e7ed5f173dc4604803f477289f1d6190e95a5c58d3a229420eaee67037080f5",
+  "replacement_register_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0039_R09\\sources\\0039_逐筆示範資料替換與追溯清冊_R09.csv",
+  "register_sha256_before": "b161f79d3c46f33b68f23d01eb078ff8488b3aaf5b1f5dfe48f16b5ea10fe605",
+  "register_sha256_after": "e3c0c0bedc07f61c05a9063e5c04d7c982110cb239bd2a9457969fe360d66e9f",
+  "register_rows": 175,
+  "mapped_rows": 175,
+  "unresolved_rows": 0,
+  "page_start_counts": {
+    "1": 0,
+    "2": 10,
+    "3": 12,
+    "4": 19,
+    "5": 10,
+    "6": 9,
+    "7": 11,
+    "8": 6,
+    "9": 11,
+    "10": 53,
+    "11": 15,
+    "12": 9,
+    "13": 9,
+    "14": 1
+  },
+  "word_tables": 31,
+  "word_table_rows_read": 162.0,
+  "paragraph_locations_read": 3,
+  "caption_to_word_table": {
+    "表1": 2,
+    "表2": 3,
+    "表3": 5,
+    "表4": 6,
+    "表5": 7,
+    "表6": 8,
+    "表7": 9,
+    "表8": 10,
+    "表9": 11,
+    "表M1": 12,
+    "表M2": 13,
+    "表M2-A": 14,
+    "表M3": 15,
+    "表M4": 16,
+    "表M4-A": 17,
+    "表M5": 18,
+    "表M5-A": 19,
+    "表M6": 20,
+    "表10": 21,
+    "表11": 22,
+    "表12": 23,
+    "表13": 24,
+    "表14": 25,
+    "表15": 26,
+    "表16": 28,
+    "表17": 29,
+    "表18": 30
+  },
+  "mapping_method": "Microsoft Word COM read-only row-level pagination of exact R09; data row n is Word row n+1 after the header; exact content match for cross-case 0033 row; full table span for section-only locators; exact COM Find for attendance and calculation paragraph. F001 corrected to the exact paragraph location independently read as page 4; targeted sample values F051-F053/F060-F062/F064-F066 synchronized verbatim with the R09 M2/M4/M5 body cells.",
+  "mapping_samples": {
+    "Table09_first_data_row": {
+      "page_start": 5,
+      "page_end": 5,
+      "basis": "Word COM Table09 data row1",
+      "locator": "表09 / 資料列1 / 示範單元與時數"
+    },
+    "M1_cross_reference": {
+      "page_start": 5,
+      "page_end": 5,
+      "basis": "Word COM M1 data row4",
+      "locator": "表 M1 / 資料列4 / 責任與驗收；交叉連結表16 A02"
+    },
+    "M2A": {
+      "page_start": 6,
+      "page_end": 6,
+      "basis": "Word COM table span",
+      "locator": "表 M2-A / 五筆合成前測現況"
+    },
+    "A06": {
+      "page_start": 12,
+      "page_end": 12,
+      "basis": "Word COM Table16 data row6",
+      "locator": "表16 / 資料列6 / 完整待辦與驗收"
+    },
+    "attendance": {
+      "page_start": 3,
+      "page_end": 3,
+      "basis": "Word COM exact Find",
+      "locator": "表04後 / 合成出席欄位示範 / R01–R05"
+    },
+    "cross_case_0033": {
+      "page_start": 14,
+      "page_end": 14,
+      "basis": "Word COM Table18 row containing 0033 I07-E01",
+      "locator": "表18文件邊界與來源 / 0033另案列"
+    },
+    "follow_up_calculation": {
+      "page_start": 12,
+      "page_end": 12,
+      "basis": "Word COM exact paragraph location",
+      "locator": "合成決議列管覆蓋與驗收完成率演算 / 表16 A01–A06"
+    },
+    "F001": {
+      "page_start": 4,
+      "page_end": 4,
+      "basis": "Independent exact-SHA review plus exact paragraph text match",
+      "locator": "課程設計情境說明 / 示範課程主題"
+    }
+  },
+  "pdf_sha256": "c3594436c13ff8f26fb41855040f61b255b87b89dadaee236af0a96039a55657",
+  "page_count": 14,
+  "exact_sha_bound_after_final_layout_adjustment": true,
+  "validation": "All 175 row references are page-mapped; the 10 reviewer-identified content/location mismatches are synchronized to the exact R09 body, preserving the DOCX SHA and pagination.",
+  "review_sync": {
+    "prior_register_sha256": "b161f79d3c46f33b68f23d01eb078ff8488b3aaf5b1f5dfe48f16b5ea10fe605",
+    "current_register_sha256": "e3c0c0bedc07f61c05a9063e5c04d7c982110cb239bd2a9457969fe360d66e9f",
+    "preserved_prior_register": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0039_R09\\sources\\history\\0039_逐筆示範資料替換與追溯清冊_R09_PRE_REVIEW_SYNC.csv",
+    "corrected_fact_ids": [
+      "0039-F001",
+      "0039-F051",
+      "0039-F052",
+      "0039-F053",
+      "0039-F060",
+      "0039-F061",
+      "0039-F062",
+      "0039-F064",
+      "0039-F065",
+      "0039-F066"
+    ],
+    "docx_sha256": "3e7ed5f173dc4604803f477289f1d6190e95a5c58d3a229420eaee67037080f5",
+    "docx_modified": false
+  }
+}
