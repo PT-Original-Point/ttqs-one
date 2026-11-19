@@ -11,7 +11,8 @@
     "deterministic": "PASS_DETERMINISTIC",
     "semantic": "PASS_W1_EXACT_SHA",
     "w2": "NOT_EXECUTED_LOCAL_CLI_REJECTED",
-    "visual": "PASS_ALL_14_PAGES"
+    "visual": "PASS_ALL_14_PAGES",
+    "github_raw_readback": "PASS_RAW_BYTE_READBACK"
   },
   "w2_block": "ANTIGRAVITY_LS_ADDRESS is not set",
   "files": [
@@ -119,6 +120,20 @@
       "path": "source/UNIQUE_BLUEPRINT_ROW_0029.json",
       "bytes": 7571,
       "sha256": "9171b4b145d0d517acbf0bd60d0be072bdcb9ae6b93fe6bc2c0e4bce5f9243f2"
+    },
+    {
+      "path": "qa/GITHUB_RAW_BYTE_READBACK_CURRENT_HEAD_20261119.json",
+      "bytes": 2165,
+      "sha256": "59ba2693c6aedf2e909673b019353a72071af195e37c37e89774c22085cf9c77"
     }
-  ]
+  ],
+  "github_raw_readback": {
+    "status": "PASS_RAW_BYTE_READBACK",
+    "candidate_sha256": "6b3150ba1bb3609bb7c14f8b5d8989d09d0da30506baa2b74f504eba4df7b289",
+    "receipt_path": "docs/ttqs-quality-20261016/0029_I05-E03_CANDIDATE_R12_20261117/qa/GITHUB_RAW_BYTE_READBACK_CURRENT_HEAD_20261119.json",
+    "readback_commit": "25d40b0913dd47a824196ab45f0e84369d9f9679",
+    "remote_bytes": 49654,
+    "remote_git_blob_sha1": "b2e2885b93d2cc3dfa35659c7788cc3c003c6993",
+    "verified_at_tpe": "2026-11-19T19:23:30.5410930+08:00"
+  }
 }
