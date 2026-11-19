@@ -1,0 +1,40 @@
+{
+  "schema": "TTQS_ONE_EXACT_SHA_SEMANTIC_REVIEW_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0019",
+  "requirement_id": "I03-E02",
+  "candidate_revision": "R04",
+  "candidate_docx_sha256": "F3F34E99F7CCE824908969D69BEBEE1F8BE3C223A29ED88A4CF1560674B2FB2C",
+  "candidate_bytes": 48671,
+  "extracted_text_sha256": "FB5BB4CF1AFA90A378ED436C101C2353EA6770228EA94132C646C3990401AFF9",
+  "official_evidence_pdf_sha256": "805386B77DF045B396FABAFED7A47D12491C25A0B5744EDD9A04876CAEE34709",
+  "crosswalk_sha256": "1DDFBB608BCAD25170683DDB42A1DBB27BAFA6F1F35FF0498F1B8D75B24F0679",
+  "blueprint_sha256": "AD03323D591CBEA62814A8A59D233110587F2741BED8F944380B1FAA2D04D216",
+  "status": "PASS",
+  "verdict": "SEMANTIC_PASS",
+  "reviewer": "W2 Antigravity CLI",
+  "work_id": "TTQS_ONE_0019_I03-E02_R04_EXACT_SHA_SEMANTIC_W2_R01_20261119",
+  "requested_route": "gemini-3.8-flash-high",
+  "served_model": "UNKNOWN",
+  "os_pid": 15808,
+  "conversation_id": "1f8f1bb3-8774-4790-85d1-ff9838c177c3",
+  "packet_sha256": "74D927614ED922F63450028B01FC672E0DECA74AFA3F11BC464DAEEDA924774C",
+  "response_sha256": "DC0C7F023DCB9BE2B1E5FD5DF2BF9D753AAED10B576FBE2F3C8CE2125481BEFD",
+  "stdout_sha256": "26058C2238F4392ACC229D73345FFC54E48A3618EF3C78FC6A342F8A0F96683E",
+  "stderr_sha256": "3A7F8550106D86ABB322E8ED0FB30A0296C0E97C6BE03D5A8033B99D16737459",
+  "exit_code": 0,
+  "review_scope": "Exact-SHA semantic usability, requirement fit, field and calculation consistency, synthetic/real boundary, replacement register, and negative-neighbor separation",
+  "blockers": [],
+  "nonblocking_findings": [],
+  "evidence_anchors": [
+    "§1-§2: I03-E02 identity and learner-training/business-development evidence linkage",
+    "§4-§6: 18 substantive fields, derived CompletenessScore, attendance and missing-field formulas",
+    "§7 and §11: exception/correction traceability and replacement register",
+    "§10: separation from 0018 I03-E01 and 0020 I03-E03"
+  ],
+  "limitations": [
+    "Served model is UNKNOWN; route requested was gemini-3.8-flash-high.",
+    "Reviewer did not perform technical or visual inspection; separate exact-SHA receipts record technical PASS and all nine rendered pages PASS."
+  ],
+  "raw_evidence_directory": "source/worker/W2_R01_EXACT_SHA"
+}
