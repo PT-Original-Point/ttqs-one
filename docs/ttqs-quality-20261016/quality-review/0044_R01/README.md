@@ -50,3 +50,9 @@ OpenCode CLI v2 completed a read-only review and returned **PASS** for exact can
 ## Acceptance boundary
 
 OpenCode CLI v2 returned PASS bound to the unchanged exact candidate SHA. It directly inspected all eight supplied final page images; it did not independently re-render the DOCX. The result establishes candidate semantic review only. It does not prove actual association records, real execution, formal approval, or final Human acceptance. Do not promote this package or present synthetic examples as real evidence.
+
+## GitHub raw-byte readback (2026-11-23T06:26:54+08:00)
+
+- PR #92 branch HEAD `252faa36a343b3e16e74860528c30f80cb4a4d49` read back `candidate/0044_R01.docx` via fresh fetch + `git cat-file blob`: 49,849 bytes; SHA-256 `76bde5df4209abc6f102a15a02c5e51a5816ef3df309aaed0a0ab44ea9075644`; Git blob SHA-1 `f2fffa5a2f7a75fa75d9112fde84d3b3ce847fc8`; exact byte match.
+- Same-SHA technical integrity PASS, Word-native visual PASS (8 pages), and OpenCode independent semantic PASS (14 criteria, 0 material findings). Requested route `opencode/deepseek-v4.1-flash-free`; served model identity UNKNOWN. Package manifest pre-close verified 61/61 entries.
+- Receipt `evidence/qa_original/github_raw_byte_readback_r01_current_head_20261123.json`. Candidate remains CANDIDATE; formal acceptance NOT_GRANTED; REAL evidence NOT_ESTABLISHED.
