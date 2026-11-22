@@ -45,3 +45,9 @@ Antigravity CLI returned `SUCCESS` with process exit code 0 after 710.862 second
 The response says the loose register and Blueprint were not separately opened as standalone inputs. The frozen packet manifest and invocation show both files were present under the `inputs/` directory added to the CLI; availability does not prove the reviewer opened them. Therefore, a separate crosswalk records every one of the 247 synthetic facts: 193 normalized text matches and 54 table/formula/context matches, with no unresolved rows. The official source row is exact and labeled `NOT ASSOCIATION EVIDENCE`. The frozen R01 register and corrected R04 register are identical except the candidate-binding SHA, updated in all 248 rows. The current Blueprint confirms 0042→I09-E02, 0043→I09-E03, and 0044→I09-E04.
 
 R04 remains `CANDIDATE / NOT_PROMOTED`; the independent PASS does not assert real association interviews, approval, or formal Human acceptance. The 0043 R04 Antigravity invocation itself completed without error; that historical result is separate from the later 0044 route incident.
+
+## GitHub 原始位元組讀回（2026-11-23T06:13:48+08:00）
+
+- 從 PR #92 指定分支 HEAD `6efd16d635254b3d796abc7ea4a914c71d252e67` 以 fresh fetch + `git cat-file blob` 讀回 candidate/0043_R04.docx：61,212 bytes、SHA-256 `23e2218ccd297d82cd0fc8298fc242c66df278cb7708d824ebfb4b15449478ab`、Git blob SHA-1 `3c5ff7dc2bce920ed4086178190d45bb578e80fa`，原始位元組完全相符。
+- 同 SHA 獨立語意審查為 PASS（9/9、0 findings，檢視第 1–17 頁）；技術收據 ZIP 完整性 PASS，248 列替換資料綁定收據已保留。技術/視覺收據中的 semantic_review=PENDING 是早於獨立審查的歷史欄位；獨立審查結果另以 exact SHA 保存。
+- Readback receipt：`evidence/qa_original/github_raw_byte_readback_r04_current_head_20261123.json`。文件仍為 CANDIDATE；正式接受未授予，REAL 證據未建立。
