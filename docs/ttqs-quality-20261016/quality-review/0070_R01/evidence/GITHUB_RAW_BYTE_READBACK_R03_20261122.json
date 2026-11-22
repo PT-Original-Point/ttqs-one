@@ -1,0 +1,45 @@
+{
+  "schema": "ttqs-one-github-raw-byte-readback-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0070",
+  "requirement_id": "I16-E02",
+  "official_checkbox_serial": "077",
+  "revision": "R03_FINAL_CANDIDATE",
+  "repository": "PT-Original-Point/ttqs-one",
+  "pull_request": 92,
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "readback_commit_sha": "dafe7ad4757a8e5d86f22a4c488f7c71d74d02af",
+  "observed_at_tpe": "2026-11-22T22:12:53.476+08:00",
+  "candidate": {
+    "path": "docs/ttqs-quality-20261016/quality-review/0070_R01/candidate/0070_R01.docx",
+    "sha256": "55AF406663F29E6A3EA8FB644D61C029C74DF42934166E6076A991FDCD895BBA",
+    "git_blob_sha1": "262d1fb7d4b1164277c48893fe5d0d585c09ced3",
+    "bytes": 56045,
+    "status": "PASS_BYTES_MATCH"
+  },
+  "qa_bindings": {
+    "technical_receipt": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0070_R01/evidence/technical_review_R03.json",
+      "candidate_sha256": "55AF406663F29E6A3EA8FB644D61C029C74DF42934166E6076A991FDCD895BBA",
+      "status": "PASS_TECHNICAL_SCOPE"
+    },
+    "visual_receipt": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0070_R01/evidence/visual_review_R03.json",
+      "candidate_sha256": "55AF406663F29E6A3EA8FB644D61C029C74DF42934166E6076A991FDCD895BBA",
+      "status": "PASS_VISUAL_SCOPE",
+      "pages": 22,
+      "scope": "All 22 pages were directly inspected; page image SHA-256 records are bound to this candidate."
+    },
+    "independent_semantic_review": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0070_R01/review/independent_semantic_review_receipt_R03.json",
+      "candidate_sha256": "55AF406663F29E6A3EA8FB644D61C029C74DF42934166E6076A991FDCD895BBA",
+      "reviewer_route": "OpenCode CLI v2",
+      "requested_model": "opencode/beam-free",
+      "runtime_model_attestation": "UNKNOWN",
+      "verdict": "PASS",
+      "blocking_findings": [],
+      "nonblocking_note": "Cover identity fields are pipe-separated on one line but remain unambiguous; visual/font scope was separately checked."
+    }
+  },
+  "candidate_state": "CANDIDATE; formal Association acceptance is not asserted."
+}
