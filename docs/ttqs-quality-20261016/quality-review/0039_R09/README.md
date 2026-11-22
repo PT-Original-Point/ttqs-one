@@ -12,4 +12,4 @@
 - Official source and Unique Blueprint row: `inputs/requirement_and_blueprint_mapping.json`; Blueprint row SHA-256 `2578c3db9d5f6faebef56c110038b974c1b0ec92cfb774ec8bf29a0391eecc28`.
 - Original QA JSON receipts: `evidence/qa_original/`; source sidecars: `inputs/source_sidecars/`.
 
-**Lifecycle:** CANDIDATE, NOT PROMOTED, no formal acceptance granted. Synthetic material is not evidence of real association activity, approval, attendance, outcomes, or third-party facts.
+**Lifecycle:** CANDIDATE, NOT PROMOTED, no formal acceptance granted. Synthetic material is not evidence of real association activity, approval, attendance, outcomes, or third-party facts.- GitHub raw-byte readback: R09 candidate matched at branch HEAD 570df450c8f2d592802fc43bc73c352042e64df2; SHA-256 3e7ed5f173dc4604803f477289f1d6190e95a5c58d3a229420eaee67037080f5, Git blob SHA-1 473ea87508498884e946af0e1b24836389e7c16f, 59699 bytes. Receipt: evidence/qa_original/github_raw_byte_readback_r09_current_head_20261123.json. This does not assert REAL or formal acceptance.
