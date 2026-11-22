@@ -1,0 +1,49 @@
+{
+  "schema": "ttqs-one-github-raw-byte-readback-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0065",
+  "requirement_id": "I15-E01",
+  "official_checkbox_serial": "071",
+  "revision": "R04",
+  "repository": "PT-Original-Point/ttqs-one",
+  "pull_request": 92,
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "readback_commit_sha": "5ad9e30ff40e38194ba3397474b215a3fa7b5d5a",
+  "observed_at_tpe": "2026-11-22T22:08:07.064+08:00",
+  "candidate": {
+    "path": "docs/ttqs-quality-20261016/quality-review/0065_R04/candidate/0065_R04.docx",
+    "sha256": "4B6A0116E8EBD4A3700C4D3243532EEB54E7DEA1F6C40E56F7E8A5E7806E654D",
+    "git_blob_sha1": "c22cd326f51915bdce56596506b51f09434404bd",
+    "bytes": 59960,
+    "status": "PASS_BYTES_MATCH"
+  },
+  "qa_bindings": {
+    "technical_receipt": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0065_R04/evidence/technical_layout_receipt_R04.json",
+      "candidate_sha256": "4B6A0116E8EBD4A3700C4D3243532EEB54E7DEA1F6C40E56F7E8A5E7806E654D",
+      "status": "PASS"
+    },
+    "visual_receipt": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0065_R04/evidence/visual_review_R04.md",
+      "candidate_sha256": "4B6A0116E8EBD4A3700C4D3243532EEB54E7DEA1F6C40E56F7E8A5E7806E654D",
+      "status": "PASS_VISUAL_LAYOUT",
+      "pages": 22,
+      "scope": "Full contact sheet inspected; full-resolution pages 1, 8, 21 and 22 inspected."
+    },
+    "independent_semantic_review": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0065_R04/evidence/independent_semantic_review_R04.md",
+      "invocation_path": "docs/ttqs-quality-20261016/quality-review/0065_R04/worker/opencode_reviewer_invocation_R04.json",
+      "candidate_sha256": "4B6A0116E8EBD4A3700C4D3243532EEB54E7DEA1F6C40E56F7E8A5E7806E654D",
+      "verdict": "PASS",
+      "requested_route": "opencode/beam-free",
+      "provider_served_model": "UNKNOWN",
+      "blocking_findings": 0,
+      "nonblocking_findings": 0
+    },
+    "build_receipt_stage_note": "Build receipt records semantic review pending at build time; later technical, visual, and independent semantic receipts all bind this same candidate SHA."
+  },
+  "method": "Fetched candidate through GitHub Contents API with encoding=base64 at exact immutable PR head; decoded bytes and recomputed SHA-256. GitHub blob SHA-1 recorded separately.",
+  "disposition": "CANDIDATE_QA_COMPLETE_GITHUB_RAW_BYTES_CONFIRMED",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_data": "UNKNOWN_HOLD"
+}
