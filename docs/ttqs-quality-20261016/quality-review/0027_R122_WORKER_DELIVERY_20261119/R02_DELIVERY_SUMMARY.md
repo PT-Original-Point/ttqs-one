@@ -12,4 +12,10 @@ Status: **CANDIDATE**. This package does not claim formal acceptance.
 - The previous W2 R01 pipe failure and UNKNOWN submission state are retained separately. R02 used a changed, previously successful `stream-json` stdin transport.
 - Source-lineage caveat: deterministic QA records `CONTENT_READBACK_PASS_WITH_LEGACY_RAW_HASH_MISMATCH`; content readback is documented, but the legacy raw-hash chain is not certified.
 
-Remote synchronization and raw-byte readback are recorded separately after the GitHub write; no remote delivery is claimed by this local README.
+## GitHub exact raw-byte readback
+
+- Status: PASS_RAW_BYTE_READBACK at immutable PR branch commit 5addbce1a417ebdfd16dbb7ad45af2fe7a8965bb.
+- DOCX bytes: 77165; SHA-256: A9321C8E5D90DCD19B150B97358A325B93C644308775006283F68DEDF598D62D; Git blob SHA-1: 6fa32ac25dce95fb6cb568aea38ab096be1c7269.
+- Receipt: docs/ttqs-quality-20261016/quality-review/0027_R122_WORKER_DELIVERY_20261119/R02_candidate/qa/GITHUB_RAW_BYTE_READBACK_20261122.json.
+- Exact-SHA technical, all-24-page visual, and independent W2 semantic PASS receipts are unchanged. Candidate remains CANDIDATE; formal acceptance is NOT_GRANTED and REAL evidence is NOT_ESTABLISHED.
+- Source-lineage caveat remains CONTENT_READBACK_PASS_WITH_LEGACY_RAW_HASH_MISMATCH; no legacy hash claim was rewritten.
