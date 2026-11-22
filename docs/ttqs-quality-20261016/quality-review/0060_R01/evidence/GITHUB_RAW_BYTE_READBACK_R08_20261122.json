@@ -1,0 +1,46 @@
+{
+  "schema": "ttqs-one-github-raw-byte-readback-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0060",
+  "requirement_id": "I14-E01",
+  "official_checkbox_serial": "065",
+  "revision": "R08",
+  "repository": "PT-Original-Point/ttqs-one",
+  "pull_request": 92,
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "readback_commit_sha": "56f57c3b9d8f8bce2cc8c312c99ff2b4f1bba884",
+  "observed_at_tpe": "2026-11-22T22:03:14.215+08:00",
+  "candidate": {
+    "path": "docs/ttqs-quality-20261016/quality-review/0060_R01/candidate/0060_R08.docx",
+    "sha256": "92962DF774A7A16546829D8968DC274394FC1EFCC12421C1A355F45127E9B5C3",
+    "git_blob_sha1": "0b017d9088432eb58e4f4711501295ad79f9d419",
+    "bytes": 71613,
+    "status": "PASS_BYTES_MATCH"
+  },
+  "qa_bindings": {
+    "technical_receipt": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0060_R01/evidence/technical_qa_R08.json",
+      "candidate_sha256": "92962DF774A7A16546829D8968DC274394FC1EFCC12421C1A355F45127E9B5C3",
+      "status": "PASS"
+    },
+    "visual_receipt": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0060_R01/evidence/visual_review_R08.json",
+      "candidate_sha256": "92962DF774A7A16546829D8968DC274394FC1EFCC12421C1A355F45127E9B5C3",
+      "status": "PASS_FOR_CHANGED_PAGES; 22 unchanged pages inherited byte-identical R07 review chain",
+      "pages": 26,
+      "note": "Changed pages 18, 19, 20, 23 directly inspected; no clipping/overlap. Semantic acceptance is separately evidenced."
+    },
+    "independent_semantic_review": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0060_R01/review/opencode_v2_semantic_R08/independent_review_receipt_R08.md",
+      "candidate_sha256": "92962DF774A7A16546829D8968DC274394FC1EFCC12421C1A355F45127E9B5C3",
+      "verdict": "PASS",
+      "requested_model": "opencode/mimo-v2.6-flash-free",
+      "provider_served_model": "UNKNOWN",
+      "note": "One observation-grade formatting note: table caption runs at 10 pt; reviewer classified it non-blocking and found content legible."
+    }
+  },
+  "method": "Fetched candidate through GitHub Contents API with encoding=base64 at exact immutable PR head; decoded bytes and recomputed SHA-256. GitHub blob SHA-1 recorded separately.",
+  "disposition": "CANDIDATE_QA_COMPLETE_GITHUB_RAW_BYTES_CONFIRMED",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_data": "UNKNOWN_HOLD"
+}
