@@ -12,3 +12,4 @@
 - `FILE_HASH_MANIFEST.json` 綁定封裝檔案位元組；套件內 `.gitattributes` 停用換行轉換，以維持原始收據位元組。
 
 本次是既有候選與 QA 的回收同步，未重派 Worker，未改 DOCX 內容。
+- GitHub 原始位元組讀回：R01 DOCX 在 PR 分支 HEAD 22c491bb042d2bdcf1384a96627e8b48160354c9 逐位元組驗證，SHA-256 859b09906f9e7045e7c55090e81ab5aa84fa610423988bc870559bfdf0bb8f2f、Git blob SHA-1 5587fb513f19fc5a259c1168a60d1f7d41016dc8、48272 bytes；收據見 R01_candidate/qa/GITHUB_RAW_BYTE_READBACK_R01_CURRENT_HEAD_20261123.json。僅證明候選檔案讀回，不代表 REAL 或 FORMAL_ACCEPTED。
