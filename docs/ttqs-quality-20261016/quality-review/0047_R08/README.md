@@ -10,3 +10,9 @@
 - The reviewer logged minor non-blocking wording/label consistency items and the two-year synthetic sample limit. These are disclosed in `review/review_validation_R01.json`; no additional rebuild is justified by those comments.
 - Official neighbor boxes 0045/P03-B07 and 0048/P03-B10 have been independently confirmed against the official inventory in `evidence/REVIEW_INPUT_MANIFEST_R08.json` and `review/review_validation_R01.json`.
 - R06 reviewer history remains PARTIAL for missing named neighbor boundaries; R07 added the boundary text; R08 fixes the one-character heading defect.
+
+## GitHub raw-byte readback
+
+- Freshly fetched branch head before readback: `4f8947c40d7afd39e26744afc7bc6004b617918c`.
+- Candidate and the five linked QA/review inputs were read from that fetched Git object and SHA-256 checked byte-for-byte; receipt: `evidence/qa_original/github_raw_byte_readback_r08_20261123.json`.
+- Candidate remains CANDIDATE ONLY. Readback does not grant Human formal acceptance or establish REAL evidence.

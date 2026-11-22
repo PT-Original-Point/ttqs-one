@@ -1,0 +1,82 @@
+{
+  "schema": "ttqs-one-github-raw-byte-readback-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0047",
+  "official_requirement_id": "I10-E02",
+  "official_checkbox_sequence": "048",
+  "revision": "R08",
+  "candidate_stage": "CANDIDATE_SAMPLE_SYNTHETIC",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "readback_commit": "4f8947c40d7afd39e26744afc7bc6004b617918c",
+  "head_at_readback": "4f8947c40d7afd39e26744afc7bc6004b617918c",
+  "observed_at_tpe": "2026-11-23T06:46:05+08:00",
+  "verified_at_tpe": "2026-11-23T06:46:05+08:00",
+  "status": "PASS_RAW_BYTE_READBACK",
+  "readback_status": "VERIFIED_RAW_BYTE_READBACK",
+  "readback_method": "Fresh git fetch of the named GitHub branch, remote ls-remote head equality, then git show FETCH_HEAD:path to raw files and SHA-256; Git blob SHA-1 is recorded separately.",
+  "candidate_sha256": "b8cc8e4473e9cd7ad93f21c0cb9503865e683e3b802ac70577fbd8db3524d447",
+  "candidate_bytes": 47609,
+  "expected_file_count": 6,
+  "verified_file_count": 6,
+  "files_mismatched": 0,
+  "errors": [],
+  "files": [
+    {
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0047_R08/candidate/0047_R08.docx",
+      "exact_byte_match": true,
+      "sha256": "b8cc8e4473e9cd7ad93f21c0cb9503865e683e3b802ac70577fbd8db3524d447",
+      "git_blob_sha1": "d502af4195034093caa6d9e03e6956f74e39730c",
+      "bytes": 47609
+    },
+    {
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0047_R08/evidence/R08_VISUAL_TECHNICAL_QA.json",
+      "exact_byte_match": true,
+      "sha256": "7c3bdffb9a8318483645ee34d4523e3626e0135eba373da22743579d802e79ec",
+      "git_blob_sha1": "e7195aa5d55a636e1d4f86e6d7e366ce4abba20c",
+      "bytes": 4786
+    },
+    {
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0047_R08/review/review_validation_R01.json",
+      "exact_byte_match": true,
+      "sha256": "92d5fbb8769c2107cd105e235846d0f17f7524a8544fb08799f970a40b98aa00",
+      "git_blob_sha1": "9afc04a7f7c9fe6af1fb79884169e5bebff87443",
+      "bytes": 2983
+    },
+    {
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0047_R08/review/opencode_v2_review_R01/independent_semantic_review_R01.md",
+      "exact_byte_match": true,
+      "sha256": "8b322f0fb3e37e8a58026efde20a5fe05c884288c89ac408ad8eb292617715a1",
+      "git_blob_sha1": "ec1529f4c6a10b4cda280b94b16c0b6a4ca69825",
+      "bytes": 13281
+    },
+    {
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0047_R08/review/opencode_execution_receipt_R01.json",
+      "exact_byte_match": true,
+      "sha256": "a293cebf01a14225cf11d60e45b3ada6e61395b4e7e0b80e33ce777c59390606",
+      "git_blob_sha1": "c7daa2392bbb0282db1bfcb6b681a9d3d85d9161",
+      "bytes": 2812
+    },
+    {
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0047_R08/evidence/REVIEW_INPUT_MANIFEST_R08.json",
+      "exact_byte_match": true,
+      "sha256": "16fb281819a285c3259fc3d63ee71638e92ad6f5c72c41cd62d9973380d0b95e",
+      "git_blob_sha1": "73354b4fa69e5aa232c3bac2ca3af0c433f8dcea",
+      "bytes": 5961
+    }
+  ],
+  "qa_scope": {
+    "technical": "PASS_EXACT_SHA",
+    "visual": "PASS_ALL_8_PAGES_DIRECTLY_INSPECTED",
+    "semantic": "PASS_SEMANTIC_ONLY_WITH_PACKET_SCOPE_LIMITATIONS_RETAINED",
+    "candidate_unchanged": true
+  },
+  "reviewer_route": {
+    "requested_model": "opencode/deepseek-v4.1-flash-free",
+    "served_model": "UNKNOWN",
+    "blocker_findings": 0,
+    "nonblocking_observations": 5
+  },
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "NOT_ESTABLISHED"
+}
