@@ -1,0 +1,57 @@
+{
+  "schema": "TTQS_ONE_VISUAL_QA_R02_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0022",
+  "requirement_id": "I04-E01",
+  "revision": "R02",
+  "work_id": "TTQS_ONE_0022_I04-E01_VISUAL_QA_R02_20261124",
+  "candidate_sha256": "A3EC4E4D777C37AFF0E8E5EFC454467653904F8608B19F1FB25C340932378831",
+  "render_method": "Microsoft Word COM export to PDF; Poppler pdftoppm 100 dpi; every page included in 4 contact sheets and visually inspected",
+  "pdf_path": "render/0022_I04-E01_R02_WordNative.pdf",
+  "pdf_sha256": "68F85D73147BD78CB039A346FEB8667D58D2E0E3257514E4E44512172994ADD7",
+  "pdf_bytes": 1074624,
+  "page_count": 40,
+  "rendered_page_count": 40,
+  "contact_sheets": [
+    {
+      "path": "visual/contact-sheets/contact-01.jpg",
+      "sha256": "78278627AC3A27D59F01088F5E79C64843721EA4581A23E5AE476541741D6BD1",
+      "bytes": 592861,
+      "page_range": "1-10"
+    },
+    {
+      "path": "visual/contact-sheets/contact-02.jpg",
+      "sha256": "38614AE40F5650F8CC6686CEF6020C27BEC15157F75A665C8571143C71D2E09C",
+      "bytes": 658782,
+      "page_range": "11-20"
+    },
+    {
+      "path": "visual/contact-sheets/contact-03.jpg",
+      "sha256": "C7165C60E031B2243AD8FC29B978C60D2F7BBFEF0D5A5B97C2E781C5593C4BA4",
+      "bytes": 566777,
+      "page_range": "21-30"
+    },
+    {
+      "path": "visual/contact-sheets/contact-04.jpg",
+      "sha256": "F940A3C43B31D60EA36E6900CCD40BB780BE4ACF0D668DF30514E08B42D80DCE",
+      "bytes": 549584,
+      "page_range": "31-40"
+    }
+  ],
+  "checks": {
+    "pdf_exists_and_nonempty": true,
+    "40_pages_rendered": true,
+    "four_contact_sheets_present": true,
+    "all_rendered_pages_open": true,
+    "pdf_page_count_matches_render": true
+  },
+  "result": "PASS",
+  "visual_findings": {
+    "blocking": [],
+    "low_nonblocking": [
+      "Some narrative pages remain sparse near orientation transitions and a few appendix continuation pages contain short table fragments; text and tables remain legible with no observed clipping, overlap, missing content, or font-floor issue. No repeated cosmetic repair requested."
+    ]
+  },
+  "reviewer": "Codex visual inspection of all 40 rendered pages; separate semantic reviewer findings recorded in semantic receipt.",
+  "formal_acceptance": "NOT_ASSERTED"
+}

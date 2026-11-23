@@ -1,0 +1,104 @@
+{
+  "receipt_version": "TTQS_ONE_WRITER_RECEIPT_R01",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS_ONE_0022_I04-E01_WRITER_R01_20261116",
+  "doc_id": "0022",
+  "requirement_id": "I04-E01",
+  "created_at_tpe": "2026-11-16T13:28:12.764+08:00",
+  "output_directory": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\PARALLEL_NEXT_READY_SOURCE_PREP_20261116\\0022_I04-E01\\writer_R01",
+  "status": "COMPLETE_TEXT_BODY_AND_SUPPORTING_ARTIFACTS_CANDIDATE",
+  "candidate_status": "CANDIDATE_NOT_CURRENT_NOT_FORMALLY_ACCEPTED",
+  "inputs": {
+    "source_packet_sha256": "c188ef3dd4316c9cd88e01476477f2c0bbda0f5a2f695bc6a8b40e759e64b18d",
+    "unique_blueprint_sha256": "d39d890ed05b922990729f65541990eaf3b0a8ca69a9aeb89040d67fa6c83f99",
+    "official_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "official_page2_text_sha256": "3c295e8861ad7775a78583e9111df61ac8733a7cf40d771f942363f00572de9c",
+    "crosswalk_master_sha256": "1ddfbb608bcad25170683ddb42a1dbb27bafa6f1f35ff0498f1b8d75b24f0679",
+    "crosswalk_selected_row_sha256": "96078050897b628f4bd5d1bc3471a03902295ba431a28a8fb411b9a07960b467",
+    "blueprint_master_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+    "blueprint_selected_row_sha256": "9b8c1beecbcfe92344b28230649671fa2fd23f73672347e16a94d1a00534aac2"
+  },
+  "worker": {
+    "tool": "OpenCode CLI",
+    "version": "2.2.5",
+    "requested_model_id": "opencode/deepseek-v4.1-flash-free",
+    "session_model_id": "deepseek-v4.1-flash-free",
+    "provider_id": "opencode",
+    "actual_serving_model": "UNKNOWN",
+    "cost": 0,
+    "session_id": "ses_e1d3deb22ffexIVXcqZVJmLQaV",
+    "session_outcome": "succeeded",
+    "stream_finish_sequence": [
+      "length",
+      "stop"
+    ],
+    "stream_text_chunk_chars": [
+      27907,
+      10633
+    ],
+    "stream_text_chars_total": 38540.0,
+    "session_started_tpe": "2026-11-16T13:08:52.5770000+08:00",
+    "session_idle_tpe": "2026-11-16T13:12:12.3710000+08:00",
+    "session_duration_ms": 199794,
+    "input_tokens": 49228,
+    "output_tokens": 22558,
+    "reasoning_tokens": 16212,
+    "cost_zero_confirmed": true,
+    "process_id": 19060,
+    "parent_powershell_pid": 7516,
+    "process_exit_code": "UNKNOWN_CALLER_DID_NOT_PERSIST_EXIT_CODE",
+    "process_running_at_readback": false
+  },
+  "recovery": {
+    "first_chunk_finish": "length",
+    "first_chunk_contains_complete_report_body_before_register_marker": true,
+    "first_chunk_register_ends_mid_SF_066_row": true,
+    "continuation_finish": "stop",
+    "continuation_reemits_complete_SF_066_row": true,
+    "normalized_register_uses_complete_rows_only": true,
+    "raw_stdout_preserved": true,
+    "session_export_preserved": true,
+    "raw_concatenated_text_saved": true,
+    "report_complete_marker_check": "PASS",
+    "final_end_marker_check": "PASS",
+    "normalization_note": "Raw stream remains unchanged. The canonical register discards the truncated partial SF-066 prefix and uses the complete SF-066 row from the continuation; no second model run was made."
+  },
+  "artifacts": {
+    "requested_outputs": {
+      "report_body_sha256": "e2e18507d7ac2f50fdebbec949049b9220c82f910493db6a0295689549e191bd",
+      "synthetic_register_sha256": "ee28d9958e9649a0c99a124224ea9e8d0f0c86c4b687345d4960104599bcafe8",
+      "cross_calculation_sha256": "3f008c4051be1b18ff44907429fcaa88c2854fa503a17bcbd0960a4ef22f0b30",
+      "source_locator_sha256": "b9a12a141e32a528fa375b5cd766d97e00a764d8411ad7d319bf82cf4f988de2"
+    },
+    "raw_worker_evidence": {
+      "stdout_jsonl_sha256": "84161f7794e3b6321ec133435915b43eb397fdfd0c742ab6ad82f5ab168ac45c",
+      "response_text_concat_sha256": "ae3dfeefe68a1f56a03d506ad5584fcf031d0f71a71e123775bb9e06a86f3431",
+      "session_export_sha256": "3bac1873c028a153dd74ab0ecf2ebd44709186e09005c3fd3e30849dd7aae71f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "register_fact_rows": 112,
+    "register_fact_ids_unique": 112,
+    "body_fact_refs": 112,
+    "calc_rows": 39,
+    "dynamic_arithmetic_checks": 30,
+    "all_sf_references_resolve": true,
+    "all_calc_input_ids_resolve": true,
+    "C_31_to_C_35_NA_and_zero_division_guard": "PASS"
+  },
+  "scope": {
+    "docx_created": false,
+    "peer_docx_or_body_used": false,
+    "shared_facts_changed": false,
+    "current_changed": false,
+    "github_write_performed": false,
+    "formal_acceptance_claimed": false,
+    "visual_review_performed": false,
+    "independent_semantic_review_performed": false,
+    "human_gate": "NONE_FOR_TEXT_WRITER_STAGE"
+  },
+  "blocked_scope": [
+    "No DOCX generation, Word visual review, independent semantic review, CURRENT promotion, or GitHub write in this writer assignment.",
+    "REAL survey instruments, actual population/response evidence, approvals and post-training outcomes remain UNKNOWN per source packet."
+  ],
+  "next_legal_stage": "The text candidate may enter a separately authorized deterministic review/Word production workflow; this receipt does not claim those stages complete."
+}
