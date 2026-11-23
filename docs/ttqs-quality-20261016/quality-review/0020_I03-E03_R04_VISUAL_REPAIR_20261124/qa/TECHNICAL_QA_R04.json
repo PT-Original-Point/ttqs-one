@@ -1,1 +1,36 @@
-ºw^~)Þ
+{
+  "work_id": "TTQS_ONE_0020_I03-E03_R04_TECHNICAL_QA_20261124",
+  "doc_id": "0020",
+  "requirement_id": "I03-E03",
+  "candidate_sha256": "0E226A4B1F4C59A80D61DE12570E05D936506DD7D084BBE71D0DC583336CF80D",
+  "bytes": 61415,
+  "zip_parts": 19,
+  "word_open_and_pdf_export": "PASS",
+  "checks": {
+    "zip_integrity": true,
+    "all_xml_parts_parse": true,
+    "body_text_unchanged_from_R03": true,
+    "document_xml_equal_except_row_cantSplit": true,
+    "all_six_target_rows_keep_together": true,
+    "revision_label_R04": true,
+    "sample_percentages_recomputed": [
+      "28/30=93.3%",
+      "23/25=92.0%",
+      "42/45=93.3%",
+      "19/20=95.0%"
+    ]
+  },
+  "font_floor_and_content_checks": {
+    "body_min_pt": 10.5,
+    "table_min_pt": 9.5,
+    "basis": "R03 receipt exact SHA; all body text and non-pagination document XML are unchanged",
+    "no_placeholder": true,
+    "denominator_ids": true,
+    "formula": true,
+    "latex": true,
+    "register": true,
+    "register_rows": 46
+  },
+  "change_scope": "pagination row keep-together metadata and R03-to-R04 revision labels only",
+  "formal_acceptance": "CANDIDATE_ONLY"
+}

@@ -1,1 +1,84 @@
-�w^~)�
+{
+  "work_id": "TTQS_ONE_0020_I03-E03_R04_EXACT_SHA_INDEPENDENT_SEMANTIC_W1_20261124",
+  "doc_id": "0020",
+  "requirement_id": "I03-E03",
+  "candidate_sha256": "0E226A4B1F4C59A80D61DE12570E05D936506DD7D084BBE71D0DC583336CF80D",
+  "reviewer_context": "W1 independent semantic/usability reviewer; read-only review of the exact R04 candidate bytes and full extracted DOCX text as supplied in the packet; OpenCode local agent context. Prior R03 result treated as reference only; decision bound solely to the R04 SHA.",
+  "requested_model": "UNKNOWN",
+  "provider_served_model": "UNKNOWN",
+  "result": "PASS",
+  "scope_reviewed": [
+    "full_document_meaning_and_requirement_fit",
+    "required_section_completeness",
+    "kpi_population_and_denominator_traceability",
+    "calculation_and_formula_recomputation",
+    "operational_usability_and_title_blind_identity",
+    "sample_real_truth_boundary",
+    "negative_neighbor_distinction",
+    "replacement_register_completeness"
+  ],
+  "findings": [
+    {
+      "severity": "LOW",
+      "locator": "壹、二 權責角色與分工代碼；玖、一 三級覆核控制程序；拾壹、表五 欄位組2/2「替換負責角色」欄",
+      "evidence": "R-PLAN、R-EXEC、R-DATA、R-MGR 反覆作為填寫／覆核角色代碼出現；表五替換清單僅登錄 SYN-0020-ROLE01（覆核角色）與 ROLE02（製表角色），未見 R-PLAN/R-EXEC/R-DATA/R-MGR 各自的 SYN 替換鍵。",
+      "reason": "壹、二已明確聲明該等代碼僅為角色代碼示例，機構是否設有相同職位及授權均須依現行組織規程確認，本稿不宣稱已指派人員；屬模板角色詞彙而非合成真人／簽章事實，未隱含真實指派或核准。",
+      "disposition": "非阻塞（LOW 編輯建議）：若要求逐碼完整，可選填 R-PLAN/R-EXEC/R-DATA/R-MGR 的 SYN 鍵與真實職位對應取得路徑；不影響本次 PASS。"
+    },
+    {
+      "severity": "LOW",
+      "locator": "伍、表二 欄位組2/4「KPI適用分母 (N_kpi)」欄；拾貳、表六 欄位組1/2「本工作稿對應欄位」欄",
+      "evidence": "擷取文字出現「30D01; SAMPLE」「FLD-04 促進 KPI 代碼FLD-09 年度目標門檻」「FLD-11 異常更正註記FLD-12 覆核簽署」等相連字串。",
+      "reason": "疑似合併儲存格於純文字擷取時的串接假象；相同欄位在表一及表二其他欄位組皆清楚分隔，R04 亦宣稱已完成 20 頁 Word 渲染視覺檢查，未見影響語意辨識或代數追溯的證據。",
+      "disposition": "非阻塞（LOW）：若實際渲染確有分隔符號缺失，可於合併儲存格補空白／換行；無須為此變更語意內容或候選 SHA。"
+    }
+  ],
+  "calculations_checked": [
+    "算例一／表二欄位組3/4：28 ÷ 30 × 100% = 93.333…% → 四捨五入 93.3%；Δ = 93.3% − 90.0% = +3.3% — 正確",
+    "算例二／表二欄位組3/4：23 ÷ 25 × 100% = 92.0000% → 92.0%；Δ = 92.0% − 85.0% = +7.0% — 正確",
+    "算例三／表二欄位組3/4：42 ÷ 45 × 100% = 93.333…% → 93.3%；Δ = 93.3% − 90.0% = +3.3% — 正確",
+    "算例四／表二欄位組3/4：19 ÷ 20 × 100% = 95.0000% → 95.0%；Δ = 95.0% − 95.0% = 0.0% — 正確",
+    "分子分母約束：0 ≤ N_pass ≤ N_kpi 於四列皆成立（28≤30、23≤25、42≤45、19≤20）— 正確",
+    "四捨五入政策：百分比取至小數點後第一位，與 FLD-08 驗證規則一致 — 正確"
+  ],
+  "sample_real_boundary": {
+    "assessment": "PASS",
+    "evidence": [
+      "標題列與資料狀態列標示【CANDIDATE｜SAMPLE / SYNTHETIC 示範｜非 REAL、非正式接受】與 ACTUAL PERFORMANCE UNKNOWN。",
+      "表四專責比較合成示範與正式 REAL 原件，並逐維標明查核方式與 UNKNOWN 狀態。",
+      "所有覆核欄位為 SAMPLE-REVIEW-SIMULATED，明確不代表真人審查、核准或簽章。",
+      "KPI-04 明確說明本指標不等於法規遵循結論、不據以宣稱事故結果；成績／證照／政府／銀行等外部原件僅列所需類別與取得路徑，未偽造。",
+      "未見 待填／待核／空白表／會後填寫 等未完成佔位；缺口一律以 UNKNOWN 加取得路徑揭露。"
+    ],
+    "real_approval_or_results_implication": "NONE"
+  },
+  "negative_neighbor_check": {
+    "assessment": "PASS",
+    "neighbors_rejected": [
+      {
+        "neighbor": "0019《學員訓練及訓練機構事業發展相關的證明_可直接使用成品》(I03-E02)",
+        "distinguishing_fields": "0019 聚焦機構中長期事業發展計畫／業務承接合約／多元委訓拓展；本件聚焦個別班次類型所促進之檢定、評核、滿意度、取證率教務 KPI。僅將其核定年度策略目標作為 FLD-09 外部輸入，不複製契約與財務數據。"
+      },
+      {
+        "neighbor": "0021《學員訓練及學員職務相稱的證明_可直接使用成品》(I03-E04)",
+        "distinguishing_fields": "0021 聚焦個別學員職務說明書／職能適配／派訓符合度；本件為總體指標運算矩陣，僅提供 TYPE-A~D 分類基礎，不收錄個別學員職務或派訓審查表。"
+      }
+    ],
+    "title_blind": "PASS — 遮蔽標題／檔名／編號後，TYPE-A~D 訓練類型、KPI-01~04 定義與公式、N_total 對比 D01~D04 分母、替換清單等專屬機制仍可辨識本件並直接回應 I03-E03，無法無修改移作其他要求。"
+  },
+  "replacement_register_check": {
+    "assessment": "PASS",
+    "denominator_rows_verified": [
+      "SYN-0020-DEN01 → D01=30 名符合指標之結訓學員；假設等於 N_total（SAMPLE）；來源：正式結訓清冊、機構核定出勤門檻及成績名冊，取得前 UNKNOWN。位置：表二第1列、KPI-01、算例一。",
+      "SYN-0020-DEN02 → D02=25 名完成專案評核學員；假設全部參訓者均完成（SAMPLE）；來源：專案作品及完成評核名冊，取得前 UNKNOWN。位置：表二第2列、KPI-02、算例二。",
+      "SYN-0020-DEN03 → D03=45 份有效問卷；假設全部回收問卷符合核定有效規則（SAMPLE）；來源：問卷原始回收紀錄及機構核定有效性規則，取得前 UNKNOWN。位置：表二第3列、KPI-03、算例三。",
+      "SYN-0020-DEN04 → D04=20 名符合應試資格且有正式報名／應試紀錄者（SAMPLE）；來源：適用考試資格規則、正式報名／應試名冊與可核實結果，取得前 UNKNOWN。位置：表二第4列、KPI-04、算例四。"
+    ],
+    "notes": "R02「N_total 重用為四個 KPI 分母」缺陷已 remediated：本文將 D01/D02/D03/D04 定義為四個不同母群，並於表二註記、陸、一各分母定義及算例一至四明確標示相等數值僅為 SAMPLE 簡化假設、真實值須依各列來源重算。表五 25 筆合成識別碼（含班級、日期、母數、分子、分母、達成率、目標、門檻、量表、例外、角色）皆附目前值、所在段落／表格及未來真實來源／負責角色／核准路徑；四筆分母列與派發清單逐字一致。"
+  },
+  "rationale": "候選 SHA 0E226A4B1F4C59A80D61DE12570E05D936506DD7D084BBE71D0DC583336CF80D 在本聲明語意／可用性範圍內通過。官方要求原文「學員訓練類型及促進關鍵績效指標（KPI）。」逐字引用並绑定來源頁 1 與 PDF_TEXT_EXACT_PAGE_MATCH；Blueprint 所列 12 個必要章節（目的／責任／界線、要求拆解與證明路徑、來源與納入規則、欄位定義與證據位置、完整合成示例、核對計算與一致性、例外更正軌跡、REAL 與合成區別、覆核保管調閱、交叉引用、真實資料替換清單、附件索引與版本）全部具備，且具可執行角色、輸入、判斷、控制點、輸出與首頁 30 秒導讀。四則 KPI 公式與逐步算例均可由展示數據重算，分子分母約束與四捨五入一致。R02 分母混用缺陷已修復為四個語意不同的母群 D01~D04，並以 DEN01~DEN04 登錄，等於 N_total 之數值明確標為 SAMPLE 假設且真實證據 UNKNOWN。SAMPLE/REAL 界線嚴格維持，無第三方原件、簽章、證照或機關／銀行會計事實遭偽造，亦無真實核准或實績隱含主張。負向相鄰 0019 與 0021 以可核對差異欄位明確拒絕，遮蔽標題後專屬機制仍可辨識。僅有兩項 LOW 編輯建議，皆非阻塞。模型方面，派發未提供可驗證的 requested model，且本隻讀上下文無法核實實際 served model，故兩欄均回報 UNKNOWN，未宣稱請求模型已被提供。",
+  "requested_model_cli_argument": "opencode/hy4-flash-free",
+  "process_exit_code": "UNKNOWN (terminal response and stop event recovered; launcher did not persist process return code)",
+  "stdout_sha256": "8C4E6909DDCA5569DA7B411B7CBA146CB7692181361D1E18BFAA48EF50571C07",
+  "formal_acceptance": "CANDIDATE_ONLY"
+}
