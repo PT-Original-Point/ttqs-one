@@ -1,0 +1,60 @@
+{
+  "schema": "ttqs-one-document-deterministic-technical-qa-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0021",
+  "requirement_id": "I03-E04",
+  "revision": "R05",
+  "technical_visual_status": "PASS_TECHNICAL_VISUAL",
+  "candidate_sha256": "61872df11cb7dda679c9892c23e5b8879a42279d7655927a1297ed53eafdc335",
+  "candidate_bytes": 59041,
+  "source_packet_sha256": "472543842b08ef61308aa46f41c0270f23b44496788ba5f26cdb0f3500f48c4b",
+  "unique_blueprint_sha256": "0c887e232dfa626a73e05661ea3372cbbc0246de1f2dff1e9ec4597b9d4e2879",
+  "native_pdf_sha256": "e31e15158447491ce0bcd0eaef74b54a70a7e7372013184ed89cc522138de4b2",
+  "native_pdf_pages": 17,
+  "scope": "Deterministic technical checks reconciled from the exact-SHA R05 QA receipt. Visual acceptance is separately bound by VISUAL_QA_R05_FULL_PAGE_20261124.json.",
+  "check_count": 9,
+  "checks": [
+    {
+      "check": "DOCX package integrity",
+      "status": "PASS"
+    },
+    {
+      "check": "scoped empty row removed",
+      "status": "PASS"
+    },
+    {
+      "check": "R05 version ledger",
+      "status": "PASS"
+    },
+    {
+      "check": "prior story text preserved",
+      "status": "PASS"
+    },
+    {
+      "check": "synthetic fact IDs unique",
+      "status": "PASS"
+    },
+    {
+      "check": "body font floor",
+      "status": "PASS"
+    },
+    {
+      "check": "table font floor",
+      "status": "PASS"
+    },
+    {
+      "check": "no hard placeholders",
+      "status": "PASS"
+    },
+    {
+      "check": "no empty table rows",
+      "status": "PASS"
+    }
+  ],
+  "underlying_receipt": {
+    "path": "candidate_R05/DETERMINISTIC_QA_R05_REPAIRED.json",
+    "sha256": "fb924f6b4ef162039a3e9c04b97bfb7ee344718a6f9c06e9489f3e965ddc4842",
+    "status": "PASS_WITHIN_DETERMINISTIC_SCOPE"
+  },
+  "formal_acceptance": "NOT_GRANTED"
+}
