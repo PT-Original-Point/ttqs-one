@@ -1,0 +1,89 @@
+{
+  "schema": "ttqs-one-worker-dispatch-reconciliation/v1",
+  "project_id": "TTQS_ONE",
+  "document_id": "0125",
+  "requirement_id": "I19-E13",
+  "candidate_sha256": "1de398e4361dcacf843996b4d93b3c2dbf499b494c26887fa9d207fec299b131",
+  "observed_local_time": "2026-10-24T16:56:06.598530+08:00",
+  "primary_writer": {
+    "route": "Antigravity CLI text lane",
+    "source_text_file": "manuscript_0125_R01.md",
+    "source_text_sha256": "28ea1903f021b7b2fc1737a9af443870519e459d595073513a64787724dccbd1",
+    "dispatch_receipt_sha256": "b22dc128cb57c0f15ae529f5b76cad89bb7449ba2e630ec07919aef8c5253303",
+    "raw_successful_stdout_available": false,
+    "model_identity": "UNKNOWN",
+    "adopted_as_final_verbatim": false,
+    "arbitration_and_material_edits": "The R01A7 manuscript is a later Codex-arbitrated and deterministically typeset version; do not treat the original writer text as the final DOCX."
+  },
+  "opencode_reviewer_attempts": [
+    {
+      "candidate_sha256": "3d62f0320b99b612146af5deea006722b785ee74e375e88fbf49991f1f04c0fa",
+      "requested_model": "opencode/deepseek-v4.1-flash-free",
+      "result": "FAILED_BEFORE_INFERENCE",
+      "error": "FreeUsageLimitError HTTP 429",
+      "stdout_sha256": "9b65b4efa500dc4248aa12ace28466d0fcd21464117ccacdaf18b13c8857a567",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exit_code": 1
+    },
+    {
+      "candidate_sha256": "1de398e4361dcacf843996b4d93b3c2dbf499b494c26887fa9d207fec299b131",
+      "requested_model": "opencode/mimo-v2.6-flash-free",
+      "result": "FAILED_BEFORE_INFERENCE",
+      "error": "FreeUsageLimitError HTTP 429",
+      "stdout_sha256": "5f186f345575e4e6da6c71d470a6e4a4926ada0dbb6c1dfb9af77bc5b496a29b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exit_code": 1
+    }
+  ],
+  "antigravity_reviewer": {
+    "conversation_id": null,
+    "candidate_sha256": "1de398e4361dcacf843996b4d93b3c2dbf499b494c26887fa9d207fec299b131",
+    "attempt01": "CLI argument parse error; no model request; raw stderr preserved",
+    "attempt02": "invalid duration unit; no model request; raw stderr preserved",
+    "attempt03": {
+      "requested_model": "gemini-3.8-flash-high",
+      "cli_resolved_model": "gemini-3.8-flash-high",
+      "provider_serving_identity": "UNKNOWN_NOT_EXPOSED_BY_CLI",
+      "mode": "plan",
+      "sandbox": true,
+      "computer_use": false,
+      "terminal_status": "SUCCESS",
+      "exit_code": 0,
+      "usage": null,
+      "stdout_sha256": "d67c554e6a70cc259f1fb2d14801778697ec9292964ff7625edc20805a29d16c",
+      "stderr_bytes": 0,
+      "log_sha256": "ec9b6cc2972d928d01a844fca5b76575152cce64f100aa85a8c5118f572a0f27",
+      "response_sha256": "48013c4706a34a029803caf2244138eb2f103a9ded07397d2dfd55682dc53ffe"
+    },
+    "semantic_verdict": "PASS",
+    "visual_review": false
+  },
+  "adopted_review_conclusion": "PASS_CONTENT_TEXT_ONLY for the exact candidate SHA, with scope caveat recorded in the semantic review receipt. Technical and visual receipts are separate. Formal acceptance remains NOT_GRANTED.",
+  "setup_and_failed_review_receipts": [
+    {
+      "label": "OpenCode DeepSeek review against superseded A5 candidate; provider quota 429; no inference",
+      "stdout_sha256": "9b65b4efa500dc4248aa12ace28466d0fcd21464117ccacdaf18b13c8857a567",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exit_code": "{\n  \"status\": \"BLOCKED_BEFORE_INFERENCE\",\n  \"candidate_sha_requested\": \"3d62f0320b99b612146af5deea006722b785ee74e375e88fbf49991f1f04c0fa\",\n  \"current_candidate_sha\": \"1de398e4361dcacf843996b4d93b3c2dbf499b494c26887fa9d207fec299b131\",\n  \"reviewer\": \"OpenCode v2 CLI\",\n  \"requested_model\": \"opencode/deepseek-v4.1-flash-free\",\n  \"session_id\": \"ses_e92f3766affeacXRv6K2mBiCML\",\n  \"cli_exit_code\": 1,\n  \"provider_error\": \"provider.quota / FreeUsageLimitError / HTTP 429\",\n  \"raw_response_path\": \"E:\\\\TTQS\\\\TTQS_ONE_CODEX_RUNTIME\\\\WORK\\\\QUALITY_REBUILD_20261016\\\\0125_I19-E13_SOURCE_PREP_R01_20261024\\\\antigravity_text_lane_R01\\\\opencode_review_stdout.json\",\n  \"raw_stderr_path\": \"E:\\\\TTQS\\\\TTQS_ONE_CODEX_RUNTIME\\\\WORK\\\\QUALITY_REBUILD_20261016\\\\0125_I19-E13_SOURCE_PREP_R01_20261024\\\\antigravity_text_lane_R01\\\\opencode_review_stderr.txt\",\n  \"repair_or_retry\": \"NOT_ATTEMPTED; same provider free-quota cause has no material route change; no paid fallback\",\n  \"verdict\": \"UNKNOWN; no semantic review response was generated\",\n  \"next_action\": \"Wait for verifiably restored no-cost reviewer capacity or use a distinct already-authorized no-cost independent route; then review current exact SHA.\"\n}"
+    },
+    {
+      "label": "OpenCode Mimo review against exact A7 candidate; provider quota 429; no inference",
+      "stdout_sha256": "5f186f345575e4e6da6c71d470a6e4a4926ada0dbb6c1dfb9af77bc5b496a29b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exit_code": "1",
+      "request_sha256": "914b11cf21fd8a3cd1162acc8c85d4e85881fe009cc9112d8de96caf725f3490"
+    },
+    {
+      "label": "Antigravity review CLI argument parser failure; no model request",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "a56e70b151b6bc03877544bfe622d52286c41b4aeb1328223eeda62c9110c21c",
+      "exit_code": "2"
+    },
+    {
+      "label": "Antigravity review CLI duration unit failure; no model request",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "9ff90d3ce9966fa7568d59457e1b1dbb2f95a21dc63d4022df03502c31fff6f3",
+      "exit_code": "2"
+    }
+  ]
+}

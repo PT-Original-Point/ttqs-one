@@ -1,0 +1,60 @@
+{
+  "work_id": "TTQS-0110-I18-E19-R06-TO-R07A-TARGETED-SEMANTIC-PATCH",
+  "doc_id": "0110",
+  "requirement_id": "I18-E19",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0110_I18-E19_R01_20261023\\candidate\\0110_I18-E19_完整問卷暨行動計畫工具_R07.docx",
+  "base_sha256": "e8baec1f7d2dd5057d58a020d2e094173e0357371bf2cd6dff625daed5ca4912",
+  "candidate_sha256": "9a306bf5712437ee578867b745e7d0811959decaa862ed540a82e7e8553bd3c2",
+  "candidate_bytes": 70594,
+  "source_packet_sha256": "e3db8f4ed82b21de4dc8cfb5886c4387c123d49a0465356354a18a9be39a8d38",
+  "unique_blueprint_sha256": "81ec1fc96c9d48fa2a088fbe32ecf8bc31abd88a3d8945ba22585226440a8796",
+  "writer": "OpenCode v2 DeepSeek V4.1 Flash Free output, independently adjudicated; deterministic patch application",
+  "opencode_session": "ses_e99077a64ffemFpxXJYVYmo3pe",
+  "opencode_session_tokens": {
+    "input": 42861,
+    "output": 9697,
+    "reasoning": 20642,
+    "cache_read": 2304,
+    "client_reported_cost": 0,
+    "independent_billing": "UNKNOWN"
+  },
+  "opencode_response_sha256": "d6f88e41b003c582a8b9733634dda78b6c5ff5be246e4b578039c9f84ced627a",
+  "model_patch_ops_received": 111,
+  "model_patch_ops_applied": 119,
+  "human_codex_adjudications": [
+    "corrected OpenCode L08/L09 percentages to 3/6=50.0% from row-level sums",
+    "changed 90% target to at-least threshold; fixed n=8 requires 8/8=100%",
+    "separated F1 and F2 change-log events",
+    "removed unsupported employment-status assertion at P0077",
+    "added anonymous client fill dates and post-period narratives",
+    "added missing L10 other code and normalized agreement-option order"
+  ],
+  "unresolved": [
+    "Full 198-row replacement register must accompany exact-SHA semantic review packet.",
+    "Independent semantic review of final exact SHA pending."
+  ],
+  "state": "CANDIDATE_NOT_ACCEPTED",
+  "revision_history": [
+    {
+      "prior_exact_sha256": "3d16a7be864f1508017f3c38be7914cfe5e7c8c9239ec8c993a86756c6ec9ee6",
+      "reason": "Visual QA revealed stale step-by-step L01 calculation that did not exclude invalid respondent L06; clarified interim vs final 90% threshold.",
+      "changed_paragraphs": [
+        "P0213",
+        "P0276"
+      ]
+    },
+    {
+      "current_exact_sha256": "5cf517555b73c280c66e7daf4583e93ae4a75da22ed8f0e8b767791d5f34d2e2",
+      "state": "CANDIDATE_NOT_ACCEPTED"
+    },
+    {
+      "prior_exact_sha256": "5cf517555b73c280c66e7daf4583e93ae4a75da22ed8f0e8b767791d5f34d2e2",
+      "reason": "Aligned all explanatory prose with the fixed-denominator >=90% final threshold; made D0+30 explicitly interim and D0+60 final-pending.",
+      "changed_paragraphs": [
+        "P0280",
+        "P0282"
+      ]
+    }
+  ],
+  "previous_sha256": "5cf517555b73c280c66e7daf4583e93ae4a75da22ed8f0e8b767791d5f34d2e2"
+}

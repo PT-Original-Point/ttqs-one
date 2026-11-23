@@ -1,0 +1,43 @@
+{
+  "work_id": "TTQS-0005-I01-E02-REVIEW-CURRENT-SOURCE-PACKET-LINEAGE-W2-GEMINI38-20261116-R01",
+  "doc_id": "0005",
+  "requirement_id": "I01-E02",
+  "requested_model": "gemini-3.8-flash-high",
+  "actual_serving_model": "UNKNOWN",
+  "candidate_sha256": "a36c501893bcb4d2dadaf0adfa7d8638df5e426650a8876182a8f83aebfa1a7c",
+  "source_packet_sha256": "c8307b7f9af5e63034123a66af2e14bcfe0b06ce71d0c601c85efd663b995b12",
+  "blueprint_row_sha256": "24c927721f8b7f446eb239f65306fd52cd466ae701b6383e8f26771287bc4275",
+  "official_source_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "verdict": "PASS_CURRENT_PACKET_BINDING",
+  "checks": {
+    "current_packet_candidate_binding": {
+      "status": "PASS",
+      "details": "Supplied evidence confirms that in current source packet (SHA-256 c8307b7f9af5e63034123a66af2e14bcfe0b06ce71d0c601c85efd663b995b12), 'R07 DOCX SHA-256' matches current candidate DOCX SHA-256 (a36c501893bcb4d2dadaf0adfa7d8638df5e426650a8876182a8f83aebfa1a7c)."
+    },
+    "qa_receipt_binding": {
+      "status": "PASS",
+      "details": "Supplied evidence confirms that current deterministic QA receipt (SHA-256 367e6c97610e06942df9bbc4ba14b21d8565f0e59738376bcfe5f18561a90f4e) binds candidate SHA-256 a36c501893bcb4d2dadaf0adfa7d8638df5e426650a8876182a8f83aebfa1a7c and maps current source packet (c8307b7f9af5e63034123a66af2e14bcfe0b06ce71d0c601c85efd663b995b12), Blueprint row (24c927721f8b7f446eb239f65306fd52cd466ae701b6383e8f26771287bc4275), and Blueprint Markdown (27c2e7873d880807a09c4cf887258648c3f2fb3edfd82e3b496c2f76e2791c54) in source_evidence_sha256."
+    },
+    "identifier_and_blueprint_consistency": {
+      "status": "PASS",
+      "details": "Supplied evidence confirms that the current source packet identifies the official requirement as I01-E02, official PDF p.1 (matching official requirement PDF SHA-256 805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709), and includes matching Unique Blueprint R02 row and Markdown hashes."
+    }
+  },
+  "findings": [
+    "Current retained source packet (c8307b7f9af5e63034123a66af2e14bcfe0b06ce71d0c601c85efd663b995b12) explicitly records 'R07 DOCX SHA-256' equal to candidate SHA a36c501893bcb4d2dadaf0adfa7d8638df5e426650a8876182a8f83aebfa1a7c.",
+    "Current cross-document deterministic QA receipt (367e6c97610e06942df9bbc4ba14b21d8565f0e59738376bcfe5f18561a90f4e) consistently references candidate SHA a36c501893bcb4d2dadaf0adfa7d8638df5e426650a8876182a8f83aebfa1a7c and binds source packet SHA c8307b7f9af5e63034123a66af2e14bcfe0b06ce71d0c601c85efd663b995b12, Unique Blueprint row SHA 24c927721f8b7f446eb239f65306fd52cd466ae701b6383e8f26771287bc4275, and Blueprint Markdown SHA 27c2e7873d880807a09c4cf887258648c3f2fb3edfd82e3b496c2f76e2791c54 in its source_evidence_sha256 mapping.",
+    "Requirement identifier I01-E02 and official requirement PDF p.1 correspond consistently with official requirement PDF SHA 805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709 and Unique Blueprint R02 specifications.",
+    "QA receipt duplicate count (exact normalized duplicate count 0 vs 0003 and 0004) is acknowledged as recorded in the receipt and noted as outside reviewer semantic authority."
+  ],
+  "historical_packet_lineage": "UNRESOLVED",
+  "full_document_semantic_review": "NOT_PERFORMED",
+  "visual_review": "NOT_PERFORMED",
+  "real_evidence_verified": false,
+  "formal_acceptance": "NOT_GRANTED",
+  "evidence_limitations": [
+    "Exact historical reviewer packet bytes reviewed were not retained; the earlier reported source-packet candidate-SHA conflict remains unresolved in lineage.",
+    "Existing semantic evidence is restricted strictly to PASS_CONTENT_SCOPE for candidate SHA a36c501893bcb4d2dadaf0adfa7d8638df5e426650a8876182a8f83aebfa1a7c and cannot be converted into a full document semantic pass.",
+    "Document body was not reviewed, full semantic review was not repeated, and visual review was not performed.",
+    "Verification is metadata/lineage binding evaluation based exclusively on supplied inert text data without tool/file/shell verification of real bytes on disk."
+  ]
+}

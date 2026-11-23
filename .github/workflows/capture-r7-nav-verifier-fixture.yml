@@ -1,0 +1,81 @@
+name: Capture R7 Navigation Verifier Actual Fixture
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/capture-r7-nav-verifier-fixture.mjs'
+      - '.github/workflows/capture-r7-nav-verifier-fixture.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: read
+
+env:
+  EXTERNAL_WEBAPP_URL: 'https://script.google.com/macros/s/AKfycbznbXi-0XWNV68E-vGU9CiAE6ElXGIlDmy27EePXMdGpRaorURzKZq0dDgsNBaaZOLh/exec'
+
+jobs:
+  capture_actual_fixture:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout fixture collector source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+
+      - name: Setup Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install repository dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Install isolated Playwright dependency
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm install --no-save --ignore-scripts playwright@1.55.0
+          npx playwright install chromium --with-deps
+
+      - name: Capture actual anonymous HtmlService bytes and provider metadata evidence
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .r7-nav-fixture
+          curl --fail --silent --show-error --location --max-time 45 \
+            -H 'cache-control: no-cache' \
+            -H 'user-agent: TTQS-ONE-R7-NAV-FIXTURE/1.0' \
+            -o .r7-nav-fixture/home.raw.html \
+            "$EXTERNAL_WEBAPP_URL"
+          gh api --paginate --slurp "/repos/$GITHUB_REPOSITORY/issues/39/comments?per_page=100" > .r7-nav-fixture/provider-comments.json
+
+      - name: Capture actual Playwright DOM and click evidence
+        env:
+          R7_RAW_HTML: .r7-nav-fixture/home.raw.html
+          R7_PROVIDER_COMMENTS: .r7-nav-fixture/provider-comments.json
+          R7_FIXTURE_OUT_DIR: .r7-nav-fixture
+        run: node scripts/capture-r7-nav-verifier-fixture.mjs
+
+      - name: Verify fixture is actual and internally bound
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module -e "import fs from 'node:fs'; const f=JSON.parse(fs.readFileSync('.r7-nav-fixture/fixture.json','utf8')); if(f.schema!=='TTQS_R7_NAV_VERIFIER_ACTUAL_FIXTURE_V1') throw new Error('FIXTURE_SCHEMA'); if(f.source?.kind!=='ACTUAL_TEST_PROVIDER'||f.source?.anonymousGet!==true) throw new Error('FIXTURE_NOT_ACTUAL'); if(!Number.isInteger(f.source?.providerVersion)||!/^[0-9a-f]{40}$/.test(f.source?.providerSourceSha||'')) throw new Error('FIXTURE_PROVIDER_METADATA'); if(f.browserDom?.indicator1?.cardGetAttributeDataIndicator!=='1') throw new Error('FIXTURE_DOM_DATA_INDICATOR'); if(f.browserDom?.indicator1?.hrefAttribute!==f.browserDom?.click?.expectedUrl) throw new Error('FIXTURE_HREF'); if(f.browserDom?.indicator1?.resolvedHref!==f.browserDom?.click?.expectedUrl) throw new Error('FIXTURE_RESOLVED_HREF'); if(f.browserDom?.indicator1?.targetAttribute!=='_top') throw new Error('FIXTURE_TARGET'); if(f.browserDom?.click?.actualPageUrl!==f.browserDom?.click?.expectedUrl) throw new Error('FIXTURE_CLICK_URL'); if(f.browserDom?.click?.windowTopEqualsSelfAfter!==true) throw new Error('FIXTURE_NOT_TOP'); if(f.browserDom?.click?.scriptGoogleIframeCountAfter!==0) throw new Error('FIXTURE_SCRIPT_GOOGLE_IFRAME'); if(f.browserDom?.matrix?.found!==true||f.browserDom.matrix.headingPresent!==true||f.browserDom.matrix.warningPresent!==true||f.browserDom.matrix.documentCardCount<1) throw new Error('FIXTURE_MATRIX_CONTRACT'); if(!f.browserDom.matrix.bodyOuterHTMLFile||!/^[0-9a-f]{64}$/.test(f.browserDom.matrix.bodyOuterHTMLSha256||'')) throw new Error('FIXTURE_MATRIX_DOM_METADATA'); if(!fs.existsSync('.r7-nav-fixture/'+f.browserDom.matrix.bodyOuterHTMLFile)) throw new Error('FIXTURE_MATRIX_DOM_FILE_MISSING');"
+
+      - name: Upload exact actual fixture
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: r7-nav-verifier-actual-fixture-${{ github.run_id }}
+          path: |
+            .r7-nav-fixture/home.raw.html
+            .r7-nav-fixture/browser.top.body.outerHTML.html
+            .r7-nav-fixture/browser.content.body.outerHTML.html
+            .r7-nav-fixture/browser.matrix.body.outerHTML.html
+            .r7-nav-fixture/indicator1.link.outerHTML.html
+            .r7-nav-fixture/indicator1.card.outerHTML.html
+            .r7-nav-fixture/fixture.json
+          if-no-files-found: error
+          retention-days: 30

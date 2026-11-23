@@ -1,0 +1,97 @@
+{
+  "receipt_id": "TTQS_ONE_R09_T01_T14_LIVE_RECONCILIATION_20261022",
+  "observed_at_tpe": "2026-10-22T16:30:12+08:00",
+  "repo_head": "b1ad91c74f3fe57f139fa26e0324d60da65d5b7f",
+  "fixture_receipt_path": "docs/ttqs-quality-20261016/quality-review/R09_WIN10_CLOSED_LOOP_20261022/r09_guard_scenarios_receipt_20261022.json",
+  "fixture_receipt_sha256": "9116e72e2dc7e076e08fae5ed46d0812da6d7bd60888898604e2aadf6ad84a43",
+  "fixture_script_path": "docs/ttqs-quality-20261016/quality-review/R09_WIN10_CLOSED_LOOP_20261022/r09_guard_scenarios_20261022.py",
+  "fixture_script_sha256": "b0cb9ac8de3871f2f23a096d8f4f2355ee2605c6c754b1fe0d1dd02b29462272",
+  "classification": "Fixture results remain PASS_SIMULATION only. Live evidence below is a separate snapshot, not a Windows E2E suite pass.",
+  "tests": [
+    {
+      "test_id": "T01",
+      "fixture_result": "PASS_SIMULATION",
+      "live_result": "PASS_LIVE_SNAPSHOT",
+      "evidence": "OpenCode PID 45628 is only the persistent service; R07 semantic session completed, no active OpenCode Writer PID observed."
+    },
+    {
+      "test_id": "T02",
+      "fixture_result": "PASS_SIMULATION",
+      "live_result": "PARTIAL_LIVE",
+      "evidence": "20 legacy WINWORD owners remain UNKNOWN; current R07 render processes 72848 and 16684 are alive/responding; no process was killed."
+    },
+    {
+      "test_id": "T03",
+      "fixture_result": "PASS_SIMULATION",
+      "live_result": "FAIL_LIVE_ALIGNMENT",
+      "evidence": "Existing dashboard is stale (last modified 2026-10-05) and no live status listener on 8765/8766; GitHub head is b1ad91c74f3f."
+    },
+    {
+      "test_id": "T04",
+      "fixture_result": "PASS_SIMULATION",
+      "live_result": "FAIL_LIVE_ALIGNMENT",
+      "evidence": "Dashboard does not expose TTQS project ID, Windows host, branch head, work ID or source freshness."
+    },
+    {
+      "test_id": "T05",
+      "fixture_result": "PASS_SIMULATION",
+      "live_result": "PARTIAL_LIVE",
+      "evidence": "Native Goal readback says active; single Codex automation config is ACTIVE at 120m. Native last/next run and natural 2h execution are UNKNOWN/NOT_TESTED."
+    },
+    {
+      "test_id": "T06",
+      "fixture_result": "PASS_SIMULATION",
+      "live_result": "PASS_LIVE_SNAPSHOT",
+      "evidence": "Stale BUILD_QUEUE has 142 entries without useful per-item status and no 0100/0101 IDs; 0100/0101 artifacts were source-derived and remote byte-identical; 0105 R07 was derived READY from official source/Blueprint."
+    },
+    {
+      "test_id": "T07",
+      "fixture_result": "PASS_SIMULATION",
+      "live_result": "PENDING_RENDER_LANE",
+      "evidence": "LibreOffice unavailable; Word PDF export processes remain alive and no PDF exists; this blocks only 0105 visual verification."
+    },
+    {
+      "test_id": "T08",
+      "fixture_result": "PASS_SIMULATION",
+      "live_result": "PASS_LIVE_GUARD",
+      "evidence": "0105 Writer attempt 2 exited 0 but had no adoptable manuscript; not treated as deliverable."
+    },
+    {
+      "test_id": "T09",
+      "fixture_result": "PASS_SIMULATION",
+      "live_result": "PASS_LIVE_SNAPSHOT",
+      "evidence": "0105 Writer attempt 3 native session succeeded and its 127585-byte manuscript was recovered; subsequent deterministic cleanup and DOCX build preserved provenance."
+    },
+    {
+      "test_id": "T10",
+      "fixture_result": "PASS_SIMULATION",
+      "live_result": "PASS_LIVE_SNAPSHOT",
+      "evidence": "Independent OpenCode semantic review returned PASS for exact candidate SHA 32bc0b8d...302027; old R04 SHA review was not reused."
+    },
+    {
+      "test_id": "T11",
+      "fixture_result": "PASS_SIMULATION",
+      "live_result": "DETECTED_ROUTE_FAILURE",
+      "evidence": "Antigravity logs for 0106 show requested Gemini was absent from local config, defaulted to CCPA, and CLI reported not logged in; 0 verified Gemini completions."
+    },
+    {
+      "test_id": "T12",
+      "fixture_result": "PASS_SIMULATION",
+      "live_result": "PASS_LIVE_SNAPSHOT",
+      "evidence": "Technical QA confirms all 162 fact IDs are SAMPLE/SYNTHETIC; no real approval or third-party evidence is claimed."
+    },
+    {
+      "test_id": "T13",
+      "fixture_result": "PASS_SIMULATION",
+      "live_result": "PENDING_GITHUB_READBACK",
+      "evidence": "Exact raw-byte readback will be recorded after the targeted push."
+    },
+    {
+      "test_id": "T14",
+      "fixture_result": "PASS_SIMULATION",
+      "live_result": "PASS_LIVE_SNAPSHOT",
+      "evidence": "No active Writer is being duplicated; only bounded R07 Word export processes remain and no subsequent writer dispatch has been issued."
+    }
+  ],
+  "aggregate": "14/14 deterministic simulations PASS at 2026-10-22T08:40 TPE; live snapshot has mixed PASS/PARTIAL/FAIL/PENDING and is not an overall PASS."
+}

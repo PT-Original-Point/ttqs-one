@@ -1,0 +1,534 @@
+{
+  "work_id": "TTQS-0105-WRITER-R07-20261022-01",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0105",
+  "requirement_id": "I18-E13",
+  "stage": "ACTIVE_PROGRESSING_BUT_NOT_RETURNED",
+  "worker": "OpenCode CLI v2",
+  "cli_version": "opencode v2.0.32",
+  "requested_model": "opencode/mimo-v2.6-flash-free",
+  "actual_serving_model": "UNKNOWN",
+  "input_candidate_sha256": "bf588da017fb6a6e8da993ce9d677e17303ae2444baa68c8c2956714ce82144d",
+  "input_packet_path": "docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022/writer/opencode_writer_0105_R07_input_packet.md",
+  "input_packet_sha256": "0c4239778fd9aea7c414c598f5165d220fd5b1cc6e6fd2bee4f6c88c089e4a69",
+  "input_packet_bytes": 261243,
+  "dispatch_started_tpe": "2026-10-22T15:12:54.682996+08:00",
+  "os_pid": "PENDING_CAPTURE",
+  "cli_exit_code": "PENDING",
+  "raw_stdout_sha256": "PENDING",
+  "raw_stderr_sha256": "PENDING",
+  "raw_response_path": "docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022/writer/opencode_writer_0105_R07_stdout.jsonl",
+  "stderr_path": "docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022/writer/opencode_writer_0105_R07_stderr.txt",
+  "native_session_id": "PENDING",
+  "response_status": "PENDING",
+  "adoption": "PENDING; no content adopted before completeness and deterministic review",
+  "provider_billing": "UNKNOWN",
+  "computer_use": "NOT_USED",
+  "filesystem_or_shell_tools_by_worker": "FORBIDDEN; plan agent; attached text only",
+  "fallback_allowed": false,
+  "first_attempt": {
+    "os_pid": 70476,
+    "started_at_tpe": "2026-10-22T15:13:07.3195897+08:00",
+    "finished_at_tpe": "2026-10-22T15:13:07.5544408+08:00",
+    "cli_exit_code": 1,
+    "stdout_bytes": 124,
+    "stdout_sha256": "e934fd3b17518389f672d7f33c21dd85d86f8ae3ff03653a27934e1a68ba2310",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "error": "OpenCode requires a positional message even when --file is supplied; CLI returned You must provide a message. No model response evidenced."
+  },
+  "repair_count": 2,
+  "repair_reason": "Only the positional message argument is added; model, agent, attached packet and work scope remain unchanged.",
+  "second_attempt": {
+    "os_pid": 72520,
+    "started_at_tpe": "2026-10-22T15:13:27.1003093+08:00",
+    "finished_at_tpe": "2026-10-22T15:17:10.3106137+08:00",
+    "cli_exit_code": 0,
+    "stdout_bytes": 17571,
+    "stdout_sha256": "1f9d5d89c4d8d433f9e4a0ca64ec64a3c1c55a33dd93f19faa2ed77c095d9051",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native_session_id": "ses_e9d8ad904ffem4gPIhUbjbWV4U",
+    "selected_model": "opencode/mimo-v2.6-flash-free",
+    "actual_serving_model": "UNKNOWN",
+    "native_outcome": "succeeded",
+    "tokens": {
+      "input": 106166,
+      "output": 4592,
+      "reasoning": 2299,
+      "cache_read": 102400,
+      "cache_write": 0,
+      "local_cost_field": 0.0,
+      "provider_billing": "UNKNOWN"
+    },
+    "response_status": "INCOMPLETE_NO_MANUSCRIPT_BYTES",
+    "reason": "Plan agent called unavailable question tool after determining full manuscript cannot fit one response; the tool request was canceled in noninteractive mode. Returned an incomplete response plus repair specification; no output was adopted."
+  },
+  "third_attempt": {
+    "status": "ACTIVE_PROGRESSING_BUT_NO_TERMINAL_RETURN",
+    "os_pid": 65076,
+    "started_at_tpe": "2026-10-22T15:19:14.5128642+08:00",
+    "agent": "build",
+    "requested_model": "opencode/mimo-v2.6-flash-free",
+    "actual_serving_model": "UNKNOWN",
+    "native_session_id": "ses_e9d858be9ffeR53uwL0FL4qS3v",
+    "native_session_outcome": "ACTIVE; idle_outcome null",
+    "native_last_updated_tpe": "2026-10-22T15:36:48.338+08:00",
+    "native_last_assistant_content": "File-tool write/edit activity observed; manuscript being written in serialized sections; no final assistant response or CLI exit yet.",
+    "tokens_snapshot": {
+      "input": 128386,
+      "output": 17378,
+      "reasoning": 17244,
+      "cache_read": 362560,
+      "cache_write": 0,
+      "local_cost_field": 0.0,
+      "provider_billing": "UNKNOWN",
+      "observed_at_tpe": "2026-10-22T15:38:32+08:00",
+      "not_final": true
+    },
+    "cli_exit_code": "PENDING",
+    "raw_stdout_path": "docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022/writer/opencode_writer_0105_R07_attempt03_stdout.jsonl",
+    "raw_stderr_path": "docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022/writer/opencode_writer_0105_R07_attempt03_stderr.txt",
+    "output_target": "docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022/writer/opencode_writer_manuscript_0105_R07_raw.md",
+    "output_file_observed": "NOT_CREATED_AT_2026-10-22T15:25:53+08:00",
+    "computer_use": "NOT_USED",
+    "paid_or_fallback_model": "NOT_AUTHORIZED; none observed",
+    "duplicate_writer_check": "no other opencode run process observed before dispatch",
+    "last_status_readback_tpe": "2026-10-22T15:38:32+08:00",
+    "worker_pid_alive_at_readback": true,
+    "target_file_exists_at_readback": true,
+    "native_session_idle_outcome": "NULL",
+    "last_native_session_update_tpe": "2026-10-22T15:20:02.439+08:00",
+    "pending_queue_rows": 0,
+    "interpretation": "Native session and file state now show real constrained Writer progress; keep the single Writer active, do not dispatch a duplicate, and do not build or accept a DOCX until terminal return and deterministic QA.",
+    "native_message_count": 7,
+    "native_tool_calls_observed": [
+      {
+        "seq": 7,
+        "tool": "write"
+      },
+      {
+        "seq": 18,
+        "tool": "edit"
+      },
+      {
+        "seq": 27,
+        "tool": "edit"
+      },
+      {
+        "seq": 36,
+        "tool": "edit"
+      },
+      {
+        "seq": 45,
+        "tool": "edit"
+      }
+    ],
+    "native_tool_call_count": 5,
+    "native_tokens_snapshot": {
+      "input": 128386,
+      "output": 17378,
+      "reasoning": 17244,
+      "cache_read": 362560,
+      "cache_write": 0,
+      "local_cost_field": 0.0,
+      "provider_billing": "UNKNOWN",
+      "observed_at_tpe": "2026-10-22T15:38:32+08:00",
+      "not_final": true
+    },
+    "worker_cpu_seconds_at_readback": 1.984375,
+    "output_file_observation": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022/writer/opencode_writer_manuscript_0105_R07_raw.md",
+      "bytes": 48442,
+      "sha256": "3b82260d82516c9691b058d12b856aa50977e784568c16177f79ff09643d3c93",
+      "last_write_tpe": "2026-10-22T15:36:42+08:00",
+      "state": "IN_PROGRESS; not adopted"
+    },
+    "input_packet_path": "docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022/writer/opencode_writer_0105_R07_input_packet_v2.md",
+    "input_packet_sha256": "861d742be1f9b7dbb3bfc37f0b37957a42fd12064304f5c6342579cafbd60a71",
+    "input_packet_bytes": 261008,
+    "provider_billing": "UNKNOWN",
+    "response_status": "PARTIAL_MANUSCRIPT_IN_PROGRESS",
+    "previous_status_snapshot": {
+      "last_status_readback_tpe": "2026-10-22T15:28:58.039118+08:00",
+      "native_last_updated_tpe": "2026-10-22T15:20:02.439+08:00",
+      "target_file_exists_at_readback": false,
+      "tokens_snapshot": {
+        "input": 0,
+        "output": 0,
+        "reasoning": 0,
+        "cache_read": 0,
+        "note": "NOT_FINAL; zero persisted snapshot is not evidence of zero usage"
+      }
+    }
+  },
+  "progress_snapshots": [
+    {
+      "observed_at_tpe": "2026-10-22T15:38:32+08:00",
+      "session_id": "ses_e9d858be9ffeR53uwL0FL4qS3v",
+      "os_pid": 65076,
+      "native_outcome": "ACTIVE",
+      "native_last_updated_tpe": "2026-10-22T15:36:48.338+08:00",
+      "native_message_count": 7,
+      "native_tool_call_count": 5,
+      "tokens": {
+        "input": 128386,
+        "output": 17378,
+        "reasoning": 17244,
+        "cache_read": 362560,
+        "cache_write": 0,
+        "local_cost_field": 0.0,
+        "provider_billing": "UNKNOWN",
+        "observed_at_tpe": "2026-10-22T15:38:32+08:00",
+        "not_final": true
+      },
+      "manuscript_sha256": "3b82260d82516c9691b058d12b856aa50977e784568c16177f79ff09643d3c93",
+      "manuscript_bytes": 48442,
+      "manuscript_last_write_tpe": "2026-10-22T15:36:42+08:00",
+      "cli_exit_code": "PENDING",
+      "actual_serving_model": "UNKNOWN",
+      "adoption": "NONE"
+    },
+    {
+      "work_id": "TTQS-0105-WRITER-R07-20261022-01",
+      "doc_id": "0105",
+      "requirement_id": "I18-E13",
+      "os_pid": 65076,
+      "process_alive": true,
+      "process_exit_code": 259,
+      "native_session_id": "ses_e9d858be9ffeR53uwL0FL4qS3v",
+      "native_outcome": "ACTIVE",
+      "native_last_updated_tpe": "2026-10-22T15:43:06.076+08:00",
+      "selected_model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode"
+      },
+      "actual_serving_model": "UNKNOWN",
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "input": 136924,
+        "output": 33049,
+        "reasoning": 17405,
+        "cache_read": 634112,
+        "cache_write": 0,
+        "local_cost_field": 0.0,
+        "not_final": true
+      },
+      "native_message_count": 9,
+      "tool_calls": [
+        {
+          "seq": 7,
+          "tool": "write",
+          "state": "completed"
+        },
+        {
+          "seq": 18,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 27,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 36,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 45,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 54,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 63,
+          "tool": "edit",
+          "state": "streaming"
+        }
+      ],
+      "output": {
+        "path": "docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022/writer/opencode_writer_manuscript_0105_R07_raw.md",
+        "bytes": 90066,
+        "sha256": "0ddcd052dc39d1e385fd964d1acccc3aa5e1bcfccb0e22f4efb78ce375d2d647",
+        "last_write_tpe": "2026-10-22T15:42:50+08:00",
+        "adoption": "NONE; in-progress raw output"
+      },
+      "cli_exit_code": "PENDING",
+      "adoption": "NONE",
+      "status": "ACTIVE_PROGRESSING_BUT_NO_TERMINAL_RETURN"
+    },
+    {
+      "work_id": "TTQS-0105-WRITER-R07-20261022-01",
+      "doc_id": "0105",
+      "requirement_id": "I18-E13",
+      "os_pid": 65076,
+      "process_alive": true,
+      "process_exit_code": 259,
+      "native_session_id": "ses_e9d858be9ffeR53uwL0FL4qS3v",
+      "native_outcome": "ACTIVE",
+      "native_last_updated_tpe": "2026-10-22T15:52:09.020+08:00",
+      "selected_model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode"
+      },
+      "actual_serving_model": "UNKNOWN",
+      "provider_billing": "UNKNOWN",
+      "tokens": {
+        "input": 179291,
+        "output": 53126,
+        "reasoning": 19394,
+        "cache_read": 2789568,
+        "cache_write": 0,
+        "local_cost_field": 0.0,
+        "not_final": true
+      },
+      "native_message_count": 21,
+      "tool_calls": [
+        {
+          "seq": 7,
+          "tool": "write",
+          "state": "completed"
+        },
+        {
+          "seq": 18,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 27,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 36,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 45,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 54,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 63,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 72,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 81,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 90,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 99,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 108,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 117,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 126,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 135,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 144,
+          "tool": "edit",
+          "state": "completed"
+        },
+        {
+          "seq": 153,
+          "tool": "grep",
+          "state": "completed"
+        },
+        {
+          "seq": 153,
+          "tool": "read",
+          "state": "completed"
+        },
+        {
+          "seq": 166,
+          "tool": "read",
+          "state": "completed"
+        }
+      ],
+      "output": {
+        "path": "docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022/writer/opencode_writer_manuscript_0105_R07_raw.md",
+        "bytes": 127585,
+        "sha256": "31b7de140f4cd93169c709f30e111ca0994267b59fa6a76ec06ccc1fda5cea12",
+        "last_write_tpe": "2026-10-22T15:50:58+08:00",
+        "adoption": "NONE; in-progress raw output"
+      },
+      "cli_exit_code": "PENDING",
+      "status": "ACTIVE_PROGRESSING_BUT_NO_TERMINAL_RETURN"
+    }
+  ],
+  "last_native_snapshot_tpe": "2026-10-22T15:53:21+08:00",
+  "latest_progress_snapshot": {
+    "work_id": "TTQS-0105-WRITER-R07-20261022-01",
+    "doc_id": "0105",
+    "requirement_id": "I18-E13",
+    "os_pid": 65076,
+    "process_alive": true,
+    "process_exit_code": 259,
+    "native_session_id": "ses_e9d858be9ffeR53uwL0FL4qS3v",
+    "native_outcome": "ACTIVE",
+    "native_last_updated_tpe": "2026-10-22T15:52:09.020+08:00",
+    "selected_model": {
+      "id": "mimo-v2.6-flash-free",
+      "providerID": "opencode"
+    },
+    "actual_serving_model": "UNKNOWN",
+    "provider_billing": "UNKNOWN",
+    "tokens": {
+      "input": 179291,
+      "output": 53126,
+      "reasoning": 19394,
+      "cache_read": 2789568,
+      "cache_write": 0,
+      "local_cost_field": 0.0,
+      "not_final": true
+    },
+    "native_message_count": 21,
+    "tool_calls": [
+      {
+        "seq": 7,
+        "tool": "write",
+        "state": "completed"
+      },
+      {
+        "seq": 18,
+        "tool": "edit",
+        "state": "completed"
+      },
+      {
+        "seq": 27,
+        "tool": "edit",
+        "state": "completed"
+      },
+      {
+        "seq": 36,
+        "tool": "edit",
+        "state": "completed"
+      },
+      {
+        "seq": 45,
+        "tool": "edit",
+        "state": "completed"
+      },
+      {
+        "seq": 54,
+        "tool": "edit",
+        "state": "completed"
+      },
+      {
+        "seq": 63,
+        "tool": "edit",
+        "state": "completed"
+      },
+      {
+        "seq": 72,
+        "tool": "edit",
+        "state": "completed"
+      },
+      {
+        "seq": 81,
+        "tool": "edit",
+        "state": "completed"
+      },
+      {
+        "seq": 90,
+        "tool": "edit",
+        "state": "completed"
+      },
+      {
+        "seq": 99,
+        "tool": "edit",
+        "state": "completed"
+      },
+      {
+        "seq": 108,
+        "tool": "edit",
+        "state": "completed"
+      },
+      {
+        "seq": 117,
+        "tool": "edit",
+        "state": "completed"
+      },
+      {
+        "seq": 126,
+        "tool": "edit",
+        "state": "completed"
+      },
+      {
+        "seq": 135,
+        "tool": "edit",
+        "state": "completed"
+      },
+      {
+        "seq": 144,
+        "tool": "edit",
+        "state": "completed"
+      },
+      {
+        "seq": 153,
+        "tool": "grep",
+        "state": "completed"
+      },
+      {
+        "seq": 153,
+        "tool": "read",
+        "state": "completed"
+      },
+      {
+        "seq": 166,
+        "tool": "read",
+        "state": "completed"
+      }
+    ],
+    "output": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022/writer/opencode_writer_manuscript_0105_R07_raw.md",
+      "bytes": 127585,
+      "sha256": "31b7de140f4cd93169c709f30e111ca0994267b59fa6a76ec06ccc1fda5cea12",
+      "last_write_tpe": "2026-10-22T15:50:58+08:00",
+      "adoption": "NONE; in-progress raw output"
+    },
+    "cli_exit_code": "PENDING",
+    "status": "ACTIVE_PROGRESSING_BUT_NO_TERMINAL_RETURN"
+  }
+}

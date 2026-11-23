@@ -1,0 +1,146 @@
+{
+  "doc_id": "0102",
+  "requirement_id": "I18-E09",
+  "input_docx": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0102_I18-E09_R01_20261021\\candidate\\0102__技能競賽獲獎證據取得與查核工作紀錄_R04.docx",
+  "input_sha256": "f55dd9f80c26e35d4103d2007fceccf41e35c899d6fb16042ab309d10839345d",
+  "output_docx": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0102_I18-E09_R01_20261021\\candidate\\0102__技能競賽獲獎證據取得與查核工作紀錄_R05.docx",
+  "output_sha256": "4e9bdfac0746f8df555843b95c9f9664f9d1164df23c2583d352a36ddad77406",
+  "bytes": 93998,
+  "patch_scope": "raise all explicit body run sizes below 10.5pt to 10.5pt and all table-cell run sizes below 9.5pt to 9.5pt; add matching complex-script sizes; raise body style defaults; update footer revision R04 to R05; no manuscript text changes",
+  "raised_run_counts": {
+    "body_runs_raised_to_10_5pt": 567,
+    "table_runs_raised_to_9_5pt": 1610,
+    "body_szCs_added_or_raised": 662,
+    "table_szCs_added_or_raised": 1610
+  },
+  "before_half_point_distribution": {
+    "body": {
+      "48": 1,
+      "24": 1,
+      "20": 438,
+      "19": 93,
+      "18": 6,
+      "26": 72,
+      "34": 15,
+      "17": 30,
+      "23": 6
+    },
+    "table": {
+      "18": 1025,
+      "17": 179,
+      "16": 406
+    }
+  },
+  "after_half_point_distribution": {
+    "body": {
+      "48": 1,
+      "24": 1,
+      "21": 567,
+      "26": 72,
+      "34": 15,
+      "23": 6
+    },
+    "table": {
+      "19": 1610
+    }
+  },
+  "updated_styles": [
+    {
+      "style_id": "Normal",
+      "element": "sz",
+      "from": "20",
+      "to": 21
+    },
+    {
+      "style_id": "Heading8",
+      "element": "sz",
+      "from": "20",
+      "to": 21
+    },
+    {
+      "style_id": "Heading8",
+      "element": "szCs",
+      "from": "20",
+      "to": 21
+    },
+    {
+      "style_id": "Heading9",
+      "element": "sz",
+      "from": "20",
+      "to": 21
+    },
+    {
+      "style_id": "Heading9",
+      "element": "szCs",
+      "from": "20",
+      "to": 21
+    },
+    {
+      "style_id": "BodyText3",
+      "element": "sz",
+      "from": "16",
+      "to": 21
+    },
+    {
+      "style_id": "BodyText3",
+      "element": "szCs",
+      "from": "16",
+      "to": 21
+    },
+    {
+      "style_id": "BodyText3Char",
+      "element": "sz",
+      "from": "16",
+      "to": 21
+    },
+    {
+      "style_id": "BodyText3Char",
+      "element": "szCs",
+      "from": "16",
+      "to": 21
+    },
+    {
+      "style_id": "MacroText",
+      "element": "sz",
+      "from": "20",
+      "to": 21
+    },
+    {
+      "style_id": "MacroText",
+      "element": "szCs",
+      "from": "20",
+      "to": 21
+    },
+    {
+      "style_id": "MacroTextChar",
+      "element": "sz",
+      "from": "20",
+      "to": 21
+    },
+    {
+      "style_id": "MacroTextChar",
+      "element": "szCs",
+      "from": "20",
+      "to": 21
+    },
+    {
+      "style_id": "Caption",
+      "element": "sz",
+      "from": "18",
+      "to": 21
+    },
+    {
+      "style_id": "Caption",
+      "element": "szCs",
+      "from": "18",
+      "to": 21
+    }
+  ],
+  "footer_updates": [
+    {
+      "part": "word/footer1.xml",
+      "replacements": 1
+    }
+  ],
+  "status": "PATCHED_PENDING_NATIVE_WORD_EXPORT_TECHNICAL_QA_AND_VISUAL_REVIEW"
+}

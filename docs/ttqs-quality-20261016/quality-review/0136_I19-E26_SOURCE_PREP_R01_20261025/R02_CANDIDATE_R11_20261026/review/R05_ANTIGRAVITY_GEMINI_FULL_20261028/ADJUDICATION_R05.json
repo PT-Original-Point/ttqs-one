@@ -1,0 +1,66 @@
+{
+  "schema": "TTQS_ONE_CODEX_SEMANTIC_REVIEW_ADJUDICATION_V1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0136-I19-E26-R02-W2-GEMINI-FULL-SEMANTIC-REVIEW-R05",
+  "doc_id": "0136",
+  "official_requirement_id": "I19-E26",
+  "project_157_index": 150,
+  "official_printed_checkbox": "UNKNOWN",
+  "candidate_sha256": "a9bd0fb528a1e22865fa5e07df44b314d48c1fd826a08149ecdd1d5915048b39",
+  "source_packet_sha256": "7bebd3eb012b152f4568db6fedccf43c3337f436a5f339127e5afe71cf0678d7",
+  "unique_blueprint_sha256": "32c1b818cc0b3957a23e319606f77b176a7979d1ee4ff58db72b9ae32ada8399",
+  "review_request_sha256": "10f448b6c25ceee24888a7bc67cf51f71cfe9bda9e798c036db7e02f2b9dcfd2",
+  "review_input_sha256": "8315323168abe0d2e01f766d1eff68d522be22eb9cc0a7d5fd9af906d68bf386",
+  "reviewer_response_sha256": "982b7afe39aaa8510e1de70f5116047471097e4c47c057b9b576ebb6a309f7f2",
+  "reviewer_reported_verdict": "PASS",
+  "codex_adjudicated_text_semantics": "PASS_SCOPED_TEXT_REVIEW",
+  "exact_binding_checks": {
+    "request_sha_matches_manifest": true,
+    "candidate_sha_matches_manifest": true,
+    "review_input_sha_matches_manifest": true,
+    "work_doc_requirement_binding": true,
+    "reviewer_response_is_valid_json": true,
+    "reviewer_reported_pass": true,
+    "all_explicit_review_checks_pass": true,
+    "no_blocking_or_major_findings_reported": true,
+    "candidate_unchanged_during_dispatch": true,
+    "same_sha_14_page_visual_receipt": true,
+    "title_blind_identity_supported_by_body_locator": true,
+    "route_identity_proven": false,
+    "fallback_proven_absent": false
+  },
+  "content_review": {
+    "official_requirement_and_document_genre": "PASS; evidence register/check tool tied to I19-E26, not an outcome report or self-scoring form.",
+    "title_blind_and_negative_neighbor": "PASS; body table 1 states operational original-evidence register use; body tables 7-8 and the three-lane A/B/C scope distinguish 0135/I19-E25, 0137/I19-E27, 0133/I19-E22 and 0134/I19-E23.",
+    "operational_mechanics": "PASS; candidate body has 32 tables with intake, custody, verification, hold/reject, claim-source mapping, sample-to-real conversion and retrieval audit steps.",
+    "sample_real_truth_boundary": "PASS; three sample cases and SAMPLE_ONLY / SOURCE_NOT_ATTACHED controls; candidate states no REAL sources and formal acceptance not granted.",
+    "quantitative_and_cross_document_consistency": "PASS; unsupported metrics remain UNKNOWN; no counts/impact claims; sources, roles and outcomes are separated."
+  },
+  "reviewer_findings": [
+    {
+      "severity": "INFO",
+      "locator": "[TABLE 1], [TABLE 6], [TABLE 16], [TABLE 18], [TABLE 20]",
+      "evidence": "官方紙本方框序號 is consistently documented as UNKNOWN.",
+      "why_it_matters": "Prevents conflation between internal production indices (0136, I19-E26, 150) and unverified official printed checkbox serials from official TTQS evaluation forms.",
+      "required_action": "Maintain UNKNOWN until verified official printed checkbox documentation is formally captured and reviewed."
+    },
+    {
+      "severity": "INFO",
+      "locator": "[TABLE 2], [TABLE 32]",
+      "evidence": "Association REAL evidence is marked UNKNOWN and Human acceptance is marked NOT GRANTED.",
+      "why_it_matters": "Enforces strict boundary between operational tool readiness and real institutional performance claims or formal accreditation.",
+      "required_action": "Operational deployment must await real original intake, lawful privacy clearance, and human administrative sign-off."
+    }
+  ],
+  "limitations": [
+    "R05 is text-only semantic review; it does not replace visual review. The exact same candidate SHA has a prior Microsoft Word native layout receipt PASS on 14/14 pages.",
+    "Antigravity CLI init metadata reports the requested slug gemini-3.8-flash-high, but backend serving identity is UNKNOWN and fallback status is UNKNOWN_NOT_EXPOSED; this is not a verified Gemini serving-model PASS.",
+    "REAL association evidence remains UNKNOWN/HOLD; no Human formal acceptance or TTQS score is granted."
+  ],
+  "route_policy_compliance": "UNKNOWN_MODEL_IDENTITY_AND_FALLBACK_NOT_EXPOSED",
+  "candidate_state": "CANDIDATE_ONLY",
+  "real_evidence": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED",
+  "candidate_rebuilt": false,
+  "candidate_sha256_after_review": "a9bd0fb528a1e22865fa5e07df44b314d48c1fd826a08149ecdd1d5915048b39"
+}

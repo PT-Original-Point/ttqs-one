@@ -1,0 +1,100 @@
+# Independent semantic review — 0117 / I19-E04 / Blueprint index 128 / R03
+
+**Scope compliance:** text-only semantic review of the supplied exact-DOCX text extraction and all supplied source materials. No tools used, no file changes, no byte-level DOCX inspection, no Word visual inspection, no independently computed SHA, no visual/layout verdict, no formal acceptance.
+
+**Binding identity (as asserted by local technical QA, not independently verified):**
+- DOCX SHA256 = `b9fdd4b3ab7ad455ada053cef3d70839bbe19d56d7636b9506778819d3b91020`
+- Extraction SHA256 = `67a90293ff499f001dd5881e43114d0fdd7e55b764e81c3ffee21815e8e4e918`
+- Request SHA, extraction-header `DOCX_SHA256`, and R03 technical receipt `docx_sha256` are mutually consistent.
+
+---
+
+## VERDICT: **PASS** (semantic only)
+
+All six evaluation criteria pass. Five minor, non-material editorial findings are listed below; none alters any count, rate, delta, boundary, decision rule, or sample/real marker, and the canonical identities in §3.3 are stated correctly. Therefore PASS is not withheld.
+
+---
+
+## 1) Official purpose and genre; three-way identity distinction — PASS
+
+- **Official item verified:** supplied official page 7 ends with 「學員考照通過率有增加，但未有」 and page 8 begins with the completion 「具體紀錄及評量。」 — the DOCX §2 quoted text 「學員考照通過率有增加，但未有具體紀錄及評量。」 matches exactly and correctly cites pp. 7–8. In official context this is a 1-point common-reference-evidence example under indicator 19 (市場功能／價值創造); the DOCX claims no score level, no acceptance, and no improvement.
+- **Purpose fit:** §1.2 defines an operational cohort-freeze → first-sit/retake logging → 90-day eventual-pass → evidence reconciliation → 4 metrics → review/decision tool. §2 correctly frames the task as converting the "口稱" into auditable records/denominators/evaluation, **not** proving an increase occurred — matching the source packet and I19 writing guidance.
+- **Three-way distinction explicit and correct:** extraction header (`DOC_ID=0117`, `REQUIREMENT_ID=I19-E04`, `BLUEPRINT_INTERNAL_INDEX=128`, `OFFICIAL_PRINTED_CHECKBOX_SERIAL=UNKNOWN_NOT_ASSERTED`), §1.1 control block (Blueprint index 128 = 內部定位碼，非官方勾選欄序號; 官方印刷勾選序號 = UNKNOWN_NOT_ASSERTED, 不得杜撰), and §2 table (內部索引 ≠ 官方印刷序號). This matches the mapping evidence JSON (deliverable_count 1, page range 7–8, index 128, serial UNKNOWN_NOT_ASSERTED) and the source packet.
+- **Provenance hygiene:** the extraction contains no GitHub references, file paths, or SHA strings; provenance is correctly confined to the receipt.
+
+## 2) Title-blind fitness and negative neighbors — PASS
+
+- **Title-blind:** with the title hidden, §3 (metric dictionary, reconciliation identities), §4 (freeze), §5 (person-level attempt fields), §6 (attempt-level audit), §7 (18-row exam dataset), §8 (pass-rate recomputation), §9 (issuer verification) remain unmistakably a certification/exam post-training tracker. §1.3 states this explicitly.
+- **0116 / I19-E03 (employment):** excluded in §1.3, §12 table (不同主題與樣本群；不得共用分母、樣本群、結果或 fact_id), and hard rules 1 and 3 (不得宣稱「考照通過＝就業」).
+- **0115 / I19-E02 (knowledge sharing):** excluded in §1.3 and §12 (非考照紀錄；不得作為任何 M1–M4 之分子或分母來源).
+- **No shared data:** all rows/aliases are `SYN-0117-*`; hard rule 4 bars synthetic rows from appearing in 0115/0116; no shared denominator, cohort, result, or fact_id appears anywhere in the extraction.
+
+## 3) Full usability of all components — PASS
+
+Checked against Unique Blueprint required contents 1–10; all present and operational:
+- **Cohort freeze:** §4.1 F1–F10 (source legality, completion date, eligibility rules, duplicates, withdrawal, no-show pre-announcement, ≤90-day window with identical definition for comparability, exam version, privacy/consent, dual sign-off) with pass conditions and unchecked ☐ result cells; §4.2 freeze-table fields incl. freeze base date, locked eligible count, exclusions, rule version, role sign-off.
+- **Eligibility & person-level:** §3.1–3.2 (ELIGIBLE/WITHDRAWN/INELIGIBLE; no post-hoc roster edits), §5.1 fields incl. `learner_alias` (no PII in public table), first/retake date-score-result, `attempt_count`, `no_attempt_reason` (must have a source), `evidence_ref`, `verification_status`, restricted `identity_map_location`, `consent_status` (not ready → HOLD).
+- **Attempt-level audit:** §6 fields (attempt_id, alias, attempt_seq, date, result, source_doc, verified_by) with anti-double-count reconciliation rules; audit demo rows match the dataset exactly.
+- **Formulas/thresholds:** §3.3 M1–M4 with explicit numerator, denominator, inclusion/exclusion; three reconciliation identities all correct; 70/100 threshold labelled SAMPLE_ONLY and barred from REAL substitution (§8.4, §10.1).
+- **Verification:** §9.3 V1–V5 (lawful source only, date/version capture, independent re-check ≥30% or full check at small n, restricted storage with public safe index, retention/access list); §9.2 privacy/de-identification rules.
+- **HOLD/REJECT:** §10.1 reproduces all 8 Blueprint HOLD triggers; §10.2 reproduces all 6 REJECT triggers plus scope control (僅作用於受影響之陳述與樣本群); §10.3 log format (10 fields incl. cause hypothesis ≤3, roles not names, close criteria, recheck date) with 3 cards explicitly labelled SAMPLE/SYNTHETIC and 非協會真實決策.
+- **Replacement register:** §11 covers all 8 source-register items (COHORT-BASE/CURR, CERT-SPEC, FIRST-RESULTS, RETAKES, NONATTEMPTS, CONSENT, REVIEW) with acceptance conditions plus HOLD/REJECT columns, and the 6-step REAL replacement procedure ending in UNKNOWN/HOLD before sign-off.
+
+## 4) Arithmetic recomputation from all 18 rows — PASS
+
+**BASE (8 rows; window 2025-04-15～2025-06-20 = 66 days; freeze base 2025-04-14):** first sittings 6; first PASS 3 (82, 75, 70); first FAIL 3 (64, 68, 59); NO_ATTEMPT 2; in-window retake 1 (BASE-04, 2025-06-20, 72 PASS — endpoint, inclusive); eventual pass 3+1 = 4.
+**CURR (10 rows; window 2025-07-15～2025-09-15 = 62 days):** first sittings 8; first PASS 5 (78, 80, 73, 71, 88); first FAIL 3 (65, 68, 63); NO_ATTEMPT 2; in-window retake 1 (CURR-06, 2025-09-15, 70 PASS — endpoint); eventual pass 5+1 = 6.
+
+| Metric | BASE | CURR | Delta (unrounded) | Doc result |
+|---|---|---|---|---|
+| M1 首次應試通過率 | 3/6 = 50.0% | 5/8 = 62.5% | 12.5 | +12.5 pp ✔ |
+| M2 首次應試參與率 | 6/8 = 75.0% | 8/10 = 80.0% | 5.0 | +5.0 pp ✔ |
+| M3 90天內最終通過率 | 4/6 = 66.666…% → 66.7% | 6/8 = 75.0% | 75.0000−66.6667 = 8.3333 → 8.3 | +8.3 pp ✔ (unrounded diff disclosed per §3.4) |
+| M4 合格樣本群產出率 | 4/8 = 50.0% | 6/10 = 60.0% | 10.0 | +10.0 pp ✔ |
+
+- Identities all hold: 6 = 3+3+0; 8 = 6+2; 4 = 3+1; 8 = 5+3+0; 10 = 8+2; 6 = 5+1. Ordering M4 ≤ M3 ≤ 100% holds (50.0 ≤ 66.7; 60.0 ≤ 75.0).
+- **Exact-row fidelity:** all 18 DOCX detail rows (aliases, dates, scores, results, retakes, attempt_count) match the supplied synthetic dataset CSV field-for-field; common-field defaults (`evidence_ref`, `verification_status=UNKNOWN_SAMPLE`, `data_origin`, `consent_status`) match; the §5.2 single-record demo and §6 audit demo match CURR-06 / BASE-04.
+- **Score/threshold consistency:** every PASS ≥70, every FAIL <70, both retake PASS scores ≥70 (72, 70); all 14 first-sit dates and both retake dates fall inside their cohort windows (endpoints inclusive). Window day-counts 66 and 62 are arithmetically correct; both ≤90.
+- Every DOCX figure matches the source packet, the unique Blueprint, the source-prep validation JSON, and the R03 receipt (M1/M2/M3/M4 and pp deltas 12.5 / 5.0 / 8.3 / 10.0).
+- Small-n statement (§8.5) is accurate: smallest single-person swing is 1/10 = 10.0 pp.
+
+## 5) SAMPLE/SYNTHETIC vs REAL boundary — PASS
+
+Extraction header, §1.1, §7 preamble, §7.2 common fields, §8 preamble + §8.5, and §10.3 all label the dataset SAMPLE_SYNTHETIC_ONLY and hold REAL at UNKNOWN/HOLD; the +12.5/+8.3/+10.0/+5.0 pp figures are explicitly barred from citation as real evidence. No fabricated association approval (sign-off cells empty, roles only, "樣本空欄待 REAL"), no fabricated issuer, certificate, consent, verification URL, or third-party record (發證/成績來源 = UNKNOWN/HOLD; verification_status = UNKNOWN_SAMPLE everywhere; §9.1/§9.3 forbid fabrication). Privacy/consent controls complete: layered storage, PII barred from public layer, access logging, de-identification, consent-gated HOLD, restricted identity map. Missing results are UNKNOWN, never FAIL; NO_ATTEMPT stays in the eligible denominator.
+
+## 6) Implementability — PASS
+
+Roles and split of duties defined (§2, §9.3, §10.3); every table is a form with fields, fill rules, pass conditions, and decision paths (F1–F10, freeze table, person table, audit log, RESET comparability check, HOLD/REJECT trigger→action tables, action-log card, replacement register, 6-step REAL procedure); rounding rule (§3.4), UNKNOWN/NO_ATTEMPT/mislabelling/retake-as-new-person sensitivity cases (§8.3), and small-n/causality/significance prohibitions (§8.5) give evaluators concrete operating instructions. A training administrator could execute the workflow end-to-end without inventing anything.
+
+---
+
+## Minor findings (non-material; exact locators)
+
+| # | Locator | Issue | Effect |
+|---|---|---|---|
+| F-a | §8.2, first check row label 「M2×合格 = 首試人+NO_ATTEMPT」 | Read literally as an equation this yields 6 = 8 (false). The intended and correct identity (合格人數 = 首試人數 + NO_ATTEMPT 人數, as stated in §3.3) holds; the displayed numbers (6+2=8, 8+2=10) are correct and the M2 values (75.0%/80.0%) are correct. | Label ambiguity only; canonical §3.3 identity is correct and governs. |
+| F-b | §4.2 freeze-table demo row 規則版本 | Demo value "R01" while the field description says 本表版本 and the cover/§1.1 set 本表版本 = R03. | Cosmetic version-label inconsistency in a synthetic demo field. |
+| F-c | §8.3, UNKNOWN row, M2/M4 cell | Typo "HM2/M4" (stray H). | Typographical only. |
+| F-d | §10.2 REJECT table, row 2 (經核准期外之結果) | 「REJECT 該應試；不對指標」 appears to be a truncation of 「不計入指標」. | Typographical only; intent is unambiguous in context. |
+| F-e | §6 reconciliation row 「M1 分母 = attempt_seq=1 之筆數」 | Could be read to conflict with the §3.3/§8.3 rule excluding UNKNOWN first attempts; §8.3 governs and is correct. | Optional clarity improvement. |
+
+## Source, title-blind, and cross-document results (summary)
+
+- **Source verification:** official item text verified across pp. 7–8 extracts; mapping (0117 / I19-E04 / index 128 / UNKNOWN_NOT_ASSERTED / deliverable 1 / pp. 7–8) verified against mapping evidence, source packet, and Blueprint; replacement register (8 items) verified against the source register; validation JSON and receipt figures match my recomputation exactly; internal SHA references across receipt/validation/sources are mutually consistent.
+- **Title-blind:** identifiable as a certification/exam tracking tool with title suppressed — PASS.
+- **Cross-document:** 0115/0116 exclusions explicit in §1.3 and §12 (topics, denominators, cohorts, fact_id, no exam-pass→employment inference); no shared rows or denominators observed; no shared REAL fact asserted without a lawful source manifest — PASS. (Neighbor DOCXs were not supplied; see uncertainties.)
+- **Sample/real conclusion:** boundary clean; all values SAMPLE_SYNTHETIC_ONLY; REAL performance, increase, evidence status, and approvals remain UNKNOWN/HOLD; no fabricated approvals or third-party records.
+
+## Uncertainties
+
+1. Byte-level DOCX SHA was **not** independently computed (out of scope); binding rests on the local technical QA receipt, which is internally consistent with the supplied extraction.
+2. No Word-native visual/layout/font-size verification was performed (out of scope); the receipt itself records `layout_visual = PENDING_WORD_NATIVE_RENDER`. **No visual verdict is given.**
+3. 0115 / I19-E06–style neighbor documents (0115, 0116) were not supplied; cross-document conclusions rest on 0117's boundary statements plus the source packet/Blueprint, without independent inspection of the neighbor files.
+4. The official checklist PDF was reviewed only via the two supplied extracted pages; the item text and page span are confirmed, the remainder of the PDF is out of scope.
+5. Receipt claims not enumerable from text (table count 31, font sizes ≥9.5pt, zip test) are accepted as unverified assertions.
+6. The extraction is document-order text; table cell/row boundaries may not preserve exact visual structure, so row-fidelity checks are content-level.
+7. This PASS is a **semantic verdict only** — not formal acceptance, and valid only for the exact DOCX SHA and extraction SHA bound above.
+
+## Minimum repair (optional, non-blocking)
+
+Relabel §8.2 row 1 as 「M2 分母（合格人數）= 首試人數 + NO_ATTEMPT 人數」; correct §4.2 demo 規則版本 to R03 (or redefine the field as the rule version in force at freeze); fix "HM2/M4" → "M2/M4"; fix 「不對指標」 → 「不計入任何指標」; optionally append 「排除 result=UNKNOWN 之首次應試」 to the §6 M1 denominator rule. Any such edit changes the DOCX SHA and requires re-binding and re-review under the new exact SHA.

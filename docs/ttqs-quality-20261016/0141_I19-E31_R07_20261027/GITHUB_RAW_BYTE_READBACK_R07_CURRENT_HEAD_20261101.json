@@ -1,0 +1,62 @@
+{
+  "schema": "ttqs-one-github-raw-byte-readback-v1",
+  "status": "VERIFIED_RAW_BYTE_READBACK",
+  "project_id": "TTQS_ONE",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "doc_id": "0141",
+  "official_requirement_id": "I19-E31",
+  "project_157_index": 155,
+  "official_printed_checkbox": "UNKNOWN_NOT_ASSERTED",
+  "candidate_state": "CANDIDATE",
+  "candidate_revision": "R07",
+  "candidate_sha256": "de111911a549a0be0bd6381a6b22ed694881ba6b3f83528d2b4a4e153002142b",
+  "semantic_review_verdict": "PASS_EXACT_SHA_TEXT_ONLY",
+  "semantic_review_scope": "Independent Antigravity CLI review of exact extracted text bound to this DOCX SHA and text SHA; official mapping, genre/usability, SAMPLE/REAL boundary, math/data, cross-document identity, and negative-neighbor controls reviewed. Visual inspection is separate. Requested and CLI-selected gemini-3.8-flash-high; actual served model/provider attestation UNKNOWN.",
+  "reviewer": "Antigravity CLI; separate from the deterministic Python document builder",
+  "reviewer_model": "UNKNOWN",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "sample_boundary": "SAMPLE/SYNTHETIC only",
+  "readback_commit": "bd2fe24c79794ce0a98a02c997bedac28a38baf3",
+  "head_after": "bd2fe24c79794ce0a98a02c997bedac28a38baf3",
+  "observed_at_local": "2026-11-01T03:32:38+08:00",
+  "readback_method": "Windows Python urllib fetched the raw DOCX at the immutable current PR branch commit; local and remote byte arrays, byte count, SHA-256 and Git blob SHA-1 were compared.",
+  "expected_file_count": 1,
+  "verified_file_count": 1,
+  "errors": [],
+  "source_receipts": {
+    "worker_review_receipt_sha256": "5d890a139fe603c9d79be5d243633ff2cd7e18bea6db00fa3144562e6c43f0b8",
+    "semantic_review_sha256": "eba62f86e35c576704b124cdc742f4bf56ce2ce08f9ceb3b057abcbd501b059a",
+    "technical_qa_sha256": "35d785708d5a50e299db0b0e4a0207a7954d993c2e274b1447ab6079902c22ce",
+    "visual_qa_sha256": "26dd77f1c55958ff7bbe5ea6b861ef8f5e994416d8448cb35abff0ec066faecb"
+  },
+  "review_execution": {
+    "worker": "Antigravity CLI",
+    "cli_version": "1.4.9",
+    "requested_model": "gemini-3.8-flash-high",
+    "cli_selected_model": "gemini-3.8-flash-high",
+    "actual_served_model": "UNKNOWN",
+    "provider_attestation": "UNKNOWN",
+    "route_observation": "CLI init and model-override logs select gemini-3.8-flash-high; generation requests use daily-cloudcode-pa.googleapis.com; one startup resolver default-to-CCPA message occurred before keyring auth and final Gemini override; no non-Google generation endpoint observed; exact provider-served model is not attested",
+    "exit_code": 0,
+    "terminal_status": "SUCCESS",
+    "candidate_mutated": false,
+    "reviewed_docx_sha256": "de111911a549a0be0bd6381a6b22ed694881ba6b3f83528d2b4a4e153002142b",
+    "reviewed_text_sha256": "e1cf2080d86aa67d7bb9667067db1cbd655ae8682ecdaa5c3517dd98c0e5789d",
+    "total_tokens": 82781
+  },
+  "files": [
+    {
+      "doc_id": "0141",
+      "remote_path": "docs/ttqs-quality-20261016/0141_I19-E31_R07_20261027/0141_I19-E31_R07_FONTFIX_PAGE24_BALANCE_R04_CANDIDATE.docx",
+      "local_sha256": "de111911a549a0be0bd6381a6b22ed694881ba6b3f83528d2b4a4e153002142b",
+      "remote_sha256": "de111911a549a0be0bd6381a6b22ed694881ba6b3f83528d2b4a4e153002142b",
+      "local_bytes": 164740,
+      "remote_bytes": 164740,
+      "local_git_blob_sha1": "4b2cb05a3eb68d475d2af6b86d393bb61141131b",
+      "remote_git_blob_sha1": "4b2cb05a3eb68d475d2af6b86d393bb61141131b",
+      "exact_byte_match": true
+    }
+  ]
+}

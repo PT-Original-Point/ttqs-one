@@ -1,0 +1,131 @@
+{
+  "review_type": "independent_semantic_usability_review",
+  "verdict": "CONDITIONAL",
+  "dispatch_work_id": "TTQS_ONE_0032_I06-E03_W1_SEMANTIC_REVIEW_R03_LONGCAT_20261118",
+  "packet_work_id": "TTQS_ONE_0032_I06-E03_SEMANTIC_REVIEW_R03_NEMOTRON35_20261118",
+  "candidate_sha256": "C0A0FB1FB346EAC6EEF2B7DE209E455185CF76CF4563C62FBCB96FCC2A9C546B",
+  "extracted_text_sha256": "50D2706E066629ABF3FB2DA7DD3434E5D92B939A66B70B07FDCB52FB615181F2",
+  "source_packet_sha256": "3540D60A59D0B11F53E45D73F25C2EDD53D8E0BCED015B39790530E902E5CED0",
+  "blueprint_sha256": "71CFFB64FDAE734A2DCEA333339BED77A6D15F471577EFBFDB60AD5694D80C46",
+  "candidate_status": "CANDIDATE only; no formal acceptance claimed",
+  "scoped_checks": [
+    {
+      "check": "genre_and_mechanics",
+      "result": "PARTIAL",
+      "note": "Role matrix, capability chain, supervisor loop, sample drill and evidence index are present, but the document is framed as a 評核/scoring instrument while the Blueprint genre is an institutional capability 說明."
+    },
+    {
+      "check": "completeness_and_coherence",
+      "result": "ISSUES",
+      "note": "Baseline 備援覆蓋 2/5 conflicts with Table 05 under the stated rule; A03 non-respondent count conflicts with 10/12; A04 index count conflicts with Table 18."
+    },
+    {
+      "check": "calculations_and_ratios",
+      "result": "ISSUES",
+      "note": "61.25, 75, 7/12, 10/12, 12/16 and 9/10 recompute correctly; 備援 2/5=40% does not recompute from Table 05 under 主責至少3級、備援至少2級 (should be 4/5=80%)."
+    },
+    {
+      "check": "evaluator_usability",
+      "result": "PARTIAL",
+      "note": "Q01-Q08 give usable prompts, evidence checks and sample readings, but the 實際評核紀錄 fields are blank lines."
+    },
+    {
+      "check": "source_traceability",
+      "result": "PASS",
+      "note": "Table 19 and Table 21 locate the official crosswalk and evidence-table item 6; UNKNOWN items are listed."
+    },
+    {
+      "check": "sample_vs_real_unknown_boundaries",
+      "result": "PASS",
+      "note": "SAMPLE/SYNTHETIC, REAL SOURCE and UNKNOWN are distinguished; no real third-party names, certificates or approvals are asserted."
+    },
+    {
+      "check": "placeholders_and_blank_forms",
+      "result": "ISSUES",
+      "note": "Q01-Q08 實際評核紀錄 fields are blank ______ lines."
+    },
+    {
+      "check": "fabricated_third_party_evidence",
+      "result": "PASS",
+      "note": "The text explicitly states that no third-party originals, signatures, qualifications or approvals are produced."
+    },
+    {
+      "check": "negative_neighbor_boundaries",
+      "result": "PASS",
+      "note": "I06-E01/I06-E02 are only cross-referenced; the text states it does not replace 0033 course-demand scope; 0030/0031/0033 are not absorbed as primary content."
+    }
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "high",
+      "locator": "P011, P027, T02R004, T14R004, T20R018 versus T05R002-T05R006",
+      "finding": "Baseline 備援覆蓋 is stated as 2/5=40% in five places, but Table 05 backups are C01=2, C02=2, C04=3, C06=2, i.e. 4/5=80% under the stated SYN-RUBRIC-01 rule (主責至少3級、備援至少2級). The ratio is not recomputable from the stated rule and Table 05.",
+      "minimum_repair": "Recompute and correct every occurrence to 4/5=80%, or explicitly state and consistently apply the rule that yields 2/5; make Table 05, Table 02, Table 14, Table 20 and the narrative agree."
+    },
+    {
+      "id": "F2",
+      "severity": "medium",
+      "locator": "T15R004 (A03 驗收條件)",
+      "finding": "A03 says 第二班回收10/12=83.3%，列明未回覆3人, but 12-10=2, so the non-respondent count is inconsistent with the stated numerator/denominator.",
+      "minimum_repair": "Change 未回覆3人 to 未回覆2人 or reconcile the numerator/denominator."
+    },
+    {
+      "id": "F3",
+      "severity": "medium",
+      "locator": "T15R004 (A04) versus T18R002-T18R009 and P083",
+      "finding": "A04 says 9/9筆模擬索引定位欄完整, but the extracted evidence index Table 18 lists 8 simulated entries (SYN-EV-01..08); P083 says 2 entries lack location. The 9/9 count is unsupported by the extracted text.",
+      "minimum_repair": "Reconcile to 8/8 (or add the missing entry) and align the P083 baseline."
+    },
+    {
+      "id": "F4",
+      "severity": "medium",
+      "locator": "P001 versus official crosswalk title and Blueprint §1/§2",
+      "finding": "Candidate title is 訓練機構職能與對外訓練執行能力評核, while the official crosswalk title is 訓練機構具備執行訓練業務相關職能的說明_完整工作稿 and the Blueprint genre is an institutional capability 說明. The document is framed as a scoring/評核 instrument rather than the required capability statement.",
+      "minimum_repair": "Retitle/reframe the deliverable as the institutional capability 說明, with the sample assessment as a clearly subordinate annex, or align the title to the official crosswalk title."
+    },
+    {
+      "id": "F5",
+      "severity": "low",
+      "locator": "P005-P008",
+      "finding": "The 使用目的 summary is brief and does not answer all five Blueprint A questions (role division/backup, capability support from preparation to closure, supervisor direction-to-tracking loop) in one-page summary form.",
+      "minimum_repair": "Add a one-page reading summary covering the five Blueprint A questions."
+    },
+    {
+      "id": "F6",
+      "severity": "low",
+      "locator": "T04R001-T04R007",
+      "finding": "The role matrix lacks the Blueprint B columns 所需訓練相關能力、能力佐證、執行產出; these are split into Tables 07-09 rather than present in the matrix.",
+      "minimum_repair": "Add the three columns to Table 04 or add explicit in-table cross-references."
+    },
+    {
+      "id": "F7",
+      "severity": "low",
+      "locator": "T09R001",
+      "finding": "The execution chain table has no explicit 輸入 column required by Blueprint C (輸入—負責角色—控制點—輸出／留存紀錄—異常處置).",
+      "minimum_repair": "Add an 輸入 column or a per-node input statement."
+    },
+    {
+      "id": "F8",
+      "severity": "low",
+      "locator": "T11R001-T11R008",
+      "finding": "The supervisor closed-loop table lacks page/定位 and per-row Fact ID required by Blueprint E.",
+      "minimum_repair": "Add 定位/頁碼 and a Fact ID per row."
+    },
+    {
+      "id": "F9",
+      "severity": "low",
+      "locator": "P059, P065, P071, P077, P085, P091, P097, P103",
+      "finding": "Q01-Q08 實際評核紀錄 fields are blank ______ lines, which conflicts with the scope requirement of no placeholders/blank forms.",
+      "minimum_repair": "Pre-fill with clearly labeled SAMPLE/SYNTHETIC example entries, or restructure as a completed sample record; if retained as a real-data form, label it explicitly and ensure the drill ends with explicit gap disposition."
+    }
+  ],
+  "limits": [
+    "Read-only semantic/usability review of the supplied extracted text and packets; no file, tool or GUI operations were performed.",
+    "Visual/layout, pagination, page-level SAMPLE/SYNTHETIC marking and Word COM render are out of scope; the R03 visual render is BLOCKED.",
+    "Actual serving model identity is UNKNOWN; this review does not certify the route.",
+    "No formal acceptance, approval or association decision is claimed; candidate status remains CANDIDATE.",
+    "The prior R02 PASS is context only and was not used as a substitute for reading the R03 text.",
+    "Findings are based on the supplied extracted text; DOCX bytes, embedded objects and exact page breaks were not independently inspected."
+  ]
+}

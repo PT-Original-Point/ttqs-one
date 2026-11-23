@@ -1,0 +1,78 @@
+{
+  "receipt_id": "TTQS_ONE_R09_T01_T14_RECHECK_20261022",
+  "observed_at_tpe": "2026-10-22T04:18:33.0335987+08:00",
+  "source_06_blob": "4c7eff55748ff265b1e5a7d1122852b0d101acbd",
+  "results": [
+    {
+      "id": "T01",
+      "status": "PASS_OBSERVED_SERVICE_NOT_WRITER",
+      "evidence": "OpenCode PID 45628 is serve --service; R16 writer and reviewer native sessions are terminal succeeded; no OpenCode child or Antigravity CLI active at snapshot."
+    },
+    {
+      "id": "T02",
+      "status": "PASS_OBSERVED_NO_PROCESS_KILL",
+      "evidence": "19 WINWORD /Automation -Embedding processes observed; owners/document handles remain UNKNOWN; none killed or represented as 19 writers."
+    },
+    {
+      "id": "T03",
+      "status": "PASS_STALE_PANEL_DETECTED",
+      "evidence": "Legacy dashboard last modified 2026-10-05; ports 8765/8766 have zero listeners; project/host identity is absent."
+    },
+    {
+      "id": "T04",
+      "status": "SIMULATION_ONLY",
+      "evidence": "PTYSD/Issue407 mismatch remains only the prior deterministic fixture; no live panel exists for an observed mismatch."
+    },
+    {
+      "id": "T05",
+      "status": "FAIL_NOT_RESUMED_NATURAL_RUN_UNKNOWN",
+      "evidence": "Native Goal status is paused; 120m thread-bound automation is active, but last/next run and actual resume are unavailable/unverified."
+    },
+    {
+      "id": "T06",
+      "status": "PASS_OBSERVED_READY_DERIVED_FROM_SOURCE",
+      "evidence": "0104 R16 advanced from official source, unique Blueprint, candidate and QA; stale queue text was not used as a stop condition."
+    },
+    {
+      "id": "T07",
+      "status": "PASS_OBSERVED_LANE_ISOLATION",
+      "evidence": "0104 R16 Word/QA/review completed without modifying the separate 0097 rendering lane."
+    },
+    {
+      "id": "T08",
+      "status": "PASS_GUARD_APPLIED",
+      "evidence": "Antigravity exit-zero text was not treated as final DOCX; R16 used native Word build, exact SHA technical/layout checks and separate review."
+    },
+    {
+      "id": "T09",
+      "status": "PASS_OBSERVED_BOUNDED_SALVAGE",
+      "evidence": "R16 reviewer CLI exit 1 had a provider.invalid-output event and later a full response; native session ended succeeded. No stable DOCX rebuild was made for this reviewer exit."
+    },
+    {
+      "id": "T10",
+      "status": "PARTIAL_TEXT_ONLY_EXACT_PACKET_BINDING",
+      "evidence": "Reviewer returned PASS on SHA in the exact packet; local SHA matches, but reviewer did not recompute SHA or inspect page images."
+    },
+    {
+      "id": "T11",
+      "status": "PASS_GUARD_MODEL_UNKNOWN",
+      "evidence": "Antigravity calls requested Gemini 3.8 Flash High but actual provider/model/fallback and quota delta remain UNKNOWN; no Gemini success claimed."
+    },
+    {
+      "id": "T12",
+      "status": "PASS_SCOPED_SAMPLE_AND_QA",
+      "evidence": "0104 R16 remains candidate; 124 synthetic fact rows, technical PASS, visual 36/36 page scope; no real association outcome or approval asserted."
+    },
+    {
+      "id": "T13",
+      "status": "PASS_REMOTE_READBACK_COMMITS_1_TO_4",
+      "evidence": "Commit1 package and commit2 closure were read back as previously receipted; commit3 R09 state sync was fetched and compared; commit4 9febd8aa02d9063d4d4101074fb82f2d8d034cd4 added 0103 R02 render/visual evidence. Fresh PR and branch refs both pointed to commit4; 50 changed paths had canonical Git blob equality, including 42 binary raw-byte SHA-256 matches and zero mismatches. Receipt: github_remote_readback_commit4_0103_R02_R09_20261022.json."
+    },
+    {
+      "id": "T14",
+      "status": "PARTIAL_SAFE_PUSH_CASE_ONLY",
+      "evidence": "No competing writer was observed before synchronization; no ambiguous push or competing-writer test was induced."
+    }
+  ],
+  "overall": "PARTIAL; GitHub exact readback verified through commit4. 0103 R02 is now rendered and all 35 pages inspected, but visual QA found repairable near-empty transition pages (24, 29, 32); DOCX remains unchanged candidate-only. Native Goal is still PAUSED, natural 120-minute trigger and live panel alignment remain UNKNOWN, reviewer binary rehash is unavailable, and T14 competing-writer race was not induced."
+}

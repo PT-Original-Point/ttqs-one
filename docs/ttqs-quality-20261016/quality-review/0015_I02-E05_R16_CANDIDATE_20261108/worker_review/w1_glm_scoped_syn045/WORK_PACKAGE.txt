@@ -1,0 +1,13 @@
+work_id: TTQS_ONE_0015_R16_SYN045_SCOPED_REVIEW_W1_GLM_20261108
+role: independent bounded semantic reviewer; no file edits
+project: TTQS_ONE
+candidate_docx_sha256: b0914f436bcb3ca317f39a12856aa7439fa8d5cf3f2c10636ca7fb28134236aa
+paired_register_sha256: 884b343cc563d0145c11f8bc80cd5e8375d480089d25e691966ef7f42a4df9d1
+source_context: doc_id 0015, requirement I02-E05, genre is a client-needs assessment and response record. This is a scoped repair only. A prior independent finding identified literal 待核 outside a labeled REAL replacement area as prohibited.
+prior target value: SAMPLE/SYNTHETIC 評分：時段與執行安排 3 分（M；僅有期望週次，真實確切日期及執行可用性待核）
+current exact extracted target value: SAMPLE/SYNTHETIC 評分：時段與執行安排 3 分（M；範例僅提供期望週次，未包含真實確切日期及執行可用性）
+paired synthetic register sample_value: SAMPLE/SYNTHETIC 評分：時段與執行安排 3 分（M；範例僅提供期望週次，未包含真實確切日期及執行可用性）
+
+Review only whether the current value removes the prohibited pending marker while preserving the score/rating and SAMPLE/SYNTHETIC truth boundary, avoids implying an actual date, availability, assessment, venue, execution, or association record, and is clear enough for a human reader. Check the exact equality of the supplied DOCX target value and paired register value. The supplied text was extracted from the candidate bound to the stated SHA; do not claim to have independently hashed/opened the binary file. Do not review the whole document or grant formal TTQS acceptance.
+
+Return exactly one compact JSON object with keys work_id, candidate_sha256, register_sha256, reviewed_scope, verdict (PASS/FAIL), finding (null or one concise finding), rationale, and whole_document_or_formal_acceptance (must be false). No markdown. Do not edit files or use tools.

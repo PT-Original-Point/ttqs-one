@@ -1,0 +1,209 @@
+{
+  "doc_id": "0095",
+  "requirement_id": "I18-E02",
+  "official_checkbox": "建立目標客戶及學員滿意度調查機制（系統及流程面）。",
+  "state": "CANDIDATE_BOUNDED_DELTA_REVIEW_PASS_SCOPE_LIMITED",
+  "register_file": "0095_R15_synthetic_replacement_register.csv",
+  "row_count": 211,
+  "column_count": 13,
+  "unique_register_key": true,
+  "fact_status_counts": {
+    "SYNTHETIC_FACT": 134,
+    "UNKNOWN_NOT_PROVIDED": 13,
+    "PROPOSED_CONTROL": 7,
+    "PROPOSED_ROLE": 4,
+    "DERIVED_SYNTHETIC_METRIC": 53
+  },
+  "r08_current_rows_from_r06": 205,
+  "r08_added_unknown_index_rows": 6,
+  "r06_historical_register_sha256": "7f2034e3a7cc77e3a327a59a49ad90d3e2970c7ac01d7c03336b2ad4d572347f",
+  "r06_historical_row_count": 208,
+  "r07_historical_register_sha256": "ba5e5e1c8f0191e7298502976e5f9d02a164d4e799a1de2a7f1514f66a7fc3d4",
+  "r07_historical_row_count": 214,
+  "prior_r08_register_sha256": "615b282278d8c95fa632ed709cc1e358fc9ddcf33fa511ef5b605d9a419b04e9",
+  "current_csv_sha256": "163796fb365509ddda1d03fe2db7f795feb4f45fba30cbb138fd50857eafd1c9",
+  "retired_r08_rows": [
+    "SYN-0095-COMBINED_RETURN_RATE",
+    "SYN-0095-COMBINED_VALID_RATE",
+    "SYN-0095-POOLED_POSITIVE_RATE"
+  ],
+  "retirement_basis": "The three combined/pooled derived metrics were removed from current R08 after §6.3.3 was changed to preserve learner and target-customer populations separately; historical R06/R07 files remain unchanged.",
+  "preserved_nonlocation_fields_vs_r07": true,
+  "page_locator_basis": "R15 final Word PDF. All 211 row references passed numeric bounds and nonempty-page validation; targeted semantic anchors include the R14 F-01 correction for UNK-0095-UNK_FORMAL_EFFECTIVE_DATE at §9.5 row 3 / PDF p.39. Final PDF and DOCX hashes are bound here.",
+  "sample_real_boundary": "All synthetic facts remain SAMPLE/SYNTHETIC; six UNKNOWN rows mark missing real-source classes; no real evidence is asserted.",
+  "source_refs": {
+    "official_source_page6_sha256": "e0ecd2d7b1fd8c20e03b9e651083ee767ccaf3c4a6297f9cb0e7709d07620f02",
+    "unique_blueprint_sha256": "9a22b3acd4bdafb15f18c15ee89088f4fb5ee334bfef9a1917fcc5740b7979c2"
+  },
+  "r08_added_keys_vs_r06": [
+    "UNK-0095-UNK_APPROVAL_SIGNATURE",
+    "UNK-0095-UNK_ATTACHMENT_STORAGE_LOCATION",
+    "UNK-0095-UNK_AUTHOR_REVIEWER_IDENTITY",
+    "UNK-0095-UNK_FORMAL_EFFECTIVE_DATE",
+    "UNK-0095-UNK_IMPROVEMENT_ORIGINALS",
+    "UNK-0095-UNK_REAL_COURSE_COHORT"
+  ],
+  "r08_retained_rows_from_r06": 205,
+  "r06_omitted_keys_from_r08": [
+    "SYN-0095-COMBINED_RETURN_RATE",
+    "SYN-0095-COMBINED_VALID_RATE",
+    "SYN-0095-POOLED_POSITIVE_RATE"
+  ],
+  "register_revision_history": [
+    {
+      "previous_csv_sha256": "323b5bcd890cf4811f277e89e407650fb295edcf9e9aef8fa3afa28f0a54be6a",
+      "reason": "Rebound PDF page locators to the directly inspected 43-page Word export; no fact values changed."
+    },
+    {
+      "previous_csv_sha256": "203583e4aa51f6c370b5dcee904922856c5d118b02d6184a5518b1174840202c",
+      "reason": "Re-anchored only the document_location page layer from R08 PDF locators to the R10 final04 44-page export, preserving all nonlocation fields; pending final R11 export verification."
+    },
+    {
+      "previous_csv_sha256": "bce85d930d2720efae66710a382d8adbb134355ed982e740b2f2c586dc444816",
+      "reason": "Corrected 13 row-level page locators from direct R11 PDF inspection, including customer return/validity rates on p.26, section 5.2 on p.21, and §9.5 rows 7–8 on p.40; all non-location fields preserved."
+    },
+    {
+      "previous_csv_sha256": "df25ec51db00707764cd488b7de44d0b686a956dd4df1433f6c159010ab3b3ee",
+      "reason": "R12 corrects four document_location entries identified by the R11 exact-SHA review and binds all locators to the final R12 PDF; no fact values or historical source registers changed."
+    },
+    {
+      "previous_csv_sha256": "b8c2b192a5b501fbdd1398cb280e8c42ad4be5111fb144b1149fca6e072e8a09",
+      "reason": "R13 reanchors only document_location PDF page references >=22 by +1 to match the directly exported R13 pagination (case-opening metadata is p.23, not p.22); all fact values, IDs and non-location columns are preserved."
+    },
+    {
+      "previous_csv_sha256": "e1331efc3f5109bcc1502821bb132b71cce682ec08926741915b0e0c906ad5b6",
+      "reason": "R15 corrects only the current locator for UNK-0095-UNK_FORMAL_EFFECTIVE_DATE from PDF p.38 to p.39, matching R14 exact-SHA review F-01 and the directly inspected R15 §9.5 row 3; no fact values or other fields changed."
+    }
+  ],
+  "prior_r08_csv_sha256": "203583e4aa51f6c370b5dcee904922856c5d118b02d6184a5518b1174840202c",
+  "revision": "R15",
+  "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "page_locator_validation": {
+    "rows_with_page_refs": 211,
+    "expanded_page_references": 258,
+    "out_of_bounds": [],
+    "references_to_empty_pages": [],
+    "semantic_anchor_checks": {
+      "24": {
+        "SYN-L01": true,
+        "SYN-L08": true
+      },
+      "27": {
+        "6.3.1": true,
+        "57": true
+      },
+      "28": {
+        "6.3.3": true
+      },
+      "29": {
+        "6.4": true
+      },
+      "30": {
+        "6.4.1": true
+      },
+      "31": {
+        "7.1": true,
+        "7.2": true
+      },
+      "33": {
+        "7.2": true,
+        "SAMPLE": true
+      },
+      "34": {
+        "7.3": true,
+        "7.4": true
+      },
+      "35": {
+        "8.1": true
+      },
+      "36": {
+        "8.4": true
+      },
+      "37": {
+        "8.5": true
+      },
+      "39": {
+        "9.5": true,
+        "UNK-0095-UNK_FORMAL_EFFECTIVE_DATE": true
+      },
+      "40": {
+        "UNK-0095-UNK_REAL_RESPONSES": true
+      },
+      "41": {
+        "UNK-0095-UNK_IMPROVEMENT_ORIGINALS": true
+      },
+      "42": {
+        "10.1": true,
+        "R15 current register": true
+      },
+      "43": {
+        "A-5": true,
+        "0095_R15_synthetic_replacement_register.csv": true
+      },
+      "44": {
+        "10.2": true,
+        "R15 current QA receipts": true
+      },
+      "45": {
+        "R15": true
+      },
+      "46": {
+        "候選狀態": true
+      }
+    },
+    "semantic_scope": "Bounds/nonempty checks cover all 211 rows. Targeted direct page-text and visual checks confirm the corrected §9.5 row 3 locator and R15 appendix anchors; other existing R13 semantic locator sampling remains inherited and is not newly re-reviewed."
+  },
+  "r11_historical_register_sha256": "df25ec51db00707764cd488b7de44d0b686a956dd4df1433f6c159010ab3b3ee",
+  "docx_file": "0095_R15_CANDIDATE.docx",
+  "docx_sha256": "c70521d50fbec6cdc3b53ce3dc35fa2613069e60c58625b7eb2f96a5a6fd3658",
+  "pdf_file": "0095_R15_CANDIDATE.pdf",
+  "pdf_sha256": "b106d9c8a66b7c3eae8ecd6c58d71adb797d03e0b7982de9f414c6e744006a04",
+  "pdf_page_count": 46,
+  "supersedes": "R14 candidate DOCX SHA-256 bde9a803c18137c98cf64992d75066b0722b5c3d3794eb7d6ab38667b88d0f19; exact-SHA review F-01 found the current register locator at PDF p.38 while the actual §9.5 row 3 is on p.39. R15 changes only that locator field in the current register and rebinds the register SHA in the DOCX.",
+  "current_qa_receipts": {
+    "technical": "qa/0095_R15_technical_qa_receipt.json",
+    "register_validation": "qa/0095_R15_register_validation_receipt.json",
+    "font_floor": "qa/0095_R15_font_floor_receipt.json",
+    "visual": "qa/0095_R15_visual_qa_receipt.json",
+    "locator_repair": "qa/0095_R15_locator_repair_receipt.json"
+  },
+  "review_history": [
+    {
+      "revision": "R14",
+      "verdict": "PARTIAL",
+      "blocking": 1,
+      "finding_id": "F-01",
+      "docx_sha256": "bde9a803c18137c98cf64992d75066b0722b5c3d3794eb7d6ab38667b88d0f19",
+      "response_sha256": "19e93153345f208840efe71d1a91592f328d8b82ed7f519c2fe728ec1de10cd3",
+      "receipt_sha256": "4e79cab0ddca3832dcbeac3baf79d52c70ba12ada00864aacb36abf0a6aa6b3d",
+      "status": "PRESERVED_HISTORICAL_FINDING_REPAIRED_IN_R15"
+    },
+    {
+      "revision": "R15",
+      "verdict": "PASS",
+      "blocking": 0,
+      "finding_id": "R14-F-01",
+      "docx_sha256": "c70521d50fbec6cdc3b53ce3dc35fa2613069e60c58625b7eb2f96a5a6fd3658",
+      "response_sha256": "2d182b9b0d2384268f3fd2ecb977bbb6b705e1ab94c23c986fd58059b08723f3",
+      "receipt_path": "review/0095_R15_opencode_deepseek_R01_receipt.json",
+      "status": "BOUNDED_EXACT_SHA_DELTA_REVIEW; F-01 CLOSED; candidate only"
+    }
+  ],
+  "generated_at_utc": "2026-10-20T14:59:51.780284+00:00",
+  "semantic_review": {
+    "verdict": "PASS",
+    "blocking": 0,
+    "finding_id": "R14-F-01",
+    "finding_status": "CLOSED",
+    "reviewed_docx_sha256": "c70521d50fbec6cdc3b53ce3dc35fa2613069e60c58625b7eb2f96a5a6fd3658",
+    "review_receipt": "review/0095_R15_opencode_deepseek_R01_receipt.json",
+    "review_response": "review/0095_R15_opencode_deepseek_R01_response.md",
+    "review_packet": "review/0095_R15_exact_sha_delta_review_packet.md",
+    "reviewer_route": "OpenCode CLI v2.0.32",
+    "requested_model": "opencode/deepseek-v4.1-flash-free",
+    "provider_model_identity": "UNKNOWN",
+    "scope": "Bounded locator-finding closure; unchanged content not fully re-reviewed.",
+    "full_content_acceptance": false,
+    "overall_scope_note": "PASS applies only to the exact-SHA R14 F-01 locator delta. Prior R12 PASS is historical on its own SHA; no unqualified fresh full-content PASS is asserted for R15."
+  }
+}

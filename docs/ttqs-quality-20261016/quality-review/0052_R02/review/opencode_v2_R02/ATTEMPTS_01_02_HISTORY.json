@@ -1,0 +1,25 @@
+{
+  "recorded_at_local": "2026-10-17T18:00:06.6359284+08:00",
+  "cli_version": "opencode v2.0.29",
+  "model_requested": "opencode/glm-5.3-flash-free",
+  "attempts": [
+    {
+      "attempt": 1,
+      "state": "CANCELLED_BEFORE_RESULT",
+      "exit_code": 1,
+      "reason": "Wrong official checkbox crosswalk in the caller review request: 0053 I12-E01 was mislabeled 058 rather than 056. Stopped before accepting output.",
+      "stdout_bytes": 0,
+      "stderr_bytes": 0,
+      "candidate_sha256": "9129aff2bb730d31f76a5cb457ed069f1cafd2460b4069219f697b35d2c11afa"
+    },
+    {
+      "attempt": 2,
+      "state": "CANCELLED_BEFORE_RESULT",
+      "exit_code": 1,
+      "reason": "The main request was corrected to 056 but a copied packet source still had stale 058. Stopped before accepting output.",
+      "stdout_bytes": 0,
+      "stderr_bytes": 0,
+      "candidate_sha256": "9129aff2bb730d31f76a5cb457ed069f1cafd2460b4069219f697b35d2c11afa"
+    }
+  ]
+}

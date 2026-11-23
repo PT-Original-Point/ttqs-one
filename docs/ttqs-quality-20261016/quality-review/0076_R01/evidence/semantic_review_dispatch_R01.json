@@ -1,0 +1,96 @@
+{
+  "schema": "TTQS_ONE_0076_SEMANTIC_REVIEW_DISPATCH_R01.v1",
+  "document_id": "0076",
+  "requirement_id": "I17B-E01",
+  "official_checkbox_serial": "084",
+  "candidate_docx_sha256": "885fe403b46144639034a3f6b26c2b74916c22c7b5a5a971628136f376a115f3",
+  "candidate_docx_bytes": 75036,
+  "route": "OpenCode CLI v2",
+  "cli_version": "2.0.29",
+  "model": "opencode/beam-free",
+  "session_id": "ses_eae64f03cffezJNEC42vjxpWiV",
+  "computer_use": false,
+  "review_only": true,
+  "process_exit_code": 0,
+  "stdout_path": "review/opencode_semantic_R01_stdout.jsonl",
+  "stdout_sha256": "a1b30dfb392a4134c0026ea304658cbbcf4e8cbe66819cd06e840e2b8ed95a10",
+  "stdout_bytes": 226778,
+  "stderr_path": "review/opencode_semantic_R01_stderr.txt",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0,
+  "review_path": "review/independent_semantic_review_R01.md",
+  "review_sha256": "0e0c65c4730e0b562ce2a2eb3e376f86b85a56a0b04be46662f64732ee240325",
+  "review_bytes": 6466,
+  "prompt_sha256": "d340e333eca4a1ba8093bfe927454054c9183d4d868a666f0b9fb8568aae9f48",
+  "attached_inputs": [
+    {
+      "path": "review/semantic_review_prompt_R01.md",
+      "sha256": "d340e333eca4a1ba8093bfe927454054c9183d4d868a666f0b9fb8568aae9f48",
+      "bytes": 4190
+    },
+    {
+      "path": "inputs/UNIQUE_BLUEPRINT_0076_R01.md",
+      "sha256": "8c95b40c91282dbbe8f303fcba7077c10a44b7165755e8d8ed519a58d972d3a3",
+      "bytes": 3969
+    },
+    {
+      "path": "inputs/SOURCE_PACKET_0076_R01.md",
+      "sha256": "b34357474de3676a1e91d70ff9979162975bcd5a0b42ce7d00cf5c504f14d31f",
+      "bytes": 4162
+    },
+    {
+      "path": "review/docx_extracted_R01.md",
+      "sha256": "cdf6aa0ea80110e58a77fd2dff2e52980f9a4d00edf069f4be6977918977a28e",
+      "bytes": 45159
+    },
+    {
+      "path": "evidence/docx_extraction_receipt_R01.json",
+      "sha256": "9a662d09a1c9c08b4838045c18a2e9f63b8e31680d94388a7431afed6a442e61",
+      "bytes": 726
+    },
+    {
+      "path": "evidence/technical_review_R01.json",
+      "sha256": "09cb3062ad490522558e19a9a58bddff5c0c8587f59f798480b1d6c4887adce8",
+      "bytes": 1695
+    },
+    {
+      "path": "evidence/visual_review_R01.json",
+      "sha256": "38f74715b98e1ca27178611a20a3b3b9a7b66de726cda55d3c1941fe0bf6adf7",
+      "bytes": 7681
+    },
+    {
+      "path": "inputs/SYNTHETIC_ASSESSMENT_DATA_0076_R01.csv",
+      "sha256": "348106b5cd0734e02c14fa340ca4134109b9d35b6404833a3a19fae77c96ad5d",
+      "bytes": 1897
+    },
+    {
+      "path": "inputs/SYNTHETIC_ITEM_ANALYSIS_0076_R01.csv",
+      "sha256": "215dad153b80f278a2292a98d335af80fe17cd373c23a509a353a83cb792a9bd",
+      "bytes": 2645
+    },
+    {
+      "path": "inputs/SYNTHETIC_CALCULATION_CHECK_0076_R01.json",
+      "sha256": "44c541789fbf5595756f2b37b93f4845e24efef1c31534e51ac6f4a85f00513a",
+      "bytes": 654
+    },
+    {
+      "path": "inputs/SYNTHETIC_REPLACEMENT_REGISTER_0076_R01.csv",
+      "sha256": "afdc9767b654af94e3e5301e4211e55f817f135487d2197c7e7f71eb8aef1eea",
+      "bytes": 35296
+    },
+    {
+      "path": "inputs/upstream_snapshots/official_evidence_table_source.pdf",
+      "sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+      "bytes": 303044
+    }
+  ],
+  "verdict": "PASS",
+  "scope_limitations": [
+    "Reviewer relied on source packet and Unique Blueprint for official requirement wording; its PDF text decoding was not usable.",
+    "Reviewer relied on supplied visual receipt and did not independently inspect page images."
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "composite_checkbox_state": "PARTIAL",
+  "real_status": "UNKNOWN/HOLD",
+  "completed_utc": "2026-10-19T00:47:28.112000+00:00"
+}

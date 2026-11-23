@@ -1,0 +1,22 @@
+{
+  "schema": "ttqs.codex_usage_readback.v1",
+  "source": "mcp__codex_app__get_usage_limits",
+  "scope": "shared Codex account",
+  "read_at_utc": "2026-10-04T23:42:54Z",
+  "ordinary_usage_allowed": true,
+  "five_hour_used_percent": 8,
+  "five_hour_remaining_percent": 92,
+  "five_hour_reset_at_utc": "2026-10-05T03:34:50Z",
+  "weekly_used_percent": 91,
+  "weekly_remaining_percent": 9,
+  "weekly_reset_at_utc": "2026-10-09T15:12:13Z",
+  "local_preflight_floor": {
+    "five_hour_percent": 20,
+    "weekly_percent": 10
+  },
+  "local_model_launch_allowed": false,
+  "local_preflight_reason": "WEEKLY_RESERVE_REACHED",
+  "quota_reset_credit_used": false,
+  "notes": "Official account usage readback only. Local runtime preflight blocks new model launch at weekly remaining <= 10%; no reserve bypass.",
+  "read_at": "2026-10-04T23:42:54Z"
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "review_id": "0040_R03_cross_review_exact_sha_20261017",
+  "status": "PARTIAL",
+  "reviewed_doc_id": "0040",
+  "candidate_path": "E:/TTQS/TTQS_ONE_CODEX_RUNTIME/WORK/QUALITY_REBUILD_20261016/0040_R03/candidate/0040__訓練評估方法與成效指標對照表_R03.docx",
+  "candidate_sha256": "c84e200ff11d2e9f46360b4e03b7867e22fb03ac4ec298d022c9d1f3d76ffdf8",
+  "register_sha256": "91ec0ab6b0a37fa38293e18bb2121adde75ff6c132d448f6779466217c207b07",
+  "rendered_pdf_sha256": "60616c48bd60da87b6596379883b9adcca95a843d20cdbc5752840aa97d0ebaf",
+  "reviewer_route": "existing_cross_review_agent_codex_local_control_review_lane",
+  "reviewer_agent_id": "01a1435e-f156-7a52-ade0-b76f38bb6230",
+  "independent_of_builder": true,
+  "source_scope": [
+    "official requirement PDF and source map",
+    "Unique Blueprint line 40",
+    "R03 DOCX and all six rendered page images",
+    "R03 source and synthetic replacement register",
+    "0039 R09 companion DOCX and review evidence",
+    "R02 exact semantic review",
+    "CURRENT_STATE reviewer route"
+  ],
+  "passing_areas": [
+    "official mapping and document genre",
+    "operational assessment method and consistent sample case",
+    "mathematical recalculation and cross-document consistency",
+    "R02 D04 gap/risk/owner/deadline/handoff/closure gap resolved",
+    "SAMPLE/SYNTHETIC boundary and exact candidate SHA binding",
+    "six-page visual readability"
+  ],
+  "blocking_findings": [
+    {
+      "id": "B1",
+      "summary": "Blueprint line 40 requires current version information and an audit index; the candidate has neither a current tool version/revision history nor a consolidated index to actual printed locations.",
+      "affected_scope": "candidate document"
+    },
+    {
+      "id": "B2",
+      "summary": "34 of 39 register locator values use §1-§11 markers that are not printed in the DOCX; replace with exact printed page/table/row/column locators and verify against final rendering.",
+      "affected_scope": "source and synthetic replacement register"
+    }
+  ],
+  "reviewer_limitations": [
+    "candidate itself does not identify its specific author, so per-file authorship is unverified beyond route configuration",
+    "review verdict is PARTIAL; no promotion or Human acceptance implied"
+  ],
+  "reviewer_modified_files": false
+}

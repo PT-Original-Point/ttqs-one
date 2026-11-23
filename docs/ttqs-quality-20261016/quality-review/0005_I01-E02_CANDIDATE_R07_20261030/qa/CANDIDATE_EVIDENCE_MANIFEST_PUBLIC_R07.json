@@ -1,0 +1,40 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0005",
+  "requirement_id": "I01-E02",
+  "checkbox_serial": "002 (project crosswalk only; not printed on official PDF)",
+  "revision": "R07",
+  "candidate_state": "CANDIDATE",
+  "candidate_path": "candidate/0005_I01-E02_R07.docx",
+  "candidate_sha256": "a36c501893bcb4d2dadaf0adfa7d8638df5e426650a8876182a8f83aebfa1a7c",
+  "parent_candidate_sha256": "b6ae9cd46a2bae5dd07a55f2a453762bb8ac33c7dd4dc1bf93aea3420c06b9c7",
+  "source_packet_path": "source/SOURCE_PACKET_0005_I01-E02_R07.md",
+  "source_packet_sha256": "c8307b7f9af5e63034123a66af2e14bcfe0b06ce71d0c601c85efd663b995b12",
+  "synthetic_register_path": "source/SYNTHETIC_REPLACEMENT_REGISTER_0005_R07.csv",
+  "synthetic_register_sha256": "e9598f6ffac5cf89d4ad834b49aaf6a55f455044918f6750622c8a6f0d489ca6",
+  "synthetic_fact_rows": 43,
+  "sources": {
+    "official_requirement_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "blueprint_row_0005_r02_sha256": "24c927721f8b7f446eb239f65306fd52cd466ae701b6383e8f26771287bc4275",
+    "blueprint_markdown_0005_r02_sha256": "27c2e7873d880807a09c4cf887258648c3f2fb3edfd82e3b496c2f76e2791c54",
+    "source_0003_r14_docx_sha256": "162c3243e276b1672d1f1aac5e42adf5b63da7d2f98e77c35bc53a2b8e5ec4f4",
+    "source_0003_r14_register_sha256": "d4f1aa86489e67cc494b5f8faa63a52a1fe3821cbe0171bcd3735bf032e61a64",
+    "source_0004_r01_packet_sha256": "ed66b95a1856751b559702fe7b944595ec827651435b652a380725b9cf8a219d",
+    "source_0004_r01_register_sha256": "c356d284fc71c2deb6a03647ee2c70e62baaea9bf96351e2b7fb151e8788c3e3"
+  },
+  "qa": {
+    "technical": "PASS",
+    "technical_receipt_sha256": "14d425192945bf65bc323772853e296befee6d345e7fa03ffc742909afef47aa",
+    "semantic_content": "PASS for exact candidate SHA; original reviewer response overall PARTIAL at review time",
+    "semantic_review_sha256": "6817dbfb1b192a0b8bbf0349b12c4addb0c7bd907e6d005c29a84ff0431fcf54",
+    "semantic_request_sha256": "bbbc45e9ba7e37d027c6155cdb6deccccdbc6e1df8bc1e2b3d21bc1849c61f89",
+    "packet_hash_discrepancy": "Corrected in sidecar only; DOCX unchanged; deterministic technical QA rerun PASS; reviewer was not re-run on corrected packet",
+    "visual": "BLOCKED_WORD_NATIVE_EXPORT_TIMEOUT",
+    "visual_status_receipt_sha256": "048fcd5f6c85b7248a8a218b5d228b41b3eebb16480334078b9510c956f0625d",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "NOT_VERIFIED",
+    "package_status": "PARTIAL_VISUAL_PENDING"
+  },
+  "known_source_limit": "0003 R14 independent semantic review PARTIAL: Q3 DECLINED is absent from its codebook table; this R07 sample uses a valid Q3 response, but real Q3 refusal processing remains HOLD.",
+  "sample_real_boundary": "All included example data are SAMPLE/SYNTHETIC; no REAL evidence or association approval is asserted."
+}

@@ -1,0 +1,338 @@
+﻿fact_id,case_id,doc_id,locator,value,type,synthetic_assumption,source_reference,real_replacement_source,role_to_verify,status
+SYN-0064-FACT-001,SYN-0060-2026-A01,0064,第 3 章「同案核對」,SYN-0060-2026-A01,案情編號,僅引用 0060 R08 已存在之案號，未重新定義或改值,inputs/0060_R08_SYNTHETIC_REPLACEMENT_REGISTER.csv；0060 R08 封包,正式案情編號,R01 檔案保管功能,引用（不重登）
+SYN-0060-FACT-003,SYN-0060-2026-A01,0064,附錄 A 跨文件說明（來源參照）,SYN-0060-FACT-003 | 授課日期 | 2026-08-15（上游 SAMPLE 日期；非索引檔案形成日期）,來源交叉參照,僅供同案追溯；沿用 0060 日期類型和值，不作為 0064 formed_date,inputs/0060_R08_SYNTHETIC_REPLACEMENT_REGISTER.csv 列 SYN-0060-FACT-003,0060 R08 對應之實際活動證據,來源資料權責功能,REFERENCE_ONLY
+SYN-0060-FACT-004,SYN-0060-2026-A01,0064,附錄 A 跨文件說明（來源參照）,SYN-0060-FACT-004 | 追蹤日期 | 2026-09-14（上游 SAMPLE 日期；非索引檔案形成日期）,來源交叉參照,僅供同案追溯；沿用 0060 日期類型和值，不作為 0064 formed_date,inputs/0060_R08_SYNTHETIC_REPLACEMENT_REGISTER.csv 列 SYN-0060-FACT-004,0060 R08 對應之實際活動證據,來源資料權責功能,REFERENCE_ONLY
+SYN-0064-FACT-004,SYN-0060-2026-A01,0064,附錄 A 合成索引表 第 1 列「file_id」,F-0064-2026-0001,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-005,SYN-0060-2026-A01,0064,附錄 A 合成索引表 第 1 列「case_id」,SYN-0060-2026-A01,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,引用（不重登）
+SYN-0064-FACT-006,SYN-0060-2026-A01,0064,附錄 A 合成索引表 第 1 列「標題」,0060 R08 同案授課資料摘要（SAMPLE）,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-007,SYN-0060-2026-A01,0064,附錄 A 合成索引表 第 1 列「類別」,訓練紀錄,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-008,SYN-0060-2026-A01,0064,附錄 A 合成索引表 第 1 列「形成日期」,2026-08-18,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-009,SYN-0060-2026-A01,0064,附錄 A 合成索引表 第 1 列「存取級別」,0061-L1,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-010,SYN-0060-2026-A01,0064,附錄 A 合成索引表 第 1 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0001,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-011,SYN-0060-2026-A01,0064,附錄 A 合成索引表 第 2 列「file_id」,F-0064-2026-0002,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-012,SYN-0060-2026-A01,0064,附錄 A 合成索引表 第 2 列「case_id」,SYN-0060-2026-A01,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,引用（不重登）
+SYN-0064-FACT-013,SYN-0060-2026-A01,0064,附錄 A 合成索引表 第 2 列「標題」,0060 R08 同案成效追蹤摘要（SAMPLE）,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-014,SYN-0060-2026-A01,0064,附錄 A 合成索引表 第 2 列「類別」,成效追蹤,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-015,SYN-0060-2026-A01,0064,附錄 A 合成索引表 第 2 列「形成日期」,2026-09-18,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-016,SYN-0060-2026-A01,0064,附錄 A 合成索引表 第 2 列「存取級別」,0061-L2,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-017,SYN-0060-2026-A01,0064,附錄 A 合成索引表 第 2 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0002,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-018,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 3 列「file_id」,F-0064-2026-0003,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-019,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 3 列「case_id」,SYN-0064-2026-A01,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-020,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 3 列「標題」,志工基礎訓練課程規劃書 v01,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-021,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 3 列「類別」,課程規劃,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-022,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 3 列「形成日期」,2026-09-02,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-023,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 3 列「存取級別」,0061-L1,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-024,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 3 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0003,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-025,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 4 列「file_id」,F-0064-2026-0004,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-026,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 4 列「case_id」,SYN-0064-2026-A01,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-027,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 4 列「標題」,志工基礎訓練課程規劃書 v02,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-028,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 4 列「類別」,課程規劃,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-029,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 4 列「形成日期」,2026-09-20,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-030,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 4 列「存取級別」,0061-L1,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-031,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 4 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0004,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-032,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 5 列「file_id」,F-0064-2026-0005,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-033,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 5 列「case_id」,SYN-0064-2026-A01,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-034,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 5 列「標題」,志工基礎訓練學員報名清冊（去識別）,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-035,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 5 列「類別」,學員報名,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-036,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 5 列「形成日期」,2026-09-05,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-037,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 5 列「存取級別」,0061-L2,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-038,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 5 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0005,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-039,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 6 列「file_id」,F-0064-2026-0006,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-040,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 6 列「case_id」,SYN-0064-2026-A01,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-041,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 6 列「標題」,志工基礎訓練講師遴選與聘書紀錄,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-042,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 6 列「類別」,講師資料,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-043,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 6 列「形成日期」,2026-09-08,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-044,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 6 列「存取級別」,0061-L2,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-045,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 6 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0006,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-046,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 7 列「file_id」,F-0064-2026-0007,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-047,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 7 列「case_id」,SYN-0064-2026-A01,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-048,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 7 列「標題」,志工基礎訓練教材彙編,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-049,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 7 列「類別」,教材,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-050,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 7 列「形成日期」,2026-09-10,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-051,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 7 列「存取級別」,0061-L1,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-052,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 7 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0007,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-053,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 8 列「file_id」,F-0064-2026-0008,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-054,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 8 列「case_id」,SYN-0064-2026-A01,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-055,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 8 列「標題」,志工基礎訓練學員個別成績紀錄,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-056,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 8 列「類別」,學習評量,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-057,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 8 列「形成日期」,2026-09-18,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-058,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 8 列「存取級別」,0061-L3,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-059,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 8 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0008,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-060,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 9 列「file_id」,F-0064-2026-0009,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-061,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 9 列「case_id」,SYN-0064-2026-A01,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-062,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 9 列「標題」,志工基礎訓練滿意度調查摘要,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-063,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 9 列「類別」,滿意度調查,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-064,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 9 列「形成日期」,2026-09-22,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-065,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 9 列「存取級別」,0061-L1,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-066,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 9 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0009,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-067,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 10 列「file_id」,F-0064-2026-0010,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-068,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 10 列「case_id」,SYN-0064-2026-A01,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-069,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 10 列「標題」,志工基礎訓練結案報告,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-070,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 10 列「類別」,結案報告,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-071,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 10 列「形成日期」,2026-09-30,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-072,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 10 列「存取級別」,0061-L1,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-073,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 10 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0010,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-074,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 11 列「file_id」,F-0064-2026-0011,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-075,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 11 列「case_id」,SYN-0064-2026-A01,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-076,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 11 列「標題」,志工基礎訓練出席紀錄表（匯總）,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-077,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 11 列「類別」,出席紀錄,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-078,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 11 列「形成日期」,2026-09-15,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-079,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 11 列「存取級別」,0061-L1,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-080,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 11 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0011,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-081,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 12 列「file_id」,F-0064-2026-0012,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-082,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 12 列「case_id」,SYN-0064-2026-A01,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-083,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 12 列「標題」,志工基礎訓練經費核銷明細,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-084,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 12 列「類別」,經費核銷,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-085,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 12 列「形成日期」,2026-10-01,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-086,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 12 列「存取級別」,0061-L2,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-087,SYN-0064-2026-A01,0064,附錄 A 合成索引表 第 12 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0012,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-088,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 13 列「file_id」,F-0064-2026-0013,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-089,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 13 列「case_id」,SYN-0064-2026-A02,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-090,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 13 列「標題」,進階班課程規劃書,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-091,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 13 列「類別」,課程規劃,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-092,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 13 列「形成日期」,2026-10-05,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-093,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 13 列「存取級別」,0061-L1,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-094,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 13 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0013,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-095,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 14 列「file_id」,F-0064-2026-0014,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-096,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 14 列「case_id」,SYN-0064-2026-A02,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-097,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 14 列「標題」,進階班學員報名資料（去識別）,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-098,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 14 列「類別」,學員報名,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-099,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 14 列「形成日期」,2026-10-06,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-100,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 14 列「存取級別」,0061-L2,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-101,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 14 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0014,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-102,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 15 列「file_id」,F-0064-2026-0015,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-103,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 15 列「case_id」,SYN-0064-2026-A02,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-104,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 15 列「標題」,進階班滿意度調查統計,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-105,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 15 列「類別」,滿意度調查,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-106,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 15 列「形成日期」,2026-10-12,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-107,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 15 列「存取級別」,0061-L1,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-108,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 15 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0015,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-109,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 16 列「file_id」,F-0064-2026-0016,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-110,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 16 列「case_id」,SYN-0064-2026-A02,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-111,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 16 列「標題」,進階班結案報告,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-112,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 16 列「類別」,結案報告,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-113,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 16 列「形成日期」,2026-10-15,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-114,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 16 列「存取級別」,0061-L1,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-115,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 16 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0016,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-116,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 17 列「file_id」,F-0064-2026-0017,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-117,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 17 列「case_id」,SYN-0064-2026-A02,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-118,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 17 列「標題」,進階班講師評選紀錄,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-119,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 17 列「類別」,講師資料,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-120,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 17 列「形成日期」,2026-10-07,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-121,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 17 列「存取級別」,0061-L2,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-122,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 17 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0017,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-123,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 18 列「file_id」,F-0064-2026-0018,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-124,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 18 列「case_id」,SYN-0064-2026-A02,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-125,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 18 列「標題」,進階班教材與講義,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-126,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 18 列「類別」,教材,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-127,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 18 列「形成日期」,2026-10-08,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-128,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 18 列「存取級別」,0061-L1,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-129,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 18 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0018,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-130,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 19 列「file_id」,F-0064-2026-0019,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-131,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 19 列「case_id」,SYN-0064-2026-A02,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-132,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 19 列「標題」,進階班學員個別學習成果,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-133,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 19 列「類別」,學習評量,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-134,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 19 列「形成日期」,2026-10-13,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-135,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 19 列「存取級別」,0061-L3,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-136,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 19 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0019,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-137,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 20 列「file_id」,F-0064-2026-0020,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-138,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 20 列「case_id」,SYN-0064-2026-A02,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-139,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 20 列「標題」,進階班出席簽到匯總,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-140,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 20 列「類別」,出席紀錄,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-141,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 20 列「形成日期」,2026-10-10,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-142,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 20 列「存取級別」,0061-L1,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-143,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 20 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0020,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-144,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 21 列「file_id」,F-0064-2026-0021,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-145,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 21 列「case_id」,SYN-0064-2026-A02,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-146,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 21 列「標題」,進階班場地與設備檢查紀錄,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-147,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 21 列「類別」,場地設備,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-148,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 21 列「形成日期」,2026-10-04,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-149,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 21 列「存取級別」,0061-L1,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-150,SYN-0064-2026-A02,0064,附錄 A 合成索引表 第 21 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0021,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-151,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 22 列「file_id」,F-0064-2026-0022,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-152,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 22 列「case_id」,SYN-0064-2026-A03,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-153,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 22 列「標題」,專題講座課程規劃書,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-154,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 22 列「類別」,課程規劃,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-155,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 22 列「形成日期」,2026-09-25,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-156,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 22 列「存取級別」,0061-L1,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-157,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 22 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0022,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-158,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 23 列「file_id」,F-0064-2026-0023,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-159,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 23 列「case_id」,SYN-0064-2026-A03,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-160,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 23 列「標題」,專題講座滿意度調查,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-161,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 23 列「類別」,滿意度調查,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-162,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 23 列「形成日期」,2026-09-28,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-163,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 23 列「存取級別」,0061-L1,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-164,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 23 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0023,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-165,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 24 列「file_id」,F-0064-2026-0024,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-166,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 24 列「case_id」,SYN-0064-2026-A03,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-167,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 24 列「標題」,專題講座結案報告,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-168,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 24 列「類別」,結案報告,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-169,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 24 列「形成日期」,2026-09-29,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-170,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 24 列「存取級別」,0061-L1,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-171,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 24 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0024,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-172,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 25 列「file_id」,F-0064-2026-0025,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-173,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 25 列「case_id」,SYN-0064-2026-A03,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-174,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 25 列「標題」,專題講座學員回饋意見匯整,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-175,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 25 列「類別」,滿意度調查,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-176,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 25 列「形成日期」,2026-09-27,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-177,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 25 列「存取級別」,0061-L2,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-178,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 25 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0025,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-179,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 26 列「file_id」,F-0064-2026-0026,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-180,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 26 列「case_id」,SYN-0064-2026-A03,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-181,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 26 列「標題」,專題講座證書發放清冊,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-182,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 26 列「類別」,證書發放,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-183,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 26 列「形成日期」,2026-10-02,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-184,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 26 列「存取級別」,0061-L2,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-185,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 26 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0026,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-186,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 27 列「file_id」,F-0064-2026-0027,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-187,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 27 列「case_id」,SYN-0064-2026-A03,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-188,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 27 列「標題」,專題講座講師資料,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-189,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 27 列「類別」,講師資料,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-190,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 27 列「形成日期」,2026-09-24,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-191,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 27 列「存取級別」,0061-L2,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-192,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 27 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0027,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-193,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 28 列「file_id」,F-0064-2026-0028,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-194,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 28 列「case_id」,SYN-0064-2026-A03,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-195,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 28 列「標題」,專題講座出席紀錄,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-196,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 28 列「類別」,出席紀錄,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-197,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 28 列「形成日期」,2026-09-26,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-198,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 28 列「存取級別」,0061-L1,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-199,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 28 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0028,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-200,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 29 列「file_id」,F-0064-2026-0029,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-201,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 29 列「case_id」,SYN-0064-2026-A03,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-202,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 29 列「標題」,專題講座教材,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-203,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 29 列「類別」,教材,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-204,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 29 列「形成日期」,2026-09-23,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-205,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 29 列「存取級別」,0061-L1,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-206,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 29 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0029,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-207,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 30 列「file_id」,F-0064-2026-0030,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檢索系統指派之檔案編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-208,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 30 列「case_id」,SYN-0064-2026-A03,識別碼,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式案情編號,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-209,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 30 列「標題」,年度訓練成果匯整報告,文字,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案標題,R02 業務經辦功能,SAMPLE
+SYN-0064-FACT-210,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 30 列「類別」,結案報告,類別,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之類別字典,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-211,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 30 列「形成日期」,2026-10-16,日期,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,正式檔案形成日期,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-212,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 30 列「存取級別」,0061-L2,分類／授權,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-213,SYN-0064-2026-A03,0064,附錄 A 合成索引表 第 30 列「locator」,SAMPLE_ROOT/10_已索引/F-0064-2026-0030,路徑,演練用合成索引欄位，非協會真實檔案,`build/fixture_0064.py`；UNIQUE_BLUEPRINT_0064_R01.md 附錄 A,真實受控位置（由 0062／受控資料夾提供）,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-214,SYN-0064-2026-A01,0064,第四章「角色」定義表,R01＝檔案保管人,角色定義,演練角色定義，非真實人事任命,UNIQUE_BLUEPRINT_0064_R01.md 第四章,真實職務指派與授權,組織權責功能,SAMPLE
+SYN-0064-FACT-215,SYN-0064-2026-A01,0064,第四章「角色」定義表,R02＝業務經辦,角色定義,演練角色定義，非真實人事任命,UNIQUE_BLUEPRINT_0064_R01.md 第四章,真實職務指派與授權,組織權責功能,SAMPLE
+SYN-0064-FACT-216,SYN-0064-2026-A01,0064,第四章「角色」定義表,R03＝調閱申請人,角色定義,演練角色定義，非真實人事任命,UNIQUE_BLUEPRINT_0064_R01.md 第四章,真實職務指派與授權,組織權責功能,SAMPLE
+SYN-0064-FACT-217,SYN-0064-2026-A01,0064,第四章「角色」定義表,R04＝覆核授權人,角色定義,演練角色定義，非真實人事任命,UNIQUE_BLUEPRINT_0064_R01.md 第四章,真實職務指派與授權,組織權責功能,SAMPLE
+SYN-0064-FACT-218,SYN-0064-2026-A01,0064,第四章「角色」定義表,R05＝受控資料夾帳號管理員,角色定義,演練角色定義，非真實人事任命,UNIQUE_BLUEPRINT_0064_R01.md 第四章,真實職務指派與授權,組織權責功能,SAMPLE
+SYN-0064-FACT-219,SYN-0064-2026-A01,0064,第四章「角色」定義表,R06＝外部／評核讀者,角色定義,演練角色定義，非真實人事任命,UNIQUE_BLUEPRINT_0064_R01.md 第四章,真實職務指派與授權,組織權責功能,SAMPLE
+SYN-0064-FACT-220,SYN-0064-2026-A01,0064,第四章「角色」定義表,R99＝未識別／授權不明者,角色定義,演練角色定義，非真實人事任命,UNIQUE_BLUEPRINT_0064_R01.md 第四章,真實職務指派與授權,組織權責功能,SAMPLE
+SYN-0064-FACT-221,SYN-0064-2026-A01,0064,第四章「存取級別與授權矩陣」,0061-L1（一般）,授權情境,演練操作授權層級（非 0060 分類碼）,UNIQUE_BLUEPRINT_0064_R01.md 第四章,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-222,SYN-0064-2026-A01,0064,第四章「存取級別與授權矩陣」,0061-L2（受限）,授權情境,演練操作授權層級（非 0060 分類碼）,UNIQUE_BLUEPRINT_0064_R01.md 第四章,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-223,SYN-0064-2026-A01,0064,第四章「存取級別與授權矩陣」,0061-L3（敏感）,授權情境,演練操作授權層級（非 0060 分類碼）,UNIQUE_BLUEPRINT_0064_R01.md 第四章,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-224,SYN-0064-2026-A01,0064,第四章「存取級別與授權矩陣」,0061-LH（凍結／HOLD）,授權情境,演練操作授權層級（非 0060 分類碼）,UNIQUE_BLUEPRINT_0064_R01.md 第四章,協會核定之存取級別,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-225,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q01,Q01,識別碼,演練查詢編號,build/fixture_0064.py,正式測試案例編號,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-226,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q01,精確檔案 ID 查詢,文字,演練查詢類型說明,build/fixture_0064.py,正式測試用例,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-227,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q01,R01,角色,演練執行角色,build/fixture_0064.py,正式測試執行角色,組織權責功能,SAMPLE
+SYN-0064-FACT-228,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q01,HIT,決策／結果,演練預期結果,build/fixture_0064.py,正式驗收標準,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-229,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q01「file_id」,F-0064-2026-0007,查詢參數,演練查詢參數,build/fixture_0064.py,正式測試參數,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-230,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q02,Q02,識別碼,演練查詢編號,build/fixture_0064.py,正式測試案例編號,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-231,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q02,關鍵字查詢,文字,演練查詢類型說明,build/fixture_0064.py,正式測試用例,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-232,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q02,R02,角色,演練執行角色,build/fixture_0064.py,正式測試執行角色,組織權責功能,SAMPLE
+SYN-0064-FACT-233,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q02,HIT_LIST,決策／結果,演練預期結果,build/fixture_0064.py,正式驗收標準,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-234,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q02「keyword」,滿意度,查詢參數,演練查詢參數,build/fixture_0064.py,正式測試參數,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-235,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q03,Q03,識別碼,演練查詢編號,build/fixture_0064.py,正式測試案例編號,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-236,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q03,日期區間查詢,文字,演練查詢類型說明,build/fixture_0064.py,正式測試用例,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-237,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q03,R04,角色,演練執行角色,build/fixture_0064.py,正式測試執行角色,組織權責功能,SAMPLE
+SYN-0064-FACT-238,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q03,HIT_LIST,決策／結果,演練預期結果,build/fixture_0064.py,正式驗收標準,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-239,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q03「date_from」,2026-09-01,查詢參數,演練查詢參數,build/fixture_0064.py,正式測試參數,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-240,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q03「date_to」,2026-09-30,查詢參數,演練查詢參數,build/fixture_0064.py,正式測試參數,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-241,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q04,Q04,識別碼,演練查詢編號,build/fixture_0064.py,正式測試案例編號,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-242,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q04,類別查詢,文字,演練查詢類型說明,build/fixture_0064.py,正式測試用例,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-243,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q04,R01,角色,演練執行角色,build/fixture_0064.py,正式測試執行角色,組織權責功能,SAMPLE
+SYN-0064-FACT-244,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q04,HIT_LIST,決策／結果,演練預期結果,build/fixture_0064.py,正式驗收標準,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-245,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q04「category」,出席紀錄,查詢參數,演練查詢參數,build/fixture_0064.py,正式測試參數,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-246,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q05,Q05,識別碼,演練查詢編號,build/fixture_0064.py,正式測試案例編號,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-247,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q05,無資料查詢（關鍵字）,文字,演練查詢類型說明,build/fixture_0064.py,正式測試用例,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-248,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q05,R01,角色,演練執行角色,build/fixture_0064.py,正式測試執行角色,組織權責功能,SAMPLE
+SYN-0064-FACT-249,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q05,NOT_FOUND,決策／結果,演練預期結果,build/fixture_0064.py,正式驗收標準,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-250,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q05「keyword」,量子電腦,查詢參數,演練查詢參數,build/fixture_0064.py,正式測試參數,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-251,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q06,Q06,識別碼,演練查詢編號,build/fixture_0064.py,正式測試案例編號,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-252,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q06,歧義查詢（單筆指定，命中多筆）,文字,演練查詢類型說明,build/fixture_0064.py,正式測試用例,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-253,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q06,R01,角色,演練執行角色,build/fixture_0064.py,正式測試執行角色,組織權責功能,SAMPLE
+SYN-0064-FACT-254,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q06,HOLD_AMBIGUOUS,決策／結果,演練預期結果,build/fixture_0064.py,正式驗收標準,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-255,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q06「keyword」,結案報告,查詢參數,演練查詢參數,build/fixture_0064.py,正式測試參數,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-256,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q06「single」,True,查詢參數,演練查詢參數,build/fixture_0064.py,正式測試參數,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-257,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q07,Q07,識別碼,演練查詢編號,build/fixture_0064.py,正式測試案例編號,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-258,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q07,未授權精確查詢（敏感級）,文字,演練查詢類型說明,build/fixture_0064.py,正式測試用例,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-259,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q07,R06,角色,演練執行角色,build/fixture_0064.py,正式測試執行角色,組織權責功能,SAMPLE
+SYN-0064-FACT-260,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q07,ACCESS_DENIED,決策／結果,演練預期結果,build/fixture_0064.py,正式驗收標準,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-261,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q07「file_id」,F-0064-2026-0008,查詢參數,演練查詢參數,build/fixture_0064.py,正式測試參數,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-262,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q08,Q08,識別碼,演練查詢編號,build/fixture_0064.py,正式測試案例編號,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-263,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q08,未識別角色關鍵字查詢,文字,演練查詢類型說明,build/fixture_0064.py,正式測試用例,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-264,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q08,R99,角色,演練執行角色,build/fixture_0064.py,正式測試執行角色,組織權責功能,SAMPLE
+SYN-0064-FACT-265,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q08,ACCESS_DENIED,決策／結果,演練預期結果,build/fixture_0064.py,正式驗收標準,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-266,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q08「keyword」,學員,查詢參數,演練查詢參數,build/fixture_0064.py,正式測試參數,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-267,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q09,Q09,識別碼,演練查詢編號,build/fixture_0064.py,正式測試案例編號,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-268,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q09,無資料查詢（ID 格式合法但不存在）,文字,演練查詢類型說明,build/fixture_0064.py,正式測試用例,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-269,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q09,R01,角色,演練執行角色,build/fixture_0064.py,正式測試執行角色,組織權責功能,SAMPLE
+SYN-0064-FACT-270,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q09,NOT_FOUND,決策／結果,演練預期結果,build/fixture_0064.py,正式驗收標準,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-271,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q09「file_id」,F-0064-2026-9999,查詢參數,演練查詢參數,build/fixture_0064.py,正式測試參數,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-272,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q10,Q10,識別碼,演練查詢編號,build/fixture_0064.py,正式測試案例編號,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-273,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q10,複合查詢（關鍵字＋類別＋日期）,文字,演練查詢類型說明,build/fixture_0064.py,正式測試用例,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-274,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q10,R01,角色,演練執行角色,build/fixture_0064.py,正式測試執行角色,組織權責功能,SAMPLE
+SYN-0064-FACT-275,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q10,HIT_LIST,決策／結果,演練預期結果,build/fixture_0064.py,正式驗收標準,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-276,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q10「keyword」,出席,查詢參數,演練查詢參數,build/fixture_0064.py,正式測試參數,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-277,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q10「category」,出席紀錄,查詢參數,演練查詢參數,build/fixture_0064.py,正式測試參數,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-278,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q10「date_from」,2026-09-01,查詢參數,演練查詢參數,build/fixture_0064.py,正式測試參數,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-279,SYN-0064-2026-A01,0064,第七章 查詢情境表 Q10「date_to」,2026-09-30,查詢參數,演練查詢參數,build/fixture_0064.py,正式測試參數,R04 覆核授權功能,SAMPLE
+SYN-0064-FACT-280,SYN-0064-2026-A01,0064,第五章「測試環境」,作業系統＝Windows-10-10.0.19045-SP0,環境,演練環境／方法參數，非協會正式系統,`build/benchmark_0064.py`；evidence/benchmark_summary_0064_R01.json,協會正式系統環境與測試方法核定,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-281,SYN-0064-2026-A01,0064,第五章「測試環境」,Python＝3.12.14,環境,演練環境／方法參數，非協會正式系統,`build/benchmark_0064.py`；evidence/benchmark_summary_0064_R01.json,協會正式系統環境與測試方法核定,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-282,SYN-0064-2026-A01,0064,第五章「計時方法」,"time.perf_counter_ns (monotonic, high-resolution)",方法,演練環境／方法參數，非協會正式系統,`build/benchmark_0064.py`；evidence/benchmark_summary_0064_R01.json,協會正式系統環境與測試方法核定,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-283,SYN-0064-2026-A01,0064,第五章「計時方法」,時鐘解析度＝100.0 ns,方法,演練環境／方法參數，非協會正式系統,`build/benchmark_0064.py`；evidence/benchmark_summary_0064_R01.json,協會正式系統環境與測試方法核定,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-284,SYN-0064-2026-A01,0064,第六章「百分位算法」,"nearest-rank: rank=ceil(p/100*n), value=sorted[rank-1]",方法,演練環境／方法參數，非協會正式系統,`build/benchmark_0064.py`；evidence/benchmark_summary_0064_R01.json,協會正式系統環境與測試方法核定,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-285,SYN-0064-2026-A01,0064,第三章「母體」,30（合成索引筆數）,件數,演練環境／方法參數，非協會正式系統,`build/benchmark_0064.py`；evidence/benchmark_summary_0064_R01.json,協會正式系統環境與測試方法核定,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-286,SYN-0064-2026-A01,0064,第五章「測次」,20（每情境重複次數）,件數,演練環境／方法參數，非協會正式系統,`build/benchmark_0064.py`；evidence/benchmark_summary_0064_R01.json,協會正式系統環境與測試方法核定,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-287,SYN-0064-2026-A01,0064,第七章「情境數」,10（查詢情境種數）,件數,演練環境／方法參數，非協會正式系統,`build/benchmark_0064.py`；evidence/benchmark_summary_0064_R01.json,協會正式系統環境與測試方法核定,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-288,SYN-0064-2026-A01,0064,第八章 摘要表「EXACT_ID」「預期結果符合率」,100.0%,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-289,SYN-0064-2026-A01,0064,第八章 摘要表「EXACT_ID」「p50」,0.0033 ms,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-290,SYN-0064-2026-A01,0064,第八章 摘要表「EXACT_ID」「p95」,0.0048 ms,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-291,SYN-0064-2026-A01,0064,第八章 摘要表「EXACT_ID」「max」,0.0068 ms,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-292,SYN-0064-2026-A01,0064,第八章 摘要表「KEYWORD」「預期結果符合率」,100.0%,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-293,SYN-0064-2026-A01,0064,第八章 摘要表「KEYWORD」「p50」,0.0056 ms,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-294,SYN-0064-2026-A01,0064,第八章 摘要表「KEYWORD」「p95」,0.0071 ms,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-295,SYN-0064-2026-A01,0064,第八章 摘要表「KEYWORD」「max」,0.0075 ms,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-296,SYN-0064-2026-A01,0064,第八章 摘要表「DATE_RANGE」「預期結果符合率」,100.0%,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-297,SYN-0064-2026-A01,0064,第八章 摘要表「DATE_RANGE」「p50」,0.0142 ms,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-298,SYN-0064-2026-A01,0064,第八章 摘要表「DATE_RANGE」「p95」,0.0145 ms,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-299,SYN-0064-2026-A01,0064,第八章 摘要表「DATE_RANGE」「max」,0.0153 ms,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-300,SYN-0064-2026-A01,0064,第八章 摘要表「CATEGORY」「預期結果符合率」,100.0%,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-301,SYN-0064-2026-A01,0064,第八章 摘要表「CATEGORY」「p50」,0.0054 ms,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-302,SYN-0064-2026-A01,0064,第八章 摘要表「CATEGORY」「p95」,0.0056 ms,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-303,SYN-0064-2026-A01,0064,第八章 摘要表「CATEGORY」「max」,0.0069 ms,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-304,SYN-0064-2026-A01,0064,第八章 摘要表「NOT_FOUND」「預期結果符合率」,100.0%,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-305,SYN-0064-2026-A01,0064,第八章 摘要表「NOT_FOUND」「p50」,0.0033 ms,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-306,SYN-0064-2026-A01,0064,第八章 摘要表「NOT_FOUND」「p95」,0.0041 ms,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-307,SYN-0064-2026-A01,0064,第八章 摘要表「NOT_FOUND」「max」,0.0046 ms,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-308,SYN-0064-2026-A01,0064,第八章 摘要表「AMBIGUOUS」「預期結果符合率」,100.0%,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-309,SYN-0064-2026-A01,0064,第八章 摘要表「AMBIGUOUS」「p50」,0.004 ms,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-310,SYN-0064-2026-A01,0064,第八章 摘要表「AMBIGUOUS」「p95」,0.0044 ms,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-311,SYN-0064-2026-A01,0064,第八章 摘要表「AMBIGUOUS」「max」,0.0049 ms,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-312,SYN-0064-2026-A01,0064,第八章 摘要表「ACCESS_DENIED」「預期結果符合率」,100.0%,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-313,SYN-0064-2026-A01,0064,第八章 摘要表「ACCESS_DENIED」「p50」,0.0056 ms,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-314,SYN-0064-2026-A01,0064,第八章 摘要表「ACCESS_DENIED」「p95」,0.006 ms,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-315,SYN-0064-2026-A01,0064,第八章 摘要表「ACCESS_DENIED」「max」,0.0073 ms,量測結果,本機實測值，非協會正式系統或 TTQS 門檻,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-316,SYN-0064-2026-A01,0064,第八章 摘要表「總計」,200,量測結果,本機實測值,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-317,SYN-0064-2026-A01,0064,第八章 摘要表「總計」,200,量測結果,本機實測值,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-318,SYN-0064-2026-A01,0064,第八章 摘要表「總計」,100.0%,量測結果,本機實測值,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-319,SYN-0064-2026-A01,0064,第八章 摘要表「總計」,0,量測結果,本機實測值,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-320,SYN-0064-2026-A01,0064,第八章 摘要表「總計延遲 p50」,0.0053 ms,量測結果,本機實測值,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-321,SYN-0064-2026-A01,0064,第八章 摘要表「總計延遲 p95」,0.0142 ms,量測結果,本機實測值,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-322,SYN-0064-2026-A01,0064,第八章 摘要表「總計延遲 max」,0.0153 ms,量測結果,本機實測值,evidence/benchmark_summary_0064_R01.json,協會正式系統實測基準,R05 帳號管理功能,SAMPLE
+SYN-0064-FACT-323,SYN-0064-2026-A01,0064,第九章 SAMPLE 查詢記錄「查詢編號」,SAMPLE-Q-0064-2026-0001,識別碼,演練查詢記錄欄位，非協會真實操作紀錄,UNIQUE_BLUEPRINT_0064_R01.md 第九章,協會正式查詢記錄,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-324,SYN-0064-2026-A01,0064,第九章「日期」,2026-10-18,日期,演練查詢記錄欄位，非協會真實操作紀錄,UNIQUE_BLUEPRINT_0064_R01.md 第九章,協會正式查詢記錄,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-325,SYN-0064-2026-A01,0064,第九章「執行角色」,R01,角色,演練查詢記錄欄位，非協會真實操作紀錄,UNIQUE_BLUEPRINT_0064_R01.md 第九章,協會正式查詢記錄,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-326,SYN-0064-2026-A01,0064,第九章「查詢類型」,EXACT_ID,文字,演練查詢記錄欄位，非協會真實操作紀錄,UNIQUE_BLUEPRINT_0064_R01.md 第九章,協會正式查詢記錄,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-327,SYN-0064-2026-A01,0064,第九章「輸入」,F-0064-2026-0007,查詢參數,演練查詢記錄欄位，非協會真實操作紀錄,UNIQUE_BLUEPRINT_0064_R01.md 第九章,協會正式查詢記錄,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-328,SYN-0064-2026-A01,0064,第九章「命中數」,1,件數,演練查詢記錄欄位，非協會真實操作紀錄,UNIQUE_BLUEPRINT_0064_R01.md 第九章,協會正式查詢記錄,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-329,SYN-0064-2026-A01,0064,第九章「決策」,HIT,決策／結果,演練查詢記錄欄位，非協會真實操作紀錄,UNIQUE_BLUEPRINT_0064_R01.md 第九章,協會正式查詢記錄,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-330,SYN-0064-2026-A01,0064,第九章「延遲」,0.0033 ms（單次示範）,量測結果,演練查詢記錄欄位，非協會真實操作紀錄,UNIQUE_BLUEPRINT_0064_R01.md 第九章,協會正式查詢記錄,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-331,SYN-0064-2026-A01,0064,第九章「核對」,回傳存取級別 0061-L1、存放 locator 與索引一致,文字,演練查詢記錄欄位，非協會真實操作紀錄,UNIQUE_BLUEPRINT_0064_R01.md 第九章,協會正式查詢記錄,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-332,SYN-0064-2026-A01,0064,第九章「建議責任角色」,R04,角色,演練查詢記錄欄位，非協會真實操作紀錄,UNIQUE_BLUEPRINT_0064_R01.md 第九章,協會正式查詢記錄,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-333,SYN-0064-2026-A01,0064,第九章「建議期限」,2026-10-25,日期,演練查詢記錄欄位，非協會真實操作紀錄,UNIQUE_BLUEPRINT_0064_R01.md 第九章,協會正式查詢記錄,R01 檔案保管功能,SAMPLE
+SYN-0064-FACT-334,SYN-0064-2026-A01,0064,第十一章 REAL 導入表,UNKNOWN（待具權限者確認）,未知值,無真實來源，維持未知，不得推測,UNIQUE_BLUEPRINT_0064_R01.md 第十一章,協會正式侵檢系統（名稱、版本）,組織權責功能,UNKNOWN
+SYN-0064-FACT-335,SYN-0064-2026-A01,0064,第十一章 REAL 導入表,UNKNOWN（待具權限者確認）,未知值,無真實來源，維持未知，不得推測,UNIQUE_BLUEPRINT_0064_R01.md 第十一章,協會正式使用者帳號與角色授權,組織權責功能,UNKNOWN
+SYN-0064-FACT-336,SYN-0064-2026-A01,0064,第十一章 REAL 導入表,UNKNOWN（待具權限者確認）,未知值,無真實來源，維持未知，不得推測,UNIQUE_BLUEPRINT_0064_R01.md 第十一章,協會正式索引欄位與筆數規格,組織權責功能,UNKNOWN
+SYN-0064-FACT-337,SYN-0064-2026-A01,0064,第十一章 REAL 導入表,UNKNOWN（待具權限者確認）,未知值,無真實來源，維持未知，不得推測,UNIQUE_BLUEPRINT_0064_R01.md 第十一章,協會自訂建議門檻之正式核定,組織權責功能,UNKNOWN

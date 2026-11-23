@@ -1,0 +1,45 @@
+{
+  "command": "TTQS_ONE_R08_P6_WORKER_DISPATCH_RECOVERY_ENFORCEMENT",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0102",
+  "official_requirement_id": "I18-E09",
+  "project_157_index": 110,
+  "worker": "OpenCode v2 CLI",
+  "cli_version": "2.0.32",
+  "agent": "plan",
+  "requested_model": "opencode/deepseek-v4.1-flash-free",
+  "actual_provider_model_identity": "UNKNOWN",
+  "fallback_identity": "UNKNOWN",
+  "requested_model_catalogued_free": true,
+  "provider_billing": "UNKNOWN",
+  "local_cli_cost_recorded": 0,
+  "cli_exit_code": 1,
+  "stderr_bytes": 0,
+  "raw_stdout_sha256": "98fea143574373a30ee637a8607084c3e1bdac59e970ec36d2b7522cd14749d1",
+  "raw_stdout_bytes": 68830,
+  "response_text_sha256": "2d9b2531ca8cc225965f4ff1aec2978b157d3613db75a21926589284e6070103",
+  "response_text_chars": 31355,
+  "text_part_count": 2,
+  "transport_error_events": [
+    {
+      "type": "provider.invalid-output",
+      "message": "OpenAI Chat stream ended without finish_reason",
+      "status": 200
+    }
+  ],
+  "final_step_reason": "stop",
+  "tokens": {
+    "input": 17341,
+    "output": 13808,
+    "reasoning": 2401,
+    "cache_read": 10368,
+    "cache_write": 0
+  },
+  "status": "RECOVERED_TEXT_PENDING_CONTENT_QA; CLI exit 1 due provider.invalid-output event; do not repeat unchanged dispatch",
+  "duplicate_dispatch": "none",
+  "local_original_receipt_sha256": "4d72378d6c4dd7cc8fd9b592992c9005814adb4b1fb1578b73c1fd71dcf3b5ac",
+  "process_id": "REDACTED_IN_PUBLIC_COPY; retained in local original receipt",
+  "session_id": "REDACTED_IN_PUBLIC_COPY; retained in local original receipt",
+  "artifact_locator": "writer/opencode_writer_manuscript_0102_R01_raw.md",
+  "note": "CLI exit 1 is preserved as failure. The returned manuscript was salvaged and repaired once; this does not prove actual provider identity or billing."
+}

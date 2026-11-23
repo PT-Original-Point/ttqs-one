@@ -1,0 +1,16 @@
+# Independent Semantic Review Verdict — 0062_R04 (SHA `460C4FCA4E685BDBF93B53B9CC3EECFC0EA72EDE07DAB209A68EC7F34476D924`)
+
+| Gate | Verdict | Evidence Summary |
+|------|---------|------------------|
+| 1. Exact official purpose & genre | **PASS** | Document title "完整的訓練文件建檔資料" matches I14-E03; checkbox 067 text "訓練文件建檔：需求到成果原件清冊、真實定位" reflected in single-evidence proposition (Sec 2.3); Sec 15 explicitly distinguishes from 0060 (classification/calculation), 0061 (management system/control), 0063 (search/improvement), 0033 (different case). |
+| 2. Maturity & practical usability | **PASS** | All 12 lifecycle stages (NEE→IMP) have complete record fields (Tables 3–6); three roles defined by functional labels (Sec 2); filing/traceability with sample filenames, paths, version chains (Tables 3, 5, 8); verification & rejection/HOLD criteria per table (Table 6, 7, 17, 18); not a template—fully populated. |
+| 3. All 173 register rows item-specific | **PASS** | TABLE 19 (T-0062-09) contains exactly 173 data rows (REG-0062-001 through REG-0062-173). Verified counts per subgroup: 4 func labels, 12 artifact_ids, 12 filenames, 12 extensions, 12 paths, 12 versions, 12 statuses, 12 decisions, 12 ACCESS, 2 retention, 2 synth dates, 18 tabletop rows, 23 exception/branch, 12 derived values, 16 quantity summaries. No "each row"/"various" generics. |
+| 4. Math/denominators/dates reconcile | **PASS** | All 13 indicators in TABLE 14/15 independently verified: 出席率 10/12=83.3%, 缺席率 2/12=16.7%, 評量通過率 8/9=88.9% (denom=有效評量9, not 12), 清晰度 8/9=88.9%, 追蹤回覆 8/10=80.0%, 自述 6/8=75.0%, 類別覆蓋 12/12=100.0%, 桌上命中 5/6=83.3%, REAL覆蓋 UNKNOWN, 演練唯一 11/12=91.7%, 演練完整 10/12=83.3%, 演練標籤 11/12=91.7%, 更正後 12/12=100.0%. Dates limited to Appendix E list; ASM correctly "未提供". Count tallies match across Tables 3, 5, 6, 7, 12, 13. |
+| 5. SAMPLE/SYNTHETIC vs REAL boundary | **PASS** | Header declares "SAMPLE / SYNTHETIC | 非協會真實紀錄"; Sec 1 states "全篇屬合成示範候選…不構成正式 TTQS 接受"; Sec 2 "本件證明與不證明" table; TABLE 7 (T-0062-02R) all 12 rows REAL=UNKNOWN/UNKNOWN/UNKNOWN/HOLD; filenames prefixed `SAMPLE__`; paths under `SAMPLE_ROOT` explicitly "虛構根，路徑不存在"; LOC-REC-* "樣本定位參照標籤，非真實櫃位"; INT/RST "樣本處理標籤（非真實權限）"; S3 "合成假設"; TABLE 10 定位型別 all "FICTITIOUS"; TABLE 11 REAL all UNKNOWN/HOLD; TABLE 12–13 "合成桌上測試", "非真實系統量測 KPI"; Sec 17 hard-fail conditions prohibit REAL=100%, 自述→驗證成果, SAMPLE標記缺失, 偽造原件/簽名/核對碼. |
+| 6. Cross-document identity & facts | **PASS** | Sec 1: "文件編號、需求編號、官方勾選序號是三種不同識別，不得互換"; Sec 15 table cleanly separates 0060 (I14-E01/065), 0061 (I14-E02/066), 0062 (I14-E03/067), 0063 (068); "0033 (SYN-0033-PLAN-01) 為不同案例，不併入"; lifecycle (Sec 3) references 0060 FACT-022..066 correctly; crosswalk row in packet confirms I14-E03→0062. |
+| 7. Exact SHA & evidence-backed findings | **PASS** | Candidate SHA matches packet exactly. All findings above cite section, table ID, row/REG-ID. No blocker to human evaluator use: rejection/HOLD criteria explicit, synthetic/real boundary unambiguous, all 12 categories traceable to 0060 facts with row locations. |
+| 8. Visual/layout review excluded | **ACKNOWLEDGED** | Semantic-only review per instructions. |
+
+## Overall Verdict: **PASS**
+
+## Exact Gaps Needed for PASS: **None** — the candidate already meets all gates at PASS level.

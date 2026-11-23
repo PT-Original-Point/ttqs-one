@@ -1,0 +1,75 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0064",
+  "revision": "R06",
+  "source_commit": "ac9a13e394fcb25414d69a6f538f95c700cc26c9",
+  "candidate_docx_sha256": "f83eeda42589da66c23918d522ad983178a252da9b6dd2240b725e9c9cfb50a1",
+  "inputs": {
+    "candidate_text_R06.txt": {
+      "bytes": 50482,
+      "sha256": "94632ca1a814050a35d695d7cff8c5474cc7306ae1f1377bcad5c80c1caa76b6"
+    },
+    "official_source_page5.txt": {
+      "bytes": 3383,
+      "sha256": "bf25836d48bf22ab7ddc25f43d6d31b4fb9b2ef838426f009517683e8eced3fc"
+    },
+    "0064_UNIQUE_BLUEPRINT_R02.md": {
+      "bytes": 49225,
+      "sha256": "0f521debdaeeef17f2c47d11cccbb193e2a4b0f8370bf4dd56da86d512c0f3d8"
+    },
+    "synthetic_replacement_register_R05.csv": {
+      "bytes": 3467,
+      "sha256": "60bd9d15b0ac3f34498f49411ad7afa19a137e4307df678f88b503d35ac2fc2f"
+    },
+    "cross_document_source_extract_R06.md": {
+      "bytes": 3177,
+      "sha256": "0d33c5f112a68234b40621da695c80da88d6eea137b6268323a284f690f5d09b"
+    },
+    "review_prompt_R06.md": {
+      "bytes": 2702,
+      "sha256": "05a849ab6a0b5111ca5be290e27e1082d78a0d7c306e0e75a79cf8e9ae746c4d"
+    },
+    "review_packet_R06.md": {
+      "path": "review/review_packet_R06.md",
+      "bytes": 60217,
+      "sha256": "448d1fd08ae04908e3a98748750d96b499eba27e81d5c5fef88974635879a38e"
+    }
+  },
+  "cross_document_sources": {
+    "0060 R08": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0060_R01/candidate/0060_R08.docx",
+      "bytes": 71613,
+      "sha256": "92962df774a7a16546829d8968dc274394fc1efcc12421c1a355f45127e9b5c3"
+    },
+    "0061 R03": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0061_R01/candidate/0061_R03.docx",
+      "bytes": 98065,
+      "sha256": "3d4fe20f7fb825e470ed5dfd71fcaf0f5bb8052dc7a63ef51ee08e2a11668c9c"
+    },
+    "0062 R04": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0062_R01/candidate/0062_R04.docx",
+      "bytes": 85655,
+      "sha256": "460c4fca4e685bdbf93b53b9cc3eecfc0ea72ede07dab209a68ec7f34476d924"
+    },
+    "0063 R02": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0063_R01/candidate/0063_R02.docx",
+      "bytes": 53909,
+      "sha256": "b1e8210b57d00813596d343403526787f065da51afcf5df4434868f0c96279f5"
+    }
+  },
+  "status": "COMPLETED_EXACT_SHA_SEMANTIC_REVIEW",
+  "historical_pre_review_status": "READY_FOR_EXACT_SHA_SEMANTIC_REVIEW",
+  "completion": {
+    "verdict": "PASS",
+    "candidate_docx_sha256": "f83eeda42589da66c23918d522ad983178a252da9b6dd2240b725e9c9cfb50a1",
+    "semantic_receipt": "semantic_review_R06_receipt.json",
+    "semantic_receipt_sha256": "e5335b95d468a60c641a0946503d4bef76c92dae8df8410bc639f3506ec0f19b",
+    "raw_stdout": "opencode_semantic_R06_stdout.jsonl",
+    "raw_stdout_sha256": "61856b9f3c7921b536d12bf063e1e3a5db35c559bdec677a19bb6fa6ff07299d",
+    "response": "independent_review_response_R06.md",
+    "response_sha256": "9fc720c5a1dcd116830cf47d1d7e69f5a74295a1db4098b42cdaad42770fb83a",
+    "cli_exit_code": 0,
+    "stderr_bytes": 0,
+    "review_scope": "Independent semantic review of exact candidate text bound to exact R06 DOCX SHA; technical and visual results are separate."
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "receipt_id": "0011_I02-E02_R10_DETERMINISTIC_TECHNICAL_QA",
+  "observed_at_local": "2026-10-30T18:30:43+08:00",
+  "doc_id": "0011",
+  "requirement_id": "I02-E02",
+  "official_requirement_text": "與訓練政策有關之訓練產品與市場定位。",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0011_I02-E02_LUNA_TEXT_DRAFT_R01_20261029\\candidate\\0011_I02-E02_R10.docx",
+  "candidate_sha256": "f539798262faaf9aac358e9839f5bfa7d65dd0c89969c765738fcd02abc17426",
+  "candidate_bytes": 76343,
+  "base_candidate_R09_sha256": "b2e96abedac44af5ad343eaa4576d5819ee8e7373145f65d5a7258274481e2c9",
+  "base_R09_technical_receipt_sha256": "c025a691bdd25aecdf147e57a31ac2c29ca05886f47b15d154aa393e6b729f1e",
+  "source_R08_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0011_I02-E02_LUNA_TEXT_DRAFT_R01_20261029\\worker\\integrated_draft_R08_targeted_semantic_repair.md",
+  "source_R08_sha256": "71c9b21bcdb459e85cd783dd1fe1d957686d1b7c7d0e265a522b0ca7d3d8c9ec",
+  "base_integrated_R07_sha256": "a35e2edbf446d3e9be3f319800063f0df88c54e45dd9e33f75758a20e33ec370",
+  "blueprint_file_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+  "blueprint_row_sha256": "115b34f20b7f8106f5aa45d06da39ecae99a85a75f5276b79970911b428b32ec",
+  "patches": {
+    "formula-range-repair": 1,
+    "attachment-index-repair": 1,
+    "artifact-self-description-repair": 1
+  },
+  "checks": {
+    "zip_integrity": true,
+    "python_docx_open": true,
+    "candidate_sha_computed": true,
+    "exactly_27_tables": true,
+    "table_cell_count": 988,
+    "table_content_identical_to_R09": true,
+    "no_empty_table_cells": true,
+    "body_min_font_ge_10_5": true,
+    "table_min_font_ge_9_5": true,
+    "formula_recomputed": true,
+    "formula_outputs_present": true,
+    "fact_id_set_unchanged_from_R09": true,
+    "R09_incorrect_formula_label_removed": true,
+    "R09_text_draft_disclaimer_removed": true,
+    "attachment_index_present": true,
+    "official_and_blueprint_binding_matches_R09": true,
+    "only_three_source_repairs_applied": true
+  },
+  "tables": 27,
+  "rows": 260,
+  "empty_cells": [],
+  "body_min_font_pt": 10.5,
+  "table_min_font_pt": 9.5,
+  "formula_recalculation": {
+    "weights": [
+      25,
+      25,
+      20,
+      15,
+      15
+    ],
+    "weights_total": 100,
+    "weighted_points": {
+      "A": 340,
+      "B": 430,
+      "C": 380
+    },
+    "standardized_scores": {
+      "A": 68.0,
+      "B": 86.0,
+      "C": 76.0
+    }
+  },
+  "fact_ids_unique_count": 83,
+  "prior_R09_technical_checks_reused_only_for_identical_table_content": true,
+  "prior_visual_scope_not_inherited_for_new_SHA": true,
+  "semantic_review": "PENDING_NEW_EXACT_SHA_REVIEW",
+  "visual_qa": "PENDING_R10_WORD_NATIVE_RENDER",
+  "formal_acceptance": "NOT_GRANTED",
+  "status": "TECHNICAL_PASS"
+}

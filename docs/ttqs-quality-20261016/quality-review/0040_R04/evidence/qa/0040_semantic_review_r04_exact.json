@@ -1,0 +1,52 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0040",
+  "revision": "R04",
+  "official_requirement_id": "I08-E03",
+  "official_checkbox_sequence": "040",
+  "verdict": "PARTIAL",
+  "review_type": "independent_exact_sha_semantic_cross_review",
+  "candidate_sha256": "be163030c29effe4067e4be1d5bc6f041a48020fbbaf5659716c87094305a44e",
+  "rendered_pdf_sha256": "05ab840261cf555a85b73722da5808eb7f980a497a61afc85fac59295cd255ba",
+  "register_actual_sha256": "a5fcd44f14561cd7122b656d04a72cce928308813bd13e45c4bfbcc1718d83ed",
+  "register_digest_input_status": "INVALID_LENGTH_66_HEX; reviewer independently bound findings to actual register bytes and exact SHA above",
+  "blueprint_row_sha256": "ab080a2e6d85cc13a706f0c10bda7c208ddc191a1fea20a670fd5a174ab14943",
+  "raw_review_path": "evidence/qa/0040_semantic_review_r04_crossreview_raw.md",
+  "raw_review_sha256": "23522aab423db2bddad33861235dea6feec365f7322fac9e6d2a362e54281aa0",
+  "reviewer_route": "Codex local control-review cross-review agent; separate from builder task at tool level; provenance does not identify individual DOCX writer, so writer separation is not independently confirmed",
+  "scope": "Candidate DOCX, official source, current Unique Blueprint, replacement register, and rendered pages 1-8 inspected directly.",
+  "checks": {
+    "official_mapping_and_genre": "PASS",
+    "operational_content_title_blind_and_adjacent_requirements": "PASS",
+    "calculations_and_0039_R09_consistency": "PASS",
+    "sample_real_authority_boundaries": "PASS",
+    "rendered_pages_1_to_8": "PASS",
+    "register_locator_precision": "PARTIAL",
+    "mission_content_contract": "FAIL_BLOCKING_ON_PAGES_7_8"
+  },
+  "findings": [
+    {
+      "severity": "BLOCKING",
+      "locator": "Printed pp.7-8; p.7 tables 目前文件控制 / 修訂歷史; pp.7-8 內容查核索引",
+      "finding": "Evaluator-facing content exposes internal DOCX/requirement/checkbox IDs, previous DOCX and official-source SHA, prior internal PARTIAL review history, and line-by-line internal evidence mapping. Current Human content contract requires internal IDs, hashes, receipts and evaluator evidence maps to remain in sidecars. Preserve human-usable version status and navigation only."
+    },
+    {
+      "severity": "REPAIRABLE",
+      "locator": "Printed p.4; register fact IDs 0040-SYN-006 and 0040-SYN-CALC-005",
+      "finding": "Register abbreviates printed table header as 前測…／後測… rather than quoting full header."
+    },
+    {
+      "severity": "REPAIRABLE",
+      "locator": "Printed pp.1 and 6; register fact ID 0040-SYN-009",
+      "finding": "The locator points to p.1 approval rule while the claim 本例未執行 is supported by the no-execution boundary on p.6; add p.6 locator."
+    },
+    {
+      "severity": "LIMITATION",
+      "locator": "Review provenance",
+      "finding": "Review route and DOCX repair route are separate task lanes, but the specific writer identity is not recorded, so independence from that individual cannot be independently established."
+    }
+  ],
+  "no_files_modified_by_reviewer": true,
+  "candidate_state": "CANDIDATE_NOT_PROMOTED",
+  "formal_acceptance": "NOT_GRANTED"
+}

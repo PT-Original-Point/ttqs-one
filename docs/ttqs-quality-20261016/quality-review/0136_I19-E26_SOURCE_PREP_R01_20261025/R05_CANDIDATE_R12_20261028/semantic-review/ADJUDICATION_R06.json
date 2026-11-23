@@ -1,0 +1,36 @@
+{
+  "schema": "TTQS_ONE_0136_R06_BASELINE_REVIEW_ADJUDICATION_V1",
+  "doc_id": "0136",
+  "requirement_id": "I19-E26",
+  "blueprint_sha256": "32c1b818cc0b3957a23e319606f77b176a7979d1ee4ff58db72b9ae32ada8399",
+  "reviewed_candidate_sha256": "a9bd0fb528a1e22865fa5e07df44b314d48c1fd826a08149ecdd1d5915048b39",
+  "review_response_sha256": "41fbf5e638576f2514461faaec652c5eebfbdb303ca0b6e25b6facbcb57b9c67",
+  "review_packet_sha256": "37e63cd41ef53480576d1573894e71f42871d06b746cc1fb46e66ac8df16ea59",
+  "review_packet_binding_note": "Reviewer response review_input_sha256 contains the source packet SHA (7bebd3...), as explicitly explained in its limitations; it is not the review packet SHA. The actual review packet SHA is bound by the R06 input manifest and locally recomputed.",
+  "verdict": "PASS_WITH_MINOR_FINDINGS",
+  "review_scope": "Independent text-semantic review; no visual QA or formal acceptance.",
+  "minor_findings": [
+    {
+      "finding": "T1 field dictionary and blank form lacked a dedicated retention/review date.",
+      "disposition": "Addressed in R05 Tables 21 and 22; only formal association rule/source may populate it; otherwise UNKNOWN."
+    },
+    {
+      "finding": "Extracted headings/captions could appear orphaned; visual confirmation requested.",
+      "disposition": "Addressed for R05 exact SHA by Word-native 15-page render and visual inspection receipt; no dangling heading/caption issue observed in recorded scope."
+    },
+    {
+      "finding": "Source-record date and association capture/receipt date were not named as separate T1 fields.",
+      "disposition": "Addressed in R05 Tables 21 and 22 as separate fields with independent UNKNOWN handling."
+    }
+  ],
+  "route_evidence": {
+    "requested_model": "opencode/glm-5.3-flash-free",
+    "observed_model_metadata": "provider opencode; model glm-5.3-flash-free in native session export",
+    "actual_upstream_backend_or_fallback": "UNKNOWN",
+    "recorded_cost": 0,
+    "invoice_or_billing_independently_verified": false,
+    "tool_events": 0
+  },
+  "formal_acceptance": "NOT_GRANTED",
+  "candidate_promotion": "NOT_GRANTED_BY_THIS_ADJUDICATION"
+}

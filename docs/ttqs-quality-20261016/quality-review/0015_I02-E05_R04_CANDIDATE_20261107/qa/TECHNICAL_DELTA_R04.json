@@ -1,0 +1,41 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0015",
+  "revision": "R04",
+  "candidate_sha256": "b6833138212359b2be99d9008f85d535733231de5b28cbab81060e14ffead718",
+  "parent_candidate_sha256": "384082390bc7322e3cb58d9c0dc4e195af2a5eff40506681e7f12e5c2a7af635",
+  "candidate_sha256_expected": "b6833138212359b2be99d9008f85d535733231de5b28cbab81060e14ffead718",
+  "parent_sha256_expected": "384082390bc7322e3cb58d9c0dc4e195af2a5eff40506681e7f12e5c2a7af635",
+  "body_blocks_before": 301,
+  "body_blocks_after": 301,
+  "changed_body_blocks": 4,
+  "changes": [
+    {
+      "block": 4,
+      "before": "本稿狀態：R03 SAMPLE 候選；完整工作案例均為 SAMPLE／SYNTHETIC。",
+      "after": "本稿狀態：R04 SAMPLE 候選；完整工作案例均為 SAMPLE／SYNTHETIC。"
+    },
+    {
+      "block": 7,
+      "before": "30 秒使用方式",
+      "after": "30 秒使用方式｜供主管、決策者及承辦角色"
+    },
+    {
+      "block": 123,
+      "before": "草稿版次 | R01（回覆草稿版次；與本文件 R03 修訂版次分開）",
+      "after": "草稿版次 | R01（回覆草稿版次；與本文件 R04 修訂版次分開）"
+    },
+    {
+      "block": 132,
+      "before": "目前僅為「附條件的初步設計建議」。確切日期、講師資格與可用時段、場地容量及設備、無障礙需求、正式費用與服務範圍仍須逐項確認；目前沒有完成排課、正式報價、合約簽署或開課承諾。請在本件回覆所列的補充期限前確認日期、場地／設備及參訓需求，以便重新核對資源與費用。若資料尚未齊全，本案將維持 HOLD，待資料完整後再評估。",
+      "after": "目前僅為「附條件的初步設計建議」。確切日期、講師資格與可用時段、場地容量及設備、無障礙需求、正式費用與服務範圍仍須逐項確認；目前沒有完成排課、正式報價、合約簽署或開課承諾。請在實際補件通知明定的期限前確認日期、場地／設備及參訓需求，以便重新核對資源與費用。若資料尚未齊全，本案將維持 HOLD，待資料完整後再評估。"
+    }
+  ],
+  "deterministic_result": "PASS_INTENDED_SCOPED_TEXT_DELTA_ONLY",
+  "scope": "R03-to-R04 revision axis, in-block 30-second reader heading, and conditional supplemental-deadline attribution",
+  "limitations": [
+    "This receipt checks extracted OOXML text delta only",
+    "It does not grant full-document semantic acceptance or formal TTQS acceptance",
+    "Visual and font receipts are separate"
+  ]
+}

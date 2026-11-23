@@ -1,0 +1,68 @@
+{
+  "schema": "TTQS_ONE_ANTIGRAVITY_HEADLESS_AUTH_ROUTE_RECHECK_R01",
+  "project_id": "TTQS_ONE",
+  "command": "RESTORE_ANTIGRAVITY_HEADLESS_AUTH_WITHOUT_RELOGIN",
+  "observed_at_local": "2026-10-29T12:49:00+08:00",
+  "evidence_scope": "Read-only Windows identity, CLI version/help, Credential Manager target presence, prior single bounded test receipt, sanitized private-log event classification.",
+  "tui": {
+    "human_reported": "PASS_AT_SCREENSHOT_TIME",
+    "screenshot_capture_time": "UNKNOWN",
+    "current_tui_auth": "UNKNOWN"
+  },
+  "windows_cli": {
+    "user_match": "PASS: current identity matched the test receipt process owner; Human stated TUI used the same Windows user.",
+    "executable": "%LOCALAPPDATA%\\agy\\bin\\agy.exe",
+    "version": "1.4.9",
+    "help_confirms": [
+      "-p/--prompt print mode",
+      "--model",
+      "--output-format text",
+      "models command"
+    ],
+    "credential_manager_target_present": true,
+    "credential_secret_read": false
+  },
+  "model_catalog_readback": {
+    "observed_at_local": "2026-10-29T07:06:11+08:00",
+    "requested_model_listed": "gemini-3.8-flash-high",
+    "stdout_sha256": "85e245ee6b6eea8450b0a953be6bc93480da5086eaa233722cfd9057961fa32",
+    "scope": "Catalog availability at readback time only; not proof of later request routing."
+  },
+  "single_headless_test": {
+    "observed_at_local": "2026-10-29T10:27:45+08:00",
+    "duration_seconds": 8.079,
+    "process_id": 20264,
+    "process_owner_match": true,
+    "requested_model": "gemini-3.8-flash-high",
+    "exit_code": 0,
+    "stdout_classification": "EXACT_MATCH_AGY_HEADLESS_OK",
+    "stdout_sha256": "ad469f03757a9ac0ff6daa4cde3c4afed963f91f7d2f7c3c8c50fe186ba61e84",
+    "stderr_classification": "EMPTY",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "private_log_sha256": "638beb0dfcf18d3cbb89ae5ee36208b87913467ae1daf7f671a34bcfb79a152c",
+    "actual_served_model": "UNKNOWN",
+    "resolver_event": "Requested model ID was not in local config; resolver logged fallback to CCPA.",
+    "keyring_events": "Cached keyring token was reported expired=true; later ChainedAuth logged authenticated via keyring. No credential value was read."
+  },
+  "conclusion": {
+    "headless_text_path": "PASS",
+    "antigravity_gemini_auth": "UNKNOWN",
+    "gemini_route": "NOT_QUALIFIED; CCPA fallback was logged, so the exact Gemini route was not validated.",
+    "verified_partial_root_cause": "The test request did not stay on the requested Gemini route; the resolver fell back to CCPA.",
+    "unresolved_root_cause": "Why the model catalog listed Gemini while the resolver reported it absent from local config; and whether the expired keyring state is a current auth failure.",
+    "human_oauth_action_required": "NOT_ESTABLISHED; no current TUI failure evidence. Do not request repeat OAuth based on this headless result alone."
+  },
+  "document_routes": {
+    "0128": "Antigravity Gemini reviewer remains paused pending qualified route evidence; existing DOCX, 13-page visual QA, candidate SHA, and original review receipts were not modified.",
+    "other_ready_work": "0121 I19-E09 R04 QA-state reconciliation was completed without DOCX mutation; local receipt bytes were aligned to the GitHub blob."
+  },
+  "next_action": "Inspect and resolve the installed CLI model-resolution/configuration mismatch without changing credentials; do not repeat a model request until a material route fix is evidenced.",
+  "non_mutation": {
+    "oauth_login_or_logout": false,
+    "credential_store_changed": false,
+    "cli_reinstalled": false,
+    "model_call_count_this_recheck": 0,
+    "computer_use": false
+  },
+  "candidate_state": "CANDIDATE_ONLY; no formal acceptance implied."
+}

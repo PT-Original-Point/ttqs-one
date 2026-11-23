@@ -1,0 +1,40 @@
+{
+  "schema": "ttqs-one-0142-r07-w1-review-public-v1",
+  "work_id": "TTQS_ONE_0142_R07_FULL_SEMANTIC_REVIEW_W1_BEAM_20261108",
+  "worker": "W1_OpenCode_v2",
+  "requested_route": "opencode/beam-free",
+  "session_model": {
+    "providerID": "opencode",
+    "id": "beam-free",
+    "variant": "default"
+  },
+  "upstream_serving_model": "UNKNOWN",
+  "cli_version": "v2.2.5",
+  "session_id": "ses_e45bbee85ffefC3jpnlMwl4sGr",
+  "wrapper_pid": 32940,
+  "exit_code": 0,
+  "timeout": false,
+  "candidate_sha256": "50d911809834a3d607aa084ede054a8fecfb0b6fd12d0b7704a7f2158c941b9b",
+  "body_sha256": "ef47b5dd8855c50958a2ebc1a5ef3267a809e55381b7ced316ec2aec7f0c926a",
+  "source_packet_sha256": "e3e8b3a8ee1effe758608fee183440add4f37381988c5e352912b1a3d55c9e49",
+  "blueprint_sha256": "4841161d6e9aad3ace2a0b4ec4a5a3e1b7e92b68ff2b20f95e9edeae2b84070b",
+  "review_input_sha256": "2aa454367d49fdbb5f49a840f9fb76a54d211db740dcc44f2c04df39f154ef80",
+  "response_sha256": "b1d26c4419fa3134c8a42c722d213ce9159338a6a388348f3b94ba3faf4cce11",
+  "stdout_sha256": "12b435d103e7cbe62fa32ae0ce08e6dfce4b41d389025b847ed74c0278f6bf77",
+  "usage": {
+    "input": 17676,
+    "output": 481,
+    "reasoning": 5967,
+    "cache": {
+      "read": 1792,
+      "write": 0
+    }
+  },
+  "reviewer_verdict": "PASS",
+  "findings": [],
+  "scope": "TEXT_ONLY_SEMANTIC_USABILITY",
+  "candidate_mutated": false,
+  "independence_vs_W1_writer": "NOT_ESTABLISHED: different OpenCode sessions/routes but same W1 lane; upstream identity unknown",
+  "independent_semantic_gate_credit": false,
+  "formal_acceptance": false
+}

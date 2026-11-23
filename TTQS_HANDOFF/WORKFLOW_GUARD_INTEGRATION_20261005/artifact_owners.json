@@ -1,0 +1,17 @@
+{
+  "updated_at": "2026-10-05T12:35:01.180745+08:00",
+  "controller_thread_id": "01a1077a-cda6-7a00-ace8-1631565b3782",
+  "owners": {
+    "final_weekly_report": "ROOT_ONLY",
+    "antigravity_dispatch_and_model_permission": "ROOT_ONLY",
+    "production_queue_current_publish_canonical": "LUNA_ONLY",
+    "workflow_guard_integration": "LUNA_ONLY",
+    "antigravity_content": "ANTIGRAVITY_EXACT_ASSIGNED_ISOLATED_PATH_ONLY"
+  },
+  "rules": [
+    "No simultaneous editing of finalized report or production document.",
+    "Luna supplemental weekly evidence stays in luna_evidence.json; do not regenerate the report.",
+    "Existing root proposal files are frozen at handed-off SHA; integration writes to a new isolated work directory.",
+    "Antigravity completes source content and reports to root; Luna does not assign Antigravity tasks."
+  ]
+}

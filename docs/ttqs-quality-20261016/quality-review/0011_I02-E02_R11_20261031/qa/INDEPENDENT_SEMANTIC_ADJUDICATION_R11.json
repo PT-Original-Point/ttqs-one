@@ -1,0 +1,113 @@
+{
+  "schema": "ttqs-one-independent-semantic-adjudication-v1",
+  "receipt_id": "0011_I02-E02_R11_FULL_EXACT_SHA_SEMANTIC_ADJUDICATION",
+  "observed_at_tpe": "2026-10-31T14:21:42+08:00",
+  "doc_id": "0011",
+  "requirement_id": "I02-E02",
+  "official_checkbox_serial": "UNKNOWN",
+  "official_requirement_text": "與訓練政策有關之訓練產品與市場定位。",
+  "candidate_state": "CANDIDATE_SAMPLE_SYNTHETIC",
+  "candidate_docx_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0011_I02-E02_LUNA_TEXT_DRAFT_R01_20261029\\candidate\\0011_I02-E02_R11.docx",
+  "candidate_sha256": "cce86967e17b6ff2a5af5bec7e37e0d6f850b069ad3845a8d04ebb1065b37f3d",
+  "writer": "Codex deterministic integration of the Luna subagent draft; no human writer identity is claimed.",
+  "reviewer": "W1 OpenCode v2 CLI; separate route and review context from draft/integration.",
+  "review_work_id": "TTQS-0011-W1-SEMANTIC-R11-FULL-20261031-01",
+  "requested_model": "opencode/glm-5.3-flash-free",
+  "actual_serving_model": "UNKNOWN",
+  "independent_semantic_status": "PASS",
+  "review_scope": "Full R11 extracted body and all 27 tables in document order (§1–§12, Tables 1–27), reviewed fresh against the exact official requirement text 與訓練政策有關之訓練產品與市場定位。 and the complete unique Blueprint row for 0011/I02-E02 including neighbors 0010/I02-E01 and 0012/I02-E03. Text-only semantic/usability scope; Word-native visual render and font-size gates are explicitly excluded.",
+  "review_input_sha256": "f143be37de95398f9f4d1dd6573c3135cb93e8c10857dd1db4dab8ebe37017e1",
+  "review_binding_sha256": "ce2174d2651c54b9501e6deaf9439b2db75dd22f88b34287cce9c288ba8d63d6",
+  "raw_stdout_sha256": "61c9b8c11c7cc23d1cd718972bffc423bca3576aef68b587b1a5c8a2a2a4bc28",
+  "parsed_review_response_sha256": "f00ab583cdfc651ee6a28c645aff6848ab8972b68c9a21a42d53dfce8ad582e8",
+  "response_candidate_sha256": "cce86967e17b6ff2a5af5bec7e37e0d6f850b069ad3845a8d04ebb1065b37f3d",
+  "candidate_unchanged_during_review": true,
+  "review_checks": [
+    {
+      "check": "1. Requirement binding, genre, association-specific use, title-blind identification",
+      "result": "PASS",
+      "locator": "§1 TABLE 1; §9 TABLE 26; front page",
+      "rationale": "Exact official text reproduced verbatim (官方原文照錄) and bound to PDF page 1; no checkbox serial asserted; document operates as an institutional SOP (制度文件) matching the Blueprint genre 專屬佐證紀錄｜…_制度文件; §1 Table 1 解讀界線 correctly limits conclusions to what the source supports."
+    },
+    {
+      "check": "2. Complete operational policy chain: policy → learners/needs/competencies → positioning → design review → update/exceptions/HOLD",
+      "result": "PASS",
+      "locator": "§2 (policy handling, 权威來源順序, conflict HOLD); §3 (categories/targeting/positioning statement); §4 (needs sourcing + competency chain Table 5); §5 (matrix + decision fields); §6 (roles, process Table 7, review Table 8, cadence Table 9, monitoring Table 10, deviation Table 11); §11 (reject/HOLD master list)",
+      "rationale": "Every stage has named actors, inputs, control points, outputs, and branches (PASS/REVISE/HOLD/REJECT with closure conditions); tables are actionable with filling rules and worked values, not template-only."
+    },
+    {
+      "check": "3. Field/instruction/role/input/validation/output/exception completeness and attachment index",
+      "result": "PASS",
+      "locator": "TABLES 21–25 (Forms A–E); §6.1 Table 6 (roles/outputs); §6.6 Table 11 (grading/closure); §12.1 (attachment index); §10 Fact-ID register with per-item replacement originals and review responsibility",
+      "rationale": "Each form field has rules, sample value, evidence location; roles are functional codes explicitly marked synthetic; rejection/return/HOLD triggers enumerated in §6.3 and §11; attachment index states no external files and locates internal content. Minor structural and citation-neatness notes recorded under findings (non-blocking)."
+    },
+    {
+      "check": "4. Mathematical consistency of all showcased scores/ratios; design suggestion vs official TTQS rule",
+      "result": "PASS",
+      "locator": "§4.2 (signal-rate formula), §5.1 (weights, anchors, standardization), §7.2 Tables 13–15, §7.3 Table 17, §7.4 Table 18, §8 Tables 22–23, §6.5 Table 10",
+      "rationale": "All numbers recompute: 9/12=75.0%, 8/12=66.7%, 7/12=58.3%; weights 25+25+20+15+15=100; A 340÷5=68.0, B 430÷5=86.0, C 380÷5=76.0; 20+45+60+45+50+20=240 min; 0–2×4 items max 8 with threshold 6 internally consistent. All thresholds/weights/cadences are explicitly labeled as management suggestions, not official TTQS rules (§1 Table 1 解讀界線, §5.1 preamble, §6.4)."
+    },
+    {
+      "check": "5. SAMPLE/SYNTHETIC boundary; no fabricated approval, real course, survey, signature, or performance",
+      "result": "PASS",
+      "locator": "Front page status block; §7.1; §8 preamble; §10 Tables 27 (F001–F083) + §10.2/§10.3; Table 19/24 per-row HOLD/PASS qualification; Table 20/25 (OPEN/HOLD, no closure)",
+      "rationale": "Every synthetic date (2026-10-20/21, 2026-11-04), role code (R-S01/R-S02), number, score, decision, and result carries a Fact ID with locator and required real replacement evidence; no third-party originals, signatures, or organizational performance claimed; negative claims (未招生、未發布、無學員) are consistently maintained; replacement register is granular enough to substitute real facts without ambiguity."
+    },
+    {
+      "check": "6. Cross-section consistency, fact IDs, internal references, adjacency to I02-E01/0010 and I02-E03/0012",
+      "result": "PASS",
+      "locator": "§1.1 (boundary with 0010/0012/course list); §9 Table 26 (traceability incl. I02-E04 boundary); Fig-ID reuse rule §10.1; internal section/table references in Tables 21–26 verified against their targets",
+      "rationale": "The document explicitly refuses to absorb 0010's assessment-standard facts and 0012's discount/subsidy facts; cross-references resolve to the claimed sections/tables; matrix scores and demand percentages recur identically across §7 and §8 with consistent Fact IDs."
+    },
+    {
+      "check": "7. Human readability and direct usability for association staff and evaluators",
+      "result": "PASS",
+      "locator": "Front page 30-second usage block; §8 five-step operating order; §1 throughout",
+      "rationale": "Purpose, reader, timing, operation, output, and SAMPLE status are stated up front in plain language; no evaluator-engineering internal jargon on the front page; executional forms are self-contained."
+    },
+    {
+      "check": "8. Front-page version label agrees with R11; no formal/REAL status claimed",
+      "result": "PASS",
+      "locator": "Front page: 文件代碼 0011／I02-E02; 版本 R11; 草案撰寫日 2026-10-29; 文件狀態 SAMPLE／SYNTHETIC",
+      "rationale": "Version label reads R11 consistent with this review's subject; document explicitly disclaims approval, effectiveness, publication, and any REAL status."
+    }
+  ],
+  "nonblocking_low_advisories": [
+    {
+      "severity": "LOW",
+      "locator": "§8 TABLE 21 (Form A) vs Blueprint required table 欄位—定義—來源—填寫者—驗證規則",
+      "concrete_defect": "No single table carries the verbatim five-column field-dictionary structure (定義 and 填寫者 are not distinct columns). The required content is substantively distributed: filling rules ≙ validation, values with evidence locations ≙ source, and filler/verifier roles appear in values (R-S01/R-S02) and in §6.1 Table 6 / §10.3.",
+      "required_minimal_repair": "Non-blocking. Optional cosmetic alignment: add explicit 定義 and 填寫者 columns to Form A or a one-line note identifying which existing columns carry each of the five roles."
+    },
+    {
+      "severity": "LOW",
+      "locator": "§8 TABLE 22 (Form B), rows 2–3, citation cells [F056]/[F057]",
+      "concrete_defect": "Two Fact-ID citations point to adjacent rather than exact facts: [F056] (objective learning goals) and [F057] (unit-method-goal consistency) are cited to support 'no pass-rate generated / five-column completeness check' notes, where F058 or the register's own note would be the nearer identifier.",
+      "required_minimal_repair": "Non-blocking. Retarget the two citations (or rely on F081/F080 as appropriate) in a future revision; no value or rule changes required."
+    },
+    {
+      "severity": "LOW",
+      "locator": "§7.2 TABLE 16 (Table 7-5) row 1 vs §7.4 demonstration rubric [F081–F083]",
+      "concrete_defect": "Table 7-5 row 1 names three behavioral anchors (hazard, prioritization, escalation) while the §7.4 rubric defines four scored behaviors (adding service-boundary holding); the reconciliation (the four behaviors span the whole integrated practice, not a single row) is inferable but not stated.",
+      "required_minimal_repair": "Non-blocking. Add one clarifying clause that the four-item rubric applies to the integrated exercise across rows."
+    },
+    {
+      "severity": "LOW",
+      "locator": "§1 TABLE 1, row 官方佐證",
+      "concrete_defect": "The placement of the official text under the parent item 「對外明確的訓練政策」 is asserted as source detail, while this packet's binding establishes only the exact text and page 1; the parent-item attribution is not verified within the provided evidence.",
+      "required_minimal_repair": "Non-blocking. Hedge to 'official table context as recorded in the runtime SOURCE map' or verify against the hash-bound source page before any external use; the exact-text quote and page binding themselves are intact."
+    }
+  ],
+  "limitations": [
+    "Text-only semantic scope per the review request; this review does not replace Word-native visual QA, font-size verification (10.5pt/9.5pt lower bounds unverifiable here), or formal association acceptance.",
+    "The DOCX and its text extraction were not independently opened, rendered, or hashed by this reviewer; the candidate SHA-256 and extraction SHA-256 are accepted as bound by this review packet.",
+    "The official checkbox serial was not inferred from the document ID and remains UNKNOWN absent direct source evidence.",
+    "The serving model identity cannot be proven from the packet alone and is reported as UNKNOWN.",
+    "Prior R09/R10 semantic history was deliberately not inherited as a baseline: R09's best recorded outcome was PARTIAL and the R10 result was a scoped delta, so no prior full semantic PASS was assumed in forming this verdict.",
+    "The §1 parent-item attribution (position of the official text within the official table) was not verifiable within the packet-provided binding and is flagged LOW rather than treated as binding evidence."
+  ],
+  "actual_model_identity": "UNKNOWN",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "adjudication_note": "PASS applies to full extracted text and all 27 tables for semantic/usability only. Technical QA and Word-native visual QA are separate receipts bound to the same candidate SHA. Four LOW advisory observations are preserved verbatim and are nonblocking; no formal association acceptance or REAL evidence is inferred."
+}

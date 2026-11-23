@@ -1,0 +1,82 @@
+{
+  "receipt_id": "TTQS_ONE_R09_WIN10_PANEL_SCHEDULE_WORKER_READBACK_20261022",
+  "observed_at_tpe": "2026-10-22T03:53:36+08:00",
+  "windows_host_id": "DESKTOP-VMV4Q60",
+  "windows_user": "REDACTED_PUBLIC_DERIVATIVE",
+  "windows_edition": "Windows 10 Pro 10.0.19045",
+  "github_source_head_before_sync": "4259e2d1d06182f3958f87aca5412560881dbb74",
+  "source_blobs": {
+    "06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md": "4c7eff55748ff265b1e5a7d1122852b0d101acbd",
+    "04_CODEX_GOAL_24X7_EXECUTION.md": "4ee893218791ec9460e824fc559933c276414738",
+    "05_HOURLY_NATIVE_WAKE_RESUME.md": "35d3081c7e7fb979466c3a58a1e77b42f0d1441a",
+    "AGENTS.md": "103cc9b04e4e756cbc7a8d405faaff218beade69"
+  },
+  "goal": {
+    "thread_id": "01a14098-b269-79e3-b07c-56e96557fe07",
+    "native_status": "PAUSED",
+    "pause_reason": "UNKNOWN; native goal read exposes status only",
+    "supported_resume_action": "UNAVAILABLE_IN_EXPOSED_TOOLSET",
+    "resume_applied": false
+  },
+  "codex_schedulers": [
+    {
+      "id": "ttqs-one-hourly-quality-goal-resume",
+      "kind": "thread-bound heartbeat",
+      "status": "ACTIVE",
+      "rrule": "RRULE:FREQ=HOURLY;INTERVAL=2",
+      "target_thread_id": "01a14098-b269-79e3-b07c-56e96557fe07",
+      "configuration_source": "local native automation.toml; app view renders card only",
+      "last_run": "UNKNOWN",
+      "next_run": "UNKNOWN",
+      "natural_120m_run_verified": false
+    },
+    {
+      "id": "ttqs-one-standalone-quality-resume",
+      "kind": "standalone cron",
+      "status": "PAUSED",
+      "rrule": "RRULE:FREQ=HOURLY;INTERVAL=1",
+      "target_thread_id": "UNKNOWN",
+      "duplicate_active": false
+    }
+  ],
+  "windows_task_scheduler": {
+    "name": "TTQS_ONE_Codex_Supervisor",
+    "state": "Disabled",
+    "enabled": false,
+    "last_run_tpe": "2026-10-05T05:03:03+08:00",
+    "reported_next_run_while_disabled": "2026-10-22T03:55:55+08:00",
+    "next_run_effective": "UNKNOWN",
+    "last_task_result": 0,
+    "trigger_repetition": "PT2M",
+    "used_as_active_schedule": false
+  },
+  "processes": {
+    "opencode_service": {
+      "pid": 45628,
+      "command_class": "opencode-cli.exe serve --service",
+      "is_writer": false
+    },
+    "active_opencode_writer_or_reviewer": 0,
+    "active_antigravity_cli": 0,
+    "winword_automation_processes": 19,
+    "winword_owner_or_document_binding": "UNKNOWN; none killed"
+  },
+  "panel": {
+    "legacy_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\MASTER\\dashboard.html",
+    "sha256": "f0e8625b2b77f4616beab18e31c1f1f7b05655e9d54898129d8e8d4f1d35a070",
+    "bytes": 12260,
+    "last_modified_tpe": "2026-10-05T22:14:08+08:00",
+    "status": "STALE_OFFLINE",
+    "project_and_host_identity": "NOT_PRESENT_IN_PANEL"
+  },
+  "panel_data_sources": [
+    "http://127.0.0.1:8766/muse-status",
+    "/status"
+  ],
+  "listeners": {
+    "127.0.0.1:8765": 0,
+    "127.0.0.1:8766": 0
+  },
+  "dashboard_project_host_alignment": "UNKNOWN_NOT_LIVE",
+  "no_new_scheduler_or_control_platform": true
+}

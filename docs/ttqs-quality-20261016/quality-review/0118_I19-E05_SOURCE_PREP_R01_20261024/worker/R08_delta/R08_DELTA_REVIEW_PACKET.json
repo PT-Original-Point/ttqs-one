@@ -1,0 +1,31 @@
+{
+  "task": "Independent narrow delta review; do not rewrite any content and do not re-review the whole document.",
+  "doc_id": "0118",
+  "official_requirement_id": "I19-E05",
+  "blueprint": "UNIQUE_BLUEPRINT_0118_I19-E05_R02.md",
+  "baseline_revision": "R07",
+  "baseline_docx_sha256": "125feecd751e7c01199fbcf3efd92c04d154cde2d83055216188df0a6271e983",
+  "candidate_revision": "R08",
+  "candidate_docx_sha256": "931c549976b83956b111cc02e8c1f6b1a8402fd681924dcc4845ef6f7d9e72f7",
+  "only_intended_change": "One WordprocessingML pagination property w:trPr/w:cantSplit on the unique field_path table row whose field_path is retention_start. No visible w:t sequence changed.",
+  "patch_receipt_sha256": "7ee570a3971c1610073e49a5b2d8ce179720e21459d0257189c4bd760bb3bdc3",
+  "technical_visual_receipt_sha256": "317471309155b95b9362f43094727fa5c182a540d813aa83e7b59218d967574b",
+  "text_sequence_sha256_r07": "4b3aeb4bc6bd8adbb46d5f1fd759e9c748839c5ecbf438529d68cd6f40d760f1",
+  "text_sequence_sha256_r08": "4b3aeb4bc6bd8adbb46d5f1fd759e9c748839c5ecbf438529d68cd6f40d760f1",
+  "word_native_pdf_sha256": "09d051c351d3877a20835fa0fbab89cc52f6bab40968c2f8d06c963d5a23b9dc",
+  "rendered_pages": 16,
+  "visual_delta": "R07 split the retention_start row across pages 12-13. R08 places the complete row together on page 13 under a repeated field_path header. All 16 rendered pages were inspected for clipping/readability by the builder-side Codex process; this is not an independent visual review.",
+  "prior_independent_semantic_review": {
+    "response_sha256": "d690b59b43c6f14475c2d79dc314cb0780932136066de5740b0e96ba4833ffc0",
+    "response_verdict": "PASS",
+    "exact_scope_sha256": "125feecd751e7c01199fbcf3efd92c04d154cde2d83055216188df0a6271e983",
+    "checklist_items": 8,
+    "all_checklist_items_pass": true,
+    "blocking_findings": 0,
+    "nonblocking_findings": 0,
+    "reviewer_model_from_init": "gemini-3.8-flash-high",
+    "coordinator_adjudication": "PASS_SEMANTIC_ONLY_FOR_R07",
+    "formal_acceptance": "NOT_GRANTED",
+    "exclusion": "R07 reviewer excluded binary and visual/layout verification."
+  }
+}

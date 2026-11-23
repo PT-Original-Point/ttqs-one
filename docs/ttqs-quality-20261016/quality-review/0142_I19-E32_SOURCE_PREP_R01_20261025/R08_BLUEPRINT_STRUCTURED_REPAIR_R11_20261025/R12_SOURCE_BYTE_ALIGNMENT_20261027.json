@@ -1,0 +1,45 @@
+{
+  "schema": "TTQS_ONE_R12_SOURCE_BYTE_ALIGNMENT_V1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0142-I19-E32-R08-SOURCE-RAW-ALIGNMENT-R12",
+  "doc_id": "0142",
+  "official_requirement_id": "I19-E32",
+  "official_157_index": 156,
+  "observed_branch_head_before_alignment": "d713e2b6a1638c14d11c5ffd002c6b487d308022",
+  "candidate": {
+    "sha256": "dd6bfd2bb75ed9708065578f435b54fc7c85c9492f35edcddf614f962db41e0a",
+    "unchanged": true
+  },
+  "files": [
+    {
+      "name": "SOURCE_PACKET_0142_I19-E32_R01.md",
+      "local_bytes": 3748,
+      "local_sha256": "e3e8b3a8ee1effe758608fee183440add4f37381988c5e352912b1a3d55c9e49",
+      "previous_remote_bytes": 3750,
+      "previous_remote_git_blob": "560b07291f1207820d970f05ca1181423ad38b84",
+      "update_commit": "12a2ac9b8f997d5ca604183417c655a1d6373329",
+      "remote_git_blob_after": "3954e411faedc21f51abc54ae3eb3c673c40c8ff",
+      "raw_base64_readback_equals_local": true
+    },
+    {
+      "name": "UNIQUE_BLUEPRINT_0142_I19-E32_R01.md",
+      "local_bytes": 4447,
+      "local_sha256": "4841161d6e9aad3ace2a0b4ec4a5a3e1b7e92b68ff2b20f95e9edeae2b84070b",
+      "previous_remote_bytes": 4449,
+      "previous_remote_git_blob": "031cb47dfdc8acc02b25f23de8e4de16326a00a4",
+      "update_commit": "93ad88eec4ce7649c95e1f2c612b55714195e310",
+      "remote_git_blob_after": "85b739d50a9ee1ff41f2b9abdd7d0eccffa09289",
+      "raw_base64_readback_equals_local": true
+    }
+  ],
+  "candidate_and_qa_readback": {
+    "candidate_git_blob": "bc414bb98324d47d1e185a2c8c3516b3aae6b1dc",
+    "qa_receipt_sha256": "4f2c112e8fd3f5862225780ae760ddc6ed9673a7c157d99dab5c546390e94918",
+    "qa_receipt_git_blob": "b5dbcb9825b0cc537562ba78aa6755b1864a8e27",
+    "raw_base64_readback_equals_local": true
+  },
+  "change_scope": "Corrected the two remote source-copy byte streams to the exact local bytes already named by the R08 QA receipt. No source text, candidate DOCX, or QA result was changed.",
+  "candidate_state": "CANDIDATE",
+  "real_evidence": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED"
+}

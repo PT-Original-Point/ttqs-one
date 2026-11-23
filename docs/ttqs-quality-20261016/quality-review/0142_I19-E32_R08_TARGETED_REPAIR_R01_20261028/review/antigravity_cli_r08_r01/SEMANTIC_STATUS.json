@@ -1,0 +1,63 @@
+{
+  "schema": "TTQS_ONE_0142_R08_SEMANTIC_REVIEW_STATUS_V2",
+  "work_id": "TTQS-0142-R08-SEMANTIC-REVIEW",
+  "doc_id": "0142",
+  "requirement_id": "I19-E32",
+  "candidate_sha256": "7efc848ed18decf665c423c03d4784e681a5d911ae5185885f614b391d92cc78",
+  "candidate_status": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "semantic_review_state": "PARTIAL_REVIEW_RESPONSE_RECEIVED_NOT_PROMOTABLE",
+  "reviewer_response": {
+    "route": "Antigravity CLI",
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_model_identity": "UNKNOWN",
+    "cli_exit_code": 0,
+    "elapsed_seconds": 49.344,
+    "response_verdict": "PASS",
+    "raw_stdout_sha256": "f47a82834d2e41d8cb39dccf671971b63361447ae0fe48de20dd0c8c6107dd2c",
+    "raw_stderr_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+    "prompt_text_sha256": "91861983fdec66c732644f55f45faaac38ead26daa7f4a82a9fe55e26ced0e8a",
+    "prompt_file_sha256": "a41a44e90cd78d91ee8c417ca9ba830038987f33f1a4298351a841ae51483c59",
+    "usage": {
+      "input_tokens": 19022,
+      "output_tokens": 7157,
+      "thinking_tokens": 5073,
+      "cache_read_tokens": 0,
+      "total_tokens": 26179
+    },
+    "cost": "UNKNOWN",
+    "computer_use": "NOT_USED",
+    "fallback": "NOT_REQUESTED_OR_AUTHORIZED",
+    "raw_terminal_receipt_sha256": "04fd4d4001b2bccd5e4a9aafe38fbb744e17ac915e9cfc49e17e6b52241934fb"
+  },
+  "scope_adjudication": {
+    "overall": "PARTIAL",
+    "reason": "Reviewer response is bound to exact candidate SHA and contains substantive analysis, but it claims F1 resolved without being supplied the lineage annex/JSON; it also claims companion-register inspection without being supplied the CSV. Local follow-up verified register F15 and 19-row file separately. Lineage annex now includes a per-stage inventory, but R01 original bytes and build date remain UNKNOWN; F1 is not a clean independent PASS.",
+    "F1": "PARTIAL; R01 bytes/build date unknown; selected-chain hashes except R01 locally recomputed; lineage annex updated with per-stage sizes, mtimes explicitly labeled as mtime, changes, and verification.",
+    "F2": "BODY_TEXT_SUPPORTED; control/version/build labels consistent at cover, section 7, F19, pending fresh exact-SHA semantic confirmation of scope-limited artifacts.",
+    "F3": "BODY_TEXT_SUPPORTED; Table 12 separates roles and identifies SAMPLE accounting basis as unspecified; REAL requires source basis and review.",
+    "F4": "BODY_AND_REGISTER_LOCALLY_VERIFIED; SAMPLE recalculation date 2026-10-28, REAL N/A/HOLD.",
+    "F5": "BODY_AND_REGISTER_LOCALLY_VERIFIED; F15 locator points to Table 7 cumulative row and Table 8 R1 conclusion.",
+    "F6": "BODY_TEXT_SUPPORTED; preserve SAMPLE rows and save separate REAL version."
+  },
+  "technical_qa": "PASS exact candidate SHA (existing receipt)",
+  "visual_qa": "PASS supplied 14-page Word-native receipt; reviewer did not inspect visual pages",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "official_score": "NOT_ASSIGNED",
+  "docx_rebuilt": "NO",
+  "docx_bytes_changed": "NO",
+  "next_action": "Keep this exact DOCX candidate unchanged and PARTIAL; do not blindly retry. Continue independent READY documents. A future reviewer run must include the lineage annex and companion register and must not claim model identity unless native evidence exposes it.",
+  "prior_opencode_attempt": {
+    "requested_model": "opencode/deepseek-v4.1-flash-free",
+    "actual_model": "deepseek-v4.1-flash-free",
+    "session_id": "ses_e7f4cf67cffepHTvNkLfXiNRk5",
+    "provider_error": "FreeUsageLimitError HTTP 429",
+    "retry_after_ms": 71252000,
+    "input_tokens_reported": 39599,
+    "output_tokens_reported": 0,
+    "reasoning_tokens_reported": 32000,
+    "session_reported_cost": 0,
+    "account_billing": "UNKNOWN",
+    "raw_receipt": "OPENCODE_SESSION_R08_REVIEW_SANITIZED.json"
+  }
+}

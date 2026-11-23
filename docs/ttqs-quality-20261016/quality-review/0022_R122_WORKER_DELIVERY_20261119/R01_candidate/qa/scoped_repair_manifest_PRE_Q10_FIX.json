@@ -1,0 +1,12 @@
+{
+  "schema": "TTQS_ONE_SCOPED_REPAIR_MANIFEST_V1",
+  "doc_id": "0022",
+  "requirement_id": "I04-E01",
+  "from_sha256": "5E0C70699758616E3765115381F5539420CEC748153F27B19C253E8AA7EBCECB",
+  "to_sha256": "BA3650445179F50FCE75E5F9EEFDFAAD813DC6978B40D80BEE201FA3CD2A8C3D",
+  "repair": "Removed w:tblHeader repeat-header flag from the sole data row containing SYN-0022-041 in word/document.xml. No text nodes or other package part changed.",
+  "reason": "The row rendered at the top of both PDF pages 8 and 9.",
+  "pdf_sha256": "4FC59C02750712D4BDBB6706A23FB2FBF56C371DCCBEFDE7A5F320EBAC6A2BB7",
+  "visual_verdict": "PASS",
+  "technical_verdict": "PASS"
+}

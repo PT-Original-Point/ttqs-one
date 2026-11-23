@@ -1,0 +1,64 @@
+{
+  "schema": "ttqs-one-0141-r07-c1-1-delta-v1",
+  "doc_id": "0141",
+  "requirement_id": "I19-E31",
+  "parent_docx_sha256": "0922f737c19598b4448b60f25a6c39391bb444a1dde2536f8eef4e83cf44673a",
+  "candidate_docx_sha256": "8e0252ac4ba18edbd364e29c7f143744e801b062b3c2cd8d69f5c4a83aee7c2c",
+  "parent_extracted_sha256": "fbb6df8f80ca72159fa37a5d1f5851717a239b760149062a5616b6c89dd2b257",
+  "candidate_extracted_sha256": "ea52796e8609a38732f8b960eb81464813b4c88181da403b66d425dc77cd4815",
+  "parent_manuscript_sha256": "15f8037adeb1cc4eaa105e8e21fca34901226c2573add42fe2e8650da4b4d6cb",
+  "candidate_manuscript_sha256": "169e074c99954abebe16f72892adc557ed11c6152ca5648424daea3c2126dc83",
+  "replacement_register_sha256": "55f932a8b1dbc27bba002ad076aad6e4c51f47a2166bf09f2736f8dc70cefc37",
+  "parent_semantic_review_raw_sha256": "045e7f75e6bc8c405a4754abfc2305c4bc998d710a899827b07978a3d95b8e81",
+  "parent_semantic_verdict": "PARTIAL",
+  "parent_only_open_finding": "R07-C1-m01 version-identification mismatch",
+  "changed_paragraph_count": 1,
+  "table_delta_operation_count": 2,
+  "paragraph_deltas": [
+    {
+      "index": 3,
+      "before": "版本界線：R07 僅針對 R06 exact-SHA 獨立語意審查列出的四項 minor 作有限修訂：明確區分 Q1–Q6 六個構面題與 Q7 獨立整體題、校正 Q2/Q5 示範門檻與基準、補上 ASCII 來源缺口索引，並更新替換清冊定位及本文 SHA。未改 R01 問卷、36 筆合成分數或官方需求對應；R07 仍待本版 exact-SHA 驗收，不構成正式接受。",
+      "after": "版本界線：本候選識別碼為 R07-C1.1（R07-C1 之版控一致性子修訂）。R07-C1 已完成四項 minor 內容修復：將 ASCII 來源缺口註記連結至抱怨條件、將替換流程統一為五步、明列 Q2 Top-2 嚴格 >75.00% 門檻、撤除舊版分析下限。本次 C1.1 僅修正基本資料版次欄與本段識別碼，使其與修訂歷史一致；未改 R01 問卷、36 筆合成分數、官方需求對應或 C1 實質正文。C1.1 仍待本版 exact-SHA 驗收，不構成正式接受。"
+    }
+  ],
+  "table_deltas": [
+    {
+      "table": 0,
+      "operation": "replace",
+      "before_rows": [
+        [
+          "報告版本與合成事實識別碼",
+          "正文修訂 R07 ／ 資料集層級合成事實識別碼：FACT-SYN-0141-SAT-TREND-R01（代表36筆 SAMPLE 資料集整體，不是單筆回覆的識別碼）。逐列登錄用事實識別碼為此基礎 ID 加上對應案號尾碼 -YYYY-NNN（例：基礎 ID 加 -2023-001）；兩者層級不同，不得互相替代。"
+        ]
+      ],
+      "after_rows": [
+        [
+          "報告版本與合成事實識別碼",
+          "正文修訂 R07-C1.1（R07-C1 之版控一致性子修訂）／ 資料集層級合成事實識別碼：FACT-SYN-0141-SAT-TREND-R01（代表36筆 SAMPLE 資料集整體，不是單筆回覆的識別碼）。逐列登錄用事實識別碼為此基礎 ID 加上對應案號尾碼 -YYYY-NNN（例：基礎 ID 加 -2023-001）；兩者層級不同，不得互相替代。"
+        ]
+      ]
+    },
+    {
+      "table": 17,
+      "operation": "insert",
+      "before_rows": [],
+      "after_rows": [
+        [
+          "R07-C1.1-SYN",
+          "2026-10-25",
+          "依 R07-C1 exact-SHA 獨立語意審查 minor R07-C1-m01 作版控一致性修訂",
+          "將基本資料版次欄、封面版本界線及修訂歷史最新列統一至 R07-C1.1；重述 C1 四項已完成修復範圍。未改任何問卷、資料列、公式、官方對應或實質正文。",
+          "R07-C1.1 候選；待本版 exact-SHA 版面及獨立驗收；未正式接受"
+        ]
+      ]
+    }
+  ],
+  "table_count_before_after": [
+    18,
+    18
+  ],
+  "source_rows_and_questionnaire_frozen": true,
+  "real_data_status": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED",
+  "official_score": "NOT_ASSIGNED"
+}

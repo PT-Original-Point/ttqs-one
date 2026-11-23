@@ -1,0 +1,204 @@
+{
+  "schema": "TTQS_ONE_QA_RECEIPT_RECONCILIATION_V1",
+  "work_id": "TTQS_ONE_0003_I01-E02_R17_QA_RECEIPT_RECONCILIATION_20261116_R01",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0003",
+  "requirement_id": "I01-E02",
+  "revision": "R17",
+  "stage": "DETERMINISTIC_QA_RECEIPT_RECONCILIATION",
+  "created_local": "2026-11-16T05:13:59.5107037+08:00",
+  "verdict": "PASS_RECONCILED_CANDIDATE_ONLY",
+  "candidate_state": "CANDIDATE",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_survey_evidence": "UNKNOWN",
+  "scope": {
+    "single_output_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0003_I01-E02_R17_20261030\\qa\\R17_QA_RECEIPT_RECONCILIATION_R01.json",
+    "only_file_written": true,
+    "docx_source_or_prior_receipts_modified": false,
+    "model_dispatch": false,
+    "github_touched": false
+  },
+  "authority": {
+    "crosswalk_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\TTQS_ONE_129_REQUIREMENT_TO_142_DELIVERABLE_CROSSWALK_R01.csv",
+    "crosswalk_sha256": "1ddfbb608bcad25170683ddb42a1dbb27bafa6f1f35ff0498f1b8d75b24f0679",
+    "crosswalk_row": {
+      "requirement_id": "I01-E02",
+      "deliverable_ids": "0003 | 0004 | 0005",
+      "document_titles": "目標市場需求調查問卷 | 目標市場調查執行與樣本紀錄 | 目標市場需求分析報告"
+    },
+    "official_requirement_text": "目標市場需求調查。",
+    "official_source_page": "1",
+    "official_pdf_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0003_I01-E02_R17_20261030\\source\\official_requirement.pdf",
+    "official_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "source_packet_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0003_I01-E02_R17_20261030\\source\\SOURCE_PACKET_0003_I01-E02_R17.md",
+    "source_packet_sha256": "c41d67261de8806bcabd20d8354b8163ae3409cb5d64fff05b0c8448052164ca",
+    "blueprint_row_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0003_I01-E02_R17_20261030\\source\\BLUEPRINT_ROW_0003_I01-E02_R03.json",
+    "blueprint_row_sha256": "9ca8530d276ed7afff1b65f066e049c5ba74de5d65546c02cc04423ca98898f2",
+    "unique_blueprint_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0003_I01-E02_R17_20261030\\source\\UNIQUE_BLUEPRINT_0003_I01-E02_R03.md",
+    "unique_blueprint_sha256": "2733e5f8aec6951f9e475a2d12d854e8f6950d3fb6eef85b29c8dfbb12ae0dbf",
+    "replacement_register_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0003_I01-E02_R17_20261030\\source\\SYNTHETIC_REPLACEMENT_REGISTER_0003_R17.csv",
+    "replacement_register_sha256": "646a5dff8a540d53033d1cf161a6d4839bbf9928d0ae4fece6b6a256764604e1"
+  },
+  "candidate": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0003_I01-E02_R17_20261030\\candidate\\0003_I01-E02_R17.docx",
+    "sha256": "206dce1d471ea5cdda2a6af15d65cc0c59c7909e55d8fe4475e0ad0b05507281",
+    "bytes": 45305,
+    "last_write_utc": "2026-10-29T22:53:42.0000000Z"
+  },
+  "technical_reconciliation": {
+    "initial_same_sha_fail": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0003_I01-E02_R17_20261030\\qa\\TECHNICAL_QA_R17_METADATA_BINDING_FAIL.json",
+      "sha256": "5ff246c58aa5beb723c64e964ba135e9d834edef3dedca53673bf1152f6b05c3",
+      "candidate_sha256": "206dce1d471ea5cdda2a6af15d65cc0c59c7909e55d8fe4475e0ad0b05507281",
+      "status": "FAIL",
+      "failed_checks": [
+        "manifest_candidate_register_packet_binding",
+        "repair_receipt_candidate_parent_binding"
+      ]
+    },
+    "subsequent_same_sha_pass": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0003_I01-E02_R17_20261030\\qa\\TECHNICAL_QA_R17.json",
+      "sha256": "a45f6d4f80dc019ce7b31c6be1ad8307e77c8de73596bf9b8e887cb833903dda",
+      "candidate_sha256": "206dce1d471ea5cdda2a6af15d65cc0c59c7909e55d8fe4475e0ad0b05507281",
+      "status": "PASS",
+      "check_count": 39,
+      "source_packet_sha256": "c41d67261de8806bcabd20d8354b8163ae3409cb5d64fff05b0c8448052164ca",
+      "register_sha256": "646a5dff8a540d53033d1cf161a6d4839bbf9928d0ae4fece6b6a256764604e1",
+      "corrected_checks": {
+        "manifest_candidate_register_packet_binding": true,
+        "repair_receipt_candidate_parent_binding": true
+      }
+    },
+    "byte_comparison_differences": [
+      {
+        "field": ".checks.manifest_candidate_register_packet_binding",
+        "before": false,
+        "after": true
+      },
+      {
+        "field": ".checks.repair_receipt_candidate_parent_binding",
+        "before": false,
+        "after": true
+      },
+      {
+        "field": ".failures[0]",
+        "before": "manifest_candidate_register_packet_binding",
+        "after": null
+      },
+      {
+        "field": ".failures[1]",
+        "before": "repair_receipt_candidate_parent_binding",
+        "after": null
+      },
+      {
+        "field": ".status",
+        "before": "FAIL",
+        "after": "PASS"
+      }
+    ],
+    "retained_pending_flags": {
+      "visual_status": "PENDING_WORD_NATIVE_RENDER_AND_ALL_PAGE_INSPECTION",
+      "semantic_status": "PENDING_INDEPENDENT_REVIEW_EXACT_SHA_R17",
+      "meaning": "Historical flags on technical receipt; later exact-SHA render, visual, and semantic receipts are recorded separately below."
+    }
+  },
+  "render": {
+    "receipt_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0003_I01-E02_R17_20261030\\qa\\WORD_NATIVE_RENDER_R17_METADATA_CLEAN.json",
+    "receipt_sha256": "aa867d37a3648d55ff712b1ba6d9acae38c9e53b5cb0f6cf792abeb978d51d64",
+    "candidate_sha256": "206dce1d471ea5cdda2a6af15d65cc0c59c7909e55d8fe4475e0ad0b05507281",
+    "pdf_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0003_I01-E02_R17_20261030\\qa\\rendered_metadata_clean\\0003_I01-E02_R17_metadata_clean.pdf",
+    "pdf_sha256_from_receipt": "b66bfe83965add5cfa31a27a1b6ab09a3381180ad479236183c96e36bbb097a1",
+    "pdf_sha256_recomputed": "b66bfe83965add5cfa31a27a1b6ab09a3381180ad479236183c96e36bbb097a1",
+    "opened": true,
+    "exported": true,
+    "pages": 12
+  },
+  "visual": {
+    "receipt_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0003_I01-E02_R17_20261030\\qa\\VISUAL_QA_R17_METADATA_CLEAN.json",
+    "receipt_sha256": "e5fc39db5c4ed172c0beadc7951bdc39d9258fe04209cda62f41de5bfe47ba8b",
+    "candidate_sha256": "206dce1d471ea5cdda2a6af15d65cc0c59c7909e55d8fe4475e0ad0b05507281",
+    "verdict": "PASS_WORD_NATIVE_12_PAGES_VISUAL_INSPECTION_INHERITED_BY_PIXEL_IDENTITY",
+    "render_receipt_sha256": "aa867d37a3648d55ff712b1ba6d9acae38c9e53b5cb0f6cf792abeb978d51d64",
+    "rendered_pdf_sha256": "b66bfe83965add5cfa31a27a1b6ab09a3381180ad479236183c96e36bbb097a1",
+    "page_count": 12,
+    "comparison_claim": "All 12 new page rasters are pixel-identical to the prior R17 pages that were individually inspected at original resolution; only DOCX core metadata changed and Word independently reopened/exported the new exact SHA."
+  },
+  "semantic": {
+    "receipt_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0003_I01-E02_R17_20261030\\qa\\SEMANTIC_REVIEW_R17_METADATA_CLEAN.json",
+    "receipt_sha256": "ce6e86c338e0c24d6bd9ff9f97f74e4e94f85ae3c398c9445cbea0e167ba383d",
+    "candidate_sha256": "206dce1d471ea5cdda2a6af15d65cc0c59c7909e55d8fe4475e0ad0b05507281",
+    "verdict": "PASS",
+    "status": "PASS_EXACT_SHA_SEMANTIC_DELTA_REVIEW",
+    "request_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0003_I01-E02_R17_20261030\\receipts\\SEMANTIC_REVIEW_R17_METADATA_CLEAN_REQUEST.md",
+    "request_sha256_recomputed": "05a2705b6636f4c9a2d634b9421cbaf02a56aa44881daafecc7f01e3d76b9dc7",
+    "response_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0003_I01-E02_R17_20261030\\receipts\\SEMANTIC_REVIEW_R17_METADATA_CLEAN_ORIGINAL_RESPONSE.md",
+    "response_sha256_recomputed": "1810ed0c6c8d45a59b84a8a30935e83c4c4bbe1b059d42ff3090d209959d6f16",
+    "reviewer_model": "UNKNOWN",
+    "real_data_status": "UNKNOWN",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "manifest": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0003_I01-E02_R17_20261030\\qa\\CANDIDATE_EVIDENCE_MANIFEST_R17.json",
+    "sha256": "f1f7fd578b3b12cfe6c533b171655e92f098f965d7d6ce0fd7bf98f514d1b981",
+    "status": "CANDIDATE_TECHNICAL_VISUAL_SEMANTIC_PASS_EXACT_SHA",
+    "candidate_sha256": "206dce1d471ea5cdda2a6af15d65cc0c59c7909e55d8fe4475e0ad0b05507281",
+    "source_packet_sha256": "c41d67261de8806bcabd20d8354b8163ae3409cb5d64fff05b0c8448052164ca",
+    "register_sha256": "646a5dff8a540d53033d1cf161a6d4839bbf9928d0ae4fece6b6a256764604e1"
+  },
+  "repair_receipt": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0003_I01-E02_R17_20261030\\qa\\REPAIR_RECEIPT_R17.json",
+    "sha256": "db10b796534491f919da5f929fe990c940469ef78b8988b473576a6ca6d2642a",
+    "candidate_sha256": "206dce1d471ea5cdda2a6af15d65cc0c59c7909e55d8fe4475e0ad0b05507281",
+    "technical_qa_sha256": "a45f6d4f80dc019ce7b31c6be1ad8307e77c8de73596bf9b8e887cb833903dda",
+    "visual_receipt_sha256": "e5fc39db5c4ed172c0beadc7951bdc39d9258fe04209cda62f41de5bfe47ba8b",
+    "semantic_receipt_sha256": "ce6e86c338e0c24d6bd9ff9f97f74e4e94f85ae3c398c9445cbea0e167ba383d"
+  },
+  "ownership": {
+    "observed_local": "2026-11-16T05:13:59.5327153+08:00",
+    "matching_writer_processes": [],
+    "lane_owner_lock_files": [],
+    "ambient_services_not_linked_to_lane": [
+      {
+        "name": "Antigravity.exe",
+        "pid": 8480,
+        "command_line": "\"C:\\Users\\J\\AppData\\Local\\Programs\\antigravity\\Antigravity.exe\"  --import=file:///C:/Users/J/.gemini/antigravity/lib/node_modules/sidecar_sdk/register_loader.js main.mjs"
+      },
+      {
+        "name": "opencode.exe",
+        "pid": 1968,
+        "command_line": "C:\\Users\\J\\AppData\\Roaming\\npm\\node_modules\\@opencode\\cli\\bin\\opencode.exe serve --service"
+      }
+    ],
+    "finding": "No process command line matched the candidate/lane; no owner or lock marker found in the exact R17 lane."
+  },
+  "checks": {
+    "all_passed": true,
+    "prewrite": {
+      "crosswalk_one_I01_E02_row": true,
+      "crosswalk_lists_doc_0003": true,
+      "blueprint_identity": true,
+      "blueprint_official_requirement_present": true,
+      "source_packet_records_pdf_blueprint_row_md_candidate_register": true,
+      "official_pdf_bytes_match_packet": true,
+      "technical_pass_candidate_sources": true,
+      "manifest_candidate_sources": true,
+      "repair_receipt_candidate_sources": true,
+      "historical_fail_same_exact_candidate": true,
+      "later_technical_rerun_pass_same_candidate": true,
+      "only_expected_technical_deltas": true,
+      "render_binds_candidate_and_pdf": true,
+      "visual_binds_candidate_render_pdf": true,
+      "semantic_pass_binds_candidate": true,
+      "semantic_request_response_hashes": true,
+      "no_target_lane_owner_or_lock": true,
+      "output_target_is_new": true,
+      "candidate_expected_sha": true
+    }
+  },
+  "limitations": [
+    "Candidate QA reconciliation only; does not promote CURRENT or grant formal acceptance.",
+    "REAL survey evidence remains UNKNOWN.",
+    "Semantic reviewer model remains UNKNOWN.",
+    "The technical receipt PENDING flags are retained as historical fields and resolved only by the later exact-SHA receipts listed here."
+  ]
+}

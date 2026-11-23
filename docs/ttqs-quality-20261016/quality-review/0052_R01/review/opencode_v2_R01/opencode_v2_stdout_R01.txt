@@ -1,0 +1,70 @@
+# Independent exact-SHA semantic review — DOCX 0052 R01
+
+## Identity verified
+
+- Candidate file: `docs/.../quality-review/0052_R01/candidate/0052_R01.docx`
+- Bytes inspected: 64,310 bytes.
+- SHA-256 observed: `406D1EF2C6E9B6266EA1ADAEADEDC5DFAC77964FE76F73C2471168220EE6D455`
+- SHA matches the requested value exactly (case-insensitive): **YES**.
+- Upstream/related source SHA checks performed in this review: Unique Blueprint row `UNIQUE_BLUEPRINT_0052.jsonl` = `3ffbfd8e62762d0de54022e96c49397b7b547a724ebf6aa2c765a1ac994d7445` (matches SOURCE_MAP); replacement register = `71e5f87f8d5a829601077fb1b98f5715c61159fddb5e5afb6420353d03779474` (matches); official p.4 image = `0e00b46586ad0ee181046d4a13d0023654bb07537f7eebc3429dad3bfa29d35f` (matches). Upstream DOCX SHAs (0033/0049/0050/0051) were not independently re-hashed here; the candidate's citations are internally consistent with SOURCE_MAP.
+
+## Result table (criteria 1–8)
+
+| # | Criterion | Result | Page/section/table locator | Concise reason |
+|---|-----------|--------|---------------------------|----------------|
+| 1 | Exact requirement mapping & genre (I11-E04 / checkbox 054, distinct from 0051/0053) | PASS | Cover p.1; §1 pp.1–2 (scope/negation table); §14 p.14 traceability; Blueprint row | Explicitly maps to I11-E04, official p.4, checkbox 054, exact official wording; genre strategy_plan; cover and §1 state it is not 0033/0049/0050/0051/0053 and does not replace their originals. |
+| 2 | Title-blind identity (feedback → analysis/trade-off → next-course revision → validation) | PASS | §§4–10 pp.5–11; §8 pp.7–9; §11 p.12 | Body contains specific instruments (Q01–Q07, G1–G5), respondent rows (L01–L08, G01–G05), triggers, A/B/C weighted comparison, unit/minute revision plan, and next-cycle verification metrics without title/ID. |
+| 3 | Operational completeness (instruments, denominator/NA rules, worked data, analysis, alternatives, plan, roles, controls, exceptions, timeline, next-cycle checks) | PASS | §4 p.5; §5 p.6; §6 pp.6–7; §7 pp.7–8; §8 p.8; §9 pp.9–10; §10 pp.10–11; §3 p.4; §11 p.12; §12 pp.12–13; §13 pp.13–14; App. A/B pp.14–15 | All required elements present and usable; NA handling stated (not coded as 0); multi-select overlap handled; exception register EX-S01–S05; version trail §12. |
+| 4 | Arithmetic (means, frequencies, proportions, weighted scores, minutes, denominators) | PASS | §5 p.6; §6 p.6; §7 pp.7–8; §8 p.8; §9 p.9 | All recalculated values match (see table below); overlapping supports not treated as exclusive; "currently no need" treated as exclusive. |
+| 5 | Cross-document consistency (single course title, upstream IDs/limits, no unsupported causality) | PASS | §1 pp.1–2; §12 pp.12–13; §14 p.14 | Single title "志工服務紀錄、交接與工作界線實務"; SYN-0033-PLAN-01; 0033/0049/0050 SHAs and limits stated; explicitly labels self-report, not causal; no conflicting figures found. |
+| 6 | SAMPLE/REAL boundary & integrity | PASS | Cover p.1; §1 p.3; §3 p.4; §13 pp.13–14; §15 p.16; register | All synthetic facts registered; roles P1–P5 explicitly UNKNOWN; no fabricated person/signature/approval/class/outcome; replacement instructions actionable (§13 steps 1–5). |
+| 7 | Practical usability for training administrator/evaluator | PASS | Whole doc; App. A/B pp.14–15; §13 pp.13–14 | Directly usable forms, SOP, metrics, exception handling; caveats clearly labeled. Minor notes below, none blocking. |
+| 8 | Exact-SHA visual evidence (text/table/layout to extent inspectable) | PARTIAL | Supplied PDF extraction pp.1–16; DOCX bytes | Text and tables extracted and verified from the exact DOCX; Word-rendered PDF supplied but page-level visual/layout review not performed in this runtime (no PDF/image viewing capability). Font floor verified programmatically: body min 10.5pt, table min 9.5pt. Official p.4 image not visually inspected. |
+
+## Arithmetic recalculation table
+
+| Locator | Stated value | Recalculation | Match |
+|---------|--------------|---------------|-------|
+| §6 p.6 Q01 | n=8, sum=30, mean=3.750, counts 0/1/2/3/2 | 2+3+3+4+4+4+5+5=30; 30/8=3.750; counts 0/1/2/3/2 | ✓ |
+| §6 p.6 Q02 | n=8, sum=30, mean=3.750, counts 0/1/2/3/2 | 2+3+3+4+4+4+5+5=30; 3.750; 0/1/2/3/2 | ✓ |
+| §6 p.6 Q03 | n=8, sum=23, mean=2.875, counts 1/2/3/1/1 | 1+2+2+3+3+3+5+4=23; 23/8=2.875; 1/2/3/1/1 | ✓ |
+| §6 p.6 Q04 | n=8, sum=28, mean=3.500, counts 0/1/3/3/1 | 2+3+3+3+4+4+4+5=28; 28/8=3.500; 0/1/3/3/1 | ✓ |
+| §6 p.6 Q05 | n=8, sum=32, mean=4.000, counts 0/0/2/4/2 | 3+3+4+4+4+4+5+5=32; 32/8=4.000; 0/0/2/4/2 | ✓ |
+| §6 p.6 Q06 | n=8, sum=34, mean=4.250, counts 0/0/1/4/3 | 3+4+4+4+4+5+5+5=34; 34/8=4.250; 0/0/1/4/3 | ✓ |
+| §6 p.6 Q07 | n=8, sum=29, mean=3.625, counts 0/1/2/4/1 | 2+3+3+4+4+4+4+5=29; 29/8=3.625; 0/1/2/4/1 | ✓ |
+| §6 p.7 response rate | 8/12 = 66.7% | 8÷12×100 = 66.666…% → 66.7% | ✓ |
+| §8 p.8 G3 | n=5, sum=16, mean=3.200, counts 0/1/2/2/0 | 2+3+3+4+4=16; 16/5=3.200; 0/1/2/2/0 | ✓ |
+| §8 p.8 G4 | n=5, sum=20, mean=4.000, counts 0/0/1/3/1 | 3+4+4+4+5=20; 20/5=4.000; 0/0/1/3/1 | ✓ |
+| §8 p.8 G5 | n=5, sum=17, mean=3.400, counts 0/1/2/1/1 | 2+3+3+4+5=17; 17/5=3.400; 0/1/2/1/1 | ✓ |
+| §8 p.8 supports | quick card 4/5=80.0%; role-play 3/5=60.0%; source check 2/5=40.0%; no-need 1/5=20.0% | Selections: 4+3+2=9 overlapping; 1 exclusive no-need; 4/5, 3/5, 2/5, 1/5 correct | ✓ |
+| §8 p.8 grad rate | 5/12 = 41.7% | 5÷12×100 = 41.666…% → 41.7% | ✓ |
+| §8 p.8 grad use | 3/5 = 60% used; 2/5 not used | G01/G02/G03 = yes (3); G04/G05 = no (2) | ✓ |
+| §9 p.9 weights | 30+25+20+15+10 = 100% | 100 | ✓ |
+| §9 p.9 Option A | 120+100+100+60+50 = 430; 430/100 = 4.30 | 30×4+25×4+20×5+15×4+10×5 = 430; /100 = 4.30 | ✓ |
+| §9 p.9 Option B | 150+100+60+60+50 = 420; 420/100 = 4.20 | 30×5+25×4+20×3+15×4+10×5 = 420; /100 = 4.20 | ✓ |
+| §9 p.9 Option C | 150+125+40+60+50 = 425; 425/100 = 4.25 | 30×5+25×5+20×2+15×4+10×5 = 425; /100 = 4.25 | ✓ |
+| §10 p.10 total minutes | 90+90+120+60 = 360 | 360 | ✓ |
+
+No arithmetic mismatch found.
+
+## Findings
+
+No material semantic defect found in the candidate.
+
+Minor observations (not blocking, no correction required for semantic acceptance):
+
+1. Scope/verification limitation: Upstream DOCX SHA values (0033/0049/0050/0051) and the official p.4 checkbox image were cited but not independently re-hashed/visually verified in this review beyond the supplied SOURCE_MAP. The candidate's internal citations are consistent with SOURCE_MAP.
+2. Register phrasing: SOURCE_MAP states "rows 186（含表頭前資料列數）"; the register file contains 186 data rows (187 lines including header). The DOCX itself does not state a row count, so no DOCX defect; recommend clarifying the count wording in control files only.
+3. Visual/layout: Page-level Word rendering (pagination, table fit, page breaks) was not inspected by this reviewer; the supplied 16-page extraction and programmatic font-size check (body ≥10.5pt, tables ≥9.5pt) support but do not fully prove layout quality. If a layout anomaly is suspected, a visual check should be run separately.
+
+## Overall semantic result
+
+**PASS_WITH_SCOPE_LIMITATION** — all eight semantic criteria pass (criterion 8 PARTIAL due to unperformed page-level visual review). No material semantic defect found.
+
+## Reviewer identity
+
+Runtime: OpenCode. Model identity as reported by the harness: `opencode/beam-free` ("Beam Free"). This identity is taken from runtime metadata, not inferred from any requested model alias. If the harness metadata is considered unavailable, treat as UNKNOWN.
+
+## Statement
+
+This is an independent candidate review only. It is not formal TTQS acceptance and does not authorize promotion of DOCX 0052 R01 to CURRENT/REAL/APPROVED/EFFECTIVE. The candidate remains CANDIDATE; all facts remain SAMPLE/SYNTHETIC/UNKNOWN as registered.

@@ -1,0 +1,63 @@
+{
+  "schema": "ttqs_one_external_worker_execution_receipt.v1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS_ONE_0014_R18_VISUAL_REVIEW_W1_NEMOTRON_20261108",
+  "worker": "W1_OpenCode_v2",
+  "attempt": 1,
+  "started_at_tpe": "2026-11-08T15:23:21.7301555+08:00",
+  "finished_at_tpe": "2026-11-08T15:24:03.9756935+08:00",
+  "wrapper_pid": 36032,
+  "opencode_session_id": "ses_e45f5a78bffepGVFNsyMCDvSou",
+  "exit_code": 0,
+  "requested_model": "opencode/nemotron-3.5-super-vl-free",
+  "serving_model": "UNKNOWN",
+  "route_status": "EXPLICIT_REQUESTED_CATALOG_MODEL_RESPONSE_RECEIVED",
+  "route_privacy_basis": "Only candidate SAMPLE/SYNTHETIC document render and public official-source-derived form; no real personal data or third-party originals.",
+  "candidate_sha256": "f010470828aad653f691d164c50fdc8e2e0359a88b52286c92eb6f6d1b994846",
+  "pdf_sha256": "42b8a58d76104d3fd770eed39b67703ed0e3b66f1c2ec78ac5338503ca7fc34b",
+  "composite_image_sha256": "c2ea3d4952fa4901b83717ece495d0b2a4e88a6d30103ad044ba4782fac0e678",
+  "work_package_sha256": "1619575a9a69dd5e5fe1ab4827bfe3103ae540bf7e1ef2b347b09f18c26b34d4",
+  "stdout_sha256": "b0eef146682293ffee0654870d594d8911e38386c5776c00040323c6108ee9b3",
+  "stdout_bytes": 1655,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0,
+  "usage": {
+    "input": 12100,
+    "output": 372,
+    "reasoning": 2085,
+    "cache": {
+      "read": 0,
+      "write": 0
+    }
+  },
+  "accepted_as_visual_pass": true,
+  "scope": "Independent visual/layout review of a single composite image containing contact sheet pages 1-36 plus full rendered pages 16,18,20; exact candidate/PDF/image hashes matched.",
+  "semantic_review": false,
+  "binary_docx_review": false,
+  "formal_ttqs_acceptance": false,
+  "promotion_authorized": false,
+  "worker_output": {
+    "work_id": "TTQS_ONE_0014_R18_VISUAL_REVIEW_W1_NEMOTRON_20261108",
+    "candidate_docx_sha256": "f010470828aad653f691d164c50fdc8e2e0359a88b52286c92eb6f6d1b994846",
+    "pdf_sha256": "42b8a58d76104d3fd770eed39b67703ed0e3b66f1c2ec78ac5338503ca7fc34b",
+    "composite_image_sha256": "c2ea3d4952fa4901b83717ece495d0b2a4e88a6d30103ad044ba4782fac0e678",
+    "verdict": "PASS",
+    "scope": "visual",
+    "pages_inspected": [
+      16,
+      18,
+      20,
+      "contact sheet 1-36"
+    ],
+    "findings": [],
+    "checks": {
+      "readable": true,
+      "no_clip_or_overlap": true,
+      "table_cells_legible": true,
+      "page_flow_ok": true
+    },
+    "formal_ttqs_acceptance": false,
+    "promotion_authorized": false
+  },
+  "result": "VISUAL_PASS"
+}

@@ -1,0 +1,39 @@
+{
+  "report_role": "IMMUTABLE_CANDIDATE_BUILD_SNAPSHOT_NOT_FINAL_ATTESTATION",
+  "candidate": "TTQS_ONE_P0_APPEND_ONLY_LOG_PROVIDER_CONTRACT_V0.6.5_20260813",
+  "version": "0.6.5",
+  "status": "SOURCE_CANDIDATE_PENDING_TEST_RUNTIME_GATE",
+  "base_main_commit": "10460b43ba4e55da9854195d2644a6c5018dfdc2",
+  "source_delta": [
+    "Add append-only 16_AttemptHistory audit history with hash chaining so prior attempt failures cannot be overwritten by retry success",
+    "Preserve prior JobLedger failure summary when a retry starts; JobLedger remains latest summary while AttemptHistory is authoritative history",
+    "Require MATCHED_EXACTLY_ONCE reconciliation before FINAL_ACCEPTED and keep reconciliation watchdog health checks",
+    "Inject one controlled TEST registration failure per real P0 audit rawRef without affecting normal aliases",
+    "Immediately reconcile each successful FORM_SUITE event while retaining hourly reconciliation as watchdog/backfill",
+    "Expose a stable TEST-only S-P0AUDIT-RUNTIME provider alias by self-healing the existing Registration Google Form from the one-minute maintenance heartbeat",
+    "Read back the provider alias choice list after repair and store fail-closed maintenance status/error markers",
+    "Keep TEST-only boundaries: REAL writes disabled, PII vault disabled, no execution API and no PROD workflow"
+  ],
+  "known_nonblocking_post_demo_debt": [
+    "CI clasp verification still downloads @google/clasp@3.3.0 from npm at runtime",
+    "The P0 provider audit alias is TEST-only engineering instrumentation and is not a production user-facing identity model",
+    "Apps Script and Google Sheets remain a limited TEST/SAMPLE architecture, not a proven production system of record"
+  ],
+  "snapshot_semantics": "This file describes candidate source intent. Final acceptance still requires a real published Google Forms submission plus authoritative TEST Sheets readback proving FAILED attempt history survives retry and exact-once final acceptance.",
+  "deploy_set_expected": "appsscript.json plus 13 root-level .gs files only",
+  "external_gates_required": [
+    "GitHub exact source readback",
+    "GitHub Actions CI including exact manifest coverage verification",
+    "official @google/clasp@3.3.0 show-file-status verification",
+    "real TEST Apps Script deployment",
+    "real TEST Google Forms P0 provider submission",
+    "authoritative AttemptHistory/JobLedger/SurveyResponse/Evidence/reconciliation/health readback"
+  ],
+  "environment": "TEST",
+  "enable_real_writes": false,
+  "pii_vault_ready": false,
+  "prod_workflow_present": false,
+  "execution_api_present": false,
+  "broad_drive_scope_present": false,
+  "formal_outcome_gate": "17-19 FORMAL_BLOCKED_NEEDS_REAL"
+}

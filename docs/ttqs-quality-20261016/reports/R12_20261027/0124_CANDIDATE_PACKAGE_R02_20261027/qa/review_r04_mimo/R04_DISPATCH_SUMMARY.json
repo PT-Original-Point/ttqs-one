@@ -1,0 +1,92 @@
+{
+  "schema": "TTQS_ONE_OPENCODE_REVIEW_ROUTE_ATTEMPT_R04",
+  "observed_local": "2026-10-27T15:14:11.1771430+08:00",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0124",
+  "requirement_id": "I19-E12",
+  "work_id": "TTQS-0124-I19-E12-R02-W1-MIMO26-EXACT-SHA-SEMANTIC-R04",
+  "candidate_sha256": "5ea20da675395954e5587859ddc3ca4b483abaeff90509a86c66950581afec07",
+  "review_packet_sha256": "9b27559264eac506e5c772fd8a41dd76abe45a189a4698e59336c54db546726b",
+  "source_sha256": "83a03deb7cbef3f07ef8b7ce0b2b25e1744baa6bc2e96b29e3259453558ccfee",
+  "unique_blueprint_sha256": "d0d8b0990d96fb7dab5d02a34d9f507b6434e57778646c920c488f01c1ab0f42",
+  "requested_model": "opencode/mimo-v2.6-flash-free",
+  "session_selected_model": "mimo-v2.6-flash-free",
+  "inference_served_model": "UNKNOWN_NO_GENERATED_RESPONSE",
+  "provider": "opencode",
+  "cli_exit_code": 1,
+  "http_status": 429,
+  "error_type": "provider.free-limit",
+  "response_available": false,
+  "candidate_unchanged": true,
+  "session_tokens": null,
+  "session_reported_cost_usd": null,
+  "upstream_billing": "UNKNOWN",
+  "retry_after_ms": 60410000,
+  "estimated_next_eligible_local": "2026-10-28T08:00:00+08:00",
+  "estimate_is_guarantee": false,
+  "permissions": "ALL_DENY",
+  "fallback_allowed": false,
+  "computer_use": false,
+  "technical_status": "PASS",
+  "visual_status": "PASS_WITHIN_RECORDED_14_PAGE_SCOPE",
+  "semantic_status": "PENDING_NO_REVIEW_ARTIFACT",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "preflight_wrapper_failures": [
+    "duplicate LiteralPath parameter binding in -or guard; no launch occurred",
+    "reviewer workspace missing; FileNotFoundError before CLI launch; no model request occurred"
+  ],
+  "evidence_files": [
+    {
+      "name": "DISPATCH_INTENT_R04.json",
+      "bytes": 1005,
+      "sha256": "52dba14bcabfb12d8fab69aff762df186d78ccbc681ce96064537de6c7a378e6"
+    },
+    {
+      "name": "DISPATCH_START_R04.json",
+      "bytes": 836,
+      "sha256": "49b1206b6ae058ab9d43dd0ea89101f31ce5b621327b46b21b21e3f6fb35ead7"
+    },
+    {
+      "name": "DISPATCH_TERMINAL_R04.json",
+      "bytes": 1421,
+      "sha256": "59dbffb6b33175aefbcfa1a30b32310c1ee83f151cd98141cefce1eebff603a2"
+    },
+    {
+      "name": "LAUNCH_WRAPPER_WARNING_PRECHECK.txt",
+      "bytes": 646,
+      "sha256": "0bdb162db0adfaa6ace4d85ff68b650d31d6c5c83dab2fbe82fa69ee25c49460"
+    },
+    {
+      "name": "launcher.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "launcher.stdout.txt",
+      "bytes": 504,
+      "sha256": "04de7047bdcc4adc7c06028ff52694e9729250327df69a3a535fff60521f6419"
+    },
+    {
+      "name": "OPENCODE_PROJECT_CONFIG_R04.json",
+      "bytes": 676,
+      "sha256": "bfe4ce74881e34c63e8f57a3f3c9e8cdb976b56642c5fc81f246a9257413fa77"
+    },
+    {
+      "name": "RAW_STDERR_R04.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "RAW_STDOUT_R04.jsonl",
+      "bytes": 528,
+      "sha256": "e1abba75170a79f49317229b64a17745122348b8c1b4de8a4be6a0933b5a5a16"
+    },
+    {
+      "name": "SESSION_EXPORT_SANITIZED_R04.json",
+      "bytes": 2840,
+      "sha256": "3558576bcd9b3dae3f03f7cc36e645fdfd9bd86e52e4cd7840f23fda4b027fd7"
+    }
+  ],
+  "next_action": "Park only OpenCode free-model semantic-review lane until provider retry estimate and fresh availability check; do not retry current model route before new evidence; continue independent READY stages."
+}

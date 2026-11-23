@@ -1,0 +1,140 @@
+{
+  "receipt_id": "TTQS-R09-0100-R10-GITHUB-READBACK-20261023",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "artifact_commit": "c594adb0861a949708531c5861f998034d6fcf1a",
+  "readback_scope": "20 files under quality-review/0100_R10_20261023",
+  "method": "Fetched every file from GitHub at immutable artifact_commit using the connected GitHub integration. For each, GitHub's blob SHA matched the SHA-1 from local git hash-object --no-filters; local SHA-256 and byte size are listed here.",
+  "exact_git_blob_matches": 20,
+  "mismatches": 0,
+  "candidate": {
+    "doc_id": "0100",
+    "requirement_id": "I18-E08",
+    "state": "CANDIDATE",
+    "docx_path": "docs/ttqs-quality-20261016/quality-review/0100_R10_20261023/candidate/0100_I18-E08_R10.docx",
+    "sha256": "1563f89a1b83119c5f7c57a21cbf6b89cc0c213231c5d12f90fc4d58fa06039e",
+    "bytes": 58798,
+    "visual_pdf_sha256": "c27271ef7fa7d973ddbb34c653ea19a0b4098a1a167e1731da97649523a66ac4",
+    "semantic_verdict": "PASS_SEMANTIC_EXACT_SHA",
+    "technical": "PASS",
+    "visual": "PASS_ALL_16_PAGES",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "adjacent_0101": {
+    "doc_id": "0101",
+    "requirement_id": "I18-E08",
+    "state": "EXISTING_R09_CANDIDATE_UNCHANGED",
+    "local_sha256": "56f433e095f32378f2fd8241c1a27948d2bfe6748da003af5623d265885edb68",
+    "path": "docs/ttqs-quality-20261016/quality-review/0100_0101_R09_20261021/0101_final9/candidate/0101_I18-E08_R09_FINAL9.docx",
+    "remote_git_blob_sha": "94624ae436571dba496f42dec10996baa4109a63",
+    "matches_local_git_blob": true
+  },
+  "worker_model_limits": {
+    "opencode_actual_provider": "UNKNOWN",
+    "antigravity_requested": "gemini-3.8-flash-high",
+    "antigravity_resolution": "CCPA default fallback; Gemini not honored; response not adopted",
+    "billing": "UNKNOWN"
+  },
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "7914039FC6495C7AD258C6C68D3CC203CDA0138BC3254E84F7B0DCAC599C9F96",
+      "blob": "15c0baec536ee39e4ee214ee9398ac43864711e0"
+    },
+    {
+      "path": "candidate/0100_I18-E08_R10.docx",
+      "sha256": "1563F89A1B83119C5F7C57A21CBF6B89CC0C213231C5D12F90FC4D58FA06039E",
+      "blob": "3b66b7c728766c4d58411597b209f752a9bd809e"
+    },
+    {
+      "path": "render/0100_I18-E08_R10_Word.pdf",
+      "sha256": "C27271EF7FA7D973DDBB34C653EA19A0B4098A1A167E1731DA97649523A66AC4",
+      "blob": "1801405fce5a39f8314f97c3b9a5c219cf08faf3"
+    },
+    {
+      "path": "source/0100_I18-E08_R10.md",
+      "sha256": "3D9F29E0B32B8C5428FD06E93877953AD5F8661C29D74B2CCA401F03BE8B8809",
+      "blob": "4d0350de58f9756ca985dc35d7713c8f944c632f"
+    },
+    {
+      "path": "source/UNIQUE_BLUEPRINT_0100_I18-E08_R08.md",
+      "sha256": "16095B5BBE2F70C8BDD26408195134F561F7AE5BD62830FD6351E3D1709DA38C",
+      "blob": "d7bdcb33878c610ac59b858373b83e8b0b87e73e"
+    },
+    {
+      "path": "source/SOURCE_PACKET_I18-E08_0100_0101_R08.md",
+      "sha256": "55A4BB4503E807480E58A19DE2E505EB07985624FF4130A05370B064DBFB8B9A",
+      "blob": "4c6004db6f065561e0056c76a96db26b80ae0ae7"
+    },
+    {
+      "path": "evidence/synthetic_replacement_register_0100_R10.csv",
+      "sha256": "889C202A6E49435D9100E3BF906883410B4AE7160166126F24D9AF27C876DBD8",
+      "blob": "a52d4ef3e485b8885df37e6d1dfd4591846e5410"
+    },
+    {
+      "path": "evidence/technical_qa_r10.json",
+      "sha256": "3C64D04540F1FB87940071AFAB766A200920BB68433330FDA0CCEDCC58931E26",
+      "blob": "0caf641d74149f750236a12dad5b1ff6e2a3d477"
+    },
+    {
+      "path": "evidence/visual_qa_r10.json",
+      "sha256": "BAD2E4D55BE6A1AD5E8125B7DB4839895EC869CE664BC8305A615E0120D5A94A",
+      "blob": "a5a484b795fb81c5148ee60f3421f8dad8354f7b"
+    },
+    {
+      "path": "evidence/independent_semantic_review_0100_R10.json",
+      "sha256": "B23F8412CA3DD26B081793BABF580AF917E2AA760EC66D8F485C4E5AAD4E86B9",
+      "blob": "961076107329ad71022034b6b4a3562e7da12c1d"
+    },
+    {
+      "path": "evidence/patch_receipt_r10.json",
+      "sha256": "34A3CE47BD7B1044D4CE696B7A802716DB51D484D6D0F83ED9D84981DB12BECA",
+      "blob": "ea60707b1f8a3e62dd23aa5085fb9c6dbcf2c4ab"
+    },
+    {
+      "path": "evidence/window_launch_incident_20261023.json",
+      "sha256": "46BB0F3215BD3A780372FA85BFFF686A3BD76CC7F49380CFC687B24A486C9F62",
+      "blob": "a76c9064580ed36810f06bac27538b3d3279eba5"
+    },
+    {
+      "path": "review/reviewer_response_original.txt",
+      "sha256": "20603164476E212DEBB01E557DA702F0ACC87CA2CD8A72AB28CD901CE1D43C71",
+      "blob": "737bece60ade31216f064062cadb9bee1c5b754d"
+    },
+    {
+      "path": "review/review_packet_0100_R10.md",
+      "sha256": "3E69BB1B0732FEB3AA6D37C98E186ADCEC2BC66C4B22DACEBB8589FC6C58D174",
+      "blob": "5696f3a161f79fb0215d9cd619eefc61ecb51f24"
+    },
+    {
+      "path": "workers/opencode_writer_dispatch_receipt.json",
+      "sha256": "8C6283EAEEA1483693A8FE98ABBB31405AB8D385E7508471779D45490EB38286",
+      "blob": "3b372bf390a7dce149f1414d622a69151b8e4fe7"
+    },
+    {
+      "path": "workers/opencode_writer_stdout.jsonl",
+      "sha256": "0879529392DF05085C00AF2EB6CA4F55481C30A9918A647341E68ECD3C718F1B",
+      "blob": "78b68b52af32ec15c29bc665e7b265379924ba39"
+    },
+    {
+      "path": "workers/opencode_writer_patch_packet.md",
+      "sha256": "5FEE1E122EDD20870CC460CEA0CF2216A282AD02BABF54446DB0726212668B99",
+      "blob": "0c2990b41e0fe6fad2ec7dd53598258d460fc897"
+    },
+    {
+      "path": "workers/antigravity_dispatch_receipt.json",
+      "sha256": "C214F4D8D3A53ACB971E2B730505C23FA3ED7DCE981B7F6FC0A8FAE2CF3BC6E5",
+      "blob": "4f6cc40db803a3366e78027c1c2ab280b8cafa0e"
+    },
+    {
+      "path": "workers/antigravity_stdout.json",
+      "sha256": "9E7384E93D9BEA3510D9F56F6C7199D23EC711C65DBEC2633DEEE0A1BC3BA353",
+      "blob": "5abc344c83996b681e72d67ad3d21aa52bad1a03"
+    },
+    {
+      "path": "workers/antigravity_runtime_excerpt_redacted.txt",
+      "sha256": "B1ED512FADF0FD7F336126AB7E05030ECFF8854ED5987FB49F81D03714B2793E",
+      "blob": "0fcf30e2275414788d22c20595dfc9a26bac2d6f"
+    }
+  ]
+}

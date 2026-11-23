@@ -1,0 +1,61 @@
+{
+  "schema": "TTQS_ONE_EXACT_SHA_SEMANTIC_REVIEW_RECEIPT.v1",
+  "project_id": "TTQS_ONE",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "pr": 92,
+  "doc_id": "0083",
+  "requirement_id": "I17C-E02",
+  "official_checkbox": "089",
+  "blueprint": "UNIQUE_BLUEPRINT_0083_R03.md",
+  "candidate_revision": "R07",
+  "candidate_docx_sha256": "63699ceb8dee08bea7c6ea437ae811670e15d021264b0f253b61ae2bdc4d1d61",
+  "review_type": "independent_semantic_review",
+  "verdict": "PASS",
+  "reviewer_route": "OpenCode CLI v2.0.29",
+  "model": "opencode/mimo-v2.6-flash-free",
+  "session_id": "ses_eac29974affeJdoWA4zZ0n8pcb",
+  "session_outcome": "succeeded",
+  "assistant_final_message_id": "msg_153e7531f001jKyNnrJ6d0EeQg",
+  "assistant_finish": "stop",
+  "idle_outcome": "succeeded",
+  "session_created_utc": "2026-10-19T11:05:23.0550000+00:00",
+  "session_updated_utc": "2026-10-19T11:26:35.4470000+00:00",
+  "prompt_path": "docs/ttqs-quality-20261016/quality-review/0083_R01/review/semantic_review_prompt_R07_exact_docx.md",
+  "prompt_sha256": "e9d6f14d4bdfd76fa93f60610e3162c0c62cc6fc1c27f7488ef13f6618f07b63",
+  "review_response_path": "docs/ttqs-quality-20261016/quality-review/0083_R01/review/independent_semantic_review_R07.md",
+  "review_response_sha256": "b521d007f1fa905f8f524f0b9aa19c2279cde961f9720451cb8f0c60c5552bf6",
+  "session_export_local_path": "docs/ttqs-quality-20261016/quality-review/0083_R01/review/opencode_semantic_R07_session_export.json",
+  "session_export_local_sha256": "66a377091d4790c8f477f70aa81b2fbdf68f5edd464440aed35d8008f587d3ef",
+  "session_export_published": false,
+  "candidate_docx_sha_recomputed_locally": "63699ceb8dee08bea7c6ea437ae811670e15d021264b0f253b61ae2bdc4d1d61",
+  "candidate_sha_matches_requested": true,
+  "extraction_sha256": "4b4da6fb6002e423b3d181ba0dbb0b41360c96838216f9a3784786ad6947c4cd",
+  "scope": [
+    "All document sections 1–15 and Appendices A–E",
+    "307 top-level paragraphs and 63 tables; 3,047 text units independently extracted",
+    "G1/T1/A1/E1 fields and blank forms",
+    "Both 81-row registers compared with each other and the 81-row CSV",
+    "Dates, calculations, 21 decision triggers, 28 negative tests",
+    "Official identity, sibling-document boundaries, SAMPLE/SYNTHETIC versus REAL"
+  ],
+  "limitations": [
+    "Semantic review only; visual/layout review is a separate PASS_LAYOUT_ONLY receipt",
+    "Reviewer did not independently fetch remote GitHub blobs; remote byte identity is independently recorded in the existing R07 readback receipt",
+    "REAL remains UNKNOWN/HOLD; formal acceptance remains NOT_GRANTED"
+  ],
+  "previous_client_exit_code": -1,
+  "previous_client_exit_interpretation": "The CLI client timed out/stopped while the persistent OpenCode session continued; session terminal state is independently recorded here as succeeded/stop/idle succeeded.",
+  "token_usage": {
+    "input": 178063,
+    "output": 13228,
+    "reasoning": 23727,
+    "cache": {
+      "read": 2750144,
+      "write": 0
+    }
+  },
+  "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED"
+}

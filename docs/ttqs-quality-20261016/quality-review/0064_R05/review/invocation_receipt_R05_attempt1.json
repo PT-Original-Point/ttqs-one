@@ -1,0 +1,29 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0064",
+  "candidate_revision": "R05",
+  "candidate_sha256": "54888e13f954478051a49839d8b67ff845992c72811e41e09d90045e512c69e1",
+  "route": "OpenCode v2 CLI",
+  "model": "opencode/beam-free",
+  "cli_version": "2.0.29",
+  "started": "2026-10-18T21:44:59.9685446+08:00",
+  "status": "CLIENT_DETACHED_SERVER_SESSION_CONTINUED_SUCCEEDED",
+  "provider_billing": "UNKNOWN",
+  "stdout_path": "stdout_R05.jsonl",
+  "stdout_sha256": "935a6f7ee1a0f6fb48a2a3ccfb8ac899e59b96cebad3b3c54f7be94fb757f5c7",
+  "stderr_path": "stderr_R05.txt",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "observed_errors": [
+    "POSIX head command unavailable in PowerShell shell",
+    "PowerShell Where-Object expression lost $_ during nested command quoting",
+    "Bash heredoc syntax not supported by PowerShell shell"
+  ],
+  "candidate_mutation_detected": false,
+  "computer_use_used": false,
+  "repair": "Retry once with simple direct PowerShell file-read and hash commands, no POSIX syntax, no heredoc, no shell variables, and no broad recursive listing.",
+  "client_detached_at": "2026-10-18T21:49:03.0094274+08:00",
+  "server_session_id": "ses_eb0bdce14ffep7f4jpjUVBqnmg",
+  "server_session_outcome": "succeeded",
+  "server_session_updated_epoch_ms": 1792331562957,
+  "resolution": "The local CLI stream was interrupted, but the OpenCode background service continued the same session. It recovered through temporary Python helpers and returned a successful PASS. No new review session was needed for the canonical verdict."
+}

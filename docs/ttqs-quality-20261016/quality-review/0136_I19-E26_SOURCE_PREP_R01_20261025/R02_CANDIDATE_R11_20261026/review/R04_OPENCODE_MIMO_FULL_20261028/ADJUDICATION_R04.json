@@ -1,0 +1,27 @@
+{
+  "work_id": "TTQS-0136-I19-E26-R02-W1-MIMO-FULL-SEMANTIC-REVIEW-R04",
+  "doc_id": "0136",
+  "requirement_id": "I19-E26",
+  "candidate_sha256": "a9bd0fb528a1e22865fa5e07df44b314d48c1fd826a08149ecdd1d5915048b39",
+  "review_input_sha256": "8315323168abe0d2e01f766d1eff68d522be22eb9cc0a7d5fd9af906d68bf386",
+  "requested_model": "opencode/mimo-v2.6-flash-free",
+  "actual_model_status": "UNKNOWN_NO_RESPONSE",
+  "response_bound": "NO_RESPONSE",
+  "semantic_verdict": "UNKNOWN_PROVIDER_FREE_LIMIT_429",
+  "scope": "full extracted body text plus official source, source packet and Blueprint; no layout",
+  "candidate_mutated": false,
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "limitations": [
+    "No independent provider-side model attestation.",
+    "Semantic review does not replace visual QA.",
+    "No REAL association source supplied."
+  ],
+  "provider_error_text": "{\"type\":\"error\",\"timestamp\":1793175014998,\"sessionID\":\"ses_e7e70b57cffeDCJDQsVH8KHRKj\",\"error\":{\"type\":\"provider.free-limit\",\"message\":\"Free usage limit reached. Connect a provider or subscribe to OpenCode Go to keep going, or switch models.\",\"status\":429,\"response\":{\"body\":\"{\\\"type\\\":\\\"error\\\",\\\"error\\\":{\\\"type\\\":\\\"FreeUsageLimitError\\\",\\\"message\\\":\\\"Free usage limit reached. Free models work in OpenCode (https://opencode.ai); subscribe to OpenCode Go to keep going: https://opencode.ai/go\\\"}}\"},\"retryAfterMs\":56985000}}\r\n",
+  "provider_error_type": "provider.free-limit",
+  "provider_http_status": 429,
+  "provider_retry_after_ms": 56985000,
+  "provider_retry_eligibility_estimate_taipei": "2026-10-29T07:59:59.998000+08:00",
+  "retry_estimate_is_guarantee": false,
+  "next_action": "Do not repeat OpenCode free inference before estimate/new availability evidence; continue other READY lanes."
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "TTQS_ONE_CROSS_DOCUMENT_EXACT_BLOCK_SCREEN_R1",
+  "work_id": "TTQS_ONE_0016_I02-E05_R14_CROSS_DOCUMENT_EXACT_PARAGRAPH_SCREEN_20261116",
+  "doc_id": "0016",
+  "requirement_id": "I02-E05",
+  "revision": "R14",
+  "candidate_sha256": "5082d0be4e42cd3e5ea1643cd4cbb75f663b75b79487eb4cb6c5b7dfd36082d0",
+  "source_authority": {
+    "blueprint_row_deliverable_id": "0016",
+    "blueprint_requirement_id": "I02-E05",
+    "official_requirement_text": "客戶提出的課程需求的相關表單 （文件），而揭露的呈現方式， 可以為EDM、海報、網站網頁等方式加以呈現。",
+    "blueprint_file_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e"
+  },
+  "comparison_scope": [
+    "0014",
+    "0015",
+    "0017"
+  ],
+  "compared_candidates": {
+    "0014": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014_I02-E05_LUNA_TEXT_DRAFT_R01_20261029\\candidate\\0014_I02-E05_R16.docx",
+      "sha256": "47f5ec9cb2053da59fbc2f263ede342c50477e4925e3afd1b2190b49e8f99d24",
+      "body_block_count": 432
+    },
+    "0015": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0015_I02-E05_LUNA_TEXT_DRAFT_R01_20261029\\candidate\\0015_I02-E05_R12.docx",
+      "sha256": "c6ffeea28b9bfd28d78ca90724221dbcef600516c647aa12a47fc1ab41cfa96f",
+      "body_block_count": 300
+    },
+    "0016": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0016_I02-E05_LUNA_TEXT_DRAFT_R01_20261029\\candidate\\0016_I02-E05_R14.docx",
+      "sha256": "5082d0be4e42cd3e5ea1643cd4cbb75f663b75b79487eb4cb6c5b7dfd36082d0",
+      "body_block_count": 239
+    },
+    "0017": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0017_I02-E05_WEBSITE_R01_20261116\\candidate\\0017_WEBSITE_DISCLOSURE_R02.docx",
+      "sha256": "809ce0c6bcccb5167500fabb91963927fbf9deeceaad4fe7eb510ae6b6828e65",
+      "body_block_count": 176
+    }
+  },
+  "method": "Extract OOXML body top-level paragraphs and table rows in document order; normalize whitespace only; report exact block matches at >=80 characters.",
+  "result": "PASS_EXACT_BLOCK_SCREEN",
+  "thresholds": {
+    "minimum_normalized_characters": 80,
+    "normalization": "whitespace only"
+  },
+  "exact_matches": [],
+  "limitations": [
+    "This deterministic screen detects exact normalized paragraph/table-row reuse only; it does not determine semantic similarity or approve the document. A zero-match result does not replace title-blind, negative-neighbor, full semantic, visual, or formal acceptance checks. Shared control language can be a false-positive if matches are present."
+  ],
+  "reviewed_at_local": "2026-11-16T05:57:35.8497679+08:00"
+}

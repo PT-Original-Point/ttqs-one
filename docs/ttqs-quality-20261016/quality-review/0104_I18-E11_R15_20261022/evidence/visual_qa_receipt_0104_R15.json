@@ -1,0 +1,232 @@
+{
+  "receipt_id": "TTQS-0104-VISUAL-QA-R15",
+  "observed_at_tpe": "2026-10-22T02:52:36.331260+08:00",
+  "doc_id": "0104",
+  "requirement_id": "I18-E11",
+  "official_checkbox_serial": "112",
+  "docx_sha256": "9bbb96da74ba9da845ab0e063421d04f035e79496209a02de1f04b0c98ec7eb8",
+  "pdf_sha256": "edb517d6babccfcf6bd0457d6ee552a127df57543b9e77e04075a756d9f454aa",
+  "page_count": 32,
+  "visual_result": "PASS_WITH_NONBLOCKING_DENSITY_NOTES",
+  "review_method": "All 32 pages are covered. The 19 R15 pages whose raster hashes do not occur anywhere in the prior R14 render were opened and directly inspected at full rendered resolution. The remaining 13 pages have byte-identical PNG hashes to a page in the documented R14 visual review; matching is by exact image hash rather than page number because R15 pagination shifted after targeted page-break repairs.",
+  "raster_hash_comparison": {
+    "r14_page_count": 29,
+    "r15_page_count": 32,
+    "changed_or_new_pages": [
+      1,
+      6,
+      7,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      24,
+      25,
+      26,
+      27,
+      31,
+      32
+    ],
+    "inherited_identical_page_hash_matches": [
+      {
+        "r15_page": 2,
+        "r14_page": 2,
+        "sha256": "b791f3139554a1a36a4e3aad78b1828350e4dfa6b07d3b9fb52f14bdc147eab9"
+      },
+      {
+        "r15_page": 3,
+        "r14_page": 3,
+        "sha256": "4c15652ea25fcc260fcfbc7da0f9b7bdb18d8d2facbfb7194cb02ab7653acf1d"
+      },
+      {
+        "r15_page": 4,
+        "r14_page": 4,
+        "sha256": "10d62345d3d5284ef4eab2f6b8aa572138c562847c0809d37abb799dfe845cf2"
+      },
+      {
+        "r15_page": 5,
+        "r14_page": 5,
+        "sha256": "5609d4178b60f33d4539141726e6317c509da89bc90cd32a676a7e07fe57849b"
+      },
+      {
+        "r15_page": 8,
+        "r14_page": 8,
+        "sha256": "1d767b314392c1149f11211b3a12225f03fd48dfc6bae1162b91fc8ab2b4df4a"
+      },
+      {
+        "r15_page": 9,
+        "r14_page": 9,
+        "sha256": "83f27f4cb2f8197fbf2daae4cc07980aa5c4575c1db557fa105dd8b67ffc5b49"
+      },
+      {
+        "r15_page": 20,
+        "r14_page": 19,
+        "sha256": "5370374a46dd6f2c2d63b31b0ec3807fe1866acc893f1078735a4c5ad83a3e31"
+      },
+      {
+        "r15_page": 21,
+        "r14_page": 20,
+        "sha256": "160797f9f1784d97d1b386b805fb77eb5a732954fe5e2df4e22bee53d2883546"
+      },
+      {
+        "r15_page": 22,
+        "r14_page": 21,
+        "sha256": "8e53c4eaea197d35319a3d43b9b85a09c43e4b8dfbfd436a7b857a3b5f223992"
+      },
+      {
+        "r15_page": 23,
+        "r14_page": 22,
+        "sha256": "bbd6d668a03e173779b590adaee3b848bf949cb5803ff436a555b818778eada2"
+      },
+      {
+        "r15_page": 28,
+        "r14_page": 25,
+        "sha256": "f5d9f44ee44a60f33ca6a0d45e1a471efaddc9f64eda18a98deb6ef80c8c9f07"
+      },
+      {
+        "r15_page": 29,
+        "r14_page": 26,
+        "sha256": "2bb8027b7696b14be8d57bbf190a75cca71010329d848c9f70fb351751e2485e"
+      },
+      {
+        "r15_page": 30,
+        "r14_page": 27,
+        "sha256": "eb301227ed1a4a58800c4564beedc89ef3613930356ccbcef7faf291731d0f30"
+      }
+    ]
+  },
+  "direct_inspection": [
+    {
+      "page": 1,
+      "png_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0104_I18-E11_SOURCE_PREP_20261022\\visual\\0104_R15\\pages\\page-1.png",
+      "sha256": "78ba485147c2d0bddb10e3b58c48c0926777b64dba40431ab2e6534a4241823b",
+      "finding": "Title and opening summary are legible; no clipping or overlap."
+    },
+    {
+      "page": 6,
+      "png_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0104_I18-E11_SOURCE_PREP_20261022\\visual\\0104_R15\\pages\\page-6.png",
+      "sha256": "3169c3677cead21346b6cf9c75388a31e2e762a41db03795ba4144b71cb55d19",
+      "finding": "Changed page content is legible; no clipping, overlap, or cut-off rows observed."
+    },
+    {
+      "page": 7,
+      "png_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0104_I18-E11_SOURCE_PREP_20261022\\visual\\0104_R15\\pages\\page-7.png",
+      "sha256": "6ddb931ffce401f4fc0575d88f17d561679179d25c807b8ced027dc47327a7e1",
+      "finding": "Changed page content is legible; no clipping, overlap, or cut-off rows observed."
+    },
+    {
+      "page": 10,
+      "png_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0104_I18-E11_SOURCE_PREP_20261022\\visual\\0104_R15\\pages\\page-10.png",
+      "sha256": "ea05f16776e4ebbd80cc1a91ea3b86e5e9e25140ae82443bf4a52cd975af506b",
+      "finding": "Changed page content is legible; no clipping, overlap, or cut-off rows observed."
+    },
+    {
+      "page": 11,
+      "png_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0104_I18-E11_SOURCE_PREP_20261022\\visual\\0104_R15\\pages\\page-11.png",
+      "sha256": "300db4e246abb2496dfe1abe3a3a689eacdc06716cce32516f274ded4ed04045",
+      "finding": "C zero-denominator register begins with its header and complete rows; 0/0 handling is readable."
+    },
+    {
+      "page": 12,
+      "png_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0104_I18-E11_SOURCE_PREP_20261022\\visual\\0104_R15\\pages\\page-12.png",
+      "sha256": "9eb45b6744a5bfa66215452b25ce6f24c3f7143da0c9c2575317db2e8d50737f",
+      "finding": "T12 rates are readable and separated from the surrounding narrative."
+    },
+    {
+      "page": 13,
+      "png_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0104_I18-E11_SOURCE_PREP_20261022\\visual\\0104_R15\\pages\\page-13.png",
+      "sha256": "60afb54993a085f6bba9b3f3f70cab8105167ceedca3420ba11a136afdb518dd",
+      "finding": "T13 priority table and navigation are readable."
+    },
+    {
+      "page": 14,
+      "png_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0104_I18-E11_SOURCE_PREP_20261022\\visual\\0104_R15\\pages\\page-14.png",
+      "sha256": "da43e7ad5f086a4d024d720ea0eb4956205ad77b5ec34da5d41fb07eb822064c",
+      "finding": "T14 and associated decision content are legible without clipping."
+    },
+    {
+      "page": 15,
+      "png_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0104_I18-E11_SOURCE_PREP_20261022\\visual\\0104_R15\\pages\\page-15.png",
+      "sha256": "ddd090321347e7dbee02ad04982514b36b116d472495f225d39a54ecb594873b",
+      "finding": "Changed page content is legible; table/text boundaries remain readable."
+    },
+    {
+      "page": 16,
+      "png_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0104_I18-E11_SOURCE_PREP_20261022\\visual\\0104_R15\\pages\\page-16.png",
+      "sha256": "2efa23a1f707588d7eef1cb210037f0fd2bb2698501f78bde2c9b5889739b23c",
+      "finding": "Changed page content is legible; table/text boundaries remain readable."
+    },
+    {
+      "page": 17,
+      "png_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0104_I18-E11_SOURCE_PREP_20261022\\visual\\0104_R15\\pages\\page-17.png",
+      "sha256": "8c776d524962eb37b3f08e9130a3741e0bcefaf78ce849eaad49baa5b1041250",
+      "finding": "Changed page content is legible; table/text boundaries remain readable."
+    },
+    {
+      "page": 18,
+      "png_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0104_I18-E11_SOURCE_PREP_20261022\\visual\\0104_R15\\pages\\page-18.png",
+      "sha256": "492185ba4af8e07b7cbc112c3da7ff759aed1620ef7b1c3d2dd6ecbb9195e07d",
+      "finding": "T18 starts with its repeated header and complete G1-G10 rows; readable."
+    },
+    {
+      "page": 19,
+      "png_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0104_I18-E11_SOURCE_PREP_20261022\\visual\\0104_R15\\pages\\page-19.png",
+      "sha256": "d09daeadb0ec9cbc8687546da3aa3b98bdff1b573a318e1e5d74de1a16e5fb33",
+      "finding": "T19 begins on a fresh page and its rows are readable."
+    },
+    {
+      "page": 24,
+      "png_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0104_I18-E11_SOURCE_PREP_20261022\\visual\\0104_R15\\pages\\page-24.png",
+      "sha256": "4dc03f5ef0e817effa4f1219b435f38ea0b77cd4b3a2539a0852af451a8623af",
+      "finding": "19.4 register table has a visible header and complete F-RA/F-RB/F-RC rows; cells are readable."
+    },
+    {
+      "page": 25,
+      "png_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0104_I18-E11_SOURCE_PREP_20261022\\visual\\0104_R15\\pages\\page-25.png",
+      "sha256": "4e69a9df4436f4c76b281ad48353eaf0cc2571848c55e2d55ff7b10a4cec1fea",
+      "finding": "Continued register table repeats its header; rate-delta rows and formulas are readable."
+    },
+    {
+      "page": 26,
+      "png_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0104_I18-E11_SOURCE_PREP_20261022\\visual\\0104_R15\\pages\\page-26.png",
+      "sha256": "0f0f5e136b6c66f437077d2e0dee2eab951809e518c74ed19186a90caa521f37",
+      "finding": "Continued register table repeats its header; gate and aggregate rows are readable."
+    },
+    {
+      "page": 27,
+      "png_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0104_I18-E11_SOURCE_PREP_20261022\\visual\\0104_R15\\pages\\page-27.png",
+      "sha256": "49886173b9096add0845942968e889de7480174d9acfb3e9927c204fa1477a88",
+      "finding": "Continued register table repeats its header; hold, exception and decision keys are readable."
+    },
+    {
+      "page": 31,
+      "png_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0104_I18-E11_SOURCE_PREP_20261022\\visual\\0104_R15\\pages\\page-31.png",
+      "sha256": "09e2ddb590088d6cf736162fe03958151184020d88d04cc3c0f6ff3e02e667e3",
+      "finding": "Evidence locator index and conclusion start are readable; table is not clipped."
+    },
+    {
+      "page": 32,
+      "png_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0104_I18-E11_SOURCE_PREP_20261022\\visual\\0104_R15\\pages\\page-32.png",
+      "sha256": "328c6f665b50ca0cb1967f3a1f0ec8d4ef3fe5d3c9a90f525d430dcbde282623",
+      "finding": "Conclusion continues with numbered items, release gate, limitations and version table; readable."
+    }
+  ],
+  "prior_visual_receipt": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0104_I18-E11_SOURCE_PREP_20261022\\evidence\\visual_qa_receipt_0104_R14.json",
+    "docx_sha256": "37876e73572794cff8ab23d2d45f3924dbae77788896fab2170c45935bc395bb",
+    "visual_result": "PASS_WITH_NONBLOCKING_DENSITY_NOTES"
+  },
+  "inherited_nonblocking_notes": [
+    "Pages 7, 9, 13 and 25 in R13 had more whitespace because short sections or wide tables sit before a section/orientation break; R15 changed pagination and these inherited notes are retained only as historical context, not as current page-number findings."
+  ],
+  "word_export_receipt_sha256": "484904e662d98ac9259a578135959521b40fec948cf18450a083eb7adb2d4fe3",
+  "technical_qa_receipt_sha256": "053d4378944a33511172767eb55b766a76a6a93d5cf597975b462d404d8fcf60",
+  "raster_receipt_sha256": "0701dfcffd96c561694af1f01ff883810b987245529c53c3894a33db8f748f87",
+  "scope_limit": "Visual/layout only; it does not provide independent semantic acceptance or establish REAL association evidence."
+}

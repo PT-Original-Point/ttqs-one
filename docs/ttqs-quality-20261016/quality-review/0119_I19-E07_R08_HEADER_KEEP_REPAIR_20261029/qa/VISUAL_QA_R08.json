@@ -1,0 +1,80 @@
+{
+  "schema": "TTQS_ONE_0119_R08_VISUAL_QA",
+  "doc_id": "0119",
+  "official_requirement_id": "I19-E07",
+  "candidate_sha256": "da0fbaa8a2063bf0d59766085cc19d25581a9d2b293469566ab7b5a7a63007c7",
+  "docx_sha256": "da0fbaa8a2063bf0d59766085cc19d25581a9d2b293469566ab7b5a7a63007c7",
+  "word_native_pdf_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0119_I19-E07_SOURCE_PREP_R01_20261024\\R08_HEADER_KEEP_REPAIR_20261029\\VISUAL_QA_WORD_R08_20261029\\0119_R08_WORD_NATIVE.pdf",
+  "word_native_pdf_sha256": "69a47b28dfa093a7a1c34ab6bc2ba0135b4503eab92ddb22fa5e715d177da7ee",
+  "page_count": 14,
+  "pages_inspected": 14,
+  "render_method": "Microsoft Word COM ExportAsFixedFormat; hidden owned process; Word Document and Documents RCWs explicitly released; new PID exited",
+  "render_pixel_comparison": {
+    "baseline_candidate_sha256": "f70daef4c43144ffb7bcb08f21c059f7b19504f0ced1a59cb289e5226bcc68b2",
+    "baseline_pdf_sha256": "ab7be81fd2c5bb3e6a5b605871b53eb73c316ddc22517924c118b42ce5e88d64",
+    "rasterizer": "same Poppler executable at 120 DPI",
+    "changed_pages": [
+      8,
+      9
+    ],
+    "unchanged_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "changed_scope": "Section 5.3 heading kept with Table 6; orphaned header removed from page 8; full decision table begins on page 9"
+  },
+  "visual_result": "PASS_EXACT_CANDIDATE_SHA",
+  "manually_inspected_pages": [
+    8,
+    9
+  ],
+  "page_png_sha256": {
+    "8": "9eb9906725231a48e23f1e32890bb74dfa32d1565d0b3b5fe9db6eb0b6b4a86e",
+    "9": "d67d39167ac2bbb5947923a051d6051ff5adf4283555148e41f241185d5bdd55"
+  },
+  "unchanged_page_inheritance": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "pixel_identical": true,
+    "baseline_candidate_sha256": "f70daef4c43144ffb7bcb08f21c059f7b19504f0ced1a59cb289e5226bcc68b2",
+    "baseline_receipt_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0119_I19-E07_SOURCE_PREP_R01_20261024\\R07_TABLE6_LAYOUT_REPAIR_20261029\\VISUAL_QA_R07.json",
+    "baseline_receipt_sha256": "18e72ffbd6d3bea48c6d0ef0a79b14fc20ba7182d1c74b6a7cc01b9602040a03"
+  },
+  "observed_checks": {
+    "no_clipping_or_overflow_visible": true,
+    "tables_readable_and_repeating_headers_visible": true,
+    "headers_footers_page_numbers_readable": true,
+    "section_5_3_heading_not_orphaned": true,
+    "table_6_header_and_first_row_kept_together": true,
+    "table_6_zero_one_row_separator_visible": true,
+    "alternating_row_fills_correct": true,
+    "long_state_labels_readable": true
+  },
+  "known_findings": [],
+  "visual_scope": "PASS all 14 pages: pages 8 and 9 directly inspected; remaining 12 are exact pixel matches to R07 rendered pages with inherited prior inspection scope",
+  "independent_semantic_review": "PENDING_EXACT_CANDIDATE_SHA",
+  "formal_acceptance": "NOT_GRANTED",
+  "verified_at_utc": "2026-10-29T09:08:38.877742+00:00"
+}

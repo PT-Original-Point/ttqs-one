@@ -1,0 +1,414 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0128",
+  "official_requirement_id": "I19-E17",
+  "candidate_sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "commit": "75c3a5032d80e0233f900a5469826657f721740e",
+  "readback_utc": "2026-10-28T12:25:37.303887+00:00",
+  "scope": "raw Git blob bytes compared against the 47 local publication-package files",
+  "result": "FAIL",
+  "checked_file_count": 47,
+  "mismatch_count": 20,
+  "mismatch_paths": [
+    "PACKAGE_INVENTORY.json",
+    "prior_reviews/ANTIGRAVITY_REVIEW_DELTA_STDERR_R05.txt",
+    "prior_reviews/ANTIGRAVITY_REVIEW_DELTA_STDOUT_R05.json",
+    "prior_reviews/ANTIGRAVITY_REVIEW_STDERR_R04.txt",
+    "prior_reviews/ANTIGRAVITY_REVIEW_STDOUT_R04.json",
+    "qa/CANDIDATE_LINEAGE_0128_R05_LAYOUTFIX04.json",
+    "qa/LAYOUT_PATCH_RECEIPT_0128_LAYOUTFIX02.json",
+    "qa/LAYOUT_PATCH_RECEIPT_0128_LAYOUTFIX03.json",
+    "qa/LAYOUT_PATCH_RECEIPT_0128_LAYOUTFIX04.json",
+    "qa/QA_HARNESS_CORRECTION_0128_LAYOUTFIX04.json",
+    "qa/SEMANTIC_CONTENT_EQUIVALENCE_R05_LAYOUTFIX04.json",
+    "qa/STATUS_MANIFEST_0128_R05_LAYOUTFIX04.json",
+    "qa/TECHNICAL_QA_R05_LAYOUTFIX04.json",
+    "qa/VISUAL_QA_R05_LAYOUTFIX04.json",
+    "README.md",
+    "worker/opencode/ATTEMPT02_STDOUT.jsonl",
+    "worker/opencode/DISPATCH_RECEIPT.json",
+    "worker/opencode/INPUT_SHA_MANIFEST.json",
+    "worker/opencode/REVIEW_REQUEST.txt",
+    "worker/opencode/ROUTE_INCIDENT.json"
+  ],
+  "root_cause_observed": "Repository Git configuration has core.autocrlf=true and the package paths have no text=-text attributes; text blobs were line-ending normalized.",
+  "files": [
+    {
+      "path": "candidate/0128_I19-E17_R05_LAYOUTFIX04_CANDIDATE.docx",
+      "bytes_local": 56424,
+      "bytes_remote": 56424,
+      "local_sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
+      "remote_sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
+      "match": true
+    },
+    {
+      "path": "candidate/extracted_text.txt",
+      "bytes_local": 25374,
+      "bytes_remote": 25374,
+      "local_sha256": "854d7e2c60c989a05d1b0a467fd7706e2f2f506f991f32aa16a9b9a6b44ce504",
+      "remote_sha256": "854d7e2c60c989a05d1b0a467fd7706e2f2f506f991f32aa16a9b9a6b44ce504",
+      "match": true
+    },
+    {
+      "path": "PACKAGE_INVENTORY.json",
+      "bytes_local": 8464,
+      "bytes_remote": 8224,
+      "local_sha256": "275b28eaca737d9df0f4de3a5fc9d10b515a40a364bbd170c2a12b008e9187f5",
+      "remote_sha256": "819519dbaa7ee058291308fe0a7cb4b523cf58f411b0b7cf5a4ae5c1eb687634",
+      "match": false
+    },
+    {
+      "path": "prior_reviews/ANTIGRAVITY_REVIEW_DELTA_STDERR_R05.txt",
+      "bytes_local": 79,
+      "bytes_remote": 78,
+      "local_sha256": "74e7b4521686e6abeff87ebb6d47e49ebb4f38787dd0cab41ff848ec01008e5f",
+      "remote_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+      "match": false
+    },
+    {
+      "path": "prior_reviews/ANTIGRAVITY_REVIEW_DELTA_STDOUT_R05.json",
+      "bytes_local": 1927,
+      "bytes_remote": 1926,
+      "local_sha256": "32ca4558b7867308e5426f628d693ee607d9d38991cf528fad78b4c39e101105",
+      "remote_sha256": "6ddce6bc9b59357193e0482cb0b5e1fc6c1ad993ebdf21dc7a5e9199d467ee12",
+      "match": false
+    },
+    {
+      "path": "prior_reviews/ANTIGRAVITY_REVIEW_STDERR_R04.txt",
+      "bytes_local": 79,
+      "bytes_remote": 78,
+      "local_sha256": "74e7b4521686e6abeff87ebb6d47e49ebb4f38787dd0cab41ff848ec01008e5f",
+      "remote_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+      "match": false
+    },
+    {
+      "path": "prior_reviews/ANTIGRAVITY_REVIEW_STDOUT_R04.json",
+      "bytes_local": 5822,
+      "bytes_remote": 5821,
+      "local_sha256": "1ddd83c003fbad53178769568b92fd4d4acdbcad407bf7b6781e0ac169b160a2",
+      "remote_sha256": "04f1408e1c6d3865a1e3716871470dc4d061cea1ad17591b0aa360cd769a0d15",
+      "match": false
+    },
+    {
+      "path": "prior_reviews/INDEPENDENT_REVIEW_ATTEMPT_R04.json",
+      "bytes_local": 1708,
+      "bytes_remote": 1708,
+      "local_sha256": "d74abf69e38514f905423d452e1fc52398ee326ad32b36c87114c7cbabb3985e",
+      "remote_sha256": "d74abf69e38514f905423d452e1fc52398ee326ad32b36c87114c7cbabb3985e",
+      "match": true
+    },
+    {
+      "path": "prior_reviews/INDEPENDENT_REVIEW_DELTA_ATTEMPT_R05.json",
+      "bytes_local": 1986,
+      "bytes_remote": 1986,
+      "local_sha256": "3dbbc46c6b5aaa71b5345f7a2602d9e1182feb5b1fe228ef11094163d6564256",
+      "remote_sha256": "3dbbc46c6b5aaa71b5345f7a2602d9e1182feb5b1fe228ef11094163d6564256",
+      "match": true
+    },
+    {
+      "path": "prior_reviews/INDEPENDENT_SEMANTIC_REVIEW_R05.json",
+      "bytes_local": 2774,
+      "bytes_remote": 2774,
+      "local_sha256": "9d3f0bf2135ce17cbc52af1a76cc88f52f57cc9e6074559f02a8706741019d45",
+      "remote_sha256": "9d3f0bf2135ce17cbc52af1a76cc88f52f57cc9e6074559f02a8706741019d45",
+      "match": true
+    },
+    {
+      "path": "qa/CANDIDATE_LINEAGE_0128_R05_LAYOUTFIX04.json",
+      "bytes_local": 1689,
+      "bytes_remote": 1652,
+      "local_sha256": "267a1eb15515192bcf2814369bd29565f2126acf6b4e83ccba4e5a7797917e55",
+      "remote_sha256": "6c28a40d08b5f87080a0689535265ad6ba347ef8b357bbdddd9614b9547f88e1",
+      "match": false
+    },
+    {
+      "path": "qa/LAYOUT_PATCH_RECEIPT_0128_LAYOUTFIX02.json",
+      "bytes_local": 1047,
+      "bytes_remote": 1030,
+      "local_sha256": "e6ab5db776c3aaac6a0e585bba2004efe1e62dce4004ebaa908ef68ce591877d",
+      "remote_sha256": "74dbc91016ed4c019e2c811d508ec52534ec757cfaecbe896e2b3324c6b83e28",
+      "match": false
+    },
+    {
+      "path": "qa/LAYOUT_PATCH_RECEIPT_0128_LAYOUTFIX03.json",
+      "bytes_local": 748,
+      "bytes_remote": 735,
+      "local_sha256": "6dc4ea04cfe37ad714c49312a073996c821200599f455805bd2551494db724db",
+      "remote_sha256": "3dbf01b550984b47505437dcada283030294da7b59713834e7e7f8715589082c",
+      "match": false
+    },
+    {
+      "path": "qa/LAYOUT_PATCH_RECEIPT_0128_LAYOUTFIX04.json",
+      "bytes_local": 824,
+      "bytes_remote": 811,
+      "local_sha256": "dea78314041cb4f775bae22eaa4959735f99e0a646d889cb3faf87dc5bd5c682",
+      "remote_sha256": "f06a829c349bb79e9f09949fe451aed90573c8dc237381d2c43b69b17e9d7c34",
+      "match": false
+    },
+    {
+      "path": "qa/QA_HARNESS_CORRECTION_0128_LAYOUTFIX04.json",
+      "bytes_local": 1702,
+      "bytes_remote": 1671,
+      "local_sha256": "844ef21bffc96df6621291ed0d5d83febaa9aa66429935859ad223878dbe49b5",
+      "remote_sha256": "7f513fd4fd1b3c7708db18cf6e5e248ff67a326540e2912cc40b850bbe47bfc5",
+      "match": false
+    },
+    {
+      "path": "qa/SEMANTIC_CONTENT_EQUIVALENCE_R05_LAYOUTFIX04.json",
+      "bytes_local": 2139,
+      "bytes_remote": 2093,
+      "local_sha256": "73b0c46e3940433114f0db3df141a4ff8374b1505b48d4c42ea6dd812e31e500",
+      "remote_sha256": "bfca2b15ccfda0440ccd02f992562ef912a8bfd81097cf5cfe460be3f35a1de0",
+      "match": false
+    },
+    {
+      "path": "qa/STATUS_MANIFEST_0128_R05_LAYOUTFIX04.json",
+      "bytes_local": 5524,
+      "bytes_remote": 5365,
+      "local_sha256": "e7dc334d0fa3f7b42df663df4bc0d973a2d049221215e2bd4777d59ef0221851",
+      "remote_sha256": "d4c4764e0ab2c2ea13749896b7a0693a5b66f059b629766477bf25f33f3623e4",
+      "match": false
+    },
+    {
+      "path": "qa/TECHNICAL_QA_R05_LAYOUTFIX04.json",
+      "bytes_local": 6805,
+      "bytes_remote": 6588,
+      "local_sha256": "4fab62c4a7095d6bde96c22359bf49f96f387aa47d2b12ec255ddea8513c69ee",
+      "remote_sha256": "b2e427e6fb2fb48f79d510b5fb9bbab1d2c32a48264d016df58ad2e96e31d74e",
+      "match": false
+    },
+    {
+      "path": "qa/VISUAL_QA_R05_LAYOUTFIX04.json",
+      "bytes_local": 4382,
+      "bytes_remote": 4202,
+      "local_sha256": "bb4eb08e5ccb771b7333d03e15f39926a31578abfe27b005b2c4613f7556e290",
+      "remote_sha256": "76d2b43fd4819d977e226c10d2d9330e0769d81508135f576149f8c0f89a00a0",
+      "match": false
+    },
+    {
+      "path": "README.md",
+      "bytes_local": 1613,
+      "bytes_remote": 1603,
+      "local_sha256": "ea19449d54c01c993f021cdb26bae42fcfc6816b73e3cde8d17156cf30ebef34",
+      "remote_sha256": "8d625c64a79f6a691d7b6d6d84aacbe831515f72445e27f6df91adf67557717c",
+      "match": false
+    },
+    {
+      "path": "render/0128_R05_LAYOUTFIX04_WordNative.pdf",
+      "bytes_local": 701118,
+      "bytes_remote": 701118,
+      "local_sha256": "e6e676c260abe7dd4a044af8ad0df098c0c2beb66c0900c3ec8595215b2b703a",
+      "remote_sha256": "e6e676c260abe7dd4a044af8ad0df098c0c2beb66c0900c3ec8595215b2b703a",
+      "match": true
+    },
+    {
+      "path": "render/pages/page-01.png",
+      "bytes_local": 406209,
+      "bytes_remote": 406209,
+      "local_sha256": "cf412caeca3345bb9ce4dd836f9bf5c5ea3f7dee7babd0e520b6cdb00c1867a7",
+      "remote_sha256": "cf412caeca3345bb9ce4dd836f9bf5c5ea3f7dee7babd0e520b6cdb00c1867a7",
+      "match": true
+    },
+    {
+      "path": "render/pages/page-02.png",
+      "bytes_local": 444658,
+      "bytes_remote": 444658,
+      "local_sha256": "f11fc3d13baadcdd6f0a8046eb30d32aabebfa0c5616ede07b2a15b755a58bbc",
+      "remote_sha256": "f11fc3d13baadcdd6f0a8046eb30d32aabebfa0c5616ede07b2a15b755a58bbc",
+      "match": true
+    },
+    {
+      "path": "render/pages/page-03.png",
+      "bytes_local": 196537,
+      "bytes_remote": 196537,
+      "local_sha256": "3e2e887869ec77235ddb891f607c940e0aa068bffb0412450399903c591c4128",
+      "remote_sha256": "3e2e887869ec77235ddb891f607c940e0aa068bffb0412450399903c591c4128",
+      "match": true
+    },
+    {
+      "path": "render/pages/page-04.png",
+      "bytes_local": 225636,
+      "bytes_remote": 225636,
+      "local_sha256": "5b2a9c490916b40b6262363b5a8babc19b1a56daea99ce07a3667e6445235b3c",
+      "remote_sha256": "5b2a9c490916b40b6262363b5a8babc19b1a56daea99ce07a3667e6445235b3c",
+      "match": true
+    },
+    {
+      "path": "render/pages/page-05.png",
+      "bytes_local": 367789,
+      "bytes_remote": 367789,
+      "local_sha256": "046f3c82e18f257acc8628d81298d103b0328df0b8ff0fcc098a763087a5a451",
+      "remote_sha256": "046f3c82e18f257acc8628d81298d103b0328df0b8ff0fcc098a763087a5a451",
+      "match": true
+    },
+    {
+      "path": "render/pages/page-06.png",
+      "bytes_local": 350748,
+      "bytes_remote": 350748,
+      "local_sha256": "4b25a094dac490018a05a564724f7e21903e890a05f5f700e4d2b2bdf75b17bf",
+      "remote_sha256": "4b25a094dac490018a05a564724f7e21903e890a05f5f700e4d2b2bdf75b17bf",
+      "match": true
+    },
+    {
+      "path": "render/pages/page-07.png",
+      "bytes_local": 395975,
+      "bytes_remote": 395975,
+      "local_sha256": "3bbe0777d38adeb6fc84680ab22c62385bc95c8b63bd5e88abb9fbb11d29327b",
+      "remote_sha256": "3bbe0777d38adeb6fc84680ab22c62385bc95c8b63bd5e88abb9fbb11d29327b",
+      "match": true
+    },
+    {
+      "path": "render/pages/page-08.png",
+      "bytes_local": 382364,
+      "bytes_remote": 382364,
+      "local_sha256": "ca2c84b2f16b34f3f8ab3cde18b2ab42d9ce658bfe22d4c3998f5e9d3b7d6be8",
+      "remote_sha256": "ca2c84b2f16b34f3f8ab3cde18b2ab42d9ce658bfe22d4c3998f5e9d3b7d6be8",
+      "match": true
+    },
+    {
+      "path": "render/pages/page-09.png",
+      "bytes_local": 173552,
+      "bytes_remote": 173552,
+      "local_sha256": "2698ae224b98b43c839c5609f2e32a96a901ef6959c7d41c5f7a819fcc02dfdd",
+      "remote_sha256": "2698ae224b98b43c839c5609f2e32a96a901ef6959c7d41c5f7a819fcc02dfdd",
+      "match": true
+    },
+    {
+      "path": "render/pages/page-10.png",
+      "bytes_local": 38568,
+      "bytes_remote": 38568,
+      "local_sha256": "b721ed33e1e4452fc8fd3d06ee362edaa33c819a3070e489b8233fb1d6804914",
+      "remote_sha256": "b721ed33e1e4452fc8fd3d06ee362edaa33c819a3070e489b8233fb1d6804914",
+      "match": true
+    },
+    {
+      "path": "render/pages/page-11.png",
+      "bytes_local": 214672,
+      "bytes_remote": 214672,
+      "local_sha256": "02ccb762a61938c14a8dcf8f3ac0c3e1b4dfae6d9002dad75fef368f4672a153",
+      "remote_sha256": "02ccb762a61938c14a8dcf8f3ac0c3e1b4dfae6d9002dad75fef368f4672a153",
+      "match": true
+    },
+    {
+      "path": "render/pages/page-12.png",
+      "bytes_local": 383686,
+      "bytes_remote": 383686,
+      "local_sha256": "02e875e41025109afa566d77079d92bccfe69f192097c835e5f5fbac4a0f1c1d",
+      "remote_sha256": "02e875e41025109afa566d77079d92bccfe69f192097c835e5f5fbac4a0f1c1d",
+      "match": true
+    },
+    {
+      "path": "render/pages/page-13.png",
+      "bytes_local": 208067,
+      "bytes_remote": 208067,
+      "local_sha256": "d23067d4001220d3f5c7aab1cacae6dbbf976be45cd7ad7295a7190f68238ad4",
+      "remote_sha256": "d23067d4001220d3f5c7aab1cacae6dbbf976be45cd7ad7295a7190f68238ad4",
+      "match": true
+    },
+    {
+      "path": "source/MAPPING_EVIDENCE_0128_R01.json",
+      "bytes_local": 1114,
+      "bytes_remote": 1114,
+      "local_sha256": "5086a5b50eb72d46090e1781796cc73325d1e4581fa44beb803adb2302ace12b",
+      "remote_sha256": "5086a5b50eb72d46090e1781796cc73325d1e4581fa44beb803adb2302ace12b",
+      "match": true
+    },
+    {
+      "path": "source/SAMPLE_INDIVIDUAL_PERFORMANCE_PANEL_R01.csv",
+      "bytes_local": 2927,
+      "bytes_remote": 2927,
+      "local_sha256": "831cf00c91fd5078a4128c2576ff5a005c3e3243b71edced5599d18c1c3c91a4",
+      "remote_sha256": "831cf00c91fd5078a4128c2576ff5a005c3e3243b71edced5599d18c1c3c91a4",
+      "match": true
+    },
+    {
+      "path": "source/SOURCE_PACKET_0128_I19-E17_R01.md",
+      "bytes_local": 6453,
+      "bytes_remote": 6453,
+      "local_sha256": "94699015ab0a316f09e500bd44f8fa6e7474e613557a6cffc322548f7c94307b",
+      "remote_sha256": "94699015ab0a316f09e500bd44f8fa6e7474e613557a6cffc322548f7c94307b",
+      "match": true
+    },
+    {
+      "path": "source/SYNTHETIC_REPLACEMENT_REGISTER_0128_R01.csv",
+      "bytes_local": 2623,
+      "bytes_remote": 2623,
+      "local_sha256": "ea06f9aa1083bd7c48f959a85dfd2ede1a480df485b51652087ce7fae7037826",
+      "remote_sha256": "ea06f9aa1083bd7c48f959a85dfd2ede1a480df485b51652087ce7fae7037826",
+      "match": true
+    },
+    {
+      "path": "source/UNIQUE_BLUEPRINT_0128_I19-E17_R01.md",
+      "bytes_local": 6809,
+      "bytes_remote": 6809,
+      "local_sha256": "f396793da8db5f7d0092ae5bb90f36b93098fdc4d9f25093db74760864796ffb",
+      "remote_sha256": "f396793da8db5f7d0092ae5bb90f36b93098fdc4d9f25093db74760864796ffb",
+      "match": true
+    },
+    {
+      "path": "worker/opencode/ATTEMPT01_STDERR.txt",
+      "bytes_local": 58,
+      "bytes_remote": 58,
+      "local_sha256": "cb62a75b5184f48c6050e1be789a1786c1a64087fc99f11213c4d140dc661dab",
+      "remote_sha256": "cb62a75b5184f48c6050e1be789a1786c1a64087fc99f11213c4d140dc661dab",
+      "match": true
+    },
+    {
+      "path": "worker/opencode/ATTEMPT01_STDOUT.jsonl",
+      "bytes_local": 1654,
+      "bytes_remote": 1654,
+      "local_sha256": "7a138276d9e67c37aa13875e2879a997858c1baff45e676e82e4b2bff8ff4b7d",
+      "remote_sha256": "7a138276d9e67c37aa13875e2879a997858c1baff45e676e82e4b2bff8ff4b7d",
+      "match": true
+    },
+    {
+      "path": "worker/opencode/ATTEMPT02_STDERR.txt",
+      "bytes_local": 0,
+      "bytes_remote": 0,
+      "local_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "remote_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "match": true
+    },
+    {
+      "path": "worker/opencode/ATTEMPT02_STDOUT.jsonl",
+      "bytes_local": 528,
+      "bytes_remote": 527,
+      "local_sha256": "e553d7b1d41fcad102fba83799088a0a0fbcdd5d7669319b6914fa4cc90311da",
+      "remote_sha256": "8b66e5ada10596abc50d6abb32cae64c9f670bf2e6ddfffb71a0351314d3e721",
+      "match": false
+    },
+    {
+      "path": "worker/opencode/DISPATCH_RECEIPT.json",
+      "bytes_local": 3539,
+      "bytes_remote": 3473,
+      "local_sha256": "c39215288585ce0fbe1e0b56a9b27971c159c07ae09a5237e46f03e5d90b81f8",
+      "remote_sha256": "5416c2d3e32c65e1aacbb81c6ff9733fc0c8cc450c0de84dbabfa835df2747a9",
+      "match": false
+    },
+    {
+      "path": "worker/opencode/INPUT_SHA_MANIFEST.json",
+      "bytes_local": 1793,
+      "bytes_remote": 1750,
+      "local_sha256": "c9debac3750adc278e2ecb49a82b46eac8a1818c641bcd111e6c5de255921cd7",
+      "remote_sha256": "c4df82b0ed4a9849972f7fdd083402f3e0416dee6f1070a4580342527df56a6c",
+      "match": false
+    },
+    {
+      "path": "worker/opencode/REVIEW_REQUEST.txt",
+      "bytes_local": 2058,
+      "bytes_remote": 2052,
+      "local_sha256": "67d643d36d6dc34709ea3fb82bcf70c6d2b6566589d29d6b9b6ee5154af451e1",
+      "remote_sha256": "1c77f0e42d7d003d7345fe7995f5bc5897e417efe68c71a586527242583ad5b2",
+      "match": false
+    },
+    {
+      "path": "worker/opencode/ROUTE_INCIDENT.json",
+      "bytes_local": 867,
+      "bytes_remote": 847,
+      "local_sha256": "80e84712d52b9a4fa420b24f73a87ef77ca603a1d4c63b94473e83bcbf3e3737",
+      "remote_sha256": "1e76822bc28867ecbcfc9dfa60bf76b60592574d52f0e01a23ee36d5f291204e",
+      "match": false
+    }
+  ]
+}

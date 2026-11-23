@@ -1,0 +1,32 @@
+{
+  "schema": "ttqs-one-targeted-content-repair-v1",
+  "work_id": "TTQS-0115-I19-E02-R03-targeted-review-repair",
+  "doc_id": "0115",
+  "official_requirement_id": "I19-E02",
+  "source_manuscript": "adopted_manuscript_R02.md",
+  "source_manuscript_sha256": "956cfb59d4e4cf519a58164b7e77c68beba945d1c8f69825ba59dd967b9e49a3",
+  "repaired_manuscript": "adopted_manuscript_R03.md",
+  "repaired_manuscript_sha256": "dd22987d7109cacc43ac0007411995f1b2cb7ae317ccbcbb658d3bf4e705ba4b",
+  "parent_candidate_sha256": "bd2119b0e4359dd2066712d91d7f3fb154c094fc27993d6786aab01074f1fe3e",
+  "review_receipt": "reviewer/opencode_R05_reviewer_receipt.json",
+  "review_response_sha256": "aaeb7aede5294da4e0a5f131f58c529afd812c87599c1415ce0dd71df31ed3e5",
+  "targeted_changes": [
+    {
+      "locator": "P001",
+      "before": "**文件編號：0115｜對應需求：I19-E02｜版本：R02（候選示範本）**",
+      "after": "**文件編號：0115｜對應需求：I19-E02｜版本：R06（本次校正；正文稿 R03）**"
+    },
+    {
+      "locator": "T10R06",
+      "before": "否者應填 HOLD 或 REJECT 理由。",
+      "after": "否則應填 HOLD 或 REJECT 理由。"
+    }
+  ],
+  "old_text_occurrences": [
+    1,
+    1
+  ],
+  "source_bytes_unchanged": true,
+  "no_other_body_changes": true,
+  "result": "APPLIED_TARGETED_TEXT_REPAIR; new DOCX must receive exact-SHA QA"
+}

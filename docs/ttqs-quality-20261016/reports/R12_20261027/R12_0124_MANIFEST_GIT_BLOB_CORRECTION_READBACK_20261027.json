@@ -1,0 +1,83 @@
+{
+  "schema": "TTQS_ONE_R12_0124_MANIFEST_RAW_GIT_BLOB_CORRECTION_READBACK_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0124",
+  "requirement_id": "I19-E12",
+  "observed_at_local": "2026-10-27T06:33:01.4316967+08:00",
+  "remote_branch": "work/ttqs-one-document-quality-contract-20261016",
+  "remote_head_verified": "f27f1bdda71cfb163b2044f6a7e270209c9a82b7",
+  "correction": {
+    "path": "docs/ttqs-quality-20261016/reports/R12_20261027/0124_CANDIDATE_PACKAGE_R01_20261027/PACKAGE_MANIFEST.json",
+    "previous_git_blob_sha1": "34d1fccb6e42dc4828d0a4e17782c130a76a167e",
+    "corrected_git_blob_sha1": "81450cc115f415f5c2b9aa5995d315541c339208",
+    "local_sha256": "710b9a2405676dfb7330327cfab638f48d6f4ffa8e98e10b60fe5335947c070e",
+    "fields_corrected": "Each package_contents git_blob_sha1 now equals raw Git Blob SHA-1; status sidecar bytes/SHA-256/Git Blob SHA-1 updated to remotely read bytes."
+  },
+  "candidate": {
+    "sha256": "0a6567c2779d9ad8014ab6d1c892779a98892351a38ceda0dea9fa8b24ff2988",
+    "bytes": 60133,
+    "git_blob_sha1": "76aea5c8eab402e3a24e599dbcc802ab7309ad0b",
+    "rebuilt": false,
+    "remote_readback": "PASS_EXACT_RAW_GIT_BLOB_AT_VERIFIED_HEAD"
+  },
+  "status_sidecar": {
+    "path": "qa/R12_STATUS_AND_REGISTER_RECONCILIATION.json",
+    "bytes": 7202,
+    "sha256": "ef8177819668e111cb921a34d769c29be89b9779cfb5d109d9b6662eeade5ce2",
+    "git_blob_sha1": "ff8a11ba61f292d85066b45fab4d54f688ae4772"
+  },
+  "package_raw_readback": [
+    {
+      "path": "candidate/0124_I19-E12_R01_candidate.docx",
+      "git_blob_sha1": "76aea5c8eab402e3a24e599dbcc802ab7309ad0b",
+      "local_remote_equal": true
+    },
+    {
+      "path": "source/SOURCE_PACKET_0124_I19-E12_R01.md",
+      "git_blob_sha1": "1637d8d1d7c11c44d11611f68cabd9fb4c9aafde",
+      "local_remote_equal": true
+    },
+    {
+      "path": "source/UNIQUE_BLUEPRINT_0124_I19-E12_R01.md",
+      "git_blob_sha1": "da3b306cf8875a2f87349bcd6fa7ea2cc7e0d093",
+      "local_remote_equal": true
+    },
+    {
+      "path": "qa/R12_STATUS_AND_REGISTER_RECONCILIATION.json",
+      "git_blob_sha1": "ff8a11ba61f292d85066b45fab4d54f688ae4772",
+      "local_remote_equal": true
+    },
+    {
+      "path": "qa/R12_VISUAL_EXPORT_RECOVERY.json",
+      "git_blob_sha1": "b5cf5ab3ae521ae64cc9fbe95b46406828b54af4",
+      "local_remote_equal": true
+    },
+    {
+      "path": "qa/TECHNICAL_QA.json",
+      "git_blob_sha1": "60249ef8fa3471aa27e384c129c1f12a438de78f",
+      "local_remote_equal": true
+    },
+    {
+      "path": "qa/VISUAL_QA.json",
+      "git_blob_sha1": "749b020b5aaf2b9e85ac3de8824e505a132112c4",
+      "local_remote_equal": true
+    },
+    {
+      "path": "qa/WORD_EXPORT_RECEIPT.json",
+      "git_blob_sha1": "e29739d56ee92781be0b13b8c9009d7d8f5a3a5a",
+      "local_remote_equal": true
+    },
+    {
+      "path": "history/BUILD_RECEIPT_AT_BUILD_TIME.json",
+      "git_blob_sha1": "9ee633fe4ffc024bfa2b7c1189785712fcf7cbd2",
+      "local_remote_equal": true
+    }
+  ],
+  "interpretation": {
+    "technical_and_visual": "Existing receipts unchanged; visual scope is 14 pages.",
+    "semantic": "Reviewer-reported PASS_TEXT_ONLY; actual serving model/fallback UNKNOWN.",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "NOT_VERIFIED",
+    "page_image_current_local_render_alignment": "UNKNOWN"
+  }
+}

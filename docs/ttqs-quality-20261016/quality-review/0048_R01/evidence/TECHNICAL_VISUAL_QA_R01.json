@@ -1,0 +1,46 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0048",
+  "requirement_id": "I10-E03",
+  "official_checkbox_sequence": "049",
+  "official_source_box_id": "P03-B10",
+  "candidate_path": "candidate/0048_R01.docx",
+  "candidate_sha256": "e6bb07cc8f984a8d6d72a64f4498717df6a5116d98431bee75c2f1e2151d28e9",
+  "candidate_bytes": 58156,
+  "source_map_sha256": "9321a7bed8b25d24482d2346761dae379883bc1554498ed6dfa32eaf63aaf1cd",
+  "blueprint_row_sha256": "8b258f9125f2b1209629d0356539537e00c322073739ec65d05c58590847ef72",
+  "synthetic_register_sha256": "a1e836657ca43762fda6f7b800721054ce3df110a8e3fca7a07908dac5a3eda0",
+  "synthetic_register_rows": 39,
+  "synthetic_fact_ids_present_in_candidate": 39,
+  "docx_zip_integrity": "PASS",
+  "docx_package_parts": 19,
+  "paragraph_count": 88,
+  "table_count": 27,
+  "pdf_sha256": "ee2e8af6dc7b2ef1c51179d33ca51bb0a04c19f250ebf89e3f7ab6a27fecc968",
+  "rendered_pdf_pages": 16,
+  "page_images": 16,
+  "direct_visual_review": "PASS_ALL_16_PAGES; no blank page, clipping, overlap, orphan row, unreadable table, or title rule observed",
+  "arithmetic": {
+    "procurement_difference_ntd": 7000,
+    "budget_utilization_pct_rounded_1dp": 94.2,
+    "weight_total_pct": 100,
+    "candidate_x_weighted_score": 89,
+    "candidate_y_weighted_score": 80,
+    "case_a_completeness_pct": 100,
+    "case_b_completeness_pct": 100
+  },
+  "sample_boundary": "PASS; all 39 register rows SAMPLE/SYNTHETIC; no real association decision or third-party original claimed",
+  "formal_acceptance": "NOT_GRANTED",
+  "status": "TECHNICAL_AND_DIRECT_VISUAL_PASS; INDEPENDENT_SEMANTIC_PARTIAL_F1",
+  "independent_semantic_review": {
+    "verdict": "PARTIAL",
+    "candidate_sha256": "e6bb07cc8f984a8d6d72a64f4498717df6a5116d98431bee75c2f1e2151d28e9",
+    "reviewer_response": "review/opencode_v2_review_result_R01.md",
+    "reviewer_response_sha256": "135dd11847b52ff39f903d5371d42323fac3e3960ca494b32db1de99867591bc",
+    "finding": "§02 field definition table lacks explicit 填寫者／責任角色 column; requirement-to-field-to-attachment mapping also needs one explicit table"
+  },
+  "later_review_reconciliation": {
+    "source": "../0048_R02/review/opencode_v2_review_result_R02.md",
+    "finding": "The 9.5pt body-note font-floor issue is inherited and was present in R01 page 1 and page 11; the first R01 reviewer statement that all body text met 10.5pt was inaccurate. R01 remains PARTIAL and superseded."
+  }
+}

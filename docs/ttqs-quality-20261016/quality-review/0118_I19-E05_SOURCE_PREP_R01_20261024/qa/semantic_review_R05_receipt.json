@@ -1,0 +1,51 @@
+{
+  "work_id": "0118-R05-SEMANTIC-REVIEW",
+  "doc_id": "0118",
+  "requirement_id": "I19-E05",
+  "internal_blueprint_index": 129,
+  "candidate_state": "CANDIDATE",
+  "candidate_docx_sha256": "aa6ee02e2b3ae7c0ef06e74cad6333f2ddcc3bc306651f4e3e5694ecf5838707",
+  "review_packet_sha256": "13ecc4a99a76c515a581c220688f92615b436406422441db905674c099ca6071",
+  "review_task_sha256": "83464a9c841820e4e6b45a13dea71db5a1dcd0856f47296630108205e571e54f",
+  "reviewer": "OpenCode v2 CLI plan agent, separate from Builder",
+  "cli_version": "opencode v2.0.32",
+  "cli_pid": 73636,
+  "cli_exit_code": 0,
+  "cli_finish": "stop",
+  "requested_model": "opencode/glm-5.3-flash-free",
+  "session_model_metadata": {
+    "id": "glm-5.3-flash-free",
+    "providerID": "opencode",
+    "variant": "default"
+  },
+  "actual_upstream_serving_model": "UNKNOWN",
+  "provider_account_and_billing": "OpenCode session reports cost=0; provider/account-level billing independently UNKNOWN",
+  "session_id": "ses_e94ae3365ffeg0Z2utxHp5ei6f",
+  "session_message_time": {
+    "created": 1792801885442,
+    "streamed": 1792801953475,
+    "completed": 1792801953478
+  },
+  "tokens": {
+    "input": 19709,
+    "output": 2089,
+    "reasoning": 3106,
+    "cache": {
+      "read": 4352,
+      "write": 0
+    }
+  },
+  "session_reported_cost": 0,
+  "final_response_sha256": "a393ba54616fe4ac604b3d02cd4ff06309e5e2086cde74b7e0aee42dd4d04cc8",
+  "final_response_recovered_from_original_session_export": true,
+  "initial_redirect_capture": "UTF-8 text was corrupted during PowerShell stream decoding; recovered existing assistant text from the same OpenCode session export; no reviewer rerun.",
+  "verdict": "PASS",
+  "scope": "Exact R05 body extraction vs official page-8 source excerpt, Unique Blueprint, crosswalk, mapping and synthetic dataset/register; semantic/usability, identity, retention, HOLD/RETURN/REJECT, boundaries and neighbor distinction. Reviewer did not inspect visual render and did not recompute SHA.",
+  "findings": "No new substantive defect. Informational: cell line-breaks in long state identifiers correspond to layout wrapping; variable underline lengths are pre-existing non-semantic formatting.",
+  "limitations": [
+    "No visual inspection by reviewer.",
+    "Reviewer did not recompute DOCX or body SHA; values were accepted from the supplied packet.",
+    "No REAL original, third-party identity, receipt, approval or association decision.",
+    "Formal acceptance NOT_GRANTED."
+  ]
+}

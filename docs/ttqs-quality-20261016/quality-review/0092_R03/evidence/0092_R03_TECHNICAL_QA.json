@@ -1,0 +1,83 @@
+{
+  "schema": "TTQS_DOCUMENT_TECHNICAL_QA_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0092",
+  "requirement_id": "I17D-E06",
+  "official_checkbox_serial": "099",
+  "candidate_revision": "R03",
+  "candidate_state": "CANDIDATE_SAMPLE_SYNTHETIC_NOT_ACCEPTED",
+  "formal_acceptance": "NOT_GRANTED",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0092_R01_OPENCODE_WRITER_R01\\0092_R03_SYNTHETIC_CANDIDATE.docx",
+  "candidate_sha256": "ed577847dba59d29cd1da0d1d64372a21ed07d8aee164ff044c3870ff958391b",
+  "official_mapping": {
+    "requirement_text": "感謝函。",
+    "official_source_page": 6,
+    "source_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "blueprint_registry_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+    "blueprint_row_sha256": "86a732b30ce881b43144da8217693570281b999801d41a1b53370bfdaa97a358",
+    "source_requirement_map_sha256": "405b987797d1558ecac182cea8e1adfbd1aead7754c880db32db43c235d5024e",
+    "129_to_142_crosswalk_sha256": "1ddfbb608bcad25170683ddb42a1dbb27bafa6f1f35ff0498f1b8d75b24f0679",
+    "142_inventory_sha256": "5eef25c42fd3473136149a91db21c5164c021afc73ff6602d1488511031fd7f5"
+  },
+  "checks": {
+    "zip_integrity": "PASS",
+    "candidate_revision_state": "CANDIDATE_SAMPLE_SYNTHETIC_NOT_ACCEPTED",
+    "docx_bytes": 62545,
+    "paragraph_count": 128,
+    "table_count": 25,
+    "unique_registered_fact_ids": 27,
+    "expected_fact_ids": 27,
+    "fact_ids_missing": [],
+    "fact_ids_unexpected": [],
+    "eight_required_fields_formula_present": true,
+    "100_percent_completeness_present": true,
+    "six_original_checks_open": true,
+    "synthetic_boundary_present": true,
+    "role_codes_A_to_D_present": true,
+    "exact_official_requirement_text_present": true,
+    "neighbor_0091_present": true,
+    "neighbor_0093_present": true,
+    "old_unsupported_category_label_absent": true,
+    "explicit_body_font_min_pt": 10.5,
+    "explicit_table_font_min_pt": 9.5,
+    "render_pdf_sha256": "242fb54cc2ff976a769e02da73ba7af8f0820fa51d8610613508aa3782bca722",
+    "render_pdf_bytes": 686516,
+    "render_page_count": 18,
+    "page_png_sha256": {
+      "page-01.png": "3b6c9e29fb3fdb6572b03b0b9a874f5c5f08f2ef80db9c566e7edb95fc387301",
+      "page-02.png": "e2e0a2e73291ae2278dbd0eefe6089923536d50856fba79359ebdce0ab50f998",
+      "page-03.png": "e1d580fbcff0b3cb0dc7ad2e1535f563de486592e5b46ead4849bcb3dd95bf95",
+      "page-04.png": "2264b876ae9acb7fe8a3f4cbf84f65a665c653ed7661da7fd60ff1d7ceb833e1",
+      "page-05.png": "10e2f9b0930b19a8fdbc9211c208cb7e21ea21b360a731246d5c2674e210cd6f",
+      "page-06.png": "ad45e0c874fef462fb140b37150ea084545a7c4f69ab9bada0e79987f6abe2d2",
+      "page-07.png": "f70407be53049cf782929904a09da5fc86fde530b9cc6f022e9424389d6fbdc0",
+      "page-08.png": "87e9783a9e86d2fe4edb266246bcd6b2f59d42f10392c179aa715ad0508f45d8",
+      "page-09.png": "da50a9cbe4dae2d399a84acfa3d36965dd5b884ce6867916b56b019a7f953867",
+      "page-10.png": "56350e772dc4ae2de83ca354fe6e98eaa6d85571d53f5ef0a35febcf9b8e5bbc",
+      "page-11.png": "c5c9e81f7a54e28f02b0cb4c556ec26a8c861eef4d583a5ed9d784b89c6f5894",
+      "page-12.png": "03c3652d7e5d3d3d9e70ff196b85266a0304291cedef3e7683df9cde7b1faf6c",
+      "page-13.png": "5fa730523a7aa70a22dfcd9baff20b0ca3cf409421958e061948ae513041ff66",
+      "page-14.png": "a97728438291b3b0a62aa698a1c2c5e89e1d2b48b30608622c63af1385fa620c",
+      "page-15.png": "6e63c584f6ea6ec1655eaae9a74f717168593ea9095d24c75f5f7e6dc6119ebd",
+      "page-16.png": "4060545a62833997c9097053b5101552de539f3cae09a04e720fed3f0b31edf9",
+      "page-17.png": "418b0b4dbc1dc2401135d9df254e75007c9902bd2c3dcb95766a833cf96e50a9",
+      "page-18.png": "a1e5be424755bcff74f145136c4252dc03797c0e389c5b742e27f91d22327b63"
+    },
+    "final_pagination_repairs": [
+      "Section 3.3 starts at top of page 5; no orphan heading/table header remains on page 4.",
+      "Section 12 starts at top of page 18; no orphan heading/table header remains on page 17."
+    ],
+    "scope_limitations": [
+      "Independent semantic reviewer must review extracted exact candidate text; it does not independently hash the DOCX binary.",
+      "Visual inspection is separate and scoped to all 18 final render page PNGs.",
+      "Actual REAL third-party originals remain absent; no formal acceptance is claimed."
+    ]
+  },
+  "status": "PASS_TECHNICAL_INTEGRITY_AND_SOURCE_BINDING; INDEPENDENT_SEMANTIC_REVIEW_PASS_WITH_NONBLOCKING_OBSERVATIONS",
+  "independent_semantic_review": {
+    "verdict": "PASS_WITH_NONBLOCKING_OBSERVATIONS",
+    "candidate_sha256": "ed577847dba59d29cd1da0d1d64372a21ed07d8aee164ff044c3870ff958391b",
+    "receipt_sha256": "d63a6b3b62b53873723cf573367d00605cf0152bc81fce725506d6af98a96584",
+    "scope_limit": "text-semantic only; binary and layout were separate"
+  }
+}

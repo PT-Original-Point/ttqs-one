@@ -1,0 +1,136 @@
+{
+  "schema": "TTQS_ONE_R12_T01_T24_RESULTS_V1",
+  "project_id": "TTQS_ONE",
+  "command": "TTQS_ONE_20261026_R12_FULL_RECOVERY_DELIVERY",
+  "source_commit": "d06e578107ecefaed694a86e0c9b1e31091fa2df",
+  "r12_blob_sha1": "63f26f0708249b211611d51b34a7fb90b4cd26a9",
+  "observed_at_local": "2026-10-27T00:48:48.983887+08:00",
+  "test_count": 24,
+  "test_results": [
+    {
+      "id": "T01",
+      "status": "PARTIAL",
+      "finding": "GitHub REST same-window JSON has 61 commits (61 rows). Current local clone is shallow, so the previously reported local 13 cannot be reproduced from its history; retain both counts and mark the local-vs-REST cause unresolved."
+    },
+    {
+      "id": "T02",
+      "status": "PASS_METADATA_ONLY",
+      "finding": "0133 local README/status aligned to exact remote blobs; candidate DOCX SHA remains 25116afb8206e0828c8b3a4a763845a9c3e672a4cb49969a64a2a3737d87256b."
+    },
+    {
+      "id": "T03",
+      "status": "PASS_GUARD_NO_INHERITANCE",
+      "finding": "0122 R02 exact DOCX SHA d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86 re-extracts to body SHA 61a732058927a033f268171084db05f3a86cac44fe9e92dd21a7a6f77fcb47ea; reviewer packet claims 81d144264640265ec015d412bdb08f3e74578b001b7621e7d4462863fb1a1e33. Do not grant/inherit R02 semantic PASS. R03 remains its separate exact-SHA delta scope only."
+    },
+    {
+      "id": "T04",
+      "status": "PASS_LANE_ONLY",
+      "finding": "0121/0135 OpenCode free route was not blindly retried before the old release; one bounded 0135 retry after release returned explicit 429 retryAfterMs=26365000. Pause only that free route through its returned retry time; unrelated work remains available."
+    },
+    {
+      "id": "T05",
+      "status": "PASS_GUARD",
+      "finding": "Historical 0121 W2 empty/tool-denied exit-0 result is not credited as useful semantic review; preserve failure and token waste as historical."
+    },
+    {
+      "id": "T06",
+      "status": "UNKNOWN_PROVIDER_IDENTITY",
+      "finding": "Antigravity requests for Gemini are not proof of serving model, fallback, or quota deduction; actual identity remains UNKNOWN."
+    },
+    {
+      "id": "T07",
+      "status": "PASS_SERVICE_NOT_WRITER",
+      "finding": "OpenCode PID 79496 is serve --service without work_id/session progress; not classified as active Writer."
+    },
+    {
+      "id": "T08",
+      "status": "PASS_NO_MASS_TERMINATION",
+      "finding": "52 WINWORD /Automation -Embedding processes have unknown owners; none were mass-terminated."
+    },
+    {
+      "id": "T09",
+      "status": "PASS_SALVAGE_SCOPE",
+      "finding": "0122 R03 existing 28-page PDF and exact candidate QA retained; 0124 wrapper failure was bypassed by existing stepwise Word-native read-only export, 14-page PDF and image readback. No DOCX rebuild."
+    },
+    {
+      "id": "T10",
+      "status": "PASS_WITH_SCOPE",
+      "finding": "0138 DOCX/PDF exact; six sidecars raw exact and ten normalization-only, so not 16/16 raw exact."
+    },
+    {
+      "id": "T11",
+      "status": "PARTIAL",
+      "finding": "REST window is 61 commits; commit count is not document count. Local clone is shallow and cannot reproduce historical local-13 count or complete local diff-tree."
+    },
+    {
+      "id": "T12",
+      "status": "PASS_GUARD_ONLY",
+      "finding": "Native config has one active same-thread 120-minute task and one standalone PAUSED task. Pause reason/history not exposed; no resume claim is made for the paused task."
+    },
+    {
+      "id": "T13",
+      "status": "UNKNOWN_NATURAL_TRIGGER",
+      "finding": "Configured 120m and manual card state do not establish natural run; no native scheduledAt/run receipt available."
+    },
+    {
+      "id": "T14",
+      "status": "PASS_CURRENT_TURN_ONLY",
+      "finding": "This active turn contains substantive native/local tool work; it does not prove future automated turns will perform work."
+    },
+    {
+      "id": "T15",
+      "status": "PASS_NO_UNNECESSARY_REBUILD",
+      "finding": "0121/0122/0133/0124 candidates were preserved where bytes were unchanged; metadata and visual/export findings were recorded separately."
+    },
+    {
+      "id": "T16",
+      "status": "PASS_NO_CONFIRMED_ACTIVE_WRITER",
+      "finding": "No active CLI Writer was found in native process snapshot; OpenCode service is not a Writer. WINWORD ownership remains UNKNOWN."
+    },
+    {
+      "id": "T17",
+      "status": "PASS_GUARD_SCOPE_LIMITED",
+      "finding": "Existing hard-fail policy and historical negative evidence retained; no broad corpus scan is claimed."
+    },
+    {
+      "id": "T18",
+      "status": "PASS_EXACT_CROSSWALK",
+      "finding": "Crosswalk has 129 requirement rows, total 142 internal document IDs ending 0142, no 0143; 0135 maps I19-E25. Internal index 140 is not an official printed serial."
+    },
+    {
+      "id": "T19",
+      "status": "UNKNOWN_PANEL_ALIGNMENT",
+      "finding": "Ports 8765/8766 were offline in the OS snapshot; live panel source/readback not located. Mark panel STALE/UNKNOWN, not aligned."
+    },
+    {
+      "id": "T20",
+      "status": "PASS_RAW_READBACK_A83183EA",
+      "finding": "Native Git fetched PR #92 head a83183eadee16ab4b97371349853ffe0b52bb044; byte-compared 101/101 paths (0122 package, R12 report, manifests and R12 .gitattributes), zero missing/mismatched; 0122 DOCX SHA b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d unchanged; R12 source blob 63f26f0708249b211611d51b34a7fb90b4cd26a9."
+    },
+    {
+      "id": "T21",
+      "status": "PASS_NO_0143",
+      "finding": "No new official requirement/document 0143 created; exact 129-to-142 crosswalk controls scope."
+    },
+    {
+      "id": "T22",
+      "status": "PASS_READY_SOURCE_AND_SALVAGE",
+      "finding": "0124 had source packet/Unique Blueprint and existing candidate; visual/export salvage proceeded despite semantic review still pending."
+    },
+    {
+      "id": "T23",
+      "status": "PASS_DISTINCT_EXACT_SHA_SCOPES_0121_0122_0124",
+      "finding": "0124: independent PASS_TEXT_ONLY bound to 0a6567c2779d9ad8014ab6d1c892779a98892351a38ceda0dea9fa8b24ff2988 with visual scope separate. 0121: full-body PASS_TEXT_ONLY bound to ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539; reviewer leaves layout UNKNOWN; exact-SHA separate Word QA 27/27. 0122: full-body PASS_TEXT_ONLY bound to b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d and body a6f9b879203ab5234d6f5c918c7b3b7b5109c641a66bbbae3d72ebbb9b409991; technical PASS_DETERMINISTIC_SCOPE and visual PASS_VISUAL_DELTA_SCOPE remain separately scoped. W2 actual serving model identity UNKNOWN; no formal acceptance is implied."
+    },
+    {
+      "id": "T24",
+      "status": "PASS_CANDIDATE_ONLY",
+      "finding": "DOCX and QA artifacts remain candidate evidence; REAL evidence NOT_VERIFIED and Human formal acceptance NOT_GRANTED."
+    }
+  ],
+  "overall": "PARTIAL_WITH_VERIFIED_MATERIAL_DELTAS",
+  "human_formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "NOT_VERIFIED",
+  "schedule_natural_trigger": "UNKNOWN",
+  "panel_alignment": "UNKNOWN"
+}

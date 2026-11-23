@@ -1,0 +1,16 @@
+replacement_id,field_or_location,current_example,record_class,required_real_source,verification_rule,owner_role,status
+R-01,cover course name,社區志工服務紀錄與溝通基礎,SYNTHETIC,approved real course plan and course roster,match course code and date,training admin role UNKNOWN,PENDING_REAL_SOURCE
+R-02,cover cohort date,2026-08-01,SYNTHETIC,real class calendar and attendance record,calendar and sign-in source agree,training admin role UNKNOWN,PENDING_REAL_SOURCE
+R-03,case_id,SYN-0120-2026-A01,SYNTHETIC,authorized real cohort identifier,link only within same real cohort,training admin role UNKNOWN,PENDING_REAL_SOURCE
+R-04,learning objectives,synthetic communication and service-record practice objectives,SYNTHETIC,approved course objectives and lesson plan,objective wording matches authorized plan,course owner role UNKNOWN,PENDING_REAL_SOURCE
+R-05,completion rule,attendance at least 80 percent plus completed practice,SYNTHETIC,real published completion requirement,verify rule existed before analysis,training admin role UNKNOWN,PENDING_REAL_SOURCE
+R-06,pretest and posttest scores,6 paired synthetic rows plus two one-sided missing rows,SYNTHETIC,original tests and scoring rubric,blind recomputation against original answers,assessment reviewer role UNKNOWN,PENDING_REAL_SOURCE
+R-07,missing-score cases,SYN-L07 missing posttest; SYN-L08 missing pretest,SYNTHETIC,source missing-data log,retain full enrolled denominator and reason evidence,training admin role UNKNOWN,PENDING_REAL_SOURCE
+R-08,passing threshold,70 out of 100,SYNTHETIC,approved assessment rubric,show approval source and version before REAL use,course owner role UNKNOWN,PENDING_REAL_SOURCE
+R-09,satisfaction questionnaire,seven synthetic responses on five-point scale,SYNTHETIC,issued questionnaire and raw response source,verify full prompt options and valid response count,training admin role UNKNOWN,PENDING_REAL_SOURCE
+R-10,satisfaction mean,30 divided by 7 equals 4.29 out of 5,SYNTHETIC,raw response file and formula,independent recomputation,reviewer role UNKNOWN,PENDING_REAL_SOURCE
+R-11,30-day follow-up,6 responses; 4 applied and 2 not yet; 2 no response,SYNTHETIC,follow-up invitation and response records,identify self-report versus third-party verification,follow-up owner role UNKNOWN,PENDING_REAL_SOURCE
+R-12,follow-up response and use ratios,6/8=75 percent; 4/6=66.7 percent; 4/8=50 percent,SYNTHETIC,full invitation denominator and raw responses,recompute each denominator and label population,reviewer role UNKNOWN,PENDING_REAL_SOURCE
+R-13,evidence IDs and original locators,SYN-EDU-01 / SYN-SAT-01 / SYN-FUP-01,SYNTHETIC,authorized original files and evidence index,stable locator and access authorization,records custodian role UNKNOWN,PENDING_REAL_SOURCE
+R-14,limitations and conclusion,descriptive SAMPLE-only statement,SYNTHETIC,real dataset and documented study limits,no causal inference; include missingness and scope,independent reviewer role UNKNOWN,PENDING_REAL_SOURCE
+R-15,role names and review dates,role-only names and blank real dates,SYNTHETIC,association role assignment and review record,verify actual appointment and authority,authorized association role UNKNOWN,PENDING_REAL_SOURCE

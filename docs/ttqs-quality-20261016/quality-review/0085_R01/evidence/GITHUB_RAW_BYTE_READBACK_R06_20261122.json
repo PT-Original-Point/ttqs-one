@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0085",
+  "requirement_id": "I17C-E04",
+  "official_checkbox": "091",
+  "candidate_revision": "R06",
+  "candidate_path": "docs/ttqs-quality-20261016/quality-review/0085_R01/candidate/0085_R06.docx",
+  "candidate_sha256": "4c2d459c8b02a333157db136774e452fb9c293e02cb525b9286f5d2d7d3740cc",
+  "candidate_bytes": 190209,
+  "github_git_blob_sha1": "2b695784e65ab71bcf56124b585c5a273fe6e3c3",
+  "github_readback": {
+    "repository": "PT-Original-Point/ttqs-one",
+    "ref": "9ed5920a0092226ce6c222f66fefaa00b4eab4b1",
+    "method": "GitHub Contents API base64 readback; decoded bytes independently SHA-256 hashed",
+    "observed_at_tpe": "2026-11-22 22:36:59+08:00",
+    "readback_sha256": "4c2d459c8b02a333157db136774e452fb9c293e02cb525b9286f5d2d7d3740cc",
+    "readback_bytes": 190209,
+    "sha256_match": true,
+    "byte_length_match": true
+  },
+  "qa_evidence": {
+    "technical_content": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0085_R01/evidence/content_verification_R06.json",
+      "receipt_sha1": "a2fd570740b29432a80be64e77dab24d163293d6",
+      "candidate_sha256": "4c2d459c8b02a333157db136774e452fb9c293e02cb525b9286f5d2d7d3740cc",
+      "all_checks_pass": true,
+      "note": "原收據 review_status 為 PENDING_EXACT_SHA_INDEPENDENT_REVIEW；本讀回不改寫該歷史欄位。"
+    },
+    "visual": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0085_R01/evidence/visual_review_R06.json",
+      "receipt_sha1": "c283d2f5bdf5b6cd9efea05e06e7a3ee40ad4f3f",
+      "candidate_sha256": "4c2d459c8b02a333157db136774e452fb9c293e02cb525b9286f5d2d7d3740cc",
+      "page_count": 37,
+      "page_coverage": "37 頁均經四張接觸表檢視；全尺寸逐頁檢視清單另列 10 頁。",
+      "full_size_pages": [
+        19,
+        20,
+        21,
+        22,
+        24,
+        28,
+        30,
+        31,
+        32,
+        33
+      ],
+      "scope": "既有製作者視覺收據；未宣稱 37 頁均全尺寸逐頁獨立檢視。"
+    },
+    "semantic": {
+      "receipt_path": "docs/ttqs-quality-20261016/quality-review/0085_R01/review/independent_semantic_review_R06_receipt.json",
+      "receipt_git_blob_sha1": "c09ddcd8c615279a8fa93a5094157447e2c3ebd9",
+      "report_path": "docs/ttqs-quality-20261016/quality-review/0085_R01/review/independent_semantic_review_R06.md",
+      "report_git_blob_sha1": "3c4c0b260e9cf76a836aea01a28dba26fa0db538",
+      "candidate_sha256": "4c2d459c8b02a333157db136774e452fb9c293e02cb525b9286f5d2d7d3740cc",
+      "returned_verdict": "PASS_SEMANTIC_TEXT_SCOPE",
+      "terminal_exit_code": 1,
+      "transport_error": "provider.invalid-output; response text was captured through explicit conclusion",
+      "disposition": "保存既有完整 exact-SHA 審查回覆及其非零 CLI 終態；不重派、不將 CLI exit 0 偽稱為 PASS。"
+    }
+  },
+  "outcome": "GITHUB_RAW_BYTE_READBACK_PASS",
+  "candidate_state": "CANDIDATE_NOT_ACCEPTED",
+  "formal_acceptance": "NOT_GRANTED",
+  "quality_ok_increment": "NOT_CLAIMED"
+}

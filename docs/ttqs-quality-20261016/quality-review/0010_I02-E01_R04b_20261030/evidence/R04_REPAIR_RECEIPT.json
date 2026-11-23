@@ -1,0 +1,28 @@
+{
+  "receipt_type": "bounded_semantic_finding_repair",
+  "doc_id": "0010",
+  "requirement_id": "I02-E01",
+  "from_revision": "R03",
+  "to_revision": "R04",
+  "r03_candidate_sha256": "7427c8e7b5b3c95164f9f5928869b8220c2bd21f3cfeae9ef50df6de4db69a51",
+  "r03_register_sha256": "3de22c208a3e527a09581436a7896567daa171242d3b4380d55964547008a67e",
+  "r03_exact_sha_review_sha256": "14f2ee950aba6cf044c1583ead5a312f91db2d0d7b029685825339a28fde5f57",
+  "r04_candidate_sha256": "131b703267feebfbef3ec49fc8aa9beaab2ded0818415e9e5d86771b84925d90",
+  "r04_register_sha256": "6a424099b25613ad930cfc638bcb846b4914294d092c01902a943229186deecc",
+  "changes": [
+    "Made the §15 embedded and sidecar registers contiguous GFM tables without blank separators; retained all 157 fact IDs and values.",
+    "Added a visibly SAMPLE/SYNTHETIC scenario control card for CASE-SYN-17 with authorization, status, source/time and REAL replacement checks.",
+    "Changed the three scenario facts to the concrete CASE-SYN-17 key and field-level locators with explicit hold/verification conditions.",
+    "Changed RET-003 and RET-004 from section-only locators to the named §11 calculation paragraph and its specific case total."
+  ],
+  "preserved": [
+    "All 157 fact IDs and values, question items, rubric weights, gates, first-attempt scores and retest arithmetic.",
+    "R03 historical candidate, review, and receipts remain unchanged."
+  ],
+  "not_resolved_or_not_claimed": [
+    "Blueprint scope conflict remains PARTIAL/UNKNOWN.",
+    "Actual roster/qualification, real authorization, execution, learner records, Human or association acceptance remain UNKNOWN.",
+    "No DOCX or Word visual QA has been produced for R04."
+  ],
+  "recorded_at_utc": "2026-10-29T16:06:21.580189+00:00"
+}

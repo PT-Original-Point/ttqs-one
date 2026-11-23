@@ -1,0 +1,79 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0040",
+  "requirement_id": "I08-E03",
+  "official_checkbox_sequence": "040",
+  "revision": "R02",
+  "review_type": "independent_exact_sha_semantic_and_visual_review",
+  "reviewed_at_local": "2026-10-17",
+  "verdict": "PARTIAL",
+  "candidate_sha256": "0152b0aadd854d79b1db7b3803743724af670d8d4902f6ef581d54a23c9accf7",
+  "candidate_sha_verified_before_and_after": true,
+  "register_sha256": "103b566ef0d24fc1b289f217eeddec072418bb2fa6f820a96ce17f0e7a96a62c",
+  "register_rows": 34,
+  "register_unique_fact_ids": 34,
+  "all_rows_bound_to_candidate_sha": true,
+  "official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "source_map_sha256": "405b987797d1558ecac182cea8e1adfbd1aead7754c880db32db43c235d5024e",
+  "blueprint_file_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+  "blueprint_row_sha256": "ab080a2e6d85cc13a706f0c10bda7c208ddc191a1fea20a670fd5a174ab14943",
+  "reviewer_identity": "Codex local control-review lane; independent of the document Builder; direct read-only source, DOCX, register, companion candidate, and six rendered-page review.",
+  "reviewer_route": "WIN10_CODEX_LOCAL_NATIVE_CONTROL_REVIEW",
+  "prior_candidate_r01_sha256": "04a0c76651fab1b74f451f4c18c4135bafbab846bd23b537355c9f874e6eeb51",
+  "prior_r01_findings_resolved": [
+    "Official source locator corrected consistently to PDF/printed page 3.",
+    "Internal DOCX/requirement/checkbox/cross-document identifiers removed from body; companion roles are expressed as descriptions.",
+    "All six Word-rendered pages readable; first-column clipping fixed.",
+    "Official public-source reference status separated from synthetic association facts.",
+    "All register entries bound to R02 exact candidate SHA."
+  ],
+  "semantic_gates": {
+    "official_mapping_and_genre": "PASS",
+    "matrix_operability": "PASS",
+    "math_and_0039_case_consistency": "PASS",
+    "sample_real_authority_boundary": "PASS",
+    "title_blind_and_negative_neighbors": "PASS",
+    "register_traceability": "PASS",
+    "visual_readability": "PASS"
+  },
+  "blocking_findings": [
+    {
+      "id": "0040-R02-B1",
+      "severity": "BLOCKING_FOR_BLUEPRINT_COMPLETION",
+      "locator": "Blueprint line 40 required tables: gap-risk-responsibility-deadline-follow-up handoff; DOCX pp.5-6, incomplete D04 action/hand-off example.",
+      "finding": "The candidate gives a filled D04 non-pass example, owner/handoff roles and exception handling, but does not provide one traceable row that links the gap to its training risk, accountable role, a concrete sample deadline, required hand-off artifacts and closure rule. The unique Blueprint explicitly requires this matrix; the tool therefore lacks an operational follow-up record.",
+      "repair_needed": "Add a clearly SAMPLE/SYNTHETIC filled tracking row with gap, risk, responsibility, deadline, hand-off and closure evidence; register each added synthetic fact and bind all rows to the repaired exact SHA."
+    }
+  ],
+  "nonblocking_observations": [
+    {
+      "locator": "p.6",
+      "finding": "Sparse but readable closing page; no orphan heading or clipping."
+    }
+  ],
+  "source_reviewed": [
+    "Official PDF page 3 exact checkbox text; source PDF SHA above.",
+    "Current source-map row DOCX 0040 -> I08-E03 / evidence 040; source-map SHA above.",
+    "Unique Blueprint current JSONL line 40; exact row SHA above.",
+    "0039 R09 candidate exact SHA 3e7ed5f173dc4604803f477289f1d6190e95a5c58d3a229420eaee67037080f5 and independent semantic PASS receipt; vectors, totals, timing and thresholds cross-checked.",
+    "R02 DOCX and all six final-review page images directly inspected."
+  ],
+  "math_recalculation": {
+    "pre_totals": "2,3,4,3,5; sum 17; mean 3.4/8",
+    "post_totals": "6,7,6,5,7; sum 31; mean 6.2/8",
+    "paired_gains": "4,4,2,2,2; sum 14; mean +2.8/8",
+    "pass": "D01,D02,D03,D05 = 4/5 = 80%; rule complete four scores, total >=6/8 and K3 >=1",
+    "coverage": "4/4=100% design coverage only",
+    "result": "PASS"
+  },
+  "visual_review": {
+    "candidate_pdf_sha256": "b9bab29dc8870f37ff901a6c7939fb4acdb55398ee619d72fe7f0cbb8fe73947",
+    "page_count": 6,
+    "all_pages_directly_inspected": true,
+    "result": "PASS"
+  },
+  "candidate_state": "CANDIDATE",
+  "promotion_status": "NOT_PROMOTED",
+  "human_acceptance": "PENDING",
+  "builder_receipts_not_treated_as_semantic_proof": true
+}

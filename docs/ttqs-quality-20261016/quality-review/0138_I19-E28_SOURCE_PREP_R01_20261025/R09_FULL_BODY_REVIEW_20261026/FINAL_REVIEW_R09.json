@@ -1,0 +1,280 @@
+{
+  "blueprint_index": 152,
+  "candidate_sha256": "f06439849ba70d0ad665d760d0a422382d9f4a991ca449b36f05fae39abd5a27",
+  "criteria": [
+    {
+      "evidence": "Exact alignment across all identifiers: DOCX ID 0138, official requirement I19-E28, project 157 index 152. Exact official wording preserved from printed page 9: 「個人績效提升（薪資提升或獎勵升遷之紀錄）。」 Official checkbox sequence is explicitly kept distinct as UNKNOWN and not conflated with DOCX ID or index 152.",
+      "id": "CRIT-01-IDENTITY",
+      "locators": [
+        "T01-R002",
+        "T02-R001-T02-R010",
+        "P016-P017"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "evidence": "Title-blind evaluation verifies that the core structure consists of individual case handling, purpose-limited consent/basis, third-party source intake and locator tracking, exact claim-to-source matrix, separated salary/reward/promotion fields, independent issuer verification, and second-person review. It is an individual third-party verification record, not an aggregate salary survey or media clipping.",
+      "id": "CRIT-02-GENRE-TITLE-BLIND",
+      "locators": [
+        "P019-P020",
+        "P006",
+        "Table 03",
+        "Table 09",
+        "Table 11",
+        "Section 16"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "evidence": "Defines 4 concrete functional responsibilities (R-01 Intake, R-02 Verification, R-03 Custody, R-04 Independent Review) and a 7-stage operational workflow (Stages 0 to 6) with explicit gate criteria and stop/HOLD rules. Independent review (R-04) cannot be performed by the claim compiler.",
+      "id": "CRIT-03-ROLES-STAGES-WORKFLOW",
+      "locators": [
+        "Table 03",
+        "Table 04",
+        "P023-P028"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "evidence": "Complete consent and choice framework: specifies purpose limitation to I19-E28 verification, minimal data fields, recipients, retention basis, withdrawal handling, and stop conditions (HOLD_PRIVACY). Refers to PDPA Articles 11 and 19 without offering legal advice or asserting fixed statutory duration.",
+      "id": "CRIT-04-CONSENT-PRIVACY",
+      "locators": [
+        "Table 06",
+        "Table 07",
+        "P030",
+        "P037-P047",
+        "T16-R004"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "evidence": "Third-party source intake form and index capture issuer, document class/ID, effective date, page/field, acquisition channel/time, independent issuer check channel, controlled location, document version identification, and access category. Explicitly establishes that document-provided contact details alone do not authenticate, and version tracking does not prove content truth.",
+      "id": "CRIT-05-SOURCE-VERIFICATION-INTEGRITY",
+      "locators": [
+        "Table 08",
+        "P031",
+        "P048-P051",
+        "T16-R005"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "evidence": "Claim-to-source mapping for salary (CLM-01), promotion (CLM-02), and reward (CLM-03). Salary comparison requires identical currency, period, wage components, and contracted working time/FTE comparability; zero or missing denominators map to N/A. Rewards and promotions strictly limited to source-documented scope.",
+      "id": "CRIT-06-CLAIM-MATRIX-COMPARABILITY",
+      "locators": [
+        "Table 09",
+        "P052-P066",
+        "T16-R006",
+        "T16-R008"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "evidence": "Recalculated linked sample SYN-0126-01: baseline NT$32,000 to followup NT$33,000 = +NT$1,000 difference; rate (33,000-32,000)/32,000 * 100 = 3.1250%, displayed as 3.13%. Anomaly drill SYN-0138-EX-01 recalculates overtime exclusion (gross 35,500 with 2,500 OT -> 33,000 comparable base = 3.13% vs unadjusted 10.94%). Both strictly registered as synthetic demonstration values.",
+      "id": "CRIT-07-DEMONSTRATION-ARITHMETIC",
+      "locators": [
+        "Table 10",
+        "Table 11",
+        "Table 12",
+        "P067-P078",
+        "Table 14",
+        "P084-P085"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "evidence": "Strict boundary between SAMPLE and REAL maintained throughout. REAL evidence is consistently UNKNOWN / HOLD, formal acceptance NOT_GRANTED. No fabricated employer originals, signatures, issuer replies, mock payroll slips, or association approvals. Training causation is explicitly disclaimed.",
+      "id": "CRIT-08-EVIDENCE-HONESTY-BOUNDARY",
+      "locators": [
+        "P003",
+        "P011-P014",
+        "Table 10",
+        "Table 12",
+        "Table 20",
+        "P138"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "evidence": "Explicitly differentiates and rejects substitution from nearest negative neighbors: 0137/I19-E27 (media reporting), 0139/I19-E29 (aggregate license/employment rate), 0126/I19-E14 (cohort salary survey), and 0125/I19-E13 (job skill application). None can substitute for individual compensation records.",
+      "id": "CRIT-09-NEGATIVE-NEIGHBORS",
+      "locators": [
+        "Table 19",
+        "P105-P107"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "evidence": "Usable operational toolkit for training administrators: 10-point checklist with failure paths, discrepancy log with synthetic drill, 8 decision states, unsent verification letter draft (DRAFT/NOT SENT), blank REAL capture template (16.1-16.4), and 9-point pre-use approval checklist.",
+      "id": "CRIT-10-OPERATIONAL-USABILITY-FORMS",
+      "locators": [
+        "Table 13",
+        "Table 14",
+        "Table 15",
+        "Table 16",
+        "Table 17",
+        "Section 16",
+        "Table 21"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "evidence": "Bidirectional traceability from official requirement clauses to document sections/fields (Table 18) and comprehensive 10-item synthetic replacement register REG-01 through REG-10 (Table 20) documenting every synthetic element, required real input, and completion criteria.",
+      "id": "CRIT-11-TRACEABILITY-REPLACEMENT-REGISTER",
+      "locators": [
+        "Table 18",
+        "Table 20"
+      ],
+      "verdict": "PASS"
+    }
+  ],
+  "doc_id": "0138",
+  "findings": [],
+  "formal_acceptance": "NOT_GRANTED",
+  "limitations": [
+    "Semantic transcription review only; visual layout, typography, and page rendering were not inspected as part of this review and are governed separately by the visual receipt.",
+    "REAL evidence status remains UNKNOWN / HOLD; candidate contains no authentic third-party originals, consent signatures, or employer responses.",
+    "Formal acceptance is NOT_GRANTED; candidate status only pending formal association review and system deployment."
+  ],
+  "math_recalculation": {
+    "anomaly_adjusted_base": 33000,
+    "anomaly_adjusted_rate": "3.13%",
+    "anomaly_case_id": "SYN-0138-EX-01",
+    "anomaly_gross": 35500,
+    "anomaly_overtime": 2500,
+    "anomaly_unadjusted_rate": "10.94%",
+    "baseline": 32000,
+    "case_id": "SYN-0126-01",
+    "diff": 1000,
+    "formula": "(33,000 - 32,000) / 32,000 * 100",
+    "rate_displayed": "3.13%",
+    "rate_percent_exact": 3.125,
+    "rate_raw": 0.03125,
+    "status": "VERIFIED_ACCURATE"
+  },
+  "negative_neighbors": {
+    "0125_I19-E13": "Job-skill application in workplace context; behavioral application does not prove salary, reward, or promotion.",
+    "0126_I19-E14": "Cohort post-training salary survey and statistical analysis; aggregate survey cannot substitute for individual third-party primary evidence.",
+    "0137_I19-E27": "Media interview and report verification; external reporting cannot verify individual employment compensation or personnel changes.",
+    "0139_I19-E29": "Aggregate license passing rate and employment rate improvement report; group rates cannot prove an individual's compensation record."
+  },
+  "real_evidence_status": "UNKNOWN/HOLD",
+  "requirement_id": "I19-E28",
+  "review_scope": {
+    "paragraphs_reviewed": 140,
+    "paragraphs_total": 140,
+    "table_review": [
+      {
+        "rows_reviewed": 2,
+        "rows_total": 2,
+        "table": 1
+      },
+      {
+        "rows_reviewed": 10,
+        "rows_total": 10,
+        "table": 2
+      },
+      {
+        "rows_reviewed": 5,
+        "rows_total": 5,
+        "table": 3
+      },
+      {
+        "rows_reviewed": 8,
+        "rows_total": 8,
+        "table": 4
+      },
+      {
+        "rows_reviewed": 14,
+        "rows_total": 14,
+        "table": 5
+      },
+      {
+        "rows_reviewed": 11,
+        "rows_total": 11,
+        "table": 6
+      },
+      {
+        "rows_reviewed": 5,
+        "rows_total": 5,
+        "table": 7
+      },
+      {
+        "rows_reviewed": 9,
+        "rows_total": 9,
+        "table": 8
+      },
+      {
+        "rows_reviewed": 4,
+        "rows_total": 4,
+        "table": 9
+      },
+      {
+        "rows_reviewed": 6,
+        "rows_total": 6,
+        "table": 10
+      },
+      {
+        "rows_reviewed": 3,
+        "rows_total": 3,
+        "table": 11
+      },
+      {
+        "rows_reviewed": 5,
+        "rows_total": 5,
+        "table": 12
+      },
+      {
+        "rows_reviewed": 11,
+        "rows_total": 11,
+        "table": 13
+      },
+      {
+        "rows_reviewed": 7,
+        "rows_total": 7,
+        "table": 14
+      },
+      {
+        "rows_reviewed": 2,
+        "rows_total": 2,
+        "table": 15
+      },
+      {
+        "rows_reviewed": 9,
+        "rows_total": 9,
+        "table": 16
+      },
+      {
+        "rows_reviewed": 7,
+        "rows_total": 7,
+        "table": 17
+      },
+      {
+        "rows_reviewed": 6,
+        "rows_total": 6,
+        "table": 18
+      },
+      {
+        "rows_reviewed": 5,
+        "rows_total": 5,
+        "table": 19
+      },
+      {
+        "rows_reviewed": 11,
+        "rows_total": 11,
+        "table": 20
+      },
+      {
+        "rows_reviewed": 9,
+        "rows_total": 9,
+        "table": 21
+      }
+    ],
+    "table_rows_total": 149,
+    "tables_total": 21
+  },
+  "sample_real_boundary": "STRICT_SEPARATION_MAINTAINED",
+  "title_blind_genre": "INDIVIDUAL_THIRD_PARTY_VERIFICATION_RECORD",
+  "verdict": "PASS",
+  "visual_review": "NOT_PERFORMED"
+}

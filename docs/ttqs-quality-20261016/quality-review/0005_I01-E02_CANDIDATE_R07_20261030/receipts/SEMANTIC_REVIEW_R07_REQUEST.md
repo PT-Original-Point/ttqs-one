@@ -1,0 +1,3 @@
+Independent review request — 0005 I01-E02 R07
+Candidate exact SHA-256: a36c501893bcb4d2dadaf0adfa7d8638df5e426650a8876182a8f83aebfa1a7c
+Read the local source packet, official requirement PDF, Unique Blueprint 0005 R02, 0003 R14 sources/readback, and exact 0005 R07 register. Do not edit files or use Word COM. Provide independent semantic/usability review with PASS/PARTIAL/FAIL, exact SHA before/after, section/table/page locators; verify 002 project-crosswalk scope, report genre and neighbor separation, all 8 metrics/values/denominators/status rules/math, U005 HOLD, illustrative ≥4 cut-point, matching Q1 label/register, disclosed 0003 R14 Q3 DECLINED gap, SAMPLE/REAL boundaries, actionability and rejection conditions. Do not grant formal acceptance or assert REAL.

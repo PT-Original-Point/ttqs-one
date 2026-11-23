@@ -1,0 +1,148 @@
+{
+  "schema": "ttqs-one-github-raw-byte-readback-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0077",
+  "requirement_id": "I17B-E01",
+  "official_checkbox_serial": "084",
+  "revision": "R01_CANDIDATE",
+  "repository": "PT-Original-Point/ttqs-one",
+  "pull_request": 92,
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "readback_commit_sha": "b34d340408c258b7faae1de7693c0dbeec41af26",
+  "observed_at_tpe": "2026-11-23T07:22:48+08:00",
+  "readback_scope": "Candidate DOCX and exact-SHA technical, visual, and independent semantic evidence listed below. The full 97-file package readback is not claimed because three auxiliary package files differ from package-manifest SHA-256.",
+  "candidate": {
+    "path": "docs/ttqs-quality-20261016/quality-review/0077_R01/candidate/0077_R01.docx",
+    "sha256": "cc545510cf503e9ecb16238c2b8dcdf6b15cbc43a28360b3b76f97513017edf7",
+    "git_blob_sha1": "c1da215af95a66ad539e7ac08cc6b6064bbbc742",
+    "bytes": 71197,
+    "status": "PASS_BYTE_EXACT"
+  },
+  "qa_bindings": {
+    "technical": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0077_R01/evidence/technical_review_R01.json",
+      "candidate_sha256": "cc545510cf503e9ecb16238c2b8dcdf6b15cbc43a28360b3b76f97513017edf7",
+      "status": "PASS"
+    },
+    "visual": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0077_R01/evidence/visual_review_R01.json",
+      "candidate_sha256": "cc545510cf503e9ecb16238c2b8dcdf6b15cbc43a28360b3b76f97513017edf7",
+      "status": "PASS",
+      "pages": 23,
+      "page_pngs": 23,
+      "render_pdf": {
+        "path": "docs/ttqs-quality-20261016/quality-review/0077_R01/evidence/0077_R01_word_render.pdf",
+        "sha256": "82249c87d81e853e4e83e56c16b3359dd80924b797c61cad3a0d36b31280bbcb",
+        "bytes": 914336
+      }
+    },
+    "independent_semantic": {
+      "receipt_path": "docs/ttqs-quality-20261016/quality-review/0077_R01/review/semantic_review_receipt_R01.json",
+      "review_path": "docs/ttqs-quality-20261016/quality-review/0077_R01/review/independent_semantic_review_R01.md",
+      "raw_stdout_path": "docs/ttqs-quality-20261016/quality-review/0077_R01/review/opencode_semantic_R01_stdout.jsonl",
+      "candidate_sha256": "cc545510cf503e9ecb16238c2b8dcdf6b15cbc43a28360b3b76f97513017edf7",
+      "reviewer_route": "OpenCode CLI v2",
+      "requested_model": "opencode/beam-free",
+      "served_model": "UNKNOWN",
+      "verdict": "PASS",
+      "formal_acceptance": "NOT_GRANTED"
+    }
+  },
+  "checkbox_state": "PARTIAL/HOLD: 0077 is one of four distinct functional products for checkbox 084",
+  "candidate_state": "CANDIDATE / SAMPLE-SYNTHETIC; formal acceptance NOT_GRANTED; REAL evidence UNKNOWN/HOLD",
+  "package_manifest_reconciliation": {
+    "manifest_listed_files": 97,
+    "exact_matches": 73,
+    "eol_normalized_content_matches": 21,
+    "unresolved_manifest_mismatches": 3,
+    "whole_package_readback": "NOT_CLAIMED",
+    "mismatches": [
+      {
+        "path": "review/semantic_review_prompt_R01.md",
+        "remote_sha256": "cbb88cd160ac2d0e843d77266fa593d3c00abe10a71599849b7d69e598be9c6c",
+        "manifest_sha256": "9aaae6fdcd2660fb7cb5eee216716abb1783244cb20859d0250c6427c911dd71",
+        "remote_bytes": 2146,
+        "manifest_bytes": 2147
+      },
+      {
+        "path": "worker/prepare_0077_packet.py",
+        "remote_sha256": "38c38d78e13f597ea90bff9d7d0ef78cbbfb344973c20e887f931b3fe275f695",
+        "manifest_sha256": "697a001f66deddf1b46301ef052b474bffd101deeda668c436033ff092d68065",
+        "remote_bytes": 20399,
+        "manifest_bytes": 20400
+      },
+      {
+        "path": "worker/WRITE_PROMPT_0077_R01.md",
+        "remote_sha256": "7045085313c8cd099eeef4e7b66ec8d73c28ae5a3d8a0c691bf2d3a393d27794",
+        "manifest_sha256": "8edcf38b3b367ff08ee179bdcbc5c3ac4bc6d73cc4905e29207985ff12e5da26",
+        "remote_bytes": 6513,
+        "manifest_bytes": 6514
+      }
+    ]
+  },
+  "verified_files": [
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0077_R01/candidate/0077_R01.docx",
+      "sha256": "cc545510cf503e9ecb16238c2b8dcdf6b15cbc43a28360b3b76f97513017edf7",
+      "git_blob_sha1": "c1da215af95a66ad539e7ac08cc6b6064bbbc742",
+      "bytes": 71197,
+      "status": "PASS_BYTES_MATCH"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0077_R01/README.md",
+      "sha256": "80b7ac4e50899a2ce3ff5732d0f8195d1aefa2806e61ae694f8d44f8b10af28b",
+      "git_blob_sha1": "ad9e8a092d8ec81c74e3361a5c627caedb7d5454",
+      "bytes": 1291,
+      "status": "PASS_BYTES_MATCH"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0077_R01/evidence/package_manifest_R01.json",
+      "sha256": "7afc533202fac3531b7ee30772996344365bd73dffe77f94bd1ea851bb21ed5f",
+      "git_blob_sha1": "599a500e052b17f0c5874b21365aec47c97d56f9",
+      "bytes": 17360,
+      "status": "PASS_BYTES_MATCH"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0077_R01/evidence/technical_review_R01.json",
+      "sha256": "1f6738e42537c06677894d645f62302fb42c2d124fc10b4ed651724b9b4dc9ef",
+      "git_blob_sha1": "3958350e211f8d18d888933202f5ec0c62280d54",
+      "bytes": 1301,
+      "status": "PASS_BYTES_MATCH"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0077_R01/evidence/visual_review_R01.json",
+      "sha256": "696e5cd1765cb0c1adb69660cb25241c226825f167976092aeeec0715462d0ed",
+      "git_blob_sha1": "fdd1840f68ff4c935488344b1d45330801a250fd",
+      "bytes": 1128,
+      "status": "PASS_BYTES_MATCH"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0077_R01/evidence/0077_R01_word_render.pdf",
+      "sha256": "82249c87d81e853e4e83e56c16b3359dd80924b797c61cad3a0d36b31280bbcb",
+      "git_blob_sha1": "816f208f32c2c8cfcd2946e7067acd3cdec3ec8a",
+      "bytes": 914336,
+      "status": "PASS_BYTES_MATCH"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0077_R01/review/semantic_review_receipt_R01.json",
+      "sha256": "a0bc5f47f940e0eed7fc254334b381174247f45aa490fb0e1fe3793f9b3a1aaa",
+      "git_blob_sha1": "83ac7382beb4b08234da406b7a669f3a97dd6138",
+      "bytes": 1852,
+      "status": "PASS_BYTES_MATCH"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0077_R01/review/independent_semantic_review_R01.md",
+      "sha256": "6b931646fff176b8a607f4d0a49594ab8439b2d2fadbd372ca22e1b3df932744",
+      "git_blob_sha1": "c7074127929549487b4caae22ac3c170257ca41e",
+      "bytes": 3821,
+      "status": "PASS_BYTES_MATCH"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0077_R01/review/opencode_semantic_R01_stdout.jsonl",
+      "sha256": "b5f38997d1fe790afc318279923ebe61c711038d7edd3f77adb0610b9fcdf1d5",
+      "git_blob_sha1": "c7abec6d7e7d01317dbb6aef958de9198b708977",
+      "bytes": 70764,
+      "status": "PASS_BYTES_MATCH"
+    }
+  ]
+}

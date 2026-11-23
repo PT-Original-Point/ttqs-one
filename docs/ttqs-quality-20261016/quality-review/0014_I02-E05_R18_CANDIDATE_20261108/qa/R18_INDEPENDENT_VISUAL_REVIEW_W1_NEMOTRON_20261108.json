@@ -1,0 +1,36 @@
+{
+  "schema": "ttqs_one_independent_visual_review_receipt.v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0014",
+  "requirement_id": "I02-E05",
+  "work_id": "TTQS_ONE_0014_R18_VISUAL_REVIEW_W1_NEMOTRON_20261108",
+  "recorded_at_tpe": "2026-11-08T15:24:03.9756935+08:00",
+  "reviewer_worker": "W1 OpenCode v2 via explicit opencode/nemotron-3.5-super-vl-free",
+  "serving_model": "UNKNOWN",
+  "candidate_sha256": "f010470828aad653f691d164c50fdc8e2e0359a88b52286c92eb6f6d1b994846",
+  "pdf_sha256": "42b8a58d76104d3fd770eed39b67703ed0e3b66f1c2ec78ac5338503ca7fc34b",
+  "composite_image_sha256": "c2ea3d4952fa4901b83717ece495d0b2a4e88a6d30103ad044ba4782fac0e678",
+  "dispatch_receipt_sha256": "529b8ab78ba09dd101cd1ca623872e3927e80e74b93e768e69d79704ed5e1370",
+  "result": "PASS_VISUAL_SCOPE",
+  "scope": "visual",
+  "pages_inspected": [
+    16,
+    18,
+    20,
+    "contact sheet 1-36"
+  ],
+  "findings": [],
+  "checks": {
+    "readable": true,
+    "no_clip_or_overlap": true,
+    "table_cells_legible": true,
+    "page_flow_ok": true
+  },
+  "limitations": [
+    "Reviewer saw a composite raster image, not the DOCX binary.",
+    "Only contact sheet pages 1-36 and full rendered pages 16,18,20 were in scope.",
+    "No semantic review, font-floor review, formal association acceptance, REAL status, or promotion was performed."
+  ],
+  "formal_ttqs_acceptance": false,
+  "promotion_authorized": false
+}

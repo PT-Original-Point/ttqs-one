@@ -1,0 +1,31 @@
+{
+  "doc_id": "0139",
+  "official_requirement_id": "I19-E29",
+  "blueprint_index": 153,
+  "printed_checkbox_serial": "UNKNOWN",
+  "candidate": "R05",
+  "candidate_docx_sha256": "9bb154830d7d3cf9790e3e43fd44e9af8b6e3a059b9e28fd910fca80c0e8e947",
+  "verdict": "PASS_DELTA_ONLY",
+  "reviewer": "Antigravity CLI bounded independent reviewer; requested model gemini-3.8-flash-high; actual serving identity UNKNOWN",
+  "cli_version": "1.4.7",
+  "cli_exit_code": 0,
+  "review_output_sha256": "7c98f99ce18d4d5694d3c77e5ee8f54a52504a1599ef5e664e3e15dc02bb07da",
+  "review_request_sha256": "cf58df29785de67b358d2ba90d1e57181160b08c98a5f7a3d7ebd2193d0763d2",
+  "scope": "R05's two-item logical delta only. The parent R04 full-document semantic verdict PASS is inherited; this reviewer explicitly did not open the DOCX or inspect its pages.",
+  "parent_docx_sha256": "0c3415ebe452fb2d7f343ec67878c03c6cff510c2f2aa94887cb2ddcdfb28601",
+  "parent_semantic_verdict": "PASS",
+  "checked_delta": [
+    {
+      "locator": "Table 7, §7.3, 缺考率（%）, 2024→2025",
+      "math": "(1/12 - 2/12)*100 = -8.333333... pp; rounds to -8.33 pp",
+      "verdict": "PASS"
+    },
+    {
+      "locator": "paragraph 172 candidate version label R04→R05",
+      "verdict": "PASS"
+    }
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence_status": "REAL=UNKNOWN/HOLD",
+  "created_local": "2026-10-25T06:31:33.284151+08:00"
+}

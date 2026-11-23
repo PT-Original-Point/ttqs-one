@@ -1,0 +1,66 @@
+{
+  "receipt_id": "TTQS-0103-I18-E10-SOURCE-STAGE-R01",
+  "created_at_utc": "2026-10-21T16:08:13.261358+00:00",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0103",
+  "requirement_id": "I18-E10",
+  "unique_blueprint_index": 111,
+  "stage": "SOURCE_READY_ONLY; WORD_CANDIDATE_NOT_BUILT",
+  "spec_commit": "a090c35310eac6484c6cf9bd9bab12f8f35d3cfb",
+  "r09_source_blob": "4c7eff55748ff265b1e5a7d1122852b0d101acbd",
+  "r09_blueprint_contract_blob": "8c2bbe7ca9dcbb03088a48934b9e57e7147ede63",
+  "official_source": {
+    "name": "TTQS查核佐證文件資料表-訓練機構版 (2).pdf",
+    "page": 7,
+    "sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "visually_inspected": true
+  },
+  "mapping_inputs": [
+    {
+      "name": "R04/00_CONTROL/BLUEPRINT_SEED_142.csv",
+      "sha256": "280783e0df4dc0b7aaaf4a8fbe826bc65e9ed9c683146eea1dfd25c0ae1c92e0"
+    },
+    {
+      "name": "R04/04_EVIDENCE/TTQS_ONE_129_REQUIREMENT_TO_142_DELIVERABLE_CROSSWALK_R01.csv",
+      "sha256": "1ddfbb608bcad25170683ddb42a1dbb27bafa6f1f35ff0498f1b8d75b24f0679"
+    }
+  ],
+  "negative_neighbor": {
+    "doc_id": "0096",
+    "requirement_id": "I18-E03",
+    "blueprint_git_blob": "1297d57a1a3c27bfa0aa4fe20cad539abeeacf9f",
+    "official_page6_context_git_blob": "1edc1bfefba5fc7243a4b99d05cb244f3aa3c995",
+    "distinction": "same generic evidence genre, different official checkbox/page context; not interchangeable"
+  },
+  "historical_candidate": {
+    "path": "GITHUB_SYNC_0065_R04/送審資料/04_全部文件與歷次版本/TTQS_GPT6_ASTRA_FULL_HANDOFF_20260925/17/1639_0103__I18-E10__01__感謝函_可直接使用成品.docx",
+    "sha256": "115fc3d6bb442583c0d51db327be2e9333397a3096f5af0bfbdacbc5a465a009",
+    "bytes": 41989,
+    "state": "HISTORICAL_UNREVIEWED; NOT_REUSED_AS_BODY_TEMPLATE"
+  },
+  "source_stage_outputs": [
+    {
+      "path": "source/SOURCE_PACKET_0103_I18-E10_R01.md",
+      "bytes": 3298,
+      "sha256": "05b94f0469fa5b03ec1b204adcd5bdadc9bd8ae22a7f1b67aa7e71dcd830aede"
+    },
+    {
+      "path": "source/UNIQUE_BLUEPRINT_0103_I18-E10_R01.md",
+      "bytes": 9593,
+      "sha256": "c4f0c3b93373aaea7ba9af1e13da40af4c72eec01e2bdb0d41a8f4919b1b8f1c"
+    },
+    {
+      "path": "source/official_source_page7_excerpt.txt",
+      "bytes": 515,
+      "sha256": "ed5c20e5d07faa6f717fab4981986c2b1fa11caa24fa46ef9dcacb864fdbd4a4"
+    },
+    {
+      "path": "source/official_source_page7_render.png",
+      "bytes": 369514,
+      "sha256": "cd6abab433007af144da97f54c946b3be85d90977b5140c74fec3a428ab7f180"
+    }
+  ],
+  "real_third_party_original": "NOT_RECEIVED_IN_THIS_STAGE",
+  "sample_real_boundary": "No external issuer, recipient, correspondence, signature, performance, approval, or score is asserted.",
+  "formal_acceptance": "NOT_GRANTED"
+}

@@ -1,0 +1,217 @@
+{
+  "receipt_id": "0012_I02-E03_R05_VISUAL_QA",
+  "observed_at_taipei": "2026-10-30T01:55:21.606765+08:00",
+  "document_id": "0012",
+  "requirement_id": "I02-E03",
+  "artifact_state": "CANDIDATE_SAMPLE_SYNTHETIC_NOT_ACCEPTED",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0012_I02-E03_LUNA_TEXT_DRAFT_R01_20261029\\candidate\\0012_I02-E03_R05.docx",
+  "candidate_sha256": "a90340289d360a7705fad8137db3a33b648a126ca67b1454d66c0b9288f9d9b5",
+  "pdf_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0012_I02-E03_LUNA_TEXT_DRAFT_R01_20261029\\qa\\render_R05\\0012_I02-E03_R05_WORD_NATIVE.pdf",
+  "pdf_sha256": "c1f13c34e11a8b9c974b817480cf441d48a7b964c890208d4b63a645012ea990",
+  "render_method": "Microsoft Word COM ExportAsFixedFormat to PDF, then bundled Poppler pdftoppm at 120dpi; render_docx.py unavailable because LibreOffice/soffice is not installed.",
+  "page_count": 17,
+  "visual_coverage": "ALL_17_PAGES; pages 10-11 inspected directly in R05 after repair; all other R05 page PNGs verified pixel-identical to R04 pages previously inspected directly.",
+  "repair_scope": "R05 sets page_break_before on subsection 10.3 to keep the complete tracking table on one page; no substantive paragraph or table data changed.",
+  "findings": [
+    "No clipped or overlapping text observed on the 17 pages.",
+    "Headers and footers appear once.",
+    "Tables remain legible at the rendered size; sections 11-13 use landscape pages for wide tables.",
+    "The 10.3 tracking table now starts on page 11 and stays together; page 10 ends cleanly after 10.2. Page 11 retains normal whitespace below a complete table and its explanatory note."
+  ],
+  "scope_limitations": [
+    "This is layout/readability evidence only, not semantic acceptance, legal review, association approval, or formal acceptance.",
+    "Page 10-11 pagination was directly inspected on R05; unchanged pages rely on SHA-identical R04 visual inspection."
+  ],
+  "semantic_review": "PENDING_INDEPENDENT_REVIEW",
+  "formal_acceptance": "UNKNOWN",
+  "status": "PASS_LAYOUT_ONLY",
+  "pages": [
+    {
+      "page": 1,
+      "png": "page-01.png",
+      "sha256": "f1f1bc06e6e01d9319ac5c0e9ae37c9c33c514839dee2b6c2c62cf4535517104",
+      "pixels": [
+        993,
+        1403
+      ],
+      "same_as_R04": true,
+      "inspection": "direct_R04_visual_inherited_pixel_identical_R05"
+    },
+    {
+      "page": 2,
+      "png": "page-02.png",
+      "sha256": "99b4bb438b28ba434cf0454cf33efbc9eac4126398436c9882401ac96482893b",
+      "pixels": [
+        993,
+        1403
+      ],
+      "same_as_R04": true,
+      "inspection": "direct_R04_visual_inherited_pixel_identical_R05"
+    },
+    {
+      "page": 3,
+      "png": "page-03.png",
+      "sha256": "5f5199ac9035c22e52cae6976a6a02733f16d8fc3662306d36cc553ce27bc33f",
+      "pixels": [
+        993,
+        1403
+      ],
+      "same_as_R04": true,
+      "inspection": "direct_R04_visual_inherited_pixel_identical_R05"
+    },
+    {
+      "page": 4,
+      "png": "page-04.png",
+      "sha256": "5d1dce9354f2d7bfa2280bb0f94edc065f11b792304bb6a7874b140c84ea5cfe",
+      "pixels": [
+        993,
+        1403
+      ],
+      "same_as_R04": true,
+      "inspection": "direct_R04_visual_inherited_pixel_identical_R05"
+    },
+    {
+      "page": 5,
+      "png": "page-05.png",
+      "sha256": "d642fef1ac5c5a95fe3b54d66d43ba7e7ed1229204a98a13b72309f87fd9d55c",
+      "pixels": [
+        993,
+        1403
+      ],
+      "same_as_R04": true,
+      "inspection": "direct_R04_visual_inherited_pixel_identical_R05"
+    },
+    {
+      "page": 6,
+      "png": "page-06.png",
+      "sha256": "e2d55ab6da53cb5b31502ec2bc324e68b6f3a94cdca9bcace7fea9903c1ab349",
+      "pixels": [
+        993,
+        1403
+      ],
+      "same_as_R04": true,
+      "inspection": "direct_R04_visual_inherited_pixel_identical_R05"
+    },
+    {
+      "page": 7,
+      "png": "page-07.png",
+      "sha256": "54e599290263e63c7e5f92e2e7ee3ead00d2e174b4fa3c376fff2a49384d26ad",
+      "pixels": [
+        993,
+        1403
+      ],
+      "same_as_R04": true,
+      "inspection": "direct_R04_visual_inherited_pixel_identical_R05"
+    },
+    {
+      "page": 8,
+      "png": "page-08.png",
+      "sha256": "dcba391e5ce4f11bd94beb9b8d316a1900edef48c5880b769943b2472a8b8052",
+      "pixels": [
+        993,
+        1403
+      ],
+      "same_as_R04": true,
+      "inspection": "direct_R04_visual_inherited_pixel_identical_R05"
+    },
+    {
+      "page": 9,
+      "png": "page-09.png",
+      "sha256": "5b6a787029876a4557f45757786e4c9f5f3400a6f138c385e9986a29b324ad54",
+      "pixels": [
+        993,
+        1403
+      ],
+      "same_as_R04": true,
+      "inspection": "direct_R04_visual_inherited_pixel_identical_R05"
+    },
+    {
+      "page": 10,
+      "png": "page-10.png",
+      "sha256": "2c328a8789f9d333157d23b23c02e15549bb293e152b6370a955629f39c602b7",
+      "pixels": [
+        993,
+        1403
+      ],
+      "same_as_R04": false,
+      "inspection": "direct_R05"
+    },
+    {
+      "page": 11,
+      "png": "page-11.png",
+      "sha256": "d7d6e95769517dde8e23f5bf3fcefe6cb7a412cbb531d255d8ac609202dfe6e9",
+      "pixels": [
+        993,
+        1403
+      ],
+      "same_as_R04": false,
+      "inspection": "direct_R05"
+    },
+    {
+      "page": 12,
+      "png": "page-12.png",
+      "sha256": "42039f6acd630eb4f8d89a79f26a9a5b8d0ba0eef3e54bc1594866bd67b181a6",
+      "pixels": [
+        1403,
+        993
+      ],
+      "same_as_R04": true,
+      "inspection": "direct_R04_visual_inherited_pixel_identical_R05"
+    },
+    {
+      "page": 13,
+      "png": "page-13.png",
+      "sha256": "bfa6bf574c1c7b70818577e14c009b1949f1538fd269de9642a118b1beb7b8f3",
+      "pixels": [
+        1403,
+        993
+      ],
+      "same_as_R04": true,
+      "inspection": "direct_R04_visual_inherited_pixel_identical_R05"
+    },
+    {
+      "page": 14,
+      "png": "page-14.png",
+      "sha256": "cc5f39ec4d5643a6b736b53a54e5e9c7e592c1e5b477c2fdc3fa542ed1c50f75",
+      "pixels": [
+        1403,
+        993
+      ],
+      "same_as_R04": true,
+      "inspection": "direct_R04_visual_inherited_pixel_identical_R05"
+    },
+    {
+      "page": 15,
+      "png": "page-15.png",
+      "sha256": "0e675ce6119ee3ea73148b8574996bf232caa843e8d3613ccd49952e1fddfb03",
+      "pixels": [
+        1403,
+        993
+      ],
+      "same_as_R04": true,
+      "inspection": "direct_R04_visual_inherited_pixel_identical_R05"
+    },
+    {
+      "page": 16,
+      "png": "page-16.png",
+      "sha256": "a5b5d9623f54e341bd5ba909a1bb8c5822b063485cdb6a360e20c0fe2cb68f52",
+      "pixels": [
+        1403,
+        993
+      ],
+      "same_as_R04": true,
+      "inspection": "direct_R04_visual_inherited_pixel_identical_R05"
+    },
+    {
+      "page": 17,
+      "png": "page-17.png",
+      "sha256": "284fff1431f40304bbcffbfd3277981d84eadbb1a6fac58cd389f286ed2462a9",
+      "pixels": [
+        1403,
+        993
+      ],
+      "same_as_R04": true,
+      "inspection": "direct_R04_visual_inherited_pixel_identical_R05"
+    }
+  ]
+}

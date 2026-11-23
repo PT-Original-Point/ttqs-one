@@ -1,0 +1,61 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0050",
+  "revision": "R01",
+  "requirement_id": "I11-E02",
+  "official_checkbox_sequence": "052",
+  "official_requirement": "各課程單元內容均能達成訓練規劃的目標。",
+  "candidate_path": "candidate/0050_R01.docx",
+  "candidate_sha256": "d0d37c2c69b161a2cdd37ee3097306722c4a65a1afd844ae92e1dff58b43381a",
+  "candidate_bytes": 62426,
+  "candidate_state": "CANDIDATE_ONLY",
+  "formal_acceptance": "NOT_GRANTED",
+  "sample_status": "SAMPLE_SYNTHETIC_ONLY_NOT_ASSOCIATION_RECORD",
+  "case_id": "SYN-0033-PLAN-01",
+  "sources": {
+    "unique_blueprint_file_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+    "unique_blueprint_row_sha256": "1204cbe5799e24ded84ad7c7a4dcf2ebb6fb0270f59ed5332f1982b714a1221a",
+    "official_evidence_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "0049_R01_docx_sha256": "e8212788b1f7b201ca4af4f4c5fb83ab131627dbfa815987f7cf6344edfda727",
+    "0049_R01_register_sha256": "c79dd292c3679b83d334f5773694d2d9089dce7c7d532197d287e3c5ad5be501",
+    "0033_R03_docx_sha256": "fe5f3cfd84c761da86435a71e0fd899daa725be78628c4d2d3f2324c1fdb5f4f",
+    "0033_R03_register_sha256": "d114f36d9c4852cda2239bf22fcc709bdc0a40aad62418e076c6b9c2ae523247"
+  },
+  "synthetic_register": {
+    "path": "evidence/SYNTHETIC_REPLACEMENT_REGISTER_R01.csv",
+    "sha256": "556f69271e796e533d4afc2c19c1ddcfbb80e8554b40c527c87e5efec29a99b3",
+    "rows": 99,
+    "fact_ids_unique": true
+  },
+  "arithmetic": {
+    "unit_minutes": [
+      90,
+      90,
+      120,
+      60
+    ],
+    "segment_minutes": [
+      90,
+      90,
+      120,
+      60
+    ],
+    "total_minutes": 360,
+    "pre_questions": 10,
+    "post_questions": 10,
+    "score_per_question": 1,
+    "post_threshold": ">=8/10",
+    "sample_scores": {
+      "pre": "6/10",
+      "post": "8/10",
+      "difference": "+2"
+    }
+  },
+  "content_shape": {
+    "paragraphs": 129,
+    "tables": 28,
+    "body_text_characters": 12883
+  },
+  "builder_checks": "PASS; deterministic content/math/register integrity only, not semantic acceptance",
+  "built_at": "2026-10-17T13:15:36.325558+08:00"
+}

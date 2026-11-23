@@ -1,0 +1,30 @@
+{
+  "document_id": "0118",
+  "requirement": "I19-E05",
+  "candidate_sha256": "a945f7b780bb3c9ef9edbe5b416687db6d19845cf70c804f32d0fd1482562bd9",
+  "stage": "VISUAL_RENDER",
+  "status": "BLOCKED",
+  "native_renderer": "Microsoft Word COM hidden process",
+  "opened_pages": 13,
+  "export_attempt": "ExportAsFixedFormat",
+  "pdf_created": false,
+  "reason": "The single bounded native export call did not return or produce a PDF; after observation the owned automation process remained alive without an output artifact and was terminated by PID.",
+  "owned_process_before_stop": {
+    "pid": 21372,
+    "name": "WINWORD.EXE",
+    "creationDate": "2026-10-24T08:00:16.2063610+08:00",
+    "cpuSeconds": 29.046875,
+    "responding": true,
+    "commandLine": "\"C:\\Program Files\\Microsoft Office\\Root\\Office16\\WINWORD.EXE\" /Automation -Embedding",
+    "lastStage": [
+      "2026-10-24T08:00:16.1684589+08:00 START Word COM hidden",
+      "2026-10-24T08:00:19.5662262+08:00 WORD_PID 21372",
+      "2026-10-24T08:00:21.3278700+08:00 OPENED_PAGES 13"
+    ],
+    "pdfExists": false
+  },
+  "owned_process_after_stop": "terminated",
+  "identical_retry": "NOT_PERFORMED",
+  "candidate_bytes_modified": false,
+  "observed_at": "2026-10-24T08:03:48.0398510+08:00"
+}

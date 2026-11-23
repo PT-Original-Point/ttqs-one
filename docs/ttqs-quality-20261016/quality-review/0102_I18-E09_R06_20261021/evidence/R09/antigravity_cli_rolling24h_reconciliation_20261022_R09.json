@@ -1,0 +1,191 @@
+{
+  "receipt_id": "TTQS_ONE_ANTIGRAVITY_ROLLING24H_RECONCILIATION_R09_20261022",
+  "captured_at_local": "2026-10-22T18:31:57.983698+08:00",
+  "window_start_local": "2026-10-21T18:31:57.983698+08:00",
+  "window_end_local": "2026-10-22T18:31:57.983698+08:00",
+  "method": "Reconciled retained CLI stdout/stderr/exit files and CLI logs in the TTQS quality-review workspace; missing work IDs/PIDs remain UNKNOWN. 0099 Oct21 calls outside this rolling window excluded.",
+  "call_attempt_count": 5,
+  "argument_rejected_before_model_count": 1,
+  "provider_attempts_or_unknown_dispatch_count": 4,
+  "confirmed_ccpa_fallback_count": 3,
+  "actual_gemini_attested_success_count": 0,
+  "nonempty_responses_count": 3,
+  "usable_as_contracted_gemini_count": 0,
+  "known_reported_total_tokens": 104973,
+  "additional_token_usage": "UNKNOWN for 0106 attempt01; billing/quota delta UNKNOWN",
+  "route_state": "No new Antigravity dispatch made; keep route unavailable for contracted Gemini work until a preflight verifies model resolution and authentication without fallback.",
+  "calls": [
+    {
+      "row_id": "AGY-0105-R04-RETRY01",
+      "work_id": "UNKNOWN_NOT_RETAINED",
+      "doc_id": "0105",
+      "requirement_id": "I18-E13",
+      "candidate_sha256": "17f7d680cbb992db93a6f67df84415500050953eecf426b477f675810177b4cb",
+      "cli_version": "1.4.4",
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_serving_model": "NOT_DISPATCHED",
+      "fallback": "NOT_APPLICABLE",
+      "started_local": "UNKNOWN",
+      "finished_local": "2026-10-22T05:09:28+08:00",
+      "duration_seconds": "UNKNOWN",
+      "os_pid": "UNKNOWN_NOT_RETAINED",
+      "conversation_id": null,
+      "cli_exit_code": 2,
+      "status": "CLI_ARGUMENT_REJECTED_BEFORE_MODEL",
+      "error": "-print-timeout value 180 missing duration unit",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "total": 0,
+        "source": "argument parser rejected request before model dispatch"
+      },
+      "stdout": {
+        "path": "docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022/evidence/antigravity_semantic_review_0105_R04_retry01_stdout.json",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stderr": {
+        "path": "docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022/evidence/antigravity_semantic_review_0105_R04_retry01_stderr.txt",
+        "sha256": "6ad756a6651d5814d3c24fb9897a923408b322de086f3673826cfc297aea4ce2"
+      },
+      "adopted_result": "NONE"
+    },
+    {
+      "row_id": "AGY-0105-R04",
+      "work_id": "TTQS_ONE-0105-R04-SEMANTIC-REVIEW",
+      "doc_id": "0105",
+      "requirement_id": "I18-E13",
+      "candidate_sha256": "17f7d680cbb992db93a6f67df84415500050953eecf426b477f675810177b4cb",
+      "cli_version": "1.4.4",
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_serving_model": "UNKNOWN",
+      "fallback": "UNKNOWN",
+      "started_local": "UNKNOWN",
+      "finished_local": "2026-10-22T05:12:28+08:00",
+      "duration_seconds": 76.3361629,
+      "os_pid": "UNKNOWN_NOT_RETAINED",
+      "conversation_id": "f6e00140-2f41-4735-970d-5ea804b6a2e2",
+      "cli_exit_code": 0,
+      "status": "SUCCESS_RESPONSE_MODEL_IDENTITY_UNVERIFIED",
+      "usage": {
+        "input": 36407,
+        "output": 10150,
+        "reasoning": 6535,
+        "total": 46557,
+        "source": "retained Antigravity receipt"
+      },
+      "response": {
+        "path": "docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022/evidence/antigravity_semantic_review_0105_R04_stdout.json",
+        "sha256": "f80b2e8237063208a750748a746987e5a2a1989d013e7e1cc06023d911d214cb"
+      },
+      "receipt": {
+        "path": "docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022/evidence/antigravity_semantic_review_0105_R04_receipt.json",
+        "sha256": "4e482d89f4893dab34a751d1b6b7b3d03d5d6035e12168ec9f3a50f28911c61c"
+      },
+      "adopted_result": "Semantic PASS reported for exact candidate; serving model unknown, so not credited as Gemini-verified or formal acceptance"
+    },
+    {
+      "row_id": "AGY-0106-ATTEMPT01",
+      "work_id": "UNKNOWN_NOT_RETAINED",
+      "doc_id": "0106",
+      "requirement_id": "I18-E14",
+      "candidate_sha256": "ff019256f77dad59b4c0547c223ae28d90727836ed300f4ad83e82d9d0654bbe",
+      "cli_version": "1.4.4",
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_serving_model": "CCPA_CONFIRMED_BY_RESOLVER",
+      "fallback": "CCPA_CONFIRMED",
+      "started_local": "2026-10-22T05:59:14+08:00",
+      "finished_local": "2026-10-22T05:59:36+08:00",
+      "duration_seconds": "UNKNOWN",
+      "os_pid": "UNKNOWN_NOT_RETAINED",
+      "conversation_id": "UNKNOWN",
+      "cli_exit_code": "UNKNOWN_NOT_RETAINED",
+      "status": "NO_USABLE_RESPONSE_PERMISSION_DENIED_AND_AUTH_ERROR",
+      "usage": {
+        "input": "UNKNOWN",
+        "output": 0,
+        "total": "UNKNOWN"
+      },
+      "log": {
+        "path": "docs/ttqs-quality-20261016/quality-review/0106_I18-E14_R01_20261022/writer/antigravity_semantic_review_0106_R01_cli.log",
+        "sha256": "5da14d029e607ea45963d24b9126f97b479ec194f0df0ef3503d23b42ea16b42"
+      },
+      "stderr": {
+        "path": "docs/ttqs-quality-20261016/quality-review/0106_I18-E14_R01_20261022/writer/antigravity_semantic_review_0106_R01_stderr.txt",
+        "sha256": "ca7a482730a0d566f91155ae9ba897a5fa431b55e7e750992acccc8ea8b1dcbc"
+      },
+      "adopted_result": "NONE"
+    },
+    {
+      "row_id": "AGY-0106-ATTEMPT02",
+      "work_id": "UNKNOWN_NOT_RETAINED",
+      "doc_id": "0106",
+      "requirement_id": "I18-E14",
+      "candidate_sha256": "ff019256f77dad59b4c0547c223ae28d90727836ed300f4ad83e82d9d0654bbe",
+      "cli_version": "1.4.4",
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_serving_model": "CCPA_CONFIRMED_BY_RESOLVER",
+      "fallback": "CCPA_CONFIRMED",
+      "started_local": "2026-10-22T06:01:23+08:00",
+      "finished_local": "2026-10-22T06:03:20+08:00",
+      "duration_seconds": 112.7839145,
+      "os_pid": "UNKNOWN_NOT_RETAINED",
+      "conversation_id": "ca077130-fe26-4b17-a7bc-3cb3ba49c5ef",
+      "cli_exit_code": "UNKNOWN_NOT_RETAINED",
+      "status": "SUCCESS_RESPONSE_WRONG_FALLBACK_MODEL",
+      "usage": {
+        "input": 30924,
+        "output": 16502,
+        "reasoning": 12718,
+        "total": 47426,
+        "source": "retained stdout JSON usage object"
+      },
+      "response": {
+        "path": "docs/ttqs-quality-20261016/quality-review/0106_I18-E14_R01_20261022/writer/antigravity_semantic_review_0106_R01_attempt02_stdout.json",
+        "sha256": "9c9d8e079b4455e34635df974e2b3eda1f91e70814fef347cf0849ab7e4bcdf6"
+      },
+      "log": {
+        "path": "docs/ttqs-quality-20261016/quality-review/0106_I18-E14_R01_20261022/writer/antigravity_semantic_review_0106_R01_attempt02_cli.log",
+        "sha256": "316eabd75da60a155ded10fee8c1115c7e1c12b3f172e375342321f5896ecb7a"
+      },
+      "adopted_result": "Response retained for audit, not credited as Gemini output; separate actual adoption into a candidate not evidenced here"
+    },
+    {
+      "row_id": "AGY-0102-R09-WRITER-PROPOSAL",
+      "work_id": "TTQS-0102-I18-E09-TARGETED-CONTENT-REPAIR-WRITER-R09-20261022-01",
+      "doc_id": "0102",
+      "requirement_id": "I18-E09",
+      "candidate_before_sha256": "40d0b9ecaebfdc3fba435811f57d89b797ec5512105995e808328f39a819cac9",
+      "candidate_after_sha256": "b7c9d82667971097313514aaaa0939d912730b63cd7a8e2dd25d4999a8659b92",
+      "cli_version": "1.4.5",
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_serving_model": "CCPA_CONFIRMED_BY_RESOLVER",
+      "fallback": "CCPA_CONFIRMED",
+      "started_local": "2026-10-22T17:16:02+08:00",
+      "finished_local": "2026-10-22T17:16:36+08:00",
+      "duration_seconds": 27.7334625,
+      "os_pid": "UNKNOWN_NOT_RETAINED",
+      "conversation_id": "b97ff5a7-4506-4aa0-ac4f-6702f6948652",
+      "cli_exit_code": 0,
+      "status": "SUCCESS_RESPONSE_WRONG_FALLBACK_MODEL",
+      "usage": {
+        "input": "UNKNOWN",
+        "output": "UNKNOWN",
+        "total": 10990,
+        "source": "prior local reconciliation; CLI JSON envelope lacks usage breakdown"
+      },
+      "response": {
+        "path": "docs/ttqs-quality-20261016/quality-review/0102_I18-E09_R06_20261021/review/antigravity_writer_patch_0102_R09_stdout.json",
+        "sha256": "4f0153353d980429cc6b366a1ed0e024f5e284f060aa77827afcdffa7d9d733d"
+      },
+      "log": {
+        "path": "docs/ttqs-quality-20261016/quality-review/0102_I18-E09_R06_20261021/review/antigravity_writer_patch_0102_R09_cli.log",
+        "sha256": "168dd5fe52940998f3478d9321a2f4d12e3d09a92de777e3332c0565c6153ee0"
+      },
+      "dispatch_receipt": {
+        "path": "docs/ttqs-quality-20261016/quality-review/0102_I18-E09_R06_20261021/review/antigravity_writer_patch_0102_R09_dispatch_receipt.json",
+        "sha256": "a9edb096cb2296acc9e6893ebede95b0321a8fa3a140783622c67af5bb6fb844"
+      },
+      "adopted_result": "The two suggestions were source-checked and applied by a deterministic minimal patch; the worker did not edit the DOCX. Cannot credit as Gemini work."
+    }
+  ]
+}

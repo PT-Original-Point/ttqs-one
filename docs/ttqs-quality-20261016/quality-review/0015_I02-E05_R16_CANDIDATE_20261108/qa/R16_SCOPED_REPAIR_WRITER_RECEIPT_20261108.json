@@ -1,0 +1,70 @@
+{
+  "schema": "ttqs_one_scoped_writer_receipt.v1",
+  "receipt_id": "0015-I02-E05-R16-SYN045-REPAIR-20261108",
+  "work_id": "TTQS_ONE_0015_R16_SYN045_SCOPED_REPAIR_LOCAL_INTEGRATION_20261108",
+  "recorded_at_taipei": "2026-11-08T14:05:14.171120+08:00",
+  "writer_owner": "Codex local OOXML integration; W2 provided text-only proposal",
+  "candidate_only": true,
+  "formal_acceptance": false,
+  "promotion": "NOT_PROMOTED",
+  "input_hashes": {
+    "r15_candidate": "ef1e122b86b94368e9cb301dc6d1261080c1dcdd67c3e992848b4a096b31a8ef",
+    "r15_register": "2da6cf11a26872690cad03c4b7a38c9d904888955971005f7fbf2bd70a057419",
+    "source_packet": "3776e7d9c3378cad23dbe83a246566b352dafbba6fdeece388855b85c19ee477",
+    "official_requirement_pdf": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "blueprint_current": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+    "r15_semantic_review": "f2acd61bc564de11f90336638432e2e980b0ae70e2c4a58e8b4369e59e351e90",
+    "w2_writer_receipt": "5069bd37ec8a17b5f60c604a2f0cbe8c9e9e7b8a0514cdc8401daae1d14ba956",
+    "w2_writer_raw_stdout": "89d4b72a17d65e17d1c567174ae690e8f8d610120ce3d7e9de2884bf15002bef"
+  },
+  "outputs": {
+    "candidate_docx": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0015-I02-E05-R16-SYN045-REPAIR_20261108\\candidate\\0015_I02-E05_R16.docx",
+      "sha256": "b0914f436bcb3ca317f39a12856aa7439fa8d5cf3f2c10636ca7fb28134236aa"
+    },
+    "paired_register_csv": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0015-I02-E05-R16-SYN045-REPAIR_20261108\\register\\SYNTHETIC_REGISTER_0015_R16.csv",
+      "sha256": "884b343cc563d0145c11f8bc80cd5e8375d480089d25e691966ef7f42a4df9d1"
+    }
+  },
+  "change_scope": {
+    "target": "Table 16 row 46 cell 2 / SYN-045 sample_value",
+    "before": "SAMPLE/SYNTHETIC 評分：時段與執行安排 3 分（M；僅有期望週次，真實確切日期及執行可用性待核）",
+    "after": "SAMPLE/SYNTHETIC 評分：時段與執行安排 3 分（M；範例僅提供期望週次，未包含真實確切日期及執行可用性）",
+    "revision_label_changes": [
+      "R15 CANDIDATE -> R16 CANDIDATE",
+      "R15 修訂版次 -> R16 修訂版次"
+    ],
+    "all_other_DOCX_package_payloads_preserved": true,
+    "all_non_target_register_rows_preserved": true
+  },
+  "verification": {
+    "docx_zip_crc": "PASS",
+    "python_docx_open": "PASS",
+    "changed_docx_package_members": [
+      "word/document.xml"
+    ],
+    "reversing_only_the_three_text_edits_recovers_source_document_xml_byte_for_byte": true,
+    "register_rows": 85,
+    "table_register_all_five_fields_exact_match": true,
+    "target_pending_markers_absent": true,
+    "body_font_min_pt": 10.5,
+    "table_font_min_pt": 9.5,
+    "post_write_hashes": {
+      "candidate": "b0914f436bcb3ca317f39a12856aa7439fa8d5cf3f2c10636ca7fb28134236aa",
+      "register": "884b343cc563d0145c11f8bc80cd5e8375d480089d25e691966ef7f42a4df9d1"
+    }
+  },
+  "qa_status": {
+    "deterministic_technical": "PASS",
+    "visual": "PASS",
+    "fresh_exact_sha_independent_semantic_repair_review": "PENDING",
+    "github_same_source_readback": "PENDING"
+  },
+  "external_writes": {
+    "github": false,
+    "current": false,
+    "shared_register": false,
+    "formal_promotion": false
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "ttqs-one-external-semantic-review-dispatch-v1",
+  "attempt": "ATTEMPT01",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0121-I19-E09-R02-EXACT-SHA-SEMANTIC-REVIEW-W2-20261026T0744",
+  "doc_id": "0121",
+  "requirement_id": "I19-E09",
+  "worker": "Antigravity CLI",
+  "cli_path": "C:\\Users\\J\\AppData\\Local\\agy\\bin\\agy.exe",
+  "cli_file_version": 1792810264.1610773,
+  "requested_model": "gemini-3.8-flash-high",
+  "cli_init_model_reported": "gemini-3.8-flash-high",
+  "actual_serving_model_identity": "UNKNOWN",
+  "fallback": "NOT_REQUESTED; provider-side fallback UNKNOWN",
+  "tools_requested": false,
+  "tool_steps": [
+    {
+      "tool_name": "run_command",
+      "state": "ACTIVE"
+    },
+    {
+      "tool_name": "run_command",
+      "state": "ERROR"
+    }
+  ],
+  "computer_use": "NOT_USED_BY_REQUEST; native attestation UNKNOWN",
+  "pid": 92120,
+  "started_local": "2026-10-26T07:48:12.985544+08:00",
+  "ended_local": "2026-10-26T07:48:45.405270+08:00",
+  "duration_seconds": 32.42,
+  "exit_code": 0,
+  "timeout": false,
+  "terminal_status": "SUCCESS",
+  "dispatch_outcome": "FAILED_OR_INCOMPLETE",
+  "pr_head_at_dispatch": "92970462155e4ad52bf25a27f483ffa7e7fcecc1",
+  "remote_candidate_git_blob_at_dispatch": "369571cb73f1b674cf480196cf12f5fbc97ab684",
+  "candidate_sha256_before": "ae5da09e834f5a8e9097a85ac87d4fe2f76acf9626049d3b0bea7c5f35042efe",
+  "candidate_sha256_after": "ae5da09e834f5a8e9097a85ac87d4fe2f76acf9626049d3b0bea7c5f35042efe",
+  "candidate_unchanged": true,
+  "prompt_sha256": "dbf4d1e8fac3cc591a021620906022c40f04b6ae0611ec71359cf5ed03cc387d",
+  "prompt_bytes": 67794,
+  "stdout_bytes": 3251,
+  "stdout_sha256": "6244fbbb4d9e5786ffdb21e8f369409f6fb77c3e909ad7e5780870da96c49e74",
+  "stderr_bytes": 381,
+  "stderr_sha256": "04a3fd7b53540108a5ddd980fe2cbad6d681c6fa15eeb5fb69a969fb581fe0c0",
+  "response_bytes": 0,
+  "response_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "json_parse_errors": [],
+  "usage": {
+    "input_tokens": 31112,
+    "output_tokens": 4185,
+    "thinking_tokens": 4143,
+    "cache_read_tokens": 0,
+    "total_tokens": 35297
+  },
+  "error": null,
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "NOT_PROVIDED"
+}

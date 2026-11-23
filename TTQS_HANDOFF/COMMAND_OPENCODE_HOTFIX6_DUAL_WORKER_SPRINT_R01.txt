@@ -1,0 +1,54 @@
+PROJECT=TTQS_ONE
+COMMAND=ENABLE_OPENCODE_DUAL_WORKER_SPRINT
+
+Sync branch ttqs-win10-handoff-20261002 and read:
+TTQS_HANDOFF/DUAL_WORKER_SPRINT_CONTRACT_R01.md
+TTQS_HANDOFF/CURRENT_STATE.json
+
+Role: OPENCODE_WORKER.
+
+You may receive BUILD or REVIEW tasks from the Codex dispatcher. You must never build and review the same deliverable.
+
+WRITE SCOPE:
+- E:\TTQS\TTQS_ONE_OPENCODE_BUILD\
+- E:\TTQS\TTQS_ONE_OPENCODE_REVIEW\
+- authorized Agent Bus task-result files only.
+
+DO NOT WRITE:
+- Codex BUILD_QUEUE / SUPERVISOR_STATE
+- CURRENT
+- central replacement register
+- Codex automation/control files
+- Codex candidate paths
+
+BUILD:
+Use only the immutable work packet: exact requirement, Blueprint row, evidence bundle, shared fact snapshot, genre mechanics, same-document repair feedback.
+Do not use peer DOCX bodies as templates.
+Return stable DOCX + build receipt + proposed synthetic delta + candidate SHA + evidence hashes.
+Do not merge shared state and do not promote.
+
+REVIEW:
+Review only candidates built by CODEX_WORKER.
+Bind verdict to exact candidate SHA + review contract hash.
+Verdict: PASS / FAIL_REPAIRABLE / FAIL_SYSTEMIC.
+FAIL must contain exact locator + minimum repair.
+
+WORK PRIORITY:
+1. REVIEW ready Codex candidate.
+2. REPAIR your own previously-built candidate with exact defect.
+3. BUILD a new assigned deliverable.
+
+QUALITY:
+Keep all requirement/genre/title-blind/negative-neighbor/duplication/readability/usability/evaluator/SAMPLE-REAL/third-party/engineering-language/inflation gates.
+No template-copying, no empty forms, no fake REAL facts.
+
+ISOLATION:
+OpenCode candidates only under E:\TTQS\TTQS_ONE_OPENCODE_BUILD\CANDIDATES\.
+Read shared facts only from the packet snapshot. Report conflicts; do not mutate central facts.
+
+NORMAL EXECUTION:
+Codex invokes you headlessly. Do not create your own scheduler or GUI watcher. No visible console or focus stealing.
+
+INITIALIZE:
+Write E:\TTQS\TTQS_ONE_OPENCODE_BUILD\CONTROL\OPENCODE_DUAL_WORKER_READY.json with READY status, supported roles BUILD/REVIEW, contract hash, version, timestamp.
+Then wait for Codex task dispatch. Human relay is not required.

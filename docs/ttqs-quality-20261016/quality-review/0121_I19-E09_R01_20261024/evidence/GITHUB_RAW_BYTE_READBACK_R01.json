@@ -1,0 +1,218 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0121",
+  "requirement_id": "I19-E09",
+  "remote_package_commit": "1b51226a97c4cd9ebaf7e9c080bd95a1524e30af",
+  "readback_source": "fetched GitHub origin branch commit via git show raw blob bytes",
+  "verification_attempts": [
+    {
+      "attempt": 1,
+      "result": "MISMATCH",
+      "cause": "core.autocrlf text normalization changed raw bytes in text artifacts; DOCX and PDF matched"
+    },
+    {
+      "attempt": 2,
+      "result": "VERIFIER_ERROR",
+      "cause": "local absolute paths were mistakenly used as repository-relative Git blob paths"
+    },
+    {
+      "attempt": 3,
+      "result": "PASS"
+    }
+  ],
+  "all_match": true,
+  "artifacts": [
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R01_20261024/candidate/0121_學員滿意度與學習評量報告_R01.docx",
+      "role": "candidate_docx",
+      "remote_bytes": 72595,
+      "expected_sha256": "e59e6b6a2b7bb36b178301be48ab27577597fdd0cd5b6b010c388b66ffb3bef6",
+      "remote_sha256": "e59e6b6a2b7bb36b178301be48ab27577597fdd0cd5b6b010c388b66ffb3bef6",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R01_20261024/evidence/0121_R01_word_render.pdf",
+      "role": "native_word_render_pdf",
+      "remote_bytes": 974477,
+      "expected_sha256": "1bf3251c4a23a741f2e810d7c31d9ecacdaeb1bb151a0589d39463c9aab3af42",
+      "remote_sha256": "1bf3251c4a23a741f2e810d7c31d9ecacdaeb1bb151a0589d39463c9aab3af42",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R01_20261024/evidence/technical_visual_QA_R01.json",
+      "role": "technical_visual_qa",
+      "remote_bytes": 9803,
+      "expected_sha256": "428cd224041c2d8379ed9da93009f21aab6f65cf50af1fb8c6c78b002ad8ae29",
+      "remote_sha256": "428cd224041c2d8379ed9da93009f21aab6f65cf50af1fb8c6c78b002ad8ae29",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R01_20261024/evidence/qa_0121_R01.py",
+      "role": "deterministic_qa_script",
+      "remote_bytes": 8810,
+      "expected_sha256": "beb65b07d402e6954b1ab0097bb292a698226cba91a263dce6837dd0915dbc75",
+      "remote_sha256": "beb65b07d402e6954b1ab0097bb292a698226cba91a263dce6837dd0915dbc75",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R01_20261024/evidence/opencode_review_attempt_R01.json",
+      "role": "independent_review_attempt_receipt",
+      "remote_bytes": 1400,
+      "expected_sha256": "c44e0f299e220b0a1f3396f7205d16969bb608f49531f6aac3aad2b326e99168",
+      "remote_sha256": "c44e0f299e220b0a1f3396f7205d16969bb608f49531f6aac3aad2b326e99168",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R01_20261024/evidence/opencode_review_request_R01.txt",
+      "role": "independent_review_prompt",
+      "remote_bytes": 2212,
+      "expected_sha256": "53b4bcf43d56958917967986ca49f461bd11570fc0d3c0906f6d0d9a2a29c43a",
+      "remote_sha256": "53b4bcf43d56958917967986ca49f461bd11570fc0d3c0906f6d0d9a2a29c43a",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R01_20261024/evidence/opencode_review_stdout_R01.jsonl",
+      "role": "independent_review_raw_stdout",
+      "remote_bytes": 430,
+      "expected_sha256": "2e348d3dc2f98c8e58575f9168d7f0cd90c4e1f77e7f6cf59113d80b39dabee4",
+      "remote_sha256": "2e348d3dc2f98c8e58575f9168d7f0cd90c4e1f77e7f6cf59113d80b39dabee4",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R01_20261024/evidence/opencode_review_stderr_R01.txt",
+      "role": "independent_review_stderr",
+      "remote_bytes": 0,
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "remote_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R01_20261024/evidence/opencode_review_exit_R01.txt",
+      "role": "independent_review_exit",
+      "remote_bytes": 1,
+      "expected_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "remote_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R01_20261024/source/UNIQUE_BLUEPRINT_0121_I19-E09_R01.md",
+      "role": "unique_blueprint",
+      "remote_bytes": 9252,
+      "expected_sha256": "99320fdc9078615ad04087c43bcbd22c5bbf751a22127c51e048e909726a5fca",
+      "remote_sha256": "99320fdc9078615ad04087c43bcbd22c5bbf751a22127c51e048e909726a5fca",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R01_20261024/source/SOURCE_PACKET_0121_I19-E09_R01.md",
+      "role": "source_packet",
+      "remote_bytes": 4650,
+      "expected_sha256": "fbeb11b96648fff29a49a0fca74bf0cc3b3d1d29934f07dfaa3cf7e410a557fd",
+      "remote_sha256": "fbeb11b96648fff29a49a0fca74bf0cc3b3d1d29934f07dfaa3cf7e410a557fd",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R01_20261024/source/official_requirement_page08.txt",
+      "role": "official_requirement_page8_text",
+      "remote_bytes": 1788,
+      "expected_sha256": "c34ead45cad406150de5622e157f44727157776ce5c6abf5343c7db5dca42520",
+      "remote_sha256": "c34ead45cad406150de5622e157f44727157776ce5c6abf5343c7db5dca42520",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R01_20261024/source/official_requirement_page08.png",
+      "role": "official_requirement_page8_image",
+      "remote_bytes": 408300,
+      "expected_sha256": "907176e44c4ccb42d86c84566baf9f1b3b6494e6c67d5a8e899decaebb065f9a",
+      "remote_sha256": "907176e44c4ccb42d86c84566baf9f1b3b6494e6c67d5a8e899decaebb065f9a",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R01_20261024/worker/manuscript_R01_revised.md",
+      "role": "adopted_manuscript",
+      "remote_bytes": 45748,
+      "expected_sha256": "5b30cc8529e9afd72c5257207b6f5ad3cc305c39485245aac562b3e30bb52041",
+      "remote_sha256": "5b30cc8529e9afd72c5257207b6f5ad3cc305c39485245aac562b3e30bb52041",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R01_20261024/worker/writer_prompt_R01.md",
+      "role": "writer_prompt",
+      "remote_bytes": 17611,
+      "expected_sha256": "cb2f17fa3b52c89681c704ea1c7cc5176d04d760c9237f1104aca28d57afddbd",
+      "remote_sha256": "cb2f17fa3b52c89681c704ea1c7cc5176d04d760c9237f1104aca28d57afddbd",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R01_20261024/worker/writer_response_R01.md",
+      "role": "writer_return",
+      "remote_bytes": 48735,
+      "expected_sha256": "4a2e587d9c8fbecd4335c0976143fa632ee3c8f826c41492e127ec638594b276",
+      "remote_sha256": "4a2e587d9c8fbecd4335c0976143fa632ee3c8f826c41492e127ec638594b276",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R01_20261024/worker/dispatch_receipt.json",
+      "role": "dispatch_receipt",
+      "remote_bytes": 1057,
+      "expected_sha256": "bdb2eb73adffcd03af347240fbea6b918d42cc21d847c55ea6d44eaeca984660",
+      "remote_sha256": "bdb2eb73adffcd03af347240fbea6b918d42cc21d847c55ea6d44eaeca984660",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R01_20261024/worker/execution.json",
+      "role": "execution_receipt",
+      "remote_bytes": 324,
+      "expected_sha256": "63dda98acea7172e073665777db8a60f69fe228c351ad88a74e1b4e64e15cabd",
+      "remote_sha256": "63dda98acea7172e073665777db8a60f69fe228c351ad88a74e1b4e64e15cabd",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R01_20261024/worker/execution_promptarg.json",
+      "role": "prompt_argument_receipt",
+      "remote_bytes": 545,
+      "expected_sha256": "56e5dbe4a38a63109350363c5bc720139623e5ba241b163abd711c4bb8155bbb",
+      "remote_sha256": "56e5dbe4a38a63109350363c5bc720139623e5ba241b163abd711c4bb8155bbb",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R01_20261024/worker/stdout_promptarg.json",
+      "role": "worker_raw_stdout",
+      "remote_bytes": 50183,
+      "expected_sha256": "48ebd8d3cf04e01c9b9c30ca41415ab5ba13039c4f582f3c53c844c02702cf14",
+      "remote_sha256": "48ebd8d3cf04e01c9b9c30ca41415ab5ba13039c4f582f3c53c844c02702cf14",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R01_20261024/worker/stderr_promptarg.log",
+      "role": "worker_stderr",
+      "remote_bytes": 78,
+      "expected_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+      "remote_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R01_20261024/worker/attempt01_pipe_failure_reconciliation.json",
+      "role": "worker_failure_reconciliation",
+      "remote_bytes": 616,
+      "expected_sha256": "f8480f8d0a3414862868711c057dffc1b61abfa5d19c2afae3306b4795add67f",
+      "remote_sha256": "f8480f8d0a3414862868711c057dffc1b61abfa5d19c2afae3306b4795add67f",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R01_20261024/evidence/PUBLIC_PACKAGE_MANIFEST_R01.json",
+      "role": "public_package_manifest",
+      "remote_bytes": 6795,
+      "expected_sha256": "f1d69c687af59c082f3841d719b5168cc52152aec801f98e420c98aa90845424",
+      "remote_sha256": "f1d69c687af59c082f3841d719b5168cc52152aec801f98e420c98aa90845424",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0121_I19-E09_R01_20261024/evidence/GITHUB_RAW_BYTE_READBACK_ATTEMPT01_LINE_ENDING_MISMATCH_R01.json",
+      "role": "readback_attempt01_line_ending_mismatch",
+      "remote_bytes": 9816,
+      "expected_sha256": "27f641c191c0022ad51f84c43ec97d9c0ae82f9acb74c5b88804f97f86f28969",
+      "remote_sha256": "27f641c191c0022ad51f84c43ec97d9c0ae82f9acb74c5b88804f97f86f28969",
+      "match": true
+    }
+  ]
+}

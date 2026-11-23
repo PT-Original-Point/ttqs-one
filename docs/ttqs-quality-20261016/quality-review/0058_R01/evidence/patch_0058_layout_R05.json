@@ -1,0 +1,41 @@
+{
+  "operation": "targeted_layout_repair",
+  "source_revision": "R04",
+  "target_revision": "R05",
+  "source_docx_sha256": "76266A3E4CB0846D6B179C875F780BBEEB5B664B5279D82EC1D4C4699CB9F246",
+  "source_pdf_pages": 31,
+  "findings": [
+    "Front-matter usage-box final line orphaned at top of page 2",
+    "Section 2 step-six paragraph had a short spill line on page 5",
+    "Table 7-2 caption/header orphaned at page 22 bottom before data rows on page 23"
+  ],
+  "fixes": [
+    "Shortened front-matter usage sequence without changing operating steps",
+    "Shortened step-six proposal paragraph while preserving synthetic boundary and authority checks",
+    "Set page_break_before on Table 7-2 caption; enabled widow control for body paragraphs"
+  ],
+  "synthetic_facts_count": 41,
+  "docx_built": false,
+  "outputs": [
+    {
+      "path": "worker\\antigravity\\0058_UNIQUE_BLUEPRINT_R05.md",
+      "bytes": 22063,
+      "sha256": "c8465275f7d15c0594b526deacd0fceb3870374729b191585e453e9ff0f2bc4d"
+    },
+    {
+      "path": "worker\\antigravity\\0058_CONTENT_R05.json",
+      "bytes": 99830,
+      "sha256": "771a1b063933bb52a393a215b3ccd342b079a70d5121b68312243bd13f7ab30e"
+    },
+    {
+      "path": "worker\\antigravity\\0058_SYNTHETIC_REPLACEMENT_REGISTER_R05.csv",
+      "bytes": 15310,
+      "sha256": "ce97d4a34c35711eadba57a58ac2b6b5628821ea391b0949c3f10ae9f6519ac8"
+    },
+    {
+      "path": "worker\\antigravity\\0058_build_R05.py",
+      "bytes": 16141,
+      "sha256": "15c590a6a6b4b06042fc1a22b438afb3a045b67e66592cd8e3b69d3b0209568b"
+    }
+  ]
+}

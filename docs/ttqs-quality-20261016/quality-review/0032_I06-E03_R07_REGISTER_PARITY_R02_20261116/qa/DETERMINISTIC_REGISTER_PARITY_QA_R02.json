@@ -1,0 +1,63 @@
+{
+  "schema": "ttqs_one_scoped_cross_cell_register_binding_qa_v1",
+  "work_id": "TTQS_ONE_0032_R07_REGISTER_PARITY_R02_20261116",
+  "doc_id": "0032",
+  "requirement_id": "I06-E03",
+  "candidate_revision": "R07",
+  "candidate_docx_sha256": "e1d6311e9828f464aba7b9bc47c20fa8b5392951dba96cf9a71d77be73fb691f",
+  "source_register_sha256": "31f0d02d35e6b244fde51e793bd05d498a64b5c9522ea13040d2e09a2e1a985e",
+  "parent_derived_register_r01_sha256": "f423a9057185688695dcdeb96a50e7adde338d044a3b622db46130e22a8b2a32",
+  "derived_register_r02_sha256": "fc7a0c60f68fc5e84824e05bafe5f44ecb25ebc66b507014db89c88b1a4fe7df",
+  "sidecar_sha256": "2e2814e16d6f34892170208164b7096199d14e324fecbe6345bcaa6da9d0f8ff",
+  "w1_response_sha256": "40e8cadffe317acbcbfcc0031fa20659b480207543162e69dd156435aa7fbae2",
+  "w1_session_export_sha256": "799e45ce797a5d41d13cd2488f9eaa9523968f606a0105d9c1dc8ae16aa5fa2b",
+  "fact_id": "SYN-032-152",
+  "candidate_locator_zero_based": {
+    "table_index": 33,
+    "row_index": 6
+  },
+  "actual_candidate_cell_texts": [
+    {
+      "cell_index": 0,
+      "text": "責任與頻率SYN-032-152"
+    },
+    {
+      "cell_index": 1,
+      "text": "假設演練角色：主管說明方向並決策；承辦整理核驗鏈；不同角色覆核來源及交接。角色均不對應真人。"
+    },
+    {
+      "cell_index": 2,
+      "text": "以協會實際核准職責與授權文件替換；目前授權人員 UNKNOWN。"
+    },
+    {
+      "cell_index": 3,
+      "text": "年度方向訂定及重大修訂時執行；原件欠缺、授權不明或鏈條斷裂→HOLD並升級有權角色。"
+    }
+  ],
+  "included_cells": [
+    1,
+    3
+  ],
+  "excluded_cells": [
+    0,
+    2
+  ],
+  "exact_join_rule": "cell[1] + cell[3], no inserted text",
+  "register_delta": {
+    "rows_before": 153,
+    "rows_after": 153,
+    "changed_register_fields": [
+      "SYN-032-152.synthetic_value"
+    ],
+    "all_other_rows_and_columns_semantically_unchanged": true,
+    "new_synthetic_value_matches_exact_bound_text": true,
+    "sample_status_retained": true
+  },
+  "worker_packet_cell0_transcription_mismatch": true,
+  "packet_value_for_cell0": "責任與頻率 / SYN-032-152",
+  "actual_candidate_cell0": "責任與頻率SYN-032-152",
+  "candidate_docx_bytes_changed": false,
+  "visual_reverification_required": false,
+  "scope": "One synthetic register row; no DOCX change; package-side QA only.",
+  "verdict": "PASS_SCOPED_PENDING_INDEPENDENT_W2"
+}

@@ -1,0 +1,92 @@
+{
+  "project_id": "TTQS_ONE",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "observed_head": "97bac24da02f2a55b8a1d7e4b91d7a53516ea8c6",
+  "document": {
+    "doc_id": "0058",
+    "requirement_id": "I13-E02",
+    "official_checkbox_serial": "062",
+    "official_page": 4,
+    "case_id": "SYN-0058-202608"
+  },
+  "sources": [
+    {
+      "path": "docs/ttqs-quality-20261016/01_HUMAN_MISSION_AND_ACCEPTANCE.md",
+      "sha256": "CE228E4B8697E6E54AD48733F2AED2BCFD09CFF625D99F1F0AEABB45E440C6E7"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/02_GENRE_WRITING_MANUAL.md",
+      "sha256": "0F4183A18E5668260B213B35AE223A7DA334EED56A25B6FEF72E2D6D7E12E649"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/03_157_CHECKBOX_BLUEPRINTS.md",
+      "sha256": "7732C40F25D0803F18836725D1634EBE72A156925444F3EA9915B6168CC1A70A"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/04_CODEX_GOAL_24X7_EXECUTION.md",
+      "sha256": "0226B15EC91BCD79044AD452E9712F61C36FDB492758181215B2D8FBA53981D6"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/05_HOURLY_NATIVE_WAKE_RESUME.md",
+      "sha256": "B41852FA40470EA56E7D781181D60BD274505342B47F04BEBEABC94F187A6CE6"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md",
+      "sha256": "908C5BF32142C02E3F88D56AB8DFC0A5D121BA684AF7B9DB61FFC98607655994"
+    },
+    {
+      "path": "送審資料/05_填表建議_方法示範不等於實績/142份文件逐項檢查與填表建議.csv",
+      "sha256": "166EB3CD3D8026206E88F06CB083AA162D2DDD464D53883A3CE5AC411ADCEA6A",
+      "locator": "0058 row"
+    },
+    {
+      "path": "送審資料/評核依據/TTQS查核佐證文件資料表-訓練機構版 (3).pdf",
+      "sha256": "805386B77DF045B396FABAFED7A47D12491C25A0B5744EDD9A04876CAEE34709",
+      "locator": "page 4, indicator 13, second checkbox"
+    }
+  ],
+  "historical_candidate": {
+    "sha256": "B90D3DBCFC3020455063755E38632EBA7B92D86ABDD4E5EDF34DD8122C829E6C",
+    "state": "HISTORICAL_UNVERIFIED",
+    "body_reused": false,
+    "issue": "legacy CSV records major fields as waiting/missing"
+  },
+  "prompt": {
+    "path": "inputs/0058_ANTIGRAVITY_BUILD_PROMPT_R01.md",
+    "sha256": "59F44DA6682F388F75B1843C8EE736F18234424DC4F0524BB77954CFA733921C"
+  },
+  "antigravity": {
+    "allowed_model": "gemini-3.8-flash-high",
+    "computer_use": "forbidden; not used",
+    "attempts": [
+      {
+        "attempt": "R01",
+        "exit_code": 0,
+        "cli_status": "SUCCESS",
+        "response": "",
+        "conversation_id": "ea9288a7-4848-4d89-a944-c1af9ba7ebac",
+        "duration_seconds": 15.7693141,
+        "usage": {
+          "input_tokens": 34418,
+          "output_tokens": 1638,
+          "thinking_tokens": 1421,
+          "cache_read_tokens": 0,
+          "total_tokens": 36056
+        },
+        "denied_action": "read_file",
+        "error": "headless permission denial; empty response; no deliverable recovered",
+        "raw_stdout": "worker/antigravity/antigravity_0058_R01_stdout.json",
+        "raw_stderr": "worker/antigravity/antigravity_0058_R01_stderr.txt",
+        "repair": "backup settings; add exact read grants for current prompt and required sources plus read/write grants limited to this work package output folder; do not use global bypass"
+      }
+    ],
+    "current_attempt": {
+      "attempt": "R02",
+      "pid": 36560,
+      "process_started_local": "2026-10-18 01:52:10 +08:00",
+      "status": "RUNNING"
+    }
+  },
+  "next": "Recover R02 raw output and four files, build and verify DOCX, perform complete-page visual inspection, obtain independent exact-SHA semantic review, sync stable public evidence to PR 92."
+}

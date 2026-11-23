@@ -1,0 +1,77 @@
+{
+  "work_id": "TTQS_ONE_0137_R03_FULL_SEMANTIC_REVIEW_W2_GEMINI_20261109",
+  "doc_id": "0137",
+  "requirement_id": "I19-E27",
+  "candidate_sha256": "fa7240da13f5140d0896d1c2e3c7a74dce7f57d861d1100c0315628708c477db",
+  "body_extract_sha256": "02b233275ebaba6c338c947c5b91fa3005a951265cb08107e016f3d95e055e05",
+  "source_packet_sha256": "7597c1346607c7c218bca7b9d92bbcd6fa4cfbba25bc793a6ff30e2b26e6b733",
+  "unique_blueprint_sha256": "7590fe026b53010cd40664d23f53880e7c717a6e93c6f19d59212ef5312d6cf9",
+  "official_source_text_sha256": "06a158a6c3dbbd9a2be8958fa3c76914aef804c46fda4d1244dd6dcf01f7b383",
+  "reviewer_verdict": "PASS",
+  "checks": {
+    "source_alignment": {
+      "status": "PASS",
+      "summary": "Exact alignment with Official Source PDF page 9 and official crosswalk mapping.",
+      "evidence": "Candidate P0016 verbatim cites the official checkbox text: 『官方查核資料表第 9 頁列出「提出報章雜誌採訪或電子媒體訪問之正面消息（其他）」』. Official crosswalk mapping I19-E27 -> 0137 媒體採訪與正面報導原件查驗表 is accurately represented in T01R002 and T02R002. Official printed serial is consistently designated as UNKNOWN without guesswork."
+    },
+    "genre_mechanics": {
+      "status": "PASS",
+      "summary": "Robust operational mechanics for third-party media original verification, screenshot indexing, and claim tracing.",
+      "evidence": "Implements an actionable 7-step intake process (P0006-P0013), a 7-gate verification pipeline G1-G7 with strict passing and handling conditions (Table 3), 3 unambiguous decision classifications (RECORDABLE_LIMITED, HOLD, REJECT in P0020), a real-source intake register schema (Table 4), an outreach template (Table 9), a HOLD/REJECT branch table (Table 10), and a 10-item reviewer checklist (P0041-P0051)."
+    },
+    "blueprint_coverage": {
+      "status": "PASS",
+      "summary": "Comprehensive coverage of all Blueprint index 151 requirements.",
+      "evidence": "Covers document boundaries, publisher-source authentication over lone screenshots, complete metadata and hash tracking, claim-by-claim deconstruction, strict non-extrapolation from positive tone to organization outcomes, media independence evaluation, reprint deduplication, copyright and privacy controls, worked synthetic case, replacement register, and same_case_id cross-referencing constraints."
+    },
+    "usability": {
+      "status": "PASS",
+      "summary": "High evaluative and operational usability for small volunteer non-profit association personnel.",
+      "evidence": "Provides clear role boundaries (handler, evidence custodian, independent reviewer), standardized media contact scripts, concrete gate check criteria, and supervisor spot-check metrics."
+    },
+    "arithmetic": {
+      "status": "PASS",
+      "summary": "Demonstration arithmetic is internally consistent and verified.",
+      "evidence": "Synthetic cohort: 24 registered, 22 attended, 20 completed (meeting 6/8h rule), 2 incomplete. Attendance rate: 22/24 = 91.7%. Attendee completion rate: 20/22 = 90.9%. All ratios, fractions, and denominators are mathematically verified across Table 5, Table 6, and Table 12."
+    },
+    "synthetic_coherence": {
+      "status": "PASS",
+      "summary": "Synthetic register is completely coherent and properly bounded.",
+      "evidence": "Synthetic identifiers (SYN-0137-CASE-01, claims SYN-C01 to SYN-C05, records SYN-TRN-01 to SYN-TRN-03, and replacement items SYN-0137-F01 to SYN-0137-F09) are tied consistently. Reserved non-resolvable domain https://news.example.invalid is used. Qualitative claim SYN-C04 is explicitly held on HOLD due to lack of verifiable pre/post outcome data. No fake hashes are provided."
+    },
+    "sample_real_boundary": {
+      "status": "PASS",
+      "summary": "Rigorous distinction between synthetic sample illustrations and real association evidence.",
+      "evidence": "Table 1 explicitly marks real originals as UNKNOWN/HOLD and sample cases as SAMPLE/SYNTHETIC. Table 4 explicitly populates all 13 intake rows with UNKNOWN/HOLD or HOLD. Table 5 and Table 6 are explicitly prefixed with SAMPLE / SYNTHETIC ONLY. Table 12 records real original count as UNKNOWN, prohibiting claims of 0 or 1 found. Concluding paragraph P0056 reinforces that transition to REAL requires verified originals and human formal acceptance."
+    },
+    "negative_neighbor": {
+      "status": "PASS",
+      "summary": "Clear functional separation from all negative neighbor documents.",
+      "evidence": "Table 2 and Table 8 explicitly delineate boundaries against 0136/I19-E26 (awards, contracts, public welfare impact originals), 0135/I19-E25 (market value trends), 0139/I19-E29 (certification and employment statistics), 0126/I19-E14 (salary survey data), and 0110/I18-E19 (course design and evaluation). Media mentions are explicitly prohibited from replacing primary operational evidence."
+    },
+    "title_blind_identification": {
+      "status": "PASS",
+      "summary": "Uniquely identifiable by structural and functional mechanics alone.",
+      "evidence": "Document is uniquely identifiable without title headers through its distinctive 7-gate media verification framework, claim deconstruction matrix against primary attendance sources, RECORDABLE_LIMITED decision semantics, and screenshot custody management rules."
+    }
+  },
+  "findings": [],
+  "reviewed_scope": [
+    "Exact Candidate R03 body extract (P0001-P0056, Tables T01-T12, lines 16-342)",
+    "Official Source Text extract pages 8-9 (lines 408-512)",
+    "Official Crosswalk CSV (lines 514-645)",
+    "Project 157 Blueprint indices 149-151 excerpt (lines 647-655)",
+    "Unique Blueprint 0137 I19-E27 R01 (lines 371-406)",
+    "Prior scoped semantic review receipt INDEPENDENT_SCOPED_SEMANTIC_REVIEW_0137_R03.json (lines 657-700)",
+    "Deterministic repair reconciliation QA receipt R03_SCOPED_REPAIR_RECONCILIATION_QA_20261108.json (lines 728-996)"
+  ],
+  "not_reviewed": [
+    "Visual rendering, margins, pagination, font sizes, and layout in DOCX/PDF format (text-only semantic review)",
+    "Live external network resolution or domain lookup (sandbox, text-only review)",
+    "Formal TTQS accreditation, evaluator scoring, or organizational acceptance"
+  ],
+  "actual_serving_model_identity": "UNKNOWN",
+  "fallback": "UNKNOWN",
+  "formal_acceptance": false,
+  "real_evidence": "NOT_VERIFIED"
+}

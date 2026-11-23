@@ -1,0 +1,56 @@
+{
+  "work_id": "TTQS-ONE-0071-I16-E02-W1-SEMANTIC-R03-20261118",
+  "verdict": "PASS",
+  "candidate_sha256": "7964F898FF4F4324C21DE33A12987B46472AFBD42B5CC8B9515B3E93AC734331",
+  "extracted_text_sha256": "E44DE739976F1EFC46568C8C264BDD10D117D35AF94436103E5CE810790BEF33",
+  "scope": "review this candidate only. Treat all explicitly registered SYNTHETIC content as simulation, not evidence of actual organizational performance. Verify complete case-level workflow, traceability, calculations and denominator consistency, coherent dates/statuses, usable fields/tables, non-placeholder worked example, no unsupported third-party claims/signatures/approvals, and clear replacement instructions. Reject generic SOP substitution. No edits outside the specific Table D pagination and control-version change from R02 to R03. Do not infer visual quality from extracted text.",
+  "requested_route": "opencode/nemotron-3.5-lightning-free",
+  "requested_model": "Nemotron 3.5 Lightning Free",
+  "provider_served_model": "UNKNOWN",
+  "session_id": "ses_e119ce346ffevxZy6UoCutffnY",
+  "output_model_metadata": null,
+  "exit_code": 0,
+  "raw_stdout_sha256": "61CE418BB287F27BA06C93815D2B358662E191073C7F157AF5842270ACC68C9D",
+  "raw_stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "reviewer_response": {
+    "verdict": "PASS",
+    "candidate_sha256": "7964F898FF4F4324C21DE33A12987B46472AFBD42B5CC8B9515B3E93AC734331",
+    "extracted_text_sha256": "E44DE739976F1EFC46568C8C264BDD10D117D35AF94436103E5CE810790BEF33",
+    "scope": "review this candidate only. Treat all explicitly registered SYNTHETIC content as simulation, not evidence of actual organizational performance. Verify complete case-level workflow, traceability, calculations and denominator consistency, coherent dates/statuses, usable fields/tables, non-placeholder worked example, no unsupported third-party claims/signatures/approvals, and clear replacement instructions. Reject generic SOP substitution. No edits outside the specific Table D pagination and control-version change from R02 to R03. Do not infer visual quality from extracted text.",
+    "findings": [
+      {
+        "severity": "info",
+        "locator": "Document-wide",
+        "detail": "SAMPLE/SYNTHETIC truth boundary properly maintained throughout all sections with [!IMPORTANT] markers and explicit declarations (Section 2). No unsupported third-party claims, signatures, or approvals present. All synthetic identifiers (SYN-REC-01/02, SYN-EV-01/06, SYN-CHK-01/06, SYN-CAPA-2026-004, SYN-CLASS-2026-08) clearly marked as demonstration-only."
+      },
+      {
+        "severity": "info",
+        "locator": "Section 3.2",
+        "detail": "Traceability properly documented: 14/16 records traceable, 2 missing (SYN-REC-01, SYN-REC-02) identified as synthetic markers only. No inference of impact on other cohorts or learners per document text."
+      },
+      {
+        "severity": "info",
+        "locator": "Section 7.1-7.3",
+        "detail": "Calculations verified: Baseline Traceable Rate 14/16=87.5% (F0071-07), Missing-Reference Rate 2/16=12.5% (F0071-07), Action Completion Rate 4/4=100% (denominator is 4 actions, F0071-19), Effectiveness Rate 6/6=100% (F0071-18, F0071-19). Denominator consistency confirmed - effectiveness sampling is independent gate not included in action completion denominator."
+      },
+      {
+        "severity": "info",
+        "locator": "Section 9-Tables A-D",
+        "detail": "All four core tables populated and complete. Table A: 3 issue rows with basis/cause/risk/action/owner/deadline referencing F0071-06/08/11. Table B: Evidence labels SYN-EV-01/06 properly identified as identifiers only with closure decision per F0071-21. Table C: 3 trigger conditions with role division (F0071-15, F0071-20). Table D: 12-row timeline with only registered events and milestones."
+      },
+      {
+        "severity": "info",
+        "locator": "Section 11-12",
+        "detail": "REAL replacement guide and replacement register complete. All 23 registered elements (F0071-01 to F0071-23) have synthetic fixed values with clear replacement instructions. No real paths, signatures, or certificates claimed. Section 11 provides field-by-field REAL replacement methods requiring actual verified data."
+      },
+      {
+        "severity": "info",
+        "locator": "Section 1-12",
+        "detail": "Generic SOP substitution explicitly rejected (Section 1: does not repeat 0070 SOP generic procedure regulations; Section 3.1: does not replace system operating procedures). Version change R02→R03 properly documented with SYN-DELTA-R02-01/02/03 synthetic delta markers noted as version-added, not external source facts."
+      }
+    ],
+    "calculations": "Baseline Traceable Rate = 14/16 = 87.5% (F0071-07); Missing-Reference Rate = 2/16 = 12.5% (F0071-07); Action Completion Rate = 4/4 = 100% (F0071-19, denominator is 4 planned actions, not 27); Effectiveness Rate = 6/6 = 100% (F0071-18, F0071-19).",
+    "synthetic_truth_boundary": "Document maintains explicit SAMPLE/SYNTHETIC boundary throughout all 12 sections with [!IMPORTANT] truth boundary markers (Section 2). All synthetic identifiers clearly marked as demonstration-only. REAL replacement guide (Section 11) and replacement register (Section 12) provide clear transition paths requiring actual verified data. No section implies real organizational performance or outcomes. SYN-EV-01/06, SYN-REC-01/02, SYN-CHK-01/06 are index identifiers only, not real attachments or records.",
+    "completeness": "Document is complete with all 12 required sections (Document Control, Truth Boundary, Intake, Containment/Correction, Root-Cause Analysis, CAPA Action Plan, Explicit Calculations, Effectiveness Verification Sample, Core Populated Tables, Case Closure/Handoff/Retention, REAL Replacement Guide, Replacement Register). All required verification elements present: complete case-level workflow, traceability, calculations with denominator consistency, coherent dates/statuses, usable fields/tables (A-D), non-placeholder worked example (synthetic throughout with clear replacement instructions), no unsupported third-party claims/signatures/approvals, and clear replacement instructions. Generic SOP substitution explicitly rejected."
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "receipt_id": "0013_I02-E04_R09_WORD_NATIVE_EXPORT_ATTEMPT",
+  "document_id": "0013",
+  "requirement_id": "I02-E04",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0013_I02-E04_LUNA_TEXT_DRAFT_R01_20261029\\candidate\\0013_I02-E04_R09.docx",
+  "candidate_sha256": "dd5ff6cc55c649952872e03a77e77f844375df3db9a86f2bf664aefe1554df3f",
+  "candidate_bytes": 67658,
+  "renderer": "Microsoft Word COM via hidden PowerShell runner",
+  "runner_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0013_I02-E04_LUNA_TEXT_DRAFT_R01_20261029\\qa\\render_0013_R09_isolated.ps1",
+  "launcher_pid": 110008,
+  "word_pid": 64124,
+  "started_at_tpe": "2026-10-30T03:24:35+08:00",
+  "last_observed_at_tpe": "2026-10-30T03:28:29+08:00",
+  "last_observation": "Word process Responding=True; CPU time increasing; no PDF emitted; stdout/stderr both 0 bytes",
+  "targeted_termination": "Only the task launcher PID 110008 and its uniquely-created Word PID 64124 were stopped after confirming the runner identity and no PDF",
+  "current_no_pdf": true,
+  "current_r09_word_pid_count": 0,
+  "phase": "UNKNOWN (runner had no phase-level logging)",
+  "root_cause": "UNKNOWN",
+  "visual_status": "BLOCKED_NO_RENDERED_PDF",
+  "technical_status": "PARTIAL_CONTENT_PREFLIGHT_ONLY",
+  "semantic_status": "PENDING_FRESH_EXACT_SHA_REVIEW",
+  "formal_acceptance": "UNKNOWN",
+  "limitations": [
+    "No PDF or page images; no visual inspection performed.",
+    "No completed runner JSON/exit code was emitted before the bounded stop.",
+    "The prior R06 visual receipt applies to SHA 3e1b0ce939ea4e1b3fe22adec1cbdab492af78d6b9a5646f41ddd394c4aa3d09 only and is not inherited by R09."
+  ]
+}

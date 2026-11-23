@@ -1,0 +1,10 @@
+Independent read-only audit of a supporting synthetic replacement register. The writer was a different model (DeepSeek V4.1 Flash Free). Use only the three attached files: the final body source of DOCX 0059 R03, its Unique Blueprint draft, and the corrected CSV register. Do not call tools, edit files, or infer real Association facts.
+
+Identity binding:
+- DOCX 0059 R03 SHA-256: 0263017F16D81B1121BB97410DE9895B43B7A42F75632BF71A82B86426FBC2B0
+- Mapping: I13-E03 / official checkbox 063; these are not the DOCX ID. Case: SAMPLE-SYN-113, independent from 0057/0058.
+- Register should have 190 rows, IDs SYN-0059-113-F001 through F190, seven columns `fact_id,locator,value,why_synthetic,source_to_replace,role_to_verify,status`, status SAMPLE_UNVERIFIED.
+
+Audit each of the 190 rows against the entire body and blueprint. Check that each locator exists and points to the stated value, no row invented or misstates a date/count/participant result/source/role, the specified source-to-replace is supported and does not claim an existing record, all roles remain proposals subject to authorization, and no SAMPLE item is represented as REAL. Check for missing high-risk facts by mechanism (retraining, reflection/consent, certificate self-report vs issuer verification, simulated practice vs real internship, questionnaire, scoring/retest, deduplication and HOLD). Validate important arithmetic claims as they appear in the register and compare with the document. Check row F136 specifically for seven correctly parsed CSV columns. Do not treat 190 rows alone as proof of completeness. If you cannot verify all rows or identify meaningful omissions, return PARTIAL.
+
+Return only one JSON object with keys: `candidate_docx_sha256`, `register_sha256` (calculate from the attached CSV if possible; otherwise say NOT_INDEPENDENTLY_COMPUTED), `verdict` (PASS/PARTIAL/FAIL), `rows_checked`, `structural_checks`, `findings` (with row IDs and exact locators), `coverage_gaps`, `truth_boundary`, `limitations`. Be concise but specific. Do not claim formal Association acceptance.

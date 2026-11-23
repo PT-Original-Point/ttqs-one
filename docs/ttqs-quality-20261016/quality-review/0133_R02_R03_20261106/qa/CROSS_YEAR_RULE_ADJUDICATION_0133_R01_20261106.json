@@ -1,0 +1,79 @@
+{
+  "schema": "ttqs-one-0133-cross-year-rule-adjudication-v1",
+  "review_id": "TTQS-0133-XR-01-R01",
+  "created_at_utc": "2026-11-06T02:10:24Z",
+  "created_at_local": "2026-11-06T10:10:24+08:00",
+  "doc_id": "0133",
+  "requirement_id": "I19-E22",
+  "review_type": "fresh targeted textual adjudication",
+  "reviewer_context": "Codex direct reread of the candidate and current-HEAD Unique Blueprint; no external agent used and no model identity asserted.",
+  "scope": "Only the cross-year annual-attribution default. This is not an overall candidate acceptance decision.",
+  "candidate": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0133_I19-E22_SOURCE_PREP_R01_20261024\\candidate\\0133_I19-E22_CANDIDATE_R01.docx",
+    "sha256": "25116afb8206e0828c8b3a4a763845a9c3e672a4cb49969a64a2a3737d87256b",
+    "locator": "§2.1 年度; document.xml paragraph index P034",
+    "original_text": "示範採曆年，即 1 月 1 日至 12 月 31 日。REAL 使用時須依協會實際採用且可核實的年度規則；規則固定後不得為製造成長而改變。以實際教學活動日期歸屬年度。同一班次如跨年，依實際結案規則指定一個年度，並列開課日、結訓日、歸屬理由及覆核人；不得將同一班拆成兩年各算一班。"
+  },
+  "blueprint": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\GITHUB_SYNC_0131_R01D_20261024\\docs\\ttqs-quality-20261016\\quality-review\\0133_R01_20261024\\source\\UNIQUE_BLUEPRINT_0133_I19-E22_R01.md",
+    "sha256": "edb8d241b1604790b36daf1622b907a9985ec7901c6d1e0a79f440be5fcb42fd",
+    "verified_at_pr_head": "47f189a5158367a8392de133ec733a88cf941ffc",
+    "url": "https://github.com/PT-Original-Point/ttqs-one/blob/47f189a5158367a8392de133ec733a88cf941ffc/docs/ttqs-quality-20261016/quality-review/0133_R01_20261024/source/UNIQUE_BLUEPRINT_0133_I19-E22_R01.md",
+    "locator": "§3.1 年度與班次",
+    "original_text": "年度採曆年 1 月 1 日至 12 月 31 日，按課程實際辦理日歸屬年度；跨年系列採最後一個具實質教學活動年度，並列跨年日期及理由。年度規則一經採用，不得為追求成長而改變。"
+  },
+  "prior_review": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\GITHUB_SYNC_0131_R01D_20261024\\docs\\ttqs-quality-20261016\\quality-review\\0133_R01_20261024\\worker\\OPENCODE_GLM_SEMANTIC_R02_20261026T0805\\SEMANTIC_REVIEW_RESPONSE_R02.md",
+    "sha256": "437a43e31542249f093f9f68e8e8777d9e92939f75305fa74ace0bb2f4f62d1f",
+    "prior_finding": "F1 labeled the wording a minor/non-blocking divergence and noted that the sample had no cross-year case.",
+    "treatment": "The prior severity label is not adopted as the result of this fresh, narrowly scoped adjudication."
+  },
+  "adjudication": {
+    "result": "PARTIAL",
+    "conclusion": "The candidate does not state or guarantee the Blueprint's default year for a cross-year series. Its wording permits attribution under an actual closeout rule that could differ from the last year containing substantive teaching. The candidate also has compatible safeguards (actual teaching dates, one-year-only counting, rationale, reviewer, and no growth-driven changes). No REAL policy or cross-year event was available to prove that an actual record has already been misattributed.",
+    "real_policy_state": "UNKNOWN",
+    "actual_real_misattribution": "NOT_ESTABLISHED",
+    "rationale": [
+      "The Blueprint makes the last year with substantive teaching activity the cross-year attribution rule, not merely an optional example.",
+      "The candidate delegates year assignment to an actual closeout rule without requiring that rule to match the Blueprint default or stating a fallback.",
+      "The sample ledger has no cross-year series, so its existing annual totals do not exercise this choice.",
+      "Therefore PASS is unsupported; PARTIAL captures the textual gap without claiming an unobserved REAL error."
+    ]
+  },
+  "boundary_case": {
+    "classification": "SYNTHETIC COUNTERFACTUAL ONLY; not an existing sample row's asserted history and not REAL evidence.",
+    "reused_sample_row": "SYN-24-08: 1 class, 13 person-times, currently attributed to 2024 (2024-12-14).",
+    "assumed_boundary_facts": "For the test only, assume substantive instruction ends on 2024-12-14, while the class closeout is recorded on 2025-01-15, with no substantive teaching in 2025. Assume the actual closeout rule attributes this series to the closeout year.",
+    "blueprint_assignment": "2024, because 2024 is the last year containing substantive teaching.",
+    "candidate_assignment_under_assumption": "2025, if the actual closeout rule assigns by closeout year.",
+    "original_sample": {
+      "annual_values": "2023=6 classes/72 person-times; 2024=8/104; 2025=10/141",
+      "adjacent_growth": "2023→2024: classes 33.3%, person-times 44.4%; 2024→2025: classes 25.0%, person-times 35.6%",
+      "totals": "24 completed sample classes, 317 sample person-times; 1 cancelled class excluded."
+    },
+    "candidate_rule_counterfactual": {
+      "annual_values": "2023=6/72; 2024=7/91; 2025=11/154",
+      "adjacent_growth": "2023→2024: classes 16.7%, person-times 26.4%; 2024→2025: classes 57.1%, person-times 69.2%",
+      "totals": "Still 24 completed classes and 317 person-times; only one class's year attribution moves."
+    },
+    "interpretation": "Both allocations still show positive adjacent-year growth in this particular sample, so the boundary case does not reverse the growth verdict. It materially changes the annual counts and growth rates, proving the default is operationally consequential and untested by the existing sample."
+  },
+  "minimal_fix": {
+    "location": "Candidate §2.1 年度, the sentence beginning「同一班次如跨年」.",
+    "proposal": "在既有句中明訂「跨年班次預設歸屬於最後一個具實質教學活動的年度」，並列實際教學日期、跨年日期及歸屬理由；若可核實的 REAL 統計政策與此口徑不一致，先標記 HOLD 並處理口徑差異，不得直接按行政結案年度混算或宣稱逐年成長。",
+    "status": "Proposal only; no DOCX edit made."
+  },
+  "qa_impact": {
+    "existing_sample_math": "No change to the current sample totals or rates is indicated because the current ledger has no cross-year series.",
+    "targeted_regression": "Add a synthetic boundary case where the last substantive teaching year differs from the closeout year; expected attribution is the last substantive teaching year and the same class must not be split.",
+    "if_candidate_is_revised": "A changed DOCX requires a new candidate SHA, refreshed deterministic/static and receipt checks, and fresh exact-SHA semantic review. Inspect the affected §2.1 page for reflow; prior visual receipt is not evidence for changed bytes.",
+    "prior_receipts": "All existing candidate, status, technical, semantic, and byte-readback files remain untouched. This receipt supplements the prior review and narrows only F1."
+  },
+  "existing_evidence_hashes": {
+    "current_status_sidecar": "eab972d14c965480301deb39dacbea2ed04dc4459fd9f6b2759a03c5702579",
+    "technical_qa": "77472067016c7c720872ebd591abe57ed956a2caf3c05963d4dd1a6dc0a68d66",
+    "semantic_adjudication_r02": "49c131e18878940039ead4466a8fd63d09663cc1cc91c814e95f56bc23661123",
+    "raw_byte_readback_20261101": "e0d927400e1f0e11ba955ad572c45cdf365c2582c5c48c96fd516af7428cede5"
+  },
+  "external_effects": "No GitHub write or push. No DOCX, shared register, dashboard, or existing QA receipt changed."
+}

@@ -1,0 +1,27 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0009",
+  "requirement_id": "I01-E06",
+  "candidate_sha256": "5BDDF2FFDE8E3DEDCCE4723E46873AC3ABF2F307CB63E8ADE3E336B2F642FFDC",
+  "attempts": [
+    {
+      "sequence": 1,
+      "agent_id": "01a18f1d-9875-7822-bb94-79ec6952c788",
+      "status": "STOPPED_AT_HASH_GATE",
+      "root_cause": "Dispatcher copied one character incorrectly in expected candidate hash; expected ended with ...CCE4123E..., local SHA was ...CCE4723E.... No semantic review occurred."
+    },
+    {
+      "sequence": 2,
+      "agent_id": "01a18f1d-9875-7822-bb94-79ec6952c788",
+      "status": "STOPPED_AT_INPUT_ACCESS",
+      "root_cause": "Isolated reviewer context could not access E:\\TTQS local candidate path; no content review occurred."
+    },
+    {
+      "sequence": 3,
+      "agent_id": "01a18f20-c637-7f52-8e00-ff278024a2de",
+      "status": "PASS_SEMANTIC_WITHIN_EXTRACTED_CONTENT_SCOPE",
+      "root_cause": "Supplied complete extracted candidate text and hashed source packet; exact file hash bound locally before extraction. Reviewer recorded the no-direct-file/visual limitations."
+    }
+  ],
+  "process_note": "No candidate DOCX rebuild resulted from failed review dispatches. File-level candidate hash remained constant."
+}

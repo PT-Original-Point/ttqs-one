@@ -1,0 +1,68 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0064",
+  "requirement_id": "I14-E05",
+  "official_checkbox_serial": "069",
+  "revision": "R06",
+  "change_type": "TARGETED_LAYOUT_REPAIR",
+  "candidate_state": "CANDIDATE",
+  "source_candidate": {
+    "repo_path": "docs/ttqs-quality-20261016/quality-review/0064_R05/0064_R05.docx",
+    "sha256": "54888e13f954478051a49839d8b67ff845992c72811e41e09d90045e512c69e1"
+  },
+  "candidate": {
+    "repo_path": "docs/ttqs-quality-20261016/quality-review/0064_R06_LAYOUT_REPAIR_20261025/candidate/0064_R06.docx",
+    "sha256": "7dd39bffc4aa7ac94eeace73bec6135bfd1c9b8c216e2de7579d0cc4c35d2764",
+    "bytes": 148387
+  },
+  "defect": {
+    "source_receipt_sha256": "97aba54bbac256a41269227bd2728c0d8da2e23340a42f55430159d72c51704d",
+    "locator": "§13.3 six-column successive timing table, page 19",
+    "finding": "Header row isolated at the bottom of page 19 while data starts on page 20.",
+    "repair": "Added w:keepNext to the six paragraph properties in the table header row."
+  },
+  "delta_proof": {
+    "zip_members_changed": [
+      "word/document.xml"
+    ],
+    "xml_equal_after_removing_six_new_keepNext": true,
+    "keepNext_added": 6,
+    "table_count": 22,
+    "target_table_rows": 25,
+    "target_table_columns": 6,
+    "visible_text_sha256": "f36d9406f395f0f32416c600b165d0c5810d9040d0c4265e1838e3761b76aedf",
+    "visible_text_identical_to_R05": true,
+    "sample_timing_pairs_preserved": 24,
+    "no_body_text_or_data_edit": true
+  },
+  "mapping_sources": {
+    "official_source_pdf": {
+      "repo_path": "docs/ttqs-quality-20261016/quality-review/0064_R05/official_source.pdf",
+      "sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709"
+    },
+    "unique_blueprint": {
+      "repo_path": "docs/ttqs-quality-20261016/quality-review/0064_R05/0064_UNIQUE_BLUEPRINT_R02.md",
+      "sha256": "ff660b55e36cb5546ab8b2a4769a0cea9e1f7d1ce1d34151ea21566484530945"
+    },
+    "synthetic_replacement_register": {
+      "repo_path": "docs/ttqs-quality-20261016/quality-review/0064_R05/evidence/synthetic_replacement_register_R05.csv",
+      "sha256": "60bd9d15b0ac3f34498f49411ad7afa19a137e4307df678f88b503d35ac2fc2f"
+    },
+    "parent_manifest_sha256": "6a2d99657ef432a34d2baf6e752ab3b80c5b727aee614f2fd04e2ee1fc11fdc6"
+  },
+  "word_render": {
+    "method": "Microsoft Word COM ExportAsFixedFormat to PDF; hidden owned instance",
+    "owned_word_pid": 85820,
+    "owned_process_closed_after_render": true,
+    "page_count": 28,
+    "pdf_sha256": "cadcd2be30cc6f162d5fa4967046e45a0df8b92d8cc692af7e3e86fd5cda48f0",
+    "page_manifest_repo_path": "docs/ttqs-quality-20261016/quality-review/0064_R06_LAYOUT_REPAIR_20261025/render_R06/page_manifest_R06.json"
+  },
+  "qa": {
+    "technical_result": "PASS_TARGETED_DELTA",
+    "visual_result": "PASS_TARGETED_REPAIR_WITH_INHERITED_IDENTICAL_PAGES",
+    "semantic_result": "INHERITED_CONTENT_EQUIVALENCE_ONLY_NOT_FRESH_R06_PASS",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN_HOLD"
+  }
+}

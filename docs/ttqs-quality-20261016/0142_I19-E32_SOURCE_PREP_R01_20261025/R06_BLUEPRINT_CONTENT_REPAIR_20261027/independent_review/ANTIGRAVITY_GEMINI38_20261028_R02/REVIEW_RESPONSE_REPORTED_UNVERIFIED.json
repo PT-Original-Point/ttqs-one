@@ -1,0 +1,70 @@
+{
+  "work_id": "TTQS-0142-I19-E32-R06-W1-OPENCODE-GLM53-FREE-EXACT-SHA-SEMANTIC-REVIEW-20261028T0830",
+  "candidate_sha256": "3781cb4cb2d26625fb5676181f4faa4176ca0bb80e2e3fac518245bbdc42f97e",
+  "review_packet_sha256": "4a1df93a2a7ea945b8c486b270e67026f4371c8961cf95cd249281489a6f79a0",
+  "target_document": "0142",
+  "official_requirement": "I19-E32",
+  "checkbox_index": 156,
+  "decision": "PASS",
+  "review_scope": "TEXT_ONLY",
+  "checks": {
+    "genre": "PASS",
+    "source_alignment": "PASS",
+    "operability": "PASS",
+    "math": "PASS",
+    "sample_real_boundary": "PASS",
+    "negative_neighbors": "PASS",
+    "title_blind": "PASS"
+  },
+  "title_blind_assessment": "Without reading document headings, the body text is uniquely recognizable as a three-year financial turnover/operating revenue reconciliation report. It contains 3 consecutive accounting periods (2023-2025), statement-to-ledger cross-checking tables, nonprofit revenue classification barriers (separating service revenue from donations, subsidies, membership dues, interest, and pass-through funds), formal role separations (custody, finance authority, independent reviewer, document controller), stop-audit triggers, and exact percentage trend calculations.",
+  "negative_neighbor_distinction": "Explicitly distinguishes and rejects near-neighbors in Section 8 and Table 7: rejects 0139/I19-E29/index 153 (certification/employment rates and denominators), 0140/I19-E30/index 154 (training information system adoption rate and duration), and 0141/I19-E31/index 155 (customer satisfaction multi-period scale statistics), prohibiting factual or score cross-contamination.",
+  "calculation_verification": {
+    "operating_revenue": {
+      "2023": "1,200,000 NTD",
+      "2024": "1,320,000 NTD",
+      "2025": "1,452,000 NTD"
+    },
+    "other_income": {
+      "2023": "280,000 NTD",
+      "2024": "260,000 NTD",
+      "2025": "300,000 NTD"
+    },
+    "total_income": {
+      "2023": "1,480,000 NTD (1,200,000 + 280,000 = 1,480,000)",
+      "2024": "1,580,000 NTD (1,320,000 + 260,000 = 1,580,000)",
+      "2025": "1,752,000 NTD (1,452,000 + 300,000 = 1,752,000)"
+    },
+    "yoy_operating_revenue": {
+      "2024_vs_2023": "(1,320,000 - 1,200,000) / 1,200,000 * 100% = +10.00%",
+      "2025_vs_2024": "(1,452,000 - 1,320,000) / 1,320,000 * 100% = +10.00%"
+    },
+    "cumulative_change": {
+      "operating_revenue_2023_to_2025": "(1,452,000 - 1,200,000) / 1,200,000 * 100% = +21.00%",
+      "total_income_2023_to_2025": "(1,752,000 - 1,480,000) / 1,480,000 * 100% = +18.38% (demonstrated separately; never substituted for operating revenue)"
+    },
+    "arithmetic_status": "VERIFIED_EXACT"
+  },
+  "sample_real_boundary_integrity": {
+    "status": "PASS",
+    "declarations": "Rigorous separation maintained throughout. Metadata, document control card, Section 2 (Table 2), Section 4 (Table 4), Section 6, and Appendix A (Table 8) consistently declare REAL=UNKNOWN/HOLD, formal acceptance NOT GRANTED, official TTQS score NOT ASSIGNED, and synthetic data labelled as SAMPLE/SYNTHETIC. No fabricated institutional approvals, signatures, or third-party CPA certificates are claimed."
+  },
+  "findings": [
+    {
+      "severity": "nonblocking",
+      "locator": "Section 2, Table 2 [TABLE 4] / Appendix A, Table 8 [TABLE 10]",
+      "issue": "Real financial source ledgers and official audit statements are currently UNKNOWN/HOLD. Synthetic numbers demonstrate mathematical operability only; production use requires designated finance roles to replace synthetic facts SYN-0142-* with verified primary documents.",
+      "repair": "Maintain UNKNOWN/HOLD status until genuine three-year CPA reports, ledgers, and formal board-approved chart of accounts are deposited into secure controlled storage."
+    },
+    {
+      "severity": "nonblocking",
+      "locator": "Section 0, Document Control Card [TABLE 2] vs Section 1, Table 1 [TABLE 3]",
+      "issue": "Table numbering offset: document text labels Table 1 starting at [TABLE 3] because header and document control cards occupy [TABLE 1] and [TABLE 2].",
+      "repair": "None required; the text explicitly clarifies '文件控制卡（封面控制資訊，不納入操作表編號）', preventing operational confusion."
+    }
+  ],
+  "limitations": [
+    "Review is strictly confined to TEXT_ONLY extracted body content; DOCX binary structure, layout formatting, visual typography, and media objects were not inspected.",
+    "Real financial statements, tax filings, and general ledgers have not been supplied or inspected; no conclusion on the organization's real financial growth is made.",
+    "Formal TTQS acceptance is NOT GRANTED and official score (1-5 scale) is NOT ASSIGNED."
+  ]
+}

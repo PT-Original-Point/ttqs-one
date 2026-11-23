@@ -1,0 +1,70 @@
+{
+  "candidate_revision": "R02",
+  "cli_observed_model_id": "glm-5.3-flash-free",
+  "cli_provider_id": "opencode",
+  "computer_use": false,
+  "doc_id": "0122",
+  "exact_input_binding": {
+    "body_sha256": "61a732058927a033f268171084db05f3a86cac44fe9e92dd21a7a6f77fcb47ea",
+    "candidate_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+    "official_page8_text_sha256": "c34ead45cad406150de5622e157f44727157776ce5c6abf5343c7db5dca42520",
+    "official_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "review_packet_sha256": "33aa3ea32a8855bfb5b67a2ceba49957adfa7ceb2279508df9994961aae1fc31",
+    "source_packet_sha256": "8301b3e12467370086dfccd86c4dbcd50d339f0ed54cda93c2bfcc051b793c3d",
+    "unique_blueprint_sha256": "cbfd0760a03870151d9bc083b8db76655d53107757706f4b1f4449e997553420"
+  },
+  "fallback": "NOT_OBSERVED_IN_SESSION",
+  "observed_at_tpe": "2026-11-01T10:02:37.863019+00:00",
+  "observed_at_utc": "2026-11-01T02:02:37.863019+00:00",
+  "original_local_evidence_sha256": {
+    "reviewer_response": "fc533e2f2f6d63bc10958e8f1bbd6098f121ffdbcaed26cd0bbabce1b37ab3fb",
+    "stdout": "0fea0a1c319cc7fea49ebe1569038e2d255272095568fd2fc4998756f6dbe82a",
+    "terminal": "32af547fd63ab04316da438d90ae7e8b57c7934140d0eedced006cd81294154a"
+  },
+  "privacy": "Original local terminal and stdout remain unchanged. Public copies redact PID/session identifiers. No credential-patterns or tool calls were found in the original stdout.",
+  "project_id": "TTQS_ONE",
+  "public_redacted_copy_sha256": {
+    "stdout": "5969ecdda74c3e9fd81a915ee5150896b5901504f50f264429e394f7af494b97",
+    "terminal": "a08e7b652531f98709a0c47662749f14164ddf1141113df3f4e7834a8eec51b0"
+  },
+  "requested_route": "opencode/glm-5.3-flash-free",
+  "requirement_id": "I19-E10",
+  "review_result": {
+    "blocking_findings": 1,
+    "nonblocking_findings": 1,
+    "response_sha256": "fc533e2f2f6d63bc10958e8f1bbd6098f121ffdbcaed26cd0bbabce1b37ab3fb",
+    "scope": "text-only; no technical, visual, binary or real-world evidence inspection",
+    "verdict": "PARTIAL"
+  },
+  "reviewer_response_binding": {
+    "body_sha256_echo": "61a732058927a033f268171084db05f3a86cac44fe9e92dd21a7a6f77fcb47ea",
+    "candidate_sha256_echo": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+    "exact_local_body_recheck": true,
+    "exact_local_candidate_recheck": true
+  },
+  "route_identity": "VERIFIED_SESSION_ROUTE",
+  "schema": "TTQS_ONE_0122_R02_OPENCODE_REVIEW_PUBLIC_MANIFEST_V1",
+  "status": "HISTORICAL_R02_PARTIAL; NOT_A_PASS; not promoted; formal acceptance not granted.",
+  "tools": false,
+  "upstream_serving_model": "UNKNOWN",
+  "worker_receipt": {
+    "cli_exit_code": 0,
+    "duration_seconds": 125.547,
+    "invoice_independently_verified": false,
+    "reported_cost": 0,
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_bytes": 9474,
+    "stdout_event_types": [
+      "step_start",
+      "text"
+    ],
+    "stdout_sha256": "0fea0a1c319cc7fea49ebe1569038e2d255272095568fd2fc4998756f6dbe82a",
+    "token_usage_reported": {
+      "input": 27578,
+      "output": 2531,
+      "reasoning": 20556
+    },
+    "work_id": "TTQS-0122-I19-E10-R02-W1-GLM-EXACT-SHA-REVIEW-R02-20261028"
+  }
+}

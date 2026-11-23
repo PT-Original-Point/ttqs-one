@@ -1,0 +1,29 @@
+{
+  "schema": "ttqs-one-independent-semantic-review-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0009",
+  "requirement_id": "I01-E06",
+  "revision": "R07_R05",
+  "candidate_sha256": "5BDDF2FFDE8E3DEDCCE4723E46873AC3ABF2F307CB63E8ADE3E336B2F642FFDC",
+  "verdict": "PASS_SEMANTIC_WITHIN_EXTRACTED_CONTENT_SCOPE",
+  "reviewer_type": "Codex internal subagent in fresh isolated context",
+  "reviewer_agent_id": "01a18f20-c637-7f52-8e00-ff278024a2de",
+  "reviewer_name": "Bohr",
+  "review_packet_path": "review/INDEPENDENT_REVIEW_INPUT_R07_R05.md",
+  "review_packet_sha256": "2E104FAAE23116D36841EFAAAC6FF6C5F330870A9E5CB04231ECB6453D21B638",
+  "raw_response_path": "review/SEMANTIC_REVIEW_R07_R05_BOHR.md",
+  "raw_response_sha256": "7124F9AE96A193B30E8BE10429B56CB8887A02891E44FDC293C43D87716A18EC",
+  "verified_sources": {
+    "official_pdf_sha256": "805386B77DF045B396FABAFED7A47D12491C25A0B5744EDD9A04876CAEE34709",
+    "unique_blueprint_row_sha256": "4D00595289266D8126E8E890FC9E503037ACC43D296C0A176DB5025EC01BC3F0",
+    "synthetic_register_sha256": "E431190CF0AE4D433D28A8BB9C88C403DB25EF3780B97F5F2D9DF274B072119A"
+  },
+  "scope": "Full candidate body/table text extracted in document order from the locally SHA-verified DOCX; official PDF page 1, source packet, mapping, unique Blueprint row, sample CSV and R06 synthetic register supplied in the exact-hash review packet.",
+  "limitations": [
+    "Reviewer could not mount/open/hash the local DOCX; local executor hashed it before deterministic extraction. Reviewer explicitly did not claim direct file access.",
+    "Visual layout is excluded; see separate exact-SHA visual receipt.",
+    "No formal association acceptance or REAL evidence asserted."
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "NOT_ASSERTED"
+}

@@ -1,0 +1,59 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0004",
+  "requirement_id": "I01-E02",
+  "work_id": "TTQS-0004-I01-E02-WRITER-R02-20261030",
+  "source_prep_qa": "PASS_SOURCE_PREP_CANDIDATE_NOT_DOCX",
+  "source_prep_commit": "df35a7cd5bf3d042df5cf2ab980ba4ea44865cd4",
+  "worker_lane": "OpenCode v2 CLI",
+  "cli_version": "2.1.4",
+  "models_listed_free_at_preflight": [
+    "opencode/deepseek-v4.1-flash-free",
+    "opencode/glm-5.3-flash-free",
+    "opencode/beam-free",
+    "opencode/big-pickle",
+    "opencode/flint-40b-free",
+    "opencode/mimo-v2.6-flash-free",
+    "opencode/nemotron-3.5-lightning-free",
+    "opencode/nemotron-3.5-super-vl-free"
+  ],
+  "models_list_sha256": "82b24394261c12b7c98211e20257f58fea700de2941d0b6483642cd04226a5a3",
+  "attempts": [
+    {
+      "model_requested": "opencode/deepseek-v4.1-flash-free",
+      "status": "REJECTED_429_NO_RESPONSE_BODY",
+      "http_status": 429,
+      "error_type": "provider.free-limit",
+      "retry_after_ms": 4822000,
+      "retry_after_utc": "2026-10-30T00:34:47.073000Z",
+      "session_id": "ses_e760e8f41ffeLxwaEg2Nx5OKdR",
+      "stdout_sha256": "75a340c212ff2236cc49a5f87a2e1e3816989d1fb70d1518e26bcf8ad5a3fa62",
+      "dispatch_receipt_sha256": "f621709a2d61f77409faefbe7cbda89b6b3870df40a489156b423c6beafbb99d",
+      "candidate_sha256": null,
+      "token_usage": "UNKNOWN"
+    },
+    {
+      "model_requested": "opencode/glm-5.3-flash-free",
+      "status": "REJECTED_429_NO_RESPONSE_BODY",
+      "http_status": 429,
+      "error_type": "provider.free-limit",
+      "retry_after_ms": 4790000,
+      "retry_after_utc": "2026-10-30T00:34:47.672000Z",
+      "session_id": "ses_e760e0e78ffeErOeno2vCryvy7",
+      "stdout_sha256": "154290303034522c574c62f8b7e52badab06d761de0f16bfe37df4c3728873ad",
+      "dispatch_receipt_sha256": "d08b3d9c2b1eae829226e18553063f4094ef5bbcacbef850efc63b36f7bc53d1",
+      "candidate_sha256": null,
+      "token_usage": "UNKNOWN"
+    }
+  ],
+  "lane_state": "WAIT_FOR_PROVIDER_FREE_LIMIT_RESET",
+  "retry_not_before_utc": "2026-10-30T00:34:47.672000Z",
+  "worker_output_available": false,
+  "candidate_docx_created": false,
+  "model_actual": "UNKNOWN_NO_GENERATION_CONFIRMED",
+  "no_silent_fallback": true,
+  "paid_route_used": false,
+  "auto_approve_used": false,
+  "computer_use_used": false,
+  "next_action": "Do not retry either free route before retry_not_before_utc; next scheduled/checkpoint may retry a single explicitly chosen free route after quota reset. Continue other independent deterministic READY work meanwhile."
+}

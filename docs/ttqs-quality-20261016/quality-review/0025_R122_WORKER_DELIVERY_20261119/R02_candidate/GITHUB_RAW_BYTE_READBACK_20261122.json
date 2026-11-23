@@ -1,0 +1,55 @@
+{
+  "schema": "ttqs-one-github-raw-byte-readback-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0025",
+  "official_requirement_id": "I04-E04",
+  "revision": "R02",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "readback_commit": "ba1b036b557b3978d2ef6968ea7f3581e22d029c",
+  "head_at_readback": "ba1b036b557b3978d2ef6968ea7f3581e22d029c",
+  "observed_at_tpe": "2026-11-22T19:40:06+08:00",
+  "verified_at_tpe": "2026-11-22T19:40:06+08:00",
+  "status": "PASS_RAW_BYTE_READBACK",
+  "readback_status": "VERIFIED_RAW_BYTE_READBACK",
+  "readback_method": "GitHub connected fetch_file with base64 at immutable PR branch commit; raw SHA-256 and Git blob SHA-1 independently recomputed.",
+  "candidate_sha256": "49DD7077F59103E41119D75A93B661B52FCB894F85F5ED382CB5B94045E35D27",
+  "candidate_bytes_expected_from_package": 29489,
+  "remote_raw_sha256": "49DD7077F59103E41119D75A93B661B52FCB894F85F5ED382CB5B94045E35D27",
+  "remote_git_blob_sha1": "618b567872ade26d7422e6b4c10a4c8c594783a9",
+  "remote_bytes": 29489,
+  "remote_path": "docs/ttqs-quality-20261016/quality-review/0025_R122_WORKER_DELIVERY_20261119/R02_candidate/0025_I04-E04_R02_CANDIDATE.docx",
+  "expected_file_count": 1,
+  "verified_file_count": 1,
+  "files_mismatched": 0,
+  "errors": [],
+  "same_sha_qa_receipts": [
+    "R02_candidate/DETERMINISTIC_QA_RECEIPT.json",
+    "R02_candidate/visual_49DD7077/VISUAL_QA_RECEIPT.json",
+    "W2_SEMANTIC_REVIEW/WORKER_RESPONSE.json"
+  ],
+  "qa_summary": {
+    "technical": "PASS",
+    "visual": "PASS",
+    "visual_pages": 19,
+    "independent_semantic": "SEMANTIC_PASS",
+    "blocking_findings": 0,
+    "requested_model": "gemini-3.8-flash-high",
+    "served_model": "UNKNOWN"
+  },
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "NOT_ESTABLISHED",
+  "files": [
+    {
+      "doc_id": "0025",
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0025_R122_WORKER_DELIVERY_20261119/R02_candidate/0025_I04-E04_R02_CANDIDATE.docx",
+      "exact_byte_match": true,
+      "expected_sha256": "49DD7077F59103E41119D75A93B661B52FCB894F85F5ED382CB5B94045E35D27",
+      "remote_sha256": "49DD7077F59103E41119D75A93B661B52FCB894F85F5ED382CB5B94045E35D27",
+      "expected_git_blob_sha1": "618b567872ade26d7422e6b4c10a4c8c594783a9",
+      "remote_git_blob_sha1": "618b567872ade26d7422e6b4c10a4c8c594783a9",
+      "expected_bytes": 29489,
+      "remote_bytes": 29489
+    }
+  ]
+}

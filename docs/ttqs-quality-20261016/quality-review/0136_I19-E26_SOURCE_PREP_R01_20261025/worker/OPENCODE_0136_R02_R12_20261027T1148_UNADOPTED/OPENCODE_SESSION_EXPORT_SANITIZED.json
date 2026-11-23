@@ -1,0 +1,93 @@
+{
+  "info": {
+    "id": "ses_e848ad83cffeCR1tVTvu1eu6MR",
+    "projectID": "f27b9df25437c3cad719f47428a6820888a43c04",
+    "model": {
+      "id": "mimo-v2.6-flash-free",
+      "providerID": "opencode",
+      "variant": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 6999,
+      "output": 26874,
+      "reasoning": 302,
+      "cache": {
+        "read": 4864,
+        "write": 0
+      }
+    },
+    "outcome": "succeeded",
+    "time": {
+      "created": 1793072637894,
+      "updated": 1793072988605,
+      "idle": 1793072988611
+    },
+    "location": {
+      "directory": "/[redacted:session-directory:ses_e848ad83cffeCR1tVTvu1eu6MR]"
+    }
+  },
+  "messages": [
+    {
+      "id": "msg_17b7527d3001sdkDjzCF1eLbdR",
+      "time": {
+        "created": 1793072637949
+      },
+      "text": "[redacted:text:msg_17b7527d3001sdkDjzCF1eLbdR]",
+      "files": [],
+      "type": "user"
+    },
+    {
+      "id": "msg_17b752816001C0SohWkjrmq3ws",
+      "time": {
+        "created": 1793072637989,
+        "streamed": 1793072988602,
+        "completed": 1793072988605
+      },
+      "type": "assistant",
+      "agent": "build",
+      "model": {
+        "id": "mimo-v2.6-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_17b752816001C0SohWkjrmq3ws]",
+          "native": {
+            "redacted": "reasoning-native:msg_17b752816001C0SohWkjrmq3ws"
+          },
+          "time": {
+            "created": 1793072642718,
+            "completed": 1793072988589
+          }
+        },
+        {
+          "type": "text",
+          "text": "[redacted:text:msg_17b752816001C0SohWkjrmq3ws]"
+        }
+      ],
+      "finish": "stop",
+      "rawFinish": "stop",
+      "cost": 0,
+      "tokens": {
+        "input": 6999,
+        "output": 26874,
+        "reasoning": 302,
+        "cache": {
+          "read": 4864,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_17b7a81c3001vTUmVeB6Fgb76R",
+      "time": {
+        "created": 1793072988611
+      },
+      "type": "idle",
+      "outcome": "succeeded"
+    }
+  ]
+}

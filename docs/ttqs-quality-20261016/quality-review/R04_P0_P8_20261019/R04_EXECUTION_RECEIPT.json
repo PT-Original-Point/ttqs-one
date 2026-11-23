@@ -1,0 +1,538 @@
+{
+  "schema": "TTQS_ONE_R04_EXECUTION_RECEIPT.v1",
+  "project_id": "TTQS_ONE",
+  "command": "TTQS_ONE_CODEX_NATIVE_WORKER_RECOVERY_SYNC_R04",
+  "source_attachment": {
+    "path": "TTQS_ONE_CODEX_96E5A5B4E5A581E5A9_80E6A593E49C89E58A_R04_20261019.md",
+    "bytes": 36456,
+    "sha256": "3330de8de26275c5e51f299982d87c250bb7e030c9838badafc369e26ee29c35"
+  },
+  "project_binding": {
+    "repo": "PT-Original-Point/ttqs-one",
+    "root": "E:\\TTQS\\_github_sync_0064",
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "pr": 92,
+    "pr_state": "OPEN_DRAFT",
+    "local_head": "ac9a13e394fcb25414d69a6f538f95c700cc26c9",
+    "remote_head_before": "ac9a13e394fcb25414d69a6f538f95c700cc26c9",
+    "prestate": "VERIFIED"
+  },
+  "P0_readonly_preflight": {
+    "writer_owner": "0072 R02 OpenCode CLI Writer active in isolated sandbox; previous R01 interrupted after context churn; no other Writer confirmed.",
+    "reviewer_owner": "NO_LIVE_REVIEWER_CONFIRMED",
+    "opencode_service_pid": 3980,
+    "opencode_service_is_writer": false,
+    "antigravity_process_or_command_on_path": false,
+    "old_word_automation_pids": [
+      6108,
+      7412,
+      10412,
+      9536,
+      9584,
+      3976,
+      7140
+    ],
+    "old_word_processes_counted_as_writer": false,
+    "unsynced_stable_work": "0054_R14 safe-review correction; 0064_R05 visual finding receipt; 0064_R06 fixed candidate/QA; 0070_R03 package-manifest reconciliation; 0070_R01 loose superseded local outputs preserved but not staged",
+    "active_writer_pid": 17152,
+    "active_writer_started_at_local": "2026-10-19T05:42:37+08:00",
+    "initial_snapshot_role": "Historical pre-recovery snapshot; do not treat its R02 RUNNING owner as current.",
+    "current_recovery_snapshot": {
+      "observed_pr_head": "7efacd6c332a79b2e049a1f7ca1533d9acb44ec3",
+      "pr_state": "OPEN_DRAFT",
+      "active_0072_writer": "NONE; R04 CLI writer exited 0",
+      "active_exact_sha_reviewer": "NONE; final 3327fdc review exited 0",
+      "OpenCode process": "No active Writer/reviewer process observed at final check; long-lived service is not an owner",
+      "antigravity": "PAUSED_FOR_THIS_ROUTE; no Computer Use or permission bypass",
+      "current_unsynced_stable_work": "0072 R01 final candidate package and R04 progress/readback receipts"
+    }
+  },
+  "P1_status_reconciliation": {
+    "0057_R07": {
+      "docx_sha256": "a8d67c3f89105d85e47b554007624ce1231c6fb3340e3a9d3bfd14b6ae838705",
+      "status": "DELTA_SEMANTIC_PASS_WITH_SCOPE",
+      "new_review_dispatch": false
+    },
+    "0061_R03": {
+      "docx_sha256": "3d4fe20f7fb825e470ed5dfd71fcaf0f5bb8052dc7a63ef51ee08e2a11668c9c",
+      "status": "TEXT_SEMANTIC_15_OF_15_PASS_WITH_SCOPE",
+      "reviewer_visual_scope": "NOT_INSPECTED_BY_REVIEWER"
+    },
+    "0059_R03": {
+      "docx_sha256": "0263017f16d81b1121bb97410de9895b43b7a42f75632bf71a82b86426fbc2b0",
+      "register_rows": 270,
+      "new_R02_rows_checked": 80,
+      "mapped": 80,
+      "unresolved": 0,
+      "source_receipt": "quality-review/R04_P0_P8_20261019/0059_R02_body_reconciliation.json",
+      "source_receipt_sha256": "d2f044529c74c9dad5fe8e19ba51f529213ad90af5d758fdd39f431ff53f2081",
+      "docx_rebuild": false
+    },
+    "0065_R04": {
+      "docx_sha256": "4b6a0116e8ebd4a3700c4d3243532eeb54e7dea1f6c40e56f7e8a5e7806e654d",
+      "status": "CANDIDATE_SEMANTIC_PASS_VISUAL_PASS_NOT_FORMALLY_ACCEPTED",
+      "visual_scope": "22-page contact plus 4 direct pages; remaining full-size scope limited"
+    },
+    "0066_R01": {
+      "docx_sha256": "c9ec333f27c967eb5bbd28c49f3c54d218783cd659feec936ba9c0c566d1f8d6",
+      "status": "SEMANTIC_PASS_AND_13_PAGE_DIRECT_VISUAL; CANDIDATE_ONLY"
+    },
+    "0058_R08": {
+      "docx_sha256": "0dfcaae1ff9943e46c1b9d527c3df34fa61048547268c482d0dd378e44d7c58b",
+      "status": "DELTA_REVIEW_PASS_WITH_SCOPE",
+      "runtime_model_identity": "UNKNOWN_DUE_CONFLICTING_ATTRIBUTION"
+    },
+    "0063_R02": {
+      "docx_sha256": "b1e8210b57d00813596d343403526787f065da51afcf5df4434868f0c96279f5",
+      "status": "REVIEW_TEXT_PASS_RECORDED",
+      "reviewer_exit_code": "UNKNOWN_NOT_CAPTURED"
+    },
+    "0055_R04": {
+      "docx_sha256": "0c4abf37856611a8226361cedb9bf58fd7c769a4cec27574920ed5d93ff4687b",
+      "status": "SAMPLE_CANDIDATE_WITH_CROSS_DOCUMENT_READBACK; NO_REBUILD"
+    },
+    "0054_R14": {
+      "docx_sha256": "3d000e580b9cb1247fd984ebb0c8f5f817fce08ce7c368cc1799c95a111a979c",
+      "status": "SAFE_OPENCODE_EXACT_SHA_SEMANTIC_PASS; CANDIDATE_ONLY",
+      "antigravity_flag_receipt": "dangerously_skip_permissions=true in preserved historical retry receipt",
+      "actual_original_argv": "UNKNOWN; no native argv record verified",
+      "docx_rebuild": false
+    },
+    "0072_R01": {
+      "doc_id": "0072",
+      "requirement_id": "I16-E03",
+      "official_checkbox_serial": "078",
+      "status": "CANDIDATE_TECHNICAL_PASS_VISUAL_PASS_EXACT_SHA_SEMANTIC_PASS_NOT_FORMALLY_ACCEPTED",
+      "current_docx_sha256": "3327fdc5200770dde695fc822eca3653feed0f562b156d4529e89cdecbdf052e",
+      "body_sha256": "e76818aa55c14e49eff843f80aacbb3cc0cea1b9110526bd38e5a004590ac2e0",
+      "replacement_register_sha256": "abbbc0c0f8f1644d883bc8bab456ab7764cd8354e7c26cdaac8eb482b17525b2",
+      "prior_94005e3_result": "PARTIAL; only 14 inline body labels below 10.5pt",
+      "correction": "Typography only; body semantic text unchanged.",
+      "current_semantic_text_sha256": "16aeaae9e4055b22585bed0aacf2228f44b53896a6fe293de18a89cc54115788",
+      "technical_receipt": "quality-review/0072_R01/evidence/technical_review_3327fdc.json",
+      "visual_receipt": "quality-review/0072_R01/evidence/visual_review_3327fdc.json",
+      "independent_review": "quality-review/0072_R01/evidence/independent_semantic_review_3327fdc.md",
+      "review_scope_note": "Reviewer used supplied visual receipt; direct visual inspection is recorded separately."
+    }
+  },
+  "P2_worker_routes": {
+    "opencode_cli": {
+      "status": "CURRENT_V2_ROUTE_PROBED; writer now active",
+      "path": "C:\\Users\\J\\AppData\\Roaming\\ai.opencode.desktop\\cli\\2.0.29-x64\\opencode-cli.exe",
+      "version": "opencode v2.0.29",
+      "model_catalogue_count": 10,
+      "listed_model_ids": [
+        "opencode/beam-free",
+        "opencode/big-pickle",
+        "opencode/deepseek-v4.1-flash-free",
+        "opencode/glm-5.3-flash-free",
+        "opencode/longcat-2.5-preview-free",
+        "opencode/mimo-v2.6-flash-free",
+        "opencode/nemotron-3-ultra-free",
+        "opencode/nemotron-3.5-lightning-free",
+        "opencode/nemotron-3.5-super-vl-free",
+        "opencode/space-bunny-free"
+      ],
+      "selected_model": "opencode/deepseek-v4.1-flash-free",
+      "selection_source": "Human supplied 2026-10-18 report, attachment SHA 2854ed92ff7d013b6bf74baf6de56d1916632e420d13900651d72dc6ae13e308",
+      "isolated_probe": "PASS exact marker; exit 0; stderr 0; stdout SHA 033e8b9ac32298a426db5f2c567245bc0f426ca2f1f7b29569b28107032747c0",
+      "provider_model_attestation": "NOT_RETURNED; requested model is recorded, not independently attested",
+      "automatic_fallback": false,
+      "legacy_muse_pin": "Replaced in active route pointer; prior 429 and prior route JSON archived locally.",
+      "active_route_file_sha256": {
+        "OPENCODE_CLI_ROUTE.json": "f0c85779aa037ad58e62b172f260a3bcf793f2c657912be4a1be8d26865928c0",
+        "OPENCODE_MODEL_ROUTE.json": "f92d44f6faf78ecc02caf10cef348ce927e0079ac45e27397edeb9d988018471"
+      },
+      "model_list_stdout_sha256": "ba43f069a542fa07e313ed9b9591d554fa2886285edae8ce39ad85c39f535ba3"
+    },
+    "active_writer": {
+      "doc_id": "0072",
+      "attempt": "R02",
+      "state": "RUNNING",
+      "model_requested": "opencode/deepseek-v4.1-flash-free",
+      "cli_version": "opencode v2.0.29",
+      "started_at_local": "2026-10-19T05:42:37+08:00",
+      "pid": 17152,
+      "cwd": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0072_R01\\opencode_isolated_R02",
+      "packet_path": "WRITER_PACKET_R02.md",
+      "packet_sha256": "5fe032860de98262af7ccc2ce9652e27197f4c954d2915dc99ee0e435fdde264",
+      "output_path": "candidate/0072_R01_body.md",
+      "duplicate_writer": false,
+      "computer_use": "NOT_USED",
+      "permission_bypass": "NOT_USED"
+    },
+    "antigravity_writer": "PAUSED_FOR_THIS_ROUTE; no new dispatch; historical effective argv remains UNKNOWN; no Computer Use.",
+    "computer_use": "NOT_USED",
+    "status": "CURRENT_V2_ROUTE_PROBED; 0072 R02 Writer active; R01 interrupted for context churn; no provider failure.",
+    "prior_0072_R01_attempt": {
+      "state": "INTERRUPTED_FOR_CONTEXT_CHURN",
+      "candidate_body_created": false,
+      "provider_error": false,
+      "incident_receipt": "quality-review/0072_R01/evidence/opencode_writer_R01_context_loop.json"
+    },
+    "current_0072_recovery": {
+      "opencode_cli": "v2.0.29; requested free model opencode/deepseek-v4.1-flash-free for R02/R03/R04; all returned exit 0 and zero stderr; provider model identity not separately attested",
+      "R01": "300-second wrapper timeout after context churn; no body; no provider error indicated; not a 3-error/3-repair route failure",
+      "active_writer": "NONE",
+      "antigravity": "PAUSED_FOR_THIS_ROUTE; no new dispatch",
+      "computer_use": "NOT_USED",
+      "permission_bypass": "NOT_USED",
+      "raw_outputs": "R02/R03/R04 public transcripts redacted for transient IDs; original raw local hashes recorded in worker/worker_history_redaction_manifest.json"
+    }
+  },
+  "P3_document_action": {
+    "doc_id": "0064",
+    "requirement_id": "I14-E05",
+    "official_checkbox_serial": "069",
+    "action": "Targeted R05 orphan table-header pagination repair; R05 retained",
+    "candidate_revision": "R06",
+    "candidate_sha256": "f83eeda42589da66c23918d522ad983178a252da9b6dd2240b725e9c9cfb50a1",
+    "technical": "PASS; 24 paired observations recomputed",
+    "visual": "PASS_LAYOUT; 28/28 page coverage; pages 1,19 directly inspected and 26 unchanged pages inherit R05 direct inspection",
+    "semantic": "PASS exact-SHA, OpenCode v2.0.29 Beam Free; raw response preserved",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "SAMPLE_SYNTHETIC_ONLY",
+    "package_manifest": {
+      "path": "quality-review/0064_R06/MANIFEST_R06.json",
+      "entries": 52,
+      "validated": 52,
+      "errors": 0
+    }
+  },
+  "P4_sync": {
+    "status": "VERIFIED_0081_PACKAGE_AND_GITHUB_READBACK",
+    "last_verified_commit": "6e22ec932865567b969350f82d97a1652151c531",
+    "remote_head_at_readback": "6e22ec932865567b969350f82d97a1652151c531",
+    "readback_at_local": "2026-10-19T06:17:34.8704067+08:00",
+    "verified_paths": 107,
+    "exact_byte_matches": 105,
+    "eol_normalized_only": 2,
+    "mismatches": 0,
+    "readback_manifest_path": "docs/ttqs-quality-20261016/quality-review/R04_P0_P8_20261019/evidence/remote_readback_6e22ec9_0072.json",
+    "readback_manifest_sha256": "00e8e4014776b5ce52bdf529cba906fceda4bc46fe697dec359f3894eb0684dd",
+    "prior_0067_readback_manifest_sha256": "4ea0ad1f66d3ef6c848b24387d3743480074666dce662719db092658ba7e97b3",
+    "remote_head_at_preparation": "6e22ec932865567b969350f82d97a1652151c531",
+    "new_docx_sha256": "3327fdc5200770dde695fc822eca3653feed0f562b156d4529e89cdecbdf052e",
+    "package_manifest_path": "docs/ttqs-quality-20261016/quality-review/0072_R01/evidence/PACKAGE_MANIFEST_0072_R01.json",
+    "package_manifest_sha256": "13f7592c78eb40cead6c16c7cbc696a83e94fe613d70797163582aeb695814fc",
+    "readback_scope": "104 manifest-listed package files plus package manifest, R04 execution receipt, and P7 test receipt; 105 raw exact, 2 text CRLF-to-LF normalized, 0 mismatches.",
+    "previous_verified_status": "VERIFIED_0072_PACKAGE_AND_GITHUB_READBACK",
+    "current_0081": {
+      "status": "VERIFIED_REMOTE_READBACK",
+      "candidate_sha256": "afad7608a1e85dd479eb655724cc2ce42cf5f91f0f9bb59d6f601b3b31b56201",
+      "package_manifest_path": "docs/ttqs-quality-20261016/quality-review/0081_R01/qa/package_manifest_R03.json",
+      "package_manifest_sha256": "447227c166f251c67d48f1efc4ef9ff3413f6fb6ae57db02fa69df1ad4f4ca64",
+      "manifest_files": 96,
+      "manifest_mismatches": 0,
+      "readback_commit": "6518947d8cd8d9c06a7f22597a14a62953ac2a9a",
+      "readback_status": "VERIFIED",
+      "remote_head": "6518947d8cd8d9c06a7f22597a14a62953ac2a9a",
+      "verified_files": 96,
+      "raw_byte_exact": 58,
+      "eol_normalized_text": 38,
+      "mismatches": 0,
+      "candidate_remote_sha256": "afad7608a1e85dd479eb655724cc2ce42cf5f91f0f9bb59d6f601b3b31b56201",
+      "package_manifest_remote_git_blob_bytes_sha256": "2cb2c378a3cb22d2d004e946675d39f77bf3cfd959c92ef62f191ead0ba244e7",
+      "readback_manifest_path": "docs/ttqs-quality-20261016/quality-review/R04_P0_P8_20261019/evidence/remote_readback_6518947_0081.json",
+      "readback_manifest_sha256": "0c5c4cfdf7f746fa1f78a077f7f48d47964cb694773248678c602538d7ddd665"
+    }
+  },
+  "P5_schedule_and_cost": {
+    "existing_hourly_task": "UNCHANGED; this wake is on the existing bound thread task",
+    "new_schedulers_created": 0,
+    "next_run_time": "UNKNOWN_FROM_READBACK",
+    "codex_native_usage": "UNKNOWN",
+    "token_cost_note": "OpenCode CLI review reports are worker-local and not Codex/provider billing",
+    "scheduler_changes_this_recovery": 0
+  },
+  "P6_next_ready": {
+    "doc_id": "0082",
+    "requirement_id": "I17C-E01",
+    "official_checkbox_serial": "088",
+    "queue_state": "PENDING_FRESH_SOURCE_AND_WORKER_RECONCILIATION",
+    "selection": "Sequential next candidate; official/Blueprint and local/remote existence still require live verification.",
+    "next_action": "Inspect current requirement and Unique Blueprint row 88, verify no local/remote candidate or live Writer, then proceed only if READY.",
+    "status": "PENDING_RECONCILIATION"
+  },
+  "P7_tests": {
+    "T1": "PASS_EXPECTED_NOOP_FIXTURE_ONLY",
+    "T2": "PASS_ROUTE_ISOLATED_FROM_HISTORICAL_0055_R04",
+    "T3": "PASS_EXACT_SHA_REUSE_NO_NEW_REVIEW_CALLS",
+    "T4": "PASS_CURRENT_0072_GITHUB_BLOB_READBACK: 107 paths; 105 raw exact, 2 text files LF-normalized, 0 mismatches; DOCX SHA verified.",
+    "T5": "PASS_0072_LOCAL_EXACT_SHA_SAMPLE_SYNTHETIC_REAL_BOUNDARY; candidate only, REAL evidence UNKNOWN/HOLD, formal acceptance NOT_GRANTED."
+  },
+  "P8_status": "0081 R03 is synced and read back from GitHub commit 6518947d8cd8d9c06a7f22597a14a62953ac2a9a. DOCX exact SHA afad7608a1e85dd479eb655724cc2ce42cf5f91f0f9bb59d6f601b3b31b56201; technical PASS; all 13 rendered pages directly inspected; exact-SHA semantic PASS (R02 full review plus R03 delta). Package readback: 96 manifest files, 58 raw exact, 38 text EOL-normalized, 0 mismatches. Candidate only; REAL=UNKNOWN/HOLD; formal acceptance NOT_GRANTED. Next 0082/I17C-E01/checkbox 088 awaits fresh source, queue and worker reconciliation.",
+  "updated_at_local": "2026-10-19T15:32:45.397797+08:00",
+  "source_contract_blobs": {
+    "01_HUMAN_MISSION_AND_ACCEPTANCE.md": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e",
+    "02_GENRE_WRITING_MANUAL.md": "4ff863d9f534b6359fc1c7c1685bd8cce02da886",
+    "03_157_CHECKBOX_BLUEPRINTS.md": "8c2bbe7ca9dcbb03088a48934b9e57e7147ede63",
+    "04_CODEX_GOAL_24X7_EXECUTION.md": "62e3dd7dfd8579b6bc97952ffa6236e7494f3b4d",
+    "05_HOURLY_NATIVE_WAKE_RESUME.md": "60ae010c58140e1710ed24016085c6dfaf6ffaee",
+    "06_EXTERNAL_AUDIT_AND_CONTINUATION_20261016.md": "263aaca84891bba8dca087875804343c3670e921"
+  },
+  "P3_document_action_0067": {
+    "doc_id": "0067",
+    "requirement_id": "I15-E03",
+    "official_checkbox_serial": "073",
+    "revision": "R03",
+    "status": "CANDIDATE_SEMANTIC_PASS_TECHNICAL_PASS_VISUAL_PASS; formal acceptance not granted",
+    "candidate_sha256": "f9985cce5ed4b5fdc65a961efe2ccbee754e8f73db773d0604c8695db9ff4e8a",
+    "history": {
+      "R01": "57895a9daecea908630897ccd95cf7763ae9457d18829225ee9d92e4638141f2",
+      "R02": "74e086337bc4ccca6c779dd5005d47cf97415122ca8b79e7745e99b567b5156d"
+    },
+    "change": "Removed extra empty spacer before Appendix A section; preserved body, dataset and replacement register. Earlier R02 fixes removed title border, moved section 3 to a fresh page and widened KPI 7.1 table.",
+    "technical": "PASS; DOCX ZIP/XML valid; 13 Blueprint sections; 49/49 contiguous register fact IDs; key formulas independently recalculated.",
+    "visual": "PASS_LAYOUT_VISUAL; 21-page PDF. R03 pages 1-13 pixel-identical to reviewed R02; pages 14-21 body pixels match reviewed R02 pages 15-22 with footer excluded; new R03 p14 directly inspected.",
+    "semantic": "PASS exact SHA, OpenCode CLI v2.0.29 opencode/beam-free; original output and verbatim review preserved.",
+    "real_evidence": "SAMPLE_SYNTHETIC_ONLY; REAL UNKNOWN/HOLD",
+    "limitation": "Reviewer did not inspect visual layout (separate visual receipt); 0066 R01 candidate SHA was not independently verified because file absent."
+  },
+  "P3_document_action_0072": {
+    "doc_id": "0072",
+    "requirement_id": "I16-E03",
+    "official_checkbox_serial": "078",
+    "revision": "R01 candidate built from writer body R04 plus deterministic exact-fact QA register repair",
+    "status": "CANDIDATE_TECHNICAL_PASS_VISUAL_PASS_EXACT_SHA_SEMANTIC_PASS_NOT_FORMALLY_ACCEPTED",
+    "docx_sha256": "3327fdc5200770dde695fc822eca3653feed0f562b156d4529e89cdecbdf052e",
+    "body_sha256": "e76818aa55c14e49eff843f80aacbb3cc0cea1b9110526bd38e5a004590ac2e0",
+    "replacement_register_sha256": "abbbc0c0f8f1644d883bc8bab456ab7764cd8354e7c26cdaac8eb482b17525b2",
+    "replacement_register_rows": 116,
+    "pages": 40,
+    "writer_attempts": [
+      "R01 interrupted after 300s/no body",
+      "R02 exit 0; body 8472e6617f971fb041beef47ac2468bae00605d8b21f45b9ac983c67449e4e3d",
+      "R03 exit 0; body 429198331a3c81d586d5c08c01ffc279d99bd710329bed528004e7b8ee6c2331",
+      "R04 exit 0; body a485f656da9e111a7a10b2b287ec6afbee5980a4e2d1c2c37a305f8ef461bff9",
+      "R04 exact-fact QA body e76818aa55c14e49eff843f80aacbb3cc0cea1b9110526bd38e5a004590ac2e0"
+    ],
+    "semantic_review_history": [
+      {
+        "sha256": "94005e3b37b998b0c914f613d41d18d918250fb26ee9c6d94c8d8bd5c5f81040",
+        "result": "PARTIAL_TYPOGRAPHY_ONLY"
+      },
+      {
+        "sha256": "3327fdc5200770dde695fc822eca3653feed0f562b156d4529e89cdecbdf052e",
+        "result": "PASS_SEMANTIC_EXACT_SHA"
+      }
+    ],
+    "technical": "PASS; DOCX ZIP valid; body min 10.5 pt; tables min 9.5 pt; no empty tables; formulas/identity bound in receipts",
+    "visual": "PASS_LAYOUT_VISUAL; all 40 pages contact-sheet reviewed; 12 pages full-size reviewed; scope recorded",
+    "real_evidence": "UNKNOWN/HOLD; SAMPLE/SYNTHETIC candidate only",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "R04_recovery_closeout": {
+    "command_state": "APPLIED_VERIFIED",
+    "pr_live_state": {
+      "number": 92,
+      "state": "OPEN_DRAFT",
+      "head_sha": "6e22ec932865567b969350f82d97a1652151c531",
+      "newer_command_comment": false
+    },
+    "p0_os_and_local_remote_alignment": "VERIFIED; remote package readback confirms 107 paths; no active 0072 Writer/reviewer identified; stale Word COM service processes not assigned as owners.",
+    "p1_acceptance_status_correction": "APPLIED; superseded 94005e3 PARTIAL typography finding is closed only on new exact SHA; candidate and formal acceptance remain distinct",
+    "p2_safe_cli_recovery": "APPLIED; OpenCode V2 DeepSeek free requested; R01 timeout/no-body recorded, R02-R04 successful; Antigravity remains paused, no Computer Use/bypass",
+    "p3_worker_return": "APPLIED; R02/R03/R04 bodies, patch packets, redacted complete outputs and hashes preserved; 116-row register extracted",
+    "p4_github_sync": "VERIFIED; 0072 package manifest and 107 paths read back from commit 6e22ec932865567b969350f82d97a1652151c531 with 0 mismatches.",
+    "p5_scheduler_and_cost": "VERIFIED unchanged; zero new schedulers; one existing hourly task; model calls recorded as nonzero",
+    "p6_next_ready": "0073 / I17A-E01 / checkbox 080, after sync and fresh no-writer/package check",
+    "p7_five_tests": "T1 fixture-only PASS; T2 route isolation PASS from observed 0055 record; T3 exact-SHA reuse/no rerun PASS; T4 current 0072 remote readback PASS (105 exact raw, 2 text EOL-normalized, 0 mismatch); T5 current 0072 boundary PASS.",
+    "p8_result": "0072 synced exact candidate; not formally accepted; proceed to 0073 after source/worker preflight."
+  },
+  "P0_current_status": "PR #92 is open draft; local and fetched remote branch both at f478e050c9ff17b562f2151da7c4d973c30b16a9. Live Windows process snapshot found no active 0082 Writer/reviewer: OpenCode CLI PID 3980 is only the resident serve --service process, not a task owner; Antigravity process absent; WINWORD /Automation processes have no 0082 owner evidence and are not counted as Writers. R08 reviewer exit 0 is terminal.",
+  "P3_document_action_0081": {
+    "doc_id": "0081",
+    "requirement_id": "I17B-E03",
+    "official_checkbox_serial": "086",
+    "unique_blueprint_sha256": "ea24a5986af99c2c6b8e68075e64c2e1d0a8702ab3c4434d94120191de3fde18",
+    "candidate_path": "docs/ttqs-quality-20261016/quality-review/0081_R01/candidate/0081_R03.docx",
+    "candidate_sha256": "afad7608a1e85dd479eb655724cc2ce42cf5f91f0f9bb59d6f601b3b31b56201",
+    "body_sha256": "77f84cad04c8487652fa112c84f21c586a7ed5a3c7429e323337e971395277c2",
+    "register_sha256": "4e76c3f7e7dc818e94b1551e81b5d3e83d1dd4361c5aaaa3cf8eea139be7e074",
+    "technical": "PASS_TECHNICAL_SCOPE",
+    "visual": "PASS; Word PDF 13 pages and all page images inspected",
+    "independent_semantic": "PASS exact SHA R03 delta; R02 full substantive review carried forward",
+    "writer_route": "OpenCode CLI v2 opencode/deepseek-v4.1-flash-free; exit 0; actual output and session artifacts preserved",
+    "reviewer_route": "OpenCode CLI v2 opencode/beam-free; R02 full semantic PASS plus R03 delta PASS; exit 0; read only",
+    "state": "CANDIDATE_ONLY; REAL=UNKNOWN/HOLD; formal_acceptance=NOT_GRANTED",
+    "github_readback_commit": "6518947d8cd8d9c06a7f22597a14a62953ac2a9a",
+    "github_candidate_sha256": "afad7608a1e85dd479eb655724cc2ce42cf5f91f0f9bb59d6f601b3b31b56201",
+    "github_readback": "VERIFIED_EXACT_DOCX; 96 manifest files: 58 raw exact, 38 text EOL-normalized, 0 mismatches"
+  },
+  "P4_sync_current": {
+    "status": "VERIFIED_BLUEPRINT_PACKAGE_READBACK",
+    "target": "PT-Original-Point/ttqs-one PR #92 existing branch work/ttqs-one-document-quality-contract-20261016",
+    "readback_commit": "c7daf76083852914d613d3721006b15d1ea0a695",
+    "manifest_path": "docs/ttqs-quality-20261016/quality-review/0084_R01/evidence/blueprint_manifest_R02.json",
+    "manifest_local_sha256": "c69899c96e00cd91d48f9bfbb9c6d564c2b44a75c1732758a7b84bbf61a979d2",
+    "manifest_remote_sha256": "f722318834280bff9ba3024526fbe0396b4d5761198fe5ac3cf8f1ea246d818e",
+    "manifest_git_blob_at_readback": "6ac6e886032401e90f9bcdb930e9eecff0f9b583",
+    "entries_checked": 13,
+    "byte_exact_matches": 1,
+    "text_eol_only_matches": 12,
+    "missing": 0,
+    "mismatches": 0,
+    "blueprint_sha256_local": "72729eab74a1cc61e84854668a7ae4afc37ef4b5eefdcab8956b90c6e0c1a5f3",
+    "blueprint_sha256_remote_content": "63450ec38056980710951571a9ca1b29d6816fe58d58c53ecb67b1e6474db30d",
+    "blueprint_git_blob_at_readback": "52471714fd567f71841e2de947f3e7bce0b46771",
+    "readback_receipt_path": "docs/ttqs-quality-20261016/quality-review/0084_R01/evidence/remote_readback_blueprint_R02.json",
+    "readback_receipt_sha256_local": "a3fe38e5d4fad1497cdc393cae980228664421d6055d389e0b5ce590303afd17",
+    "readback_receipt_sha256_remote_content": "61dce5852b62612b140719f7666e125b440f50ef1c845dccfdd9fdebf70ef33a",
+    "readback_receipt_git_blob": "3d782b320731a5e63c4e86e4d9e36be0b4a6f924"
+  },
+  "P6_current_next_ready": {
+    "doc_id": "0084",
+    "requirement_id": "I17C-E03",
+    "official_checkbox_serial": "090",
+    "queue_state": "ACTIVE_WRITER_DO_NOT_REDISPATCH",
+    "blueprint_path": "docs/ttqs-quality-20261016/quality-review/0084_R01/inputs/UNIQUE_BLUEPRINT_0084_R02.md",
+    "blueprint_sha256": "72729eab74a1cc61e84854668a7ae4afc37ef4b5eefdcab8956b90c6e0c1a5f3",
+    "writer_session_id": "ses_eacf1cb26ffeUBxW4SruAR7csW",
+    "next_action": "Wait for the existing writer; then inspect exact outputs and continue independent QA."
+  },
+  "P4_sync_0081_historical": {
+    "status": "PENDING_GITHUB_PUSH",
+    "target": "PT-Original-Point/ttqs-one PR #92 existing branch",
+    "candidate_sha256": "afad7608a1e85dd479eb655724cc2ce42cf5f91f0f9bb59d6f601b3b31b56201"
+  },
+  "P6_after_0081_historical": {
+    "doc_id": "0082",
+    "requirement_id": "I17C-E01",
+    "official_checkbox_serial": "088",
+    "queue_state": "READY_AFTER_0081_SYNC; pre-dispatch live check required",
+    "genre": "post-training behavior-transfer survey; distinct from 0081 closeout/action-plan verification"
+  },
+  "P3_document_action_0082": {
+    "doc_id": "0082",
+    "requirement_id": "I17C-E01",
+    "official_checkbox_serial": "088",
+    "unique_blueprint_sha256": "451acd1e197b916f2d14c03bd2651653892a4a7955119291e9628bdc5e27e602",
+    "source_packet_sha256": "8a40f41867a1cbe2a847f58538f6a8a9831e5e518a3f0435d90ab7ce59b39388",
+    "revision": "R08",
+    "candidate_path": "docs/ttqs-quality-20261016/quality-review/0082_R01/candidate/0082_R08.docx",
+    "candidate_sha256": "2a4b2aadf2a1ee9e1dce47247b91aa4bd150d83770fda1708bca0c722a07e20d",
+    "body_sha256": "e16528b80a80e245ca2161587ac5f6019dd2d2deed2def570d77a3fafe03924b",
+    "replacement_register_sha256": "c2beac42f56ce4b764ca9c26ee16ebed880c7abac237547565c8b3e139115b10",
+    "replacement_register_rows": 115,
+    "repairs": [
+      "R06 restored N-10/N-11 negative tests, Blueprint +7/+14 reminder cadence, valid A8 synthetic option, and PASS-SAMPLE vocabulary.",
+      "R07 aligned blank questionnaire C1 with the field dictionary and worked example: handoff closure.",
+      "R08 removed literal Markdown delimiters around PASS-SAMPLE in §10; presentation-only change."
+    ],
+    "technical": "PASS; exact DOCX SHA bound; 3 sections, 20 tables, 245 paragraphs; 17-page A4 Word render.",
+    "data": "PASS; 72 locked synthetic rows / 12 synthetic respondents; 115 replacement-register rows; matrix, arithmetic, date, identity and boundary checks pass.",
+    "visual": "PASS_LAYOUT_VISUAL; final R08 page 14 directly inspected; remaining 16 pages pixel-identical to R07; all 17 pages have direct or inherited visual scope; no clipping/table overflow/header-footer overlap; whitespace notes nonblocking.",
+    "independent_semantic": "PASS exact SHA; OpenCode CLI v2.0.29, opencode/beam-free, session ses_ead5792d5ffeMqM16cRB8kGCJT, exit 0; original review and raw outputs preserved.",
+    "reviewer_scope_limitation": "Reviewer used supplied extracted text and technical/visual receipts; did not independently recompute DOCX bytes or inspect PDF. Local exact SHA verified; final page 14 directly inspected, other pages inherited pixel-identical.",
+    "sample_real": "SAMPLE/SYNTHETIC only; REAL=UNKNOWN/HOLD; formal acceptance NOT_GRANTED.",
+    "state": "CANDIDATE_QUALITY_PASS; NOT_FORMALLY_ACCEPTED",
+    "package_manifest": "docs/ttqs-quality-20261016/quality-review/0082_R01/evidence/package_manifest_0082_R08.json",
+    "package_manifest_sha256": "0a1a0322e7d52c6d080daddc885c4312e1a40c546ecb25e1733ba9e650803b36",
+    "package_manifest_sha256_scope": "SHA256 of the manifest bytes stored in the Git index after line-ending normalization."
+  },
+  "P8_current_status": "0082 R08 is synced and verified from GitHub commit f478e050c9ff17b562f2151da7c4d973c30b16a9: 242/242 manifest entries match remote bytes; candidate SHA 2a4b2aadf2a1ee9e1dce47247b91aa4bd150d83770fda1708bca0c722a07e20d; technical/data/visual and exact-SHA semantic PASS. Candidate only; REAL=UNKNOWN/HOLD; formal acceptance NOT_GRANTED. Next READY action: unique Blueprint for 0083/I17C-E02/checkbox 089.",
+  "P2_current_outsourcing": {
+    "OpenCode": "v2.0.29; R08 exact-SHA review succeeded with opencode/beam-free, exit 0; no active 0082 request remains.",
+    "Antigravity": "dispatch remains paused; no new attempt in this recovery; no Computer Use.",
+    "next_route": "Use the existing OpenCode v2 CLI free route for a READY 0083 blueprint/body task after source reconciliation; no new platform or agent."
+  },
+  "P7_current_0082": {
+    "T1_identity_mapping": "PASS: DOCX 0082=I17C-E01=checkbox 088; unique Blueprint SHA recorded.",
+    "T2_live_writer_guard": "PASS: no active 0082 Writer/reviewer; no duplicate dispatch.",
+    "T3_exact_sha_reuse": "PASS: preserved and reused R08 candidate; no rebuild or repeated review.",
+    "T4_remote_package_integrity": "PASS: 242 manifest entries; all 242 fetched remote Git blob byte lengths and SHA-256 matched; 0 mismatches at f478e050c9ff17b562f2151da7c4d973c30b16a9.",
+    "T5_evidence_boundary": "PASS: SAMPLE/SYNTHETIC only; REAL=UNKNOWN/HOLD; formal acceptance NOT_GRANTED."
+  },
+  "P8_current_0083_R03": {
+    "doc_id": "0083",
+    "requirement_id": "I17C-E02",
+    "official_checkbox_serial": "089",
+    "candidate_revision": "R03",
+    "candidate_sha256": "60c18ccbb6f5b723de7cd69efca28c4c14774617c13d90784604427895ab8b07",
+    "body_sha256": "65adee0f9be4643b612817250484407cd1833daa3a2fa6a0a93e797ba68c324e",
+    "semantic": "PASS exact candidate SHA; independent OpenCode v2 DeepSeek V4.1 Flash Free reviewer; exit 0; full DOCX content and all 81-row crosswalks inspected.",
+    "technical": "PASS_STRUCTURE_ONLY; python-docx opened; 63 tables; 10 sections; watermark/footer fields found.",
+    "visual": "BLOCKED_VISUAL_VERIFICATION; R02 defects located (orphan §5.3 heading p14, trailing blank p64); R03 Word PDF and one-page PDF/XPS exports stalled; no R03 visual PASS.",
+    "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+    "REAL": "UNKNOWN/HOLD",
+    "FORMAL_ACCEPTANCE": "NOT_GRANTED",
+    "evidence_manifest": "docs/ttqs-quality-20261016/quality-review/0083_R01/evidence/package_manifest_R03.json",
+    "github_readback": "VERIFIED; 162 entries, no missing or content mismatches"
+  },
+  "P8_status_current": "0084 Blueprint R02 is synced/readback verified. One OpenCode v2 free-model Writer is active (session ses_eacf1cb26ffeUBxW4SruAR7csW, PID 43480); no DOCX exists yet and no duplicate dispatch is permitted. 0083 R03 remains candidate-only, semantic PASS, visual BLOCKED.",
+  "P4_sync_0083_R03": {
+    "status": "VERIFIED_PACKAGE_READBACK",
+    "target": "PT-Original-Point/ttqs-one PR #92 existing branch work/ttqs-one-document-quality-contract-20261016",
+    "readback_commit": "77551d0d0b1a34577f2aa82d0f2f73b772b9d72f",
+    "candidate_sha256": "60c18ccbb6f5b723de7cd69efca28c4c14774617c13d90784604427895ab8b07",
+    "manifest_sha256": "f714723a8245d39cbd643b2ce813332c6f49de475c099a06933ab818b46892e3",
+    "files_checked": 162,
+    "byte_exact_matches": 121,
+    "text_eol_only_matches": 41,
+    "missing": 0,
+    "mismatches": 0,
+    "readback_receipt_path": "docs/ttqs-quality-20261016/quality-review/R04_P0_P8_20261019/0083_GITHUB_READBACK_R03.json",
+    "readback_receipt_sha256": "bd92dd6477bd5cb34668d0b70c47cdb241758d6ee2e06dca31086b325426e711",
+    "remote_docx_exact_sha_verified": true,
+    "readback_receipt_git_blob_sha": "f47560ce5821ade4aa3ba0ecb3aa2693b4cfa73f",
+    "readback_receipt_sha_scope": "SHA256 of fetched remote text blob content; Git object id listed separately."
+  },
+  "P3_document_action_0084_blueprint": {
+    "document_id": "0084",
+    "requirement_id": "I17C-E03",
+    "official_checkbox_serial": "090",
+    "blueprint_r01_sha256": "1978e0c261caa14f26bf03c6307e364d83468fbe1ee476e6e543eb55e98142e7",
+    "blueprint_r01_review": "PARTIAL; precise defects recorded in inputs/BLUEPRINT_REVIEW_R01.md",
+    "blueprint_r02_sha256": "72729eab74a1cc61e84854668a7ae4afc37ef4b5eefdcab8956b90c6e0c1a5f3",
+    "blueprint_r02_review_receipt_sha256": "7dfa84aa3c178d9b3aad7f92c75aad39980db1b60e0367af9a448337de4f90ec",
+    "builder": "OpenCode CLI v2.0.29 opencode/deepseek-v4.1-flash-free",
+    "worker_session": "ses_eacfded6affeoGIzPOMznmvdNV",
+    "worker_exit_code": 0,
+    "blueprint_static_checks": "PASS; identity, source hashes, B1–B4 anchors, date arithmetic, 46 register IDs, sample boundary and case-link checks. Blueprint readiness only.",
+    "candidate_docx": "NOT_BUILT"
+  },
+  "P8_current_0084_blueprint_R02": {
+    "document_id": "0084",
+    "requirement_id": "I17C-E03",
+    "official_checkbox_serial": "090",
+    "blueprint_sha256": "72729eab74a1cc61e84854668a7ae4afc37ef4b5eefdcab8956b90c6e0c1a5f3",
+    "status": "READY_FOR_DOCX_WRITER; BLUEPRINT ONLY",
+    "candidate_docx": "NOT_BUILT",
+    "real_evidence": "UNKNOWN/HOLD",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "P4_sync_0084_blueprint_R02": {
+    "status": "VERIFIED_BLUEPRINT_PACKAGE_READBACK",
+    "target": "PT-Original-Point/ttqs-one PR #92 existing branch work/ttqs-one-document-quality-contract-20261016",
+    "readback_commit": "c7daf76083852914d613d3721006b15d1ea0a695",
+    "manifest_path": "docs/ttqs-quality-20261016/quality-review/0084_R01/evidence/blueprint_manifest_R02.json",
+    "manifest_local_sha256": "c69899c96e00cd91d48f9bfbb9c6d564c2b44a75c1732758a7b84bbf61a979d2",
+    "manifest_remote_sha256": "f722318834280bff9ba3024526fbe0396b4d5761198fe5ac3cf8f1ea246d818e",
+    "manifest_git_blob_at_readback": "6ac6e886032401e90f9bcdb930e9eecff0f9b583",
+    "entries_checked": 13,
+    "byte_exact_matches": 1,
+    "text_eol_only_matches": 12,
+    "missing": 0,
+    "mismatches": 0,
+    "blueprint_sha256_local": "72729eab74a1cc61e84854668a7ae4afc37ef4b5eefdcab8956b90c6e0c1a5f3",
+    "blueprint_sha256_remote_content": "63450ec38056980710951571a9ca1b29d6816fe58d58c53ecb67b1e6474db30d",
+    "blueprint_git_blob_at_readback": "52471714fd567f71841e2de947f3e7bce0b46771",
+    "readback_receipt_path": "docs/ttqs-quality-20261016/quality-review/0084_R01/evidence/remote_readback_blueprint_R02.json",
+    "readback_receipt_sha256_local": "a3fe38e5d4fad1497cdc393cae980228664421d6055d389e0b5ce590303afd17",
+    "readback_receipt_sha256_remote_content": "61dce5852b62612b140719f7666e125b440f50ef1c845dccfdd9fdebf70ef33a",
+    "readback_receipt_git_blob": "3d782b320731a5e63c4e86e4d9e36be0b4a6f924"
+  },
+  "P2_current_0084_writer": {
+    "status": "ACTIVE",
+    "pid": 43480,
+    "session_id": "ses_eacf1cb26ffeUBxW4SruAR7csW",
+    "model": "opencode/deepseek-v4.1-flash-free",
+    "task_path": "docs/ttqs-quality-20261016/quality-review/0084_R01/worker/opencode_docx_task_R01.md",
+    "started_local": "2026-10-19T15:26:42.222891+08:00",
+    "exit_code": null,
+    "candidate_body": "PENDING",
+    "candidate_docx": "PENDING",
+    "no_duplicate_dispatch": true
+  }
+}

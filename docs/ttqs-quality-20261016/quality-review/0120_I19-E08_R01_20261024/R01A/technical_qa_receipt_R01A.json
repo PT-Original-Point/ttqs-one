@@ -1,0 +1,50 @@
+{
+  "schema": "ttqs-one-docx-r01a-technical-assembly-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0120",
+  "requirement_id": "I19-E08",
+  "official_source_page_printed": 8,
+  "candidate_revision": "R01A",
+  "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "finding": "R01 aggregate-only expansion replacement mapping did not provide row-level replacement lineage for all 8 satisfaction records and 14 test records.",
+  "change": "Preserved R01 aggregate rows; added 22 itemized mappings to table 26 and matching sidecar CSV.",
+  "input_candidate_sha256": "7dfc32e23d0be9e5c5749b3e721ae47d7a472dd913d9d247ce76a70eaa8ebaf4",
+  "output_candidate_sha256": "d99e4caec0f2ede04ed607d0e7a897065213c06c8e93bcadb83e638e3b54e57a",
+  "output_candidate_bytes": 58203,
+  "register_sha256": "f61cd436ff03c2b3e4757811f2f763a3656394d0fa2068be9802400ac4bcb606",
+  "change_note_sha256": "c54d79171eaebb084bef09651d781b510cd799f0f10620748e5f6a8385cd8c8d",
+  "source_packet_sha256": "2b04bc2bc232b45247b37ab93bf00e25d8d2fff8402366e771b960c8fe096b9d",
+  "unique_blueprint_sha256": "09a3aec874c14f97d5d6a1bed85d3cd75d617a9cf4bd33871973e5cb27c088ad",
+  "source_csv_sha256": {
+    "SYNTHETIC_SATISFACTION_ITEMS_0120_R01.csv": "9a032b1583f6b21420d73bed373dd1b94642260415e3827f58c2fa5a6828368b",
+    "SYNTHETIC_TEST_ITEM_SCORES_0120_R01.csv": "fd4f02ea60718c7f15b6d7fed2231ea289f5af6b26efd4299f04b37ca56a6545"
+  },
+  "checks": {
+    "satisfaction_records": 8,
+    "satisfaction_responses": 7,
+    "satisfaction_nonresponses": 1,
+    "satisfaction_means_recomputed": true,
+    "test_records": 14,
+    "test_item_values_in_0_to_20": true,
+    "test_totals_match": true,
+    "replacement_register_rows": 22,
+    "docx_table_26_data_rows": 24,
+    "all_added_rows_synthetic_and_pending_real_source": true,
+    "r01_overwritten": false
+  },
+  "technical_qa": "PASS_FOR_ASSEMBLY_AND_ARITHMETIC_ONLY",
+  "visual_qa": "PASS_VISUAL_15_OF_15",
+  "independent_semantic_review": "PASS_FROM_ANTIGRAVITY_CLI_EXACT_SHA; ACTUAL_MODEL_UNKNOWN",
+  "formal_acceptance": "NOT_GRANTED",
+  "created_at_local": "2026-10-25T21:11:02+08:00",
+  "visual_findings_repaired": [
+    "stale R01 visible in header and cover revision cell",
+    "dark header text after cell replacement reduced contrast"
+  ],
+  "visual_receipt_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0120_I19-E08_SOURCE_PREP_R01_20261024\\render_R01A_final\\visual_qa_receipt_R01A.json",
+  "visual_receipt_sha256": "7e0f253ace811aebe5e3a8767c50bae6bab0d024c2f68e7efe1fb8075b570c44",
+  "render_pdf_sha256": "ddc46a53347a5ed3bca315560f79712bd47a582fa5efa66c9e2b1ecb63873752",
+  "render_pdf_pages": 15,
+  "semantic_review_receipt_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0120_I19-E08_SOURCE_PREP_R01_20261024\\worker_R01\\antigravity_R01_20261024\\R11_semantic_review_20261025\\attempt06_R01A\\semantic_review_receipt_R01A.json",
+  "semantic_review_receipt_sha256": "ac36431371207808e168dee9c7f385fb9db928af332d3fc1b9b9746fd9b1f374"
+}

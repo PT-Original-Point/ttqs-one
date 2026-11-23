@@ -1,0 +1,51 @@
+﻿sample_id,location,synthetic_value_or_rule,intended_real_source,replacement_check
+SYN-REG-002,第一單元 1.1節 表格,UNKNOWN_NOT_ASSERTED,REAL_OFFICIAL_CHECKBOX_SERIAL,查驗官方最新紙本評核表是否印有實體序號否則保持未宣稱
+SYN-REG-003,第一單元 1.1節 表格,第 131 項,REAL_CHECKBOX_LIST_ORDINAL,確認為PR92候選清單序號非官方印刷流水號
+SYN-REG-004,第一單元 1.1節 表格,第 119 列,REAL_SEED_ROW_NUMBER,比對142種子表列號是否精確對應0119
+SYN-REG-005,第一單元 1.1節 表格,第 106 列,REAL_CROSSWALK_ROW_NUMBER,比對129轉142矩陣列號確認交付數1拆分數0
+SYN-REG-006,第一單元 1.1節 表格,訓練行政承辦人（整理者）、第二位覆核者（查核者）,REAL_APPOINTED_OFFICER_NAME,替換為機構正式派任承辦人與主管之真實職稱姓名
+SYN-REG-007,第三單元 3.1節 內文,有效詢問中的預先定義目標族群符合率,REAL_MARKET_INDICATOR_NAME,確認正式目標市場指標名稱符合非市占率原則
+SYN-REG-008,第三單元 3.2節 內文,本課程至少有一項內容可說明其可用情境？,REAL_SURVEY_USEFULNESS_QUESTION,置換為機構課後問卷中實際採行之具體可用性自陳題文字
+SYN-REG-009,第四單元 4.1節 表格 F01,SYN-MKT-01,REAL_MARKET_METRIC_CODE,替換為機構內部正式指標編號
+SYN-REG-010,第四單元 4.1節 表格 F01,SYN-VAL-01,REAL_VALUE_METRIC_CODE,替換為機構內部正式指標編號
+SYN-REG-011,第四單元 4.1節 表格 F03,假設官方 LINE 諮詢登記簿（SYN-CHAN-01）,REAL_INQUIRY_CHANNEL_NAME,置換為實際進線諮詢管道如官網表單或實體服務台
+SYN-REG-012,第四單元 4.1節 表格 F03,實體班次課後紙本問卷調查（SYN-CLASS-01）,REAL_SURVEY_COLLECTION_METHOD,置換為實際問卷施測班別與形式
+SYN-REG-013,第四單元 4.1節 表格 F04,2025年第一季（SYN-PERIOD-BASE）,REAL_BASELINE_PERIOD_MKT,填入真實市場基線期程如2024年第四季
+SYN-REG-014,第四單元 4.1節 表格 F04,2025年第1期基礎課程（SYN-PERIOD-BASE）,REAL_BASELINE_PERIOD_VAL,填入真實價值基線班期如第101期研習班
+SYN-REG-015,第四單元 4.1節 表格 F05,20 筆進線登記,REAL_BASELINE_INVITED_MKT,查驗市場基線進線原始總清單筆數
+SYN-REG-016,第四單元 4.1節 表格 F05,20 人結訓發卷,REAL_BASELINE_INVITED_VAL,查驗價值基線問卷實際發放總人次
+SYN-REG-017,第四單元 4.1節 表格 F06,20 筆有效詢問,REAL_BASELINE_DENOMINATOR_MKT,依排除條件核算市場基線有效分母
+SYN-REG-018,第四單元 4.1節 表格 F06,16 份有效問卷,REAL_BASELINE_DENOMINATOR_VAL,清點價值基線完整回收且有效之問卷總數
+SYN-REG-019,第四單元 4.1節 表格 F07,100.0% (20 / 20),REAL_BASELINE_RESPONSE_RATE_MKT,計算市場基線資料有效納入率
+SYN-REG-020,第四單元 4.1節 表格 F07,80.0% (16 / 20),REAL_BASELINE_RESPONSE_RATE_VAL,重新驗算基線問卷有效回覆率是否達標
+SYN-REG-021,第四單元 4.1節 表格 F08,8 筆符合目標族群需求,REAL_BASELINE_NUMERATOR_MKT,逐筆比對市場基線符合目標受眾特徵之人數
+SYN-REG-022,第四單元 4.1節 表格 F08,10 人回答「是」,REAL_BASELINE_NUMERATOR_VAL,逐張清點可用性問題勾選是之問卷總數
+SYN-REG-023,第四單元 4.1節 表格 F09,40.0% (8 / 20 × 100%),REAL_BASELINE_PERCENT_MKT,盲算驗算分子除以分母並四捨五入至小數第一位
+SYN-REG-024,第四單元 4.1節 表格 F09,62.5% (10 / 16 × 100%),REAL_BASELINE_PERCENT_VAL,盲算驗算分子除以分母並四捨五入至小數第一位
+SYN-REG-025,第四單元 4.1節 表格 F10,2025年第三季（SYN-PERIOD-COMP）,REAL_COMPARISON_PERIOD_MKT,填入真實市場比較期程
+SYN-REG-026,第四單元 4.1節 表格 F10,2025年第3期基礎課程（SYN-PERIOD-COMP）,REAL_COMPARISON_PERIOD_VAL,填入真實價值比較班期
+SYN-REG-027,第四單元 4.1節 表格 F11,25 筆進線登記,REAL_COMPARISON_INVITED_MKT,查驗市場比較期進線原始總清單筆數
+SYN-REG-028,第四單元 4.1節 表格 F11,25 人結訓發卷,REAL_COMPARISON_INVITED_VAL,查驗價值比較期問卷實際發放總人次
+SYN-REG-029,第四單元 4.1節 表格 F12,25 筆有效詢問,REAL_COMPARISON_DENOMINATOR_MKT,依排除條件核算市場比較期有效分母
+SYN-REG-030,第四單元 4.1節 表格 F12,20 份有效問卷,REAL_COMPARISON_DENOMINATOR_VAL,清點價值比較期完整回收且有效之問卷總數
+SYN-REG-031,第四單元 4.1節 表格 F13,100.0% (25 / 25),REAL_COMPARISON_RESPONSE_RATE_MKT,計算市場比較期資料有效納入率
+SYN-REG-032,第四單元 4.1節 表格 F13,80.0% (20 / 25),REAL_COMPARISON_RESPONSE_RATE_VAL,重新驗算比較期問卷有效回覆率
+SYN-REG-033,第四單元 4.1節 表格 F14,12 筆符合目標族群需求,REAL_COMPARISON_NUMERATOR_MKT,逐筆比對市場比較期符合目標受眾特徵之人數
+SYN-REG-034,第四單元 4.1節 表格 F14,15 人回答「是」,REAL_COMPARISON_NUMERATOR_VAL,逐張清點比較期可用性問題勾選是之問卷數
+SYN-REG-035,第四單元 4.1節 表格 F15,48.0% (12 / 25 × 100%),REAL_COMPARISON_PERCENT_MKT,盲算驗算分子除以分母並四捨五入至小數第一位
+SYN-REG-036,第四單元 4.1節 表格 F15,75.0% (15 / 20 × 100%),REAL_COMPARISON_PERCENT_VAL,盲算驗算分子除以分母並四捨五入至小數第一位
+SYN-REG-037,第四單元 4.1節 表格 F16,+8.0 個百分點 (+8.0 pp),REAL_DELTA_PERCENT_POINT_MKT,嚴格執行比較期減基線期並確認單位為百分點
+SYN-REG-038,第四單元 4.1節 表格 F16,+12.5 個百分點 (+12.5 pp),REAL_DELTA_PERCENT_POINT_VAL,嚴格執行比較期減基線期並確認單位為百分點
+SYN-REG-039,第四單元 4.1節 表格 F17,部分提升（Positive Delta）,REAL_CONSTRUCT_STATUS_MKT,依前後差數值判定是否大於零
+SYN-REG-040,第四單元 4.1節 表格 F17,部分提升（Positive Delta）,REAL_CONSTRUCT_STATUS_VAL,依前後差數值判定是否大於零
+SYN-REG-041,第四單元 TABLE 3 F18；第六單元 TABLE 7 E01-E02,SAMPLE_MKT_LOG_2025Q1.xlsx | SAMPLE_MKT_LOG_2025Q3.xlsx,REAL_EVIDENCE_FILENAME_MKT,基線與比較期樣本檔名分開列示；轉 REAL 時逐一以可回查真實底冊取代
+SYN-REG-042,第四單元 TABLE 3 F18；第六單元 TABLE 7 E03-E04,SAMPLE_SURVEY_2025_01.xlsx | SAMPLE_SURVEY_2025_03.xlsx,REAL_EVIDENCE_FILENAME_VAL,基線與比較期樣本檔名分開列示；轉 REAL 時逐一以可回查真實底冊取代
+SYN-REG-043,第四單元 TABLE 3 F19；第六單元 TABLE 7 E01-E02,示範索引：Inquiries，基線列 2-21 | 比較期列 2-26,REAL_EVIDENCE_LOCATION_MKT,分別核對兩期真實工作表名稱與列範圍；本樣本索引不代表底層檔案存在
+SYN-REG-044,第四單元 TABLE 3 F19；第六單元 TABLE 7 E03-E04,示範索引：Responses，基線列 2-17 | 比較期列 2-21,REAL_EVIDENCE_LOCATION_VAL,分別核對兩期真實工作表名稱與列範圍；本樣本索引不代表底層檔案存在
+SYN-REG-045,第五單元 5.3節 表格,BOTH_PARTIAL_CANDIDATE,REAL_FINAL_SYNTHESIS_DECISION,依據真實雙構面判定結果進行勾選並簽署意見
+SYN-REG-046,第六單元 TABLE 7 E01-E04,SAMPLE_MKT_LOG_2025Q1.xlsx | SAMPLE_MKT_LOG_2025Q3.xlsx | SAMPLE_SURVEY_2025_01.xlsx | SAMPLE_SURVEY_2025_03.xlsx | 示範索引；底層檔未隨附 | 不代表實際檔案存在 | SAMPLE 索引 | 不代表任何真實檔案或協會紀錄存在,REAL_FILE_SERVER_PATH,REAL 欄僅於真實檔案存在且可調閱時填寫正式伺服器路徑
+SYN-REG-047,第六單元 E01-E04 清冊,SYN-ROLE-ADMIN | SAMPLE 算式參考值 | 真人第二人盲算覆核：未執行 | 狀態：NOT_REVIEWED,REAL_OFFICER_SIGNATURE,所有角色及未執行狀態保持 SAMPLE/UNKNOWN；不得當作真人簽章或覆核
+SYN-REG-048,第九單元 9.2節 內文,在此合成示例中，兩個分開指定的觀察指標均高於示例基線；樣本小且有自選回覆等限制，不能推論為原始點關懷協會成果或訓練造成的因果效果。,REAL_EXECUTIVE_SUMMARY_TEXT,上線時依真實數據與局限性產出正式保守總結報告
+SYN-REG-049,第六單元 E01-E04 授權欄,未提供真人個資或授權原件 | 本例不判定個資法遵狀態 | 未提供任何真人同意書 | 實際授權狀態 UNKNOWN,REAL_AUTHORIZATION_RECORD,確認正式資料來源與授權；不得將示範文字當成真人同意
+SYN-REG-050,第六單元 E01-E04 第二人覆算欄,真人第二人盲算覆核：未執行 | 狀態：NOT_REVIEWED,REAL_SECOND_REVIEW_RECORD,轉 REAL 後須由第二人依原始底冊重新盲算並留下真實簽核證據
+SYN-REG-051,第六單元 TABLE 7 E01-E04 檔名與列號,示範索引；底層檔未隨附 | 不代表實際檔案存在 | 本候選未附逐筆底冊,REAL_EVIDENCE_FILE_AND_LOCATION,正式使用前確認檔案實際存在且位置可調閱

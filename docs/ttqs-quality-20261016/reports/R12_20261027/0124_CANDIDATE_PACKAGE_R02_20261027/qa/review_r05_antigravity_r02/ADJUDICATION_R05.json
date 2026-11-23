@@ -1,0 +1,49 @@
+{
+  "work_id": "TTQS-0124-I19-E12-R02-ANTIGRAVITY-EXACT-SHA-SEMANTIC-REVIEW",
+  "native_model_catalog_confirmed": true,
+  "fallback_status": "UNKNOWN_NOT_VERIFIED; no fallback authorized",
+  "exit_code": 0,
+  "review_scope": [
+    "Exact candidate SHA binding",
+    "Official I19-E12 source and page 8",
+    "Unique Blueprint hash",
+    "R02 Table 3 and Table 6 material changes",
+    "0123/0125 neighboring requirement distinction",
+    "SAMPLE/REAL boundary",
+    "worked example and arithmetic",
+    "fillable operational forms and HOLD criteria"
+  ],
+  "unique_blueprint_sha256": "d0d8b0990d96fb7dab5d02a34d9f507b6434e57778646c920c488f01c1ab0f42",
+  "reviewer_declared_verdict": "PASS",
+  "candidate_sha256": "5ea20da675395954e5587859ddc3ca4b483abaeff90509a86c66950581afec07",
+  "source_packet_sha256": "83a03deb7cbef3f07ef8b7ce0b2b25e1744baa6bc2e96b29e3259453558ccfee",
+  "response_status": "SUCCESS",
+  "doc_id": "0124",
+  "next_action": "Preserve candidate SHA. Do not claim Gemini-verified review or promote semantic acceptance while model route identity remains UNKNOWN; continue unrelated READY work.",
+  "project_id": "TTQS_ONE",
+  "observed_local": "2026-10-27T15:50:38.4748749+08:00",
+  "actual_serving_model": "UNKNOWN",
+  "cli_version": "1.4.7",
+  "review_packet_sha256": "9b27559264eac506e5c772fd8a41dd76abe45a189a4698e59336c54db546726b",
+  "adjudicated_semantic_response": "PASS_TEXT_ONLY",
+  "schema": "TTQS_ONE_R12_0124_ANTIGRAVITY_R02_REVIEW_ADJUDICATION_V1",
+  "acceptance_status": "NOT_GRANTED_ROUTE_IDENTITY_UNKNOWN",
+  "requirement_id": "I19-E12",
+  "limitations": [
+    "Actual serving model UNKNOWN",
+    "Fallback status UNKNOWN_NOT_VERIFIED",
+    "Text-only review; no visual review"
+  ],
+  "verification": {
+    "candidate_unchanged": true,
+    "response_output_tokens": 8768,
+    "tool_call_indicators": 0,
+    "input_binding_match": true,
+    "visual_review": "NOT_PERFORMED_BY_REVIEWER; existing 14-page visual receipt binds same candidate SHA",
+    "blueprint_binding_match": true,
+    "source_binding_match": true,
+    "discrepancy_reviewed": "Tables 5, 7, and 16 contain blank operational input rows; section 6 labels its blank rows as working forms and explicitly says the completed synthetic example in section 8 is separate. Section 14 explicitly scopes its blank checklist to REAL case closure. Not treated as an empty-form-only document.",
+    "total_tokens": 31607
+  },
+  "requested_model": "gemini-3.8-flash-high"
+}

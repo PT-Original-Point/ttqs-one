@@ -1,0 +1,96 @@
+{
+  "session_id": "ses_ea1a826fcffeumwDg7f4giu6By",
+  "worker": "OpenCode v2 CLI",
+  "cli_version": "2.0.32",
+  "model": {
+    "id": "deepseek-v4.1-flash-free",
+    "providerID": "opencode"
+  },
+  "cost": 0.0,
+  "tokens": {
+    "input": 69056,
+    "output": 21626,
+    "reasoning": 46701,
+    "cache_read": 33152,
+    "cache_write": 0
+  },
+  "time_created_ms": 1792584177937,
+  "time_updated_ms": 1792584500482,
+  "time_idle_ms": 1792584500510,
+  "idle_outcome": "succeeded",
+  "messages": [
+    {
+      "seq": 5,
+      "type": "user",
+      "id": "msg_15e57d937001iuoVz96FD39Cp7",
+      "text_chars": 27369,
+      "files_count": 0
+    },
+    {
+      "seq": 6,
+      "type": "assistant",
+      "id": "msg_15e57d97e001eWAjl0pknyYdIF",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "finish": "length",
+      "rawFinish": "length",
+      "cost": 0,
+      "tokens": {
+        "input": 18316,
+        "output": 20165,
+        "reasoning": 45375,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "text_chars": 29844
+    },
+    {
+      "seq": 13,
+      "type": "synthetic",
+      "id": "msg_15e5c8642001fxG8Vdh1nMredi",
+      "text": "Your last response hit the output token limit (stop reason: length). Do not apologize, recap, or repeat yourself. Break the remaining work into smaller pieces."
+    },
+    {
+      "seq": 14,
+      "type": "assistant",
+      "id": "msg_15e5c8647001O3W3FJvnmBV4N7",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "finish": "stop",
+      "rawFinish": "stop",
+      "cost": 0,
+      "tokens": {
+        "input": 50740,
+        "output": 1461,
+        "reasoning": 1326,
+        "cache": {
+          "read": 33152,
+          "write": 0
+        }
+      },
+      "text_chars": 2127
+    },
+    {
+      "seq": 21,
+      "type": "idle",
+      "id": "msg_15e5cc51e001M8ucIJNekRZRR8",
+      "outcome": "succeeded",
+      "time": {
+        "created": 1792584500510
+      }
+    }
+  ],
+  "combined_text_chars": 31971,
+  "manuscript_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0100_0101_R08_SOURCE_BLUEPRINT_20261021\\worker\\opencode_R09_0101\\manuscript_0101_R09_OPENCODE_RECOVERED.md",
+  "manuscript_sha256": "1ebae3f14dd34210311f1bbc7c269b3ba8c471ae31199faf2cd62e741e76b227",
+  "raw_cli_stdout_sha256": "c63369a352369c9ed8e6dae3878f015898aa18aaf838bedf1e0f2230877907ba",
+  "outer_cli_exit_file_exists": true
+}

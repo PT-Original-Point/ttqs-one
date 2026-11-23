@@ -1,0 +1,725 @@
+{
+  "schema": "ttqs_one_0032_r07_independent_deterministic_qa_v1",
+  "receipt_kind": "INDEPENDENT_DETERMINISTIC_TECHNICAL_QA",
+  "created_at_local": "2026-11-08T05:44:22.030116+08:00",
+  "created_at_utc": "2026-11-07T21:44:22.030116+00:00",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0032",
+  "requirement_id": "I06-E03",
+  "revision": "R07",
+  "reviewer": {
+    "worker_id": "01a1b7e0-1ebc-7092-b0a6-81b0f0649615",
+    "alias": "Lorentz",
+    "worker_id_source": "user-provided",
+    "model_service_identity": "UNKNOWN",
+    "identity_note": "Model/service identity was not independently verifiable."
+  },
+  "disposition": {
+    "overall_deterministic_qa": "PARTIAL",
+    "candidate_status": "CANDIDATE",
+    "formal_acceptance": false,
+    "promotion_status": "NOT_PROMOTED",
+    "semantic_review": "NOT_PERFORMED",
+    "visual_review": "NOT_PERFORMED",
+    "partial_reason": "Strict register-to-DOCX value alignment is incomplete; semantic equivalence is outside scope."
+  },
+  "scope": {
+    "candidate_and_sources_read_only": true,
+    "existing_receipts_read_only": true,
+    "only_new_receipt_written": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0032_R07\\qa\\R07_INDEPENDENT_DETERMINISTIC_QA_20261108.json",
+    "github_writes": false,
+    "visual_or_semantic_claims": false
+  },
+  "inputs": {
+    "candidate_docx": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0032_R07\\candidate\\0032_I06-E03_R07.docx",
+      "expected_sha256": "e1d6311e9828f464aba7b9bc47c20fa8b5392951dba96cf9a71d77be73fb691f",
+      "initial_readback_sha256": "e1d6311e9828f464aba7b9bc47c20fa8b5392951dba96cf9a71d77be73fb691f",
+      "end_of_qa_before_receipt_write_sha256": "e1d6311e9828f464aba7b9bc47c20fa8b5392951dba96cf9a71d77be73fb691f",
+      "unchanged": true,
+      "bytes": 61975,
+      "last_write_time_utc": "2026-11-07T20:49:54+00:00",
+      "after_receipt_write_sha256": "e1d6311e9828f464aba7b9bc47c20fa8b5392951dba96cf9a71d77be73fb691f",
+      "unchanged_after_receipt_write": true
+    },
+    "paired_register": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0032_R07\\sources\\SYNTHETIC_REPLACEMENT_REGISTER_0032_R07.csv",
+      "expected_sha256": "31f0d02d35e6b244fde51e793bd05d498a64b5c9522ea13040d2e09a2e1a985e",
+      "initial_readback_sha256": "31f0d02d35e6b244fde51e793bd05d498a64b5c9522ea13040d2e09a2e1a985e",
+      "end_of_qa_before_receipt_write_sha256": "31f0d02d35e6b244fde51e793bd05d498a64b5c9522ea13040d2e09a2e1a985e",
+      "unchanged": true,
+      "bytes": 129501,
+      "last_write_time_utc": "2026-11-07T20:41:10+00:00",
+      "after_receipt_write_sha256": "31f0d02d35e6b244fde51e793bd05d498a64b5c9522ea13040d2e09a2e1a985e",
+      "unchanged_after_receipt_write": true
+    },
+    "writer_receipt": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0032_R07\\qa\\R07_LAYOUT_REPAIR_WRITER_RECEIPT_20261108.json",
+      "sha256": "fbafca934f48e2cc2e85eb44348f7846220c70e9aee69e9af7e7199c50872a9e",
+      "schema": "ttqs_one_0032_r07_integrated_writer_repair_receipt_v1",
+      "receipt_kind": "INTEGRATOR_ASSEMBLED_FROM_WORKER_ARTIFACTS_AND_LOCAL_READBACK",
+      "provenance": "Assembled by the Codex integration coordinator from existing Worker artifacts and fresh local readback; not represented as a receipt authored by the Writer."
+    },
+    "official_sources_and_blueprint": {
+      "official_evidence_table": {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\SOURCES\\TTQS查核佐證文件資料表-訓練機構版 (2).pdf",
+        "sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+        "expected_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+        "hash_match": true,
+        "locator": "PDF printed p.2, Indicator 6, I06-E03",
+        "official_requirement_text": "訓練機構具備執行訓練業務相關職能的說明。"
+      },
+      "official_evaluation_form": {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\SOURCES\\TTQS人才發展品質管理評核表-訓練機構版 (1).pdf",
+        "sha256": "9d253829410a505c77d8a59fa0203b4c052aa223e2c98d1d509c7c1a57083684",
+        "expected_sha256": "9d253829410a505c77d8a59fa0203b4c052aa223e2c98d1d509c7c1a57083684",
+        "hash_match": true,
+        "locator": "PDF printed p.1, Indicator 6",
+        "supported_dimensions": "understand the training unit development direction, determine it, and execute it"
+      },
+      "blueprint": {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\BLUEPRINT_CURRENT.jsonl",
+        "sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+        "expected_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+        "hash_match": true,
+        "row_number": 32,
+        "row_key": "deliverable_id=0032; requirement_id=I06-E03",
+        "expected_row_sha256": "8edcf9bc9cf412657d6a702e0da3c8dc5ddb22b4aa6c53ff52e1fbe8f310f07f",
+        "computed_raw_line_sha256": "8edcf9bc9cf412657d6a702e0da3c8dc5ddb22b4aa6c53ff52e1fbe8f310f07f",
+        "row_hash_match": true,
+        "required_sections": "執行目的及本次紀錄範圍；計畫母體、抽樣框與納入規則；執行步驟、管道與時序；樣本／案件流水欄位定義；邀請、回收、有效及排除流向；缺失、重複與偏差處理；資料保管、權限與去識別；完整合成批次逐筆示例；覆核、修正及異常升級；與工具及後續分析的交接；真實紀錄替換與查核清單；證據位置與版本索引",
+        "required_tables_or_figures": "執行階段—責任角色—操作—控制點—輸出；邀請／接觸／回收／有效／排除流向明細；完整合成樣本逐筆紀錄及納入判定；官方要求—紀錄欄位—來源—覆核追溯表"
+      }
+    },
+    "r06_baseline": {
+      "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0032_R06\\candidate\\0032__訓練機構辦訓作業職能與執行程序說明暨完整示範_R06.docx",
+      "candidate_expected_sha256": "a783e4ebc73787b0c67b428f1dfd287a0eefd015c46236776f42a71f0fe2d5f7",
+      "candidate_observed_sha256": "a783e4ebc73787b0c67b428f1dfd287a0eefd015c46236776f42a71f0fe2d5f7",
+      "register_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0032_R06\\sources\\SYNTHETIC_REPLACEMENT_REGISTER_0032_R06.csv",
+      "register_expected_sha256": "0cbec7c67cef8b9ebe1466356ce5a4b9ba01dbf2de91443c084eb29bc056af97",
+      "register_observed_sha256": "0cbec7c67cef8b9ebe1466356ce5a4b9ba01dbf2de91443c084eb29bc056af97",
+      "receipts": {
+        "build_receipt": {
+          "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0032_R06\\qa\\0032_r06_build_receipt.json",
+          "sha256": "9c031bd3e796787e1216341bd57bc5d86e719e2d404b8c4307952604fb681e61",
+          "expected_sha256": "9c031bd3e796787e1216341bd57bc5d86e719e2d404b8c4307952604fb681e61",
+          "sha_match": true,
+          "schema": "ttqs_one_0032_r06_build_receipt_v1",
+          "status": null,
+          "verdict": null,
+          "visual_status": null,
+          "candidate_sha256": "a783e4ebc73787b0c67b428f1dfd287a0eefd015c46236776f42a71f0fe2d5f7",
+          "register_sha256": "0cbec7c67cef8b9ebe1466356ce5a4b9ba01dbf2de91443c084eb29bc056af97"
+        },
+        "deterministic_consistency": {
+          "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0032_R06\\qa\\0032_r06_deterministic_consistency.json",
+          "sha256": "453dbc057eade1f7c4db7eb57cb0a10bb53ec4f2765d6e7f2fcafa52c33a7e87",
+          "expected_sha256": "453dbc057eade1f7c4db7eb57cb0a10bb53ec4f2765d6e7f2fcafa52c33a7e87",
+          "sha_match": true,
+          "schema": "ttqs_one_0032_r06_deterministic_consistency_v1",
+          "status": "PASS",
+          "verdict": null,
+          "visual_status": null,
+          "candidate_sha256": "a783e4ebc73787b0c67b428f1dfd287a0eefd015c46236776f42a71f0fe2d5f7",
+          "register_sha256": "0cbec7c67cef8b9ebe1466356ce5a4b9ba01dbf2de91443c084eb29bc056af97"
+        },
+        "synthetic_register_qa": {
+          "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0032_R06\\qa\\0032_r06_synthetic_register_qa.json",
+          "sha256": "84e4319b1ccdad6a205448dca035a1c67e6bbfd9451f8695941cae0393435606",
+          "expected_sha256": "84e4319b1ccdad6a205448dca035a1c67e6bbfd9451f8695941cae0393435606",
+          "sha_match": true,
+          "schema": "ttqs_one_0032_r06_synthetic_register_qa_v1",
+          "status": "PASS",
+          "verdict": null,
+          "visual_status": null,
+          "candidate_sha256": null,
+          "register_sha256": "0cbec7c67cef8b9ebe1466356ce5a4b9ba01dbf2de91443c084eb29bc056af97"
+        },
+        "word_technical_qa": {
+          "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0032_R06\\qa\\0032_r06_word_technical_qa.json",
+          "sha256": "20617fa6bf608d1dc6b145b6be1ef025d965401492ce408cf07d63ba4a91f714",
+          "expected_sha256": "20617fa6bf608d1dc6b145b6be1ef025d965401492ce408cf07d63ba4a91f714",
+          "sha_match": true,
+          "schema": "ttqs_one_0032_r06_word_technical_qa_v1",
+          "status": "PASS",
+          "verdict": null,
+          "visual_status": "BLOCKED",
+          "candidate_sha256": "a783e4ebc73787b0c67b428f1dfd287a0eefd015c46236776f42a71f0fe2d5f7",
+          "register_sha256": null
+        },
+        "r05_preservation_manifest": {
+          "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0032_R06\\qa\\0032_r06_r05_preservation_manifest.json",
+          "sha256": "9b8b85164851684c48cb94d5391c0979f461f9fa4ab639fc472cd1da36a33a9d",
+          "expected_sha256": "9b8b85164851684c48cb94d5391c0979f461f9fa4ab639fc472cd1da36a33a9d",
+          "sha_match": true,
+          "schema": "ttqs_one_0032_r06_r05_byte_preservation_v1",
+          "status": "PASS",
+          "verdict": null,
+          "visual_status": null,
+          "candidate_sha256": null,
+          "register_sha256": null
+        },
+        "independent_semantic_review": {
+          "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0032_R06\\qa\\0032_R06_INDEPENDENT_SEMANTIC_REVIEW_20261108.json",
+          "sha256": "b1f3c70a8cd9b53d4b0a7dbbc4863d003387d396e47825da749b600332ce9981",
+          "expected_sha256": "b1f3c70a8cd9b53d4b0a7dbbc4863d003387d396e47825da749b600332ce9981",
+          "sha_match": true,
+          "schema": "ttqs_one_0032_r06_independent_semantic_review_v1",
+          "status": null,
+          "verdict": "FAIL",
+          "visual_status": null,
+          "candidate_sha256": null,
+          "register_sha256": null
+        },
+        "visual_qa_attempt02": {
+          "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0032_R06\\qa\\0032_r06_visual_qa_native_word_attempt02_20261108.json",
+          "sha256": "c8a46304907e098ec2cb0a97440cf273add011489900569e429853edfad3ff67",
+          "expected_sha256": "c8a46304907e098ec2cb0a97440cf273add011489900569e429853edfad3ff67",
+          "sha_match": true,
+          "schema": "ttqs_one_0032_r06_visual_qa_native_word_attempt02_v1",
+          "status": "FAIL",
+          "verdict": null,
+          "visual_status": "FAIL",
+          "candidate_sha256": "a783e4ebc73787b0c67b428f1dfd287a0eefd015c46236776f42a71f0fe2d5f7",
+          "register_sha256": null
+        },
+        "independent_repair_review": {
+          "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0032_R06\\qa\\INDEPENDENT_REPAIR_REVIEW_R06_20261108.json",
+          "sha256": "f23a6863705ae8da228142e3402081bb047271239c8dca804eab504dc55d0ca1",
+          "expected_sha256": "f23a6863705ae8da228142e3402081bb047271239c8dca804eab504dc55d0ca1",
+          "sha_match": true,
+          "schema": "ttqs_one_0032_r06_independent_repair_review_v1",
+          "status": null,
+          "verdict": null,
+          "visual_status": null,
+          "candidate_sha256": "a783e4ebc73787b0c67b428f1dfd287a0eefd015c46236776f42a71f0fe2d5f7",
+          "register_sha256": "0cbec7c67cef8b9ebe1466356ce5a4b9ba01dbf2de91443c084eb29bc056af97"
+        }
+      }
+    }
+  },
+  "checks": [
+    {
+      "id": "EXACT_SHA_AND_STABILITY",
+      "status": "PASS",
+      "evidence": {
+        "candidate_initial_sha256": "e1d6311e9828f464aba7b9bc47c20fa8b5392951dba96cf9a71d77be73fb691f",
+        "candidate_end_of_qa_sha256": "e1d6311e9828f464aba7b9bc47c20fa8b5392951dba96cf9a71d77be73fb691f",
+        "register_initial_sha256": "31f0d02d35e6b244fde51e793bd05d498a64b5c9522ea13040d2e09a2e1a985e",
+        "register_end_of_qa_sha256": "31f0d02d35e6b244fde51e793bd05d498a64b5c9522ea13040d2e09a2e1a985e",
+        "candidate_bytes": 61975,
+        "register_bytes": 129501,
+        "candidate_mtime_utc": "2026-11-07T20:49:54+00:00",
+        "register_mtime_utc": "2026-11-07T20:41:10+00:00",
+        "candidate_sha_after_receipt_write": "e1d6311e9828f464aba7b9bc47c20fa8b5392951dba96cf9a71d77be73fb691f",
+        "register_sha_after_receipt_write": "31f0d02d35e6b244fde51e793bd05d498a64b5c9522ea13040d2e09a2e1a985e",
+        "post_receipt_hashes_unchanged": true
+      },
+      "locator": "candidate and paired register paths"
+    },
+    {
+      "id": "R06_SAME_SHA_UNCHANGED_BASE",
+      "status": "PASS",
+      "evidence": {
+        "r06_candidate_sha256": "a783e4ebc73787b0c67b428f1dfd287a0eefd015c46236776f42a71f0fe2d5f7",
+        "r06_register_sha256": "0cbec7c67cef8b9ebe1466356ce5a4b9ba01dbf2de91443c084eb29bc056af97",
+        "r06_top_level_paragraphs": 121,
+        "r07_top_level_paragraphs": 124,
+        "r06_paragraph_text_is_exact_r07_prefix": true,
+        "r06_tables": 33,
+        "r07_tables": 34,
+        "preexisting_table_differences_other_than_table17_notice": [],
+        "table17_original_rows_preserved_after_notice": true,
+        "r06_receipts": {
+          "build_receipt": {
+            "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0032_R06\\qa\\0032_r06_build_receipt.json",
+            "sha256": "9c031bd3e796787e1216341bd57bc5d86e719e2d404b8c4307952604fb681e61",
+            "expected_sha256": "9c031bd3e796787e1216341bd57bc5d86e719e2d404b8c4307952604fb681e61",
+            "sha_match": true,
+            "schema": "ttqs_one_0032_r06_build_receipt_v1",
+            "status": null,
+            "verdict": null,
+            "visual_status": null,
+            "candidate_sha256": "a783e4ebc73787b0c67b428f1dfd287a0eefd015c46236776f42a71f0fe2d5f7",
+            "register_sha256": "0cbec7c67cef8b9ebe1466356ce5a4b9ba01dbf2de91443c084eb29bc056af97"
+          },
+          "deterministic_consistency": {
+            "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0032_R06\\qa\\0032_r06_deterministic_consistency.json",
+            "sha256": "453dbc057eade1f7c4db7eb57cb0a10bb53ec4f2765d6e7f2fcafa52c33a7e87",
+            "expected_sha256": "453dbc057eade1f7c4db7eb57cb0a10bb53ec4f2765d6e7f2fcafa52c33a7e87",
+            "sha_match": true,
+            "schema": "ttqs_one_0032_r06_deterministic_consistency_v1",
+            "status": "PASS",
+            "verdict": null,
+            "visual_status": null,
+            "candidate_sha256": "a783e4ebc73787b0c67b428f1dfd287a0eefd015c46236776f42a71f0fe2d5f7",
+            "register_sha256": "0cbec7c67cef8b9ebe1466356ce5a4b9ba01dbf2de91443c084eb29bc056af97"
+          },
+          "synthetic_register_qa": {
+            "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0032_R06\\qa\\0032_r06_synthetic_register_qa.json",
+            "sha256": "84e4319b1ccdad6a205448dca035a1c67e6bbfd9451f8695941cae0393435606",
+            "expected_sha256": "84e4319b1ccdad6a205448dca035a1c67e6bbfd9451f8695941cae0393435606",
+            "sha_match": true,
+            "schema": "ttqs_one_0032_r06_synthetic_register_qa_v1",
+            "status": "PASS",
+            "verdict": null,
+            "visual_status": null,
+            "candidate_sha256": null,
+            "register_sha256": "0cbec7c67cef8b9ebe1466356ce5a4b9ba01dbf2de91443c084eb29bc056af97"
+          },
+          "word_technical_qa": {
+            "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0032_R06\\qa\\0032_r06_word_technical_qa.json",
+            "sha256": "20617fa6bf608d1dc6b145b6be1ef025d965401492ce408cf07d63ba4a91f714",
+            "expected_sha256": "20617fa6bf608d1dc6b145b6be1ef025d965401492ce408cf07d63ba4a91f714",
+            "sha_match": true,
+            "schema": "ttqs_one_0032_r06_word_technical_qa_v1",
+            "status": "PASS",
+            "verdict": null,
+            "visual_status": "BLOCKED",
+            "candidate_sha256": "a783e4ebc73787b0c67b428f1dfd287a0eefd015c46236776f42a71f0fe2d5f7",
+            "register_sha256": null
+          },
+          "r05_preservation_manifest": {
+            "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0032_R06\\qa\\0032_r06_r05_preservation_manifest.json",
+            "sha256": "9b8b85164851684c48cb94d5391c0979f461f9fa4ab639fc472cd1da36a33a9d",
+            "expected_sha256": "9b8b85164851684c48cb94d5391c0979f461f9fa4ab639fc472cd1da36a33a9d",
+            "sha_match": true,
+            "schema": "ttqs_one_0032_r06_r05_byte_preservation_v1",
+            "status": "PASS",
+            "verdict": null,
+            "visual_status": null,
+            "candidate_sha256": null,
+            "register_sha256": null
+          },
+          "independent_semantic_review": {
+            "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0032_R06\\qa\\0032_R06_INDEPENDENT_SEMANTIC_REVIEW_20261108.json",
+            "sha256": "b1f3c70a8cd9b53d4b0a7dbbc4863d003387d396e47825da749b600332ce9981",
+            "expected_sha256": "b1f3c70a8cd9b53d4b0a7dbbc4863d003387d396e47825da749b600332ce9981",
+            "sha_match": true,
+            "schema": "ttqs_one_0032_r06_independent_semantic_review_v1",
+            "status": null,
+            "verdict": "FAIL",
+            "visual_status": null,
+            "candidate_sha256": null,
+            "register_sha256": null
+          },
+          "visual_qa_attempt02": {
+            "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0032_R06\\qa\\0032_r06_visual_qa_native_word_attempt02_20261108.json",
+            "sha256": "c8a46304907e098ec2cb0a97440cf273add011489900569e429853edfad3ff67",
+            "expected_sha256": "c8a46304907e098ec2cb0a97440cf273add011489900569e429853edfad3ff67",
+            "sha_match": true,
+            "schema": "ttqs_one_0032_r06_visual_qa_native_word_attempt02_v1",
+            "status": "FAIL",
+            "verdict": null,
+            "visual_status": "FAIL",
+            "candidate_sha256": "a783e4ebc73787b0c67b428f1dfd287a0eefd015c46236776f42a71f0fe2d5f7",
+            "register_sha256": null
+          },
+          "independent_repair_review": {
+            "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0032_R06\\qa\\INDEPENDENT_REPAIR_REVIEW_R06_20261108.json",
+            "sha256": "f23a6863705ae8da228142e3402081bb047271239c8dca804eab504dc55d0ca1",
+            "expected_sha256": "f23a6863705ae8da228142e3402081bb047271239c8dca804eab504dc55d0ca1",
+            "sha_match": true,
+            "schema": "ttqs_one_0032_r06_independent_repair_review_v1",
+            "status": null,
+            "verdict": null,
+            "visual_status": null,
+            "candidate_sha256": "a783e4ebc73787b0c67b428f1dfd287a0eefd015c46236776f42a71f0fe2d5f7",
+            "register_sha256": "0cbec7c67cef8b9ebe1466356ce5a4b9ba01dbf2de91443c084eb29bc056af97"
+          }
+        },
+        "r06_acceptance": "R06 remains unaccepted; its cited semantic and visual receipts are FAIL on R06 SHA"
+      },
+      "locator": "R06 candidate/register and cited R06 QA receipts; DOCX paragraph/table indices"
+    },
+    {
+      "id": "OFFICIAL_SOURCE_AND_BLUEPRINT_BINDING",
+      "status": "PASS",
+      "evidence": {
+        "official_evidence_table": {
+          "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\SOURCES\\TTQS查核佐證文件資料表-訓練機構版 (2).pdf",
+          "sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+          "expected_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+          "hash_match": true,
+          "locator": "PDF printed p.2, Indicator 6, I06-E03",
+          "official_requirement_text": "訓練機構具備執行訓練業務相關職能的說明。"
+        },
+        "official_evaluation_form": {
+          "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\SOURCES\\TTQS人才發展品質管理評核表-訓練機構版 (1).pdf",
+          "sha256": "9d253829410a505c77d8a59fa0203b4c052aa223e2c98d1d509c7c1a57083684",
+          "expected_sha256": "9d253829410a505c77d8a59fa0203b4c052aa223e2c98d1d509c7c1a57083684",
+          "hash_match": true,
+          "locator": "PDF printed p.1, Indicator 6",
+          "supported_dimensions": "understand the training unit development direction, determine it, and execute it"
+        },
+        "blueprint": {
+          "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\BLUEPRINT_CURRENT.jsonl",
+          "sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+          "expected_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+          "hash_match": true,
+          "row_number": 32,
+          "row_key": "deliverable_id=0032; requirement_id=I06-E03",
+          "expected_row_sha256": "8edcf9bc9cf412657d6a702e0da3c8dc5ddb22b4aa6c53ff52e1fbe8f310f07f",
+          "computed_raw_line_sha256": "8edcf9bc9cf412657d6a702e0da3c8dc5ddb22b4aa6c53ff52e1fbe8f310f07f",
+          "row_hash_match": true,
+          "required_sections": "執行目的及本次紀錄範圍；計畫母體、抽樣框與納入規則；執行步驟、管道與時序；樣本／案件流水欄位定義；邀請、回收、有效及排除流向；缺失、重複與偏差處理；資料保管、權限與去識別；完整合成批次逐筆示例；覆核、修正及異常升級；與工具及後續分析的交接；真實紀錄替換與查核清單；證據位置與版本索引",
+          "required_tables_or_figures": "執行階段—責任角色—操作—控制點—輸出；邀請／接觸／回收／有效／排除流向明細；完整合成樣本逐筆紀錄及納入判定；官方要求—紀錄欄位—來源—覆核追溯表"
+        }
+      },
+      "locator": "official evidence table p.2; evaluation form p.1; Blueprint row 32"
+    },
+    {
+      "id": "DOCX_ZIP_OOXML_AND_RELATIONSHIPS",
+      "status": "PASS",
+      "evidence": {
+        "python_docx_open": true,
+        "zip_members": 19,
+        "zip_testzip_bad_member": null,
+        "xml_parts_parsed": 18,
+        "xml_parse_errors": 0,
+        "internal_target_missing": 0,
+        "dangling_relationship_ids": 0,
+        "missing_content_type_override_parts": 0,
+        "external_relationships": 0,
+        "relationships": 15
+      },
+      "locator": "OOXML package rels, [Content_Types].xml and word/document.xml"
+    },
+    {
+      "id": "REQUIRED_SECTIONS_AND_TABLES_PRESENT",
+      "status": "PASS",
+      "evidence": {
+        "required_sections_found_structurally": 12,
+        "required_sections_total": 12,
+        "section_mapping": [
+          {
+            "section": "執行目的及本次紀錄範圍",
+            "locator": "§01 P008-P010; 表01 / T00"
+          },
+          {
+            "section": "計畫母體、抽樣框與納入規則",
+            "locator": "§07 P060; 表11 at P061 / T17"
+          },
+          {
+            "section": "執行步驟、管道與時序",
+            "locator": "§04 P031-P039; 表07 / T11; §06 P047-P052 / T16"
+          },
+          {
+            "section": "樣本／案件流水欄位定義",
+            "locator": "§07 P055-P061; 表11 / T17 and 表12 / T18"
+          },
+          {
+            "section": "邀請、回收、有效及排除流向",
+            "locator": "§07 P058-P063; 表11 / T17"
+          },
+          {
+            "section": "缺失、重複與偏差處理",
+            "locator": "§07 P062-P070; §09 P082-P084; 表15 / T23"
+          },
+          {
+            "section": "資料保管、權限與去識別",
+            "locator": "§10 P088-P096; 表16 / T25"
+          },
+          {
+            "section": "完整合成批次逐筆示例",
+            "locator": "§06-08 P047-P079; 表09 / T14, 表10 / T16, 表12 / T18, 表13 / T20"
+          },
+          {
+            "section": "覆核、修正及異常升級",
+            "locator": "§03 P022-P027; §05 P041-P043; §09 P082-P084; 表21 / T31"
+          },
+          {
+            "section": "與工具及後續分析的交接",
+            "locator": "§08 P073-P079; 表13 / T20 and 表14 / T21; §10 P088-P095; §12 P110, 表19 / T28 and 表21 / T31"
+          },
+          {
+            "section": "真實紀錄替換與查核清單",
+            "locator": "§11-13 P098-P118; 表17 / T26, 表18 / T27, 表19 / T28, 表21 / T31"
+          },
+          {
+            "section": "證據位置與版本索引",
+            "locator": "§13 P114-P118; 表20 / T30 and 表21 / T31"
+          }
+        ],
+        "required_table_types_found": 4,
+        "required_table_types_total": 4,
+        "table_mapping": [
+          {
+            "required_table": "執行階段—責任角色—操作—控制點—輸出",
+            "locator": "表07 / T11"
+          },
+          {
+            "required_table": "邀請／接觸／回收／有效／排除流向明細",
+            "locator": "表11 / T17"
+          },
+          {
+            "required_table": "完整合成樣本逐筆紀錄及納入判定",
+            "locator": "表11 / T17 and 表12 / T18"
+          },
+          {
+            "required_table": "官方要求—紀錄欄位—來源—覆核追溯表",
+            "locator": "表20 / T30 and 表21 / T31"
+          }
+        ],
+        "new_indicator6_table": "§14 P121-P123; Word table T33, 8 rows x 4 columns"
+      },
+      "locator": "main document paragraph/table locators; zero-based indices",
+      "scope_note": "Structural presence only; no semantic sufficiency or usability review."
+    },
+    {
+      "id": "TABLE17_REAL_REPLACEMENT_AREA_TEXT_BOUNDARY",
+      "status": "PASS",
+      "evidence": {
+        "table_index_zero_based": 26,
+        "r06_rows": 12,
+        "r07_rows": 13,
+        "r07_notice_is_first_row": true,
+        "original_rows_preserved_after_notice": true,
+        "explicit_real_label_and_text": "Banner identifies 表17 REAL 作業替換區, states current data UNKNOWN, requires actual people/records and verifiable original locations, disallows treating it as completed SAMPLE/REAL evidence, and requires any SAMPLE copy to be separately fully populated and fact-registered."
+      },
+      "locator": "§11; Word table T26 row 1 banner",
+      "scope_note": "Text and row-preservation check only; no semantic or visual review."
+    },
+    {
+      "id": "INDICATOR6_SAMPLE_REGISTER_ALIGNMENT",
+      "status": "PARTIAL",
+      "evidence": {
+        "register_rows": 153,
+        "unique_fact_ids": 153,
+        "duplicate_fact_ids": [],
+        "first_146_rows_parse_equal_R06": true,
+        "new_fact_rows": [
+          {
+            "fact_id": "SYN-032-147",
+            "document_locator": "§14「理解發展方向」列；SYN-032-147",
+            "docx_table_index_zero_based": 33,
+            "docx_table_row_one_based": 2,
+            "id_occurrences_in_docx": 1,
+            "full_value_exact_after_whitespace_normalization": false,
+            "status": "SAMPLE/SYNTHETIC — not an association record"
+          },
+          {
+            "fact_id": "SYN-032-148",
+            "document_locator": "§14「訂定可核驗目標」列；SYN-032-148",
+            "docx_table_index_zero_based": 33,
+            "docx_table_row_one_based": 3,
+            "id_occurrences_in_docx": 1,
+            "full_value_exact_after_whitespace_normalization": true,
+            "status": "SAMPLE/SYNTHETIC — not an association record"
+          },
+          {
+            "fact_id": "SYN-032-149",
+            "document_locator": "§14「核驗鏈」列；SYN-032-149",
+            "docx_table_index_zero_based": 33,
+            "docx_table_row_one_based": 4,
+            "id_occurrences_in_docx": 1,
+            "full_value_exact_after_whitespace_normalization": false,
+            "status": "SAMPLE/SYNTHETIC — not an association record"
+          },
+          {
+            "fact_id": "SYN-032-150",
+            "document_locator": "§14「監測發現」列；SYN-032-150",
+            "docx_table_index_zero_based": 33,
+            "docx_table_row_one_based": 5,
+            "id_occurrences_in_docx": 1,
+            "full_value_exact_after_whitespace_normalization": false,
+            "status": "SAMPLE/SYNTHETIC — not an association record"
+          },
+          {
+            "fact_id": "SYN-032-151",
+            "document_locator": "§14「改善決策」列；SYN-032-151",
+            "docx_table_index_zero_based": 33,
+            "docx_table_row_one_based": 6,
+            "id_occurrences_in_docx": 1,
+            "full_value_exact_after_whitespace_normalization": false,
+            "status": "SAMPLE/SYNTHETIC — not an association record"
+          },
+          {
+            "fact_id": "SYN-032-152",
+            "document_locator": "§14「責任與頻率」列；SYN-032-152",
+            "docx_table_index_zero_based": 33,
+            "docx_table_row_one_based": 7,
+            "id_occurrences_in_docx": 1,
+            "full_value_exact_after_whitespace_normalization": false,
+            "status": "SAMPLE/SYNTHETIC — not an association record"
+          },
+          {
+            "fact_id": "SYN-032-153",
+            "document_locator": "§14「情境結論」列；SYN-032-153",
+            "docx_table_index_zero_based": 33,
+            "docx_table_row_one_based": 8,
+            "id_occurrences_in_docx": 1,
+            "full_value_exact_after_whitespace_normalization": false,
+            "status": "SAMPLE/SYNTHETIC — not an association record"
+          }
+        ],
+        "register_value_full_string_exact_matches_after_whitespace_normalization": 114,
+        "register_value_full_string_nonmatches": 39,
+        "legacy_nonexact_value_ids": [
+          "SYN-032-007",
+          "SYN-032-008",
+          "SYN-032-L01-03",
+          "SYN-032-L02-03",
+          "SYN-032-L03-03",
+          "SYN-032-L04-03",
+          "SYN-032-L05-03",
+          "SYN-032-L06-03",
+          "SYN-032-L07-03",
+          "SYN-032-045",
+          "SYN-032-046",
+          "SYN-032-047",
+          "SYN-032-048",
+          "SYN-032-049",
+          "SYN-032-050",
+          "SYN-032-051",
+          "SYN-032-053",
+          "SYN-032-054",
+          "SYN-032-055",
+          "SYN-032-L01-04",
+          "SYN-032-L02-04",
+          "SYN-032-L03-04",
+          "SYN-032-L04-04",
+          "SYN-032-L05-04",
+          "SYN-032-L06-04",
+          "SYN-032-L07-04",
+          "SYN-032-127",
+          "SYN-032-134",
+          "SYN-032-135",
+          "SYN-032-136",
+          "SYN-032-137",
+          "SYN-032-138",
+          "SYN-032-139"
+        ],
+        "new_nonexact_value_ids": [
+          "SYN-032-147",
+          "SYN-032-149",
+          "SYN-032-150",
+          "SYN-032-151",
+          "SYN-032-152",
+          "SYN-032-153"
+        ],
+        "legacy_ids_printed_in_docx": 0,
+        "legacy_ids_total": 146,
+        "source_and_blueprint_hash_bindings": {
+          "official_evidence_table": {
+            "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\SOURCES\\TTQS查核佐證文件資料表-訓練機構版 (2).pdf",
+            "sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+            "expected_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+            "hash_match": true,
+            "locator": "PDF printed p.2, Indicator 6, I06-E03",
+            "official_requirement_text": "訓練機構具備執行訓練業務相關職能的說明。"
+          },
+          "official_evaluation_form": {
+            "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\SOURCES\\TTQS人才發展品質管理評核表-訓練機構版 (1).pdf",
+            "sha256": "9d253829410a505c77d8a59fa0203b4c052aa223e2c98d1d509c7c1a57083684",
+            "expected_sha256": "9d253829410a505c77d8a59fa0203b4c052aa223e2c98d1d509c7c1a57083684",
+            "hash_match": true,
+            "locator": "PDF printed p.1, Indicator 6",
+            "supported_dimensions": "understand the training unit development direction, determine it, and execute it"
+          },
+          "blueprint": {
+            "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\BLUEPRINT_CURRENT.jsonl",
+            "sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+            "expected_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+            "hash_match": true,
+            "row_number": 32,
+            "row_key": "deliverable_id=0032; requirement_id=I06-E03",
+            "expected_row_sha256": "8edcf9bc9cf412657d6a702e0da3c8dc5ddb22b4aa6c53ff52e1fbe8f310f07f",
+            "computed_raw_line_sha256": "8edcf9bc9cf412657d6a702e0da3c8dc5ddb22b4aa6c53ff52e1fbe8f310f07f",
+            "row_hash_match": true,
+            "required_sections": "執行目的及本次紀錄範圍；計畫母體、抽樣框與納入規則；執行步驟、管道與時序；樣本／案件流水欄位定義；邀請、回收、有效及排除流向；缺失、重複與偏差處理；資料保管、權限與去識別；完整合成批次逐筆示例；覆核、修正及異常升級；與工具及後續分析的交接；真實紀錄替換與查核清單；證據位置與版本索引",
+            "required_tables_or_figures": "執行階段—責任角色—操作—控制點—輸出；邀請／接觸／回收／有效／排除流向明細；完整合成樣本逐筆紀錄及納入判定；官方要求—紀錄欄位—來源—覆核追溯表"
+          }
+        }
+      },
+      "locator": "§14; Word table T33 rows 2-8; R07 replacement-register rows 147-153",
+      "scope_note": "IDs/locators are present for the seven new facts. Six new full value strings differ. Semantic equivalence is UNKNOWN by scope."
+    },
+    {
+      "id": "ARITHMETIC_AND_PERCENTAGES",
+      "status": "PASS",
+      "evidence": {
+        "recomputed": "9=8+1; 8=7+1; 7/8=87.5%; 6/7=85.7%; 5/6=83.3%; 5/7=71.4%; 1/6=16.7%; 7=5+1+1; 6=5+1; 5*120+90+0=690 minutes; 120*90%=108 minutes. All displayed results match, percentages rounded to one decimal where shown."
+      },
+      "locator": "§07 P062; §08 P073-P079; 表13 / T20; 表14 / T21; 表09 / T14; 表12 / T18"
+    },
+    {
+      "id": "NO_BROKEN_LINKS_OR_NUMBERED_REFERENCES",
+      "status": "PASS",
+      "evidence": {
+        "internal_relationship_targets_missing": 0,
+        "dangling_relationship_ids": 0,
+        "hyperlink_anchors": 0,
+        "bookmark_targets": 0,
+        "REF_or_PAGEREF_fields": 0,
+        "external_relationships": 0,
+        "printed_table_labels": "表01 through 表21 found",
+        "unresolved_table_labels": 0,
+        "cross_document_refs": "0031/I06-E02 and 0033/I07-E01 resolve to Blueprint rows 31 and 33"
+      },
+      "locator": "OOXML relationships, document reference fields, numbered labels, Blueprint rows 31/33"
+    },
+    {
+      "id": "EFFECTIVE_FONT_FLOORS",
+      "status": "PASS",
+      "evidence": {
+        "method": "Run direct size > character-style chain > paragraph-style chain > explicit table-style size > document defaults; no theme-only size inference.",
+        "docDefaults_pt": 11.0,
+        "table_style_explicit_size_definitions": 0,
+        "body_text_runs": 78,
+        "table_text_runs": 606,
+        "body_direct_min_pt": 10.5,
+        "table_direct_min_pt": 9.5,
+        "body_effective_min_pt": 10.5,
+        "table_effective_min_pt": 9.5,
+        "unresolved_runs": 0,
+        "below_floor_runs": 0
+      },
+      "locator": "word/document.xml and word/styles.xml"
+    },
+    {
+      "id": "NO_EXISTING_ARTIFACT_OR_EXTERNAL_WRITES",
+      "status": "PASS",
+      "evidence": {
+        "candidate_modified": false,
+        "register_modified": false,
+        "sources_or_blueprint_modified": false,
+        "existing_receipts_modified": false,
+        "github_writes": false,
+        "external_effects": [],
+        "only_new_output": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0032_R07\\qa\\R07_INDEPENDENT_DETERMINISTIC_QA_20261108.json"
+      },
+      "locator": "write-scope readback"
+    }
+  ],
+  "findings": [
+    {
+      "id": "F-01",
+      "severity": "MATERIAL",
+      "status": "PARTIAL",
+      "title": "Strict register value text alignment incomplete",
+      "details": "All seven new IDs and locators are present once in §14, but only SYN-032-148 has an exact full-value match after whitespace normalization. SYN-032-147 and SYN-032-149 through SYN-032-153 are worded differently in the table. Across 153 rows, 114 full strings match and 39 do not (33 carried unchanged from R06, 6 new R07 rows). No semantic equivalence judgment was made."
+    },
+    {
+      "id": "F-02",
+      "severity": "INFORMATIONAL",
+      "status": "PARTIAL",
+      "title": "Historic register IDs are not printed in the candidate body",
+      "details": "The 146 inherited register rows are parsed-row identical to R06, but none of their fact_id strings is printed in the R07 DOCX. The seven new IDs are each printed once. Historic fact-level equivalence and locator adequacy remain UNKNOWN within deterministic-only scope."
+    }
+  ],
+  "non_claims": [
+    "No R07 semantic review was performed.",
+    "No R07 visual or page-layout review was performed.",
+    "No formal acceptance or promotion was granted.",
+    "R06 semantic FAIL and visual FAIL receipts are bound to R06 SHA and are not R07 verdicts.",
+    "The writer receipt is integrator-assembled, not represented as writer-authored."
+  ],
+  "write_scope": {
+    "post_write_readback": {
+      "candidate_sha256": "e1d6311e9828f464aba7b9bc47c20fa8b5392951dba96cf9a71d77be73fb691f",
+      "register_sha256": "31f0d02d35e6b244fde51e793bd05d498a64b5c9522ea13040d2e09a2e1a985e",
+      "both_inputs_still_match_expected": true
+    }
+  }
+}

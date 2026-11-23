@@ -1,0 +1,42 @@
+{
+  "schema": "TTQS_ONE_VISUAL_REVIEW.v1",
+  "document_id": "0083",
+  "requirement_id": "I17C-E02",
+  "official_checkbox": "089",
+  "revision": "R06",
+  "candidate_docx_sha256": "5b1089c7f16cff1423824609d3a28025530a3ee2483bab2c7701305ca4c2a51a",
+  "pdf_sha256": "7bcb85f6e97f0b8eefda9e4a4927aa54cdd3d24567411d96bfb45bbe8bf96db3",
+  "page_count": 62,
+  "review_method": "Direct full-page contact-sheet inspection plus full-resolution page inspection; reviewer is visually separate from document build operation, not an independent semantic reviewer.",
+  "coverage": {
+    "contact_sheet_pages": "1-62",
+    "full_resolution_pages": [
+      1,
+      5,
+      6,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62
+    ],
+    "page_images_covered": 62
+  },
+  "verdict": "FAIL_REPAIR_REQUIRED",
+  "finding": "Appendix A source-ID column is too narrow: SRC identifiers wrap vertically by character on rendered pages 50-51, impairing lookup. This was corrected in R07.",
+  "limitations": [
+    "Visual/layout only; no semantic verdict.",
+    "No formal acceptance."
+  ]
+}

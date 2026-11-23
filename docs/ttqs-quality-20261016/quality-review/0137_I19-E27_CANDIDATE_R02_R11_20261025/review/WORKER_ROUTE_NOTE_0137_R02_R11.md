@@ -1,0 +1,3 @@
+# 0137 R02 R11 worker dispatch note
+
+One wrapper invocation failed locally before launching Antigravity because PowerShell's reserved read-only PID variable was assigned. No CLI/provider process was created and no model call occurred for that attempt. The wrapper was corrected to use agyProcessId; the subsequent single bounded text-only CLI call completed with exit code 0 and preserved the raw response. CLI stderr reported that --mode plan had no effect while slash-command expansion was disabled. No Computer Use or tools were requested or observed. Requested model gemini-3.8-flash-high; actual serving model and fallback identity UNKNOWN. This is a prelaunch wrapper repair, not an Antigravity provider failure.

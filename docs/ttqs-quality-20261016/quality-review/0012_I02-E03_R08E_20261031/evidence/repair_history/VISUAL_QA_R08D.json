@@ -1,0 +1,20 @@
+{
+  "receipt_id": "0012-I02-E03-R08D-VISUAL-QA",
+  "observed_at_local": "2026-10-31T00:40:08+08:00",
+  "candidate_sha256": "a98907526e47b02e5bab2c16b99ca201d3d9b6ae119263893592126e89c4fc4c",
+  "pdf_sha256": "e1fe39d6449d1b296e4ed29f03571b0b5b5d5604a78e7492be5fbdbd28dae76d",
+  "inspected_pages": [
+    14,
+    15,
+    16
+  ],
+  "page_image_sha256": {
+    "14": "b10fd7f5062108cc1954e520e81e322c4fcea5ad428d293faa24535cbb4b3eee",
+    "15": "a4a7e1992eebb30293c1d550ff49c2d574e87c2432e7649d9ebacca4417e0004",
+    "16": "9ef7022eb5b41f3a1873533e0df04c7378e44602361dc130b25a63754242e863"
+  },
+  "status": "FAIL",
+  "finding": "Page 14 ends with the standalone R08 SAMPLE monthly-report table header; its data starts on page 15. Header paragraph keep-with-next did not move the table header with the first row. Section 11 begins cleanly on page 16.",
+  "root_cause": "Word table pagination does not honor the intended keep-with-next setting across this header-row boundary in this layout.",
+  "next_repair": "Apply a page break before the complete R08 SAMPLE monthly-report heading so heading, context, and table start together."
+}

@@ -1,0 +1,492 @@
+你是 TTQS ONE 的獨立語意與可用性審查者。請只審查下方所附的文件材料；這是一項只讀審查，不要修改、生成或另存任何文件，也不要使用命令、檔案工具或其他工具。
+
+工作識別：doc_id=0030；requirement=I06-E01；candidate=R04。
+候選 DOCX SHA-256：c1bde91c1bb92407fd631a0692c6d2cab8a997f591a4cc8a4251ab73783e4a72
+抽取正文 SHA-256：6ac327bb606b1066ad3730136803dd40b394cfc5cab6dc603e15f09a4ea8edc9
+Word 原生全頁視覺檢查收據 SHA-256 待由主協調者另附；本次你的審查範圍僅為語意、官方需求對應、可操作性、合成事實一致性與 SAMPLE/REAL 界線。不得宣稱完成視覺檢查。
+
+依下列條件作出明確 PASS 或 FAIL：
+1. 是否忠實且充分回應官方唯一需求「工作經驗的相關受訓證明。」；不能擴張成資格認證或真實任職證明。
+2. 是否提供可直接使用的完整 SAMPLE/SYNTHETIC 示範，而非空白表、只有提示或待填內容；流程和欄位能否讓協會實際追溯工作任務、受訓內容、證據原件、核對、缺口及後續行動。
+3. 是否清楚承認無真實受訓者、雇主、工作經驗、證書、簽章、課程或第三方原件；缺失保持 UNKNOWN / NOT_VERIFIED，沒有把合成例升為 REAL。
+4. 固定合成鍵 SYN-0030-001 至 -015 是否被一致使用，替換清冊是否完整且逐鍵可追溯；不要因同一鍵多次引用就要求多列清冊。
+5. 是否有虛構法定義務、未提供的制度、算術或資格判定；有沒有負向近鄰 DOC 0029 I05-E03 或 0031 I06-E02 的正文混用。
+6. 針對協會人員、複核者、管理者、評核閱讀者的實務可操作性與可讀性。
+
+審查規則：
+- 只對此候選 SHA 給結論；不要把不同版本或不同收據拼接。
+- 自稱/Writer 的 PASS 不能作為證據，請指出可核對的正文定位。
+- 高/中缺陷須 FAIL；低風險建議可以 PASS 但列出。
+- 若證據不足，結論 UNKNOWN/FAIL 並說明精確缺口。
+- 回覆控制在 1,200 個中文字內，使用繁體中文。
+- 最終輸出必須有：candidate_sha256、review_scope、decision、findings（每項含嚴重度/章節或表格定位/理由）、negative_neighbor_check、sample_real_boundary、limitations、reviewer_model_requested=gemini-3.8-flash-high、provider_served_model=UNKNOWN（除非 CLI 回執能證明）。
+
+以下是本次唯讀審查材料：
+
+
+## 1. 官方需求原文與來源定位
+ 
+2 
+項目 評核指標項目 
+內涵說明（以下為
+例，但不以此為
+限） 
+常見參考佐證資料 
+（並註明資料來源及頁碼） 
+系
+統
+性 
+4.訓練品質
+管 理 的
+系 統 化
+文 件 資
+訊 
+展示文件（如：訓練
+手冊、訓練體系圖
+表、程序或辦法等相
+關文件）以說明訓練
+機構如何運作TTQS
+管理系統。 
+展示此文件如何核
+准、公告、更新、保
+存紀錄。 
+ 訓練需求的定期調查與分析。 
+ 不同訓練課程的設計與規劃方
+向。 
+ 訓練的提供方式及選擇的指標。 
+ 訓練結果的評估 、訓練實施的依
+據及標準化作業流程（SOP）。 
+ 機構如何運作 TTQS 管理系統及
+如何核准、公告、更新、保存紀
+錄的證明資料。 
+ 其他： 
+ 
+連
+結
+性 
+5.訓練規劃
+及 經 營
+目 標 的
+連結性 
+說明對外訓練發展課
+程及年度營運計畫之
+連結性。 
+展現訓練發展重點課
+程的行動計畫。 
+ 學員訓練 及訓練機構年度事業計
+畫的相關資料。 
+ 訓練課程體系 及訓練機構業務策
+略方向的相關資料。 
+ 訓練規劃 及達到客戶課程績效目
+標的證明資料。 
+ 其他： 
+能
+力 
+6.訓練機構
+的 行 政
+管 理 能
+力 及 訓
+練 主 管
+相 關 職
+能 
+展現訓練單位有適當
+的分工及人員有足夠
+的訓練相關能力以執
+行對外訓練業務。 
+展現訓練部門主管具
+備能充分了解訓練單
+位發展方向訂定及執
+行之能力。 
+ 工作經驗的相關受訓證明。 
+ 專業訓練人員 職能評估方法等證
+明。 
+ 訓練機構具備執行訓練業務相關
+職能的說明。 
+ 其他： 
+設計 
+（Design） 
+7.訓練需求相關
+的職能分析及
+應用 
+展現課程設計過程中
+有適當的確認客戶或
+市場訓練需求，據以
+進行適當的職能落差
+分析。 
+展現職能分析與運用
+之方法及紀錄。 
+ 訓練課程計畫配合客戶 及受訓者
+需求、職能需求的調查規劃的證
+明。 
+ 針對學員做職能盤點或職能分析
+並據以規劃適切課程的證明資
+料。 
+ 對相關職能分析 及運用的方法均
+能適時檢討隨時改進。 
+ 有課程設計進度表、課程規劃流
+程圖說明、訓練規劃書等佐證資
+料。 
+ 其他： 
+8.訓練方案的系
+統設計 
+展現訓練發展課程規
+劃時，有適當的訓練
+課程設計流程。 
+展 現 有 適 當 的 訓
+練 方 案 產 出 ， 如
+訓 練 目 標 、 訓 練
+ 相關文件紀錄能顯示近年來訓練
+目標、訓練方法、課程時程安
+排、師資遴選、學員遴選條件、
+訓練教材、設施與環境、訓練評
+估方法等的檢討及改善過程。 
+ 針對訓練方案的系統設計能適時
+
+## 2. 交叉對照列
+{
+  "requirement_id": "I06-E01",
+  "deliverable_count": "1",
+  "split_extra_count": "0",
+  "deliverable_ids": "0030",
+  "document_titles": "工作經驗的相關受訓證明_可直接使用成品"
+}
+
+
+## 3. 專屬 Blueprint 列
+{
+  "deliverable_id": "0030",
+  "requirement_id": "I06-E01",
+  "final_filename": "0030__工作經驗的相關受訓證明_可直接使用成品.docx",
+  "document_genre": "專屬佐證紀錄｜工作經驗的相關受訓證明_可直接使用成品",
+  "document_purpose": "本件專屬焦點：工作經驗的相關受訓證明_可直接使用成品；需直接回應的官方佐證要求為：工作經驗的相關受訓證明。；產出一份可實際執行、可閱讀並可追溯的專屬成品；本分件職責與同要求其他分件清楚分開。",
+  "primary_user_or_reader": "供執行人員、主管與評核閱讀者追溯要求、事實、證據位置及覆核狀態。",
+  "evidence_role": "保存此項要求專屬的原始紀錄或證據索引；不代替第三方原件。 本文件只擁有 I06-E01 的直接紀錄／分析口徑；不得吞併其他要求的事實。",
+  "source_of_truth": "官方查核佐證表精確原文『工作經驗的相關受訓證明。』，表內頁次 2，讀取狀態 PDF_TEXT_EXACT_PAGE_MATCH；REQ_157_MAP 對應 I06-E01；本行文件名稱與 ID 以 R04 142 交付 crosswalk/seed 為準。Phase2 歷史 Blueprint 僅作需求拆解參考，絕非可複製正文或現行標題權威。",
+  "required_sections": "紀錄目的、責任及適用界線；官方要求拆解與證明路徑；來源、形成時點及納入規則；欄位定義及證據位置；完整合成紀錄示例；核對、計算與一致性判定；例外、缺證及更正軌跡；真實原件與合成示例的區別；覆核、保管及調閱規則；相關要求及文件交叉引用；真實資料替換清單；附件索引與版本",
+  "required_tables_or_figures": "欄位—定義—來源—填寫者—驗證規則；完整合成填寫列及欄位解說；問題／例外—修正—覆核及追蹤；官方要求—表單欄位—附件定位追溯表",
+  "required_fields_or_questions": "合成資料識別碼；日期欄位及合成標示；責任角色代碼；來源／附件位置欄位；判定、理由、覆核及後續行動",
+  "required_calculations_or_analysis": "若此表單有數量、金額、期間或比例，明列定義、分子分母與逐步算例；若沒有，明示不適用並提供至少一個欄位驗證／完整度判斷示例。",
+  "required_cross_references": "同要求分件 無；相鄰要求 I05-E03, I06-E02；共用原始來源時只引用核實結果，不複製別份文件正文。",
+  "real_data_required": "升格為 REAL 前逐項取得可核實來源：正式日期；真實人名/角色；核准/簽章；真實班次/課程；實際數字/比例；真實附件與檔案位置；第三方出具者；原件編號/日期；可回查聯絡/查證方式。在無原件時標示 SAMPLE/SYNTHETIC；合成事實須登錄 replacement register，不得宣稱機構實績。",
+  "third_party_evidence_required": "若結論依賴外部機關／第三方／真人正式簽章或證書，必須由合法來源取得可核對原件；本文件可提供清楚索引與合成流程示範，絕不代製、仿簽、補作或冒充第三方正式原件。",
+  "prohibited_fabrication": "不得把擬真工作稿標成REAL；不得偽造核准、簽章、真人參與、辦訓、成績、成果或不存在的外部事實。 不得代替第三方/政府/雇主/媒體/保險或證照機構製造「已出具」原件。；不得將舊檔內容、示範數據、未查證Drive候選或歷史草案標成 REAL；不得偽造核准、簽章、真人參與、辦訓、成績、成果、外部證據或來源定位。",
+  "title_blind_test": "遮蔽本件標題、檔名與編號，只讀正文應可由專屬機制辨認為『工作經驗的相關受訓證明_可直接使用成品』並證明『工作經驗的相關受訓證明。』；若可無修改移作其他要求即失敗。",
+  "negative_choice_neighbors": "0029《訓練規劃及達到客戶課程績效目標的證明資料_可直接使用成品》（I05-E03）：應證明不同工作物；本件不得代替、合併或複製其專屬事實。\n0031《專業訓練人員職能評估方法等證明_可直接使用成品》（I06-E02）：應證明不同工作物；本件不得代替、合併或複製其專屬事實。",
+  "acceptance_tests": "移除標題及檔名後，讀者可由正文專屬欄位、操作或分析辨認為『工作經驗的相關受訓證明_可直接使用成品』，且能指出直接回應『工作經驗的相關受訓證明。』的頁節／表格。\n逐項呈現官方要求、資料來源、記錄欄位、判定、證據定位及覆核；官方原文不被歷史草案改寫。\n依本文件文類實際可用：問卷含題目選項量尺；SOP含角色、輸入、判斷、控制點、異常和輸出；會議紀錄含議題、證據、決議、責任、期限；報告含資料、分母、公式、逐步計算、限制和決策。\n若沒有可驗證 REAL 資料，提供前後一致、完整填入的 SAMPLE/SYNTHETIC 案例；不得用空表、待填、待核或未來式充當完成品。\n每一項合成日期、角色、數字、比例、金額、決議、來源路徑與結果皆有逐事實替換簿記錄鍵、所在文件／頁表／欄位及真實替換方式。\n絕不偽造第三方原件、真人簽名、核准、出席、證書、政府、銀行、會計或外部機構事實；需要該等原件時只說明所需原件與取得路徑。\n所有公式可由展示數據重算；分母、單位、期間、四捨五入及N/A條件清楚，交叉引用不重複創造相異版本。\n對照負向鄰項，正文可拒絕至少兩個錯誤近鄰；指出可核對的差異欄位或章節。\n首頁30秒內說明目的、讀者、使用時點、操作、輸出和SAMPLE／REAL狀態；無評核工程內部術語。\n正文可供日常協會作業及評核閱讀；標題層級、欄位、步驟、表格能直接執行，無複製同儕 DOCX 正文。\n字體下限：正文至少10.5pt、表格至少9.5pt；資訊不足時加頁，不縮小字體。\n來源定位與交叉引用使用本 Blueprint 登錄的官方頁次／文件 ID；所有結論不超出來源支持範圍。",
+  "document_role": "evidence_record",
+  "official_requirement_text": "工作經驗的相關受訓證明。",
+  "official_checkbox_text": "工作經驗的相關受訓證明。",
+  "official_evidence_table_page": "2",
+  "official_source_readback_status": "PDF_TEXT_EXACT_PAGE_MATCH",
+  "official_visually_checked_pages": "",
+  "requirement_deliverable_siblings": "0030",
+  "docx_body_template_policy": "FROM_SOURCE_ONLY; old body is discovery evidence only and prohibited as rebuild template; Wave005 R3 0031-0040 quality-height references only; Wave001-004 tainted; old Wave005 invalid; Wave006 prohibited.",
+  "synthetic_population_rule": "缺 REAL 即生成完整連貫 SAMPLE/SYNTHETIC worked example；事實粒度一筆一列登錄 SYNTHETIC_REPLACEMENT_REGISTER，含值、類型、定位、替換原件與責任；不得留待填或冒充 REAL。",
+  "historical_blueprint_source": "d479a544b7cdf423220463223061423f9c4470a745c88d99d97a006e5ddb0d78",
+  "historical_body_use": "PROHIBITED",
+  "source_map_notes": "129 exact official requirement rows + reconciled 142-ID crosswalk; official source PDF and exact Drive readback evidence are recorded in runtime SOURCE/CONTROL maps."
+}
+
+
+## 4. 固定合成事實清冊
+{
+  "work_id": "TTQS_ONE_0030_I06-E01_W1_WRITER_R01_20261117",
+  "doc_id": "0030",
+  "requirement_id": "I06-E01",
+  "status": "SAMPLE_SYNTHETIC_ONLY",
+  "facts": [
+    {
+      "key": "SYN-0030-001",
+      "item": "sample evidence record label",
+      "value": "SAMPLE-REC-0030-01",
+      "unit": "label",
+      "source_type": "synthetic"
+    },
+    {
+      "key": "SYN-0030-002",
+      "item": "fictional trainee label",
+      "value": "SAMPLE-TRAINEE-01",
+      "unit": "label; not a real person",
+      "source_type": "synthetic"
+    },
+    {
+      "key": "SYN-0030-003",
+      "item": "fictional training course label",
+      "value": "SAMPLE-COURSE-0030",
+      "unit": "label; no actual course delivery asserted",
+      "source_type": "synthetic"
+    },
+    {
+      "key": "SYN-0030-004",
+      "item": "sample work domain",
+      "value": "customer case handling",
+      "unit": "descriptive scope",
+      "source_type": "synthetic"
+    },
+    {
+      "key": "SYN-0030-005",
+      "item": "illustrative experience task link A",
+      "value": "case information intake and classification",
+      "unit": "task-to-learning link; not actual work history",
+      "source_type": "synthetic"
+    },
+    {
+      "key": "SYN-0030-006",
+      "item": "illustrative experience task link B",
+      "value": "recording service response and follow-up",
+      "unit": "task-to-learning link; not actual work history",
+      "source_type": "synthetic"
+    },
+    {
+      "key": "SYN-0030-007",
+      "item": "illustrative experience task link C",
+      "value": "escalating and closing a customer case",
+      "unit": "task-to-learning link; not actual work history",
+      "source_type": "synthetic"
+    },
+    {
+      "key": "SYN-0030-008",
+      "item": "experience period / employer identity",
+      "value": "UNKNOWN; no authentic employment evidence supplied",
+      "unit": "not asserted",
+      "source_type": "unknown"
+    },
+    {
+      "key": "SYN-0030-009",
+      "item": "sample trainee statement locator",
+      "value": "SAMPLE://0030/trainee-statement-example",
+      "unit": "illustrative locator only; no document attached",
+      "source_type": "synthetic_locator"
+    },
+    {
+      "key": "SYN-0030-010",
+      "item": "authentic work-experience original locator required",
+      "value": "SAMPLE://0030/authentic-work-experience-original-required",
+      "unit": "required evidence locator; absent from this sample",
+      "source_type": "synthetic_locator"
+    },
+    {
+      "key": "SYN-0030-011",
+      "item": "authentic role description locator required",
+      "value": "SAMPLE://0030/authentic-role-description-required",
+      "unit": "required evidence locator; absent from this sample",
+      "source_type": "synthetic_locator"
+    },
+    {
+      "key": "SYN-0030-012",
+      "item": "course-scope locator",
+      "value": "SAMPLE://0030/course-scope-reference",
+      "unit": "illustrative locator only; no actual course source attached",
+      "source_type": "synthetic_locator"
+    },
+    {
+      "key": "SYN-0030-013",
+      "item": "verification outcome",
+      "value": "NOT_VERIFIED; originals not supplied",
+      "unit": "sample review outcome; not a real decision",
+      "source_type": "derived_synthetic"
+    },
+    {
+      "key": "SYN-0030-014",
+      "item": "real-proof disposition",
+      "value": "NOT_ACCEPTED_AS_REAL_PROOF",
+      "unit": "sample process outcome; not a real eligibility finding",
+      "source_type": "derived_synthetic"
+    },
+    {
+      "key": "SYN-0030-015",
+      "item": "truth boundary",
+      "value": "SAMPLE only; no real trainee, employer, work experience, certificate, signature, course, delivery, verification or acceptance is asserted",
+      "unit": "mandatory label",
+      "source_type": "mandatory_label"
+    }
+  ]
+}
+
+
+## 5. 候選文件正文（依段落與表格順序抽取）
+專屬佐證紀錄｜工作經驗的相關受訓證明_可直接使用成品（SAMPLE / SYNTHETIC）
+文件類別：專屬佐證紀錄｜工作經驗的相關受訓證明_可直接使用成品（合成流程示例，非第三方原件）
+需求編號：I06-E01（本件僅對應此一要求，不吞併其他要求事實）
+交付編號：0030
+官方要求原文（逐字）：工作經驗的相關受訓證明。
+官方佐證表頁次：第 2 頁；讀取狀態 PDF_TEXT_EXACT_PAGE_MATCH
+樣本識別碼：SAMPLE-REC-0030-01（SYN-0030-001）
+合成標示：全篇為 SAMPLE_SYNTHETIC_ONLY；核驗結果 NOT_VERIFIED; originals not supplied（SYN-0030-013）
+處置結果：NOT_ACCEPTED_AS_REAL_PROOF（SYN-0030-014）
+真偽界線：SAMPLE only；不主張任何真實受訓者、雇主、工作經歷、證書、簽章、課程、辦訓、查核或認可（SYN-0030-015）
+字體下限：正文至少 10.5pt，表格至少 9.5pt；資訊不足時加頁，不縮小字體。
+一、紀錄目的、責任角色與適用界線
+1.1 目的
+本件是 I06-E01 的專屬佐證紀錄，功能是保存官方要求「工作經驗的相關受訓證明。」所對應的工作任務—受訓內容關聯之證據索引、核對方法與合成流程示範。它提供一套可實際執行的做法：當需要提出該項佐證時，執行人員能從工作任務的描述出發，逐一比對受訓內容、原始任職文件、職務說明與課程範圍，明確指出每一筆主張是由哪一分件、哪一欄位、哪一定位支持，並在缺證時留下可追溯的更正軌跡。本件不代替第三方出具的原件，也不代替評核機關作任何真實經歷或資格判定（SYN-0030-015）。
+1.2 主要讀者與使用時點
+供執行人員、主管與評核閱讀者追溯要求、事實、證據位置及覆核狀態。典型使用時點有三：一是彙整送審資料前，確認工作任務與受訓內容的關聯是否可被核對；二是收到補件通知時，依例外／缺證清單補正；三是歸檔與調閱時，確認每筆資料的版本、定位與真偽狀態。
+1.3 適用界線
+本件只擁有 I06-E01 的直接紀錄／分析口徑。同要求無其他分件（requirement_deliverable_siblings 為 0030），因此不存在同要求內的分件衝突。相鄰要求僅作對照拒絕之用，見第八章。任何超出官方原文「工作經驗的相關受訓證明。」範圍的結論，本件均不予推論。
+1.4 責任角色（通用功能標籤，均未指派）
+功能標籤 | 職責 | 本件示例值 | 對應鍵
+填表角色 | 建立工作任務—受訓內容關聯、填寫合成欄位 | 未指派（僅示流程位置，不主張特定個人） | 不適用
+複核角色 | 核對來源定位、驗證規則、一致性判定 | 未指派（僅示流程位置，不主張特定個人） | 不適用
+管卷角色 | 保管調閱、版本與更正軌跡 | 未指派（僅示流程位置，不主張特定個人） | 不適用
+評核閱讀者 | 追溯與判斷之使用者 | 外部評核人員 | 不適用
+受訓者指稱為 SAMPLE-TRAINEE-01，是虛構標籤、非真人（SYN-0030-002）。本件不得虛構雇主名稱、工作起迄日、年資、職稱證明、證書號、簽章、雇主回覆、出席／訓練紀錄或主管核定。工作期間及雇主身份一律標 UNKNOWN；未提出真實任職證明前不作任何年資或資格主張（SYN-0030-008）。
+1.5 輸出與狀態揭露
+本件輸出為：一份完整填入的合成佐證紀錄示例、一張欄位定義表、一張問題／例外追蹤表、一張官方要求—表單欄位—附件定位追溯表，以及文末 15 列 SAMPLE 替換清冊。翻閱首頁即可讀到目的、讀者、使用時點、操作、輸出與 SAMPLE／REAL 狀態。
+二、官方要求拆解與證明路徑
+2.1 官方原文與所在脈絡
+官方查核佐證表第 2 頁，於「訓練機構的行政能力及訓練主管相關職能」項下，把 工作經驗的相關受訓證明。 列為常見參考佐證資料之一，並註明需註明資料來源及頁碼。本件之官方原文逐字呈現為：「工作經驗的相關受訓證明。」，不加以改寫、不加字、不換句讀。歷史草案或舊檔內容不得作為改寫官方原文的依據。
+2.2 要求拆解
+官方原文可拆解為三個必須被交代清楚的元素：
+「工作經驗」：以工作任務的具體描述呈現，而非僅寫「有經驗」。每一項主張都要能連結到工作域與任務行為。
+「相關受訓」：以受訓內容（課程主題、課程範圍、學習成果）與工作任務之間的對應關係呈現。
+「證明」：以可追溯的證據定位呈現，包含自述、原始任職證明、職務說明與課程範圍四類原件的定位與核驗狀態。
+2.3 證明路徑
+證明路徑採「任務 → 受訓內容 → 原件」三段式，並逐段交叉核對，鍵值均可查：
+步驟 | 檢核動作 | 對應合成鍵
+步驟 1 | 界定工作域，確認任務描述可被理解與重現 | SYN-0030-004
+步驟 2 | 列出三項可追溯任務，逐項連結受訓內容 | SYN-0030-005、SYN-0030-006、SYN-0030-007
+步驟 3 | 以自述支持任務描述（不自稱已驗證） | SYN-0030-009
+步驟 4 | 以原始任職證明確認受僱事實（本件缺） | SYN-0030-010
+步驟 5 | 以職務說明確認職責與任務一致（本件缺） | SYN-0030-011
+步驟 6 | 以課程範圍確認受訓內容覆蓋任務所需（本件缺） | SYN-0030-012
+步驟 7 | 彙整判定、理由、覆核與後續行動 | SYN-0030-013、SYN-0030-014
+三項可追溯的工作任務—受訓內容關聯如下，全部為合成示例、不代表真實工作經歷（SYN-0030-015）：
+任務 A（SYN-0030-005）：case information intake and classification（案件資訊受理與分類）。對應受訓內容為案件受理程序與分類原則；由自述支持任務描述，但任職事實未驗證（SYN-0030-009、SYN-0030-010）。
+任務 B（SYN-0030-006）：recording service response and follow-up（服務回應與跟催紀錄）。對應受訓內容為服務回應紀錄與跟催流程；職務說明缺（SYN-0030-011）。
+任務 C（SYN-0030-007）：escalating and closing a customer case（案件升級與結案）。對應受訓內容為異常升級與結案判定；課程範圍定位僅為示例（SYN-0030-012）。
+2.4 逐項交叉核對
+官方要求元素 | 自述可支持部分 | 必須原件可支持部分 | 缺口處理
+工作經驗 | 任務描述（SYN-0030-005～007） | 原始任職證明（SYN-0030-010）、職務說明（SYN-0030-011） | 標 UNKNOWN，列入缺證
+相關受訓 | 課程範圍示例（SYN-0030-012） | 課程實際上課與成果原件 | 標未附，列入缺證
+證明 | 定位說明 | 第三方可核對原件 | 不得代製或冒充
+三、來源、形成時點及納入規則
+3.1 來源盤點
+來源類型 | 合成定位 | 性質 | 對應鍵
+受訓者自述示例 | SAMPLE://0030/trainee-statement-example | 示例定位；未附任何文件 | SYN-0030-009
+原始任職證明 | SAMPLE://0030/authentic-work-experience-original-required | 應備原件定位；本件缺 | SYN-0030-010
+職務說明 | SAMPLE://0030/authentic-role-description-required | 應備原件定位；本件缺 | SYN-0030-011
+課程範圍 | SAMPLE://0030/course-scope-reference | 示例定位；未附實際課程來源 | SYN-0030-012
+工作期間／雇主身份 | UNKNOWN；未提出真實任職證據 | 不主張 | SYN-0030-008
+以上定位僅說明應存放何種原件，不代表附件真的存在；本件為 SAMPLE，未附任何第三方原件。
+3.2 形成時點與版本
+每一來源都應記載形成時點（文件產出或核准之日）、版本（版次或修正編號）、定位（檔案位置或索引編號）與核驗狀態。合成示例中的日期與版次不具真實效力，一律以合成標示呈現。正式納入時，凡屬第三方出具的日期、核准日、簽章日，均以該第三方原件上所載為準，不得回填推測值。
+3.3 納入規則
+只有來自合法來源、可得回查的原件得納入 REAL 判定；未取得原件者維持 SAMPLE 或 UNKNOWN。
+每一筆合成事實都必須有一列 SYNTHETIC_REPLACEMENT_REGISTER 記錄，含值、類型、定位、替換原件與責任（見第九章）。
+不得創造固定保存年限、法律規則或機構政策；機構現行保管／調閱政策未提供時，一律標 UNKNOWN。
+更正軌跡須留存：原值、新值、修正原因、修正者、複核者與日期，不得以覆蓋方式消除舊紀錄。
+四、欄位定義、證據位置與完整合成紀錄示例
+4.1 欄位—定義—來源—填寫者—驗證規則
+欄位 | 定義 | 來源 | 填寫者 | 驗證規則
+合成資料識別碼 | 辨識本筆合成紀錄的唯一標籤 | 流程產生 | 填表角色 | 須與 SYN-0030-001 一致
+日期欄位及合成標示 | 記錄各欄位之形成日與是否合成 | 流程產生 | 填表角色 | 合成日不得當成真實形成日
+責任角色 | 紀錄填表、複核、管卷之功能位置 | 機構指派 | 填表／複核／管卷角色 | 未指派者不得填真實姓名
+來源／附件位置欄位 | 說明每筆事實之定位 | 來源盤點 | 填表角色 | 定位須可被回查；缺件須標 absent
+判定 | 對該筆關聯之核對結論 | 核對結果 | 複核角色 | 缺原件時限縮為 NOT_VERIFIED
+理由 | 判定之依據 | 核對結果 | 複核角色 | 只陳述來源支持之範圍
+覆核 | 複核功能與覆核時點 | 流程產生 | 複核角色 | 未覆核者不得作 REAL 主張
+後續行動 | 解除缺證之步驟 | 流程產生 | 填表角色 | 須指明應取得之原件種類
+工作任務—受訓內容關聯 | 三項任務與對應學習內容 | 合成示例 | 填表角色 | 不得宣稱真實經歷
+真偽界線 | 強制揭露標籤 | 流程產生 | 填表角色 | 對應 SYN-0030-015
+4.2 完整合成填寫列及欄位解說
+主表（合成紀錄示例，識別碼 `SAMPLE-REC-0030-01`，SYN-0030-001）
+欄位 | 合成值 | 類型 | 對應鍵／定位
+合成資料識別碼 | SAMPLE-REC-0030-01 | label | SYN-0030-001
+受訓者指稱 | SAMPLE-TRAINEE-01（非真人） | label | SYN-0030-002
+課程指稱 | SAMPLE-COURSE-0030（未主張實際開課） | label | SYN-0030-003
+工作域 | customer case handling | descriptive scope | SYN-0030-004
+任務 A | case information intake and classification | task-to-learning link | SYN-0030-005
+任務 B | recording service response and follow-up | task-to-learning link | SYN-0030-006
+任務 C | escalating and closing a customer case | task-to-learning link | SYN-0030-007
+工作期間／雇主 | UNKNOWN; no authentic employment evidence supplied | not asserted | SYN-0030-008
+自述定位 | SAMPLE://0030/trainee-statement-example | synthetic locator | SYN-0030-009
+任職證明定位 | SAMPLE://0030/authentic-work-experience-original-required | required locator；absent | SYN-0030-010
+職務說明定位 | SAMPLE://0030/authentic-role-description-required | required locator；absent | SYN-0030-011
+課程範圍定位 | SAMPLE://0030/course-scope-reference | synthetic locator | SYN-0030-012
+判定 | NOT_VERIFIED; originals not supplied | derived | SYN-0030-013
+處置 | NOT_ACCEPTED_AS_REAL_PROOF | derived | SYN-0030-014
+真偽界線 | SAMPLE only; ...（全文見 SYN-0030-015） | mandatory label | SYN-0030-015
+欄位解說：主表每一列都對應一個固定合成鍵，且逐列標明其類型，讓閱讀者在遮蔽標題與檔名後，仍能由「合成識別碼＋工作域＋三項任務—受訓關聯＋判定＋真偽界線」辨認本件為「工作經驗的相關受訓證明_可直接使用成品」，並指出直接回應官方原文「工作經驗的相關受訓證明。」的章節（第二章至第四章）。
+4.3 三項任務—受訓內容關聯
+任務鍵 | 任務示例 | 受訓內容示例 | 可支持之原件 | 缺口
+SYN-0030-005 | 案件資訊受理與分類 | 受理程序與分類原則 | 自述（SYN-0030-009） | 任職證明缺（SYN-0030-010）
+SYN-0030-006 | 服務回應與跟催紀錄 | 回應紀錄與跟催流程 | 自述（SYN-0030-009） | 職務說明缺（SYN-0030-011）
+SYN-0030-007 | 案件升級與結案 | 異常升級與結案判定 | 課程範圍（SYN-0030-012） | 實際上課／成果原件缺
+三項任務共用同一工作域（SYN-0030-004），使「工作任務—受訓內容」的連結可被集中核對，也便於評核閱讀者一次追完。所有內容為合成示例，不得當作機構實績（SYN-0030-015）。
+五、核對、計算與一致性判定
+5.1 期間與年資
+本件工作期間／雇主身份為 UNKNOWN（SYN-0030-008），因此不計算年資、不判定合格與否。本件無數量、金額、期間或比例可計算，計算項目不適用；未取得可核對原件日期前，任何年資或期間結論均不成立。待取得原始任職證明與職務說明（SYN-0030-010、SYN-0030-011）且其日期可核對後，計算基礎應依該等原件所載之起迄日與機構現行規定辦理。
+5.2 欄位驗證示例（不產生分數）
+在沒有可計算之數量、金額、期間或比例時，本件以「欄位與固定鍵的對應檢核」作為驗證方式，不產生任何分數或完整性評量：
+檢核合成資料識別碼是否與 SYN-0030-001 一致。
+檢核工作域是否與 SYN-0030-004 一致。
+檢核三項任務是否各自綁定 SYN-0030-005、SYN-0030-006、SYN-0030-007。
+檢核判定與真偽界線是否分別對應 SYN-0030-013、SYN-0030-015。
+若任一必要欄位缺漏或無法回查，判定即維持 NOT_VERIFIED; originals not supplied（SYN-0030-013），處置維持 NOT_ACCEPTED_AS_REAL_PROOF（SYN-0030-014），並列入缺證清單。
+此驗證只確認欄位與固定鍵的對應關係，不構成真實資格判定，也不授權任何績效或覆蓋率百分比。
+5.3 一致性判定
+一致性判定包含以下檢核：①同一任務在自述、職務說明、課程範圍三者所述是否指向同一行為；②合成鍵與欄位值是否一致；③判定是否與來源狀態相符。本示例因缺原始任職證明、職務說明與實際上課／成果原件，判定只能停在 NOT_VERIFIED; originals not supplied（SYN-0030-013），處置為 NOT_ACCEPTED_AS_REAL_PROOF（SYN-0030-014）。不得因合成示例「看起來完整」而升格為 REAL。
+六、例外、缺證、更正軌跡及覆核步驟
+6.1 示例狀態
+本示例呈現下列狀態：缺原件（任職證明 SYN-0030-010、職務說明 SYN-0030-011、實際上課／成果原件）、未驗證（NOT_VERIFIED，SYN-0030-013）、未作真實認定（NOT_ACCEPTED_AS_REAL_PROOF，SYN-0030-014）。
+6.2 問題／例外—修正—覆核及追蹤
+問題／例外 | 現況 | 修正方式 | 覆核及追蹤 | 對應鍵
+未附原始任職證明 | 定位存在但無件 | 向合法來源取得可核對原件，登錄版本／編號／日期 | 複核角色核對後更新判定 | SYN-0030-010
+未附職務說明 | 同上 | 取得職務說明或由雇主出具的正式說明 | 複核角色核對任務—職責一致性 | SYN-0030-011
+未附課程實際上課／成果原件 | 僅示例課程範圍 | 取得可回查之課程來源與成果文件 | 複核角色核對課程內容是否覆蓋任務 | SYN-0030-012
+工作期間／雇主 UNKNOWN | 不主張 | 取得任職證明後補登 | 補登前維持不計算年資 | SYN-0030-008
+真偽界線未揭露 | 已揭露（強制） | 不須修正，但每次改版都須保留 | 每次改版重揭 | SYN-0030-015
+6.3 解除步驟
+由填表角色盤點缺件清單，逐項指向應備原件定位。
+由管卷角色或指定人員向合法來源取得原件，登錄來源、版本、形成時點、編號。
+由複核角色依驗證規則逐項核對，更新判定、理由與後續行動。
+將更正前後值寫入更正軌跡，保留不可覆蓋之舊紀錄。
+完成後，把 SAMPLE 升級為 REAL 的主張交由有權者依機構現行程序決定；本件不自行升格。
+七、真實原件與合成示例的區別；保管／調閱
+7.1 區別對照
+面向 | 合成示例 | 真實原件
+目的 | 示範流程與欄位怎麼填 | 支持特定個人之經歷事實
+效力 | 無（NOT_ACCEPTED_AS_REAL_PROOF） | 經合法來源與核對後始生效力
+人物／雇主 | 虛構標籤或 UNKNOWN | 可回查之真實名稱與身份
+日期 | 合成日，不具真實效力 | 第三方原件所載日期
+簽章 | 不得仿簽、補作 | 由有權者正式簽署
+標示 | 必須有 SAMPLE／SYNTHETIC 標籤 | 依機構政策留存
+對應鍵 | SYN-0030-001～015 | 由 replacement register 指向
+7.2 保管／調閱
+保管、調閱、保存年限與權限分配，遵循機構實際現行資料管制政策；若該政策未提供，相關欄位一律標 UNKNOWN，不得憑空創造年限或法規依據。本件之角色分工（填表角色／複核角色／管卷角色）僅描述流程責任，不主張特定個人身份。調閱時應同步揭露真偽界線（SYN-0030-015），避免合成示例被誤讀為真實證明。
+八、相關要求交叉引用（僅 I06-E01）、附件索引與版本用途
+8.1 交叉引用
+本件直接引用僅 I06-E01，官方原文「工作經驗的相關受訓證明。」，頁次 2，讀取狀態 PDF_TEXT_EXACT_PAGE_MATCH。
+同要求無其他分件，無分件衝突。
+相鄰要求僅作負向對照（見 8.2），共用原始來源時只引用核實結果，不複製別份文件正文。
+8.2 負向鄰項拒絕
+鄰項 | 要求 | 為何不可移用 | 可核對差異欄位／章節
+0029《訓練規劃及達到客戶課程績效目標的證明資料_可直接使用成品》 | I05-E03 | 工作物為「訓練規劃與達成績效」，非「個人工作任務—受訓內容」 | 缺少本件第三章來源盤點與第四章三項任務—受訓關聯（SYN-0030-005～007）
+0031《專業訓練人員職能評估方法等證明_可直接使用成品》 | I06-E02 | 工作物為「專業訓練人員職能評估方法」，非個人受訓證明 | 缺少本件判定／真偽界線欄位（SYN-0030-013～015）
+本件可無修改移作上述任一要求即視為失敗；反之，正文可拒絕這兩個錯誤近鄰。
+8.3 附件索引與版本用途
+編號 | 附件／索引 | 用途 | 狀態
+ATT-0030-01 | 官方佐證表第 2 頁節錄（OFFICIAL_SOURCE_PAGE2.txt） | 呈現官方原文脈絡 | 僅供溯源，非本件主張
+ATT-0030-02 | FIXED_SYNTHETIC_FACTS_0030.json | 提供固定合成鍵 SYN-0030-001～015 | SAMPLE 依據
+ATT-0030-03 | 本件文末 SAMPLE 替換清冊 | 逐事實登錄替換方式 | SAMPLE
+ATT-0030-04 | 應備原始任職證明 | 未來升格 REAL 所需 | 缺（SYN-0030-010）
+ATT-0030-05 | 應備職務說明 | 未來升格 REAL 所需 | 缺（SYN-0030-011）
+版本用途：本版僅為本件之合成流程示例版；任何改版須保留版本對照，且不得變更官方原文。
+九、SAMPLE 替換清冊（恰好 15 列）
+鍵 | 示例值 | 類型 | 定位 | 真實替換原件 | REAL 狀態
+SYN-0030-001 | SAMPLE-REC-0030-01 | label | 本文件首頁識別碼 | 機構正式紀錄識別碼或編號規則 | UNKNOWN
+SYN-0030-002 | SAMPLE-TRAINEE-01 | label；非真人 | 本文件 §1.4 | 可回查之受訓者身份與個人資料（依機構現行資料管制政策處理；政策未提供時標 UNKNOWN） | UNKNOWN
+SYN-0030-003 | SAMPLE-COURSE-0030 | label；未主張開課 | 本文件 §4.2 | 真實課程名稱與開課證明 | UNKNOWN
+SYN-0030-004 | customer case handling | descriptive scope | 本文件 §2.3 | 職務說明所載之工作域描述 | UNKNOWN
+SYN-0030-005 | case information intake and classification | task-to-learning link | 本文件 §2.3 任務 A | 真實任職文件／職務說明所載任務 | UNKNOWN
+SYN-0030-006 | recording service response and follow-up | task-to-learning link | 本文件 §2.3 任務 B | 真實任職文件／職務說明所載任務 | UNKNOWN
+SYN-0030-007 | escalating and closing a customer case | task-to-learning link | 本文件 §2.3 任務 C | 真實任職文件／職務說明所載任務 | UNKNOWN
+SYN-0030-008 | UNKNOWN; no authentic employment evidence supplied | not asserted | 本文件 §3.1 | 原始任職證明（含起迄日與雇主身份） | UNKNOWN
+SYN-0030-009 | SAMPLE://0030/trainee-statement-example | synthetic locator | 本文件 §3.1 | 受訓者自述正本或正式述明文件 | UNKNOWN
+SYN-0030-010 | SAMPLE://0030/authentic-work-experience-original-required | required locator；absent | 本文件 §3.1 | 雇主或權責機關出具之任職證明正本 | UNKNOWN
+SYN-0030-011 | SAMPLE://0030/authentic-role-description-required | required locator；absent | 本文件 §3.1 | 正式職務說明或任免／派任文件 | UNKNOWN
+SYN-0030-012 | SAMPLE://0030/course-scope-reference | synthetic locator | 本文件 §3.1 | 課程綱要、開課紀錄或受訓成果原件 | UNKNOWN
+SYN-0030-013 | NOT_VERIFIED; originals not supplied | derived | 本文件 §4.2 判定 | 有原件並完成核對後始更新為 VERIFIED | UNKNOWN
+SYN-0030-014 | NOT_ACCEPTED_AS_REAL_PROOF | derived | 本文件 §4.2 處置 | 合法原件齊備並經有權者核定後，另依機構程序判定 | UNKNOWN
+SYN-0030-015 | SAMPLE only; no real trainee, employer, work experience, certificate, signature, course, delivery, verification or acceptance is asserted | mandatory label | 本文件首頁真偽界線 | 不適用（強制標籤，任何情形均須保留） | UNKNOWN
+清冊使用規則：上表 15 列以一筆事實一列的方式登錄，每列包含鍵、示例值、類型、定位、真實替換原件與 REAL 狀態。任何合成值被替換時，須同步更新替換清冊，並保留不可覆蓋之原版。清冊中的 REAL 狀態一律為 UNKNOWN，直到相對應之真實原件被合法來源提供並完成核對為止。

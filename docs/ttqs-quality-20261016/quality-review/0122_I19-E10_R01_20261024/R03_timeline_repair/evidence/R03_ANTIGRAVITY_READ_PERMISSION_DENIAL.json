@@ -1,0 +1,36 @@
+{
+  "work_id": "TTQS-0122-I19-E10-R12-R03-EXACT-SHA-SEMANTIC-REVIEW-ATTEMPT01",
+  "worker": "Antigravity CLI",
+  "candidate_sha256": "b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d",
+  "requested_model": "gemini-3.8-flash-high",
+  "actual_model": "UNKNOWN",
+  "cli_version": "1.4.7",
+  "conversation_id": "e3cdadce-48f8-4fb6-b927-ef1b2b6eb702",
+  "duration_seconds": 33.1983621,
+  "num_turns": 1,
+  "usage": {
+    "input_tokens": 34125,
+    "output_tokens": 3550,
+    "thinking_tokens": 3089,
+    "cache_read_tokens": 0,
+    "total_tokens": 37675
+  },
+  "provider_result_status": "SUCCESS",
+  "review_response_nonempty": false,
+  "denied_actions": [
+    {
+      "action": "read_file",
+      "display_name": "ReadFile"
+    }
+  ],
+  "stderr_sha256": "d69ea3c7c4bca02da38e38c57b5e7d6ad4bd8112913a54c5345f7c83e742b88a",
+  "stderr_bytes": 385,
+  "process_id": "UNKNOWN_NOT_PERSISTED_BY_WRAPPER",
+  "exit_code": "UNKNOWN_NOT_PERSISTED_BY_WRAPPER",
+  "root_cause": "Plan mode attempted an implicit read_file action for the local packet; headless CLI could not prompt, so the action was auto-denied and no review response was produced.",
+  "repair": "Do not alter permissions or use --dangerously-skip-permissions. Next request supplies only the exact delta and source criteria inline, with no workspace attachment or tool call.",
+  "retry_same_input": "NO",
+  "computer_use": "NOT_USED",
+  "fallback": "UNKNOWN_NOT_OBSERVED",
+  "formal_acceptance": "NOT_GRANTED"
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "TTQS_ONE_0005_CURRENT_PACKET_BINDING_REVIEW_EVIDENCE_R01",
+  "work_id": "TTQS-0005-I01-E02-REVIEW-CURRENT-SOURCE-PACKET-LINEAGE-W2-GEMINI38-20261116-R01",
+  "observed_at_tpe": "2026-11-16T04:45:46.6117844+08:00",
+  "doc_id": "0005",
+  "requirement_id": "I01-E02",
+  "requested_model": "gemini-3.8-flash-high",
+  "actual_serving_model": "UNKNOWN",
+  "candidate_sha256": "a36c501893bcb4d2dadaf0adfa7d8638df5e426650a8876182a8f83aebfa1a7c",
+  "source_packet_sha256": "c8307b7f9af5e63034123a66af2e14bcfe0b06ce71d0c601c85efd663b995b12",
+  "blueprint_row_sha256": "24c927721f8b7f446eb239f65306fd52cd466ae701b6383e8f26771287bc4275",
+  "official_source_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "scoped_verdict": "PASS_CURRENT_PACKET_BINDING",
+  "checks": {
+    "current_packet_candidate_binding": {
+      "status": "PASS",
+      "details": "Supplied evidence confirms that in current source packet (SHA-256 c8307b7f9af5e63034123a66af2e14bcfe0b06ce71d0c601c85efd663b995b12), 'R07 DOCX SHA-256' matches current candidate DOCX SHA-256 (a36c501893bcb4d2dadaf0adfa7d8638df5e426650a8876182a8f83aebfa1a7c)."
+    },
+    "qa_receipt_binding": {
+      "status": "PASS",
+      "details": "Supplied evidence confirms that current deterministic QA receipt (SHA-256 367e6c97610e06942df9bbc4ba14b21d8565f0e59738376bcfe5f18561a90f4e) binds candidate SHA-256 a36c501893bcb4d2dadaf0adfa7d8638df5e426650a8876182a8f83aebfa1a7c and maps current source packet (c8307b7f9af5e63034123a66af2e14bcfe0b06ce71d0c601c85efd663b995b12), Blueprint row (24c927721f8b7f446eb239f65306fd52cd466ae701b6383e8f26771287bc4275), and Blueprint Markdown (27c2e7873d880807a09c4cf887258648c3f2fb3edfd82e3b496c2f76e2791c54) in source_evidence_sha256."
+    },
+    "identifier_and_blueprint_consistency": {
+      "status": "PASS",
+      "details": "Supplied evidence confirms that the current source packet identifies the official requirement as I01-E02, official PDF p.1 (matching official requirement PDF SHA-256 805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709), and includes matching Unique Blueprint R02 row and Markdown hashes."
+    }
+  },
+  "historical_packet_lineage": "UNRESOLVED",
+  "previous_semantic_status": "PASS_CONTENT_SCOPE only; not upgraded or overwritten",
+  "full_document_semantic_review": "NOT_PERFORMED",
+  "visual_review": "NOT_PERFORMED",
+  "real_evidence_verified": false,
+  "formal_acceptance": "NOT_GRANTED",
+  "provider_status": "SUCCESS",
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_call_events": 0,
+  "dispatch_pid": 10420,
+  "prompt_sha256": "d75da5e35af73b29860f207c5b2c01d05d247db34173d0f78549ed5945645f5d",
+  "stdout_sha256": "9164d004afc9aa875865c294337a0684e5ff0538f2eefdeb72de07fd79f65a75",
+  "stderr_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+  "response_sha256": "4a02c320bb876b0cb173a414862625b3c8d4cae3985e8e4c0ef9bb3a54aa3cf0",
+  "evidence_files": {
+    "input": "d75da5e35af73b29860f207c5b2c01d05d247db34173d0f78549ed5945645f5d",
+    "response": "4a02c320bb876b0cb173a414862625b3c8d4cae3985e8e4c0ef9bb3a54aa3cf0",
+    "stdout": "9164d004afc9aa875865c294337a0684e5ff0538f2eefdeb72de07fd79f65a75",
+    "stderr": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+    "dispatch_start": "738848dfbb2ee1ecea50f632abefe4d3c07cd0d79603e3101704124da217b9e8",
+    "terminal": "be339d4cf6c240912042742d3b74005d514ea64bd827362ac4e30cf7cf1087bb"
+  },
+  "limitations": [
+    "Exact historical reviewer packet bytes reviewed were not retained; the earlier reported source-packet candidate-SHA conflict remains unresolved in lineage.",
+    "Existing semantic evidence is restricted strictly to PASS_CONTENT_SCOPE for candidate SHA a36c501893bcb4d2dadaf0adfa7d8638df5e426650a8876182a8f83aebfa1a7c and cannot be converted into a full document semantic pass.",
+    "Document body was not reviewed, full semantic review was not repeated, and visual review was not performed.",
+    "Verification is metadata/lineage binding evaluation based exclusively on supplied inert text data without tool/file/shell verification of real bytes on disk."
+  ]
+}

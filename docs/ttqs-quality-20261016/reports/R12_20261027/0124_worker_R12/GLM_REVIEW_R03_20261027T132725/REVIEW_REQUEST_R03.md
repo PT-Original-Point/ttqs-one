@@ -1,0 +1,7 @@
+# Independent semantic review request: 0124 / I19-E12
+
+Review the attached complete text packet for candidate DOCX SHA-256 0a6567c2779d9ad8014ab6d1c892779a98892351a38ceda0dea9fa8b24ff2988. The packet binds source packet SHA-256 83a03deb7cbef3f07ef8b7ce0b2b25e1744baa6bc2e96b29e3259453558ccfee and Unique Blueprint SHA-256 d0d8b0990d96fb7dab5d02a34d9f507b6434e57778646c920c488f01c1ab0f42.
+
+Assess only the packet content: official requirement fit; genre and negative-neighbor separation; practical employer verification and feedback workflow; question and record completeness; math and case-summary consistency; sample/real boundary; replacement register; custody, hold and rejection rules; administrator/evaluator usability. Cite exact section/table/question/key locators. Visual/layout scope is already covered by a separate Word-native receipt and is out of scope here.
+
+Do not call tools, browse, run commands, read other files, edit anything, switch models, use Computer Use, or claim formal acceptance or real-world evidence. Return JSON with candidate_sha256, doc_id, semantic verdict PASS/PARTIAL/FAIL, blocking and nonblocking findings, locators, and scope limitations. If the packet is insufficient, say UNKNOWN rather than infer.

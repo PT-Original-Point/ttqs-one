@@ -1,0 +1,47 @@
+{
+  "doc_id": "0089",
+  "candidate": "R04",
+  "docx_sha256": "42bebbdfcaba93a753467260d5e1865b93b6bc2fee652a03d39b8fb385ef8476",
+  "history": [
+    {
+      "revision": "R01",
+      "docx_sha256": "f8abe9da3156a5ec1fbb6df27bffccb77811f304e6142f9fea49a4d982352c6b",
+      "findings": [
+        "14-field intake form too dense in portrait",
+        "Word list numbering continued from prior content",
+        "footer missing",
+        "status table row split across pages",
+        "section 7.1 table header stranded"
+      ]
+    },
+    {
+      "revision": "R02",
+      "docx_sha256": "0bcfa68571474a90b61c6fa020ed7bd18050510f3faaa9ddc24d6e4abf678364",
+      "findings": [
+        "Prior R01 layout issues repaired; render identified section 8.1 table header stranded on page 27 and appendix version bullets split at page end"
+      ]
+    },
+    {
+      "revision": "R03",
+      "docx_sha256": "7ecff872ab59f3b2070a902fcfb5008f1ef0d10d9b747dc36c6a3f06084b7d3d",
+      "findings": [
+        "Moved section 8 to new page; moved appendix version bullets before section 13 table; review then identified section 11.2 header stranded on page 31"
+      ]
+    },
+    {
+      "revision": "R04",
+      "docx_sha256": "42bebbdfcaba93a753467260d5e1865b93b6bc2fee652a03d39b8fb385ef8476",
+      "changes": [
+        "Inserted page break before section 11.2 and its table"
+      ],
+      "verification": [
+        "35-page Microsoft Word read-only PDF render",
+        "pages 30-35 directly inspected",
+        "pages 1-26 verified pixel-identical to inspected R02 page images",
+        "pages 27-29 verified pixel-identical to inspected R03 page images",
+        "no clipping, stranded table header, or isolated trailing bullets found"
+      ],
+      "result": "LAYOUT_REPAIR_COMPLETE; DO_NOT_REBUILD_WITHOUT_NEW_LOCATED_DEFECT"
+    }
+  ]
+}

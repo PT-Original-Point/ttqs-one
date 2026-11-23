@@ -1,0 +1,14 @@
+{
+  "schema": "TTQS_ONE_0121_R04_OPTIONAL_PACKAGED_RENDERER_DIAGNOSTIC_V1",
+  "candidate_sha256": "a80535a46b457404c8c1bf93404b124ce6d74c53f653cf0b3dfa128ec82c6e89",
+  "attempt": "documents skill render_docx.py --emit_pdf",
+  "status": "BLOCKED_OPTIONAL_PACKAGED_RENDERER_DEPENDENCY",
+  "diagnostic": "FileNotFoundError: LibreOffice soffice.exe was not found on PATH",
+  "same_input_retry": "NOT_ATTEMPTED; native Microsoft Word export is available and was used",
+  "authoritative_project_render": {
+    "method": "Microsoft Word COM ExportAsFixedFormat, read-only, Visible=false",
+    "pdf_sha256": "3e523f2adc4b03f0202b1d56eaffdb19b5311e4dbc079cfef13d1705e6dc5f5d",
+    "settlement_status": "PASS_POST_EXIT_READBACK"
+  },
+  "created_at_local": "2026-10-28T15:17:00+08:00"
+}

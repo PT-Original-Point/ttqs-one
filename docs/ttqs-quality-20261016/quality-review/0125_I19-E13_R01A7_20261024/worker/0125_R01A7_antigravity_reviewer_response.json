@@ -1,0 +1,156 @@
+{
+  "document_id": "0125",
+  "requirement_id": "I19-E13",
+  "docx_sha256": "1de398e4361dcacf843996b4d93b3c2dbf499b494c26887fa9d207fec299b131",
+  "candidate_label": "R01A7",
+  "verdict": "PASS",
+  "reviewed_scope": {
+    "candidate_file": "0125__學員職務運用追蹤紀錄.docx",
+    "bundle_file": "read_only_semantic_bundle_0125_R01A7.md",
+    "official_requirement": "部份學員能運用所學於職務中。",
+    "official_page": 8,
+    "official_source_packet_sha256": "2933ccd6d9e848e8e1bab1da0ff354d99b19877291fb67c00d63d51a347bf52f",
+    "unique_blueprint_sha256": "d6cdd1420f53736bd3d9e32673f306d54df63a37cbe3afa256020a3d7215d0c5",
+    "mapping_evidence_sha256": "f0bd85dde069f888c6d5366e586720f9618e2aba659816fd4cfba2d8e6c7e09e",
+    "synthetic_register_sha256": "66b663593998eddde856bd39643a189ac9cd304b4db507bdc73ed4dba33f2f2f",
+    "extracted_text_sha256": "f9c501fde819db2d55723448c454bd757f8438919dc13992a5d33dd732328d44",
+    "review_mode": "read_only_semantic_and_usability_review"
+  },
+  "checks": {
+    "requirement_fit": {
+      "verdict": "PASS",
+      "locators": [
+        "P0001",
+        "P0002",
+        "T001-R002",
+        "P0014",
+        "T005",
+        "P0136"
+      ],
+      "analysis": "Candidate strictly focuses on TTQS indicator I19-E13 ('部份學員能運用所學於職務中。'). The scope is precisely bounded to post-training workplace skill transfer, tracking whether individual learners have task opportunities, whether they attempt application in their jobs, whether work outputs meet rubric standards, and corrective actions if gaps appear. It explicitly rejects swallowing macroscopic enterprise performance, general employer satisfaction (I19-E12), or salary changes (I19-E14)."
+    },
+    "correct_genre": {
+      "verdict": "PASS",
+      "locators": [
+        "T001-R003",
+        "T004",
+        "P0030-P0037",
+        "T006",
+        "T007",
+        "T008",
+        "T009",
+        "T011",
+        "T012",
+        "T013",
+        "T015",
+        "T018"
+      ],
+      "analysis": "Accurately fulfills the '改善／行動追蹤工具｜學員職務運用追蹤紀錄' genre specified in the Unique Blueprint. The document provides an operational SOP with inputs, control points, outputs, and exception flows (T006); two blank operational forms for real use (T007 Case Form and T008 Corrective Action Form); a worked cohort tracking matrix (T009); an end-to-end worked case SYN-0125-CASE-01 with gap identification, root cause hypotheses, corrective actions, follow-up verification, and hold disposition (T011-T013); overdue/invalidation handling (T015); and gatekeeping checklists (T018)."
+    },
+    "usable_association_workflow": {
+      "verdict": "PASS",
+      "locators": [
+        "P0022-P0025",
+        "T004",
+        "P0031-P0037",
+        "T006",
+        "T007",
+        "T008"
+      ],
+      "analysis": "The governance design directly reflects the operational reality of small trade associations lacking independent HR departments. Secretarial staff roles are clearly defined across four functional positions: 案件承辦 (case handler), 工作樣本覆核 (sample reviewer), 案件決定職能 (case decider), and 資料保管／隱私諮詢 (data custodian). Inherent risks of self-review (when handler and reviewer are the same staff member) are explicitly disclosed, and formal closure is restricted to authorized decision-makers. The step-by-step SOP and clear branch rules (NO_OPPORTUNITY, HOLD_UNKNOWN, PARTIAL_USE, risk halt) are fully actionable for association staff."
+    },
+    "complete_operational_tables_and_hold_criteria": {
+      "verdict": "PASS",
+      "locators": [
+        "T002",
+        "T003",
+        "T006",
+        "T007",
+        "T008",
+        "P0089",
+        "P0103-P0112",
+        "T015",
+        "T018"
+      ],
+      "analysis": "All operational tables, forms, and decision gates are complete and robust. Table 5-1 and Table 5-2 provide comprehensive fillable fields for real deployment without premature assumptions. Chapter 9 establishes concrete criteria for overdue follow-up, evidence invalidation (out-of-window, unverified association, tampering, self-statement only, irrelevant attendance cards), and case closure/reopening. Crucially, the hold criteria prevent papering over gaps: cases remain in HOLD/REVISE whenever critical evidence is unverified or follow-up actions are incomplete."
+    },
+    "sample_real_boundary_and_no_fabricated_approvals": {
+      "verdict": "PASS",
+      "locators": [
+        "P0002",
+        "T001-R006",
+        "T004-R004",
+        "P0042",
+        "P0047",
+        "P0050",
+        "P0068",
+        "P0083",
+        "P0089-P0091",
+        "P0098",
+        "T016",
+        "T017"
+      ],
+      "analysis": "The SAMPLE/REAL boundary is flawlessly maintained. P0002 explicitly declares 'SAMPLE / SYNTHETIC ONLY', 'REAL EVIDENCE NOT PROVIDED', and 'FORMAL ACCEPTANCE NOT GRANTED'. Chapter 5 provides blank forms clearly marked 'REAL use only' for actual deployment. All demonstration cases use synthetic IDs (SYN-L01~L12, SYN-0125-CASE-01, SYN-D01~D05, ACT-01~04, SIM-LOC-*), synthetic roles, and simulated locators. No living individuals, real employers, committee approvals, or simulated signatures are fabricated. The worked case properly concludes with a status of 'HOLD / REVISE' due to an overdue synthetic action (ACT-04), honestly exemplifying governance control rather than fake unanimous success. Chapter 11 provides an exhaustive 35-item replacement register (REG-0125-001 through REG-0125-035) matching the audit register byte-for-byte."
+    },
+    "numerical_and_cross_section_consistency": {
+      "verdict": "PASS",
+      "locators": [
+        "T002-R005",
+        "T003",
+        "T009",
+        "P0053-P0063",
+        "T010",
+        "P0070-P0074",
+        "T011",
+        "P0078",
+        "T013",
+        "P0086-P0089",
+        "T017"
+      ],
+      "analysis": "All calculations, denominator definitions, and date schedules cross-reconcile with 100% mathematical precision: (1) Total cohort = 12; NO_OPPORTUNITY = 2; Eligible denominator = 12 - 2 = 10. Within eligible denominator: COMPLETE_USE = 6 (60.0%), PARTIAL_USE = 2 (20.0%), VERIFIED_NO_USE = 1 (10.0%), HOLD_UNKNOWN = 1 (10.0%); Any use rate = (6 + 2)/10 = 80.0%; No opportunity proportion = 2/12 = 16.7%. Unknown cases remain in the denominator and are never counted as success. (2) Worked case SYN-0125-CASE-01 has 5 sample documents (SYN-D01 to SYN-D05) evaluated against 4 rubric dimensions; 4 pass, 1 fails (D03), yielding 4/5 = 80.0%, properly driving case disposition to PARTIAL_USE without score averaging. (3) Corrective actions total 4; 3 completed (ACT-01 to ACT-03), 1 overdue/incomplete (ACT-04); Action completion rate = 3/4 = 75.0%. (4) Date arithmetic matches the calendar exactly: Day 0 = 2026-07-01; Day 31-60 observation window = 2026-08-01 to 2026-08-30; Day 90 review = 2026-09-29 (July 30 days remaining + August 31 days + September 29 days = 90 days); all sample dates (08-05, 08-11, 08-17, 08-22, 08-28) fall strictly within the window; action deadlines (08-20, 08-24, 08-27, 09-24) follow strict chronology."
+    },
+    "negative_neighbor_misfiling_check": {
+      "verdict": "PASS",
+      "locators": [
+        "P0002",
+        "T001-R003",
+        "T005",
+        "P0136"
+      ],
+      "analysis": "Distinctions from negative neighbors are explicitly articulated and structurally enforced. Table T005 provides a comprehensive 4-dimension comparative matrix distinguishing 0125 from 0124 (I19-E12, employer hiring and feedback) and 0126 (I19-E14, post-training salary change survey). It prohibits inferring skill compliance from employer satisfaction, prohibits inferring salary increase or employer endorsement from job-task compliance, and forbids causal claims linking single training sessions to macroeconomic employment or compensation outcomes."
+    },
+    "staff_evaluator_usability": {
+      "verdict": "PASS",
+      "locators": [
+        "P0003-P0011",
+        "T001",
+        "T006",
+        "T007",
+        "T008",
+        "T014",
+        "T018"
+      ],
+      "analysis": "Usability for both frontline association operators and external TTQS evaluators is outstanding. Section 1.2 provides a '30-second quick guide' summarizing intake, data privacy, rubric evaluation, corrective action follow-up, and closure authority. Section 8.1 provides an objective 4-level rubric with explicit behavioral criteria across 4 dimensions. Table 12-1 establishes a pre-registration and pre-closure gatekeeper checklist that prevents premature sign-offs. The language is professional, clear Traditional Chinese, completely free of internal engineering or test harness jargon."
+    }
+  },
+  "material_findings": [],
+  "nonblocking_improvements": [
+    {
+      "area": "Operational form field formatting",
+      "locators": ["T007", "T008"],
+      "suggestion": "Blank forms in Chapter 5 currently use generic underline fills ('____________'). In actual digitized deployment, providing standardized character length limits or masked field formatting for restricted evidence locator codes would further safeguard against accidental over-entry of sensitive details."
+    },
+    {
+      "area": "Root cause analysis taxonomy expansion",
+      "locators": ["T012"],
+      "suggestion": "Table T012 models 3 root cause dimensions (人員操作, 表單工具, 流程覆核). While thorough, adding an explicit optional fourth category for '作業情境／時間壓力' (operational workload/time constraints) would provide additional diagnostic breadth when investigating frontline customer service gaps."
+    },
+    {
+      "area": "Rubric inter-rater calibration guidelines",
+      "locators": ["T014"],
+      "suggestion": "Table T014 defines clear 4-level anchors for sample review. For associations with multiple reviewers, adding a short calibration instruction or second-reviewer dispute resolution mechanism would further reinforce inter-rater reliability."
+    }
+  ],
+  "final_recommendation": "ACCEPT_CANDIDATE_R01A7: Candidate 0125 R01A7 is semantically impeccable, methodologically rigorous, fully aligned with official requirement I19-E13 and the Unique Blueprint, and completely free of material defects, mathematical discrepancies, or unauthorized real-world claims."
+}
+

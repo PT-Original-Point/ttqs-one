@@ -1,0 +1,370 @@
+{
+  "schema": "ttqs.weekly_workflow_evidence.v1",
+  "task_id": "LUNA_WEEKLY_WORKFLOW_AUDIT_AND_GUARD_INTEGRATION_20261005",
+  "captured_at": "2026-10-05T12:41:02+08:00",
+  "scope": {
+    "requested_window_start": "2026-09-29T00:00:00+08:00",
+    "requested_window_end": "2026-10-05T12:41:02+08:00",
+    "retained_machine_evidence_window": "2026-10-02 through 2026-10-05",
+    "coverage_gap": "2026-09-29 through 2026-10-01: no retained runtime logs identified; no rates or events inferred for this gap."
+  },
+  "attribution": {
+    "luna_specific_model_task_id": "UNKNOWN",
+    "note": "Metrics below are tied to local records, exact work IDs, and the separately identified root-owned audit. No per-agent productivity or cost rating is inferred."
+  },
+  "opencode": {
+    "new_calls_made_by_this_audit": 0,
+    "build_result_files": 82,
+    "result_status_counts": {
+      "BUILD_READY": 13,
+      "BUILD_FAILED": 69
+    },
+    "structured_provider_quota_result_files": 64,
+    "quota_evidence": "Retained structured error records include provider error code quota and nested provider.quota status=429; machine error message Rate limit exceeded. Please try again later.; inner FreeUsageLimitError.",
+    "first_successful_build_start": "2026-10-04T11:51:02+08:00",
+    "first_structured_quota_build_start": "2026-10-04T11:57:12+08:00",
+    "first_structured_quota_result_finished": "2026-10-04T12:01:06+08:00",
+    "last_structured_quota_build_start": "2026-10-04T16:33:08+08:00",
+    "last_structured_quota_result_finished": "2026-10-04T16:33:10+08:00",
+    "multiworker_and_single_control": {
+      "two_worker_lane_ids": [
+        "0027",
+        "0030"
+      ],
+      "first_observed_structured_quota_finish": {
+        "0027": "2026-10-04T13:15:05+08:00",
+        "0030": "2026-10-04T13:15:05+08:00"
+      },
+      "retained_structured_quota_result_wrappers_by_id": {
+        "0027": 3,
+        "0030": 3,
+        "0023": 3,
+        "0024": 3
+      },
+      "single_worker_control_ids": [
+        "0023",
+        "0024"
+      ],
+      "single_worker_control_structured_quota_wrappers": {
+        "0023": 3,
+        "0024": 3
+      },
+      "interpretation": "Single-worker controls also returned structured quota evidence, so concurrency greater than one is not required to trigger the observed rejection. No successful single-worker availability sample exists in this evidence. Wrapper-file counts are not provider request counts."
+    },
+    "permanent_ban_proven": false,
+    "retry_after": "Per-result provider Retry-After is UNKNOWN where absent; no synthetic retry deadline inferred.",
+    "token_recovery": {
+      "unique_step_finish_records": 1425,
+      "totals_as_reported": {
+        "input": 5283536,
+        "output": 406434,
+        "reasoning": 300667,
+        "cache_read": 76036573,
+        "cache_write": 0
+      },
+      "conflicting_duplicate_ids": [],
+      "limitations": "These are deduplicated step records keyed by sessionID+part.id, not work/model-request counts or account billing. Token fields may overlap. cost=0 is not evidence of unlimited free usage."
+    },
+    "codex_log_token_observation": {
+      "distinct_dated_log_files": 239,
+      "unique_sha256": 238,
+      "reported_tokens_used_sum": 17116772,
+      "scope": "Log-visible tokens only; not a complete account usage total and not a remaining-quota conversion."
+    },
+    "duplicate_review_attempts": {
+      "count": 8,
+      "candidate_sha256": "438ff278c714944f684f58c22094c9aa6f31162d78bcbef19243439bba8b1eb2",
+      "persisted_review_json_count": 22,
+      "distinct_persisted_review_candidate_sha256": 22,
+      "note": "Eight same-candidate review logs were reruns; persisted review JSON set has no duplicate candidate SHA."
+    }
+  },
+  "current": {
+    "measured_docx_count": 14,
+    "measurement": "Enumerated CURRENT *.docx files at 2026-10-05T12:25:02+08:00; queue item state count at the same readback was DONE=11.",
+    "baseline_docx_count": 10,
+    "baseline_source": "CHECKPOINT_ANTIGRAVITY_SCOPED_WRITE_20261004.md",
+    "net_change_since_baseline": 4,
+    "antigravity_promotions_in_collector_snapshot": 0,
+    "caveat": "Queue DONE count in the collector snapshot was 11 while CURRENT folder count was 14; reconcile this inventory discrepancy before final acceptance."
+  },
+  "antigravity": {
+    "production_receipts_in_collector_snapshot": {
+      "receipt_count": 23,
+      "cli_success": 22,
+      "cli_error": 1,
+      "content_path_exists": 16,
+      "content_json_object": 15,
+      "content_json_stable": 15,
+      "published_current": 0
+    },
+    "host_validated_payload_count": 10,
+    "current_promotions": 0,
+    "qualifying_cost_samples": 0,
+    "root_owned_workflow_audit": {
+      "work_id": "WF_ANTIGRAVITY_WORKFLOW_AUDIT_20261005",
+      "task_type": "WORKFLOW_AUDIT_ONLY",
+      "production_document": false,
+      "actual_model": "gemini-3.8-flash-high",
+      "cli_status": "SUCCESS",
+      "exit_code": 0,
+      "duration_seconds": 32.954,
+      "usage_reported": {
+        "input_tokens": 31117,
+        "output_tokens": 6748,
+        "thinking_tokens": 4647,
+        "cache_read_tokens": 0,
+        "total_tokens": 37865
+      },
+      "content_json_sha256": "caa1acc6d385f5b5e389fd101e354050b282218535ab773ec0fe2865a7152738",
+      "content_json_bytes": 5349,
+      "denied_actions": [],
+      "permission_scope": "write_file(E:/TTQS/TTQS_ONE_CODEX_RUNTIME/WORK/CONTENT_PAYLOADS/WF_ANTIGRAVITY_WORKFLOW_AUDIT_20261005/content.json)",
+      "permission_scope_readback_pass": true,
+      "permission_removed_readback": true,
+      "five_hour_remaining_percent_before": 73.6971,
+      "five_hour_remaining_percent_after": 73.4539,
+      "weekly_remaining_percent_before": 55.0373,
+      "weekly_remaining_percent_after": 54.9968,
+      "percentage_point_deltas": {
+        "five_hour": 0.2432,
+        "weekly": 0.0405
+      },
+      "note": "This audit task was performed by the Master controller, not a production document build; it does not count as one of the three production cost samples."
+    },
+    "dispatch_ownership": "Master direct dispatch only; Luna supervisor auto-dispatch is deferred while existing payload salvage/local integration remain enabled."
+  },
+  "workflow_guard_integration": {
+    "verification_cases": 22,
+    "passed": 22,
+    "live_model_calls": 0,
+    "integration_with_supervisor": "PASS",
+    "tested_real_entrypoint": "validate_content_payload rejects the persisted 0013 payload with CONTENT_PROMPT_LEAK.",
+    "dispatch_policy": "Master-owned Antigravity dispatch is enforced; existing-payload salvage remains enabled.",
+    "review_policy": "Final JSON review parsing requires exact work_id and candidate SHA; cache fingerprint binds candidate, contract, official source anchor and synthetic facts; cross-review reuse also requires the same work_id.",
+    "provider_policy": "Structured provider event is retained with explicit observed status/error code; no permanent-ban inference and no timer-driven automatic retry.",
+    "semantic_gates_weakened": false,
+    "supervisor_sha256": "6b9bc16165250fa338fbae2159cc5515b2e8338e10b4815faadbd5f858303c9d",
+    "guard_sha256": "dbcf40f09665f23cde80dba6a0855aaef059c426bdc7c6a7be31c141607a7963",
+    "verification_sha256": "74d338a4bb93c136d406adcfcb33a1db796443894be69abb79cfb3849552a6b7"
+  },
+  "known_failures_and_open_work": {
+    "0033_status": "PARKED_CONTROL / PRE_SCOPED_WRITE_FIX_ATTEMPT_HISTORICAL_EVIDENCE_ONLY; stable content is historical and not promoted.",
+    "0054": "R13 exact-SHA review is a true FAIL; no repeat model review. Targeted local repair remains pending integration and fresh acceptance.",
+    "0013": "Root-owned short content repair is in progress/awaiting host validation and independent review; no CURRENT claim.",
+    "workflow_audit_smoke": "No write smoke rerun; this was one isolated workflow audit only."
+  },
+  "limitations": [
+    "Provider request count is not available from result wrapper count alone.",
+    "OpenCode token-step totals are not account-billing or quota totals.",
+    "No retained event source covers 2026-09-29 through 2026-10-01.",
+    "No per-agent Luna task ID was available for an individual productivity rating."
+  ],
+  "sources": [
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\MASTER\\WEEKLY_WORKFLOW_AUDIT_20261005\\evidence.json",
+      "sha256": "9caccbd1da2dddae79a50d6da03bea254cfba5e0be20134f973fb4ec15dc2f56",
+      "representative_lines": [
+        6,
+        10,
+        71,
+        2001,
+        2075,
+        3757,
+        4294
+      ],
+      "json_pointer": "/opencode/result_records, /codex, /antigravity, /runtime"
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\MASTER\\WEEKLY_WORKFLOW_AUDIT_20261005\\opencode_token_record_recovery.json",
+      "sha256": "9daa25e6ba974a02b66427ed528936fb6d64337393ccdb083866d6bf607fd350",
+      "representative_lines": [
+        3,
+        4,
+        11,
+        27090
+      ],
+      "json_pointer": "/unique_step_finish_records, /totals_as_reported, /conflicting_duplicate_ids, /limitations"
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\OPENCODE_OFFLINE_USAGE_RECONSTRUCTION_R03.json",
+      "sha256": "504892177cac788e79ab71d81582c48359877d6e7e954d6c92df69fa66cef66a",
+      "representative_lines": [
+        24,
+        32,
+        47,
+        824,
+        1013
+      ],
+      "json_pointer": "/build_attempts, /earliest_retained_structured_provider_quota_event, /reviews, /token_usage"
+    },
+    {
+      "path": "E:\\PT-Original-Point\\ttqs-one\\TTQS_HANDOFF\\CHECKPOINT_ANTIGRAVITY_SCOPED_WRITE_20261004.md",
+      "sha256": "f9bc082effb6a3b7011abceee3fb4480d7d8f5b7615ed2647193f6de2bca1270",
+      "representative_lines": [
+        9,
+        26
+      ]
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\ANTIGRAVITY_COST_SAMPLE_REGISTER.json",
+      "sha256": "29fad84224922e0f25950f4505a4f8f731c7ee990e7ddf899b37284c525466b8",
+      "json_pointer": "/samples"
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\ANTIGRAVITY_QUOTA_LEDGER.jsonl",
+      "sha256": "ab946cdf17dc2d3c9fa7b186e81df89f3f11d0f7f6fd9d600e96ed878fc814e8",
+      "representative_lines": [
+        92,
+        93,
+        94,
+        95
+      ]
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\CONTENT_PAYLOADS\\WF_ANTIGRAVITY_WORKFLOW_AUDIT_20261005\\agy_stdout.stream.jsonl",
+      "sha256": "e05ea82b0314f2146ddf9ff7659d5c381cad9fdb5f6e6b900ceff2b2b5a43558"
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\CONTENT_PAYLOADS\\WF_ANTIGRAVITY_WORKFLOW_AUDIT_20261005\\antigravity_run_receipt.json",
+      "sha256": "dd2eb7ee1640d03f88436615f0fc5b3790eb3e718f98e5f7dafe9764d2cf720d",
+      "representative_lines": [
+        4,
+        8,
+        26,
+        48,
+        74,
+        80
+      ]
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\CONTENT_PAYLOADS\\WF_ANTIGRAVITY_WORKFLOW_AUDIT_20261005\\content.json",
+      "sha256": "caa1acc6d385f5b5e389fd101e354050b282218535ab773ec0fe2865a7152738",
+      "representative_lines": [
+        1,
+        2,
+        5,
+        74
+      ]
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\MASTER\\WEEKLY_WORKFLOW_AUDIT_20261005\\guard_verification.json",
+      "sha256": "74d338a4bb93c136d406adcfcb33a1db796443894be69abb79cfb3849552a6b7",
+      "representative_lines": [
+        2,
+        3,
+        95,
+        98
+      ]
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\MASTER\\workflow_guard.py",
+      "sha256": "dbcf40f09665f23cde80dba6a0855aaef059c426bdc7c6a7be31c141607a7963",
+      "representative_lines": [
+        15,
+        42,
+        45,
+        51,
+        59
+      ]
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\AUTOMATION\\supervisor_core.py",
+      "sha256": "6b9bc16165250fa338fbae2159cc5515b2e8338e10b4815faadbd5f858303c9d",
+      "representative_lines": [
+        43,
+        46,
+        1257,
+        1298,
+        1324,
+        1395,
+        1500,
+        1521,
+        2366,
+        4062,
+        4478
+      ]
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\LOGS\\20261004_120404__codex_cross_review_0019_WF_OPENCODE_REPAIR_0019_20261004_115102.log",
+      "sha256": "5681f90661fb2819fedd0af6e67904468b99722fc2ff84b7709bf61906cbd20b",
+      "representative_lines": [
+        14
+      ],
+      "candidate_sha256": "438ff278c714944f684f58c22094c9aa6f31162d78bcbef19243439bba8b1eb2"
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\LOGS\\20261004_122102__codex_cross_review_0019_WF_OPENCODE_REPAIR_0019_20261004_115102.log",
+      "sha256": "ddfcb32a09eb70a23dde7b06d06f34b867aba83bec1e9a92254239a0924a86dd",
+      "representative_lines": [
+        14
+      ],
+      "candidate_sha256": "438ff278c714944f684f58c22094c9aa6f31162d78bcbef19243439bba8b1eb2"
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\LOGS\\20261004_125243__codex_cross_review_0019_WF_OPENCODE_REPAIR_0019_20261004_115102.log",
+      "sha256": "8a04c1691a87ccd29aafcc33f7a8310d26ce7703455529a3688447301f41dcab",
+      "representative_lines": [
+        14
+      ],
+      "candidate_sha256": "438ff278c714944f684f58c22094c9aa6f31162d78bcbef19243439bba8b1eb2"
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\LOGS\\20261004_132901__codex_cross_review_0019_WF_OPENCODE_REPAIR_0019_20261004_115102.log",
+      "sha256": "5eea487d3226ffb0af397be0be01618fcdb3c4ab9757bdbe34350340aecca2ef",
+      "representative_lines": [
+        14
+      ],
+      "candidate_sha256": "438ff278c714944f684f58c22094c9aa6f31162d78bcbef19243439bba8b1eb2"
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\LOGS\\20261004_135810__codex_cross_review_0019_WF_OPENCODE_REPAIR_0019_20261004_115102.log",
+      "sha256": "8311dcd225a2e2f582348192c4951322c7b0a402c6c90e78f4f7733707c9a355",
+      "representative_lines": [
+        14
+      ],
+      "candidate_sha256": "438ff278c714944f684f58c22094c9aa6f31162d78bcbef19243439bba8b1eb2"
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\LOGS\\20261004_141501__codex_cross_review_0019_WF_OPENCODE_REPAIR_0019_20261004_115102.log",
+      "sha256": "bbbd314e6c7601df0666b85a7da03e01f4103a7961a2dbf398ae6c9cd5c6b785",
+      "representative_lines": [
+        14
+      ],
+      "candidate_sha256": "438ff278c714944f684f58c22094c9aa6f31162d78bcbef19243439bba8b1eb2"
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\LOGS\\20261004_144239__codex_cross_review_0019_WF_OPENCODE_REPAIR_0019_20261004_115102.log",
+      "sha256": "64672e144afce1c6c944c95f3abef2f0015619b76fe317c8e2e1ef8df1d96a74",
+      "representative_lines": [
+        14
+      ],
+      "candidate_sha256": "438ff278c714944f684f58c22094c9aa6f31162d78bcbef19243439bba8b1eb2"
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\LOGS\\20261004_145501__codex_cross_review_0019_WF_OPENCODE_REPAIR_0019_20261004_115102.log",
+      "sha256": "33732f53e9c8eeb91b437c193844ec841fc2a062f39b556cbd8312b5797d021a",
+      "representative_lines": [
+        14
+      ],
+      "candidate_sha256": "438ff278c714944f684f58c22094c9aa6f31162d78bcbef19243439bba8b1eb2"
+    }
+  ],
+  "report_artifact": {
+    "attempted_revision_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\MASTER\\WEEKLY_WORKFLOW_AUDIT_20261005\\UNVERIFIED_LUNA_APPENDIX_REPORT_c1c89c9c2bd706e656d716c6ff62b86b94ccd46b446e9e46ff1aa4573994ddc0.docx",
+    "attempted_revision_sha256": "c1c89c9c2bd706e656d716c6ff62b86b94ccd46b446e9e46ff1aa4573994ddc0",
+    "attempted_revision_pages": 9,
+    "attempted_revision_visual_review": "PASS for all nine pages, but this copy is explicitly UNVERIFIED and is not the official report.",
+    "formal_report_path": "E:\\TTQS\\交付報告\\TTQS近一週工作流稽核與改善報告_20261005.docx",
+    "formal_report_sha256_after_master_restore": "174f65cd13019789f8e2c2886ffd704a8bfea119e842555cfc8b3f0a19f53aa8",
+    "formal_report_status": "Master restored the previously accepted report; Luna made no further changes."
+  },
+  "control_files": {
+    "artifact_owners": {
+      "source_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\MASTER\\ARTIFACT_OWNERS.json",
+      "source_sha256": "5bc409bcea3c4c78966287c3fabe7a907729059a370421f15e8aa460dbcffffb",
+      "snapshot_path": "TTQS_HANDOFF/WORKFLOW_GUARD_INTEGRATION_20261005/artifact_owners.json",
+      "snapshot_sha256": "5bc409bcea3c4c78966287c3fabe7a907729059a370421f15e8aa460dbcffffb"
+    }
+  }
+}

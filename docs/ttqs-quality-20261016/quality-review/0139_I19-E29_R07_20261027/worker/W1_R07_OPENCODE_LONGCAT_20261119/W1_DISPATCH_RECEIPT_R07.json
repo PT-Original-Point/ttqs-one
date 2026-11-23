@@ -1,0 +1,46 @@
+{
+  "schema": "TTQS_ONE_OPENCODE_DISPATCH_RECEIPT_R12_2_V1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS_ONE_0139_I19-E29_SEMANTIC_REVIEW_R07_OPENCODE_LONGCAT_20261119",
+  "doc_id": "0139",
+  "requirement_id": "I19-E29",
+  "candidate": "R07",
+  "candidate_sha256": "9e9f65b962f2a6b0e3b1a14c8d4615b6a70c98b140d672943adb5de636843241",
+  "source_packet_sha256": "3c9c310e086a86c03d38bea68bba1ca53bcb2fc927d8949fb6b91c45379d9d47",
+  "blueprint_sha256": "090169968e3df59a6cecaac665a99b2cb625a9cbc355bf84528d08b27c98052a",
+  "replacement_register_sha256": "01eca5f482240e0a7bf9c48f4ca7734b810e957b156107ed4da0b0b7f49e3f9d",
+  "dispatch_head": "512de587306985ee906a6b4cf147b72a2b687e60",
+  "packet_sha256": "f7441d65f95af975bb8a54e8dcc659666ae582028531415c71d29dee62f94244",
+  "requested_route": "opencode/longcat-2.5-free",
+  "session_model_id": "longcat-2.5-free",
+  "provider_served_model": "UNKNOWN",
+  "agent": "plan",
+  "command": "opencode run --model opencode/longcat-2.5-free --agent plan --format json --title TTQS-0139-R07-Semantic-Review --file <packet> <bounded-review-instruction>",
+  "wrapper_pid": 9400,
+  "cli_pid": 18448,
+  "session_id": "ses_e1019f2b2ffep2LJSowkQvnAb7",
+  "process_start_local": "2026-11-19T02:23:12.9290562+08:00",
+  "terminal_reason": "stop",
+  "reported_cost": 0,
+  "token_usage": {
+    "input": 36675,
+    "output": 1714,
+    "reasoning": 14056,
+    "cache": {
+      "read": 1792,
+      "write": 0
+    }
+  },
+  "process_exit_code": "UNKNOWN",
+  "completed_at_local": "2026-11-19T02:27:00.415+08:00",
+  "stdout_sha256": "37c37728a09670be97f9bcbf9bb567833b2efafeeab69d2c847a6eb0f464fb58",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "response_sha256": "7587290c9cddee0fe2d2877f2c922021e4e73d76aa066a4f91e5a4aa49813bf9",
+  "response_bytes": 4451,
+  "verdict": "PASS",
+  "limitations": [
+    "Semantic text review only; no visual or technical scope re-run.",
+    "Reviewer did not independently recompute the DOCX SHA; dispatcher verified candidate bytes and exact SHA before packet creation.",
+    "Requested model/CLI session identity does not prove upstream serving model; actual serving model UNKNOWN."
+  ]
+}

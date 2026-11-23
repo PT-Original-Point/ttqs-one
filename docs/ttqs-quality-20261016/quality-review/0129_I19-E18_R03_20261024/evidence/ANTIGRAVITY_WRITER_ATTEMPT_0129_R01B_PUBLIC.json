@@ -1,0 +1,62 @@
+{
+  "work_id": "TTQS-0129-I19-E18-WRITER-R01B",
+  "doc_id": "0129",
+  "requirement_id": "I19-E18",
+  "worker": "Antigravity CLI",
+  "requested_model": "gemini-3.8-flash-high",
+  "actual_model": "UNKNOWN",
+  "prompt_sha256": "31a67e9fd810e24c54a52efaeb48bee352c534350c74ffad6d7d0040b6125d96",
+  "prompt_bytes": 10896,
+  "previous_attempt": "R01 rejected by CLI argument parser before generation; preserved in ANTIGRAVITY_WRITER_DISPATCH_0129_R01.json",
+  "repair": "move --print-timeout before --print and pass prompt as --print positional value; prompt bytes unchanged",
+  "mode": "pure text; plan mode; slash commands disabled; no Computer Use; no file tools requested; no fallback; no paid upgrade",
+  "started_at_local": "2026-10-24T19:12:42.228716+08:00",
+  "status": "RESPONSE_RECEIVED",
+  "timeout_seconds": 300,
+  "invocation_redacted": [
+    "--model",
+    "gemini-3.8-flash-high",
+    "--mode",
+    "plan",
+    "--output-format",
+    "json",
+    "--print-timeout",
+    "0",
+    "--disable-slash-commands",
+    "--print",
+    "<prompt>"
+  ],
+  "pid": 20824,
+  "ended_at_local": "2026-10-24T19:15:08.868082+08:00",
+  "exit_code": 0,
+  "timed_out": false,
+  "stdout_bytes": 38351,
+  "stdout_sha256": "47b99eafbfbb8d4341bfba010df0ace4aa4c0576fc1899df7eb1e3d72fedfcc7",
+  "stderr_bytes": 78,
+  "stderr_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+  "usage": {
+    "input_tokens": 9874,
+    "output_tokens": 16498,
+    "thinking_tokens": 4224,
+    "cache_read_tokens": 0,
+    "total_tokens": 26372
+  },
+  "native_envelope": {
+    "conversation_id": "4fb58848-925a-4001-adb3-4e081acc941e",
+    "status": "SUCCESS",
+    "duration_seconds": 139.5574342,
+    "num_turns": 1,
+    "usage": {
+      "input_tokens": 9874,
+      "output_tokens": 16498,
+      "thinking_tokens": 4224,
+      "cache_read_tokens": 0,
+      "total_tokens": 26372
+    }
+  },
+  "manuscript_bytes": 36983,
+  "manuscript_sha256": "d3e7cf0d6284a771e752c9f3a9c75ffe2ab04e1531ba8c6035977987eedee9dd",
+  "response_chars": 19284,
+  "local_original_receipt_sha256": "9abeedf858f2ae80dcecdbb51f1c79d217ff330e245f4c8daca4a428d021ac59",
+  "public_sanitization": "Absolute local paths removed; process, model, raw-output, timing and status fields retained."
+}

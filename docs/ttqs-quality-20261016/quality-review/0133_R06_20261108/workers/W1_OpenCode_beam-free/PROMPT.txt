@@ -1,0 +1,35 @@
+你是 OpenCode W1，擔任 TTQS ONE 0133 R05 的限界文字修訂提案者。這是新 work_id，只處理既有全文審查唯一非阻擋觀察 SYN-EX-01；不要重做全文審查，不要開檔、寫檔、呼叫工具或瀏覽網路。
+
+候選 exact SHA：7f9cf468358d43ab866a1f11f29149faf0ee21ff99c7966f7754bc1a7978eb6e。官方頁 8 SHA 與 Blueprint SHA 在 packet。R05 既有 W1 全文文字審查 verdict=PASS，但 review_accepted=false，明確指出 TABLE 10 的「20筆日簽到去重為11」缺少日別拆分，不能獨立重算。只產生最小修訂文字提案，不直接改 DOCX。
+
+維持20筆原始簽到條目與11名不重複學員/人次，不改年度總數；可用兩個示例日各10筆、重複9人，計算10+10-9=11。不可加真實日期、人名或協會績效；新增內容明標SYNTHETIC，且說明不計入年度總數。保留HOLD待來源核對、拒絕把20筆當成不重複人次、保存舊/新值/來源/原因/第二人覆核紀錄。同步提議更新 TABLE 15 的 SYN-EX-01 替換清冊列，使新增數值均有登錄。不要擴大範圍、不要改其他段落。
+
+請只回一個 JSON 物件：work_id、candidate_sha256、table_10_replacement_cells（依現有欄位順序）、table_15_register_replacement_cells（依現有欄位順序）、calculation、synthetic_fact_ids_or_values_to_register、checks_passed、ambiguities、limitations。若安全提出修訂需要更多證據，回 status=BLOCKED 並說明。不要自稱已修改文件或通過 QA。
+
+INLINE_PACKET:
+{
+  "project_id":"TTQS_ONE",
+  "work_id":"TTQS_ONE_0133_R05_SYNEX01_REPAIR_PROPOSAL_20261108",
+  "doc_id":"0133",
+  "requirement_id":"I19-E22",
+  "candidate":"R05",
+  "candidate_sha256":"7f9cf468358d43ab866a1f11f29149faf0ee21ff99c7966f7754bc1a7978eb6e",
+  "official_requirement_page_sha256":"805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "unique_blueprint_sha256":"edb8d241b1604790b36daf1622b907a9985ec7901c6d1e0a79f440be5fcb42fd",
+  "stage":"READY_SCOPED_REPAIR_PROPOSAL",
+  "writer_role":"bounded text proposal only; no file edits",
+  "scope":"Resolve the single W1 R05 review advisory: SYN-EX-01 says 20 daily attendance entries deduplicate to 11, but lacks a daily split to reproduce 11.",
+  "current_table_10_row":"SYN-EX-01 | 20筆日簽到誤當人次，去重為11 | REJECT 20 作為人次；先 HOLD 等來源核對 | 以「班次×去識別學員」重算 11；保存舊值20、新值11、來源鍵、原因與第二人覆核",
+  "current_table_15_register_row":"SYN-EX-01 | §8/p8; §10/p10 | 20筆日簽到誤當人次，去重為11 | REAL需原始簽到及去識別學員×班次清單；示例不併年度數",
+  "review_advisory":"20筆日簽到去重為11 is feasible but not independently recomputable without day-level split.",
+  "constraints":[
+    "Preserve the existing 20 sign-in entries and 11 unique learner/person-time outcome; do not alter annual totals.",
+    "All added details must be explicitly SYNTHETIC, not real association data.",
+    "Prefer the smallest exact replacement for Table 10 and its Table 15 register entry; do not redesign the document.",
+    "A simple two-day example may use 10 entries on each day with 9 repeated learners, yielding 10+10-9=11 unique learners. Do not invent dates or named people.",
+    "State that this is an illustrative computation only and excluded from annual totals; REAL use still requires source attendance records and de-identified learner-by-class mapping.",
+    "Output must preserve operational correction semantics: HOLD source verification, reject 20 as unique person-times, keep old/new values and second-person review trail."
+  ],
+  "acceptance":"Return concise JSON with exact replacement text for Table 10 row and Table 15 register row; list arithmetic and truth-boundary checks; identify any ambiguity or source/Blueprint conflict. No claims of DOCX modification, QA PASS, or formal acceptance."
+}
+

@@ -1,0 +1,111 @@
+{
+  "schema": "ttqs_one_deterministic_register_parity_window_qa_v1",
+  "work_id": "TTQS_ONE_0032_R07_REGISTER_PARITY_WINDOW_147_153_R02_20261116",
+  "doc_id": "0032",
+  "requirement_id": "I06-E03",
+  "candidate_revision": "R07",
+  "candidate_docx_sha256": "e1d6311e9828f464aba7b9bc47c20fa8b5392951dba96cf9a71d77be73fb691f",
+  "derived_register_r02_sha256": "fc7a0c60f68fc5e84824e05bafe5f44ecb25ebc66b507014db89c88b1a4fe7df",
+  "scope": "DOCX table index 33, rows 1-7; register facts SYN-032-147 through SYN-032-153 only.",
+  "rule": "SYN-032-147/148/149/150/151/153 synthetic_value equals exact candidate cell1; SYN-032-152 equals exact candidate cell1 + cell3. Cell2 replacement instruction is excluded.",
+  "target_fact_count": 7,
+  "exact_matches": 7,
+  "bindings": [
+    {
+      "fact_id": "SYN-032-147",
+      "table_index": 33,
+      "row_index": 1,
+      "cell0_id_matches": true,
+      "included_cell_indices": [
+        1
+      ],
+      "register_value_sha256": "744023f606b5ee2d3299601d963211970ecd140108ac443c58fdf7581f89d9fa",
+      "exact_parity": true,
+      "status": "SAMPLE/SYNTHETIC — not an association record"
+    },
+    {
+      "fact_id": "SYN-032-148",
+      "table_index": 33,
+      "row_index": 2,
+      "cell0_id_matches": true,
+      "included_cell_indices": [
+        1
+      ],
+      "register_value_sha256": "6eb44745899d5ba73fdfd5387ac588a6c080d49735b0aa3f07783da46d00c7f6",
+      "exact_parity": true,
+      "status": "SAMPLE/SYNTHETIC — not an association record"
+    },
+    {
+      "fact_id": "SYN-032-149",
+      "table_index": 33,
+      "row_index": 3,
+      "cell0_id_matches": true,
+      "included_cell_indices": [
+        1
+      ],
+      "register_value_sha256": "9acd098f33ecf6466d83bdba6e6c56404abed49e5693c9a892b4983547f6ac07",
+      "exact_parity": true,
+      "status": "SAMPLE/SYNTHETIC — not an association record"
+    },
+    {
+      "fact_id": "SYN-032-150",
+      "table_index": 33,
+      "row_index": 4,
+      "cell0_id_matches": true,
+      "included_cell_indices": [
+        1
+      ],
+      "register_value_sha256": "4d3b9987fb3d8d90e885b18569cc4ca3f681cf629ecda330c2ce290e5fa9a76c",
+      "exact_parity": true,
+      "status": "SAMPLE/SYNTHETIC — not an association record"
+    },
+    {
+      "fact_id": "SYN-032-151",
+      "table_index": 33,
+      "row_index": 5,
+      "cell0_id_matches": true,
+      "included_cell_indices": [
+        1
+      ],
+      "register_value_sha256": "89c9fed8d6edec71f30f131a1889d1dc4f876875195d66585b1c76355a9d17de",
+      "exact_parity": true,
+      "status": "SAMPLE/SYNTHETIC — not an association record"
+    },
+    {
+      "fact_id": "SYN-032-152",
+      "table_index": 33,
+      "row_index": 6,
+      "cell0_id_matches": true,
+      "included_cell_indices": [
+        1,
+        3
+      ],
+      "register_value_sha256": "47a385866bbcfab42300623477b6ba3d822018f7b0894bb4d59a5864e7524c0e",
+      "exact_parity": true,
+      "status": "SAMPLE/SYNTHETIC — not an association record"
+    },
+    {
+      "fact_id": "SYN-032-153",
+      "table_index": 33,
+      "row_index": 7,
+      "cell0_id_matches": true,
+      "included_cell_indices": [
+        1
+      ],
+      "register_value_sha256": "ec305158a376c717b7829c37e57f4dcef7ef2bc43d2fb3f6ab5cc9f601ae839c",
+      "exact_parity": true,
+      "status": "SAMPLE/SYNTHETIC — not an association record"
+    }
+  ],
+  "existing_semantic_receipt_sha256": "db41971101cbd8cbdc54927faab0486041b2813f426b7c94a718693bdbde4a49",
+  "existing_semantic_verdict": "PASS",
+  "existing_semantic_candidate_sha256": "e1d6311e9828f464aba7b9bc47c20fa8b5392951dba96cf9a71d77be73fb691f",
+  "existing_semantic_nonblocking_finding_count": 1,
+  "existing_visual_receipt_sha256": "90a56da7123ee2cc2a25e2fbb4caff5a3c37ef85620da09cb155dd0b6891c71c",
+  "existing_visual_verdict": "PASS",
+  "existing_visual_candidate_sha256": "e1d6311e9828f464aba7b9bc47c20fa8b5392951dba96cf9a71d77be73fb691f",
+  "docx_bytes_changed": false,
+  "visual_review_repeated": false,
+  "formal_acceptance": "NOT_GRANTED",
+  "overall_verdict": "PASS_SCOPED_7_OF_7"
+}

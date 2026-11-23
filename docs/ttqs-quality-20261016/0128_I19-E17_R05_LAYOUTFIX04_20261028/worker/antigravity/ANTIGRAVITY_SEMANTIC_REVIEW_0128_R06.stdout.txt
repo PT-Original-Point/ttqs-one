@@ -1,0 +1,139 @@
+{
+  "verdict": "PASS",
+  "bound_docx_sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
+  "bound_extracted_text_sha256": "297d6c23f31c3a6b3b52ce34eafe3bc23272e5c3aae0f34ecae0f09771502418",
+  "review_scope": "Independent semantic review of candidate document TTQS-0128-I19-E17 (DOCX SHA-256 1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41) based strictly on extracted text and project binding specifications. Visual rendering, fonts, and pagination layout QA are excluded.",
+  "criterion_results": {
+    "individual_job_performance_core": {
+      "status": "PASS",
+      "evidence_locator": "文件性質 / 壹、三十秒使用說明與作業治理規範 / 二、作業治理與權限控管原則",
+      "quoted_evidence": "本表專注於「個人層次（Individual Level）之工作任務產出成果」",
+      "assessment": "The candidate document establishes an evaluator-usable case analysis report and standardized operational form specifically designed to evaluate an individual trainee's post-training job performance improvement on a specific task."
+    },
+    "distinction_from_surveys_exams_personnel_and_neighbors": {
+      "status": "PASS",
+      "evidence_locator": "文件性質 / 壹、三十秒使用說明與作業治理規範 / 二、作業治理與權限控管原則",
+      "quoted_evidence": "（非一般問卷、非滿意度調查、非人事升遷考績單）... 嚴格區隔於指標 19-E14（薪資/升遷紀錄）與 19-E16（市場/客戶價值延伸效益）",
+      "assessment": "The document explicitly differentiates individual job performance from Level 1 satisfaction surveys, Level 2 exams, personnel promotion records (0126 / I19-E14), and market/customer value metrics (0127 / I19-E16)."
+    },
+    "task_level_measurement_and_calculations": {
+      "status": "PASS",
+      "evidence_locator": "貳、作業路徑與績效指標資料字典 / 二、欄位與計算字典",
+      "quoted_evidence": "工作指標 | 報名資料首次核對正確率 ... 正確分子 ÷ 分母 × 100% ... 訓後百分率 − 訓前百分率",
+      "assessment": "Baseline and post-training measurements are defined at the specific task level with clear numerator (first-pass correct records) and denominator (total comparable records), with formulas specified in percentage points."
+    },
+    "six_synthetic_cases_and_pooled_aggregates": {
+      "status": "PASS",
+      "evidence_locator": "參、六案個案績效前後對比分析總表（SAMPLE 資料集）",
+      "quoted_evidence": "合併分子分母 / 加權 | 93 / 120 | 77.50% | 101 / 120 | 84.17% | +6.67 pp ... 整體加權比率差 +6.6667 pp（SAMPLE）",
+      "assessment": "All six synthetic cases are fully reported without omitting negative (S-EMP-03: -5.00 pp) or neutral (S-EMP-06: 0.00 pp) cases. Aggregates are computed via pooled numerators and denominators (93/120 -> 101/120) rather than an invalid simple average of percentages."
+    },
+    "skill_demonstration_vs_job_kpi_separation": {
+      "status": "PASS",
+      "evidence_locator": "參、六案個案績效前後對比分析總表 / 重要提醒（IMPORTANT）",
+      "quoted_evidence": "課堂實作總分由 33/60（55.00%）提升至 48/60（80.00%）... 絕非日常工作之績效指標",
+      "assessment": "Learning assessment (skill demonstration score out of 10) is presented in separate columns from job KPI and explicitly prohibited from serving as workplace performance."
+    },
+    "evidence_traceability_and_followup": {
+      "status": "PASS",
+      "evidence_locator": "伍、個人訓練到工作成果的佐證鏈 / 陸、訓後 30、60、90 日追蹤",
+      "quoted_evidence": "所有實際結果仍為 UNKNOWN / NOT COLLECTED",
+      "assessment": "Traces the complete chain from competency gaps to 30/60/90-day tracking, properly flagging unimplemented future intervals as UNKNOWN/NOT COLLECTED."
+    },
+    "confounders_and_causality_boundary": {
+      "status": "PASS",
+      "evidence_locator": "柒、資料品質與混雜因素檢查 / 拾壹、治理聲明與限制邊界公告",
+      "quoted_evidence": "嚴禁用於宣稱培訓為促成績效改變之唯一或排他性原因 ... 同質性只是 SAMPLE 假設",
+      "assessment": "Examines 10 distinct confounding categories (difficulty, workload, system version, seasonality, concurrent training, sampling bias, criteria drift, reviewer bias, log integrity, privacy) and strictly limits findings to descriptive observations."
+    },
+    "hold_reject_and_replacement_governance": {
+      "status": "PASS",
+      "evidence_locator": "捌、判讀流程與 HOLD／REJECT 條件 / 二、後續處理 / 拾、真實資料替換清單（RR-01 至 RR-12）",
+      "quoted_evidence": "REJECT 指資料，不是對人員下人事判決 ... UNKNOWN_UNTIL_SOURCE",
+      "assessment": "Provides explicit criteria for Observed Increase/Flat/Decrease, HOLD for insufficient evidence, and REJECT for tainted/fabricated data. Connects cleanly to RR-01 through RR-12."
+    },
+    "sample_vs_real_boundary_and_no_fabrication": {
+      "status": "PASS",
+      "evidence_locator": "資料提醒｜CAUTION / 玖、REAL 實際資料替換表單 / 拾壹、治理聲明與限制邊界公告",
+      "quoted_evidence": "簽名/日期：＿＿＿＿＿＿＿ ... 本文件目前未具備任何特定公協會或機構之真實主管簽章、正式印信或合法決策授權",
+      "assessment": "Clear boundary between SAMPLE/SYNTHETIC and REAL/UNKNOWN. Operational replacement form contains blank signature blocks; no fictitious signatures, stamps, approvals, or real trainee outcomes are fabricated."
+    }
+  },
+  "math_recheck": {
+    "status": "PASS",
+    "individual_cases": {
+      "S-EMP-01": {
+        "baseline": "14 / 20 = 70.00%",
+        "post": "18 / 20 = 90.00%",
+        "delta_pp": "90.00% - 70.00% = +20.00 pp",
+        "skill_demo": "4 -> 8 (+4)",
+        "verified": true
+      },
+      "S-EMP-02": {
+        "baseline": "16 / 20 = 80.00%",
+        "post": "18 / 20 = 90.00%",
+        "delta_pp": "90.00% - 80.00% = +10.00 pp",
+        "skill_demo": "5 -> 8 (+3)",
+        "verified": true
+      },
+      "S-EMP-03": {
+        "baseline": "15 / 20 = 75.00%",
+        "post": "14 / 20 = 70.00%",
+        "delta_pp": "70.00% - 75.00% = -5.00 pp",
+        "skill_demo": "6 -> 7 (+1)",
+        "verified": true
+      },
+      "S-EMP-04": {
+        "baseline": "18 / 20 = 90.00%",
+        "post": "19 / 20 = 95.00%",
+        "delta_pp": "95.00% - 90.00% = +5.00 pp",
+        "skill_demo": "7 -> 9 (+2)",
+        "verified": true
+      },
+      "S-EMP-05": {
+        "baseline": "13 / 20 = 65.00%",
+        "post": "15 / 20 = 75.00%",
+        "delta_pp": "75.00% - 65.00% = +10.00 pp",
+        "skill_demo": "3 -> 7 (+4)",
+        "verified": true
+      },
+      "S-EMP-06": {
+        "baseline": "17 / 20 = 85.00%",
+        "post": "17 / 20 = 85.00%",
+        "delta_pp": "85.00% - 85.00% = 0.00 pp",
+        "skill_demo": "8 -> 9 (+1)",
+        "verified": true
+      }
+    },
+    "pooled_aggregate": {
+      "baseline_pooled": "(14+16+15+18+13+17) / (20*6) = 93 / 120 = 77.50%",
+      "post_pooled": "(18+18+14+19+15+17) / (20*6) = 101 / 120 = 84.1667% (reported as 84.17%)",
+      "weighted_delta_pp": "101/120 - 93/120 = 8/120 = +6.6667 pp (reported as +6.67 pp / +6.6667 pp)",
+      "skill_demo_pre": "33 / 60 = 55.00%",
+      "skill_demo_post": "48 / 60 = 80.00%",
+      "skill_demo_delta_pp": "80.00% - 55.00% = +25.00 pp",
+      "verified": true
+    }
+  },
+  "sample_real_boundary": {
+    "status": "PASS",
+    "assessment": "The boundary between synthetic demonstration and genuine organizational data is maintained throughout. All demonstration records (S-EMP-*, S-COURSE-01, dates, logs) are explicitly labeled as SAMPLE/SYNTHETIC. Real organizational evidence requirements are categorized as UNKNOWN_UNTIL_SOURCE across RR-01 to RR-12. The operational form in Section 玖 contains clean blank templates with no manufactured signatures or fake entity names."
+  },
+  "title_blind_and_negative_neighbor": {
+    "status": "PASS",
+    "assessment": "Title-blind analysis confirms the document's substance is uniquely focused on individual post-training job performance improvement through paired task-level measurement. Negative neighbors are rigorously segregated: salary/wage increases and promotions (0126 / I19-E14) are excluded; market customer value indicators (0127 / I19-E16) are excluded; Level 1 satisfaction surveys and Level 2 exam scores are strictly delineated."
+  },
+  "findings": [
+    "Exact SHA-256 binding matches candidate DOCX and extracted text.",
+    "Methodologically sound dual-structure: robust synthetic case analysis plus complete blank operational form for real-world deployment.",
+    "Mathematical calculations across all 6 individual cases and pooled aggregate match exactly without rounding errors or simple-average distortion.",
+    "Includes non-positive outcomes (S-EMP-03 declined by 5 pp; S-EMP-06 remained flat at 85%), demonstrating genuine evaluative rigor.",
+    "Comprehensive confounder controls and strict non-causality governance statements are maintained.",
+    "No fabricated signatures, personnel identities, course completion records, or external approvals are present."
+  ],
+  "limitations": [
+    "Review is restricted to semantic evaluation of the extracted text; physical typography, margin layout, and visual page rendering in Word were not inspected.",
+    "All data in the candidate document is synthetic/sample; no real organizational performance records or institutional verifications were inspected."
+  ],
+  "reviewer_reported_model_identity": "UNKNOWN"
+}

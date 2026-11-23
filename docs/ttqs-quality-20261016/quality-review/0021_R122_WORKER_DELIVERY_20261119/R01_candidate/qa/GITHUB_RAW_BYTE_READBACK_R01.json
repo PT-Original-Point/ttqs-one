@@ -1,0 +1,45 @@
+{
+  "schema": "TTQS_ONE_GITHUB_RAW_BYTE_READBACK_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0021",
+  "requirement_id": "I03-E04",
+  "candidate_revision": "R01",
+  "candidate_stage": "CANDIDATE_SAMPLE_SYNTHETIC",
+  "repository": "PT-Original-Point/ttqs-one",
+  "pull_request": 92,
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "observed_at_tpe": "2026-11-22T21:31:12.4447770+08:00",
+  "immutable_readback_commit": "62232aae68f4b397e69d18530a679ccb2da35ba1",
+  "candidate": {
+    "path": "docs/ttqs-quality-20261016/quality-review/0021_R122_WORKER_DELIVERY_20261119/R01_candidate/0021_I03-E04_R01.docx",
+    "bytes": 46032,
+    "sha256": "E363D9D3DB2E3777E07596F1B1D736C0FB2A2C20D3B5A347B90C1D5BCC746B44",
+    "git_blob_sha1": "c981082335a2bf580feb2df74f5187b9b4c7baf3",
+    "readback": "PASS"
+  },
+  "qa_binding": {
+    "technical": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0021_R122_WORKER_DELIVERY_20261119/R01_candidate/qa/technical_qa.json",
+      "status": "PASS",
+      "candidate_sha256": "E363D9D3DB2E3777E07596F1B1D736C0FB2A2C20D3B5A347B90C1D5BCC746B44"
+    },
+    "visual": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0021_R122_WORKER_DELIVERY_20261119/R01_candidate/qa/visual_review_receipt.json",
+      "status": "PASS",
+      "pages_inspected": 10,
+      "candidate_sha256": "E363D9D3DB2E3777E07596F1B1D736C0FB2A2C20D3B5A347B90C1D5BCC746B44"
+    },
+    "semantic": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0021_R122_WORKER_DELIVERY_20261119/R01_candidate/qa/semantic_review_receipt.json",
+      "status": "SEMANTIC_PASS",
+      "candidate_sha256": "E363D9D3DB2E3777E07596F1B1D736C0FB2A2C20D3B5A347B90C1D5BCC746B44",
+      "reviewer": "W2 Antigravity CLI",
+      "work_id": "TTQS_ONE_0021_I03-E04_R01_EXACT_SHA_SEMANTIC_W2_20261119",
+      "requested_route": "gemini-3.8-flash-high",
+      "served_model": "UNKNOWN",
+      "blocking_findings": 0,
+      "text_hash_reconciliation": "TEXT_HASH_CLAIM_MISMATCH; DOCX_SHA_BINDING_MATCH. Reconciliation receipt records that normalized packet body equals normalized local extracted text; reviewer-reported extracted-text hash is not asserted as verified."
+    }
+  },
+  "acceptance_boundary": "Raw-byte readback and QA closure only; formal acceptance and REAL status are not claimed."
+}

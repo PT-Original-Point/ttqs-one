@@ -1,0 +1,30 @@
+{
+  "doc_id": "0142",
+  "requirement_id": "I19-E32",
+  "candidate_sha256": "dd6bfd2bb75ed9708065578f435b54fc7c85c9492f35edcddf614f962db41e0a",
+  "qa_scope": "R08 deterministic structure, table-field coverage, exact sample cross-table arithmetic, unique replacement fact IDs, explicit neighbor exclusion, nonfabrication hold fields, and portrait widths.",
+  "checks": {
+    "table_count_17": true,
+    "register_data_rows_18": true,
+    "register_ids_unique": true,
+    "annual_sample_component_sums": true,
+    "annual_total_income_sums": true,
+    "portrait_tables_fit_7_03in": true,
+    "source_register_field_coverage": true,
+    "ledger_reconciliation_field_coverage": true,
+    "exception_hold_six_fields": true,
+    "neighboring_requirements_explicit": true,
+    "real_status_not_promoted": true
+  },
+  "verdict": "PASS_DETERMINISTIC_CONTENT_STRUCTURE_AND_MATH",
+  "real_status": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED",
+  "created_local": "2026-10-25T16:49:56.385633+08:00",
+  "visual_repair": "Table9 header contrast: all six header cells set to white bold text on blue fill after visual inspection.",
+  "layout_and_semantic_references": {
+    "word_render_receipt": "review/WORD_NATIVE_RENDER_RECEIPT_0142_R08.json",
+    "visual_receipt": "review/VISUAL_QA_RECEIPT_0142_R08.json",
+    "independent_semantic_receipt": "ANTIGRAVITY_SEMANTIC_DELTA_REVIEW_0142_R08_R11_RECEIPT.json",
+    "semantic_verdict": "PASS"
+  }
+}

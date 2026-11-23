@@ -1,0 +1,33 @@
+{
+  "schema": "TTQS_ONE_0075_R02_SEMANTIC_REVIEW_RECEIPT.v1",
+  "document_id": "0075",
+  "requirement_id": "I17A-E03",
+  "official_checkbox_serial": "082",
+  "candidate_sha256": "ca81a4791febbe6f303a755f441705e41fb465c869098e17cc3c5c222a2c6961",
+  "reviewer": "OpenCode CLI v2.0.29",
+  "reviewer_model": "opencode/beam-free",
+  "reviewer_session_id": "ses_eae841cdcffeT8KZ7QUzvmnXrm",
+  "independent_of_writer": true,
+  "writer_model": "opencode/deepseek-v4.1-flash-free",
+  "writer_session_ids": [
+    "ses_eae931846ffedeTiiMPxiOS6ko"
+  ],
+  "reviewer_exit_code": 0,
+  "reviewer_stderr_bytes": 0,
+  "review_input": {
+    "bundle_sha256": "4842e8015bd32a1897d46d6b01dd2dc112152a0142d2a72c1272f27648479707",
+    "prompt_sha256": "15dfd3b6882c1ab8d7dec611d4a8aa03ecd9b994bf396f506c9137c00528e8ab",
+    "docx_text_extraction_sha256": "d18b4457496720b06785bf158a58d0fbd16b6c8f4e1c069bd7bd0a870f87bd3e",
+    "extraction_method": "python-docx traversing body paragraphs and tables in OOXML body order from the candidate file whose SHA is bound above"
+  },
+  "reviewer_original_response_sha256": "630468d98d657bae66df0d16a41cdf03db25bf06cb4278eba8af985c13bd72b5",
+  "reviewer_raw_response_path": "review\\opencode_semantic_R02_stdout.jsonl",
+  "verdict": "PASS",
+  "blocking_findings": 0,
+  "non_blocking_note": "Reviewer suggests optional colocation of M2/M3 protocol details; the review states these requirements are present through sections 7, 9, and 10.2. No repair was required for the PASS verdict.",
+  "review_scope": "Text-only semantic review of exact extracted R02 content, official checklist pages 5-6, indicator 17a manual excerpt, checkbox 082 guidance, complete unique Blueprint, source packet, and 110-row replacement register. Visual QA recorded separately.",
+  "candidate_status": "CANDIDATE_ONLY",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "limitation": "Reviewer did not independently compute the binary DOCX SHA; local extraction binding records the actual DOCX SHA and exact extraction hash supplied in the review bundle. Reviewer did not independently inspect rendered pages."
+}

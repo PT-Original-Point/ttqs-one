@@ -1,0 +1,350 @@
+PROJECT=TTQS_ONE
+COMMAND=BOOTSTRAP_HOTFIX6_DUAL_WORKER_SPRINT
+
+同步 branch=ttqs-win10-handoff-20261002
+
+fresh-read：
+TTQS_HANDOFF/R04_HOTFIX5_STABLE_DUAL_AGENT_PIPELINE_20261003.md
+TTQS_HANDOFF/R04_HOTFIX6_DUAL_WORKER_SPRINT_20261003.md
+TTQS_HANDOFF/DUAL_WORKER_SPRINT_CONTRACT_R01.md
+TTQS_HANDOFF/DUAL_AGENT_REVIEW_CONTRACT_R01.md
+TTQS_HANDOFF/CURRENT_STATE.json
+
+不要重建 CURRENT、queue、candidates、checkpoints。
+
+一、先完成 HOTFIX5 bootstrap
+若 ROUND_A / ROUND_B 尚未 PASS：
+先完成兩個不改 DOCX bytes 的 exact-SHA E2E。
+未 PASS 前不得雙 Builder。
+
+當且僅當以下全部 PASS：
+HUMAN_RELAY_COUNT=0
+VISIBLE_CONSOLE_COUNT=0
+DOCX_SHA_CHANGED_BY_CONTROL_FIX=0
+ROUND_A=PASS
+ROUND_B=PASS
+
+立即自動切換：
+SPRINT_MODE=DUAL_WORKER_ACTIVE
+
+不要再等 Human。
+
+二、雙 Worker
+最多同時兩個 model workers：
+CODEX_WORKER=1
+OPENCODE_WORKER=1
+
+每個 worker 每次只做一個 model task。
+
+角色依文件分派，不固定：
+
+文件 A：
+Codex BUILD
+OpenCode REVIEW
+
+文件 B：
+OpenCode BUILD
+Codex fresh isolated REVIEW
+
+任何文件：
+BUILD_OWNER != REVIEW_OWNER
+
+禁止 self-review。
+
+三、Codex 是唯一 dispatcher/integrator/promoter
+只有 Codex 可以寫：
+BUILD_QUEUE
+SUPERVISOR_STATE
+central synthetic register
+CURRENT
+canonical checkpoints
+
+OpenCode 永遠不得碰上述共享狀態。
+
+四、建立 isolated OpenCode build workspace
+E:\TTQS\TTQS_ONE_OPENCODE_BUILD\
+
+至少：
+CANDIDATES\
+BUILD_RECEIPTS\
+SYNTHETIC_DELTAS\
+LOGS\
+CONTROL\
+
+OpenCode-built DOCX 只寫這裡。
+
+五、work packet
+Codex 對 OpenCode build 任務建立：
+E:\TTQS\TTQS_ONE_AGENT_BUS\BUILD_INBOX\<work_id>.json
+
+必要欄位：
+work_id
+deliverable_id
+build_owner
+review_owner
+requirement_id
+document_family
+blueprint_row_hash
+source_anchor_hash
+evidence_bundle_path
+shared_fact_snapshot_path
+shared_fact_snapshot_hash
+shared_fact_groups
+acceptance_contract_hash
+output_staging_path
+
+temp-write → atomic rename。
+
+一個 deliverable 同時只能一個 BUILD_OWNER。
+
+shared_fact_groups 有重疊的兩份文件不得同時 build。
+未知依賴時，同 family 先序列化。
+
+六、immutable evidence bundle
+每份文件只建一次 authoritative evidence bundle：
+exact requirement
+exact Blueprint row
+verified source anchors/excerpts
+genre mechanics
+shared fact snapshot
+該文件 known repair feedback
+
+禁止塞其他 DOCX body。
+
+Builder 和 reviewer 都使用同 bundle/hash。
+Reviewer 不讀 builder prose plan。
+
+七、OpenCode BUILD 的交付
+OpenCode只能輸出：
+stable DOCX
+build receipt
+proposed synthetic fact delta
+candidate SHA
+source/evidence hashes
+
+不得直接 merge central register。
+
+八、deterministic integration
+Codex 對兩邊 Builder 的候選統一跑：
+OOXML integrity
+placeholder
+font floor
+required markers
+arithmetic
+engineering-language scan
+hidden lightweight layout
+candidate/receipt hash binding
+substantive duplication
+
+Word COM/layout serialized。
+禁止 full-corpus PDF/PNG。
+
+九、cross-review
+Codex-built：
+OpenCode exact-SHA REVIEW。
+
+OpenCode-built：
+啟動 fresh isolated Codex reviewer。
+此 reviewer只讀 candidate + evidence bundle + review contract。
+不得讀 Builder context。
+不得修改 DOCX。
+
+十、worker scheduling
+每個 worker 的優先序：
+1. REVIEW 另一個 worker 已完成的 ready candidate
+2. REPAIR 自己原先 build 且有 exact defect 的文件
+3. BUILD 下一份 READY 文件
+
+不要讓 OpenCode空等。
+不要讓 Codex因等待 review 而空等。
+
+十一、promotion
+只有 Codex integrator promotion。
+
+需要：
+deterministic exact-SHA PASS
++
+independent cross-review exact-SHA PASS
++
+contract hash match
++
+synthetic delta validation
+
+promotion lock 內：
+fresh-read shared fact groups
+→ merge approved delta
+→ publish exact reviewed DOCX to CURRENT
+→ update queue/checkpoint
+→ unlock
+
+若 shared fact snapshot stale：
+先檢查是否真正衝突。
+無衝突：
+只 rebind sidecar，不改 DOCX。
+真正內容衝突：
+才回 CONTENT_DEFECT 給原 Builder。
+
+十二、FAIL
+FAIL_REPAIRABLE：
+只回 original BUILD_OWNER。
+只修 exact locator。
+新 SHA 後重新 gate + cross-review。
+
+FAIL_SYSTEMIC：
+只 impact scan confirmed affected family/epoch。
+禁止 142 全 reset。
+
+CONTROL/REVIEW INFRA failure：
+修控制器。
+禁止改 DOCX。
+
+十三、品質不可降
+每份仍必須：
+requirement fit
+genre mechanics
+title-blind
+negative-neighbor
+substantive duplication
+國中生30秒懂
+協會直接可用
+委員看起來是正式文件
+SAMPLE完整但非REAL
+無第三方偽造
+無工程垃圾
+無不合理膨脹
+可靠 layout PASS
+
+十四、deadline priority
+評核前執行：
+P0 remaining canaries / known evaluator defects
+P1 named requirement coverage
+P2 remaining planned 1:N support docs
+
+只改施工順序，不縮減 142 目標。
+
+十五、桌面
+所有 background：
+CREATE_NO_WINDOW / redirected stdio
+不得 PowerShell/cmd/Python/OpenCode/Codex 黑窗
+不得 steal focus
+不得第二套 visible scheduler
+
+十六、人類
+Human 不做搬運、不做 heartbeat。
+每 10 promotions 可非阻塞寫 checkpoint/通知，但施工繼續。
+
+十七、回報欄位
+SPRINT_MODE=
+HOTFIX5_ROUND_A=
+HOTFIX5_ROUND_B=
+CODEX_WORKER=
+OPENCODE_WORKER=
+CODEX_BUILD_ID=
+OPENCODE_BUILD_ID=
+CODEX_REVIEW_ID=
+OPENCODE_REVIEW_ID=
+CURRENT_COUNT=
+READY_COUNT=
+PARKED_CONTENT=
+PARKED_CONTROL=
+VISIBLE_CONSOLE_COUNT=
+HUMAN_RELAY_COUNT=
+NEXT_ACTION=
+
+啟動後自行持續到 final acceptance 或真正 Human Gate。
+
+
+十八、Worker liveness：禁止 OpenCode 就緒後睡死
+
+若 HOTFIX5 Round A/B 已符合 activation contract，且：
+OPENCODE_DUAL_WORKER_READY=TRUE
+READY_COUNT>0
+OPENCODE_ACTIVE_TASK=NONE
+
+則同一 scheduling turn 必須 dispatch OpenCode，不得留到下一次人工喚醒。
+
+dispatch priority：
+1. REVIEW Codex ready candidate
+2. REPAIR OpenCode 自己被 exact locator 退回的 candidate
+3. BUILD 下一份無 shared_fact_group collision 的 READY deliverable
+
+正式 invariant：
+READY_WORK_EXISTS && OPENCODE_READY && NO_ACTIVE_OPENCODE_TASK
+=> DISPATCH_IN_SAME_SCHEDULING_TURN
+
+若已宣告 DUAL_WORKER_ACTIVE：
+E:\TTQS\TTQS_ONE_AGENT_BUS\BUILD_INBOX
+必須存在。
+bus 空白只有在「真的沒有可合法派送工作」時才正常。
+
+十九、OpenCode CLI 不得依賴 PATH
+
+OpenCode Desktop shell 回報 PATH 找不到 opencode，不代表本機 CLI 不可用。
+不得要求 Human 手動修 PATH。
+
+Codex 必須：
+- 讀回先前 HOTFIX3 成功 preflight 的 executable/path evidence；
+- 或 fresh-resolve 本機已安裝 OpenCode CLI 的 absolute executable path；
+- 用 absolute path 執行 --version / harmless read-only smoke；
+- 將 verified absolute path 寫入 control sidecar；
+- 之後 headless invocation 一律使用該 absolute path + redirected stdio + CREATE_NO_WINDOW。
+
+只有真的需要互動 OAuth/MFA 才是 Human Gate。
+
+若 CLI route 暫時失效：
+只標 OpenCode executor/review infra lane defect，
+Codex 其他 READY 工作照常施工，
+不得 global stop，
+不得修改 DOCX。
+
+
+二十、OpenCode model 強制鎖定
+
+Human 最新明確命令：
+OpenCode 只允許使用畫面顯示名稱「Muse Spark 1.3 Free」。
+
+禁止使用任何其他 OpenCode 模型。
+禁止 fallback。
+
+特別禁止目前曾被偵測到的：
+ling-3.1-flash-free
+mimo-v2.6-flash-free
+nemotron-3.5-lightning-free
+
+以及任何其他非 Muse Spark 1.3 Free 模型。
+
+不要猜 CLI model slug。
+必須從本機 OpenCode metadata/config/model listing 中證明：
+display label = Muse Spark 1.3 Free
+對應的 exact CLI model identifier。
+
+把 exact mapping 寫入 control sidecar：
+allowed_display_model
+resolved_cli_model_id
+resolution_evidence
+resolved_at
+
+之後每個 OpenCode BUILD/REVIEW/REPAIR：
+必須在 headless invocation 明確指定 resolved_cli_model_id。
+不得依賴 Desktop UI 當前選擇。
+
+每個 OpenCode result 必須記錄 actual_model_id。
+actual_model_id != resolved_cli_model_id：
+MODEL_POLICY_VIOLATION
+→ result invalid
+→ 禁止 promotion
+→ 禁止 reuse
+
+如果 Muse Spark 1.3 Free 429：
+PROVIDER_BACKPRESSURE
+→ Retry-After 或 bounded exponential backoff
+→ 不得切其他模型
+→ 不得修改 DOCX
+→ Codex 其他 READY lanes 繼續
+
+如果無法證明 Muse Spark 的 exact CLI identity：
+OPENCODE_MODEL_ROUTE_BLOCKED
+→ OpenCode lane 暫停
+→ Codex 照常施工
+→ 不得自行換模型
+→ 除非真的需要 OAuth/MFA，否則不是 Human Gate。

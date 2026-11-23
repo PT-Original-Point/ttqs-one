@@ -1,0 +1,73 @@
+{
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0004-I01-E02-R05-L06-REVIEW-20261030",
+  "doc_id": "0004",
+  "requirement_id": "I01-E02",
+  "official_checkbox_project_serial": "002",
+  "candidate_docx_sha256": "8fe5abdc8b90592b47af67c5ef5d0d37947eec0cdbd55f6034fce82d3723a561",
+  "w1_opencode_v2": {
+    "dispatch_for_this_document": false,
+    "result": "NONE",
+    "token_usage": "UNKNOWN_NOT_DISPATCHED",
+    "note": "No service PID or CLI installation state is counted as a Writer or Reviewer task."
+  },
+  "w2_antigravity_cli": {
+    "dispatch_count": 1,
+    "work_id": "TTQS-0004-I01-E02-WRITER-R03-AGY-20261030",
+    "cli_version": "1.4.10",
+    "pid": 102644,
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_model": "UNKNOWN_NOT_ATTESTED_BY_RESPONSE",
+    "wrapper_status": "TIMEOUT_KILLED",
+    "wrapper_exit_code": 1,
+    "wrapper_timeout_seconds": 240.062,
+    "nested_cli_payload_status": "SUCCESS",
+    "nested_cli_duration_seconds": 122.838606,
+    "nested_cli_response_chars": 16409,
+    "nested_cli_response_sha256": "d7ab16b28f6cae465735458b7b238910d422641d386281a4bdc1ca99812bd83f",
+    "token_usage": {
+      "input_tokens": 18714,
+      "output_tokens": 15902,
+      "thinking_tokens": 5647,
+      "cache_read_tokens": 0,
+      "total_tokens": 34616
+    },
+    "candidate_content_adopted": false,
+    "computer_use": false,
+    "file_tools_enabled": false,
+    "dangerous_permission_bypass": false,
+    "paid_route": false,
+    "raw_evidence": [
+      "../worker/AGY_WRITER_DISPATCH_R03.json",
+      "../worker/AGY_WRITER_INPUT_0004_R03.md",
+      "../worker/AGY_WRITER_RAW_STDOUT_R03.jsonl",
+      "../worker/AGY_WRITER_RAW_STDERR_R03.txt",
+      "../worker/AGY_RESPONSE_EXTRACT_R03.txt",
+      "../worker/AGY_RESPONSE_RECOVERY_R01.json"
+    ]
+  },
+  "codex": {
+    "role": "deterministic manuscript correction, OOXML numbering repair, Word-native export orchestration and evidence integration",
+    "manuscript_sha256": "a391589d8511372141963b9dbde172889420ed5baa3c6513681e58530a03656e",
+    "candidate_docx_sha256": "8fe5abdc8b90592b47af67c5ef5d0d37947eec0cdbd55f6034fce82d3723a561"
+  },
+  "independent_reviewers": [
+    {
+      "name": "Zeno",
+      "role": "independent semantic reviewer",
+      "verdict": "PASS",
+      "docx_sha256": "8fe5abdc8b90592b47af67c5ef5d0d37947eec0cdbd55f6034fce82d3723a561",
+      "raw_reply": "../worker/review/REVIEWER_ZENO_R05_L06_RAW.md"
+    },
+    {
+      "name": "Godel",
+      "role": "independent semantic reviewer",
+      "verdict": "PASS",
+      "docx_sha256": "8fe5abdc8b90592b47af67c5ef5d0d37947eec0cdbd55f6034fce82d3723a561",
+      "raw_reply": "../worker/review/REVIEWER_GODEL_R05_L06_RAW.md"
+    }
+  ],
+  "candidate_state": "INDEPENDENTLY_REVIEWED_CANDIDATE",
+  "formal_acceptance": "UNKNOWN",
+  "real_execution": "UNKNOWN"
+}

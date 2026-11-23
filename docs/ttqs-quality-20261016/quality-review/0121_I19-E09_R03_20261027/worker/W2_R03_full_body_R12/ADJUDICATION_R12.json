@@ -1,0 +1,79 @@
+{
+  "schema": "TTQS_ONE_R12_INDEPENDENT_SEMANTIC_ADJUDICATION_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0121",
+  "requirement_id": "I19-E09",
+  "revision": "R03",
+  "candidate_state": "CANDIDATE",
+  "candidate_sha256": "ba067fdb2b90f99b9b354a6edc9d176d5af9527febdaaa71e6c550125f22b539",
+  "candidate_bytes": 72632,
+  "body_extract_sha256": "4ea875c255a3d1f852788a258725150729787f83dad96efa997dd491a8f01552",
+  "source_packet_sha256": "fbeb11b96648fff29a49a0fca74bf0cc3b3d1d29934f07dfaa3cf7e410a557fd",
+  "unique_blueprint_sha256": "99320fdc9078615ad04087c43bcbd22c5bbf751a22127c51e048e909726a5fca",
+  "source_blueprint_row_sha256": "e5956462565186757b6a20f53cff22e9e53cd5abca1e2b69e6942a24c91f5b08",
+  "official_mapping_evidence_sha256": "fc9e9704748e58847c14c707078acf66ed07f024e2b83c67201b2372ead8208d",
+  "worker": {
+    "route": "W2 Antigravity CLI",
+    "cli_version": "1.4.7",
+    "pid": 18328,
+    "work_id": "TTQS-0121-I19-E09-R03-ANTIGRAVITY-R12-FULL-SEMANTIC-REVIEW",
+    "exit_code": 0,
+    "requested_model": "gemini-3.8-flash-high",
+    "model_catalog_confirmed": true,
+    "actual_serving_model": "UNKNOWN",
+    "fallback": "NOT_AUTHORIZED; actual provider identity not exposed",
+    "computer_use": "NOT_USED_BY_LAUNCH; no tool indicators in raw output",
+    "tool_indicators": [],
+    "finished_local": "2026-10-27T01:07:58.985650+08:00",
+    "usage_or_token_count": {
+      "input_tokens": 28821,
+      "output_tokens": 23965,
+      "thinking_tokens": 17128,
+      "cache_read_tokens": 0,
+      "total_tokens": 52786
+    }
+  },
+  "review_binding": {
+    "request_sha256": "d5935a49c75152ff3e68451e9e78271f4ec4d746645bab49f89086a621576b1d",
+    "raw_stdout_sha256": "93770fa08a7e4714c6b6e65d38c699f81bd4b26169a33e5f05741c951b5cdb10",
+    "raw_stdout_bytes": 19211,
+    "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "normalized_response_sha256": "9f68f37a3427aee265f54f3f895fa832cca6580a3f6fdc0de07916f47865ed4d",
+    "terminal_receipt_sha256": "72144cdd41ff8aacf240919672ca0b7d9e98c7faa877896c355d20462c170dd9",
+    "reviewed_source_head": "70d7ca0fb0fe8e56e2da8b3c54f67e37bef59e64"
+  },
+  "semantic": {
+    "reviewer_verdict": "PASS",
+    "adjudicated_status": "PASS_TEXT_ONLY",
+    "blockers_reported": 0,
+    "scope": "Full candidate body and tables; exact requirement I19-E09; Blueprint substantive sections 1-5 and 7-10. Reviewer separately marks native Word typography and page layout UNKNOWN; no visual/binary claim.",
+    "criteria": "Requirement/provenance; genre and title-blind identity; negative-neighbor boundary; complete usable instruments; arithmetic; SAMPLE/REAL boundary; anti-fabrication; operational CAPA; replacement register and hold controls.",
+    "limitations": [
+      "Actual serving model identity UNKNOWN despite gemini-3.8-flash-high request and model catalog entry.",
+      "Semantic reviewer did not inspect binary or layout; retain separate exact-SHA native Word QA scope.",
+      "Human formal acceptance NOT_GRANTED; candidate remains unpromoted."
+    ]
+  },
+  "separate_exact_sha_technical_visual_qa": {
+    "status": "PASS",
+    "checks": 27,
+    "receipt_sha256": "5a7478d792a5e9cd0e884e5bdda78fa34cab611ba36b64d592b93a2a726b4015",
+    "word_native_pdf_sha256": "fa3fd36e716372d47ae36a3eaf4a5f28ec5c395d9800e6764bf69325abed0f70",
+    "pages": 23,
+    "changed_pages_inspected": [
+      1,
+      18
+    ],
+    "unchanged_pixel_identical_pages": 21,
+    "body_min_font_pt": 10.5,
+    "table_min_font_pt": 9.5
+  },
+  "sample_real": {
+    "sample_replacement_register_sha256": "96837dfbabcc81693256042e4c326825c6e0f847982a63add3eb72945c5d100e",
+    "real_evidence": "NOT_PROVIDED",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "docx_bytes_changed": false,
+  "promotion": "NOT_PROMOTED",
+  "adjudicated_local": "2026-10-27T01:10:00+08:00"
+}

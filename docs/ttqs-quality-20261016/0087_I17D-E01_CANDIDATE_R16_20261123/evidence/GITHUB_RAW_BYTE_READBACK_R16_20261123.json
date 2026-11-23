@@ -1,0 +1,170 @@
+{
+  "schema": "ttqs-one-github-raw-byte-readback-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0087",
+  "requirement_id": "I17D-E01",
+  "official_check_item": "094",
+  "revision": "R16_CANDIDATE",
+  "repository": "PT-Original-Point/ttqs-one",
+  "pull_request": 92,
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "readback_commit_sha": "8d077b47e752a0553b33deec46255a67883e6d77",
+  "observed_at_tpe": "2026-11-23T07:11:56+08:00",
+  "candidate": {
+    "path": "docs/ttqs-quality-20261016/0087_I17D-E01_CANDIDATE_R16_20261123/candidate/0087_I17D-E01_R16.docx",
+    "sha256": "39e2d9d6e64fed47cc79b0863e029569c7c7f6f8ea0f804c993231c13b07d23f",
+    "git_blob_sha1": "45282a9744fc1829da4c1c53620f9f95774c7c40",
+    "bytes": 66914,
+    "status": "PASS_BYTES_MATCH"
+  },
+  "qa_bindings": {
+    "deterministic": {
+      "path": "docs/ttqs-quality-20261016/0087_I17D-E01_CANDIDATE_R16_20261123/qa/DETERMINISTIC_QA_R16.json",
+      "candidate_sha256": "39e2d9d6e64fed47cc79b0863e029569c7c7f6f8ea0f804c993231c13b07d23f",
+      "status": "PASS_DETERMINISTIC_CONTENT_MATH"
+    },
+    "technical": {
+      "path": "docs/ttqs-quality-20261016/0087_I17D-E01_CANDIDATE_R16_20261123/qa/TECHNICAL_QA_R16.json",
+      "candidate_sha256": "39e2d9d6e64fed47cc79b0863e029569c7c7f6f8ea0f804c993231c13b07d23f",
+      "status": "PASS_TECHNICAL_STATIC"
+    },
+    "visual": {
+      "path": "docs/ttqs-quality-20261016/0087_I17D-E01_CANDIDATE_R16_20261123/qa/VISUAL_QA_R16.json",
+      "candidate_sha256": "39e2d9d6e64fed47cc79b0863e029569c7c7f6f8ea0f804c993231c13b07d23f",
+      "status": "PASS_VISUAL_REVIEW_WITH_NONBLOCKING_LAYOUT_NOTES",
+      "pages": 25,
+      "inspected_pages": 25
+    },
+    "independent_semantic": {
+      "path": "docs/ttqs-quality-20261016/0087_I17D-E01_CANDIDATE_R16_20261123/qa/W1_SEMANTIC_REVIEW_R16.json",
+      "candidate_sha256": "39e2d9d6e64fed47cc79b0863e029569c7c7f6f8ea0f804c993231c13b07d23f",
+      "review_work_id": "TTQS_ONE_W1_REVIEW_0087_R16_SHA_39e2d9d6e64f",
+      "requested_route": "opencode/deepseek-v4.1-flash-free",
+      "served_model": "UNKNOWN",
+      "decision": "PASS"
+    }
+  },
+  "candidate_state": "CANDIDATE; SAMPLE/SYNTHETIC; formal acceptance and REAL status not claimed",
+  "manifest_entry_count": 17,
+  "files": [
+    {
+      "path": "docs/ttqs-quality-20261016/0087_I17D-E01_CANDIDATE_R16_20261123/candidate/0087_I17D-E01_R16.docx",
+      "sha256": "39e2d9d6e64fed47cc79b0863e029569c7c7f6f8ea0f804c993231c13b07d23f",
+      "git_blob_sha1": "45282a9744fc1829da4c1c53620f9f95774c7c40",
+      "bytes": 66914,
+      "status": "PASS_BYTES_MATCH"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0087_I17D-E01_CANDIDATE_R16_20261123/qa/DETERMINISTIC_QA_R16.json",
+      "sha256": "382feab92480378a46d9ed8c2d519251d1f32f0c2e635714709528d830ad09a3",
+      "git_blob_sha1": "75335a43eed33b962326f7d40b4d8233934b1bb1",
+      "bytes": 3328,
+      "status": "PASS_BYTES_MATCH"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0087_I17D-E01_CANDIDATE_R16_20261123/qa/TECHNICAL_QA_R16.json",
+      "sha256": "59382c49666a99db3bb3feafc8e634603a36a88fd948130de791dcfe69142969",
+      "git_blob_sha1": "c0c8819b75e027156ccf4c56c208a193b0b7b158",
+      "bytes": 1717,
+      "status": "PASS_BYTES_MATCH"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0087_I17D-E01_CANDIDATE_R16_20261123/qa/VISUAL_QA_R16.json",
+      "sha256": "56f8ef791bf2e7025158649d8a51f931ed9f9f19ba0d653896d1609fe898e0ba",
+      "git_blob_sha1": "2ab4dd573b3750f45a0ffb1099e2321d4e45b726",
+      "bytes": 4404,
+      "status": "PASS_BYTES_MATCH"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0087_I17D-E01_CANDIDATE_R16_20261123/qa/W1_DISPATCH_R16.json",
+      "sha256": "f4381ab4f78b272c837a2036dcf54bbaac11c466d317dcfb0367f81ca52b3272",
+      "git_blob_sha1": "c5fee952dd1b0710b9ab3cf38416a4e931866c66",
+      "bytes": 1201,
+      "status": "PASS_BYTES_MATCH"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0087_I17D-E01_CANDIDATE_R16_20261123/qa/W1_RAW_STDERR_R16.txt",
+      "sha256": "4b443d2bfcfc82f732ed2898d83a44fca934e723a9953774cd9841b5f6ec76a8",
+      "git_blob_sha1": "ab08f89b27c527d7ec0cfe79c02d18147ff2b853",
+      "bytes": 388,
+      "status": "PASS_BYTES_MATCH"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0087_I17D-E01_CANDIDATE_R16_20261123/qa/W1_RAW_STDOUT_R16.jsonl",
+      "sha256": "8e4b4623c196097ffae2598dc242f12c885d17e7e36f87ab70f6b1e623361e3a",
+      "git_blob_sha1": "fcbba538d5656be8bbb83dac9bc9cd3f63191f99",
+      "bytes": 3350,
+      "status": "PASS_BYTES_MATCH"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0087_I17D-E01_CANDIDATE_R16_20261123/qa/W1_REVIEW_PACKET_R16.md",
+      "sha256": "5fe00fb152f5939b4c461e6f14f11c0c6e6f363c2e30ec6eef16cb113e3021eb",
+      "git_blob_sha1": "a1c4e4495d0ef76e4082a7137a768f47bcfc2561",
+      "bytes": 69976,
+      "status": "PASS_BYTES_MATCH"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0087_I17D-E01_CANDIDATE_R16_20261123/qa/W1_SEMANTIC_REVIEW_R16.json",
+      "sha256": "001f39c0957cac099fc8ad2b70f0f79251fd50ea034b874062c0eef614c03d34",
+      "git_blob_sha1": "dd0d9f46e478bec761e734d08c3762e4005be966",
+      "bytes": 2530,
+      "status": "PASS_BYTES_MATCH"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0087_I17D-E01_CANDIDATE_R16_20261123/qa/WORD_RENDER_RECEIPT_R16.json",
+      "sha256": "103f8923605e54b8bbdb46bc2364d213708632109b01b36f7cdf3e4df9b0064a",
+      "git_blob_sha1": "5eea9df3fce750c2abef2c6612ae8165e6836153",
+      "bytes": 902,
+      "status": "PASS_BYTES_MATCH"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0087_I17D-E01_CANDIDATE_R16_20261123/README.md",
+      "sha256": "7a9979778dc07c2b0c09f5f22ef6ef9489912e088034ce85081f67b99d305dea",
+      "git_blob_sha1": "f89c9084dbcd8449bbec0fb7df58e2b59deb81e3",
+      "bytes": 896,
+      "status": "PASS_BYTES_MATCH"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0087_I17D-E01_CANDIDATE_R16_20261123/render/WORD_RENDER_R16.pdf",
+      "sha256": "3079d06ad1bd35c959c870464e2ab8ea63c48a2f743c438e566522eae08c23c4",
+      "git_blob_sha1": "af4ff69b449461cccbbca2cf09b9add3306360af",
+      "bytes": 851576,
+      "status": "PASS_BYTES_MATCH"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0087_I17D-E01_CANDIDATE_R16_20261123/source/DOCX_BODY_R16.md",
+      "sha256": "ed432f1b0237820737b72b24c46da417db3585ba591758a3637ad73f029299ea",
+      "git_blob_sha1": "5bae3163f9c794a9da210bb3788881a7056387b0",
+      "bytes": 41667,
+      "status": "PASS_BYTES_MATCH"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0087_I17D-E01_CANDIDATE_R16_20261123/source/EXTRACTED_TEXT_R16.txt",
+      "sha256": "236fa11a7e56a0e499b193d125cd6d4c5c61ecfca126bfcf6eabfebaf67ffdee",
+      "git_blob_sha1": "3ab61d4904d7465a2ae65429b1de09f6f9cb7742",
+      "bytes": 37562,
+      "status": "PASS_BYTES_MATCH"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0087_I17D-E01_CANDIDATE_R16_20261123/source/SOURCE_PACKET_R01.md",
+      "sha256": "97625ade2777258de85037ba4e4c085c63d68e3a43e128b0392f0f155c2e3c35",
+      "git_blob_sha1": "4a8569294adb482776494dae73dc533d736e2c18",
+      "bytes": 5447,
+      "status": "PASS_BYTES_MATCH"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0087_I17D-E01_CANDIDATE_R16_20261123/source/UNIQUE_BLUEPRINT_R03.md",
+      "sha256": "ee5a8ed988e24ad83c7d1b12e056ea6d254e589ca827ef21af77a56a9f1fd284",
+      "git_blob_sha1": "9be8042c21eaeed817039b70f0abbfab7dd7b894",
+      "bytes": 24064,
+      "status": "PASS_BYTES_MATCH"
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0087_I17D-E01_CANDIDATE_R16_20261123/source/W1_WRITER_RECEIPT_R16.json",
+      "sha256": "b926ba01e7958a03cf2a1c72a46f0a9c8e6f203e434e97f6342d9f6ef717f548",
+      "git_blob_sha1": "4199ff5aeadccb8f24a9fe7165aa41065a1adde8",
+      "bytes": 467,
+      "status": "PASS_BYTES_MATCH"
+    }
+  ]
+}

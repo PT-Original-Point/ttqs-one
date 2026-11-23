@@ -1,0 +1,97 @@
+{
+  "schema": "ttqs-one-build-receipt-v1",
+  "recorded_at_local": "2026-11-06T10:27:51+08:00",
+  "project_id": "TTQS_ONE",
+  "deliverable_id": "0033",
+  "requirement_id": "I07-E01",
+  "revision": "R04",
+  "candidate_state": "CANDIDATE_NOT_PROMOTED",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0033_R04\\candidate\\0033__訓練課程計畫配合客戶及受訓者需求、職能需求的_可直接使用成品_R04.docx",
+  "candidate_sha256": "6e9d797b15a6235ba30f93162a7a8fec1298b04f5e5564002e9e6aaa53a38672",
+  "bytes": 58560,
+  "paragraphs": 91,
+  "tables": 25,
+  "body_chars": 9789,
+  "source_candidate_revision": "R03",
+  "parent_candidate_sha256": "fe5f3cfd84c761da86435a71e0fd899daa725be78628c4d2d3f2324c1fdb5f4f",
+  "source_requirement_map_sha256": "405b987797d1558ecac182cea8e1adfbd1aead7754c880db32db43c235d5024e",
+  "unique_blueprint_row_sha256": "5d3942b13f2f07e142b921bbd27b01dde41b50656948bec72398339c6f457263",
+  "official_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "replacement_register_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0033_R03\\sources\\SYNTHETIC_REPLACEMENT_REGISTER_0033_R03.csv",
+  "replacement_register_sha256": "d114f36d9c4852cda2239bf22fcc709bdc0a40aad62418e076c6b9c2ae523247",
+  "replacement_register_rows": 196,
+  "register_modified": false,
+  "checks": {
+    "zip_integrity": "PASS",
+    "docx_open_python_docx": "PASS",
+    "word_native_open": "PASS",
+    "word_native_pdf_render": "PASS",
+    "word_native_page_count": 12,
+    "word_rendered_pngs_inspected": 12,
+    "visual_layout": "PASS_LAYOUT_ONLY",
+    "body_min_font_pt": 10.5,
+    "table_min_font_pt": 9.5,
+    "five_wording_only_text_diff": "PASS",
+    "sample_numeric_values_unchanged": "PASS",
+    "independent_exact_sha_semantic_review": "PENDING_OTHER_REVIEWER",
+    "semantic_review": "PENDING_OTHER_REVIEWER",
+    "promotion": "NOT_PROMOTED",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "state_consistency": "PASS_ALL_R04_REVIEW_FIELDS_PENDING_AND_NOT_PROMOTED",
+  "changes": [
+    {
+      "locator": "page 2, paragraph 20",
+      "before": "資源或權限未確認時，方案保持待核",
+      "after": "資源或權限尚未確認時暫緩方案；取得並核對授權證據後再啟用"
+    },
+    {
+      "locator": "page 3, Word table 5, row 8, cell 3",
+      "before": "真實授權者待核",
+      "after": "授權者尚未確認；核對授權證據前暫不啟用。"
+    },
+    {
+      "locator": "page 7, Word table 13, row 4, cell 3",
+      "before": "已列資源及限制，仍有待核項",
+      "after": "未確認部分暫緩；取得並核對授權證據後再啟用"
+    },
+    {
+      "locator": "page 7, Word table 15, row 2, cell 2",
+      "before": "資源與授權仍待核",
+      "after": "資源與授權尚未確認，核對授權證據前暫緩採用"
+    },
+    {
+      "locator": "page 12, Word table 25, row 12, cell 2",
+      "before": "否則維持待核",
+      "after": "否則暫緩執行，取得並核對授權證據後再啟用"
+    }
+  ],
+  "r03_legacy_receipts_preserved": true,
+  "r03_build_receipt_sha256": "460a1bbc4c9058356189da4afd744d2c32736d65a05116b87c943150a731ecb1",
+  "render_evidence": {
+    "pdf_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0033_R04\\render_word\\0033_R04_WORD_NATIVE.pdf",
+    "pdf_sha256": "093f92b1660421ca03fc5471c61849f6640b32a6170b8f47963146263dd378b3",
+    "png_manifest": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0033_R04\\qa\\0033_R04_WORD_RENDER_RECEIPT.json",
+    "png_manifest_sha256": "8a3a25c0a5bb9de821333c0fee7d841d6c8902250081209735671a17ad9a0eb8",
+    "page_image_count": 12
+  },
+  "qa_sidecars": {
+    "0033_R04_EDIT_RECEIPT.json": "e1f003688833e7a305b3bfc422ae5c506b72b84cd264f593e732dc549dae1168",
+    "0033_R04_STATIC_QA.json": "93653c2b6c46f73e30765f015fa3787afd980d436e542503de5e8c5c2357fc4a",
+    "0033_R04_WORD_RENDER_RECEIPT.json": "8a3a25c0a5bb9de821333c0fee7d841d6c8902250081209735671a17ad9a0eb8"
+  },
+  "unresolved_scope_note": [
+    {
+      "locator": "body paragraph 81; rendered page 10, formal-use record section",
+      "term": "空白表",
+      "context": "以下空白表僅供正式執行時記錄；完整示範已獨立提供。使用前核實授權、隱私告知及保存位置。"
+    }
+  ],
+  "reviewer_instruction": "A different reviewer must inspect this exact R04 candidate SHA. This build receipt grants no independent semantic PASS.",
+  "external_effects": {
+    "github_modified": false,
+    "shared_register_modified": false,
+    "monitor_panel_modified": false,
+    "current_or_canonical_promoted": false
+  }
+}

@@ -1,0 +1,12 @@
+Independent exact-SHA targeted semantic delta review. You are text-only and have no file, browser, Computer Use, or external tools. Do not claim visual or binary inspection. Review only the stated change and whether prior semantic findings can be inherited.
+
+Project TTQS ONE. doc_id=0142, official requirement I19-E32, unique Blueprint tied to the three-year revenue growth statement.
+Exact candidate SHA-256: dee4b45dcac7e32685f56cbf23d956443aa2810110b359472ab557dfcc0e8eea
+Parent R06 candidate SHA-256: 5b2ee12dfd2c2a942ca5f89e9e95af453b310f65240463ee7d49f4fae540ace6
+Parent targeted independent semantic review output SHA-256: eaf5ffe6ccc74817868740cc094a40eace662421ebac5110ac4dfaeb7d198f47; verdict PASS on the R03 findings: six-column account mapping, embedded nine-row SAMPLE replacement register, and two-decimal recomputed growth rates.
+R07 delta: only direct caption font size changed from 9pt to 10.5pt in word/document.xml; extracted visible text nodes and numeric values unchanged. Current structural receipt says body minimum 10.5pt, tables minimum 9.5pt, caption 10.5pt. Visual QA receipt reports all 7 Word-native rendered pages individually inspected, no clipping/overlap/broken table/missing content, with nonblocking final-page white space. This review does not independently inspect those pixels.
+The retained content distinguishes SAMPLE/SYNTHETIC from REAL, marks actual financial originals absent as REAL UNKNOWN/HOLD, does not fabricate approval, and formal association acceptance is NOT_GRANTED.
+
+Return concise JSON with fields:
+doc_id, candidate_sha256, verdict (PASS/PARTIAL/FAIL), review_scope, parent_verdict_inheritable (yes/no/partial), whether font-only change introduces semantic issue, specific remaining semantic findings (empty array if none), real_evidence_status, formal_acceptance, limitations.
+Check the exact SHA and scope. Do not claim the model identity is independently verified. If the packet does not permit a sound verdict, return PARTIAL or FAIL with a concrete reason. No extra prose outside JSON.

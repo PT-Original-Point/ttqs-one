@@ -1,0 +1,140 @@
+{
+  "schema": "ttqs_one_scoped_writer_receipt.v1",
+  "receipt_id": "0014-I02-E05-R18-SCOPED-REPAIR-20261108",
+  "created_at": "2026-11-08T05:57:47.799434+08:00",
+  "worker_id": "codex-local-writer-0014-I02-E05-R18-20261108",
+  "worker_process_id": 39012,
+  "scope": "Authorized local CANDIDATE work only",
+  "candidate_only": true,
+  "formal_acceptance": false,
+  "promotion": "NOT_PROMOTED",
+  "reviewer_needed": true,
+  "input_hashes": {
+    "r17_docx": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R17-TRACEABILITY-MATRIX-REPAIR_20261108\\publication_preflight_20261107_205716_ae42e2ed\\payload\\candidate\\0014_I02-E05_R17.docx",
+      "sha256": "287bdfc5e8674d8cdb160bdbcba484ca12e9cf8fc29c4ad0be8169103274053e"
+    },
+    "r17_csv": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R17-TRACEABILITY-MATRIX-REPAIR_20261108\\publication_preflight_20261107_205716_ae42e2ed\\payload\\synthetic_register\\SYNTHETIC_REGISTER_DRAFT_0014_R12.csv",
+      "sha256": "802a532296b2b503b979bd62c69d66e9c94de9afbc39dff202b440429da7dac1"
+    },
+    "review": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R17-TRACEABILITY-MATRIX-REPAIR_20261108\\qa\\SEMANTIC_REVIEW_R17_INDEPENDENT_WORKER_20261108.json",
+      "sha256": "0ad4e9e2f6fa1dc5579bb0ac572e20bb2c454e5cc0a7dbb3cb87a4ba0dfa242a"
+    },
+    "source_packet": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R17-TRACEABILITY-MATRIX-REPAIR_20261108\\publication_preflight_20261107_205716_ae42e2ed\\payload\\source\\SOURCE_PACKET_0014_R01.json",
+      "sha256": "30ade83ab55d9ed185dae519252e114ebfb33c8ef276c8005cf77cb355e82b91"
+    },
+    "official_pdf": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R17-TRACEABILITY-MATRIX-REPAIR_20261108\\publication_preflight_20261107_205716_ae42e2ed\\payload\\source\\official_source.pdf",
+      "sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709"
+    },
+    "blueprint_row": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R17-TRACEABILITY-MATRIX-REPAIR_20261108\\publication_preflight_20261107_205716_ae42e2ed\\payload\\blueprint\\BLUEPRINT_ROW_0014_I02-E05.jsonl",
+      "sha256": "ec6fc82addd4474a9d7d664b137bd8e35a2fe6a7bb04e7ca028f048e21d1e5d3"
+    }
+  },
+  "outputs": {
+    "candidate_docx": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R18-SCOPED_REPAIR_20261108\\candidate\\0014_I02-E05_R18.docx",
+      "sha256": "f010470828aad653f691d164c50fdc8e2e0359a88b52286c92eb6f6d1b994846"
+    },
+    "paired_register_csv": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R18-SCOPED_REPAIR_20261108\\register\\SYNTHETIC_REGISTER_DRAFT_0014_R18.csv",
+      "sha256": "92c35585cfd1a53a88807c89a6a5ba39ebcbe46af876a1530eb9c51c45435860"
+    }
+  },
+  "change_scope": {
+    "only_changes": [
+      {
+        "synthetic_id": "SYN-0014-002",
+        "field": "升格 REAL 所需替換來源與責任",
+        "before": "原始收件系統時間、郵件標頭或實際紙本收件戳記",
+        "after": "程序SAMPLE角色「受理承辦人」取得原始收件系統時間、郵件標頭或實際紙本收件戳記；「初審覆核人」核對原件與表列日期時間一致，留存原件索引及覆核紀錄。"
+      },
+      {
+        "synthetic_id": "SYN-0014-003",
+        "field": "升格 REAL 所需替換來源與責任",
+        "before": "實際電子郵件、紙本、網站匯出或接洽紀錄及定位",
+        "after": "程序SAMPLE角色「受理承辦人」取得實際電子郵件、紙本、網站匯出或接洽紀錄及定位；「初審覆核人」核對來源、管道及定位一致，留存原件索引及覆核紀錄。"
+      },
+      {
+        "synthetic_id": "SYN-0014-016",
+        "field": "升格 REAL 所需替換來源與責任",
+        "before": "以替換後的現況及目標按同一公式重算",
+        "after": "程序SAMPLE角色「受理承辦人」取得替換後現況與目標的可核對來源；「初審覆核人」按 max(0,目標−現況) 重算並核對輸入與結果，留存來源定位、公式、計算表及覆核紀錄。"
+      },
+      {
+        "synthetic_id": "SYN-0014-040",
+        "field": "升格 REAL 所需替換來源與責任",
+        "before": "以實際目標人數及分母重算；不得報為成果",
+        "after": "程序SAMPLE角色「受理承辦人」取得實際目標人數及適用人數分母的可核對來源；「初審覆核人」按分子÷分母×100重算並核對兩項輸入，留存來源定位、計算表及覆核紀錄；此為目標比例，不是成果。"
+      },
+      {
+        "artifact": "candidate_docx",
+        "field": "revision_label",
+        "before": "R17｜SAMPLE 候選｜2026-11-08",
+        "after": "R18｜SAMPLE 候選｜2026-11-08"
+      }
+    ],
+    "target_ids": [
+      "SYN-0014-002",
+      "SYN-0014-003",
+      "SYN-0014-016",
+      "SYN-0014-040"
+    ],
+    "target_rows_changed": 4,
+    "non_target_rows_preserved": 63,
+    "csv_revision_label_change": "none"
+  },
+  "verification": {
+    "input_hashes_reconfirmed_before_receipt": true,
+    "docx_ooxml_zip_integrity": "PASS",
+    "python_docx_open": "PASS",
+    "csv_parse": "PASS",
+    "csv_data_rows": 67,
+    "csv_columns": 5,
+    "unique_identifiers": 67,
+    "docx_table16_data_rows": 67,
+    "docx_csv_four_target_cells_exact_match": true,
+    "all_63_non_target_csv_rows_byte_value_identical": true,
+    "all_target_nonresponsibility_fields_unchanged": true,
+    "docx_text_node_differences": 5,
+    "ooxml_package_parts_changed": [
+      "word/document.xml"
+    ],
+    "score_and_other_content_changed": false,
+    "font_floor_pt": {
+      "body": 10.5,
+      "table": 9.5,
+      "status": "preserved; package diff limited to document text"
+    },
+    "writer_visual_render": {
+      "engine": "Microsoft Word read-only COM export; Poppler PNG rasterization",
+      "pages": 36,
+      "all_pages_inspected": true,
+      "observed": "No clipping or overlap; four corrected Table 16 entries readable",
+      "independent_visual_qa": "PENDING"
+    }
+  },
+  "qa_status": {
+    "writer_deterministic_readback": "PASS",
+    "fresh_independent_technical_qa": "PENDING",
+    "fresh_independent_visual_qa": "PENDING",
+    "fresh_independent_semantic_review": "PENDING"
+  },
+  "r17_review": {
+    "verdict": "PARTIAL",
+    "formal_acceptance": "NOT_GRANTED",
+    "promotion": "NOT_PROMOTED",
+    "finding": "P2 traceability gap in Table 16 for SYN-0014-002, -003, -016, -040; R17 is not represented as semantic PASS",
+    "review_sha256": "0ad4e9e2f6fa1dc5579bb0ac572e20bb2c454e5cc0a7dbb3cb87a4ba0dfa242a"
+  },
+  "external_writes": {
+    "github": false,
+    "current": false,
+    "shared_register": false,
+    "formal_promotion": false
+  }
+}

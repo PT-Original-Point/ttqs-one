@@ -1,0 +1,89 @@
+{
+  "operation": "targeted_integrator_wording_repair",
+  "source_revision": "R05",
+  "target_revision": "R06",
+  "trigger": "Independent OpenCode v2 exact-SHA review R03 marked PARTIAL; literal banned placeholder wording in §7 and Table 10-3 conflicted with the document Blueprint rejection rule.",
+  "review_session": "ses_eb4dcf052ffes9mG02pgpKHq5V",
+  "reviewed_source_docx_sha256": "34DC48094F3260F65477BBD914F45966965A11D15D6A5FE7AA2666068310A020",
+  "source_content_sha256": "771A1B063933BB52A393A215B3CCD342B079A70D5121B68312243BD13F7AB30E",
+  "targeted_replacements": {
+    "§7 warning": 1,
+    "Table10-3 R00": 1,
+    "Table10-3 R04": 1,
+    "revision_history_rows_added": 1,
+    "Table1-1 revision label R05 to R06": 1,
+    "Table3-1 caption/header orphan page break": 1
+  },
+  "synthetic_fact_count_before": 41,
+  "synthetic_fact_count_after": 41,
+  "mapping": {
+    "doc_id": "0058",
+    "requirement_id": "I13-E02",
+    "official_checkbox_serial": "062",
+    "case_id": "SYN-0058-202608"
+  },
+  "forbidden_literals_absent_from_content_json": true,
+  "superseded_pre_fix_candidate_sha256": "08795D06EFFA0D6BE415E3F2C005B70CA4C362FB2D513F1920A64D0B189B67B9",
+  "superseded_pre_fix_render_pdf_sha256": "CDA35B4319CA72D2420F968FE9FE0AB42C9A82BDEE549F07FFA76C6521605811",
+  "docx_built": true,
+  "rendered": true,
+  "independent_review": {
+    "route": "OpenCode CLI v2.0.29",
+    "model": "opencode/beam-free",
+    "session_id": "ses_eb4c69a00ffecdiCvGl5LzE5aU",
+    "verdict": "PASS_QUALIFIED_SEMANTIC_REVIEW_ONLY",
+    "candidate_sha256": "B7F8806A204EB6CB9C1F9FA2F84B016B6F1EAFB56FF43E5C7C02E2499CE13B07",
+    "candidate_sha_match": true,
+    "render_pdf_sha256": "86F427DB160BF716CAFFF63201672EC3BD91921F6BD77736B5E8C6F3A31877FF",
+    "render_pdf_sha_match": true,
+    "candidate_unchanged": true,
+    "limitations": [
+      "Reviewer could not visually inspect PDF or contact sheets.",
+      "Reviewer verdict does not establish Human acceptance, REAL evidence, association approval or formal promotion.",
+      "Initial CLI stream had Windows Unicode replacement characters; preserved and followed by same-session ASCII recovery summary."
+    ]
+  },
+  "outputs": [
+    {
+      "path": "worker/antigravity/0058_CONTENT_R06.json",
+      "bytes": 98780,
+      "sha256": "552482B0FA96535D6532FE75EFE551868FB27FDE9BA17D0D54A8B925CD08949A"
+    },
+    {
+      "path": "worker/antigravity/0058_UNIQUE_BLUEPRINT_R06.md",
+      "bytes": 22687,
+      "sha256": "7606D16B80A4886CF6871943EF46DE0407D3EFB921FD6DB63597615F4C5B81F4"
+    },
+    {
+      "path": "worker/antigravity/0058_SYNTHETIC_REPLACEMENT_REGISTER_R06.csv",
+      "bytes": 15310,
+      "sha256": "CE97D4A34C35711EADBA57A58AC2B6B5628821EA391B0949C3F10AE9F6519AC8"
+    },
+    {
+      "path": "worker/antigravity/0058_build_R06.py",
+      "bytes": 15923,
+      "sha256": "D21CFDB264E063C35632605785F85CF49C0C3FE366AE997A777F8AFA9262BBD1"
+    }
+  ],
+  "final_candidate": {
+    "path": "candidate/0058_R06.docx",
+    "bytes": 74974,
+    "sha256": "B7F8806A204EB6CB9C1F9FA2F84B016B6F1EAFB56FF43E5C7C02E2499CE13B07"
+  },
+  "final_render": {
+    "path": "evidence/render_R06_final/0058_R06.pdf",
+    "bytes": 969696,
+    "sha256": "86F427DB160BF716CAFFF63201672EC3BD91921F6BD77736B5E8C6F3A31877FF",
+    "page_count": 32,
+    "manifest_sha256": "73FE645BD5A8451DA23D676EBB5BD8530E13C6DECFFDCBC62148AC90E3642E62"
+  },
+  "visual_inspection": {
+    "verdict": "PASS_LOCAL_VISUAL_REVIEW",
+    "scope": "All 32 PNG pages viewed at original resolution in 8 contact sheets after final build. Table 3-1 starts with caption and data on page 7; Table 7-2 caption/table on page 23.",
+    "renderer": "Microsoft Word COM export to PDF; pypdfium2 render scale 1.6",
+    "pdf_sha256": "86F427DB160BF716CAFFF63201672EC3BD91921F6BD77736B5E8C6F3A31877FF",
+    "page_count": 32,
+    "contact_sheet_count": 8,
+    "reviewer_visual_limit": "OpenCode could not view contact sheets or PDF images."
+  }
+}

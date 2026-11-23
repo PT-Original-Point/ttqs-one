@@ -1,0 +1,3335 @@
+{
+  "report_type": "TTQS_ONE_INDEPENDENT_STATIC_QA",
+  "work_id": "0035-I07-E03-STATIC-QA-R02-TW-CHAR-FIX",
+  "scope": "0035/I07-E03 R02 deterministic static checks only; no edit, Word COM, render, visual review, or semantic acceptance",
+  "inputs": {
+    "candidate": {
+      "path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\candidate\\0035_I07-E03_R02_TW_CHAR_FIX.docx",
+      "sha256": "0E5AB81615BA45D0A1D8008203C8696F24A3B98ADA65B99A261DC9D0DF13FF99",
+      "bytes": 63969
+    },
+    "source_packet": {
+      "path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\SOURCE_PACKET_0035_I07-E03_R01.md",
+      "sha256": "36DCA53E98B77ECF6F9FAC96D2D74ECB817554E924B98F76A1B8C7182BD77891",
+      "bytes": 9686
+    },
+    "blueprint": {
+      "path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\UNIQUE_BLUEPRINT_0035_I07-E03_R01.md",
+      "sha256": "ED05970D955945EAD41CD411D29DE0C55F92FF8737C93B463A4B0142ED3E8D9A",
+      "bytes": 8062
+    },
+    "scoped_repair": {
+      "path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\candidate\\qa\\scoped_repair_r02_worker\\0035_I07-E03_R02_SCOPED_REPAIR.md",
+      "sha256": "A11BE8683D2AF72D65BB3A02A4AC79F3035BCDFCAC6A064AEA66E03F9F50474C",
+      "bytes": 68733
+    },
+    "build_receipt": {
+      "path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\candidate\\qa\\static_qa_r03_carver\\BUILD_RECEIPT_0035_I07-E03_R03.json",
+      "sha256": "596B66EB48362EE5790CF544269D0A849318824745FEFA7F5E4B7230B6C42DDD",
+      "bytes": 10123
+    },
+    "qa_script": {
+      "path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\candidate\\qa\\static_qa_r03_carver\\static_qa_0035_r03_carver.py",
+      "sha256": "43AFCDA4C0BECE24C81C8A4981DFC01BF99F54C5DFBD50EEE81DC569DAFED937",
+      "bytes": 32337
+    },
+    "expected_candidate_sha256": "0E5AB81615BA45D0A1D8008203C8696F24A3B98ADA65B99A261DC9D0DF13FF99"
+  },
+  "checks": {
+    "input_output_sha_binding": {
+      "status": "PASS",
+      "evidence": {
+        "scoped_repair": {
+          "receipt_path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\candidate\\qa\\scoped_repair_r02_worker\\0035_I07-E03_R02_SCOPED_REPAIR.md",
+          "receipt_sha256": "A11BE8683D2AF72D65BB3A02A4AC79F3035BCDFCAC6A064AEA66E03F9F50474C",
+          "actual_path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\candidate\\qa\\scoped_repair_r02_worker\\0035_I07-E03_R02_SCOPED_REPAIR.md",
+          "actual_sha256": "A11BE8683D2AF72D65BB3A02A4AC79F3035BCDFCAC6A064AEA66E03F9F50474C",
+          "path_matches": true,
+          "sha_matches": true,
+          "bytes_matches": true
+        },
+        "source_packet": {
+          "receipt_path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\SOURCE_PACKET_0035_I07-E03_R01.md",
+          "receipt_sha256": "36DCA53E98B77ECF6F9FAC96D2D74ECB817554E924B98F76A1B8C7182BD77891",
+          "actual_path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\SOURCE_PACKET_0035_I07-E03_R01.md",
+          "actual_sha256": "36DCA53E98B77ECF6F9FAC96D2D74ECB817554E924B98F76A1B8C7182BD77891",
+          "path_matches": true,
+          "sha_matches": true,
+          "bytes_matches": true
+        },
+        "blueprint": {
+          "receipt_path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\UNIQUE_BLUEPRINT_0035_I07-E03_R01.md",
+          "receipt_sha256": "ED05970D955945EAD41CD411D29DE0C55F92FF8737C93B463A4B0142ED3E8D9A",
+          "actual_path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\UNIQUE_BLUEPRINT_0035_I07-E03_R01.md",
+          "actual_sha256": "ED05970D955945EAD41CD411D29DE0C55F92FF8737C93B463A4B0142ED3E8D9A",
+          "path_matches": true,
+          "sha_matches": true,
+          "bytes_matches": true
+        },
+        "candidate_output": {
+          "receipt_path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\candidate\\0035_I07-E03_R02_TW_CHAR_FIX.docx",
+          "receipt_sha256": "0E5AB81615BA45D0A1D8008203C8696F24A3B98ADA65B99A261DC9D0DF13FF99",
+          "actual_path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\candidate\\0035_I07-E03_R02_TW_CHAR_FIX.docx",
+          "actual_sha256": "0E5AB81615BA45D0A1D8008203C8696F24A3B98ADA65B99A261DC9D0DF13FF99",
+          "path_matches": true,
+          "sha_matches": true,
+          "expected_sha_matches": true,
+          "bytes_matches": true
+        }
+      }
+    },
+    "build_receipt_parse": {
+      "status": "PASS",
+      "evidence": {
+        "receipt_type": "TTQS_ONE_DOCX_BUILD_RECEIPT",
+        "status": "CANDIDATE_BUILD_COMPLETE_DETERMINISTIC_CHECKS_ONLY"
+      }
+    },
+    "document_requirement_identity": {
+      "status": "PASS",
+      "evidence": {
+        "source_packet": {
+          "doc_id_0035_present": true,
+          "requirement_I07_E03_present": true,
+          "content_sha256": "36DCA53E98B77ECF6F9FAC96D2D74ECB817554E924B98F76A1B8C7182BD77891"
+        },
+        "blueprint": {
+          "doc_id_0035_present": true,
+          "requirement_I07_E03_present": true,
+          "content_sha256": "ED05970D955945EAD41CD411D29DE0C55F92FF8737C93B463A4B0142ED3E8D9A"
+        },
+        "scoped_repair": {
+          "doc_id_0035_present": true,
+          "requirement_I07_E03_present": true,
+          "content_sha256": "A11BE8683D2AF72D65BB3A02A4AC79F3035BCDFCAC6A064AEA66E03F9F50474C"
+        },
+        "build_receipt": {
+          "doc_id": "0035",
+          "requirement_id": "I07-E03",
+          "revision": "R02"
+        }
+      }
+    },
+    "docx_zip_and_ooxml_openability": {
+      "status": "PASS",
+      "evidence": {
+        "testzip_bad_member": null,
+        "required_members": {
+          "[Content_Types].xml": true,
+          "word/document.xml": true,
+          "word/_rels/document.xml.rels": true,
+          "word/styles.xml": true
+        },
+        "xml_parse_errors": []
+      }
+    },
+    "table_structure_receipt_consistency": {
+      "status": "PASS",
+      "evidence": {
+        "actual_tables": 28,
+        "actual_rows": [
+          5,
+          5,
+          6,
+          5,
+          5,
+          6,
+          7,
+          9,
+          6,
+          6,
+          6,
+          4,
+          4,
+          4,
+          6,
+          4,
+          5,
+          6,
+          6,
+          6,
+          7,
+          5,
+          5,
+          5,
+          78,
+          6,
+          18,
+          7
+        ],
+        "receipt_tables": 28,
+        "receipt_rows": [
+          5,
+          5,
+          6,
+          5,
+          5,
+          6,
+          7,
+          9,
+          6,
+          6,
+          6,
+          4,
+          4,
+          4,
+          6,
+          4,
+          5,
+          6,
+          6,
+          6,
+          7,
+          5,
+          5,
+          5,
+          78,
+          6,
+          18,
+          7
+        ]
+      }
+    },
+    "empty_table_cells": {
+      "status": "PASS",
+      "evidence": {
+        "count": 0,
+        "locations": []
+      }
+    },
+    "irregular_table_row_widths": {
+      "status": "PASS",
+      "evidence": {
+        "tables": []
+      }
+    },
+    "font_size_floor": {
+      "status": "PASS",
+      "evidence": {
+        "body": {
+          "status": "PASS",
+          "minimum_required_pt": 10.5,
+          "observed_minimum_pt": 11.0,
+          "text_run_count": 107,
+          "missing_direct_size_count": 0,
+          "missing_direct_size_run_indexes": [],
+          "below_threshold": []
+        },
+        "tables": {
+          "status": "PASS",
+          "minimum_required_pt": 9.5,
+          "observed_minimum_pt": 9.5,
+          "text_run_count": 1049,
+          "missing_direct_size_count": 0,
+          "missing_direct_size_run_indexes": [],
+          "below_threshold": []
+        },
+        "method": "direct w:rPr/w:sz on nonempty text runs in word/document.xml"
+      }
+    },
+    "fact_finding_id_register_and_replacement_completeness": {
+      "status": "PASS",
+      "evidence": {
+        "facts_body_unique": 77,
+        "facts_registered_rows": 77,
+        "facts_missing_registration": [],
+        "findings_body_unique": 5,
+        "findings_registered_rows": 5,
+        "findings_missing_registration": [],
+        "duplicate_register_rows": [],
+        "rows_missing_replacement_guidance": [],
+        "malformed_tokens": []
+      }
+    },
+    "SAMPLE_REAL_UNKNOWN_boundary_marking": {
+      "status": "PASS",
+      "evidence": {
+        "body_marker_occurrences": {
+          "SAMPLE": 299,
+          "SYNTHETIC": 264,
+          "REAL": 210,
+          "UNKNOWN": 150
+        },
+        "tables": [
+          {
+            "table": 1,
+            "contains_synthetic_id": false,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE",
+              "SYNTHETIC"
+            ]
+          },
+          {
+            "table": 2,
+            "contains_synthetic_id": true,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE",
+              "SYNTHETIC",
+              "合成"
+            ]
+          },
+          {
+            "table": 3,
+            "contains_synthetic_id": true,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE",
+              "SYNTHETIC",
+              "合成"
+            ]
+          },
+          {
+            "table": 4,
+            "contains_synthetic_id": true,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE",
+              "SYNTHETIC"
+            ]
+          },
+          {
+            "table": 5,
+            "contains_synthetic_id": true,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE",
+              "SYNTHETIC"
+            ]
+          },
+          {
+            "table": 6,
+            "contains_synthetic_id": false,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE",
+              "SYNTHETIC"
+            ]
+          },
+          {
+            "table": 7,
+            "contains_synthetic_id": false,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE",
+              "SYNTHETIC"
+            ]
+          },
+          {
+            "table": 8,
+            "contains_synthetic_id": true,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE",
+              "SYNTHETIC"
+            ]
+          },
+          {
+            "table": 9,
+            "contains_synthetic_id": true,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE",
+              "SYNTHETIC",
+              "合成",
+              "樣本"
+            ]
+          },
+          {
+            "table": 10,
+            "contains_synthetic_id": false,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE",
+              "SYNTHETIC",
+              "合成"
+            ]
+          },
+          {
+            "table": 11,
+            "contains_synthetic_id": false,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE",
+              "SYNTHETIC",
+              "合成"
+            ]
+          },
+          {
+            "table": 12,
+            "contains_synthetic_id": false,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE",
+              "SYNTHETIC"
+            ]
+          },
+          {
+            "table": 13,
+            "contains_synthetic_id": false,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE",
+              "SYNTHETIC"
+            ]
+          },
+          {
+            "table": 14,
+            "contains_synthetic_id": false,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE",
+              "SYNTHETIC"
+            ]
+          },
+          {
+            "table": 15,
+            "contains_synthetic_id": false,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE",
+              "SYNTHETIC",
+              "合成"
+            ]
+          },
+          {
+            "table": 16,
+            "contains_synthetic_id": false,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE",
+              "SYNTHETIC"
+            ]
+          },
+          {
+            "table": 17,
+            "contains_synthetic_id": false,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE"
+            ]
+          },
+          {
+            "table": 18,
+            "contains_synthetic_id": true,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE",
+              "SYNTHETIC",
+              "合成"
+            ]
+          },
+          {
+            "table": 19,
+            "contains_synthetic_id": true,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE",
+              "SYNTHETIC"
+            ]
+          },
+          {
+            "table": 20,
+            "contains_synthetic_id": true,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE",
+              "SYNTHETIC"
+            ]
+          },
+          {
+            "table": 21,
+            "contains_synthetic_id": true,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE",
+              "SYNTHETIC",
+              "合成"
+            ]
+          },
+          {
+            "table": 22,
+            "contains_synthetic_id": true,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE"
+            ]
+          },
+          {
+            "table": 23,
+            "contains_synthetic_id": true,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE",
+              "SYNTHETIC",
+              "合成",
+              "樣本"
+            ]
+          },
+          {
+            "table": 24,
+            "contains_synthetic_id": true,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE",
+              "SYNTHETIC",
+              "合成",
+              "樣本"
+            ]
+          },
+          {
+            "table": 25,
+            "contains_synthetic_id": true,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE",
+              "SYNTHETIC",
+              "合成",
+              "樣本"
+            ]
+          },
+          {
+            "table": 26,
+            "contains_synthetic_id": true,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE",
+              "SYNTHETIC",
+              "合成"
+            ]
+          },
+          {
+            "table": 27,
+            "contains_synthetic_id": true,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE",
+              "SYNTHETIC",
+              "合成"
+            ]
+          },
+          {
+            "table": 28,
+            "contains_synthetic_id": false,
+            "has_sample_marker": true,
+            "sample_marker_evidence": [
+              "SAMPLE",
+              "SYNTHETIC",
+              "合成"
+            ]
+          }
+        ],
+        "synthetic_id_tables_without_sample_marker": [],
+        "all_fact_and_finding_ids_are_SYN": true,
+        "page_by_page_marker_check": "UNKNOWN_NOT_RENDERED"
+      }
+    },
+    "pending_placeholder_scan": {
+      "status": "PASS",
+      "evidence": {
+        "empty_top_level_paragraph_count": 0,
+        "empty_table_cell_count": 0,
+        "placeholder_occurrence_count": 0,
+        "literal_placeholder_candidates": [],
+        "policy_or_example_mentions": []
+      }
+    },
+    "kappa_matrix_and_arithmetic_recalculation": {
+      "status": "PASS",
+      "evidence": {
+        "matrices": {
+          "version_A": {
+            "table_index_1_based": 14,
+            "table_rows": [
+              {
+                "row": 1,
+                "cells": [
+                  {
+                    "column": 1,
+                    "text": "版本 A：審查者 1＼審查者 2（SAMPLE/SYNTHETIC）",
+                    "normalized": "版本 A：審查者 1＼審查者 2（SAMPLE/SYNTHETIC）"
+                  },
+                  {
+                    "column": 2,
+                    "text": "達成",
+                    "normalized": "達成"
+                  },
+                  {
+                    "column": 3,
+                    "text": "未達成",
+                    "normalized": "未達成"
+                  },
+                  {
+                    "column": 4,
+                    "text": "合計",
+                    "normalized": "合計"
+                  }
+                ]
+              },
+              {
+                "row": 2,
+                "cells": [
+                  {
+                    "column": 1,
+                    "text": "達成",
+                    "normalized": "達成"
+                  },
+                  {
+                    "column": 2,
+                    "text": "2",
+                    "normalized": "2"
+                  },
+                  {
+                    "column": 3,
+                    "text": "3",
+                    "normalized": "3"
+                  },
+                  {
+                    "column": 4,
+                    "text": "5",
+                    "normalized": "5"
+                  }
+                ]
+              },
+              {
+                "row": 3,
+                "cells": [
+                  {
+                    "column": 1,
+                    "text": "未達成",
+                    "normalized": "未達成"
+                  },
+                  {
+                    "column": 2,
+                    "text": "3",
+                    "normalized": "3"
+                  },
+                  {
+                    "column": 3,
+                    "text": "2",
+                    "normalized": "2"
+                  },
+                  {
+                    "column": 4,
+                    "text": "5",
+                    "normalized": "5"
+                  }
+                ]
+              },
+              {
+                "row": 4,
+                "cells": [
+                  {
+                    "column": 1,
+                    "text": "合計",
+                    "normalized": "合計"
+                  },
+                  {
+                    "column": 2,
+                    "text": "5",
+                    "normalized": "5"
+                  },
+                  {
+                    "column": 3,
+                    "text": "5",
+                    "normalized": "5"
+                  },
+                  {
+                    "column": 4,
+                    "text": "10",
+                    "normalized": "10"
+                  }
+                ]
+              }
+            ],
+            "computed": {
+              "status": "PASS",
+              "category_rows": [
+                {
+                  "label": "達成",
+                  "values": [
+                    2.0,
+                    3.0,
+                    5.0
+                  ]
+                },
+                {
+                  "label": "未達成",
+                  "values": [
+                    3.0,
+                    2.0,
+                    5.0
+                  ]
+                }
+              ],
+              "matrix": [
+                [
+                  2,
+                  3
+                ],
+                [
+                  3,
+                  2
+                ]
+              ],
+              "row_totals": [
+                5,
+                5
+              ],
+              "row_cells_match_recalculation": true,
+              "column_totals": [
+                5,
+                5
+              ],
+              "n": 10,
+              "observed_final_totals": [
+                5,
+                5,
+                10
+              ],
+              "final_totals_row_matches_recalculation": true,
+              "p_o": 0.4,
+              "p_e": 0.5,
+              "kappa": -0.19999999999999996,
+              "observed_total_rows": [
+                [
+                  null,
+                  null,
+                  null,
+                  null
+                ],
+                [
+                  null,
+                  5.0,
+                  5.0,
+                  10.0
+                ]
+              ]
+            }
+          },
+          "version_B": {
+            "table_index_1_based": 16,
+            "table_rows": [
+              {
+                "row": 1,
+                "cells": [
+                  {
+                    "column": 1,
+                    "text": "版本 B：審查者 1＼審查者 2（SAMPLE/SYNTHETIC）",
+                    "normalized": "版本 B：審查者 1＼審查者 2（SAMPLE/SYNTHETIC）"
+                  },
+                  {
+                    "column": 2,
+                    "text": "達成",
+                    "normalized": "達成"
+                  },
+                  {
+                    "column": 3,
+                    "text": "未達成",
+                    "normalized": "未達成"
+                  },
+                  {
+                    "column": 4,
+                    "text": "合計",
+                    "normalized": "合計"
+                  }
+                ]
+              },
+              {
+                "row": 2,
+                "cells": [
+                  {
+                    "column": 1,
+                    "text": "達成",
+                    "normalized": "達成"
+                  },
+                  {
+                    "column": 2,
+                    "text": "4",
+                    "normalized": "4"
+                  },
+                  {
+                    "column": 3,
+                    "text": "1",
+                    "normalized": "1"
+                  },
+                  {
+                    "column": 4,
+                    "text": "5",
+                    "normalized": "5"
+                  }
+                ]
+              },
+              {
+                "row": 3,
+                "cells": [
+                  {
+                    "column": 1,
+                    "text": "未達成",
+                    "normalized": "未達成"
+                  },
+                  {
+                    "column": 2,
+                    "text": "1",
+                    "normalized": "1"
+                  },
+                  {
+                    "column": 3,
+                    "text": "4",
+                    "normalized": "4"
+                  },
+                  {
+                    "column": 4,
+                    "text": "5",
+                    "normalized": "5"
+                  }
+                ]
+              },
+              {
+                "row": 4,
+                "cells": [
+                  {
+                    "column": 1,
+                    "text": "合計",
+                    "normalized": "合計"
+                  },
+                  {
+                    "column": 2,
+                    "text": "5",
+                    "normalized": "5"
+                  },
+                  {
+                    "column": 3,
+                    "text": "5",
+                    "normalized": "5"
+                  },
+                  {
+                    "column": 4,
+                    "text": "10",
+                    "normalized": "10"
+                  }
+                ]
+              }
+            ],
+            "computed": {
+              "status": "PASS",
+              "category_rows": [
+                {
+                  "label": "達成",
+                  "values": [
+                    4.0,
+                    1.0,
+                    5.0
+                  ]
+                },
+                {
+                  "label": "未達成",
+                  "values": [
+                    1.0,
+                    4.0,
+                    5.0
+                  ]
+                }
+              ],
+              "matrix": [
+                [
+                  4,
+                  1
+                ],
+                [
+                  1,
+                  4
+                ]
+              ],
+              "row_totals": [
+                5,
+                5
+              ],
+              "row_cells_match_recalculation": true,
+              "column_totals": [
+                5,
+                5
+              ],
+              "n": 10,
+              "observed_final_totals": [
+                5,
+                5,
+                10
+              ],
+              "final_totals_row_matches_recalculation": true,
+              "p_o": 0.8,
+              "p_e": 0.5,
+              "kappa": 0.6000000000000001,
+              "observed_total_rows": [
+                [
+                  null,
+                  null,
+                  null,
+                  null
+                ],
+                [
+                  null,
+                  5.0,
+                  5.0,
+                  10.0
+                ]
+              ]
+            }
+          }
+        },
+        "delta_B_minus_A": 0.8,
+        "receipt_comparison": {
+          "version_A": {
+            "matrix_matches_receipt": true,
+            "n_matches_receipt": true,
+            "kappa_matches_receipt_rounded_6dp": true,
+            "receipt_claim": {
+              "matrix": [
+                [
+                  2,
+                  3
+                ],
+                [
+                  3,
+                  2
+                ]
+              ],
+              "row_totals": [
+                5,
+                5
+              ],
+              "column_totals": [
+                5,
+                5
+              ],
+              "n": 10,
+              "p_o": 0.4,
+              "p_e": 0.5,
+              "kappa": -0.2,
+              "fraction": "-1/5"
+            }
+          },
+          "version_B": {
+            "matrix_matches_receipt": true,
+            "n_matches_receipt": true,
+            "kappa_matches_receipt_rounded_6dp": true,
+            "receipt_claim": {
+              "matrix": [
+                [
+                  4,
+                  1
+                ],
+                [
+                  1,
+                  4
+                ]
+              ],
+              "row_totals": [
+                5,
+                5
+              ],
+              "column_totals": [
+                5,
+                5
+              ],
+              "n": 10,
+              "p_o": 0.8,
+              "p_e": 0.5,
+              "kappa": 0.6,
+              "fraction": "3/5"
+            }
+          },
+          "delta_matches_receipt_rounded_6dp": true
+        },
+        "displayed_result_tokens_present": {
+          "kappa_A_-0.20": true,
+          "kappa_B_0.60": true,
+          "delta_0.80": true
+        }
+      }
+    },
+    "builder_receipt_output_claim": {
+      "status": "PASS",
+      "evidence": {
+        "claimed_status": "CANDIDATE_BUILD_COMPLETE_DETERMINISTIC_CHECKS_ONLY",
+        "claimed_candidate_sha256": "0E5AB81615BA45D0A1D8008203C8696F24A3B98ADA65B99A261DC9D0DF13FF99",
+        "actual_candidate_sha256": "0E5AB81615BA45D0A1D8008203C8696F24A3B98ADA65B99A261DC9D0DF13FF99"
+      }
+    }
+  },
+  "evidence": {
+    "build_receipt_claims": {
+      "work_id": "TTQS_ONE_0035_I07-E03_BUILD_R02_TW_CHAR_FIX_20261118",
+      "doc_id": "0035",
+      "requirement_id": "I07-E03",
+      "revision": "R02",
+      "status": "CANDIDATE_BUILD_COMPLETE_DETERMINISTIC_CHECKS_ONLY",
+      "inputs": {
+        "sole_body_source": {
+          "path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\candidate\\qa\\scoped_repair_r02_worker\\0035_I07-E03_R02_SCOPED_REPAIR.md",
+          "sha256": "A11BE8683D2AF72D65BB3A02A4AC79F3035BCDFCAC6A064AEA66E03F9F50474C",
+          "bytes": 68733
+        },
+        "source_packet_metadata_only": {
+          "path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\SOURCE_PACKET_0035_I07-E03_R01.md",
+          "sha256": "36DCA53E98B77ECF6F9FAC96D2D74ECB817554E924B98F76A1B8C7182BD77891",
+          "bytes": 9686
+        },
+        "blueprint_metadata_only": {
+          "path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\UNIQUE_BLUEPRINT_0035_I07-E03_R01.md",
+          "sha256": "ED05970D955945EAD41CD411D29DE0C55F92FF8737C93B463A4B0142ED3E8D9A",
+          "bytes": 8062
+        }
+      },
+      "outputs": {
+        "docx": {
+          "path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\candidate\\0035_I07-E03_R02_TW_CHAR_FIX.docx",
+          "sha256": "0E5AB81615BA45D0A1D8008203C8696F24A3B98ADA65B99A261DC9D0DF13FF99",
+          "bytes": 63969
+        },
+        "builder_script": {
+          "path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\candidate\\qa\\build_r02_kepler\\build_0035_docx_r02_kepler.py",
+          "sha256": "5A8A4533A6B15BE4ED974FAD235597C9C8945C26D1DEA384DBA83FE517A5A648",
+          "bytes": 22909
+        }
+      },
+      "content_claims": {
+        "paragraph_count": 82,
+        "output_paragraph_count": 82,
+        "table_count": 28,
+        "table_row_counts_including_header": [
+          5,
+          5,
+          6,
+          5,
+          5,
+          6,
+          7,
+          9,
+          6,
+          6,
+          6,
+          4,
+          4,
+          4,
+          6,
+          4,
+          5,
+          6,
+          6,
+          6,
+          7,
+          5,
+          5,
+          5,
+          78,
+          6,
+          18,
+          7
+        ],
+        "total_table_rows_including_header": 242,
+        "FACT_FINDING_ID_checks": {
+          "FACT_occurrences": 152,
+          "FACT_unique": 77,
+          "FACT_registered_rows": 77,
+          "FINDING_occurrences": 26,
+          "FINDING_unique": 5,
+          "FINDING_registered_rows": 5,
+          "total_distinct_registered": 82,
+          "status": "PASS",
+          "fact_ids": [
+            "SYN-0035-0001",
+            "SYN-0035-0002",
+            "SYN-0035-0003",
+            "SYN-0035-0004",
+            "SYN-0035-0005",
+            "SYN-0035-0006",
+            "SYN-0035-0007",
+            "SYN-0035-0008",
+            "SYN-0035-0009",
+            "SYN-0035-0010",
+            "SYN-0035-0011",
+            "SYN-0035-0012",
+            "SYN-0035-0013",
+            "SYN-0035-0014",
+            "SYN-0035-0015",
+            "SYN-0035-0016",
+            "SYN-0035-0017",
+            "SYN-0035-0018",
+            "SYN-0035-0019",
+            "SYN-0035-0020",
+            "SYN-0035-0021",
+            "SYN-0035-0022",
+            "SYN-0035-0023",
+            "SYN-0035-0024",
+            "SYN-0035-0025",
+            "SYN-0035-0026",
+            "SYN-0035-0027",
+            "SYN-0035-0028",
+            "SYN-0035-0029",
+            "SYN-0035-0030",
+            "SYN-0035-0031",
+            "SYN-0035-0032",
+            "SYN-0035-0033",
+            "SYN-0035-0034",
+            "SYN-0035-0035",
+            "SYN-0035-0036",
+            "SYN-0035-0037",
+            "SYN-0035-0038",
+            "SYN-0035-0039",
+            "SYN-0035-0040",
+            "SYN-0035-0041",
+            "SYN-0035-0042",
+            "SYN-0035-0043",
+            "SYN-0035-0044",
+            "SYN-0035-0045",
+            "SYN-0035-0046",
+            "SYN-0035-0047",
+            "SYN-0035-0048",
+            "SYN-0035-0049",
+            "SYN-0035-0050",
+            "SYN-0035-0051",
+            "SYN-0035-0052",
+            "SYN-0035-0053",
+            "SYN-0035-0054",
+            "SYN-0035-0055",
+            "SYN-0035-0056",
+            "SYN-0035-0057",
+            "SYN-0035-0058",
+            "SYN-0035-0059",
+            "SYN-0035-0060",
+            "SYN-0035-0061",
+            "SYN-0035-0062",
+            "SYN-0035-0063",
+            "SYN-0035-0064",
+            "SYN-0035-0065",
+            "SYN-0035-0066",
+            "SYN-0035-0067",
+            "SYN-0035-0068",
+            "SYN-0035-0069",
+            "SYN-0035-0070",
+            "SYN-0035-0071",
+            "SYN-0035-0072",
+            "SYN-0035-0073",
+            "SYN-0035-0074",
+            "SYN-0035-0075",
+            "SYN-0035-0076",
+            "SYN-0035-0077"
+          ],
+          "finding_ids": [
+            "SYN-0035-F01",
+            "SYN-0035-F02",
+            "SYN-0035-F03",
+            "SYN-0035-F04",
+            "SYN-0035-F05"
+          ]
+        },
+        "calculations": null
+      },
+      "font_claims": {
+        "table_count": 28,
+        "table_row_counts": [
+          5,
+          5,
+          6,
+          5,
+          5,
+          6,
+          7,
+          9,
+          6,
+          6,
+          6,
+          4,
+          4,
+          4,
+          6,
+          4,
+          5,
+          6,
+          6,
+          6,
+          7,
+          5,
+          5,
+          5,
+          78,
+          6,
+          18,
+          7
+        ],
+        "body_min_pt": 11.0,
+        "table_min_pt": 9.5,
+        "body_text_run_count": 107,
+        "table_text_run_count": 1049,
+        "body_text_runs_missing_explicit_size": 0,
+        "table_text_runs_missing_explicit_size": 0,
+        "body_min_required_pt": 10.5,
+        "table_min_required_pt": 9.5,
+        "body_status": "PASS",
+        "table_status": "PASS",
+        "method": "direct w:sz in word/document.xml"
+      }
+    },
+    "receipt_bindings": {
+      "scoped_repair": {
+        "receipt_path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\candidate\\qa\\scoped_repair_r02_worker\\0035_I07-E03_R02_SCOPED_REPAIR.md",
+        "receipt_sha256": "A11BE8683D2AF72D65BB3A02A4AC79F3035BCDFCAC6A064AEA66E03F9F50474C",
+        "actual_path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\candidate\\qa\\scoped_repair_r02_worker\\0035_I07-E03_R02_SCOPED_REPAIR.md",
+        "actual_sha256": "A11BE8683D2AF72D65BB3A02A4AC79F3035BCDFCAC6A064AEA66E03F9F50474C",
+        "path_matches": true,
+        "sha_matches": true,
+        "bytes_matches": true
+      },
+      "source_packet": {
+        "receipt_path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\SOURCE_PACKET_0035_I07-E03_R01.md",
+        "receipt_sha256": "36DCA53E98B77ECF6F9FAC96D2D74ECB817554E924B98F76A1B8C7182BD77891",
+        "actual_path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\SOURCE_PACKET_0035_I07-E03_R01.md",
+        "actual_sha256": "36DCA53E98B77ECF6F9FAC96D2D74ECB817554E924B98F76A1B8C7182BD77891",
+        "path_matches": true,
+        "sha_matches": true,
+        "bytes_matches": true
+      },
+      "blueprint": {
+        "receipt_path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\UNIQUE_BLUEPRINT_0035_I07-E03_R01.md",
+        "receipt_sha256": "ED05970D955945EAD41CD411D29DE0C55F92FF8737C93B463A4B0142ED3E8D9A",
+        "actual_path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\UNIQUE_BLUEPRINT_0035_I07-E03_R01.md",
+        "actual_sha256": "ED05970D955945EAD41CD411D29DE0C55F92FF8737C93B463A4B0142ED3E8D9A",
+        "path_matches": true,
+        "sha_matches": true,
+        "bytes_matches": true
+      },
+      "candidate_output": {
+        "receipt_path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\candidate\\0035_I07-E03_R02_TW_CHAR_FIX.docx",
+        "receipt_sha256": "0E5AB81615BA45D0A1D8008203C8696F24A3B98ADA65B99A261DC9D0DF13FF99",
+        "actual_path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0035_I07-E03_SOURCE_PREP_R01_20261118\\candidate\\0035_I07-E03_R02_TW_CHAR_FIX.docx",
+        "actual_sha256": "0E5AB81615BA45D0A1D8008203C8696F24A3B98ADA65B99A261DC9D0DF13FF99",
+        "path_matches": true,
+        "sha_matches": true,
+        "expected_sha_matches": true,
+        "bytes_matches": true
+      }
+    },
+    "identity_metadata": {
+      "source_packet": {
+        "doc_id_0035_present": true,
+        "requirement_I07_E03_present": true,
+        "content_sha256": "36DCA53E98B77ECF6F9FAC96D2D74ECB817554E924B98F76A1B8C7182BD77891"
+      },
+      "blueprint": {
+        "doc_id_0035_present": true,
+        "requirement_I07_E03_present": true,
+        "content_sha256": "ED05970D955945EAD41CD411D29DE0C55F92FF8737C93B463A4B0142ED3E8D9A"
+      },
+      "scoped_repair": {
+        "doc_id_0035_present": true,
+        "requirement_I07_E03_present": true,
+        "content_sha256": "A11BE8683D2AF72D65BB3A02A4AC79F3035BCDFCAC6A064AEA66E03F9F50474C"
+      },
+      "build_receipt": {
+        "doc_id": "0035",
+        "requirement_id": "I07-E03",
+        "revision": "R02"
+      }
+    },
+    "docx_zip_ooxml": {
+      "testzip_bad_member": null,
+      "required_members": {
+        "[Content_Types].xml": true,
+        "word/document.xml": true,
+        "word/_rels/document.xml.rels": true,
+        "word/styles.xml": true
+      },
+      "xml_parse_errors": []
+    },
+    "structure": {
+      "top_level_paragraph_count": 82,
+      "all_document_paragraph_count": 1124,
+      "table_count": 28,
+      "table_row_counts": [
+        5,
+        5,
+        6,
+        5,
+        5,
+        6,
+        7,
+        9,
+        6,
+        6,
+        6,
+        4,
+        4,
+        4,
+        6,
+        4,
+        5,
+        6,
+        6,
+        6,
+        7,
+        5,
+        5,
+        5,
+        78,
+        6,
+        18,
+        7
+      ],
+      "total_rows": 242,
+      "table_cell_counts_by_row": [
+        {
+          "table": 1,
+          "column_counts": [
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "table": 2,
+          "column_counts": [
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "table": 3,
+          "column_counts": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "table": 4,
+          "column_counts": [
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "table": 5,
+          "column_counts": [
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "table": 6,
+          "column_counts": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        {
+          "table": 7,
+          "column_counts": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        {
+          "table": 8,
+          "column_counts": [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+          ]
+        },
+        {
+          "table": 9,
+          "column_counts": [
+            7,
+            7,
+            7,
+            7,
+            7,
+            7
+          ]
+        },
+        {
+          "table": 10,
+          "column_counts": [
+            8,
+            8,
+            8,
+            8,
+            8,
+            8
+          ]
+        },
+        {
+          "table": 11,
+          "column_counts": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "table": 12,
+          "column_counts": [
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "table": 13,
+          "column_counts": [
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        {
+          "table": 14,
+          "column_counts": [
+            4,
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "table": 15,
+          "column_counts": [
+            7,
+            7,
+            7,
+            7,
+            7,
+            7
+          ]
+        },
+        {
+          "table": 16,
+          "column_counts": [
+            4,
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "table": 17,
+          "column_counts": [
+            5,
+            5,
+            5,
+            5,
+            5
+          ]
+        },
+        {
+          "table": 18,
+          "column_counts": [
+            10,
+            10,
+            10,
+            10,
+            10,
+            10
+          ]
+        },
+        {
+          "table": 19,
+          "column_counts": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "table": 20,
+          "column_counts": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        {
+          "table": 21,
+          "column_counts": [
+            6,
+            6,
+            6,
+            6,
+            6,
+            6,
+            6
+          ]
+        },
+        {
+          "table": 22,
+          "column_counts": [
+            5,
+            5,
+            5,
+            5,
+            5
+          ]
+        },
+        {
+          "table": 23,
+          "column_counts": [
+            4,
+            4,
+            4,
+            4,
+            4
+          ]
+        },
+        {
+          "table": 24,
+          "column_counts": [
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "table": 25,
+          "column_counts": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "table": 26,
+          "column_counts": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "table": 27,
+          "column_counts": [
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7,
+            7
+          ]
+        },
+        {
+          "table": 28,
+          "column_counts": [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      ],
+      "empty_top_level_paragraphs": [],
+      "empty_table_cells": [],
+      "irregular_row_widths": [],
+      "matches_build_receipt_table_counts": true,
+      "flattened_xml_text_length": 29971,
+      "paragraph_cell_scan_text_length": 31094,
+      "flattened_vs_enumerated_id_token_difference": {
+        "flattened_only": [
+          "SYN-0035-0036SAMPLE",
+          "SYN-0035-0037SAMPLE",
+          "SYN-0035-005412",
+          "SYN-0035-0054SYN-0035-0049",
+          "SYN-0035-0055A2",
+          "SYN-0035-0056A3",
+          "SYN-0035-0057A4",
+          "SYN-0035-0058A5",
+          "SYN-0035-0060B2",
+          "SYN-0035-0061B3",
+          "SYN-0035-0062B4",
+          "SYN-0035-0063B5",
+          "SYN-0035-0064B6",
+          "SYN-0035-006512",
+          "SYN-0035-006912",
+          "SYN-0035-007312",
+          "SYN-0035-0074REAL",
+          "SYN-0035-0075REAL",
+          "SYN-0035-007712"
+        ],
+        "enumerated_only": []
+      },
+      "tables_text": [
+        {
+          "table": 1,
+          "text": "欄位 / 內容 / 狀態 | 檢討主題 / 對相關職能分析及運用的方法檢討改進 / SAMPLE/SYNTHETIC 框架 | 報告目標 / 記錄方法版本變更、證據鏈、前後態比較、改善決策與剩餘限制，展示閉環追蹤模型 / SAMPLE/SYNTHETIC | 報告適用範圍 / 僅限 I07-E03 對應之 deliverable 0035；不延伸至 0033、0034、0036、0031、0049 之實體內容 / REAL (藉由 crosswalk 界定) | 決策支援 / 檢視方法是否能「適時檢討隨時改進」；歸檢變更前後之差異與證據完整性；規劃下次檢討觸發點 / SAMPLE/SYNTHETIC"
+        },
+        {
+          "table": 2,
+          "text": "欄位 / 內容 / 狀態 | 檢討啟動時間 / 2026-11-18（本工作包建立日） / SAMPLE/SYNTHETIC (SYN-0035-0001) | 檢討觸發原因 / 官方指標要求「方法均能適時檢討隨時改進」；實際缺乏版本變更紀錄、前後態比較或改善證據。觸發點為「無法證明方法已適時檢討隨時改進」。 / SAMPLE/SYNTHETIC (SYN-0035-0002) | 資料期間 / 未發現實際資料期間；下文使用合成案例區間 2024-01 至 2025-12 / SAMPLE/SYNTHETIC (SYN-0035-0003) | 預定下次檢討 / 待驗證改善後 6 個月，或於新版本發布時觸發。實際觸發時間 UNKNOWN。 / UNKNOWN"
+        },
+        {
+          "table": 3,
+          "text": "欄位 / 內容 / 狀態 | 當前方法版本 / SAMPLE/SYNTHETIC：版本 A (2024-03 發行)，步驟 1–5；版本 B (2025-09 發行)，步驟 1–6。無 REAL 版本文件可資來源。 / SAMPLE/SYNTHETIC (SYN-0035-0004、SYN-0035-0005) | 版本擁有者 / UNKNOWN。協會內無公開的方法擁有權文件。 / UNKNOWN | 版本變更日期 / 未知。下文合成變更時間點為 2025-11-15。 / SAMPLE/SYNTHETIC (SYN-0035-0006) | 先前版本 / 版本 A（僅存記載，無實際應用紀錄）。 / SAMPLE/SYNTHETIC (SYN-0035-0007) | 版本權限來源 / 無法查證，標示 UNKNOWN。 / UNKNOWN"
+        },
+        {
+          "table": 4,
+          "text": "欄位 / 內容 / 狀態 | 檢討情境 / 職能分析作為課程設計之前置步驟；方法用於識別學習目標與行為規格。實際應用情境不明，下文以 SAMPLE/SYNTHETIC 學校課程重設計情境說明。 / SAMPLE/SYNTHETIC (SYN-0035-0008) | 關鍵角色 / - 檢討小組主席：SAMPLE/SYNTHETIC (SYN-0035-0009) - 內容專家：SAMPLE/SYNTHETIC (SYN-0035-0010) - 審查者：SAMPLE/SYNTHETIC (SYN-0035-0011) - 課程規劃者：SAMPLE/SYNTHETIC (SYN-0035-0012) / SAMPLE/SYNTHETIC | 授權來源 / 無 REAL 授權文件。下文角色之決策權限均為 SAMPLE/SYNTHETIC 設定，標示 SAMPLE/SYNTHETIC。 / UNKNOWN | 決策層級 / SAMPLE/SYNTHETIC 示範規則：採納須有可追溯支持證據；拒絕須記錄足以支持拒絕的證據與理由；試行須界定範圍、期限及停止條件。若必要證據缺失、互相矛盾或無法定位，立即停止實質判斷並標示 UNKNOWN，列明缺少證據、補證責任狀態及重新判定觸發條件；不得以推測補值。 / SAMPLE/SYNTHETIC (SYN-0035-0013)"
+        },
+        {
+          "table": 5,
+          "text": "決策類型 / 內容 / 狀態 | 方法有效性判斷 / 是否能「適時檢討隨時改進」？ 無法實質判斷，因為前態/後態比較證據均缺。 / UNKNOWN | 版本變更必要性 / 需要變更嗎？ SAMPLE/SYNTHETIC：因為版本 B 引入第 6 步但缺乏改善證據，故判定「待驗證」。 / SAMPLE/SYNTHETIC (SYN-0035-0014) | 改善採納 / 是否採納本次變更？ SAMPLE/SYNTHETIC：試行結果顯示至少一項可觀察屬性改善，故標示「試行中」。 / SAMPLE/SYNTHETIC (SYN-0035-0015) | 下次檢討觸發點 / 當新案例出現時，或當現有流程連續 3 個季度無法證明「適時檢討隨時改進」時觸發。 / SAMPLE/SYNTHETIC (SYN-0035-0016)"
+        },
+        {
+          "table": 6,
+          "text": "步驟（SAMPLE/SYNTHETIC） / 說明 / 輸入 / 判讀規則 / 輸出 / 失效分支 | A1 / 檢索職能規格文件 / 文件列表、目錄 / 檢查文件是否存在且為最新版本 / 編號清單 / 文件遺失 → 中斷 | A2 / 歸納可觀察行為 / 訪談錄音、作品集 / 行為描述須符合規格標題 / 行為規格表 / 行為描述模糊 → 重訪談 | A3 / 評分與歸類 / 審查者評分表 / 使用 3 級量表（不達成、部分達成、完全達成） / 評分結果 / 評分標準不一致 → 重訓練 | A4 / 汇總差距 / 評分結果 / 若超過 2 項「不達成」則標示為主要差距 / 差距報告 / 無法歸檢優先順序 → 中止 | A5 / 決策與記錄 / 差距報告 / 若有差距則提出訓練建議 / 決策記錄 / 建議無法支援下游 → 棄棄"
+        },
+        {
+          "table": 7,
+          "text": "步驟（SAMPLE/SYNTHETIC） / 說明 / 輸入 / 判讀規則 / 輸出 / 失效分支 | B1 / 檢索職能規格文件 / 文件列表、目錄 / 與版本 A 相同 / 編號清單 / 文件遺失 → 中斷 | B2 / 歸納可觀察行為 / 訪談錄音、作品集 / 行為描述須符合規格標題；須額外標註證據來源 / 行為規格表 / 同上，另檢查來源標註 | B3 / 証據類型分離 / 訪談錄音、作品、觀察記錄 / 必須將「定性証據」與「定量指標」分開記錄 / 分類後的證據圖譜 / 未能分離 → 退回重錄 | B4 / 評分與歸類 / 審查者評分表 / 使用 3 級量表；對分離後的證據分別評分 / 評分結果 / 評分標準不一致 → 重訓練 | B5 / 汇總差距 / 評分結果 / 若超過 2 項「不達成」則標示為主要差距；另檢查證據類型是否均有覆蓋 / 差距報告 / 同上，另檢查證據覆蓋度 | B6 / 下游適用檢核 / 差距報告 / 報告是否支援課程規劃者直接使用，而不失去來源與限制 / 適用性意見 / 不適用 → 記錄為「無下游適用性」"
+        },
+        {
+          "table": 8,
+          "text": "標準編號 / 檢查項目 / 觀察方式 / 門檻/指標 (SAMPLE) / 狀態 | CS-01 / 任務轉職能項目 / 檢查任務描述是否明確對應至可觀察行為 / 無官方門檻；內部評核：≥ 80% 任務有明確對應 / SAMPLE/SYNTHETIC (SYN-0035-0028) | CS-02 / 行為/ competency 清晰度 / 評估行為描述是否符合錨點規格 / 無官方門檻；內部評核：≥ 70% 行為符合錨點 / SAMPLE/SYNTHETIC (SYN-0035-0029) | CS-03 / 來源/錨點品質 / 檢查每一項行為是否有可定位的來源文件或錄音 / 無官方門檻；內部評核：所有行為均須有 ≥ 1 可定位來源 / SAMPLE/SYNTHETIC (SYN-0035-0030) | CS-04 / 證據型態分離 / 檢查訪談、作品、觀察等證據是否被正確區分 / 無官方門檻；內部評核：≥ 80% 證據型態被分離 / SAMPLE/SYNTHETIC (SYN-0035-0031) | CS-05 / 評審一致性 / 多位審查者獨立評分後比對 / 無官方門檻；內部評核：Cohen's kappa ≥ 0.6 (SAMPLE 設計) / SAMPLE/SYNTHETIC (SYN-0035-0032) | CS-06 / 差跡/優先順序追蹤 / 差跡是否能追溯至證據與決策 / 無官方門檻；內部評核：≥ 90% 差跡能追溯 / SAMPLE/SYNTHETIC (SYN-0035-0033) | CS-07 / 不足/衝突證據處置 / 是否有處理資料不足、矛盾或偏差的規定 / 無官方門檻；內部評核：有處置規定者計 1，無者計 0 / SAMPLE/SYNTHETIC (SYN-0035-0034) | CS-08 / 下游規劃適用性 / 方法輸出是否能被課程規劃者使用而不失去來源與限制 / 無官方門檻；內部評核：≥ 70% 規劃者認為可用 / SAMPLE/SYNTHETIC (SYN-0035-0035)"
+        },
+        {
+          "table": 9,
+          "text": "finding_id / 方法版本/步驟 / 證據及定位 / 觀察到的缺口 / 影響與限制 / 根因假設 / 處置決定 | SYN-0035-F01 / 版本 A，步驟 A3（評分與歸類） / SAMPLE/SYNTHETIC：合成審查者評分表（內部文件），無 REAL 來源定位。標記 SAMPLE/SYNTHETIC、locator: 内部合成文件 / SAMPLE / A3 / 審查者之間評分差異大，同一作品可能被不同審查者評為不同級別；缺乏明確的評分標準說明。 / 可能導致差距報告不真實，進而影響下游課程規劃者的決策依據；影響級別：推論性。 / 評分標準模糊、樣本量不足（僅 3 位審查者），導致一致性不足。 / 試行：在版本 B 中引入 B3（證據型態分離）與更明確的評分說明；待驗證。 | SYN-0035-F02 / 版本 A，步驟 A4（汇總差距） / SAMPLE/SYNTHETIC：合成差距報告，無 REAL 案例定位。標記 SAMPLE/SYNTHETIC、locator: 内部合成文件 / SAMPLE / A4 / 差跡優先順序無法從評歸檢歸檔資料中追溯；同一級別的「部分達成」在不同任務間意義不一。 / 無法向課程規劃者清楚傳遞哪些差跡應優先處理；影響級別：實務層面。 / 優先順序歸檔機制缺失，未建立追蹤機制。 / 試行：在版本 B 中引入 B5（汇總差距）中顯式檢查證據類型覆蓋度；待驗證。 | SYN-0035-F03 / 版本 B，步驟 B3（證據型態分離） / SAMPLE/SYNTHETIC：合成證據圖譜，無 REAL 來源定位。標記 SAMPLE/SYNTHETIC、locator: 内部合成文件 / SAMPLE / B3 / 若未能正確分離「定性証據」與「定量指標」，後續評分可能混用不同型態證據，導致評分無意義。 / 若證據型態未被分離，評分結果可能失真，影響課程規劃者的判斷依據；影響級別：理論與實務雙重。 / 過往方法未規定證據型態分離流程，導致實務中常混用。 / 採納：版本 B 保留 B3 為強制步驟；已登錄 SAMPLE/SYNTHETIC (SYN-0035-0036)。 | SYN-0035-F04 / 版本 B，步驟 B6（下游適用檢核） / SAMPLE/SYNTHETIC：合成適用性意見模板，無 REAL 來源定位。標記 SAMPLE/SYNTHETIC、locator: 内部合成文件 / SAMPLE / B6 / 方法輸出（差距報告）是否支援課程規劃者直接使用，而不失去來源與限制？ 若失效，規劃者可能誤用報告結果。 / 課程規劃者可能忽略來源與限制，導致課程目標偏離實際職能需求；影響級別：實務層面，可能導致課程內容無效。 / 過往方法未規定「適用性意見」產出流程，導致報告僅作為差距清單而非可支援規劃的決策工具。 / 採納：版本 B 保留 B6 為強制步驟；已登錄 SAMPLE/SYNTHETIC (SYN-0035-0037)。 | SYN-0035-F05 / 版本 A 與版本 B 的整體比較 / SAMPLE/SYNTHETIC：合成對照表，無 REAL 來源定位。標記 SAMPLE/SYNTHETIC、locator: 内部合成文件 / SAMPLE / COMP / 版本 B 新增 B3、B6 兩步驟，但未實證是否確實改善可觀察屬性；是否引入了新的繁瑣度。 / 若改善未被證實，版本 B 可能僅為增加負擔而非實質改善；影響級別：理論與實務雙重。 / 變更動機可能為「有步驟就有改善」的錯覺，而非基於實證數據。 / 待驗證：需透過合成案例重跑比較（見下文第 10 節）。"
+        },
+        {
+          "table": 10,
+          "text": "編號 / 旧版規則/欄位 / 新版規則/欄位 / 變更原因 / 影響步驟 / 版次差異 / 責任角色狀態 / 試行/計畫狀態 | RV-01 / 評分標準：僅載明「3級量表（不達成、部分達成、完全達成）」，無明確評分說明 / 評分標準：明確各級別的評分說明與評分錨點（參考作品集特徵） / 評分間一致性差，實務中審查者主觀判斷為主 / A3、B3 / 新增評分說明段落；B3 新增證據型態分離 / 角色狀態：SAMPLE/SYNTHETIC（無 REAL 擁有者） / 試行中（版本 B 中試行） | RV-02 / 差跡歸檔：未建立優先順序追蹤機制 / 差跡歸檔：明確標示主要差跡並追溯至證據覆蓋度 / 無法向課程規劃者傳遞優先順息 / A4、B5 / 新增「證據類型覆蓋度」欄位；新增優先順序欄位 / 角色狀態：SAMPLE/SYNTHETIC / 試行中 | RV-03 / 證據型態：未規定分離 / 證據型態：必須將「定性証據」與「定量指標」分開記錄 / 可能混用不同型態證據，導致評分無意義 / B3 / 新增「證據型態」欄位；規定分離流程 / 角色狀態：SAMPLE/SYNTHETIC / 採納（版本 B 中保留） | RV-04 / 下游適用性：未予檢核 / 下游適用性：產生「適用性意見」，說明報告支援情況與限制 / 課程規劃者可能誤用報告結果 / B6 / 新增「適用性意見」欄位；規定檢核要點 / 角色狀態：SAMPLE/SYNTHETIC / 採納（版本 B 中保留） | RV-05 / 無整體改善比較 / 引入合成案例重跑比較，顯示至少一項可觀察屬性改善 / 缺乏改善實證支援 / 整體 / 新增「改善比較小節」（見下文第 10 節） / 角色狀態：SAMPLE/SYNTHETIC / 試行中（待驗證）"
+        },
+        {
+          "table": 11,
+          "text": "项目 / 內容 | 合成案例名稱 / SYN-0035- 案例 C1（課程設計職能分析實例） | 案例時間點 / 2025-11-15（變更節點前後重跑） | 案例規模 / 3 位審查者、5 項職能規格、2 件作品集 | 方法版本 / A（舊） vs B（新） | REAL 來源 / UNKNOWN；全部為 SAMPLE/SYNTHETIC"
+        },
+        {
+          "table": 12,
+          "text": "項目（SAMPLE/SYNTHETIC） / 內容 | 作品集 A（學習者 X） / 5 項行為描述，3 位審查者獨立評分 | 作品集 B（學習者 Y） / 5 項行為描述，3 位審查者獨立評分 | 職能規格 / 5 項可觀察行為標準（對應版本 A 步驟 A2）"
+        },
+        {
+          "table": 13,
+          "text": "步驟（SAMPLE/SYNTHETIC） / 審查者 1 / 審查者 2 / 審查者 3 / 平均分 / 通過標準（3級量說明） | A2 - 行為歸納 / 2（部分達成） / 3（完全達成） / 2（部分達成） / 2.33 / 2.33 ≥ 2？是（視作通過） | A3 - 評分 / 2 / 3 / 2 / 2.33 / 同上 | A4 - 汇總差跡 / 2 項「不達成」 / — / — / — / 2 項以上「不達成」→ 標示主要差跡"
+        },
+        {
+          "table": 14,
+          "text": "版本 A：審查者 1＼審查者 2（SAMPLE/SYNTHETIC） / 達成 / 未達成 / 合計 | 達成 / 2 / 3 / 5 | 未達成 / 3 / 2 / 5 | 合計 / 5 / 5 / 10"
+        },
+        {
+          "table": 15,
+          "text": "步驟（SAMPLE/SYNTHETIC） / 審查者 1 / 審查者 2 / 審查者 3 / 平均分 / B3 證據型態分離結果 / B6 下游適用性意見 | B2 - 行為歸納 / 2（部分達成） / 3（完全達成） / 2（部分達成） / 2.33 / 行為描述已標註證據來源（訪談錄音、作品集） / 不適用（含在 B6） | B3 - 證據型態分離 / 已分離：定性証據（訪談錄音） / 定量指標（作品集分數） / — / — / 完全分離，無混用 / — | B4 - 評分 / 2 / 3 / 2 / 2.33 / 對分離後的證據分別評分 / — | B5 - 汇總差跡 / 2 項「不達成」 / — / — / — / 另檢查證據類型覆蓋度：定性証據 2 項、定量指標 1 項，覆蓋率 60% / — | B6 - 下游適用檢核 / — / — / — / — / — / 可支援課程規劃者使用，惟須注明：(1) 來源為合成案例、(2) 限制為僅 3 位審查者、2 件作品集"
+        },
+        {
+          "table": 16,
+          "text": "版本 B：審查者 1＼審查者 2（SAMPLE/SYNTHETIC） / 達成 / 未達成 / 合計 | 達成 / 4 / 1 / 5 | 未達成 / 1 / 4 / 5 | 合計 / 5 / 5 / 10"
+        },
+        {
+          "table": 17,
+          "text": "可觀察屬性 / 版本 A 結果 / 版本 B 結果 / 是否改善 / 備註 | 評審一致性 (Cohen kappa) / −0.20 (SAMPLE) / 0.60 (SAMPLE) / 是（此矩陣中） / 兩版均列出完整矩陣；多項規則同時改變，不能單獨歸因 B3 | 證據型態分離 / 未進行（混用） / 完全分離（SAMPLE） / 是 / B3 強制分離 | 下游適用性 / 未檢核（無意見） / 檢核通過，附帶限制說明 (SAMPLE) / 是 / B6 新增適用性意見 | 差跡優先順序追蹤 / 未建立 (SAMPLE) / 已建立（覆蓋率 60%，SAMPLE） / 是 / B5 新增覆蓋度檢核"
+        },
+        {
+          "table": 18,
+          "text": "finding_id / 修訂動作 / 責任角色/授權狀態 / 目標日期/檢查點 / 版本/紀錄定位 / 執行狀態 / 驗證方法 / 驗證證據 / 結果 / 下一步 | SYN-0035-F01 / 引入明確評分說明與錨點 / SAMPLE/SYNTHETIC 角色：內容專家 (SYN-0035-0010)，授權狀態：UNKNOWN / 2026-02-15（合成試行檢查點） / 版本 B 合成方法示例 / SAMPLE/SYNTHETIC 試行 / 以同一 N=10 配對矩陣重算 Cohen kappa / −0.20 至 0.60（SAMPLE/SYNTHETIC；見 §10.3–10.4） / 合成矩陣一致率增加；不能證明 REAL 改善或單獨歸因某一規則 / 後續如有 REAL 原始評分，先核對來源，再依同一分類規則重算；否則維持 UNKNOWN | SYN-0035-F02 / 新增優先順序追蹤機制 / SAMPLE/SYNTHETIC 角色：內容專家 (SYN-0035-0010)，授權狀態：UNKNOWN / 2026-02-15（合成試行檢查點） / 版本 B 合成方法示例 / SAMPLE/SYNTHETIC 試行 / 檢查差距項目能否追溯至證據 / 60% 證據覆蓋率（SAMPLE/SYNTHETIC） / 部分差距能追溯，部分仍缺來源定位 / 若有 REAL 案例，按每項證據及差距重建追蹤鏈；沒有原件時維持 UNKNOWN | SYN-0035-F03 / 保留 B3：證據型態分離 / SAMPLE/SYNTHETIC 角色：內容專家 (SYN-0035-0010)，授權狀態： UNKNOWN / 已實施（見版本 B） / 版本 B 文件（B3 步驟） / 已實施 / 檢查證據是否被分離 / 100% 證據型態被分離 (SAMPLE) / 完全分離，無混用 / 維持現狀，作為版本 B 強制步驟 | SYN-0035-F04 / 保留 B6：下游適用檢核 / SAMPLE/SYNTHETIC 角色：內容專家 (SYN-0035-0010)，授權狀態： UNKNOWN / 已實施（見版本 B） / 版本 B 文件（B6 步驟） / 已實施 / 檢查適用性意見是否產出 / 適用性意見已產出 (SAMPLE) / 意見已產出，附帶限制說明 / 維持現狀，作為版本 B 強制步驟 | SYN-0035-F05 / 合成案例重跑比較 / SAMPLE/SYNTHETIC 角色：審查者 (SYN-0035-0011)，授權狀態： UNKNOWN / 2026-02-15（試行檢查點） / 本報告 Section 10 / 試行中 / 重跑同一案例，比較可觀察屬性 / 改善屬性：一致性、分離、適用性、優先順序 (SAMPLE) / 至少一項改善，至少一項仍 UNKNOWN / 規劃下次檢討，收集更多合成案例以強化統計動力"
+        },
+        {
+          "table": 19,
+          "text": "項目（SAMPLE/SYNTHETIC） / 內容 / fact_id | 案例編號 / SYN-0035-案例 C1 / SYN-0035-0045 | 檢討對象 / 某學校課程設計中的職能分析流程 / SYN-0035-0045 | 適用方法版本 / 版本 A (2024-03) → 版本 B (2025-09) / SYN-0035-0046、SYN-0035-0047 | 檢討觸發點 / 官方指標「方法均能適時檢討隨時改進」無法證實 / SYN-0035-0048 | 參與角色 / - 檢討小組主席：SYN-0035-0049 - 內容專家：SYN-0035-0050 - 審查者 1：SYN-0035-0051 - 審查者 2：SYN-0035-0052 - 審查者 3：SYN-0035-0053 - 課程規劃者：SYN-0035-0054 / SYN-0035-0049 至 SYN-0035-0054"
+        },
+        {
+          "table": 20,
+          "text": "步驟（SAMPLE/SYNTHETIC） / 執行內容 / 實際輸入 / 實際輸出 / 發現之缺口 / fact_id | A1 / 檢索職能規格文件 / 文件列表 / 編號清單 / 無 / SYN-0035-0055 | A2 / 歸納可觀察行為 / 訪談錄音、作品集 / 行為規格表 / 行為描述模糊，缺乏證據來源標註 / SYN-0035-0056 | A3 / 評分與歸類 / 審查者評分表 / 評分結果 / 審查者間一致性差（Cohen's kappa = -0.20） / SYN-0035-0057 | A4 / 汇總差距 / 評分結果 / 差跡報告 / 優先順序無法追溯至證據 / SYN-0035-0058 | A5 / 決策與記錄 / 差跡報告 / 決策記錄 / 建議無法支援下游規劃 / SYN-0035-0059"
+        },
+        {
+          "table": 21,
+          "text": "步驟（SAMPLE/SYNTHETIC） / 修訂內容 / 修訂後輸入 / 修訂後輸出 / 修訂後缺口 / fact_id | B1 / 檢索職能規格文件 / 文件列表 / 編號清單 / 無 / SYN-0035-0060 | B2 / 歸納可觀察行為 / 訪談錄音、作品集 / 行為規格表 / 同上，另需標註證據來源 / SYN-0035-0061 | B3 / 新增證據型態分離 / 必須將「定性證據」與「定量指標」分開記錄 / 分類後的證據圖譜 / 無（強制分離） / SYN-0035-0062 | B4 / 評分與歸類 / 分離後的證據 / 評分結果 / 評分標準明確（附有說明段落） / SYN-0035-0063 | B5 / 汇總差跡 / 分離後的證據 / 差跡報告 / 優先順序有明確標註，證據覆蓋率標註 / SYN-0035-0064 | B6 / 新增下游適用檢核 / 報告是否支援課程規劃者直接使用，註明來源與限制 / 適用性意見 / 可支援使用，惟須注明合成案例限制 / SYN-0035-0065"
+        },
+        {
+          "table": 22,
+          "text": "可觀察屬性 / 版本 A 結果 / 版本 B 結果 / 改善方向 / fact_id | 評審一致性 (Cohen kappa) / −0.20 (SAMPLE) / 0.60 (SAMPLE) / 此矩陣中改善 0.80 / SYN-0035-0066 | 證據型態分離 / 未進行 (混用) / 完全分離 (SAMPLE) / 改善 / SYN-0035-0067 | 下游適用性 / 未檢核 (無意見) / 檢核通過，附帶限制說明 (SAMPLE) / 改善 / SYN-0035-0068 | 差跡優先順序追蹤 / 未建立 (無追蹤) / 已建立（覆蓋率 60%） (SAMPLE) / 改善 / SYN-0035-0069"
+        },
+        {
+          "table": 23,
+          "text": "決策事項（SAMPLE/SYNTHETIC） / 內容 / 依據 / fact_id | 版本 B 採納嗎？ / 是，試行中 / 至少一項可觀察屬性改善 ( kappa、分離、適用性、優先順序 )；至少一項仍 UNKNOWN (小樣本限制、 REAL 來源) / SYN-0035-0070 | 主要改善點 / 合成對照中 B3 與 B6 等多項規則一併調整；此示例不能單獨證明因果或 REAL 方法改善 / 合成案例重跑結果 (Section 10) / SYN-0035-0071 | 試行期限 / 2026-02-15 至 2026-08-15 (6個月) / 本報告 Section 11 登錄 / SYN-0035-0072 | 下次檢討觸發點 / (1) 6個月後重新測試 Cohen's kappa 是否維持改善；(2) 若出現新案例，同步重跑；(3) 若出現 REAL 協會檢討紀錄，優先採 REAL 資料 / 本報告 Section 11、Section 15 / SYN-0035-0073"
+        },
+        {
+          "table": 24,
+          "text": "限制項目（SAMPLE/SYNTHETIC） / 狀態 / fact_id | 小樣本限制（3位審查者、5項行為、2件作品集） / UNKNOWN，結果不可外推 / SYN-0035-0074 | REAL 協會方法版次、檢討紀錄、改善結果 / UNKNOWN，無法確認 / SYN-0035-0075 | 版本 B 的長期有效性 / 未知，需持續監測 / SYN-0035-0076 | 課程規劃者對合成案例結果的接受度 / 未知，需實務試驗驗證 / SYN-0035-0077"
+        },
+        {
+          "table": 25,
+          "text": "fact_id / FACT assertion（SAMPLE/SYNTHETIC） / REAL 替換指引 | SYN-0035-0001 / 檢討啟動時間 (2026-11-18) / 以實際檢討紀錄中的啟動日期替換本合成日期。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0002 / 檢討觸發原因 (無法證明「適時檢討隨時改進」) / 以可追溯的實際觸發事件與原始紀錄替換本合成觸發原因。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0003 / 資料期間 (2024-01 至 2025-12) / 以原始紀錄涵蓋期間替換本合成資料期間，並標明起訖及定位。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0004 / 當前方法版本 A (2024-03) / 以有版次、日期、核發或存檔來源的正式方法文件替換版本或日期；逐項核對版本先後及變更紀錄。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0005 / 當前方法版本 B (2025-09) / 以有版次、日期、核發或存檔來源的正式方法文件替換版本或日期；逐項核對版本先後及變更紀錄。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0006 / 版本變更日期 (2025-11-15) / 以有版次、日期、核發或存檔來源的正式方法文件替換版本或日期；逐項核對版本先後及變更紀錄。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0007 / 先前版本 (版本 A，僅存記錄) / 以有版次、日期、核發或存檔來源的正式方法文件替換版本或日期；逐項核對版本先後及變更紀錄。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0008 / 檢討情境 (SAMPLE/SYNTHETIC 學校課程重設計) / 以實際適用情境的可定位案件紀錄替換合成情境；不得以虛構學校或案例充作 REAL。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0009 / 檢討小組主席 (SAMPLE/SYNTHETIC) / 以有來源支持的實際角色名稱或職責文件替換；授權或任職無原件時標 UNKNOWN，不填入推測人名。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0010 / 內容專家 (SAMPLE/SYNTHETIC) / 以有來源支持的實際角色名稱或職責文件替換；授權或任職無原件時標 UNKNOWN，不填入推測人名。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0011 / 審查者 (SAMPLE/SYNTHETIC) / 以有來源支持的實際角色名稱或職責文件替換；授權或任職無原件時標 UNKNOWN，不填入推測人名。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0012 / 課程規劃者 (SAMPLE/SYNTHETIC) / 以有來源支持的實際角色名稱或職責文件替換；授權或任職無原件時標 UNKNOWN，不填入推測人名。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0013 / 資料不足時停止作成實質結論並標示 UNKNOWN；記錄缺少或矛盾的證據、補證責任狀態與重新判定觸發條件 / 以正式核定的決策程序替換此示範規則；未能證明時保留停止判定、標示 UNKNOWN 的安全分支。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0014 / 版本變更必要性 (待驗證) / 以可定位的實際決策、檢討週期或觸發紀錄替換；無紀錄時標 UNKNOWN，不推定採納或試行。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0015 / 改善採納 (試行中) / 以可定位的實際決策、檢討週期或觸發紀錄替換；無紀錄時標 UNKNOWN，不推定採納或試行。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0016 / 下次檢討觸發點 / 以可定位的實際決策、檢討週期或觸發紀錄替換；無紀錄時標 UNKNOWN，不推定採納或試行。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0017 / 失效分支 A1 (文件遺失) / 以實際方法文件的失效處置條文及對應案例紀錄替換該分支；若無來源，保留為 SAMPLE/SYNTHETIC 方法示例。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0018 / 失效分支 A2 (行為描述模糊) / 以實際方法文件的失效處置條文及對應案例紀錄替換該分支；若無來源，保留為 SAMPLE/SYNTHETIC 方法示例。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0019 / 失效分支 A3 (評分不一致) / 以實際方法文件的失效處置條文及對應案例紀錄替換該分支；若無來源，保留為 SAMPLE/SYNTHETIC 方法示例。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0020 / 失效分支 A4 (優先順序無法追溯) / 以實際方法文件的失效處置條文及對應案例紀錄替換該分支；若無來源，保留為 SAMPLE/SYNTHETIC 方法示例。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0021 / 失效分支 A5 (建議無法支援下游) / 以實際方法文件的失效處置條文及對應案例紀錄替換該分支；若無來源，保留為 SAMPLE/SYNTHETIC 方法示例。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0022 / 失效分支 B1 (同上) / 以實際方法文件的失效處置條文及對應案例紀錄替換該分支；若無來源，保留為 SAMPLE/SYNTHETIC 方法示例。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0023 / 失效分支 B2 (同上) / 以實際方法文件的失效處置條文及對應案例紀錄替換該分支；若無來源，保留為 SAMPLE/SYNTHETIC 方法示例。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0024 / 失效分支 B3 (若未分離) / 以實際方法文件的失效處置條文及對應案例紀錄替換該分支；若無來源，保留為 SAMPLE/SYNTHETIC 方法示例。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0025 / 失效分支 B4 (評分標準不一致) / 以實際方法文件的失效處置條文及對應案例紀錄替換該分支；若無來源，保留為 SAMPLE/SYNTHETIC 方法示例。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0026 / 失效分支 B5 (證據覆蓋不足) / 以實際方法文件的失效處置條文及對應案例紀錄替換該分支；若無來源，保留為 SAMPLE/SYNTHETIC 方法示例。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0027 / 失效分支 B6 (無下游適用性) / 以實際方法文件的失效處置條文及對應案例紀錄替換該分支；若無來源，保留為 SAMPLE/SYNTHETIC 方法示例。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0028 / 檢查標準 CS-01 (任務轉職能項目) / 以正式方法文件及可覆核案例替換該檢查標準或門檻；官方未訂的百分比或量尺不得標作官方規則。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0029 / 檢查標準 CS-02 (行為清晰度) / 以正式方法文件及可覆核案例替換該檢查標準或門檻；官方未訂的百分比或量尺不得標作官方規則。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0030 / 檢查標準 CS-03 (來源品質) / 以正式方法文件及可覆核案例替換該檢查標準或門檻；官方未訂的百分比或量尺不得標作官方規則。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0031 / 檢查標準 CS-04 (證據型態分離) / 以正式方法文件及可覆核案例替換該檢查標準或門檻；官方未訂的百分比或量尺不得標作官方規則。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0032 / 檢查標準 CS-05 (評審一致性) / 以正式方法文件及可覆核案例替換該檢查標準或門檻；官方未訂的百分比或量尺不得標作官方規則。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0033 / 檢查標準 CS-06 (差跡追蹤) / 以正式方法文件及可覆核案例替換該檢查標準或門檻；官方未訂的百分比或量尺不得標作官方規則。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0034 / 檢查標準 CS-07 (不足/衝突處置) / 以正式方法文件及可覆核案例替換該檢查標準或門檻；官方未訂的百分比或量尺不得標作官方規則。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0035 / 檢查標準 CS-08 (下游適用性) / 以正式方法文件及可覆核案例替換該檢查標準或門檻；官方未訂的百分比或量尺不得標作官方規則。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0036 / SAMPLE finding SYN-0035-F03 的處置決定（採納 B3；不代表 REAL 核准或實施） / 以對應 finding 的實際決議紀錄替換示範處置；沒有簽核或決議原件時標 UNKNOWN，不宣稱採納或核准。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0037 / SAMPLE finding SYN-0035-F04 的處置決定（採納 B6；不代表 REAL 核准或實施） / 以對應 finding 的實際決議紀錄替換示範處置；沒有簽核或決議原件時標 UNKNOWN，不宣稱採納或核准。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0038 / 版本 A 成對混淆矩陣及 Cohen kappa（SAMPLE：N=10，kappa=-0.20） / 以同一批可定位評分原始資料重建成對混淆矩陣並重算 kappa；不可沿用合成矩陣或無依據的數值。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0039 / 版本 A 與版本 B 的完整成對混淆矩陣、邊際比例及 Cohen kappa 公式計算（SAMPLE） / 以原始評分逐格核實觀察一致率、邊際比例與公式；若無足夠資料，將結果標 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0040 / 版本 A/B 合成比較：kappa -0.20 至 0.60，差值 0.80；不可外推或歸因單一變更（SAMPLE） / 以同案例、同評分者規則的前後原始矩陣重算差值，並說明混淆因素；沒有可比資料時撤回改善數值。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0041 / 小樣本限制聲明 / 以真實樣本構成和限制替換本合成限制聲明；樣本不足時保留不可外推的限制。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0042 / 版本 A 步驟 A1 實際輸入 / 以版本 A 原始輸入、輸出及評分紀錄替換示範步驟；逐項列出可定位證據，缺件標 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0043 / 版本 A 步驟 A2 實際輸出 / 以版本 A 原始輸入、輸出及評分紀錄替換示範步驟；逐項列出可定位證據，缺件標 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0044 / 版本 A 步驟 A3 實際輸出 / 以版本 A 原始輸入、輸出及評分紀錄替換示範步驟；逐項列出可定位證據，缺件標 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0045 / 案例編號 SYN-0035-案例 C1 / 以實際案例編號、方法版本與觸發紀錄替換合成背景；不可把 SAMPLE 案例編號當作協會案號。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0046 / 方法版本 A / 以實際案例編號、方法版本與觸發紀錄替換合成背景；不可把 SAMPLE 案例編號當作協會案號。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0047 / 方法版本 B / 以實際案例編號、方法版本與觸發紀錄替換合成背景；不可把 SAMPLE 案例編號當作協會案號。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0048 / 檢討觸發點 / 以實際案例編號、方法版本與觸發紀錄替換合成背景；不可把 SAMPLE 案例編號當作協會案號。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0049 / 檢討小組主席 (SAMPLE/SYNTHETIC) / 以具可追溯身分及職責來源的實際角色資料替換合成人員；不得仿造簽名或授權。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0050 / 內容專家 (SAMPLE/SYNTHETIC) / 以具可追溯身分及職責來源的實際角色資料替換合成人員；不得仿造簽名或授權。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0051 / 審查者 1 (SAMPLE/SYNTHETIC) / 以具可追溯身分及職責來源的實際角色資料替換合成人員；不得仿造簽名或授權。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0052 / 審查者 2 (SAMPLE/SYNTHETIC) / 以具可追溯身分及職責來源的實際角色資料替換合成人員；不得仿造簽名或授權。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0053 / 審查者 3 (SAMPLE/SYNTHETIC) / 以具可追溯身分及職責來源的實際角色資料替換合成人員；不得仿造簽名或授權。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0054 / 課程規劃者 (SAMPLE/SYNTHETIC) / 以具可追溯身分及職責來源的實際角色資料替換合成人員；不得仿造簽名或授權。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0055 / 步驟 A1 實際輸入 / 以版本 A 的實際步驟、輸入輸出和證據定位替換示範列；無對應原件時維持 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0056 / 步驟 A2 發現之缺口 / 以版本 A 的實際步驟、輸入輸出和證據定位替換示範列；無對應原件時維持 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0057 / 版本 A 步驟 A3 評分缺口（成對評分矩陣算得 Cohen kappa=-0.20；SAMPLE） / 以版本 A 的實際步驟、輸入輸出和證據定位替換示範列；無對應原件時維持 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0058 / 步驟 A4 發現之缺口 / 以版本 A 的實際步驟、輸入輸出和證據定位替換示範列；無對應原件時維持 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0059 / 步驟 A5 發現之缺口 / 以版本 A 的實際步驟、輸入輸出和證據定位替換示範列；無對應原件時維持 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0060 / 步驟 B1 實際輸入 / 以版本 B 的正式修訂文件及實際步驟紀錄替換示範列；未證明實施時不可標示已實施。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0061 / 步驟 B2 實際輸出 (含證據來源標註) / 以版本 B 的正式修訂文件及實際步驟紀錄替換示範列；未證明實施時不可標示已實施。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0062 / 步驟 B3 修訂內容 (證據型態分離) / 以版本 B 的正式修訂文件及實際步驟紀錄替換示範列；未證明實施時不可標示已實施。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0063 / 步驟 B4 修訂後輸出 (評分標準明確) / 以版本 B 的正式修訂文件及實際步驟紀錄替換示範列；未證明實施時不可標示已實施。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0064 / 步驟 B5 修訂後輸出 (優先順序標註) / 以版本 B 的正式修訂文件及實際步驟紀錄替換示範列；未證明實施時不可標示已實施。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0065 / 步驟 B6 修訂後輸出 (適用性意見) / 以版本 B 的正式修訂文件及實際步驟紀錄替換示範列；未證明實施時不可標示已實施。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0066 / 可觀察屬性比較（成對評分 Cohen kappa -0.20 至 0.60，差值 0.80；SAMPLE） / 以固定案例及可比較的前後原始資料重算該改善屬性；無資料即撤回改善主張並標 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0067 / 可觀察屬性改善 (證據型態分離) / 以固定案例及可比較的前後原始資料重算該改善屬性；無資料即撤回改善主張並標 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0068 / 可觀察屬性改善 (下游適用性) / 以固定案例及可比較的前後原始資料重算該改善屬性；無資料即撤回改善主張並標 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0069 / 可觀察屬性改善 (差跡優先順序) / 以固定案例及可比較的前後原始資料重算該改善屬性；無資料即撤回改善主張並標 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0070 / 改善決策 (試行中) / 以正式決議、授權、檢查點及後續紀錄替換示範狀態與日期；計畫與已完成結果須分開。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0071 / 主要改善點 (B3、B6) / 以正式決議、授權、檢查點及後續紀錄替換示範狀態與日期；計畫與已完成結果須分開。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0072 / 試行期限 (2026-02-15 至 2026-08-15) / 以正式決議、授權、檢查點及後續紀錄替換示範狀態與日期；計畫與已完成結果須分開。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0073 / 下次檢討觸發點 / 以正式決議、授權、檢查點及後續紀錄替換示範狀態與日期；計畫與已完成結果須分開。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0074 / 小樣本限制 (UNKNOWN) / 若取得可定位的 REAL 長期或下游驗證資料，替換相應 UNKNOWN 限制；未取得前必須保留 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0075 / REAL 協會方法版次 (UNKNOWN) / 若取得可定位的 REAL 長期或下游驗證資料，替換相應 UNKNOWN 限制；未取得前必須保留 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0076 / 版本 B 長期有效性 (UNKNOWN) / 若取得可定位的 REAL 長期或下游驗證資料，替換相應 UNKNOWN 限制；未取得前必須保留 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。 | SYN-0035-0077 / 課程規劃者接受度 (UNKNOWN) / 若取得可定位的 REAL 長期或下游驗證資料，替換相應 UNKNOWN 限制；未取得前必須保留 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+        },
+        {
+          "table": 26,
+          "text": "finding_id / FINDING assertion（SAMPLE/SYNTHETIC） / REAL 替換指引 | SYN-0035-F01 / 版本 A 步驟 A3 評分一致性缺口；版本 B 對照僅為 SAMPLE/SYNTHETIC。 / 以原始成對評分及版本規則核實；無定位資料則標 UNKNOWN，不保留合成缺口為真實發現。 | SYN-0035-F02 / 版本 A 步驟 A4 優先順序與證據追溯缺口；SAMPLE/SYNTHETIC。 / 以實際差距報告、證據鏈及決策紀錄核實；無原件則標 UNKNOWN。 | SYN-0035-F03 / 版本 B 步驟 B3 證據型態分離問題及示範處置；SAMPLE/SYNTHETIC。 / 以正式方法條文和實際證據圖譜核實；不得將示範採納改寫成 REAL 核准或實施。 | SYN-0035-F04 / 版本 B 步驟 B6 下游適用性問題及示範處置；SAMPLE/SYNTHETIC。 / 以實際下游使用紀錄、來源限制及決議核實；缺件時標 UNKNOWN。 | SYN-0035-F05 / 版本 A/B 整體差異與改善可比性問題；SAMPLE/SYNTHETIC。 / 以同一案例的前後原始資料、版本差異及混淆因素核實；無可比資料即撤回改善結論。"
+        },
+        {
+          "table": 27,
+          "text": "索引項目 / 方法主張 / 版本 / 來源/頁面/記錄 / 來源類別 / 支援範圍 / 狀態 | EI-01 / 檢討目的：記录方法版本變更、證據鏈、前後態比較、改善決策與剩餘限制 / SAMPLE/SYNTHETIC / 本報告 Section 1–15 / SAMPLE/SYNTHETIC / 報告主體 / SAMPLE/SYNTHETIC | EI-02 / 檢討期間：2026-11-18 為建立日；資料期間 2024-01 至 2025-12 / SAMPLE/SYNTHETIC / 本報告 Section 2 / SAMPLE/SYNTHETIC / 報告主體 / SAMPLE/SYNTHETIC | EI-03 / 方法版本 A (2024-03) / 版本 B (2025-09) / SAMPLE/SYNTHETIC / 本報告 Section 3 / SAMPLE/SYNTHETIC / 報告主體 / SAMPLE/SYNTHETIC | EI-04 / 檢討觸發點：官方指標「方法均能適時檢討隨時改進」無法證實 / SAMPLE/SYNTHETIC / 本報告 Section 2 / SAMPLE/SYNTHETIC / 報告主體 / SAMPLE/SYNTHETIC | EI-05 / 上下文：學校課程重設計情境 / SAMPLE/SYNTHETIC / 本報告 Section 4 / SAMPLE/SYNTHETIC / 報告主體 / SAMPLE/SYNTHETIC | EI-06 / 關鍵角色：主席、內容專家、審查者、課程規劃者 (全部 SAMPLE/SYNTHETIC) / SAMPLE/SYNTHETIC / 本報告 Section 4 / SAMPLE/SYNTHETIC / 報告主體 / SAMPLE/SYNTHETIC | EI-07 / 支持的決策：方法有效性判斷 (UNKNOWN) / UNKNOWN / 官方 PDF (page 2, indicator 7) / REAL (官方指標) / 報告主體 / UNKNOWN (因缺乏 REAL 方法紀錄) | EI-08 / 支持的決策：版本變更必要性 (待驗證) / SAMPLE/SYNTHETIC / 本報告 Section 5 / SAMPLE/SYNTHETIC / 報告主體 / SAMPLE/SYNTHETIC | EI-09 / 支持的決策：改善採納 (試行中) / SAMPLE/SYNTHETIC / 本報告 Section 5 / SAMPLE/SYNTHETIC / 報告主體 / SAMPLE/SYNTHETIC | EI-10 / 檢查標準 CS-01 至 CS-08 (全部 SAMPLE 設計) / SAMPLE/SYNTHETIC / 本報告 Section 7 / SAMPLE/SYNTHETIC / 報告主體 / SAMPLE/SYNTHETIC | EI-11 / 前態 finding SYN-0035-F01 至 SYN-0035-F05（5 個 FINDING_ID，全部 SAMPLE/SYNTHETIC） / SAMPLE/SYNTHETIC / 本報告 Section 8 / SAMPLE/SYNTHETIC / 報告主體 / SAMPLE/SYNTHETIC | EI-12 / 改版 RV-01 至 RV-05 (全部 SAMPLE/SYNTHETIC) / SAMPLE/SYNTHETIC / 本報告 Section 9 / SAMPLE/SYNTHETIC / 報告主體 / SAMPLE/SYNTHETIC | EI-13 / 合成案例重跑結果 (Section 10)：kappa -0.20 → 0.60、證據分離、適用性、優先順序 / SAMPLE/SYNTHETIC / 本報告 Section 10 / SAMPLE/SYNTHETIC / 報告主體 / SAMPLE/SYNTHETIC | EI-14 / 改善行動登冊 (Section 11)：5 個 FINDING_ID，合成示例狀態為 2 個已實施、3 個試行或待驗證 / SAMPLE/SYNTHETIC / 本報告 Section 11 / SAMPLE/SYNTHETIC / 報告主體 / SAMPLE/SYNTHETIC | EI-15 / 完整工作例 (Section 12)：案例 C1，從缺口識別至改善決策 / SAMPLE/SYNTHETIC / 本報告 Section 12 / SAMPLE/SYNTHETIC / 報告主體 / SAMPLE/SYNTHETIC | EI-16 / 識別碼登錄 (Section 12.7–12.8)：77 個 FACT_ID 加 5 個 FINDING_ID，共 82 個不同識別碼 / SAMPLE/SYNTHETIC / 本報告 Section 12.7–12.8 / SAMPLE/SYNTHETIC / 報告主體 / SAMPLE/SYNTHETIC | EI-17 / 證據索引 EI-01 至 EI-17 (本表本身) / SAMPLE/SYNTHETIC / 本報告 Section 13 / SAMPLE/SYNTHETIC / 報告主體 / SAMPLE/SYNTHETIC"
+        },
+        {
+          "table": 28,
+          "text": "項目 / 聲明 | SAMPLE/SYNTHETIC 本質 / 本報告全部內容（含表格、數值、 finding、決策、結果、 fact_id）均為 SAMPLE/SYNTHETIC，旨在展示方法檢討與改善追蹤報告之模範結構與運作邏輯。 | REAL 數據 unavailable / 官方 PDF、藍圖、十字路線交叉映射僅界定主題與格式，其上未見實際方法版次、檢討紀錄或改善結果。所有 REAL 協會紀錄均為 UNKNOWN，不得仿造簽署、核准或真實改善。 | 識別碼唯一性 / 77 個 FACT_ID 與 5 個 FINDING_ID 分別逐列登錄；共 82 個不同識別碼。所有合成項目不得改寫成 REAL 協會事實。 | 不得仿造 / 本報告不得用於仿造會議簽名、核准、協會真實檢討紀錄或任何 REAL 紀錄。發現者將保留追究責任的權利。 | 可供評估用途 / 本報告僅作為評估師評估方法檢討與改善追蹤報告結構與邏輯之用，不得作為 REAL 協會方法有效性的實證依據。 | 邊界聲明 / 本報告僅限 I07-E03 對應之 deliverable 0035；不延伸至 0033、0034、0036、0031、0049 之實體內容。負向近鄰已在 Section 1–2 中說明。"
+        }
+      ]
+    },
+    "font_sizes": {
+      "body": {
+        "status": "PASS",
+        "minimum_required_pt": 10.5,
+        "observed_minimum_pt": 11.0,
+        "text_run_count": 107,
+        "missing_direct_size_count": 0,
+        "missing_direct_size_run_indexes": [],
+        "below_threshold": []
+      },
+      "tables": {
+        "status": "PASS",
+        "minimum_required_pt": 9.5,
+        "observed_minimum_pt": 9.5,
+        "text_run_count": 1049,
+        "missing_direct_size_count": 0,
+        "missing_direct_size_run_indexes": [],
+        "below_threshold": []
+      },
+      "method": "direct w:rPr/w:sz on nonempty text runs in word/document.xml"
+    },
+    "synthetic_ids_and_registers": {
+      "fact_occurrences": 152,
+      "fact_unique_in_body": 77,
+      "fact_ids_in_body": [
+        "SYN-0035-0001",
+        "SYN-0035-0002",
+        "SYN-0035-0003",
+        "SYN-0035-0004",
+        "SYN-0035-0005",
+        "SYN-0035-0006",
+        "SYN-0035-0007",
+        "SYN-0035-0008",
+        "SYN-0035-0009",
+        "SYN-0035-0010",
+        "SYN-0035-0011",
+        "SYN-0035-0012",
+        "SYN-0035-0013",
+        "SYN-0035-0014",
+        "SYN-0035-0015",
+        "SYN-0035-0016",
+        "SYN-0035-0017",
+        "SYN-0035-0018",
+        "SYN-0035-0019",
+        "SYN-0035-0020",
+        "SYN-0035-0021",
+        "SYN-0035-0022",
+        "SYN-0035-0023",
+        "SYN-0035-0024",
+        "SYN-0035-0025",
+        "SYN-0035-0026",
+        "SYN-0035-0027",
+        "SYN-0035-0028",
+        "SYN-0035-0029",
+        "SYN-0035-0030",
+        "SYN-0035-0031",
+        "SYN-0035-0032",
+        "SYN-0035-0033",
+        "SYN-0035-0034",
+        "SYN-0035-0035",
+        "SYN-0035-0036",
+        "SYN-0035-0037",
+        "SYN-0035-0038",
+        "SYN-0035-0039",
+        "SYN-0035-0040",
+        "SYN-0035-0041",
+        "SYN-0035-0042",
+        "SYN-0035-0043",
+        "SYN-0035-0044",
+        "SYN-0035-0045",
+        "SYN-0035-0046",
+        "SYN-0035-0047",
+        "SYN-0035-0048",
+        "SYN-0035-0049",
+        "SYN-0035-0050",
+        "SYN-0035-0051",
+        "SYN-0035-0052",
+        "SYN-0035-0053",
+        "SYN-0035-0054",
+        "SYN-0035-0055",
+        "SYN-0035-0056",
+        "SYN-0035-0057",
+        "SYN-0035-0058",
+        "SYN-0035-0059",
+        "SYN-0035-0060",
+        "SYN-0035-0061",
+        "SYN-0035-0062",
+        "SYN-0035-0063",
+        "SYN-0035-0064",
+        "SYN-0035-0065",
+        "SYN-0035-0066",
+        "SYN-0035-0067",
+        "SYN-0035-0068",
+        "SYN-0035-0069",
+        "SYN-0035-0070",
+        "SYN-0035-0071",
+        "SYN-0035-0072",
+        "SYN-0035-0073",
+        "SYN-0035-0074",
+        "SYN-0035-0075",
+        "SYN-0035-0076",
+        "SYN-0035-0077"
+      ],
+      "fact_register": {
+        "table_indexes": [
+          25
+        ],
+        "ids": [
+          "SYN-0035-0001",
+          "SYN-0035-0002",
+          "SYN-0035-0003",
+          "SYN-0035-0004",
+          "SYN-0035-0005",
+          "SYN-0035-0006",
+          "SYN-0035-0007",
+          "SYN-0035-0008",
+          "SYN-0035-0009",
+          "SYN-0035-0010",
+          "SYN-0035-0011",
+          "SYN-0035-0012",
+          "SYN-0035-0013",
+          "SYN-0035-0014",
+          "SYN-0035-0015",
+          "SYN-0035-0016",
+          "SYN-0035-0017",
+          "SYN-0035-0018",
+          "SYN-0035-0019",
+          "SYN-0035-0020",
+          "SYN-0035-0021",
+          "SYN-0035-0022",
+          "SYN-0035-0023",
+          "SYN-0035-0024",
+          "SYN-0035-0025",
+          "SYN-0035-0026",
+          "SYN-0035-0027",
+          "SYN-0035-0028",
+          "SYN-0035-0029",
+          "SYN-0035-0030",
+          "SYN-0035-0031",
+          "SYN-0035-0032",
+          "SYN-0035-0033",
+          "SYN-0035-0034",
+          "SYN-0035-0035",
+          "SYN-0035-0036",
+          "SYN-0035-0037",
+          "SYN-0035-0038",
+          "SYN-0035-0039",
+          "SYN-0035-0040",
+          "SYN-0035-0041",
+          "SYN-0035-0042",
+          "SYN-0035-0043",
+          "SYN-0035-0044",
+          "SYN-0035-0045",
+          "SYN-0035-0046",
+          "SYN-0035-0047",
+          "SYN-0035-0048",
+          "SYN-0035-0049",
+          "SYN-0035-0050",
+          "SYN-0035-0051",
+          "SYN-0035-0052",
+          "SYN-0035-0053",
+          "SYN-0035-0054",
+          "SYN-0035-0055",
+          "SYN-0035-0056",
+          "SYN-0035-0057",
+          "SYN-0035-0058",
+          "SYN-0035-0059",
+          "SYN-0035-0060",
+          "SYN-0035-0061",
+          "SYN-0035-0062",
+          "SYN-0035-0063",
+          "SYN-0035-0064",
+          "SYN-0035-0065",
+          "SYN-0035-0066",
+          "SYN-0035-0067",
+          "SYN-0035-0068",
+          "SYN-0035-0069",
+          "SYN-0035-0070",
+          "SYN-0035-0071",
+          "SYN-0035-0072",
+          "SYN-0035-0073",
+          "SYN-0035-0074",
+          "SYN-0035-0075",
+          "SYN-0035-0076",
+          "SYN-0035-0077"
+        ],
+        "unique_count": 77,
+        "row_count": 77,
+        "duplicate_rows": [],
+        "rows_missing_replacement_guidance": [],
+        "rows": [
+          {
+            "id": "SYN-0035-0001",
+            "table": 25,
+            "row": 2,
+            "replacement_guidance": "以實際檢討紀錄中的啟動日期替換本合成日期。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0002",
+            "table": 25,
+            "row": 3,
+            "replacement_guidance": "以可追溯的實際觸發事件與原始紀錄替換本合成觸發原因。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0003",
+            "table": 25,
+            "row": 4,
+            "replacement_guidance": "以原始紀錄涵蓋期間替換本合成資料期間，並標明起訖及定位。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0004",
+            "table": 25,
+            "row": 5,
+            "replacement_guidance": "以有版次、日期、核發或存檔來源的正式方法文件替換版本或日期；逐項核對版本先後及變更紀錄。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0005",
+            "table": 25,
+            "row": 6,
+            "replacement_guidance": "以有版次、日期、核發或存檔來源的正式方法文件替換版本或日期；逐項核對版本先後及變更紀錄。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0006",
+            "table": 25,
+            "row": 7,
+            "replacement_guidance": "以有版次、日期、核發或存檔來源的正式方法文件替換版本或日期；逐項核對版本先後及變更紀錄。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0007",
+            "table": 25,
+            "row": 8,
+            "replacement_guidance": "以有版次、日期、核發或存檔來源的正式方法文件替換版本或日期；逐項核對版本先後及變更紀錄。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0008",
+            "table": 25,
+            "row": 9,
+            "replacement_guidance": "以實際適用情境的可定位案件紀錄替換合成情境；不得以虛構學校或案例充作 REAL。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0009",
+            "table": 25,
+            "row": 10,
+            "replacement_guidance": "以有來源支持的實際角色名稱或職責文件替換；授權或任職無原件時標 UNKNOWN，不填入推測人名。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0010",
+            "table": 25,
+            "row": 11,
+            "replacement_guidance": "以有來源支持的實際角色名稱或職責文件替換；授權或任職無原件時標 UNKNOWN，不填入推測人名。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0011",
+            "table": 25,
+            "row": 12,
+            "replacement_guidance": "以有來源支持的實際角色名稱或職責文件替換；授權或任職無原件時標 UNKNOWN，不填入推測人名。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0012",
+            "table": 25,
+            "row": 13,
+            "replacement_guidance": "以有來源支持的實際角色名稱或職責文件替換；授權或任職無原件時標 UNKNOWN，不填入推測人名。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0013",
+            "table": 25,
+            "row": 14,
+            "replacement_guidance": "以正式核定的決策程序替換此示範規則；未能證明時保留停止判定、標示 UNKNOWN 的安全分支。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0014",
+            "table": 25,
+            "row": 15,
+            "replacement_guidance": "以可定位的實際決策、檢討週期或觸發紀錄替換；無紀錄時標 UNKNOWN，不推定採納或試行。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0015",
+            "table": 25,
+            "row": 16,
+            "replacement_guidance": "以可定位的實際決策、檢討週期或觸發紀錄替換；無紀錄時標 UNKNOWN，不推定採納或試行。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0016",
+            "table": 25,
+            "row": 17,
+            "replacement_guidance": "以可定位的實際決策、檢討週期或觸發紀錄替換；無紀錄時標 UNKNOWN，不推定採納或試行。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0017",
+            "table": 25,
+            "row": 18,
+            "replacement_guidance": "以實際方法文件的失效處置條文及對應案例紀錄替換該分支；若無來源，保留為 SAMPLE/SYNTHETIC 方法示例。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0018",
+            "table": 25,
+            "row": 19,
+            "replacement_guidance": "以實際方法文件的失效處置條文及對應案例紀錄替換該分支；若無來源，保留為 SAMPLE/SYNTHETIC 方法示例。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0019",
+            "table": 25,
+            "row": 20,
+            "replacement_guidance": "以實際方法文件的失效處置條文及對應案例紀錄替換該分支；若無來源，保留為 SAMPLE/SYNTHETIC 方法示例。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0020",
+            "table": 25,
+            "row": 21,
+            "replacement_guidance": "以實際方法文件的失效處置條文及對應案例紀錄替換該分支；若無來源，保留為 SAMPLE/SYNTHETIC 方法示例。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0021",
+            "table": 25,
+            "row": 22,
+            "replacement_guidance": "以實際方法文件的失效處置條文及對應案例紀錄替換該分支；若無來源，保留為 SAMPLE/SYNTHETIC 方法示例。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0022",
+            "table": 25,
+            "row": 23,
+            "replacement_guidance": "以實際方法文件的失效處置條文及對應案例紀錄替換該分支；若無來源，保留為 SAMPLE/SYNTHETIC 方法示例。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0023",
+            "table": 25,
+            "row": 24,
+            "replacement_guidance": "以實際方法文件的失效處置條文及對應案例紀錄替換該分支；若無來源，保留為 SAMPLE/SYNTHETIC 方法示例。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0024",
+            "table": 25,
+            "row": 25,
+            "replacement_guidance": "以實際方法文件的失效處置條文及對應案例紀錄替換該分支；若無來源，保留為 SAMPLE/SYNTHETIC 方法示例。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0025",
+            "table": 25,
+            "row": 26,
+            "replacement_guidance": "以實際方法文件的失效處置條文及對應案例紀錄替換該分支；若無來源，保留為 SAMPLE/SYNTHETIC 方法示例。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0026",
+            "table": 25,
+            "row": 27,
+            "replacement_guidance": "以實際方法文件的失效處置條文及對應案例紀錄替換該分支；若無來源，保留為 SAMPLE/SYNTHETIC 方法示例。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0027",
+            "table": 25,
+            "row": 28,
+            "replacement_guidance": "以實際方法文件的失效處置條文及對應案例紀錄替換該分支；若無來源，保留為 SAMPLE/SYNTHETIC 方法示例。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0028",
+            "table": 25,
+            "row": 29,
+            "replacement_guidance": "以正式方法文件及可覆核案例替換該檢查標準或門檻；官方未訂的百分比或量尺不得標作官方規則。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0029",
+            "table": 25,
+            "row": 30,
+            "replacement_guidance": "以正式方法文件及可覆核案例替換該檢查標準或門檻；官方未訂的百分比或量尺不得標作官方規則。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0030",
+            "table": 25,
+            "row": 31,
+            "replacement_guidance": "以正式方法文件及可覆核案例替換該檢查標準或門檻；官方未訂的百分比或量尺不得標作官方規則。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0031",
+            "table": 25,
+            "row": 32,
+            "replacement_guidance": "以正式方法文件及可覆核案例替換該檢查標準或門檻；官方未訂的百分比或量尺不得標作官方規則。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0032",
+            "table": 25,
+            "row": 33,
+            "replacement_guidance": "以正式方法文件及可覆核案例替換該檢查標準或門檻；官方未訂的百分比或量尺不得標作官方規則。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0033",
+            "table": 25,
+            "row": 34,
+            "replacement_guidance": "以正式方法文件及可覆核案例替換該檢查標準或門檻；官方未訂的百分比或量尺不得標作官方規則。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0034",
+            "table": 25,
+            "row": 35,
+            "replacement_guidance": "以正式方法文件及可覆核案例替換該檢查標準或門檻；官方未訂的百分比或量尺不得標作官方規則。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0035",
+            "table": 25,
+            "row": 36,
+            "replacement_guidance": "以正式方法文件及可覆核案例替換該檢查標準或門檻；官方未訂的百分比或量尺不得標作官方規則。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0036",
+            "table": 25,
+            "row": 37,
+            "replacement_guidance": "以對應 finding 的實際決議紀錄替換示範處置；沒有簽核或決議原件時標 UNKNOWN，不宣稱採納或核准。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0037",
+            "table": 25,
+            "row": 38,
+            "replacement_guidance": "以對應 finding 的實際決議紀錄替換示範處置；沒有簽核或決議原件時標 UNKNOWN，不宣稱採納或核准。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0038",
+            "table": 25,
+            "row": 39,
+            "replacement_guidance": "以同一批可定位評分原始資料重建成對混淆矩陣並重算 kappa；不可沿用合成矩陣或無依據的數值。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0039",
+            "table": 25,
+            "row": 40,
+            "replacement_guidance": "以原始評分逐格核實觀察一致率、邊際比例與公式；若無足夠資料，將結果標 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0040",
+            "table": 25,
+            "row": 41,
+            "replacement_guidance": "以同案例、同評分者規則的前後原始矩陣重算差值，並說明混淆因素；沒有可比資料時撤回改善數值。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0041",
+            "table": 25,
+            "row": 42,
+            "replacement_guidance": "以真實樣本構成和限制替換本合成限制聲明；樣本不足時保留不可外推的限制。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0042",
+            "table": 25,
+            "row": 43,
+            "replacement_guidance": "以版本 A 原始輸入、輸出及評分紀錄替換示範步驟；逐項列出可定位證據，缺件標 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0043",
+            "table": 25,
+            "row": 44,
+            "replacement_guidance": "以版本 A 原始輸入、輸出及評分紀錄替換示範步驟；逐項列出可定位證據，缺件標 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0044",
+            "table": 25,
+            "row": 45,
+            "replacement_guidance": "以版本 A 原始輸入、輸出及評分紀錄替換示範步驟；逐項列出可定位證據，缺件標 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0045",
+            "table": 25,
+            "row": 46,
+            "replacement_guidance": "以實際案例編號、方法版本與觸發紀錄替換合成背景；不可把 SAMPLE 案例編號當作協會案號。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0046",
+            "table": 25,
+            "row": 47,
+            "replacement_guidance": "以實際案例編號、方法版本與觸發紀錄替換合成背景；不可把 SAMPLE 案例編號當作協會案號。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0047",
+            "table": 25,
+            "row": 48,
+            "replacement_guidance": "以實際案例編號、方法版本與觸發紀錄替換合成背景；不可把 SAMPLE 案例編號當作協會案號。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0048",
+            "table": 25,
+            "row": 49,
+            "replacement_guidance": "以實際案例編號、方法版本與觸發紀錄替換合成背景；不可把 SAMPLE 案例編號當作協會案號。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0049",
+            "table": 25,
+            "row": 50,
+            "replacement_guidance": "以具可追溯身分及職責來源的實際角色資料替換合成人員；不得仿造簽名或授權。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0050",
+            "table": 25,
+            "row": 51,
+            "replacement_guidance": "以具可追溯身分及職責來源的實際角色資料替換合成人員；不得仿造簽名或授權。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0051",
+            "table": 25,
+            "row": 52,
+            "replacement_guidance": "以具可追溯身分及職責來源的實際角色資料替換合成人員；不得仿造簽名或授權。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0052",
+            "table": 25,
+            "row": 53,
+            "replacement_guidance": "以具可追溯身分及職責來源的實際角色資料替換合成人員；不得仿造簽名或授權。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0053",
+            "table": 25,
+            "row": 54,
+            "replacement_guidance": "以具可追溯身分及職責來源的實際角色資料替換合成人員；不得仿造簽名或授權。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0054",
+            "table": 25,
+            "row": 55,
+            "replacement_guidance": "以具可追溯身分及職責來源的實際角色資料替換合成人員；不得仿造簽名或授權。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0055",
+            "table": 25,
+            "row": 56,
+            "replacement_guidance": "以版本 A 的實際步驟、輸入輸出和證據定位替換示範列；無對應原件時維持 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0056",
+            "table": 25,
+            "row": 57,
+            "replacement_guidance": "以版本 A 的實際步驟、輸入輸出和證據定位替換示範列；無對應原件時維持 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0057",
+            "table": 25,
+            "row": 58,
+            "replacement_guidance": "以版本 A 的實際步驟、輸入輸出和證據定位替換示範列；無對應原件時維持 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0058",
+            "table": 25,
+            "row": 59,
+            "replacement_guidance": "以版本 A 的實際步驟、輸入輸出和證據定位替換示範列；無對應原件時維持 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0059",
+            "table": 25,
+            "row": 60,
+            "replacement_guidance": "以版本 A 的實際步驟、輸入輸出和證據定位替換示範列；無對應原件時維持 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0060",
+            "table": 25,
+            "row": 61,
+            "replacement_guidance": "以版本 B 的正式修訂文件及實際步驟紀錄替換示範列；未證明實施時不可標示已實施。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0061",
+            "table": 25,
+            "row": 62,
+            "replacement_guidance": "以版本 B 的正式修訂文件及實際步驟紀錄替換示範列；未證明實施時不可標示已實施。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0062",
+            "table": 25,
+            "row": 63,
+            "replacement_guidance": "以版本 B 的正式修訂文件及實際步驟紀錄替換示範列；未證明實施時不可標示已實施。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0063",
+            "table": 25,
+            "row": 64,
+            "replacement_guidance": "以版本 B 的正式修訂文件及實際步驟紀錄替換示範列；未證明實施時不可標示已實施。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0064",
+            "table": 25,
+            "row": 65,
+            "replacement_guidance": "以版本 B 的正式修訂文件及實際步驟紀錄替換示範列；未證明實施時不可標示已實施。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0065",
+            "table": 25,
+            "row": 66,
+            "replacement_guidance": "以版本 B 的正式修訂文件及實際步驟紀錄替換示範列；未證明實施時不可標示已實施。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0066",
+            "table": 25,
+            "row": 67,
+            "replacement_guidance": "以固定案例及可比較的前後原始資料重算該改善屬性；無資料即撤回改善主張並標 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0067",
+            "table": 25,
+            "row": 68,
+            "replacement_guidance": "以固定案例及可比較的前後原始資料重算該改善屬性；無資料即撤回改善主張並標 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0068",
+            "table": 25,
+            "row": 69,
+            "replacement_guidance": "以固定案例及可比較的前後原始資料重算該改善屬性；無資料即撤回改善主張並標 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0069",
+            "table": 25,
+            "row": 70,
+            "replacement_guidance": "以固定案例及可比較的前後原始資料重算該改善屬性；無資料即撤回改善主張並標 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0070",
+            "table": 25,
+            "row": 71,
+            "replacement_guidance": "以正式決議、授權、檢查點及後續紀錄替換示範狀態與日期；計畫與已完成結果須分開。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0071",
+            "table": 25,
+            "row": 72,
+            "replacement_guidance": "以正式決議、授權、檢查點及後續紀錄替換示範狀態與日期；計畫與已完成結果須分開。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0072",
+            "table": 25,
+            "row": 73,
+            "replacement_guidance": "以正式決議、授權、檢查點及後續紀錄替換示範狀態與日期；計畫與已完成結果須分開。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0073",
+            "table": 25,
+            "row": 74,
+            "replacement_guidance": "以正式決議、授權、檢查點及後續紀錄替換示範狀態與日期；計畫與已完成結果須分開。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0074",
+            "table": 25,
+            "row": 75,
+            "replacement_guidance": "若取得可定位的 REAL 長期或下游驗證資料，替換相應 UNKNOWN 限制；未取得前必須保留 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0075",
+            "table": 25,
+            "row": 76,
+            "replacement_guidance": "若取得可定位的 REAL 長期或下游驗證資料，替換相應 UNKNOWN 限制；未取得前必須保留 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0076",
+            "table": 25,
+            "row": 77,
+            "replacement_guidance": "若取得可定位的 REAL 長期或下游驗證資料，替換相應 UNKNOWN 限制；未取得前必須保留 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          },
+          {
+            "id": "SYN-0035-0077",
+            "table": 25,
+            "row": 78,
+            "replacement_guidance": "若取得可定位的 REAL 長期或下游驗證資料，替換相應 UNKNOWN 限制；未取得前必須保留 UNKNOWN。以可定位的 REAL 原件或紀錄核實後才替換；若缺件、矛盾或無法定位，維持 SAMPLE/SYNTHETIC 並將 REAL 狀態標為 UNKNOWN，不得轉寫為協會實績、核准或完成。"
+          }
+        ]
+      },
+      "fact_missing_register": [],
+      "fact_registered_not_used": [],
+      "fact_missing_expected_sequence": [],
+      "finding_occurrences": 26,
+      "finding_unique_in_body": 5,
+      "finding_ids_in_body": [
+        "SYN-0035-F01",
+        "SYN-0035-F02",
+        "SYN-0035-F03",
+        "SYN-0035-F04",
+        "SYN-0035-F05"
+      ],
+      "finding_register": {
+        "table_indexes": [
+          26
+        ],
+        "ids": [
+          "SYN-0035-F01",
+          "SYN-0035-F02",
+          "SYN-0035-F03",
+          "SYN-0035-F04",
+          "SYN-0035-F05"
+        ],
+        "unique_count": 5,
+        "row_count": 5,
+        "duplicate_rows": [],
+        "rows_missing_replacement_guidance": [],
+        "rows": [
+          {
+            "id": "SYN-0035-F01",
+            "table": 26,
+            "row": 2,
+            "replacement_guidance": "以原始成對評分及版本規則核實；無定位資料則標 UNKNOWN，不保留合成缺口為真實發現。"
+          },
+          {
+            "id": "SYN-0035-F02",
+            "table": 26,
+            "row": 3,
+            "replacement_guidance": "以實際差距報告、證據鏈及決策紀錄核實；無原件則標 UNKNOWN。"
+          },
+          {
+            "id": "SYN-0035-F03",
+            "table": 26,
+            "row": 4,
+            "replacement_guidance": "以正式方法條文和實際證據圖譜核實；不得將示範採納改寫成 REAL 核准或實施。"
+          },
+          {
+            "id": "SYN-0035-F04",
+            "table": 26,
+            "row": 5,
+            "replacement_guidance": "以實際下游使用紀錄、來源限制及決議核實；缺件時標 UNKNOWN。"
+          },
+          {
+            "id": "SYN-0035-F05",
+            "table": 26,
+            "row": 6,
+            "replacement_guidance": "以同一案例的前後原始資料、版本差異及混淆因素核實；無可比資料即撤回改善結論。"
+          }
+        ]
+      },
+      "finding_missing_register": [],
+      "finding_registered_not_used": [],
+      "finding_missing_expected_sequence": [],
+      "malformed_tokens": [],
+      "build_receipt_claims": {
+        "FACT_occurrences": 152,
+        "FACT_unique": 77,
+        "FACT_registered_rows": 77,
+        "FINDING_occurrences": 26,
+        "FINDING_unique": 5,
+        "FINDING_registered_rows": 5,
+        "total_distinct_registered": 82,
+        "status": "PASS",
+        "fact_ids": [
+          "SYN-0035-0001",
+          "SYN-0035-0002",
+          "SYN-0035-0003",
+          "SYN-0035-0004",
+          "SYN-0035-0005",
+          "SYN-0035-0006",
+          "SYN-0035-0007",
+          "SYN-0035-0008",
+          "SYN-0035-0009",
+          "SYN-0035-0010",
+          "SYN-0035-0011",
+          "SYN-0035-0012",
+          "SYN-0035-0013",
+          "SYN-0035-0014",
+          "SYN-0035-0015",
+          "SYN-0035-0016",
+          "SYN-0035-0017",
+          "SYN-0035-0018",
+          "SYN-0035-0019",
+          "SYN-0035-0020",
+          "SYN-0035-0021",
+          "SYN-0035-0022",
+          "SYN-0035-0023",
+          "SYN-0035-0024",
+          "SYN-0035-0025",
+          "SYN-0035-0026",
+          "SYN-0035-0027",
+          "SYN-0035-0028",
+          "SYN-0035-0029",
+          "SYN-0035-0030",
+          "SYN-0035-0031",
+          "SYN-0035-0032",
+          "SYN-0035-0033",
+          "SYN-0035-0034",
+          "SYN-0035-0035",
+          "SYN-0035-0036",
+          "SYN-0035-0037",
+          "SYN-0035-0038",
+          "SYN-0035-0039",
+          "SYN-0035-0040",
+          "SYN-0035-0041",
+          "SYN-0035-0042",
+          "SYN-0035-0043",
+          "SYN-0035-0044",
+          "SYN-0035-0045",
+          "SYN-0035-0046",
+          "SYN-0035-0047",
+          "SYN-0035-0048",
+          "SYN-0035-0049",
+          "SYN-0035-0050",
+          "SYN-0035-0051",
+          "SYN-0035-0052",
+          "SYN-0035-0053",
+          "SYN-0035-0054",
+          "SYN-0035-0055",
+          "SYN-0035-0056",
+          "SYN-0035-0057",
+          "SYN-0035-0058",
+          "SYN-0035-0059",
+          "SYN-0035-0060",
+          "SYN-0035-0061",
+          "SYN-0035-0062",
+          "SYN-0035-0063",
+          "SYN-0035-0064",
+          "SYN-0035-0065",
+          "SYN-0035-0066",
+          "SYN-0035-0067",
+          "SYN-0035-0068",
+          "SYN-0035-0069",
+          "SYN-0035-0070",
+          "SYN-0035-0071",
+          "SYN-0035-0072",
+          "SYN-0035-0073",
+          "SYN-0035-0074",
+          "SYN-0035-0075",
+          "SYN-0035-0076",
+          "SYN-0035-0077"
+        ],
+        "finding_ids": [
+          "SYN-0035-F01",
+          "SYN-0035-F02",
+          "SYN-0035-F03",
+          "SYN-0035-F04",
+          "SYN-0035-F05"
+        ]
+      }
+    },
+    "truth_boundaries": {
+      "body_marker_occurrences": {
+        "SAMPLE": 299,
+        "SYNTHETIC": 264,
+        "REAL": 210,
+        "UNKNOWN": 150
+      },
+      "tables": [
+        {
+          "table": 1,
+          "contains_synthetic_id": false,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE",
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "table": 2,
+          "contains_synthetic_id": true,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE",
+            "SYNTHETIC",
+            "合成"
+          ]
+        },
+        {
+          "table": 3,
+          "contains_synthetic_id": true,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE",
+            "SYNTHETIC",
+            "合成"
+          ]
+        },
+        {
+          "table": 4,
+          "contains_synthetic_id": true,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE",
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "table": 5,
+          "contains_synthetic_id": true,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE",
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "table": 6,
+          "contains_synthetic_id": false,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE",
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "table": 7,
+          "contains_synthetic_id": false,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE",
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "table": 8,
+          "contains_synthetic_id": true,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE",
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "table": 9,
+          "contains_synthetic_id": true,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE",
+            "SYNTHETIC",
+            "合成",
+            "樣本"
+          ]
+        },
+        {
+          "table": 10,
+          "contains_synthetic_id": false,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE",
+            "SYNTHETIC",
+            "合成"
+          ]
+        },
+        {
+          "table": 11,
+          "contains_synthetic_id": false,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE",
+            "SYNTHETIC",
+            "合成"
+          ]
+        },
+        {
+          "table": 12,
+          "contains_synthetic_id": false,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE",
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "table": 13,
+          "contains_synthetic_id": false,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE",
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "table": 14,
+          "contains_synthetic_id": false,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE",
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "table": 15,
+          "contains_synthetic_id": false,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE",
+            "SYNTHETIC",
+            "合成"
+          ]
+        },
+        {
+          "table": 16,
+          "contains_synthetic_id": false,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE",
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "table": 17,
+          "contains_synthetic_id": false,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE"
+          ]
+        },
+        {
+          "table": 18,
+          "contains_synthetic_id": true,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE",
+            "SYNTHETIC",
+            "合成"
+          ]
+        },
+        {
+          "table": 19,
+          "contains_synthetic_id": true,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE",
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "table": 20,
+          "contains_synthetic_id": true,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE",
+            "SYNTHETIC"
+          ]
+        },
+        {
+          "table": 21,
+          "contains_synthetic_id": true,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE",
+            "SYNTHETIC",
+            "合成"
+          ]
+        },
+        {
+          "table": 22,
+          "contains_synthetic_id": true,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE"
+          ]
+        },
+        {
+          "table": 23,
+          "contains_synthetic_id": true,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE",
+            "SYNTHETIC",
+            "合成",
+            "樣本"
+          ]
+        },
+        {
+          "table": 24,
+          "contains_synthetic_id": true,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE",
+            "SYNTHETIC",
+            "合成",
+            "樣本"
+          ]
+        },
+        {
+          "table": 25,
+          "contains_synthetic_id": true,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE",
+            "SYNTHETIC",
+            "合成",
+            "樣本"
+          ]
+        },
+        {
+          "table": 26,
+          "contains_synthetic_id": true,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE",
+            "SYNTHETIC",
+            "合成"
+          ]
+        },
+        {
+          "table": 27,
+          "contains_synthetic_id": true,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE",
+            "SYNTHETIC",
+            "合成"
+          ]
+        },
+        {
+          "table": 28,
+          "contains_synthetic_id": false,
+          "has_sample_marker": true,
+          "sample_marker_evidence": [
+            "SAMPLE",
+            "SYNTHETIC",
+            "合成"
+          ]
+        }
+      ],
+      "synthetic_id_tables_without_sample_marker": [],
+      "all_fact_and_finding_ids_are_SYN": true,
+      "page_by_page_marker_check": "UNKNOWN_NOT_RENDERED"
+    },
+    "empty_and_placeholder_content": {
+      "empty_top_level_paragraph_count": 0,
+      "empty_table_cell_count": 0,
+      "placeholder_occurrence_count": 0,
+      "literal_placeholder_candidates": [],
+      "policy_or_example_mentions": []
+    },
+    "independent_math": {
+      "matrices": {
+        "version_A": {
+          "table_index_1_based": 14,
+          "table_rows": [
+            {
+              "row": 1,
+              "cells": [
+                {
+                  "column": 1,
+                  "text": "版本 A：審查者 1＼審查者 2（SAMPLE/SYNTHETIC）",
+                  "normalized": "版本 A：審查者 1＼審查者 2（SAMPLE/SYNTHETIC）"
+                },
+                {
+                  "column": 2,
+                  "text": "達成",
+                  "normalized": "達成"
+                },
+                {
+                  "column": 3,
+                  "text": "未達成",
+                  "normalized": "未達成"
+                },
+                {
+                  "column": 4,
+                  "text": "合計",
+                  "normalized": "合計"
+                }
+              ]
+            },
+            {
+              "row": 2,
+              "cells": [
+                {
+                  "column": 1,
+                  "text": "達成",
+                  "normalized": "達成"
+                },
+                {
+                  "column": 2,
+                  "text": "2",
+                  "normalized": "2"
+                },
+                {
+                  "column": 3,
+                  "text": "3",
+                  "normalized": "3"
+                },
+                {
+                  "column": 4,
+                  "text": "5",
+                  "normalized": "5"
+                }
+              ]
+            },
+            {
+              "row": 3,
+              "cells": [
+                {
+                  "column": 1,
+                  "text": "未達成",
+                  "normalized": "未達成"
+                },
+                {
+                  "column": 2,
+                  "text": "3",
+                  "normalized": "3"
+                },
+                {
+                  "column": 3,
+                  "text": "2",
+                  "normalized": "2"
+                },
+                {
+                  "column": 4,
+                  "text": "5",
+                  "normalized": "5"
+                }
+              ]
+            },
+            {
+              "row": 4,
+              "cells": [
+                {
+                  "column": 1,
+                  "text": "合計",
+                  "normalized": "合計"
+                },
+                {
+                  "column": 2,
+                  "text": "5",
+                  "normalized": "5"
+                },
+                {
+                  "column": 3,
+                  "text": "5",
+                  "normalized": "5"
+                },
+                {
+                  "column": 4,
+                  "text": "10",
+                  "normalized": "10"
+                }
+              ]
+            }
+          ],
+          "computed": {
+            "status": "PASS",
+            "category_rows": [
+              {
+                "label": "達成",
+                "values": [
+                  2.0,
+                  3.0,
+                  5.0
+                ]
+              },
+              {
+                "label": "未達成",
+                "values": [
+                  3.0,
+                  2.0,
+                  5.0
+                ]
+              }
+            ],
+            "matrix": [
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                2
+              ]
+            ],
+            "row_totals": [
+              5,
+              5
+            ],
+            "row_cells_match_recalculation": true,
+            "column_totals": [
+              5,
+              5
+            ],
+            "n": 10,
+            "observed_final_totals": [
+              5,
+              5,
+              10
+            ],
+            "final_totals_row_matches_recalculation": true,
+            "p_o": 0.4,
+            "p_e": 0.5,
+            "kappa": -0.19999999999999996,
+            "observed_total_rows": [
+              [
+                null,
+                null,
+                null,
+                null
+              ],
+              [
+                null,
+                5.0,
+                5.0,
+                10.0
+              ]
+            ]
+          }
+        },
+        "version_B": {
+          "table_index_1_based": 16,
+          "table_rows": [
+            {
+              "row": 1,
+              "cells": [
+                {
+                  "column": 1,
+                  "text": "版本 B：審查者 1＼審查者 2（SAMPLE/SYNTHETIC）",
+                  "normalized": "版本 B：審查者 1＼審查者 2（SAMPLE/SYNTHETIC）"
+                },
+                {
+                  "column": 2,
+                  "text": "達成",
+                  "normalized": "達成"
+                },
+                {
+                  "column": 3,
+                  "text": "未達成",
+                  "normalized": "未達成"
+                },
+                {
+                  "column": 4,
+                  "text": "合計",
+                  "normalized": "合計"
+                }
+              ]
+            },
+            {
+              "row": 2,
+              "cells": [
+                {
+                  "column": 1,
+                  "text": "達成",
+                  "normalized": "達成"
+                },
+                {
+                  "column": 2,
+                  "text": "4",
+                  "normalized": "4"
+                },
+                {
+                  "column": 3,
+                  "text": "1",
+                  "normalized": "1"
+                },
+                {
+                  "column": 4,
+                  "text": "5",
+                  "normalized": "5"
+                }
+              ]
+            },
+            {
+              "row": 3,
+              "cells": [
+                {
+                  "column": 1,
+                  "text": "未達成",
+                  "normalized": "未達成"
+                },
+                {
+                  "column": 2,
+                  "text": "1",
+                  "normalized": "1"
+                },
+                {
+                  "column": 3,
+                  "text": "4",
+                  "normalized": "4"
+                },
+                {
+                  "column": 4,
+                  "text": "5",
+                  "normalized": "5"
+                }
+              ]
+            },
+            {
+              "row": 4,
+              "cells": [
+                {
+                  "column": 1,
+                  "text": "合計",
+                  "normalized": "合計"
+                },
+                {
+                  "column": 2,
+                  "text": "5",
+                  "normalized": "5"
+                },
+                {
+                  "column": 3,
+                  "text": "5",
+                  "normalized": "5"
+                },
+                {
+                  "column": 4,
+                  "text": "10",
+                  "normalized": "10"
+                }
+              ]
+            }
+          ],
+          "computed": {
+            "status": "PASS",
+            "category_rows": [
+              {
+                "label": "達成",
+                "values": [
+                  4.0,
+                  1.0,
+                  5.0
+                ]
+              },
+              {
+                "label": "未達成",
+                "values": [
+                  1.0,
+                  4.0,
+                  5.0
+                ]
+              }
+            ],
+            "matrix": [
+              [
+                4,
+                1
+              ],
+              [
+                1,
+                4
+              ]
+            ],
+            "row_totals": [
+              5,
+              5
+            ],
+            "row_cells_match_recalculation": true,
+            "column_totals": [
+              5,
+              5
+            ],
+            "n": 10,
+            "observed_final_totals": [
+              5,
+              5,
+              10
+            ],
+            "final_totals_row_matches_recalculation": true,
+            "p_o": 0.8,
+            "p_e": 0.5,
+            "kappa": 0.6000000000000001,
+            "observed_total_rows": [
+              [
+                null,
+                null,
+                null,
+                null
+              ],
+              [
+                null,
+                5.0,
+                5.0,
+                10.0
+              ]
+            ]
+          }
+        }
+      },
+      "delta_B_minus_A": 0.8,
+      "receipt_comparison": {
+        "version_A": {
+          "matrix_matches_receipt": true,
+          "n_matches_receipt": true,
+          "kappa_matches_receipt_rounded_6dp": true,
+          "receipt_claim": {
+            "matrix": [
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                2
+              ]
+            ],
+            "row_totals": [
+              5,
+              5
+            ],
+            "column_totals": [
+              5,
+              5
+            ],
+            "n": 10,
+            "p_o": 0.4,
+            "p_e": 0.5,
+            "kappa": -0.2,
+            "fraction": "-1/5"
+          }
+        },
+        "version_B": {
+          "matrix_matches_receipt": true,
+          "n_matches_receipt": true,
+          "kappa_matches_receipt_rounded_6dp": true,
+          "receipt_claim": {
+            "matrix": [
+              [
+                4,
+                1
+              ],
+              [
+                1,
+                4
+              ]
+            ],
+            "row_totals": [
+              5,
+              5
+            ],
+            "column_totals": [
+              5,
+              5
+            ],
+            "n": 10,
+            "p_o": 0.8,
+            "p_e": 0.5,
+            "kappa": 0.6,
+            "fraction": "3/5"
+          }
+        },
+        "delta_matches_receipt_rounded_6dp": true
+      },
+      "displayed_result_tokens_present": {
+        "kappa_A_-0.20": true,
+        "kappa_B_0.60": true,
+        "delta_0.80": true
+      }
+    }
+  },
+  "limitations": [
+    "No Word COM or rendering; physical page boundaries and page-by-page SAMPLE marking are UNKNOWN.",
+    "No semantic/source-alignment acceptance; this is deterministic static QA only.",
+    "Font gate reads explicit w:sz on text-bearing runs; inherited style behavior is not used to infer a missing direct size."
+  ],
+  "overall_static_gate": "PASS",
+  "exit_code": 0,
+  "process_exit_code": 0,
+  "stderr": ""
+}

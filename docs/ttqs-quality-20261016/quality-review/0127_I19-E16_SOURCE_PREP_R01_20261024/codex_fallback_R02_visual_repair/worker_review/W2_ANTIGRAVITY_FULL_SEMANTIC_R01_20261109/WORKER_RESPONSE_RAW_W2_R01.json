@@ -1,0 +1,46 @@
+{
+  "work_id": "TTQS_ONE_0127_R02_FULL_SEMANTIC_REVIEW_W2_GEMINI_20261109",
+  "doc_id": "0127",
+  "requirement_id": "I19-E16",
+  "candidate_docx_sha256": "abba46bcdd0919c4511df025cd90d65cd302fe3f9f59c86d0fa8b7efe2015285",
+  "candidate_body_text_sha256": "57f94b9f7f605e2d05903871bea9ec0a897b3737cc696f9924b0bf600a271554",
+  "source_packet_sha256": "058663e200fd0207196c08a02e4d159c6e3eaa7f167094cd7b409b4050b18675",
+  "unique_blueprint_sha256": "9a249a2e398407469bd82c9bf5d7a6188c9e3d28be79172bd4cc33b213c700ff",
+  "verdict": "PASS_TEXT_ONLY",
+  "checks": {
+    "requirement_and_genre": "PASS",
+    "operational_usability": "PASS",
+    "calculations_and_cross_references": "PASS",
+    "sample_real_boundary": "PASS",
+    "title_blind_and_negative_neighbors": "PASS"
+  },
+  "recalculated_values": {
+    "reach_change_pct": "+50.00%",
+    "purchase_rate_M1": "25.00%",
+    "purchase_rate_M4": "31.25%",
+    "purchase_rate_delta_pp": "+6.25pp",
+    "paired_value_mean_M1": "3.25",
+    "paired_value_mean_M4": "4.00",
+    "paired_value_delta": "+0.75",
+    "relative_change_pct": "+23.08%"
+  },
+  "findings": [
+    {
+      "severity": "nonblocking",
+      "locator": "Section 7 / Table 6",
+      "evidence": "角色/期限標示為「市場資料承辦(待指派)」、「核定後」等",
+      "impact": "符合合成示範文件規範，未假造機構真實人事指派；升級真實佐證時需填入協會正式權責人員與核定時程",
+      "required_action": "none"
+    },
+    {
+      "severity": "nonblocking",
+      "locator": "Section 4 / Table 3A & Table 4",
+      "evidence": "0.75/3.25=23.08%",
+      "impact": "正文採兩位小數（+23.08%），來源包敘述採一位小數（+23.1%），兩者算術基礎完全一致且無矛盾",
+      "required_action": "none"
+    }
+  ],
+  "visual_review": "NOT_PERFORMED",
+  "real_evidence_verified": false,
+  "formal_acceptance": "NOT_GRANTED"
+}
