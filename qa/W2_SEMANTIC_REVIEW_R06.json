@@ -1,0 +1,34 @@
+{
+  "work_id": "TTQS_ONE_0040_I08-E03_R06_EXACT_SHA_INDEPENDENT_SEMANTIC_W2_20261123",
+  "candidate_sha256": "b2635adfc72f0328509b582f1d9af5f37a6eca8a37c5a54cbf77a31deb63dde6",
+  "verdict": "PASS",
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    {
+      "id": "NB-0040-R06-01",
+      "severity": "LOW",
+      "locator": "Register row 0040-REF-001 (body_locator)",
+      "evidence": "Register locator references 第7頁「目前文件控制」表, while candidate page 7 heading is titled 「文件版本與使用指引」.",
+      "reason": "Minor descriptive locator wording artifact from R05 section refactoring; does not impair auditability or verification of the official checkbox 040 mapping.",
+      "minimum_repair": "Harmonize register locator string to match 「文件版本與使用指引」 in the next scheduled metadata alignment."
+    },
+    {
+      "id": "NB-0040-R06-02",
+      "severity": "LOW",
+      "locator": "Register bound_candidate_sha256 column (all 39 rows)",
+      "evidence": "bound_candidate_sha256 reflects base R05 SHA 9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d.",
+      "reason": "R06 represents an OOXML-only table width normalization with byte-identical text nodes; metadata provenance correctly preserves linkage to the base candidate.",
+      "minimum_repair": "Update register bound_candidate_sha256 to R06 SHA b2635adfc72f0328509b582f1d9af5f37a6eca8a37c5a54cbf77a31deb63dde6 during regular batch register re-indexing."
+    }
+  ],
+  "scope_reviewed": "Full 8-page rendered candidate text (pages 1 through 8) and all 39 rows of replacement register 8cf3cbc3a77c355b8624f8153eb60e5a7f074a5f7645fa45b7a6e8bad0467bde against official requirement I08-E03 (checkbox 040) and Unique Blueprint scope ab080a2e6d85cc13a706f0c10bda7c208ddc191a1fea20a670fd5a174ab14943.",
+  "official_fit": "Fully complies with official checkbox requirement 040 (勞動力發展署《TTQS 查核佐證文件資料表—訓練機構版》PDF 第 3 頁). Operationalizes the course-evaluation design flow as a concrete companion matrix to the course-planning meeting record (0039). Defines observable goals, measures/tools, timing, thresholds, and evidence paths without attempting to substitute for the meeting record or course plan.",
+  "operational_usability": "Extremely solid operational usability. Sets forth a 5-step operational workflow (核需求, 定目標, 定工具, 定時點, 重算與改善), 4 direct behavioral indicators (K1-K4) with 0/1/2 rubrics, and a dual passing rule (total >= 6/8 and K3 >= 1). Provides complete, mathematically verified calculations across 5 synthetic cases D01-D05 (100% target coverage, 3.4/8 pretest mean, 6.2/8 posttest mean, +2.8 paired change, 80% pass rate). Features rigorous exception handling rules, operational handoff protocols, and an actionable remediation example for failed case D04.",
+  "negative_neighbor_separation": "Strict negative-neighbor separation is enforced. Explicitly differentiates this evaluation matrix from meeting records (0039), needs assessment surveys (0037/0038), and system-level review records. Explicitly warns against merging synthetic cases into false operational chains or treating the companion matrix as a substitute for course plans or meeting minutes.",
+  "sample_real_boundary": "Rigorous compliance with anti-garbage and truth-boundary rules. Every page is clearly watermarked and labeled SAMPLE / SYNTHETIC. All dates, cases (SAMPLE-0039-01), role titles, scores, and unexecuted follow-up tasks for D04 are transparently identified as non-real synthetic demonstrations. No fabricated third-party credentials, seals, or real association endorsements.",
+  "synthetic_register": "All 39 rows in the replacement register comprehensively account for official citations, case identifiers, course parameters, rubric thresholds, baseline values, pre/post test score vectors, aggregate formulas, and improvement tracking items with clear assumptions and real-world replacement criteria.",
+  "visual_review_performed": false,
+  "github_readback_performed": false,
+  "formal_acceptance_granted": false,
+  "model_reported_identity": "Gemini 3.8 Flash (High)"
+}

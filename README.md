@@ -1,49 +1,11 @@
-# TTQS ONE
+# TTQS ONE 0040 R06 candidate delivery
 
-TTQS ONE is the controlled TEST runtime for the 2026-08-13 consultant demonstration.
+- Project: `TTQS_ONE`; requirement `I08-E03`, official checkbox `040`; document ID `0040`.
+- Candidate SHA-256: `b2635adfc72f0328509b582f1d9af5f37a6eca8a37c5a54cbf77a31deb63dde6` (51,379 bytes).
+- Technical QA: PASS, including OOXML integrity, unchanged body text from R05, table grid alignment, register and arithmetic provenance, body/table font floors (10.5/9.5 pt), and no unconverted LaTeX markers.
+- Visual QA: 8 pages; pages 1–7 are pixel-identical to the previously inspected R05 renders; page 8 was rendered and inspected in the R06 run. Word PDF and page PNGs are included.
+- Independent semantic QA: W2 Antigravity CLI PASS on this exact SHA, zero blocking findings. Two LOW notes are preserved as nonblocking. Requested model was `gemini-3.8-flash-high`; provider-served model remains UNKNOWN.
+- The document and all examples remain SAMPLE/SYNTHETIC. This is a candidate-quality result, not formal acceptance or REAL evidence.
+- Raw GitHub byte readback is performed after publication and recorded in a separate exact-SHA receipt.
 
-## v0.6.3 adversarial-audit hardening
-
-Acceptance path:
-
-Real Google Forms SAMPLE submission -> immutable raw event identity -> Apps Script -> TEST core database -> EventJobLedger -> controlled failure -> bounded automatic retry -> raw-root exact reconciliation -> runtime EvidenceMaster registration -> automatic 19-indicator consultant evidence index.
-
-Hard gates:
-
-- TEST only for the 8/13 runtime acceptance path; PROD remains untouched.
-- `ENABLE_REAL_WRITES=false` and `PII_VAULT_READY=false` are fail-closed code controls.
-- `ttqsBootstrapTest()` requires consent for all explicit manifest scopes before any lock, health check, ledger write, Form creation, or trigger creation; Health also exposes current FULL authorization status.
-- Google Forms expose only controlled SAMPLE choices; no arbitrary respondent text field is created.
-- Each real Form response is assigned a persisted `TTQS_EVENT_ID` before JobLedger processing. `FORM_SUITE` identity uses Form ID + this immutable event ID; row number is only a locator.
-- Retry handles due `FAILED` jobs and stale `RUNNING` jobs after a bounded lease, under a ScriptLock, and resolves the raw response again by immutable source reference.
-- Reconciliation starts from the raw `RUNTIME_*_RESPONSES` rows, so a response whose installable trigger never created a JobLedger row is a mismatch rather than a false PASS.
-- Reconciliation requires exact component counts and validates job/survey/party/evidence cross-links before `MATCHED_EXACTLY_ONCE`.
-- Runtime EvidenceMaster rows are `TEST` / `SAMPLE`, carry raw/provider/job linkage, and are explicitly `NOT_FORMAL`; they do not prove formal TTQS outcomes.
-- Managed trigger validation checks handler cardinality plus event type, trigger source, and the TEST core spreadsheet source ID for `onFormSubmit`.
-- Runtime Forms must read back as published and expose a non-empty responder URL; real accessibility is still a Google provider runtime gate.
-- Indicators 17-19 remain `FORMAL_BLOCKED_NEEDS_REAL` until genuine REAL outcome evidence exists.
-- `FormResponse.submit()` is not used for runtime acceptance; submissions must use the real Google Forms UI.
-- `clasp` push scope remains exactly `appsscript.json` plus 13 root-level `.gs` files.
-- The release manifest verifier requires exact coverage of git-tracked regular files, excluding only the manifest and its separate self-hash file.
-- GitHub Actions `checkout` and `setup-node` references are pinned to immutable commit SHAs rather than mutable major-version tags.
-
-Evidence boundary:
-
-- Source/CI PASS does not mean Google runtime PASS.
-- Unit/contract/behavior tests do not prove Google OAuth, trigger scheduling, responder accessibility, or provider-side execution.
-- Google provider runtime acceptance must independently verify identity ownership, remote source readback, real Form UI submission, Apps Script Executions evidence, exact reconciliation, and the 17-19 formal REAL gate.
-
-Known non-blocking post-demo hardening:
-
-- Remove CI-time `npx --yes` supply-chain dependence by locking the clasp tool graph.
-- Re-evaluate TypeScript and a transactional database / Cloud Run architecture before REAL or scaled production use.
-
-## Main TEST entrypoints
-
-- `ttqsBootstrapTest()`
-- `ttqsHealthCheck()`
-- `ttqsInjectNextRegistrationFailure()`
-- `ttqsCreateFaultProbe()`
-- `ttqsRetryFailedJobs()`
-- `ttqsReconcile()`
-- `ttqsRefreshConsultView()`
+See `artifact_manifest.json` for the file hashes and sizes.
