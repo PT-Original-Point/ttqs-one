@@ -1,7 +1,0 @@
-# Bounded independent review
-work_id: 0048-I10-E03-REVIEW-R01
-review_scope: body-only semantic, operational usability, fact-boundary, and acceptance-criteria review of the exact attached R01 Markdown; do not rewrite it.
-Candidate body SHA-256: AC81CEE7BDE419BCF9A5BCB68B1B687EF9AD626C614207BEF68891D5A7D6A995
-Official requirement: 「大型採購均辦理會議通過、師資遴聘後亦經過會議或審查通過並留有紀錄。」 Source PDF p.3, exact source SHA is in the attached brief.
-Use the attached writer brief as the acceptance contract and the attached body as the only candidate. Verify: two fully populated synthetic examples (large-purchase approval meeting and post-selection teacher review), no invented threshold, exact official text/source locator, complete field definitions/evidence crosswalk, calculation with numerator/denominator and worked arithmetic, every synthetic fact registered with value/location/type/authentic source/responsible role, corrections/audit trail, real policy-based retention/retrieval instructions, I10-E02 and I11-E01 negative-neighbor boundaries, no fabricated people/signatures/approvals/third-party facts, no unresolved blanks/placeholders, Traditional Chinese and requested length.
-Return concise JSON only: decision PASS or REPAIR; candidate_sha256; findings array (each with section/table locator, precise issue, minimal required correction); checked_at. Do not create/edit files or use tools. Do not claim actual association records. If evidence is insufficient, say UNKNOWN and REPAIR.
