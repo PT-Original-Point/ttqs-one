@@ -1,0 +1,76 @@
+{
+  "schema": "TTQS_ONE_GITHUB_RAW_BYTE_READBACK_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0004",
+  "requirement_id": "I01-E02",
+  "candidate_revision": "R03",
+  "repository": "PT-Original-Point/ttqs-one",
+  "pull_request": 92,
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "observed_at_tpe": "2026-11-23T15:51:50.7749074+08:00",
+  "immutable_readback_commit": "d4eb1660ddc6e175c186196dc5c83e61e257301b",
+  "readback_method": "Windows HttpClient GET from raw.githubusercontent.com pinned to the exact PR head; file SHA-256 and Git Blob SHA-1 computed over downloaded DOCX bytes.",
+  "candidate": {
+    "path": "docs/ttqs-quality-20261016/quality-review/0004_I01-E02_R03_20261116/candidate/0004_I01-E02_R03_CANDIDATE.docx",
+    "http_status": 200,
+    "bytes": 59306,
+    "sha256": "e3914144f13079b0673428a42d5b930c252ba0a223379deded49ea5ad1c5f08c",
+    "git_blob_sha1": "32dcb615c4075b47354453cff926acf8dc187ce2",
+    "readback": "PASS"
+  },
+  "qa_receipts": [
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0004_I01-E02_R03_20261116/qa/FINAL_CANDIDATE_QA_R03_EXACT_SHA_R02.json",
+      "http": 200,
+      "bytes": 2766,
+      "sha256": "8a1f82f34b17a7ef64b884e89a953875197b3f468ae3a548c3de80378e6726d3",
+      "expected_sha256": "8a1f82f34b17a7ef64b884e89a953875197b3f468ae3a548c3de80378e6726d3",
+      "sha_match": true,
+      "candidate_sha256": "e3914144f13079b0673428a42d5b930c252ba0a223379deded49ea5ad1c5f08c",
+      "candidate_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0004_I01-E02_R03_20261116/qa/VISUAL_QA_R03_EXACT_SHA_R01.json",
+      "http": 200,
+      "bytes": 875,
+      "sha256": "e6abe86762437cd99b1b8aa345edbf28261c34086eb57fa4ba6601660adc958f",
+      "expected_sha256": "e6abe86762437cd99b1b8aa345edbf28261c34086eb57fa4ba6601660adc958f",
+      "sha_match": true,
+      "candidate_sha256": "e3914144f13079b0673428a42d5b930c252ba0a223379deded49ea5ad1c5f08c",
+      "candidate_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0004_I01-E02_R03_20261116/qa/WORD_OPEN_RENDER_R03_EXACT_SHA_R02.json",
+      "http": 200,
+      "bytes": 860,
+      "sha256": "d16b9802ff6de0147830b95641b0d988491290a40e09febdf46e70d617670ec3",
+      "expected_sha256": "d16b9802ff6de0147830b95641b0d988491290a40e09febdf46e70d617670ec3",
+      "sha_match": true,
+      "candidate_sha256": "e3914144f13079b0673428a42d5b930c252ba0a223379deded49ea5ad1c5f08c",
+      "candidate_match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/quality-review/0004_I01-E02_R03_20261116/qa/gemini38/RESPONSE_VALIDATION_R02.json",
+      "http": 200,
+      "bytes": 1732,
+      "sha256": "6f81e2254b556ac3013bd056829f208205d964c37e628ca619e2b7f6618f8ac9",
+      "expected_sha256": "6f81e2254b556ac3013bd056829f208205d964c37e628ca619e2b7f6618f8ac9",
+      "sha_match": true,
+      "candidate_sha256": "e3914144f13079b0673428a42d5b930c252ba0a223379deded49ea5ad1c5f08c",
+      "candidate_match": true
+    }
+  ],
+  "quality_binding": {
+    "final_quality": "PASS_SCOPED_COMPLETE_QUALITY",
+    "final_check_count": 19,
+    "visual": "PASS",
+    "visual_pages": 21,
+    "word_native_open": "PASS_READ_ONLY",
+    "word_render": "PASS_WORD_PDF_EXPORT",
+    "semantic": "PASS",
+    "semantic_findings": 0,
+    "semantic_requested_model": "gemini-3.8-flash-high",
+    "semantic_actual_serving_model": "UNKNOWN"
+  },
+  "acceptance_boundary": "Candidate bytes and exact-SHA QA readback only; formal acceptance and REAL status are not claimed."
+}
