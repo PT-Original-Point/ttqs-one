@@ -1,0 +1,59 @@
+{
+  "schema": "TTQS_ONE_NATIVE_W1_TEXT_RESPONSE_RECOVERY_V1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS_ONE_0036_I07-E04_R13_INDEPENDENT_SEMANTIC_W1_R01_20261123",
+  "doc_id": "0036",
+  "requirement_id": "I07-E04",
+  "revision": "R13",
+  "candidate_sha256": "47d5760c227a3a7dc7b3ba7942e697fb7e5dd0a7b1856209f1cbb81296d987e3",
+  "worker": "W1 OpenCode v2 CLI",
+  "requested_model": "opencode/hy4-flash-free",
+  "served_model": "UNKNOWN",
+  "cli_version": "opencode v2.3.0",
+  "session_id": "ses_df947f346ffeh3L5bFD5cY8vjg",
+  "os_pid": 22624,
+  "exit_code": 0,
+  "stdout_jsonl_sha256": "fa421d46fa6e11a411d67cde9fd527f52fde96af6d440474a9e34d0bf8653b27",
+  "response_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0036_R13_SCOPED_REPAIR_20261123\\qa\\W1_REVIEW_RESPONSE_R01.json",
+  "response_bytes": 14887,
+  "response_sha256": "e04c292f9dfbf220dbba3e71cfe84f827517d7cf75d4a08190826639389a72ee",
+  "verdict": "PASS",
+  "reported_candidate_sha256": "47D5760C227A3A7DC7B3BA7942E697FB7E5DD0A7B1856209F1CBB81296D987E3",
+  "blocking_findings": 0,
+  "nonblocking_findings": 6,
+  "targeted_checks": {
+    "new_real_replacement_area_label": {
+      "status": "COMPLIANT",
+      "locator": "Candidate text §15 交接紀錄欄位 / 交接紀錄欄位 paragraph",
+      "quoted_label": "【REAL 替換資料區｜僅供取得真實課程交接原件及授權後填入；未填不代表完成佐證】",
+      "supporting_quote": "未取得可核實原件或授權，不得勾選完成。本欄為空白格式，不代表協會已完成交接。",
+      "register_link": "F085 (§15 交接紀錄欄位／逐項空白紀錄格式; status SAMPLE/SYNTHETIC; blank format for future real handover)",
+      "reasoning": "The word REAL names a replacement target area, not a claim that the document or field contains real data. The label is bounded by '僅供…後填入' and '未填不代表完成佐證', the field is blank, and the following sentence repeats that no handover is complete. This does not violate prohibited_fabrication and does not turn the worked example into a REAL claim."
+    },
+    "unverified_sample_retention_wording": {
+      "status": "COMPLIANT",
+      "locators": [
+        "Candidate text §16 輸出交接與保存 / 保存年限句",
+        "Candidate text §4 step 8 判斷／例外",
+        "Candidate text §13 升級時限（SAMPLE／SYNTHETIC）段落",
+        "Candidate text §14 放行 row",
+        "Candidate text §16 替換清單 introduction"
+      ],
+      "quoted_wording": [
+        "本件只提供3年作為SAMPLE／SYNTHETIC示範提案，尚未經法規、契約及協會正式規範核實或核定，不是現行政策或法律結論。",
+        "權限或資源未知時維持 SAMPLE 草案",
+        "未核定前維持SAMPLE草案",
+        "流程停在 SAMPLE 草案；沒有公告、簽章或辦訓。",
+        "若某項未取得，保留未知狀態，不得用本示範值代填。"
+      ],
+      "register_link": "F064 (3-year retention as unverified SAMPLE proposal); F016 (final gate not verified, no announcement/scheduling)",
+      "reasoning": "Both the retention-period wording and the 'retain/hold SAMPLE draft when unverified' wording are explicitly marked unverified, non-policy and non-approval. They are consistent across §4, §5, §13, §14 and §16 and do not present a blank or future-state item as a completed evidence product; the fully filled SAMPLE worked example remains the deliverable."
+    }
+  },
+  "visual_review_performed": false,
+  "packet_metadata_findings": [
+    "Header and embedded provenance list different candidate byte counts, while the exact R13 SHA matches.",
+    "Revision labels R12/R13 are inconsistent in the review packet; review response did not inspect DOCX bytes."
+  ],
+  "human_acceptance": "NOT_GRANTED"
+}
