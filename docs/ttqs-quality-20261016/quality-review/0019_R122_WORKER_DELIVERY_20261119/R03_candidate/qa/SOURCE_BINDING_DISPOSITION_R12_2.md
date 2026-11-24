@@ -1,0 +1,7 @@
+# 0019 R03 source-binding disposition (R12.2)
+
+- Candidate: `0019_I03-E02_R03.docx`, SHA-256 `A6DCFF55A916F8D52087B09D260CE1888252D1D4530EA37F63439045960B0CA7`; its bytes were not modified during closeout.
+- The exact-SHA technical recheck verifies the DOCX, calculations, 29/29 synthetic register keys, attachment hash, typography, pagination, and source-lineage hashes. The exact-SHA visual receipt covers all 8 pages. W2's independent text-only review binds the same SHA, returns PASS with zero blockers, and verifies the official requirement locator on page 1. Its sole advisory is a nonblocking R03 version-history row.
+- The older check `source_sha_present=false` concerns embedding a hash inside the DOCX. The current R12.2 contract (AGENTS.md at PR head `aec4763c457394f60ddfda5d7ce3162b50b6ec1d`) requires source/Blueprint hashes to match the technical receipt; it does not require the hash to be printed in the document. The 0019 Blueprint requires official page/ID source locators. The candidate's source lineage binds its SHA to the official PDF, crosswalk row, checkbox map, and unique Blueprint hashes. Those local source hashes match the lineage receipt; W2 independently checked the page-1 locator.
+- Disposition: the absent in-document source hash is nonblocking under R12.2; preserve the existing candidate and exact-SHA QA. This note is a scope clarification, not a new review or formal acceptance.
+- Status remains `CANDIDATE`; formal acceptance and REAL evidence are not granted.

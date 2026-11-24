@@ -1,0 +1,61 @@
+{
+  "schema": "TTQS_ONE_DETERMINISTIC_RECHECK_0019_R03_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0019",
+  "requirement_id": "I03-E02",
+  "revision": "R03",
+  "candidate_docx_sha256": "A6DCFF55A916F8D52087B09D260CE1888252D1D4530EA37F63439045960B0CA7",
+  "candidate_bytes": 48468,
+  "prior_technical_qa": "STALE_AND_PRESERVED",
+  "prior_technical_qa_sha256": "5A204A6B3F24CD275A2B79DA86A82A4CB8E23F914040A41CA9E60FF8BCB2DF7E",
+  "prior_qa_claimed_bytes": 48321,
+  "paragraph_count_direct_xml": 462,
+  "table_count": 8,
+  "synthetic_keys_in_document": 29,
+  "replacement_register_rows": 29,
+  "unregistered_synthetic_keys": [],
+  "calculations": {
+    "attendance": "12.0/16.0*100=75.0",
+    "single_missing": "17/18*100 rounded 1dp=94.4",
+    "double_missing": "16/18*100 rounded 1dp=88.9",
+    "complete": "18/18*100=100.0",
+    "result": "PASS"
+  },
+  "font_floor": {
+    "body_explicit_min_pt": 10.5,
+    "table_explicit_min_pt": 9.5,
+    "doc_default_half_points": 22
+  },
+  "row_split": {
+    "cant_split_rows": 78,
+    "maximum_text_chars_among_cant_split_rows": 112,
+    "unreasonable_long_cant_split_rows_over_300": 0,
+    "result": "PASS_SCOPED"
+  },
+  "latex_found": false,
+  "attachment_sha256": "25F756932B472A85B1F00531A253142C559D7DF4E6EE85259D6385BF0B7E0791",
+  "source_lineage_receipt": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORKTREES\\R122_DELIVERY_20261118B\\docs\\ttqs-quality-20261016\\quality-review\\0019_R122_WORKER_DELIVERY_20261119\\R03_candidate\\source\\SOURCE_LINEAGE_R03_20261119.json",
+  "source_sha_embedded_in_docx": false,
+  "checks": {
+    "docx_opens_and_document_xml_parses": true,
+    "candidate_sha_matches_candidate_manifest": true,
+    "attachment_sha256_matches": true,
+    "synthetic_register_keys_29_of_29": true,
+    "calculation_arithmetic_recomputed": true,
+    "no_unconverted_latex": true,
+    "body_explicit_font_floor_10_5pt": true,
+    "table_explicit_font_floor_9_5pt": true,
+    "no_long_cant_split_row_over_300_characters": true,
+    "render_pages_1_to_8_present": true,
+    "source_sha_in_docx": false,
+    "source_lineage_hashes_verified": true
+  },
+  "decision": "SCOPED_STATIC_CONTENT_AND_STRUCTURE_PASS;SOURCE_PRESENTATION_AND_SEMANTIC_GATE_STILL_OPEN",
+  "limitations": [
+    "The old technical_qa.json is bound to a different SHA and was not reused.",
+    "The source SHA is in the lineage receipt, not embedded in DOCX; whether the legacy in-body check is required remains unresolved.",
+    "This is not an independent semantic review or formal acceptance.",
+    "GitHub exact-byte readback for this local R03 candidate has not occurred."
+  ],
+  "created_at": "2026-11-19T18:57:02.2636179+08:00"
+}
