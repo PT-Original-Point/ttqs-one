@@ -1,0 +1,48 @@
+{
+  "schema": "TTQS_ONE_INDEPENDENT_SEMANTIC_REVIEW_RECEIPT_R01",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0092",
+  "requirement_id": "I17D-E06",
+  "revision": "R05",
+  "candidate_sha256": "b5da79e4b394040df5f20bd4a33b1253073c1859b44f259fae087366f4fc42c4",
+  "reviewer": {
+    "role": "independent semantic reviewer",
+    "agent": "Heisenberg",
+    "agent_id": "01a20ed9-774f-7430-9c0c-7b8d602ab2d7",
+    "execution_model": "UNKNOWN"
+  },
+  "verdict": "PASS_SEMANTIC",
+  "scope": {
+    "requirement_genre_and_function": "PASS",
+    "sample_real_boundary": "PASS",
+    "f031_f033_scoped_repair": "PASS",
+    "title_blind_identification": "PASS",
+    "negative_neighbor_duplication": "PASS",
+    "technical": "NOT_REVIEWED",
+    "visual": "NOT_REVIEWED"
+  },
+  "findings": {
+    "requirement_genre": "Directly responds to official 感謝函 requirement as an association-side request draft and third-party-original verification register, with responsibilities, decisions, exceptions, example, and replacement procedure.",
+    "sample_real": "Request draft is marked not sent; no third-party original is represented; 8/8 denotes field completeness only; six original-document checks have not started and are not treated as formal evidence.",
+    "f031": "Both synthetic IDs are consistent across body, internal fact register, and external CSV.",
+    "f033": "One synthetic return outcome is consistent across body, fact register, and CSV.",
+    "title_blind": "With title hidden, the body remains identifiable as a thank-you-letter request and evidence-verification workflow.",
+    "negative_neighbors": "No substantive duplicated sentences or copied tables were found against exact candidates 0091 R03 and 0093 R16. Shared terms are necessary SAMPLE/SYNTHETIC and evidence-record vocabulary."
+  },
+  "negative_neighbor_candidates": [
+    {
+      "doc_id": "0091",
+      "revision": "R03",
+      "sha256": "8c9b8f7ec6fa37f9ad833fa5df406ef2c9d120e675eea28cc3d3b15e5b9c4ac3",
+      "remote_manifest_raw_readback": "MATCH"
+    },
+    {
+      "doc_id": "0093",
+      "revision": "R16",
+      "sha256": "d12b256f2a0162749ff685235e90665a0d440a0f4c6365da00fbbe1c479707e5",
+      "remote_manifest_raw_readback": "MATCH"
+    }
+  ],
+  "reviewed_at_tpe": "2026-11-25T02:56:08+08:00",
+  "limitations": "Semantic scope only. Technical and visual are covered by their separate same-candidate receipts; formal acceptance and REAL evidence are not granted."
+}
