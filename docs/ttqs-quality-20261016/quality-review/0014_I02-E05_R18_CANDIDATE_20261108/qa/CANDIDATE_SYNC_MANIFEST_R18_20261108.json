@@ -21,9 +21,13 @@
     "independent_visual": "W1 OpenCode explicit opencode/nemotron-3.5-super-vl-free; PASS visual-only review; 36-page contact sheet plus full pages 16,18,20; zero findings; exact candidate/PDF/image hashes bound; serving model UNKNOWN.",
     "scoped_traceability": "PASS scoped 4-row traceability review exact candidate SHA.",
     "formal_ttqs_acceptance": false,
-    "promotion_authorized": false
+    "promotion_authorized": false,
+    "technical_reconciliation": "PASS exact candidate SHA; OOXML ZIP and python-docx open; 67/67 unique SAMPLE identifiers match the candidate; source and Blueprint hashes match the W1 review; existing body/table font floors and Word PDF render verified.",
+    "full_page_visual": "PASS exact candidate SHA; all 36 rendered pages individually inspected; no blocking clipping/overlap; continuation-header and short-page whitespace observations are nonblocking.",
+    "semantic_identity_reconciliation": "Existing W1 OpenCode full-document semantic PASS retained at the same candidate SHA. Identity field normalization only; requested route opencode/crouton-alpha-free; actual serving model UNKNOWN; no new review dispatched.",
+    "github_raw_byte_readback": "VERIFIED exact raw bytes at immutable branch HEAD 772f84bcca282af128d3ddc806c52bb385240357; candidate SHA-256 f010470828aad653f691d164c50fdc8e2e0359a88b52286c92eb6f6d1b994846; 72042 bytes; Git blob SHA-1 8b1b573e4c246daae8060d29247fc6186edfc3b1."
   },
-  "github_same_source_readback": "PENDING until push readback",
+  "github_same_source_readback": "VERIFIED_RAW_BYTE_READBACK at branch HEAD 772f84bcca282af128d3ddc806c52bb385240357; exact SHA-256 and Git blob recorded in qa/GITHUB_RAW_BYTE_READBACK_R18_20261126.json.",
   "worker_usage": {
     "w1_semantic_input": 26536,
     "w1_semantic_output": 283,
@@ -46,6 +50,11 @@
       "path": "history/R17_INDEPENDENT_SEMANTIC_REVIEW_20261108.json",
       "bytes": 13042,
       "sha256": "0ad4e9e2f6fa1dc5579bb0ac572e20bb2c454e5cc0a7dbb3cb87a4ba0dfa242a"
+    },
+    {
+      "path": "qa/GITHUB_RAW_BYTE_READBACK_R18_20261126.json",
+      "bytes": 2119,
+      "sha256": "81b8fa2bf2a6dc8436f9c5e2c31aa2294aec7b9a95f1ab76f8bd45c8105e7354"
     },
     {
       "path": "qa/R18_DETERMINISTIC_FONT_FLOOR_QA_20261108.json",
@@ -81,6 +90,21 @@
       "path": "qa/R18_WORD_COM_RENDER_RECEIPT_20261108.json",
       "bytes": 1039,
       "sha256": "d604ecd7ded7ee37d4981c57d908ec0f573c080f804ee5d4cbb33e3db44055cc"
+    },
+    {
+      "path": "qa/SEMANTIC_REVIEW_IDENTITY_RECONCILIATION_R18_20261126.json",
+      "bytes": 3000,
+      "sha256": "e308c41f03a3e100f9165af278b0c7409c6406fa37b44e8ed38175260a6f95c8"
+    },
+    {
+      "path": "qa/TECHNICAL_QA_R18_RECONCILED_20261126.json",
+      "bytes": 3799,
+      "sha256": "f8f8e77de40941a1367565e8ee7598d1f774fe40994a50a2848e5272c58eab97"
+    },
+    {
+      "path": "qa/VISUAL_QA_R18_FULL_PAGE_RECONCILED_20261126.json",
+      "bytes": 12787,
+      "sha256": "fbd7e22c201ea571b214a302da57b5b4d4bb457d0767c724d0a91c3c3ef2c275"
     },
     {
       "path": "qa/render_evidence/0014_I02-E05_R18.pdf",

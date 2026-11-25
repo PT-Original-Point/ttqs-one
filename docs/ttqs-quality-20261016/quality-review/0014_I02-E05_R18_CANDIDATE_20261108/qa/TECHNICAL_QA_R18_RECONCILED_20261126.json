@@ -1,0 +1,58 @@
+{
+  "schema": "ttqs_one_r07_exact_sha_technical_qa.v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0014",
+  "requirement_id": "I02-E05",
+  "work_id": "TTQS_ONE_0014_R18_RECONCILED_TECHNICAL_QA_EXACT_SHA_20261126",
+  "completed_at_tpe": "2026-11-26T01:12:01+08:00",
+  "candidate_sha256": "f010470828aad653f691d164c50fdc8e2e0359a88b52286c92eb6f6d1b994846",
+  "technical_verdict": "PASS",
+  "zip_integrity": "PASS",
+  "python_docx_open": "PASS",
+  "unique_blueprint_row_sha256": "ec6fc82addd4474a9d7d664b137bd8e35a2fe6a7bb04e7ca028f048e21d1e5d3",
+  "source_packet_sha256": "30ade83ab55d9ed185dae519252e114ebfb33c8ef276c8005cf77cb355e82b91",
+  "all_required_fields_nonblank": true,
+  "all_rows_SAMPLE_SYNTHETIC": true,
+  "sample_synthetic_basis": "All 67 register identifiers use SYN-0014-###; every register cell is nonblank; every identifier is present in the exact candidate; exact-SHA W1 review passes synthetic example and truth-boundary checks.",
+  "body_min_explicit_font_pt": 10.5,
+  "table_min_explicit_font_pt": 9.5,
+  "replacement_register_rows": 67,
+  "unique_fact_ids": 67,
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R18-SCOPED_REPAIR_20261108\\candidate\\0014_I02-E05_R18.docx",
+  "docx_bytes": 72042,
+  "replacement_register_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R18-SCOPED_REPAIR_20261108\\register\\SYNTHETIC_REGISTER_DRAFT_0014_R18.csv",
+  "replacement_register_sha256": "92c35585cfd1a53a88807c89a6a5ba39ebcbe46af876a1530eb9c51c45435860",
+  "rendered_pdf": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R18-SCOPED_REPAIR_20261108\\qa\\0014_I02-E05_R18_visual.pdf",
+  "pdf_sha256": "42b8a58d76104d3fd770eed39b67703ed0e3b66f1c2ec78ac5338503ca7fc34b",
+  "rendered_pages": 36,
+  "evidence": {
+    "font_floor_receipt": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R18-SCOPED_REPAIR_20261108\\qa\\R18_DETERMINISTIC_FONT_FLOOR_QA_20261108.json",
+      "sha256": "842deeb4e24f418367158619b704c13afbe83c7aa7df6f4db36af918e46f2363",
+      "scope": "exact-SHA body/table minimum font floor"
+    },
+    "word_com_render_receipt": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R18-SCOPED_REPAIR_20261108\\qa\\R18_WORD_COM_RENDER_RECEIPT_20261108.json",
+      "sha256": "d604ecd7ded7ee37d4981c57d908ec0f573c080f804ee5d4cbb33e3db44055cc",
+      "scope": "read-only Word COM PDF render; exact candidate unchanged"
+    },
+    "full_document_semantic_receipt": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R18-SCOPED_REPAIR_20261108\\qa\\R18_FULL_DOCUMENT_SEMANTIC_REVIEW_W1_CROUTON_20261108.json",
+      "sha256": "db4e54c2398ec0b97995eb21ce8f2e2c0386bf4925731501590aca0924b27eac",
+      "scope": "W1 independent semantic/text review; exact candidate SHA"
+    },
+    "writer_receipt": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R18-SCOPED_REPAIR_20261108\\qa\\R18_SCOPED_REPAIR_WRITER_RECEIPT_20261108.json",
+      "sha256": "8d65a5119073887c6ef962dd27e824c1b724265b5a337b7cf800406608834566"
+    },
+    "register_validation": {
+      "rows": 67,
+      "unique_ids": 67,
+      "all_cells_nonblank": true,
+      "all_ids_found_in_candidate": true
+    },
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "NOT_ESTABLISHED"
+  },
+  "scope_limit": "Deterministic structure, exact source/Blueprint binding, synthetic-register traceability, font floors, and render binding. Semantic meaning relies on the cited W1 exact-SHA review; this receipt does not grant formal acceptance or REAL status."
+}
