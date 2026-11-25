@@ -4,7 +4,7 @@
   "doc_id": "0117",
   "requirement_id": "I19-E04",
   "revision": "R09",
-  "state": "CANDIDATE_PENDING_GITHUB_RAW_BYTE_READBACK",
+  "state": "CANDIDATE_RAW_BYTE_READBACK_VERIFIED",
   "candidate_sha256": "78aba2030004475f09bd236436cc2d964bd1ef4b1ce5adba87d47377b4281c97",
   "source_packet_sha256": "6607741c8178f7a84097f06f76671d63871c2710b30c3da7a19e25e9fb4217a1",
   "unique_blueprint_sha256": "3535cd80790687ce7a6c031b3f5e6ee61ff3f0136e772638cd24899d30f332fb",
@@ -12,7 +12,7 @@
   "visual": "PASS_VISUAL_SCOPE",
   "semantic": "PASS_SCOPED_DELTA_RECOVERED_BODY_TERMINAL_UNCONFIRMED",
   "actual_served_model": "UNKNOWN",
-  "github_raw_readback": "PENDING",
+  "github_raw_readback": "VERIFIED_AT_IMMUTABLE_COMMIT; LIVE_HEAD_CARRY_FORWARD_PENDING",
   "formal_acceptance": "NOT_GRANTED",
   "real_evidence": "SAMPLE_SYNTHETIC_ONLY",
   "files": [
@@ -20,6 +20,11 @@
       "path": "candidate/0117_I19-E04_R09.docx",
       "bytes": 64906,
       "sha256": "78aba2030004475f09bd236436cc2d964bd1ef4b1ce5adba87d47377b4281c97"
+    },
+    {
+      "path": "candidate/GITHUB_RAW_BYTE_READBACK_R09_20261126.json",
+      "bytes": 1994,
+      "sha256": "803d34b0392257f1ef7cb03d6f87bb1baaf6be5a10342a754bed2f9eef1e5941"
     },
     {
       "path": "qa/DELTA_CHECK_R09.json",
@@ -63,8 +68,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 1167,
-      "sha256": "057527139d32b9d4c1024783c350a3557210f77f0464090fce0eebb38d9f8138"
+      "bytes": 1503,
+      "sha256": "93177a9c5b27177a77072dcb4471db25045c7dde9dcdebc0feddcc1d4d753e9c"
     },
     {
       "path": "render/0117_I19-E04_R09_WordNative.pdf",
@@ -136,5 +141,10 @@
       "bytes": 5424,
       "sha256": "3535cd80790687ce7a6c031b3f5e6ee61ff3f0136e772638cd24899d30f332fb"
     }
-  ]
+  ],
+  "readback_sha256": "78aba2030004475f09bd236436cc2d964bd1ef4b1ce5adba87d47377b4281c97",
+  "readback_bytes": 64906,
+  "readback_git_blob_sha1": "0843f50b64e704660eb77b7ed545a361cfe5b095",
+  "readback_commit": "63e7090b4921c87276131e3111800df0c5b21409",
+  "readback_url": "https://raw.githubusercontent.com/PT-Original-Point/ttqs-one/63e7090b4921c87276131e3111800df0c5b21409/docs/ttqs-quality-20261016/0117_I19-E04_CANDIDATE_R09_20261126/candidate/0117_I19-E04_R09.docx"
 }
