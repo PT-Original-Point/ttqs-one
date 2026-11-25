@@ -1,0 +1,40 @@
+{
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS_ONE_0026_I04-E05_SCOPED_REPAIR_R03_20261124",
+  "doc_id": "0026",
+  "requirement_id": "I04-E05",
+  "status": "CANDIDATE_PENDING_TECHNICAL_VISUAL_AND_FRESH_SEMANTIC_QA",
+  "input_candidate_sha256": "dc68b8f85699af264b964641e89801714058c36898436a3b54d44460a5612b89",
+  "output_candidate_sha256": "bdf30057cf9327b2cb10e72458c6d0d95727e48323c14eeb6ad9fd814c5b6692",
+  "output_bytes": 73412,
+  "repair_scope": "Only the two exact-SHA W1 R02 semantic blockers in the §18.3 version/status sequence.",
+  "changes": [
+    {
+      "locator": "§18.3 walkthrough version/effective determination",
+      "before": "版次/生效（2026-10-08）",
+      "after": "版次/生效（2026-10-05）",
+      "reason": "The version/effective decision now precedes the 2026-10-05 announcement it supplies."
+    },
+    {
+      "locator": "timeline row 2026-10-05 / 公告 / 1.0",
+      "before": "CURRENT",
+      "after": "APPROVED",
+      "reason": "The version remains approved but not yet effective before 2026-10-12."
+    },
+    {
+      "locator": "timeline row 2026-10-12 / 生效與簽收截止",
+      "before": "CURRENT at effective date",
+      "after": "CURRENT at effective date (retained)",
+      "reason": "This row shows transition on the registered effective date."
+    }
+  ],
+  "unchanged_fact_register_rows": 107,
+  "input_review_work_id": "TTQS_ONE_0026_I04-E05_R02_EXACT_SHA_INDEPENDENT_SEMANTIC_W1_20261124",
+  "input_review_packet_sha256": "6c42f4192ac0ccae883c50a8cc8479d08c1891127a89f4e713bd99cfbefe739c",
+  "input_review_verdict": "PARTIAL",
+  "reviewer_blockers_addressed": [
+    "M1",
+    "M2"
+  ],
+  "created_at_tpe": "2026-11-24T11:10:00+08:00"
+}

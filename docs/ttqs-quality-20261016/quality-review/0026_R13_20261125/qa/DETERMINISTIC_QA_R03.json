@@ -1,0 +1,121 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0026",
+  "requirement_id": "I04-E05",
+  "candidate_sha256": "bdf30057cf9327b2cb10e72458c6d0d95727e48323c14eeb6ad9fd814c5b6692",
+  "candidate_bytes": 73412,
+  "checks": {
+    "sha256": {
+      "status": "PASS",
+      "detail": "bdf30057cf9327b2cb10e72458c6d0d95727e48323c14eeb6ad9fd814c5b6692"
+    },
+    "zip_integrity": {
+      "status": "PASS",
+      "detail": null
+    },
+    "docx_openable": {
+      "status": "PASS",
+      "detail": {
+        "paragraphs": 169,
+        "tables": 42
+      }
+    },
+    "synthetic_register_107_unique": {
+      "status": "PASS",
+      "detail": {
+        "rows": 107,
+        "unique": 107
+      }
+    },
+    "all_sf_references_registered": {
+      "status": "PASS",
+      "detail": {
+        "unregistered": [],
+        "references": 107
+      }
+    },
+    "no_hard_placeholders": {
+      "status": "PASS",
+      "detail": {
+        "待填": 0,
+        "待核": 0,
+        "空白表": 0,
+        "保持空白": 0,
+        "會後填寫": 0,
+        "[填寫": 0,
+        "(填寫": 0
+      }
+    },
+    "table_rows_can_split": {
+      "status": "PASS",
+      "detail": {
+        "cantSplit_count": 0
+      }
+    },
+    "seven_day_advance_notice": {
+      "status": "PASS",
+      "detail": {
+        "announcement": "2026-10-05",
+        "effective": "2026-10-12",
+        "days": 7,
+        "check": "2026-10-05 ≤ 2026-10-05"
+      }
+    },
+    "acknowledgement_schedule_11_plus_1": {
+      "status": "PASS",
+      "detail": {
+        "total": 12,
+        "timely": 11,
+        "late": 1,
+        "deadline": "2026-10-12",
+        "last": "2026-10-14"
+      }
+    },
+    "ack_duration_metric": {
+      "status": "PASS",
+      "detail": {
+        "days": 9,
+        "metric": "9 日（2026-10-05 至 2026-10-14）"
+      }
+    },
+    "exception_review_not_periodic": {
+      "status": "PASS",
+      "detail": "於 2026-11-15 風險/例外審查確認無需永久變更；暫行指示依期限有效至 2026-11-24，屆期後關閉（SF-050 / SF-074 / SF-077 / SF-078）"
+    },
+    "exception_closes_at_registered_expiry": {
+      "status": "PASS",
+      "detail": {
+        "closure": "2026-11-24（SF-077）",
+        "expiry": "暫行指示 EI-0026-001（SF-075），有效 2026-10-25 至 2026-11-24（SF-076 / SF-077）",
+        "event": "2026-11-24（SF-077） / 暫行指示屆期；例外關閉，無永久修訂 / 1.0 / CURRENT / ROLE-QMS-001 / EC-0026-001 / EI-0026-001"
+      }
+    },
+    "no_false_formal_version_change": {
+      "status": "PASS",
+      "detail": "CLOSED - expired on 2026-11-24; no formal version change"
+    },
+    "formula_arithmetic": {
+      "status": "PASS",
+      "detail": {
+        "11+1": true,
+        "91.7%": true,
+        "100%": true
+      }
+    },
+    "version_decision_before_announcement": {
+      "status": "PASS",
+      "detail": "版次/生效（2026-10-05）：指定 v1.0、生效日 2026-10-12、公告對象 12 人。"
+    },
+    "status_transition_matches_effective_date": {
+      "status": "PASS",
+      "detail": {
+        "pre_effective_date": "2026-10-05",
+        "pre_effective_status": "APPROVED",
+        "effective_date": "2026-10-12",
+        "effective_status": "CURRENT"
+      }
+    }
+  },
+  "result": "PASS",
+  "executed_at_tpe": "2026-11-24"
+}

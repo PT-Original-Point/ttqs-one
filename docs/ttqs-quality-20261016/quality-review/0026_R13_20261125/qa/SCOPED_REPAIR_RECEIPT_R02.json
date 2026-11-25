@@ -1,0 +1,233 @@
+{
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS_ONE_0026_I04-E05_SCOPED_REPAIR_R02_20261124",
+  "doc_id": "0026",
+  "requirement_id": "I04-E05",
+  "status": "CANDIDATE_PENDING_TECHNICAL_VISUAL_AND_FRESH_SEMANTIC_QA",
+  "input_candidate_sha256": "cff5a4628f16b526a1054b3e236b276dac8c36edf27ff93bfcc2fbb35f788e6b",
+  "output_candidate_sha256": "dc68b8f85699af264b964641e89801714058c36898436a3b54d44460a5612b89",
+  "output_bytes": 73415,
+  "review_work_id": "TTQS_ONE_0026_I04-E05_R01_EXACT_SHA_INDEPENDENT_SEMANTIC_W1_20261124",
+  "reviewed_candidate_sha256": "cff5a4628f16b526a1054b3e236b276dac8c36edf27ff93bfcc2fbb35f788e6b",
+  "review_verdict": "PARTIAL",
+  "blocking_findings_addressed": [
+    "B1: sample announcement moved to 7 days before effective date; checklist now tests the exact lead-time rule",
+    "B2: 11/15 risk/exception review no longer pretends periodic review is due; the temporary instruction closes on its registered 11/24 expiry"
+  ],
+  "changes": [
+    {
+      "locator": "P144_18.3_announcement",
+      "before": "公告（2026-10-12）：內部系統 + 電子郵件；公告 ID ANN-0026-001；截止日 2026-10-19。",
+      "after": "公告（2026-10-05）：內部系統 + 電子郵件；公告 ID ANN-0026-001；截止日 2026-10-12。"
+    },
+    {
+      "locator": "P145_18.3_acknowledgement",
+      "before": "簽收（2026-10-12 至 2026-10-21）：11 人於截止日前簽收；1 人逾期，於 2026-10-20 升級，2026-10-21 完成；最終 12/12 = 100%。",
+      "after": "簽收（2026-10-05 至 2026-10-14）：11 人於截止日前簽收；1 人逾期，於 2026-10-13 升級，2026-10-14 完成；最終 12/12 = 100%。"
+    },
+    {
+      "locator": "T22R1_ACK_DURATION_RESULT",
+      "before": "9 日（2026-10-12 至 2026-10-21）",
+      "after": "9 日（2026-10-05 至 2026-10-14）"
+    },
+    {
+      "locator": "T23R6_ANNOUNCEMENT_DATE",
+      "before": "2026-10-12（SF-044）",
+      "after": "2026-10-05（SF-044）"
+    },
+    {
+      "locator": "T23R7_ACK_DEADLINE",
+      "before": "2026-10-19（SF-045）",
+      "after": "2026-10-12（SF-045）"
+    },
+    {
+      "locator": "T23R8_LAST_ACK_DATE",
+      "before": "2026-10-21（SF-047）",
+      "after": "2026-10-14（SF-047）"
+    },
+    {
+      "locator": "T24R8_DATE",
+      "before": "2026-10-12",
+      "after": "2026-10-05"
+    },
+    {
+      "locator": "T24R8_EVENT",
+      "before": "生效與公告",
+      "after": "公告"
+    },
+    {
+      "locator": "T24R9_DATE",
+      "before": "2026-10-19",
+      "after": "2026-10-12"
+    },
+    {
+      "locator": "T24R9_EVENT",
+      "before": "簽收截止；11/12 完成",
+      "after": "生效與簽收截止；11/12 準時簽收"
+    },
+    {
+      "locator": "T24R10_DATE",
+      "before": "2026-10-20",
+      "after": "2026-10-13"
+    },
+    {
+      "locator": "T24R11_DATE",
+      "before": "2026-10-21",
+      "after": "2026-10-14"
+    },
+    {
+      "locator": "T24R15_C0",
+      "before": "2026-11-15",
+      "after": "2026-11-24（SF-077）"
+    },
+    {
+      "locator": "T24R15_C1",
+      "before": "風險/例外審查",
+      "after": "暫行指示屆期；例外關閉，無永久修訂"
+    },
+    {
+      "locator": "T24R15_C5",
+      "before": "RV-0026-002",
+      "after": "EC-0026-001 / EI-0026-001"
+    },
+    {
+      "locator": "T25R2_CRITERION",
+      "before": "公告日 ≤ 生效日或同日",
+      "after": "公告日 ≤ 生效日 - 7 日"
+    },
+    {
+      "locator": "T25R2_CALCULATION",
+      "before": "2026-10-12 ≤ 2026-10-12",
+      "after": "2026-10-05 ≤ 2026-10-05"
+    },
+    {
+      "locator": "T25R3_CALCULATION",
+      "before": "2026-10-19 ≥ 2026-10-12",
+      "after": "2026-10-12 ≥ 2026-10-05"
+    },
+    {
+      "locator": "T29R3_ANNOUNCEMENT_DATE",
+      "before": "2026-10-12（SF-044）",
+      "after": "2026-10-05（SF-044）"
+    },
+    {
+      "locator": "T29R8_ACK_DEADLINE",
+      "before": "2026-10-19（SF-045）",
+      "after": "2026-10-12（SF-045）"
+    },
+    {
+      "locator": "T30R1_ACK_DATE",
+      "before": "2026-10-13",
+      "after": "2026-10-06"
+    },
+    {
+      "locator": "T30R2_ACK_DATE",
+      "before": "2026-10-14",
+      "after": "2026-10-07"
+    },
+    {
+      "locator": "T30R3_ACK_DATE",
+      "before": "2026-10-15",
+      "after": "2026-10-08"
+    },
+    {
+      "locator": "T30R4_ACK_DATE",
+      "before": "2026-10-13",
+      "after": "2026-10-06"
+    },
+    {
+      "locator": "T30R5_ACK_DATE",
+      "before": "2026-10-16",
+      "after": "2026-10-09"
+    },
+    {
+      "locator": "T30R6_ACK_DATE",
+      "before": "2026-10-17",
+      "after": "2026-10-10"
+    },
+    {
+      "locator": "T30R7_ACK_DATE",
+      "before": "2026-10-18",
+      "after": "2026-10-11"
+    },
+    {
+      "locator": "T30R8_ACK_DATE",
+      "before": "2026-10-14",
+      "after": "2026-10-07"
+    },
+    {
+      "locator": "T30R9_ACK_DATE",
+      "before": "2026-10-15",
+      "after": "2026-10-08"
+    },
+    {
+      "locator": "T30R10_ACK_DATE",
+      "before": "2026-10-16",
+      "after": "2026-10-09"
+    },
+    {
+      "locator": "T30R11_ACK_DATE",
+      "before": "2026-10-18",
+      "after": "2026-10-11"
+    },
+    {
+      "locator": "T30R12_ACK_DATE",
+      "before": "2026-10-21",
+      "after": "2026-10-14"
+    },
+    {
+      "locator": "T40R2_CRITERION",
+      "before": "公告日 ≤ 簽收截止日",
+      "after": "公告日 ≤ 生效日 - 7 日"
+    },
+    {
+      "locator": "T40R2_RESULT",
+      "before": "PASS（2026-10-12 ≤ 2026-10-19）",
+      "after": "PASS（2026-10-05 ≤ 2026-10-05）"
+    },
+    {
+      "locator": "T41_SF-044_VALUE",
+      "before": "2026-10-12",
+      "after": "2026-10-05"
+    },
+    {
+      "locator": "T41_SF-045_VALUE",
+      "before": "2026-10-19",
+      "after": "2026-10-12"
+    },
+    {
+      "locator": "T41_SF-046_VALUE",
+      "before": "2026-10-20",
+      "after": "2026-10-13"
+    },
+    {
+      "locator": "T41_SF-047_VALUE",
+      "before": "2026-10-21",
+      "after": "2026-10-14"
+    },
+    {
+      "locator": "T41_SF-074_VALUE",
+      "before": "CLOSED - no permanent change required",
+      "after": "CLOSED ON EXPIRY 2026-11-24 - no permanent change required"
+    },
+    {
+      "locator": "T41_SF-078_VALUE",
+      "before": "CLOSED - superseded by formal review outcome",
+      "after": "CLOSED - expired on 2026-11-24; no formal version change"
+    },
+    {
+      "locator": "T18R7_RESULT",
+      "before": "於定期審查確認無需永久變更；例外關閉（SF-074 / SF-078）",
+      "after": "於 2026-11-15 風險/例外審查確認無需永久變更；暫行指示依期限有效至 2026-11-24，屆期後關閉（SF-050 / SF-074 / SF-077 / SF-078）"
+    },
+    {
+      "locator": "T18R8_CLOSURE_DATE",
+      "before": "2026-11-15（SF-050）",
+      "after": "2026-11-24（SF-077）"
+    }
+  ],
+  "synthetic_register_rows": 107,
+  "synthetic_fact_ids_added": 0,
+  "scope": "Only 0026 R02 timeline and exception-consistency repairs; no unrelated DOCX or policy artifact changed.",
+  "created_at_tpe": "2026-11-24"
+}
