@@ -1,0 +1,74 @@
+{
+  "schema": "TTQS_ONE_CANDIDATE_PACKAGE_MANIFEST_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0029",
+  "requirement_id": "I05-E03",
+  "revision": "R13",
+  "status": "CANDIDATE",
+  "formal_acceptance": "NOT_GRANTED",
+  "candidate_docx_sha256": "6afdb891b2af00dfd35a0f6056297d21cda0721c0564a6d2714debdff80a1ee8",
+  "parent_candidate_sha256": "6b3150ba1bb3609bb7c14f8b5d8989d09d0da30506baa2b74f504eba4df7b289",
+  "source_binding": "SOURCE_BINDING_R13.json",
+  "quality": {
+    "deterministic": "PASS_DETERMINISTIC",
+    "visual": "PASS_ALL_16_PAGES",
+    "semantic": "R12_FULL_DOCUMENT_PASS_PLUS_R13_SCOPED_REPAIR_PASS",
+    "semantic_scope": "R12 full-document semantic PASS bound to parent candidate; R13 independent reviewer PASS_SCOPED_REPAIR confirms all 24 role additions and no unrelated change.",
+    "github_readback": "PENDING_UNTIL_COMMIT"
+  },
+  "content_delta": "Section XIII: added responsibility role code/function for all 24 synthetic replacement facts; added R13 revision record.",
+  "caveats": [
+    "Requested R12 OpenCode reviewer route was opencode/glm-5.3-flash-free; served model was UNKNOWN in its receipt.",
+    "R13 independent review is scoped to the repair; it does not claim visual or technical review.",
+    "One unchanged nonblocking observation: 9 valid satisfaction responses vs 10 learners; reason remains UNKNOWN.",
+    "No formal acceptance or REAL status is claimed."
+  ],
+  "files": [
+    {
+      "path": "candidate/0029_I05-E03_CANDIDATE_R13.docx",
+      "bytes": 50614,
+      "sha256": "6afdb891b2af00dfd35a0f6056297d21cda0721c0564a6d2714debdff80a1ee8"
+    },
+    {
+      "path": "render-final/export_receipt.json",
+      "bytes": 971,
+      "sha256": "5ab9e477c5ce4e3e5e65f385fb83deaace676dcd4cec1a4a58bab91a0d618a8d"
+    },
+    {
+      "path": "ROLE_MAPPING_R13.json",
+      "bytes": 3124,
+      "sha256": "9336b21c60d58483e536941b63735a287317c160031c69a35a21ccd3f45c42b7"
+    },
+    {
+      "path": "SCOPED_REPAIR_RECEIPT_R13.json",
+      "bytes": 1274,
+      "sha256": "e789216f48757ced644947da3b5b6b0ab748baa117313dc1a61de5f92d4fc1d8"
+    },
+    {
+      "path": "DETERMINISTIC_QA_R13.json",
+      "bytes": 1860,
+      "sha256": "ac07a0640b7244b159845a89a1ded3c43de137b2a9ad10b64dac4a9db26abbf1"
+    },
+    {
+      "path": "VISUAL_REVIEW_R13.json",
+      "bytes": 948,
+      "sha256": "8c0c558d856eeb72b083e7c4a09a615e047460bbe832729c98bba48d76f437c9"
+    },
+    {
+      "path": "INDEPENDENT_SEMANTIC_REVIEW_R13.json",
+      "bytes": 1180,
+      "sha256": "8988f9244c3c35b26c104f8ecc8e96f4efc7ce1d9c172c7ed4606755ab7921e8"
+    },
+    {
+      "path": "SOURCE_BINDING_R13.json",
+      "bytes": 2661,
+      "sha256": "a9edfaf3093180e791a023c25a437a2a2c42218ab9f7fb4c6febaf00fc983748"
+    }
+  ],
+  "local_visual_render_evidence": {
+    "path": "render-final/candidate.pdf",
+    "bytes": 552553,
+    "sha256": "a4ae2f2063afaf19f6459585647346b166e296a212a73aa8c4f84d4a46fb0474",
+    "status": "RETAINED_LOCALLY_NOT_IN_GITHUB_PACKAGE"
+  }
+}
