@@ -1,0 +1,30 @@
+{
+  "schema": "ttqs_one_candidate_delta_v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0117",
+  "requirement_id": "I19-E04",
+  "revision": "R09",
+  "parent_revision": "R08",
+  "parent_sha256": "d9b61fe6f2ff03d298cd3190033233b6cfdfa5a36b56d773a277cdcdc6a33f79",
+  "candidate_sha256": "78aba2030004475f09bd236436cc2d964bd1ef4b1ce5adba87d47377b4281c97",
+  "root_cause": "pageBreakBefore was placed inside the RETAKES data row; despite cantSplit, Word rendered the row as a split continuation and omitted the header on the next page",
+  "content_changes": [],
+  "layout_changes": [
+    "split the original eight-row checklist after the fourth data row into two five-row tables",
+    "repeat the existing six-column header in the second table",
+    "remove row-level pageBreakBefore; add a page break between the tables",
+    "update visible revision labels from R08 to R09"
+  ],
+  "all_original_data_row_ids": [
+    "SYN-0117-COHORT-BASE",
+    "SYN-0117-COHORT-CURR",
+    "SYN-0117-CERT-SPEC",
+    "SYN-0117-FIRST-RESULTS",
+    "SYN-0117-RETAKES",
+    "SYN-0117-NONATTEMPTS",
+    "SYN-0117-CONSENT",
+    "SYN-0117-REVIEW"
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "status": "CANDIDATE_PENDING_EXACT_SHA_SEMANTIC_AND_GITHUB_READBACK"
+}

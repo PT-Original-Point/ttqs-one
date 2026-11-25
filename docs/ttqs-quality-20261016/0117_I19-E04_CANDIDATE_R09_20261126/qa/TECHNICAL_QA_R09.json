@@ -1,0 +1,83 @@
+{
+  "schema": "ttqs_one_technical_qa_v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0117",
+  "requirement_id": "I19-E04",
+  "revision": "R09",
+  "candidate_sha256": "78aba2030004475f09bd236436cc2d964bd1ef4b1ce5adba87d47377b4281c97",
+  "source_sha256": "6607741c8178f7a84097f06f76671d63871c2710b30c3da7a19e25e9fb4217a1",
+  "blueprint_sha256": "3535cd80790687ce7a6c031b3f5e6ee61ff3f0136e772638cd24899d30f332fb",
+  "observed_at_tpe": "2026-11-26T00:22:58+08:00",
+  "word_opened_read_only": true,
+  "word_pages": 22,
+  "rendered_pdf_sha256": "ce9b1e1132e23c330a11d4e77a04dfdc4bad21fd3758ea848ae91e4696bcc99d",
+  "rendered_pdf_bytes": 735113,
+  "candidate_hash_unchanged_during_read_only_open": true,
+  "body_font_floor_pt": 10.5,
+  "table_font_floor_pt": 9.5,
+  "font_floor_basis": "unchanged R08 text/table run formatting; R09 only duplicates the existing header row and changes table boundaries and revision labels",
+  "latex_markers_found": false,
+  "sample_replacement_ids": [
+    "SYN-0117-BASE",
+    "SYN-0117-CURR",
+    "SYN-0117-CERT-01",
+    "SYN-0117-EXAM-SPEC-A",
+    "SYN-0117-CURR-06",
+    "SYN-0117-CURR-08",
+    "SYN-0117-BASE-04",
+    "SYN-0117-CURR-10"
+  ],
+  "arithmetic": [
+    {
+      "base": "3/6=50.0%",
+      "metric": "M1",
+      "delta": "+12.5 pp",
+      "curr": "5/8=62.5%"
+    },
+    {
+      "base": "6/8=75.0%",
+      "metric": "M2",
+      "delta": "+5.0 pp",
+      "curr": "8/10=80.0%"
+    },
+    {
+      "base": "4/6=66.7%",
+      "metric": "M3",
+      "delta": "+8.3 pp",
+      "curr": "6/8=75.0%"
+    },
+    {
+      "base": "4/8=50.0%",
+      "metric": "M4",
+      "delta": "+10.0 pp",
+      "curr": "6/10=60.0%"
+    }
+  ],
+  "checklist_tables": [
+    {
+      "columns": 6,
+      "data_ids": [
+        "SYN-0117-COHORT-BASE",
+        "SYN-0117-COHORT-CURR",
+        "SYN-0117-CERT-SPEC",
+        "SYN-0117-FIRST-RESULTS"
+      ],
+      "rows": 5,
+      "header": "item_id"
+    },
+    {
+      "columns": 6,
+      "data_ids": [
+        "SYN-0117-RETAKES",
+        "SYN-0117-NONATTEMPTS",
+        "SYN-0117-CONSENT",
+        "SYN-0117-REVIEW"
+      ],
+      "rows": 5,
+      "header": "item_id"
+    }
+  ],
+  "visual_related_no_content_change": "R09 added only the repeated existing table header; all eight original data rows retained",
+  "formal_acceptance": "NOT_GRANTED",
+  "status": "PASS_DETERMINISTIC_ONLY"
+}
