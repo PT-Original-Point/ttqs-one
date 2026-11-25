@@ -1,0 +1,51 @@
+{
+  "schema": "TTQS_ONE_CONTENT_REPAIR_RECEIPT_R21_R01",
+  "work_id": "TTQS_ONE_0018_I03-E01_SCOPED_AGGREGATE_CATEGORY_REPAIR_R21_20261125",
+  "doc_id": "0018",
+  "requirement_id": "I03-E01",
+  "candidate_status": "CANDIDATE",
+  "source_candidate_sha256": "9a552a17c9a2814459c3696a90cdab6f5b125bb9dc99708c39f5b3d7bf48c92e",
+  "candidate_sha256": "44e15653475d3f20b120e250c7c7600970390cf29176004e666726bde84cadcb",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0018_I03-E01_SOURCE_PREP_R01_20261116\\candidate\\0018__PDDRO訓練體系圖與核心訓練類別說明_R21.docx",
+  "source_packet_sha256": "165ad4947e734b712ff5056f7807f88b70f28f584332c0f53855e8a0c679c66a",
+  "unique_blueprint_sha256": "f3e12f4f0924b439ff60fdbaebae80bce524ef00394ce64db696c2a5bc05da30",
+  "review_finding": {
+    "work_id": "TTQS_ONE_0018_I03-E01_FULL_SEMANTIC_REVIEW_R20_20261125",
+    "requested_route": "opencode/beam-free",
+    "actual_served_model": "UNKNOWN",
+    "session_id": "ses_df061fa7fffeW4SMdIVFoFwDRB",
+    "stdout_sha256": "475124aa765a05da9daff69d1371c4bdc92d80984f2aa59a6b7873a303843382",
+    "verdict": "PASS_WITH_BLOCKERS",
+    "blocker": "REC-FACT-011..014 category fields duplicate the category code and append session labels; W1 requested category-only labels."
+  },
+  "repair_basis": "W1 exact-SHA review R20 identified four class-aggregate category fields requiring category-only labels. Reconciled against the existing category names in REC-FACT-002..005 and dedicated Blueprint. No class schedule, synthetic count, date, score, or result changed.",
+  "change_count": 4,
+  "changes": [
+    {
+      "locator": "TABLE-11/REC-FACT-012/category",
+      "before": "C01 C01 照護理念與安全服務基礎示範課程 B",
+      "after": "C01 照護理念與安全服務基礎"
+    },
+    {
+      "locator": "TABLE-11/REC-FACT-013/category",
+      "before": "C02 C02 照護溝通與倫理應對示範課程 B",
+      "after": "C02 照護溝通與倫理應對"
+    },
+    {
+      "locator": "TABLE-11/REC-FACT-014/category",
+      "before": "C03 C03 訓練設計與教學帶領示範課程 B",
+      "after": "C03 訓練設計與教學帶領"
+    },
+    {
+      "locator": "TABLE-11/REC-FACT-015/category",
+      "before": "C04 C04 訓練評估與機構品質循環示範課程 B",
+      "after": "C04 訓練評估與機構品質循環"
+    }
+  ],
+  "static_qa": "PENDING",
+  "visual_review": "PENDING_NEW_SHA",
+  "semantic_review": "PENDING_NEW_SHA",
+  "github_readback": "PENDING",
+  "formal_acceptance": "NOT_GRANTED",
+  "created_at_utc": "2026-11-24T22:15:04.143212+00:00"
+}
