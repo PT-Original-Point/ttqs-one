@@ -1,0 +1,85 @@
+{
+  "schema": "TTQS_ONE_EXACT_SHA_INDEPENDENT_SEMANTIC_REVIEW_R05",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0055",
+  "requirement_id": "I12-E03",
+  "official_box": "058",
+  "candidate_revision": "R05",
+  "candidate_sha256": "b30cebc0e5a7df10095d4a20271109e2e3e2eab278938e6ff1a1cfb764e9b6f1",
+  "body_extract_sha256": "48b68238315617c30239a8d11c22f36827322e5cdc89d44cc1471f16f6ef17c9",
+  "review_work_id": "TTQS_ONE_0055_I12-E03_W1_SEMANTIC_REVIEW_R05_EXACT_SHA_20261125",
+  "reviewer_route": "opencode/deepseek-v4.1-flash-free",
+  "requested_model": "opencode/deepseek-v4.1-flash-free",
+  "served_model": "deepseek-v4.1-flash-free",
+  "provider": "opencode",
+  "session_id": "ses_ded473f85ffecUgrOxnOZxQHGk",
+  "response_sha256": "0bed51d40a3fae63ebe7d71e62f8cfaf7550c8268996b518134d2f2a13975ec5",
+  "request_packet_sha256": "909654aedc823d5247df108d7b9751fcde17ae08aa3ca0852fefb0659c949a34",
+  "outcome": "succeeded",
+  "cost": 0,
+  "usage": {
+    "input": 23569,
+    "output": 3880,
+    "reasoning": 3131,
+    "cache": {
+      "read": 1920,
+      "write": 0
+    }
+  },
+  "verdict": "PASS_SEMANTIC_SCOPED_EXACT_SHA",
+  "result": "PASS_SEMANTIC_SCOPED_EXACT_SHA",
+  "blocking_findings": [],
+  "review_scope": "Semantic, usability, requirement-conformance, internal-consistency and fabrication-boundary review of the candidate text only.",
+  "review_method": "Read-only review of the bounded packet body extract bound to the exact R05 DOCX SHA-256; title and front matter excluded from substance assessment; no file, CLI, shell, network, or GitHub actions performed; no tools used.",
+  "requirement_conformance": [
+    {
+      "element": "Selection standards and process",
+      "status": "SATISFIED",
+      "evidence": "§4 states a five-criterion rubric with weights 25/25/20/20/10 totaling 100, 0/60/100 observable anchors, explicit formula (mean = sum/3; weighted = mean x weight / 100; total = sum of weighted), rounding rules, and pass/HOLD/REJECT state rules."
+    },
+    {
+      "element": "Comparative evaluation of at least three candidates",
+      "status": "SATISFIED",
+      "evidence": "§5 and §7 provide C-01, C-02, C-03 with three-reviewer raw scores per criterion, means, weighted points, recomputable totals and a ranked comparison table."
+    },
+    {
+      "element": "Teaching demonstration evidence",
+      "status": "SATISFIED",
+      "evidence": "§6 fixes identical topic, 12-minute duration, preparation time, materials, observation conditions, independent scoring before discussion, and separates observation summaries from scores."
+    },
+    {
+      "element": "Qualification and authorization checks",
+      "status": "SATISFIED",
+      "evidence": "§5 covers resume, professional qualification, teaching authorization/availability, conflict declaration and personal-data consent, with an explicit instruction that the sample PASS markers must not be copied and must be replaced by verified originals or HOLD."
+    },
+    {
+      "element": "Conflict-of-interest handling",
+      "status": "SATISFIED",
+      "evidence": "§8 defines declaration before scoring, recusal scope, substitute reviewer, record fields, data-minimization handling and freeze-on-inconsistency, plus the rule that blank declarations are not 'no conflict'."
+    },
+    {
+      "element": "Training management committee decision and authority",
+      "status": "SATISFIED",
+      "evidence": "§3 and §9 provide an authority checklist, quorum (2 of 3), non-voting chair/recorder, 3-0 recorded vote, attachments, dissent/recusal fields, owner and deadline, and an explicit assumption statement that committee authority is UNKNOWN until proven."
+    },
+    {
+      "element": "Appointment letter issued only after approval",
+      "status": "SATISFIED",
+      "evidence": "§10 sequences recommendation, committee decision, condition authorization, issuance/delivery and acceptance/archiving, each with a non-bypass gate, and marks the specimen NOT ISSUED / NOT VALID with blank signature lines."
+    },
+    {
+      "element": "Adjacent-requirement separation",
+      "status": "SATISFIED",
+      "evidence": "§1 separates I12-E01/056, I12-E02/057, I12-E05/059 and I11-E02/052 from this package's instructor selection scope."
+    },
+    {
+      "element": "Future follow-up not claimed as delivered",
+      "status": "SATISFIED",
+      "evidence": "§11 is labeled 尚未發生 and records delivery/completion as not occurred or UNKNOWN; register rows FAC-050 to FAC-052 carry the same hold rule."
+    }
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "candidate_status": "CANDIDATE_ONLY",
+  "github_delivery_claim": "NOT_CLAIMED",
+  "observed_at_tpe": "2026-11-25T21:03:21.1781147+08:00"
+}

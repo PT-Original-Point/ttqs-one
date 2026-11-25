@@ -1,0 +1,250 @@
+{
+  "work_id": "TTQS_ONE_0055_I12-E03_W1_SEMANTIC_REVIEW_R05_EXACT_SHA_20261125",
+  "doc_id": "0055",
+  "requirement_id": "I12-E03",
+  "official_box": "058",
+  "official_locator": "official checklist PDF page 4, indicator 12c",
+  "candidate_revision": "R05",
+  "candidate_status": "CANDIDATE_ONLY",
+  "candidate_sha256": "b30cebc0e5a7df10095d4a20271109e2e3e2eab278938e6ff1a1cfb764e9b6f1",
+  "candidate_bytes": 54652,
+  "body_extract_sha256": "48b68238315617c30239a8d11c22f36827322e5cdc89d44cc1471f16f6ef17c9",
+  "review_role": "independent semantic/usability/title-blind reviewer",
+  "review_method": "Read-only review of the bounded packet body extract bound to the exact R05 DOCX SHA-256; title and front matter excluded from substance assessment; no file, CLI, shell, network, or GitHub actions performed; no tools used.",
+  "independence_statement": "This verdict is derived solely from the exact R05 candidate SHA and the packet evidence. The rejected gemini-4-hydrogen-high R04 route is not treated as evidence, and no R04 conclusion is inherited.",
+  "verdict": "PASS_SEMANTIC_SCOPED_EXACT_SHA",
+  "verdict_scope": "Semantic, usability, requirement-conformance, internal-consistency and fabrication-boundary review of the candidate text only.",
+  "formal_acceptance": "NOT_GRANTED",
+  "github_delivery_claim": "NOT_CLAIMED",
+  "remote_readback": "NOT_YET_PUBLISHED",
+  "blocking_findings": [],
+  "requirement_conformance": [
+    {
+      "element": "Selection standards and process",
+      "status": "SATISFIED",
+      "evidence": "§4 states a five-criterion rubric with weights 25/25/20/20/10 totaling 100, 0/60/100 observable anchors, explicit formula (mean = sum/3; weighted = mean x weight / 100; total = sum of weighted), rounding rules, and pass/HOLD/REJECT state rules."
+    },
+    {
+      "element": "Comparative evaluation of at least three candidates",
+      "status": "SATISFIED",
+      "evidence": "§5 and §7 provide C-01, C-02, C-03 with three-reviewer raw scores per criterion, means, weighted points, recomputable totals and a ranked comparison table."
+    },
+    {
+      "element": "Teaching demonstration evidence",
+      "status": "SATISFIED",
+      "evidence": "§6 fixes identical topic, 12-minute duration, preparation time, materials, observation conditions, independent scoring before discussion, and separates observation summaries from scores."
+    },
+    {
+      "element": "Qualification and authorization checks",
+      "status": "SATISFIED",
+      "evidence": "§5 covers resume, professional qualification, teaching authorization/availability, conflict declaration and personal-data consent, with an explicit instruction that the sample PASS markers must not be copied and must be replaced by verified originals or HOLD."
+    },
+    {
+      "element": "Conflict-of-interest handling",
+      "status": "SATISFIED",
+      "evidence": "§8 defines declaration before scoring, recusal scope, substitute reviewer, record fields, data-minimization handling and freeze-on-inconsistency, plus the rule that blank declarations are not 'no conflict'."
+    },
+    {
+      "element": "Training management committee decision and authority",
+      "status": "SATISFIED",
+      "evidence": "§3 and §9 provide an authority checklist, quorum (2 of 3), non-voting chair/recorder, 3-0 recorded vote, attachments, dissent/recusal fields, owner and deadline, and an explicit assumption statement that committee authority is UNKNOWN until proven."
+    },
+    {
+      "element": "Appointment letter issued only after approval",
+      "status": "SATISFIED",
+      "evidence": "§10 sequences recommendation, committee decision, condition authorization, issuance/delivery and acceptance/archiving, each with a non-bypass gate, and marks the specimen NOT ISSUED / NOT VALID with blank signature lines."
+    },
+    {
+      "element": "Adjacent-requirement separation",
+      "status": "SATISFIED",
+      "evidence": "§1 separates I12-E01/056, I12-E02/057, I12-E05/059 and I11-E02/052 from this package's instructor selection scope."
+    },
+    {
+      "element": "Future follow-up not claimed as delivered",
+      "status": "SATISFIED",
+      "evidence": "§11 is labeled 尚未發生 and records delivery/completion as not occurred or UNKNOWN; register rows FAC-050 to FAC-052 carry the same hold rule."
+    }
+  ],
+  "arithmetic_checks": [
+    {
+      "check": "Unit sum 90+90+120+60",
+      "computed": 360,
+      "document_value": 360,
+      "status": "PASS"
+    },
+    {
+      "check": "Weights 25+25+20+20+10",
+      "computed": 100,
+      "document_value": 100,
+      "status": "PASS"
+    },
+    {
+      "check": "C-01 criterion means",
+      "computed": [86, 82, 78, 80, 90],
+      "document_value": [86, 82, 78, 80, 90],
+      "status": "PASS"
+    },
+    {
+      "check": "C-01 weighted points and total",
+      "computed": [21.5, 20.5, 15.6, 16.0, 9.0, 82.6],
+      "document_value": [21.5, 20.5, 15.6, 16.0, 9.0, 82.6],
+      "status": "PASS"
+    },
+    {
+      "check": "C-02 criterion means",
+      "computed": [78, 88, 75, 80, 85],
+      "document_value": [78, 88, 75, 80, 85],
+      "status": "PASS"
+    },
+    {
+      "check": "C-02 weighted points and total",
+      "computed": [19.5, 22.0, 15.0, 16.0, 8.5, 81.0],
+      "document_value": [19.5, 22.0, 15.0, 16.0, 8.5, 81.0],
+      "status": "PASS"
+    },
+    {
+      "check": "C-03 criterion means",
+      "computed": [90, 86, 88, 85, 90],
+      "document_value": [90, 86, 88, 85, 90],
+      "status": "PASS"
+    },
+    {
+      "check": "C-03 weighted points and total",
+      "computed": [22.5, 21.5, 17.6, 17.0, 9.0, 87.6],
+      "document_value": [22.5, 21.5, 17.6, 17.0, 9.0, 87.6],
+      "status": "PASS"
+    },
+    {
+      "check": "Ranking order C-03 > C-01 > C-02",
+      "computed": "87.6 > 82.6 > 81.0",
+      "document_value": "87.6 > 82.6 > 81.0",
+      "status": "PASS"
+    },
+    {
+      "check": "Threshold application (total >= 80; subject/teaching/fit >= 75; safety >= 80)",
+      "computed": "All three candidates meet thresholds, with C-02 learner fit exactly at the 75 boundary under the stated '>=' rule",
+      "document_value": "All three marked 達標",
+      "status": "PASS"
+    },
+    {
+      "check": "Honorarium 360 minutes x NT$800/hour",
+      "computed": "6 x 800 = 4800",
+      "document_value": "NT$4,800",
+      "status": "PASS"
+    },
+    {
+      "check": "Replacement register entry count FAC-0055-001..052",
+      "computed": 52,
+      "document_value": 52,
+      "status": "PASS"
+    },
+    {
+      "check": "Quorum and vote record",
+      "computed": "3 eligible, quorum 2, present 3, yes 3 / no 0 / abstain 0 / recused 0",
+      "document_value": "identical",
+      "status": "PASS"
+    }
+  ],
+  "fabrication_and_claim_boundary": {
+    "status": "PASS",
+    "observations": [
+      "All persons appear as role or candidate codes (評審甲/乙/丙, C-01..C-03, P-01, S-01, M-01..M-03, A-01); no real names, certificates, seals or signatures are presented.",
+      "The cover box, §5 note, §8 note, §9 box, §10 SAMPLE/NOT ISSUED/NOT VALID box, §11 heading and §13 status table consistently deny real approval, real appointment and real delivery.",
+      "Committee existence, authority, delegation, budget, fee authorization and retention rules are repeatedly stated as UNKNOWN and gated to HOLD.",
+      "No claim of course delivery, learner outcome, appointment issuance or evaluation result is made; §11 explicitly marks these as not occurred or UNKNOWN.",
+      "Register rows 034, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, 048, 050, 051, 052 correctly carry SYNTHETIC/REAL UNKNOWN with source, verifier and hold condition."
+    ]
+  },
+  "non_blocking_findings": [
+    {
+      "id": "F-01",
+      "severity": "LOW",
+      "type": "provenance",
+      "description": "Governing artifacts supplied with the packet are labeled R02 (source map 'for DOCX 0055 R02', Unique Blueprint for DOCX 0055 R02, replacement register FAC-0055 series) while the reviewed candidate is R05. Content matches the R05 body, but the artifact revision labels do not match the reviewed revision.",
+      "disposition": "Accept as controlling content on the supplied hashes; require explicit confirmation that these hashes are the governing versions for R05 before formal acceptance."
+    },
+    {
+      "id": "F-02",
+      "severity": "LOW",
+      "type": "provenance/head",
+      "description": "Branch-head references diverge: source map lists PR #92 head fdfd3b4dbd7c8cc52dd0e315406294bab83f1093, packet dispatch head is 165cf3b7de54b647a5f42dc79f9df5d1d8e03d9a, and the neighbor check is pinned to older HEAD f36b0b16feb5b8718d141c4410cee1e025b8dacd.",
+      "disposition": "Treat neighbor-check result as historical only; no live readback claim may be made."
+    },
+    {
+      "id": "F-03",
+      "severity": "LOW",
+      "type": "screening gap",
+      "description": "Body exact-screen receipt has status REVIEW_REQUIRED with peer_results empty. Only exact normalized substantive overlap was screened for 0053 R03, 0054 R14 and 0056 R05; paraphrase-level duplication remains unscreened.",
+      "disposition": "Non-blocking for this semantic verdict because the packet does not claim paraphrase coverage; must be closed or explicitly waived before formal acceptance."
+    },
+    {
+      "id": "F-04",
+      "severity": "LOW",
+      "type": "staleness",
+      "description": "§9 labels the synthetic meeting date 2026-11-10 as 未來示例, but that date precedes the review date 2026-11-25. The appointment sample date 2026-12-05 remains future.",
+      "disposition": "Cosmetic only: the record is unambiguously synthetic and disclaimed; consider neutral wording such as 示例日期 at the next revision."
+    },
+    {
+      "id": "F-05",
+      "severity": "INFO",
+      "type": "usability",
+      "description": "§5 shows '樣本核驗標記：PASS' for professional qualification while register FAC-0055-034 records the status as SYNTHETIC/REAL UNKNOWN. Copy-through risk exists, but the paragraph immediately below forbids copying PASS and requires 已驗證 plus original location, verifier, date, method and result, otherwise HOLD.",
+      "disposition": "Control is adequate; no change required."
+    },
+    {
+      "id": "F-06",
+      "severity": "INFO",
+      "type": "boundary threshold",
+      "description": "C-02 learner-fit mean is exactly 75 and is treated as passing under the documented '>=' rule, while safety for the same candidate is 85 against a >=80 rule.",
+      "disposition": "Correct application of the stated rule; no inconsistency."
+    },
+    {
+      "id": "F-07",
+      "severity": "INFO",
+      "type": "external-standard anchoring",
+      "description": "The rubric is a document-specific, synthetic selection instrument. It does not cite an external instructor-qualification standard; qualification is handled as a non-compensable pass/fail gate with original-document verification.",
+      "disposition": "Acceptable for candidate scope because the weights, thresholds and tie-break are declared unauthorized and gated to the real governing authority."
+    }
+  ],
+  "consistency_checks": [
+    {
+      "check": "§13 consistency row versus §4 and §7 numbers",
+      "status": "PASS"
+    },
+    {
+      "check": "Cover workflow section pointers versus actual section numbering (§2-3, §4-5/8, §6-7, §9-10, §12)",
+      "status": "PASS"
+    },
+    {
+      "check": "§3 authority checklist versus §9 assumption disclosure versus §12 evidence-chain item 1",
+      "status": "PASS"
+    },
+    {
+      "check": "Register locators versus the body sections that actually contain the referenced fields",
+      "status": "PASS"
+    },
+    {
+      "check": "Tie-break rule (subject-accuracy points, then teaching points, then documented second demonstration, else HOLD) versus §7 stated non-triggering in this example",
+      "status": "PASS"
+    },
+    {
+      "check": "English and Chinese criterion naming consistent across §4, §7, register and ranking table",
+      "status": "PASS"
+    }
+  ],
+  "evidence_limitations": [
+    "Candidate is not published; no remote readback of this exact SHA exists, so no delivery claim is made.",
+    "Source-map, blueprint, register and synthetic-register hashes were supplied but not independently recomputed in this read-only semantic role.",
+    "Upstream control blobs (mission, writing manual, 157-checkbox blueprint, external audit, checklist PDF) were not fetched or verified.",
+    "Neighbor duplicate evidence is bound to an older HEAD and is historical only.",
+    "Paraphrase-level cross-document screening was not performed, consistent with the declared exact-screen method."
+  ],
+  "conditions_before_formal_acceptance": [
+    "Publish R05 and obtain live remote readback bound to SHA-256 b30cebc0e5a7df10095d4a20271109e2e3e2eab278938e6ff1a1cfb764e9b6f1.",
+    "Close or formally waive the REVIEW_REQUIRED exact-screen receipt, including a decision on paraphrase-level screening.",
+    "Confirm that the R02-labeled source map, blueprint and register hashes are the governing versions for R05, or reissue them at R05.",
+    "Re-run the neighbor check against the current PR #92 head.",
+    "Record the independent Human acceptance decision; this review does not grant it."
+  ],
+  "summary": "R05 satisfies I12-E03 semantically: it presents a disclosed weighted rubric, a three-candidate three-reviewer recomputable comparison with verified arithmetic and correct ranking, a controlled teaching demonstration, qualification/authorization/conflict gates, an authority-checked committee decision record, and an approved-then-appointment sequence with a fully marked NOT ISSUED / NOT VALID specimen. Fabrication boundaries are explicit and consistent, and no real person, credential, approval, signature or delivery is asserted. No blocking semantic, usability or requirement-coverage defect was identified. Remaining items are provenance, publication and screening conditions rather than document content defects, so formal acceptance remains NOT_GRANTED and candidate status remains CANDIDATE_ONLY."
+}
