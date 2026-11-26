@@ -1,0 +1,130 @@
+{
+  "work_id": "TTQS_ONE_0029_I05-E03_WORD_NATIVE_VISUAL_REVIEW_R14_20261126",
+  "doc_id": "0029",
+  "requirement_id": "I05-E03",
+  "candidate_status": "CANDIDATE",
+  "candidate_sha256": "a1bc1f59615d658b3a4fd012ea8f06092ee63ca83613473c336940ec0b7c4c6b",
+  "renderer": "Microsoft Word COM ExportAsFixedFormat PDF + Poppler rasterization",
+  "pdf_sha256": "266d2d6a6fb919323355a8a4a3fea16917b8cdaa2bb5dcf305f9cfc127e1d5e7",
+  "pdf_page_count": 16,
+  "rendered_png_count": 16,
+  "pages_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "page_pngs": [
+    {
+      "page": 1,
+      "sha256": "16e002e43a45defc19ea4359c0103e7c2a1736918786e3d03cd18e5879b4a354",
+      "bytes": 294245
+    },
+    {
+      "page": 2,
+      "sha256": "0c11fe215af98be270e9e5b730f491f0c75c375275852e79e6c02b8552c01e07",
+      "bytes": 276229
+    },
+    {
+      "page": 3,
+      "sha256": "2624a6494301ef3787bf8ed18b51e15e2038f80b755b8972fe9d26c0054ed818",
+      "bytes": 306655
+    },
+    {
+      "page": 4,
+      "sha256": "8ddcf2497f5f243331ef3eb49c2fea35fd4ef5f203d159342b048f6c681c5266",
+      "bytes": 249420
+    },
+    {
+      "page": 5,
+      "sha256": "7edbf327fd980eeefb21c0bdc06b71b2f6be0afc3876aabe3bf852a5158582d2",
+      "bytes": 200488
+    },
+    {
+      "page": 6,
+      "sha256": "9a65f92961cf2c436ab6facf991c59b6b52ec4cc9e43e5a302d8b4484494b1ea",
+      "bytes": 131133
+    },
+    {
+      "page": 7,
+      "sha256": "cc20e084d37fffb22e62bd189b6def2cc7bc9f36a7d8f0001e784d875e74f8c9",
+      "bytes": 151248
+    },
+    {
+      "page": 8,
+      "sha256": "df581b98f489cb4047e6e57b38513d57be25d80abdeaad9deb8e4a312887ba65",
+      "bytes": 121688
+    },
+    {
+      "page": 9,
+      "sha256": "e2caed0e418b4bb6f72eed88df70c547e3b42acdecf7230dcf5793c5f02deb72",
+      "bytes": 276077
+    },
+    {
+      "page": 10,
+      "sha256": "b85833cf74b08c4e79278449a4e91a94b171ccc8a4ac329a225f3117cbad8017",
+      "bytes": 264772
+    },
+    {
+      "page": 11,
+      "sha256": "7eb4e3a7d170bb5b9fdab7fa73f7d194fc643120cea32b9f0bd5373d0c5e1884",
+      "bytes": 184107
+    },
+    {
+      "page": 12,
+      "sha256": "0924529ae273c4ecf992560937e3768dd036f7c2b5e840efba9aff8d8e5bc943",
+      "bytes": 195093
+    },
+    {
+      "page": 13,
+      "sha256": "babbab543e8dd2e1bc4816a64ac823e8a96f96b2a7dd0ccfacc7ee3d0f266463",
+      "bytes": 180689
+    },
+    {
+      "page": 14,
+      "sha256": "5c50977c111c33ce5b10d079d6b42d105bbbb589dfe79bc8f13a32ae6b2714d2",
+      "bytes": 117647
+    },
+    {
+      "page": 15,
+      "sha256": "fdad4ab65876967d26cb597825b4407d0b77037c5d5a4c3a7bcd6b5ac58c69a1",
+      "bytes": 180647
+    },
+    {
+      "page": 16,
+      "sha256": "651ac46aa2f6336ad7e9ec0225e662ececb0b2baa090a9cfbfebc4a08a56f41a",
+      "bytes": 78472
+    }
+  ],
+  "review_status": "PASS",
+  "findings": [],
+  "scope": [
+    "all-page readability",
+    "clipping",
+    "overlap",
+    "table flow",
+    "page breaks",
+    "headings",
+    "replacement register",
+    "revision history"
+  ],
+  "observations": [
+    "All 16 rendered pages were visually inspected; no clipping, overlap, unreadable text, or broken layout found.",
+    "Page 13 version-history paragraph fits and remains reader-facing; replacement register begins below it.",
+    "Page 14 continues the replacement register with the table header repeated.",
+    "The candidate SHA-256 was fixed before and after Word PDF export."
+  ],
+  "created_at_tpe": "2026-11-26T08:11:41.903230+08:00"
+}

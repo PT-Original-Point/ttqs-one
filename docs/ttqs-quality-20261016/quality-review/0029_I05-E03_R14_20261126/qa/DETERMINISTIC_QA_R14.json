@@ -1,0 +1,44 @@
+{
+  "work_id": "TTQS_ONE_0029_I05-E03_DETERMINISTIC_QA_R14_20261126",
+  "doc_id": "0029",
+  "requirement_id": "I05-E03",
+  "candidate_status": "CANDIDATE",
+  "candidate_sha256": "a1bc1f59615d658b3a4fd012ea8f06092ee63ca83613473c336940ec0b7c4c6b",
+  "candidate_bytes": 50424,
+  "qa_status": "PASS_DETERMINISTIC",
+  "checks": {
+    "python_docx_open": "PASS",
+    "zip_crc_errors": 0,
+    "table_count": 10,
+    "table_rows": 100,
+    "table_cells": 472,
+    "empty_table_rows": 0,
+    "replacement_register_rows": 24,
+    "unique_synthetic_fact_ids": 24,
+    "missing_synthetic_fact_ids": [],
+    "role_code_present_all_24_rows": true,
+    "only_one_paragraph_changed_from_R13": true,
+    "non_text_OOXML_structure_unchanged": true,
+    "docx_package_members_changed": [
+      "word/document.xml"
+    ],
+    "version_history_internal_metadata_scan": "PASS",
+    "raw_latex_markers_found": false,
+    "placeholder_only_terms_found": false,
+    "normal_body_style_size_pt": 10.5,
+    "table_text_style_size_pt": 9.5,
+    "calculations": {
+      "planned_attendance": "10*5=50",
+      "attendance_rate": "46/50*100=92%",
+      "completion_rate": "9/10*100=90%",
+      "pretest_mean": "558/9=62",
+      "posttest_mean": "738/9=82",
+      "mean_gain": "82-62=20",
+      "satisfaction_mean": "40/9=4.44; displayed 4.4/5"
+    },
+    "visual_export_pdf_sha256": "266d2d6a6fb919323355a8a4a3fea16917b8cdaa2bb5dcf305f9cfc127e1d5e7",
+    "visual_page_count": 16
+  },
+  "source_candidate_sha256": "6afdb891b2af00dfd35a0f6056297d21cda0721c0564a6d2714debdff80a1ee8",
+  "created_at_tpe": "2026-11-26T08:08:59.901561+08:00"
+}
