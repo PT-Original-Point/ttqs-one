@@ -1,0 +1,38 @@
+{
+  "schema": "TTQS_ONE_TECHNICAL_DELTA_QA_EXACT_SHA_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0091",
+  "requirement_id": "I17D-E05",
+  "work_id": "TTQS_ONE_0091_I17D-E05_TECHNICAL_DELTA_QA_R11_20261126",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0091_R01_OPENCODE_WRITER_R01\\candidate_R11_revision_label_repair_20261126\\0091_R11_I17D-E05_學員就業證明_協會端作業紀錄.docx",
+  "candidate_sha256": "8974a4d584e1ca43442bf20ff8bd6ad0b62e1679b308ecd0f98cbd6b028ed6a4",
+  "parent_candidate_sha256": "4e4cc9c05fc6ba10d7fc960c39a4138d46b6cf1f9204b7845c55125a75ba2137",
+  "status": "DETERMINISTIC_PASS_PENDING_VISUAL_AND_SEMANTIC",
+  "method": "Exact package delta comparison to R10; all non-label package bytes required identical; inherited R10 deterministic assertions remain valid; reran R11 label, package, and integrity checks.",
+  "checks": {
+    "parent_r10_deterministic_checks_pass": true,
+    "package_integrity_pass": true,
+    "package_parts_unchanged": true,
+    "changed_parts_exact_allowlist": true,
+    "delta_normalizes_byte_identical_to_R10": true,
+    "candidate_sha256": "8974a4d584e1ca43442bf20ff8bd6ad0b62e1679b308ecd0f98cbd6b028ed6a4",
+    "candidate_bytes": 88448,
+    "revision_R11_labels_consistent": true,
+    "core_candidate_label_R11": true,
+    "all_section_footers_candidate_R11": true,
+    "semantic_body_changes": "NONE; only cover title/version labels changed; footer/core revision labels updated",
+    "parent_technical_receipt_sha256": "024f608f1f8347feb61ba557afb5aaa092d682819593aeb6a1cff77fa524fa9b",
+    "deterministic_checks_pass": true
+  },
+  "changed_package_parts": [
+    "docProps/core.xml",
+    "word/footer1.xml",
+    "word/footer2.xml",
+    "word/footer3.xml",
+    "word/footer4.xml",
+    "word/footer5.xml",
+    "word/footer6.xml",
+    "word/footer7.xml",
+    "word/document.xml"
+  ]
+}
