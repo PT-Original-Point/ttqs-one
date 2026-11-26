@@ -28,11 +28,6 @@
       "sha256": "a1bc1f59615d658b3a4fd012ea8f06092ee63ca83613473c336940ec0b7c4c6b"
     },
     {
-      "path": "render/0029_R14_WORD_NATIVE.pdf",
-      "bytes": 550816,
-      "sha256": "266d2d6a6fb919323355a8a4a3fea16917b8cdaa2bb5dcf305f9cfc127e1d5e7"
-    },
-    {
       "path": "qa/DETERMINISTIC_QA_R14.json",
       "bytes": 1649,
       "sha256": "cbe91d5b43cfd74fd0abd25113da059612f651ac8597c4a2b917674fc0d0406c"
@@ -78,5 +73,20 @@
       "sha256": "6efabef5944a72945ec175ec33cbff0870fd2625c45b5178e252081a28c838f9"
     }
   ],
-  "created_at_tpe": "2026-11-26T08:12:12.919836+08:00"
+  "created_at_tpe": "2026-11-26T08:12:12.919836+08:00",
+  "local_only_visual_artifacts": [
+    {
+      "path": "render-word-native/0029_R14_WORD_NATIVE.pdf",
+      "bytes": 550816,
+      "sha256": "266d2d6a6fb919323355a8a4a3fea16917b8cdaa2bb5dcf305f9cfc127e1d5e7",
+      "purpose": "Microsoft Word native render used for the 16-page visual inspection; not included in the GitHub package, consistent with the R13 package layout."
+    }
+  ],
+  "github_raw_byte_readback": {
+    "status": "VERIFIED_FOR_DELIVERY_FILES",
+    "verification_commit": "ac224f981916f93be10200a77849578c3bce3be8",
+    "files_verified": 11,
+    "candidate_sha256": "a1bc1f59615d658b3a4fd012ea8f06092ee63ca83613473c336940ec0b7c4c6b",
+    "note": "The package manifest is updated in a follow-up commit; its final bytes are verified separately."
+  }
 }
