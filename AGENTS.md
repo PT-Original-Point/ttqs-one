@@ -1,3 +1,13 @@
+# 2026-11-27 Human R12.3 active override (applies over R12.2 for this closure)
+
+COMMAND=TTQS_ONE_R12_3_INTEGRATOR_HANDOFF_DOT_R123_20261127
+
+- Dot exclusively owns dispatch, supervision, independent audit, candidate-quality verdict, rejection/rework, collection and delivery verification. Codex owns construction, Word production, deterministic technical checks, and is the sole shared-state/PR #92 writer and integrator; Codex has no competing dispatch or quality authority and may integrate only a candidate Dot explicitly approved at the exact SHA. W1/W2 work only in isolated scopes under Dot's dispatch; a writer cannot approve its own version.
+- Use the existing R12.3 closure queue as a locator, never as proof of PASS. Freeze each candidate by its actual DOCX SHA-256. Current targets are 0031 `fff554e6b1424f4485b99956dcaf5183a76f2864ede454386d9315cd55d8d78e`, 0055 `85c329617ef7146ad1569fc3ebd841ab7ce5a0c5e183cbabc7ac6474109ded94`, and 0134 `f09248f678ba6cc13e426440a3a0be0d04652d4e0203be8a54fd917a37c814f5` (0134 content revision R02; R03 is a layout attempt). Any different bytes require fresh scope-specific qualification.
+- Close a candidate only against its exact bytes and applicable official requirement/unique Blueprint, deterministic technical and calculation checks, native Word visual evidence, independent semantic review, GitHub raw-byte readback, and the existing quality index. Inherit same-scope evidence only when the exact candidate SHA is bound, or for unchanged pages when page-image bytes match a valid accepted baseline; directly inspect every changed page. A queue label, filename, process exit, or prior revision is not a substitute.
+- Keep all outputs CANDIDATE. No REAL, formal acceptance, or external approval is inferred. Keep 0091 R11 isolated and not approved for sharing until its separate scoped repair and full qualification are verified.
+- Merge R12.3 into these existing controls and the existing active goal thread; do not add a parallel specification, supervisor, schedule, model route, spend, or speed setting.
+
 # TTQS ONE｜現役精簡施工規則 R12.2（2026-11-18）
 
 PROJECT_ID=TTQS_ONE
