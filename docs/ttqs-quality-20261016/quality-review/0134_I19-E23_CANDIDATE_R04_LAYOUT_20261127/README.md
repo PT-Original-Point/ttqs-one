@@ -9,3 +9,5 @@
 - GitHub raw-byte readback: VERIFIED from immutable commit `700eccf64f0b74f04c7a33f080a06196ad4644d6`; remote SHA-256 and bytes exactly match the candidate. Receipt: `qa/GITHUB_RAW_BYTE_READBACK_R04_CURRENT_HEAD_20261127.json` (`561955527fd33e0bf49b9e9b85e58ed14469333e97dda1aba18cf0130d926810`).
 - Candidate remains CANDIDATE. Formal acceptance is NOT_GRANTED; REAL evidence is UNKNOWN/HOLD.
 - This is the same doc_id 0134: distinct-document quality count delta is 0. The exact-SHA candidate has technical PASS, scoped visual PASS, inherited semantic PASS, Dot approval and raw-byte readback; formal acceptance remains NOT_GRANTED. The exact-SHA candidate now has technical PASS, scoped visual PASS, inherited semantic PASS, Dot approval and raw-byte readback; formal acceptance remains NOT_GRANTED.
+
+Package SHA256SUMS records GitHub raw bytes from the immutable package commit. PACKAGE_MANIFEST entries include local_projection_sha256 because core.autocrlf=true may change checkout bytes for text evidence files. The DOCX candidate SHA is identical locally and remotely.
