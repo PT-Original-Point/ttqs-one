@@ -1,0 +1,359 @@
+{
+  "doc_id": "0134",
+  "sha256": "5992544eba31b6d146f22c5614051350ded4c636adcfbfa162b805a9b8dddb9a",
+  "model": "gemini-4-hydrogen-high",
+  "native_conversation_id": "5f15d70f-7770-4158-96ad-d09058941f2d",
+  "terminal_status": "SUCCESS",
+  "usage": {
+    "input_tokens": 29311,
+    "output_tokens": 16654,
+    "thinking_tokens": 11691,
+    "cache_read_tokens": 0,
+    "total_tokens": 45965
+  },
+  "wall_native_s": 70.5242484,
+  "steps": {
+    "user_input": 1,
+    "agent_response": 653
+  },
+  "review_scope": "actual complete candidate extracted text including 114 embedded register rows",
+  "result": {
+    "sha256": "5992544eba31b6d146f22c5614051350ded4c636adcfbfa162b805a9b8dddb9a",
+    "genre": "TTQS R12.3 年度指標分析報告（全篇 SAMPLE／SYNTHETIC 工作示範與 REAL 替換作業規範，非協會實績報告）",
+    "official_requirement": {
+      "doc_id": "0134",
+      "version": "R02 候選稿",
+      "requirement_id": "I19-E23",
+      "summary_index_157": "index 147「會員／會費：實際帳冊與敏感資料隔離」（不等同文件序號）",
+      "official_checkbox_serial": "UNKNOWN",
+      "official_text": "會員人數及會費收入均逐年增加。",
+      "official_source": "訓練機構版 TTQS 官方查核佐證表，PDF 第 8 頁",
+      "excluded_adjacent_metrics": [
+        {
+          "doc_and_req": "0133／I19-E22 年度訓練班次與參訓人次趨勢",
+          "exclusion": "開班數、參訓人次（含 0133 之 317 參訓人次）、課程完成率不等於會員人數或會費收入，未混入本件。"
+        },
+        {
+          "doc_and_req": "0135／I19-E25 目標市場與顧客價值具體提升成效",
+          "exclusion": "市場需求、顧客效益或訓練成效不等於會員年末存量或會費收入，亦不做因果歸因。"
+        }
+      ],
+      "real_compliance_status": "UNKNOWN（無真實會員名冊、原始憑證與核准政策；合成例正向趨勢不構成協會實績或正式符合判定）"
+    },
+    "member_recompute": {
+      "all_consistent": true,
+      "yearly_stock_and_movements": [
+        {
+          "year": 2023,
+          "categories": {
+            "一般會員": {
+              "opening": 25,
+              "joined": 7,
+              "exited": 2,
+              "recomputed_closing": 30,
+              "reported_closing": 30,
+              "diff": 0
+            },
+            "支持會員": {
+              "opening": 8,
+              "joined": 1,
+              "exited": 1,
+              "recomputed_closing": 8,
+              "reported_closing": 8,
+              "diff": 0
+            },
+            "示範免繳類別": {
+              "opening": 4,
+              "joined": 0,
+              "exited": 0,
+              "recomputed_closing": 4,
+              "reported_closing": 4,
+              "diff": 0
+            }
+          },
+          "total": {
+            "opening": 37,
+            "joined": 8,
+            "exited": 3,
+            "recomputed_closing": 42,
+            "reported_closing": 42,
+            "diff": 0
+          },
+          "yoy_abs_change": "基準年",
+          "yoy_rate_recomputed": "N/A",
+          "yoy_rate_reported": "N/A"
+        },
+        {
+          "year": 2024,
+          "opening_ties_to_prior_closing": true,
+          "categories": {
+            "一般會員": {
+              "opening": 30,
+              "joined": 7,
+              "exited": 1,
+              "recomputed_closing": 36,
+              "reported_closing": 36,
+              "diff": 0
+            },
+            "支持會員": {
+              "opening": 8,
+              "joined": 2,
+              "exited": 2,
+              "recomputed_closing": 8,
+              "reported_closing": 8,
+              "diff": 0
+            },
+            "示範免繳類別": {
+              "opening": 4,
+              "joined": 1,
+              "exited": 1,
+              "recomputed_closing": 4,
+              "reported_closing": 4,
+              "diff": 0
+            }
+          },
+          "total": {
+            "opening": 42,
+            "joined": 10,
+            "exited": 4,
+            "recomputed_closing": 48,
+            "reported_closing": 48,
+            "diff": 0
+          },
+          "yoy_abs_change": 6,
+          "yoy_rate_recomputed": "14.2857% -> 14.3%",
+          "yoy_rate_reported": "14.3%"
+        },
+        {
+          "year": 2025,
+          "opening_ties_to_prior_closing": true,
+          "categories": {
+            "一般會員": {
+              "opening": 36,
+              "joined": 6,
+              "exited": 2,
+              "recomputed_closing": 40,
+              "reported_closing": 40,
+              "diff": 0
+            },
+            "支持會員": {
+              "opening": 8,
+              "joined": 3,
+              "exited": 1,
+              "recomputed_closing": 10,
+              "reported_closing": 10,
+              "diff": 0
+            },
+            "示範免繳類別": {
+              "opening": 4,
+              "joined": 1,
+              "exited": 1,
+              "recomputed_closing": 4,
+              "reported_closing": 4,
+              "diff": 0
+            }
+          },
+          "total": {
+            "opening": 48,
+            "joined": 10,
+            "exited": 4,
+            "recomputed_closing": 54,
+            "reported_closing": 54,
+            "diff": 0
+          },
+          "yoy_abs_change": 6,
+          "yoy_rate_recomputed": "12.5%",
+          "yoy_rate_reported": "12.5%"
+        }
+      ],
+      "cumulative_2023_to_2025": {
+        "abs_change": 12,
+        "rate_recomputed": "28.5714% -> 28.6%",
+        "rate_reported": "28.6%"
+      }
+    },
+    "cash_and_dues_recompute": {
+      "all_consistent": true,
+      "synthetic_policy": {
+        "rates_ntd": {
+          "一般會員": 3000,
+          "支持會員": 1500,
+          "示範免繳類別": 0
+        },
+        "recognition_rule": "具年末有效會籍且關帳時負全年會費義務者計費；退出者不另加計、無部分期間攤提或額外折讓；年末未收列應收；現金退款沖減當年認列收入且無後續追收義務；次年收款列預收負債、次期轉列收入；舊欠無法收回時沖應收並列呆帳費用，不再扣減當年會費收入。",
+        "policy_status": "SAMPLE／SYNTHETIC 假設，不代表原始點協會現行或已核准政策"
+      },
+      "yearly_reconciliation": [
+        {
+          "year": 2023,
+          "cash_collection_detail": "30×3,000 + 8×1,500 = 102,000（含次年預收 1,500）",
+          "gross_cash_received": 102000,
+          "cash_refund": 0,
+          "net_cash": 102000,
+          "net_cash_yoy_change": "基準",
+          "net_cash_yoy_rate": "N/A",
+          "gross_billed_before_refund": 102000,
+          "billing_check": "30×3,000 + 8×1,500 + 4×0 = 102,000",
+          "allocation_check": {
+            "cash_allocated_to_current_year": 100500,
+            "prior_prepaid_transferred_in": 1500,
+            "new_ar": 0,
+            "sum": 102000,
+            "diff_vs_billed": 0
+          },
+          "ar_rollforward": {
+            "opening": 0,
+            "new_ar": 0,
+            "prior_ar_cash_collected": 0,
+            "bad_debt_writeoff": 0,
+            "recomputed_closing": 0,
+            "reported_closing": 0,
+            "diff": 0
+          },
+          "prepaid_rollforward": {
+            "opening": 1500,
+            "transferred_to_revenue": 1500,
+            "new_next_year_received": 1500,
+            "recomputed_closing": 1500,
+            "reported_closing": 1500,
+            "diff": 0
+          },
+          "recognized_dues_revenue_direct": 102000,
+          "recognized_dues_revenue_reverse_formula": "102,000 + (0 - 0) - (1,500 - 1,500) + 0 = 102,000",
+          "reverse_reconciliation_diff": 0,
+          "recognized_revenue_yoy_change": "基準",
+          "recognized_revenue_yoy_rate": "N/A"
+        },
+        {
+          "year": 2024,
+          "cash_collection_detail": "34×3,000 + 8×1,500 = 114,000（含次年預收 1,500）",
+          "gross_cash_received": 114000,
+          "cash_refund": 3000,
+          "net_cash": 111000,
+          "net_cash_yoy_change": 9000,
+          "net_cash_yoy_rate": "8.8235% -> 8.8%（報告一致）",
+          "gross_billed_before_refund": 120000,
+          "billing_check": "36×3,000 + 8×1,500 + 4×0 = 120,000",
+          "allocation_check": {
+            "cash_allocated_to_current_year": 112500,
+            "prior_prepaid_transferred_in": 1500,
+            "new_ar": 6000,
+            "sum": 120000,
+            "diff_vs_billed": 0
+          },
+          "ar_rollforward": {
+            "opening": 0,
+            "new_ar": 6000,
+            "prior_ar_cash_collected": 0,
+            "bad_debt_writeoff": 0,
+            "recomputed_closing": 6000,
+            "reported_closing": 6000,
+            "diff": 0
+          },
+          "prepaid_rollforward": {
+            "opening": 1500,
+            "transferred_to_revenue": 1500,
+            "new_next_year_received": 1500,
+            "recomputed_closing": 1500,
+            "reported_closing": 1500,
+            "diff": 0
+          },
+          "recognized_dues_revenue_direct": 117000,
+          "recognized_dues_revenue_reverse_formula": "111,000 + (6,000 - 0) - (1,500 - 1,500) + 0 = 117,000",
+          "reverse_reconciliation_diff": 0,
+          "recognized_revenue_yoy_change": 15000,
+          "recognized_revenue_yoy_rate": "14.7059% -> 14.7%（報告一致）"
+        },
+        {
+          "year": 2025,
+          "cash_collection_detail": "38×3,000 + 9×1,500 = 127,500（含次年預收 1,500）",
+          "gross_cash_received": 127500,
+          "cash_refund": 1500,
+          "net_cash": 126000,
+          "net_cash_yoy_change": 15000,
+          "net_cash_yoy_rate": "13.5135% -> 13.5%（報告一致）",
+          "gross_billed_before_refund": 135000,
+          "billing_check": "40×3,000 + 10×1,500 + 4×0 = 135,000",
+          "allocation_check": {
+            "cash_allocated_to_current_year": 126000,
+            "prior_prepaid_transferred_in": 1500,
+            "new_ar": 7500,
+            "sum": 135000,
+            "diff_vs_billed": 0
+          },
+          "ar_rollforward": {
+            "opening": 6000,
+            "new_ar": 7500,
+            "prior_ar_cash_collected": 0,
+            "bad_debt_writeoff": 6000,
+            "recomputed_closing": 7500,
+            "reported_closing": 7500,
+            "diff": 0
+          },
+          "prepaid_rollforward": {
+            "opening": 1500,
+            "transferred_to_revenue": 1500,
+            "new_next_year_received": 1500,
+            "recomputed_closing": 1500,
+            "reported_closing": 1500,
+            "diff": 0
+          },
+          "recognized_dues_revenue_direct": 133500,
+          "recognized_dues_revenue_reverse_formula": "126,000 + (7,500 - 6,000) - (1,500 - 1,500) + 6,000 = 133,500",
+          "reverse_reconciliation_diff": 0,
+          "recognized_revenue_yoy_change": 16500,
+          "recognized_revenue_yoy_rate": "14.1026% -> 14.1%（報告一致）"
+        }
+      ],
+      "cumulative_2023_to_2025": {
+        "net_cash_abs_change": 24000,
+        "net_cash_rate_recomputed": "23.5294% -> 23.5%（報告一致）",
+        "recognized_revenue_abs_change": 31500,
+        "recognized_revenue_rate_recomputed": "30.8824% -> 30.9%（報告第 5.4 節未單獨列示該累計率）"
+      },
+      "exception_entry_and_review_check": {
+        "case_checked": "第 8 節「合成例外覆核與解除」及 SYN-0134-114",
+        "arithmetic_verified": true,
+        "detail": "2025 試算誤將次年預收 1,500 元認列為當期收入（135,000），與應繳扣退款 133,500 相差 1,500；更正為預收負債後兩路均為 133,500、差額 0。覆核者（第二覆核角色）與覆核日期（2026-01-20）均明確標註為 SAMPLE 佔位，真實覆核未執行。"
+      }
+    },
+    "register_check": {
+      "stated_count_in_section_14": 114,
+      "observed_count_in_section_11": 114,
+      "key_range": "SYN-0134-001 至 SYN-0134-114",
+      "contiguous_without_gaps_or_duplicates": true,
+      "consistent_with_body_and_tables": true,
+      "real_boundary_and_placeholder_hygiene": "PASS（全數真實原件來源皆標記 UNKNOWN 或待取得原件，無偽造人名、職章、憑證號或系統路徑；所有角色皆標明佔位）"
+    },
+    "blocking_findings": [],
+    "nonblocking_findings": [
+      {
+        "id": "NB-01",
+        "location": "第 5.3 節、第 5.5 節",
+        "finding": "2024 年一般會員期末有效 36 人（含未收 2 人、實收人次 34 人）同時發生現金退款 3,000 元（2025 年亦含退款 1,500 元），報告說明「因當年款項退還而無後續追收義務，不計作年末欠繳」，使應繳減退款與現金雙向反算完全平帳；惟實務替換 REAL 時，應另區分退款對象屬於「期末仍具資格但獲減免退款」或「期中已退會者」，以免混淆期末有效人數與當年計費母體。"
+      },
+      {
+        "id": "NB-02",
+        "location": "第 5.4 節、第 6 節",
+        "finding": "第 5.4 節公式表列示了會員人數與示範淨收款的年增率及 2023–2025 累計變化率，認列會費收入之年增率（14.7%、14.1%）另列於第 6 節與第 8 節（且未列認列收入之三年累計變化率 30.9%）；建議後續維護可考慮於第 5.4 節並列認列收入公式，惟現行跨節索引已足夠明確，不影響重算與判讀。"
+      },
+      {
+        "id": "NB-03",
+        "location": "第 2.1 節",
+        "finding": "「本報告直接證據位置」一欄列舉第 5.1、5.3、5.4、6、12 節，未同時明列第 5.2 節（會員資格變動調節）與第 5.5 節（應計會費與現金淨收款三年勾稽），惟第 5.4、11、12 節已有交叉指向，屬輕微索引列舉不全。"
+      }
+    ],
+    "text_scope_verdict": {
+      "verdict": "PASS_SAMPLE_TEXT_SCOPE",
+      "summary": "在純文本與表格審查範圍內，本候選 R02 完整達成 I19-E23 之 SAMPLE／SYNTHETIC 示範目的：三年會員存量與異動、現金收款與退款、應收與呆帳沖銷、跨年預收負債、應計認列收入、雙向反算調節及年增率重算全部零差額吻合；114 項清冊索引一致；與 0133、0135 之業務指標界線明確；SAMPLE／REAL 界線與未授權聲明嚴謹。",
+      "reader_perspectives": {
+        "承辦": "可用。第 3 節定義明確、第 5 節公式與例題可逐筆重算、第 7 節 7 步驟流程及第 11／13 節替換清冊與作業單可直接導引後續 REAL 取數與個資遮罩。",
+        "品質": "可用。第 4.1 節 S0–S3 分級、第 6.1／10 節停止條件（HOLD）、角色分離原則與第 8 節例外沖轉紀錄皆到位，且未偽造真實原件、人名或簽核。",
+        "評核": "可用作方法與範本查驗。第 2.1 節與第 12 節準確對應 I19-E23 官方原文，第 2.3 與 12.1 節明確排除 0133／0135 並通過標題盲測，且誠實標示目前實績 UNKNOWN、不可作為正式送審證據。"
+      },
+      "non_declarations": "本評閱僅涵蓋所提供抽取文本、表格與清冊之邏輯與算術驗證；不宣告 Word 原生匯出、排版／技術層檢查、逐頁視覺驗收或正式接受／對外送審（依第 14 節仍為 PENDING／NOT_GRANTED），亦不證明原始點協會真實會員人數或會費收入實績。"
+    }
+  },
+  "extra_credits_opt_in": false,
+  "actual_charge": "UNKNOWN"
+}

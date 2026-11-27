@@ -1,0 +1,62 @@
+{
+  "schema": "ttqs-one-semantic-equivalence-adjudication-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0134",
+  "requirement_id": "I19-E23",
+  "candidate_sha256": "db4867b709f4d1962db9c2d991c879975f0a140f907621e2df0f1727c700a0b3",
+  "semantic_gate_status": "PASS_SEMANTIC_SCOPED_EXACT_SHA",
+  "semantic_verdict": "PASS_INHERITED_EXACT_TEXT_EQUIVALENCE",
+  "review_method": "INHERITED_REVIEW_WITH_DETERMINISTIC_EXACT_TEXT_EQUIVALENCE; NO_NEW_MODEL_CALL",
+  "reviewer_name": "Antigravity CLI v1.4.2 (W2 reviewer of unchanged R02 semantic content)",
+  "reviewer_route": "Antigravity CLI v1.4.2",
+  "reviewer_context_id": "5f15d70f-7770-4158-96ad-d09058941f2d",
+  "reviewed_source_candidate_sha256": "5992544eba31b6d146f22c5614051350ded4c636adcfbfa162b805a9b8dddb9a",
+  "reviewed_source_verdict": "PASS_SAMPLE_TEXT_SCOPE",
+  "source_review_receipt_sha256": "0da04a141de41ad21f3eea483be7ed1202e8e98d4c3d3fdb8af5b6cdee1fc2a2",
+  "source_review_scope": "actual complete candidate extracted text including 114 embedded register rows",
+  "requested_model": "gemini-4-hydrogen-high",
+  "actual_serving_model": "UNKNOWN",
+  "actual_charge": "UNKNOWN",
+  "equivalence_chain": [
+    {
+      "from_sha256": "5992544eba31b6d146f22c5614051350ded4c636adcfbfa162b805a9b8dddb9a",
+      "to_sha256": "f09248f678ba6cc13e426440a3a0be0d04652d4e0203be8a54fd917a37c814f5",
+      "evidence_path": "qa/INDEPENDENT_R02_R03_SEMANTIC_EQUIVALENCE.json",
+      "evidence_sha256": "fdc7822ce4858e6a6614d3e86ab9ab4c1b69f3196885683a82afaf34898397d0",
+      "result": "all non-formatting nodes equivalent; ordered paragraphs identical"
+    },
+    {
+      "from_sha256": "f09248f678ba6cc13e426440a3a0be0d04652d4e0203be8a54fd917a37c814f5",
+      "to_sha256": "db4867b709f4d1962db9c2d991c879975f0a140f907621e2df0f1727c700a0b3",
+      "evidence_path": "qa/R04_INTEGRATION_DETERMINISTIC_RECHECK.json",
+      "evidence_sha256": "e52c7d8e8c7fd15cd66631af6c4271110cf1c4868a2374c7e7c43d0b6f8263ab",
+      "result": "ordered paragraph text and run formatting unchanged; exactly two manual layout breaks only"
+    }
+  ],
+  "candidate_text_semantics_unchanged": true,
+  "source_blueprint_exclusions_and_calculations_reconfirmed_by_dot_exact_approval": true,
+  "dot_approval_path": "qa/DOT_0134_R04_EXACT_CANDIDATE_APPROVAL_20261127.json",
+  "dot_approval_sha256": "0005370e9e27385fbaf7c030e7738fa0e8f441b9964b316ed1f20a962ec1573c",
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    {
+      "id": "NB-01",
+      "status": "REMAINS_NONBLOCKING",
+      "source_review_sha256": "0da04a141de41ad21f3eea483be7ed1202e8e98d4c3d3fdb8af5b6cdee1fc2a2"
+    },
+    {
+      "id": "NB-02",
+      "status": "REMAINS_NONBLOCKING",
+      "source_review_sha256": "0da04a141de41ad21f3eea483be7ed1202e8e98d4c3d3fdb8af5b6cdee1fc2a2"
+    },
+    {
+      "id": "NB-03",
+      "status": "REMAINS_NONBLOCKING",
+      "source_review_sha256": "0da04a141de41ad21f3eea483be7ed1202e8e98d4c3d3fdb8af5b6cdee1fc2a2"
+    }
+  ],
+  "review_scope": "Semantic content was independently reviewed on R02; this exact R04 SHA receives that verdict only through the documented deterministic text-equivalence chain. No claim of a new R04 W2 execution. Dot approved this exact R04 for integration and verified source/Blueprint/numbering/exclusion and page-8 correction.",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "observed_at_local": "2026-11-27T11:55:31+08:00"
+}

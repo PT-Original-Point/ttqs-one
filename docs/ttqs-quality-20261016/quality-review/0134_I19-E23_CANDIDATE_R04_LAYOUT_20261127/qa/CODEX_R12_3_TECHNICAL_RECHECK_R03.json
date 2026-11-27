@@ -1,0 +1,136 @@
+{
+  "project_id": "TTQS_ONE",
+  "command": "TTQS_ONE_R12_3_DETERMINISTIC_TECHNICAL_RECHECK_0134",
+  "observed_local": "2026-11-27T10:30:21.505118+08:00",
+  "scope": "Local deterministic technical/calculation and existing render-byte cross-check only; no Dot verdict, no full qualification, no GitHub readback.",
+  "candidate": {
+    "doc_id": "0134",
+    "content_revision": "R02",
+    "layout_attempt": "R03",
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_HUMAN_R12_3_FULL_QUALITY_REMEDIATION_20261125\\0134_F04_ACCRUAL_BRIDGE_VERIFIED_BUILD\\LAYOUT_R03\\0134_I19-E23_CANDIDATE_R03.docx",
+    "sha256": "f09248f678ba6cc13e426440a3a0be0d04652d4e0203be8a54fd917a37c814f5",
+    "bytes": 68827
+  },
+  "baseline": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_HUMAN_R12_3_FULL_QUALITY_REMEDIATION_20261125\\0134_F04_ACCRUAL_BRIDGE_VERIFIED_BUILD\\STABLE_R02\\0134_I19-E23_CANDIDATE_R02.docx",
+    "sha256": "5992544eba31b6d146f22c5614051350ded4c636adcfbfa162b805a9b8dddb9a",
+    "bytes": 68799
+  },
+  "docx_package": {
+    "R02_zip_test_error": null,
+    "R03_zip_test_error": null,
+    "zip_changed_parts": [
+      "word/document.xml"
+    ],
+    "R02_only_parts": [],
+    "R03_only_parts": [],
+    "ordered_paragraphs_equal": true,
+    "paragraphs_R02_R03": [
+      1403,
+      1403
+    ],
+    "tables_R03": 26
+  },
+  "font_floor_points": {
+    "minimum_body": 11.0,
+    "minimum_table": 9.5,
+    "body_runs": 64,
+    "table_runs": 1316,
+    "body_below_10_5": 0,
+    "table_below_9_5": 0,
+    "unknown_size_runs": 0
+  },
+  "content_hygiene": {
+    "table_cells_empty_nonempty": [
+      0,
+      1316
+    ],
+    "placeholder_hits": [],
+    "raw_latex_commands": []
+  },
+  "synthetic_register": {
+    "sha256": "6be7eace6b4b987c79cc32fbda3bd00699af21e759501ed3b2b5b0e33a4dffbe",
+    "rows": 114,
+    "key_range": [
+      "SYN-0134-001",
+      "SYN-0134-114"
+    ],
+    "contiguous": true,
+    "new_real_data": false
+  },
+  "calculation_checks": {
+    "annual_reconciliations": [
+      {
+        "year": 2023,
+        "net_cash_calc": 102000,
+        "net_cash_recorded": 102000,
+        "recognized_calc": 102000,
+        "recognized_recorded": 102000,
+        "allocation_calc": 102000,
+        "billed_recorded": 102000,
+        "all_differences_zero": true
+      },
+      {
+        "year": 2024,
+        "net_cash_calc": 111000,
+        "net_cash_recorded": 111000,
+        "recognized_calc": 117000,
+        "recognized_recorded": 117000,
+        "allocation_calc": 120000,
+        "billed_recorded": 120000,
+        "all_differences_zero": true
+      },
+      {
+        "year": 2025,
+        "net_cash_calc": 126000,
+        "net_cash_recorded": 126000,
+        "recognized_calc": 133500,
+        "recognized_recorded": 133500,
+        "allocation_calc": 135000,
+        "billed_recorded": 135000,
+        "all_differences_zero": true
+      }
+    ],
+    "all_pass": true,
+    "membership_2023_rollup": [
+      37,
+      8,
+      3,
+      42
+    ]
+  },
+  "semantic_scope": {
+    "W2_review_receipt_sha256": "0da04a141de41ad21f3eea483be7ed1202e8e98d4c3d3fdb8af5b6cdee1fc2a2",
+    "W2_reviewed_sha256": "5992544eba31b6d146f22c5614051350ded4c636adcfbfa162b805a9b8dddb9a",
+    "R02_text_verdict": "PASS_SAMPLE_TEXT_SCOPE",
+    "R02_R03_equivalence_receipt_sha256": "fdc7822ce4858e6a6614d3e86ab9ab4c1b69f3196885683a82afaf34898397d0",
+    "R02_R03_exact_binding": true,
+    "R03_direct_independent_review": "PENDING_DOT"
+  },
+  "visual_scope": {
+    "pdf_sha256": "351e0722532218f8777cd4e80365d25af0adae6cab62359e59916b8008771683",
+    "visual_receipt_sha256": "da8c737214689e6c84799a781b67a30cd76cbe165441ab4d77326354783d0a92",
+    "visual_docx_match": true,
+    "visual_pdf_match": true,
+    "layout_equivalence_receipt_sha256": "ec70103af00fd7f826ba2a6ce5563f4efc76194c3643ec4e980dbaf0a7476f3a",
+    "equivalence_binding_match": true,
+    "page_count": 28,
+    "page_hash_match_count": 28,
+    "page_hash_total": 28,
+    "contact_sheet_hashes_match": {
+      "sheet-01.png": true,
+      "sheet-02.png": true,
+      "sheet-03.png": true,
+      "sheet-04.png": true,
+      "sheet-05.png": true
+    },
+    "existing_visual_outcome": "KNOWN_R02_LAYOUT_BLOCKERS_RESOLVED; READY_FOR_INTEGRATOR_REVIEW; NO_FORMAL_PASS"
+  },
+  "unverified_gates": [
+    "Primary official source SHA and scoped unique Blueprint row hash not rebound in this recheck",
+    "Dot exact-SHA approval absent",
+    "GitHub PR #92 same-ref raw-byte readback not done",
+    "Existing visual receipt is READY_FOR_INTEGRATOR_REVIEW, not formal PASS"
+  ],
+  "overall_disposition": "LOCAL_SCOPED_CHECKS_ONLY; CANDIDATE_HOLD_PENDING_DOT_AND_SOURCE_BINDING"
+}
