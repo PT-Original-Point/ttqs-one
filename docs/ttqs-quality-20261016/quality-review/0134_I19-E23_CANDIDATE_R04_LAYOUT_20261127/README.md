@@ -6,6 +6,6 @@
 - Exact Dot approval permits integration of this SHA only.
 - Scope: two line breaks in Section 5.4 cash-rate cells; all amounts, paragraph text, run formatting and arithmetic are unchanged.
 - QA: deterministic technical PASS; scoped visual PASS (page 8 directly inspected by Dot, 27 rendered pages hash-inherited); semantic verdict inherited from the independent W2 R02 review through exact text-equivalence receipts. No new W2 model call is claimed.
-- GitHub raw-byte readback: PENDING at package creation; status is recorded separately after push.
+- GitHub raw-byte readback: VERIFIED from immutable commit `700eccf64f0b74f04c7a33f080a06196ad4644d6`; remote SHA-256 and bytes exactly match the candidate. Receipt: `candidate/GITHUB_RAW_BYTE_READBACK_R04_CURRENT_HEAD_20261127.json` (`299e5145981deac42e3269f141ee0d70e643164e316cdde9593059b658d005ec`).
 - Candidate remains CANDIDATE. Formal acceptance is NOT_GRANTED; REAL evidence is UNKNOWN/HOLD.
-- This is the same doc_id 0134: distinct-document quality count delta is 0.
+- This is the same doc_id 0134: distinct-document quality count delta is 0. The exact-SHA candidate has technical PASS, scoped visual PASS, inherited semantic PASS, Dot approval and raw-byte readback; formal acceptance remains NOT_GRANTED. The exact-SHA candidate now has technical PASS, scoped visual PASS, inherited semantic PASS, Dot approval and raw-byte readback; formal acceptance remains NOT_GRANTED.
