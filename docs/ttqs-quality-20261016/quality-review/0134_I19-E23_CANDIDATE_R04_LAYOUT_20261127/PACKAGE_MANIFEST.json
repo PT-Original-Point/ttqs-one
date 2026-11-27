@@ -26,23 +26,18 @@
   "package_files": [
     {
       "path": "DELIVERY_INDEX_R04.json",
-      "bytes": 1583,
-      "sha256": "86d8d47d9240a7f3fc4d497aa810537abe29b0f1885471cfefc0bf54c450cc87"
+      "bytes": 1576,
+      "sha256": "24315ced42992a87186943e95de85ff58c2493c8ac69738f9198d36e2f7086bc"
     },
     {
       "path": "README.md",
-      "bytes": 1546,
-      "sha256": "c085b5969c26af67fc4a6b259f37290a040b3171884c7244fd4513057ad290f9"
+      "bytes": 1539,
+      "sha256": "b22431c12e22b30408f681f74f04399b59b7ca6ffa15b3b8bdff73b7a810b163"
     },
     {
       "path": "candidate/0134_I19-E23_CANDIDATE_R04.docx",
       "bytes": 68844,
       "sha256": "db4867b709f4d1962db9c2d991c879975f0a140f907621e2df0f1727c700a0b3"
-    },
-    {
-      "path": "candidate/GITHUB_RAW_BYTE_READBACK_R04_CURRENT_HEAD_20261127.json",
-      "bytes": 4483,
-      "sha256": "299e5145981deac42e3269f141ee0d70e643164e316cdde9593059b658d005ec"
     },
     {
       "path": "qa/CODEX_R12_3_TECHNICAL_RECHECK_R03.json",
@@ -68,6 +63,11 @@
       "path": "qa/F04_WORD_NATIVE_VISUAL_OBSERVATION_LAYOUT_R03.json",
       "bytes": 8058,
       "sha256": "da8c737214689e6c84799a781b67a30cd76cbe165441ab4d77326354783d0a92"
+    },
+    {
+      "path": "qa/GITHUB_RAW_BYTE_READBACK_R04_CURRENT_HEAD_20261127.json",
+      "bytes": 4576,
+      "sha256": "561955527fd33e0bf49b9e9b85e58ed14469333e97dda1aba18cf0130d926810"
     },
     {
       "path": "qa/INDEPENDENT_R02_R03_SEMANTIC_EQUIVALENCE.json",
@@ -162,8 +162,8 @@
   ],
   "manifest_scope": "Exact candidate and evidence package; official source PDF is referenced by canonical repository path and exact SHA rather than duplicated.",
   "github_readback_commit": "700eccf64f0b74f04c7a33f080a06196ad4644d6",
-  "github_readback_receipt_path": "candidate/GITHUB_RAW_BYTE_READBACK_R04_CURRENT_HEAD_20261127.json",
-  "github_readback_receipt_sha256": "299e5145981deac42e3269f141ee0d70e643164e316cdde9593059b658d005ec",
+  "github_readback_receipt_path": "qa/GITHUB_RAW_BYTE_READBACK_R04_CURRENT_HEAD_20261127.json",
+  "github_readback_receipt_sha256": "561955527fd33e0bf49b9e9b85e58ed14469333e97dda1aba18cf0130d926810",
   "github_readback_url": "https://raw.githubusercontent.com/PT-Original-Point/ttqs-one/700eccf64f0b74f04c7a33f080a06196ad4644d6/docs/ttqs-quality-20261016/quality-review/0134_I19-E23_CANDIDATE_R04_LAYOUT_20261127/candidate/0134_I19-E23_CANDIDATE_R04.docx",
   "quality_basis": "Exact candidate SHA has technical PASS, scoped visual PASS (page 8 direct inspection plus 27 unchanged rendered-page hashes), semantic PASS inherited through exact text-equivalence chain and Dot exact-SHA approval, and verified GitHub raw bytes. This is candidate quality status only; formal acceptance remains NOT_GRANTED.",
   "readback_observed_at_tpe": "2026-11-27T12:05:05+08:00"
