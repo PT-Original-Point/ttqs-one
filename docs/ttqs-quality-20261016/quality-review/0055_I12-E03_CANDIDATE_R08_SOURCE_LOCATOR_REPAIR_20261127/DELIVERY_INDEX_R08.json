@@ -1,0 +1,83 @@
+{
+  "schema": "TTQS_ONE_DELIVERY_INDEX_R08",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0055",
+  "official_requirement_id": "I12-E03",
+  "project_157_item": 58,
+  "printed_checkbox_serial": "UNKNOWN",
+  "printed_serial_note": "Official p.4 item 12c has no printed box ordinal; 058 is the internal 157-checkbox crosswalk sequence only.",
+  "revision": "R08_v3",
+  "base_candidate_sha256": "85c329617ef7146ad1569fc3ebd841ab7ce5a0c5e183cbabc7ac6474109ded94",
+  "candidate_status": "CANDIDATE_SAMPLE_SYNTHETIC_ONLY",
+  "candidate_sha256": "34f46b6c8d84b5264c998dd872834a92e342ab2e23e456fcedf9bd56b3a4af00",
+  "candidate_bytes": 56199,
+  "candidate_git_blob_sha1": "531be2a32711134911755de5092e33124024cd85",
+  "remote_path": "docs/ttqs-quality-20261016/quality-review/0055_I12-E03_CANDIDATE_R08_SOURCE_LOCATOR_REPAIR_20261127/candidate/0055_R08_SOURCE_LOCATOR_REPAIR_CANDIDATE_v3.docx",
+  "source": {
+    "official_source_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "official_source_path": "docs/ttqs-quality-20261016/quality-review/0055_R02/inputs/official_checklist_source.pdf",
+    "locator": "p.4, item 12c, rightmost column, third checkbox; requirement I12-E03; no printed box ordinal",
+    "unique_blueprint_sha256": "e255a2397b47868e3c0a740320bda0bd022b9e540f7adeb7211f66d32840c45b",
+    "unique_blueprint_path": "docs/ttqs-quality-20261016/quality-review/0055_R02/UNIQUE_BLUEPRINT_0055_R02.md",
+    "separate_source_packet_sha256": "UNKNOWN"
+  },
+  "technical_status": "PASS_SCOPED_EXACT_SHA_SOURCE_LOCATOR_AND_INVARIANCE",
+  "visual_status": "PASS_FULL_PAGE_EXACT_SHA_BY_DELTA",
+  "semantic_status": "PASS_SEMANTIC_SCOPED_EXACT_SHA",
+  "independent_semantic_basis": "W2 R06 exact-SHA review reused only for unchanged text; W2 R07 threshold/tie findings retained; Dot independently verified R08 source override. No new reviewer/model call.",
+  "quality_ok": true,
+  "quality_scope": "Dot disposition PASS_SCOPED_EXACT_SHA_CANDIDATE_INTEGRATION_ONLY; this marks only the scoped R08 candidate and does not qualify the historical cohort.",
+  "quality_notes": [
+    "Nine source-locator paragraph substitutions only; 18 of 19 package parts unchanged, only word/document.xml changed.",
+    "All 52 unique synthetic fact rows remain byte-identical; no score, fee, or sample content rewrite.",
+    "11-page Word-native delta: pages 1, 2, 11 changed and directly inspected; pages 3-10 page-image hashes identical to R07. Existing PDFs and delta receipt reused; no re-render.",
+    "Original worker receipt is preserved unchanged and predates Dot approval; exact Dot approval supersedes its former pending gate.",
+    "R05 path and prior R07/R08 trials remain historical; this package adds a unique R08 path only."
+  ],
+  "register_rows": 52,
+  "register_sha256": "8044dec5d3ef118c9efdd650642eeb607525e7db7b536f8ab5b6ab678807b051",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence_status": "UNKNOWN/HOLD",
+  "current_promotion": "NOT_PERFORMED",
+  "distinct_doc_id_delta": 0,
+  "github_raw_readback": {
+    "status": "VERIFIED_RAW_BYTE_READBACK",
+    "commit": "83c07f566fe7e72ff922e5015b0aed8cfc47e7f7",
+    "pr_head_at_readback": "83c07f566fe7e72ff922e5015b0aed8cfc47e7f7",
+    "receipt_path": "docs/ttqs-quality-20261016/quality-review/0055_I12-E03_CANDIDATE_R08_SOURCE_LOCATOR_REPAIR_20261127/evidence/GITHUB_RAW_BYTE_READBACK_R08_COMMIT1.json",
+    "receipt_sha256": "172fd223293f5f8d172c1526eaaab8343f319f20c78c752ae8849d57c417ca58",
+    "sha256": "34f46b6c8d84b5264c998dd872834a92e342ab2e23e456fcedf9bd56b3a4af00",
+    "bytes": 56199,
+    "git_blob_sha1": "531be2a32711134911755de5092e33124024cd85"
+  },
+  "receipts": {
+    "dot_approval": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0055_I12-E03_CANDIDATE_R08_SOURCE_LOCATOR_REPAIR_20261127/evidence/DOT_0055_R08_EXACT_CANDIDATE_APPROVAL_20261127.json",
+      "sha256": "12cbfd3f3f6f0433db634105e38acd89e1b65cb33f0c8a79d060b64037ff69d4",
+      "status": "PASS_SCOPED_EXACT_SHA_CANDIDATE_INTEGRATION_ONLY"
+    },
+    "source_repair": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0055_I12-E03_CANDIDATE_R08_SOURCE_LOCATOR_REPAIR_20261127/evidence/SOURCE_LOCATOR_REPAIR_RECEIPT_R08_20261127.json",
+      "sha256": "1ae4b296487401d0d4c02ee46430519e625ac5354b44736c4a93769570066073"
+    },
+    "visual_delta": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0055_I12-E03_CANDIDATE_R08_SOURCE_LOCATOR_REPAIR_20261127/evidence/NATIVE_WORD_PAGE_DELTA_R08_20261127.json",
+      "sha256": "8b05842a81a476a08ba52c27fd43bd6cd8e7db7414aff2c5c76b8e4c22595c6f"
+    },
+    "register": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0055_I12-E03_CANDIDATE_R08_SOURCE_LOCATOR_REPAIR_20261127/evidence/SYNTHETIC_REPLACEMENT_REGISTER_0055_R08_LINKED.csv",
+      "sha256": "8044dec5d3ef118c9efdd650642eeb607525e7db7b536f8ab5b6ab678807b051",
+      "rows": 52
+    },
+    "raw_readback": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0055_I12-E03_CANDIDATE_R08_SOURCE_LOCATOR_REPAIR_20261127/evidence/GITHUB_RAW_BYTE_READBACK_R08_COMMIT1.json",
+      "sha256": "172fd223293f5f8d172c1526eaaab8343f319f20c78c752ae8849d57c417ca58"
+    }
+  },
+  "historical": {
+    "prior_R05_sha256": "b30cebc0e5a7df10095d4a20271109e2e3e2eab278938e6ff1a1cfb764e9b6f1",
+    "prior_R05_path": "docs/ttqs-quality-20261016/quality-review/0055_I12-E03_CANDIDATE_R05_20261125/candidate/0055_R05_CANDIDATE.docx",
+    "r07_base_sha256": "85c329617ef7146ad1569fc3ebd841ab7ce5a0c5e183cbabc7ac6474109ded94",
+    "superseded_R08_trials_preserved": true
+  }
+}
