@@ -1,0 +1,29 @@
+{
+  "doc_id": "0055",
+  "candidate_sha256": "85c329617ef7146ad1569fc3ebd841ab7ce5a0c5e183cbabc7ac6474109ded94",
+  "status": "HOLD_SCOPED_OFFICIAL_SOURCE_AND_NEIGHBOR_LOCATOR_REPAIR",
+  "official_evidence_table_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "blueprint_exact_row_sha256": "0f2df5c3354d0d53b01461849204f241da70fd12fbee932314093b948d60d903",
+  "official_locator": "Printed p4, indicator 12, rightmost evidence column third checkbox, project ID I12-E03; 12c is the aligned sub-indicator, checkbox has no printed ordinal. Same PDF next box equipment / insurance is mapped to I12-E04, not I12-E05, which is other.",
+  "findings": [
+    {
+      "p_zero_based": [
+        17,
+        26,
+        465,
+        469
+      ],
+      "detail": "The actual PDF is the checkable evidence table, not the rating table used as title in the candidate; no 058 or individual printed checkbox serial. Label 058 as an internal index only if corroborated or omit."
+    },
+    {
+      "p_zero_based": [
+        22,
+        24,
+        28,
+        30
+      ],
+      "detail": "Do not depict project reference indices as official checkbox numbers for neighboring items. Paragraph 28 cross-reference equipment safety/site insurance says I12-E05; correct to I12-E04."
+    }
+  ],
+  "repair_scope": "Isolated copy; source label, i.e. actual evidence table name and project IDs, only. Preserve original source quote/score tables/rounding thresholds/fee/all 52 underlying register facts. Rebind existing source page and register pointers if affected, use new SHA and native Word compare only changed pages; no shared push before Dot approval. Keep 0134 integration uninterrupted."
+}
