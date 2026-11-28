@@ -1,0 +1,403 @@
+{
+  "schema": "TTQS_ONE_BUILD_RECEIPT_R12_3",
+  "deliverable_id": "0002",
+  "candidate_filename": "0002__策略因果鏈與三年KPI對照表.docx",
+  "candidate_sha256": "6c11620746c46c637222da31bbacd7243cb6dd0c46e25296cdcd7fe08b556bcd",
+  "candidate_bytes": 52807,
+  "baseline_docx_sha256": "35cc28acb04f4fba0681833ef51857ccaaf98f60698cd7218d9aef49749ecc14",
+  "blueprint_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+  "blueprint_row_sha256": "acf45a45f488364bf14f3fd3a73530ea8f1c37bf2ec02e0cf532ec20e9f05d4c",
+  "official_source_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "crosswalk_sha256": "1ddfbb608bcad25170683ddb42a1dbb27bafa6f1f35ff0498f1b8d75b24f0679",
+  "register_file": "0002_R07_示範資料替換清單.csv",
+  "register_sha256": "e1c23fe7c04fe02046a27f9fb6e548c6925feaa322dae1b728e51b787135b5da",
+  "register_row_count": 18,
+  "sources_read": [
+    {
+      "artifact": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\SOURCES\\TTQS查核佐證文件資料表-訓練機構版 (2).pdf",
+      "sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+      "use": "Official checkbox source PDF, printed page 1."
+    },
+    {
+      "artifact": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\BLUEPRINT_CURRENT.jsonl",
+      "sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+      "row_sha256": "acf45a45f488364bf14f3fd3a73530ea8f1c37bf2ec02e0cf532ec20e9f05d4c",
+      "use": "Deliverable 0002 source text and required output filename."
+    },
+    {
+      "artifact": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\TTQS_ONE_129_REQUIREMENT_TO_142_DELIVERABLE_CROSSWALK_R01.csv",
+      "sha256": "1ddfbb608bcad25170683ddb42a1dbb27bafa6f1f35ff0498f1b8d75b24f0679",
+      "use": "I01-E01 mapping to deliverables 0001/0002."
+    },
+    {
+      "artifact": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_HUMAN_R12_3_FULL_QUALITY_REMEDIATION_20261125\\HISTORICAL_AUDIT_REVIEW_0001_0026\\0002_R05_A2_SCOPED_REPAIR_20261127\\R06_P53_REDUNDANT_EMPTY_PARAGRAPH_REPAIR_20261128\\0002_I01-E01_R06_P53_STRUCTURAL_CANDIDATE.docx",
+      "sha256": "35cc28acb04f4fba0681833ef51857ccaaf98f60698cd7218d9aef49749ecc14",
+      "use": "Isolated R06 baseline; carries forward the structural repair."
+    },
+    {
+      "artifact": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_HUMAN_R12_3_FULL_QUALITY_REMEDIATION_20261125\\HISTORICAL_AUDIT_REVIEW_0001_0026\\0002_R05_A2_SCOPED_REPAIR_20261127\\R06_P53_REDUNDANT_EMPTY_PARAGRAPH_REPAIR_20261128\\0002_R06_STRUCTURAL_RECEIPT.json",
+      "sha256": "a5b8bae993a2b66641b43b778d4bd2759b49ebbe99cc5321853a355b69a9f777",
+      "use": "R06 historical structural evidence, not transferred as R07 QA."
+    },
+    {
+      "artifact": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_HUMAN_R12_3_FULL_QUALITY_REMEDIATION_20261125\\HISTORICAL_AUDIT_REVIEW_0001_0026\\0002_R05_A2_SCOPED_REPAIR_20261127\\R06_P53_REDUNDANT_EMPTY_PARAGRAPH_REPAIR_20261128\\DOT_0002_R06_EXACT_WORD_16P_SCOPE_20261128.json",
+      "sha256": "5727995dfa7e03c1b13d0c32a3b3f785c85bfb0dc44db6c314ed925e5bfb7d6f",
+      "use": "R06 16-page scope receipt, not transferred as R07 visual PASS."
+    },
+    {
+      "artifact": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_HUMAN_R12_3_FULL_QUALITY_REMEDIATION_20261125\\HISTORICAL_AUDIT_REVIEW_0001_0026\\0002_R05_A2_SCOPED_REPAIR_20261127\\R06_P53_REDUNDANT_EMPTY_PARAGRAPH_REPAIR_20261128\\R06_WORD_NATIVE_EXACT_20261128_ATTEMPT02\\candidate_R06.pdf",
+      "sha256": "35d60b1ab3e89b9292adada58ccb9b50ad1eb57bad0f4f8ecdd016875c856303",
+      "use": "R06 historical native PDF, not R07 visual acceptance."
+    },
+    {
+      "artifact": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_HUMAN_R12_3_FULL_QUALITY_REMEDIATION_20261125\\HISTORICAL_AUDIT_REVIEW_0001_0026\\0002_R05_A2_SCOPED_REPAIR_20261127\\R06_P53_REDUNDANT_EMPTY_PARAGRAPH_REPAIR_20261128\\DOT_0002_R06_CUMULATIVE_EXACT_HOLD_20261128.json",
+      "sha256": "7103322bc9118fa3c8a875f03e6e729e6a94f1eaffb0392a2a30f0c9ef9f9f53",
+      "use": "Dot exact R06 HOLD_FULL_QA and scoped repair source."
+    },
+    {
+      "artifact": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_HUMAN_R12_3_FULL_QUALITY_REMEDIATION_20261125\\HISTORICAL_AUDIT_REVIEW_0001_0026\\0002_R05_A2_SCOPED_REPAIR_20261127\\R07_CUMULATIVE_EXACT_QA_REPAIR_20261128\\R07B_STATIC_SCOPE_REPAIR_20261128\\candidate\\0002__策略因果鏈與三年KPI對照表.docx",
+      "sha256": "0136fd137cceafab4965745d03377a3366d01d9926611586be694df92bca3d82",
+      "use": "Exact R07B parent candidate; all three scoped Dot holds addressed in this successor."
+    },
+    {
+      "artifact": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_HUMAN_R12_3_FULL_QUALITY_REMEDIATION_20261125\\HISTORICAL_AUDIT_REVIEW_0001_0026\\0002_R05_A2_SCOPED_REPAIR_20261127\\R07_CUMULATIVE_EXACT_QA_REPAIR_20261128\\R07B_STATIC_SCOPE_REPAIR_20261128\\candidate\\0002_R07B_BUILD_RECEIPT.json",
+      "sha256": "3c04978c8b0396277c501cae932c98404f286e402f6d3e458d03b1a0d2aac606",
+      "use": "R07B parent build receipt."
+    },
+    {
+      "artifact": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_HUMAN_R12_3_FULL_QUALITY_REMEDIATION_20261125\\HISTORICAL_AUDIT_REVIEW_0001_0026\\0002_R05_A2_SCOPED_REPAIR_20261127\\R07_CUMULATIVE_EXACT_QA_REPAIR_20261128\\R07B_STATIC_SCOPE_REPAIR_20261128\\candidate\\DOT_0002_R07B_EXACT_WORD_AND_CUMULATIVE_HOLD_20261128.json",
+      "sha256": "29e774bb5bde5b7f32dd13ecf627f14fe1aae4fe50398901b7fe8de2e73b3e17",
+      "use": "Dot exact R07B disposition with three holds."
+    },
+    {
+      "artifact": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_HUMAN_R12_3_FULL_QUALITY_REMEDIATION_20261125\\HISTORICAL_AUDIT_REVIEW_0001_0026\\0002_R05_A2_SCOPED_REPAIR_20261127\\R07_CUMULATIVE_EXACT_QA_REPAIR_20261128\\R07C_DOT_THREE_HOLD_REPAIR_20261128\\BYTEPATCH_SUCCESSOR\\candidate\\0002__策略因果鏈與三年KPI對照表.docx",
+      "sha256": "0e123711556977199c866837a090b4de11d88db47104642a1ddd7b57199838cc",
+      "use": "Exact R07C parent; page-10 orphaned threshold-table header finding prompted this formula-only successor."
+    },
+    {
+      "artifact": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_HUMAN_R12_3_FULL_QUALITY_REMEDIATION_20261125\\HISTORICAL_AUDIT_REVIEW_0001_0026\\0002_R05_A2_SCOPED_REPAIR_20261127\\R07_CUMULATIVE_EXACT_QA_REPAIR_20261128\\R07C_DOT_THREE_HOLD_REPAIR_20261128\\BYTEPATCH_SUCCESSOR\\candidate\\0002_R07C_BUILD_RECEIPT.json",
+      "sha256": "7d78718b48e52bc7a8a1509d902eb747aa0610f0cf6b4b4d8661fabebfecc77c",
+      "use": "R07C build lineage and exact unchanged register binding."
+    },
+    {
+      "artifact": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0002_R07D_20261128\\run01\\native_word_receipt.json",
+      "sha256": "3c57ebd4b6ad17b4c24d2eb84a7dedf73fe9dbae3c6b32f6a78f5fe8f1ae7c61",
+      "use": "Native Word 16 exact-SHA render receipt; document window PID attribution verified."
+    },
+    {
+      "artifact": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0002_R07D_20261128\\run01\\candidate.pdf",
+      "sha256": "6e6cc518ee4b653362bba424b84cb0a3bc860560cd03f1d74bca7aa0e6f046c0",
+      "use": "19-page native Word PDF for R07D visual comparison."
+    },
+    {
+      "artifact": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0002_R07D_20261128\\run01\\native_stage_events.jsonl",
+      "sha256": "b70a801d606289f84748c398a9d70957c26af246a9ccca9944849668cecb4b3f",
+      "use": "Durably flushed native Word stage events."
+    },
+    {
+      "artifact": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0002_R07D_20261128\\run01\\visual_delta\\r07c_to_r07d_page_delta.json",
+      "sha256": "921241356c55a16c76c93cfc69626aaca57d3e1d97da4dd88872c14f691a1842",
+      "use": "All-page 100-dpi R07C to R07D pixel/text delta."
+    },
+    {
+      "artifact": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_HUMAN_R12_3_FULL_QUALITY_REMEDIATION_20261125\\HISTORICAL_AUDIT_REVIEW_0001_0026\\0002_R05_A2_SCOPED_REPAIR_20261127\\R07_CUMULATIVE_EXACT_QA_REPAIR_20261128\\R07D_A1_FORMULA_COMPRESSION_20261128\\0002_R07D_NATIVE_VISUAL_RECEIPT.json",
+      "sha256": "743218fd373ad4eaa61883bccdfc3a9ab2a85c7dc172df522759745b405935f7",
+      "use": "Local manual inspection of all changed pages and prior changed pages; independent Dot decision pending."
+    }
+  ],
+  "synthetic_facts": [
+    {
+      "doc_id": "0002",
+      "scenario_id": "R06_CARRIED_SAMPLE_FACTS",
+      "fact_id": "SYN-ORG-01",
+      "field": "示範機構代稱",
+      "fact_type": "SAMPLE/SYNTHETIC",
+      "synthetic_value": "示範社區關懷訓練機構（虛擬代碼）",
+      "effective_date": "UNKNOWN（示範欄位真實生效日未提供）",
+      "document_section": "全文說明、表頭",
+      "calculation_or_basis": "查驗法人登記證書字號與圖記印模。",
+      "source_status": "SAMPLE/SYNTHETIC",
+      "real_replacement_action": "機構正式立案證書、法人登記證書與官方全銜；取得並核驗真實原件後才替換；目前真實資料UNKNOWN。",
+      "responsible_role": "機構負責人／執行長"
+    },
+    {
+      "doc_id": "0002",
+      "scenario_id": "R06_CARRIED_SAMPLE_FACTS",
+      "fact_id": "SYN-PERIOD-01",
+      "field": "示範規劃期程",
+      "fact_type": "SAMPLE/SYNTHETIC",
+      "synthetic_value": "2026–2028 年規劃期程",
+      "effective_date": "UNKNOWN（示範欄位真實生效日未提供）",
+      "document_section": "肆、伍章表格及公式",
+      "calculation_or_basis": "確認計畫期程業經會議決議通過並載於議事錄。",
+      "source_status": "SAMPLE/SYNTHETIC",
+      "real_replacement_action": "理監事會或管委會正式核定之中長程發展計畫書；取得並核驗真實原件後才替換；目前真實資料UNKNOWN。",
+      "responsible_role": "策略贊助人 (示範覆核角色乙)"
+    },
+    {
+      "doc_id": "0002",
+      "scenario_id": "R06_CARRIED_SAMPLE_FACTS",
+      "fact_id": "SYN-A1-01",
+      "field": "示範策略軸一",
+      "fact_type": "SAMPLE/SYNTHETIC",
+      "synthetic_value": "3門課程開發；基線0/3；目標 1/3, 2/3, 3/3",
+      "effective_date": "UNKNOWN（示範欄位真實生效日未提供）",
+      "document_section": "肆、伍章表列軸向一",
+      "calculation_or_basis": "取得完整教案審查合格證明與課審委員簽章。",
+      "source_status": "SAMPLE/SYNTHETIC",
+      "real_replacement_action": "訓練發展委員會核定之年度課程開發計畫清單及審查標準；取得並核驗真實原件後才替換；目前真實資料UNKNOWN。",
+      "responsible_role": "課程研發主任"
+    },
+    {
+      "doc_id": "0002",
+      "scenario_id": "R06_CARRIED_SAMPLE_FACTS",
+      "fact_id": "SYN-A2-01",
+      "field": "示範策略軸二",
+      "fact_type": "SAMPLE/SYNTHETIC",
+      "synthetic_value": "追蹤涵蓋率；算術樣本分母50名合格結訓且T日有效同意之去重學員；基線40%；目標50%、60%、70%；邊界樣本S01-S05：分母3人、分子2人、66.7%。",
+      "effective_date": "UNKNOWN（示範欄位真實生效日未提供）",
+      "document_section": "肆、伍章表列軸向二",
+      "calculation_or_basis": "依核准SOP核對合格結訓名冊、唯一學員鍵、T日同意狀態及截止日；未同意或T前撤回者排除分子/分母；分母0或狀態不明為N/A/UNKNOWN；現行口徑UNKNOWN。",
+      "source_status": "SAMPLE/SYNTHETIC",
+      "real_replacement_action": "訓練班次簽到冊、合格結訓名冊、統計截止T有效同意紀錄及有效追蹤紀錄。；取得並核驗真實原件後才替換；目前真實資料UNKNOWN。",
+      "responsible_role": "教務行政組長"
+    },
+    {
+      "doc_id": "0002",
+      "scenario_id": "R06_CARRIED_SAMPLE_FACTS",
+      "fact_id": "SYN-A3-01",
+      "field": "示範策略軸三",
+      "fact_type": "SAMPLE/SYNTHETIC",
+      "synthetic_value": "佐證可追溯率；抽檢20份；基線70%；目標 80%, 90%, 95%",
+      "effective_date": "UNKNOWN（示範欄位真實生效日未提供）",
+      "document_section": "肆、伍章表列軸向三",
+      "calculation_or_basis": "依實際抽檢數量計算，檢驗每份表件編號與原件。",
+      "source_status": "SAMPLE/SYNTHETIC",
+      "real_replacement_action": "內部品質稽核紀錄簿、各班期行政檔案卷宗實際抽檢單；取得並核驗真實原件後才替換；目前真實資料UNKNOWN。",
+      "responsible_role": "品質稽核人員"
+    },
+    {
+      "doc_id": "0002",
+      "scenario_id": "R06_CARRIED_SAMPLE_FACTS",
+      "fact_id": "SYN-ROLE-01",
+      "field": "示範覆核角色乙",
+      "fact_type": "SAMPLE/SYNTHETIC",
+      "synthetic_value": "策略贊助角色代碼（虛擬代碼）",
+      "effective_date": "UNKNOWN（示範欄位真實生效日未提供）",
+      "document_section": "參、肆、柒、捌章",
+      "calculation_or_basis": "查核人事組織派令與主管職務證明文件。",
+      "source_status": "SAMPLE/SYNTHETIC",
+      "real_replacement_action": "機構人事派令、組織架構圖授權之策略決策主管；取得並核驗真實原件後才替換；目前真實資料UNKNOWN。",
+      "responsible_role": "人事主管"
+    },
+    {
+      "doc_id": "0002",
+      "scenario_id": "R06_CARRIED_SAMPLE_FACTS",
+      "fact_id": "SYN-ROLE-02",
+      "field": "示範填報角色甲",
+      "fact_type": "SAMPLE/SYNTHETIC",
+      "synthetic_value": "執行協調角色代碼（虛擬代碼）",
+      "effective_date": "UNKNOWN（示範欄位真實生效日未提供）",
+      "document_section": "參、肆、柒、捌章",
+      "calculation_or_basis": "查核內部業務執掌劃分表及專案派任指派單。",
+      "source_status": "SAMPLE/SYNTHETIC",
+      "real_replacement_action": "機構人事派令指定之訓練專案經理或品質管制主管；取得並核驗真實原件後才替換；目前真實資料UNKNOWN。",
+      "responsible_role": "人事主管"
+    },
+    {
+      "doc_id": "0002",
+      "scenario_id": "R06_CARRIED_SAMPLE_FACTS",
+      "fact_id": "SYN-REVIEW-01",
+      "field": "示範差距分級參數",
+      "fact_type": "SAMPLE/SYNTHETIC",
+      "synthetic_value": "SAMPLE門檻：0.0 pp Green無升級交接；9.9 pp Yellow/15工作日；10.0及10.1 pp Red/7工作日。",
+      "effective_date": "UNKNOWN（示範欄位真實生效日未提供）",
+      "document_section": "肆、柒、捌章",
+      "calculation_or_basis": "查核機構正式公告之行政品質管理辦法；示範門檻與時限須以核准版本替換。",
+      "source_status": "SAMPLE/SYNTHETIC",
+      "real_replacement_action": "機構品質手冊明訂之內部管審會議規範與控制程序書；取得並核驗真實原件後才替換；目前真實資料UNKNOWN。",
+      "responsible_role": "品質管制主管"
+    },
+    {
+      "doc_id": "0002",
+      "scenario_id": "R06_CARRIED_SAMPLE_FACTS",
+      "fact_id": "SYN-RISK-01",
+      "field": "示範個資與同意邊界",
+      "fact_type": "SAMPLE/SYNTHETIC",
+      "synthetic_value": "個資授權合規管制；A2未有效同意或截止T前撤回標記HOLD，且同時排除分子/分母（SAMPLE計算口徑，非現行政策）。",
+      "effective_date": "UNKNOWN（示範欄位真實生效日未提供）",
+      "document_section": "第陸章（非數值之 HOLD 管制規則）",
+      "calculation_or_basis": "依核准個資/同意SOP核驗同意狀態與截止日；現行規則UNKNOWN，未核實不得推定為完成或0%。",
+      "source_status": "SAMPLE/SYNTHETIC",
+      "real_replacement_action": "學員個人資料保護作業要點、學員簽署之正本同意書；取得並核驗真實原件後才替換；目前真實資料UNKNOWN。",
+      "responsible_role": "法制／個資專責人員"
+    },
+    {
+      "doc_id": "0002",
+      "scenario_id": "R06_CARRIED_SAMPLE_FACTS",
+      "fact_id": "SYN-BUDGET-01",
+      "field": "實際經費預算（UNKNOWN）",
+      "fact_type": "SAMPLE/SYNTHETIC",
+      "synthetic_value": "經費預算標示為 UNKNOWN，無虛構金額",
+      "effective_date": "UNKNOWN（示範欄位真實生效日未提供）",
+      "document_section": "伍、柒、玖說明",
+      "calculation_or_basis": "必須取得會計師查核簽證或理事會核定預算決算表。",
+      "source_status": "SAMPLE/SYNTHETIC",
+      "real_replacement_action": "機構年度正式核定預算書、會計帳冊或財務報表；取得並核驗真實原件後才替換；目前真實資料UNKNOWN。",
+      "responsible_role": "財務主計人員"
+    },
+    {
+      "doc_id": "0002",
+      "scenario_id": "R06_CARRIED_SAMPLE_FACTS",
+      "fact_id": "SYN-PARTIAL-TIMELINE-01",
+      "field": "Yellow示範時限",
+      "fact_type": "SAMPLE/SYNTHETIC",
+      "synthetic_value": "15個工作日內提出微調方案（SAMPLE/SYNTHETIC示範時限）",
+      "effective_date": "UNKNOWN（示範欄位真實生效日未提供）",
+      "document_section": "柒、判定與改善處置｜注意（Yellow）之改善期限",
+      "calculation_or_basis": "核對起算事件、工作日定義、例外延長及核准版本後，以正式時限替換。",
+      "source_status": "SAMPLE/SYNTHETIC",
+      "real_replacement_action": "機構正式矯正預防措施程序、品質改善時限表及主管核准紀錄；取得並核驗真實原件後才替換；目前真實資料UNKNOWN。",
+      "responsible_role": "品質管制主管／權責主管"
+    },
+    {
+      "doc_id": "0002",
+      "scenario_id": "R06_CARRIED_SAMPLE_FACTS",
+      "fact_id": "SYN-FAIL-TIMELINE-01",
+      "field": "Red示範時限",
+      "fact_type": "SAMPLE/SYNTHETIC",
+      "synthetic_value": "7個工作日內提報改善計畫（SAMPLE/SYNTHETIC示範時限）",
+      "effective_date": "UNKNOWN（示範欄位真實生效日未提供）",
+      "document_section": "柒、判定與改善處置｜預警（Red）之改善期限",
+      "calculation_or_basis": "核對起算事件、工作日定義、例外延長及核准版本後，以正式時限替換。",
+      "source_status": "SAMPLE/SYNTHETIC",
+      "real_replacement_action": "機構正式矯正預防措施程序、品質改善時限表及主管核准紀錄；取得並核驗真實原件後才替換；目前真實資料UNKNOWN。",
+      "responsible_role": "品質管制主管／權責主管"
+    },
+    {
+      "doc_id": "0002",
+      "scenario_id": "R06_CARRIED_SAMPLE_FACTS",
+      "fact_id": "SYN-SAMPLING-01",
+      "field": "抽樣示範參數",
+      "fact_type": "SAMPLE/SYNTHETIC",
+      "synthetic_value": "至少30%名冊抽樣比例（SAMPLE/SYNTHETIC示範參數）",
+      "effective_date": "UNKNOWN（示範欄位真實生效日未提供）",
+      "document_section": "捌、一、抽樣方法｜成效追蹤紀錄",
+      "calculation_or_basis": "核准抽樣設計、最小樣本與抽樣方式，確認個資授權及留痕要求後再替換或正式確認。",
+      "source_status": "SAMPLE/SYNTHETIC",
+      "real_replacement_action": "機構核定抽樣覆核程序、實際追蹤母體名冊及適用個資保護規範；取得並核驗真實原件後才替換；目前真實資料UNKNOWN。",
+      "responsible_role": "品質稽核主管／個資專責人員"
+    },
+    {
+      "doc_id": "0002",
+      "scenario_id": "R06_CARRIED_SAMPLE_FACTS",
+      "fact_id": "SYN-RETENTION-01",
+      "field": "保存年限示範參數",
+      "fact_type": "SAMPLE/SYNTHETIC",
+      "synthetic_value": "六年（規劃執行三年加評核存查三年之SAMPLE示範政策；非法律判定）",
+      "effective_date": "UNKNOWN（示範欄位真實生效日未提供）",
+      "document_section": "拾、二、表件版本與管制作業資訊｜保存年限",
+      "calculation_or_basis": "確認法定期限、起算點、法遵核可與機構核定；依適用規範確定正式年限後替換。",
+      "source_status": "SAMPLE/SYNTHETIC",
+      "real_replacement_action": "適用法令、機構核定檔案保存年限表及評核計畫；取得並核驗真實原件後才替換；目前真實資料UNKNOWN。",
+      "responsible_role": "文件管制員／法遵負責人"
+    },
+    {
+      "doc_id": "0002",
+      "scenario_id": "R06_CARRIED_SAMPLE_FACTS",
+      "fact_id": "SYN-DOCCTRL-01",
+      "field": "文件管制示範欄位",
+      "fact_type": "SAMPLE/SYNTHETIC",
+      "synthetic_value": "文件編號TTQS-TOOL-0002-2026；候選識別TTQS-0002；本候選版Ver 2.0；初版日2026-11-19；本版修訂日2026-11-28；未生效，SAMPLE/SYNTHETIC",
+      "effective_date": "UNKNOWN（示範欄位真實生效日未提供）",
+      "document_section": "拾、二、表件版本與管制作業資訊｜文件編號、版本、日期及機密等級",
+      "calculation_or_basis": "逐欄比對受控清冊、核准紀錄、生效日期及分級依據後替換；未核准前維持SAMPLE。",
+      "source_status": "SAMPLE/SYNTHETIC",
+      "real_replacement_action": "機構核准文件清冊、版控紀錄、文件分級規範及正式受控文件；取得並核驗真實原件後才替換；目前真實資料UNKNOWN。",
+      "responsible_role": "文件管制員／核准主管"
+    },
+    {
+      "doc_id": "0002",
+      "scenario_id": "R07_THREE_AXIS_WORKED_EXAMPLE",
+      "fact_id": "SYN-0002-DEMO-A1",
+      "field": "示範軸一完整抽核案例（計算、判定、定位、處置）",
+      "fact_type": "SAMPLE/SYNTHETIC",
+      "synthetic_value": "示範值：規劃課程3門，覆核通過1門；1/3=33.3%。2026示範目標1/3=33.3%。本會實際值：UNKNOWN。 示範判定：Green；落差0.0 pp，依本表示範門檻不升級。此為合成演練；本會實際判定：UNKNOWN。 虛構定位（非實存原件）：演練資料夾/課程清單-01第1頁第1至3列；覆核紀錄-01第1頁第1列。 模擬處置：將本例覆核清單存入演練資料夾並列入季度抽查；真實檔案、處置及核准均UNKNOWN。",
+      "effective_date": "UNKNOWN（虛構演練，無真實生效日）",
+      "document_section": "T3示範軸一列、T4示範軸一列、替換清單新增案例列",
+      "calculation_or_basis": "1/3=33.3%；目標1/3=33.3%；差0.0 pp；Green。",
+      "source_status": "SAMPLE/SYNTHETIC",
+      "real_replacement_action": "用真實課程清冊及覆核原件替換；目前UNKNOWN。",
+      "responsible_role": "示範承辦角色甲填報；示範主管角色乙覆核（虛構代稱）。"
+    },
+    {
+      "doc_id": "0002",
+      "scenario_id": "R07_THREE_AXIS_WORKED_EXAMPLE",
+      "fact_id": "SYN-0002-DEMO-A2",
+      "field": "示範軸二完整追蹤案例（計算、判定、定位、處置）",
+      "fact_type": "SAMPLE/SYNTHETIC",
+      "synthetic_value": "示範值：去重且具有效同意之合格學員50人，完成至少一次有效追蹤32人；32/50=64.0%。2026示範目標25/50=50.0%；高於目標14.0 pp。本會實際值：UNKNOWN。此例與五人邊界例分開。 示範判定：Green；超前14.0 pp。五人同意邊界例仍為2/3=66.7%，不以總量例替代。真實口徑與實際判定：UNKNOWN。 虛構定位（非實存原件）：演練資料夾/合格名冊-01第1頁第1至50列；追蹤紀錄-01第1頁第1至32列。 模擬處置：依例行演練歸檔並於季度抽樣重算；不得視為實際學員或同意紀錄；真實處置與核准UNKNOWN。",
+      "effective_date": "UNKNOWN（虛構演練，無真實生效日）",
+      "document_section": "T3示範軸二列、T4示範軸二列、替換清單新增案例列",
+      "calculation_or_basis": "32/50=64.0%；目標25/50=50.0%；高於14.0 pp；五人邊界例仍獨立為2/3=66.7%。",
+      "source_status": "SAMPLE/SYNTHETIC",
+      "real_replacement_action": "用去重母體、同意紀錄及追蹤原件重算；目前UNKNOWN。",
+      "responsible_role": "示範承辦角色甲填報；示範主管角色乙覆核（虛構代稱）。"
+    },
+    {
+      "doc_id": "0002",
+      "scenario_id": "R07_THREE_AXIS_WORKED_EXAMPLE",
+      "fact_id": "SYN-0002-DEMO-A3",
+      "field": "示範軸三完整抽核案例（計算、判定、定位、處置）",
+      "fact_type": "SAMPLE/SYNTHETIC",
+      "synthetic_value": "示範值：抽查20份，13份完整可檢索；13/20=65.0%。2026示範目標16/20=80.0%；落後15.0 pp。本會實際值：UNKNOWN。 示範判定：Red；按本表演練規則於7個工作日內提出改善計畫。後續示範複核20/20=100.0%；本會實際判定、改善及結案：UNKNOWN。 虛構定位（非實存原件）：演練資料夾/抽檢清單-01第1頁第1至20列；缺漏追蹤單-01第1頁第1至7列。 模擬處置：7個工作日內提出改善計畫；後續演練複核20份均可追溯（20/20=100.0%）。真實補正、核准及結案UNKNOWN。",
+      "effective_date": "UNKNOWN（虛構演練，無真實生效日）",
+      "document_section": "T3示範軸三列、T4示範軸三列、替換清單新增案例列",
+      "calculation_or_basis": "13/20=65.0%；目標16/20=80.0%；落後15.0 pp；Red；後續演練20/20=100.0%。",
+      "source_status": "SAMPLE/SYNTHETIC",
+      "real_replacement_action": "用品質抽樣原件、缺失追蹤及核准改善紀錄替換；目前UNKNOWN。",
+      "responsible_role": "示範承辦角色甲填報；示範品質覆核角色乙覆核（虛構代稱）。"
+    }
+  ],
+  "scope_delta": {
+    "official_checkbox_full_text_added": [
+      "body paragraph 20",
+      "T7 I01-E01 row"
+    ],
+    "T3_sample_rows_added": 3,
+    "T4_sample_rows_added": 3,
+    "embedded_summary_rows_added": 3,
+    "registered_sample_facts": 18,
+    "candidate_control_strip_added": true,
+    "human_readable_sample_disclosure_added": true,
+    "visible_internal_codes_replaced": true,
+    "preserved": {
+      "R06_structural_blank_page_repair": "carried unchanged from exact baseline; not rendered again",
+      "A2_five_person_boundary": "unchanged at 2/3=66.7%; actual rule UNKNOWN",
+      "threshold_table": "unchanged",
+      "sections": 5,
+      "tables": 7,
+      "R06_history": "unchanged"
+    },
+    "static_cleanup_delta": [
+      "replace two evidence hash labels with reader-facing wording",
+      "normalize cover version field to 2.0 while retaining candidate status"
+    ],
+    "dot_r07b_hold_repairs": [
+      "DOCCTRL_REF_CONFLICT: align embedded and sidecar sample control metadata with current candidate Ver 2.0/revision 2026-11-28; distinguish initial date 2026-11-19 and retain non-effective SAMPLE status.",
+      "OFFICIAL_HEADING_SCOPE: use the official source heading and identify I01 only as internal mapping.",
+      "FORMULA_UNIT_MISMATCH: CKP-A1 is a percentage completion rate with numerator and denominator expressed in courses, denominator 3 courses, and ×100%; displayed 0/3, 1/3, 2/3, 3/3 values unchanged."
+    ],
+    "R07D_formula_compression": "Shortened CKP-A1 numerator and denominator labels in T2 and Section 5; retained course units, planned denominator of 3 courses, percentage output, x100%, and every displayed example value."
+  },
+  "qa_status": {
+    "static": "PASS_STATIC",
+    "native_word_visual": "LOCAL_VISUAL_REVIEW_PASS_PENDING_DOT_EXACT_SHA",
+    "independent_semantic": "PENDING_DOT_EXACT_SHA_REVIEW",
+    "github": "NOT_PUBLISHED",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_status": "UNKNOWN"
+  },
+  "created_at_taipei": "2026-11-28T17:26:41+08:00",
+  "parent_candidate_sha256": "0e123711556977199c866837a090b4de11d88db47104642a1ddd7b57199838cc"
+}

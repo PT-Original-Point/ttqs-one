@@ -1,0 +1,71 @@
+{
+  "schema": "TTQS_ONE_DELTA_RECEIPT_R12_3",
+  "deliverable_id": "0002",
+  "parent_candidate_sha256": "0e123711556977199c866837a090b4de11d88db47104642a1ddd7b57199838cc",
+  "candidate_filename": "0002__策略因果鏈與三年KPI對照表.docx",
+  "candidate_sha256": "6c11620746c46c637222da31bbacd7243cb6dd0c46e25296cdcd7fe08b556bcd",
+  "register_file": "0002_R07_示範資料替換清單.csv",
+  "parent_register_sha256": "e1c23fe7c04fe02046a27f9fb6e548c6925feaa322dae1b728e51b787135b5da",
+  "register_sha256": "e1c23fe7c04fe02046a27f9fb6e548c6925feaa322dae1b728e51b787135b5da",
+  "register_rows": 18,
+  "changed_ooxml_parts": [
+    "word/document.xml"
+  ],
+  "changed_body_paragraph_indices_zero_based": [
+    65
+  ],
+  "changed_table_cells_zero_based": [
+    [
+      1,
+      1,
+      2
+    ]
+  ],
+  "only_csv_cell_changes": [],
+  "text_node_patch_count": 3,
+  "patches": [
+    {
+      "target": "section5_formula",
+      "old_utf8_sha256": "213f8cf0b902d02060f800547952c40796950aae0ebb1a262d28a37efb9ad2ff",
+      "new_utf8_sha256": "304412e1ca8fb66736ac281f1d07bae3f96b33848f1f38420f1e637d434a5013",
+      "occurrences": 1,
+      "old_length": 141,
+      "new_length": 114
+    },
+    {
+      "target": "table_numerator",
+      "old_utf8_sha256": "d1dbc8b98f52b3e18581104a72be638f238b02af5cd3c9f7292770003928dba7",
+      "new_utf8_sha256": "28dfe968b658299cc646095a561b27f3707d079822b5c135da360c0bd2f5c89b",
+      "occurrences": 1,
+      "old_length": 51,
+      "new_length": 36
+    },
+    {
+      "target": "table_denominator",
+      "old_utf8_sha256": "da06c02a5c9d88c41c12f35786fceb16b55d58922f2041823c38843db7d6cfa9",
+      "new_utf8_sha256": "a4267323bb003327e8eb8f79ccca94184c9cd03dc6df837f4e7902b0e884eadd",
+      "occurrences": 1,
+      "old_length": 38,
+      "new_length": 35
+    }
+  ],
+  "preserved": [
+    "R07C exact history retained; its page-10 orphan header finding is not hidden",
+    "T2 and Section 5 formula units and 3-course denominator remain explicit",
+    "all displayed CKP-A1 example values remain unchanged",
+    "CSV bytes and all registered facts unchanged",
+    "A2 boundary and thresholds unchanged",
+    "all OOXML package members except word/document.xml are byte-identical"
+  ],
+  "status": {
+    "static": "PASS_STATIC",
+    "native_word_visual": "LOCAL_VISUAL_REVIEW_PASS_PENDING_DOT_EXACT_SHA",
+    "dot": "PENDING_NEW_EXACT_SHA",
+    "github": "NOT_PUBLISHED",
+    "formal": "NOT_GRANTED",
+    "real": "UNKNOWN",
+    "independent_semantic": "PENDING_DOT_EXACT_SHA_REVIEW"
+  },
+  "visual_review_receipt_sha256": "743218fd373ad4eaa61883bccdfc3a9ab2a85c7dc172df522759745b405935f7",
+  "native_pdf_sha256": "6e6cc518ee4b653362bba424b84cb0a3bc860560cd03f1d74bca7aa0e6f046c0"
+}
