@@ -1,0 +1,53 @@
+{
+  "schema": "TTQS_ONE_R07D_BUILD_RECEIPT_HASH_RECONCILIATION_V1",
+  "observed_at_tpe": "2026-11-28T19:18:40+08:00",
+  "status": "PENDING_DOT_RECHECK_BUILD_LINKAGE",
+  "candidate_docx_sha256": "6c11620746c46c637222da31bbacd7243cb6dd0c46e25296cdcd7fe08b556bcd",
+  "dot_disposition": {
+    "path": "0002/qa/DOT_EXACT_ACCEPTANCE_R07D.json",
+    "sha256": "84f1bd8b7dbf4809bff34c7c7bc2cb9f4780fd041719661bba30289129616151",
+    "referenced_build_receipt_sha256": "bde8967638a67db03b1f400f9e19b00f637473dc51c865e1e4a954e10fae1a7d"
+  },
+  "current_build_receipt": {
+    "path": "0002/qa/BUILD_RECEIPT_R07D.json",
+    "raw_bytes": 27689,
+    "raw_sha256": "ea8f41ab86ac5e94b703d025a0dc2da021a80bd8f4ed719768f54aed6af46ab8",
+    "git_blob_sha1": "1e1fbe085098443879b9b7198c76d2b68f131b50",
+    "committed_at": "2026-11-28T18:18:44+08:00",
+    "embedded_created_at_tpe": "2026-11-28T17:26:41+08:00",
+    "qa_status_current": {
+      "static": "PASS_STATIC",
+      "native_word_visual": "LOCAL_VISUAL_REVIEW_PASS_PENDING_DOT_EXACT_SHA",
+      "independent_semantic": "PENDING_DOT_EXACT_SHA_REVIEW",
+      "github": "NOT_PUBLISHED",
+      "formal_acceptance": "NOT_GRANTED",
+      "real_status": "UNKNOWN"
+    }
+  },
+  "difference_report": {
+    "reported_by_dot": "Dot direct local/remote reread",
+    "reported_equal_except": [
+      "qa_status"
+    ],
+    "prior_qa_status": "UNKNOWN",
+    "old_raw_bytes_independently_recovered": false,
+    "change_time": "UNKNOWN",
+    "change_author": "UNKNOWN",
+    "change_reason": "UNKNOWN"
+  },
+  "recovery_scope": {
+    "searched_work_folder": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_HUMAN_R12_3_FULL_QUALITY_REMEDIATION_20261125\\HISTORICAL_AUDIT_REVIEW_0001_0026\\0002_R05_A2_SCOPED_REPAIR_20261127\\R07_CUMULATIVE_EXACT_QA_REPAIR_20261128\\R07D_A1_FORMULA_COMPRESSION_20261128",
+    "bounded_scope": "R07D isolated artifacts, the 0002 repair subtree records, and PR #92 Git history for BUILD_RECEIPT_R07D.json",
+    "found_original_bytes_sha256": "NO",
+    "only_tracked_receipt_version": "ea8f41ab86ac5e94b703d025a0dc2da021a80bd8f4ed719768f54aed6af46ab8",
+    "first_tracked_commit": "e432170d3e7b568ecd614040d7d6ceb3ad4a56dc",
+    "first_tracked_commit_parent_has_path": false,
+    "notes": "The original bde... bytes were not reconstructed. Filesystem LastWriteTime and embedded creation time do not establish the edit time, author, or reason."
+  },
+  "observed_timestamps": {
+    "dot_observed_at_utc": "2026-11-28T17:32:07.358113+08:00",
+    "local_build_file_last_write_tpe": "2026-11-28T17:32:14+08:00",
+    "first_package_commit_tpe": "2026-11-28T18:18:44+08:00"
+  },
+  "boundary": "No change to accepted DOCX, PDF, register, Dot disposition, build receipt, QA decision, REAL status, or formal-acceptance status. Dot recheck is still required."
+}
