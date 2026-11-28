@@ -1,7 +1,7 @@
 {
   "schema": "TTQS_ONE_R07D_BUILD_RECEIPT_HASH_RECONCILIATION_V1",
-  "observed_at_tpe": "2026-11-28T19:18:40+08:00",
-  "status": "PENDING_DOT_RECHECK_BUILD_LINKAGE",
+  "observed_at_tpe": "2026-11-28T19:48:34+08:00",
+  "status": "PASS_CURRENT_BUILD_LINKAGE",
   "candidate_docx_sha256": "6c11620746c46c637222da31bbacd7243cb6dd0c46e25296cdcd7fe08b556bcd",
   "dot_disposition": {
     "path": "0002/qa/DOT_EXACT_ACCEPTANCE_R07D.json",
@@ -26,9 +26,7 @@
   },
   "difference_report": {
     "reported_by_dot": "Dot direct local/remote reread",
-    "reported_equal_except": [
-      "qa_status"
-    ],
+    "reported_equal_except": "UNKNOWN",
     "prior_qa_status": "UNKNOWN",
     "old_raw_bytes_independently_recovered": false,
     "change_time": "UNKNOWN",
@@ -49,5 +47,12 @@
     "local_build_file_last_write_tpe": "2026-11-28T17:32:14+08:00",
     "first_package_commit_tpe": "2026-11-28T18:18:44+08:00"
   },
-  "boundary": "No change to accepted DOCX, PDF, register, Dot disposition, build receipt, QA decision, REAL status, or formal-acceptance status. Dot recheck is still required."
+  "boundary": "No change to accepted DOCX, PDF, register, Dot disposition, build receipt, QA decision, REAL status, or formal-acceptance status. Dot recheck is still required.",
+  "dot_build_linkage_supplement": {
+    "path": "0002/qa/DOT_0002_R07D_CURRENT_BUILD_LINKAGE_20261128.json",
+    "sha256": "bd70f0df77a4f7ddf293d03baafdb4b546e43efcaa076fc934cfe3fabecec924",
+    "checked_commit": "d873ef798a1bfa6477779fb23dfcd892e6922f8d",
+    "current_build_receipt_sha256": "ea8f41ab86ac5e94b703d025a0dc2da021a80bd8f4ed719768f54aed6af46ab8",
+    "candidate_docx_sha256": "6c11620746c46c637222da31bbacd7243cb6dd0c46e25296cdcd7fe08b556bcd"
+  }
 }
