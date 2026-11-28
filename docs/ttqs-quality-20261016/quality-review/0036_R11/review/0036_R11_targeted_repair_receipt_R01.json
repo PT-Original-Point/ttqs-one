@@ -1,0 +1,42 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0036",
+  "requirement_id": "I07-E04",
+  "official_checkbox_serial": "036",
+  "revision": "R11",
+  "source_revision": "R10",
+  "source_sha256": "765e36f07c5e92964d3d5aa438564ef4578e0b2d6ca684b2123687cff5686a6a",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0036_R11\\candidate\\0036__課程設計進度與訓練規劃_R11.docx",
+  "candidate_sha256": "1e08913a7e330fcbd52f50645138f97b8c951022ef69bc5bd1ee3d2971c9a7c7",
+  "candidate_bytes": 228667,
+  "changed_package_parts": [
+    "word/document.xml"
+  ],
+  "targeted_repairs": [
+    {
+      "locator": "§6 progress schedule, unit/time allocation row",
+      "review_finding": "190 minutes was labeled teaching only while the detailed schedule included evaluation",
+      "repair": "Changed label to 190 minutes for course delivery and assessment plus 20 minutes of breaks."
+    },
+    {
+      "locator": "§14 synthetic walkthrough schedule row",
+      "review_finding": "Same 190-minute classification mismatch",
+      "repair": "Aligned summary wording with the detailed course/evaluation schedule; total remains 210 minutes."
+    },
+    {
+      "locator": "§15 after the handoff checklist",
+      "review_finding": "No auditable completion status, check date, evidence location or unresolved-item owner/deadline",
+      "repair": "Added repeatable per-item form fields for complete/incomplete, date, source filename and page/table/cell locator, plus unresolved owner, due date and hold action. Explicitly states blank form is not a completed association record."
+    }
+  ],
+  "sample_register": {
+    "source_rows": 84,
+    "R11_rows": 85,
+    "updated_fact_id": "0036-SYN-F033",
+    "new_fact_id": "0036-SYN-F085",
+    "sha256": "73e53cb809c8ee7af291b76128896348134e4157b79dc3c013ca95b1d3d28150"
+  },
+  "unchanged_scope": "No other case values, calculations, flowchart, assessment items or authorization facts were regenerated. §5 flowchart remains unchanged and will be verified against the rendered page.",
+  "candidate_disposition": "CANDIDATE_ONLY_NOT_PROMOTED",
+  "semantic_review": "PENDING_FRESH_EXACT_SHA"
+}

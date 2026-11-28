@@ -1,0 +1,112 @@
+{
+  "info": {
+    "id": "ses_ea2aa09a9ffeB00gywgaC38BfX",
+    "projectID": "75adec0167404bd4e3d42517f71aa6f82c0d6104",
+    "agent": "plan",
+    "model": {
+      "id": "nemotron-3-ultra-free",
+      "providerID": "opencode",
+      "variant": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 108009,
+      "output": 4753,
+      "reasoning": 298,
+      "cache": {
+        "read": 0,
+        "write": 0
+      }
+    },
+    "outcome": "succeeded",
+    "time": {
+      "created": 1792567277291,
+      "updated": 1792567386044,
+      "idle": 1792567386049
+    },
+    "title": "[redacted:session-title:ses_ea2aa09a9ffeB00gywgaC38BfX]",
+    "location": {
+      "directory": "/[redacted:session-directory:ses_ea2aa09a9ffeB00gywgaC38BfX]"
+    }
+  },
+  "messages": [
+    {
+      "id": "msg_15d55f702001S83LGQknhzp7bi",
+      "time": {
+        "created": 1792567277314
+      },
+      "type": "agent-switched",
+      "agent": "plan",
+      "previous": "plan"
+    },
+    {
+      "id": "msg_15d55f6ef001BLDuTOjg8FQiAR",
+      "time": {
+        "created": 1792567277454
+      },
+      "text": "[redacted:synthetic:msg_15d55f6ef001BLDuTOjg8FQiAR]",
+      "type": "synthetic"
+    },
+    {
+      "id": "msg_15d55f6ff001ywapvwxwSASnhP",
+      "time": {
+        "created": 1792567277457
+      },
+      "text": "[redacted:text:msg_15d55f6ff001ywapvwxwSASnhP]",
+      "files": [],
+      "type": "user"
+    },
+    {
+      "id": "msg_15d55f79f0014HozsUm8vGn6x9",
+      "time": {
+        "created": 1792567277491,
+        "streamed": 1792567386041,
+        "completed": 1792567386044
+      },
+      "type": "assistant",
+      "agent": "plan",
+      "model": {
+        "id": "nemotron-3-ultra-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_15d55f79f0014HozsUm8vGn6x9]",
+          "state": {
+            "redacted": "reasoning-state:msg_15d55f79f0014HozsUm8vGn6x9"
+          },
+          "time": {
+            "created": 1792567285611,
+            "completed": 1792567386034
+          }
+        },
+        {
+          "type": "text",
+          "text": "[redacted:text:msg_15d55f79f0014HozsUm8vGn6x9]"
+        }
+      ],
+      "finish": "stop",
+      "rawFinish": "stop",
+      "cost": 0,
+      "tokens": {
+        "input": 108009,
+        "output": 4753,
+        "reasoning": 298,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_15d579fc1001mu1lpVe3aoRHOE",
+      "time": {
+        "created": 1792567386049
+      },
+      "type": "idle",
+      "outcome": "succeeded"
+    }
+  ]
+}

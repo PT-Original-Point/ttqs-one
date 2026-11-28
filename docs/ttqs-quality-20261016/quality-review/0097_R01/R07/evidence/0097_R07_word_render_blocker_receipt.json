@@ -1,0 +1,44 @@
+{
+  "schema": "ttqs.word_render_blocker.v1",
+  "document_id": "0097",
+  "requirement_id": "I18-E05",
+  "revision": "R07",
+  "candidate_docx_sha256": "026288491716d626a7bcac14a515313da7846f5a204703da9bad3a9010edf214",
+  "attempts": [
+    {
+      "result": "BLOCKED_STALLED",
+      "observed_runtime": ">300 seconds",
+      "method": "Word COM ExportAsFixedFormat to PDF",
+      "output_pdf_created": false,
+      "word_pid": 21744,
+      "powershell_pid": 69372
+    },
+    {
+      "result": "BLOCKED_STALLED",
+      "observed_runtime": ">120 seconds",
+      "method": "Word COM SaveAs2 PDF format 17",
+      "output_pdf_created": false,
+      "word_pid": 40696,
+      "powershell_pid": 65736
+    },
+    {
+      "result": "OPEN_PASS_IN_0.9_SECONDS",
+      "method": "Word COM open diagnostic",
+      "log_file": "0097_R07_word_open_diagnostic.txt",
+      "word_pid": 48800,
+      "cleanup": "Only diagnostic Word process verified by PID/command line then terminated",
+      "subsequent_script_error": "Quit argument binding expected PSReference; not a DOCX open error"
+    }
+  ],
+  "logs": [
+    "0097_R07_word_open_diagnostic.txt",
+    "0097_R07_word_saveas_log.txt"
+  ],
+  "candidate_sha_rechecked_unchanged": true,
+  "no_active_R07_writer_after_attempts": true,
+  "rendered_pdf_present": false,
+  "visual_layout_status": "UNKNOWN_BLOCKED",
+  "R06_visual_receipt_inherited": false,
+  "attempt_wallclock_times": "Exact start/end for the two stalled export attempts were not preserved in the listed log files; runtimes and process IDs are preserved from process observation.",
+  "recorded_at_local": "2026-10-21T06:47:10.7186760+08:00"
+}

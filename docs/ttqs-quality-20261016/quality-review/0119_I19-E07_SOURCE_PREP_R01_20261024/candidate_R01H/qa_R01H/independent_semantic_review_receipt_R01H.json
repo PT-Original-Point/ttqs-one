@@ -1,0 +1,57 @@
+{
+  "work_id": "TTQS_ONE-0119-I19-E07-R01H-EXACT-SHA-SEMANTIC-REVIEW",
+  "doc_id": "0119",
+  "requirement_id": "I19-E07",
+  "candidate": "R01H",
+  "candidate_docx_sha256": "60169b73895fc24bb1a0397534aa0ede37776c1ca3b7631a848bf4b69a9d312a",
+  "candidate_extracted_text_sha256": "fed3c440eb8d8c25e2dabd6d38637f315a73d7b91ed0b93b77f4ca173ec29c04",
+  "reviewer": "Antigravity CLI 1.4.7",
+  "requested_model": "gemini-3.8-flash-high",
+  "actual_model_from_init": "gemini-3.8-flash-high",
+  "cli_pid": 71048,
+  "cli_exit_code": 0,
+  "timed_out": false,
+  "tool_calls": 0,
+  "actual_model_and_dispatch_integrity": "PASS",
+  "usage": {
+    "input_tokens": 25846,
+    "output_tokens": 7478,
+    "thinking_tokens": 3956,
+    "cache_read_tokens": 0,
+    "total_tokens": 33324
+  },
+  "original_response_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0119_I19-E07_SOURCE_PREP_R01_20261024\\candidate_R01H\\qa_R01H\\review_bundle_R01H\\antigravity_response_R01H.txt",
+  "original_response_sha256": "82b9d066195bfad45bb3d306bb9b6d9887b8f46e193dfbc426c6bee0fa5a1cbf",
+  "prompt_sha256": "69c57670458b478a46d3ce18816843c724bc8c86ee751187e716b436d1555928",
+  "source_packet_sha256": "935a5cbc91c7dadfdcd0d9f3a7a45f56dcc5013ee9dd81fef1cfedd6b5b73656",
+  "unique_blueprint_sha256": "d097c7491235e323ebca4a31ff147ee5be2e6e5f893041087fd3076664aa0473",
+  "mapping_sha256": "f31661eb03b992c903f41c86076908deaf51e8a83fb26ff87d1cef2752d3d4a8",
+  "official_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "official_page8_text_sha256": "57c6b33d70b665bd41b8d58ff58f5c0d78f9c2c751ccd9c6dd1b740b2fbf374e",
+  "scope": "independent semantic review of the complete extracted exact-SHA document text and official/source/Blueprint mapping; 10 review rows and all recomputation audits checked; excludes visual inspection, real association evidence and formal acceptance",
+  "reviewer_verdict": "PASS",
+  "checklist_rows": 10,
+  "all_checklist_rows_pass": true,
+  "blockers": [],
+  "nonblocking_findings": [
+    {
+      "id": "NBF-01",
+      "description": "候選文本第0.1節印刷序號欄呈現為『＿＿＿』並註記依規則保持空白，正文與表2-1亦正確載明UNKNOWN_NOT_ASSERTED，格式一致且遵循反偽造防護。",
+      "severity": "INFORMATIONAL"
+    },
+    {
+      "id": "NBF-02",
+      "description": "表10-2中原始紀錄實際收到狀態標註為NOT_PROVIDED_IN_CANDIDATE_PACKET，誠實反映來源包限制，符合專案反偽造與邊界規範。",
+      "severity": "INFORMATIONAL"
+    }
+  ],
+  "coordinator_adjudication": "PASS for semantic scope only: binding SHAs and mapping inputs match current local files; all 10 checklist rows PASS; response has zero blockers; calculations independently match technical QA; local all-page visual QA separately PASS.",
+  "visual_receipt_sha256": "5ff59c15e525b0478cacb20cc62f6f979b7bf1f2cbecdee7baf60f2d1b7d4f2d",
+  "technical_receipt_sha256": "c63172af072fa6a63e6b30c17bbca203b77982838546c9528653f6f04590cd15",
+  "semantic_status": "PASS_EXACT_SHA_SEMANTIC_SCOPE",
+  "formal_acceptance": "NOT_GRANTED",
+  "sample_real_status": "SAMPLE_SYNTHETIC_ONLY",
+  "adjudicated_at_local": "2026-10-24T11:18:21.871721+08:00",
+  "previous_technical_receipt_sha256": "76b245d47a2391b53c513cfba8e26730829e97d1bbbf17ecb92a2e8d9fee52e8",
+  "technical_receipt_linkage_correction": "Coordinator-only receipt linkage correction: the prior pointer referred to the pre-adjudication technical QA snapshot. The technical QA JSON is finalized with the exact-SHA semantic outcome; document and reviewer-response bytes are unchanged. Reviewer verdict is based on exact extracted document text and source mapping, not on the technical-receipt pointer."
+}

@@ -1,0 +1,138 @@
+{
+  "work_id": "TTQS-0136-I19-E26-R02-W1-OPENCODE-GLM53-FREE-EXACT-SHA-SEMANTIC-REVIEW-R06",
+  "doc_id": "0136",
+  "requirement_id": "I19-E26",
+  "target_candidate_sha256": "a9bd0fb528a1e22865fa5e07df44b314d48c1fd826a08149ecdd1d5915048b39",
+  "review_input_sha256": "7bebd3eb012b152f4568db6fedccf43c3337f436a5f339127e5afe71cf0678d7",
+  "review_type": "independent_text_semantic_review_exact_SHA_no_visual_no_acceptance",
+  "verdict": "PASS",
+  "summary": "The candidate DOCX 0136 satisfies the I19-E26 genre as an operational original-evidence verification register rather than a results report. The exact official indicator-19 reference-example sentence is reproduced verbatim (TABLE 5) and explicitly framed as a listed reference type, not an association result (Section 2; TABLE 2). Identity fields bind DOCX 0136 ↔ I19-E26 ↔ project index 150 while keeping the printed checkbox serial UNKNOWN (TABLE 1, TABLE 6). Three separate verification paths separate existence/identity, association role, and outcome (Section 3, TABLE 9), matched by status machinery (TABLE 12), hold/reject conditions (Sections 5–7, TABLES 10, 13), field dictionary (TABLE 21), blank working tables T1–T6 (TABLES 22–26), retrieval drill (Section 12, TABLE 31), and a complete T6 replacement register for every synthetic field (TABLES 28–29). All three SAMPLE walkthroughs use synthetic labels, no attached sources, no hashes, and NOT FOR EXTERNAL USE wording. Neighbor lanes 0135/I19-E25, 0137/I19-E27, 0133/I19-E22, 0134/I19-E23 are explicitly routed out (TABLE 7, TABLE 8). No self-score, no fabricated source, no invented governance rules; unknowns and non-association authority limits are marked rather than invented (TABLE 4, TABLE 14, TABLE 32). No blocking or major semantic defect found; findings are minor only.",
+  "checks": [
+    {
+      "criterion": "Exact official p8–9 wording present (reference example of indicator 19)",
+      "result": "PASS",
+      "locator": "TABLE 5；Section 2 source-boundary paragraph",
+      "evidence": "TABLE 5 reproduces 提出參與社會公益活動、獲頒公民營單位獎項、結合學校單位產學或研發成果社會面。 verbatim; Section 2 adds 不代表原始點協會已完成其中任何一類，也不表示必須同時具備全部類型, matching the packet's rule that one reference example is not proof all three classes exist."
+    },
+    {
+      "criterion": "Requirement fit and genre: operational original-evidence verification register, not a results claim",
+      "result": "PASS",
+      "locator": "Section 2 (文件用途 text)；TABLE 1 文件用途 row；TABLE 2",
+      "evidence": "用途 stated as 操作型原始佐證登錄與查驗工具；不是成果報告、核准紀錄或第三方原件；TABLE 2 declares no real activity/award/partnership/outcome originals are attached and SAMPLE content is not countable evidence."
+    },
+    {
+      "criterion": "Identity binding and do-not- Ersatz rule: DOCX 0136 ↔ I19-E26, index 150 separate, printed serial UNKNOWN",
+      "result": "PASS",
+      "locator": "TABLE 1；TABLE 6；every T1 mapping row (TABLES 16, 18, 20)",
+      "evidence": "TABLE 1/TABLE 6 carry DOCX 0136, I19-E26, 157 索引 150, and 紙本方框序號 UNKNOWN with the prohibition 不得以 0136、I19-E26 或 150 代替; each SAMPLE row repeats the same four-field mapping including 紙本方框 UNKNOWN."
+    },
+    {
+      "criterion": "Operational usefulness at zero REAL entries",
+      "result": "PASS",
+      "locator": "Section 1；TABLE 3 (steps 01–06)；TABLE 12；blank tables TABLES 22–26",
+      "evidence": "Six-step SOP covers intake→preservation→source check→role check→outcome check→decision/retrieval, each with required records and pause/reject conditions; blank fill-in rows for T1/T2/T3/T4/T5 let staff create real rows without fabricating data; TABLE 22 note confirms 本份候選不含任何 REAL 案件."
+    },
+    {
+      "criterion": "Three separate verification paths separating event/award/project existence, association role, and outcome",
+      "result": "PASS",
+      "locator": "Section 3；TABLE 9；TABLE 10",
+      "evidence": "TABLE 9 gives per-class three-layer checks (存在／身分, 協會角色, 結果／社會面) for A 公益活動, B 獎項, C 學校／產學／研發; TABLE 10 gives per-class UNKNOWN/reject conditions such as 提名不等於獲獎 and 只有協議不證完成."
+    },
+    {
+      "criterion": "Required record fields, statuses, and decision thresholds usable",
+      "result": "PASS",
+      "locator": "TABLE 21；TABLE 12；TABLE 14；Section 10 T4 note",
+      "evidence": "T1 field dictionary covers identity, claim, source, role/outcome with unit/numerator/denominator, verification/limits, status/reason/owner/期限來源; TABLE 12 defines all six blueprint statuses including SAMPLE_ONLY and VERIFIED_SECONDARY with the 不稱原件驗證 limit; TABLE 14 forbids self-created signing authority; T4 preserves rejected history 以修訂紀錄連結舊列，不刪除不利歷史."
+    },
+    {
+      "criterion": "Three complete SAMPLE/SYNTHETIC examples unmistakably non-real with full replacement registration",
+      "result": "PASS",
+      "locator": "Section 5 (TABLES 15–16), Section 6 (TABLES 17–18), Section 7 (TABLES 19–20)；T6 = TABLES 28–29",
+      "evidence": "Each example is page-marked SYNTHETIC 操作演練, uses SAMPLE-ACT-001 / SAMPLE-AWD-001 / SAMPLE-SCH-001 identifiers, SAMPLE-ORGANIZER-A / SAMPLE-ISSUER-B / SAMPLE-SCHOOL-C placeholders, states SAMPLE_SOURCE_NOT_ATTACHED with no hash/bytes/location, and carries NOT FOR EXTERNAL USE wording; TABLES 28–29 register every synthetic field with the exact real source required to replace it."
+    },
+    {
+      "criterion": "Negative-neighbor distinction (0135/I19-E25, 0137/I19-E27, 0133/I19-E22, 0134/I19-E23)",
+      "result": "PASS",
+      "locator": "TABLE 7；TABLE 8；Paragraph 相鄰文類分流 (Section 2)；Section 12 交接自查",
+      "evidence": "TABLE 7 routes market/customer value to 0135, media to 0137 (報導可作線索…不能替代原始來源), training statistics to 0133, member/dues ledgers to 0134; TABLE 8 adds the shared event_project_key double-count control; the self-check line confirms 0135、0137、0133、0134 的相鄰用途沒有混入."
+    },
+    {
+      "criterion": "Separation of activity/award/partnership vs association role vs delivery vs outcome, and causation prohibition",
+      "result": "PASS",
+      "locator": "TABLE 3 steps 04–05；TABLE 11；TABLE 13；Section 7 本案例不計算效益",
+      "evidence": "Claims must be split 一列一主張 (TABLE 11); outcome step requires 量尺、期間、分子、分母與來源 and forbids 以出席、合作或得獎推估社會影響或因果 (TABLE 3 step 05; TABLE 13 row 結果未證); Section 7 refuses to build any ratio, growth rate, or causal narrative from the synthetic school case."
+    },
+    {
+      "criterion": "Custody, SHA integrity, and custody/retrieval controls",
+      "result": "PASS",
+      "locator": "TABLE 3 step 02；Section 9 notes (TABLE 9 area)；TABLE 23；Section 12 retrieval drill TABLE 31",
+      "evidence": "SHA-256 只對實際取得的原始檔計算; explicit bans on 假雜湊、箱號、伺服器位置或時間戳 for sources not received (TABLE 3 step 02; 空白作業表 note); restricted locator kept in controlled internal records with minimized public description; TABLE 31 gives a six-step repeatable retrieval drill including hash re-computation and witness-safe return without 虛填簽名."
+    },
+    {
+      "criterion": "Privacy/authority limits and no invented governance",
+      "result": "PASS",
+      "locator": "TABLE 4；TABLE 12 HOLD_PRIVACY row；TABLE 13 隱私未恰 row；TABLE 14",
+      "evidence": "Candidate declines to create deadlines, dual signatures, approvals, or WORM, instructing use of the association's formal rules or UNKNOWN; HOLD_PRIVACY blocks publication/counting until legal basis/redaction resolved; 遮住姓名就宣稱已取得所有必要授權 is explicitly forbidden; photo identification of unauthorized individuals is barred (Section 5)."
+    },
+    {
+      "criterion": "No unsupported statements, no TTQS self-score, honest candidate status",
+      "result": "PASS",
+      "locator": "Section 1 closing line；Section 2 end；TABLE 32",
+      "evidence": "本表不自評分數 and 不替代正式評核 appear up front; TABLE 32 states 原始點協會 REAL 佐證：UNKNOWN、CANDIDATE、Human 正式接受：NOT GRANTED, and the final self-check re-states that building the DOCX does not imply pass or formal acceptance."
+    },
+    {
+      "criterion": "Quantitative and cross-document consistency within the candidate",
+      "result": "PASS",
+      "locator": "TABLES 16, 18, 20 vs TABLES 28–29",
+      "evidence": "All synthetic values are internally consistent between the walkthroughs and T6: SAMPLE_DATE=2026-06-15, SAMPLE_DATE=2026-05-20, SAMPLE_PERIOD=2026-04-01 至 2026-09-30 appear identically in both locations; no numeric outcome, beneficiary count, or ratio is asserted anywhere in a REAL-context table."
+    },
+    {
+      "criterion": "Reviewer retrievability: another person can rerun source retrieval and verification",
+      "result": "PASS",
+      "locator": "Section 12 (另一人可重做的調閱演練)；TABLE 31；TABLE 24 last row",
+      "evidence": "Retrieval drill records locator access handled in controlled internal records, hash re-computation, page/item-level claim support check, privacy/duplicate/status re-review, and custody return; T3 includes the row 另一人可依指引重做來源調閱 as a mandatory checkpoint."
+    },
+    {
+      "criterion": "Bluepring T6 replacement register covers every synthetic fact",
+      "result": "PASS",
+      "locator": "TABLE 28；TABLE 29 (T6 續)；逐欄轉換步驟 TABLE 30",
+      "evidence": "All three SAMPLE records' synthetic field groups (identifiers, dates, role labels, placeholders, status wording) are each listed with the required upgrade source and completion condition; TABLE 30's five steps create new REAL record_ids while preserving SAMPLE traces, and forbid copying any SAMPLE field directly into REAL."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "minor",
+      "locator": "TABLE 21 (T1 欄位字典) vs TABLE 4 (期限與權限)",
+      "evidence": "The blueprint's required field 'retention review date' has no dedicated named column in the T1 field dictionary or blank T1 (TABLE 22); retention is handled narratively in TABLE 4 (保存規則另依協會正式內規，查不到標 UNKNOWN).",
+      "why_it_matters": "A staff member filling a REAL row might not record a retention/review date unless the association later issues its own rules, so the field could be silently omitted rather than explicitly marked UNKNOWN.",
+      "required_action": "In a future revision, add an explicit 保存／複查日期 or equivalent row to TABLE 22/TABLE 21 that defaults to UNKNOWN when no formal retention rule source exists, consistent with the no-invented-governance boundary."
+    },
+    {
+      "severity": "minor",
+      "locator": "Extracted body under Section 2 headings 編號不可互換 / 相鄰文類分流；Sections 4–11 intervening lines",
+      "evidence": "Several headings in the extracted plain-text body appear orphaned with their supporting content carried entirely in adjacent tables (e.g., the short lines 相鄰文類分流, 不足時的處置, 狀態轉換的控制點 precede tables rather than narrative paragraphs).",
+      "why_it_matters": "This is likely a text-extraction artifact of table-anchored captions; if mirrored in layout it could reduce standalone readability of the printed body, though semantic coverage remains complete.",
+      "required_action": "Visual QA (out of scope for this review, bound to the same SHA) should confirm the captions render as table titles/lead-ins rather than dangling headings."
+    },
+    {
+      "severity": "minor",
+      "locator": "TABLE 21 row 來源 vs blueprint required fields",
+      "evidence": "Fields such as 取得方式 and 頁／段／項 are present, but 來源記錄日期 (source-record date) and capture date are only partially implied via T2 交接時間／人員 (TABLE 23) rather than named as distinct T1 fields.",
+      "why_it_matters": "Implied fields risk inconsistent completion across real rows; not blocking because T2 must record actual receipt/transfer times for any original actually received.",
+      "required_action": "Optionally name 來源記錄日期／取得日期 explicitly in the T1 dictionary in a next revision."
+    }
+  ],
+  "sample_real_boundary": "Readily enforced and unmistakable. Page-level marks precede each walkthrough (TABLES 15, 17, 19: SYNTHETIC 操作練，非原始點協會…紀錄；不得當作 REAL 或對外引用); every T1 sample row closes with 可對外文字 NOT FOR EXTERNAL USE and an explicit boundary sentence (e.g., 此 SAMPLE 不可作為活動曾舉辦、協會曾參與或有成效之主張); no real organizer/school/issuer/recipient names, no fabricated certificates, letters, MOUs, signatures, hashes, box numbers, or beneficiary counts anywhere; TABLE 22 confirms no REAL case rows exist; TABLE 32 states REAL evidence UNKNOWN and Human acceptance NOT GRANTED; TABLES 28–29 register each synthetic field with its replacement source and TABLE 30 forbids direct copy of SAMPLE values into REAL rows.",
+  "negative_neighbor_distinction": "Effective and explicit. TABLE 7 gives a dedicated routing row for each neighbor: market/customer-value analysis must not be imported from 0135 (I19-E25); media reports can only be locators/corroboration, never the underlying original, and belong to 0137 (I19-E27), matching the packet's rule that a press clipping does not replace the award/participation/partnership original; training class/person-time statistics (0133/I19-E22) and member/dues ledgers (0134/I19-E23) are barred from being counted as social impact. TABLE 8 operationalizes double-count prevention via the shared event_project_key with one original source stored once and per-document citation scopes. The extract from project index 149/150/151 confirms index 150 (not 151 media) is the correct planning anchor, and the candidate's title/content match the 公益／表揚／產學／研發社會影響：原件與來源 lane. The title-blind check (公益活動、獎項與學校合作原件驗證登錄表 as an intake/verification tool) fits the requirement without drifting into the 0135 market-value genre or the 0137 media-index genre.",
+  "quantitative_claims": "The candidate makes no association performance numbers and correctly blocks them. Outcome fields mandate unit, period, numerator, denominator, and source per claim (TABLE 3 step 05; TABLE 21 row 角色與結果), forbid inferring impact or causation from attendance/partnership/award (TABLE 13), keep the synthetic school case's use context, beneficiaries, and results UNKNOWN with no ratio or causal narrative (Section 7 本案例不計算效益), and route any future numeric data through per-item registration of unit/molecular/denominator/dedup/original source. The only numerals present are structural identifiers (DOCX 0136, I19-E26, index 150, table numbering) and synthetic sample labels (SAMPLE_DATE=2026-06-15, 2026-05-20, SAMPLE_PERIOD 2026-04-01 至 2026-09-30), which are internally consistent between the walkthroughs (TABLES 16/18/20) and the T6 replacement register (TABLES 28–29). No cross-document inconsistency detected within the candidate text.",
+  "operational_usability": "High for the source-preparation register genre. A staff member with zero verified sources can: (1) intake one claim per row with pause/refuse triggers (TABLE 3 step 01); (2) preserve only actually received files with real SHA-256 and no placeholder artifacts (TABLE 3 step 02; 空白作業表 notes); (3) run class-specific three-layer checks (TABLE 9) with UNKNOWN/reject conditions per class (TABLE 10); (4) assign one of six statuses with defined wording and handling (TABLE 12), including escalation path via HOLD_PRIVACY/REJECTED and correction history preservation (Section 10); (5) file evidence in T2 custody rows (TABLE 23), verify entry-by-entry in T3 (TABLE 24), track gaps in T4 (TABLE 25), and bind external wording to sources in T5 (TABLE 26 with TABLE 27 wording control); (6) run a six-step, by-another-person-repeatable retrieval drill (TABLE 31) plus a handoff self-check (Section 12). The design does not invent authority, deadlines, or signatures—each requires a citing formal source or stays UNKNOWN (TABLE 4, TABLE 14, TABLE 21 后續與決定 row)—which keeps the tool compliant with an association whose internal rules are not yet confirmed to the candidate.",
+  "limitations": [
+    "This is an independent text-semantic review of the packet's extracted candidate text bound to the stated exact SHA; visual/rendered-page QA, technical QA, and Association/Human acceptance are separate and out of scope. Verdict is reviewer opinion, not formal acceptance.",
+    "Review input hashes: Source Packet SHA-256 7bebd3eb012b152f4568db6fedccf43c3337f436a5f339127e5afe71cf0678d7; Unique Blueprint SHA-256 32c1b818cc0b3957a23e319606f77b176a7979d1ee4ff58db72b9ae32ada8399; the review_input_sha256 field carries the Source Packet hash.",
+    "The official printed checkbox serial remains UNKNOWN in both packet and candidate; no verdict depends on it and it was not substituted by 0136, I19-E26, or 150.",
+    "No REAL association evidence, source endpoint checks, or external system lookups were performed; all real-world associations of the Pingdian (原始點) association's activities, awards, or partnerships remain UNKNOWN by design.",
+    "Reviewers cannot verify the SOC/ association's actual authorization documents, retention rules, or GitHub raw bytes from this packet; the candidate correctly defaults these to UNKNOWN or defers to binding receipts.",
+    "Three minor findings are recorded (retention/review-date field not explicit in T1; possible orphaned heading captions requiring visual QA; source-record/capture dates only implied in T1); none is blocking or major.",
+    "The minor findings' Required Actions should be handled in a next revision cycle; they do not alter the PASS verdict for this exact SHA."
+  ]
+}

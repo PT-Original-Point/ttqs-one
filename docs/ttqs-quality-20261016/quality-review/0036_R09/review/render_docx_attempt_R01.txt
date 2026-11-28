@@ -1,0 +1,5 @@
+Packaged documents renderer attempt:
+Command: bundled Python render_docx.py <R09.docx> --output_dir <R09 render> --emit_pdf --verbose
+Result: failed before conversion because bundled LibreOffice executable soffice.exe is not available on PATH (FileNotFoundError from render_docx.py).
+Fallback: Microsoft Word COM export, the same renderer family used by the R08 baseline. Word metadata identifies Microsoft 365 Word as both Creator and Producer. PDF SHA-256 and all 19 PNG page images are recorded in the R09 visual receipt.
+No installed LibreOffice was used.

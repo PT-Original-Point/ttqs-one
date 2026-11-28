@@ -1,0 +1,52 @@
+{
+  "project_id": "TTQS_ONE",
+  "work_id": "0048-I10-E03-SOURCE-PACKET-R01",
+  "doc_id": "0048",
+  "requirement_id": "I10-E03",
+  "candidate_revision": "NONE",
+  "candidate_sha256": "UNKNOWN",
+  "repo": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "github_live_head": "03348e7811dfe57a5b6e46efed1598b929db563d",
+  "fetch_head": "03348e7811dfe57a5b6e46efed1598b929db563d",
+  "sources": [
+    {
+      "kind": "official_evidence_pdf",
+      "path_in_packet": "source/OFFICIAL_TTQS_EVIDENCE_TABLE_R04.pdf",
+      "origin_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\GITHUB_PACKAGE_0026_R11_DELIVERY_20261117\\0026_I04-E05_CANDIDATE_R11_20261117\\source\\inputs\\OFFICIAL_TTQS_EVIDENCE_TABLE_R04.pdf",
+      "sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+      "bytes": 303044,
+      "page": 3,
+      "total_pages": 9
+    },
+    {
+      "kind": "129_to_142_crosswalk",
+      "path_in_packet": "source/CROSSWALK_129_TO_142_R01.csv",
+      "origin_repo_path": "docs/ttqs-quality-20261016/quality-review/0026_R11_20261117/source/inputs/CROSSWALK_129_TO_142_R01.csv",
+      "live_ref_blob_sha1": "1ac4a8419088d947947031b758e29c35a3606514",
+      "sha256": "1ddfbb608bcad25170683ddb42a1dbb27bafa6f1f35ff0498f1b8d75b24f0679",
+      "bytes": 10578,
+      "exact_live_blob_match": true,
+      "row_i10_e03": "I10-E03,1,0,0048,大型採購均辦理會議通過、師資遴聘後亦經過會議_可直接使用成品"
+    },
+    {
+      "kind": "blueprint_bundle",
+      "path_in_packet": "source/UNIQUE_BLUEPRINT_0045_0047_0048.jsonl",
+      "origin_repo_path": "docs/ttqs-quality-20261016/quality-review/0047_R08/inputs/UNIQUE_BLUEPRINT_0045_0047_0048.jsonl",
+      "live_ref_blob_sha1": "ec917caa9ca66d8ffb99bcb60a32755155bfad88",
+      "sha256": "cf27a59f04d59d7b43aa364c3a812715e37337863c756ab513fe0b0661513667",
+      "bytes": 23863,
+      "exact_live_blob_match": true,
+      "row_0048_sha256": "8b258f9125f2b1209629d0356539537e00c322073739ec65d05c58590847ef72"
+    }
+  ],
+  "official_requirement_text": "大型採購均辦理會議通過、師資遴聘後亦經過會議或審查通過並留有紀錄。",
+  "official_text_check": {
+    "pypdf_page3_normalized_exact_match": true,
+    "pdfplumber_page3_normalized_exact_match": false,
+    "pdfplumber_note": "Text is present but flattened table ordering does not preserve the checkbox as one contiguous normalized string; retain full extraction as context, rely on pypdf exact normalized match plus visual page check.",
+    "page3_render_visual_inspection": "PASS"
+  },
+  "external_real_records_available": false,
+  "writer_boundary": "SAMPLE/SYNTHETIC only unless verified association originals are later supplied; do not fabricate third-party records."
+}

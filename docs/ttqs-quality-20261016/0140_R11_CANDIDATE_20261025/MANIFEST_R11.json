@@ -1,0 +1,162 @@
+{
+  "work_id": "TTQS-0140-I19-E30-R11",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0140",
+  "requirement_id": "I19-E30",
+  "official_registry_index": 154,
+  "printed_checkbox_serial": "UNKNOWN",
+  "candidate_status": "CANDIDATE_ONLY",
+  "candidate_revision": "R11",
+  "parent_candidate_revision": "R10",
+  "parent_docx_sha256": "de9525e42a391d0ed002d23d54d5a9b9c1e042f7c194b71f00b61bd98ff48c16",
+  "docx_sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d",
+  "docx_bytes": 127801,
+  "source_manuscript_sha256": "8dcd4ec781e21d163a1912ff2397f40272ce357206fc7d81cea3a645116066df",
+  "dataset_sha256": "d1322d85bb809f3606a2edf4a8e0a26b9bb461dee4577e91ea0522972694c63d",
+  "replacement_register_sha256": "9a207c162cc36b08896d4f1ad04ccdcfdefa62bd2b038be31dc715702982e19f",
+  "technical_qa": {
+    "status": "PASS_21_OF_21",
+    "receipt_sha256": "bc3655dbe60bebfe4bc7dda65514808ae3ccb50cf85098e4f7fcb059ab5028d2"
+  },
+  "visual_review": {
+    "status": "PASS_WITH_NONBLOCKING_LAYOUT_NOTE",
+    "pages_reviewed": 29,
+    "receipt_sha256": "e077d1662a8d23706ad5de51f794ea908c69cfbc4682e608dd63fc301c8aa96a",
+    "word_native_pdf_sha256": "ed2b1cb66440eb5f4db83023d794587467c8836197fed4ca686fc86de49bc5bc",
+    "note": "Pages 6, 10 and 14 contain substantial whitespace; no clipping, overlap, truncation or overflow."
+  },
+  "semantic_delta_review": {
+    "status": "PASS_DELTA_ONLY",
+    "receipt_sha256": "0573a95b8b37dcf4e5c850cd8e7331dc4b0fa72f7dd22745742ee697426d447c",
+    "raw_response_sha256": "559e04a8ce4dfa80572123e9b29ef5e08c3a5f25ce514f65cd1465bd0391a236",
+    "review_packet_sha256": "8a5ea829182a30216dd6dbe9ef81e62d867a738262b6fa976647a9b478ac0324",
+    "scope": "R11 targeted text/table delta only; R10 full-body review remains bound to R10 SHA.",
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model": "UNKNOWN",
+    "fallback": "UNKNOWN"
+  },
+  "visible_text_diff": {
+    "status": "PASS_EXACTLY_FIVE_REGISTERED_REPLACEMENTS",
+    "receipt_sha256": "a1c6730a554947f120ae750b9fc78d1450f03b5cea2c786a012df19ca5c5dad4"
+  },
+  "inherited_full_semantic_baseline": {
+    "parent_revision": "R10",
+    "parent_docx_sha256": "de9525e42a391d0ed002d23d54d5a9b9c1e042f7c194b71f00b61bd98ff48c16",
+    "receipt_sha256": "598aa42ac83f3de9462bcf49f6c33fcf657bd1a1432a748c5cfa91e20c2f3d55",
+    "applies_to_R11": "NO; only context for targeted delta review"
+  },
+  "real_evidence": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED",
+  "remote_sync": "VERIFIED_BY_GITHUB_RAW_READBACK",
+  "build_receipt_sha256": "39a2c58493b22f8d73373c15879f4d514d60dd96378a1b1a97e0bf07670f47aa",
+  "source_delta_receipt_sha256": "e929d9079dce51347283a11543dab526e29395acc9963ca558533f95ec02cf6a",
+  "stage_receipt_sha256": "010c0fb4032f23ec99253fe2c7bc194ab0edaac344ec67a6f0542e1fa7b8d795",
+  "opencode_route": "BLOCKED_PROVIDER_FREE_LIMIT_HTTP_429",
+  "opencode_receipt_sha256": "c3e9d1fa92cc3eb12fdbc10ae35ac66299e40a16cb7de2b8b48445deb62e43d3",
+  "github_artifact_commit": "db02ac3f13ed8f02e5f93633c406c36606e70f6a",
+  "github_readback_receipt": "GITHUB_RAW_READBACK_R11_0140.json",
+  "github_readback_receipt_sha256": "b517e581b26b0d2a90855bdbaf26431251c62be55e724806e99103162205ac22",
+  "github_readback_files_verified": 19,
+  "full_body_semantic_review": {
+    "status": "VERIFIED_TEXT_SEMANTIC_PASS_WITH_NONBLOCKING_NOTE",
+    "scope": "Exact R11 candidate body/text semantics; visual scope is separately bound to the Word-native 29-page receipt.",
+    "candidate_sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d",
+    "body_extraction_sha256": "e0c5f4b863e29a874dc5107fd59a7801fe319f54eb6e1c38ad8412d0cebb3f1d",
+    "request_packet_sha256": "faeb4f0c488f13ccd5f151ba0c842af69d507720aab2eeff7adcc06ab71169e7",
+    "input_manifest_sha256": "ce8975492d6f890cde5da76a9a4d020ce4c23c7ca7592fd29647bb70c1877d3b",
+    "dispatch_receipt_sha256": "0165ea57c58eb8febd8f35e77c3ac048fd82b0771ef7a27760139f79642810fc",
+    "raw_response_sha256": "fe6400c7a5cd350a84d0349bbe9ca7f0e6d7baa83eda3f4d72230051f527f4e8",
+    "adjudication_receipt_sha256": "4a4f4bc08b0ec3d6e7abba692c25da227d9aa97da1dd657d6e3213663a753d84",
+    "reviewer": "W2 Antigravity CLI",
+    "requested_model": "gemini-3.8-flash-high",
+    "backend_serving_model_identity": "UNKNOWN",
+    "fallback": "UNKNOWN",
+    "seven_semantic_criteria_pass": true,
+    "reviewer_findings": null,
+    "candidate_unchanged": true,
+    "real_evidence": "UNKNOWN/HOLD",
+    "formal_acceptance": "NOT_GRANTED",
+    "remote_preverified_evidence": "5_OF_5_REVIEW_INPUTS_AND_CANDIDATE_DOCX_RAW_BYTES_AT_163AE69D017A4FC6180EB9CD6425CEC441100599"
+  },
+  "chart_data_visual_reconciliation": {
+    "status": "PASS",
+    "scope": "F4 chart-value reconciliation only for exact candidate SHA; not a full semantic review or formal acceptance.",
+    "candidate_sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d",
+    "receipt_sha256": "24f02e58122533feb1f52d894f030ececbbc68f49b6e387b306596a4256c076a",
+    "dataset_sha256": "d1322d85bb809f3606a2edf4a8e0a26b9bb461dee4577e91ea0522972694c63d",
+    "chart_image_sha256": "6863393aba501342057715f360c2a3651b266e6edd14a6a87ad58ad38e6c6e0b",
+    "word_native_pdf_sha256": "ed2b1cb66440eb5f4db83023d794587467c8836197fed4ca686fc86de49bc5bc",
+    "word_page9_png_sha256": "02b14a9341e78f731caf9ec20aaa231c864546b5a6bfd79b9c9b47c2bd39be0b",
+    "annual_recomputed_values": [
+      {
+        "year": "2023",
+        "dataset_rows": 20,
+        "eligible_denominator": 20,
+        "active_numerator": 12,
+        "adoption_rate": "60.00%",
+        "all_required_tasks_complete_numerator": 9,
+        "completion_rate_of_eligible": "45.00%",
+        "summary_csv_matches": true,
+        "chart_labels_visually_transcribed_from_exact_word_page9": {
+          "adoption": "60.00%",
+          "completion": "45.00%"
+        },
+        "chart_labels_match_recomputed": true
+      },
+      {
+        "year": "2024",
+        "dataset_rows": 28,
+        "eligible_denominator": 28,
+        "active_numerator": 22,
+        "adoption_rate": "78.57%",
+        "all_required_tasks_complete_numerator": 18,
+        "completion_rate_of_eligible": "64.29%",
+        "summary_csv_matches": true,
+        "chart_labels_visually_transcribed_from_exact_word_page9": {
+          "adoption": "78.57%",
+          "completion": "64.29%"
+        },
+        "chart_labels_match_recomputed": true
+      },
+      {
+        "year": "2025",
+        "dataset_rows": 32,
+        "eligible_denominator": 32,
+        "active_numerator": 28,
+        "adoption_rate": "87.50%",
+        "all_required_tasks_complete_numerator": 25,
+        "completion_rate_of_eligible": "78.13%",
+        "summary_csv_matches": true,
+        "chart_labels_visually_transcribed_from_exact_word_page9": {
+          "adoption": "87.50%",
+          "completion": "78.13%"
+        },
+        "chart_labels_match_recomputed": true
+      }
+    ],
+    "real_evidence": "UNKNOWN/HOLD",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "candidate_quality_state": "TECHNICAL_VISUAL_CHART_AND_FULL_BODY_SEMANTIC_VERIFIED_FOR_EXACT_R11_SHA; CANDIDATE_ONLY",
+  "status_reconciliation_observed_at_local": "2026-10-27T08:14:56.724523+08:00",
+  "current_remote_sync_readback": {
+    "pre_update_head": "b2750f70a9579fc4cdbb2e57dc9d39aa672e0f8d",
+    "candidate_docx_blob": "a4c1545eaa9887195dae72623846dc9eea6cc120",
+    "candidate_raw_bytes_equal": true,
+    "previous_manifest_blob": "f53bc6a7d3ea26b475855d560811ca800e38ccc8",
+    "previous_manifest_raw_bytes_equal": true,
+    "new_status_files": "PASS_RAW_BYTES_EQUAL_AT_4142ED10F92E3F366FDA2FC7B6236A5D63250D3D",
+    "verified_status_files": 3,
+    "verified_paths": [
+      "candidate/0140__訓練資訊系統使用普及率盤點與分析表_R11.docx",
+      "MANIFEST_R11.json",
+      "R12_COMPLETION_STATUS_DELTA_0140_20261027.json"
+    ]
+  },
+  "latest_status_readback": {
+    "status": "PASS_RAW_BYTES_EQUAL",
+    "verified_at_commit": "4142ed10f92e3f366fda2fc7b6236a5d63250d3d",
+    "file_count": 3,
+    "candidate_sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d"
+  }
+}

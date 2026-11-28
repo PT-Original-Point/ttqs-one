@@ -1,0 +1,215 @@
+{
+  "doc_id": "0101",
+  "requirement_id": "I18-E08",
+  "docx_sha256": "56f433e095f32378f2fd8241c1a27948d2bfe6748da003af5623d265885edb68",
+  "overall": "PASS",
+  "criteria": {
+    "A": {
+      "status": "PASS",
+      "locators": [
+        "p.1 §1.1 報告目的",
+        "p.1–2 §1.2 文件識別與版本",
+        "p.3 §1.3 使用情境",
+        "p.5 §3.1 分析鏈",
+        "p.5–6 表3-1",
+        "p.29 表11-1",
+        "p.29 §11 盲測順序"
+      ],
+      "finding": "Correct genre and purpose: a descriptive aggregate report on eight synthetic pre/post self-rating pairs, not the data-capture instrument. §1.1 limits the report to four questions (80-cell completeness/range; pre/post totals, means and dimension differences; fixed 0–4 radar specification; REAL replacement/HOLD-REJECT conditions) and expressly refuses effectiveness, competence-gain, pass/fail, comparative and validity claims. §3.1 and 表3-1 separate 0100 (form) from 0101 (aggregate); 表11-1/§11 distinguish 0097 perception, 0098 satisfaction and 0099 rubric-based skill evidence."
+    },
+    "B": {
+      "status": "PASS",
+      "locators": [
+        "p.1–2 §1.2 配套表單、配套狀態、示範施測日期",
+        "p.2 版本註記",
+        "p.5–6 表3-1 來源與版本綁定",
+        "p.6–7 表3-2 樣本與課程基本資料",
+        "p.7 §4.1 納入條件",
+        "p.20–21 表10-2 S-01–S-06",
+        "p.30 §12.1 A",
+        "p.31 §12.3",
+        "p.32 §12.4"
+      ],
+      "finding": "Identity and pairing are clear: DOC_ID 0101 / I18-E08; official printed serial UNKNOWN in §1.2 and §12.1 A; no internal index is used as a serial. The companion is 0100 R09 candidate, inner version R09a, questionnaire SR-0100-v1.0-SAMPLE, with same course/session, post date not earlier than pre and same-version rules (§1.2, §3.2, 表3-2, §4.1, 表10-2 S-01–S-06, §12.3). The supplied 0100 table matches the 80 cells exactly. Document-level lineage is complete; exact-byte binding is external (technical receipt), so the exact 0100 SHA is not printed in the body, which is a transparency limitation rather than a semantic defect."
+    },
+    "C": {
+      "status": "PASS",
+      "locators": [
+        "p.4 表2-1、表2-2",
+        "p.10 表5-1",
+        "p.11 表6-1、表6-2",
+        "p.11–12 §6.3 交叉驗算",
+        "p.12 表7-1",
+        "p.14 圖1 替代文字",
+        "p.15 表8-1",
+        "p.22–26 §10.5 定位表",
+        "p.26–27 表10-3",
+        "p.27 表10-4",
+        "p.27–28 表10-5"
+      ],
+      "finding": "All arithmetic recomputes and all duplicates agree. The 80 cells, row totals/deltas, dimension totals/means/deltas, overall means and 160-denominator percentages match 表2-1/2-2, 表5-1, 表6-1/6-2, 表7-1, 表8-1, 表10-3/10-4/10-5, 圖1 alt text and §12.3. The locator map has exactly 80 unique rows and matches 表5-1 cell-for-cell; A05/前E=2 is present on p.24."
+    },
+    "D": {
+      "status": "PASS",
+      "locators": [
+        "p.7–8 §4.1–4.2 表4-1",
+        "p.8–9 §4.3 表4-2、表4-3",
+        "p.16–18 §9.1–9.2",
+        "p.18 表10-1",
+        "p.19 §10.2 替換檢查清單",
+        "p.20–21 表10-2",
+        "p.21–22 §10.4 定位與核對代碼",
+        "p.22–26 §10.5",
+        "p.26–28 表10-3–10-5"
+      ],
+      "finding": "Usable administrative machinery: eight inclusion conditions, explicit denominators, no-imputation, 表4-1/表10-1 error rules, V1–V7/H1–H4 codes, a 17-item REAL replacement checklist, eight recommended roles and a nine-step trigger/stop workflow, plus 表10-2 S-01–S-15 with replacement source, verification and HOLD action for every SAMPLE field class. Escalation from unresolved HOLD to REJECT/H3 is stated (§10.4–§10.5). A reader can execute this without the review packet."
+    },
+    "E": {
+      "status": "PASS",
+      "locators": [
+        "p.1 SAMPLE／SYNTHETIC 邊界警告",
+        "全篇頁首／頁尾標記",
+        "p.2 §1.2 資料性質",
+        "p.3 §1.3–1.4",
+        "p.5 §2.3",
+        "p.6 §3.3 五點邊界",
+        "p.15 §8.2",
+        "p.15–16 §8.3",
+        "p.31 §12.3"
+      ],
+      "finding": "SAMPLE/SYNTHETIC boundaries hold throughout: front-page warning and every page header/footer; 資料性質 in §1.2; blank approval fields in §1.4; no names, signatures, association decisions, real course results or validated-scale claims. 0099 reuse is fenced by five statements (§3.3), and 14/20 appears only in exclusion/boundary contexts (§3.3 item 4, §7.4, §8.3, 表11-1). No causal, significance, pass-rate or competence claims are made; §8.2–8.3 explicitly disclaim them."
+    },
+    "F": {
+      "status": "PASS",
+      "locators": [
+        "p.4 表2-2 後段",
+        "p.15 表8-1",
+        "p.15 §8.2",
+        "p.16 §8.3",
+        "p.16–17 §9.1–9.3",
+        "p.30–31 §12.1 D"
+      ],
+      "finding": "Interpretation is arithmetic only: D +1.250 largest, E +0.875 smallest, A/B +1.000, C +1.125, with explicit denial of significance, effect size, causality, ranking and population inference; §8.1 warns that a 3.125 group mean does not mean every learner scored 3+. Follow-up items in §9 are labelled '建議程序，不是已完成的事實' and keep any objective task, consent, rubric and dataset separate. No recommendation is presented as completed."
+    },
+    "G": {
+      "status": "PASS",
+      "locators": [
+        "p.29 表11-1 盲標題邊界",
+        "p.29 §11 五步盲測順序",
+        "p.5 §3.1 分析鏈",
+        "p.1–2 §1.1–1.2"
+      ],
+      "finding": "Title-blind identification works: the body alone reveals n=8, 80 cells, 75/117/+42, five dimension means, a fixed 0–4 radar with legend/denominator disclosure and a companion 0100. 表11-1 and §11's five tests distinguish 0100 (blank ticks, pre/post pages, five items/version field), 0099 (rater, rubric, 14/20), 0098 (satisfaction) and 0097 (perception), so the artifact is identifiable without DOC_ID or filename."
+    },
+    "H": {
+      "status": "PASS",
+      "locators": [
+        "p.3 §1.5 閱讀路徑",
+        "p.6–7 表3-2 配對識別",
+        "p.19 §10.2",
+        "p.31 §12.1 E",
+        "p.7 §4.1",
+        "p.32 §12.4"
+      ],
+      "finding": "All three prior final8 PARTIAL items are resolved on final9: (i) §1.5 now cites §8.3 (p.3), which exists, not §8.4; (ii) §10.2 (p.19) and §12.1 E (p.31) now say 'A4 混合頁面方向（正文直向、寬表橫向）', matching the technical receipt's 12 landscape pages; (iii) 表3-2 (p.6–7) now says '合成識別碼；正式使用應採可安全配對的去識別代碼' and no four-digit-code phrase remains. The new wording aligns with §4.1 and §10.2 and creates no new contradiction; the four declared wording-only edits are present and no numeric fixture changed."
+    },
+    "I": {
+      "status": "PASS",
+      "locators": [
+        "p.1–3 封面、使用範圍、閱讀路徑",
+        "p.4–12 表格與算式",
+        "p.18–28 HOLD／REJECT、替換登錄與定位表",
+        "p.30–32 最終檢核與聲明"
+      ],
+      "finding": "Phrasing is readable Traditional Chinese and tables/instructions are self-contained: units, denominators, totals, means, differences and HOLD/REJECT actions are defined where used, and the 80-row locator table can be followed row by row. The only usability drags are the very dense landscape register/locator pages (p.20–28); no dependence on this review packet is required."
+    }
+  },
+  "arithmetic": {
+    "status": "PASS",
+    "checks": [
+      {
+        "check": "Cell count, range and 0100 source match",
+        "recomputed": "8 pairs × 5 dimensions × 2 phases = 80 integer cells; all values are 1–4 (within 0–4); cell-for-cell equal to the supplied paired 0100 table; 80 unique locator rows.",
+        "result": "PASS"
+      },
+      {
+        "check": "Row sums, pre",
+        "recomputed": "A01–A08: 8, 10, 11, 9, 12, 7, 10, 8 = 75.",
+        "result": "PASS"
+      },
+      {
+        "check": "Row sums, post",
+        "recomputed": "A01–A08: 15, 16, 14, 13, 18, 12, 15, 14 = 117.",
+        "result": "PASS"
+      },
+      {
+        "check": "Row differences",
+        "recomputed": "+7, +6, +3, +4, +6, +5, +5, +6 = +42; all positive as stated.",
+        "result": "PASS"
+      },
+      {
+        "check": "Dimension pre sums",
+        "recomputed": "A 17, B 16, C 13, D 14, E 15 = 75.",
+        "result": "PASS"
+      },
+      {
+        "check": "Dimension post sums",
+        "recomputed": "A 25, B 24, C 22, D 24, E 22 = 117.",
+        "result": "PASS"
+      },
+      {
+        "check": "Dimension means and deltas",
+        "recomputed": "A 2.125→3.125 (+1.000); B 2.000→3.000 (+1.000); C 1.625→2.750 (+1.125); D 1.750→3.000 (+1.250); E 1.875→2.750 (+0.875); delta sum 5.250.",
+        "result": "PASS"
+      },
+      {
+        "check": "Overall means",
+        "recomputed": "75 ÷ 8 = 9.375/20; 117 ÷ 8 = 14.625/20; difference 5.25/20 = 42 ÷ 8.",
+        "result": "PASS"
+      },
+      {
+        "check": "Normalization and denominators",
+        "recomputed": "75 ÷ 160 = 46.875%; 117 ÷ 160 = 73.125%; 73.125 − 46.875 = 26.25 percentage points; 160 = 8 × 20.",
+        "result": "PASS"
+      },
+      {
+        "check": "Range and ranking statements",
+        "recomputed": "Max dimension delta +1.250 (D), min +0.875 (E); post mean A highest 3.125; pre mean C lowest 1.625; post C/E 2.750 below 3.000 — all as stated.",
+        "result": "PASS"
+      },
+      {
+        "check": "Chart/text/table duplicate consistency",
+        "recomputed": "§7.2 series, 圖1 alt text, 表7-1, 表10-4/10-5 equal 表6-1/6-2 and 表2-2 on a fixed 0–4 axis with n=8 and two SAMPLE series; no contradictory plotted summary.",
+        "result": "PASS"
+      },
+      {
+        "check": "Locator and derived-map counts",
+        "recomputed": "§10.5 exactly 80 unique T5-1/A01–A08/前後A–E rows, including A05/前E=2 on p.24; 表10-3 has 8 × 3 = 24 values; 表10-4 has 5 × 5 = 25 values; 表10-5 values are consistent.",
+        "result": "PASS"
+      },
+      {
+        "check": "No imported 0099 threshold",
+        "recomputed": "No 14/20 pass line, pass rate, rubric application or skill-threshold import in any 0101 table, figure or calculation; 14/20 appears only in 0099 boundary/prohibition contexts.",
+        "result": "PASS"
+      }
+    ]
+  },
+  "blocking_defects": [],
+  "nonblocking_notes": [
+    "Exact DOCX/PDF/0100 SHA values are not printed in the human-facing body; the technical receipt binds them externally. If in-artifact byte binding is required, add a controlled annex; otherwise record the deliberate choice.",
+    "The 2026-11-02 sample date is expressly labelled a synthetic placeholder on p.1 and p.7, but a non-date placeholder would still read more safely.",
+    "14/20 appears only in 0099 boundary/bypass contexts (§3.3, §7.4, §8.3, 表11-1) and must never migrate into 0101 figures or the radar.",
+    "The external 95-row replacement register mentioned in the technical receipt was not supplied for semantic review; only the in-document 表10-2 (S-01–S-15) and §10.5–10.8 locator maps were assessed.",
+    "The landscape register/locator pages p.20–28 are dense; readable, but heavy for a first-time reader."
+  ],
+  "review_scope_limitations": [
+    "This was a read-only, no-tool review; the DOCX and PDF SHA-256 values are taken as supplied and were not independently recomputed.",
+    "Review is bound to the supplied DOCX-table extract and page-labeled Word-native PDF text; the actual DOCX/PDF bytes were not opened.",
+    "Radar-chart pixels, axis-label legibility, legend placement, fonts, orientation and pagination were not independently inspected; the separate visual receipt is used only as scope/consistency evidence.",
+    "The paired 0100 content was checked against the supplied 0100 table (it matches all 80 cells), not by opening the 0100 DOCX; the exact 0100 SHA is external.",
+    "The 0097/0098/0099 source documents were not supplied; neighbour boundaries were assessed from 0101's own text and the packet.",
+    "The official printed checkbox serial remains UNKNOWN; no external verification was performed.",
+    "The external 95-row replacement register was not supplied; only the in-document replacement table and locator maps were assessed."
+  ],
+  "formal_acceptance": "NOT_GRANTED"
+}

@@ -1,0 +1,151 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0135",
+  "official_requirement_id": "I19-E25",
+  "project_157_item": 140,
+  "official_printed_checkbox_serial": "UNKNOWN",
+  "blueprint": "source/UNIQUE_BLUEPRINT_0135_I19-E25_R01.md",
+  "source_commit": "8ff5f8cbe6df80be9ed60577ed324e5a0a18f382",
+  "candidate_state": "CANDIDATE",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN_UNTIL_SOURCE",
+  "artifacts": {
+    "docx": {
+      "path": "candidate/0135__目標市場與顧客價值具體提升成效分析報告_R01.docx",
+      "sha256": "cae8be8280456b51a1294ee90eafca0ac1ae8a12738289d6ebbca35b3a05a3da",
+      "bytes": 52820
+    },
+    "body_markdown": {
+      "path": "candidate/0135_I19-E25_BODY_R01.md",
+      "sha256": "e251cec14fc1e80244a206b4ba852e4b30356c786013f248dcf43459d2136e0b"
+    },
+    "replacement_register": {
+      "path": "candidate/0135_SYNTHETIC_REPLACEMENT_REGISTER_R01.csv",
+      "sha256": "044bb6428e5b36fa6d1c0b7c162ac7c771f8fbd7f9fc97a5a86a3e012d790f88"
+    },
+    "word_native_pdf": {
+      "path": "render/word_native_final/0135_R01_WordNative.pdf",
+      "sha256": "836ce81d08d096fa856e5a20ed40e005b2ac5a4c58d056397d151505e29e8362",
+      "bytes": 570579
+    },
+    "technical_qa": {
+      "path": "qa/TECHNICAL_QA_0135_R01.json",
+      "sha256": "e775c8ed9a143ba8d67fd808ac0d191b4095ce0cfaa27e9adfb412345c11358d",
+      "status": "PASS_WITH_SCOPE"
+    },
+    "visual_qa": {
+      "path": "qa/VISUAL_QA_0135_R01.json",
+      "sha256": "0e4bb3b9bf5256c8fd082697e2f9376f709516271b989df5de375334b4ac3acb",
+      "status": "PASS_WITH_SCOPE"
+    },
+    "independent_semantic_review": {
+      "status": "PASS_TEXT_ONLY_WITH_PROVIDER_IDENTITY_UNKNOWN",
+      "exact_sha_required": "cae8be8280456b51a1294ee90eafca0ac1ae8a12738289d6ebbca35b3a05a3da",
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_serving_model": "UNKNOWN",
+      "independent_route": "Antigravity CLI 1.4.7; reviewer separate from Codex Writer; actual provider/model identity not proven",
+      "result": "Raw reviewer JSON verdict PASS; zero blocking and zero nonblocking findings. Text-only semantic, arithmetic, SAMPLE/REAL boundary, neighbor separation and usability.",
+      "work_id": "TTQS-0135-I19-E25-R01-W2-ANTIGRAVITY-R12-EXACT-SHA-REVIEW",
+      "cli_exit_code": 0,
+      "pid": 82660,
+      "conversation_id": "b1dcba37-8eb8-49ec-8515-9628ad18c090",
+      "token_usage": {
+        "input_tokens": 20300,
+        "output_tokens": 7986,
+        "thinking_tokens": 6175,
+        "cache_read_tokens": 0,
+        "total_tokens": 28286
+      },
+      "response_sha256": "e1d401cf008db13e7e836684b05a9877efc838011235d5c7abec4ad1c653b519",
+      "stdout_sha256": "0c88c061431a39b0c3c7c2ba5e793445b935bc217aba662053c54b2862a59a6f",
+      "terminal_receipt": "independent_review/ANTIGRAVITY_R12_20261027/ADJUDICATION_R12.json",
+      "scope_limit": "No binary DOCX inspection, rendering, visual review, or provider identity proof; existing technical and 10/10-page visual receipts remain separate.",
+      "candidate_mutated": false,
+      "formal_acceptance": "NOT_GRANTED"
+    },
+    "supplemental_semantic_reviews": [
+      {
+        "status": "PASS_TEXT_ONLY_WITH_TWO_NONBLOCKING_FINDINGS",
+        "exact_sha_required": "cae8be8280456b51a1294ee90eafca0ac1ae8a12738289d6ebbca35b3a05a3da",
+        "worker": "OpenCode v2 CLI 2.1.4",
+        "work_id": "TTQS-0135-I19-E25-R03-W1-EXACT-SHA-REVIEW-AFTER-429-RELEASE",
+        "requested_model": "opencode/glm-5.3-flash-free",
+        "actual_model": "opencode/glm-5.3-flash-free",
+        "actual_model_evidence": "Sanitized native session export: providerID=opencode, id=glm-5.3-flash-free",
+        "cli_exit_code": 0,
+        "pid": 92176,
+        "session_id": "ses_e8544289bffeNRi5T4R1l2X87Y",
+        "duration_seconds": 56.686,
+        "token_usage": {
+          "input_tokens": 14697,
+          "output_tokens": 1791,
+          "reasoning_tokens": 718,
+          "cache_read_tokens": 2432,
+          "cache_write_tokens": 0
+        },
+        "reported_cost_usd": 0,
+        "fallback": "NOT_OBSERVED_IN_CAPTURED_SESSION",
+        "tool_events_observed": false,
+        "computer_use": false,
+        "blocking_findings": 0,
+        "nonblocking_findings": 2,
+        "response_sha256": "f5d73a8d010da4ceec811f5cb3754af1d8baf100f53b1211ba5b679275ca7af7",
+        "stdout_sha256": "5b743e90485525ee05cddc6c57eb9a017bccfbb6aed950bb7700a3c98df2433e",
+        "session_export_sha256": "f80deda674cb7304152029009228d14d0697b409acd0a6762da18a357827966f",
+        "terminal_sha256": "e5a5d165260703bd54e20cec61720e3551a9befa64f0452c27ba74e8bce6bc72",
+        "adjudication_path": "independent_review/OPENCODE_R12_20261027T0819/ADJUDICATION_OPENCODE_R12.json",
+        "adjudication_sha256": "6eb3bf68a33c52ae49a2e2a507118bf4984b31d5eeb9c036feae9aa63d441ee3",
+        "scope_limit": "Text-only using supplied extracted text; reviewer did not open/re-hash DOCX. No layout/visual or formal/REAL acceptance."
+      }
+    ],
+    "latest_additional_semantic_review": {
+      "status": "PASS_TEXT_ONLY_WITH_TWO_NONBLOCKING_FINDINGS",
+      "exact_sha_required": "cae8be8280456b51a1294ee90eafca0ac1ae8a12738289d6ebbca35b3a05a3da",
+      "worker": "OpenCode v2 CLI 2.1.4",
+      "work_id": "TTQS-0135-I19-E25-R03-W1-EXACT-SHA-REVIEW-AFTER-429-RELEASE",
+      "requested_model": "opencode/glm-5.3-flash-free",
+      "actual_model": "opencode/glm-5.3-flash-free",
+      "actual_model_evidence": "Sanitized native session export: providerID=opencode, id=glm-5.3-flash-free",
+      "cli_exit_code": 0,
+      "pid": 92176,
+      "session_id": "ses_e8544289bffeNRi5T4R1l2X87Y",
+      "duration_seconds": 56.686,
+      "token_usage": {
+        "input_tokens": 14697,
+        "output_tokens": 1791,
+        "reasoning_tokens": 718,
+        "cache_read_tokens": 2432,
+        "cache_write_tokens": 0
+      },
+      "reported_cost_usd": 0,
+      "fallback": "NOT_OBSERVED_IN_CAPTURED_SESSION",
+      "tool_events_observed": false,
+      "computer_use": false,
+      "blocking_findings": 0,
+      "nonblocking_findings": 2,
+      "response_sha256": "f5d73a8d010da4ceec811f5cb3754af1d8baf100f53b1211ba5b679275ca7af7",
+      "stdout_sha256": "5b743e90485525ee05cddc6c57eb9a017bccfbb6aed950bb7700a3c98df2433e",
+      "session_export_sha256": "f80deda674cb7304152029009228d14d0697b409acd0a6762da18a357827966f",
+      "terminal_sha256": "e5a5d165260703bd54e20cec61720e3551a9befa64f0452c27ba74e8bce6bc72",
+      "adjudication_path": "independent_review/OPENCODE_R12_20261027T0819/ADJUDICATION_OPENCODE_R12.json",
+      "adjudication_sha256": "6eb3bf68a33c52ae49a2e2a507118bf4984b31d5eeb9c036feae9aa63d441ee3",
+      "scope_limit": "Text-only using supplied extracted text; reviewer did not open/re-hash DOCX. No layout/visual or formal/REAL acceptance."
+    }
+  },
+  "source_data_boundary": "All outcome figures and case rows are SAMPLE/SYNTHETIC. Association REAL originals and formal checkbox serial remain UNKNOWN.",
+  "builder": "Codex authored the replacement candidate after external Worker results were rejected or unavailable; do not attribute this candidate to Antigravity/OpenCode.",
+  "created_at_local": "2026-10-25T00:23:30+08:00",
+  "historical_semantic_reviews": [
+    {
+      "status": "PARTIAL",
+      "source": "R11 Antigravity text review/adjudication",
+      "note": "Historical receipt retained; limitations not overwritten by R12."
+    },
+    {
+      "status": "NO_USABLE_REVIEW",
+      "source": "OpenCode free-model attempt",
+      "note": "Provider returned HTTP 429; no reviewer body was produced."
+    }
+  ],
+  "updated_at_local": "2026-10-27T08:22:29.5248404+08:00"
+}

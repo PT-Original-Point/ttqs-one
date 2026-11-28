@@ -1,0 +1,20 @@
+{
+  "schema": "TTQS_ONE_INDEPENDENT_SEMANTIC_REVIEW_RESPONSE_R01",
+  "work_id": "TTQS_ONE_0023_I04-E02_R05_W1_SEMANTIC_REVIEW_R01_20261116",
+  "candidate_sha256": "ed1bd7938beb991e0dd4edfb12e8397fde0dcff5ad46f64b34b6e8e33d4c9784",
+  "verdict": "PASS",
+  "checks": {
+    "requirement_fit": "PASS",
+    "genre_boundary": "PASS",
+    "operational_usability": "PASS",
+    "synthetic_truth_boundary": "PASS",
+    "calculation_consistency": "PASS",
+    "evaluator_inspectability": "PASS"
+  },
+  "findings": [],
+  "unknowns": [
+    "REAL 機構名稱、核准簽章、法規條次、經費預算、學員名冊與實際辦訓成果均標示 UNKNOWN，未推論、未代製。",
+    "官方來源僅文字層 PDF_TEXT_EXACT_PAGE_MATCH，視覺核驗未執行；文件已如實標示不主張版面視覺一致。"
+  ],
+  "limitations": "本審查基於封包內提供之 candidate 文字、合成替換簿、計算稽核表與兩份 QA 收據；未開啟 DOCX 原件逐頁比對，但確定性 QA（SHA、字數、表格數、字型、fact ID 完整性）與視覺 QA（全頁縮圖＋全尺寸頁）均已 PASS。所有 80 個 SYN-0023 fact ID 在替換簿恰各映射一次，32 筆計算重新驗算一致，含 C-01 三單元四捨五入 100.1% 之顯示捨入差說明。"
+}

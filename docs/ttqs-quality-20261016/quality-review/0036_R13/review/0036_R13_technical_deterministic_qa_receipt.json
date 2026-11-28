@@ -1,0 +1,125 @@
+{
+  "schema": "TTQS_ONE_R12_2_DETERMINISTIC_QA_RECEIPT_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0036",
+  "requirement_id": "I07-E04",
+  "revision": "R13",
+  "candidate_sha256": "47d5760c227a3a7dc7b3ba7942e697fb7e5dd0a7b1856209f1cbb81296d987e3",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0036_R13_SCOPED_REPAIR_20261123\\candidate\\0036__課程設計進度與訓練規劃_R13.docx",
+  "remote_path": "docs/ttqs-quality-20261016/quality-review/0036_R13/candidate/0036__課程設計進度與訓練規劃_R13.docx",
+  "result": "PASS",
+  "validator_sha256": "7ca78317c770144a7810ed057e0043a643c315c2296ec9ff436a17e15716f0f9",
+  "source_sha256": {
+    "official_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "unique_blueprint_sha256": "2940375cf6e16697ccad12e56ac6f0a3cd43f31c97d054250ab31b0927ce4cf5",
+    "source_r12_candidate_sha256": "e2be3928f96d45bdee6d18762b169c92e7817d10d0c0f87e4854bd16756febbb",
+    "synthetic_register_sha256": "b353019f2949347b9e801157ff0eafef42a6f507e3489d9bb93b0d95703a7adf",
+    "w1_packet_sha256": "ebbd9a2153f9c3d5adaf10cf2952e24e9feef45a0c0d28a3320fdb12473e83c2"
+  },
+  "checks": [
+    {
+      "id": "exact_docx_identity_and_byte_count",
+      "result": "PASS",
+      "evidence": {
+        "candidate_sha256": "47d5760c227a3a7dc7b3ba7942e697fb7e5dd0a7b1856209f1cbb81296d987e3",
+        "bytes": 229679
+      }
+    },
+    {
+      "id": "native_docx_open_and_zip_integrity",
+      "result": "PASS",
+      "evidence": {
+        "python_docx_open": true,
+        "technical_delta_zip_integrity": "PASS"
+      }
+    },
+    {
+      "id": "official_requirement_and_unique_blueprint_binding",
+      "result": "PASS",
+      "evidence": {
+        "requirement_id": "I07-E04",
+        "official_source_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+        "unique_blueprint_sha256": "2940375cf6e16697ccad12e56ac6f0a3cd43f31c97d054250ab31b0927ce4cf5"
+      }
+    },
+    {
+      "id": "inherited_r12_technical_floor_and_formatting",
+      "result": "PASS",
+      "evidence": {
+        "r12_technical_receipt_sha256": "bba30bed710cd9b64009be6b62d343074e48cd8400c89025504b7e189a4c0d32",
+        "r12_result": "PASS",
+        "r13_formatting_signature_unchanged": true
+      }
+    },
+    {
+      "id": "scoped_ooxml_and_content_delta",
+      "result": "PASS",
+      "evidence": {
+        "changed_parts": [
+          "word/document.xml"
+        ],
+        "changed_paragraphs": 2,
+        "table_structure_unchanged": true,
+        "embedded_media_unchanged": true
+      }
+    },
+    {
+      "id": "sample_real_and_replacement_boundary",
+      "result": "PASS",
+      "evidence": {
+        "explicit_real_replacement_area": true,
+        "retention_claim_non_authoritative": true,
+        "reviewer_targeted_checks_pass": true
+      }
+    },
+    {
+      "id": "review_packet_exact_sha_and_text_coverage",
+      "result": "PASS",
+      "evidence": {
+        "packet_sha256": "ebbd9a2153f9c3d5adaf10cf2952e24e9feef45a0c0d28a3320fdb12473e83c2",
+        "review_response_sha256": "e04c292f9dfbf220dbba3e71cfe84f827517d7cf75d4a08190826639389a72ee",
+        "candidate_text_blocks": 798,
+        "candidate_nonempty_lines": 807,
+        "missing_candidate_blocks": 0,
+        "coverage_method": "whitespace-normalized candidate paragraph/table-cell text each occurs in packet"
+      }
+    },
+    {
+      "id": "rendered_pdf_exact_candidate_and_page_set",
+      "result": "PASS",
+      "evidence": {
+        "renderer": "LibreOffice headless; not Microsoft Word",
+        "pdf_sha256": "e319a65204ec3b355f757bc89f4b416c6007c69f1895ee968fb2f96db1b53fff",
+        "page_count": 19,
+        "18_pages_pixel_identical_to_r12": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          18,
+          19
+        ],
+        "changed_page": [
+          17
+        ]
+      }
+    }
+  ],
+  "reviewer_verdict": "PASS",
+  "technical_scope": "R12 passing technical floor inherited without content/format regression; R13 exact-SHA scoped delta and source bindings verified. No formal acceptance asserted.",
+  "observed_at_tpe": "2026-11-24T10:02:17+08:00",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "NOT_ASSERTED"
+}

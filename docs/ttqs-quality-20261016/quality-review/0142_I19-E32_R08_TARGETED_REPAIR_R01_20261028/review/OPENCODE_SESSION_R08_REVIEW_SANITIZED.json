@@ -1,0 +1,149 @@
+{
+  "info": {
+    "id": "ses_e7f4cf67cffepHTvNkLfXiNRk5",
+    "projectID": "40324aede2fa06c711480e1583f762d65af10fc9",
+    "agent": "plan",
+    "model": {
+      "id": "deepseek-v4.1-flash-free",
+      "providerID": "opencode",
+      "variant": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 39599,
+      "output": 0,
+      "reasoning": 32000,
+      "cache": {
+        "read": 1792,
+        "write": 0
+      }
+    },
+    "outcome": "failed",
+    "time": {
+      "created": 1793160579667,
+      "updated": 1793160747674,
+      "idle": 1793160747679
+    },
+    "location": {
+      "directory": "/[redacted:session-directory:ses_e7f4cf67cffepHTvNkLfXiNRk5]"
+    }
+  },
+  "messages": [
+    {
+      "id": "msg_180b30a8c001kZ1g6F714fRxoD",
+      "time": {
+        "created": 1793160579724
+      },
+      "type": "agent-switched",
+      "agent": "plan",
+      "previous": "plan"
+    },
+    {
+      "id": "msg_180b30a59001qH8QEW6HlAfJqB",
+      "time": {
+        "created": 1793160579944
+      },
+      "text": "[redacted:synthetic:msg_180b30a59001qH8QEW6HlAfJqB]",
+      "type": "synthetic"
+    },
+    {
+      "id": "msg_180b30a7b00181d4huBAqPtTm0",
+      "time": {
+        "created": 1793160579951
+      },
+      "text": "[redacted:text:msg_180b30a7b00181d4huBAqPtTm0]",
+      "files": [],
+      "type": "user"
+    },
+    {
+      "id": "msg_180b30b95001De2ZHx3RqaZ8vh",
+      "time": {
+        "created": 1793160580017,
+        "streamed": 1793160745143,
+        "completed": 1793160745150
+      },
+      "type": "assistant",
+      "agent": "plan",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [
+        {
+          "type": "reasoning",
+          "text": "[redacted:reasoning:msg_180b30b95001De2ZHx3RqaZ8vh]",
+          "native": {
+            "redacted": "reasoning-native:msg_180b30b95001De2ZHx3RqaZ8vh"
+          },
+          "time": {
+            "created": 1793160582111,
+            "completed": 1793160745135
+          }
+        }
+      ],
+      "finish": "length",
+      "rawFinish": "length",
+      "cost": 0,
+      "tokens": {
+        "input": 39599,
+        "output": 0,
+        "reasoning": 32000,
+        "cache": {
+          "read": 1792,
+          "write": 0
+        }
+      }
+    },
+    {
+      "id": "msg_180b590cb001QSMbAv3uyce8Vj",
+      "time": {
+        "created": 1793160745163
+      },
+      "text": "[redacted:synthetic:msg_180b590cb001QSMbAv3uyce8Vj]",
+      "type": "synthetic"
+    },
+    {
+      "id": "msg_180b590cf001DFjqLsVKVKAKt5",
+      "time": {
+        "created": 1793160745231,
+        "completed": 1793160747674
+      },
+      "type": "assistant",
+      "agent": "plan",
+      "model": {
+        "id": "deepseek-v4.1-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [],
+      "finish": "error",
+      "error": {
+        "type": "provider.free-limit",
+        "message": "Free usage limit reached. Connect a provider or subscribe to OpenCode Go to keep going, or switch models.",
+        "status": 429,
+        "response": {
+          "body": "{\"type\":\"error\",\"error\":{\"type\":\"FreeUsageLimitError\",\"message\":\"Free usage limit reached. Free models work in OpenCode (https://opencode.ai); subscribe to OpenCode Go to keep going: https://opencode.ai/go\"}}"
+        },
+        "retryAfterMs": 71252000
+      }
+    },
+    {
+      "id": "msg_180b59a9f001CvlzYezPiKa6E0",
+      "time": {
+        "created": 1793160747679
+      },
+      "type": "idle",
+      "outcome": "failed",
+      "error": {
+        "type": "provider.free-limit",
+        "message": "Free usage limit reached. Connect a provider or subscribe to OpenCode Go to keep going, or switch models.",
+        "status": 429,
+        "response": {
+          "body": "{\"type\":\"error\",\"error\":{\"type\":\"FreeUsageLimitError\",\"message\":\"Free usage limit reached. Free models work in OpenCode (https://opencode.ai); subscribe to OpenCode Go to keep going: https://opencode.ai/go\"}}"
+        },
+        "retryAfterMs": 71252000
+      }
+    }
+  ]
+}

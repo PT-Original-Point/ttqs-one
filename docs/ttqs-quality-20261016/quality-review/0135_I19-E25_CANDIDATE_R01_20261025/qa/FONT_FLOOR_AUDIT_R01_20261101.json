@@ -1,0 +1,66 @@
+{
+  "schema": "ttqs-one-font-floor-audit-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0135",
+  "official_requirement_id": "I19-E25",
+  "observed_at_local": "2026-11-01T07:29:50+08:00",
+  "result": "PASS_FONT_FLOOR_ONLY",
+  "candidate_state": "CANDIDATE_ONLY",
+  "candidate": {
+    "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0135_I19-E25_SOURCE_PREP_R01_20261024\\candidate\\0135__目標市場與顧客價值具體提升成效分析報告_R01.docx",
+    "bytes": 52820,
+    "sha256": "cae8be8280456b51a1294ee90eafca0ac1ae8a12738289d6ebbca35b3a05a3da",
+    "github_readback_ref": "c66c08884a23f475ab65c9e992c7a6567371becd",
+    "github_git_blob_sha1": "f3b01de845fa21f30d1af7dc5d8d8d2a370b4e0c",
+    "github_blob_matches_local": true
+  },
+  "source_packet_sha256": "fe4e433924b21b9891ca61ca52907e56a9dbd9ac62a4fd6fc43a9e4faef19696",
+  "unique_blueprint_sha256": "cb936466e92bb2d5976a2be1a013d85ccdd3a8bbe434dd8b51ac3d77e12d25c1",
+  "existing_receipt_sha256": {
+    "technical": "e775c8ed9a143ba8d67fd808ac0d191b4095ce0cfaa27e9adfb412345c11358d",
+    "visual": "0e4bb3b9bf5256c8fd082697e2f9376f709516271b989df5de375334b4ac3acb",
+    "semantic_adjudication": "6eb3bf68a33c52ae49a2e2a507118bf4984b31d5eeb9c036feae9aa63d441ee3"
+  },
+  "method": {
+    "format": "OOXML word/document.xml + word/styles.xml",
+    "size_resolution_order": "direct run size, character-style chain, paragraph-style chain, document default",
+    "table_style_check": "enumerated each table style in use and inspected base/conditional run properties; no table-style font-size override was defined",
+    "body_floor_pt": 10.5,
+    "table_floor_pt": 9.5,
+    "unresolved_runs": 0,
+    "limitations": [
+      "Checks WordprocessingML run text sizing and style inheritance only. Does not constitute visual, semantic, source-mapping, mathematical, formal-acceptance, or REAL-evidence review.",
+      "The audit records the current candidate font-floor result only; it does not upgrade or replace any prior overall quality state."
+    ]
+  },
+  "run_counts_and_sizes": {
+    "body_runs": 90,
+    "body_pt": {
+      "10.5_paragraph_style": 26,
+      "11_doc_default": 42,
+      "12.5_paragraph_style": 7,
+      "15_paragraph_style": 14,
+      "21_paragraph_style": 1
+    },
+    "table_runs": 334,
+    "table_pt": {
+      "9.5_direct": 332,
+      "11_doc_default": 2
+    },
+    "unresolved_body_runs": 0,
+    "unresolved_table_runs": 0,
+    "table_styles_used": {
+      "default": 1,
+      "TableGrid": 11
+    },
+    "table_style_font_overrides": "none"
+  },
+  "minimum_effective_body_pt": 10.5,
+  "minimum_effective_table_pt": 9.5,
+  "body_floor": "PASS",
+  "table_floor": "PASS",
+  "candidate_docx_modified": false,
+  "overall_quality_promotion": "NONE",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "NOT_ASSERTED"
+}

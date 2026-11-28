@@ -1,0 +1,37 @@
+{
+  "schema": "TTQS_ONE_VISUAL_QA_R21_R01",
+  "work_id": "TTQS_ONE_0018_I03-E01_VISUAL_REVIEW_R21_20261125",
+  "candidate_sha256": "44e15653475d3f20b120e250c7c7600970390cf29176004e666726bde84cadcb",
+  "candidate_bytes": 102070,
+  "pdf_sha256": "7bf467f01150eb3b9925d6c4c7ef31adda2e7ef1230dc9f2bc8b1b64bd6195ed",
+  "page_raster_manifest_sha256": "bcd93a32e6e0805d4ba92aad71d424e55fb321c61e7b7d1a92f933b494b53288",
+  "page_count": 74,
+  "raster_count": 74,
+  "dpi": 90,
+  "visual_scope": "FULL_74_PAGE_REVIEW_BY_CONTACT_SHEETS_AND_TARGET_PAGE_MAGNIFICATION",
+  "comparison": {
+    "base_candidate_sha256": "9a552a17c9a2814459c3696a90cdab6f5b125bb9dc99708c39f5b3d7bf48c92e",
+    "base_page_count": 74,
+    "pixel_identical_pages_count": 70,
+    "changed_pages_reinspected": [
+      31,
+      32,
+      33,
+      34
+    ],
+    "changed_page_count": 4
+  },
+  "inspection_method": "Inspected all R20 full-document page contact sheets; for R21, verified image SHA equality on 70 unchanged pages and inspected the four changed pages at 620x804 contact-sheet scale. Word COM opened R21 read-only and exported PDF; Poppler rasterized every page.",
+  "findings": {
+    "page_clipping": "NONE_OBSERVED",
+    "table_overflow": "NONE_OBSERVED",
+    "headers_footers": "CONSISTENT",
+    "blank_or_corrupt_pages": "NONE_OBSERVED",
+    "changed_category_fields_visible": "PASS"
+  },
+  "visual_review": "PASS",
+  "semantic_review": "PENDING",
+  "github_raw_readback": "PENDING",
+  "formal_acceptance": "NOT_GRANTED",
+  "reviewed_at_tpe": "2026-11-25T06:21:36.054037+08:00"
+}

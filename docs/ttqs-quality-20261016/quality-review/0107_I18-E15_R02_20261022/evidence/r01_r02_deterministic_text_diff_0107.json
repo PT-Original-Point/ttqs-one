@@ -1,0 +1,81 @@
+{
+  "doc_id": "0107",
+  "requirement_id": "I18-E15",
+  "method": "python-docx OOXML body-order extraction; paragraph text and table cell text; no Word rendering or semantic inference",
+  "r01_docx_sha256": "748ac062b33c1da0db75aa882905c4d0e8c624b0ab50189b7b37146bc6968651",
+  "r02_docx_sha256": "66160c8fdf8d674317c895687182f2883c2447a5294e926c4d6f412a3190767e",
+  "r01_block_count": 100,
+  "r02_block_count": 100,
+  "r01_paragraph_count": 82,
+  "r02_paragraph_count": 82,
+  "r01_table_count": 18,
+  "r02_table_count": 18,
+  "changed_body_blocks": 2,
+  "changes": [
+    {
+      "block_index": 7,
+      "kind": "table",
+      "r01_row_count": 10,
+      "r02_row_count": 10,
+      "cell_changes": [
+        {
+          "row_index": 8,
+          "column_index": 1,
+          "r01": "R01／TTQS-0107-I18-E15-SAMPLE-WRITER-R01-20261022-02",
+          "r02": "R02／TTQS-0107-I18-E15-SAMPLE-WRITER-R02-20261022-01"
+        }
+      ]
+    },
+    {
+      "block_index": 36,
+      "kind": "table",
+      "r01_row_count": 5,
+      "r02_row_count": 5,
+      "cell_changes": [
+        {
+          "row_index": 0,
+          "column_index": 6,
+          "r01": null,
+          "r02": "觀察窗截止日\ncutoff_date"
+        },
+        {
+          "row_index": 1,
+          "column_index": 6,
+          "r01": null,
+          "r02": "2026-07-29"
+        },
+        {
+          "row_index": 2,
+          "column_index": 6,
+          "r01": null,
+          "r02": "2026-07-29"
+        },
+        {
+          "row_index": 3,
+          "column_index": 6,
+          "r01": null,
+          "r02": "2026-07-29"
+        },
+        {
+          "row_index": 4,
+          "column_index": 6,
+          "r01": null,
+          "r02": "2026-07-29"
+        }
+      ]
+    }
+  ],
+  "inheritance_rule": "R01 semantic verdict is reused only for byte-identical extracted body blocks; R02 delta must be reviewed separately. Text extraction does not establish visual/layout or formal acceptance.",
+  "status": "PASS_DETERMINISTIC_DIFF_ONLY",
+  "r01_extracted_text_snapshot_sha256": "4d1b8a74733bb7b436270b015aff57f4a8c1b28463fa242087aab90e687b873f",
+  "r02_extracted_text_snapshot_sha256": "e088ce13863a35e7e36481b0401d71bf4cc961fcc2194e1340200880c686787b",
+  "extraction_script_sha256": "a164e70866ff428967dc3c3fc745ab5198c38350535ad1779d2cba9c6edfb365",
+  "r01_independent_review_response_sha256": "3844e50304c9652dc58737b8eb9db267ab3fc3e22284b748a4cccef512228c7a",
+  "r01_technical_qa_receipt_sha256": "c1a7c2107a0f29fea2cc5f653578457fdc932dda46e6f678c6b12165970f1bff",
+  "r02_technical_qa_receipt_sha256": "da54b274d7b087bf9e49a6022195970a2e479965a110dbd23af6360d168fea7b",
+  "limitations": [
+    "This compares extracted body paragraphs and table cell text only.",
+    "It does not compare headers/footers, non-text drawing content, document properties, visual layout, or rendered pages.",
+    "No formal association acceptance is asserted."
+  ]
+}

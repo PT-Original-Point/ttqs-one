@@ -1,0 +1,51 @@
+{
+  "schema": "TTQS_ONE_GITHUB_READBACK_RECEIPT_R08_P6_V1",
+  "project_id": "TTQS_ONE",
+  "command": "TTQS_ONE_R08_P6_WORKER_DISPATCH_RECOVERY_ENFORCEMENT",
+  "verified_at_tpe": "2026-10-22T15:34:55+08:00",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "pr_number": 92,
+  "remote_head": "46ca3dec7f46a346f9f794d9b02abb2ac870c473",
+  "method": "native git fetch origin branch; git cat-file blob FETCH_HEAD:path; compare SHA-256 and byte length with each package manifest",
+  "packages": [
+    {
+      "doc_id": "0101",
+      "manifest_path": "docs/ttqs-quality-20261016/quality-review/0100_0101_R09_20261021/0101_final9/evidence/0101_R09_final9_package_manifest.json",
+      "listed_artifact_count": 41,
+      "remote_readback_verified_count": 41,
+      "failed_count": 0,
+      "candidate_sha256": "56f433e095f32378f2fd8241c1a27948d2bfe6748da003af5623d265885edb68",
+      "candidate_bytes": 166586,
+      "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+      "formal_acceptance": "NOT_GRANTED"
+    },
+    {
+      "doc_id": "0105",
+      "manifest_path": "docs/ttqs-quality-20261016/quality-review/0105_I18-E13_R01_20261022/evidence/worker_return_R06_R08_P6_manifest.json",
+      "listed_artifact_count": 81,
+      "remote_readback_verified_count": 81,
+      "failed_count": 0,
+      "candidate_sha256": "bf588da017fb6a6e8da993ce9d677e17303ae2444baa68c8c2956714ce82144d",
+      "candidate_bytes": 92356,
+      "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+      "formal_acceptance": "NOT_GRANTED"
+    },
+    {
+      "doc_id": "0106",
+      "manifest_path": "docs/ttqs-quality-20261016/quality-review/0106_I18-E14_R01_20261022/evidence/worker_return_manifest_0106_R01_R08_P6.json",
+      "listed_artifact_count": 74,
+      "remote_readback_verified_count": 74,
+      "failed_count": 0,
+      "candidate_sha256": "204bc47e1d7049b872c667a07b1f9fe7d9148bb867ca13b59c89ccaad36d515e",
+      "candidate_bytes": 351339,
+      "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+      "formal_acceptance": "NOT_GRANTED"
+    }
+  ],
+  "candidate_acceptance": "all three remain candidates; no formal acceptance asserted",
+  "active_work_snapshot": {
+    "0105_R07": "PID 65076 remained alive; manuscript exists locally but was not adopted or counted as a completed return at this verification time",
+    "no_duplicate_writer_dispatched": true
+  }
+}

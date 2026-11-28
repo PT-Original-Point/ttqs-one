@@ -1,0 +1,57 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0056",
+  "revision": "R05",
+  "official_requirement_id": "I12-E04",
+  "official_checkbox_serial": "059",
+  "candidate_sha256": "a8ac2f2487bd40ff00784980bbe2ef9a84c0cfe326c9b37e6dceaeebc3e750cf",
+  "predecessor_sha256": "0cf37ad689906df1eadc8034d6aa39853e9d7d5454a13d000559ded790e456a6",
+  "package_zip_test": "PASS",
+  "python_docx_open": "PASS",
+  "paragraph_count": 128,
+  "table_count": 17,
+  "remaining_schema_field_keys": [],
+  "remaining_machine_status_keys": [],
+  "unique_target_text_change_from_R04": "已送出索取，待回覆",
+  "changed_ooxml_members": [
+    "word/document.xml"
+  ],
+  "namespace_map_preserved": true,
+  "mc_ignorable_prefixes_resolved": true,
+  "word_com_open_and_pdf_export": "PASS",
+  "word_pdf_sha256": "281b7dcaa837317c529a977580f4bdb33f9e4c26659d0950c4193f0b09e243e3",
+  "pdf_pages": 14,
+  "a4_page_size_points": [
+    595.32,
+    841.92
+  ],
+  "page_png_count": 14,
+  "visual_inspection": "ALL_14_PAGES_INSPECTED",
+  "layout_notes": [
+    "Pages 4-8 contain dense tables but text remains readable at full-page view.",
+    "Page 6 has substantial whitespace because it contains one synthetic example row and two blank real-data-entry rows.",
+    "No clipping, overlap, missing table cells, or broken status labels observed."
+  ],
+  "R04_to_R05_render_changed_pages": [
+    "page-03.png"
+  ],
+  "technical_result": "PASS",
+  "human_acceptance": "NOT_GRANTED",
+  "independent_semantic_review": "PASS",
+  "reviewed_candidate_sha256": "a8ac2f2487bd40ff00784980bbe2ef9a84c0cfe326c9b37e6dceaeebc3e750cf",
+  "reviewer_receipt": "review/opencode_v2_semantic_R05/review_receipt_R05.json",
+  "source_provenance": {
+    "repository": "PT-Original-Point/ttqs-one",
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "source_commit_at_build": "9fdfc1deda180997dbae6e93669c34cc8d442b37",
+    "source_commit_at_pre_sync_readback": "9fdfc1deda180997dbae6e93669c34cc8d442b37",
+    "mission_blob_sha1": "538bedb9d87e8465f43151933b4a5c1bfa4bbc4e",
+    "genre_manual_blob_sha1": "4ff863d9f534b6359fc1c7c1685bd8cce02da886",
+    "157_checkbox_contract_blob_sha1": "8c2bbe7ca9dcbb03088a48934b9e57e7147ede63",
+    "execution_contract_blob_sha1": "62e3dd7dfd8579b6bc97952ffa6236e7494f3b4d",
+    "hourly_wake_contract_blob_sha1": "60ae010c58140e1710ed24016085c6dfaf6ffaee",
+    "external_audit_contract_blob_sha1": "263aaca84891bba8dca087875804343c3670e921",
+    "unique_blueprint_blob_sha1": "6a4b940251c0954faa592d8814bbf93ee96556da",
+    "source_packet_blob_sha1": "016cd9a71cbc52f48ff3db41142cbc120beb8334"
+  }
+}

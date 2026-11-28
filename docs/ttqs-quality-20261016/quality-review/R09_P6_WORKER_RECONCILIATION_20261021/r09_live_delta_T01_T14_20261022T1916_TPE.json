@@ -1,0 +1,46 @@
+{
+  "receipt_id": "TTQS_ONE_R09_LIVE_DELTA_T01_T14_20261022T1916_TPE",
+  "observed_at_tpe": "2026-10-22T19:16:45+08:00",
+  "command": "TTQS_ONE_R09_WIN10_PANEL_WORKER_FULL_CLOSED_LOOP_20261021",
+  "r09_contract_blob": "4c7eff55748ff265b1e5a7d1122852b0d101acbd",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "github_head_before_this_receipt": "c68fada30b70f69bbd21312ffedbadc5619ceef3",
+  "host_id": "DESKTOP-VMV4Q60",
+  "host_os": "Windows 10",
+  "host_user_redacted": "desktop-vmv4q60\\<LOCAL_USER>",
+  "goal_thread": "01a14098-b269-79e3-b07c-56e96557fe07",
+  "goal_state": "ACTIVE",
+  "goal_pause_reason": "NONE_OBSERVED",
+  "scheduler": {"id":"ttqs-one-hourly-quality-goal-resume","state":"ACTIVE","interval_minutes":120,"binding":"same Goal thread","project":"E:\\TTQS","native_last_run":"UNKNOWN","native_next_run":"UNKNOWN","natural_120_minute_trigger":"NOT_VERIFIED"},
+  "panel": {"path":"E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\MASTER\\dashboard.html","project":"TTQS_ONE legacy static HTML; live source not verified","host":"UNKNOWN_IN_RENDERED_PANEL","last_observed":"2026-10-05T22:14:08+08:00","data_sources":["http://127.0.0.1:8765/status","http://127.0.0.1:8766/muse-status"],"listeners_8765_8766":"NONE","current_head_or_work_id_rendered":false,"alignment":"FAIL_STALE_OFFLINE"},
+  "workers": {
+    "opencode": {"window_start":"2026-10-21T19:15:22+08:00","window_end":"2026-10-22T19:15:22+08:00","sessions":45,"succeeded":42,"interrupted":2,"failed":1,"tokens":{"input":2229260,"output":410455,"reasoning":689726,"cache_read":8243392,"cache_write":0},"local_recorded_cost":0,"provider_billing":"UNKNOWN","models":{"deepseek-v4.1-flash-free":26,"glm-5.3-flash-free":2,"mimo-v2.6-flash-free":17},"pending_sessions":0,"0107_writer":{"pid":68120,"session":"ses_e9cb2a4c5ffeKj7mRtRIbYX2TJ","requested_model":"opencode/deepseek-v4.1-flash-free","exit":1,"error":"provider.auth 403 FreeTierError","tokens":0,"local_cost":0,"adopted_content":"NONE"},"service_pid":45628,"service_is_writer":false},
+    "antigravity": {"window_start":"2026-10-21T19:16+08:00","window_end":"2026-10-22T19:16+08:00","verified_retained_model_dispatch_attempts":0,"actual_model_invocation_count":"UNKNOWN_NO_DURABLE_LEDGER","agy_processes":0,"model_catalog_contains":"gemini-3.8-flash-high","model_identity":"UNKNOWN","authentication":"UNKNOWN","fallback":"UNKNOWN","billing":"UNKNOWN","quota_delta":"UNKNOWN","diagnostic_only":"agy.exe 1.4.5 --version/--help; no inference request"}
+  },
+  "windows": {"active_0102_export":{"parent_powershell_pid":66060,"child_powershell_pid":70808,"owned_word_pid":15600,"all_responding":true,"candidate_sha256":"b7c9d82667971097313514aaaa0939d912730b63cd7a8e2dd25d4999a8659b92","pdf_exists":false},"winword_total":22,"other_word_owner_count":21,"known_unattributed_word_pid":[72848]},
+  "candidate_states": {
+    "0100":{"requirement":"I18-E08","sha256":"debd41e7ca1b18b88cad37db118c5b3474df411b3e2d1c87a8351d456245e0b2","state":"EXISTING_CANDIDATE_PRIOR_QA_NO_REBUILD"},
+    "0101":{"requirement":"I18-E08","sha256":"56f433e095f32378f2fd8241c1a27948d2bfe6748da003af5623d265885edb68","state":"EXISTING_CANDIDATE_SCOPED_QA_NO_REBUILD"},
+    "0102":{"requirement":"I18-E09","sha256":"b7c9d82667971097313514aaaa0939d912730b63cd7a8e2dd25d4999a8659b92","state":"SEMANTIC_SCOPE_PASS_VISUAL_PENDING_NATIVE_EXPORT_RUNNING"},
+    "0107":{"requirement":"I18-E15","source_packet_ready":true,"source_sync_commit":"c68fada30b70f69bbd21312ffedbadc5619ceef3","writer_outcome":"BLOCKED_PROVIDER_403_NO_DOCX"}
+  },
+  "tests": [
+    {"id":"T01","status":"PASS_LIVE","evidence":"OpenCode service PID 45628 is responsive but is not a writer; no pending session; 0107 request failed."},
+    {"id":"T02","status":"PARTIAL_OWNER_UNKNOWN","evidence":"22 WINWORD; PID 15600 is 0102 exporter owned by 66060->70808; other 21 owners unknown, including PID 72848. Nothing terminated."},
+    {"id":"T03","status":"FAIL_PANEL_STALE_OFFLINE","evidence":"Dashboard last modified 2026-10-05; required 8765/8766 sources have no listeners and no current head/work_id."},
+    {"id":"T04","status":"PASS_FIXTURE_ONLY","evidence":"Mismatched PTYSD panel was not used; test itself remains simulated."},
+    {"id":"T05","status":"PARTIAL_NATURAL_TRIGGER_UNKNOWN","evidence":"Goal active; one 120-minute thread-bound automation; exact natural last/next run unavailable."},
+    {"id":"T06","status":"PASS_ARTIFACT_EXISTENCE","evidence":"0100/0101 candidates and source packets exist; 0107 source packet/Unique Blueprint were remotely read back at c68fada."},
+    {"id":"T07","status":"PASS_SCOPED_LANE_ISOLATION","evidence":"0105 failed export remains scoped; 0102 export continues; 0107 writer failure did not invalidate its synced source stage."},
+    {"id":"T08","status":"PASS_FAILURE_DETECTED","evidence":"0105 attempt-02 exit 0 without adoptable output remains rejected; current 0107 403 produced no content."},
+    {"id":"T09","status":"PASS_RECOVERED_ARTIFACT","evidence":"0105 R07 manuscript was previously recovered and reviewed; no new Antigravity success claimed."},
+    {"id":"T10","status":"PARTIAL_SCOPED_REVIEWS","evidence":"0102 exact-SHA semantic 14/14; Word visual export pending. 0101 final9 semantic PASS has stated binary/visual scope limits. No formal acceptance."},
+    {"id":"T11","status":"PASS_FAIL_CLOSED_UNKNOWN_IDENTITY","evidence":"Latest Antigravity receipt reports 0 retained attempts and actual count UNKNOWN; no agy process; no inference call in this turn."},
+    {"id":"T12","status":"PASS_SAMPLE_BOUNDARY","evidence":"0107 blueprint is synthetic-only; no association performance or third-party certificate asserted."},
+    {"id":"T13","status":"PASS_EXACT_GITHUB_BLOB_READBACK","evidence":"Five 0107 source artifacts matched local and GitHub Git blob IDs at c68fada; prior 29-file readback remains unchanged."},
+    {"id":"T14","status":"PARTIAL_PIPELINE_NOT_COMPLETE","evidence":"0107 source stage synced but Writer blocked by 403; 0102 export active and not duplicated; this dispatch produced no DOCX."}
+  ],
+  "system_recovery": "NOT_PASS",
+  "all_sync": "NOT_PASS",
+  "unknowns": ["Natural 120-minute trigger timestamp and continuation proof","Panel live source and same-snapshot OS/GitHub alignment","Antigravity exact invocation count/auth/model/fallback/billing/quota","21 Word process owner/work IDs","0102 PDF/export receipt and visual QA"]
+}

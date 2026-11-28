@@ -1,0 +1,5 @@
+# OpenCode monitoring context for the 0124 R02 review
+
+The user-provided monitoring report has SHA-256 `ff3ca9886e3a345d78be358b2883296b7e5454408d23bc940fee239ba826c900` and a Taipei observation cutoff of 2026-10-27 08:17. It reports ten free models in the official catalogue, nine in the public model API, two Free Inference incidents totaling 3 hours 39 minutes before the cutoff, and says it did not perform account-level calls to the ten models. It lists DeepSeek V4.1 Flash Free as a priority test candidate, with GLM-5.3-Flash Free and MiMo-V2.6-Flash Free as comparison/backup candidates; it does not establish account-specific availability or success rates.
+
+The later local OpenCode v2.1.4 request for `opencode/deepseek-v4.1-flash-free` on DOCX 0124 R02 started at 2026-10-27 13:57 Taipei and was rejected with `provider.free-limit` HTTP 429 before any model response. That later account-level result does not conflict with the report's earlier platform-level Operational status. Actual serving model is UNKNOWN because no model response was produced. No other model was tried, no fallback was accepted, and no semantic verdict resulted.

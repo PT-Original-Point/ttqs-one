@@ -1,0 +1,195 @@
+{
+  "schema": "ttqs-one-0140-r08-candidate-manifest-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0140",
+  "requirement_id": "I19-E30",
+  "official_157_index": 154,
+  "printed_checkbox_serial": "UNKNOWN",
+  "revision": "R08",
+  "candidate_status": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "candidate_docx_sha256": "a6feeb119c14731b63c92833411721e6613db5a011a26f8e38334de9ecacc970",
+  "candidate_docx_bytes": 127755,
+  "real_data": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED",
+  "source_mapping": {
+    "doc_id": "0140",
+    "requirement_id": "I19-E30",
+    "official_checklist_index": 154,
+    "printed_checkbox_serial": "UNKNOWN",
+    "current_blueprint_file": {
+      "repository": "PT-Original-Point/ttqs-one",
+      "branch": "work/ttqs-one-document-quality-contract-20261016",
+      "source_commit": "2288891580cc64a1349e3daa75500f827690fbff",
+      "path": "docs/ttqs-quality-20261016/03_157_CHECKBOX_BLUEPRINTS.md",
+      "git_blob_sha": "8c2bbe7ca9dcbb03088a48934b9e57e7147ede63",
+      "index_154_excerpt": "資訊系統普及率：定義/期間/數據"
+    },
+    "official_source_packet_path": "docs/ttqs-quality-20261016/0140_R06_CANDIDATE_20261025/source/SOURCE_PACKET_0140_I19-E30_R01.md",
+    "source_packet_sha256": "d7b4522d2dd7ea0a0355f26ce699b37397b9944787ecfe6a7be5994bd17b986d",
+    "unique_blueprint_path": "docs/ttqs-quality-20261016/0140_R06_CANDIDATE_20261025/source/UNIQUE_BLUEPRINT_0140_I19-E30_R01.md",
+    "unique_blueprint_sha256": "6188968135d0a01de4db183b997d7e678337fcdb87e0d664d47cd9d05f1c8ceb",
+    "official_requirement_row_sha256": "6464bd7eb4b5b44b0e40ba829cb288916106966233bb5a3baa8aac1e6ac93ccf",
+    "official_requirement_excerpt_sha256": "84e22a29014f735d9db92a24bf9d8412c870c5f681b7cfa9fa7c85147e523ea1",
+    "crosswalk_sha256": "8eb614a730f4c13041751b12a9a0f1bdeb31e618557cdde8d949805e1931b9b1",
+    "official_locator": "WDA training-institution evidence table, page 9, indicator 19 example"
+  },
+  "change_scope": [
+    "Preserved R07 and reused the unchanged 80-row synthetic dataset and 82-row replacement register.",
+    "Restored parenthetical and punctuation in section headings by changing only the R08 heading parser.",
+    "Added explicit SAMPLE/SYNTHETIC labels to section 5.3 and 8.3.",
+    "Clarified the eligible-user denominator in completion-rate labels.",
+    "Replaced internal production terminology in the user-facing review checklist.",
+    "Removed the unsupported association-specific system disclaimer."
+  ],
+  "deterministic_content_math_qa": {
+    "status": "PASS",
+    "receipt": "receipts/R08_PRELIMINARY_CONTENT_QA_0140.json",
+    "receipt_sha256": "d2aa47e4394d777fff0bc8e0f9adba6d6d6ac40bc940347b45ed6f6432e84637"
+  },
+  "visual_review": {
+    "status": "PENDING_NATIVE_WORD_RENDER_AND_ALL_PAGE_INSPECTION"
+  },
+  "independent_semantic_review": {
+    "status": "IN_PROGRESS",
+    "requested_model": "opencode/mimo-v2.6-flash-free",
+    "actual_model": "UNKNOWN_PENDING_RAW_EVENTS"
+  },
+  "files": [
+    {
+      "path": "candidate/0140__訓練資訊系統使用普及率盤點與分析表_R08.docx",
+      "sha256": "a6feeb119c14731b63c92833411721e6613db5a011a26f8e38334de9ecacc970",
+      "bytes": 127755,
+      "role": "candidate_docx"
+    },
+    {
+      "path": "candidate/SAMPLE_RATE_TREND_0140_R08.png",
+      "sha256": "6863393aba501342057715f360c2a3651b266e6edd14a6a87ad58ad38e6c6e0b",
+      "bytes": 64906,
+      "role": "render_source_chart"
+    },
+    {
+      "path": "receipts/DOCX_BUILD_RECEIPT_0140_R08.json",
+      "sha256": "7aabd986d77454502bba6c364b2e9f762a98029811f3333e566cb04b36cb2fa0",
+      "bytes": 1599,
+      "role": "build_receipt"
+    },
+    {
+      "path": "receipts/R07_REVIEW_ADJUDICATION_RECEIPT.json",
+      "sha256": "4f39d48c6e540258a6f2fa994d0a02edb8dd805c85571551558b50b33eaedcd8",
+      "bytes": 3183,
+      "role": "review_adjudication"
+    },
+    {
+      "path": "receipts/R07_TARGETED_REPAIR_INPUT_RECEIPT.json",
+      "sha256": "cf1f08fd6322a4cc35b31204828609c8784d7b0f134d5a1bce8cd6d1556a8eb1",
+      "bytes": 4150,
+      "role": "source_or_audit_evidence"
+    },
+    {
+      "path": "receipts/R08_PRELIMINARY_CONTENT_QA_0140.json",
+      "sha256": "d2aa47e4394d777fff0bc8e0f9adba6d6d6ac40bc940347b45ed6f6432e84637",
+      "bytes": 4509,
+      "role": "content_and_math_receipt"
+    },
+    {
+      "path": "review/OPENCODE_R08_ATTEMPT02_STDERR.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "role": "source_or_audit_evidence"
+    },
+    {
+      "path": "review/OPENCODE_R08_ATTEMPT02_STDOUT.jsonl",
+      "sha256": "dbe4d799d5f8e30cc66d11409d291d0852a002549590fc3390482972bd5fdfa6",
+      "bytes": 251,
+      "role": "source_or_audit_evidence"
+    },
+    {
+      "path": "review/OPENCODE_R08_LAUNCH.json",
+      "sha256": "9cda21dd0c77a8d31d2b55b9da785c0335d632b56da233ec528b46a3f4341264",
+      "bytes": 1720,
+      "role": "worker_launch_receipt"
+    },
+    {
+      "path": "review/OPENCODE_R08_REVIEW_PACKET.md",
+      "sha256": "9c135c6eb8f1f8293f1d2e341c4d2404e7cc813731b586e6883b28652eae1e14",
+      "bytes": 99887,
+      "role": "review_request"
+    },
+    {
+      "path": "review/OPENCODE_R08_STDERR.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "role": "source_or_audit_evidence"
+    },
+    {
+      "path": "review/OPENCODE_R08_STDOUT.jsonl",
+      "sha256": "0e0b9aab6dc1eb7f2cf91559499b0a66824eda5f7f1b86289abeb2bedd846529",
+      "bytes": 124,
+      "role": "source_or_audit_evidence"
+    },
+    {
+      "path": "review/OPENCODE_RUN_HELP_STDERR.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "role": "source_or_audit_evidence"
+    },
+    {
+      "path": "review/OPENCODE_RUN_HELP_STDOUT.txt",
+      "sha256": "7a138276d9e67c37aa13875e2879a997858c1baff45e676e82e4b2bff8ff4b7d",
+      "bytes": 1654,
+      "role": "source_or_audit_evidence"
+    },
+    {
+      "path": "source/build_0140_docx_r08.py",
+      "sha256": "eae8f5c14d6a9c2759915bb38fc731a5a4271c503a739c461c6713c199529e82",
+      "bytes": 21800,
+      "role": "source_or_audit_evidence"
+    },
+    {
+      "path": "source/MANUSCRIPT_0140_R08.md",
+      "sha256": "b8ab8a6709ca1bed0526401c14396985f786735ec37e61956c8265a9dde8c4d8",
+      "bytes": 30690,
+      "role": "source_or_audit_evidence"
+    },
+    {
+      "path": "source/prepare_0140_r08.py",
+      "sha256": "b3c98bf9b320440340a383c8a3654ddb6c80492990cd5e40267b86e999b5a147",
+      "bytes": 6437,
+      "role": "source_or_audit_evidence"
+    },
+    {
+      "path": "source/qa_0140_r08_preliminary.py",
+      "sha256": "6ae34b169eeba65ad29b0c8184c4ae9a39582dc36161fb6bfcadded731dba71d",
+      "bytes": 6642,
+      "role": "source_or_audit_evidence"
+    },
+    {
+      "path": "source/SAMPLE_PERIOD_SUMMARY_0140_R01.csv",
+      "sha256": "fe8c78984fc9e263212be7de724449b71747f50a1a5bffadbff1a4cca3b393ff",
+      "bytes": 385,
+      "role": "source_or_audit_evidence"
+    },
+    {
+      "path": "source/SOURCE_MAPPING_0140_R08.json",
+      "sha256": "c36cddb45821f31fde4804ea6873b3c242feb914cbf51c9ebf95fdcf009dc34d",
+      "bytes": 1424,
+      "role": "source_or_audit_evidence"
+    },
+    {
+      "path": "source/SYNTHETIC_REPLACEMENT_REGISTER_0140_REUSED_R07.csv",
+      "sha256": "9a207c162cc36b08896d4f1ad04ccdcfdefa62bd2b038be31dc715702982e19f",
+      "bytes": 31613,
+      "role": "source_or_audit_evidence"
+    },
+    {
+      "path": "source/SYNTHETIC_USER_DATASET_0140_R01.csv",
+      "sha256": "d1322d85bb809f3606a2edf4a8e0a26b9bb461dee4577e91ea0522972694c63d",
+      "bytes": 16952,
+      "role": "source_or_audit_evidence"
+    }
+  ],
+  "not_included_yet": [
+    "Native Word PDF and page images, pending completion of another document's active Word COM render and sufficient workstation resources.",
+    "Original independent R08 response and exact-SHA adjudication, currently in progress."
+  ]
+}

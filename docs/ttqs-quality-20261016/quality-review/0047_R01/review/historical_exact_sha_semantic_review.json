@@ -1,0 +1,405 @@
+{
+  "deliverable_id": "0047",
+  "verdict": "PASS",
+  "inferred_genre": "跨年度課程資源評估、採購、簽約及履約改善分析／評估報告；具有評分量尺、檢核、年度案例計算、差距與改善追蹤。",
+  "inferred_requirement_id": "I10-E02",
+  "inferred_requirement": "隱去標題與檔名後，由同一課程的事前規準、選擇理由、契約、履約後檢討改善鏈結及兩年度比較辨識。精確官方要求：相關文件能記錄近年來對於課程之評估、採購、簽約與後續管理作業的檢討及改善。",
+  "requirement_genre_mechanics": "PASS",
+  "title_blind_identification": "PASS",
+  "substantive_duplication": "PASS",
+  "sample_real_truth_boundary": "PASS",
+  "body_locators": [
+    "定位慣例：P為word/document.xml本文頂層段落，含空段落；T為本文頂層表，R為含表頭的表列。",
+    "P1-P2：完整報告標題及文件管制；T1R2-R6：用途、使用人、時機、操作與產出。",
+    "P8-P18：分析問題、精確官方要求、範圍及相鄰工作物界線。",
+    "P19-P28：來源、兩筆示範母數、排除、加權公式、檢核分母、四捨五入及完整判讀分支。",
+    "P31-P41：逐步計算、趨勢、合併值、限制及不作因果推論。",
+    "P43-P62：證據鏈結、改善建議、角色與期限、真實替換及未生效狀態。",
+    "P63／T2：定義、分母、來源與限制字典；T2R6規定零分母列不適用。",
+    "P65／T3：2024與2025完整案例、各項評分及完成數；P67／T4：差距比較及合併結果。",
+    "P69／T5：結論、證據、建議、責任、期限及指標；P71／T6：官方要求對應結果及真實原件種類。",
+    "P73-P79／T7-T9：準則、量尺、四項檢核、判讀；尾端沒有重複的加權或履約率公式。"
+  ],
+  "negative_choice_results": [
+    {
+      "neighbor": "0045／I10-E01 訓練資源採購與甄選管理辦法",
+      "verdict": "REJECT",
+      "reason": "藍圖列明近鄰。本文分析兩年度記錄與改善缺口，並非規範每筆採購的程序、授權及例外；P13明定不取代單筆採購程序文件。",
+      "body_locator": "P13、P21、P31-P34；T3-T5"
+    },
+    {
+      "neighbor": "0048／I10-E03 大型採購及師資遴聘會議或審查通過紀錄",
+      "verdict": "REJECT",
+      "reason": "藍圖列明近鄰。本文沒有冒充會議議題、出席、審查意見或核准決議；分析結果亦不證明大型採購或師資聘任經會議通過。",
+      "body_locator": "P13、P18、P23、P41、P61"
+    },
+    {
+      "neighbor": "0049／I11-E01 訓練課程計畫配合業主、受訓者以及職能需求等調查規劃的證明",
+      "verdict": "REJECT",
+      "reason": "補充最近的第三個不同官方要求；0047藍圖只列兩項負向近鄰。本文沒有業主／受訓者需求調查結果、職能差距對應或課程規劃方案；其需求欄位是採購改善分析的一個檢核面向，不能代替需求調查與規劃證明。",
+      "body_locator": "P10-P12、P17、P21-P23；T2R2、T3R1-R3"
+    },
+    {
+      "neighbor": "0046／I10-E01 師資教材廠商評選紀錄表",
+      "verdict": "REJECT",
+      "reason": "補充最近的同指標表單分件。本文四項分數評量證據完整性，沒有逐一候選師資、教材、廠商比較及選擇核決欄位，不能充當單筆評選表。",
+      "body_locator": "P11、P13、P46；T3R1-R3、T7R2-R5"
+    }
+  ],
+  "defects": [],
+  "readability_30s": "PASS",
+  "association_usable": "PASS",
+  "committee_professional": "PASS",
+  "no_unnecessary_content": "PASS",
+  "first_page_30s_complete": "PASS",
+  "document_control": "PASS",
+  "layout_density_review": "PASS",
+  "evaluator_facing": "PASS",
+  "reviewed_sha256": "b51815c1594e44ba7b1d1d02753c3b38d44a16166e74a4474a2e47509116b2b2",
+  "prior_defect_resolution": {
+    "feedback_sha256": "c7389b63190331b1dee739146745d547f9974818dd4761f5978a16676a2be923",
+    "status": "PASS",
+    "items": [
+      {
+        "id": "D01",
+        "issue": "Remove duplicate denominator/exclusion and rounding explanation from sparse tail; retain necessary rules in calculation section.",
+        "status": "PASS",
+        "body_locator": "P19-P28；P73-P79／T7-T9",
+        "evidence": "納入排除仍在P19-P23；分母及四捨五入在P26-P27。尾端P73-P79只保留準則、量尺、檢核與判讀，沒有重複分母／排除或四捨五入說明。供給的精確SHA隱藏分頁回讀為7頁，blank_pages與sparse_pages皆空。"
+      },
+      {
+        "id": "D02",
+        "issue": "Define high-score with incomplete tracking-checklist judgment branch.",
+        "status": "PASS",
+        "body_locator": "P28；T9R4-R5",
+        "evidence": "P28與T9R4明定至少4.00但檢核未全完成仍列需改善、先補齊缺項再覆核；T9R5只有至少4.00且四項全完成才達示範門檻。"
+      },
+      {
+        "id": "R04-REGRESSION-DENOMINATOR-APPENDIX",
+        "issue": "Remove duplicated total-score and tracking-rate formulas from the trailing assessment mechanics.",
+        "status": "PASS",
+        "body_locator": "P25-P27；P73-P79／T7-T9",
+        "evidence": "主要計算段保留加權總分、履約達成率與合併口徑。尾端评量機制沒有再次列出總分或追蹤率公式；其表格只列準則权重、量尺及判讀條件。"
+      },
+      {
+        "id": "FRESH-TITLE-0047",
+        "issue": "Visible title must be a complete natural professional report title rather than truncated filename stem.",
+        "status": "PASS",
+        "body_locator": "P1",
+        "evidence": "可見標題為「課程評估、採購、簽約及履約改善分析報告」，完整自然，明確指出主題與報告文類，沒有截斷檔名或「制度文件」檔名尾碼。"
+      }
+    ]
+  },
+  "explicit_usability_answers": {
+    "junior_high_student_30s": {
+      "answer": "YES",
+      "body_locator": "P1-P2；T1R2-R6",
+      "evidence": "首頁以用途、使用人、時機、操作、結果五個短欄交代本報告；示範／非實際及未生效狀態明確。"
+    },
+    "association_staff_ordinary_operations": {
+      "answer": "YES",
+      "body_locator": "P25-P28、P43-P48、P61；T2-T5、T7-T9",
+      "evidence": "可按原件種類核對四項準則及檢核，以量尺評分、重算、判讀並安排改善責任與期限；採真實案件及正式授權後即可依此方法作業。"
+    },
+    "professional_institutional_document": {
+      "answer": "YES",
+      "body_locator": "P1-P2、P50-P62；T1、T3、T5",
+      "evidence": "有完整主題、文件管制、清楚示範狀態及職能角色；沒有工廠控制詞、fact_id、SHA、內部路徑或仿造核准簽章。"
+    },
+    "no_unnecessary_length_repetition_engineering": {
+      "answer": "YES",
+      "body_locator": "P24-P28、P63-P79；T2-T9",
+      "evidence": "7頁用於定義、完整案例、比較、建議與實際評分工具。摘要、字典、明細及判讀表各有使用目的；曾被要求刪除的尾端公式及分母說明已刪，未見無功能的重複解說或內部工程內容。"
+    }
+  },
+  "semantic_calculation_review": {
+    "status": "PASS",
+    "body_locator": "P25-P34、P39；T2R6、T3R2-R3、T4R2-R5、T5R4、T9R2-R5",
+    "evidence": "四項各25%合計100%；(4+4+3+2)×25%=3.25、(4+4+4+4)×25%=4.00；3／4=75.0%、4／4=100.0%；差異0.75分及25.0個百分點；合併7／8=87.5%；平均3.625顯示3.63。合併仍需改善與完整門檻一致。零分母列不適用；未可追溯者不算完成；比例合併採分子分母加總而非平均百分比。"
+  },
+  "document_control_assessment": {
+    "status": "PASS",
+    "body_locator": "P1-P2、P50、P61-P62",
+    "evidence": "標題、TTQS-0047、版本1.0、修訂日期2026-10-04、示範非實際及未生效均明列。未冒稱已核准或實際簽核；本件藍圖及控制來源未供可核實的機構全名，故不要求虛構機構名稱。角色僅為示範職能。"
+  },
+  "layout_density_assessment": {
+    "status": "PASS",
+    "source": "Human-supplied exact-candidate hidden Word pagination readback",
+    "candidate_sha256": "b51815c1594e44ba7b1d1d02753c3b38d44a16166e74a4474a2e47509116b2b2",
+    "pages": 7,
+    "blank_pages": [],
+    "sparse_pages": [],
+    "evidence": "報告狀態PASS_LAYOUT且SHA與本次讀取位元組一致。未提供逐頁預覽；本次只依所給頁數、空白／稀疏頁結果及本文連續性審查，不宣稱自行視覺渲染。沒有已識別的裁切、破表或分頁異常，未啟動Word／COM或生成PDF／PNG。"
+  },
+  "synthetic_traceability_review": {
+    "semantic_status": "PASS",
+    "receipt_fact_count": 25,
+    "current_register_row_count": 0,
+    "register_scope": "僅採fact_id出現在現行0047 receipt的列；沒有符合列，歷史SYN-0047不納入語意證據。",
+    "deterministic_matching_observation": "中央CSV未含現行25個fact_id。此為Static Gate擁有的精確登錄列／欄位匹配事項；本語意PASS不認證中央登錄同步，不取代promotion所需deterministic hard gates。",
+    "evidence_boundary": "現行receipt已逐項保留值、定位、替換原件及責任角色；本文只需簡明示範聲明與真實替換操作，不需抄入內部逐事實台帳。任何側檔均不證明REAL活動。",
+    "items": [
+      {
+        "fact_id": "0047-FE1-001",
+        "status": "PASS",
+        "receipt_locator": "document_control.version",
+        "body_locator": "P2 文件管制列：版本1.0、未生效",
+        "value_correspondence": "現行定位所指的案例、量尺、數值、判讀或責任期限可在上述本文位置找到，語意一致。",
+        "replacement_evidence": "本文件經權責核定後，依正式文件管制規則填列實際版次及修訂紀錄。",
+        "responsible_role": "文件管制角色",
+        "replacement_assessment": "替換原件與該項事實類型相符；責任為職能角色，未冒稱實際任命、核准或第三方證明。"
+      },
+      {
+        "fact_id": "0047-FE1-002",
+        "status": "PASS",
+        "receipt_locator": "document_control.status；sample_synthetic_content.label；年度案例明細與逐步計算表.兩列.資料狀態",
+        "body_locator": "P2、P6、P9、P52；T3R2-R3 資料狀態",
+        "value_correspondence": "現行定位所指的案例、量尺、數值、判讀或責任期限可在上述本文位置找到，語意一致。",
+        "replacement_evidence": "有真實來源且完成逐項核實後，依權責將實際紀錄與示範資料分開標記；不得因替換單一數值而移除此聲明。",
+        "responsible_role": "文件管制角色",
+        "replacement_assessment": "替換原件與該項事實類型相符；責任為職能角色，未冒稱實際任命、核准或第三方證明。"
+      },
+      {
+        "fact_id": "0047-FE1-003",
+        "status": "PASS",
+        "receipt_locator": "assessment_mechanics.rating_scale；資料欄位、定義、分母、來源及限制字典表.評估準則及分數列",
+        "body_locator": "P25；T2R2；P76／T8R2-R6 評分量尺",
+        "value_correspondence": "現行定位所指的案例、量尺、數值、判讀或責任期限可在上述本文位置找到，語意一致。",
+        "replacement_evidence": "以權責正式核定的評估辦法及真實課程評估表採用的量尺取代；若沒有核定量尺，先核定後再分析。",
+        "responsible_role": "管理權責角色",
+        "replacement_assessment": "替換原件與該項事實類型相符；責任為職能角色，未冒稱實際任命、核准或第三方證明。"
+      },
+      {
+        "fact_id": "0047-FE1-004",
+        "status": "PASS",
+        "receipt_locator": "assessment_mechanics.criteria；年度案例明細與逐步計算表.評分欄；資料欄位、定義、分母、來源及限制字典表.評估準則及分數列",
+        "body_locator": "T2R2、T3R1 四項評分欄；P74／T7R2-R5",
+        "value_correspondence": "現行定位所指的案例、量尺、數值、判讀或責任期限可在上述本文位置找到，語意一致。",
+        "replacement_evidence": "逐項以實際課程制度、案件表單及覆核需求確認準則名稱與適用範圍。",
+        "responsible_role": "課程承辦角色",
+        "replacement_assessment": "替換原件與該項事實類型相符；責任為職能角色，未冒稱實際任命、核准或第三方證明。"
+      },
+      {
+        "fact_id": "0047-FE1-005",
+        "status": "PASS",
+        "receipt_locator": "assessment_mechanics.criteria.weight；年度案例明細與逐步計算表.四項權重欄；完整示範資料及逐步計算",
+        "body_locator": "P25；T2R3；T3R2-R3 四項權重；T7R2-R5",
+        "value_correspondence": "現行定位所指的案例、量尺、數值、判讀或責任期限可在上述本文位置找到，語意一致。",
+        "replacement_evidence": "以正式核定評估辦法或實際評估表中的權重取代，並核對權重合計為100%。",
+        "responsible_role": "管理權責角色",
+        "replacement_assessment": "替換原件與該項事實類型相符；責任為職能角色，未冒稱實際任命、核准或第三方證明。"
+      },
+      {
+        "fact_id": "0047-FE1-006",
+        "status": "PASS",
+        "receipt_locator": "assessment_mechanics.sample_thresholds；年度案例明細與逐步計算表.判讀欄",
+        "body_locator": "P28；P79／T9R2-R5 四個互斥判讀分支",
+        "value_correspondence": "現行定位所指的案例、量尺、數值、判讀或責任期限可在上述本文位置找到，語意一致。",
+        "replacement_evidence": "以權責核定的正式決策門檻取代；沒有正式門檻時只報原始分數及差距，不採用本示範分類。",
+        "responsible_role": "管理權責角色",
+        "replacement_assessment": "替換原件與該項事實類型相符；責任為職能角色，未冒稱實際任命、核准或第三方證明。"
+      },
+      {
+        "fact_id": "0047-FE1-007",
+        "status": "PASS",
+        "receipt_locator": "assessment_mechanics.tracking_checkpoints；資料欄位、定義、分母、來源及限制字典表.履約追蹤完成數列",
+        "body_locator": "P78 四項履約檢核；T2R4-R6",
+        "value_correspondence": "現行定位所指的案例、量尺、數值、判讀或責任期限可在上述本文位置找到，語意一致。",
+        "replacement_evidence": "依真實制度及案件原件定義應檢核項目，確認每項有明確完成標準及來源。",
+        "responsible_role": "課程承辦角色",
+        "replacement_assessment": "替換原件與該項事實類型相符；責任為職能角色，未冒稱實際任命、核准或第三方證明。"
+      },
+      {
+        "fact_id": "0047-FE1-008",
+        "status": "PASS",
+        "receipt_locator": "資料來源、樣本與納入排除；sample_synthetic_content.scenario；年度案例明細與逐步計算表",
+        "body_locator": "P21、P30；T3R2-R3 兩年度各一案例",
+        "value_correspondence": "現行定位所指的案例、量尺、數值、判讀或責任期限可在上述本文位置找到，語意一致。",
+        "replacement_evidence": "以真實課程案件母體及實際納入規則重新界定分析期間和樣本數，並附可核對案件清單。",
+        "responsible_role": "資料彙整角色",
+        "replacement_assessment": "替換原件與該項事實類型相符；責任為職能角色，未冒稱實際任命、核准或第三方證明。"
+      },
+      {
+        "fact_id": "0047-FE1-009",
+        "status": "PASS",
+        "receipt_locator": "年度案例明細與逐步計算表.第一列.示範年度；sample_synthetic_content.records[0].period",
+        "body_locator": "T3R2 示範年度：2024年度",
+        "value_correspondence": "現行定位所指的案例、量尺、數值、判讀或責任期限可在上述本文位置找到，語意一致。",
+        "replacement_evidence": "以課程計畫、採購及履約原件所共同證明的實際日期及報告期間取代。",
+        "responsible_role": "資料彙整角色",
+        "replacement_assessment": "替換原件與該項事實類型相符；責任為職能角色，未冒稱實際任命、核准或第三方證明。"
+      },
+      {
+        "fact_id": "0047-FE1-010",
+        "status": "PASS",
+        "receipt_locator": "年度案例明細與逐步計算表.第一列.案例；sample_synthetic_content.records[0].case",
+        "body_locator": "T3R2 案例：課程甲",
+        "value_correspondence": "現行定位所指的案例、量尺、數值、判讀或責任期限可在上述本文位置找到，語意一致。",
+        "replacement_evidence": "以核實過的實際課程名稱及可追溯案件識別資料取代。",
+        "responsible_role": "課程承辦角色",
+        "replacement_assessment": "替換原件與該項事實類型相符；責任為職能角色，未冒稱實際任命、核准或第三方證明。"
+      },
+      {
+        "fact_id": "0047-FE1-011",
+        "status": "PASS",
+        "receipt_locator": "年度案例明細與逐步計算表.第一列.四項評分；sample_synthetic_content.records[0].scores_by_criterion",
+        "body_locator": "T3R2 四項評分：4、4、3、2",
+        "value_correspondence": "現行定位所指的案例、量尺、數值、判讀或責任期限可在上述本文位置找到，語意一致。",
+        "replacement_evidence": "以事前評估、選擇比較、正式契約驗收及履約檢討原件逐項重評，保存評分依據。",
+        "responsible_role": "課程承辦角色",
+        "replacement_assessment": "替換原件與該項事實類型相符；責任為職能角色，未冒稱實際任命、核准或第三方證明。"
+      },
+      {
+        "fact_id": "0047-FE1-012",
+        "status": "PASS",
+        "receipt_locator": "年度案例明細與逐步計算表.第一列.履約檢核完成／應完成；sample_synthetic_content.records[0].tracking_checkpoints_completed及tracking_checkpoints_due",
+        "body_locator": "P31、P39；T3R2 完成／應完成：3／4",
+        "value_correspondence": "現行定位所指的案例、量尺、數值、判讀或責任期限可在上述本文位置找到，語意一致。",
+        "replacement_evidence": "依真實年度應檢核清單逐項核對案件材料，以有來源原件的實際完成數及應完成數取代。",
+        "responsible_role": "資料彙整角色",
+        "replacement_assessment": "替換原件與該項事實類型相符；責任為職能角色，未冒稱實際任命、核准或第三方證明。"
+      },
+      {
+        "fact_id": "0047-FE1-013",
+        "status": "PASS",
+        "receipt_locator": "年度案例明細與逐步計算表.第一列.加權總分及履約達成率；sample_synthetic_content.records[0].weighted_score_out_of_5及tracking_rate",
+        "body_locator": "P31；T3R2：3.25／5、75.0%",
+        "value_correspondence": "現行定位所指的案例、量尺、數值、判讀或責任期限可在上述本文位置找到，語意一致。",
+        "replacement_evidence": "使用經覆核的真實評分、正式權重、年度應檢核清單及原件完成數重新計算。",
+        "responsible_role": "資料彙整角色",
+        "replacement_assessment": "替換原件與該項事實類型相符；責任為職能角色，未冒稱實際任命、核准或第三方證明。"
+      },
+      {
+        "fact_id": "0047-FE1-014",
+        "status": "PASS",
+        "receipt_locator": "年度案例明細與逐步計算表.第一列.判讀；發現、原因與證據強度",
+        "body_locator": "P28、P39；T3R2 判讀：需改善，履約檢討改善未完成",
+        "value_correspondence": "現行定位所指的案例、量尺、數值、判讀或責任期限可在上述本文位置找到，語意一致。",
+        "replacement_evidence": "由權責角色按核定量尺及真實案件證據重新判讀，保留決策依據。",
+        "responsible_role": "管理權責角色",
+        "replacement_assessment": "替換原件與該項事實類型相符；責任為職能角色，未冒稱實際任命、核准或第三方證明。"
+      },
+      {
+        "fact_id": "0047-FE1-015",
+        "status": "PASS",
+        "receipt_locator": "年度案例明細與逐步計算表.第二列.示範年度；sample_synthetic_content.records[1].period",
+        "body_locator": "T3R3 示範年度：2025年度",
+        "value_correspondence": "現行定位所指的案例、量尺、數值、判讀或責任期限可在上述本文位置找到，語意一致。",
+        "replacement_evidence": "以課程計畫、採購及履約原件所共同證明的實際日期及報告期間取代。",
+        "responsible_role": "資料彙整角色",
+        "replacement_assessment": "替換原件與該項事實類型相符；責任為職能角色，未冒稱實際任命、核准或第三方證明。"
+      },
+      {
+        "fact_id": "0047-FE1-016",
+        "status": "PASS",
+        "receipt_locator": "年度案例明細與逐步計算表.第二列.案例；sample_synthetic_content.records[1].case",
+        "body_locator": "T3R3 案例：課程乙",
+        "value_correspondence": "現行定位所指的案例、量尺、數值、判讀或責任期限可在上述本文位置找到，語意一致。",
+        "replacement_evidence": "以核實過的實際課程名稱及可追溯案件識別資料取代。",
+        "responsible_role": "課程承辦角色",
+        "replacement_assessment": "替換原件與該項事實類型相符；責任為職能角色，未冒稱實際任命、核准或第三方證明。"
+      },
+      {
+        "fact_id": "0047-FE1-017",
+        "status": "PASS",
+        "receipt_locator": "年度案例明細與逐步計算表.第二列.四項評分；sample_synthetic_content.records[1].scores_by_criterion",
+        "body_locator": "T3R3 四項評分：4、4、4、4",
+        "value_correspondence": "現行定位所指的案例、量尺、數值、判讀或責任期限可在上述本文位置找到，語意一致。",
+        "replacement_evidence": "以事前評估、選擇比較、正式契約驗收及履約檢討原件逐項重評，保存評分依據。",
+        "responsible_role": "課程承辦角色",
+        "replacement_assessment": "替換原件與該項事實類型相符；責任為職能角色，未冒稱實際任命、核准或第三方證明。"
+      },
+      {
+        "fact_id": "0047-FE1-018",
+        "status": "PASS",
+        "receipt_locator": "年度案例明細與逐步計算表.第二列.履約檢核完成／應完成；sample_synthetic_content.records[1].tracking_checkpoints_completed及tracking_checkpoints_due",
+        "body_locator": "P31、P39；T3R3 完成／應完成：4／4",
+        "value_correspondence": "現行定位所指的案例、量尺、數值、判讀或責任期限可在上述本文位置找到，語意一致。",
+        "replacement_evidence": "依真實年度應檢核清單逐項核對案件材料，以有來源原件的實際完成數及應完成數取代。",
+        "responsible_role": "資料彙整角色",
+        "replacement_assessment": "替換原件與該項事實類型相符；責任為職能角色，未冒稱實際任命、核准或第三方證明。"
+      },
+      {
+        "fact_id": "0047-FE1-019",
+        "status": "PASS",
+        "receipt_locator": "年度案例明細與逐步計算表.第二列.加權總分及履約達成率；sample_synthetic_content.records[1].weighted_score_out_of_5及tracking_rate",
+        "body_locator": "P31；T3R3：4.00／5、100.0%",
+        "value_correspondence": "現行定位所指的案例、量尺、數值、判讀或責任期限可在上述本文位置找到，語意一致。",
+        "replacement_evidence": "使用經覆核的真實評分、正式權重、年度應檢核清單及原件完成數重新計算。",
+        "responsible_role": "資料彙整角色",
+        "replacement_assessment": "替換原件與該項事實類型相符；責任為職能角色，未冒稱實際任命、核准或第三方證明。"
+      },
+      {
+        "fact_id": "0047-FE1-020",
+        "status": "PASS",
+        "receipt_locator": "年度案例明細與逐步計算表.第二列.判讀；分群／趨勢／差異結果",
+        "body_locator": "P28；T3R3 判讀：達示範檢視門檻，四項材料均可追溯",
+        "value_correspondence": "現行定位所指的案例、量尺、數值、判讀或責任期限可在上述本文位置找到，語意一致。",
+        "replacement_evidence": "由權責角色按核定量尺及真實案件證據重新判讀，保留決策依據。",
+        "responsible_role": "管理權責角色",
+        "replacement_assessment": "替換原件與該項事實類型相符；責任為職能角色，未冒稱實際任命、核准或第三方證明。"
+      },
+      {
+        "fact_id": "0047-FE1-021",
+        "status": "PASS",
+        "receipt_locator": "分群比較及差距優先排序矩陣表；sample_synthetic_content.combined_calculations；分群／趨勢／差異結果",
+        "body_locator": "P33-P34；T4R2-R5：+0.75分、+25.0個百分點、7／8＝87.5%、3.625顯示3.63",
+        "value_correspondence": "現行定位所指的案例、量尺、數值、判讀或責任期限可在上述本文位置找到，語意一致。",
+        "replacement_evidence": "從真實案件母體重新彙整全部年度分數、分子及分母後計算，不沿用示範期間或樣本數。",
+        "responsible_role": "資料彙整角色",
+        "replacement_assessment": "替換原件與該項事實類型相符；責任為職能角色，未冒稱實際任命、核准或第三方證明。"
+      },
+      {
+        "fact_id": "0047-FE1-022",
+        "status": "PASS",
+        "receipt_locator": "發現、原因與證據強度；結論與可執行建議",
+        "body_locator": "P36、P39-P41、P44：第一筆改善檢核缺漏，不能推論因果",
+        "value_correspondence": "現行定位所指的案例、量尺、數值、判讀或責任期限可在上述本文位置找到，語意一致。",
+        "replacement_evidence": "以真實履約檢討及改善原件確認缺項、原因與結案狀態，再由權責角色核定正式發現。",
+        "responsible_role": "管理權責角色",
+        "replacement_assessment": "替換原件與該項事實類型相符；責任為職能角色，未冒稱實際任命、核准或第三方證明。"
+      },
+      {
+        "fact_id": "0047-FE1-023",
+        "status": "PASS",
+        "receipt_locator": "結論、證據、建議、責任與追蹤指標表.第一列及第三列.示範期限",
+        "body_locator": "T5R2、T5R4 示範期限：課程結束後30日、收齊資料後10個工作日",
+        "value_correspondence": "現行定位所指的案例、量尺、數值、判讀或責任期限可在上述本文位置找到，語意一致。",
+        "replacement_evidence": "依實際課程週期、資料取得需求及權責正式決議訂定期限，並以核定紀錄取代。",
+        "responsible_role": "管理權責角色",
+        "replacement_assessment": "替換原件與該項事實類型相符；責任為職能角色，未冒稱實際任命、核准或第三方證明。"
+      },
+      {
+        "fact_id": "0047-FE1-024",
+        "status": "PASS",
+        "receipt_locator": "plain_language_intro.user；責任人、期限與追蹤指標；結論、證據、建議、責任與追蹤指標表.示範責任角色",
+        "body_locator": "T1R3、P50、P61；T5R2-R4 課程承辦、採購覆核、管理權責角色",
+        "value_correspondence": "現行定位所指的案例、量尺、數值、判讀或責任期限可在上述本文位置找到，語意一致。",
+        "replacement_evidence": "以正式組織權責、職務代理及授權文件確認實際承辦與覆核角色；不以虛構姓名替換。",
+        "responsible_role": "管理權責角色",
+        "replacement_assessment": "替換原件與該項事實類型相符；責任為職能角色，未冒稱實際任命、核准或第三方證明。"
+      },
+      {
+        "fact_id": "0047-FE1-025",
+        "status": "PASS",
+        "receipt_locator": "結論與可執行建議；結論、證據、建議、責任與追蹤指標表.三列",
+        "body_locator": "P43-P48；T5R2-R4 補齊改善閉環並連回同一課程及契約",
+        "value_correspondence": "現行定位所指的案例、量尺、數值、判讀或責任期限可在上述本文位置找到，語意一致。",
+        "replacement_evidence": "由管理權責角色根據真實課程案件原件覆核差距後，記錄實際決議、責任、期限及後續結果。",
+        "responsible_role": "管理權責角色",
+        "replacement_assessment": "替換原件與該項事實類型相符；責任為職能角色，未冒稱實際任命、核准或第三方證明。"
+      }
+    ]
+  },
+  "substantive_duplication_evidence": {
+    "status": "PASS",
+    "source": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\QA\\0047__相關文件能記錄近年來對於課程之評估、採購、簽_制度文件.docx.static.json",
+    "candidate_sha256": "b51815c1594e44ba7b1d1d02753c3b38d44a16166e74a4474a2e47509116b2b2",
+    "peer_docs_compared": 30,
+    "findings": [],
+    "evidence": "已讀取精確static report；substantive_duplication_screen.status為PASS。本文機制也具備本要求專屬的跨年度採購及履約改善鏈結。"
+  },
+  "review_scope": "Fresh exact-SHA independent semantic/usability/evaluator review only；未建置、修改或發布DOCX。此PASS不替代Static Gate、receipt/register或promotion授權。",
+  "review_worker_id": "codex_cross_review_0047_20261005_014156",
+  "review_owner": "CODEX_FRESH_ISOLATED_REVIEWER"
+}

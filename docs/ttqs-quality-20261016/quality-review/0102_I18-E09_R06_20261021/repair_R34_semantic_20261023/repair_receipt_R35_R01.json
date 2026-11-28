@@ -1,0 +1,41 @@
+{
+  "schema": "ttqs.docx_minimal_candidate_repair.v1",
+  "work_id": "TTQS-0102-I18E09-R35-FORM-A-CASE-COLUMN-CORRECTION-R01",
+  "doc_id": "0102",
+  "official_requirement_id": "I18-E09",
+  "blueprint_project_index": 110,
+  "printed_official_checkbox_serial": "UNKNOWN",
+  "source_revision": "R34",
+  "source_docx_sha256": "84C0C420168F255A7556043ED59532BBB9E82232EA27490E7602AD973E6AAAA2",
+  "source_receipt_sha256": "2F806B8D82AFA53509199ED8684214ED49F82FE9C7EEB83F022728748FBF0371",
+  "candidate_revision": "R35",
+  "candidate_docx_sha256": "04F71DB94DD8949B2E0FC67FC0DF5577C2A647138B95E3BEADD3BE2DEA4457AA",
+  "candidate_path": "E:\\TTQS\\_r09_sync_0104_20261022\\docs\\ttqs-quality-20261016\\quality-review\\0102_I18-E09_R06_20261021\\candidate\\0102__技能競賽獲獎證據取得與查核工作紀錄_R35.docx",
+  "repair_script_sha256": "E1C4377BDFE36043D9F5B2E49328AB61DB0FEA99E79290AEC026CDB515260266",
+  "repair_scope": "只修正 Form A 六組欄位的 CASE-01／CASE-02 欄位錯置；更新現行候選標籤並追加版本紀錄。其餘 R34 內容位元組邏輯保持。",
+  "source_packet_sha256": "90E2C809914964039563C734881D9DEDC4E969F60179778F391E39FE2C156982",
+  "unique_blueprint_sha256": "211DE39325C3EE5811D25738161CC6C5AE6322AE6809FD056400ECD2181074A0",
+  "writer_response_sha256": "385ACABC56650DE760AFC1B1BE8376D1922E5C3230878C7ABFB8101D77A3C461",
+  "build_attempt": {
+    "script_exit_code": 1,
+    "post_save_assertion_failed": "expected table count 46; actual 45",
+    "salvage": "candidate preserved and independently reopened; full bounded assertions below passed"
+  },
+  "prior_R34_receipt_status": "R34 self-reported static pass is superseded for six Form A case-column mappings; R35 verifies corrected split values.",
+  "checks": {
+    "docx_reopen": "PASS",
+    "zip_crc": "PASS",
+    "form_a_case_columns": "PASS",
+    "case_register": "2_CASES_ONE_ROW_EACH_6_COLUMNS",
+    "fact_rows": "55_UNIQUE",
+    "duplicate_alias": "PRESERVED_OUTSIDE_FACT_ROWS",
+    "form_f": "5_GATES_PLUS_OVERALL_ROW",
+    "sample_math": "0/2=0%_PRESERVED",
+    "body_font_min_pt": 10.5,
+    "table_font_min_pt": 9.5,
+    "semantic_review": "PENDING_EXACT_R35_SHA",
+    "word_native_export_and_visual_review": "PENDING"
+  },
+  "formal_acceptance": "NOT_GRANTED",
+  "created_at_local": "2026-10-23T07:28:19.460636+08:00"
+}

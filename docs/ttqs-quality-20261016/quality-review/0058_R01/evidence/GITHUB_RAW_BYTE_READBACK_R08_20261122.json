@@ -1,0 +1,38 @@
+{
+  "schema": "ttqs-one-github-raw-byte-readback-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0058",
+  "requirement_id": "I13-E02",
+  "official_checkbox_serial": "062",
+  "revision": "R08",
+  "repository": "PT-Original-Point/ttqs-one",
+  "pull_request": 92,
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "readback_commit_sha": "0b2932f51cdf38a3da41a389a81bb1ae68353a4f",
+  "observed_at_tpe": "2026-11-22T21:48:04.000+08:00",
+  "candidate": {
+    "path": "docs/ttqs-quality-20261016/quality-review/0058_R01/candidate/0058_R08.docx",
+    "sha256": "0DFCAAE1FF9943E46C1B9D527C3DF34FA61048547268C482D0DD378E44D7C58B",
+    "git_blob_sha1": "a2f2eee56a887b0b6131eee955884a9676fedcfc",
+    "bytes": 74999,
+    "status": "PASS_BYTES_MATCH"
+  },
+  "qa_bindings": {
+    "technical_visual_receipt": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0058_R01/evidence/technical_qa_0058_R08.json",
+      "candidate_sha256": "0DFCAAE1FF9943E46C1B9D527C3DF34FA61048547268C482D0DD378E44D7C58B",
+      "technical": "PASS",
+      "visual": "PASS_ALL_32_PAGES"
+    },
+    "semantic_review_response": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0058_R01/review/opencode_v2_semantic_R05/antigravity_gemini38_0058_R08_semantic_R04_response.md",
+      "candidate_sha256": "0DFCAAE1FF9943E46C1B9D527C3DF34FA61048547268C482D0DD378E44D7C58B",
+      "verdict": "PASS",
+      "provider_served_model": "UNKNOWN"
+    }
+  },
+  "method": "Fetched candidate through GitHub Contents API with encoding=base64 at exact immutable PR head; decoded bytes and recomputed SHA-256. GitHub blob SHA-1 recorded separately.",
+  "disposition": "CANDIDATE_QA_COMPLETE_GITHUB_RAW_BYTES_CONFIRMED",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_data": "UNKNOWN_HOLD"
+}

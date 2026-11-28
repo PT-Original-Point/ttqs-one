@@ -1,0 +1,36 @@
+WORK_ID=TTQS_ONE_0032_I06-E03_SCOPED_WRITER_R05_GEMINI38_HIGH_20261118
+PROJECT_ID=TTQS_ONE
+DOC_ID=0032
+REQUIREMENT_ID=I06-E03
+ROLE=Scoped content Writer, not reviewer. Output text-only patch instructions; do not edit files or claim PASS.
+INPUT_CANDIDATE_SHA256=70334325BEFE6C438337977D345A0B539AD164A68108895D1547856A2D362E05
+SOURCE_PACKET_SHA256=3540D60A59D0B11F53E45D73F25C2EDD53D8E0BCED015B39790530E902E5CED0
+BLUEPRINT_SHA256=71CFFB64FDAE734A2DCEA333339BED77A6D15F471577EFBFDB60AD5694D80C46
+
+TASK
+Write a minimal, exact, implementable R05 patch proposal for the four remaining blocking findings from an independent W1 review. The current R04 candidate is a local candidate; it is not claimed GitHub-readback. Do not repeat the completed R04 correction of A03 from 3 nonrespondents to 2. Do not re-review or rebuild the whole document. Use only existing registered SAMPLE/SYNTHETIC IDs and the facts below. No new numerical or real-world facts. If a patch cannot be grounded in the supplied text, mark it INSUFFICIENT rather than inventing.
+
+OFFICIAL REQUIREMENT AND GENRE
+Crosswalk title: 訓練機構具備執行訓練業務相關職能的說明_完整工作稿. Requirement: explain the training institution’s role division, staff capability to execute training work, and supervisor capability to understand direction and translate it into execution. The primary document genre is an institutional capability statement. The internal scoring exercise is subordinate SAMPLE/SYNTHETIC illustration, not an official TTQS scoring standard, approval, or real capability result.
+
+VERIFIED CURRENT R04 CONTENT / FACTS
+- Top title: 訓練機構職能與對外訓練執行能力評核.
+- Purpose says the document provides an internal capability assessment, evidence interpretation, scoring, improvement, and re-evaluation example.
+- Baseline: weighted 61.25/100; rubric weights 15/10/15/15/10/15/10/10, 0-4 scale, threshold 75; principal coverage 3/5=60%; backup coverage currently stated 2/5=40%.
+- Table 05 role values: C01 principal 3 / backup 2; C02 principal 3 / backup 2; C03 principal 2 / no qualified backup; C04 principal 3 / backup 3; C06 principal 2 / backup 2. Rule: principal qualifies at >=3 and backup at >=2. Therefore baseline principal coverage is 3/5=60%; backup coverage is 4/5=80%. After sample improvement, both are 5/5=100% (already registered).
+- Baseline gap: principal C03 and C06 below threshold; backup C03 has no qualified backup. Other listed backup scores meet the >=2 threshold.
+- Existing fact ID SYN-COVER-01 currently records principal 3/5=60%, backup 2/5=40%, and post-improvement 5/5 each. Correct the erroneous baseline derived value only; do not create new fact IDs.
+- R04 has already corrected A03: 12 total, 10 responses, 2 nonresponses, 10/12=83.3%. Leave it unchanged.
+- Evidence index contains exactly eight rows SYN-EV-01 through SYN-EV-08. Existing text says two sample records lack a locator. A04 acceptance currently says 9/9 complete. Correct count to 8/8. An internal section/table anchor can locate a SAMPLE/SYNTHETIC illustration, but it is not a REAL external original. Keep missing real source/locator as UNKNOWN until authentic evidence exists.
+- Existing sample evidence items: EV01 role/backup drill; EV02 capability matrix and sample assessment; EV03 instructor/procurement verification workflow; EV04 course readiness/resources; EV05 document index demonstration; EV06 learner feedback and 30-day follow-up; EV07 supervisor direction-to-goal planning chain; EV08 improvement and re-evaluation index. Corresponding current document sections: II role division, III competency matrix, IV delivery/readiness/follow-up, V supervisor planning, IX improvement tracking, X re-evaluation, XI evidence index.
+- Q01-Q08 actual assessment record lines are blank. The existing sample scores and weights are: Q01 3/4 w15 (SYN-EV-01); Q02 2/4 w10 (coverage); Q03 2/4 w15 (SYN-EV-03; third-party credential UNKNOWN); Q04 3/4 w15 (SYN-FLOW-01..08 and SYN-CASE-01; 12 simulated learners, 16 seats, 8 hours); Q05 2/4 w10 (two simulated index rows lacked locators at baseline); Q06 3/4 w15 (SYN-DIR-01; 5 workdays, 90% target, real strategy UNKNOWN); Q07 2/4 w10 (SYN-EV-04; capacity 12/16=75%); Q08 2/4 w10 (SYN-ACT-01..05; baseline not yet re-evaluated). Every existing ID is registered in the current synthetic register. No unregistered facts may be added.
+- Other W1 low-priority suggestions F5-F8 are intentionally outside this repair scope; do not expand the patch.
+
+REQUIRED PATCHES
+1. F1: enumerate every affected exact location/value in the supplied excerpt list. Correct all baseline backup 2/5=40% claims to 4/5=80%; correct Q02 and A02 deficiency wording to distinguish principal gaps C03/C06 from backup gap C03. Keep 3/5 principal, 75 threshold, and post-improvement 5/5 each. Check all arithmetic.
+2. F3: reconcile exactly eight index entries and the two missing baseline locators. Change A04 future acceptance 9/9 to 8/8. Propose a five-column index including an internal section locator for each of EV01..08, using only the named section anchors above; label these as internal SAMPLE/SYNTHETIC anchors, never external originals. Keep real source/locator UNKNOWN.
+3. F4: reframe this as the required institutional capability statement. Give exact replacement for title and purpose paragraph, and exact replacement headings only where necessary so the scoring exercise is explicitly subordinate SAMPLE/SYNTHETIC support. Do not imply official scoring or actual institution approval.
+4. F9: replace all eight blank actual-assessment lines with fully populated SAMPLE/SYNTHETIC example records, one per Q01-Q08. Use only existing score, weight and Fact IDs listed above; state REAL source and real assessment are UNKNOWN. Each record must name its sample source ID, internal anchor, result/score and concise reason. Do not add blank fields or new synthetic facts.
+
+RESPONSE FORMAT
+Return exactly one JSON object (no markdown fences) with keys: work_id, input_candidate_sha256, source_packet_sha256, blueprint_sha256, result (PATCH_READY|INSUFFICIENT), patches (array of {finding_id, target, exact_old_text_or_target, exact_new_text_or_replacement, fact_ids, rationale}), all_occurrence_check (array of every baseline coverage occurrence to change), evidence_index_rows (8 rows each with id, sample material, scope, internal_anchor, real_source_status), q01_q08_records (8 complete records), numeric_reconciliation, unchanged_scope, insufficient_items, candidate_status. Every patch must be exact, bounded, and grounded in this input. No QA, no semantic PASS, no visual claim, no GitHub claim.

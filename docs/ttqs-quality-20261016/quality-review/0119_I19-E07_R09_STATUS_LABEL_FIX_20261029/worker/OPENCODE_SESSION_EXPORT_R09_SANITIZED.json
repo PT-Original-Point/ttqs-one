@@ -1,0 +1,101 @@
+{
+  "info": {
+    "id": "ses_e78e7bfedffe32Bdc8LvgnkEtd",
+    "projectID": "f27b9df25437c3cad719f47428a6820888a43c04",
+    "agent": "plan",
+    "model": {
+      "id": "glm-5.3-flash-free",
+      "providerID": "opencode",
+      "variant": "default"
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 0,
+      "output": 0,
+      "reasoning": 0,
+      "cache": {
+        "read": 0,
+        "write": 0
+      }
+    },
+    "outcome": "failed",
+    "time": {
+      "created": 1793267875864,
+      "updated": 1793267876993,
+      "idle": 1793267876998
+    },
+    "location": {
+      "directory": "/[redacted:session-directory:ses_e78e7bfedffe32Bdc8LvgnkEtd]"
+    }
+  },
+  "messages": [
+    {
+      "id": "msg_187184041001CjainAmWQEUyQO",
+      "time": {
+        "created": 1793267875905
+      },
+      "type": "agent-switched",
+      "agent": "plan",
+      "previous": "plan"
+    },
+    {
+      "id": "msg_187184024001mKPrsw2xNfIJ2z",
+      "time": {
+        "created": 1793267875958
+      },
+      "text": "[redacted:synthetic:msg_187184024001mKPrsw2xNfIJ2z]",
+      "type": "synthetic"
+    },
+    {
+      "id": "msg_18718403c001Wpia1PDMAyn9Vg",
+      "time": {
+        "created": 1793267875961
+      },
+      "text": "[redacted:text:msg_18718403c001Wpia1PDMAyn9Vg]",
+      "files": [],
+      "type": "user"
+    },
+    {
+      "id": "msg_187184099001rIk1ACZvmE2AY2",
+      "time": {
+        "created": 1793267876009,
+        "completed": 1793267876993
+      },
+      "type": "assistant",
+      "agent": "plan",
+      "model": {
+        "id": "glm-5.3-flash-free",
+        "providerID": "opencode",
+        "variant": "default"
+      },
+      "content": [],
+      "finish": "error",
+      "error": {
+        "type": "provider.free-limit",
+        "message": "Free usage limit reached. Connect a provider or subscribe to OpenCode Go to keep going, or switch models.",
+        "status": 429,
+        "response": {
+          "body": "{\"type\":\"error\",\"error\":{\"type\":\"FreeUsageLimitError\",\"message\":\"Free usage limit reached. Free models work in OpenCode (https://opencode.ai); subscribe to OpenCode Go to keep going: https://opencode.ai/go\"}}"
+        },
+        "retryAfterMs": 52611000
+      }
+    },
+    {
+      "id": "msg_187184486001Vvl87GNFHUbJDZ",
+      "time": {
+        "created": 1793267876998
+      },
+      "type": "idle",
+      "outcome": "failed",
+      "error": {
+        "type": "provider.free-limit",
+        "message": "Free usage limit reached. Connect a provider or subscribe to OpenCode Go to keep going, or switch models.",
+        "status": 429,
+        "response": {
+          "body": "{\"type\":\"error\",\"error\":{\"type\":\"FreeUsageLimitError\",\"message\":\"Free usage limit reached. Free models work in OpenCode (https://opencode.ai); subscribe to OpenCode Go to keep going: https://opencode.ai/go\"}}"
+        },
+        "retryAfterMs": 52611000
+      }
+    }
+  ]
+}

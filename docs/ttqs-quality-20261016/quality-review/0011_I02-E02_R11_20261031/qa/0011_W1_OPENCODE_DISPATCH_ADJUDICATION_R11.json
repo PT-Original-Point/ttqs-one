@@ -1,0 +1,52 @@
+{
+  "schema": "ttqs-one-worker-dispatch-normalization-v1",
+  "receipt_id": "0011_W1_OPENCODE_DISPATCH_ADJUDICATION_R11",
+  "worker": "W1 OpenCode v2 CLI",
+  "provider": "OpenCode v2 CLI",
+  "doc_id": "0011",
+  "requirement_id": "I02-E02",
+  "work_id": "TTQS-0011-W1-SEMANTIC-R11-FULL-20261031-01",
+  "stage": "READY_INDEPENDENT_SEMANTIC",
+  "status": "COMPLETED_PASS",
+  "started_at_local": "2026-10-31T14:13:40.8965207+08:00",
+  "finished_at_local": "2026-10-31T14:16:06.2594306+08:00",
+  "pid": 108676,
+  "process_created_hidden": true,
+  "process_window": "HIDDEN_CREATE_NO_WINDOW",
+  "requested_model": "opencode/glm-5.3-flash-free",
+  "actual_model": "UNKNOWN",
+  "model_identity_status": "UNKNOWN",
+  "candidate_sha256_before": "cce86967e17b6ff2a5af5bec7e37e0d6f850b069ad3845a8d04ebb1065b37f3d",
+  "candidate_sha256_after": "cce86967e17b6ff2a5af5bec7e37e0d6f850b069ad3845a8d04ebb1065b37f3d",
+  "candidate_unchanged": true,
+  "review_input_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0011_I02-E02_LUNA_TEXT_DRAFT_R01_20261029\\qa\\W1_SEMANTIC_REVIEW_R11_FULL_20261031\\REVIEW_INPUT_R11_FULL.md",
+  "review_input_sha256": "f143be37de95398f9f4d1dd6573c3135cb93e8c10857dd1db4dab8ebe37017e1",
+  "review_binding_sha256": "ce2174d2651c54b9501e6deaf9439b2db75dd22f88b34287cce9c288ba8d63d6",
+  "review_scope": "Full R11 extracted body and all 27 tables in document order (§1–§12, Tables 1–27), reviewed fresh against the exact official requirement text 與訓練政策有關之訓練產品與市場定位。 and the complete unique Blueprint row for 0011/I02-E02 including neighbors 0010/I02-E01 and 0012/I02-E03. Text-only semantic/usability scope; Word-native visual render and font-size gates are explicitly excluded.",
+  "review_response_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0011_I02-E02_LUNA_TEXT_DRAFT_R01_20261029\\qa\\W1_SEMANTIC_REVIEW_R11_FULL_20261031\\REVIEW_RESPONSE_R11.txt",
+  "review_response_sha256": "f00ab583cdfc651ee6a28c645aff6848ab8972b68c9a21a42d53dfce8ad582e8",
+  "stdout_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0011_I02-E02_LUNA_TEXT_DRAFT_R01_20261029\\qa\\W1_SEMANTIC_REVIEW_R11_FULL_20261031\\RAW_STDOUT_R11.jsonl",
+  "stdout_sha256": "61c9b8c11c7cc23d1cd718972bffc423bca3576aef68b587b1a5c8a2a2a4bc28",
+  "stderr_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0011_I02-E02_LUNA_TEXT_DRAFT_R01_20261029\\qa\\W1_SEMANTIC_REVIEW_R11_FULL_20261031\\RAW_STDERR_R11.txt",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "exit_code": 0,
+  "timed_out": false,
+  "duration_seconds": 145.366,
+  "session_ids": [
+    "ses_e6f6854bdffeIeV8w23MZPXTX4"
+  ],
+  "usage_metadata": [
+    {
+      "input": 32458,
+      "output": 3592,
+      "reasoning": 6896,
+      "cache": {
+        "read": 4352,
+        "write": 0
+      }
+    }
+  ],
+  "reviewer_verdict": "PASS",
+  "formal_acceptance": "NOT_GRANTED",
+  "normalization_note": "Derived receipt links the immutable native dispatch terminal to its fenced JSON reviewer response by exact SHA so the local dashboard can show completed work; it does not replace or modify the original terminal receipt."
+}

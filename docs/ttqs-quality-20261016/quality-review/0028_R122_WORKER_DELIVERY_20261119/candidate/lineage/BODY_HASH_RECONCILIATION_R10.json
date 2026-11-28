@@ -1,0 +1,35 @@
+{
+  "schema": "TTQS_ONE_BODY_HASH_RECONCILIATION_V1",
+  "doc_id": "0028",
+  "requirement_id": "I05-E02",
+  "candidate_sha256": "b818f9ce6363db5fb6850cfd9f0449715633e70bcc6760a74b5bd5e3002fad2d",
+  "hashes": [
+    {
+      "label": "adopted Markdown file bytes",
+      "sha256": "9fce8df6103cdda11ecf5ba4a441aabf3bf5ef91539ff516cab6a3e18413a8a1",
+      "bytes": 29459,
+      "method": "SHA-256 over BODY_ADOPTED_R10.md raw bytes with Windows CRLF line endings",
+      "role": "source body file checksum"
+    },
+    {
+      "label": "scoped repair body string",
+      "sha256": "782a45d8ece38f419683789197bcb0e19fa15047d3494f5f7f336af955c1fe05",
+      "bytes_after_utf8_lf_normalization": 29060,
+      "method": "SHA-256 after normalizing CRLF to LF; independently recomputed from BODY_ADOPTED_R10.md and matches SCOPED_REPAIR_R10.json",
+      "role": "repair transformation body checksum"
+    },
+    {
+      "label": "OOXML extracted review body",
+      "sha256": "32a5a481335965e3928b67d127ee7a7b48bf9ed105aaf332d538d9a8600c720c",
+      "bytes": 27793,
+      "method": "SHA-256 over EXTRACTED_BODY_R10.txt; packet specifies OOXML body order, paragraphs and table cells",
+      "role": "exact semantic review text bound to candidate SHA"
+    }
+  ],
+  "conclusion": "The three hashes describe different serializations or extraction stages. The repair hash reproduces after LF normalization; the semantic review text hash is separately bound to the exact DOCX SHA. No unresolved body-hash collision or candidate ambiguity remains.",
+  "source_receipts": {
+    "technical_qa_candidate_sha256": "b818f9ce6363db5fb6850cfd9f0449715633e70bcc6760a74b5bd5e3002fad2d",
+    "repair_candidate_sha256": "b818f9ce6363db5fb6850cfd9f0449715633e70bcc6760a74b5bd5e3002fad2d",
+    "w1_review_terminal_candidate_sha256": "b818f9ce6363db5fb6850cfd9f0449715633e70bcc6760a74b5bd5e3002fad2d"
+  }
+}

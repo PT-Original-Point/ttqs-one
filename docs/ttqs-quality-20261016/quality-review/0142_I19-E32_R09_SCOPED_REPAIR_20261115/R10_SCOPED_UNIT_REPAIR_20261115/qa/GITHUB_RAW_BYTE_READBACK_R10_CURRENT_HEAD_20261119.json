@@ -1,0 +1,27 @@
+{
+  "schema": "TTQS_ONE_GITHUB_RAW_BYTE_READBACK_RECEIPT_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0142",
+  "requirement_id": "I19-E32",
+  "revision": "R10_SCOPED_UNIT_REPAIR",
+  "work_id": "TTQS_ONE_0142_R10_GITHUB_RAW_READBACK_20261119",
+  "candidate_state": "CANDIDATE_ONLY",
+  "candidate_path": "docs/ttqs-quality-20261016/quality-review/0142_I19-E32_R09_SCOPED_REPAIR_20261115/R10_SCOPED_UNIT_REPAIR_20261115/candidate/0142_R10_SCOPED_UNIT_REPAIR_CANDIDATE.docx",
+  "candidate_sha256": "127d419e4b3814f66669730212b474b1d1219fa1377374cfdacd424798b27e1c",
+  "candidate_bytes": 49581,
+  "github_blob_sha1": "c70358771046b20bc362169fe61e775814497174",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "readback_base_head": "27c9d37a750a3ee9b99bb2e0b744bca03da0752e",
+  "method": "Fetched the binary candidate from the GitHub Contents API at the exact PR head as base64, decoded the returned bytes, and recomputed SHA-256 with Node.js crypto; the returned Git blob SHA-1 is recorded separately.",
+  "verification": "PASS_RAW_BYTES_MATCH",
+  "qa_binding": {
+    "technical_qa": "PASS; package manifest file qa/REPAIR_QA_R10.json SHA-256 0b8d6a868322dd328ff3d68bb5aaef85f2c983e25729b7140e4a13072ecb9085",
+    "visual_qa": "PASS; qa/VISUAL_RECEIPT_R10.json SHA-256 406d6844fdf2c774437dc7d7469a6a1dfcf52b72929ee097943db4045cd0f9fa",
+    "semantic_review": "W2 exact candidate SHA; PASS_TEXT_ONLY; response SHA-256 aff40103711c794377a97210d0f5bf155fdbff3de40bc6b60866ca5a8758dc01",
+    "w2_served_model": "UNKNOWN"
+  },
+  "formal_acceptance": "NOT_GRANTED",
+  "real_data": "UNKNOWN/HOLD",
+  "observed_at_tpe": "2026-11-19T03:11:12.1519968+08:00"
+}

@@ -1,0 +1,14 @@
+獨立語意審查工作，唯讀，不得寫入、修改、轉存或刪除任何專案文件。你是與 0105 R06 Writer 不同的 reviewer；請完整閱讀附加的審查包，其候選正文由指定 DOCX exact SHA 確定性抽取。不可只憑 Builder/QA 自報 PASS。
+
+身份：doc_id=0105；official requirement=I18-E13；project 157 index 114 僅為內部索引，官方核取表序號不得推定；文件類型為「績效改善調查與課後行動計畫追蹤套件」；候選 DOCX SHA-256=bf588da017fb6a6e8da993ce9d677e17303ae2444baa68c8c2956714ce82144d。來源 PDF 第7頁、SOURCE_PACKET、唯一 Blueprint、專案矩陣相鄰列、crosswalk 與候選抽取文字都在審查包。比較近鄰至少辨識 I18-E12、I18-E14，不能只看標題。
+
+必查實質事項：
+1. 完全符合 I18-E13 官方佐證目的且文類確實正確，遮住標題仍能辨認是此類績效改善調查／課後行動追蹤套件。
+2. 可供協會訓練行政人員直接使用：操作人、時點、步驟、欄位、輸出、後續用法及拒收/暫緩條件清楚；六種表單是否完整互相連接，不能只有說明文字或空模板。
+3. 核對有效性規則、分母／缺答／NA、有理由與無理由、排除和保留條件、合格門檻、四捨五入、案例及行動閉環。逐算 12 列示範稽核及正文數字；不接受只說「數學一致」。查數字是否由相同 case_id 綁定。
+4. 查 SAMPLE/SYNTHETIC 與 REAL 界線、完整替換清冊、對外正式事實、核准、署名、第三方證明或實際成果是否有偽稱；不得把示範當協會真實執行。
+5. 查 152 個替換欄位的可操作性、唯一性、定位與表單引用；前後測及行動追蹤的同一學員／案例證據鏈。
+6. 針對歷史 R04 PARTIAL 曾提出的有效樣本小組 disposition、N1 分母、N2 退出／分母、N3 提問偏誤、N4 清冊關聯、N5 重複與退出計數、N8 未選選項、N10 同意/時間/回收路徑、N11 逐項 SAMPLE 標記及近鄰識別，逐一核對 R06 是否有具體修復；若歷史 Finding 並非適用，不得強行判缺陷。
+7. 找出具體正文定位（段落編號/表號/列 ID/表單欄位，勿杜撰頁碼；本任務只提供文本抽取，未提供視覺頁面），引用短語或精確數字作證。每個問題需 severity、影響、最小修復範圍；區分阻擋與非阻擋觀察。
+
+輸出繁體中文、只輸出一個有效 JSON 物件，欄位：review_id, role, candidate_sha256, source_scope, review_scope="TEXT_ONLY", verdict="PASS|PARTIAL|FAIL", tested_dimensions (每項含 verdict/evidence/locator), prior_finding_matrix (N1..N11逐項 status/evidence/locator), findings (array of id/severity/locator/problem/minimal_repair), non_blocking_notes, unverified (必須明確列視覺排版未驗、Word 位元組 SHA 未由 reviewer 自行計算), recommendation。若 evidence 不足，標 PARTIAL/UNKNOWN，禁止猜測。不要給版面或圖片驗收 PASS；不要把本回覆寫入或改動 DOCX。不要宣稱正式接受或 REAL。

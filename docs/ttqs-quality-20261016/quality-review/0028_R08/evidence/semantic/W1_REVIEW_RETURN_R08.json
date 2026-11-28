@@ -1,0 +1,47 @@
+{
+  "schema": "TTQS_ONE_0028_W1_REVIEW_RETURN_R08",
+  "work_id": "TTQS_ONE_0028_I05-E02_W1_SEMANTIC_REVIEW_R08_20261118",
+  "candidate_docx_sha256": "1EB4E9D26F761B57885AF7DC304BB76324AD85C7513FC858C82AF199D5273F70",
+  "extracted_text_sha256": "B999DF1D0A681825C4CD57D7E6220F21E32CC7660EF5FF6983EE3FD8D6474D79",
+  "requested_model": "opencode/nemotron-3.5-lightning-free",
+  "served_model": "UNKNOWN",
+  "decision": "PASS",
+  "findings": [],
+  "scope_checks": "1) Document directly satisfies I05-E02 with strategy/course-system genre, operational steps, owners, timing, measures, decisions and traceable evidence. 2) Title-blind identification distinguishes 0028/I05-E02 from negative neighbors 0027/I05-E01 and 0029/I05-E03 via explicit boundary sections (Section 3) and structural differentiation (Section 3: course system architecture, strategy axis, demand-response mechanisms distinct from peer scopes). 3) SAMPLE/SYNTHETIC facts, dates, counts, ratios, owners and decisions are coherent and registered via replacement register (SYN-0028 IDs); KPI 2 exact ratio 2/3 ≥ threshold 2/3, displayed as 66.7% after rounding; KPI 3 exact ratio 5/6 > threshold 833/1000, displayed as 83.3% after rounding; DATE-006 absent from active facts and history, consistent with documented omission. 4) Institution-specific unknowns honestly marked as UNKNOWN; no invented association approval, signature, external proof or actual performance. 5) Document complete and usable with clear SAMPLE/SYNTHETIC replacement steps (Section 11) and evaluator-facing language across all blueprint Sections 1-12. 6) Precise heading/table-row locators provided throughout; no blocking findings materially impairing correct use or evidence acceptance.",
+  "rationale": "The R08 candidate document properly addresses I05-E02 within the strategy/course-system genre with complete section structure per blueprint, correctly calculated KPIs with exact integer-comparison before rounding, honest UNKNOWN/SYNTHETIC markings, proper negative-neighbor exclusion, and a full replacement register (Section 11). All six review criteria are satisfied for a bounded independent semantic review of this SAMPLE/SYNTHETIC candidate.",
+  "session_id": "ses_e13123512ffeJ5gWsYAbKX4J3r",
+  "process_id": 14464,
+  "process_terminal_event": {
+    "type": "step_finish",
+    "timestamp": 1794976510958,
+    "sessionID": "ses_e13123512ffeJ5gWsYAbKX4J3r",
+    "part": {
+      "id": "prt_1eceff3ee0015Ty6dOdw3xbIDt",
+      "sessionID": "ses_e13123512ffeJ5gWsYAbKX4J3r",
+      "messageID": "msg_1ecedcd19001DK3gE1CLHBwVo6",
+      "type": "step-finish",
+      "reason": "stop",
+      "cost": 0,
+      "tokens": {
+        "input": 34894,
+        "output": 657,
+        "reasoning": 5341,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      }
+    }
+  },
+  "process_exit_code": "UNKNOWN_NOT_CAPTURED_LAUNCHER_FAILED_AFTER_START",
+  "stdout_sha256": "3DA9676BCDCBBC4710D676BEB1192E25F395BBDBDB3FEE6AFACE1577F4A1F634",
+  "stdout_bytes": 3100,
+  "stderr_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+  "stderr_bytes": 0,
+  "returned_review_json_sha256": "4A90346C5848BC4CCA215F7B50F0904947699DE7B3685EA22DFF6991660A8DBB",
+  "cost_usd": null,
+  "token_usage": null,
+  "return_recovered_at_local": "2026-11-18T12:36:33.069810+08:00",
+  "result": "PASS_W1_EXACT_SHA_SEMANTIC_REVIEW_R08",
+  "exit_code_claimed": false
+}

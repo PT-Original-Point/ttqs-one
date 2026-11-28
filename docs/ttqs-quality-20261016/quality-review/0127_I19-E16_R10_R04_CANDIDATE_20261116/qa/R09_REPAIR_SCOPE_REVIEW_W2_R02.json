@@ -1,0 +1,37 @@
+{
+  "schema": "TTQS_ONE_R09_SCOPED_SEMANTIC_REVIEW_RECEIPT_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0127",
+  "requirement_id": "I19-E16",
+  "candidate_docx_sha256": "d374fa890072edfbad55542b56fb43df22aeac6db51e3f9d2164ab2f0f82ae03",
+  "candidate_body_text_sha256": "00b009b1b9c2a24758372f44e3d70824bc4cba8dd4a2214d0ec213e18d69c632",
+  "paired_csv_sha256": "d5eb3b91ecc83d4e76b831804f85d0e5f81b24e5f66d8a7853aaebc475803b88",
+  "official_source_packet_sha256": "058663e200fd0207196c08a02e4d159c6e3eaa7f167094cd7b409b4050b18675",
+  "unique_blueprint_sha256": "9a249a2e398407469bd82c9bf5d7a6188c9e3d28be79172bd4cc33b213c700ff",
+  "worker": "Antigravity CLI",
+  "cli_version": "1.5.9",
+  "work_id": "TTQS_ONE_0127_R04_R09_FINDING_CLOSURE_W2_GEMINI38_20261114_R02",
+  "dispatch_packet_sha256": "c2f5cecab9de2cc2f3c96bd08795c9896e0e674a94cf187ab474372e5664aad5",
+  "worker_response_sha256": "d850c6a42df1459fa71efacd781a3d8f5ebc76b2c1856253cac58e00621db55f",
+  "response_validation_receipt": "RESPONSE_VALIDATION_W2_R02_CORRECTED.json",
+  "raw_stdout_sha256": "171bdfe9fba26ac240a3a07236622cac748dcf1ac8d4ad60ab5a06736a98c14e",
+  "raw_stderr_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+  "requested_model": "gemini-3.8-flash-high",
+  "actual_serving_model": "UNKNOWN",
+  "review_scope": "R09_FINDINGS_01_02_03_AND_PAIRED_STATUS_SEMANTICS",
+  "verdict": "PASS_REPAIR_SCOPE",
+  "checks": {
+    "R09_01": "PASS",
+    "R09_02": "PASS",
+    "R09_03": "PASS",
+    "paired_status_semantics": "PASS"
+  },
+  "findings": [],
+  "visual_review": "NOT_PERFORMED",
+  "real_evidence_verified": false,
+  "formal_acceptance": "NOT_GRANTED",
+  "limitations": [
+    "僅確認 R09 已列出的三項修補與配對狀態語意；不構成完整文件語意 PASS。",
+    "SAMPLE/合成內容未驗證為任何真實第三方證據。"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "TTQS_ONE_GITHUB_RAW_BYTE_READBACK_RECONCILIATION_V1",
+  "project_id": "TTQS_ONE",
+  "repository": "PT-Original-Point/ttqs-one",
+  "verified_ref": "fc136b57cd952d4a758a9e48e325eb34d89f613b",
+  "observed_local_time": "2026-11-19T01:52:45.3547406+08:00",
+  "candidate": {
+    "path": "docs/ttqs-quality-20261016/quality-review/0028_R08/candidate/0028_R08.docx",
+    "bytes": 62613,
+    "file_sha256": "1EB4E9D26F761B57885AF7DC304BB76324AD85C7513FC858C82AF199D5273F70",
+    "git_blob_sha1": "5f96a7cbcf660f2e40584160f338cd3bf9e4eb21",
+    "github_contents_api_readback": "PASS_BASE64_DECODED_SHA256_MATCH"
+  },
+  "manifest": {
+    "path": "docs/ttqs-quality-20261016/quality-review/0028_R08/ARTIFACT_MANIFEST_R08.json",
+    "bytes": 6769,
+    "file_sha256": "4C4D4C57F600FA14AC05BC177CF9F77731E636A5D133EC7F7746BF911480CD0E",
+    "git_blob_sha1": "de455d809787623a5ba5fa3ba09de7043878a1d4",
+    "github_contents_api_readback": "PASS_BASE64_DECODED_SHA256_MATCH"
+  },
+  "manifest_entries": {
+    "total": 31,
+    "byte_exact_entries": 14,
+    "canonical_lf_entries": 17,
+    "unexplained_mismatches": 0,
+    "reconciliation": "All 17 manifest-listed text evidence blobs reconstruct their declared bytes and SHA-256 by converting canonical LF blob bytes to CRLF; 14 entries match directly. Binary candidate exact SHA-256 verified through GitHub Contents API and local Git object readback at the same ref."
+  },
+  "formal_acceptance": "NOT_CLAIMED"
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "ttqs-one-docx-layout-patch-v1",
+  "observed_at_local": "2026-10-27T21:30:50.858587+08:00",
+  "work_id": "TTQS_ONE_0141_I19-E31_R07_PAGE24_LAYOUT_REPAIR_R04",
+  "doc_id": "0141",
+  "requirement_id": "I19-E31",
+  "blueprint_index_157": 155,
+  "printed_checkbox_serial": "UNKNOWN",
+  "source_candidate": "0141_I19-E31_R07_FONTFIX_TERMINALPARA_R03_CANDIDATE.docx",
+  "source_candidate_sha256": "bfdb9ae9e048dd43f87e84d9e541d63f655335d7d1478297969fe68debcea56e",
+  "output_candidate": "0141_I19-E31_R07_FONTFIX_PAGE24_BALANCE_R04_CANDIDATE.docx",
+  "output_candidate_sha256": "de111911a549a0be0bd6381a6b22ed694881ba6b3f83528d2b4a4e153002142b",
+  "output_bytes": 164740,
+  "defect": "R03 rendered page 24 contained only synthetic record SYN-0141-2025-012 after six records on page 23; substantial unused page area.",
+  "repair": "Add w:pageBreakBefore to the first paragraph of the existing unsplittable table row SYN-0141-2025-010. Target distribution is page 23 records 006-009 and page 24 records 010-012.",
+  "preflight_note": "The R03 target row already had w:cantSplit; the first patch attempt stopped without writing output. The repaired patch preserves that property and adds only pageBreakBefore.",
+  "changed_package_parts": [
+    "word/document.xml"
+  ],
+  "visible_text_unchanged": true,
+  "table_count": 18,
+  "target_table_index_zero_based": 14,
+  "target_row_index_zero_based": 34,
+  "target_row_id": "SYN-0141-2025-010",
+  "existing_cant_split_preserved": true,
+  "page_break_before_verified": true,
+  "render_status": "AWAITING_NATIVE_WORD_RENDER_AND_VISUAL_QA",
+  "semantic_review": "NOT_YET_REVIEWED_ON_R04_SHA",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_data": "UNKNOWN_HOLD"
+}

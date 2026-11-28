@@ -1,0 +1,62 @@
+{
+  "doc_id": "0103",
+  "requirement_id": "I18-E10",
+  "unique_blueprint_item": 111,
+  "revision": "R02",
+  "status": "CANDIDATE_ONLY",
+  "base_docx_sha256": "3bd540066fe9c03cede3ee6b77bff347eb023a1b5229187fbf635faa09878709",
+  "base_manuscript_sha256": "e7955fab1e0b005052a20a2cfd64dd93a745ca5b2a80a1f98875bb64398dfb42",
+  "repair_script_sha256": "3ad5a6f74c8f1f44fd9ca9f638c1635d4b53b33650decda57006b30c43a1f51e",
+  "repaired_manuscript_sha256": "3cf31cc52ead9ba485e1d666d95c0a6fb5fc8770c11ee52b893495cec8e602b4",
+  "scope": "Bounded semantic repairs from independent R01 review; no third-party REAL evidence or approval added.",
+  "changes": [
+    {
+      "finding": "cross-reference to visible status heading",
+      "old": "使用第4.0節狀態碼",
+      "new": "依「共用狀態碼」表選擇狀態",
+      "occurrences": 1
+    },
+    {
+      "finding": "use defined primary state for unsent request",
+      "old": "| 狀態 | `NOT_RECEIVED` | `NOT_SENT` | `NOT_APPLICABLE` |",
+      "new": "| 狀態 | `NOT_RECEIVED` | `REQUEST_DRAFT_ONLY（未寄出）` | `NOT_APPLICABLE` |",
+      "occurrences": 1
+    },
+    {
+      "finding": "state D15 conflict gate alongside D01-D14",
+      "old": "- `VERIFIED_REAL` 必須附上 D01～D14 的必要證據；不能只寫「看起來是真的」。",
+      "new": "- `VERIFIED_REAL` 必須具備 D01～D14 的必要證據，並確認 D15 無重大未解矛盾；若 D15 有未解矛盾，維持 `HOLD`。",
+      "occurrences": 1
+    },
+    {
+      "finding": "align VERIFIED_REAL status table with D15 gate",
+      "old": "| `VERIFIED_REAL` | 來源、權限／範圍、完整性、內容四類查核均有證據 | D01～D14 必要項均有支持 | 不得寫成評分、獎項或正式接受 | 可進入人類覆核，但仍非驗收 |",
+      "new": "| `VERIFIED_REAL` | 來源、權限／範圍、完整性、內容四類查核均有證據 | D01～D14 必要項均有支持；D15 無重大未解矛盾 | 不得寫成評分、獎項或正式接受 | 可進入人類覆核，但仍非驗收 |",
+      "occurrences": 1
+    },
+    {
+      "finding": "replace mixed-language operational instruction",
+      "old": "未確認前不 contact、不轉傳、不公開",
+      "new": "未確認前不聯絡、不轉傳、不公開",
+      "occurrences": 1
+    },
+    {
+      "finding": "replace locator with visible record title",
+      "old": "都要記入 Form 4.7。",
+      "new": "都要記入「存取、更正與保存位置紀錄」表。",
+      "occurrences": 1
+    },
+    {
+      "finding": "merge the stronger S-07 replacement condition into its first row",
+      "old": "| S-07 | 案例一／Form A | 關係 | `SAMPLE-REL-01` | 真實學員／客戶關係證明 | 承辦 | 關係可查 | SAMPLE_ONLY |",
+      "new": "| S-07 | 案例一／Form A | 關係 | `SAMPLE-REL-01` | 真實學員／客戶關係證明 | 承辦 | 關係可查且與課程一致 | SAMPLE_ONLY |",
+      "occurrences": 1
+    },
+    {
+      "finding": "remove duplicate S-07 continuation row",
+      "old": "| S-07 | 案例一／Form A | 關係 | `SAMPLE-REL-01` | 真實學員／客戶關係證明 | 承辦 | 關係可查且與課程一致 | SAMPLE_ONLY |",
+      "new": "",
+      "occurrences_removed": 1
+    }
+  ]
+}

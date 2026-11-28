@@ -1,0 +1,60 @@
+{
+  "schema": "ttqs-one-cli-response-reconciliation-v1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0004-I01-E02-WRITER-R03-AGY-20261030",
+  "doc_id": "0004",
+  "requirement_id": "I01-E02",
+  "worker": "Antigravity CLI",
+  "cli_version": "1.4.10",
+  "pid": 102644,
+  "cwd": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0004_I01-E02_SOURCE_PREP_R03_20261030\\worker",
+  "model_requested": "gemini-3.8-flash-high",
+  "model_actual": "UNKNOWN_NOT_ATTESTED_BY_RESPONSE",
+  "wrapper_result": {
+    "status": "TIMEOUT_KILLED",
+    "exit_code": 1,
+    "timed_out": true,
+    "duration_seconds": 240.062
+  },
+  "cli_payload_result": {
+    "status": "SUCCESS",
+    "num_turns": 1,
+    "duration_seconds": 122.838606,
+    "response_chars": 16409,
+    "response_sha256": "d7ab16b28f6cae465735458b7b238910d422641d386281a4bdc1ca99812bd83f"
+  },
+  "usage_tokens": {
+    "input_tokens": 18714,
+    "output_tokens": 15902,
+    "thinking_tokens": 5647,
+    "cache_read_tokens": 0,
+    "total_tokens": 34616
+  },
+  "raw_files": {
+    "stdout_sha256": "2570e0cb40d1490dde22e7793f7e2eb20c9e08b05390816afa82a363f4232f95",
+    "stderr_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+    "extracted_response_sha256": "d7ab16b28f6cae465735458b7b238910d422641d386281a4bdc1ca99812bd83f"
+  },
+  "reconciliation": "The outer PowerShell dispatch timed out and exited 1 after 240 seconds, but its captured single-line JSON payload contains a complete CLI-level SUCCESS response produced in 122.838606 seconds. Preserve both outcomes; do not call the wrapper run cleanly successful.",
+  "adoption": "The extracted response was reviewed independently; its content was used as source material for scoped R02 and R03 manuscript candidates. It is not itself an accepted DOCX.",
+  "review_findings_on_prior_sha": [
+    "R02: unsupported eligibility method and U005 basis; corrected with sample-only target, explicit rule, and five registered flags.",
+    "R02: invitation count could be read as actual send; corrected to scenarios not sent and denominator field renamed.",
+    "R02: U004 same-day no-response lacked cutoff; corrected with registered synthetic 23:59 Asia/Taipei cutoff.",
+    "R02: receipt/duplicate source locators absent; corrected with explicit registered NOT_A_RECORD slots.",
+    "R02: requirement-to-fields/source/review/output map absent; added traceability matrix."
+  ],
+  "current_candidate": {
+    "manuscript_sha256": "5638bd1ac8d34e461670c43378035e645905aa2d2f26f0f33cbae3bbbdb528d3",
+    "register_sha256": "bbf6ec66d58cd93df63c90ecd611b6aae3e8587265890b33a5daf061c96ec3f9",
+    "status": "CANDIDATE_PENDING_INDEPENDENT_REVIEW_AND_DOCX"
+  },
+  "qa": {
+    "deterministic_checks": "15/15 PASS candidate-only",
+    "independent_semantic": "PENDING",
+    "docx": "NOT_BUILT",
+    "visual": "PENDING",
+    "real_execution": "UNKNOWN",
+    "formal_acceptance": "NOT_GRANTED"
+  }
+}

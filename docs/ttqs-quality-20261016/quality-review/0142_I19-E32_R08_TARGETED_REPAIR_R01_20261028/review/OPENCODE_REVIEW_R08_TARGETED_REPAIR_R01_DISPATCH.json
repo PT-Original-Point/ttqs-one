@@ -1,0 +1,50 @@
+{
+  "work_id": "TTQS-0142-R08-SEMANTIC-REVIEW",
+  "doc_id": "0142",
+  "requirement_id": "I19-E32",
+  "candidate_sha256": "7efc848ed18decf665c423c03d4784e681a5d911ae5185885f614b391d92cc78",
+  "request_sha256": "f1cad4349f039ccdeb0c42a991dc9b81fbc7c7e65806eeb5bdad3522c9314bf8",
+  "requested_model": "opencode/deepseek-v4.1-flash-free",
+  "agent": "plan",
+  "fallback": "NOT_AUTHORIZED",
+  "computer_use": "NOT_USED",
+  "pid": 71260,
+  "started_utc": "2026-10-28T04:09:38.9178024Z",
+  "stdout": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0142_I19-E32_SOURCE_PREP_R01_20261025\\R06_STRUCTURAL_COMPLETION_R12_20261028\\R06_REVIEW\\R08_TARGETED_REPAIR_R01_20261028\\OPENCODE_REVIEW_R08_TARGETED_REPAIR_R01.stdout.jsonl",
+  "stderr": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0142_I19-E32_SOURCE_PREP_R01_20261025\\R06_STRUCTURAL_COMPLETION_R12_20261028\\R06_REVIEW\\R08_TARGETED_REPAIR_R01_20261028\\OPENCODE_REVIEW_R08_TARGETED_REPAIR_R01.stderr.txt",
+  "cli_exit_code": "UNKNOWN",
+  "state": "FAILED_PROVIDER_FREE_LIMIT",
+  "observed_utc": "2026-10-28T04:10:38.9980109Z",
+  "finished_utc": "2026-10-28T04:13:52.4918198Z",
+  "provider_error": {
+    "type": "provider.free-limit",
+    "message": "Free usage limit reached. Connect a provider or subscribe to OpenCode Go to keep going, or switch models.",
+    "status": 429,
+    "response": {
+      "body": "{\"type\":\"error\",\"error\":{\"type\":\"FreeUsageLimitError\",\"message\":\"Free usage limit reached. Free models work in OpenCode (https://opencode.ai); subscribe to OpenCode Go to keep going: https://opencode.ai/go\"}}"
+    },
+    "retryAfterMs": 71252000
+  },
+  "partial_usage": {
+    "id": "prt_180b590be001PG7ecTBa5dDyFO",
+    "sessionID": "ses_e7f4cf67cffepHTvNkLfXiNRk5",
+    "messageID": "msg_180b30b95001De2ZHx3RqaZ8vh",
+    "type": "step-finish",
+    "reason": "length",
+    "cost": 0,
+    "tokens": {
+      "input": 39599,
+      "output": 0,
+      "reasoning": 32000,
+      "cache": {
+        "read": 1792,
+        "write": 0
+      }
+    }
+  },
+  "stdout_sha256": "e51b1a6a0aa303e04263e5975e5f7c41040663631ca7017f0cf0caf7c3efeb78",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "sanitized_session_export_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0142_I19-E32_SOURCE_PREP_R01_20261025\\R06_STRUCTURAL_COMPLETION_R12_20261028\\R06_REVIEW\\R08_TARGETED_REPAIR_R01_20261028\\OPENCODE_SESSION_R08_REVIEW_SANITIZED.json",
+  "sanitized_session_export_sha256": "91d8e2c70f1f400eb9400a52e7e9362e38d2df6805d408835c9d8aa60ac66528",
+  "sanitized_session_export_bytes": 4271
+}

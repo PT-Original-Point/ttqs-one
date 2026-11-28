@@ -1,0 +1,61 @@
+{
+  "schema": "ttqs.independent_semantic_review_receipt.v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0054",
+  "requirement_id": "I12-E02",
+  "official_checkbox_sequence": "057",
+  "candidate_revision": "R14",
+  "candidate_docx_sha256": "3d000e580b9cb1247fd984ebb0c8f5f817fce08ce7c368cc1799c95a111a979c",
+  "review_route": "OpenCode CLI v2.0.29",
+  "model_requested": "opencode/beam-free",
+  "runtime_model_identity": "NOT_ATTESTED_BY_CLI",
+  "session_id": "ses_eaf6339caffe0MzG95tXJSG8CC",
+  "reviewed_at_local": "2026-10-19T04:13:44.767602+08:00",
+  "review_basis": "Exact-SHA DOCX text extraction; semantic-only review; no direct binary or visual inspection claimed.",
+  "inputs": {
+    "candidate_text": {
+      "path": "candidate_text_extraction.md",
+      "bytes": 22376,
+      "sha256": "c22602378789ed17f67710bea377db9cfd204b23fd366e41398eab5a6e0a9c0c"
+    },
+    "official_extract": {
+      "path": "inputs/official/official_checkbox_page4_excerpt.txt",
+      "bytes": 1275,
+      "sha256": "0f37c7f492ccd2440566001f951954c5f48df62fd16622842de87ac3dbff3e25"
+    },
+    "unique_blueprint": {
+      "path": "inputs/mapping/UNIQUE_BLUEPRINT_0054.json",
+      "bytes": 7714,
+      "sha256": "7324f7caab751a56bc2c89fbde2c28af846989fb9b3bf344109336b4d27fa483"
+    },
+    "synthetic_replacement_register": {
+      "path": "inputs/traceability/synthetic_replacement_register_R13.csv",
+      "bytes": 36869,
+      "sha256": "5c2ae524a48e433502e0bc299108b38233984296ca01c5fc420dab782c653e2f"
+    },
+    "review_prompt": {
+      "path": "review_prompt.md",
+      "bytes": 1331,
+      "sha256": "c8e5d61c89f9cd99633edf3d272271e177f22be70a5d6e9d13d40e402c75afb7"
+    }
+  },
+  "cli_exit_code": 0,
+  "stderr_bytes": 0,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_bytes": 2814,
+  "stdout_sha256": "8ccdfab0bcb91bd72bd5b74384d2eae7186aa0d8d17c40ba3e29a17f1e876749",
+  "verdict": "PASS",
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "No explicit related-documents/revision-history heading; information is present in workflow/handover tables.",
+    "No separate control-point column; controls are embedded in workflow steps and exception/handover tables."
+  ],
+  "safety": {
+    "computer_use": false,
+    "permission_bypass": false,
+    "auto_permission_flag": false,
+    "file_tools_requested": false
+  },
+  "formal_association_acceptance": "NOT_GRANTED",
+  "real_evidence_status": "SAMPLE_SYNTHETIC_ONLY"
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "TTQS_ONE_SEMANTIC_READBACK_V1",
+  "created_at": "2026-11-26T21:15:52+08:00",
+  "work_id": "TTQS_ONE_0070_I16-E02_R03_W2_EXACT_SHA_SEMANTIC_20261126",
+  "doc_id": "0070",
+  "requirement_id": "I16-E02",
+  "candidate_sha256": "e94501d2afe86b9209f3d4a040c55d754e465431895ba14dde3526a75891f981",
+  "reviewer": "Antigravity CLI W2",
+  "requested_model": "gemini-3.8-flash-high",
+  "served_model": "UNKNOWN",
+  "review_scope": "semantic and operational usability only",
+  "verdict": "PASS",
+  "blockers": [],
+  "nonblocking_findings": [
+    {
+      "locator": "Section 10 (Tables 35–40)",
+      "evidence": "Auxiliary blank forms are clearly marked as secondary tools and each includes designated roles, trigger timings, required sources, and explicit return/rejection criteria, avoiding the blank-as-deliverable anti-pattern while maintaining practical field usability."
+    },
+    {
+      "locator": "Section 6 & Section 7 (Tables 21–32)",
+      "evidence": "Synthetic worked example SYN-0070-CASE-01 maintains strict mathematical consistency across initial notification (10/12 = 83.3%), follow-up tracking (2/2 = 100%), total notification completion (12/12 = 100%), and 3-stage independent verification (9/9 checkpoints = 100%, 0/3 recurrence), with explicit caveats that sample metrics do not constitute actual association performance."
+    }
+  ],
+  "limitations": [
+    "served model identity is unknown unless the CLI proves it"
+  ],
+  "dispatch_receipt_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_0070_I16-E02_R03_W2_EXACT_SHA_SEMANTIC_20261126\\W2_DISPATCH_RECEIPT_R03_ATTEMPT2.json",
+  "dispatch_receipt_sha256": "e602f37fdfd19a752901fa3ab8a5251380cc870405dfc84d9c8a7041bf571683",
+  "review_packet_sha256": "23591629b800accba22b7b94e144c8ab52a79fb9c1720dbd6a00f106a7249c5d",
+  "raw_response_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_0070_I16-E02_R03_W2_EXACT_SHA_SEMANTIC_20261126\\W2_STDOUT_R03_ATTEMPT2.txt",
+  "raw_response_sha256": "03a600b27f74fa69474636d78e73a996f2f10823635a2573150552de1aa2f267",
+  "os_pid": 11412,
+  "session_id": "UNKNOWN",
+  "exit_code": 0,
+  "timeout": false,
+  "candidate_binary_review": "NO; reviewer assessed provided extracted body and evidence packet",
+  "github_raw_readback": "NOT_PRESENT_FOR_R03",
+  "formal_acceptance": "NOT_GRANTED"
+}

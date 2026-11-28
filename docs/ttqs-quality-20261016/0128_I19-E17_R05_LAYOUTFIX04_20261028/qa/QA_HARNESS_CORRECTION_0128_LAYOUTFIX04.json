@@ -1,0 +1,31 @@
+{
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0128-I19-E17-QA-HARNESS-CORRECTION-LAYOUTFIX04",
+  "candidate_docx_sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
+  "candidate_bytes_changed_during_harness_repair": false,
+  "findings": [
+    {
+      "class": "QA_HARNESS_BUG",
+      "detail": "lxml XPath .find used the w: prefix without passing the namespace map; corrected to explicit namespace-aware lookup.",
+      "effect": "Initial harness execution stopped before a technical receipt was written."
+    },
+    {
+      "class": "QA_HARNESS_BUG",
+      "detail": "internal_path_leak is a negative predicate; the aggregate PASS expression previously treated false (no leak) as a failed positive check. Corrected logic now requires all positive checks and not internal_path_leak.",
+      "effect": "Corrected technical QA is PASS for the current exact SHA."
+    },
+    {
+      "class": "REAL_CANDIDATE_DEFECT_REPAIRED",
+      "detail": "LAYOUTFIX03 had omitted the existing REAL-form title paragraph. The text was restored in LAYOUTFIX04 and verified in extracted text and Word render.",
+      "effect": "No intermediate layoutfix02/03 DOCX was synchronized."
+    },
+    {
+      "class": "QA_HARNESS_BUG",
+      "detail": "The sample CSV contains six case rows, each aggregating 20 task observations; the aggregate denominator is 120, not 120 CSV rows.",
+      "effect": "QA asserts six cases and independently sums denominators to 120."
+    }
+  ],
+  "current_docx_sha256": "1ade26a9b850a41e4fe2ee686689e0abc075f179e1a95cb0c050b94c03b9ec41",
+  "current_technical_status": "PASS",
+  "recorded_at_local": "2026-10-28T20:12:26.488997+08:00"
+}

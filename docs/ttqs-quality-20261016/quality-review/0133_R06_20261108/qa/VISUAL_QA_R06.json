@@ -1,0 +1,101 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0133",
+  "candidate_revision": "R06",
+  "candidate_docx_sha256": "cceae5b8781fe503bd15993409ba616adb53a99d9923816d44afe019ee48b821",
+  "candidate_pdf_sha256": "c628f0a9012bc7f4bda877d92e53f1fc898b517410608d0f2c2067e8a82203bd",
+  "baseline_revision": "R05",
+  "baseline_docx_sha256": "7f9cf468358d43ab866a1f11f29149faf0ee21ff99c7966f7754bc1a7978eb6e",
+  "baseline_pdf_sha256": "7b7ca35f175fcde835d381c82bd92dd315acb2cff9ac1375d8f6a971fe1ac027",
+  "baseline_review_response_path": "docs/ttqs-quality-20261016/quality-review/0133_R05_20261106/w1_r05_review/review_response.md",
+  "baseline_review_response_sha256": "4047b053890757006e0364a4e64e3fd18cc226394847c15b9cf7db69786df4bc",
+  "render_engine": "Microsoft Word native PDF; page PNGs rendered from exact candidate PDF at 120 dpi",
+  "page_count": 12,
+  "pages_full_page_inspected": [
+    8,
+    10,
+    11,
+    12
+  ],
+  "page_observations": {
+    "8": "Table 10 SYN-EX-01 formula and the two-day synthetic split are readable; no clipping or overlap observed.",
+    "10": "Unchanged continuation of the replacement register is readable.",
+    "11": "Table 15 SYN-EX-01 values and REAL-source/HOLD boundary are readable; expanded row moves the following HOLD row to page 12.",
+    "12": "Repeated status-table header appears; HOLD and REJECT rows remain intact and readable, followed by the unchanged source index."
+  },
+  "baseline_candidate_pixel_comparisons": [
+    {
+      "page": 8,
+      "baseline_dimensions_px": [
+        993,
+        1403
+      ],
+      "candidate_dimensions_px": [
+        993,
+        1403
+      ],
+      "decoded_pixels_identical": false,
+      "changed_luminance_pixels": 360944,
+      "total_pixels": 1393179,
+      "changed_fraction": 0.259079,
+      "difference_bbox_px": [
+        87,
+        224,
+        899,
+        1281
+      ],
+      "baseline_png_sha256": "cc3002704b1909806b52a4ecf8b4206eb080e80962c63c219a2491e97daa2f68",
+      "candidate_png_sha256": "e0c7ae466315147ad7e883efcb427c52f8ee43001ba9fe9d4aaed43417154c55"
+    },
+    {
+      "page": 11,
+      "baseline_dimensions_px": [
+        993,
+        1403
+      ],
+      "candidate_dimensions_px": [
+        993,
+        1403
+      ],
+      "decoded_pixels_identical": false,
+      "changed_luminance_pixels": 303167,
+      "total_pixels": 1393179,
+      "changed_fraction": 0.217608,
+      "difference_bbox_px": [
+        88,
+        300,
+        884,
+        1309
+      ],
+      "baseline_png_sha256": "f8a3daffee35b75ce9249851e049e8ae8fd54f92f6876a2eb22173fd0d310e64",
+      "candidate_png_sha256": "a98a2c21b0dca687395484a8e6422c18eeac956cd1e7adcd78872c2c7a144c71"
+    },
+    {
+      "page": 12,
+      "baseline_dimensions_px": [
+        993,
+        1403
+      ],
+      "candidate_dimensions_px": [
+        993,
+        1403
+      ],
+      "decoded_pixels_identical": false,
+      "changed_luminance_pixels": 556756,
+      "total_pixels": 1393179,
+      "changed_fraction": 0.39963,
+      "difference_bbox_px": [
+        88,
+        123,
+        904,
+        1291
+      ],
+      "baseline_png_sha256": "f4a234eaa37994b5230f15e2b1f684d51b4e18bcf831a5957897b535b93520c2",
+      "candidate_png_sha256": "e8539213036ae84f3dba0ffd1e633f3bc434353b114ed8f9f1d4e1e22df55483"
+    }
+  ],
+  "pixel_differences_expected": "R06 adds the explicit example and replacement-boundary wording; changes are not expected to be pixel-identical.",
+  "visual_verdict": "PASS_SCOPED_VISUAL",
+  "scope_limit": "Only pages 8, 10, 11, 12 and the localized reflow caused by the four-cell delta; not a full-document fresh visual certification.",
+  "formal_acceptance": "NOT_GRANTED"
+}

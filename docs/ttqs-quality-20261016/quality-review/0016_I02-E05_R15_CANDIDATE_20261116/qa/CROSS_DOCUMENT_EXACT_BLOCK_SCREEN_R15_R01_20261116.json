@@ -1,0 +1,38 @@
+{
+  "schema": "TTQS_ONE_CROSS_DOCUMENT_EXACT_BLOCK_SCREEN_R1",
+  "doc_id": "0016",
+  "requirement_id": "I02-E05",
+  "revision": "R15",
+  "candidate_sha256": "8d353de8930d6074419def384b507ce2cd8d20bc271a6140391aae87ffa9cdff",
+  "candidate_body_block_count": 239,
+  "comparison_scope": [
+    "0014",
+    "0015",
+    "0017"
+  ],
+  "minimum_normalized_characters": 80,
+  "normalization": "whitespace only",
+  "exact_matches": [],
+  "result": "PASS_EXACT_BLOCK_SCREEN",
+  "compared_candidates": [
+    {
+      "doc_id": "0014",
+      "sha256": "47f5ec9cb2053da59fbc2f263ede342c50477e4925e3afd1b2190b49e8f99d24",
+      "body_block_count": 432
+    },
+    {
+      "doc_id": "0015",
+      "sha256": "c6ffeea28b9bfd28d78ca90724221dbcef600516c647aa12a47fc1ab41cfa96f",
+      "body_block_count": 300
+    },
+    {
+      "doc_id": "0017",
+      "sha256": "809ce0c6bcccb5167500fabb91963927fbf9deeceaad4fe7eb510ae6b6828e65",
+      "body_block_count": 176
+    }
+  ],
+  "limitations": [
+    "僅精確比對正規化空白後長度至少 80 字元之段落／表格列；不取代語意、title-blind、負向近鄰或視覺審查。"
+  ],
+  "reviewed_at_local": "2026-11-16T06:47:04.0084253+08:00"
+}

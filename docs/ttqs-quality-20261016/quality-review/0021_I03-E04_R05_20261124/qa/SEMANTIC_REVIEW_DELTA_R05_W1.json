@@ -1,0 +1,54 @@
+{
+  "schema": "ttqs-one-independent-semantic-review-delta-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0021",
+  "requirement_id": "I03-E04",
+  "revision": "R05",
+  "candidate_sha256": "61872df11cb7dda679c9892c23e5b8879a42279d7655927a1297ed53eafdc335",
+  "parent_candidate_sha256": "ad8e16aec04e62ea1ae46ab898713aaa4903a73d865e5a65cd6dbdfb402ddbfa",
+  "verdict": "PASS_SCOPED_DELTA",
+  "review_scope": "R05 textual delta only. Prior exact-SHA semantic PASS is carried forward for unchanged story body; this review checks the removed wholly empty row, appended R05 version-ledger entry, sample/real boundary, and absence of new semantic blockers. Not a full-body rereview, visual inspection, or binary verification.",
+  "checks": {
+    "exact_candidate_sha_binding": "PASS",
+    "prior_unchanged_body_review_carries_forward": "PASS",
+    "empty_row_removal_is_nonregressive": "PASS",
+    "version_ledger_and_candidate_boundary": "PASS",
+    "no_new_blocking_findings": "PASS"
+  },
+  "findings": [],
+  "blocking_findings": [],
+  "reviewer": {
+    "worker": "W1 OpenCode v2 CLI",
+    "route": "OpenCode v2 CLI",
+    "reviewer_route": "opencode/hy4-flash-free",
+    "reviewer_context_id": "ses_df5b112e7ffen4Z62airb5t2iN",
+    "requested_model": "opencode/hy4-flash-free",
+    "actual_served_model": "UNKNOWN",
+    "work_id": "TTQS_ONE_0021_I03-E04_SCOPED_SEMANTIC_REVIEW_R05_COMPLETE_EVIDENCE_20261124",
+    "cli_version": "2.3.0"
+  },
+  "dispatch": {
+    "native_pid": 7660,
+    "session_id": "ses_df5b112e7ffen4Z62airb5t2iN",
+    "exit_code": 0,
+    "status": "COMPLETED",
+    "cost_usd": 0,
+    "provider_errors": [],
+    "response_count": 1,
+    "requested_route": "opencode/hy4-flash-free",
+    "actual_serving_model": "UNKNOWN"
+  },
+  "evidence": {
+    "review_response_sha256": "4851e1d606329e83fa3cb183f86178752d79c4b9d1162715e88c84dd018a0ce5",
+    "dispatch_terminal_sha256": "b3251948876e4de088de5b564585f9810020ade7226a2dacd1d0e752c64a5560",
+    "review_packet_sha256": "f74538bed5790ae4bf732d5fd7bc380d6a881f84c693d04a1d6bd69d55da4a10"
+  },
+  "limitations": [
+    "Reviewer did not independently verify DOCX filesystem bytes or its own SHA; Codex independently hashed the exact local candidate and bound the returned SHA.",
+    "The upstream provider-served model identity is UNKNOWN.",
+    "Formal acceptance is not granted."
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "candidate_mutated_by_reviewer": false,
+  "recorded_at_tpe": "2026-11-24T05:28:00+08:00"
+}

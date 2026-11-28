@@ -1,0 +1,61 @@
+{
+  "doc_id": "0142",
+  "requirement_id": "I19-E32",
+  "parent_candidate_sha256": "dee4b45dcac7e32685f56cbf23d956443aa2810110b359472ab557dfcc0e8eea",
+  "parent_full_semantic_verdict": "PARTIAL",
+  "parent_findings": [
+    {
+      "severity": "HIGH",
+      "locator": "第7節 表11（追溯事項第2列『資料、公式與結論』）",
+      "evidence": "第3節欄位定義、第4節表5至表8完整示例及逐步算式；組織實績仍待真實原件替換後判定。",
+      "reason": "表11文字明確引述『第4節表5至表8完整示例』，但候選文本第4節實體僅標記『表5』與『表6』，第4.1節逐步算式表與示例判定表均無表格編號（遺漏表7與表8標題）；此外，全篇表格編號由表6跳空直達表11（欠缺表7至表10），構成內部虛引用與序號斷層。",
+      "correction": "為第4.1節逐步計算表補上『表7 示例逐步計算與覆核算式』、示例判定表補上『表8 示例趨勢判讀結果』，並依序將後續表格編號規範化，消除虛假引用。"
+    },
+    {
+      "severity": "HIGH",
+      "locator": "第4節 表6、第4節 表5、第5節 例外處理表",
+      "evidence": "表6 示例資料位置與覆核欄位（僅年度與單一綜合敘述欄）；表5（僅列年度、營業額、其他收入、總收入、年增率）；第5節問題／目前狀態表（僅問題、處理、覆核三欄）。",
+      "reason": "Blueprint『必要表格與欄位』明確定義6項獨立結構化表格要求：來源登錄需含『年度、來源/版本、頁碼或科目列、幣別/單位、會計基礎、核准/簽證狀態、擷取與覆核職務、差異』8欄；年度勾稽需含『財報列、總帳/明細、差異、調整、原件位置』；例外停審需含『受影響年度、待辦責任職務、期限欄、解除證據、重算日』。現有文本將多數欄位折疊為段落文字，結構化程度不足，無法完整發揮核對表功能。",
+      "correction": "依 Blueprint 規範將表6擴充為8欄結構之來源登錄表；將表5增補或擴充為含總帳勾稽與差異調整之年度勾稽表；並於第5節補齊受影響年度、待辦職務、期限、解除證據及重算日欄位。"
+    },
+    {
+      "severity": "MEDIUM",
+      "locator": "第1節第1段、第7.1節第1段",
+      "evidence": "不得把問卷、顧客滿意度或其他要求的資料當作營業額證據。 / 相鄰要求辨別：顧客滿意度趨勢須依問卷及滿意度分析資料另行核對，不由本報告的金額表取代；其他要求的事實或佐證也不由本件承接。",
+      "reason": "Blueprint 與來源包明定必須排除之近鄰要求包括 0139 / I19-E29（考照/就業率）、0140 / I19-E30（訓練資訊系統使用）及 0141 / I19-E31（顧客滿意度）。現有文字僅明確排除顧客滿意度（0141），對 0139 與 0140 僅以概括詞『其他要求』帶過，未列具體編號與指標名稱。",
+      "correction": "於第1節與第7.1節補列完整排除條款，明文列出不得以 0139 (I19-E29) 考照與就業率、0140 (I19-E30) 訓練資訊系統採用率作為本指標之財務數據或佐證替代。"
+    },
+    {
+      "severity": "LOW",
+      "locator": "文件控制標頭（第5段）",
+      "evidence": "文件編號：TTQS-0142｜版本：1.0｜狀態：示範文件／未生效｜修訂日期：2026-10-03｜生效日期：未生效",
+      "reason": "Blueprint 第1節『正文結構』要求文件控制應包含 doc_id、requirement、索引（156）、版本及生效狀態。標頭目前遺漏指標代碼 I19-E32 及 157 項目索引 156。",
+      "correction": "於文件控制欄增列『指標代碼：I19-E32｜項目索引：156』。"
+    }
+  ],
+  "child_candidate_sha256": "dd6bfd2bb75ed9708065578f435b54fc7c85c9492f35edcddf614f962db41e0a",
+  "closure_map": [
+    {
+      "finding": "Unlabelled Tables 7-10 and false Table 11 cross-reference",
+      "repair": "Added captions for Tables 7-10; retained Table 11 traceability caption and updated internal Appendix B/C references."
+    },
+    {
+      "finding": "Source register, annual reconciliation, and exception tracker insufficiently structured",
+      "repair": "Added linked Appendix B-1/B-2 covering every required source registration field; Appendix C-1/C-2 covering other-income items, financial-statement lines, ledger detail, differences, adjustments, and locator; expanded Table 9 to six required hold fields."
+    },
+    {
+      "finding": "Neighboring indicators 0139/0140 not explicitly excluded",
+      "repair": "Named 0139/I19-E29, 0140/I19-E30, 0141/I19-E31 in sections 1 and 7.1."
+    },
+    {
+      "finding": "Header missing indicator/index",
+      "repair": "Added I19-E32 and project index 156 to document-control block."
+    }
+  ],
+  "remaining_review": "NONE_WITHIN_TEXT_SEMANTIC_SCOPE; visual scope is separately PASS",
+  "real_status": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED",
+  "independent_delta_verdict": "PASS",
+  "independent_delta_candidate_sha256": "dd6bfd2bb75ed9708065578f435b54fc7c85c9492f35edcddf614f962db41e0a",
+  "independent_delta_response_sha256": "7225ce1e24aefc3de0e54ae3571275dcbe13eef8180b329dac2af182f1f9afc7"
+}

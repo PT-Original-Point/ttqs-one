@@ -1,0 +1,93 @@
+{
+  "blueprint_revision": "R05",
+  "status": "CANDIDATE_SCOPE_RECONCILIATION",
+  "doc_id": "0010",
+  "requirement_id": "I02-E01",
+  "official_checkbox_sequence": "008",
+  "official_source": {
+    "document": "TTQS查核佐證文件資料表—訓練機構版",
+    "pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "locator": "printed page 1, indicator 2",
+    "requirement_text": "對學員訓練成果有評核標準的訂定及說明。",
+    "checkbox_detail_source": "docs/ttqs-quality-20261016/03_157_CHECKBOX_BLUEPRINTS.md",
+    "checkbox_detail_blob_sha1": "8c2bbe7ca9dcbb03088a48934b9e57e7147ede63",
+    "checkbox_detail_locator": "I02, item 008",
+    "checkbox_detail": "學員成果評核標準：題型配分與實作量規、完整評分示例。"
+  },
+  "crosswalk": {
+    "file": "TTQS_ONE_129_REQUIREMENT_TO_142_DELIVERABLE_CROSSWALK_R01.csv",
+    "file_sha256": "1ddfbb608bcad25170683ddb42a1dbb27bafa6f1f35ff0498f1b8d75b24f0679",
+    "row": {
+      "requirement_id": "I02-E01",
+      "deliverable_ids": ["0010"],
+      "document_title": "學員訓練成果評核標準與說明"
+    }
+  },
+  "document_genre": "學員訓練成果評核標準與說明，含完整 SAMPLE 評分示例與評估分析",
+  "document_purpose": "訂定可重複執行、可覆核的學員訓練成果評核標準，並以完整合成個案展示題型、量尺、計分、判定、差距及後續處置。分析限於學員訓練成果評核，不延伸為組織政策完成率或公開揭露制度。",
+  "primary_user_or_reader": "小型志工協會的課程承辦、評核者及覆核者；評核委員可抽查題本版本、原始答卷、量規、算式、判定與追溯資料。",
+  "evidence_role": "直接證明學員訓練成果評核標準已被設計並可示範使用；所有案例為 SAMPLE/SYNTHETIC，不能證明協會已採用或已取得真實訓練成效。",
+  "why_this_document_exists": "I02-E01 要求學員訓練成果的評核標準與說明；本件以標準、完整試題、實作量規、評分範例及個案分析直接回答。",
+  "required_sections": [
+    "30 秒使用摘要：讀者、使用時點、操作、輸出及 SAMPLE/REAL 狀態",
+    "官方要求、文件範圍、來源與負向近鄰界線",
+    "可測學習目標與題目／實作指標對應",
+    "完整題本、選項、均衡答案鍵、版本與施測方式；答案鍵另標評核者專用",
+    "實作情境卡、提示協議、P/C/M 各指標 0–4 量規及評核校準例",
+    "分數權重、分母、門檻、PASS／NOT_PASS／HOLD 的不同用途",
+    "完整填入的 SAMPLE/SYNTHETIC 答卷、逐項行為證據、計算與判定",
+    "樣本納入／排除、首次結果、差距排序、證據強度及限制",
+    "複評題本版本、重複暴露、哪些資料新評／沿用、複評算式及未達處置",
+    "結論、具體品質改善行動、示範責任角色、期限與追蹤指標",
+    "SAMPLE/SYNTHETIC 事實替換清冊、真實來源取得清單、覆核與附件索引"
+  ],
+  "required_tables_or_figures": [
+    "學習目標—題號／指標—構念—分母—證據映射表",
+    "20 題完整四選項題本與答案鍵平衡統計",
+    "P1–P4、C1–C5、M1–M3 評分錨點與具體例證表",
+    "合成個案原始分數、逐步公式、四項通過門檻與結果表",
+    "納入／排除及分母定義表",
+    "個案／構面差距排序與證據強度表",
+    "發現—證據—原因假設—建議—責任角色—期限—追蹤指標表",
+    "複評新資料／沿用資料／重複暴露揭露表",
+    "Fact ID—類型—Case ID—合成日期—精確值—正文定位—REAL 替換來源—責任待指定—狀態清冊"
+  ],
+  "required_calculations_or_analysis": {
+    "knowledge": "20 題 × 1 分 = 20 分；逐題對照答案鍵，錯答、空白、多選計 0 分。答案鍵分布須均衡且不得形成單一選項即可通過的捷徑。",
+    "practical": "P1–P4 各 10 分，等級 0–4；合計 40 分。",
+    "case": "C1–C5 各 5 分，等級 0–4；合計 25 分。",
+    "communication": "M1–M3 各 5 分，等級 0–4；合計 15 分。",
+    "formula": "單項分數=等級÷4×該項權重；總分=知識+實作+案例+溝通，先以精確值加總再顯示兩位小數。",
+    "candidate_thresholds": "總分≥70/100、知識≥12/20、實作≥28/40、P3≥3/4；明示為候選內規，非官方指定。",
+    "analysis": "報告須列清樣本數、納入／排除、期間、分母、通過率、未達門檻的交集／重疊、分項差距、證據強度與小樣本限制；同版複評不得推論學習增益。",
+    "excluded_calculation": "不得以政策檢討完成率、對外承諾完成率或公開揭露完成率取代本文件的學員評核結果；這些欄位不在官方 I02-E01 要求及 I02 項目 008 的直接範圍。"
+  },
+  "decision_state_semantics": {
+    "PASS": "所有必要數據完整且四項門檻均達標。",
+    "NOT_PASS": "資料完整、算式可重算，但一項或多項實質門檻未達；提供補救與再評規則。",
+    "HOLD": "版本、授權、提示紀錄、原始證據、獨立覆核或算式等關鍵資料不完整／有衝突，暫不能可靠判定。HOLD 不可代稱分數未達。"
+  },
+  "required_cross_references": [
+    "0009/I01-E06 組織年度績效目標分析：不同文件，不得以學員評分替代組織年度目標。",
+    "0011/I02-E02 訓練產品與市場定位：不同文件，不得把公開承諾、產品或市場政策欄位併入本件。"
+  ],
+  "sample_real_boundary": "沒有可核實的協會實測資料時，完整示範僅標 SAMPLE/SYNTHETIC；人名、資格、核准、出席、課程、日期、作答、評分、覆核與結果皆不可聲稱為真實。採 REAL 前逐欄取得合法原始來源，未知保持 UNKNOWN。",
+  "synthetic_population_rule": "每一個會影響結論的合成事實均須有 Fact ID、類型、Case ID、合成日期／版本（若適用）、值、正文定位、真實替換來源或 UNKNOWN、待協會指定的責任角色及狀態。不得編造真實姓名、資格或核准。",
+  "title_blind_test": "遮蔽標題後，題本、答案鍵、實作量規、門檻、完整評分示例與結果分析仍須明確指向學員訓練成果評核；不能移作組織績效或市場政策文件。",
+  "negative_choice_neighbors": [
+    "0009/I01-E06：年度組織績效目標訂定與分析。",
+    "0011/I02-E02：訓練政策、產品及市場定位。"
+  ],
+  "acceptance_tests": [
+    "官方 PDF 第 1 頁 I02-E01 與 03 項目 008 的範圍均被明確對應。",
+    "完整題本與均衡鍵正確對應，選項長度不洩漏答案；評核者專用鍵與受評者版可分開使用。",
+    "完整示範涵蓋每題得分、13 個行為指標量規、樣本納入／排除、分母、計算、發現、限制、決策與追蹤。",
+    "實質未達標標 NOT_PASS；只有資料或控制證據不足標 HOLD。",
+    "同版複評完整揭露新測資料與沿用資料，不把重複施測當訓練成效。",
+    "所有 SAMPLE/SYNTHETIC 事實可追溯且有替換責任／來源狀態；不偽造 REAL 或第三方原件。",
+    "正文不包含 Git/JSON/Blueprint/Builder 等內部工程語句；字級正文≥10.5pt、表格≥9.5pt。",
+    "正文可拒絕 0009 與 0011 的錯件用途，並能供小型協會行政實際操作。"
+  ],
+  "supersedes": "BLUEPRINT_ROW_0010_I02-E01_R04.json only for the corrected candidate scope; original R04 is preserved as historical evidence.",
+  "source_commit_readback": "c6f4c1b987d624b82e3d26f9d7b3a188d8c7e250"
+}

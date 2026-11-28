@@ -1,0 +1,107 @@
+{
+  "receipt_id": "TTQS_ONE_R09_WIN10_GOAL_SCHEDULER_PANEL_STATE_20261022",
+  "observed_at_tpe": "2026-10-22T16:35:15+08:00",
+  "human_spec": "2026-10-21 R09 / CANDIDATE",
+  "canonical_spec": "UNKNOWN_OR_VERIFIED_REF: current branch contract read; not formally accepted",
+  "github": {
+    "pr": 92,
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "observed_head": "b1ad91c74f3fe57f139fa26e0324d60da65d5b7f",
+    "contract_blob_sha256": "4c7eff55748ff265b1e5a7d1122852b0d101acbd",
+    "R09_section": "6.1-6.12",
+    "status": "open draft"
+  },
+  "windows": {
+    "os": "Windows 10 Pro 10.0.19045",
+    "host_user": "observed locally; omitted from public receipt for privacy"
+  },
+  "goal": {
+    "thread": "existing TTQS_ONE GOAL thread",
+    "native_status": "active",
+    "pause_reason": "none observed; resume not needed",
+    "reset_or_recreation": "none"
+  },
+  "scheduler": {
+    "id": "ttqs-one-hourly-quality-goal-resume",
+    "owner": "Codex native thread-bound automation",
+    "enabled": "ACTIVE",
+    "interval_minutes": 120,
+    "native_last_run": "UNKNOWN",
+    "native_next_run": "UNKNOWN",
+    "natural_120m_trigger": "NOT_TESTED",
+    "readback_source": "C:/Users/[LOCAL_USER]/.codex/automations/.../automation.toml",
+    "other_codex_standalone_scheduler": "PAUSED",
+    "windows_task_TTQS_ONE_Codex_Supervisor": "Disabled; last run 2026-10-05 05:03; task info reported a stale next-run timestamp despite disabled state; not an active scheduler"
+  },
+  "panel": {
+    "path": "E:/TTQS/TTQS_ONE_CODEX_RUNTIME/MASTER/dashboard.html",
+    "sha256": "f0e8625b2b77f4616beab18e31c1f1f7b05655e9d54898129d8e8d4f1d35a070",
+    "bytes": 12260,
+    "file_last_modified_tpe": "2026-10-05T22:14:00+08:00",
+    "status": "STATIC_STALE_OFFLINE",
+    "declared_data_sources": [
+      "/status",
+      "http://127.0.0.1:8766/muse-status"
+    ],
+    "listeners_on_8765_8766": "NONE_OBSERVED",
+    "project_host_head_work_id_source_freshness_fields": "ABSENT",
+    "os_github_alignment": "FAIL"
+  },
+  "queue": {
+    "path": "E:/TTQS/TTQS_ONE_CODEX_RUNTIME/CONTROL/BUILD_QUEUE.json",
+    "sha256": "a7f1b942c5e403a820209739014e186cb700e8eeeff24951ec51ad4d9baceb42",
+    "bytes": 175825,
+    "last_write_tpe": "2026-10-19T03:24:00+08:00",
+    "entries": 142,
+    "status_fields": "missing_or_empty",
+    "0100_0101_doc_ids": "not found",
+    "authority": "stale; do not use as the READY authority"
+  },
+  "workers": {
+    "opencode_service_pid_45628": "alive service only; not a Writer",
+    "opencode_0105_R07_writer": "complete; recovered manuscript",
+    "opencode_0105_R07_reviewer": "native session succeeded; exact-SHA semantic PASS",
+    "opencode_0102_R06_reviewer": {
+      "pid": 73664,
+      "work_id": "TTQS-0102-I18-E09-SEMANTIC-REVIEW-R06-R09-20261022-01",
+      "status": "RUNNING",
+      "candidate_sha256": "7275d99844ffb0a96773872ccca99f44a6523c827eca76af2a24ef85e23f27da"
+    },
+    "antigravity_current_process": "none observed",
+    "winword_legacy_unknown_owner_count": 20,
+    "winword_current_render_pids": [
+      72848,
+      16684
+    ],
+    "winword_current_render_status": "alive/responding; no PDF yet; neither terminated"
+  },
+  "documents": {
+    "0100": "candidate byte-identical to current PR #92, SHA-256 debd41e7ca1b18b88cad37db118c5b3474df411b3e2d1c87a8351d456245e0b2; no rebuild",
+    "0101": "candidate byte-identical to current PR #92, SHA-256 56f433e095f32378f2fd8241c1a27948d2bfe6748da003af5623d265885edb68; exact-SHA semantic PASS; no rebuild",
+    "0105_R07": {
+      "candidate_sha256": "32bc0b8d7efe767e584b2a848206507d4da73ffa344378143b22186705302027",
+      "technical": "PASS",
+      "semantic": "PASS_SEMANTIC_ONLY_EXACT_SHA",
+      "visual": "PENDING_NO_PDF_YET",
+      "real_evidence": "UNKNOWN/HOLD"
+    },
+    "0102_R06": {
+      "candidate_sha256": "7275d99844ffb0a96773872ccca99f44a6523c827eca76af2a24ef85e23f27da",
+      "local_remote_bytes": "identical on current FETCH_HEAD",
+      "technical": "PASS",
+      "visual": "PASS on 53 pages per exact-SHA receipt",
+      "semantic": "PENDING; current independent OpenCode review running"
+    }
+  },
+  "model_routing": {
+    "antigravity": "new dispatch withheld; current local CLI logs show requested Gemini missing from local config and defaulted to CCPA; unauthenticated; no Gemini serving identity verified",
+    "opencode": "selected catalog free models; provider-side model identity and billing remain UNKNOWN"
+  },
+  "real_evidence": "UNKNOWN_UNTIL_RECEIVED",
+  "human_formal_acceptance": "NOT_GRANTED",
+  "next_single_legal_action": "finish and collect exact-SHA independent semantic review for already complete 0102 R06 while preserving candidate; then sync stable 0102 and 0105 R07 evidence to PR #92 and perform raw-byte GitHub readback.",
+  "unresolved_external_effects": [
+    "Word native export processes 72848 and 16684 remain alive; no PDF output yet.",
+    "OpenCode 0102 reviewer PID 73664 is active; do not duplicate."
+  ]
+}

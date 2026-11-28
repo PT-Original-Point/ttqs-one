@@ -1,0 +1,37 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0096",
+  "requirement_id": "I18-E03",
+  "official_checkbox_serial": "099",
+  "revision": "R13",
+  "change_type": "POST_REVIEW_METADATA_LABEL_CORRECTION_ONLY",
+  "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "source_binding_as_reviewed_sha256": "3cbcb6ab41a4d4bd968275a082125aaeaa66d9800093b79625ad9449517a2657",
+  "source_binding_corrected_sha256": "8eb765f2b5423bd29989d24323987f37c0af199e7743d11d057b1ecee67f80c6",
+  "review_input_manifest_sha256": "5a901774a924b9f0127642ef153aecb66fc35e8b19856dc235823841ac216c9b",
+  "independent_semantic_response_sha256": "11df70ab1e8f927b274337044eb53a98101dd32236d4acbf8284fb5109ab6980",
+  "correction": {
+    "field": "official_checkbox_text",
+    "old_value": "感謝函：索取稿及原件登錄，不假裝已收函",
+    "new_value": "感謝函。",
+    "scope_gloss_field": "internal_scope_gloss",
+    "scope_gloss_value": "索取稿及原件登錄，不假裝已收函",
+    "official_source": "Page 6, I18-E03, exact checkbox text 感謝函。"
+  },
+  "unchanged_artifacts": {
+    "candidate_docx_sha256": "6ece53befed3ecb1b42e523b80da80decd33b0a7d55e4e1fe75ddf79b905d445",
+    "candidate_manuscript_sha256": "e27c03fc386b092d4be26652b83705c680857ef0f53b198e62c691917d0099ea",
+    "synthetic_register_sha256": "16d238c7fde83318c3d9f5c5c4c8a295ee210c34edf9ba68759a78991a0c1a91",
+    "semantic_review_response_sha256": "11df70ab1e8f927b274337044eb53a98101dd32236d4acbf8284fb5109ab6980",
+    "review_packet_sha256": "5142964a890f990fa3e3b128722639fd69bdb379d360d073d2a0a1ca275959c6",
+    "review_input_manifest_sha256": "5a901774a924b9f0127642ef153aecb66fc35e8b19856dc235823841ac216c9b"
+  },
+  "verification": {
+    "static_audit_all_checks_pass": true,
+    "static_audit_receipt_sha256": "dfde048953c226b6234d424907811b5baed297ab6aba21609cf0213d27308fbe",
+    "binding_sha256_matches_static_receipt": true,
+    "no_docx_rebuild": true,
+    "no_new_semantic_review": true,
+    "reason": "Reviewer identified this as a nonblocking manifest-label issue; exact official wording is in the candidate body and official page extract. The candidate Word bytes and reviewed text/CSV remained unchanged."
+  }
+}

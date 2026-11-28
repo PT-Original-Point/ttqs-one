@@ -1,0 +1,39 @@
+{
+  "deliverable_id": "0045",
+  "requirement_id": "I10-E01",
+  "official_checkbox_sequence": "047",
+  "candidate_revision": "R01",
+  "candidate_docx_sha256": "c40f401fade386d831b5ba170f9cb17a24313de84474cd957a92ecf8d75a7049",
+  "reviewer_route": "OpenCode CLI v2",
+  "requested_model": "opencode/deepseek-v4.1-flash-free",
+  "runtime_model_attestation": "NOT_PROVIDED_BY_CLI_SESSION_METADATA",
+  "session_id": "ses_eb8a4f83fffeK6dV8ibUPMYGtX",
+  "packet_path": "docs/ttqs-quality-20261016/quality-review/0045_R01/review/opencode_v2_review_R01/REVIEW_PACKET_R01.md",
+  "packet_sha256": "c1d54f1aa4cc03ca3cf35374bded2f738456a2c3ee5ff10a0eccacc7829999c5",
+  "cli_stdout_path": "docs/ttqs-quality-20261016/quality-review/0045_R01/review/opencode_v2_review_R01/RAW_OPENCODE_STDOUT.json",
+  "cli_stdout_sha256": "3ddbf93aa2cd8ad8d164608a70a57936cee4920572fc2f16bab9c703ff321e99",
+  "cli_stderr_path": "docs/ttqs-quality-20261016/quality-review/0045_R01/review/opencode_v2_review_R01/RAW_OPENCODE_STDERR.txt",
+  "cli_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "cli_exit_code": 0,
+  "event_types": [
+    "step_start",
+    "text"
+  ],
+  "tool_calls_observed": 0,
+  "reviewer_verdict": "PARTIAL",
+  "blocking_defect_count": 0,
+  "nonblocking_repair_items": [
+    "Replacement register misses required case_id, doc_id, assumption rationale, and cross-document reference fields.",
+    "TABLE 5 points to nonexistent subsection 5.2.",
+    "Section 10.4 heading/introduction alignment needs confirmation.",
+    "RACI/authorization/deputy fields could be made explicit."
+  ],
+  "reviewed_at_epoch_ms": 1792198615173,
+  "promotion": "NOT_PROMOTED",
+  "candidate_bytes_changed_during_review": false,
+  "scope_limitations": [
+    "Reviewer did not independently hash/re-extract the DOCX; coordinator independently computed exact SHA before dispatch and will read it again after review.",
+    "Peer document bodies were not included; cross-document duplication verdict remains UNKNOWN.",
+    "Independent layout inspection was outside semantic review scope; existing visual receipt covers all 12 pages."
+  ]
+}

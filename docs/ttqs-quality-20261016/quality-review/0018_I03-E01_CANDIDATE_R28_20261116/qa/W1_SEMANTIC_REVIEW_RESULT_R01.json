@@ -1,0 +1,51 @@
+{
+  "schema": "TTQS_ONE_0018_R28_W1_SEMANTIC_REVIEW_RESULT_R01",
+  "work_id": "TTQS_ONE_0018_I03-E01_R28_W1_SEMANTIC_REVIEW_R01_20261116",
+  "candidate_sha256": "c608c806b8d4a02622ccfdb00784c7855edfa4a917fad9ffcef529d6fc2eb63b",
+  "candidate_sha256_after": "c608c806b8d4a02622ccfdb00784c7855edfa4a917fad9ffcef529d6fc2eb63b",
+  "review_packet_sha256": "2520d0b6c726074bec64b45ad6c1b2889316ecadfaaa72f29f20a8d09b4ced5d",
+  "route_requested": "opencode/longcat-2.5-free",
+  "provider_actual_model_id": "UNKNOWN",
+  "cli_version": "opencode v2.2.5",
+  "exit_code": 0,
+  "raw_stdout_sha256": "62f6f25d1baed539f42a30ad5df73eb07c1c7d757f8b2f0e840d3b3adae1c76b",
+  "verdict": "PASS",
+  "scope": "0018 / I03-E01 PDDRO訓練體系圖與核心訓練類別說明；R28 exact-SHA candidate semantic review against embedded R01 source packet and unique blueprint. Layout/visual and Word-native export excluded.",
+  "checks": {
+    "official_source_traceability": "PASS — §2.1 cites official PDF 805386b7…, crosswalk 1ddfbb60…, blueprint 406d0495…, PR #92 commit c139d76c…; official wording quoted exactly.",
+    "blueprint_structure": "PASS — all 8 required structures present (§1–§8).",
+    "pddro_mechanics": "PASS — five-stage input/work/output/responsibility/evidence tables; English expansion explicitly flagged as candidate operational wording, not official.",
+    "category_matrix": "PASS — C01–C04 with code, positioning, capability, audience, observable target, topics, methods, assessment, expected evidence.",
+    "fixed_synthetic_data": "PASS — 2027, 4 categories, 8 classes × 12 = 96 seats, all dates and tuples match blueprint exactly.",
+    "formulas_denominators_counts": "PASS — 72/96=75.00%; 66/72=91.67%; 60/66=90.91%; 54/60=90.00%; 228/54=4.22; 41/60=68.33%; gap 11.67pp; column sums and ladder constraints verified.",
+    "sample_labeling": "PASS — every date/class/code/count/score/target/role marked SAMPLE/SYNTHETIC; no real names, signatures, approval, or third-party originals.",
+    "replacement_boundary": "PASS — S18-SYN-01..09 keys, UNKNOWN status, and per-field REAL replacement table complete; no unexplained blanks.",
+    "exception_ex_syn_01": "PASS — 41/60 vs 48/60, 11.67pp gap, 2027-12-15 derived as 2027-11-15+30 calendar days, PROPOSED_NOT_EXECUTED; no execution claim.",
+    "genre_fit": "PASS — operational PDDRO system diagram plus core-category record, not a generic outline.",
+    "negative_neighbor_rejection": "PASS — only I02-E05 and I03-E02 cross-referenced; no absorption of other requirements.",
+    "real_result_approval_claims": "PASS — repeated disclaimers; approver role explicitly non-signing; improvement not claimed executed.",
+    "evaluator_usability": "PASS — checkpoint matrix, validation dictionary, reconciliation rules, and conversion checklist are evaluator-facing."
+  },
+  "defects": [
+    {
+      "id": "D1-minor",
+      "locator": "§7.1 Table 11, REC-FACT-030 row (核准權限代碼)",
+      "evidence": "record value=ROLE-SAMPLE-APPROVER-01 but responsibility_code=ROLE-SAMPLE-PLAN-01.",
+      "smallest_repair": "Set responsibility_code=ROLE-SAMPLE-APPROVER-01, or note PLAN-01 is only the registering role."
+    },
+    {
+      "id": "D2-minor",
+      "locator": "§7.1 Table 11, REC-FACT-002..005 and REC-FACT-011..014 classification cells",
+      "evidence": "Category/data-group rows carry an extraneous trailing '示範課程 B' label although the records are category-level aggregates.",
+      "smallest_repair": "Remove the trailing '示範課程 B' from those classification cells or mark it a display artifact."
+    }
+  ],
+  "unknowns": [
+    "Header review_extracted_text_sha256=2b76edbe… conflicts with repair-lineage extracted-text SHA b0be7a06…; packet-level extraction identity is UNKNOWN without re-hashing.",
+    "Header source_sha256=165ad494… and blueprint_sha256=f3e12f4f… do not match the embedded packet's official-source/blueprint hashes (805386b7…, 406d0495…); whether they are packet-file hashes is UNKNOWN.",
+    "Retention rules, real replacement originals, authorized role assignments, and attachment SHAs remain UNKNOWN by design.",
+    "PDDRO English expansion is not source-confirmed; document correctly treats it as candidate wording."
+  ],
+  "disposition": "Semantically acceptable at exact candidate SHA c608c806… for I03-E01. Minor labeling inconsistencies are non-blocking and need no content rebuild for semantic acceptance. Visual/layout and Word-native export remain separate evidence.",
+  "observed_at_tpe": "2026-11-16T23:43:14.2908052+08:00"
+}

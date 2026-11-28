@@ -1,82 +1,43 @@
-# AGENTS.md — TTQS_ONE Win10 Codex Local
+# 2026-11-27 Human R12.3 active override (applies over R12.2 for this closure)
 
-## Mission
-你是 TTQS_ONE 的 durable local executor。把 142 份 TTQS Word 候選重建成協會平日可操作、評核委員可抽查、SAMPLE/REAL 界線清楚的完整文件體系，並持續自動施工到 final acceptance 或真正 Human Gate。
+COMMAND=TTQS_ONE_R12_3_INTEGRATOR_HANDOFF_DOT_R123_20261127
 
-## Runtime
-- Use native Windows PowerShell, filesystem, Python, git, installed Office/LibreOffice tooling directly.
-- Do NOT depend on Factory MCP, Win11 Factory, RDC, or SYSTEM_CAPABILITY_RUN_DENY wrappers.
-- Missing Factory/MCP capability is NOT a blocker for ordinary local file work.
-- Primary artifact is DOCX. Do not generate full-corpus PDF/PNG by default.
-- Runtime root: E:\TTQS\TTQS_ONE_CODEX_RUNTIME.
-- Home-PC concurrency ceiling: at most one BUILD worker plus one REVIEW worker on a different document; shared promotion/register/CURRENT writes are serialized.
+- Dot exclusively owns dispatch, supervision, independent audit, candidate-quality verdict, rejection/rework, collection and delivery verification. Codex owns construction, Word production, deterministic technical checks, and is the sole shared-state/PR #92 writer and integrator; Codex has no competing dispatch or quality authority and may integrate only a candidate Dot explicitly approved at the exact SHA. W1/W2 work only in isolated scopes under Dot's dispatch; a writer cannot approve its own version.
+- Use the existing R12.3 closure queue as a locator, never as proof of PASS. Freeze each candidate by its actual DOCX SHA-256. Current targets are 0031 `fff554e6b1424f4485b99956dcaf5183a76f2864ede454386d9315cd55d8d78e`, 0055 `85c329617ef7146ad1569fc3ebd841ab7ce5a0c5e183cbabc7ac6474109ded94`, and 0134 `f09248f678ba6cc13e426440a3a0be0d04652d4e0203be8a54fd917a37c814f5` (0134 content revision R02; R03 is a layout attempt). Any different bytes require fresh scope-specific qualification.
+- Close a candidate only against its exact bytes and applicable official requirement/unique Blueprint, deterministic technical and calculation checks, native Word visual evidence, independent semantic review, GitHub raw-byte readback, and the existing quality index. Inherit same-scope evidence only when the exact candidate SHA is bound, or for unchanged pages when page-image bytes match a valid accepted baseline; directly inspect every changed page. A queue label, filename, process exit, or prior revision is not a substitute.
+- Keep all outputs CANDIDATE. No REAL, formal acceptance, or external approval is inferred. Keep 0091 R11 isolated and not approved for sharing until its separate scoped repair and full qualification are verified.
+- Merge R12.3 into these existing controls and the existing active goal thread; do not add a parallel specification, supervisor, schedule, model route, spend, or speed setting.
 
-## Authority
-Latest Human Mission > this AGENTS.md/current control files > official TTQS sources/Unique Blueprint > verified artifacts > historical Work outputs.
+# TTQS ONE｜現役精簡施工規則 R12.2（2026-11-18）
 
-## Anti-garbage hard rules
-1. Build each deliverable from its exact requirement + Blueprint.
-2. If REAL operational data is unavailable, populate a complete coherent SAMPLE/SYNTHETIC worked example. Never submit an empty form or placeholder-only document.
-3. Every synthetic date/person/count/amount/ratio/score/result/meeting/decision must be registered.
-4. Never fabricate third-party originals, signatures, certificates, government letters, bank/accounting evidence, or external achievements.
-5. Builder has no PASS authority. A fresh review context checks every completed batch.
-6. Failed bodies and peer bodies are forbidden as rebuild templates. Shared front-matter labels are allowed; substantive tables/body schema must be requirement-specific.
-7. 待填|待核|空白表|保持空白|會後填寫 outside an explicitly labeled REAL replacement area is a hard fail.
-8. Questionnaire/SOP/meeting/assessment/outcome genres must contain their real functional mechanics, not generic headings.
-9. Body hard floor 10.5 pt, table hard floor 9.5 pt; never shrink text just to reduce page count.
-10. CURRENT means latest accepted candidate under the current frozen acceptance contract; it does not mean REAL/APPROVED/EFFECTIVE.
+PROJECT_ID=TTQS_ONE
+REPO=PT-Original-Point/ttqs-one
+PR=92
+BRANCH=work/ttqs-one-document-quality-contract-20261016
+RUNTIME=E:\TTQS\TTQS_ONE_CODEX_RUNTIME
 
-## Efficiency ownership
-- Builder: create exact-source DOCX + build receipt only. Do not duplicate validator/reviewer work.
-- Static gate: deterministic technical/content checks only.
-- Fresh reviewer: semantic/usability/evaluator-facing review only. No Word COM/CUA/PDF/PNG/nested Codex unless a concrete layout anomaly exists.
-- Non-zero builder exit with a stable new DOCX + valid receipt is salvageable; gate that exact candidate before rebuilding.
-- One lane gets at most one attempt per scheduling turn; failures move to queue tail while other READY lanes continue.
-- Reuse unchanged authoritative source readback by exact source SHA + Blueprint row hash.
-- Delta-only verification during production; full-corpus verification is reserved for final QA.
-- After two consecutive Canary PASS under the same contract, freeze builder/static/reviewer acceptance semantics for the run unless a concrete source/artifact defect is proven.
+Human 已表示原生 Codex GOAL 改為 R12.2。此 GitHub 更新不代表 Windows GOAL、CLI Worker 或排程已套用。Human 最新明確 Mission/Spec 優先；01_HUMAN_MISSION_AND_ACCEPTANCE.md、02_GENRE_WRITING_MANUAL.md、03_157_CHECKBOX_BLUEPRINTS.md 依當下文件需求引用。10/26 R12 長篇指揮書、06 舊事故、HOTFIX5/6、舊 queue 只供精確故障追溯，不再強制每次完整閱讀或重跑舊任務；相容的安全與品質保護仍有效。
 
-## Autonomy
-- Work in 10-document batches for checkpoint/reporting, not as a blocking approval gate.
-- After each batch: lightweight delta checkpoint only (changed DOCX + SHA + synthetic delta + QA receipt + remaining queue).
-- If gates pass, continue automatically. Do NOT wait for Human permit every 10 docs.
-- Human notification is non-blocking unless a true Human Gate is triggered.
-- On defect: auto impact-scan affected family/epoch, repair/rebuild, fresh re-review, continue other READY lanes.
-- A failed document or failed canary MUST NOT stop other READY lanes.
-- After two failed repair epochs on the same logical defect, stop rebuilding only that exact lane, run root-cause audit, repair the builder/reviewer/validator contract if needed, then retry only when there is a material delta. Do NOT escalate to Human merely because two repairs failed.
-- During Canary phase, publish each passing canary to CURRENT immediately; park failing canaries and continue testing the remaining representative canaries. Full production rollout still requires the required Canary set to pass, but Canary repair is an autonomous engineering task unless a true Human Gate exists.
+## 1. 目標與最短交付路徑
+- 為屏東縣原始點關懷協會按官方 129 個具名方框、正式 129→142 crosswalk（複合需求按用途拆件），交付成熟可編輯、可直接調閱的 DOCX。28 個未命名「其他」不湊數；142 個歷史序號不等於 142 件合格。
+- 文類/官方要求/專屬 Blueprint 必須精確；缺 REAL 時需完整、可重算且可操作的 SAMPLE/SYNTHETIC 案例與逐事實替換清冊。不得偽造正式核准、簽章、外部原件；正文無 JSON/控制欄位；正文≥10.5pt、表格≥9.5pt，Word 原生全頁可讀。
+- 新 Session、故障、未知外部效果或實質內容變動才做有界 OS/GitHub/候選 SHA 恢復。已確認來源及同 SHA、同範圍 QA 不重查。依當前 READY 選最短合法交付：已通過品質只缺 readback → 完成；來源/Blueprint 齊備缺 DOCX → 立即 Writer；既有候選有真阻斷缺陷 → 最小修復；缺材料 → 補來源/Blueprint。
+- 不以歷史固定 doc_id 名單優先於最新 READY；非阻斷 LOW 建議登錄，不觸發無限修版。同一邏輯缺陷連續兩次沒有外部新事實或改善，暫停該 scope 返工查根因，其他 READY 照常。
 
-## Human Gates only
-Stop and ask Human only for:
-- Mission/spec change or major quality-policy change that cannot be derived from the current Mission;
-- genuine SAMPLE-vs-REAL authority ambiguity;
-- legal/signature/identity/OAuth/MFA;
-- missing third-party original or missing real-world fact that materially changes what must be delivered and cannot be obtained automatically;
-- bounded root-cause reconciliation still leaves an external side effect or authority ambiguity unresolved;
-- final evaluation package acceptance.
+## 2. 已授權、實際可用時全力外包
+- Codex 是唯一協調、整合與 GitHub 共享寫入 owner，不預設親自全文撰稿。優先將可獨立驗收的來源/Blueprint 實質分析、專屬 SAMPLE 正文、局部內容修補與獨立語意審查委派既有 W1 OpenCode v2 CLI、W2 Antigravity CLI。Codex 聚焦任務拆分、數學/來源確定性 QA、Word DOCX/全頁渲染、候選採納及 remote raw-byte readback。
+- 有兩個不同 doc_id 的獨立 READY，且 W1/W2 各自已驗證 CLI、實際可用的授權模型/配額、工作權限及互不衝突的寫入範圍，應同時真正派工，不只做模型型錄查詢或保持 serve/GUI 存活。但不以 Worker 永遠 BUSY 為目標，不派空任務。
+- 一個 Worker 可寫文件 A，另一個可審另一份已固定 SHA 的文件 B；同一文件的 Writer 不能自審。相同 doc/revision、共享 SAMPLE register/CURRENT、GitHub ref 之修改只准一個有效寫入 owner。各 CLI 採已驗證的安全、非互動、有界原生方式，不使用 Computer Use、危險授權、未知付費服務或隱性模型 fallback。
+- 派工與回收需確切 work_id、doc_id、source/Blueprint/候選 SHA、範圍、真實 OS PID/session、起迄、原始 stdout/stderr、採納內容/審查結論及錯誤。serve PID、GUI PID、requested model、exit0、Token 消耗、Worker 自稱 PASS、429/空回覆都不等於有效工作；served-model 缺實際證據填 UNKNOWN。
+- 某路由 429、權限、網路或模型身分無法驗證，只封鎖受影響 lane；不盲重試、繞過配額或無授權轉付費。所有合法模型都不可用時，先完成不同文件的確定性 READY；需要模型的精確工作標 BLOCKED，不假稱已全力外包。高成本主模型不應無必要重做原本合格的 Worker 工作。
 
-The following are explicitly NOT Human Gates:
-- one document failing review;
-- one canary failing review;
-- two repair epochs failing the same document;
-- a local validator/parser bug;
-- a reviewer disagreement that can be resolved from authoritative sources;
-- an individual lane being parked while other READY lanes exist.
+## 3. 品質、讀回、續作
+- Builder 不得自授 PASS；同候選 SHA 需有適用的技術/計算、Word 原生全頁視覺、與 Builder 獨立之語意/文類/近鄰/防複製審查。TEXT_ONLY≠VISUAL，CANDIDATE≠REAL/Human 正式接受。僅修真正違反驗收契約且有精確位置的缺陷。
+- GitHub 共享寫入：fresh HEAD/同 path prestate → exact scope/必要競爭保護 → 單次派送 → 同 ref Git Blob/原始位元組 SHA-256 讀回；結果不明不盲重送。公開 repo 不上傳個資、真實學員、Token 或未公開第三方原件。
+- 每階段終態後，有合法 READY 與仍活躍的執行會話，就立即下一件；唯一原生 120m 排程僅故障補漏、不是施工節流。GOAL ACTIVE、面板 HTTP200、排程通知、OpenCode serve PID 不代表背景 Writer 活躍。
+- Human Gate 僅策略/Mission重大變更、Production/正式接受、新費用、法律契約/身分、OAuth/MFA、不可逆權限擴張及重大不明外部效果。已批准可逆候選不因換 Session 重問。
 
-## Efficiency safety invariant
-- Speed optimizations may change scheduling, retries, caching, or concurrency only; they MUST NOT weaken semantic acceptance.
-- Fresh Builder for one deliverable may not use peer DOCX body text as a writing template.
-- Reuse is limited to authoritative source readback, calculations, and shared fact IDs; generated prose/body/table/question blocks are not reusable across unrelated deliverables.
-- Before CURRENT promotion, every DOCX must still pass exact requirement/genre mechanics, title-blind identification, negative-neighbor rejection, substantive cross-document duplication screening, evaluator-facing readability, and SAMPLE/REAL truth-boundary checks.
-- Contract freeze requires two consecutive PASS canaries from different document families and a passing duplication/negative-neighbor gate.
+## 4. 真產能短回報
+只有材料變更才短報：fresh HEAD、W1/W2 真派工與回收（work_id/PID/終態）、新不同 doc_id 合格 DOCX 淨增量、具名需求覆蓋、候選 SHA/QA/remote bytes、受阻車道、下一合法 READY。未知填 UNKNOWN。不得以 commit、版本、Worker 呼叫、Token 或長篇稽核報告冒充完成。
 
-## HOTFIX5 stable dual-agent invariant
-- Canonical promotion pipeline is: BUILD -> deterministic STATIC/LAYOUT/RECEIPT PASS -> WAITING_OPENCODE_REVIEW -> OpenCode exact-SHA semantic/usability PASS -> CURRENT.
-- OpenCode is the single independent semantic acceptance reviewer. Codex builder/self-diagnostics do not grant semantic acceptance.
-- CONTROL_PLANE_DEFECT, REVIEW_INFRA_DEFECT, and TRANSIENT_EXECUTION_DEFECT never authorize DOCX mutation.
-- If content/layout bytes do not need repair, DOCX SHA must not change; metadata/control updates stay in sidecars.
-- WAITING_OPENCODE_REVIEW is workflow state, never CONTENT_FAIL.
-- DONE/CURRENT evidence is not invalidated merely by policy/control-code revision; exact source/artifact defect with locator is required.
-
-## HOTFIX6 dual-worker sprint
-After HOTFIX5 two-cycle exact-SHA bootstrap PASS, OpenCode may actively BUILD isolated deliverables as well as REVIEW Codex-built deliverables. Roles are per-document. BUILD_OWNER must never equal REVIEW_OWNER. Codex remains sole dispatcher/integrator/promoter and sole writer of shared canonical state. OpenCode build outputs and proposed synthetic deltas remain isolated until independent cross-review PASS and Codex serialized promotion.
+歷史完整原文可由 Git history 取得，未刪除必要執行收據。

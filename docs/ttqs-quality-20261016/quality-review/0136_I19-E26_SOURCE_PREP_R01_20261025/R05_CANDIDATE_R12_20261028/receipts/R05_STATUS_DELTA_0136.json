@@ -1,0 +1,57 @@
+{
+  "schema": "TTQS_ONE_0136_R05_CANDIDATE_STATUS_DELTA_V1",
+  "observed_at_local": "2026-10-28",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0136",
+  "requirement_id": "I19-E26",
+  "project_index": 150,
+  "printed_checkbox_serial": "UNKNOWN",
+  "source_packet_sha256": "7bebd3eb012b152f4568db6fedccf43c3337f436a5f339127e5afe71cf0678d7",
+  "unique_blueprint_sha256": "32c1b818cc0b3957a23e319606f77b176a7979d1ee4ff58db72b9ae32ada8399",
+  "candidate": {
+    "revision": "R05",
+    "filename": "0136_I19-E26_R05_CANDIDATE_20261028.docx",
+    "sha256": "6d02df68d9dcdd0024aec8d32b38b12e8c66ce112165663836427739c0af5611",
+    "bytes": 55729,
+    "state": "CANDIDATE"
+  },
+  "change_basis": "Seven targeted table-cell text corrections and one page break, each derived from R06 findings; built from R02 original, not failed R03/R04 bodies. No unrelated paragraph/cell text changed.",
+  "technical_qa": {
+    "zip_integrity": "PASS",
+    "table_count": 32,
+    "required_field_assertions": "PASS",
+    "body_explicit_min_pt": 10.5,
+    "table_explicit_min_pt": 9.5,
+    "table_inherited_size_runs": 7,
+    "inherited_table_default_pt": 11.0,
+    "sample_real": "SAMPLE labels retained; REAL evidence remains UNKNOWN/HOLD"
+  },
+  "word_visual_qa": {
+    "renderer": "Microsoft Word COM 16.0, hidden, read-only export",
+    "pages": 15,
+    "coverage": "15/15 page images have review evidence; pages 1, 9, 10 directly inspected for R05, remaining pages byte-identical to inspected R04 render",
+    "verdict": "PASS",
+    "pdf_sha256": "4fc26543815ec876cbe9c35562c65be1f980bce67b12ba624568e08b685d8bf3"
+  },
+  "semantic_qa": {
+    "R06_baseline": "PASS with three minor findings on R02; addressed or visually dispositioned on R05",
+    "R07_exact_candidate": "PASS with one residual cosmetic wording note",
+    "candidate_sha_binding": "R07 response names exact R05 SHA; dispatch pre/post SHA unchanged; response SHA and packet SHA independently recomputed"
+  },
+  "review_route": {
+    "selected_model": "opencode/glm-5.3-flash-free",
+    "session_provider_model_observed": "opencode/glm-5.3-flash-free",
+    "actual_upstream_backend_or_fallback": "UNKNOWN",
+    "recorded_cost_usd": 0,
+    "billing_independently_verified": false,
+    "computer_use": false,
+    "tool_events": 0
+  },
+  "remaining_gaps": [
+    "Official printed checkbox serial remains UNKNOWN.",
+    "REAL association evidence and formal association acceptance/approval were not supplied and remain UNKNOWN/NOT_GRANTED.",
+    "Actual serving backend/fallback cannot be independently proven from available CLI/session records.",
+    "Residual cosmetic label variation retained; no operational risk identified by reviewer."
+  ],
+  "formal_acceptance": "NOT_GRANTED"
+}

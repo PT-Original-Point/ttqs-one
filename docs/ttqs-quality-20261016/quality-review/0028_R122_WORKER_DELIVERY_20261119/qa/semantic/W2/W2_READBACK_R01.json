@@ -1,0 +1,91 @@
+{
+  "work_id": "TTQS_ONE_0028_I05-E02_EXACT_SHA_SEMANTIC_W2_R01_20261119",
+  "candidate_sha256": "b818f9ce6363db5fb6850cfd9f0449715633e70bcc6760a74b5bd5e3002fad2d",
+  "extracted_body_sha256": "32a5a481335965e3928b67d127ee7a7b48bf9ed105aaf332d538d9a8600c720c",
+  "exit_code": 0,
+  "timed_out": false,
+  "provider_status": "SUCCESS",
+  "requested_model": "gemini-3.8-flash-high",
+  "served_model": "UNKNOWN",
+  "response_claimed_model": "Gemini 3.8 Flash (High)",
+  "served_model_evidence": "No provider telemetry in CLI result; model-generated response label is not independent service evidence",
+  "usage": {
+    "input_tokens": 25564,
+    "output_tokens": 11500,
+    "thinking_tokens": 9865,
+    "cache_read_tokens": 0,
+    "total_tokens": 37064
+  },
+  "verdict": "PASS",
+  "finding_count": 2,
+  "findings": [
+    {
+      "severity": "INFO",
+      "locator": "§5.2 vs §11.3",
+      "evidence": "§5.2 provides a generic methodological calculation demonstration yielding 80.0% (4/5) with explicit note '(方法示範，非第 6 章映射表實算結果)', whereas §11.3 evaluates the actual candidate data where all 5 clusters and 3 strategic priorities are mapped, yielding 100.0% (5/5 and 3/3).",
+      "recommendation": "Maintain both presentations; the separation between metric formula definition and actual portfolio evaluation is clearly articulated."
+    },
+    {
+      "severity": "INFO",
+      "locator": "§13.1",
+      "evidence": "Section 13.1 records exact SHA-256 hashes for the official source PDF, crosswalk row, and unique Blueprint file, matching the authoritative manifest exactly.",
+      "recommendation": "Retain embedded cryptographic source references for audit trail integrity."
+    }
+  ],
+  "checks": [
+    {
+      "name": "official_requirement_alignment",
+      "result": "PASS",
+      "evidence": "Matches verbatim official requirement '訓練課程體系及訓練機構業務策略方向的相關資料。' cited to Page 2 under '連結性／5. 訓練規劃及經營目標的連結性' without text modification or omission in title, §2.1, §2.2, §7.2, and §13.1."
+    },
+    {
+      "name": "blueprint_structure_and_sections",
+      "result": "PASS",
+      "evidence": "All 12 Blueprint required sections plus Section 0 (30-second quick read / 3-minute summary) are present and properly ordered from §1 (文件用途與決策範圍) through §13 (證據索引、限制與版本核對)."
+    },
+    {
+      "name": "required_tables_and_figures",
+      "result": "PASS",
+      "evidence": "Contains all 4 required Blueprint tables: §6.1 field definition/validation table (欄位—定義—來源—填寫者—驗證規則), §6 twelve-module mapping table, §10.3 exception handling table (問題／例外—修正—覆核及追蹤), and §7.2 requirement traceability table (官方要求—表單欄位—附件定位追溯表)."
+    },
+    {
+      "name": "required_fields_and_worked_decision_example",
+      "result": "PASS",
+      "evidence": "Section 11.3 provides a complete worked decision record for quarterly review QR-2 containing all mandatory fields: 決策主題, 判定 (覆蓋率 100.0%, 追溯率 100.0%), 理由, 覆核 (R-01, R-03), 後續行動 (R-02), and synthetic tracking key SYN-0028-024."
+    },
+    {
+      "name": "calculations_and_mathematical_consistency",
+      "result": "PASS",
+      "evidence": "§5.2 and §5.3 define formulas, numerators, denominators, periods, rounding (1 decimal place), and N/A handling for 課程群覆蓋率 and 策略主軸追溯率. §6.2 and §11.3 consistently verify that all 3 strategic priorities (SP-1..SP-3) and all 5 course clusters (CL-A..CL-E) are covered across modules M-01 through M-12 (3/3 = 100.0%, 5/5 = 100.0%)."
+    },
+    {
+      "name": "synthetic_registry_and_replacements",
+      "result": "PASS",
+      "evidence": "All 25 synthetic keys (SYN-0028-001 through SYN-0028-025) are comprehensively registered in §12.1 with exact value, data type, locator, real replacement artifact requirement, and responsible role. §12.3 specifies minimum real record requirements for every synthetic key."
+    },
+    {
+      "name": "truth_boundaries_and_sample_demarcation",
+      "result": "PASS",
+      "evidence": "Candidate strictly maintains SAMPLE/SYNTHETIC boundaries; §3.2 contains exhaustive UNKNOWN declarations for real strategy, customer needs, rosters, course history, and approval records. §11.1 explicitly disclaims institutional adoption. Prohibits fabricated real records, external seals, or synthetic student outcomes."
+    },
+    {
+      "name": "title_blind_identification",
+      "result": "PASS",
+      "evidence": "Title-blind test passes; the core mechanics (mapping strategic priorities SP-1..SP-3 to clusters CL-A..CL-E and modules M-01..M-12 with tracking metrics and review cadence) uniquely identify the document as the strategy-to-curriculum framework for I05-E02."
+    },
+    {
+      "name": "negative_neighbor_separation",
+      "result": "PASS",
+      "evidence": "Explicitly distinguishes and rejects boundaries with negative neighbors I05-E01 (0027, annual business plan) and I05-E03 (0029, client course performance goals) in §2.3, §0, and §1.2, refusing to absorb financial budgets, client PII, or operational delivery claims."
+    },
+    {
+      "name": "scoped_repair_verification_r10",
+      "result": "PASS",
+      "evidence": "SYN-0028-022 locator correctly references '第 6 章映射表、第 6.2 節及第 11.3 節' in §12.1; §13.3 records candidate version V1.5 reflecting R10 repairs."
+    }
+  ],
+  "response_sha256": "fb6f30d5906441eb9fa1d5b70161ce338d076139335315c0dad2e17708a96b9d",
+  "stdout_sha256": "9c1d29517e50a432fd849bf554f342858e7bb292cd8857418c9b6850002f06da",
+  "exact_sha_binding_pass": true,
+  "readback_status": "PASS"
+}

@@ -1,0 +1,67 @@
+{
+  "schema": "ttqs-one-opencode-model-identity-reconciliation-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0115",
+  "requirement_id": "I19-E02",
+  "verified_at_local": "2026-10-25T04:59:37.4533216+08:00",
+  "purpose": "Resolve actual OpenCode model and recorded cost for existing exact-SHA R05 full review and R06 scoped-delta review; no new inference or DOCX rebuild performed.",
+  "candidate_R06_sha256": "ec4e48258dca756eaad81d899d8195285308fa5e08edb99b31e2f2e9856ff707",
+  "candidate_R06_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "sessions": [
+    {
+      "tokens": {
+        "input": 75857,
+        "output": 1521,
+        "reasoning": 32199,
+        "cache": {
+          "read": 4352,
+          "write": 0
+        }
+      },
+      "prior_verdict": "PASS with minor findings",
+      "stdout_sha256": "aaeb7aede5294da4e0a5f131f58c529afd812c87599c1415ce0dd71df31ed3e5",
+      "scope": "R05 full-body semantic review",
+      "exported_provider_id": "opencode",
+      "session_id": "ses_e95617c99ffezFeSzyR40OiyzM",
+      "prior_receipt_sha256": "e977707b04040a6d4e8e3bbce9f92a3d9a08349e604f1cadae5f420c553baa35",
+      "verified_model": "opencode/glm-5.3-flash-free",
+      "reviewer_response_sha256": "6c5079bb104d84e91be5a1948abcaf433fb11f47f60517ca87e735b7f33fdc4f",
+      "requested_model": "opencode/glm-5.3-flash-free",
+      "session_export_sanitized_sha256": "579cb4bb5d9527c8176e5269cd27513b8d5507a6ba260bf2c555727765110fab",
+      "exported_model_id": "glm-5.3-flash-free",
+      "session_cost": 0,
+      "candidate_sha256": "bd2119b0e4359dd2066712d91d7f3fb154c094fc27993d6786aab01074f1fe3e"
+    },
+    {
+      "tokens": {
+        "input": 7164,
+        "output": 485,
+        "reasoning": 1538,
+        "cache": {
+          "read": 0,
+          "write": 0
+        }
+      },
+      "prior_verdict": "PASS_SCOPED_DELTA; unchanged full-body semantic coverage inherited from R05 exact-SHA review",
+      "stdout_sha256": "eac7ed03d7e926956a978ba019f1e4d026dfeb169fcfd575e65496eb5e68cca9",
+      "scope": "R06 exact-SHA scoped-delta semantic review",
+      "exported_provider_id": "opencode",
+      "session_id": "ses_e95549875ffeKEASIh6vNxRC4H",
+      "prior_receipt_sha256": "bcf049021435d127ad879304d699fcb8dc02bb3c6d79452e9be761afcecefbd9",
+      "verified_model": "opencode/glm-5.3-flash-free",
+      "reviewer_response_sha256": "138817d5e25161b96333325bd9ba2b271ab8d701198748c399d03bbfb5752d82",
+      "requested_model": "opencode/glm-5.3-flash-free",
+      "session_export_sanitized_sha256": "76895f776ec8bcad356ffdeead76edfea297633bae960552e38312e2bd38c19b",
+      "exported_model_id": "glm-5.3-flash-free",
+      "session_cost": 0,
+      "candidate_sha256": "ec4e48258dca756eaad81d899d8195285308fa5e08edb99b31e2f2e9856ff707"
+    }
+  ],
+  "provider_fallback": "No alternate model/provider appears in exported session model records; internal provider routing is not observable in this export and remains UNKNOWN.",
+  "billing": "OpenCode session metadata records cost=0 for both sessions; no external paid charge is evidenced.",
+  "method": "Windows OpenCode v2.1.4 CLI session export --sanitize; read-only export of existing sessions, not new inference.",
+  "candidate_unchanged": true,
+  "scope_limit": "Model/provider and recorded session-cost reconciliation only; no direct binary/page re-review, no formal acceptance, no REAL evidence."
+}

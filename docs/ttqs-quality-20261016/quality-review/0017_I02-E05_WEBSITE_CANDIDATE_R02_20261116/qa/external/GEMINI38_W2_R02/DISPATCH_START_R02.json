@@ -1,0 +1,30 @@
+{
+  "schema": "TTQS_ONE_W2_SEMANTIC_DISPATCH_START_R02",
+  "work_id": "TTQS-0017-I02-E05-WEBSITE-W2-GEMINI38-20261116-R02",
+  "doc_id": "0017",
+  "requirement_id": "I02-E05",
+  "process_id": 17360,
+  "started_tpe": "2026-11-16T04:16:42.3313271+08:00",
+  "candidate_sha256": "809ce0c6bcccb5167500fabb91963927fbf9deeceaad4fe7eb510ae6b6828e65",
+  "packet_sha256": "b80dbffdcfbad467c36cef93186bc30113c36a5e927013db9d41831a5cd4fccd",
+  "requested_model": "gemini-3.8-flash-high",
+  "actual_serving_model": "UNKNOWN",
+  "cli_version": "1.5.9",
+  "mode": "plan",
+  "sandbox": true,
+  "tool_denies": [
+    "read_file(*)",
+    "write_file(*)",
+    "read_url(*)",
+    "execute_url(*)",
+    "command(*)",
+    "unsandboxed(*)",
+    "mcp(*)"
+  ],
+  "launch_hidden": true,
+  "credits_overages": "OFF_PER_HUMAN_SCREENSHOT",
+  "quota_snapshot": "100% weekly and five-hour remaining on screenshot; live dispatch-time quota UNKNOWN",
+  "input_transport": "stdin stream-json",
+  "timeout_ms": 900000,
+  "dispatch_state": "DISPATCHED"
+}

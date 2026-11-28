@@ -1,0 +1,37 @@
+{
+  "schema": "ttqs-one-r11-shared-free-provider-cooldown-correction-v1",
+  "recorded_at_local": "2026-10-25T20:39:56.9675977+08:00",
+  "scope": "TTQS_ONE OpenCode free-model shared provider state across document lanes",
+  "finding": "The existing 0110 I18-E19 R09 narrow-review receipt already recorded HTTP 429 at 19:26 TPE with retryAfterMs=45203000. A second OpenCode call for 0120 at about 20:29 TPE requested the same free model and was rejected with HTTP 429 retryAfterMs=41436000. The earlier cooldown was not checked before the 0120 call; this was an avoidable cross-document retry.",
+  "prior_0110_receipt": {
+    "path": "docs/ttqs-quality-20261016/quality-review/0110_I18-E19_R01_20261023/R09/evidence/opencode_0110_R09_narrow_review_R11_dispatch_receipt.json",
+    "sha256": "654f3cd7d8eba79b2620046e6e4411e9455915dac741c3b7c4d19b6560542401",
+    "candidate_sha256": "7fc82ba7ae25ba3fd422d7abcae2618176f64d4e2e118021122912440d9b740f",
+    "result": "HTTP 429; no review returned",
+    "requested_model": "opencode/deepseek-v4.1-flash-free",
+    "retry_after_ms": 45203000
+  },
+  "second_0120_attempt": {
+    "path": "docs/ttqs-quality-20261016/quality-review/0120_I19-E08_R01_20261024/evidence/R11_worker_recovery_20261025/opencode/dispatch_receipt.json",
+    "requested_model": "opencode/deepseek-v4.1-flash-free",
+    "result": "HTTP 429; no review returned",
+    "retry_after_ms": 41436000,
+    "provider_inference_accepted": false,
+    "actual_model": "UNKNOWN",
+    "output_adopted": false
+  },
+  "mapping_0110_already_complete": {
+    "doc_id": "0110",
+    "requirement_id": "I18-E19",
+    "candidate_sha256": "7fc82ba7ae25ba3fd422d7abcae2618176f64d4e2e118021122912440d9b740f",
+    "r04_crosscheck_local_sha256": "573ec7debafdaf990bbb7331770149a53dd010df5b9ee4594783c24db67c2311",
+    "r04_result": "PASS_DETERMINISTIC_DIRECT_CANDIDATE_CROSSCHECK",
+    "construct_mappings": 14,
+    "sample_math": "6/8=75.0%; 7/8=87.5%; +12.5 percentage points; fixed N=8 90% threshold requires 8/8",
+    "candidate_remote_sha256": "7fc82ba7ae25ba3fd422d7abcae2618176f64d4e2e118021122912440d9b740f",
+    "rebuild": "NOT_REQUIRED"
+  },
+  "corrective_control": "Freeze OpenCode free-model dispatch across all document lanes while the reported cooldown remains active; do not switch model IDs to bypass the same free-limit fault; inspect prior provider receipts before each call.",
+  "billing": "No paid fallback or overage was used; no model response or token usage returned; actual billing UNKNOWN",
+  "formal_acceptance": "NOT_GRANTED"
+}

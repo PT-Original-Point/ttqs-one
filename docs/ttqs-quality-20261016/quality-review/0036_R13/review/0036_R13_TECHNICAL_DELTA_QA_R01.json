@@ -1,0 +1,46 @@
+{
+  "schema": "TTQS_ONE_R12_2_TECHNICAL_DELTA_QA_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0036",
+  "requirement_id": "I07-E04",
+  "revision": "R13",
+  "candidate_sha256": "47d5760c227a3a7dc7b3ba7942e697fb7e5dd0a7b1856209f1cbb81296d987e3",
+  "candidate_bytes": 229679,
+  "source_r12_sha256": "e2be3928f96d45bdee6d18762b169c92e7817d10d0c0f87e4854bd16756febbb",
+  "result": "PASS_SCOPED_TECHNICAL_DELTA",
+  "checks": {
+    "docx_opens_with_python_docx": true,
+    "zip_integrity": "PASS",
+    "same_ooxml_part_inventory": true,
+    "only_expected_document_xml_and_core_props_parts_changed": true,
+    "only_two_expected_paragraph_text_changes": true,
+    "table_structure_unchanged": true,
+    "run_formatting_signature_unchanged": true,
+    "embedded_media_unchanged": true,
+    "real_replacement_area_explicitly_labeled": true,
+    "retention_claim_remains_unverified_and_non_authoritative": true,
+    "old_retention_placeholder_phrase_absent": true,
+    "visual_review": "PENDING",
+    "independent_semantic_review": "PENDING"
+  },
+  "changed_package_parts": [
+    "word/document.xml"
+  ],
+  "image_part_count": 1,
+  "changed_paragraphs": [
+    {
+      "index": 96,
+      "before": "逐項填寫，每個交接項目各一筆。\n項目：＿＿＿＿　結果：□完成　□未完成　核對日期：＿＿＿＿\n原件名稱及頁／表／欄位定位：＿＿＿＿\n未完成時：責任角色＿＿＿＿　期限＿＿＿＿　暫停措施＿＿＿＿\n未取得可核實原件或授權，不得勾選完成。本欄為空白格式，不代表協會已完成交接。",
+      "after": "【REAL 替換資料區｜僅供取得真實課程交接原件及授權後填入；未填不代表完成佐證】 逐項填寫，每個交接項目各一筆。\n項目：＿＿＿＿　結果：□完成　□未完成　核對日期：＿＿＿＿\n原件名稱及頁／表／欄位定位：＿＿＿＿\n未完成時：責任角色＿＿＿＿　期限＿＿＿＿　暫停措施＿＿＿＿\n未取得可核實原件或授權，不得勾選完成。本欄為空白格式，不代表協會已完成交接。"
+    },
+    {
+      "index": 101,
+      "before": "完成核准後，交接一份受控課程規劃書、課程設計進度紀錄、流程圖、需求—目標—評量矩陣、教材版本、原始評量及課後追蹤索引。保管人和存取權限依真實授權指定。保存年限應先核對現行法規、契約及協會正式規範；本件只提供3年作為待核示範建議，不是現行政策或法律結論。",
+      "after": "完成核准後，交接一份受控課程規劃書、課程設計進度紀錄、流程圖、需求—目標—評量矩陣、教材版本、原始評量及課後追蹤索引。保管人和存取權限依真實授權指定。保存年限應先核對現行法規、契約及協會正式規範；本件只提供3年作為SAMPLE／SYNTHETIC示範提案，尚未經法規、契約及協會正式規範核實或核定，不是現行政策或法律結論。"
+    }
+  ],
+  "limits": [
+    "This is a scoped delta check; the existing R12 technical floor receipt remains the unchanged formatting baseline.",
+    "No visual PASS or semantic PASS is claimed by this receipt."
+  ]
+}

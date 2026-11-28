@@ -1,0 +1,118 @@
+{
+  "receipt_id": "TTQS-I18E08-DOC0100-R09A-SEMANTIC-REVIEW-RESULT-20261021",
+  "work_id": "TTQS-I18E08-DOC0100-R09A-SEMANTIC-REVIEW-OPENCODE-20261021",
+  "doc_id": "0100",
+  "official_requirement_id": "I18-E08",
+  "revision": "R09a",
+  "verdict": "PASS_SEMANTIC_ONLY",
+  "candidate_state": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0100_0101_R08_SOURCE_BLUEPRINT_20261021\\candidate_R09\\0100_I18-E08_R09.docx",
+  "candidate_sha256": "debd41e7ca1b18b88cad37db118c5b3474df411b3e2d1c87a8351d456245e0b2",
+  "candidate_bytes": 58574,
+  "reviewer": "Independent OpenCode v2 CLI plan agent; read-only",
+  "requested_model": "opencode/deepseek-v4.1-flash-free",
+  "native_session_model": {
+    "id": "deepseek-v4.1-flash-free",
+    "providerID": "opencode"
+  },
+  "native_session_id": "ses_ea1cf5503ffe00DhJ9tzXxSzPG",
+  "native_session_status": "succeeded",
+  "native_session_directory": "E:/TTQS",
+  "native_agent": "plan",
+  "started_local": "2026-10-21T19:20:10.399000+08:00",
+  "finished_local": "2026-10-21T19:27:04.142000+08:00",
+  "duration_seconds": 413.743,
+  "cli_exit_code": 0,
+  "usage": {
+    "input_tokens": 196596,
+    "output_tokens": 14196,
+    "reasoning_tokens": 45375,
+    "cache_read_tokens": 2321408,
+    "cache_write_tokens": 0,
+    "local_cost": 0.0,
+    "provider_billing": "UNKNOWN"
+  },
+  "stdout": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0100_0101_R08_SOURCE_BLUEPRINT_20261021\\candidate_R09\\review\\opencode_semantic_R09a_20261021\\reviewer_stdout.jsonl",
+    "sha256": "fccdf17bfbfa84cdd15079d6a7bf1d654a72511848b8453af91f44cc9bc46203",
+    "bytes": 355736
+  },
+  "stderr": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0100_0101_R08_SOURCE_BLUEPRINT_20261021\\candidate_R09\\review\\opencode_semantic_R09a_20261021\\reviewer_stderr.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "reviewer_final_text": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0100_0101_R08_SOURCE_BLUEPRINT_20261021\\candidate_R09\\review\\opencode_semantic_R09a_20261021\\reviewer_final_text.txt",
+    "sha256": "c3b6a73d598556d90db6b25cd5f15d59addd52538490aeccd8723ff20d802d2f",
+    "bytes": 16384
+  },
+  "reviewed_inputs": [
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0100_0101_R08_SOURCE_BLUEPRINT_20261021\\candidate_R09\\0100_I18-E08_R09.docx",
+      "sha256": "debd41e7ca1b18b88cad37db118c5b3474df411b3e2d1c87a8351d456245e0b2",
+      "bytes": 58574
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0100_0101_R08_SOURCE_BLUEPRINT_20261021\\SOURCE_PACKET_I18-E08_0100_0101_R09.md",
+      "sha256": "81caa978a17dda522850628e6e9b4b16453145a986d2bafd2598b6f5ac96b886",
+      "bytes": 5253
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0100_0101_R08_SOURCE_BLUEPRINT_20261021\\UNIQUE_BLUEPRINT_0100_I18-E08_R09.md",
+      "sha256": "c407af272823d0159bbbe0c1c9258ed74ee89e5328bd8338840cef26183b2817",
+      "bytes": 4829
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0100_0101_R08_SOURCE_BLUEPRINT_20261021\\UNIQUE_BLUEPRINT_0101_I18-E08_R09.md",
+      "sha256": "51b5a85d08c85550fa18de656ab7e9cdb3923831f4584ea7e9bf4da3ce35e8ce",
+      "bytes": 4625
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0100_0101_R08_SOURCE_BLUEPRINT_20261021\\candidate_R09\\synthetic_replacement_register_0100_R09.csv",
+      "sha256": "889c202a6e49435d9100e3bf906883410b4ae7160166126f24d9af27c876dbd8",
+      "bytes": 65820
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0100_0101_R08_SOURCE_BLUEPRINT_20261021\\candidate_R09\\review\\opencode_semantic_exact_sha_20261021\\reviewer_final_text.txt",
+      "sha256": "fc162d9dcb033378e04f3ca15e82e890dc2c4d782ed026d1bca08250877b0321",
+      "bytes": 12139
+    }
+  ],
+  "scope": [
+    "official requirement and unique blueprint",
+    "genre and practical usability",
+    "SAMPLE/REAL boundary",
+    "80 raw score cells and arithmetic",
+    "R1 repair criteria",
+    "replacement register and cross-document boundaries"
+  ],
+  "not_in_scope": [
+    "visual rendering (separate receipt)",
+    "formal association acceptance",
+    "real learner or course evidence"
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "MINOR",
+      "summary": "Cross-stage duplicate code pair cannot be verified as same respondent; hold/reject unmatched pair before delta."
+    },
+    {
+      "id": "F2",
+      "severity": "MINOR",
+      "summary": "Operational privacy inspection checklist at §6.1/§4.4/§5.4 should explicitly include employer/client/service-recipient names already prohibited by §7."
+    },
+    {
+      "id": "F3",
+      "severity": "MINOR",
+      "summary": "R09a visible version/status says no independent review while filename/register remain R09; clarify the filename convention and update status at final acceptance."
+    },
+    {
+      "id": "F4",
+      "severity": "TRIVIAL",
+      "summary": "§10.1 uses shorthand “4碼”; blank value classification overlaps; sample CSV header has leading spaces."
+    }
+  ],
+  "semantic_conclusion": "PASS for exact candidate SHA. Reviewer explicitly states F1–F4 do not meet Blueprint REJECT/HOLD threshold and do not invalidate current synthetic 80-cell sample; keep listed residuals visible. Do not convert to formal acceptance."
+}

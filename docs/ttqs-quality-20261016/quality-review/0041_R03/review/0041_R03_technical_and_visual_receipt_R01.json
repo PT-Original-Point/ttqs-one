@@ -1,0 +1,78 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0041",
+  "requirement_id": "I09-E01",
+  "official_checkbox_serial": "042",
+  "revision": "R03",
+  "candidate_path": "candidate/0041_R03.docx",
+  "candidate_sha256": "1BC0337C0328C68A8644CABF3E07D5080E9C2A9D98B19B8881A6DB05196CBA43",
+  "candidate_disposition": "CANDIDATE_ONLY_NOT_PROMOTED",
+  "source_lineage": "R02 targeted layout repair: prevent shaded callout table row from splitting; correct unique-blueprint registry path in inputs; no unrelated body rewrite asserted.",
+  "technical_review": {
+    "status": "PASS_TECHNICAL_ONLY",
+    "docx_zip_test": "PASS",
+    "docx_tables": 30,
+    "docx_paragraphs": 86,
+    "section_count": 1,
+    "pdf_path": "evidence/render_final/0041_R03_Word.pdf",
+    "pdf_sha256": "80535A832139184DB64B2353817F11B976FACF9EB0D76EB57EE8F93CC08E7F73",
+    "pdf_page_count": 12,
+    "render_page_images": 12,
+    "explicit_min_body_font_pt": 10.5,
+    "explicit_min_table_font_pt": 9.5,
+    "synthetic_replacement_register": "evidence/SYNTHETIC_REPLACEMENT_REGISTER_R03.csv",
+    "register_row_count": 43,
+    "unique_fact_id_count": 43,
+    "required_content_markers_present": [
+      "0041 R03",
+      "I09-E01",
+      "042",
+      "SAMPLE",
+      "SYNTHETIC",
+      "UNKNOWN",
+      "2.90",
+      "4.10",
+      "2.30",
+      "225",
+      "215",
+      "9/12",
+      "75%",
+      "50%"
+    ],
+    "calculation_recheck": {
+      "option_B": "4*0.35 + 4*0.25 + 4*0.20 + 5*0.10 + 4*0.10 = 4.10",
+      "weights": "0.35 + 0.25 + 0.20 + 0.10 + 0.10 = 1.00",
+      "schedule": "20+40+10+55+55+25+20 = 225 minutes; 10-minute break; 215 effective learning minutes",
+      "learning_check": "9/12 overall with stated key-item minimums of 2",
+      "sample_outcome": "2/4 = 50%, below the 75% sample threshold and triggers redesign/review"
+    }
+  },
+  "visual_review": {
+    "status": "PASS_LOCAL_DIRECT_VISUAL_REVIEW",
+    "render_source": "existing Microsoft Word final export; no re-render during this review",
+    "pages_inspected": "01-12, each page image directly inspected",
+    "findings": "No clipping, text collision, cut-off table, or unreadable text observed. The page-3/4 shaded callout that split in R02 now remains together on page 4 as a complete box. Pages 5 and 12 contain deliberate white space; content remains legible. Page 12 continues the rubric with a repeated header.",
+    "limitations": "This is a local visual check, not the independent semantic review."
+  },
+  "input_sha256": {
+    "official_evidence_table.pdf": "805386B77DF045B396FABAFED7A47D12491C25A0B5744EDD9A04876CAEE34709",
+    "association_context_provenance.md": "DD7A4BD43813F5C4D837963D5150B350B5605CED27101275A5DB2CE0CCA02B22",
+    "requirement_mapping_0041.json": "D58C41CCCD152F1D8B79E2F659355AA288B7D2CB1C5A05353D4A5597F682E1D6",
+    "unique_blueprint_row_0041.json": "F16548FFDB24C0E5022D640F5EC1D72A23F1A63E30338711ABD6B757FE322D5E",
+    "synthetic_register": "3BC9711552BB49D7CB9AFDFB51A61242EA6DA16F699820D43B8EB2F749A84802"
+  },
+  "independent_semantic_review": {
+    "status": "PARTIAL",
+    "reviewer_agent_id": "01a14663-df8b-7e03-972e-48b85eda27c8",
+    "review_file": "review/0041_R03_independent_semantic_review_R01.md",
+    "review_file_sha256": "22cbda171b60697f294eccaadc13dcd6579783ba7c71673004a20a695d22b062",
+    "candidate_sha256": "1BC0337C0328C68A8644CABF3E07D5080E9C2A9D98B19B8881A6DB05196CBA43",
+    "findings": [
+      "F-01 actual stakeholder consultation not established; perspectives are synthetic.",
+      "F-02 three-column vs four-column handoff card mismatch; corrected in R04.",
+      "F-03 display-name alignment note, legal identity unverified."
+    ]
+  },
+  "formal_acceptance": "NOT_GRANTED",
+  "promotion": "NOT_PROMOTED"
+}

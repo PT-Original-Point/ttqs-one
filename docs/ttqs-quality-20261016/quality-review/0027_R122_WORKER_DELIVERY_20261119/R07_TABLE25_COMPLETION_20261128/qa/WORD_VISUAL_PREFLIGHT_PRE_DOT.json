@@ -1,0 +1,441 @@
+{
+  "receipt_type": "INTEGRATOR_EXACT_SHA_TABLE25_COMPLETION_WORD_VISUAL_PREFLIGHT",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0027",
+  "observed_at_taipei": "2026-11-28T11:52:46.9452085+08:00",
+  "status": "ISOLATED_CANDIDATE_PENDING_DOT_EXACT_REVIEW",
+  "authority_basis": {
+    "blueprint_row_sha256": "5bb72d3aab2cbb36f22341ad792b96aa8a1c076c8242b6f8b8cd880032c5bfe1",
+    "blueprint_file_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+    "dot_hold_sha256": "534a78893262eaec1021398fd4775d9faf7353f456a549a50bbf0d874855b8d0",
+    "decision": "Blueprint calls for a complete per-fact replacement register and does not state that an unexplained partial embedded list is sufficient; therefore the eleven rows already present in the exact sidecar were appended to Table 25."
+  },
+  "input": {
+    "docx": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_HUMAN_R12_3_FULL_QUALITY_REMEDIATION_20261125\\0027_R12_3_W2_SCOPED_REPAIR_20261126\\0027_R07_DEMAND_KEY_REBIND_R02_20261128\\0027__學員訓練及訓練機構年度事業計畫的相關資料_完整工作稿.docx",
+      "bytes": 83092,
+      "sha256": "f634f74e201bda2015f946773aeed10fa9ad10128fb08b18939dc4673d8ddd68"
+    },
+    "sidecar": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_HUMAN_R12_3_FULL_QUALITY_REMEDIATION_20261125\\0027_R12_3_W2_SCOPED_REPAIR_20261126\\0027_R07_DEMAND_KEY_REBIND_R02_20261128\\0027_SYNTHETIC_REPLACEMENT_REGISTER_12COL_R07.csv",
+      "bytes": 45265,
+      "sha256": "757a5bf855f042ca132592b9ba9cac7607e44f3ba2f99664fcc0fdfcca67309a"
+    }
+  },
+  "candidate": {
+    "docx": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_HUMAN_R12_3_FULL_QUALITY_REMEDIATION_20261125\\0027_R12_3_W2_SCOPED_REPAIR_20261126\\0027_R07_DEMAND_KEY_REBIND_R02_20261128\\R07_TABLE25_COMPLETION_SUCCESSOR_20261128\\0027_R07_TABLE25_COMPLETE_CANDIDATE.docx",
+      "bytes": 86183,
+      "sha256": "f070b4f00ac7e1f57c2206edc62b39612fe6de49578ba0b90f0a89288aafa248"
+    },
+    "sidecar": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_HUMAN_R12_3_FULL_QUALITY_REMEDIATION_20261125\\0027_R12_3_W2_SCOPED_REPAIR_20261126\\0027_R07_DEMAND_KEY_REBIND_R02_20261128\\R07_TABLE25_COMPLETION_SUCCESSOR_20261128\\0027_SYNTHETIC_REPLACEMENT_REGISTER_12COL_R07.csv",
+      "bytes": 45265,
+      "sha256": "757a5bf855f042ca132592b9ba9cac7607e44f3ba2f99664fcc0fdfcca67309a"
+    },
+    "table25_before_data_rows": 102,
+    "table25_after_data_rows": 113,
+    "columns": [
+      "fact_id",
+      "fact_type",
+      "synthetic_value",
+      "document_section",
+      "real_replacement_action",
+      "responsible_role"
+    ],
+    "appended_fact_ids": [
+      "SYN-0027-DEM01",
+      "SYN-0027-DEM02",
+      "SYN-0027-DEM03",
+      "SYN-0027-G02-YEARLY-REF",
+      "SYN-0027-G05-YEARLY-REF",
+      "SYN-0027-K06-ACTUAL-CUM-20270131",
+      "SYN-0027-K06-ACTUAL-CUM-20270228",
+      "SYN-0027-K06-PLAN-CUM-20270131",
+      "SYN-0027-K06-PLAN-CUM-20270228",
+      "SYN-0027-K06-VARIANCE-CUM-20270228",
+      "SYN-0027-K06-VARIANCE-OVERLAP-ERROR"
+    ],
+    "changed_package_parts": [
+      "word/document.xml"
+    ],
+    "preserved_prior_rows": 102,
+    "amounts_formulas_and_meaning": "UNCHANGED",
+    "sample_real_status": "SAMPLE/SYNTHETIC; REAL=UNKNOWN/HOLD",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "evidence_files": [
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_HUMAN_R12_3_FULL_QUALITY_REMEDIATION_20261125\\0027_R12_3_W2_SCOPED_REPAIR_20261126\\0027_R07_DEMAND_KEY_REBIND_R02_20261128\\R07_TABLE25_COMPLETION_SUCCESSOR_20261128\\DOT_0027_TABLE25_SIX_FIELD_EXACT_QA_20261128.json",
+      "bytes": 997,
+      "sha256": "ee3b65785e006cf52c1b82e262efe81be9ad498dfdf853d99d3342f4dc6dfca5"
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_HUMAN_R12_3_FULL_QUALITY_REMEDIATION_20261125\\0027_R12_3_W2_SCOPED_REPAIR_20261126\\0027_R07_DEMAND_KEY_REBIND_R02_20261128\\DOT_0027_R07_EMBEDDED_REGISTER_SCOPE_HOLD_20261128_1100.json",
+      "bytes": 1735,
+      "sha256": "534a78893262eaec1021398fd4775d9faf7353f456a549a50bbf0d874855b8d0"
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_HUMAN_R12_3_FULL_QUALITY_REMEDIATION_20261125\\0027_R12_3_W2_SCOPED_REPAIR_20261126\\0027_R07_DEMAND_KEY_REBIND_R02_20261128\\R07_TABLE25_COMPLETION_SUCCESSOR_20261128\\INTEGRATOR_0027_R07_TABLE25_COMPLETION_RECEIPT.json",
+      "bytes": 3991,
+      "sha256": "e71d97e6d605cde6812ad437fe75e99f44756feff8758feb5680f2727f6fcb55"
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_HUMAN_R12_3_FULL_QUALITY_REMEDIATION_20261125\\0027_R12_3_W2_SCOPED_REPAIR_20261126\\0027_R07_DEMAND_KEY_REBIND_R02_20261128\\R07_TABLE25_COMPLETION_SUCCESSOR_20261128\\INTEGRATOR_0027_R07_TABLE25_COMPLETION_BUILD_RECEIPT.json",
+      "bytes": 88884,
+      "sha256": "5fbd496975ce94f840089559a506e0ca04040cf345348bae747a1a2a6f3fe04b"
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_HUMAN_R12_3_FULL_QUALITY_REMEDIATION_20261125\\0027_R12_3_W2_SCOPED_REPAIR_20261126\\0027_R07_DEMAND_KEY_REBIND_R02_20261128\\R07_TABLE25_COMPLETION_SUCCESSOR_20261128\\INTEGRATOR_0027_R07_TABLE25_COMPLETION_STATIC_GATE.json",
+      "bytes": 1738,
+      "sha256": "c1352f0e8dedf47fcbb208133fcf4ad0c1ed5e2a5ec63ac53b84c152c5d8a206"
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_HUMAN_R12_3_FULL_QUALITY_REMEDIATION_20261125\\0027_R12_3_W2_SCOPED_REPAIR_20261126\\0027_R07_DEMAND_KEY_REBIND_R02_20261128\\R07_TABLE25_COMPLETION_SUCCESSOR_20261128\\WORD_NATIVE_EXACT_ATTEMPT02\\native_word_receipt.json",
+      "bytes": 1806,
+      "sha256": "9d208cea885cc27a8a9e268feb2d6dbe0204598dbdc7c95de208a51e1f650dd6"
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_HUMAN_R12_3_FULL_QUALITY_REMEDIATION_20261125\\0027_R12_3_W2_SCOPED_REPAIR_20261126\\0027_R07_DEMAND_KEY_REBIND_R02_20261128\\R07_TABLE25_COMPLETION_SUCCESSOR_20261128\\WORD_NATIVE_EXACT_ATTEMPT01\\native_word_receipt.json",
+      "bytes": 1958,
+      "sha256": "2fb57c9bab17540d26c818837fdb67f86b53f09643436b1c252270ffcdbe526c"
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pdf_page_index.json",
+      "bytes": 4634,
+      "sha256": "a22f4a3feab2de4dfc271e3bf175b2af797fba04b94e25bbb7742dba4ccee533"
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\TTQS_ONE_HUMAN_R12_3_FULL_QUALITY_REMEDIATION_20261125\\0027_R12_3_W2_SCOPED_REPAIR_20261126\\0027_R07_DEMAND_KEY_REBIND_R02_20261128\\R07_TABLE25_COMPLETION_SUCCESSOR_20261128\\WORD_NATIVE_EXACT_ATTEMPT02\\candidate_0027_R07_TABLE25_COMPLETE.pdf",
+      "bytes": 962019,
+      "sha256": "357abf27cf9f6b3c5981fd44a09ad93357db5bb771b9ae1b86d04543224050c5"
+    }
+  ],
+  "static_gate": {
+    "status": "PASS_STATIC",
+    "hard_fail_count": 0,
+    "warning_count": 0,
+    "engineering_hits": 0,
+    "table_min_explicit_pt": 9.5,
+    "substantive_duplication_status": "PASS",
+    "receipt_sha256": "c1352f0e8dedf47fcbb208133fcf4ad0c1ed5e2a5ec63ac53b84c152c5d8a206",
+    "metadata_discrepancy": {
+      "gate_declared_pages": 8,
+      "native_word_pages": 40,
+      "state": "MISMATCH; no metadata edit made; Dot/canonical disposition required before acceptance"
+    }
+  },
+  "native_word": {
+    "status": "NATIVE_WORD_EXPORT_PASS",
+    "candidate_sha256": "f070b4f00ac7e1f57c2206edc62b39612fe6de49578ba0b90f0a89288aafa248",
+    "snapshot_sha256": "f070b4f00ac7e1f57c2206edc62b39612fe6de49578ba0b90f0a89288aafa248",
+    "page_count": 40,
+    "pdf": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\candidate.pdf",
+      "bytes": 962019,
+      "sha256": "357abf27cf9f6b3c5981fd44a09ad93357db5bb771b9ae1b86d04543224050c5"
+    },
+    "owned_pid": 21392,
+    "document_hwnd": 11603684,
+    "document_window_pid": 21392,
+    "application_hwnd_preopen": 0,
+    "source_unchanged": true,
+    "quit_called": 21392,
+    "attempt1": {
+      "status": "NATIVE_WORD_EXPORT_FAIL",
+      "error": "DOCUMENT_OPEN_RETURNED_NULL",
+      "owned_pid": 27380,
+      "document_hwnd": null,
+      "document_window_pid": null,
+      "process_status": "PRESENT_UNRESOLVED",
+      "no_force_termination": true
+    }
+  },
+  "visual_preflight": {
+    "rasterizer": "Poppler 26.11.0",
+    "page_count": 40,
+    "rendered_png_count": 40,
+    "rendered_pages": [
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-01.png",
+        "bytes": 186146,
+        "sha256": "d7610f01f707bb682807c43e25a4e15ca88b81bb3def67435d284eec09c1249f"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-02.png",
+        "bytes": 170647,
+        "sha256": "2cc75ec5cc3b279d8593777928f35b53599df0e3a678990ad4b4c3582835035c"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-03.png",
+        "bytes": 148765,
+        "sha256": "e1b1d2e25094e2a8fec0ee0ce21a405925ca2af47a91880ef1575d2cba97151b"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-04.png",
+        "bytes": 158992,
+        "sha256": "7bfcf52312b11d118e741fb022dabd6016724d95e2596b519771439473edf537"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-05.png",
+        "bytes": 154981,
+        "sha256": "e613f65ebb59facf4a5d57e91258b9c4107b941bcf4763cb7d24d51a40f9fe10"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-06.png",
+        "bytes": 153719,
+        "sha256": "7c906a670fa638a58d4d786ccdc666325abb3d8e5129f1aea6ee75351bfbdee4"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-07.png",
+        "bytes": 146061,
+        "sha256": "c3ce13b7af4abfd6a39a06a1fe03d0093037d5fea77457a011eb1386728215e5"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-08.png",
+        "bytes": 128004,
+        "sha256": "a1ab34ec1963bb0091a0fdc2729e524636f36874ad4cb45a2f3629268fbf6457"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-09.png",
+        "bytes": 130628,
+        "sha256": "1ac85c45241a8b410d41ea1facd55956c1654c9863009d8762442fa6cb979c54"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-10.png",
+        "bytes": 109406,
+        "sha256": "390082c507bd0f35ce551a64b55eb8b829830fbd4cb011992a492c0acf7f2a06"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-11.png",
+        "bytes": 112659,
+        "sha256": "8f088257ff69501d57616bbb6706aeb5f9fd22f22fc70b216c03c2e006067a3d"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-12.png",
+        "bytes": 154982,
+        "sha256": "7b58a9933df6b5b0d5476bcc9626380a95b6e3788077a0e10e72659cf75a557a"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-13.png",
+        "bytes": 143145,
+        "sha256": "c919d647ec081a8f2afbe70ebbb3ca070afa6cef088ef80adec5879114d8789a"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-14.png",
+        "bytes": 90217,
+        "sha256": "da3e0f7d84285fc833e6cd9860c31d075a1ca7baa5d35940e14aff5b35901a79"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-15.png",
+        "bytes": 124358,
+        "sha256": "5b27d0c556720f425d3f3e8eda4068e05cec66a095a4ee5fc6016c496b0030b8"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-16.png",
+        "bytes": 197258,
+        "sha256": "e7af7a9c8aef321f7a299a1b74417951072150ecec492efb17ef070fd28ac6d2"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-17.png",
+        "bytes": 156013,
+        "sha256": "86910a14960a6b6d2798759139c75a0d7c1cfca98d837741dc555a3dfd206585"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-18.png",
+        "bytes": 161806,
+        "sha256": "a2a8889e834b3b73ca22e5b975f6d5bf58adb711d4f5b27ea2bfc62cd2fd3f3d"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-19.png",
+        "bytes": 176975,
+        "sha256": "c09dbec11157dda24c06ec412d0a8b43b695f21267f0f4bd06b9a9516996fed4"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-20.png",
+        "bytes": 166365,
+        "sha256": "24eb0256783f9ed9f1a314408c7beb038ca3ad1b2a0f567320824126241d5031"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-21.png",
+        "bytes": 118324,
+        "sha256": "0620f0a3c694b676707fa264253229c52c8a0ebcebc4f7d1ba362bb8a2478edb"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-22.png",
+        "bytes": 112597,
+        "sha256": "4d947f8fd223fe5cabb8a78fc75880e868bb7690118a2c4e55b970103df87e00"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-23.png",
+        "bytes": 126896,
+        "sha256": "78c1b165b4b3b78ae9d81eb7f0ea7c00abfc4784d2aa3b5c9696a6a46b041fc5"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-24.png",
+        "bytes": 136093,
+        "sha256": "1d6bfb1a113b9fbe9bddd44d4effd964bf97c921e06174133b9ac3c7a3854938"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-25.png",
+        "bytes": 137807,
+        "sha256": "94e41ecf6cb6e2e1c4b90e6c3d19e403e2e6a40814d93ed3515ee0e5c31a2743"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-26.png",
+        "bytes": 144220,
+        "sha256": "1e28c91939285119f8fd06f6659bb6bdaffb55e6fa66944049ec69b728b04049"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-27.png",
+        "bytes": 135444,
+        "sha256": "a46e0bf69d144c1c12f2520ea61a1cf3e9ce1b48b932f5db45846165be6dcb35"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-28.png",
+        "bytes": 134449,
+        "sha256": "61003830c8e8ca060809236f4b61127b519fe20463875275f550e783f0d5490f"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-29.png",
+        "bytes": 145493,
+        "sha256": "49823fa4e8fe1f9cae3b76ea6fe52c44e28cdba3ba5872b7c6f4e9020e718a65"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-30.png",
+        "bytes": 132710,
+        "sha256": "43b51473dbf57dcdd1ff6150ca82a04d786ebd9828bf7e48ed28334af6bfc51f"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-31.png",
+        "bytes": 135605,
+        "sha256": "3d2dc9292d55b0a0c09c8cdbdd1effa4a22f809e7830d2579db2b9f7fe56a531"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-32.png",
+        "bytes": 131963,
+        "sha256": "6ea0c1d3501a412af986d65a1d1ae5f59937131ab52c466ee028a4fac16d103c"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-33.png",
+        "bytes": 157608,
+        "sha256": "e494b70d6a0847a4ac169990de2da0ab2c89c1de34b53587a009e707d944909d"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-34.png",
+        "bytes": 128127,
+        "sha256": "5f1314c8d8db78e4088fd35fcd6cd73bb835217fa42af2d009588be9634382c2"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-35.png",
+        "bytes": 135783,
+        "sha256": "5e72336a81866a81930ffae49dfcc129bdfec713cc0fd0ee2e018886e2a15792"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-36.png",
+        "bytes": 146156,
+        "sha256": "ce7d8d15a3e1ffc01fec4ce0b01eadb561a310f4d21748f512f6b0c2fe1652ee"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-37.png",
+        "bytes": 132339,
+        "sha256": "fbd50130a56b1a689ebf81e9539962184737d33946753073c92bfa1e56afda74"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-38.png",
+        "bytes": 214772,
+        "sha256": "85cae69725fb080d703e41d151996f431bd687de07c4551ecd4092e11a3451a7"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-39.png",
+        "bytes": 168880,
+        "sha256": "57207c15fca1aa3d1006eecbc2746474b4cc0397e78526f738f67fa7fc58076d"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\pages\\page-40.png",
+        "bytes": 46067,
+        "sha256": "3200c482514f13279950fb8b6d54e36a5646d9315819f2fcc6b4b043aa2058a1"
+      }
+    ],
+    "contact_sheets": [
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\contact_01.jpg",
+        "bytes": 152835,
+        "sha256": "71f6ee01a66aba3f0c019270982c845d484325f15e1b08f414757bfb2ba01539"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\contact_02.jpg",
+        "bytes": 144447,
+        "sha256": "8964a48973302ad5c98f4fa29d4e0f989d6ecf6d496f8a9224e95820da05d2a4"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\contact_03.jpg",
+        "bytes": 135892,
+        "sha256": "ac51137eed3abd4bc5144e731bff7c8cc1a88cf40ca21f00645ee628744071d1"
+      },
+      {
+        "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\EXTERNAL_WORK\\R123_SHORT_WORD\\0027_R07_20261128\\contact_04.jpg",
+        "bytes": 130830,
+        "sha256": "4b3b26470503543ce3dd16a4fcacf10f23172c3f85fd5c63d3291366ad7a4757"
+      }
+    ],
+    "fact_id_pages": {
+      "SYN-0027-DEM01": [
+        6,
+        38
+      ],
+      "SYN-0027-DEM02": [
+        6,
+        7,
+        38
+      ],
+      "SYN-0027-DEM03": [
+        6,
+        7,
+        39
+      ],
+      "SYN-0027-G02-YEARLY-REF": [
+        38
+      ],
+      "SYN-0027-G05-YEARLY-REF": [
+        38
+      ],
+      "SYN-0027-K06-ACTUAL-CUM-20270131": [
+        39
+      ],
+      "SYN-0027-K06-ACTUAL-CUM-20270228": [
+        39
+      ],
+      "SYN-0027-K06-PLAN-CUM-20270131": [
+        39
+      ],
+      "SYN-0027-K06-PLAN-CUM-20270228": [
+        39
+      ],
+      "SYN-0027-K06-VARIANCE-CUM-20270228": [
+        39
+      ],
+      "SYN-0027-K06-VARIANCE-OVERLAP-ERROR": [
+        40
+      ]
+    },
+    "inspected_scope": "40-page contact-sheet review plus individual inspection of pages 38-40",
+    "result": "New Table 25 rows legible; no visible clipping or overlap on pages 38-40; full visual PASS remains Dot decision",
+    "sparse_page": [
+      {
+        "page": 40,
+        "chars": 265,
+        "fact_ids": [
+          "SYN-0027-K06-VARIANCE-OVERLAP-ERROR"
+        ]
+      }
+    ],
+    "exact_parent_page_delta": "UNKNOWN: no exact f634... baseline PDF/render was found in scoped evidence; no cross-version render substituted"
+  },
+  "external_effects": {
+    "github_write": "NONE",
+    "shared_index_write": "NONE",
+    "dot_approval": "PENDING",
+    "current_or_formal_promotion": "NONE"
+  }
+}

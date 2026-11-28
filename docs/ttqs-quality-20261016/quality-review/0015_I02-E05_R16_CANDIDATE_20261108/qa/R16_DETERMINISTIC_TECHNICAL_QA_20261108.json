@@ -1,0 +1,27 @@
+{
+  "schema": "ttqs_one_deterministic_technical_qa.v1",
+  "work_id": "TTQS_ONE_0015_R16_SYN045_DETERMINISTIC_QA_20261108",
+  "recorded_at_taipei": "2026-11-08T14:05:14.171120+08:00",
+  "candidate_sha256": "b0914f436bcb3ca317f39a12856aa7439fa8d5cf3f2c10636ca7fb28134236aa",
+  "register_sha256": "884b343cc563d0145c11f8bc80cd5e8375d480089d25e691966ef7f42a4df9d1",
+  "result": "PASS",
+  "scope": "Exact R16 DOCX/CSV structural, parity, text-boundary and font-floor checks. Does not grant semantic acceptance.",
+  "checks": {
+    "docx_zip_crc": "PASS",
+    "python_docx_open": "PASS",
+    "document_xml_reverses_to_R15_after_only_three_expected_text_changes": true,
+    "changed_package_members": [
+      "word/document.xml"
+    ],
+    "register_row_count": 85,
+    "docx_register_all_85_rows_all_5_fields_match": true,
+    "all_non_target_register_rows_identical": true,
+    "SYN045_unique_and_exact_pair_match": true,
+    "prohibited_markers_absent_from_target_value": true,
+    "body_font_min_pt": 10.5,
+    "body_font_floor_10_5pt": "PASS",
+    "table_font_min_pt": 9.5,
+    "table_font_floor_9_5pt": "PASS",
+    "no_formula_or_score_fields_changed": true
+  }
+}

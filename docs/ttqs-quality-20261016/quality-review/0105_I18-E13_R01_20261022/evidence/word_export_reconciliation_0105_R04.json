@@ -1,0 +1,46 @@
+{
+  "receipt_id": "TTQS-0105-WORD-EXPORT-RECONCILIATION-R04",
+  "doc_id": "0105",
+  "revision": "R04",
+  "docx_sha256": "17f7d680cbb992db93a6f67df84415500050953eecf426b477f675810177b4cb",
+  "layout_fixes_in_candidate": [
+    "document ID column width equals role column width",
+    "CLOSED_FOR_SAMPLE rendered with a deliberate break while preserving token",
+    "final substantive paragraph retained at 10.5pt with a separate empty terminal paragraph"
+  ],
+  "technical_qa_receipt": "technical_qa_receipt_0105_R04.json",
+  "technical_qa_verdict": "PASS 32/32",
+  "attempts": [
+    {
+      "id": "R04-export-01",
+      "method": "Word COM ExportAsFixedFormat entire document",
+      "result": "FAIL before reliable process startup; PS5 script source lacked UTF-8 BOM and the failure receipt showed mojibake path; no new Word PID was detected"
+    },
+    {
+      "id": "R04-export-02",
+      "method": "Word COM ExportAsFixedFormat after opening exact candidate read-only",
+      "result": "BLOCKED; opened 13 pages, ExportAsFixedFormat did not return within ~150s and produced no PDF; owned PID 45232 closed, 19 baseline Word processes preserved"
+    },
+    {
+      "id": "R04-saveas-01",
+      "method": "Word COM SaveAs2 WdFormatPDF on a byte-identical temporary DOCX copy",
+      "result": "BLOCKED; opened 13 pages, SaveAs2 did not return within ~155s and produced no PDF; owned PID 69256 closed, 19 baseline Word processes preserved"
+    },
+    {
+      "id": "R04-range-01",
+      "method": "Word COM ExportAsFixedFormat pages 7-13",
+      "result": "BLOCKED; opened 13 pages, page-range export did not return within ~154s and produced no PDF; owned PID 72552 closed, 19 baseline Word processes preserved"
+    }
+  ],
+  "phase_receipts": [
+    "word_export_phase_R04.txt",
+    "word_saveas_phase_R04.txt",
+    "word_export_range_phase_R04.txt"
+  ],
+  "outcome": "VISUAL_QA_BLOCKED",
+  "root_cause": "UNKNOWN beyond the native Word PDF/save-as COM calls remaining CPU-active after successful open and page count; no external renderer found except Pandoc, and no PDF engine (LibreOffice/LaTeX/WeasyPrint) is installed.",
+  "inheritance": "R03 page images are historical and are not treated as exact-SHA R04 visual evidence. Word reported 13 pages for R04, but no R04 PDF/page images exist.",
+  "preexisting_word_processes": 19,
+  "preexisting_processes_modified": false,
+  "formal_acceptance": "NOT_GRANTED"
+}

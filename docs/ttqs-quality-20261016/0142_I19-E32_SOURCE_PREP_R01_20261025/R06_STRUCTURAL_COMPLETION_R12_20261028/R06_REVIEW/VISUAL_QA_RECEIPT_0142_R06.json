@@ -1,0 +1,36 @@
+{
+  "schema": "TTQS_ONE_0142_R06_VISUAL_QA_RECEIPT_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0142",
+  "requirement_id": "I19-E32",
+  "official_checkbox_index": 156,
+  "printed_checkbox_serial": "UNKNOWN",
+  "candidate_sha256": "60563d4a56ac4502e522feb2665edef07771824ab4c2b2fb596862bb0e84f0e6",
+  "word_native_pdf_sha256": "e88d5f5d9bd0020a04a2df8dd2094e15f48e0804afea0c267f9ef50de1e38000",
+  "word_native_render_receipt_sha256": "52c31076ef73bec6353096a6c9e6896ed1badb90b19e7b791f89194675ce18af",
+  "page_image_manifest_sha256": "e5703381250ac0b369da523c631014f31eead181d5e7b365a719fa0032f0d994",
+  "manifest_candidate_sha256": "60563d4a56ac4502e522feb2665edef07771824ab4c2b2fb596862bb0e84f0e6",
+  "manifest_pdf_sha256": "e88d5f5d9bd0020a04a2df8dd2094e15f48e0804afea0c267f9ef50de1e38000",
+  "page_count": 10,
+  "pages_reviewed": "1-10",
+  "inspection_method": "All 10 pages reviewed in four contact sheets; pages 9-10 also inspected at full page resolution.",
+  "visual_reviewer": "Codex visual inspection; not an independent semantic reviewer.",
+  "layout_result": "PASS",
+  "visual_checks": [
+    "No clipping or overlap observed across rendered pages.",
+    "Table 15 remains readable and fully visible on page 9.",
+    "Table 16 register codes F01-F19 are all present; it flows from page 9 to page 10 with the table header repeated.",
+    "Removed the former forced page break; no three-row orphan page remains.",
+    "Word opened candidate read-only and candidate SHA remained unchanged across export."
+  ],
+  "resolved_prior_finding": {
+    "candidate_sha256": "b424acbcd5ad10c9606d7dfe2b4f854edfe15f1ad99db708b0395994093103c1",
+    "finding": "Table 16 F17-F19 were isolated on page 11 with excessive unused space.",
+    "repair": "Removed the forced page break before section 12 and retained compact table margins without reducing the 9.5 pt minimum."
+  },
+  "semantic_review": "PENDING_INDEPENDENT_EXACT_SHA_REVIEW",
+  "real_evidence": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED",
+  "word_instance_pid": 77156,
+  "render_result": "PDF_EXPORTED_BY_OWNED_WORD_INSTANCE"
+}

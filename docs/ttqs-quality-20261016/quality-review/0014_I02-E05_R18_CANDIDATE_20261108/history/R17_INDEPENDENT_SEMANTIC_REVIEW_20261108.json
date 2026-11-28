@@ -1,0 +1,203 @@
+{
+  "schema_version": "1.0",
+  "receipt_type": "TTQS_ONE_INDEPENDENT_SEMANTIC_REVIEW_RECEIPT",
+  "receipt_id": "0014-I02-E05-R17-independent-worker-semantic-review-20261108",
+  "recorded_at": "2026-11-08T05:22:17+08:00",
+  "project_id": "TTQS_ONE",
+  "work_id": "0014",
+  "requirement_id": "I02-E05",
+  "revision": "R17",
+  "review_scope": {
+    "scope": "Independent semantic and evaluator-facing content review of the exact candidate SHA.",
+    "criteria": [
+      "official requirement coverage and source-only factual claims",
+      "operational form genre and mechanics",
+      "completeness and usability",
+      "synthetic register linkage and SAMPLE/REAL boundary",
+      "title-blind identification and negative-neighbor separation",
+      "internal control metadata presented as user-facing"
+    ],
+    "visual_review": "Not repeated. The supplied all-pages visual QA receipt is recorded separately; its whitespace observations are not semantic findings."
+  },
+  "verdict": "PARTIAL",
+  "semantic_content_verdict": "PARTIAL",
+  "formal_acceptance": "NOT_GRANTED",
+  "promotion_status": "NOT_PROMOTED",
+  "candidate": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R17-TRACEABILITY-MATRIX-REPAIR_20261108\\publication_preflight_20261107_205716_ae42e2ed\\payload\\candidate\\0014_I02-E05_R17.docx",
+    "evidence_class": "CANDIDATE",
+    "expected_sha256": "287bdfc5e8674d8cdb160bdbcba484ca12e9cf8fc29c4ad0be8169103274053e",
+    "sha256_before_review": "287bdfc5e8674d8cdb160bdbcba484ca12e9cf8fc29c4ad0be8169103274053e",
+    "sha256_after_review": "287bdfc5e8674d8cdb160bdbcba484ca12e9cf8fc29c4ad0be8169103274053e",
+    "sha256_stable": true,
+    "bytes": 71789,
+    "content_extract_stats": {
+      "paragraphs": 143,
+      "tables": 28,
+      "embedded_register_table_number": 16,
+      "embedded_register_data_rows": 67
+    }
+  },
+  "reviewer": {
+    "worker_thread_id": "01a1b7d6-6b3f-7560-b941-ebb37e6c5e6c",
+    "nickname": "Schrodinger",
+    "identity_assignment_source": "User-provided assignment in the task instruction",
+    "provider_identity": "UNKNOWN",
+    "model_identity": "UNKNOWN",
+    "independence_basis": "Fresh review context reread the exact candidate, formal source packet, official PDF page 1, dedicated Blueprint row, and R12 register. Existing semantic receipt was treated as prior evidence only; its verdict was not adopted as this review result."
+  },
+  "source_bindings": {
+    "formal_requirement": {
+      "requirement_id": "I02-E05",
+      "official_requirement_text": "客戶提出的課程需求的相關表單 （文件），而揭露的呈現方式， 可以為EDM、海報、網站網頁等方式加以呈現。",
+      "official_page": 1,
+      "source_packet_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R17-TRACEABILITY-MATRIX-REPAIR_20261108\\publication_preflight_20261107_205716_ae42e2ed\\payload\\source\\SOURCE_PACKET_0014_R01.json",
+      "source_packet_sha256": "30ade83ab55d9ed185dae519252e114ebfb33c8ef276c8005cf77cb355e82b91",
+      "official_pdf_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R17-TRACEABILITY-MATRIX-REPAIR_20261108\\publication_preflight_20261107_205716_ae42e2ed\\payload\\source\\official_source.pdf",
+      "official_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+      "source_packet_requirement_matches_pdf_page_1_after_whitespace_normalization": true
+    },
+    "blueprint_row": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R17-TRACEABILITY-MATRIX-REPAIR_20261108\\publication_preflight_20261107_205716_ae42e2ed\\payload\\blueprint\\BLUEPRINT_ROW_0014_I02-E05.jsonl",
+      "deliverable_id": "0014",
+      "requirement_id": "I02-E05",
+      "row_sha256": "ec6fc82addd4474a9d7d664b137bd8e35a2fe6a7bb04e7ca028f048e21d1e5d3",
+      "canonical_blueprint_file_sha256_recorded_in_source_packet": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+      "dedicated_row_hash_verified": true
+    },
+    "synthetic_register": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R17-TRACEABILITY-MATRIX-REPAIR_20261108\\publication_preflight_20261107_205716_ae42e2ed\\payload\\synthetic_register\\SYNTHETIC_REGISTER_DRAFT_0014_R12.csv",
+      "sha256": "802a532296b2b503b979bd62c69d66e9c94de9afbc39dff202b440429da7dac1",
+      "data_rows": 67,
+      "unique_sequential_fact_ids": "SYN-0014-001 through SYN-0014-067",
+      "embedded_table_16_exact_five_column_row_match": true
+    }
+  },
+  "prior_qa_evidence": {
+    "prior_semantic_receipt": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R17-TRACEABILITY-MATRIX-REPAIR_20261108\\publication_preflight_20261107_205716_ae42e2ed\\payload\\qa\\SEMANTIC_REVIEW_R17.json",
+      "sha256": "b9e64600d760cd0f99aa8be1f0f406937fc4fab9c62f7429eea4f1398bb44e4f",
+      "reported_content_verdict": "PASS",
+      "reported_overall_verdict": "PARTIAL",
+      "reviewer_service_identity": "UNKNOWN",
+      "prior_visual_scope": "Pages 1-3 only; not adopted as current visual evidence."
+    },
+    "deterministic_receipt": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R17-TRACEABILITY-MATRIX-REPAIR_20261108\\publication_preflight_20261107_205716_ae42e2ed\\payload\\qa\\R17_DETERMINISTIC_QA_AND_EVIDENCE_BINDING_20261108.json",
+      "sha256": "2e40546e53971340636c4d95661fa5c20aa8059658ed72cbc1a1f3ee10a14d77",
+      "reported_status": "PASS",
+      "candidate_sha_binding_matches": true
+    },
+    "all_pages_visual_receipt": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R17-TRACEABILITY-MATRIX-REPAIR_20261108\\publication_preflight_20261107_205716_ae42e2ed\\payload\\qa\\VISUAL_QA_R17_ALL_PAGES_20261108.json",
+      "sha256": "e8ee1e094115ae9cace7299ce0b9473ba9f12c77387db4a80cdd4093afc10ae1",
+      "candidate_sha_binding_matches": true,
+      "page_count": 35,
+      "pages_reviewed": "1-35",
+      "verdict": "PASS_WITH_MINOR_OBSERVATIONS",
+      "scope_note": "Separate visual evidence only; the receipt records broad whitespace on pages 24, 27, 29, and 31. No page images were reopened or regenerated for this semantic review."
+    }
+  },
+  "checks": [
+    {
+      "criterion": "Official requirement scope and traceability",
+      "result": "PASS",
+      "evidence": "DOCX §1 paragraphs 6-10 and table 1 rows 1-3 split the customer-demand application form from public disclosure; the official text and page 1 locator are reproduced without material scope change."
+    },
+    {
+      "criterion": "Operational form genre, field mechanics, and usability",
+      "result": "PASS",
+      "evidence": "DOCX §§2-7, tables 2-9 and appendices A-1 to A-6 provide F01-F20 definitions, sources, roles, validation, intake, completeness review, HOLD/refusal, authorization, handoff, and real-case fillable tools."
+    },
+    {
+      "criterion": "Complete worked example and numerical logic",
+      "result": "PASS",
+      "evidence": "DOCX §8.1-§8.6: all example values are labeled synthetic; priority scores 10, 8, 15, 12 total 45/80=56.25%; 10/12=83.33% is a target; 10/10=100% is explicitly limited to field completeness."
+    },
+    {
+      "criterion": "Source-only claims and SAMPLE/REAL truth boundary",
+      "result": "PASS",
+      "evidence": "Official requirement wording is bound to source packet/PDF page 1. §8 disclaims real client, receipt, authority, attachment, signature, approval, delivery, and outcomes. Blank fields are confined to appendices explicitly labeled REAL replacement areas."
+    },
+    {
+      "criterion": "Synthetic register linkage",
+      "result": "PARTIAL",
+      "evidence": "All 67 unique sequential IDs, values, types, locators, and replacement cells in §9 table 16 match the five-column R12 CSV exactly; no empty cells. Some per-fact replacement cells do not name an accountable source provider, verifier, or recalculator; see finding SEM-REGISTER-RESP-01."
+    },
+    {
+      "criterion": "Title-blind identity and negative-neighbor separation",
+      "result": "PASS",
+      "evidence": "F01-F20 and intake/confirmation/authorization/HOLD/handoff mechanics identify a customer course-needs application form. DOCX §1 and §7 distinguish 0015 evaluation/reply, 0016 EDM copy, and 0017 website copy; 0013 annual course disclosure and 0018 PDDRO map are expressly non-substitutes."
+    },
+    {
+      "criterion": "Internal control metadata in user-facing content",
+      "result": "PASS_WITH_NOTE",
+      "evidence": "Printed body exposes document revision/status labels R17 and SAMPLE candidate, consistent with its unaccepted state, but no SHA, Blueprint row hash, QA receipt ID, worker ID, queue, or control-plane tokens. DOCX core properties carry a non-rendered comments note referring to an R14 repair and author fields; these are metadata, not page content."
+    }
+  ],
+  "findings": [
+    {
+      "id": "SEM-REGISTER-RESP-01",
+      "severity": "P2",
+      "category": "Synthetic register accountability / real replacement traceability",
+      "locator": "§9, embedded table 16, column 「升格 REAL 所需替換來源與責任」; rows SYN-0014-002, SYN-0014-003, SYN-0014-016, SYN-0014-040 (and comparable rows).",
+      "evidence_examples": [
+        {
+          "fact_id": "SYN-0014-002",
+          "cell_text": "原始收件系統時間、郵件標頭或實際紙本收件戳記"
+        },
+        {
+          "fact_id": "SYN-0014-003",
+          "cell_text": "實際電子郵件、紙本、網站匯出或接洽紀錄及定位"
+        },
+        {
+          "fact_id": "SYN-0014-016",
+          "cell_text": "以替換後的現況及目標按同一公式重算"
+        },
+        {
+          "fact_id": "SYN-0014-040",
+          "cell_text": "以實際目標人數及分母重算；不得報為成果"
+        }
+      ],
+      "finding": "These cells give a source or recalculation instruction but do not consistently identify who obtains/verifies the source or performs/checks the recalculation. §§2 and 10 provide broad roles, so the gap is partly inferable, but the per-fact register does not consistently bind responsibility as its column heading and Blueprint call for.",
+      "impact": "The sample remains truthful and usable, and fact/value/location linkage is complete; responsibility for a subset of real replacements is less directly auditable.",
+      "recommended_action": "For each affected row, name the responsible source provider and the role that verifies or recomputes the value, or add an exact row-level cross-reference to the applicable responsibility rule; keep the embedded table and R12 CSV aligned."
+    }
+  ],
+  "metadata_observations": [
+    {
+      "locator": "Cover paragraph 2; §11 paragraphs 85 and 89; docProps/core.xml.",
+      "detail": "R17 and candidate status are printed as document version/status cues. The core-properties comments field contains an internal R14 scoped-repair note and author metadata, but these are not rendered in evaluator-facing page content."
+    }
+  ],
+  "supplemental_fact_check": [
+    {
+      "claim": "The fictional contact address uses the reserved .invalid namespace so it is not presented as a real contact route.",
+      "source": "https://www.rfc-editor.org/rfc/rfc2606.html",
+      "source_title": "RFC 2606: Reserved Top Level DNS Names",
+      "finding": "Supports using .invalid for a clearly invalid example address."
+    }
+  ],
+  "limitations": [
+    "No new render or page-image inspection was performed; the separate all-pages visual receipt is reported as independent visual evidence only.",
+    "Provider/model identity remains UNKNOWN. The worker/thread ID and nickname are recorded as assigned in the user instruction; no separate native identity registry was queried.",
+    "This review grants no formal TTQS acceptance, REAL status, or promotion."
+  ],
+  "actions_performed": [
+    "Read-only review of the exact candidate, official requirement/source packet, official PDF page 1, hash-verified dedicated Blueprint row, R12 synthetic register, and the three supplied QA receipts.",
+    "Recomputed candidate SHA at review start and immediately after review; both equal the required SHA.",
+    "Created this new receipt only. No candidate DOCX, PDF, register, existing receipt, shared CURRENT, GitHub, or repository control file was modified."
+  ],
+  "side_effects": {
+    "candidate_docx_write_count": 0,
+    "pdf_write_count": 0,
+    "register_write_count": 0,
+    "existing_receipt_write_count": 0,
+    "shared_current_write_count": 0,
+    "github_write_attempted": false,
+    "promotion_attempted": false,
+    "new_receipt_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0014-I02-E05-R17-TRACEABILITY-MATRIX-REPAIR_20261108\\qa\\SEMANTIC_REVIEW_R17_INDEPENDENT_WORKER_20261108.json",
+    "create_new_semantics": true
+  }
+}
+

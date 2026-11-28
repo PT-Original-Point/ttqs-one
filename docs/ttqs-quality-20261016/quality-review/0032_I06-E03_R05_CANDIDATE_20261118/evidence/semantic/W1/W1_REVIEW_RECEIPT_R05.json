@@ -1,0 +1,42 @@
+{
+  "schema": "TTQS_ONE_INDEPENDENT_REVIEW_RECEIPT_V1",
+  "work_id": "TTQS_ONE_0032_I06-E03_SEMANTIC_REVIEW_R05_OPENCODE_LONGCAT_20261118",
+  "doc_id": "0032",
+  "requirement_id": "I06-E03",
+  "requested_model": "opencode/longcat-2.5-free",
+  "provider_served_model": "UNKNOWN",
+  "session_id": "ses_e1118bd08ffeQGS8uBHHzbsvKe",
+  "candidate_docx_sha256": "F8AFBC1B480AB95E9482CD04B6C30DDDBD8F070DBE832D72C9A4D51371C73556",
+  "input_packet_sha256": "880813CB0111BE836A7191F2D62A583E85D4C42FF75EB4587B117B89ACDCC7C8",
+  "response_sha256": "B1B86C23AE3D6B230E6A407A840AAD629BA01D59A7B87EC7215B3BCC2F1E79D4",
+  "response_json_parse": "PASS",
+  "verdict": "PASS",
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    {
+      "locator": "第一節前「使用目的」段落（-extracted order 約第 6-8 行）",
+      "evidence": "內文稱「第二至第五節為機構能力說明；第六至第十節是SAMPLE/SYNTHETIC內部能力檢視、改善與複核示例」，但全文實際上不存在第六至第十節，對應內容位於附錄A 與第十一、十二節。",
+      "suggested_minimal_repair": "將該句改為指向「附錄A 及第十一、十二節」，或補齊/調整節號；屬導覽一致性修正，不影響本次語意判斷。"
+    },
+    {
+      "locator": "第二節「關鍵工作覆蓋」表",
+      "evidence": "分母固定為 5，但第三節能力矩陣定義 C01-C09 共 9 個代碼；C05、C07、C08、C09 未列入覆蓋計算，亦未說明此 5 項即為預設關鍵職能集合。",
+      "suggested_minimal_repair": "加一句註記說明覆蓋分母採 5 項關鍵職能，其餘代碼為支援職能；避免評核者誤解分母。"
+    },
+    {
+      "locator": "第二節角色／責任矩陣",
+      "evidence": "Blueprint §2B 列舉之「能力佐證」與「執行產出」未成為該表直欄，而是分別由第三節與第四節提供。整體機制存在，但角色表本身可追溯性較弱。",
+      "suggested_minimal_repair": "非必要；若后续版次調整，可於角色表增列簡要證據／產出指向。"
+    },
+    {
+      "locator": "標題下方副標「SAMPLE/SYNTHETIC　模擬評核與改善追蹤」",
+      "evidence": "此副標緊接官方標題，初看可能讓人以為整份文件都是模擬評核；內文「使用目的」已釐清只有部分內容為示例。",
+      "suggested_minimal_repair": "可改為「（內含 SAMPLE/SYNTHETIC 模擬評核與改善追蹤附錄）」以降低誤讀；非阻塞。"
+    }
+  ],
+  "stdout_sha256": "C4B64053E347F48CB9B17DE574F33B6BB3EF4F3CC46ED110AB1624E22FCA0EF8",
+  "stderr_bytes": 0,
+  "exit_code": "UNKNOWN_NOT_CAPTURED",
+  "terminal_reason": "stop",
+  "receipt_result": "PASS_EXACT_SHA"
+}

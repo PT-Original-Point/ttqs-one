@@ -1,0 +1,65 @@
+{
+  "status": "success",
+  "input_docx": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0137_I19-E27_CANDIDATE_R02_R11_20261025\\0137_I19-E27_媒體採訪與正面報導原件查驗表_R02.docx",
+  "input_sha256_before": "3899167f0437ec76df42e6229685564d910250c6a822b627ec15b5f9cfcfecc8",
+  "input_sha256_after": "3899167f0437ec76df42e6229685564d910250c6a822b627ec15b5f9cfcfecc8",
+  "input_bytes": 51646,
+  "r02_source_unchanged": true,
+  "output_docx": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0137_I19-E27_CANDIDATE_R03_20261108\\candidate\\0137_I19-E27_媒體採訪與正面報導原件查驗表_R03.docx",
+  "output_sha256": "66577936e66ab74d94831f36028577c68f88d008219aa882b069b5dd1513dc7d",
+  "output_bytes": 51654,
+  "changes": {
+    "table_index_zero_based": 3,
+    "table_rows_modified_zero_based": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "cells_modified_count": 13,
+    "rows_1_to_11_and_13_text": "UNKNOWN/HOLD：尚無可回查真實媒體原件",
+    "row_12_text": "HOLD：尚無可回查真實媒體原件",
+    "body_text_replacement": {
+      "old": "原始點協會",
+      "new": "本會",
+      "occurrences_replaced": 2,
+      "paragraph_indices_zero_based": [
+        4,
+        15
+      ],
+      "body_occurrences_before": 2,
+      "body_occurrences_after": 0
+    }
+  },
+  "verification": {
+    "output_table_3_cell_texts": [
+      "UNKNOWN/HOLD：尚無可回查真實媒體原件",
+      "UNKNOWN/HOLD：尚無可回查真實媒體原件",
+      "UNKNOWN/HOLD：尚無可回查真實媒體原件",
+      "UNKNOWN/HOLD：尚無可回查真實媒體原件",
+      "UNKNOWN/HOLD：尚無可回查真實媒體原件",
+      "UNKNOWN/HOLD：尚無可回查真實媒體原件",
+      "UNKNOWN/HOLD：尚無可回查真實媒體原件",
+      "UNKNOWN/HOLD：尚無可回查真實媒體原件",
+      "UNKNOWN/HOLD：尚無可回查真實媒體原件",
+      "UNKNOWN/HOLD：尚無可回查真實媒體原件",
+      "UNKNOWN/HOLD：尚無可回查真實媒體原件",
+      "HOLD：尚無可回查真實媒體原件",
+      "UNKNOWN/HOLD：尚無可回查真實媒體原件"
+    ],
+    "output_body_occurrences_original_term": 0,
+    "tables_count": 12,
+    "body_paragraphs_count": 56
+  },
+  "register_unchanged_reason": "R03 is a bounded repair: it only fills REAL media-original pending fields in table 4 and normalizes the organization name in body paragraphs. SAMPLE/SYNTHETIC cases, numeric values, all 12 tables, register, formats, and other content are preserved; no synthetic facts were added.",
+  "failure": null
+}

@@ -1,0 +1,29 @@
+{
+  "receipt_id": "TTQS_ONE_0006_I01-E03_R17_INDEPENDENT_SEMANTIC_DELTA_REVIEW",
+  "work_id": "TTQS-0006-R17-INDEPENDENT-SEMANTIC-DELTA-20261031-01",
+  "observed_at_local": "2026-10-31T21:21:29.8340927+08:00",
+  "doc_id": "0006",
+  "requirement_id": "I01-E03",
+  "candidate_path": "candidate/0006_I01-E03_R17.docx",
+  "candidate_sha256": "7d40b9e4ddc85a1fbbc246212db3cdab5196b136fc63016540eac6fec6e53aef",
+  "reviewer": "Lovelace independent Codex subagent",
+  "reviewer_agent_id": "01a1920c-fada-7b51-ab79-81fce89be20f",
+  "verdict": "PASS_DELTA_SCOPE",
+  "scope": "Exact-SHA delta verification of seven register references and two R17 labels; inherited R16 full semantic review except R16 pointer findings",
+  "checks": [
+    "Candidate SHA matched before and after review",
+    "SF-045/046 and SF-077/078/079 point to §8.1/Table 12 and §10.3/Table 16",
+    "SF-068/069 point to §10.3/Table 16 as applicable",
+    "No stale bare §8 or §10.2 references remain in the seven entries",
+    "Both current revision labels read R17"
+  ],
+  "limitations": [
+    "No new full semantic re-review; R16 unchanged semantic findings are inherited",
+    "No visual inspection",
+    "No formal association acceptance"
+  ],
+  "raw_response_path": "qa/INDEPENDENT_SEMANTIC_REVIEW_R17_LOVELACE_DELTA_20261031.md",
+  "raw_response_sha256": "af0cf52b1b0f1cac49c55593fead3948c6b7a50adc526899b0246e4fda4761d1",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "NOT_ASSERTED"
+}

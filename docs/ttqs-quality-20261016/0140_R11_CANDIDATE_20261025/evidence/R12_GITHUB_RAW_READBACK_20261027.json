@@ -1,0 +1,111 @@
+{
+  "schema": "ttqs-one-github-raw-readback/v1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0140-I19-E30-R11-W2-FULL-BODY-SEMANTIC-REVIEW-R12",
+  "observed_at_utc": "2026-10-27T14:23:24.867Z",
+  "source": {
+    "repository": "PT-Original-Point/ttqs-one",
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "pre_sync_commit": "b9149b1d3238c18a8fb7958a4dcaa1f547e10905",
+    "pre_sync_tree": "338522f3dad70ca0b54fb138c32b92d7e03b1f87"
+  },
+  "document": {
+    "doc_id": "0140",
+    "official_requirement_id": "I19-E30",
+    "candidate_state": "CANDIDATE_ONLY",
+    "docx_sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d",
+    "docx_bytes": 127801,
+    "docx_modified": false
+  },
+  "review": {
+    "reviewer": "W2 Antigravity CLI",
+    "requested_model": "gemini-3.8-flash-high",
+    "cli_init_model_reported": "gemini-3.8-flash-high",
+    "backend_serving_model_identity": "UNKNOWN",
+    "fallback": "UNKNOWN",
+    "local_adjudication": "VERIFIED_TEXT_SEMANTIC_PASS_WITH_NONBLOCKING_NOTE",
+    "scope": "exact-SHA text/body review; separate Word-native visual receipt 29 pages; technical QA 21/21",
+    "human_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN/HOLD"
+  },
+  "existing_artifacts_current_head_readback": [
+    {
+      "key": "request_packet",
+      "observed": "47727f25bfcbd7271f4fc6c328c09a902c20c8d9",
+      "expected": "47727f25bfcbd7271f4fc6c328c09a902c20c8d9",
+      "local_sha256": "faeb4f0c488f13ccd5f151ba0c842af69d507720aab2eeff7adcc06ab71169e7"
+    },
+    {
+      "key": "input_manifest",
+      "observed": "d340f9c84c12ec08030f689c9890682aeae00d53",
+      "expected": "d340f9c84c12ec08030f689c9890682aeae00d53",
+      "local_sha256": "ce8975492d6f890cde5da76a9a4d020ce4c23c7ca7592fd29647bb70c1877d3b"
+    },
+    {
+      "key": "dispatch",
+      "observed": "90c122c13032c57a9daaaf07e8ca620628ee3a68",
+      "expected": "90c122c13032c57a9daaaf07e8ca620628ee3a68",
+      "local_sha256": "0165ea57c58eb8febd8f35e77c3ac048fd82b0771ef7a27760139f79642810fc"
+    },
+    {
+      "key": "raw_response",
+      "observed": "2dd98f729c3f10730ab587e498aa7d4873641a2a",
+      "expected": "2dd98f729c3f10730ab587e498aa7d4873641a2a",
+      "local_sha256": "UNKNOWN"
+    },
+    {
+      "key": "candidate_docx",
+      "observed": "a4c1545eaa9887195dae72623846dc9eea6cc120",
+      "expected": "a4c1545eaa9887195dae72623846dc9eea6cc120",
+      "local_sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d"
+    }
+  ],
+  "adjudication_sidecar": {
+    "path": "docs/ttqs-quality-20261016/0140_R11_CANDIDATE_20261025/evidence/R12_W2_FULL_BODY_INDEPENDENT_ADJUDICATION.json",
+    "local_sha256": "84d1869f33b8d6eb6c1ab28f01aafea47246d6e3471666995a0282b0259f9210",
+    "bytes": 4445,
+    "expected_git_blob_sha": "cbc7f0074fde70227b7b717e3ff2ba47969b11c3"
+  },
+  "verification_state": "VERIFIED",
+  "no_model_call": true,
+  "no_docx_rebuild": true,
+  "verified_at_utc": "2026-10-27T14:23:33.863Z",
+  "verified_commit": "d3ce51846ac04a599fc73fee233653b9052c2c46",
+  "post_commit_readback": [
+    {
+      "path": "docs/ttqs-quality-20261016/0140_R11_CANDIDATE_20261025/evidence/R12_W2_FULL_BODY_REQUEST_PACKET.md",
+      "git_blob_sha": "47727f25bfcbd7271f4fc6c328c09a902c20c8d9",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0140_R11_CANDIDATE_20261025/evidence/R12_W2_FULL_BODY_INPUT_MANIFEST.json",
+      "git_blob_sha": "d340f9c84c12ec08030f689c9890682aeae00d53",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0140_R11_CANDIDATE_20261025/evidence/R12_W2_FULL_BODY_DISPATCH_RECEIPT.json",
+      "git_blob_sha": "90c122c13032c57a9daaaf07e8ca620628ee3a68",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0140_R11_CANDIDATE_20261025/evidence/R12_W2_FULL_BODY_RAW_RESPONSE.json",
+      "git_blob_sha": "2dd98f729c3f10730ab587e498aa7d4873641a2a",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0140_R11_CANDIDATE_20261025/candidate/0140__訓練資訊系統使用普及率盤點與分析表_R11.docx",
+      "git_blob_sha": "a4c1545eaa9887195dae72623846dc9eea6cc120",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0140_R11_CANDIDATE_20261025/evidence/R12_W2_FULL_BODY_INDEPENDENT_ADJUDICATION.json",
+      "git_blob_sha": "cbc7f0074fde70227b7b717e3ff2ba47969b11c3",
+      "match": true
+    },
+    {
+      "path": "docs/ttqs-quality-20261016/0140_R11_CANDIDATE_20261025/evidence/R12_GITHUB_RAW_READBACK_20261027.json",
+      "git_blob_sha": "7024e4334a52bae1cb863fae5849d97ca6b6c57f",
+      "match": true
+    }
+  ]
+}

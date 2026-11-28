@@ -1,0 +1,27 @@
+{
+  "schema": "ttqs.independent_semantic_review.v1",
+  "work_id": "TTQS_ONE_0030_I06-E01_W2_INDEPENDENT_REVIEW_R04_20261117",
+  "doc_id": "0030",
+  "requirement_id": "I06-E01",
+  "reviewer": "W2 Antigravity CLI",
+  "requested_model": "gemini-3.8-flash-high",
+  "provider_served_model": "UNKNOWN",
+  "decision": "PASS",
+  "candidate_sha256": "c1bde91c1bb92407fd631a0692c6d2cab8a997f591a4cc8a4251ab73783e4a72",
+  "review_packet_sha256": "62a18fcafbf2c854c78771a4be0adcf9cf176fcb86e9c5337666280f33089119",
+  "stdout_sha256": "2a2d75eef999bb97be413d86a8a479a4866eafd1974d750afe9c6cd2b931d7ec",
+  "exit_code": 0,
+  "timed_out": false,
+  "duration_seconds": 48.328,
+  "scope": "official requirement fit; operational usability; synthetic fact and replacement register consistency; SAMPLE/REAL boundary; negative neighbors 0029 and 0031; no visual review",
+  "low_findings": [
+    "§9 SYN-0030-012: when replacing with real evidence, optionally include actual training hours or certificate original as a source locator; non-blocking."
+  ],
+  "high_findings": [],
+  "medium_findings": [],
+  "limitations": [
+    "No provider-served model attestation in CLI output; actual served model UNKNOWN.",
+    "Review did not claim Word visual QA."
+  ],
+  "raw_output_file": "W2_REVIEW_R04_ATTEMPT3_STDOUT.txt"
+}

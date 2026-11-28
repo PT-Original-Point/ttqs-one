@@ -1,0 +1,32 @@
+{
+  "schema": "TTQS_ONE_REVISION_DELTA_R06_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0126",
+  "requirement_id": "I19-E14",
+  "candidate_versions": [
+    {
+      "revision": "R03",
+      "result": "rejected build gate: body 9.5pt/table 8.5pt",
+      "sha256": "ef2a1ec8817d3de7ef00e74c3507a0b593e454355c9611fa56127ef892f461f3"
+    },
+    {
+      "revision": "R04",
+      "result": "font floor repaired; 11 pages, closing note orphan",
+      "sha256": "854c7fd7f828fb0d5de9c83802abe7f02d127f058bf8138f1fa8642fa562d057"
+    },
+    {
+      "revision": "R05",
+      "result": "closing note consolidated; Word emitted blank trailing page 11",
+      "sha256": "c2da1ce9d57b17897f92a010b5553fd33149acf64784c5c2e6a4f5b2a7e23e33"
+    },
+    {
+      "revision": "R06",
+      "result": "10 pages; body 10.5pt/table 9.5pt; no blank trailing page; semantic pending",
+      "sha256": "1f82a5ac21a105310aad23b96305e00c0396551f358fa8dc2252288973366130"
+    }
+  ],
+  "fixes": [
+    "R04 font floors pass and R05 blank-page defect eliminated in R06",
+    "R03-R05 originals preserved"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "TTQS_ONE_R03_EXACT_DELTA_TECHNICAL_RECEIPT_V1",
+  "work_id": "TTQS_ONE_0070_I16-E02_LAYOUT_REPAIR_R03_20261126",
+  "doc_id": "0070",
+  "requirement_id": "I16-E02",
+  "candidate_sha256": "e94501d2afe86b9209f3d4a040c55d754e465431895ba14dde3526a75891f981",
+  "candidate_bytes": 56113,
+  "source_r01_sha256": "6a1ceb0678ecf0868f2a08b61a00eda3462d826e3db75dd56dfe81a147a2aa05",
+  "changed_zip_members": [
+    "word/document.xml"
+  ],
+  "zip_test": null,
+  "removed_xml_bytes": 43,
+  "inserted_xml_bytes": 0,
+  "only_one_pagebreak_paragraph_deleted": true,
+  "all_wt_text_identical": true,
+  "pagebreak_count_before_after": [
+    12,
+    11
+  ],
+  "font_floor_inherited_from_R01_exact_technical_PASS": true,
+  "font_floor_basis": "Only word/document.xml changed, and the exact byte delta is a no-text page-break paragraph deletion; all other package parts are byte-identical. Existing exact-R01 technical PASS measured body 11.0 pt and table 10.0 pt against 10.5/9.5 pt floors.",
+  "technical_status": "PASS",
+  "scope_note": "Exact-candidate deterministic delta validation; visual and semantic gates are separately receipted.",
+  "observed_at_tpe": "2026-11-26T20:23:33+08:00"
+}

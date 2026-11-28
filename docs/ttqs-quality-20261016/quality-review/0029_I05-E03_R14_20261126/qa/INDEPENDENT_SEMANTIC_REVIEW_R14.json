@@ -1,0 +1,31 @@
+{
+  "work_id": "TTQS_ONE_0029_I05-E03_FRESH_SEMANTIC_REVIEW_R14_20261126",
+  "doc_id": "0029",
+  "requirement_id": "I05-E03",
+  "candidate_status": "CANDIDATE",
+  "candidate_sha256": "a1bc1f59615d658b3a4fd012ea8f06092ee63ca83613473c336940ec0b7c4c6b",
+  "candidate_text_sha256": "1c7729b3edf2fd77b2915eedf8e8d4335fb0bcd127a2e313bd58b3760ae39966",
+  "review_packet_sha256": "4642678ff5d8e4180b9fca037b2883ad3ceff2dfab34bddba8bab38dda26ffc1",
+  "verified_source_hashes": {
+    "OFFICIAL_SOURCE_PAGE2.txt": "5d469aa8c3d2ac2b6a4e49442850e9295837fd81c74d1c7954d9a32c099857f3",
+    "CROSSWALK_ROW_0029.json": "1179b2df5eeb455df7f683fc432029cf98d637f8bc325123257eb9a159855f4f",
+    "UNIQUE_BLUEPRINT_ROW_0029.json": "9171b4b145d0d517acbf0bd60d0be072bdcb9ae6b93fe6bc2c0e4bce5f9243f2",
+    "FIXED_SYNTHETIC_FACTS_0029.json": "ab14e24c85d285f49fb6d89bbf6e3fe8b830ce12117aed9a61c43205a295ec35"
+  },
+  "reviewer": "Fresh OpenCode v2 semantic-review session; separate from the Writer session",
+  "review_route_requested": "opencode/hy4-flash-free",
+  "provider_actual_model": "UNKNOWN",
+  "review_session_id": "ses_dead71895ffey4LnVp8guJ3lnf",
+  "review_raw_stdout_sha256": "6efabef5944a72945ec175ec33cbff0870fd2625c45b5178e252081a28c838f9",
+  "review_raw_stdout_bytes": 4218,
+  "verdict": "PASS",
+  "scope": "Full-text semantic/usability review of extracted candidate text; exact candidate SHA named by reviewer.",
+  "limitations": [
+    "Reviewer did not independently hash the DOCX bytes.",
+    "Visual/layout/font review is separate and covered by WORD_NATIVE_VISUAL_REVIEW_R14.json.",
+    "No formal acceptance or REAL status claimed."
+  ],
+  "blocking_findings": [],
+  "review_text": "## Semantic Review Verdict\n\n**Verdict: PASS**\n\n**Candidate SHA-256:** `a1bc1f59615d658b3a4fd012ea8f06092ee63ca83613473c336940ec0b7c4c6b`\n\n**Scope (as bounded by packet):** Full-text semantic/usability review of the extracted candidate text only. No DOCX hash verification, no visual/layout/font review, no formal acceptance claimed. Fixed facts treated as synthetic examples only; no official approval, real client outcomes, or external originals inferred.\n\n### Checks\n\n| Check | Result |\n|---|---|\n| Official requirement alignment | PASS — quotes \"訓練規劃及達到客戶課程績效目標的證明資料。\" verbatim (§二一), cites official page 2 / item 5, binds to I05-E03 / 0029, no rewriting or neighbor takeover. |\n| Document genre (strategy_plan) | PASS — purpose → causal chain → goals/indicators → work breakdown → timeline → risks → review → example → evidence index; reader-facing and executable. |\n| Operational mechanics | PASS — field/definition/source/filler/validation table, calculation口径 table, work-breakdown table, milestone table, exception/correction/review/tracking table all present. |\n| Title-blind neighbor rejection | PASS — §二三 names distinctive mechanism (customer-goal / attendance / completion / pre-post gain / satisfaction + goal–value–judgment chain) and explicitly refuses 0028 (course-system/business strategy) and 0030 (personal training proof). |\n| Arithmetic & denominators | PASS — 46/50=92%; 9/10=90%; 558/9=62; 738/9=82; 82−62=20; 10×5=50; 40/9=4.44→4.4. Rounding, N/A and UNKNOWN conditions stated; all recomputable and internally consistent. |\n| 24 synthetic facts + role codes | PASS — SYN-0029-001…024 all present in §十三 register with value, type, body location, real-replacement original, responsibility role code, REAL status = UNKNOWN. |\n| SAMPLE/REAL boundary | PASS — unequivocal SAMPLE/SYNTHETIC labeling; completion definition, satisfaction target and all real baselines held UNKNOWN; no promotion to REAL, no invented individual scores. |\n| Unsupported claims / privacy / authenticity | PASS — no real names, signatures, approvals, certificates, contracts or third-party originals fabricated; no service commitments; no placeholders/待填 used as finished content. |\n| Evaluator-facing language & metadata hygiene | PASS — first-page orientation covers purpose/reader/timing/operation/output/SAMPLE-REAL status; no internal `work_id`, SHA hashes, receipt workflow, or hidden production metadata appears anywhere in the candidate text. Version history (§十二三, R03–R13) is reader-facing content description; §十三 is a reader-facing replacement register. |\n\n### Blocking locators\n**None.** No blocking defect found in scope.\n\n### Non-blocking notes (polish, not gates)\n- The review prompt expects \"section XIII = version history,\" but §十三 is in fact the 24-fact replacement register and version history sits in §十二(三). This is a structural mismatch with the prompt's assumption, not a document defect; both sections are free of internal metadata.\n- Font floors (≥10.5 pt body / ≥9.5 pt table) and layout were not verifiable from extracted text and were explicitly out of scope — confirm in the separate layout/static gate.",
+  "created_at_tpe": "2026-11-26T08:11:41.908228+08:00"
+}

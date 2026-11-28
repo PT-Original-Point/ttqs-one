@@ -1,0 +1,87 @@
+{
+  "schema": "ttqs-one-independent-review/v1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS_ONE_0140_R11_W1_FULL_SEMANTIC_REVIEW_20261031_01",
+  "doc_id": "0140",
+  "requirement_id": "I19-E30",
+  "official_registry_index": 154,
+  "printed_checkbox_serial": "UNKNOWN",
+  "candidate_status": "CANDIDATE_ONLY",
+  "candidate_revision": "R11",
+  "candidate_sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d",
+  "candidate_git_blob_sha1": "a4c1545eaa9887195dae72623846dc9eea6cc120",
+  "candidate_remote_path": "docs/ttqs-quality-20261016/0140_R11_CANDIDATE_20261025/candidate/0140__訓練資訊系統使用普及率盤點與分析表_R11.docx",
+  "candidate_remote_readback_commit": "0abf24776d12b857729cb1fcf85ed1a2937fef83",
+  "candidate_remote_raw_sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d",
+  "candidate_unchanged": true,
+  "source_sha256": {
+    "crosswalk": "8eb614a730f4c13041751b12a9a0f1bdeb31e618557cdde8d949805e1931b9b1",
+    "sample_register": "9a207c162cc36b08896d4f1ad04ccdcfdefa62bd2b038be31dc715702982e19f",
+    "candidate_body": "ff5e43108d3833b92b16eaa7e66e8c16a73d15659f9cf9621746d40c22ce0ed5",
+    "blueprint": "6188968135d0a01de4db183b997d7e678337fcdb87e0d664d47cd9d05f1c8ceb",
+    "sample_dataset": "d1322d85bb809f3606a2edf4a8e0a26b9bb461dee4577e91ea0522972694c63d",
+    "source_packet": "d7b4522d2dd7ea0a0355f26ce699b37397b9944787ecfe6a7be5994bd17b986d",
+    "official_row": "6464bd7eb4b5b44b0e40ba829cb288916106966233bb5a3baa8aac1e6ac93ccf",
+    "official_excerpt": "84e22a29014f735d9db92a24bf9d8412c870c5f681b7cfa9fa7c85147e523ea1"
+  },
+  "reviewer": {
+    "worker": "W1 OpenCode CLI",
+    "cli_path": "C:\\Users\\J\\AppData\\Roaming\\npm\\opencode.cmd",
+    "cli_version": "2.2.5",
+    "requested_model": "opencode/glm-5.3-flash-free",
+    "actual_serving_model": "UNKNOWN",
+    "fallback_status": "UNKNOWN_NOT_PROVIDER_ATTESTED",
+    "session_id": "ses_e6ff3ca5effeAAkRwyR6JlsR4u",
+    "wrapper_pid": 81696,
+    "opencode_pid": 111496,
+    "started_at": "2026-10-31T11:41:24.688+08:00",
+    "finished_at": "2026-10-31T11:42:48.977+08:00",
+    "elapsed_seconds": 84,
+    "exit_code": 0,
+    "tokens": {
+      "input": 42466,
+      "output": 2783,
+      "reasoning": 4365,
+      "cache": {
+        "read": 0,
+        "write": 0
+      }
+    },
+    "reported_cost": 0
+  },
+  "semantic": {
+    "verdict": "PASS",
+    "scope": "Full extracted semantic/usability review; 80-row arithmetic; official/Blueprint fit; SAMPLE/REAL boundary; negative-neighbor distinction; no visual/Word binary scope",
+    "body_sha256": "ff5e43108d3833b92b16eaa7e66e8c16a73d15659f9cf9621746d40c22ce0ed5",
+    "response_sha256": "1ebab51365a7bb5be9c1ae50a466a18e8619072497127f7153e5cfdfa9cc61cb",
+    "stdout_sha256": "ff1bdcdc1f04c3c27a71f7fd66cd11a2a356e129e3684fa5766300f3288e1f25",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "request_sha256": "f99c206384f20bf55cec49a667dd57a012d7b9470d5f4f3b9e303d89c7a4500b",
+    "nonblocking_notes": [
+      "SAMPLE-COURSE-01…03 not individually named in replacement table; generically mapped by period/course scope.",
+      "Appendix SAMPLE marking appears at appendix heading/intro level; per-page prominence belongs to visual scope."
+    ],
+    "blocking_defects": []
+  },
+  "technical": {
+    "status": "PASS_21_OF_21",
+    "receipt_sha256": "81cadadbc64b3af4a5b3d30d844e21fb3920f4aa438e61b21fe88b3f975267c4"
+  },
+  "visual": {
+    "status": "PASS_WITH_NONBLOCKING_LAYOUT_NOTE",
+    "pages": 29,
+    "receipt_sha256": "e077d1662a8d23706ad5de51f794ea908c69cfbc4682e608dd63fc301c8aa96a",
+    "render_pdf_sha256": "ed2b1cb66440eb5f4db83023d794587467c8836197fed4ca686fc86de49bc5bc"
+  },
+  "previous_full_body_semantic": {
+    "status": "VERIFIED_TEXT_SEMANTIC_PASS_WITH_NONBLOCKING_NOTE",
+    "candidate_sha256": "5860d73916e94c221a8cdba6ba39bab7236c1af65be5f569448c06ecdcd6b86d",
+    "raw_response_sha256": "fe6400c7a5cd350a84d0349bbe9ca7f0e6d7baa83eda3f4d72230051f527f4e8",
+    "backend_model": "UNKNOWN",
+    "fallback": "UNKNOWN"
+  },
+  "real_evidence": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED",
+  "overall_candidate_quality": "PASS_WITH_NONBLOCKING_NOTES",
+  "created_at": "2026-10-31T11:45:58.7775332+08:00"
+}

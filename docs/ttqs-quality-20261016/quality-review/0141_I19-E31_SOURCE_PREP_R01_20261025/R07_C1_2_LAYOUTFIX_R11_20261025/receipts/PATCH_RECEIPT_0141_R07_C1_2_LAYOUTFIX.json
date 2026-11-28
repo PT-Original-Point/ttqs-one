@@ -1,0 +1,39 @@
+{
+  "schema": "ttqs-one-0141-r07-c1-2-minimal-layout-delta-v1",
+  "work_id": "TTQS_ONE_0141_I19-E31_R07_C1_2_LAYOUT_DELTA",
+  "doc_id": "0141",
+  "requirement_id": "I19-E31",
+  "blueprint": "I19-E31",
+  "parent_candidate_sha256": "8e0252ac4ba18edbd364e29c7f143744e801b062b3c2cd8d69f5c4a83aee7c2c",
+  "candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0141_I19-E31_SOURCE_PREP_R01_20261025\\R07\\R07_C1_2_LAYOUTFIX_R11_20261025\\candidate\\0141_I19-E31_R07_C1_2_CANDIDATE.docx",
+  "candidate_sha256": "b40ea2f5b5c5467cdc31c2e5b1595ac8de4d679b7f4763aa00860727f5d3f1a0",
+  "source_parent_sha256": "169e074c99954abebe16f72892adc557ed11c6152ca5648424daea3c2126dc83",
+  "source_candidate_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0141_I19-E31_SOURCE_PREP_R01_20261025\\R07\\R07_C1_2_LAYOUTFIX_R11_20261025\\source\\MANUSCRIPT_0141_R07_C1_2_CANDIDATE.md",
+  "source_candidate_sha256": "1fd435fd5d238a405f5673dcdcd7d644f413a4fdb52cfe227a8ef68d1af8681f",
+  "change_reason": "Word-native render showed the final paragraph alone on page 27. The full data/truth/acceptance boundary is already present on the cover and repeated in page footers.",
+  "changes": [
+    "Renamed the candidate label from R07-C1.1 to R07-C1.2.",
+    "Removed only the duplicate terminal boundary paragraph after the appendices.",
+    "Updated the existing latest version-history row to record this minimal layout change."
+  ],
+  "preserved": [
+    "cover SAMPLE/SYNTHETIC declaration",
+    "REAL=UNKNOWN/HOLD",
+    "Human formal acceptance=NOT_GRANTED",
+    "Official score=NOT_ASSIGNED",
+    "R01 questionnaire",
+    "36 synthetic responses",
+    "all formulas",
+    "analysis",
+    "official mapping",
+    "replacement register data"
+  ],
+  "visible_text_diff_scope": "exactly 1 body paragraph removed, 1 cover version cell updated, 1 version-boundary paragraph updated, and 5 cells in existing latest revision-history row updated",
+  "source_rows_and_questionnaire_frozen": true,
+  "word_native_visual_defect": "page 27 contained only the repeated disclaimer; fixed by removing duplicate while preserving cover/footer boundary",
+  "real_data_status": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED",
+  "official_score": "NOT_ASSIGNED",
+  "verification": "reopened DOCX and compared every visible paragraph and all table cells against the exact registered delta",
+  "result": "PASS_REGISTERED_TEXT_DELTA"
+}

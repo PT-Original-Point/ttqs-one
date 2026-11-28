@@ -1,0 +1,42 @@
+{
+  "receipt_id": "TTQS_ONE_0107_I18_E15_SOURCE_STAGE_VALIDATION_R01",
+  "observed_at_taipei": "2026-10-22T19:04:58.8486047+08:00",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "source_branch_head": "5a1eeef474fb036607310013718bb24ab7f36b01",
+  "document_id": "0107",
+  "official_requirement": "I18-E15",
+  "internal_blueprint_index": 116,
+  "source_artifact_sha256": {
+    "source_packet": "dda168bd5fab62d5e26975d39dbdd328cc518cad3c919195aacfb5d4864b82f9",
+    "unique_blueprint": "9d8f51b781992925a7b1421340dfd53658a2c41a905a15693ff8ed006aff0475",
+    "source_readback": "405994c5eb4d18cb9d0dbf049282d7fbabf86f47cfefe737ef318a5a0ac29959",
+    "official_page7_png": "b4b229b154ae401cff6305f8dd413d967ac7a347165d112c355fa15689a358a1"
+  },
+  "checks": {
+    "doc_id_0107": true,
+    "official_requirement_I18_E15": true,
+    "page7_mapping": true,
+    "internal_index_not_official_serial": true,
+    "sample_real_boundary": true,
+    "fixed_sample_8_people_7_attempts": true,
+    "formula_4_6": true,
+    "formula_5_6": true,
+    "formula_5_8": true,
+    "hold_and_reject_rules": true,
+    "neighbor_distinction": true,
+    "no_real_records": true,
+    "source_page_hash_matches": true
+  },
+  "source_stage": "READY_SOURCE_PACKET",
+  "docx_state": "NOT_BUILT",
+  "writer_dispatch": "NOT_YET_DISPATCHED",
+  "real_association_evidence": "UNKNOWN_NOT_PROVIDED",
+  "formal_acceptance": "NOT_GRANTED",
+  "notes": [
+    "Official page 7 was directly read and rendered; the mapping distinguishes neighboring I18-E08 and I18-E09 documents.",
+    "The cohort and rates are synthetic; no association performance is asserted.",
+    "0102 native Word export was already active when this receipt was created; this stage does not start another renderer.",
+    "OpenCode model attestation and provider billing remain UNKNOWN."
+  ]
+}

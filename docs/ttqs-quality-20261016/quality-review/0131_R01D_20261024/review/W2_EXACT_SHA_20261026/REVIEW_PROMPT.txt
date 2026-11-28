@@ -1,0 +1,587 @@
+# Independent semantic review — 0131 / I19-E20
+Exact candidate DOCX SHA-256: 1f979e423624e59a63ddf080da5b61354e2526efb68f0d6f8ef1380a57b3f8ba. Identity: doc_id 0131, internal requirement I19-E20, 157-item Blueprint index 144 under I19-L3; printed checkbox serial UNKNOWN. Review only the exact candidate body below. Text-semantic scope only: do not edit/build or claim visual review; native visual QA is separate. Do not inherit older verdicts or claim formal acceptance.
+Source SHA-256: official PDF 805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709; official extract 3f9c1db9d19ff9af8522edeb1a5d2281d306dd034b2b8bb85be2e5c42a1a383d; crosswalk 1b63115d57b28863e3049d4084972d28e7893c851c2d20ee8590fcbc7f6b3c38; source packet e76ad37d9214493fe78ebda7216b98c9043986341cdd34d65043f3e7a2bad3ad; unique Blueprint 64aa0b0563c417e7f037e0152c5fe5e26a683045df9ff245a880c5efe742bbb5. Body packet SHA 02eb2046e819ed6e263b36991a261f9a60633dea54f703240f2d51b61d38e503; extracted DOCX text SHA d26268a95737669cd2bf1a7f216fbf63cd0e13a7803f88bf026f3be8c3f7b90c.
+Check mapping/neighbor separation, document genre and operational usability, fields/workflow, cohort/date/denominators/exclusions/resits/de-duplication/unknowns, formulas and consistency, source locator/privacy/authorization, full SAMPLE/SYNTHETIC worked case, replacement register and hold/return/reject/correction rules, false REAL/approval/credential/employer/signature/causality claims, and title-blind purpose. Verify calculations against the Blueprint; invent nothing.
+Return one PASS/PARTIAL/FAIL for semantic scope, exact candidate SHA, major/minor findings with precise locators and fixes, unchecked dimensions UNKNOWN. Actual serving model only if native output attests it; else UNKNOWN.
+
+## OFFICIAL PAGE 8 EXTRACT
+SOURCE: 《TTQS 查核佐證文件資料表－訓練機構版》官方 PDF，第 8 頁
+PDF SHA-256: 805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709
+GitHub path: docs/ttqs-quality-20261016/quality-review/0031_R06/inputs/official_source.pdf
+Git blob: 9c7621decdad585b743bf2b3d949ee5518b7bee0
+
+Page 8 visual transcription (reference evidence item):
+「學員證照通過、就業率高。」
+
+The official page labels these as common reference evidence materials and asks the user to state source and page. This line is not evidence that any named learner, employer, training organization, or association achieved the result. No printed checkbox serial was verified from the source page.
+
+Related project mapping (a separate internal contract, not printed on the PDF):
+Current 157 Blueprint: I19-L3, project index 144, 「考照/就業率：分母與可追溯數據」.
+Internal 142 crosswalk row: I19-E20, deliverable ID 0131, 「學員證照通過與就業追蹤統計表」.
+
+## INTERNAL CROSSWALK
+requirement_id,deliverable_count,split_extra_count,deliverable_ids,document_titles
+I19-E20,1,0,0131,學員證照通過與就業追蹤統計表
+
+## UNIQUE BLUEPRINT
+
+# UNIQUE BLUEPRINT｜0131｜I19-E20｜R01
+
+## 1. 身分鎖定
+
+- `project_id`: TTQS_ONE
+- `doc_id`: 0131
+- `internal_requirement_id`: I19-E20（internal 142 sequence crosswalk only）
+- `project_157_index`: 144，I19-L3；官方來源 PDF 第 8 頁
+- `printed_official_checkbox_serial`: UNKNOWN。不得以 0131、I19-E20 或 index 144 代替印刷流水號。
+- 官方方框原文：「學員證照通過、就業率高。」
+- 唯一文類：學員 cohort 證照通過與訓後就業追蹤統計表，含明確分母、逐筆資料字典、可追溯來源、缺失狀態、計算、複核與改善決策。
+- 主要讀者：小型協會訓練行政人員、資料複核人及 TTQS 評核委員。
+- 官方 PDF SHA-256：`805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709`。現行 157 Blueprint SHA-256：`ad03323d591cbea62814a8a59d233110587f2741bed8f944380b1faa2d04d216`。
+- Mission / Genre Manual / Blueprint blobs：`538bedb9d87e8465f43151933b4a5c1bfa4bbc4e` / `4ff863d9f534b6359fc1c7c1685bd8cce02da886` / `8c2bbe7ca9dcbb03088a48934b9e57e7147ede63`。
+
+## 2. 核心目的與不可超譯處
+
+此表讓行政人員從已界定的訓練 cohort 逐筆整理證照與就業追蹤狀態，讓每一個分子、分母、期間、排除、未知狀態和來源定位可重算、可複核。官方清單列示的參考佐證文字是「學員證照通過、就業率高。」；它不授權文件宣稱本協會已有高通過率、高就業率或訓練造成就業。無真實原件時只能提供完整 `SAMPLE/SYNTHETIC` 操作示範。
+
+## 3. 必備正文結構與可用欄位
+
+1. **封面／快速使用說明**：doc_id、內部需求及 Blueprint index 分列；候選與 SAMPLE 標示；適用範圍、填寫責任角色、複核方式、不可證明事項。
+2. **統計口徑與 cohort 凍結表**：班別代碼、招生／報到／完訓人數、納入期間、資料截止日、完訓判準、證照適格條件及訂定日期、追蹤時點（建議完訓後 90 日）、名單版本及異動紀錄。
+3. **證照逐筆追蹤表**：匿名學員代碼、完訓狀態／來源、證照類別與職能關聯、是否符合報考資格、資格依據、報考／重考狀態與日期、截止日前是否至少一次通過、證照來源 ID／核發或查驗者／查驗日期／定位、未知或缺件理由、複核狀態。不得在公開範例填入真實證號。
+4. **證照彙總與雙口徑計算**：列出符合資格者、曾報考者、截止日前至少一次通過者、未通過者、未報考者、未查明者及不適用者；分別計算「曾報考者通過比率」與「符合資格 cohort 取得比率」。分母定義、重考去重規則、期間和四捨五入規則均須明示。
+5. **就業逐筆追蹤表**：匿名學員代碼、完訓日、固定追蹤截止日、聯繫次數／日期（公開版只用合成紀錄）、回覆狀態、就業狀態（就業／未就業／未知）、工作開始日、職務與課程關聯、資料來源 ID、來源角色與查驗狀態、授權及保存位置、未回覆／拒答／缺件原因。不得把自陳偽裝成雇主或第三方確認。
+6. **就業 cohort 彙總**：全體完訓 cohort 分母、已回覆、已確認就業、已確認未就業、未知／失聯、排除及理由；分開報告追蹤回覆率、應答者就業比例，以及全體 cohort 中已確認就業人數。未回覆者不得被算為已就業或未就業；除非清楚標示統計口徑，不得把應答者比例寫成全體就業率。
+7. **來源索引與交叉核對矩陣**：每項數據連回來源 ID、保管角色、原件／副本、文件日期、頁／表／欄／列定位、查驗動作、授權狀態、SHA（僅對合法持有且允許保存的原件）、限制、下一步。敏感原件存放路徑不寫入公開版。
+8. **完整 synthetic worked example**：採用下列 `SYN-0131-COHORT-2025Q1` 演算，逐筆表、彙總和結論互相一致；所有人員、課程、考試狀態、雇主及來源均明確標作虛構測試資料，不表示協會實際運作。
+9. **決策、退件、補件與 HOLD 工作流**：列出資料責任角色、缺件代碼、補件期限、複核點、狀態轉換、重開條件及何時可以產生定稿彙總。角色可填，姓名／核准／簽章不得假造。
+10. **限制、改善與跨文件連結**：將結果轉化為可追蹤的訓練改進問題；只以同一真實 cohort 的可定位來源連結其他訓練文件。若無共同來源，明列「尚未建立共同 REAL cohort」；不得挪用 0130 創業 SAMPLE、0129 營運數據或 0132 不良件數。
+11. **REAL 替換清冊**：逐一列示樣本欄位、所需真實來源、授權／保管角色、最小必要揭露、驗證人角色、缺件處置。沒有真實來源時，保留 UNKNOWN，不要生成真實率。
+
+## 4. Synthetic 測試資料與算式
+
+以下資料只用來驗證表格和公式，正文要在頁首及每一張含數據的頁面標 `SAMPLE / SYNTHETIC — NOT ASSOCIATION PERFORMANCE`。
+
+### 4.1 Cohort
+
+- 合成班別 `SYN-0131-COHORT-2025Q1`；報到 16 人，完訓 12 人，未完訓 4 人。
+- 合成課程完訓日 2025-03-31；證照及就業觀察截止日 2025-06-29（完訓後 90 日）。
+- 12 名完訓者中，10 人符合預先定義的證照報考資格、8 人於觀察期曾報考、6 人至少一次通過、2 人報考但未通過、2 人符合資格但未報考、2 人完訓但不符合本次證照資格。
+- 證照逐筆代碼：`SYN-P01`–`SYN-P06` = 通過；`SYN-P07`–`SYN-P08` = 已報考未通過；`SYN-P09`–`SYN-P10` = 合格未報考；`SYN-P11`–`SYN-P12` = 不適格；`SYN-P13`–`SYN-P16` = 未完訓且不進入完訓者分母。
+
+### 4.2 證照計算
+
+- 曾報考者通過比率：6 名至少一次通過者 ÷ 8 名曾報考者 = **75.0%**。
+- 符合資格 cohort 取得比率：6 名至少一次通過者 ÷ 10 名符合資格者 = **60.0%**。
+- 合格未報考：2 ÷ 10 = **20.0%**。不得把兩名未報考者改記為未通過或通過。
+- 完訓後不符合此次資格者：2 人，明列理由，不進入兩個上述分母。
+- 重考按「人」去重；若實際文件另列考試次數，須獨立報告考試次數，不能拿次數當學員數。
+
+### 4.3 就業追蹤計算
+
+- 就業追蹤母體：12 名完訓者；收到可用答覆 9 人，其中 SAMPLE 示範狀態 6 人就業、3 人未就業；3 人未知／未回覆。
+- 追蹤回覆率：9 ÷ 12 = **75.0%**。
+- 回覆者中的就業比例：6 ÷ 9 = **66.7%**；名稱必須明確限定為「回覆者比例」，不可寫成全 cohort 就業率。
+- 全 cohort 已確認就業人數為 6，已確認未就業 3，未知 3；與 12 人總數相加核對。可列 6 ÷ 12 = 50.0% 作為「全 cohort 中已確認就業者占比」，不可稱為完整就業率，因仍有 3 人狀態未知。
+- 樣本逐筆：`SYN-P01`–`SYN-P06` = SAMPLE 就業狀態；`SYN-P07`–`SYN-P09` = SAMPLE 未就業；`SYN-P10`–`SYN-P12` = SAMPLE 未回覆／未知。這些是演算欄位，無任何真實雇主、電話紀錄或學員確認。
+
+## 5. 狀態與退件條件
+
+- 可用狀態：`DRAFT`、`HOLD_COHORT_DENOMINATOR`、`HOLD_MISSING_CERT_SOURCE`、`HOLD_MISSING_EMPLOYMENT_SOURCE`、`HOLD_CONSENT_OR_PRIVACY`、`HOLD_CROSSWALK`、`RETURN_FOR_CORRECTION`、`READY_FOR_HUMAN_REVIEW`。Human review 不等於正式接受。
+- cohort 名單與完訓數不能對帳、適格規則未事先界定、資料截止日不一致、逐筆數合計與彙總不同、重考重複計數、來源定位不明：`HOLD` 或 `RETURN_FOR_CORRECTION`，禁止發布率值。
+- 證照只有學員自述而無可合法查驗來源：標 `SELF_REPORT_ONLY/UNKNOWN`；不得列為已查驗通過。
+- 就業只有未經佐證自陳、未授權聯繫雇主、來源不明、就業日期超過觀察截止日、工作狀態不清或非應答：標 `UNKNOWN/HOLD`，不可自動補值。
+- 真實資料含可識別個資、敏感就業資訊或第三方原件：保存在受權限保護的原生來源；公開 PR 僅列匿名化統計、最小必要來源索引和授權後可公開的證據。
+- 任何把 synthetic 數字寫成原始點協會真實績效、捏造證書／雇主／簽章／協會核准或宣稱訓練造成就業者均為 `FAIL`。
+
+## 6. 替換清冊最低欄位
+
+每個合成欄位皆要有清冊列：欄位代碼、SAMPLE 值、真實替換來源類型、來源保管角色、必要授權、核驗動作、定位方法、公開版遮蔽要求、目前 REAL 狀態、缺件處置。原件不足時保留 UNKNOWN，不得用人工補寫成事實。
+
+## 7. 獨立語意驗收
+
+Reviewer 必須閱讀最終 DOCX exact SHA 及完整正文，檢查：
+
+1. 文件用途是否是 cohort 證照／就業追蹤統計表，而非創業故事、課程計畫或一般滿意度問卷。
+2. 0131 / I19-E20 / index 144 / 官方 p.8 的映射是否清楚分欄；印刷流水號是否仍為 UNKNOWN。
+3. 證照及就業母體、截止日、分子分母、去重、未回覆和排除規則能否照表重算。
+4. 全體逐筆行、兩組彙總與所有公式是否數量一致。
+5. 回覆者就業比率是否與全 cohort 已確認就業比例分開呈現，未知者未被強迫分類。
+6. SAMPLE/SYNTHETIC 是否醒目且逐頁可辨；無虛構 REAL 來源、雇主、證照、簽名或協會決定。
+7. 來源 ID / 定位 / 授權／保管欄位是否能讓行政人員實際查驗與補件，並保護個資。
+8. 課程訓練關聯是否作為追蹤背景而不暗示因果；其他文件的共同 cohort 只在有同一來源時建立連結。
+9. 遮住標題後仍可辨識文類；表格能直接填寫、複核、HOLD 和更正。
+10. 最終 Word 技術、全頁渲染可讀性與版面影像複核均完成；審查結果綁定同一 DOCX SHA。
+
+## 8. 本版禁止繼承或拼接
+
+- 0130 的正文與創業示例不適用本件；只可依共通正式來源政策，不得移植個案數據。
+- 0131 歷史封存 DOCX 不作為本 R01 的候選或驗收證據。
+- 本版來源準備 PASS 不能替代 Writer 原稿、DOCX 技術／視覺 QA、獨立語意 PASS 或 Human 正式接受。
+
+## EXACT CANDIDATE BODY EXTRACT
+DOC_ID=0131
+INTERNAL_REQUIREMENT=I19-E20
+PROJECT_157_INDEX=144 (I19-L3)
+OFFICIAL_TEXT=學員證照通過、就業率高。
+CANDIDATE_DOCX_SHA256=1f979e423624e59a63ddf080da5b61354e2526efb68f0d6f8ef1380a57b3f8ba
+EXTRACTION_METHOD=python-docx paragraph and table-cell text in document order
+EXTRACTED_TEXT_SHA256=d26268a95737669cd2bf1a7f216fbf63cd0e13a7803f88bf026f3be8c3f7b90c
+VISUAL_REVIEW=not included in this text review; separately checked in native Word export
+STATUS=CANDIDATE; all rows are synthetic; real evidence unknown; formal acceptance not granted
+
+SAMPLE / SYNTHETIC — NOT ASSOCIATION PERFORMANCE
+學員證照通過與就業追蹤統計表
+文件識別碼（doc_id）：0131
+內部管理需求編號（internal_requirement_id）：I19-E20（僅供內部 142 序列 crosswalk 查核）
+TTQS 查核指標／項目藍圖索引（project_157_index）：144（對應指標項目：I19-L3）
+官方佐證資料表頁次：第 8 頁
+官方方框原始查核文字：「學員證照通過、就業率高。」
+印刷版官方核取方框流水號（printed_official_checkbox_serial）：UNKNOWN（不得以 0131、I19-E20 或 144 逕行充作印刷流水號）
+文件版本：R01
+文件狀態：SAMPLE_SYNTHETIC_WORKED_EXAMPLE（僅供作業規範示範與公式檢驗，非社團法人台灣原始點健康推廣協會之實際辦訓成效）
+資料凍結基準日（Data Cutoff Date）：2025-06-29（完訓日 2025-03-31 後第 90 日）
+填表單位：由協會依實際組織與授權指定；本合成示例不表示現行部門配置
+示範用途與資料界線
+【SAMPLE / SYNTHETIC — NOT ASSOCIATION PERFORMANCE】
+本文件所載之一切班別名稱、學員識別碼（SYN-P01 至 SYN-P16）、測驗日期、考照成果、追蹤通聯紀錄、就業狀態、雇主資訊及來源佐證代碼，均為系統測試與文件結構合規性審查專用之合成虛擬夾具（Synthetic Test Fixture）。
+1. 本表不代表社團法人台灣原始點健康推廣協會或任何受測學員之真實營運數據或辦訓成就。
+2. 本表不構成協會對學員考取證照或成功就業之保證，亦嚴禁據以推論「受訓與就業具備絕對因果關係」。
+3. 本件嚴禁與 0130 / I19-E19（創業輔導案例）混同或合併計算，兩者屬不同評核要求與口徑範疇。
+4. 正式評核或換發真實資料時，應依第 11 節逐項核實可追溯來源及查驗授權；本示例不含 REAL 原件或已查驗資料，未取得真實原件前，所有正式績效欄位均維持 UNKNOWN / NOT_GRANTED。
+目錄
+1. 封面、表單目的、邊界宣告與快速操作指引
+2. Cohort 母體凍結清冊、分母界定與標準資料字典
+3. 16 人合成班別全體學員名冊（12 名完訓＋4 名未完訓）
+4. 12 名完訓學員證照資格、報考與通過逐筆追蹤表
+5. 證照成效雙口徑勾稽彙總表與計算明細
+6. 12 名完訓學員 90 日訓後就業逐筆追蹤表
+7. 就業追蹤多層級勾稽彙總表
+8. 來源可追溯性與佐證依據勾稽矩陣（Source Traceability Matrix）
+9. 資料審查、退件、補正、HOLD 與解凍管制工作流程
+10. 小型協會專用逐筆追蹤、異常處置與資料更正紀錄簿
+11. 逐欄 REAL 真實資料替換檢核清冊
+12. 限制事項、後續改善行動及空白操作表單
+第一節 封面、表單目的、邊界宣告與快速操作指引
+1.1 文件目的
+本表係為落實 TTQS（人才發展品質管理系統）評核指標「I19 成果評估－L3 行為與成果」中關於官方查核項目「學員證照通過、就業率高」之標準化作業而設計。為使小型非營利訓練機構於有限行政量能下，建立具備高度稽核可信度之追蹤機制，本表提供從單一特定訓練班別（Cohort）出發，界定母體、逐筆追蹤、嚴格對帳、多層級雙口徑計算至異常管制的全流程實務工具。
+1.2 作業角色與責任
+以上是供協會依實際制度指定的角色，不表示協會目前已有特定部門、職稱或既成決議。
+1.3 快速操作步驟
+1. 固定 cohort：記錄班別、完訓名冊版本、完訓判準及資料截止日。真實資料以有權限的原始名冊核對；本例的 16 人均為合成資料。
+2. 先定證照口徑：以可查到的實際證照資格規則定義適格者，並在計算前固定觀察期間及重考去重方式。本例的 80 小時及 70 分門檻只是合成示例設定，不是協會或任何發證單位的真實規定。
+3. 分開記錄自陳與來源查驗：學員回覆、外部來源查核及未回覆分別登錄。未取得或未獲准查驗的來源不得填成已核實。
+4. 照固定截止日重算：分別呈現報考者通過比率、合格 cohort 取得比率、追蹤回覆率及回覆者自陳就業比例。截止日後補到的資料記入新版本，保留原版和更正理由。
+5. 控制揭露：公開版使用匿名代碼和最小必要來源索引。個人資料、證照原件、雇主資料及私人聯絡資料留在經協會確認有權限的來源環境；本表不指定或聲稱特定保存位置及年限。
+第二節 Cohort 母體凍結清冊、分母界定與標準資料字典
+2.1 合成 Cohort 母體設定
+下列資料完全為 SAMPLE / SYNTHETIC 測試夾具，不代表協會開班或學員紀錄。真實使用時，必須換成經授權且可追溯的 cohort 來源。
+合成班別代碼：SYN-0131-COHORT-2025Q1
+合成課程期間：2025-01-05 至 2025-03-31；本例以 96 小時為課程總時數。
+合成報到人數：16 人（SYN-P01 至 SYN-P16）；完訓 12 人，未完訓 4 人。
+本例為了示範算式，假設完訓門檻為至少 80 小時；本例另假設證照適格條件為完訓且測驗至少 70 分。這兩項門檻只屬測試資料設定，真實 cohort 必須引用適用的課程及發證資格來源，不能照抄本例。
+合成觀察期間：課程完訓日 2025-03-31 至截止日 2025-06-29（90 日）。
+合成名冊版本：SYN-VER-20250629。實際使用應記錄版本、凍結時間與異動原因，不使用本例版本號。
+2.2 指標口徑與公式
+下列公式說明應如何列出分子、分母及未知值。合成算例只用於驗算文件，不代表協會成效。
+證照 A｜曾報考者通過比率
+分子：截止日前至少一次通過的不同學員人數
+分母：觀察期內曾報考的不同學員人數
+公式：分子 ÷ 分母 × 100%
+
+證照 B｜符合資格 cohort 取得比率
+分子：截止日前至少一次通過的不同學員人數
+分母：完訓且符合預先定義資格的不同學員人數
+公式：分子 ÷ 分母 × 100%
+
+就業 A｜追蹤回覆率
+分子：截止日前提供可用回覆的不同完訓學員人數
+分母：全體完訓學員人數
+公式：分子 ÷ 分母 × 100%
+
+就業 B｜回覆者自陳就業比例
+分子：回覆者中自陳就業的人數；同時另列來源查驗狀態
+分母：取得可用回覆的不同學員人數
+公式：分子 ÷ 分母 × 100%
+
+就業 C｜全 cohort 來源查驗就業占比
+分子：全體完訓學員中有可追溯來源支持就業狀態的人數
+分母：全體完訓學員人數
+公式：分子 ÷ 分母 × 100%
+限制：無來源時 REAL 值為 UNKNOWN；不可把沒有資料當成 0，也不可把回覆者比例寫成全 cohort 就業率。
+「高」的判定限制：目前官方方框原文未在此來源頁指定數值門檻、比較群或基準期間；本文件不自行定義「高」的通過線。SAMPLE 比例只驗算欄位與公式。真實報告若要使用「高」字，須另記核定基準來源、適用 cohort、期間與比較方法；未取得時只報數字及口徑，狀態列 未設定／不判定。
+報考者以不同學員去重。重考次數可另列，但不得拿考試人次替代學員人數。未回覆、未查明及不適格者必須分開呈現。
+2.3 資料字典
+第三節 16 人合成班別全體學員名冊
+【SAMPLE / SYNTHETIC — NOT ASSOCIATION PERFORMANCE】
+以下清冊包含 16 名合成學員之完整參訓與完訓狀態，展示嚴密之分母對帳邏輯。
+3.1 名冊母體對帳平準檢驗
+報名報到總人數：16 名
+完訓人數（進入證照與就業追蹤母體）：12 名（SYN-P01 至 SYN-P12）
+未完訓人數（嚴格排除於統計母體外）：4 名（SYN-P13 至 SYN-P16）
+勾稽平衡驗證：12 + 4 = 16 名（平衡無誤）
+第四節 完訓學員證照資格與結果追蹤表
+SAMPLE / SYNTHETIC — NOT ASSOCIATION PERFORMANCE。本節沒有實際考試機構、證照、成績單或學員資料。SYN-FIXTURE 代碼只代表供算式演練的資料列，不是來源原件。
+合成觀察期間為 2025-03-31 至 2025-06-29。示例資格規則為至少 80 小時完訓且測驗至少 70 分；實際資格須重新依適用來源確認。
+逐筆來源欄位與查驗狀態（與上表以學員代碼連結）
+本表中的日期、分數、結果及資格狀態均為虛構測試資料。真實使用時，每列須補上實際資格規則來源、可定位的結果來源及獲准的查驗紀錄；缺任何關鍵來源時標 HOLD 或 UNKNOWN，不得沿用本例的 SAMPLE 結果。
+第五節 證照成效雙口徑勾稽彙總表與計算明細
+【SAMPLE / SYNTHETIC — NOT ASSOCIATION PERFORMANCE】
+本節落實雙口徑計算與去重原則，絕不隱匿未報考或不適格人數。
+5.1 證照人次與狀態勾稽平衡表
+5.2 雙口徑率值試算與統計結果
+1. 【指標一：曾報考者通過比率（Attempt-based Pass Rate）】
+   - 分子：截止日前至少一次及格人數 = 6 人
+   - 分母：觀察期內實際報考人數 = 8 人
+   - 計算式：(6 ÷ 8) × 100% = 75.0%
+   - 詮釋意義：在實際參與測驗的 8 名學員中，有 75.0% 順利取得及格通過。
+
+2. 【指標二：符合資格 Cohort 取得比率（Eligibility-based Attainment Rate）】
+   - 分子：截止日前至少一次及格人數 = 6 人
+   - 分母：完訓且具備報考資格人數 = 10 人
+   - 計算式：(6 ÷ 10) × 100% = 60.0%
+   - 詮釋意義：在結訓且具備應試資格的 10 名學員中，共有 60.0% 實際轉化取得證書。
+
+3. 【補充指標：合格未報考比率（Eligible Non-attempt Rate）】
+   - 分子：符合資格但未報考人數 = 2 人
+   - 分母：完訓且具備報考資格人數 = 10 人
+   - 計算式：(2 ÷ 10) × 100% = 20.0%
+   - 處置規範：未報考之 2 人嚴禁灌入未通過或任意除外，必須完整列示。
+
+4. 【重考去重說明】：合成學員 `SYN-P04` 於 5/10 首試未通過，於 6/15 重考 SAMPLE 通過，於統計中僅計為 1 名報考者與 1 名及格者，嚴禁以總應考人次（9 人次）混充為人頭分母。
+第六節 完訓學員 90 日就業追蹤表
+SAMPLE / SYNTHETIC — NOT ASSOCIATION PERFORMANCE。本例沒有實際通聯紀錄、雇主、就業來源或學員自陳。以下狀態只是用來測試分母、未知值和公式。
+逐筆聯繫與來源追溯（所有日期均為合成測試值，並非實際通聯）
+六筆自陳就業、三筆自陳未就業及三筆未知均是 SAMPLE 分類，沒有任何第三方來源或實際通聯可供查驗。對真實 cohort，另記追蹤日期、同意／授權依據、回覆方式、來源 ID、定位及查驗層級；不在公開版放姓名、電話、雇主識別資訊或原件。
+第七節 就業追蹤彙總與公式
+SAMPLE / SYNTHETIC — NOT ASSOCIATION PERFORMANCE。下列比例只反映本文件的虛構資料列，不是協會的就業率。
+7.1 算式與限制
+合成追蹤回覆率：9 ÷ 12 × 100% = 75.0%。
+合成回覆者自陳就業比例：6 ÷ 9 × 100% = 66.7%。名稱須保留「回覆者自陳」字樣，不得簡稱全體就業率。
+合成全 cohort 自陳就業占比：6 ÷ 12 × 100% = 50.0%。這不是來源查驗的全體就業率。
+人數對帳：9 回覆 + 3 未聯繫／拒答 = 12 完訓者；6 自陳就業 + 3 自陳未就業 + 3 未知 = 12。
+REAL 來源查驗就業數：UNKNOWN。本例沒有 REAL 資料；不得以沒有提供來源推導成 0 人就業。
+自陳狀態與外部來源支持的狀態應分開列示。若只取得自陳，來源層級標 SELF_REPORT_ONLY；未回覆與拒答保留 UNKNOWN。
+第八節 來源索引與替換要求
+SAMPLE / SYNTHETIC — NOT ASSOCIATION PERFORMANCE。SYN-FIXTURE 是本文件內的合成列代碼，不是文件、證書、電話紀錄、雇主資料或第三方原件。
+目前本文件沒有與 0130、0129、0132 或其他文件建立共同 REAL cohort；只有來源 ID、班別範圍與期間完全相同且可追溯時才可跨文件連結，不挪用其他文件的 SAMPLE 數字。
+真實來源索引最低欄位：來源 ID、聲明／數據欄位、保管角色、來源種類、形成日期、頁／表／列定位、查驗動作、授權／可公開狀態、限制及後續處理。公開版只列匿名索引及經允許揭露的內容；敏感原件留在經協會核實有權限的來源位置。
+第九節 審查、補件與 HOLD 流程
+9.1 狀態
+9.2 作業順序
+1. 凍結 cohort 範圍、來源版本、完訓判準、證照適格規則及觀察截止日。
+2. 逐筆核對完訓與適格狀態；任何矛盾先標 HOLD_COHORT_DENOMINATOR。
+3. 證照結果分成通過、未通過、未報考及未知；缺來源不得推定為未通過。
+4. 就業狀態分開保存回覆狀態、自陳狀態與來源查驗層級；失聯、拒答或來源不足都保留未知。
+5. 由第二個具實際授權的角色重算分子、分母及逐筆合計。錯誤以新版本更正並保留原紀錄、日期、責任角色與理由。
+6. 來源、授權或數字未解決時維持 HOLD。只有完成該項核對才可清除此項 HOLD；不得把未知自動轉為 INELIGIBLE、未就業或已核實。
+7. 所有 REAL 來源核對完成後，最多轉為 READY_FOR_AUTHORIZED_REVIEW；正式採認仍須依實際 Human Gate 辦理。
+9.3 退回與解除 HOLD 條件
+cohort 總數或完訓名冊無法對帳：停止發布比例，列出差異並指定核對角色。
+證照截止日、報考者去重、合格規則或結果來源不明：保持 HOLD，不能自行補列。
+就業自陳不得標為外部來源已查驗；未回覆或拒答不能當成未就業。
+任一來源涉及未核實的蒐集或公開權限時，暫停該筆披露，先確認適用規則。
+補件期限由有權限的經辦／覆核角色依實際流程指定；逾期不代表資料自動作廢或真實結果變成零。
+解除 HOLD 時留下核對來源、日期、處理角色、前後值及理由。不得補造簽章或決議。
+第十節 合成異常處理紀錄
+SAMPLE / SYNTHETIC — NOT ASSOCIATION PERFORMANCE。以下是操作訓練用的假設情境，不是協會曾發生的事件或已作成的決定。
+更正紀錄應保留原值、修正值、來源、日期、處理角色及覆核狀態。真實使用時不能以本節的假設事件代替實際更正記錄。
+第十一節 REAL 資料替換清冊
+SAMPLE / SYNTHETIC — NOT ASSOCIATION PERFORMANCE。協會目前是否已有對應 REAL 資料，本文件無法證明，狀態全部為 UNKNOWN。
+真實替換前，由協會確認適用的資料蒐集、使用、保存、公開及刪除規則。此清冊未填入具體權限文件、固定保存期限或既成授權。
+第十二節 使用限制、改善選項與空白表單
+12.1 使用限制
+1. 本例不是協會績效：本文件所有班別、日期、數字、回覆和來源代碼均為合成測試資料。沒有提供任何協會真實證照通過率、就業率或原始追蹤資料。
+2. 自陳不是來源查驗：回覆者自陳比例只能按實際回覆者及觀察期間描述。沒有取得來源時，REAL 查驗結果為 UNKNOWN；未知值不代表零。
+3. 不作因果結論：訓後出現就業狀態本身不能證明工作由課程造成。若真實使用，另列觀察限制、時間範圍及可核對來源。
+4. 資料最小化：只登錄執行追蹤、複核及彙總所需欄位。協會尚須先核實實際適用的蒐集、查驗、保管及公開規則；不要聯絡未經授權的第三人或把個人原件上傳公開位置。
+12.2 改善選項示例
+以下不是協會已通過或已採行的計畫，只是未來可以評估的選項：
+在真實課程開辦前，確認證照適格規則、追蹤期間及資料來源，避免結訓後才更改分母。
+若真實追蹤回覆不足，先分析聯絡方式、時點及拒答原因的可公開彙總；只有在授權規則允許時才調整追蹤方式。
+只有在取得可比較的 cohort 資料及適當來源後，才設定後續量化目標；本合成 75% 回覆率不構成協會目標或基準。
+12.3 空白操作表單
+以下表單不含任何真實學員資料。填寫前先確認適用授權及來源保管方式；以匿名代碼取代姓名，未取得來源時選 UNKNOWN 或 HOLD。
+表單一 Cohort 名冊凍結與資格初審
+班別代碼：________________　資料期間：________________　凍結版本：________________
+報到人數：________　完訓人數：________　未完訓人數：________　完訓規則來源 ID：________________
+證照適格規則來源／版本：________________　觀察截止日：________________
+表單二A 證照逐筆結果與資格
+證照類別／課程職能對照：________________________________　資格規則來源／版本：________________　觀察期間：________________
+表單二B 證照來源、查驗及覆核
+表單三A 訓後聯繫及回覆追蹤
+Cohort 代碼：________________　完訓日：________________　固定截止日：________________
+表單三B 就業來源、職務關聯與查驗
+Cohort 代碼：________________　完訓日：________________　固定截止日：________________
+表單四 cohort 彙總與算式覆核
+A 報到人數：_____  B 完訓人數：_____  C 未完訓人數：_____  平衡檢查：B + C = A [ ]是 [ ]否
+D 完訓且符合證照資格：_____  E 曾報考不同學員：_____  F 至少通過不同學員：_____
+報考者通過比率：F / E × 100% = _____%   未報考／未知：_____ / _____
+證照適格 cohort 取得比率：F / D × 100% = _____%   分母來源 ID：________________
+G 完訓 cohort：_____  H 收到有效回覆：_____  I 未回覆／拒答／未知：_____
+回覆率：H / G × 100% = _____%   對帳 H + I = G [ ]是 [ ]否
+J 回覆者自陳就業：_____  K 回覆者自陳未就業：_____  L 狀態未知：_____
+回覆者自陳就業比例：J / H × 100% = _____%（不得簡稱全體就業率）
+M 有來源支持的就業狀態人數：_____ / G = _____%（無來源時 REAL = UNKNOWN，不填0）
+來源／期間：________________   更正版本及理由：________________
+經辦角色／日期：________________   覆核角色／日期：________________
+授權決策角色／日期（如適用）：________________
+表單五 HOLD 與更正紀錄
+文件末尾｜SAMPLE / SYNTHETIC — NOT ASSOCIATION PERFORMANCE｜所有 REAL 結果與正式接受仍須依實際來源核實。
+
+[TABLE 1]
+作業角色 | 主要工作 | 必留紀錄
+資料經辦（由協會依實際組織指定） | 維護 cohort 名冊、登錄證照與追蹤回覆、整理來源索引 | 名冊版本、逐筆狀態、待補事項
+資料覆核角色（依實際授權指定） | 核對來源定位、分子分母、日期與更正紀錄；遇缺件先標示 HOLD | 覆核日期、來源 ID、疑點與處理理由
+授權決策角色（職稱依協會現行授權核實） | 決定是否送交內部或外部審查，並指示後續改善 | 決策者角色、日期、決定與依據；未簽核前保持候選
+
+[TABLE 2]
+欄位 | 可用值或格式 | 檢查規則
+STUDENT_ID | 匿名識別碼；本例使用 SYN-P01 至 SYN-P16 | 唯一識別；對照真實姓名的清冊不得放進公開版
+COMPLETION_STATUS | COMPLETED、NOT_COMPLETED、UNKNOWN | 完訓狀態要連回實際課程完成判準及名冊來源
+CERT_ELIGIBILITY | ELIGIBLE、INELIGIBLE、UNKNOWN、NOT_APPLICABLE | 保留資格規則來源和適用日期；不得事後改規則配合結果
+CERT_OUTCOME | PASSED、NOT_PASSED、NOT_ATTEMPTED、UNKNOWN | 以人去重；UNKNOWN 不等於未通過
+EMP_RESPONSE | RESPONDED、UNCONTACTED、REFUSED、UNKNOWN | 只記錄實際追蹤結果，不把拒答改成失業
+EMP_REPORTED_STATUS | REPORTED_EMPLOYED、REPORTED_NOT_EMPLOYED、UNKNOWN | 明確標示是自陳狀態；不代表已由其他來源查驗
+SOURCE_STATUS | SOURCE_NOT_PROVIDED、SELF_REPORT_ONLY、SOURCE_CHECKED、HOLD、SAMPLE_ONLY | 來源查驗狀態與結果分類分開記錄；SAMPLE_ONLY 永遠不算 REAL 查驗
+RECORD_STATE | DRAFT、HOLD_*、RETURN_FOR_CORRECTION、READY_FOR_AUTHORIZED_REVIEW | 缺件時保持 HOLD；送審不代表正式接受
+
+[TABLE 3]
+學員代碼 | 報名日期 | 正式報到日 | 總受訓時數 (滿96h) | 出勤率 | 結訓測驗成績 | 完訓判定 | 證照報考資格判定 | 未完訓／不符資格客觀理由
+SYN-P01 | 2024-12-10 | 2025-01-05 | 96 小時 | 100.0% | 88 分 | COMPLETED | ELIGIBLE | SAMPLE—達成示例門檻（≥80h、≥70分）
+SYN-P02 | 2024-12-11 | 2025-01-05 | 92 小時 | 95.8% | 84 分 | COMPLETED | ELIGIBLE | SAMPLE—達成示例門檻（≥80h、≥70分）
+SYN-P03 | 2024-12-12 | 2025-01-05 | 96 小時 | 100.0% | 92 分 | COMPLETED | ELIGIBLE | SAMPLE—達成示例門檻（≥80h、≥70分）
+SYN-P04 | 2024-12-12 | 2025-01-05 | 90 小時 | 93.8% | 79 分 | COMPLETED | ELIGIBLE | SAMPLE—達成示例門檻（≥80h、≥70分）
+SYN-P05 | 2024-12-15 | 2025-01-05 | 94 小時 | 97.9% | 81 分 | COMPLETED | ELIGIBLE | SAMPLE—達成示例門檻（≥80h、≥70分）
+SYN-P06 | 2024-12-16 | 2025-01-05 | 96 小時 | 100.0% | 85 分 | COMPLETED | ELIGIBLE | SAMPLE—達成示例門檻（≥80h、≥70分）
+SYN-P07 | 2024-12-18 | 2025-01-05 | 88 小時 | 91.7% | 76 分 | COMPLETED | ELIGIBLE | SAMPLE—達成示例門檻（≥80h、≥70分）
+SYN-P08 | 2024-12-18 | 2025-01-05 | 92 小時 | 95.8% | 78 分 | COMPLETED | ELIGIBLE | SAMPLE—達成示例門檻（≥80h、≥70分）
+SYN-P09 | 2024-12-20 | 2025-01-05 | 96 小時 | 100.0% | 90 分 | COMPLETED | ELIGIBLE | SAMPLE—達成示例門檻（≥80h、≥70分）
+SYN-P10 | 2024-12-22 | 2025-01-05 | 88 小時 | 91.7% | 77 分 | COMPLETED | ELIGIBLE | SAMPLE—達成示例門檻（≥80h、≥70分）
+SYN-P11 | 2024-12-22 | 2025-01-05 | 82 小時 | 85.4% | 68 分 | COMPLETED | INELIGIBLE | SAMPLE—未達70分示例線；REAL資格 UNKNOWN
+SYN-P12 | 2024-12-25 | 2025-01-05 | 80 小時 | 83.3% | 64 分 | COMPLETED | INELIGIBLE | SAMPLE—未達70分示例線；REAL資格 UNKNOWN
+SYN-P13 | 2024-12-26 | 2025-01-05 | 40 小時 | 41.7% | 無（退訓） | DROPPED | NA_DROPPED | SAMPLE—未達80h示例完訓線
+SYN-P14 | 2024-12-26 | 2025-01-05 | 32 小時 | 33.3% | 無（退訓） | DROPPED | NA_DROPPED | SAMPLE—未達80h示例完訓線
+SYN-P15 | 2024-12-28 | 2025-01-05 | 60 小時 | 62.5% | 無（未完訓） | FAILED_ATTENDANCE | NA_DROPPED | SAMPLE—未達80h示例完訓線
+SYN-P16 | 2024-12-29 | 2025-01-05 | 56 小時 | 58.3% | 無（未完訓） | FAILED_ATTENDANCE | NA_DROPPED | SAMPLE—未達80h示例完訓線
+
+[TABLE 4]
+學員代碼 | 合成資格／依據 | 報考次數與日期 | 合成結果 | SAMPLE 列 ID | REAL 結果
+SYN-P01 | 適格；96h／88分 | 1；2025-05-10 | SAMPLE 通過 | SYN-FIXTURE-CERT-001 | UNKNOWN
+SYN-P02 | 適格；92h／84分 | 1；2025-05-10 | SAMPLE 通過 | SYN-FIXTURE-CERT-002 | UNKNOWN
+SYN-P03 | 適格；96h／92分 | 1；2025-05-10 | SAMPLE 通過 | SYN-FIXTURE-CERT-003 | UNKNOWN
+SYN-P04 | 適格；90h／79分 | 2；05-10未通過、06-15通過 | SAMPLE 通過（按人去重） | SYN-FIXTURE-CERT-004 | UNKNOWN
+SYN-P05 | 適格；94h／81分 | 1；2025-05-10 | SAMPLE 通過 | SYN-FIXTURE-CERT-005 | UNKNOWN
+SYN-P06 | 適格；96h／85分 | 1；2025-05-10 | SAMPLE 通過 | SYN-FIXTURE-CERT-006 | UNKNOWN
+SYN-P07 | 適格；88h／76分 | 1；2025-05-10 | SAMPLE 未通過 | SYN-FIXTURE-CERT-007 | UNKNOWN
+SYN-P08 | 適格；92h／78分 | 1；2025-05-10 | SAMPLE 未通過 | SYN-FIXTURE-CERT-008 | UNKNOWN
+SYN-P09 | 適格；96h／90分 | 0；不適用 | SAMPLE 未報考 | SYN-FIXTURE-CERT-009 | UNKNOWN
+SYN-P10 | 適格；88h／77分 | 0；不適用 | SAMPLE 未報考 | SYN-FIXTURE-CERT-010 | UNKNOWN
+SYN-P11 | 不適格；82h／68分 | 0；不適用 | SAMPLE 不適格 | SYN-FIXTURE-CERT-011 | UNKNOWN
+SYN-P12 | 不適格；80h／64分 | 0；不適用 | SAMPLE 不適格 | SYN-FIXTURE-CERT-012 | UNKNOWN
+
+[TABLE 5]
+學員代碼 | SAMPLE 證照類別／職能關聯 | SAMPLE 來源 ID／定位 | 核發／查驗角色與日期 | REAL 授權／原件狀態 | 覆核狀態
+SYN-P01 | SAMPLE-資格類別A；SAMPLE-職能關聯待課程目標核對 | SYN-FIXTURE-CERT-001；無原件定位 | NONE—SAMPLE；查驗日期不適用 | UNKNOWN；無 REAL 原件／授權 | SAMPLE_ONLY
+SYN-P02 | SAMPLE-資格類別A；SAMPLE-職能關聯待課程目標核對 | SYN-FIXTURE-CERT-002；無原件定位 | NONE—SAMPLE；查驗日期不適用 | UNKNOWN；無 REAL 原件／授權 | SAMPLE_ONLY
+SYN-P03 | SAMPLE-資格類別A；SAMPLE-職能關聯待課程目標核對 | SYN-FIXTURE-CERT-003；無原件定位 | NONE—SAMPLE；查驗日期不適用 | UNKNOWN；無 REAL 原件／授權 | SAMPLE_ONLY
+SYN-P04 | SAMPLE-資格類別A；SAMPLE-職能關聯待課程目標核對 | SYN-FIXTURE-CERT-004；無原件定位 | NONE—SAMPLE；查驗日期不適用 | UNKNOWN；無 REAL 原件／授權 | SAMPLE_ONLY
+SYN-P05 | SAMPLE-資格類別A；SAMPLE-職能關聯待課程目標核對 | SYN-FIXTURE-CERT-005；無原件定位 | NONE—SAMPLE；查驗日期不適用 | UNKNOWN；無 REAL 原件／授權 | SAMPLE_ONLY
+SYN-P06 | SAMPLE-資格類別A；SAMPLE-職能關聯待課程目標核對 | SYN-FIXTURE-CERT-006；無原件定位 | NONE—SAMPLE；查驗日期不適用 | UNKNOWN；無 REAL 原件／授權 | SAMPLE_ONLY
+SYN-P07 | SAMPLE-資格類別A；SAMPLE-職能關聯待課程目標核對 | SYN-FIXTURE-CERT-007；無原件定位 | NONE—SAMPLE；查驗日期不適用 | UNKNOWN；無 REAL 原件／授權 | SAMPLE_ONLY
+SYN-P08 | SAMPLE-資格類別A；SAMPLE-職能關聯待課程目標核對 | SYN-FIXTURE-CERT-008；無原件定位 | NONE—SAMPLE；查驗日期不適用 | UNKNOWN；無 REAL 原件／授權 | SAMPLE_ONLY
+SYN-P09 | SAMPLE-資格類別A；SAMPLE-職能關聯待課程目標核對 | SYN-FIXTURE-CERT-009；無原件定位 | NONE—SAMPLE；查驗日期不適用 | UNKNOWN；無 REAL 原件／授權 | SAMPLE_ONLY
+SYN-P10 | SAMPLE-資格類別A；SAMPLE-職能關聯待課程目標核對 | SYN-FIXTURE-CERT-010；無原件定位 | NONE—SAMPLE；查驗日期不適用 | UNKNOWN；無 REAL 原件／授權 | SAMPLE_ONLY
+SYN-P11 | SAMPLE-資格類別A；SAMPLE-職能關聯待課程目標核對 | SYN-FIXTURE-CERT-011；無原件定位 | NONE—SAMPLE；查驗日期不適用 | UNKNOWN；無 REAL 原件／授權 | SAMPLE_ONLY
+SYN-P12 | SAMPLE-資格類別A；SAMPLE-職能關聯待課程目標核對 | SYN-FIXTURE-CERT-012；無原件定位 | NONE—SAMPLE；查驗日期不適用 | UNKNOWN；無 REAL 原件／授權 | SAMPLE_ONLY
+
+[TABLE 6]
+項目分類 | 人數統計 | 占完訓學員比率（分母=12） | 備註與計算口徑說明
+A. 完訓合格學員總數 | 12 人 | 100.0% | 基礎母體（排除 4 名未完訓者）
+B. 完訓但不符報考資格者 | 2 人 | 16.7% | SYN-P11, SYN-P12（測驗未達 70 分，不列入適格母體）
+C. 完訓且符合報考資格者 | 10 人 | 83.3% | 口徑二分母（A - B = 12 - 2 = 10）
+D. 符合資格但未報考者 | 2 人 | 16.7% | SYN-P09, SYN-P10（合成資料未設定個人理由）
+E. 實際報考檢定人數 | 8 人 | 66.7% | 口徑一分母（C - D = 10 - 2 = 8；按人去重）
+F. 報考後及格通過人數 | 6 人 | 50.0% | SYN-P01 至 SYN-P06（雙口徑共同分子）
+G. 報考後未通過人數 | 2 人 | 16.7% | SYN-P07, SYN-P08
+報考者平衡檢驗 | 8 人 | — | E = F + G (6 + 2 = 8)，平衡一致
+適格者平衡檢驗 | 10 人 | — | C = D + E (2 + 8 = 10)，平衡一致
+完訓者平衡檢驗 | 12 人 | — | A = B + C (2 + 10 = 12)，平衡一致
+
+[TABLE 7]
+學員代碼 | 完訓日／固定截止日 | 合成追蹤狀態 | 合成自陳／工作起日 | 職務與課程目標關聯 | SAMPLE 列 ID | REAL 結果
+SYN-P01 | 2025-03-31／2025-06-29 | 已回覆 | SAMPLE 自陳就業；2025-05-01 | SAMPLE-待課程目標核對 | SYN-FIXTURE-EMP-001 | UNKNOWN
+SYN-P02 | 2025-03-31／2025-06-29 | 已回覆 | SAMPLE 自陳就業；2025-05-15 | SAMPLE-待課程目標核對 | SYN-FIXTURE-EMP-002 | UNKNOWN
+SYN-P03 | 2025-03-31／2025-06-29 | 已回覆 | SAMPLE 自陳就業；2025-04-15 | SAMPLE-待課程目標核對 | SYN-FIXTURE-EMP-003 | UNKNOWN
+SYN-P04 | 2025-03-31／2025-06-29 | 已回覆 | SAMPLE 自陳就業；2025-06-01 | SAMPLE-待課程目標核對 | SYN-FIXTURE-EMP-004 | UNKNOWN
+SYN-P05 | 2025-03-31／2025-06-29 | 已回覆 | SAMPLE 自陳就業；2025-05-20 | SAMPLE-待課程目標核對 | SYN-FIXTURE-EMP-005 | UNKNOWN
+SYN-P06 | 2025-03-31／2025-06-29 | 已回覆 | SAMPLE 自陳就業；2025-06-01 | SAMPLE-待課程目標核對 | SYN-FIXTURE-EMP-006 | UNKNOWN
+SYN-P07 | 2025-03-31／2025-06-29 | 已回覆 | SAMPLE 自陳未就業；不適用 | 不適用 | SYN-FIXTURE-EMP-007 | UNKNOWN
+SYN-P08 | 2025-03-31／2025-06-29 | 已回覆 | SAMPLE 自陳未就業；不適用 | 不適用 | SYN-FIXTURE-EMP-008 | UNKNOWN
+SYN-P09 | 2025-03-31／2025-06-29 | 已回覆 | SAMPLE 自陳未就業；不適用 | 不適用 | SYN-FIXTURE-EMP-009 | UNKNOWN
+SYN-P10 | 2025-03-31／2025-06-29 | 合成未聯繫 | 未知；未知 | 未知 | SYN-FIXTURE-EMP-010 | UNKNOWN
+SYN-P11 | 2025-03-31／2025-06-29 | 合成未聯繫 | 未知；未知 | 未知 | SYN-FIXTURE-EMP-011 | UNKNOWN
+SYN-P12 | 2025-03-31／2025-06-29 | 合成拒答 | 未知；未知 | 未知 | SYN-FIXTURE-EMP-012 | UNKNOWN
+
+[TABLE 8]
+學員代碼 | 合成聯繫日期／次數 | 回覆方式／來源類型 | SAMPLE 來源 ID／定位 | REAL 授權／來源角色 | 查驗／覆核狀態
+SYN-P01 | 2025-06-05；1次 | SAMPLE-方式未設定 | SYN-FIXTURE-EMP-001；無實際來源定位 | UNKNOWN；角色／授權未設定 | SAMPLE_ONLY
+SYN-P02 | 2025-06-07；1次 | SAMPLE-方式未設定 | SYN-FIXTURE-EMP-002；無實際來源定位 | UNKNOWN；角色／授權未設定 | SAMPLE_ONLY
+SYN-P03 | 2025-06-09；1次 | SAMPLE-方式未設定 | SYN-FIXTURE-EMP-003；無實際來源定位 | UNKNOWN；角色／授權未設定 | SAMPLE_ONLY
+SYN-P04 | 2025-06-11；1次 | SAMPLE-方式未設定 | SYN-FIXTURE-EMP-004；無實際來源定位 | UNKNOWN；角色／授權未設定 | SAMPLE_ONLY
+SYN-P05 | 2025-06-13；1次 | SAMPLE-方式未設定 | SYN-FIXTURE-EMP-005；無實際來源定位 | UNKNOWN；角色／授權未設定 | SAMPLE_ONLY
+SYN-P06 | 2025-06-15；1次 | SAMPLE-方式未設定 | SYN-FIXTURE-EMP-006；無實際來源定位 | UNKNOWN；角色／授權未設定 | SAMPLE_ONLY
+SYN-P07 | 2025-06-17；1次 | SAMPLE-方式未設定 | SYN-FIXTURE-EMP-007；無實際來源定位 | UNKNOWN；角色／授權未設定 | SAMPLE_ONLY
+SYN-P08 | 2025-06-19；1次 | SAMPLE-方式未設定 | SYN-FIXTURE-EMP-008；無實際來源定位 | UNKNOWN；角色／授權未設定 | SAMPLE_ONLY
+SYN-P09 | 2025-06-21；1次 | SAMPLE-方式未設定 | SYN-FIXTURE-EMP-009；無實際來源定位 | UNKNOWN；角色／授權未設定 | SAMPLE_ONLY
+SYN-P10 | 2025-06-22、06-26；2次 | SAMPLE-無回覆 | SYN-FIXTURE-EMP-010；無實際來源定位 | UNKNOWN；角色／授權未設定 | SAMPLE_ONLY
+SYN-P11 | 2025-06-23、06-27；2次 | SAMPLE-無回覆 | SYN-FIXTURE-EMP-011；無實際來源定位 | UNKNOWN；角色／授權未設定 | SAMPLE_ONLY
+SYN-P12 | 2025-06-24；1次 | SAMPLE-拒答 | SYN-FIXTURE-EMP-012；無實際來源定位 | UNKNOWN；角色／授權未設定 | SAMPLE_ONLY
+
+[TABLE 9]
+狀態 | 人數 | 全體完訓分母比率 | 說明
+完訓 cohort | 12 | 100.0% | SYN-P01 至 SYN-P12
+收到回覆 | 9 | 75.0% | SYN-P01 至 SYN-P09
+未聯繫或拒答，狀態未知 | 3 | 25.0% | SYN-P10 至 SYN-P12；不填成就業或未就業
+SAMPLE 自陳就業 | 6 | 50.0% | SYN-P01 至 SYN-P06；不是來源查驗結果
+SAMPLE 自陳未就業 | 3 | 25.0% | SYN-P07 至 SYN-P09
+
+[TABLE 10]
+合成列代碼 | 示例用途 | 本例是否有實際原件 | 真實使用需取得或定位的來源 | REAL 狀態
+SYN-FIXTURE-ROSTER | 完訓 cohort 16／12 人數 | 否 | 經授權的報到與完訓名冊、完訓規則及版本定位 | UNKNOWN
+SYN-FIXTURE-ELIGIBILITY | 10 名適格、2 名不適格 | 否 | 適用的證照資格規則、日期及逐筆適格依據 | UNKNOWN
+SYN-FIXTURE-CERT-* | 6 通過、2 未通過、2 未報考 | 否 | 可定位的考試結果或證照來源及獲准查驗紀錄 | UNKNOWN
+SYN-FIXTURE-EMP-* | 6 自陳就業、3 自陳未就業、3 未知 | 否 | 經允許取得的追蹤回覆；若報告來源查驗結果，另記來源種類、日期與定位 | UNKNOWN
+SYN-FIXTURE-CONTACT | 追蹤回覆與未知狀態的分類示例 | 否 | 實際追蹤日期與聯繫結果；不得使用未獲准的第三人聯繫 | UNKNOWN
+SYN-FIXTURE-REVIEW | 覆核／更正流程演練 | 否 | 真實覆核紀錄、經辦角色、日期、理由及版本 | UNKNOWN
+
+[TABLE 11]
+狀態 | 使用時機 | 後續動作
+DRAFT | 初次登錄，尚未完成核對 | 補全來源 ID、日期、口徑
+HOLD_COHORT_DENOMINATOR | 名冊、完訓狀態或分母規則不一致 | 凍結該 cohort 統計，核對來源與規則
+HOLD_MISSING_CERT_SOURCE | 通過／未通過結果缺少可定位來源 | 保留 UNKNOWN，請有權限者取得或查驗來源
+HOLD_MISSING_EMPLOYMENT_SOURCE | 就業分類或追蹤回覆缺少必要來源 | 區分自陳與已查驗資料；未知者不補值
+HOLD_PRIVACY_AUTHORITY | 蒐集、查驗或公開權限不明 | 暫停該筆處理，確認適用授權及最小必要資料
+RETURN_FOR_CORRECTION | 已定位的欄位或算式錯誤需要更正 | 指定責任角色、期限及更正理由；保留原紀錄
+SOURCE_CHECKED | 指定來源已按記錄方法核對 | 只表示該來源已核對，不等於指標通過或正式接受
+READY_FOR_AUTHORIZED_REVIEW | 口徑、來源和對帳完成 | 交由實際授權角色決定後續；不代表已正式接受
+SAMPLE_ONLY | 合成算例或操作演練 | 永不計為 REAL 成效或來源查驗
+
+[TABLE 12]
+合成紀錄 | 情境 | 發現的錯誤 | 修正／HOLD 動作 | 算例處理結果 | 狀態
+SYN-LOG-01 | SYN-P04 有兩次考試列 | 把兩次考試當兩位學員 | 依唯一學員代碼去重；分開列考試人次 | 報考者仍為 8 人 | SAMPLE_ONLY
+SYN-LOG-02 | SYN-P10 未取得回覆 | 初稿把未回覆當未就業 | 改列未知，不納入回覆者分母 | 回覆 9、未知 3 | SAMPLE_ONLY
+SYN-LOG-03 | SYN-P11 資格規則沒有來源 | 以測驗分數直接宣稱真實不適格 | HOLD；本例只依已聲明的合成門檻演算 | REAL 資格狀態仍 UNKNOWN | SAMPLE_ONLY
+SYN-LOG-04 | 合成來源代碼被誤讀為真實文件 | 把 SYN-FIXTURE-* 當外部原件 | 標示 SAMPLE_ONLY 並移除真實查驗措辭 | 不形成 REAL 來源證據 | SAMPLE_ONLY
+SYN-LOG-05 | 合成比例被複製到對外績效敘述 | 以 66.7% 稱全 cohort 就業率 | 撤回該標示；明列為回覆者自陳比例 | REAL 就業結果保持 UNKNOWN | SAMPLE_ONLY
+
+[TABLE 13]
+欄位 | 本例值 | 真實替換來源／核對方式 | 權限及保管角色 | 公開版處理 | REAL 狀態與缺件處置
+Cohort 人數 | SYN-0131-COHORT-2025Q1，16／12 | 實際報到、完訓名冊和適用完訓規則 | 由協會確認實際保管及授權角色 | 公開版僅列匿名人數與版本 | UNKNOWN；未對帳先 HOLD
+學員識別 | SYN-P01–SYN-P16 | 真實名冊建立受限的匿名代碼對照 | 角色與存放位置待實際確認 | 不公開姓名、證件號或私人聯絡方式 | UNKNOWN；未獲准不得蒐集或公開
+完訓狀態 | 合成時數及成績 | 實際出席、評量紀錄與課程完訓標準 | 依實際課程規範指定 | 公開版僅列必要狀態及來源 ID | UNKNOWN；規則缺失則 HOLD
+證照資格 | 合成示例 80h／70分 | 適用證照資格來源、版本日期及逐筆判定 | 由實際資料經辦與覆核角色確認 | 引用公開規則的可定位位置，不放個資 | UNKNOWN；不可照搬合成門檻
+證照結果 | SAMPLE_PASS | 可追溯的結果來源或獲准查驗紀錄 | 查驗者與取得方式待核實 | 只公開匿名彙總及允許的來源定位 | UNKNOWN；未查明保持 HOLD／UNKNOWN
+就業回覆 | SAMPLE 自陳狀態 | 經允許的訓後回覆紀錄，保存回覆日期及狀態 | 授權方式與保管角色待核實 | 不公開原始訊息、電話或雇主資料 | UNKNOWN；拒答或無回覆不補值
+就業來源查驗 | 未提供 REAL 證據 | 如報告來源查驗結果，記錄來源種類、日期、定位及查驗方法 | 實際可查閱者待確認 | 只放匿名索引；原件留在受限來源 | UNKNOWN；不得以 SAMPLE 來源代替
+更正／追蹤紀錄 | SYN-LOG-* | 真實異動、補件、HOLD 和覆核紀錄 | 依實際授權流程指定 | 公開版去除可識別資訊 | UNKNOWN；沒有原始紀錄就不宣稱已處理
+
+[TABLE 14]
+序號 | 匿名學員代碼 | 參訓時數 | 完訓狀態 | 資格狀態 | 資格來源 ID／定位 | 紀錄狀態
+01 |  |  |  |  |  | 
+02 |  |  |  |  |  | 
+03 |  |  |  |  |  | 
+04 |  |  |  |  |  | 
+05 |  |  |  |  |  | 
+06 |  |  |  |  |  | 
+07 |  |  |  |  |  | 
+08 |  |  |  |  |  | 
+09 |  |  |  |  |  | 
+10 |  |  |  |  |  | 
+11 |  |  |  |  |  | 
+12 |  |  |  |  |  | 
+13 |  |  |  |  |  | 
+14 |  |  |  |  |  | 
+15 |  |  |  |  |  | 
+16 |  |  |  |  |  | 
+
+[TABLE 15]
+序號 | 匿名學員代碼 | 適格狀態／依據 | 報考次數／日期 | 截止日前結果 | REAL 狀態／缺件碼
+01 |  |  |  |  | 
+02 |  |  |  |  | 
+03 |  |  |  |  | 
+04 |  |  |  |  | 
+05 |  |  |  |  | 
+06 |  |  |  |  | 
+07 |  |  |  |  | 
+08 |  |  |  |  | 
+09 |  |  |  |  | 
+10 |  |  |  |  | 
+11 |  |  |  |  | 
+12 |  |  |  |  | 
+
+[TABLE 16]
+匿名學員代碼 | 來源 ID／原件定位 | 核發／保管角色 | 查驗者／日期／動作 | 授權／公開限制 | 覆核狀態／HOLD 理由
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+
+[TABLE 17]
+序號 | 匿名學員代碼 | 聯繫日期／次數 | 聯繫方式／回覆狀態 | 自陳工作狀態／起日
+01 |  |  |  | 
+02 |  |  |  | 
+03 |  |  |  | 
+04 |  |  |  | 
+05 |  |  |  | 
+06 |  |  |  | 
+07 |  |  |  | 
+08 |  |  |  | 
+09 |  |  |  | 
+10 |  |  |  | 
+11 |  |  |  | 
+12 |  |  |  | 
+
+[TABLE 18]
+匿名學員代碼 | 職務／課程目標對照依據 | 來源 ID／定位 | 來源角色／查驗日期與方式 | 授權／限制／保管位置代碼 | REAL 狀態／HOLD／補件動作
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  | 
+
+[TABLE 19]
+序號 | 匿名學員代碼 | 回覆狀態 | 自陳狀態 | 來源查驗層級 | 來源 ID／定位 | HOLD／後續動作
+01 |  |  |  |  |  | 
+02 |  |  |  |  |  | 
+03 |  |  |  |  |  | 
+04 |  |  |  |  |  | 
+05 |  |  |  |  |  | 
+06 |  |  |  |  |  | 
+07 |  |  |  |  |  | 
+08 |  |  |  |  |  | 
+09 |  |  |  |  |  | 
+10 |  |  |  |  |  | 
+11 |  |  |  |  |  | 
+12 |  |  |  |  |  | 
+
+[TABLE 20]
+日期 | 匿名識別碼／統計欄位 | 原狀態 | 問題及來源定位 | 處理／責任角色 | 新狀態、日期及理由
+ |  |  |  |  | 
+ |  |  |  |  | 
+ |  |  |  |  |

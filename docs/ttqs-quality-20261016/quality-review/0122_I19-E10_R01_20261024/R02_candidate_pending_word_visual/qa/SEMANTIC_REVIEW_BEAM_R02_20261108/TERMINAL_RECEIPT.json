@@ -1,0 +1,57 @@
+{
+  "schema": "ttqs-one-external-semantic-review-terminal-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0122",
+  "requirement_id": "I19-E10",
+  "work_id": "TTQS_ONE_0122_R02_FULL_SEMANTIC_REVIEW_W1_BEAM_20261108",
+  "worker": "W1_OpenCode_v2",
+  "requested_route": "opencode/beam-free",
+  "session_model": {
+    "id": "beam-free",
+    "providerID": "opencode",
+    "variant": "default"
+  },
+  "upstream_serving_model": "UNKNOWN",
+  "cli_version": "v2.2.5",
+  "agent": "plan",
+  "session_id": "ses_e45d04ca4ffeUogsHzk4oTDFcv",
+  "wrapper_pid": 44564,
+  "exit_code": 0,
+  "status": "PASS_TEXT_ONLY_WITH_HOST_VERIFIED_INPUT_BINDING",
+  "candidate_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+  "candidate_bytes": 74242,
+  "remote_readback_commit": "cf566a0cb50cc2fc39f4900f330f30eb6d03911a",
+  "remote_raw_readback_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+  "body_extract_sha256": "61a732058927a033f268171084db05f3a86cac44fe9e92dd21a7a6f77fcb47ea",
+  "review_input_sha256": "4b17759980a3a4cfefb06c945f2ce1d1ac2611adee6de0b854509b930dbb94a9",
+  "worker_returned_review_packet_sha256": "8301b3e12467370086dfccd86c4dbcd50d339f0ed54cda93c2bfcc051b793c3d",
+  "worker_returned_packet_field_matches_full_input": false,
+  "worker_returned_packet_field_matches_source_packet": true,
+  "raw_stdout_sha256": "bc74de96bb8b8317248e606965b46f2ba55c0d2a3c0fdf820afa2dcc4df7701f",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "session_export_sha256": "b343a98aacde41fb5afa01e748f3043f6d98d5f4ae60b13eb109b03ba5fa8085",
+  "usage": {
+    "input": 25873,
+    "output": 396,
+    "reasoning": 8620,
+    "cache": {
+      "read": 1792,
+      "write": 0
+    }
+  },
+  "reviewer_verdict": "PASS",
+  "checks": {
+    "official_fit": true,
+    "complete_operating_mechanics": true,
+    "cohort_and_denominators": true,
+    "calculation_consistency": true,
+    "source_traceability": true,
+    "sample_real_boundary": true,
+    "negative_neighbors_rejected": true
+  },
+  "findings": [],
+  "formal_acceptance": false,
+  "candidate_mutated": false,
+  "review_scope": "TEXT_ONLY_SEMANTIC_USABILITY",
+  "metadata_discrepancy": "Worker response populated review_packet_sha256 with the source packet SHA instead of the composite dispatched input SHA; dispatcher independently records composite input SHA and candidate/body hashes both match."
+}

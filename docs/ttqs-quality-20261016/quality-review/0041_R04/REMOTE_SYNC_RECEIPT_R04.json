@@ -1,0 +1,95 @@
+{
+  "observed_branch_head_before_repair": "891c19502184e5a7739c97151c947c5d93abe2e4",
+  "candidate_path": "candidate/0041_R04.docx",
+  "candidate_sha256": "287c06f989478d31204cb34a0c4ddf66bf9bae8c68e4ad4ff5f90c54421a7b8c",
+  "candidate_bytes": 57616,
+  "candidate_git_blob_sha_at_pre_repair_head": "01e96614bb1365fdc54f7e54790ada53255f7ef3",
+  "independent_review_git_blob_sha_at_pre_repair_head": "370b1143d441f45de6aeeee4101731fa3b55c3ba",
+  "prior_manifest_git_blob_sha": "181dd6fb58590b863053cc49ac5d47101521ca23",
+  "prior_manifest_stale_entries": [
+    "build/patch_0041_R04_handoff_card_count_R01.py",
+    "evidence/SYNTHETIC_REPLACEMENT_REGISTER_R04.csv",
+    "inputs/requirement_mapping_0041.json",
+    "inputs/unique_blueprint_row_0041.json",
+    "review/0041_R04_technical_and_visual_receipt_R01.json"
+  ],
+  "candidate_and_review_readback": "PASS; exact local Git blob IDs matched the live GitHub blobs.",
+  "manifest_repair": "Refreshed metadata/file hashes only; DOCX not changed.",
+  "post_repair_manifest_readback": "PASS_AT_OBSERVED_HEAD; SEVEN_STALE_MANIFEST_ENTRIES_RECONCILED",
+  "latest_raw_readback": {
+    "observed_at_tpe": "2026-11-23T17:11:51.000+08:00",
+    "ref": "work/ttqs-one-document-quality-contract-20261016",
+    "head_sha_before_metadata_reconciliation": "2b9ee6f19878279fbf7f51598bf0143d6e6bd511",
+    "raw_file_count": 26,
+    "raw_byte_readback": "PASS_ALL_26_FILES",
+    "manifest_entries_matching_before_reconciliation": 19,
+    "stale_manifest_entries_found": [
+      {
+        "path": "build/patch_0041_R04_handoff_card_count_R01.py",
+        "declared_bytes": 2269,
+        "observed_bytes": 2268,
+        "declared_sha256": "86bb3cc91f6a17234d0ede6a837ab204b1392de50d293043e00f12ff17bb6d96",
+        "observed_sha256": "a5b5c463324d7cac6705e665599afa57df934f9b15c631a7f636ce2d8a37a054"
+      },
+      {
+        "path": "evidence/SYNTHETIC_REPLACEMENT_REGISTER_R04.csv",
+        "declared_bytes": 6112,
+        "observed_bytes": 6068,
+        "declared_sha256": "3bc9711552bb49d7cb9afdfb51a61242ea6da16f699820d43b8eb2f749a84802",
+        "observed_sha256": "049651c4be250ee887b2a09fced6f05e92af56b0897802349720ccce01f7f649"
+      },
+      {
+        "path": "inputs/requirement_mapping_0041.json",
+        "declared_bytes": 1831,
+        "observed_bytes": 1807,
+        "declared_sha256": "d58c41cccd152f1d8b79e2f659355aa288b7d2cb1c5a05353d4a5597f682e1d6",
+        "observed_sha256": "281a1a3c8e2cc133563a8e7d553e6659877d806e054c5308b874e3f396146c5a"
+      },
+      {
+        "path": "inputs/unique_blueprint_row_0041.json",
+        "declared_bytes": 7812,
+        "observed_bytes": 7811,
+        "declared_sha256": "f16548ffdb24c0e5022d640f5ec1d72a23f1a63e30338711abd6b757fe322d5e",
+        "observed_sha256": "037a2ccf53b81748670451e393d2fb71844608a59e90b22b28920e544b63d945"
+      },
+      {
+        "path": "PROGRESS.json",
+        "declared_bytes": 4420,
+        "observed_bytes": 4351,
+        "declared_sha256": "03ef5db74b266820772d72795c719a1c5af5b374f9937938b2000b2fcdf4311e",
+        "observed_sha256": "0c4737c261d4870a293685266e1b20c6b389d38a1e2533b53b362dace2d54835"
+      },
+      {
+        "path": "REMOTE_SYNC_RECEIPT_R04.json",
+        "declared_bytes": 1074,
+        "observed_bytes": 1055,
+        "declared_sha256": "f59b6a37f613232af0695a6f8510a0984b10821795de6167227c9ad3e89820ae",
+        "observed_sha256": "979f1350aef041768075b9b278895a70827534070f39dad93805f1a793d10c15"
+      },
+      {
+        "path": "review/0041_R04_technical_and_visual_receipt_R01.json",
+        "declared_bytes": 2096,
+        "observed_bytes": 2049,
+        "declared_sha256": "ce3a8eeb551e6d3d72d909c21abaf209811d48d7f326aca2cb5610019a0372aa",
+        "observed_sha256": "1c8d532ae14b5d342278b35ce504bc28d6b2b5d09caf76279e04e1e3b2084d03"
+      }
+    ],
+    "candidate_path": "candidate/0041_R04.docx",
+    "candidate_sha256": "287c06f989478d31204cb34a0c4ddf66bf9bae8c68e4ad4ff5f90c54421a7b8c",
+    "candidate_git_blob_sha1": "01e96614bb1365fdc54f7e54790ada53255f7ef3",
+    "candidate_changed": false,
+    "semantic_review_sha256": "9627ee97a78d61e1b80be06ba17188e048147c021d0c60fdae937bcccdeeefb0",
+    "semantic_status": "PASS_FOR_SAMPLE_ARTIFACT; REAL_CHECKBOX_042_NOT_ESTABLISHED",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "manifest_reconciliation": {
+    "status": "STALE_ENTRIES_REFRESHED_IN_METADATA_ONLY_COMMIT",
+    "corrected_entries": 7,
+    "candidate_docx_changed": false,
+    "observed_parent_head": "2b9ee6f19878279fbf7f51598bf0143d6e6bd511",
+    "post_commit_readback": "separately verified after the ref update"
+  },
+  "readback_commit": "2b9ee6f19878279fbf7f51598bf0143d6e6bd511",
+  "candidate_exact_sha_remote_readback": "PASS",
+  "independent_review_exact_candidate_binding": "PASS"
+}

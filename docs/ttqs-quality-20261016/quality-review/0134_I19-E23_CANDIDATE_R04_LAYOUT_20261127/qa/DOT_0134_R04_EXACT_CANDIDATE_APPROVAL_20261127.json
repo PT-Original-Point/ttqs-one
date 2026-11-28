@@ -1,0 +1,29 @@
+{
+  "project": "TTQS_ONE",
+  "document": "0134",
+  "content_revision": "R02",
+  "engineering_attempt": "R04",
+  "candidate_sha256": "db4867b709f4d1962db9c2d991c879975f0a140f907621e2df0f1727c700a0b3",
+  "verdict": "DOT_APPROVED_EXACT_SHA_FOR_CODEX_INTEGRATION_ONLY",
+  "approved_at_tpe": "2026-11-27T11:02:22.091252+08:00",
+  "primary_source_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+  "official_page": 8,
+  "blueprint_exact_row_sha256": "e350b8d985979567e81e519432524890512f27a580b2a055be583272f9325779",
+  "word_native_pdf_sha256": "ae85f6617abaef0040c71b2086f5eb9a18a836120e3fdb9b0539311f00500150",
+  "p8_exact_sha256": "bef88a8d82785a38503a50c571a9145d0c6add22bfc4e46786a71e8b1119a9d3",
+  "register_sha256": "6be7eace6b4b987c79cc32fbda3bd00699af21e759501ed3b2b5b0e33a4dffbe",
+  "register_count": 114,
+  "technical_recheck_r03_sha256": "cdc2cd2408587c789e14f6c9dd52a84cefb8e5983194b27e7fc705368924e768",
+  "native_r04_receipt_sha256": "64edc66b9708600b6a7de3c156d37092a3dbf2b2aa3dca2b4f51ed81737f7d8d",
+  "w2_semantic_source_r02_sha256": "0da04a141de41ad21f3eea483be7ed1202e8e98d4c3d3fdb8af5b6cdee1fc2a2",
+  "r02_to_r03_equivalence_sha256": "fdc7822ce4858e6a6614d3e86ab9ab4c1b69f3196885683a82afaf34898397d0",
+  "scope_observations": [
+    "Previous source, Blueprint, numerical and exclusion checks remain valid: independently compared actual R03/R04 Word bytes, only document.xml differs, paragraph text 1403 ordered identical, exactly two w:br in paragraphs 388/389; confirmed 28 rendered page hash pairs with identical 27 pages.",
+    "Independently viewed exact Word page 8; both 100% operands and results 8.8% and 13.5% fully visible, no truncation or table clipping. Recognized income remains 102000/117000/133500, not net cash 102000/111000/126000.",
+    "Complete 114 distinct register rows with nonblank fields; adjacent 0133 SAMPLE attendee person-times 317 rechecked but not used as a membership number. R02 remains the displayed content revision; R04 describes this layout rework only."
+  ],
+  "owner_instruction": "Codex sole shared writer: integrate exactly these bytes as a distinct CANDIDATE revision/layout package, no overwrite of historical artifacts; bind all receipts and then provide same-ref GitHub raw readback and quality index. If DOCX bytes change, return to Dot; do not inherit this approval to another SHA.",
+  "remote_raw_match": "PENDING",
+  "complete_quality_count": 0,
+  "formal_acceptance": "NOT_GRANTED"
+}

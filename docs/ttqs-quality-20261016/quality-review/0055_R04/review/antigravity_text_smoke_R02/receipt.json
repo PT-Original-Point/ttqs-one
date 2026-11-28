@@ -1,0 +1,79 @@
+{
+  "command": "TTQS_ONE_ANTIGRAVITY_CLI_RECOVERY_COST_AWARE_R02",
+  "scope": "one bounded no-tools text smoke only; does not resume Antigravity file-writer lane",
+  "started_utc": "2026-10-18T04:07:32.648602+00:00",
+  "finished_utc": "2026-10-18T04:07:36.092974+00:00",
+  "cli_path": "%LOCALAPPDATA%\\agy\\bin\\agy.exe",
+  "cli_version": "1.4.2",
+  "model_requested": "gemini-3.8-flash-high",
+  "model_identity_attestation": "UNKNOWN; no runtime attestation observed",
+  "effort": "low",
+  "mode": "plan",
+  "sandbox": true,
+  "computer_use": false,
+  "file_access_requested": false,
+  "shell_requested": false,
+  "dangerously_skip_permissions": false,
+  "argv": [
+    "--input-format",
+    "stream-json",
+    "--output-format",
+    "stream-json",
+    "--model",
+    "gemini-3.8-flash-high",
+    "--effort",
+    "low",
+    "--mode",
+    "plan",
+    "--sandbox",
+    "--disable-slash-commands",
+    "--print-timeout",
+    "2m"
+  ],
+  "working_directory": "ephemeral empty temp directory",
+  "cli_same_account_as_gui": "UNKNOWN; no native account-status subcommand shown by CLI help and GUI identity was not independently read",
+  "timeout": false,
+  "exit_code": 1,
+  "result_status": "ERROR",
+  "response_nonempty": false,
+  "response": "",
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "thinking_tokens": 0,
+    "cache_read_tokens": 0,
+    "total_tokens": 0
+  },
+  "provider_cost": "UNKNOWN; CLI did not provide a verified billing amount",
+  "prompt_sha256": "86deb91595b1dfaa694b5f81faa02e4af10b14c184bc775e7ce40225702ea6da",
+  "input_line_sha256": "19138ffeaea8e2d68bfcac56b4340c629e8a4f173f47bf6082aaf5b2c975d6ad",
+  "stdout_sha256": "5ba58a22be5f0a7a0f7f8588fe8d77cc1c362958ffb1d1479cd8c046300dffa3",
+  "stderr_sha256": "2ed788447f62dd6738610ca6e1c19ee124955a993fd532911a5c700bc25c929c",
+  "response_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "exit_code_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+  "files": {
+    "prompt.txt": {
+      "bytes": 266,
+      "sha256": "86deb91595b1dfaa694b5f81faa02e4af10b14c184bc775e7ce40225702ea6da"
+    },
+    "stdout.jsonl": {
+      "bytes": 367,
+      "sha256": "5ba58a22be5f0a7a0f7f8588fe8d77cc1c362958ffb1d1479cd8c046300dffa3"
+    },
+    "stderr.txt": {
+      "bytes": 139,
+      "sha256": "2ed788447f62dd6738610ca6e1c19ee124955a993fd532911a5c700bc25c929c"
+    },
+    "response.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "exit_code.txt": {
+      "bytes": 1,
+      "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    }
+  },
+  "network_tool_or_browse_requested": false,
+  "provider_network_transport": "No model turn started; CLI rejected the invalid effort/model combination before request execution.",
+  "effective_model_turn_started": false
+}

@@ -1,0 +1,31 @@
+{
+  "document_id": "0098",
+  "requirement_id": "I18-E06",
+  "revision": "R10",
+  "candidate_sha256": "6310a71f6fb540b22572f823e7becb7a8198c12dc068eebff2794599e5a88152",
+  "register_sha256": "923d20a99dc75f5f03436723a051d3f28d7b9a6f98858994411a19ceead8397e",
+  "register_rows": 192,
+  "unique_fact_ids": 192,
+  "duplicate_groups": 0,
+  "route": "OpenCode v2 CLI",
+  "version": "2.0.32",
+  "requested_model": "opencode/deepseek-v4.1-flash-free",
+  "actual_serving_model_identity": "UNKNOWN",
+  "session_id": "ses_ea2c81ba3ffeM18eHbo9pdlLms",
+  "cli_exit_code": 0,
+  "cli_reported_session_cost": 0,
+  "provider_invoice_cost": "UNKNOWN",
+  "packet_sha256": "f0d2d20ffe407ef98c12db6b853fc2342840af81759c23cacb4f5243f0af7798",
+  "raw_stdout_sha256": "68904467fab1f2323f482ff8fd17f00d63e96cebf09df03b704fd5b5cbfa323a",
+  "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "review_response_sha256": "f69d2cb4ba02334b3957355fcf27727ca6cbe3d7d82b4d37d73816e73a057a3d",
+  "verdict": "PASS",
+  "scope": "bounded R08-to-R10 delta only; reviewer did not open/hash DOCX; local exact-SHA and 192/192 unique-ID checks verified separately",
+  "finding": "No new repair required; package-relative evidence-folder direction, mismatch HOLD, SAMPLE/REAL boundary retained; same-package register placement verified in staged delivery.",
+  "limitations": [
+    "Not a full semantic rereview; R08 PASS remains within its recorded scope.",
+    "Not formal association acceptance or REAL evidence verification.",
+    "Reviewer did not independently rehash DOCX or open the CSV; local technical checks bind the exact artifacts.",
+    "Visual review is sampled full-size with all-page contact overview, not every page at original scale."
+  ]
+}

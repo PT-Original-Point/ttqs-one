@@ -1,0 +1,9 @@
+# Antigravity independent semantic review — TTQS ONE 0106
+
+Candidate DOCX SHA-256: ff019256f77dad59b4c0547c223ae28d90727836ed300f4ad83e82d9d0654bbe
+Candidate ID: 0106 / official requirement I18-E14 / project checkbox index 115.
+Exact DOCX text snapshot SHA-256: d2a48b81a337cc4b19033ae2716c897a7abdfb81b140da28e112af5929984502.
+
+Review only the stated candidate and source packet. Use read-only local file access to read `0106_R01_exact_docx_text_snapshot.md`, `SOURCE_PACKET_0106_I18-E14_R01.md`, and `UNIQUE_BLUEPRINT_0106_I18-E14_R01.md`. The snapshot was extracted from the stated exact DOCX SHA. Do not edit files, use Computer Use, browser or shell, dispatch another worker, or change the requested model. If a file is unavailable, state BLOCKED and identify it.
+
+Return an independent semantic verdict PASS / PARTIAL / FAIL (semantic scope only), bound to both exact hashes, with findings by section/table/fact_id and brief evidence. Check exact requirement fit and document type; independence from I18-E13/0105, I18-E11/0104 and item 120; mature practical usability; complete financial inputs/calculations/forms/survey/replacement register/hold and rejection rules; mathematical consistency including survey item means and positive/low score counts; all synthetic labels and no false real association/client/approval/third-party claims; consistent case IDs, numbers, periods and decisions; and whether a reader can identify the finance-impact analysis purpose after headings are masked. Do not assess full page layout from text; explicitly mark visual layout OUT OF SCOPE. Do not rely on the builder's QA assertions. Do not rewrite or summarize the document: provide only the review result and actionable findings.

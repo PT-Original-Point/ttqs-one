@@ -1,0 +1,191 @@
+{
+  "schema": "ttqs-one-0038-synthetic-calculation-receipt-v2",
+  "doc_id": "0038",
+  "requirement_id": "I08-E02",
+  "official_checkbox": "039",
+  "historical_sequence_index": "1575 (not checkbox serial)",
+  "case_id": "SAMPLE-0038-CASE-001",
+  "truth_status": "SAMPLE_SYNTHETIC; REAL evidence UNKNOWN/HOLD",
+  "created_at_tpe": "2026-11-01T12:05:10+08:00",
+  "source_packet_sha256": "06ebdfa5fceb229ab609c4c873a21955aa8092a77fa91ba1557b1b7a6fde987a",
+  "unique_blueprint_sha256": "a651c496e0a699d2cb218d1c15ad88d2796f30a20d641a89412c4f167ba24340",
+  "facts_csv_filename": "0038_SYNTHETIC_FACT_REGISTER_R02_20261101.csv",
+  "facts_csv_sha256": "62047052b932164619ad0a07017ed24c591e4c05d56ed75d8380c9c013da27bf",
+  "row_count": 165,
+  "unique_fact_id_count": 165,
+  "calculation_method": "Independent PowerShell re-import; arithmetic recomputed from entity_id/v1/v2 rows, option score rows restricted to four criteria",
+  "checks": [
+    {
+      "check": "unique_fact_ids",
+      "expected": "165",
+      "actual": "165",
+      "pass": true
+    },
+    {
+      "check": "row_count",
+      "expected": "165",
+      "actual": "165",
+      "pass": true
+    },
+    {
+      "check": "doc_id",
+      "expected": "0038",
+      "actual": "0038",
+      "pass": true
+    },
+    {
+      "check": "requirement_id",
+      "expected": "I08-E02",
+      "actual": "I08-E02",
+      "pass": true
+    },
+    {
+      "check": "checkbox",
+      "expected": "039",
+      "actual": "039",
+      "pass": true
+    },
+    {
+      "check": "case_id",
+      "expected": "SAMPLE-0038-CASE-001",
+      "actual": "SAMPLE-0038-CASE-001",
+      "pass": true
+    },
+    {
+      "check": "paired_entity_count",
+      "expected": "8",
+      "actual": "8",
+      "pass": true
+    },
+    {
+      "check": "paired_entities_have_both_measures",
+      "expected": "8",
+      "actual": "8",
+      "pass": true
+    },
+    {
+      "check": "measurement_row_count",
+      "expected": "16",
+      "actual": "16",
+      "pass": true
+    },
+    {
+      "check": "pre_sum",
+      "expected": "27",
+      "actual": "27",
+      "pass": true
+    },
+    {
+      "check": "post_sum",
+      "expected": "33",
+      "actual": "33",
+      "pass": true
+    },
+    {
+      "check": "pre_pass_count",
+      "expected": "4",
+      "actual": "4",
+      "pass": true
+    },
+    {
+      "check": "post_pass_count",
+      "expected": "7",
+      "actual": "7",
+      "pass": true
+    },
+    {
+      "check": "pre_rate_percent",
+      "expected": "50.0",
+      "actual": "50.0",
+      "pass": true
+    },
+    {
+      "check": "post_rate_percent",
+      "expected": "87.5",
+      "actual": "87.5",
+      "pass": true
+    },
+    {
+      "check": "percentage_point_delta",
+      "expected": "+37.5",
+      "actual": "+37.5",
+      "pass": true
+    },
+    {
+      "check": "pre_mean",
+      "expected": "3.375",
+      "actual": "3.375",
+      "pass": true
+    },
+    {
+      "check": "post_mean",
+      "expected": "4.125",
+      "actual": "4.125",
+      "pass": true
+    },
+    {
+      "check": "mean_delta",
+      "expected": "0.750",
+      "actual": "0.750",
+      "pass": true
+    },
+    {
+      "check": "weights_sum",
+      "expected": "100",
+      "actual": "100",
+      "pass": true
+    },
+    {
+      "check": "option_A",
+      "expected": "67",
+      "actual": "67",
+      "pass": true
+    },
+    {
+      "check": "option_B",
+      "expected": "93",
+      "actual": "93",
+      "pass": true
+    },
+    {
+      "check": "option_C",
+      "expected": "70",
+      "actual": "70",
+      "pass": true
+    },
+    {
+      "check": "rubric_criterion_count",
+      "expected": "5",
+      "actual": "5",
+      "pass": true
+    },
+    {
+      "check": "S08_change",
+      "expected": "4->3",
+      "actual": "4->3",
+      "pass": true
+    },
+    {
+      "check": "real_unknown_hold_count",
+      "expected": "12",
+      "actual": "12",
+      "pass": true
+    },
+    {
+      "check": "real_values_unknown",
+      "expected": "12",
+      "actual": "12",
+      "pass": true
+    },
+    {
+      "check": "all_fact_values_nonempty",
+      "expected": "0",
+      "actual": "0",
+      "pass": true
+    }
+  ],
+  "failed_count": 0,
+  "overall": "PASS_DETERMINISTIC_FACTS_AND_MATH",
+  "diagnostic": "An earlier local checker receipt R01 failed because it expected participant identifiers in field names and required one literal UNKNOWN / HOLD value for all real-status rows. The register values were not changed for that diagnostic. R02 adds explicit entity_id and validates UNKNOWN status semantics; a prior Python checker attempt also aborted before receipt due inclusion of derived weighted summary fields. Those validator defects are retained as history and are not quality PASS evidence.",
+  "scope_limit": "Arithmetic and synthetic fact traceability only. Not DOCX technical/visual/semantic QA, REAL evidence, formal acceptance, or association approval."
+}

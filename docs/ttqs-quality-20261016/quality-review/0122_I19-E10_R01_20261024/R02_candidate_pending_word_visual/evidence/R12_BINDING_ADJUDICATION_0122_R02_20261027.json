@@ -1,0 +1,88 @@
+{
+  "schema": "TTQS_ONE_R12_0122_R02_BINDING_ADJUDICATION_V1",
+  "observed_at_local": "2026-10-27T14:24:41.8614937+08:00",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0122-I19-E10-R02-R12-ZERO-TOKEN-BINDING-ADJUDICATION",
+  "doc_id": "0122",
+  "official_requirement_id": "I19-E10",
+  "official_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+  "candidate": {
+    "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0122_I19-E10_SOURCE_PREP_R01_20261024\\candidate_R02\\0122_課後追蹤與證照通過分析表_R02.docx",
+    "sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+    "bytes": 74242,
+    "github_path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R02_candidate_pending_word_visual/0122_I19-E10_R02.docx",
+    "github_raw_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+    "github_git_blob_sha1": "4ff7c0c43593d6a2f732c2db605d4e7021e38cc3",
+    "local_remote_bytes_match": true
+  },
+  "body_extraction": {
+    "method": "python-docx 1.2.0; WordprocessingML body order; non-empty top-level paragraphs stripped; tables marked [TABLE n], rows joined with space-pipe-space, cell newlines replaced by slash; UTF-8 final LF",
+    "paragraphs": 286,
+    "tables": 20,
+    "chars": 21672,
+    "bytes": 44536,
+    "sha256": "61a732058927a033f268171084db05f3a86cac44fe9e92dd21a7a6f77fcb47ea",
+    "saved_extract_matches_recomputation": true
+  },
+  "original_response": {
+    "response_sha256": "040c302a2b1a1fee701f6ca5ff1f2c06035b6d31bbe40144c29df148df8bd0f7",
+    "claimed_extracted_body_sha256": "81d144264640265ec015d412bdb08f3e74578b001b7621e7d4462863fb1a1e33",
+    "binding": "PACKET_ASSERTED_ONLY",
+    "result": "ORIGINAL_REVIEW_RESPONSE_NOT_BOUND_TO_THIS_EXACT_DOCX_BODY",
+    "actual_model": "UNKNOWN",
+    "fallback": "UNKNOWN"
+  },
+  "later_attempt03": {
+    "request_sha256": "501f07bfe715b90e3d8640e17feefc05488d9cce24c5ca0db26a953cc9c06c6a",
+    "dispatch_receipt_sha256": "21d11c091d4db3d8917200331d4d1c2ba139a7b636ce65fab993ba82fc32a27e",
+    "response_sha256": "0bfa5a69fb327fed4d28a57fadebe73c499b53a37fd177d145da8a2cb214ea92",
+    "requested_model": "gemini-3.8-flash-high",
+    "candidate_sha_repeated_by_response": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+    "body_sha_repeated_by_response": "61a732058927a033f268171084db05f3a86cac44fe9e92dd21a7a6f77fcb47ea",
+    "embedded_request_body_matches_saved_extraction": true,
+    "response_verdict": "PASS_REPORTED",
+    "actual_model": "UNKNOWN",
+    "fallback": "UNKNOWN",
+    "computer_use": "NOT_USED",
+    "reported_total_tokens": 36634
+  },
+  "adjudication": {
+    "input_binding": "PASS_EXACT_CANDIDATE_AND_BODY_TEXT",
+    "reviewer_response": "PASS_REPORTED_TEXT_ONLY",
+    "model_route_identity": "UNKNOWN_NOT_VERIFIED",
+    "eligible_gemini_route": "NOT_VERIFIED",
+    "semantic_pass_granted": false,
+    "reason": "Attempt03 request embeds the deterministic body extraction byte-for-byte and the response repeats the exact DOCX/body hashes, unlike the original packet-only response. However the Antigravity dispatch receipt records actual serving model and fallback as UNKNOWN, so the authorized Gemini route cannot be verified and no accepted semantic PASS is granted."
+  },
+  "prior_audit": {
+    "local_sha256": "c50f22a35947c7a32eee61967bd8b9880363167f376925e6c1857ddad4f14cb0",
+    "strict_json": "MALFORMED_TRAILING_LITERAL_BACKSLASH_N",
+    "substantive_body_finding": "Original response claim 81d144... does not match exact-DOCX extraction 61a732...",
+    "interpretation": "The malformed trailing characters do not erase the preserved body finding. The later attempt03 is a distinct review input and must be evaluated separately."
+  },
+  "prior_reconciliation": {
+    "local_sha256": "5488253ffef6a6761f7a3519b3a05bf179ba067bc602829f67bccdb9dce7035f",
+    "github_git_blob_sha1": "2cb2ad227a7806d389b2d3e2963168d3f08672a6",
+    "prior_status_file_sha256": "4ad7bd4373043c3ebdc65ce4a0f17952e3fc4a0892c6070034ca3b8d5a9b2e51",
+    "prior_status_github_blob_sha1": "75f268d7773d3652c66307bd4c61d962d2d4bacd",
+    "assessment": "Its exact-body fields are supported for later attempt03 only; its broad PASS label must not be read as model-route verification or semantic acceptance."
+  },
+  "preserved_qa": {
+    "technical": "PASS_EXISTING_SAME_SHA_RECEIPTS",
+    "visual": "PASS_VISUAL_SCOPE_EXISTING_SAME_SHA_RECEIPTS",
+    "semantic": "PARTIAL_REVIEWER_REPORTED_PASS_MODEL_ROUTE_UNKNOWN",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN_NOT_VERIFIED"
+  },
+  "mutation": {
+    "docx_rebuilt": false,
+    "docx_sha_changed": false,
+    "new_model_calls": 0
+  },
+  "routing_context": {
+    "user_report_sha256": "ff3ca9886e3a345d78be358b2883296b7e5454408d23bc940fee239ba826c900",
+    "report_scope": "Global OpenCode free-service status; no account-level model calls",
+    "report_does_not_override": "Later local provider.free-limit HTTP 429; no alternative route is established by that report alone."
+  },
+  "next_action": "Proceed with other R12 READY status-reconciliation work. Keep 0122 semantic acceptance pending unless a permitted independent route and actual model identity can be verified; do not repeat an identical quota-blocked call before its retry window."
+}

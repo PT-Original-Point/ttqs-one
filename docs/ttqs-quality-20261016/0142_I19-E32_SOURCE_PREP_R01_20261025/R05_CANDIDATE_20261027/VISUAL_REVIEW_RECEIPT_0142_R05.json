@@ -1,0 +1,56 @@
+{
+  "schema": "ttqs-one-visual-review-receipt-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0142",
+  "requirement_id": "I19-E32",
+  "candidate_sha256": "a213a30cd949948f7ce8c2b5d76fc79b5fdcd90117f6fba77139af6660c5ab6e",
+  "pdf_sha256": "5c0be13903a73c76851f791105bfbb287960bdb841a9530c69e98661321da8aa",
+  "page_manifest_sha256": "6098c11336140150aad24dba5cee4f0cc489e528cde2b980414f785799eb49fe",
+  "render_receipt_sha256": "c33bc14e83cfec3c1e1dd39254d36ee33c70052c945c04ccea508508d5fee571",
+  "page_count": 6,
+  "result": "PASS_LAYOUT_READABILITY",
+  "pages": [
+    {
+      "page": 1,
+      "image_sha256": "ec0d782d25a541fddfdee6bd5afe219e4e5cb8832ac95d59612d785744ea93f8",
+      "inspection": "direct full-size R04 inspection inherited because R05 page-image SHA is identical"
+    },
+    {
+      "page": 2,
+      "image_sha256": "e99d79ce95b39fc5be412511c8f78e4c23ad06cb40c37075f8b24c2b99fb9b2f",
+      "inspection": "direct full-size R04 inspection inherited because R05 page-image SHA is identical"
+    },
+    {
+      "page": 3,
+      "image_sha256": "33cdb904ce37afff66d109952bfaee1c2a396e0540fb1d8ad14bf1446dab5a6e",
+      "inspection": "direct full-size inspection of R05 page 3"
+    },
+    {
+      "page": 4,
+      "image_sha256": "3d4c40770eade1d1fce11edbfae3a5147138a9aa15a990dcc953418340d6342e",
+      "inspection": "direct full-size R04 inspection inherited because R05 page-image SHA is identical"
+    },
+    {
+      "page": 5,
+      "image_sha256": "9701ed8cfcaba2eb53456f516b454aac817624afe0af009b69836448ead17fa6",
+      "inspection": "direct full-size R04 inspection inherited because R05 page-image SHA is identical"
+    },
+    {
+      "page": 6,
+      "image_sha256": "2610f75493df5d3e242c37c7f99db2b325f6d662b143a5d9a717b0a39a10f012",
+      "inspection": "direct full-size R04 inspection inherited because R05 page-image SHA is identical"
+    }
+  ],
+  "findings_fixed": [
+    "Table 3 final row no longer occupies a one-row continuation page; explicit redundant break removed.",
+    "Dark-filled headers in Table 5 first column and Table 6 second column now use white bold text."
+  ],
+  "nonblocking_notes": [
+    "Table 11 continues onto page 6 with repeated header; the final row and closing guidance remain readable.",
+    "Page 4 is intentionally a separated formula/interpretation section; no clipping, overlap, or unreadable content observed."
+  ],
+  "inspection_method": "Microsoft Word native read-only PDF export; page raster 120 DPI; all six page PNGs inspected at full size; unchanged page images inherit exact image SHA from R04.",
+  "semantic_review": "PENDING_INDEPENDENT_EXACT_SHA_REVIEW",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD"
+}

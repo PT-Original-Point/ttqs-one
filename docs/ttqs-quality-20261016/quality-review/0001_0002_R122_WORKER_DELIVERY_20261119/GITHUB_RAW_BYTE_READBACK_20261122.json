@@ -1,0 +1,57 @@
+{
+  "schema": "TTQS_ONE_GITHUB_RAW_BYTE_READBACK_V1",
+  "project_id": "TTQS_ONE",
+  "repository": "PT-Original-Point/ttqs-one",
+  "pull_request": 92,
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "observed_at_tpe": "2026-11-22T19:59:00.5019332+08:00",
+  "immutable_readback_commit": "d01e55f1a930a6fbfbcce8e813c680dfb1aff963",
+  "readback_method": "GitHub fetch_file at the immutable commit with base64 encoding; decoded file bytes were SHA-256 hashed locally. GitHub Git Blob SHA-1 is recorded separately.",
+  "files": [
+    {
+      "doc_id": "0001",
+      "requirement_id": "I01-E01",
+      "path": "docs/ttqs-quality-20261016/quality-review/0001_0002_R122_WORKER_DELIVERY_20261119/0001/candidate/0001_I01-E01_R01.docx",
+      "bytes": 51640,
+      "sha256": "2C643258ADD377789F1A04F9FFE0FAEBF53CB2AEEE38EC0B7234E5BDA92BC0BB",
+      "git_blob_sha1": "1b33417d975718177314210ebc14f404d882b927",
+      "technical": "PASS",
+      "visual": {
+        "status": "PASS",
+        "pages": 12
+      },
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "W2 Antigravity CLI",
+        "work_id": "TTQS_ONE_0001_I01-E01_SEMANTIC_REVIEW_R01_20261119",
+        "requested_route": "gemini-3.8-flash-high",
+        "served_model": "UNKNOWN",
+        "blocking_findings": 0,
+        "nonblocking_findings": 1
+      }
+    },
+    {
+      "doc_id": "0002",
+      "requirement_id": "I01-E01",
+      "path": "docs/ttqs-quality-20261016/quality-review/0001_0002_R122_WORKER_DELIVERY_20261119/0002/candidate/0002_I01-E01_R04.docx",
+      "bytes": 53122,
+      "sha256": "317867355DBF0759918A65C9623BA0FEBD05D7E88774E3E349C5EC18102420C7",
+      "git_blob_sha1": "38ed8ffcf7051deefd3c72cd7aa2ecc4ef3294c2",
+      "technical": "PASS",
+      "visual": {
+        "status": "PASS",
+        "pages": 15
+      },
+      "semantic": {
+        "status": "PASS",
+        "reviewer": "W1 OpenCode v2",
+        "work_id": "TTQS_ONE_0002_I01-E01_SEMANTIC_REVIEW_R02_20261119",
+        "requested_route": "opencode/beam-free",
+        "served_model": "UNKNOWN",
+        "blocking_findings": 0,
+        "nonblocking_findings": 0
+      }
+    }
+  ],
+  "acceptance_boundary": "CANDIDATE_SAMPLE_SYNTHETIC; formal acceptance and REAL status are not claimed."
+}

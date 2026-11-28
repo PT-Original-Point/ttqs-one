@@ -1,0 +1,43 @@
+{
+  "work_id": "TTQS_ONE_0040_I08-E03_R06_EXACT_SHA_INDEPENDENT_SEMANTIC_W2_20261123",
+  "worker": "W2 Antigravity CLI",
+  "requested_model": "gemini-3.8-flash-high",
+  "served_model": "UNKNOWN",
+  "native_pid": 27836,
+  "cli_exit_code": 0,
+  "cli_status": "SUCCESS",
+  "stdout_bytes": 4577,
+  "stdout_sha256": "659d841ede9de1ae2425d0af75ec6fbc93adc3fbdff7a017ebe06db6fea730af",
+  "stderr_bytes": 79,
+  "stderr_sha256": "74e7b4521686e6abeff87ebb6d47e49ebb4f38787dd0cab41ff848ec01008e5f",
+  "stderr_note": "warning: --mode plan has no effect while slash command expansion is disabled.",
+  "candidate_sha256": "b2635adfc72f0328509b582f1d9af5f37a6eca8a37c5a54cbf77a31deb63dde6",
+  "packet_file_bytes_sha256": "249e88ccc1c1a81f1aa16b43b6b12856f67ccdbcb6f3a06eb1603a4ef2fc4d5c",
+  "review_verdict": "PASS",
+  "review_scope": "Full 8-page rendered candidate text (pages 1 through 8) and all 39 rows of replacement register 8cf3cbc3a77c355b8624f8153eb60e5a7f074a5f7645fa45b7a6e8bad0467bde against official requirement I08-E03 (checkbox 040) and Unique Blueprint scope ab080a2e6d85cc13a706f0c10bda7c208ddc191a1fea20a670fd5a174ab14943.",
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    {
+      "id": "NB-0040-R06-01",
+      "severity": "LOW",
+      "locator": "Register row 0040-REF-001 (body_locator)",
+      "evidence": "Register locator references 第7頁「目前文件控制」表, while candidate page 7 heading is titled 「文件版本與使用指引」.",
+      "reason": "Minor descriptive locator wording artifact from R05 section refactoring; does not impair auditability or verification of the official checkbox 040 mapping.",
+      "minimum_repair": "Harmonize register locator string to match 「文件版本與使用指引」 in the next scheduled metadata alignment."
+    },
+    {
+      "id": "NB-0040-R06-02",
+      "severity": "LOW",
+      "locator": "Register bound_candidate_sha256 column (all 39 rows)",
+      "evidence": "bound_candidate_sha256 reflects base R05 SHA 9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d.",
+      "reason": "R06 represents an OOXML-only table width normalization with byte-identical text nodes; metadata provenance correctly preserves linkage to the base candidate.",
+      "minimum_repair": "Update register bound_candidate_sha256 to R06 SHA b2635adfc72f0328509b582f1d9af5f37a6eca8a37c5a54cbf77a31deb63dde6 during regular batch register re-indexing."
+    }
+  ],
+  "provider_model": "UNKNOWN",
+  "formal_acceptance": false,
+  "observed_at_local": "2026-11-23 Asia/Taipei",
+  "visual_scope": "not reviewed by W2; deterministic visual receipt is separate",
+  "github_scope": "not reviewed; no GitHub readback in this worker call",
+  "note": "Raw output retained; review JSON extracted from actual stdout."
+}

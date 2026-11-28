@@ -1,0 +1,34 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0042",
+  "revision": "R01",
+  "candidate_sha256": "e6f74140e5dfa01464ec5e4dc66d8817b06a7b878ccdaba704c49da213a0df17",
+  "route": "Antigravity CLI",
+  "cli_version": "1.4.0",
+  "requested_model": "gemini-3.8-flash-high",
+  "review_scope": "Read-only independent semantic and all-page visual review; no Computer Use.",
+  "events": [
+    {
+      "attempt": 1,
+      "mode": "headless --sandbox --mode plan",
+      "result": "NO_REVIEW_OUTPUT",
+      "error": "jetski: no output produced — a tool required the command permission that headless mode cannot prompt for, so it was auto-denied.",
+      "changes": "none"
+    },
+    {
+      "attempt": 2,
+      "mode": "interactive --sandbox --mode plan",
+      "result": "NO_REVIEW_OUTPUT",
+      "command_requested": "Get-FileHash -Algorithm SHA256 on the exact 0042 R01 candidate path",
+      "error": "The Windows environment did not support the first sandboxed command attempt; the CLI then requested sandbox bypass with full network access.",
+      "decision": "Declined sandbox bypass; interrupted and exited the CLI.",
+      "changes": "No files edited; no persistent command allow rule added; Computer Use not invoked; telemetry opt-in left unchecked."
+    }
+  ],
+  "failure_pause_threshold": {
+    "rule": "Three consecutive errors plus three attempted corrections still unable to execute and return a review.",
+    "threshold_met": false,
+    "status": "Route not paused by this event; two CLI attempts recorded and no broad sandbox bypass authorized."
+  },
+  "independent_review_status": "NOT_RETURNED_FROM_ANTIGRAVITY; existing independent reviewer task is being used for this exact-SHA review."
+}

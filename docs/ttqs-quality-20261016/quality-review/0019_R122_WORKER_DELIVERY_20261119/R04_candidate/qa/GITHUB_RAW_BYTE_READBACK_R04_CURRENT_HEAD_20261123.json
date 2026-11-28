@@ -1,0 +1,46 @@
+{
+  "schema": "TTQS_ONE_GITHUB_RAW_BYTE_READBACK_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0019",
+  "requirement_id": "I03-E02",
+  "candidate_revision": "R04",
+  "candidate_stage": "CANDIDATE_SAMPLE_SYNTHETIC",
+  "repository": "PT-Original-Point/ttqs-one",
+  "pull_request": 92,
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "observed_at_tpe": "2026-11-23T14:32:44.2828913+08:00",
+  "immutable_readback_commit": "87093714b732da74ce6255e558955223f0095f06",
+  "readback_method": "GitHub fetch_file from the PR head ref with base64 encoding; decoded bytes SHA-256 and Git Blob SHA-1 computed locally and matched the exact-SHA QA candidate.",
+  "candidate": {
+    "path": "docs/ttqs-quality-20261016/quality-review/0019_R122_WORKER_DELIVERY_20261119/R04_candidate/0019_I03-E02_R04.docx",
+    "bytes": 48671,
+    "sha256": "F3F34E99F7CCE824908969D69BEBEE1F8BE3C223A29ED88A4CF1560674B2FB2C",
+    "git_blob_sha1": "d89ad22fc50da84520690161d7bcdb4ba4076785",
+    "readback": "PASS"
+  },
+  "qa_binding": {
+    "technical": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0019_R122_WORKER_DELIVERY_20261119/R04_candidate/qa/technical_qa.json",
+      "status": "PASS",
+      "candidate_sha256": "F3F34E99F7CCE824908969D69BEBEE1F8BE3C223A29ED88A4CF1560674B2FB2C"
+    },
+    "visual": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0019_R122_WORKER_DELIVERY_20261119/R04_candidate/qa/visual_review_receipt.json",
+      "status": "PASS",
+      "pages_inspected": 9,
+      "candidate_sha256": "F3F34E99F7CCE824908969D69BEBEE1F8BE3C223A29ED88A4CF1560674B2FB2C"
+    },
+    "semantic": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0019_R122_WORKER_DELIVERY_20261119/R04_candidate/qa/semantic_review_receipt.json",
+      "status": "PASS",
+      "reviewer": "W2 Antigravity CLI",
+      "work_id": "TTQS_ONE_0019_I03-E02_R04_EXACT_SHA_SEMANTIC_W2_R01_20261119",
+      "requested_route": "gemini-3.8-flash-high",
+      "served_model": "UNKNOWN",
+      "blocking_findings": 0,
+      "nonblocking_findings": 0,
+      "candidate_sha256": "F3F34E99F7CCE824908969D69BEBEE1F8BE3C223A29ED88A4CF1560674B2FB2C"
+    }
+  },
+  "acceptance_boundary": "Raw-byte readback only; candidate remains SAMPLE/SYNTHETIC. Formal acceptance and REAL status are not claimed."
+}

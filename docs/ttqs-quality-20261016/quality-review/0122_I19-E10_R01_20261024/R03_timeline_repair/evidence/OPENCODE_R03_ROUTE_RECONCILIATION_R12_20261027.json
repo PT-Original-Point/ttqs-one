@@ -1,0 +1,117 @@
+{
+  "schema": "TTQS_ONE_OPENCODE_R03_ROUTE_RECONCILIATION_R12_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0122",
+  "requirement_id": "I19-E10",
+  "work_scope": "Independent semantic review of exact candidate R03; no DOCX write",
+  "candidate_sha256": "b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d",
+  "review_packet_sha256": "02d51a689b77b255479b499779efaff1d18f77be2c94d1f92f419efba53cde79",
+  "source_packet_sha256": "8301b3e12467370086dfccd86c4dbcd50d339f0ed54cda93c2bfcc051b793c3d",
+  "unique_blueprint_sha256": "cbfd0760a03870151d9bc083b8db76655d53107757706f4b1f4449e997553420",
+  "cli": "opencode v2.1.4",
+  "requested_model": "opencode/deepseek-v4.1-flash-free",
+  "actual_model": "UNKNOWN",
+  "fallback": "UNKNOWN",
+  "attempts": [
+    {
+      "attempt_id": "POST_RETRY_WINDOW_01",
+      "observed_at_local": "2026-10-27T22:48:51.7957485+08:00",
+      "outcome": "LOCAL_LAUNCHER_ARGUMENT_ERROR",
+      "exit_code": 1,
+      "duration_seconds": 0.2,
+      "session_id": "UNKNOWN",
+      "stdout_sha256": "b3702e7233ca3a1c644288371b3564f9f5a77e6b82181c773c9da27d6d324095",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "model_request_sent": false,
+      "provider_tokens": "UNKNOWN",
+      "note": "File path argument was passed with literal wrapper quoting; CLI returned File not found before provider dispatch."
+    },
+    {
+      "attempt_id": "POST_LAUNCHER_FIX_01",
+      "observed_at_local": "2026-10-27T22:49:16.4879626+08:00",
+      "outcome": "PROVIDER_FREE_LIMIT_HTTP_429",
+      "exit_code": 1,
+      "duration_seconds": 1.744,
+      "pid": 71636,
+      "session_id": "ses_e8229bb5affeLAPqlbkrH21MM6",
+      "requested_model": "opencode/deepseek-v4.1-flash-free",
+      "actual_model": "UNKNOWN",
+      "fallback": "UNKNOWN",
+      "stdout_sha256": "df941d02dad740bf196b1c355342990c38bee0518c9b97c1d306792912b8579c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "retry_after_ms": 33042000,
+      "next_eligible_local": "2026-10-28T08:00:00.3234461+08:00",
+      "provider_tokens": "UNKNOWN",
+      "response_text_bytes": 0,
+      "tools_requested": false,
+      "computer_use": false
+    }
+  ],
+  "semantic_review_result": "NO_NEW_REVIEW_RESPONSE",
+  "semantic_acceptance": "NOT_GRANTED",
+  "formal_acceptance": "NOT_GRANTED",
+  "token_usage": "UNKNOWN",
+  "candidate_modified": false,
+  "route_status": "PAUSED_FOR_FREE_LIMIT_429",
+  "next_eligible_local": "2026-10-28T08:00:00.3234461+08:00",
+  "quota_report_interpretation": "The supplied 2026-10-27 service report is global status only; it does not establish account-specific quota availability. The observed CLI 429 governs this route.",
+  "next_action": "Do not retry before next_eligible_local. After expiry, dispatch only if a legitimate review remains READY and a fresh free-route availability check supports a bounded attempt; do not switch models to evade the 429.",
+  "evidence_files": [
+    {
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0122_I19-E10_SOURCE_PREP_R01_20261024\\candidate_R03\\review\\OPENCODE_R03_EXACT_SHA_RETRY_20261027\\DISPATCH_START.json",
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/evidence/opencode_retry_20261027/OPENCODE_R03_EXACT_SHA_RETRY_20261027/DISPATCH_START.json",
+      "bytes": 1490,
+      "sha256": "60d2a170a4eecac1a8f402b63a4639396397375caa560b14a454fce904f9da12"
+    },
+    {
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0122_I19-E10_SOURCE_PREP_R01_20261024\\candidate_R03\\review\\OPENCODE_R03_EXACT_SHA_RETRY_20261027\\DISPATCH_TERMINAL.json",
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/evidence/opencode_retry_20261027/OPENCODE_R03_EXACT_SHA_RETRY_20261027/DISPATCH_TERMINAL.json",
+      "bytes": 982,
+      "sha256": "0864ac110fe67307a55603d6cee44b484a4bf1027d3aea781a35c5ddcec7eafd"
+    },
+    {
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0122_I19-E10_SOURCE_PREP_R01_20261024\\candidate_R03\\review\\OPENCODE_R03_EXACT_SHA_RETRY_20261027\\RAW_STDOUT.json",
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/evidence/opencode_retry_20261027/OPENCODE_R03_EXACT_SHA_RETRY_20261027/RAW_STDOUT.json",
+      "bytes": 274,
+      "sha256": "b3702e7233ca3a1c644288371b3564f9f5a77e6b82181c773c9da27d6d324095"
+    },
+    {
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0122_I19-E10_SOURCE_PREP_R01_20261024\\candidate_R03\\review\\OPENCODE_R03_EXACT_SHA_RETRY_20261027\\RAW_STDERR.txt",
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/evidence/opencode_retry_20261027/OPENCODE_R03_EXACT_SHA_RETRY_20261027/RAW_STDERR.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0122_I19-E10_SOURCE_PREP_R01_20261024\\candidate_R03\\review\\OPENCODE_R03_EXACT_SHA_RETRY02_20261027\\DISPATCH_START.json",
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/evidence/opencode_retry_20261027/OPENCODE_R03_EXACT_SHA_RETRY02_20261027/DISPATCH_START.json",
+      "bytes": 1482,
+      "sha256": "9384426d964333bf7089ad3ffb050eeae15b7326295e2b510664317fcdceab64"
+    },
+    {
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0122_I19-E10_SOURCE_PREP_R01_20261024\\candidate_R03\\review\\OPENCODE_R03_EXACT_SHA_RETRY02_20261027\\DISPATCH_TERMINAL.json",
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/evidence/opencode_retry_20261027/OPENCODE_R03_EXACT_SHA_RETRY02_20261027/DISPATCH_TERMINAL.json",
+      "bytes": 1038,
+      "sha256": "152a57d62cf915c040faf4217ef2f25d9440df2c7b738bafecdb71743b0a6059"
+    },
+    {
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0122_I19-E10_SOURCE_PREP_R01_20261024\\candidate_R03\\review\\OPENCODE_R03_EXACT_SHA_RETRY02_20261027\\RAW_STDOUT.json",
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/evidence/opencode_retry_20261027/OPENCODE_R03_EXACT_SHA_RETRY02_20261027/RAW_STDOUT.json",
+      "bytes": 528,
+      "sha256": "df941d02dad740bf196b1c355342990c38bee0518c9b97c1d306792912b8579c"
+    },
+    {
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0122_I19-E10_SOURCE_PREP_R01_20261024\\candidate_R03\\review\\OPENCODE_R03_EXACT_SHA_RETRY02_20261027\\RAW_STDERR.txt",
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/evidence/opencode_retry_20261027/OPENCODE_R03_EXACT_SHA_RETRY02_20261027/RAW_STDERR.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "local_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0122_I19-E10_SOURCE_PREP_R01_20261024\\candidate_R03\\review\\OPENCODE_R03_EXACT_SHA_RETRY02_20261027\\REVIEW_REQUEST.md",
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0122_I19-E10_R01_20261024/R03_timeline_repair/review/OPENCODE_R03_EXACT_SHA_REVIEW_REQUEST.md",
+      "bytes": 492,
+      "sha256": "97e3e7a6d19e7d83541a53ef78662c8524afef1a662dfcefd9f39a9146a2a26b"
+    }
+  ],
+  "source_head_before_sync": "4c47855e5532665bbe26c31db2c9da9eb11de169",
+  "remote_readback_state": "PENDING_AT_WRITE_TIME; see GITHUB_RAW_READBACK_OPENCODE_R03_RETRY_20261027.json"
+}

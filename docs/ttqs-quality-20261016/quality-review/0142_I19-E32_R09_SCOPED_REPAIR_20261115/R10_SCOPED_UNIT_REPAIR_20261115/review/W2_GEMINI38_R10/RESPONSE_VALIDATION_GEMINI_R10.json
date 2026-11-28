@@ -1,0 +1,37 @@
+{
+  "schema": "TTQS_ONE_W2_FULL_SEMANTIC_REVIEW_VALIDATION_R10_V1",
+  "work_id": "TTQS_ONE_0142_R10_FULL_SEMANTIC_REVIEW_GEMINI38_20261115",
+  "candidate_sha256": "127d419e4b3814f66669730212b474b1d1219fa1377374cfdacd424798b27e1c",
+  "body_sha256": "0fc364c97d6a559f0f0d4a013ac7bd1c0664a71d040726b7364b2c8ca5096bbd",
+  "response_sha256": "aff40103711c794377a97210d0f5bf155fdbff3de40bc6b60866ca5a8758dc01",
+  "stdout_sha256": "2cc14c824f6b44fd5f372eae97ea8632a7f063aefb7b0e7b0e65aa56841648e7",
+  "stderr_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+  "cli_exit_code": 0,
+  "event_names": [
+    "init",
+    "result",
+    "step_update"
+  ],
+  "step_types": [
+    "agent_response",
+    "user_input"
+  ],
+  "tool_calls": 0,
+  "exact_binding": "PASS",
+  "checks": {
+    "title_blind_identification": "PASS",
+    "adjacent_requirement_exclusion": "PASS",
+    "genre_and_operational_mechanics": "PASS",
+    "math_units_and_internal_consistency": "PASS",
+    "sample_real_boundary": "PASS",
+    "synthetic_register_consistency": "PASS"
+  },
+  "verdict": "PASS_TEXT_ONLY",
+  "findings_count": 0,
+  "limitations": [
+    "本審查為純文字語意與實用性審查，不包含Word排版視覺與分頁渲染之驗證。",
+    "審查範圍限於候選文檔內建之合成算例架構、科目映射規範及替換追蹤機制，不代表已驗證協會外部真實財務報表、總帳或稅務原件（依規定維持REAL=UNKNOWN/HOLD）。"
+  ],
+  "actual_serving_model": "UNKNOWN",
+  "formal_acceptance": "NOT_GRANTED"
+}

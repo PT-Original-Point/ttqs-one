@@ -1,0 +1,42 @@
+{
+  "project_id": "TTQS_ONE",
+  "document_id": "0122",
+  "official_requirement_id": "I19-E10",
+  "candidate_revision": "R03",
+  "artifact_state": "CANDIDATE_PENDING_WORD_NATIVE_VISUAL_QA_AND_FRESH_EXACT_SHA_SEMANTIC_REVIEW",
+  "parent_candidate_sha256": "d3a6a1222d0389172dc6ab9737d06c5e46f4b45ed3a661324f3b885b751b7b86",
+  "candidate_docx_sha256": "b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d",
+  "candidate_docx_bytes": 74234,
+  "source_packet_sha256": "8301b3e12467370086dfccd86c4dbcd50d339f0ed54cda93c2bfcc051b793c3d",
+  "unique_blueprint_sha256": "cbfd0760a03870151d9bc083b8db76655d53107757706f4b1f4449e997553420",
+  "deterministic_body_extract_sha256": "a6f9b879203ab5234d6f5c918c7b3b7b5109c641a66bbbae3d72ebbb9b409991",
+  "body_extract_bytes": 44536,
+  "repair": {
+    "finding": "30-day Wave 1 around 2026-06-14 reported results for a synthetic test dated 2026-07-10.",
+    "locator": "Word table 8, Q12 column P01-P08; Word table 15 rows 1-3, 30-day count and rate columns.",
+    "change": "P01-P08 W1 status changed to code 3 (registered, awaiting exam/result). W1 distribution changed to 0/8, 0.0%; 0/8, 0.0%; 8/8, 100.0%.",
+    "unchanged": "Exam date and score register unchanged. W2 Q12 values remain 6/7, 0/7, 0/7, 1/7, 0/7 with rates 85.7%, 0.0%, 0.0%, 14.3%, 0.0%.",
+    "truth_boundary": "All values remain SAMPLE/SYNTHETIC; no REAL result or Association approval asserted."
+  },
+  "deterministic_checks": {
+    "R02_body_extract_reproduced_byte_identically": true,
+    "all_W1_Q12_values_code3": true,
+    "W1_counts_sum_to_8": true,
+    "W1_percentages_sum_to_100": true,
+    "W2_values_unchanged": true,
+    "R02_preserved": true
+  },
+  "quality_state": {
+    "R02_semantic_acceptance": "NOT_ACCEPTED_MATERIAL_TIMELINE_CONTRADICTION",
+    "R03_word_native_visual": "PENDING",
+    "R03_fresh_independent_semantic": "PENDING",
+    "formal_human_acceptance": "NOT_GRANTED"
+  },
+  "prior_reviewer_context": {
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_serving_model": "UNKNOWN",
+    "prior_review_stdout_sha256": "653ecc9ec77c8acd09dd05ca8f89bddb3b39e0682927f2bc3f11a06c51dd6ce1",
+    "reviewer_self_report": "PASS",
+    "adjudication": "The reviewer identified the dated contradiction but incorrectly classified it as nonblocking; R02 is not accepted."
+  }
+}

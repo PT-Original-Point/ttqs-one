@@ -1,0 +1,50 @@
+{
+  "schema": "ttqs-one-0141-r07-c1-2-review-adjudication-v1",
+  "doc_id": "0141",
+  "requirement_id": "I19-E31",
+  "candidate_sha256": "b40ea2f5b5c5467cdc31c2e5b1595ac8de4d679b7f4763aa00860727f5d3f1a0",
+  "worker": "Antigravity CLI",
+  "requested_model": "gemini-3.8-flash-high",
+  "serving_model": "UNKNOWN",
+  "cli_status": "SUCCESS",
+  "cli_exit_code": 0,
+  "timed_out": false,
+  "response_sha256": "158c736e99242cce4c28974c2589282b399a29114c947dd5afd98e08a6f23a0c",
+  "stderr_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+  "response_verdict": "PASS",
+  "response_candidate_sha256": "b40ea2f5b5c5467cdc31c2e5b1595ac8de4d679b7f4763aa00860727f5d3f1a0",
+  "response_sha_matches_host": true,
+  "reviewed_scope": "DOCX 0141 (I19-E31) C1.1 -> C1.2 delta: duplicate terminal disclaimer paragraph deletion, cover and footer truth boundary retention, and revision history consistency",
+  "checks": {
+    "no_material_truth_boundary_loss": true,
+    "version_history_consistency": true,
+    "delta_stays_within_registered_scope": true
+  },
+  "findings": [
+    {
+      "locator": "Terminal paragraph (former p. 27)",
+      "severity": "INFO",
+      "evidence": "Duplicate terminal disclaimer was removed to eliminate single-paragraph page spill; cover fields and per-page footers retain full SAMPLE/SYNTHETIC, REAL=UNKNOWN/HOLD, and acceptance boundaries.",
+      "disposition": "ACCEPTED_DELTA"
+    },
+    {
+      "locator": "Revision history table (R07-C1.2 row)",
+      "severity": "INFO",
+      "evidence": "Revision entry accurately records the removal of the duplicate disclaimer while certifying that questionnaire items, 36 synthetic responses, formulas, analysis, and official mapping remain unchanged.",
+      "disposition": "VERIFIED_CONSISTENT"
+    }
+  ],
+  "limitations": [
+    "Scoped delta review only; does not constitute a fresh full-corpus semantic re-review.",
+    "Evaluation based strictly on the provided review packet without external file or tool access.",
+    "Real association evidence remains UNKNOWN/HOLD; official score remains NOT_ASSIGNED."
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "adjudication": "PASS_TARGETED_DELTA_ONLY",
+  "reviewer_independently_computed_docx_sha": false,
+  "limitations_of_adjudication": [
+    "Serving model identity remains UNKNOWN.",
+    "Packet-only targeted review; not a new full-document review.",
+    "Formal association acceptance and official score are not granted."
+  ]
+}

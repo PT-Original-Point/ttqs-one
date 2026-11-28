@@ -1,0 +1,84 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0122",
+  "requirement_id": "I19-E10",
+  "official_printed_checkbox_serial": "UNKNOWN_NOT_ASSERTED",
+  "observed_at_local": "2026-10-28T06:05:10.1909073+08:00",
+  "candidate_state": "CANDIDATE_PENDING_FORMAL_HUMAN_ACCEPTANCE",
+  "candidate_docx_sha256": "b55d498e0e3ea8a53c2b5d12a64958c40383f4a015c5f8211789e664762f2c2d",
+  "candidate_body_sha256": "a6f9b879203ab5234d6f5c918c7b3b7b5109c641a66bbbae3d72ebbb9b409991",
+  "review_packet_sha256": "02d51a689b77b255479b499779efaff1d18f77be2c94d1f92f419efba53cde79",
+  "source_packet_sha256": "8301b3e12467370086dfccd86c4dbcd50d339f0ed54cda93c2bfcc051b793c3d",
+  "unique_blueprint_sha256": "cbfd0760a03870151d9bc083b8db76655d53107757706f4b1f4449e997553420",
+  "official_requirement_page8_text_sha256": "c34ead45cad406150de5622e157f44727157776ce5c6abf5343c7db5dca42520",
+  "reviewer": "OpenCode v2 CLI fresh plan session",
+  "reviewer_context_separate_from_local_R03_repair": true,
+  "builder_identity": "Not named in original repair receipt; reviewer session is a distinct native OpenCode session from local deterministic repair execution",
+  "cli_version": "2.1.4",
+  "session_id": "ses_e80a031c6ffel3fs9p6RJXrhzL",
+  "session_model_provider": "opencode",
+  "session_model_id": "glm-5.3-flash-free",
+  "requested_model": "opencode/glm-5.3-flash-free",
+  "actual_model": "opencode/glm-5.3-flash-free",
+  "fallback_status": "NO_DIFFERENT_MODEL_RECORDED_IN_NATIVE_SESSION_EXPORT; provider internal serving chain not separately exposed",
+  "process_id": 59216,
+  "parent_pid": 15680,
+  "process_exit_code": 0,
+  "process_timeout": false,
+  "duration_seconds": 130.54,
+  "raw_stdout_sha256": "0708aeef1583132e8612d48414f3090315ce3b8abcdf3c32bcd166d2e8ac9e2d",
+  "raw_stdout_bytes": 9838,
+  "normalized_response_sha256": "a1d9294df8d4cc638473b56b388b21e7e68aca548f833e83debf09a97e8b41e0",
+  "normalized_response_bytes": 9202,
+  "sanitized_session_export_sha256": "5b2814e0199bad4a51f7e1c6a3c3cf8ca28c214e32a48209da40ff27b78895be",
+  "token_usage": {
+    "input": 22467,
+    "output": 2709,
+    "reasoning": 8488,
+    "cache_read": 4352,
+    "cache_write": 0,
+    "session_cost_recorded": 0,
+    "billing_invoice_independently_verified": false
+  },
+  "tool_calls": 0,
+  "agent": "plan",
+  "auto_approval": "NOT_USED",
+  "visual_review": "NOT_IN_SCOPE_FOR_REVIEWER",
+  "reviewer_verdict": "PASS",
+  "adjudicated_semantic_status": "PASS_TEXT_ONLY_EXACT_SHA",
+  "blocking_findings": [],
+  "nonblocking_observations": [
+    "Blueprint data dictionary fields are distributed across tables rather than consolidated in one field-definition table.",
+    "Three Q11 synthetic reflections are labeled examples and read more like example prompts than participant-style entries.",
+    "Q12 code-1 external-verification wording is adapted to clearly labeled synthetic demonstration status; preserve SAMPLE boundary in any REAL deployment.",
+    "The dual skill-use denominator section could label Wave 1 explicitly in its opening sentence."
+  ],
+  "unknowns": [
+    "Reviewer did not inspect PDF/page raster; separate R03 Word visual delta receipt is checked.",
+    "OpenCode metadata identifies the selected model ID but does not expose any lower-level infrastructure identity."
+  ],
+  "github_current_head": "d7b4d3503e99dcbf3c669ac80c79c555f77e300b",
+  "local_remote_git_blob_match": {
+    "docx": {
+      "local": "639b2adda47553c26da934d8ffeea0040ef3778f",
+      "remote": "639b2adda47553c26da934d8ffeea0040ef3778f",
+      "exact": true
+    },
+    "body": {
+      "local": "a11f760fc64532dced544f05c39200fa95fb11a4",
+      "remote": "a11f760fc64532dced544f05c39200fa95fb11a4",
+      "exact": true
+    },
+    "packet": {
+      "local": "78f6b57768105b84d0894ff25a0efc8bf189278f",
+      "remote": "78f6b57768105b84d0894ff25a0efc8bf189278f",
+      "exact": true
+    }
+  },
+  "technical_receipt": "PASS_DETERMINISTIC_SCOPE; exact candidate SHA",
+  "visual_receipt": "PASS_VISUAL_DELTA_SCOPE; 28 pages, 25 pixel-identical baseline pages, 3 changed pages directly inspected",
+  "real_evidence": "NOT_PROVIDED",
+  "formal_acceptance": "NOT_GRANTED",
+  "promotion": "NOT_PROMOTED",
+  "remote_sync": "PENDING"
+}

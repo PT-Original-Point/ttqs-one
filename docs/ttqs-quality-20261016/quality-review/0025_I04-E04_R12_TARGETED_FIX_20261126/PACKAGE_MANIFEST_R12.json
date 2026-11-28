@@ -1,0 +1,164 @@
+{
+  "schema": "TTQS_ONE_CANDIDATE_DELIVERY_PACKAGE_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0025",
+  "requirement_id": "I04-E04",
+  "candidate_state": "CANDIDATE_SAMPLE_SYNTHETIC",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "NOT_GRANTED",
+  "candidate_path": "candidate/0025_I04-E04_R12_TARGETED_FIX_CANDIDATE.docx",
+  "candidate_sha256": "2a6eae131aeff27275adc2e6fa851e05b1cdf2b7688b1da96cd79c27a88f3712",
+  "candidate_bytes": 72213,
+  "base_candidate_sha256": "7fe989df84e5d4e5b1163617aa2e470e2ba497b7aac7e0414dc1a55dd0625fd3",
+  "requirement_sources": [
+    {
+      "sha256": "59d85e77c79218b6a885cdf2ebd79cd606494c8f62f3e8b101dda8983badd8af",
+      "path": "source/SOURCE_BINDING_R01.json"
+    },
+    {
+      "sha256": "424b751eaf0c8654c63962b887ebe5df3a4f98ca8100db3c702ad83ae1e5b77f",
+      "path": "source/BLUEPRINT_ROW_0025.json"
+    },
+    {
+      "sha256": "5921c97fd05f062cd31e9c78ad29bf4f83045d244af83076524c9b50207d46e5",
+      "path": "source/CROSSWALK_ROW_I04-E04.csv"
+    }
+  ],
+  "qa": {
+    "semantic": {
+      "delta_review": "review/delta/W2_REVIEW_RECEIPT.json",
+      "actual_w2_served_model": "UNKNOWN",
+      "requested_w2_model": "gemini-3.8-flash-high",
+      "status": "PASS_SCOPED_REPAIR_CHAIN",
+      "base_full_review": "review/base/W1_FULL_REVIEW_7FE989_NEMOTRON.stdout.jsonl",
+      "candidate_sha256": "2a6eae131aeff27275adc2e6fa851e05b1cdf2b7688b1da96cd79c27a88f3712",
+      "review_scope": "All five baseline blocking findings and their cross-reference/replacement-register consequences; baseline review reports only these five blocking defects."
+    },
+    "effective_font": {
+      "status": "PASS",
+      "table_floor_pt": 9.5,
+      "candidate_sha256": "2a6eae131aeff27275adc2e6fa851e05b1cdf2b7688b1da96cd79c27a88f3712",
+      "receipt": "qa/WORD_EFFECTIVE_FONT_QA_R12.json",
+      "body_floor_pt": 10.5
+    },
+    "technical": {
+      "status": "PASS",
+      "candidate_sha256": "2a6eae131aeff27275adc2e6fa851e05b1cdf2b7688b1da96cd79c27a88f3712",
+      "receipt": "qa/QA_TECHNICAL_STATIC_R12.json"
+    },
+    "visual": {
+      "status": "PASS",
+      "pages": 29,
+      "candidate_sha256": "2a6eae131aeff27275adc2e6fa851e05b1cdf2b7688b1da96cd79c27a88f3712",
+      "receipt": "qa/QA_VISUAL_R12_EXACT_SHA.json"
+    }
+  },
+  "visual_pdf_local_only": {
+    "pages": 29,
+    "path": "candidate_R12_TARGETED_FIX/rendered_word_com_r12/0025_R12_candidate.pdf",
+    "uploaded": false,
+    "sha256": "7ae51fa19a6a1cbace09ce5ff90609b3d963aa92d2ccd87c10017944f8d04adf"
+  },
+  "artifacts": [
+    {
+      "path": "candidate/0025_I04-E04_R12_TARGETED_FIX_CANDIDATE.docx",
+      "bytes": 72213,
+      "sha256": "2a6eae131aeff27275adc2e6fa851e05b1cdf2b7688b1da96cd79c27a88f3712"
+    },
+    {
+      "path": "source/SOURCE_BINDING_R01.json",
+      "bytes": 2167,
+      "sha256": "59d85e77c79218b6a885cdf2ebd79cd606494c8f62f3e8b101dda8983badd8af"
+    },
+    {
+      "path": "source/BLUEPRINT_ROW_0025.json",
+      "bytes": 7210,
+      "sha256": "424b751eaf0c8654c63962b887ebe5df3a4f98ca8100db3c702ad83ae1e5b77f"
+    },
+    {
+      "path": "source/CROSSWALK_ROW_I04-E04.csv",
+      "bytes": 127,
+      "sha256": "5921c97fd05f062cd31e9c78ad29bf4f83045d244af83076524c9b50207d46e5"
+    },
+    {
+      "path": "qa/QA_TECHNICAL_STATIC_R12.json",
+      "bytes": 1284,
+      "sha256": "24428e265acf9c11954ae71e7a95cd7d13f65afd71aa2fba90ecc0b2e1c85b4a"
+    },
+    {
+      "path": "qa/WORD_RENDER_R12.json",
+      "bytes": 1679,
+      "sha256": "73bfb8d00f24b522261ab6986487d2a55d34ed26bff2c32ca438f350d49c7f5f"
+    },
+    {
+      "path": "qa/QA_VISUAL_R12_EXACT_SHA.json",
+      "bytes": 1696,
+      "sha256": "6f91ce4c56e314b9908c3f51a22d4748580706bea38f11148b77c8cd8aa6f2fc"
+    },
+    {
+      "path": "qa/WORD_EFFECTIVE_FONT_QA_R12.json",
+      "bytes": 1153,
+      "sha256": "41772fd29f122c7edf4e69721d0621c6db99cb3838fb4893a11b1e25981d1e15"
+    },
+    {
+      "path": "qa/REPAIR_MANIFEST_R12.json",
+      "bytes": 1867,
+      "sha256": "cdca1293af793fd8f4a9f8afe495d29670e507a0ab78f0d2ec5fed03b937972c"
+    },
+    {
+      "path": "review/base/W1_FULL_REVIEW_7FE989_NEMOTRON.execution.json",
+      "bytes": 1298,
+      "sha256": "1f655553286adab5415ab5fcf3a8ed402babe736cc51aca498ad64b27edb0ec4"
+    },
+    {
+      "path": "review/base/W1_FULL_REVIEW_7FE989_NEMOTRON.stdout.jsonl",
+      "bytes": 6922,
+      "sha256": "234fc50ad0af6e65b296e7120b2cb016c36e598898275641830d604a309f05df"
+    },
+    {
+      "path": "review/delta/W2_REVIEW_PACKAGE.md",
+      "bytes": 17543,
+      "sha256": "aa289375bcb62526d80e277de2dccd86ff25d46ae4404bf381362d644486cce8"
+    },
+    {
+      "path": "review/delta/W2_RESPONSE.md",
+      "bytes": 8930,
+      "sha256": "466e5455804fa01a9d2de84a8f9cb002d6e586c6942b7662b894f53cf1408298"
+    },
+    {
+      "path": "review/delta/W2_REVIEW_RECEIPT.json",
+      "bytes": 1126,
+      "sha256": "b7f577e403ba8fc04efd09fcdeabca56a18e22554afc601ad89f48f7dc38e3cf"
+    },
+    {
+      "path": "review/delta/W2_DISPATCH_TERMINAL.json",
+      "bytes": 749,
+      "sha256": "714acc539fe9fd3610543fcc8db2061abecd312ed6721f6417967fabe1946509"
+    },
+    {
+      "path": "review/delta/W2_STDOUT.json",
+      "bytes": 9316,
+      "sha256": "d2f57fa1fce18a1ad8f0e526027aaefba98f0846dd34dd6cc97dbd5b4074c044"
+    },
+    {
+      "path": "review/delta/W2_STDERR.txt",
+      "bytes": 78,
+      "sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459"
+    }
+  ],
+  "local_only_evidence": [
+    {
+      "path": "candidate/0025_R11_BASE_CANDIDATE.docx",
+      "bytes": 71097,
+      "sha256": "7fe989df84e5d4e5b1163617aa2e470e2ba497b7aac7e0414dc1a55dd0625fd3",
+      "reason": "Local source evidence retained for provenance; excluded from PR upload because current candidate and exact review outcome receipts are included."
+    },
+    {
+      "path": "review/base/W1_FULL_REVIEW_PACKET_7FE989.md",
+      "bytes": 55281,
+      "sha256": "c8cb460b2d01e7f2785f95809c8c89783ab9a4a8b5c7974fcf63a4a92a804ef1",
+      "reason": "Local source evidence retained for provenance; excluded from PR upload because current candidate and exact review outcome receipts are included."
+    }
+  ],
+  "remote_package_root": "docs/ttqs-quality-20261016/quality-review/0025_I04-E04_R12_TARGETED_FIX_20261126/"
+}

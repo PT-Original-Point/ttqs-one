@@ -1,0 +1,65 @@
+{
+  "schema": "TTQS_ONE_GITHUB_WORKER_EVIDENCE_READBACK_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0139",
+  "requirement_id": "I19-E29",
+  "candidate": "R07",
+  "candidate_sha256": "9e9f65b962f2a6b0e3b1a14c8d4615b6a70c98b140d672943adb5de636843241",
+  "repository": "PT-Original-Point/ttqs-one",
+  "readback_ref": "1a04144063b499090c6aa6637e4388d5f1442c64",
+  "candidate_readback": {
+    "path": "docs/ttqs-quality-20261016/quality-review/0139_I19-E29_R07_20261027/candidate/0139_R07.docx",
+    "bytes": 116366,
+    "sha256": "9e9f65b962f2a6b0e3b1a14c8d4615b6a70c98b140d672943adb5de636843241",
+    "github_blob_sha1": "50a84997d03b84b82ac5ba7b59af2b982d02b020",
+    "raw_bytes_match": true
+  },
+  "worker_response": {
+    "path": "worker/W1_R07_OPENCODE_LONGCAT_20261119/W1_REVIEW_RESPONSE_R07.json",
+    "bytes": 4451,
+    "sha256": "7587290c9cddee0fe2d2877f2c922021e4e73d76aa066a4f91e5a4aa49813bf9",
+    "github_blob_sha1": "88a043b75805d403fe93b21e4e108ea88347e1f8",
+    "raw_bytes_match": true
+  },
+  "dispatch_receipt": {
+    "path": "worker/W1_R07_OPENCODE_LONGCAT_20261119/W1_DISPATCH_RECEIPT_R07.json",
+    "bytes": 2189,
+    "sha256": "63f2c1126767f155afe0d3e2eb6ddd3024b4c0881c8ed62577f431c3635212bf",
+    "github_blob_sha1": "40256461c6d22e616bf0bc8504840557faff2dcb",
+    "raw_bytes_match": true
+  },
+  "stdout": {
+    "path": "worker/W1_R07_OPENCODE_LONGCAT_20261119/W1_OPENCODE_STDOUT_R07.jsonl",
+    "local_bytes": 5503,
+    "local_sha256": "37c37728a09670be97f9bcbf9bb567833b2efafeeab69d2c847a6eb0f464fb58",
+    "github_bytes": 5500,
+    "github_sha256": "4afcbef42295c9ce9b8977677e889d957cda87fa27ba74a3622ae598b3a1a7b2",
+    "github_blob_sha1": "d75de38840f13604c0b12c8667eb64fb9fad707b",
+    "raw_bytes_match": false,
+    "note": "Git text line-ending normalization removed 3 CR bytes; terminal review response and step_finish are retained."
+  },
+  "stderr": {
+    "path": "worker/W1_R07_OPENCODE_LONGCAT_20261119/W1_OPENCODE_STDERR_R07.txt",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw_bytes_match": true
+  },
+  "input_packet": {
+    "path": "worker/W1_R07_OPENCODE_LONGCAT_20261119/W1_REVIEW_PACKET_R07.md",
+    "local_bytes": 97437,
+    "local_sha256": "f7441d65f95af975bb8a54e8dcc659666ae582028531415c71d29dee62f94244",
+    "github_bytes": 97085,
+    "github_sha256": "50dca338c568fb43fdc65d19af6aef4ff879c09c375985aa3d6990f2e07ec502",
+    "github_blob_sha1": "9bb41702357fb186d31eccb6e237b036beb94a9e",
+    "raw_bytes_match": false,
+    "note": "Git text line-ending normalization changed the stored packet representation; dispatch receipt binds the original local packet SHA."
+  },
+  "quality": [
+    "technical PASS exact SHA",
+    "visual PASS exact SHA on existing receipt",
+    "W1 independent semantic PASS exact SHA"
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "observed_at_tpe": "2026-11-19T02:44:28.621+08:00"
+}

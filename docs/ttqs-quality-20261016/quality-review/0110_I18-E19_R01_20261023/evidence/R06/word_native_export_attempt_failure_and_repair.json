@@ -1,0 +1,13 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0110",
+  "work_id": "0110-WORD-EXPORT-R06-ATTEMPT-01",
+  "time": "UNKNOWN exact timestamp; this occurred immediately before the successful R06 export in the same work stage.",
+  "status": "FAILED_REPAIRED",
+  "error": "Word COM ExportAsFixedFormat returned Value does not fall within the expected range.",
+  "cause": "The initial positional argument list omitted the export Item enum, shifting later arguments.",
+  "impact": "No PDF artifact was created; R06 DOCX bytes were unchanged.",
+  "repair": "Corrected argument order and supplied wdExportDocumentContent=0 plus the full 1..26 page range.",
+  "verified_recovery": "Word 16.0 hidden export succeeded; 26-page A4 PDF SHA-256 8a620d5b03fbec1be6cddbcf4b98b41a528b3c0e680448e4d38d656c19d7ad0d",
+  "retry_policy": "One correction after identifying changed call arguments; no repeated identical call."
+}

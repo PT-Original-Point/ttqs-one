@@ -1,0 +1,92 @@
+{
+  "schema": "TTQS_ONE_CANDIDATE_PACKAGE_R07_V1",
+  "doc_id": "0027",
+  "requirement_id": "I05-E01",
+  "status": "CANDIDATE_EXACT_SHA_QUALIFIED",
+  "candidate": {
+    "path": "candidate/0027_I05-E01_CANDIDATE_R07_TABLE25_COMPLETE.docx",
+    "sha256": "f070b4f00ac7e1f57c2206edc62b39612fe6de49578ba0b90f0a89288aafa248",
+    "bytes": 86183,
+    "parent_sha256": "f634f74e201bda2015f946773aeed10fa9ad10128fb08b18939dc4673d8ddd68"
+  },
+  "source": {
+    "official_source_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "official_locator": "印刷第2頁，指標5，右欄具名項目1（I05-E01）",
+    "source_packet_sha256": "534337566d0d4b8a7ecd8b6a3b9ef6c7b8ce70401e73d714a65f02860803772e",
+    "source_packet_path": "source/ISOLATED_0027_PRIMARY_SOURCE_BOUND.md",
+    "unique_blueprint_sha256": "a9e9fc1681b7919f9a76d63f1839abb7e2bbd5fd4c53d613987516f93005f9f7",
+    "unique_blueprint_path": "source/ISOLATED_0027_UNIQUE_BLUEPRINT_SOURCE_BOUND.md",
+    "blueprint_current_jsonl_sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+    "blueprint_0027_row_sha256": "5bb72d3aab2cbb36f22341ad792b96aa8a1c076c8242b6f8b8cd880032c5bfe1",
+    "register_path": "source/SYNTHETIC_REPLACEMENT_REGISTER_12COL_R07.csv",
+    "register_sha256": "757a5bf855f042ca132592b9ba9cac7607e44f3ba2f99664fcc0fdfcca67309a",
+    "register_data_rows": 113
+  },
+  "table25": {
+    "data_rows": 113,
+    "previous_rows_preserved": 102,
+    "rows_appended": 11,
+    "appended_fact_ids": [
+      "SYN-0027-DEM01",
+      "SYN-0027-DEM02",
+      "SYN-0027-DEM03",
+      "SYN-0027-G02-YEARLY-REF",
+      "SYN-0027-G05-YEARLY-REF",
+      "SYN-0027-K06-ACTUAL-CUM-20270131",
+      "SYN-0027-K06-ACTUAL-CUM-20270228",
+      "SYN-0027-K06-PLAN-CUM-20270131",
+      "SYN-0027-K06-PLAN-CUM-20270228",
+      "SYN-0027-K06-VARIANCE-CUM-20270228",
+      "SYN-0027-K06-VARIANCE-OVERLAP-ERROR"
+    ],
+    "all_113_match_exact_six_field_projection_of_sidecar": true,
+    "other_tables_or_body_text_changed": false,
+    "only_changed_docx_part": "word/document.xml",
+    "original_facts_and_values_changed": false
+  },
+  "qa": {
+    "static_status": "PASS_STATIC",
+    "static_receipt": "qa/STATIC_GATE.json",
+    "native_word_status": "PASS",
+    "native_word_pages": 40,
+    "native_word_pdf_path": "qa/WORD_NATIVE_40P.pdf",
+    "native_word_pdf_sha256": "357abf27cf9f6b3c5981fd44a09ad93357db5bb771b9ae1b86d04543224050c5",
+    "visual_status": "PASS_EXACT_SHA",
+    "visual_pages": 40,
+    "contact_sheets": 4,
+    "independently_inspected_full_size_pages": [
+      38,
+      39,
+      40
+    ],
+    "semantic_status": "PASS_EXACT_SHA",
+    "dot_receipt": "qa/DOT_EXACT_ACCEPTANCE.json",
+    "dot_receipt_sha256": "91ffe96b9ab18e675a0580c36eab9a2551ed6aed1709d63f756aa8e30cad3697"
+  },
+  "acceptance": {
+    "candidate_quality": "PASS_EXACT_SHA_SAMPLE_CANDIDATE",
+    "sample_synthetic": true,
+    "real_data": "UNKNOWN/HOLD",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "historical_notes": [
+    "歷史 R02 遠端候選位元組不覆寫。",
+    "Dot 核准限本候選 SHA 及 SAMPLE/CANDIDATE 交付；不代表 REAL 或正式接受。",
+    "qa/WORD_VISUAL_PREFLIGHT_PRE_DOT.json 是 Dot 最終裁決前的歷史預檢，最後視覺裁決以 DOT_EXACT_ACCEPTANCE.json 為準。",
+    "source/DOT_0027_PRIMARY_SOURCE_BLUEPRINT_EXACT_20261127.json 僅為來源／Blueprint 綁定收據；其自身候選欄位不作 R07 文件 QA。"
+  ],
+  "github_raw_byte_readback": {
+    "status": "VERIFIED_RAW_BYTE_READBACK",
+    "repository": "PT-Original-Point/ttqs-one",
+    "ref": "refs/pull/92/head",
+    "verified_immutable_commit": "6d20c1c389f29f4c370b8e295cde352eac7f8e96",
+    "method": "Fetched the PR ref and compared Git blob bytes with local package bytes.",
+    "package_files_exact_at_verified_commit": 59,
+    "candidate_path": "docs/ttqs-quality-20261016/quality-review/0027_R122_WORKER_DELIVERY_20261119/R07_TABLE25_COMPLETION_20261128/candidate/0027_I05-E01_CANDIDATE_R07_TABLE25_COMPLETE.docx",
+    "candidate_bytes": 86183,
+    "candidate_sha256": "f070b4f00ac7e1f57c2206edc62b39612fe6de49578ba0b90f0a89288aafa248",
+    "candidate_git_blob_sha1": "bd9f474570b3ab8055f9b9b5f470cff533db96c8",
+    "register_sha256": "757a5bf855f042ca132592b9ba9cac7607e44f3ba2f99664fcc0fdfcca67309a",
+    "dot_exact_approval_sha256": "91ffe96b9ab18e675a0580c36eab9a2551ed6aed1709d63f756aa8e30cad3697"
+  }
+}

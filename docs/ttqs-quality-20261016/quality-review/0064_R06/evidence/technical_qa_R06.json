@@ -1,0 +1,75 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0064",
+  "requirement_id": "I14-E05",
+  "official_checkbox_serial": "069",
+  "candidate_revision": "R06",
+  "candidate_sha256": "f83eeda42589da66c23918d522ad983178a252da9b6dd2240b725e9c9cfb50a1",
+  "source_candidate_revision": "R05",
+  "source_candidate_sha256": "54888e13f954478051a49839d8b67ff845992c72811e41e09d90045e512c69e1",
+  "checks": [
+    {
+      "check": "docx_zip_integrity",
+      "pass": true,
+      "detail": "20 OOXML package members; CRC test passed."
+    },
+    {
+      "check": "official_mapping",
+      "pass": true,
+      "detail": "DOCX 0064 / I14-E05 / official checkbox 069 present."
+    },
+    {
+      "check": "internal_revision",
+      "pass": true,
+      "detail": "Document-control version field reads R06."
+    },
+    {
+      "check": "text_change_scope",
+      "pass": true,
+      "detail": "Ordered text is identical to R05 except document-control revision label R05 -> R06."
+    },
+    {
+      "check": "ooxml_change_scope",
+      "pass": true,
+      "detail": "Only word/document.xml differs from R05; styles.xml and run font/style signatures unchanged."
+    },
+    {
+      "check": "table_inventory",
+      "pass": true,
+      "detail": "22 tables; the timed table contains 24 paired observations with T01-T12 represented for two operators."
+    },
+    {
+      "check": "repeating_header_keep_next",
+      "pass": true,
+      "detail": "All six first-row header cell paragraphs have keepNext; repeat-header row marker retained."
+    },
+    {
+      "check": "paired_calculations",
+      "pass": true,
+      "detail": "Folder n24 sum2442 mean101.75 median95.5 P90 rank22=137 max156; index sum783 mean32.625 median28.5 P90 rank22=47 max62; HIT+safe HOLD 22/24 and 24/24; saving 1659s total, 69.125s/task, 67.9361%."
+    },
+    {
+      "check": "render_page_count",
+      "pass": true,
+      "detail": "Microsoft Word render has 28 pages and 28 page images."
+    },
+    {
+      "check": "sample_real_boundary",
+      "pass": true,
+      "detail": "SAMPLE/SYNTHETIC and 未實測 markers are present; REAL evidence remains HOLD."
+    },
+    {
+      "check": "font_floor_inherited",
+      "pass": true,
+      "detail": "R05 exact-candidate technical receipt confirms body >=10.5 pt and tables >=9.5 pt; R06 styles.xml and run font/style signatures are unchanged."
+    }
+  ],
+  "technical_result": "PASS",
+  "semantic_review": "PASS; exact-SHA receipt: review/semantic_review_R06_receipt.json",
+  "visual_review": "PASS_LAYOUT_TARGETED_REPAIR_VERIFIED",
+  "formal_acceptance": "NOT_GRANTED",
+  "synthetic_boundary": "SAMPLE_SYNTHETIC_ONLY",
+  "generated_local": "2026-10-19T04:34:24.211644+08:00",
+  "semantic_review_sha256": "e5335b95d468a60c641a0946503d4bef76c92dae8df8410bc639f3506ec0f19b",
+  "updated_local": "2026-10-19T04:35:57.272911+08:00"
+}

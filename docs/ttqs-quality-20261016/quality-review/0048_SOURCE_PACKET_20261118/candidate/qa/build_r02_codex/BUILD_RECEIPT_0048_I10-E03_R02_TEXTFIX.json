@@ -1,0 +1,60 @@
+{
+  "receipt_type": "TTQS_ONE_DOCX_BUILD_RECEIPT",
+  "work_id": "0048-I10-E03-BUILD-R02-TEXTFIX",
+  "doc_id": "0048",
+  "requirement_id": "I10-E03",
+  "revision": "R02_TEXTFIX",
+  "status": "CANDIDATE_BUILD_COMPLETE_DETERMINISTIC_CHECKS_ONLY",
+  "built_at_tpe": "2026-11-18T07:05:47.951527+08:00",
+  "inputs": {
+    "adopted_worker_body": {
+      "path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0048_SOURCE_PACKET_20261118\\scoped_repair_w1_longcat_r02\\WORKER_BODY_R02_TYPOFIX.md",
+      "sha256": "54C1442EEFCF624FFBC9BC35238CCFDE72C79520FC14E956EF165CA25919C798",
+      "bytes": 20103
+    },
+    "raw_worker_r02": {
+      "path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0048_SOURCE_PACKET_20261118\\scoped_repair_w1_longcat_r02\\WORKER_BODY_R02.md",
+      "sha256": "070A4168D744F6991C0D1DDE447D9E4F96B26158F74602EF110DFAF26125B1F6",
+      "bytes": 20103
+    },
+    "official_requirement_extract": {
+      "path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0048_SOURCE_PACKET_20261118\\OFFICIAL_REQUIREMENT_EXTRACT.md",
+      "sha256": "99B01A7B4A928731E0D00A9A27B07ACE36B8BD3AE1E4832C26791935A234AAD2",
+      "bytes": 1163
+    },
+    "unique_blueprint_row": {
+      "path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0048_SOURCE_PACKET_20261118\\UNIQUE_BLUEPRINT_ROW.json",
+      "sha256": "8B258F9125F2B1209629D0356539537E00C322073739EC65D05C58590847EF72",
+      "bytes": 7618
+    },
+    "source_packet_receipt": {
+      "path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0048_SOURCE_PACKET_20261118\\SOURCE_PACKET_RECEIPT.json",
+      "sha256": "AA4668AB3F2E1931E30176A655A2990ED7B928B53E74D7D74ED4F3568422C448",
+      "bytes": 2283
+    }
+  },
+  "outputs": {
+    "docx": {
+      "path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0048_SOURCE_PACKET_20261118\\candidate\\0048_I10-E03_R02_SCOPED_REPAIR_TEXTFIX.docx",
+      "sha256": "D05F229A85903B2BF52C49D19F4926FCA872D69E2737833FCDC75F07FD897BD2",
+      "bytes": 50972
+    },
+    "builder_script": {
+      "path": "E:\\tqrepo\\docs\\ttqs-quality-20261016\\quality-review\\0048_SOURCE_PACKET_20261118\\candidate\\qa\\build_r02_codex\\build_0048_docx_r02_textfix.py",
+      "sha256": "E53C9C9E9701C8CEE505054B894E013E88B0F4DB2FBC4146FD5BC8BDB84A8435",
+      "bytes": 8458
+    }
+  },
+  "builder": {
+    "python": "3.15.2",
+    "python_docx": "1.2.0",
+    "orientation": "A4 landscape",
+    "body_font_pt": 11,
+    "table_font_pt": 9.5,
+    "table_headers_repeat": true,
+    "table_rows_cant_split": true,
+    "markdown_blocks_preserved": true
+  },
+  "synthetic_boundary": "SAMPLE/SYNTHETIC; no real association facts asserted",
+  "formal_acceptance": "NOT_CLAIMED"
+}

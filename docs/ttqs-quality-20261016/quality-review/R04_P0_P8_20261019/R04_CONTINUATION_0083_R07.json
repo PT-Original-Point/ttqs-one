@@ -1,0 +1,51 @@
+{
+  "schema": "TTQS_ONE_0083_R07_CANDIDATE_CONTINUATION.v1",
+  "project_id": "TTQS_ONE",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "pr": 92,
+  "doc_id": "0083",
+  "requirement_id": "I17C-E02",
+  "official_checkbox": "089",
+  "candidate_revision": "R07",
+  "candidate_docx_sha256": "63699ceb8dee08bea7c6ea437ae811670e15d021264b0f253b61ae2bdc4d1d61",
+  "body_sha256": "4f150eb598cea245971f606deb8238a24d191517fb8b06b88545fa45414b9dd0",
+  "blueprint_sha256": "21f76376621c5dd22d002a62202f41ea7335bbf872a965b0bbf8fb86955d0178",
+  "source_packet_sha256": "2c2f2947961abd93c0b36ce1269519e8db9c9e1c4e352d5f15aa71c5c5450783",
+  "technical_status": "TECHNICAL_PASS; VISUAL_PASS; SEMANTIC_PASS; CANDIDATE_NOT_FORMALLY_ACCEPTED; REAL_UNKNOWN_HOLD",
+  "visual_status": "PASS_LAYOUT_ONLY",
+  "visual_review_receipt_sha256": "dbae7e1aea7f2ea5ac43fac9f221353ab1488b6430b11ad91a86c7a117b7b1c9",
+  "semantic_review": {
+    "route": "OpenCode CLI v2.0.29",
+    "model": "opencode/mimo-v2.6-flash-free",
+    "session_id": "ses_eac29974affeJdoWA4zZ0n8pcb",
+    "client_exit_code": -1,
+    "tokens_reported_by_session": {
+      "input": 171195,
+      "output": 9316,
+      "reasoning": 17893,
+      "cache": {
+        "read": 2503936,
+        "write": 0
+      }
+    },
+    "assistant_finish": "stop",
+    "receipt_sha256": "310f11181be5c42e03a858d06851ff18ff6c372fbe3e876a1ecc81aab5a074fc",
+    "receipt_path": "docs/ttqs-quality-20261016/quality-review/0083_R01/evidence/semantic_review_receipt_R07.json",
+    "idle_outcome": "succeeded",
+    "last_session_updated_ms": 1792409195447,
+    "session_outcome": "succeeded",
+    "partial_checks": "TERMINAL_VERIFIED: exact-SHA PASS response emitted by the named persistent OpenCode session; final finish=stop and following idle=succeeded. Full scope and limitations are in the original final response and semantic receipt.",
+    "session_export_sha256_local_only": "66a377091d4790c8f477f70aa81b2fbdf68f5edd464440aed35d8008f587d3ef",
+    "review_response_sha256": "b521d007f1fa905f8f524f0b9aa19c2279cde961f9720451cb8f0c60c5552bf6",
+    "status": "PASS",
+    "review_response_path": "docs/ttqs-quality-20261016/quality-review/0083_R01/review/independent_semantic_review_R07.md",
+    "final_message_id": "msg_153e7531f001jKyNnrJ6d0EeQg",
+    "client_note": "The CLI client exited -1 after prolonged wait, but the background session remained active and subsequently completed successfully. No duplicate review was launched."
+  },
+  "candidate_only": true,
+  "real_evidence": "UNKNOWN/HOLD",
+  "formal_acceptance": "NOT_GRANTED",
+  "next_action": "Inspect live 0084 writer/session and current READY queue; do not duplicate an active Writer. Continue the next eligible document after reconciling its current candidate and QA.",
+  "updated_local": "2026-10-19T19:29:56.8068764+08:00"
+}

@@ -1,0 +1,62 @@
+{
+  "work_id": "TTQS_ONE_0022_I04-E01_SEMANTIC_REVIEW_R02_20261124",
+  "doc_id": "0022",
+  "requirement_id": "I04-E01",
+  "candidate_sha256": "A3EC4E4D777C37AFF0E8E5EFC454467653904F8608B19F1FB25C340932378831",
+  "candidate_docx_sha256": "A3EC4E4D777C37AFF0E8E5EFC454467653904F8608B19F1FB25C340932378831",
+  "candidate_unchanged_during_review": true,
+  "reviewer_context": "Independent OpenCode W1 semantic reviewer, session ses_df5ec0377ffe4XJLcMF27Gplu6; complete extracted paragraphs and all tables plus both registers. Coordinator hashes the source DOCX and binds extraction packet to that hash; reviewer notes it did not independently open/hash DOCX bytes.",
+  "requested_model": "opencode/deepseek-v4.1-flash-free",
+  "actual_model_from_session_export": "opencode/deepseek-v4.1-flash-free",
+  "provider_served_model": "UNKNOWN",
+  "model_status": "OpenCode session export confirms CLI provider/model metadata; upstream served identity UNKNOWN.",
+  "review_model": "opencode/deepseek-v4.1-flash-free",
+  "review_provider": "OpenCode CLI session; upstream provider identity UNKNOWN",
+  "session_id": "ses_df5ec0377ffe4XJLcMF27Gplu6",
+  "session_export_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORKTREES\\DELIVERY_0022_R02_20261124\\docs\\ttqs-quality-20261016\\quality-review\\0022_I04-E01_R02_20261124\\worker\\W1\\W1_SESSION_EXPORT_R02.json",
+  "session_export_sha256": "2B6722763FE2A1AC8FB062C04F4121C4E2D2719DF6DE407FB4503A7A196A7973",
+  "raw_stdout_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORKTREES\\DELIVERY_0022_R02_20261124\\docs\\ttqs-quality-20261016\\quality-review\\0022_I04-E01_R02_20261124\\worker\\W1\\W1_RAW_STDOUT_R02.jsonl",
+  "raw_stdout_sha256": "AEF6A58E2F1E0581FCE1EA39BF5C6740F38F764B77676299B519EA17D6CF7CB4",
+  "response_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORKTREES\\DELIVERY_0022_R02_20261124\\docs\\ttqs-quality-20261016\\quality-review\\0022_I04-E01_R02_20261124\\worker\\W1\\W1_RESPONSE_R02.json",
+  "response_sha256": "E4DCD4B3DE73AAFE50F3D588896CAC2173CE5EEA1F09347B3900E4D9B9C69CAF",
+  "result": "PASS",
+  "semantic_status": "PASS",
+  "scope_reviewed": [
+    "full extracted body and all 25 tables",
+    "112-row SAMPLE/SYNTHETIC replacement register",
+    "39-row cross-calculation register",
+    "official requirement fit and analysis-report genre",
+    "scope separation / negative neighbors",
+    "operational usability",
+    "arithmetic consistency and SAMPLE/REAL boundary",
+    "material placeholders / fabricated evidence"
+  ],
+  "findings": [],
+  "nonblocking_low_findings": [
+    {
+      "locator": "§7.2 逐步計算；附錄B C-31～C-34（input_fact_ids=SF-091;SF-092;SF-093）",
+      "note": "改善率計算列引用 SF-091／SF-092（成果門檻 80/100、4/5）作為輸入，但門檻並非前/後測觀測值；結果已正確標 N/A，故不影響結論。建議將輸入改指向前後測資料欄位或明確標為 NONE_FORMULA_ONLY，以免追溯被誤讀。"
+    },
+    {
+      "locator": "表22 與附錄A 的責任角色對照（如 SF-092「各 lead」vs register owner_role=SAMPLE_ROLE_APPROVER；SF-052～SF-059「APPROVER」vs register 各 lead）",
+      "note": "兩處 owner_role 指派不一致，屬追溯欄位表述差異；不影響任何數值或 SAMPLE 邊界。建議於下一版對齊，使表22 與替換清冊逐列同源。"
+    },
+    {
+      "locator": "Blueprint §D「要求與證據追溯表」對應位置（§2.1、表22、表23）",
+      "note": "要求與證據追溯資訊分散於 §2.1（原文／頁次／SHA／crosswalk）、表22（REAL 替換）、表23（附件索引）三處，未收斂為單一「原文→報告頁節/圖表→證據位置→覆核狀態」表。功能上可追溯，屬結構精簡建議。"
+    },
+    {
+      "locator": "§4 表（Q4、Q5 填答者為規劃小組）；§3.5 有效回覆 20 份（SF-112）",
+      "note": "Q4／Q5 由規劃小組填列而非受測者，且 20 份全數視為有效回覆為演練假設，兩者均已明確標示與限制說明；建議在表頭再加一列「非受測者題項」提示，降低讀者把 Q4/Q5 誤認為問卷自填題的機率。"
+    },
+    {
+      "locator": "全文用字（如 SF-068／SF-071／SF-074／SF-077「核定时數」、C-30「可重複参訓」）；分節轉換與附錄表續頁版面偏疏（依 deterministic context）",
+      "note": "少量異體字／錯字與版面留白屬外觀問題，不影響語意、可讀性或數值可重算性，列為非阻擋性建議。"
+    }
+  ],
+  "reviewer_caveat": "本審查僅基於封包所附之抽取正文、表格、替換清冊、交叉核算表與 deterministic/visual context，未開啟 DOCX 原始位元組、未重算檔案雜湊、未獨立驗證 PDF 或頁面影像，故不確認實際檔案與 candidate_sha256=A3EC4E4D… 的位元綁定；亦不宣稱模型身份或任何正式驗收、QA PASS、CURRENT 晉升或 REAL 採用。PASS 僅代表此 exact 封包內容在指定決策規則下無阻擋性語意缺陷。",
+  "process_exit_code": "UNKNOWN; terminal step_finish reason=stop recorded and process exit observed, caller did not retain exit code",
+  "fallback_allowed": false,
+  "formal_acceptance": "NOT_GRANTED",
+  "current_promotion": "NOT_ASSERTED"
+}

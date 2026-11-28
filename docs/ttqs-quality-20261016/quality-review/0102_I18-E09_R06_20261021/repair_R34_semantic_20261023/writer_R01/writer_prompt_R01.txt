@@ -1,0 +1,23 @@
+Produce a complete, exact, document-specific R34 manuscript patch for DOCX 0102 / I18-E09. This is a content/record repair, not formal acceptance. Use only the supplied candidate, source packet, unique Blueprint, and reviewer findings. Do not call tools, edit files, use shell/GUI/Computer Use, browse, or change any other document. Return Markdown only; include complete replacement text, not advice or placeholders. Keep non-target content unchanged and preserve all history.
+
+Resolve all ten findings. Most importantly:
+1) Rebuild §12.1 as a true one-row-per-case table with CASE-01 and CASE-02 rows (not fields as rows/cases as columns). Include all operational fields required by the Blueprint and align with forms/§§9–10.
+2) Audit EVERY F-0102 row in §12.2. Return a complete locator matrix with each existing fact_id and an exact stable locator (section + named case/field/form item); no stale or ambiguous table ordinal/row references. Ensure CASE-01 Form E is the correct table; CASE-02 Form E is correct; duplicate check is Form D #12; remove stale Table 34 coordinates; remove duplicated CASE-01/CASE-02 labels. If captions are needed, supply exact caption text.
+3) Make sample-case contrast explicit without claiming real consent: CASE-01 is a visibly SYNTHETIC simulated limited-consent/request-pending workflow, with actual outbound request NOT SENT and real contact still blocked pending real consent/authority. CASE-02 remains a distinct SAMPLE HOLD for absent consent and identity comparison. Clearly distinguish workflow state from real-world state.
+4) Set both `course_source` values to exactly `UNKNOWN`; put the synthetic/no-real-course-source explanation in notes.
+5) Replace CASE-01 “身分對不上” with “UNKNOWN／目前無法對照”; reserve mismatch for verified comparison.
+6) Record CASE-02 review on 2026-10-20 and set a future SAMPLE-only next review date (use 2026-10-30 consistently) with reason across Form A, Form F, §§10.2 and 12.1.
+7) Simplify Form F to the five core verification conditions: official source/award confirmation; identity match; training linkage; valid consent/disclosure authority; locator/preservation. For each Yes/No/Unknown state give the disposition: all Yes may proceed to VERIFIED_REAL only after real source review; any Unknown or remediable No => HOLD; confirmed forgery/contradiction or unauthorized disclosure => REJECT/STOP as applicable. Make it unambiguous this mirrors the gate, not an extra gate.
+8) Include valid consent and contact/disclosure authority in CASE-01's real-evidence missing-items/HOLD summary while retaining the sample-only pending-source contrast.
+9) Remove F-0102-036 from the one-fact-per-row factual register and place a separate alias note `DUPLICATE_OF=F-0102-016`; never put that marker in the training-link column. Preserve references coherently.
+10) Qualify the blanket no-fabrication statement: no real sending, third-party/organizer reply, signature, approval, award proof, or real achievement is invented; synthetic learner narrative is process simulation and marked SAMPLE/SYNTHETIC.
+
+OUTPUT FORMAT (all exact text):
+A. `PATCH_DECISIONS`: one row for each finding 1–10, with disposition and changed locations.
+B. `SECTION_12_1_REPLACEMENT`: full two-row case table plus field definitions/notes, with exact case IDs, states, owners, review dates, real-source requirements, synthetic fact IDs, consent/authority, source locator, verification/training-link states, and decision.
+C. `FORM_F_REPLACEMENT`: complete five-gate checklist fields, allowed states, decision consequences, sample CASE-01 and CASE-02 entries, and reviewer/owner/next date fields.
+D. `SECTION_12_2_FULL_LOCATOR_AUDIT`: every existing F-0102 fact_id once, current fact identity, exact corrected locator, case/value context; no omissions or invented IDs. Separate the duplicate alias outside the fact rows.
+E. `EXACT_TEXT_REPLACEMENTS`: concise exact replacements for all other affected occurrences in §§4, 7.3, 9.3–9.4, 10.1–10.2, 12.2, 14, and version history, including any Form A/D/E references that must change. Make cross-section strings/data consistent.
+F. `CONSISTENCY_CHECK`: list the exact repeated values that must match (dates, consent status, request state, case dispositions, source status, counts, arithmetic, synthetic boundary). Do not claim a repair has been applied or accepted.
+
+If the supplied content does not contain a locator or field value, mark it `NOT FOUND IN INPUT` and propose a stable locator instead of inventing. Do not assert any real consent, external request, organizer reply, identity match, award, association action, or signature. Sample values remain synthetic. Avoid broad rewrite and do not change the valid `0/2 = 0%` calculation or official requirement interpretation.

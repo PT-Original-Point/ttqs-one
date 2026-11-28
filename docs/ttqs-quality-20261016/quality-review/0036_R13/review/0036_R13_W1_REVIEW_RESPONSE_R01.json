@@ -1,0 +1,209 @@
+{
+  "review": "Independent exact-candidate semantic/usability review",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0036",
+  "requirement_id": "I07-E04",
+  "header_revision": "R13",
+  "candidate_sha256": "47D5760C227A3A7DC7B3BA7942E697FB7E5DD0A7B1856209F1CBB81296D987E3",
+  "verdict": "PASS",
+  "verdict_scope": "Text-level semantic and usability conformance for the exact SHA in the packet only. Not formal acceptance. No visual review performed or claimed.",
+  "verdict_basis": [
+    "Identity: CANDIDATE_SHA256 in the header matches candidate_sha256 in the R12 repair provenance (case-insensitive); the reviewed artifact is the SHA-labelled candidate, subject to the byte-count caveat in nonblocking findings.",
+    "Requirement fit: the official text '有課程設計進度表、課程規劃流程圖說明、訓練規劃書等佐證資料。' appears verbatim on the cover and in §1 with page-2 source locator; §5 (flowchart description), §6 (filled schedule), §7–§14 (training-plan content) directly respond to I07-E04.",
+    "Title-blind: with title/filename/number removed, §1, §5, §6 and §15 identify a course-design schedule / flowchart / training-plan work product; no reliance on the filename is needed.",
+    "Negative neighbors: §1 table '本件與相鄰要求的界線' rejects 0035/I07-E03 ('職能分析與方法改善') and 0037/I08-E01 ('近年訓練方案檢討') with concrete distinguishing fields, plus 需求調查; this satisfies the 'at least two wrong neighbors' test.",
+    "SAMPLE/REAL boundary: cover status box, §2/§4/§13/§14/§16 gates consistently maintain SAMPLE/草案 status when authority/resources are unverified; no fabricated signatures, approvals, real persons or outcomes are asserted; F068 official source is marked REAL_OFFICIAL_SOURCE_REFERENCE and explicitly not association evidence.",
+    "Arithmetic/record consistency visible in text: weighted totals 3.3/4.7/3.5 recompute from 40/30/20/10 weights; 15+40+10+45+10+40+30+20=210 with 190 instructional/assessment and 20 rest; coverage 4/4=100%; paired data 24/10=2.4, 40/10=4.0, 16/10=+1.6, 8/10=80%; gap percentages 40/50/60/30% and 40/30/20/50-point deltas are internally consistent.",
+    "Both targeted checks returned COMPLIANT (see targeted_checks)."
+  ],
+  "candidate_identity": {
+    "sha256_header": "47D5760C227A3A7DC7B3BA7942E697FB7E5DD0A7B1856209F1CBB81296D987E3",
+    "sha256_provenance": "47d5760c227a3a7dc7b3ba7942e697fb7e5dd0a7b1856209f1cbb81296d987e3",
+    "sha256_match_case_insensitive": true,
+    "byte_count_header": 229679,
+    "byte_count_provenance": 229608,
+    "byte_count_delta": 71,
+    "byte_count_resolved": false,
+    "note": "SHA is treated as the identity field; the byte-count conflict is logged as a nonblocking metadata finding because no file or tool inspection was permitted."
+  },
+  "targeted_checks": {
+    "new_real_replacement_area_label": {
+      "status": "COMPLIANT",
+      "locator": "Candidate text §15 交接紀錄欄位 / 交接紀錄欄位 paragraph",
+      "quoted_label": "【REAL 替換資料區｜僅供取得真實課程交接原件及授權後填入；未填不代表完成佐證】",
+      "supporting_quote": "未取得可核實原件或授權，不得勾選完成。本欄為空白格式，不代表協會已完成交接。",
+      "register_link": "F085 (§15 交接紀錄欄位／逐項空白紀錄格式; status SAMPLE/SYNTHETIC; blank format for future real handover)",
+      "reasoning": "The word REAL names a replacement target area, not a claim that the document or field contains real data. The label is bounded by '僅供…後填入' and '未填不代表完成佐證', the field is blank, and the following sentence repeats that no handover is complete. This does not violate prohibited_fabrication and does not turn the worked example into a REAL claim."
+    },
+    "unverified_sample_retention_wording": {
+      "status": "COMPLIANT",
+      "locators": [
+        "Candidate text §16 輸出交接與保存 / 保存年限句",
+        "Candidate text §4 step 8 判斷／例外",
+        "Candidate text §13 升級時限（SAMPLE／SYNTHETIC）段落",
+        "Candidate text §14 放行 row",
+        "Candidate text §16 替換清單 introduction"
+      ],
+      "quoted_wording": [
+        "本件只提供3年作為SAMPLE／SYNTHETIC示範提案，尚未經法規、契約及協會正式規範核實或核定，不是現行政策或法律結論。",
+        "權限或資源未知時維持 SAMPLE 草案",
+        "未核定前維持SAMPLE草案",
+        "流程停在 SAMPLE 草案；沒有公告、簽章或辦訓。",
+        "若某項未取得，保留未知狀態，不得用本示範值代填。"
+      ],
+      "register_link": "F064 (3-year retention as unverified SAMPLE proposal); F016 (final gate not verified, no announcement/scheduling)",
+      "reasoning": "Both the retention-period wording and the 'retain/hold SAMPLE draft when unverified' wording are explicitly marked unverified, non-policy and non-approval. They are consistent across §4, §5, §13, §14 and §16 and do not present a blank or future-state item as a completed evidence product; the fully filled SAMPLE worked example remains the deliverable."
+    }
+  },
+  "evidence_locators": [
+    {
+      "id": "E1",
+      "source": "Packet header",
+      "locator": "CANDIDATE_SHA256 / CANDIDATE_BYTES / REVISION fields",
+      "observation": "Exact SHA supplied; byte count conflicts with provenance (see N1); revision label conflicts with provenance title (see N2)."
+    },
+    {
+      "id": "E2",
+      "source": "Packet",
+      "locator": "## R12 repair provenance — changed_package_parts, unchanged_scope, visual_review, visual_iteration_note",
+      "observation": "Only word/media/image1.png changed; body, 38 tables, 85-fact register and calculations stated unchanged from R11; visual status recorded as PASS_LAYOUT_DELTA_ONLY_PAGE_5_DIRECT_INSPECTION_PENDING_FINAL_REVIEW_RECEIPT."
+    },
+    {
+      "id": "E3",
+      "source": "Packet",
+      "locator": "## Rendered changed page context — branch (2) description",
+      "observation": "Describes branch 2 as 'return to course-unit/resource scheduling', while provenance and body say course-matrix (see N3)."
+    },
+    {
+      "id": "E4",
+      "source": "Candidate text",
+      "locator": "Cover — 資料狀態 box; 30 秒使用摘要 table; 快速定位 table; official requirement line",
+      "observation": "First-page 30-second orientation, reader/use-time/output table, SAMPLE/SYNTHETIC status, verbatim official requirement and page-2 source locator present."
+    },
+    {
+      "id": "E5",
+      "source": "Candidate text",
+      "locator": "§1 本件與相鄰要求的界線 table",
+      "observation": "Three-row boundary table distinguishes 需求調查, 職能分析與方法改善 (0035/I07-E03) and 近年訓練方案檢討 (0037/I08-E01)."
+    },
+    {
+      "id": "E6",
+      "source": "Candidate text",
+      "locator": "§2 小型團隊的責任分離示例 RACI table and asterisk note",
+      "observation": "R/A/C/I roles with '星號表示必須以真實章程或授權資料核實，不能由此示範推定'."
+    },
+    {
+      "id": "E7",
+      "source": "Candidate text",
+      "locator": "§4 step 4, step 8; §5 paragraph; §13 覆蓋率低於100% row; §13 升級時限; §14 放行 row",
+      "observation": "Decision gates and unverified-SAMPLE hold wording are mutually consistent; target-without-assessment returns to 課程矩陣."
+    },
+    {
+      "id": "E8",
+      "source": "Candidate text",
+      "locator": "§6 課程設計進度表 — final row 2026-09-12",
+      "observation": "Final gate row: '未取得授權或原件' / '未通過；不得發布排課'; dates match register F007–F015."
+    },
+    {
+      "id": "E9",
+      "source": "Candidate text",
+      "locator": "§7 能力缺口表, denominator paragraph, weighting formula, plan comparison table, 合成方案結論 box",
+      "observation": "Four baselines 4/10, 5/10, 6/10, 3/10 with 8/10 targets and correct 40/30/20/50-point gaps; weights sum 100%; weighted totals recompute to 3.3/4.7/3.5; B selected only as SAMPLE recommendation."
+    },
+    {
+      "id": "E10",
+      "source": "Candidate text",
+      "locator": "§8 訓練目標與課程對應 table; 需求到證據的追溯矩陣; coverage paragraph",
+      "observation": "Four observable targets each with a direct assessment; 4/4=100% coverage explicitly limited to design completeness. Target-3 parenthetical omits column 5 in its enumeration (see N4)."
+    },
+    {
+      "id": "E11",
+      "source": "Candidate text",
+      "locator": "§9 課表 and 時數核對 line; §10 八欄練習表",
+      "observation": "210 = 190 + 20 recompute; sample date 2026-10-03 and tracking 2026-10-10 flagged SAMPLE and not actually scheduled; 10 people / 5 pairs consistent."
+    },
+    {
+      "id": "E12",
+      "source": "Candidate text",
+      "locator": "§11 五題測驗表, 服務紀錄實作量規 (items 1–8), 實作合格 box",
+      "observation": "Overall ≥4/5, target-1 specific 2/2 on Q1+Q4, rubric ≥7/8 with items 1, 7, 8 mandatory and non-offsettable — consistent with §7, §8 and F028–F031, F049–F050."
+    },
+    {
+      "id": "E13",
+      "source": "Candidate text",
+      "locator": "§12 配對資料表 U01–U10 and 指標計算表",
+      "observation": "All four displayed calculations recompute exactly from the ten rows; limitations state the figures are fictional and not real outcomes."
+    },
+    {
+      "id": "E14",
+      "source": "Candidate text",
+      "locator": "§15 REAL 替換資料區 label and closing sentence; §16 replacement list and retention sentence",
+      "observation": "Both targeted items present and properly caveated; see targeted_checks and F064/F085."
+    },
+    {
+      "id": "E15",
+      "source": "Candidate text",
+      "locator": "附表 A-1 four SAMPLE scenarios; 附表 A-2 答案錨點與評分表; 個人通過條件",
+      "observation": "Target-4 3/4 gate with key-error override is operationalised into four scorable items and an answer key; scoring sheet left blank for real use."
+    },
+    {
+      "id": "E16",
+      "source": "Packet",
+      "locator": "## Registered synthetic data — F001–F085; F016, F064, F068, F071–F075, F085",
+      "observation": "85 rows present as declared; key facts about the final gate, retention, official-source status, target-4 scenarios and blank real-replacement format are individually registered."
+    }
+  ],
+  "blockers": [],
+  "nonblocking_findings": [
+    {
+      "id": "N1",
+      "severity": "nonblocking",
+      "locator": "Header CANDIDATE_BYTES=229679 vs ## R12 repair provenance candidate_bytes=229608",
+      "finding": "Two different byte counts are attached to the same SHA (71-byte difference). SHA values match, so identity is not broken, but the metadata is internally inconsistent and could not be resolved without file inspection."
+    },
+    {
+      "id": "N2",
+      "severity": "nonblocking",
+      "locator": "Header REVISION=R13 vs section title '## R12 repair provenance' with source_revision R11 and candidate_sha256 equal to the header SHA",
+      "finding": "Revision labelling is inconsistent across the packet. The content of the provenance (source R11, candidate = header SHA) is usable, but the R12/R13 label should be reconciled in the packet metadata."
+    },
+    {
+      "id": "N3",
+      "severity": "nonblocking",
+      "locator": "## R12 repair provenance repairs[1].return_target='course-matrix design box' and route 'arrow enters course-matrix box' vs ## Rendered changed page context branch (2) 'return to course-unit/resource scheduling' vs candidate §5 '目標沒有評量時回到課程矩陣'",
+      "finding": "The destination of the second re-entry arrow is described three ways. Provenance and body text agree on course-matrix; the rendered-context paragraph says course-unit/resource scheduling. Visual confirmation is outside this review and was not performed."
+    },
+    {
+      "id": "N4",
+      "severity": "nonblocking",
+      "locator": "Candidate §8 目標3列: '完成一筆交接紀錄；第5–8欄完整，含下一步、責任角色、狀態及追蹤日期。' vs §10 八欄練習表 columns 5–8 and F030",
+      "finding": "The parenthetical enumerates 下一步／責任角色／狀態／追蹤日期 but omits column 5 '已採行動' while the gate requires columns 5–8 as 4/4. This is a wording imprecision, not an arithmetic or scoring discrepancy; the register and §10 table both support 4/4."
+    },
+    {
+      "id": "N5",
+      "severity": "nonblocking",
+      "locator": "Targeted label §15 and retention wording §16 vs ## R12 repair provenance unchanged_scope ('Body paragraphs ... unchanged from R11')",
+      "finding": "The two items the request calls 'new' are in body text that the provenance says was not changed by the R11→candidate repair. They are present and compliant in this candidate, but this packet alone does not establish that they were newly introduced in this revision."
+    },
+    {
+      "id": "N6",
+      "severity": "nonblocking",
+      "locator": "## R12 repair provenance visible_return_connector fields and visual_iteration_note",
+      "finding": "The two return connectors are documented as unlabeled elbow arrows after small labels were removed at Word-render scale. This is acceptable per the recorded rationale, but no reviewer visual confirmation is claimed here."
+    }
+  ],
+  "limitations": [
+    "No visual review was performed or claimed. Page-5 Figure 5-1 rendering and the actual presence/placement of the two return arrows were not inspected; the packet's own visual status remains PENDING_FINAL_REVIEW_RECEIPT.",
+    "No external tools, commands or file operations were used. SHA-256 and register SHA-256 were not recomputed, candidate_bytes was not verified against the binary, the DOCX was not opened, and font-size floors (body ≥10.5pt, tables ≥9.5pt) were not checked.",
+    "All arithmetic and cross-record consistency findings were recomputed manually from the extracted text in the packet, not from the source file.",
+    "The 85-row synthetic register was cross-checked against body locators for key items; the full register was not independently re-derived and its SHA-256 was not verified.",
+    "Official source locator (page 2, PDF_TEXT_EXACT_PAGE_MATCH) and negative-neighbor row SHAs are taken from the packet; the source PDF and Blueprint JSONL were not re-read.",
+    "This is not formal acceptance. Determination that any SAMPLE item may be upgraded to REAL, including third-party originals, signatures, approvals and retention policy, remains outside this review."
+  ],
+  "claims": {
+    "visual_review": false,
+    "formal_acceptance": false,
+    "file_edit": false,
+    "command_or_tool_use": false
+  }
+}

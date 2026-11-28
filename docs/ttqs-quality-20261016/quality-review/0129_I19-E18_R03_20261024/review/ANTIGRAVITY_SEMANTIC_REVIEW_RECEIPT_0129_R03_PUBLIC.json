@@ -1,0 +1,82 @@
+{
+  "work_id": "TTQS-0129-I19-E18-INDEPENDENT-SEMANTIC-REVIEW-R03",
+  "doc_id": "0129",
+  "requirement_id": "I19-E18",
+  "role": "REVIEWER",
+  "worker": "Antigravity CLI",
+  "requested_model": "gemini-3.8-flash-high",
+  "actual_serving_model": "UNKNOWN",
+  "docx_sha256": "73c856a6c31b9997e084b443f30bb0eadb1763320d2c7818626e40d431fc848a",
+  "input_text_sha256": "1b848e5c826763f09ecf6513ebbf6ea8b66c64b26e25413f9c131d6e1fcda757",
+  "blueprint_sha256": "c86b2e79c4953a0d12eda4fa0264325ffa0e073016522601ca9c6457c8988046",
+  "official_extract_sha256": "ba4939328d98e753da7e7fc0eb01cff284cdabeff1203fbb8c0df83802cf63e1",
+  "source_packet_sha256": "5d6ef2b80872a3ac80c8e72c43d51f2002c138cdf9e8025cf36061dcad9f3e72",
+  "neighbor_crosswalk_rows": [
+    {
+      "requirement_id": "I19-E17",
+      "deliverable_count": "1",
+      "split_extra_count": "0",
+      "deliverable_ids": "0128",
+      "document_titles": "個人訓後績效改善個案分析表"
+    },
+    {
+      "requirement_id": "I19-E18",
+      "deliverable_count": "1",
+      "split_extra_count": "0",
+      "deliverable_ids": "0129",
+      "document_titles": "營運表現前後比較分析表"
+    },
+    {
+      "requirement_id": "I19-E19",
+      "deliverable_count": "1",
+      "split_extra_count": "0",
+      "deliverable_ids": "0130",
+      "document_titles": "學員訓後創業案例紀錄與佐證表"
+    }
+  ],
+  "prompt_sha256": "4d478322efe311a8b7d7263c9fb42382f7ca78eed2f5ba971c723d307d24682b",
+  "prompt_bytes": 43053,
+  "execution": "noninteractive --print; plan mode; sandbox enabled; slash commands disabled; empty working directory; no source files mounted; no Computer Use; no tools requested; no --continue; no paid upgrade or fallback",
+  "timeout_seconds": 240,
+  "started_at_local": "2026-10-24T19:45:59.150067+08:00",
+  "status": "RESPONSE_RECEIVED",
+  "pid": 10512,
+  "ended_at_local": "2026-10-24T19:47:52.475546+08:00",
+  "exit_code": 0,
+  "timed_out": false,
+  "stdout_bytes": 14568,
+  "stdout_sha256": "db2b51b17ebc38264039fb11c3063b420cfd31eadb63f5767c242da60df2ec94",
+  "stderr_bytes": 78,
+  "stderr_sha256": "3a7f8550106d86abb322e8ed0fb30a0296c0e97c6be03d5a8033b99d16737459",
+  "usage": {
+    "input_tokens": 19879,
+    "output_tokens": 15005,
+    "thinking_tokens": 10021,
+    "cache_read_tokens": 0,
+    "total_tokens": 34884
+  },
+  "native_envelope": {
+    "conversation_id": "b2127ed1-7dd0-47ed-a025-d56378251129",
+    "status": "SUCCESS",
+    "duration_seconds": 105.0777367,
+    "num_turns": 1,
+    "usage": {
+      "input_tokens": 19879,
+      "output_tokens": 15005,
+      "thinking_tokens": 10021,
+      "cache_read_tokens": 0,
+      "total_tokens": 34884
+    }
+  },
+  "response_bytes": 14079,
+  "response_sha256": "132a5735562029662c425c115667df7bdd371370b5b8f4a487a513a3172f10e6",
+  "response_chars": 7375,
+  "verdict_binding": "Reviewer can only review provided extracted text; dispatcher must independently re-hash the local DOCX.",
+  "response_serialization": "UTF-8 bytes reconstructed from the original raw CLI JSON response; no newline conversion",
+  "response_file_sha256": "132a5735562029662c425c115667df7bdd371370b5b8f4a487a513a3172f10e6",
+  "raw_stdout_sha256": "db2b51b17ebc38264039fb11c3063b420cfd31eadb63f5767c242da60df2ec94",
+  "raw_stdout_response_matches_saved_response": true,
+  "independent_verdict": "PASS_TEXT_ONLY",
+  "local_original_receipt_sha256": "b7a2ed63919b1c073adf26fce7e9421faf851a93213c9286972f27fcc6c6841f",
+  "public_sanitization": "Absolute local paths removed; exact candidate and evidence hashes retained."
+}

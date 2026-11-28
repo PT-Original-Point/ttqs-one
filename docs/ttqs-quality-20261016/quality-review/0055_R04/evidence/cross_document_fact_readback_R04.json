@@ -1,0 +1,77 @@
+{
+  "project_id": "TTQS_ONE",
+  "document_id": "0055",
+  "revision": "R04",
+  "official_requirement_id": "I12-E03",
+  "official_indicator": "12c",
+  "official_checkbox_serial": "058",
+  "candidate_sha256": "0c4abf37856611a8226361cedb9bf58fd7c769a4cec27574920ed5d93ff4687b",
+  "source_branch": "work/ttqs-one-document-quality-contract-20261016",
+  "source_commit_readback": "5c0858d5320123a73e99906bbda719f7a3c68d93",
+  "official_source": {
+    "title": "TTQS查核佐證文件資料表－訓練機構版",
+    "page": 4,
+    "locator": "indicator 12c",
+    "local_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "status": "LOCAL_HASH_VERIFIED",
+    "url": "https://ttqs.wda.gov.tw/download_files/6475978659d646f58e3eddc3b1ea51d9/TTQS%E6%9F%A5%E6%A0%B8%E4%BD%90%E8%AD%89%E6%96%87%E4%BB%B6%E8%B3%87%E6%96%99%E8%A1%A8-%E8%A8%93%E7%B7%B4%E6%A9%9F%E6%A7%8B%E7%89%88.pdf"
+  },
+  "shared_synthetic_facts": {
+    "case_id": "SYN-0033-PLAN-01",
+    "course_title": "志工服務紀錄、交接與工作界線實務",
+    "planned_unit_minutes": [
+      90,
+      90,
+      120,
+      60
+    ],
+    "planned_total_minutes": 360,
+    "status": "SAMPLE/SYNTHETIC; not evidence of delivery"
+  },
+  "source_documents": [
+    {
+      "document_id": "0033",
+      "revision": "R03",
+      "requirement_id": "I07-E01",
+      "sha256": "fe5f3cfd84c761da86435a71e0fd899daa725be78628c4d2d3f2324c1fdb5f4f",
+      "local_matches_blueprint": true,
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0033_R03/candidate/0033_R03.docx",
+      "remote_exact_git_blob_match": true,
+      "remote_git_blob": "96a55a93e372058b662e356fbbcb72266bffe018"
+    },
+    {
+      "document_id": "0049",
+      "revision": "R01",
+      "requirement_id": "I11-E01",
+      "sha256": "e8212788b1f7b201ca4af4f4c5fb83ab131627dbfa815987f7cf6344edfda727",
+      "local_matches_blueprint": true,
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0049_R01/candidate/0049_R01.docx",
+      "remote_exact_git_blob_match": true,
+      "remote_git_blob": "17d362f24856415fb3491e37f26cdaf7cc15c226"
+    },
+    {
+      "document_id": "0050",
+      "revision": "R01",
+      "requirement_id": "I11-E02",
+      "sha256": "d0d37c2c69b161a2cdd37ee3097306722c4a65a1afd844ae92e1dff58b43381a",
+      "local_matches_blueprint": true,
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0050_R01/candidate/0050_R01.docx",
+      "remote_exact_git_blob_match": true,
+      "remote_git_blob": "1454e4b0d80c22552642f59179d307859b4049f8"
+    },
+    {
+      "document_id": "0052",
+      "revision": "R02",
+      "requirement_id": "I11-E04",
+      "sha256": "9129aff2bb730d31f76a5cb457ed069f1cafd2460b4069219f697b35d2c11afa",
+      "local_matches_blueprint": true,
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0052_R02/candidate/0052_R02.docx",
+      "remote_exact_git_blob_match": true,
+      "remote_git_blob": "999b5914e8e0a9914737218c8959053ff9cdfea8"
+    }
+  ],
+  "method": "Windows read-only DOCX ZIP/OOXML text extraction and SHA-256; current remote Git blob IDs matched local file Git blob IDs.",
+  "comparison": "All four source SHA-256 values match the Unique Blueprint. Source bodies contain the same SAMPLE case ID, course title, planned units and 360-minute total.",
+  "reviewer_scope_note": "Independent reviewer did not open these four external same-case DOCX files; this deterministic Windows readback is a separate supplemental fact check and does not alter reviewer scope.",
+  "created_at_taipei": "2026-10-19T00:42:00+08:00"
+}

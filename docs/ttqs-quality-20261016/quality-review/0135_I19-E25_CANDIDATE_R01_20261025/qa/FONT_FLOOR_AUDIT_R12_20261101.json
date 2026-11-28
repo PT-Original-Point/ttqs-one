@@ -1,0 +1,84 @@
+{
+  "artifact_state": "CANDIDATE",
+  "candidate": {
+    "bytes": 52820,
+    "git_blob_sha1": "f3b01de845fa21f30d1af7dc5d8d8d2a370b4e0c",
+    "github_path": "docs/ttqs-quality-20261016/quality-review/0135_I19-E25_CANDIDATE_R01_20261025/candidate/0135__目標市場與顧客價值具體提升成效分析報告_R01.docx",
+    "local_runtime_relative_path": "0135_I19-E25_SOURCE_PREP_R01_20261024/candidate/0135__目標市場與顧客價值具體提升成效分析報告_R01.docx",
+    "mutated_by_this_audit": false,
+    "sha256": "cae8be8280456b51a1294ee90eafca0ac1ae8a12738289d6ebbca35b3a05a3da"
+  },
+  "candidate_remote_readback": {
+    "branch": "work/ttqs-one-document-quality-contract-20261016",
+    "bytes": 52820,
+    "commit_sha": "ecfbf5c2da2ce2418e4541c27f0fc2f40b3cfd8c",
+    "exact_bytes_match": true,
+    "git_blob_sha1": "f3b01de845fa21f30d1af7dc5d8d8d2a370b4e0c",
+    "http_status": 200,
+    "raw_url": "https://raw.githubusercontent.com/PT-Original-Point/ttqs-one/ecfbf5c2da2ce2418e4541c27f0fc2f40b3cfd8c/docs/ttqs-quality-20261016/quality-review/0135_I19-E25_CANDIDATE_R01_20261025/candidate/0135__%E7%9B%AE%E6%A8%99%E5%B8%82%E5%A0%B4%E8%88%87%E9%A1%A7%E5%AE%A2%E5%83%B9%E5%80%BC%E5%85%B7%E9%AB%94%E6%8F%90%E5%8D%87%E6%88%90%E6%95%88%E5%88%86%E6%9E%90%E5%A0%B1%E5%91%8A_R01.docx",
+    "repository": "PT-Original-Point/ttqs-one",
+    "sha256": "cae8be8280456b51a1294ee90eafca0ac1ae8a12738289d6ebbca35b3a05a3da"
+  },
+  "deterministic_audit": {
+    "audit_version": "R12_FONT_FLOOR_1",
+    "metrics": {
+      "applied_table_style_ids": [
+        "TableGrid",
+        "TableNormal"
+      ],
+      "body_below_10_5_count": 0,
+      "body_max_pt": 21.0,
+      "body_min_pt": 10.5,
+      "body_resolution_sources": {
+        "paragraph-style": 90
+      },
+      "body_runs": 90,
+      "body_unresolved_count": 0,
+      "conditional_table_style_font_size_override_count": 0,
+      "conditional_table_style_font_size_overrides": [],
+      "table_below_9_5_count": 0,
+      "table_max_pt": 10.5,
+      "table_min_pt": 9.5,
+      "table_resolution_sources": {
+        "paragraph-style": 2,
+        "run-direct": 332
+      },
+      "table_runs": 334,
+      "table_unresolved_count": 0,
+      "visible_main_story_runs_only": true
+    },
+    "python_docx_version": "1.2.0",
+    "python_version": "3.10.8",
+    "scope": "Visible text-bearing runs in Word main story: body paragraphs and table-cell paragraphs; resolves run direct formatting, character style, paragraph style basedOn, default character style, and docDefaults; checks applied/default table style conditional size overrides.",
+    "script_github_path": "docs/ttqs-quality-20261016/quality-review/_tools/verify_docx_font_floor_r12.py",
+    "script_local_runtime_relative_path": "_qa_tools/verify_docx_font_floor_r12.py",
+    "script_sha256": "3f9433d242112b9e2139f637a545a4a0c33dfd9c27a0dc3b4562f86a3b38f8b1",
+    "status": "PASS_SCOPED_FONT_FLOOR_ONLY",
+    "thresholds_pt": {
+      "body_minimum": 10.5,
+      "table_minimum": 9.5
+    }
+  },
+  "document_id": "0135",
+  "observed_at_tpe": "2026-11-01T09:58:45.475372+00:00",
+  "observed_at_utc": "2026-11-01T01:58:45.475372+00:00",
+  "official_requirement_id": "I19-E25",
+  "project_id": "TTQS_ONE",
+  "receipt_id": "TTQS_ONE_0135_FONT_FLOOR_R12_20261101",
+  "result": "PASS_SCOPED_FONT_FLOOR_ONLY",
+  "scope_limits": [
+    "This receipt covers font floors only.",
+    "It does not certify page rendering, visual readability, semantic correctness, math, SAMPLE/REAL truth boundary, independent review, formal acceptance, or REAL evidence.",
+    "Headers/footers and footnotes/endnotes are outside this scoped main-story check."
+  ],
+  "source_binding": {
+    "source_packet_sha256": "fe4e433924b21b9891ca61ca52907e56a9dbd9ac62a4fd6fc43a9e4faef19696",
+    "unique_blueprint_sha256": "cb936466e92bb2d5976a2be1a013d85ccdd3a8bbe434dd8b51ac3d77e12d25c1"
+  },
+  "status_separation": {
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "NOT_ASSESSED",
+    "semantic_review": "UNCHANGED; not established by this receipt",
+    "visual_review": "UNCHANGED; not established by this receipt"
+  }
+}

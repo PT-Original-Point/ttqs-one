@@ -1,0 +1,176 @@
+{
+  "work_id": "TTQS_ONE_0029_I05-E03_W2_WRITER_R01_20261117",
+  "doc_id": "0029",
+  "requirement_id": "I05-E03",
+  "status": "SAMPLE_SYNTHETIC_ONLY",
+  "facts": [
+    {
+      "key": "SYN-0029-001",
+      "item": "fictional customer case label",
+      "value": "SAMPLE-CUST-01",
+      "unit": "label",
+      "source_type": "synthetic"
+    },
+    {
+      "key": "SYN-0029-002",
+      "item": "fictional course label",
+      "value": "SAMPLE-COURSE-01",
+      "unit": "label",
+      "source_type": "synthetic"
+    },
+    {
+      "key": "SYN-0029-003",
+      "item": "sample period label",
+      "value": "SAMPLE-PERIOD-01",
+      "unit": "label; no real calendar dates",
+      "source_type": "synthetic"
+    },
+    {
+      "key": "SYN-0029-004",
+      "item": "planned course sessions",
+      "value": 5,
+      "unit": "sessions",
+      "source_type": "synthetic"
+    },
+    {
+      "key": "SYN-0029-005",
+      "item": "planned/registered learners denominator",
+      "value": 10,
+      "unit": "learners",
+      "source_type": "synthetic"
+    },
+    {
+      "key": "SYN-0029-006",
+      "item": "customer target attendance rate",
+      "value": 85,
+      "unit": "percent; threshold >=85%",
+      "source_type": "synthetic"
+    },
+    {
+      "key": "SYN-0029-007",
+      "item": "planned attendance seat-sessions",
+      "value": 50,
+      "unit": "seat-sessions; 10 x 5",
+      "source_type": "synthetic_calculation"
+    },
+    {
+      "key": "SYN-0029-008",
+      "item": "attended seat-sessions",
+      "value": 46,
+      "unit": "seat-sessions",
+      "source_type": "synthetic"
+    },
+    {
+      "key": "SYN-0029-009",
+      "item": "attendance rate",
+      "value": 92,
+      "unit": "percent; 46/50 x 100",
+      "source_type": "derived_synthetic"
+    },
+    {
+      "key": "SYN-0029-010",
+      "item": "learners meeting sample completion rule",
+      "value": 9,
+      "unit": "learners",
+      "source_type": "synthetic"
+    },
+    {
+      "key": "SYN-0029-011",
+      "item": "customer target completion rate",
+      "value": 80,
+      "unit": "percent; threshold >=80%",
+      "source_type": "synthetic"
+    },
+    {
+      "key": "SYN-0029-012",
+      "item": "completion rate",
+      "value": 90,
+      "unit": "percent; 9/10 x 100",
+      "source_type": "derived_synthetic"
+    },
+    {
+      "key": "SYN-0029-013",
+      "item": "satisfaction scale maximum",
+      "value": 5,
+      "unit": "points; integer response scale 1-5",
+      "source_type": "synthetic"
+    },
+    {
+      "key": "SYN-0029-014",
+      "item": "valid satisfaction responses",
+      "value": 9,
+      "unit": "responses",
+      "source_type": "synthetic"
+    },
+    {
+      "key": "SYN-0029-015",
+      "item": "aggregate satisfaction score",
+      "value": 40,
+      "unit": "points; total across 9 valid responses",
+      "source_type": "synthetic"
+    },
+    {
+      "key": "SYN-0029-016",
+      "item": "mean satisfaction",
+      "value": 4.44,
+      "unit": "points out of 5; 40/9 rounded to 2 decimals; 4.4 to 1 decimal",
+      "source_type": "derived_synthetic"
+    },
+    {
+      "key": "SYN-0029-017",
+      "item": "paired pre/post assessment count",
+      "value": 9,
+      "unit": "learners",
+      "source_type": "synthetic"
+    },
+    {
+      "key": "SYN-0029-018",
+      "item": "pre-assessment total and mean",
+      "value": "558 total points; 62/100 mean",
+      "unit": "points",
+      "source_type": "synthetic_calculation"
+    },
+    {
+      "key": "SYN-0029-019",
+      "item": "post-assessment total and mean",
+      "value": "738 total points; 82/100 mean",
+      "unit": "points",
+      "source_type": "synthetic_calculation"
+    },
+    {
+      "key": "SYN-0029-020",
+      "item": "customer target post-assessment mean",
+      "value": 80,
+      "unit": "points out of 100; threshold >=80",
+      "source_type": "synthetic"
+    },
+    {
+      "key": "SYN-0029-021",
+      "item": "customer target mean gain",
+      "value": 10,
+      "unit": "points; threshold >=10",
+      "source_type": "synthetic"
+    },
+    {
+      "key": "SYN-0029-022",
+      "item": "mean score gain",
+      "value": 20,
+      "unit": "points; 82-62",
+      "source_type": "derived_synthetic"
+    },
+    {
+      "key": "SYN-0029-023",
+      "item": "sample conclusion",
+      "value": "all four sample targets meet or exceed thresholds; derived only from the fictional aggregate case",
+      "unit": "decision statement",
+      "source_type": "derived_synthetic"
+    },
+    {
+      "key": "SYN-0029-024",
+      "item": "truth boundary",
+      "value": "SAMPLE only; no real customer, contract, approval, delivery, attendee, survey, score record, customer acceptance or formal adoption is asserted; all real baselines UNKNOWN",
+      "unit": "truth boundary",
+      "source_type": "mandatory_label"
+    }
+  ]
+}

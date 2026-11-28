@@ -1,0 +1,184 @@
+{
+  "receipt_schema": "ttqs_independent_semantic_review.v1",
+  "review_date_local": "2026-10-16",
+  "scope": "Candidate-level, read-only exact-SHA semantic and existing-render review; no candidate edit, rebuild, or rerender.",
+  "reviewer_route": {
+    "control_file": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\CURRENT_STATE.json",
+    "control_sha256": "1345b6330b01c7b71293eeaf58aa7409a78681b7cf011b65a065c91888f972d6",
+    "route": "CROSS_REVIEW_BY_OTHER_ACTIVE_AGENT / WIN11_CODEX_LOCAL_NATIVE_CONTROL_REVIEW",
+    "independent_of_builder": true,
+    "basis": "Current state assigns primary content building to Antigravity and exact-SHA cross-review to the separate Codex lane."
+  },
+  "candidate": {
+    "doc_id": "0035",
+    "version": "R11",
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0035_R11\\candidate\\0035__\u8077\u80fd\u5206\u6790\u8207\u904b\u7528\u65b9\u6cd5\u6aa2\u8a0e\u53ca\u6539\u9032\u5206\u6790\u5831\u544a_R11.docx",
+    "expected_sha256": "9c6036599fec79e41bc482ea3b720ba1dd5cfa9b2b3bfa05cf8930d997d02661",
+    "observed_sha256": "9c6036599fec79e41bc482ea3b720ba1dd5cfa9b2b3bfa05cf8930d997d02661",
+    "state": "CANDIDATE",
+    "promotion": "NOT_PROMOTED",
+    "human_acceptance": "PENDING"
+  },
+  "mapping": {
+    "requirement_id": "I07-E03",
+    "official_checkbox_sequence": "035",
+    "mapping_rule": "DOCX ID and official checkbox sequence are separate identifiers; mapping is taken from the current Blueprint row.",
+    "current_blueprint_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\BLUEPRINT_CURRENT.jsonl",
+    "current_blueprint_line": 35,
+    "current_blueprint_row_sha256": "278eda9df6f1486cbac7ddbaddf8a67c1670cd9bc961d7224fcce91d248500b1",
+    "official_pdf": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\SOURCES\\TTQS\u67e5\u6838\u4f50\u8b49\u6587\u4ef6\u8cc7\u6599\u8868-\u8a13\u7df4\u6a5f\u69cb\u7248 (2).pdf",
+    "official_pdf_sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+    "official_page": 2,
+    "official_text": "\u5c0d\u76f8\u95dc\u8077\u80fd\u5206\u6790\u53ca\u904b\u7528\u7684\u65b9\u6cd5\u5747\u80fd\u9069\u6642\u6aa2\u8a0e\u96a8\u6642\u6539\u9032\u3002",
+    "content_blueprint_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0035_R11\\sources\\0035_unique_content_blueprint_R02.md",
+    "content_blueprint_sha256": "e365e972cea8ab494b56acee1cd1872f16ba947a3e2add5af7402ea3a7dea255"
+  },
+  "source_manifest_sha256": "50ba597ad6f5a099e30f5e9e214f058da94d060ce9c6314568d98b57078d0793",
+  "replacement_register": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0035_R11\\sources\\SYNTHETIC_REPLACEMENT_REGISTER_0035_R11.csv",
+    "sha256": "32da2c5dcb3c0737fc41abf498860a79d854a2ce404396e9271a6a763d01b52b",
+    "rows": 262,
+    "unique_fact_ids": 262,
+    "rows_bound_to_candidate_sha256": 262
+  },
+  "existing_render": {
+    "pdf_path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0035_R11\\render\\final_9c6036599fec79e41bc482ea3b720ba1dd5cfa9b2b3bfa05cf8930d997d02661\\candidate_9c6036599fec79e41bc482ea3b720ba1dd5cfa9b2b3bfa05cf8930d997d02661.pdf",
+    "pdf_sha256": "c7fc2bdf03dd18a18067b2449698070de5023890a511240c4e8cf4443ef462a8",
+    "pages": 19,
+    "png_pages": 19,
+    "all_pages_directly_inspected": true,
+    "rerendered": false
+  },
+  "recalculations": {
+    "paired_method_usability": {
+      "basis": "8 synthetic scenarios x 4 dimensions = 32 paired cells per version; two synthetic raters.",
+      "v0_exact": "19/32 = 59.375%, displayed 59.4%",
+      "v1_exact": "28/32 = 87.5%",
+      "v0_absolute_error": "13/32 = 0.40625, displayed 0.406",
+      "v1_absolute_error": "4/32 = 0.125",
+      "maximum_single_cell_difference_v0_v1": 1,
+      "dimension_exact_v0": [
+        "8/8",
+        "5/8",
+        "4/8",
+        "2/8"
+      ],
+      "dimension_exact_v1": [
+        "8/8",
+        "6/8",
+        "7/8",
+        "7/8"
+      ],
+      "dimension_absolute_error_v0": [
+        0,
+        3,
+        4,
+        6
+      ],
+      "dimension_absolute_error_v1": [
+        0,
+        2,
+        1,
+        1
+      ],
+      "dates": "2026-05-04 to 2026-05-18 = 14 days."
+    },
+    "locator_completeness": {
+      "criterion": "Source, version/date, page/field locator, and permission flags for each cell.",
+      "v0_by_dimension": [
+        8,
+        6,
+        5,
+        1
+      ],
+      "v0": "20/32 = 62.5%",
+      "v1_by_dimension": [
+        8,
+        7,
+        7,
+        7
+      ],
+      "v1": "29/32 = 90.625%, displayed 90.6%"
+    },
+    "no_observation_controls": {
+      "cases": [
+        "\u60c5\u5883\u4e09\uff1a\u7121\u540c\u96e3\u5ea6\u53ef\u6bd4\u6a23\u672c",
+        "\u60c5\u5883\u4e03\uff1a\u6c92\u6709\u5b89\u6392\u53ef\u89c0\u5bdf\u6642\u9ede"
+      ],
+      "denominator": 2,
+      "v0": "1/2 = 50%; \u60c5\u5883\u4e03\u5224\u8b80\u932f\u8aa4\u3002",
+      "v1": "2/2 = 100%; \u5169\u6848\u5747\u6b63\u78ba\u6a19\u793a N/O\u3002",
+      "separation": "Separate two-case control measure; these scenarios remain included in the 32 method-usability cells."
+    },
+    "competency_gap_example": {
+      "locator": "p.11, \u00a77.3",
+      "rows": [
+        "K01: 3-2=+1",
+        "K02: 3-3=0",
+        "K03: 3-2=+1",
+        "K04: 2-3=-1"
+      ],
+      "attainment": "K02 and K04 meet/exceed target: 2/4 = 50.0%.",
+      "boundary": "Synthetic example only; no real-person diagnosis or course decision."
+    }
+  },
+  "gates": [
+    {
+      "gate": "Official requirement and report genre",
+      "verdict": "PASS",
+      "evidence": "Official PDF p.2, Design item 7, third evidence bullet; current Blueprint line 35/hash verified. DOCX pp.1-2 and \u00a7\u00a71,5-9 form a v0/v1 method review and improvement report."
+    },
+    {
+      "gate": "Title-blind fit and negative neighbors",
+      "verdict": "PASS",
+      "evidence": "p.3 table\u300c\u5bb9\u6613\u6df7\u6dc6\u7684\u5de5\u4f5c\u300dand version comparison, paired ratings, source locators and N/O controls distinguish I07-E03 from 0034/I07-E02 individual competency planning and 0036/I07-E04 course-design progress/process. Neighbor Blueprint rows checked."
+    },
+    {
+      "gate": "Operational maturity and reusable forms",
+      "verdict": "PASS",
+      "evidence": "pp.4-6 \u00a7\u00a72-4 define scope, four dimensions, eight cases, scale and procedure; pp.14-19 \u00a7\u00a710-11 provide source, paired-rating, N/O, return/correction and independent verification forms."
+    },
+    {
+      "gate": "Raw data, denominators, arithmetic and consistency",
+      "verdict": "PASS",
+      "evidence": "pp.7-8 \u00a7\u00a75.1-5.2 raw 32-cell matrices; p.9 \u00a76.1 locator flags; p.10 \u00a7\u00a76.2/7.1 N/O and aggregate formulas; p.11 \u00a7\u00a77.2/7.2a dimension totals and \u00a77.3 separate gap example. Direct recomputation matches."
+    },
+    {
+      "gate": "SAMPLE/REAL, authority, and conclusion boundary",
+      "verdict": "PASS",
+      "evidence": "p.1 notice and pp.1-19 footers mark SAMPLE/SYNTHETIC. pp.1-2, 13-14, \u00a7\u00a711.1-11.2 disclaim real association originals, approval, meeting decision, third-party verification and formal adoption. p.13 confines conclusions to synthetic exercise."
+    },
+    {
+      "gate": "Register/source trace",
+      "verdict": "PASS",
+      "evidence": "262 unique fact IDs; all 262 register rows bind to exact candidate SHA. Register supports provenance; semantic findings were checked against the DOCX itself."
+    },
+    {
+      "gate": "Internal-control metadata boundary",
+      "verdict": "PASS",
+      "evidence": "Direct body scan found no Blueprint path/hash, SHA-256, replacement-register filename, fact_id, Builder, runtime, CURRENT_STATE, or Unique Blueprint text."
+    },
+    {
+      "gate": "Administrator/evaluator usability",
+      "verdict": "PASS",
+      "evidence": "pp.5-6 explain rating, independent review, source/version/page-field/permission checks and N/O handling; pp.13-19 provide bounded follow-up and blank operational forms."
+    },
+    {
+      "gate": "Existing render readability",
+      "verdict": "PASS",
+      "evidence": "All 19 existing Word page PNGs inspected directly; no blank page, clipped text, or cut-off table."
+    }
+  ],
+  "non_blocking_observations": [
+    "p.17 has substantial unused lower-page space, but complete readable content.",
+    "The confirmation-method column on pp.18-19 is narrow and wraps vertically; still legible and within page bounds."
+  ],
+  "limitation": "No real association evidence was supplied. This candidate cannot prove actual organizational adoption or real-world improvement; it discloses that limitation and makes no such claim.",
+  "overall_verdict": "PASS",
+  "blocking_defects": [],
+  "final_state": {
+    "candidate": "CANDIDATE",
+    "promotion": "NOT_PROMOTED",
+    "human_acceptance": "PENDING"
+  }
+}

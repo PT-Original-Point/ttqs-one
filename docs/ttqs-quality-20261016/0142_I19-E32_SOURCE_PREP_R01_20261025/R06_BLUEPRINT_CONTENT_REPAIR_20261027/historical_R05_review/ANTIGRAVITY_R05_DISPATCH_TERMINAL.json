@@ -1,0 +1,90 @@
+{
+  "schema": "ttqs-one-0142-r05-antigravity-terminal-v1",
+  "work_id": "TTQS-0142-I19-E32-R05-ANTIGRAVITY-EXACT-SHA-REVIEW",
+  "status": "REVIEWER_RESPONSE_RECEIVED",
+  "pid": 66868,
+  "exit_code": 0,
+  "timed_out": false,
+  "requested_model": "gemini-3.8-flash-high",
+  "actual_serving_model": "UNKNOWN",
+  "model_fields_from_native_response": [],
+  "model_fallback": "UNKNOWN_NOT_VERIFIED; no fallback authorized",
+  "usage_fields_from_native_response": [
+    {
+      "path": "$.usage",
+      "value": {
+        "input_tokens": 14222,
+        "output_tokens": 14862,
+        "thinking_tokens": 9684,
+        "cache_read_tokens": 0,
+        "total_tokens": 29084
+      }
+    },
+    {
+      "path": "$.usage.input_tokens",
+      "value": 14222
+    },
+    {
+      "path": "$.usage.output_tokens",
+      "value": 14862
+    },
+    {
+      "path": "$.usage.thinking_tokens",
+      "value": 9684
+    },
+    {
+      "path": "$.usage.cache_read_tokens",
+      "value": 0
+    },
+    {
+      "path": "$.usage.total_tokens",
+      "value": 29084
+    }
+  ],
+  "tokens": [
+    {
+      "path": "$.usage",
+      "value": {
+        "input_tokens": 14222,
+        "output_tokens": 14862,
+        "thinking_tokens": 9684,
+        "cache_read_tokens": 0,
+        "total_tokens": 29084
+      }
+    },
+    {
+      "path": "$.usage.input_tokens",
+      "value": 14222
+    },
+    {
+      "path": "$.usage.output_tokens",
+      "value": 14862
+    },
+    {
+      "path": "$.usage.thinking_tokens",
+      "value": 9684
+    },
+    {
+      "path": "$.usage.cache_read_tokens",
+      "value": 0
+    },
+    {
+      "path": "$.usage.total_tokens",
+      "value": 29084
+    }
+  ],
+  "tool_call_indicators": [],
+  "computer_use": "NOT_USED_BY_LAUNCH; no UI automation was invoked",
+  "candidate_sha256_before": "a213a30cd949948f7ce8c2b5d76fc79b5fdcd90117f6fba77139af6660c5ab6e",
+  "candidate_sha256_after": "a213a30cd949948f7ce8c2b5d76fc79b5fdcd90117f6fba77139af6660c5ab6e",
+  "candidate_mutated": false,
+  "request_sha256": "cfa94a5e084032debcd816809f7e90d288168dbfaa7fc5b263aa0b2e8ddf0e70",
+  "stdout_bytes": 15096,
+  "stdout_sha256": "7a48ff471733275a462117d3f5d06f669de5185cd7acd60ff22d8b3a51a3f51a",
+  "stderr_bytes": 0,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "reviewer_reported_verdict": "NO_EXPLICIT_VERDICT",
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "finished_local": "2026-10-27T23:45:09.628583+08:00"
+}

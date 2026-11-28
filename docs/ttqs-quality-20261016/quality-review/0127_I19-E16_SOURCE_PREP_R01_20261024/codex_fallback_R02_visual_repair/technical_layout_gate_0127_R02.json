@@ -1,0 +1,57 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0127",
+  "official_requirement": "I19-E16",
+  "unique_blueprint": "UBP-0127-I19-E16",
+  "candidate": "R02_CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "docx_sha256": "abba46bcdd0919c4511df025cd90d65cd302fe3f9f59c86d0fa8b7efe2015285",
+  "docx_bytes": 145484,
+  "verification_scope": "DOCX ZIP, text font floors, document structure, and CSV-derived market/customer arithmetic; visual QA pending",
+  "checks": {
+    "docx_zip_integrity": {
+      "pass": true,
+      "bad_member": null
+    },
+    "table_font_floor": {
+      "pass": true,
+      "min_pt": 9.5,
+      "explicit_text_runs": 863,
+      "floor_pt": 9.5
+    },
+    "body_font_floor": {
+      "pass": true,
+      "min_pt": 10.5,
+      "explicit_text_runs": 66,
+      "floor_pt": 10.5
+    },
+    "document_structure": {
+      "pass": true,
+      "sections": 2,
+      "tables": 20,
+      "paragraphs": 90
+    },
+    "math_reconciliation": {
+      "pass": true,
+      "market_A": 32,
+      "market_B": 48,
+      "purchases_A": 8,
+      "purchases_B": 15,
+      "customer_total_A": 234,
+      "customer_total_B": 288,
+      "pairs": 24,
+      "conversion_A_pct": 25.0,
+      "conversion_B_pct": 31.25,
+      "delta_pp": 6.25,
+      "paired_means": [
+        3.25,
+        4.0
+      ]
+    },
+    "orphan_disclosure_moved": {
+      "pass": true,
+      "paragraph_found": 74
+    }
+  },
+  "overall": "PASS_TECHNICAL_PRE_RENDER",
+  "verified_at_local": "2026-10-28T19:01:36.319777+08:00"
+}

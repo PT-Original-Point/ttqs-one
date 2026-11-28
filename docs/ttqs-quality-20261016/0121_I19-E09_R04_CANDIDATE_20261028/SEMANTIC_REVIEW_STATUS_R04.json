@@ -1,0 +1,109 @@
+{
+  "schema": "TTQS_ONE_0121_R04_EXACT_SHA_SEMANTIC_REVIEW_STATUS_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0121",
+  "requirement_id": "I19-E09",
+  "candidate_status": "CANDIDATE",
+  "candidate_sha256": "a80535a46b457404c8c1bf93404b124ce6d74c53f653cf0b3dfa128ec82c6e89",
+  "body_extract_sha256": "480f8121caf5ff37e1768081281c86d3f31198616ca2965d181ec27fa05e6e35",
+  "review_provider": "opencode",
+  "review_cli": "OpenCode v2.1.4",
+  "review_model": "glm-5.3-flash-free",
+  "review_variant": "default",
+  "review_session_id": "ses_e7e9e6326ffedus6tFdDpPTBNo",
+  "review_outcome": "succeeded",
+  "reported_cost_usd": 0,
+  "tokens": {
+    "input": 39372,
+    "output": 3559,
+    "reasoning": 20480,
+    "cache": {
+      "read": 0,
+      "write": 0
+    }
+  },
+  "verdict": "PASS",
+  "review_scope": "Text-only independent semantic review of the complete R04 body extraction (P001–P196, TABLES T01–T18, §1–§12), targeting the four special-attention items: (1) §9.2 1–5 distribution, (2) REP-0121-004-RATE / REP-0121-DIST-01 in both the in-document register and the reproduced CSV, (3) coherence of carried-forward content, (4) mapping/genre/usability/negative neighbors/fabrication. No DOCX binary, rendering, or visual layout was opened (separate exact-SHA native Word receipts cover that). The R03 extract is not in the packet, so R03 coherence was verified against the complete current body plus the repair receipt change list, not a direct diff. Semantic PASS is not formal acceptance.",
+  "limitations": [
+    "Text-only semantic review of the extracted body; the DOCX binary, native Word rendering, pagination, fonts and visual layout were not opened or inspected — those are covered by the separate exact-SHA native Word receipts cited in the packet.",
+    "Cryptographic identities (candidate DOCX SHA-256, extract SHA-256, native PDF SHA-256, register CSV SHA-256 8e95ca7e…, official PDF/seed hashes) are asserted by the packet and echoed here; none were recomputed in this read-only review, and the review itself is only meaningful if the packet body truly derives from the stated exact SHAs and review receipt is later bound to them.",
+    "The external register CSV was verified against its full reproduction in the packet and against the in-document register row-for-row (23/23 rows match, including REP-0121-004-RATE and REP-0121-DIST-01 with all five required elements); on-disk byte/SHA equality with the CSV could not be checked from inside the packet.",
+    "The R03 extraction is not included; 'all original R03 content remains coherent' was verified by recomputing the complete current body and checking the three declared R03→R04 changes against it, not by a direct text diff against R03.",
+    "All statistics were independently recomputed by this reviewer from the line-item tables in the body (T07, T10, T11); every displayed figure reproduced exactly, including the new distribution.",
+    "A semantic PASS is not formal association acceptance; formal acceptance remains NOT_GRANTED and real evidence remains UNKNOWN/HOLD until the Human Gate."
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "official_score": "NOT_ASSIGNED",
+  "findings": [
+    {
+      "next_action": "下一次實質正文修訂時統一顯示名稱或加別名註記。",
+      "summary": "同一技能任務顯示名稱有差異；數值及情境可對應，無數字錯誤。",
+      "locator": "T14 row T04 vs T09/T11/T16",
+      "severity": "LOW",
+      "disposition": "NON_BLOCKING_RECORDED"
+    },
+    {
+      "next_action": "下次正文修訂時明確允許分布表使用兩位小數。",
+      "summary": "一般百分比四捨五入註記為一位小數，但分布表採兩位小數以保留精確值。",
+      "locator": "§9 P116 percentage rounding statement vs §9.2/T13/register",
+      "severity": "INFO",
+      "disposition": "NON_BLOCKING_RECORDED"
+    },
+    {
+      "next_action": "可加註其主要證據來自技能任務及心得。",
+      "summary": "隱私與設施安全構面沒有專屬滿意度題目；目前未以鬆散對應驅動推論。",
+      "locator": "T04 construct map §3.1",
+      "severity": "INFO",
+      "disposition": "NON_BLOCKING_RECORDED"
+    },
+    {
+      "next_action": "下次正文修訂時補一行家族鍵等價說明。",
+      "summary": "詞典使用基礎家族鍵、清冊列出細分單位鍵，覆蓋完整但等價關係未明示。",
+      "locator": "T05 key column vs §12.2 replacement register",
+      "severity": "INFO",
+      "disposition": "NON_BLOCKING_RECORDED"
+    },
+    {
+      "next_action": "更新 sidecar/packet 註記統一編號慣例；不改 DOCX。",
+      "summary": "收據稱 T16，審查 packet 依表序稱第17/18表；正文未印表號。",
+      "locator": "R04 repair receipt table locator vs review packet table ordinal",
+      "severity": "INFO",
+      "disposition": "NON_BLOCKING_SIDECAR_ONLY"
+    }
+  ],
+  "native_visual": "PASS",
+  "technical_checks": "34/34 PASS",
+  "native_word_pages": 24,
+  "manual_visual_pages": [
+    1,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "inherited_pixel_identical_pages": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "r03_mutated": false,
+  "reviewer_binary_opened": false,
+  "provider_identity_limit": "OpenCode session metadata reports opencode/glm-5.3-flash-free. Upstream model serving identity beyond CLI session metadata is not independently verified."
+}

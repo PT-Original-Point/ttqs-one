@@ -1,0 +1,56 @@
+I'll start by verifying the candidate's exact-SHA and gathering the primary sources.
+SHA and size match. Now let me explore the candidate directory and read the primary sources.
+Both required SHAs match. Let me read the key text sources and inspect the render folder.
+15-page render confirmed. Let me read the metadata, QA receipt, and replacement register.
+Let me extract the DOCX content and view the rendered page images.
+Page 1 renders cleanly. Let me view the remaining pages.
+Page 4 raw importance values confirmed; sums 41/38/35/39 recomputed correctly. Continuing pages 5–8.
+Calculations verified. Continuing pages 9–12.
+Pages 13–15 now.
+All 15 pages inspected. Now let me verify the official source image, blueprint row, and extract the DOCX text for stale-text screening.
+Official page 4 and blueprint row confirmed. Now let me read the writing manual, checkbox spec, and extract the DOCX text.
+Let me read the manual and blueprint sections directly for correct encoding.
+Sources confirmed. Now let me extract the full DOCX text and check the register for uniqueness and provenance.
+Register verified: 158 unique fact IDs, all SAMPLE-only. Let me read the extracted text.
+Let me inspect the extracted tables and screen for stale/contradictory references.
+Now let me verify the 0033 R03 source tables (8/12/13) and its register to validate cross-document facts.
+Let me examine register provenance completeness more closely and screen for stale text across tables.
+No stale contradictions found. Let me verify font floors, render PDF, and source image hashes independently.
+All hashes and font floors verified. Let me clean up the temporary extraction files I created so the tree is left unmodified (read-only mode).
+Read-only state confirmed (candidate SHA unchanged; my temp files removed). Let me confirm the R02 findings context before finalizing.
+# Independent exact-SHA review — DOCX 0049 R01 (R03 lane)
+
+**On-disk SHA-256** (`docs/ttqs-quality-20261016/quality-review/0049_R01/candidate/0049_R01.docx`): `e8212788b1f7b201ca4af4f4c5fb83ab131627dbfa815987f7cf6344edfda727` — **matches** the required hash; size **61,773 bytes**. No mismatch; review proceeded on this exact byte-identical candidate.
+
+**Verdict: `PASS`.** Official checkbox 051 is satisfied; the body is a sound, usable three-source demand→course plan with no fabrication; all recomputed math, the 158-row register, SAMPLE/REAL boundaries, and all 15 rendered pages are correct and compliant. Two cosmetic/observation items remain (below), neither of which requires DOCX byte changes or changes requirement satisfaction. This is an independent candidate-quality review only and does **not** grant Human acceptance, REAL/EFFECTIVE status, or promotion (candidate state stays `CANDIDATE_ONLY`; formal acceptance `NOT_GRANTED`).
+
+**Independently inspected:** candidate DOCX (73 paragraphs, 31 tables); `SOURCE_MAP_R01.md`; `BUILD_METADATA_R01.json`; 158-row `SYNTHETIC_REPLACEMENT_REGISTER_R01.csv`; `TECHNICAL_VISUAL_QA_R01.json`; `source/official_evidence_table_page4.png`; `BLUEPRINT_CURRENT.jsonl` row `0049`; `02_GENRE_WRITING_MANUAL.md` Ind.11 (lines 81–86); `03_157_CHECKBOX_BLUEPRINTS.md` I11 (lines 127–133); complete DOCX 0033 R03 plus register; and `0049_R01.pdf` with `page-01.png`–`page-15.png`.
+
+**Recomputed source hashes (all match):** 0033 R03 DOCX `fe5f3cfd…b5f4f`; 0033 register `d114f36d…523247` (196 unique rows); Blueprint `406d0495…ef3e`; official page‑4 PNG `0e00b465…d35f`; render PDF `bc5e0c77…39d5` (15 pages); register `c79dd292…e501`.
+
+## Check results
+
+**1. Official wording / genre / neighbor distinction — PASS.** Page‑4 image shows indicator 11 whose first checkbox reads verbatim 「訓練課程計畫配合業主、受訓者以及職能需求等調查規劃的證明。」 The candidate reproduces it exactly (p.1 identification; §9 p.13 first row) and maps it to `I11-E01 / 方框051 / 官方資料表第4頁`; the Blueprint row 0049 = `I11-E01`, page 4 confirms the mapping. Genre = strategy/course plan, correct for 051. The four identities stay strictly distinct (§1.1 p.2–3; §9 p.13): 本件 0049/I11‑E01/051; 0033/I07‑E01/033 (survey evidence); 0048/I10‑E03/049 (procurement/trainer meeting, explicitly excluded); 0050/I11‑E02/052 (unit objectives, deferred). No misattributed content.
+
+**2. Title-masked body = practical demand→course plan — PASS.** Masking p.1, the body sequences §2 three demand sources → §3 denominators + anonymous raw matrices → §4 gap/ranking + three-option comparison → §5 course-level objectives G1–G4 → §6 content/method/schedule/staffing/resources/environment → §7 assessment timing/scales/thresholds → §8 risk/revision → §9–10 traceability/replacement. This is unmistakably a demand-to-course plan, not a survey report (instrumentation lives in 0033; p.4 §intro), not a unit-level lesson plan (deferred to 0050; §5 intro p.6), not a meeting record (0048 only a negative-neighbour distinction, §1.1 p.3), not generic.
+
+**3. Recomputations vs 0033 R03 — PASS.** From the rendered §3.1/§3.2 raw matrices: denominators 合作窗口 4/3/3, 預定受訓者 4/3/3, 任務角色代表 4/4/3 → total **12/10/9**; 10÷12=**83.3%**, 9÷12=**75.0%**, 9÷10=**90.0%**. Importance sums 甲41/乙38/丙35/丁39 → means **4.56/4.22/3.89/4.33**. Self-rating sums 甲24/乙25/丙27/丁21 → means **2.67/2.78/3.00/2.33**. Gaps **丁2.00 / 甲1.89 / 乙1.44 / 丙0.89** (ranking 丁1, 甲2, 乙3; 丙 below the sample rule importance≥4.00 ∧ gap≥1.20). Weighted options 甲 5·.4+5·.3+4·.2+5·.1=**4.80**; 乙=**4.00**; 丙=**3.50**/5. Modules **90+90+120+60=360** minutes. Every value matches 0033 R03's printed 表8 (importance raw), 表9 (self-rating), 表10 (means/gaps), 表13 (options), and 表15 (unit hours). The priority rule is explicitly labelled sample-only, not official/association policy.
+
+**4. Prior repairs correct; no stale text — PASS.** 0033's printed 表12 = 「三個候選方向的合成加權比較」 and the candidate §4.1 (p.6) cites 「0033 R03 表12」 for weights/scores ✔. 0033's 表13 = 「優先擬議方向的學習目標與評量」 and the candidate §6.1 (p.8) cites 「0033 R03 表13」 for module names/behaviour/hours ✔. The p.1 quick guide 「先做什麼」 now points to 「第4.1節方案比較」 ✔. Cohort = **12** (p.2 §1; §6 適用對象/環境) and sample room estimate = **14 席** (p.8 學習環境; p.12 樣本資源清單) ✔. **§10.1 G1–G4 all sit together with their header on p.15** ✔. Stale-token sweep over paragraphs + all 31 tables found **no** misidentified 「表3」 reference; remaining 「已調查／已決定／已開課／已達標」 hits are all inside explicit prohibitions (e.g. p.1 callout), never claims.
+
+**5. Register — PASS.** 158 rows, 158 **unique** `fact_id` (0 duplicates), all `doc_id=0049`, all `case_id=SYN-0033-PLAN-01`, all `verification_status=SAMPLE_ONLY_NOT_VERIFIED_AS_REAL`. Provenance is complete: every row carries `required_replacement_source`, `owner_role_to_confirm`, `assumption_or_basis`, `locator_marker`; 115 rows are `SYNTHETIC_CROSS_DOCUMENT_REFERENCE` carrying `source_doc_id=0033` + source SHA (90 with an explicit `source_fact_id` linking into 0033's register), and 43 are `SYNTHETIC_PLAN_ASSUMPTION`/`SYNTHETIC_ASSESSMENT_DESIGN` local synthetic design facts. No SAMPLE/SYNTHETIC fact is represented as a real survey, authorization, decision, approval, attendance, delivery, assessment result, or third-party evidence; the association name appears only inside an explicit non-representation disclaimer. Boundary states are asserted throughout (UNKNOWN / NOT APPROVED / NOT SCHEDULED / NOT IMPLEMENTED).
+
+**6. Practical use for administrators/evaluators — PASS.** Present and actionable: source/authority checks (§2), decisions and alternatives (§4.1), course-level objectives with observable behaviour and criteria (§5), content/method/schedule/staff/resources/environment (§6, §6.1, §6.2), assessment timing/scales/thresholds ≥8/10 and ≥3/4 with failure handling and one re-demonstration then re-assessment (§7, §7.2), retraining/reopen conditions (§4.1 重開條件; §8 six-trigger risk table; 課後14日 review), and per-source replacement gates with §10.1 four adoption gates. Responsibilities are cleanly separated from 0048/0050.
+
+**7. Page-by-page visual — PASS.** All 15 images reviewed at full resolution. Body/table font floors re-measured from DOCX runs: **body min 10.5 pt**, **table min 9.5 pt** (header 8.0, footer 8.5) — compliant, no shrink-to-fit. Layout: p.1 title/SAMPLE callout/30-sec table/id; p.2 §1+§1.1 head; p.3 §1.1 tail+§2; p.4 §3 denominators+3.1 matrix; p.5 §3.2+§4 means; p.6 §4.1 options+§5 head; p.7 §5 G3/G4 + scope-exclusion (intentional chapter white space); p.8 §6/§6.1; p.9 §6.2 schedule+roles; p.10 §7+Q1–Q5; p.11 Q6–Q10+§7.2; p.12 §8 risk+review; p.13 §9/§9.1; p.14 §9.1 tail+§10; p.15 §10.1. **No clipping, overlap, broken cells, orphan headings, or table split without a repeated header** (splits at p.2→3, 4→5, 6→7, 10→11, 13→14 all carry the header). §10.1 is intact on p.15.
+
+**8. R02 findings rechecked — PASS.** (a) §2 業主／客戶需求 row (p.3) now reads 「同案Q04重要度原始值見0033 R03表8」 — correctly identified as 0033 表8, and 0033's 表3 (「需求—課程—評量因果鏈」) is not cited as that source. (b) `SOURCE_MAP_R01.md` line 10 cites candidate SHA `e8212788…fda727` and line 47 cites `render_R01_e8212788/0049_R01.pdf` + `page-01.png`–`page-15.png` (15 pages) — both now match this exact candidate/render.
+
+## Defects
+
+No **material** defect found. Two non-material observations only:
+
+- **O1 (observation, no byte change).** 25 derived-aggregate rows (case ID, dates, invited/returned/valid totals, design weights, priority ranks, cohort size, total minutes, etc.) are tagged `SYNTHETIC_CROSS_DOCUMENT_REFERENCE` but leave `source_fact_id` empty (the `assumption_or_basis` still cites 0033 R03). Locator: `SYNTHETIC_REPLACEMENT_REGISTER_R01.csv`. Why it matters: negligibly — these are aggregates recomputed from 0033's raw facts and every row still carries replacement provenance. **DOCX bytes: no change.** Smallest adequate fix (optional): populate `source_fact_id` with the 0033 aggregate fact IDs.
+- **O2 (cosmetic, no byte change).** §5 objective G1 uses 「5題至少4題正確」 (the 5 embedded case situations) while §7.1 prints a 10-question bank. Not contradictory — G1 is the in-course subset — but a reader could momentarily conflate the two counts. Locator: rendered p.6 (docx table 15, row G1) vs p.10 §7.1. Why it matters: clarity only. **DOCX bytes: no change.** Smallest adequate fix (optional): add 「(5題子集)」 to G1.
+
+**Material defect remaining: none.** All eight required checks pass. This independent exact-SHA review does not grant Human acceptance, production status, or promotion, and no artifact was edited, rebuilt, or saved. Temporary extraction files created during inspection were removed; the candidate SHA is unchanged.

@@ -1,0 +1,179 @@
+{
+  "schema": "ttqs-one-r12-document-status-reconciliation/v1",
+  "project_id": "TTQS_ONE",
+  "work_id": "TTQS-0124-I19-E12-R01-R12-STATUS-AND-REVIEW-EVIDENCE",
+  "observed_at_utc": "2026-10-27T14:36:11.533Z",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "pr": 92,
+  "precommit_head": "9ef7975c72651720d5527ce99a151e6625bb8c21",
+  "document": {
+    "doc_id": "0124",
+    "requirement_id": "I19-E12",
+    "candidate_state": "CANDIDATE",
+    "candidate_sha256": "0a6567c2779d9ad8014ab6d1c892779a98892351a38ceda0dea9fa8b24ff2988",
+    "source_packet_sha256": "83a03deb7cbef3f07ef8b7ce0b2b25e1744baa6bc2e96b29e3259453558ccfee",
+    "unique_blueprint_sha256": "d0d8b0990d96fb7dab5d02a34d9f507b6434e57778646c920c488f01c1ab0f42",
+    "candidate_unchanged": true
+  },
+  "quality": {
+    "technical": {
+      "status": "PASS_DETERMINISTIC_SCOPE",
+      "receipt_sha256": "4f1632db2fb27d73cdb29fec6ceb234f341f4969352df45a6fe31b7ce4a35a21"
+    },
+    "visual": {
+      "status": "PASS_FOR_14_PAGE_DIRECT_VISUAL_SCOPE",
+      "pages": 14,
+      "receipt_sha256": "7a7b889c99be8902e88a7bab5ef94991f23a30c0cad326369836ac3c46a8c381",
+      "all_page_images_hashed": true
+    },
+    "semantic": {
+      "reviewer_reported": "PASS_TEXT_ONLY",
+      "independent_acceptance": "NOT_VERIFIED_ROUTE_IDENTITY",
+      "reviewer": "W2 Antigravity CLI",
+      "work_id": "TTQS-0124-I19-E12-R01-ANTIGRAVITY-R12-EXACT-SHA-SEMANTIC-REVIEW",
+      "requested_model": "gemini-3.8-flash-high",
+      "actual_serving_model": "UNKNOWN",
+      "fallback": "UNKNOWN_NOT_VERIFIED",
+      "response_sha256": "a4665ce8e60f6c2fe690a501806f860df9b40587e129dd050d2d0d15da73c515",
+      "dispatch_terminal_sha256": "e96a99cd7147c2059bc2d11190de8d609c1449b00b31a0a5871a3f55897a4e7c",
+      "worker_reported_tokens": {
+        "input": 22138,
+        "output": 6412,
+        "thinking": 4028,
+        "total": 28550
+      },
+      "computer_use": "CLI launcher did not call Computer Use; worker response-side tool use is not asserted by this summary"
+    },
+    "synthetic_register": {
+      "table_index_1_based": 12,
+      "data_rows": 30,
+      "unique_keys": 30,
+      "all_keys_mapped": true,
+      "reviewer_reported_key_count": 27,
+      "real_replacements": "NOT_PROVIDED"
+    }
+  },
+  "authority": {
+    "real_evidence": "NOT_VERIFIED; sample/synthetic only",
+    "formal_acceptance": "NOT_GRANTED"
+  },
+  "preexisting_remote_artifacts_precommit": [
+    {
+      "key": "candidate",
+      "path": "docs/ttqs-quality-20261016/quality-review/0124_I19-E12_R01_20261024/candidate/0124__結訓學員雇用與雇主回饋佐證表_R01_candidate.docx",
+      "expected_git_blob_sha": "76aea5c8eab402e3a24e599dbcc802ab7309ad0b",
+      "observed_git_blob_sha": "76aea5c8eab402e3a24e599dbcc802ab7309ad0b",
+      "match": true
+    },
+    {
+      "key": "pdf",
+      "path": "docs/ttqs-quality-20261016/quality-review/0124_I19-E12_R01_20261024/render/0124_R01_word.pdf",
+      "expected_git_blob_sha": "968579b157c2642b275e1ae93faf2fc4f4fb6e68",
+      "observed_git_blob_sha": "968579b157c2642b275e1ae93faf2fc4f4fb6e68",
+      "match": true
+    },
+    {
+      "key": "visual_qa",
+      "path": "docs/ttqs-quality-20261016/quality-review/0124_I19-E12_R01_20261024/evidence/VISUAL_QA_0124_R01.json",
+      "expected_git_blob_sha": "749b020b5aaf2b9e85ac3de8824e505a132112c4",
+      "observed_git_blob_sha": "749b020b5aaf2b9e85ac3de8824e505a132112c4",
+      "match": true
+    },
+    {
+      "key": "stepwise_word_receipt",
+      "path": "docs/ttqs-quality-20261016/quality-review/0124_I19-E12_R01_20261024/evidence/word_export_receipt_stepwise.json",
+      "expected_git_blob_sha": "e29739d56ee92781be0b13b8c9009d7d8f5a3a5a",
+      "observed_git_blob_sha": "e29739d56ee92781be0b13b8c9009d7d8f5a3a5a",
+      "match": true
+    },
+    {
+      "key": "technical_qa",
+      "path": "docs/ttqs-quality-20261016/quality-review/0124_I19-E12_R01_20261024/evidence/TECHNICAL_QA_0124_R01.json",
+      "expected_git_blob_sha": "60249ef8fa3471aa27e384c129c1f12a438de78f",
+      "observed_git_blob_sha": "60249ef8fa3471aa27e384c129c1f12a438de78f",
+      "match": true
+    },
+    {
+      "key": "candidate_work_receipt",
+      "path": "docs/ttqs-quality-20261016/quality-review/0124_I19-E12_R01_20261024/evidence/CANDIDATE_WORK_RECEIPT_0124_R01.json",
+      "expected_git_blob_sha": "9ee633fe4ffc024bfa2b7c1189785712fcf7cbd2",
+      "observed_git_blob_sha": "9ee633fe4ffc024bfa2b7c1189785712fcf7cbd2",
+      "match": true
+    }
+  ],
+  "source_status_sha256": "6c4b803a4613173d01e08272d7f28c2acf6b6685a222b6d7021f7e1ea1278d35",
+  "worker_artifacts": [
+    {
+      "name": "ADJUDICATION_R12.json",
+      "path": "docs/ttqs-quality-20261016/quality-review/0124_I19-E12_R01_20261024/review/ANTIGRAVITY_R12_REVIEW_20261027/ADJUDICATION_R12.json",
+      "bytes": 3197,
+      "local_sha256": "a24300220c665617c01207f27a8b3060851ffade7ad79cd5437e1f993175220d",
+      "expected_git_blob_sha": "08eef959c749977af19f44a16bd09866123374ef"
+    },
+    {
+      "name": "ANTIGRAVITY_R12_REVIEW_REQUEST.md",
+      "path": "docs/ttqs-quality-20261016/quality-review/0124_I19-E12_R01_20261024/review/ANTIGRAVITY_R12_REVIEW_20261027/ANTIGRAVITY_R12_REVIEW_REQUEST.md",
+      "bytes": 42539,
+      "local_sha256": "e1220635787d81b93b3ff6e1c23b4ce2114a75e3cfe745e06d47cbbaf4f0df34",
+      "expected_git_blob_sha": "ceb49458d72231ec97f730bb5f78f43211f5f17f"
+    },
+    {
+      "name": "DISPATCH_START.json",
+      "path": "docs/ttqs-quality-20261016/quality-review/0124_I19-E12_R01_20261024/review/ANTIGRAVITY_R12_REVIEW_20261027/DISPATCH_START.json",
+      "bytes": 1248,
+      "local_sha256": "29c6ef9a6433472e1b39c94b5db749d812c5acb6460d0a98c485db31d94c8321",
+      "expected_git_blob_sha": "2a8c3c298845eb855c08cfc1f961e97c46f8de71"
+    },
+    {
+      "name": "DISPATCH_TERMINAL.json",
+      "path": "docs/ttqs-quality-20261016/quality-review/0124_I19-E12_R01_20261024/review/ANTIGRAVITY_R12_REVIEW_20261027/DISPATCH_TERMINAL.json",
+      "bytes": 1640,
+      "local_sha256": "e96a99cd7147c2059bc2d11190de8d609c1449b00b31a0a5871a3f55897a4e7c",
+      "expected_git_blob_sha": "785e4c8e2dff01b453371b3354536d6e99b2dcc3"
+    },
+    {
+      "name": "INPUT_MANIFEST.json",
+      "path": "docs/ttqs-quality-20261016/quality-review/0124_I19-E12_R01_20261024/review/ANTIGRAVITY_R12_REVIEW_20261027/INPUT_MANIFEST.json",
+      "bytes": 1048,
+      "local_sha256": "9c88666efba42cd90fdcca0b141b43aa9bc38d036f7378205b0c586c0cc5a43d",
+      "expected_git_blob_sha": "eb78cdb1b1715e231f7f63b74dcc5d41e01ba811"
+    },
+    {
+      "name": "MODEL_CATALOG_STDERR.txt",
+      "path": "docs/ttqs-quality-20261016/quality-review/0124_I19-E12_R01_20261024/review/ANTIGRAVITY_R12_REVIEW_20261027/MODEL_CATALOG_STDERR.txt",
+      "bytes": 29,
+      "local_sha256": "53f588bc9a928f4a66908deacaca57dddc7e7ce177a0cc3586b5a501be26e1e8",
+      "expected_git_blob_sha": "6bb234241c4e3487b6b6f1f8511f2c8b40421c69"
+    },
+    {
+      "name": "MODEL_CATALOG_STDOUT.txt",
+      "path": "docs/ttqs-quality-20261016/quality-review/0124_I19-E12_R01_20261024/review/ANTIGRAVITY_R12_REVIEW_20261027/MODEL_CATALOG_STDOUT.txt",
+      "bytes": 281,
+      "local_sha256": "85e245eeb6ee6aa8450b0a953be6bc93480da5086eaa233722cfd9057961fa32",
+      "expected_git_blob_sha": "e912625f26acab77dd6950929829584ef016c0c0"
+    },
+    {
+      "name": "RAW_STDERR.txt",
+      "path": "docs/ttqs-quality-20261016/quality-review/0124_I19-E12_R01_20261024/review/ANTIGRAVITY_R12_REVIEW_20261027/RAW_STDERR.txt",
+      "bytes": 0,
+      "local_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected_git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "name": "RAW_STDOUT.json",
+      "path": "docs/ttqs-quality-20261016/quality-review/0124_I19-E12_R01_20261024/review/ANTIGRAVITY_R12_REVIEW_20261027/RAW_STDOUT.json",
+      "bytes": 9327,
+      "local_sha256": "e03885e07e43bb42437040028fd0c191b19b169efa81dc93de99399179b18b13",
+      "expected_git_blob_sha": "d768764a84f46de8e6a4f9da51a96aca195a2b99"
+    },
+    {
+      "name": "REVIEW_RESPONSE.md",
+      "path": "docs/ttqs-quality-20261016/quality-review/0124_I19-E12_R01_20261024/review/ANTIGRAVITY_R12_REVIEW_20261027/REVIEW_RESPONSE.md",
+      "bytes": 8902,
+      "local_sha256": "a4665ce8e60f6c2fe690a501806f860df9b40587e129dd050d2d0d15da73c515",
+      "expected_git_blob_sha": "1ea6abd31e8e89c86ff392fd68010e4f8cc76958"
+    }
+  ],
+  "new_worker_artifact_readback": "PENDING_POST_COMMIT_FETCH"
+}

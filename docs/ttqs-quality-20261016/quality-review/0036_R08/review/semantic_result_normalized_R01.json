@@ -1,0 +1,175 @@
+{
+  "review_receipt_source": "semantic_receipt_full_R01.json",
+  "review_type": "independent_semantic_review",
+  "doc_id": "0036",
+  "requirement_id": "I07-E04",
+  "candidate_revision": "R08",
+  "candidate_sha256": "e2d4b3f5e906faaf3d473c7351bd79618a78dcf2c8f91a32a4e952d005ac5eae",
+  "candidate_unchanged": true,
+  "reviewer_route": "Antigravity CLI headless; no Computer Use",
+  "cli_version": "1.4.0",
+  "cli_sha256": "f5466e6aaf9f1345cae476fecb9aebb9e82c2ca8dfd43136fa9747fcf075e062",
+  "model_requested": "gemini-3.8-flash-high",
+  "effort_requested": "high",
+  "model_runtime_field_returned": false,
+  "model_runtime_note": "CLI invocation pinned --model; the response envelope did not include a runtime model field.",
+  "started_utc": "2026-10-16T23:13:03.073195+08:00",
+  "completed_utc": "2026-10-16T23:17:27.391839+08:00",
+  "elapsed_seconds": 263.59,
+  "process_exit_code": 0,
+  "conversation_id": "2d1c1652-f592-4611-a975-d0eb200eab88",
+  "envelope_status": "SUCCESS",
+  "usage": {
+    "input_tokens": 141428,
+    "output_tokens": 26701,
+    "thinking_tokens": 20380,
+    "cache_read_tokens": 1348414,
+    "total_tokens": 168129
+  },
+  "result": {
+    "project_id": "TTQS_ONE",
+    "doc_id": "0036",
+    "requirement_id": "I07-E04",
+    "candidate_revision": "R08",
+    "candidate_sha256": "e2d4b3f5e906faaf3d473c7351bd79618a78dcf2c8f91a32a4e952d005ac5eae",
+    "verdict": "PASS",
+    "title_blind_test": {
+      "verdict": "PASS",
+      "evidence": [
+        "Page 4, Table 10, §4「課程設計作業程序」: 明定 9 步標準作業程序（1接件、2核源、3定缺口、4寫目標、5選方案、6編規劃、7覆核、8授權、9發版與回饋），包含每步之輸入、操作責任、判斷/例外規則與輸出紀錄。",
+        "Page 5, Figure 5-1, §5「課程規劃流程圖」: 圖 5-1 提供課程規劃連續放行閘門與否決分支（來源不完整退回補件、目標缺評量退回重設、未獲授權停留 SAMPLE 草案閘門）。",
+        "Page 6, Table 12, §6「課程設計進度表」: 逐列登錄 2026-09-01 至 2026-09-12 之 8 項具體里程碑、責任角色、輸入產出、檢核點與示範完成狀態，末端授權閘門明確標註『未取得授權或原件；未通過；不得發布排課』。",
+        "Pages 7-14, §7-12「訓練規劃書」: 完整開展需求缺口診斷（Table 13）、三方案加權決策（Table 14）、目標對應矩陣（Table 16）、100%評量覆蓋矩陣（Table 17）、210分鐘課程時間表（Table 18）、師資學員教材環境條件（Table 19）、8欄服務紀錄表（Table 20）、5題選擇題測驗、8項實作量規（Table 21）與課後成效核算（Table 22）。",
+        "Pages 18-19, 附表 A-1 與 A-2: 專屬附錄提供可直接施測的目標 4 四情境判斷卡及評量者答案錨點與評分表，具備獨立可印可測特性。",
+        "負向鄰項邊界排除明確: 正文第 2 頁 Table 5 明確界定本件為單一示範課程之前置規劃，不代替 0035/I07-E03 之職能分析方法檢討改善報告，亦不代替 0037/I08-E01 之跨年度訓練方案檢討紀錄。"
+      ]
+    },
+    "criteria": [
+      {
+        "criterion": "Exact official requirement coverage (I07-E04)",
+        "verdict": "PASS",
+        "evidence_locators": [
+          "Page 1, Paragraph 8 & Page 2, Table 4",
+          "Page 4, Table 10",
+          "Page 5, Figure 5-1",
+          "Page 6, Table 12",
+          "Pages 7-14, §7-12",
+          "Page 16, Table 26"
+        ],
+        "reason": "候選文件完全符合官方訓練機構版第 2 頁 I07-E04 原文要求，具備實質且可執行的課程設計進度表（§6）、流程圖說明（§4、§5）及完整訓練規劃書（§7-12），並於 §15 建立官方條文與正文位置對照表。"
+      },
+      {
+        "criterion": "Document genre and operational usability (SOP)",
+        "verdict": "PASS",
+        "evidence_locators": [
+          "Page 1, Table 2",
+          "Pages 2-3, §1-2, Tables 4, 7, 8",
+          "Pages 3-4, §3, Table 9",
+          "Page 4, §4, Table 10",
+          "Pages 14-15, §13, Tables 22, 23, 24",
+          "Page 17, §16, Table 27"
+        ],
+        "reason": "文件屬性為標準作業程序（SOP），首頁提供 30 秒讀者/時點/操作摘要，定義小型協會 5 種功能角色與 RACI 責任分離矩陣，明訂啟動條件、輸入核對、9 步作業程序、例外處置與升級路徑、4 項設計監測指標、受控輸出清單與真實資料替換程序。所有步驟均切合小型組織人工作業實際，無不可執行之虛構常設委員會。"
+      },
+      {
+        "criterion": "Truth boundary and synthetic case coherence",
+        "verdict": "PASS",
+        "evidence_locators": [
+          "Page 1, Header & Callout",
+          "Page 2, §1 真實資料界線",
+          "Page 6, Table 12 Row 8",
+          "Page 11, Table 20 警語",
+          "Page 13, §12 計算演練說明",
+          "Page 16, §14 走讀結論",
+          "Page 17, §16 替換清單",
+          "Page 18, 附表 A-1 表頭",
+          "Page 19, 附表 A-2 評量紀錄"
+        ],
+        "reason": "全篇 19 頁頁首均標註 SAMPLE / SYNTHETIC，正文首頁及各節均設置嚴謹資料界線聲明，明確表示未獲真實法人授權、未實際開課、未聘任真人講師，授權閘門保持未通過（不得發布排課），無冒充協會實績或偽造第三方公文/簽章之情事。"
+      },
+      {
+        "criterion": "Arithmetic recalculation and instructional alignment",
+        "verdict": "PASS",
+        "evidence_locators": [
+          "Page 7, Table 13",
+          "Page 8, Table 14",
+          "Page 9, Paragraph 59",
+          "Page 10, Table 18",
+          "Pages 13-14, Table 21 & Continuation Table",
+          "Pages 18-19, 附表 A-1 & A-2"
+        ],
+        "reason": "所有呈現之數值與公式皆由原始行列重算完全吻合：三方案加權總分（A:3.3, B:4.7, C:3.5）、四項能力缺口與課後目標百分點差（40pt, 30pt, 20pt, 50pt）、目標評量覆蓋率 4/4=100%、課表時段加總（教學190+休息20=210分鐘）、10 組前後測配對平均（前測2.4, 後測4.0, 提升+1.6, 達標80%）。目標、教法、課表、資源與評量邏輯一貫。"
+      },
+      {
+        "criterion": "Goal 4 assessment instruments and scoring anchors validity",
+        "verdict": "PASS",
+        "evidence_locators": [
+          "Page 8, Table 16",
+          "Page 18, 附表 A-1",
+          "Page 19, 附表 A-2"
+        ],
+        "reason": "附表 A-1 與 A-2 針對目標 4（更正與異常處置）提供 4 個具體情境與作答欄位；評量者端具有客觀可觀察之 0/1 分錨點；明定個人通過門檻為至少 3/4 且無關鍵錯誤；關鍵錯誤（未授權公開/散布可識別資料、無軌跡覆寫或刪除原件、隱匿未授權傳送、捏造來源/自行核准）具有不可抵銷之否決效力，規則明確無歧義。"
+      },
+      {
+        "criterion": "Cross-reference consistency and neighbor non-appropriation",
+        "verdict": "PASS",
+        "evidence_locators": [
+          "Page 2, Table 5",
+          "Page 6, Table 12",
+          "Page 8, Table 14",
+          "Page 10, Table 18",
+          "Page 11, Table 20",
+          "Page 15, Table 25",
+          "synthetic_replacement_register_75_rows.csv"
+        ],
+        "reason": "文件內所有案例 ID（SYN-036-PLAN-01）、日期（設計時程 2026-09-01~09-12、示範授課日 2026-10-03、追蹤日 2026-10-10）、課程時長（210分鐘）、角色代碼與替換清冊 75 筆事實鍵逐一對齊吻合，且完全獨立於 0035 與 0037 之專屬資料，無偷換或吞併近鄰事實。"
+      },
+      {
+        "criterion": "Readability and visual layout integrity",
+        "verdict": "PASS",
+        "evidence_locators": [
+          "Page 14, Continuation Table & §13",
+          "Page 16, Continuation Table & §15",
+          "Page 18, 附表 A-1",
+          "Page 19, 附表 A-2"
+        ],
+        "reason": "經檢視第 14、16、18、19 頁之高解析渲染頁面與文字版，無表格欄位被截斷、無文字溢出、無孤行標題、表格字體符合規範（≥9.5pt），跨頁表格之續表標題與欄位對齊清晰；附表 A-1 與 A-2 各自獨立成完整單頁，可供受測者與評量者直接列印使用。"
+      }
+    ],
+    "findings": [],
+    "truth_boundary_and_synthetic_register": {
+      "verdict": "PASS",
+      "evidence": [
+        "所有 75 項合成事實（0036-SYN-F001 至 0036-SYN-F075）均能在候選文件正文中精確定位，包括標題界線、功能角色、RACI 矩陣、9 步時限、進度表日期與狀態、基線與目標分母、方案加權計算、課表時段、CASE-S01 填寫示例、測驗與量規、前後測 10 組配對數據、附表 A-1 四情境及附表 A-2 答案錨點。",
+        "第 6 頁進度表第 8 里程碑明確標記：『未取得授權或原件；未通過；不得發布排課』，真實授權 Human Gate 實質阻斷，未偽稱通過審批。",
+        "第 17 頁 §16 提供完整 7 項真實資料替換清單，載明轉為真實文件時所需之核對原件與責任角色。"
+      ],
+      "unmatched_material_facts": []
+    },
+    "arithmetic_recalculation": {
+      "verdict": "PASS",
+      "recalculated_items": [
+        "方案比較加權總分（權重 40%, 30%, 20%, 10%）：方案 A = 3×0.4 + 2×0.3 + 5×0.2 + 5×0.1 = 3.3/5；方案 B = 5×0.4 + 5×0.3 + 4×0.2 + 4×0.1 = 4.7/5；方案 C = 4×0.4 + 4×0.3 + 2×0.2 + 3×0.1 = 3.5/5。計算正確，方案 B 最高。",
+        "四項能力缺口與課後目標差距（分母固定 10 人）：完整度基線 4/10=40%，目標 8/10=80%，差距 80%-40%=40 個百分點；資料最少化基線 5/10=50%，目標 8/10=80%，差距 80%-50%=30 個百分點；服務交接基線 6/10=60%，目標 8/10=80%，差距 80%-60%=20 個百分點；更正與異常基線 3/10=30%，目標 8/10=80%，差距 80%-30%=50 個百分點。重算完全相符。",
+        "目標評量覆蓋率：4 個目標皆具備直接評量工具，覆蓋率 4/4 = 100%。重算完全相符。",
+        "課表時程加總：15 + 40 + 10 + 45 + 10 + 40 + 30 + 20 = 210 分鐘；教學評量時間 15+40+45+40+30+20 = 190 分鐘，休息時間 10+10 = 20 分鐘。時鐘起訖 09:00 至 12:30 完全吻合。",
+        "前後測配對統計（10 名學員 U01-U10）：前測總分 24，平均 24÷10 = 2.4/5；後測總分 40，平均 40÷10 = 4.0/5；配對差總和 16，平均提升 16÷10 = +1.6 分；後測達標（≥4分）人數 8 人（U01, U02, U03, U04, U06, U07, U08, U09），達標率 8÷10 = 80%。重算完全相符。"
+      ],
+      "discrepancies": []
+    },
+    "layout_scope": {
+      "verdict": "PASS",
+      "inspected_pages": [
+        14,
+        16,
+        18,
+        19
+      ],
+      "findings": []
+    },
+    "review_limitations": [
+      "本評審為唯讀式語意品質審查，依據使用者提供之 inputs/ 封包文本、藍圖、替換清冊與 WordCOM 渲染 PDF/截圖進行靜態核實，未執行終端命令、腳本、子代理，亦未對任何文件進行寫入、重產或修改。",
+      "排版檢視聚焦於使用者指定之第 14、16、18、19 頁（涵蓋表單跨頁修訂與新增附表 A-1、A-2），其餘第 1-13、15、17 頁係依據封包脈絡載明之繼承狀態並比對頁面文字核實。"
+    ]
+  }
+}

@@ -1,0 +1,478 @@
+WORK_ID=TTQS_ONE_0040_I08-E03_R06_EXACT_SHA_INDEPENDENT_SEMANTIC_W2_20261123
+PROJECT_ID=TTQS_ONE
+DOC_ID=0040
+REQUIREMENT_ID=I08-E03
+OFFICIAL_SEQUENCE=040
+CANDIDATE_SHA256=b2635adfc72f0328509b582f1d9af5f37a6eca8a37c5a54cbf77a31deb63dde6
+BASE_R05_CANDIDATE_SHA256=9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+SOURCE_PDF_SHA256=805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709
+UNIQUE_BLUEPRINT_ROW_SHA256=ab080a2e6d85cc13a706f0c10bda7c208ddc191a1fea20a670fd5a174ab14943
+REPLACEMENT_REGISTER_SHA256=8cf3cbc3a77c355b8624f8153eb60e5a7f074a5f7645fa45b7a6e8bad0467bde
+RENDERED_PDF_SHA256=3285ee3ef1670bbf4f9ae58ba987fbe08005ddaacbfd2f86ac2ed0d47d300ae4
+
+EXACT OFFICIAL CHECKBOX REQUIREMENT (PDF page 3):
+「課程規劃會議紀錄展現訓練課程設計流程，擬定訓練評估方法並作為訓練成效評估的依據，且有佐證資料可查。」
+
+UNIQUE BLUEPRINT SCOPE SUMMARY (row SHA above): the evidence tool must operationalize course-evaluation design: observable goals, measures/tools, schedule/timing, criteria/thresholds, data/evidence paths, scoring and reproducible calculations, follow-up and improvement handoff. The matrix is a companion to the course-planning meeting record, not a substitute for the actual meeting record or plan.
+
+R06 CHANGE SCOPE: OOXML-only normalization of page-navigation table widths. Extracted body/table text is byte-for-byte identical at the text-node level to R05. Candidate hash changed; this review must bind R06 exact SHA above. Review semantic/usability across all 8 pages and the 39-row replacement register below. Do not perform visual, filesystem, command, browser, or GitHub actions.
+
+REVIEW CONTRACT:
+Independently judge official fit, whether the matrix is usable by training staff and an evaluator, operational completeness of scoring/calculation/follow-up, title-blind identification and negative-neighbor separation, whether each factual claim is source-backed or clearly SAMPLE/SYNTHETIC, whether synthetic values and replacement records are adequately registered, and whether any content implies real association activity/approval/credential/third-party evidence. Do not treat polished text or exact SHA as a pass. Cite each blocker with printed page and section/table/row plus the exact evidence. Classify low-risk style suggestions as nonblocking. Never claim visual QA, GitHub readback, formal acceptance, or REAL evidence.
+
+REQUIRED OUTPUT: JSON only, <= 6000 characters, with work_id, candidate_sha256, verdict PASS/FAIL/PARTIAL, blocking_findings array (id,severity,locator,evidence,reason,minimum_repair), nonblocking_findings array, scope_reviewed, official_fit, operational_usability, negative_neighbor_separation, sample_real_boundary, synthetic_register, visual_review_performed=false, github_readback_performed=false, formal_acceptance_granted=false, model_reported_identity. Do not use tools or modify files.
+
+=== RENDERED CANDIDATE TEXT, ALL EIGHT PAGES ===
+===== PAGE 1 =====
+SAMPLE / SYNTHETIC  ·  訓練評估工具 
+SAMPLE / SYNTHETIC  ·  訓練評估工具  ·  第 1 頁 
+訓練評估方法與成效指標對照表 
+把課程目標、觀察工具、評量時點、門檻與後續用途接成可核對的紀錄 
+工具主題 資料狀態 使用時點與用途 示範資料日期 
+訓練評估指標對照 SAMPLE / SYNTHETIC 
+課程計畫定版前設計評量；課後
+彙整成效 
+2026-06-12（SAMPLE） 
+ 
+使用者：訓練行政人員、課程設計者與評核閱讀者。使用時點：課程計畫定版前，及每次課程前後評量資料彙
+整時。操作方式：先核對需求與目標，再確認每個目標都有可觀察項目、工具、時點、門檻及證據位置；課後
+只用有效且可配對資料計算。輸出：一張可執行的評量矩陣、一份逐筆評分紀錄及可重算的班次摘要。 
+官方要求（逐字引用）：「課程規劃會議紀錄展現訓練課程設計流程，擬定訓練評估方法並作為訓練成效評估
+的依據，且有佐證資料可查。」 
+來源：勞動力發展署《TTQS 查核佐證文件資料表—訓練機構版》PDF 第 3 頁載明，課程規劃會議須展現設計
+流程、擬定評量方法並作為訓練成效評估依據，且有佐證可查。本工具把評量方法轉成可執行矩陣；會議決策
+由配套會議示範，這份矩陣供課前設計及課後計算使用。 
+示範界線：本件使用虛構課程「社區服務志工接待與活動引導」作跨表計算例。所有角色、需求分數、受評代
+碼、評分與計算均為 SAMPLE / SYNTHETIC，不是原始點協會實際調查、開課或成效。未取得原始資料與權限
+前，不得把示範結果改標為 REAL。 該示範案例代碼：SAMPLE-0039-01。 
+ 
+步驟 操作 完成後留下的可查結果 
+1 核需求 
+確認需求來源、日期、適用課程與職能差距；資料未
+核實先標 SAMPLE 或待驗證。 
+需求來源索引與版本；不把合成需求當成調查結
+果。 
+2 定目標 
+把每個差距改寫成可觀察的行為，並指定直接評量項
+目。 
+目標—指標對照；覆蓋率計算。 
+3 定工具 
+固定題目/情境、量尺、評分者、資料欄位、缺漏規
+則及合格門檻。 
+可重複使用的評量表與評分基準。 
+4 定時點 
+開課前做基線；最後一次練習後、結訓前做後測；30
+日追蹤另行核准。 
+含日期、版本、去識別代碼的評量紀錄。 
+5 重算與改
+善 
+按有效分母計算，揭露缺漏；未達門檻要列補強及再
+評量。 
+班次摘要、例外與課程修訂交接。 
+ 
+
+===== PAGE 2 =====
+SAMPLE / SYNTHETIC  ·  訓練評估工具 
+SAMPLE / SYNTHETIC  ·  訓練評估工具  ·  第 2 頁 
+ 
+本矩陣與配套會議示範共用同一合成課程案例。會議示範呈現假設情境如何選擇目標、評量方法、時點與門檻；
+本矩陣把該設計轉成可執行及可計算的工具。這只維持合成示範一致，不表示該會議曾在協會發生。 
+文件／資料 本件如何引用 不得推論 
+官方要求來源（PDF 第 3 
+頁） 
+界定完整證據目的：會議決定評量方法，並有可查
+佐證。 
+不推論協會已達標或已完成評量。 
+配套會議示範案例 
+引用其 K1–K4、0–2 量尺、課前/結訓前時點、總
+分與 K3 門檻，以及五筆示範前後測。 
+會議示範不是協會已召開或核准的
+原始紀錄。 
+另一份需求調查示範案例 
+另一個合成案例；不把其日期、需求分數或樣本併
+入本案例。 
+兩案不得合併為一條真實證據鏈。 
+系統改善檢討紀錄；課程計
+畫文件 
+系統改善紀錄呈現改善檢討；課程計畫文件載明課
+程規劃內容。需要時依權責交接，不以本矩陣代
+替。 
+本矩陣不代替系統改善紀錄或完整
+課程計畫。 
+ 
+ 
+以下流程是評估設計的工作順序。每一步都要保留來源、版本與責任；任一關鍵前置資料未核實時，先停在示
+範或待驗證狀態。 
+流程節點 可核對輸出 
+01  需求與差距 可追溯的需求來源 → K1–K4 基線 
+02  行為目標 把差距改寫成可觀察、可評分的行為 
+03  工具與門檻 固定情境、0/1/2 量尺、K3 關鍵門檻及缺漏規則 
+04  前後評量 課前基線 → 最後練習後且結訓前；同版可比任務 
+05  計算與決策 有效樣本、平均變化、達標率、例外與補強 
+06  課程修訂 把未達標的 K 項交給課程負責角色更新下一版 
+ 
+設計覆蓋率＝有直接評量的目標數 ÷ 全部目標數。示範中 K1–K4 均有直接觀察項目，4 ÷ 4＝100%；這表示設
+計表面有覆蓋，不表示學員已達標。 
+  
+
+===== PAGE 3 =====
+SAMPLE / SYNTHETIC  ·  訓練評估工具 
+SAMPLE / SYNTHETIC  ·  訓練評估工具  ·  第 3 頁 
+ 
+示範基線取自配套會議示範中的同一組合成資料：K1、K2、K3、K4 平均分別為 1.0、0.6、1.2、0.6（滿分各 2 
+分）。差距＝2 分目標－基線平均。矩陣列出每項目標的直接觀察、時點、門檻、證據及覆核責任。 
+差距與目標 直接評量／工具 時點與門檻 證據欄位、定位及責任 
+K1 開場與角色說明；基線 
+1.0，差距 1.0。受訓者清
+楚說明互動角色與可協助
+範圍。 
+標準化模擬接待；K1 0–2 
+分。看是否能說明角色及界
+線。 
+前測、後測各評一次。總門
+檻的一部分：後測需達總分 
+≥6/8。 
+去識別受評代碼、情境版
+號、觀察事實、K1 分數、
+評分角色與日期；評量角色
+（示範職務）。 
+K2 澄清與摘要確認；基線 
+0.6，差距 1.4。先詢問，
+再用自己的話核對理解。 
+同一套標準化模擬接待；K2 
+0–2 分。觀察是否取得需要
+並讓對方修正摘要。 
+前測、後測各評一次；缺任
+一構面不得列入完整總分。 
+同上；評分須記錄可觀察行
+為，不以印象或滿意度替
+代。 
+K3 同意與隱私界線；基線 
+1.2，差距 0.8。說明用
+途、取得同意、限制資料
+並適當轉介。 
+K3 為關鍵項目：未同意或越
+界為 0；提示後修正為 1；
+主動守界線及轉介為 2。 
+獨立必要門檻：K3 ≥1；總分
+再須 ≥6/8。任何一項不合格
+都不能被其他高分抵銷。 
+評分紀錄只存去識別代碼及
+行為，不記錄真實服務對象
+個資；評量覆核角色（示範
+職務）負責覆核。 
+K4 收尾與交接；基線 
+0.6，差距 1.4。說明下一
+步、依範圍交接及完成去
+識別紀錄。 
+同一模擬任務；K4 0–2 分，
+檢查收尾、交接及記錄。 
+前測、後測各評一次；相同
+量尺、相近難度情境。 
+記錄下一步、交接對象角
+色、狀態與時間；不得填真
+實人名或未授權服務內容。 
+ 
+ 
+構面 0 分：未達 1 分：部分達成 2 分：完整達成 直接觀察重點 
+K1 開場與角色 
+未說明或角色範圍錯
+誤。 
+提示後能部分說明。 
+清楚說明互動角色、可協助及
+不可承諾範圍。 
+開場語句與角色界
+線。 
+K2 澄清與摘要 
+未確認需求，或摘要
+明顯不符。 
+提示後完成部分確
+認。 
+先詢問，再摘要並讓對方修正
+或確認。 
+提問、摘要、確
+認。 
+K3 同意與隱私 
+未取同意、收集不必
+要資料或越權提供建
+議。 
+提示後才修正；僅達
+最低門檻。 
+主動說明用途、取得同意、限
+制資料並適當轉介。 
+隱私與同意為安全
+關鍵項；0 分直接
+不通過。 
+K4 收尾與交接 
+沒有下一步或交接錯
+誤。 
+提示後完成部分步
+驟。 
+說明下一步、依授權交接並留
+下去識別記錄。 
+行動、責任角色、
+狀態與追蹤欄位。 
+ 
+計分：四構面各 0、1、2 分，總分 0–8。示範通過條件同時為「四項完整」且「總分至少 6 分」且「K3 至少 1 
+分」。未觀察或缺評不得補 0；先記缺漏原因並補測或排除，計算時揭露有效分母。 
+  
+
+===== PAGE 4 =====
+SAMPLE / SYNTHETIC  ·  訓練評估工具 
+SAMPLE / SYNTHETIC  ·  訓練評估工具  ·  第 4 頁 
+ 
+下表沿用配套會議示範中的五筆合成評分，僅用來證明矩陣可重算。向量次序固定為 K1/K2/K3/K4。個人通過
+需後測四項完整、總分 ≥6/8 且 K3 ≥1。 
+合成代碼 前測 K1/K2/K3/K4；總分 後測 K1/K2/K3/K4；總分 總分變化 依門檻判定 
+D01 1/0/1/0；2/8 2/1/2/1；6/8 +4 通過：6/8 且 K3=2 
+D02 0/1/1/1；3/8 2/2/2/1；7/8 +4 通過：7/8 且 K3=2 
+D03 1/1/2/0；4/8 2/2/1/1；6/8 +2 通過：6/8 且 K3=1 
+D04 1/0/1/1；3/8 2/1/1/1；5/8 +2 未通過：總分低於 6 
+D05 2/1/1/1；5/8 2/2/2/1；7/8 +2 通過：7/8 且 K3=2 
+ 
+ 
+指標 定義／分母 代入合成資料 結果及解讀限制 
+目標覆蓋率 
+有直接評量的目標數 ÷ 全部目標
+數。 
+4 個目標均連到 K1–K4：4÷4。 
+100%；僅代表設計覆蓋，不
+代表學會。 
+平均前測 
+有效且四項完整的前測總分 ÷ 有
+效前測人數。 
+(2+3+4+3+5)÷5 = 17÷5。 3.4/8；五筆均為合成樣本。 
+平均後測 
+有效且四項完整的後測總分 ÷ 有
+效後測人數。 
+(6+7+6+5+7)÷5 = 31÷5。 6.2/8；未用缺漏補值。 
+配對平均變化 
+同一代碼前後測均完整者的「後
+測－前測」總分和 ÷ 配對有效人
+數。 
+(4+4+2+2+2)÷5 = 14÷5。 +2.8 分/8；不是因果證明。 
+後測達標率 
+符合完整資料、總分 ≥6 且 K3 ≥1 
+的人數 ÷ 有效完整後測人數。 
+D01、D02、D03、D05 達標：
+4÷5。 
+80%；D04 為 5/8，未達門
+檻。 
+構面平均 
+該構面有效評分總和 ÷ 該構面有
+效人數。 
+前測 K1–K4：5/5、3/5、6/5、
+3/5；後測：10/5、8/5、8/5、
+5/5。 
+前測 1.0/0.6/1.2/0.6；後測 
+2.0/1.6/1.6/1.0。 
+ 
+本例五筆皆完整：前測總分合計 17，後測 31，配對增加 14，平均增加 14÷5＝2.8 分；達標 4 人，分母為 5 名
+有效後測者，4÷5＝80%。這些數字與配套會議示範資料一致。若實際資料有缺漏，應分別報告有效前測 N、
+有效後測 N、完整配對 N、缺漏數與原因；不得把未評分補成 0。 
+ 
+執行時每一時點各留一筆，前後測使用同一去識別代碼、同版量尺及相近難度任務。下列 D04 是完整填入的 
+SAMPLE 例，展示未達標如何處置；沒有真實姓名、簽名或實際課程紀錄。 
+
+===== PAGE 5 =====
+SAMPLE / SYNTHETIC  ·  訓練評估工具 
+SAMPLE / SYNTHETIC  ·  訓練評估工具  ·  第 5 頁 
+欄位 完整合成填寫示例 實際使用時檢查 
+受評代碼／案例 D04／本案例合成代碼 
+只用受控代碼；對照表另行限權保
+存。 
+測量時點與任務 
+前測：第一單元前；後測：最後練習後、結訓前；同版
+模擬接待情境。 
+記錄實際日期、情境版次與是否相
+近；不把評量時間併入授課時數。 
+K1–K4 前測 1、0、1、1；總分 3/8。 逐項記錄可觀察事實與評分依據。 
+K1–K4 後測 2、1、1、1；總分 5/8；K3=1。 
+四項均完整才計總分；K3 另套關鍵門
+檻。 
+判定與理由 未通過：5/8 低於 6/8；不是因 K3 低分。 保留門檻、計算及評分者覆核紀錄。 
+後續行動（示範待
+辦） 
+課程設計角色安排補強 K2 澄清摘要及 K4 交接，再以等
+難度新情境重評；本例未執行、未填重評結果。 
+確認責任、期限、授權及新任務版
+本；完成前不可改為通過。 
+ 
+ 
+觸發狀況 當下處理 統計／結案規則 
+任一構面未觀察或表
+單缺欄 
+標明缺漏欄、原因、發現時間及補測安排；不補 
+0。 
+未補完整前不列完整個案；揭露各指標有效 
+N。 
+K3=0，或出現未同
+意、越權、隱私暴露 
+停止該情境演練，依課程安全程序處理；主管檢
+視工具與教學。 
+即使總分 ≥6 仍判未通過；記錄限制存取，
+不保留多餘個資。 
+評分者差異超過 1 分
+或對 K3 判定不同 
+保留各自原始分；由受訓覆核角色回看去識別行
+為紀錄並記理由。 
+不得覆寫原始分；在摘要標示裁定值及覆核
+者角色。 
+前後測版本／難度不
+同 
+標記不可比，保留原因並決定重測或分開報告。 不得納入同一配對變化分母。 
+有效樣本為 0 確認缺件與補測可能性；保護原始資料。 
+平均與通過率報 N/A，寫明 N=0；不填 
+0%。 
+門檻、題目或目標要
+變更 
+先由有權限的角色檢核並記新版、原因、生效班
+次。 
+不得用後測結果回頭改門檻；版本不同的資
+料分開分析。 
+ 
+ 
+交接對象／步驟 必交資料 未完成時 
+評量角色（示範職務） 
+量尺版本、逐項原始評分、觀察事實、有效/缺漏標
+示、計算表及覆核紀錄。 
+資料不完整時標待補，不簽結論。 
+課程設計角色（示範職
+務） 
+未達標構面、補強活動、修訂版本及再評估安排。 不得把建議寫成已執行或已有效。 
+
+===== PAGE 6 =====
+SAMPLE / SYNTHETIC  ·  訓練評估工具 
+SAMPLE / SYNTHETIC  ·  訓練評估工具  ·  第 6 頁 
+交接對象／步驟 必交資料 未完成時 
+配套課程設計會議紀錄 
+只回寫核實後的工具、門檻與課程修訂決議；實際會
+議原件另存。 
+不得改寫會議示範來冒充實際決議。 
+真實化必要項 
+真實需求來源及日期、參訓者授權/同意、實際班次、
+評分者角色與校準、原始評分、工具版本、資料保管
+權限、核准與附件定位。 
+任一項缺證時仍標示 SAMPLE/待驗
+證；不可宣稱協會已辦訓、已核准或
+有效。 
+ 
+ 
+未達門檻的改善追蹤示例（SAMPLE / SYNTHETIC） 
+下列 D04 只示範如何把未達門檻轉為有風險、責任角色、期限及後續交接的可追蹤安排；日期與角色皆為合成
+資料，未經協會核准且尚未執行。 
+目前沒有協會實際簽到、學員評分、核准、課程執行或成效原件。本件不製作第三方原件或真人簽名。正式使
+用前，應由具權限角色逐項核實需求、課程、評量與成效來源；未核實的內容維持 SAMPLE / SYNTHETIC，不
+得宣稱協會已辦訓、已核准或已產生成效。 
+官方要求：勞動力發展署《TTQS 查核佐證文件資料表—訓練機構版》PDF 第 3 頁載明，課程規劃會議須展現
+訓練課程設計流程、擬定評量方法並作為訓練成效評估依據，且有佐證可查。本工具把評量設計轉成可使用的
+核對矩陣，並與配套會議示範使用同一組合成資料；這不表示任何實際會議獲協會核准。 
+差距／未達門檻 示範風險 責任角色 示範期限／狀態 交接資料／結案規則 
+D04：後測 5/8；
+低於 6/8 門檻。 
+K2 澄清摘要及 K4 交
+接未完整；屬訓練練
+習風險，不是實際服
+務事件。 
+課程設計角色修訂
+練習；評量覆核角
+色以同版量尺評新
+情境。 
+2026-06-19
+（SAMPLE 目標
+期限）；本例尚
+未執行，沒有重
+評結果。 
+移交修訂教材、責任與期限紀錄、
+等難度重評表；四項完整、總分至
+少 6/8 且 K3 至少 1 分才可結案。 
+  
+
+===== PAGE 7 =====
+SAMPLE / SYNTHETIC  ·  訓練評估工具 
+SAMPLE / SYNTHETIC  ·  訓練評估工具  ·  第 7 頁 
+文件版本與使用指引 
+本文件是課程規劃與評量設計的示範工具，供對照目標、評量方法、時點、門檻及後續用途，不取代課程規劃
+會議紀錄。示範版次為「SAMPLE 工具版 v1.0」，目前未經協會核准、未正式採用且未生效。文件內課程、角
+色、D01–D05 代碼、分數及結果皆為 SAMPLE／SYNTHETIC 合成資料，不代表協會實際開課、學員評分或訓
+練成效。實際使用前，須依協會現行程序確認內容、取得授權並以有權使用的實際資料替換；保存依協會授權
+規範辦理，本文件不設定保存年限。 
+
+===== PAGE 8 =====
+SAMPLE / SYNTHETIC  ·  訓練評估工具 
+SAMPLE / SYNTHETIC  ·  訓練評估工具  ·  第 8 頁 
+內容導覽 
+本表協助依頁次快速找到文件中的操作內容；頁次以本候選文件版面為準。 
+項目 說明 實際使用前應完成 
+目的 
+對照課程目標、評量方法、時點、門檻與結果用
+途；不取代會議紀錄。 
+確認與協會現行課程及評估程序相符。 
+適用時點 
+課程計畫定版前，以及課程前後評量資料彙整
+時。 
+依實際課程安排確認各評量時點。 
+示範版次 
+SAMPLE 工具版 v1.0；僅供演練，非正式採用或
+生效版本。 
+取得有權角色核實與授權後再用於實務。 
+資料性質 
+課程、角色、D01–D05、分數及計算結果均為合
+成示範。 
+以有權使用且已核實的實際資料替換。 
+門檻與計算 本文件門檻、評分規準及計算均為示範設定。 依協會現行規範確認工具、門檻及算法。 
+資料保存 本文件不設定資料保存年限。 依協會實際授權的保存規範辦理。 
+頁次 內容 可快速查找 
+第 1 頁 
+使用說明、需求來源及五步流
+程 
+用途與時點、官方要求、SAMPLE 界線，以及需求至課程修訂的操作流
+程。 
+第 2 頁 設計原則與覆蓋率 與配套會議示範的關係、評量設計步驟及 K1–K4 目標覆蓋率。 
+第 3 頁 評量目標、量尺與規則 K1–K4 可觀察目標、0／1／2 評分規準、通過門檻及缺漏處理。 
+第 4 頁 合成評分與計算 D01–D05 前後測向量、總分、變化、門檻判定及後測達標率。 
+第 5 頁 成效統計與 D04 追蹤 覆蓋率、前後測平均、配對變化、達標率及未達標追蹤示例。 
+第 6 頁 例外處理、交接與實務前核實 資料例外、交接事項及正式使用前的真實化檢查清單。 
+ 
+
+=== EXACT REPLACEMENT REGISTER ===
+fact_id,doc_id,case_id,fact_type,synthetic_value,body_locator,assumption_reason,real_source_to_replace,real_owner_role,status,bound_candidate_sha256
+0040-REF-001,0040,OFFICIAL-040,official_source_reference,官方 I08-E03 checkbox 040；官方來源 PDF 第 3 頁；SHA 805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709,第1頁「官方要求（逐字引用）」及「來源」段；第7頁「目前文件控制」表之「官方映射」列／目前記錄欄（0040→I08-E03→官方 checkbox 040；來源 PDF 第3頁及 SHA）。,只記錄已核對的官方來源定位，不表示協會佐證已通過。,不替換；若官方版本更新，重新取得官方文件核對。,文件管理角色,REAL_OFFICIAL_SOURCE_REFERENCE; NOT ASSOCIATION EVIDENCE,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-001,0040,SAMPLE-0039-01,sample_case_id,SAMPLE-0039-01,第1頁「示範界線」段末句「該示範案例代碼：SAMPLE-0039-01」。,沿用 0039 R09 的合成案例識別碼維持同案計算一致；非實際會議編號。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-002,0040,SAMPLE-0039-01,sample_course_title,社區服務志工接待與活動引導,第1頁「示範界線」段；課程名稱「社區服務志工接待與活動引導」。,沿用 0039 R09 明示的虛構課程主題；未表示協會曾開課。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-003,0040,SAMPLE-0039-01,sample_meeting_date,2026-06-12,第1頁表頭「工具主題｜資料狀態｜使用時點與用途｜示範資料日期」；資料列／第4欄「示範資料日期」。,沿用 0039 R09 的合成會議日期；非實際會議日期。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-004,0040,SAMPLE-0039-01,sample_target_count,4 個行為目標 K1–K4,第3頁表頭「差距與目標｜直接評量／工具｜時點與門檻｜證據欄位、定位及責任」；K1、K2、K3、K4列／第1欄。,配套 0039 R09 合成目標數；覆蓋率演算使用 4 作分母。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-005,0040,SAMPLE-0039-01,sample_scale,每構面 0/1/2 分；四構面總分 0–8,第3頁表頭「構面｜0分：未達｜1分：部分達成｜2分：完整達成｜直接觀察重點」；K1–K4列及其後「計分」段。,配套 0039 R09 合成評量量尺。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-006,0040,SAMPLE-0039-01,sample_pass_rule,資料完整且總分至少 6/8，且 K3 至少 1 分,第4頁評分對照表完整表頭：「合成代碼｜前測 K1/K2/K3/K4；總分｜後測 K1/K2/K3/K4；總分｜總分變化｜依門檻判定」；本筆既有合成值對應同表總分變化與 K3 評分欄。,沿用 0039 R09 示範門檻；非協會已核定課程標準。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-007,0040,SAMPLE-0039-01,sample_pre_timing,第一單元開始前,第1頁表頭「步驟｜操作｜完成後留下的可查結果」；「4 定時點」列／操作欄（開課前做基線）。,沿用配套決議的相對時點；本件不虛構日曆日期。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-008,0040,SAMPLE-0039-01,sample_post_timing,最後一次實作後、結訓前,第1頁表頭「步驟｜操作｜完成後留下的可查結果」；「4 定時點」列／操作欄（最後一次練習後、結訓前做後測）。,沿用配套決議的相對時點；非實際班次安排。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-009,0040,SAMPLE-0039-01,optional_followup_rule,課後30日追蹤另需授權,第1頁「需求至課程修訂五步流程」表第4步「定時點」之操作欄；該處明示30日追蹤須另行核准。,沿用配套 0039 R09 的選配追蹤界線；沒有合成訓後結果。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-010,0040,SAMPLE-0039-01,sample_role,課程設計角色（示範職務）；評量角色（示範職務）；評量覆核角色（示範職務）,第3頁評量矩陣表頭「差距與目標｜直接評量／工具｜時點與門檻｜證據欄位、定位及責任」之責任欄；第5頁表頭「欄位｜完整合成填寫示例｜實際使用時檢查」／「後續行動（示範待辦）」列。,只用角色代碼避免虛構真人身份或任用。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,實際人員、職務權責與授權須依現行真實權責資料核實；本件僅為示範角色標籤。,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-BL-K1,0040,SAMPLE-0039-01,synthetic_baseline_mean,K1基線平均 1.0/2；目標2；差距 1.0,第3頁表頭「差距與目標｜直接評量／工具｜時點與門檻｜證據欄位、定位及責任」；「K1 開場與角色說明」列／第1欄（基線與差距）。,由 0039 R09 五筆合成基線依同一評量資料計得；不是協會需求調查。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-BL-K2,0040,SAMPLE-0039-01,synthetic_baseline_mean,K2基線平均 0.6/2；目標2；差距 1.4,第3頁表頭「差距與目標｜直接評量／工具｜時點與門檻｜證據欄位、定位及責任」；「K2 澄清與摘要確認」列／第1欄（基線與差距）。,由 0039 R09 五筆合成基線依同一評量資料計得；不是協會需求調查。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-BL-K3,0040,SAMPLE-0039-01,synthetic_baseline_mean,K3基線平均 1.2/2；目標2；差距 0.8,第3頁表頭「差距與目標｜直接評量／工具｜時點與門檻｜證據欄位、定位及責任」；「K3 同意與隱私界線」列／第1欄（基線與差距）。,由 0039 R09 五筆合成基線依同一評量資料計得；不是協會需求調查。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-BL-K4,0040,SAMPLE-0039-01,synthetic_baseline_mean,K4基線平均 0.6/2；目標2；差距 1.4,第3頁表頭「差距與目標｜直接評量／工具｜時點與門檻｜證據欄位、定位及責任」；「K4 收尾與交接」列／第1欄（基線與差距）。,由 0039 R09 五筆合成基線依同一評量資料計得；不是協會需求調查。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-PRE-D01,0040,SAMPLE-0039-01,synthetic_pretest_score_vector,1/0/1/0; total 2/8,第4頁表頭「合成代碼｜前測 K1/K2/K3/K4；總分｜後測 K1/K2/K3/K4；總分｜總分變化｜依門檻判定」；「D01」列／「前測 K1/K2/K3/K4；總分」欄。,逐筆沿用 0039 R09 合成前測，不是實際學員評分。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-PRE-D02,0040,SAMPLE-0039-01,synthetic_pretest_score_vector,0/1/1/1; total 3/8,第4頁表頭「合成代碼｜前測 K1/K2/K3/K4；總分｜後測 K1/K2/K3/K4；總分｜總分變化｜依門檻判定」；「D02」列／「前測 K1/K2/K3/K4；總分」欄。,逐筆沿用 0039 R09 合成前測，不是實際學員評分。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-PRE-D03,0040,SAMPLE-0039-01,synthetic_pretest_score_vector,1/1/2/0; total 4/8,第4頁表頭「合成代碼｜前測 K1/K2/K3/K4；總分｜後測 K1/K2/K3/K4；總分｜總分變化｜依門檻判定」；「D03」列／「前測 K1/K2/K3/K4；總分」欄。,逐筆沿用 0039 R09 合成前測，不是實際學員評分。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-PRE-D04,0040,SAMPLE-0039-01,synthetic_pretest_score_vector,1/0/1/1; total 3/8,第4頁表頭「合成代碼｜前測 K1/K2/K3/K4；總分｜後測 K1/K2/K3/K4；總分｜總分變化｜依門檻判定」；「D04」列／「前測 K1/K2/K3/K4；總分」欄。,逐筆沿用 0039 R09 合成前測，不是實際學員評分。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-PRE-D05,0040,SAMPLE-0039-01,synthetic_pretest_score_vector,2/1/1/1; total 5/8,第4頁表頭「合成代碼｜前測 K1/K2/K3/K4；總分｜後測 K1/K2/K3/K4；總分｜總分變化｜依門檻判定」；「D05」列／「前測 K1/K2/K3/K4；總分」欄。,逐筆沿用 0039 R09 合成前測，不是實際學員評分。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-POST-D01,0040,SAMPLE-0039-01,synthetic_posttest_score_vector,2/1/2/1; total 6/8,第4頁表頭「合成代碼｜前測 K1/K2/K3/K4；總分｜後測 K1/K2/K3/K4；總分｜總分變化｜依門檻判定」；「D01」列／「後測 K1/K2/K3/K4；總分」欄。,逐筆沿用 0039 R09 合成後測，不是實際學員評分。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-POST-D02,0040,SAMPLE-0039-01,synthetic_posttest_score_vector,2/2/2/1; total 7/8,第4頁表頭「合成代碼｜前測 K1/K2/K3/K4；總分｜後測 K1/K2/K3/K4；總分｜總分變化｜依門檻判定」；「D02」列／「後測 K1/K2/K3/K4；總分」欄。,逐筆沿用 0039 R09 合成後測，不是實際學員評分。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-POST-D03,0040,SAMPLE-0039-01,synthetic_posttest_score_vector,2/2/1/1; total 6/8,第4頁表頭「合成代碼｜前測 K1/K2/K3/K4；總分｜後測 K1/K2/K3/K4；總分｜總分變化｜依門檻判定」；「D03」列／「後測 K1/K2/K3/K4；總分」欄。,逐筆沿用 0039 R09 合成後測，不是實際學員評分。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-POST-D04,0040,SAMPLE-0039-01,synthetic_posttest_score_vector,2/1/1/1; total 5/8,第4頁表頭「合成代碼｜前測 K1/K2/K3/K4；總分｜後測 K1/K2/K3/K4；總分｜總分變化｜依門檻判定」；「D04」列／「後測 K1/K2/K3/K4；總分」欄。,逐筆沿用 0039 R09 合成後測，不是實際學員評分。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-POST-D05,0040,SAMPLE-0039-01,synthetic_posttest_score_vector,2/2/2/1; total 7/8,第4頁表頭「合成代碼｜前測 K1/K2/K3/K4；總分｜後測 K1/K2/K3/K4；總分｜總分變化｜依門檻判定」；「D05」列／「後測 K1/K2/K3/K4；總分」欄。,逐筆沿用 0039 R09 合成後測，不是實際學員評分。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-CALC-001,0040,SAMPLE-0039-01,coverage_calculation,4/4=100%,第2頁「設計覆蓋率」段（4÷4＝100%）；第2頁表頭「流程節點｜可核對輸出」／「01 需求與差距」列。,四目標皆有直接量尺；只表示設計覆蓋。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-CALC-002,0040,SAMPLE-0039-01,pretest_aggregate,2+3+4+3+5=17；17/5=3.4/8,第4頁表頭「指標｜定義／分母｜代入合成資料｜結果及解讀限制」；「平均前測」列／「代入合成資料」與「結果及解讀限制」欄。,由五筆合成前測總分重算。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-CALC-003,0040,SAMPLE-0039-01,posttest_aggregate,6+7+6+5+7=31；31/5=6.2/8,第4頁表頭「指標｜定義／分母｜代入合成資料｜結果及解讀限制」；「平均後測」列／「代入合成資料」與「結果及解讀限制」欄。,由五筆合成後測總分重算。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-CALC-004,0040,SAMPLE-0039-01,paired_mean_change,4+4+2+2+2=14；14/5=+2.8分/8,第4頁表頭「指標｜定義／分母｜代入合成資料｜結果及解讀限制」；「配對平均變化」列／「代入合成資料」與「結果及解讀限制」欄。,相同五個合成代碼皆有完整配對；不作因果推論。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-CALC-005,0040,SAMPLE-0039-01,posttest_pass_count,D01、D02、D03、D05=4；D04=1未達,第4頁評分對照表完整表頭：「合成代碼｜前測 K1/K2/K3/K4；總分｜後測 K1/K2/K3/K4；總分｜總分變化｜依門檻判定」；D01、D02、D03、D05 各列之依門檻判定欄，以及後測達標率統計列。,依總分≥6且K3≥1重算。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-CALC-006,0040,SAMPLE-0039-01,posttest_pass_rate,4/5=80%,第4頁表頭「指標｜定義／分母｜代入合成資料｜結果及解讀限制」；「後測達標率」列／「代入合成資料」及「結果及解讀限制」欄。,分母是五名完整合成後測代碼。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-CALC-007,0040,SAMPLE-0039-01,pretest_dimension_means,K1=1.0; K2=0.6; K3=1.2; K4=0.6,第4頁表頭「指標｜定義／分母｜代入合成資料｜結果及解讀限制」；「構面平均」列／「代入合成資料」欄之前測K1–K4數列。,由五筆合成前測構面分數計算。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-CALC-008,0040,SAMPLE-0039-01,posttest_dimension_means,K1=2.0; K2=1.6; K3=1.6; K4=1.0,第4頁表頭「指標｜定義／分母｜代入合成資料｜結果及解讀限制」；「構面平均」列／「結果及解讀限制」欄之後測K1–K4平均數列。,由五筆合成後測構面分數計算。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-CALC-009,0040,SAMPLE-0039-01,sample_followup_action,D04示範待補強K2/K4並以等難度新情境重評；未執行、無結果,第5頁表頭「欄位｜完整合成填寫示例｜實際使用時檢查」；「後續行動（示範待辦）」列／「完整合成填寫示例」欄；另見第6頁D04追蹤列。,流程示範待辦，不宣稱已執行或已改善。,實際課程需求原件、課程評量原始表或有效核准紀錄；沒有來源時保留 SAMPLE。,課程負責角色；實際權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-034,0040,SAMPLE-0039-01,synthetic_followup_gap,D04 示範後測 5/8，低於 6/8；K2 澄清摘要與 K4 交接仍未完整。,第6頁表頭「差距／未達門檻｜示範風險｜責任角色｜示範期限／狀態｜交接資料／結案規則」；D04資料列／「差距／未達門檻」欄。,由同一合成評量矩陣之 D04 評分列推導；不是協會實際學習或服務結果。,實際班次的原始評分、量尺版本及有效完整配對資料；缺件則維持 SAMPLE。,授權評量覆核角色；真實權責待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-035,0040,SAMPLE-0039-01,synthetic_followup_risk,K2 澄清摘要及 K4 交接未完整的訓練練習風險；不代表實際服務事件。,第6頁表頭「差距／未達門檻｜示範風險｜責任角色｜示範期限／狀態｜交接資料／結案規則」；D04資料列／「示範風險」欄。,為展示未達門檻如何連到風險；不得推論為協會實際發生之事件。,實際課後評量紀錄及經權責核准的風險評估；無原件時保留 SAMPLE。,具權責之課程設計角色；待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-036,0040,SAMPLE-0039-01,synthetic_followup_owner_assignment,示範由課程設計角色修訂練習，評量覆核角色依同版量尺評新情境。,第6頁表頭「差距／未達門檻｜示範風險｜責任角色｜示範期限／狀態｜交接資料／結案規則」；D04資料列／「責任角色」欄。,僅示範責任分工，尚未指派真實人員或獲核准。,現行權責表、經核准的真實承辦指派與覆核紀錄。,授權主管與評量管理角色；待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-037,0040,SAMPLE-0039-01,synthetic_followup_deadline,2026-06-19（SAMPLE 目標期限）；本例尚未執行，沒有重評結果。,第6頁表頭「差距／未達門檻｜示範風險｜責任角色｜示範期限／狀態｜交接資料／結案規則」；D04資料列／「示範期限／狀態」欄。,合成示範期限，僅供展示追蹤欄位，不是實際決議或紀錄。,真實且經權責核准的改善期限與排程紀錄；取得前維持 SAMPLE。,實際課程承辦角色；待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d
+0040-SYN-038,0040,SAMPLE-0039-01,synthetic_followup_handoff_and_closure,移交修訂教材、責任與期限紀錄、等難度重評表；四項完整、總分至少6/8且K3至少1分才可結案。,第6頁表頭「差距／未達門檻｜示範風險｜責任角色｜示範期限／狀態｜交接資料／結案規則」；D04資料列／「交接資料／結案規則」欄。,延伸既有合成評分規則示範所需交接與結案證據；未執行、未形成協會決議。,經核實的課程計畫修訂、實際覆核評分及權責核准之結案紀錄。,具權責之課程設計與評量覆核角色；待核,SAMPLE/SYNTHETIC; NOT ASSOCIATION RECORD,9b33a7a265c85a40d312982a9888735fce76438bf32b2e98af3706dfe63f940d

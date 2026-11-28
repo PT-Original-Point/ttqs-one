@@ -1,0 +1,30 @@
+{
+  "document_id": "0098",
+  "requirement_id": "I18-E06",
+  "route": "Antigravity CLI",
+  "cli_path": "C:\\Users\\J\\AppData\\Local\\agy\\bin\\agy.exe",
+  "cli_version": "1.4.3",
+  "requested_model": "gemini-3.8-flash-high",
+  "actual_serving_model": "UNKNOWN_UNTIL_OUTPUT_VERIFIED",
+  "mode": "print text response; plan",
+  "computer_use": false,
+  "file_write_permission": false,
+  "input_packet_sha256": "c3d0aa467b61cacf6d19d3f16741b78f5c6445f9e6b80d0f9b332ee52b81ed41",
+  "attempts": [
+    {
+      "number": 1,
+      "result": "CLI_ARGUMENT_PARSE_ERROR",
+      "exit_code": 2,
+      "detail": "--print consumed --model because prompt was passed as a separate positional argument; no provider response was produced."
+    },
+    {
+      "started_at_local": "2026-10-21T06:54:26.7910183+08:00",
+      "completed_at_local": "2026-10-21T07:00:21.4080320+08:00",
+      "stderr_bytes": 79,
+      "exit_code": -1,
+      "number": 2,
+      "result": "ERROR_OR_EMPTY",
+      "stdout_bytes": 42664
+    }
+  ]
+}

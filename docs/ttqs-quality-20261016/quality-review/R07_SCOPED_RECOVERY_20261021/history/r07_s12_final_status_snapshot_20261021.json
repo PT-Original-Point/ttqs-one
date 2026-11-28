@@ -1,0 +1,110 @@
+{
+  "schema": "ttqs.r07_s12_final_status_snapshot.v1",
+  "project_id": "TTQS_ONE",
+  "command": "TTQS_ONE_20261021_DEEP_AUDIT_SCOPED_RECOVERY_R07",
+  "r07_source_sha256": "9241c5e2047373e3fe669ed278977107df182a0979e17d51fb68d7d8e8582f2a",
+  "observed_local_time": "2026-10-21T16:14:05+08:00",
+  "head_at_evidence_cutoff": "f25af3a931665dd75a891c11b96f648d1dd26612",
+  "active_writer": {
+    "ttqs_writer_processes_with_work_command_line": 0,
+    "antigravity_cli_writer": "NONE",
+    "opencode_service": {
+      "pid": 45628,
+      "command": "opencode-cli.exe serve --service",
+      "active_ttqs_job": false
+    },
+    "winword_automation": {
+      "count": 18,
+      "command": "WINWORD.EXE /Automation -Embedding",
+      "parent_pid": 1104,
+      "parent": "svchost.exe",
+      "responding": true,
+      "document_or_task_identity": "UNKNOWN",
+      "disposition": "Preserved; not attributed to an active TTQS Writer and not terminated."
+    }
+  },
+  "findings": {
+    "F01": "0096 R13 fresh semantic review is PASS_TEXT_ONLY on exact DOCX-derived text; old R12-bound receipt retained; no DOCX rebuild.",
+    "F02_F03": "0098 R10 candidate body checked; engineering-path/body concern resolved in sidecar/body evidence; DOCX unchanged.",
+    "F04": "0096 correction R03 reconciles all 13 preserved files to remote source; 12 hashes match R02 inventory, README is the sole mismatch; original README/history retained and correction appended.",
+    "F05": "0094 R18 bounded free-route review produced text-scope result; upstream serving model/invoice identity remains UNKNOWN; no new dispatch in this final readback.",
+    "F06": "0097 R08 layout repair is text-identical and narrowly changes heading pagination; Word export >180s produced no PDF; visual state BLOCKED/UNKNOWN and R07 visual evidence is not inherited.",
+    "F07_F08": "0099 R02 source/blob verified; 80 raw score cells and arithmetic pass; R17 candidate verified; R01 not rebuilt.",
+    "F09": "Incremental receipts only; no giant activity report added.",
+    "F10": "All examples remain SAMPLE/SYNTHETIC; real evidence and novice test remain UNKNOWN/PENDING.",
+    "F11": "Antigravity CLI dispatch count in this recovery=0; Gemini model execution identity UNKNOWN.",
+    "F12": "0092 I17D-E06 third-party work/cooperation letter distinguished from 0096 I18-E03 voluntary target-customer/learner feedback; shared real original UNKNOWN."
+  },
+  "candidate_readbacks_at_head_f25af3a931665dd75a891c11b96f648d1dd26612": {
+    "0099_R17": {
+      "docx_sha256": "293be2dc0e3e0162fa368272851baed27e92990b4ac1871228ec37b51546776b",
+      "docx_bytes": 167038,
+      "package_checked": 34,
+      "package_passed": 34,
+      "blueprint_revision": "R02",
+      "blueprint_git_blob": "5ec600d4fe2bed76b448daf80382d39dacc5d93b",
+      "blueprint_sha256": "cafe5d8ade0fd1c8feac8933018aea50597b4bbd3e86a9eb2234a39e91d51577",
+      "math": "8x2x5=80; pre=75; post=117; gain=42; mean=5.25; sample threshold=6/8",
+      "technical": "PASS",
+      "visual": "PASS_SCOPED 37/37 overview; pages 1,22,23,24 full-size",
+      "semantic": "PASS_FOR_SAMPLE_CANDIDATE_TEXT; reviewer did not hash binary or inspect pages; REAL-target evidence UNKNOWN; formal acceptance NOT_GRANTED"
+    },
+    "0095_R15": {
+      "docx_sha256": "c70521d50fbec6cdc3b53ce3dc35fa2613069e60c58625b7eb2f96a5a6fd3658",
+      "package_checked": 46,
+      "package_passed": 46,
+      "technical": "PASS_BOUNDED_TECHNICAL_READBACK",
+      "visual": "PASS_WITH_NONBLOCKING_WHITESPACE_NOTES, 46 pages",
+      "semantic": "PASS_BOUNDED_EXACT_SHA_DELTA_REVIEW; R14 F01 closed; not a full unchanged-content review; formal acceptance NOT_GRANTED"
+    },
+    "0096_R13": {
+      "docx_sha256": "6ece53befed3ecb1b42e523b80da80decd33b0a7d55e4e1fe75ddf79b905d445",
+      "docx_changed": false,
+      "supplement_files_checked": 17,
+      "supplement_files_passed": 17,
+      "remote_source_reconciliation_files": 13,
+      "r02_hash_matches": 12,
+      "sole_mismatch": "preserved original README.md",
+      "formal_acceptance": "NOT_GRANTED"
+    },
+    "0098_R10": {
+      "docx_sha256": "6310a71f6fb540b22572f823e7becb7a8198c12dc068eebff2794599e5a88152",
+      "docx_changed": false,
+      "status": "Candidate and sidecar evidence retained."
+    },
+    "0097_R08": {
+      "docx_sha256": "daf85320fc7b2304da353a0c41d3bf32d585f2edfb3349938bff877dd0f5a2cb",
+      "pdf_created": false,
+      "visual": "UNKNOWN_BLOCKED",
+      "R07_visual_inheritance": "FORBIDDEN"
+    }
+  },
+  "r07_package_readback_at_base_head": {
+    "package_files_checked": 9,
+    "passed": 9,
+    "prior_sync_commit": "f25af3a931665dd75a891c11b96f648d1dd26612"
+  },
+  "next_work_readiness": {
+    "queue_path": "TTQS_ONE_CODEX_RUNTIME/CONTROL/BUILD_QUEUE.json",
+    "queue_last_write": "2026-10-19T03:24:56+08:00",
+    "states": {
+      "DONE": 10,
+      "PENDING": 115,
+      "PARKED_CONTROL": 12,
+      "PARKED_ROOT_CAUSE_REPAIR": 5
+    },
+    "explicit_ready_state_present": false,
+    "next_candidate_0101": "PENDING only; no current UNIQUE_BLUEPRINT_0101 or source_binding/candidate found",
+    "decision": "No fresh source-bound READY document confirmed; do not equate PENDING or legacy files with READY. 0095 R15 already exists and is remotely complete; 0097 R08 render lane is blocked."
+  },
+  "S10": "PASS 10/10 disposable cases; no candidate DOCX modified by those cases.",
+  "S11": {
+    "opencode_v2_calls_in_recovery": 2,
+    "antigravity_cli_calls": 0,
+    "provider_model_identity": "UNKNOWN when not attested",
+    "provider_invoice_or_tokens": "UNKNOWN where telemetry absent",
+    "new_paid_dispatch": "NONE"
+  },
+  "acceptance": "CANDIDATES_ONLY; formal organizational acceptance NOT_GRANTED; no REAL evidence fabricated.",
+  "next_legal_action": "Keep 0097 R08 render lane isolated/blocked pending a genuinely different bounded renderer diagnosis; continue from a fresh source-bound READY item when one exists. No new scheduler, agent, database, or control platform."
+}

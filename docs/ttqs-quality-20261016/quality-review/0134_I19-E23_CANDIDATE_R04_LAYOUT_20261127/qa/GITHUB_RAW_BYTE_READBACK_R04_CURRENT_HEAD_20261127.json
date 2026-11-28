@@ -1,0 +1,93 @@
+{
+  "schema": "TTQS_ONE_GITHUB_RAW_BYTE_READBACK_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0134",
+  "official_requirement_id": "I19-E23",
+  "revision": "R02",
+  "layout_attempt": "R04",
+  "repository": "PT-Original-Point/ttqs-one",
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "pull_request": 92,
+  "readback_commit": "700eccf64f0b74f04c7a33f080a06196ad4644d6",
+  "head_at_readback": "700eccf64f0b74f04c7a33f080a06196ad4644d6",
+  "observed_at_tpe": "2026-11-27T12:05:05+08:00",
+  "verified_at_tpe": "2026-11-27T12:05:05+08:00",
+  "status": "VERIFIED_RAW_BYTE_READBACK",
+  "readback_status": "VERIFIED_RAW_BYTE_READBACK",
+  "readback_method": "Direct HTTPS GET from immutable raw.githubusercontent.com commit URL after live refs/pull/92/head and branch both resolved to this commit; SHA-256, byte length, and Git blob SHA-1 recomputed from downloaded bytes.",
+  "readback_url": "https://raw.githubusercontent.com/PT-Original-Point/ttqs-one/700eccf64f0b74f04c7a33f080a06196ad4644d6/docs/ttqs-quality-20261016/quality-review/0134_I19-E23_CANDIDATE_R04_LAYOUT_20261127/candidate/0134_I19-E23_CANDIDATE_R04.docx",
+  "remote_path": "docs/ttqs-quality-20261016/quality-review/0134_I19-E23_CANDIDATE_R04_LAYOUT_20261127/candidate/0134_I19-E23_CANDIDATE_R04.docx",
+  "candidate_sha256": "db4867b709f4d1962db9c2d991c879975f0a140f907621e2df0f1727c700a0b3",
+  "candidate_bytes": 68844,
+  "local_sha256": "db4867b709f4d1962db9c2d991c879975f0a140f907621e2df0f1727c700a0b3",
+  "remote_sha256": "db4867b709f4d1962db9c2d991c879975f0a140f907621e2df0f1727c700a0b3",
+  "local_git_blob_sha1": "2f9d41f0d266cec8685fccd6553376b3889f5d03",
+  "remote_git_blob_sha1": "2f9d41f0d266cec8685fccd6553376b3889f5d03",
+  "local_bytes": 68844,
+  "remote_bytes": 68844,
+  "exact_byte_match": true,
+  "expected_file_count": 1,
+  "verified_file_count": 1,
+  "files_mismatched": 0,
+  "errors": [],
+  "files": [
+    {
+      "doc_id": "0134",
+      "path": "docs/ttqs-quality-20261016/quality-review/0134_I19-E23_CANDIDATE_R04_LAYOUT_20261127/candidate/0134_I19-E23_CANDIDATE_R04.docx",
+      "remote_path": "docs/ttqs-quality-20261016/quality-review/0134_I19-E23_CANDIDATE_R04_LAYOUT_20261127/candidate/0134_I19-E23_CANDIDATE_R04.docx",
+      "candidate_sha256": "db4867b709f4d1962db9c2d991c879975f0a140f907621e2df0f1727c700a0b3",
+      "local_sha256": "db4867b709f4d1962db9c2d991c879975f0a140f907621e2df0f1727c700a0b3",
+      "remote_sha256": "db4867b709f4d1962db9c2d991c879975f0a140f907621e2df0f1727c700a0b3",
+      "local_git_blob_sha1": "2f9d41f0d266cec8685fccd6553376b3889f5d03",
+      "remote_git_blob_sha1": "2f9d41f0d266cec8685fccd6553376b3889f5d03",
+      "local_bytes": 68844,
+      "remote_bytes": 68844,
+      "exact_byte_match": true
+    }
+  ],
+  "same_sha_qa_receipts": [
+    {
+      "path": "qa/TECHNICAL_QA_R04.json",
+      "sha256": "16e0da3a5ef5f7f92fe653e258cada16ca995d6c57fd9c33fc3d28acf8938be5"
+    },
+    {
+      "path": "qa/VISUAL_QA_R04_SCOPED.json",
+      "sha256": "f850da968bbd94aad13108f7537ce4965316a5c978f19f48243a757a9995e0d9"
+    },
+    {
+      "path": "qa/SEMANTIC_REVIEW_STATUS_R04.json",
+      "sha256": "1841b3d751bb8cba4af7acbdc688849adfc8f601247ed7b9c180d3367a762131"
+    },
+    {
+      "path": "qa/DOT_0134_R04_EXACT_CANDIDATE_APPROVAL_20261127.json",
+      "sha256": "0005370e9e27385fbaf7c030e7738fa0e8f441b9964b316ed1f20a962ec1573c"
+    }
+  ],
+  "qa_scope": {
+    "technical": {
+      "candidate_sha256": "db4867b709f4d1962db9c2d991c879975f0a140f907621e2df0f1727c700a0b3",
+      "status": "PASS",
+      "receipt_sha256": "16e0da3a5ef5f7f92fe653e258cada16ca995d6c57fd9c33fc3d28acf8938be5"
+    },
+    "visual": {
+      "candidate_sha256": "db4867b709f4d1962db9c2d991c879975f0a140f907621e2df0f1727c700a0b3",
+      "status": "PASS_WITHIN_VISUAL_SCOPE",
+      "pages_covered": 28,
+      "directly_inspected_pages": [
+        8
+      ],
+      "unchanged_inherited_pages": 27
+    },
+    "semantic": {
+      "candidate_sha256": "db4867b709f4d1962db9c2d991c879975f0a140f907621e2df0f1727c700a0b3",
+      "status": "PASS_SEMANTIC_SCOPED_EXACT_SHA",
+      "reviewer_route": "Antigravity CLI v1.4.2",
+      "reviewed_source_sha256": "5992544eba31b6d146f22c5614051350ded4c636adcfbfa162b805a9b8dddb9a",
+      "actual_serving_model": "UNKNOWN",
+      "new_model_call": false
+    },
+    "dot_exact_candidate_approval_sha256": "0005370e9e27385fbaf7c030e7738fa0e8f441b9964b316ed1f20a962ec1573c"
+  },
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD"
+}

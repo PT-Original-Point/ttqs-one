@@ -1,0 +1,76 @@
+{
+  "receipt_id": "TTQS_R09_WINDOWS_PANEL_WORKER_READBACK_20261022",
+  "observed_at_local": "2026-10-22T03:13:20.3199597+08:00",
+  "os": "Windows 10 Pro build 19045",
+  "host": "DESKTOP-VMV4Q60",
+  "user": "desktop-vmv4q60\\j",
+  "goal": {
+    "thread_id": "01a14098-b269-79e3-b07c-56e96557fe07",
+    "status": "paused",
+    "pause_reason": "UNKNOWN",
+    "native_resume_api_available": "NO_IN_TOOL_SURFACE",
+    "resume_performed": false
+  },
+  "codex_automations": [
+    {
+      "id": "ttqs-one-hourly-quality-goal-resume",
+      "status": "ACTIVE",
+      "rrule": "RRULE:FREQ=HOURLY;INTERVAL=2",
+      "target_thread_id": "01a14098-b269-79e3-b07c-56e96557fe07"
+    },
+    {
+      "id": "ttqs-one-standalone-quality-resume",
+      "status": "PAUSED",
+      "rrule": "RRULE:FREQ=HOURLY;INTERVAL=1",
+      "target_thread_id": null
+    }
+  ],
+  "active_ttqs_automation_count": 1,
+  "task_scheduler": {
+    "name": "TTQS_ONE_Codex_Supervisor",
+    "state": "Disabled",
+    "last_run": "2026-10-05T05:03:03+08:00",
+    "last_result": 0,
+    "next_run_metadata": "2026-10-22T03:07:07+08:00 (stale metadata; task disabled)"
+  },
+  "panel": {
+    "dashboard_html_sha256": "f0e8625b2b77f4616beab18e31c1f1f7b05655e9d54898129d8e8d4f1d35a070",
+    "dashboard_html_last_write": "2026-10-05T22:14:08+08:00",
+    "dashboard_server_inputs": [
+      "CONTROL/SUPERVISOR_STATE.json",
+      "CONTROL/BUILD_QUEUE.json",
+      "CURRENT/*.docx"
+    ],
+    "listener_8765": "NONE_OBSERVED",
+    "listener_8766": "NONE_OBSERVED",
+    "state": "STALE_LEGACY_OFFLINE",
+    "github_alignment": "UNKNOWN"
+  },
+  "build_queue": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\BUILD_QUEUE.json",
+    "last_write": "2026-10-18T19:24:56+08:00",
+    "records": 142,
+    "status_counts": {
+      "blank": 142
+    }
+  },
+  "processes": {
+    "opencode_service_pid": 45628,
+    "service_is_writer": false,
+    "active_reviewer_pid": 11156,
+    "active_reviewer_session": "ses_ea030cfffffeWft8qAw18cKX1E",
+    "active_writer_0104": "NONE",
+    "antigravity": "NONE_OBSERVED",
+    "winword_count": 20,
+    "word_export_child_44056": "EXITED_PER_RECEIPT",
+    "word_processes_killed": 0
+  },
+  "schedule": {
+    "configured_interval_minutes": 120,
+    "active_thread_bound_task_count": 1,
+    "bound_thread": "01a14098-b269-79e3-b07c-56e96557fe07",
+    "native_next_run": "UNKNOWN",
+    "natural_trigger_execution": "UNKNOWN",
+    "native_view": "Rendered automation card only"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "work_id": "TTQS-0010-R18-SCOPED-REPAIR-20261030",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0010",
+  "requirement_id": "I02-E01",
+  "official_checkbox_serial": "008",
+  "predecessor_candidate_sha256": "57e48e29be753d029d18c45bc86706866bdb98a9257061509b213cc3897eac70",
+  "predecessor_source_sha256": "8bc022f0dbcc968a83687d9693fac6757b72c7661697da124956e32de25378ac",
+  "predecessor_register_sha256": "8729ff8305121c252e5db393ef5b627fe7f94c265aa014cdcc5feba71c127cc9",
+  "predecessor_blueprint_sha256": "750fd2cee6e1f25f22a89746e165cfc69ca4e13c5c2e7662545baf71b2dbc955",
+  "predecessor_independent_review": "PARTIAL; R17 exact SHA unchanged during review; P3 retest scores unsupported; R05 indicator-count contradiction.",
+  "changes": [
+    "Added a retest-only SAMPLE/SYNTHETIC authorization input card with identity, purpose, permitted/restricted fields, synthetic lookup result, stop/HOLD rules, and REAL replacement conditions.",
+    "Expanded EV-SYN-003-P3-R1 and EV-SYN-004-P3-R1 so each level-3 rating is supported by pre-access authorization/purpose checks, minimum-necessary lookup, no overreach, and one named noncritical record omission.",
+    "Added six Fact IDs SF-114 through SF-119 and synchronized the manuscript's embedded register with the external synthetic register; total fact rows are 162.",
+    "Corrected R05 internal Blueprint count from 13 to the 12 enumerated behavior indicators, keeping the knowledge test separate; preserved R05 unchanged.",
+    "Aligned the RET-003/SCORE wording between manuscript and external register."
+  ],
+  "blueprint_revision": "R06",
+  "github_source_head_readback": "34999da6038c45169b5a7643a2b2f6cc13bd9c8a",
+  "candidate_status": "CANDIDATE_NOT_FORMALLY_ACCEPTED",
+  "checked_at_taipei": "2026-10-30T16:58:58.607534+08:00",
+  "artifacts": {
+    "source_markdown": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0010_I02-E01_ASSESSMENT_STANDARD_R04_20261030\\worker\\0010_I02-E01_R18.md",
+      "sha256": "6a0f94819c374bb2d98a60a50ada4d8f0393e0ea68ce42a6bf5921ea7f624aca"
+    },
+    "synthetic_register": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0010_I02-E01_ASSESSMENT_STANDARD_R04_20261030\\worker\\SYNTHETIC_REGISTER_R17.md",
+      "sha256": "e8fe911395ea47e456040fcb8ca1b5d0d0b30b0312a5e1531cd6570f24a27b91",
+      "fact_rows": 162
+    },
+    "unique_blueprint": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0010_I02-E01_ASSESSMENT_STANDARD_R04_20261030\\source\\BLUEPRINT_ROW_0010_I02-E01_R06.json",
+      "sha256": "b17fc687f35515e11eaedee549618e00e65a1940de2ebc09b6873e2058923f3d"
+    },
+    "source_binding": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0010_I02-E01_ASSESSMENT_STANDARD_R04_20261030\\source\\SOURCE_BINDING_R06.json",
+      "sha256": "590d6fbf90c29f7ccb5e74caae7714b3c99ab235ac0e6757b15fe4410b49b45e"
+    },
+    "builder": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0010_I02-E01_ASSESSMENT_STANDARD_R04_20261030\\qa\\build_0010_r18_docx.py",
+      "sha256": "bf1124f78fcc7ebdbe94e55c9b33e25b082e5304c2db8465bf6d666fad2f0bec"
+    },
+    "candidate_docx": {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0010_I02-E01_ASSESSMENT_STANDARD_R04_20261030\\candidate\\0010_I02-E01_R18.docx",
+      "sha256": "be07538cef58aa9238a841f53e1f3b79e40557d44969e6d0bf903c029a502951",
+      "bytes": 89205
+    }
+  },
+  "builder_stdout": "{\n  \"docx\": \"E:\\\\TTQS\\\\TTQS_ONE_CODEX_RUNTIME\\\\WORK\\\\QUALITY_REBUILD_20261016\\\\0010_I02-E01_ASSESSMENT_STANDARD_R04_20261030\\\\candidate\\\\0010_I02-E01_R18.docx\",\n  \"sha256\": \"be07538cef58aa9238a841f53e1f3b79e40557d44969e6d0bf903c029a502951\",\n  \"bytes\": 89205,\n  \"paragraphs\": 61,\n  \"tables\": 22,\n  \"sections\": 4,\n  \"source_sha256\": \"6a0f94819c374bb2d98a60a50ada4d8f0393e0ea68ce42a6bf5921ea7f624aca\",\n  \"built_at_taipei\": \"2026-10-30T16:58:58.569564+08:00\"\n}",
+  "builder_stderr": "",
+  "semantic_review": "PENDING; R17 review is not inherited.",
+  "formal_acceptance": "NOT_ACCEPTED"
+}

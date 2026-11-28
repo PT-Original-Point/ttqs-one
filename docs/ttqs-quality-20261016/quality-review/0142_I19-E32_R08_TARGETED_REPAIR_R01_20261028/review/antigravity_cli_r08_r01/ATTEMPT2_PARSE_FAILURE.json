@@ -1,0 +1,18 @@
+{
+  "work_id": "TTQS-0142-I19-E32-AGY-REVIEW-R08-R01",
+  "attempt": 2,
+  "status": "FAILED_BEFORE_MODEL_RESPONSE",
+  "requested_model": "gemini-3.8-flash-high",
+  "actual_model_identity": "UNKNOWN_NOT_REACHED",
+  "candidate_sha256": "7efc848ed18decf665c423c03d4784e681a5d911ae5185885f614b391d92cc78",
+  "cli_exit_code": 2,
+  "stdout_bytes": 0,
+  "observed_error": "flag needs an argument: -print",
+  "stderr_bytes_observed": 2942,
+  "stderr_sha256_observed": "2d49fb308284018a0d57b7d534f4f1dfbae0eea807b51fc0e0148881c0ce0281",
+  "stderr_file_preserved": false,
+  "preservation_note": "The shared CLI stderr path was overwritten by attempt 3; hash/size are from the terminal observation recorded at that time. No model output was returned.",
+  "repair": "Attach complete bounded prompt as one --print=<prompt> argv item; compact request to fit Windows command line; no stdin.",
+  "computer_use": "NOT_USED",
+  "model_usage": "NONE_EVIDENCED"
+}

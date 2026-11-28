@@ -1,0 +1,44 @@
+{
+  "schema": "ttqs-one-github-raw-byte-readback-v1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0081",
+  "requirement_id": "I17B-E03",
+  "official_checkbox_serial": "086",
+  "revision": "R03",
+  "repository": "PT-Original-Point/ttqs-one",
+  "pull_request": 92,
+  "branch": "work/ttqs-one-document-quality-contract-20261016",
+  "readback_commit_sha": "89888655bfca27bb70b04d4e38e835878c3f20ef",
+  "observed_at_tpe": "2026-11-22T22:23:10.941+08:00",
+  "candidate": {
+    "path": "docs/ttqs-quality-20261016/quality-review/0081_R01/candidate/0081_R03.docx",
+    "sha256": "AFAD7608A1E85DD479EB655724CC2CE42CF5F91F0F9BB59D6F601B3B31B56201",
+    "git_blob_sha1": "e6ab57148101e13afc4e7d45d078b77f46238678",
+    "bytes": 60889,
+    "status": "PASS_BYTES_MATCH"
+  },
+  "qa_bindings": {
+    "technical_receipt": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0081_R01/qa/technical_review_R03.json",
+      "candidate_sha256": "AFAD7608A1E85DD479EB655724CC2CE42CF5F91F0F9BB59D6F601B3B31B56201",
+      "status": "PASS_TECHNICAL_SCOPE"
+    },
+    "visual_receipt": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0081_R01/qa/visual_review_R03.json",
+      "candidate_sha256": "AFAD7608A1E85DD479EB655724CC2CE42CF5F91F0F9BB59D6F601B3B31B56201",
+      "status": "PASS",
+      "all_pages_directly_inspected": true
+    },
+    "independent_semantic_review": {
+      "path": "docs/ttqs-quality-20261016/quality-review/0081_R01/review/independent_semantic_review_receipt_R03.json",
+      "baseline_review_path": "docs/ttqs-quality-20261016/quality-review/0081_R01/review/independent_semantic_review_R02.md",
+      "delta_review_path": "docs/ttqs-quality-20261016/quality-review/0081_R01/review/independent_semantic_review_R03_delta.md",
+      "candidate_sha256": "AFAD7608A1E85DD479EB655724CC2CE42CF5F91F0F9BB59D6F601B3B31B56201",
+      "reviewer_route": "OpenCode CLI v2",
+      "requested_model": "opencode/beam-free",
+      "verdict": "PASS",
+      "scope": "Exact-SHA delta review; R02 full review retained, R03 limited to three non-substantive metadata corrections and confirms body/tables/numbers unchanged."
+    }
+  },
+  "candidate_state": "CANDIDATE_ONLY; REAL=UNKNOWN/HOLD; formal Association acceptance is not asserted."
+}

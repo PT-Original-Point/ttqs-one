@@ -1,0 +1,17 @@
+{
+  "candidate_sha256": "B72A65EA05D118C6479747280DBA768AC27ECB0B2A335FDD61C0FA2A32D9FC2D",
+  "verdict": "PASS",
+  "blocking_findings": [],
+  "nonblocking_findings": [
+    "[LOW] §5 步驟1「將本 SOP 所需之實施基準自 sniffed 來源分離」與 §5 步驟3「出席與/fabric 證據」含 INTERNAL／英文殘留詞（sniffed、fabric），評核者可讀但用語不精確；建議改為「自來源文件分離」與「出席與缺漏／請假證據」，不牽動流程或數值。",
+    "[LOW] §8-H SYN-XREF-01/02 將 I04-E01／I04-E02 的 doc_id 標為 UNKNOWN，但同一表 SYN-XREF-03/04 已列明 0024／I04-E03 與 0026／I04-E05，且所引 crosswalk 明列 I04-E01→0022、I04-E02→0023；鄰接文件交叉連結口可一致化，或明確說明前三者之 doc_id 一律保留 UNKNOWN 的理由。",
+    "[LOW] 決策角色對應未完全一致：§7 B6 決策角色為 FR-01、§5 步驟7 A=FR-01，但 §8-G SYN-DEC-02/03 記載「提出／決策 SYN-FR-03／SYN-FR-04」；§7 B2 決策角色 FR-04 與 RACI 活動3 A=FR-01 亦有落差。屬 SAMPLE 角色標註層面不一致，不影響真相邊界與外部主張。",
+    "[LOW] §0-A 版次標示 R01-CANDIDATE，與本修復案版序 R05 不同；涉及修法追蹤時易生混淆，可補註「本檔為 R05 範疇修復候選，文件識別維持初始 candidate 系列」。"
+  ],
+  "scope_checked": "以 DOCX 實際位元組重算 SHA256＝B72A65EA05D118C6479747280DBA768AC27ECB0B2A335FDD61C0FA2A32D9FC2D，與 packet 完全相符；獨立比對 R04（4C45BB9B7924CCB698C0CDD7E2E13062F3C93E87AE84907AFC363074104B7A55）→R05，全文件 1,142 個儲存格中恰好 3 個改變（table 16/5/4、21/5/6、23/4/4），與 REPAIR_RECEIPT_R05 一致，非表格段落未變；由 18 列名冊重算出席 16/18＝88.89%、前測 960/16＝60、後測 1,360/16＝85、前後測差 25pp、初次通過 14/16＝87.5%、問卷 15/16＝93.75% 與 66/15＝4.4、補救 2/2、補救後 16/16＝100%，皆與表 8-F／9-A／9-C 一致；核對官方 PDF 第2頁 SHA 805386B7…、官方頁面讀回 SHA 3C295E88…、crosswalk 第20行 SHA 1F6B4107…、Blueprint 022 列 SHA 35480951… 及 candidate 所引 Blueprint 主檔 SHA AD03323D… 均相符；確認無「待填／待核／空白表」等字樣，FORM A–H 皆有 SAMPLE 例值而非空白欄位，真相邊界、UNKNOWN 清單與合成值清冊覆蓋所有合成事實。限制：本環境未尋獲 SOURCE_PACKET_0025_I04-E04_R01.md 與 SOURCE_PACKET_MANIFEST.json 實體檔可供獨立重算（該二 SHA 以 packet 提供值為上下文）；packet 頂部 blueprint_sha256 D63626B… 未在本地任一 BLUEPRINT 檔命中，但 candidate 引用之 AD03323D… 版本確實存在，且其第022列雜湊與 packet 的列雜湊逐位元相符，故來源與藍圖.binding 內容成立。本審查僅為語意判斷，不主張版面、字體或正式接受。",
+  "source_and_blueprint_bound": true,
+  "no_real_or_approval_fabrication": true,
+  "sampled_values_and_register_consistent": true,
+  "cross_document_scope": true,
+  "reviewer_note": "獨立語意審查（非 0025 實質撰稿者），綁定 R05 精確 SHA。兩項前次阻斷性問題均已確認修復：表8-H SYN-EV-03 為 3 模組；表6-A 與表8-F 明確區分「個人後測 80 分 SAMPLE 門檻」與「群體平均為描述性、無門檻」，未再混淆。全文依 I04-E04 官方摘錄（訓練結果的評估、訓練實施的依據及標準化作業流程 SOP）與 Blueprint 第022列最低要求（來源定位、核心正文/示範、決策或結果、跨文件事實連結、不得空白交差）檢核，未發現會阻礙需求或造成錯誤操作聲明的新material缺陷；上述 LOW 項目均為既有非表格文字或 SAMPE 標註層面，不觸發改寫。本結論不構成版面、技術或正式接受。"
+}

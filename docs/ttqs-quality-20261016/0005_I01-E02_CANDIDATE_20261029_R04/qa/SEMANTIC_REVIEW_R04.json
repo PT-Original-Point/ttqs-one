@@ -1,0 +1,182 @@
+{
+  "receipt_type": "independent_exact_sha_semantic_review",
+  "review_id": "0005-I01-E02-R04",
+  "reviewed_at_utc": "2026-10-29T15:15:11Z",
+  "verdict": "PASS",
+  "candidate": {
+    "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0005_I01-E02_R04_20261029\\candidate\\0005_I01-E02_R04.docx",
+    "expected_sha256": "ea84597eecb0b6289d459bc3f412949303590fd8da93e4a969ffb489f437742e",
+    "sha256_before": "ea84597eecb0b6289d459bc3f412949303590fd8da93e4a969ffb489f437742e",
+    "sha256_after_full_read": "ea84597eecb0b6289d459bc3f412949303590fd8da93e4a969ffb489f437742e",
+    "methods": [
+      "Get-FileHash",
+      "Python hashlib",
+      "certutil"
+    ],
+    "read_complete": {
+      "body_paragraphs": 82,
+      "body_tables": 10,
+      "table_rows_including_headers": 109,
+      "headers_footers": true
+    }
+  },
+  "sources": [
+    {
+      "role": "official_pdf",
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\SOURCES\\TTQS查核佐證文件資料表-訓練機構版 (2).pdf",
+      "sha256": "805386b77df045b396fabafed7a47d12491c25a0b5744edd9a04876caee34709",
+      "locator": "p.1",
+      "text": "目標市場需求調查。"
+    },
+    {
+      "role": "blueprint",
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\BLUEPRINT_CURRENT.jsonl",
+      "sha256": "406d0495365d0970dcf8113a42842663b8a54372a4e204cc492b7c3f8156ef3e",
+      "unique_matching_rows": 1,
+      "row_locator": "line 5; deliverable_id=0005, requirement_id=I01-E02",
+      "row_sha256_without_eol": "0a6b3a839a88692c40befd3494b5ac8733711c0a81ab918fdc1ed64835c8108d",
+      "genre": "分析／評估報告｜目標市場需求分析報告"
+    },
+    {
+      "role": "0003_register",
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0003_I01-E02_SOURCE_PREP_R01_20261029\\source\\SYNTHETIC_REPLACEMENT_REGISTER_0003_R01.csv",
+      "sha256": "7a21cf2fb6e8fd3600aba6733d176ad45c4a7003957f7a8875f7cb6095257423"
+    },
+    {
+      "role": "0004_source_packet",
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0004_I01-E02_SOURCE_PREP_R01_20261029\\SOURCE_PACKET_0004_I01-E02_R01.md",
+      "sha256": "ed66b95a1856751b559702fe7b944595ec827651435b652a380725b9cf8a219d"
+    },
+    {
+      "role": "R04_markdown",
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0005_I01-E02_R04_20261029\\source\\0005_I01-E02_R04.md",
+      "sha256": "9638864711888d7cb9496a16d08a7c488dcd3ce7a3d1f5ca2449de087f16c3c9"
+    },
+    {
+      "role": "quality_gates",
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\CONTROL\\AUTOMATED_QUALITY_GATES.md",
+      "sha256": "76114d02f0ed72b25fd2421c95be255a23751f18c1b51846cd8b5d97796f1c7e"
+    }
+  ],
+  "reviewer_role_separation": {
+    "reviewer": "Independent semantic reviewer in this Codex task; did not author, build, or edit this R04 DOCX and did not alter existing QA receipts.",
+    "writer_identity": "Not independently established by reviewed evidence.",
+    "only_write": "The requested new reviewer JSON."
+  },
+  "findings": [
+    {
+      "id": "F01",
+      "field": "official_mapping_and_genre",
+      "verdict": "PASS",
+      "locator": "§2; Table 01 row 2; Table 09 rows 2-3",
+      "reason": "Exact official p.1 wording is cited and mapped to analysis_report; project-local ID is not misrepresented as printed official numbering."
+    },
+    {
+      "id": "F02",
+      "field": "title_blind_identity_and_neighbors",
+      "verdict": "PASS",
+      "locator": "§1; §§4-10; §14 final paragraph; Table 09 rows 4-5; Table 01 row 7",
+      "reason": "With title/ID masked, analysis mechanics identify the report. §14 reserves questions/options/scales for 0003 and execution/sample validity for 0004; 0005 analyzes and recommends. It is not an annual plan, approval, or spending decision."
+    },
+    {
+      "id": "F03",
+      "field": "flow_and_source_consistency",
+      "verdict": "PASS",
+      "locator": "§4 Table 02 rows 2-10 and reconciliation; 0004 packet §7; 0003 SYN-001..017",
+      "reason": "5=1 ineligible+4 invited; 4=2 unique replies+1 refusal+1 no reply; 2=1 valid+1 invalid; 3 receipt events=2 unique+1 duplicate. Duplicate is not counted as a person or denominator. Response facts match the specified synthetic register."
+    },
+    {
+      "id": "F04",
+      "field": "formulas_and_denominators",
+      "verdict": "PASS",
+      "locator": "§5 Table 03 rows 2-9; §7.2; §15 Table 10 rows 30-38",
+      "reason": "Recomputed: 4/5=80.0%; 2/4=50.0%; 1/2=50.0%; 1/4=25.0%; urgency 4/1=4.0/5; high urgency 1/1=100.0%; confidence 2/1=2.0/5; exploratory difference 4.0−2.0=2.0 points. Percentages round to one decimal; zero denominator rule is N/A with reason."
+    },
+    {
+      "id": "F05",
+      "field": "ranking_and_conclusions",
+      "verdict": "PASS",
+      "locator": "§6 Table 04 rows 4-6; §7.1 Table 05 rows 2-4 and following paragraph; §9 Table 07",
+      "reason": "One effective response ranks three topics 1/2/3; each has one respondent mention. No market rate or generalization is inferred; limitations match the sample size."
+    },
+    {
+      "id": "F06",
+      "field": "43_row_replacement_register",
+      "verdict": "PASS",
+      "locator": "§15 Table 10 rows 2-44",
+      "reason": "43 unique sequential IDs SYN-0005-001..043; six populated columns per row; every status SAMPLE / SYNTHETIC. Entries locate source response/flow facts and derived rates, scores, rankings, and recommendations with replacement rules."
+    },
+    {
+      "id": "F07",
+      "field": "truth_boundary_and_unknown_real_evidence",
+      "verdict": "PASS",
+      "locator": "§1; §4 Table 02; §§9-10; §§12-16; header/footer",
+      "reason": "Synthetic data and derived results are not claimed as association activity, member opinion, outcomes, price, approval, or third-party evidence. The report says actual survey occurrence and real records are unverified."
+    },
+    {
+      "id": "F08",
+      "field": "volunteer_usability_and_decision_support",
+      "verdict": "PASS",
+      "locator": "§10.2; §11 Table 08 rows 2-5; §13",
+      "reason": "Role-based actions give triggers, evidence, and follow-up indicators without inventing staff or completion. The sequence supports target definition, real survey, denominator validation, recalculation, and authorized feasibility review."
+    },
+    {
+      "id": "F09",
+      "field": "hold_reject_and_replacement_controls",
+      "verdict": "PASS",
+      "locator": "§12 hold/reject subsections; §13 items 1-8",
+      "reason": "Holds decisions for unknown denominators, unresolved duplicates/invalids, unreproducible metrics, or absent authority; rejects relabeling sample data as REAL and gives replacement/recalculation steps."
+    },
+    {
+      "id": "F10",
+      "field": "cross_document_role_separation",
+      "verdict": "PASS",
+      "locator": "§4; §14 Table 09 rows 4-5; §15 Table 10 rows 3-28 and 30-43",
+      "reason": "0003 remains the response-data source, 0004 the synthetic execution-flow summary, and 0005 the analysis. Neither source packet nor register is substituted for an actual questionnaire response or execution record."
+    }
+  ],
+  "recomputation": {
+    "flow": [
+      "5 screened=1 ineligible+4 invited",
+      "4 invited=2 unique replies+1 refusal+1 no reply",
+      "2 unique replies=1 valid+1 invalid",
+      "3 receipt events=2 unique replies+1 duplicate"
+    ],
+    "metrics": [
+      "qualification 4/5=80.0%",
+      "unique response 2/4=50.0%",
+      "valid response 1/2=50.0%",
+      "effective yield 1/4=25.0%",
+      "urgency mean 4/1=4.0/5",
+      "high urgency 1/1=100.0%",
+      "confidence mean 2/1=2.0/5",
+      "exploratory difference 4.0-2.0=2.0 points",
+      "topic rank: one respondent mentions each of three topics at ranks 1,2,3; no market proportion"
+    ]
+  },
+  "qa_receipts_background_only": [
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0005_I01-E02_R04_20261029\\qa\\TECHNICAL_QA_R04.json",
+      "sha256": "6422974061b3c96fee2a311ca4e3927fb37e57c87d5f31558e0aea24072d59f8",
+      "declared": "PASS_WITHIN_DECLARED_SCOPE",
+      "note": "Technical integrity/content checks only; receipt disclaims semantic acceptance."
+    },
+    {
+      "path": "E:\\TTQS\\TTQS_ONE_CODEX_RUNTIME\\WORK\\QUALITY_REBUILD_20261016\\0005_I01-E02_R04_20261029\\qa\\VISUAL_QA_R04.json",
+      "sha256": "5f694b4cda6323c89715f019fa1a2f008a1118d5557a0d00c393a3c582ebf4a6",
+      "declared": "PASS_WITHIN_DECLARED_VISUAL_SCOPE",
+      "note": "Receipt declares 12-page review; this reviewer did not inspect images/render and makes no visual-QA claim."
+    }
+  ],
+  "scope_unknowns": [
+    "Actual survey occurrence, real participants/target population, approvals, and real decisions remain UNKNOWN.",
+    "No real raw responses or execution records were supplied in the reviewed source set; 0004 packet says actual execution is unverified.",
+    "Full 0003 questionnaire DOCX/instrument was not separately reviewed; the specified 0003 CSV register was reviewed."
+  ],
+  "not_performed": [
+    "No DOCX rendering or independent visual inspection.",
+    "No Human/association formal acceptance.",
+    "No verification of real execution, approval, or third-party originals."
+  ],
+  "disposition": "PASS for semantic review of this exact DOCX as a SAMPLE / SYNTHETIC analysis-report candidate only. It is not evidence that a real survey occurred, an authorization to train/spend, or Human/formal acceptance."
+}

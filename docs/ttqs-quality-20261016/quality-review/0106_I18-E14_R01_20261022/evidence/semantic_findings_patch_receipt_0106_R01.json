@@ -1,0 +1,25 @@
+{
+  "doc_id": "0106",
+  "requirement_id": "I18-E14",
+  "base_candidate_sha256": "ff019256f77dad59b4c0547c223ae28d90727836ed300f4ad83e82d9d0654bbe",
+  "base_source_sha256": "53600ac3b7ff04780b1dc3abcc220465969e081278939465f8c6aa7a9a641b8b",
+  "findings_repaired": [
+    "F-01 Q5 below-4 count restated as 5/10 including 3 score-3 and 2 score-1/2",
+    "F-02 literal NT$ escaped in every markdown table to prevent Pandoc math parsing; graph axis labels retained in DOCX",
+    "F-03 simplified Chinese 什么 corrected to traditional 什麼",
+    "F-04 composite fact-index row split into five unique method-key rows; duplicate VIEW-01 removed",
+    "F-05 C1 converted to an anchored 1-5 agreement statement; response description aligned",
+    "R09 §5.3: removed internal Git blob/source commit/PDF SHA and internal control filenames from human-facing T01; retained official source title/page and unique human-readable scope; provenance stays in sidecar receipts.",
+    "Removed the remaining internal SOURCE_PACKET filename reference from the human-facing T13 checklist; replaced it with reader-facing wording."
+  ],
+  "preserved_candidate_history": [
+    "history/0106_R01_pre_semantic_repair.docx",
+    "history/0106_R01_pre_semantic_repair_text_snapshot.md",
+    "history/0106_R01_pre_semantic_repair_patched.md",
+    "history/0106_R01_pre_semantic_repair_build_input.md"
+  ],
+  "escaped_currency_symbols_in_pipe_tables": 8,
+  "source_updated": "docs\\ttqs-quality-20261016\\quality-review\\0106_I18-E14_R01_20261022\\writer\\opencode_writer_0106_R01_patched.md",
+  "source_sha256": "bbc24e81c4431b62556c9bb5af6fdc61904a05b43c67951322f14475961d097a",
+  "status": "R09_HUMAN_DOCUMENT_BOUNDARY_SOURCE_CLEANED; AWAITING_FINAL_REBUILD_AND_EXACT_SHA_REVIEW"
+}

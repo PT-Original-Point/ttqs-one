@@ -1,0 +1,54 @@
+{
+  "schema": "TTQS_ONE_R12_INDEPENDENT_REVIEW_ADJUDICATION_V1",
+  "project_id": "TTQS_ONE",
+  "doc_id": "0139",
+  "official_requirement_id": "I19-E29",
+  "candidate_revision": "R08",
+  "candidate_sha256": "d31ef2d8b8615f3dd314572c4e50b6604198e8f24faafb144bcbaea7373c696f",
+  "extracted_text_sha256": "04ec584f28f71295ddc0f701c82df655ab6de07e7f7ec990a2ff20462fb97df1",
+  "review_request_sha256": "67694de400b53b788b25980bd8378e1d35817370c5a8f69a348881154cc08f63",
+  "review_input_sha256": "62c80539028fcd7a049e1cdde8b44450116ff02fa2aaf0a4421858b766232e9e",
+  "raw_stdout_sha256": "f260c999db14bf0bb4ec9fdf2321eb03efa0f9fd50660f19a369f3ae5334e8fc",
+  "raw_response_sha256": "d21c48b556e3cbe52d5e0e6ec2e4643183ece2c1012dc63184cfeaa41e59465a",
+  "parsed_review_sha256": "9d23361cc5a6d43cff003bc9d7dbe021a0a3f077967e13a5f81493ca035fa57f",
+  "cli": "OpenCode v2.1.4",
+  "pid": 70404,
+  "session_id": "ses_e852a71e5ffeefe7w5Yve1SpmG",
+  "cli_exit": 0,
+  "actual_provider": "opencode",
+  "actual_model": "glm-5.3-flash-free",
+  "cost_usd": 0,
+  "token_usage": {
+    "input": 35366,
+    "output": 2926,
+    "reasoning": 1070,
+    "cache": {
+      "read": 0,
+      "write": 0
+    }
+  },
+  "tool_events": 0,
+  "candidate_hash_pre_post_equal": true,
+  "reviewer_reported_verdict": "PASS",
+  "review_scope": "Complete supplied R08 extracted body reviewed directly against official p.9 requirement excerpt, 157 index 153, crosswalk row, source packet R01 and Unique Blueprint R01; no inheritance from any prior R07 verdict; Word layout/binary and QA receipts excluded per instruction.",
+  "blocking_findings": 0,
+  "nonblocking_findings": 3,
+  "codex_adjudication": "PARTIAL_REPAIR_REQUIRED",
+  "actionable_issue": {
+    "locator": "0139 R08 extracted body lines 538 and 603",
+    "evidence_1": "§9.2: SAMPLE ONLY / NOT RATEABLE; 34 records and evidence indices are synthetic and may not be classified L-1 through L-4.",
+    "reason": "Contradictory evidence rating in a synthetic-only document; keep exact candidate as historical baseline and repair only this phrase.",
+    "evidence_2": "§10.3 ACT-03: 就業佐證強度僅 L-2（第 9 節評級分析）."
+  },
+  "nonblocking_issues": [
+    "§13.1 QC-08 cite 『自 KEY-COH-001 至 KEY-DATE-001 等全要素管制鍵』 skips mention of the later KEY-ACTION-001/KEY-RUBRIC-001 keys in sequence order; the 『等』 qualifier keeps this accurate but imprecise.",
+    "§11 row 2 label 『及（雙軌分立要求）』 splits the official sentence 『證照通過率高 及 就業率大幅提升』 into three matrix rows; the split is declared and traceable, but reads slightly unusually against the verbatim sentence."
+  ],
+  "formal_acceptance": "NOT_GRANTED",
+  "real_evidence": "UNKNOWN/HOLD",
+  "limitations": [
+    "Reviewer reviewed full supplied extracted text and source package; did not rehash DOCX or inspect layout. Local hash was verified before and after the call.",
+    "Reviewer PASS is its text-only semantic verdict. Codex adjudication found one specific contradiction requiring repair before treating current candidate as complete.",
+    "No Windows visual QA or human formal acceptance is implied."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "project_id": "TTQS_ONE",
+  "doc_id": "0122",
+  "requirement_id": "I19-E10",
+  "worker": "Antigravity CLI",
+  "cli_version": "1.4.2",
+  "attempt_1": {
+    "result": "CLI_ARGUMENT_PARSE_ERROR_BEFORE_MODEL",
+    "exit_code": 2,
+    "model_invocation": "NOT_CONFIRMED",
+    "repair": "Moved model/effort flags before the single --print prompt argument."
+  },
+  "attempt_2": {
+    "requested_model": "gemini-3.8-flash-high",
+    "actual_model_identity": "UNKNOWN",
+    "fallback": "NOT_AUTHORIZED",
+    "exit_code": 0,
+    "conversation_id": "a5798aef-73be-49ff-8c30-803eb528b4fe",
+    "duration_seconds": 212.5682403,
+    "turns": 1,
+    "usage": {
+      "input_tokens": 11906,
+      "output_tokens": 27066,
+      "thinking_tokens": 10921,
+      "cache_read_tokens": 0,
+      "total_tokens": 38972
+    },
+    "cost": "UNKNOWN",
+    "computer_use": "NOT_USED",
+    "filesystem_files_attached": "NONE",
+    "raw_response_sha256": "62d9a9c15361165e9ba638cf5fa433642ec9a9603ea0dad43636ace0cb2b1d2c",
+    "published_response": "source/antigravity_writer_response_R01_REDACTED.md",
+    "published_response_sha256": "8e29dcdb76deeed374a62f5c3bc6193c2cd86c98e9a488fe93489e91bcb28d6e",
+    "local_path_redactions": 4
+  },
+  "adopted_candidate_sha256": "7f154df3ae9e9b5a9b91195fdd8c3abc8c1a88e7b2fcd9a87d47faa10fdf137e",
+  "semantic_review": "PENDING",
+  "formal_acceptance": "NOT_GRANTED"
+}

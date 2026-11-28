@@ -1,0 +1,59 @@
+{
+  "schema": "TTQS_ONE_OPENCODE_FULL_REVIEW_TERMINAL_V1",
+  "work_id": "TTQS-0142-I19-E32-R08-OPENCODE-FULL-SEMANTIC-R12",
+  "pid": 70940,
+  "session_id": "ses_e83e30a33ffeMZ0ybKYHEzflNQ",
+  "cli_exit_code": 1,
+  "timed_out": false,
+  "duration_seconds": 1.531,
+  "stdout_bytes": 779,
+  "stdout_sha256": "c4da12a560c8dcb3da387cdbd6f858160831b5fc4e70ce251a1eec83a4d1c470",
+  "stderr_bytes": 0,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "session_export_exit": 0,
+  "session_export_stderr": "",
+  "requested_model": "opencode/deepseek-v4.1-flash-free",
+  "actual_model_ids": [],
+  "actual_provider_ids": [
+    "opencode"
+  ],
+  "actual_model_status": "SESSION_SELECTED_MODEL_CONFIRMED; INFERENCE_MODEL_UNKNOWN_NO_RESPONSE",
+  "tokens": "NOT_REPORTED_IN_ERROR_RESPONSE",
+  "reported_cost": "UNKNOWN_NOT_RETURNED",
+  "fallback_allowed": false,
+  "computer_use": false,
+  "auto_approve": false,
+  "candidate_sha256_before": "dd6bfd2bb75ed9708065578f435b54fc7c85c9492f35edcddf614f962db41e0a",
+  "candidate_sha256_after": "dd6bfd2bb75ed9708065578f435b54fc7c85c9492f35edcddf614f962db41e0a",
+  "candidate_unchanged": true,
+  "status": "DISPATCH_FAILED_UPSTREAM_FREE_LIMIT_429",
+  "response_received": "ERROR_ONLY_NO_SEMANTIC_REVIEW",
+  "upstream_error": {
+    "type": "provider.free-limit",
+    "message": "Free usage limit reached. Connect a provider or subscribe to OpenCode Go to keep going, or switch models.",
+    "http_status": 429,
+    "retry_after_ms": 61964000,
+    "observed_at_utc": "2026-10-27T14:47:16.236+08:00",
+    "provider_next_eligible_estimate_utc": "2026-10-28T08:00:00.236+08:00",
+    "provider_next_eligible_estimate_taipei": "2026-10-28T08:00:00.236+08:00",
+    "availability_note": "Provider retry estimate is not a service guarantee; no retry or model switch was performed."
+  },
+  "next_action": "Do not repeat the same free inference call before the provider retry estimate; continue other READY work.",
+  "request_sha256": "75e4085f11ce84eede492b1abab8c26ca1e44cfe2109611913db9cecfdf8e52d",
+  "session_model_selection": {
+    "model_id": "deepseek-v4.1-flash-free",
+    "provider_id": "opencode",
+    "source": "sanitized native OpenCode session export"
+  },
+  "inference_served_model": "UNKNOWN_NO_GENERATED_RESPONSE",
+  "session_reported_tokens": {
+    "input": 0,
+    "output": 0,
+    "reasoning": 0,
+    "cache": {
+      "read": 0,
+      "write": 0
+    }
+  },
+  "session_reported_cost_usd": 0
+}

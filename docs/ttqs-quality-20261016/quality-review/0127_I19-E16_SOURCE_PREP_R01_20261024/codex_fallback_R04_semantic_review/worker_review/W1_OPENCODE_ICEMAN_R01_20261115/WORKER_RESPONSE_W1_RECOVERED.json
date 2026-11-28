@@ -1,0 +1,35 @@
+{
+  "work_id": "TTQS_ONE_0127_R04_FULL_SEMANTIC_W1_ICEMAN_20261115_R01",
+  "doc_id": "0127",
+  "requirement_id": "I19-E16",
+  "candidate_docx_sha256": "d374fa890072edfbad55542b56fb43df22aeac6db51e3f9d2164ab2f0f82ae03",
+  "candidate_body_text_sha256": "00b009b1b9c2a24758372f44e3d70824bc4cba8dd8a2214d0ec213e18d69c632",
+  "paired_csv_sha256": "d5eb3b91ecc83d4e76b831804f85d0e5f81b24e5f66d8a7853aaebc475803b88",
+  "official_source_packet_sha256": "058663e200fd0207196c08a02e4d159c6e3eaa7f167094cd7b409b4050b18675",
+  "unique_blueprint_sha256": "9a249a2e398407469bd82c9bf5d7a6188c9e3d28be79172bd4cc33b213c700ff",
+  "verdict": "PASS",
+  "checks": {
+    "requirement_alignment": "PASS",
+    "genre_and_usability": "PASS",
+    "dual_constructs": "PASS",
+    "definitions_and_math": "PASS",
+    "synthetic_truth_boundary": "PASS",
+    "traceability_and_register": "PASS",
+    "negative_neighbor_boundaries": "PASS",
+    "actionability": "PASS"
+  },
+  "findings": [
+    {
+      "severity": "nonblocking",
+      "locator": "§3 圖1 / §4 圖2 (extracted text shows '/' placeholders where figures are described)",
+      "evidence": "「/ 圖1　市場觸及人數與首購轉換率分圖呈現；兩者單位不同。SAMPLE/SYNTHETIC。」及「/ 圖2　三個分題與複合均分；縱軸1–5分，全部SAMPLE/SYNTHETIC。」",
+      "impact": "The extracted body text contains figure descriptions and labels but the visual rendering/content of the charts cannot be confirmed from text extraction alone; semantic intent and labeling are present.",
+      "required_action": "none (visual/layout verification out of scope for this semantic review)"
+    }
+  ],
+  "scope_limitation": "semantic/usability review of full extracted body only; not visual QA or formal acceptance",
+  "visual_review": "NOT_PERFORMED",
+  "real_evidence_verified": false,
+  "formal_acceptance": "NOT_GRANTED",
+  "actual_serving_model": "UNKNOWN"
+}

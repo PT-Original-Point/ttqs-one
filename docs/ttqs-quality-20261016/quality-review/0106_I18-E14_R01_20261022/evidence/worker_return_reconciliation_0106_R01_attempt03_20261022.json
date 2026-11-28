@@ -1,0 +1,71 @@
+{
+  "schema": "ttqs-one-cli-worker-return-reconciliation-v1",
+  "observed_at_taipei": "2026-10-22T21:50:49.9819444+08:00",
+  "work_id": "TTQS-0106-WRITER-R01-20261022-01",
+  "doc_id": "0106",
+  "requirement_id": "I18-E14",
+  "role": "WRITER",
+  "worker": "OpenCode v2 CLI",
+  "cli_version": "2.0.32",
+  "requested_model": "opencode/mimo-v2.6-flash-free",
+  "session_model_metadata": "opencode/mimo-v2.6-flash-free",
+  "provider_serving_identity": "UNKNOWN",
+  "provider_billing": "UNKNOWN",
+  "session_id": "ses_e9f9a27baffeOVEvJCqeg08qPn",
+  "os_pid_at_dispatch": 15384,
+  "os_pid_currently_alive": false,
+  "dispatch_receipt_at_time_status": "RUNNING",
+  "return_status": "FULL_TEXT_RESPONSE_RECOVERED_AND_USED_AS_MANUSCRIPT_BASELINE",
+  "cli_exit_code": "UNKNOWN_NOT_RETAINED",
+  "native_session": {
+    "finish": "stop",
+    "session_outcome": "idle_after_assistant_response",
+    "started_at_tpe": "2026-10-22T05:37:29.4429457+08:00",
+    "assistant_completed_at_tpe": "2026-10-22T05:45:17.378+08:00",
+    "tokens_input": 14195,
+    "tokens_output": 20364,
+    "tokens_reasoning": 4357,
+    "tokens_cache_read": 0,
+    "local_cost": 0
+  },
+  "source_packet_sha256": "6e39bdeff9c8f0955aca5c382346bdd4d897cb7c1a9d22a4a2e438632b333238",
+  "unique_blueprint_sha256": "dad70f1d1772ed20636d50956e3464aa9ac6918df242f7f11cb5a12f0b63a97d",
+  "prompt_sha256": "78bb95858ae949d3cfd63b7a307318404fcc7ce1c18e6c2be89f0e5ca00b334c",
+  "raw_return": {
+    "path": "writer/opencode_writer_0106_R01_attempt03_stdout.jsonl",
+    "sha256": "fd2d8d10983308069e00a0159974a3f9d7a1df7934b1d9aab152469e68c887d0",
+    "bytes": 49107,
+    "stderr_bytes": 0,
+    "response_markdown_chars": 27756,
+    "exact_equals_recovered_original_after_newline_normalization": true,
+    "recovered_original_sha256": "f79c4db58b11043ee480180366a4b5477103edf7eb9e7ee8d3711a458642d2e6"
+  },
+  "adoption": {
+    "patched_manuscript_path": "writer/opencode_writer_0106_R01_patched.md",
+    "patched_manuscript_sha256": "c859ab16062d3f98664dd441954187d09fc525f7df26974acbe842802c6e0a14",
+    "diff_line_entries_vs_original": 214,
+    "builder_receipt_path": "evidence/docx_build_receipt_0106_R01.json",
+    "builder_receipt_sha256": "6571a081be18b5b88866948744545da66ea97700fe1e87f29465d609b4b3bdba",
+    "candidate_docx_sha256": "204bc47e1d7049b872c667a07b1f9fe7d9148bb867ca13b59c89ccaad36d515e",
+    "candidate_docx_bytes": 351339,
+    "statement": "The candidate was built from the patched manuscript; the exact original writer response is retained as baseline. The 214 diff line entries include multi-line edits/additions and are not described as a minimal patch."
+  },
+  "qa": {
+    "technical": "PASS",
+    "technical_receipt_sha256": "351988e9cbb9d0c6e962957e90f1c289f36c35c119e55ec32d13c3b5edb30bbf",
+    "visual": "PASS",
+    "visual_receipt_sha256": "6bfba7644b2ace8eb635707fe4de3a165f893e9564b0c82ec11b22169876fff1",
+    "semantic": "PASS_TEXT_SEMANTIC_ONLY",
+    "reviewer": "separate OpenCode v2 session attempt07",
+    "reviewer_response_sha256": "b81141e22e5963d9879ab6341c887a38e05895296d6192787dd06aee38e1d518",
+    "formal_acceptance": "NOT_GRANTED",
+    "real_evidence": "UNKNOWN_UNTIL_RECEIVED"
+  },
+  "limitations": [
+    "Native OpenCode session reports a completed assistant response; the wrapper exit code was not retained.",
+    "Model ID in local session metadata is not provider-side serving identity proof.",
+    "Semantic reviewer used supplied text snapshot and did not open DOCX/PDF or independently recompute the DOCX hash.",
+    "No association approval or real evidence is claimed."
+  ],
+  "candidate_rebuilt_this_reconciliation": false
+}

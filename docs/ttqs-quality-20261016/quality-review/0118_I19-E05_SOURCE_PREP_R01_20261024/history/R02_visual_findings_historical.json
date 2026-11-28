@@ -1,0 +1,61 @@
+{
+  "doc_id": "0118",
+  "requirement_id": "I19-E05",
+  "candidate_sha256": "20ed29f9fc9934c7a5009d05f338844375a2fcf35d0b40d37dfd4493c089d127",
+  "pdf_sha256": "556cc0c63f81cd7a109d1a5a177581aff4ed9df112e40af310a461b0d4820ef5",
+  "pdf_bytes": 830893,
+  "renderer": "Microsoft Word COM PrintOut to Microsoft Print to PDF",
+  "word_pages": 13,
+  "pdf_pages": 13,
+  "page_pngs": 13,
+  "pages_inspected": "1-13 all rendered at 983x1390 and visually reviewed",
+  "visual_verdict": "FAIL_REPAIR_REQUIRED",
+  "findings": [
+    {
+      "pages": [
+        2,
+        3
+      ],
+      "location": "§1.5 original-type matrix, first type-code column",
+      "finding": "Codes such as PAPER_ORIGINAL and SENDER_NATIVE_FILE were fragmented into narrow character groups due to Word AutoFit.",
+      "severity": "major readability/layout"
+    },
+    {
+      "pages": [
+        6,
+        7
+      ],
+      "location": "§4 status decision matrix, status-code column",
+      "finding": "Long status identifiers were fragmented into narrow character groups.",
+      "severity": "major readability/layout"
+    },
+    {
+      "pages": [
+        9,
+        10
+      ],
+      "location": "§5.4 replacement register, field_path column",
+      "finding": "Field paths such as record_class and original_received were fragmented across many short lines.",
+      "severity": "major readability/layout"
+    },
+    {
+      "pages": [
+        11
+      ],
+      "location": "§7 negative-neighbor table, Document ID column",
+      "finding": "Four-digit document IDs wrapped (e.g. 0092 split into 009 and 2).",
+      "severity": "minor readability/layout"
+    },
+    {
+      "pages": [
+        11
+      ],
+      "location": "§6.2 custody-chain list",
+      "finding": "Automatic numbering continued at 5–9 rather than restarting at 1–5.",
+      "severity": "material usability/sequence"
+    }
+  ],
+  "other_pages": "No additional clipping, overlap, missing content, or footer defect observed in the inspected pages.",
+  "candidate_modified_after_render": false,
+  "observed_at": "2026-10-24T08:17:58+08:00"
+}

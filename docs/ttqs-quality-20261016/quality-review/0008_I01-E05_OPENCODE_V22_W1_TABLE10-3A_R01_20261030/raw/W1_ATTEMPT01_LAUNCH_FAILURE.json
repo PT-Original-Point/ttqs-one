@@ -1,0 +1,20 @@
+{
+  "work_id": "TTQS-0008-W1-20261030-01",
+  "attempt": 1,
+  "worker": "W1 OpenCode CLI",
+  "cli_version": "2.2.2",
+  "requested_model": "opencode/deepseek-v4.1-flash-free",
+  "agent": "plan",
+  "pid": 93692,
+  "child_pid": 113384,
+  "started_at": "2026-10-30T11:06:17.651016+08:00",
+  "terminal_log_run_id": "6cd9a995",
+  "terminal_error": "EPIPE: broken pipe, write",
+  "root_cause": "PowerShell launcher assigned the read-only automatic variable $PID after process start; parent exited before draining stdout/stderr",
+  "db_tokens_input": 0,
+  "db_tokens_output": 0,
+  "session_id": "ses_e753a3e9dffewRZrPDP6ndj8h9",
+  "session_state": "no assistant response; zero token counters at readback",
+  "artifact": "none",
+  "remediation": "stop exact failed process tree, use nonreserved variable, start actual build agent, attach async readers before waiting"
+}
